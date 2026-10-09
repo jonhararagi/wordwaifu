@@ -578,7 +578,7 @@ async function run() {
     assert.match(orgImportAlert.message(), /Proyecto importado correctamente/i);
     await orgImportAlert.accept();
     await orgImportSelection;
-    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.some((item) => item.id === "org-cartographers")), true);
+    assert.equal(await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.some((item) => item.id === id), unrelatedOrganizationId), true);
     process.stdout.write("PASS organization export/import: references remain valid after round-trip.\n");
 
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
