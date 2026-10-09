@@ -92,3 +92,7 @@ No marcar la tarea como DONE si su gate global aún tiene criterios pendientes; 
 
 ## Investigación técnica comparativa
 Cuando una tarea involucre arquitectura o UX, revisar implementaciones públicas comparables si aporta valor; separar patrones observados de hipótesis. Registrar fuente, fecha, aprendizaje y decisión propia en `docs/TECHNICAL_RESEARCH.md`. Usar referencias para aprender, no copiar código, diseños ni contenido. Priorizar invariantes verificables: IDs estables, referencias validadas, compatibilidad de importación y eliminación explícita de enlaces.
+
+
+## Snapshot contract (WF-004-C)
+El snapshot tiene identidad propia y un `projectId` inmutable. Validar contenido antes de restaurar; no cambiar el ID del universo. Antes de reemplazar el proyecto activo, guardar y verificar una copia anterior. No describir una eliminación de universo como recuperable si sus snapshots se borran con él: el texto de confirmación y la política de retención deben comunicar exactamente el efecto. Los cambios de esquema de IndexedDB deben ser no destructivos y contar con una prueba de migración desde la versión previa.

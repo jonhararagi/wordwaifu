@@ -52,7 +52,7 @@ Se puede utilizar una obra conocida como referencia de diseño en datos privados
 
 ## Estado
 
-El repositorio contiene un prototipo funcional del atlas con creación/edición/movimiento/borrado seguro de ubicaciones, validación de importaciones y pruebas automáticas en Chromium. El estado detallado y la siguiente tarea verificable están en [docs/STATUS.md](docs/STATUS.md) y [docs/DONE.md](docs/DONE.md). El CRUD de personajes y otras entidades, IndexedDB y los generadores narrativos siguen pendientes.
+El prototipo incluye atlas, CRUD de las entidades principales, relaciones, catálogo multiverso y persistencia IndexedDB con respaldo local. La primera capa de snapshots y restauración está implementada parcialmente y validada en Chromium; aún faltan políticas completas ante todos los borrados, la prueba de retención y la inspección visual en Windows. La siguiente tarea verificable está en [docs/STATUS.md](docs/STATUS.md) y [docs/DONE.md](docs/DONE.md).
 
 - [Visión y límites](docs/PRODUCT_VISION.md)
 - [Arquitectura](docs/ARCHITECTURE.md)

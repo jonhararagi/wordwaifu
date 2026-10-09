@@ -66,3 +66,19 @@ WordWaifu ofrece búsqueda en personajes, lugares, acontecimientos, organizacion
 - WordWaifu usa la clave compuesta en la ruta de apertura, conserva el proyecto previo ante fallos y no mezcla los datos de otros universos.
 - La prueba añadida verifica que `document.activeElement` sea el encabezado `h2` esperado dentro de `#details-panel`, tanto para el universo activo como para otro universo.
 - La lectura de los datos no sustituye la prueba manual visual en Windows 11, que sigue en `NOT_RUN`.
+
+
+## 2026-10-09 · Snapshots versionados y restauración local
+
+### Decisión de arquitectura
+- Los snapshots están separados de los registros de proyectos en IndexedDB. Cada copia apunta a `projectId`, conserva su ID propio y se crea con `add`, para no sobrescribir una copia anterior con el mismo identificador.
+- La actualización de IndexedDB v1→v2 añade el nuevo almacén sin recrear ni limpiar los almacenes de proyectos o metadatos.
+- La restauración vuelve a comprobar el proyecto activo y la versión del contenido dentro de una transacción; valida el snapshot, crea `before-restore`, verifica después de escribir y también verifica el respaldo local.
+- El gestor de proyectos permite examinar y borrar snapshots individuales. El import válido se protege con `before-import` antes de reemplazar el proyecto.
+
+### Evidencia y límites
+- [CI #38006355845](https://github.com/jonhararagi/wordwaifu/actions/runs/38006355845) verifica la migración v1→v2, aislamiento entre dos IDs de universo, rechazo de un snapshot inválido, restauración del estado anterior, copia `before-restore`, eliminación selectiva y tests UI de creación/restauración/borrado.
+- La misma CI prueba que una importación válida deja un snapshot del proyecto previo y que un error posterior de almacenamiento conserva el estado activo.
+- El límite de 25 snapshots existe en código, pero la prueba que alcanza la frontera sigue pendiente.
+- Borrar un proyecto elimina sus snapshots. Todavía no existe un camino para resucitar un proyecto que ya fue eliminado; la interfaz y el contrato de la próxima subtarea deben resolver esta decisión explícitamente.
+- El test automatizado es Chromium headless; la inspección manual en Windows 11 sigue en `NOT_RUN`.

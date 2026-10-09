@@ -1,69 +1,59 @@
-DONE
+PARTIAL
 
 # WordWaifu · Punto de continuidad
 
-**Tarea cerrada:** WF-004-B.3 · Apertura contextual desde resultados del índice maestro.
-**Estado:** PASS_REAL. La apertura cambia de universo de forma validada, enfoca la entidad exacta por ID y revierte el cambio si la persistencia o el destino fallan.
+**Subtarea verificada:** WF-004-C.1 · Almacén de snapshots versionados y restauración protegida en el gestor de proyectos.
+**Estado de la fase:** PARTIAL. El circuito de snapshots manuales, restauración y respaldo previo a importación ya pasó CI; faltan las políticas/pruebas para todas las acciones destructivas, retención y recuperación de universos eliminados.
 **Fecha:** 2026-10-09.
 
 ## Estado de Git
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama de trabajo: `foundation/story-foundry-north-star`.
-- HEAD BEFORE de esta iteración: `a972cdcc76de4a9f5211626cbe4ed747b63a29c7`.
-- HEAD de código probado: `83a7a6afb96725b3d1c5301c6dc0ed025c9ef205`.
-- CI final de código y pruebas: **PASS_REAL**, [ejecución #38000904219](https://github.com/jonhararagi/wordwaifu/actions/runs/38000904219).
-- CI anterior del mismo conjunto funcional: **PASS_REAL**, [ejecución #38000652000](https://github.com/jonhararagi/wordwaifu/actions/runs/38000652000).
-- El cierre documental se añadirá como un commit posterior a `83a7a6afb96725b3d1c5301c6dc0ed025c9ef205`; verificar ese HEAD nuevo después del commit antes de la siguiente tarea.
-- PR #1: [abierto y en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), no fusionado ni marcado listo.
+- Rama: `foundation/story-foundry-north-star`.
+- HEAD BEFORE de esta iteración: `9f481c20653a57657543c4d1700a9414829513f6`.
+- HEAD de código probado: `a2a276ce346be4b59c43173432ce193910be068f`.
+- CI: **PASS_REAL**, [ejecución #38006355845](https://github.com/jonhararagi/wordwaifu/actions/runs/38006355845).
+- PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1); no fusionado ni marcado listo.
 - `main` permanece intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
+- Este commit documental genera un HEAD posterior al código probado. Inspeccionar el HEAD vivo en la próxima sesión.
 
-## Trabajo verificado
-- El resultado del índice maestro mantiene la identidad compuesta `projectId + entityType + entityId`; un ID de ficha repetido en dos universos no colisiona.
-- Antes de abrir, la aplicación guarda/verifica el proyecto activo en IndexedDB. El destino de otro universo se lee desde IndexedDB directamente, sin aceptar un respaldo local sin verificar como destino confiable.
-- El proyecto destino se valida y la ficha se busca por tipo e ID exacto. Si el proyecto o la ficha desaparecen después de la búsqueda, no se abre una ficha con nombre parecido.
-- La transición solo se confirma cuando la persistencia en IndexedDB se verifica. Si falla, la app restaura el proyecto y espacio de trabajo anteriores.
-- Se conservan otros universos y sus registros; la búsqueda no edita el proyecto activo.
-- El resultado abierto cierra el gestor de proyectos, muestra la ficha y traslada el foco de teclado al destino exacto.
-- Añadidas aserciones explícitas de foco para el personaje exacto en el universo activo y para un personaje con el mismo ID en un segundo universo.
-
-## Archivos cambiados en esta iteración
-- `tests/browser_smoke.cjs`: dos comprobaciones de foco de teclado tras abrir desde el índice maestro. No se cambió lógica de producción porque ya implementaba el contrato y pasó su suite previa; este cierre confirma el comportamiento con una prueba adicional.
-- `docs/DONE.md`: reemplazado por este punto de continuidad.
-- `docs/STATUS.md`, `docs/ROADMAP.md`, `docs/WORK_PROTOCOL.md`: estado de hito y próxima tarea actualizados.
-- `docs/TECHNICAL_RESEARCH.md`: nuevo registro de decisiones de navegación contextual y recuperación ante fallos.
+## Implementado y persistido
+- IndexedDB sube de versión 1 a 2 sin eliminar los almacenes `projects` y `metadata`; incorpora `snapshots` con índices por `projectId` y `createdAt`.
+- API del repositorio para validar, crear, enumerar, eliminar y restaurar snapshots. Los IDs pertenecen al proyecto exacto, no al nombre.
+- Límite defensivo en código: 25 snapshots por proyecto. Si se alcanza, la creación se rechaza y no sobrescribe copias existentes.
+- Restauración solo para el proyecto que ya está activo en IndexedDB. Valida snapshot, ID y contenido, comprueba que el proyecto no cambió durante la operación, guarda una copia `before-restore`, verifica el resultado y revierte si falla la lectura/escritura de verificación o el respaldo local.
+- Gestor de proyectos con listado de snapshots, creación manual, restauración y eliminación individual con confirmación. Solo permite restaurar un snapshot marcado válido del proyecto activo; los demás proyectos se mantienen aislados.
+- Una importación JSON válida crea un snapshot `before-import` del estado actual antes de guardar el candidato. Si la persistencia del candidato falla, el estado activo y el respaldo local no se sustituyen.
+- Borrar un proyecto elimina sus snapshots en la misma transacción. En esta fase aún no hay una bandeja de recuperación de universos eliminados; es un límite conocido, no una recuperación garantizada.
+- Archivos de código y pruebas modificados durante esta subtarea: `src/project-repository.js`, `src/app.js`, `index.html`, `src/styles.css`, `tests/browser_smoke.cjs`.
 
 ## Evidencia
-- **PASS_REAL:** [CI #38000904219](https://github.com/jonhararagi/wordwaifu/actions/runs/38000904219), incluye sintaxis, validador, prueba Chromium y validación estructural.
-- **PASS_STATIC:** 18 pruebas de esquema aprobadas.
-- **PASS_REAL:** Chromium verifica búsqueda multiverso por IDs compuestos, filtro por tipo/campos, normalización de acentos, resultado vacío tras búsqueda completa y error de IndexedDB declarado como búsqueda parcial.
-- **PASS_REAL:** proyecto destino ausente, ficha eliminada tras la búsqueda y fallo simulado de persistencia son rechazados sin perder el proyecto anterior.
-- **PASS_REAL:** apertura exacta en el universo actual y en un segundo universo; ambas fichas reciben foco de teclado.
-- **PASS_REAL:** suite de regresión de CRUD de ubicaciones, personajes, acontecimientos, organizaciones, relaciones, persistencia IndexedDB, migración, import/export y fallos de almacenamiento completada sin errores de página.
-- **NOT_RUN:** validación manual/visual en la PC Windows 11 del usuario; Chromium CI corre en modo headless.
+- **PASS_REAL:** [CI #38006355845](https://github.com/jonhararagi/wordwaifu/actions/runs/38006355845) completada con éxito. Chromium confirmó creación/listado/restore/delete, snapshot previo a importación, conservación del ID activo, snapshot de rollback, aislamiento por proyecto y fallos sembrados de persistencia.
+- **PASS_STATIC:** 18 pruebas de esquema pasan; sintaxis de JavaScript, estructura y enlaces locales pasan.
+- **PASS_REAL:** smoke de Chromium finalizó sin errores de página.
+- **FAIL_REAL durante desarrollo, corregido:** varias pasadas descubrieron aserciones que no esperaban la asincronía del selector, una inyección que fallaba antes del punto previsto y dos errores de uso del test runner. Se corrigieron; solo la última ejecución listada arriba es la evidencia final.
+- **NOT_RUN:** prueba manual visual/usabilidad en Windows 11.
 
-## Límites conocidos
-- La búsqueda reconstruye resultados desde proyectos locales en cada consulta; no hay índice invertido persistente.
-- El respaldo local es un único snapshot compatible, no un historial versionado con selección y restauración.
-- Aún no existe historial de revisiones del canon por entidad ni un mecanismo de comparación visual entre versiones.
+## Lo que todavía no queda cerrado
+1. Añadir snapshot/rollback explícito al borrar personajes, lugares, acontecimientos, organizaciones y otras operaciones destructivas, definiendo cuándo se conservan o eliminan sus snapshots.
+2. Decidir y probar la política de eliminación de un universo completo: hoy elimina sus snapshots también, sin una bandeja para recuperar el universo eliminado. La interfaz debe comunicar ese efecto explícitamente o incorporar un flujo de recuperación separado.
+3. Añadir prueba para alcanzar el límite de 25 snapshots, comprobar el fallo por falta de espacio y cubrir errores durante la creación, restauración y respaldo local.
+4. Probar visualmente el gestor en Windows 11. La automatización headless no sustituye esa comprobación.
 
 ## Progreso global
-**Estimación: 18%** de la visión completa, ponderada subjetivamente por alcance. No representa porcentaje de código ni cobertura. Los circuitos CRUD, persistencia, selector multiverso, borrado seguro, índice maestro y apertura contextual tienen cobertura automatizada. Generadores narrativos, Novel Studio, Content Guard, snapshots versionados, auditoría temporal e integración con BotImagen siguen pendientes.
+**Estimación: 19%** de la visión completa, ponderada por alcance y no por líneas de código ni cobertura. El proyecto ya tiene CRUD de entidades principales, índice multiverso y una primera capa versionada de recuperación; generadores narrativos, Novel Studio, Continuity Guard y conexión con BotImagen siguen pendientes.
 
 ## Siguiente tarea activa
-**WF-004-C.1 — Respaldos versionados y restauración segura.**
+**WF-004-C.2 — Snapshots para acciones destructivas, límites y recuperación transparente.**
 
-**TIMER inicial: 4–7 horas**, recalcular tras inspeccionar el esquema IndexedDB y los puntos de importación, borrado y cambio de proyecto.
+**TIMER restante estimado: 2–4 horas**, recalcular al inspeccionar el estado vivo.
 
 ### Criterios de aceptación
-1. Migrar el esquema IndexedDB de forma no destructiva y añadir un almacén de snapshots versionados.
-2. Registrar snapshot inmutable con ID propio, projectId, fecha, causa y copia de datos validable.
-3. Crear respaldo antes de las acciones que sustituyen o destruyen datos; no llamar «respaldo verificado» a una copia cuyo guardado/lectura no haya sido comprobado.
-4. Enumerar snapshots por proyecto, aislando por ID de proyecto incluso si dos universos comparten nombres.
-5. Restaurar solo tras confirmación y validación; mantener el ID del proyecto y dejar intactos los demás proyectos.
-6. Definir retención/capacidad y borrado individual de snapshots sin borrar el proyecto ni otros snapshots.
-7. Probar migración de una base IndexedDB v1, crear/listar/restaurar, proyectos con nombres/IDs similares, JSON inválido, error de persistencia y que el activo no cambie si falla una restauración.
-8. Chromium CI PASS, actualizar documentos y sobrescribir de nuevo `docs/DONE.md`.
-9. Mantener `main` intacta, PR #1 en borrador y la prueba manual de Windows como `NOT_RUN` hasta ejecutarla.
+1. Inspeccionar las funciones actuales de borrado, importación y cambio de proyecto.
+2. Garantizar snapshots recuperables antes de operaciones destructivas relevantes; no crear copias cuyo borrado inmediato haga inútil la recuperación.
+3. Acordar el comportamiento de borrar un proyecto completo: explicitar borrado de snapshots o mantener una vía verificable de restauración del universo eliminado.
+4. Pruebas para límite de 25, error de escritura, restauración cancelada/fallida, aislamiento entre universos y limpieza selectiva.
+5. Chromium CI PASS y persistencia de estado actualizada; prueba manual Windows `NOT_RUN` hasta ejecutarla.
+6. Mantener `main` intacta y PR #1 en borrador.
 
-### Antes de empezar
-Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD/PR/CI vivos. Inspeccionar `src/project-repository.js`, `src/app.js`, `index.html`, `tests/browser_smoke.cjs` y las pruebas de migración existentes.
+### Para retomar
+Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Inspeccionar HEAD/PR/CI vivos y los bloques de borrado en `src/app.js`, las operaciones de snapshots en `src/project-repository.js` y los tests en `tests/browser_smoke.cjs`.

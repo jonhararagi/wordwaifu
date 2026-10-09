@@ -245,3 +245,14 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - Chromium CI PASS_REAL: [#38000904219](https://github.com/jonhararagi/wordwaifu/actions/runs/38000904219), incluidos rollback y fallos sembrados.
 - Se añadió aserción de accesibilidad: tras abrir el resultado, el foco queda en el encabezado exacto, incluso con IDs de personaje repetidos en otro universo.
 - Siguiente: WF-004-C.1, respaldos versionados y restauración segura. TIMER: 4–7 horas.
+
+
+### WF-004-C.1 — PARTIAL · Almacén de snapshots y restauración segura
+- IndexedDB migra de v1 a v2 sin perder `projects` o `metadata`; añade el almacén `snapshots`, índices de proyecto/fecha y límite defensivo de 25 por universo.
+- API de crear/listar/borrar/restaurar con validación estructural y aislamiento por ID; antes de restaurar se genera snapshot `before-restore`, se verifica el resultado y se mantiene la copia local.
+- El gestor de proyectos presenta las copias, permite crear/restaurar/borrar una individualmente con confirmación y bloquea restauración sobre otro universo o un snapshot inválido.
+- La importación válida conserva un snapshot `before-import` antes de reemplazar el proyecto; si el candidato falla, no sustituye la sesión activa.
+- **PASS_REAL:** [Chromium CI #38006355845](https://github.com/jonhararagi/wordwaifu/actions/runs/38006355845); la prueba verificó migración de base v1 real, aislamiento, rollback, fallo de importación y el gestor UI.
+- **NOT_RUN:** prueba visual/manual Windows 11.
+- **Pendiente:** snapshots antes de borrados de entidades, recuperación tras borrar universo, política visible de qué pasa con los snapshots al borrar proyecto, prueba de límite 25 y fallos de capacidad/storage.
+- Siguiente: **WF-004-C.2**, TIMER restante 2–4 horas. Mantener `main` intacta y PR #1 en borrador.

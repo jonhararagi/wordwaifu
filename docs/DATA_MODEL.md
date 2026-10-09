@@ -82,3 +82,15 @@ El índice de búsqueda no reemplaza el canon ni se guarda como una segunda copi
 El resultado incluye el nombre del universo, ID de proyecto, tipo de entidad, ID estable del registro, nombre y detalle. En la iteración inicial se incluyen personajes, lugares, acontecimientos, organizaciones, relaciones e historias, con filtro por tipo y búsqueda de texto sobre los campos relevantes de cada ficha. La normalización de texto tolera diferencias de acentuación.
 
 Si IndexedDB no se puede leer, solo se puede consultar el respaldo local disponible. El método devuelve `complete: false` y una advertencia; la interfaz comunica `BÚSQUEDA PARCIAL`. No debe sugerir que no hay resultados si no se pudieron examinar todos los proyectos. Una futura optimización podrá introducir caché o índice invertido solo con invalidación/reconstrucción demostrada, evitando desincronizar el canon.
+
+
+## Snapshot versionado (implementación IndexedDB v2)
+Un registro de respaldo conserva identidad y pertenencia separadas del nombre del proyecto:
+`snapshotId`, `projectId`, `createdAt`, `reason`, `data`.
+
+- `snapshotId` es único y la creación usa inserción, no sobreescritura.
+- `projectId` debe coincidir exactamente con `data.project.id`; cambiar el nombre del universo no cambia su pertenencia.
+- Antes de usarlo para restaurar, se valida `data` con el mismo contrato de importación. Un snapshot inválido puede listarse como inválido, pero no restaurarse.
+- La restauración está vinculada al proyecto activo por ID y conserva una copia `before-restore` del estado que se va a reemplazar.
+- La política vigente limita el almacén a 25 snapshots por proyecto. La cobertura automatizada de la frontera de retención queda pendiente.
+- En esta fase, borrar un proyecto elimina sus snapshots; el modelo aún no incluye una bandeja de recuperación que pueda volver a materializar un proyecto eliminado. No se debe prometer restauración después de borrar un universo completo.
