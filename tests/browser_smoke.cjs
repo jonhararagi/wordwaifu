@@ -322,7 +322,7 @@ async function run() {
     await performMiraSearch();
     const vanishedProjectCard = page.locator('#master-search-results .master-search-result[data-project-id="' + createdUniverse.id + '"]');
     await vanishedProjectCard.evaluate((card) => { card.dataset.projectId = "project-removed-after-search"; });
-    await vanishedProjectCard.locator("[data-master-open]").click();
+    await page.locator('#master-search-results .master-search-result[data-project-id="project-removed-after-search"] [data-master-open]').click();
     await page.waitForFunction(() => (document.querySelector("#master-search-status")?.textContent || "").toLowerCase().includes("proyecto destino ya no existe"), null, { timeout: 5000 });
     const activeAfterMissingDestination = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
