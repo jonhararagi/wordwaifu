@@ -36,6 +36,9 @@
     for (const key of ["locations", "characters", "events"]) {
       if (!Array.isArray(input[key])) errors.push(key + " debe ser una lista.");
     }
+    if (input.organizations !== undefined && !Array.isArray(input.organizations)) {
+      errors.push("organizations debe ser una lista.");
+    }
     if (errors.length) return { valid: false, errors, project: null };
 
     const project = {
@@ -44,6 +47,7 @@
       locations: input.locations.map((item) => isRecord(item) ? { ...item } : item),
       characters: input.characters.map((item) => isRecord(item) ? { ...item } : item),
       events: input.events.map((item) => isRecord(item) ? { ...item } : item),
+      organizations: Array.isArray(input.organizations) ? input.organizations.map((item) => isRecord(item) ? { ...item } : item) : [],
       stories: Array.isArray(input.stories) ? input.stories.map((item) => isRecord(item) ? { ...item } : item) : [],
       settings: isRecord(input.settings) ? { ...input.settings } : { time: "now" }
     };
@@ -52,6 +56,7 @@
       ["locations", project.locations],
       ["characters", project.characters],
       ["events", project.events],
+      ["organizations", project.organizations],
       ["stories", project.stories]
     ];
     const ids = new Set();
@@ -81,6 +86,7 @@
     const locationIds = byGroup.locations;
     const characterIds = byGroup.characters;
     const eventIds = byGroup.events;
+    const organizationIds = byGroup.organizations;
 
     project.locations.forEach((location, index) => {
       const path = "locations[" + index + "]";
@@ -160,6 +166,32 @@
       if (typeof event.description !== "string") errors.push(path + ".description debe ser texto.");
       if (event.position === undefined || event.position === null) event.position = "unknown";
       if (typeof event.position !== "string") errors.push(path + ".position debe ser texto.");
+    });
+
+    project.organizations.forEach((organization, index) => {
+      const path = "organizations[" + index + "]";
+      hasStringArray(organization, "goals", path, errors);
+      hasStringArray(organization, "leaderCharacterIds", path, errors);
+      hasStringArray(organization, "memberCharacterIds", path, errors);
+      for (const id of organization.leaderCharacterIds) {
+        if (!characterIds.has(id)) errors.push(path + ".leaderCharacterIds referencia un personaje inexistente: " + id + ".");
+      }
+      for (const id of organization.memberCharacterIds) {
+        if (!characterIds.has(id)) errors.push(path + ".memberCharacterIds referencia un personaje inexistente: " + id + ".");
+      }
+      if (organization.baseLocationId === undefined || organization.baseLocationId === null || organization.baseLocationId === "") {
+        organization.baseLocationId = null;
+      } else if (!isNonEmptyString(organization.baseLocationId)) {
+        errors.push(path + ".baseLocationId debe ser un ID o null.");
+      } else if (!locationIds.has(organization.baseLocationId)) {
+        errors.push(path + ".baseLocationId referencia un lugar inexistente: " + organization.baseLocationId + ".");
+      }
+      for (const key of ["organizationType", "ideology", "description", "history", "status"]) {
+        if (organization[key] === undefined || organization[key] === null) {
+          organization[key] = key === "organizationType" ? "Organización sin clasificar" : "";
+        }
+        if (typeof organization[key] !== "string") errors.push(path + "." + key + " debe ser texto.");
+      }
     });
 
     project.stories.forEach((story, index) => {

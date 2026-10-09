@@ -45,6 +45,7 @@ function testValidProjectNormalizesOptionalFields() {
   const result = validateAndNormalizeProject(validProject());
   assert.equal(result.valid, true, result.errors.join("\n"));
   assert.deepEqual(result.project.stories, []);
+  assert.deepEqual(result.project.organizations, []);
   assert.deepEqual(result.project.settings, { time: "now" });
   assert.deepEqual(result.project.locations[0].marker, [200, 150]);
 }
@@ -135,6 +136,57 @@ function testRejectsDanglingLocationEventReferences() {
   assert.match(result.errors.join("\n"), /locations\[0\]\.events referencia un evento inexistente/);
 }
 
+function testLegacyProjectDefaultsOrganizationsToEmpty() {
+  const input = validProject();
+  delete input.organizations;
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\\n"));
+  assert.deepEqual(result.project.organizations, []);
+}
+
+function testOrganizationFieldsAndReferencesNormalize() {
+  const input = validProject();
+  input.organizations = [{
+    id: "org-a", name: "Gremio A", organizationType: "Gremio",
+    description: "Organización de prueba.", ideology: "Compartir conocimiento.",
+    goals: ["Investigar"], leaderCharacterIds: ["char-a"], memberCharacterIds: ["char-a"],
+    baseLocationId: "loc-a", history: "Fundado recientemente.", status: "canon"
+  }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\\n"));
+  assert.equal(result.project.organizations[0].baseLocationId, "loc-a");
+  assert.deepEqual(result.project.organizations[0].leaderCharacterIds, ["char-a"]);
+  assert.deepEqual(result.project.organizations[0].goals, ["Investigar"]);
+}
+
+function testRejectsDanglingOrganizationReferences() {
+  const badLeader = validProject();
+  badLeader.organizations = [{ id: "org-a", name: "Gremio", leaderCharacterIds: ["char-missing"] }];
+  const leaderResult = validateAndNormalizeProject(badLeader);
+  assert.equal(leaderResult.valid, false);
+  assert.match(leaderResult.errors.join("\\n"), /leaderCharacterIds referencia un personaje inexistente/);
+
+  const badMember = validProject();
+  badMember.organizations = [{ id: "org-a", name: "Gremio", memberCharacterIds: ["char-missing"] }];
+  const memberResult = validateAndNormalizeProject(badMember);
+  assert.equal(memberResult.valid, false);
+  assert.match(memberResult.errors.join("\\n"), /memberCharacterIds referencia un personaje inexistente/);
+
+  const badBase = validProject();
+  badBase.organizations = [{ id: "org-a", name: "Gremio", baseLocationId: "loc-missing" }];
+  const baseResult = validateAndNormalizeProject(badBase);
+  assert.equal(baseResult.valid, false);
+  assert.match(baseResult.errors.join("\\n"), /baseLocationId referencia un lugar inexistente/);
+}
+
+function testOrganizationIdsAreGloballyUnique() {
+  const input = validProject();
+  input.organizations = [{ id: "char-a", name: "Colisión de ID" }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join("\\n"), /ID duplicado/);
+}
+
 const tests = [
   testValidProjectNormalizesOptionalFields,
   testMissingOptionalFieldsReceiveSafeDefaults,
@@ -144,7 +196,11 @@ const tests = [
   testRejectsLocationHierarchyCycles,
   testMalformedArraysFailWithoutThrowing,
   testRejectsUnsupportedSchemaAndInvalidMarkers,
-  testRejectsDanglingLocationEventReferences
+  testRejectsDanglingLocationEventReferences,
+  testLegacyProjectDefaultsOrganizationsToEmpty,
+  testOrganizationFieldsAndReferencesNormalize,
+  testRejectsDanglingOrganizationReferences,
+  testOrganizationIdsAreGloballyUnique
 ];
 
 for (const test of tests) {

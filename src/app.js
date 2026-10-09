@@ -7,6 +7,7 @@
     characters: ["Personajes", "Fichas conectadas con lugares, relaciones y acontecimientos."],
     places: ["Lugares", "Cada lugar es parte de la geografía y del canon de tu universo."],
     timeline: ["Cronología", "Revisá los acontecimientos y los cambios de estado de tu mundo."],
+    organizations: ["Organizaciones", "Facciones, gremios y grupos que mueven tu universo."],
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."]
   };
@@ -31,6 +32,19 @@
       { id: "event-alarm", title: "Las campanas de Azur", position: "chapter5", description: "La fortaleza envía una señal que no figura en ningún protocolo vigente.", locationIds: ["loc-azur", "loc-asteria"], characterIds: ["char-kael", "char-mira"] },
       { id: "event-rupture", title: "La ruta borrada", position: "chapter12", description: "Sakura encuentra en Lunaria una copia de la ruta que su orden negó conocer.", locationIds: ["loc-lunaria", "loc-velado"], characterIds: ["char-sakura"] }
     ],
+    organizations: [{
+      id: "org-cartographers",
+      name: "Archivo de Cartógrafos",
+      organizationType: "Gremio de exploración",
+      description: "Conserva mapas y testimonios de rutas olvidadas.",
+      ideology: "Ningún mapa debe ocultar la historia de quienes lo recorren.",
+      goals: ["Preservar rutas olvidadas", "Compartir atlas verificados"],
+      leaderCharacterIds: ["char-mira"],
+      memberCharacterIds: ["char-mira", "char-noa"],
+      baseLocationId: "loc-asteria",
+      history: "Nació para preservar rutas que los reinos dejaron de reconocer.",
+      status: "canon"
+    }],
     stories: [],
     settings: { time: "now" }
   };
@@ -41,6 +55,7 @@
   let selectedLocationId = "loc-asteria";
   let selectedCharacterId = null;
   let selectedEventId = null;
+  let selectedOrganizationId = null;
   let mapScale = 1;
   const enabledLayers = { places: true, characters: true, routes: true, events: true };
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -53,7 +68,10 @@
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (parsed && parsed.schemaVersion === 1 && parsed.project && Array.isArray(parsed.locations) && Array.isArray(parsed.characters)) return parsed;
+        if (parsed && parsed.schemaVersion === 1 && parsed.project && Array.isArray(parsed.locations) && Array.isArray(parsed.characters)) {
+          // Backward compatibility for projects saved before organization records existed.
+          return { ...parsed, organizations: Array.isArray(parsed.organizations) ? parsed.organizations : [] };
+        }
       }
     } catch (error) {
       console.warn("No se pudo leer el proyecto local; se usará la demo.", error);
@@ -108,7 +126,7 @@
     $("#view-subtitle").textContent = titles[activeView][1];
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
-    $("#directory-view").classList.toggle("hidden", !["characters", "places", "timeline", "stories"].includes(activeView));
+    $("#directory-view").classList.toggle("hidden", !["characters", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
@@ -293,17 +311,39 @@
         const linkedCharacters = (item.characterIds || []).map((id) => characterById(id)?.name || "").join(" ");
         return matches([item.title, item.description, item.position, linkedLocations, linkedCharacters].join(" "), query);
       }).map((event) => '<article class="entity-card event-card' + (event.id === selectedEventId ? ' selected' : '') + '" data-event="' + escapeHTML(event.id) + '" tabindex="0" role="button" aria-pressed="' + String(event.id === selectedEventId) + '"><span class="avatar">◷</span><h3>' + escapeHTML(event.title) + '</h3><p>' + escapeHTML(event.description || "Descripción pendiente.") + '</p><div class="tag-row"><span class="tag">' + escapeHTML(event.position || "unknown") + '</span>' + (event.locationIds || []).map((id) => locationById(id)).filter(Boolean).map((loc) => '<span class="tag">' + escapeHTML(loc.name) + '</span>').join("") + '</div></article>');
+    } else if (activeView === "organizations") {
+      heading = "Organizaciones y facciones";
+      items = (state.organizations || []).filter((item) => matches([
+        item.name, item.organizationType, item.description, item.ideology, (item.goals || []).join(" "),
+        (item.leaderCharacterIds || []).map((id) => characterById(id)?.name || "").join(" "),
+        (item.memberCharacterIds || []).map((id) => characterById(id)?.name || "").join(" "),
+        locationById(item.baseLocationId)?.name || ""
+      ].join(" "), query)).map((organization) => {
+        const base = locationById(organization.baseLocationId);
+        return '<article class="entity-card organization-card' + (organization.id === selectedOrganizationId ? ' selected' : '') + '" data-organization="' + escapeHTML(organization.id) + '" tabindex="0" role="button" aria-pressed="' + String(organization.id === selectedOrganizationId) + '"><span class="avatar">⚑</span><h3>' + escapeHTML(organization.name) + '</h3><p>' + escapeHTML(organization.description || "Descripción pendiente.") + '</p><div class="tag-row"><span class="tag">' + escapeHTML(organization.organizationType || "Organización sin clasificar") + '</span><span class="tag">' + (organization.memberCharacterIds || []).length + ' miembros</span><span class="tag">' + escapeHTML(base ? base.name : "Sin sede") + '</span></div></article>';
+      });
     } else {
       heading = "Historias y novelas";
       items = state.stories.map((story) => '<article class="entity-card"><span class="avatar">▤</span><h3>' + escapeHTML(story.name) + '</h3><p>' + escapeHTML(story.description || "Sinopsis pendiente.") + '</p></article>');
       if (!items.length) items = ['<div class="empty-state">Todavía no hay novelas registradas. La próxima fase incorporará premisas, arcos, capítulos y escenas. Podés crear personajes y lugares mientras tanto.</div>'];
     }
     const selectedEvent = activeView === "timeline" ? state.events.find((event) => event.id === selectedEventId) : null;
+    const selectedOrganization = activeView === "organizations" ? (state.organizations || []).find((item) => item.id === selectedOrganizationId) : null;
     const selectedEventHTML = selectedEvent ? '<section id="selected-event-details" class="selected-event-card"><div class="event-detail-heading"><div><p class="eyebrow">ACONTECIMIENTO SELECCIONADO</p><h2>' + escapeHTML(selectedEvent.title) + '</h2></div><span class="tag">' + escapeHTML(selectedEvent.position || "unknown") + '</span></div><p>' + escapeHTML(selectedEvent.description || "Descripción pendiente.") + '</p><div class="tag-row">' + (selectedEvent.locationIds || []).map((id) => locationById(id)).filter(Boolean).map((location) => '<span class="tag">⌖ ' + escapeHTML(location.name) + '</span>').join("") + (selectedEvent.characterIds || []).map((id) => characterById(id)).filter(Boolean).map((character) => '<span class="tag">♙ ' + escapeHTML(character.name) + '</span>').join("") + '</div><div class="location-actions"><button type="button" id="edit-event-button" class="outline-button">Editar acontecimiento</button><button type="button" id="delete-event-button" class="outline-button danger-action">Eliminar acontecimiento</button></div></section>' : "";
-    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span></div>' + selectedEventHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>';
+    const selectedOrganizationHTML = selectedOrganization ? (() => {
+      const leaders = (selectedOrganization.leaderCharacterIds || []).map(characterById).filter(Boolean);
+      const members = (selectedOrganization.memberCharacterIds || []).map(characterById).filter(Boolean);
+      const base = locationById(selectedOrganization.baseLocationId);
+      return '<section id="selected-organization-details" class="selected-event-card"><div class="event-detail-heading"><div><p class="eyebrow">ORGANIZACIÓN SELECCIONADA</p><h2>' + escapeHTML(selectedOrganization.name) + '</h2></div><span class="tag">' + escapeHTML(selectedOrganization.status || "proposal") + '</span></div><p>' + escapeHTML(selectedOrganization.description || "Descripción pendiente.") + '</p><div class="detail-meta"><div><span>Tipo</span><strong>' + escapeHTML(selectedOrganization.organizationType || "Organización sin clasificar") + '</strong></div><div><span>Sede</span><strong>' + escapeHTML(base ? base.name : "Sin sede") + '</strong></div><div><span>Responsables</span><strong>' + escapeHTML(leaders.map((character) => character.name).join(", ") || "Sin asignar") + '</strong></div><div><span>Miembros</span><strong>' + escapeHTML(members.map((character) => character.name).join(", ") || "Sin miembros") + '</strong></div></div><div class="detail-divider"></div><span class="detail-type">IDEOLOGÍA</span><p>' + escapeHTML(selectedOrganization.ideology || "Sin definir") + '</p><div class="tag-row">' + (selectedOrganization.goals || []).map((goal) => '<span class="tag">' + escapeHTML(goal) + '</span>').join("") + '</div><div class="detail-divider"></div><span class="detail-type">HISTORIA</span><p>' + escapeHTML(selectedOrganization.history || "Sin historia registrada.") + '</p><div class="location-actions"><button type="button" id="edit-organization-button" class="outline-button">Editar organización</button><button type="button" id="delete-organization-button" class="outline-button danger-action">Eliminar organización</button></div></section>';
+    })() : "";
+    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span></div>' + selectedEventHTML + selectedOrganizationHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>';
     if (selectedEvent) {
       $("#edit-event-button").addEventListener("click", () => editEvent(selectedEvent.id));
       $("#delete-event-button").addEventListener("click", () => deleteEvent(selectedEvent.id));
+    }
+    if (selectedOrganization) {
+      $("#edit-organization-button").addEventListener("click", () => editOrganization(selectedOrganization.id));
+      $("#delete-organization-button").addEventListener("click", () => deleteOrganization(selectedOrganization.id));
     }
   }
 
@@ -355,6 +395,17 @@
     Array.from($("#event-characters").options).forEach((option) => { option.selected = selectedCharacters.has(option.value); });
   }
 
+  function populateOrganizationReferenceOptions(leaderIds = [], memberIds = [], baseLocationId = null) {
+    const leaders = new Set(leaderIds);
+    const members = new Set(memberIds);
+    $("#organization-leaders").innerHTML = state.characters.map((character) => '<option value="' + escapeHTML(character.id) + '">' + escapeHTML(character.name) + '</option>').join("");
+    $("#organization-members").innerHTML = state.characters.map((character) => '<option value="' + escapeHTML(character.id) + '">' + escapeHTML(character.name) + '</option>').join("");
+    $("#organization-base-location").innerHTML = '<option value="">Sin sede asignada</option>' + state.locations.map((location) => '<option value="' + escapeHTML(location.id) + '">' + escapeHTML(location.name) + '</option>').join("");
+    Array.from($("#organization-leaders").options).forEach((option) => { option.selected = leaders.has(option.value); });
+    Array.from($("#organization-members").options).forEach((option) => { option.selected = members.has(option.value); });
+    $("#organization-base-location").value = baseLocationId || "";
+  }
+
   function syncEventLocationReferences(event) {
     const selectedLocations = new Set(Array.isArray(event.locationIds) ? event.locationIds : []);
     state.locations.forEach((location) => {
@@ -370,9 +421,11 @@
     $("#location-type-field").classList.toggle("hidden", type !== "location");
     $("#character-fields").classList.toggle("hidden", type !== "character");
     $("#event-fields").classList.toggle("hidden", type !== "event");
-    $("#entity-name-label").textContent = type === "event" ? "Título del acontecimiento" : type === "location" ? "Nombre del lugar" : "Nombre del personaje";
-    $("#entity-name").placeholder = type === "event" ? "Título del acontecimiento" : "Nombre de la entidad";
+    $("#organization-fields").classList.toggle("hidden", type !== "organization");
+    $("#entity-name-label").textContent = type === "event" ? "Título del acontecimiento" : type === "location" ? "Nombre del lugar" : type === "organization" ? "Nombre de la organización" : "Nombre del personaje";
+    $("#entity-name").placeholder = type === "event" ? "Título del acontecimiento" : type === "organization" ? "Nombre del grupo" : "Nombre de la entidad";
     if (type === "event") populateEventReferenceOptions(selectedValues("#event-locations"), selectedValues("#event-characters"));
+    if (type === "organization") populateOrganizationReferenceOptions(selectedValues("#organization-leaders"), selectedValues("#organization-members"), $("#organization-base-location").value);
   }
 
   function addEntity() {
@@ -380,7 +433,7 @@
     form.dataset.editing = "";
     form.dataset.editingType = "";
     $("#entity-type").disabled = false;
-    $("#entity-type").value = activeView === "timeline" ? "event" : activeView === "places" ? "location" : "character";
+    $("#entity-type").value = activeView === "timeline" ? "event" : activeView === "places" ? "location" : activeView === "organizations" ? "organization" : "character";
     $("#dialog-title").textContent = "Crear entidad";
     $("#entity-name").value = "";
     $("#entity-description").value = "";
@@ -395,8 +448,17 @@
     $("#event-position").value = "unknown";
     $("#event-locations").innerHTML = "";
     $("#event-characters").innerHTML = "";
+    $("#organization-type").value = "Gremio";
+    $("#organization-ideology").value = "";
+    $("#organization-goals").value = "";
+    $("#organization-history").value = "";
+    $("#organization-status").value = "proposal";
+    $("#organization-leaders").innerHTML = "";
+    $("#organization-members").innerHTML = "";
+    $("#organization-base-location").innerHTML = "";
     updateEntityFieldVisibility();
     populateEventReferenceOptions([], []);
+    populateOrganizationReferenceOptions([], [], null);
     $("#entity-form button[type=\"submit\"]").textContent = "Guardar propuesta";
     $("#entity-dialog").showModal();
   }
@@ -481,6 +543,49 @@
     updateEntityFieldVisibility();
     $("#entity-form button[type=\"submit\"]").textContent = "Guardar cambios";
     $("#entity-dialog").showModal();
+  }
+
+  function editOrganization(id) {
+    const organization = (state.organizations || []).find((item) => item.id === id);
+    if (!organization) return;
+    const form = $("#entity-form");
+    form.dataset.editing = id;
+    form.dataset.editingType = "organization";
+    $("#entity-type").value = "organization";
+    $("#entity-type").disabled = true;
+    $("#dialog-title").textContent = "Editar organización";
+    $("#entity-name").value = organization.name || "";
+    $("#entity-description").value = organization.description || "";
+    $("#organization-type").value = organization.organizationType || "Organización sin clasificar";
+    $("#organization-ideology").value = organization.ideology || "";
+    $("#organization-goals").value = (organization.goals || []).join(", ");
+    $("#organization-history").value = organization.history || "";
+    $("#organization-status").value = organization.status || "proposal";
+    populateOrganizationReferenceOptions(organization.leaderCharacterIds || [], organization.memberCharacterIds || [], organization.baseLocationId || null);
+    updateEntityFieldVisibility();
+    $("#entity-form button[type=\"submit\"]").textContent = "Guardar cambios";
+    $("#entity-dialog").showModal();
+  }
+
+  function deleteOrganization(id) {
+    const organization = (state.organizations || []).find((item) => item.id === id);
+    if (!organization) return;
+    const leaderCount = (organization.leaderCharacterIds || []).length;
+    const memberCount = (organization.memberCharacterIds || []).length;
+    const base = locationById(organization.baseLocationId);
+    const summary = [
+      "Se eliminará la organización \"" + organization.name + "\".",
+      leaderCount ? leaderCount + " responsable(s) dejarán de figurar en esta organización." : "",
+      memberCount ? memberCount + " vínculo(s) de membresía dejarán de figurar en esta organización." : "",
+      base ? "La sede " + base.name + " seguirá existiendo." : "",
+      "No se borrará ningún personaje ni lugar. La operación no se puede deshacer; exportá una copia si querés conservarla."
+    ].filter(Boolean).join("\n");
+    if (!confirm(summary)) return;
+    state.organizations = (state.organizations || []).filter((item) => item.id !== id);
+    selectedOrganizationId = null;
+    activeView = "organizations";
+    saveProject();
+    render();
   }
 
   function deleteEvent(id) {
@@ -593,6 +698,27 @@
       return;
     }
 
+    if (editingId && editingType === "organization") {
+      const organization = (state.organizations || []).find((item) => item.id === editingId);
+      if (!organization) { alert("No se encontró la organización que se intentaba editar."); return; }
+      organization.name = name;
+      organization.description = description || "Descripción pendiente.";
+      organization.organizationType = $("#organization-type").value.trim() || "Organización sin clasificar";
+      organization.ideology = $("#organization-ideology").value.trim();
+      organization.goals = $("#organization-goals").value.split(",").map((goal) => goal.trim()).filter(Boolean);
+      organization.leaderCharacterIds = selectedValues("#organization-leaders");
+      organization.memberCharacterIds = selectedValues("#organization-members");
+      organization.baseLocationId = $("#organization-base-location").value || null;
+      organization.history = $("#organization-history").value.trim();
+      organization.status = $("#organization-status").value || "proposal";
+      selectedOrganizationId = organization.id;
+      activeView = "organizations";
+      saveProject();
+      $("#entity-dialog").close();
+      render();
+      return;
+    }
+
     const id = "local-" + type + "-" + Date.now().toString(36);
     if (type === "character") {
       const ageRaw = $("#character-age").value.trim();
@@ -621,6 +747,22 @@
       syncEventLocationReferences(newEvent);
       selectedEventId = id;
       activeView = "timeline";
+    } else if (type === "organization") {
+      const organization = {
+        id, name, description: description || "Descripción pendiente.",
+        organizationType: $("#organization-type").value.trim() || "Organización sin clasificar",
+        ideology: $("#organization-ideology").value.trim(),
+        goals: $("#organization-goals").value.split(",").map((goal) => goal.trim()).filter(Boolean),
+        leaderCharacterIds: selectedValues("#organization-leaders"),
+        memberCharacterIds: selectedValues("#organization-members"),
+        baseLocationId: $("#organization-base-location").value || null,
+        history: $("#organization-history").value.trim(),
+        status: $("#organization-status").value || "proposal"
+      };
+      state.organizations = state.organizations || [];
+      state.organizations.push(organization);
+      selectedOrganizationId = id;
+      activeView = "organizations";
     } else {
       state.locations.push({ id, name, type: locationType || "Lugar sin clasificar", parentId: null, description: description || "Descripción pendiente.", tags: ["Propuesta"], population: "Sin datos", government: "Sin datos", climate: "Sin datos", marker: [120 + Math.random() * 620, 90 + Math.random() * 390], characters: [], events: [] });
       activeView = "places";
@@ -663,6 +805,7 @@
       selectedLocationId = state.locations[0]?.id || null;
       selectedCharacterId = null;
       selectedEventId = null;
+      selectedOrganizationId = null;
       activeView = "atlas";
       render();
       $("#save-status").textContent = "Proyecto importado y guardado localmente";
@@ -754,7 +897,7 @@
   $("#import-file").addEventListener("change", (event) => importProject(event.target.files[0]));
   $("#new-project-button").addEventListener("click", () => {
     if (!confirm("¿Crear un proyecto vacío? Exportá el proyecto actual antes si querés conservar una copia.")) return;
-    state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], stories: [], settings: { time: "now" } };
+    state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], organizations: [], stories: [], settings: { time: "now" } };
     selectedLocationId = null;
     selectedCharacterId = null;
     selectedEventId = null;
@@ -781,18 +924,21 @@
     const character = event.target.closest("[data-character]");
     const location = event.target.closest("[data-location]");
     const eventCard = event.target.closest("[data-event]");
+    const organizationCard = event.target.closest("[data-organization]");
     if (character) { navigate("atlas"); openCharacter(character.dataset.character); }
     else if (location) showLocation(location.dataset.location);
     else if (eventCard) { selectedEventId = eventCard.dataset.event; renderDirectory(); }
+    else if (organizationCard) { selectedOrganizationId = organizationCard.dataset.organization; renderDirectory(); }
   });
   $("#directory-view").addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
-    const target = event.target.closest("[data-character],[data-location],[data-event]");
+    const target = event.target.closest("[data-character],[data-location],[data-event],[data-organization]");
     if (!target) return;
     event.preventDefault();
     if (target.dataset.character) { navigate("atlas"); openCharacter(target.dataset.character); }
     else if (target.dataset.location) showLocation(target.dataset.location);
     else if (target.dataset.event) { selectedEventId = target.dataset.event; renderDirectory(); }
+    else if (target.dataset.organization) { selectedOrganizationId = target.dataset.organization; renderDirectory(); }
   });
   $("#show-all-related").addEventListener("click", () => navigate("characters"));
   $("#command-form").addEventListener("submit", (event) => {
