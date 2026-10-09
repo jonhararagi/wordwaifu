@@ -98,7 +98,7 @@ No saltar directamente a generadores masivos antes de demostrar que el canon y l
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
-La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente subtarea activa es WF-004-A.3, resiliencia integrada de escrituras y recuperación.
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas y la persistencia activa están verificados en Chromium CI. La siguiente tarea activa es WF-004-B.1, registro de proyectos locales y selector de universos.
 
 ### Índice maestro multiverso
 - Separar proyectos/universos por IDs estables.
@@ -200,3 +200,13 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - Evidencia: [CI #37962660799 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/37962660799).
 - Pendiente para cerrar WF-004-A completo: pruebas integradas de fallo de transacción/ráfaga y prueba manual Windows.
 - Siguiente subtarea: WF-004-A.3, resiliencia integrada. TIMER: 2–4 horas.
+
+
+### WF-004-A.3 — DONE · Resiliencia integrada
+- La suite simula escrituras IndexedDB lentas consecutivas y comprueba que tanto IndexedDB como el respaldo terminan en el estado más reciente.
+- Un fallo real inyectado al método de escritura del repositorio deja intacta la copia local y hace que el estado de interfaz describa el fallback.
+- La importación no sustituye estado ni respaldo si fallan tanto IndexedDB como localStorage.
+- El proyecto se sigue pudiendo exportar y validar desde memoria tras el fallo.
+- Evidencia: [CI #37963611180 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/37963611180); 18 pruebas de esquema y smoke Chromium completo.
+- WF-004-A queda cerrado a nivel de automatización. La validación manual en Windows se mantiene como NOT_RUN.
+- Siguiente: WF-004-B.1, selector multiverso de proyectos. TIMER: 3–5 horas.
