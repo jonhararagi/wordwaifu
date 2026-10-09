@@ -293,14 +293,14 @@ async function run() {
         !Array.from(document.querySelectorAll("#snapshot-list option")).some((option) => option.value === deletedId),
       snapshotId);
     }
-    await page.waitForFunction((keptId) => {
+    await page.waitForFunction((ids) => {
       const options = Array.from(document.querySelectorAll("#snapshot-list option"));
-      return options.some((option) => option.value === keptId) &&
-        !options.some((option) => option.value === "PLACEHOLDER");
-    }, preImportSnapshotId);
-    assert.equal(await page.locator("#snapshot-list option").filter({hasValue: preImportSnapshotId}).count(), 1);
-    assert.equal(await page.locator("#snapshot-list option").filter({hasValue: uiSnapshotId}).count(), 0);
-    assert.equal(await page.locator("#snapshot-list option").filter({hasValue: automaticSnapshotId}).count(), 0);
+      return options.some((option) => option.value === ids[0]) &&
+        ids.slice(1).every((deletedId) => !options.some((option) => option.value === deletedId));
+    }, [preImportSnapshotId, uiSnapshotId, automaticSnapshotId]);
+    assert.equal(await page.locator('#snapshot-list option[value="' + preImportSnapshotId + '"]').count(), 1);
+    assert.equal(await page.locator('#snapshot-list option[value="' + uiSnapshotId + '"]').count(), 0);
+    assert.equal(await page.locator('#snapshot-list option[value="' + automaticSnapshotId + '"]').count(), 0);
     await page.locator("#project-close-button").click();
     process.stdout.write("PASS snapshot UI delete: selected copies require confirmation; older snapshots and the project survive.\\n");
 
