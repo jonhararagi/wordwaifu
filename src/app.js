@@ -388,8 +388,8 @@
     mapMode = "world";
     mapScale = 1;
     Object.keys(enabledLayers).forEach((layer) => { enabledLayers[layer] = true; });
-    $( "[data-layer]" ).forEach((input) => { input.checked = true; });
-    $( ".view-tab" ).forEach((tab) => tab.classList.toggle("active", tab.dataset.mapMode === "world"));
+    $$("[data-layer]").forEach((input) => { input.checked = true; });
+    $$(".view-tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.mapMode === "world"));
     $("#global-search").value = "";
     $("#time-select").value = "now";
     saveProject();
