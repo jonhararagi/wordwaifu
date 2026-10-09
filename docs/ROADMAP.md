@@ -100,7 +100,7 @@ No saltar directamente a generadores masivos antes de demostrar que el canon y l
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
-La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas y la persistencia activa están verificados en Chromium CI. La subtarea WF-004-B.1.1 (catálogo, creación y cambio entre universos) pasó Chromium CI #37966133138. El selector multiverso permanece PARTIAL hasta cerrar WF-004-B.1.2, borrado seguro y protección del proyecto activo.
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas y la persistencia activa están verificados en Chromium CI. El catálogo, el cambio validado entre universos y el borrado seguro pasaron Chromium CI #37988482281.
 
 ### Índice maestro multiverso
 - Separar proyectos/universos por IDs estables.
@@ -228,11 +228,18 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - **Siguiente:** WF-004-B.2, índice maestro multiverso sin mezclar universos. TIMER: 3–5 horas iniciales.
 
 
-### WF-004-B.2 — PARTIAL · Índice maestro multiverso
+### WF-004-B.2 — DONE · Índice maestro multiverso
 - Implementado `ProjectRepository.searchAcrossProjects(query, options)`: búsqueda de solo lectura sobre los universos en IndexedDB, con respaldo local de alcance limitado si falla la base.
 - Tipos iniciales: personajes, lugares, acontecimientos, organizaciones, relaciones e historias.
 - Resultados con `projectId`, `entityType`, `entityId`, nombre del universo y detalle; permite filtro por tipo y texto seleccionado, con normalización de acentos.
 - El estado activo permanece sin cambios. La búsqueda parcial indica explícitamente errores y no interpreta cero resultados parciales como una ausencia segura.
-- **Estado del gate:** PARTIAL mientras se verifica [CI #37996000708](https://github.com/jonhararagi/wordwaifu/actions/runs/37996000708). Ejecuciones previas detectaron dos defectos de test/código que se corrigieron antes del SHA candidato.
+- **PASS_REAL:** [CI #37996000708](https://github.com/jonhararagi/wordwaifu/actions/runs/37996000708), con smoke Chromium y validador estructural completados.
 - **No optimizado aún:** la búsqueda reconstruye el índice en memoria al consultar; no persiste un índice invertido.
-- Mantener `main` intacta y PR #1 en borrador. Próxima sesión: leer `docs/DONE.md`, comprobar el CI del HEAD vivo y cerrar WF-004-B.2 solo con PASS_REAL.
+- Mantener `main` intacta y PR #1 en borrador. Siguiente: WF-004-B.3, apertura contextual de un resultado usando `projectId + entityType + entityId`. TIMER inicial: 2–4 horas.
+
+
+### WF-004-B.3 — Próxima tarea · Apertura contextual de resultados
+- Abrir el resultado exacto desde el índice: cambiar de universo de manera transaccional y después enfocar el registro por tipo e ID, no por nombre.
+- Comprobar que el proyecto y la ficha sigan existiendo en el momento de la acción; manejar cambios concurrentes, destino ausente y fallos de guardado sin perder el proyecto previo.
+- Resultados en respaldo no verificado se muestran como referencias parciales, no como destino garantizado.
+- TIMER inicial: 2–4 horas; recalcular tras inspección.
