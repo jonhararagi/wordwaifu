@@ -67,10 +67,11 @@ async function run() {
     process.stdout.write("PASS atlas navigation: selecting a map marker opens its location.\n");
 
     const confirmPromise = page.waitForEvent("dialog");
-    await page.locator("#new-project-button").click();
+    const newProjectClick = page.locator("#new-project-button").click();
     const confirmDialog = await confirmPromise;
     assert.equal(confirmDialog.type(), "confirm");
     await confirmDialog.accept();
+    await newProjectClick;
     await page.locator("#details-panel").getByText(/Todavía no hay lugares/).waitFor();
     process.stdout.write("PASS empty state: a new empty project renders without stale locations.\n");
 
