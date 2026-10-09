@@ -581,6 +581,109 @@ async function run() {
     assert.equal(await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.some((item) => item.id === id), unrelatedOrganizationId), true);
     process.stdout.write("PASS organization export/import: references remain valid after round-trip.\n");
 
+    // Dedicated relationship CRUD: canonical records stay synchronized with old character-local lists.
+    await page.locator('.nav-item[data-view="relationships"]').click();
+    await page.locator("#add-button").click();
+    assert.equal(await page.locator("#entity-type").inputValue(), "relationship");
+    await page.locator("#entity-name").fill("Confianza recuperada");
+    await page.locator("#relationship-source").selectOption("wf-test-witness");
+    await page.locator("#relationship-target").selectOption(createdCharacter.id);
+    await page.locator("#relationship-type").selectOption("friendship");
+    await page.locator("#relationship-description").fill("Después de una discusión aprenden a confiar.");
+    await page.locator("#relationship-status").selectOption("canon");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-relationship-details h2").getByText("Confianza recuperada").waitFor();
+    const firstRelationship = await page.evaluate((targetId) => {
+      const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      return {
+        relationship: project.relationships.find((item) => item.name === "Confianza recuperada"),
+        source: project.characters.find((item) => item.id === "wf-test-witness"),
+        target: project.characters.find((item) => item.id === targetId)
+      };
+    }, createdCharacter.id);
+    assert.ok(firstRelationship.relationship.id.startsWith("local-relationship-"));
+    assert.equal(firstRelationship.relationship.relationshipType, "friendship");
+    assert.equal(firstRelationship.relationship.status, "canon");
+    assert.ok(firstRelationship.source.relationships.includes(createdCharacter.id));
+    assert.ok(firstRelationship.target.relationships.includes("wf-test-witness"));
+    process.stdout.write("PASS relationship create: canonical record and reciprocal projection are saved.\\n");
+
+    // Same pair + same type is blocked; a distinct type between that pair is allowed.
+    await page.locator("#add-button").click();
+    await page.locator("#entity-name").fill("Duplicado que no debe guardarse");
+    await page.locator("#relationship-source").selectOption("wf-test-witness");
+    await page.locator("#relationship-target").selectOption(createdCharacter.id);
+    await page.locator("#relationship-type").selectOption("friendship");
+    const duplicateRelationshipAlertPromise = page.waitForEvent("dialog");
+    const duplicateRelationshipSubmit = page.locator('#entity-form button[type="submit"]').click();
+    const duplicateRelationshipAlert = await duplicateRelationshipAlertPromise;
+    assert.equal(duplicateRelationshipAlert.type(), "alert");
+    assert.match(duplicateRelationshipAlert.message(), /Ya existe una relación/);
+    await duplicateRelationshipAlert.accept();
+    await duplicateRelationshipSubmit;
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.filter((item) => item.relationshipType === "friendship").length), 1);
+    await page.locator("#relationship-type").selectOption("rivalry");
+    await page.locator("#entity-name").fill("Rivalidad todavía viva");
+    await page.locator("#relationship-description").fill("Compiten por motivos distintos.");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-relationship-details h2").getByText("Rivalidad todavía viva").waitFor();
+    const secondRelationship = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.find((item) => item.name === "Rivalidad todavía viva"));
+    assert.ok(secondRelationship);
+    process.stdout.write("PASS relationship uniqueness: duplicate pair/type rejected; another type accepted.\\n");
+
+    const relationshipIdBeforeEdit = firstRelationship.relationship.id;
+    await page.locator('[data-relationship="' + relationshipIdBeforeEdit + '"]').click();
+    await page.locator("#edit-relationship-button").click();
+    await page.locator("#entity-name").fill("Alianza reconstruida");
+    await page.locator("#relationship-type").selectOption("alliance");
+    await page.locator("#relationship-description").fill("Ahora coordinan sus esfuerzos.");
+    await page.locator("#relationship-status").selectOption("canon");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-relationship-details h2").getByText("Alianza reconstruida").waitFor();
+    const editedRelationship = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.find((item) => item.id === id), relationshipIdBeforeEdit);
+    assert.equal(editedRelationship.id, relationshipIdBeforeEdit, "Editing a relationship must preserve its ID.");
+    assert.equal(editedRelationship.relationshipType, "alliance");
+    process.stdout.write("PASS relationship edit: stable ID and canonical fields update.\\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    await page.locator('.nav-item[data-view="relationships"]').click();
+    await page.locator('[data-relationship="' + relationshipIdBeforeEdit + '"]').click();
+    await page.locator("#selected-relationship-details h2").getByText("Alianza reconstruida").waitFor();
+    process.stdout.write("PASS relationship persistence: edits survive reload.\\n");
+
+    const deleteRelationshipDialogPromise = page.waitForEvent("dialog");
+    const deleteRelationshipClick = page.locator("#delete-relationship-button").click();
+    const deleteRelationshipDialog = await deleteRelationshipDialogPromise;
+    assert.equal(deleteRelationshipDialog.type(), "confirm");
+    assert.match(deleteRelationshipDialog.message(), /Los dos personajes se conservarán/);
+    await deleteRelationshipDialog.accept();
+    await deleteRelationshipClick;
+    const afterRelationshipDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
+    assert.equal(afterRelationshipDelete.relationships.some((item) => item.id === relationshipIdBeforeEdit), false);
+    assert.ok(afterRelationshipDelete.relationships.some((item) => item.id === secondRelationship.id), "A relation of another type must survive.");
+    assert.ok(afterRelationshipDelete.characters.some((item) => item.id === "wf-test-witness"), "The source character must survive.");
+    assert.ok(afterRelationshipDelete.characters.some((item) => item.id === createdCharacter.id), "The target character must survive.");
+    assert.equal(validateAndNormalizeProject(afterRelationshipDelete).valid, true, "Deleting a relationship should leave a valid graph.");
+    process.stdout.write("PASS relationship delete: one edge removed; both character records survive.\\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    const relationshipExportPromise = page.waitForEvent("download");
+    await page.locator("#export-button").click();
+    const relationshipExport = await relationshipExportPromise;
+    const relationshipExportPath = await relationshipExport.path();
+    const relationshipExportProject = JSON.parse(fs.readFileSync(relationshipExportPath, "utf8"));
+    const relationshipExportValidation = validateAndNormalizeProject(relationshipExportProject);
+    assert.equal(relationshipExportValidation.valid, true, relationshipExportValidation.errors.join("\\n"));
+    assert.ok(relationshipExportProject.relationships.some((item) => item.id === secondRelationship.id));
+    const relationshipImportAlertPromise = page.waitForEvent("dialog");
+    const relationshipImport = page.locator("#import-file").setInputFiles(relationshipExportPath);
+    const relationshipImportAlert = await relationshipImportAlertPromise;
+    assert.match(relationshipImportAlert.message(), /Proyecto importado correctamente/i);
+    await relationshipImportAlert.accept();
+    await relationshipImport;
+    assert.ok(await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.some((item) => item.id === id), secondRelationship.id));
+    process.stdout.write("PASS relationship export/import: IDs and graph survive round-trip.\\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {
