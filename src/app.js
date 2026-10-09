@@ -170,7 +170,7 @@
     mapScale = 1;
     $("#global-search").value = "";
     $("#time-select").value = "now";
-    $(".view-tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.mapMode === "world"));
+    $$(".view-tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.mapMode === "world"));
     render();
   }
 
