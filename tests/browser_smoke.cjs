@@ -63,9 +63,27 @@ async function run() {
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
 
-    await page.locator('g.map-marker[data-location="loc-velado"]').first().click();
-    await page.locator("#details-panel h2").getByText("Bosque Velado").waitFor();
-    process.stdout.write("PASS atlas navigation: selecting a map marker opens its location.\n");
+    const forestMarker = page.locator('g.map-marker[data-location="loc-velado"]').first();
+    await forestMarker.click();
+    const forestSelected = await page.waitForFunction(
+      () => document.querySelector("#details-panel h2")?.textContent === "Bosque Velado",
+      { timeout: 2500 }
+    ).then(() => true).catch(() => false);
+    if (!forestSelected) {
+      const diagnostic = await page.evaluate(() => ({
+        heading: document.querySelector("#details-panel h2")?.textContent || null,
+        activeView: document.querySelector(".nav-item.active")?.dataset.view || null,
+        mapVisible: !document.querySelector("#atlas-layout").classList.contains("hidden"),
+        markers: Array.from(document.querySelectorAll('g.map-marker[data-location="loc-velado"]')).map((marker) => ({
+          className: marker.getAttribute("class"),
+          transform: marker.getAttribute("transform"),
+          rect: (() => { const box = marker.getBoundingClientRect(); return { x: box.x, y: box.y, width: box.width, height: box.height }; })()
+        })),
+        headingHtml: document.querySelector("#details-panel").innerHTML.slice(0, 450)
+      }));
+      throw new Error("Marker click diagnostic: " + JSON.stringify(diagnostic));
+    }
+    process.stdout.write("PASS atlas navigation: selecting a map marker opens its location.\\n");
 
     const asteriaMarker = page.locator('g.map-marker[data-location="loc-asteria"]').first();
     await page.locator("#layers-button").click();
