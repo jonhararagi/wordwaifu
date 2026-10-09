@@ -30,7 +30,7 @@ if html_path.is_file():
 
 if js_path.is_file():
     js = js_path.read_text(encoding="utf-8")
-    for required in ("STORAGE_KEY", "charactersAt", "renderDetails", "exportProject", "importProject", "executeCommand"):
+    for required in ("STORAGE_KEY", "charactersAt", "renderDetails", "exportProject", "importProject", "executeCommand", '$(".map-marker").forEach'):
         require(required in js, "Falta componente esperado en src/app.js: " + required)
 
 if css_path.is_file():
