@@ -39,8 +39,12 @@
     if (input.organizations !== undefined && !Array.isArray(input.organizations)) {
       errors.push("organizations debe ser una lista.");
     }
+    if (input.relationships !== undefined && !Array.isArray(input.relationships)) {
+      errors.push("relationships debe ser una lista.");
+    }
     if (errors.length) return { valid: false, errors, project: null };
 
+    const hasExplicitRelationships = Array.isArray(input.relationships);
     const project = {
       ...input,
       project: { ...input.project },
@@ -48,15 +52,39 @@
       characters: input.characters.map((item) => isRecord(item) ? { ...item } : item),
       events: input.events.map((item) => isRecord(item) ? { ...item } : item),
       organizations: Array.isArray(input.organizations) ? input.organizations.map((item) => isRecord(item) ? { ...item } : item) : [],
+      relationships: hasExplicitRelationships ? input.relationships.map((item) => isRecord(item) ? { ...item } : item) : [],
       stories: Array.isArray(input.stories) ? input.stories.map((item) => isRecord(item) ? { ...item } : item) : [],
       settings: isRecord(input.settings) ? { ...input.settings } : { time: "now" }
     };
+
+    // Legacy relationship arrays are migrated into a single stable record per pair.
+    if (!hasExplicitRelationships) {
+      const knownCharacterIds = new Set(project.characters.filter(isRecord).map((character) => character.id).filter(isNonEmptyString));
+      const migrated = new Map();
+      for (const character of project.characters) {
+        if (!isRecord(character) || !isNonEmptyString(character.id) || !Array.isArray(character.relationships)) continue;
+        for (const relatedId of character.relationships) {
+          if (!isNonEmptyString(relatedId) || relatedId === character.id || !knownCharacterIds.has(relatedId)) continue;
+          const [sourceCharacterId, targetCharacterId] = [character.id, relatedId].sort();
+          const key = sourceCharacterId + "\\u0000" + targetCharacterId;
+          if (!migrated.has(key)) migrated.set(key, {
+            id: "rel-legacy-" + encodeURIComponent(sourceCharacterId) + "-" + encodeURIComponent(targetCharacterId),
+            name: "Relación heredada", sourceCharacterId, targetCharacterId,
+            relationshipType: "other",
+            description: "Relación migrada desde la ficha del proyecto anterior.",
+            status: "unknown"
+          });
+        }
+      }
+      project.relationships = Array.from(migrated.values());
+    }
 
     const groups = [
       ["locations", project.locations],
       ["characters", project.characters],
       ["events", project.events],
       ["organizations", project.organizations],
+      ["relationships", project.relationships],
       ["stories", project.stories]
     ];
     const ids = new Set();
@@ -123,6 +151,26 @@
         visited.add(parentId);
         parentId = locationById.get(parentId).parentId;
       }
+    }
+
+    if (hasExplicitRelationships) {
+      project.characters.forEach((character, index) => {
+        if (!isRecord(character)) return;
+        if (character.relationships !== undefined && character.relationships !== null &&
+            (!Array.isArray(character.relationships) || character.relationships.some((id) => typeof id !== "string"))) {
+          errors.push("characters[" + index + "].relationships debe ser una lista de textos.");
+        }
+        character.relationships = [];
+      });
+      const projectionCharacters = new Map(project.characters.filter(isRecord).map((character) => [character.id, character]));
+      project.relationships.forEach((relationship) => {
+        if (!isRecord(relationship)) return;
+        const source = projectionCharacters.get(relationship.sourceCharacterId);
+        const target = projectionCharacters.get(relationship.targetCharacterId);
+        if (!source || !target || source.id === target.id) return;
+        source.relationships.push(target.id);
+        target.relationships.push(source.id);
+      });
     }
 
     project.characters.forEach((character, index) => {
@@ -192,6 +240,50 @@
         }
         if (typeof organization[key] !== "string") errors.push(path + "." + key + " debe ser texto.");
       }
+    });
+
+    const relationCharacters = new Map(project.characters.filter(isRecord).map((character) => [character.id, character]));
+    const seenRelationshipKeys = new Set();
+    project.relationships.forEach((relationship, index) => {
+      const path = "relationships[" + index + "]";
+      if (!isRecord(relationship)) {
+        errors.push(path + " debe ser un objeto.");
+        return;
+      }
+      const sourceId = relationship.sourceCharacterId;
+      const targetId = relationship.targetCharacterId;
+      if (!isNonEmptyString(sourceId) || !characterIds.has(sourceId)) errors.push(path + ".sourceCharacterId referencia un personaje inexistente.");
+      if (!isNonEmptyString(targetId) || !characterIds.has(targetId)) errors.push(path + ".targetCharacterId referencia un personaje inexistente.");
+      if (isNonEmptyString(sourceId) && sourceId === targetId) errors.push(path + " no puede relacionar un personaje consigo mismo.");
+      if (relationship.relationshipType === undefined || relationship.relationshipType === null || relationship.relationshipType === "") {
+        relationship.relationshipType = "other";
+      } else if (typeof relationship.relationshipType !== "string") {
+        errors.push(path + ".relationshipType debe ser texto.");
+      } else {
+        relationship.relationshipType = relationship.relationshipType.trim() || "other";
+      }
+      if (relationship.description === undefined || relationship.description === null) relationship.description = "";
+      if (typeof relationship.description !== "string") errors.push(path + ".description debe ser texto.");
+      if (relationship.status === undefined || relationship.status === null) relationship.status = "proposal";
+      if (typeof relationship.status !== "string") errors.push(path + ".status debe ser texto.");
+
+      if (isNonEmptyString(sourceId) && isNonEmptyString(targetId) && sourceId !== targetId &&
+          characterIds.has(sourceId) && characterIds.has(targetId) && typeof relationship.relationshipType === "string") {
+        const [firstId, secondId] = [sourceId, targetId].sort();
+        const key = firstId + "\\u0000" + secondId + "\\u0000" + relationship.relationshipType.toLowerCase();
+        if (seenRelationshipKeys.has(key)) errors.push(path + " duplica una relación existente entre el mismo par y tipo.");
+        else seenRelationshipKeys.add(key);
+      }
+    });
+
+    project.characters.forEach((character) => { if (isRecord(character)) character.relationships = []; });
+    project.relationships.forEach((relationship) => {
+      if (!isRecord(relationship)) return;
+      const source = relationCharacters.get(relationship.sourceCharacterId);
+      const target = relationCharacters.get(relationship.targetCharacterId);
+      if (!source || !target || source.id === target.id) return;
+      if (!source.relationships.includes(target.id)) source.relationships.push(target.id);
+      if (!target.relationships.includes(source.id)) target.relationships.push(source.id);
     });
 
     project.stories.forEach((story, index) => {

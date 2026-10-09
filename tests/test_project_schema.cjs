@@ -46,6 +46,7 @@ function testValidProjectNormalizesOptionalFields() {
   assert.equal(result.valid, true, result.errors.join("\n"));
   assert.deepEqual(result.project.stories, []);
   assert.deepEqual(result.project.organizations, []);
+  assert.deepEqual(result.project.relationships, []);
   assert.deepEqual(result.project.settings, { time: "now" });
   assert.deepEqual(result.project.locations[0].marker, [200, 150]);
 }
@@ -187,6 +188,83 @@ function testOrganizationIdsAreGloballyUnique() {
   assert.match(result.errors.join("\\n"), /ID duplicado/);
 }
 
+function testMigratesLegacyCharacterRelationshipsToStableRecords() {
+  const input = validProject();
+  const second = structuredClone(input.characters[0]);
+  second.id = "char-b";
+  second.name = "Juno";
+  second.relationships = ["char-a"];
+  input.characters[0].relationships = ["char-b"];
+  input.characters.push(second);
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\\n"));
+  assert.equal(result.project.relationships.length, 1, "Reciprocal legacy links become one relationship.");
+  const relationship = result.project.relationships[0];
+  assert.ok(relationship.id.startsWith("rel-legacy-"));
+  assert.deepEqual([relationship.sourceCharacterId, relationship.targetCharacterId].sort(), ["char-a", "char-b"]);
+  assert.deepEqual(result.project.characters.find((character) => character.id === "char-a").relationships, ["char-b"]);
+  assert.deepEqual(result.project.characters.find((character) => character.id === "char-b").relationships, ["char-a"]);
+}
+
+function testValidatesExplicitRelationshipsAndBuildsCompatibilityProjection() {
+  const input = validProject();
+  const second = structuredClone(input.characters[0]);
+  second.id = "char-b";
+  second.name = "Juno";
+  second.relationships = ["char-missing"];
+  input.characters.push(second);
+  input.relationships = [{
+    id: "rel-a", name: "Confianza recuperada", sourceCharacterId: "char-a",
+    targetCharacterId: "char-b", relationshipType: "friendship",
+    description: "Aprenden a confiar.", status: "canon"
+  }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\\n"));
+  assert.deepEqual(result.project.characters.find((character) => character.id === "char-a").relationships, ["char-b"]);
+  assert.deepEqual(result.project.characters.find((character) => character.id === "char-b").relationships, ["char-a"]);
+}
+
+function testRejectsInvalidRelationshipEndpointsAndSelfLinks() {
+  const missing = validProject();
+  missing.relationships = [{ id: "rel-a", name: "Rota", sourceCharacterId: "char-a", targetCharacterId: "missing", relationshipType: "other" }];
+  const missingResult = validateAndNormalizeProject(missing);
+  assert.equal(missingResult.valid, false);
+  assert.match(missingResult.errors.join("\\n"), /targetCharacterId referencia un personaje inexistente/);
+
+  const self = validProject();
+  self.relationships = [{ id: "rel-a", name: "Auto", sourceCharacterId: "char-a", targetCharacterId: "char-a", relationshipType: "other" }];
+  const selfResult = validateAndNormalizeProject(self);
+  assert.equal(selfResult.valid, false);
+  assert.match(selfResult.errors.join("\\n"), /no puede relacionar un personaje consigo mismo/);
+}
+
+function testRejectsDuplicateRelationshipPairsAndTypes() {
+  const input = validProject();
+  const second = structuredClone(input.characters[0]);
+  second.id = "char-b";
+  second.name = "Juno";
+  second.relationships = [];
+  input.characters.push(second);
+  input.relationships = [
+    { id: "rel-a", name: "Amistad", sourceCharacterId: "char-a", targetCharacterId: "char-b", relationshipType: "friendship" },
+    { id: "rel-b", name: "Amigos", sourceCharacterId: "char-b", targetCharacterId: "char-a", relationshipType: "friendship" }
+  ];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join("\\n"), /duplica una relación existente/);
+}
+
+function testRelationshipIDsAreGloballyUnique() {
+  const input = validProject();
+  input.relationships = [{
+    id: "char-a", name: "Colisión", sourceCharacterId: "char-a",
+    targetCharacterId: "char-a", relationshipType: "other"
+  }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join("\\n"), /ID duplicado/);
+}
+
 const tests = [
   testValidProjectNormalizesOptionalFields,
   testMissingOptionalFieldsReceiveSafeDefaults,
@@ -200,7 +278,12 @@ const tests = [
   testLegacyProjectDefaultsOrganizationsToEmpty,
   testOrganizationFieldsAndReferencesNormalize,
   testRejectsDanglingOrganizationReferences,
-  testOrganizationIdsAreGloballyUnique
+  testOrganizationIdsAreGloballyUnique,
+  testMigratesLegacyCharacterRelationshipsToStableRecords,
+  testValidatesExplicitRelationshipsAndBuildsCompatibilityProjection,
+  testRejectsInvalidRelationshipEndpointsAndSelfLinks,
+  testRejectsDuplicateRelationshipPairsAndTypes,
+  testRelationshipIDsAreGloballyUnique
 ];
 
 for (const test of tests) {
