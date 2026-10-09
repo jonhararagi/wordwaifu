@@ -199,7 +199,7 @@
     const dynamicLayer = $("#dynamic-markers");
     if (dynamicLayer) {
       dynamicLayer.replaceChildren();
-      state.locations.filter((location) => !$(".map-marker:not(.event-marker)").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
+      state.locations.filter((location) => !$$(".map-marker:not(.event-marker)").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
         const point = Array.isArray(location.marker) ? location.marker : [450, 300];
         if (!Array.isArray(location.marker)) location.marker = point;
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
