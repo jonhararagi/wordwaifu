@@ -118,7 +118,7 @@
     const dynamicLayer = $("#dynamic-markers");
     if (dynamicLayer) {
       dynamicLayer.replaceChildren();
-      state.locations.filter((location) => !$(".map-marker[data-location=\"" + location.id + "\"]")).forEach((location) => {
+      state.locations.filter((location) => !$(".map-marker").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
         const point = Array.isArray(location.marker) ? location.marker : [450, 300];
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
         group.setAttribute("class", "map-marker custom-marker");
