@@ -117,12 +117,38 @@ async function run() {
     await page.locator('[data-view="atlas"]').click();
     await page.locator("g.map-marker.custom-marker").click();
     await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
+    const targetLocationId = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.find((item) => item.name === "Ciudad de Prueba").id);
     process.stdout.write("PASS create/select: a new location appears in the directory and atlas.\n");
+
+    await page.locator("#edit-location-button").click();
+    assert.equal(await page.locator("#entity-name").inputValue(), "Ciudad de Prueba");
+    await page.locator("#entity-name").fill("Ciudad Renombrada");
+    await page.locator("#location-type").fill("Ciudad independiente");
+    await page.locator("#entity-description").fill("Descripción actualizada desde la ficha del atlas.");
+    await page.locator('#entity-form button[type="submit"]').click();
+    assert.equal(await page.locator("#details-panel h2").innerText(), "Ciudad Renombrada");
+    assert.equal(await page.locator("#details-panel .detail-type").innerText(), "Ciudad independiente");
+    process.stdout.write("PASS edit: name, category and description update while preserving the ID.\n");
+
+    const markerBeforeDrag = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.find((item) => item.id === id).marker, targetLocationId);
+    const draggableMarker = page.locator('g.map-marker[data-location="' + targetLocationId + '"]').first();
+    const markerBox = await draggableMarker.boundingBox();
+    assert.ok(markerBox, "The created location marker should be visible for dragging.");
+    await page.mouse.move(markerBox.x + markerBox.width/2, markerBox.y + markerBox.height/2);
+    await page.mouse.down();
+    await page.mouse.move(markerBox.x + markerBox.width/2 + 42, markerBox.y + markerBox.height/2 + 26, { steps: 8 });
+    await page.mouse.up();
+    const markerAfterDrag = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.find((item) => item.id === id).marker, targetLocationId);
+    assert.ok(Math.hypot(markerAfterDrag[0]-markerBeforeDrag[0],markerAfterDrag[1]-markerBeforeDrag[1]) > 10, "Dragging should persist a new map position.");
+    assert.ok(markerAfterDrag[0]>=12&&markerAfterDrag[0]<=888&&markerAfterDrag[1]>=12&&markerAfterDrag[1]<=588);
+    process.stdout.write("PASS move: dragging a marker stores bounded SVG coordinates.\n");
 
     await page.reload({ waitUntil: "networkidle" });
     await page.locator("#project-name").getByText("Mi nuevo universo").waitFor();
-    await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
-    process.stdout.write("PASS persistence: the created location survives a page reload.\n");
+    await page.locator("#details-panel h2").getByText("Ciudad Renombrada").waitFor();
+    const markerAfterReload = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.find((item) => item.id === id).marker, targetLocationId);
+    assert.deepEqual(markerAfterReload, markerAfterDrag, "Moved marker coordinates should survive a reload.");
+    process.stdout.write("PASS persistence: edited location and marker coordinates survive a reload.\n");
 
     const downloadPromise = page.waitForEvent("download");
     await page.locator("#export-button").click();
@@ -165,6 +191,69 @@ async function run() {
     await page.locator("#project-name").getByText("Mi nuevo universo").waitFor();
     await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
     process.stdout.write("PASS safe import: malformed project is rejected without replacing active data.\n");
+
+    const referenceFixture = JSON.parse(JSON.stringify(exportedProject));
+    referenceFixture.locations.push({ id:"wf-test-child-location",name:"Distrito de Prueba",type:"Distrito",parentId:targetLocationId,
+      description:"Ubicación hija creada para probar la limpieza de referencias.",tags:[],population:"Sin datos",government:"Sin datos",climate:"Sin datos",
+      marker:[235,255],characters:["wf-test-resident"],events:["wf-test-event"] });
+    referenceFixture.characters.push({ id:"wf-test-resident",name:"Habitante de Prueba",age:30,species:"Humana",role:"Habitante",personality:[],
+      description:"Personaje vinculado al lugar que se borrará.",motivation:"",flaw:"",
+      locationHistory:[{locationId:targetLocationId,from:"chapter1",to:"now"}],relationships:[],status:"proposal" });
+    referenceFixture.events.push({ id:"wf-test-event",title:"Evento de Prueba",position:"chapter1",description:"Debe conservarse sin el lugar eliminado.",
+      locationIds:[targetLocationId],characterIds:["wf-test-resident"] });
+    const fixtureImportPromise=page.waitForEvent("dialog");
+    const fixtureImportSelection=page.locator("#import-file").setInputFiles({name:"wordwaifu-delete-reference-fixture.json",mimeType:"application/json",buffer:Buffer.from(JSON.stringify(referenceFixture),"utf8")});
+    const fixtureImportAlert=await fixtureImportPromise;
+    assert.equal(fixtureImportAlert.type(),"alert");
+    assert.match(fixtureImportAlert.message(),/Proyecto importado correctamente/i);
+    await fixtureImportAlert.accept();
+    await fixtureImportSelection;
+    await page.locator('g.map-marker[data-location="' + targetLocationId + '"]').first().click();
+    await page.locator("#details-panel h2").getByText("Ciudad Renombrada").waitFor();
+
+    const deleteDialogPromise=page.waitForEvent("dialog");
+    const deleteClick=page.locator("#delete-location-button").click();
+    const deleteDialog=await deleteDialogPromise;
+    assert.equal(deleteDialog.type(),"confirm");
+    assert.match(deleteDialog.message(),/ubicación\(es\) hija\(s\)/);
+    assert.match(deleteDialog.message(),/historial de personajes/);
+    assert.match(deleteDialog.message(),/acontecimiento\(s\)/);
+    await deleteDialog.accept();
+    await deleteClick;
+
+    const afterDeletion=await page.evaluate(()=>JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
+    assert.equal(afterDeletion.locations.some((item)=>item.id===targetLocationId),false);
+    const survivingChild=afterDeletion.locations.find((item)=>item.id==="wf-test-child-location");
+    assert.ok(survivingChild);
+    assert.equal(survivingChild.parentId,null);
+    const survivingCharacter=afterDeletion.characters.find((item)=>item.id==="wf-test-resident");
+    assert.ok(survivingCharacter);
+    assert.equal(survivingCharacter.locationHistory.some((entry)=>entry.locationId===targetLocationId),false);
+    const survivingEvent=afterDeletion.events.find((item)=>item.id==="wf-test-event");
+    assert.ok(survivingEvent);
+    assert.equal(survivingEvent.locationIds.includes(targetLocationId),false);
+    process.stdout.write("PASS delete: confirmation, child reparenting and reference cleanup work.\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    await page.locator("#details-panel h2").getByText("Distrito de Prueba").waitFor();
+    const finalDownloadPromise=page.waitForEvent("download");
+    await page.locator("#export-button").click();
+    const finalDownload=await finalDownloadPromise, finalPath=await finalDownload.path();
+    assert.ok(finalPath);
+    const finalProject=JSON.parse(fs.readFileSync(finalPath,"utf8"));
+    const finalValidation=validateAndNormalizeProject(finalProject);
+    assert.equal(finalValidation.valid,true,finalValidation.errors.join("\n"));
+    assert.equal(finalProject.locations.some((item)=>item.id==="wf-test-child-location"&&item.parentId===null),true);
+    assert.equal(finalProject.characters.find((item)=>item.id==="wf-test-resident").locationHistory.length,0);
+    assert.deepEqual(finalProject.events.find((item)=>item.id==="wf-test-event").locationIds,[]);
+    const finalRoundTripAlertPromise=page.waitForEvent("dialog");
+    const finalImportSelection=page.locator("#import-file").setInputFiles(finalPath);
+    const finalRoundTripAlert=await finalRoundTripAlertPromise;
+    assert.match(finalRoundTripAlert.message(),/Proyecto importado correctamente/i);
+    await finalRoundTripAlert.accept();
+    await finalImportSelection;
+    await page.locator("#details-panel h2").getByText("Distrito de Prueba").waitFor();
+    process.stdout.write("PASS post-delete round-trip: valid state survives reload, export and import.\n");
 
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");

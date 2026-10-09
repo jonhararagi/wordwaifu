@@ -117,12 +117,62 @@
     renderDirectory();
   }
 
+  function mapPointFromPointer(event) {
+    const svg = $("#world-map"), mapArt = $("#map-art"), matrix = mapArt && mapArt.getScreenCTM();
+    if (!svg || !matrix) return null;
+    const point = svg.createSVGPoint(); point.x = event.clientX; point.y = event.clientY;
+    const local = point.matrixTransform(matrix.inverse());
+    return { x: local.x, y: local.y };
+  }
+
+  function clampMarkerPoint(point) {
+    return { x: Math.max(12, Math.min(888, point.x)), y: Math.max(12, Math.min(588, point.y)) };
+  }
+
+  function bindMarkerInteractions(marker) {
+    if (!marker || marker.classList.contains("event-marker") || marker.dataset.markerInteractionsBound) return;
+    marker.dataset.markerInteractionsBound = "true";
+    marker.addEventListener("pointerdown", (event) => {
+      if (event.button !== 0 || event.isPrimary === false) return;
+      const location = locationById(marker.dataset.location), point = mapPointFromPointer(event);
+      if (!location || !point) return;
+      const origin = Array.isArray(location.marker) ? location.marker : [450, 300];
+      marker._wordwaifuDrag = { pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,offsetX:origin[0]-point.x,offsetY:origin[1]-point.y,origin,moving:false,current:origin };
+      try { marker.setPointerCapture(event.pointerId); } catch { /* Pointer capture is optional. */ }
+      event.preventDefault();
+    });
+    marker.addEventListener("pointermove", (event) => {
+      const drag = marker._wordwaifuDrag;
+      if (!drag || drag.pointerId !== event.pointerId) return;
+      if (!drag.moving && Math.hypot(event.clientX-drag.startX,event.clientY-drag.startY)<4) return;
+      const point = mapPointFromPointer(event);
+      if (!point) return;
+      drag.moving = true;
+      const next = clampMarkerPoint({x:point.x+drag.offsetX,y:point.y+drag.offsetY});
+      drag.current = [next.x,next.y];
+      marker.setAttribute("transform","translate("+next.x+" "+next.y+")");
+    });
+    const finishDrag = (event,cancelled) => {
+      const drag=marker._wordwaifuDrag;
+      if(!drag||drag.pointerId!==event.pointerId)return;
+      marker._wordwaifuDrag=null;
+      if(cancelled){const location=locationById(marker.dataset.location),point=location&&Array.isArray(location.marker)?location.marker:drag.origin;marker.setAttribute("transform","translate("+point[0]+" "+point[1]+")");return;}
+      if(!drag.moving)return;
+      const location=locationById(marker.dataset.location);if(!location)return;
+      location.marker=drag.current.map((value)=>Math.round(value*10)/10);
+      saveProject();renderMap();
+    };
+    marker.addEventListener("pointerup",(event)=>finishDrag(event,false));
+    marker.addEventListener("pointercancel",(event)=>finishDrag(event,true));
+  }
+
   function renderMap() {
     const dynamicLayer = $("#dynamic-markers");
     if (dynamicLayer) {
       dynamicLayer.replaceChildren();
-      state.locations.filter((location) => !$$(".map-marker").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
+      state.locations.filter((location) => !$(".map-marker:not(.event-marker)").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
         const point = Array.isArray(location.marker) ? location.marker : [450, 300];
+        if (!Array.isArray(location.marker)) location.marker = point;
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
         group.setAttribute("class", "map-marker custom-marker");
         group.setAttribute("data-location", location.id);
@@ -143,9 +193,18 @@
         dynamicLayer.appendChild(group);
       });
     }
-    $$(".map-marker").forEach((marker) => {
+    $(".map-marker").forEach((marker) => {
       const locationId = marker.dataset.location;
-      const missingLocation = !locationById(locationId);
+      const location = locationById(locationId);
+      if (location && !marker.classList.contains("event-marker")) {
+        if (!Array.isArray(location.marker)) location.marker = [450, 300];
+        marker.setAttribute("transform", "translate(" + location.marker[0] + " " + location.marker[1] + ")");
+        marker.setAttribute("aria-label", "Abrir " + location.name);
+        const label = marker.querySelector(":scope > text");
+        if (label) label.textContent = location.name.toUpperCase();
+        bindMarkerInteractions(marker);
+      }
+      const missingLocation = !location;
       marker.classList.toggle("selected", locationId === selectedLocationId);
       const layerDisabled = marker.classList.contains("event-marker") ? !enabledLayers.events : !enabledLayers.places;
       marker.classList.toggle("hidden", missingLocation || layerDisabled);
@@ -171,7 +230,9 @@
     }
     const people = charactersAt(location.id);
     const event = state.events.find((entry) => entry.locationIds.includes(location.id));
-    $("#details-panel").innerHTML = '<div class="detail-cover"></div><span class="detail-type">' + escapeHTML(location.type) + '</span><h2>' + escapeHTML(location.name) + '</h2><p>' + escapeHTML(location.description) + '</p><div class="tag-row">' + location.tags.map((tag) => '<span class="tag">' + escapeHTML(tag) + '</span>').join("") + '</div><div class="detail-divider"></div><div class="detail-meta"><div><span>Población</span><strong>' + escapeHTML(location.population || "Sin datos") + '</strong></div><div><span>Gobierno</span><strong>' + escapeHTML(location.government || "Sin datos") + '</strong></div><div><span>Clima</span><strong>' + escapeHTML(location.climate || "Sin datos") + '</strong></div><div><span>Personajes presentes</span><strong>' + people.length + '</strong></div></div><div class="detail-divider"></div><div class="section-title"><strong>Último acontecimiento relacionado</strong></div><p>' + escapeHTML(event ? event.title + " · " + event.description : "Todavía no hay acontecimientos vinculados.") + '</p>';
+    $("#details-panel").innerHTML = '<div class="detail-cover"></div><span class="detail-type">' + escapeHTML(location.type) + '</span><h2>' + escapeHTML(location.name) + '</h2><p>' + escapeHTML(location.description) + '</p><div class="location-actions"><button type="button" id="edit-location-button" class="outline-button">Editar lugar</button><button type="button" id="delete-location-button" class="outline-button danger-action">Eliminar lugar</button></div><p class="marker-help">Arrastrá el marcador en el mapa para cambiar su posición.</p><div class="tag-row">' + location.tags.map((tag) => '<span class="tag">' + escapeHTML(tag) + '</span>').join("") + '</div><div class="detail-divider"></div><div class="detail-meta"><div><span>Población</span><strong>' + escapeHTML(location.population || "Sin datos") + '</strong></div><div><span>Gobierno</span><strong>' + escapeHTML(location.government || "Sin datos") + '</strong></div><div><span>Clima</span><strong>' + escapeHTML(location.climate || "Sin datos") + '</strong></div><div><span>Personajes presentes</span><strong>' + people.length + '</strong></div></div><div class="detail-divider"></div><div class="section-title"><strong>Último acontecimiento relacionado</strong></div><p>' + escapeHTML(event ? event.title + " · " + event.description : "Todavía no hay acontecimientos vinculados.") + '</p>';
+    $("#edit-location-button").addEventListener("click", () => editLocation(location.id));
+    $("#delete-location-button").addEventListener("click", () => deleteLocation(location.id));
     $("#related-title").textContent = "Personajes en " + location.name;
     $("#related-list").innerHTML = people.length ? people.map((character) => '<div class="related-person" data-character="' + escapeHTML(character.id) + '" tabindex="0" role="button"><span class="avatar">' + escapeHTML(initials(character.name)) + '</span><div><strong>' + escapeHTML(character.name) + '</strong><small>' + escapeHTML(character.role) + ' · ' + escapeHTML(character.species) + '</small></div><span class="arrow">↗</span></div>').join("") : '<div class="empty-state">No hay personajes registrados aquí en este momento narrativo.</div>';
   }
@@ -232,26 +293,93 @@
     render();
   }
 
+  function updateLocationTypeVisibility() {
+    $("#location-type-field").classList.toggle("hidden", $("#entity-type").value !== "location");
+  }
+
   function addEntity() {
     $("#entity-form").dataset.editing = "";
+    $("#entity-type").disabled = false;
     $("#dialog-title").textContent = "Crear entidad";
     $("#entity-name").value = "";
     $("#entity-description").value = "";
+    $("#location-type").value = "Lugar sin clasificar";
+    $("#entity-form button[type=\"submit\"]").textContent = "Guardar propuesta";
+    updateLocationTypeVisibility();
     $("#entity-dialog").showModal();
+  }
+
+  function editLocation(id) {
+    const location = locationById(id);
+    if (!location) return;
+    $("#entity-form").dataset.editing = id;
+    $("#entity-type").value = "location";
+    $("#entity-type").disabled = true;
+    $("#dialog-title").textContent = "Editar ubicación";
+    $("#entity-name").value = location.name;
+    $("#entity-description").value = location.description || "";
+    $("#location-type").value = location.type || "Lugar sin clasificar";
+    $("#entity-form button[type=\"submit\"]").textContent = "Guardar cambios";
+    updateLocationTypeVisibility();
+    $("#entity-dialog").showModal();
+  }
+
+  function deleteLocation(id) {
+    const location = locationById(id);
+    if (!location) return;
+    const children = state.locations.filter((item) => item.parentId === id);
+    const historyCount = state.characters.reduce((count, character) => count + (character.locationHistory || []).filter((entry) => entry.locationId === id).length, 0);
+    const eventCount = state.events.filter((item) => (item.locationIds || []).includes(id)).length;
+    const summary = [
+      "Se eliminará \"" + location.name + "\".",
+      children.length ? children.length + " ubicación(es) hija(s) pasarán a su ubicación padre." : "",
+      historyCount ? historyCount + " entrada(s) de historial de personajes perderán esta ubicación." : "",
+      eventCount ? eventCount + " acontecimiento(s) conservarán sus datos, pero dejarán de enlazar este lugar." : "",
+      "La operación no se puede deshacer. Exportá una copia antes si querés conservarla."
+    ].filter(Boolean).join("\n");
+    if (!confirm(summary)) return;
+    const fallbackParentId = location.parentId && location.parentId !== id && locationById(location.parentId) ? location.parentId : null;
+    const nextSelectionId = children[0]?.id || state.locations.find((item) => item.id !== id)?.id || null;
+    state.locations = state.locations.filter((item) => item.id !== id);
+    state.locations.forEach((item) => { if (item.parentId === id) item.parentId = fallbackParentId; });
+    state.characters.forEach((character) => { character.locationHistory = (character.locationHistory || []).filter((entry) => entry.locationId !== id); });
+    state.events.forEach((item) => { item.locationIds = (item.locationIds || []).filter((locationId) => locationId !== id); });
+    selectedLocationId = nextSelectionId;
+    selectedCharacterId = null;
+    activeView = "atlas";
+    saveProject();
+    render();
   }
 
   function handleEntitySubmit(event) {
     event.preventDefault();
+    const form = $("#entity-form");
+    const editingId = form.dataset.editing;
     const type = $("#entity-type").value;
     const name = $("#entity-name").value.trim();
     const description = $("#entity-description").value.trim();
+    const locationType = $("#location-type").value.trim();
     if (!name) return;
+    if (editingId) {
+      const location = locationById(editingId);
+      if (!location) { alert("No se encontró la ubicación que se intentaba editar."); return; }
+      location.name = name;
+      location.type = locationType || "Lugar sin clasificar";
+      location.description = description || "Descripción pendiente.";
+      selectedLocationId = location.id;
+      selectedCharacterId = null;
+      activeView = "atlas";
+      saveProject();
+      $("#entity-dialog").close();
+      render();
+      return;
+    }
     const id = "local-" + type + "-" + Date.now().toString(36);
     if (type === "character") {
       state.characters.push({ id, name, age: null, species: "Sin definir", role: "Sin definir", personality: [], description: description || "Descripción pendiente.", motivation: "", flaw: "", locationHistory: [], relationships: [], status: "proposal" });
       activeView = "characters";
     } else {
-      state.locations.push({ id, name, type: "Lugar sin clasificar", parentId: null, description: description || "Descripción pendiente.", tags: ["Propuesta"], population: "Sin datos", government: "Sin datos", climate: "Sin datos", marker: [120 + Math.random() * 620, 90 + Math.random() * 390], characters: [], events: [] });
+      state.locations.push({ id, name, type: locationType || "Lugar sin clasificar", parentId: null, description: description || "Descripción pendiente.", tags: ["Propuesta"], population: "Sin datos", government: "Sin datos", climate: "Sin datos", marker: [120 + Math.random() * 620, 90 + Math.random() * 390], characters: [], events: [] });
       activeView = "places";
     }
     saveProject();
@@ -375,6 +503,7 @@
   });
   $("#add-button").addEventListener("click", addEntity);
   $("#entity-form").addEventListener("submit", handleEntitySubmit);
+  $("#entity-type").addEventListener("change", updateLocationTypeVisibility);
   $("#dialog-close").addEventListener("click", () => $("#entity-dialog").close());
   $("#dialog-cancel").addEventListener("click", () => $("#entity-dialog").close());
   $("#export-button").addEventListener("click", exportProject);
