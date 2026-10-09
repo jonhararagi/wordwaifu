@@ -1664,9 +1664,17 @@
         relationships: Array.isArray(validation.project.relationships) ? validation.project.relationships : undefined
       });
       const operationSequence = ++persistenceSequence;
-      const saveReport = await enqueueRepositoryOperation(() => {
+      const saveReport = await enqueueRepositoryOperation(async () => {
         if (!projectRepository) throw new Error("El repositorio de proyectos no está disponible.");
-        return projectRepository.saveActive(candidate);
+        const previousProject = structuredClone(state);
+        if (!previousProject || !previousProject.project || typeof previousProject.project.id !== "string") {
+          throw new Error("No se pudo identificar el proyecto anterior para respaldarlo antes de importar.");
+        }
+        // Flush the exact active content, then create and verify a versioned snapshot before replacing it.
+        await projectRepository.write(previousProject);
+        const preImportSnapshot = await projectRepository.createSnapshot(previousProject, { reason: "before-import" });
+        const persisted = await projectRepository.saveActive(candidate);
+        return { ...persisted, preImportSnapshotId: preImportSnapshot.snapshotId };
       });
       state = candidate;
       selectedLocationId = state.locations[0]?.id || null;

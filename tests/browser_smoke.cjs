@@ -90,6 +90,29 @@ async function run() {
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
 
+    // A successful import must snapshot the previous active project before replacing it.
+    const preImportExportPromise = page.waitForEvent("download");
+    await page.locator("#export-button").click();
+    const preImportExport = await preImportExportPromise;
+    const preImportExportPath = await preImportExport.path();
+    assert.ok(preImportExportPath);
+    const preImportAlertPromise = page.waitForEvent("dialog");
+    const preImportSelection = page.locator("#import-file").setInputFiles(preImportExportPath);
+    const preImportAlert = await preImportAlertPromise;
+    assert.match(preImportAlert.message(), /Proyecto importado correctamente/i);
+    await preImportAlert.accept();
+    await preImportSelection;
+    const preImportSnapshots = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const snapshots = await repository.listSnapshots("project-asteria");
+      repository.close();
+      return snapshots.map((snapshot) => ({ id: snapshot.snapshotId, reason: snapshot.reason, valid: snapshot.valid }));
+    });
+    assert.ok(preImportSnapshots.some((snapshot) => snapshot.reason === "before-import" && snapshot.valid),
+      "Successful import must leave a verified snapshot of the pre-import project.");
+    const preImportSnapshotId = preImportSnapshots.find((snapshot) => snapshot.reason === "before-import" && snapshot.valid).id;
+    process.stdout.write("PASS import safety: valid import creates a verified snapshot before replacement.\\n");
+
     // Upgrade a real v1 database without losing its projects, then exercise versioned snapshots.
     const snapshotRepositoryEvidence = await page.evaluate(async () => {
       const databaseName = "wordwaifu.snapshot-migration." + Date.now().toString(36);
@@ -270,12 +293,16 @@ async function run() {
         !Array.from(document.querySelectorAll("#snapshot-list option")).some((option) => option.value === deletedId),
       snapshotId);
     }
-    await page.waitForFunction(() => {
+    await page.waitForFunction((keptId) => {
       const options = Array.from(document.querySelectorAll("#snapshot-list option"));
-      return options.length === 1 && options[0].value === "";
-    });
+      return options.some((option) => option.value === keptId) &&
+        !options.some((option) => option.value === "PLACEHOLDER");
+    }, preImportSnapshotId);
+    assert.equal(await page.locator("#snapshot-list option").filter({hasValue: preImportSnapshotId}).count(), 1);
+    assert.equal(await page.locator("#snapshot-list option").filter({hasValue: uiSnapshotId}).count(), 0);
+    assert.equal(await page.locator("#snapshot-list option").filter({hasValue: automaticSnapshotId}).count(), 0);
     await page.locator("#project-close-button").click();
-    process.stdout.write("PASS snapshot UI delete: individual copies require confirmation and leave the project intact.\\n");
+    process.stdout.write("PASS snapshot UI delete: selected copies require confirmation; older snapshots and the project survive.\\n");
 
 
     const backupOnlyDeleteGuard = await page.evaluate(async () => {
