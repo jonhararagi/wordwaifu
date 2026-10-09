@@ -102,6 +102,8 @@ async function run() {
     assert.equal(confirmDialog.type(), "confirm");
     await confirmDialog.accept();
     await newProjectClick;
+    assert.equal(await page.locator("#global-search").inputValue(), "");
+    assert.equal(await page.locator("#time-select").inputValue(), "now");
     await page.locator("#details-panel").getByText(/Todavía no hay lugares/).waitFor();
     process.stdout.write("PASS empty state: a new empty project renders without stale locations.\n");
 
