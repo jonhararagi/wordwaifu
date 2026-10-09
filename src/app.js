@@ -138,7 +138,6 @@
       if (!location || !point) return;
       const origin = Array.isArray(location.marker) ? location.marker : [450, 300];
       marker._wordwaifuDrag = { pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,offsetX:origin[0]-point.x,offsetY:origin[1]-point.y,origin,moving:false,current:origin };
-      try { marker.setPointerCapture(event.pointerId); } catch { /* Pointer capture is optional. */ }
     });
     marker.addEventListener("pointermove", (event) => {
       const drag = marker._wordwaifuDrag;
@@ -146,7 +145,10 @@
       if (!drag.moving && Math.hypot(event.clientX-drag.startX,event.clientY-drag.startY)<4) return;
       const point = mapPointFromPointer(event);
       if (!point) return;
-      drag.moving = true;
+      if (!drag.moving) {
+        drag.moving = true;
+        try { marker.setPointerCapture(event.pointerId); } catch { /* Pointer capture is optional. */ }
+      }
       const next = clampMarkerPoint({x:point.x+drag.offsetX,y:point.y+drag.offsetY});
       drag.current = [next.x,next.y];
       marker.setAttribute("transform","translate("+next.x+" "+next.y+")");
