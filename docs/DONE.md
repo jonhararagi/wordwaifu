@@ -2,70 +2,68 @@ DONE
 
 # WordWaifu · Punto de continuidad
 
-**Tarea cerrada:** WF-004-B.2 · Índice maestro multiverso, búsqueda entre proyectos sin mezclar datos.
-**Estado:** implementación, pruebas de navegador y validación estructural de CI completadas.
+**Tarea cerrada:** WF-004-B.3 · Apertura contextual desde resultados del índice maestro.
+**Estado:** PASS_REAL. La apertura cambia de universo de forma validada, enfoca la entidad exacta por ID y revierte el cambio si la persistencia o el destino fallan.
 **Fecha:** 2026-10-09.
 
 ## Estado de Git
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama: `foundation/story-foundry-north-star`.
-- HEAD BEFORE de WF-004-B.2: `3874a73fd899b74d2464a2ca7b950f6420338923`.
-- HEAD de código validado: `1f363739b931f2732fe076b60cb488414fbdbe71`.
-- CI de código: **PASS_REAL**, [ejecución #37996000708](https://github.com/jonhararagi/wordwaifu/actions/runs/37996000708).
-- CI del cierre documental anterior: **PASS_REAL**, [ejecución #37996129056](https://github.com/jonhararagi/wordwaifu/actions/runs/37996129056).
-- HEAD verificado antes de este cierre documental: `7e63c46cb51edccaa19ed61ff523f844a0f9e5b8`. El nuevo commit de documentos estará después del SHA de código probado; al retomar, consultar siempre el HEAD vivo.
+- Rama de trabajo: `foundation/story-foundry-north-star`.
+- HEAD BEFORE de esta iteración: `a972cdcc76de4a9f5211626cbe4ed747b63a29c7`.
+- HEAD de código probado: `83a7a6afb96725b3d1c5301c6dc0ed025c9ef205`.
+- CI final de código y pruebas: **PASS_REAL**, [ejecución #38000904219](https://github.com/jonhararagi/wordwaifu/actions/runs/38000904219).
+- CI anterior del mismo conjunto funcional: **PASS_REAL**, [ejecución #38000652000](https://github.com/jonhararagi/wordwaifu/actions/runs/38000652000).
+- El cierre documental se añadirá como un commit posterior a `83a7a6afb96725b3d1c5301c6dc0ed025c9ef205`; verificar ese HEAD nuevo después del commit antes de la siguiente tarea.
 - PR #1: [abierto y en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), no fusionado ni marcado listo.
 - `main` permanece intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
 
-## Trabajo implementado
-- `ProjectRepository.searchAcrossProjects(query, options)` recorre los proyectos en IndexedDB mediante una transacción de solo lectura. No activa, escribe ni sustituye el proyecto activo.
-- La búsqueda abarca personajes, lugares, acontecimientos, organizaciones, relaciones e historias, con filtro por tipo y texto en nombres y campos relevantes.
-- Normaliza acentos y mayúsculas. Por ejemplo, buscar `cartografa` permite encontrar «Cartógrafa».
-- Cada resultado incluye ID del proyecto, nombre del universo, tipo de entidad, ID de entidad, nombre y detalle. La identidad contextual es `projectId + entityType + entityId`, por lo que dos universos pueden usar `char-mira` sin colisionar.
-- Se añadió la sección «Índice maestro» al gestor de proyectos, con campo de búsqueda, filtro por tipo, conteo/estado y resultados.
-- Los resultados se representan con nodos DOM y `textContent`, sin insertar datos narrativos como HTML.
-- Si falla IndexedDB, solo se usan datos del respaldo local disponible, con `complete: false` y advertencia. La UI dice **BÚSQUEDA PARCIAL** y no afirma que la ausencia de resultados parciales sea definitiva.
-- Se limitan los resultados mostrados y se informa si están truncados. Registros inconsistentes o fuentes de almacenamiento fallidas no producen una afirmación de búsqueda completa.
-- Se registró el contrato de datos y el diseño del índice en `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`.
+## Trabajo verificado
+- El resultado del índice maestro mantiene la identidad compuesta `projectId + entityType + entityId`; un ID de ficha repetido en dos universos no colisiona.
+- Antes de abrir, la aplicación guarda/verifica el proyecto activo en IndexedDB. El destino de otro universo se lee desde IndexedDB directamente, sin aceptar un respaldo local sin verificar como destino confiable.
+- El proyecto destino se valida y la ficha se busca por tipo e ID exacto. Si el proyecto o la ficha desaparecen después de la búsqueda, no se abre una ficha con nombre parecido.
+- La transición solo se confirma cuando la persistencia en IndexedDB se verifica. Si falla, la app restaura el proyecto y espacio de trabajo anteriores.
+- Se conservan otros universos y sus registros; la búsqueda no edita el proyecto activo.
+- El resultado abierto cierra el gestor de proyectos, muestra la ficha y traslada el foco de teclado al destino exacto.
+- Añadidas aserciones explícitas de foco para el personaje exacto en el universo activo y para un personaje con el mismo ID en un segundo universo.
 
-## Archivos de implementación
-- `src/project-repository.js`: motor de búsqueda multiverso de solo lectura.
-- `src/app.js`: formulario, estado, resultados seguros y reporte de búsqueda parcial.
-- `index.html`: controles accesibles del índice en el gestor de proyectos.
-- `src/styles.css`: estilos de la sección y tarjetas de resultado.
-- `tests/browser_smoke.cjs`: pruebas de IDs coincidentes en universos diferentes, búsquedas por campos, acentos, filtro de tipo, cero resultados y error de IndexedDB.
-- `scripts/validate_project.py`: requisitos estáticos para el nuevo método y controles.
+## Archivos cambiados en esta iteración
+- `tests/browser_smoke.cjs`: dos comprobaciones de foco de teclado tras abrir desde el índice maestro. No se cambió lógica de producción porque ya implementaba el contrato y pasó su suite previa; este cierre confirma el comportamiento con una prueba adicional.
+- `docs/DONE.md`: reemplazado por este punto de continuidad.
+- `docs/STATUS.md`, `docs/ROADMAP.md`, `docs/WORK_PROTOCOL.md`: estado de hito y próxima tarea actualizados.
+- `docs/TECHNICAL_RESEARCH.md`: nuevo registro de decisiones de navegación contextual y recuperación ante fallos.
 
 ## Evidencia
-- **PASS_REAL:** [CI #37996000708](https://github.com/jonhararagi/wordwaifu/actions/runs/37996000708), terminó con éxito.
-- **PASS_STATIC:** 18 pruebas de esquema aprobadas, más sintaxis JavaScript y validación estructural.
-- **PASS_REAL:** Chromium verificó dos resultados con el mismo ID de entidad pero distinto proyecto, sin cambiar el ID activo ni alterar los datos de Asteria o del segundo universo.
-- **PASS_REAL:** Chromium verificó búsqueda por campos y acentos, filtro por tipo, resultado vacío tras lectura completa y estado parcial ante fallo de IndexedDB.
-- **PASS_REAL:** la suite de regresión completa para selector multiverso, CRUD, persistencia, relaciones, importación/exportación y recuperación continuó pasando sin errores de página.
-- **FAIL_REAL durante desarrollo, corregidos antes del cierre:** una búsqueda de sede llamó a un `Map` como función; el test del respaldo parcial no aisló el filtro de tipo. Ambos problemas se reprodujeron, corrigieron y la ejecución final del código pasó.
-- **NOT_RUN:** prueba visual/manual en Windows 11; CI usó Chromium headless.
+- **PASS_REAL:** [CI #38000904219](https://github.com/jonhararagi/wordwaifu/actions/runs/38000904219), incluye sintaxis, validador, prueba Chromium y validación estructural.
+- **PASS_STATIC:** 18 pruebas de esquema aprobadas.
+- **PASS_REAL:** Chromium verifica búsqueda multiverso por IDs compuestos, filtro por tipo/campos, normalización de acentos, resultado vacío tras búsqueda completa y error de IndexedDB declarado como búsqueda parcial.
+- **PASS_REAL:** proyecto destino ausente, ficha eliminada tras la búsqueda y fallo simulado de persistencia son rechazados sin perder el proyecto anterior.
+- **PASS_REAL:** apertura exacta en el universo actual y en un segundo universo; ambas fichas reciben foco de teclado.
+- **PASS_REAL:** suite de regresión de CRUD de ubicaciones, personajes, acontecimientos, organizaciones, relaciones, persistencia IndexedDB, migración, import/export y fallos de almacenamiento completada sin errores de página.
+- **NOT_RUN:** validación manual/visual en la PC Windows 11 del usuario; Chromium CI corre en modo headless.
 
 ## Límites conocidos
-- El índice se reconstruye desde las entidades guardadas en cada consulta. No hay índice invertido persistente ni caché; optimizarlo requerirá métricas y una invalidación demostrada.
-- Los resultados muestran la referencia del canon, pero todavía no abren automáticamente la ficha dentro de su universo. Ese será el siguiente trabajo.
-- El índice inicial recorre los proyectos disponibles en IndexedDB. Si solo puede consultar un respaldo local ante un error, informa cobertura parcial y no pretende haber buscado en todos los universos.
+- La búsqueda reconstruye resultados desde proyectos locales en cada consulta; no hay índice invertido persistente.
+- El respaldo local es un único snapshot compatible, no un historial versionado con selección y restauración.
+- Aún no existe historial de revisiones del canon por entidad ni un mecanismo de comparación visual entre versiones.
 
 ## Progreso global
-**Estimación: 17%** de la visión total, ponderada subjetivamente por alcance; no es porcentaje de código ni de cobertura. El almacenamiento local, el selector de universos y la búsqueda inicial multiverso tienen gates automatizados. El manuscrito/Novel Studio, los generadores, Continuity Guard y la integración con BotImagen siguen pendientes.
+**Estimación: 18%** de la visión completa, ponderada subjetivamente por alcance. No representa porcentaje de código ni cobertura. Los circuitos CRUD, persistencia, selector multiverso, borrado seguro, índice maestro y apertura contextual tienen cobertura automatizada. Generadores narrativos, Novel Studio, Content Guard, snapshots versionados, auditoría temporal e integración con BotImagen siguen pendientes.
 
 ## Siguiente tarea activa
-**WF-004-B.3 — Apertura contextual desde resultados del índice maestro.**
+**WF-004-C.1 — Respaldos versionados y restauración segura.**
 
-**TIMER inicial: 2–4 horas**, recalcular después de inspeccionar los puntos de entrada.
+**TIMER inicial: 4–7 horas**, recalcular tras inspeccionar el esquema IndexedDB y los puntos de importación, borrado y cambio de proyecto.
 
 ### Criterios de aceptación
-1. Un resultado mantiene `projectId`, `entityType` y `entityId` y ofrece una acción explícita para abrirlo.
-2. Al abrir un resultado de otro universo, guardar/verificar el universo activo actual antes del cambio, validar y persistir el proyecto destino y mantener intactos los demás proyectos.
-3. Tras el cambio, enfocar la ficha exacta por tipo e ID sin confiar solo en el nombre. Si la ficha ya no existe, informar y no abrir un registro parecido.
-4. Los resultados de respaldo local no verificado no deben tratarse como registros disponibles para navegación completa; explicar que hace falta recuperar/verificar el proyecto.
-5. Chromium cubre un resultado del proyecto activo, uno de un proyecto distinto con ID repetido, una ficha borrada entre búsqueda y apertura, un destino ausente y errores de persistencia.
-6. CI PASS; actualizar `STATUS.md`, `ROADMAP.md` y sobrescribir este `DONE.md`.
-7. Mantener `main` intacta, PR #1 abierto en borrador; la validación manual de Windows sigue como `NOT_RUN` hasta realizarla.
+1. Migrar el esquema IndexedDB de forma no destructiva y añadir un almacén de snapshots versionados.
+2. Registrar snapshot inmutable con ID propio, projectId, fecha, causa y copia de datos validable.
+3. Crear respaldo antes de las acciones que sustituyen o destruyen datos; no llamar «respaldo verificado» a una copia cuyo guardado/lectura no haya sido comprobado.
+4. Enumerar snapshots por proyecto, aislando por ID de proyecto incluso si dos universos comparten nombres.
+5. Restaurar solo tras confirmación y validación; mantener el ID del proyecto y dejar intactos los demás proyectos.
+6. Definir retención/capacidad y borrado individual de snapshots sin borrar el proyecto ni otros snapshots.
+7. Probar migración de una base IndexedDB v1, crear/listar/restaurar, proyectos con nombres/IDs similares, JSON inválido, error de persistencia y que el activo no cambie si falla una restauración.
+8. Chromium CI PASS, actualizar documentos y sobrescribir de nuevo `docs/DONE.md`.
+9. Mantener `main` intacta, PR #1 en borrador y la prueba manual de Windows como `NOT_RUN` hasta ejecutarla.
 
 ### Antes de empezar
-Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD/PR/CI vivos. Inspeccionar `src/project-repository.js`, `src/app.js`, `index.html` y `tests/browser_smoke.cjs`.
+Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD/PR/CI vivos. Inspeccionar `src/project-repository.js`, `src/app.js`, `index.html`, `tests/browser_smoke.cjs` y las pruebas de migración existentes.

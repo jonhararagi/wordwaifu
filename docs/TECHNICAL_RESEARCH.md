@@ -50,3 +50,19 @@ La lectura de esos proyectos no demuestra que sus soluciones sean mejores en tod
 
 ### Decisión y gate
 WordWaifu ofrece búsqueda en personajes, lugares, acontecimientos, organizaciones, relaciones e historias, con filtro por tipo y texto sobre nombre/campos pertinentes. La siguiente validación debe demostrar en Chromium la identidad compuesta entre dos universos, búsqueda de campos, resultado vacío tras una lectura completa y estado parcial ante fallo de IndexedDB. El código no se marca como terminado antes de que la CI del HEAD vivo quede en PASS.
+
+
+## 2026-10-09 · Apertura contextual desde una búsqueda multiverso
+
+### Invariantes comprobados
+- Un resultado buscado no es una referencia global por nombre: la identidad exige `projectId + entityType + entityId`.
+- La apertura es una transición de estado. Primero se persiste/verifica el universo actual y después se valida el proyecto/ficha destino antes de actualizar el activo.
+- Un hit puede quedar obsoleto entre la búsqueda y el clic. La apertura debe volver a consultar por ID en el almacén primario y rechazar destinos borrados o registros con IDs diferentes.
+- El proyecto en respaldo local es evidencia de recuperación, no prueba de que exista una ficha verificada en IndexedDB. No debe ofrecerse como destino garantizado.
+- La navegación funcional también necesita validar el foco de teclado; tras cerrar el diálogo debe enfocar la ficha exacta y no dejar el foco en un control oculto.
+
+### Evidencia y decisión aplicada
+- [CI #38000904219](https://github.com/jonhararagi/wordwaifu/actions/runs/38000904219) verificó en Chromium destinos inexistentes, IDs de personajes repetidos en diferentes universos, rollback al fallar la persistencia y foco exacto tras abrir resultados.
+- WordWaifu usa la clave compuesta en la ruta de apertura, conserva el proyecto previo ante fallos y no mezcla los datos de otros universos.
+- La prueba añadida verifica que `document.activeElement` sea el encabezado `h2` esperado dentro de `#details-panel`, tanto para el universo activo como para otro universo.
+- La lectura de los datos no sustituye la prueba manual visual en Windows 11, que sigue en `NOT_RUN`.

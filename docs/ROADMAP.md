@@ -31,9 +31,9 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 - [x] CRUD básico de relaciones canónicas con migración retrocompatible desde `characters[].relationships` (WF-003-A; Chromium CI #37951860214 PASS).
 - [x] Repositorio desacoplado + IndexedDB integrado al ciclo de vida de la aplicación (WF-004-A.2; CI #37962660799 PASS). `localStorage` se conserva como respaldo/fallback.
 - [x] Catálogo local por ID, creación de universo con identidad estable y cambio validado entre proyectos (WF-004-B.1.1; Chromium CI #37966133138 PASS).
-- Exportar/importar JSON con validación.
-- Búsqueda e índice maestro de referencias por IDs estables.
-- Copias de seguridad versionadas.
+- [x] Exportar/importar JSON con validación.
+- [x] Búsqueda e índice maestro de referencias por IDs estables, incluida apertura contextual verificada.
+- [ ] Copias de seguridad versionadas y restauración selectiva; siguiente tarea WF-004-C.1 (TIMER 4–7 horas).
 - [x] WF-004-B.1.2: eliminación segura de proyectos y protección del proyecto activo (CI #37988482281 PASS).
 
 **Gate:** reiniciar el navegador no pierde el proyecto y exportar/importar conserva las relaciones.
@@ -238,8 +238,10 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - Mantener `main` intacta y PR #1 en borrador. Siguiente: WF-004-B.3, apertura contextual de un resultado usando `projectId + entityType + entityId`. TIMER inicial: 2–4 horas.
 
 
-### WF-004-B.3 — Próxima tarea · Apertura contextual de resultados
-- Abrir el resultado exacto desde el índice: cambiar de universo de manera transaccional y después enfocar el registro por tipo e ID, no por nombre.
-- Comprobar que el proyecto y la ficha sigan existiendo en el momento de la acción; manejar cambios concurrentes, destino ausente y fallos de guardado sin perder el proyecto previo.
-- Resultados en respaldo no verificado se muestran como referencias parciales, no como destino garantizado.
-- TIMER inicial: 2–4 horas; recalcular tras inspección.
+### WF-004-B.3 — DONE · Apertura contextual del índice maestro
+- La acción de un resultado valida `projectId + entityType + entityId`; las identidades locales repetidas en universos distintos siguen separadas.
+- Guarda/verifica el proyecto anterior; lee el destino de IndexedDB, valida el proyecto y confirma que la ficha exacta exista antes del cambio.
+- Ante proyecto/ficha ausente o fallo de persistencia, rechaza la acción y restaura el proyecto anterior; un respaldo local no verificado no se ofrece como destino confiable.
+- Chromium CI PASS_REAL: [#38000904219](https://github.com/jonhararagi/wordwaifu/actions/runs/38000904219), incluidos rollback y fallos sembrados.
+- Se añadió aserción de accesibilidad: tras abrir el resultado, el foco queda en el encabezado exacto, incluso con IDs de personaje repetidos en otro universo.
+- Siguiente: WF-004-C.1, respaldos versionados y restauración segura. TIMER: 4–7 horas.
