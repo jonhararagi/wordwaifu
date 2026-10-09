@@ -90,6 +90,130 @@ async function run() {
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
 
+    // Upgrade a real v1 database without losing its projects, then exercise versioned snapshots.
+    const snapshotRepositoryEvidence = await page.evaluate(async () => {
+      const databaseName = "wordwaifu.snapshot-migration." + Date.now().toString(36);
+      const storageKey = databaseName + ".backup";
+      const baseProject = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const projectA = JSON.parse(JSON.stringify(baseProject));
+      projectA.project = { ...projectA.project, id: "snapshot-project-a", name: "Universo Snapshot A" };
+      const projectB = JSON.parse(JSON.stringify(baseProject));
+      projectB.project = { ...projectB.project, id: "snapshot-project-b", name: "Universo Snapshot B" };
+
+      await new Promise((resolve, reject) => {
+        const openRequest = indexedDB.open(databaseName, 1);
+        openRequest.onupgradeneeded = () => {
+          openRequest.result.createObjectStore("projects", { keyPath: "projectId" });
+          openRequest.result.createObjectStore("metadata", { keyPath: "key" });
+        };
+        openRequest.onerror = () => reject(openRequest.error || new Error("Could not create v1 test database."));
+        openRequest.onsuccess = () => {
+          const database = openRequest.result;
+          const tx = database.transaction(["projects", "metadata"], "readwrite");
+          tx.objectStore("projects").put({ projectId: projectA.project.id, data: projectA });
+          tx.objectStore("projects").put({ projectId: projectB.project.id, data: projectB });
+          tx.objectStore("metadata").put({ key: "activeProjectId", value: projectA.project.id });
+          tx.oncomplete = () => { database.close(); resolve(); };
+          tx.onerror = () => reject(tx.error || new Error("Could not seed v1 projects."));
+          tx.onabort = () => reject(tx.error || new Error("v1 seed transaction aborted."));
+        };
+      });
+
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository({ databaseName, storageKey });
+      const database = await repository.open();
+      const migration = {
+        version: database.version,
+        hasSnapshots: database.objectStoreNames.contains("snapshots"),
+        hasProjects: database.objectStoreNames.contains("projects"),
+        hasMetadata: database.objectStoreNames.contains("metadata"),
+        nameA: (await repository.read("projects", projectA.project.id))?.data?.project?.name,
+        nameB: (await repository.read("projects", projectB.project.id))?.data?.project?.name
+      };
+
+      const snapshotA = await repository.createSnapshot(projectA, { reason: "manual-test" });
+      const snapshotB = await repository.createSnapshot(projectB, { reason: "isolation-test" });
+      const listA = await repository.listSnapshots(projectA.project.id);
+      const listB = await repository.listSnapshots(projectB.project.id);
+
+      const invalidSnapshot = {
+        snapshotId: "snapshot-invalid-" + Date.now().toString(36),
+        projectId: projectA.project.id,
+        createdAt: new Date().toISOString(),
+        reason: "corrupted-test",
+        data: { schemaVersion: 99, project: projectA.project, locations: [], characters: [], events: [], organizations: [], relationships: [], stories: [] }
+      };
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("snapshots", "readwrite");
+        tx.objectStore("snapshots").add(invalidSnapshot);
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed invalid snapshot."));
+        tx.onabort = () => reject(tx.error || new Error("Invalid snapshot seed aborted."));
+      });
+      const listAfterInvalid = await repository.listSnapshots(projectA.project.id);
+      let invalidRestoreRejected = false;
+      try { await repository.restoreSnapshot(invalidSnapshot.snapshotId, projectA.project.id); }
+      catch { invalidRestoreRejected = true; }
+
+      const changedA = JSON.parse(JSON.stringify(projectA));
+      changedA.project.description = "Mutated after the backup.";
+      await repository.write(changedA);
+      const restored = await repository.restoreSnapshot(snapshotA.snapshotId, projectA.project.id);
+      const storedA = await repository.read("projects", projectA.project.id);
+      const storedB = await repository.read("projects", projectB.project.id);
+      const active = await repository.read("metadata", "activeProjectId");
+      const snapshotsA = await repository.listSnapshots(projectA.project.id);
+      let crossProjectDeleteRejected = false;
+      try { await repository.deleteSnapshot(snapshotB.snapshotId, projectA.project.id); }
+      catch { crossProjectDeleteRejected = true; }
+      const snapshotBStillExists = Boolean(await repository.read("snapshots", snapshotB.snapshotId));
+      const deleteResult = await repository.deleteSnapshot(snapshotA.snapshotId, projectA.project.id);
+      const snapshotADeleted = !(await repository.read("snapshots", snapshotA.snapshotId));
+      const rollbackSnapshotExists = Boolean(await repository.read("snapshots", restored.rollbackSnapshotId));
+      const localBackupMatches = repository.readBackup().project?.project?.id === projectA.project.id &&
+        repository.readBackup().project?.project?.description === storedA.data.project.description;
+
+      repository.close();
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(databaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Snapshot test cleanup failed."));
+        request.onblocked = () => reject(new Error("Snapshot test cleanup blocked."));
+      });
+      localStorage.removeItem(storageKey);
+      return {
+        migration, listAIds: listA.map((item) => item.projectId), listBIds: listB.map((item) => item.projectId),
+        invalidMarked: listAfterInvalid.some((item) => item.snapshotId === invalidSnapshot.snapshotId && !item.valid),
+        invalidRestoreRejected,
+        restoredDescription: storedA.data.project.description, expectedDescription: projectA.project.description,
+        otherProjectUnchanged: storedB.data.project.description === projectB.project.description,
+        activeProjectId: active.value, snapshotsAAfterRestore: snapshotsA.length,
+        crossProjectDeleteRejected, snapshotBStillExists, deleteResult, snapshotADeleted,
+        rollbackSnapshotExists, localBackupMatches
+      };
+    });
+    assert.equal(snapshotRepositoryEvidence.migration.version, 2);
+    assert.equal(snapshotRepositoryEvidence.migration.hasSnapshots, true);
+    assert.equal(snapshotRepositoryEvidence.migration.hasProjects, true);
+    assert.equal(snapshotRepositoryEvidence.migration.hasMetadata, true);
+    assert.equal(snapshotRepositoryEvidence.migration.nameA, "Universo Snapshot A");
+    assert.equal(snapshotRepositoryEvidence.migration.nameB, "Universo Snapshot B");
+    assert.deepEqual(snapshotRepositoryEvidence.listAIds, ["snapshot-project-a"]);
+    assert.deepEqual(snapshotRepositoryEvidence.listBIds, ["snapshot-project-b"]);
+    assert.equal(snapshotRepositoryEvidence.invalidMarked, true);
+    assert.equal(snapshotRepositoryEvidence.invalidRestoreRejected, true);
+    assert.equal(snapshotRepositoryEvidence.restoredDescription, snapshotRepositoryEvidence.expectedDescription);
+    assert.equal(snapshotRepositoryEvidence.otherProjectUnchanged, true);
+    assert.equal(snapshotRepositoryEvidence.activeProjectId, "snapshot-project-a");
+    assert.equal(snapshotRepositoryEvidence.snapshotsAAfterRestore, 3);
+    assert.equal(snapshotRepositoryEvidence.crossProjectDeleteRejected, true);
+    assert.equal(snapshotRepositoryEvidence.snapshotBStillExists, true);
+    assert.equal(snapshotRepositoryEvidence.deleteResult.deleted, true);
+    assert.equal(snapshotRepositoryEvidence.snapshotADeleted, true);
+    assert.equal(snapshotRepositoryEvidence.rollbackSnapshotExists, true);
+    assert.equal(snapshotRepositoryEvidence.localBackupMatches, true);
+    process.stdout.write("PASS snapshot migration/API: v1->v2 is non-destructive; per-project isolation, invalid-snapshot rejection, guarded restore, rollback snapshot and selective delete work.\\n");
+
+
     const backupOnlyDeleteGuard = await page.evaluate(async () => {
       const storageKey = "wordwaifu.delete-test.local-only";
       const databaseName = "wordwaifu.delete-test.local-only";
