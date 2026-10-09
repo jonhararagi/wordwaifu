@@ -14,12 +14,14 @@ js_path = ROOT / "src" / "app.js"
 css_path = ROOT / "src" / "styles.css"
 schema_path = ROOT / "src" / "project-schema.js"
 schema_test_path = ROOT / "tests" / "test_project_schema.cjs"
+browser_test_path = ROOT / "tests" / "browser_smoke.cjs"
 
 require(html_path.is_file(), "Falta index.html")
 require(js_path.is_file(), "Falta src/app.js")
 require(css_path.is_file(), "Falta src/styles.css")
 require(schema_path.is_file(), "Falta src/project-schema.js")
 require(schema_test_path.is_file(), "Falta tests/test_project_schema.cjs")
+require(browser_test_path.is_file(), "Falta tests/browser_smoke.cjs")
 
 if html_path.is_file():
     html = html_path.read_text(encoding="utf-8")
@@ -50,6 +52,11 @@ if schema_test_path.is_file():
     tests = schema_test_path.read_text(encoding="utf-8")
     require("testRejectsDuplicateIdsAcrossEntityTypes" in tests, "Falta prueba de IDs duplicados")
     require("testRejectsLocationHierarchyCycles" in tests, "Falta prueba de ciclos de ubicaciones")
+
+if browser_test_path.is_file():
+    browser_test = browser_test_path.read_text(encoding="utf-8")
+    require("PASS_REAL" in browser_test, "La prueba del navegador debe reportar su nivel de evidencia")
+    require("safe import" in browser_test, "La prueba del navegador debe verificar imports seguros")
 
 if css_path.is_file():
     css = css_path.read_text(encoding="utf-8")
