@@ -90,6 +90,37 @@ async function run() {
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
 
+    const backupOnlyDeleteGuard = await page.evaluate(async () => {
+      const storageKey = "wordwaifu.delete-test.local-only";
+      const databaseName = "wordwaifu.delete-test.local-only";
+      const projectId = "backup-only-project";
+      const backupProject = {
+        schemaVersion: 1,
+        project: { id: projectId, name: "Solo respaldo", description: "" },
+        locations: [], characters: [], events: [], organizations: [], relationships: [], stories: [],
+        settings: { time: "now" }
+      };
+      localStorage.setItem(storageKey, JSON.stringify(backupProject));
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository({ storageKey, databaseName });
+      const catalog = await repository.listProjects();
+      let rejection = "";
+      try { await repository.deleteProject(projectId); } catch (error) { rejection = error.message; }
+      const backupRetained = repository.readBackup().project?.project.id === projectId;
+      repository.close();
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(databaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Backup-only test database cleanup failed."));
+        request.onblocked = () => reject(new Error("Backup-only test database cleanup was blocked."));
+      });
+      localStorage.removeItem(storageKey);
+      return { candidateSource: catalog.find((item) => item.projectId === projectId)?.source, rejection, backupRetained };
+    });
+    assert.equal(backupOnlyDeleteGuard.candidateSource, "localStorage");
+    assert.match(backupOnlyDeleteGuard.rejection, /no tiene un registro verificado en IndexedDB/);
+    assert.equal(backupOnlyDeleteGuard.backupRetained, true);
+    process.stdout.write("PASS project delete guard: localStorage-only candidate cannot be falsely reported as deleted.\n");
+
     await page.locator("#manage-projects-button").click();
     await page.locator("#project-dialog").waitFor({state:"visible"});
     await page.locator("#project-list").selectOption("project-asteria");
@@ -119,6 +150,21 @@ async function run() {
     process.stdout.write("PASS project catalog/create: distinct project IDs coexist in IndexedDB.\n");
 
     await page.locator("#manage-projects-button").click();
+    await page.locator("#project-list").selectOption(createdUniverse.id);
+    assert.equal(await page.locator("#project-delete-button").isDisabled(), true, "The active project must not expose deletion.");
+    const activeDeleteGuard = await page.evaluate(async (projectId) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      let rejection = "";
+      try { await repository.deleteProject(projectId); } catch (error) { rejection = error.message; }
+      const active = await repository.read("metadata", "activeProjectId");
+      const record = await repository.read("projects", projectId);
+      repository.close();
+      return { rejection, activeId: active?.value, recordId: record?.projectId };
+    }, createdUniverse.id);
+    assert.match(activeDeleteGuard.rejection, /No se puede borrar el proyecto activo/);
+    assert.equal(activeDeleteGuard.activeId, createdUniverse.id);
+    assert.equal(activeDeleteGuard.recordId, createdUniverse.id);
+    process.stdout.write("PASS project delete guard: active universe is blocked at UI and repository layers.\n");
     await page.locator("#project-list").selectOption("project-asteria");
     await page.locator("#project-open-button").click();
     await page.locator("#project-name").getByText("Las Crónicas de Asteria").waitFor();
@@ -154,6 +200,80 @@ async function run() {
     await page.locator("#project-list").selectOption("project-asteria");
     await page.locator("#project-open-button").click();
     await page.locator("#project-name").getByText("Las Crónicas de Asteria").waitFor();
+
+    const neighborProject = await page.evaluate(async (sourceId) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const source = await repository.getProject(sourceId);
+      const neighborId = sourceId + "-neighbor";
+      const neighbor = { ...source, project: { ...source.project, id: neighborId, name: "Universo Multiverso QA vecino" } };
+      const db = await repository.open();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId: neighborId, data: neighbor });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Neighbor project fixture failed."));
+        tx.onabort = () => reject(tx.error || new Error("Neighbor project fixture was aborted."));
+      });
+      repository.close();
+      return { id: neighborId, name: neighbor.project.name };
+    }, createdUniverse.id);
+
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-list").selectOption(createdUniverse.id);
+    assert.equal(await page.locator("#project-delete-button").isDisabled(), false, "An inactive IndexedDB project should be deletable.");
+    const cancelProjectDeletePromise = page.waitForEvent("dialog");
+    const cancelProjectDeleteClick = page.locator("#project-delete-button").click();
+    const cancelProjectDeleteDialog = await cancelProjectDeletePromise;
+    assert.equal(cancelProjectDeleteDialog.type(), "confirm");
+    assert.match(cancelProjectDeleteDialog.message(), new RegExp(createdUniverse.id));
+    await cancelProjectDeleteDialog.dismiss();
+    await cancelProjectDeleteClick;
+    const afterCancelDelete = await page.evaluate(async (ids) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const catalog = await repository.listProjects();
+      const neighbor = await repository.getProject(ids.neighbor);
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return { catalogIds: catalog.map((item) => item.projectId), neighborName: neighbor?.project.name, activeId: active?.value };
+    }, { target: createdUniverse.id, neighbor: neighborProject.id });
+    assert.ok(afterCancelDelete.catalogIds.includes(createdUniverse.id), "Dismissing confirmation must not remove the project.");
+    assert.equal(afterCancelDelete.neighborName, neighborProject.name);
+    assert.equal(afterCancelDelete.activeId, "project-asteria");
+    process.stdout.write("PASS project delete cancel: both IDs remain intact when confirmation is dismissed.\n");
+
+    await page.locator("#project-list").selectOption(createdUniverse.id);
+    const acceptProjectDeletePromise = page.waitForEvent("dialog");
+    const acceptProjectDeleteClick = page.locator("#project-delete-button").click();
+    const acceptProjectDeleteDialog = await acceptProjectDeletePromise;
+    assert.match(acceptProjectDeleteDialog.message(), /Solo se borrará este ID exacto/);
+    await acceptProjectDeleteDialog.accept();
+    await acceptProjectDeleteClick;
+    await page.waitForFunction((id) => !Array.from(document.querySelector("#project-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
+    const afterProjectDelete = await page.evaluate(async (ids) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const catalog = await repository.listProjects();
+      const deletedRecord = await repository.read("projects", ids.target);
+      const neighbor = await repository.getProject(ids.neighbor);
+      const active = await repository.read("metadata", "activeProjectId");
+      const original = await repository.getProject("project-asteria");
+      repository.close();
+      return {
+        listedTarget: catalog.some((item) => item.projectId === ids.target),
+        deletedRecord: Boolean(deletedRecord),
+        neighborId: neighbor?.project.id,
+        neighborName: neighbor?.project.name,
+        activeId: active?.value,
+        originalCharacterCount: original?.characters?.length
+      };
+    }, { target: createdUniverse.id, neighbor: neighborProject.id });
+    assert.equal(afterProjectDelete.listedTarget, false);
+    assert.equal(afterProjectDelete.deletedRecord, false);
+    assert.equal(afterProjectDelete.neighborId, neighborProject.id, "A similar ID must not be deleted accidentally.");
+    assert.equal(afterProjectDelete.neighborName, neighborProject.name);
+    assert.equal(afterProjectDelete.activeId, "project-asteria", "Deleting an inactive project must not change the active pointer.");
+    assert.equal(afterProjectDelete.originalCharacterCount, 4, "The active universe's data must remain intact.");
+    process.stdout.write("PASS project delete: exact ID removed, similar ID and active universe retained.\n");
+    await page.locator("#project-close-button").click();
 
     const initialPanel = await page.locator("#details-panel").innerHTML();
     if (!initialPanel.trim()) {

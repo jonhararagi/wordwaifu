@@ -152,6 +152,54 @@
       return { projectId, active: true };
     }
 
+    async deleteProject(projectId) {
+      if (typeof projectId !== "string" || !projectId.trim()) throw new Error("El ID del proyecto que se quiere borrar no es válido.");
+      const db = await this.open();
+      let guardError = null;
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction(["projects", "metadata"], "readwrite");
+        const projects = tx.objectStore("projects");
+        const projectRequest = projects.get(projectId);
+        const activeRequest = tx.objectStore("metadata").get(ACTIVE_KEY);
+        let projectReady = false, activeReady = false, projectRecord, activeRecord;
+        const evaluateDelete = () => {
+          if (!projectReady || !activeReady) return;
+          if (!projectRecord || projectRecord.projectId !== projectId || !isProject(projectRecord.data) || projectRecord.data.project.id !== projectId) {
+            guardError = new Error("Este proyecto no tiene un registro verificado en IndexedDB. Si solo aparece en el respaldo local, primero debe recuperarse o migrarse; no se marcará como borrado.");
+            tx.abort();
+            return;
+          }
+          if (activeRecord && activeRecord.value === projectId) {
+            guardError = new Error("No se puede borrar el proyecto activo. Abrí y activá otro proyecto primero, y después seleccioná este proyecto para eliminarlo.");
+            tx.abort();
+            return;
+          }
+          projects.delete(projectId);
+        };
+        projectRequest.onsuccess = () => { projectRecord = projectRequest.result; projectReady = true; evaluateDelete(); };
+        activeRequest.onsuccess = () => { activeRecord = activeRequest.result; activeReady = true; evaluateDelete(); };
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(guardError || tx.error || new Error("Falló la transacción al borrar el proyecto."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("El borrado del proyecto fue cancelado."));
+      });
+      const remaining = await this.read("projects", projectId);
+      if (remaining) throw new Error("IndexedDB no confirmó la eliminación del proyecto.");
+      let backupRemoved = true, warning = null;
+      const backup = this.readBackup().project;
+      if (backup && backup.project.id === projectId) {
+        try {
+          if (!this.localStorage) throw new Error("localStorage no está disponible.");
+          this.localStorage.removeItem(this.storageKey);
+          backupRemoved = this.localStorage.getItem(this.storageKey) === null;
+          if (!backupRemoved) throw new Error("El respaldo local sigue presente después del borrado.");
+        } catch (error) {
+          backupRemoved = false;
+          warning = "El registro de IndexedDB se borró, pero no se pudo retirar el respaldo local: " + error.message;
+        }
+      }
+      return { projectId, deleted: true, backupRemoved, warning };
+    }
+
     saveBackup(project) {
       if (!isProject(project)) return { written: false, warning: "El proyecto debe contener project.id." };
       try {
