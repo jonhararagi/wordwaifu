@@ -67,6 +67,21 @@ async function run() {
     await page.locator("#details-panel h2").getByText("Bosque Velado").waitFor();
     process.stdout.write("PASS atlas navigation: selecting a map marker opens its location.\n");
 
+    const asteriaMarker = page.locator('g.map-marker[data-location="loc-asteria"]').first();
+    await page.locator("#layers-button").click();
+    await page.locator('[data-layer="places"]').uncheck();
+    assert.equal(await asteriaMarker.evaluate((node) => node.classList.contains("hidden")), true);
+    await page.locator('[data-layer="places"]').check();
+    assert.equal(await asteriaMarker.evaluate((node) => node.classList.contains("hidden")), false);
+    await asteriaMarker.focus();
+    await asteriaMarker.press("Enter");
+    assert.equal(await page.locator("#details-panel h2").innerText(), "Asteria");
+    await page.locator("#global-search").fill("Puerto Umbría");
+    assert.equal(await page.locator("#details-panel h2").innerText(), "Puerto Umbría");
+    await page.locator("#global-search").fill("Mira");
+    assert.equal(await page.locator("#details-panel h2").innerText(), "Mira Solenne");
+    process.stdout.write("PASS controls: layer filtering, keyboard marker activation and global search work.\n");
+
     await page.locator("#time-select").selectOption("chapter1");
     await page.locator('g.map-marker[data-location="loc-asteria"]').first().click();
     assert.match(await page.locator("#related-list").innerText(), /Mira Solenne/);
