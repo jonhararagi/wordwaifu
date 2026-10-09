@@ -171,6 +171,9 @@ async function run() {
       const rollbackSnapshotExists = Boolean(await repository.read("snapshots", restored.rollbackSnapshotId));
       const localBackupMatches = repository.readBackup().project?.project?.id === projectA.project.id &&
         repository.readBackup().project?.project?.description === storedA.data.project.description;
+      const deletedProjectB = await repository.deleteProject(projectB.project.id);
+      const snapshotBRemovedWithProject = !(await repository.read("snapshots", snapshotB.snapshotId));
+      const projectBRemoved = !(await repository.read("projects", projectB.project.id));
 
       repository.close();
       await new Promise((resolve, reject) => {
@@ -188,7 +191,7 @@ async function run() {
         otherProjectUnchanged: storedB.data.project.description === projectB.project.description,
         activeProjectId: active.value, snapshotsAAfterRestore: snapshotsA.length,
         crossProjectDeleteRejected, snapshotBStillExists, deleteResult, snapshotADeleted,
-        rollbackSnapshotExists, localBackupMatches
+        rollbackSnapshotExists, localBackupMatches, deletedProjectB, snapshotBRemovedWithProject, projectBRemoved
       };
     });
     assert.equal(snapshotRepositoryEvidence.migration.version, 2);
@@ -211,7 +214,63 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.snapshotADeleted, true);
     assert.equal(snapshotRepositoryEvidence.rollbackSnapshotExists, true);
     assert.equal(snapshotRepositoryEvidence.localBackupMatches, true);
+    assert.equal(snapshotRepositoryEvidence.deletedProjectB.deleted, true);
+    assert.equal(snapshotRepositoryEvidence.snapshotBRemovedWithProject, true);
+    assert.equal(snapshotRepositoryEvidence.projectBRemoved, true);
     process.stdout.write("PASS snapshot migration/API: v1->v2 is non-destructive; per-project isolation, invalid-snapshot rejection, guarded restore, rollback snapshot and selective delete work.\\n");
+
+    // Visible snapshot controls create, restore and delete while preserving the active universe ID.
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-dialog").waitFor({state:"visible"});
+    await page.locator("#project-list").selectOption("project-asteria");
+    await page.locator("#snapshot-create-button").click();
+    await page.waitForFunction(() => Array.from(document.querySelectorAll("#snapshot-list option"))
+      .some((option) => option.dataset.reason === "manual"));
+    const uiSnapshotId = await page.locator('#snapshot-list option[data-reason="manual"]').first().getAttribute("value");
+    assert.ok(uiSnapshotId);
+    process.stdout.write("PASS snapshot UI create: a verified project snapshot appears in the project manager.\\n");
+    await page.locator("#project-close-button").click();
+
+    await page.locator("#add-button").click();
+    await page.locator("#entity-name").fill("Temporal de snapshot");
+    await page.locator("#entity-description").fill("Este registro debe desaparecer tras la restauración.");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.waitForFunction(() => document.querySelector("#character-count")?.textContent === "5");
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.some((item) => item.name === "Temporal de snapshot")), true);
+
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-list").selectOption("project-asteria");
+    await page.locator("#snapshot-list").selectOption(uiSnapshotId);
+    assert.equal(await page.locator("#snapshot-restore-button").isEnabled(), true);
+    const restoreUiDialogPromise = page.waitForEvent("dialog");
+    const restoreUiClick = page.locator("#snapshot-restore-button").click();
+    const restoreUiDialog = await restoreUiDialogPromise;
+    assert.equal(restoreUiDialog.type(), "confirm");
+    assert.match(restoreUiDialog.message(), /copia automática del estado actual/);
+    await restoreUiDialog.accept();
+    await restoreUiClick;
+    await page.waitForFunction(() => document.querySelector("#character-count")?.textContent === "4");
+    const restoredUiState = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
+    assert.equal(restoredUiState.project.id, "project-asteria");
+    assert.equal(restoredUiState.characters.some((item) => item.name === "Temporal de snapshot"), false);
+    const automaticSnapshotId = await page.locator('#snapshot-list option[data-reason="before-restore"]').getAttribute("value");
+    assert.ok(automaticSnapshotId, "Restore must keep an automatic snapshot of the previous state.");
+    process.stdout.write("PASS snapshot UI restore: active project ID stays stable and a pre-restore snapshot is retained.\\n");
+
+    for (const snapshotId of [uiSnapshotId, automaticSnapshotId]) {
+      await page.locator("#snapshot-list").selectOption(snapshotId);
+      const deleteUiDialogPromise = page.waitForEvent("dialog");
+      const deleteUiClick = page.locator("#snapshot-delete-button").click();
+      const deleteUiDialog = await deleteUiDialogPromise;
+      assert.equal(deleteUiDialog.type(), "confirm");
+      assert.match(deleteUiDialog.message(), /proyecto y los demás snapshots se conservarán/);
+      await deleteUiDialog.accept();
+      await deleteUiClick;
+    }
+    assert.equal(await page.locator("#snapshot-list option").count(), 1);
+    assert.equal(await page.locator("#snapshot-list option").first().getAttribute("value"), "");
+    await page.locator("#project-close-button").click();
+    process.stdout.write("PASS snapshot UI delete: individual copies require confirmation and leave the project intact.\\n");
 
 
     const backupOnlyDeleteGuard = await page.evaluate(async () => {

@@ -538,7 +538,7 @@
       const db = await this.open();
       let guardError = null;
       await new Promise((resolve, reject) => {
-        const tx = db.transaction(["projects", "metadata"], "readwrite");
+        const tx = db.transaction(["projects", "metadata", "snapshots"], "readwrite");
         const projects = tx.objectStore("projects");
         const projectRequest = projects.get(projectId);
         const activeRequest = tx.objectStore("metadata").get(ACTIVE_KEY);
@@ -556,6 +556,10 @@
             return;
           }
           projects.delete(projectId);
+          const snapshotRequest = tx.objectStore("snapshots").index("byProjectId").getAll(projectId);
+          snapshotRequest.onsuccess = () => {
+            snapshotRequest.result.forEach((snapshot) => tx.objectStore("snapshots").delete(snapshot.snapshotId));
+          };
         };
         projectRequest.onsuccess = () => { projectRecord = projectRequest.result; projectReady = true; evaluateDelete(); };
         activeRequest.onsuccess = () => { activeRecord = activeRequest.result; activeReady = true; evaluateDelete(); };

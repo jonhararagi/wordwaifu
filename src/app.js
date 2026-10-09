@@ -209,7 +209,156 @@
       ? projects.length + " proyecto(s) local(es). Los proyectos se identifican por ID, no por nombre."
       : "Todavía no hay proyectos persistidos.";
     updateProjectDeleteControl();
+    try { await refreshSnapshotList(); }
+    catch (error) { $("#snapshot-status").textContent = "No se pudieron leer los respaldos: " + error.message; }
     return projects;
+  }
+
+  async function refreshSnapshotList() {
+    const projectId = $("#project-list").value;
+    const select = $("#snapshot-list");
+    const previousSnapshotId = select.value;
+    select.replaceChildren();
+    if (!projectId) {
+      const empty = document.createElement("option");
+      empty.value = "";
+      empty.textContent = "Seleccioná un proyecto primero";
+      empty.disabled = true;
+      select.appendChild(empty);
+      $("#snapshot-status").textContent = "Seleccioná un proyecto para consultar sus copias.";
+      updateSnapshotControls();
+      return [];
+    }
+
+    $("#snapshot-status").textContent = "Leyendo snapshots de " + projectId + "…";
+    const snapshots = await projectRepository.listSnapshots(projectId);
+    if (!snapshots.length) {
+      const empty = document.createElement("option");
+      empty.value = "";
+      empty.textContent = "Todavía no hay snapshots";
+      empty.disabled = true;
+      select.appendChild(empty);
+    } else {
+      snapshots.forEach((snapshot) => {
+        const option = document.createElement("option");
+        option.value = snapshot.snapshotId;
+        option.dataset.valid = String(snapshot.valid);
+        option.dataset.reason = snapshot.reason;
+        option.textContent = new Date(snapshot.createdAt).toLocaleString("es-AR") + " · " +
+          snapshot.reason + (snapshot.valid ? "" : " · INVÁLIDO");
+        select.appendChild(option);
+      });
+      if (snapshots.some((snapshot) => snapshot.snapshotId === previousSnapshotId)) select.value = previousSnapshotId;
+      else select.value = snapshots[0].snapshotId;
+    }
+    const selectedProject = $("#project-list").selectedOptions[0];
+    const sourceName = selectedProject?.textContent || projectId;
+    $("#snapshot-status").textContent = snapshots.length
+      ? snapshots.length + "/25 copias para " + sourceName + ". Los snapshots pertenecen al ID, no al nombre."
+      : "No existen copias versionadas para " + sourceName + ".";
+    updateSnapshotControls();
+    return snapshots;
+  }
+
+  function updateSnapshotControls() {
+    const projectId = $("#project-list").value;
+    const projectOption = $("#project-list").selectedOptions[0];
+    const snapshotOption = $("#snapshot-list").selectedOptions[0];
+    const isPersisted = Boolean(projectId && projectOption?.dataset.source === "indexeddb");
+    const isActive = projectId === state.project.id;
+    $("#snapshot-create-button").disabled = !isPersisted;
+    $("#snapshot-delete-button").disabled = !snapshotOption || !snapshotOption.value;
+    $("#snapshot-restore-button").disabled = !snapshotOption || !snapshotOption.value ||
+      snapshotOption.dataset.valid !== "true" || !isActive;
+    if (projectId && !isActive) {
+      $("#snapshot-status").setAttribute("aria-description", "Para restaurar, abrí primero este proyecto desde el catálogo.");
+    } else {
+      $("#snapshot-status").removeAttribute("aria-description");
+    }
+  }
+
+  async function createSelectedSnapshot() {
+    const projectId = $("#project-list").value;
+    const option = $("#project-list").selectedOptions[0];
+    if (!projectId || !option) return;
+    if (option.dataset.source !== "indexeddb") {
+      $("#snapshot-status").textContent = "Este universo solo está en el respaldo local; primero debe recuperarse y verificarse en IndexedDB.";
+      return;
+    }
+    $("#snapshot-create-button").disabled = true;
+    $("#snapshot-status").textContent = "Verificando el proyecto y creando el snapshot…";
+    try {
+      if (projectId === state.project.id) await requireCurrentProjectInIndexedDB();
+      const snapshot = await enqueueRepositoryOperation(async () => {
+        const record = await projectRepository.read("projects", projectId);
+        if (!record || record.projectId !== projectId || !record.data || record.data.project?.id !== projectId) {
+          throw new Error("El proyecto seleccionado no tiene una copia verificada en IndexedDB.");
+        }
+        return projectRepository.createSnapshot(record.data, { reason: "manual" });
+      });
+      await refreshSnapshotList();
+      $("#snapshot-list").value = snapshot.snapshotId;
+      updateSnapshotControls();
+      $("#snapshot-status").textContent = "Snapshot creado y verificado: " + snapshot.snapshotId;
+    } catch (error) {
+      $("#snapshot-status").textContent = "No se creó el snapshot: " + error.message;
+    } finally {
+      updateSnapshotControls();
+    }
+  }
+
+  async function deleteSelectedSnapshot() {
+    const projectId = $("#project-list").value;
+    const snapshotId = $("#snapshot-list").value;
+    const snapshotOption = $("#snapshot-list").selectedOptions[0];
+    if (!projectId || !snapshotId || !snapshotOption) return;
+    if (!confirm("Se eliminará únicamente esta copia versionada. El proyecto y los demás snapshots se conservarán.\\n\\n" + snapshotOption.textContent)) {
+      $("#snapshot-status").textContent = "Borrado cancelado; no se eliminó ningún snapshot.";
+      return;
+    }
+    $("#snapshot-delete-button").disabled = true;
+    try {
+      await enqueueRepositoryOperation(() => projectRepository.deleteSnapshot(snapshotId, projectId));
+      await refreshSnapshotList();
+      $("#snapshot-status").textContent = "Snapshot eliminado. El proyecto y las demás copias permanecen intactos.";
+    } catch (error) {
+      $("#snapshot-status").textContent = "No se pudo eliminar el snapshot: " + error.message;
+    } finally {
+      updateSnapshotControls();
+    }
+  }
+
+  async function restoreSelectedSnapshot() {
+    const projectId = $("#project-list").value;
+    const snapshotId = $("#snapshot-list").value;
+    const snapshotOption = $("#snapshot-list").selectedOptions[0];
+    if (!projectId || !snapshotId || !snapshotOption || snapshotOption.dataset.valid !== "true") return;
+    if (projectId !== state.project.id) {
+      $("#snapshot-status").textContent = "Abrí primero el universo seleccionado; una restauración nunca cambia de proyecto por accidente.";
+      updateSnapshotControls();
+      return;
+    }
+    if (!confirm("Se restaurará el contenido de este snapshot en el universo activo.\\n" +
+      "Antes se guardará una copia automática del estado actual. El ID del proyecto y los demás universos se conservarán.\\n\\n" +
+      snapshotOption.textContent + "\\n\\n¿Continuar?")) return;
+
+    const appShell = $(".app-shell");
+    if (appShell) appShell.inert = true;
+    $("#snapshot-status").textContent = "Validando y restaurando. No cierres la aplicación…";
+    $("#snapshot-restore-button").disabled = true;
+    try {
+      await requireCurrentProjectInIndexedDB();
+      const restored = await enqueueRepositoryOperation(() => projectRepository.restoreSnapshot(snapshotId, projectId));
+      state = ensureRelationshipStore(restored.project);
+      resetProjectWorkspace();
+      await refreshProjectList();
+      $("#snapshot-status").textContent = "Restauración verificada. Copia automática previa: " + restored.rollbackSnapshotId;
+    } catch (error) {
+      $("#snapshot-status").textContent = "Restauración cancelada sin cambiar la sesión activa: " + error.message;
+    } finally {
+      if (appShell) appShell.inert = false;
+      updateSnapshotControls();
+    }
   }
 
   function updateProjectDeleteControl() {
@@ -1626,7 +1775,17 @@
   $("#project-refresh-button").addEventListener("click", () => refreshProjectList().catch((error) => {
     $("#project-list-status").textContent = "No se pudo actualizar: " + error.message;
   }));
-  $("#project-list").addEventListener("change", updateProjectDeleteControl);
+  $("#project-list").addEventListener("change", () => {
+    updateProjectDeleteControl();
+    refreshSnapshotList().catch((error) => { $("#snapshot-status").textContent = "No se pudieron leer los snapshots: " + error.message; });
+  });
+  $("#snapshot-list").addEventListener("change", updateSnapshotControls);
+  $("#snapshot-refresh-button").addEventListener("click", () => refreshSnapshotList().catch((error) => {
+    $("#snapshot-status").textContent = "No se pudieron leer los snapshots: " + error.message;
+  }));
+  $("#snapshot-create-button").addEventListener("click", createSelectedSnapshot);
+  $("#snapshot-restore-button").addEventListener("click", restoreSelectedSnapshot);
+  $("#snapshot-delete-button").addEventListener("click", deleteSelectedSnapshot);
   $("#project-delete-button").addEventListener("click", deleteSelectedProject);
   $("#project-open-button").addEventListener("click", openSelectedProject);
   $("#project-create-button").addEventListener("click", createNamedProject);
