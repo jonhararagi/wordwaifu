@@ -157,6 +157,8 @@
         offsetX: origin[0] - point.x, offsetY: origin[1] - point.y,
         origin, moving: false, current: origin, handle
       };
+      try { handle.setPointerCapture(event.pointerId); } catch { /* Pointer capture is optional. */ }
+      event.preventDefault();
       event.stopPropagation();
     });
     handle.addEventListener("click", (event) => event.stopPropagation());
