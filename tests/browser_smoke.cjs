@@ -483,6 +483,91 @@ async function run() {
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).events.some((item) => item.id === "wf-test-event")), true);
     process.stdout.write("PASS event export/import: valid references and unrelated events survive round-trip.\n");
 
+    // Organization CRUD: use stable IDs for leaders, members and the base location.
+    await page.locator('.nav-item[data-view="organizations"]').click();
+    await page.locator("#add-button").click();
+    assert.equal(await page.locator("#entity-type").inputValue(), "organization");
+    await page.locator("#entity-name").fill("Orden del Archivo Vivo");
+    await page.locator("#entity-description").fill("Custodia rutas y testimonios.");
+    await page.locator("#organization-type").fill("Orden");
+    await page.locator("#organization-ideology").fill("El conocimiento se comparte.");
+    await page.locator("#organization-goals").fill("Preservar mapas, Formar aprendices");
+    await page.locator("#organization-leaders").selectOption(["wf-test-witness"]);
+    await page.locator("#organization-members").selectOption(["wf-test-witness", createdCharacter.id]);
+    await page.locator("#organization-base-location").selectOption("wf-test-other-location");
+    await page.locator("#organization-history").fill("Fundada tras una expedición.");
+    await page.locator("#organization-status").selectOption("canon");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-organization-details h2").getByText("Orden del Archivo Vivo").waitFor();
+    const createdOrganization = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.find((item) => item.name === "Orden del Archivo Vivo"));
+    assert.ok(createdOrganization.id.startsWith("local-organization-"));
+    assert.equal(createdOrganization.organizationType, "Orden");
+    assert.deepEqual(createdOrganization.goals, ["Preservar mapas", "Formar aprendices"]);
+    assert.deepEqual(createdOrganization.leaderCharacterIds, ["wf-test-witness"]);
+    assert.deepEqual([...createdOrganization.memberCharacterIds].sort(), [createdCharacter.id, "wf-test-witness"].sort());
+    assert.equal(createdOrganization.baseLocationId, "wf-test-other-location");
+    const createdOrganizationValidation = validateAndNormalizeProject(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1"))));
+    assert.equal(createdOrganizationValidation.valid, true, createdOrganizationValidation.errors.join("\\n"));
+    process.stdout.write("PASS organization create: fields reference existing people and locations by stable ID.\\n");
+
+    const organizationIdBeforeEdit = createdOrganization.id;
+    await page.locator('[data-organization="' + organizationIdBeforeEdit + '"]').click();
+    await page.locator("#edit-organization-button").click();
+    await page.locator("#entity-name").fill("Orden del Archivo Vivo Renovada");
+    await page.locator("#organization-type").fill("Orden archivística");
+    await page.locator("#organization-goals").fill("Conservar testimonios");
+    await page.locator("#organization-members").selectOption(["wf-test-witness"]);
+    await page.locator("#organization-base-location").selectOption("wf-test-child-location");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-organization-details h2").getByText("Orden del Archivo Vivo Renovada").waitFor();
+    const editedOrganization = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.find((item) => item.id === id), organizationIdBeforeEdit);
+    assert.equal(editedOrganization.id, organizationIdBeforeEdit, "Organization editing must preserve the ID.");
+    assert.equal(editedOrganization.organizationType, "Orden archivística");
+    assert.deepEqual(editedOrganization.goals, ["Conservar testimonios"]);
+    assert.deepEqual(editedOrganization.memberCharacterIds, ["wf-test-witness"]);
+    assert.equal(editedOrganization.baseLocationId, "wf-test-child-location");
+    process.stdout.write("PASS organization edit: stable ID and existing entity references update correctly.\\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    await page.locator('.nav-item[data-view="organizations"]').click();
+    await page.locator('[data-organization="' + organizationIdBeforeEdit + '"]').click();
+    await page.locator("#selected-organization-details h2").getByText("Orden del Archivo Vivo Renovada").waitFor();
+    process.stdout.write("PASS organization persistence: changes survive a browser reload.\\n");
+
+    const deleteOrganizationDialogPromise = page.waitForEvent("dialog");
+    const deleteOrganizationClick = page.locator("#delete-organization-button").click();
+    const deleteOrganizationDialog = await deleteOrganizationDialogPromise;
+    assert.equal(deleteOrganizationDialog.type(), "confirm");
+    assert.match(deleteOrganizationDialog.message(), /No se borrará ningún personaje ni lugar/);
+    await deleteOrganizationDialog.accept();
+    await deleteOrganizationClick;
+    const afterOrganizationDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
+    assert.equal(afterOrganizationDelete.organizations.some((item) => item.id === organizationIdBeforeEdit), false);
+    assert.ok(afterOrganizationDelete.organizations.some((item) => item.id === "org-cartographers"), "Unrelated organizations must survive deletion.");
+    assert.ok(afterOrganizationDelete.characters.some((item) => item.id === "wf-test-witness"), "Referenced characters must survive organization deletion.");
+    assert.ok(afterOrganizationDelete.locations.some((item) => item.id === "wf-test-child-location"), "The base location must survive organization deletion.");
+    const afterOrganizationDeleteValidation = validateAndNormalizeProject(afterOrganizationDelete);
+    assert.equal(afterOrganizationDeleteValidation.valid, true, afterOrganizationDeleteValidation.errors.join("\\n"));
+    process.stdout.write("PASS organization delete: only the organization is deleted; linked records survive.\\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    const orgExportPromise = page.waitForEvent("download");
+    await page.locator("#export-button").click();
+    const orgExport = await orgExportPromise;
+    const orgExportPath = await orgExport.path();
+    const orgExportProject = JSON.parse(fs.readFileSync(orgExportPath, "utf8"));
+    const orgExportValidation = validateAndNormalizeProject(orgExportProject);
+    assert.equal(orgExportValidation.valid, true, orgExportValidation.errors.join("\\n"));
+    assert.equal(orgExportProject.organizations.some((item) => item.id === organizationIdBeforeEdit), false);
+    const orgImportAlertPromise = page.waitForEvent("dialog");
+    const orgImportSelection = page.locator("#import-file").setInputFiles(orgExportPath);
+    const orgImportAlert = await orgImportAlertPromise;
+    assert.match(orgImportAlert.message(), /Proyecto importado correctamente/i);
+    await orgImportAlert.accept();
+    await orgImportSelection;
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.some((item) => item.id === "org-cartographers")), true);
+    process.stdout.write("PASS organization export/import: references remain valid after round-trip.\\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {

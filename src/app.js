@@ -901,6 +901,7 @@
     selectedLocationId = null;
     selectedCharacterId = null;
     selectedEventId = null;
+    selectedOrganizationId = null;
     activeView = "atlas";
     mapMode = "world";
     mapScale = 1;
