@@ -23,7 +23,14 @@ id, project_id, name, aliases[], species, age_value, age_unit, age_as_of, pronou
 id, project_id, name, location_type, parent_location_id, description, climate, culture, government, economy, resources[], coordinates, map_layer, canon_status, notes.
 
 ### Organization
-id, project_id, name, organization_type, ideology, goals[], leader_character_ids[], member_character_ids[], base_location_id, history, canon_status.
+Entidad independiente para gremios, facciones, órdenes, gobiernos y otros grupos:
+id, project_id, name, organization_type, description, ideology, goals[], leader_character_ids[], member_character_ids[], base_location_id, history, canon_status.
+
+**Contrato implementado en el prototipo (JavaScript camelCase):** `id`, `name`, `organizationType`, `description`, `ideology`, `goals[]`, `leaderCharacterIds[]`, `memberCharacterIds[]`, `baseLocationId` (`null` o un `Location.id` existente), `history`, `status`.
+
+Los responsables y miembros son referencias a `Character.id`; la sede apunta a `Location.id`. No se guardan copias de las fichas. La validación verifica las referencias y mantiene los IDs de organización únicos frente a las demás entidades. El campo superior `organizations` es compatible hacia atrás: si falta en un proyecto antiguo, la normalización produce una lista vacía. El borrado de una organización no borra sus miembros ni su sede.
+
+No se ha incorporado todavía una referencia inversa `Character.organizationIds`; se evitará mantener dos grafos redundantes hasta que un caso de uso probado lo justifique.
 
 ### Event
 id, project_id, title, description, start_time, end_time, precision, location_ids[], participant_character_ids[], organization_ids[], cause_event_ids[], consequence_event_ids[], story_reference, canon_status.

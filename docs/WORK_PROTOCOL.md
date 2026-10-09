@@ -43,7 +43,7 @@ No acumular tareas independientes. Si una sesión se interrumpe, retomar desde S
 
 ## Próxima tarea activa
 
-WF-002-C — Modelo y CRUD básico de organizaciones con referencias seguras. Leer docs/DONE.md y docs/STATUS.md para alcance, evidencia y criterios actuales.
+WF-003-A — Modelo y CRUD dedicado de relaciones entre personajes. Leer docs/DONE.md y docs/STATUS.md para alcance, evidencia y criterios actuales.
 
 ## Roles del asistente en WordWaifu: Cerebro + Obrero
 
@@ -88,3 +88,7 @@ El documento debe comenzar con `DONE` o `PARTIAL` para indicar el resultado real
 La próxima sesión debe leer `docs/DONE.md` junto a `docs/STATUS.md`, `docs/WORK_PROTOCOL.md` y `docs/MASTER_VISION.md`, inspeccionar el HEAD actual y continuar desde la tarea anotada. Nunca confiar únicamente en un SHA antiguo ni repetir una escritura que ya fue confirmada.
 
 No marcar la tarea como DONE si su gate global aún tiene criterios pendientes; en ese caso registrar la subtarea como DONE y el trabajo mayor como PARTIAL.
+
+
+## Investigación técnica comparativa
+Cuando una tarea involucre arquitectura o UX, revisar implementaciones públicas comparables si aporta valor; separar patrones observados de hipótesis. Registrar fuente, fecha, aprendizaje y decisión propia en `docs/TECHNICAL_RESEARCH.md`. Usar referencias para aprender, no copiar código, diseños ni contenido. Priorizar invariantes verificables: IDs estables, referencias validadas, compatibilidad de importación y eliminación explícita de enlaces.

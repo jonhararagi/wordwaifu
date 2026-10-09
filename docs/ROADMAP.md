@@ -27,7 +27,7 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 - [x] CRUD de ubicaciones del atlas, con edición, movimiento y borrado seguro (WF-001-B; Chromium CI PASS).
 - [x] CRUD básico de personajes y limpieza segura de referencias (WF-002-A; Chromium CI PASS).
 - [x] CRUD básico de acontecimientos y limpieza segura de referencias (WF-002-B; Chromium CI #37927849547 PASS).
-- [ ] CRUD de organizaciones.
+- [x] CRUD básico de organizaciones con referencias seguras (WF-002-C; Chromium CI #37936748101 PASS).
 - IndexedDB con repositorio desacoplado.
 - Exportar/importar JSON con validación.
 - Búsqueda y referencias por IDs estables.
@@ -97,7 +97,7 @@ No saltar directamente a generadores masivos antes de demostrar que el canon y l
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
-La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente tarea activa es WF-002-C, modelo y CRUD básico de organizaciones con referencias seguras.
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente tarea activa es WF-003-A, modelo y CRUD dedicado de relaciones entre personajes.
 
 ### Índice maestro multiverso
 - Separar proyectos/universos por IDs estables.
@@ -168,3 +168,12 @@ La especificación completa de estas capacidades está en [MASTER_VISION.md](MAS
 - Siguiente tarea: WF-002-C, organizaciones con referencias seguras. TIMER: 3–5 horas iniciales.
 
 Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vigente.
+
+
+### WF-002-C — DONE · Organizaciones
+- Modelo `organizations` opcional con default vacío para proyectos anteriores; IDs de organización globalmente únicos.
+- Validación de líderes y miembros contra personajes y sede contra lugares ya registrados.
+- Vista nueva de organizaciones con búsqueda, detalle, creación, edición de ID estable y borrado confirmado sin cascada hacia personas o lugares.
+- CI PASS_REAL: [ejecución #37936748101](https://github.com/jonhararagi/wordwaifu/actions/runs/37936748101), incluyó Chromium CRUD, persistencia, referencias y round-trip JSON.
+- Investigación conceptual documentada en [TECHNICAL_RESEARCH.md](TECHNICAL_RESEARCH.md), sin reutilizar código de terceros.
+- Siguiente tarea: WF-003-A, relaciones dedicadas. TIMER: 3–5 horas.

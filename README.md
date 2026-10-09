@@ -60,12 +60,14 @@ El repositorio contiene un prototipo funcional del atlas con creación/edición/
 - [Mapa interactivo y canon](docs/INTERACTIVE_ATLAS.md)
 - [Hoja de ruta](docs/ROADMAP.md)
 - [Modo offline](docs/OFFLINE_FIRST.md)
+- [Investigación técnica comparativa](docs/TECHNICAL_RESEARCH.md)
 
 ## Continuidad del trabajo
 
 - [Punto de continuidad más reciente (DONE)](docs/DONE.md)
 - [Estado del proyecto](docs/STATUS.md)
 - [Visión maestra](docs/MASTER_VISION.md)
+- [Investigación técnica y patrones comparados](docs/TECHNICAL_RESEARCH.md)
 
 ## Regla de ejecución
 
