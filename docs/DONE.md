@@ -1,59 +1,62 @@
-DONE
+PARTIAL
 
 # WordWaifu · Punto de continuidad
 
-**Tarea cerrada:** WF-004-A · Repositorio de persistencia e introducción gradual de IndexedDB.
-**Última subtarea cerrada:** WF-004-A.3 · Pruebas integradas de resiliencia del guardado, cola e importación segura.
-**Estado:** el flujo de persistencia de la aplicación está integrado y verificado por CI. La prueba manual en Windows 11 continúa pendiente.
+**Tarea mayor activa:** WF-004-B.1 · Registro de proyectos locales y selector de universos.
+**Subtarea cerrada:** WF-004-B.1.1 · Catálogo por ID, creación y cambio seguro entre proyectos.
+**Estado:** esta subtarea pasó CI completa en Chromium. La tarea mayor sigue parcial porque aún falta el borrado seguro de proyectos y su cobertura.
 **Fecha:** 2026-10-09.
 
 ## Estado de Git
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama de trabajo: `foundation/story-foundry-north-star`.
-- HEAD BEFORE de WF-004-A.3: `8bbaac7391bcb7bc67aecfc2f839ec671591c213`.
-- HEAD de código validado: `624e4715545c46a2268b1e4b5c892c68b58f617c`.
-- CI: **PASS**, [ejecución #37963611180](https://github.com/jonhararagi/wordwaifu/actions/runs/37963611180).
+- Rama: `foundation/story-foundry-north-star`.
+- HEAD BEFORE de WF-004-B.1.1: `e624e576a407778b2d99a75daf0768b645c1d1af`.
+- HEAD de código validado: `0b04444bb6edf726e3ae5e4971ad49e533567f27`.
+- CI de código y pruebas: **PASS**, [ejecución #37966133138](https://github.com/jonhararagi/wordwaifu/actions/runs/37966133138).
 - PR #1: [abierto y en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), no fusionado ni marcado listo.
 - `main` permanece intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
-- Este cierre documental crea un commit posterior al SHA del código probado. Verificar el HEAD vivo al retomar.
+- El commit documental de cierre será posterior al HEAD de código probado. Verificar el HEAD vivo al retomar.
 
-## Trabajo completado en WF-004-A
-- Se añadió `src/project-repository.js` como capa de persistencia intercambiable con almacenes IndexedDB `projects` y `metadata`, verificación posterior a escritura y puntero al proyecto activo.
-- `saveBackup()` encapsula la copia local y su manejo de errores. `saveActive()` migra y verifica IndexedDB, conserva el respaldo y usa fallback cuando corresponde.
-- `src/app.js` ya no accede directamente a `localStorage`; delega lectura, respaldo y escrituras a `ProjectRepository`.
-- El arranque es asíncrono y deja la interfaz inerte hasta recuperar/migrar el proyecto, evitando renderizar la demo encima de datos existentes.
-- Los guardados normales actualizan el respaldo local de forma inmediata y serializan las escrituras verificadas en IndexedDB. Se probó una ráfaga de dos escrituras con latencia artificial: ambos almacenes terminan con el estado más reciente.
-- La importación valida el archivo, espera las escrituras en cola, persiste el proyecto candidato y solo entonces reemplaza el estado activo.
-- Se simuló una transacción IndexedDB fallida en el runtime de la aplicación: el respaldo local conserva el cambio y la interfaz muestra el fallback sin afirmar que IndexedDB guardó.
-- Se simuló el fallo de ambos backends al importar: el proyecto activo y su copia local permanecieron sin cambios.
-- La exportación sigue disponible desde memoria durante un fallo de almacenamiento.
-- El test elimina el respaldo local y verifica que la aplicación recupera desde IndexedDB el proyecto vigente y sus relaciones.
-- `scripts/validate_project.py` comprueba la integración con el repositorio y rechaza el uso directo de `localStorage` en `src/app.js`.
+## Implementado en WF-004-B.1.1
+- `ProjectRepository.listProjects()` enumera proyectos de IndexedDB por ID estable, incluye el puntero activo y ordena por nombre solo para presentación.
+- Si un proyecto solo existe en el respaldo de `localStorage`, el catálogo puede incluirlo como candidato de recuperación/migración.
+- `getProject(projectId)` recupera por ID; `activateProject(projectId)` solo actualiza el puntero cuando el registro ya existe y valida su identidad.
+- Nueva ventana **Proyectos** para consultar el catálogo local, abrir un universo existente o crear uno con nombre y nuevo ID.
+- Antes de cambiar de universo, la aplicación verifica el guardado del proyecto actual; valida y persiste el candidato antes de reemplazar el estado en memoria. Si falla, mantiene el proyecto anterior y presenta el error.
+- El cambio de universo reinicia vista, selección, búsqueda, filtro temporal y zoom para no arrastrar estado de un proyecto a otro.
+- Chromium crea un segundo universo, comprueba IDs distintos, vuelve al original, abre el nuevo y verifica que los cuatro personajes de Asteria siguen intactos.
 
 ## Evidencia
-- **PASS_REAL:** [CI #37963611180](https://github.com/jonhararagi/wordwaifu/actions/runs/37963611180), ejecución completa exitosa.
+- **PASS_REAL:** [CI #37966133138](https://github.com/jonhararagi/wordwaifu/actions/runs/37966133138), ejecución completa exitosa.
+- **PASS_REAL:** Chromium verificó catálogo/creación, cambio entre proyectos, puntero activo correcto y aislamiento de los datos de ambos universos.
 - **PASS_STATIC:** 18 pruebas de esquema; sintaxis JavaScript y validador estructural.
-- **PASS_REAL:** smoke test Chromium completo para ubicaciones, personajes, acontecimientos, organizaciones, relaciones, persistencia y export/import.
-- **PASS_REAL:** ráfaga de guardados con latencia, fallback ante fallo IndexedDB, importación rechazada cuando ambos backends fallan y exportación posterior al fallo.
-- **NOT_RUN:** prueba visual/manual en la PC Windows 11 del usuario. No se afirma que esa máquina haya sido verificada.
-- **Límite conocido:** `localStorage` se conserva intencionalmente como respaldo/fallback. El selector de múltiples proyectos todavía no está implementado.
+- **PASS_REAL:** smoke test completo previo para atlas, CRUD de ubicaciones/personajes/acontecimientos/organizaciones/relaciones, importación/exportación y resiliencia IndexedDB.
+- **FAIL_REAL durante desarrollo, corregido:** el primer test detectó que el reinicio de contexto iteraba con un selector DOM individual en vez de una colección. Se corrigió a `$$(".view-tab")`; la ejecución posterior completa pasó.
+- **NOT_RUN:** prueba visual/manual en Windows 11. No se afirma que la PC del usuario haya sido verificada.
+
+## Archivos modificados
+- `src/project-repository.js`: listado, lectura por ID y activación segura.
+- `src/app.js`: gestor, creación/cambio, recuperación ante errores y reinicio del espacio de trabajo.
+- `index.html`, `src/styles.css`: control y diálogo del gestor.
+- `tests/browser_smoke.cjs`: pruebas de catálogo, creación, cambio e aislamiento.
+- `scripts/validate_project.py`: controles requeridos y cobertura del gestor.
 
 ## Progreso global
-**Estimación: 14%** de la visión completa. Es una estimación subjetiva ponderada por alcance, no por líneas ni cobertura. Este hito estabiliza la persistencia, pero no representa todavía el índice maestro, el selector multiverso, los generadores narrativos ni Novel Studio.
+**Estimación: 15%** de la visión total, ponderada subjetivamente por alcance; no representa porcentaje de código ni cobertura. El catálogo y el cambio entre universos están probados, pero no equivalen a un índice maestro multiverso.
 
-## Siguiente tarea activa
-**WF-004-B.1 — Registro de proyectos locales y selector de universos.**
+## Siguiente subpaso
+**WF-004-B.1.2 — Eliminación segura de proyectos y cierre del selector multiverso.**
 
-**TIMER inicial: 3–5 horas**, recalcular después de inspeccionar las APIs de persistencia existentes y el flujo de creación de proyectos.
+**TIMER inicial: 2–3 horas**, recalcular después de inspeccionar el código y el comportamiento actual.
 
 ### Criterios de aceptación
-1. Añadir una API para enumerar proyectos existentes desde IndexedDB sin depender de nombres de proyecto ni del respaldo local.
-2. Añadir un selector/gestor que permita abrir y crear proyectos sin sobrescribir accidentalmente otro universo.
-3. Cambiar el puntero del proyecto activo de forma transaccional y cargar el proyecto seleccionado antes de desbloquear la interfaz.
-4. Mantener compatibilidad con proyectos antiguos que solo existan en `localStorage`.
-5. Proteger el borrado: no eliminar proyecto sin confirmación; evitar borrar el proyecto activo sin reemplazo explícito y no borrar otros proyectos por accidente.
-6. Pruebas Chromium para crear/listar/cambiar proyecto, persistencia, respaldo, IDs distintos y export/import; CI PASS.
-7. Actualizar STATUS/ROADMAP/DONE. No modificar ni fusionar `main`; manual Windows sigue etiquetado `NOT_RUN` hasta probarlo realmente.
+1. Borrar un proyecto no activo con confirmación explícita y resumen del nombre/ID afectado.
+2. Prohibir borrar el proyecto activo salvo que otro proyecto ya exista, se seleccione y quede activado correctamente como reemplazo.
+3. Eliminar solo el registro cuyo ID se confirmó y actualizar el catálogo sin alterar datos de otros universos.
+4. Mantener compatibilidad con proyectos solo en respaldo local; no mostrar borrado confirmado si no se pudo eliminar de IndexedDB.
+5. Pruebas Chromium para cancelar/eliminar, protección del proyecto activo, cambio de selección, IDs similares y preservación del resto de datos.
+6. CI PASS; actualizar STATUS/ROADMAP/DONE; sin escrituras a `main` ni fusión de PR.
+7. La prueba manual de Windows sigue como `NOT_RUN` hasta que se ejecute realmente.
 
 ### Para retomar
-Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD/PR/CI actuales. Revisar `src/project-repository.js`, `src/app.js`, `index.html`, `tests/browser_smoke.cjs` y `scripts/validate_project.py`.
+Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, PR y CI actuales. Inspeccionar `src/project-repository.js`, `src/app.js`, el diálogo en `index.html`, `tests/browser_smoke.cjs` y `scripts/validate_project.py`.

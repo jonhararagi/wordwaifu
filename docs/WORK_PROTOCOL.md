@@ -43,7 +43,7 @@ No acumular tareas independientes. Si una sesión se interrumpe, retomar desde S
 
 ## Próxima tarea activa
 
-WF-004-B.1 — Registro de proyectos locales y selector de universos. Leer docs/DONE.md y docs/STATUS.md para alcance, evidencia y criterios actuales.
+WF-004-B.1.2 — Eliminación segura de proyectos y cierre del selector multiverso. Leer docs/DONE.md y docs/STATUS.md para alcance, evidencia y criterios actuales.
 
 ## Roles del asistente en WordWaifu: Cerebro + Obrero
 

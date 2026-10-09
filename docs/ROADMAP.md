@@ -30,9 +30,11 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 - [x] CRUD básico de organizaciones con referencias seguras (WF-002-C; Chromium CI #37936748101 PASS).
 - [x] CRUD básico de relaciones canónicas con migración retrocompatible desde `characters[].relationships` (WF-003-A; Chromium CI #37951860214 PASS).
 - [x] Repositorio desacoplado + IndexedDB integrado al ciclo de vida de la aplicación (WF-004-A.2; CI #37962660799 PASS). `localStorage` se conserva como respaldo/fallback.
+- [x] Catálogo local por ID, creación de universo con identidad estable y cambio validado entre proyectos (WF-004-B.1.1; Chromium CI #37966133138 PASS).
 - Exportar/importar JSON con validación.
-- Búsqueda y referencias por IDs estables.
-- Copias de seguridad.
+- Búsqueda e índice maestro de referencias por IDs estables.
+- Copias de seguridad versionadas.
+- [ ] WF-004-B.1.2: eliminación segura de proyectos y protección del proyecto activo.
 
 **Gate:** reiniciar el navegador no pierde el proyecto y exportar/importar conserva las relaciones.
 
@@ -98,7 +100,7 @@ No saltar directamente a generadores masivos antes de demostrar que el canon y l
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
-La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas y la persistencia activa están verificados en Chromium CI. La siguiente tarea activa es WF-004-B.1, registro de proyectos locales y selector de universos.
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas y la persistencia activa están verificados en Chromium CI. La subtarea WF-004-B.1.1 (catálogo, creación y cambio entre universos) pasó Chromium CI #37966133138. El selector multiverso permanece PARTIAL hasta cerrar WF-004-B.1.2, borrado seguro y protección del proyecto activo.
 
 ### Índice maestro multiverso
 - Separar proyectos/universos por IDs estables.
@@ -210,3 +212,13 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - Evidencia: [CI #37963611180 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/37963611180); 18 pruebas de esquema y smoke Chromium completo.
 - WF-004-A queda cerrado a nivel de automatización. La validación manual en Windows se mantiene como NOT_RUN.
 - Siguiente: WF-004-B.1, selector multiverso de proyectos. TIMER: 3–5 horas.
+
+
+### WF-004-B.1.1 — DONE · Catálogo, creación y cambio entre universos
+- `ProjectRepository.listProjects()` enumera proyectos por ID estable en IndexedDB e incorpora el respaldo local cuando un proyecto aún no aparece en la base de datos.
+- `getProject(projectId)` y `activateProject(projectId)` permiten leer y activar por ID; la activación exige un registro existente y actualiza el puntero mediante transacción de metadatos.
+- Nueva ventana «Proyectos» para abrir universos existentes y crear uno con nombre e ID propios.
+- El proyecto anterior se guarda/verifica antes de cambiar; el candidato se valida y persiste antes de reemplazar el estado en memoria.
+- Chromium CI PASS: [#37966133138](https://github.com/jonhararagi/wordwaifu/actions/runs/37966133138). Verifica creación, IDs únicos, cambio en ambos sentidos y que Asteria conserva sus cuatro personajes.
+- El primer test detectó un selector DOM singular usado como colección; se corrigió y la última ejecución terminó en PASS.
+- **Subtarea siguiente:** WF-004-B.1.2, borrado seguro y protección del proyecto activo. TIMER: 2–3 horas. El gate completo de WF-004-B.1 sigue PARTIAL.
