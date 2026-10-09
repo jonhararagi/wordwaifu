@@ -272,16 +272,25 @@
     try {
       if (file.size > 10 * 1024 * 1024) throw new Error("El archivo supera el límite de 10 MB.");
       const parsed = JSON.parse(await file.text());
-      if (parsed.schemaVersion !== 1 || !parsed.project || !Array.isArray(parsed.locations) || !Array.isArray(parsed.characters) || !Array.isArray(parsed.events)) throw new Error("El archivo no tiene un formato WordWaifu compatible.");
-      const ids = new Set();
-      for (const item of [...parsed.locations, ...parsed.characters, ...parsed.events]) {
-        if (!item.id || ids.has(item.id)) throw new Error("Hay entidades sin ID o con IDs duplicados.");
-        ids.add(item.id);
+      const schema = window.WordWaifuProjectSchema;
+      if (!schema || typeof schema.validateAndNormalizeProject !== "function") {
+        throw new Error("No está disponible el validador de proyectos. Recargá la aplicación e intentá de nuevo.");
       }
-      state = parsed;
+      const validation = schema.validateAndNormalizeProject(parsed);
+      if (!validation.valid) {
+        const details = validation.errors.slice(0, 6).join("\\n");
+        const remainder = validation.errors.length > 6 ? "\\n… y " + (validation.errors.length - 6) + " problema(s) más." : "";
+        throw new Error("El proyecto no supera la validación:\\n" + details + remainder);
+      }
+
+      // Persist first. If the storage write fails, the active project remains untouched.
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(validation.project));
+      state = validation.project;
       selectedLocationId = state.locations[0]?.id || null;
-      saveProject();
+      selectedCharacterId = null;
+      activeView = "atlas";
       render();
+      $("#save-status").textContent = "Proyecto importado y guardado localmente";
       alert("Proyecto importado correctamente.");
     } catch (error) {
       alert("No se pudo importar: " + error.message);
