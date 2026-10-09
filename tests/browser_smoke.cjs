@@ -281,6 +281,7 @@ async function run() {
       window.__masterSearchOriginalOpen = prototype.open;
       prototype.open = async function () { throw new Error("Simulated IndexedDB index read failure."); };
     });
+    await page.locator("#master-search-type").selectOption("character");
     await page.locator("#master-search-query").fill("Mira");
     await page.locator("#master-search-button").click();
     await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("BÚSQUEDA PARCIAL"), null, { timeout: 5000 });
