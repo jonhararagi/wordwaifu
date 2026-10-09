@@ -192,7 +192,7 @@ async function run() {
     assert.match(validImportAlert.message(), /Proyecto importado correctamente/i);
     await validImportAlert.accept();
     await validImportSelection;
-    await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
+    await page.locator("#details-panel h2").getByText("Ciudad Renombrada").waitFor();
     process.stdout.write("PASS round-trip: an exported project imports back successfully.\n");
 
     const invalidProject = {
