@@ -805,6 +805,126 @@ async function run() {
     assert.equal(databaseOnlyRecovery.relationshipFound, true);
     process.stdout.write("PASS app persistence recovery: IndexedDB restores the current project and relationships without localStorage backup.\\n");
 
+    // Slow consecutive IndexedDB writes to ensure the queue persists the newest state last.
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      window.__wordWaifuOriginalRepositoryWrite = prototype.write;
+      prototype.write = async function (project) {
+        await new Promise((resolve) => setTimeout(resolve, 150));
+        return window.__wordWaifuOriginalRepositoryWrite.call(this, project);
+      };
+    });
+    await page.locator('.nav-item[data-view="organizations"]').click();
+    await page.locator("#add-button").click();
+    await page.locator("#entity-name").fill("Guardado rápido A");
+    await page.locator("#entity-description").fill("Primera escritura del lote.");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-organization-details h2").getByText("Guardado rápido A").waitFor();
+    await page.locator("#add-button").click();
+    await page.locator("#entity-name").fill("Guardado rápido B");
+    await page.locator("#entity-description").fill("Última escritura del lote.");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-organization-details h2").getByText("Guardado rápido B").waitFor();
+    await page.waitForFunction(() => document.querySelector("#save-status")?.textContent.includes("Guardado en IndexedDB"), { timeout: 5000 });
+    const burstPersistence = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const backup = repository.readBackup().project;
+      const metadata = await repository.read("metadata", "activeProjectId");
+      const record = metadata ? await repository.read("projects", metadata.value) : null;
+      repository.close();
+      const names = ["Guardado rápido A", "Guardado rápido B"];
+      return {
+        backupHasBoth: names.every((name) => backup.organizations.some((item) => item.name === name)),
+        indexedDBHasBoth: Boolean(record && names.every((name) => record.data.organizations.some((item) => item.name === name))),
+        backupName: backup.project.name,
+        indexedDBName: record?.data?.project?.name
+      };
+    });
+    assert.equal(burstPersistence.backupHasBoth, true);
+    assert.equal(burstPersistence.indexedDBHasBoth, true, "The serialized queue must leave IndexedDB at the newest project snapshot.");
+    assert.equal(burstPersistence.indexedDBName, burstPersistence.backupName);
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      prototype.write = window.__wordWaifuOriginalRepositoryWrite;
+      delete window.__wordWaifuOriginalRepositoryWrite;
+    });
+    process.stdout.write("PASS persistence burst: consecutive writes leave local backup and IndexedDB at the newest snapshot.\\n");
+
+    // A real integrated write failure must preserve the immediate local backup and report fallback honestly.
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      window.__wordWaifuOriginalRepositoryWrite = prototype.write;
+      prototype.write = async function () { throw new Error("Simulated IndexedDB transaction failure."); };
+    });
+    await page.locator("#add-button").click();
+    await page.locator("#entity-name").fill("Solo en respaldo local");
+    await page.locator("#entity-description").fill("Este registro sobrevive a un fallo de IndexedDB.");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-organization-details h2").getByText("Solo en respaldo local").waitFor();
+    await page.waitForFunction(() => document.querySelector("#save-status")?.textContent.includes("Respaldo local disponible"), { timeout: 5000 });
+    const failedWriteEvidence = await page.evaluate(async () => {
+      const backup = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const metadata = await repository.read("metadata", "activeProjectId");
+      const record = metadata ? await repository.read("projects", metadata.value) : null;
+      repository.close();
+      return {
+        backupHasNewRecord: backup.organizations.some((item) => item.name === "Solo en respaldo local"),
+        indexedDBHasNewRecord: Boolean(record && record.data.organizations.some((item) => item.name === "Solo en respaldo local")),
+        status: document.querySelector("#save-status").textContent,
+        activeName: backup.project.name
+      };
+    });
+    assert.equal(failedWriteEvidence.backupHasNewRecord, true);
+    assert.equal(failedWriteEvidence.indexedDBHasNewRecord, false, "Injected transaction failure should leave IndexedDB unchanged.");
+    assert.match(failedWriteEvidence.status, /Respaldo local disponible/);
+    process.stdout.write("PASS integrated write failure: local backup survives and the UI reports fallback instead of claiming IndexedDB success.\\n");
+
+    // If neither backend accepts an import, the active project must remain unchanged.
+    const unpersistableCandidate = await page.evaluate(() => {
+      const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      project.project = { ...project.project, name: "Importación no persistible" };
+      return project;
+    });
+    const activeNameBeforeRejectedImport = failedWriteEvidence.activeName;
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      window.__wordWaifuOriginalSaveBackup = prototype.saveBackup;
+      prototype.saveBackup = () => ({ written: false, warning: "Simulated local backup write failure." });
+    });
+    const rejectedImportAlertPromise = page.waitForEvent("dialog");
+    const rejectedImportTask = page.locator("#import-file").setInputFiles({
+      name: "unpersistable-project.json",
+      mimeType: "application/json",
+      buffer: Buffer.from(JSON.stringify(unpersistableCandidate))
+    });
+    const rejectedImportAlert = await rejectedImportAlertPromise;
+    assert.equal(rejectedImportAlert.type(), "alert");
+    assert.match(rejectedImportAlert.message(), /Fallaron IndexedDB y localStorage/);
+    await rejectedImportAlert.accept();
+    await rejectedImportTask;
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      prototype.write = window.__wordWaifuOriginalRepositoryWrite;
+      prototype.saveBackup = window.__wordWaifuOriginalSaveBackup;
+      delete window.__wordWaifuOriginalRepositoryWrite;
+      delete window.__wordWaifuOriginalSaveBackup;
+    });
+    assert.equal(await page.locator("#project-name").innerText(), activeNameBeforeRejectedImport);
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).project.name), activeNameBeforeRejectedImport);
+    process.stdout.write("PASS rejected import: if both persistence backends fail, active state and backup remain unchanged.\\n");
+
+    const failedStorageExportPromise = page.waitForEvent("download");
+    await page.locator("#export-button").click();
+    const failedStorageExport = await failedStorageExportPromise;
+    const failedStorageExportPath = await failedStorageExport.path();
+    const failedStorageExportProject = JSON.parse(fs.readFileSync(failedStorageExportPath, "utf8"));
+    const failedStorageExportValidation = validateAndNormalizeProject(failedStorageExportProject);
+    assert.equal(failedStorageExportValidation.valid, true, failedStorageExportValidation.errors.join("\\n"));
+    assert.equal(failedStorageExportProject.project.name, activeNameBeforeRejectedImport);
+    assert.ok(failedStorageExportProject.organizations.some((item) => item.name === "Solo en respaldo local"));
+    process.stdout.write("PASS export after storage failure: valid active project remains downloadable from memory.\\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {
