@@ -25,7 +25,9 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 ## Fase 2 — Canon local y persistencia
 **Estimación:** 1–3 días.
 - [x] CRUD de ubicaciones del atlas, con edición, movimiento y borrado seguro (WF-001-B; Chromium CI PASS).
-- [x] CRUD básico de personajes y limpieza segura de referencias (WF-002-A; Chromium CI PASS).\n- [ ] CRUD de acontecimientos y organizaciones.
+- [x] CRUD básico de personajes y limpieza segura de referencias (WF-002-A; Chromium CI PASS).
+- [x] CRUD básico de acontecimientos y limpieza segura de referencias (WF-002-B; Chromium CI #37927849547 PASS).
+- [ ] CRUD de organizaciones.
 - IndexedDB con repositorio desacoplado.
 - Exportar/importar JSON con validación.
 - Búsqueda y referencias por IDs estables.
@@ -95,7 +97,7 @@ No saltar directamente a generadores masivos antes de demostrar que el canon y l
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
-La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente tarea activa es WF-002-B, CRUD de acontecimientos con referencias seguras.
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente tarea activa es WF-002-C, modelo y CRUD básico de organizaciones con referencias seguras.
 
 ### Índice maestro multiverso
 - Separar proyectos/universos por IDs estables.
@@ -156,7 +158,13 @@ La especificación completa de estas capacidades está en [MASTER_VISION.md](MAS
 - CRUD básico de personajes: crear y editar datos esenciales sin cambiar el ID.
 - Borrado con confirmación y limpieza selectiva de relaciones entrantes, referencias de ubicación y participantes en eventos.
 - CI PASS_REAL: [ejecución #37925820239](https://github.com/jonhararagi/wordwaifu/actions/runs/37925820239), incluyendo Chromium, persistencia, export/import, edad desconocida renderizada correctamente y comprobación sin errores de página.
+
+### WF-002-B — DONE
+- CRUD básico de acontecimientos: crear, seleccionar, editar con ID estable y borrar con confirmación.
+- Al editar, se sincronizan las referencias `event.locationIds` con `location.events`; al borrar, se elimina solo la referencia al evento borrado.
+- CI PASS_REAL: [ejecución #37927849547](https://github.com/jonhararagi/wordwaifu/actions/runs/37927849547), con nueve pruebas de esquema, Chromium, persistencia, borrado selectivo y round-trip de export/import.
+- Las primeras ejecuciones detectaron fixtures de prueba incompletos; se corrigieron. La última ejecución terminó en PASS.
 - Pendiente fuera del gate CI: prueba manual en Windows 11.
-- Siguiente tarea: WF-002-B, CRUD seguro de acontecimientos. TIMER: 2–4 horas iniciales.
+- Siguiente tarea: WF-002-C, organizaciones con referencias seguras. TIMER: 3–5 horas iniciales.
 
 Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vigente.
