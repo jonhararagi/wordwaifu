@@ -29,7 +29,7 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 - [x] CRUD básico de acontecimientos y limpieza segura de referencias (WF-002-B; Chromium CI #37927849547 PASS).
 - [x] CRUD básico de organizaciones con referencias seguras (WF-002-C; Chromium CI #37936748101 PASS).
 - [x] CRUD básico de relaciones canónicas con migración retrocompatible desde `characters[].relationships` (WF-003-A; Chromium CI #37951860214 PASS).
-- IndexedDB con repositorio desacoplado.
+- [x] Repositorio desacoplado + IndexedDB integrado al ciclo de vida de la aplicación (WF-004-A.2; CI #37962660799 PASS). `localStorage` se conserva como respaldo/fallback.
 - Exportar/importar JSON con validación.
 - Búsqueda y referencias por IDs estables.
 - Copias de seguridad.
@@ -98,7 +98,7 @@ No saltar directamente a generadores masivos antes de demostrar que el canon y l
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
-La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente tarea activa es WF-004-A, repositorio de persistencia e introducción gradual de IndexedDB.
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente subtarea activa es WF-004-A.3, resiliencia integrada de escrituras y recuperación.
 
 ### Índice maestro multiverso
 - Separar proyectos/universos por IDs estables.
@@ -186,3 +186,17 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - CRUD desde la vista «Relaciones», con persistencia, round-trip, borrado confirmado y sincronización de la proyección antigua.
 - Evidencia: [Chromium CI #37951860214 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/37951860214); 18 pruebas de esquema y smoke test completo.
 - Siguiente: WF-004-A, repositorio local desacoplado + IndexedDB. TIMER: 4–6 horas.
+
+
+### WF-004-A.1 — DONE · Adaptador aislado
+- IndexedDB y respaldo local con migración, verificación del contenido, reparación ante divergencia y fallback.
+- Evidencia: [CI #37961153186](https://github.com/jonhararagi/wordwaifu/actions/runs/37961153186).
+
+### WF-004-A.2 — DONE · Integración de ProjectRepository en la aplicación
+- Arranque asíncrono que bloquea interacciones hasta recuperar el proyecto activo.
+- Guardados normales serializados; la copia local se actualiza de forma inmediata y las escrituras IndexedDB van en cola.
+- La importación pasa validación y guardado antes de sustituir el estado activo.
+- Chromium valida el registro IndexedDB, respaldo y recuperación sin copia local.
+- Evidencia: [CI #37962660799 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/37962660799).
+- Pendiente para cerrar WF-004-A completo: pruebas integradas de fallo de transacción/ráfaga y prueba manual Windows.
+- Siguiente subtarea: WF-004-A.3, resiliencia integrada. TIMER: 2–4 horas.

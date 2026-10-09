@@ -46,8 +46,10 @@ if html_path.is_file():
 
 if js_path.is_file():
     js = js_path.read_text(encoding="utf-8")
-    for required in ("STORAGE_KEY", "charactersAt", "renderDetails", "exportProject", "importProject", "executeCommand", "validateAndNormalizeProject", "WordWaifuProjectSchema", '$(".map-marker").forEach'):
+    for required in ("STORAGE_KEY", "ProjectRepository", "initializeApplication", "enqueueRepositoryOperation", "charactersAt", "renderDetails", "exportProject", "importProject", "executeCommand", "validateAndNormalizeProject", "WordWaifuProjectSchema", '$(".map-marker").forEach'):
         require(required in js, "Falta componente esperado en src/app.js: " + required)
+    require("localStorage." not in js, "src/app.js no debe acceder directamente a localStorage; usar ProjectRepository")
+    require("projectRepository.write(snapshot)" in js, "El guardado normal debe persistir mediante ProjectRepository")
 
 if schema_path.is_file():
     schema = schema_path.read_text(encoding="utf-8")
@@ -56,7 +58,7 @@ if schema_path.is_file():
 if repository_path.is_file():
     repository = repository_path.read_text(encoding="utf-8")
     require("class ProjectRepository" in repository, "Falta el adaptador ProjectRepository")
-    require("loadActive" in repository and "saveActive" in repository, "El repositorio debe exponer carga y guardado del proyecto activo")
+    require("loadActive" in repository and "saveActive" in repository and "saveBackup" in repository and "write" in repository, "El repositorio debe exponer carga, guardado, respaldo y verificación del proyecto activo")
     require("recoveredBackup" in repository, "Falta la ruta de recuperación del respaldo local")
 
 if schema_test_path.is_file():
@@ -68,6 +70,8 @@ if browser_test_path.is_file():
     browser_test = browser_test_path.read_text(encoding="utf-8")
     require("PASS_REAL" in browser_test, "La prueba del navegador debe reportar su nivel de evidencia")
     require("safe import" in browser_test, "La prueba del navegador debe verificar imports seguros")
+    require("PASS app persistence boot" in browser_test, "Falta prueba de integración del arranque con IndexedDB")
+    require("PASS app persistence recovery" in browser_test, "Falta prueba de recuperación desde IndexedDB sin respaldo local")
 
 if css_path.is_file():
     css = css_path.read_text(encoding="utf-8")

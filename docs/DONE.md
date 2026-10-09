@@ -3,62 +3,55 @@ PARTIAL
 # WordWaifu · Punto de continuidad
 
 **Tarea activa:** WF-004-A · Repositorio de persistencia e introducción gradual de IndexedDB.
-**Subtarea trabajada:** WF-004-A.1 · Adaptador de persistencia con migración verificada y fallback.
-**Estado:** el adaptador y sus pruebas aisladas pasan CI. La aplicación principal todavía usa directamente `localStorage`; la integración con el arranque, guardado e importación sigue pendiente.
+**Subtarea cerrada:** WF-004-A.2 · Integración de ProjectRepository en el ciclo de vida real de la aplicación.
+**Estado:** código y suite automatizada completos para esta subtarea; la prueba manual en Windows 11 y pruebas extra de resiliencia de escritura en el runtime integrado siguen pendientes.
 **Fecha:** 2026-10-09.
 
 ## Estado de Git
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama: `foundation/story-foundry-north-star`.
-- HEAD BEFORE de WF-004-A.1: `e38abfbc8597d938e895c3fa21a92b72eddf708c`.
-- HEAD de código validado: `6b0d70168e5a843b7deba4b78527dc34498e214e`.
-- CI: **PASS**, [ejecución #37961153186](https://github.com/jonhararagi/wordwaifu/actions/runs/37961153186).
-- PR #1: [abierto y en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar ni marcar listo.
+- Rama de trabajo: `foundation/story-foundry-north-star`.
+- HEAD BEFORE de WF-004-A.2: `5801760f9ec102fd596aab9acb6369165c9f62c5`.
+- HEAD de código validado: `b0adfdef92c8f8376a63d8a4f470d4ae5ce7bf21`.
+- CI: **PASS**, [ejecución #37962660799](https://github.com/jonhararagi/wordwaifu/actions/runs/37962660799).
+- PR #1: [abierto y en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), no fusionado ni marcado listo.
 - `main` permanece intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
-- Este commit actualiza documentación después del HEAD de código probado. En la próxima sesión consultar siempre el HEAD vivo de la rama.
+- Este cierre documental genera un commit posterior al HEAD de código probado. Verificar el HEAD vivo al retomar.
 
-## Cambios persistidos
-- Nuevo `src/project-repository.js`, cargado antes de `src/app.js`, con una clase `ProjectRepository` que separa la API de persistencia de la lógica narrativa.
-- Base IndexedDB con almacenes `projects` y `metadata`. Los proyectos se guardan como registros con clave `projectId` y contenido `data`; metadatos identifican el proyecto activo.
-- `saveActive(project)` escribe primero la copia recuperable de `localStorage`, escribe proyecto y puntero activo dentro de una transacción IndexedDB, y relee el registro para verificar el contenido.
-- La copia de `localStorage` no se borra tras migrar. Si IndexedDB no está disponible o la transacción falla, el adaptador usa el fallback local cuando pudo conservarlo; solo falla si no pudo guardar en ninguno de los dos sitios.
-- `loadActive()` migra un proyecto anterior hacia IndexedDB, conserva el respaldo local y repara IndexedDB cuando la copia local difiere, cubriendo una posible interrupción entre ambas escrituras.
-- Actualizada la validación estructural para comprobar el nuevo módulo y el orden de los scripts. CI revisa sintaxis del repositorio y del smoke test.
-- Las pruebas Chromium usan claves y base de datos aisladas para no tocar datos normales del test.
+## Cambios implementados
+- `src/app.js` ya no accede directamente a `localStorage`; lectura de respaldo, copia local y almacenamiento se delegan a `ProjectRepository`.
+- El arranque es asíncrono y mantiene la interfaz inerte durante la recuperación/migración, evitando que la demo se renderice primero y tape el proyecto recuperado.
+- El guardado normal conserva una copia local inmediata mediante `ProjectRepository.saveBackup()` y encola escrituras IndexedDB verificadas en orden. Las escrituras anteriores no sobrescriben una copia local más reciente.
+- La importación valida el archivo, bloquea interacciones durante el reemplazo y encola `saveActive(candidate)` detrás de las escrituras pendientes. El estado activo cambia solo después de que el repositorio confirme IndexedDB o el respaldo local.
+- La exportación sigue usando el estado en memoria y no depende de que la última escritura haya tenido éxito.
+- `src/project-repository.js` consolida `saveBackup()` y `saveActive()` reutiliza ese método.
+- El smoke test verifica que el arranque sincronice registro IndexedDB, puntero activo y respaldo local; también quita el respaldo y confirma la recuperación del proyecto y sus relaciones desde IndexedDB.
+- `scripts/validate_project.py` ahora exige los puntos de integración con el repositorio y rechaza el acceso directo a `localStorage` en `src/app.js`.
 
 ## Evidencia
-- **PASS_STATIC:** sintaxis JavaScript y 18 pruebas del esquema aprobadas en [CI #37961153186](https://github.com/jonhararagi/wordwaifu/actions/runs/37961153186).
-- **PASS_REAL:** Chromium probó migración desde el respaldo antiguo, retención de la copia local, reparación desde una copia más reciente y fallback cuando IndexedDB no existe.
-- **PASS_REAL:** el smoke test completo de la aplicación terminó sin errores de página en esa ejecución.
-- **FAIL_REAL durante desarrollo, corregido:** la primera corrida detectó una clave IndexedDB incompatible con el formato del proyecto (`project.id`). Se cambió a una clave `projectId` con el documento dentro de `data`; la siguiente ejecución pasó.
-- **PARTIAL:** el adaptador aún no sustituye las llamadas directas de `src/app.js` a `localStorage`. No declarar migrada la aplicación completa hasta integrar y probar el nuevo ciclo de arranque/guardado.
-- **NOT_RUN:** prueba manual visual y funcional en Windows 11.
-
-## Inventario de riesgo para la integración
-- Lectura inicial síncrona en `loadProject()`.
-- Escritura síncrona en `saveProject()`, usada desde múltiples operaciones CRUD.
-- Escritura directa dentro de `importProject()`.
-- Guardado al crear un proyecto y al inicializar la aplicación.
-- Exportación produce el JSON desde memoria y debe seguir funcionando aunque falle el almacenamiento.
-
-No convertir únicamente el backend de guardado en asíncrono mientras el arranque siga siendo síncrono. La integración debe definir un estado de inicialización, serializar escrituras y no sustituir el estado activo antes de validar y guardar correctamente una importación.
+- **PASS_REAL:** [CI #37962660799](https://github.com/jonhararagi/wordwaifu/actions/runs/37962660799), ejecución completa exitosa.
+- **PASS_STATIC:** 18 pruebas de esquema, incluidas migración retrocompatible de relaciones, referencias válidas e IDs globales.
+- **PASS_REAL:** Chromium verificó arranque con IndexedDB, registro activo y respaldo local, migración/fallback y los flujos CRUD existentes de lugares, personajes, acontecimientos, organizaciones y relaciones.
+- **PASS_REAL:** se quitó la copia local al final del smoke test y la aplicación recuperó desde IndexedDB el proyecto vigente y sus relaciones.
+- **PASS_STATIC:** sintaxis JavaScript y validación estructural terminaron en verde.
+- **NOT_RUN:** prueba manual visual/funcional en Windows 11.
+- **PARTIAL:** el gate mayor WF-004-A continúa abierto para pruebas extra de escritura fallida en la app integrada y validación manual. `localStorage` se conserva intencionalmente como respaldo/fallback.
 
 ## Progreso global
-**Estimación: 14%** de la visión completa. Estimación subjetiva ponderada por alcance, no por líneas ni cobertura. Esta subtarea es infraestructura probada en aislamiento y no justifica aumentar el porcentaje funcional.
+**Estimación: 14%** de la visión completa. Es una estimación ponderada por alcance, no una métrica de líneas o cobertura.
 
 ## Siguiente subtarea activa
-**WF-004-A.2 — Integrar ProjectRepository al arranque, guardado, proyecto nuevo e importación/exportación.**
+**WF-004-A.3 — Resiliencia integrada: errores de escritura, cola de guardado y estado de recuperación.**
 
-**TIMER inicial: 3–5 horas**, recalcular tras inspeccionar todos los puntos de mutación.
+**TIMER inicial: 2–4 horas**, recalcular tras inspeccionar el runtime.
 
 ### Criterios de aceptación
-1. Arranque asíncrono: leer el proyecto activo por el repositorio y evitar que la demo se renderice y luego sobrescriba el proyecto recuperado.
-2. Un único flujo de persistencia serializado; cambios rápidos no pueden dejar datos antiguos sobrescribiendo datos recientes.
-3. Guardar y verificar IndexedDB; mantener `localStorage` como respaldo/fallback durante la transición.
-4. Importar valida antes de sustituir el estado; el cambio activo ocurre solo tras una escritura exitosa. Exportar sigue disponible si falla el guardado.
-5. Crear/borrar proyecto, organizaciones, relaciones y otras entidades conservan las pruebas previas.
-6. Pruebas de recarga, migración, fallback, escritura fallida, proyecto vacío y round-trip; CI PASS.
-7. Actualizar continuidad y documentos relacionados. No modificar ni fusionar `main`.
+1. Simular fallos de IndexedDB en la app y demostrar que el respaldo se conserva y el estado visible no afirma que IndexedDB guardó.
+2. Probar una ráfaga de escrituras; el respaldo local y el registro IndexedDB deben terminar con el estado más reciente.
+3. Verificar que una importación inválida o no persistible no sustituya el proyecto activo.
+4. Confirmar que exportar funciona durante un fallo de almacenamiento.
+5. Mantener 18 pruebas de esquema, CRUD Chromium y validación estructural en PASS.
+6. CI PASS; actualizar la continuidad y no modificar ni fusionar `main`.
+7. Mantener la validación manual de Windows como `NOT_RUN` hasta hacerla realmente.
 
 ### Para retomar
-Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD/PR/CI. Revisar `src/app.js` (`loadProject`, `saveProject`, `importProject`, creación de proyecto y guardado inicial), `src/project-repository.js` y `tests/browser_smoke.cjs`.
+Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD/PR/CI actuales. Inspeccionar `src/app.js`, `src/project-repository.js`, `tests/browser_smoke.cjs` y `scripts/validate_project.py`.
