@@ -10,8 +10,8 @@
 ## GitHub verificado
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama: `foundation/story-foundry-north-star`.
-- HEAD de código probado: `66002e539eef47103dfde50c91461153eace80dd`.
-- CI: [PASS, ejecución #37951860214](https://github.com/jonhararagi/wordwaifu/actions/runs/37951860214).
+- HEAD de código probado en la subtarea de persistencia: `6b0d70168e5a843b7deba4b78527dc34498e214e`.
+- CI: [PASS, ejecución #37961153186](https://github.com/jonhararagi/wordwaifu/actions/runs/37961153186).
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar.
 - `main`: intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
 - El cierre documental generará un commit posterior al SHA probado; verificar el HEAD vivo al retomar.
@@ -48,17 +48,18 @@
 - Evidencia: [Chromium CI #37951860214](https://github.com/jonhararagi/wordwaifu/actions/runs/37951860214), 18 pruebas de esquema + CRUD Chromium completo.
 
 ## Evidencia y límites
-- **PASS_REAL:** [CI #37951860214](https://github.com/jonhararagi/wordwaifu/actions/runs/37951860214), browser smoke en Chromium sin errores de página.
+- **PASS_REAL:** [CI #37951860214](https://github.com/jonhararagi/wordwaifu/actions/runs/37951860214), CRUD de relaciones en Chromium.
 - **PASS_STATIC:** 18 pruebas de esquema aprobadas.
+- **PASS_REAL:** [CI #37961153186](https://github.com/jonhararagi/wordwaifu/actions/runs/37961153186), pruebas Chromium del repositorio aislado: migración, recuperación de respaldo local y fallback.
+- **PARTIAL:** `src/project-repository.js` está probado, pero `src/app.js` todavía lee/escribe directamente `localStorage`. La migración de persistencia de la aplicación no está hecha.
 - **NOT_RUN:** prueba manual visual/funcional en Windows 11.
-- **PARTIAL:** las relaciones básicas no tienen todavía rangos temporales, intensidad, secretos ni vínculos con acontecimientos. El estado se guarda en `localStorage`; IndexedDB y copias de seguridad están pendientes.
 
-## Siguiente tarea activa
-**WF-004-A — Repositorio de persistencia e introducción gradual de IndexedDB.**
+## Tarea activa
+**WF-004-A.2 — Integración del repositorio al ciclo de vida real de la aplicación.**
 
-**TIMER inicial: 4–6 horas**, recalcular tras inspección.
+**TIMER inicial: 3–5 horas**, recalcular tras inspeccionar los puntos de mutación/guardado.
 
-Criterios: inventariar lecturas/escrituras; separar acceso a datos del estado UI; migrar localStorage a IndexedDB sin pérdida, verificar lectura/escritura antes de limpiar; fallback claro; conservar importación/exportación; pruebas de persistencia, migración y fallos; CI PASS y actualización del punto de continuidad.
+Criterios: arranque asíncrono seguro; un único flujo de guardado serializado; importación validada antes de sustituir el estado; respaldo local y fallback; persistencia, recarga, round-trip y fallos probados en Chromium; CI PASS y continuidad actualizada.
 
 ## Pendiente a medio/largo plazo
 - IndexedDB, repositorio desacoplado y respaldos.
