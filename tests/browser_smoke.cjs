@@ -806,6 +806,7 @@ async function run() {
     process.stdout.write("PASS app persistence recovery: IndexedDB restores the current project and relationships without localStorage backup.\\n");
 
     // Slow consecutive IndexedDB writes to ensure the queue persists the newest state last.
+    await page.locator('.nav-item[data-view="organizations"]').click();
     await page.evaluate(() => {
       const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
       window.__wordWaifuOriginalRepositoryWrite = prototype.write;
