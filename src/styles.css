@@ -25,3 +25,5 @@
 .master-search-result strong{font-size:12px}
 .master-search-result small{color:var(--muted);font-size:10px;line-height:1.5;margin-top:4px}
 .master-search-result span{font-size:10px;color:#a9e7d8;margin-top:5px}
+
+.master-search-open{margin-top:8px}.master-search-open:disabled{opacity:.45;cursor:not-allowed}.story-card.selected{border-color:var(--teal);box-shadow:inset 0 0 0 1px var(--teal)}

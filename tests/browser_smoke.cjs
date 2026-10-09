@@ -291,6 +291,8 @@ async function run() {
     assert.equal(partialMasterResults.length, 1, "Only the active local backup should be available when IndexedDB fails.");
     assert.equal(partialMasterResults[0].projectId, "project-asteria");
     assert.equal(partialMasterResults[0].source, "localStorage");
+    assert.equal(await page.locator("#master-search-results [data-master-open]").isDisabled(), true,
+      "A backup-only result must not be offered as a verified destination.");
     assert.match(await page.locator("#master-search-status").innerText(), /Simulated IndexedDB index read failure/);
     await page.evaluate(() => {
       const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
@@ -305,6 +307,109 @@ async function run() {
     });
     assert.equal(activeAfterPartialSearch, "project-asteria");
     process.stdout.write("PASS master index partial failure: IndexedDB read failure is explicit and never claims full coverage.\\n");
+
+    const performMiraSearch = async () => {
+      await page.locator("#master-search-query").fill("Mira");
+      await page.locator("#master-search-type").selectOption("character");
+      await page.locator("#master-search-button").click();
+      await page.waitForFunction(() => {
+        const status = document.querySelector("#master-search-status")?.textContent || "";
+        return status.includes("Búsqueda completa") || status.startsWith("BÚSQUEDA PARCIAL");
+      }, null, { timeout: 5000 });
+    };
+
+    // Simulate a stale search hit whose destination project was deleted after the query.
+    await performMiraSearch();
+    const vanishedProjectCard = page.locator('#master-search-results .master-search-result[data-project-id="' + createdUniverse.id + '"]');
+    await vanishedProjectCard.evaluate((card) => { card.dataset.projectId = "project-removed-after-search"; });
+    await vanishedProjectCard.locator("[data-master-open]").click();
+    await page.waitForFunction(() => (document.querySelector("#master-search-status")?.textContent || "").toLowerCase().includes("proyecto destino ya no existe"), null, { timeout: 5000 });
+    const activeAfterMissingDestination = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return active?.value;
+    });
+    assert.equal(activeAfterMissingDestination, "project-asteria");
+    process.stdout.write("PASS master index stale destination: missing project is refused and active universe is preserved.\\n");
+
+    // Simulate a stale entity ID from a hit cached before the record changed.
+    await performMiraSearch();
+    const vanishedEntityCard = page.locator('#master-search-results .master-search-result[data-project-id="project-asteria"]');
+    await vanishedEntityCard.evaluate((card) => { card.dataset.entityId = "char-removed-after-search"; });
+    await vanishedEntityCard.locator("[data-master-open]").click();
+    await page.waitForFunction(() => (document.querySelector("#master-search-status")?.textContent || "").toLowerCase().includes("ficha exacta ya no existe"), null, { timeout: 5000 });
+    const activeAfterMissingEntity = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return active?.value;
+    });
+    assert.equal(activeAfterMissingEntity, "project-asteria");
+    process.stdout.write("PASS master index stale entity: missing ID is refused without opening a similarly named record.\\n");
+
+    // Simulate a target write that can only fall back to localStorage. Switching must roll back.
+    await performMiraSearch();
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      window.__originalSaveActiveForContextOpen = prototype.saveActive;
+      prototype.saveActive = async function (project) {
+        if (project.project.id !== "project-asteria") return { backend: "localStorage", backupWritten: true, warning: "Simulated persistence failure." };
+        return window.__originalSaveActiveForContextOpen.call(this, project);
+      };
+    });
+    const failedSaveCard = page.locator('#master-search-results .master-search-result[data-project-id="' + createdUniverse.id + '"]');
+    await failedSaveCard.locator("[data-master-open]").click();
+    await page.waitForFunction(() => (document.querySelector("#master-search-status")?.textContent || "").toLowerCase().includes("no se pudo persistir y verificar"), null, { timeout: 5000 });
+    const activeAfterSaveFailure = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return active?.value;
+    });
+    assert.equal(activeAfterSaveFailure, "project-asteria");
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      prototype.saveActive = window.__originalSaveActiveForContextOpen;
+      delete window.__originalSaveActiveForContextOpen;
+    });
+    process.stdout.write("PASS master index persistence failure: switching is rolled back to the previous universe.\\n");
+
+    // A valid result from the active project opens its exact ID without switching universes.
+    await performMiraSearch();
+    const currentUniverseCard = page.locator('#master-search-results .master-search-result[data-project-id="project-asteria"]');
+    await currentUniverseCard.locator("[data-master-open]").click();
+    await page.locator("#details-panel h2").getByText("Mira Solenne").waitFor();
+    const activeAfterCurrentOpen = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return active?.value;
+    });
+    assert.equal(activeAfterCurrentOpen, "project-asteria");
+    process.stdout.write("PASS master index contextual open: active-project result focuses its exact character ID.\\n");
+
+    // The second universe reuses the same character ID but stores a different character.
+    await page.locator("#manage-projects-button").click();
+    await performMiraSearch();
+    const otherUniverseCard = page.locator('#master-search-results .master-search-result[data-project-id="' + createdUniverse.id + '"]');
+    await otherUniverseCard.locator("[data-master-open]").click();
+    await page.locator("#project-name").getByText("Universo Multiverso QA").waitFor();
+    await page.locator("#details-panel h2").getByText("Mira de Niebla").waitFor();
+    const activeAfterOtherOpen = await page.evaluate(async (createdId) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      const original = await repository.getProject("project-asteria");
+      const target = await repository.getProject(createdId);
+      repository.close();
+      return { activeId: active?.value, originalCharacterCount: original?.characters?.length, targetName: target?.project?.name };
+    }, createdUniverse.id);
+    assert.equal(activeAfterOtherOpen.activeId, createdUniverse.id);
+    assert.equal(activeAfterOtherOpen.originalCharacterCount, 4);
+    assert.equal(activeAfterOtherOpen.targetName, "Universo Multiverso QA");
+    process.stdout.write("PASS master index contextual open: matching entity IDs in separate universes open the correct project-scoped character.\\n");
+
+    await page.locator("#manage-projects-button").click();
     await page.locator("#project-close-button").click();
 
     await page.locator("#manage-projects-button").click();

@@ -64,6 +64,7 @@
   let selectedEventId = null;
   let selectedOrganizationId = null;
   let selectedRelationshipId = null;
+  let selectedStoryId = null;
   let mapScale = 1;
   const enabledLayers = { places: true, characters: true, routes: true, events: true };
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -165,6 +166,7 @@
     selectedEventId = null;
     selectedOrganizationId = null;
     selectedRelationshipId = null;
+    selectedStoryId = null;
     activeView = "atlas";
     mapMode = "world";
     mapScale = 1;
@@ -325,7 +327,20 @@
         const identity = document.createElement("span");
         identity.textContent = "Proyecto ID: " + item.projectId + " · Ficha ID: " + item.entityId +
           (item.source === "localStorage" ? " · solo en respaldo local" : "");
-        card.append(title, metadata, identity);
+        const action = document.createElement("button");
+        action.type = "button";
+        action.className = "outline-button master-search-open";
+        action.dataset.masterOpen = "true";
+        action.textContent = item.source === "indexeddb" ? "Abrir ficha" : "No verificable";
+        action.disabled = item.source !== "indexeddb";
+        action.title = item.source === "indexeddb"
+          ? "Abrir esta ficha exacta en su universo"
+          : "Este resultado solo está en un respaldo local; recuperá y verificá el proyecto antes de abrirlo.";
+        action.setAttribute("aria-label", (item.source === "indexeddb" ? "Abrir " : "No verificable: ") + item.name + " · " + item.projectName);
+        action.addEventListener("click", () => {
+          void openMasterSearchResult(card.dataset.projectId, card.dataset.entityType, card.dataset.entityId, card.dataset.source, action);
+        });
+        card.append(title, metadata, identity, action);
         resultsNode.appendChild(card);
       });
       if (!report.results.length) {
@@ -346,6 +361,188 @@
       status.textContent = "No se pudo consultar el índice maestro: " + error.message;
     } finally {
       button.disabled = false;
+    }
+  }
+
+
+  function masterSearchEntityExists(project, entityType, entityId) {
+    const collections = {
+      character: project.characters, location: project.locations, event: project.events,
+      organization: project.organizations, relationship: project.relationships, story: project.stories
+    };
+    const records = collections[entityType];
+    return Array.isArray(records) && records.some((record) => record && record.id === entityId);
+  }
+
+  function selectMasterSearchEntity(entityType, entityId) {
+    $("#global-search").value = "";
+    if (entityType === "character") {
+      activeView = "atlas";
+      selectedCharacterId = entityId;
+      render();
+      openCharacter(entityId);
+      const target = $("#details-panel h2");
+      if (target) target.tabIndex = -1;
+      return target;
+    }
+    if (entityType === "location") {
+      showLocation(entityId);
+      const target = $("#details-panel h2");
+      if (target) target.tabIndex = -1;
+      return target;
+    }
+    if (entityType === "event") {
+      selectedEventId = entityId;
+      activeView = "timeline";
+    } else if (entityType === "organization") {
+      selectedOrganizationId = entityId;
+      activeView = "organizations";
+    } else if (entityType === "relationship") {
+      selectedRelationshipId = entityId;
+      activeView = "relationships";
+    } else if (entityType === "story") {
+      selectedStoryId = entityId;
+      activeView = "stories";
+    } else {
+      throw new Error("El tipo de ficha no se puede abrir desde el índice maestro.");
+    }
+    render();
+    const selector = {
+      event: "[data-event]", organization: "[data-organization]",
+      relationship: "[data-relationship]", story: "[data-story]"
+    }[entityType];
+    const key = {
+      event: "event", organization: "organization",
+      relationship: "relationship", story: "story"
+    }[entityType];
+    const target = $("#directory-view " + selector).find((node) => node.dataset[key] === entityId);
+    if (!target) throw new Error("La ficha existe, pero no se pudo enfocar su tarjeta exacta.");
+    return target;
+  }
+
+  async function openMasterSearchResult(projectId, entityType, entityId, source, actionButton) {
+    const status = $("#master-search-status");
+    if (source !== "indexeddb") {
+      status.textContent = "No se puede abrir este resultado: solo está en un respaldo local no verificado. Recuperá el proyecto y repetí la búsqueda.";
+      return;
+    }
+    const supportedTypes = new Set(["character", "location", "event", "organization", "relationship", "story"]);
+    if (!projectId || !entityId || !supportedTypes.has(entityType)) {
+      status.textContent = "El resultado no contiene una identidad completa. Repetí la búsqueda.";
+      return;
+    }
+    if (!projectRepository) {
+      status.textContent = "No se puede abrir la ficha porque el repositorio local no está disponible.";
+      return;
+    }
+
+    const previousProject = structuredClone(state);
+    const previousWorkspace = {
+      activeView, mapMode, selectedLocationId, selectedCharacterId, selectedEventId,
+      selectedOrganizationId, selectedRelationshipId, selectedStoryId, mapScale
+    };
+    const appShell = $(".app-shell");
+    const shellWasInert = appShell ? appShell.inert : false;
+    let switchAttempted = false;
+    let opened = false;
+    let focusTarget = null;
+    if (appShell) appShell.inert = true;
+    if (actionButton) actionButton.disabled = true;
+    status.textContent = "Guardando y verificando el universo actual; luego se comprobará la ficha de destino…";
+
+    try {
+      await requireCurrentProjectInIndexedDB();
+      let candidate;
+      if (projectId === previousProject.project.id) {
+        candidate = structuredClone(state);
+      } else {
+        // read() is deliberate: getProject() may fall back to a localStorage-only backup.
+        const record = await projectRepository.read("projects", projectId);
+        if (!record || record.projectId !== projectId || !record.data ||
+            !record.data.project || record.data.project.id !== projectId) {
+          throw new Error("El proyecto destino ya no existe como registro verificado en IndexedDB. Repetí la búsqueda; no se abrirá una ficha parecida.");
+        }
+        candidate = structuredClone(record.data);
+      }
+
+      const schema = window.WordWaifuProjectSchema;
+      if (!schema || typeof schema.validateAndNormalizeProject !== "function") {
+        throw new Error("El validador de proyectos no está disponible.");
+      }
+      const validation = schema.validateAndNormalizeProject(candidate);
+      if (!validation.valid) {
+        throw new Error("El proyecto destino no supera la validación: " + validation.errors.slice(0, 5).join(" "));
+      }
+      if (validation.project.project.id !== projectId) {
+        throw new Error("El ID del proyecto no coincide con el resultado de búsqueda.");
+      }
+      const normalized = ensureRelationshipStore({
+        ...validation.project,
+        organizations: Array.isArray(validation.project.organizations) ? validation.project.organizations : [],
+        relationships: Array.isArray(validation.project.relationships) ? validation.project.relationships : undefined
+      });
+      if (!masterSearchEntityExists(normalized, entityType, entityId)) {
+        throw new Error("La ficha exacta ya no existe en ese universo. Repetí la búsqueda; no se abrirá otra ficha con un nombre parecido.");
+      }
+
+      if (projectId !== previousProject.project.id) {
+        switchAttempted = true;
+        const saved = await enqueueRepositoryOperation(() => projectRepository.saveActive(normalized));
+        if (saved.backend !== "indexeddb") {
+          projectRepository.saveBackup(previousProject);
+          await projectRepository.activateProject(previousProject.project.id);
+          switchAttempted = false;
+          throw new Error("No se pudo persistir y verificar el universo de destino en IndexedDB. El universo anterior permanece activo.");
+        }
+        state = normalized;
+        resetProjectWorkspace();
+      } else {
+        state = normalized;
+        if (JSON.stringify(normalized) !== JSON.stringify(previousProject)) {
+          const saved = await saveProject();
+          if (!saved || !$("#save-status").textContent.startsWith("Guardado en IndexedDB")) {
+            throw new Error("No se pudieron guardar las normalizaciones del proyecto actual.");
+          }
+        }
+      }
+
+      focusTarget = selectMasterSearchEntity(entityType, entityId);
+      if (!focusTarget) throw new Error("No se pudo enfocar la ficha exacta.");
+      $("#project-dialog").close();
+      $("#save-status").textContent = "Ficha abierta desde el índice maestro · " + state.project.name;
+      opened = true;
+    } catch (error) {
+      state = previousProject;
+      activeView = previousWorkspace.activeView;
+      mapMode = previousWorkspace.mapMode;
+      selectedLocationId = previousWorkspace.selectedLocationId;
+      selectedCharacterId = previousWorkspace.selectedCharacterId;
+      selectedEventId = previousWorkspace.selectedEventId;
+      selectedOrganizationId = previousWorkspace.selectedOrganizationId;
+      selectedRelationshipId = previousWorkspace.selectedRelationshipId;
+      selectedStoryId = previousWorkspace.selectedStoryId;
+      mapScale = previousWorkspace.mapScale;
+      try { projectRepository.saveBackup(previousProject); } catch { /* IndexedDB remains the primary recovery point. */ }
+      if (switchAttempted) {
+        try {
+          await projectRepository.activateProject(previousProject.project.id);
+        } catch (rollbackError) {
+          status.textContent = "No se pudo abrir la ficha y tampoco confirmar la restauración del proyecto activo: " + rollbackError.message;
+          render();
+          return;
+        }
+      }
+      render();
+      status.textContent = "No se pudo abrir la ficha: " + error.message;
+    } finally {
+      if (appShell) appShell.inert = shellWasInert;
+      if (actionButton) actionButton.disabled = false;
+    }
+    if (opened && focusTarget) {
+      try {
+        focusTarget.focus({ preventScroll: true });
+        if (typeof focusTarget.scrollIntoView === "function") focusTarget.scrollIntoView({ block: "nearest" });
+      } catch { /* The exact record is already displayed; focusing is an enhancement. */ }
     }
   }
 
@@ -697,7 +894,7 @@
       });
     } else {
       heading = "Historias y novelas";
-      items = state.stories.map((story) => '<article class="entity-card"><span class="avatar">▤</span><h3>' + escapeHTML(story.name) + '</h3><p>' + escapeHTML(story.description || "Sinopsis pendiente.") + '</p></article>');
+      items = state.stories.map((story) => '<article class="entity-card story-card' + (story.id === selectedStoryId ? ' selected' : '') + '" data-story="' + escapeHTML(story.id) + '" tabindex="0" role="button" aria-pressed="' + String(story.id === selectedStoryId) + '"><span class="avatar">▤</span><h3>' + escapeHTML(story.name) + '</h3><p>' + escapeHTML(story.description || "Sinopsis pendiente.") + '</p></article>');
       if (!items.length) items = ['<div class="empty-state">Todavía no hay novelas registradas. La próxima fase incorporará premisas, arcos, capítulos y escenas. Podés crear personajes y lugares mientras tanto.</div>'];
     }
     const selectedEvent = activeView === "timeline" ? state.events.find((event) => event.id === selectedEventId) : null;
@@ -1064,6 +1261,7 @@
     state.relationships = state.relationships.filter((item) => item.id !== id);
     syncRelationshipProjection();
     selectedRelationshipId = null;
+    selectedStoryId = null;
     activeView = "relationships";
     saveProject();
     render();
@@ -1327,6 +1525,7 @@
       selectedEventId = null;
       selectedOrganizationId = null;
       selectedRelationshipId = null;
+    selectedStoryId = null;
       activeView = "atlas";
       render();
       $("#save-status").textContent = saveReport.warning
@@ -1441,6 +1640,7 @@
     selectedEventId = null;
     selectedOrganizationId = null;
     selectedRelationshipId = null;
+    selectedStoryId = null;
     activeView = "atlas";
     mapMode = "world";
     mapScale = 1;
@@ -1466,15 +1666,17 @@
     const eventCard = event.target.closest("[data-event]");
     const organizationCard = event.target.closest("[data-organization]");
     const relationshipCard = event.target.closest("[data-relationship]");
+    const storyCard = event.target.closest("[data-story]");
     if (character) { navigate("atlas"); openCharacter(character.dataset.character); }
     else if (location) showLocation(location.dataset.location);
     else if (eventCard) { selectedEventId = eventCard.dataset.event; renderDirectory(); }
     else if (organizationCard) { selectedOrganizationId = organizationCard.dataset.organization; renderDirectory(); }
     else if (relationshipCard) { selectedRelationshipId = relationshipCard.dataset.relationship; renderDirectory(); }
+    else if (storyCard) { selectedStoryId = storyCard.dataset.story; renderDirectory(); }
   });
   $("#directory-view").addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
-    const target = event.target.closest("[data-character],[data-location],[data-event],[data-organization],[data-relationship]");
+    const target = event.target.closest("[data-character],[data-location],[data-event],[data-organization],[data-relationship],[data-story]");
     if (!target) return;
     event.preventDefault();
     if (target.dataset.character) { navigate("atlas"); openCharacter(target.dataset.character); }
@@ -1482,6 +1684,7 @@
     else if (target.dataset.event) { selectedEventId = target.dataset.event; renderDirectory(); }
     else if (target.dataset.organization) { selectedOrganizationId = target.dataset.organization; renderDirectory(); }
     else if (target.dataset.relationship) { selectedRelationshipId = target.dataset.relationship; renderDirectory(); }
+    else if (target.dataset.story) { selectedStoryId = target.dataset.story; renderDirectory(); }
   });
   $("#show-all-related").addEventListener("click", () => navigate("characters"));
   $("#command-form").addEventListener("submit", (event) => {
