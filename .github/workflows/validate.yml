@@ -29,5 +29,11 @@ jobs:
           node --check tests/test_project_schema.cjs
       - name: Test project import validation
         run: node tests/test_project_schema.cjs
+      - name: Install pinned Playwright
+        run: npm install --no-save --no-package-lock playwright@1.55.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run browser smoke test
+        run: node tests/browser_smoke.cjs
       - name: Check project structure
         run: python scripts/validate_project.py
