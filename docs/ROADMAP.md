@@ -155,7 +155,7 @@ La especificación completa de estas capacidades está en [MASTER_VISION.md](MAS
 ### WF-002-A — DONE
 - CRUD básico de personajes: crear y editar datos esenciales sin cambiar el ID.
 - Borrado con confirmación y limpieza selectiva de relaciones entrantes, referencias de ubicación y participantes en eventos.
-- CI PASS_REAL: [ejecución #37925193509](https://github.com/jonhararagi/wordwaifu/actions/runs/37925193509), incluyendo Chromium, persistencia, export/import y comprobación sin errores de página.
+- CI PASS_REAL: [ejecución #37925820239](https://github.com/jonhararagi/wordwaifu/actions/runs/37925820239), incluyendo Chromium, persistencia, export/import, edad desconocida renderizada correctamente y comprobación sin errores de página.
 - Pendiente fuera del gate CI: prueba manual en Windows 11.
 - Siguiente tarea: WF-002-B, CRUD seguro de acontecimientos. TIMER: 2–4 horas iniciales.
 

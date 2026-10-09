@@ -10,8 +10,8 @@ DONE
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama de trabajo: `foundation/story-foundry-north-star`.
 - HEAD BEFORE de WF-002-A: `a175a67de6684d97d8168aeed40be566a840954e`.
-- HEAD de código probado: `d9c2537cbbf32809d1d8e01e8c692587a6bfe5bf`.
-- CI del código: **PASS**, [ejecución #37925193509](https://github.com/jonhararagi/wordwaifu/actions/runs/37925193509).
+- HEAD de código probado: `4161ec5341dcec43aa636a03781b1f9a90df3d3c`.
+- CI del código: **PASS**, [ejecución #37925820239](https://github.com/jonhararagi/wordwaifu/actions/runs/37925820239).
 - PR #1: [abierto y en borrador](https://github.com/jonhararagi/wordwaifu/pull/1); no fusionado ni marcado listo.
 - `main` permanece intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
 - La persistencia documental produce un commit posterior al HEAD probado. Al reanudar, consultar el HEAD vivo en GitHub y no asumir que el SHA de código es el último commit de la rama.
@@ -22,13 +22,15 @@ DONE
 - Ficha de personaje con acciones para editar y eliminar.
 - Eliminación con confirmación y resumen del impacto. Se borran solo las referencias entrantes al personaje desde relaciones de otros personajes, listas de personajes asociadas a ubicaciones y acontecimientos; se conservan las demás entidades y enlaces.
 - La modificación persiste en `localStorage`; exportación/importación y validación de esquema se mantienen operativas.
+- Pulido en la revisión final: una edad desconocida se presenta como «Edad sin definir», no como `null años`, con una prueba de regresión automatizada.
 - Se añadieron pruebas Chromium que comprueban crear, editar, conservar ID, recargar y borrar, además de comprobar la limpieza selectiva de referencias y un round-trip de exportación/importación.
 - No se comenzó la migración a React/TypeScript ni los generadores narrativos.
 
 ## Evidencia
-- **PASS_REAL:** CI #37925193509 completó el flujo browser smoke en Chromium headless sin errores de página.
+- **PASS_REAL:** CI #37925820239 completó el flujo browser smoke en Chromium headless sin errores de página.
 - **PASS_REAL:** creación de personaje, edición de campos conservando ID, persistencia tras recarga, diálogo de confirmación y limpieza de relaciones, lugares y eventos.
 - **PASS_REAL:** exportación/importación posterior al borrado valida el grafo de referencias.
+- **PASS_REAL:** la prueba también cubre edad desconocida y confirma que la interfaz no expone `null años`.
 - **PASS_STATIC:** las 8 pruebas existentes del esquema pasaron; también pasaron sintaxis JavaScript y verificación estructural del proyecto.
 - **NOT_RUN:** prueba manual visual e interactiva en la PC Windows 11 del usuario. CI no sustituye esa validación.
 

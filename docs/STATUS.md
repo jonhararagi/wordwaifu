@@ -10,8 +10,8 @@
 ## GitHub verificado
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama de trabajo: `foundation/story-foundry-north-star`.
-- HEAD de código validado: `d9c2537cbbf32809d1d8e01e8c692587a6bfe5bf`.
-- CI: [PASS, ejecución #37925193509](https://github.com/jonhararagi/wordwaifu/actions/runs/37925193509).
+- HEAD de código validado: `4161ec5341dcec43aa636a03781b1f9a90df3d3c`.
+- CI: [PASS, ejecución #37925820239](https://github.com/jonhararagi/wordwaifu/actions/runs/37925820239).
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar.
 - `main`: intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
 - Tras actualizar documentos, el HEAD vivo puede ser un commit documental posterior. Verificarlo antes de continuar.
@@ -30,10 +30,11 @@
 - Crear y editar campos esenciales: nombre, descripción, especie, edad, rol, personalidad, motivación, defecto y estado del canon.
 - Edición conserva el ID estable.
 - Borrado confirmado con limpieza selectiva de relaciones entrantes, referencias en ubicaciones y participantes de acontecimientos.
+- La ficha con edad desconocida muestra «Edad sin definir», verificado en Chromium para evitar que aparezca `null años`.
 - Chromium CI verifica creación, edición, persistencia, eliminación y exportación/importación tras borrar.
 
 ## Evidencia y límites
-- **PASS_REAL:** [CI #37925193509](https://github.com/jonhararagi/wordwaifu/actions/runs/37925193509), que incluye Chromium headless sin errores de página.
+- **PASS_REAL:** [CI #37925820239](https://github.com/jonhararagi/wordwaifu/actions/runs/37925820239), que incluye Chromium headless sin errores de página.
 - **PASS_STATIC:** 8 pruebas de esquema, sintaxis JavaScript y comprobación estructural.
 - **NOT_RUN:** prueba manual en Windows 11 del usuario.
 - **PARTIAL:** las ubicaciones y los personajes tienen CRUD básico. Acontecimientos y organizaciones no tienen CRUD equivalente completo. La persistencia actual usa `localStorage`, no IndexedDB.
