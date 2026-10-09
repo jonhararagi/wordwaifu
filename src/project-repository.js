@@ -27,7 +27,7 @@
         const request = this.indexedDB.open(this.databaseName, 1);
         request.onupgradeneeded = () => {
           const db = request.result;
-          if (!db.objectStoreNames.contains("projects")) db.createObjectStore("projects", { keyPath: "id" });
+          if (!db.objectStoreNames.contains("projects")) db.createObjectStore("projects", { keyPath: "projectId" });
           if (!db.objectStoreNames.contains("metadata")) db.createObjectStore("metadata", { keyPath: "key" });
         };
         request.onerror = () => reject(request.error || new Error("No se pudo abrir IndexedDB."));
@@ -58,13 +58,14 @@
       const db = await this.open();
       await new Promise((resolve, reject) => {
         const tx = db.transaction(["projects", "metadata"], "readwrite");
-        tx.objectStore("projects").put(project);
+        tx.objectStore("projects").put({ projectId: project.project.id, data: project });
         tx.objectStore("metadata").put({ key: ACTIVE_KEY, value: project.project.id });
         tx.oncomplete = resolve;
         tx.onerror = () => reject(tx.error || new Error("Error al escribir IndexedDB."));
         tx.onabort = () => reject(tx.error || new Error("Escritura IndexedDB cancelada."));
       });
-      const verified = await this.read("projects", project.project.id);
+      const storedRecord = await this.read("projects", project.project.id);
+      const verified = storedRecord && storedRecord.data;
       if (!verified || JSON.stringify(verified) !== JSON.stringify(project)) {
         throw new Error("La verificación posterior a IndexedDB no coincide.");
       }
@@ -107,7 +108,8 @@
         await this.open();
         const metadata = await this.read("metadata", ACTIVE_KEY);
         if (metadata && typeof metadata.value === "string") {
-          const candidate = await this.read("projects", metadata.value);
+          const storedRecord = await this.read("projects", metadata.value);
+          const candidate = storedRecord && storedRecord.data;
           if (isProject(candidate)) dbProject = candidate;
         }
       } catch (error) { dbError = error; }
