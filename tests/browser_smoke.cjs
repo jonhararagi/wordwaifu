@@ -380,6 +380,15 @@ async function run() {
     const currentUniverseCard = page.locator('#master-search-results .master-search-result[data-project-id="project-asteria"]');
     await currentUniverseCard.locator("[data-master-open]").click();
     await page.locator("#details-panel h2").getByText("Mira Solenne").waitFor();
+    const focusedCurrentEntity = await page.evaluate(() => ({
+      tag: document.activeElement?.tagName,
+      text: document.activeElement?.textContent?.trim(),
+      inDetails: Boolean(document.activeElement?.closest("#details-panel"))
+    }));
+    assert.equal(focusedCurrentEntity.tag, "H2");
+    assert.equal(focusedCurrentEntity.text, "Mira Solenne");
+    assert.equal(focusedCurrentEntity.inDetails, true);
+    process.stdout.write("PASS master index focus: exact active-project character receives keyboard focus.\\n");
     const activeAfterCurrentOpen = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const active = await repository.read("metadata", "activeProjectId");
@@ -396,6 +405,15 @@ async function run() {
     await otherUniverseCard.locator("[data-master-open]").click();
     await page.locator("#project-name").getByText("Universo Multiverso QA").waitFor();
     await page.locator("#details-panel h2").getByText("Mira de Niebla").waitFor();
+    const focusedOtherEntity = await page.evaluate(() => ({
+      tag: document.activeElement?.tagName,
+      text: document.activeElement?.textContent?.trim(),
+      inDetails: Boolean(document.activeElement?.closest("#details-panel"))
+    }));
+    assert.equal(focusedOtherEntity.tag, "H2");
+    assert.equal(focusedOtherEntity.text, "Mira de Niebla");
+    assert.equal(focusedOtherEntity.inDetails, true);
+    process.stdout.write("PASS master index focus: exact character in a second universe receives keyboard focus.\\n");
     const activeAfterOtherOpen = await page.evaluate(async (createdId) => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const active = await repository.read("metadata", "activeProjectId");
