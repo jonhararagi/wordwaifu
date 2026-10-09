@@ -1541,11 +1541,21 @@ async function run() {
       return project;
     });
     const activeNameBeforeRejectedImport = failedWriteEvidence.activeName;
-    await page.evaluate(() => {
+    await page.evaluate((oldName, newName) => {
       const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
       window.__wordWaifuOriginalSaveBackup = prototype.saveBackup;
       prototype.saveBackup = () => ({ written: false, warning: "Simulated local backup write failure." });
-    });
+      // Permit the pre-import snapshot flush, then fail the candidate write itself.
+      prototype.write = async function (project) {
+        if (project && project.project && project.project.name === oldName) {
+          return window.__wordWaifuOriginalRepositoryWrite.call(this, project);
+        }
+        if (project && project.project && project.project.name === newName) {
+          throw new Error("Simulated candidate write failure.");
+        }
+        throw new Error("Unexpected project write during import failure test.");
+      };
+    }, activeNameBeforeRejectedImport, unpersistableCandidate.project.name);
     const rejectedImportAlertPromise = page.waitForEvent("dialog");
     const rejectedImportTask = page.locator("#import-file").setInputFiles({
       name: "unpersistable-project.json",
