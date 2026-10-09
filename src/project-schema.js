@@ -18,6 +18,7 @@
     }
     if (!Array.isArray(item[key]) || item[key].some((value) => typeof value !== "string")) {
       errors.push(path + "." + key + " debe ser una lista de textos.");
+      item[key] = [];
     }
   };
 
