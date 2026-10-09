@@ -5,7 +5,7 @@
 - Producto: WordWaifu — World & Story Foundry.
 - Objetivo: atlas interactivo + canon narrativo + herramientas de planificación, offline-first.
 - Rama de fundación: foundation/story-foundry-north-star.
-- Estado de esta rama: documentación fundacional y prototipo inicial añadidos; requiere revisión y pruebas de ejecución.
+- Estado de esta rama: documentación fundacional, prototipo inicial y validación CI añadidos. La validación estática y la sintaxis JavaScript pasaron en commits recientes; sigue pendiente la prueba funcional real en navegador.
 - Rama principal: no se ha modificado en esta etapa.
 - IA/API: no requerida por diseño.
 - Persistencia prototipo: localStorage para la demo; IndexedDB/repositorio desacoplado sigue pendiente.
@@ -39,5 +39,6 @@
 ## Evidencia actual
 
 - Documentación y código fueron escritos en la rama de fundación.
+- GitHub Actions: workflow Validate WordWaifu ejecuta node --check y scripts/validate_project.py. Los runs recientes completaron correctamente; verificar el run asociado al HEAD final.
 - No se ha registrado aún una prueba de navegador real.
-- Estado honesto del prototipo: PARTIAL / NOT_RUN para validación de ejecución.
+- Estado honesto del prototipo: PASS_STATIC para estructura/sintaxis en los commits validados; PARTIAL / NOT_RUN para validación funcional en navegador.
