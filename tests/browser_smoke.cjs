@@ -189,7 +189,7 @@ async function run() {
     await alertDialog.accept();
     await importFileSelection;
     await page.locator("#project-name").getByText("Mi nuevo universo").waitFor();
-    await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
+    await page.locator("#details-panel h2").getByText("Ciudad Renombrada").waitFor();
     process.stdout.write("PASS safe import: malformed project is rejected without replacing active data.\n");
 
     const referenceFixture = JSON.parse(JSON.stringify(exportedProject));
