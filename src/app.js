@@ -115,8 +115,34 @@
   }
 
   function renderMap() {
-    $$(".map-marker").forEach((marker) => {
+    const dynamicLayer = $("#dynamic-markers");
+    if (dynamicLayer) {
+      dynamicLayer.replaceChildren();
+      state.locations.filter((location) => !$(".map-marker[data-location=\"" + location.id + "\"]")).forEach((location) => {
+        const point = Array.isArray(location.marker) ? location.marker : [450, 300];
+        const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        group.setAttribute("class", "map-marker custom-marker");
+        group.setAttribute("data-location", location.id);
+        group.setAttribute("tabindex", "0");
+        group.setAttribute("role", "button");
+        group.setAttribute("aria-label", "Abrir " + location.name);
+        group.setAttribute("transform", "translate(" + point[0] + " " + point[1] + ")");
+        const halo = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        halo.setAttribute("class", "marker-halo"); halo.setAttribute("r", "18");
+        const core = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        core.setAttribute("class", "marker-core city"); core.setAttribute("r", "6");
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("y", "-17"); label.textContent = location.name.toUpperCase();
+        group.append(halo, core, label);
+        const activate = () => showLocation(location.id);
+        group.addEventListener("click", activate);
+        group.addEventListener("keydown", (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); activate(); } });
+        dynamicLayer.appendChild(group);
+      });
+    }
+    $(".map-marker").forEach((marker) => {
       const locationId = marker.dataset.location;
+      if (!marker.classList.contains("event-marker")) marker.classList.toggle("hidden", !locationById(locationId));
       marker.classList.toggle("selected", locationId === selectedLocationId);
       marker.classList.toggle("hidden", marker.classList.contains("event-marker") ? !enabledLayers.events : !enabledLayers.places);
       if (mapMode === "people" && !marker.classList.contains("event-marker")) {
@@ -124,7 +150,6 @@
         marker.style.opacity = count ? "1" : ".4";
       } else marker.style.opacity = "1";
     });
-    $("#map-art").style.transform = "scale(" + mapScale + ")";
     $("#world-map").style.transform = "scale(" + mapScale + ")";
     $("#world-map").style.transformOrigin = "center";
     if (mapMode === "factions") $("#view-subtitle").textContent = "Vista de facciones: la demo muestra organizaciones a través de sus lugares y personajes vinculados.";
@@ -134,7 +159,12 @@
   function renderDetails() {
     if (activeView !== "atlas") return;
     const location = selectedLocation();
-    if (!location) return;
+    if (!location) {
+      $("#details-panel").innerHTML = '<div class="empty-state">Todavía no hay lugares en este proyecto. Creá una entidad de tipo Lugar para empezar a poblar el atlas.</div>';
+      $("#related-title").textContent = "Personajes en este lugar";
+      $("#related-list").innerHTML = '<div class="empty-state">Cuando registres ubicaciones y presencias, los personajes aparecerán aquí.</div>';
+      return;
+    }
     const people = charactersAt(location.id);
     const event = state.events.find((entry) => entry.locationIds.includes(location.id));
     $("#details-panel").innerHTML = '<div class="detail-cover"></div><span class="detail-type">' + escapeHTML(location.type) + '</span><h2>' + escapeHTML(location.name) + '</h2><p>' + escapeHTML(location.description) + '</p><div class="tag-row">' + location.tags.map((tag) => '<span class="tag">' + escapeHTML(tag) + '</span>').join("") + '</div><div class="detail-divider"></div><div class="detail-meta"><div><span>Población</span><strong>' + escapeHTML(location.population || "Sin datos") + '</strong></div><div><span>Gobierno</span><strong>' + escapeHTML(location.government || "Sin datos") + '</strong></div><div><span>Clima</span><strong>' + escapeHTML(location.climate || "Sin datos") + '</strong></div><div><span>Personajes presentes</span><strong>' + people.length + '</strong></div></div><div class="detail-divider"></div><div class="section-title"><strong>Último acontecimiento relacionado</strong></div><p>' + escapeHTML(event ? event.title + " · " + event.description : "Todavía no hay acontecimientos vinculados.") + '</p>';
