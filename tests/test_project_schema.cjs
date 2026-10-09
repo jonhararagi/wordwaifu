@@ -127,6 +127,14 @@ function testRejectsUnsupportedSchemaAndInvalidMarkers() {
   assert.match(markerResult.errors.join("\n"), /marker debe contener dos coordenadas numéricas/);
 }
 
+function testRejectsDanglingLocationEventReferences() {
+  const input = validProject();
+  input.locations[0].events = ["event-missing"];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join("\n"), /locations\[0\]\.events referencia un evento inexistente/);
+}
+
 const tests = [
   testValidProjectNormalizesOptionalFields,
   testMissingOptionalFieldsReceiveSafeDefaults,
@@ -135,7 +143,8 @@ const tests = [
   testRejectsDanglingRelationshipsAndEvents,
   testRejectsLocationHierarchyCycles,
   testMalformedArraysFailWithoutThrowing,
-  testRejectsUnsupportedSchemaAndInvalidMarkers
+  testRejectsUnsupportedSchemaAndInvalidMarkers,
+  testRejectsDanglingLocationEventReferences
 ];
 
 for (const test of tests) {

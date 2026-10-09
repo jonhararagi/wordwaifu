@@ -388,6 +388,98 @@ async function run() {
     await page.locator("#details-panel h2").getByText("Distrito de Prueba").waitFor();
     process.stdout.write("PASS character export/import: the deleted reference graph remains valid after round-trip.\n");
 
+    // Event CRUD: create, select, edit stable ID and synchronize both sides of location links.
+    await page.locator('.nav-item[data-view="timeline"]').click();
+    await page.locator("#add-button").click();
+    assert.equal(await page.locator("#entity-type").inputValue(), "event");
+    await page.locator("#entity-name").fill("Acontecimiento de Prueba");
+    await page.locator("#entity-description").fill("El equipo encuentra una ruta desconocida.");
+    await page.locator("#event-position").fill("chapter5");
+    await page.locator("#event-locations").selectOption(["wf-test-child-location"]);
+    await page.locator("#event-characters").selectOption(["wf-test-witness"]);
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-event-details h2").getByText("Acontecimiento de Prueba").waitFor();
+    const createdEvent = await page.evaluate(() => {
+      const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      return { event: project.events.find((item) => item.title === "Acontecimiento de Prueba"), child: project.locations.find((item) => item.id === "wf-test-child-location") };
+    });
+    assert.ok(createdEvent.event.id.startsWith("local-event-"));
+    assert.equal(createdEvent.event.position, "chapter5");
+    assert.deepEqual(createdEvent.event.locationIds, ["wf-test-child-location"]);
+    assert.deepEqual(createdEvent.event.characterIds, ["wf-test-witness"]);
+    assert.ok(createdEvent.child.events.includes(createdEvent.event.id));
+    process.stdout.write("PASS event create: event fields and location reverse reference are saved.\n");
+
+    const eventIdBeforeEdit = createdEvent.event.id;
+    await page.locator('[data-event="' + eventIdBeforeEdit + '"]').click();
+    await page.locator("#selected-event-details h2").getByText("Acontecimiento de Prueba").waitFor();
+    await page.locator("#edit-event-button").click();
+    await page.locator("#entity-name").fill("Acontecimiento Renombrado");
+    await page.locator("#entity-description").fill("La ruta se registra en los archivos.");
+    await page.locator("#event-position").fill("chapter12");
+    await page.locator("#event-locations").selectOption(["loc-asteria"]);
+    await page.locator("#event-characters").selectOption(["wf-test-witness", createdCharacter.id]);
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-event-details h2").getByText("Acontecimiento Renombrado").waitFor();
+    const editedEventGraph = await page.evaluate((id) => {
+      const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      return {
+        event: project.events.find((item) => item.id === id),
+        asteria: project.locations.find((item) => item.id === "loc-asteria"),
+        child: project.locations.find((item) => item.id === "wf-test-child-location")
+      };
+    }, eventIdBeforeEdit);
+    assert.equal(editedEventGraph.event.id, eventIdBeforeEdit, "Editing an event must preserve its ID.");
+    assert.equal(editedEventGraph.event.title, "Acontecimiento Renombrado");
+    assert.equal(editedEventGraph.event.position, "chapter12");
+    assert.deepEqual(editedEventGraph.event.locationIds, ["loc-asteria"]);
+    assert.deepEqual(editedEventGraph.event.characterIds, ["wf-test-witness", createdCharacter.id]);
+    assert.ok(editedEventGraph.asteria.events.includes(eventIdBeforeEdit));
+    assert.equal(editedEventGraph.child.events.includes(eventIdBeforeEdit), false, "Changing linked locations must remove the old reverse link.");
+    process.stdout.write("PASS event edit/select: ID stays stable and location/participant references update selectively.\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    await page.locator('.nav-item[data-view="timeline"]').click();
+    await page.locator('[data-event="' + eventIdBeforeEdit + '"]').click();
+    await page.locator("#selected-event-details h2").getByText("Acontecimiento Renombrado").waitFor();
+    const persistedEvent = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).events.find((item) => item.id === id), eventIdBeforeEdit);
+    assert.equal(persistedEvent.position, "chapter12");
+    process.stdout.write("PASS event persistence: edited event survives a reload and remains selectable.\n");
+
+    const deleteEventDialogPromise = page.waitForEvent("dialog");
+    const deleteEventClick = page.locator("#delete-event-button").click();
+    const deleteEventDialog = await deleteEventDialogPromise;
+    assert.equal(deleteEventDialog.type(), "confirm");
+    assert.match(deleteEventDialog.message(), /referencia\(s\) de lugar/);
+    await deleteEventDialog.accept();
+    await deleteEventClick;
+    const afterEventDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
+    assert.equal(afterEventDelete.events.some((item) => item.id === eventIdBeforeEdit), false);
+    assert.equal(afterEventDelete.locations.some((item) => (item.events || []).includes(eventIdBeforeEdit)), false);
+    assert.ok(afterEventDelete.events.some((item) => item.id === "wf-test-event"), "Unrelated events must survive the delete.");
+    assert.ok(afterEventDelete.locations.find((item) => item.id === "wf-test-child-location").events.includes("wf-test-event"));
+    assert.equal(validateAndNormalizeProject(afterEventDelete).valid, true, "Event deletion should leave a valid project graph.");
+    process.stdout.write("PASS event delete: confirmation removes only the event and its incoming location references.\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    const eventExportPromise = page.waitForEvent("download");
+    await page.locator("#export-button").click();
+    const eventExport = await eventExportPromise;
+    const eventExportPath = await eventExport.path();
+    assert.ok(eventExportPath);
+    const eventExportProject = JSON.parse(fs.readFileSync(eventExportPath, "utf8"));
+    const eventExportValidation = validateAndNormalizeProject(eventExportProject);
+    assert.equal(eventExportValidation.valid, true, eventExportValidation.errors.join("\n"));
+    assert.equal(eventExportProject.events.some((item) => item.id === eventIdBeforeEdit), false);
+    const eventRoundTripAlertPromise = page.waitForEvent("dialog");
+    const eventRoundTripImport = page.locator("#import-file").setInputFiles(eventExportPath);
+    const eventRoundTripAlert = await eventRoundTripAlertPromise;
+    assert.match(eventRoundTripAlert.message(), /Proyecto importado correctamente/i);
+    await eventRoundTripAlert.accept();
+    await eventRoundTripImport;
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).events.some((item) => item.id === "wf-test-event")), true);
+    process.stdout.write("PASS event export/import: valid references and unrelated events survive round-trip.\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {

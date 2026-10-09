@@ -40,6 +40,7 @@
   let mapMode = "world";
   let selectedLocationId = "loc-asteria";
   let selectedCharacterId = null;
+  let selectedEventId = null;
   let mapScale = 1;
   const enabledLayers = { places: true, characters: true, routes: true, events: true };
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -111,7 +112,7 @@
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "timeline" || activeView === "stories");
+    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "stories");
     renderMap();
     renderDetails();
     renderDirectory();
@@ -287,13 +288,23 @@
       items = state.locations.filter((item) => matches(item.name + " " + item.type + " " + item.description, query)).map((location) => '<article class="entity-card" data-location="' + escapeHTML(location.id) + '" tabindex="0" role="button"><span class="avatar">⌖</span><h3>' + escapeHTML(location.name) + '</h3><p>' + escapeHTML(location.description) + '</p><div class="tag-row"><span class="tag">' + escapeHTML(location.type) + '</span><span class="tag">' + charactersAt(location.id).length + ' personajes</span></div></article>');
     } else if (activeView === "timeline") {
       heading = "Acontecimientos del universo";
-      items = state.events.filter((item) => matches(item.title + " " + item.description, query)).map((event) => '<article class="entity-card"><span class="avatar">◷</span><h3>' + escapeHTML(event.title) + '</h3><p>' + escapeHTML(event.description) + '</p><div class="tag-row"><span class="tag">' + escapeHTML(event.position) + '</span>' + event.locationIds.map((id) => locationById(id)).filter(Boolean).map((loc) => '<span class="tag">' + escapeHTML(loc.name) + '</span>').join("") + '</div></article>');
+      items = state.events.filter((item) => {
+        const linkedLocations = (item.locationIds || []).map((id) => locationById(id)?.name || "").join(" ");
+        const linkedCharacters = (item.characterIds || []).map((id) => characterById(id)?.name || "").join(" ");
+        return matches([item.title, item.description, item.position, linkedLocations, linkedCharacters].join(" "), query);
+      }).map((event) => '<article class="entity-card event-card' + (event.id === selectedEventId ? ' selected' : '') + '" data-event="' + escapeHTML(event.id) + '" tabindex="0" role="button" aria-pressed="' + String(event.id === selectedEventId) + '"><span class="avatar">◷</span><h3>' + escapeHTML(event.title) + '</h3><p>' + escapeHTML(event.description || "Descripción pendiente.") + '</p><div class="tag-row"><span class="tag">' + escapeHTML(event.position || "unknown") + '</span>' + (event.locationIds || []).map((id) => locationById(id)).filter(Boolean).map((loc) => '<span class="tag">' + escapeHTML(loc.name) + '</span>').join("") + '</div></article>');
     } else {
       heading = "Historias y novelas";
       items = state.stories.map((story) => '<article class="entity-card"><span class="avatar">▤</span><h3>' + escapeHTML(story.name) + '</h3><p>' + escapeHTML(story.description || "Sinopsis pendiente.") + '</p></article>');
       if (!items.length) items = ['<div class="empty-state">Todavía no hay novelas registradas. La próxima fase incorporará premisas, arcos, capítulos y escenas. Podés crear personajes y lugares mientras tanto.</div>'];
     }
-    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span></div><div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>';
+    const selectedEvent = activeView === "timeline" ? state.events.find((event) => event.id === selectedEventId) : null;
+    const selectedEventHTML = selectedEvent ? '<section id="selected-event-details" class="selected-event-card"><div class="event-detail-heading"><div><p class="eyebrow">ACONTECIMIENTO SELECCIONADO</p><h2>' + escapeHTML(selectedEvent.title) + '</h2></div><span class="tag">' + escapeHTML(selectedEvent.position || "unknown") + '</span></div><p>' + escapeHTML(selectedEvent.description || "Descripción pendiente.") + '</p><div class="tag-row">' + (selectedEvent.locationIds || []).map((id) => locationById(id)).filter(Boolean).map((location) => '<span class="tag">⌖ ' + escapeHTML(location.name) + '</span>').join("") + (selectedEvent.characterIds || []).map((id) => characterById(id)).filter(Boolean).map((character) => '<span class="tag">♙ ' + escapeHTML(character.name) + '</span>').join("") + '</div><div class="location-actions"><button type="button" id="edit-event-button" class="outline-button">Editar acontecimiento</button><button type="button" id="delete-event-button" class="outline-button danger-action">Eliminar acontecimiento</button></div></section>' : "";
+    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span></div>' + selectedEventHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>';
+    if (selectedEvent) {
+      $("#edit-event-button").addEventListener("click", () => editEvent(selectedEvent.id));
+      $("#delete-event-button").addEventListener("click", () => deleteEvent(selectedEvent.id));
+    }
   }
 
   function matches(value, query) { return !query || String(value).toLowerCase().includes(query); }
@@ -331,10 +342,37 @@
     render();
   }
 
+  function selectedValues(selector) {
+    return Array.from($(selector).selectedOptions).map((option) => option.value).filter(Boolean);
+  }
+
+  function populateEventReferenceOptions(locationIds = [], characterIds = []) {
+    const selectedLocations = new Set(locationIds);
+    const selectedCharacters = new Set(characterIds);
+    $("#event-locations").innerHTML = state.locations.map((location) => '<option value="' + escapeHTML(location.id) + '">' + escapeHTML(location.name) + '</option>').join("");
+    $("#event-characters").innerHTML = state.characters.map((character) => '<option value="' + escapeHTML(character.id) + '">' + escapeHTML(character.name) + '</option>').join("");
+    Array.from($("#event-locations").options).forEach((option) => { option.selected = selectedLocations.has(option.value); });
+    Array.from($("#event-characters").options).forEach((option) => { option.selected = selectedCharacters.has(option.value); });
+  }
+
+  function syncEventLocationReferences(event) {
+    const selectedLocations = new Set(Array.isArray(event.locationIds) ? event.locationIds : []);
+    state.locations.forEach((location) => {
+      const existing = Array.isArray(location.events) ? location.events : [];
+      const next = existing.filter((eventId) => eventId !== event.id);
+      if (selectedLocations.has(location.id)) next.push(event.id);
+      location.events = Array.from(new Set(next));
+    });
+  }
+
   function updateEntityFieldVisibility() {
     const type = $("#entity-type").value;
     $("#location-type-field").classList.toggle("hidden", type !== "location");
     $("#character-fields").classList.toggle("hidden", type !== "character");
+    $("#event-fields").classList.toggle("hidden", type !== "event");
+    $("#entity-name-label").textContent = type === "event" ? "Título del acontecimiento" : type === "location" ? "Nombre del lugar" : "Nombre del personaje";
+    $("#entity-name").placeholder = type === "event" ? "Título del acontecimiento" : "Nombre de la entidad";
+    if (type === "event") populateEventReferenceOptions(selectedValues("#event-locations"), selectedValues("#event-characters"));
   }
 
   function addEntity() {
@@ -342,7 +380,7 @@
     form.dataset.editing = "";
     form.dataset.editingType = "";
     $("#entity-type").disabled = false;
-    $("#entity-type").value = "character";
+    $("#entity-type").value = activeView === "timeline" ? "event" : activeView === "places" ? "location" : "character";
     $("#dialog-title").textContent = "Crear entidad";
     $("#entity-name").value = "";
     $("#entity-description").value = "";
@@ -354,8 +392,12 @@
     $("#character-motivation").value = "";
     $("#character-flaw").value = "";
     $("#character-status").value = "proposal";
-    $("#entity-form button[type=\"submit\"]").textContent = "Guardar propuesta";
+    $("#event-position").value = "unknown";
+    $("#event-locations").innerHTML = "";
+    $("#event-characters").innerHTML = "";
     updateEntityFieldVisibility();
+    populateEventReferenceOptions([], []);
+    $("#entity-form button[type=\"submit\"]").textContent = "Guardar propuesta";
     $("#entity-dialog").showModal();
   }
 
@@ -419,6 +461,42 @@
     selectedCharacterId = null;
     selectedLocationId = locationById(selectedLocationId)?.id || state.locations[0]?.id || null;
     activeView = "atlas";
+    saveProject();
+    render();
+  }
+
+  function editEvent(id) {
+    const event = state.events.find((item) => item.id === id);
+    if (!event) return;
+    const form = $("#entity-form");
+    form.dataset.editing = id;
+    form.dataset.editingType = "event";
+    $("#entity-type").value = "event";
+    $("#entity-type").disabled = true;
+    $("#dialog-title").textContent = "Editar acontecimiento";
+    $("#entity-name").value = event.title || "";
+    $("#entity-description").value = event.description || "";
+    $("#event-position").value = event.position || "unknown";
+    populateEventReferenceOptions(event.locationIds || [], event.characterIds || []);
+    updateEntityFieldVisibility();
+    $("#entity-form button[type=\"submit\"]").textContent = "Guardar cambios";
+    $("#entity-dialog").showModal();
+  }
+
+  function deleteEvent(id) {
+    const event = state.events.find((item) => item.id === id);
+    if (!event) return;
+    const locationCount = state.locations.filter((location) => (location.events || []).includes(id) || (event.locationIds || []).includes(location.id)).length;
+    const summary = [
+      "Se eliminará el acontecimiento \"" + event.title + "\".",
+      locationCount ? locationCount + " referencia(s) de lugar dejarán de enlazar este acontecimiento." : "",
+      "Los personajes, ubicaciones y demás acontecimientos se conservarán. La operación no se puede deshacer. Exportá una copia antes si querés conservarla."
+    ].filter(Boolean).join("\n");
+    if (!confirm(summary)) return;
+    state.events = state.events.filter((item) => item.id !== id);
+    state.locations.forEach((location) => { location.events = (location.events || []).filter((eventId) => eventId !== id); });
+    selectedEventId = null;
+    activeView = "timeline";
     saveProject();
     render();
   }
@@ -498,6 +576,23 @@
       return;
     }
 
+    if (editingId && editingType === "event") {
+      const event = state.events.find((item) => item.id === editingId);
+      if (!event) { alert("No se encontró el acontecimiento que se intentaba editar."); return; }
+      event.title = name;
+      event.description = description || "Descripción pendiente.";
+      event.position = $("#event-position").value.trim() || "unknown";
+      event.locationIds = selectedValues("#event-locations");
+      event.characterIds = selectedValues("#event-characters");
+      syncEventLocationReferences(event);
+      selectedEventId = event.id;
+      activeView = "timeline";
+      saveProject();
+      $("#entity-dialog").close();
+      render();
+      return;
+    }
+
     const id = "local-" + type + "-" + Date.now().toString(36);
     if (type === "character") {
       const ageRaw = $("#character-age").value.trim();
@@ -513,6 +608,19 @@
         locationHistory: [], relationships: [], status: $("#character-status").value || "proposal"
       });
       activeView = "characters";
+    } else if (type === "event") {
+      const newEvent = {
+        id,
+        title: name,
+        position: $("#event-position").value.trim() || "unknown",
+        description: description || "Descripción pendiente.",
+        locationIds: selectedValues("#event-locations"),
+        characterIds: selectedValues("#event-characters")
+      };
+      state.events.push(newEvent);
+      syncEventLocationReferences(newEvent);
+      selectedEventId = id;
+      activeView = "timeline";
     } else {
       state.locations.push({ id, name, type: locationType || "Lugar sin clasificar", parentId: null, description: description || "Descripción pendiente.", tags: ["Propuesta"], population: "Sin datos", government: "Sin datos", climate: "Sin datos", marker: [120 + Math.random() * 620, 90 + Math.random() * 390], characters: [], events: [] });
       activeView = "places";
@@ -554,6 +662,7 @@
       state = validation.project;
       selectedLocationId = state.locations[0]?.id || null;
       selectedCharacterId = null;
+      selectedEventId = null;
       activeView = "atlas";
       render();
       $("#save-status").textContent = "Proyecto importado y guardado localmente";
@@ -648,6 +757,7 @@
     state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], stories: [], settings: { time: "now" } };
     selectedLocationId = null;
     selectedCharacterId = null;
+    selectedEventId = null;
     activeView = "atlas";
     mapMode = "world";
     mapScale = 1;
@@ -670,16 +780,19 @@
   $("#directory-view").addEventListener("click", (event) => {
     const character = event.target.closest("[data-character]");
     const location = event.target.closest("[data-location]");
+    const eventCard = event.target.closest("[data-event]");
     if (character) { navigate("atlas"); openCharacter(character.dataset.character); }
-    if (location) showLocation(location.dataset.location);
+    else if (location) showLocation(location.dataset.location);
+    else if (eventCard) { selectedEventId = eventCard.dataset.event; renderDirectory(); }
   });
   $("#directory-view").addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
-    const target = event.target.closest("[data-character],[data-location]");
+    const target = event.target.closest("[data-character],[data-location],[data-event]");
     if (!target) return;
     event.preventDefault();
     if (target.dataset.character) { navigate("atlas"); openCharacter(target.dataset.character); }
-    if (target.dataset.location) showLocation(target.dataset.location);
+    else if (target.dataset.location) showLocation(target.dataset.location);
+    else if (target.dataset.event) { selectedEventId = target.dataset.event; renderDirectory(); }
   });
   $("#show-all-related").addEventListener("click", () => navigate("characters"));
   $("#command-form").addEventListener("submit", (event) => {
