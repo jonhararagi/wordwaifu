@@ -95,7 +95,16 @@ async function run() {
     await page.locator("#project-list").selectOption("project-asteria");
     await page.locator("#create-project-name").fill("Universo Multiverso QA");
     await page.locator("#project-create-button").click();
-    await page.locator("#project-name").getByText("Universo Multiverso QA").waitFor();
+    await page.waitForFunction(() => {
+      const name = document.querySelector("#project-name")?.textContent || "";
+      const status = document.querySelector("#project-list-status")?.textContent || "";
+      return name === "Universo Multiverso QA" || status.includes("No se pudo crear el proyecto:");
+    }, { timeout: 8000 });
+    assert.equal(
+      await page.locator("#project-name").innerText(),
+      "Universo Multiverso QA",
+      "Project creation failed: " + await page.locator("#project-list-status").innerText()
+    );
     const createdUniverse = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const active = await repository.read("metadata", "activeProjectId");
