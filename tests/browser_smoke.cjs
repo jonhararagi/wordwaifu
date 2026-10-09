@@ -64,7 +64,7 @@ async function run() {
 
     await page.locator('g.map-marker[data-location="loc-velado"]').first().click();
     await page.locator("#details-panel h2").getByText("Bosque Velado").waitFor();
-    process.stdout.write("PASS atlas navigation: selecting a map marker opens its location.\\n");
+    process.stdout.write("PASS atlas navigation: selecting a map marker opens its location.\n");
 
     await page.locator("#time-select").selectOption("chapter1");
     await page.locator('g.map-marker[data-location="loc-asteria"]').first().click();
@@ -74,7 +74,7 @@ async function run() {
     await page.locator("#time-select").selectOption("chapter12");
     await page.locator('g.map-marker[data-location="loc-umbria"]').first().click();
     assert.match(await page.locator("#related-list").innerText(), /Mira Solenne/);
-    process.stdout.write("PASS timeline: character presence follows chapter-specific location history.\\n");
+    process.stdout.write("PASS timeline: character presence follows chapter-specific location history.\n");
 
     const confirmPromise = page.waitForEvent("dialog");
     const newProjectClick = page.locator("#new-project-button").click();
