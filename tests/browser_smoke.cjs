@@ -114,8 +114,8 @@ async function run() {
     assert.ok(exportedPath, "Export should produce a local JSON download.");
     const exportedProject = JSON.parse(fs.readFileSync(exportedPath, "utf8"));
     const exportValidation = validateAndNormalizeProject(exportedProject);
-    assert.equal(exportValidation.valid, true, exportValidation.errors.join("\\n"));
-    process.stdout.write("PASS export: downloaded project is valid JSON with intact references.\\n");
+    assert.equal(exportValidation.valid, true, exportValidation.errors.join("\n"));
+    process.stdout.write("PASS export: downloaded project is valid JSON with intact references.\n");
 
     const validImportAlertPromise = page.waitForEvent("dialog");
     const validImportSelection = page.locator("#import-file").setInputFiles(exportedPath);
@@ -125,7 +125,7 @@ async function run() {
     await validImportAlert.accept();
     await validImportSelection;
     await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
-    process.stdout.write("PASS round-trip: an exported project imports back successfully.\\n");
+    process.stdout.write("PASS round-trip: an exported project imports back successfully.\n");
 
     const invalidProject = {
       schemaVersion: 1,
