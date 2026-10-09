@@ -136,3 +136,20 @@ La especificación completa de estas capacidades está en [MASTER_VISION.md](MAS
 - Mantener una capa de persistencia intercambiable; IndexedDB para la aplicación web local y Tauri + SQLite como posibilidad futura de escritorio.
 - Gate: migración sin pérdida del canon, relaciones ni capacidades de importar/exportar.
 
+
+
+## Registro de implementación y continuidad (2026-10-09)
+
+### WF-001-A — DONE
+- Se añadió validación de proyectos importados y 8 pruebas unitarias de esquema.
+- Smoke test de Chromium ejecutado en CI: PASS_REAL en https://github.com/jonhararagi/wordwaifu/actions/runs/37888290629
+- CI: PASS_STATIC para sintaxis, esquema y estructura.
+- El test prueba navegación, capas, teclado, búsqueda, tiempo por capítulo, estado vacío, creación de lugar, persistencia, exportación/importación y rechazo seguro de un proyecto inválido.
+- Límite explícito: esta evidencia es Chromium headless en CI; la prueba manual en Windows del usuario sigue pendiente.
+
+### WF-001 — PARTIAL
+El gate general sigue abierto porque la interfaz aún debe permitir editar, mover y eliminar ubicaciones/marcadores de manera segura.
+
+Siguiente tarea activa: **WF-001-B — CRUD y manipulación de marcadores**. TIMER: 2–4 horas estimadas para primera implementación y pruebas, sujeto a inspección del código.
+
+Al terminar, sobrescribir `docs/DONE.md` con el punto de continuidad actualizado y comprobar si WF-001 puede cerrarse.

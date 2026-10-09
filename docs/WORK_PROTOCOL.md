@@ -69,3 +69,22 @@ Para este repositorio el asistente puede cubrir ambos papeles, pero no debe mezc
 
 La visión consolidada y los límites de producto están en docs/MASTER_VISION.md. Este flujo se aplica a WordWaifu y no reemplaza las reglas que el usuario haya establecido para otros repositorios.
 
+
+
+## Regla obligatoria de cierre y punto de reanudación: docs/DONE.md
+
+En cada tarea de trabajo en este repositorio, el último paso de persistencia debe **sobrescribir el contenido de `docs/DONE.md`** para representar el punto de continuidad más reciente. No usar DONE.md como un archivo interminable de tareas históricas.
+
+El documento debe comenzar con `DONE` o `PARTIAL` para indicar el resultado real, e incluir:
+- ID de tarea y alcance ejecutado.
+- HEAD BEFORE, HEAD de código validado y HEAD actual al cerrar.
+- Rama, estado/URL del PR y confirmación de si main se mantuvo intacta.
+- Archivos/cambios, commits, CI y pruebas con etiquetas PASS_REAL, PASS_STATIC, FAIL_REAL, PARTIAL, NOT_RUN o UNKNOWN.
+- Limitaciones y funciones aún no implementadas.
+- Estimación TIMER para la siguiente tarea.
+- Siguiente ID de tarea, criterios de aceptación y comandos/ubicación de inicio.
+- Porcentaje global estimado, con explicación de que es aproximado y ponderado por alcance.
+
+La próxima sesión debe leer `docs/DONE.md` junto a `docs/STATUS.md`, `docs/WORK_PROTOCOL.md` y `docs/MASTER_VISION.md`, inspeccionar el HEAD actual y continuar desde la tarea anotada. Nunca confiar únicamente en un SHA antiguo ni repetir una escritura que ya fue confirmada.
+
+No marcar la tarea como DONE si su gate global aún tiene criterios pendientes; en ese caso registrar la subtarea como DONE y el trabajo mayor como PARTIAL.

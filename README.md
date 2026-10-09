@@ -61,6 +61,12 @@ El repositorio parte de una base prácticamente vacía. La primera etapa es defi
 - [Hoja de ruta](docs/ROADMAP.md)
 - [Modo offline](docs/OFFLINE_FIRST.md)
 
+## Continuidad del trabajo
+
+- [Punto de continuidad más reciente (DONE)](docs/DONE.md)
+- [Estado del proyecto](docs/STATUS.md)
+- [Visión maestra](docs/MASTER_VISION.md)
+
 ## Regla de ejecución
 
 Cada tarea debe seguir: **INSPECT → PLAN → EXECUTE → VERIFY → PERSIST → REPORT**. No declarar una función terminada solo porque existe el archivo: probarla en ejecución cuando sea posible y etiquetar la evidencia como PASS_REAL, PASS_STATIC, FAIL_REAL, NOT_RUN, UNKNOWN o PARTIAL.
