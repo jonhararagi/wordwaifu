@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="WordWaifu: taller offline de mundos, personajes, mapas y novelas.">
+  <title>WordWaifu · World & Story Foundry</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="WordWaifu inicio">
+        <span class="brand-mark">W</span>
+        <span><strong>WordWaifu</strong><small>WORLD & STORY FOUNDRY</small></span>
+      </a>
+      <div class="project-switcher">
+        <span class="eyebrow">PROYECTO ACTIVO</span>
+        <strong id="project-name">Las Crónicas de Asteria</strong>
+        <span class="project-status"><i></i> Guardado local</span>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-item active" data-view="atlas"><span>⌘</span> Atlas del mundo</button>
+        <button class="nav-item" data-view="characters"><span>♙</span> Personajes <b id="character-count">4</b></button>
+        <button class="nav-item" data-view="places"><span>⌖</span> Lugares</button>
+        <button class="nav-item" data-view="timeline"><span>◷</span> Cronología</button>
+        <button class="nav-item" data-view="stories"><span>▤</span> Historias y novelas</button>
+        <button class="nav-item" data-view="commands"><span>⌘</span> Asistente local</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="offline-card"><span class="offline-icon">◉</span><div><strong>Modo sin IA</strong><small>Sin API ni conexión requerida</small></div><span class="status-dot"></span></div>
+        <button id="export-button" class="quiet-button">↥ Exportar proyecto JSON</button>
+        <label class="quiet-button import-button">↧ Importar proyecto JSON<input id="import-file" type="file" accept=".json,application/json" hidden></label>
+        <p class="sidebar-foot">PROTOTIPO LOCAL · DATOS DE EJEMPLO</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Proyectos</span><span>/</span><strong id="breadcrumb-current">Atlas del mundo</strong></div>
+        <div class="top-actions"><span class="offline-pill"><i></i> Offline-first</span><button id="new-project-button" class="outline-button">＋ Nuevo proyecto</button></div>
+      </header>
+
+      <section class="view-heading">
+        <div><p class="eyebrow">TU UNIVERSO, CONECTADO</p><h1 id="view-title">Atlas del mundo</h1><p id="view-subtitle">Explorá lugares, encontrá personajes y recorré la historia de tu mundo.</p></div>
+        <div class="heading-actions"><label class="search-box"><span>⌕</span><input id="global-search" type="search" placeholder="Buscar personajes, lugares..." autocomplete="off"><kbd>⌕</kbd></label><button id="add-button" class="primary-button">＋ Crear entidad</button></div>
+      </section>
+
+      <section class="toolbar" aria-label="Filtros del atlas">
+        <div class="view-tabs"><button class="view-tab active" data-map-mode="world">Mapa</button><button class="view-tab" data-map-mode="people">Personajes</button><button class="view-tab" data-map-mode="factions">Facciones</button></div>
+        <div class="toolbar-right"><label class="time-filter"><span>VER CANON EN</span><select id="time-select"><option value="now">Estado actual</option><option value="chapter1">Capítulo 1 · Llegada</option><option value="chapter5">Capítulo 5 · La alarma</option><option value="chapter12">Capítulo 12 · La ruptura</option></select></label><button id="layers-button" class="icon-button" aria-expanded="false" title="Capas del mapa">☷ <span>Capas</span></button></div>
+      </section>
+
+      <section id="layers-panel" class="layers-panel hidden"><label><input type="checkbox" data-layer="places" checked> Lugares</label><label><input type="checkbox" data-layer="characters" checked> Personajes</label><label><input type="checkbox" data-layer="routes" checked> Rutas</label><label><input type="checkbox" data-layer="events" checked> Acontecimientos</label></section>
+
+      <section id="atlas-layout" class="atlas-layout">
+        <div class="map-card">
+          <div class="map-topline"><div><span class="live-dot"></span><strong>ASTERIA Y LAS TIERRAS DEL ESTE</strong><small>Mapa esquemático · Demo original</small></div><div class="map-controls"><button id="zoom-out" aria-label="Alejar">−</button><button id="zoom-reset" aria-label="Restablecer zoom">⟲</button><button id="zoom-in" aria-label="Acercar">＋</button></div></div>
+          <div class="map-viewport" id="map-viewport">
+            <svg id="world-map" viewBox="0 0 900 600" role="img" aria-label="Mapa interactivo del mundo de Asteria">
+              <defs>
+                <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M 36 0 L 0 0 0 36" fill="none" stroke="#8fa9a0" stroke-opacity=".12" stroke-width="1"/></pattern>
+                <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#162f3b"/><stop offset="1" stop-color="#203f4a"/></linearGradient>
+                <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <rect width="900" height="600" fill="url(#sea)"/>
+              <rect width="900" height="600" fill="url(#grid)"/>
+              <g class="map-art" id="map-art">
+                <path class="landmass" d="M63 140 L115 91 190 75 237 101 287 89 338 126 365 171 340 213 302 228 284 274 240 288 222 330 173 349 137 323 113 278 81 258 68 210Z"/>
+                <path class="landmass landmass-alt" d="M396 61 L454 49 497 73 536 63 584 92 611 133 594 173 556 190 541 230 506 251 476 227 443 236 420 207 390 181 375 139Z"/>
+                <path class="landmass" d="M581 283 L627 251 677 262 706 292 753 303 789 342 773 390 739 409 718 457 676 475 639 447 620 407 590 391 567 350Z"/>
+                <path class="landmass landmass-alt" d="M286 384 L323 363 359 376 383 410 370 444 344 466 329 510 298 520 275 484 257 452 267 415Z"/>
+                <path class="mountain-range" d="M102 154 l15 -22 12 21 15 -31 14 25 16 -17 12 23 M420 109 l15 -22 12 21 15 -31 14 25 16 -17 12 23 M621 326 l15 -22 12 21 15 -31 14 25 16 -17 12 23"/>
+                <path class="river" d="M224 123 C211 164 246 185 226 216 S203 269 179 300 M480 102 C467 143 497 166 475 202 S490 222 506 237"/>
+                <path class="road" d="M189 191 Q248 194 298 158 T453 144 T526 177 M453 144 Q473 213 505 238 M505 238 Q579 293 651 351 M298 158 Q318 265 340 424"/>
+                <g class="map-label"><text x="142" y="112">BOSQUE VELADO</text><text x="435" y="44">CORDILLERA AZUR</text><text x="650" y="246">TIERRAS DEL ESTE</text><text x="274" y="551">MAR INTERIOR</text></g>
+                <g class="map-marker" data-location="loc-asteria" tabindex="0" role="button" aria-label="Abrir ciudad Asteria" transform="translate(298 158)"><circle class="marker-halo" r="24"/><circle class="marker-core city" r="8"/><text y="-20">ASTERIA</text></g>
+                <g class="map-marker" data-location="loc-velado" tabindex="0" role="button" aria-label="Abrir Bosque Velado" transform="translate(170 224)"><circle class="marker-halo" r="18"/><circle class="marker-core forest" r="6"/><text y="-17">BOSQUE VELADO</text></g>
+                <g class="map-marker" data-location="loc-azur" tabindex="0" role="button" aria-label="Abrir Fortaleza Azur" transform="translate(477 143)"><circle class="marker-halo" r="18"/><circle class="marker-core fortress" r="6"/><text y="-17">FORTALEZA AZUR</text></g>
+                <g class="map-marker" data-location="loc-umbria" tabindex="0" role="button" aria-label="Abrir Puerto Umbría" transform="translate(651 351)"><circle class="marker-halo" r="18"/><circle class="marker-core port" r="6"/><text y="-17">PUERTO UMBRÍA</text></g>
+                <g class="map-marker" data-location="loc-lunaria" tabindex="0" role="button" aria-label="Abrir Santuario Lunaria" transform="translate(340 424)"><circle class="marker-halo" r="18"/><circle class="marker-core shrine" r="6"/><text y="-17">SANTUARIO LUNARIA</text></g>
+                <g class="map-marker event-marker" data-location="loc-azur" tabindex="0" role="button" aria-label="Acontecimiento en Fortaleza Azur" transform="translate(511 184)"><circle r="6"/><text x="12" y="4">!</text></g>
+              </g>
+            </svg>
+            <div class="map-compass">N<br><span>↑</span></div><div class="map-scale">ESQUEMA NARRATIVO · NO A ESCALA</div>
+          </div>
+          <div class="map-legend"><span><i class="legend-dot city"></i>Ciudad</span><span><i class="legend-dot forest"></i>Región natural</span><span><i class="legend-dot fortress"></i>Fortaleza</span><span><i class="legend-dot port"></i>Puerto</span><span><i class="legend-dot shrine"></i>Santuario</span></div>
+        </div>
+        <aside class="details-column">
+          <section id="details-panel" class="detail-card"></section>
+          <section class="quick-stats"><div><span>Personajes</span><strong id="stat-characters">4</strong></div><div><span>Lugares</span><strong id="stat-locations">5</strong></div><div><span>Eventos</span><strong id="stat-events">3</strong></div></section>
+          <section class="related-card"><div class="section-title"><strong id="related-title">Personajes en este lugar</strong><button id="show-all-related">Ver todos ↗</button></div><div id="related-list" class="related-list"></div></section>
+        </aside>
+      </section>
+
+      <section id="directory-view" class="directory-view hidden"></section>
+      <section id="command-view" class="command-view hidden">
+        <div class="command-intro"><span class="command-orb">⌘</span><h2>Asistente local</h2><p>Consultá y organizá tu universo con comandos conocidos. No utiliza IA ni envía datos a Internet.</p></div>
+        <div id="command-log" class="command-log"><div class="system-message">Probá: «buscar personaje», «listar lugares», «validar continuidad» o «ayuda».</div></div>
+        <form id="command-form" class="command-form"><input id="command-input" autocomplete="off" placeholder="Escribí un comando local..."><button class="primary-button" type="submit">Ejecutar ↗</button></form>
+        <div class="command-chips"><button data-command="ayuda">Ayuda</button><button data-command="listar personajes">Listar personajes</button><button data-command="listar lugares">Listar lugares</button><button data-command="validar continuidad">Validar continuidad</button></div>
+      </section>
+      <footer class="app-footer"><span>WORDWAIFU · TU UNIVERSO, TUS REGLAS</span><span id="save-status">Cambios guardados en este navegador</span></footer>
+    </main>
+  </div>
+  <dialog id="entity-dialog" class="entity-dialog"><form id="entity-form" method="dialog"><div class="dialog-heading"><div><p class="eyebrow">CANON CORE</p><h2 id="dialog-title">Crear entidad</h2></div><button type="button" id="dialog-close" class="icon-button">✕</button></div><label>Tipo<select id="entity-type"><option value="character">Personaje</option><option value="location">Lugar</option></select></label><label>Nombre<input id="entity-name" required maxlength="100" placeholder="Nombre de la entidad"></label><label>Descripción<textarea id="entity-description" rows="3" maxlength="2000" placeholder="Descripción inicial"></textarea></label><div class="dialog-actions"><button type="button" id="dialog-cancel" class="outline-button">Cancelar</button><button type="submit" class="primary-button">Guardar propuesta</button></div></form></dialog>
+  <script src="./src/app.js" defer></script>
+</body>
+</html>
