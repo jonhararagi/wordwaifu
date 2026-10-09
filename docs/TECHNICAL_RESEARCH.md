@@ -37,3 +37,16 @@ La lectura de esos proyectos no demuestra que sus soluciones sean mejores en tod
 
 ### Evidencia
 - [Chromium CI #37951860214](https://github.com/jonhararagi/wordwaifu/actions/runs/37951860214): 18 pruebas de esquema y CRUD del navegador, incluidos duplicados, edición, recarga, eliminación y round-trip.
+
+
+## 2026-10-09 · Índice de búsqueda entre universos
+
+### Principios de implementación
+- Clave de resultado compuesta por proyecto, tipo de entidad e ID de entidad. Los IDs locales no son globales por sí solos.
+- Consultar IndexedDB en modo de solo lectura mantiene la búsqueda independiente de las operaciones para activar, guardar o borrar universos.
+- La búsqueda se realiza sobre los datos canónicos disponibles, no sobre copias editables. Los resultados siempre indican de qué universo provienen.
+- Si el almacén principal no se puede leer, el respaldo de `localStorage` puede aportar coincidencias, pero no equivale al índice completo. El sistema debe indicar su limitación.
+- El prototipo reconstruye coincidencias desde los registros al consultar. No se ha añadido un índice persistido ni se ha supuesto que los tiempos de búsqueda escalen a miles de proyectos.
+
+### Decisión y gate
+WordWaifu ofrece búsqueda en personajes, lugares, acontecimientos, organizaciones, relaciones e historias, con filtro por tipo y texto sobre nombre/campos pertinentes. La siguiente validación debe demostrar en Chromium la identidad compuesta entre dos universos, búsqueda de campos, resultado vacío tras una lectura completa y estado parcial ante fallo de IndexedDB. El código no se marca como terminado antes de que la CI del HEAD vivo quede en PASS.

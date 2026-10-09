@@ -73,3 +73,12 @@ No mezclar identidad permanente con estado de un capítulo. El nombre, la especi
 ## Ejemplo conceptual
 
 Un marcador de mapa apunta a location_id = loc-orario; una ficha apunta a character_id = char-example; una presencia enlaza ambos durante un intervalo. El mapa consulta presencias para mostrar quién está allí en el momento seleccionado. La ciudad no necesita almacenar una copia de todas las fichas.
+
+
+## Índice maestro multiverso (implementación inicial)
+
+El índice de búsqueda no reemplaza el canon ni se guarda como una segunda copia editable. Consulta los proyectos persistidos en IndexedDB en modo de solo lectura y construye coincidencias en memoria. La identidad de cada resultado es compuesta: `projectId + entityType + entityId`; un mismo `entityId` puede existir en universos diferentes sin ser el mismo registro.
+
+El resultado incluye el nombre del universo, ID de proyecto, tipo de entidad, ID estable del registro, nombre y detalle. En la iteración inicial se incluyen personajes, lugares, acontecimientos, organizaciones, relaciones e historias, con filtro por tipo y búsqueda de texto sobre los campos relevantes de cada ficha. La normalización de texto tolera diferencias de acentuación.
+
+Si IndexedDB no se puede leer, solo se puede consultar el respaldo local disponible. El método devuelve `complete: false` y una advertencia; la interfaz comunica `BÚSQUEDA PARCIAL`. No debe sugerir que no hay resultados si no se pudieron examinar todos los proyectos. Una futura optimización podrá introducir caché o índice invertido solo con invalidación/reconstrucción demostrada, evitando desincronizar el canon.
