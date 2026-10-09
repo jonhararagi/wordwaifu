@@ -23,3 +23,17 @@ Registro permanente de aprendizajes obtenidos al estudiar aplicaciones y reposit
 
 ### Qué no se afirma
 La lectura de esos proyectos no demuestra que sus soluciones sean mejores en todos los contextos ni que WordWaifu esté terminado. Solo se adaptaron ideas generales de modelado; la implementación y pruebas de WordWaifu son propias.
+
+
+## 2026-10-09 · Grafo de relaciones de personajes
+
+### Decisiones de arquitectura
+- Separamos las relaciones como registros de primera clase con IDs estables; cada relación apunta a dos personajes existentes.
+- Los vínculos antiguos guardados como listas de IDs se migran al nuevo grafo solo cuando el proyecto no contiene la colección raíz `relationships[]`. Los enlaces recíprocos no se duplican.
+- En transición, el grafo raíz es la fuente de verdad y `characters[].relationships` se reconstruye como proyección recíproca. Esto evita que dos representaciones editables se desincronicen.
+- Las relaciones se consideran simétricas en el MVP. La pareja de IDs no ordenada + tipo define duplicidad; tipos diferentes en el mismo par se permiten. Un futuro modelo dirigido necesitará formalizar dirección y tipos asimétricos antes de implementarlos.
+- Los endpoints se validan contra IDs existentes; se prohíben auto-relaciones y al borrar un personaje se borran aristas asociadas, no otros personajes.
+- Campos temporales, intensidad, secreto y enlaces a eventos permanecen en el modelo futuro, sin simularlos todavía en la interfaz.
+
+### Evidencia
+- [Chromium CI #37951860214](https://github.com/jonhararagi/wordwaifu/actions/runs/37951860214): 18 pruebas de esquema y CRUD del navegador, incluidos duplicados, edición, recarga, eliminación y round-trip.

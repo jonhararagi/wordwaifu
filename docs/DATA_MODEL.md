@@ -36,7 +36,14 @@ No se ha incorporado todavía una referencia inversa `Character.organizationIds`
 id, project_id, title, description, start_time, end_time, precision, location_ids[], participant_character_ids[], organization_ids[], cause_event_ids[], consequence_event_ids[], story_reference, canon_status.
 
 ### Relationship
-id, project_id, source_entity_id, target_entity_id, relationship_type, description, start_time, end_time, intensity, is_secret, canon_status.
+Entidad de primera clase que conecta dos personajes existentes por IDs estables:
+id, project_id, source_character_id, target_character_id, relationship_type, description, start_time, end_time, intensity, is_secret, canon_status.
+
+**Contrato implementado en el prototipo (JavaScript camelCase):** `id`, `name` (etiqueta breve visible), `sourceCharacterId`, `targetCharacterId`, `relationshipType`, `description`, `status`.
+
+El prototipo trata las relaciones como vínculos simétricos entre un par de personajes: la pareja no ordenada + tipo no se puede duplicar, un personaje no puede relacionarse consigo mismo y se permiten tipos distintos para la misma pareja. Los IDs de ambos extremos deben resolver a personajes existentes. La edición conserva el ID de relación; borrar el vínculo conserva las fichas. Cuando se borra un personaje, se eliminan las relaciones que lo referencian.
+
+La colección raíz `relationships[]` es la fuente de verdad. `characters[].relationships` se conserva como proyección recíproca compatible con proyectos/pantallas anteriores. Si un proyecto antiguo no incluye `relationships[]`, sus enlaces por ID se migran automáticamente a registros canónicos, colapsando pares recíprocos en un registro. No se cambia `schemaVersion: 1`. Los campos temporales `start_time`, `end_time`, intensidad, secreto y referencias a eventos todavía no se implementan en la UI.
 
 ### Presence / Location Assignment
 No guardar una sola ubicación mutable si necesitamos saber dónde estuvo alguien anteriormente. Registrar intervalos o eventos de presencia:

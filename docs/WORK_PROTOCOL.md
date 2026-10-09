@@ -43,7 +43,7 @@ No acumular tareas independientes. Si una sesión se interrumpe, retomar desde S
 
 ## Próxima tarea activa
 
-WF-003-A — Modelo y CRUD dedicado de relaciones entre personajes. Leer docs/DONE.md y docs/STATUS.md para alcance, evidencia y criterios actuales.
+WF-004-A — Repositorio de persistencia e introducción gradual de IndexedDB. Leer docs/DONE.md y docs/STATUS.md para alcance, evidencia y criterios actuales.
 
 ## Roles del asistente en WordWaifu: Cerebro + Obrero
 

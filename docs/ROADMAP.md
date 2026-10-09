@@ -28,6 +28,7 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 - [x] CRUD básico de personajes y limpieza segura de referencias (WF-002-A; Chromium CI PASS).
 - [x] CRUD básico de acontecimientos y limpieza segura de referencias (WF-002-B; Chromium CI #37927849547 PASS).
 - [x] CRUD básico de organizaciones con referencias seguras (WF-002-C; Chromium CI #37936748101 PASS).
+- [x] CRUD básico de relaciones canónicas con migración retrocompatible desde `characters[].relationships` (WF-003-A; Chromium CI #37951860214 PASS).
 - IndexedDB con repositorio desacoplado.
 - Exportar/importar JSON con validación.
 - Búsqueda y referencias por IDs estables.
@@ -97,7 +98,7 @@ No saltar directamente a generadores masivos antes de demostrar que el canon y l
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
-La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente tarea activa es WF-003-A, modelo y CRUD dedicado de relaciones entre personajes.
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente tarea activa es WF-004-A, repositorio de persistencia e introducción gradual de IndexedDB.
 
 ### Índice maestro multiverso
 - Separar proyectos/universos por IDs estables.
@@ -177,3 +178,11 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - CI PASS_REAL: [ejecución #37936748101](https://github.com/jonhararagi/wordwaifu/actions/runs/37936748101), incluyó Chromium CRUD, persistencia, referencias y round-trip JSON.
 - Investigación conceptual documentada en [TECHNICAL_RESEARCH.md](TECHNICAL_RESEARCH.md), sin reutilizar código de terceros.
 - Siguiente tarea: WF-003-A, relaciones dedicadas. TIMER: 3–5 horas.
+
+
+### WF-003-A — DONE · Relaciones canónicas entre personajes
+- Añadida la colección raíz `relationships[]` y migración sin cambio de schemaVersion desde las listas locales por personaje.
+- Relaciones enlazadas por IDs; auto-relaciones, endpoints inexistentes e IDs/pares-tipos duplicados se rechazan.
+- CRUD desde la vista «Relaciones», con persistencia, round-trip, borrado confirmado y sincronización de la proyección antigua.
+- Evidencia: [Chromium CI #37951860214 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/37951860214); 18 pruebas de esquema y smoke test completo.
+- Siguiente: WF-004-A, repositorio local desacoplado + IndexedDB. TIMER: 4–6 horas.
