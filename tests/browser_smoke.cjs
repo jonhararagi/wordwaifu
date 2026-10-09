@@ -89,6 +89,63 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-dialog").waitFor({state:"visible"});
+    await page.locator("#project-list").selectOption("project-asteria");
+    await page.locator("#create-project-name").fill("Universo Multiverso QA");
+    await page.locator("#project-create-button").click();
+    await page.locator("#project-name").getByText("Universo Multiverso QA").waitFor();
+    const createdUniverse = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      const catalog = await repository.listProjects();
+      repository.close();
+      return { id: active?.value || null, ids: catalog.map((item) => item.projectId), names: catalog.map((item) => item.name) };
+    });
+    assert.ok(createdUniverse.id && createdUniverse.id !== "project-asteria", "New projects need distinct stable IDs.");
+    assert.ok(createdUniverse.ids.includes("project-asteria"), "The original universe must remain in the catalog.");
+    assert.ok(createdUniverse.ids.includes(createdUniverse.id), "The new universe must be listed after persistence.");
+    assert.ok(createdUniverse.names.includes("Universo Multiverso QA"));
+    process.stdout.write("PASS project catalog/create: distinct project IDs coexist in IndexedDB.\n");
+
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-list").selectOption("project-asteria");
+    await page.locator("#project-open-button").click();
+    await page.locator("#project-name").getByText("Las Crónicas de Asteria").waitFor();
+    assert.equal(await page.locator("#character-count").innerText(), "4");
+    const activeDemoProject = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return active?.value;
+    });
+    assert.equal(activeDemoProject, "project-asteria");
+    process.stdout.write("PASS project switch: existing universe restored and active pointer follows its ID.\n");
+
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-list").selectOption(createdUniverse.id);
+    await page.locator("#project-open-button").click();
+    await page.locator("#project-name").getByText("Universo Multiverso QA").waitFor();
+    await page.locator("#details-panel").getByText(/Todavía no hay lugares/).waitFor();
+    const projectSwitchIntegrity = await page.evaluate(async (createdId) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const original = await repository.getProject("project-asteria");
+      const active = await repository.read("metadata", "activeProjectId");
+      const selected = await repository.getProject(createdId);
+      repository.close();
+      return { originalCharacterCount: original?.characters?.length, activeId: active?.value, selectedId: selected?.project?.id };
+    }, createdUniverse.id);
+    assert.equal(projectSwitchIntegrity.originalCharacterCount, 4, "Switching projects must not overwrite the original universe.");
+    assert.equal(projectSwitchIntegrity.activeId, createdUniverse.id);
+    assert.equal(projectSwitchIntegrity.selectedId, createdUniverse.id);
+    process.stdout.write("PASS project isolation: switching back preserves both universes and their own data.\n");
+
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-list").selectOption("project-asteria");
+    await page.locator("#project-open-button").click();
+    await page.locator("#project-name").getByText("Las Crónicas de Asteria").waitFor();
+
     const initialPanel = await page.locator("#details-panel").innerHTML();
     if (!initialPanel.trim()) {
       throw new Error("Initial render diagnostic: " + JSON.stringify({ pageErrors, consoleErrors }));

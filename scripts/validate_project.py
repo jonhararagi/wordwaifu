@@ -41,7 +41,7 @@ if html_path.is_file():
     ids = re.findall(r'\bid="([^"]+)"', html)
     duplicates = sorted({item for item in ids if ids.count(item) > 1})
     require(not duplicates, "IDs HTML duplicados: " + ", ".join(duplicates))
-    for required_id in ("world-map", "details-panel", "time-select", "global-search", "export-button", "import-file", "command-form"):
+    for required_id in ("world-map", "details-panel", "time-select", "global-search", "export-button", "import-file", "command-form", "manage-projects-button", "project-dialog", "project-list", "project-create-button", "create-project-name"):
         require(required_id in ids, "Falta control esencial en index.html: " + required_id)
 
 if js_path.is_file():
@@ -59,6 +59,7 @@ if repository_path.is_file():
     repository = repository_path.read_text(encoding="utf-8")
     require("class ProjectRepository" in repository, "Falta el adaptador ProjectRepository")
     require("loadActive" in repository and "saveActive" in repository and "saveBackup" in repository and "write" in repository, "El repositorio debe exponer carga, guardado, respaldo y verificación del proyecto activo")
+    require("listProjects" in repository and "getProject" in repository and "activateProject" in repository, "El repositorio debe enumerar, leer y activar proyectos por ID")
     require("recoveredBackup" in repository, "Falta la ruta de recuperación del respaldo local")
 
 if schema_test_path.is_file():
@@ -72,6 +73,7 @@ if browser_test_path.is_file():
     require("safe import" in browser_test, "La prueba del navegador debe verificar imports seguros")
     require("PASS app persistence boot" in browser_test, "Falta prueba de integración del arranque con IndexedDB")
     require("PASS app persistence recovery" in browser_test, "Falta prueba de recuperación desde IndexedDB sin respaldo local")
+    require("PASS project catalog/create" in browser_test and "PASS project isolation" in browser_test, "Falta cobertura de catálogo, creación y aislamiento de proyectos")
 
 if css_path.is_file():
     css = css_path.read_text(encoding="utf-8")

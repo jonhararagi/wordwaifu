@@ -159,6 +159,159 @@
     });
   }
 
+  function resetProjectWorkspace() {
+    selectedLocationId = state.locations[0]?.id || null;
+    selectedCharacterId = null;
+    selectedEventId = null;
+    selectedOrganizationId = null;
+    selectedRelationshipId = null;
+    activeView = "atlas";
+    mapMode = "world";
+    mapScale = 1;
+    $("#global-search").value = "";
+    $("#time-select").value = "now";
+    $(".view-tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.mapMode === "world"));
+    render();
+  }
+
+  async function requireCurrentProjectInIndexedDB() {
+    const saved = await saveProject();
+    if (!saved || !$("#save-status").textContent.startsWith("Guardado en IndexedDB")) {
+      throw new Error("El proyecto actual no está verificado en IndexedDB. Se conserva la pantalla para no arriesgar la única copia local.");
+    }
+  }
+
+  async function refreshProjectList() {
+    const select = $("#project-list");
+    const previousValue = select.value;
+    select.replaceChildren();
+    const projects = await projectRepository.listProjects();
+    projects.forEach((project) => {
+      const option = document.createElement("option");
+      option.value = project.projectId;
+      option.textContent = project.name + (project.active || project.projectId === state.project.id ? " · activo" : "");
+      option.dataset.source = project.source;
+      select.appendChild(option);
+    });
+    if (!projects.length) {
+      const option = document.createElement("option");
+      option.value = "";
+      option.textContent = "No hay proyectos guardados";
+      option.disabled = true;
+      select.appendChild(option);
+    }
+    if (projects.some((project) => project.projectId === state.project.id)) select.value = state.project.id;
+    else if (projects.some((project) => project.projectId === previousValue)) select.value = previousValue;
+    $("#project-list-status").textContent = projects.length
+      ? projects.length + " proyecto(s) local(es). Los proyectos se identifican por ID, no por nombre."
+      : "Todavía no hay proyectos persistidos.";
+    return projects;
+  }
+
+  async function openProjectManager() {
+    if (!projectRepository) {
+      alert("El repositorio local de proyectos no está disponible.");
+      return;
+    }
+    $("#project-dialog").showModal();
+    $("#project-list-status").textContent = "Leyendo el catálogo local…";
+    try {
+      await refreshProjectList();
+    } catch (error) {
+      $("#project-list-status").textContent = "No se pudo enumerar: " + error.message;
+    }
+  }
+
+  async function openSelectedProject() {
+    const projectId = $("#project-list").value;
+    if (!projectId) return;
+    if (projectId === state.project.id) {
+      $("#project-dialog").close();
+      return;
+    }
+    const appShell = $(".app-shell");
+    const previousProject = structuredClone(state);
+    if (appShell) appShell.inert = true;
+    $("#project-list-status").textContent = "Guardando el proyecto actual y abriendo el seleccionado…";
+    try {
+      await requireCurrentProjectInIndexedDB();
+      const candidate = await projectRepository.getProject(projectId);
+      if (!candidate) throw new Error("El proyecto seleccionado ya no existe en el catálogo local.");
+      const schema = window.WordWaifuProjectSchema;
+      if (!schema || typeof schema.validateAndNormalizeProject !== "function") throw new Error("El validador de proyectos no está disponible.");
+      const validation = schema.validateAndNormalizeProject(candidate);
+      if (!validation.valid) throw new Error("El proyecto seleccionado no supera la validación: " + validation.errors.slice(0, 5).join(" "));
+      const normalized = ensureRelationshipStore(validation.project);
+      const persisted = await projectRepository.saveActive(normalized);
+      if (persisted.backend !== "indexeddb") {
+        projectRepository.saveBackup(previousProject);
+        await projectRepository.activateProject(previousProject.project.id);
+        throw new Error("No se pudo verificar el cambio en IndexedDB; se restauró el proyecto anterior.");
+      }
+      state = normalized;
+      resetProjectWorkspace();
+      $("#project-dialog").close();
+      $("#save-status").textContent = "Proyecto abierto y verificado en IndexedDB";
+    } catch (error) {
+      state = previousProject;
+      projectRepository.saveBackup(previousProject);
+      try { await projectRepository.activateProject(previousProject.project.id); } catch { /* Preserve visible state if storage is unavailable. */ }
+      $("#project-list-status").textContent = "No se pudo abrir el proyecto: " + error.message;
+      alert("No se pudo cambiar de proyecto. El proyecto anterior permanece abierto. " + error.message);
+    } finally {
+      if (appShell) appShell.inert = false;
+    }
+  }
+
+  function newProjectId() {
+    const randomPart = window.crypto && typeof window.crypto.randomUUID === "function"
+      ? window.crypto.randomUUID()
+      : Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 10);
+    return "project-" + randomPart;
+  }
+
+  async function createNamedProject() {
+    const name = $("#create-project-name").value.trim();
+    if (!name) {
+      $("#create-project-name").setCustomValidity("Escribí un nombre para el universo.");
+      $("#create-project-name").reportValidity();
+      return;
+    }
+    $("#create-project-name").setCustomValidity("");
+    const appShell = $(".app-shell");
+    const previousProject = structuredClone(state);
+    if (appShell) appShell.inert = true;
+    $("#project-list-status").textContent = "Guardando el proyecto actual y creando el nuevo…";
+    try {
+      await requireCurrentProjectInIndexedDB();
+      const project = {
+        schemaVersion: 1,
+        project: { id: newProjectId(), name, description: "" },
+        locations: [], characters: [], events: [], organizations: [], relationships: [], stories: [],
+        settings: { time: "now" }
+      };
+      const persisted = await projectRepository.saveActive(project);
+      if (persisted.backend !== "indexeddb") {
+        projectRepository.saveBackup(previousProject);
+        await projectRepository.activateProject(previousProject.project.id);
+        throw new Error("IndexedDB no verificó el proyecto nuevo. El proyecto anterior sigue activo.");
+      }
+      state = ensureRelationshipStore(project);
+      resetProjectWorkspace();
+      $("#create-project-name").value = "";
+      $("#project-dialog").close();
+      $("#save-status").textContent = "Nuevo proyecto creado y verificado en IndexedDB";
+    } catch (error) {
+      state = previousProject;
+      projectRepository.saveBackup(previousProject);
+      try { await projectRepository.activateProject(previousProject.project.id); } catch { /* Preserve previous in-memory project. */ }
+      $("#project-list-status").textContent = "No se pudo crear el proyecto: " + error.message;
+      alert("No se pudo crear el proyecto. El proyecto anterior permanece abierto. " + error.message);
+    } finally {
+      if (appShell) appShell.inert = false;
+    }
+  }
+
   function locationById(id) { return state.locations.find((location) => location.id === id); }
   function characterById(id) { return state.characters.find((character) => character.id === id); }
   function currentTime() { return $("#time-select").value; }
@@ -1128,6 +1281,14 @@
   $("#dialog-cancel").addEventListener("click", () => $("#entity-dialog").close());
   $("#export-button").addEventListener("click", exportProject);
   $("#import-file").addEventListener("change", (event) => importProject(event.target.files[0]));
+  $("#manage-projects-button").addEventListener("click", openProjectManager);
+  $("#project-refresh-button").addEventListener("click", () => refreshProjectList().catch((error) => {
+    $("#project-list-status").textContent = "No se pudo actualizar: " + error.message;
+  }));
+  $("#project-open-button").addEventListener("click", openSelectedProject);
+  $("#project-create-button").addEventListener("click", createNamedProject);
+  $("#project-close-button").addEventListener("click", () => $("#project-dialog").close());
+  $("#create-project-name").addEventListener("input", () => $("#create-project-name").setCustomValidity(""));
   $("#new-project-button").addEventListener("click", () => {
     if (!confirm("¿Crear un proyecto vacío? Exportá el proyecto actual antes si querés conservar una copia.")) return;
     state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], organizations: [], relationships: [], stories: [], settings: { time: "now" } };

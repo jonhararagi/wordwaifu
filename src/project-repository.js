@@ -71,6 +71,87 @@
       }
     }
 
+    async listProjects() {
+      let records = [];
+      let activeProjectId = null;
+      let indexedDbError = null;
+      try {
+        const db = await this.open();
+        records = await new Promise((resolve, reject) => {
+          const tx = db.transaction("projects", "readonly");
+          const request = tx.objectStore("projects").getAll();
+          let result = [];
+          request.onsuccess = () => { result = Array.isArray(request.result) ? request.result : []; };
+          tx.oncomplete = () => resolve(result);
+          tx.onerror = () => reject(tx.error || request.error || new Error("No se pudieron enumerar los proyectos."));
+          tx.onabort = () => reject(tx.error || new Error("La enumeración de proyectos fue cancelada."));
+        });
+        const active = await this.read("metadata", ACTIVE_KEY);
+        if (active && typeof active.value === "string") activeProjectId = active.value;
+      } catch (error) {
+        indexedDbError = error;
+      }
+
+      const byId = new Map();
+      records.forEach((record) => {
+        if (!record || typeof record.projectId !== "string" || !isProject(record.data) ||
+            record.data.project.id !== record.projectId) return;
+        byId.set(record.projectId, {
+          projectId: record.projectId,
+          name: record.data.project.name || "Proyecto sin nombre",
+          description: record.data.project.description || "",
+          updatedAt: record.data.project.updatedAt || null,
+          source: "indexeddb"
+        });
+      });
+
+      const backup = this.readBackup().project;
+      if (backup && !byId.has(backup.project.id)) {
+        byId.set(backup.project.id, {
+          projectId: backup.project.id,
+          name: backup.project.name || "Proyecto sin nombre",
+          description: backup.project.description || "",
+          updatedAt: backup.project.updatedAt || null,
+          source: "localStorage"
+        });
+      }
+      if (indexedDbError && byId.size === 0) throw indexedDbError;
+      return Array.from(byId.values())
+        .map((item) => ({ ...item, active: item.projectId === activeProjectId }))
+        .sort((left, right) => left.name.localeCompare(right.name, "es"));
+    }
+
+    async getProject(projectId) {
+      if (typeof projectId !== "string" || !projectId.trim()) return null;
+      try {
+        const record = await this.read("projects", projectId);
+        if (record && record.projectId === projectId && isProject(record.data) && record.data.project.id === projectId) {
+          return record.data;
+        }
+      } catch {
+        // A matching compatibility backup may still be usable during migration.
+      }
+      const backup = this.readBackup().project;
+      return backup && backup.project.id === projectId ? backup : null;
+    }
+
+    async activateProject(projectId) {
+      if (typeof projectId !== "string" || !projectId.trim()) throw new Error("El ID del proyecto activo no es válido.");
+      const record = await this.read("projects", projectId);
+      if (!record || record.projectId !== projectId || !isProject(record.data) || record.data.project.id !== projectId) {
+        throw new Error("No se puede activar un proyecto que no esté persistido en IndexedDB.");
+      }
+      const db = await this.open();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("metadata", "readwrite");
+        tx.objectStore("metadata").put({ key: ACTIVE_KEY, value: projectId });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("No se pudo cambiar el proyecto activo."));
+        tx.onabort = () => reject(tx.error || new Error("El cambio de proyecto activo fue cancelado."));
+      });
+      return { projectId, active: true };
+    }
+
     saveBackup(project) {
       if (!isProject(project)) return { written: false, warning: "El proyecto debe contener project.id." };
       try {
