@@ -5,6 +5,7 @@
   const titles = {
     atlas: ["Atlas del mundo", "Explorá lugares, encontrá personajes y recorré la historia de tu mundo."],
     characters: ["Personajes", "Fichas conectadas con lugares, relaciones y acontecimientos."],
+    relationships: ["Relaciones", "Vínculos del canon entre personajes, con tipo, descripción y estado."],
     places: ["Lugares", "Cada lugar es parte de la geografía y del canon de tu universo."],
     timeline: ["Cronología", "Revisá los acontecimientos y los cambios de estado de tu mundo."],
     organizations: ["Organizaciones", "Facciones, gremios y grupos que mueven tu universo."],
@@ -49,19 +50,54 @@
     settings: { time: "now" }
   };
 
-  let state = loadProject();
+  let state = ensureRelationshipStore(loadProject());
   let activeView = "atlas";
   let mapMode = "world";
   let selectedLocationId = "loc-asteria";
   let selectedCharacterId = null;
   let selectedEventId = null;
   let selectedOrganizationId = null;
+  let selectedRelationshipId = null;
   let mapScale = 1;
   const enabledLayers = { places: true, characters: true, routes: true, events: true };
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
   const escapeHTML = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
   const titleCase = (value) => value.charAt(0).toUpperCase() + value.slice(1);
+
+  function ensureRelationshipStore(project) {
+    if (!project || !Array.isArray(project.characters)) return project;
+    const charactersById = new Map(project.characters.filter((character) => character && typeof character.id === "string").map((character) => [character.id, character]));
+    if (!Array.isArray(project.relationships)) {
+      const migrated = new Map();
+      for (const character of project.characters) {
+        if (!character || !Array.isArray(character.relationships)) continue;
+        for (const relatedId of character.relationships) {
+          if (typeof relatedId !== "string" || relatedId === character.id || !charactersById.has(relatedId)) continue;
+          const [sourceCharacterId, targetCharacterId] = [character.id, relatedId].sort();
+          const key = sourceCharacterId + "\\u0000" + targetCharacterId;
+          if (!migrated.has(key)) migrated.set(key, {
+            id: "rel-legacy-" + encodeURIComponent(sourceCharacterId) + "-" + encodeURIComponent(targetCharacterId),
+            name: "Relación heredada", sourceCharacterId, targetCharacterId,
+            relationshipType: "other",
+            description: "Relación migrada desde la ficha del proyecto anterior.",
+            status: "unknown"
+          });
+        }
+      }
+      project.relationships = Array.from(migrated.values());
+    }
+    project.characters.forEach((character) => { if (character && typeof character === "object") character.relationships = []; });
+    project.relationships.forEach((relationship) => {
+      if (!relationship || typeof relationship.sourceCharacterId !== "string" || typeof relationship.targetCharacterId !== "string") return;
+      const source = charactersById.get(relationship.sourceCharacterId);
+      const target = charactersById.get(relationship.targetCharacterId);
+      if (!source || !target || source.id === target.id) return;
+      if (!source.relationships.includes(target.id)) source.relationships.push(target.id);
+      if (!target.relationships.includes(source.id)) target.relationships.push(source.id);
+    });
+    return project;
+  }
 
   function loadProject() {
     try {
@@ -70,7 +106,7 @@
         const parsed = JSON.parse(saved);
         if (parsed && parsed.schemaVersion === 1 && parsed.project && Array.isArray(parsed.locations) && Array.isArray(parsed.characters)) {
           // Backward compatibility for projects saved before organization records existed.
-          return { ...parsed, organizations: Array.isArray(parsed.organizations) ? parsed.organizations : [] };
+          return ensureRelationshipStore({ ...parsed, organizations: Array.isArray(parsed.organizations) ? parsed.organizations : [] });
         }
       }
     } catch (error) {
@@ -126,7 +162,7 @@
     $("#view-subtitle").textContent = titles[activeView][1];
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
-    $("#directory-view").classList.toggle("hidden", !["characters", "places", "timeline", "organizations", "stories"].includes(activeView));
+    $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
@@ -322,6 +358,17 @@
         const base = locationById(organization.baseLocationId);
         return '<article class="entity-card organization-card' + (organization.id === selectedOrganizationId ? ' selected' : '') + '" data-organization="' + escapeHTML(organization.id) + '" tabindex="0" role="button" aria-pressed="' + String(organization.id === selectedOrganizationId) + '"><span class="avatar">⚑</span><h3>' + escapeHTML(organization.name) + '</h3><p>' + escapeHTML(organization.description || "Descripción pendiente.") + '</p><div class="tag-row"><span class="tag">' + escapeHTML(organization.organizationType || "Organización sin clasificar") + '</span><span class="tag">' + (organization.memberCharacterIds || []).length + ' miembros</span><span class="tag">' + escapeHTML(base ? base.name : "Sin sede") + '</span></div></article>';
       });
+    } else if (activeView === "relationships") {
+      heading = "Relaciones entre personajes";
+      items = (state.relationships || []).filter((relationship) => {
+        const source = characterById(relationship.sourceCharacterId);
+        const target = characterById(relationship.targetCharacterId);
+        return matches([relationship.name, relationship.relationshipType, relationship.description, source?.name, target?.name, relationship.status].join(" "), query);
+      }).map((relationship) => {
+        const source = characterById(relationship.sourceCharacterId);
+        const target = characterById(relationship.targetCharacterId);
+        return '<article class="entity-card relationship-card' + (relationship.id === selectedRelationshipId ? ' selected' : '') + '" data-relationship="' + escapeHTML(relationship.id) + '" tabindex="0" role="button" aria-pressed="' + String(relationship.id === selectedRelationshipId) + '"><span class="avatar">↔</span><h3>' + escapeHTML(relationship.name) + '</h3><p>' + escapeHTML((source ? source.name : "Personaje eliminado") + " ↔ " + (target ? target.name : "Personaje eliminado")) + '</p><div class="tag-row"><span class="tag">' + escapeHTML(relationshipTypeLabel(relationship.relationshipType)) + '</span><span class="tag">' + escapeHTML(relationship.status || "proposal") + '</span></div><p>' + escapeHTML(relationship.description || "Descripción pendiente.") + '</p></article>';
+      });
     } else {
       heading = "Historias y novelas";
       items = state.stories.map((story) => '<article class="entity-card"><span class="avatar">▤</span><h3>' + escapeHTML(story.name) + '</h3><p>' + escapeHTML(story.description || "Sinopsis pendiente.") + '</p></article>');
@@ -329,6 +376,7 @@
     }
     const selectedEvent = activeView === "timeline" ? state.events.find((event) => event.id === selectedEventId) : null;
     const selectedOrganization = activeView === "organizations" ? (state.organizations || []).find((item) => item.id === selectedOrganizationId) : null;
+    const selectedRelationship = activeView === "relationships" ? (state.relationships || []).find((item) => item.id === selectedRelationshipId) : null;
     const selectedEventHTML = selectedEvent ? '<section id="selected-event-details" class="selected-event-card"><div class="event-detail-heading"><div><p class="eyebrow">ACONTECIMIENTO SELECCIONADO</p><h2>' + escapeHTML(selectedEvent.title) + '</h2></div><span class="tag">' + escapeHTML(selectedEvent.position || "unknown") + '</span></div><p>' + escapeHTML(selectedEvent.description || "Descripción pendiente.") + '</p><div class="tag-row">' + (selectedEvent.locationIds || []).map((id) => locationById(id)).filter(Boolean).map((location) => '<span class="tag">⌖ ' + escapeHTML(location.name) + '</span>').join("") + (selectedEvent.characterIds || []).map((id) => characterById(id)).filter(Boolean).map((character) => '<span class="tag">♙ ' + escapeHTML(character.name) + '</span>').join("") + '</div><div class="location-actions"><button type="button" id="edit-event-button" class="outline-button">Editar acontecimiento</button><button type="button" id="delete-event-button" class="outline-button danger-action">Eliminar acontecimiento</button></div></section>' : "";
     const selectedOrganizationHTML = selectedOrganization ? (() => {
       const leaders = (selectedOrganization.leaderCharacterIds || []).map(characterById).filter(Boolean);
@@ -336,7 +384,12 @@
       const base = locationById(selectedOrganization.baseLocationId);
       return '<section id="selected-organization-details" class="selected-event-card"><div class="event-detail-heading"><div><p class="eyebrow">ORGANIZACIÓN SELECCIONADA</p><h2>' + escapeHTML(selectedOrganization.name) + '</h2></div><span class="tag">' + escapeHTML(selectedOrganization.status || "proposal") + '</span></div><p>' + escapeHTML(selectedOrganization.description || "Descripción pendiente.") + '</p><div class="detail-meta"><div><span>Tipo</span><strong>' + escapeHTML(selectedOrganization.organizationType || "Organización sin clasificar") + '</strong></div><div><span>Sede</span><strong>' + escapeHTML(base ? base.name : "Sin sede") + '</strong></div><div><span>Responsables</span><strong>' + escapeHTML(leaders.map((character) => character.name).join(", ") || "Sin asignar") + '</strong></div><div><span>Miembros</span><strong>' + escapeHTML(members.map((character) => character.name).join(", ") || "Sin miembros") + '</strong></div></div><div class="detail-divider"></div><span class="detail-type">IDEOLOGÍA</span><p>' + escapeHTML(selectedOrganization.ideology || "Sin definir") + '</p><div class="tag-row">' + (selectedOrganization.goals || []).map((goal) => '<span class="tag">' + escapeHTML(goal) + '</span>').join("") + '</div><div class="detail-divider"></div><span class="detail-type">HISTORIA</span><p>' + escapeHTML(selectedOrganization.history || "Sin historia registrada.") + '</p><div class="location-actions"><button type="button" id="edit-organization-button" class="outline-button">Editar organización</button><button type="button" id="delete-organization-button" class="outline-button danger-action">Eliminar organización</button></div></section>';
     })() : "";
-    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span></div>' + selectedEventHTML + selectedOrganizationHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>';
+    const selectedRelationshipHTML = selectedRelationship ? (() => {
+      const source = characterById(selectedRelationship.sourceCharacterId);
+      const target = characterById(selectedRelationship.targetCharacterId);
+      return '<section id="selected-relationship-details" class="selected-event-card"><div class="event-detail-heading"><div><p class="eyebrow">RELACIÓN SELECCIONADA</p><h2>' + escapeHTML(selectedRelationship.name) + '</h2></div><span class="tag">' + escapeHTML(selectedRelationship.status || "proposal") + '</span></div><p>' + escapeHTML((source ? source.name : "Personaje eliminado") + " ↔ " + (target ? target.name : "Personaje eliminado")) + '</p><div class="detail-meta"><div><span>Personaje A</span><strong>' + escapeHTML(source ? source.name : "No disponible") + '</strong></div><div><span>Personaje B</span><strong>' + escapeHTML(target ? target.name : "No disponible") + '</strong></div><div><span>Tipo</span><strong>' + escapeHTML(relationshipTypeLabel(selectedRelationship.relationshipType)) + '</strong></div><div><span>Estado del canon</span><strong>' + escapeHTML(selectedRelationship.status || "proposal") + '</strong></div></div><div class="detail-divider"></div><p>' + escapeHTML(selectedRelationship.description || "Sin descripción registrada.") + '</p><div class="location-actions"><button type="button" id="edit-relationship-button" class="outline-button">Editar relación</button><button type="button" id="delete-relationship-button" class="outline-button danger-action">Eliminar relación</button></div></section>';
+    })() : "";
+    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span></div>' + selectedEventHTML + selectedOrganizationHTML + selectedRelationshipHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>';
     if (selectedEvent) {
       $("#edit-event-button").addEventListener("click", () => editEvent(selectedEvent.id));
       $("#delete-event-button").addEventListener("click", () => deleteEvent(selectedEvent.id));
@@ -344,6 +397,10 @@
     if (selectedOrganization) {
       $("#edit-organization-button").addEventListener("click", () => editOrganization(selectedOrganization.id));
       $("#delete-organization-button").addEventListener("click", () => deleteOrganization(selectedOrganization.id));
+    }
+    if (selectedRelationship) {
+      $("#edit-relationship-button").addEventListener("click", () => editRelationship(selectedRelationship.id));
+      $("#delete-relationship-button").addEventListener("click", () => deleteRelationship(selectedRelationship.id));
     }
   }
 
@@ -406,6 +463,57 @@
     $("#organization-base-location").value = baseLocationId || "";
   }
 
+  function populateRelationshipReferenceOptions(sourceCharacterId = "", targetCharacterId = "") {
+    const options = '<option value="">Elegí personaje…</option>' + state.characters.map((character) => '<option value="' + escapeHTML(character.id) + '">' + escapeHTML(character.name) + '</option>').join("");
+    $("#relationship-source").innerHTML = options;
+    $("#relationship-target").innerHTML = options;
+    $("#relationship-source").value = sourceCharacterId || "";
+    $("#relationship-target").value = targetCharacterId || "";
+  }
+
+  function syncRelationshipProjection() {
+    ensureRelationshipStore(state);
+  }
+
+  function relationshipTypeLabel(type) {
+    return ({
+      friendship: "Amistad", romance: "Romance", family: "Familiar",
+      rivalry: "Rivalidad", mentorship: "Mentoría", alliance: "Alianza",
+      enemy: "Enemistad", other: "Otro"
+    })[type] || type || "Otro";
+  }
+
+  function getRelationshipFormData(excludeId = null) {
+    const sourceCharacterId = $("#relationship-source").value;
+    const targetCharacterId = $("#relationship-target").value;
+    const relationshipType = $("#relationship-type").value || "other";
+    if (!sourceCharacterId || !targetCharacterId) {
+      alert("Elegí los dos personajes que forman la relación.");
+      return null;
+    }
+    if (sourceCharacterId === targetCharacterId) {
+      alert("Una relación debe conectar dos personajes distintos.");
+      return null;
+    }
+    const [firstId, secondId] = [sourceCharacterId, targetCharacterId].sort();
+    const duplicate = (state.relationships || []).find((relationship) => {
+      if (relationship.id === excludeId) return false;
+      const [existingFirst, existingSecond] = [relationship.sourceCharacterId, relationship.targetCharacterId].sort();
+      return existingFirst === firstId && existingSecond === secondId &&
+        String(relationship.relationshipType || "other").toLowerCase() === relationshipType.toLowerCase();
+    });
+    if (duplicate) {
+      alert("Ya existe una relación de tipo «" + relationshipTypeLabel(relationshipType) + "» entre esos personajes. Editá la existente o elegí otro tipo.");
+      return null;
+    }
+    return {
+      name: $("#entity-name").value.trim(),
+      sourceCharacterId, targetCharacterId, relationshipType,
+      description: $("#relationship-description").value.trim(),
+      status: $("#relationship-status").value || "proposal"
+    };
+  }
+
   function syncEventLocationReferences(event) {
     const selectedLocations = new Set(Array.isArray(event.locationIds) ? event.locationIds : []);
     state.locations.forEach((location) => {
@@ -422,10 +530,13 @@
     $("#character-fields").classList.toggle("hidden", type !== "character");
     $("#event-fields").classList.toggle("hidden", type !== "event");
     $("#organization-fields").classList.toggle("hidden", type !== "organization");
-    $("#entity-name-label").textContent = type === "event" ? "Título del acontecimiento" : type === "location" ? "Nombre del lugar" : type === "organization" ? "Nombre de la organización" : "Nombre del personaje";
-    $("#entity-name").placeholder = type === "event" ? "Título del acontecimiento" : type === "organization" ? "Nombre del grupo" : "Nombre de la entidad";
+    $("#relationship-fields").classList.toggle("hidden", type !== "relationship");
+    $("#entity-description-field").classList.toggle("hidden", type === "relationship");
+    $("#entity-name-label").textContent = type === "event" ? "Título del acontecimiento" : type === "location" ? "Nombre del lugar" : type === "organization" ? "Nombre de la organización" : type === "relationship" ? "Etiqueta breve de la relación" : "Nombre del personaje";
+    $("#entity-name").placeholder = type === "event" ? "Título del acontecimiento" : type === "organization" ? "Nombre del grupo" : type === "relationship" ? "Ej. Confianza recuperada" : "Nombre de la entidad";
     if (type === "event") populateEventReferenceOptions(selectedValues("#event-locations"), selectedValues("#event-characters"));
     if (type === "organization") populateOrganizationReferenceOptions(selectedValues("#organization-leaders"), selectedValues("#organization-members"), $("#organization-base-location").value);
+    if (type === "relationship") populateRelationshipReferenceOptions($("#relationship-source").value, $("#relationship-target").value);
   }
 
   function addEntity() {
@@ -433,7 +544,7 @@
     form.dataset.editing = "";
     form.dataset.editingType = "";
     $("#entity-type").disabled = false;
-    $("#entity-type").value = activeView === "timeline" ? "event" : activeView === "places" ? "location" : activeView === "organizations" ? "organization" : "character";
+    $("#entity-type").value = activeView === "timeline" ? "event" : activeView === "places" ? "location" : activeView === "organizations" ? "organization" : activeView === "relationships" ? "relationship" : "character";
     $("#dialog-title").textContent = "Crear entidad";
     $("#entity-name").value = "";
     $("#entity-description").value = "";
@@ -456,9 +567,15 @@
     $("#organization-leaders").innerHTML = "";
     $("#organization-members").innerHTML = "";
     $("#organization-base-location").innerHTML = "";
+    $("#relationship-description").value = "";
+    $("#relationship-type").value = "friendship";
+    $("#relationship-status").value = "proposal";
+    $("#relationship-source").innerHTML = "";
+    $("#relationship-target").innerHTML = "";
     updateEntityFieldVisibility();
     populateEventReferenceOptions([], []);
     populateOrganizationReferenceOptions([], [], null);
+    populateRelationshipReferenceOptions("", "");
     $("#entity-form button[type=\"submit\"]").textContent = "Guardar propuesta";
     $("#entity-dialog").showModal();
   }
@@ -520,6 +637,9 @@
     state.characters.forEach((item) => { item.relationships = (item.relationships || []).filter((relatedId) => relatedId !== id); });
     state.locations.forEach((item) => { item.characters = (item.characters || []).filter((characterId) => characterId !== id); });
     state.events.forEach((item) => { item.characterIds = (item.characterIds || []).filter((characterId) => characterId !== id); });
+    state.relationships = (state.relationships || []).filter((relationship) =>
+      relationship.sourceCharacterId !== id && relationship.targetCharacterId !== id);
+    syncRelationshipProjection();
     selectedCharacterId = null;
     selectedLocationId = locationById(selectedLocationId)?.id || state.locations[0]?.id || null;
     activeView = "atlas";
@@ -584,6 +704,41 @@
     state.organizations = (state.organizations || []).filter((item) => item.id !== id);
     selectedOrganizationId = null;
     activeView = "organizations";
+    saveProject();
+    render();
+  }
+
+  function editRelationship(id) {
+    const relationship = (state.relationships || []).find((item) => item.id === id);
+    if (!relationship) return;
+    const form = $("#entity-form");
+    form.dataset.editing = id;
+    form.dataset.editingType = "relationship";
+    $("#entity-type").value = "relationship";
+    $("#entity-type").disabled = true;
+    $("#dialog-title").textContent = "Editar relación";
+    $("#entity-name").value = relationship.name || "";
+    $("#relationship-description").value = relationship.description || "";
+    $("#relationship-type").value = relationship.relationshipType || "other";
+    $("#relationship-status").value = relationship.status || "proposal";
+    populateRelationshipReferenceOptions(relationship.sourceCharacterId, relationship.targetCharacterId);
+    updateEntityFieldVisibility();
+    $("#entity-form button[type=\"submit\"]").textContent = "Guardar cambios";
+    $("#entity-dialog").showModal();
+  }
+
+  function deleteRelationship(id) {
+    const relationship = (state.relationships || []).find((item) => item.id === id);
+    if (!relationship) return;
+    const source = characterById(relationship.sourceCharacterId);
+    const target = characterById(relationship.targetCharacterId);
+    if (!confirm("Se eliminará la relación «" + relationship.name + "» entre " +
+      (source ? source.name : "un personaje") + " y " + (target ? target.name : "otro personaje") +
+      ". Los dos personajes se conservarán. La operación no se puede deshacer.")) return;
+    state.relationships = state.relationships.filter((item) => item.id !== id);
+    syncRelationshipProjection();
+    selectedRelationshipId = null;
+    activeView = "relationships";
     saveProject();
     render();
   }
@@ -719,6 +874,27 @@
       return;
     }
 
+    const relationshipData = type === "relationship" ? getRelationshipFormData(editingId || null) : null;
+    if (type === "relationship" && !relationshipData) return;
+
+    if (editingId && editingType === "relationship") {
+      const relationship = (state.relationships || []).find((item) => item.id === editingId);
+      if (!relationship) { alert("No se encontró la relación que se intentaba editar."); return; }
+      relationship.name = name;
+      relationship.sourceCharacterId = relationshipData.sourceCharacterId;
+      relationship.targetCharacterId = relationshipData.targetCharacterId;
+      relationship.relationshipType = relationshipData.relationshipType;
+      relationship.description = relationshipData.description;
+      relationship.status = relationshipData.status;
+      syncRelationshipProjection();
+      selectedRelationshipId = relationship.id;
+      activeView = "relationships";
+      saveProject();
+      $("#entity-dialog").close();
+      render();
+      return;
+    }
+
     const id = "local-" + type + "-" + Date.now().toString(36);
     if (type === "character") {
       const ageRaw = $("#character-age").value.trim();
@@ -763,6 +939,12 @@
       state.organizations.push(organization);
       selectedOrganizationId = id;
       activeView = "organizations";
+    } else if (type === "relationship") {
+      state.relationships = state.relationships || [];
+      state.relationships.push({ id, ...relationshipData, name });
+      syncRelationshipProjection();
+      selectedRelationshipId = id;
+      activeView = "relationships";
     } else {
       state.locations.push({ id, name, type: locationType || "Lugar sin clasificar", parentId: null, description: description || "Descripción pendiente.", tags: ["Propuesta"], population: "Sin datos", government: "Sin datos", climate: "Sin datos", marker: [120 + Math.random() * 620, 90 + Math.random() * 390], characters: [], events: [] });
       activeView = "places";
@@ -806,6 +988,7 @@
       selectedCharacterId = null;
       selectedEventId = null;
       selectedOrganizationId = null;
+      selectedRelationshipId = null;
       activeView = "atlas";
       render();
       $("#save-status").textContent = "Proyecto importado y guardado localmente";
@@ -897,11 +1080,12 @@
   $("#import-file").addEventListener("change", (event) => importProject(event.target.files[0]));
   $("#new-project-button").addEventListener("click", () => {
     if (!confirm("¿Crear un proyecto vacío? Exportá el proyecto actual antes si querés conservar una copia.")) return;
-    state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], organizations: [], stories: [], settings: { time: "now" } };
+    state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], organizations: [], relationships: [], stories: [], settings: { time: "now" } };
     selectedLocationId = null;
     selectedCharacterId = null;
     selectedEventId = null;
     selectedOrganizationId = null;
+    selectedRelationshipId = null;
     activeView = "atlas";
     mapMode = "world";
     mapScale = 1;
@@ -926,20 +1110,23 @@
     const location = event.target.closest("[data-location]");
     const eventCard = event.target.closest("[data-event]");
     const organizationCard = event.target.closest("[data-organization]");
+    const relationshipCard = event.target.closest("[data-relationship]");
     if (character) { navigate("atlas"); openCharacter(character.dataset.character); }
     else if (location) showLocation(location.dataset.location);
     else if (eventCard) { selectedEventId = eventCard.dataset.event; renderDirectory(); }
     else if (organizationCard) { selectedOrganizationId = organizationCard.dataset.organization; renderDirectory(); }
+    else if (relationshipCard) { selectedRelationshipId = relationshipCard.dataset.relationship; renderDirectory(); }
   });
   $("#directory-view").addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
-    const target = event.target.closest("[data-character],[data-location],[data-event],[data-organization]");
+    const target = event.target.closest("[data-character],[data-location],[data-event],[data-organization],[data-relationship]");
     if (!target) return;
     event.preventDefault();
     if (target.dataset.character) { navigate("atlas"); openCharacter(target.dataset.character); }
     else if (target.dataset.location) showLocation(target.dataset.location);
     else if (target.dataset.event) { selectedEventId = target.dataset.event; renderDirectory(); }
     else if (target.dataset.organization) { selectedOrganizationId = target.dataset.organization; renderDirectory(); }
+    else if (target.dataset.relationship) { selectedRelationshipId = target.dataset.relationship; renderDirectory(); }
   });
   $("#show-all-related").addEventListener("click", () => navigate("characters"));
   $("#command-form").addEventListener("submit", (event) => {
