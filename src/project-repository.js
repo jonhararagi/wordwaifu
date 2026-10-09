@@ -6,6 +6,7 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function (root) {
   "use strict";
   const ACTIVE_KEY = "activeProjectId";
+  const MAX_SNAPSHOTS_PER_PROJECT = 25;
   const isProject = (value) => value && typeof value === "object" && value.project &&
     typeof value.project.id === "string" && value.project.id.trim().length > 0;
 
@@ -24,11 +25,20 @@
       if (!this.indexedDB || typeof this.indexedDB.open !== "function") throw new Error("IndexedDB no está disponible.");
       if (this.opening) return this.opening;
       this.opening = new Promise((resolve, reject) => {
-        const request = this.indexedDB.open(this.databaseName, 1);
+        const request = this.indexedDB.open(this.databaseName, 2);
         request.onupgradeneeded = () => {
           const db = request.result;
           if (!db.objectStoreNames.contains("projects")) db.createObjectStore("projects", { keyPath: "projectId" });
           if (!db.objectStoreNames.contains("metadata")) db.createObjectStore("metadata", { keyPath: "key" });
+          if (!db.objectStoreNames.contains("snapshots")) {
+            const snapshots = db.createObjectStore("snapshots", { keyPath: "snapshotId" });
+            snapshots.createIndex("byProjectId", "projectId", { unique: false });
+            snapshots.createIndex("byCreatedAt", "createdAt", { unique: false });
+          } else {
+            const snapshots = request.transaction.objectStore("snapshots");
+            if (!snapshots.indexNames.contains("byProjectId")) snapshots.createIndex("byProjectId", "projectId", { unique: false });
+            if (!snapshots.indexNames.contains("byCreatedAt")) snapshots.createIndex("byCreatedAt", "createdAt", { unique: false });
+          }
         };
         request.onerror = () => reject(request.error || new Error("No se pudo abrir IndexedDB."));
         request.onblocked = () => reject(new Error("La apertura de IndexedDB está bloqueada."));
@@ -307,6 +317,220 @@
         tx.onabort = () => reject(tx.error || new Error("El cambio de proyecto activo fue cancelado."));
       });
       return { projectId, active: true };
+    }
+
+
+    normalizeSnapshotProject(projectId, candidate) {
+      if (!isProject(candidate) || candidate.project.id !== projectId) {
+        throw new Error("El snapshot no pertenece al proyecto indicado.");
+      }
+      let copy;
+      try { copy = JSON.parse(JSON.stringify(candidate)); }
+      catch { throw new Error("Los datos del snapshot no se pueden serializar como JSON."); }
+      const schema = root.WordWaifuProjectSchema;
+      if (schema && typeof schema.validateAndNormalizeProject === "function") {
+        const validation = schema.validateAndNormalizeProject(copy);
+        if (!validation.valid) throw new Error("Snapshot inválido: " + validation.errors.slice(0, 4).join(" "));
+        copy = validation.project;
+      }
+      if (!isProject(copy) || copy.project.id !== projectId) {
+        throw new Error("El ID del proyecto cambió durante la validación del snapshot.");
+      }
+      return copy;
+    }
+
+    snapshotSummary(snapshot) {
+      let valid = false;
+      let validationError = null;
+      try {
+        this.normalizeSnapshotProject(snapshot.projectId, snapshot.data);
+        valid = true;
+      } catch (error) {
+        validationError = error.message;
+      }
+      return {
+        snapshotId: snapshot.snapshotId,
+        projectId: snapshot.projectId,
+        createdAt: snapshot.createdAt,
+        reason: snapshot.reason || "manual",
+        projectName: snapshot.data && snapshot.data.project && typeof snapshot.data.project.name === "string"
+          ? snapshot.data.project.name : "Snapshot sin nombre",
+        valid,
+        validationError,
+        sizeBytes: (() => { try { return JSON.stringify(snapshot.data).length; } catch { return null; } })()
+      };
+    }
+
+    async createSnapshot(project, options = {}) {
+      if (!isProject(project)) throw new Error("No se puede respaldar un proyecto sin project.id.");
+      const projectId = project.project.id;
+      const data = this.normalizeSnapshotProject(projectId, project);
+      const createdAt = new Date().toISOString();
+      const randomPart = root.crypto && typeof root.crypto.randomUUID === "function"
+        ? root.crypto.randomUUID()
+        : Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2);
+      const snapshot = {
+        snapshotId: "snapshot-" + Date.now().toString(36) + "-" + randomPart,
+        projectId,
+        createdAt,
+        reason: typeof options.reason === "string" && options.reason.trim()
+          ? options.reason.trim().slice(0, 120) : "manual",
+        data
+      };
+      const db = await this.open();
+      let guardError = null;
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("snapshots", "readwrite");
+        const store = tx.objectStore("snapshots");
+        const query = store.index("byProjectId").getAll(projectId);
+        query.onsuccess = () => {
+          if (query.result.length >= MAX_SNAPSHOTS_PER_PROJECT) {
+            guardError = new Error("Este proyecto alcanzó el límite de " + MAX_SNAPSHOTS_PER_PROJECT +
+              " snapshots. Eliminá una copia antigua antes de crear otra.");
+            tx.abort();
+            return;
+          }
+          store.add(snapshot);
+        };
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(guardError || tx.error || new Error("No se pudo guardar el snapshot."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("La creación del snapshot fue cancelada."));
+      });
+      const persisted = await this.read("snapshots", snapshot.snapshotId);
+      if (!persisted || JSON.stringify(persisted) !== JSON.stringify(snapshot)) {
+        throw new Error("La verificación del snapshot guardado falló.");
+      }
+      return this.snapshotSummary(persisted);
+    }
+
+    async listSnapshots(projectId) {
+      if (typeof projectId !== "string" || !projectId.trim()) throw new Error("El ID del proyecto no es válido.");
+      const db = await this.open();
+      const records = await new Promise((resolve, reject) => {
+        const tx = db.transaction("snapshots", "readonly");
+        const request = tx.objectStore("snapshots").index("byProjectId").getAll(projectId);
+        let result = [];
+        request.onsuccess = () => { result = Array.isArray(request.result) ? request.result : []; };
+        tx.oncomplete = () => resolve(result);
+        tx.onerror = () => reject(tx.error || request.error || new Error("No se pudieron leer los snapshots."));
+        tx.onabort = () => reject(tx.error || new Error("La lectura de snapshots fue cancelada."));
+      });
+      return records
+        .filter((record) => record && record.projectId === projectId && typeof record.snapshotId === "string")
+        .map((record) => this.snapshotSummary(record))
+        .sort((left, right) => right.createdAt.localeCompare(left.createdAt) || right.snapshotId.localeCompare(left.snapshotId));
+    }
+
+    async deleteSnapshot(snapshotId, projectId) {
+      if (typeof snapshotId !== "string" || !snapshotId.trim() ||
+          typeof projectId !== "string" || !projectId.trim()) {
+        throw new Error("Se requieren el ID del snapshot y el ID del proyecto.");
+      }
+      const db = await this.open();
+      let guardError = null;
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("snapshots", "readwrite");
+        const store = tx.objectStore("snapshots");
+        const request = store.get(snapshotId);
+        request.onsuccess = () => {
+          const record = request.result;
+          if (!record) {
+            guardError = new Error("El snapshot ya no existe.");
+            tx.abort();
+            return;
+          }
+          if (record.projectId !== projectId) {
+            guardError = new Error("El snapshot pertenece a otro proyecto.");
+            tx.abort();
+            return;
+          }
+          store.delete(snapshotId);
+        };
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(guardError || tx.error || new Error("No se pudo eliminar el snapshot."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("La eliminación del snapshot fue cancelada."));
+      });
+      if (await this.read("snapshots", snapshotId)) throw new Error("IndexedDB no confirmó la eliminación del snapshot.");
+      return { snapshotId, projectId, deleted: true };
+    }
+
+    async restoreSnapshot(snapshotId, projectId) {
+      if (typeof snapshotId !== "string" || !snapshotId.trim() ||
+          typeof projectId !== "string" || !projectId.trim()) {
+        throw new Error("Se requieren el ID del snapshot y el ID del proyecto.");
+      }
+      const metadata = await this.read("metadata", ACTIVE_KEY);
+      if (!metadata || metadata.value !== projectId) {
+        throw new Error("Para restaurar, primero abrí el proyecto al que pertenece el snapshot.");
+      }
+      const currentRecord = await this.read("projects", projectId);
+      if (!currentRecord || currentRecord.projectId !== projectId || !isProject(currentRecord.data) ||
+          currentRecord.data.project.id !== projectId) {
+        throw new Error("El proyecto activo no tiene un registro verificado en IndexedDB.");
+      }
+      const snapshot = await this.read("snapshots", snapshotId);
+      if (!snapshot || snapshot.snapshotId !== snapshotId || snapshot.projectId !== projectId) {
+        throw new Error("El snapshot no existe o pertenece a otro proyecto.");
+      }
+      const restoredProject = this.normalizeSnapshotProject(projectId, snapshot.data);
+      const currentProject = JSON.parse(JSON.stringify(currentRecord.data));
+      const rollbackSnapshot = await this.createSnapshot(currentProject, { reason: "before-restore" });
+      const db = await this.open();
+      let guardError = null;
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction(["projects", "metadata"], "readwrite");
+        const projects = tx.objectStore("projects");
+        const activeStore = tx.objectStore("metadata");
+        const currentRequest = projects.get(projectId);
+        const activeRequest = activeStore.get(ACTIVE_KEY);
+        let currentReady = false, activeReady = false, latest, active;
+        const applyRestore = () => {
+          if (!currentReady || !activeReady) return;
+          if (!active || active.value !== projectId) {
+            guardError = new Error("El proyecto activo cambió mientras se preparaba la restauración.");
+            tx.abort();
+            return;
+          }
+          if (!latest || latest.projectId !== projectId || !isProject(latest.data) ||
+              JSON.stringify(latest.data) !== JSON.stringify(currentProject)) {
+            guardError = new Error("El proyecto cambió durante la restauración. No se aplicó el snapshot; volvé a intentar.");
+            tx.abort();
+            return;
+          }
+          projects.put({ projectId, data: restoredProject });
+          activeStore.put({ key: ACTIVE_KEY, value: projectId });
+        };
+        currentRequest.onsuccess = () => { latest = currentRequest.result; currentReady = true; applyRestore(); };
+        activeRequest.onsuccess = () => { active = activeRequest.result; activeReady = true; applyRestore(); };
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(guardError || tx.error || new Error("Falló la transacción de restauración."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("La restauración fue cancelada."));
+      });
+
+      const verified = await this.read("projects", projectId);
+      if (!verified || JSON.stringify(verified.data) !== JSON.stringify(restoredProject)) {
+        try { await this.write(currentProject); }
+        catch (rollbackError) {
+          throw new Error("La verificación de restauración falló y el rollback también falló: " + rollbackError.message);
+        }
+        throw new Error("La restauración no se pudo verificar; se recuperó el estado anterior.");
+      }
+      const backup = this.saveBackup(restoredProject);
+      if (!backup.written) {
+        try { await this.write(currentProject); }
+        catch (rollbackError) {
+          throw new Error("No se pudo actualizar el respaldo local y tampoco se pudo revertir IndexedDB: " + rollbackError.message);
+        }
+        throw new Error("No se pudo actualizar el respaldo local; se revirtió la restauración. " + backup.warning);
+      }
+      return {
+        projectId,
+        snapshotId,
+        restored: true,
+        project: restoredProject,
+        rollbackSnapshotId: rollbackSnapshot.snapshotId,
+        backupWritten: true
+      };
     }
 
     async deleteProject(projectId) {
