@@ -222,7 +222,7 @@
         dynamicLayer.appendChild(group);
       });
     }
-    $(".map-marker").forEach((marker) => {
+    $$(".map-marker").forEach((marker) => {
       const locationId = marker.dataset.location;
       const location = locationById(locationId);
       if (location && !marker.classList.contains("event-marker")) {
