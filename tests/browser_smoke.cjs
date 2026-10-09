@@ -221,9 +221,9 @@ async function run() {
     referenceFixture.locations.push({ id:"wf-test-child-location",name:"Distrito de Prueba",type:"Distrito",parentId:targetLocationId,
       description:"Ubicación hija creada para probar la limpieza de referencias.",tags:[],population:"Sin datos",government:"Sin datos",climate:"Sin datos",
       marker:[235,255],characters:["wf-test-resident","wf-test-witness"],events:["wf-test-event"] });
-    referenceFixture.locations.push({ id:"loc-asteria",name:"Asteria",type:"Ciudad capital",parentId:null,
+    referenceFixture.locations.push({ id:"wf-test-other-location",name:"Archivo de Prueba",type:"Archivo",parentId:null,
       description:"Ubicación adicional para verificar que editar un acontecimiento cambia sus referencias sin borrar otros lugares.",tags:[],population:"Sin datos",
-      government:"Sin datos",climate:"Sin datos",marker:[298,158],characters:[],events:[] });
+      government:"Sin datos",climate:"Sin datos",marker:[640,340],characters:[],events:[] });
     referenceFixture.characters.push({ id:"wf-test-resident",name:"Habitante de Prueba",age:30,species:"Humana",role:"Habitante",personality:[],
       description:"Personaje vinculado al lugar que se borrará.",motivation:"",flaw:"",
       locationHistory:[{locationId:targetLocationId,from:"chapter1",to:"chapter5"},{locationId:"wf-test-child-location",from:"chapter5",to:"now"}],relationships:[],status:"proposal" });
@@ -420,7 +420,7 @@ async function run() {
     await page.locator("#entity-name").fill("Acontecimiento Renombrado");
     await page.locator("#entity-description").fill("La ruta se registra en los archivos.");
     await page.locator("#event-position").fill("chapter12");
-    await page.locator("#event-locations").selectOption(["loc-asteria"]);
+    await page.locator("#event-locations").selectOption(["wf-test-other-location"]);
     await page.locator("#event-characters").selectOption(["wf-test-witness", createdCharacter.id]);
     await page.locator('#entity-form button[type="submit"]').click();
     await page.locator("#selected-event-details h2").getByText("Acontecimiento Renombrado").waitFor();
@@ -428,16 +428,16 @@ async function run() {
       const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
       return {
         event: project.events.find((item) => item.id === id),
-        asteria: project.locations.find((item) => item.id === "loc-asteria"),
+        otherLocation: project.locations.find((item) => item.id === "wf-test-other-location"),
         child: project.locations.find((item) => item.id === "wf-test-child-location")
       };
     }, eventIdBeforeEdit);
     assert.equal(editedEventGraph.event.id, eventIdBeforeEdit, "Editing an event must preserve its ID.");
     assert.equal(editedEventGraph.event.title, "Acontecimiento Renombrado");
     assert.equal(editedEventGraph.event.position, "chapter12");
-    assert.deepEqual(editedEventGraph.event.locationIds, ["loc-asteria"]);
+    assert.deepEqual(editedEventGraph.event.locationIds, ["wf-test-other-location"]);
     assert.deepEqual(editedEventGraph.event.characterIds, ["wf-test-witness", createdCharacter.id]);
-    assert.ok(editedEventGraph.asteria.events.includes(eventIdBeforeEdit));
+    assert.ok(editedEventGraph.otherLocation.events.includes(eventIdBeforeEdit));
     assert.equal(editedEventGraph.child.events.includes(eventIdBeforeEdit), false, "Changing linked locations must remove the old reverse link.");
     process.stdout.write("PASS event edit/select: ID stays stable and location/participant references update selectively.\n");
 
