@@ -280,7 +280,7 @@
       heading = "Registro de personajes";
       items = state.characters.filter((item) => matches(item.name + " " + item.role + " " + item.species + " " + item.description, query)).map((character) => {
         const place = characterLocationAt(character, currentTime());
-        return '<article class="entity-card" data-character="' + escapeHTML(character.id) + '" tabindex="0" role="button"><span class="avatar">' + escapeHTML(initials(character.name)) + '</span><h3>' + escapeHTML(character.name) + '</h3><p>' + escapeHTML(character.description) + '</p><div class="tag-row"><span class="tag">' + escapeHTML(character.role) + '</span><span class="tag">' + escapeHTML(character.age + " años") + '</span><span class="tag">' + escapeHTML(place ? place.name : "Ubicación desconocida") + '</span></div></article>';
+        return '<article class="entity-card" data-character="' + escapeHTML(character.id) + '" tabindex="0" role="button"><span class="avatar">' + escapeHTML(initials(character.name)) + '</span><h3>' + escapeHTML(character.name) + '</h3><p>' + escapeHTML(character.description) + '</p><div class="tag-row"><span class="tag">' + escapeHTML(character.role) + '</span><span class="tag">' + escapeHTML(character.age == null ? "Edad sin definir" : character.age + " años") + '</span><span class="tag">' + escapeHTML(place ? place.name : "Ubicación desconocida") + '</span></div></article>';
       });
     } else if (activeView === "places") {
       heading = "Atlas de lugares";

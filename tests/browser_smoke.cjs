@@ -334,6 +334,18 @@ async function run() {
     assert.deepEqual(createdCharacter.personality, ["Atenta", "Metódica"]);
     process.stdout.write("PASS character create: new character fields are saved to the project.\n");
 
+    await page.locator("#add-button").click();
+    await page.locator("#entity-type").selectOption("character");
+    await page.locator("#entity-name").fill("Personaje de Edad Desconocida");
+    await page.locator("#entity-description").fill("La edad no ha sido establecida.");
+    await page.locator("#character-age").fill("");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#directory-view .entity-card").filter({hasText:"Personaje de Edad Desconocida"}).getByText("Edad sin definir").waitFor();
+    const unknownAgeCharacter = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.find((item) => item.name === "Personaje de Edad Desconocida"));
+    assert.equal(unknownAgeCharacter.age, null);
+    assert.doesNotMatch(await page.locator("#directory-view").innerText(), /null años/);
+    process.stdout.write("PASS character unknown age: empty age is stored as null and rendered without leaking null into the UI.\n");
+
     // Deleting a character cleans incoming references but preserves other records.
     await page.locator('.nav-item[data-view="atlas"]').click();
     await page.locator('#related-list [data-character="wf-test-resident"]').click();
