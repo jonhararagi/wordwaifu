@@ -91,3 +91,48 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 8. Extensiones visuales e IA opcional.
 
 No saltar directamente a generadores masivos antes de demostrar que el canon y las relaciones sobreviven a la edición y a la recarga.
+
+## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
+
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). Esta ampliación no altera la siguiente tarea activa WF-001: primero se debe verificar el MVP actual.
+
+### Índice maestro multiverso
+- Separar proyectos/universos por IDs estables.
+- Buscar personajes, lugares, facciones, eventos, capítulos y referencias desde un índice global.
+- Abrir tarjetas compactas y expedientes completos.
+- Mantener procedencia y estado de verificación de datos importados.
+- Gate: dos universos pueden tener entidades con nombres iguales sin mezclar registros ni relaciones.
+
+### Atlas temporal, trayectorias y mapa de relaciones
+- Añadir épocas configurables y estados históricos sin duplicar la identidad de cada personaje.
+- Guardar presencias por intervalo, fecha, evento o capítulo.
+- Añadir rutas habituales, encuentros, eventos críticos y último registro conocido, con filtros y leyenda configurable.
+- Al seleccionar marcadores, abrir su evento, participantes, ubicación, fuente y consecuencias.
+- Añadir una ficha de personaje con relaciones por época, intensidad, tipo, descripción y acontecimientos compartidos.
+- Gate: cambiar de época modifica correctamente ubicaciones/estados y no borra relaciones o historia anterior.
+
+### Generador de historias y lore
+- Añadir perfiles editables de ADN narrativo y recetas de combinación.
+- Permitir crear sinopsis, protagonista(s), elenco, reglas de mundo, facciones, conflictos, arcos, capítulos y escenas.
+- Incluir perfiles de referencia a recursos narrativos generales; no copiar por defecto personajes, diálogos o tramas protegidas.
+- Configurar género del protagonista, géneros narrativos y preferencias de romance/tono por proyecto.
+- Mantener los resultados como propuestas hasta que el autor los apruebe.
+- Gate: la propuesta se edita y se vincula al canon existente sin sobrescribir silenciosamente registros confirmados.
+
+### Content Guard
+- Clasificación a nivel de proyecto y etiquetas a nivel de capítulo/escena.
+- Mostrar un indicador claro de contenido maduro/adulto y avisos antes de exportar.
+- Permitir revisión manual y registro de por qué se asignó la clasificación.
+- Gate: exportar muestra los avisos pertinentes; ninguna detección heurística se presenta como infalible ni garantiza aceptación por una plataforma externa.
+
+### Recursos visuales y BotImagen
+- WordWaifu puede almacenar una referencia/ruta a una ilustración y mostrar su miniatura.
+- El diseñador visual, prompts de imagen, variaciones, biblioteca visual principal e importación/validación de assets pertenecen a BotImagen.
+- Gate: integración mediante IDs/rutas/metadatos explícitos, sin duplicar el creador visual en WordWaifu.
+
+### Dirección tecnológica
+- Estabilizar primero el prototipo HTML/CSS/JavaScript.
+- Planificar la migración gradual a TypeScript + React + Vite.
+- Mantener una capa de persistencia intercambiable; IndexedDB para la aplicación web local y Tauri + SQLite como posibilidad futura de escritorio.
+- Gate: migración sin pérdida del canon, relaciones ni capacidades de importar/exportar.
+
