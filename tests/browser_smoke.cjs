@@ -230,6 +230,12 @@ async function run() {
     referenceFixture.characters.push({ id:"wf-test-witness",name:"Testigo de Prueba",age:26,species:"Humana",role:"Testigo",personality:["Atenta"],
       description:"Debe sobrevivir al borrado de otro personaje.",motivation:"",flaw:"",
       locationHistory:[{locationId:"wf-test-child-location",from:"chapter5",to:"now"}],relationships:["wf-test-resident"],status:"canon" });
+    // Keep this fixture link in the canonical graph; character-local arrays are only a compatibility projection.
+    referenceFixture.relationships = (referenceFixture.relationships || []).concat([{
+      id:"wf-test-relationship",name:"Vínculo de prueba",sourceCharacterId:"wf-test-resident",
+      targetCharacterId:"wf-test-witness",relationshipType:"friendship",
+      description:"Fixture para comprobar la limpieza de relaciones al borrar un personaje.",status:"canon"
+    }]);
     referenceFixture.events.push({ id:"wf-test-event",title:"Evento de Prueba",position:"chapter1",description:"Debe conservarse sin el lugar eliminado.",
       locationIds:[targetLocationId,"wf-test-child-location"],characterIds:["wf-test-resident","wf-test-witness"] });
     const fixtureImportPromise=page.waitForEvent("dialog");
