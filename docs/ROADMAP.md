@@ -24,7 +24,8 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 
 ## Fase 2 — Canon local y persistencia
 **Estimación:** 1–3 días.
-- CRUD de personajes, ubicaciones, organizaciones y eventos.
+- [x] CRUD de ubicaciones del atlas, con edición, movimiento y borrado seguro (WF-001-B; Chromium CI PASS).
+- [ ] CRUD de personajes, organizaciones y eventos.
 - IndexedDB con repositorio desacoplado.
 - Exportar/importar JSON con validación.
 - Búsqueda y referencias por IDs estables.
@@ -94,7 +95,7 @@ No saltar directamente a generadores masivos antes de demostrar que el canon y l
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
-La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). Esta ampliación no altera la siguiente tarea activa WF-001: primero se debe verificar el MVP actual.
+La especificación completa de estas capacidades está en [MASTER_VISION.md](MASTER_VISION.md). El gate básico del atlas está verificado en Chromium CI. La siguiente tarea activa es WF-002-A, CRUD de fichas de personaje con referencias seguras.
 
 ### Índice maestro multiverso
 - Separar proyectos/universos por IDs estables.
@@ -141,15 +142,16 @@ La especificación completa de estas capacidades está en [MASTER_VISION.md](MAS
 ## Registro de implementación y continuidad (2026-10-09)
 
 ### WF-001-A — DONE
-- Se añadió validación de proyectos importados y 8 pruebas unitarias de esquema.
-- Smoke test de Chromium ejecutado en CI: PASS_REAL en https://github.com/jonhararagi/wordwaifu/actions/runs/37888290629
-- CI: PASS_STATIC para sintaxis, esquema y estructura.
-- El test prueba navegación, capas, teclado, búsqueda, tiempo por capítulo, estado vacío, creación de lugar, persistencia, exportación/importación y rechazo seguro de un proyecto inválido.
-- Límite explícito: esta evidencia es Chromium headless en CI; la prueba manual en Windows del usuario sigue pendiente.
+- Validador de importaciones y 8 pruebas de esquema.
+- CI PASS: [ejecución #37888290629](https://github.com/jonhararagi/wordwaifu/actions/runs/37888290629).
+- Rechazo seguro de importación inválida; smoke test del atlas.
 
-### WF-001 — PARTIAL
-El gate general sigue abierto porque la interfaz aún debe permitir editar, mover y eliminar ubicaciones/marcadores de manera segura.
+### WF-001-B — DONE
+- Edición de ubicaciones con ID estable, movimiento de marcadores con coordenadas SVG persistentes y borrado seguro.
+- Borrado confirma impacto, reasigna ubicaciones hijas y elimina solo referencias al lugar borrado en historiales/eventos.
+- CI PASS_REAL: [ejecución #37922783841](https://github.com/jonhararagi/wordwaifu/actions/runs/37922783841). Incluye Chromium, persistencia, round-trip de export/import y ausencia de errores de página.
+- Referencia técnica contrastada: [DeckSketchCanvas.tsx](https://github.com/SamuelGoldsmith/deck-doctors/blob/ba1c6c52ce17a7c3a822064e40352dc94b21066f/components/deck-estimate/DeckSketchCanvas.tsx), sólo para aprender del mapeo de coordenadas SVG y sus límites; la implementación WordWaifu es propia.
+- Pendiente fuera del gate CI: prueba manual en Windows 11.
+- Siguiente tarea: WF-002-A, CRUD seguro de personajes. TIMER: 2–4 horas iniciales.
 
-Siguiente tarea activa: **WF-001-B — CRUD y manipulación de marcadores**. TIMER: 2–4 horas estimadas para primera implementación y pruebas, sujeto a inspección del código.
-
-Al terminar, sobrescribir `docs/DONE.md` con el punto de continuidad actualizado y comprobar si WF-001 puede cerrarse.
+Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vigente.

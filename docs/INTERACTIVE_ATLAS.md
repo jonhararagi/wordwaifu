@@ -88,3 +88,13 @@ No intentar cartografía realista ni un mapa mundial automático en el primer hi
 ## Datos de franquicias existentes
 
 Una franquicia conocida puede inspirar la experiencia de navegación, pero WordWaifu no debe incluir por defecto mapas, fichas extensas ni textos protegidos de terceros. Para demostrar el sistema, utilizar un universo original de fantasía con contenido claramente marcado como ejemplo.
+
+
+## Estado del gate MVP (2026-10-09)
+
+**WF-001 Atlas MVP: DONE en Chromium CI; prueba manual en Windows 11: NOT_RUN.**
+
+- Edición de nombre, categoría/tipo y descripción preservando el ID canónico.
+- Arrastre con coordenadas locales SVG, límites y persistencia tras recarga.
+- Borrado confirmado con reasignación de ubicaciones hijas y limpieza selectiva de referencias en historial/eventos.
+- Evidencia: [CI #37922783841](https://github.com/jonhararagi/wordwaifu/actions/runs/37922783841). La prueba también valida exportación/importación tras el borrado.

@@ -52,7 +52,7 @@ Se puede utilizar una obra conocida como referencia de diseño en datos privados
 
 ## Estado
 
-El repositorio parte de una base prácticamente vacía. La primera etapa es definir el contrato del producto y construir un MVP verificable, no llenar el proyecto de generadores inconexos.
+El repositorio contiene un prototipo funcional del atlas con creación/edición/movimiento/borrado seguro de ubicaciones, validación de importaciones y pruebas automáticas en Chromium. El estado detallado y la siguiente tarea verificable están en [docs/STATUS.md](docs/STATUS.md) y [docs/DONE.md](docs/DONE.md). El CRUD de personajes y otras entidades, IndexedDB y los generadores narrativos siguen pendientes.
 
 - [Visión y límites](docs/PRODUCT_VISION.md)
 - [Arquitectura](docs/ARCHITECTURE.md)

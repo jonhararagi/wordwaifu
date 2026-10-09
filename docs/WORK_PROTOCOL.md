@@ -43,7 +43,7 @@ No acumular tareas independientes. Si una sesión se interrumpe, retomar desde S
 
 ## Próxima tarea activa
 
-WF-001 — Verificación y estabilización del Atlas MVP. Consultar docs/STATUS.md para el alcance y los criterios actuales.
+WF-002-A — CRUD de fichas de personaje con referencias seguras. Leer docs/DONE.md y docs/STATUS.md para alcance, evidencia y criterios actuales.
 
 ## Roles del asistente en WordWaifu: Cerebro + Obrero
 
