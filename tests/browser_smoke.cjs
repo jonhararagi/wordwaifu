@@ -355,12 +355,15 @@ async function run() {
     const characterDeleteDialogPromise = page.waitForEvent("dialog");
     const characterDeleteClick = page.locator("#delete-character-button").click();
     const characterDeleteDialog = await characterDeleteDialogPromise;
-    assert.equal(characterDeleteDialog.type(), "confirm");
-    assert.match(characterDeleteDialog.message(), /relación\(es\)/);
-    assert.match(characterDeleteDialog.message(), /referencia\(s\) en lugares/);
-    assert.match(characterDeleteDialog.message(), /referencia\(s\) en acontecimientos/);
+    const characterDeleteDialogType = characterDeleteDialog.type();
+    const characterDeleteDialogMessage = characterDeleteDialog.message();
+    // Resolve the dialog before assertions so a mismatch cannot strand Chromium.
     await characterDeleteDialog.accept();
     await characterDeleteClick;
+    assert.equal(characterDeleteDialogType, "confirm", characterDeleteDialogMessage);
+    assert.match(characterDeleteDialogMessage, /relación\(es\)/);
+    assert.match(characterDeleteDialogMessage, /referencia\(s\) en lugares/);
+    assert.match(characterDeleteDialogMessage, /referencia\(s\) en acontecimientos/);
     const afterCharacterDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterCharacterDelete.characters.some((item) => item.id === "wf-test-resident"), false);
     assert.equal(afterCharacterDelete.characters.some((item) => item.id === "wf-test-witness"), true);
