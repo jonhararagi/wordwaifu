@@ -221,6 +221,9 @@ async function run() {
     referenceFixture.locations.push({ id:"wf-test-child-location",name:"Distrito de Prueba",type:"Distrito",parentId:targetLocationId,
       description:"Ubicación hija creada para probar la limpieza de referencias.",tags:[],population:"Sin datos",government:"Sin datos",climate:"Sin datos",
       marker:[235,255],characters:["wf-test-resident","wf-test-witness"],events:["wf-test-event"] });
+    referenceFixture.locations.push({ id:"loc-asteria",name:"Asteria",type:"Ciudad capital",parentId:null,
+      description:"Ubicación adicional para verificar que editar un acontecimiento cambia sus referencias sin borrar otros lugares.",tags:[],population:"Sin datos",
+      government:"Sin datos",climate:"Sin datos",marker:[298,158],characters:[],events:[] });
     referenceFixture.characters.push({ id:"wf-test-resident",name:"Habitante de Prueba",age:30,species:"Humana",role:"Habitante",personality:[],
       description:"Personaje vinculado al lugar que se borrará.",motivation:"",flaw:"",
       locationHistory:[{locationId:targetLocationId,from:"chapter1",to:"chapter5"},{locationId:"wf-test-child-location",from:"chapter5",to:"now"}],relationships:[],status:"proposal" });
