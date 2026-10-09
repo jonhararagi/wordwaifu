@@ -1,5 +1,18 @@
 # WordWaifu — Visión del producto
 
+## Visión maestra ampliada
+
+La especificación de producto vigente está consolidada en [MASTER_VISION.md](MASTER_VISION.md). Incluye:
+- Separación de responsabilidades entre WordWaifu y BotImagen.
+- Dirección tecnológica TypeScript + React + Vite, con migración gradual después de verificar el prototipo actual.
+- Índice maestro para múltiples universos, fichas históricas y fuentes.
+- Atlas 2D temporal, rutas de personajes, mapa de relaciones y acontecimientos.
+- Generador de historias/lore basado en perfiles de referencia narrativa, protagonista y elenco configurables.
+- Novel Studio, Continuity Guard y Content Guard con avisos antes de exportar/publicar.
+- Principios de procedencia de fuentes, licencias, privacidad, portabilidad y trabajo por tareas verificables.
+
+La visión ampliada no cambia el siguiente paso técnico: WF-001 sigue siendo la tarea activa hasta verificar y estabilizar el atlas actual. Los módulos posteriores son objetivos de hoja de ruta, no funcionalidades ya terminadas.
+
 ## Objetivo único
 
 Crear una herramienta local de construcción de universos narrativos que convierta ideas en un canon estructurado, navegable y reutilizable, y que ayude a planificar historias y novelas sin exigir IA, API, suscripciones o Internet.
