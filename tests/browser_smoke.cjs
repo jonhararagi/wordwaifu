@@ -3,6 +3,7 @@ const fs = require("node:fs");
 const http = require("node:http");
 const path = require("node:path");
 const { chromium } = require("playwright");
+const { validateAndNormalizeProject } = require("../src/project-schema.js");
 
 const root = path.resolve(__dirname, "..");
 const mimeTypes = {
@@ -69,6 +70,10 @@ async function run() {
     await page.locator("#time-select").selectOption("chapter1");
     await page.locator('g.map-marker[data-location="loc-asteria"]').first().click();
     assert.match(await page.locator("#related-list").innerText(), /Mira Solenne/);
+    await page.locator('#related-list [data-character="char-mira"]').click();
+    assert.equal(await page.locator("#details-panel h2").innerText(), "Mira Solenne");
+    await page.locator("#back-to-location").click();
+    assert.equal(await page.locator("#details-panel h2").innerText(), "Asteria");
     await page.locator("#time-select").selectOption("chapter5");
     assert.match(await page.locator("#related-list").innerText(), /Kael Veyran/);
     await page.locator("#time-select").selectOption("chapter12");
@@ -101,6 +106,26 @@ async function run() {
     await page.locator("#project-name").getByText("Mi nuevo universo").waitFor();
     await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
     process.stdout.write("PASS persistence: the created location survives a page reload.\n");
+
+    const downloadPromise = page.waitForEvent("download");
+    await page.locator("#export-button").click();
+    const download = await downloadPromise;
+    const exportedPath = await download.path();
+    assert.ok(exportedPath, "Export should produce a local JSON download.");
+    const exportedProject = JSON.parse(fs.readFileSync(exportedPath, "utf8"));
+    const exportValidation = validateAndNormalizeProject(exportedProject);
+    assert.equal(exportValidation.valid, true, exportValidation.errors.join("\\n"));
+    process.stdout.write("PASS export: downloaded project is valid JSON with intact references.\\n");
+
+    const validImportAlertPromise = page.waitForEvent("dialog");
+    const validImportSelection = page.locator("#import-file").setInputFiles(exportedPath);
+    const validImportAlert = await validImportAlertPromise;
+    assert.equal(validImportAlert.type(), "alert");
+    assert.match(validImportAlert.message(), /Proyecto importado correctamente/i);
+    await validImportAlert.accept();
+    await validImportSelection;
+    await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
+    process.stdout.write("PASS round-trip: an exported project imports back successfully.\\n");
 
     const invalidProject = {
       schemaVersion: 1,
