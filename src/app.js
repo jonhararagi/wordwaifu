@@ -118,7 +118,7 @@
     const dynamicLayer = $("#dynamic-markers");
     if (dynamicLayer) {
       dynamicLayer.replaceChildren();
-      state.locations.filter((location) => !$(".map-marker").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
+      state.locations.filter((location) => !$$(".map-marker").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
         const point = Array.isArray(location.marker) ? location.marker : [450, 300];
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
         group.setAttribute("class", "map-marker custom-marker");
@@ -140,11 +140,12 @@
         dynamicLayer.appendChild(group);
       });
     }
-    $(".map-marker").forEach((marker) => {
+    $$(".map-marker").forEach((marker) => {
       const locationId = marker.dataset.location;
-      if (!marker.classList.contains("event-marker")) marker.classList.toggle("hidden", !locationById(locationId));
+      const missingLocation = !locationById(locationId);
       marker.classList.toggle("selected", locationId === selectedLocationId);
-      marker.classList.toggle("hidden", marker.classList.contains("event-marker") ? !enabledLayers.events : !enabledLayers.places);
+      const layerDisabled = marker.classList.contains("event-marker") ? !enabledLayers.events : !enabledLayers.places;
+      marker.classList.toggle("hidden", missingLocation || layerDisabled);
       if (mapMode === "people" && !marker.classList.contains("event-marker")) {
         const count = charactersAt(locationId).length;
         marker.style.opacity = count ? "1" : ".4";
