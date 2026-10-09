@@ -416,7 +416,7 @@ async function run() {
     await page.locator("#project-list").selectOption(createdUniverse.id);
     await page.locator("#project-open-button").click();
     await page.locator("#project-name").getByText("Universo Multiverso QA").waitFor();
-    await page.locator("#details-panel").getByText(/Todavía no hay lugares/).waitFor();
+    await page.locator("#details-panel h2").getByText("Mira de Niebla").waitFor();
     const projectSwitchIntegrity = await page.evaluate(async (createdId) => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const original = await repository.getProject("project-asteria");
