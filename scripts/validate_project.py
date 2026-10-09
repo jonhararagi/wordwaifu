@@ -15,6 +15,7 @@ css_path = ROOT / "src" / "styles.css"
 schema_path = ROOT / "src" / "project-schema.js"
 schema_test_path = ROOT / "tests" / "test_project_schema.cjs"
 browser_test_path = ROOT / "tests" / "browser_smoke.cjs"
+repository_path = ROOT / "src" / "project-repository.js"
 
 require(html_path.is_file(), "Falta index.html")
 require(js_path.is_file(), "Falta src/app.js")
@@ -22,17 +23,21 @@ require(css_path.is_file(), "Falta src/styles.css")
 require(schema_path.is_file(), "Falta src/project-schema.js")
 require(schema_test_path.is_file(), "Falta tests/test_project_schema.cjs")
 require(browser_test_path.is_file(), "Falta tests/browser_smoke.cjs")
+require(repository_path.is_file(), "Falta src/project-repository.js")
 
 if html_path.is_file():
     html = html_path.read_text(encoding="utf-8")
     require('./src/styles.css' in html, "index.html no enlaza src/styles.css")
     require('./src/project-schema.js' in html, "index.html no enlaza src/project-schema.js")
+    require('./src/project-repository.js' in html, "index.html no enlaza src/project-repository.js")
     require('./src/app.js' in html, "index.html no enlaza src/app.js")
     require('lang="es"' in html, "La interfaz debe declarar idioma español")
     schema_script_position = html.find('./src/project-schema.js')
+    repository_script_position = html.find('./src/project-repository.js')
     app_script_position = html.find('./src/app.js')
-    require(schema_script_position >= 0 and app_script_position >= 0 and schema_script_position < app_script_position,
-            "project-schema.js debe cargarse antes de app.js")
+    require(schema_script_position >= 0 and repository_script_position >= 0 and app_script_position >= 0 and
+            schema_script_position < repository_script_position < app_script_position,
+            "project-schema.js y project-repository.js deben cargarse antes de app.js")
     ids = re.findall(r'\bid="([^"]+)"', html)
     duplicates = sorted({item for item in ids if ids.count(item) > 1})
     require(not duplicates, "IDs HTML duplicados: " + ", ".join(duplicates))
@@ -47,6 +52,12 @@ if js_path.is_file():
 if schema_path.is_file():
     schema = schema_path.read_text(encoding="utf-8")
     require("validateAndNormalizeProject" in schema, "Falta el validador de importación")
+
+if repository_path.is_file():
+    repository = repository_path.read_text(encoding="utf-8")
+    require("class ProjectRepository" in repository, "Falta el adaptador ProjectRepository")
+    require("loadActive" in repository and "saveActive" in repository, "El repositorio debe exponer carga y guardado del proyecto activo")
+    require("recoveredBackup" in repository, "Falta la ruta de recuperación del respaldo local")
 
 if schema_test_path.is_file():
     tests = schema_test_path.read_text(encoding="utf-8")

@@ -69,6 +69,69 @@ async function run() {
       throw new Error("Initial render diagnostic: " + JSON.stringify({ pageErrors, consoleErrors }));
     }
 
+    // Exercise migration, recovery and fallback in isolated storage names.
+    const repositoryReport = await page.evaluate(async () => {
+      const api = window.WordWaifuProjectRepository;
+      if (!api || typeof api.ProjectRepository !== "function") throw new Error("ProjectRepository script not loaded.");
+      const storageKey = "wordwaifu.repository-test.legacy.v1";
+      const databaseName = "wordwaifu.repository-test.v1";
+      const seed = {
+        schemaVersion: 1,
+        project: { id: "repository-test-project", name: "Legacy Recovery Project", description: "Migration fixture." },
+        locations: [], characters: [], events: [], organizations: [], relationships: [], stories: [],
+        settings: { time: "now" }
+      };
+      localStorage.setItem(storageKey, JSON.stringify(seed));
+      const migrationRepository = new api.ProjectRepository({ storageKey, databaseName });
+      const migrated = await migrationRepository.loadActive();
+      const migrationKeepsBackup = JSON.parse(localStorage.getItem(storageKey)).project.name === "Legacy Recovery Project";
+      const changed = { ...migrated.project, project: { ...migrated.project.project, name: "Newest Local Backup" } };
+      // Simulate a close between the verified local recovery write and its IndexedDB mirror.
+      localStorage.setItem(storageKey, JSON.stringify(changed));
+      const recoveryRepository = new api.ProjectRepository({ storageKey, databaseName });
+      const recovered = await recoveryRepository.loadActive();
+      const verificationRepository = new api.ProjectRepository({ storageKey, databaseName });
+      const verified = await verificationRepository.loadActive();
+
+      const memory = new Map();
+      const fallbackStorage = {
+        getItem: (key) => memory.has(key) ? memory.get(key) : null,
+        setItem: (key, value) => memory.set(key, String(value))
+      };
+      const fallbackRepository = new api.ProjectRepository({ indexedDB: null, localStorage: fallbackStorage, storageKey: "fallback-project" });
+      const fallbackSaved = await fallbackRepository.saveActive(seed);
+      const fallbackLoaded = await fallbackRepository.loadActive();
+
+      migrationRepository.close();
+      recoveryRepository.close();
+      verificationRepository.close();
+      fallbackRepository.close();
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(databaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Test database cleanup failed."));
+        request.onblocked = () => reject(new Error("Test database cleanup was blocked."));
+      });
+      localStorage.removeItem(storageKey);
+      return {
+        migrationBackend: migrated.backend, migrated: migrated.migrated, migrationKeepsBackup,
+        recoveryBackend: recovered.backend, recoveredBackup: recovered.recoveredBackup,
+        verifiedName: verified.project && verified.project.project.name,
+        fallbackBackend: fallbackSaved.backend, fallbackLoadedName: fallbackLoaded.project && fallbackLoaded.project.project.name
+      };
+    });
+    assert.equal(repositoryReport.migrationBackend, "indexeddb");
+    assert.equal(repositoryReport.migrated, true);
+    assert.equal(repositoryReport.migrationKeepsBackup, true, "Migration must keep the localStorage recovery copy.");
+    assert.equal(repositoryReport.recoveryBackend, "indexeddb");
+    assert.equal(repositoryReport.recoveredBackup, true, "A newer local copy must repair stale IndexedDB.");
+    assert.equal(repositoryReport.verifiedName, "Newest Local Backup");
+    assert.equal(repositoryReport.fallbackBackend, "localStorage");
+    assert.equal(repositoryReport.fallbackLoadedName, "Legacy Recovery Project");
+    process.stdout.write("PASS repository migration: localStorage stays as backup until IndexedDB is verified.\\n");
+    process.stdout.write("PASS repository recovery: newest local backup repairs stale IndexedDB.\\n");
+    process.stdout.write("PASS repository fallback: localStorage works when IndexedDB is unavailable.\\n");
+
     const forestMarker = page.locator('g.map-marker[data-location="loc-velado"]').first();
     await forestMarker.click();
     const forestSelected = await page.waitForFunction(

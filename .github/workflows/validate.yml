@@ -26,7 +26,9 @@ jobs:
         run: |
           node --check src/app.js
           node --check src/project-schema.js
+          node --check src/project-repository.js
           node --check tests/test_project_schema.cjs
+          node --check tests/browser_smoke.cjs
       - name: Test project import validation
         run: node tests/test_project_schema.cjs
       - name: Install pinned Playwright
