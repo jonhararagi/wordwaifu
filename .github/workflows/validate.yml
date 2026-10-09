@@ -3,7 +3,7 @@ name: Validate WordWaifu
 on:
   push:
     branches:
-      - "**"
+      - main
   pull_request:
     branches:
       - main
