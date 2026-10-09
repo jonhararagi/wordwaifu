@@ -383,6 +383,15 @@
     if (!confirm("¿Crear un proyecto vacío? Exportá el proyecto actual antes si querés conservar una copia.")) return;
     state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], stories: [], settings: { time: "now" } };
     selectedLocationId = null;
+    selectedCharacterId = null;
+    activeView = "atlas";
+    mapMode = "world";
+    mapScale = 1;
+    Object.keys(enabledLayers).forEach((layer) => { enabledLayers[layer] = true; });
+    $("[data-layer]").forEach((input) => { input.checked = true; });
+    $(".view-tab").forEach((tab) => tab.classList.toggle("active", tab.dataset.mapMode === "world"));
+    $("#global-search").value = "";
+    $("#time-select").value = "now";
     saveProject();
     render();
   });
