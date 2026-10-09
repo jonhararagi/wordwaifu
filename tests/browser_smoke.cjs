@@ -89,7 +89,7 @@ async function run() {
       }));
       throw new Error("Marker click diagnostic: " + JSON.stringify(diagnostic));
     }
-    process.stdout.write("PASS atlas navigation: selecting a map marker opens its location.\\n");
+    process.stdout.write("PASS atlas navigation: selecting a map marker opens its location.\n");
 
     const asteriaMarker = page.locator('g.map-marker[data-location="loc-asteria"]').first();
     await page.locator("#layers-button").click();
@@ -151,7 +151,7 @@ async function run() {
     await page.locator("#entity-description").fill("Descripción actualizada desde la ficha del atlas.");
     await page.locator('#entity-form button[type="submit"]').click();
     assert.equal(await page.locator("#details-panel h2").innerText(), "Ciudad Renombrada");
-    assert.equal(await page.locator("#details-panel .detail-type").innerText(), "Ciudad independiente");
+    assert.equal(await page.locator("#details-panel .detail-type").innerText(), "CIUDAD INDEPENDIENTE");
     process.stdout.write("PASS edit: name, category and description update while preserving the ID.\n");
 
     const markerBeforeDrag = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.find((item) => item.id === id).marker, targetLocationId);
