@@ -79,11 +79,14 @@
 
   function characterLocationAt(character, time) {
     const moment = timeOrder(time);
-    const match = (character.locationHistory || []).find((entry) => {
+    // If adjacent history entries overlap on a chapter boundary, the entry
+    // with the latest start takes precedence (e.g. the new location at chapter 5).
+    const match = (character.locationHistory || []).reduce((best, entry) => {
       const from = timeOrder(entry.from);
       const to = entry.to === "now" ? 9999 : timeOrder(entry.to);
-      return moment >= from && moment <= to;
-    });
+      if (moment < from || moment > to) return best;
+      return !best || from >= timeOrder(best.from) ? entry : best;
+    }, null);
     return match ? locationById(match.locationId) : null;
   }
 
