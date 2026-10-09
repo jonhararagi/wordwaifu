@@ -1,66 +1,53 @@
-# DONE — Punto de continuidad WordWaifu
+DONE
 
-**RESULTADO: DONE para WF-001-B.**  
-**GATE DEL ATLAS MVP WF-001: DONE en Chromium CI; validación manual de Windows sigue pendiente.**
+# WordWaifu · Punto de continuidad
 
-Fecha de cierre de código: 2026-10-09
+**Tarea cerrada:** WF-002-A · CRUD básico de personajes y limpieza segura de referencias.
+**Gate del atlas y CRUD básico de personajes:** validado en Chromium CI.
+**Fecha:** 2026-10-09.
 
-## 1. Identidad del trabajo y estado de Git
-
+## Estado de Git
 - Repositorio: `jonhararagi/wordwaifu`.
-- Tarea: `WF-001-B — CRUD y manipulación de ubicaciones/marcadores`.
-- HEAD BEFORE de la tarea: `011770e7db09f2a724b57d3bd7b988e6c5825bda`.
-- HEAD de código probado con CI PASS: `7132503de33a32473c297b12df9c4262fa07e032`.
-- Rama: `foundation/story-foundry-north-star`.
-- CI: **PASS**, ejecución [#37922783841](https://github.com/jonhararagi/wordwaifu/actions/runs/37922783841).
-- PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1); no se integró ni se marcó listo.
-- `main`: intacta durante esta tarea, HEAD verificado `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
-- El commit de persistencia documental posterior al HEAD validado solo actualiza continuidad; al reanudar, consultar la referencia real de Git y no asumir que el SHA de código sigue siendo el HEAD.
+- Rama de trabajo: `foundation/story-foundry-north-star`.
+- HEAD BEFORE de WF-002-A: `a175a67de6684d97d8168aeed40be566a840954e`.
+- HEAD de código probado: `d9c2537cbbf32809d1d8e01e8c692587a6bfe5bf`.
+- CI del código: **PASS**, [ejecución #37925193509](https://github.com/jonhararagi/wordwaifu/actions/runs/37925193509).
+- PR #1: [abierto y en borrador](https://github.com/jonhararagi/wordwaifu/pull/1); no fusionado ni marcado listo.
+- `main` permanece intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
+- La persistencia documental produce un commit posterior al HEAD probado. Al reanudar, consultar el HEAD vivo en GitHub y no asumir que el SHA de código es el último commit de la rama.
 
-## 2. Trabajo completado
+## Resultado implementado
+- Formulario de personaje con nombre, descripción, especie, edad opcional, rol, personalidad, motivación, defecto y estado del canon.
+- Creación y edición desde la interfaz; la edición modifica la ficha existente y conserva su ID estable.
+- Ficha de personaje con acciones para editar y eliminar.
+- Eliminación con confirmación y resumen del impacto. Se borran solo las referencias entrantes al personaje desde relaciones de otros personajes, listas de personajes asociadas a ubicaciones y acontecimientos; se conservan las demás entidades y enlaces.
+- La modificación persiste en `localStorage`; exportación/importación y validación de esquema se mantienen operativas.
+- Se añadieron pruebas Chromium que comprueban crear, editar, conservar ID, recargar y borrar, además de comprobar la limpieza selectiva de referencias y un round-trip de exportación/importación.
+- No se comenzó la migración a React/TypeScript ni los generadores narrativos.
 
-- Edición de una ubicación existente desde su ficha: nombre, categoría/tipo y descripción; el ID canónico se conserva.
-- Movimiento de marcadores SVG mediante un control de arrastre separado del clic de selección.
-- Conversión de coordenadas de pantalla a coordenadas locales del SVG; límites seguros y persistencia estable en el proyecto.
-- Borrado de ubicación con confirmación y resumen de impacto.
-- Al borrar una ubicación, las ubicaciones hijas se reasignan al padre válido o a la raíz; se quitan solo las entradas de historial y referencias de eventos que apuntaban al lugar borrado. Los personajes, eventos y vínculos válidos hacia otras ubicaciones se conservan.
-- Prueba automatizada de edición, movimiento, recarga, exportación/importación, importación inválida y borrado con referencias cruzadas.
-- Diagnóstico y corrección de un defecto previo de selector que había dejado el panel de lugar sin renderizar, además de los detalles de captura del puntero y las expectativas desactualizadas del test.
+## Evidencia
+- **PASS_REAL:** CI #37925193509 completó el flujo browser smoke en Chromium headless sin errores de página.
+- **PASS_REAL:** creación de personaje, edición de campos conservando ID, persistencia tras recarga, diálogo de confirmación y limpieza de relaciones, lugares y eventos.
+- **PASS_REAL:** exportación/importación posterior al borrado valida el grafo de referencias.
+- **PASS_STATIC:** las 8 pruebas existentes del esquema pasaron; también pasaron sintaxis JavaScript y verificación estructural del proyecto.
+- **NOT_RUN:** prueba manual visual e interactiva en la PC Windows 11 del usuario. CI no sustituye esa validación.
 
-## 3. Evidencia y límites
+## Progreso global
+**Estimación: 10%** de la visión completa, aproximada y ponderada por alcance, no porcentaje de código ni cobertura. Se amplió el CRUD básico de ubicaciones a personajes y se verificó la integridad de referencias. Permanecen pendientes gran parte del índice multiuniverso, CRUD de acontecimientos y organizaciones, almacenamiento IndexedDB/backup, atlas temporal avanzado, generadores narrativos, Novel Studio, Content Guard e integración con BotImagen.
 
-- **PASS_REAL:** [Chromium smoke test en CI](https://github.com/jonhararagi/wordwaifu/actions/runs/37922783841). La ejecución recorre carga, navegación, capas, teclado, búsqueda, cronología, proyecto vacío, creación, edición con ID estable, movimiento, coordenadas dentro de límites, persistencia tras recarga, exportación JSON, importación round-trip, rechazo seguro de datos inválidos, borrado confirmado, reasignación de hijos, limpieza selectiva de referencias y round-trip posterior al borrado. No hubo errores de página.
-- **PASS_STATIC:** 8 pruebas del esquema de proyecto; sintaxis JavaScript; comprobación estructural de CI.
-- **PASS_REAL:** el flujo automatizado de interacción corre en Chromium headless dentro de GitHub Actions.
-- **NOT_RUN:** prueba manual en la PC Windows 11 del usuario. Este resultado no implica una validación visual/manual en su equipo.
-- **PARTIAL:** las ubicaciones del atlas cubren ahora el CRUD básico, pero personajes, organizaciones y eventos todavía no tienen un CRUD equivalente completo. IndexedDB también sigue pendiente; la persistencia actual usa localStorage.
+## Siguiente tarea activa
+**WF-002-B — CRUD de acontecimientos con referencias seguras.**
 
-## 4. Aprendizaje externo adaptado
+**TIMER inicial: 2–4 horas** para implementación y pruebas automáticas, a recalcular tras inspección.
 
-Se consultó [DeckSketchCanvas.tsx, de deck-doctors](https://github.com/SamuelGoldsmith/deck-doctors/blob/ba1c6c52ce17a7c3a822064e40352dc94b21066f/components/deck-estimate/DeckSketchCanvas.tsx) como referencia técnica de un editor SVG interactivo, no como aplicación de worldbuilding ni como fuente para copiar código. El patrón útil es transformar las coordenadas de puntero con la matriz inversa del SVG, guardar la geometría en el espacio de diseño y limitarla a los bordes. WordWaifu implementa su propio flujo sobre su modelo canónico de ubicaciones.
+### Criterios de aceptación
+1. Crear, seleccionar, editar y eliminar un acontecimiento desde la interfaz; conservar el ID durante la edición.
+2. Permitir editar título, posición temporal, descripción y participantes/lugares existentes sin inventar entidades.
+3. Borrar con confirmación y quitar solo las referencias entrantes al evento desde las ubicaciones, preservando otros eventos y entidades.
+4. Mantener IDs y referencias restantes válidos según `src/project-schema.js`.
+5. Añadir pruebas Chromium para CRUD, referencias, persistencia, exportación e importación.
+6. Ejecutar CI y registrar la evidencia; la prueba manual de Windows sigue como `NOT_RUN` hasta realizarse.
+7. Al cerrar esta tarea, **sobrescribir este mismo `docs/DONE.md`** con el nuevo resultado y punto de continuidad.
 
-## 5. Porcentaje de avance global
-
-**Estimación global: 9%.**
-
-Es una estimación aproximada y ponderada por el alcance de toda la visión, no una medición de código ni cobertura de tests. Se incrementa desde 8% porque el gate navegable básico del atlas ahora tiene creación, edición, movimiento, borrado seguro y evidencia automatizada. La mayoría de la visión sigue sin implementarse: CRUD de otras entidades, IndexedDB, índice multiuniverso completo, cronología avanzada, relaciones, generadores narrativos, Novel Studio, Content Guard e integración BotImagen.
-
-## 6. Siguiente tarea activa
-
-**WF-002-A — CRUD de fichas de personaje con referencias seguras.**
-
-**TIMER estimado: 2–4 horas** para primera implementación y pruebas; recalcular tras inspección.
-
-Antes de ejecutar:
-1. Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md` y `docs/DATA_MODEL.md`.
-2. Consultar la rama, HEAD, PR y CI actuales.
-3. Inspeccionar `src/app.js`, `src/project-schema.js`, `index.html`, `src/styles.css` y `tests/browser_smoke.cjs`.
-
-Alcance y aceptación:
-- Editar los campos esenciales de un personaje existente sin cambiar su ID.
-- Añadir borrado confirmado de personaje, limpiando las referencias entrantes de relaciones, ubicaciones y eventos sin borrar datos no relacionados.
-- Mantener intactos los personajes, ubicaciones y eventos restantes; no dejar IDs colgantes.
-- Probar creación/edición/borrado, persistencia, exportación e importación mediante Chromium y el esquema.
-- Ejecutar CI y guardar evidencia real; la prueba manual de Windows debe seguir como `NOT_RUN` hasta que se realice.
-- No comenzar todavía la migración React/TypeScript ni los generadores de novela.
-- Al cerrar WF-002-A, **sobrescribir este mismo `docs/DONE.md`** con el resultado y el siguiente punto de reanudación.
+### Antes de empezar
+Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md` y `docs/DATA_MODEL.md`; inspeccionar HEAD/PR/CI actuales, y revisar `src/app.js`, `src/project-schema.js`, `index.html`, `src/styles.css` y `tests/browser_smoke.cjs`.
