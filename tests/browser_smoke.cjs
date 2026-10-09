@@ -220,12 +220,15 @@ async function run() {
     const referenceFixture = JSON.parse(JSON.stringify(exportedProject));
     referenceFixture.locations.push({ id:"wf-test-child-location",name:"Distrito de Prueba",type:"Distrito",parentId:targetLocationId,
       description:"Ubicación hija creada para probar la limpieza de referencias.",tags:[],population:"Sin datos",government:"Sin datos",climate:"Sin datos",
-      marker:[235,255],characters:["wf-test-resident"],events:["wf-test-event"] });
+      marker:[235,255],characters:["wf-test-resident","wf-test-witness"],events:["wf-test-event"] });
     referenceFixture.characters.push({ id:"wf-test-resident",name:"Habitante de Prueba",age:30,species:"Humana",role:"Habitante",personality:[],
       description:"Personaje vinculado al lugar que se borrará.",motivation:"",flaw:"",
       locationHistory:[{locationId:targetLocationId,from:"chapter1",to:"chapter5"},{locationId:"wf-test-child-location",from:"chapter5",to:"now"}],relationships:[],status:"proposal" });
+    referenceFixture.characters.push({ id:"wf-test-witness",name:"Testigo de Prueba",age:26,species:"Humana",role:"Testigo",personality:["Atenta"],
+      description:"Debe sobrevivir al borrado de otro personaje.",motivation:"",flaw:"",
+      locationHistory:[{locationId:"wf-test-child-location",from:"chapter5",to:"now"}],relationships:["wf-test-resident"],status:"canon" });
     referenceFixture.events.push({ id:"wf-test-event",title:"Evento de Prueba",position:"chapter1",description:"Debe conservarse sin el lugar eliminado.",
-      locationIds:[targetLocationId,"wf-test-child-location"],characterIds:["wf-test-resident"] });
+      locationIds:[targetLocationId,"wf-test-child-location"],characterIds:["wf-test-resident","wf-test-witness"] });
     const fixtureImportPromise=page.waitForEvent("dialog");
     const fixtureImportSelection=page.locator("#import-file").setInputFiles({name:"wordwaifu-delete-reference-fixture.json",mimeType:"application/json",buffer:Buffer.from(JSON.stringify(referenceFixture),"utf8")});
     const fixtureImportAlert=await fixtureImportPromise;
@@ -280,6 +283,98 @@ async function run() {
     await finalImportSelection;
     await page.locator("#details-panel h2").getByText("Distrito de Prueba").waitFor();
     process.stdout.write("PASS post-delete round-trip: valid state survives reload, export and import.\n");
+
+    // Character CRUD: edit canonical fields without changing the stable ID.
+    await page.locator('#related-list [data-character="wf-test-resident"]').click();
+    const residentIdBefore = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.find((item) => item.id === "wf-test-resident").id);
+    await page.locator("#edit-character-button").click();
+    await page.locator("#entity-name").fill("Habitante Renombrado");
+    await page.locator("#entity-description").fill("Ficha editada por Chromium.");
+    await page.locator("#character-species").fill("Elfa");
+    await page.locator("#character-age").fill("35");
+    await page.locator("#character-role").fill("Archivista");
+    await page.locator("#character-personality").fill("Analítica, Persistente");
+    await page.locator("#character-motivation").fill("Conservar las rutas.");
+    await page.locator("#character-flaw").fill("Desconfía de los mapas.");
+    await page.locator("#character-status").selectOption("canon");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#details-panel h2").getByText("Habitante Renombrado").waitFor();
+    const editedResident = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.find((item) => item.id === "wf-test-resident"));
+    assert.equal(editedResident.id, residentIdBefore, "Character editing must preserve its stable ID.");
+    assert.equal(editedResident.age, 35);
+    assert.equal(editedResident.species, "Elfa");
+    assert.equal(editedResident.role, "Archivista");
+    assert.deepEqual(editedResident.personality, ["Analítica", "Persistente"]);
+    assert.equal(editedResident.status, "canon");
+    process.stdout.write("PASS character edit: canonical fields update without changing the ID.\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    const residentAfterReload = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.find((item) => item.id === "wf-test-resident"));
+    assert.equal(residentAfterReload.name, "Habitante Renombrado");
+    assert.equal(residentAfterReload.id, residentIdBefore);
+    process.stdout.write("PASS character persistence: edited character survives reload.\n");
+
+    // Character creation uses the same project schema and remains offline.
+    await page.locator("#add-button").click();
+    await page.locator("#entity-type").selectOption("character");
+    await page.locator("#entity-name").fill("Personaje Creado por Prueba");
+    await page.locator("#entity-description").fill("Ficha nueva creada desde el formulario.");
+    await page.locator("#character-species").fill("Humana");
+    await page.locator("#character-age").fill("21");
+    await page.locator("#character-role").fill("Cronista");
+    await page.locator("#character-personality").fill("Atenta, Metódica");
+    await page.locator("#character-motivation").fill("Registrar lo ocurrido.");
+    await page.locator("#character-flaw").fill("Se demora en decidir.");
+    await page.locator("#character-status").selectOption("proposal");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#directory-view h3").getByText("Personaje Creado por Prueba").waitFor();
+    const createdCharacter = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.find((item) => item.name === "Personaje Creado por Prueba"));
+    assert.ok(createdCharacter.id.startsWith("local-character-"));
+    assert.equal(createdCharacter.age, 21);
+    assert.deepEqual(createdCharacter.personality, ["Atenta", "Metódica"]);
+    process.stdout.write("PASS character create: new character fields are saved to the project.\n");
+
+    // Deleting a character cleans incoming references but preserves other records.
+    await page.locator('.nav-item[data-view="atlas"]').click();
+    await page.locator('#related-list [data-character="wf-test-resident"]').click();
+    const characterDeleteDialogPromise = page.waitForEvent("dialog");
+    const characterDeleteClick = page.locator("#delete-character-button").click();
+    const characterDeleteDialog = await characterDeleteDialogPromise;
+    assert.equal(characterDeleteDialog.type(), "confirm");
+    assert.match(characterDeleteDialog.message(), /relación\(es\)/);
+    assert.match(characterDeleteDialog.message(), /referencia\(s\) en lugares/);
+    assert.match(characterDeleteDialog.message(), /referencia\(s\) en acontecimientos/);
+    await characterDeleteDialog.accept();
+    await characterDeleteClick;
+    const afterCharacterDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
+    assert.equal(afterCharacterDelete.characters.some((item) => item.id === "wf-test-resident"), false);
+    assert.equal(afterCharacterDelete.characters.some((item) => item.id === "wf-test-witness"), true);
+    assert.equal(afterCharacterDelete.characters.some((item) => item.name === "Personaje Creado por Prueba"), true);
+    assert.deepEqual(afterCharacterDelete.characters.find((item) => item.id === "wf-test-witness").relationships, []);
+    assert.equal(afterCharacterDelete.locations.some((item) => (item.characters || []).includes("wf-test-resident")), false);
+    assert.equal(afterCharacterDelete.locations.some((item) => (item.characters || []).includes("wf-test-witness")), true);
+    assert.equal(afterCharacterDelete.events.some((item) => (item.characterIds || []).includes("wf-test-resident")), false);
+    assert.equal(afterCharacterDelete.events.some((item) => (item.characterIds || []).includes("wf-test-witness")), true);
+    process.stdout.write("PASS character delete: relations, location links and event references are cleaned selectively.\n");
+
+    await page.reload({waitUntil:"networkidle"});
+    const deletedRoundTripDownloadPromise = page.waitForEvent("download");
+    await page.locator("#export-button").click();
+    const deletedRoundTripDownload = await deletedRoundTripDownloadPromise;
+    const deletedRoundTripPath = await deletedRoundTripDownload.path();
+    const deletedRoundTripProject = JSON.parse(fs.readFileSync(deletedRoundTripPath, "utf8"));
+    const deletedRoundTripValidation = validateAndNormalizeProject(deletedRoundTripProject);
+    assert.equal(deletedRoundTripValidation.valid, true, deletedRoundTripValidation.errors.join("\n"));
+    assert.equal(deletedRoundTripProject.characters.some((item) => item.id === "wf-test-resident"), false);
+    assert.equal(deletedRoundTripProject.characters.some((item) => item.id === "wf-test-witness"), true);
+    const deletedRoundTripImportPromise = page.waitForEvent("dialog");
+    const deletedRoundTripImport = page.locator("#import-file").setInputFiles(deletedRoundTripPath);
+    const deletedRoundTripAlert = await deletedRoundTripImportPromise;
+    assert.match(deletedRoundTripAlert.message(), /Proyecto importado correctamente/i);
+    await deletedRoundTripAlert.accept();
+    await deletedRoundTripImport;
+    await page.locator("#details-panel h2").getByText("Distrito de Prueba").waitFor();
+    process.stdout.write("PASS character export/import: the deleted reference graph remains valid after round-trip.\n");
 
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");

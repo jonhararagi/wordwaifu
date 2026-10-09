@@ -303,10 +303,17 @@
     if (!character) return;
     selectedCharacterId = id;
     const place = characterLocationAt(character, currentTime());
-    $("#details-panel").innerHTML = '<div class="detail-cover"></div><span class="detail-type">' + escapeHTML(character.species) + ' · ' + escapeHTML(character.status) + '</span><h2>' + escapeHTML(character.name) + '</h2><p>' + escapeHTML(character.description) + '</p><div class="tag-row">' + character.personality.map((tag) => '<span class="tag">' + escapeHTML(tag) + '</span>').join("") + '</div><div class="detail-divider"></div><div class="detail-meta"><div><span>Edad</span><strong>' + character.age + ' años</strong></div><div><span>Rol</span><strong>' + escapeHTML(character.role) + '</strong></div><div><span>Ubicación en este momento</span><strong>' + escapeHTML(place ? place.name : "Desconocida") + '</strong></div><div><span>Estado del canon</span><strong>' + escapeHTML(character.status === "canon" ? "Confirmado" : "Propuesta") + '</strong></div></div><div class="detail-divider"></div><span class="detail-type">MOTIVACIÓN</span><p>' + escapeHTML(character.motivation) + '</p><div class="detail-divider"></div><span class="detail-type">DEFECTO PRINCIPAL</span><p>' + escapeHTML(character.flaw) + '</p><div class="detail-divider"></div><span class="detail-type">HISTORIAL DE UBICACIONES</span><p>' + character.locationHistory.map((entry) => { const loc = locationById(entry.locationId); return escapeHTML(loc ? loc.name : "Lugar eliminado") + " · " + escapeHTML(entry.from) + " → " + escapeHTML(entry.to); }).join("<br>") + '</p><button id="back-to-location" class="text-link">← Volver a su ubicación</button>';
+    const personality = (character.personality || []).map((tag) => '<span class="tag">' + escapeHTML(tag) + '</span>').join("");
+    const history = (character.locationHistory || []).map((entry) => {
+      const loc = locationById(entry.locationId);
+      return escapeHTML(loc ? loc.name : "Lugar eliminado") + " · " + escapeHTML(entry.from) + " → " + escapeHTML(entry.to);
+    }).join("<br>");
+    $("#details-panel").innerHTML = '<div class="detail-cover"></div><span class="detail-type">' + escapeHTML(character.species || "Especie sin definir") + ' · ' + escapeHTML(character.status || "unknown") + '</span><h2>' + escapeHTML(character.name) + '</h2><p>' + escapeHTML(character.description) + '</p><div class="location-actions"><button type="button" id="edit-character-button" class="outline-button">Editar personaje</button><button type="button" id="delete-character-button" class="outline-button danger-action">Eliminar personaje</button></div><div class="tag-row">' + personality + '</div><div class="detail-divider"></div><div class="detail-meta"><div><span>Edad</span><strong>' + escapeHTML(character.age == null ? "Sin definir" : String(character.age) + " años") + '</strong></div><div><span>Rol</span><strong>' + escapeHTML(character.role || "Sin definir") + '</strong></div><div><span>Ubicación en este momento</span><strong>' + escapeHTML(place ? place.name : "Desconocida") + '</strong></div><div><span>Estado del canon</span><strong>' + escapeHTML(character.status || "unknown") + '</strong></div></div><div class="detail-divider"></div><span class="detail-type">MOTIVACIÓN</span><p>' + escapeHTML(character.motivation || "Sin definir") + '</p><div class="detail-divider"></div><span class="detail-type">DEFECTO PRINCIPAL</span><p>' + escapeHTML(character.flaw || "Sin definir") + '</p><div class="detail-divider"></div><span class="detail-type">HISTORIAL DE UBICACIONES</span><p>' + (history || "Sin historial registrado.") + '</p><button id="back-to-location" class="text-link">← Volver a su ubicación</button>';
+    $("#edit-character-button").addEventListener("click", () => editCharacter(character.id));
+    $("#delete-character-button").addEventListener("click", () => deleteCharacter(character.id));
     $("#related-title").textContent = "Relaciones registradas";
-    const relations = character.relationships.map(characterById).filter(Boolean);
-    $("#related-list").innerHTML = relations.length ? relations.map((related) => '<div class="related-person" data-character="' + escapeHTML(related.id) + '" role="button" tabindex="0"><span class="avatar">' + escapeHTML(initials(related.name)) + '</span><div><strong>' + escapeHTML(related.name) + '</strong><small>' + escapeHTML(related.role) + '</small></div><span class="arrow">↗</span></div>').join("") : '<div class="empty-state">Todavía no hay relaciones registradas para este personaje.</div>';
+    const relations = (character.relationships || []).map(characterById).filter(Boolean);
+    $("#related-list").innerHTML = relations.length ? relations.map((related) => '<div class="related-person" data-character="' + escapeHTML(related.id) + '" role="button" tabindex="0"><span class="avatar">' + escapeHTML(initials(related.name)) + '</span><div><strong>' + escapeHTML(related.name) + '</strong><small>' + escapeHTML(related.role || "Sin definir") + '</small></div><span class="arrow">↗</span></div>').join("") : '<div class="empty-state">Todavía no hay relaciones registradas para este personaje.</div>';
     $("#back-to-location").addEventListener("click", () => { selectedCharacterId = null; renderDetails(); });
   }
 
@@ -324,19 +331,31 @@
     render();
   }
 
-  function updateLocationTypeVisibility() {
-    $("#location-type-field").classList.toggle("hidden", $("#entity-type").value !== "location");
+  function updateEntityFieldVisibility() {
+    const type = $("#entity-type").value;
+    $("#location-type-field").classList.toggle("hidden", type !== "location");
+    $("#character-fields").classList.toggle("hidden", type !== "character");
   }
 
   function addEntity() {
-    $("#entity-form").dataset.editing = "";
+    const form = $("#entity-form");
+    form.dataset.editing = "";
+    form.dataset.editingType = "";
     $("#entity-type").disabled = false;
+    $("#entity-type").value = "character";
     $("#dialog-title").textContent = "Crear entidad";
     $("#entity-name").value = "";
     $("#entity-description").value = "";
     $("#location-type").value = "Lugar sin clasificar";
+    $("#character-species").value = "Sin definir";
+    $("#character-age").value = "";
+    $("#character-role").value = "Sin definir";
+    $("#character-personality").value = "";
+    $("#character-motivation").value = "";
+    $("#character-flaw").value = "";
+    $("#character-status").value = "proposal";
     $("#entity-form button[type=\"submit\"]").textContent = "Guardar propuesta";
-    updateLocationTypeVisibility();
+    updateEntityFieldVisibility();
     $("#entity-dialog").showModal();
   }
 
@@ -344,6 +363,7 @@
     const location = locationById(id);
     if (!location) return;
     $("#entity-form").dataset.editing = id;
+    $("#entity-form").dataset.editingType = "location";
     $("#entity-type").value = "location";
     $("#entity-type").disabled = true;
     $("#dialog-title").textContent = "Editar ubicación";
@@ -351,8 +371,56 @@
     $("#entity-description").value = location.description || "";
     $("#location-type").value = location.type || "Lugar sin clasificar";
     $("#entity-form button[type=\"submit\"]").textContent = "Guardar cambios";
-    updateLocationTypeVisibility();
+    updateEntityFieldVisibility();
     $("#entity-dialog").showModal();
+  }
+
+  function editCharacter(id) {
+    const character = characterById(id);
+    if (!character) return;
+    const form = $("#entity-form");
+    form.dataset.editing = id;
+    form.dataset.editingType = "character";
+    $("#entity-type").value = "character";
+    $("#entity-type").disabled = true;
+    $("#dialog-title").textContent = "Editar personaje";
+    $("#entity-name").value = character.name || "";
+    $("#entity-description").value = character.description || "";
+    $("#character-species").value = character.species || "Sin definir";
+    $("#character-age").value = character.age == null ? "" : String(character.age);
+    $("#character-role").value = character.role || "Sin definir";
+    $("#character-personality").value = (character.personality || []).join(", ");
+    $("#character-motivation").value = character.motivation || "";
+    $("#character-flaw").value = character.flaw || "";
+    $("#character-status").value = character.status || "proposal";
+    $("#entity-form button[type=\"submit\"]").textContent = "Guardar cambios";
+    updateEntityFieldVisibility();
+    $("#entity-dialog").showModal();
+  }
+
+  function deleteCharacter(id) {
+    const character = characterById(id);
+    if (!character) return;
+    const relationCount = state.characters.reduce((count, item) => count + (item.id === id ? 0 : (item.relationships || []).filter((relatedId) => relatedId === id).length), 0);
+    const locationCount = state.locations.reduce((count, item) => count + (item.characters || []).filter((characterId) => characterId === id).length, 0);
+    const eventCount = state.events.reduce((count, item) => count + (item.characterIds || []).filter((characterId) => characterId === id).length, 0);
+    const summary = [
+      "Se eliminará el personaje \"" + character.name + "\".",
+      relationCount ? relationCount + " relación(es) de otros personajes dejarán de apuntar a esta ficha." : "",
+      locationCount ? locationCount + " referencia(s) en lugares se eliminarán." : "",
+      eventCount ? eventCount + " referencia(s) en acontecimientos se eliminarán." : "",
+      "Las demás entidades y referencias se conservarán. La operación no se puede deshacer. Exportá una copia antes si querés conservarla."
+    ].filter(Boolean).join("\n");
+    if (!confirm(summary)) return;
+    state.characters = state.characters.filter((item) => item.id !== id);
+    state.characters.forEach((item) => { item.relationships = (item.relationships || []).filter((relatedId) => relatedId !== id); });
+    state.locations.forEach((item) => { item.characters = (item.characters || []).filter((characterId) => characterId !== id); });
+    state.events.forEach((item) => { item.characterIds = (item.characterIds || []).filter((characterId) => characterId !== id); });
+    selectedCharacterId = null;
+    selectedLocationId = locationById(selectedLocationId)?.id || state.locations[0]?.id || null;
+    activeView = "atlas";
+    saveProject();
+    render();
   }
 
   function deleteLocation(id) {
@@ -386,12 +454,14 @@
     event.preventDefault();
     const form = $("#entity-form");
     const editingId = form.dataset.editing;
+    const editingType = form.dataset.editingType;
     const type = $("#entity-type").value;
     const name = $("#entity-name").value.trim();
     const description = $("#entity-description").value.trim();
     const locationType = $("#location-type").value.trim();
     if (!name) return;
-    if (editingId) {
+
+    if (editingId && editingType === "location") {
       const location = locationById(editingId);
       if (!location) { alert("No se encontró la ubicación que se intentaba editar."); return; }
       location.name = name;
@@ -405,9 +475,43 @@
       render();
       return;
     }
+
+    if (editingId && editingType === "character") {
+      const character = characterById(editingId);
+      if (!character) { alert("No se encontró el personaje que se intentaba editar."); return; }
+      const ageRaw = $("#character-age").value.trim();
+      const age = ageRaw === "" ? null : Number(ageRaw);
+      character.name = name;
+      character.description = description || "Descripción pendiente.";
+      character.species = $("#character-species").value.trim() || "Sin definir";
+      character.age = Number.isFinite(age) && age >= 0 ? age : null;
+      character.role = $("#character-role").value.trim() || "Sin definir";
+      character.personality = $("#character-personality").value.split(",").map((tag) => tag.trim()).filter(Boolean);
+      character.motivation = $("#character-motivation").value.trim();
+      character.flaw = $("#character-flaw").value.trim();
+      character.status = $("#character-status").value;
+      activeView = "atlas";
+      saveProject();
+      $("#entity-dialog").close();
+      render();
+      openCharacter(character.id);
+      return;
+    }
+
     const id = "local-" + type + "-" + Date.now().toString(36);
     if (type === "character") {
-      state.characters.push({ id, name, age: null, species: "Sin definir", role: "Sin definir", personality: [], description: description || "Descripción pendiente.", motivation: "", flaw: "", locationHistory: [], relationships: [], status: "proposal" });
+      const ageRaw = $("#character-age").value.trim();
+      const age = ageRaw === "" ? null : Number(ageRaw);
+      state.characters.push({
+        id, name, age: Number.isFinite(age) && age >= 0 ? age : null,
+        species: $("#character-species").value.trim() || "Sin definir",
+        role: $("#character-role").value.trim() || "Sin definir",
+        personality: $("#character-personality").value.split(",").map((tag) => tag.trim()).filter(Boolean),
+        description: description || "Descripción pendiente.",
+        motivation: $("#character-motivation").value.trim(),
+        flaw: $("#character-flaw").value.trim(),
+        locationHistory: [], relationships: [], status: $("#character-status").value || "proposal"
+      });
       activeView = "characters";
     } else {
       state.locations.push({ id, name, type: locationType || "Lugar sin clasificar", parentId: null, description: description || "Descripción pendiente.", tags: ["Propuesta"], population: "Sin datos", government: "Sin datos", climate: "Sin datos", marker: [120 + Math.random() * 620, 90 + Math.random() * 390], characters: [], events: [] });
@@ -534,7 +638,7 @@
   });
   $("#add-button").addEventListener("click", addEntity);
   $("#entity-form").addEventListener("submit", handleEntitySubmit);
-  $("#entity-type").addEventListener("change", updateLocationTypeVisibility);
+  $("#entity-type").addEventListener("change", updateEntityFieldVisibility);
   $("#dialog-close").addEventListener("click", () => $("#entity-dialog").close());
   $("#dialog-cancel").addEventListener("click", () => $("#entity-dialog").close());
   $("#export-button").addEventListener("click", exportProject);
