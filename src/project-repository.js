@@ -240,7 +240,7 @@
         organizations.forEach((item) => appendEntity(candidate, "organization", item, item?.id, item?.name, [
           item?.organizationType, item?.description, item?.ideology, item?.goals,
           item?.history, characterNames(item?.leaderCharacterIds),
-          characterNames(item?.memberCharacterIds), locationById(item?.baseLocationId)?.name
+          characterNames(item?.memberCharacterIds), locationById.get(item?.baseLocationId)?.name
         ], [item?.organizationType, item?.status].filter(Boolean).join(" · ")));
         relationships.forEach((item) => {
           const sourceName = characterById.get(item?.sourceCharacterId)?.name || "";
