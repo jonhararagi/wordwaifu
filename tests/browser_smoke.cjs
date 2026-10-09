@@ -47,6 +47,7 @@ async function run() {
   const server = createServer();
   let browser;
   const pageErrors = [];
+  const consoleErrors = [];
   try {
     await new Promise((resolve, reject) => {
       server.once("error", reject);
@@ -56,12 +57,17 @@ async function run() {
     browser = await chromium.launch({ headless: true });
     const context = await browser.newContext();
     const page = await context.newPage();
-    page.on("pageerror", (error) => pageErrors.push(error.message));
+    page.on("pageerror", (error) => pageErrors.push(error.stack || error.message));
+    page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
     await page.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
+    const initialPanel = await page.locator("#details-panel").innerHTML();
+    if (!initialPanel.trim()) {
+      throw new Error("Initial render diagnostic: " + JSON.stringify({ pageErrors, consoleErrors }));
+    }
 
     const forestMarker = page.locator('g.map-marker[data-location="loc-velado"]').first();
     await forestMarker.click();
