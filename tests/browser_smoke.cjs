@@ -100,7 +100,7 @@ async function run() {
       events: []
     };
     const alertPromise = page.waitForEvent("dialog");
-    await page.locator("#import-file").setInputFiles({
+    const importFileSelection = page.locator("#import-file").setInputFiles({
       name: "invalid-wordwaifu-project.json",
       mimeType: "application/json",
       buffer: Buffer.from(JSON.stringify(invalidProject), "utf8")
@@ -109,6 +109,7 @@ async function run() {
     assert.equal(alertDialog.type(), "alert");
     assert.match(alertDialog.message(), /no supera la validación/i);
     await alertDialog.accept();
+    await importFileSelection;
     await page.locator("#project-name").getByText("Mi nuevo universo").waitFor();
     await page.locator("#details-panel h2").getByText("Ciudad de Prueba").waitFor();
     process.stdout.write("PASS safe import: malformed project is rejected without replacing active data.\n");
