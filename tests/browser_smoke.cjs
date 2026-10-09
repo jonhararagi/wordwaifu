@@ -266,9 +266,14 @@ async function run() {
       assert.match(deleteUiDialog.message(), /proyecto y los demás snapshots se conservarán/);
       await deleteUiDialog.accept();
       await deleteUiClick;
+      await page.waitForFunction((deletedId) =>
+        !Array.from(document.querySelectorAll("#snapshot-list option")).some((option) => option.value === deletedId),
+      snapshotId);
     }
-    assert.equal(await page.locator("#snapshot-list option").count(), 1);
-    assert.equal(await page.locator("#snapshot-list option").first().getAttribute("value"), "");
+    await page.waitForFunction(() => {
+      const options = Array.from(document.querySelectorAll("#snapshot-list option"));
+      return options.length === 1 && options[0].value === "";
+    });
     await page.locator("#project-close-button").click();
     process.stdout.write("PASS snapshot UI delete: individual copies require confirmation and leave the project intact.\\n");
 
