@@ -132,7 +132,8 @@ async function run() {
 
     const markerBeforeDrag = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.find((item) => item.id === id).marker, targetLocationId);
     const draggableMarker = page.locator('g.map-marker[data-location="' + targetLocationId + '"]').first();
-    const markerBox = await draggableMarker.boundingBox();
+    const dragHandle = draggableMarker.locator(".marker-drag-handle");
+    const markerBox = await dragHandle.boundingBox();
     assert.ok(markerBox, "The created location marker should be visible for dragging.");
     await page.mouse.move(markerBox.x + markerBox.width/2, markerBox.y + markerBox.height/2);
     await page.mouse.down();

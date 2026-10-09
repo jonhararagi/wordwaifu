@@ -129,42 +129,70 @@
     return { x: Math.max(12, Math.min(888, point.x)), y: Math.max(12, Math.min(588, point.y)) };
   }
 
+  function ensureMarkerDragHandle(marker) {
+    let handle = marker.querySelector(".marker-drag-handle");
+    if (handle) return handle;
+    handle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    handle.setAttribute("class", "marker-drag-handle");
+    handle.setAttribute("cx", "14");
+    handle.setAttribute("cy", "10");
+    handle.setAttribute("r", "6");
+    handle.setAttribute("aria-hidden", "true");
+    marker.appendChild(handle);
+    return handle;
+  }
+
   function bindMarkerInteractions(marker) {
     if (!marker || marker.classList.contains("event-marker") || marker.dataset.markerInteractionsBound) return;
     marker.dataset.markerInteractionsBound = "true";
-    marker.addEventListener("pointerdown", (event) => {
+    const handle = ensureMarkerDragHandle(marker);
+    handle.addEventListener("pointerdown", (event) => {
       if (event.button !== 0 || event.isPrimary === false) return;
-      const location = locationById(marker.dataset.location), point = mapPointFromPointer(event);
+      const location = locationById(marker.dataset.location);
+      const point = mapPointFromPointer(event);
       if (!location || !point) return;
       const origin = Array.isArray(location.marker) ? location.marker : [450, 300];
-      marker._wordwaifuDrag = { pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,offsetX:origin[0]-point.x,offsetY:origin[1]-point.y,origin,moving:false,current:origin };
+      marker._wordwaifuDrag = {
+        pointerId: event.pointerId, startX: event.clientX, startY: event.clientY,
+        offsetX: origin[0] - point.x, offsetY: origin[1] - point.y,
+        origin, moving: false, current: origin, handle
+      };
+      event.stopPropagation();
     });
+    handle.addEventListener("click", (event) => event.stopPropagation());
     marker.addEventListener("pointermove", (event) => {
       const drag = marker._wordwaifuDrag;
       if (!drag || drag.pointerId !== event.pointerId) return;
-      if (!drag.moving && Math.hypot(event.clientX-drag.startX,event.clientY-drag.startY)<4) return;
+      if (!drag.moving && Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) < 4) return;
       const point = mapPointFromPointer(event);
       if (!point) return;
       if (!drag.moving) {
         drag.moving = true;
-        try { marker.setPointerCapture(event.pointerId); } catch { /* Pointer capture is optional. */ }
+        try { drag.handle.setPointerCapture(event.pointerId); } catch { /* Optional enhancement. */ }
       }
-      const next = clampMarkerPoint({x:point.x+drag.offsetX,y:point.y+drag.offsetY});
-      drag.current = [next.x,next.y];
-      marker.setAttribute("transform","translate("+next.x+" "+next.y+")");
+      const next = clampMarkerPoint({ x: point.x + drag.offsetX, y: point.y + drag.offsetY });
+      drag.current = [next.x, next.y];
+      marker.setAttribute("transform", "translate(" + next.x + " " + next.y + ")");
     });
-    const finishDrag = (event,cancelled) => {
-      const drag=marker._wordwaifuDrag;
-      if(!drag||drag.pointerId!==event.pointerId)return;
-      marker._wordwaifuDrag=null;
-      if(cancelled){const location=locationById(marker.dataset.location),point=location&&Array.isArray(location.marker)?location.marker:drag.origin;marker.setAttribute("transform","translate("+point[0]+" "+point[1]+")");return;}
-      if(!drag.moving)return;
-      const location=locationById(marker.dataset.location);if(!location)return;
-      location.marker=drag.current.map((value)=>Math.round(value*10)/10);
-      saveProject();renderMap();
+    const finishDrag = (event, cancelled) => {
+      const drag = marker._wordwaifuDrag;
+      if (!drag || drag.pointerId !== event.pointerId) return;
+      marker._wordwaifuDrag = null;
+      if (cancelled) {
+        const location = locationById(marker.dataset.location);
+        const point = location && Array.isArray(location.marker) ? location.marker : drag.origin;
+        marker.setAttribute("transform", "translate(" + point[0] + " " + point[1] + ")");
+        return;
+      }
+      if (!drag.moving) return;
+      const location = locationById(marker.dataset.location);
+      if (!location) return;
+      location.marker = drag.current.map((value) => Math.round(value * 10) / 10);
+      saveProject();
+      renderMap();
     };
-    marker.addEventListener("pointerup",(event)=>finishDrag(event,false));
-    marker.addEventListener("pointercancel",(event)=>finishDrag(event,true));
+    marker.addEventListener("pointerup", (event) => finishDrag(event, false));
+    marker.addEventListener("pointercancel", (event) => finishDrag(event, true));
   }
 
   function renderMap() {
