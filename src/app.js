@@ -283,6 +283,72 @@
     }
   }
 
+  async function runMasterSearch(event) {
+    event.preventDefault();
+    const query = $("#master-search-query").value.trim();
+    const entityType = $("#master-search-type").value || "all";
+    const status = $("#master-search-status");
+    const resultsNode = $("#master-search-results");
+    resultsNode.replaceChildren();
+    if (!query) {
+      status.textContent = "Escribí un término para iniciar la búsqueda.";
+      return;
+    }
+    if (!projectRepository || typeof projectRepository.searchAcrossProjects !== "function") {
+      status.textContent = "El índice maestro no está disponible en esta sesión.";
+      return;
+    }
+    const button = $("#master-search-button");
+    button.disabled = true;
+    status.textContent = "Consultando los universos locales sin cambiar el proyecto activo…";
+    try {
+      const report = await projectRepository.searchAcrossProjects(query, { entityType, limit: 100 });
+      if (report.complete) {
+        status.textContent = report.totalMatches + " coincidencia(s) en " + report.scannedProjects +
+          " universo(s). Búsqueda completa" + (report.truncated ? "; se muestran los primeros " + report.results.length + " resultados." : ".");
+      } else {
+        status.textContent = "BÚSQUEDA PARCIAL: " + report.totalMatches + " coincidencia(s) en " +
+          report.scannedProjects + " universo(s) consultable(s). " +
+          (report.warning || "No se pudo confirmar que se hayan consultado todos los universos.");
+      }
+      report.results.forEach((item) => {
+        const card = document.createElement("article");
+        card.className = "master-search-result";
+        card.dataset.projectId = item.projectId;
+        card.dataset.entityType = item.entityType;
+        card.dataset.entityId = item.entityId;
+        card.dataset.source = item.source;
+        const title = document.createElement("strong");
+        title.textContent = item.name;
+        const metadata = document.createElement("small");
+        metadata.textContent = item.projectName + " · " + item.entityTypeLabel + " · " + item.detail;
+        const identity = document.createElement("span");
+        identity.textContent = "Proyecto ID: " + item.projectId + " · Ficha ID: " + item.entityId +
+          (item.source === "localStorage" ? " · solo en respaldo local" : "");
+        card.append(title, metadata, identity);
+        resultsNode.appendChild(card);
+      });
+      if (!report.results.length) {
+        const empty = document.createElement("p");
+        empty.className = "field-help";
+        empty.textContent = report.complete
+          ? "No se encontraron coincidencias en los universos consultados."
+          : "No se encontraron coincidencias en la parte consultable. La búsqueda incompleta no garantiza ausencia de resultados.";
+        resultsNode.appendChild(empty);
+      }
+      if (!report.complete && report.warning) {
+        const warning = document.createElement("small");
+        warning.className = "field-help";
+        warning.textContent = report.warning;
+        resultsNode.appendChild(warning);
+      }
+    } catch (error) {
+      status.textContent = "No se pudo consultar el índice maestro: " + error.message;
+    } finally {
+      button.disabled = false;
+    }
+  }
+
   async function openProjectManager() {
     if (!projectRepository) {
       alert("El repositorio local de proyectos no está disponible.");
@@ -1357,6 +1423,7 @@
   $("#export-button").addEventListener("click", exportProject);
   $("#import-file").addEventListener("change", (event) => importProject(event.target.files[0]));
   $("#manage-projects-button").addEventListener("click", openProjectManager);
+  $("#master-search-form").addEventListener("submit", runMasterSearch);
   $("#project-refresh-button").addEventListener("click", () => refreshProjectList().catch((error) => {
     $("#project-list-status").textContent = "No se pudo actualizar: " + error.message;
   }));

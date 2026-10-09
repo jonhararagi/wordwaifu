@@ -178,6 +178,100 @@ async function run() {
     assert.equal(activeDemoProject, "project-asteria");
     process.stdout.write("PASS project switch: existing universe restored and active pointer follows its ID.\n");
 
+    // Two separate universes may legally contain the same entity ID.
+    const multiverseSearchFixture = await page.evaluate(async (projectId) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const project = await repository.getProject(projectId);
+      project.locations = [];
+      project.characters = [{
+        id: "char-mira", name: "Mira de Niebla", age: 22, species: "Humana", role: "Investigadora",
+        personality: ["Curiosa"], description: "Busca archivos escondidos entre universos.",
+        motivation: "Encontrar testimonios perdidos.", flaw: "No comparte todos sus hallazgos.",
+        locationHistory: [], relationships: [], status: "canon"
+      }];
+      project.events = [];
+      project.organizations = [];
+      project.relationships = [];
+      project.stories = [];
+      const db = await repository.open();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId, data: project });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Master search fixture write failed."));
+        tx.onabort = () => reject(tx.error || new Error("Master search fixture was aborted."));
+      });
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return { projectId, activeId: active?.value || null, characterId: project.characters[0].id };
+    }, createdUniverse.id);
+    assert.equal(multiverseSearchFixture.activeId, "project-asteria", "The fixture must not change the active project.");
+
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#master-search-query").fill("Mira");
+    await page.locator("#master-search-type").selectOption("character");
+    await page.locator("#master-search-button").click();
+    await page.waitForFunction(() => document.querySelectorAll("#master-search-results .master-search-result").length === 2, { timeout: 5000 });
+    const multiverseSearchResults = await page.locator("#master-search-results .master-search-result").evaluateAll((cards) => cards.map((card) => ({
+      projectId: card.dataset.projectId, entityId: card.dataset.entityId, entityType: card.dataset.entityType, text: card.textContent
+    })));
+    assert.deepEqual(new Set(multiverseSearchResults.map((item) => item.projectId)), new Set(["project-asteria", createdUniverse.id]));
+    assert.deepEqual(multiverseSearchResults.map((item) => item.entityId), ["char-mira", "char-mira"]);
+    assert.ok(multiverseSearchResults.some((item) => item.text.includes("Mira Solenne")));
+    assert.ok(multiverseSearchResults.some((item) => item.text.includes("Mira de Niebla")));
+    assert.ok(multiverseSearchResults.every((item) => item.entityType === "character"));
+    const afterMasterSearch = await page.evaluate(async (projectId) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      const asteria = await repository.getProject("project-asteria");
+      const other = await repository.getProject(projectId);
+      repository.close();
+      return { activeId: active?.value, asteriaCount: asteria?.characters?.length, otherCount: other?.characters?.length, otherName: other?.project?.name };
+    }, createdUniverse.id);
+    assert.equal(afterMasterSearch.activeId, "project-asteria");
+    assert.equal(afterMasterSearch.asteriaCount, 4);
+    assert.equal(afterMasterSearch.otherCount, 1);
+    assert.equal(afterMasterSearch.otherName, "Universo Multiverso QA");
+    assert.match(await page.locator("#master-search-status").innerText(), /Búsqueda completa/);
+    process.stdout.write("PASS master index: duplicate entity IDs in separate universes return distinct project-scoped hits without changing or mutating the active project.\\n");
+
+    await page.locator("#master-search-query").fill("termino-imposible-sin-resultados");
+    await page.locator("#master-search-button").click();
+    await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("0 coincidencia"));
+    assert.match(await page.locator("#master-search-results").innerText(), /No se encontraron coincidencias/);
+    assert.match(await page.locator("#master-search-status").innerText(), /Búsqueda completa/);
+    process.stdout.write("PASS master index empty result: zero matches are reported only after a complete scan.\\n");
+
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      window.__masterSearchOriginalOpen = prototype.open;
+      prototype.open = async function () { throw new Error("Simulated IndexedDB index read failure."); };
+    });
+    await page.locator("#master-search-query").fill("Mira");
+    await page.locator("#master-search-button").click();
+    await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("BÚSQUEDA PARCIAL"));
+    const partialMasterResults = await page.locator("#master-search-results .master-search-result").evaluateAll((cards) => cards.map((card) => ({
+      projectId: card.dataset.projectId, source: card.dataset.source, text: card.textContent
+    })));
+    assert.equal(partialMasterResults.length, 1, "Only the active local backup should be available when IndexedDB fails.");
+    assert.equal(partialMasterResults[0].projectId, "project-asteria");
+    assert.equal(partialMasterResults[0].source, "localStorage");
+    assert.match(await page.locator("#master-search-status").innerText(), /Simulated IndexedDB index read failure/);
+    await page.evaluate(() => {
+      const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
+      prototype.open = window.__masterSearchOriginalOpen;
+      delete window.__masterSearchOriginalOpen;
+    });
+    const activeAfterPartialSearch = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return active?.value;
+    });
+    assert.equal(activeAfterPartialSearch, "project-asteria");
+    process.stdout.write("PASS master index partial failure: IndexedDB read failure is explicit and never claims full coverage.\\n");
+    await page.locator("#project-close-button").click();
+
     await page.locator("#manage-projects-button").click();
     await page.locator("#project-list").selectOption(createdUniverse.id);
     await page.locator("#project-open-button").click();

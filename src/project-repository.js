@@ -121,6 +121,163 @@
         .sort((left, right) => left.name.localeCompare(right.name, "es"));
     }
 
+    async searchAcrossProjects(rawQuery, options = {}) {
+      const normalize = (value) => String(value ?? "").normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es");
+      const query = normalize(rawQuery).trim();
+      const validTypes = new Set(["all", "character", "location", "event", "organization", "relationship", "story"]);
+      const requestedType = validTypes.has(options.entityType) ? options.entityType : "all";
+      const limit = Number.isInteger(options.limit) ? Math.max(1, Math.min(options.limit, 200)) : 100;
+      if (!query) {
+        return { query: "", results: [], complete: false, scannedProjects: 0, totalProjects: null, totalMatches: 0, truncated: false, warning: "Escribí un término para iniciar la búsqueda." };
+      }
+
+      let records = [];
+      let indexedDbError = null;
+      try {
+        const db = await this.open();
+        records = await new Promise((resolve, reject) => {
+          const tx = db.transaction("projects", "readonly");
+          const request = tx.objectStore("projects").getAll();
+          let values = [];
+          request.onsuccess = () => { values = Array.isArray(request.result) ? request.result : []; };
+          tx.oncomplete = () => resolve(values);
+          tx.onerror = () => reject(tx.error || request.error || new Error("No se pudo leer el índice de proyectos."));
+          tx.onabort = () => reject(tx.error || new Error("La lectura del índice de proyectos fue cancelada."));
+        });
+      } catch (error) {
+        indexedDbError = error;
+      }
+
+      const candidates = new Map();
+      let invalidRecordCount = 0;
+      if (!indexedDbError) {
+        records.forEach((record) => {
+          if (!record || typeof record.projectId !== "string" || !isProject(record.data) ||
+              record.data.project.id !== record.projectId) {
+            invalidRecordCount += 1;
+            return;
+          }
+          const data = record.data;
+          const hasMalformedCollection = ["characters", "locations", "events", "organizations", "relationships", "stories"]
+            .some((key) => data[key] !== undefined && !Array.isArray(data[key]));
+          if (hasMalformedCollection) invalidRecordCount += 1;
+          candidates.set(record.projectId, {
+            projectId: record.projectId,
+            project: data,
+            projectName: typeof data.project.name === "string" && data.project.name.trim() ? data.project.name : "Proyecto sin nombre",
+            source: "indexeddb"
+          });
+        });
+      }
+
+      const backup = this.readBackup();
+      let backupAdded = false;
+      if (backup.project && !candidates.has(backup.project.project.id)) {
+        candidates.set(backup.project.project.id, {
+          projectId: backup.project.project.id,
+          project: backup.project,
+          projectName: typeof backup.project.project.name === "string" && backup.project.project.name.trim()
+            ? backup.project.project.name : "Proyecto sin nombre",
+          source: "localStorage"
+        });
+        backupAdded = true;
+      }
+
+      const results = [];
+      let totalMatches = 0;
+      const entityLabels = {
+        character: "Personaje", location: "Lugar", event: "Acontecimiento",
+        organization: "Organización", relationship: "Relación", story: "Historia"
+      };
+      const asText = (value) => Array.isArray(value) ? value.join(" ") : String(value ?? "");
+      const appendEntity = (candidate, type, entity, entityId, name, searchFields, detail) => {
+        if (requestedType !== "all" && requestedType !== type) return;
+        if (typeof entityId !== "string" || !entityId.trim() || typeof name !== "string" || !name.trim()) return;
+        if (!normalize([name, ...searchFields].map(asText).join(" ")).includes(query)) return;
+        totalMatches += 1;
+        if (results.length < limit) {
+          results.push({
+            projectId: candidate.projectId,
+            projectName: candidate.projectName,
+            entityType: type,
+            entityTypeLabel: entityLabels[type],
+            entityId,
+            name,
+            detail: asText(detail),
+            source: candidate.source
+          });
+        }
+      };
+
+      for (const candidate of candidates.values()) {
+        const project = candidate.project;
+        const characters = Array.isArray(project.characters) ? project.characters : [];
+        const locations = Array.isArray(project.locations) ? project.locations : [];
+        const events = Array.isArray(project.events) ? project.events : [];
+        const organizations = Array.isArray(project.organizations) ? project.organizations : [];
+        const relationships = Array.isArray(project.relationships) ? project.relationships : [];
+        const stories = Array.isArray(project.stories) ? project.stories : [];
+        const characterById = new Map(characters.filter((item) => item && typeof item.id === "string").map((item) => [item.id, item]));
+        const locationById = new Map(locations.filter((item) => item && typeof item.id === "string").map((item) => [item.id, item]));
+        const organizationById = new Map(organizations.filter((item) => item && typeof item.id === "string").map((item) => [item.id, item]));
+        const characterNames = (ids) => (Array.isArray(ids) ? ids : []).map((id) => characterById.get(id)?.name || "").filter(Boolean);
+        const locationNames = (ids) => (Array.isArray(ids) ? ids : []).map((id) => locationById.get(id)?.name || "").filter(Boolean);
+        const organizationNames = (ids) => (Array.isArray(ids) ? ids : []).map((id) => organizationById.get(id)?.name || "").filter(Boolean);
+
+        characters.forEach((item) => appendEntity(candidate, "character", item, item?.id, item?.name, [
+          item?.aliases, item?.role, item?.species, item?.description, item?.motivation,
+          item?.flaw, item?.personality, item?.status, item?.backstory, item?.notes
+        ], [item?.role, item?.species, item?.status].filter(Boolean).join(" · ")));
+        locations.forEach((item) => appendEntity(candidate, "location", item, item?.id, item?.name, [
+          item?.type, item?.description, item?.tags, item?.climate, item?.culture,
+          item?.government, item?.economy, item?.history, item?.notes
+        ], [item?.type, item?.climate].filter(Boolean).join(" · ")));
+        events.forEach((item) => appendEntity(candidate, "event", item, item?.id, item?.title || item?.name, [
+          item?.position, item?.description, locationNames(item?.locationIds),
+          characterNames(item?.characterIds), organizationNames(item?.organizationIds)
+        ], [item?.position, item?.status].filter(Boolean).join(" · ")));
+        organizations.forEach((item) => appendEntity(candidate, "organization", item, item?.id, item?.name, [
+          item?.organizationType, item?.description, item?.ideology, item?.goals,
+          item?.history, characterNames(item?.leaderCharacterIds),
+          characterNames(item?.memberCharacterIds), locationById(item?.baseLocationId)?.name
+        ], [item?.organizationType, item?.status].filter(Boolean).join(" · ")));
+        relationships.forEach((item) => {
+          const sourceName = characterById.get(item?.sourceCharacterId)?.name || "";
+          const targetName = characterById.get(item?.targetCharacterId)?.name || "";
+          const name = item?.name || [sourceName, targetName].filter(Boolean).join(" ↔ ") || "Relación sin nombre";
+          appendEntity(candidate, "relationship", item, item?.id, name, [
+            sourceName, targetName, item?.relationshipType, item?.description, item?.status
+          ], [item?.relationshipType, item?.status].filter(Boolean).join(" · "));
+        });
+        stories.forEach((item) => appendEntity(candidate, "story", item, item?.id, item?.title || item?.name, [
+          item?.description, item?.premise, item?.genre, item?.tone, item?.status
+        ], [item?.genre, item?.status].filter(Boolean).join(" · ")));
+      }
+
+      results.sort((left, right) =>
+        left.projectName.localeCompare(right.projectName, "es") ||
+        left.name.localeCompare(right.name, "es") ||
+        left.entityType.localeCompare(right.entityType, "es") ||
+        left.entityId.localeCompare(right.entityId, "es")
+      );
+      const complete = !indexedDbError && invalidRecordCount === 0 && !backup.error;
+      const warnings = [];
+      if (indexedDbError) warnings.push("No se pudo leer IndexedDB (" + indexedDbError.message + "); solo se consultó el respaldo local disponible.");
+      if (invalidRecordCount) warnings.push("Se omitieron o había " + invalidRecordCount + " registro(s) con estructura/metadatos inconsistentes.");
+      if (backup.error) warnings.push("No se pudo leer el respaldo local (" + backup.error.message + ").");
+      return {
+        query: String(rawQuery).trim(),
+        results,
+        complete,
+        scannedProjects: candidates.size,
+        totalProjects: indexedDbError ? null : records.length + (backupAdded ? 1 : 0),
+        totalMatches,
+        truncated: totalMatches > results.length,
+        warning: warnings.join(" ")
+      };
+    }
+
     async getProject(projectId) {
       if (typeof projectId !== "string" || !projectId.trim()) return null;
       try {

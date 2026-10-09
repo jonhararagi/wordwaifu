@@ -41,7 +41,7 @@ if html_path.is_file():
     ids = re.findall(r'\bid="([^"]+)"', html)
     duplicates = sorted({item for item in ids if ids.count(item) > 1})
     require(not duplicates, "IDs HTML duplicados: " + ", ".join(duplicates))
-    for required_id in ("world-map", "details-panel", "time-select", "global-search", "export-button", "import-file", "command-form", "manage-projects-button", "project-dialog", "project-list", "project-create-button", "create-project-name"):
+    for required_id in ("world-map", "details-panel", "time-select", "global-search", "export-button", "import-file", "command-form", "manage-projects-button", "project-dialog", "project-list", "project-create-button", "create-project-name", "master-search-form", "master-search-query", "master-search-results", "master-search-status"):
         require(required_id in ids, "Falta control esencial en index.html: " + required_id)
 
 if js_path.is_file():
@@ -60,6 +60,7 @@ if repository_path.is_file():
     require("class ProjectRepository" in repository, "Falta el adaptador ProjectRepository")
     require("loadActive" in repository and "saveActive" in repository and "saveBackup" in repository and "write" in repository, "El repositorio debe exponer carga, guardado, respaldo y verificación del proyecto activo")
     require("listProjects" in repository and "getProject" in repository and "activateProject" in repository, "El repositorio debe enumerar, leer y activar proyectos por ID")
+    require("searchAcrossProjects" in repository, "Falta el índice maestro de búsqueda entre proyectos")
     require("recoveredBackup" in repository, "Falta la ruta de recuperación del respaldo local")
 
 if schema_test_path.is_file():

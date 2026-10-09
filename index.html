@@ -111,6 +111,18 @@
     <div class="project-manager-content">
       <div class="dialog-heading"><div><p class="eyebrow">MULTIVERSO LOCAL</p><h2 id="project-dialog-title">Gestionar proyectos</h2></div><button type="button" id="project-close-button" class="icon-button" aria-label="Cerrar gestor de proyectos">✕</button></div>
       <p class="project-manager-intro">Cada universo se guarda por separado. Abrir o crear uno no elimina los demás.</p>
+      <section class="master-search" aria-labelledby="master-search-title">
+        <div><p class="eyebrow">ÍNDICE MAESTRO</p><h3 id="master-search-title">Buscar en todos los universos</h3></div>
+        <p class="field-help">Consulta proyectos guardados sin cambiar el universo activo. Si una fuente falla, se indicará que la búsqueda es parcial.</p>
+        <form id="master-search-form" class="master-search-form">
+          <label for="master-search-query">Nombre o texto a encontrar<input id="master-search-query" type="search" maxlength="160" autocomplete="off" placeholder="Mira, Ciudad de Cristal, antigua alianza..." required></label>
+          <label for="master-search-type">Tipo de ficha<select id="master-search-type"><option value="all">Todos los tipos</option><option value="character">Personajes</option><option value="location">Lugares</option><option value="event">Acontecimientos</option><option value="organization">Organizaciones</option><option value="relationship">Relaciones</option><option value="story">Historias</option></select></label>
+          <button type="submit" id="master-search-button" class="primary-button">⌕ Buscar en universos</button>
+        </form>
+        <p id="master-search-status" class="field-help" role="status">Escribí un término para consultar el índice local.</p>
+        <div id="master-search-results" class="master-search-results" aria-live="polite"></div>
+      </section>
+      <div class="detail-divider"></div>
       <label for="project-list">Proyectos guardados</label>
       <select id="project-list" size="6" aria-describedby="project-list-status"></select>
       <p id="project-list-status" class="field-help" role="status">Leyendo el catálogo local…</p>
