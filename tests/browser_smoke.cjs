@@ -235,7 +235,24 @@ async function run() {
     assert.match(await page.locator("#master-search-status").innerText(), /Búsqueda completa/);
     process.stdout.write("PASS master index: duplicate entity IDs in separate universes return distinct project-scoped hits without changing or mutating the active project.\\n");
 
+    // Search selected fields, not only entity names; diacritics should not block matching.
+    await page.locator("#master-search-query").fill("cartografa");
+    await page.locator("#master-search-type").selectOption("character");
+    await page.locator("#master-search-button").click();
+    await page.waitForFunction(() => document.querySelectorAll("#master-search-results .master-search-result").length === 1);
+    assert.match(await page.locator("#master-search-results .master-search-result").innerText(), /Mira Solenne/);
+    process.stdout.write("PASS master index selected fields: role search is accent-insensitive.\\n");
+
+    await page.locator("#master-search-query").fill("capital");
+    await page.locator("#master-search-type").selectOption("location");
+    await page.locator("#master-search-button").click();
+    await page.waitForFunction(() => document.querySelectorAll("#master-search-results .master-search-result").length === 1);
+    assert.match(await page.locator("#master-search-results .master-search-result").innerText(), /Asteria/);
+    assert.match(await page.locator("#master-search-status").innerText(), /Búsqueda completa/);
+    process.stdout.write("PASS master index type filter: location tags and categories are searchable.\\n");
+
     await page.locator("#master-search-query").fill("termino-imposible-sin-resultados");
+    await page.locator("#master-search-type").selectOption("all");
     await page.locator("#master-search-button").click();
     await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("0 coincidencia"));
     assert.match(await page.locator("#master-search-results").innerText(), /No se encontraron coincidencias/);
