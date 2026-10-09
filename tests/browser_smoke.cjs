@@ -60,10 +60,35 @@ async function run() {
     page.on("pageerror", (error) => pageErrors.push(error.stack || error.message));
     page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
     await page.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
+    await page.waitForFunction(() => {
+      const shell = document.querySelector(".app-shell");
+      return Boolean(shell && !shell.inert);
+    }, { timeout: 5000 });
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
+    const appPersistence = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const recovery = await repository.loadActive();
+      const project = recovery.project;
+      const backup = repository.readBackup().project;
+      const record = project ? await repository.read("projects", project.project.id) : null;
+      const metadata = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return {
+        backend: recovery.backend,
+        projectName: project?.project.name,
+        backupName: backup?.project.name,
+        recordName: record?.data?.project?.name,
+        activeProjectId: metadata?.value
+      };
+    });
+    assert.equal(appPersistence.projectName, "Las Crónicas de Asteria");
+    assert.equal(appPersistence.recordName, appPersistence.projectName, "The app boot must persist the initial project to IndexedDB.");
+    assert.equal(appPersistence.activeProjectId, "project-asteria");
+    assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
+    process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
     const initialPanel = await page.locator("#details-panel").innerHTML();
     if (!initialPanel.trim()) {
       throw new Error("Initial render diagnostic: " + JSON.stringify({ pageErrors, consoleErrors }));
@@ -755,6 +780,30 @@ async function run() {
     await relationshipImport;
     assert.ok(await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.some((item) => item.id === id), secondRelationship.id));
     process.stdout.write("PASS relationship export/import: IDs and graph survive round-trip.\\n");
+
+    // IndexedDB must restore the app even if the local compatibility backup is absent.
+    const persistedBeforeBackupRemoval = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
+    await page.evaluate(() => localStorage.removeItem("wordwaifu.project.v1"));
+    await page.reload({waitUntil:"networkidle"});
+    await page.waitForFunction(() => {
+      const shell = document.querySelector(".app-shell");
+      return Boolean(shell && !shell.inert);
+    }, { timeout: 5000 });
+    assert.equal(await page.locator("#project-name").innerText(), persistedBeforeBackupRemoval.project.name);
+    const databaseOnlyRecovery = await page.evaluate(async (relationshipId) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const recovered = await repository.loadActive();
+      repository.close();
+      return {
+        backend: recovered.backend,
+        projectId: recovered.project?.project.id,
+        relationshipFound: recovered.project?.relationships?.some((item) => item.id === relationshipId)
+      };
+    }, secondRelationship.id);
+    assert.equal(databaseOnlyRecovery.backend, "indexeddb");
+    assert.equal(databaseOnlyRecovery.projectId, persistedBeforeBackupRemoval.project.id);
+    assert.equal(databaseOnlyRecovery.relationshipFound, true);
+    process.stdout.write("PASS app persistence recovery: IndexedDB restores the current project and relationships without localStorage backup.\\n");
 
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");

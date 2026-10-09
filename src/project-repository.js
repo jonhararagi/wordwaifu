@@ -71,6 +71,17 @@
       }
     }
 
+    saveBackup(project) {
+      if (!isProject(project)) return { written: false, warning: "El proyecto debe contener project.id." };
+      try {
+        if (!this.localStorage) throw new Error("localStorage no está disponible.");
+        this.localStorage.setItem(this.storageKey, JSON.stringify(project));
+        return { written: true, warning: null };
+      } catch (error) {
+        return { written: false, warning: error.message };
+      }
+    }
+
     readBackup() {
       try {
         if (!this.localStorage) return { raw: null, project: null };
@@ -83,13 +94,9 @@
 
     async saveActive(project) {
       if (!isProject(project)) throw new Error("El proyecto debe contener project.id.");
-      let backupWritten = false;
-      let backupError = null;
-      try {
-        if (!this.localStorage) throw new Error("localStorage no está disponible.");
-        this.localStorage.setItem(this.storageKey, JSON.stringify(project));
-        backupWritten = true;
-      } catch (error) { backupError = error; }
+      const backup = this.saveBackup(project);
+      const backupWritten = backup.written;
+      const backupError = backup.warning ? new Error(backup.warning) : null;
 
       try {
         await this.write(project);

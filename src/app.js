@@ -2,6 +2,12 @@
   "use strict";
 
   const STORAGE_KEY = "wordwaifu.project.v1";
+  const repositoryApi = window.WordWaifuProjectRepository;
+  const projectRepository = repositoryApi && typeof repositoryApi.ProjectRepository === "function"
+    ? new repositoryApi.ProjectRepository({ storageKey: STORAGE_KEY })
+    : null;
+  let persistenceQueue = Promise.resolve();
+  let persistenceSequence = 0;
   const titles = {
     atlas: ["Atlas del mundo", "Explorá lugares, encontrá personajes y recorré la historia de tu mundo."],
     characters: ["Personajes", "Fichas conectadas con lugares, relaciones y acontecimientos."],
@@ -50,7 +56,7 @@
     settings: { time: "now" }
   };
 
-  let state = ensureRelationshipStore(loadProject());
+  let state = ensureRelationshipStore(structuredClone(demo));
   let activeView = "atlas";
   let mapMode = "world";
   let selectedLocationId = "loc-asteria";
@@ -100,31 +106,57 @@
   }
 
   function loadProject() {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (parsed && parsed.schemaVersion === 1 && parsed.project && Array.isArray(parsed.locations) && Array.isArray(parsed.characters)) {
-          // Backward compatibility for projects saved before organization records existed.
-          return ensureRelationshipStore({ ...parsed, organizations: Array.isArray(parsed.organizations) ? parsed.organizations : [] });
-        }
-      }
-    } catch (error) {
-      console.warn("No se pudo leer el proyecto local; se usará la demo.", error);
+    const backup = projectRepository ? projectRepository.readBackup() : null;
+    const parsed = backup && backup.project;
+    if (parsed && parsed.schemaVersion === 1 && parsed.project &&
+        Array.isArray(parsed.locations) && Array.isArray(parsed.characters)) {
+      return ensureRelationshipStore({
+        ...parsed,
+        organizations: Array.isArray(parsed.organizations) ? parsed.organizations : [],
+        relationships: Array.isArray(parsed.relationships) ? parsed.relationships : undefined
+      });
     }
     return structuredClone(demo);
   }
 
+  function enqueueRepositoryOperation(operation) {
+    const task = persistenceQueue.catch(() => undefined).then(operation);
+    persistenceQueue = task.catch(() => undefined);
+    return task;
+  }
+
   function saveProject() {
+    const snapshot = structuredClone(state);
+    const sequence = ++persistenceSequence;
+    let backup = { written: false, warning: "ProjectRepository no está disponible." };
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-      $("#save-status").textContent = "Cambios guardados en este navegador";
-      $("#project-name").textContent = state.project.name;
-      return true;
+      if (projectRepository) backup = projectRepository.saveBackup(snapshot);
     } catch (error) {
-      $("#save-status").textContent = "No se pudo guardar: exportá una copia";
-      return false;
+      backup = { written: false, warning: error.message };
     }
+    $("#project-name").textContent = snapshot.project.name;
+    $("#save-status").textContent = "Guardando proyecto…";
+
+    if (!projectRepository) {
+      if (sequence === persistenceSequence) $("#save-status").textContent = "No se pudo guardar: exportá una copia";
+      return Promise.resolve(false);
+    }
+
+    return enqueueRepositoryOperation(() => projectRepository.write(snapshot)).then(() => {
+      if (sequence === persistenceSequence) {
+        $("#save-status").textContent = backup.written
+          ? "Guardado en IndexedDB · copia local disponible"
+          : "Guardado en IndexedDB · respaldo local no disponible";
+      }
+      return true;
+    }).catch(() => {
+      if (sequence === persistenceSequence) {
+        $("#save-status").textContent = backup.written
+          ? "Respaldo local disponible · IndexedDB no disponible"
+          : "No se pudo guardar: exportá una copia";
+      }
+      return Boolean(backup.written);
+    });
   }
 
   function locationById(id) { return state.locations.find((location) => location.id === id); }
@@ -967,6 +999,9 @@
 
   async function importProject(file) {
     if (!file) return;
+    const appShell = document.querySelector(".app-shell");
+    const shellWasInert = Boolean(appShell && appShell.inert);
+    if (appShell) appShell.inert = true;
     try {
       if (file.size > 10 * 1024 * 1024) throw new Error("El archivo supera el límite de 10 MB.");
       const parsed = JSON.parse(await file.text());
@@ -981,9 +1016,18 @@
         throw new Error("El proyecto no supera la validación:\\n" + details + remainder);
       }
 
-      // Persist first. If the storage write fails, the active project remains untouched.
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(validation.project));
-      state = validation.project;
+      // Queue after pending edits; never switch active state before the candidate is saved.
+      const candidate = ensureRelationshipStore({
+        ...validation.project,
+        organizations: Array.isArray(validation.project.organizations) ? validation.project.organizations : [],
+        relationships: Array.isArray(validation.project.relationships) ? validation.project.relationships : undefined
+      });
+      const operationSequence = ++persistenceSequence;
+      const saveReport = await enqueueRepositoryOperation(() => {
+        if (!projectRepository) throw new Error("El repositorio de proyectos no está disponible.");
+        return projectRepository.saveActive(candidate);
+      });
+      state = candidate;
       selectedLocationId = state.locations[0]?.id || null;
       selectedCharacterId = null;
       selectedEventId = null;
@@ -991,12 +1035,18 @@
       selectedRelationshipId = null;
       activeView = "atlas";
       render();
-      $("#save-status").textContent = "Proyecto importado y guardado localmente";
+      $("#save-status").textContent = saveReport.warning
+        ? "Proyecto importado · " + saveReport.warning
+        : saveReport.backend === "indexeddb"
+          ? "Proyecto importado y guardado en IndexedDB"
+          : "Proyecto importado en el respaldo local";
+      if (operationSequence === persistenceSequence) $("#project-name").textContent = state.project.name;
       alert("Proyecto importado correctamente.");
     } catch (error) {
       alert("No se pudo importar: " + error.message);
     } finally {
       $("#import-file").value = "";
+      if (appShell) appShell.inert = shellWasInert;
     }
   }
 
@@ -1137,6 +1187,47 @@
   $$(".command-chips button").forEach((button) => button.addEventListener("click", () => executeCommand(button.dataset.command)));
   $("#global-search").addEventListener("keydown", (event) => { if (event.key === "Escape") { event.target.value = ""; renderDirectory(); } });
 
-  if (!localStorage.getItem(STORAGE_KEY)) saveProject();
-  render();
+  async function initializeApplication() {
+    const appShell = document.querySelector(".app-shell");
+    if (appShell) appShell.inert = true;
+    $("#save-status").textContent = "Recuperando proyecto…";
+    try {
+      if (!projectRepository) throw new Error("El repositorio de proyectos no está disponible.");
+      const recovery = await projectRepository.loadActive();
+      const recoveredProject = recovery.project;
+      state = ensureRelationshipStore(recoveredProject
+        ? {
+            ...structuredClone(recoveredProject),
+            organizations: Array.isArray(recoveredProject.organizations) ? recoveredProject.organizations : [],
+            relationships: Array.isArray(recoveredProject.relationships) ? recoveredProject.relationships : undefined
+          }
+        : structuredClone(demo));
+
+      const normalizedChanged = !recoveredProject || JSON.stringify(state) !== JSON.stringify(recoveredProject);
+      if (normalizedChanged) {
+        const report = await enqueueRepositoryOperation(() => projectRepository.saveActive(state));
+        $("#save-status").textContent = report.warning
+          ? "Proyecto recuperado · " + report.warning
+          : report.backend === "indexeddb"
+            ? "Proyecto recuperado y guardado en IndexedDB"
+            : "Proyecto recuperado desde el respaldo local";
+      } else {
+        $("#save-status").textContent = recovery.warning
+          ? "Proyecto recuperado · " + recovery.warning
+          : recovery.backend === "indexeddb"
+            ? "Proyecto cargado desde IndexedDB"
+            : "Proyecto cargado desde el respaldo local";
+      }
+      render();
+    } catch (error) {
+      state = ensureRelationshipStore(loadProject());
+      render();
+      const saved = await saveProject();
+      if (!saved) $("#save-status").textContent = "Modo de recuperación · exportá una copia: " + error.message;
+    } finally {
+      if (appShell) appShell.inert = false;
+    }
+  }
+
+  initializeApplication();
 })(); 
