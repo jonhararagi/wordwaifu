@@ -139,7 +139,6 @@
       const origin = Array.isArray(location.marker) ? location.marker : [450, 300];
       marker._wordwaifuDrag = { pointerId:event.pointerId,startX:event.clientX,startY:event.clientY,offsetX:origin[0]-point.x,offsetY:origin[1]-point.y,origin,moving:false,current:origin };
       try { marker.setPointerCapture(event.pointerId); } catch { /* Pointer capture is optional. */ }
-      event.preventDefault();
     });
     marker.addEventListener("pointermove", (event) => {
       const drag = marker._wordwaifuDrag;

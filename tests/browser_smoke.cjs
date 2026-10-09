@@ -198,9 +198,9 @@ async function run() {
       marker:[235,255],characters:["wf-test-resident"],events:["wf-test-event"] });
     referenceFixture.characters.push({ id:"wf-test-resident",name:"Habitante de Prueba",age:30,species:"Humana",role:"Habitante",personality:[],
       description:"Personaje vinculado al lugar que se borrará.",motivation:"",flaw:"",
-      locationHistory:[{locationId:targetLocationId,from:"chapter1",to:"now"}],relationships:[],status:"proposal" });
+      locationHistory:[{locationId:targetLocationId,from:"chapter1",to:"chapter5"},{locationId:"wf-test-child-location",from:"chapter5",to:"now"}],relationships:[],status:"proposal" });
     referenceFixture.events.push({ id:"wf-test-event",title:"Evento de Prueba",position:"chapter1",description:"Debe conservarse sin el lugar eliminado.",
-      locationIds:[targetLocationId],characterIds:["wf-test-resident"] });
+      locationIds:[targetLocationId,"wf-test-child-location"],characterIds:["wf-test-resident"] });
     const fixtureImportPromise=page.waitForEvent("dialog");
     const fixtureImportSelection=page.locator("#import-file").setInputFiles({name:"wordwaifu-delete-reference-fixture.json",mimeType:"application/json",buffer:Buffer.from(JSON.stringify(referenceFixture),"utf8")});
     const fixtureImportAlert=await fixtureImportPromise;
@@ -244,8 +244,9 @@ async function run() {
     const finalValidation=validateAndNormalizeProject(finalProject);
     assert.equal(finalValidation.valid,true,finalValidation.errors.join("\n"));
     assert.equal(finalProject.locations.some((item)=>item.id==="wf-test-child-location"&&item.parentId===null),true);
-    assert.equal(finalProject.characters.find((item)=>item.id==="wf-test-resident").locationHistory.length,0);
-    assert.deepEqual(finalProject.events.find((item)=>item.id==="wf-test-event").locationIds,[]);
+    assert.equal(finalProject.characters.find((item)=>item.id==="wf-test-resident").locationHistory.length,1);
+    assert.equal(finalProject.characters.find((item)=>item.id==="wf-test-resident").locationHistory[0].locationId,"wf-test-child-location");
+    assert.deepEqual(finalProject.events.find((item)=>item.id==="wf-test-event").locationIds,["wf-test-child-location"]);
     const finalRoundTripAlertPromise=page.waitForEvent("dialog");
     const finalImportSelection=page.locator("#import-file").setInputFiles(finalPath);
     const finalRoundTripAlert=await finalRoundTripAlertPromise;
