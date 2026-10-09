@@ -523,6 +523,19 @@ async function run() {
     const unrelatedOrganizationId = unrelatedOrganization.id;
     process.stdout.write("PASS organization isolation fixture: unrelated organization exists before deletion.\n");
 
+    // A second organization makes the no-cascade-delete guarantee explicit in this fixture.
+    await page.locator("#add-button").click();
+    await page.locator("#entity-name").fill("Gremio Independiente");
+    await page.locator("#entity-description").fill("Debe sobrevivir a la eliminación de otra organización.");
+    await page.locator("#organization-type").fill("Colectivo");
+    await page.locator("#organization-goals").fill("Conservar sus archivos");
+    await page.locator('#entity-form button[type="submit"]').click();
+    await page.locator("#selected-organization-details h2").getByText("Gremio Independiente").waitFor();
+    const unrelatedOrganization = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.find((item) => item.name === "Gremio Independiente"));
+    assert.ok(unrelatedOrganization);
+    const unrelatedOrganizationId = unrelatedOrganization.id;
+    process.stdout.write("PASS organization isolation fixture: unrelated record exists before deletion.\n");
+
     const organizationIdBeforeEdit = createdOrganization.id;
     await page.locator('[data-organization="' + organizationIdBeforeEdit + '"]').click();
     await page.locator("#edit-organization-button").click();
