@@ -221,4 +221,8 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - El proyecto anterior se guarda/verifica antes de cambiar; el candidato se valida y persiste antes de reemplazar el estado en memoria.
 - Chromium CI PASS: [#37966133138](https://github.com/jonhararagi/wordwaifu/actions/runs/37966133138). Verifica creación, IDs únicos, cambio en ambos sentidos y que Asteria conserva sus cuatro personajes.
 - El primer test detectó un selector DOM singular usado como colección; se corrigió y la última ejecución terminó en PASS.
-- **Subtarea siguiente:** WF-004-B.1.2, borrado seguro y protección del proyecto activo. TIMER: 2–3 horas. El gate completo de WF-004-B.1 sigue PARTIAL.
+- **WF-004-B.1.2 — DONE:** borrado seguro de proyectos con confirmación por ID exacto y protección del activo tanto en UI como dentro de la transacción IndexedDB.
+- **PASS_REAL:** CI [#37988482281](https://github.com/jonhararagi/wordwaifu/actions/runs/37988482281), incluyendo 18 pruebas de esquema, smoke Chromium completo y validación estructural.
+- Chromium confirmó bloqueo del proyecto activo y de candidatos solo en respaldo local; cancelar no borra; al aceptar, solo se elimina el ID objetivo, mientras el ID vecino y Asteria con sus cuatro personajes sobreviven.
+- El gate automatizado de WF-004-B.1 queda cerrado. Prueba manual de Windows 11 sigue NOT_RUN.
+- **Siguiente:** WF-004-B.2, índice maestro multiverso sin mezclar universos. TIMER: 3–5 horas iniciales.
