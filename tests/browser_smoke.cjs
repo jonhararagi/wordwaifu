@@ -206,12 +206,29 @@ async function run() {
       return { projectId, activeId: active?.value || null, characterId: project.characters[0].id };
     }, createdUniverse.id);
     assert.equal(multiverseSearchFixture.activeId, "project-asteria", "The fixture must not change the active project.");
+    const masterSearchApiEvidence = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const report = await repository.searchAcrossProjects("Mira", { entityType: "character" });
+      repository.close();
+      return {
+        complete: report.complete, totalMatches: report.totalMatches,
+        scannedProjects: report.scannedProjects, warning: report.warning,
+        results: report.results.map((item) => ({ projectId: item.projectId, name: item.name, entityId: item.entityId }))
+      };
+    });
+    assert.equal(masterSearchApiEvidence.totalMatches, 2, "Direct multiverse search diagnostic: " + JSON.stringify(masterSearchApiEvidence));
+    assert.equal(masterSearchApiEvidence.complete, true, "Search should be complete before injecting the read error: " + JSON.stringify(masterSearchApiEvidence));
 
     await page.locator("#manage-projects-button").click();
     await page.locator("#master-search-query").fill("Mira");
     await page.locator("#master-search-type").selectOption("character");
     await page.locator("#master-search-button").click();
-    await page.waitForFunction(() => document.querySelectorAll("#master-search-results .master-search-result").length === 2, { timeout: 5000 });
+    await page.waitForFunction(() => {
+      const status = document.querySelector("#master-search-status")?.textContent || "";
+      return status.includes("Búsqueda completa") || status.startsWith("BÚSQUEDA PARCIAL") || status.startsWith("No se pudo consultar");
+    }, null, { timeout: 5000 });
+    const masterSearchUiCount = await page.locator("#master-search-results .master-search-result").count();
+    assert.equal(masterSearchUiCount, 2, "Master search UI result count mismatch; status: " + await page.locator("#master-search-status").innerText());
     const multiverseSearchResults = await page.locator("#master-search-results .master-search-result").evaluateAll((cards) => cards.map((card) => ({
       projectId: card.dataset.projectId, entityId: card.dataset.entityId, entityType: card.dataset.entityType, text: card.textContent
     })));
@@ -239,7 +256,7 @@ async function run() {
     await page.locator("#master-search-query").fill("cartografa");
     await page.locator("#master-search-type").selectOption("character");
     await page.locator("#master-search-button").click();
-    await page.waitForFunction(() => document.querySelectorAll("#master-search-results .master-search-result").length === 1);
+    await page.waitForFunction(() => document.querySelectorAll("#master-search-results .master-search-result").length === 1, null, { timeout: 5000 });
     assert.match(await page.locator("#master-search-results .master-search-result").innerText(), /Mira Solenne/);
     process.stdout.write("PASS master index selected fields: role search is accent-insensitive.\\n");
 
@@ -254,7 +271,7 @@ async function run() {
     await page.locator("#master-search-query").fill("termino-imposible-sin-resultados");
     await page.locator("#master-search-type").selectOption("all");
     await page.locator("#master-search-button").click();
-    await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("0 coincidencia"));
+    await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("0 coincidencia"), null, { timeout: 5000 });
     assert.match(await page.locator("#master-search-results").innerText(), /No se encontraron coincidencias/);
     assert.match(await page.locator("#master-search-status").innerText(), /Búsqueda completa/);
     process.stdout.write("PASS master index empty result: zero matches are reported only after a complete scan.\\n");
@@ -266,7 +283,7 @@ async function run() {
     });
     await page.locator("#master-search-query").fill("Mira");
     await page.locator("#master-search-button").click();
-    await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("BÚSQUEDA PARCIAL"));
+    await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("BÚSQUEDA PARCIAL"), null, { timeout: 5000 });
     const partialMasterResults = await page.locator("#master-search-results .master-search-result").evaluateAll((cards) => cards.map((card) => ({
       projectId: card.dataset.projectId, source: card.dataset.source, text: card.textContent
     })));
