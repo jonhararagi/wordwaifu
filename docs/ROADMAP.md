@@ -9,7 +9,7 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 - [x] Definir el atlas como interfaz distintiva.
 - [x] Definir modelo canónico inicial.
 - [x] Definir fases y criterios generales.
-- [ ] Revisar la documentación y crear el registro de decisiones.
+- [x] Revisar la documentación y consolidar el registro de decisiones.
 
 ## Fase 1 — MVP visual ejecutable
 **Estimación:** 1–2 días.
