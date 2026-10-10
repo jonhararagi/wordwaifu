@@ -829,7 +829,6 @@
       let backupProjectTrashed = false;
       try {
         await this.open();
-        trashReadable = true;
         const metadata = await this.read("metadata", ACTIVE_KEY);
         if (metadata && typeof metadata.value === "string") {
           const tombstone = await this.read("trash", metadata.value);
@@ -844,11 +843,12 @@
         if (backup.project) {
           backupProjectTrashed = Boolean(await this.read("trash", backup.project.project.id));
         }
+        trashReadable = true;
       } catch (error) { dbError = error; }
 
       // A tombstone is authoritative: stale active pointers or compatibility backups
       // must never resurrect a project that has already been moved to trash.
-      if (dbProject && backup.project && !backupProjectTrashed && JSON.stringify(dbProject) !== JSON.stringify(backup.project)) {
+      if (dbProject && backup.project && trashReadable && !backupProjectTrashed && JSON.stringify(dbProject) !== JSON.stringify(backup.project)) {
         try {
           const repaired = await this.saveActive(backup.project);
           return { project: backup.project, backend: repaired.backend, migrated: false, recoveredBackup: true, backupRetained: repaired.backupWritten, warning: repaired.warning };
@@ -857,7 +857,7 @@
         }
       }
       if (dbProject) return { project: dbProject, backend: "indexeddb", migrated: false, recoveredBackup: false, backupRetained: backup.raw !== null };
-      if (backup.project && !(trashReadable && backupProjectTrashed)) {
+      if (backup.project && (!this.db || (trashReadable && !backupProjectTrashed))) {
         try {
           const saved = await this.saveActive(backup.project);
           return { project: backup.project, backend: saved.backend, migrated: saved.backend === "indexeddb", recoveredBackup: false, backupRetained: saved.backupWritten, warning: saved.warning };
