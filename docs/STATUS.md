@@ -40,7 +40,7 @@
 - **CI de esta rama: NOT_RUN.** Las pruebas nuevas se añadieron, pero no se ejecutaron en esta sesión.
 - UI integrada: la acción estándar «Enviar a papelera» conserva datos y snapshots; en Papelera se restaura por ID o se borra permanentemente con confirmación.
 - Cobertura adicional: fallo de limpieza y respaldo malformado mantienen la entrada de papelera; restauración con snapshot inconsistente revierte escrituras parciales; la búsqueda multiverso filtra los IDs en papelera y no debe volver a exponer universos desde respaldos locales residuales.
-- Último commit de código/pruebas/documentación: pendiente de verificación final tras esta actualización.
+- Se añadió una regresión para impedir que la búsqueda multiverso exponga un proyecto en papelera desde un respaldo local residual.
 - Intento previo de dispatch bloqueado: navegador sin sesión autenticada de GitHub.
 - Pendiente: ejecutar GitHub Actions, probar fallos reales de cuota y realizar prueba manual Windows 11.
 
