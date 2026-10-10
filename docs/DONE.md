@@ -1,6 +1,6 @@
 # DONE — WordWaifu · Punto de continuidad
 
-**Resultado de esta sesión: PARTIAL — auditoría de continuidad registrada; gates de código aún pendientes.**  
+**Resultado de esta sesión: PARTIAL — corregidos dos defectos de pruebas; CI de validación del HEAD actual aún en curso.**  
 **Tarea activa:** WF-004-C.3 — papelera y recuperación de universos completos.  
 **Fecha:** 2026-10-10.  
 **Avance global estimado:** 19% de la visión completa; estimación ponderada por alcance, no por líneas de código.
@@ -9,8 +9,9 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama de trabajo: `work/wf-004-c3-project-trash`.
 - `main` permanece en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`; no se modificó.
-- Comparación verificada durante la auditoría: rama de trabajo 220 commits ahead / 0 behind respecto de main antes de los dos commits documentales de esta sesión.
-- Commit documental de estado: [`da533e7`](https://github.com/jonhararagi/wordwaifu/commit/da533e77a96dba5464edbf87125f5b69a2be47e4).
+- Comparación verificada tras las correcciones: rama de trabajo 224 commits ahead / 0 behind respecto de main.
+- Corrección de identificadores de diálogo duplicados: [`eff7f73`](https://github.com/jonhararagi/wordwaifu/commit/eff7f73fe574f9dc40d1e31d94a9f5dfda9c08ab).
+- Corrección de fixture de test (incluye nombre del proyecto): [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1).
 - Este trabajo de WF-004-C.3 no está incluido en el PR #1. [PR #1](https://github.com/jonhararagi/wordwaifu/pull/1) sigue abierto en borrador y no se fusionó.
 - No se realizó ningún cambio en `main`, no se abrió un PR nuevo ni se fusionó nada.
 
@@ -19,7 +20,7 @@
 - Confirmado que `.github/workflows/validate.yml` contiene triggers de push a `main` y `work/**`, PR a `main` y `workflow_dispatch`.
 - Actualizado `docs/STATUS.md` para reflejar la comparación más reciente y mantener explícitos los gates pendientes.
 - La última persistencia de la sesión actualiza este archivo para que sea el punto de reanudación canónico.
-- No se modificó lógica de aplicación ni pruebas de código en esta sesión; no presentar la actualización documental como una corrección funcional.
+- Se modificó únicamente `tests/browser_smoke.cjs`: se renombraron variables locales del bloque de restauración de papelera para evitar redeclaración y se incluyó el nombre del universo en la fixture `createdUniverse`. No se cambió lógica de aplicación.
 
 ## Estado funcional heredado de WF-004-C.3
 - Implementación registrada: migración IndexedDB v2→v3, almacén `trash`, envío reversible, listado, restauración por ID, borrado permanente separado y conservación de snapshots.
@@ -29,16 +30,17 @@
 ## Evidencia y gates
 - **PASS_REAL histórico para WF-004-C.2:** [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita C.3.
 - **PASS_STATIC:** revisión de la configuración del workflow y de la documentación/estructura del contrato.
-- **NOT_RUN / NO CONFIRMADO:** CI para el HEAD actual de C.3; sintaxis, pruebas de esquema, smoke de Chromium y validador estructural de esta revisión.
-- **NOT_RUN:** fallos reales de cuota de almacenamiento y pruebas de abortos transaccionales.
-- **NOT_RUN:** revisión visual/manual en Windows 11.
-- No se afirma que la suite esté verde. La herramienta de consulta disponible no proporcionó una ejecución que confirme el HEAD actual.
+- **PASS_REAL parcial** en run [#38020361524](https://github.com/jonhararagi/wordwaifu/actions/runs/38020361524), HEAD `de061c6`: sintaxis JavaScript y `tests/test_project_schema.cjs` pasaron; el smoke de Chromium seguía en ejecución en la última consulta. Estado final del run: **NO CONFIRMADO**.
+- **FAIL_REAL previo** en [run #38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894): el smoke encontró que `createdUniverse.name` era `undefined`; corregido en `de061c6`.
+- **FAIL_REAL previo** en [run #38020089307](https://github.com/jonhararagi/wordwaifu/actions/runs/38020089307): sintaxis detectó redeclaración de `restoreUiDialog`; corregido en `eff7f73`.
+- **NOT_RUN / PENDIENTE:** validador estructural si el smoke no llega a terminar; fallos reales de cuota y revisión visual/manual en Windows 11.
+- No se afirma que la suite esté verde; mantener WF-004-C.3 como PARTIAL.
 
 ## Próxima tarea y criterios de aceptación
 **WF-004-C.3-VERIFY — validar HEAD exacto antes de cerrar la subtarea.**
 
-1. Inspeccionar el HEAD actual y confirmar que el push del workflow disparó una ejecución para `work/wf-004-c3-project-trash`.
-2. Si no existe run, iniciar GitHub Actions con una sesión autorizada o abrir una PR solo tras autorización explícita.
+1. Consultar el resultado final de [run #38020361524](https://github.com/jonhararagi/wordwaifu/actions/runs/38020361524) para el HEAD `de061c6`.
+2. Si Chromium falla, inspeccionar el log, corregir solo el defecto observado y volver a verificar el HEAD exacto.
 3. Exigir que pasen sintaxis, `tests/test_project_schema.cjs`, smoke de Chromium y `scripts/validate_project.py`.
 4. Añadir/ejecutar pruebas de abortos, cuota y aislamiento del respaldo local de otro universo.
 5. Realizar revisión visual en Windows 11.

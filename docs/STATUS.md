@@ -11,7 +11,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama activa WF-004-C.3: `work/wf-004-c3-project-trash`.
 - `main`: `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
-- Comparación comprobada el 2026-10-10: rama de trabajo **220 commits ahead / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
+- Comparación comprobada el 2026-10-10: rama de trabajo **224 commits ahead / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar. Su head corresponde a otra rama; WF-004-C.3 no forma parte de ese PR.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
@@ -32,11 +32,13 @@
 - Catálogo y búsqueda multiverso filtran IDs en papelera y aplican guardias ante fallos al verificar tombstones.
 - `getProject()` y `activateProject()` incluyen comprobaciones de papelera para evitar resurrección/activación de universos enviados a papelera.
 - Regresiones añadidas para respaldo residual, fallo al leer tombstones y registro residual duplicado.
-- **CI de HEAD actual: NOT_RUN / NO CONFIRMADO.** La integración disponible no aportó evidencia de una ejecución asociada al HEAD actual. Una lista vacía no demuestra que no haya ejecuciones.
-- El workflow incluye push en `work/**`, pero aún no se confirmó una ejecución verde en la rama actual.
+- CI del HEAD previo `eff7f73`: **FAIL_REAL** en el smoke de Chromium porque la fixture de creación omitía el nombre esperado (`createdUniverse.name` era `undefined`); la sintaxis y `tests/test_project_schema.cjs` pasaron.
+- Corrección de test persistida en [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1): la fixture ahora devuelve también el nombre del universo activo.
+- **CI del HEAD actual `de061c6`: IN_PROGRESS / NO GREEN TODAVÍA.** Run [#38020361524](https://github.com/jonhararagi/wordwaifu/actions/runs/38020361524); sintaxis y prueba de esquema pasaron, Chromium smoke continúa en ejecución en la última consulta.
+- El run anterior [#38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894) confirmó que la corrección de identificadores duplicados eliminó el error de sintaxis, pero detectó la aserción de fixture indicada arriba.
 
 ## Gates pendientes — no marcar GREEN
-- Confirmar CI real del HEAD exacto: sintaxis, pruebas de esquema, Chromium y validador estructural.
+- Obtener resultado final del CI del HEAD exacto; exigir sintaxis, pruebas de esquema, Chromium y validador estructural en verde.
 - Probar abortos de transacción y fallos reales de cuota de almacenamiento.
 - Revisar que un respaldo local de otro universo nunca se borre ni sustituya.
 - Realizar revisión visual/manual en Windows 11.
