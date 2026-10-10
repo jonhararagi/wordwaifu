@@ -39,7 +39,7 @@
 - Migración IndexedDB v2→v3 y pruebas del ciclo de papelera añadidas.
 - **CI de esta rama: NOT_RUN.**
 - UI visible integrada: listar papelera, restaurar por ID y borrar permanentemente con confirmación.
-- Pendiente: ejecutar GitHub Actions, probar abortos/cuota y realizar prueba manual Windows 11.
+- Cobertura adicional: fallo simulado al limpiar respaldo local mantiene la entrada de papelera y rechaza borrado permanente.\n- Intento de dispatch bloqueado: navegador sin sesión autenticada de GitHub.\n- Pendiente: ejecutar GitHub Actions, probar abortos/cuota y realizar prueba manual Windows 11.
 
 ## Protocolo
 Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, PR y CI vivos antes de tocar código. Una tarea activa por agente. No tocar `main` ni fusionar PR sin autorización.
