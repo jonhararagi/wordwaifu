@@ -600,7 +600,7 @@
             tx.abort();
             return;
           }
-          trash.add({ projectId, deletedAt: new Date().toISOString(), projectData: projectRecord.data, snapshots });
+          trash.add({ formatVersion: 1, projectId, deletedAt: new Date().toISOString(), projectData: projectRecord.data, snapshots });
           projects.delete(projectId);
           snapshots.forEach((snapshot) => tx.objectStore("snapshots").delete(snapshot.snapshotId));
         };
@@ -615,8 +615,12 @@
       if (!trashed || !isProject(trashed.projectData) || trashed.projectData.project.id !== projectId ||
           (await this.read("projects", projectId))) throw new Error("La verificación posterior al envío a la papelera falló.");
       let backupRemoved = true, warning = null;
-      const backup = this.readBackup().project;
-      if (backup && backup.project.id === projectId) {
+      const backupResult = this.readBackup();
+      const backup = backupResult.project;
+      if (backupResult.error || (backupResult.raw !== null && !backup)) {
+        backupRemoved = false;
+        warning = "El universo está protegido en la papelera, pero existe un respaldo local que no se pudo validar; no se retiró para evitar borrar datos ajenos.";
+      } else if (backup && backup.project.id === projectId) {
         try {
           if (!this.localStorage) throw new Error("localStorage no está disponible.");
           this.localStorage.removeItem(this.storageKey);
@@ -697,8 +701,14 @@
             return;
           }
           // Only remove a compatibility backup after confirming the exact tombstone
-          // exists. A stale backup with a different ID must never be touched.
-          const backup = this.readBackup().project;
+          // exists. An unreadable or malformed backup cannot safely be attributed to an ID.
+          const backupResult = this.readBackup();
+          const backup = backupResult.project;
+          if (backupResult.error || (backupResult.raw !== null && !backup)) {
+            guardError = new Error("No se puede verificar el respaldo local; la entrada de papelera se conserva.");
+            tx.abort();
+            return;
+          }
           if (backup && backup.project.id === projectId) {
             try {
               if (!this.localStorage) throw new Error("localStorage no está disponible.");
