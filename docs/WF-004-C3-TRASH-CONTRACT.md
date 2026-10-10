@@ -1,6 +1,6 @@
 # WF-004-C.3 — Contrato de papelera de universos
 
-Estado: **BACKEND + UI IMPLEMENTED / CI PENDING**  
+Estado: **BACKEND + UI IMPLEMENTED / AUTOMATED CI PASS / MANUAL GATES PENDING**  
 Rama de trabajo: `work/wf-004-c3-project-trash`
 
 ## Objetivo
@@ -45,14 +45,15 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 - [x] Aborto de restauración por snapshot inconsistente: la transacción revierte la escritura del proyecto y los snapshots parciales y conserva la entrada de papelera.
 - [x] Respaldo local malformado: se conserva sin modificar, se informa la advertencia y se bloquea el borrado permanente.
 - [ ] Fallos reales de cuota de almacenamiento aún pendientes; no se simulan como aprobados.
-- [ ] El respaldo local de otro universo nunca se elimina ni se sustituye.
+- [x] El smoke de Chromium verifica que el borrado permanente de un universo en papelera conserva el respaldo local de otro universo; PASS_REAL en CI #38021293453.
 - [x] La búsqueda multiverso filtra los IDs en papelera y no muestra un universo por un respaldo local residual.
 - [x] UI de papelera integrada: la acción normal «Enviar a papelera» mueve el universo de forma reversible; la pantalla Papelera permite restauración por ID y borrado permanente con confirmación.
-- [ ] Chromium CI pasa; inspección visual en Windows queda `NOT_RUN` hasta ejecutarse manualmente.
+- [x] Chromium CI pasa en run [#38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453), asociado al commit [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f); incluye sintaxis, esquema/importación, browser smoke y validador estructural.
+- [ ] Inspección visual manual en Windows queda `NOT_RUN` hasta ejecutarse manualmente.
 
 ## Evidencia y límites
 
-Este documento comenzó como especificación de trabajo. La implementación parcial y sus pruebas se registran a continuación; no se consideran aprobadas hasta ejecutar los gates. La base de referencia auditada reporta WF-004-C.2 con Chromium CI PASS en [run #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869).
+Este documento comenzó como especificación de trabajo. La implementación y los gates automatizados se consideran validados solo en el alcance cubierto por CI; la tarea completa sigue parcial por pruebas de cuota y revisión visual manual pendientes. CI actual: [run #38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453). La base histórica de C.2 fue [run #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869).
 
 ## Implementación parcial registrada
 
@@ -62,10 +63,10 @@ Este documento comenzó como especificación de trabajo. La implementación parc
 - La restauración recupera el ID original y los snapshots; un conflicto de ID no sobrescribe registros existentes.
 - El catálogo y `getProject()` omiten IDs en papelera para evitar que un respaldo local residual los resucite. Si IndexedDB abre pero no se puede leer el almacén `trash`, `listProjects()` falla cerrado. `getProject()` también devuelve `null` si no puede verificar el tombstone del ID solicitado. `activateProject()` valida la existencia del proyecto y la ausencia de tombstone dentro de la misma transacción que modifica `activeProjectId`, y verifica el valor persistido antes de confirmar éxito.
 - La búsqueda multiverso también filtra los tombstones de IndexedDB; si no puede verificar la papelera, omite el respaldo local y devuelve una advertencia en vez de arriesgar la resurrección de un universo.
-- Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. CI todavía no ejecutado.
+- Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. El CI actual ejecutó Chromium smoke y pasó.
 - UI visible integrada en `index.html`/`src/app.js`; la acción normal de catálogo envía a papelera y conserva snapshots, mientras que el borrado irreversible queda separado en la pantalla Papelera. El smoke test cubre el movimiento reversible, restauración y borrado permanente desde la interfaz.
 - Pruebas añadidas para que un borrado permanente de ID ausente no borre respaldos ajenos, para respaldos residuales coincidentes, fallos al retirar respaldos, JSON malformado, rollback atómico por snapshot inconsistente y fallo cerrado del catálogo/recuperación de proyecto si la papelera o el tombstone no pueden leerse.
-- **Pendiente:** ejecutar CI real, añadir cobertura específica de abortos/cuota y realizar prueba visual manual en Windows 11.
+- **Pendiente:** añadir/ejecutar cobertura específica de abortos de transacción y cuota real; realizar prueba visual manual en Windows 11.
 - Intento de dispatch realizado; el navegador conectado no tenía sesión autenticada y no permitió iniciar el workflow. Ver [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/workflows/validate.yml).
 
 La tarea WF-004-C.3 no debe marcarse DONE hasta que la UI y todos los gates anteriores estén implementados y ejecutados.
