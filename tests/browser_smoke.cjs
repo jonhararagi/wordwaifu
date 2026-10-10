@@ -303,7 +303,21 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.deletedProjectB.deleted, true);
     assert.equal(snapshotRepositoryEvidence.snapshotBRemovedWithProject, true);
     assert.equal(snapshotRepositoryEvidence.projectBRemoved, true);
-    process.stdout.write("PASS snapshot migration/API: v1->v2 is non-destructive; per-project isolation, invalid-snapshot rejection, guarded restore, rollback snapshot and selective delete work.\\n");
+    assert.equal(snapshotRepositoryEvidence.activeProjectTrashRejected, true, "The active universe must not be moved to trash.");
+    assert.equal(snapshotRepositoryEvidence.trashMove.moved, true);
+    assert.equal(snapshotRepositoryEvidence.trashListed, true);
+    assert.equal(snapshotRepositoryEvidence.projectCAbsent, true);
+    assert.equal(snapshotRepositoryEvidence.snapshotCAbsentWhileTrashed, true);
+    assert.equal(snapshotRepositoryEvidence.trashRetainsSnapshot, true, "Trash must retain the complete snapshot payload.");
+    assert.equal(snapshotRepositoryEvidence.projectCHiddenFromCatalog, true, "A stale local backup must not resurrect a trashed ID.");
+    assert.equal(snapshotRepositoryEvidence.trashRestore.restored, true);
+    assert.equal(snapshotRepositoryEvidence.projectCRestored, true);
+    assert.equal(snapshotRepositoryEvidence.snapshotCRestored, true);
+    assert.equal(snapshotRepositoryEvidence.trashEntryRemovedOnRestore, true);
+    assert.equal(snapshotRepositoryEvidence.trashAgain.moved, true);
+    assert.equal(snapshotRepositoryEvidence.permanentDelete.permanentlyDeleted, true);
+    assert.equal(snapshotRepositoryEvidence.permanentlyGone, true);
+    process.stdout.write("PASS trash repository: v1->v3 migration, active-project guard, snapshot retention, restore and permanent delete verified.\\n");
 
     // Visible snapshot controls create, restore and delete while preserving the active universe ID.
     await page.locator("#manage-projects-button").click();
