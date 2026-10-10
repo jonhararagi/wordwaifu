@@ -11,7 +11,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama base histórica: `foundation/story-foundry-north-star`.
 - Rama activa de WF-004-C.3: `work/wf-004-c3-project-trash`.
-- Últimos commits de esta sesión: código `bd42dc02c4f2a95cbd0f334c08d1043ba90f6562`; regresión `f14b770bb96d85ecc23f66a1f685a0c2e957fc83`.
+- Últimos commits de esta sesión: protección del catálogo `bd42dc02c4f2a95cbd0f334c08d1043ba90f6562`; protección de `getProject()` `7b5e1e4fa819d1adb8cbedf9ed6d5fd8e87c1d0f`; regresiones `f14b770bb96d85ecc23f66a1f685a0c2e957fc83` y `fbdf5f58067bac40217324a0fcefa69c1be817e5`.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar.
 - `main`: no modificada.
 - Workflows #141–#143: **FAIL_REAL** durante la iteración; se corrigieron carreras de aserciones asíncronas y un ID de proyecto fijo en una prueba.
@@ -41,7 +41,7 @@
 - UI integrada: la acción estándar «Enviar a papelera» conserva datos y snapshots; en Papelera se restaura por ID o se borra permanentemente con confirmación.
 - Cobertura adicional: fallo de limpieza y respaldo malformado mantienen la entrada de papelera; restauración con snapshot inconsistente revierte escrituras parciales; la búsqueda multiverso filtra los IDs en papelera y no debe volver a exponer universos desde respaldos locales residuales.
 - Se añadió una regresión para impedir que la búsqueda multiverso exponga un proyecto en papelera desde un respaldo local residual.
-- El catálogo también falla cerrado si IndexedDB abre pero no puede leerse la papelera; se agregó una prueba de regresión para ese escenario.
+- El catálogo y `getProject()` fallan cerrados si IndexedDB abre pero no puede verificarse la papelera/tombstone; hay pruebas de regresión para impedir que un respaldo residual resucite un universo en ese escenario.
 - Intento previo de dispatch bloqueado: navegador sin sesión autenticada de GitHub.
 - Pendiente: ejecutar GitHub Actions, probar fallos reales de cuota y realizar prueba manual Windows 11.
 
