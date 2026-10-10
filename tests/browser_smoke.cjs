@@ -89,6 +89,24 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+    const assertSnapshotContains = async (entityId, collection, reason) => {
+      const evidence = await page.evaluate(async ({ entityId, collection, reason }) => {
+        const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+        const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+        const summaries = await repository.listSnapshots(project.project.id);
+        const summary = summaries.find((item) => item.reason === reason && item.valid);
+        const snapshot = summary ? await repository.read("snapshots", summary.snapshotId) : null;
+        repository.close();
+        return {
+          exists: Boolean(summary && snapshot),
+          retained: Boolean(snapshot?.data?.[collection]?.some((item) => item.id === entityId))
+        };
+      }, { entityId, collection, reason });
+      assert.equal(evidence.exists, true, "Expected a verified pre-delete snapshot for " + entityId + ".");
+      assert.equal(evidence.retained, true, "The snapshot must preserve the prior " + collection + " record.");
+      process.stdout.write("PASS pre-delete snapshot: " + reason + " preserves " + entityId + ".\\n");
+    };
+
 
     // A successful import must snapshot the previous active project before replacing it.
     const preImportExportPromise = page.waitForEvent("download");
@@ -378,6 +396,15 @@ async function run() {
 
     await page.locator("#manage-projects-button").click();
     await page.locator("#project-list").selectOption(createdUniverse.id);
+    const projectDeletionSnapshotId = await page.evaluate(async (projectId) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const project = await repository.getProject(projectId);
+      const snapshot = await repository.createSnapshot(project, { reason: "project-delete-policy-test" });
+      repository.close();
+      return snapshot.snapshotId;
+    }, createdUniverse.id);
+    assert.ok(projectDeletionSnapshotId, "Precondition: a snapshot exists for the project targeted for deletion.");
+
     assert.equal(await page.locator("#project-delete-button").isDisabled(), true, "The active project must not expose deletion.");
     const activeDeleteGuard = await page.evaluate(async (projectId) => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
@@ -725,6 +752,8 @@ async function run() {
     const acceptProjectDeleteClick = page.locator("#project-delete-button").click();
     const acceptProjectDeleteDialog = await acceptProjectDeletePromise;
     assert.match(acceptProjectDeleteDialog.message(), /Solo se borrará este ID exacto/);
+    assert.match(acceptProjectDeleteDialog.message(), /También se borrarán todas las copias de seguridad/);
+    assert.match(acceptProjectDeleteDialog.message(), /no existe recuperación posterior/);
     await acceptProjectDeleteDialog.accept();
     await acceptProjectDeleteClick;
     await page.waitForFunction((id) => !Array.from(document.querySelector("#project-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
@@ -732,6 +761,7 @@ async function run() {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const catalog = await repository.listProjects();
       const deletedRecord = await repository.read("projects", ids.target);
+      const remainingSnapshots = await repository.listSnapshots(ids.target);
       const neighbor = await repository.getProject(ids.neighbor);
       const active = await repository.read("metadata", "activeProjectId");
       const original = await repository.getProject("project-asteria");
@@ -739,6 +769,7 @@ async function run() {
       return {
         listedTarget: catalog.some((item) => item.projectId === ids.target),
         deletedRecord: Boolean(deletedRecord),
+        remainingSnapshotCount: remainingSnapshots.length,
         neighborId: neighbor?.project.id,
         neighborName: neighbor?.project.name,
         activeId: active?.value,
@@ -747,6 +778,7 @@ async function run() {
     }, { target: createdUniverse.id, neighbor: neighborProject.id });
     assert.equal(afterProjectDelete.listedTarget, false);
     assert.equal(afterProjectDelete.deletedRecord, false);
+    assert.equal(afterProjectDelete.remainingSnapshotCount, 0, "Deleting a project must remove snapshots owned by that ID.");
     assert.equal(afterProjectDelete.neighborId, neighborProject.id, "A similar ID must not be deleted accidentally.");
     assert.equal(afterProjectDelete.neighborName, neighborProject.name);
     assert.equal(afterProjectDelete.activeId, "project-asteria", "Deleting an inactive project must not change the active pointer.");
@@ -1011,6 +1043,7 @@ async function run() {
     await deleteDialog.accept();
     await deleteClick;
     await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.some((item) => item.id === id), targetLocationId, { timeout: 5000 });
+    await assertSnapshotContains(targetLocationId, "locations", "before-delete-location");
 
     const afterDeletion=await page.evaluate(()=>JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterDeletion.locations.some((item)=>item.id===targetLocationId),false);
@@ -1121,21 +1154,7 @@ async function run() {
     await characterDeleteDialog.accept();
     await characterDeleteClick;
     await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.some((item) => item.id === id), "wf-test-resident", { timeout: 5000 });
-    const characterDeleteSnapshot = await page.evaluate(async () => {
-      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
-      const activeProject = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
-      const activeProjectId = activeProject?.project?.id;
-      const summaries = await repository.listSnapshots(activeProjectId);
-      const summary = summaries.find((item) => item.reason === "before-delete-character" && item.valid);
-      const snapshot = summary ? await repository.read("snapshots", summary.snapshotId) : null;
-      repository.close();
-      return {
-        exists: Boolean(summary && snapshot),
-        retainsDeletedCharacter: Boolean(snapshot?.data?.characters?.some((item) => item.id === "wf-test-resident"))
-      };
-    });
-    assert.equal(characterDeleteSnapshot.exists, true, "Character deletion must create a verified snapshot first.");
-    assert.equal(characterDeleteSnapshot.retainsDeletedCharacter, true, "The snapshot must retain the pre-delete character.");
+    await assertSnapshotContains("wf-test-resident", "characters", "before-delete-character");
     assert.equal(characterDeleteDialogType, "confirm", characterDeleteDialogMessage);
     assert.match(characterDeleteDialogMessage, /relación\(es\)/);
     assert.match(characterDeleteDialogMessage, /referencia\(s\) en lugares/);
@@ -1236,6 +1255,7 @@ async function run() {
     await deleteEventDialog.accept();
     await deleteEventClick;
     await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).events.some((item) => item.id === id), eventIdBeforeEdit, { timeout: 5000 });
+    await assertSnapshotContains(eventIdBeforeEdit, "events", "before-delete-event");
     const afterEventDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterEventDelete.events.some((item) => item.id === eventIdBeforeEdit), false);
     assert.equal(afterEventDelete.locations.some((item) => (item.events || []).includes(eventIdBeforeEdit)), false);
@@ -1335,6 +1355,7 @@ async function run() {
     await deleteOrganizationDialog.accept();
     await deleteOrganizationClick;
     await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.some((item) => item.id === id), organizationIdBeforeEdit, { timeout: 5000 });
+    await assertSnapshotContains(organizationIdBeforeEdit, "organizations", "before-delete-organization");
     const afterOrganizationDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterOrganizationDelete.organizations.some((item) => item.id === organizationIdBeforeEdit), false);
     assert.ok(afterOrganizationDelete.organizations.some((item) => item.id === unrelatedOrganizationId), "Unrelated organizations must survive deletion.");
@@ -1440,6 +1461,7 @@ async function run() {
     await deleteRelationshipDialog.accept();
     await deleteRelationshipClick;
     await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.some((item) => item.id === id), relationshipIdBeforeEdit, { timeout: 5000 });
+    await assertSnapshotContains(relationshipIdBeforeEdit, "relationships", "before-delete-relationship");
     const afterRelationshipDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterRelationshipDelete.relationships.some((item) => item.id === relationshipIdBeforeEdit), false);
     assert.ok(afterRelationshipDelete.relationships.some((item) => item.id === secondRelationship.id), "A relation of another type must survive.");
@@ -1620,6 +1642,39 @@ async function run() {
     assert.equal(failedStorageExportProject.project.name, activeNameBeforeRejectedImport);
     assert.ok(failedStorageExportProject.organizations.some((item) => item.name === "Solo en respaldo local"));
     process.stdout.write("PASS export after storage failure: valid active project remains downloadable from memory.\\n");
+
+    const deleteProtectionAtCap = await page.evaluate(async () => {
+      const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      let snapshots = await repository.listSnapshots(project.project.id);
+      while (snapshots.length < 25) {
+        await repository.createSnapshot(project, { reason: "delete-protection-cap-test" });
+        snapshots = await repository.listSnapshots(project.project.id);
+      }
+      repository.close();
+      return { projectId: project.project.id, count: snapshots.length };
+    });
+    assert.equal(deleteProtectionAtCap.count, 25);
+
+    await page.locator('.nav-item[data-view="relationships"]').click();
+    await page.locator('[data-relationship="' + secondRelationship.id + '"]').click();
+    const capDeleteConfirmPromise = page.waitForEvent("dialog");
+    const capDeleteClick = page.locator("#delete-relationship-button").click();
+    const capDeleteConfirm = await capDeleteConfirmPromise;
+    assert.equal(capDeleteConfirm.type(), "confirm");
+    assert.match(capDeleteConfirm.message(), /copia recuperable antes de borrar/);
+    const capDeleteFailurePromise = page.waitForEvent("dialog");
+    await capDeleteConfirm.accept();
+    const capDeleteFailure = await capDeleteFailurePromise;
+    assert.equal(capDeleteFailure.type(), "alert");
+    assert.match(capDeleteFailure.message(), /La eliminación se canceló para proteger el universo/);
+    assert.match(capDeleteFailure.message(), /límite de 25 snapshots/i);
+    await capDeleteFailure.accept();
+    await capDeleteClick;
+    const relationshipPreservedAtCap = await page.evaluate((id) =>
+      JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.some((item) => item.id === id), secondRelationship.id);
+    assert.equal(relationshipPreservedAtCap, true, "A full snapshot store must block a relationship deletion.");
+    process.stdout.write("PASS fail-closed deletion: reaching 25 snapshots preserves the entity and explains the refusal.\\n");
 
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
