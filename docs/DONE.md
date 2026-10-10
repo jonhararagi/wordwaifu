@@ -37,3 +37,9 @@ PARTIAL
 5. Actualizar `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md` y sobrescribir este `docs/DONE.md` al cerrar el siguiente ciclo.
 
 **Restricciones:** no tocar `main`, no fusionar PRs, no crear PR nuevo ni cambiar estados de PR sin autorización expresa. Verificar HEAD y CI antes de cualquier escritura.
+
+
+## Actualización 2026-10-10 — plan de verificación
+- Documentado el procedimiento seguro en `docs/WF-004-C3-QUOTA-WINDOWS-TEST-PLAN.md`.
+- Cambio documental solamente. Cuota real y revisión visual/manual Windows 11 siguen pendientes; estado `PARTIAL`.
+- Commit de actualización de STATUS: c16d38c1b7b50d29ad5e537f9ca45454713e593f.
