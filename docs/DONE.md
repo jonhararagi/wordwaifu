@@ -2,7 +2,8 @@ DONE
 
 # WordWaifu · Punto de continuidad
 
-**Última tarea cerrada:** WF-004-C.2 — protección de borrados destructivos y límite de snapshots.\n**Trabajo en curso:** WF-004-C.3 — API de papelera y recuperación (implementación parcial en rama de trabajo).
+**Última tarea cerrada:** WF-004-C.2 — protección de borrados destructivos y límite de snapshots.
+**Trabajo en curso:** WF-004-C.3 — API de papelera y recuperación (implementación parcial en rama de trabajo).
 **Estado de la subtarea:** DONE con CI verde. **WF-004-C en conjunto:** PARTIAL, porque aún no existe papelera para recuperar universos completos.
 **Fecha:** 2026-10-10.
 
@@ -43,7 +44,16 @@ DONE
 ## Progreso global
 **Estimación: 19%** de la visión completa, ponderada por alcance y no por líneas de código ni cobertura. Las protecciones locales principales de snapshots están verificadas automáticamente; papelera, generadores narrativos, Novel Studio completo, Continuity Guard integral e integración con BotImagen siguen pendientes.
 
-## Estado del trabajo WF-004-C.3 (parcial, CI pendiente)\n- Rama de trabajo: `work/wf-004-c3-project-trash`.\n- Migración IndexedDB v2→v3 no destructiva con almacén `trash`.\n- API: `moveProjectToTrash`, `listTrash`, `restoreTrashedProject`, `permanentlyDeleteTrashedProject`.\n- UI visible para listar, restaurar por ID y borrar permanentemente con confirmación.\n- Proyecto y snapshots se conservan por ID; restauración y borrado permanente usan transacciones IndexedDB.\n- Smoke Chromium ampliado con ciclo UI de restauración y borrado permanente, conflicto de ID, preservación de snapshots y límites de respaldo local; pendiente ejecución real en CI.\n- **No declarado GREEN:** CI no se ha ejecutado; revisar fallos de almacenamiento y prueba visual Windows 11.\n\n## Estado WF-004-C.3 (parcial; CI pendiente)
+## Estado del trabajo WF-004-C.3 (parcial, CI pendiente)
+- Rama de trabajo: `work/wf-004-c3-project-trash`.
+- Migración IndexedDB v2→v3 no destructiva con almacén `trash`.
+- API: `moveProjectToTrash`, `listTrash`, `restoreTrashedProject`, `permanentlyDeleteTrashedProject`.
+- UI visible para listar, restaurar por ID y borrar permanentemente con confirmación.
+- Proyecto y snapshots se conservan por ID; restauración y borrado permanente usan transacciones IndexedDB.
+- Smoke Chromium ampliado con ciclo UI de restauración y borrado permanente, conflicto de ID, preservación de snapshots y límites de respaldo local; pendiente ejecución real en CI.
+- **No declarado GREEN:** CI no se ha ejecutado; revisar fallos de almacenamiento y prueba visual Windows 11.
+
+## Estado WF-004-C.3 (parcial; CI pendiente)
 - Rama: `work/wf-004-c3-project-trash`.
 - Migración IndexedDB v2→v3 con almacén `trash`.
 - API de envío, listado, restauración y borrado permanente por ID.
