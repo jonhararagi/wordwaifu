@@ -349,18 +349,42 @@
 
     async activateProject(projectId) {
       if (typeof projectId !== "string" || !projectId.trim()) throw new Error("El ID del proyecto activo no es válido.");
-      const record = await this.read("projects", projectId);
-      if (!record || record.projectId !== projectId || !isProject(record.data) || record.data.project.id !== projectId) {
-        throw new Error("No se puede activar un proyecto que no esté persistido en IndexedDB.");
-      }
       const db = await this.open();
+      let guardError = null;
       await new Promise((resolve, reject) => {
-        const tx = db.transaction("metadata", "readwrite");
-        tx.objectStore("metadata").put({ key: ACTIVE_KEY, value: projectId });
+        // Check project existence and trash tombstone in the same read/write
+        // transaction that changes the active ID, preventing a stale duplicate
+        // project record from activating an item that is already in the trash.
+        const tx = db.transaction(["projects", "metadata", "trash"], "readwrite");
+        const projectRequest = tx.objectStore("projects").get(projectId);
+        const trashRequest = tx.objectStore("trash").get(projectId);
+        let projectReady = false;
+        let trashReady = false;
+        let projectRecord;
+        let trashRecord;
+        const evaluate = () => {
+          if (!projectReady || !trashReady) return;
+          if (trashRecord && trashRecord.projectId === projectId) {
+            guardError = new Error("No se puede activar un universo que está en la papelera.");
+            tx.abort();
+            return;
+          }
+          if (!projectRecord || projectRecord.projectId !== projectId || !isProject(projectRecord.data) ||
+              projectRecord.data.project.id !== projectId) {
+            guardError = new Error("No se puede activar un proyecto que no esté persistido en IndexedDB.");
+            tx.abort();
+            return;
+          }
+          tx.objectStore("metadata").put({ key: ACTIVE_KEY, value: projectId });
+        };
+        projectRequest.onsuccess = () => { projectRecord = projectRequest.result; projectReady = true; evaluate(); };
+        trashRequest.onsuccess = () => { trashRecord = trashRequest.result; trashReady = true; evaluate(); };
         tx.oncomplete = resolve;
-        tx.onerror = () => reject(tx.error || new Error("No se pudo cambiar el proyecto activo."));
-        tx.onabort = () => reject(tx.error || new Error("El cambio de proyecto activo fue cancelado."));
+        tx.onerror = () => reject(guardError || tx.error || new Error("No se pudo cambiar el proyecto activo."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("El cambio de proyecto activo fue cancelado."));
       });
+      const active = await this.read("metadata", ACTIVE_KEY);
+      if (!active || active.value !== projectId) throw new Error("La verificación posterior al cambio de proyecto activo falló.");
       return { projectId, active: true };
     }
 
