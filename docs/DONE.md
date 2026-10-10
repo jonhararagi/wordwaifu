@@ -1,6 +1,6 @@
 # DONE — WordWaifu · Punto de continuidad
 
-**Resultado de esta sesión: PARTIAL — corregidos tres defectos de pruebas; CI del último cambio funcional pendiente de confirmar.**  
+**Resultado de esta sesión: PARTIAL — CI automatizado PASS_REAL; quedan gates de cuota y revisión visual manual.**  
 **Tarea activa:** WF-004-C.3 — papelera y recuperación de universos completos.  
 **Fecha:** 2026-10-10.  
 **Avance global estimado:** 19% de la visión completa; estimación ponderada por alcance, no por líneas de código.
@@ -19,7 +19,7 @@
 - Reconsultadas las ramas, PR abierto, comparación de historia y archivos de continuidad.
 - Confirmado que `.github/workflows/validate.yml` contiene triggers de push a `main` y `work/**`, PR a `main` y `workflow_dispatch`.
 - Actualizado `docs/STATUS.md` para reflejar la comparación más reciente y mantener explícitos los gates pendientes.
-- La última persistencia de la sesión actualiza este archivo para que sea el punto de reanudación canónico.
+- La documentación de continuidad se actualiza para reflejar el resultado CI confirmado y mantener explícitos los gates pendientes.
 - Se corrigió `tests/browser_smoke.cjs`: variables de diálogo únicas, nombre en la fixture `createdUniverse`, y selección explícita del `projectId` exacto antes de restaurar y borrar permanentemente. No se cambió lógica de aplicación.
 
 ## Estado funcional heredado de WF-004-C.3
@@ -30,23 +30,23 @@
 ## Evidencia y gates
 - **PASS_REAL histórico para WF-004-C.2:** [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita C.3.
 - **PASS_STATIC:** revisión de la configuración del workflow y de la documentación/estructura del contrato.
-- **FAIL_REAL** en run [#38020416762](https://github.com/jonhararagi/wordwaifu/actions/runs/38020416762), HEAD `c654510`: sintaxis y esquema pasaron; Chromium agotó el tiempo esperando la desaparición del ID objetivo tras el borrado permanente. El test no seleccionaba el ID exacto tras refrescar la lista; se corrigió en [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7). CI del SHA corregido aún no confirmado.
+- **FAIL_REAL histórico** en run [#38020416762](https://github.com/jonhararagi/wordwaifu/actions/runs/38020416762), HEAD `c654510`: Chromium agotó el tiempo esperando el borrado permanente porque el test no seleccionaba el ID exacto. Corrección en [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7).
+- **PASS_REAL CI actual:** run [#38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453), asociado al commit de cierre [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f). Job `validate` = `success`; nueve etapas finalizaron correctamente, incluyendo sintaxis JS, validación de esquema/importación, Chromium smoke y validador estructural. El código funcional validado corresponde al cambio `a85c737`; `da79c58` solo actualiza documentación.
 - **FAIL_REAL previo** en [run #38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894): el smoke encontró que `createdUniverse.name` era `undefined`; corregido en `de061c6`.
 - **FAIL_REAL previo** en [run #38020089307](https://github.com/jonhararagi/wordwaifu/actions/runs/38020089307): sintaxis detectó redeclaración de `restoreUiDialog`; corregido en `eff7f73`.
-- **NOT_RUN / PENDIENTE:** validador estructural si el smoke no llega a terminar; fallos reales de cuota y revisión visual/manual en Windows 11.
-- No se afirma que la suite esté verde; mantener WF-004-C.3 como PARTIAL.
+- **NOT_RUN / PENDIENTE:** pruebas específicas de fallos reales de cuota y revisión visual/manual en Windows 11. El validador estructural sí pasó en el CI #38021293453.
+- CI automatizado está verde para el código funcional corregido; mantener WF-004-C.3 como PARTIAL hasta superar cuota y revisión manual.
 
 ## Próxima tarea y criterios de aceptación
 **WF-004-C.3-VERIFY — validar HEAD exacto antes de cerrar la subtarea.**
 
-1. Consultar el CI del commit `a85c737` y del HEAD actual, exigiendo sintaxis, `tests/test_project_schema.cjs`, Chromium y `scripts/validate_project.py`.
-2. Si Chromium vuelve a fallar, inspeccionar el log y corregir solo el defecto observado.
-4. Añadir/ejecutar pruebas de abortos, cuota y aislamiento del respaldo local de otro universo.
-5. Realizar revisión visual en Windows 11.
-6. Actualizar `docs/STATUS.md` y sobrescribir este `docs/DONE.md` con SHA, CI y resultados reales.
-7. No tocar `main` ni fusionar sin autorización explícita.
+1. CI automatizado del código funcional corregido confirmado PASS_REAL en run #38021293453.
+2. Añadir/ejecutar pruebas específicas de abortos de transacción y cuota real de almacenamiento.
+3. Realizar revisión visual manual en Windows 11.
+4. Actualizar `docs/STATUS.md` y sobrescribir este `docs/DONE.md` con SHA, CI y resultados reales.
+5. No tocar `main` ni fusionar sin autorización explícita.
 
-**Último cambio funcional:** [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7). Las actualizaciones posteriores son documentación de continuidad; el CI para el HEAD de cierre todavía debe confirmarse.
+**Último cambio funcional:** [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7). **HEAD con CI PASS:** [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f). La actualización de `STATUS.md` de esta sesión es posterior y solo documental; la lógica y las pruebas funcionales no cambiaron.
 
 **Punto de inicio:** `work/wf-004-c3-project-trash`; leer `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`.
 
