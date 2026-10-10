@@ -401,7 +401,7 @@
     if (!confirm(
       "Se eliminará el proyecto «" + projectName + "» (ID: " + projectId + ").\n" +
       "Solo se borrará este ID exacto; otros universos, incluso con nombres parecidos, se conservarán.\n" +
-      "El proyecto activo actual («" + state.project.name + "») no se eliminará. Esta acción no se puede deshacer."
+      "El proyecto activo actual («" + state.project.name + "») no se eliminará. También se borrarán todas las copias de seguridad de este universo; no existe recuperación posterior."
     )) {
       $("#project-list-status").textContent = "Eliminación cancelada. No se borró ningún proyecto.";
       return;
@@ -1291,7 +1291,23 @@
     $("#entity-dialog").showModal();
   }
 
-  function deleteCharacter(id) {
+  async function snapshotBeforeDestructiveAction(reason) {
+    if (!projectRepository || typeof projectRepository.createSnapshot !== "function") {
+      alert("No se puede eliminar todavía: el sistema de respaldos no está disponible.");
+      return false;
+    }
+    try {
+      const snapshot = await projectRepository.createSnapshot(structuredClone(state), { reason });
+      if (!snapshot || !snapshot.valid) throw new Error("El respaldo no pasó la verificación.");
+      return true;
+    } catch (error) {
+      alert("La eliminación se canceló para proteger el universo. No se pudo crear un respaldo verificado: " +
+        error.message + " Revisá el almacenamiento o eliminá una copia antigua si se alcanzó el límite.");
+      return false;
+    }
+  }
+
+  async function deleteCharacter(id) {
     const character = characterById(id);
     if (!character) return;
     const relationCount = state.characters.reduce((count, item) => count + (item.id === id ? 0 : (item.relationships || []).filter((relatedId) => relatedId === id).length), 0);
@@ -1302,9 +1318,10 @@
       relationCount ? relationCount + " relación(es) de otros personajes dejarán de apuntar a esta ficha." : "",
       locationCount ? locationCount + " referencia(s) en lugares se eliminarán." : "",
       eventCount ? eventCount + " referencia(s) en acontecimientos se eliminarán." : "",
-      "Las demás entidades y referencias se conservarán. La operación no se puede deshacer. Exportá una copia antes si querés conservarla."
+      "Las demás entidades y referencias se conservarán. Se creará una copia recuperable antes de borrar; si falla el respaldo, se cancelará la operación."
     ].filter(Boolean).join("\n");
     if (!confirm(summary)) return;
+    if (!(await snapshotBeforeDestructiveAction("before-delete-character"))) return;
     state.characters = state.characters.filter((item) => item.id !== id);
     state.characters.forEach((item) => { item.relationships = (item.relationships || []).filter((relatedId) => relatedId !== id); });
     state.locations.forEach((item) => { item.characters = (item.characters || []).filter((characterId) => characterId !== id); });
@@ -1359,7 +1376,7 @@
     $("#entity-dialog").showModal();
   }
 
-  function deleteOrganization(id) {
+  async function deleteOrganization(id) {
     const organization = (state.organizations || []).find((item) => item.id === id);
     if (!organization) return;
     const leaderCount = (organization.leaderCharacterIds || []).length;
@@ -1370,9 +1387,10 @@
       leaderCount ? leaderCount + " responsable(s) dejarán de figurar en esta organización." : "",
       memberCount ? memberCount + " vínculo(s) de membresía dejarán de figurar en esta organización." : "",
       base ? "La sede " + base.name + " seguirá existiendo." : "",
-      "No se borrará ningún personaje ni lugar. La operación no se puede deshacer; exportá una copia si querés conservarla."
+      "No se borrará ningún personaje ni lugar. Se creará una copia recuperable antes de borrar; si falla el respaldo, se cancelará la operación."
     ].filter(Boolean).join("\n");
     if (!confirm(summary)) return;
+    if (!(await snapshotBeforeDestructiveAction("before-delete-organization"))) return;
     state.organizations = (state.organizations || []).filter((item) => item.id !== id);
     selectedOrganizationId = null;
     activeView = "organizations";
@@ -1399,14 +1417,15 @@
     $("#entity-dialog").showModal();
   }
 
-  function deleteRelationship(id) {
+  async function deleteRelationship(id) {
     const relationship = (state.relationships || []).find((item) => item.id === id);
     if (!relationship) return;
     const source = characterById(relationship.sourceCharacterId);
     const target = characterById(relationship.targetCharacterId);
     if (!confirm("Se eliminará la relación «" + relationship.name + "» entre " +
       (source ? source.name : "un personaje") + " y " + (target ? target.name : "otro personaje") +
-      ". Los dos personajes se conservarán. La operación no se puede deshacer.")) return;
+      ". Los dos personajes se conservarán. Se guardará una copia recuperable antes de borrar.")) return;
+    if (!(await snapshotBeforeDestructiveAction("before-delete-relationship"))) return;
     state.relationships = state.relationships.filter((item) => item.id !== id);
     syncRelationshipProjection();
     selectedRelationshipId = null;
@@ -1416,16 +1435,17 @@
     render();
   }
 
-  function deleteEvent(id) {
+  async function deleteEvent(id) {
     const event = state.events.find((item) => item.id === id);
     if (!event) return;
     const locationCount = state.locations.filter((location) => (location.events || []).includes(id) || (event.locationIds || []).includes(location.id)).length;
     const summary = [
       "Se eliminará el acontecimiento \"" + event.title + "\".",
       locationCount ? locationCount + " referencia(s) de lugar dejarán de enlazar este acontecimiento." : "",
-      "Los personajes, ubicaciones y demás acontecimientos se conservarán. La operación no se puede deshacer. Exportá una copia antes si querés conservarla."
+      "Los personajes, ubicaciones y demás acontecimientos se conservarán. Se creará una copia recuperable antes de borrar; si falla el respaldo, se cancelará la operación."
     ].filter(Boolean).join("\n");
     if (!confirm(summary)) return;
+    if (!(await snapshotBeforeDestructiveAction("before-delete-event"))) return;
     state.events = state.events.filter((item) => item.id !== id);
     state.locations.forEach((location) => { location.events = (location.events || []).filter((eventId) => eventId !== id); });
     selectedEventId = null;
@@ -1434,7 +1454,7 @@
     render();
   }
 
-  function deleteLocation(id) {
+  async function deleteLocation(id) {
     const location = locationById(id);
     if (!location) return;
     const children = state.locations.filter((item) => item.parentId === id);
@@ -1445,9 +1465,10 @@
       children.length ? children.length + " ubicación(es) hija(s) pasarán a su ubicación padre." : "",
       historyCount ? historyCount + " entrada(s) de historial de personajes perderán esta ubicación." : "",
       eventCount ? eventCount + " acontecimiento(s) conservarán sus datos, pero dejarán de enlazar este lugar." : "",
-      "La operación no se puede deshacer. Exportá una copia antes si querés conservarla."
+      "Se creará una copia recuperable antes de borrar; si falla el respaldo, se cancelará la operación."
     ].filter(Boolean).join("\n");
     if (!confirm(summary)) return;
+    if (!(await snapshotBeforeDestructiveAction("before-delete-location"))) return;
     const fallbackParentId = location.parentId && location.parentId !== id && locationById(location.parentId) ? location.parentId : null;
     const nextSelectionId = children[0]?.id || state.locations.find((item) => item.id !== id)?.id || null;
     state.locations = state.locations.filter((item) => item.id !== id);
