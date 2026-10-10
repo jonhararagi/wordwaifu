@@ -922,6 +922,7 @@ async function run() {
       const neighbor = await repository.getProject(ids.neighbor);
       const active = await repository.read("metadata", "activeProjectId");
       const original = await repository.getProject("project-asteria");
+      const compatibilityBackup = repository.readBackup().project;
       repository.close();
       return {
         listedTarget: catalog.some((item) => item.projectId === ids.target),
@@ -934,7 +935,10 @@ async function run() {
         neighborId: neighbor?.project.id,
         neighborName: neighbor?.project.name,
         activeId: active?.value,
-        originalCharacterCount: original?.characters?.length
+        originalCharacterCount: original?.characters?.length,
+        compatibilityBackupId: compatibilityBackup?.project?.id,
+        compatibilityBackupName: compatibilityBackup?.project?.name,
+        compatibilityBackupCharacters: compatibilityBackup?.characters?.length
       };
     }, { target: createdUniverse.id, neighbor: neighborProject.id });
     assert.equal(afterProjectDelete.listedTarget, false);
@@ -948,7 +952,10 @@ async function run() {
     assert.equal(afterProjectDelete.neighborName, neighborProject.name);
     assert.equal(afterProjectDelete.activeId, "project-asteria", "Moving an inactive project must not change the active pointer.");
     assert.equal(afterProjectDelete.originalCharacterCount, 4, "The active universe's data must remain intact.");
-    process.stdout.write("PASS project trash action: exact ID moved to trash, snapshots retained, neighbor and active universe preserved.\\n");
+    assert.equal(afterProjectDelete.compatibilityBackupId, "project-asteria", "Moving an unrelated project to trash must preserve the active project's local backup.");
+    assert.equal(afterProjectDelete.compatibilityBackupName, "Las Crónicas de Asteria");
+    assert.equal(afterProjectDelete.compatibilityBackupCharacters, 4, "The unrelated backup must not be replaced with the deleted project's contents.");
+    process.stdout.write("PASS project trash action: exact ID moved to trash, snapshots and unrelated backup retained, neighbor and active universe preserved.\\n");
     await page.locator("#project-close-button").click();
 
     const initialPanel = await page.locator("#details-panel").innerHTML();
@@ -2118,7 +2125,15 @@ async function run() {
     await page.waitForFunction((id) => document.querySelector("#trash-status").textContent.includes("Borrado permanente verificado") &&
       !Array.from(document.querySelectorAll("#trash-list option")).some((option) => option.value === id),
       trashUiSeed.projectId);
-    process.stdout.write("PASS trash UI: list, restore by exact ID, and confirmed permanent deletion.\\n");
+    const backupAfterPermanentDelete = await page.evaluate(() => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const backup = repository.readBackup().project;
+      repository.close();
+      return { projectId: backup?.project?.id, name: backup?.project?.name };
+    });
+    assert.equal(backupAfterPermanentDelete.projectId, "project-asteria", "Permanent deletion of a trashed universe must preserve a backup owned by another universe.");
+    assert.equal(backupAfterPermanentDelete.name, "Las Crónicas de Asteria");
+    process.stdout.write("PASS trash UI: list, restore by exact ID, permanent deletion, and preservation of an unrelated local backup.\\n");
 
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
