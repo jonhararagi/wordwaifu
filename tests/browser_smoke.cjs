@@ -1119,6 +1119,19 @@ async function run() {
     // Resolve the dialog before assertions so a mismatch cannot strand Chromium.
     await characterDeleteDialog.accept();
     await characterDeleteClick;
+    const characterDeleteSnapshot = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const summaries = await repository.listSnapshots("project-asteria");
+      const summary = summaries.find((item) => item.reason === "before-delete-character" && item.valid);
+      const snapshot = summary ? await repository.read("snapshots", summary.snapshotId) : null;
+      repository.close();
+      return {
+        exists: Boolean(summary && snapshot),
+        retainsDeletedCharacter: Boolean(snapshot?.data?.characters?.some((item) => item.id === "wf-test-resident"))
+      };
+    });
+    assert.equal(characterDeleteSnapshot.exists, true, "Character deletion must create a verified snapshot first.");
+    assert.equal(characterDeleteSnapshot.retainsDeletedCharacter, true, "The snapshot must retain the pre-delete character.");
     assert.equal(characterDeleteDialogType, "confirm", characterDeleteDialogMessage);
     assert.match(characterDeleteDialogMessage, /relación\(es\)/);
     assert.match(characterDeleteDialogMessage, /referencia\(s\) en lugares/);
