@@ -39,7 +39,7 @@
 - Migración IndexedDB v2→v3 y pruebas del ciclo de papelera añadidas.
 - **CI de esta rama: NOT_RUN.**
 - UI integrada: la acción estándar «Enviar a papelera» conserva datos y snapshots; en Papelera se restaura por ID o se borra permanentemente con confirmación.
-- Cobertura adicional: fallo simulado al limpiar respaldo local mantiene la entrada de papelera y rechaza borrado permanente.\n- Intento de dispatch bloqueado: navegador sin sesión autenticada de GitHub.\n- Pendiente: ejecutar GitHub Actions, probar abortos/cuota y realizar prueba manual Windows 11.
+- Cobertura adicional: fallo de limpieza y respaldo malformado mantienen la entrada de papelera; restauración con snapshot inconsistente revierte escrituras parciales.\n- Intento de dispatch bloqueado: navegador sin sesión autenticada de GitHub.\n- Pendiente: ejecutar GitHub Actions, probar fallos reales de cuota y realizar prueba manual Windows 11.
 
 ## Protocolo
 Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, PR y CI vivos antes de tocar código. Una tarea activa por agente. No tocar `main` ni fusionar PR sin autorización.
