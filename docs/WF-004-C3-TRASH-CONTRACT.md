@@ -44,7 +44,7 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 - [x] Fallo simulado al retirar el respaldo local: la papelera permanece intacta y el borrado permanente se rechaza explícitamente.
 - [ ] Fallos de cuota y abortos de IndexedDB deben probarse por separado; la cobertura actual no sustituye esos escenarios.
 - [ ] El respaldo local de otro universo nunca se elimina ni se sustituye.
-- [x] UI de papelera integrada: listado por ID, restauración con confirmación y borrado permanente con confirmación.
+- [x] UI de papelera integrada: la acción normal «Enviar a papelera» mueve el universo de forma reversible; la pantalla Papelera permite restauración por ID y borrado permanente con confirmación.
 - [ ] Chromium CI pasa; inspección visual en Windows queda `NOT_RUN` hasta ejecutarse manualmente.
 
 ## Evidencia y límites
@@ -59,7 +59,7 @@ Este documento comenzó como especificación de trabajo. La implementación parc
 - La restauración recupera el ID original y los snapshots; un conflicto de ID no sobrescribe registros existentes.
 - El catálogo y `getProject()` omiten IDs en papelera para evitar que un respaldo local residual los resucite.
 - Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. CI todavía no ejecutado.
-- UI visible integrada en `index.html`/`src/app.js`; el smoke test incorpora el ciclo de restauración y borrado permanente desde la interfaz.
+- UI visible integrada en `index.html`/`src/app.js`; la acción normal de catálogo envía a papelera y conserva snapshots, mientras que el borrado irreversible queda separado en la pantalla Papelera. El smoke test cubre el movimiento reversible, restauración y borrado permanente desde la interfaz.
 - Pruebas añadidas para que un borrado permanente de ID ausente no borre respaldos ajenos, y para que se retire un respaldo residual solo cuando coincide exactamente con el ID en papelera.
 - **Pendiente:** ejecutar CI real, añadir cobertura específica de abortos/cuota y realizar prueba visual manual en Windows 11.
 - Intento de dispatch realizado; el navegador conectado no tenía sesión autenticada y no permitió iniciar el workflow. Ver [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/workflows/validate.yml).
