@@ -43,7 +43,7 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 - [ ] Borrado permanente solo afecta al ID confirmado.
 - [ ] Fallos sembrados de transacción/cuota no producen éxito falso ni pérdida parcial.
 - [ ] El respaldo local de otro universo nunca se elimina ni se sustituye.
-- [ ] Chromium CI pasa; inspección visual en Windows queda `NOT_RUN` hasta ejecutarse manualmente.
+- [x] UI de papelera integrada: listado por ID, restauración con confirmación y borrado permanente con confirmación.\n- [ ] Chromium CI pasa; inspección visual en Windows queda `NOT_RUN` hasta ejecutarse manualmente.
 
 ## Evidencia y límites
 
@@ -55,6 +55,6 @@ Este documento es una especificación de trabajo, no evidencia de funcionalidad 
 - La restauración recupera el ID original y los snapshots; un conflicto de ID no sobrescribe registros existentes.
 - El catálogo y `getProject()` omiten IDs en papelera para evitar que un respaldo local residual los resucite.
 - Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. CI todavía no ejecutado.
-- **Pendiente:** UI visible para gestionar la papelera, revisar errores de almacenamiento/casos límite y obtener CI verde.
+- UI visible integrada en `index.html`/`src/app.js`; el smoke test incorpora el ciclo de restauración y borrado permanente desde la interfaz.\n- **Pendiente:** ejecutar CI real, revisar fallos de almacenamiento/casos límite y prueba visual manual en Windows 11.
 
 La tarea WF-004-C.3 no debe marcarse DONE hasta que la UI y todos los gates anteriores estén implementados y ejecutados.
