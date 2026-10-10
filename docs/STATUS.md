@@ -16,7 +16,8 @@
 - Workflow #141: **FAIL_REAL** por carrera asíncrona en prueba de borrado de lugar; corregida con espera explícita.
 - Workflows #142 y #143: **FAIL_REAL** porque la prueba buscaba el snapshot bajo un ID de proyecto fijo que no coincidía con el ID del proyecto importado.
 - Corrección aplicada: la prueba obtiene el ID real del proyecto desde el estado persistido antes de enumerar snapshots.
-- Workflow #144: **IN_PROGRESS** al cerrar esta actualización; es la primera ejecución con esa corrección.
+- Workflow #144: **PASS_REAL** — [ejecución #38008108247](https://github.com/jonhararagi/wordwaifu/actions/runs/38008108247). Chromium smoke test y validación estructural terminaron con éxito tras corregir el ID usado por la prueba.
+- Workflow #145: **IN_PROGRESS**; valida la misma revisión de código junto con los documentos de continuidad actualizados.
 - Prueba manual en Windows 11: **NOT_RUN**.
 
 ## Funcionalidad con evidencia previa
@@ -35,7 +36,7 @@
 
 ## Siguiente tarea activa
 **WF-004-C.2 — Obtener CI verde y cerrar el contrato de snapshots.**
-1. Revisar el workflow #144 y el workflow posterior provocado por esta actualización documental.
+1. Confirmar el resultado del workflow #145 (la ejecución #144 ya está verde) y de cualquier ejecución posterior provocada por cambios documentales.
 2. Corregir cualquier fallo con logs reales; no declarar PASS antes de que el workflow termine con éxito.
 3. Confirmar snapshot de personaje y frontera 25/26.
 4. Mantener el borrado de universo explícitamente irreversible hasta implementar una papelera independiente.
