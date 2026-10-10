@@ -155,6 +155,15 @@ async function run() {
 
       const snapshotA = await repository.createSnapshot(projectA, { reason: "manual-test" });
       const snapshotB = await repository.createSnapshot(projectB, { reason: "isolation-test" });
+      const limitProject = JSON.parse(JSON.stringify(projectA));
+      limitProject.project = { ...limitProject.project, id: "snapshot-project-limit", name: "Universo límite de snapshots" };
+      for (let index = 0; index < 25; index += 1) {
+        await repository.createSnapshot(limitProject, { reason: "limit-test-" + index });
+      }
+      let snapshotLimitRejected = false;
+      try { await repository.createSnapshot(limitProject, { reason: "limit-overflow" }); }
+      catch (error) { snapshotLimitRejected = /límite de 25 snapshots/i.test(error.message); }
+      const limitSnapshots = await repository.listSnapshots(limitProject.project.id);
       const listA = await repository.listSnapshots(projectA.project.id);
       const listB = await repository.listSnapshots(projectB.project.id);
 
@@ -208,6 +217,7 @@ async function run() {
       localStorage.removeItem(storageKey);
       return {
         migration, listAIds: listA.map((item) => item.projectId), listBIds: listB.map((item) => item.projectId),
+        snapshotLimitRejected, limitSnapshotCount: limitSnapshots.length,
         invalidMarked: listAfterInvalid.some((item) => item.snapshotId === invalidSnapshot.snapshotId && !item.valid),
         invalidRestoreRejected,
         restoredDescription: storedA.data.project.description, expectedDescription: projectA.project.description,
@@ -225,6 +235,8 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.migration.nameB, "Universo Snapshot B");
     assert.deepEqual(snapshotRepositoryEvidence.listAIds, ["snapshot-project-a"]);
     assert.deepEqual(snapshotRepositoryEvidence.listBIds, ["snapshot-project-b"]);
+    assert.equal(snapshotRepositoryEvidence.snapshotLimitRejected, true, "The 26th snapshot must be rejected without deleting prior copies.");
+    assert.equal(snapshotRepositoryEvidence.limitSnapshotCount, 25, "The snapshot cap must preserve exactly 25 existing copies.");
     assert.equal(snapshotRepositoryEvidence.invalidMarked, true);
     assert.equal(snapshotRepositoryEvidence.invalidRestoreRejected, true);
     assert.equal(snapshotRepositoryEvidence.restoredDescription, snapshotRepositoryEvidence.expectedDescription);
@@ -1107,6 +1119,19 @@ async function run() {
     // Resolve the dialog before assertions so a mismatch cannot strand Chromium.
     await characterDeleteDialog.accept();
     await characterDeleteClick;
+    const characterDeleteSnapshot = await page.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const summaries = await repository.listSnapshots("project-asteria");
+      const summary = summaries.find((item) => item.reason === "before-delete-character" && item.valid);
+      const snapshot = summary ? await repository.read("snapshots", summary.snapshotId) : null;
+      repository.close();
+      return {
+        exists: Boolean(summary && snapshot),
+        retainsDeletedCharacter: Boolean(snapshot?.data?.characters?.some((item) => item.id === "wf-test-resident"))
+      };
+    });
+    assert.equal(characterDeleteSnapshot.exists, true, "Character deletion must create a verified snapshot first.");
+    assert.equal(characterDeleteSnapshot.retainsDeletedCharacter, true, "The snapshot must retain the pre-delete character.");
     assert.equal(characterDeleteDialogType, "confirm", characterDeleteDialogMessage);
     assert.match(characterDeleteDialogMessage, /relación\(es\)/);
     assert.match(characterDeleteDialogMessage, /referencia\(s\) en lugares/);
