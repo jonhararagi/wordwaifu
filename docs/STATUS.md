@@ -33,12 +33,12 @@
 - `getProject()` y `activateProject()` incluyen comprobaciones de papelera para evitar resurrección/activación de universos enviados a papelera.
 - Regresiones añadidas para respaldo residual, fallo al leer tombstones y registro residual duplicado.
 - Fallos anteriores documentados: run [#38020089307](https://github.com/jonhararagi/wordwaifu/actions/runs/38020089307) detectó la redeclaración de `restoreUiDialog`, corregida en [`eff7f73`](https://github.com/jonhararagi/wordwaifu/commit/eff7f73fe574f9dc40d1e31d94a9f5dfda9c08ab); run [#38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894) detectó `createdUniverse.name` indefinido, corregido en [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1); run [#38020416762](https://github.com/jonhararagi/wordwaifu/actions/runs/38020416762) detectó timeout en el borrado, corregido en [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7).
-- **CI actual PASS_REAL:** run [#38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453), asociado al HEAD de cierre [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f). El job `validate` terminó `success`; las nueve etapas reportadas finalizaron correctamente: sintaxis, import/schema, instalación Playwright/Chromium, browser smoke y validador estructural.
+- **CI actual PASS_REAL:** run [#38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453), asociado al commit de validación [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f); los commits posteriores solo actualizan documentación. El job `validate` terminó `success`; las nueve etapas reportadas finalizaron correctamente: sintaxis, import/schema, instalación Playwright/Chromium, browser smoke y validador estructural.
 - El smoke de Chromium valida también que la eliminación permanente de un universo en papelera preserve el respaldo local perteneciente a otro universo. Esta prueba pasó en el run anterior.
 - La corrección `a85c737` afecta la selección de IDs de la prueba; no cambió la lógica de aplicación.
 
 ## Gates pendientes — WF-004-C.3 sigue PARTIAL
-- **CI automatizado del HEAD de cierre: PASS_REAL** (run #38021293453, SHA `da79c5801257246730ce7f88085e2a90e37fd02f`).
+- **CI automatizado del código funcional corregido: PASS_REAL** (run #38021293453, commit de validación `da79c5801257246730ce7f88085e2a90e37fd02f`; cambios funcionales en `a85c737`).
 - Añadir/ejecutar pruebas específicas de abortos de transacción y fallos reales de cuota de almacenamiento; todavía no acreditados.
 - Realizar revisión visual/manual en Windows 11; `NOT_RUN`.
 - El smoke de Chromium sí verifica que borrar permanentemente un universo no elimine el respaldo local de otro universo.
