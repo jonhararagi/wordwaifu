@@ -168,6 +168,21 @@
         indexedDbError = error;
       }
 
+      let trashedIds = new Set();
+      let trashReadError = null;
+      if (!indexedDbError) {
+        try {
+          const trashRecords = await this.readAll("trash");
+          trashedIds = new Set(trashRecords
+            .filter((item) => item && typeof item.projectId === "string")
+            .map((item) => item.projectId));
+        } catch (error) {
+          // Do not fall back to a local backup when IndexedDB opened but the
+          // tombstones could not be checked: it could resurrect a trashed project.
+          trashReadError = error;
+        }
+      }
+
       const candidates = new Map();
       let invalidRecordCount = 0;
       if (!indexedDbError) {
@@ -177,6 +192,7 @@
             invalidRecordCount += 1;
             return;
           }
+          if (trashedIds.has(record.projectId)) return;
           const data = record.data;
           const hasMalformedCollection = ["characters", "locations", "events", "organizations", "relationships", "stories"]
             .some((key) => data[key] !== undefined && !Array.isArray(data[key]));
@@ -192,7 +208,8 @@
 
       const backup = this.readBackup();
       let backupAdded = false;
-      if (backup.project && !candidates.has(backup.project.project.id)) {
+      if (backup.project && !trashedIds.has(backup.project.project.id) &&
+          !candidates.has(backup.project.project.id) && !trashReadError) {
         candidates.set(backup.project.project.id, {
           projectId: backup.project.project.id,
           project: backup.project,
@@ -280,9 +297,10 @@
         left.entityType.localeCompare(right.entityType, "es") ||
         left.entityId.localeCompare(right.entityId, "es")
       );
-      const complete = !indexedDbError && invalidRecordCount === 0 && !backup.error;
+      const complete = !indexedDbError && !trashReadError && invalidRecordCount === 0 && !backup.error;
       const warnings = [];
       if (indexedDbError) warnings.push("No se pudo leer IndexedDB (" + indexedDbError.message + "); solo se consultó el respaldo local disponible.");
+      if (trashReadError) warnings.push("No se pudo verificar la papelera (" + trashReadError.message + "); se omitió el respaldo local para evitar recuperar proyectos eliminados.");
       if (invalidRecordCount) warnings.push("Se omitieron o había " + invalidRecordCount + " registro(s) con estructura/metadatos inconsistentes.");
       if (backup.error) warnings.push("No se pudo leer el respaldo local (" + backup.error.message + ").");
       return {
