@@ -683,16 +683,6 @@
 
     async permanentlyDeleteTrashedProject(projectId) {
       if (typeof projectId !== "string" || !projectId.trim()) throw new Error("El ID del proyecto que se quiere borrar permanentemente no es válido.");
-      // A failed earlier cleanup must not let a localStorage backup resurrect the project
-      // after its tombstone is removed. Clean only a backup whose ID matches exactly.
-      const backup = this.readBackup().project;
-      if (backup && backup.project.id === projectId) {
-        if (!this.localStorage) throw new Error("No se puede borrar permanentemente: el respaldo local coincide con el ID y localStorage no está disponible.");
-        this.localStorage.removeItem(this.storageKey);
-        if (this.localStorage.getItem(this.storageKey) !== null) {
-          throw new Error("No se pudo retirar el respaldo local; la entrada de papelera se conserva para evitar que el universo reaparezca.");
-        }
-      }
       const db = await this.open();
       let guardError = null;
       await new Promise((resolve, reject) => {
@@ -705,6 +695,22 @@
             guardError = new Error("El universo ya no está en la papelera.");
             tx.abort();
             return;
+          }
+          // Only remove a compatibility backup after confirming the exact tombstone
+          // exists. A stale backup with a different ID must never be touched.
+          const backup = this.readBackup().project;
+          if (backup && backup.project.id === projectId) {
+            try {
+              if (!this.localStorage) throw new Error("localStorage no está disponible.");
+              this.localStorage.removeItem(this.storageKey);
+              if (this.localStorage.getItem(this.storageKey) !== null) {
+                throw new Error("El respaldo local sigue presente.");
+              }
+            } catch (error) {
+              guardError = new Error("No se pudo retirar el respaldo local; la entrada de papelera se conserva: " + error.message);
+              tx.abort();
+              return;
+            }
           }
           trash.delete(projectId);
         };
