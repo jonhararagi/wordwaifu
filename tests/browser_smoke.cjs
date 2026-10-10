@@ -1123,7 +1123,9 @@ async function run() {
     await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.some((item) => item.id === id), "wf-test-resident", { timeout: 5000 });
     const characterDeleteSnapshot = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
-      const summaries = await repository.listSnapshots("project-asteria");
+      const activeProject = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const activeProjectId = activeProject?.project?.id;
+      const summaries = await repository.listSnapshots(activeProjectId);
       const summary = summaries.find((item) => item.reason === "before-delete-character" && item.valid);
       const snapshot = summary ? await repository.read("snapshots", summary.snapshotId) : null;
       repository.close();
