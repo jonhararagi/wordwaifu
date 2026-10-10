@@ -11,7 +11,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama base histórica: `foundation/story-foundry-north-star`.
 - Rama activa de WF-004-C.3: `work/wf-004-c3-project-trash`.
-- Últimos commits de esta iteración: guardia atómica de activación `6c80626a75b4791db296d47eb7d524608ea8977b`; regresión de activación `d6a4d96c57243bd8ca0bb4a01a1da486894ccb35`; estado `44a6d76b8a24baa347f59720481c63685ef6149c`; contrato `a59949b10c0437bde42ff013beffb6fa30e8eb1d`.
+- Commits de esta iteración: guardia atómica de activación `6c80626a75b4791db296d47eb7d524608ea8977b`; regresión de activación `d6a4d96c57243bd8ca0bb4a01a1da486894ccb35`; contrato `a59949b10c0437bde42ff013beffb6fa30e8eb1d`; actualización más reciente de este estado `b580233d8a40c774c7da91791626b86a722edf58`.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar.
 - `main`: no modificada.
 - Workflows #141–#143: **FAIL_REAL** durante la iteración; se corrigieron carreras de aserciones asíncronas y un ID de proyecto fijo en una prueba.
