@@ -11,7 +11,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama base histórica: `foundation/story-foundry-north-star`.
 - Rama activa de WF-004-C.3: `work/wf-004-c3-project-trash`.
-- Último commit de código/pruebas validado: `b7bcd7702063a65d05438c9ba71bac12c1c2d166`.
+- Últimos commits de esta sesión: código `bd42dc02c4f2a95cbd0f334c08d1043ba90f6562`; regresión `f14b770bb96d85ecc23f66a1f685a0c2e957fc83`.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar.
 - `main`: no modificada.
 - Workflows #141–#143: **FAIL_REAL** durante la iteración; se corrigieron carreras de aserciones asíncronas y un ID de proyecto fijo en una prueba.
@@ -41,6 +41,7 @@
 - UI integrada: la acción estándar «Enviar a papelera» conserva datos y snapshots; en Papelera se restaura por ID o se borra permanentemente con confirmación.
 - Cobertura adicional: fallo de limpieza y respaldo malformado mantienen la entrada de papelera; restauración con snapshot inconsistente revierte escrituras parciales; la búsqueda multiverso filtra los IDs en papelera y no debe volver a exponer universos desde respaldos locales residuales.
 - Se añadió una regresión para impedir que la búsqueda multiverso exponga un proyecto en papelera desde un respaldo local residual.
+- El catálogo también falla cerrado si IndexedDB abre pero no puede leerse la papelera; se agregó una prueba de regresión para ese escenario.
 - Intento previo de dispatch bloqueado: navegador sin sesión autenticada de GitHub.
 - Pendiente: ejecutar GitHub Actions, probar fallos reales de cuota y realizar prueba manual Windows 11.
 
