@@ -246,6 +246,27 @@ async function run() {
       const trashRecord = await repository.read("trash", projectC.project.id);
       const trashRetainsSnapshot = Boolean(trashRecord?.snapshots?.some((item) => item.snapshotId === trashSnapshot.snapshotId));
       const projectCHiddenFromCatalog = !(await repository.listProjects()).some((item) => item.projectId === projectC.project.id);
+      const collisionProject = JSON.parse(JSON.stringify(projectC));
+      collisionProject.project.name = "Colisión que debe conservarse";
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").add({ projectId: collisionProject.project.id, data: collisionProject });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed restoration ID collision."));
+        tx.onabort = () => reject(tx.error || new Error("Restoration collision seed aborted."));
+      });
+      let trashRestoreCollisionRejected = false;
+      try { await repository.restoreTrashedProject(projectC.project.id); }
+      catch (error) { trashRestoreCollisionRejected = /ya existe un proyecto con ese ID/i.test(error.message); }
+      const collisionDataPreserved = (await repository.read("projects", projectC.project.id))?.data?.project?.name === "Colisión que debe conservarse";
+      const trashPreservedAfterCollision = Boolean(await repository.read("trash", projectC.project.id));
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").delete(projectC.project.id);
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not remove restoration collision fixture."));
+        tx.onabort = () => reject(tx.error || new Error("Restoration collision cleanup aborted."));
+      });
       const trashRestore = await repository.restoreTrashedProject(projectC.project.id);
       const projectCRestored = Boolean(await repository.read("projects", projectC.project.id));
       const snapshotCRestored = Boolean(await repository.read("snapshots", trashSnapshot.snapshotId));
@@ -274,6 +295,7 @@ async function run() {
         rollbackSnapshotExists, localBackupMatches, deletedProjectB, snapshotBRemovedWithProject, projectBRemoved,
         activeProjectTrashRejected, trashMove, trashListed: trashList.some((item) => item.projectId === projectC.project.id),
         projectCAbsent, snapshotCAbsentWhileTrashed, trashRetainsSnapshot, projectCHiddenFromCatalog,
+        trashRestoreCollisionRejected, collisionDataPreserved, trashPreservedAfterCollision,
         trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain, permanentDelete, permanentlyGone
       };
     });
@@ -310,6 +332,9 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.snapshotCAbsentWhileTrashed, true);
     assert.equal(snapshotRepositoryEvidence.trashRetainsSnapshot, true, "Trash must retain the complete snapshot payload.");
     assert.equal(snapshotRepositoryEvidence.projectCHiddenFromCatalog, true, "A stale local backup must not resurrect a trashed ID.");
+    assert.equal(snapshotRepositoryEvidence.trashRestoreCollisionRejected, true);
+    assert.equal(snapshotRepositoryEvidence.collisionDataPreserved, true);
+    assert.equal(snapshotRepositoryEvidence.trashPreservedAfterCollision, true);
     assert.equal(snapshotRepositoryEvidence.trashRestore.restored, true);
     assert.equal(snapshotRepositoryEvidence.projectCRestored, true);
     assert.equal(snapshotRepositoryEvidence.snapshotCRestored, true);
