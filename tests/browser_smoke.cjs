@@ -272,6 +272,13 @@ async function run() {
       const snapshotCRestored = Boolean(await repository.read("snapshots", trashSnapshot.snapshotId));
       const trashEntryRemovedOnRestore = !(await repository.read("trash", projectC.project.id));
       const trashAgain = await repository.moveProjectToTrash(projectC.project.id);
+      const unrelatedBackupProject = JSON.parse(JSON.stringify(projectC));
+      unrelatedBackupProject.project = { ...unrelatedBackupProject.project, id: "trash-not-present-" + Date.now().toString(36) };
+      const unrelatedBackupWritten = repository.saveBackup(unrelatedBackupProject).written;
+      let missingTrashRejected = false;
+      try { await repository.permanentlyDeleteTrashedProject(unrelatedBackupProject.project.id); }
+      catch (error) { missingTrashRejected = /ya no está en la papelera/i.test(error.message); }
+      const unrelatedBackupPreserved = repository.readBackup().project?.project?.id === unrelatedBackupProject.project.id;
       // Simulate a stale local backup left behind by an earlier cleanup failure.
       const residualBackupWritten = repository.saveBackup(projectC).written;
       const permanentDelete = await repository.permanentlyDeleteTrashedProject(projectC.project.id);
@@ -299,7 +306,7 @@ async function run() {
         activeProjectTrashRejected, trashMove, trashListed: trashList.some((item) => item.projectId === projectC.project.id),
         projectCAbsent, snapshotCAbsentWhileTrashed, trashRetainsSnapshot, projectCHiddenFromCatalog,
         trashRestoreCollisionRejected, collisionDataPreserved, trashPreservedAfterCollision,
-        trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain, residualBackupWritten, permanentDelete, permanentlyGone, residualBackupRemoved
+        trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain, unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten, permanentDelete, permanentlyGone, residualBackupRemoved
       };
     });
     assert.equal(snapshotRepositoryEvidence.migration.version, 3);
@@ -347,6 +354,9 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.permanentlyGone, true);
     assert.equal(snapshotRepositoryEvidence.residualBackupWritten, true);
     assert.equal(snapshotRepositoryEvidence.residualBackupRemoved, true, "Permanent deletion must remove a stale backup with the exact same project ID.");
+    assert.equal(snapshotRepositoryEvidence.unrelatedBackupWritten, true);
+    assert.equal(snapshotRepositoryEvidence.missingTrashRejected, true);
+    assert.equal(snapshotRepositoryEvidence.unrelatedBackupPreserved, true, "An ID absent from trash must not trigger deletion of any local backup.");
     process.stdout.write("PASS trash repository: v1->v3 migration, active-project guard, snapshot retention, restore and permanent delete verified.\\n");
 
     // Visible snapshot controls create, restore and delete while preserving the active universe ID.
