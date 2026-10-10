@@ -941,6 +941,62 @@ async function run() {
     process.stdout.write("PASS repository recovery: newest local backup repairs stale IndexedDB.\\n");
     process.stdout.write("PASS repository fallback: localStorage works when IndexedDB is unavailable.\\n");
 
+    // A local-storage cleanup failure must never be reported as a permanent delete.
+    const trashFailureReport = await page.evaluate(async () => {
+      const api = window.WordWaifuProjectRepository;
+      const source = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const candidate = JSON.parse(JSON.stringify(source));
+      candidate.project = { ...candidate.project, id: "trash-failure-" + Date.now().toString(36), name: "Universo Respaldo Bloqueado" };
+      const backupMemory = new Map([["trash-failure-backup", JSON.stringify(candidate)]]);
+      const failingStorage = {
+        getItem: (key) => backupMemory.has(key) ? backupMemory.get(key) : null,
+        setItem: (key, value) => backupMemory.set(key, String(value)),
+        removeItem: () => { throw new Error("simulated storage cleanup denial"); }
+      };
+      const databaseName = "wordwaifu.trash-failure-test." + Date.now().toString(36);
+      const repository = new api.ProjectRepository({
+        databaseName,
+        storageKey: "trash-failure-backup",
+        localStorage: failingStorage
+      });
+      const db = await repository.open();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId: candidate.project.id, data: candidate });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed failure-test project."));
+        tx.onabort = () => reject(tx.error || new Error("Failure-test seed aborted."));
+      });
+      const move = await repository.moveProjectToTrash(candidate.project.id);
+      let permanentDeleteRejected = false;
+      try { await repository.permanentlyDeleteTrashedProject(candidate.project.id); }
+      catch (error) { permanentDeleteRejected = /no se pudo retirar el respaldo local/i.test(error.message); }
+      const trashRecord = await repository.read("trash", candidate.project.id);
+      const activeRecord = await repository.read("projects", candidate.project.id);
+      repository.close();
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(databaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Failure-test database cleanup failed."));
+        request.onblocked = () => reject(new Error("Failure-test database cleanup blocked."));
+      });
+      return {
+        moved: move.moved,
+        backupCleanupWarning: !move.backupRemoved && Boolean(move.warning),
+        permanentDeleteRejected,
+        trashRecordPreserved: Boolean(trashRecord),
+        activeRecordRemoved: !activeRecord,
+        backupPreserved: backupMemory.has("trash-failure-backup")
+      };
+    });
+    assert.equal(trashFailureReport.moved, true, "Moving to trash should retain the durable tombstone even if legacy-backup cleanup fails.");
+    assert.equal(trashFailureReport.backupCleanupWarning, true, "Backup cleanup failure must be surfaced as a warning.");
+    assert.equal(trashFailureReport.permanentDeleteRejected, true, "Permanent deletion must reject if a matching backup cannot be removed.");
+    assert.equal(trashFailureReport.trashRecordPreserved, true, "A failed permanent delete must preserve the trash entry.");
+    assert.equal(trashFailureReport.activeRecordRemoved, true);
+    assert.equal(trashFailureReport.backupPreserved, true, "The failing storage fixture must not silently drop the backup.");
+    process.stdout.write("PASS trash failure boundary: backup cleanup denial preserves trash and rejects permanent deletion.\\n");
+
     const forestMarker = page.locator('g.map-marker[data-location="loc-velado"]').first();
     await forestMarker.click();
     const forestSelected = await page.waitForFunction(
