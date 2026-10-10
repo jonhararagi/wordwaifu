@@ -272,6 +272,10 @@ async function run() {
       const snapshotCRestored = Boolean(await repository.read("snapshots", trashSnapshot.snapshotId));
       const trashEntryRemovedOnRestore = !(await repository.read("trash", projectC.project.id));
       const trashAgain = await repository.moveProjectToTrash(projectC.project.id);
+      // A stale compatibility backup must not make a trashed universe searchable.
+      const trashedBackupForSearchWritten = repository.saveBackup(projectC).written;
+      const trashSearchReport = await repository.searchAcrossProjects("Mira", { entityType: "character" });
+      const trashedProjectSearchExcluded = !trashSearchReport.results.some((item) => item.projectId === projectC.project.id);
       const unrelatedBackupProject = JSON.parse(JSON.stringify(projectC));
       unrelatedBackupProject.project = { ...unrelatedBackupProject.project, id: "trash-not-present-" + Date.now().toString(36) };
       const unrelatedBackupWritten = repository.saveBackup(unrelatedBackupProject).written;
@@ -306,7 +310,9 @@ async function run() {
         activeProjectTrashRejected, trashMove, trashListed: trashList.some((item) => item.projectId === projectC.project.id),
         projectCAbsent, snapshotCAbsentWhileTrashed, trashRetainsSnapshot, projectCHiddenFromCatalog,
         trashRestoreCollisionRejected, collisionDataPreserved, trashPreservedAfterCollision,
-        trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain, unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten, permanentDelete, permanentlyGone, residualBackupRemoved
+        trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain,
+        trashedBackupForSearchWritten, trashedProjectSearchExcluded, trashSearchComplete: trashSearchReport.complete,
+        unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten, permanentDelete, permanentlyGone, residualBackupRemoved
       };
     });
     assert.equal(snapshotRepositoryEvidence.migration.version, 3);
@@ -350,6 +356,11 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.snapshotCRestored, true);
     assert.equal(snapshotRepositoryEvidence.trashEntryRemovedOnRestore, true);
     assert.equal(snapshotRepositoryEvidence.trashAgain.moved, true);
+    assert.equal(snapshotRepositoryEvidence.trashedBackupForSearchWritten, true);
+    assert.equal(snapshotRepositoryEvidence.trashedProjectSearchExcluded, true,
+      "Multiverse search must not resurrect a trashed project from a stale localStorage backup.");
+    assert.equal(snapshotRepositoryEvidence.trashSearchComplete, true,
+      "Trash filtering should remain complete when the trash store is readable.");
     assert.equal(snapshotRepositoryEvidence.permanentDelete.permanentlyDeleted, true);
     assert.equal(snapshotRepositoryEvidence.permanentlyGone, true);
     assert.equal(snapshotRepositoryEvidence.residualBackupWritten, true);
