@@ -1748,6 +1748,62 @@ async function run() {
     assert.equal(relationshipPreservedAtCap, true, "A full snapshot store must block a relationship deletion.");
     process.stdout.write("PASS fail-closed deletion: reaching 25 snapshots preserves the entity and explains the refusal.\\n");
 
+    // Exercise the actual trash controls, including restore and permanent deletion.
+    const trashUiSeed = await page.evaluate(async () => {
+      const source = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const candidate = JSON.parse(JSON.stringify(source));
+      candidate.project = { ...candidate.project, id: "trash-ui-" + Date.now().toString(36), name: "Universo Papelera UI" };
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const database = await repository.open();
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId: candidate.project.id, data: candidate });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed the inactive UI test project."));
+        tx.onabort = () => reject(tx.error || new Error("UI seed transaction aborted."));
+      });
+      await repository.moveProjectToTrash(candidate.project.id);
+      repository.close();
+      return { projectId: candidate.project.id, name: candidate.project.name };
+    });
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-dialog").waitFor({ state: "visible" });
+    await page.locator("#trash-list option").filter({ hasText: trashUiSeed.projectId }).waitFor();
+    assert.equal(await page.locator("#trash-restore-button").isEnabled(), true);
+    const restoreUiDialog = page.waitForEvent("dialog");
+    const restoreUiClick = page.locator("#trash-restore-button").click();
+    const restoreUiConfirm = await restoreUiDialog;
+    assert.equal(restoreUiConfirm.type(), "confirm");
+    assert.match(restoreUiConfirm.message(), new RegExp(trashUiSeed.projectId));
+    await restoreUiConfirm.accept();
+    await restoreUiClick;
+    await page.waitForFunction((id) => document.querySelector("#trash-status").textContent.includes("Restauración verificada") &&
+      Array.from(document.querySelectorAll("#project-list option")).some((option) => option.value === id),
+      trashUiSeed.projectId);
+    const projectRestoredInCatalog = await page.locator("#project-list option").evaluateAll((options, id) =>
+      options.some((option) => option.value === id), trashUiSeed.projectId);
+    assert.equal(projectRestoredInCatalog, true, "UI restore must return the exact ID to the project catalog.");
+    const moveBackToTrash = await page.evaluate(async (id) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const result = await repository.moveProjectToTrash(id);
+      repository.close();
+      return result.moved;
+    }, trashUiSeed.projectId);
+    assert.equal(moveBackToTrash, true);
+    await page.locator("#trash-refresh-button").click();
+    await page.locator("#trash-list option").filter({ hasText: trashUiSeed.projectId }).waitFor();
+    const permanentUiDialog = page.waitForEvent("dialog");
+    const permanentUiClick = page.locator("#trash-delete-button").click();
+    const permanentUiConfirm = await permanentUiDialog;
+    assert.equal(permanentUiConfirm.type(), "confirm");
+    assert.match(permanentUiConfirm.message(), /no se puede deshacer/i);
+    await permanentUiConfirm.accept();
+    await permanentUiClick;
+    await page.waitForFunction((id) => document.querySelector("#trash-status").textContent.includes("Borrado permanente verificado") &&
+      !Array.from(document.querySelectorAll("#trash-list option")).some((option) => option.value === id),
+      trashUiSeed.projectId);
+    process.stdout.write("PASS trash UI: list, restore by exact ID, and confirmed permanent deletion.\\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {
