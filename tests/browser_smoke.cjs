@@ -1010,6 +1010,7 @@ async function run() {
     assert.match(deleteDialog.message(),/acontecimiento\(s\)/);
     await deleteDialog.accept();
     await deleteClick;
+    await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.some((item) => item.id === id), targetLocationId, { timeout: 5000 });
 
     const afterDeletion=await page.evaluate(()=>JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterDeletion.locations.some((item)=>item.id===targetLocationId),false);
@@ -1119,6 +1120,7 @@ async function run() {
     // Resolve the dialog before assertions so a mismatch cannot strand Chromium.
     await characterDeleteDialog.accept();
     await characterDeleteClick;
+    await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).characters.some((item) => item.id === id), "wf-test-resident", { timeout: 5000 });
     const characterDeleteSnapshot = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const summaries = await repository.listSnapshots("project-asteria");
@@ -1231,6 +1233,7 @@ async function run() {
     assert.match(deleteEventDialog.message(), /referencia\(s\) de lugar/);
     await deleteEventDialog.accept();
     await deleteEventClick;
+    await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).events.some((item) => item.id === id), eventIdBeforeEdit, { timeout: 5000 });
     const afterEventDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterEventDelete.events.some((item) => item.id === eventIdBeforeEdit), false);
     assert.equal(afterEventDelete.locations.some((item) => (item.events || []).includes(eventIdBeforeEdit)), false);
@@ -1329,6 +1332,7 @@ async function run() {
     assert.match(deleteOrganizationDialog.message(), /No se borrará ningún personaje ni lugar/);
     await deleteOrganizationDialog.accept();
     await deleteOrganizationClick;
+    await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).organizations.some((item) => item.id === id), organizationIdBeforeEdit, { timeout: 5000 });
     const afterOrganizationDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterOrganizationDelete.organizations.some((item) => item.id === organizationIdBeforeEdit), false);
     assert.ok(afterOrganizationDelete.organizations.some((item) => item.id === unrelatedOrganizationId), "Unrelated organizations must survive deletion.");
@@ -1433,6 +1437,7 @@ async function run() {
     assert.match(deleteRelationshipDialog.message(), /Los dos personajes se conservarán/);
     await deleteRelationshipDialog.accept();
     await deleteRelationshipClick;
+    await page.waitForFunction((id) => !JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.some((item) => item.id === id), relationshipIdBeforeEdit, { timeout: 5000 });
     const afterRelationshipDelete = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
     assert.equal(afterRelationshipDelete.relationships.some((item) => item.id === relationshipIdBeforeEdit), false);
     assert.ok(afterRelationshipDelete.relationships.some((item) => item.id === secondRelationship.id), "A relation of another type must survive.");
