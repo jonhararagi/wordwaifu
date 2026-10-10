@@ -167,6 +167,7 @@ async function run() {
         hasSnapshots: database.objectStoreNames.contains("snapshots"),
         hasProjects: database.objectStoreNames.contains("projects"),
         hasMetadata: database.objectStoreNames.contains("metadata"),
+        hasTrash: database.objectStoreNames.contains("trash"),
         nameA: (await repository.read("projects", projectA.project.id))?.data?.project?.name,
         nameB: (await repository.read("projects", projectB.project.id))?.data?.project?.name
       };
@@ -225,6 +226,34 @@ async function run() {
       const snapshotBRemovedWithProject = !(await repository.read("snapshots", snapshotB.snapshotId));
       const projectBRemoved = !(await repository.read("projects", projectB.project.id));
 
+      let activeProjectTrashRejected = false;
+      try { await repository.moveProjectToTrash(projectA.project.id); }
+      catch (error) { activeProjectTrashRejected = /proyecto activo/i.test(error.message); }
+      const projectC = JSON.parse(JSON.stringify(projectA));
+      projectC.project = { ...projectC.project, id: "trash-project-c", name: "Universo Papelera C" };
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").add({ projectId: projectC.project.id, data: projectC });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed project C for trash test."));
+        tx.onabort = () => reject(tx.error || new Error("Project C seed transaction aborted."));
+      });
+      const trashSnapshot = await repository.createSnapshot(projectC, { reason: "trash-retention-test" });
+      const trashMove = await repository.moveProjectToTrash(projectC.project.id);
+      const trashList = await repository.listTrash();
+      const projectCAbsent = !(await repository.read("projects", projectC.project.id));
+      const snapshotCAbsentWhileTrashed = !(await repository.read("snapshots", trashSnapshot.snapshotId));
+      const trashRecord = await repository.read("trash", projectC.project.id);
+      const trashRetainsSnapshot = Boolean(trashRecord?.snapshots?.some((item) => item.snapshotId === trashSnapshot.snapshotId));
+      const projectCHiddenFromCatalog = !(await repository.listProjects()).some((item) => item.projectId === projectC.project.id);
+      const trashRestore = await repository.restoreTrashedProject(projectC.project.id);
+      const projectCRestored = Boolean(await repository.read("projects", projectC.project.id));
+      const snapshotCRestored = Boolean(await repository.read("snapshots", trashSnapshot.snapshotId));
+      const trashEntryRemovedOnRestore = !(await repository.read("trash", projectC.project.id));
+      const trashAgain = await repository.moveProjectToTrash(projectC.project.id);
+      const permanentDelete = await repository.permanentlyDeleteTrashedProject(projectC.project.id);
+      const permanentlyGone = !(await repository.read("trash", projectC.project.id));
+
       repository.close();
       await new Promise((resolve, reject) => {
         const request = indexedDB.deleteDatabase(databaseName);
@@ -242,13 +271,17 @@ async function run() {
         otherProjectUnchanged: storedB.data.project.description === projectB.project.description,
         activeProjectId: active.value, snapshotsAAfterRestore: snapshotsA.length,
         crossProjectDeleteRejected, snapshotBStillExists, deleteResult, snapshotADeleted,
-        rollbackSnapshotExists, localBackupMatches, deletedProjectB, snapshotBRemovedWithProject, projectBRemoved
+        rollbackSnapshotExists, localBackupMatches, deletedProjectB, snapshotBRemovedWithProject, projectBRemoved,
+        activeProjectTrashRejected, trashMove, trashListed: trashList.some((item) => item.projectId === projectC.project.id),
+        projectCAbsent, snapshotCAbsentWhileTrashed, trashRetainsSnapshot, projectCHiddenFromCatalog,
+        trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain, permanentDelete, permanentlyGone
       };
     });
-    assert.equal(snapshotRepositoryEvidence.migration.version, 2);
+    assert.equal(snapshotRepositoryEvidence.migration.version, 3);
     assert.equal(snapshotRepositoryEvidence.migration.hasSnapshots, true);
     assert.equal(snapshotRepositoryEvidence.migration.hasProjects, true);
     assert.equal(snapshotRepositoryEvidence.migration.hasMetadata, true);
+    assert.equal(snapshotRepositoryEvidence.migration.hasTrash, true);
     assert.equal(snapshotRepositoryEvidence.migration.nameA, "Universo Snapshot A");
     assert.equal(snapshotRepositoryEvidence.migration.nameB, "Universo Snapshot B");
     assert.deepEqual(snapshotRepositoryEvidence.listAIds, ["snapshot-project-a"]);
