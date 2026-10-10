@@ -824,17 +824,31 @@
       const backup = this.readBackup();
       let dbProject = null;
       let dbError = null;
+      let trashReadable = false;
+      let activeProjectTrashed = false;
+      let backupProjectTrashed = false;
       try {
         await this.open();
+        trashReadable = true;
         const metadata = await this.read("metadata", ACTIVE_KEY);
         if (metadata && typeof metadata.value === "string") {
-          const storedRecord = await this.read("projects", metadata.value);
-          const candidate = storedRecord && storedRecord.data;
-          if (isProject(candidate)) dbProject = candidate;
+          const tombstone = await this.read("trash", metadata.value);
+          if (tombstone) {
+            activeProjectTrashed = true;
+          } else {
+            const storedRecord = await this.read("projects", metadata.value);
+            const candidate = storedRecord && storedRecord.data;
+            if (isProject(candidate)) dbProject = candidate;
+          }
+        }
+        if (backup.project) {
+          backupProjectTrashed = Boolean(await this.read("trash", backup.project.project.id));
         }
       } catch (error) { dbError = error; }
 
-      if (dbProject && backup.project && JSON.stringify(dbProject) !== JSON.stringify(backup.project)) {
+      // A tombstone is authoritative: stale active pointers or compatibility backups
+      // must never resurrect a project that has already been moved to trash.
+      if (dbProject && backup.project && !backupProjectTrashed && JSON.stringify(dbProject) !== JSON.stringify(backup.project)) {
         try {
           const repaired = await this.saveActive(backup.project);
           return { project: backup.project, backend: repaired.backend, migrated: false, recoveredBackup: true, backupRetained: repaired.backupWritten, warning: repaired.warning };
@@ -843,7 +857,7 @@
         }
       }
       if (dbProject) return { project: dbProject, backend: "indexeddb", migrated: false, recoveredBackup: false, backupRetained: backup.raw !== null };
-      if (backup.project) {
+      if (backup.project && !(trashReadable && backupProjectTrashed)) {
         try {
           const saved = await this.saveActive(backup.project);
           return { project: backup.project, backend: saved.backend, migrated: saved.backend === "indexeddb", recoveredBackup: false, backupRetained: saved.backupWritten, warning: saved.warning };
@@ -851,7 +865,10 @@
           return { project: backup.project, backend: "localStorage", migrated: false, recoveredBackup: false, backupRetained: true, warning: error.message };
         }
       }
-      return { project: null, backend: this.db ? "indexeddb" : "localStorage", migrated: false, recoveredBackup: false, backupRetained: backup.raw !== null, warning: dbError ? dbError.message : (backup.error ? backup.error.message : null) };
+      const trashWarning = activeProjectTrashed || backupProjectTrashed
+        ? "El proyecto está en la papelera; se ignoró el puntero o respaldo local para evitar resucitarlo."
+        : null;
+      return { project: null, backend: this.db ? "indexeddb" : "localStorage", migrated: false, recoveredBackup: false, backupRetained: backup.raw !== null, warning: trashWarning || (dbError ? dbError.message : (backup.error ? backup.error.message : null)) };
     }
 
     close() {
