@@ -2067,13 +2067,13 @@ async function run() {
     await page.locator("#project-dialog").waitFor({ state: "visible" });
     await page.locator("#trash-list option").filter({ hasText: trashUiSeed.projectId }).waitFor();
     assert.equal(await page.locator("#trash-restore-button").isEnabled(), true);
-    const restoreUiDialog = page.waitForEvent("dialog");
-    const restoreUiClick = page.locator("#trash-restore-button").click();
-    const restoreUiConfirm = await restoreUiDialog;
-    assert.equal(restoreUiConfirm.type(), "confirm");
-    assert.match(restoreUiConfirm.message(), new RegExp(trashUiSeed.projectId));
-    await restoreUiConfirm.accept();
-    await restoreUiClick;
+    const trashRestoreDialogPromise = page.waitForEvent("dialog");
+    const trashRestoreClickPromise = page.locator("#trash-restore-button").click();
+    const trashRestoreConfirm = await trashRestoreDialogPromise;
+    assert.equal(trashRestoreConfirm.type(), "confirm");
+    assert.match(trashRestoreConfirm.message(), new RegExp(trashUiSeed.projectId));
+    await trashRestoreConfirm.accept();
+    await trashRestoreClickPromise;
     await page.waitForFunction((id) => document.querySelector("#trash-status").textContent.includes("Restauración verificada") &&
       Array.from(document.querySelectorAll("#project-list option")).some((option) => option.value === id),
       trashUiSeed.projectId);
