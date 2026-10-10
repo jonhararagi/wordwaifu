@@ -268,6 +268,7 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 ### WF-004-C.3 — EN CURSO · Papelera y recuperación de universos completos
 - Implementación parcial en `work/wf-004-c3-project-trash`: borrado reversible por ID estable (soft delete/tombstone), con borrado permanente explícito.
 - Mantener snapshots asociados al universo mientras esté en la papelera; restaurar sin colisionar con otro proyecto de nombre parecido.
-- API IndexedDB y UI visibles implementadas para listar, restaurar y borrar permanentemente; tests de Chromium añadidos para restauración, colisión de ID, conservación de snapshots y coherencia del respaldo local.\n- Pendiente: ejecutar CI, añadir/ejecutar fallos de abort/cuota y prueba manual Windows 11.
+- API IndexedDB y UI visibles implementadas para listar, restaurar y borrar permanentemente; tests de Chromium añadidos para restauración, colisión de ID, conservación de snapshots y coherencia del respaldo local.
+- Pendiente: ejecutar CI, añadir/ejecutar fallos de abort/cuota y prueba manual Windows 11.
 - **TIMER inicial: 3–5 horas**; la rama sigue parcial hasta CI verde y gates restantes.
 - Mantener `main` intacta y PR #1 en borrador hasta autorización expresa.
