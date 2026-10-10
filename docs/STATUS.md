@@ -25,25 +25,26 @@
 - **WF-004-C.1 · PARCIAL:** snapshots versionados, migración IndexedDB v1→v2, restauración con copia previa y respaldo antes de importar.
 - **WF-004-C.2 · DONE / PASS_REAL histórico:** snapshots previos verificados para los cinco tipos de borrado; límite 25/26 validado. Evidencia histórica: [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita cambios posteriores de C.3.
 
-## WF-004-C.3 — Papelera y recuperación (EN CURSO)
-- Migración IndexedDB v2→v3 con almacén `trash`; API de envío, listado, restauración y borrado permanente por ID.
-- UI integra acción reversible, restauración por ID y borrado permanente separado con confirmación.
-- Los snapshots se conservan en la entrada de papelera y vuelven al restaurar.
-- Catálogo y búsqueda multiverso filtran IDs en papelera y aplican guardias ante fallos al verificar tombstones.
-- `getProject()` y `activateProject()` incluyen comprobaciones de papelera para evitar resurrección/activación de universos enviados a papelera.
-- Regresiones añadidas para respaldo residual, fallo al leer tombstones y registro residual duplicado.
-- Fallos anteriores documentados: run [#38020089307](https://github.com/jonhararagi/wordwaifu/actions/runs/38020089307) detectó la redeclaración de `restoreUiDialog`, corregida en [`eff7f73`](https://github.com/jonhararagi/wordwaifu/commit/eff7f73fe574f9dc40d1e31d94a9f5dfda9c08ab); run [#38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894) detectó `createdUniverse.name` indefinido, corregido en [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1); run [#38020416762](https://github.com/jonhararagi/wordwaifu/actions/runs/38020416762) detectó timeout en el borrado, corregido en [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7).
-- **CI actual PASS_REAL:** run [#38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453), asociado al commit de validación [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f); los commits posteriores solo actualizan documentación. El job `validate` terminó `success`; las nueve etapas reportadas finalizaron correctamente: sintaxis, import/schema, instalación Playwright/Chromium, browser smoke y validador estructural.
-- El smoke de Chromium valida también que la eliminación permanente de un universo en papelera preserve el respaldo local perteneciente a otro universo. Esta prueba pasó en el run anterior.
-- La corrección `a85c737` afecta la selección de IDs de la prueba; no cambió la lógica de aplicación.
+## HEAD de código validado más reciente
+- SHA: `327360caa66875becbd11e5563fc2988196553a4`.
+- CI: [#38022402137 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137).
+
+## WF-004-C.3 — Papelera y recuperación (PARTIAL)
+- IndexedDB v2→v3 añade el almacén `trash`; la API y la UI permiten enviar proyectos a la papelera, listar, restaurar por ID y borrar permanentemente con confirmación.
+- El proyecto activo está protegido y se conservan/restauran sus snapshots. El catálogo y la búsqueda multiverso filtran tombstones.
+- **Hardening de esta iteración:** `write(project)` valida el tombstone dentro de la transacción de escritura; `saveActive(project)` consulta la papelera antes de escribir el respaldo local y restaura el respaldo previo si detecta la carrera.
+- Chromium verifica que escribir/guardar un ID en papelera se rechace, que el respaldo no sea sobrescrito y que el respaldo de otro universo sobreviva al movimiento y al borrado permanente.
+- **PASS_STATIC:** sintaxis JavaScript y 18 pruebas de esquema.
+- **PASS_REAL:** [CI #38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137), código probado `327360caa66875becbd11e5563fc2988196553a4`; Chromium smoke y validador estructural en verde.
+- **NOT_RUN:** cuota de almacenamiento realmente agotada y revisión visual/manual en Windows 11.
+- **PARTIAL:** falta cobertura específica de operaciones de papelera con nombres idénticos y IDs distintos.
 
 ## Gates pendientes — WF-004-C.3 sigue PARTIAL
-- **CI automatizado del código funcional corregido: PASS_REAL** (run #38021293453, commit de validación `da79c5801257246730ce7f88085e2a90e37fd02f`; cambios funcionales en `a85c737`).
-- Añadir/ejecutar pruebas específicas de abortos de transacción y fallos reales de cuota de almacenamiento; todavía no acreditados.
-- Realizar revisión visual/manual en Windows 11; `NOT_RUN`.
-- El smoke de Chromium sí verifica que borrar permanentemente un universo no elimine el respaldo local de otro universo.
-- No cerrar WF-004-C.3 hasta superar los gates manuales y de cuota; CI verde no equivale a validación completa.
-
+- [x] CI del HEAD de código probado en verde: sintaxis, 18 pruebas de esquema, Chromium y validación estructural; [#38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137).
+- [x] El respaldo local de otro universo sobrevive al movimiento a papelera y al borrado permanente.
+- [ ] Prueba dedicada de proyectos con el mismo nombre e IDs distintos a través de mover/restaurar/borrar.
+- [ ] Cuota real agotada o limitación del entorno demostrada y documentada; excepciones inyectadas no equivalen a cuota real.
+- [ ] Revisión visual/manual en Windows 11.
 ## Límites conocidos del producto
 - Novel Studio completo, generación narrativa avanzada, Continuity Guard integral e integración con BotImagen siguen pendientes.
 - La inspección visual manual en Windows 11 no está acreditada.

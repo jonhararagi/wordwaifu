@@ -1,6 +1,6 @@
 # WF-004-C.3 — Contrato de papelera de universos
 
-Estado: **BACKEND + UI IMPLEMENTED / AUTOMATED CI PASS / MANUAL GATES PENDING**  
+Estado: **BACKEND + UI IMPLEMENTED / CI PASS (HEAD `327360c`) / MANUAL GATES PENDING**  
 Rama de trabajo: `work/wf-004-c3-project-trash`
 
 ## Objetivo
@@ -34,11 +34,11 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 
 ## Gates de aceptación
 
-- [ ] Migración IndexedDB conserva los datos de instalaciones existentes.
-- [ ] Enviar a papelera un proyecto inactivo mueve proyecto y snapshots de forma atómica.
-- [ ] Intentar enviar a papelera el proyecto activo falla sin mutaciones.
-- [ ] Restaurar recupera el mismo ID, los datos y los snapshots.
-- [ ] Un conflicto de ID rechaza la restauración sin sobrescritura.
+- [x] Migración IndexedDB v1→v3 conserva los stores previos; probada en Chromium CI #38022402137.
+- [x] Enviar a papelera un proyecto inactivo mueve proyecto y snapshots de forma atómica; Chromium CI #38022402137 PASS.
+- [x] Enviar a papelera el proyecto activo falla sin mutaciones; cubierto por la prueba del repositorio.
+- [x] Restaurar recupera el mismo ID, los datos y los snapshots; cubierto por Chromium CI #38022402137.
+- [x] Un conflicto de ID rechaza la restauración sin sobrescritura; la entrada de papelera permanece recuperable.
 - [ ] Proyectos con nombres idénticos permanecen aislados por ID.
 - [x] Borrado permanente solo afecta al ID confirmado; se limpia únicamente un respaldo local con el mismo ID y solo después de validar la entrada de papelera. Un ID ausente no puede borrar respaldos.
 - [x] Fallo simulado al retirar el respaldo local: la papelera permanece intacta y el borrado permanente se rechaza explícitamente.
@@ -53,7 +53,7 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 
 ## Evidencia y límites
 
-Este documento comenzó como especificación de trabajo. La implementación y los gates automatizados se consideran validados solo en el alcance cubierto por CI; la tarea completa sigue parcial por pruebas de cuota y revisión visual manual pendientes. CI actual: [run #38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453). La base histórica de C.2 fue [run #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869).
+El código y las pruebas de esta rama pasan en [CI #38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137). La tarea completa sigue parcial por cuota real, nombres duplicados en operaciones de papelera y revisión visual/manual pendientes. La base histórica de C.2 fue [run #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869).
 
 ## Implementación parcial registrada
 
@@ -63,10 +63,10 @@ Este documento comenzó como especificación de trabajo. La implementación y lo
 - La restauración recupera el ID original y los snapshots; un conflicto de ID no sobrescribe registros existentes.
 - El catálogo y `getProject()` omiten IDs en papelera para evitar que un respaldo local residual los resucite. Si IndexedDB abre pero no se puede leer el almacén `trash`, `listProjects()` falla cerrado. `getProject()` también devuelve `null` si no puede verificar el tombstone del ID solicitado. `activateProject()` valida la existencia del proyecto y la ausencia de tombstone dentro de la misma transacción que modifica `activeProjectId`, y verifica el valor persistido antes de confirmar éxito.
 - La búsqueda multiverso también filtra los tombstones de IndexedDB; si no puede verificar la papelera, omite el respaldo local y devuelve una advertencia en vez de arriesgar la resurrección de un universo.
-- Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. El CI actual ejecutó Chromium smoke y pasó.
+- **PASS_REAL CI #38022402137:** migración v1→v3, envío, conservación de snapshots, restauración, borrado permanente, protección del activo, guardia anti-resurrección en escritura/localStorage, UI y validador estructural.
 - UI visible integrada en `index.html`/`src/app.js`; la acción normal de catálogo envía a papelera y conserva snapshots, mientras que el borrado irreversible queda separado en la pantalla Papelera. El smoke test cubre el movimiento reversible, restauración y borrado permanente desde la interfaz.
 - Pruebas añadidas para que un borrado permanente de ID ausente no borre respaldos ajenos, para respaldos residuales coincidentes, fallos al retirar respaldos, JSON malformado, rollback atómico por snapshot inconsistente y fallo cerrado del catálogo/recuperación de proyecto si la papelera o el tombstone no pueden leerse.
-- **Pendiente:** añadir/ejecutar cobertura específica de abortos de transacción y cuota real; realizar prueba visual manual en Windows 11.
-- Intento de dispatch realizado; el navegador conectado no tenía sesión autenticada y no permitió iniciar el workflow. Ver [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/workflows/validate.yml).
+- **Pendiente:** nombre duplicado con IDs distintos en todas las operaciones de papelera, cuota real agotada y revisión visual/manual en Windows 11.
+- CI ejecutada en GitHub Actions: [#38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137), todas las etapas en PASS.
 
-La tarea WF-004-C.3 no debe marcarse DONE hasta que la UI y todos los gates anteriores estén implementados y ejecutados.
+WF-004-C.3 permanece PARTIAL hasta que se pruebe el aislamiento de nombres duplicados, se valide el comportamiento bajo cuota real y se complete la revisión manual de Windows 11.

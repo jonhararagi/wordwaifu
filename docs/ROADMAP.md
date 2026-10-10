@@ -265,11 +265,11 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - **PASS_STATIC:** 18 pruebas de esquema, sintaxis y estructura del proyecto.
 - **NOT_RUN:** prueba manual visual/usabilidad en Windows 11.
 
-### WF-004-C.3 — EN CURSO · Papelera y recuperación de universos completos
-- Implementación parcial en `work/wf-004-c3-project-trash`: borrado reversible por ID estable (soft delete/tombstone), con borrado permanente explícito.
-- Mantener snapshots asociados al universo mientras esté en la papelera; restaurar sin colisionar con otro proyecto de nombre parecido.
-- API IndexedDB y UI visibles implementadas: el catálogo envía a papelera por defecto, conserva snapshots, y la papelera permite restaurar o borrar permanentemente. Tests de Chromium añadidos para movimiento, restauración, colisión de ID, conservación de snapshots y coherencia del respaldo local.
-- Smoke ampliado con fallos de limpieza, respaldo malformado y rollback atómico por snapshot inconsistente.
-- Pendiente: ejecutar CI, validar límites reales de cuota y prueba manual Windows 11.
-- **TIMER inicial: 3–5 horas**; la rama sigue parcial hasta CI verde y gates restantes.
+### WF-004-C.3 — PARTIAL · Papelera y recuperación de universos completos
+- IndexedDB v2→v3, store `trash`, envío reversible por ID, restauración con snapshots y borrado permanente separado.
+- El guardado está endurecido contra resurrección accidental: `write(project)` lee el tombstone dentro de la transacción, y `saveActive(project)` valida la papelera antes de modificar el respaldo local.
+- Chromium verifica migración, protección del activo, restauración/conflicto de ID, conservación de snapshots, rollback, UI y supervivencia de un respaldo ajeno al mover/borrar permanentemente otro universo.
+- **PASS_REAL CI:** [#38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137), código probado `327360caa66875becbd11e5563fc2988196553a4`; 18 pruebas de esquema, Chromium y validador estructural en verde.
+- Siguen pendientes una prueba dedicada de nombres idénticos, cuota realmente agotada y revisión visual/manual en Windows 11.
+- **TIMER siguiente tarea: 1–2 horas** para los gates restantes.
 - Mantener `main` intacta y PR #1 en borrador hasta autorización expresa.
