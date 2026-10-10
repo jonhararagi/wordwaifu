@@ -9,7 +9,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama de trabajo: `work/wf-004-c3-project-trash`.
 - `main` permanece en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`; no se modificó.
-- Comparación verificada tras las correcciones: rama de trabajo 226 commits ahead / 0 behind respecto de main.
+- Comparación verificada tras las correcciones: rama de trabajo por delante de main / 0 behind respecto de main.
 - Corrección de identificadores de diálogo duplicados: [`eff7f73`](https://github.com/jonhararagi/wordwaifu/commit/eff7f73fe574f9dc40d1e31d94a9f5dfda9c08ab).
 - Corrección de fixture de test (incluye nombre del proyecto): [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1).
 - Este trabajo de WF-004-C.3 no está incluido en el PR #1. [PR #1](https://github.com/jonhararagi/wordwaifu/pull/1) sigue abierto en borrador y no se fusionó.
@@ -46,7 +46,7 @@
 6. Actualizar `docs/STATUS.md` y sobrescribir este `docs/DONE.md` con SHA, CI y resultados reales.
 7. No tocar `main` ni fusionar sin autorización explícita.
 
-**HEAD funcional corregido:** [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7). La documentación de continuidad quedó actualizada después de ese cambio.
+**Último cambio funcional:** [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7). Las actualizaciones posteriores son documentación de continuidad; el CI para el HEAD de cierre todavía debe confirmarse.
 
 **Punto de inicio:** `work/wf-004-c3-project-trash`; leer `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`.
 
