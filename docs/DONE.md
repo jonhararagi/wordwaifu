@@ -2,7 +2,7 @@ DONE
 
 # WordWaifu · Punto de continuidad
 
-**Tarea cerrada:** WF-004-C.2 — protección de borrados destructivos y límite de snapshots.
+**Última tarea cerrada:** WF-004-C.2 — protección de borrados destructivos y límite de snapshots.\n**Trabajo en curso:** WF-004-C.3 — API de papelera y recuperación (implementación parcial en rama de trabajo).
 **Estado de la subtarea:** DONE con CI verde. **WF-004-C en conjunto:** PARTIAL, porque aún no existe papelera para recuperar universos completos.
 **Fecha:** 2026-10-10.
 
@@ -43,5 +43,5 @@ DONE
 ## Progreso global
 **Estimación: 19%** de la visión completa, ponderada por alcance y no por líneas de código ni cobertura. Las protecciones locales principales de snapshots están verificadas automáticamente; papelera, generadores narrativos, Novel Studio completo, Continuity Guard integral e integración con BotImagen siguen pendientes.
 
-## Inicio de la próxima sesión
+## Estado del trabajo WF-004-C.3 (parcial, CI pendiente)\n- Rama de trabajo: `work/wf-004-c3-project-trash`.\n- Migración IndexedDB v2→v3 no destructiva con almacén `trash`.\n- API: `moveProjectToTrash`, `listTrash`, `restoreTrashedProject`, `permanentlyDeleteTrashedProject`.\n- Proyecto y snapshots se conservan por ID; restauración y borrado permanente usan transacciones IndexedDB.\n- Tests de Chromium ampliados para el ciclo de papelera.\n- **No declarado GREEN:** CI no se ha ejecutado; falta UI y revisar pruebas en GitHub Actions.\n\n## Inicio de la próxima sesión
 Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Consultar HEAD, CI y PR vivos antes de escribir. Mantener una tarea activa y no fusionar PR ni tocar `main` sin autorización.
