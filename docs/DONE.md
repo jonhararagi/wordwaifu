@@ -1,49 +1,47 @@
-PARTIAL
+DONE
 
 # WordWaifu · Punto de continuidad
 
-**Tarea:** WF-004-C.2 — protección de borrados destructivos y límite de snapshots.
-**Estado:** PARTIAL. Código añadido; CI ha detectado dos defectos de sincronización/identificación en las pruebas, ambos corregidos. La ejecución #144 está en curso con la última corrección.
-**Fecha:** 2026-10-09.
+**Tarea cerrada:** WF-004-C.2 — protección de borrados destructivos y límite de snapshots.
+**Estado de la subtarea:** DONE con CI verde. **WF-004-C en conjunto:** PARTIAL, porque aún no existe papelera para recuperar universos completos.
+**Fecha:** 2026-10-10.
 
 ## Estado de Git
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama: `foundation/story-foundry-north-star`.
-- Último commit de código/pruebas: `5fc991962c463ece2e9e46d2b40c79838c79b16d`.
-- PR principal: [#1 abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1); no fusionado.
-- `main`: no modificada.
-- Workflow #141: **FAIL_REAL** — la prueba leía localStorage antes de que terminara el borrado asíncrono.
-- Workflow #142 y #143: **FAIL_REAL** — la prueba buscaba el snapshot en un ID fijo, distinto del ID real del proyecto importado.
-- Correcciones: las pruebas esperan el estado persistido y resuelven el ID del universo desde localStorage.
-- Workflow #144: **PASS_REAL**, [CI #38008108247](https://github.com/jonhararagi/wordwaifu/actions/runs/38008108247); Chromium smoke test y validación estructural completaron con éxito.
-- Workflow #145: **IN_PROGRESS** para validar la misma revisión junto con la documentación actualizada.
-- Prueba manual en Windows 11: **NOT_RUN**.
+- HEAD BEFORE de la ampliación final de pruebas: `291bcc703dbfec2c877bfd80ead83632e21f6fb1`.
+- HEAD de código/pruebas validado: `b7bcd7702063a65d05438c9ba71bac12c1c2d166`.
+- CI final de código/pruebas: **PASS_REAL**, [ejecución #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869).
+- PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1); no fusionado ni marcado listo.
+- `main` permanece intacta en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
+- La actualización documental crea un commit posterior al HEAD probado; al reanudar, consultar siempre la rama viva.
 
-## Cambios realizados
-- `src/app.js`: helper `snapshotBeforeDestructiveAction`; los borrados de personajes, lugares, acontecimientos, organizaciones y relaciones guardan/verifican un snapshot antes de mutar el canon. Si falla el respaldo o se alcanza el límite, se cancela el borrado y se informa al usuario.
-- `src/app.js`: el diálogo de borrado de universo aclara que también se eliminarán sus snapshots y que no existe recuperación posterior.
-- `tests/browser_smoke.cjs`: prueba de snapshot anterior al borrado de personaje, límite de 25 snapshots, y esperas explícitas para operaciones asíncronas.
-- `docs/STATUS.md`: estado y fallos observados actualizados.
-- No se cambió el esquema de IndexedDB ni se tocó `main`.
+## Trabajo implementado/verificado
+- Los borrados de personaje, lugar, acontecimiento, organización y relación crean un snapshot verificado antes de modificar el canon. Si falla la creación, la operación se cancela y el usuario recibe el motivo.
+- Chromium comprueba que cada snapshot previo contiene el registro anterior al borrado, y que las referencias sobrevivientes siguen válidas.
+- Límite: 25 snapshots por proyecto. La copia 26 se rechaza sin sobrescribir las anteriores. También se prueba una eliminación real bloqueada por el límite y se confirma que la relación permanece intacta.
+- El borrado de un universo muestra un aviso explícito: elimina todos sus snapshots y no existe recuperación posterior. La prueba crea una copia del universo objetivo, confirma el diálogo, y comprueba que el proyecto y sus snapshots se eliminan juntos mientras los universos vecinos y el activo permanecen intactos.
+- Los fallos previos de CI provenían de leer localStorage antes del fin de una operación asíncrona y de consultar el snapshot usando un ID de proyecto fijo. Se corrigieron con esperas explícitas y la lectura del ID activo. La ejecución final es verde.
 
-## Criterios de aceptación
-1. Snapshot válido conserva el personaje anterior: prueba añadida; CI #144 PASS_REAL; confirmar también el workflow posterior de documentación.
-2. La copia 26 se rechaza y permanecen las 25 existentes: prueba añadida; CI #144 PASS_REAL.
-3. Los borrados de entidades se cancelan si no se puede crear el snapshot.
-4. El borrado de universo informa explícitamente que sus snapshots también se eliminan.
-5. Chromium CI y validación estructural: **PENDING**.
-6. Prueba manual en Windows: **NOT_RUN**.
+## Evidencia
+- **PASS_REAL:** [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869), job completo.
+- **PASS_REAL:** Chromium valida snapshot antes de cada uno de los cinco tipos de borrado, preservación de referencias, borrado del universo más snapshots, límite real y rechazo de borrado al tope.
+- **PASS_STATIC:** 18 pruebas de esquema; sintaxis JavaScript; estructura, enlaces locales e IDs únicos.
+- **FAIL_REAL durante la iteración, corregido:** condiciones de carrera en aserciones asíncronas e ID fijo en la prueba de snapshot. El workflow final pasó.
+- **NOT_RUN:** revisión visual/manual en Windows 11.
 
-## Riesgos y límites
-- No existe papelera para universos completos; eliminarlos sigue siendo irreversible.
-- Al alcanzar 25 snapshots, hay que eliminar una copia antigua antes de realizar un borrado de entidad.
-- No declarar DONE hasta obtener un workflow verde que incluya el test actualizado.
+## Límites pendientes
+- El borrado de un universo completo continúa siendo irreversible. El aviso es explícito y probado, pero no equivale a una papelera.
+- Al llegar a 25 snapshots, hay que borrar una copia antigua desde el gestor antes de ejecutar otro borrado de entidad.
+- La prueba manual en Windows 11 permanece pendiente.
 
-## Próxima acción exacta
-1. Consultar [GitHub Actions](https://github.com/jonhararagi/wordwaifu/actions), confirmar el workflow #145 y revisar cualquier ejecución posterior a cambios de documentación.
-2. Si falla, revisar el log del paso `Run browser smoke test`, corregir la causa y repetir.
-3. Si pasa, registrar el SHA y la URL de la ejecución verde.
-4. Mantener PR #1 en borrador y `main` intacta hasta autorización expresa.
+## Siguiente tarea activa
+**WF-004-C.3 — Papelera y recuperación de universos completos eliminados.**
+
+**TIMER inicial: 3–5 horas.** Inspeccionar el contrato de `deleteProject`, la transacción de IndexedDB y los snapshots; definir borrado reversible por ID con restauración del mismo universo y una política explícita de borrado permanente. Probar que restaurar no afecta universos con nombres similares y que la papelera no confunde IDs.
 
 ## Progreso global
-**Estimación: 19%** de la visión completa, ponderada por alcance y no por líneas de código ni cobertura. El núcleo tiene atlas, CRUD de entidades, catálogo multiverso y snapshots iniciales; Novel Studio, generación narrativa completa, Continuity Guard integral y conexión con BotImagen siguen pendientes.
+**Estimación: 19%** de la visión completa, ponderada por alcance y no por líneas de código ni cobertura. Las protecciones locales principales de snapshots están verificadas automáticamente; papelera, generadores narrativos, Novel Studio completo, Continuity Guard integral e integración con BotImagen siguen pendientes.
+
+## Inicio de la próxima sesión
+Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Consultar HEAD, CI y PR vivos antes de escribir. Mantener una tarea activa y no fusionar PR ni tocar `main` sin autorización.

@@ -33,7 +33,9 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 - [x] Catálogo local por ID, creación de universo con identidad estable y cambio validado entre proyectos (WF-004-B.1.1; Chromium CI #37966133138 PASS).
 - [x] Exportar/importar JSON con validación.
 - [x] Búsqueda e índice maestro de referencias por IDs estables, incluida apertura contextual verificada.
-- [ ] Copias de seguridad versionadas y restauración selectiva; siguiente tarea WF-004-C.1 (TIMER 4–7 horas).
+- [x] Snapshots versionados, restauración protegida y copia previa a importación (WF-004-C.1; CI #38006355845 PASS).
+- [x] Snapshot verificado antes de borrar entidades; límite de 25 por universo; borrado de universo informa y elimina sus snapshots (WF-004-C.2; CI #38008260869 PASS).
+- [ ] Papelera y recuperación de universos completos eliminados (WF-004-C.3; TIMER 3–5 horas).
 - [x] WF-004-B.1.2: eliminación segura de proyectos y protección del proyecto activo (CI #37988482281 PASS).
 
 **Gate:** reiniciar el navegador no pierde el proyecto y exportar/importar conserva las relaciones.
@@ -247,12 +249,25 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - Siguiente: WF-004-C.1, respaldos versionados y restauración segura. TIMER: 4–7 horas.
 
 
-### WF-004-C.1 — PARTIAL · Almacén de snapshots y restauración segura
-- IndexedDB migra de v1 a v2 sin perder `projects` o `metadata`; añade el almacén `snapshots`, índices de proyecto/fecha y límite defensivo de 25 por universo.
-- API de crear/listar/borrar/restaurar con validación estructural y aislamiento por ID; antes de restaurar se genera snapshot `before-restore`, se verifica el resultado y se mantiene la copia local.
-- El gestor de proyectos presenta las copias, permite crear/restaurar/borrar una individualmente con confirmación y bloquea restauración sobre otro universo o un snapshot inválido.
-- La importación válida conserva un snapshot `before-import` antes de reemplazar el proyecto; si el candidato falla, no sustituye la sesión activa.
-- **PASS_REAL:** [Chromium CI #38006355845](https://github.com/jonhararagi/wordwaifu/actions/runs/38006355845); la prueba verificó migración de base v1 real, aislamiento, rollback, fallo de importación y el gestor UI.
-- **NOT_RUN:** prueba visual/manual Windows 11.
-- **Pendiente:** snapshots antes de borrados de entidades, recuperación tras borrar universo, política visible de qué pasa con los snapshots al borrar proyecto, prueba de límite 25 y fallos de capacidad/storage.
-- Siguiente: **WF-004-C.2**, TIMER restante 2–4 horas. Mantener `main` intacta y PR #1 en borrador.
+### WF-004-C.1 — DONE · Almacén de snapshots y restauración segura
+- IndexedDB v1→v2 no destructiva; añade `snapshots` con índices por proyecto/fecha y límite de 25 copias por universo.
+- API para crear/listar/borrar/restaurar; valida el ID propietario, comprueba el contenido y conserva un snapshot `before-restore` antes de aplicar una restauración.
+- El gestor permite crear, restaurar y borrar copias individuales con confirmación; los snapshots se aíslan por `projectId`.
+- Una importación válida crea `before-import`; ante fallo al persistir el candidato, la sesión activa y el respaldo local no se sustituyen.
+- **PASS_REAL:** [Chromium CI #38006355845](https://github.com/jonhararagi/wordwaifu/actions/runs/38006355845).
+
+### WF-004-C.2 — DONE · Protección ante borrados destructivos
+- Antes de borrar personaje, lugar, acontecimiento, organización o relación, la aplicación crea y verifica un snapshot del proyecto. Si falla, la operación se cancela.
+- Se comprueba que cada snapshot previo contiene el registro que después se elimina; así la prueba valida el contenido, no solo la existencia del snapshot.
+- La copia 26 se rechaza cuando ya existen 25 snapshots, sin sobrescribir los anteriores. Una operación de borrado real también se bloquea al alcanzar el límite.
+- El diálogo de borrado de universo explica que todas sus copias de seguridad también se eliminan y que no existe recuperación posterior; la prueba verifica que el ID objetivo y sus snapshots se eliminan, mientras los proyectos vecinos y el proyecto activo sobreviven.
+- **PASS_REAL:** [Chromium CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869), Chromium smoke completo sin errores de página.
+- **PASS_STATIC:** 18 pruebas de esquema, sintaxis y estructura del proyecto.
+- **NOT_RUN:** prueba manual visual/usabilidad en Windows 11.
+
+### WF-004-C.3 — Siguiente · Papelera y recuperación de universos completos
+- Diseñar una política de borrado reversible por ID estable (soft delete/tombstone) con expiración o borrado permanente explícito.
+- Mantener snapshots asociados al universo mientras esté en la papelera; restaurar sin colisionar con otro proyecto de nombre parecido.
+- Verificar borrado, restauración, expiración y aislamiento entre universos mediante IndexedDB y Chromium.
+- **TIMER inicial: 3–5 horas**, recalcular después de inspección.
+- Mantener `main` intacta y PR #1 en borrador hasta autorización expresa.
