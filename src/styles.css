@@ -30,3 +30,10 @@
 
 
 .snapshot-manager{display:grid;gap:10px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#111923}.snapshot-manager h3{margin:5px 0;font-size:15px}.snapshot-manager>p{margin:0}.snapshot-manager select{min-height:105px}.snapshot-manager .project-manager-actions{justify-content:flex-start}.snapshot-manager button:disabled{opacity:.45;cursor:not-allowed}
+
+.project-trash-manager{display:grid;gap:10px;padding:14px;border:1px solid #67434b;border-radius:12px;background:#1c151b}
+.project-trash-manager h3{margin:5px 0;font-size:15px}
+.project-trash-manager>p{margin:0}
+.project-trash-manager select{min-height:96px}
+.project-trash-manager .project-manager-actions{justify-content:flex-start;flex-wrap:wrap}
+.project-trash-manager button:disabled{opacity:.45;cursor:not-allowed}

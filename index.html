@@ -126,8 +126,20 @@
       <label for="project-list">Proyectos guardados</label>
       <select id="project-list" size="6" aria-describedby="project-list-status"></select>
       <p id="project-list-status" class="field-help" role="status">Leyendo el catálogo local…</p>
-      <div class="project-manager-actions"><button type="button" id="project-refresh-button" class="outline-button">Actualizar lista</button><button type="button" id="project-open-button" class="primary-button">Abrir seleccionado</button><button type="button" id="project-delete-button" class="outline-button danger-action" disabled>Eliminar seleccionado</button></div>
-      <p id="project-delete-help" class="field-help" role="status">Seleccioná un proyecto para ver las opciones de borrado.</p>
+      <div class="project-manager-actions"><button type="button" id="project-refresh-button" class="outline-button">Actualizar lista</button><button type="button" id="project-open-button" class="primary-button">Abrir seleccionado</button><button type="button" id="project-delete-button" class="outline-button danger-action" disabled>Mover a papelera</button></div>
+      <p id="project-delete-help" class="field-help" role="status">Seleccioná un proyecto para moverlo a la papelera.</p>
+      <section id="project-trash-manager" class="project-trash-manager" aria-labelledby="project-trash-title">
+        <div><p class="eyebrow">RECUPERACIÓN</p><h3 id="project-trash-title">Papelera de universos</h3></div>
+        <p class="field-help">Los universos eliminados se conservan aquí por ID, junto con sus snapshots. Restaurar devuelve el mismo universo al catálogo; solo el borrado permanente destruye los datos y sus copias.</p>
+        <label for="project-trash-list">Universos en papelera</label>
+        <select id="project-trash-list" size="4" aria-describedby="project-trash-status"></select>
+        <p id="project-trash-status" class="field-help" role="status">Leyendo la papelera local…</p>
+        <div class="project-manager-actions">
+          <button type="button" id="project-trash-refresh-button" class="outline-button">Actualizar papelera</button>
+          <button type="button" id="project-trash-restore-button" class="primary-button" disabled>Restaurar universo</button>
+          <button type="button" id="project-trash-purge-button" class="outline-button danger-action" disabled>Borrar para siempre</button>
+        </div>
+      </section>
       <section class="snapshot-manager" aria-labelledby="snapshot-manager-title">
         <div><p class="eyebrow">RECUPERACIÓN LOCAL</p><h3 id="snapshot-manager-title">Respaldos versionados</h3></div>
         <p class="field-help">Hasta 25 snapshots por universo. Cada copia conserva el ID del proyecto y se valida antes de restaurar. Para restaurar, primero debe estar abierto ese universo.</p>

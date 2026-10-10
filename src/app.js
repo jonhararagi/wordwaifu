@@ -211,6 +211,8 @@
     updateProjectDeleteControl();
     try { await refreshSnapshotList(); }
     catch (error) { $("#snapshot-status").textContent = "No se pudieron leer los respaldos: " + error.message; }
+    try { await refreshTrashList(); }
+    catch (error) { $("#project-trash-status").textContent = "No se pudo leer la papelera: " + error.message; }
     return projects;
   }
 
@@ -361,6 +363,89 @@
     }
   }
 
+
+  async function refreshTrashList() {
+    const select = $("#project-trash-list");
+    const previousValue = select.value;
+    select.replaceChildren();
+    const items = await projectRepository.listTrashedProjects();
+    items.forEach((item) => {
+      const option = document.createElement("option");
+      option.value = item.projectId;
+      const deletedAt = new Date(item.deletedAt);
+      const dateLabel = Number.isNaN(deletedAt.getTime()) ? item.deletedAt : deletedAt.toLocaleString("es-AR");
+      option.textContent = item.name + " · " + dateLabel + " · " + item.snapshotCount + " respaldo(s)";
+      option.dataset.projectName = item.name;
+      option.dataset.snapshotCount = String(item.snapshotCount);
+      select.appendChild(option);
+    });
+    if (!items.length) {
+      const option = document.createElement("option");
+      option.value = "";
+      option.textContent = "La papelera está vacía";
+      option.disabled = true;
+      select.appendChild(option);
+    }
+    if (items.some((item) => item.projectId === previousValue)) select.value = previousValue;
+    $("#project-trash-status").textContent = items.length
+      ? items.length + " proyecto(s) recuperable(s). Se conservan sus IDs y respaldos."
+      : "No hay universos en la papelera.";
+    updateProjectTrashControls();
+    return items;
+  }
+
+  function updateProjectTrashControls() {
+    const select = $("#project-trash-list");
+    const restore = $("#project-trash-restore-button");
+    const purge = $("#project-trash-purge-button");
+    if (!select || !restore || !purge) return;
+    const selected = Boolean(select.value && select.selectedOptions[0] && !select.selectedOptions[0].disabled);
+    restore.disabled = !selected;
+    purge.disabled = !selected;
+  }
+
+  async function restoreSelectedTrashedProject() {
+    const projectId = $("#project-trash-list").value;
+    const option = $("#project-trash-list").selectedOptions[0];
+    if (!projectId || !option || option.disabled) return;
+    const projectName = option.dataset.projectName || option.textContent;
+    if (!confirm("Se restaurará «" + projectName + "» (ID: " + projectId + ") al catálogo local. Su identidad original y sus snapshots se conservarán; el proyecto activo no cambiará.")) return;
+    $("#project-trash-restore-button").disabled = true;
+    try {
+      const restored = await projectRepository.restoreTrashedProject(projectId);
+      await refreshProjectList();
+      $("#project-list").value = projectId;
+      updateProjectDeleteControl();
+      $("#project-trash-status").textContent = "Universo «" + projectName + "» restaurado. ID conservado y " +
+        restored.snapshotsPreserved + " respaldo(s) disponibles. Podés abrirlo desde Proyectos guardados.";
+    } catch (error) {
+      $("#project-trash-status").textContent = "No se pudo restaurar el universo: " + error.message;
+    } finally {
+      updateProjectTrashControls();
+    }
+  }
+
+  async function permanentlyDeleteSelectedTrashedProject() {
+    const projectId = $("#project-trash-list").value;
+    const option = $("#project-trash-list").selectedOptions[0];
+    if (!projectId || !option || option.disabled) return;
+    const projectName = option.dataset.projectName || option.textContent;
+    const snapshotCount = Number(option.dataset.snapshotCount) || 0;
+    if (!confirm("BORRADO PERMANENTE\nSe eliminará «" + projectName + "» (ID: " + projectId + ") de la papelera y se destruirán sus " +
+      snapshotCount + " snapshot(s). Esta acción no se puede deshacer. Los demás universos no se modificarán.")) return;
+    $("#project-trash-purge-button").disabled = true;
+    try {
+      const result = await projectRepository.permanentlyDeleteTrashedProject(projectId);
+      await refreshTrashList();
+      $("#project-trash-status").textContent = "Universo «" + projectName + "» borrado permanentemente." +
+        (result.warning ? " " + result.warning : "");
+    } catch (error) {
+      $("#project-trash-status").textContent = "No se pudo vaciar este elemento: " + error.message;
+    } finally {
+      updateProjectTrashControls();
+    }
+  }
+
   function updateProjectDeleteControl() {
     const button = $("#project-delete-button");
     const help = $("#project-delete-help");
@@ -374,7 +459,7 @@
     if (!projectId) help.textContent = "Seleccioná un proyecto para ver las opciones de borrado.";
     else if (active) help.textContent = "Este es el proyecto activo. Primero abrí y activá otro universo; luego podrás eliminar este proyecto desde el catálogo.";
     else if (backupOnly) help.textContent = "Este proyecto solo existe en el respaldo local. Debe recuperarse y verificarse en IndexedDB antes de poder eliminarlo.";
-    else help.textContent = "Se eliminará únicamente el ID seleccionado, con confirmación. Los universos restantes se conservarán.";
+    else help.textContent = "Se moverá únicamente este ID a la papelera. Podrás restaurarlo después; los universos restantes y sus snapshots se conservarán.";
   }
 
   async function deleteSelectedProject() {
@@ -384,12 +469,12 @@
     if (!projectId || !option) return;
     if (projectId === state.project.id || option.dataset.active === "true") {
       updateProjectDeleteControl();
-      $("#project-list-status").textContent = "Protección activa: primero abrí otro proyecto y después seleccioná el anterior para eliminarlo.";
+      $("#project-list-status").textContent = "Protección activa: primero abrí otro proyecto y después seleccioná el anterior para moverlo a papelera.";
       return;
     }
     if (option.dataset.source !== "indexeddb") {
       updateProjectDeleteControl();
-      $("#project-list-status").textContent = "No se puede borrar un proyecto que solo existe en el respaldo local. Primero debe recuperarse y verificarse en IndexedDB.";
+      $("#project-list-status").textContent = "No se puede mover a papelera un proyecto que solo existe en el respaldo local. Primero debe recuperarse y verificarse en IndexedDB.";
       return;
     }
     const candidate = await projectRepository.getProject(projectId);
@@ -399,35 +484,33 @@
     }
     const projectName = candidate.project.name || "Proyecto sin nombre";
     if (!confirm(
-      "Se eliminará el proyecto «" + projectName + "» (ID: " + projectId + ").\n" +
-      "Solo se borrará este ID exacto; otros universos, incluso con nombres parecidos, se conservarán.\n" +
-      "El proyecto activo actual («" + state.project.name + "») no se eliminará. También se borrarán todas las copias de seguridad de este universo; no existe recuperación posterior."
+      "Se moverá a la papelera «" + projectName + "» (ID: " + projectId + ").\n" +
+      "Solo se moverá este ID exacto; otros universos, incluso con nombres parecidos, se conservarán.\n" +
+      "El proyecto activo «" + state.project.name + "» no se tocará. Los snapshots se conservarán hasta que restaures el universo o lo borres permanentemente."
     )) {
-      $("#project-list-status").textContent = "Eliminación cancelada. No se borró ningún proyecto.";
+      $("#project-list-status").textContent = "Movimiento cancelado. No se modificó ningún proyecto.";
       return;
     }
     const appShell = $(".app-shell");
     if (appShell) appShell.inert = true;
     $("#project-delete-button").disabled = true;
-    $("#project-list-status").textContent = "Verificando el proyecto activo y eliminando el ID seleccionado…";
-    let deletion = null;
+    $("#project-list-status").textContent = "Verificando el proyecto activo y moviendo el ID seleccionado a papelera…";
     try {
       await requireCurrentProjectInIndexedDB();
-      deletion = await projectRepository.deleteProject(projectId);
+      const result = await projectRepository.trashProject(projectId);
       const projects = await refreshProjectList();
       const stillListed = projects.some((project) => project.projectId === projectId);
       select.value = state.project.id;
       updateProjectDeleteControl();
       if (stillListed) {
-        $("#project-list-status").textContent = deletion.warning ||
-          "IndexedDB confirmó el borrado, pero aún aparece un candidato de respaldo con el mismo ID.";
+        $("#project-list-status").textContent = result.warning ||
+          "IndexedDB confirmó el movimiento, pero aún aparece un candidato de respaldo con el mismo ID.";
         return;
       }
-      $("#project-list-status").textContent = "Proyecto «" + projectName + "» eliminado. El proyecto activo «" +
-        state.project.name + "» y los demás universos permanecen intactos." +
-        (deletion.warning ? " " + deletion.warning : "");
+      $("#project-list-status").textContent = "Universo «" + projectName + "» movido a la papelera. Sus snapshots se conservaron y puede restaurarse." +
+        (result.warning ? " " + result.warning : "");
     } catch (error) {
-      $("#project-list-status").textContent = "No se pudo eliminar el proyecto: " + error.message;
+      $("#project-list-status").textContent = "No se pudo mover el proyecto a papelera: " + error.message;
     } finally {
       if (appShell) appShell.inert = false;
       updateProjectDeleteControl();
@@ -1817,6 +1900,12 @@
   $("#snapshot-delete-button").addEventListener("click", deleteSelectedSnapshot);
   $("#project-delete-button").addEventListener("click", deleteSelectedProject);
   $("#project-open-button").addEventListener("click", openSelectedProject);
+  $("#project-trash-list").addEventListener("change", updateProjectTrashControls);
+  $("#project-trash-refresh-button").addEventListener("click", () => refreshTrashList().catch((error) => {
+    $("#project-trash-status").textContent = "No se pudo actualizar la papelera: " + error.message;
+  }));
+  $("#project-trash-restore-button").addEventListener("click", restoreSelectedTrashedProject);
+  $("#project-trash-purge-button").addEventListener("click", permanentlyDeleteSelectedTrashedProject);
   $("#project-create-button").addEventListener("click", createNamedProject);
   $("#project-close-button").addEventListener("click", () => $("#project-dialog").close());
   $("#create-project-name").addEventListener("input", () => $("#create-project-name").setCustomValidity(""));
