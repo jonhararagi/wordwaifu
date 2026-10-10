@@ -9,7 +9,8 @@
 
 ## GitHub
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama base histórica: `foundation/story-foundry-north-star`.\n- Rama activa de WF-004-C.3: `work/wf-004-c3-project-trash`.
+- Rama base histórica: `foundation/story-foundry-north-star`.
+- Rama activa de WF-004-C.3: `work/wf-004-c3-project-trash`.
 - Último commit de código/pruebas validado: `b7bcd7702063a65d05438c9ba71bac12c1c2d166`.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar.
 - `main`: no modificada.
@@ -37,7 +38,8 @@
 - API del repositorio implementada en `work/wf-004-c3-project-trash`.
 - Migración IndexedDB v2→v3 y pruebas del ciclo de papelera añadidas.
 - **CI de esta rama: NOT_RUN.**
-- UI visible integrada: listar papelera, restaurar por ID y borrar permanentemente con confirmación.\n- Pendiente: ejecutar GitHub Actions, probar abortos/cuota y realizar prueba manual Windows 11.
+- UI visible integrada: listar papelera, restaurar por ID y borrar permanentemente con confirmación.
+- Pendiente: ejecutar GitHub Actions, probar abortos/cuota y realizar prueba manual Windows 11.
 
 ## Protocolo
 Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, PR y CI vivos antes de tocar código. Una tarea activa por agente. No tocar `main` ni fusionar PR sin autorización.
