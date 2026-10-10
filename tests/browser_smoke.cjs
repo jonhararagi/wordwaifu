@@ -1062,6 +1062,57 @@ async function run() {
     assert.equal(trashAbortReport.trashPreserved, true, "An aborted restoration must keep the original trash entry recoverable.");
     process.stdout.write("PASS trash atomicity: malformed snapshot abort rolls back project and snapshots, preserving trash.\\n");
 
+    // A malformed local backup cannot be safely assigned to any project ID.
+    const malformedBackupReport = await page.evaluate(async () => {
+      const api = window.WordWaifuProjectRepository;
+      const source = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const candidate = JSON.parse(JSON.stringify(source));
+      candidate.project = { ...candidate.project, id: "trash-malformed-backup-" + Date.now().toString(36), name: "Universo Respaldo Ilegible" };
+      const storageKey = "trash-malformed-backup";
+      const memory = new Map([[storageKey, "{not-json"]]);
+      const storage = {
+        getItem: (key) => memory.has(key) ? memory.get(key) : null,
+        setItem: (key, value) => memory.set(key, String(value)),
+        removeItem: (key) => memory.delete(key)
+      };
+      const databaseName = "wordwaifu.trash-malformed-test." + Date.now().toString(36);
+      const repository = new api.ProjectRepository({ databaseName, storageKey, localStorage: storage });
+      const db = await repository.open();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId: candidate.project.id, data: candidate });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed malformed-backup fixture."));
+        tx.onabort = () => reject(tx.error || new Error("Malformed-backup seed aborted."));
+      });
+      const move = await repository.moveProjectToTrash(candidate.project.id);
+      let permanentDeleteRejected = false;
+      try { await repository.permanentlyDeleteTrashedProject(candidate.project.id); }
+      catch (error) { permanentDeleteRejected = /no se puede verificar el respaldo local/i.test(error.message); }
+      const trashRecord = await repository.read("trash", candidate.project.id);
+      const malformedBackupPreserved = memory.get(storageKey) === "{not-json";
+      repository.close();
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(databaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Malformed-backup database cleanup failed."));
+        request.onblocked = () => reject(new Error("Malformed-backup database cleanup blocked."));
+      });
+      return {
+        moved: move.moved,
+        warning: !move.backupRemoved && Boolean(move.warning),
+        permanentDeleteRejected,
+        trashPreserved: Boolean(trashRecord),
+        malformedBackupPreserved
+      };
+    });
+    assert.equal(malformedBackupReport.moved, true);
+    assert.equal(malformedBackupReport.warning, true, "Malformed backup data must surface a warning during reversible trash movement.");
+    assert.equal(malformedBackupReport.permanentDeleteRejected, true, "Permanent deletion must stop if a local backup cannot be parsed and attributed.");
+    assert.equal(malformedBackupReport.trashPreserved, true);
+    assert.equal(malformedBackupReport.malformedBackupPreserved, true, "Unknown backup data must not be silently removed.");
+    process.stdout.write("PASS trash malformed backup: unknown backup preserved and permanent deletion blocked.\\n");
+
     const forestMarker = page.locator('g.map-marker[data-location="loc-velado"]').first();
     await forestMarker.click();
     const forestSelected = await page.waitForFunction(
