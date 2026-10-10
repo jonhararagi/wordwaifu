@@ -401,7 +401,7 @@
     if (!confirm(
       "Se eliminará el proyecto «" + projectName + "» (ID: " + projectId + ").\n" +
       "Solo se borrará este ID exacto; otros universos, incluso con nombres parecidos, se conservarán.\n" +
-      "El proyecto activo actual («" + state.project.name + "») no se eliminará. Esta acción no se puede deshacer."
+      "El proyecto activo actual («" + state.project.name + "») no se eliminará. También se borrarán todas las copias de seguridad de este universo; no existe recuperación posterior."
     )) {
       $("#project-list-status").textContent = "Eliminación cancelada. No se borró ningún proyecto.";
       return;
