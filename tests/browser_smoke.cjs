@@ -281,6 +281,7 @@ async function run() {
         tx.onerror = () => reject(tx.error || new Error("Could not seed stale project record beside trash tombstone."));
         tx.onabort = () => reject(tx.error || new Error("Stale project record seed was aborted."));
       });
+      const activeIdBeforeRejectedTrashActivation = (await repository.read("metadata", "activeProjectId"))?.value || null;
       let trashedProjectActivationRejected = false;
       try { await repository.activateProject(projectC.project.id); }
       catch (error) { trashedProjectActivationRejected = /está en la papelera/i.test(error.message); }
@@ -350,7 +351,7 @@ async function run() {
         projectCAbsent, snapshotCAbsentWhileTrashed, trashRetainsSnapshot, projectCHiddenFromCatalog,
         trashRestoreCollisionRejected, collisionDataPreserved, trashPreservedAfterCollision,
         trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain,
-        trashedProjectActivationRejected, activeIdAfterRejectedTrashActivation,
+        trashedProjectActivationRejected, activeIdBeforeRejectedTrashActivation, activeIdAfterRejectedTrashActivation,
         trashedBackupForSearchWritten, trashedProjectSearchExcluded, trashSearchComplete: trashSearchReport.complete,
         unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten,
         catalogBlockedOnUnreadableTrash, getProjectBlockedOnUnreadableTrash,
@@ -400,7 +401,9 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.trashAgain.moved, true);
     assert.equal(snapshotRepositoryEvidence.trashedProjectActivationRejected, true,
       "A stale duplicate projects record must not allow activation when the trash tombstone exists.");
-    assert.notEqual(snapshotRepositoryEvidence.activeIdAfterRejectedTrashActivation, "trash-project-c");
+    assert.equal(snapshotRepositoryEvidence.activeIdAfterRejectedTrashActivation,
+      snapshotRepositoryEvidence.activeIdBeforeRejectedTrashActivation,
+      "Rejected activation must leave the previously active project unchanged.");
     assert.equal(snapshotRepositoryEvidence.trashedBackupForSearchWritten, true);
     assert.equal(snapshotRepositoryEvidence.trashedProjectSearchExcluded, true,
       "Multiverse search must not resurrect a trashed project from a stale localStorage backup.");
