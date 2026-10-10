@@ -1,6 +1,6 @@
 # WF-004-C.3 — Contrato de papelera de universos
 
-Estado: **BACKEND + UI IMPLEMENTED / CI PASS (HEAD `327360c`) / MANUAL GATES PENDING**  
+Estado: **BACKEND + UI IMPLEMENTED / CI PASS (HEAD `2ef6492`) / QUOTA + WINDOWS GATES PENDING**  
 Rama de trabajo: `work/wf-004-c3-project-trash`
 
 ## Objetivo
@@ -63,10 +63,11 @@ El código y las pruebas de esta rama pasan en [CI #38022402137](https://github.
 - La restauración recupera el ID original y los snapshots; un conflicto de ID no sobrescribe registros existentes.
 - El catálogo y `getProject()` omiten IDs en papelera para evitar que un respaldo local residual los resucite. Si IndexedDB abre pero no se puede leer el almacén `trash`, `listProjects()` falla cerrado. `getProject()` también devuelve `null` si no puede verificar el tombstone del ID solicitado. `activateProject()` valida la existencia del proyecto y la ausencia de tombstone dentro de la misma transacción que modifica `activeProjectId`, y verifica el valor persistido antes de confirmar éxito.
 - La búsqueda multiverso también filtra los tombstones de IndexedDB; si no puede verificar la papelera, omite el respaldo local y devuelve una advertencia en vez de arriesgar la resurrección de un universo.
-- **PASS_REAL CI #38022402137:** migración v1→v3, envío, conservación de snapshots, restauración, borrado permanente, protección del activo, guardia anti-resurrección en escritura/localStorage, UI y validador estructural.
+- **PASS_REAL CI #38023966741** en commit `2ef649202e1f27db0e0ff0a939e4307933e178de`: migración v1→v3, envío, conservación de snapshots, restauración, borrado permanente, protección del activo, guardia anti-resurrección en escritura/localStorage, UI, prueba de nombres duplicados y validador estructural.
 - UI visible integrada en `index.html`/`src/app.js`; la acción normal de catálogo envía a papelera y conserva snapshots, mientras que el borrado irreversible queda separado en la pantalla Papelera. El smoke test cubre el movimiento reversible, restauración y borrado permanente desde la interfaz.
 - Pruebas añadidas para que un borrado permanente de ID ausente no borre respaldos ajenos, para respaldos residuales coincidentes, fallos al retirar respaldos, JSON malformado, rollback atómico por snapshot inconsistente y fallo cerrado del catálogo/recuperación de proyecto si la papelera o el tombstone no pueden leerse.
-- **Pendiente:** nombre duplicado con IDs distintos en todas las operaciones de papelera, cuota real agotada y revisión visual/manual en Windows 11.
-- CI ejecutada en GitHub Actions: [#38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137), todas las etapas en PASS.
+- **PASS_REAL:** la prueba `PASS duplicate-name trash isolation` cubre dos universos de nombre idéntico y IDs distintos durante mover, restaurar y borrado permanente; comprueba además la conservación de snapshots del universo restaurado.
+- **Pendiente:** cuota real agotada y revisión visual/manual en Windows 11.
+- CI ejecutada en GitHub Actions: [#38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741), todas las etapas en PASS.
 
-WF-004-C.3 permanece PARTIAL hasta que se pruebe el aislamiento de nombres duplicados, se valide el comportamiento bajo cuota real y se complete la revisión manual de Windows 11.
+WF-004-C.3 permanece PARTIAL hasta que se documente/pruebe el comportamiento bajo cuota real y se complete la revisión manual de Windows 11.

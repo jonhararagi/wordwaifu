@@ -12,7 +12,7 @@
 - Rama activa WF-004-C.3: `work/wf-004-c3-project-trash`.
 - `main`: `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
 - Comparación comprobada el 2026-10-10: rama de trabajo **por delante de main / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
-- PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar. Su head corresponde a otra rama; WF-004-C.3 no forma parte de ese PR.
+- PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar; su head corresponde a otra rama. PR #3: [abierto, no fusionado](https://github.com/jonhararagi/wordwaifu/pull/3), head `work/wf-004-c3-project-trash`; no fue creado ni modificado en esta iteración. No se abrió otro PR ni se hizo merge.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
 - Workflow de validación configurado para pushes en `main` y `work/**`, PR hacia `main` y `workflow_dispatch`: [`4502475`](https://github.com/jonhararagi/wordwaifu/commit/4502475cdf9b536c0c5d6dbf51a83efc7408ae6d).
@@ -35,14 +35,15 @@
 - **Hardening de esta iteración:** `write(project)` valida el tombstone dentro de la transacción de escritura; `saveActive(project)` consulta la papelera antes de escribir el respaldo local y restaura el respaldo previo si detecta la carrera.
 - Chromium verifica que escribir/guardar un ID en papelera se rechace, que el respaldo no sea sobrescrito y que el respaldo de otro universo sobreviva al movimiento y al borrado permanente.
 - **PASS_STATIC:** sintaxis JavaScript y 18 pruebas de esquema.
-- **PASS_REAL:** [CI #38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137), código probado `327360caa66875becbd11e5563fc2988196553a4`; Chromium smoke y validador estructural en verde.
-- **NOT_RUN:** cuota de almacenamiento realmente agotada y revisión visual/manual en Windows 11.
-- **PARTIAL:** falta cobertura específica de operaciones de papelera con nombres idénticos y IDs distintos.
+- **PASS_REAL:** [CI #38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741), commit de código `2ef649202e1f27db0e0ff0a939e4307933e178de`; sintaxis, 18 pruebas de esquema, Chromium smoke y validador estructural completados.
+- **PASS_REAL:** el smoke ahora crea dos universos con el mismo nombre y distintos IDs, mueve ambos a papelera, restaura uno, borra permanentemente el otro y verifica que sus snapshots e identidad no se mezclan.
+- **NOT_RUN:** cuota real agotada; una excepción simulada no se presenta como cuota real. Revisión visual/manual en Windows 11 también sigue pendiente.
+- **PARTIAL:** quedan los gates de cuota real y revisión manual en Windows 11.
 
 ## Gates pendientes — WF-004-C.3 sigue PARTIAL
-- [x] CI del HEAD de código probado en verde: sintaxis, 18 pruebas de esquema, Chromium y validación estructural; [#38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137).
+- [x] CI de código y regresión duplicada en verde: sintaxis, 18 pruebas de esquema, Chromium y validación estructural; [#38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741).
 - [x] El respaldo local de otro universo sobrevive al movimiento a papelera y al borrado permanente.
-- [ ] Prueba dedicada de proyectos con el mismo nombre e IDs distintos a través de mover/restaurar/borrar.
+- [x] Proyectos con el mismo nombre y distintos IDs permanecen aislados en mover/restaurar/borrar.
 - [ ] Cuota real agotada o limitación del entorno demostrada y documentada; excepciones inyectadas no equivalen a cuota real.
 - [ ] Revisión visual/manual en Windows 11.
 ## Límites conocidos del producto
