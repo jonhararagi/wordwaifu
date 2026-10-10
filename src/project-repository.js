@@ -606,7 +606,7 @@
         };
         projectRequest.onsuccess = () => { projectRecord = projectRequest.result; projectReady = true; evaluate(); };
         activeRequest.onsuccess = () => { activeRecord = activeRequest.result; activeReady = true; evaluate(); };
-        snapshotsRequest.onsuccess = () => { snapshots = Array.isArray(snapshotsRequest.result) ? snapshots.requestResult : snapshots; snapshotsReady = true; evaluate(); };
+        snapshotsRequest.onsuccess = () => { snapshots = Array.isArray(snapshotsRequest.result) ? snapshotsRequest.result : []; snapshotsReady = true; evaluate(); };
         tx.oncomplete = resolve;
         tx.onerror = () => reject(guardError || tx.error || new Error("Falló la transacción al enviar el proyecto a la papelera."));
         tx.onabort = () => reject(guardError || tx.error || new Error("El envío a la papelera fue cancelado."));
