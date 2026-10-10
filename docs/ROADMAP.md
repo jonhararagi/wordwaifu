@@ -35,7 +35,7 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 - [x] Búsqueda e índice maestro de referencias por IDs estables, incluida apertura contextual verificada.
 - [x] Snapshots versionados, restauración protegida y copia previa a importación (WF-004-C.1; CI #38006355845 PASS).
 - [x] Snapshot verificado antes de borrar entidades; límite de 25 por universo; borrado de universo informa y elimina sus snapshots (WF-004-C.2; CI #38008260869 PASS).
-- [ ] Papelera y recuperación de universos completos eliminados (WF-004-C.3; TIMER 3–5 horas).
+- [x] Papelera y recuperación de universos completos eliminados (WF-004-C.3; Chromium CI #38024310803 PASS_REAL).
 - [x] WF-004-B.1.2: eliminación segura de proyectos y protección del proyecto activo (CI #37988482281 PASS).
 
 **Gate:** reiniciar el navegador no pierde el proyecto y exportar/importar conserva las relaciones.
@@ -265,9 +265,11 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - **PASS_STATIC:** 18 pruebas de esquema, sintaxis y estructura del proyecto.
 - **NOT_RUN:** prueba manual visual/usabilidad en Windows 11.
 
-### WF-004-C.3 — Siguiente · Papelera y recuperación de universos completos
-- Diseñar una política de borrado reversible por ID estable (soft delete/tombstone) con expiración o borrado permanente explícito.
-- Mantener snapshots asociados al universo mientras esté en la papelera; restaurar sin colisionar con otro proyecto de nombre parecido.
-- Verificar borrado, restauración, expiración y aislamiento entre universos mediante IndexedDB y Chromium.
-- **TIMER inicial: 3–5 horas**, recalcular después de inspección.
-- Mantener `main` intacta y PR #1 en borrador hasta autorización expresa.
+### WF-004-C.3 — DONE · Papelera y recuperación de universos completos
+- IndexedDB migra de v2 a v3 de forma no destructiva, añadiendo una tienda `trash` indexada por `deletedAt`.
+- Mover un proyecto a papelera retira el registro del catálogo normal por ID y conserva su contenido y los snapshots asociados.
+- Restaurar valida el contenido, exige que no exista una colisión de ID, recupera la misma identidad y deja el universo listo para abrir desde el catálogo.
+- El borrado permanente es una acción distinta y confirmada; elimina la entrada de papelera y solo los snapshots de ese ID. Nunca puede borrar el universo activo.
+- **PASS_REAL:** [Chromium CI #38024310803](https://github.com/jonhararagi/wordwaifu/actions/runs/38024310803), con migración, movimiento, restauración, purga e aislamiento de universos vecinos.
+- La papelera no caduca de forma automática; la purga queda bajo decisión explícita del usuario.
+- Siguiente: WF-005-A, modelo explícito de presencia temporal en lugares. TIMER inicial: 3–5 horas.

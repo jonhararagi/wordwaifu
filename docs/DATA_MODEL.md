@@ -84,7 +84,7 @@ El resultado incluye el nombre del universo, ID de proyecto, tipo de entidad, ID
 Si IndexedDB no se puede leer, solo se puede consultar el respaldo local disponible. El método devuelve `complete: false` y una advertencia; la interfaz comunica `BÚSQUEDA PARCIAL`. No debe sugerir que no hay resultados si no se pudieron examinar todos los proyectos. Una futura optimización podrá introducir caché o índice invertido solo con invalidación/reconstrucción demostrada, evitando desincronizar el canon.
 
 
-## Snapshot versionado (implementación IndexedDB v2)
+## Snapshot versionado (implementación IndexedDB v3)
 Un registro de respaldo conserva identidad y pertenencia separadas del nombre del proyecto:
 `snapshotId`, `projectId`, `createdAt`, `reason`, `data`.
 
@@ -92,5 +92,14 @@ Un registro de respaldo conserva identidad y pertenencia separadas del nombre de
 - `projectId` debe coincidir exactamente con `data.project.id`; cambiar el nombre del universo no cambia su pertenencia.
 - Antes de usarlo para restaurar, se valida `data` con el mismo contrato de importación. Un snapshot inválido puede listarse como inválido, pero no restaurarse.
 - La restauración está vinculada al proyecto activo por ID y conserva una copia `before-restore` del estado que se va a reemplazar.
-- La política vigente limita el almacén a 25 snapshots por proyecto. La cobertura automatizada de la frontera de retención queda pendiente.
-- En esta fase, borrar un proyecto elimina sus snapshots; el modelo aún no incluye una bandeja de recuperación que pueda volver a materializar un proyecto eliminado. No se debe prometer restauración después de borrar un universo completo.
+- La política vigente limita el almacén a 25 snapshots por proyecto. La frontera 25/26 y la cancelación segura al alcanzar el límite tienen evidencia automatizada.
+- Los snapshots conservan un `projectId` estable incluso si el proyecto se mueve a papelera; el nombre no define la pertenencia.
+
+## Papelera de universos (IndexedDB v3)
+La papelera es una tienda separada y no un flag mutable dentro del objeto del universo. Cada entrada contiene `projectId`, `name`, `description`, `deletedAt` y `data`. El ID de la clave, el ID del registro y `data.project.id` deben coincidir.
+
+- `trashProject(projectId)` mueve el registro desde `projects` a `trash` en una transacción. No permite mover el proyecto activo.
+- Los snapshots permanecen en la tienda `snapshots` con su `projectId`; la restauración mantiene sus IDs.
+- `restoreTrashedProject(projectId)` valida el proyecto, verifica que no haya una colisión en `projects`, devuelve el registro con la misma identidad y retira su entrada de papelera. No cambia el puntero del proyecto activo.
+- `permanentlyDeleteTrashedProject(projectId)` exige una entrada válida en la papelera, protege el proyecto activo y elimina solo los snapshots con el mismo `projectId`.
+- La purga es irreversible y explícita en la interfaz. No existe caducidad automática de la papelera en esta versión.
