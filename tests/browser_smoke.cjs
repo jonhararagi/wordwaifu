@@ -2141,6 +2141,71 @@ async function run() {
     assert.equal(backupAfterPermanentDelete.name, trashUiSeed.backupProjectName);
     process.stdout.write("PASS trash UI: list, restore by exact ID, permanent deletion, and preservation of an unrelated local backup.\\n");
 
+    // Same display name must never collapse identity across trash operations.
+    const duplicateNameEvidence = await page.evaluate(async () => {
+      const source = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const suffix = Date.now().toString(36);
+      const leftId = "same-name-left-" + suffix;
+      const rightId = "same-name-right-" + suffix;
+      const left = JSON.parse(JSON.stringify(source));
+      const right = JSON.parse(JSON.stringify(source));
+      left.project = { ...left.project, id: leftId, name: "Universo Nombre Duplicado" };
+      right.project = { ...right.project, id: rightId, name: "Universo Nombre Duplicado" };
+      const database = await repository.open();
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId: leftId, data: left });
+        tx.objectStore("projects").put({ projectId: rightId, data: right });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed duplicate-name projects."));
+        tx.onabort = () => reject(tx.error || new Error("Duplicate-name seed transaction aborted."));
+      });
+      await repository.createSnapshot(left, { reason: "duplicate-name-trash-isolation" });
+      await repository.createSnapshot(right, { reason: "duplicate-name-trash-isolation" });
+      const leftMoved = await repository.moveProjectToTrash(leftId);
+      const rightMoved = await repository.moveProjectToTrash(rightId);
+      const listed = await repository.listTrash();
+      const sameNameEntries = listed.filter((item) => item.name === "Universo Nombre Duplicado");
+      if (!leftMoved.moved || !rightMoved.moved) throw new Error("Both duplicate-name projects must move independently.");
+      if (sameNameEntries.filter((item) => item.projectId === leftId || item.projectId === rightId).length !== 2) {
+        throw new Error("Trash listing must retain both duplicate-name IDs.");
+      }
+      const restored = await repository.restoreTrashedProject(leftId);
+      const afterRestore = await repository.listTrash();
+      const leftRecord = await repository.read("projects", leftId);
+      const rightRecord = await repository.read("projects", rightId);
+      if (!restored.restored || !leftRecord || leftRecord.data.project.id !== leftId) throw new Error("Restore must recover the selected ID.");
+      if (rightRecord || !afterRestore.some((item) => item.projectId === rightId) || afterRestore.some((item) => item.projectId === leftId)) {
+        throw new Error("Restoring one duplicate-name project must not affect its sibling.");
+      }
+      const permanentlyDeleted = await repository.permanentlyDeleteTrashedProject(rightId);
+      const afterDelete = await repository.listTrash();
+      const leftAfterDelete = await repository.read("projects", leftId);
+      const rightTrashAfterDelete = await repository.read("trash", rightId);
+      const leftSnapshots = await repository.listSnapshots(leftId);
+      if (!permanentlyDeleted.permanentlyDeleted || rightTrashAfterDelete || !leftAfterDelete ||
+          leftAfterDelete.data.project.id !== leftId || afterDelete.some((item) => item.projectId === rightId) ||
+          leftSnapshots.length !== restored.snapshotCount) {
+        throw new Error("Permanent deletion must affect only the selected duplicate-name ID and preserve the restored project's snapshots.");
+      }
+      // Clean up the surviving test project without touching the active universe.
+      await repository.moveProjectToTrash(leftId);
+      await repository.permanentlyDeleteTrashedProject(leftId);
+      repository.close();
+      return {
+        leftId, rightId, sameName: left.project.name,
+        restoredSnapshotCount: restored.snapshotCount,
+        trashIdsAfterRestore: afterRestore.map((item) => item.projectId),
+        leftSurvivedRightDelete: true
+      };
+    });
+    assert.equal(duplicateNameEvidence.sameName, "Universo Nombre Duplicado");
+    assert.notEqual(duplicateNameEvidence.leftId, duplicateNameEvidence.rightId);
+    assert.equal(duplicateNameEvidence.leftSurvivedRightDelete, true);
+    assert.ok(duplicateNameEvidence.restoredSnapshotCount >= 1, "Restore must preserve the selected project's snapshots.");
+    process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {
