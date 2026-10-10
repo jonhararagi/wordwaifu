@@ -32,20 +32,17 @@
 - Catálogo y búsqueda multiverso filtran IDs en papelera y aplican guardias ante fallos al verificar tombstones.
 - `getProject()` y `activateProject()` incluyen comprobaciones de papelera para evitar resurrección/activación de universos enviados a papelera.
 - Regresiones añadidas para respaldo residual, fallo al leer tombstones y registro residual duplicado.
-- CI del HEAD previo `eff7f73`: **FAIL_REAL** en el smoke de Chromium porque la fixture de creación omitía el nombre esperado (`createdUniverse.name` era `undefined`); la sintaxis y `tests/test_project_schema.cjs` pasaron.
-- Corrección de test persistida en [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1): la fixture ahora devuelve también el nombre del universo activo.
-- **CI del HEAD actual `de061c6`: IN_PROGRESS / NO GREEN TODAVÍA.** Run [#38020361524](https://github.com/jonhararagi/wordwaifu/actions/runs/38020361524); sintaxis y prueba de esquema pasaron, Chromium smoke continúa en ejecución en la última consulta.
-- El run anterior [#38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894) confirmó que la corrección de identificadores duplicados eliminó el error de sintaxis, pero detectó la aserción de fixture indicada arriba.
+- Fallos anteriores documentados: run [#38020089307](https://github.com/jonhararagi/wordwaifu/actions/runs/38020089307) detectó la redeclaración de `restoreUiDialog`, corregida en [`eff7f73`](https://github.com/jonhararagi/wordwaifu/commit/eff7f73fe574f9dc40d1e31d94a9f5dfda9c08ab); run [#38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894) detectó `createdUniverse.name` indefinido, corregido en [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1); run [#38020416762](https://github.com/jonhararagi/wordwaifu/actions/runs/38020416762) detectó timeout en el borrado, corregido en [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7).
+- **CI actual PASS_REAL:** run [#38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453), asociado al HEAD de cierre [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f). El job `validate` terminó `success`; las nueve etapas reportadas finalizaron correctamente: sintaxis, import/schema, instalación Playwright/Chromium, browser smoke y validador estructural.
+- El smoke de Chromium valida también que la eliminación permanente de un universo en papelera preserve el respaldo local perteneciente a otro universo. Esta prueba pasó en el run anterior.
+- La corrección `a85c737` afecta la selección de IDs de la prueba; no cambió la lógica de aplicación.
 
-- Último commit de corrección de test: [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7), selecciona el ID exacto en ambos pasos de la prueba de papelera.
-- CI de `a85c737`: pendiente de confirmar; el último CI confirmado, run [#38020416762](https://github.com/jonhararagi/wordwaifu/actions/runs/38020416762) para `c654510`, falló en el smoke de Chromium por timeout al esperar el borrado del ID objetivo.
-
-## Gates pendientes — no marcar GREEN
-- Obtener resultado final del CI del HEAD exacto; exigir sintaxis, pruebas de esquema, Chromium y validador estructural en verde.
-- Probar abortos de transacción y fallos reales de cuota de almacenamiento.
-- Revisar que un respaldo local de otro universo nunca se borre ni sustituya.
-- Realizar revisión visual/manual en Windows 11.
-- La inspección estática y el CI histórico de C.2 no sustituyen estas verificaciones.
+## Gates pendientes — WF-004-C.3 sigue PARTIAL
+- **CI automatizado del HEAD de cierre: PASS_REAL** (run #38021293453, SHA `da79c5801257246730ce7f88085e2a90e37fd02f`).
+- Añadir/ejecutar pruebas específicas de abortos de transacción y fallos reales de cuota de almacenamiento; todavía no acreditados.
+- Realizar revisión visual/manual en Windows 11; `NOT_RUN`.
+- El smoke de Chromium sí verifica que borrar permanentemente un universo no elimine el respaldo local de otro universo.
+- No cerrar WF-004-C.3 hasta superar los gates manuales y de cuota; CI verde no equivale a validación completa.
 
 ## Límites conocidos del producto
 - Novel Studio completo, generación narrativa avanzada, Continuity Guard integral e integración con BotImagen siguen pendientes.
