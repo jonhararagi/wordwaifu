@@ -3,19 +3,20 @@
 ## Resumen
 - Producto: WordWaifu · World & Story Foundry.
 - Objetivo: aplicación local/offline-first para organizar universos, canon, atlas temporal, personajes, relaciones, acontecimientos, organizaciones e historias/novelas.
-- **Avance global estimado: 19%** de la visión completa. Estimación ponderada por alcance, no métrica de código ni cobertura.
-- Tecnología actual: HTML/CSS/JavaScript con SVG, IndexedDB y copia de compatibilidad en localStorage.
-- WordWaifu gestiona el canon y la planificación narrativa; BotImagen gestiona creación visual/recursos. La integración todavía no está implementada.
+- **Avance global estimado: 19%** de la visión completa; estimación ponderada por alcance, no métrica de código ni cobertura.
+- Tecnología actual: HTML/CSS/JavaScript, SVG, IndexedDB y respaldo de compatibilidad en localStorage.
+- WordWaifu gestiona canon y planificación narrativa; BotImagen gestiona recursos visuales. La integración todavía no está implementada.
 
 ## GitHub
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama de trabajo: `foundation/story-foundry-north-star`.
-- Último commit de código/pruebas: `1c8cd7a69cb04b523c8057ccace80596528fdbb4`.
+- Rama: `foundation/story-foundry-north-star`.
+- Último commit de código/pruebas: `5fc991962c463ece2e9e46d2b40c79838c79b16d`.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar.
 - `main`: no modificada.
-- Workflow #141: **FAIL_REAL**, por una condición de carrera en el smoke test de borrado de lugar; la prueba leía localStorage antes de que terminara la operación asíncrona.
-- Corrección añadida: esperar explícitamente a que el estado persistido refleje el borrado antes de comprobar el resultado.
-- Workflow #142: **IN_PROGRESS** al cierre de esta revisión. La sintaxis JS y validación de importación JSON pasaron; Chromium debe completar el smoke test y la validación estructural.
+- Workflow #141: **FAIL_REAL** por carrera asíncrona en prueba de borrado de lugar; corregida con espera explícita.
+- Workflows #142 y #143: **FAIL_REAL** porque la prueba buscaba el snapshot bajo un ID de proyecto fijo que no coincidía con el ID del proyecto importado.
+- Corrección aplicada: la prueba obtiene el ID real del proyecto desde el estado persistido antes de enumerar snapshots.
+- Workflow #144: **IN_PROGRESS** al cerrar esta actualización; es la primera ejecución con esa corrección.
 - Prueba manual en Windows 11: **NOT_RUN**.
 
 ## Funcionalidad con evidencia previa
@@ -24,22 +25,21 @@
 - **WF-003-A:** relaciones con ID estable y proyección compatible.
 - **WF-004-B:** catálogo multiverso y búsqueda contextual por IDs.
 - **WF-004-C.1 · PARCIAL:** snapshots versionados, migración IndexedDB v1→v2, restauración con copia previa y respaldo antes de importar.
-- **WF-004-C.2 · PARCIAL / CI PENDIENTE:** antes de eliminar personajes, lugares, acontecimientos, organizaciones o relaciones se crea y verifica un snapshot; ante fallo o límite alcanzado, el borrado se cancela. La confirmación de borrado de universo explica que sus snapshots también se eliminan.
+- **WF-004-C.2 · PARCIAL / CI PENDIENTE:** snapshot verificado antes de borrar personajes, lugares, acontecimientos, organizaciones y relaciones; se cancela el borrado si falla el respaldo o se alcanza el límite. El borrado de universo comunica que sus snapshots también se eliminarán.
 
 ## Límites conocidos
 - El borrado de un universo elimina sus snapshots y no tiene recuperación posterior.
-- El límite de 25 snapshots rechaza la copia número 26 sin sobrescribir las anteriores.
-- La prueba de snapshot previo al borrado de personaje y la prueba de frontera de 25 snapshots están añadidas; falta CI verde.
+- El límite de 25 snapshots rechaza la copia 26 sin sobrescribir las anteriores.
+- Las pruebas nuevas de snapshot previo y límite 25/26 requieren CI verde.
 - Novel Studio completo, generación narrativa avanzada, Continuity Guard integral y conexión con BotImagen siguen pendientes.
 
 ## Siguiente tarea activa
-**WF-004-C.2 — Obtener CI verde y cerrar la política de snapshots.**
-
-1. Revisar el resultado del workflow #142.
-2. Si falla, leer logs y corregir la causa en esta rama.
-3. Verificar que el snapshot del personaje conserva el estado previo y que el límite 25/26 se cumple.
+**WF-004-C.2 — Obtener CI verde y cerrar el contrato de snapshots.**
+1. Revisar el workflow #144 y el workflow posterior provocado por esta actualización documental.
+2. Corregir cualquier fallo con logs reales; no declarar PASS antes de que el workflow termine con éxito.
+3. Confirmar snapshot de personaje y frontera 25/26.
 4. Mantener el borrado de universo explícitamente irreversible hasta implementar una papelera independiente.
-5. Actualizar `docs/DONE.md` con el SHA y evidencia final. No declarar PASS antes de que el workflow termine con éxito.
+5. Registrar en `docs/DONE.md` el SHA exacto validado y la URL de CI.
 
 ## Protocolo
 Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, PR y CI vivos antes de tocar código. Una tarea activa por agente. No tocar `main` ni fusionar PR sin autorización.
