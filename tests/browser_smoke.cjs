@@ -536,7 +536,7 @@ async function run() {
       const active = await repository.read("metadata", "activeProjectId");
       const catalog = await repository.listProjects();
       repository.close();
-      return { id: active?.value || null, ids: catalog.map((item) => item.projectId), names: catalog.map((item) => item.name) };
+      return { id: active?.value || null, name: catalog.find((item) => item.projectId === active?.value)?.name || null, ids: catalog.map((item) => item.projectId), names: catalog.map((item) => item.name) };
     });
     assert.ok(createdUniverse.id && createdUniverse.id !== "project-asteria", "New projects need distinct stable IDs.");
     assert.ok(createdUniverse.ids.includes("project-asteria"), "The original universe must remain in the catalog.");
