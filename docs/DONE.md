@@ -43,5 +43,13 @@ DONE
 ## Progreso global
 **Estimación: 19%** de la visión completa, ponderada por alcance y no por líneas de código ni cobertura. Las protecciones locales principales de snapshots están verificadas automáticamente; papelera, generadores narrativos, Novel Studio completo, Continuity Guard integral e integración con BotImagen siguen pendientes.
 
-## Estado del trabajo WF-004-C.3 (parcial, CI pendiente)\n- Rama de trabajo: `work/wf-004-c3-project-trash`.\n- Migración IndexedDB v2→v3 no destructiva con almacén `trash`.\n- API: `moveProjectToTrash`, `listTrash`, `restoreTrashedProject`, `permanentlyDeleteTrashedProject`.\n- Proyecto y snapshots se conservan por ID; restauración y borrado permanente usan transacciones IndexedDB.\n- Tests de Chromium ampliados para el ciclo de papelera.\n- **No declarado GREEN:** CI no se ha ejecutado; falta UI y revisar pruebas en GitHub Actions.\n\n## Inicio de la próxima sesión
+## Estado del trabajo WF-004-C.3 (parcial, CI pendiente)\n- Rama de trabajo: `work/wf-004-c3-project-trash`.\n- Migración IndexedDB v2→v3 no destructiva con almacén `trash`.\n- API: `moveProjectToTrash`, `listTrash`, `restoreTrashedProject`, `permanentlyDeleteTrashedProject`.\n- Proyecto y snapshots se conservan por ID; restauración y borrado permanente usan transacciones IndexedDB.\n- Tests de Chromium ampliados para el ciclo de papelera.\n- **No declarado GREEN:** CI no se ha ejecutado; falta UI y revisar pruebas en GitHub Actions.\n\n## Estado WF-004-C.3 (parcial; CI pendiente)
+- Rama: `work/wf-004-c3-project-trash`.
+- Migración IndexedDB v2→v3 con almacén `trash`.
+- API de envío, listado, restauración y borrado permanente por ID.
+- Los snapshots se guardan en la papelera y vuelven al almacén al restaurar.
+- Tests de Chromium ampliados, incluidos conflicto de ID y protección del proyecto activo.
+- CI de esta rama: **NOT_RUN**. La UI de papelera y revisión de fallos siguen pendientes.
+
+## Inicio de la próxima sesión
 Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Consultar HEAD, CI y PR vivos antes de escribir. Mantener una tarea activa y no fusionar PR ni tocar `main` sin autorización.
