@@ -1010,6 +1010,58 @@ async function run() {
     assert.equal(trashFailureReport.backupPreserved, true, "The failing storage fixture must not silently drop the backup.");
     process.stdout.write("PASS trash failure boundary: backup cleanup denial preserves trash and rejects permanent deletion.\\n");
 
+    // Corrupt a trash snapshot deliberately to force an abort after the project and first snapshot have been queued.
+    const trashAbortReport = await page.evaluate(async () => {
+      const api = window.WordWaifuProjectRepository;
+      const source = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const candidate = JSON.parse(JSON.stringify(source));
+      candidate.project = { ...candidate.project, id: "trash-abort-" + Date.now().toString(36), name: "Universo Transacción Atómica" };
+      const projectId = candidate.project.id;
+      const firstSnapshotId = "trash-abort-snapshot-" + Date.now().toString(36);
+      const databaseName = "wordwaifu.trash-abort-test." + Date.now().toString(36);
+      const repository = new api.ProjectRepository({ databaseName, localStorage: null });
+      const db = await repository.open();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("trash", "readwrite");
+        tx.objectStore("trash").put({
+          projectId,
+          deletedAt: new Date().toISOString(),
+          projectData: candidate,
+          snapshots: [
+            { snapshotId: firstSnapshotId, projectId, createdAt: new Date().toISOString(), data: candidate },
+            { snapshotId: "trash-abort-invalid", projectId: "wrong-project-id", createdAt: new Date().toISOString(), data: candidate }
+          ]
+        });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed atomic-restore fixture."));
+        tx.onabort = () => reject(tx.error || new Error("Atomic-restore fixture seed aborted."));
+      });
+      let restoreRejected = false;
+      try { await repository.restoreTrashedProject(projectId); }
+      catch (error) { restoreRejected = /snapshot inconsistente/i.test(error.message); }
+      const projectAfterAbort = await repository.read("projects", projectId);
+      const firstSnapshotAfterAbort = await repository.read("snapshots", firstSnapshotId);
+      const trashAfterAbort = await repository.read("trash", projectId);
+      repository.close();
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(databaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Atomic-restore database cleanup failed."));
+        request.onblocked = () => reject(new Error("Atomic-restore database cleanup blocked."));
+      });
+      return {
+        restoreRejected,
+        projectWriteRolledBack: !projectAfterAbort,
+        snapshotWriteRolledBack: !firstSnapshotAfterAbort,
+        trashPreserved: Boolean(trashAfterAbort)
+      };
+    });
+    assert.equal(trashAbortReport.restoreRejected, true, "An inconsistent snapshot must abort restoration.");
+    assert.equal(trashAbortReport.projectWriteRolledBack, true, "An aborted restoration must not leave a partial project.");
+    assert.equal(trashAbortReport.snapshotWriteRolledBack, true, "An aborted restoration must roll back earlier snapshot writes in the same transaction.");
+    assert.equal(trashAbortReport.trashPreserved, true, "An aborted restoration must keep the original trash entry recoverable.");
+    process.stdout.write("PASS trash atomicity: malformed snapshot abort rolls back project and snapshots, preserving trash.\\n");
+
     const forestMarker = page.locator('g.map-marker[data-location="loc-velado"]').first();
     await forestMarker.click();
     const forestSelected = await page.waitForFunction(
