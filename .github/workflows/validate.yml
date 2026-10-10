@@ -1,0 +1,41 @@
+name: Validate WordWaifu
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check JavaScript syntax
+        run: |
+          node --check src/app.js
+          node --check src/project-schema.js
+          node --check src/project-repository.js
+          node --check tests/test_project_schema.cjs
+          node --check tests/browser_smoke.cjs
+      - name: Test project import validation
+        run: node tests/test_project_schema.cjs
+      - name: Install pinned Playwright
+        run: npm install --no-save --no-package-lock playwright@1.55.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run browser smoke test
+        run: node tests/browser_smoke.cjs
+      - name: Check project structure
+        run: python scripts/validate_project.py
