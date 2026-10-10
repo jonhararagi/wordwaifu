@@ -272,6 +272,26 @@ async function run() {
       const snapshotCRestored = Boolean(await repository.read("snapshots", trashSnapshot.snapshotId));
       const trashEntryRemovedOnRestore = !(await repository.read("trash", projectC.project.id));
       const trashAgain = await repository.moveProjectToTrash(projectC.project.id);
+      // Simulate a stale duplicate active-store record beside a valid trash tombstone.
+      // Activation must reject the trashed ID atomically rather than switching active metadata.
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId: projectC.project.id, data: projectC });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed stale project record beside trash tombstone."));
+        tx.onabort = () => reject(tx.error || new Error("Stale project record seed was aborted."));
+      });
+      let trashedProjectActivationRejected = false;
+      try { await repository.activateProject(projectC.project.id); }
+      catch (error) { trashedProjectActivationRejected = /está en la papelera/i.test(error.message); }
+      const activeIdAfterRejectedTrashActivation = (await repository.read("metadata", "activeProjectId"))?.value || null;
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").delete(projectC.project.id);
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not clean stale project record fixture."));
+        tx.onabort = () => reject(tx.error || new Error("Stale project record cleanup was aborted."));
+      });
       // A stale compatibility backup must not make a trashed universe searchable.
       const trashedBackupForSearchWritten = repository.saveBackup(projectC).written;
       const trashSearchReport = await repository.searchAcrossProjects("Mira", { entityType: "character" });
@@ -330,6 +350,7 @@ async function run() {
         projectCAbsent, snapshotCAbsentWhileTrashed, trashRetainsSnapshot, projectCHiddenFromCatalog,
         trashRestoreCollisionRejected, collisionDataPreserved, trashPreservedAfterCollision,
         trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain,
+        trashedProjectActivationRejected, activeIdAfterRejectedTrashActivation,
         trashedBackupForSearchWritten, trashedProjectSearchExcluded, trashSearchComplete: trashSearchReport.complete,
         unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten,
         catalogBlockedOnUnreadableTrash, getProjectBlockedOnUnreadableTrash,
@@ -377,6 +398,9 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.snapshotCRestored, true);
     assert.equal(snapshotRepositoryEvidence.trashEntryRemovedOnRestore, true);
     assert.equal(snapshotRepositoryEvidence.trashAgain.moved, true);
+    assert.equal(snapshotRepositoryEvidence.trashedProjectActivationRejected, true,
+      "A stale duplicate projects record must not allow activation when the trash tombstone exists.");
+    assert.notEqual(snapshotRepositoryEvidence.activeIdAfterRejectedTrashActivation, "trash-project-c");
     assert.equal(snapshotRepositoryEvidence.trashedBackupForSearchWritten, true);
     assert.equal(snapshotRepositoryEvidence.trashedProjectSearchExcluded, true,
       "Multiverse search must not resurrect a trashed project from a stale localStorage backup.");
