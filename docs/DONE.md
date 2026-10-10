@@ -1,53 +1,45 @@
 # DONE — WordWaifu · Punto de continuidad
 
-**Resultado de esta sesión: PARTIAL — CI automatizado PASS_REAL; quedan gates de cuota y revisión visual manual.**  
-**Tarea activa:** WF-004-C.3 — papelera y recuperación de universos completos.  
+**Resultado:** PARTIAL — CI automatizado PASS_REAL; pendientes gates específicos de cuota y revisión visual manual.  
+**Tarea activa:** WF-004-C.3-VERIFY — validar papelera y recuperación antes del cierre.  
 **Fecha:** 2026-10-10.  
 **Avance global estimado:** 19% de la visión completa; estimación ponderada por alcance, no por líneas de código.
 
-## HEAD, rama y PR
+## Repositorio, rama y revisiones
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama de trabajo: `work/wf-004-c3-project-trash`.
+- HEAD antes de esta persistencia de continuidad: `8db6e08b7007d92220074ccd7d787e080359e79c`.
+- Último cambio funcional: [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7).
+- Revisión de código validada por CI: [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f). Los commits posteriores actualizan solo documentación.
 - `main` permanece en `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`; no se modificó.
-- Comparación verificada tras las correcciones: rama de trabajo por delante de main / 0 behind respecto de main.
-- Corrección de identificadores de diálogo duplicados: [`eff7f73`](https://github.com/jonhararagi/wordwaifu/commit/eff7f73fe574f9dc40d1e31d94a9f5dfda9c08ab).
-- Corrección de fixture de test (incluye nombre del proyecto): [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1).
-- Este trabajo de WF-004-C.3 no está incluido en el PR #1. [PR #1](https://github.com/jonhararagi/wordwaifu/pull/1) sigue abierto en borrador y no se fusionó.
-- No se realizó ningún cambio en `main`, no se abrió un PR nuevo ni se fusionó nada.
+- Comparación comprobada: rama activa 236 commits ahead / 0 behind respecto de `main`. El conteo describe historia acumulada, no tareas completadas.
+- PR #1 sigue abierto en borrador: https://github.com/jonhararagi/wordwaifu/pull/1. WF-004-C.3 no está incluido en ese PR. No se abrió PR nuevo ni se fusionó nada.
 
-## Alcance ejecutado en esta sesión
-- Reconsultadas las ramas, PR abierto, comparación de historia y archivos de continuidad.
-- Confirmado que `.github/workflows/validate.yml` contiene triggers de push a `main` y `work/**`, PR a `main` y `workflow_dispatch`.
-- Actualizado `docs/STATUS.md` para reflejar la comparación más reciente y mantener explícitos los gates pendientes.
-- La documentación de continuidad se actualiza para reflejar el resultado CI confirmado y mantener explícitos los gates pendientes.
-- Se corrigió `tests/browser_smoke.cjs`: variables de diálogo únicas, nombre en la fixture `createdUniverse`, y selección explícita del `projectId` exacto antes de restaurar y borrar permanentemente. No se cambió lógica de aplicación.
+## Trabajo de esta sesión
+- Reconsultado CI y listado de jobs para run [#38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453).
+- Confirmado que el job `validate` finalizó `success`; los pasos de sintaxis JS, validación de importación/esquema, instalación Playwright/Chromium, browser smoke y validador estructural finalizaron correctamente.
+- Actualizado `docs/STATUS.md` para retirar el estado obsoleto de CI pendiente y separar con claridad los gates automatizados de los manuales.
+- Actualizado este `docs/DONE.md` como punto de continuidad canónico.
+- Actualizado `docs/WF-004-C3-TRASH-CONTRACT.md`: CI actual documentado, y prueba de aislamiento del respaldo ajeno marcada como verificada por el smoke.
+- El smoke verifica que el borrado permanente de un universo en papelera conserve el respaldo local perteneciente a otro universo.
+- No se cambió lógica funcional en esta sesión; los cambios nuevos son documentación.
 
-## Estado funcional heredado de WF-004-C.3
-- Implementación registrada: migración IndexedDB v2→v3, almacén `trash`, envío reversible, listado, restauración por ID, borrado permanente separado y conservación de snapshots.
-- Se registran guardias contra la resurrección de universos mediante respaldos residuales y comprobaciones de tombstones.
-- **Estado general: PARTIAL.** La implementación declarada no se considera validada hasta superar los gates de la revisión actual.
+## Estado de WF-004-C.3
+- Backend y UI registrados: migración IndexedDB v2→v3, almacén `trash`, envío reversible, restauración por ID, borrado permanente separado y conservación de snapshots.
+- Guardias para impedir resurrección de universos mediante punteros/backups residuales y comprobación de tombstones.
+- Tres defectos de pruebas se corrigieron en `eff7f73`, `de061c6` y `a85c737`.
+- **PASS_REAL CI:** [run #38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453), job `validate` = `success`.
+- **PARTIAL:** aún no hay evidencia de prueba real de cuota ni de revisión visual manual en Windows 11.
+- No declarar WF-004-C.3 DONE solo por CI verde.
 
-## Evidencia y gates
-- **PASS_REAL histórico para WF-004-C.2:** [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita C.3.
-- **PASS_STATIC:** revisión de la configuración del workflow y de la documentación/estructura del contrato.
-- **FAIL_REAL histórico** en run [#38020416762](https://github.com/jonhararagi/wordwaifu/actions/runs/38020416762), HEAD `c654510`: Chromium agotó el tiempo esperando el borrado permanente porque el test no seleccionaba el ID exacto. Corrección en [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7).
-- **PASS_REAL CI actual:** run [#38021293453](https://github.com/jonhararagi/wordwaifu/actions/runs/38021293453), asociado al commit de cierre [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f). Job `validate` = `success`; nueve etapas finalizaron correctamente, incluyendo sintaxis JS, validación de esquema/importación, Chromium smoke y validador estructural. El código funcional validado corresponde al cambio `a85c737`; `da79c58` solo actualiza documentación.
-- **FAIL_REAL previo** en [run #38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894): el smoke encontró que `createdUniverse.name` era `undefined`; corregido en `de061c6`.
-- **FAIL_REAL previo** en [run #38020089307](https://github.com/jonhararagi/wordwaifu/actions/runs/38020089307): sintaxis detectó redeclaración de `restoreUiDialog`; corregido en `eff7f73`.
-- **NOT_RUN / PENDIENTE:** pruebas específicas de fallos reales de cuota y revisión visual/manual en Windows 11. El validador estructural sí pasó en el CI #38021293453.
-- CI automatizado está verde para el código funcional corregido; mantener WF-004-C.3 como PARTIAL hasta superar cuota y revisión manual.
+## Gates pendientes y siguiente ejecución
+1. Diseñar/ejecutar pruebas específicas de abortos de transacción IndexedDB y de fallos reales de cuota de almacenamiento; verificar rollback y ausencia de éxito falso.
+2. Ejecutar revisión visual manual de la papelera/restauración en Windows 11.
+3. Si alguna prueba falla, inspeccionar logs, corregir el defecto observado y repetir CI en la rama de trabajo.
+4. Actualizar `docs/STATUS.md` y sobrescribir este `docs/DONE.md` al cerrar el próximo ciclo.
+5. No tocar `main`, no fusionar ni abrir PR sin autorización explícita.
 
-## Próxima tarea y criterios de aceptación
-**WF-004-C.3-VERIFY — validar HEAD exacto antes de cerrar la subtarea.**
+## Punto de inicio para la próxima sesión
+Rama: `work/wf-004-c3-project-trash`. Leer `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Inspeccionar el HEAD actual antes de escribir para evitar duplicados.
 
-1. CI automatizado del código funcional corregido confirmado PASS_REAL en run #38021293453.
-2. Añadir/ejecutar pruebas específicas de abortos de transacción y cuota real de almacenamiento.
-3. Realizar revisión visual manual en Windows 11.
-4. Actualizar `docs/STATUS.md` y sobrescribir este `docs/DONE.md` con SHA, CI y resultados reales.
-5. No tocar `main` ni fusionar sin autorización explícita.
-
-**Último cambio funcional:** [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7). **HEAD con CI PASS:** [`da79c58`](https://github.com/jonhararagi/wordwaifu/commit/da79c5801257246730ce7f88085e2a90e37fd02f). La actualización de `STATUS.md` de esta sesión es posterior y solo documental; la lógica y las pruebas funcionales no cambiaron.
-
-**Punto de inicio:** `work/wf-004-c3-project-trash`; leer `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`.
-
-**Estimación de la siguiente tarea:** 5–10 minutos para inspección/CI inicial; la verificación manual de Windows y las pruebas de cuota pueden requerir más tiempo y entorno específico.
+**Estimación:** 5–10 minutos para preparar/ejecutar el siguiente bloque automatizable; las pruebas de cuota y revisión visual dependen de un entorno que permita provocarlas y observarlas realmente.
