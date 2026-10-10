@@ -20,15 +20,15 @@ Permitir recuperar un universo eliminado por error sin confundir proyectos que t
 9. **Aislamiento entre universos.** Dos proyectos con el mismo nombre no pueden afectar la entrada de papelera, restauración o borrado permanente del otro.
 10. **Offline-first.** Toda operación de papelera funciona localmente sin red, IA ni API externa.
 
-## Modelo de persistencia a evaluar
+## Modelo de persistencia implementado
 
-Añadir un object store versionado, por ejemplo `trash`, indexado por `projectId` y `deletedAt`. Cada entrada debe incluir al menos:
+El almacén IndexedDB `trash` (migración v2→v3) usa `projectId` como clave. Cada entrada implementada incluye:
 
 - `projectId`
 - `deletedAt`
 - `projectData` validado
 - `snapshots` validados pertenecientes al mismo `projectId`
-- metadatos de versión del formato de papelera
+- `formatVersion: 1` para identificar el formato de la entrada
 
 La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La forma definitiva del registro queda sujeta a la implementación y pruebas; no se considera aprobada solo por existir este documento.
 
@@ -42,7 +42,9 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 - [ ] Proyectos con nombres idénticos permanecen aislados por ID.
 - [x] Borrado permanente solo afecta al ID confirmado; se limpia únicamente un respaldo local con el mismo ID y solo después de validar la entrada de papelera. Un ID ausente no puede borrar respaldos.
 - [x] Fallo simulado al retirar el respaldo local: la papelera permanece intacta y el borrado permanente se rechaza explícitamente.
-- [ ] Fallos de cuota y abortos de IndexedDB deben probarse por separado; la cobertura actual no sustituye esos escenarios.
+- [x] Aborto de restauración por snapshot inconsistente: la transacción revierte la escritura del proyecto y los snapshots parciales y conserva la entrada de papelera.
+- [x] Respaldo local malformado: se conserva sin modificar, se informa la advertencia y se bloquea el borrado permanente.
+- [ ] Fallos reales de cuota de almacenamiento aún pendientes; no se simulan como aprobados.
 - [ ] El respaldo local de otro universo nunca se elimina ni se sustituye.
 - [x] UI de papelera integrada: la acción normal «Enviar a papelera» mueve el universo de forma reversible; la pantalla Papelera permite restauración por ID y borrado permanente con confirmación.
 - [ ] Chromium CI pasa; inspección visual en Windows queda `NOT_RUN` hasta ejecutarse manualmente.
@@ -60,7 +62,7 @@ Este documento comenzó como especificación de trabajo. La implementación parc
 - El catálogo y `getProject()` omiten IDs en papelera para evitar que un respaldo local residual los resucite.
 - Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. CI todavía no ejecutado.
 - UI visible integrada en `index.html`/`src/app.js`; la acción normal de catálogo envía a papelera y conserva snapshots, mientras que el borrado irreversible queda separado en la pantalla Papelera. El smoke test cubre el movimiento reversible, restauración y borrado permanente desde la interfaz.
-- Pruebas añadidas para que un borrado permanente de ID ausente no borre respaldos ajenos, y para que se retire un respaldo residual solo cuando coincide exactamente con el ID en papelera.
+- Pruebas añadidas para que un borrado permanente de ID ausente no borre respaldos ajenos, para respaldos residuales coincidentes, fallos al retirar respaldos, JSON malformado y rollback atómico por snapshot inconsistente.
 - **Pendiente:** ejecutar CI real, añadir cobertura específica de abortos/cuota y realizar prueba visual manual en Windows 11.
 - Intento de dispatch realizado; el navegador conectado no tenía sesión autenticada y no permitió iniciar el workflow. Ver [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/workflows/validate.yml).
 
