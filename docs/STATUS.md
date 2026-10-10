@@ -11,7 +11,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama activa WF-004-C.3: `work/wf-004-c3-project-trash`.
 - `main`: `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
-- Comparación comprobada el 2026-10-10: rama de trabajo **226 commits ahead / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
+- Comparación comprobada el 2026-10-10: rama de trabajo **por delante de main / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar. Su head corresponde a otra rama; WF-004-C.3 no forma parte de ese PR.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
