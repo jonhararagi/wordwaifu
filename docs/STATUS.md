@@ -37,7 +37,7 @@
 - API del repositorio implementada en `work/wf-004-c3-project-trash`.
 - Migración IndexedDB v2→v3 y pruebas del ciclo de papelera añadidas.
 - **CI de esta rama: NOT_RUN.**
-- Pendiente: UI visible, validación GitHub Actions, revisión de fallos de transacción y prueba manual Windows 11.
+- UI visible integrada: listar papelera, restaurar por ID y borrar permanentemente con confirmación.\n- Pendiente: ejecutar GitHub Actions, revisar fallos de transacción y prueba manual Windows 11.
 
 ## Protocolo
 Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, PR y CI vivos antes de tocar código. Una tarea activa por agente. No tocar `main` ni fusionar PR sin autorización.
