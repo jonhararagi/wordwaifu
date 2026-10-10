@@ -128,6 +128,18 @@
       <p id="project-list-status" class="field-help" role="status">Leyendo el catálogo local…</p>
       <div class="project-manager-actions"><button type="button" id="project-refresh-button" class="outline-button">Actualizar lista</button><button type="button" id="project-open-button" class="primary-button">Abrir seleccionado</button><button type="button" id="project-delete-button" class="outline-button danger-action" disabled>Eliminar seleccionado</button></div>
       <p id="project-delete-help" class="field-help" role="status">Seleccioná un proyecto para ver las opciones de borrado.</p>
+      <section class="snapshot-manager trash-manager" aria-labelledby="trash-manager-title">
+        <div><p class="eyebrow">RECUPERACIÓN DE UNIVERSOS</p><h3 id="trash-manager-title">Papelera</h3></div>
+        <p class="field-help">Los universos enviados aquí conservan sus datos y snapshots. Restaurar recupera el mismo ID; borrar permanentemente no se puede deshacer.</p>
+        <div class="project-manager-actions">
+          <button type="button" id="trash-refresh-button" class="outline-button">Actualizar papelera</button>
+          <button type="button" id="trash-restore-button" class="primary-button" disabled>Restaurar universo</button>
+          <button type="button" id="trash-delete-button" class="outline-button danger-action" disabled>Borrar permanentemente</button>
+        </div>
+        <label for="trash-list">Universos en papelera</label>
+        <select id="trash-list" size="4" aria-describedby="trash-status"></select>
+        <p id="trash-status" class="field-help" role="status" aria-live="polite">Actualizá la papelera para consultar los universos eliminados.</p>
+      </section>
       <section class="snapshot-manager" aria-labelledby="snapshot-manager-title">
         <div><p class="eyebrow">RECUPERACIÓN LOCAL</p><h3 id="snapshot-manager-title">Respaldos versionados</h3></div>
         <p class="field-help">Hasta 25 snapshots por universo. Cada copia conserva el ID del proyecto y se valida antes de restaurar. Para restaurar, primero debe estar abierto ese universo.</p>
