@@ -25,7 +25,7 @@
       if (!this.indexedDB || typeof this.indexedDB.open !== "function") throw new Error("IndexedDB no está disponible.");
       if (this.opening) return this.opening;
       this.opening = new Promise((resolve, reject) => {
-        const request = this.indexedDB.open(this.databaseName, 2);
+        const request = this.indexedDB.open(this.databaseName, 3);
         request.onupgradeneeded = () => {
           const db = request.result;
           if (!db.objectStoreNames.contains("projects")) db.createObjectStore("projects", { keyPath: "projectId" });
@@ -38,6 +38,13 @@
             const snapshots = request.transaction.objectStore("snapshots");
             if (!snapshots.indexNames.contains("byProjectId")) snapshots.createIndex("byProjectId", "projectId", { unique: false });
             if (!snapshots.indexNames.contains("byCreatedAt")) snapshots.createIndex("byCreatedAt", "createdAt", { unique: false });
+          }
+          if (!db.objectStoreNames.contains("trash")) {
+            const trash = db.createObjectStore("trash", { keyPath: "projectId" });
+            trash.createIndex("byDeletedAt", "deletedAt", { unique: false });
+          } else {
+            const trash = request.transaction.objectStore("trash");
+            if (!trash.indexNames.contains("byDeletedAt")) trash.createIndex("byDeletedAt", "deletedAt", { unique: false });
           }
         };
         request.onerror = () => reject(request.error || new Error("No se pudo abrir IndexedDB."));
@@ -531,6 +538,209 @@
         rollbackSnapshotId: rollbackSnapshot.snapshotId,
         backupWritten: true
       };
+    }
+
+
+    async listTrashedProjects() {
+      const db = await this.open();
+      const data = await new Promise((resolve, reject) => {
+        const tx = db.transaction(["trash", "snapshots"], "readonly");
+        const trashRequest = tx.objectStore("trash").getAll();
+        const snapshotRequest = tx.objectStore("snapshots").getAll();
+        let trashed = [], snapshots = [];
+        trashRequest.onsuccess = () => { trashed = Array.isArray(trashRequest.result) ? trashRequest.result : []; };
+        snapshotRequest.onsuccess = () => { snapshots = Array.isArray(snapshotRequest.result) ? snapshotRequest.result : []; };
+        tx.oncomplete = () => resolve({ trashed, snapshots });
+        tx.onerror = () => reject(tx.error || new Error("No se pudo leer la papelera."));
+        tx.onabort = () => reject(tx.error || new Error("La lectura de la papelera fue cancelada."));
+      });
+      const counts = new Map();
+      data.snapshots.forEach((record) => {
+        if (record && typeof record.projectId === "string") counts.set(record.projectId, (counts.get(record.projectId) || 0) + 1);
+      });
+      return data.trashed
+        .filter((record) => record && typeof record.projectId === "string" &&
+          isProject(record.data) && record.data.project.id === record.projectId &&
+          typeof record.deletedAt === "string")
+        .map((record) => ({
+          projectId: record.projectId,
+          name: typeof record.name === "string" && record.name.trim() ? record.name : "Proyecto sin nombre",
+          description: typeof record.description === "string" ? record.description : "",
+          deletedAt: record.deletedAt,
+          snapshotCount: counts.get(record.projectId) || 0,
+          source: "trash"
+        }))
+        .sort((a, b) => b.deletedAt.localeCompare(a.deletedAt) || a.projectId.localeCompare(b.projectId));
+    }
+
+    async trashProject(projectId) {
+      if (typeof projectId !== "string" || !projectId.trim()) throw new Error("El ID del proyecto no es válido.");
+      const db = await this.open();
+      let guardError = null;
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction(["projects", "metadata", "trash"], "readwrite");
+        const projects = tx.objectStore("projects");
+        const trash = tx.objectStore("trash");
+        const projectRequest = projects.get(projectId);
+        const activeRequest = tx.objectStore("metadata").get(ACTIVE_KEY);
+        const trashRequest = trash.get(projectId);
+        let projectReady = false, activeReady = false, trashReady = false;
+        let projectRecord, activeRecord, trashRecord;
+        const applyTrash = () => {
+          if (!projectReady || !activeReady || !trashReady) return;
+          if (!projectRecord || projectRecord.projectId !== projectId || !isProject(projectRecord.data) ||
+              projectRecord.data.project.id !== projectId) {
+            guardError = new Error("El proyecto no tiene un registro verificado en IndexedDB.");
+            tx.abort();
+            return;
+          }
+          if (activeRecord && activeRecord.value === projectId) {
+            guardError = new Error("No se puede mover a papelera el proyecto activo. Abrí otro proyecto primero.");
+            tx.abort();
+            return;
+          }
+          if (trashRecord) {
+            guardError = new Error("Este proyecto ya existe en la papelera.");
+            tx.abort();
+            return;
+          }
+          const data = JSON.parse(JSON.stringify(projectRecord.data));
+          trash.put({
+            projectId,
+            name: data.project.name || "Proyecto sin nombre",
+            description: data.project.description || "",
+            deletedAt: new Date().toISOString(),
+            data
+          });
+          projects.delete(projectId);
+        };
+        projectRequest.onsuccess = () => { projectRecord = projectRequest.result; projectReady = true; applyTrash(); };
+        activeRequest.onsuccess = () => { activeRecord = activeRequest.result; activeReady = true; applyTrash(); };
+        trashRequest.onsuccess = () => { trashRecord = trashRequest.result; trashReady = true; applyTrash(); };
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(guardError || tx.error || new Error("Falló el movimiento a papelera."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("El movimiento a papelera fue cancelado."));
+      });
+      if (await this.read("projects", projectId)) throw new Error("IndexedDB no confirmó el movimiento a papelera.");
+      const entry = await this.read("trash", projectId);
+      if (!entry || !isProject(entry.data) || entry.data.project.id !== projectId) throw new Error("Falló la verificación de la papelera.");
+      let backupRemoved = true, warning = null;
+      const backup = this.readBackup().project;
+      if (backup && backup.project.id === projectId) {
+        try {
+          if (!this.localStorage) throw new Error("localStorage no está disponible.");
+          this.localStorage.removeItem(this.storageKey);
+          backupRemoved = this.localStorage.getItem(this.storageKey) === null;
+          if (!backupRemoved) throw new Error("El respaldo local sigue presente.");
+        } catch (error) {
+          backupRemoved = false;
+          warning = "El proyecto está en papelera, pero no se pudo retirar el respaldo local: " + error.message;
+        }
+      }
+      return { projectId, trashed: true, deletedAt: entry.deletedAt, backupRemoved, warning };
+    }
+
+    async restoreTrashedProject(projectId) {
+      if (typeof projectId !== "string" || !projectId.trim()) throw new Error("El ID del proyecto no es válido.");
+      const entry = await this.read("trash", projectId);
+      if (!entry || entry.projectId !== projectId || !isProject(entry.data) || entry.data.project.id !== projectId) {
+        throw new Error("El proyecto no existe en la papelera o su ID no coincide.");
+      }
+      const restoredData = this.normalizeSnapshotProject(projectId, entry.data);
+      const db = await this.open();
+      let guardError = null;
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction(["projects", "metadata", "trash"], "readwrite");
+        const projects = tx.objectStore("projects");
+        const currentRequest = projects.get(projectId);
+        const trashRequest = tx.objectStore("trash").get(projectId);
+        const activeRequest = tx.objectStore("metadata").get(ACTIVE_KEY);
+        let projectReady = false, trashReady = false, activeReady = false;
+        let current, latestTrash, active;
+        const applyRestore = () => {
+          if (!projectReady || !trashReady || !activeReady) return;
+          if (current) {
+            guardError = new Error("Ya existe un proyecto con ese ID; la restauración se canceló.");
+            tx.abort();
+            return;
+          }
+          if (!latestTrash || latestTrash.projectId !== projectId || JSON.stringify(latestTrash.data) !== JSON.stringify(entry.data)) {
+            guardError = new Error("La entrada de papelera cambió durante la restauración. Actualizá e intentá otra vez.");
+            tx.abort();
+            return;
+          }
+          if (active && active.value === projectId) {
+            guardError = new Error("El puntero activo no puede apuntar a un proyecto en papelera.");
+            tx.abort();
+            return;
+          }
+          projects.put({ projectId, data: restoredData });
+          tx.objectStore("trash").delete(projectId);
+        };
+        currentRequest.onsuccess = () => { current = currentRequest.result; projectReady = true; applyRestore(); };
+        trashRequest.onsuccess = () => { latestTrash = trashRequest.result; trashReady = true; applyRestore(); };
+        activeRequest.onsuccess = () => { active = activeRequest.result; activeReady = true; applyRestore(); };
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(guardError || tx.error || new Error("Falló la restauración desde papelera."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("La restauración fue cancelada."));
+      });
+      const restored = await this.read("projects", projectId);
+      if (!restored || restored.projectId !== projectId || !isProject(restored.data) ||
+          JSON.stringify(restored.data) !== JSON.stringify(restoredData) || await this.read("trash", projectId)) {
+        throw new Error("IndexedDB no pudo verificar la restauración.");
+      }
+      return { projectId, restored: true, project: restoredData, snapshotsPreserved: (await this.listSnapshots(projectId)).length };
+    }
+
+    async permanentlyDeleteTrashedProject(projectId) {
+      if (typeof projectId !== "string" || !projectId.trim()) throw new Error("El ID del proyecto no es válido.");
+      const db = await this.open();
+      let guardError = null;
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction(["trash", "metadata", "snapshots"], "readwrite");
+        const trash = tx.objectStore("trash");
+        const entryRequest = trash.get(projectId);
+        const activeRequest = tx.objectStore("metadata").get(ACTIVE_KEY);
+        let entryReady = false, activeReady = false, entry, active;
+        const applyPurge = () => {
+          if (!entryReady || !activeReady) return;
+          if (!entry || entry.projectId !== projectId || !isProject(entry.data) || entry.data.project.id !== projectId) {
+            guardError = new Error("El proyecto no tiene una entrada verificada en la papelera.");
+            tx.abort();
+            return;
+          }
+          if (active && active.value === projectId) {
+            guardError = new Error("No se puede borrar permanentemente el proyecto activo.");
+            tx.abort();
+            return;
+          }
+          trash.delete(projectId);
+          const snapshotsRequest = tx.objectStore("snapshots").index("byProjectId").getAll(projectId);
+          snapshotsRequest.onsuccess = () => snapshotsRequest.result.forEach((snapshot) => tx.objectStore("snapshots").delete(snapshot.snapshotId));
+        };
+        entryRequest.onsuccess = () => { entry = entryRequest.result; entryReady = true; applyPurge(); };
+        activeRequest.onsuccess = () => { active = activeRequest.result; activeReady = true; applyPurge(); };
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(guardError || tx.error || new Error("Falló el borrado permanente."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("El borrado permanente fue cancelado."));
+      });
+      if (await this.read("trash", projectId)) throw new Error("IndexedDB no confirmó el borrado permanente.");
+      const remainingSnapshots = await this.listSnapshots(projectId);
+      if (remainingSnapshots.length) throw new Error("No se pudieron eliminar todos los snapshots del proyecto.");
+      let backupRemoved = true, warning = null;
+      const backup = this.readBackup().project;
+      if (backup && backup.project.id === projectId) {
+        try {
+          if (!this.localStorage) throw new Error("localStorage no está disponible.");
+          this.localStorage.removeItem(this.storageKey);
+          backupRemoved = this.localStorage.getItem(this.storageKey) === null;
+          if (!backupRemoved) throw new Error("El respaldo local sigue presente.");
+        } catch (error) {
+          backupRemoved = false;
+          warning = "La papelera se vació, pero no se pudo retirar el respaldo local: " + error.message;
+        }
+      }
+      return { projectId, purged: true, backupRemoved, warning };
     }
 
     async deleteProject(projectId) {
