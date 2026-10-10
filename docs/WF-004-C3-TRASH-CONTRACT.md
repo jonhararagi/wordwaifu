@@ -1,6 +1,6 @@
 # WF-004-C.3 — Contrato de papelera de universos
 
-Estado: **BACKEND IMPLEMENTED / UI AND CI PENDING**  
+Estado: **BACKEND + UI IMPLEMENTED / CI PENDING**  
 Rama de trabajo: `work/wf-004-c3-project-trash`
 
 ## Objetivo
@@ -41,14 +41,17 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 - [ ] Un conflicto de ID rechaza la restauración sin sobrescritura.
 - [ ] Proyectos con nombres idénticos permanecen aislados por ID.
 - [x] Borrado permanente solo afecta al ID confirmado; se limpia únicamente un respaldo local con el mismo ID y solo después de validar la entrada de papelera. Un ID ausente no puede borrar respaldos.
-- [ ] Fallos sembrados de transacción/cuota no producen éxito falso ni pérdida parcial (aún falta cobertura específica de abort/cuota).
+- [x] Fallo simulado al retirar el respaldo local: la papelera permanece intacta y el borrado permanente se rechaza explícitamente.
+- [ ] Fallos de cuota y abortos de IndexedDB deben probarse por separado; la cobertura actual no sustituye esos escenarios.
 - [ ] El respaldo local de otro universo nunca se elimina ni se sustituye.
 - [x] UI de papelera integrada: listado por ID, restauración con confirmación y borrado permanente con confirmación.
 - [ ] Chromium CI pasa; inspección visual en Windows queda `NOT_RUN` hasta ejecutarse manualmente.
 
 ## Evidencia y límites
 
-Este documento es una especificación de trabajo, no evidencia de funcionalidad implementada. La base de referencia auditada reporta WF-004-C.2 con Chromium CI PASS en [run #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). ## Implementación parcial registrada
+Este documento comenzó como especificación de trabajo. La implementación parcial y sus pruebas se registran a continuación; no se consideran aprobadas hasta ejecutar los gates. La base de referencia auditada reporta WF-004-C.2 con Chromium CI PASS en [run #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869).
+
+## Implementación parcial registrada
 
 - IndexedDB sube de v2 a v3 de forma no destructiva y añade el almacén `trash`.
 - `moveProjectToTrash(projectId)` mueve proyecto y snapshots en una transacción; bloquea el proyecto activo.
@@ -58,6 +61,7 @@ Este documento es una especificación de trabajo, no evidencia de funcionalidad 
 - Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. CI todavía no ejecutado.
 - UI visible integrada en `index.html`/`src/app.js`; el smoke test incorpora el ciclo de restauración y borrado permanente desde la interfaz.
 - Pruebas añadidas para que un borrado permanente de ID ausente no borre respaldos ajenos, y para que se retire un respaldo residual solo cuando coincide exactamente con el ID en papelera.
-- **Pendiente:** ejecutar CI real, revisar abortos/cuota y prueba visual manual en Windows 11.
+- **Pendiente:** ejecutar CI real, añadir cobertura específica de abortos/cuota y realizar prueba visual manual en Windows 11.
+- Intento de dispatch realizado; el navegador conectado no tenía sesión autenticada y no permitió iniciar el workflow. Ver [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/workflows/validate.yml).
 
 La tarea WF-004-C.3 no debe marcarse DONE hasta que la UI y todos los gates anteriores estén implementados y ejecutados.
