@@ -38,7 +38,7 @@
 - API del repositorio implementada en `work/wf-004-c3-project-trash`.
 - Migración IndexedDB v2→v3 y pruebas del ciclo de papelera añadidas.
 - **CI de esta rama: NOT_RUN.**
-- UI visible integrada: listar papelera, restaurar por ID y borrar permanentemente con confirmación.
+- UI integrada: la acción estándar «Enviar a papelera» conserva datos y snapshots; en Papelera se restaura por ID o se borra permanentemente con confirmación.
 - Cobertura adicional: fallo simulado al limpiar respaldo local mantiene la entrada de papelera y rechaza borrado permanente.\n- Intento de dispatch bloqueado: navegador sin sesión autenticada de GitHub.\n- Pendiente: ejecutar GitHub Actions, probar abortos/cuota y realizar prueba manual Windows 11.
 
 ## Protocolo
