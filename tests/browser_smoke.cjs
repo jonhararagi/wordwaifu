@@ -272,8 +272,11 @@ async function run() {
       const snapshotCRestored = Boolean(await repository.read("snapshots", trashSnapshot.snapshotId));
       const trashEntryRemovedOnRestore = !(await repository.read("trash", projectC.project.id));
       const trashAgain = await repository.moveProjectToTrash(projectC.project.id);
+      // Simulate a stale local backup left behind by an earlier cleanup failure.
+      const residualBackupWritten = repository.saveBackup(projectC).written;
       const permanentDelete = await repository.permanentlyDeleteTrashedProject(projectC.project.id);
       const permanentlyGone = !(await repository.read("trash", projectC.project.id));
+      const residualBackupRemoved = localStorage.getItem(storageKey) === null;
 
       repository.close();
       await new Promise((resolve, reject) => {
@@ -296,7 +299,7 @@ async function run() {
         activeProjectTrashRejected, trashMove, trashListed: trashList.some((item) => item.projectId === projectC.project.id),
         projectCAbsent, snapshotCAbsentWhileTrashed, trashRetainsSnapshot, projectCHiddenFromCatalog,
         trashRestoreCollisionRejected, collisionDataPreserved, trashPreservedAfterCollision,
-        trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain, permanentDelete, permanentlyGone
+        trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain, residualBackupWritten, permanentDelete, permanentlyGone, residualBackupRemoved
       };
     });
     assert.equal(snapshotRepositoryEvidence.migration.version, 3);
@@ -342,6 +345,8 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.trashAgain.moved, true);
     assert.equal(snapshotRepositoryEvidence.permanentDelete.permanentlyDeleted, true);
     assert.equal(snapshotRepositoryEvidence.permanentlyGone, true);
+    assert.equal(snapshotRepositoryEvidence.residualBackupWritten, true);
+    assert.equal(snapshotRepositoryEvidence.residualBackupRemoved, true, "Permanent deletion must remove a stale backup with the exact same project ID.");
     process.stdout.write("PASS trash repository: v1->v3 migration, active-project guard, snapshot retention, restore and permanent delete verified.\\n");
 
     // Visible snapshot controls create, restore and delete while preserving the active universe ID.
