@@ -926,10 +926,38 @@ async function run() {
       const fallbackSaved = await fallbackRepository.saveActive(seed);
       const fallbackLoaded = await fallbackRepository.loadActive();
 
+      // A stale compatibility backup must not resurrect a project already in trash.
+      const tombstoneStorageKey = "wordwaifu.repository-test.trashed.v1";
+      const tombstoneDatabaseName = "wordwaifu.repository-test.trashed.v1";
+      localStorage.setItem(tombstoneStorageKey, JSON.stringify(seed));
+      const tombstoneRepository = new api.ProjectRepository({
+        storageKey: tombstoneStorageKey,
+        databaseName: tombstoneDatabaseName
+      });
+      const tombstoneDb = await tombstoneRepository.open();
+      await new Promise((resolve, reject) => {
+        const tx = tombstoneDb.transaction(["trash", "metadata"], "readwrite");
+        tx.objectStore("trash").put({
+          projectId: seed.project.id,
+          formatVersion: 1,
+          projectData: seed,
+          snapshots: []
+        });
+        tx.objectStore("metadata").put({ key: "activeProjectId", value: seed.project.id });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Tombstone fixture failed."));
+        tx.onabort = () => reject(tx.error || new Error("Tombstone fixture was aborted."));
+      });
+      const tombstoneLoad = await tombstoneRepository.loadActive();
+      const tombstoneProject = await tombstoneRepository.read("projects", seed.project.id);
+      const tombstoneCatalog = await tombstoneRepository.listProjects();
+      const tombstoneBackupPreserved = localStorage.getItem(tombstoneStorageKey) !== null;
+
       migrationRepository.close();
       recoveryRepository.close();
       verificationRepository.close();
       fallbackRepository.close();
+      tombstoneRepository.close();
       await new Promise((resolve, reject) => {
         const request = indexedDB.deleteDatabase(databaseName);
         request.onsuccess = resolve;
@@ -937,11 +965,23 @@ async function run() {
         request.onblocked = () => reject(new Error("Test database cleanup was blocked."));
       });
       localStorage.removeItem(storageKey);
+      localStorage.removeItem(tombstoneStorageKey);
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(tombstoneDatabaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Tombstone test database cleanup failed."));
+        request.onblocked = () => reject(new Error("Tombstone test database cleanup was blocked."));
+      });
       return {
         migrationBackend: migrated.backend, migrated: migrated.migrated, migrationKeepsBackup,
         recoveryBackend: recovered.backend, recoveredBackup: recovered.recoveredBackup,
         verifiedName: verified.project && verified.project.project.name,
-        fallbackBackend: fallbackSaved.backend, fallbackLoadedName: fallbackLoaded.project && fallbackLoaded.project.project.name
+        fallbackBackend: fallbackSaved.backend, fallbackLoadedName: fallbackLoaded.project && fallbackLoaded.project.project.name,
+        tombstoneLoadReturnedProject: Boolean(tombstoneLoad.project),
+        tombstoneProjectWasNotResurrected: !tombstoneProject,
+        tombstoneCatalogExcludedProject: !tombstoneCatalog.some((item) => item.projectId === seed.project.id),
+        tombstoneBackupPreserved,
+        tombstoneWarning: tombstoneLoad.warning
       };
     });
     assert.equal(repositoryReport.migrationBackend, "indexeddb");
@@ -952,6 +992,11 @@ async function run() {
     assert.equal(repositoryReport.verifiedName, "Newest Local Backup");
     assert.equal(repositoryReport.fallbackBackend, "localStorage");
     assert.equal(repositoryReport.fallbackLoadedName, "Legacy Recovery Project");
+    assert.equal(repositoryReport.tombstoneLoadReturnedProject, false, "A tombstoned active project must not load from its stale backup.");
+    assert.equal(repositoryReport.tombstoneProjectWasNotResurrected, true, "Startup must not recreate a project that has a trash record.");
+    assert.equal(repositoryReport.tombstoneCatalogExcludedProject, true, "A tombstoned project must remain absent from the normal catalog.");
+    assert.equal(repositoryReport.tombstoneBackupPreserved, true, "Startup must preserve the stale backup until explicit permanent deletion.");
+    assert.match(repositoryReport.tombstoneWarning, /papelera/i);
     process.stdout.write("PASS repository migration: localStorage stays as backup until IndexedDB is verified.\\n");
     process.stdout.write("PASS repository recovery: newest local backup repairs stale IndexedDB.\\n");
     process.stdout.write("PASS repository fallback: localStorage works when IndexedDB is unavailable.\\n");
