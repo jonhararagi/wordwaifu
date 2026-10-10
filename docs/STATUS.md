@@ -11,7 +11,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama activa WF-004-C.3: `work/wf-004-c3-project-trash`.
 - `main`: `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
-- Comparación comprobada el 2026-10-10: rama de trabajo **224 commits ahead / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
+- Comparación comprobada el 2026-10-10: rama de trabajo **226 commits ahead / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar. Su head corresponde a otra rama; WF-004-C.3 no forma parte de ese PR.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
@@ -36,6 +36,9 @@
 - Corrección de test persistida en [`de061c6`](https://github.com/jonhararagi/wordwaifu/commit/de061c6d566645be8b0539f81fb57aa01aed0ac1): la fixture ahora devuelve también el nombre del universo activo.
 - **CI del HEAD actual `de061c6`: IN_PROGRESS / NO GREEN TODAVÍA.** Run [#38020361524](https://github.com/jonhararagi/wordwaifu/actions/runs/38020361524); sintaxis y prueba de esquema pasaron, Chromium smoke continúa en ejecución en la última consulta.
 - El run anterior [#38020309894](https://github.com/jonhararagi/wordwaifu/actions/runs/38020309894) confirmó que la corrección de identificadores duplicados eliminó el error de sintaxis, pero detectó la aserción de fixture indicada arriba.
+
+- Último commit de corrección de test: [`a85c737`](https://github.com/jonhararagi/wordwaifu/commit/a85c737f7ab0e50604c860b2e95743afe2273db7), selecciona el ID exacto en ambos pasos de la prueba de papelera.
+- CI de `a85c737`: pendiente de confirmar; el último CI confirmado, run [#38020416762](https://github.com/jonhararagi/wordwaifu/actions/runs/38020416762) para `c654510`, falló en el smoke de Chromium por timeout al esperar el borrado del ID objetivo.
 
 ## Gates pendientes — no marcar GREEN
 - Obtener resultado final del CI del HEAD exacto; exigir sintaxis, pruebas de esquema, Chromium y validador estructural en verde.
