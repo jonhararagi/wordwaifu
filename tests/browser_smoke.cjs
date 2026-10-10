@@ -285,6 +285,17 @@ async function run() {
       const unrelatedBackupPreserved = repository.readBackup().project?.project?.id === unrelatedBackupProject.project.id;
       // Simulate a stale local backup left behind by an earlier cleanup failure.
       const residualBackupWritten = repository.saveBackup(projectC).written;
+      // If the trash store cannot be read, the project catalog must fail closed
+      // instead of presenting a stale localStorage backup as an active universe.
+      const originalReadAllForCatalog = repository.readAll;
+      repository.readAll = async function (storeName) {
+        if (storeName === "trash") throw new Error("Simulated unreadable trash store.");
+        return originalReadAllForCatalog.call(this, storeName);
+      };
+      let catalogBlockedOnUnreadableTrash = false;
+      try { await repository.listProjects(); }
+      catch (error) { catalogBlockedOnUnreadableTrash = /no se pudo verificar la papelera/i.test(error.message); }
+      repository.readAll = originalReadAllForCatalog;
       const permanentDelete = await repository.permanentlyDeleteTrashedProject(projectC.project.id);
       const permanentlyGone = !(await repository.read("trash", projectC.project.id));
       const residualBackupRemoved = localStorage.getItem(storageKey) === null;
@@ -312,7 +323,8 @@ async function run() {
         trashRestoreCollisionRejected, collisionDataPreserved, trashPreservedAfterCollision,
         trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain,
         trashedBackupForSearchWritten, trashedProjectSearchExcluded, trashSearchComplete: trashSearchReport.complete,
-        unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten, permanentDelete, permanentlyGone, residualBackupRemoved
+        unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten,
+        catalogBlockedOnUnreadableTrash, permanentDelete, permanentlyGone, residualBackupRemoved
       };
     });
     assert.equal(snapshotRepositoryEvidence.migration.version, 3);
@@ -364,6 +376,8 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.permanentDelete.permanentlyDeleted, true);
     assert.equal(snapshotRepositoryEvidence.permanentlyGone, true);
     assert.equal(snapshotRepositoryEvidence.residualBackupWritten, true);
+    assert.equal(snapshotRepositoryEvidence.catalogBlockedOnUnreadableTrash, true,
+      "The project catalog must fail closed when IndexedDB opens but trash cannot be read.");
     assert.equal(snapshotRepositoryEvidence.residualBackupRemoved, true, "Permanent deletion must remove a stale backup with the exact same project ID.");
     assert.equal(snapshotRepositoryEvidence.unrelatedBackupWritten, true);
     assert.equal(snapshotRepositoryEvidence.missingTrashRejected, true);
