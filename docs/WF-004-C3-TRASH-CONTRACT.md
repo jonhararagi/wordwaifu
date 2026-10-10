@@ -47,4 +47,14 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 
 ## Evidencia y límites
 
-Este documento es una especificación de trabajo, no evidencia de funcionalidad implementada. La base de referencia auditada reporta WF-004-C.2 con Chromium CI PASS en [run #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). La tarea WF-004-C.3 no debe marcarse DONE hasta que se implementen y ejecuten los gates anteriores.
+Este documento es una especificación de trabajo, no evidencia de funcionalidad implementada. La base de referencia auditada reporta WF-004-C.2 con Chromium CI PASS en [run #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). ## Implementación parcial registrada
+
+- IndexedDB sube de v2 a v3 de forma no destructiva y añade el almacén `trash`.
+- `moveProjectToTrash(projectId)` mueve proyecto y snapshots en una transacción; bloquea el proyecto activo.
+- `listTrash()`, `restoreTrashedProject(projectId)` y `permanentlyDeleteTrashedProject(projectId)` están implementados.
+- La restauración recupera el ID original y los snapshots; un conflicto de ID no sobrescribe registros existentes.
+- El catálogo y `getProject()` omiten IDs en papelera para evitar que un respaldo local residual los resucite.
+- Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. CI todavía no ejecutado.
+- **Pendiente:** UI visible para gestionar la papelera, revisar errores de almacenamiento/casos límite y obtener CI verde.
+
+La tarea WF-004-C.3 no debe marcarse DONE hasta que la UI y todos los gates anteriores estén implementados y ejecutados.
