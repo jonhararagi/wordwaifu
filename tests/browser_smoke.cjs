@@ -2075,6 +2075,7 @@ async function run() {
       const candidate = JSON.parse(JSON.stringify(source));
       candidate.project = { ...candidate.project, id: "trash-ui-" + Date.now().toString(36), name: "Universo Papelera UI" };
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const compatibilityBackupBefore = repository.readBackup().project;
       const database = await repository.open();
       await new Promise((resolve, reject) => {
         const tx = database.transaction("projects", "readwrite");
@@ -2085,7 +2086,12 @@ async function run() {
       });
       await repository.moveProjectToTrash(candidate.project.id);
       repository.close();
-      return { projectId: candidate.project.id, name: candidate.project.name };
+      return {
+        projectId: candidate.project.id,
+        name: candidate.project.name,
+        backupProjectId: compatibilityBackupBefore?.project?.id || null,
+        backupProjectName: compatibilityBackupBefore?.project?.name || null
+      };
     });
     await page.locator("#manage-projects-button").click();
     await page.locator("#project-dialog").waitFor({ state: "visible" });
@@ -2131,8 +2137,8 @@ async function run() {
       repository.close();
       return { projectId: backup?.project?.id, name: backup?.project?.name };
     });
-    assert.equal(backupAfterPermanentDelete.projectId, "project-asteria", "Permanent deletion of a trashed universe must preserve a backup owned by another universe.");
-    assert.equal(backupAfterPermanentDelete.name, "Las Crónicas de Asteria");
+    assert.equal(backupAfterPermanentDelete.projectId, trashUiSeed.backupProjectId, "Permanent deletion of a trashed universe must preserve a backup owned by another universe.");
+    assert.equal(backupAfterPermanentDelete.name, trashUiSeed.backupProjectName);
     process.stdout.write("PASS trash UI: list, restore by exact ID, permanent deletion, and preservation of an unrelated local backup.\\n");
 
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
