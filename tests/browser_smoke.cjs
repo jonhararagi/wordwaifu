@@ -834,6 +834,12 @@ async function run() {
     assert.equal(afterCancelDelete.activeId, "project-asteria");
     process.stdout.write("PASS project delete cancel: both IDs remain intact when confirmation is dismissed.\n");
 
+    const snapshotsBeforeTrash = await page.evaluate(async (id) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const snapshots = await repository.listSnapshots(id);
+      repository.close();
+      return snapshots.length;
+    }, createdUniverse.id);
     await page.locator("#project-list").selectOption(createdUniverse.id);
     const acceptProjectDeletePromise = page.waitForEvent("dialog");
     const acceptProjectDeleteClick = page.locator("#project-delete-button").click();
@@ -872,7 +878,7 @@ async function run() {
     assert.equal(afterProjectDelete.remainingSnapshotCount, 0, "Snapshots should move out of the active store with the project.");
     assert.equal(afterProjectDelete.trashedRecord, true, "Normal project deletion must move the universe to trash instead of destroying it.");
     assert.equal(afterProjectDelete.trashedProjectName, createdUniverse.name);
-    assert.ok(afterProjectDelete.trashedSnapshotCount >= 0, "The trash record must preserve its snapshot collection.");
+    assert.equal(afterProjectDelete.trashedSnapshotCount, snapshotsBeforeTrash, "The exact snapshot collection must survive the move to trash.");
     assert.equal(afterProjectDelete.neighborId, neighborProject.id, "A similar ID must not be moved accidentally.");
     assert.equal(afterProjectDelete.neighborName, neighborProject.name);
     assert.equal(afterProjectDelete.activeId, "project-asteria", "Moving an inactive project must not change the active pointer.");
