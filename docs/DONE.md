@@ -50,8 +50,8 @@ DONE
 - API: `moveProjectToTrash`, `listTrash`, `restoreTrashedProject`, `permanentlyDeleteTrashedProject`.
 - UI visible para listar, restaurar por ID y borrar permanentemente con confirmación.
 - Proyecto y snapshots se conservan por ID; restauración y borrado permanente usan transacciones IndexedDB.
-- Smoke Chromium ampliado con ciclo UI de restauración y borrado permanente, conflicto de ID, preservación de snapshots y límites de respaldo local; pendiente ejecución real en CI.
-- **No declarado GREEN:** CI no se ha ejecutado; revisar fallos de almacenamiento y prueba visual Windows 11.
+- Smoke Chromium ampliado con ciclo UI de restauración y borrado permanente, conflicto de ID, preservación de snapshots, límites de respaldo local y fallo simulado de limpieza; pendiente ejecución real en CI.
+- **No declarado GREEN:** CI no se ha ejecutado; revisar abortos/cuota y prueba visual Windows 11.
 
 ## Estado WF-004-C.3 (parcial; CI pendiente)
 - Rama: `work/wf-004-c3-project-trash`.
