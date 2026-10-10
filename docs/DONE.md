@@ -48,9 +48,9 @@ DONE
 - Rama de trabajo: `work/wf-004-c3-project-trash`.
 - Migración IndexedDB v2→v3 no destructiva con almacén `trash`.
 - API: `moveProjectToTrash`, `listTrash`, `restoreTrashedProject`, `permanentlyDeleteTrashedProject`.
-- UI visible para listar, restaurar por ID y borrar permanentemente con confirmación.
+- UI visible: la acción normal del catálogo envía a papelera; desde Papelera se restaura por ID o se borra permanentemente con confirmación.
 - Proyecto y snapshots se conservan por ID; restauración y borrado permanente usan transacciones IndexedDB.
-- Smoke Chromium ampliado con ciclo UI de restauración y borrado permanente, conflicto de ID, preservación de snapshots, límites de respaldo local y fallo simulado de limpieza; pendiente ejecución real en CI.
+- Smoke Chromium ampliado con movimiento reversible desde el catálogo, comparación de snapshots antes/después, ciclo UI de restauración y borrado permanente, conflicto de ID, límites de respaldo local y fallo simulado de limpieza; pendiente ejecución real en CI.
 - **No declarado GREEN:** CI no se ha ejecutado; revisar abortos/cuota y prueba visual Windows 11.
 
 ## Estado WF-004-C.3 (parcial; CI pendiente)
