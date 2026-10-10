@@ -838,9 +838,9 @@ async function run() {
     const acceptProjectDeletePromise = page.waitForEvent("dialog");
     const acceptProjectDeleteClick = page.locator("#project-delete-button").click();
     const acceptProjectDeleteDialog = await acceptProjectDeletePromise;
-    assert.match(acceptProjectDeleteDialog.message(), /Solo se borrará este ID exacto/);
-    assert.match(acceptProjectDeleteDialog.message(), /También se borrarán todas las copias de seguridad/);
-    assert.match(acceptProjectDeleteDialog.message(), /no existe recuperación posterior/);
+    assert.match(acceptProjectDeleteDialog.message(), /papelera/i);
+    assert.match(acceptProjectDeleteDialog.message(), /snapshots/i);
+    assert.match(acceptProjectDeleteDialog.message(), new RegExp(createdUniverse.id));
     await acceptProjectDeleteDialog.accept();
     await acceptProjectDeleteClick;
     await page.waitForFunction((id) => !Array.from(document.querySelector("#project-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
@@ -849,6 +849,7 @@ async function run() {
       const catalog = await repository.listProjects();
       const deletedRecord = await repository.read("projects", ids.target);
       const remainingSnapshots = await repository.listSnapshots(ids.target);
+      const trashRecord = await repository.read("trash", ids.target);
       const neighbor = await repository.getProject(ids.neighbor);
       const active = await repository.read("metadata", "activeProjectId");
       const original = await repository.getProject("project-asteria");
@@ -857,6 +858,9 @@ async function run() {
         listedTarget: catalog.some((item) => item.projectId === ids.target),
         deletedRecord: Boolean(deletedRecord),
         remainingSnapshotCount: remainingSnapshots.length,
+        trashedRecord: Boolean(trashRecord),
+        trashedProjectName: trashRecord?.projectData?.project?.name,
+        trashedSnapshotCount: trashRecord?.snapshots?.length,
         neighborId: neighbor?.project.id,
         neighborName: neighbor?.project.name,
         activeId: active?.value,
@@ -865,12 +869,15 @@ async function run() {
     }, { target: createdUniverse.id, neighbor: neighborProject.id });
     assert.equal(afterProjectDelete.listedTarget, false);
     assert.equal(afterProjectDelete.deletedRecord, false);
-    assert.equal(afterProjectDelete.remainingSnapshotCount, 0, "Deleting a project must remove snapshots owned by that ID.");
-    assert.equal(afterProjectDelete.neighborId, neighborProject.id, "A similar ID must not be deleted accidentally.");
+    assert.equal(afterProjectDelete.remainingSnapshotCount, 0, "Snapshots should move out of the active store with the project.");
+    assert.equal(afterProjectDelete.trashedRecord, true, "Normal project deletion must move the universe to trash instead of destroying it.");
+    assert.equal(afterProjectDelete.trashedProjectName, createdUniverse.name);
+    assert.ok(afterProjectDelete.trashedSnapshotCount >= 0, "The trash record must preserve its snapshot collection.");
+    assert.equal(afterProjectDelete.neighborId, neighborProject.id, "A similar ID must not be moved accidentally.");
     assert.equal(afterProjectDelete.neighborName, neighborProject.name);
-    assert.equal(afterProjectDelete.activeId, "project-asteria", "Deleting an inactive project must not change the active pointer.");
+    assert.equal(afterProjectDelete.activeId, "project-asteria", "Moving an inactive project must not change the active pointer.");
     assert.equal(afterProjectDelete.originalCharacterCount, 4, "The active universe's data must remain intact.");
-    process.stdout.write("PASS project delete: exact ID removed, similar ID and active universe retained.\n");
+    process.stdout.write("PASS project trash action: exact ID moved to trash, snapshots retained, neighbor and active universe preserved.\\n");
     await page.locator("#project-close-button").click();
 
     const initialPanel = await page.locator("#details-panel").innerHTML();
