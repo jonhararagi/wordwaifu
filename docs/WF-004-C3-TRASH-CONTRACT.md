@@ -1,6 +1,6 @@
 # WF-004-C.3 — Contrato de papelera de universos
 
-Estado: **SPECIFICATION / NOT IMPLEMENTED**  
+Estado: **BACKEND IMPLEMENTED / UI AND CI PENDING**  
 Rama de trabajo: `work/wf-004-c3-project-trash`
 
 ## Objetivo
