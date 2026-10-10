@@ -46,6 +46,7 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 - [x] Respaldo local malformado: se conserva sin modificar, se informa la advertencia y se bloquea el borrado permanente.
 - [ ] Fallos reales de cuota de almacenamiento aún pendientes; no se simulan como aprobados.
 - [ ] El respaldo local de otro universo nunca se elimina ni se sustituye.
+- [x] La búsqueda multiverso filtra los IDs en papelera y no muestra un universo por un respaldo local residual.
 - [x] UI de papelera integrada: la acción normal «Enviar a papelera» mueve el universo de forma reversible; la pantalla Papelera permite restauración por ID y borrado permanente con confirmación.
 - [ ] Chromium CI pasa; inspección visual en Windows queda `NOT_RUN` hasta ejecutarse manualmente.
 
@@ -60,6 +61,7 @@ Este documento comenzó como especificación de trabajo. La implementación parc
 - `listTrash()`, `restoreTrashedProject(projectId)` y `permanentlyDeleteTrashedProject(projectId)` están implementados.
 - La restauración recupera el ID original y los snapshots; un conflicto de ID no sobrescribe registros existentes.
 - El catálogo y `getProject()` omiten IDs en papelera para evitar que un respaldo local residual los resucite.
+- La búsqueda multiverso también filtra los tombstones de IndexedDB; si no puede verificar la papelera, omite el respaldo local y devuelve una advertencia en vez de arriesgar la resurrección de un universo.
 - Se añadieron gates de Chromium para migración, envío, conservación de snapshots, restauración y borrado permanente. CI todavía no ejecutado.
 - UI visible integrada en `index.html`/`src/app.js`; la acción normal de catálogo envía a papelera y conserva snapshots, mientras que el borrado irreversible queda separado en la pantalla Papelera. El smoke test cubre el movimiento reversible, restauración y borrado permanente desde la interfaz.
 - Pruebas añadidas para que un borrado permanente de ID ausente no borre respaldos ajenos, para respaldos residuales coincidentes, fallos al retirar respaldos, JSON malformado y rollback atómico por snapshot inconsistente.
