@@ -325,9 +325,16 @@
 
     async getProject(projectId) {
       if (typeof projectId !== "string" || !projectId.trim()) return null;
+      let indexedDbOpened = false;
       try {
+        await this.open();
+        indexedDbOpened = true;
         if (await this.read("trash", projectId)) return null;
-      } catch { /* Preserve the compatibility fallback if the trash store is unavailable. */ }
+      } catch {
+        // If IndexedDB opened but its tombstone cannot be checked, do not
+        // recover from localStorage: that backup may belong to a trashed project.
+        if (indexedDbOpened) return null;
+      }
       try {
         const record = await this.read("projects", projectId);
         if (record && record.projectId === projectId && isProject(record.data) && record.data.project.id === projectId) {
