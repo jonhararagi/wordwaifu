@@ -867,6 +867,7 @@ async function run() {
         trashedRecord: Boolean(trashRecord),
         trashedProjectName: trashRecord?.projectData?.project?.name,
         trashedSnapshotCount: trashRecord?.snapshots?.length,
+        trashFormatVersion: trashRecord?.formatVersion,
         neighborId: neighbor?.project.id,
         neighborName: neighbor?.project.name,
         activeId: active?.value,
@@ -877,6 +878,7 @@ async function run() {
     assert.equal(afterProjectDelete.deletedRecord, false);
     assert.equal(afterProjectDelete.remainingSnapshotCount, 0, "Snapshots should move out of the active store with the project.");
     assert.equal(afterProjectDelete.trashedRecord, true, "Normal project deletion must move the universe to trash instead of destroying it.");
+    assert.equal(afterProjectDelete.trashFormatVersion, 1, "Trash records must carry an explicit format version.");
     assert.equal(afterProjectDelete.trashedProjectName, createdUniverse.name);
     assert.equal(afterProjectDelete.trashedSnapshotCount, snapshotsBeforeTrash, "The exact snapshot collection must survive the move to trash.");
     assert.equal(afterProjectDelete.neighborId, neighborProject.id, "A similar ID must not be moved accidentally.");
