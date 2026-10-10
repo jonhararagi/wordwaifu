@@ -2066,6 +2066,7 @@ async function run() {
     await page.locator("#manage-projects-button").click();
     await page.locator("#project-dialog").waitFor({ state: "visible" });
     await page.locator("#trash-list option").filter({ hasText: trashUiSeed.projectId }).waitFor();
+    await page.locator("#trash-list").selectOption(trashUiSeed.projectId);
     assert.equal(await page.locator("#trash-restore-button").isEnabled(), true);
     const trashRestoreDialogPromise = page.waitForEvent("dialog");
     const trashRestoreClickPromise = page.locator("#trash-restore-button").click();
@@ -2089,6 +2090,7 @@ async function run() {
     assert.equal(moveBackToTrash, true);
     await page.locator("#trash-refresh-button").click();
     await page.locator("#trash-list option").filter({ hasText: trashUiSeed.projectId }).waitFor();
+    await page.locator("#trash-list").selectOption(trashUiSeed.projectId);
     const permanentUiDialog = page.waitForEvent("dialog");
     const permanentUiClick = page.locator("#trash-delete-button").click();
     const permanentUiConfirm = await permanentUiDialog;
