@@ -15,7 +15,8 @@ PARTIAL
 - Workflow #141: **FAIL_REAL** — la prueba leía localStorage antes de que terminara el borrado asíncrono.
 - Workflow #142 y #143: **FAIL_REAL** — la prueba buscaba el snapshot en un ID fijo, distinto del ID real del proyecto importado.
 - Correcciones: las pruebas esperan el estado persistido y resuelven el ID del universo desde localStorage.
-- Workflow #144: **IN_PROGRESS** en el último sondeo.
+- Workflow #144: **PASS_REAL**, [CI #38008108247](https://github.com/jonhararagi/wordwaifu/actions/runs/38008108247); Chromium smoke test y validación estructural completaron con éxito.
+- Workflow #145: **IN_PROGRESS** para validar la misma revisión junto con la documentación actualizada.
 - Prueba manual en Windows 11: **NOT_RUN**.
 
 ## Cambios realizados
@@ -26,8 +27,8 @@ PARTIAL
 - No se cambió el esquema de IndexedDB ni se tocó `main`.
 
 ## Criterios de aceptación
-1. Snapshot válido conserva el personaje anterior: prueba añadida; CI #144 pendiente.
-2. La copia 26 se rechaza y permanecen las 25 existentes: prueba añadida; CI pendiente.
+1. Snapshot válido conserva el personaje anterior: prueba añadida; CI #144 PASS_REAL; confirmar también el workflow posterior de documentación.
+2. La copia 26 se rechaza y permanecen las 25 existentes: prueba añadida; CI #144 PASS_REAL.
 3. Los borrados de entidades se cancelan si no se puede crear el snapshot.
 4. El borrado de universo informa explícitamente que sus snapshots también se eliminan.
 5. Chromium CI y validación estructural: **PENDING**.
@@ -39,7 +40,7 @@ PARTIAL
 - No declarar DONE hasta obtener un workflow verde que incluya el test actualizado.
 
 ## Próxima acción exacta
-1. Consultar [GitHub Actions](https://github.com/jonhararagi/wordwaifu/actions), especialmente workflow #144 y el posterior.
+1. Consultar [GitHub Actions](https://github.com/jonhararagi/wordwaifu/actions), confirmar el workflow #145 y revisar cualquier ejecución posterior a cambios de documentación.
 2. Si falla, revisar el log del paso `Run browser smoke test`, corregir la causa y repetir.
 3. Si pasa, registrar el SHA y la URL de la ejecución verde.
 4. Mantener PR #1 en borrador y `main` intacta hasta autorización expresa.
