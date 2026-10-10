@@ -1011,10 +1011,21 @@ async function run() {
         tx.onerror = () => reject(tx.error || new Error("Tombstone fixture failed."));
         tx.onabort = () => reject(tx.error || new Error("Tombstone fixture was aborted."));
       });
+      const tombstonedCandidate = {
+        ...seed,
+        project: { ...seed.project, name: "No debe resucitarse mediante escritura" }
+      };
+      let tombstoneSaveActiveRejected = false, tombstoneSaveActiveError = "";
+      try { await tombstoneRepository.saveActive(tombstonedCandidate); }
+      catch (error) { tombstoneSaveActiveRejected = true; tombstoneSaveActiveError = error.message; }
+      let tombstoneDirectWriteRejected = false, tombstoneDirectWriteError = "";
+      try { await tombstoneRepository.write(tombstonedCandidate); }
+      catch (error) { tombstoneDirectWriteRejected = true; tombstoneDirectWriteError = error.message; }
       const tombstoneLoad = await tombstoneRepository.loadActive();
       const tombstoneProject = await tombstoneRepository.read("projects", seed.project.id);
       const tombstoneCatalog = await tombstoneRepository.listProjects();
-      const tombstoneBackupPreserved = localStorage.getItem(tombstoneStorageKey) !== null;
+      const tombstoneBackup = JSON.parse(localStorage.getItem(tombstoneStorageKey));
+      const tombstoneBackupPreserved = tombstoneBackup.project.name === seed.project.name;
 
       migrationRepository.close();
       recoveryRepository.close();
@@ -1041,6 +1052,8 @@ async function run() {
         verifiedName: verified.project && verified.project.project.name,
         fallbackBackend: fallbackSaved.backend, fallbackLoadedName: fallbackLoaded.project && fallbackLoaded.project.project.name,
         tombstoneLoadReturnedProject: Boolean(tombstoneLoad.project),
+        tombstoneSaveActiveRejected, tombstoneSaveActiveError,
+        tombstoneDirectWriteRejected, tombstoneDirectWriteError,
         tombstoneProjectWasNotResurrected: !tombstoneProject,
         tombstoneCatalogExcludedProject: !tombstoneCatalog.some((item) => item.projectId === seed.project.id),
         tombstoneBackupPreserved,
@@ -1056,9 +1069,13 @@ async function run() {
     assert.equal(repositoryReport.fallbackBackend, "localStorage");
     assert.equal(repositoryReport.fallbackLoadedName, "Legacy Recovery Project");
     assert.equal(repositoryReport.tombstoneLoadReturnedProject, false, "A tombstoned active project must not load from its stale backup.");
+    assert.equal(repositoryReport.tombstoneSaveActiveRejected, true, "saveActive must reject a project ID in trash before touching local backup.");
+    assert.match(repositoryReport.tombstoneSaveActiveError, /está en la papelera/i);
+    assert.equal(repositoryReport.tombstoneDirectWriteRejected, true, "The IndexedDB transaction must reject writes that race with a trash move.");
+    assert.match(repositoryReport.tombstoneDirectWriteError, /está en la papelera/i);
     assert.equal(repositoryReport.tombstoneProjectWasNotResurrected, true, "Startup must not recreate a project that has a trash record.");
     assert.equal(repositoryReport.tombstoneCatalogExcludedProject, true, "A tombstoned project must remain absent from the normal catalog.");
-    assert.equal(repositoryReport.tombstoneBackupPreserved, true, "Startup must preserve the stale backup until explicit permanent deletion.");
+    assert.equal(repositoryReport.tombstoneBackupPreserved, true, "Rejected writes must not replace the compatibility backup for a tombstoned ID.");
     assert.match(repositoryReport.tombstoneWarning, /papelera/i);
     process.stdout.write("PASS repository migration: localStorage stays as backup until IndexedDB is verified.\\n");
     process.stdout.write("PASS repository recovery: newest local backup repairs stale IndexedDB.\\n");

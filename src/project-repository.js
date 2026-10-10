@@ -67,13 +67,25 @@
 
     async write(project) {
       const db = await this.open();
+      let guardError = null;
       await new Promise((resolve, reject) => {
-        const tx = db.transaction(["projects", "metadata"], "readwrite");
-        tx.objectStore("projects").put({ projectId: project.project.id, data: project });
-        tx.objectStore("metadata").put({ key: ACTIVE_KEY, value: project.project.id });
+        // Serialize writes against trash moves in the same transaction. A stale
+        // tab or import must never recreate a project whose tombstone already exists.
+        const tx = db.transaction(["projects", "metadata", "trash"], "readwrite");
+        const trashRequest = tx.objectStore("trash").get(project.project.id);
+        trashRequest.onsuccess = () => {
+          if (trashRequest.result) {
+            guardError = new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
+            guardError.code = "PROJECT_IN_TRASH";
+            tx.abort();
+            return;
+          }
+          tx.objectStore("projects").put({ projectId: project.project.id, data: project });
+          tx.objectStore("metadata").put({ key: ACTIVE_KEY, value: project.project.id });
+        };
         tx.oncomplete = resolve;
-        tx.onerror = () => reject(tx.error || new Error("Error al escribir IndexedDB."));
-        tx.onabort = () => reject(tx.error || new Error("Escritura IndexedDB cancelada."));
+        tx.onerror = () => reject(guardError || tx.error || new Error("Error al escribir IndexedDB."));
+        tx.onabort = () => reject(guardError || tx.error || new Error("Escritura IndexedDB cancelada."));
       });
       const storedRecord = await this.read("projects", project.project.id);
       const verified = storedRecord && storedRecord.data;
@@ -864,6 +876,25 @@
 
     async saveActive(project) {
       if (!isProject(project)) throw new Error("El proyecto debe contener project.id.");
+      // If IndexedDB is available, check the tombstone before touching the single
+      // compatibility backup. If IndexedDB itself is unavailable, preserve the
+      // existing localStorage-only fallback; write() repeats this guard atomically.
+      let dbAvailable = false;
+      if (this.indexedDB && typeof this.indexedDB.open === "function") {
+        try { await this.open(); dbAvailable = true; } catch { /* Let the documented localStorage fallback handle unavailable IndexedDB. */ }
+      }
+      if (dbAvailable) {
+        let tombstone;
+        try { tombstone = await this.read("trash", project.project.id); }
+        catch (error) { throw new Error("No se pudo verificar la papelera; el proyecto no se guardó. " + error.message); }
+        if (tombstone) {
+          const error = new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
+          error.code = "PROJECT_IN_TRASH";
+          throw error;
+        }
+      }
+
+      const previousBackup = this.readBackup();
       const backup = this.saveBackup(project);
       const backupWritten = backup.written;
       const backupError = backup.warning ? new Error(backup.warning) : null;
@@ -872,6 +903,18 @@
         await this.write(project);
         return { backend: "indexeddb", backupWritten, warning: backupError ? backupError.message : null };
       } catch (error) {
+        if (error && error.code === "PROJECT_IN_TRASH") {
+          // The tombstone may have appeared between the preflight and the write
+          // transaction. Restore the prior compatibility backup rather than
+          // leaving a ghost project under an ID that the repository rejects.
+          try {
+            if (this.localStorage) {
+              if (previousBackup.raw === null) this.localStorage.removeItem(this.storageKey);
+              else this.localStorage.setItem(this.storageKey, previousBackup.raw);
+            }
+          } catch { /* Keep the authoritative tombstone; surface the guard below. */ }
+          throw error;
+        }
         if (backupWritten) return { backend: "localStorage", backupWritten: true, warning: "IndexedDB no se verificó; se conserva el respaldo local: " + error.message };
         throw new Error("Fallaron IndexedDB y localStorage. " + error.message + (backupError ? " " + backupError.message : ""));
       }
