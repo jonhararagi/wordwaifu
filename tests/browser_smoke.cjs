@@ -245,7 +245,7 @@ async function run() {
         rollbackSnapshotExists, localBackupMatches, deletedProjectB, snapshotBRemovedWithProject, projectBRemoved
       };
     });
-    assert.equal(snapshotRepositoryEvidence.migration.version, 2);
+    assert.equal(snapshotRepositoryEvidence.migration.version, 3, "The trash store must upgrade IndexedDB v1/v2 without losing existing snapshots.");
     assert.equal(snapshotRepositoryEvidence.migration.hasSnapshots, true);
     assert.equal(snapshotRepositoryEvidence.migration.hasProjects, true);
     assert.equal(snapshotRepositoryEvidence.migration.hasMetadata, true);
@@ -751,39 +751,119 @@ async function run() {
     const acceptProjectDeletePromise = page.waitForEvent("dialog");
     const acceptProjectDeleteClick = page.locator("#project-delete-button").click();
     const acceptProjectDeleteDialog = await acceptProjectDeletePromise;
-    assert.match(acceptProjectDeleteDialog.message(), /Solo se borrará este ID exacto/);
-    assert.match(acceptProjectDeleteDialog.message(), /También se borrarán todas las copias de seguridad/);
-    assert.match(acceptProjectDeleteDialog.message(), /no existe recuperación posterior/);
+    assert.match(acceptProjectDeleteDialog.message(), /Solo se moverá este ID exacto/);
+    assert.match(acceptProjectDeleteDialog.message(), /snapshots se conservarán/i);
+    assert.doesNotMatch(acceptProjectDeleteDialog.message(), /no existe recuperación posterior/i);
     await acceptProjectDeleteDialog.accept();
     await acceptProjectDeleteClick;
     await page.waitForFunction((id) => !Array.from(document.querySelector("#project-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
-    const afterProjectDelete = await page.evaluate(async (ids) => {
+    await page.waitForFunction((id) => Array.from(document.querySelector("#project-trash-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
+
+    const afterTrash = await page.evaluate(async (ids) => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const catalog = await repository.listProjects();
-      const deletedRecord = await repository.read("projects", ids.target);
-      const remainingSnapshots = await repository.listSnapshots(ids.target);
+      const trashed = await repository.read("trash", ids.target);
+      const snapshots = await repository.listSnapshots(ids.target);
       const neighbor = await repository.getProject(ids.neighbor);
       const active = await repository.read("metadata", "activeProjectId");
       const original = await repository.getProject("project-asteria");
       repository.close();
       return {
         listedTarget: catalog.some((item) => item.projectId === ids.target),
-        deletedRecord: Boolean(deletedRecord),
-        remainingSnapshotCount: remainingSnapshots.length,
+        trashedId: trashed?.projectId,
+        trashedDataId: trashed?.data?.project?.id,
+        snapshotCount: snapshots.length,
         neighborId: neighbor?.project.id,
         neighborName: neighbor?.project.name,
         activeId: active?.value,
         originalCharacterCount: original?.characters?.length
       };
     }, { target: createdUniverse.id, neighbor: neighborProject.id });
-    assert.equal(afterProjectDelete.listedTarget, false);
-    assert.equal(afterProjectDelete.deletedRecord, false);
-    assert.equal(afterProjectDelete.remainingSnapshotCount, 0, "Deleting a project must remove snapshots owned by that ID.");
-    assert.equal(afterProjectDelete.neighborId, neighborProject.id, "A similar ID must not be deleted accidentally.");
-    assert.equal(afterProjectDelete.neighborName, neighborProject.name);
-    assert.equal(afterProjectDelete.activeId, "project-asteria", "Deleting an inactive project must not change the active pointer.");
-    assert.equal(afterProjectDelete.originalCharacterCount, 4, "The active universe's data must remain intact.");
-    process.stdout.write("PASS project delete: exact ID removed, similar ID and active universe retained.\n");
+    assert.equal(afterTrash.listedTarget, false, "A trashed universe must disappear from the regular catalogue.");
+    assert.equal(afterTrash.trashedId, createdUniverse.id);
+    assert.equal(afterTrash.trashedDataId, createdUniverse.id, "Trash data must retain the exact project ID.");
+    assert.ok(afterTrash.snapshotCount >= 1, "Trash must preserve snapshots until explicit permanent deletion.");
+    assert.equal(afterTrash.neighborId, neighborProject.id, "A similar project ID must remain intact.");
+    assert.equal(afterTrash.neighborName, neighborProject.name);
+    assert.equal(afterTrash.activeId, "project-asteria");
+    assert.equal(afterTrash.originalCharacterCount, 4);
+    process.stdout.write("PASS project trash: exact ID is hidden from catalogue and snapshots are retained.\\n");
+
+    await page.locator("#project-trash-list").selectOption(createdUniverse.id);
+    const restoreTrashPromise = page.waitForEvent("dialog");
+    const restoreTrashClick = page.locator("#project-trash-restore-button").click();
+    const restoreTrashDialog = await restoreTrashPromise;
+    assert.match(restoreTrashDialog.message(), /identidad original/i);
+    await restoreTrashDialog.accept();
+    await restoreTrashClick;
+    await page.waitForFunction((id) => Array.from(document.querySelector("#project-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
+    const afterTrashRestore = await page.evaluate(async (id) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const project = await repository.read("projects", id);
+      const trash = await repository.read("trash", id);
+      const snapshots = await repository.listSnapshots(id);
+      repository.close();
+      return {
+        projectId: project?.projectId,
+        dataId: project?.data?.project?.id,
+        trashed: Boolean(trash),
+        snapshotCount: snapshots.length,
+        name: project?.data?.project?.name
+      };
+    }, createdUniverse.id);
+    assert.equal(afterTrashRestore.projectId, createdUniverse.id);
+    assert.equal(afterTrashRestore.dataId, createdUniverse.id);
+    assert.equal(afterTrashRestore.trashed, false);
+    assert.ok(afterTrashRestore.snapshotCount >= 1);
+    assert.equal(afterTrashRestore.name, "Universo Multiverso QA");
+    process.stdout.write("PASS project restore: original universe ID and snapshots return to the catalogue.\\n");
+
+    // Trash it again, then explicitly purge it to prove the two deletion levels differ.
+    await page.locator("#project-list").selectOption(createdUniverse.id);
+    const retrashDialogPromise = page.waitForEvent("dialog");
+    const retrashClick = page.locator("#project-delete-button").click();
+    const retrashDialog = await retrashDialogPromise;
+    await retrashDialog.accept();
+    await retrashClick;
+    await page.waitForFunction((id) => Array.from(document.querySelector("#project-trash-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
+
+    await page.locator("#project-trash-list").selectOption(createdUniverse.id);
+    const purgeDialogPromise = page.waitForEvent("dialog");
+    const purgeClick = page.locator("#project-trash-purge-button").click();
+    const purgeDialog = await purgeDialogPromise;
+    assert.match(purgeDialog.message(), /BORRADO PERMANENTE/);
+    assert.match(purgeDialog.message(), /snapshot/i);
+    await purgeDialog.accept();
+    await purgeClick;
+    await page.waitForFunction((id) => !Array.from(document.querySelector("#project-trash-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
+
+    const afterPurge = await page.evaluate(async (ids) => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const catalog = await repository.listProjects();
+      const project = await repository.read("projects", ids.target);
+      const trash = await repository.read("trash", ids.target);
+      const snapshots = await repository.listSnapshots(ids.target);
+      const neighbor = await repository.getProject(ids.neighbor);
+      const active = await repository.read("metadata", "activeProjectId");
+      repository.close();
+      return {
+        listedTarget: catalog.some((item) => item.projectId === ids.target),
+        projectExists: Boolean(project),
+        trashExists: Boolean(trash),
+        snapshotCount: snapshots.length,
+        neighborId: neighbor?.project.id,
+        neighborName: neighbor?.project.name,
+        activeId: active?.value
+      };
+    }, { target: createdUniverse.id, neighbor: neighborProject.id });
+    assert.equal(afterPurge.listedTarget, false);
+    assert.equal(afterPurge.projectExists, false);
+    assert.equal(afterPurge.trashExists, false);
+    assert.equal(afterPurge.snapshotCount, 0, "Permanent purge must delete snapshots belonging to the exact target ID.");
+    assert.equal(afterPurge.neighborId, neighborProject.id);
+    assert.equal(afterPurge.neighborName, neighborProject.name);
+    assert.equal(afterPurge.activeId, "project-asteria");
+    process.stdout.write("PASS project permanent purge: project, trash entry and snapshots removed by exact ID; neighbors survive.\\n");
     await page.locator("#project-close-button").click();
 
     const initialPanel = await page.locator("#details-panel").innerHTML();
