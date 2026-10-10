@@ -296,6 +296,14 @@ async function run() {
       try { await repository.listProjects(); }
       catch (error) { catalogBlockedOnUnreadableTrash = /no se pudo verificar la papelera/i.test(error.message); }
       repository.readAll = originalReadAllForCatalog;
+      const originalReadForProject = repository.read;
+      repository.read = async function (storeName, key) {
+        if (storeName === "trash") throw new Error("Simulated unreadable project tombstone.");
+        return originalReadForProject.call(this, storeName, key);
+      };
+      const getProjectWhenTrashUnreadable = await repository.getProject(projectC.project.id);
+      repository.read = originalReadForProject;
+      const getProjectBlockedOnUnreadableTrash = getProjectWhenTrashUnreadable === null;
       const permanentDelete = await repository.permanentlyDeleteTrashedProject(projectC.project.id);
       const permanentlyGone = !(await repository.read("trash", projectC.project.id));
       const residualBackupRemoved = localStorage.getItem(storageKey) === null;
@@ -324,7 +332,8 @@ async function run() {
         trashRestore, projectCRestored, snapshotCRestored, trashEntryRemovedOnRestore, trashAgain,
         trashedBackupForSearchWritten, trashedProjectSearchExcluded, trashSearchComplete: trashSearchReport.complete,
         unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten,
-        catalogBlockedOnUnreadableTrash, permanentDelete, permanentlyGone, residualBackupRemoved
+        catalogBlockedOnUnreadableTrash, getProjectBlockedOnUnreadableTrash,
+        permanentDelete, permanentlyGone, residualBackupRemoved
       };
     });
     assert.equal(snapshotRepositoryEvidence.migration.version, 3);
@@ -378,6 +387,8 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.residualBackupWritten, true);
     assert.equal(snapshotRepositoryEvidence.catalogBlockedOnUnreadableTrash, true,
       "The project catalog must fail closed when IndexedDB opens but trash cannot be read.");
+    assert.equal(snapshotRepositoryEvidence.getProjectBlockedOnUnreadableTrash, true,
+      "getProject must not recover a stale backup when its tombstone cannot be checked.");
     assert.equal(snapshotRepositoryEvidence.residualBackupRemoved, true, "Permanent deletion must remove a stale backup with the exact same project ID.");
     assert.equal(snapshotRepositoryEvidence.unrelatedBackupWritten, true);
     assert.equal(snapshotRepositoryEvidence.missingTrashRejected, true);
