@@ -86,8 +86,10 @@
       let records = [];
       let activeProjectId = null;
       let indexedDbError = null;
+      let indexedDbOpened = false;
       try {
         const db = await this.open();
+        indexedDbOpened = true;
         records = await new Promise((resolve, reject) => {
           const tx = db.transaction("projects", "readonly");
           const request = tx.objectStore("projects").getAll();
@@ -122,6 +124,12 @@
         trashedIds = new Set(trashRecords.filter((item) => item && typeof item.projectId === "string").map((item) => item.projectId));
       } catch (error) {
         if (!indexedDbError) indexedDbError = error;
+        // If IndexedDB opened but its trash store cannot be read, the catalog
+        // cannot safely distinguish active projects from stale/residual copies.
+        // Fail closed rather than exposing a universe that may be trashed.
+        if (indexedDbOpened) {
+          throw new Error("No se pudo verificar la papelera; el catálogo se bloqueó para evitar resucitar universos eliminados.");
+        }
       }
       trashedIds.forEach((projectId) => byId.delete(projectId));
       const backup = this.readBackup().project;
