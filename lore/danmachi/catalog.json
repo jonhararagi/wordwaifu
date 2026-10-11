@@ -563,63 +563,45 @@
   ],
   "documents": [
     {
-      "document_id": "MASTER-INDEX",
-      "path": "MASTER_INDEX.md",
-      "type": "master_index",
+      "document_id": "DOC-PREMISE",
+      "path": "01-premisa-autor.md",
+      "type": "author_premise",
       "status": "present"
     },
     {
-      "document_id": "README",
-      "path": "README.md",
-      "type": "readme",
+      "document_id": "DOC-RECORD-SCHEMA",
+      "path": "02-plantilla-registro.md",
+      "type": "generic_template",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-CHARACTER",
-      "path": "templates/registro-personaje.md",
-      "type": "template",
+      "document_id": "DOC-REVIEW-PROTOCOL",
+      "path": "03-protocolo-revision.md",
+      "type": "review_protocol",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-EVENT",
-      "path": "templates/registro-evento.md",
-      "type": "template",
+      "document_id": "DOC-TEST-BANK",
+      "path": "04-banco-pruebas.md",
+      "type": "test_suite",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-RULE",
-      "path": "templates/registro-regla.md",
-      "type": "template",
+      "document_id": "DOC-SOURCE-POLICY",
+      "path": "05-fuentes-y-verificacion.md",
+      "type": "source_policy",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-PLACE",
-      "path": "templates/registro-lugar.md",
-      "type": "template",
+      "document_id": "DOC-AUTHOR-DECISIONS",
+      "path": "06-registro-decisiones.md",
+      "type": "author_decisions",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-VOLUME",
-      "path": "templates/registro-volumen.md",
-      "type": "template",
-      "status": "present"
-    },
-    {
-      "document_id": "SOURCES-INDEX",
-      "path": "sources/00-registro-fuentes.md",
-      "type": "source_registry",
-      "status": "present"
-    },
-    {
-      "document_id": "QUALITY-DEDUP",
-      "path": "QUALITY_AND_DEDUP.md",
-      "type": "quality_gate",
-      "status": "present"
-    },
-    {
-      "document_id": "WORK-QUEUE",
-      "path": "WORK_QUEUE.md",
-      "type": "work_queue",
+      "document_id": "DOC-REVIEW-PROMPT",
+      "path": "07-prompt-revision.md",
+      "type": "review_prompt",
       "status": "present"
     },
     {
@@ -629,27 +611,63 @@
       "status": "present"
     },
     {
-      "document_id": "TIMELINE-MAP",
-      "path": "timeline/00-mapa-de-eras.md",
-      "type": "timeline_index",
+      "document_id": "MASTER-INDEX",
+      "path": "MASTER_INDEX.md",
+      "type": "master_index",
       "status": "present"
     },
     {
-      "document_id": "EVENT-INDEX",
-      "path": "timeline/03-indice-eventos.md",
-      "type": "event_index",
+      "document_id": "QUALITY-DEDUP",
+      "path": "QUALITY_AND_DEDUP.md",
+      "type": "quality_gate",
       "status": "present"
     },
     {
-      "document_id": "PENDING-MILESTONES",
-      "path": "timeline/04-hitos-pendientes.md",
-      "type": "research_queue",
+      "document_id": "README",
+      "path": "README.md",
+      "type": "readme",
       "status": "present"
     },
     {
-      "document_id": "TIMELINE-RULES",
-      "path": "timeline/02-reglas-de-cronologia.md",
-      "type": "temporal_model",
+      "document_id": "WORK-QUEUE",
+      "path": "WORK_QUEUE.md",
+      "type": "work_queue",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-OC-PREMISE-EVAL",
+      "path": "au/01-evaluacion-premisa-oc.md",
+      "type": "au_evaluation",
+      "status": "present"
+    },
+    {
+      "document_id": "GOD-INDEX",
+      "path": "canon/06-indice-deidades.md",
+      "type": "entity_index",
+      "status": "present"
+    },
+    {
+      "document_id": "MYSTERY-INDEX",
+      "path": "canon/07-indice-misterios-y-revelaciones.md",
+      "type": "mystery_index",
+      "status": "present"
+    },
+    {
+      "document_id": "MAGIC-INDEX",
+      "path": "canon/08-indice-magia-habilidades-y-equipo.md",
+      "type": "ability_index",
+      "status": "present"
+    },
+    {
+      "document_id": "MONSTER-INDEX",
+      "path": "canon/09-indice-monstruos-y-amenazas.md",
+      "type": "monster_index",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-CATALOG",
+      "path": "catalog.json",
+      "type": "catalog_file",
       "status": "present"
     },
     {
@@ -677,33 +695,105 @@
       "status": "present"
     },
     {
-      "document_id": "VOLUME-INDEX",
-      "path": "volumes/00-indice-volumenes-y-arcos.md",
-      "type": "publication_index",
+      "document_id": "SOURCES-INDEX",
+      "path": "sources/00-registro-fuentes.md",
+      "type": "source_registry",
       "status": "present"
     },
     {
-      "document_id": "GOD-INDEX",
-      "path": "canon/06-indice-deidades.md",
-      "type": "entity_index",
+      "document_id": "TEMPLATE-ARC",
+      "path": "templates/registro-arco.md",
+      "type": "template",
       "status": "present"
     },
     {
-      "document_id": "MYSTERY-INDEX",
-      "path": "canon/07-indice-misterios-y-revelaciones.md",
-      "type": "mystery_index",
+      "document_id": "TEMPLATE-ERA",
+      "path": "templates/registro-epoca.md",
+      "type": "template",
       "status": "present"
     },
     {
-      "document_id": "MAGIC-INDEX",
-      "path": "canon/08-indice-magia-habilidades-y-equipo.md",
-      "type": "ability_index",
+      "document_id": "TEMPLATE-EVENT",
+      "path": "templates/registro-evento.md",
+      "type": "template",
       "status": "present"
     },
     {
-      "document_id": "MONSTER-INDEX",
-      "path": "canon/09-indice-monstruos-y-amenazas.md",
-      "type": "monster_index",
+      "document_id": "TEMPLATE-FAMILY",
+      "path": "templates/registro-familia.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-ABILITY",
+      "path": "templates/registro-habilidad-equipo.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-PLACE",
+      "path": "templates/registro-lugar.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-MYSTERY",
+      "path": "templates/registro-misterio.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-MONSTER",
+      "path": "templates/registro-monstruo.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-CHARACTER",
+      "path": "templates/registro-personaje.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-RULE",
+      "path": "templates/registro-regla.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-RELATIONSHIP",
+      "path": "templates/registro-relacion.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-VOLUME",
+      "path": "templates/registro-volumen.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TIMELINE-MAP",
+      "path": "timeline/00-mapa-de-eras.md",
+      "type": "timeline_index",
+      "status": "present"
+    },
+    {
+      "document_id": "TIMELINE-RULES",
+      "path": "timeline/02-reglas-de-cronologia.md",
+      "type": "temporal_model",
+      "status": "present"
+    },
+    {
+      "document_id": "EVENT-INDEX",
+      "path": "timeline/03-indice-eventos.md",
+      "type": "event_index",
+      "status": "present"
+    },
+    {
+      "document_id": "PENDING-MILESTONES",
+      "path": "timeline/04-hitos-pendientes.md",
+      "type": "research_queue",
       "status": "present"
     },
     {
@@ -779,99 +869,135 @@
       "status": "present"
     },
     {
-      "document_id": "DOC-PREMISE",
-      "path": "01-premisa-autor.md",
-      "type": "author_premise",
-      "status": "present"
-    },
-    {
-      "document_id": "DOC-RECORD-SCHEMA",
-      "path": "02-plantilla-registro.md",
-      "type": "generic_template",
-      "status": "present"
-    },
-    {
-      "document_id": "DOC-REVIEW-PROTOCOL",
-      "path": "03-protocolo-revision.md",
-      "type": "review_protocol",
-      "status": "present"
-    },
-    {
-      "document_id": "DOC-TEST-BANK",
-      "path": "04-banco-pruebas.md",
-      "type": "test_suite",
-      "status": "present"
-    },
-    {
-      "document_id": "DOC-SOURCE-POLICY",
-      "path": "05-fuentes-y-verificacion.md",
-      "type": "source_policy",
-      "status": "present"
-    },
-    {
-      "document_id": "DOC-AUTHOR-DECISIONS",
-      "path": "06-registro-decisiones.md",
-      "type": "author_decisions",
-      "status": "present"
-    },
-    {
-      "document_id": "DOC-REVIEW-PROMPT",
-      "path": "07-prompt-revision.md",
-      "type": "review_prompt",
-      "status": "present"
-    },
-    {
-      "document_id": "DOC-OC-PREMISE-EVAL",
-      "path": "au/01-evaluacion-premisa-oc.md",
-      "type": "au_evaluation",
-      "status": "present"
-    },
-    {
       "document_id": "CHECK-CATALOG",
       "path": "tools/check-catalog.mjs",
       "type": "integrity_checker",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-FAMILY",
-      "path": "templates/registro-familia.md",
-      "type": "template",
+      "document_id": "VOLUME-INDEX",
+      "path": "volumes/00-indice-volumenes-y-arcos.md",
+      "type": "publication_index",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-ERA",
-      "path": "templates/registro-epoca.md",
-      "type": "template",
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-01",
+      "path": "volumes/main/volume-01.md",
+      "type": "volume_stub",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-MYSTERY",
-      "path": "templates/registro-misterio.md",
-      "type": "template",
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-02",
+      "path": "volumes/main/volume-02.md",
+      "type": "volume_stub",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-RELATIONSHIP",
-      "path": "templates/registro-relacion.md",
-      "type": "template",
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-03",
+      "path": "volumes/main/volume-03.md",
+      "type": "volume_stub",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-MONSTER",
-      "path": "templates/registro-monstruo.md",
-      "type": "template",
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-04",
+      "path": "volumes/main/volume-04.md",
+      "type": "volume_stub",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-ABILITY",
-      "path": "templates/registro-habilidad-equipo.md",
-      "type": "template",
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-05",
+      "path": "volumes/main/volume-05.md",
+      "type": "volume_stub",
       "status": "present"
     },
     {
-      "document_id": "TEMPLATE-ARC",
-      "path": "templates/registro-arco.md",
-      "type": "template",
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-06",
+      "path": "volumes/main/volume-06.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-07",
+      "path": "volumes/main/volume-07.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-08",
+      "path": "volumes/main/volume-08.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-09",
+      "path": "volumes/main/volume-09.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-10",
+      "path": "volumes/main/volume-10.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-11",
+      "path": "volumes/main/volume-11.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-12",
+      "path": "volumes/main/volume-12.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-13",
+      "path": "volumes/main/volume-13.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-14",
+      "path": "volumes/main/volume-14.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-15",
+      "path": "volumes/main/volume-15.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-16",
+      "path": "volumes/main/volume-16.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-17",
+      "path": "volumes/main/volume-17.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-18",
+      "path": "volumes/main/volume-18.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-19",
+      "path": "volumes/main/volume-19.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-20",
+      "path": "volumes/main/volume-20.md",
+      "type": "volume_stub",
       "status": "present"
     }
   ]
