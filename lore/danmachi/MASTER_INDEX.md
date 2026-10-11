@@ -14,7 +14,15 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Plantilla de regla de mundo](templates/registro-regla.md)
 - [Plantilla de lugar](templates/registro-lugar.md)
 - [Plantilla de volumen](templates/registro-volumen.md)
+- [Plantilla de Familia](templates/registro-familia.md)
+- [Plantilla de era](templates/registro-epoca.md)
+- [Plantilla de misterio](templates/registro-misterio.md)
+- [Plantilla de relación](templates/registro-relacion.md)
+- [Plantilla de monstruo](templates/registro-monstruo.md)
+- [Plantilla de habilidad/equipo](templates/registro-habilidad-equipo.md)
+- [Plantilla de arco](templates/registro-arco.md)
 - [Registro maestro de fuentes](sources/00-registro-fuentes.md)
+- [Validador automático de catálogo](tools/check-catalog.mjs)
 
 ## 2. Cronología desde las eras antiguas hasta el cierre publicado
 
