@@ -111,6 +111,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 ## 4.1 Paquetes de investigación
 
 - [DANMACHI-RESEARCH-001 · Era Oscura de Orario y personajes multiepoca](research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md)
+- [DANMACHI-RESEARCH-002 · Psicología de personajes y auditoría de retrieval](research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md)
 
 ## 5. Prioridades de verificación
 

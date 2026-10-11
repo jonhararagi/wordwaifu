@@ -81,3 +81,23 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Validación de la tanda de investigación precedente: GitHub Actions #38141893958, SHA exacto `a6c01dcc3bedb0f4127b6f9260435337a9323f05`, success.
 - Validación de esta integración: pendiente del nuevo commit.
 - Resultado: datos mejor organizados y navegables; no equivale a canon completo ni a approved.
+
+## DANMACHI-RESEARCH-002 · Psicología de personajes, cobertura multiepoca y retrieval
+
+- Fecha: 2026-10-11
+- Estado: partial.
+- ID interno: DANMACHI-RESEARCH-002; el nombre de archivo BATCH-DM-004 se conserva, pero la cola reserva esa clave para ERA-01.
+- HEAD preflight: `3553289c5eb60a716bcd5f4fbf893e28c262b0e3`; main se mantiene separado.
+- Paquete creado: `research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md`.
+- Perfiles ampliados: DM-CHAR-BELL, DM-CHAR-HESTIA, DM-CHAR-AIS, DM-CHAR-EINA, CHAR-RYUU-LION, CHAR-ASTREA, CHAR-ALISE-LOVELACE.
+- Fichas individuales provisionales: CHAR-FINN-DEIMNE, CHAR-FREYA, CHAR-OTTAR; sus IDs pasan de reservedIds a records.
+- Claims: DMR-002-CLM-001, DMR-002-CLM-002, DMR-002-CLM-003, DMR-002-CLM-004, DMR-002-CLM-005, DMR-002-CLM-006, DMR-002-CLM-007, DMR-002-CLM-008, DMR-002-CLM-009, DMR-002-CLM-010, DMR-002-CLM-011, DMR-002-CLM-012, DMR-002-CLM-013, DMR-002-CLM-014, DMR-002-CLM-015, DMR-002-CLM-016, DMR-002-CLM-017, DMR-002-CLM-018, DMR-002-CLM-019, DMR-002-CLM-020.
+- Fuentes nuevas: DMR-002-SRC-001, DMR-002-SRC-002, DMR-002-SRC-003; para Ryu/Alise se reutilizan DMR-001-SRC-003/004.
+- Auditoría real de código: la búsqueda actual opera sobre entidades de proyectos guardadas en IndexedDB y el respaldo local; no se encontró carga del corpus `lore/danmachi/` ni de `catalog.json`.
+- Pruebas existentes inspeccionadas: `tests/browser_smoke.cjs` comprueba búsqueda textual de entidades de demo (“Mira”, “Puerto Umbría”) y búsqueda maestra en dos proyectos; no son pruebas del corpus DanMachi y no fueron ejecutadas durante esta tanda.
+- Herramientas examinadas: SillyTavern, LlamaIndex, AnythingLLM y RAGFlow; los resultados y límites figuran en el paquete.
+- No se añadieron dependencias ni se modificó el motor de aplicación.
+- Validador y GitHub Actions de este commit: pendiente de ejecución/verificación.
+- Límite probatorio: páginas de adaptación y sinopsis editoriales; no se consultó el texto íntegro de las novelas ni se inventaron gustos/miedos/voz.
+- Próximas prioridades: localizadores internos de novela; recuperación del corpus con metadatos y citas tras una tarea de implementación autorizada.
+- Veredicto: PARTIAL.

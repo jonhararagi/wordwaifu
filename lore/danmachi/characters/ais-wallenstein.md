@@ -6,6 +6,11 @@ status: provisional
 confidence: high for general role; time-specific facts need verification
 tags: [Ais Wallenstein, Familia Loki, aventurera, Bell]
 source_refs: [DanMachi light novel series; localizador pendiente]
+claim_refs:
+  - DMR-002-CLM-005
+  - DMR-002-CLM-006
+research_source_refs:
+  - DMR-002-SRC-003
 ---
 # Ais Wallenstein
 
@@ -23,3 +28,11 @@ Ais Wallenstein es una aventurera destacada asociada a la Familia Loki. Es conoc
 ## Verificación pendiente
 
 Cotejar las primeras apariciones de Ais y los volúmenes que explican su biografía, afiliación y desarrollo. Añadir localizadores verificables antes de usar esta ficha para un dictamen factual.
+
+## Perfil psicológico inicial · DANMACHI-RESEARCH-002
+
+**Alcance:** perfiles oficiales de adaptación; falta contrastar escenas de novela.
+
+- **Competencia y atención:** la página destaca su capacidad con la espada y su interés por el crecimiento inusualmente rápido de Bell. Eso demuestra curiosidad por su progreso, pero no establece por sí solo reciprocidad romántica. [DMR-002-CLM-005, DMR-002-CLM-006]
+- **Gustos, aversiones, temores y voz:** no se rellenan en esta tanda porque las fuentes consultadas no proporcionan evidencia suficientemente específica.
+- **Evolución:** para fechar el origen de un rasgo se necesitan pasajes por volumen/escena, diferenciando la novela principal de *Sword Oratoria* y la adaptación.

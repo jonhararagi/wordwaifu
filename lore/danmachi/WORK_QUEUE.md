@@ -111,6 +111,23 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [ ] Si la obra sigue en curso, marcar FINAL CANÓNICO NO PUBLICADO.
 - [ ] No tratar teorías como hechos ni crear un final especulativo dentro del canon.
 
+## DANMACHI-RESEARCH-002 · Psicología de personajes y auditoría de retrieval
+
+- Estado: PARTIAL; perfiles iniciales y fuentes oficiales añadidos, sin lectura íntegra de novelas ni pruebas reales de consulta al corpus desde la aplicación.
+- Paquete: [BATCH-DM-004-psicologia-personajes-y-retrieval.md](research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md).
+- [x] Confirmar HEAD y separar main.
+- [x] Inventariar grupos y prioridades multiepoca.
+- [x] Ampliar perfiles existentes de Bell, Hestia, Ais, Eina, Ryu, Astrea y Alise.
+- [x] Crear fichas provisionales individuales para Finn, Freya y Ottar con sus IDs reservados.
+- [x] Registrar 20 afirmaciones con tipo de evidencia, continuidad, fuente, localizador y confianza.
+- [x] Añadir tres perfiles oficiales de adaptación al registro de fuentes.
+- [x] Auditar el código de almacenamiento/búsqueda y las pruebas existentes de WordWaifu.
+- [x] Comparar SillyTavern World Info, LlamaIndex, AnythingLLM y RAGFlow.
+- [ ] Consultar novelas y relatos directamente para obtener localizadores de escenas y profundizar en rasgos psicológicos.
+- [ ] En una futura tarea autorizada, integrar el índice de lore al buscador con filtros por época/continuidad/spoiler y citas.
+- [ ] Ejecutar consultas de aceptación: Ryu en CONT-AR, Ryu en CONT-ANIME por separado y consulta sin evidencia sobre gustos de Ais.
+- Nota: el archivo conserva BATCH-DM-004 por instrucción, pero esta clave sigue asignada a ERA-01. ID de investigación: DANMACHI-RESEARCH-002.
+
 ## Reporte obligatorio por tanda
 
 - Batch ID:

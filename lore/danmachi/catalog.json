@@ -348,14 +348,49 @@
       ],
       "status": "provisional",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-FINN-DEIMNE",
+      "path": "characters/finn-deimne.md",
+      "type": "character",
+      "tags": [
+        "Finn Deimne",
+        "Loki Familia",
+        "leadership",
+        "command"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-FREYA",
+      "path": "characters/freya.md",
+      "type": "deity_character",
+      "tags": [
+        "Freya",
+        "Freya Familia",
+        "Bell",
+        "motivation",
+        "spoiler"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-OTTAR",
+      "path": "characters/ottar.md",
+      "type": "character",
+      "tags": [
+        "Ottar",
+        "Freya Familia",
+        "training",
+        "loyalty"
+      ],
+      "status": "provisional",
+      "priority": "high"
     }
   ],
   "reservedIds": [
-    {
-      "id": "CHAR-FINN-DEIMNE",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
     {
       "id": "CHAR-RIVERIA-LJOS-ALF",
       "type": "character",
@@ -403,16 +438,6 @@
     },
     {
       "id": "CHAR-SANJOUNO-HARUHIME",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-FREYA",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-OTTAR",
       "type": "character",
       "status": "candidate_not_created"
     },
@@ -1188,6 +1213,11 @@
     },
     {
       "path": "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
+      "type": "research_package",
+      "status": "present"
+    },
+    {
+      "path": "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
       "type": "research_package",
       "status": "present"
     }

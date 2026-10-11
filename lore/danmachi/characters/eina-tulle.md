@@ -6,6 +6,11 @@ status: provisional
 confidence: high for general role; medium for age/timeline
 tags: [Eina Tulle, Guild, asesora, Bell]
 source_refs: [DanMachi light novel Vol. 1; localizador pendiente]
+claim_refs:
+  - DMR-002-CLM-007
+  - DMR-002-CLM-008
+research_source_refs:
+  - DMR-002-SRC-003
 ---
 # Eina Tulle
 
@@ -29,3 +34,11 @@ Antes de clasificar la escena, precisar qué significa “registrarse” y cotej
 ## Verificación pendiente
 
 DanMachi, novela ligera, volumen 1: revisar las interacciones iniciales Eina-Bell y verificar edad/estado laboral en la fecha que el autor elija.
+
+## Perfil psicológico inicial · DANMACHI-RESEARCH-002
+
+**Alcance:** perfil oficial de adaptación, no prueba de su estado en la época previa propuesta para el OC.
+
+- **Rol observable:** Eina aparece como asesora de la Guild asignada a Bell y como fuente de conocimientos sobre el Dungeon y la ciudad. [DMR-002-CLM-007]
+- **Interpretación limitada:** su función es compatible con un estilo práctico y orientador hacia un novato, pero esto se marca como inferencia basada en el rol profesional, no como personalidad universal ni como prueba de que actuaría igual con el OC. [DMR-002-CLM-008]
+- **Pendiente:** gustos, miedos, voz, edad y puesto en fechas anteriores requieren fuente y localizador específicos.

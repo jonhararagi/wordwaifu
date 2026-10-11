@@ -179,3 +179,71 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-001
 - verification_status: source_checked
 
+---
+
+## DMR-002-SRC-001 · Perfiles oficiales de personajes de DanMachi V
+
+- source_id: DMR-002-SRC-001
+- title: ダンまちⅤ キャラクター | アニメ「ダンまち」シリーズ公式サイト
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi V; perfiles de adaptación anime
+- volume_or_edition: Página web, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi5/character
+- accessed_at: 2026-10-11
+- locator_type: character_profile
+- locator: Entradas ベル・クラネル, ヘスティア, フレイヤ y オッタル.
+- claims_supported: [DMR-002-CLM-001, DMR-002-CLM-002, DMR-002-CLM-003, DMR-002-CLM-004, DMR-002-CLM-011, DMR-002-CLM-012, DMR-002-CLM-013, DMR-002-CLM-014]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Perfil oficial de adaptación consultado directamente. No sustituye localizadores de la novela principal.
+- conflicting_sources: []
+- rights_note: Conservar resúmenes propios, no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-002
+- verification_status: source_checked
+
+## DMR-002-SRC-002 · Perfiles oficiales de personajes de DanMachi IV
+
+- source_id: DMR-002-SRC-002
+- title: キャラクター | アニメ「ダンまち」シリーズ公式サイト (DanMachi IV)
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi IV; perfiles de adaptación anime
+- volume_or_edition: Página web, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi4/character
+- accessed_at: 2026-10-11
+- locator_type: character_profile
+- locator: Entradas アストレア, アリーゼ・ローヴェル y perfiles de Astrea Familia, incluida リュー・リオン.
+- claims_supported: [DMR-002-CLM-017, DMR-002-CLM-018, DMR-002-CLM-019, DMR-002-CLM-020]
+- events_supported: []
+- continuity_scope: CONT-ANIME; comparación auxiliar con CONT-AR
+- reliability_note: Perfil oficial de adaptación; no se transfiere automáticamente a la novela ligera.
+- conflicting_sources: []
+- rights_note: Guardar resúmenes propios.
+- verified_by: DANMACHI-RESEARCH-002
+- verification_status: source_checked
+
+## DMR-002-SRC-003 · Perfiles oficiales de personajes de DanMachi III
+
+- source_id: DMR-002-SRC-003
+- title: キャラクター | TVアニメ「ダンまち」第3期公式サイト
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi III; perfiles de adaptación anime
+- volume_or_edition: Página web, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi3/character
+- accessed_at: 2026-10-11
+- locator_type: character_profile
+- locator: Entradas エイナ・チュール, フィン・ディムナ y アイズ・ヴァレンシュタイン.
+- claims_supported: [DMR-002-CLM-005, DMR-002-CLM-006, DMR-002-CLM-007, DMR-002-CLM-008, DMR-002-CLM-009, DMR-002-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Resumen oficial de adaptación; no fija por sí solo psicología o fecha interna de cada escena.
+- conflicting_sources: []
+- rights_note: Conservar resúmenes propios y localizadores de sección.
+- verified_by: DANMACHI-RESEARCH-002
+- verification_status: source_checked
+

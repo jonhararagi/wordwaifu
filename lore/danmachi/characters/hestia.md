@@ -6,6 +6,11 @@ status: provisional
 confidence: high for general identity; medium for exact dates
 tags: [Hestia, deidad, Familia Hestia, cronología]
 source_refs: [DanMachi light novel Vol. 1; localizador pendiente]
+claim_refs:
+  - DMR-002-CLM-003
+  - DMR-002-CLM-004
+research_source_refs:
+  - DMR-002-SRC-001
 ---
 # Hestia
 
@@ -36,3 +41,11 @@ El recuerdo general de la trama es que Hestia llevaba alrededor de medio año en
 ## Verificación prioritaria
 
 DanMachi, novela ligera, volumen 1: verificar los pasajes sobre cuánto tiempo lleva Hestia en el mundo inferior y cómo conoce a Bell. Añadir edición, capítulo y página tras cotejarlos.
+
+## Perfil psicológico inicial · DANMACHI-RESEARCH-002
+
+**Alcance:** perfil de la adaptación DanMachi V, sin localizador interno de novela.
+
+- **Cuidado práctico:** se la describe como bondadosa y trabajando para contribuir al coste de la daga entregada a Bell. La conducta respalda su inversión en la Familia, no una afición a vender comida ni un gusto alimentario particular. [DMR-002-CLM-003]
+- **Relación con Bell y Freya:** el perfil dice que ama a Bell y mantiene cautela ante la posibilidad de que Freya interfiera en el vínculo. “Celos protectores” es una interpretación del comportamiento descrito, no un diagnóstico ni una característica que deba suponerse invariable. [DMR-002-CLM-004]
+- **Temporalidad:** no proyectar esta dinámica a escenas anteriores sin evidencia del periodo elegido.

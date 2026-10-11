@@ -18,7 +18,7 @@ Este índice mezcla registros existentes y candidatos para futuras fichas. La co
 | DM-CHAR-EINA | Eina Tulle | Eina | Guild, Bell | Ficha inicial existente |
 | DM-CHAR-AIS | Ais Wallenstein | Ais | Loki Familia, Bell | Ficha inicial existente |
 | DM-CHAR-LOKI-LEADERS | Finn/Riveria/Gareth (grupo provisional) | No tratar como una persona | Loki Familia | Registro grupal existente; crear fichas individuales cuando se investiguen |
-| CHAR-FINN-DEIMNE | Finn Deimne | Finn | Loki Familia | Candidato, ficha individual pendiente |
+| CHAR-FINN-DEIMNE | [Finn Deimne](finn-deimne.md) | Finn | Loki Familia; liderazgo | Ficha provisional; perfil de adaptación |
 | CHAR-RIVERIA-LJOS-ALF | Riveria Ljos Alf | Riveria | Loki Familia | Candidato, ficha individual pendiente |
 | CHAR-GARETH-LANDROCK | Gareth Landrock | Gareth | Loki Familia | Candidato, ficha individual pendiente |
 | CHAR-BETE-LOGA | Bete Loga | Bete | Loki Familia | Candidato pendiente |
@@ -30,8 +30,8 @@ Este índice mezcla registros existentes y candidatos para futuras fichas. La co
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Candidato pendiente |
 | CHAR-SANJOUNO-HARUHIME | Sanjouno Haruhime | Haruhime | Hestia Familia, Ishtar historia | Candidato pendiente |
 | CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia (estado histórico); Hostess of Fertility (perfil de adaptación) | Ficha provisional con estados separados por continuidad |
-| CHAR-FREYA | Freya | Syr como alias/identidad por verificar con cuidado | Freya Familia, Hostess of Fertility | Candidato pendiente; spoiler mayor |
-| CHAR-OTTAR | Ottar | Ottar | Freya Familia | Candidato pendiente |
+| CHAR-FREYA | [Freya](freya.md) | Syr como alias/identidad por verificar con cuidado | Freya Familia, Bell; relaciones con spoiler | Ficha provisional; perfil de adaptación; spoiler mayor |
+| CHAR-OTTAR | [Ottar](ottar.md) | Ottar | Freya Familia, entrenamiento, lealtad | Ficha provisional; perfil de adaptación |
 | CHAR-HERMES | Hermes | Hermes | Hermes Familia, Bell | Candidato pendiente |
 | CHAR-OURANOS | Ouranos | Ouranos | Guild, Fels | Candidato pendiente |
 | CHAR-FELS | Fels | Fels | Ouranos, Guild | Candidato pendiente |
@@ -68,3 +68,23 @@ Este índice mezcla registros existentes y candidatos para futuras fichas. La co
 Antes de crear una ficha nueva, buscar el ID principal, nombres, romanizaciones, traducciones, alias y relaciones en este índice y en catalog.json. Si es la misma persona, ampliar la ficha existente. Si existe duda, registrar IDENTITY_UNRESOLVED sin fusionar.
 
 Las candidaturas usan IDs sugeridos. Al crearse una ficha real, ese ID se convierte en canónico para el repositorio; no generar un segundo ID por transliteración alternativa.
+
+## Cobertura transversal y prioridades · DANMACHI-RESEARCH-002
+
+Los nombres indicados son rutas de investigación, no una afirmación de que todas sus afiliaciones y estados estén verificados para todas las épocas.
+
+| Grupo | Identidades que deben conservarse/localizarse | Próxima prioridad |
+|---|---|---|
+| Historia antigua | Zeus (`CHAR-ZEUS`), Hera (`CHAR-HERA`), Alfia (`CHAR-ALFIA`), Zard/Zald (`CHAR-ZARD`), Meteria (`CHAR-METERIA`), Albert Waldstein (`CHAR-ALBERT-WALDSTEIN`), Aria (`CHAR-ARIA`) | Fuentes literarias, spoilers y estados históricos diferenciados. |
+| Era Oscura / Astrea Familia | Ryu/Ryuu (`CHAR-RYUU-LION`), Astrea (`CHAR-ASTREA`), Alise (`CHAR-ALISE-LOVELACE`), Kaguya (`CHAR-KAGUYA`), Lyra (`CHAR-LYRA`) | Localizadores internos de *Astrea Record* 1–3 y roster respaldado. |
+| Loki Familia | Loki, Finn, Riveria, Gareth, Bete, Tiona, Tione, Lefiya | Crear fichas individuales desde IDs ya reservados y describir por separado estado, relación y conocimiento por época. |
+| Freya Familia | Freya (`CHAR-FREYA`), Ottar (`CHAR-OTTAR`), Allen, Hedin, Hogni, Gulliver Brothers, Van; Anya según su intervalo; Syr con guardia de spoiler | Jerarquía, formación y vínculos por periodos; no fusionar alias por intuición. |
+| Historia principal / Hestia Familia | Bell, Hestia, Ais, Eina, Welf, Liliruca, Mikoto, Haruhime y Ryu | Preferir novelas principales y eventos/escenas precisas. |
+| Instituciones, deidades y secundarios | Hermes, Ouranos, Fels, Ganesha, personal de Guild, Mia y personal de Hostess of Fertility | Roles, hábitos observables y relaciones en estados temporales correctos. |
+
+### Orden recomendado
+1. Loki, Riveria y Gareth como fichas individuales.
+2. Kaguya y Lyra con fuentes directas de *Astrea Record*.
+3. Zeus/Hera, Alfia y Zard con localizadores y marcas de spoiler.
+4. Bell/Hestia/Eina/Ais en novela principal, por escena.
+5. Personal de la taberna y estados de Freya Familia.

@@ -10,8 +10,14 @@ source_refs:
 claim_refs:
   - DMR-001-CLM-005
   - DMR-001-CLM-010
+  - DMR-002-CLM-015
+  - DMR-002-CLM-016
 verification_status: source_checked_for_official_web_pages
 tags: [Ryu Lion, Ryuu Lion, Astrea Familia, multi-era]
+research_source_refs:
+  - DMR-002-SRC-002
+  - DMR-001-SRC-003
+  - DMR-001-SRC-004
 ---
 # Ryu Lion / Ryuu Lion
 
@@ -50,3 +56,10 @@ Treat Ryu as a stable identity with separate temporal states. The documented his
 - [ ] Determine what the primary main-series novel itself establishes about her later role, independent of the anime profile.
 - [ ] Verify exact romanization preferred by the edition used in this lore base.
 - [ ] Capture any AU effects on Ryu only after the author defines the OC’s Family and divergence.
+
+## Perfil psicológico inicial · DANMACHI-RESEARCH-002
+
+- **Estado histórico, CONT-AR:** la sinopsis oficial presenta a Ryu buscando su propia comprensión de la justicia bajo Astrea, con Alise y sus compañeras como guías. Esto muestra una formación moral en desarrollo, no una filosofía acabada e inmutable. [DMR-002-CLM-015]
+- **Bajo presión, CONT-AR:** la sinopsis del volumen 2 dice que las pérdidas durante el periodo luego llamado “Los siete días de la muerte” sacuden su sentido de justicia. El cambio general está en la sinopsis; las escenas exactas y sus consecuencias individuales requieren el volumen. [DMR-002-CLM-016]
+- **Límites:** no inferir gustos cotidianos, miedo específico ni diagnóstico psicológico desde el trauma o la pérdida.
+- **Continuidad:** mantener este estado separado del perfil posterior de taberna en CONT-ANIME.
