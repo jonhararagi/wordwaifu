@@ -1,0 +1,43 @@
+---
+id: EVT-DM-BELL-MEETS-HESTIA-001
+universe: danmachi
+type: event
+status: pending_verification
+continuity_scope: main
+spoiler_level: mild
+source_refs: []
+---
+# EVT-DM-BELL-MEETS-HESTIA-001 · Encuentro inicial entre Bell y Hestia
+
+## Afirmación candidata
+
+Bell Cranel y Hestia se conocen al comienzo de la historia principal y su relación lleva a la formación/funcionamiento inicial de la Familia Hestia. La secuencia detallada de encuentro, aceptación, bendición y primeras acciones debe registrarse de acuerdo con el texto fuente.
+
+## Preguntas de extracción
+
+- ¿Dónde y en qué circunstancias se conocen?
+- ¿Qué había ocurrido con Bell antes del encuentro?
+- ¿Qué decide cada uno durante la escena?
+- ¿Cuándo recibe Bell la Falna y qué fuente confirma el momento?
+- ¿Cuánto tiempo transcurre entre los distintos pasos?
+- ¿Qué registro de la Guild existe en ese punto?
+- ¿Qué sabe cada personaje en esa escena?
+- ¿Qué cambia en la afiliación de Bell?
+
+## Control de duplicados
+
+Si otros volúmenes o relatos mencionan el encuentro como recuerdo, no crear un evento nuevo a menos que la fuente confirme que se trata de otro encuentro. Las escenas retrospectivas se enlazan al mismo ID y conservan su propio localizador.
+
+## Verificación necesaria
+- Fuente primaria:
+- Capítulo/sección:
+- Secuencia confirmada:
+- Fechas relativas:
+- Registro/Guild:
+- Estado: pending_verification.
+
+## Relaciones
+- DM-CHAR-BELL.
+- DM-CHAR-HESTIA.
+- DM-FAM-HESTIA.
+- EVT-DM-HESTIA-DESCENT-001.
