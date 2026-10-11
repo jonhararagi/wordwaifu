@@ -777,6 +777,102 @@
       "path": "timeline/eras/AU-oc-y-divergencias.md",
       "type": "au_timeline",
       "status": "present"
+    },
+    {
+      "document_id": "DOC-PREMISE",
+      "path": "01-premisa-autor.md",
+      "type": "author_premise",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-RECORD-SCHEMA",
+      "path": "02-plantilla-registro.md",
+      "type": "generic_template",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-REVIEW-PROTOCOL",
+      "path": "03-protocolo-revision.md",
+      "type": "review_protocol",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-TEST-BANK",
+      "path": "04-banco-pruebas.md",
+      "type": "test_suite",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-SOURCE-POLICY",
+      "path": "05-fuentes-y-verificacion.md",
+      "type": "source_policy",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-AUTHOR-DECISIONS",
+      "path": "06-registro-decisiones.md",
+      "type": "author_decisions",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-REVIEW-PROMPT",
+      "path": "07-prompt-revision.md",
+      "type": "review_prompt",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-OC-PREMISE-EVAL",
+      "path": "au/01-evaluacion-premisa-oc.md",
+      "type": "au_evaluation",
+      "status": "present"
+    },
+    {
+      "document_id": "CHECK-CATALOG",
+      "path": "tools/check-catalog.mjs",
+      "type": "integrity_checker",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-FAMILY",
+      "path": "templates/registro-familia.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-ERA",
+      "path": "templates/registro-epoca.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-MYSTERY",
+      "path": "templates/registro-misterio.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-RELATIONSHIP",
+      "path": "templates/registro-relacion.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-MONSTER",
+      "path": "templates/registro-monstruo.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-ABILITY",
+      "path": "templates/registro-habilidad-equipo.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-ARC",
+      "path": "templates/registro-arco.md",
+      "type": "template",
+      "status": "present"
     }
   ]
 }
