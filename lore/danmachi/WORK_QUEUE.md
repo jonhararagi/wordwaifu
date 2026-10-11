@@ -1,65 +1,101 @@
 # Cola de trabajo para futuras tandas de lore
 
-El paquete se amplía en pequeñas tandas. Completar primero los campos de prioridad crítica y los datos con mayor impacto en la premisa del OC. No rellenar toda una categoría a costa de arrastrar hechos sin fuente.
+Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el último volumen principal publicado que se pueda verificar. Las tareas se dividen para no mezclar épocas, fuentes o continuidades. Ningún número de volumen ni final se inventará para llenar huecos.
 
-## Orden recomendado
+## BATCH-DM-001 — Esqueleto cronológico y catálogo
+- Estado: DONE como estructura documental.
+- Resultado: ERA-00 a ERA-10 y ERA-AU; índices por categoría; plantillas; catálogo JSON; validador de integridad.
+- Evidencia y límites: consultar BATCH_LOG.md. El contenido canónico aún necesita fuentes primarias.
 
-### BATCH-DM-001 — Auditoría del esquema y cronología Hestia–Bell
-- [ ] Identificar el término correcto detrás de “Época Dorada”.
-- [ ] Localizar fuentes primarias sobre la llegada de Hestia y el primer encuentro con Bell.
-- [ ] Localizar información primaria sobre Eina y el registro en Guild.
-- [ ] Resolver las preguntas en \`06-registro-decisiones.md\`.
-- [ ] Actualizar la ficha de cronología solo después del cotejo.
-- [ ] Ejecutar búsqueda de duplicados y actualizar \`catalog.json\`.
+## BATCH-DM-002 — Verificación prioritaria para la premisa del OC
+- Estado: pendiente.
+- [ ] Identificar el término oficial detrás de “Época Dorada” antes de nombrar una era canónica.
+- [ ] Cotejar la cronología de Hestia y Bell en fuente primaria.
+- [ ] Cotejar el papel de Eina, el registro en la Guild y la entrada al Dungeon.
+- [ ] Aclarar qué significa que Loki llame “Bell” al OC y si Bell Cranel existe como entidad separada en la AU.
+- [ ] Registrar decisiones del autor; no aceptar overrides por inferencia.
+- [ ] Ejecutar tools/check-catalog.mjs desde un checkout del repositorio y reparar cualquier fallo que realmente aparezca.
 
-### BATCH-DM-002 — Zeus, Hera y Dragón Negro
-- [ ] Identificar los acontecimientos pertinentes.
-- [ ] Registrar personajes, miembros, expediciones y consecuencias.
-- [ ] Separar hechos de la novela principal de los revelados en relatos paralelos.
-- [ ] Cotejar nombres, transliteraciones y orden temporal.
+## Orden de cobertura histórica
 
-### BATCH-DM-003 — Astrea Familia y pasado de Ryuu
-- [ ] Crear fichas individuales de personajes importantes.
-- [ ] Ordenar acontecimientos y estados por periodo.
-- [ ] Enlazar con relatos oficiales relevantes y la novela principal.
-- [ ] Evitar duplicar un mismo evento contado retrospectivamente.
+### BATCH-DM-003 — ERA-00: historia antigua y terminología
+- [ ] Resolver traducciones y denominaciones de las eras.
+- [ ] Registrar mitos, héroes, monstruos y hechos antiguos con fuentes.
+- [ ] Distinguir relato, rumor, teoría y hecho confirmado.
+- [ ] Actualizar mapa de eras y catálogo.
 
-### BATCH-DM-004 — Loki Familia y periodos previos
-- [ ] Añadir fichas individuales de Finn, Riveria, Gareth, Ais, Bete, Tiona, Tione y Lefiya.
-- [ ] Verificar afiliaciones y niveles solo en las fechas que use la historia.
-- [ ] Registrar expediciones y conflictos pertinentes.
+### BATCH-DM-004 — ERA-01: descenso de las deidades
+- [ ] Registrar llegada, límites y condiciones que indiquen las fuentes.
+- [ ] Crear registros individuales para reglas independientes.
+- [ ] Separar las creencias de los personajes del relato objetivo.
 
-### BATCH-DM-005 — Saga principal por volumen
-- [ ] Confirmar inventario completo de volúmenes publicados.
-- [ ] Analizar un volumen por tanda o dividirlo según el número de eventos.
-- [ ] Extraer eventos, introducciones, cambios de estado, reglas y pistas.
-- [ ] Ejecutar control de duplicados con los volúmenes anteriores.
-- [ ] Actualizar misterios abiertos/resueltos y estados de personajes.
+### BATCH-DM-005 — ERA-02 y ERA-03: Orario, Dungeon, héroes y Familias tempranas
+- [ ] Verificar la historia documentada de Orario, Babel y Guild.
+- [ ] Rellenar los índices institucionales y geográficos.
+- [ ] Registrar expediciones y figuras históricas.
+- [ ] No inventar fechas de fundación ni cronología absoluta.
 
-### BATCH-DM-006 — Spin-offs y material lateral
-- [ ] Inventariar publicaciones y continuidad.
-- [ ] Registrar eventos compartidos una sola vez.
-- [ ] Conservar perspectivas distintas y diferencias de adaptación.
-- [ ] Evitar que una escena exclusiva de una adaptación se marque como novela principal.
+### BATCH-DM-006 — ERA-04 y ERA-05: Zeus, Hera, Dragón Negro y consecuencias
+- [ ] Identificar acontecimientos y orden temporal respaldado.
+- [ ] Registrar los miembros confirmados por periodo.
+- [ ] Documentar expediciones, caída y consecuencias.
+- [ ] Separar la historia principal de los hechos conocidos por material paralelo.
+- [ ] Registrar rumores, datos disputados y supervivientes sin fusionar versiones.
 
-### BATCH-DM-007 — Auditoría final de continuidad publicada
-- [ ] Confirmar cuál es el último volumen publicado.
-- [ ] Registrar el estado final conocido de cada línea argumental importante.
-- [ ] Auditar huecos temporales y contradicciones sin resolver.
-- [ ] Separar incógnitas intencionadas del autor de lagunas de datos.
-- [ ] Publicar una cobertura final honesta con porcentajes por categoría, nunca inventados.
+### BATCH-DM-007 — Pasado de Astrea Familia y Ryuu
+- [ ] Crear fichas de personajes y eventos.
+- [ ] Reconstruir estados y afiliaciones por periodo.
+- [ ] Enlazar relatos paralelos sin duplicar los mismos acontecimientos.
+- [ ] Añadir localizadores comprobables.
 
-## Plantilla de reporte de tanda
+### BATCH-DM-008 — ERA-06: periodo previo a Bell
+- [ ] Completar Hestia, Loki, Freya, Eina y familias relevantes por fecha.
+- [ ] Verificar ubicaciones, edad aproximada, afiliaciones y conocimiento.
+- [ ] Revisar las alertas de la premisa del OC.
+- [ ] Registrar cada divergencia AU que el autor apruebe.
 
-Resumen:
-- Tanda:
-- Rango de fuentes:
+### BATCH-DM-009 — ERA-07: inicio de la historia principal
+- [ ] Inventariar el volumen 1 con edición y localizadores.
+- [ ] Atomizar acontecimientos por escena/evento.
+- [ ] Actualizar los estados iniciales de Bell, Hestia, Eina y otras entidades relevantes.
+- [ ] Verificar reglas del Dungeon y de la Guild según el texto.
+
+### BATCH-DM-010 — ERA-08: volúmenes principales posteriores
+- [ ] Confirmar bibliografía vigente antes de fijar el total.
+- [ ] Trabajar por volumen o sub-batches pequeños.
+- [ ] Registrar eventos, estados, habilidades, reglas, lugares, Familias, pistas y revelaciones.
+- [ ] Comparar cada registro con los anteriores para evitar duplicados.
+- [ ] Diferenciar orden de publicación y cronología interna.
+- [ ] Mantener spoiler level y conocimiento por personaje.
+
+### BATCH-DM-011 — ERA-09: spin-offs y material paralelo
+- [ ] Inventariar Sword Oratoria, Familia Chronicle, Astrea Record y otros materiales incluidos en el alcance.
+- [ ] Etiquetar cada fuente y continuidad.
+- [ ] Enlazar eventos compartidos en lugar de volver a registrarlos.
+- [ ] Registrar diferencias entre novela, anime, manga y juego.
+
+### BATCH-DM-012 — ERA-10: último volumen publicado y cierre
+- [ ] Comprobar el estado real de publicación y la edición utilizada.
+- [ ] Documentar el último volumen principal publicado.
+- [ ] Si hay final publicado, registrar eventos finales, estado de personajes, misterios resueltos y asuntos abiertos.
+- [ ] Si la obra sigue en curso, marcar FINAL CANÓNICO NO PUBLICADO.
+- [ ] No tratar teorías como hechos ni crear un final especulativo dentro del canon.
+
+## Reporte obligatorio por tanda
+
+- Batch ID:
+- Fuentes exactas consultadas:
+- Localizadores comprobados:
 - IDs nuevos:
-- IDs existentes actualizados:
+- IDs actualizados:
+- Alias incorporados:
 - Duplicados evitados/fusionados:
-- Conflictos encontrados:
-- Datos no verificados:
-- Archivos tocados:
-- Evidencia de revisión:
-- Resultado:
-- Próxima tanda:
+- Conflictos entre fuentes:
+- Datos pendientes:
+- Validador ejecutado y resultado:
+- Veredicto: partial, source_checked, cross_checked o approved.
+- Próximo batch:
+
+## Regla
+
+Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No transformar un resumen escrito desde conocimiento general en canon verificado solo por guardarlo en GitHub.
