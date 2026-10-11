@@ -1920,7 +1920,7 @@
     log.scrollTop = log.scrollHeight;
   }
 
-  $(".nav-item").forEach((button) => button.addEventListener("click", () => {
+  $$(".nav-item").forEach((button) => button.addEventListener("click", () => {
     navigate(button.dataset.view);
     if (button.dataset.view === "lore") void prepareLoreView().catch(() => {});
   }));
