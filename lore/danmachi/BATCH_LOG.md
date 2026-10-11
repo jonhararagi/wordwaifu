@@ -6,26 +6,27 @@
 - Fuentes primarias cotejadas: ninguna en esta tanda.
 - Resultado: estructura y primeros resúmenes preliminares, no canon verificado.
 
-## BATCH-DM-001 · Esqueleto cronológico y cobertura por categorías
-- Estado: estructura creada; fuentes y contenido histórico siguen pendientes.
-- Alcance: eras desde la historia antigua hasta el último volumen/final publicado; cronología AU separada; índices de personajes, Familias, deidades, lugares, reglas, monstruos, magia/equipo, misterios, acontecimientos y volúmenes; plantillas de personaje, evento, regla, lugar, volumen, Familia, era, misterio, relación, monstruo, habilidad/equipo y arco.
-- Cobertura por eras: ERA-00 a ERA-10 y ERA-AU.
-- Control de identidad: los IDs de fichas existentes se alinearon con los índices principales; candidatos futuros están en reservedIds para evitar crearlos dos veces.
-- Catálogo actual: 15 registros con ficha, 76 IDs candidatos reservados y 52 documentos de apoyo indexados.
-- Integridad estática realizada durante esta tanda: el JSON se pudo parsear; no se detectaron IDs duplicados entre registros reales ni colisión entre IDs reales y reservados; los IDs y rutas de documentos del catálogo fueron comprobados como únicos.
-- Herramienta añadida: tools/check-catalog.mjs, comprobador sin dependencias externas para detectar IDs duplicados, colisiones de rutas, archivos ausentes, discrepancias entre frontmatter y catálogo y enlaces Markdown rotos. La ejecución manual en el equipo del propietario no se realizó.
-- **PASS_REAL de GitHub Actions:** [run #38137048288](https://github.com/jonhararagi/wordwaifu/actions/runs/38137048288), commit validado dc677b543ffaf459660c0a906c8271ea3cff54d3; el job “Catalog, IDs and Markdown links” completó en success.
+## BATCH-DM-001 · Esqueleto cronológico y catálogo
+- Estado: DONE como estructura documental.
+- Alcance: ERA-00 a ERA-10 y ERA-AU; índices de personaje, Familia, lugar, regla, deidad, monstruo, misterio, magia/equipo, eventos, volúmenes y arcos; matriz de continuidad; plantillas; cola de tareas; registro de fuentes; control de duplicados; registro por tanda.
+- Volúmenes: 20 plantillas individuales iniciales (volume-01.md a volume-20.md). No se afirma que sean todos los volúmenes publicados ni que el volumen 20 sea el último; la bibliografía decidirá cuántas plantillas adicionales crear.
+- Plantillas: personaje, evento, regla, lugar, volumen, Familia, era, misterio, relación, monstruo, habilidad/equipo, arco y capítulo/escena.
+- Catálogo actualizado desde el árbol recursivo de GitHub: 92 archivos de lore rastreados, 15 registros con ficha, 76 IDs candidatos reservados y 77 documentos de apoyo indexados.
+- Control estructural: catálogo JSON parseado; IDs de registros, IDs reservados, IDs documentales y rutas comprobados como únicos en la sincronización; ningún ID real se solapa con un ID reservado.
+- Validador: `tools/check-catalog.mjs`, sin dependencias externas; valida catálogo, rutas, IDs en frontmatter, colisiones de IDs reservados, y enlaces Markdown.
+- **PASS_REAL:** [GitHub Actions #38137112591](https://github.com/jonhararagi/wordwaifu/actions/runs/38137112591) para la versión anterior de la estructura.
+- **Estado de la última estructura ampliada:** pendiente de que termine la ejecución nueva de CI, disparada por los commits posteriores.
 - Fuentes primarias cotejadas: ninguna en esta tanda.
-- Resultado: ESQUELETO AMPLIO; no significa que toda la cronología o todos los datos canónicos estén completados.
+- Resultado: ESQUELETO AMPLIO Y NAVEGABLE; no significa que la cronología ni el canon estén completos.
 
-## BATCH-DM-002 · Prioridad crítica: cronología y premisa del OC
+## BATCH-DM-002 · Verificación prioritaria para la premisa del OC
 - Estado: pendiente.
-- [ ] Verificar la terminología oficial detrás de “Época Dorada”.
+- [ ] Identificar el término exacto detrás de “Época Dorada” con referencia de fuente; no convertirlo en nombre canónico por intuición.
 - [ ] Cotejar la cronología de Hestia y Bell en la fuente primaria.
-- [ ] Cotejar el registro/asesoría de la Guild y la función de Eina.
-- [ ] Aclarar qué significa “Loki lo llama Bell”.
-- [ ] Registrar decisiones expresas del autor y no inferir overrides AU.
-- [ ] Ejecutar el comprobador desde un checkout del repositorio y corregir errores reales.
+- [ ] Cotejar el papel de Eina, el registro en la Guild y la entrada al Dungeon.
+- [ ] Aclarar qué significa que Loki llame “Bell” al OC.
+- [ ] Registrar decisiones expresas del autor, distinguiendo propuesta de override AU aceptado.
+- [ ] Verificar el último volumen principal publicado cuando se aborde ERA-10.
 
 ## Plantilla para próximas tandas
 
@@ -41,7 +42,7 @@
 - Conflictos entre fuentes:
 - Decisiones del autor:
 - Datos sin verificar:
-- Verificaciones ejecutadas:
+- Validador ejecutado y resultado:
 - Evidencia:
 - Próxima tanda:
 
