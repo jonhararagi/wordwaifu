@@ -21,7 +21,11 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Plantilla de monstruo](templates/registro-monstruo.md)
 - [Plantilla de habilidad/equipo](templates/registro-habilidad-equipo.md)
 - [Plantilla de arco](templates/registro-arco.md)
+- [Plantilla de capítulo/escena](templates/registro-capitulo-escena.md)
 - [Registro maestro de fuentes](sources/00-registro-fuentes.md)
+- [Matriz de continuidad entre novela, spin-offs y adaptaciones](continuity/00-matriz-de-continuidad.md)
+- [Índice de arcos narrativos](arcs/00-indice-arcos.md)
+- [Índice de plantillas individuales de los volúmenes](volumes/main/README.md)
 - [Validador automático de catálogo](tools/check-catalog.mjs)
 
 ## 2. Cronología desde las eras antiguas hasta el cierre publicado
@@ -72,6 +76,10 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 
 ### Volúmenes, arcos y adaptación
 - [Índice de volúmenes y arcos](volumes/00-indice-volumenes-y-arcos.md)
+- [Índice de arcos narrativos](arcs/00-indice-arcos.md)
+- [Matriz de continuidad](continuity/00-matriz-de-continuidad.md)
+- [Volúmenes principales 01–20: plantillas](volumes/00-indice-volumenes-y-arcos.md)
+- [Instrucciones para ampliar volúmenes](volumes/main/README.md)
 
 ## 4. Fichas iniciales disponibles
 
