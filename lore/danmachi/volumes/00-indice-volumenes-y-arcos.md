@@ -21,6 +21,33 @@ Crear una entrada por volumen publicado y registrar:
 
 No se fija aquí un número final de volúmenes: primero hay que comprobar la bibliografía vigente. No inventar un final para una obra que pudiera seguir publicándose.
 
+## Espacios preparados para la serie principal
+
+Los siguientes 20 archivos son **plantillas numeradas**, no una afirmación de que la serie termine en el volumen 20 ni de que todos esos volúmenes estén ya publicados en cualquier edición. Primero se usa esta tanda de espacios y se amplía el índice si la bibliografía verificada contiene más volúmenes.
+
+- [Volumen principal 1 · plantilla pendiente de verificar](main/volume-01.md)
+- [Volumen principal 2 · plantilla pendiente de verificar](main/volume-02.md)
+- [Volumen principal 3 · plantilla pendiente de verificar](main/volume-03.md)
+- [Volumen principal 4 · plantilla pendiente de verificar](main/volume-04.md)
+- [Volumen principal 5 · plantilla pendiente de verificar](main/volume-05.md)
+- [Volumen principal 6 · plantilla pendiente de verificar](main/volume-06.md)
+- [Volumen principal 7 · plantilla pendiente de verificar](main/volume-07.md)
+- [Volumen principal 8 · plantilla pendiente de verificar](main/volume-08.md)
+- [Volumen principal 9 · plantilla pendiente de verificar](main/volume-09.md)
+- [Volumen principal 10 · plantilla pendiente de verificar](main/volume-10.md)
+- [Volumen principal 11 · plantilla pendiente de verificar](main/volume-11.md)
+- [Volumen principal 12 · plantilla pendiente de verificar](main/volume-12.md)
+- [Volumen principal 13 · plantilla pendiente de verificar](main/volume-13.md)
+- [Volumen principal 14 · plantilla pendiente de verificar](main/volume-14.md)
+- [Volumen principal 15 · plantilla pendiente de verificar](main/volume-15.md)
+- [Volumen principal 16 · plantilla pendiente de verificar](main/volume-16.md)
+- [Volumen principal 17 · plantilla pendiente de verificar](main/volume-17.md)
+- [Volumen principal 18 · plantilla pendiente de verificar](main/volume-18.md)
+- [Volumen principal 19 · plantilla pendiente de verificar](main/volume-19.md)
+- [Volumen principal 20 · plantilla pendiente de verificar](main/volume-20.md)
+
+Para cada volumen, registrar título, publicación, edición, eventos, estados de personaje, reglas, misterios, spoilers y localizadores. No cambiar `summary_status: stub` hasta haber cotejado la fuente.
+
 ## Spin-offs y continuidad relacionada
 
 Crear registros separados para:
