@@ -89,6 +89,37 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+    // DanMachi lore retrieval: a single UI query must preserve temporal continuity.
+    await page.locator('.nav-item[data-view="lore"]').click();
+    await page.waitForFunction(() => document.querySelector("#lore-search-status")?.textContent.includes("Leídas"), { timeout: 5000 });
+    await page.locator("#lore-character").selectOption("CHAR-RYUU-LION");
+    await page.locator("#lore-continuity").selectOption("CONT-AR");
+    await page.locator("#lore-period").selectOption("ASTREA_RECORD");
+    await page.locator("#lore-aspect").selectOption("all");
+    await page.locator("#lore-spoiler").selectOption("all");
+    await page.locator("#lore-search-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelectorAll(".lore-result").length > 0, { timeout: 5000 });
+    const ryuAr = await page.locator(".lore-result").evaluateAll(nodes => nodes.map(n => ({ claimId:n.dataset.claimId, entryId:n.dataset.entryId, continuity:n.dataset.continuity, text:n.innerText })));
+    assert.ok(ryuAr.some(item => item.claimId === "DMR-002-CLM-015"));
+    assert.ok(ryuAr.every(item => item.continuity === "CONT-AR"));
+    process.stdout.write("PASS lore UI: Ryu in CONT-AR is retrieved separately.\n");
+    await page.locator("#lore-continuity").selectOption("CONT-ANIME");
+    await page.locator("#lore-period").selectOption("ALL");
+    await page.locator("#lore-search-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelectorAll(".lore-result").length > 0, { timeout: 5000 });
+    const ryuAnime = await page.locator(".lore-result").evaluateAll(nodes => nodes.map(n => ({ claimId:n.dataset.claimId, entryId:n.dataset.entryId, continuity:n.dataset.continuity, text:n.innerText })));
+    assert.ok(ryuAnime.some(item => item.entryId.endsWith("--CONT-ANIME") || item.text.includes("Hostess of Fertility")));
+    assert.ok(ryuAnime.every(item => item.continuity === "CONT-ANIME"));
+    process.stdout.write("PASS lore UI: Ryu in CONT-ANIME is retrieved separately.\n");
+    await page.locator("#lore-character").selectOption("DM-CHAR-AIS");
+    await page.locator("#lore-continuity").selectOption("ALL");
+    await page.locator("#lore-aspect").selectOption("likes");
+    await page.locator("#lore-search-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelector("#lore-search-status")?.textContent.includes("No se encontró evidencia"), { timeout: 5000 });
+    assert.equal(await page.locator(".lore-result").count(), 0);
+    process.stdout.write("PASS lore UI: undocumented Ais likes produce explicit abstention.\n");
+    await page.locator('.nav-item[data-view="atlas"]').click();
+
     const assertSnapshotContains = async (entityId, collection, reason) => {
       const evidence = await page.evaluate(async ({ entityId, collection, reason }) => {
         const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));

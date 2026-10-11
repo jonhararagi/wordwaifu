@@ -1,33 +1,42 @@
-name: DanMachi Lore Integrity
-
+name: DanMachi Lore and Retrieval Integrity
 on:
   push:
-    paths:
-      - "lore/danmachi/**"
-      - ".github/workflows/danmachi-lore-check.yml"
+    branches: [feature/danmachi-lore-poc]
+    paths: ["lore/danmachi/**","src/lore-corpus.js","src/app.js","src/styles.css","index.html","tests/**",".github/workflows/danmachi-lore-check.yml"]
   pull_request:
-    paths:
-      - "lore/danmachi/**"
-      - ".github/workflows/danmachi-lore-check.yml"
+    paths: ["lore/danmachi/**","src/lore-corpus.js","src/app.js","src/styles.css","index.html","tests/**",".github/workflows/danmachi-lore-check.yml"]
   workflow_dispatch:
-
 permissions:
   contents: read
-
 concurrency:
-  group: danmachi-lore-integrity-${{ github.ref }}
+  group: danmachi-lore-integrity-feature-branch
   cancel-in-progress: true
-
 jobs:
-  catalog-integrity:
-    name: Catalog, IDs and Markdown links
+  catalog-and-retrieval:
+    name: Catalog, retrieval and browser smoke
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-      - name: Validate DanMachi lore catalog
+          node-version: "22"
+      - name: Check JavaScript syntax
+        run: |
+          node --check src/app.js
+          node --check src/lore-corpus.js
+          node --check src/project-schema.js
+          node --check src/project-repository.js
+          node --check tests/test_lore_corpus.cjs
+          node --check tests/browser_smoke.cjs
+      - name: Test lore retrieval filters and abstention
+        run: node tests/test_lore_corpus.cjs
+      - name: Test project import validation
+        run: node tests/test_project_schema.cjs
+      - name: Install pinned Playwright
+        run: npm install --no-save --no-package-lock playwright@1.55.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run browser smoke
+        run: node tests/browser_smoke.cjs
+      - name: Validate catalog and links
         run: node lore/danmachi/tools/check-catalog.mjs

@@ -16,7 +16,8 @@
     timeline: ["Cronología", "Revisá los acontecimientos y los cambios de estado de tu mundo."],
     organizations: ["Organizaciones", "Facciones, gremios y grupos que mueven tu universo."],
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
-    commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."]
+    commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
+    lore: ["Consulta de lore", "Busca afirmaciones de DanMachi con filtros por personaje, época y continuidad."]
   };
   const demo = {
     schemaVersion: 1,
@@ -919,9 +920,10 @@
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
+    $("#lore-view").classList.toggle("hidden", activeView !== "lore");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "stories");
+    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "stories" || activeView === "lore");
     renderMap();
     renderDetails();
     renderDirectory();
@@ -1804,6 +1806,81 @@
     }
   }
 
+
+  let loreIndexPromise = null;
+  let lorePanelPrepared = false;
+  async function prepareLoreView() {
+    const status = $("#lore-search-status");
+    status.textContent = "Leyendo las afirmaciones curadas desde el repositorio…";
+    if (!window.WordWaifuLoreCorpus) throw new Error("El módulo de búsqueda no está cargado.");
+    if (!loreIndexPromise) loreIndexPromise = window.WordWaifuLoreCorpus.load("./lore/danmachi/");
+    const index = await loreIndexPromise;
+    if (!lorePanelPrepared) {
+      const select = $("#lore-character"), selected = select.value;
+      select.replaceChildren(new Option("Cualquier personaje", ""));
+      index.characters.forEach(character => select.appendChild(new Option(character.name, character.id)));
+      select.value = selected;
+      lorePanelPrepared = true;
+    }
+    status.textContent = "Leídas " + index.sourceClaimCount + " afirmaciones; " + index.entryCount + " entradas de búsqueda. Búsqueda textual, sin IA; el corpus aún es parcial.";
+    return index;
+  }
+  function appendLoreLink(container, label, href, external) {
+    if (!href) return;
+    let url; try { url = new URL(href, window.location.href); } catch { return; }
+    if (url.protocol !== "https:" && url.protocol !== "http:") return;
+    const link = document.createElement("a"); link.href = url.href; link.textContent = label;
+    if (external) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
+    container.appendChild(link);
+  }
+  async function runLoreSearch(event) {
+    event.preventDefault();
+    const status = $("#lore-search-status"), resultsNode = $("#lore-results"), button = $("#lore-search-form button[type='submit']");
+    resultsNode.replaceChildren(); button.disabled = true;
+    try {
+      const index = await prepareLoreView();
+      const report = window.WordWaifuLoreCorpus.search(index, {
+        query: $("#lore-query").value, characterId: $("#lore-character").value,
+        continuity: $("#lore-continuity").value, period: $("#lore-period").value,
+        aspect: $("#lore-aspect").value, spoiler: $("#lore-spoiler").value, limit: 30
+      });
+      if (!report.results.length) {
+        status.textContent = "No se encontró evidencia en el corpus consultado para esos filtros. Esto no demuestra que el dato no exista en el canon: no inventes una respuesta; busca una fuente o escena que lo documente.";
+        return;
+      }
+      status.textContent = report.totalMatches + " afirmación(es) coincidente(s); mostrando " + report.results.length +
+        ". Se conservan continuidad y nivel de verificación." + (report.truncated ? " Se alcanzó el límite de resultados." : "");
+      report.results.forEach(item => {
+        const card = document.createElement("article"); card.className = "lore-result";
+        card.dataset.claimId = item.claimId; card.dataset.entryId = item.entryId; card.dataset.continuity = item.continuityScopes.join(",");
+        const title = document.createElement("h3"); title.textContent = item.heading || item.claimId;
+        const claim = document.createElement("p"); claim.className = "lore-result-claim"; claim.textContent = item.claim;
+        const meta = document.createElement("p"); meta.className = "lore-result-meta";
+        meta.textContent = ["Personaje: " + (item.characterNames.join(", ") || "general"), "Aspecto: " + item.aspect,
+          "Continuidad: " + item.continuityScopes.join(", "), "Periodo: " + (item.eraOrInterval || item.periodKey || "no determinado"),
+          "Evidencia: " + item.evidenceType, "Verificación: " + item.verificationStatus, "Spoiler: " + item.spoilerLevel].join(" · ");
+        const source = document.createElement("p"); source.className = "lore-result-source";
+        source.textContent = "Fuente: " + (item.sourceTitle || item.sourceIds.join(", ") || "sin título") +
+          (item.sourceLocator ? " · Localizador: " + item.sourceLocator : "");
+        const links = document.createElement("div"); links.className = "lore-result-links";
+        (item.sourceUrls || []).forEach((url, i) => appendLoreLink(links, item.sourceUrls.length > 1 ? "Fuente " + (i + 1) : "Abrir fuente original", url, true));
+        if (item.profilePaths && item.profilePaths[0]) appendLoreLink(links, "Abrir ficha del personaje", "./lore/danmachi/" + item.profilePaths[0], false);
+        card.append(title, claim, meta, source);
+        if (item.confidenceNote) { const note = document.createElement("p"); note.className = "lore-result-note"; note.textContent = "Límite: " + item.confidenceNote; card.appendChild(note); }
+        if (links.childNodes.length) card.appendChild(links);
+        resultsNode.appendChild(card);
+      });
+    } catch (error) {
+      status.textContent = "La consulta no pudo completarse: " + error.message + " Abrí WordWaifu desde GitHub Pages o un servidor HTTP local, no como archivo file://.";
+    } finally { button.disabled = false; }
+  }
+  $("#lore-search-form").addEventListener("submit", event => { void runLoreSearch(event); });
+  $("#lore-clear-button").addEventListener("click", () => {
+    $("#lore-query").value = ""; $("#lore-character").value = ""; $("#lore-continuity").value = "ALL";
+    $("#lore-period").value = "ALL"; $("#lore-aspect").value = "all"; $("#lore-spoiler").value = "all";
+    $("#lore-results").replaceChildren(); void prepareLoreView().catch(() => {});
+  });
+
   function executeCommand(raw) {
     const command = raw.trim();
     const lower = command.toLowerCase();
@@ -1843,7 +1920,10 @@
     log.scrollTop = log.scrollHeight;
   }
 
-  $$(".nav-item").forEach((button) => button.addEventListener("click", () => navigate(button.dataset.view)));
+  $(".nav-item").forEach((button) => button.addEventListener("click", () => {
+    navigate(button.dataset.view);
+    if (button.dataset.view === "lore") void prepareLoreView().catch(() => {});
+  }));
   $$(".map-marker").forEach((marker) => {
     const activate = () => showLocation(marker.dataset.location);
     marker.addEventListener("click", activate);

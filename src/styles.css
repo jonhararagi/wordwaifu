@@ -37,3 +37,29 @@
 .project-trash-manager select{min-height:96px}
 .project-trash-manager .project-manager-actions{justify-content:flex-start;flex-wrap:wrap}
 .project-trash-manager button:disabled{opacity:.45;cursor:not-allowed}
+
+
+/* DanMachi evidence search: compact, source-first results. */
+.lore-view{max-width:1200px;margin:0 auto 24px;display:grid;gap:14px}
+.lore-panel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:20px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(140deg,#15232b,#141b25)}
+.lore-panel-heading h2{margin:4px 0 8px;font-size:21px}
+.lore-panel-heading p:not(.eyebrow){max-width:700px;margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+.lore-mode-pill{flex-shrink:0;padding:7px 9px;border:1px solid var(--line);border-radius:999px;color:var(--teal);font-size:10px}
+.lore-search-form{display:grid;gap:13px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.lore-query-field,.lore-filter-grid label{display:grid;gap:7px;color:var(--muted);font-size:11px}
+.lore-query-field input,.lore-filter-grid select{width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;background:#0f151d;color:var(--text);padding:10px}
+.lore-filter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.lore-search-actions{display:flex;gap:9px;flex-wrap:wrap}
+.lore-search-actions button{min-height:38px}
+.lore-search-status{margin:0;padding:11px 13px;border-left:3px solid var(--teal);background:#121c25;color:var(--muted);font-size:11px;line-height:1.55}
+.lore-results{display:grid;gap:10px}
+.lore-result{display:grid;gap:8px;padding:15px;border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow-wrap:anywhere}
+.lore-result h3{margin:0;font-size:14px;color:var(--text)}
+.lore-result-claim{margin:0;font-size:13px;line-height:1.65}
+.lore-result-meta,.lore-result-source,.lore-result-note{margin:0;color:var(--muted);font-size:10px;line-height:1.65}
+.lore-result-note{padding-top:8px;border-top:1px solid var(--line);color:#d2c19d}
+.lore-result-links{display:flex;gap:12px;flex-wrap:wrap;font-size:11px}
+.lore-result-links a{color:var(--teal);text-decoration:none}
+.lore-result-links a:hover{text-decoration:underline}
+@media(max-width:800px){.lore-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lore-panel-heading{flex-direction:column}}
+@media(max-width:520px){.lore-filter-grid{grid-template-columns:1fr}.lore-panel-heading{padding:15px}.lore-panel-heading h2{font-size:18px}.lore-search-form{padding:12px}}

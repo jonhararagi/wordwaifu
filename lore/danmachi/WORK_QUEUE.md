@@ -146,3 +146,13 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 ## Regla
 
 Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No transformar un resumen escrito desde conocimiento general en canon verificado solo por guardarlo en GitHub.
+
+## DANMACHI-RETRIEVAL-001 · Buscador local de lore
+
+- Estado: implementación en la rama de trabajo; CI por confirmar.
+- El navegador lee directamente los paquetes de investigación curados y catalog.json; no requiere un bot instalado, backend ni índice duplicado.
+- Filtros: personaje, continuidad, periodo, aspecto psicológico/temático y spoiler.
+- Ryu queda dividido en CONT-AR y CONT-ANIME; la inferencia que conecta ambas versiones se muestra como CROSS-CONTINUITY/provisional.
+- La consulta Ais + gustos debe abstenerse cuando no existan afirmaciones de apoyo.
+- Pruebas: casos unitarios y browser smoke en GitHub Actions.
+- Límite: búsqueda textual normalizada sobre los 30 claims actuales. No es IA, no usa RAG y no cubre toda la franquicia.

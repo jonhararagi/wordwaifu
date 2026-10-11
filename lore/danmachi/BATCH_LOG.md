@@ -101,3 +101,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Límite probatorio: páginas de adaptación y sinopsis editoriales; no se consultó el texto íntegro de las novelas ni se inventaron gustos/miedos/voz.
 - Próximas prioridades: localizadores internos de novela; recuperación del corpus con metadatos y citas tras una tarea de implementación autorizada.
 - Veredicto: PARTIAL.
+
+
+## DANMACHI-RETRIEVAL-001 · Primera búsqueda local de evidencia
+
+- Estado: implementación en rama de trabajo; validación por confirmar.
+- Fuente única: los paquetes Markdown DMR-001 y DMR-002 y el catálogo existente; se evitan ficheros de índice redundantes.
+- Interfaz: nueva sección Consulta de lore con filtros de personaje, continuidad, periodo, aspecto y spoiler. Los resultados exhiben texto del claim, ID, fuentes, localizadores, estado de verificación y nota de confianza.
+- Los estados Ryu CONT-AR y CONT-ANIME se recuperan por separado; consultas sin evidencia como Ais + gustos devuelven abstención.
+- Validación planificada: pruebas unitarias de recuperación y browser smoke en Chromium dentro de GitHub Actions.
+- Límite: búsqueda textual con corpus parcial; sin LLM, embeddings ni RAG.
