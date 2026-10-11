@@ -1,0 +1,33 @@
+name: DanMachi Lore Integrity
+
+on:
+  push:
+    paths:
+      - "lore/danmachi/**"
+      - ".github/workflows/danmachi-lore-check.yml"
+  pull_request:
+    paths:
+      - "lore/danmachi/**"
+      - ".github/workflows/danmachi-lore-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: danmachi-lore-integrity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalog-integrity:
+    name: Catalog, IDs and Markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Validate DanMachi lore catalog
+        run: node lore/danmachi/tools/check-catalog.mjs
