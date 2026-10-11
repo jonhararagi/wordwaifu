@@ -2,42 +2,55 @@
 
 ## Propósito
 
-Esta carpeta es una prueba de concepto documental para comprobar si una base de conocimiento pequeña, trazable y separada del canon y de las decisiones del autor permite revisar escenas de DanMachi con menos errores inventados y menos falsas alarmas.
+Base inicial de conocimiento narrativo para comprobar si WordWaifu y una IA pueden ayudar a revisar una historia de DanMachi sin inventar hechos ni confundir el canon con las decisiones de una AU (universo alternativo).
 
-No es una función integrada en WordWaifu. No implementa IA, búsqueda automática ni conexión de GitHub con ChatGPT. En esta fase, los documentos se facilitan manualmente al modelo que realiza la revisión.
+## Estado real
 
-## Estado actual
+- **Estructura y protocolo:** creados.
+- **Lore inicial:** primera tanda redactada a partir de conocimiento general del asistente; aún requiere cotejo contra las fuentes primarias.
+- **Fuentes externas verificadas en esta sesión:** ninguna. Los volúmenes mencionados son pistas de verificación, no citas de página ya comprobadas.
+- **Índices personales del propietario:** todavía no existen en el repositorio; esta base inicial se está creando desde cero.
+- **Código de WordWaifu:** no se modifica.
+- **Revisión automatizada:** no implementada.
+- **Pruebas narrativas:** diseñadas, no ejecutadas.
 
-- Estado: DRAFT / ESTRUCTURA INICIAL.
-- Fuentes canónicas incorporadas: ninguna verificada todavía.
-- Premisa del OC: registrada como propuesta del autor, pendiente de resolver sus ambigüedades.
-- Pruebas: definidas como diseño; todavía no ejecutadas.
-- Código de la aplicación: sin cambios en esta prueba de concepto.
-- Índices personales del propietario: no importados porque aún no se han proporcionado en el repositorio.
+## Contenido
 
-## Archivos
+- \`01-premisa-autor.md\`: acontecimientos deseados y dudas abiertas del OC.
+- \`02-plantilla-registro.md\`: esquema de registros.
+- \`03-protocolo-revision.md\`: reglas de revisión.
+- \`04-banco-pruebas.md\`: cinco clases de pruebas.
+- \`05-fuentes-y-verificacion.md\`: procedencia y comprobación.
+- \`06-registro-decisiones.md\`: decisiones aprobadas por el autor.
+- \`07-prompt-revision.md\`: prompt manual reutilizable.
+- \`canon/00-indice-canon.md\`: índice de hechos iniciales y su estado.
+- \`canon/01-mundo-orario.md\`: mundo y ciudad.
+- \`canon/02-falna-familias.md\`: dioses, Falna y Familias.
+- \`canon/03-dungeon-y-guild.md\`: Dungeon, Guild y registro.
+- \`characters/hestia.md\`, \`characters/loki.md\`, \`characters/eina-tulle.md\`, \`characters/bell-cranel.md\`: fichas centrales.
+- \`familias/hestia-familia.md\`, \`familias/loki-familia.md\`: grupos relevantes.
+- \`timeline/01-alertas-cronologia.md\`: cronología conocida, riesgos e incertidumbres.
+- \`au/01-evaluacion-premisa-oc.md\`: evaluación preliminar de la idea del autor.
 
-- 01-premisa-autor.md: acontecimientos deseados y preguntas pendientes.
-- 02-plantilla-registro.md: campos estándar para fichas de lore y reglas AU.
-- 03-protocolo-revision.md: procedimiento y formato de informe para ChatGPT.
-- 04-banco-pruebas.md: cinco clases de casos para medir resultados.
-- 05-fuentes-y-verificacion.md: reglas de procedencia y verificación.
-- 06-registro-decisiones.md: decisiones del autor que deben persistir.
-- 07-prompt-revision.md: prompt reutilizable para revisiones manuales.
+## Cómo interpretar la confianza
 
-## Regla fundamental
+- **Alta (recuerdo general):** dato ampliamente establecido en la historia, pero la cita exacta sigue pendiente.
+- **Media:** síntesis plausible que necesita comprobarse en el material primario antes de usarla como prueba.
+- **Pendiente:** no utilizar para declarar una contradicción canónica.
+- **Inferencia:** consecuencia lógica derivada de otros datos, no dato textual independiente.
 
-Un dato que no esté respaldado por una fuente incorporada se marca como PENDIENTE_DE_VERIFICAR. Una propuesta de trama tampoco se transforma automáticamente en hecho canónico. Solo el autor puede aprobar que una divergencia se convierta en regla explícita de su AU.
+Las etiquetas de confianza no sustituyen una fuente. Hasta registrar un localizador comprobado, un hallazgo basado en estas fichas no debe presentarse como un dictamen canónico definitivo.
 
-## Flujo manual
+## Flujo manual actual
 
-1. Seleccionar del repositorio las fichas relacionadas con la escena.
-2. Adjuntar las fichas y el borrador al modelo.
-3. Usar el prompt de 07-prompt-revision.md.
-4. Revisar cada hallazgo, especialmente los que no tengan referencia directa.
-5. Registrar en 06-registro-decisiones.md las excepciones que el autor apruebe.
-6. Repetir los casos de prueba después de cambiar el esquema o el prompt.
+1. Leer el índice canónico y la ficha de cronología.
+2. Adjuntar al modelo solo las fichas relevantes más el borrador.
+3. Usar \`07-prompt-revision.md\`.
+4. Exigir la referencia exacta de cualquier contradicción alegada.
+5. Registrar las excepciones de AU aprobadas por el autor.
 
-## Criterio de éxito
+Esta carpeta no se carga automáticamente desde GitHub en cada conversación. Para una revisión manual hay que abrir o proporcionar al modelo los documentos relevantes.
 
-La prueba solo será positiva cuando distinga correctamente hechos respaldados, contradicciones con evidencia, divergencias deliberadas y casos con información insuficiente. Un informe convincente o rápido no es, por sí solo, evidencia de precisión.
+## Próximo trabajo
+
+Cotejar las fichas prioritarias con las novelas y fuentes disponibles, empezando por el volumen 1 y los pasajes que fijan la llegada de Hestia, el encuentro con Bell, el papel de Eina y las normas de la Guild. Después, ampliar personajes y cronología.
