@@ -33,6 +33,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 ### Mapa maestro
 - [Mapa de eras y terminología](timeline/00-mapa-de-eras.md)
 - [Índice maestro de eventos](timeline/03-indice-eventos.md)
+- [Índice de eventos candidatos documentados](events/00-indice-candidatos.md)
 - [Hitos cronológicos pendientes](timeline/04-hitos-pendientes.md)
 - [Reglas para modelar cronología](timeline/02-reglas-de-cronologia.md)
 - [Alertas de cronología conocidas](timeline/01-alertas-cronologia.md)
@@ -82,6 +83,16 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Instrucciones para ampliar volúmenes](volumes/main/README.md)
 
 ## 4. Fichas iniciales disponibles
+
+### Eventos concretos ya preparados
+- [Índice de eventos candidatos](events/00-indice-candidatos.md)
+- [Descenso de las deidades](events/candidates/EVT-DM-DESCENT-001.md)
+- [Zeus/Hera contra el Dragón Negro](events/candidates/EVT-DM-ZH-OEBD-001.md)
+- [Caída/pérdida de posición de Zeus y Hera](events/candidates/EVT-DM-ZH-FALL-001.md)
+- [Llegada de Hestia al mundo inferior](events/candidates/EVT-DM-HESTIA-DESCENT-001.md)
+- [Encuentro de Bell y Hestia](events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md)
+- [Eina asesora a Bell](events/candidates/EVT-DM-EINA-ADVISOR-001.md)
+- [Eventos de la AU del OC](events/00-indice-candidatos.md#línea-alternativa-del-oc-propuestas-de-autor)
 
 - [Hestia](characters/hestia.md)
 - [Loki](characters/loki.md)
