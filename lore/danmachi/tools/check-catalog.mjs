@@ -99,6 +99,12 @@ for (const file of markdownFiles) {
   }
 }
 
+for (const id of reservedIds) {
+  if (frontmatterIds.has(id)) {
+    errors.push(`Reserved candidate ID '${id}' is already used by ${frontmatterIds.get(id)}`);
+  }
+}
+
 for (const item of catalog.records) {
   if (!item.path || !item.id) continue;
   const file = path.resolve(root, item.path);
