@@ -34,3 +34,11 @@ No convertir “Época Dorada” en título canónico aún. Confirmar si el prop
 
 ## Regla de publicación
 No escribir un relato completo de la antigüedad desde teorías de fans. Cada afirmación histórica necesita fuente y etiqueta de conocimiento.
+
+## Hallazgo terminológico de DANMACHI-RESEARCH-001
+
+Se localizó en la cronología oficial la expresión japonesa **オラリオの暗黒期**, empleada para presentar *Astrea Record* y traducida aquí como **Era Oscura de Orario**. La referencia editorial la sitúa aproximadamente siete años antes de que Bell visite Orario.
+
+Este hallazgo **no confirma que “Época Dorada” sea el nombre de una era oficial ni que sea el periodo opuesto o equivalente a esta Era Oscura**. Mantener “Época Dorada” como etiqueta autoral pendiente, sin fusionarla con ERA-00 ni con la franja histórica de *Astrea Record*.
+
+Fuente y localizadores: [paquete DMR-001](../../research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md), afirmaciones DMR-001-CLM-001 y DMR-001-CLM-002.

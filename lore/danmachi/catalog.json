@@ -311,6 +311,43 @@
       ],
       "status": "proposed_author_event",
       "priority": "critical"
+    },
+    {
+      "id": "CHAR-RYUU-LION",
+      "path": "characters/ryuu-lion.md",
+      "type": "character",
+      "tags": [
+        "Ryu Lion",
+        "Ryuu Lion",
+        "Astrea Record",
+        "multi-era"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ASTREA",
+      "path": "characters/astrea.md",
+      "type": "deity_character",
+      "tags": [
+        "Astrea",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ALISE-LOVELACE",
+      "path": "characters/alise-lovelace.md",
+      "type": "character",
+      "tags": [
+        "Alise Lovelace",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -370,11 +407,6 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "CHAR-RYUU-LION",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "CHAR-FREYA",
       "type": "deity_character",
       "status": "candidate_not_created"
@@ -412,16 +444,6 @@
     {
       "id": "CHAR-HERA",
       "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-ASTREA",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-ALISE-LOVELACE",
-      "type": "character",
       "status": "candidate_not_created"
     },
     {
@@ -1172,13 +1194,13 @@
   ],
   "lastStructuredSync": {
     "branch": "feature/danmachi-lore-poc",
-    "source": "GitHub recursive tree listing",
-    "treeSha": "8813efd59e9f309917bcf352f8eb28c0ce0dcd44",
-    "trackedLoreFiles": 104,
-    "records": 26,
-    "reservedIds": 76,
-    "supportingDocuments": 78,
-    "syncNote": "Navigation index updated for temporal identity and continuity model; sourceCommit identifies the inspected parent tree.",
-    "sourceCommit": "19777c0f056382c5d62505283c043e3af3c31106"
+    "source": "Evidence package DMR-001, organized against the parent tree",
+    "treeSha": "ea95097fd795dce1f7d5ca49f3fda197b71187fe",
+    "trackedLoreFiles": 108,
+    "records": 29,
+    "reservedIds": 73,
+    "supportingDocuments": 79,
+    "sourceCommit": "a6c01dcc3bedb0f4127b6f9260435337a9323f05",
+    "syncNote": "Counts describe the target catalog after promoting three reserved character IDs into records. treeSha identifies the parent snapshot used for this atomic update."
   }
 }

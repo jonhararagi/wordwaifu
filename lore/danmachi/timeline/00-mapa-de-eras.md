@@ -20,7 +20,7 @@ La cronología deberá comprobar también si la expresión buscada se refiere a 
 | ERA-03 | Primeras generaciones de héroes y grandes Familias | Héroes, expediciones, Familias influyentes y sucesos históricos | ESQUEMA; falta identificar eventos verificables |
 | ERA-04 | Auge de las Familias Zeus y Hera | Miembros, expediciones, relación con el Dragón Negro y otros acontecimientos atribuidos a esas Familias | ESQUEMA; fuentes pendientes |
 | ERA-05 | Caída o disolución de Zeus y Hera | Causas, fecha relativa, supervivientes, consecuencias para Orario y el mundo | ESQUEMA; no completar por inferencia |
-| ERA-06 | Periodo anterior al inicio de Bell | Familias, eventos de Astrea y otras facciones, llegada de Hestia, movimientos de Loki y Freya | ESQUEMA; múltiples hitos por comprobar |
+| ERA-06 | Periodo anterior al inicio de Bell | Incluye la franja aproximada de *Astrea Record* (Era Oscura de Orario, alrededor de siete años antes de la visita de Bell), además de llegada de Hestia y movimientos de Loki/Freya | PARCIAL: páginas oficiales consultadas; texto íntegro y localizadores internos pendientes |
 | ERA-07 | Inicio de la historia de Bell | Llegada de Bell, registro, primeros encuentros, primeras exploraciones y evolución de las Familias | ESQUEMA; dividir por volumen |
 | ERA-08 | Saga principal, volúmenes posteriores | Un registro por volumen, arco, suceso, ficha de personaje y cambio de estado | INCOMPLETO; rellenado en tandas |
 | ERA-09 | Material paralelo y relatos laterales | Sword Oratoria, Familia Chronicle, Astrea Record, Episode y otros relatos oficiales que aporten continuidad | INCOMPLETO; separar continuidad y cronología |
@@ -43,3 +43,9 @@ No se considerará “completa” mientras:
 - las contradicciones entre fuentes no estén registradas;
 - el material posterior a la publicación más reciente se esté presentando como canon;
 - el final de la obra no esté documentado con evidencia de publicación, si ya existe.
+
+## Actualización documental tras DANMACHI-RESEARCH-001
+
+La etiqueta oficial localizada es **オラリオの暗黒期** (“Era Oscura de Orario”) y está asociada en el portal oficial a *Astrea Record*. Las páginas oficiales sitúan esa historia aproximadamente siete años antes de la visita de Bell a Orario. La base la cataloga dentro de ERA-06 como una franja histórica delimitada por la evidencia actualmente disponible, no como sinónimo de la historia antigua completa.
+
+Las páginas consultadas no identifican “Época Dorada” como traducción equivalente. Tampoco fijan fecha absoluta, duración completa o todos los acontecimientos de esa era. Véanse [ERA-06](eras/06-periodo-previo-a-bell.md) y el [paquete de evidencia](../research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md).

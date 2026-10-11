@@ -29,7 +29,7 @@ Este índice mezcla registros existentes y candidatos para futuras fichas. La co
 | CHAR-LILIRUCA-ARDE | Liliruca Arde | Lili | Hestia Familia | Candidato pendiente |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Candidato pendiente |
 | CHAR-SANJOUNO-HARUHIME | Sanjouno Haruhime | Haruhime | Hestia Familia, Ishtar historia | Candidato pendiente |
-| CHAR-RYUU-LION | Ryuu Lion | Ryuu, Ryu | Hostess of Fertility, Astrea Familia, Hestia Familia | Candidato pendiente; romanización a normalizar |
+| CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia (estado histórico); Hostess of Fertility (perfil de adaptación) | Ficha provisional con estados separados por continuidad |
 | CHAR-FREYA | Freya | Syr como alias/identidad por verificar con cuidado | Freya Familia, Hostess of Fertility | Candidato pendiente; spoiler mayor |
 | CHAR-OTTAR | Ottar | Ottar | Freya Familia | Candidato pendiente |
 | CHAR-HERMES | Hermes | Hermes | Hermes Familia, Bell | Candidato pendiente |
@@ -44,7 +44,7 @@ Este índice mezcla registros existentes y candidatos para futuras fichas. La co
 | CHAR-ZEUS | Zeus | Zeus Familia, historia antigua | Candidato pendiente |
 | CHAR-HERA | Hera | Hera Familia, historia antigua | Candidato pendiente |
 | CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Candidato pendiente |
-| CHAR-ALISE-LOVELACE | Alise Lovelace | Alise | Astrea Familia | Candidato pendiente |
+| CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Astrea Familia; guía/capitana de Ryu en sinopsis editorial | Ficha provisional; estado histórico con fuente web oficial |
 | CHAR-KAGUYA | Kaguya | Kaguya | Astrea Familia | Candidato pendiente |
 | CHAR-LYRA | Lyra | Lyra | Astrea Familia | Candidato pendiente |
 | CHAR-ALFIA | Alfia | Alfia | Historia Zeus/Hera | Candidato pendiente; spoilers |

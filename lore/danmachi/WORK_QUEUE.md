@@ -71,10 +71,12 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [ ] Registrar rumores, datos disputados y supervivientes sin fusionar versiones.
 
 ### BATCH-DM-007 — Pasado de Astrea Familia y Ryuu
-- [ ] Crear fichas de personajes y eventos.
-- [ ] Reconstruir estados y afiliaciones por periodo.
+- [x] Crear fichas iniciales de Ryu, Astrea y Alise a partir de sinopsis oficiales, con alcance y límites explícitos.
+- [x] Registrar para Ryu estados temporales separados por continuidad (Astrea Record frente a perfil de adaptación).
+- [ ] Completar fichas de personajes y eventos con pasajes de los textos íntegros.
+- [ ] Reconstruir estados y afiliaciones por periodo más allá de los datos de sinopsis.
 - [ ] Enlazar relatos paralelos sin duplicar los mismos acontecimientos.
-- [ ] Añadir localizadores comprobables.
+- [ ] Añadir localizadores internos de las novelas; las URLs de sinopsis no bastan para cerrar esta tarea.
 
 ### BATCH-DM-008 — ERA-06: periodo previo a Bell
 - [ ] Completar Hestia, Loki, Freya, Eina y familias relevantes por fecha.

@@ -99,6 +99,9 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Eina Tulle](characters/eina-tulle.md)
 - [Bell Cranel](characters/bell-cranel.md)
 - [Ais Wallenstein](characters/ais-wallenstein.md)
+- [Ryu Lion / Ryuu Lion](characters/ryuu-lion.md) · estados separados entre *Astrea Record* y la adaptación anime.
+- [Astrea](characters/astrea.md) · evidencia histórica limitada a páginas oficiales.
+- [Alise Lovelace](characters/alise-lovelace.md) · estado de capitana de Astrea Familia en sinopsis oficial.
 - [Finn, Riveria y Gareth, registro de grupo provisional](characters/finn-riveria-gareth.md)
 - [Evaluación de la premisa del OC](au/01-evaluacion-premisa-oc.md)
 - [Decisiones que debe resolver el autor](06-registro-decisiones.md)
