@@ -1224,13 +1224,13 @@
   ],
   "lastStructuredSync": {
     "branch": "feature/danmachi-lore-poc",
-    "source": "Evidence package DMR-001, organized against the parent tree",
-    "treeSha": "ea95097fd795dce1f7d5ca49f3fda197b71187fe",
-    "trackedLoreFiles": 108,
-    "records": 29,
-    "reservedIds": 73,
-    "supportingDocuments": 79,
-    "sourceCommit": "a6c01dcc3bedb0f4127b6f9260435337a9323f05",
-    "syncNote": "Counts describe the target catalog after promoting three reserved character IDs into records. treeSha identifies the parent snapshot used for this atomic update."
+    "source": "GitHub recursive tree audit",
+    "treeSha": "19cd2abf885a52e955f672411215bc8173881cf8",
+    "trackedLoreFiles": 112,
+    "records": 32,
+    "reservedIds": 70,
+    "supportingDocuments": 80,
+    "sourceCommit": "7ad54c5e614619da1c00fac8ad27f015bbdb9c5d",
+    "syncNote": "Counts verified against the complete repository tree at sourceCommit. The following index/template correction changes file contents but not the 112 tracked paths."
   }
 }

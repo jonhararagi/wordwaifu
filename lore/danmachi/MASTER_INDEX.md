@@ -99,6 +99,9 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Eina Tulle](characters/eina-tulle.md)
 - [Bell Cranel](characters/bell-cranel.md)
 - [Ais Wallenstein](characters/ais-wallenstein.md)
+- [Finn Deimne](characters/finn-deimne.md) · liderazgo; fuente de adaptación, perfil provisional.
+- [Freya](characters/freya.md) · motivación respecto de Bell y Charm; spoiler mayor.
+- [Ottar](characters/ottar.md) · entrenamiento y lealtad a Freya; perfil provisional.
 - [Ryu Lion / Ryuu Lion](characters/ryuu-lion.md) · estados separados entre *Astrea Record* y la adaptación anime.
 - [Astrea](characters/astrea.md) · evidencia histórica limitada a páginas oficiales.
 - [Alise Lovelace](characters/alise-lovelace.md) · estado de capitana de Astrea Familia en sinopsis oficial.
