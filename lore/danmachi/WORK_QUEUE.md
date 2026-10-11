@@ -4,7 +4,7 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 ## BATCH-DM-001 — Esqueleto cronológico y catálogo
 - Estado: DONE como estructura documental.
-- Resultado: ERA-00 a ERA-10 y ERA-AU; índices por categoría; plantillas; catálogo JSON; validador de integridad.
+- Resultado: ERA-00 a ERA-10 y ERA-AU; índices por categoría; 20 plantillas iniciales de volúmenes; matriz de continuidad, índice de arcos, plantillas narrativas reutilizables; catálogo JSON; validador de integridad. Los stubs no afirman que el volumen 20 sea el último.
 - Evidencia y límites: consultar BATCH_LOG.md. El contenido canónico aún necesita fuentes primarias.
 
 ## BATCH-DM-002 — Verificación prioritaria para la premisa del OC
