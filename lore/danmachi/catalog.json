@@ -635,6 +635,12 @@
       "status": "present"
     },
     {
+      "document_id": "DOC-ARCS-00-INDICE-ARCOS",
+      "path": "arcs/00-indice-arcos.md",
+      "type": "arc_index",
+      "status": "present"
+    },
+    {
       "document_id": "DOC-OC-PREMISE-EVAL",
       "path": "au/01-evaluacion-premisa-oc.md",
       "type": "au_evaluation",
@@ -677,6 +683,12 @@
       "status": "present"
     },
     {
+      "document_id": "DOC-CONTINUITY-00-MATRIZ-DE-CONTINUIDAD",
+      "path": "continuity/00-matriz-de-continuidad.md",
+      "type": "continuity_policy",
+      "status": "present"
+    },
+    {
       "document_id": "FAMILIA-INDEX",
       "path": "familias/00-indice-familias.md",
       "type": "entity_index",
@@ -703,6 +715,12 @@
     {
       "document_id": "TEMPLATE-ARC",
       "path": "templates/registro-arco.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-TEMPLATES-REGISTRO-CAPITULO-ESCENA",
+      "path": "templates/registro-capitulo-escena.md",
       "type": "template",
       "status": "present"
     },
@@ -881,6 +899,12 @@
       "status": "present"
     },
     {
+      "document_id": "DOC-VOLUMES-MAIN-README",
+      "path": "volumes/main/README.md",
+      "type": "volume_index",
+      "status": "present"
+    },
+    {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-01",
       "path": "volumes/main/volume-01.md",
       "type": "volume_stub",
@@ -1000,5 +1024,15 @@
       "type": "volume_stub",
       "status": "present"
     }
-  ]
+  ],
+  "lastStructuredSync": {
+    "branch": "feature/danmachi-lore-poc",
+    "source": "GitHub recursive tree listing",
+    "treeSha": "8ed20d5466837059a747309a99ad0831b246cbb2",
+    "trackedLoreFiles": 92,
+    "records": 15,
+    "reservedIds": 76,
+    "supportingDocuments": 77,
+    "syncNote": "Catalog navigation index regenerated from current repository tree; lore content remains provisional unless source-verified."
+  }
 }
