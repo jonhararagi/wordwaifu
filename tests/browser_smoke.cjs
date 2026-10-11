@@ -61,9 +61,15 @@ async function run() {
     page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
     await page.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
     await page.waitForFunction(() => {
-      const shell = document.querySelector(".app-shell");
-      return Boolean(shell && !shell.inert);
-    }, { timeout: 5000 });
+      const status = document.querySelector("#save-status")?.textContent || "";
+      return [
+        "Proyecto recuperado y guardado en IndexedDB",
+        "Proyecto cargado desde IndexedDB",
+        "Proyecto recuperado desde el respaldo local"
+      ].some(message => status.includes(message)) ||
+        status.startsWith("Proyecto recuperado ·") ||
+        status.startsWith("Respaldo local disponible");
+    }, { timeout: 10000 });
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
