@@ -177,6 +177,140 @@
       ],
       "status": "provisional_inference",
       "priority": "critical"
+    },
+    {
+      "id": "DM-EVENT-CANDIDATES-INDEX",
+      "path": "events/00-indice-candidatos.md",
+      "type": "index",
+      "tags": [
+        "events",
+        "timeline",
+        "AU"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-DESCENT-001",
+      "path": "events/candidates/EVT-DM-DESCENT-001.md",
+      "type": "event",
+      "tags": [
+        "deities",
+        "ancient history"
+      ],
+      "status": "pending_verification",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-ZH-OEBD-001",
+      "path": "events/candidates/EVT-DM-ZH-OEBD-001.md",
+      "type": "event",
+      "tags": [
+        "Zeus Familia",
+        "Hera Familia",
+        "Black Dragon"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-ZH-FALL-001",
+      "path": "events/candidates/EVT-DM-ZH-FALL-001.md",
+      "type": "event",
+      "tags": [
+        "Zeus Familia",
+        "Hera Familia",
+        "history"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-HESTIA-DESCENT-001",
+      "path": "events/candidates/EVT-DM-HESTIA-DESCENT-001.md",
+      "type": "event",
+      "tags": [
+        "Hestia",
+        "timeline"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-BELL-MEETS-HESTIA-001",
+      "path": "events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Hestia",
+        "Familia"
+      ],
+      "status": "pending_verification",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-EINA-ADVISOR-001",
+      "path": "events/candidates/EVT-DM-EINA-ADVISOR-001.md",
+      "type": "event",
+      "tags": [
+        "Eina",
+        "Guild",
+        "Bell"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "AU-EVT-OC-ARRIVAL-001",
+      "path": "events/au/AU-EVT-OC-ARRIVAL-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "arrival",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "critical"
+    },
+    {
+      "id": "AU-EVT-OC-EINA-001",
+      "path": "events/au/AU-EVT-OC-EINA-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "Eina",
+        "Dungeon",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "critical"
+    },
+    {
+      "id": "AU-EVT-OC-LOKI-RECRUITMENT-001",
+      "path": "events/au/AU-EVT-OC-LOKI-RECRUITMENT-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "Loki",
+        "Familia",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "high"
+    },
+    {
+      "id": "AU-EVT-LOKI-NAMES-OC-BELL-001",
+      "path": "events/au/AU-EVT-LOKI-NAMES-OC-BELL-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "Loki",
+        "Bell",
+        "identity",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -1028,11 +1162,11 @@
   "lastStructuredSync": {
     "branch": "feature/danmachi-lore-poc",
     "source": "GitHub recursive tree listing",
-    "treeSha": "8ed20d5466837059a747309a99ad0831b246cbb2",
-    "trackedLoreFiles": 92,
-    "records": 15,
+    "treeSha": "8813efd59e9f309917bcf352f8eb28c0ce0dcd44",
+    "trackedLoreFiles": 103,
+    "records": 26,
     "reservedIds": 76,
     "supportingDocuments": 77,
-    "syncNote": "Catalog navigation index regenerated from current repository tree; lore content remains provisional unless source-verified."
+    "syncNote": "Full navigation index regenerated from repository tree. Content status and source verification are tracked per record."
   }
 }
