@@ -13,7 +13,8 @@
 - Control de identidad: los IDs de fichas existentes se alinearon con los índices principales; candidatos futuros están en reservedIds para evitar crearlos dos veces.
 - Catálogo actual: 15 registros con ficha, 76 IDs candidatos reservados y 52 documentos de apoyo indexados.
 - Integridad estática realizada durante esta tanda: el JSON se pudo parsear; no se detectaron IDs duplicados entre registros reales ni colisión entre IDs reales y reservados; los IDs y rutas de documentos del catálogo fueron comprobados como únicos.
-- Herramienta añadida: tools/check-catalog.mjs, comprobador sin dependencias externas para detectar IDs duplicados, colisiones de rutas, archivos ausentes, discrepancias entre frontmatter y catálogo y enlaces Markdown rotos. El script está guardado pero no se ejecutó contra un checkout local en esta sesión.
+- Herramienta añadida: tools/check-catalog.mjs, comprobador sin dependencias externas para detectar IDs duplicados, colisiones de rutas, archivos ausentes, discrepancias entre frontmatter y catálogo y enlaces Markdown rotos. La ejecución manual en el equipo del propietario no se realizó.
+- **PASS_REAL de GitHub Actions:** [run #38137048288](https://github.com/jonhararagi/wordwaifu/actions/runs/38137048288), commit validado dc677b543ffaf459660c0a906c8271ea3cff54d3; el job “Catalog, IDs and Markdown links” completó en success.
 - Fuentes primarias cotejadas: ninguna en esta tanda.
 - Resultado: ESQUELETO AMPLIO; no significa que toda la cronología o todos los datos canónicos estén completados.
 
