@@ -65,6 +65,7 @@ async function run() {
       return Boolean(shell && !shell.inert);
     }, { timeout: 5000 });
 
+    process.stdout.write("DEBUG app startup errors: " + JSON.stringify({ pageErrors, consoleErrors, saveStatus: await page.locator("#save-status").innerText().catch(() => "missing") }) + "\\n");
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
@@ -84,6 +85,7 @@ async function run() {
         activeProjectId: metadata?.value
       };
     });
+    process.stdout.write("DEBUG repository persistence: " + JSON.stringify(appPersistence) + "\\n");
     assert.equal(appPersistence.projectName, "Las Crónicas de Asteria");
     assert.equal(appPersistence.recordName, appPersistence.projectName, "The app boot must persist the initial project to IndexedDB.");
     assert.equal(appPersistence.activeProjectId, "project-asteria");
