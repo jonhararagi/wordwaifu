@@ -14,7 +14,7 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [ ] Cotejar el papel de Eina, el registro en la Guild y la entrada al Dungeon.
 - [ ] Aclarar qué significa que Loki llame “Bell” al OC y si Bell Cranel existe como entidad separada en la AU.
 - [ ] Registrar decisiones del autor; no aceptar overrides por inferencia.
-- [ ] Ejecutar tools/check-catalog.mjs desde un checkout del repositorio y reparar cualquier fallo que realmente aparezca.
+- [x] Ejecutado por GitHub Actions: [PASS_REAL #38137048288](https://github.com/jonhararagi/wordwaifu/actions/runs/38137048288). La ejecución manual en el equipo local sigue sin realizarse; reparar cualquier fallo futuro que aparezca.
 
 ## Orden de cobertura histórica
 
