@@ -36,7 +36,15 @@ Base estructurada para organizar la historia de DanMachi desde las eras antiguas
 - [Plantilla de regla](templates/registro-regla.md)
 - [Plantilla de lugar](templates/registro-lugar.md)
 - [Plantilla de volumen](templates/registro-volumen.md)
+- [Plantilla de Familia](templates/registro-familia.md)
+- [Plantilla de era](templates/registro-epoca.md)
+- [Plantilla de misterio/revelación](templates/registro-misterio.md)
+- [Plantilla de relación](templates/registro-relacion.md)
+- [Plantilla de monstruo](templates/registro-monstruo.md)
+- [Plantilla de habilidad/equipo](templates/registro-habilidad-equipo.md)
+- [Plantilla de arco](templates/registro-arco.md)
 - [Registro maestro de fuentes](sources/00-registro-fuentes.md)
+- [Validador de catálogo e IDs](tools/check-catalog.mjs)
 
 ## Cronología completa por etapas
 
