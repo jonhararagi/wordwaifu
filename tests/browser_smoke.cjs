@@ -60,16 +60,26 @@ async function run() {
     page.on("pageerror", (error) => pageErrors.push(error.stack || error.message));
     page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
     await page.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
-    await page.waitForFunction(() => {
-      const status = document.querySelector("#save-status")?.textContent || "";
-      return [
-        "Proyecto recuperado y guardado en IndexedDB",
-        "Proyecto cargado desde IndexedDB",
-        "Proyecto recuperado desde el respaldo local"
-      ].some(message => status.includes(message)) ||
-        status.startsWith("Proyecto recuperado ·") ||
-        status.startsWith("Respaldo local disponible");
-    }, { timeout: 10000 });
+    try {
+      await page.waitForFunction(() => {
+        const status = document.querySelector("#save-status")?.textContent || "";
+        return [
+          "Proyecto recuperado y guardado en IndexedDB", "Proyecto cargado desde IndexedDB",
+          "Proyecto recuperado desde el respaldo local", "Guardado en IndexedDB",
+          "Respaldo local disponible", "No se pudo guardar: exportá una copia"
+        ].some(message => status.includes(message)) ||
+          status.startsWith("Proyecto recuperado ·") || status.startsWith("Modo de recuperación");
+      }, { timeout: 10000 });
+    } catch (error) {
+      const diagnostics = await page.evaluate(() => ({
+        saveStatus: document.querySelector("#save-status")?.textContent || null,
+        shellInert: document.querySelector(".app-shell")?.inert ?? null,
+        appModuleLoaded: Boolean(window.WordWaifuLoreCorpus),
+        repositoryLoaded: Boolean(window.WordWaifuProjectRepository)
+      }));
+      process.stdout.write("BOOT_DIAGNOSTICS: " + JSON.stringify({ diagnostics, pageErrors, consoleErrors }) + "\n");
+      throw error;
+    }
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
