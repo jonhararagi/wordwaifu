@@ -2,71 +2,95 @@
 
 ## Propósito
 
-Base inicial de conocimiento narrativo para revisar una historia de DanMachi sin inventar hechos ni confundir el canon con las decisiones de una AU (universo alternativo).
+Base estructurada para organizar la historia de DanMachi desde las eras antiguas hasta el último volumen principal que pueda verificarse, separando canon, fuentes secundarias, interpretaciones y decisiones del autor para una AU.
 
 ## Estado real
 
-- **Estructura y protocolo:** creados.
-- **Lore inicial:** 15 registros y fichas nuevas redactadas desde conocimiento general del asistente; requieren cotejo contra fuentes primarias.
-- **Fuentes externas verificadas en esta sesión:** ninguna. Los volúmenes mencionados son pistas para buscar localizadores, no citas de páginas ya comprobadas.
-- **Índices personales del propietario:** no existen en el repositorio todavía; esta base se está construyendo desde cero.
-- **Código de WordWaifu:** no modificado.
-- **Revisión automatizada:** no implementada.
-- **Pruebas narrativas:** definidas, no ejecutadas.
+- Estructura cronológica, plantillas e índices creados en la rama feature/danmachi-lore-poc.
+- Primera tanda de fichas redactada desde conocimiento general y pendiente de cotejo con las fuentes primarias.
+- Ningún localizador de novela se da por cotejado en esta tanda.
+- Los índices originales del propietario aún no se han importado: la base se está iniciando desde cero.
+- No se modificó el código de WordWaifu.
+- No hay una función de revisión automática integrada.
+- El banco de pruebas está diseñado, pero todavía no se ha ejecutado.
 
-## Estructura del paquete
+## Punto de entrada
 
-### Guía y protocolo
+- [Índice maestro de cobertura](MASTER_INDEX.md)
+- [Catálogo JSON de registros, IDs reservados y documentos](catalog.json)
+- [Control de calidad y duplicados](QUALITY_AND_DEDUP.md)
+- [Cola de trabajo](WORK_QUEUE.md)
+- [Registro de tandas](BATCH_LOG.md)
 
-- \`01-premisa-autor.md\`: idea del OC y ambigüedades abiertas.
-- \`02-plantilla-registro.md\`: campos para fichas y reglas AU.
-- \`03-protocolo-revision.md\`: método de revisión y clasificación de hallazgos.
-- \`04-banco-pruebas.md\`: cinco clases de pruebas de calidad.
-- \`05-fuentes-y-verificacion.md\`: política de evidencia y futuras referencias.
-- \`06-registro-decisiones.md\`: decisiones que el autor aprueba para su AU.
-- \`07-prompt-revision.md\`: prompt de revisión manual reutilizable.
-- \`catalog.json\`: catálogo consultable de fichas, IDs, etiquetas y prioridades.
+## Plantillas y protocolo
 
-### Canon, personajes y cronología
+- [Premisa inicial del OC](01-premisa-autor.md)
+- [Plantilla de registro de lore](02-plantilla-registro.md)
+- [Protocolo de revisión narrativa](03-protocolo-revision.md)
+- [Banco de pruebas](04-banco-pruebas.md)
+- [Fuentes y verificación](05-fuentes-y-verificacion.md)
+- [Registro de decisiones del autor](06-registro-decisiones.md)
+- [Prompt reutilizable de revisión](07-prompt-revision.md)
+- [Plantilla de personaje](templates/registro-personaje.md)
+- [Plantilla de evento](templates/registro-evento.md)
+- [Plantilla de regla](templates/registro-regla.md)
+- [Plantilla de lugar](templates/registro-lugar.md)
+- [Plantilla de volumen](templates/registro-volumen.md)
+- [Registro maestro de fuentes](sources/00-registro-fuentes.md)
 
-- \`canon/00-indice-canon.md\`: índice de afirmaciones iniciales y estado de verificación.
-- \`canon/01-mundo-orario.md\`: mundo y ciudad de Orario.
-- \`canon/02-falna-familias.md\`: deidades, Falna, status y Familias.
-- \`canon/03-dungeon-y-guild.md\`: Dungeon, Guild y la ambigüedad del registro.
-- \`canon/04-aventureros-y-progresion.md\`: desarrollo de aventureros.
-- \`canon/05-monstruos-y-piedras-magicas.md\`: monstruos y recursos.
-- \`characters/hestia.md\`, \`characters/loki.md\`, \`characters/eina-tulle.md\`, \`characters/bell-cranel.md\`, \`characters/ais-wallenstein.md\`: fichas de personajes.
-- \`characters/finn-riveria-gareth.md\`: recordatorio del liderazgo de la Familia Loki.
-- \`familias/hestia-familia.md\`, \`familias/loki-familia.md\`: composición y consecuencias de afiliación.
-- \`timeline/01-alertas-cronologia.md\`: alerta de cronología para la premisa.
-- \`timeline/02-reglas-de-cronologia.md\`: modelo para eventos y presencia temporal.
-- \`au/01-evaluacion-premisa-oc.md\`: primera evaluación de la idea del autor.
+## Cronología completa por etapas
 
-## Cómo interpretar la confianza
+- [Mapa de eras y aclaración de “Época Dorada”](timeline/00-mapa-de-eras.md)
+- [Eventos](timeline/03-indice-eventos.md)
+- [Hitos pendientes](timeline/04-hitos-pendientes.md)
+- [Reglas de modelado temporal](timeline/02-reglas-de-cronologia.md)
+- [Alertas cronológicas actuales](timeline/01-alertas-cronologia.md)
+- [ERA-00: historia antigua y terminología](timeline/eras/00-era-antigua-y-terminologia.md)
+- [ERA-01: descenso de las deidades](timeline/eras/01-descenso-de-deidades.md)
+- [ERA-02: formación de Orario y el Dungeon](timeline/eras/02-formacion-orario-y-dungeon.md)
+- [ERA-03: héroes y grandes Familias](timeline/eras/03-historia-de-heroes-y-familias.md)
+- [ERA-04: Zeus, Hera y Dragón Negro](timeline/eras/04-auge-zeus-hera-y-dragon-negro.md)
+- [ERA-05: caída de Zeus/Hera y consecuencias](timeline/eras/05-caida-zeus-hera-y-consecuencias.md)
+- [ERA-06: periodo previo a Bell](timeline/eras/06-periodo-previo-a-bell.md)
+- [ERA-07: inicio de la historia principal](timeline/eras/07-inicio-de-la-historia-principal.md)
+- [ERA-08: arcos principales posteriores](timeline/eras/08-arcos-posteriores-y-spoilers.md)
+- [ERA-09: spin-offs y continuidades paralelas](timeline/eras/09-relatos-paralelos-y-continuidades.md)
+- [ERA-10: último volumen y final publicado](timeline/eras/10-ultimo-volumen-y-final-publicado.md)
+- [ERA-AU: divergencias del OC](timeline/eras/AU-oc-y-divergencias.md)
 
-- **Alta (recuerdo general):** hecho general ampliamente establecido, pero la cita exacta sigue pendiente.
-- **Media:** síntesis plausible que necesita verificarse en material primario.
-- **Pendiente:** no utilizar para declarar una contradicción canónica.
-- **Inferencia:** consecuencia lógica, no dato textual independiente.
+## Índices por categoría
 
-Las etiquetas de confianza no sustituyen una fuente. Hasta añadir localizadores comprobados, los hallazgos basados en estas fichas no deben presentarse como dictámenes canónicos definitivos.
+- [Canon general](canon/00-indice-canon.md)
+- [Orario](canon/01-mundo-orario.md)
+- [Falna y Familias](canon/02-falna-familias.md)
+- [Dungeon y Guild](canon/03-dungeon-y-guild.md)
+- [Aventureros y progresión](canon/04-aventureros-y-progresion.md)
+- [Monstruos y piedras mágicas](canon/05-monstruos-y-piedras-magicas.md)
+- [Deidades](canon/06-indice-deidades.md)
+- [Misterios y revelaciones](canon/07-indice-misterios-y-revelaciones.md)
+- [Magia, habilidades y equipo](canon/08-indice-magia-habilidades-y-equipo.md)
+- [Monstruos y amenazas](canon/09-indice-monstruos-y-amenazas.md)
+- [Personajes](characters/00-indice-personajes.md)
+- [Familias y organizaciones](familias/00-indice-familias.md)
+- [Lugares](places/00-indice-lugares.md)
+- [Reglas del mundo](rules/00-indice-reglas.md)
+- [Volúmenes y arcos](volumes/00-indice-volumenes-y-arcos.md)
+- [Evaluación preliminar de la premisa](au/01-evaluacion-premisa-oc.md)
 
-## Hallazgo prioritario de la premisa
+## Hallazgo prioritario
 
-El recuerdo provisional de trabajo es que Hestia llevaba alrededor de medio año en el mundo inferior cuando conoce a Bell. Si el OC llega cinco años antes del inicio de la historia principal, encontrar a Hestia ya presente podría generar un conflicto temporal. Esta alerta aún necesita cotejo con el volumen 1 y no obliga al autor a abandonar la idea: puede cambiar el ancla temporal o establecer un override AU explícito.
+La idea de que el OC llegue cinco años antes y ya se encuentre con Hestia podría entrar en conflicto con el recuerdo provisional de la cronología Hestia-Bell. Sigue siendo una alerta por verificar en el volumen 1, no un fallo canónico confirmado. También faltan aclaraciones sobre el registro del Dungeon y el nombre “Bell” que Loki da al OC.
 
-También falta precisar qué significa “entrar al Dungeon sin registrarse” y por qué Loki llama “Bell” al OC. El documento \`au/01-evaluacion-premisa-oc.md\` organiza estas dudas.
+## Estados de verificación
 
-## Flujo manual actual
+- stub: solo existe la estructura.
+- draft: resumen preliminar.
+- source_checked: cotejado con una fuente identificable.
+- cross_checked: comparado con otras fichas y fuentes.
+- approved: listo para usarse en revisiones, con límites documentados.
+- disputed: fuentes en conflicto.
+- stale: necesita revisión.
 
-1. Leer el índice canónico y la alerta temporal.
-2. Adjuntar al modelo solo las fichas relevantes más el borrador.
-3. Usar \`07-prompt-revision.md\`.
-4. Exigir la referencia concreta de cualquier contradicción alegada.
-5. Registrar las excepciones AU que apruebe el autor.
+## Política de cronología
 
-Estos documentos no se cargan automáticamente en todas las conversaciones. Para revisar una escena, hay que abrir o proporcionar al modelo los archivos relevantes.
-
-## Próximo paso
-
-Cotejar la cronología de Hestia y Bell, el papel de Eina y las normas de la Guild con la novela ligera, empezando por el volumen 1. Después ampliar la base con citas verificadas y escenarios de prueba.
+La meta es cubrir desde las eras antiguas hasta el último volumen principal publicado y verificable. “Época Dorada” permanece como denominación provisional hasta localizar su significado en las fuentes. No se asumirá cuántos volúmenes tiene la serie ni se inventará el final si el cierre no está publicado.
