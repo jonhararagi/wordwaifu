@@ -97,7 +97,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Pruebas existentes inspeccionadas: `tests/browser_smoke.cjs` comprueba búsqueda textual de entidades de demo (“Mira”, “Puerto Umbría”) y búsqueda maestra en dos proyectos; no son pruebas del corpus DanMachi y no fueron ejecutadas durante esta tanda.
 - Herramientas examinadas: SillyTavern, LlamaIndex, AnythingLLM y RAGFlow; los resultados y límites figuran en el paquete.
 - No se añadieron dependencias ni se modificó el motor de aplicación.
-- Validador y GitHub Actions de este commit: pendiente de ejecución/verificación.
+- GitHub Actions #38146056803 para el commit sustantivo `58debfdafee9c12869ec95f7d55e550114c6a4d9`: `completed/success`, validador de catálogo y enlaces completado. La corrección documental de seguimiento genera una nueva ejecución y se verificará sobre su SHA exacto.
 - Límite probatorio: páginas de adaptación y sinopsis editoriales; no se consultó el texto íntegro de las novelas ni se inventaron gustos/miedos/voz.
 - Próximas prioridades: localizadores internos de novela; recuperación del corpus con metadatos y citas tras una tarea de implementación autorizada.
 - Veredicto: PARTIAL.
