@@ -4,8 +4,13 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 ## BATCH-DM-001 — Esqueleto cronológico y catálogo
 - Estado: DONE como estructura documental.
-- Resultado: ERA-00 a ERA-10 y ERA-AU; índices por categoría; 20 plantillas iniciales de volúmenes; matriz de continuidad, índice de arcos, plantillas narrativas reutilizables; catálogo JSON; validador de integridad. Los stubs no afirman que el volumen 20 sea el último.
+- Resultado: ERA-00 a ERA-10 y ERA-AU; índices por categoría; 20 plantillas iniciales de volúmenes; matriz de continuidad, índice de arcos, plantillas narrativas reutilizables; 6 eventos de canon candidatos y 4 eventos AU propuestos; catálogo JSON; validador de integridad. Los stubs no afirman que el volumen 20 sea el último.
 - Evidencia y límites: consultar BATCH_LOG.md. El contenido canónico aún necesita fuentes primarias.
+
+## Estado provisional de eventos candidatos
+- Fichas creadas: descenso de las deidades, expedición de Zeus/Hera contra el Dragón Negro, caída/pérdida de posición de esas Familias, llegada de Hestia, encuentro Bell-Hestia y Eina como asesora.
+- Eventos AU propuestos: llegada del OC, interacción con Eina, reclutamiento por Loki y Loki lo llama “Bell”.
+- Todos los eventos canónicos candidatos están pendientes de cotejo. Los eventos AU esperan aclaración/decisión expresa.
 
 ## BATCH-DM-002 — Verificación prioritaria para la premisa del OC
 - Estado: pendiente.
