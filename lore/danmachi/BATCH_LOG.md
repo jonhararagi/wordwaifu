@@ -28,6 +28,26 @@
 - [ ] Registrar decisiones expresas del autor, distinguiendo propuesta de override AU aceptado.
 - [ ] Verificar el último volumen principal publicado cuando se aborde ERA-10.
 
+## DANMACHI-RESEARCH-001 · Era Oscura de Orario y personajes multiepoca
+
+- Fecha: 2026-10-11
+- Estado: partial; source_checked solo para declaraciones explícitas en páginas oficiales web.
+- ID interno: DANMACHI-RESEARCH-001. La cadena BATCH-DM-003 del archivo se mantiene por instrucción; la cola ya reserva BATCH-DM-003 para ERA-00.
+- Fuentes: cronología oficial, anuncio oficial de edición novelada, páginas GA Bunko de los volúmenes 1–3 y perfil oficial de personajes de la adaptación.
+- Localizadores: bloques de sinopsis; «約七年前», «オラリオの暗黒期», «死の七日間» y nombres japoneses.
+- Paquete creado: `research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md`.
+- Afirmaciones registradas: DMR-001-CLM-001, DMR-001-CLM-002, DMR-001-CLM-003, DMR-001-CLM-004, DMR-001-CLM-005, DMR-001-CLM-006, DMR-001-CLM-007, DMR-001-CLM-008, DMR-001-CLM-009, DMR-001-CLM-010.
+- Fuentes añadidas: DMR-001-SRC-001, DMR-001-SRC-002, DMR-001-SRC-003, DMR-001-SRC-004, DMR-001-SRC-005, DMR-001-SRC-006.
+- Fichas y eventos canónicos modificados: ninguno.
+- Índice maestro: enlace al paquete añadido.
+- Catálogo: documento agregado para navegación.
+- Cola: se precisó el término oficial y se añadió la tarea de seguimiento; no se reasignó BATCH-DM-003.
+- Diferencias directas detectadas: ninguna; se distingue la Era Oscura de Orario de «Época Dorada» y de la historia antigua en general.
+- Pendientes: lectura íntegra de novelas, localizadores internos, fechas absolutas/duración completa, secuencia Zeus/Hera, cronología Hestia/Bell, estados posteriores de Astrea/Alise y decisiones AU.
+- Validador y Actions: resultado pendiente tras el commit exacto.
+- Próxima tanda: extraer eventos atómicos de *Astrea Record* 1–3 y luego investigar Hestia/Bell por separado.
+- Veredicto: PARTIAL.
+
 ## Plantilla para próximas tandas
 
 ### BATCH-DM-NNN · [alcance]

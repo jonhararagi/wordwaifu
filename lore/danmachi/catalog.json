@@ -1163,6 +1163,11 @@
       "path": "characters/01-identidad-y-variantes-temporales.md",
       "type": "character_continuity_model",
       "status": "present"
+    },
+    {
+      "path": "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
+      "type": "research_package",
+      "status": "present"
     }
   ],
   "lastStructuredSync": {

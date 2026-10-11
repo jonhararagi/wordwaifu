@@ -105,6 +105,10 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Prompt de revisión manual](07-prompt-revision.md)
 - [Banco de pruebas](04-banco-pruebas.md)
 
+## 4.1 Paquetes de investigación
+
+- [DANMACHI-RESEARCH-001 · Era Oscura de Orario y personajes multiepoca](research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md)
+
 ## 5. Prioridades de verificación
 
 1. Aclarar qué fuente/periodo designa el autor con “Época Dorada”.

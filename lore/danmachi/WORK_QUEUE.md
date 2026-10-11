@@ -13,7 +13,7 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [x] La historia principal/canónica posterior está muy cambiada respecto de la original.
 - [ ] Precisar si “conoce” significa encuentro, ingreso formal a la Familia o ambas cosas.
 - [ ] Identificar integrantes, ancla temporal, punto de divergencia y consecuencias para el estado posterior de los personajes.
-- [ ] Confirmar qué periodo oficial corresponde a “Era Oscura”; mantener la etiqueta como provisional hasta cotejo.
+- [x] Confirmada una equivalencia oficial limitada: «オラリオの暗黒期» (Era Oscura de Orario) en *Astrea Record*, aproximadamente siete años antes de la visita de Bell a Orario. No equivale automáticamente a toda la historia antigua ni a «Época Dorada».
 - [x] Incorporar el modelo de identidad estable + estados por época y continuidad.
 
 ## Estado provisional de eventos candidatos
@@ -29,6 +29,20 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [ ] Aclarar qué significa que Loki llame “Bell” al OC y si Bell Cranel existe como entidad separada en la AU.
 - [ ] Registrar decisiones del autor; no aceptar overrides por inferencia.
 - [x] Ejecutado por GitHub Actions: [PASS_REAL #38137048288](https://github.com/jonhararagi/wordwaifu/actions/runs/38137048288). La ejecución manual en el equipo local sigue sin realizarse; reparar cualquier fallo futuro que aparezca.
+
+## DANMACHI-RESEARCH-001 · Investigación documental de la Era Oscura
+
+- Estado: PARTIAL; fuentes oficiales web cotejadas, textos completos de los volúmenes 1–3 pendientes.
+- Paquete: [BATCH-DM-003-era-oscura-y-personajes-multiepoca.md](research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md).
+- [x] Verificar la denominación «Era Oscura de Orario» (`オラリオの暗黒期`).
+- [x] Registrar la ancla temporal aproximada de siete años antes de la visita de Bell a Orario.
+- [x] Recopilar la información editorial oficial sobre Astrea Familia, Ryu, Alise y Evilus.
+- [x] Distinguir el evento original de DanMemo y la trilogía novelada.
+- [ ] Consultar directamente los volúmenes 1–3 y guardar localizadores internos.
+- [ ] Verificar estados posteriores de Ryu, Astrea y Alise mediante fuente de continuidad adecuada.
+- [ ] Investigar por separado la cronología de Hestia/Bell y el orden de eventos de Zeus/Hera.
+- [ ] Mantener sin resolver el roster del OC y el punto de divergencia hasta decisión expresa del autor.
+- Nota: el nombre de archivo solicitado contiene BATCH-DM-003, pero la clave de cola ya está reservada a ERA-00. Se usa DANMACHI-RESEARCH-001 como ID interno para evitar colisiones.
 
 ## Orden de cobertura histórica
 
