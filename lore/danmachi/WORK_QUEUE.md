@@ -7,6 +7,15 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - Resultado: ERA-00 a ERA-10 y ERA-AU; índices por categoría; 20 plantillas iniciales de volúmenes; matriz de continuidad, índice de arcos, plantillas narrativas reutilizables; 6 eventos de canon candidatos y 4 eventos AU propuestos; catálogo JSON; validador de integridad. Los stubs no afirman que el volumen 20 sea el último.
 - Evidencia y límites: consultar BATCH_LOG.md. El contenido canónico aún necesita fuentes primarias.
 
+## Premisa narrativa autoral incorporada
+
+- [x] Durante la época que el autor denomina “Era Oscura”, el OC conoce a su Familia.
+- [x] La historia principal/canónica posterior está muy cambiada respecto de la original.
+- [ ] Precisar si “conoce” significa encuentro, ingreso formal a la Familia o ambas cosas.
+- [ ] Identificar integrantes, ancla temporal, punto de divergencia y consecuencias para el estado posterior de los personajes.
+- [ ] Confirmar qué periodo oficial corresponde a “Era Oscura”; mantener la etiqueta como provisional hasta cotejo.
+- [x] Incorporar el modelo de identidad estable + estados por época y continuidad.
+
 ## Estado provisional de eventos candidatos
 - Fichas creadas: descenso de las deidades, expedición de Zeus/Hera contra el Dragón Negro, caída/pérdida de posición de esas Familias, llegada de Hestia, encuentro Bell-Hestia y Eina como asesora.
 - Eventos AU propuestos: llegada del OC, interacción con Eina, reclutamiento por Loki y Loki lo llama “Bell”.

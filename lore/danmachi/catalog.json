@@ -1157,16 +1157,23 @@
       "path": "volumes/main/volume-20.md",
       "type": "volume_stub",
       "status": "present"
+    },
+    {
+      "document_id": "DOC-CHARACTER-TEMPORAL-VARIANTS",
+      "path": "characters/01-identidad-y-variantes-temporales.md",
+      "type": "character_continuity_model",
+      "status": "present"
     }
   ],
   "lastStructuredSync": {
     "branch": "feature/danmachi-lore-poc",
     "source": "GitHub recursive tree listing",
     "treeSha": "8813efd59e9f309917bcf352f8eb28c0ce0dcd44",
-    "trackedLoreFiles": 103,
+    "trackedLoreFiles": 104,
     "records": 26,
     "reservedIds": 76,
-    "supportingDocuments": 77,
-    "syncNote": "Full navigation index regenerated from repository tree. Content status and source verification are tracked per record."
+    "supportingDocuments": 78,
+    "syncNote": "Navigation index updated for temporal identity and continuity model; sourceCommit identifies the inspected parent tree.",
+    "sourceCommit": "19777c0f056382c5d62505283c043e3af3c31106"
   }
 }

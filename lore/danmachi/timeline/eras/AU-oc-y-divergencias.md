@@ -36,3 +36,13 @@ El canon original se mantiene como capa de referencia. Una decisión AU explíci
 
 ## Regla
 No codificar una divergencia como aceptada hasta que el autor la confirme explícitamente. Una sugerencia de la IA no es una decisión del autor.
+
+## Aclaración temporal aportada por el autor
+
+- Premisa: durante la época que el autor denomina “Era Oscura”, el OC conoce a su Familia.
+- Premisa: la historia principal/canónica posterior queda muy modificada respecto de la versión original.
+- Pendiente: aclarar si “conoce a su Familia” significa primer encuentro, ingreso formal o ambas cosas; identificar integrantes, ancla temporal, punto de divergencia y consecuencias.
+- Regla: identidad estable, estados separados por época y continuidad; nunca clonar automáticamente un personaje ni trasladar conocimientos futuros al pasado.
+- Estado: dirección narrativa autoral recibida; cronología precisa y detalles todavía pendientes.
+
+Consultar el [modelo de identidad y variantes temporales](../../characters/01-identidad-y-variantes-temporales.md).

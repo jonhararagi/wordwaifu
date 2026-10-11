@@ -43,3 +43,11 @@ Toda ficha importante debe conservar:
 ## Política de spoilers
 
 El canon puede contener revelaciones que un personaje aún no conoce. Cada registro debe distinguir la información disponible al lector de la información dentro del conocimiento del personaje, y marcar spoilers antes de exportar un paquete para revisar un capítulo temprano.
+
+## Eje independiente: época frente a continuidad
+
+Esta matriz selecciona la **línea narrativa**; no sustituye el mapa de eras. La época selecciona cuándo ocurre un hecho. “Era Oscura” puede ser la época de una escena AU, mientras que CONT-MAIN-LN identifica el alcance de un hecho de la novela principal. No tratar una época como continuidad ni asumir que cambiar de época significa cambiar de universo.
+
+Cuando una persona aparezca en más de una época, reutilizar su ID de identidad si es la misma persona y registrar estados/relaciones por intervalo y continuidad. Mantener separados el conocimiento del lector y el conocimiento del personaje. La AU no sustituye el estado canónico. No crear una ficha duplicada solo porque la historia alternativa ha cambiado su pasado.
+
+Ver el [modelo de identidad y variantes temporales](../characters/01-identidad-y-variantes-temporales.md).

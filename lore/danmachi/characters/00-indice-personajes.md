@@ -2,6 +2,10 @@
 
 ## Convenciones
 
+**No usar una ficha plana para todas las épocas.** Cada persona conserva una identidad estable; apariciones, afiliaciones, relaciones y conocimiento se registran por época y línea de continuidad. Una variante AU nunca reemplaza el registro canónico. Ver [modelo de identidad y variantes temporales](01-identidad-y-variantes-temporales.md).
+
+“Era Oscura” es una etiqueta temporal, no una continuidad por sí sola. No crear duplicados porque cambie la época o porque la AU altere la historia.
+
 Este índice mezcla registros existentes y candidatos para futuras fichas. La columna de ID indica si el registro ya existe o si es solo una propuesta. No crear una ficha nueva si el ID canónico ya está asignado.
 
 ## Personajes centrales
