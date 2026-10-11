@@ -48,3 +48,19 @@
 ## Regla
 
 Dos escenas que describen el mismo acontecimiento deben enlazarse a un solo ID canónico con varias fuentes, no convertirse en eventos duplicados. Si las versiones difieren materialmente, crear registros relacionados con una nota de discrepancia, sin borrar las fuentes originales.
+
+## Eventos candidatos ya registrados
+
+- [Índice de eventos candidatos](../events/00-indice-candidatos.md)
+- Descenso de las deidades: `EVT-DM-DESCENT-001`.
+- Zeus/Hera y Dragón Negro: `EVT-DM-ZH-OEBD-001`.
+- Caída/pérdida de posición de Zeus y Hera: `EVT-DM-ZH-FALL-001`.
+- Llegada de Hestia al mundo inferior: `EVT-DM-HESTIA-DESCENT-001`.
+- Primer encuentro Bell–Hestia: `EVT-DM-BELL-MEETS-HESTIA-001`.
+- Eina como asesora de Bell: `EVT-DM-EINA-ADVISOR-001`.
+- Llegada del OC a Orario: `AU-EVT-OC-ARRIVAL-001` (propuesta del autor).
+- Interacción del OC con Eina: `AU-EVT-OC-EINA-001` (propuesta del autor).
+- Reclutamiento del OC por Loki: `AU-EVT-OC-LOKI-RECRUITMENT-001` (propuesta del autor).
+- Loki llama “Bell” al OC: `AU-EVT-LOKI-NAMES-OC-BELL-001` (propuesta del autor).
+
+Estos registros facilitan la siguiente tanda, pero las seis entradas de canon siguen pendientes de cotejo y las cuatro entradas AU requieren decisión expresa del autor.
