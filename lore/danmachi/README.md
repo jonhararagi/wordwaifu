@@ -43,7 +43,11 @@ Base estructurada para organizar la historia de DanMachi desde las eras antiguas
 - [Plantilla de monstruo](templates/registro-monstruo.md)
 - [Plantilla de habilidad/equipo](templates/registro-habilidad-equipo.md)
 - [Plantilla de arco](templates/registro-arco.md)
+- [Plantilla de capítulo/escena](templates/registro-capitulo-escena.md)
 - [Registro maestro de fuentes](sources/00-registro-fuentes.md)
+- [Matriz de continuidad](continuity/00-matriz-de-continuidad.md)
+- [Índice de arcos](arcs/00-indice-arcos.md)
+- [Plantillas individuales para los volúmenes principales 01–20](volumes/main/README.md)
 - [Validador de catálogo e IDs](tools/check-catalog.mjs)
 
 ## Cronología completa por etapas
