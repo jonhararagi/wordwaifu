@@ -1,28 +1,32 @@
 # Índice de deidades y entidades divinas
 
-Este es un índice de búsqueda inicial, no una lista exhaustiva ni una cronología completa. El nombre y papel de cada deidad deben cotejarse con la fuente y el periodo específicos.
+Este índice apunta a las fichas de personaje o propone futuros registros. No crear un segundo registro biográfico para un personaje solo porque también sea una deidad: su identidad se mantiene en una única ficha, mientras que su papel divino es una categoría de datos.
 
-| ID sugerido | Nombre | Familias/temas para localizar | Estado |
+| ID de personaje | Nombre | Familias/temas para localizar | Estado |
 |---|---|---|---|
-| GOD-HESTIA | Hestia | Hestia Familia, Bell | Ficha inicial |
-| GOD-LOKI | Loki | Loki Familia | Ficha inicial |
-| GOD-FREYA | Freya | Freya Familia, Bell | Pendiente |
-| GOD-ZEUS | Zeus | Zeus Familia, héroes antiguos | Pendiente |
-| GOD-HERA | Hera | Hera Familia, historia antigua | Pendiente |
-| GOD-OURANOS | Ouranos | Guild, Dungeon, Fels | Pendiente |
-| GOD-HERMES | Hermes | Hermes Familia, Bell | Pendiente |
-| GOD-HEPHAISTOS | Hephaistos | Herrería y equipo | Pendiente |
-| GOD-MIACH | Miach | Medicina, Naaza | Pendiente |
-| GOD-TAKEMIKAZUCHI | Takemikazuchi | Familia de Mikoto | Pendiente |
-| GOD-SOMA | Soma | Soma Familia, Liliruca | Pendiente |
-| GOD-DIAN-CECHT | Dian Cecht | Curación | Pendiente |
-| GOD-GANESHA | Ganesha | Ganesha Familia, ciudad | Pendiente |
-| GOD-DEMETER | Demeter | Cultivo y personajes relacionados | Pendiente |
-| GOD-ISHTAR | Ishtar | Ishtar Familia y su arco | Pendiente |
-| GOD-APOLLO | Apollo | Apollo Familia y su arco | Pendiente |
-| GOD-ASTREA | Astrea | Astrea Familia, Ryuu | Pendiente |
-| GOD-ARTEMIS | Artemis | Material complementario; continuidad por verificar | Pendiente |
+| DM-CHAR-HESTIA | Hestia | Hestia Familia, Bell | Ficha inicial existente |
+| DM-CHAR-LOKI | Loki | Loki Familia | Ficha inicial existente |
+| CHAR-FREYA | Freya | Freya Familia; Syr como alias/identidad por verificar | Candidato pendiente |
+| CHAR-ZEUS | Zeus | Zeus Familia, historia antigua | Candidato pendiente |
+| CHAR-HERA | Hera | Hera Familia, historia antigua | Candidato pendiente |
+| CHAR-OURANOS | Ouranos | Guild, Dungeon, Fels | Candidato pendiente |
+| CHAR-HERMES | Hermes | Hermes Familia, Bell | Candidato pendiente |
+| CHAR-HEPHAISTOS | Hephaistos | Herrería y equipo | Candidato pendiente |
+| CHAR-MIACH | Miach | Medicina y Naaza | Candidato pendiente |
+| CHAR-TAKEMIKAZUCHI | Takemikazuchi | Familia de Mikoto | Candidato pendiente |
+| CHAR-SOMA | Soma | Soma Familia, Liliruca | Candidato pendiente |
+| CHAR-DIAN-CECHT | Dian Cecht | Curación | Candidato pendiente |
+| CHAR-GANESHA | Ganesha | Ganesha Familia, ciudad | Candidato pendiente |
+| CHAR-DEMETER | Demeter | Agricultura y personajes relacionados | Candidato pendiente |
+| CHAR-ISHTAR | Ishtar | Ishtar Familia y su arco | Candidato pendiente |
+| CHAR-APOLLO | Apollo | Apollo Familia y su arco | Candidato pendiente |
+| CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Candidato pendiente |
+| CHAR-ARTEMIS | Artemis | Material complementario; continuidad por verificar | Candidato pendiente |
 
-## Por cada deidad
+## Datos por recopilar
 
-Registrar identidad, origen mitológico solo si la obra lo expresa, personalidad en la adaptación correspondiente, Familia y miembros por periodo, relaciones con otras deidades, reglas que declara, eventos y fuente. No convertir información de mitología real en un hecho del canon de DanMachi sin evidencia textual.
+Nombre en la edición, romanizaciones, afiliación/Familia por periodo, fecha de llegada si se conoce, relaciones con otras deidades, declaraciones sobre las reglas, eventos, conocimiento, fuentes y continuidad.
+
+## Precaución
+
+No convertir información de la mitología real en canon de DanMachi sin evidencia textual. La lista no es exhaustiva: las deidades adicionales se incorporarán al encontrarse en las fuentes.
