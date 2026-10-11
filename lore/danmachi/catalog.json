@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "universeId": "danmachi",
+  "title": "DanMachi Lore PoC",
+  "status": "provisional",
+  "note": "Catalog of starter files. Not all lore facts have been verified against primary sources. Do not treat provisional records as decisive evidence.",
+  "records": [
+    {"id":"DM-CANON-INDEX-001","path":"canon/00-indice-canon.md","type":"index","tags":["index","canon"],"verification":"provisional","priority":"high"},
+    {"id":"DM-WORLD-001","path":"canon/01-mundo-orario.md","type":"setting","tags":["Orario","world","city"],"verification":"source_locator_pending","priority":"normal"},
+    {"id":"DM-FALNA-001","path":"canon/02-falna-familias.md","type":"world_rule","tags":["Falna","Familia","deities"],"verification":"source_locator_pending","priority":"normal"},
+    {"id":"DM-GUILD-001","path":"canon/03-dungeon-y-guild.md","type":"institution_and_location","tags":["Dungeon","Guild","registration"],"verification":"source_locator_pending","priority":"high"},
+    {"id":"DM-ADVENTURERS-001","path":"canon/04-aventureros-y-progresion.md","type":"world_rule","tags":["adventurers","status","levels"],"verification":"source_locator_pending","priority":"normal"},
+    {"id":"DM-MONSTERS-001","path":"canon/05-monstruos-y-piedras-magicas.md","type":"world_rule","tags":["monsters","magic stones","Dungeon"],"verification":"source_locator_pending","priority":"normal"},
+    {"id":"DM-CHAR-HESTIA","path":"characters/hestia.md","type":"character","tags":["Hestia","timeline"],"verification":"source_locator_pending","priority":"critical"},
+    {"id":"DM-CHAR-LOKI","path":"characters/loki.md","type":"character","tags":["Loki","Familia Loki"],"verification":"source_locator_pending","priority":"high"},
+    {"id":"DM-CHAR-EINA","path":"characters/eina-tulle.md","type":"character","tags":["Eina","Guild"],"verification":"source_locator_pending","priority":"high"},
+    {"id":"DM-CHAR-BELL","path":"characters/bell-cranel.md","type":"character","tags":["Bell","identity"],"verification":"source_locator_pending","priority":"high"},
+    {"id":"DM-CHAR-AIS","path":"characters/ais-wallenstein.md","type":"character","tags":["Ais","Familia Loki"],"verification":"source_locator_pending","priority":"normal"},
+    {"id":"DM-CHAR-LOKI-LEADERS","path":"characters/finn-riveria-gareth.md","type":"character_group","tags":["Finn","Riveria","Gareth"],"verification":"source_locator_pending","priority":"normal"},
+    {"id":"DM-FAM-HESTIA","path":"familias/hestia-familia.md","type":"familia","tags":["Hestia","Bell"],"verification":"source_locator_pending","priority":"high"},
+    {"id":"DM-FAM-LOKI","path":"familias/loki-familia.md","type":"familia","tags":["Loki","roster"],"verification":"source_locator_pending","priority":"high"},
+    {"id":"DM-TIMELINE-ALERTS","path":"timeline/01-alertas-cronologia.md","type":"chronology","tags":["timeline","Hestia","Bell","OC"],"verification":"provisional_inference","priority":"critical"}
+  ]
+}
