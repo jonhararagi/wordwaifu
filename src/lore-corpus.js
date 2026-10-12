@@ -195,14 +195,24 @@
     const claims = documents.flatMap(doc => parseSource(doc.content, doc.path)).flatMap(splitContinuityClaims)
       .map(claim => ({ ...claim, aspects: getAspects(claim), periodKey: getPeriod(claim) }));
     const usedIds = new Set(claims.flatMap(claim => claim.characterIds));
-    const characters = (catalog.records || [])
+    const catalogCharacters = (catalog.records || [])
       .filter(record => ["character", "deity_character"].includes(record.type) && usedIds.has(record.id))
       .map(record => {
         const tags = record.tags || [];
         const name = tags.find(tag => typeof tag === "string" && !/^spoiler/i.test(tag)) || record.id;
         const aliases = unique([name, ...tags.filter(tag => !/familia|multi-era|motivation|leadership|training|loyalty|spoiler|deity|historical state|timeline|provisional/i.test(tag))]);
         return { id: record.id, name, aliases, profilePath: record.path };
-      }).sort((a, b) => a.name.localeCompare(b.name, "es"));
+      });
+    // Official adaptation references extend discoverability without pretending to be
+    // fully researched canonical dossier files. Each entry must have source-backed claims.
+    const knownCharacterIds = new Set(catalogCharacters.map(character => character.id));
+    const officialRoster = typeof globalThis !== "undefined" && globalThis.WordWaifuOfficialCharacterRoster
+      ? globalThis.WordWaifuOfficialCharacterRoster.list() : [];
+    const externalCharacters = officialRoster
+      .filter(record => usedIds.has(record.id) && !knownCharacterIds.has(record.id))
+      .map(record => ({ id: record.id, name: record.name, aliases: unique([record.name, ...(record.aliases || [])]) }));
+    const characters = [...catalogCharacters, ...externalCharacters]
+      .sort((a, b) => a.name.localeCompare(b.name, "es"));
     const profileDetails = Object.create(null);
     (profileDocuments || []).forEach(document => {
       const parsed = parseCharacterProfile(document.content, document.path);
@@ -215,7 +225,7 @@
   }
   async function load(basePath) {
     const base = basePath || "./lore/danmachi/";
-    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md"];
+    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md"];
     const responses = await Promise.all(paths.map(path => fetch(base + path, { cache: "no-cache" })));
     for (let i = 0; i < responses.length; i++) if (!responses[i].ok) throw new Error("No se pudo cargar " + paths[i] + " (HTTP " + responses[i].status + ").");
     const catalog = await responses[0].json();
