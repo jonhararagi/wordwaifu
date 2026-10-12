@@ -31,14 +31,27 @@
   }
 
   async function readAll() {
+    let indexedRecords = [];
     try {
       const db = await openDatabase();
-      return await new Promise((resolve, reject) => {
+      indexedRecords = await new Promise((resolve, reject) => {
         const request = db.transaction(STORE, "readonly").objectStore(STORE).getAll();
         request.onsuccess = () => resolve(request.result || []);
-        request.onerror = () => reject(request.error);
+        request.onerror = () => reject(request.error || new Error("No se pudieron leer los recursos de IndexedDB."));
       });
-    } catch (_) { return Object.values(fallbackRead()); }
+    } catch (_) {
+      // If IndexedDB cannot be opened or read, localStorage is the available store.
+      return Object.values(fallbackRead());
+    }
+
+    // A failed IndexedDB write can be safely stored in localStorage even while the
+    // database remains readable. Merge both stores so the gallery does not hide
+    // successful fallback saves; IndexedDB wins when both contain the same key.
+    const records = new Map(indexedRecords.map(record => [record.key, record]));
+    for (const record of Object.values(fallbackRead())) {
+      if (record && record.key && !records.has(record.key)) records.set(record.key, record);
+    }
+    return Array.from(records.values());
   }
 
   async function readOne(key) {
