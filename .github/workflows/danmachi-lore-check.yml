@@ -10,7 +10,7 @@ permissions:
   contents: read
 concurrency:
   group: danmachi-lore-integrity-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   catalog-and-retrieval:
     name: Catalog, retrieval and browser smoke
