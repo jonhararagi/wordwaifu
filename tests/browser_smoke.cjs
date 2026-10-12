@@ -2505,12 +2505,39 @@ async function run() {
     assert.deepEqual(editFormState, { category: "background", id: "bg-orario-night", name: "Orario nocturno" },
       "The edit action must load the exact assignment identity before saving.");
     const originalBackgroundUpdatedAt = backgroundAsset.updatedAt;
+    await page.evaluate(() => {
+      window.__artPutLog = [];
+      const originalPut = IDBObjectStore.prototype.put;
+      IDBObjectStore.prototype.put = function(value, ...args) {
+        if (value && value.key && this.transaction && this.transaction.db.name === "wordwaifu-art-studio") {
+          window.__artPutLog.push({ key: value.key, prompt: value.prompt, updatedAt: value.updatedAt });
+        }
+        return originalPut.call(this, value, ...args);
+      };
+    });
     await page.locator("#art-prompt").fill("Panorámica revisada de Orario bajo la lluvia.");
+    assert.equal(await page.locator("#art-prompt").inputValue(), "Panorámica revisada de Orario bajo la lluvia.");
     await page.locator("#art-save").click();
     await page.waitForFunction(async (previousUpdatedAt) => {
       const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
       return Boolean(asset && asset.prompt.includes("revisada") && asset.updatedAt !== previousUpdatedAt);
     }, originalBackgroundUpdatedAt, { timeout: 5000 });
+    const immediateEditEvidence = await page.evaluate(async () => {
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
+      const db = await new Promise((resolve, reject) => {
+        const request = indexedDB.open("wordwaifu-art-studio", 1);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+      const indexedRecord = await new Promise((resolve, reject) => {
+        const request = db.transaction("assignments", "readonly").objectStore("assignments").get("background:bg-orario-night");
+        request.onsuccess = () => resolve(request.result || null);
+        request.onerror = () => reject(request.error);
+      });
+      db.close();
+      return { assetPrompt: asset?.prompt, indexedPrompt: indexedRecord?.prompt, putLog: window.__artPutLog, status: document.querySelector("#art-status")?.textContent };
+    });
+    process.stdout.write("ART_EDIT_IMMEDIATE: " + JSON.stringify(immediateEditEvidence) + "\\n");
     await page.reload({ waitUntil: "networkidle" });
     await page.locator('.nav-item[data-view="art"]').click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", null, { timeout: 5000 });
