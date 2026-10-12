@@ -112,7 +112,7 @@ async function run() {
     await page.keyboard.press("Enter");
     try {
       await page.waitForFunction(() =>
-        document.querySelector("#view-title")?.textContent === "Consulta de lore" &&
+        document.querySelector("#view-title")?.textContent === "Enciclopedia de personajes" &&
         document.querySelector("#character-archive-query")?.value === "Ryu" &&
         document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').length === 1,
         null,

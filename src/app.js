@@ -1885,7 +1885,7 @@
     const results=$("#character-archive-results"),status=$("#archive-directory-status");
     const items=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:$("#character-archive-query").value,continuity:$("#archive-continuity").value,spoiler:$("#archive-spoiler").value});
     results.replaceChildren();
-    status.textContent=items.length?items.length+" ficha(s) disponibles. Los retratos son marcadores CSS decorativos, no ilustraciones oficiales.":"No hay fichas que coincidan. Probá otro nombre o una continuidad más amplia.";
+    status.textContent=items.length?items.length+" ficha(s) disponibles. Ryu, Alise y Astrea tienen ilustraciones vectoriales originales no oficiales; otros retratos pueden estar pendientes.":"No hay fichas que coincidan. Probá otro nombre o una continuidad más amplia.";
     if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados."));return;}
     items.forEach(item=>{
       const card=archiveElement("article","archive-character-card");card.setAttribute("role","listitem");
