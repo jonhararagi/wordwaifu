@@ -45,7 +45,7 @@ try:
         ("/assets/character-portraits/lyra.svg", b"Lyra"),
         ("/assets/lore-moments/ryu-justice.svg", b"Ryu"),
         ("/assets/lore-moments/ryu-evilus.svg", b"Evilus"),
-        ("/assets/lore-moments/ryu-seven-days.svg", b"Los siete días"),
+        ("/assets/lore-moments/ryu-seven-days.svg", b"conceptual"),
         ("/src/app.js", b"WordWaifuLoreCorpus"),
         ("/src/styles.css", b".lore-"),
         ("/lore/danmachi/catalog.json", b'"records"'),
