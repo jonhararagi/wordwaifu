@@ -65,6 +65,8 @@ function testSearchAndEveryConnectionHasKnownEndpoints() {
   assert.ok(graph.search("corazón", { universe: "Code Geass" }).some(item => item.id === "CG-POWER-ROLO-GEASS"),
     "Search should index power costs and not just profile titles.");
   assert.ok(graph.search("Geass", { universe: "Code Geass", continuity: "CONT-R2" }).length > 0);
+  assert.ok(graph.search("Ryu", { universe: "DanMachi", continuity: "CONT-AR" }).some(item => item.id === "CHAR-RYUU-LION"),
+    "A character must remain discoverable in a continuity when it has links in that era.");
   for (const edge of graph.allEdges()) {
     assert.ok(graph.getEntity(edge.from), "Unknown source: " + edge.from);
     assert.ok(graph.getEntity(edge.to), "Unknown target: " + edge.to);
