@@ -2020,7 +2020,7 @@
             "detail": "Compañeras de la Familia histórica. No se afirman lazos íntimos individuales sin escenas o localizadores específicos."
           }
         ],
-        "habits": "Se la recuerda como directa y de ánimo luminoso en materiales de adaptación, pero cada rasgo psicológico más fino debe anclarse en pasajes de Astrea Record.",
+        "habits": "Las sinopsis editoriales confirman su capitanía y su papel como guía de Ryu, pero no bastan para reconstruir sus hábitos cotidianos. Los detalles conductuales concretos deben documentarse con escenas localizables de Astrea Record, sin trasladar automáticamente rasgos de la adaptación.",
         "narrativeRole": "Alise representa el ideal comunitario que sostiene a Ryu antes de la catástrofe. Su importancia narrativa deriva tanto de lo que hace como líder como de la huella moral que deja en quienes sobreviven.",
         "sources": [
           "https://ga.sbcr.jp/product/9784815610173",
