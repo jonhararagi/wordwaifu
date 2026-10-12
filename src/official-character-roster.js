@@ -2632,6 +2632,76 @@
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
     "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
+  },
+  {
+    "id": "DM-CHAR-EINA",
+    "name": "Eina Tulle",
+    "aliases": [
+      "Eina",
+      "エイナ・チュール"
+    ],
+    "family": "Guild · asesora de Bell",
+    "species": "Media elfa",
+    "level": null,
+    "epithet": "—",
+    "voice": "Haruka Tomatsu",
+    "role": "Recepcionista y asesora de aventureros",
+    "summary": "Recepcionista del Gremio y asesora asignada a Bell Cranel. Se ocupa de que los aventureros entiendan los riesgos del Dungeon, preparen su equipo y no confundan crecimiento rápido con experiencia suficiente.",
+    "personality": "Seria, estudiosa, humilde y protectora. Suele expresarse con calma, pero se preocupa por Bell cuando se aventura más allá de sus límites; no le gusta pedir ayuda con sus propios problemas.",
+    "abilities": "Su mayor valor es el conocimiento de rutas, monstruos, reglamentos y jeroglíficos. Puede traducir información difícil en consejos prácticos, aunque su función principal no es combatir.",
+    "relationships": "Bell es su aventurero asesorado y motivo de preocupación frecuente; Misha es su amiga y compañera de trabajo; Nina Tulle es su hermana menor.",
+    "source": "COMMUNITY",
+    "image": null,
+    "locator": "DanMachi Wiki · secciones Apariencia, Personalidad, Historia y Habilidades",
+    "imageUrl": "https://static.wikia.nocookie.net/danmachi/images/f/f6/Eina_Tulle_Anime.png/revision/latest/scale-to-width-down/536?cb=20180715233030&path-prefix=es",
+    "sourcePage": "https://danmachi.fandom.com/es/wiki/Eina_Tulle",
+    "sourceTitle": "DanMachi Wiki · Eina Tulle (referencia comunitaria)",
+    "sourceId": "DMR-007-SRC-001",
+    "evidenceType": "secondary_character_profile",
+    "continuity": "CONT-MAIN-LN",
+    "imageCredit": "Retrato de adaptación enlazado desde una wiki comunitaria; la imagen no se copia al repositorio.",
+    "imageProvider": "community",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Eina_Tulle",
+        "sourceLabel": "DanMachi Wiki · Eina Tulle",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Media elfa de cabello castaño a la altura de los hombros y ojos verdes. Lleva el uniforme del Gremio; su imagen pública es la de una profesional ordenada, no la de una aventurera de primera línea.",
+        "history": "Eina destaca en sus estudios antes de incorporarse al Gremio. Al empezar a trabajar descubre que asesorar aventureros implica advertirles sobre peligros que a menudo no quieren escuchar. Más tarde se convierte en la asesora de Bell, cuyo crecimiento inusual la obliga a encontrar un equilibrio entre respetar su decisión de aventurarse y recordarle lo que todavía no sabe.",
+        "development": "Eina es responsable, humilde y muy precavida. Aunque suele actuar como una figura fraternal para Bell, también tiene dificultades para compartir sus propios problemas y teme molestar a los demás si pide ayuda. El trabajo le da una forma práctica de cuidar a personas; su desafío consiste en reconocer que su propia seguridad también importa.",
+        "combatProfile": "No es principalmente una combatiente; su competencia se apoya en el conocimiento del Dungeon, los registros del Gremio, las especies de monstruos y los jeroglíficos. Su valor para el grupo consiste en preparar mejor a otros y reducir riesgos antes de la expedición.",
+        "abilities": [
+          {
+            "name": "Conocimiento del Dungeon",
+            "detail": "Asesora sobre rutas, monstruos y preparación; sus consejos proceden de estudio y experiencia institucional, no de clarividencia."
+          },
+          {
+            "name": "Lectura de jeroglíficos",
+            "detail": "Su formación académica le permite interpretar parte del lenguaje sagrado y consultar materiales que no cualquier aventurero puede leer."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Bell Cranel",
+            "detail": "Es su asesorado y una preocupación persistente. Ella le enseña a prepararse; él a veces reconoce su esfuerzo más allá de las lecciones estrictas."
+          },
+          {
+            "name": "Misha",
+            "detail": "Amiga y compañera de trabajo que intenta ayudarla cuando Eina se resiste a pedir apoyo."
+          },
+          {
+            "name": "Nina Tulle",
+            "detail": "Su hermana menor, también reconocida por su capacidad académica; la relación familiar permite ver el mundo de Eina fuera del Gremio."
+          }
+        ],
+        "habits": "Es eficiente, prudente y modesta; evita presumir de su preparación. Puede avergonzarse cuando la conversación se desplaza hacia el romance y suele intentar rechazar atenciones sin humillar a la otra persona.",
+        "narrativeRole": "Eina conecta la aventura con el conocimiento civil e institucional que hace posible sobrevivir. Su ficha demuestra que la información y la preparación son recursos tan relevantes como las armas.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Eina_Tulle"
+        ]
+      }
+    }
   }
 ];
   const byId = Object.fromEntries(records.map(record => [record.id, record]));
