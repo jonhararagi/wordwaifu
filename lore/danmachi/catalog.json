@@ -391,6 +391,31 @@
       ],
       "status": "provisional",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-KAGUYA",
+      "path": "characters/gojouno-kaguya.md",
+      "type": "character",
+      "tags": [
+        "Gojouno Kaguya",
+        "Kaguya",
+        "Familia Astrea",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-LYRA",
+      "path": "characters/lyra.md",
+      "type": "character",
+      "tags": [
+        "Lyra",
+        "Familia Astrea",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
@@ -472,16 +497,6 @@
     {
       "id": "CHAR-HERA",
       "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-KAGUYA",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-LYRA",
-      "type": "character",
       "status": "candidate_not_created"
     },
     {
@@ -1222,6 +1237,12 @@
     {
       "path": "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
       "type": "research_package",
+      "status": "present"
+    },
+    {
+      "document_id": "RESEARCH-DM-005",
+      "path": "research/inbox/BATCH-DM-005-astrea-familia-network.md",
+      "type": "character_relationship_batch",
       "status": "present"
     }
   ],
