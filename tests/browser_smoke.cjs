@@ -2506,18 +2506,50 @@ async function run() {
     assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
       "Deleting an IndexedDB assignment must remove it from storage.");
 
-    // Simulate IndexedDB being unavailable: fallback assignments must support create/edit/reload/delete.
+    // Simulate IndexedDB writes failing while reads still succeed: fallback assignments must support create/edit/reload/delete.
     const fallbackPage = await context.newPage();
     await fallbackPage.addInitScript(() => {
+      // Read operations succeed with an empty database, while writes fail after
+      // openDatabase has succeeded. This reproduces the subtle fallback/gallery bug.
+      const database = {
+        objectStoreNames: { contains: () => true },
+        createObjectStore() {},
+        transaction(_store, mode) {
+          const transaction = {
+            error: null,
+            objectStore() {
+              return {
+                getAll() {
+                  const request = { result: [] };
+                  queueMicrotask(() => request.onsuccess && request.onsuccess());
+                  return request;
+                },
+                get() {
+                  const request = { result: undefined };
+                  queueMicrotask(() => request.onsuccess && request.onsuccess());
+                  return request;
+                },
+                put() {
+                  if (mode === "readwrite") queueMicrotask(() => {
+                    transaction.error = new Error("Simulated IndexedDB write failure");
+                    if (transaction.onerror) transaction.onerror();
+                  });
+                },
+                delete() {
+                  queueMicrotask(() => transaction.oncomplete && transaction.oncomplete());
+                }
+              };
+            }
+          };
+          return transaction;
+        }
+      };
       Object.defineProperty(window, "indexedDB", {
         configurable: true,
         value: {
           open() {
-            const request = {};
-            queueMicrotask(() => {
-              request.error = new Error("Simulated IndexedDB unavailable");
-              if (typeof request.onerror === "function") request.onerror();
-            });
+            const request = { result: database };
+            queueMicrotask(() => request.onsuccess && request.onsuccess());
             return request;
           }
         }
