@@ -962,6 +962,7 @@
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
     $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "universe", "powers", "art"].includes(activeView));
+    $(".heading-actions").classList.toggle("hidden", ["universe", "powers"].includes(activeView));
     renderMap();
     renderDetails();
     renderDirectory();
