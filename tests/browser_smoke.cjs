@@ -1269,7 +1269,7 @@ async function run() {
       marker:[235,255],characters:["wf-test-resident","wf-test-witness"],events:["wf-test-event"] });
     referenceFixture.locations.push({ id:"wf-test-other-location",name:"Archivo de Prueba",type:"Archivo",parentId:null,
       description:"Ubicación adicional para verificar que editar un acontecimiento cambia sus referencias sin borrar otros lugares.",tags:[],population:"Sin datos",
-      government:"Sin datos",climate:"Sin datos",marker:[640,340],characters:[],events:[] });
+      government:"Sin datos",climate:"Sin datos",marker:[820,500],characters:[],events:[] });
     referenceFixture.characters.push({ id:"wf-test-resident",name:"Habitante de Prueba",age:30,species:"Humana",role:"Habitante",personality:[],
       description:"Personaje vinculado al lugar que se borrará.",motivation:"",flaw:"",
       locationHistory:[{locationId:targetLocationId,from:"chapter1",to:"chapter5"},{locationId:"wf-test-child-location",from:"chapter5",to:"now"}],relationships:[],status:"proposal" });
