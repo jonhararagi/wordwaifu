@@ -149,9 +149,10 @@ async function run() {
       return current.length > previous.length && (document.querySelector("#story-power-generator-status")?.textContent || "").includes("Idea añadida:");
     }, firstGeneratedCatalog, { timeout: 10000 });
     const generatedCatalog = await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue();
-    const generatedNames = generatedCatalog.split("\n").filter(line => line.startsWith("Nombre: ")).map(line => line.slice("Nombre: ".length)).filter(name => name !== "Geas de mandato");
+    const generatedNames = generatedCatalog.split("\n").filter(line => line.startsWith("Nombre: ")).map(line => line.slice("Nombre: ".length));
     assert.ok(generatedCatalog.includes("Geas de mandato"), "generator must preserve the user's existing power");
-    assert.ok(generatedNames.length >= 2 && generatedNames[0] !== generatedNames[1], "successive generation should provide different power ideas");
+    assert.ok(generatedNames.length >= 3 && generatedNames[generatedNames.length - 1] !== generatedNames[generatedNames.length - 2],
+      "the two latest successive proposals should provide different power ideas");
     assert.ok(generatedCatalog.includes("Evolución:") && generatedCatalog.includes("Consecuencias:"), "generated ideas must include progression and narrative consequences");
     process.stdout.write("PASS power generator: appends varied powers, preserves manual entries, and includes evolution and consequences.\\n");
     await page.locator("#story-add-chapter-button").click();
