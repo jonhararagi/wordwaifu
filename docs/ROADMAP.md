@@ -101,3 +101,47 @@ Estados de evidencia: `PASS_REAL`, `PASS_STATIC`, `FAIL_REAL`, `NOT_RUN`, `UNKNO
 3. ¿Qué idioma se aprende primero y cuál es el idioma de la interfaz?
 
 Resolver estas decisiones evita construir una arquitectura bonita para el producto equivocado.
+
+
+## Auditoría de repositorio · 2026-10-12
+
+**Estado:** `PARTIAL`. Auditoría estática remota; no se ejecutó el proyecto en un entorno local.
+
+### Evidencia observada
+
+- Repositorio: `jonhararagi/wordwaifu`; visibilidad pública; rama predeterminada: `main`.
+- HEAD observado antes de los cambios: `c07ef226a61ad6e48b081890f1e3d96eecb585b5` (commit `docs: add staged roadmap and quality gates`).
+- Árbol de raíz visible en GitHub: `.gitignore`, `README.md` y `docs/ROADMAP.md`.
+- No se observó código de aplicación, manifiesto de dependencias ni workflow de CI en el árbol de raíz/documentación inspeccionado. Esto no sustituye una auditoría de seguridad exhaustiva.
+- La hoja de ruta previa ya define como hipótesis el aprendizaje de vocabulario con identidad anime; no es todavía un requisito confirmado.
+
+### Resultado por control
+
+| Control | Estado | Evidencia / límite |
+|---|---|---|
+| Rama y HEAD | `PASS_STATIC` | Metadatos de GitHub y referencia `main` consultados |
+| Inventario inicial de archivos | `PASS_STATIC` | Árbol raíz y `docs/` consultados |
+| Código ejecutable y dependencias | `UNKNOWN` | No se encontró código de aplicación ni manifiesto en las rutas inspeccionadas; no hubo clonación local |
+| CI y pruebas | `NOT_RUN` | No se encontró workflow en las rutas inspeccionadas; no se ejecutó CI |
+| Secretos | `UNKNOWN` | No se hizo escaneo de secretos ni auditoría completa |
+| Plataforma, idiomas y objetivo final | `NOT_READY` | Requiere decisión del propietario |
+| Pruebas locales | `NOT_RUN` | No se afirma ejecución local |
+
+### Decisión técnica provisional
+
+No añadir un framework ni dependencias hasta confirmar plataforma y caso de uso. Para reducir riesgo y tiempo de entrega, el siguiente incremento debe ser una especificación breve del producto y, tras confirmarla, un prototipo mínimo con una única experiencia central completa. Si se confirma aprendizaje de vocabulario: estudiar una aplicación web adaptable, práctica de recuperación activa, repetición espaciada, progreso local y contenido original con licencia documentada.
+
+### Bloqueos que requieren al propietario
+
+1. Producto principal: aprendizaje de vocabulario, juego de palabras, diccionario con personajes u otra propuesta.
+2. Plataforma prioritaria: web, Windows o Android.
+3. Idioma que se aprende e idioma de interfaz.
+
+### Siguiente tarea
+
+`WW-002`: confirmar las tres decisiones anteriores y escribir criterios de aceptación para el MVP antes de seleccionar arquitectura. No incorporar recursos de terceros sin verificar licencia, atribución y derechos de redistribución.
+
+### Registro de cambios
+
+- Rama de trabajo: `work/audit-baseline-2026-10-12`.
+- Esta auditoría se limita a evidencia accesible desde GitHub; no equivale a pruebas locales.
