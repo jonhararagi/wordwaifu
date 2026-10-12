@@ -18,6 +18,8 @@
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
     lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."],
+    universe: ["Explorador de universos", "Recorré personajes, familias, diosas, sistemas y acontecimientos con enlaces de ida y vuelta."],
+    powers: ["Poderes y habilidades", "Guardá cada poder como una ficha conectada a personajes e historias."],
     art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."]
   };
   const demo = {
@@ -75,7 +77,9 @@
   const titleCase = (value) => value.charAt(0).toUpperCase() + value.slice(1);
 
   function ensureRelationshipStore(project) {
-    if (!project || !Array.isArray(project.characters)) return project;
+    if (!project) return project;
+    if (!Array.isArray(project.powers)) project.powers = [];
+    if (!Array.isArray(project.characters)) return project;
     const charactersById = new Map(project.characters.filter((character) => character && typeof character.id === "string").map((character) => [character.id, character]));
     if (!Array.isArray(project.relationships)) {
       const migrated = new Map();
@@ -952,13 +956,16 @@
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $("#lore-view").classList.toggle("hidden", activeView !== "lore");
+    $("#universe-view").classList.toggle("hidden", activeView !== "universe");
+    $("#powers-view").classList.toggle("hidden", activeView !== "powers");
     $("#art-view").classList.toggle("hidden", activeView !== "art");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art"].includes(activeView));
+    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "universe", "powers", "art"].includes(activeView));
     renderMap();
     renderDetails();
     renderDirectory();
+    if (window.WordWaifuPowerWorkbench) window.WordWaifuPowerWorkbench.refresh(state);
   }
 
   function mapPointFromPointer(event) {
@@ -1316,6 +1323,7 @@
     if (deleteStory) deleteStory.addEventListener("click", async () => {
       if (!confirm("¿Eliminar la historia y todos sus capítulos? Exportá una copia antes si querés conservarla.")) return;
       state.stories = state.stories.filter((item) => item.id !== story.id);
+      (state.powers || []).forEach((power) => { if (power.storyId === story.id) power.storyId = null; });
       selectedStoryId = null;
       await saveProject();
       renderDirectory();
@@ -1692,11 +1700,13 @@
       relationCount ? relationCount + " relación(es) de otros personajes dejarán de apuntar a esta ficha." : "",
       locationCount ? locationCount + " referencia(s) en lugares se eliminarán." : "",
       eventCount ? eventCount + " referencia(s) en acontecimientos se eliminarán." : "",
+      (state.powers || []).some((power) => power.ownerCharacterId === id) ? (state.powers.filter((power) => power.ownerCharacterId === id).length + " poder(es) quedarán sin dueño asignado.") : "",
       "Las demás entidades y referencias se conservarán. Se creará una copia recuperable antes de borrar; si falla el respaldo, se cancelará la operación."
     ].filter(Boolean).join("\n");
     if (!confirm(summary)) return;
     if (!(await snapshotBeforeDestructiveAction("before-delete-character"))) return;
     state.characters = state.characters.filter((item) => item.id !== id);
+    (state.powers || []).forEach((power) => { if (power.ownerCharacterId === id) power.ownerCharacterId = null; });
     state.characters.forEach((item) => { item.relationships = (item.relationships || []).filter((relatedId) => relatedId !== id); });
     state.locations.forEach((item) => { item.characters = (item.characters || []).filter((characterId) => characterId !== id); });
     state.events.forEach((item) => { item.characterIds = (item.characterIds || []).filter((characterId) => characterId !== id); });
@@ -2931,7 +2941,7 @@
   $("#create-project-name").addEventListener("input", () => $("#create-project-name").setCustomValidity(""));
   $("#new-project-button").addEventListener("click", () => {
     if (!confirm("¿Crear un proyecto vacío? Exportá el proyecto actual antes si querés conservar una copia.")) return;
-    state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], organizations: [], relationships: [], stories: [], settings: { time: "now" } };
+    state = { schemaVersion: 1, project: { id: "project-" + Date.now().toString(36), name: "Mi nuevo universo", description: "" }, locations: [], characters: [], events: [], organizations: [], relationships: [], stories: [], powers: [], settings: { time: "now" } };
     selectedLocationId = null;
     selectedCharacterId = null;
     selectedEventId = null;
@@ -3034,5 +3044,11 @@
     }
   }
 
+  if (window.WordWaifuUniverseExplorer) window.WordWaifuUniverseExplorer.mount({ root: $("#universe-view") });
+  if (window.WordWaifuPowerWorkbench) window.WordWaifuPowerWorkbench.mount({
+    root: $("#powers-view"),
+    getProject: () => state,
+    onSave: () => saveProject()
+  });
   initializeApplication();
 })(); 
