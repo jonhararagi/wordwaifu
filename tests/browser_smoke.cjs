@@ -158,12 +158,20 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 7);
+    await page.locator("#archive-tab-relationships").click();
+    const ryuRelationshipsText = await page.locator("#archive-profile-panel").innerText();
+    assert.ok(ryuRelationshipsText.includes("Alise · capitana y reclutadora"));
+    assert.ok(ryuRelationshipsText.includes("Gojouno Kaguya · rivalidad respetuosa"));
+    assert.ok(ryuRelationshipsText.includes("chocan a menudo"));
     // Connected family explorer: Ryu -> Alise -> Astrea, with a reliable way back.
     await page.locator("#archive-tab-family").click();
     await page.waitForFunction(() => document.querySelector('#archive-profile-panel [data-family-id="FAM-ASTREA"]'));
     const astreaFamilyText = await page.locator('#archive-profile-panel [data-family-id="FAM-ASTREA"]').innerText();
     assert.ok(astreaFamilyText.includes("Integrantes con ficha disponible"));
     assert.ok(astreaFamilyText.includes("Alise"));
+    assert.equal(await page.locator('#archive-profile-panel [data-family-id="FAM-ASTREA"] .archive-family-member').count(), 4,
+      "The goddess should be separately linked as deity, not counted as an adventurer member.");
+    assert.ok(await page.locator('#archive-profile-panel [data-family-id="FAM-ASTREA"] .archive-family-role [data-character-link="CHAR-ASTREA"]').count() === 1);
     assert.ok(astreaFamilyText.includes("Gojouno Kaguya"));
     assert.ok(astreaFamilyText.includes("Lyra"));
     assert.ok(astreaFamilyText.includes("Astrea deja Orario antes de la venganza de Ryu"));
