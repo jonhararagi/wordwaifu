@@ -16,6 +16,7 @@
     timeline: ["Cronología", "Revisá los acontecimientos y los cambios de estado de tu mundo."],
     organizations: ["Organizaciones", "Facciones, gremios y grupos que mueven tu universo."],
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
+    ideas: ["Generador de ideas", "Convertí una semilla en premisas, personajes y conflictos para fanfics o historias originales."],
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
     lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."],
     art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."]
@@ -949,12 +950,13 @@
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
+    $("#idea-view").classList.toggle("hidden", activeView !== "ideas");
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $("#lore-view").classList.toggle("hidden", activeView !== "lore");
     $("#art-view").classList.toggle("hidden", activeView !== "art");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art"].includes(activeView));
+    $("#add-button").classList.toggle("hidden", ["commands", "stories", "ideas", "lore", "art"].includes(activeView));
     renderMap();
     renderDetails();
     renderDirectory();
@@ -2797,6 +2799,46 @@
   });
   $$(".command-chips button").forEach((button) => button.addEventListener("click", () => executeCommand(button.dataset.command)));
   $("#global-search").addEventListener("keydown", (event) => { if (event.key === "Escape") { event.target.value = ""; renderDirectory(); } });
+
+  window.addEventListener("wordwaifu:save-generated-story", (event) => {
+    const story = event.detail;
+    if (!story || typeof story.id !== "string" || typeof story.name !== "string" || typeof story.description !== "string") return;
+    state.stories = Array.isArray(state.stories) ? state.stories : [];
+    if (state.stories.some((item) => item.id === story.id)) {
+      const status = document.querySelector("#idea-save-status");
+      if (status) status.textContent = "Esta propuesta ya está registrada en el proyecto; generá otra variante si querés una nueva entrada.";
+      return;
+    }
+    state.stories.push({ id: story.id, name: story.name, description: story.description, status: "draft" });
+    saveProject().then((saved) => {
+      const status = document.querySelector("#idea-save-status");
+      if (status) status.textContent = saved
+        ? "Idea guardada en el proyecto. Abrí «Historias y novelas» para revisarla."
+        : "La idea está en la sesión, pero no se pudo confirmar el guardado. Exportá el proyecto antes de cerrar.";
+      navigate("stories");
+    });
+  });
+
+  window.addEventListener("wordwaifu:add-generated-characters", (event) => {
+    const characters = Array.isArray(event.detail) ? event.detail : [];
+    if (!characters.length) return;
+    state.characters = Array.isArray(state.characters) ? state.characters : [];
+    const existingIds = new Set(state.characters.map((item) => item.id));
+    const additions = characters.filter((item) => item && typeof item.id === "string" && !existingIds.has(item.id));
+    if (!additions.length) {
+      const status = document.querySelector("#idea-save-status");
+      if (status) status.textContent = "Estos personajes ya existen en el universo.";
+      return;
+    }
+    state.characters.push(...additions);
+    saveProject().then((saved) => {
+      const status = document.querySelector("#idea-save-status");
+      if (status) status.textContent = saved
+        ? additions.length + " personajes añadidos como propuestas editables. No se consideran canon automáticamente."
+        : "Los personajes están en la sesión, pero no se pudo confirmar el guardado. Exportá el proyecto antes de cerrar.";
+      navigate("characters");
+    });
+  });
 
   async function initializeApplication() {
     const appShell = document.querySelector(".app-shell");
