@@ -1875,16 +1875,20 @@
       ? window.WordWaifuOfficialCharacterRoster.get(id) : null;
     const fallbackSource = portraitSources[id] || "";
     const selectedContinuity = continuity || "ALL";
+    const historicalReference = selectedContinuity === "CONT-AR" && official && official.historicalImageUrl;
     const mayUseOfficialPortrait = selectedContinuity === "ALL" || selectedContinuity === "CONT-ANIME";
-    const officialSource = mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
+    const officialSource = historicalReference ? official.historicalImageUrl
+      : mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
     const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
     node.setAttribute("role", "img");
     node.setAttribute("aria-label", officialSource
-      ? "Retrato oficial enlazado desde " + (official.sourcePage || "la web oficial") + "; derechos de terceros."
+      ? (historicalReference ? "Retrato oficial de referencia de DanMachi IV; no específico de la época " + selectedContinuity + "."
+        : "Retrato oficial enlazado desde " + (official.sourcePage || "la web oficial") + "; derechos de terceros.")
       : fallbackSource ? "Ilustración vectorial conceptual original de " + name + ", no oficial."
       : "Inicial representativa de " + name + "; no hay retrato verificado disponible.");
     const caption = large ? archiveElement("span","archive-portrait-caption",
-      officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
+      historicalReference ? "REFERENCIA VISUAL OFICIAL · NO ESPECÍFICA DE ÉPOCA"
+        : officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
     function showInitial() {
       node.replaceChildren(archiveElement("span","",initial));
       if (large) node.appendChild(archiveElement("span","archive-portrait-caption","SIN RETRATO DISPONIBLE"));
