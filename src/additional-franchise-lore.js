@@ -357,6 +357,24 @@
       sourceUrl:sources.wixoss,sourceUrls:[sources.wixoss,sources.wixossPublisher],status:"Perfil semilla · spoilers",
       notes:"Las fuentes enlazadas no dan una biografía completa de Tama; ampliar con referencias directas de episodios antes de cerrar detalles."
     }),
+    character({id:"WIX-CHAR-HITOE",name:"Hitoe Uemura",universe:wixoss,aliases:["Hitoe","植村一衣"],
+      summary:"Amiga de Rūko cuya soledad y deseo de amistad se entrelazan con las consecuencias de las batallas Selector.",
+      personality:"Tímida y sensible, le cuesta iniciar relaciones y teme perder los lazos cuando se vuelven importantes. Su deseo de tener amigas influye en la forma en que entiende las reglas y los resultados de WIXOSS.",
+      history:"Conoce a Rūko y Yuzuki en el contexto de las batallas Selector. Su experiencia demuestra que una derrota puede afectar las relaciones y la vida cotidiana más allá de la partida.",
+      relationships:"Rūko y Yuzuki forman parte de su primera red de amistad; su LRIG Midoriko se conecta a las batallas y a las condiciones que Hitoe intenta comprender.",
+      conflict:"Desea tener amigas, pero las reglas que prometen conceder deseos pueden castigar precisamente el tipo de vínculo que busca construir.",
+      abilities:"Selector asociada a una LRIG; registrar la mecánica de sus batallas por episodio y no mezclar las reglas sobrenaturales con las del TCG.",
+      goals:"Conservar amistades reales y entender el sistema de Selectors.",
+      values:"Amistad, honestidad, confianza y cuidado.",
+      fear:"Quedarse aislada o que los vínculos que más desea se vuelvan imposibles.",
+      characterArc:"De una persona que teme acercarse a otras a alguien que aprende que la amistad no puede reducirse a ganar una partida.",
+      knowledgeScope:"Sus experiencias con derrota, memoria y relaciones cambian por episodio; mantener las revelaciones separadas.",
+      continuity:"selector infected/spread · confirmar por episodio",
+      sourceQuality:"licensed-series-reference",
+      sourceTitle:"WIXOSS: portal oficial de franquicia y publicación licenciada",
+      sourceUrl:sources.wixoss,sourceUrls:[sources.wixoss,sources.wixossPublisher],status:"Perfil semilla · verificar con citas por episodio",
+      notes:"Los portales consultados no sustituyen una referencia episódica completa; esta ficha debe expandirse antes de usarse para continuidad detallada."
+    }),
     character({id:"WIX-CHAR-YUZUKI",name:"Yuzuki Kurebayashi",universe:wixoss,aliases:["Yuzuki","紅林遊月"],
       summary:"Amiga de Rūko que entra en WIXOSS con un deseo personal que pone a prueba sus lazos familiares y su honestidad.",
       personality:"Energética, protectora y emocionalmente intensa; intenta sostener su imagen de amiga cercana mientras oculta una motivación íntima que le cuesta decir en voz alta.",
@@ -521,7 +539,7 @@
     {from:"NAB-ORG-GREY-WOLVES",to:"NAB-POWER-SHINRA-BANSHO",type:"objetivo de adquisición",continuity:"manga principal / anime",description:"La facción busca obtener Shinra Banshō mediante operaciones dirigidas contra Miharu y otras aldeas.",sourceTitle:"Square Enix · G Fantasy, Nabari no Ō",sourceUrl:sources.nabari},
     {from:"WIX-CHAR-RUKO",to:"WIX-CHAR-TAMA",type:"Selector y LRIG",continuity:"selector infected/spread",description:"Tama es la LRIG central de Rūko; su relación se transforma a medida que ambas conocen las consecuencias de las batallas.",sourceTitle:"Takara Tomy y publicación oficial de WIXOSS",sourceUrl:sources.wixoss},
     {from:"WIX-CHAR-RUKO",to:"WIX-SYSTEM-SELECTOR",type:"participante del sistema",continuity:"selector infected/spread",description:"Las batallas Selector exponen a Rūko a reglas y costes distintos de una partida normal de cartas.",sourceTitle:"Takara Tomy · portal oficial de WIXOSS",sourceUrl:sources.wixoss},
-    {from:"WIX-CHAR-YUZUKI",to:"WIXOSS-CHAR-HITOE",type:"amistad",continuity:"selector infected/spread · IDs de relación por completar",description:"La relación forma parte de la red de amigas y Selectors; mantener la continuidad y los estados de sus deseos separados.",sourceTitle:"WIXOSS · índice oficial de franquicia y manga licenciado",sourceUrl:sources.wixossPublisher},
+    {from:"WIX-CHAR-YUZUKI",to:"WIX-CHAR-HITOE",type:"amistad",continuity:"selector infected/spread · IDs de relación por completar",description:"La relación forma parte de la red de amigas y Selectors; mantener la continuidad y los estados de sus deseos separados.",sourceTitle:"WIXOSS · índice oficial de franquicia y manga licenciado",sourceUrl:sources.wixossPublisher},
     {from:"WIX-CHAR-TAMA",to:"WIX-SYSTEM-SELECTOR",type:"LRIG / entidad vinculada a batalla",continuity:"selector infected/spread",description:"La ficha de Tama se conecta al sistema sobrenatural sin confundir la identidad de LRIG con las mecánicas normales del TCG.",sourceTitle:"Takara Tomy · portal oficial de WIXOSS",sourceUrl:sources.wixoss},
     {from:"MJP-CHAR-IZURU",to:"MJP-ORG-TEAM-RABBITS",type:"piloto y miembro",continuity:"serie de TV",description:"Izuru actúa como piloto principal y su desarrollo depende de las decisiones y capacidades de todo el equipo.",sourceTitle:"Majestic Prince · portal oficial de personajes",sourceUrl:sources.mjp},
     {from:"MJP-CHAR-ASAGI",to:"MJP-ORG-TEAM-RABBITS",type:"piloto y miembro",continuity:"serie de TV",description:"Asagi aporta control táctico y debe encontrar confianza en el trabajo del grupo.",sourceTitle:"Majestic Prince · portal oficial de personajes",sourceUrl:sources.mjp},
@@ -530,5 +548,5 @@
     {from:"MJP-CHAR-TAMAKI",to:"MJP-ORG-TEAM-RABBITS",type:"piloto y miembro",continuity:"serie de TV",description:"Tamaki contribuye al equipo tanto en misiones como en la convivencia que sostiene sus vínculos.",sourceTitle:"Majestic Prince · portal oficial de personajes",sourceUrl:sources.mjp},
     {from:"MJP-ORG-TEAM-RABBITS",to:"MJP-SYSTEM-AHSMB",type:"unidad operadora",continuity:"serie de TV",description:"Los pilotos operan distintos AHSMB, con una configuración por unidad y misión.",sourceTitle:"Majestic Prince · portal oficial de MECHANIC",sourceUrl:sources.mjpMovie}
   ];
-  return { universes:[mha,opm,nabari,wixoss,mjp], list:()=>entities.map(item=>({...item,aliases:[...(item.aliases||[])],sourceUrls:[...(item.sourceUrls||(item.sourceUrl?[item.sourceUrl]:[]))]})), edges:()=>links.map(item=>({...item})) };
+  return { universes:[mha,opm,nabari,wixoss,mjp], list:()=>entities.map(item=>({...item,aliases:[...(item.aliases||[])],sourceUrls:[...(item.sourceUrls||(item.sourceUrl?[item.sourceUrl]:[]))]})), edges:()=>links.map(item=>({sourceQuality:"official-reference-partial",...item})) };
 });
