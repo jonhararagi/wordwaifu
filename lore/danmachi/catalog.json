@@ -323,7 +323,8 @@
         "Ryu Lion",
         "Ryuu Lion",
         "Astrea Record",
-        "multi-era"
+        "multi-era",
+        "Astrea Familia"
       ],
       "status": "provisional",
       "priority": "high"
@@ -400,7 +401,8 @@
         "Gojouno Kaguya",
         "Kaguya",
         "Familia Astrea",
-        "Astrea Record"
+        "Astrea Record",
+        "Astrea Familia"
       ],
       "status": "provisional",
       "priority": "high"
@@ -412,7 +414,8 @@
       "tags": [
         "Lyra",
         "Familia Astrea",
-        "Astrea Record"
+        "Astrea Record",
+        "Astrea Familia"
       ],
       "status": "provisional",
       "priority": "normal"
