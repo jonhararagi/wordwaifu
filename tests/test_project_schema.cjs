@@ -45,6 +45,7 @@ function testValidProjectNormalizesOptionalFields() {
   const result = validateAndNormalizeProject(validProject());
   assert.equal(result.valid, true, result.errors.join("\n"));
   assert.deepEqual(result.project.stories, []);
+  assert.deepEqual(result.project.powers, []);
   assert.deepEqual(result.project.organizations, []);
   assert.deepEqual(result.project.relationships, []);
   assert.deepEqual(result.project.settings, { time: "now" });
@@ -265,7 +266,60 @@ function testRelationshipIDsAreGloballyUnique() {
   assert.match(result.errors.join("\\n"), /ID duplicado/);
 }
 
+
+function testPowerRecordsNormalizeAndKeepSharedReferences() {
+  const input = validProject();
+  input.stories = [{ id: "story-a", name: "Historia A", description: "Una historia de prueba." }];
+  input.powers = [{
+    id: "power-a", name: "Mandato de cristal", ownerCharacterId: "char-a", storyId: "story-a",
+    family: "mental", activation: "Contacto visual", evolution: "I → II", irreversible: true
+  }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\n"));
+  const power = result.project.powers[0];
+  assert.equal(power.ownerCharacterId, "char-a");
+  assert.equal(power.storyId, "story-a");
+  assert.equal(power.irreversible, true);
+  assert.equal(power.status, "proposal");
+  assert.equal(power.activation, "Contacto visual");
+  assert.equal(power.category, "");
+}
+
+function testPowerOwnerAndStoryReferencesMustExist() {
+  const badOwner = validProject();
+  badOwner.powers = [{ id: "power-a", name: "Poder roto", ownerCharacterId: "char-missing" }];
+  const ownerResult = validateAndNormalizeProject(badOwner);
+  assert.equal(ownerResult.valid, false);
+  assert.match(ownerResult.errors.join("\n"), /ownerCharacterId referencia un personaje inexistente/);
+
+  const badStory = validProject();
+  badStory.powers = [{ id: "power-a", name: "Poder roto", storyId: "story-missing" }];
+  const storyResult = validateAndNormalizeProject(badStory);
+  assert.equal(storyResult.valid, false);
+  assert.match(storyResult.errors.join("\n"), /storyId referencia una historia inexistente/);
+}
+
+function testPowerIdsAreGloballyUnique() {
+  const input = validProject();
+  input.powers = [{ id: "char-a", name: "Colisión de ID" }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join("\n"), /ID duplicado/);
+}
+
+function testPowerCollectionMustBeAnArray() {
+  const input = validProject();
+  input.powers = {};
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, false);
+  assert.match(result.errors.join("\n"), /powers debe ser una lista/);
+}
+
 const tests = [
+  testPowerRecordsNormalizeAndKeepSharedReferences,
+  testPowerOwnerAndStoryReferencesMustExist,
+  testPowerIdsAreGloballyUnique,
+  testPowerCollectionMustBeAnArray,
   testValidProjectNormalizesOptionalFields,
   testMissingOptionalFieldsReceiveSafeDefaults,
   testRejectsDuplicateIdsAcrossEntityTypes,
