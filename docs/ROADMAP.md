@@ -113,7 +113,7 @@ Resolver estas decisiones evita construir una arquitectura bonita para el produc
 - HEAD observado antes de los cambios: `c07ef226a61ad6e48b081890f1e3d96eecb585b5` (commit `docs: add staged roadmap and quality gates`).
 - Árbol de raíz visible en GitHub: `.gitignore`, `README.md` y `docs/ROADMAP.md`.
 - No se observó código de aplicación, manifiesto de dependencias ni workflow de CI en el árbol de raíz/documentación inspeccionado. Esto no sustituye una auditoría de seguridad exhaustiva.
-- La hoja de ruta previa ya define como hipótesis el aprendizaje de vocabulario con identidad anime; no es todavía un requisito confirmado.
+- La hipótesis de aprendizaje de vocabulario en documentos antiguos es inconsistente con el trabajo de producto más reciente. El PR #1 (`Foundation: WordWaifu offline world atlas and narrative canon`) define el producto como taller offline-first de universos narrativos; debe tratarse como la dirección de producto más respaldada hasta confirmación explícita del propietario.
 
 ### Resultado por control
 
@@ -121,27 +121,40 @@ Resolver estas decisiones evita construir una arquitectura bonita para el produc
 |---|---|---|
 | Rama y HEAD | `PASS_STATIC` | Metadatos de GitHub y referencia `main` consultados |
 | Inventario inicial de archivos | `PASS_STATIC` | Árbol raíz y `docs/` consultados |
-| Código ejecutable y dependencias | `UNKNOWN` | No se encontró código de aplicación ni manifiesto en las rutas inspeccionadas; no hubo clonación local |
-| CI y pruebas | `NOT_RUN` | No se encontró workflow en las rutas inspeccionadas; no se ejecutó CI |
+| Código ejecutable y dependencias en `main` | `PASS_STATIC` | No hay código de aplicación en el árbol de `main`; no hubo clonación local |
+| Implementación en ramas/PR | `PASS_STATIC` | `foundation/story-foundry-north-star` contiene `index.html`, `src/app.js`, `src/project-repository.js`, `src/project-schema.js`, `src/styles.css`, `tests/` y `.github/workflows/validate.yml` |
+| CI y pruebas de la rama `main` | `NOT_RUN` | `main` no contiene workflow; no se ejecutó CI en esta auditoría |
+| CI declarada en la rama de fundación | `UNKNOWN` | Existe `.github/workflows/validate.yml`; no se consultaron resultados de ejecución de esta revisión |
 | Secretos | `UNKNOWN` | No se hizo escaneo de secretos ni auditoría completa |
 | Plataforma, idiomas y objetivo final | `NOT_READY` | Requiere decisión del propietario |
 | Pruebas locales | `NOT_RUN` | No se afirma ejecución local |
 
 ### Decisión técnica provisional
 
-No añadir un framework ni dependencias hasta confirmar plataforma y caso de uso. Para reducir riesgo y tiempo de entrega, el siguiente incremento debe ser una especificación breve del producto y, tras confirmarla, un prototipo mínimo con una única experiencia central completa. Si se confirma aprendizaje de vocabulario: estudiar una aplicación web adaptable, práctica de recuperación activa, repetición espaciada, progreso local y contenido original con licencia documentada.
+No crear una implementación paralela ni asumir que el proyecto es una app de vocabulario. Primero reconciliar el prototipo ya existente en `foundation/story-foundry-north-star` con las ramas `work/wf-004-c2-destructive-snapshots` y `work/wf-004-c3-project-trash`, confirmar su CI y decidir una rama de integración. La dirección con más evidencia disponible es un taller web local/offline-first de universos narrativos, con atlas interactivo, gestión de entidades, persistencia local, importación/exportación y protección ante borrados.
 
 ### Bloqueos que requieren al propietario
 
-1. Producto principal: aprendizaje de vocabulario, juego de palabras, diccionario con personajes u otra propuesta.
-2. Plataforma prioritaria: web, Windows o Android.
-3. Idioma que se aprende e idioma de interfaz.
+1. Confirmar que la visión de taller offline-first de universos narrativos del PR #1 es la dirección oficial.
+2. Confirmar la política de integración: mantener `main` limpia hasta revisar CI y fusionar los PR por orden, o elegir una rama de desarrollo como base.
+3. Confirmar si se desea soporte de escritorio empaquetado además de la aplicación web.
 
 ### Siguiente tarea
 
-`WW-002`: confirmar las tres decisiones anteriores y escribir criterios de aceptación para el MVP antes de seleccionar arquitectura. No incorporar recursos de terceros sin verificar licencia, atribución y derechos de redistribución.
+`WW-002`: reconciliar las ramas y PR existentes; revisar CI real, continuidad y límites de seguridad de persistencia antes de añadir funciones nuevas. No incorporar recursos de terceros sin verificar licencia, atribución y derechos de redistribución.
 
 ### Registro de cambios
 
 - Rama de trabajo: `work/audit-baseline-2026-10-12`.
 - Esta auditoría se limita a evidencia accesible desde GitHub; no equivale a pruebas locales.
+
+
+### Corrección de auditoría · 2026-10-12 (segunda pasada)
+
+La primera pasada solo examinó el árbol de `main` y documentación; eso no representaba el trabajo existente en ramas de desarrollo. Se inspeccionó el árbol recursivo del commit `3500ec0517f216a5b96a82c08c9f81a5dc108e42` de `foundation/story-foundry-north-star` y se encontraron prototipo, módulos de datos, pruebas y workflow. También se identificaron PRs de protección de snapshots y papelera en progreso. Por tanto, no debe describirse WordWaifu globalmente como “sin código”: la afirmación correcta es que `main` aún no integra la implementación y hay trabajo sustancial en ramas/PR.
+
+- Producto provisional más respaldado: taller de universos narrativos offline-first.
+- PR de fundación: https://github.com/jonhararagi/wordwaifu/pull/1
+- PR de auditoría: https://github.com/jonhararagi/wordwaifu/pull/6
+- Verificación de ejecución local: `NOT_RUN`.
+- Próximo gate: reconciliar ramas, inspeccionar el workflow y revisar resultados CI antes de nuevas funciones.
