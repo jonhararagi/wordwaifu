@@ -2561,10 +2561,37 @@ async function run() {
 
     assert.ok(persistedEditEvidence.assetPrompt?.includes("revisada") && persistedEditEvidence.indexedPrompt?.includes("revisada"),
       "Editing an IndexedDB assignment must update its saved prompt and survive a full page reload.");
+    // Seed a stale fallback copy, then force its cleanup to fail after IndexedDB deletion.
+    // The durable IndexedDB tombstone must prevent this stale copy reappearing after reload.
+    await page.evaluate(async () => {
+      const key = "background:bg-orario-night";
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
+      const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
+      fallback[key] = { ...asset };
+      localStorage.setItem("wordwaifu.art.assignments.v1", JSON.stringify(fallback));
+      const nativeSetItem = Storage.prototype.setItem;
+      Storage.prototype.setItem = function(storageKey, value) {
+        if (storageKey === "wordwaifu.art.assignments.v1") {
+          throw new DOMException("Simulated fallback cleanup failure", "QuotaExceededError");
+        }
+        return nativeSetItem.call(this, storageKey, value);
+      };
+    });
     await page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first().getByRole("button", { name: "Eliminar" }).first().click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
     assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
-      "Deleting an IndexedDB assignment must remove it from storage.");
+      "Deleting an IndexedDB assignment must remove it from active storage.");
+    assert.ok(await page.evaluate(() => {
+      const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
+      return Boolean(fallback["background:bg-orario-night"]?.prompt?.includes("revisada"));
+    }), "The failure simulation must leave the stale fallback copy in place.");
+
+    await page.reload({ waitUntil: "networkidle" });
+    await page.locator('.nav-item[data-view="art"]').click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", null, { timeout: 5000 });
+    assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
+      "A stale localStorage copy must not resurrect an IndexedDB-deleted assignment after reload.");
+    process.stdout.write("PASS art deletion tombstone: stale fallback cleanup failure cannot resurrect a deleted assignment.\\n");
 
     // Simulate IndexedDB writes failing while reads still succeed: fallback assignments must support create/edit/reload/delete.
     const fallbackPage = await context.newPage();
