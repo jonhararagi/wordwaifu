@@ -144,3 +144,5 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 ## 7. Regla de honestidad
 
 Esta estructura busca cubrir la historia publicada desde las eras más antiguas hasta el último volumen que pueda verificarse. No significa que la cronología, todas las fichas o el final estén completos. Un índice vacío es mejor que un dato inventado.
+- `research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md` — cobertura del elenco y referencias visuales; las imágenes comunitarias no se presentan como oficiales.
+- `sources/DMR-007-wiki-comunitaria.md` — registro de la wiki comunitaria como fuente secundaria, con límites de continuidad y atribución.

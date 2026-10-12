@@ -24,9 +24,9 @@ Para mantener trazabilidad, se archivan la visión original y la descripción co
 
 ## Estado verificable
 
-La rama de integración contiene el prototipo de atlas, CRUD de entidades, relaciones, persistencia local, papelera, archivo de personajes, expedientes ampliados y panel de arte. En el commit de origen `e56f412f97b7730da63eb80c25d914983a56cd0a`, las acciones **Validate WordWaifu** y **DanMachi Lore and Retrieval Integrity** terminaron en verde, incluyendo la prueba Chromium de creación, edición, recarga y eliminación del panel de arte y los fallos simulados de almacenamiento.
+La rama de integración contiene el prototipo de atlas, CRUD de entidades, relaciones, persistencia local, papelera, archivo de personajes, expedientes ampliados y panel de arte. En el commit de origen `74021ef9b43d728ce10aef999b71578bcaabfac2`, las acciones **Validate WordWaifu** y **DanMachi Lore and Retrieval Integrity** terminaron en verde, incluyendo CRUD del panel de arte con IndexedDB y respaldo local, fallos simulados de almacenamiento, atribución de imágenes comunitarias y regresiones de continuidad. La instantánea de esta PR vuelve a ejecutar sus propias validaciones.
 
-Esto no significa que WordWaifu esté terminado. La integración final sigue en revisión: las PR #9 y #10 contienen cambios solapados de cobertura del elenco y profundidad de expedientes que deben reconciliarse sin duplicar registros; ninguna de las PR de integración ha sido fusionada en `main`.
+Esto no significa que WordWaifu esté terminado. La integración ahora incorpora una sola vez los datos y fuentes compartidos por las PR #9 y #10: roster de 59 personajes, atribución comunitaria de Eina, `DMR-007`, `BATCH-DM-006` y claims de expedientes por continuidad. No se copia la segunda interfaz `renderDeepCharacterDossier` porque la PR #11 ya aporta un panel de expedientes ampliados; las PR #9 y #10 siguen abiertas para revisar su UI de consulta externa y decidir si esos datos se integran en el panel existente. Ninguna PR de integración se ha fusionado en `main`.
 
 ## Documentación
 

@@ -6,7 +6,7 @@ const corpus=require("../src/lore-corpus.js");
 const archive=require("../src/character-archive.js");
 const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
-const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md"];
+const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md"];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
@@ -17,11 +17,13 @@ const profilePaths=[
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
 assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
-assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,58,"The official-source registry should hold the extended character catalog.");
+assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,59,"The official-source registry should hold the extended character catalog.");
 assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-ASFI-AL-ANDROMEDA").voice,"Ai Kayano");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-DIONYSUS").voice,"Masaya Matsukaze");
-assert.ok(archive.list(index).length >= 58,"The directory should include the expanded S4/S5 and Sword Oratoria cast, beyond the 12 deep dossiers.");
+assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("DM-CHAR-EINA").imageProvider,"community","Eina’s community portrait must be labelled as non-official.");
+assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("DM-CHAR-EINA").sourcePage.includes("danmachi.fandom.com"));
+assert.ok(archive.list(index).length >= 59,"The directory should include the expanded S4/S5 and Sword Oratoria cast, beyond the 12 deep dossiers.");
 const addedCast=["CHAR-DAPHNE-LAUROS","CHAR-CASSANDRA-ILION","CHAR-KASHIMA-OUKA","CHAR-HITACHI-CHIGUSA","CHAR-AISHA-BELKA","CHAR-LUVIS-LILIX","CHAR-DORMUL-BOLSTER","CHAR-MARI-XENOS","CHAR-NEOIN-UNICK","CHAR-NEESE-RANQUETTE","CHAR-ASTA-NOX","CHAR-LIANA-LEETS","CHAR-SELTTY-THROA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE","CHAR-LULUNE-LOUIE","CHAR-TSUBAKI-COLBRANDE"];
 for(const id of addedCast){
   assert.ok(archive.list(index).some(character=>character.id===id),"Expanded roster must expose "+id);
@@ -118,7 +120,8 @@ assert.ok(extendedBell.sections.some(section=>section.title==="Anclas de continu
 const filtered=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","safe-only");
 assert.ok(!filtered.moments.some(m=>m.id==="ryu-seven-days"));
 assert.equal(archive.list(index,{query:"Ryu"}).filter(c=>c.id==="CHAR-RYUU-LION").length,1);
-assert.ok(ryu.missingContinuities.includes("CONT-MAIN-LN")&&ryu.missingContinuities.includes("CONT-AU"));
+assert.ok(!ryu.missingContinuities.includes("CONT-MAIN-LN"),"Ryu now has source-backed main-light-novel dossier coverage.");
+assert.ok(ryu.missingContinuities.includes("CONT-AU"),"The unsupported Astrea AU continuity must remain missing.");
 // Expanded character profiles consume existing curated claims rather than inventing data.
 const directory=archive.list(index);
 for(const id of ["DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR"]){

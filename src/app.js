@@ -1881,16 +1881,21 @@
     const mayUseOfficialPortrait = selectedContinuity === "ALL" || selectedContinuity === "CONT-ANIME";
     const officialSource = historicalReference ? official.historicalImageUrl
       : mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
+    const isCommunityImage = Boolean(official && (official.imageProvider === "community" || /fandom\.com|wikia\.nocookie\.net/i.test(official.sourcePage || "")));
+    const portraitSourceLabel = isCommunityImage ? "REFERENCIA COMUNITARIA · NO OFICIAL" : "IMAGEN OFICIAL · ENLACE EXTERNO";
+    node.dataset.imageProvider = officialSource ? (isCommunityImage ? "community" : "official") : fallbackSource ? "local" : "none";
+    node.dataset.sourceProvider = historicalReference ? "official" : (official && official.imageProvider) || (officialSource ? "official" : fallbackSource ? "local" : "none");
     const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
     node.setAttribute("role", "img");
     node.setAttribute("aria-label", officialSource
       ? (historicalReference ? "Retrato oficial de referencia de DanMachi IV; no específico de la época " + selectedContinuity + "."
+        : isCommunityImage ? "Retrato de referencia tomado de una wiki comunitaria; no es una imagen oficial. La fuente comunitaria se cita en la ficha."
         : "Retrato oficial enlazado desde " + (official.sourcePage || "la web oficial") + "; derechos de terceros.")
       : fallbackSource ? "Ilustración vectorial conceptual original de " + name + ", no oficial."
       : "Inicial representativa de " + name + "; no hay retrato verificado disponible.");
     const caption = large ? archiveElement("span","archive-portrait-caption",
       historicalReference ? "REFERENCIA VISUAL OFICIAL · NO ESPECÍFICA DE ÉPOCA"
-        : officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
+        : officialSource ? portraitSourceLabel : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
     function showInitial() {
       node.replaceChildren(archiveElement("span","",initial));
       if (large) node.appendChild(archiveElement("span","archive-portrait-caption","SIN RETRATO DISPONIBLE"));
@@ -1910,11 +1915,12 @@
         if (portraitImage.dataset.customArt === "true" && (officialSource || fallbackSource)) {
           portraitImage.dataset.customArt = "false";
           portraitImage.src = officialSource || fallbackSource;
-          if (caption) caption.textContent = officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
+          if (caption) caption.textContent = officialSource ? portraitSourceLabel : "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
           return;
         }
         if (officialSource && fallbackSource && portraitImage.src !== new URL(fallbackSource, window.location.href).href) {
           portraitImage.src = fallbackSource;
+          node.dataset.imageProvider = "local";
           node.setAttribute("aria-label","Ilustración conceptual local de " + name + ", no oficial; el retrato externo no cargó.");
           if (caption) caption.textContent = "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
           return;
@@ -1948,6 +1954,7 @@
           }
           image.dataset.customArt = "true";
           image.src = asset.src;
+          target.dataset.imageProvider = "custom-local";
           target.setAttribute("aria-label", "Arte personalizado asignado a " + name + ".");
           const targetCaption = target.querySelector(".archive-portrait-caption");
           if (targetCaption) targetCaption.textContent = "ARTE PERSONALIZADO · BIBLIOTECA LOCAL";

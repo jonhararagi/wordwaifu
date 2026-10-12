@@ -1,4 +1,5 @@
 const assert = require("node:assert/strict");
+require("../src/official-character-roster.js");
 const fs = require("node:fs");
 const path = require("node:path");
 const corpus = require("../src/lore-corpus.js");
@@ -7,13 +8,21 @@ const catalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf
 const documentPaths = [
   "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
   "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
-  "research/inbox/BATCH-DM-005-astrea-familia-network.md"
+  "research/inbox/BATCH-DM-005-astrea-familia-network.md",
+  "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
-assert.equal(index.sourceClaimCount, 32);
-assert.equal(index.entryCount, 35);
+assert.ok(index.sourceClaimCount > 32, "Roster-backed claims must expand source coverage.");
+assert.ok(index.entryCount > 35, "Continuity-scoped roster dossier claims must be indexed.");
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
+const rosterClaims = index.claims.filter(claim => claim.claimId.startsWith("DMR-008-CLM-"));
+assert.ok(rosterClaims.length > 0, "Roster dossiers must become searchable claims.");
+assert.ok(rosterClaims.some(claim => claim.sourceIds.includes("DMR-007-SRC-001") &&
+  claim.sourceType === "SECONDARY" && claim.confidenceNote.includes("fuente secundaria")),
+  "Community-wiki claims must retain secondary-source labeling and limitations.");
+assert.ok(rosterClaims.some(claim => claim.continuityScopes.includes("CONT-MAIN-LN")),
+  "Generated claims must preserve main-light-novel continuity.");
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
 assert.ok(historicalRyu.totalMatches > 0);
@@ -27,8 +36,11 @@ assert.ok(!animeRyu.results.some(claim => claim.entryId.endsWith("--CONT-AR")));
 const aisLikes = corpus.search(index, { query: "", characterId: "DM-CHAR-AIS", continuity: "ALL", period: "ALL", aspect: "likes", spoiler: "all" });
 assert.equal(aisLikes.totalMatches, 0);
 assert.equal(aisLikes.abstain, true);
-const unsupportedNovel = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
-assert.equal(unsupportedNovel.totalMatches, 0);
+const mainNovelRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(mainNovelRyu.totalMatches > 0, "Ryu's sourced main-novel dossier must be searchable in its own continuity.");
+assert.ok(mainNovelRyu.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")));
+assert.ok(mainNovelRyu.results.some(claim => claim.sourceType === "SECONDARY" &&
+  claim.confidenceNote.includes("fuente secundaria")));
 
 const aliseHistorical = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseHistorical.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-AR"));
