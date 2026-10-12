@@ -61,7 +61,9 @@
   }
 
   async function readOne(key) {
-    if (memoryCache.has(key)) return memoryCache.get(key);
+    // The cache is only a hint, not the source of truth: another tab may have
+    // saved a newer fallback copy or written an IndexedDB deletion tombstone.
+    // Always reconcile persistent stores before returning an assignment.
     let indexedValue = null;
     try {
       const db = await openDatabase();
