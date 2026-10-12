@@ -3,16 +3,16 @@
 ## Resumen
 - Producto: WordWaifu · World & Story Foundry.
 - Objetivo: aplicación local/offline-first para organizar universos, canon, atlas temporal, personajes, relaciones, acontecimientos, organizaciones e historias/novelas.
-- **Avance global estimado: 19%** de la visión completa; estimación de alcance, no métrica de líneas de código ni de cobertura.
+- **Avance global estimado: pendiente de recalcular.** El 19% de la actualización del 2026-10-10 es una estimación histórica y no mide el estado integrado actual.
 - Tecnología: HTML/CSS/JavaScript, SVG, IndexedDB y respaldo de compatibilidad en localStorage.
-- WordWaifu gestiona canon y planificación narrativa; BotImagen gestiona recursos visuales. La integración todavía no está implementada.
+- El árbol integrado ya incluye el Panel de arte (Art Studio) con IndexedDB y respaldo local, además del atlas, papelera, archivo de personajes y expedientes ampliados. La integración externa con BotImagen y las capacidades avanzadas de Novel Studio siguen pendientes.
 
 ## GitHub y control de cambios
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama activa WF-004-C.3: `work/wf-004-c3-project-trash`.
-- `main`: `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
-- Comparación comprobada el 2026-10-10: rama de trabajo **por delante de main / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
-- PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar; su head corresponde a otra rama. PR #3: [abierto, no fusionado](https://github.com/jonhararagi/wordwaifu/pull/3), head `work/wf-004-c3-project-trash`; no fue creado ni modificado en esta iteración. No se abrió otro PR ni se hizo merge.
+- Rama candidata de integración del producto: `work/integration-mainline-2026-10` (PR #14). La rama de validación de origen `work/integration-validation-fixes-2026-10` se conserva como referencia.
+- `main` verificada el 2026-10-12: `c07ef226a61ad6e48b081890f1e3d96eecb585b5` (sin cambios en esta integración).
+- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), abierto contra `main`, no fusionado, `mergeable=true`; HEAD de código `7cf83c63c8d263eb54a5ab8650bbd4872551448b`.
+- PR #1, #3, #7, #9, #10 y #12: cerradas como rutas supersedidas, no fusionadas; se conservan las ramas de origen. PR #11: fusionada en la rama de integración de trabajo, no en `main`. No se ha desplegado.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
 - Workflow de validación configurado para pushes en `main` y `work/**`, PR hacia `main` y `workflow_dispatch`: [`4502475`](https://github.com/jonhararagi/wordwaifu/commit/4502475cdf9b536c0c5d6dbf51a83efc7408ae6d).
@@ -25,9 +25,12 @@
 - **WF-004-C.1 · PARCIAL:** snapshots versionados, migración IndexedDB v1→v2, restauración con copia previa y respaldo antes de importar.
 - **WF-004-C.2 · DONE / PASS_REAL histórico:** snapshots previos verificados para los cinco tipos de borrado; límite 25/26 validado. Evidencia histórica: [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita cambios posteriores de C.3.
 
-## HEAD de código validado más reciente
-- SHA: `327360caa66875becbd11e5563fc2988196553a4`.
-- CI: [#38022402137 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137).
+## HEAD de integración validado más reciente
+- SHA: `7cf83c63c8d263eb54a5ab8650bbd4872551448b`.
+- [Validate WordWaifu — PR run 38280567102 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38280567102).
+- [Validate WordWaifu — push run 38280558226 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38280558226).
+- [DanMachi Lore and Retrieval Integrity — run 38280567224 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38280567224).
+- Chromium confirma CRUD del Panel de arte en IndexedDB y respaldo local, fallos simulados sin falso éxito, papelera y snapshots, expedientes ampliados y recuperación separada de Ryu en `CONT-AR` y `CONT-ANIME`.
 
 ## WF-004-C.3 — Papelera y recuperación (PARTIAL)
 - IndexedDB v2→v3 añade el almacén `trash`; la API y la UI permiten enviar proyectos a la papelera, listar, restaurar por ID y borrar permanentemente con confirmación.
@@ -47,7 +50,7 @@
 - [ ] Cuota real agotada o limitación del entorno demostrada y documentada; excepciones inyectadas no equivalen a cuota real.
 - [ ] Revisión visual/manual en Windows 11.
 ## Límites conocidos del producto
-- Novel Studio completo, generación narrativa avanzada, Continuity Guard integral e integración con BotImagen siguen pendientes.
+- Novel Studio completo, generación narrativa avanzada, Continuity Guard integral e integración externa con BotImagen siguen pendientes. El Panel de arte local ya está integrado en la rama candidata; no equivale a una integración externa con BotImagen.
 - La inspección visual manual en Windows 11 no está acreditada.
 - WF-004-C.3 permanece parcial hasta superar los gates pendientes.
 
