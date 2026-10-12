@@ -136,6 +136,8 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyRevealClues']").inputValue(), "Las cartas comparten un símbolo antiguo y reaccionan antes de que se anuncie cada duelo.");
     assert.equal(await page.locator("#story-meta-form [name='storyRevealTiming']").inputValue(), "Final del segundo arco, tras descubrirse el archivo original.");
     assert.equal(await page.locator("#story-meta-form [name='storyRevealConsequences']").inputValue(), "Las reglas del juego cambian y los rivales deben decidir si cooperan.");
+    assert.equal(await page.locator("#story-meta-form [name='storyPantheon']").inputValue(), "Diosa A: quiere recuperar su libertad, discute con el protagonista y protege a una amiga por una deuda antigua.");
+    assert.equal(await page.locator("#story-meta-form [name='storyEnsemble']").inputValue(), "Piloto: teme fallar | rivalidad con el equipo | salva a un compañero | aprende a confiar | capítulos 2 y 5.");
     assert.ok((await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue()).includes("III ya no puede desactivarse"), "power evolution and irreversible stage must persist");
     // Power idea generator appends varied proposals without overwriting the user's hand-written Geass.
     await page.locator("#story-power-generate-button").click();
