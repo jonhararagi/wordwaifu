@@ -178,11 +178,20 @@
     if (!q) return records.slice(0, 80);
     const tokens = q.split(/\s+/).filter(Boolean);
     return records.map(entity => {
-      const haystack = normal([entity.name, ...(entity.aliases || []), entity.type, entity.summary, entity.description, entity.personality, entity.abilities, entity.affiliation, entity.continuity].join(" "));
+      const haystack = normal([
+        entity.name, ...(entity.aliases || []), entity.type, entity.summary, entity.description,
+        entity.appearance, entity.history, entity.personality, entity.relationships, entity.conflict,
+        entity.goals, entity.values, entity.fear, entity.characterArc, entity.knowledgeScope,
+        entity.abilities, entity.activation, entity.cost, entity.limits, entity.evolution,
+        entity.consequences, entity.contract, entity.inspiration, entity.affiliation,
+        entity.continuity, entity.status, entity.sourceTitle, entity.notes
+      ].join(" "));
       const matched = tokens.every(token => haystack.includes(token));
       const exact = normal(entity.name) === q ? 30 : normal(entity.name).startsWith(q) ? 15 : 0;
       return { entity, score:matched ? exact + tokens.length * 2 : -1 };
-    }).filter(item => item.score >= 0).sort((a,b)=>b.score-a.score || a.entity.name.localeCompare(b.entity.name,"es")).slice(0,80).map(item=>item.entity);
+    }).filter(item => item.score >= 0)
+      .filter(item => !settings.continuity || settings.continuity === "all" || String(item.entity.continuity || "").includes(settings.continuity))
+      .sort((a,b)=>b.score-a.score || a.entity.name.localeCompare(b.entity.name,"es")).slice(0,80).map(item=>item.entity);
   }
   function getEntity(id) { return allEntities().find(entity => entity.id === id) || null; }
   function getRelated(id, options) {
@@ -192,7 +201,7 @@
       const forward = edge.from === id, targetId = forward ? edge.to : edge.from;
       const target = byId.get(targetId);
       return target ? { ...edge, direction:forward ? "outgoing" : "incoming", targetId, targetName:target.name, targetType:target.type, targetUniverse:target.universe, target } : null;
-    }).filter(Boolean).filter(item => !options || options.continuity === "all" || !options.continuity || item.continuity === options.continuity)
+    }).filter(Boolean).filter(item => !options || options.continuity === "all" || !options.continuity || String(item.continuity || "").includes(options.continuity))
       .sort((a,b)=>(a.targetName||"").localeCompare(b.targetName||"","es"));
   }
   function coverage() {
