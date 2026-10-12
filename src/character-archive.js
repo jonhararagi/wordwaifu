@@ -164,9 +164,9 @@ if(scopes.length&&!scopes.includes(continuity))return base;
 const sections=(doc.sections||[]).filter(section=>{
   const heading=String(section.heading||"");
   if(/perfil psicol[oó]gico inicial/i.test(heading))return false;
-  if(/temporal state a|estado hist[oó]rico|astrea record/i.test(heading)&&/temporal state b|anime/i.test(heading))return false;
-  if(/temporal state a|estado hist[oó]rico|astrea record/i.test(heading)&&continuity!=="CONT-AR")return false;
-  if(/temporal state b|official anime|adaptaci[oó]n anime/i.test(heading)&&continuity!=="CONT-ANIME")return false;
+  if(/(?:temporal state a|estado temporal a|estado hist[oó]rico|astrea record)/i.test(heading)&&/(?:temporal state b|estado temporal b|anime)/i.test(heading))return false;
+  if(/(?:temporal state a|estado temporal a|estado hist[oó]rico|astrea record)/i.test(heading)&&continuity!=="CONT-AR")return false;
+  if(/(?:temporal state b|estado temporal b|official anime|perfil oficial del anime|adaptaci[oó]n anime|perfil oficial de adaptaci[oó]n)/i.test(heading)&&continuity!=="CONT-ANIME")return false;
   if(/perfil oficial de adaptaci[oó]n/i.test(heading)&&continuity!=="CONT-ANIME")return false;
   return true;
 }).map(section=>({title:section.heading,text:section.text,source:"existing-repository-profile"}));
