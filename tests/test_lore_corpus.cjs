@@ -47,28 +47,41 @@ process.stdout.write("PASS lore search: 32 source claims, 35 entries, continuity
   const requestedUrls = [];
   const mockFetch = async input => {
     const url = new URL(input); requestedUrls.push(url);
-    if (url.hostname === "danmachi.fandom.com") return {
-      ok:true,status:200,json:async()=>({query:{search:[{
-        title:"Ryuu Lion",
+    const action=url.searchParams.get("action"), prop=url.searchParams.get("prop");
+    if (url.hostname === "danmachi.fandom.com") {
+      if(action==="parse") return {ok:true,status:200,json:async()=>({parse:{text:{"*":"<div><aside>Infobox data is not the lead.</aside><p>Ryuu Lion is an elven adventurer formerly affiliated with Astrea Familia.</p><p>She later works at the Hostess of Fertility and has a complicated history with Bell Cranel.</p></div>"}}})};
+      if(action==="query"&&prop==="pageimages|info") return {ok:true,status:200,json:async()=>({query:{pages:{"2264":{pageid:2264,title:"Ryuu Lion",canonicalurl:"https://danmachi.fandom.com/wiki/Ryuu_Lion",thumbnail:{source:"https://static.wikia.nocookie.net/dungeon-ni-deai-o-motemeru/images/3/33/Ryuu.png"}}}}})};
+      return {ok:true,status:200,json:async()=>({query:{search:[{
+        pageid:2264,title:"Ryuu Lion",
         snippet:'<span class="searchmatch">Ryuu Lion</span> appears in Astrea Record &amp; the main series.',
         timestamp:"2025-01-01T00:00:00Z"
-      }]}})
-    };
-    if (url.hostname === "en.wikipedia.org") return {
-      ok:true,status:200,json:async()=>({query:{search:[{title:"Is It Wrong to Try to Pick Up Girls in a Dungeon?",snippet:"A Japanese light novel series."}]}})
-    };
+      }]}})};
+    }
+    if (url.hostname === "en.wikipedia.org") {
+      if(action==="parse") return {ok:true,status:200,json:async()=>({parse:{text:{"*":"<div><p>Is It Wrong to Try to Pick Up Girls in a Dungeon? is a Japanese light novel series written by Fujino Omori.</p></div>"}}})};
+      if(action==="query"&&prop==="pageimages|info") return {ok:true,status:200,json:async()=>({query:{pages:{"100":{pageid:100,title:"Is It Wrong to Try to Pick Up Girls in a Dungeon?",canonicalurl:"https://en.wikipedia.org/wiki/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a_Dungeon",thumbnail:{source:"https://upload.wikimedia.org/wikipedia/en/a/a2/Danmachi.jpg"}}}}})};
+      return {ok:true,status:200,json:async()=>({query:{search:[{pageid:100,title:"Is It Wrong to Try to Pick Up Girls in a Dungeon?",snippet:"A Japanese light novel series."}]}})};
+    }
     throw new Error("Unexpected mock host: "+url.hostname);
   };
   const externalReport=await corpus.searchExternalSources("Ryu Lion",{fetchImpl:mockFetch});
-  assert.equal(requestedUrls.length,2);
+  const searchRequests=requestedUrls.filter(url=>url.searchParams.get("list")==="search");
+  assert.equal(searchRequests.length,2);
   assert.ok(requestedUrls.every(url=>url.searchParams.get("origin")==="*"));
-  assert.ok(requestedUrls.every(url=>url.searchParams.get("srsearch")==="Ryu Lion"));
+  assert.ok(searchRequests.every(url=>url.searchParams.get("srsearch")==="Ryu Lion"));
   assert.equal(externalReport.results.length,2);
   assert.ok(externalReport.results.every(result=>result.authority.includes("secundaria")));
   assert.ok(externalReport.results[0].snippet.includes("Ryuu Lion"));
   assert.ok(!externalReport.results[0].snippet.includes("<span"));
   assert.ok(externalReport.results[0].snippet.includes("& the main series."));
+  assert.ok(externalReport.results[0].extract.includes("elven adventurer"),"External lookup should include a useful article lead, not only the short search snippet.");
+  assert.ok(externalReport.results[0].thumbnailUrl.startsWith("https://static.wikia.nocookie.net/"),"Wiki images should appear as secure external thumbnail links.");
+  assert.ok(externalReport.results[0].imageCredit.includes("rights of image owners")===false,"Image credit text must not claim ownership of fan art.");
+  assert.ok(externalReport.results[1].thumbnailUrl.startsWith("https://upload.wikimedia.org/"));
   assert.equal(externalReport.hasFailures,false);
+  assert.equal(corpus.allowedExternalImageUrl("http://evil.example/a.png","danmachi-wiki"),"");
+  assert.equal(corpus.allowedExternalImageUrl("https://evil.example/a.png","danmachi-wiki"),"");
+  assert.ok(corpus.extractExternalLead("<aside><p>hidden infobox content</p></aside><p>This paragraph is useful and long enough to be used as a visible article lead in the external research panel.</p>").includes("useful"));
   const partialFailure=await corpus.searchExternalSources("Ais",{fetchImpl:async input=>{
     const url=new URL(input);
     if(url.hostname==="danmachi.fandom.com")return{ok:false,status:503,json:async()=>({})};
