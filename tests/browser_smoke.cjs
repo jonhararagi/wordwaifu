@@ -1508,6 +1508,73 @@ async function run() {
     assert.equal(malformedBackupReport.trashPreserved, true);
     assert.equal(malformedBackupReport.malformedBackupPreserved, true, "Unknown backup data must not be silently removed.");
     process.stdout.write("PASS trash malformed backup: unknown backup preserved and permanent deletion blocked.\\n");
+    // Simulate localStorage quota without mutating browser-global storage or filling a profile.
+    const projectQuotaReport = await page.evaluate(async () => {
+      const source = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const candidate = JSON.parse(JSON.stringify(source));
+      candidate.project = { ...candidate.project, id: "quota-project-" + Date.now().toString(36), name: "Proyecto con cuota limitada" };
+      const sibling = JSON.parse(JSON.stringify(source));
+      sibling.project = { ...sibling.project, id: "quota-sibling-" + Date.now().toString(36), name: "Proyecto hermano intacto" };
+      const storageKey = "quota-test-backup";
+      const originalBackup = JSON.stringify(sibling);
+      const memory = new Map([[storageKey, originalBackup]]);
+      const quotaStorage = {
+        getItem: (key) => memory.has(key) ? memory.get(key) : null,
+        setItem: () => { throw new DOMException("Quota exceeded (simulated)", "QuotaExceededError"); },
+        removeItem: (key) => memory.delete(key)
+      };
+      const databaseName = "wordwaifu.quota-test." + Date.now().toString(36);
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository({ databaseName, storageKey, localStorage: quotaStorage });
+      const db = await repository.open();
+      await new Promise((resolve, reject) => {
+        const tx = db.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId: sibling.project.id, data: sibling });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Quota fixture seed failed."));
+        tx.onabort = () => reject(tx.error || new Error("Quota fixture seed aborted."));
+      });
+      const saved = await repository.saveActive(candidate);
+      const persisted = await repository.read("projects", candidate.project.id);
+      const siblingPersisted = await repository.read("projects", sibling.project.id);
+      const backupPreserved = memory.get(storageKey) === originalBackup;
+      repository.close();
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(databaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Quota fixture cleanup failed."));
+        request.onblocked = () => reject(new Error("Quota fixture cleanup blocked."));
+      });
+      const noStorageKey = "quota-double-failure-backup";
+      const previous = JSON.stringify(sibling);
+      const failingStorage = {
+        getItem: (key) => key === noStorageKey ? previous : null,
+        setItem: () => { throw new DOMException("Quota exceeded (simulated)", "QuotaExceededError"); },
+        removeItem: () => { throw new Error("Unexpected backup removal"); }
+      };
+      const unavailableIndexedDB = { open: () => { throw new Error("IndexedDB unavailable (simulated)"); } };
+      const fallbackRepository = new window.WordWaifuProjectRepository.ProjectRepository({ indexedDB: unavailableIndexedDB, storageKey: noStorageKey, localStorage: failingStorage });
+      let doubleFailureRejected = false;
+      let doubleFailureMessage = "";
+      try { await fallbackRepository.saveActive(candidate); }
+      catch (error) { doubleFailureRejected = true; doubleFailureMessage = error.message; }
+      return {
+        backend: saved.backend, backupWritten: saved.backupWritten, warning: saved.warning,
+        indexedDBRecordPersisted: Boolean(persisted && persisted.data.project.id === candidate.project.id),
+        siblingPreserved: Boolean(siblingPersisted && siblingPersisted.data.project.id === sibling.project.id),
+        previousBackupPreserved: backupPreserved,
+        doubleFailureRejected, doubleFailureMessage, doubleFailureBackupPreserved: failingStorage.getItem(noStorageKey) === previous
+      };
+    });
+    assert.equal(projectQuotaReport.backend, "indexeddb", "A verified IndexedDB write may succeed when only the compatibility backup hits quota.");
+    assert.equal(projectQuotaReport.backupWritten, false);
+    assert.match(projectQuotaReport.warning, /QuotaExceededError|Quota exceeded/i, "The localStorage quota failure must be surfaced as a warning.");
+    assert.equal(projectQuotaReport.indexedDBRecordPersisted, true, "The primary record must be verified before reporting an IndexedDB save.");
+    assert.equal(projectQuotaReport.siblingPreserved, true, "Quota handling must not overwrite another project.");
+    assert.equal(projectQuotaReport.previousBackupPreserved, true, "A failed quota write must preserve the previous local backup.");
+    assert.equal(projectQuotaReport.doubleFailureRejected, true, "If IndexedDB and localStorage both fail, saveActive must reject instead of claiming success.");
+    assert.match(projectQuotaReport.doubleFailureMessage, /Fallaron IndexedDB y localStorage/i);
+    assert.equal(projectQuotaReport.doubleFailureBackupPreserved, true, "The previous backup must survive a double storage failure.");
+    process.stdout.write("PASS_SIMULATED: project storage quota failure is surfaced; durable IndexedDB save and double-failure rejection preserve prior data.\\n");
 
     const forestMarker = page.locator('g.map-marker[data-location="loc-velado"]').first();
     await forestMarker.click();
