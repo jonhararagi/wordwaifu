@@ -158,6 +158,11 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
+    const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
+    assert.ok(ryuHistoricalPortrait.includes("ryu-lion.svg"), "Historical Ryu must use the conceptual local portrait, not DanMachi V art.");
+    await page.locator("#archive-tab-summary").click();
+    assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 0,
+      "DanMachi V character data must not leak into the historical Astrea Record dossier.");
     // Expanded reading must open a modal with a Spanish community reference and preserve continuity context.
     await page.locator("#archive-profile-panel [data-archive-more-info]").click();
     await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, { timeout: 3000 });
@@ -210,6 +215,11 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
     assert.ok((await page.locator("#archive-profile-summary").innerText()).includes("Hostess of Fertility"));
+    const ryuAnimePortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
+    assert.ok(ryuAnimePortrait.includes("chara_tachi_18.png"), "Ryu's anime state should use the official DanMachi V image.");
+    await page.locator("#archive-tab-summary").click();
+    assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 1,
+      "Official adaptation details should appear only in the anime continuity.");
     await page.locator("#archive-tab-relationships").click();
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("No hay relaciones interpersonales documentadas"));
     assert.equal(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count(), 0);
@@ -235,7 +245,7 @@ async function run() {
     await page.locator("#archive-return-search").click();
     assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
-    // Newly curated profiles have local original SVG portraits rather than broken or empty remote images.
+    // The newly curated anime roster loads an official image from its source host.
     await page.locator("#character-archive-query").fill("Bell Cranel");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
     const bellCardSelector = "#character-archive-results .archive-character-card:has([data-archive-open='DM-CHAR-BELL'])";
