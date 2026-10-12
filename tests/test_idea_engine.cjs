@@ -45,3 +45,14 @@ assert.match(serious.story.description, /consecuencias son reales y persistentes
 const comedy = generate({ premise, genre: "comedy", tone: "comedy" });
 assert.match(comedy.story.description, /El absurdo domina el ritmo/);
 process.stdout.write("PASS_STATIC: idea engine generates a premise, 3 goddess archetypes, a protagonist, companion, antagonist, opening scene and tonal dramatic core.\n");
+
+const traitDriven = generate({ premise: "Un protagonista inteligente, miedoso y perezoso debe salvar el día.", traits: { courage: 20, fear: 80, intelligence: 90, attitude: 10, empathy: 55 }, world: "magic-school", dynamic: "reluctant-hero", worldRules: "La magia requiere contratos y toda promesa tiene un precio." });
+assert.ok(traitDriven.story.description.includes("Miedoso y apático"));
+assert.ok(traitDriven.story.description.includes("La magia requiere contratos"));
+assert.ok(traitDriven.story.description.includes("DINÁMICA: una mente brillante evita el esfuerzo"));
+assert.equal(traitDriven.traits.intelligence, 90);
+const malfoy = generate({ premise: "En un fanfic de Harry Potter, renazco como Draco Malfoy pero siendo mujer y ahora intento llevarme bien con Harry Potter sin darme cuenta de que está enamorado de mí.", mode: "fanfic", continuity: "Harry Potter · Hogwarts", gender: "woman", dynamic: "secret-crush", world: "magic-school" });
+assert.equal(malfoy.characters[0].name, "Draco Malfoy");
+assert.ok(malfoy.characters.some((character) => character.name === "Harry Potter"));
+assert.ok(malfoy.story.description.includes("empieza a enamorarse de ella"));
+assert.ok(malfoy.story.description.includes("DINÁMICA EN ESCENA"));
