@@ -68,8 +68,21 @@
     const seed = hash(prompt + "|" + (input.genre || "balanced") + "|" + (input.tone || "balanced") + "|" + generation++);
     const gamerPremise = /(gamer|videojuego|videojuegos|jugador|isekai|konosuba)/i.test(prompt);
     const divinePremise = /(diosas?|deidades|pante[oó]n|mitolog[ií]a maya)/i.test(prompt);
+    const novelistPremise = /(novelista|novelista|escritor|escribe novelas)/i.test(prompt);
+    const npcPremise = /\\bNPC\\b|personaje no jugable|personaje secundario/i.test(prompt);
+    const motherlyPremise = /madre protectora|maternal|actuando como una madre|figura materna|protectora/i.test(prompt);
+    const milfPremise = /\\bMILF\\b|mujeres maduras|mujer madura|maduras/i.test(prompt);
     const protagonistBank = gamerPremise ? banks.protagonists : banks.generalProtagonists;
-    const protagonist = { ...pick(protagonistBank, seed), id: "char-gen-protagonist-" + seed };
+    const protagonist = novelistPremise
+      ? {
+          name: "Damián Varela",
+          role: npcPremise ? "novelista reencarnado que interpreta a un NPC universitario" : "novelista reencarnado",
+          personality: "observador, teatral y experto en clichés románticos; confunde leer a la gente con entenderla",
+          flaw: "trata las relaciones como escenas que puede dirigir y esconde sus inseguridades detrás de un papel",
+          motivation: motherlyPremise ? "proteger al grupo y ganarse su confianza sin revelar que interpreta un personaje" : "escribir una vida nueva que no dependa de los finales que conoce",
+          id: "char-gen-protagonist-" + seed
+        }
+      : { ...pick(protagonistBank, seed), id: "char-gen-protagonist-" + seed };
     const goddesses = divinePremise
       ? banks.goddesses.map((item, index) => ({ ...item, id: "char-gen-goddess-" + seed + "-" + index }))
       : [];
@@ -102,6 +115,9 @@
     const hook = divinePremise
       ? protagonist.name + ", " + protagonist.role + ", recibe una misión de " + groupNames + ". Las tres aceptan ayudar, pero ninguna coincide en qué significa salvar el mundo."
       : protagonist.name + ", " + protagonist.role + ", reúne a " + groupNames + " para resolver una crisis que parece sencilla hasta que cada integrante aplica su propia idea de lo correcto.";
+    const specializedHook = novelistPremise
+      ? "En su vida anterior, " + protagonist.name + " era novelista y jugador obsesionado con arquetipos románticos de mujeres adultas maduras. Reencarnado en otro mundo, adopta el papel de NPC de una universidad y ensaya una estrategia desconcertante: llamar la atención de las heroínas mediante una actitud protectora, casi maternal. Cree que está interpretando un papel perfecto; ellas empiezan a detectar las grietas entre su fachada y su verdadera personalidad."
+      : "";
     const groupDynamic = divinePremise
       ? protagonist.name + " (" + protagonist.personality + ") intenta convertir la misión en una partida explotable. " + goddesses[0].name + " quiere preservar los destinos, " + goddesses[1].name + " insiste en que todo puede crecer de nuevo y " + goddesses[2].name + " oculta una cláusula del pacto. " + companion.name + " aporta una solución que funciona por el motivo equivocado; " + antagonist.name + " parece un burócrata ridículo, pero puede ejecutar una amenaza real."
       : protagonist.name + " (" + protagonist.personality + ") choca con " + party[0].name + ", " + party[1].name + " y " + party[2].name + ": cada uno tiene una habilidad útil y un defecto que convierte las soluciones simples en nuevos problemas. " + antagonist.name + " parece ridículo, pero su objetivo tiene consecuencias reales.";
@@ -113,8 +129,8 @@
         "CONTINUIDAD / MUNDO: " + (continuity || (mode === "fanfic" ? "Por especificar; no asumir datos de canon." : "Universo original por desarrollar.")),
         "GÉNERO: " + genre,
         "PREMISA DEL AUTOR: " + premiseText,
-        "GANCHO: " + hook,
-        "REPARTO Y TENSIONES: " + groupDynamic,
+        "GANCHO: " + (specializedHook || hook),
+        "REPARTO Y TENSIONES: " + groupDynamic,\n        "CONTRADICCIÓN DEL PROTAGONISTA: " + (novelistPremise ? "Quiere pasar inadvertido como NPC, pero su instinto de novelista lo lleva a preparar encuentros, diálogos y rescates demasiado convenientes. Su gusto por las mujeres adultas maduras influye en sus expectativas románticas, no le da derecho a manipular los sentimientos de nadie." : "El protagonista debe confrontar la diferencia entre su imagen pública y sus necesidades reales."),\n        "ESTRATEGIA SOCIAL: " + (motherlyPremise ? "Ofrece apoyo práctico, recuerda pequeños detalles y actúa como figura protectora; cuando intenta controlar cada resultado, las heroínas le ponen límites y debe aprender a ayudar sin decidir por ellas." : "Los vínculos se desarrollan mediante decisiones, confianza, límites y consecuencias, no por atracción automática."),\n        "COMEDIA DE PERSONAJE: " + (npcPremise ? "Cada vez que intenta actuar como un NPC de fondo, su exceso de preparación convierte una interacción corriente en una escena sospechosamente importante." : "El humor nace de la distancia entre lo que el protagonista planea y lo que realmente ocurre."),
         "CONFLICTO EXTERNO: " + complication + ".",
         "NÚCLEO EMOCIONAL: " + seriousCore + ".",
         "TONO: " + toneNote,
