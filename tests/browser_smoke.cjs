@@ -157,7 +157,33 @@ async function run() {
     await page.locator('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
-    assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
+    assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 7);
+    // Connected family explorer: Ryu -> Alise -> Astrea, with a reliable way back.
+    await page.locator("#archive-tab-family").click();
+    await page.waitForFunction(() => document.querySelector('#archive-profile-panel [data-family-id="FAM-ASTREA"]'));
+    const astreaFamilyText = await page.locator('#archive-profile-panel [data-family-id="FAM-ASTREA"]').innerText();
+    assert.ok(astreaFamilyText.includes("Integrantes con ficha disponible"));
+    assert.ok(astreaFamilyText.includes("Alise"));
+    assert.ok(astreaFamilyText.includes("Gojouno Kaguya"));
+    assert.ok(astreaFamilyText.includes("Lyra"));
+    assert.ok(astreaFamilyText.includes("Astrea deja Orario; Ryu permanece"));
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count() > 0);
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').click();
+    await page.waitForFunction(() => /Alise/.test(document.querySelector("#archive-profile-name")?.textContent || ""));
+    await page.locator("#archive-tab-family").click();
+    await page.waitForFunction(() => document.querySelector('#archive-profile-panel [data-family-id="FAM-ASTREA"]'));
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent === "Astrea");
+    await page.locator("#archive-profile-back").click();
+    await page.waitForFunction(() => /Alise/.test(document.querySelector("#archive-profile-name")?.textContent || "") &&
+      document.querySelector("#archive-tab-family")?.getAttribute("aria-selected") === "true");
+    await page.locator("#archive-profile-back").click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent === "Ryu Lion" &&
+      document.querySelector("#archive-tab-family")?.getAttribute("aria-selected") === "true");
+    process.stdout.write("PASS family explorer: Ryu -> Alise -> Astrea is navigable, family members and outcome are visible, and back restores the prior profile/tab.\\n");
+
+    const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
     const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
     assert.ok(ryuHistoricalPortrait.includes("danmachi4/character/images/chara_tachi_15.png"),
       "Historical Ryu should use the official character reference from the Astrea Record adaptation era.");
