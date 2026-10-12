@@ -64,6 +64,14 @@ El prototipo incluye atlas, CRUD de las entidades principales, relaciones, catá
 - [Modo offline](docs/OFFLINE_FIRST.md)
 - [Investigación técnica comparativa](docs/TECHNICAL_RESEARCH.md)
 
+## Archivo de historias originales
+
+- [Archivo y formato de almacenamiento](stories/README.md)
+- [Las campanas de Asteria — manuscrito completo en cuatro capítulos](stories/original/las-campanas-de-asteria.md)
+- [Paquete JSON estructurado de la historia](stories/original/las-campanas-de-asteria.json)
+
+La historia se guarda como Markdown legible y como JSON con IDs, arcos y capítulos. El editor de capítulos dentro de la aplicación aún debe integrarse; no se presenta como una función ya terminada.
+
 ## Continuidad del trabajo
 
 - [Punto de continuidad más reciente (DONE)](docs/DONE.md)
