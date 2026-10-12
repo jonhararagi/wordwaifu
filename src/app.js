@@ -2255,9 +2255,88 @@
   function closeDialogFromBackdrop(event){
     if(event.target===event.currentTarget)event.currentTarget.close();
   }
+
+  function renderArchiveFamilyCard(group,filter){
+    const card=archiveElement("article","archive-family-card");card.dataset.familyId=group.id;
+    const heading=archiveElement("div","archive-family-card-heading");
+    const title=archiveElement("div","archive-family-title");
+    title.append(archiveElement("span","archive-family-kicker",group.kind||"Grupo"),archiveElement("h4","",group.name));
+    heading.append(title,archiveBadge(group.continuity,"continuity"));card.appendChild(heading);
+    card.appendChild(archiveElement("p","archive-family-period",group.period));
+    card.appendChild(archiveElement("p","archive-family-summary",group.summary));
+    const roles=archiveElement("div","archive-family-roles");
+    if(group.leader)roles.appendChild(archiveElement("span","archive-family-role","Liderazgo: "+group.leader.name));
+    if(group.deity)roles.appendChild(archiveElement("span","archive-family-role","Diosa: "+group.deity.name));
+    else if(group.deityName)roles.appendChild(archiveElement("span","archive-family-role","Diosa: "+group.deityName+" · ficha navegable pendiente"));
+    if(roles.childNodes.length)card.appendChild(roles);
+    const members=archiveElement("div","archive-family-members");
+    group.members.forEach(member=>{
+      const person=archiveElement("article","archive-family-member");
+      person.appendChild(archivePortrait(member.id,member.name,false,group.continuity));
+      const copy=archiveElement("div","archive-family-member-copy");
+      copy.append(archiveElement("strong","",member.name),archiveElement("span","",member.role));
+      const action=archiveElement("button","archive-related-link","Abrir ficha ↗");action.type="button";
+      action.dataset.characterLink=member.id;action.dataset.linkContinuity=group.continuity;
+      copy.appendChild(action);person.appendChild(copy);members.appendChild(person);
+    });
+    card.append(archiveElement("h5","archive-family-subheading","Integrantes con ficha disponible"),members);
+    const milestones=(group.milestones||[]).filter(item=>window.WordWaifuCharacterArchive.spoilerVisible(item.spoilerLevel||"unknown",filter));
+    if(milestones.length){
+      card.appendChild(archiveElement("h5","archive-family-subheading","Historia y desenlace"));
+      const history=archiveElement("div","archive-family-milestones");
+      milestones.forEach(item=>{
+        const block=archiveElement("article","archive-family-milestone");
+        const meta=archiveElement("div","archive-family-milestone-meta");
+        meta.append(archiveElement("strong","",item.title),archiveElement("span","",item.period||"Periodo no determinado"));
+        if(item.spoilerLevel&&item.spoilerLevel!=="none")meta.appendChild(archiveBadge("Spoiler: "+item.spoilerLevel,["major","endgame"].includes(item.spoilerLevel)?"spoiler":"muted"));
+        block.append(meta,archiveElement("p","",item.text));
+        const ref=archiveElement("div","archive-source-links");
+        appendLoreLink(ref,(item.sourceKind==="community"?"Referencia comunitaria · ":"Fuente primaria · ")+(item.sourceLabel||"Consultar fuente"),item.sourceUrl,true);
+        block.appendChild(ref);history.appendChild(block);
+      });
+      card.appendChild(history);
+    }else card.appendChild(archiveEmpty("No hay acontecimientos de esta Familia visibles con el filtro de spoilers actual."));
+    if(group.sourceNote)card.appendChild(archiveElement("p","archive-family-source-note",group.sourceNote));
+    const refs=archiveElement("div","archive-source-links");
+    (group.sourceUrls||[]).forEach(ref=>appendLoreLink(refs,(ref.kind==="community"?"Wiki comunitaria · ":"Fuente oficial · ")+ref.label,ref.url,true));
+    if(refs.childNodes.length)card.appendChild(refs);
+    return card;
+  }
+  function renderArchiveFamilies(profile){
+    const root=archiveElement("div","archive-section");
+    const heading=archiveElement("div","archive-section-heading");
+    heading.append(archiveElement("h3","","Familia y entorno"),archiveElement("p","","Explorá la Familia, sus integrantes, su deidad y los acontecimientos que explican su evolución. Cada ficha se abre sin perder el camino recorrido."));
+    root.appendChild(heading);
+    const relevant=profile.families||[];
+    if(relevant.length)relevant.forEach(group=>root.appendChild(renderArchiveFamilyCard(group,$("#archive-spoiler").value)));
+    else root.appendChild(archiveEmpty("No hay una Familia vinculada con evidencia suficiente para "+profile.name+" en "+profile.continuity+". No se completan afiliaciones por suposición."));
+    const otherGroups=window.WordWaifuCharacterArchive.getGroups(loreArchiveIndex,profile.continuity).filter(group=>!relevant.some(current=>current.id===group.id));
+    if(otherGroups.length){
+      const details=archiveElement("details","archive-other-families");
+      details.appendChild(archiveElement("summary","","Otras familias registradas en esta continuidad ("+otherGroups.length+")"));
+      const list=archiveElement("div","archive-other-family-list");
+      otherGroups.forEach(group=>{
+        const row=archiveElement("article","archive-other-family");
+        const copy=archiveElement("div","archive-other-family-copy");
+        copy.append(archiveElement("strong","",group.name),archiveElement("p","",group.summary));
+        const badges=archiveElement("div","archive-badge-row");
+        badges.append(archiveBadge(group.continuity,"continuity"),archiveBadge(group.memberCount+" fichas enlazadas","muted"));
+        copy.appendChild(badges);row.appendChild(copy);
+        const linked=archiveElement("div","archive-other-family-members");
+        group.members.forEach(member=>{
+          const link=archiveElement("button","archive-related-link",member.name+" ↗");
+          link.type="button";link.dataset.characterLink=member.id;link.dataset.linkContinuity=group.continuity;linked.appendChild(link);
+        });
+        row.appendChild(linked);list.appendChild(row);
+      });
+      details.appendChild(list);root.appendChild(details);
+    }
+    return root;
+  }
+
   function renderArchiveTab(){
     const panel=$("#archive-profile-panel");if(!panel||!activeArchiveProfile)return;panel.replaceChildren();
-    const draw={summary:renderArchiveSummary,personality:renderArchivePersonality,relationships:renderArchiveRelationships,moments:renderArchiveMoments,timeline:renderArchiveTimeline,sources:renderArchiveSources};
+    const draw={summary:renderArchiveSummary,personality:renderArchivePersonality,relationships:renderArchiveRelationships,family:renderArchiveFamilies,moments:renderArchiveMoments,timeline:renderArchiveTimeline,sources:renderArchiveSources};
     panel.appendChild((draw[activeArchiveTab]||renderArchiveSummary)(activeArchiveProfile));panel.setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
   }
   function renderArchiveProfile(){
