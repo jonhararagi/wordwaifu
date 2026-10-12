@@ -10,7 +10,8 @@ const mimeTypes = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
-  ".json": "application/json; charset=utf-8"
+  ".json": "application/json; charset=utf-8",
+  ".svg": "image/svg+xml; charset=utf-8"
 };
 
 function createServer() {
@@ -109,13 +110,26 @@ async function run() {
     await page.locator('.nav-item[data-view="atlas"]').click();
     await page.locator("#global-search").fill("Ryu");
     await page.keyboard.press("Enter");
-    await page.waitForFunction(() =>
-      document.querySelector("#view-title")?.textContent === "Consulta de lore" &&
-      document.querySelector("#character-archive-query")?.value === "Ryu" &&
-      document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').length === 1,
-      null,
-      { timeout: 12000 }
-    );
+    try {
+      await page.waitForFunction(() =>
+        document.querySelector("#view-title")?.textContent === "Consulta de lore" &&
+        document.querySelector("#character-archive-query")?.value === "Ryu" &&
+        document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').length === 1,
+        null,
+        { timeout: 12000 }
+      );
+    } catch (error) {
+      const diagnostic = await page.evaluate(() => ({
+        viewTitle: document.querySelector("#view-title")?.textContent || null,
+        globalQuery: document.querySelector("#global-search")?.value || null,
+        archiveQuery: document.querySelector("#character-archive-query")?.value || null,
+        directoryStatus: document.querySelector("#archive-directory-status")?.textContent || null,
+        visibleCards: document.querySelectorAll("#character-archive-results [data-archive-open]").length,
+        pageErrors: window.__wordwaifuTestPageErrors || []
+      }));
+      process.stdout.write("GLOBAL_SEARCH_DIAGNOSTICS: " + JSON.stringify(diagnostic) + "\\n");
+      throw error;
+    }
     await page.waitForFunction(() => {
       const img = document.querySelector("#character-archive-results .archive-portrait-art");
       return !!img && img.complete && img.naturalWidth > 0;

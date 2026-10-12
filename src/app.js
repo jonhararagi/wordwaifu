@@ -2203,20 +2203,27 @@
       return;
     }
     if (!forceOpen && projectHasGlobalSearchMatch(query)) return;
+
+    // Move to the archive immediately so the search has a visible destination while its
+    // local corpus loads. Do not silently leave the user on the Atlas when there are no
+    // matching claims: the directory can explain that there are no results.
+    navigate("lore");
+    $("#archive-continuity").value = "ALL";
+    $("#archive-spoiler").value = "all";
+    $("#character-archive-query").value = query;
+    $("#character-archive-profile").classList.add("hidden");
+    $("#character-archive-directory").classList.remove("hidden");
+    $("#archive-directory-status").textContent = "Buscando en la enciclopedia de personajes…";
+
     try {
       const index = await prepareLoreView();
-      if ($("#global-search").value.trim() !== query) return;
+      if ($("#global-search").value.trim() !== query || activeView !== "lore") return;
       if (!window.WordWaifuCharacterArchive) throw new Error("El módulo de fichas no está cargado.");
-      const found = window.WordWaifuCharacterArchive.list(index, { query, continuity: "ALL", spoiler: "all" });
-      if (!found.length && !forceOpen) return;
-      navigate("lore");
-      $("#archive-continuity").value = "ALL";
-      $("#archive-spoiler").value = "all";
-      resetArchiveForGlobalSearch(query);
+      window.WordWaifuCharacterArchive.list(index, { query, continuity: "ALL", spoiler: "all" });
+      renderCharacterDirectory();
       $("#character-archive-directory").scrollIntoView({ block: "start", behavior: "auto" });
     } catch (error) {
-      if (forceOpen && $("#global-search").value.trim() === query) {
-        navigate("lore");
+      if ($("#global-search").value.trim() === query && activeView === "lore") {
         $("#archive-directory-status").textContent = "No se pudo cargar el archivo de DanMachi: " + error.message;
       }
     }
