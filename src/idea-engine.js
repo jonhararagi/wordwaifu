@@ -72,6 +72,13 @@
     const npcPremise = /\bNPC\b|personaje no jugable|personaje secundario/i.test(prompt);
     const motherlyPremise = /madre protectora|maternal|actuando como una madre|figura materna|protectora/i.test(prompt);
     const milfPremise = /\bMILF\b|mujeres maduras|mujer madura|maduras/i.test(prompt);
+    const traits = Object.fromEntries(["courage", "fear", "intelligence", "attitude", "empathy"].map((key) => {
+      const fallback = { courage: 20, fear: 50, intelligence: 80, attitude: 10, empathy: 55 }[key];
+      const value = Number(input.traits && input.traits[key]);
+      return [key, Number.isFinite(value) ? Math.max(0, Math.min(100, Math.round(value))) : fallback];
+    }));
+    const worldKey = input.world && input.world !== "auto" ? input.world : /(harry\\s*potter|hogwarts)/i.test(prompt) ? "magic-school" : /(isekai|reencarna|otro mundo)/i.test(prompt) ? "isekai" : "original";
+    const dynamicKey = input.dynamic && input.dynamic !== "auto" ? input.dynamic : /malfoy/i.test(prompt) && /harry\\s*potter|hogwarts/i.test(prompt) ? "secret-crush" : motherlyPremise ? "found-family" : traits.intelligence >= 70 && traits.attitude <= 30 ? "reluctant-hero" : "auto";
     const protagonistBank = gamerPremise ? banks.protagonists : banks.generalProtagonists;
     const protagonist = novelistPremise
       ? {
@@ -83,6 +90,32 @@
           id: "char-gen-protagonist-" + seed
         }
       : { ...pick(protagonistBank, seed), id: "char-gen-protagonist-" + seed };
+    const traitProfile = traits.courage <= 30 && traits.fear >= 60 && traits.intelligence >= 70 && traits.attitude <= 30
+      ? "Miedoso y apático, pero con una inteligencia capaz de idear soluciones inesperadas; suele encontrar la salida brillante y luego intenta evitar ser quien la ejecute."
+      : "Valentía " + traits.courage + "/100, miedo " + traits.fear + "/100, inteligencia " + traits.intelligence + "/100, ganas de actuar " + traits.attitude + "/100 y empatía " + traits.empathy + "/100.";
+    protagonist.personality += " [Perfil de rasgos: " + traitProfile + "]";
+    protagonist.traits = traits;
+    protagonist.fearDetail = String(input.fearDetail || "").trim() || (traits.fear >= 65 ? "teme fracasar delante de otros y quedar expuesto" : "teme perder aquello que considera suyo");
+    protagonist.signatureAction = String(input.signatureAction || "").trim() || (traits.intelligence >= 70 && traits.attitude <= 30 ? "idea una solución brillante y luego intenta que otra persona la ejecute" : "actúa según su temperamento, aunque complique el plan");
+    const worldProfiles = {
+      "magic-school": "MUNDO: escuela de magia con casas, jerarquías familiares, reglas institucionales y rivalidades cotidianas.",
+      isekai: "MUNDO: otro mundo con leyes propias que deben descubrirse, no asumirse por los tropos.",
+      "urban-fantasy": "MUNDO: lo sobrenatural convive con la vida moderna y sus secretos sociales.",
+      "dark-fantasy": "MUNDO: la magia tiene un precio y cada victoria deja consecuencias.",
+      scifi: "MUNDO: tecnología avanzada, recursos limitados y estructuras sociales que condicionan las decisiones.",
+      original: "MUNDO: universo original cuyas reglas deben definirse y mantenerse consistentes."
+    };
+    const dynamics = {
+      "slow-burn": "DINÁMICA: romance lento construido con actos pequeños, retrocesos y conversaciones difíciles.",
+      rivals: "DINÁMICA: rivales obligados a cooperar aprenden a confiar sin dejar de desafiarse.",
+      "secret-crush": "DINÁMICA: alguien oculta su enamoramiento y la otra persona interpreta mal sus señales.",
+      "found-family": "DINÁMICA: protección y familia encontrada; ayudar no significa controlar.",
+      "reluctant-hero": "DINÁMICA: una mente brillante evita el esfuerzo; debe decidir si acepta el costo de actuar.",
+      politics: "DINÁMICA: alianzas, reputación, secretos familiares y consecuencias públicas.",
+      survival: "DINÁMICA: sobrevivir exige cooperación, recursos limitados y decisiones difíciles."
+    };
+    const worldProfile = worldProfiles[worldKey] + (String(input.worldRules || "").trim() ? " REGLAS DEL AUTOR: " + String(input.worldRules).trim() : "");
+    const dynamicProfile = dynamics[dynamicKey] || "DINÁMICA: los vínculos cambian por acciones observables, malentendidos, límites y consecuencias.";
     const goddesses = divinePremise
       ? banks.goddesses.map((item, index) => ({ ...item, id: "char-gen-goddess-" + seed + "-" + index }))
       : [];
@@ -128,12 +161,15 @@
         "TIPO: " + (mode === "fanfic" ? "FANFIC" : "HISTORIA ORIGINAL"),
         "CONTINUIDAD / MUNDO: " + (continuity || (mode === "fanfic" ? "Por especificar; no asumir datos de canon." : "Universo original por desarrollar.")),
         "GÉNERO: " + genre,
+        worldProfile,
+        dynamicProfile,
+        "PERFIL PSICOLÓGICO: " + traitProfile + " Miedo principal: " + protagonist.fearDetail + ". Acción característica: " + protagonist.signatureAction + ".",
         "PREMISA DEL AUTOR: " + premiseText,
         "GANCHO: " + (specializedHook || hook),
         "REPARTO Y TENSIONES: " + groupDynamic,
         "CONTRADICCIÓN DEL PROTAGONISTA: " + (novelistPremise ? "Quiere pasar inadvertido como NPC, pero su instinto de novelista lo lleva a preparar encuentros, diálogos y rescates demasiado convenientes. Su gusto por las mujeres adultas maduras influye en sus expectativas románticas, no le da derecho a manipular los sentimientos de nadie." : "El protagonista debe confrontar la diferencia entre su imagen pública y sus necesidades reales."),
         "ESTRATEGIA SOCIAL: " + (motherlyPremise ? "Ofrece apoyo práctico, recuerda pequeños detalles y actúa como figura protectora; cuando intenta controlar cada resultado, las heroínas le ponen límites y debe aprender a ayudar sin decidir por ellas." : "Los vínculos se desarrollan mediante decisiones, confianza, límites y consecuencias, no por atracción automática."),
-        "COMEDIA DE PERSONAJE: " + (npcPremise ? "Cada vez que intenta actuar como un NPC de fondo, su exceso de preparación convierte una interacción corriente en una escena sospechosamente importante." : "El humor nace de la distancia entre lo que el protagonista planea y lo que realmente ocurre."),
+        "COMEDIA DE PERSONAJE: " + (npcPremise ? "Cada vez que intenta actuar como un NPC de fondo, su exceso de preparación convierte una interacción corriente en una escena sospechosamente importante." : traits.intelligence >= 70 && traits.attitude <= 30 ? "El protagonista diseña planes brillantes y luego intenta convencer al grupo de que ejecutarlos es trabajo de otra persona." : "El humor nace de la distancia entre lo que el protagonista planea y lo que realmente ocurre."),
         "CONFLICTO EXTERNO: " + complication + ".",
         "NÚCLEO EMOCIONAL: " + seriousCore + ".",
         "TONO: " + toneNote,
@@ -148,7 +184,7 @@
       generatedAt: new Date().toISOString(),
       generatedCharacters: characters.map((character) => character.id)
     };
-    return { story, characters, genre, tone, mode, continuity, complication, seriousCore, opening, seed };
+    return { story, characters, genre, tone, mode, continuity, complication, seriousCore, opening, seed, traits, worldKey, dynamicKey };
   }
 
   function characterCard(character, index) {
