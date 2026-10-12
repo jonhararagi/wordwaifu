@@ -136,7 +136,7 @@ async function run() {
     assert.ok((await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue()).length > 500,
       "Markdown import must preserve the full chapter body, not just its first paragraph.");
     assert.ok((await page.locator("#story-meta-form [name='storyArcs']").inputValue()).split("\n").length >= 4,
-      "Markdown import must preserve the protagonist arcs, not stop at the first character.");
+      "Markdown import must preserve the protagonist arcs, not stop at the first character. Actual: " + JSON.stringify(await page.locator("#story-meta-form [name='storyArcs']").inputValue()));
     assert.ok((await page.locator(".story-chapter-form [name='chapterTitle']").nth(3).inputValue()).includes("Un lugar en el mapa"));
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
