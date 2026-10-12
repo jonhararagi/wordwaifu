@@ -2613,7 +2613,27 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#universe-entity-panel h2")?.textContent === "Lelouch Lamperouge", { timeout: 5000 });
     assert.ok((await page.locator("#universe-entity-panel").innerText()).includes("C.C."));
     assert.ok((await page.locator("#universe-entity-panel").innerText()).includes("Geass"));
-    process.stdout.write("PASS connected lore: Code Geass seed links Lelouch, C.C. and Geass.\\n");
+    process.stdout.write("PASS connected lore: Code Geass core links Lelouch, C.C. and Geass.\\n");
+
+    // Expanded character profile: personality, motivation, and knowledge limits by stage.
+    await page.locator("#universe-search").fill("Shirley");
+    await page.waitForFunction(() => document.querySelector('[data-explorer-open="CG-CHAR-SHIRLEY"]') !== null, { timeout: 5000 });
+    await page.locator('[data-explorer-open="CG-CHAR-SHIRLEY"]').click();
+    await page.waitForFunction(() => document.querySelector("#universe-entity-panel h2")?.textContent === "Shirley Fenette", { timeout: 5000 });
+    const shirleyPanel = await page.locator("#universe-entity-panel").innerText();
+    assert.ok(shirleyPanel.includes("Personalidad y conducta") && shirleyPanel.includes("Qué sabe en esta etapa"));
+    assert.ok(shirleyPanel.includes("Geass Canceller") && shirleyPanel.includes("Abrir fuente"));
+    process.stdout.write("PASS Code Geass dossier: Shirley exposes personality, continuity knowledge and sources.\\n");
+
+    // Each Geass is a separate record with its own activation, limits and cost.
+    await page.locator("#universe-type-filter").selectOption("power");
+    await page.locator("#universe-search").fill("Geass de Rolo");
+    await page.waitForFunction(() => document.querySelector('[data-explorer-open="CG-POWER-ROLO-GEASS"]') !== null, { timeout: 5000 });
+    await page.locator('[data-explorer-open="CG-POWER-ROLO-GEASS"]').click();
+    const roloPowerPanel = await page.locator("#universe-entity-panel").innerText();
+    assert.ok(roloPowerPanel.includes("Costes") && roloPowerPanel.includes("Límites"));
+    assert.ok(roloPowerPanel.toLowerCase().includes("corazón"));
+    process.stdout.write("PASS Code Geass powers: Rolo's Geass has its own cost and limits.\\n");
 
     // Generated candidates must be editable before becoming standalone project records.
     await page.locator('.nav-item[data-view="powers"]').click();
