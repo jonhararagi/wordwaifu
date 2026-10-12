@@ -66,7 +66,8 @@ try:
         assert marker in body, f"Expected marker not found in {route}"
     get("/.git/config", 404)
     get("/docs/MASTER_VISION.md", 404)
-    get("/lore/danmachi/characters/ryuu-lion.md", 404)
+    get("/lore/danmachi/characters/00-indice-personajes.md", 404)
+    get("/lore/danmachi/characters/loki.md", 404)
     print("PASS preview server: app shell, original SVGs, curated research and 12 allowlisted character dossiers respond; unrelated files remain blocked.")
 finally:
     server.shutdown()
