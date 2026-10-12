@@ -66,16 +66,29 @@
   function dynamicCharacters() {
     const api = typeof globalThis !== "undefined" ? globalThis.WordWaifuOfficialCharacterRoster : null;
     if (!api || typeof api.list !== "function") return [];
-    return api.list().map(record => ({
-      id:record.id, name:record.name, universe:DANMACHI, type:"Personaje", aliases:[...(record.aliases || [])],
-      summary:record.summary || "Referencia de personaje disponible en el registro oficial.",
-      description:record.summary || "", personality:record.personality || "", abilities:record.abilities || "",
-      affiliation:record.family || "", continuity:record.continuity || "CONT-ANIME",
-      status:"referencia de adaptación", sourceQuality:"official-reference",
-      sourceTitle:record.sourceTitle || "Registro de perfiles oficiales de DanMachi",
-      sourceUrl:record.sourcePage || OFFICIAL_DM,
-      notes:"Ficha de referencia resumida de una adaptación. No equivale a un expediente exhaustivo de todas las novelas."
-    }));
+    const dossierApi = typeof globalThis !== "undefined" ? globalThis.WordWaifuCharacterDossiers : null;
+    return api.list().map(record => {
+      const dossier = dossierApi && typeof dossierApi.get === "function" ? dossierApi.get(record.id) : null;
+      const dossierSources = dossier && Array.isArray(dossier.sources) ? dossier.sources.filter(Boolean) : [];
+      return {
+        id:record.id, name:record.name, universe:DANMACHI, type:"Personaje", aliases:[...(record.aliases || [])],
+        summary:record.summary || "Referencia de personaje disponible en el registro oficial.",
+        description:record.summary || "", appearance:dossier && dossier.appearance || "",
+        history:dossier && dossier.history || "", personality:dossier && dossier.personality || record.personality || "",
+        abilities:dossier && dossier.abilities || record.abilities || "",
+        relationships:dossier && dossier.relationships || "",
+        conflict:dossier && dossier.conflict || "",
+        affiliation:record.family || "", continuity:record.continuity || "CONT-ANIME",
+        status:dossier ? "expediente ampliado · continuidad por filtrar" : "referencia de adaptación",
+        sourceQuality:dossier ? "curated-dossier-mixed" : "official-reference",
+        sourceTitle:dossier ? "Expediente ampliado de personaje · fuentes heterogéneas" : (record.sourceTitle || "Registro de perfiles oficiales de DanMachi"),
+        sourceUrl:record.sourcePage || OFFICIAL_DM,
+        sourceUrls:Array.from(new Set([record.sourcePage || OFFICIAL_DM, ...dossierSources])),
+        notes:dossier
+          ? "El expediente ampliado combina información de más de una fuente y puede abarcar varias etapas. Para afirmaciones sensibles, comprobá el episodio o volumen y usá la Enciclopedia de personajes para filtrar continuidad."
+          : "Ficha de referencia resumida de una adaptación. No equivale a un expediente exhaustivo de todas las novelas."
+      };
+    });
   }
   function allEntities() {
     const staticById = new Map(entities.map(entity => [entity.id, entity]));
