@@ -30,6 +30,9 @@ ALLOWED_FILES = {
     "/assets/character-portraits/ottar.svg": "assets/character-portraits/ottar.svg",
     "/assets/character-portraits/kaguya.svg": "assets/character-portraits/kaguya.svg",
     "/assets/character-portraits/lyra.svg": "assets/character-portraits/lyra.svg",
+    "/assets/lore-moments/ryu-justice.svg": "assets/lore-moments/ryu-justice.svg",
+    "/assets/lore-moments/ryu-evilus.svg": "assets/lore-moments/ryu-evilus.svg",
+    "/assets/lore-moments/ryu-seven-days.svg": "assets/lore-moments/ryu-seven-days.svg",
     "/lore/danmachi/catalog.json": "lore/danmachi/catalog.json",
     "/lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md":
         "lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
