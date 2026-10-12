@@ -1,0 +1,150 @@
+(function (root, factory) {
+  "use strict";
+  const api = factory();
+  if (typeof module === "object" && module.exports) module.exports = api;
+  else root.WordWaifuUniverseGraph = api;
+})(typeof globalThis !== "undefined" ? globalThis : this, function () {
+  "use strict";
+  const DANMACHI = "DanMachi";
+  const GEASS = "Code Geass";
+  const OFFICIAL_DM = "https://danmachi.com/danmachi4/character/";
+  const OFFICIAL_GEASS = "https://geass.jp/R-geass/character.php";
+  const COMMUNITY_ASTREA = "https://danmachi.fandom.com/es/wiki/Astrea_Familia";
+  const entities = [
+    { id:"DM-ORG-ASTREA-FAMILIA", name:"Astrea Familia", universe:DANMACHI, type:"Familia", aliases:["Familia de Astrea","Astrea familia"], summary:"Familia histórica vinculada a la justicia y a la formación de Ryu. La cobertura incorporada es parcial: varias relaciones se apoyan en sinopsis oficiales; los detalles de su caída y disolución siguen pendientes de localizadores literarios.", description:"Recorré sus integrantes enlazados, a su diosa y a la Era Oscura. Esta ficha es un nodo de navegación, no una historia completa de la Familia.", continuity:"CONT-AR", status:"parcial", sourceQuality:"mixto", sourceTitle:"Sinopsis editorial y perfiles oficiales; para algunos datos históricos, wiki comunitaria", sourceUrl:COMMUNITY_ASTREA, notes:"Los vínculos interpersonales más específicos deben corroborarse con los volúmenes de Astrea Record. La página comunitaria no es fuente primaria." },
+    { id:"DM-ORG-HESTIA-FAMILIA", name:"Hestia Familia", universe:DANMACHI, type:"Familia", aliases:["Familia de Hestia"], summary:"Familia de Hestia, asociada en la historia principal a Bell y a sus compañeros.", description:"Nodo para recorrer integrantes, la diosa Hestia y el inicio de la historia principal. Datos individuales proceden de fichas de adaptación cuando así se indica.", continuity:"CONT-MAIN-LN / CONT-ANIME", status:"parcial", sourceQuality:"official-reference", sourceTitle:"Portal oficial de personajes DanMachi", sourceUrl:"https://danmachi.com/danmachi5/character/", notes:"No hay una cronología completa de cada miembro integrada aquí." },
+    { id:"DM-ORG-LOKI-FAMILIA", name:"Loki Familia", universe:DANMACHI, type:"Familia", aliases:["Familia de Loki"], summary:"Una de las Familias de aventureros centrales en la historia principal y en Sword Oratoria.", description:"Explorá a Loki, Finn, Riveria, Gareth, Ais y otros miembros disponibles en el registro oficial.", continuity:"CONT-ANIME", status:"parcial", sourceQuality:"official-reference", sourceTitle:"Sword Oratoria · perfiles oficiales", sourceUrl:"https://danmachi.com/sword_oratoria/character/", notes:"Los perfiles actuales no sustituyen una historia por escenas de todos los miembros." },
+    { id:"DM-ORG-FREYA-FAMILIA", name:"Freya Familia", universe:DANMACHI, type:"Familia", aliases:["Familia de Freya"], summary:"Familia asociada a Freya y a aventureros de alto rango, con información distribuida por estados y spoilers.", description:"Los miembros y relaciones se muestran como referencias de adaptación. El detalle literario y las etapas se deben filtrar por continuidad.", continuity:"CONT-ANIME", status:"parcial", sourceQuality:"official-reference", sourceTitle:"Portal oficial DanMachi V", sourceUrl:"https://danmachi.com/danmachi5/character/", notes:"Evitar tratar las fichas de anime como una descripción exhaustiva de la novela." },
+    { id:"DM-ORG-HEPHAISTOS-FAMILIA", name:"Hephaistos Familia", universe:DANMACHI, type:"Familia", aliases:["Familia de Hefesto"], summary:"Familia con vínculos de herrería y fabricación de equipo.", description:"Nodo inicial para conectar a Tsubaki y otros personajes que mencionen esta afiliación.", continuity:"CONT-ANIME", status:"parcial", sourceQuality:"official-reference", sourceTitle:"Sword Oratoria · perfiles oficiales", sourceUrl:"https://danmachi.com/sword_oratoria/character/", notes:"La relación de pertenencia es más segura que inferir amistades personales." },
+    { id:"DM-ORG-HOSTESS", name:"Hostess of Fertility", universe:DANMACHI, type:"Lugar / establecimiento", aliases:["Hostess","La taberna"], summary:"Taberna donde Ryu aparece trabajando en la etapa descrita por el perfil oficial del anime.", description:"Usá este nodo para distinguir el estado posterior de Ryu de sus vínculos de la Era Oscura.", continuity:"CONT-ANIME", status:"referencia de adaptación", sourceQuality:"official-reference", sourceTitle:"DanMachi IV · perfil oficial de Ryu", sourceUrl:OFFICIAL_DM, notes:"El perfil oficial es una fuente de la adaptación anime; no debe fusionarse automáticamente con la novela principal." },
+    { id:"DM-LOC-ORARIO", name:"Orario", universe:DANMACHI, type:"Ciudad", aliases:["Ciudad laberinto"], summary:"Ciudad principal de DanMachi, organizada en torno al Dungeon y las Familias de deidades.", description:"Punto de partida geográfico para ubicar gremio, familias, dungeon y acontecimientos.", continuity:"variada", status:"referencia", sourceQuality:"official-reference", sourceTitle:"Portal oficial de DanMachi", sourceUrl:"https://danmachi.com/", notes:"Mapa conceptual, no una geografía completa." },
+    { id:"DM-CONCEPT-DUNGEON-FALNA", name:"Dungeon y Falna", universe:DANMACHI, type:"Sistema del mundo", aliases:["Dungeon","Falna","bendición divina"], summary:"Conceptos centrales de exploración y crecimiento de aventureros en DanMachi.", description:"Ficha de navegación inicial para los sistemas del mundo. Las reglas finas, excepciones y evolución requieren fuentes específicas por volumen.", continuity:"variada", status:"cobertura inicial", sourceQuality:"official-reference", sourceTitle:"Portal oficial DanMachi", sourceUrl:"https://danmachi.com/", notes:"No es un manual exhaustivo del sistema." },
+    { id:"DM-EVT-ASTREA-ERA", name:"Astrea Familia durante la Era Oscura", universe:DANMACHI, type:"Periodo / acontecimiento", aliases:["Era Oscura","Astrea Record","Los siete días de la muerte"], summary:"Periodo histórico en el que se sitúa Astrea Record y se documenta a Ryu junto a Alise y Astrea.", description:"La cronología oficial sitúa Astrea Record años antes de la visita de Bell a Orario. La historia completa de los acontecimientos no está transcrita aquí.", continuity:"CONT-AR", status:"parcial", sourceQuality:"official-plus-secondary", sourceTitle:"Cronología oficial y sinopsis editorial; detalles adicionales con fuente secundaria", sourceUrl:"https://danmachi.com/chronology/", notes:"Las consecuencias individuales y localizadores de los volúmenes siguen pendientes. Contiene spoilers de la historia derivada.", spoilerLevel:"major" },
+    { id:"CG-CHAR-LELOUCH", name:"Lelouch Lamperouge", universe:GEASS, type:"Personaje", aliases:["Lelouch vi Britannia","Zero"], summary:"Protagonista vinculado a la identidad de Zero; el perfil oficial de Resurrection presenta su poder Geass como una orden de obediencia absoluta.", description:"El registro se limita a una referencia inicial del sitio oficial. La cronología y los detalles completos de sus distintas continuidades aún no están integrados.", personality:"Estratega, reservado y determinado; revisar los rasgos contra la serie y marcar su evolución por arco.", abilities:"Geass de mandato en la representación oficial consultada; no extrapolar sus límites de esta ficha breve.", affiliation:"Black Knights (vínculo histórico en la serie; la fuente de Resurrection no cubre toda la serie).", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", status:"cobertura inicial", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS, notes:"La página citada es oficial pero corresponde a Resurrection; comprobar afirmaciones de R1/R2 en sus episodios y materiales antes de tratarlas como completas." },
+    { id:"CG-CHAR-CC", name:"C.C.", universe:GEASS, type:"Personaje", aliases:["C.C.","C2"], summary:"Figura inmortal que concede a Lelouch el poder Geass en el material oficial consultado.", description:"Nodo inicial para seguir el contrato, el Geass y su relación con Lelouch. No se presenta una psicología completa aquí.", personality:"La ficha breve no basta para una psicología integral; completar desde fuentes primarias por arco.", abilities:"Inmortalidad descrita en el portal oficial citado; detalles de sus poderes requieren investigación adicional.", affiliation:"Independiente / vínculo contractual con Lelouch.", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", status:"cobertura inicial", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS, notes:"Mantener por separado las revelaciones y la información conocida por cada personaje." },
+    { id:"CG-CHAR-SUZAKU", name:"Suzaku Kururugi", universe:GEASS, type:"Personaje", aliases:["Suzaku"], summary:"Personaje central en la trayectoria política y militar de Lelouch; esta entrada es solo un índice de referencia.", description:"La ficha debe expandirse con escenas, motivaciones, cambios de lealtad y cronología; no se declara completa.", personality:"Pendiente de investigación narrativa por etapa; evitar reducirlo a una sola etiqueta.", abilities:"Combate y pilotaje de Knightmare Frame; ficha aún sin desglose de técnicas.", affiliation:"Britannia / entorno militar; el estado depende de la etapa.", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", status:"cobertura inicial", sourceQuality:"index-seed", sourceTitle:"Directorio de franquicia; validación detallada pendiente", sourceUrl:OFFICIAL_GEASS, notes:"No usar la breve referencia oficial de Resurrection como sustituto del desarrollo completo en la serie." },
+    { id:"CG-CHAR-KALLEN", name:"Kallen Stadtfeld", universe:GEASS, type:"Personaje", aliases:["Kallen Kozuki","Kallen Kōzuki"], summary:"Piloto destacada y combatiente asociada a los Black Knights; entrada inicial para expandir su historia por arcos.", description:"La fuente oficial consultada la describe como ace del pilotaje de Knightmare Frames. Su biografía completa y sus relaciones requieren más fuentes.", personality:"Pendiente de estructurar por etapa, decisiones, motivaciones y conducta observable.", abilities:"Pilotaje de Knightmare Frames según el perfil oficial consultado.", affiliation:"Black Knights (continuidad principal; comprobar detalles por temporada).", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", status:"cobertura inicial", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS, notes:"Separar los hechos del canon de los análisis comunitarios." },
+    { id:"CG-CHAR-NUNNALLY", name:"Nunnally Lamperouge", universe:GEASS, type:"Personaje", aliases:["Nunnally vi Britannia"], summary:"Hermana de Lelouch; el perfil oficial consultado la vincula con una organización humanitaria mundial.", description:"Entrada inicial de enciclopedia. Las etapas, motivaciones, relaciones y eventos necesitan documentación por temporada.", personality:"Pendiente de completar con acciones y diálogos concretos.", abilities:"No se registra poder sobrenatural en esta ficha inicial.", affiliation:"Familia Lamperouge / organización humanitaria en la etapa oficial descrita.", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", status:"cobertura inicial", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS, notes:"Evitar confundir la información de una etapa posterior con lo que sabe o hace en etapas anteriores." },
+    { id:"CG-ORG-BRITANNIA", name:"Sacro Imperio de Britannia", universe:GEASS, type:"Imperio / organización", aliases:["Britannia","Imperio Britanniano"], summary:"Institución imperial que estructura buena parte del conflicto político y militar de Code Geass.", description:"Entrada inicial para conectar gobernantes, fuerzas militares, Knightmare Frames y cambios políticos. Cobertura por completar.", continuity:"CONT-R1 / CONT-R2", status:"cobertura inicial", sourceQuality:"index-seed", sourceTitle:"Code Geass · índice de franquicia", sourceUrl:OFFICIAL_GEASS, notes:"La estructura política detallada aún no está modelada." },
+    { id:"CG-ORG-BLACK-KNIGHTS", name:"Black Knights", universe:GEASS, type:"Movimiento / organización", aliases:["Caballeros Negros"], summary:"Organización de resistencia asociada a Zero en la historia principal.", description:"Nodo para explorar líderes, integrantes, objetivos y cambios de lealtad por etapas.", continuity:"CONT-R1 / CONT-R2", status:"cobertura inicial", sourceQuality:"index-seed", sourceTitle:"Code Geass · índice de franquicia", sourceUrl:OFFICIAL_GEASS, notes:"Los miembros y los eventos asociados se ampliarán con fuentes primarias." },
+    { id:"CG-CONCEPT-GEASS", name:"Geass", universe:GEASS, type:"Sistema de poder", aliases:["Poder Geass","Código Geass"], summary:"Poder sobrenatural de reglas distintas según individuo. El portal oficial de Resurrection describe el de Lelouch como una orden de obediencia absoluta.", description:"No asumir que todos los Geass comparten una activación, alcance, coste o límite; registrar reglas por usuario y evolución.", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", status:"cobertura inicial", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS, notes:"La página oficial consultada no es un reglamento completo del Geass." },
+    { id:"CG-EVT-ZERO-REQUIEM", name:"Zero Requiem", universe:GEASS, type:"Acontecimiento / plan", aliases:["Zero Requiem"], summary:"Hito central en la resolución de una continuidad principal de Code Geass.", description:"Nodo de navegación con spoiler mayor. El resumen detallado está deliberadamente omitido en esta fase inicial y necesita revisión contra episodios originales.", continuity:"CONT-R2", status:"pendiente de documentación", sourceQuality:"index-seed", sourceTitle:"Code Geass · referencia de índice, localizadores pendientes", sourceUrl:OFFICIAL_GEASS, notes:"Completar solo con citas de episodios y separar lo que cada personaje conoce.", spoilerLevel:"major" }
+  ];
+
+  const edges = [
+    { from:"CHAR-RYUU-LION", to:"CHAR-ALISE-LOVELACE", type:"capitana y guía", continuity:"CONT-AR", description:"La sinopsis editorial presenta a Alise como capitana y guía de Ryu en su búsqueda de justicia.", sourceQuality:"editorial-official", sourceTitle:"GA Bunko · sinopsis de Astrea Record, volumen 1", sourceUrl:"https://ga.sbcr.jp/special/danmachi/astrea/" },
+    { from:"CHAR-RYUU-LION", to:"CHAR-ASTREA", type:"deidad asociada / miembro de Familia", continuity:"CONT-AR", description:"Ryu aparece bajo la guía de Astrea y vinculada a Astrea Familia en la etapa histórica.", sourceQuality:"editorial-official", sourceTitle:"GA Bunko · sinopsis de Astrea Record", sourceUrl:"https://ga.sbcr.jp/special/danmachi/astrea/" },
+    { from:"CHAR-RYUU-LION", to:"CHAR-KAGUYA", type:"misma Familia histórica", continuity:"CONT-AR", description:"Ambas se organizan aquí como integrantes vinculadas al contexto histórico de Astrea Familia; la profundidad de su relación no se infiere.", sourceQuality:"official-plus-secondary", sourceTitle:"Registro de perfiles y fuentes secundarias; vínculo personal pendiente", sourceUrl:COMMUNITY_ASTREA },
+    { from:"CHAR-RYUU-LION", to:"CHAR-LYRA", type:"misma Familia histórica", continuity:"CONT-AR", description:"Coincidencia de afiliación en el registro de Astrea Familia. No implica por sí sola amistad íntima.", sourceQuality:"official-plus-secondary", sourceTitle:"Registro de perfiles y fuentes secundarias; vínculo personal pendiente", sourceUrl:COMMUNITY_ASTREA },
+    { from:"CHAR-RYUU-LION", to:"DM-ORG-ASTREA-FAMILIA", type:"pertenencia histórica", continuity:"CONT-AR", description:"La afiliación corresponde al estado histórico de Astrea Record.", sourceQuality:"editorial-official", sourceTitle:"GA Bunko · sinopsis de Astrea Record", sourceUrl:"https://ga.sbcr.jp/special/danmachi/astrea/" },
+    { from:"CHAR-ALISE-LOVELACE", to:"DM-ORG-ASTREA-FAMILIA", type:"capitana", continuity:"CONT-AR", description:"Alise es identificada como capitana de Astrea Familia en la sinopsis editorial.", sourceQuality:"editorial-official", sourceTitle:"GA Bunko · sinopsis de Astrea Record", sourceUrl:"https://ga.sbcr.jp/special/danmachi/astrea/" },
+    { from:"CHAR-ASTREA", to:"DM-ORG-ASTREA-FAMILIA", type:"diosa de la Familia", continuity:"CONT-AR", description:"La Familia histórica se presenta bajo la guía de Astrea.", sourceQuality:"editorial-official", sourceTitle:"GA Bunko · sinopsis de Astrea Record", sourceUrl:"https://ga.sbcr.jp/special/danmachi/astrea/" },
+    { from:"CHAR-KAGUYA", to:"DM-ORG-ASTREA-FAMILIA", type:"integrante histórica", continuity:"CONT-AR", description:"Afiliación usada como ruta de navegación; confirmar detalles por fuente primaria.", sourceQuality:"official-plus-secondary", sourceTitle:"Astrea Familia · referencia secundaria con verificación pendiente", sourceUrl:COMMUNITY_ASTREA },
+    { from:"CHAR-LYRA", to:"DM-ORG-ASTREA-FAMILIA", type:"integrante histórica", continuity:"CONT-AR", description:"Afiliación usada como ruta de navegación; confirmar detalles por fuente primaria.", sourceQuality:"official-plus-secondary", sourceTitle:"Astrea Familia · referencia secundaria con verificación pendiente", sourceUrl:COMMUNITY_ASTREA },
+    { from:"DM-ORG-ASTREA-FAMILIA", to:"DM-EVT-ASTREA-ERA", type:"marco histórico", continuity:"CONT-AR", description:"Astrea Record se sitúa en la historia previa a la historia principal; su cronología está relacionada con la Era Oscura.", sourceQuality:"official-reference", sourceTitle:"Cronología oficial de DanMachi", sourceUrl:"https://danmachi.com/chronology/" },
+    { from:"DM-ORG-ASTREA-FAMILIA", to:"DM-LOC-ORARIO", type:"área de actividad", continuity:"CONT-AR", description:"Astrea Familia se explora dentro del marco histórico de Orario. Los detalles de su salida de la ciudad no se consideran hechos verificados por este nodo.", sourceQuality:"official-reference-partial", sourceTitle:"Cronología oficial y expediente histórico parcial", sourceUrl:"https://danmachi.com/chronology/" },
+    { from:"CHAR-RYUU-LION", to:"DM-ORG-HOSTESS", type:"trabajo en etapa posterior", continuity:"CONT-ANIME", description:"El perfil oficial de DanMachi IV presenta a Ryu en el contexto de Hostess of Fertility; no trasladar esta etapa a Astrea Record.", sourceQuality:"official-adaptation", sourceTitle:"DanMachi IV · perfil oficial de Ryu", sourceUrl:OFFICIAL_DM },
+    { from:"DM-ORG-HESTIA-FAMILIA", to:"DM-CHAR-HESTIA", type:"diosa de la Familia", continuity:"CONT-MAIN-LN / CONT-ANIME", description:"Hestia encabeza la Familia que lleva su nombre.", sourceQuality:"official-reference", sourceTitle:"Portal oficial DanMachi V", sourceUrl:"https://danmachi.com/danmachi5/character/" },
+    { from:"DM-ORG-HESTIA-FAMILIA", to:"DM-CHAR-BELL", type:"miembro fundador / aventurero", continuity:"CONT-MAIN-LN / CONT-ANIME", description:"Los perfiles oficiales sitúan a Bell en la Hestia Familia.", sourceQuality:"official-reference", sourceTitle:"Portal oficial DanMachi V", sourceUrl:"https://danmachi.com/danmachi5/character/" },
+    { from:"DM-ORG-LOKI-FAMILIA", to:"DM-CHAR-LOKI", type:"diosa de la Familia", continuity:"CONT-ANIME", description:"Loki es la deidad que da nombre a su Familia.", sourceQuality:"official-reference", sourceTitle:"Sword Oratoria · perfiles oficiales", sourceUrl:"https://danmachi.com/sword_oratoria/character/" },
+    { from:"DM-ORG-LOKI-FAMILIA", to:"DM-CHAR-AIS", type:"miembro", continuity:"CONT-ANIME", description:"Ais aparece en los perfiles oficiales asociada a Loki Familia.", sourceQuality:"official-reference", sourceTitle:"Sword Oratoria · perfiles oficiales", sourceUrl:"https://danmachi.com/sword_oratoria/character/" },
+    { from:"DM-ORG-FREYA-FAMILIA", to:"CHAR-FREYA", type:"diosa de la Familia", continuity:"CONT-ANIME", description:"Familia asociada a Freya en las referencias oficiales.", sourceQuality:"official-reference", sourceTitle:"Portal oficial DanMachi V", sourceUrl:"https://danmachi.com/danmachi5/character/" },
+    { from:"DM-ORG-FREYA-FAMILIA", to:"CHAR-OTTAR", type:"miembro destacado", continuity:"CONT-ANIME", description:"Ottar aparece en los perfiles oficiales dentro del entorno de Freya Familia.", sourceQuality:"official-reference", sourceTitle:"Portal oficial DanMachi V", sourceUrl:"https://danmachi.com/danmachi5/character/" },
+    { from:"DM-CONCEPT-DUNGEON-FALNA", to:"DM-LOC-ORARIO", type:"mundo y ubicación", continuity:"variada", description:"El Dungeon es parte central del mundo urbano de Orario.", sourceQuality:"official-reference", sourceTitle:"Portal oficial DanMachi", sourceUrl:"https://danmachi.com/" },
+    { from:"CG-CHAR-LELOUCH", to:"CG-CHAR-CC", type:"contrato / origen del Geass", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", description:"La página oficial consultada atribuye a C.C. la concesión del Geass a Lelouch; la evolución exacta del vínculo debe seguirse por continuidad.", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS },
+    { from:"CG-CHAR-LELOUCH", to:"CG-CONCEPT-GEASS", type:"poder / mandato", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", description:"El perfil oficial describe la capacidad de Lelouch como una orden de obediencia absoluta.", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS },
+    { from:"CG-CHAR-CC", to:"CG-CONCEPT-GEASS", type:"concesión del poder", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", description:"El portal oficial relaciona a C.C. con la concesión del poder Geass a Lelouch.", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS },
+    { from:"CG-CHAR-LELOUCH", to:"CG-CHAR-NUNNALLY", type:"hermanos", continuity:"CONT-R1 / CONT-R2 / RESURRECTION", description:"Vínculo familiar de la historia principal; esta base inicial no incorpora todavía una cronología de escenas.", sourceQuality:"index-seed", sourceTitle:"Code Geass · cobertura inicial", sourceUrl:OFFICIAL_GEASS },
+    { from:"CG-CHAR-LELOUCH", to:"CG-CHAR-SUZAKU", type:"relación central / contrapunto", continuity:"CONT-R1 / CONT-R2", description:"Relación narrativa central con lealtades y objetivos cambiantes; no reducirla a amistad o rivalidad fija.", sourceQuality:"index-seed", sourceTitle:"Code Geass · cobertura inicial, contraste por arcos pendiente", sourceUrl:OFFICIAL_GEASS },
+    { from:"CG-CHAR-KALLEN", to:"CG-ORG-BLACK-KNIGHTS", type:"integrante / combatiente", continuity:"CONT-R1 / CONT-R2", description:"La página oficial consultada la describe como piloto destacada en el entorno de la franquicia; la ficha aún no desarrolla todas las etapas de su servicio.", sourceQuality:"official-reference-partial", sourceTitle:"Code Geass: Lelouch of the Re;surrection · página oficial de personajes", sourceUrl:OFFICIAL_GEASS },
+    { from:"CG-CHAR-LELOUCH", to:"CG-ORG-BLACK-KNIGHTS", type:"liderazgo bajo la identidad de Zero", continuity:"CONT-R1 / CONT-R2", description:"La conexión es un resumen de la continuidad principal; se marca como entrada inicial hasta sumar localizadores de episodios.", sourceQuality:"index-seed", sourceTitle:"Code Geass · cobertura inicial", sourceUrl:OFFICIAL_GEASS },
+    { from:"CG-ORG-BRITANNIA", to:"CG-CHAR-LELOUCH", type:"origen y linaje", continuity:"CONT-R1 / CONT-R2", description:"Conexión de contexto para navegar la identidad de Lelouch; ampliar con evidencias y spoiler por etapa.", sourceQuality:"index-seed", sourceTitle:"Code Geass · cobertura inicial", sourceUrl:OFFICIAL_GEASS },
+    { from:"CG-EVT-ZERO-REQUIEM", to:"CG-CHAR-LELOUCH", type:"plan / acontecimiento", continuity:"CONT-R2", description:"Hito de la continuidad principal con spoiler mayor; el detalle de la resolución no se expone en esta ficha inicial.", sourceQuality:"index-seed", sourceTitle:"Code Geass · cobertura inicial", sourceUrl:OFFICIAL_GEASS, spoilerLevel:"major" }
+  ];
+
+  function normal(value) { return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
+  function dynamicCharacters() {
+    const api = typeof globalThis !== "undefined" ? globalThis.WordWaifuOfficialCharacterRoster : null;
+    if (!api || typeof api.list !== "function") return [];
+    return api.list().map(record => ({
+      id:record.id, name:record.name, universe:DANMACHI, type:"Personaje", aliases:[...(record.aliases || [])],
+      summary:record.summary || "Referencia de personaje disponible en el registro oficial.",
+      description:record.summary || "", personality:record.personality || "", abilities:record.abilities || "",
+      affiliation:record.family || "", continuity:record.continuity || "CONT-ANIME",
+      status:"referencia de adaptación", sourceQuality:"official-reference",
+      sourceTitle:record.sourceTitle || "Registro de perfiles oficiales de DanMachi",
+      sourceUrl:record.sourcePage || OFFICIAL_DM,
+      notes:"Ficha de referencia resumida de una adaptación. No equivale a un expediente exhaustivo de todas las novelas."
+    }));
+  }
+  function allEntities() {
+    const staticById = new Map(entities.map(entity => [entity.id, entity]));
+    dynamicCharacters().forEach(character => { if (!staticById.has(character.id)) staticById.set(character.id, character); });
+    return Array.from(staticById.values());
+  }
+  function autoFamilyEdges(records) {
+    const known = new Set(records.map(record => record.id));
+    const names = {
+      "Astrea Familia":"DM-ORG-ASTREA-FAMILIA", "Hestia Familia":"DM-ORG-HESTIA-FAMILIA",
+      "Loki Familia":"DM-ORG-LOKI-FAMILIA", "Freya Familia":"DM-ORG-FREYA-FAMILIA",
+      "Hephaistos Familia":"DM-ORG-HEPHAISTOS-FAMILIA", "Hostess of Fertility":"DM-ORG-HOSTESS"
+    };
+    const generated = [];
+    dynamicCharacters().forEach(character => {
+      const famText = String(character.affiliation || "");
+      Object.keys(names).forEach(familyName => {
+        if (!famText.toLowerCase().includes(familyName.toLowerCase()) || !known.has(names[familyName])) return;
+        const historical = familyName === "Astrea Familia" && /histor|astrea/i.test(famText);
+        generated.push({
+          from:character.id, to:names[familyName], type:familyName === "Hostess of Fertility" ? "trabaja en / afiliación posterior" : "afiliación de referencia",
+          continuity:historical ? "CONT-AR" : character.continuity,
+          description:"Vínculo deducido del campo de afiliación del registro de personaje; no implica amistad ni relación privada.",
+          sourceQuality:character.sourceQuality, sourceTitle:character.sourceTitle, sourceUrl:character.sourceUrl
+        });
+      });
+    });
+    return generated;
+  }
+  function allEdges() {
+    const records = allEntities();
+    const known = new Set(records.map(entity => entity.id));
+    return edges.concat(autoFamilyEdges(records)).filter(edge => known.has(edge.from) && known.has(edge.to));
+  }
+  function list(options) {
+    const settings = options || {}, universe = settings.universe || "all", type = settings.type || "all";
+    return allEntities().filter(entity => (universe === "all" || entity.universe === universe) && (type === "all" || entity.type === type))
+      .sort((a,b)=>a.universe.localeCompare(b.universe,"es") || a.name.localeCompare(b.name,"es"));
+  }
+  function search(query, options) {
+    const settings = options || {}, q = normal(query).trim();
+    const records = list(settings);
+    if (!q) return records.slice(0, 80);
+    const tokens = q.split(/\s+/).filter(Boolean);
+    return records.map(entity => {
+      const haystack = normal([entity.name, ...(entity.aliases || []), entity.type, entity.summary, entity.description, entity.personality, entity.abilities, entity.affiliation, entity.continuity].join(" "));
+      const matched = tokens.every(token => haystack.includes(token));
+      const exact = normal(entity.name) === q ? 30 : normal(entity.name).startsWith(q) ? 15 : 0;
+      return { entity, score:matched ? exact + tokens.length * 2 : -1 };
+    }).filter(item => item.score >= 0).sort((a,b)=>b.score-a.score || a.entity.name.localeCompare(b.entity.name,"es")).slice(0,80).map(item=>item.entity);
+  }
+  function getEntity(id) { return allEntities().find(entity => entity.id === id) || null; }
+  function getRelated(id, options) {
+    const records = allEntities(), byId = new Map(records.map(entity => [entity.id, entity]));
+    const edges = allEdges();
+    return edges.filter(edge => edge.from === id || edge.to === id).map(edge => {
+      const forward = edge.from === id, targetId = forward ? edge.to : edge.from;
+      const target = byId.get(targetId);
+      return target ? { ...edge, direction:forward ? "outgoing" : "incoming", targetId, targetName:target.name, targetType:target.type, targetUniverse:target.universe, target } : null;
+    }).filter(Boolean).filter(item => !options || options.continuity === "all" || !options.continuity || item.continuity === options.continuity)
+      .sort((a,b)=>(a.targetName||"").localeCompare(b.targetName||"","es"));
+  }
+  function coverage() {
+    const rows = [DANMACHI, GEASS].map(universe => {
+      const records = allEntities().filter(entity => entity.universe === universe);
+      const people = records.filter(entity=>entity.type==="Personaje").length;
+      return { universe, total:records.length, characters:people, status:universe===DANMACHI?"referencias de personajes más una red histórica parcial":"solo semilla inicial de personajes y conceptos; no es enciclopedia completa" };
+    });
+    return rows;
+  }
+  return { list, search, getEntity, getRelated, coverage, allEdges };
+});
