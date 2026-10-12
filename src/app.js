@@ -2093,9 +2093,11 @@
       });
       const sourceLinks=archiveElement("div","archive-official-source-links");
       appendLoreLink(sourceLinks,"Abrir perfil oficial y fuente de la imagen ↗",official.sourcePage,true);
+      const communitySearch = "https://danmachi.fandom.com/wiki/Special:Search?query=" + encodeURIComponent(official.name);
+      appendLoreLink(sourceLinks,"Contrastar en la wiki comunitaria (fuente secundaria) ↗",communitySearch,true);
       officialSection.appendChild(sourceLinks);
       officialSection.appendChild(archiveElement("p","archive-research-note",
-        "La ilustración se carga directamente desde el dominio oficial y no está copiada en el repositorio. Los titulares conservan todos los derechos; sin conexión se usa una ilustración conceptual local si existe."));
+        "La ilustración se carga desde el dominio oficial y no se copia al repositorio. La wiki comunitaria puede ofrecer más detalle, pero es secundaria y debe contrastarse; sin conexión se usa una ilustración conceptual local si existe."));
       root.appendChild(officialSection);
     }
     const relSection=archiveElement("section","archive-section"),rh=archiveElement("div","archive-section-heading");rh.append(archiveElement("h3","","Personas relacionadas"),archiveGoTab("relationships","Ver red completa"));relSection.appendChild(rh);
