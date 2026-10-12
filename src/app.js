@@ -2298,8 +2298,9 @@
         const relation=archiveElement("article","archive-family-dynamic");
         relation.appendChild(archiveElement("strong","",item.title));
         const people=archiveElement("div","archive-family-dynamic-people");
+        const findGroupPerson=id=>group.members.find(member=>member.id===id)||(group.leader&&group.leader.id===id?group.leader:null)||(group.deity&&group.deity.id===id?group.deity:null);
         [item.fromId,item.toId].forEach(id=>{
-          const person=group.members.find(member=>member.id===id)||group.leader&&group.leader.id===id? (group.members.find(member=>member.id===id)||group.leader):group.deity&&group.deity.id===id?group.deity:null;
+          const person=findGroupPerson(id);
           if(!person)return;
           const link=archiveElement("button","archive-related-link",person.name+" ↗");link.type="button";
           link.dataset.characterLink=person.id;link.dataset.linkContinuity=group.continuity;people.appendChild(link);
