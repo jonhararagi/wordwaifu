@@ -2495,7 +2495,10 @@ async function run() {
     await backgroundCard.getByRole("button", { name: "Editar" }).first().click();
     await page.locator("#art-prompt").fill("Panorámica revisada de Orario bajo la lluvia.");
     await page.locator("#art-save").click();
-    await page.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("Se asignó a Orario nocturno"), { timeout: 5000 });
+    await page.waitForFunction(async () => {
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
+      return Boolean(asset && asset.prompt.includes("revisada"));
+    }, { timeout: 5000 });
     assert.ok((await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"))).prompt.includes("revisada"),
       "Editing an IndexedDB assignment must update its saved prompt.");
     await page.reload({ waitUntil: "networkidle" });
@@ -2571,7 +2574,10 @@ async function run() {
     await fallbackPage.locator(".art-assignment-card").getByRole("button", { name: "Editar" }).click();
     await fallbackPage.locator("#art-prompt").fill("Prompt editado y persistido en el respaldo.");
     await fallbackPage.locator("#art-save").click();
-    await fallbackPage.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("respaldo local"), { timeout: 5000 });
+    await fallbackPage.waitForFunction(async () => {
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test");
+      return Boolean(asset && asset.prompt.includes("editado"));
+    }, { timeout: 5000 });
     await fallbackPage.reload({ waitUntil: "networkidle" });
     await fallbackPage.locator('.nav-item[data-view="art"]').click();
     await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
