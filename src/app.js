@@ -1888,9 +1888,26 @@
     body.appendChild(archiveElement("p","","Tipo de evidencia: "+(claim.evidenceType||"no especificado")+" · Verificación: "+(claim.verificationStatus||"unverified")+" · Spoiler: "+(claim.spoilerLevel||"unknown")));
     if(claim.confidenceNote)body.appendChild(archiveElement("p","","Límites: "+claim.confidenceNote));
     const links=archiveElement("div","archive-source-links");
-    (claim.sourceUrls||[]).forEach((url,i)=>{const label=url.includes("ga.sbcr.jp")?"Fuente editorial original (japonés)":url.includes("danmachi.com")?"Fuente oficial (japonés)":url.includes("fandom.com")?"Wiki comunitaria (no oficial)":(claim.sourceUrls.length>1?"Abrir fuente "+(i+1):"Abrir fuente");appendLoreLink(links,label,url,true);});
     const communityRefs=[...new Set(claim.characterIds||[])].map(id=>archiveCommunityReferences[id]).filter(Boolean);
-    communityRefs.forEach(ref=>appendLoreLink(links,"Ampliar en español · "+ref.name+" (wiki comunitaria)",ref.url,true));
+    const sourceUrls=[...new Set(claim.sourceUrls||[])];
+    const communityEntries=[];
+    const seenCommunityUrls=new Set();
+    [...communityRefs,...sourceUrls.filter(url=>/fandom\\.com\\/es\\//i.test(url)).map(url=>({name:"",url}))].forEach(ref=>{
+      if(!ref.url||seenCommunityUrls.has(ref.url))return;
+      seenCommunityUrls.add(ref.url);communityEntries.push(ref);
+    });
+    if(communityEntries.length){
+      links.appendChild(archiveElement("p","archive-source-group-label","Lectura en español · wiki comunitaria, no oficial"));
+      communityEntries.forEach(ref=>appendLoreLink(links,ref.name?"Leer ficha de "+ref.name+" en español":"Leer la referencia comunitaria en español",ref.url,true));
+    }
+    const primaryUrls=sourceUrls.filter(url=>!(/fandom\\.com\\/es\\//i.test(url)));
+    if(primaryUrls.length){
+      links.appendChild(archiveElement("p","archive-source-group-label","Fuentes originales y oficiales · algunas páginas están en japonés"));
+      primaryUrls.forEach((url,i)=>{
+        const label=url.includes("ga.sbcr.jp")?"Fuente editorial original (japonés)":url.includes("danmachi.com")?"Fuente oficial del anime (japonés)":(primaryUrls.length>1?"Abrir fuente original "+(i+1):"Abrir fuente original");
+        appendLoreLink(links,label,url,true);
+      });
+    }
     if(links.childNodes.length)body.appendChild(links);
     details.appendChild(body);return details;
   }
