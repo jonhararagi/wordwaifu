@@ -31,7 +31,7 @@ assert.match(novelist.characters[0].role, /NPC universitario/);
 assert.ok(novelist.story.description.includes("novelista y jugador obsesionado con arquetipos románticos de mujeres adultas maduras"));
 assert.ok(novelist.story.description.includes("ESTRATEGIA SOCIAL"));
 assert.ok(novelist.story.description.includes("COMEDIA DE PERSONAJE"));
-assert.ok(novelist.story.description.includes("límites y consecuencias"));
+assert.ok(novelist.story.description.includes("le ponen límites"));
 assert.ok(novelist.story.description.includes("\\n") === false, "The outline must contain actual paragraph breaks rather than literal slash-n sequences.");
 const general = generate({ premise: "Una archivista descubre que el reino borró de sus registros a una ciudad entera.", genre: "drama", tone: "balanced" });
 assert.equal(general.characters.length, 5, "A non-divine premise should create a different party rather than forcing three goddesses into every story.");
