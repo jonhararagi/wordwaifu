@@ -1124,7 +1124,7 @@ async function run() {
     await page.waitForFunction((id) => !Array.from(document.querySelector("#project-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
     await page.waitForFunction((id) => Array.from(document.querySelector("#trash-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
 
-    const afterTrash = await page.evaluate(async (ids) => {
+    const afterProjectDelete = await page.evaluate(async (ids) => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const catalog = await repository.listProjects();
       const deletedRecord = await repository.read("projects", ids.target);
