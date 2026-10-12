@@ -2610,15 +2610,19 @@ async function run() {
           return transaction;
         }
       };
+      // Keep the app's project database real; only the Art Studio store is simulated.
+      const nativeFactory = window.indexedDB;
+      const nativeOpen = nativeFactory.open.bind(nativeFactory);
+      const wrappedFactory = Object.create(nativeFactory);
+      wrappedFactory.open = function(name, version) {
+        if (name !== "wordwaifu-art-studio") return nativeOpen(name, version);
+        const request = { result: database };
+        queueMicrotask(() => request.onsuccess && request.onsuccess());
+        return request;
+      };
       Object.defineProperty(window, "indexedDB", {
         configurable: true,
-        value: {
-          open() {
-            const request = { result: database };
-            queueMicrotask(() => request.onsuccess && request.onsuccess());
-            return request;
-          }
-        }
+        value: wrappedFactory
       });
     });
     await fallbackPage.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
