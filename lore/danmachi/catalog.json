@@ -1244,6 +1244,12 @@
       "path": "research/inbox/BATCH-DM-005-astrea-familia-network.md",
       "type": "character_relationship_batch",
       "status": "present"
+    },
+    {
+      "document_id": "RESEARCH-DM-006",
+      "path": "research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md",
+      "type": "timeline_verification_batch",
+      "status": "present"
     }
   ],
   "lastStructuredSync": {
