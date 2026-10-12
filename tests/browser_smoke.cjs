@@ -2591,6 +2591,12 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", null, { timeout: 5000 });
     assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
       "A stale localStorage copy must not resurrect an IndexedDB-deleted assignment after reload.");
+    // Keep this regression isolated from the following mock-storage scenario.
+    await page.evaluate(() => {
+      const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
+      delete fallback["background:bg-orario-night"];
+      localStorage.setItem("wordwaifu.art.assignments.v1", JSON.stringify(fallback));
+    });
     process.stdout.write("PASS art deletion tombstone: stale fallback cleanup failure cannot resurrect a deleted assignment.\\n");
 
     // Simulate IndexedDB writes failing while reads still succeed: fallback assignments must support create/edit/reload/delete.
