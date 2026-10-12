@@ -158,3 +158,15 @@ La primera pasada solo examinó el árbol de `main` y documentación; eso no rep
 - PR de auditoría: https://github.com/jonhararagi/wordwaifu/pull/6
 - Verificación de ejecución local: `NOT_RUN`.
 - Próximo gate: reconciliar ramas, inspeccionar el workflow y revisar resultados CI antes de nuevas funciones.
+
+
+### Auditoría de QA · CI de lore (2026-10-12)
+
+Se consultó el historial de GitHub Actions, no solo la existencia del workflow.
+
+- Último run inspeccionado: [DanMachi Lore and Retrieval Integrity #38199172414](https://github.com/jonhararagi/wordwaifu/actions/runs/38199172414), commit `4b69c6051864f489ae651466f604e5191ee217dd`, conclusión `failure`.
+- El log muestra que `node tests/test_lore_corpus.cjs` pasa (35 entradas / 32 source claims), pero `node tests/test_character_archive.cjs` falla en la línea 48: el test esperaba el encabezado inglés `Temporal state A` aunque el dossier existente usa `Estado temporal A`. La aserción equivalente sobre el estado B tenía el mismo problema.
+- Cambio mínimo preparado en una rama aislada: [PR #7](https://github.com/jonhararagi/wordwaifu/pull/7), que solo actualiza las dos aserciones del test. No modifica código de producción ni contenido de lore.
+- HEAD del fix: `4b16e4e926ecaba7ef47b7e3c03e6656210be19a`.
+- Estado al redactar este registro: CI de PR #7 `IN_PROGRESS`; no declarar el fix validado hasta que termine.
+- El historial muestra varios runs cancelados y fallidos recientes en la rama lore. La concurrencia con `cancel-in-progress: true` cancela runs anteriores al llegar pushes nuevos; revisar el run final del HEAD y no interpretar cancelaciones como fallos de pruebas.
