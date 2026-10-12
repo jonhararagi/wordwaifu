@@ -8,8 +8,8 @@ import os
 ROOT = Path(__file__).resolve().parents[1]
 PORT = int(os.environ.get("PORT", "8000"))
 
-# Serve only the app shell, its runtime modules, and the three lore resources
-# loaded by src/lore-corpus.js. Never expose .git, devcontainer, docs, or other files.
+# Serve the app shell, the three research batches, and the explicit character dossiers loaded by src/lore-corpus.js.
+# Never expose the repository tree, .git, devcontainer, docs, or non-allowlisted lore files.
 ALLOWED_FILES = {
     "/index.html": "index.html",
     "/src/styles.css": "src/styles.css",
@@ -37,6 +37,18 @@ ALLOWED_FILES = {
         "lore/danmachi/research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
     "/lore/danmachi/research/inbox/BATCH-DM-005-astrea-familia-network.md":
         "lore/danmachi/research/inbox/BATCH-DM-005-astrea-familia-network.md",
+    "/lore/danmachi/characters/ryuu-lion.md": "lore/danmachi/characters/ryuu-lion.md",
+    "/lore/danmachi/characters/alise-lovelace.md": "lore/danmachi/characters/alise-lovelace.md",
+    "/lore/danmachi/characters/astrea.md": "lore/danmachi/characters/astrea.md",
+    "/lore/danmachi/characters/bell-cranel.md": "lore/danmachi/characters/bell-cranel.md",
+    "/lore/danmachi/characters/hestia.md": "lore/danmachi/characters/hestia.md",
+    "/lore/danmachi/characters/ais-wallenstein.md": "lore/danmachi/characters/ais-wallenstein.md",
+    "/lore/danmachi/characters/eina-tulle.md": "lore/danmachi/characters/eina-tulle.md",
+    "/lore/danmachi/characters/finn-deimne.md": "lore/danmachi/characters/finn-deimne.md",
+    "/lore/danmachi/characters/freya.md": "lore/danmachi/characters/freya.md",
+    "/lore/danmachi/characters/ottar.md": "lore/danmachi/characters/ottar.md",
+    "/lore/danmachi/characters/gojouno-kaguya.md": "lore/danmachi/characters/gojouno-kaguya.md",
+    "/lore/danmachi/characters/lyra.md": "lore/danmachi/characters/lyra.md",
 }
 
 class PreviewRequestHandler(SimpleHTTPRequestHandler):
