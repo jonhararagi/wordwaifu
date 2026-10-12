@@ -876,43 +876,50 @@
 
     async saveActive(project) {
       if (!isProject(project)) throw new Error("El proyecto debe contener project.id.");
-      // If IndexedDB is available, check the tombstone before touching the single
-      // compatibility backup. If IndexedDB itself is unavailable, preserve the
-      // existing localStorage-only fallback; write() repeats this guard atomically.
+
+      // Stage the compatibility backup synchronously so UI edits and exports see
+      // the latest candidate immediately. If the trash guard rejects this save,
+      // restore the exact prior backup before surfacing the failure.
+      const previousBackup = this.readBackup();
+      const backup = this.saveBackup(project);
+      const backupWritten = backup.written;
+      const backupError = backup.warning ? new Error(backup.warning) : null;
+      const restorePreviousBackup = () => {
+        if (!backupWritten || !this.localStorage || previousBackup.error) return;
+        try {
+          if (previousBackup.raw === null) this.localStorage.removeItem(this.storageKey);
+          else this.localStorage.setItem(this.storageKey, previousBackup.raw);
+        } catch { /* Preserve the authoritative error if storage rollback is unavailable. */ }
+      };
+
+      // If IndexedDB is available, check the tombstone before the write. write()
+      // repeats this guard atomically to cover a trash move racing this preflight.
       let dbAvailable = false;
       if (this.indexedDB && typeof this.indexedDB.open === "function") {
-        try { await this.open(); dbAvailable = true; } catch { /* Let the documented localStorage fallback handle unavailable IndexedDB. */ }
+        try { await this.open(); dbAvailable = true; } catch { /* Keep the documented localStorage-only fallback. */ }
       }
       if (dbAvailable) {
         let tombstone;
         try { tombstone = await this.read("trash", project.project.id); }
-        catch (error) { throw new Error("No se pudo verificar la papelera; el proyecto no se guardó. " + error.message); }
+        catch (error) {
+          restorePreviousBackup();
+          throw new Error("No se pudo verificar la papelera; el proyecto no se guardó. " + error.message);
+        }
         if (tombstone) {
+          restorePreviousBackup();
           const error = new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
           error.code = "PROJECT_IN_TRASH";
           throw error;
         }
       }
 
-      const previousBackup = this.readBackup();
-      const backup = this.saveBackup(project);
-      const backupWritten = backup.written;
-      const backupError = backup.warning ? new Error(backup.warning) : null;
-
       try {
         await this.write(project);
         return { backend: "indexeddb", backupWritten, warning: backupError ? backupError.message : null };
       } catch (error) {
         if (error && error.code === "PROJECT_IN_TRASH") {
-          // The tombstone may have appeared between the preflight and the write
-          // transaction. Restore the prior compatibility backup rather than
-          // leaving a ghost project under an ID that the repository rejects.
-          try {
-            if (this.localStorage) {
-              if (previousBackup.raw === null) this.localStorage.removeItem(this.storageKey);
-              else this.localStorage.setItem(this.storageKey, previousBackup.raw);
-            }
-          } catch { /* Keep the authoritative tombstone; surface the guard below. */ }
+          // A trash move may win after preflight but before the write transaction.
+          restorePreviousBackup();
           throw error;
         }
         if (backupWritten) return { backend: "localStorage", backupWritten: true, warning: "IndexedDB no se verificó; se conserva el respaldo local: " + error.message };
