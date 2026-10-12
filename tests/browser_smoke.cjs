@@ -2486,6 +2486,9 @@ async function run() {
     assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
     // A user-assigned portrait takes precedence over the linked reference art in the archive.
     await page.locator('.nav-item[data-view="lore"]').click();
+    const profileBack = page.locator("#archive-profile-back");
+    if (await profileBack.isVisible().catch(() => false)) await profileBack.click();
+    await page.locator("#archive-clear-filters").click();
     await page.locator("#character-archive-query").fill("Bell");
     await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="DM-CHAR-BELL"]').length === 1, { timeout: 5000 });
     await page.locator('#character-archive-results [data-archive-open="DM-CHAR-BELL"]').click();
