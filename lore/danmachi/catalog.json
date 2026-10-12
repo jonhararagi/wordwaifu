@@ -416,6 +416,140 @@
       ],
       "status": "provisional",
       "priority": "normal"
+    },
+    {
+      "id": "CHAR-ISKA-BRA",
+      "path": "characters/iska-bra.md",
+      "type": "character",
+      "tags": [
+        "Iska Bra",
+        "Iska",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-MARYUU-REAGE",
+      "path": "characters/maryuu-reage.md",
+      "type": "character",
+      "tags": [
+        "Maryuu Reage",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-NOIN-UNIC",
+      "path": "characters/noin-unic.md",
+      "type": "character",
+      "tags": [
+        "Noin Unic",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-NEZE-RANKETT",
+      "path": "characters/neze-rankett.md",
+      "type": "character",
+      "tags": [
+        "Neze Rankett",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-ASTA-KNOX",
+      "path": "characters/asta-knox.md",
+      "type": "character",
+      "tags": [
+        "Asta Knox",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-RYANA-LIETZ",
+      "path": "characters/ryana-lietz.md",
+      "type": "character",
+      "tags": [
+        "Ryana Lietz",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-CELTY-SROWA",
+      "path": "characters/celty-srowa.md",
+      "type": "character",
+      "tags": [
+        "Celty Srowa",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-CECIL-BLACKLIZA",
+      "path": "characters/cecil-blackliza.md",
+      "type": "character",
+      "tags": [
+        "Cecil Blackliza",
+        "capitana",
+        "Nueva Astrea Familia",
+        "Solingen"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-ISELINA",
+      "path": "characters/iselina.md",
+      "type": "character",
+      "tags": [
+        "Iselina",
+        "Nueva Astrea Familia",
+        "Solingen"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-SHAU",
+      "path": "characters/shau.md",
+      "type": "character",
+      "tags": [
+        "Shau",
+        "Nueva Astrea Familia",
+        "Solingen"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-ULANDA",
+      "path": "characters/ulanda.md",
+      "type": "character",
+      "tags": [
+        "Ulanda",
+        "Nueva Astrea Familia",
+        "Solingen"
+      ],
+      "status": "provisional",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
@@ -1249,6 +1383,12 @@
       "document_id": "RESEARCH-DM-006",
       "path": "research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md",
       "type": "timeline_verification_batch",
+      "status": "present"
+    },
+    {
+      "document_id": "RESEARCH-DM-007",
+      "path": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+      "type": "character_relationship_research",
       "status": "present"
     }
   ],
