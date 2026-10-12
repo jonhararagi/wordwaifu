@@ -72,15 +72,92 @@
               <rect width="900" height="600" fill="url(#sea)"/>
               <rect width="900" height="600" fill="url(#grid)"/>
               <g class="map-art" id="map-art">
-                <path class="landmass" d="M63 140 L115 91 190 75 237 101 287 89 338 126 365 171 340 213 302 228 284 274 240 288 222 330 173 349 137 323 113 278 81 258 68 210Z"/>
-                <path class="landmass landmass-alt" d="M396 61 L454 49 497 73 536 63 584 92 611 133 594 173 556 190 541 230 506 251 476 227 443 236 420 207 390 181 375 139Z"/>
-                <path class="landmass" d="M581 283 L627 251 677 262 706 292 753 303 789 342 773 390 739 409 718 457 676 475 639 447 620 407 590 391 567 350Z"/>
-                <path class="landmass landmass-alt" d="M286 384 L323 363 359 376 383 410 370 444 344 466 329 510 298 520 275 484 257 452 267 415Z"/>
-                <path class="mountain-range" d="M102 154 l15 -22 12 21 15 -31 14 25 16 -17 12 23 M420 109 l15 -22 12 21 15 -31 14 25 16 -17 12 23 M621 326 l15 -22 12 21 15 -31 14 25 16 -17 12 23"/>
-                <path class="river" d="M224 123 C211 164 246 185 226 216 S203 269 179 300 M480 102 C467 143 497 166 475 202 S490 222 506 237"/>
-                <path class="road" d="M189 191 Q248 194 298 158 T453 144 T526 177 M453 144 Q473 213 505 238 M505 238 Q579 293 651 351 M298 158 Q318 265 340 424"/>
-                <g class="map-label"><text x="142" y="112">BOSQUE VELADO</text><text x="435" y="44">CORDILLERA AZUR</text><text x="650" y="246">TIERRAS DEL ESTE</text><text x="274" y="551">MAR INTERIOR</text></g>
-                <g class="map-marker" data-location="loc-asteria" tabindex="0" role="button" aria-label="Abrir ciudad Asteria" transform="translate(298 158)"><circle class="marker-halo" r="24"/><circle class="marker-core city" r="8"/><text y="-20">ASTERIA</text></g>
+                
+                <!-- Continentes de Asteria: cartografía ilustrada original en SVG, no un shapefile. -->
+                <g class="atlas-water-lines" fill="none" stroke-linecap="round">
+                  <path d="M28 110 C91 91 124 101 163 91 S248 94 292 73 M35 118 C92 101 124 111 163 101 S248 104 292 83"/>
+                  <path d="M548 238 C605 219 642 232 689 218 S789 225 858 205 M547 248 C604 229 641 242 688 228 S788 235 857 215"/>
+                  <path d="M409 287 C461 270 499 281 530 269 S601 277 635 260 M410 297 C462 280 500 291 531 279 S602 287 636 270"/>
+                  <path d="M32 390 C79 371 117 380 143 365 M34 400 C80 381 118 390 144 375 M424 466 C468 449 502 459 526 446 S583 445 606 434 M425 476 C469 459 503 469 527 456 S584 455 607 444"/>
+                  <path d="M42 478 C74 465 99 471 118 459 M43 488 C75 475 100 481 119 469 M772 140 C795 132 821 136 849 121 M771 150 C794 142 820 146 848 131"/>
+                </g>
+                <g class="atlas-map-frame" fill="none">
+                  <rect x="18" y="18" width="864" height="564" rx="5"/>
+                  <path d="M29 53V29H53 M847 29H871V53 M29 547V571H53 M847 571H871V547"/>
+                  <path d="M390 29H510 M390 571H510"/>
+                </g>
+                <g class="atlas-map-title">
+                  <text x="44" y="43">ATLAS DE ASTERIA</text>
+                  <text class="atlas-map-subtitle" x="45" y="61">LAS TIERRAS DEL ESTE · CARTA DE EXPLORACIÓN</text>
+                </g>
+                <path class="landmass" d="M55 143 C59 122 77 111 94 103 C110 94 117 77 139 82 C156 85 170 72 190 80 C211 88 225 75 244 83 C260 89 275 88 290 98 C308 109 330 112 342 128 C357 141 371 153 365 170 C360 184 341 187 335 204 C331 218 315 226 304 235 C296 249 294 266 279 278 C265 289 248 294 235 308 C218 322 200 315 187 324 C172 333 159 320 146 311 C132 302 119 294 114 277 C109 261 94 252 88 237 C78 219 79 204 66 188 C57 175 48 159 55 143Z"/>
+                <path class="landmass landmass-alt" d="M368 89 C380 71 398 64 414 71 C430 78 444 64 459 60 C475 57 487 70 500 75 C516 81 531 77 543 87 C558 97 573 93 585 108 C599 124 592 139 579 151 C568 161 566 175 556 190 C547 205 531 210 521 224 C507 238 492 241 478 230 C464 220 455 209 440 213 C426 217 415 207 407 191 C395 178 380 175 379 159 C376 142 364 134 360 118 C357 107 360 96 368 89Z"/>
+                <path class="landmass" d="M577 285 C590 274 605 268 619 258 C633 246 648 252 664 257 C680 261 693 268 706 282 C720 293 739 293 751 308 C766 323 777 331 780 347 C783 364 774 379 758 392 C748 405 742 417 738 434 C734 451 719 464 707 477 C694 489 681 477 667 466 C650 455 641 447 632 435 C619 422 605 415 591 407 C578 398 570 383 578 368 C584 354 568 342 565 329 C561 313 565 297 577 285Z"/>
+                <path class="landmass landmass-alt" d="M257 391 C268 375 286 373 302 369 C316 365 328 371 340 370 C355 368 370 384 379 398 C390 414 389 427 381 442 C376 456 376 472 363 485 C349 497 347 515 332 526 C317 537 303 525 292 513 C279 503 270 489 265 472 C261 458 249 444 252 428 C252 414 249 401 257 391Z"/>
+                <path class="landmass" d="M475 491 C486 478 501 482 514 489 C525 496 534 512 526 526 C517 540 494 544 483 531 C472 521 467 503 475 491Z"/>
+                <path class="landmass landmass-alt" d="M730 497 C739 488 754 493 762 500 C773 511 766 526 753 530 C741 535 727 523 727 511 C726 506 727 501 730 497Z"/>
+                <g class="atlas-coast-detail" fill="none" stroke-linecap="round">
+                  <path d="M62 152 Q73 132 92 126 M74 205 Q87 222 100 226 M111 279 Q130 289 140 302 M151 315 Q165 322 178 315 M206 309 Q221 296 237 291 M299 230 Q316 218 324 205 M338 151 Q352 159 357 170"/>
+                  <path d="M381 111 Q393 95 407 99 M421 183 Q430 196 442 194 M493 229 Q508 231 518 218 M551 190 Q560 176 562 167 M580 125 Q587 138 579 148"/>
+                  <path d="M590 289 Q601 280 616 278 M624 431 Q641 439 650 450 M707 473 Q722 459 726 443 M762 391 Q772 376 769 362"/>
+                  <path d="M266 409 Q277 395 289 396 M276 474 Q286 490 297 496 M354 484 Q366 470 367 454 M330 523 Q341 511 342 500"/>
+                </g>
+                <g class="mountain-range">
+                  <path d="M100 154l12-19 9 16 13-26 12 20 11-15 12 20 12-13 14 23 12-11 12 18 11-13 10 17"/>
+                  <path d="M384 121l13-20 10 16 14-27 12 19 13-17 13 22 13-12 13 19 12-11 10 15"/>
+                  <path d="M421 144l10-15 8 13 11-20 10 16 9-11 10 16 11-9 11 15"/>
+                  <path d="M615 312l14-21 10 17 13-26 11 20 13-14 12 19 14-11 11 15"/>
+                  <path d="M292 414l11-17 10 14 12-23 11 18 10-12 11 17"/>
+                </g>
+                <g class="atlas-forest" stroke="#b3bd8a" stroke-width="1.4" fill="#344f3f">
+                  <path d="M126 191l7-13 7 13h-4l5 9h-16l5-9z M144 201l6-12 6 12h-4l4 8h-12l4-8z M162 184l7-14 7 14h-4l5 9h-15l5-9z M184 199l6-12 6 12h-3l4 8h-12l4-8z M144 230l8-15 8 15h-5l5 10h-16l5-10z M169 248l6-12 6 12h-4l4 8h-12l4-8z M198 235l7-14 7 14h-4l4 9h-14l4-9z M224 220l6-12 6 12h-4l4 8h-12l4-8z"/>
+                  <path d="M599 365l7-13 7 13h-4l5 9h-16l5-9z M616 384l6-12 6 12h-4l4 8h-12l4-8z M697 396l7-14 7 14h-4l5 9h-16l5-9z M710 418l6-12 6 12h-4l4 8h-12l4-8z"/>
+                </g>
+                <g class="atlas-hills" fill="none" stroke="#c3ad78" stroke-width="1.1" opacity=".8">
+                  <path d="M245 249q8-12 16 0q8-12 16 0 M250 256q8-12 16 0q8-12 16 0 M302 181q8-12 16 0q8-12 16 0 M309 188q8-12 16 0q8-12 16 0"/>
+                  <path d="M532 123q8-12 16 0q8-12 16 0 M536 130q8-12 16 0q8-12 16 0 M654 287q8-12 16 0q8-12 16 0 M658 294q8-12 16 0q8-12 16 0"/>
+                </g>
+                <g class="river">
+                  <path d="M178 118 C169 136 185 148 192 164 S203 185 194 201 S180 219 190 235 S211 259 207 279 S193 297 182 304"/>
+                  <path d="M231 103 C248 121 238 137 250 151 S271 164 267 181 S278 206 300 220"/>
+                  <path d="M452 98 C440 118 461 133 475 145 S479 165 490 178 S499 197 506 210"/>
+                  <path d="M632 287 C625 305 638 318 638 332 S652 350 663 359 S675 382 689 397"/>
+                  <path d="M309 390 C316 402 331 408 334 422 S342 444 356 458 S365 478 358 488"/>
+                </g>
+                <g class="road">
+                  <path d="M188 234 C213 221 246 206 298 158"/>
+                  <path d="M298 158 Q340 148 381 127 T477 143"/>
+                  <path d="M477 143 Q500 181 526 210 Q574 238 604 293 T651 351"/>
+                  <path d="M298 158 Q320 250 340 424"/>
+                  <path d="M340 424 Q318 454 308 474"/>
+                  <path d="M651 351 Q685 346 711 360"/>
+                </g>
+                <g class="atlas-settlements" fill="#e5cc91" stroke="#29392d" stroke-width="1">
+                  <circle cx="249" cy="144" r="3"/><circle cx="214" cy="282" r="2.5"/><circle cx="416" cy="176" r="2.7"/><circle cx="540" cy="199" r="2.5"/><circle cx="618" cy="322" r="2.5"/><circle cx="700" cy="436" r="2.5"/><circle cx="297" cy="458" r="2.6"/>
+                </g>
+                <g class="map-label">
+                  <text x="111" y="110">BOSQUE VELADO</text>
+                  <text x="390" y="89">CORDILLERA AZUR</text>
+                  <text x="651" y="246">TIERRAS DEL ESTE</text>
+                  <text x="280" y="554">MAR INTERIOR</text>
+                  <text x="82" y="344">COSTA DE ARAM</text>
+                  <text x="570" y="460">BAHÍA DE UMBRÍA</text>
+                  <text x="402" y="306">PASO DE LAS NIEBLAS</text>
+                </g>
+                <g class="atlas-map-title">
+                  <text x="42" y="43">ATLAS DE ASTERIA</text>
+                  <text class="atlas-map-subtitle" x="43" y="59">LAS TIERRAS DEL ESTE · CARTA DE EXPLORACIÓN</text>
+                </g>
+                <g class="atlas-compass" transform="translate(834 86)">
+                  <circle r="26"/><circle r="18"/><path d="M0-34V34M-34 0H34M-23-23L23 23M23-23L-23 23"/>
+                  <path class="compass-north" d="M0-25L7 6 0 1 -7 6Z"/><path d="M0 25L7 -6 0 -1 -7 -6Z"/>
+                  <text x="0" y="-41" text-anchor="middle">N</text>
+                </g>
+                <g class="atlas-scale" transform="translate(48 530)">
+                  <path d="M0 0H90M0-4V4M45-4V4M90-4V4"/>
+                  <text x="0" y="17">0</text><text x="45" y="17" text-anchor="middle">50</text><text x="90" y="17" text-anchor="end">100 LEGUAS</text>
+                </g>
+<g class="map-marker" data-location="loc-asteria" tabindex="0" role="button" aria-label="Abrir ciudad Asteria" transform="translate(298 158)"><circle class="marker-halo" r="24"/><circle class="marker-core city" r="8"/><text y="-20">ASTERIA</text></g>
                 <g class="map-marker" data-location="loc-velado" tabindex="0" role="button" aria-label="Abrir Bosque Velado" transform="translate(170 224)"><circle class="marker-halo" r="18"/><circle class="marker-core forest" r="6"/><text y="-17">BOSQUE VELADO</text></g>
                 <g class="map-marker" data-location="loc-azur" tabindex="0" role="button" aria-label="Abrir Fortaleza Azur" transform="translate(477 143)"><circle class="marker-halo" r="18"/><circle class="marker-core fortress" r="6"/><text y="-17">FORTALEZA AZUR</text></g>
                 <g class="map-marker" data-location="loc-umbria" tabindex="0" role="button" aria-label="Abrir Puerto Umbría" transform="translate(651 351)"><circle class="marker-halo" r="18"/><circle class="marker-core port" r="6"/><text y="-17">PUERTO UMBRÍA</text></g>
