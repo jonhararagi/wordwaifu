@@ -30,6 +30,8 @@
         <button class="nav-item" data-view="stories"><span>▤</span> Historias y novelas</button>
         <button class="nav-item" data-view="commands"><span>⌘</span> Asistente local</button>
         <button class="nav-item" data-view="lore"><span>⌕</span> Enciclopedia de personajes</button>
+        <button class="nav-item" data-view="universe"><span>◎</span> Explorador de universos</button>
+        <button class="nav-item" data-view="powers"><span>✦</span> Poderes y habilidades</button>
         <button class="nav-item" data-view="art"><span>▧</span> Panel de arte</button>
       </nav>
       <div class="sidebar-bottom">
@@ -100,6 +102,8 @@
       </section>
 
       <section id="directory-view" class="directory-view hidden"></section>
+      <section id="universe-view" class="universe-view hidden" aria-label="Explorador conectado de franquicias"></section>
+      <section id="powers-view" class="powers-view hidden" aria-label="Catálogo editable de poderes"></section>
       <section id="command-view" class="command-view hidden">
         <div class="command-intro"><span class="command-orb">⌘</span><h2>Asistente local</h2><p>Consultá y organizá tu universo con comandos conocidos. No utiliza IA ni envía datos a Internet.</p></div>
         <div id="command-log" class="command-log"><div class="system-message">Probá: «buscar personaje», «listar lugares», «validar continuidad» o «ayuda».</div></div>
@@ -302,6 +306,10 @@
   <script src="./src/art-studio.js" defer></script>
   <script src="./src/lore-corpus.js" defer></script>
   <script src="./src/character-archive.js" defer></script>
+  <script src="./src/power-catalog.js" defer></script>
+  <script src="./src/universe-graph.js" defer></script>
+  <script src="./src/universe-explorer.js" defer></script>
+  <script src="./src/power-workbench.js" defer></script>
   <script src="./src/app.js" defer></script>
   <script src="./src/art-studio.js" defer></script>
 </body>
