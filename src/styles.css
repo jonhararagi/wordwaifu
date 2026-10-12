@@ -371,3 +371,10 @@ select{background:#332d26;color:#e9dfd2}
 .archive-other-family-copy>p{margin:0;color:#c1b29e;font-size:10px;line-height:1.65}
 .archive-other-family-members{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap}
 @media(max-width:560px){.archive-family-card{padding:13px}.archive-family-title h4{font-size:19px}.archive-family-member{grid-template-columns:45px minmax(0,1fr)}.archive-family-member .archive-portrait{width:45px;height:55px}.archive-family-milestone-meta{grid-template-columns:1fr}.archive-family-milestone-meta>span{text-align:left}.archive-other-family{grid-template-columns:1fr}.archive-other-family-members{justify-content:flex-start}}
+
+.archive-family-dynamics{display:grid;gap:9px}
+.archive-family-dynamic{display:grid;gap:8px;padding:12px;border:1px solid #514333;border-radius:11px;background:#2d271f}
+.archive-family-dynamic>strong{font-size:12px;line-height:1.55}
+.archive-family-dynamic-people{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.archive-family-dynamic>p{margin:0;color:#d1c2af;font-size:11px;line-height:1.8}
+.archive-family-dynamic .archive-source-links{font-size:10px}
