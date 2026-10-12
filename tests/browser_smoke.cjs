@@ -166,10 +166,13 @@ async function run() {
     assert.ok(astreaFamilyText.includes("Alise"));
     assert.ok(astreaFamilyText.includes("Gojouno Kaguya"));
     assert.ok(astreaFamilyText.includes("Lyra"));
-    assert.ok(astreaFamilyText.includes("Astrea deja Orario; Ryu permanece"));
+    assert.ok(astreaFamilyText.includes("Astrea deja Orario antes de la venganza de Ryu"));
+    assert.ok(astreaFamilyText.includes("Cómo se relacionaban"));
+    assert.ok(astreaFamilyText.includes("Alise invita a Ryu y se convierte en su capitana"));
+    assert.ok(astreaFamilyText.includes("Choques frecuentes y respeto por la habilidad"));
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count() > 0);
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').click();
+    await page.locator('#archive-profile-panel .archive-family-role [data-character-link="CHAR-ALISE-LOVELACE"]').click();
     await page.waitForFunction(() => /Alise/.test(document.querySelector("#archive-profile-name")?.textContent || ""));
     await page.locator("#archive-tab-family").click();
     await page.waitForFunction(() => document.querySelector('#archive-profile-panel [data-family-id="FAM-ASTREA"]'));
