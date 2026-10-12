@@ -2485,6 +2485,8 @@ async function run() {
     await page.locator("#art-prompt").fill("Panorámica nocturna de Orario, luces cálidas y cielo profundo.");
     await page.locator("#art-save").click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
+    assert.equal(await page.locator("#art-assignments > .art-assignment-card").count(), 2,
+      "Concurrent gallery refreshes must not render duplicate assignment cards.");
     const backgroundAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"));
     assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
 
