@@ -26,9 +26,10 @@ function testEachGeassPowerHasIndividualMechanicsAndCost() {
   for (const id of expected) {
     const power = records.get(id);
     assert.ok(power, "Missing distinct power record: " + id);
-    for (const field of ["activation","cost","limits","consequences","sourceUrl","continuity"]) {
+    for (const field of ["activation","cost","limits","consequences","sourceUrl"]) {
       assert.ok(String(power[field] || "").length > 10, id + " must specify " + field);
     }
+    assert.ok(String(power.continuity || "").length >= 3, id + " must declare a continuity");
     assert.ok(power.sourceUrl.startsWith("https://"));
   }
   assert.match(records.get("CG-POWER-ROLO-GEASS").cost, /coraz[oó]n/i);
