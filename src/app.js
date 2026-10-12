@@ -2265,9 +2265,18 @@
     card.appendChild(archiveElement("p","archive-family-period",group.period));
     card.appendChild(archiveElement("p","archive-family-summary",group.summary));
     const roles=archiveElement("div","archive-family-roles");
-    if(group.leader)roles.appendChild(archiveElement("span","archive-family-role","Liderazgo: "+group.leader.name));
-    if(group.deity)roles.appendChild(archiveElement("span","archive-family-role","Diosa: "+group.deity.name));
-    else if(group.deityName)roles.appendChild(archiveElement("span","archive-family-role","Diosa: "+group.deityName+" · ficha navegable pendiente"));
+    if(group.leader){
+      const leadership=archiveElement("div","archive-family-role");
+      const leaderLink=archiveElement("button","archive-related-link","Liderazgo: "+group.leader.name+" ↗");
+      leaderLink.type="button";leaderLink.dataset.characterLink=group.leader.id;leaderLink.dataset.linkContinuity=group.continuity;
+      leadership.appendChild(leaderLink);roles.appendChild(leadership);
+    }
+    if(group.deity){
+      const patron=archiveElement("div","archive-family-role");
+      const deityLink=archiveElement("button","archive-related-link","Deidad: "+group.deity.name+" ↗");
+      deityLink.type="button";deityLink.dataset.characterLink=group.deity.id;deityLink.dataset.linkContinuity=group.continuity;
+      patron.appendChild(deityLink);roles.appendChild(patron);
+    } else if(group.deityName)roles.appendChild(archiveElement("span","archive-family-role","Deidad: "+group.deityName+" · ficha navegable pendiente"));
     if(roles.childNodes.length)card.appendChild(roles);
     const members=archiveElement("div","archive-family-members");
     group.members.forEach(member=>{
