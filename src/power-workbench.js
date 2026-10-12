@@ -189,7 +189,7 @@
       const generated=api.generate({family:root.querySelector("#power-generator-family").value});
       if(!generated){root.querySelector("#power-generator-status").textContent="No hay plantillas para esa familia.";return;}
       candidate=generated;
-      const power={...generated,status:"proposal",irreversible:/permanent|permanently|permanente|irreversib/i.test([generated.evolution,generated.cost,generated.consequences].join(" "))};
+      const power={...generated,id:null,status:"proposal",irreversible:/permanent|permanently|permanente|irreversib/i.test([generated.evolution,generated.cost,generated.consequences].join(" "))};
       setForm(power);candidate=generated;
       root.querySelector("#power-generator-status").textContent="Candidato «"+generated.name+"» cargado para revisión; editá la ficha y guardala para incorporarla.";
       return;
