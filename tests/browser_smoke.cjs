@@ -1122,7 +1122,7 @@ async function run() {
     await acceptProjectDeleteDialog.accept();
     await acceptProjectDeleteClick;
     await page.waitForFunction((id) => !Array.from(document.querySelector("#project-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
-    await page.waitForFunction((id) => Array.from(document.querySelector("#project-trash-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
+    await page.waitForFunction((id) => Array.from(document.querySelector("#trash-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
 
     const afterTrash = await page.evaluate(async (ids) => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
