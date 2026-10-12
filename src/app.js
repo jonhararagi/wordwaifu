@@ -1288,7 +1288,15 @@
         story.name = parsed.name;
         story.description = parsed.description;
         story.premise = parsed.premise;
-        story.conflict = story.conflict || "";
+        story.conflict = parsed.conflict || story.conflict || "";
+        story.worldType = parsed.worldType || "unspecified";
+        story.worldRules = parsed.worldRules || "";
+        story.worldDynamics = parsed.worldDynamics || "";
+        story.revealType = parsed.revealType || "none";
+        story.revealSecret = parsed.revealSecret || "";
+        story.revealClues = parsed.revealClues || "";
+        story.revealTiming = parsed.revealTiming || "";
+        story.revealConsequences = parsed.revealConsequences || "";
         story.arcs = parsed.arcs;
         story.chapters = parsed.chapters;
         story.status = "draft";
@@ -1306,6 +1314,14 @@
         "## Sinopsis\n\n" + (story.description || "Sinopsis pendiente.") + "\n\n" +
         "## Premisa\n\n" + (story.premise || "Premisa pendiente.") + "\n\n" +
         "## Conflicto central\n\n" + (story.conflict || "Conflicto pendiente.") + "\n\n" +
+        "## Tipo de mundo\n\n" + (story.worldType || "unspecified") + "\n\n" +
+        "## Reglas del mundo\n\n" + (story.worldRules || "") + "\n\n" +
+        "## Dinámica del mundo\n\n" + (story.worldDynamics || "") + "\n\n" +
+        "## Motor de revelación\n\n" + (story.revealType || "none") + "\n\n" +
+        "## Secreto central\n\n" + (story.revealSecret || "") + "\n\n" +
+        "## Pistas y falsas interpretaciones\n\n" + (story.revealClues || "") + "\n\n" +
+        "## Momento de revelación\n\n" + (story.revealTiming || "") + "\n\n" +
+        "## Consecuencias del giro\n\n" + (story.revealConsequences || "") + "\n\n" +
         "## Arcos narrativos\n\n" + (story.arcs || []).map((arc) => "- " + (typeof arc === "string" ? arc : arc.title || arc.description || "")).join("\n") + "\n\n" +
         (story.chapters || []).map((chapter, index) => "## Capítulo " + (index + 1) + ": " + (chapter.title || "Sin título") + "\n\n" + (chapter.summary ? "> " + chapter.summary + "\n\n" : "") + (chapter.content || "_Capítulo sin redactar._") + "\n").join("\n");
       const url = URL.createObjectURL(new Blob([markdown], { type: "text/markdown;charset=utf-8" }));
@@ -1324,6 +1340,24 @@
     const synopsisMatch = text.match(/^##\s+Sinopsis\s*\n+([\s\S]*?)(?=\n#{1,3}\s|\n---\s*$|$)/im);
     const description = synopsisMatch ? synopsisMatch[1].trim() : "";
     const chapterPattern = /^##\s+Cap[ií]tulo\s+(\d+)\s*[—–:-]\s*(.+?)\s*\n([\s\S]*?)(?=^##\s+Cap[ií]tulo\s+\d+\s*[—–:-]|(?![\s\S]))/gim;
+    const readSection = (heading) => {
+      const header = new RegExp("^##\\s+" + heading + "\\s*$", "im");
+      const found = header.exec(text);
+      if (!found) return "";
+      const start = found.index + found[0].length;
+      const remainder = text.slice(start).replace(/^\s*\n/, "");
+      const nextHeading = remainder.search(/^#{1,3}\s/m);
+      return (nextHeading < 0 ? remainder : remainder.slice(0, nextHeading)).trim();
+    };
+    const conflict = readSection("Conflicto central");
+    const worldType = readSection("Tipo de mundo");
+    const worldRules = readSection("Reglas del mundo");
+    const worldDynamics = readSection("Dinámica del mundo");
+    const revealType = readSection("Motor de revelación");
+    const revealSecret = readSection("Secreto central");
+    const revealClues = readSection("Pistas y falsas interpretaciones");
+    const revealTiming = readSection("Momento de revelación");
+    const revealConsequences = readSection("Consecuencias del giro");
     const chapters = [];
     let match;
     while ((match = chapterPattern.exec(text)) !== null) {
@@ -1345,7 +1379,7 @@
         if (arc) arcs.push(arc[1].trim() + ": " + arc[2].trim());
       }
     }
-    return { name, description, premise: description, arcs, chapters };
+    return { name, description, premise: description, conflict, worldType, worldRules, worldDynamics, revealType, revealSecret, revealClues, revealTiming, revealConsequences, arcs, chapters };
   }
 
   async function createStory() {
