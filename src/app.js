@@ -1205,7 +1205,7 @@
     if (!Array.isArray(story.arcs)) story.arcs = [];
     const chapters = story.chapters.map((chapter, index) => '<article class="story-chapter-card"><div class="story-chapter-heading"><span class="tag">Capítulo ' + (index + 1) + '</span><span class="tag">' + escapeHTML(chapter.status || "borrador") + '</span></div><form class="story-chapter-form" data-chapter-id="' + escapeHTML(chapter.id) + '"><label>Título del capítulo<input name="chapterTitle" maxlength="180" required value="' + escapeHTML(chapter.title || "") + '"></label><label>Resumen del capítulo<textarea name="chapterSummary" rows="2" maxlength="4000">' + escapeHTML(chapter.summary || "") + '</textarea></label><label>Manuscrito<textarea name="chapterContent" rows="12" maxlength="200000" placeholder="Escribí acá el capítulo completo…">' + escapeHTML(chapter.content || "") + '</textarea></label><label>Estado<select name="chapterStatus"><option value="outline"' + (chapter.status === "outline" ? " selected" : "") + '>Esquema</option><option value="draft"' + (!chapter.status || chapter.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (chapter.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (chapter.status === "complete" ? " selected" : "") + '>Completo</option></select></label><div class="location-actions"><button class="primary-button" type="submit">Guardar capítulo</button><button class="outline-button danger-action" type="button" data-delete-chapter="' + escapeHTML(chapter.id) + '">Eliminar capítulo</button></div></form></article>').join("");
     const completeCount = story.chapters.filter((chapter) => chapter.status === "complete").length;
-    return '<section class="story-editor selected-event-card"><div class="story-editor-title"><div><p class="eyebrow">EDITOR DE HISTORIAS · BORRADOR LOCAL</p><h2>' + escapeHTML(story.name || "Historia sin título") + '</h2><p>' + story.chapters.length + ' capítulos · ' + completeCount + ' completos</p></div><button type="button" id="story-export-button" class="outline-button">Exportar manuscrito .md</button></div><form id="story-meta-form" data-story-id="' + escapeHTML(story.id) + '"><div class="story-form-grid"><label>Título<input name="storyName" required maxlength="180" value="' + escapeHTML(story.name || "") + '"></label><label>Estado<select name="storyStatus"><option value="idea"' + (story.status === "idea" ? " selected" : "") + '>Idea</option><option value="outline"' + (story.status === "outline" ? " selected" : "") + '>En planificación</option><option value="draft"' + (!story.status || story.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (story.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (story.status === "complete" ? " selected" : "") + '>Completa</option></select></label></div><label>Sinopsis<textarea name="storyDescription" rows="3" maxlength="6000" placeholder="¿De qué trata la historia?">' + escapeHTML(story.description || "") + '</textarea></label><label>Premisa<textarea name="storyPremise" rows="3" maxlength="6000" placeholder="La idea central y qué hace única esta historia…">' + escapeHTML(story.premise || "") + '</textarea></label><label>Conflicto central<textarea name="storyConflict" rows="3" maxlength="6000" placeholder="Qué quiere el protagonista, qué se lo impide y qué está en juego…">' + escapeHTML(story.conflict || "") + '</textarea></label><label>Arcos narrativos (uno por línea)<textarea name="storyArcs" rows="4" maxlength="12000" placeholder="Personaje: punto de partida → cambio → consecuencia">' + escapeHTML((story.arcs || []).map((arc) => typeof arc === "string" ? arc : arc.title || arc.description || "").join("\n")) + '</textarea></label><div class="location-actions"><button type="submit" class="primary-button">Guardar historia</button><button type="button" id="story-add-chapter-button" class="outline-button">＋ Añadir capítulo</button><button type="button" id="story-delete-button" class="outline-button danger-action">Eliminar historia</button></div><p class="field-help" id="story-editor-status" role="status" aria-live="polite">Los cambios de cada formulario se guardan por separado.</p></form><div class="detail-divider"></div><h3>Capítulos y manuscrito</h3><p class="field-help">Cada capítulo tiene título, resumen, texto íntegro y estado. «Completo» es una marca editorial manual, no una evaluación automática de calidad.</p><div class="story-chapters">' + (chapters || '<div class="empty-state">Esta historia todavía no tiene capítulos. Pulsá «Añadir capítulo» para crear el primero.</div>') + '</div></section>';
+    return '<section class="story-editor selected-event-card"><div class="story-editor-title"><div><p class="eyebrow">EDITOR DE HISTORIAS · BORRADOR LOCAL</p><h2>' + escapeHTML(story.name || "Historia sin título") + '</h2><p>' + story.chapters.length + ' capítulos · ' + completeCount + ' completos</p></div><div class="story-file-actions"><button type="button" id="story-import-button" class="outline-button">Importar manuscrito .md</button><input type="file" id="story-import-file" accept=".md,text/markdown,text/plain" hidden><button type="button" id="story-export-button" class="outline-button">Exportar manuscrito .md</button></div></div><form id="story-meta-form" data-story-id="' + escapeHTML(story.id) + '"><div class="story-form-grid"><label>Título<input name="storyName" required maxlength="180" value="' + escapeHTML(story.name || "") + '"></label><label>Estado<select name="storyStatus"><option value="idea"' + (story.status === "idea" ? " selected" : "") + '>Idea</option><option value="outline"' + (story.status === "outline" ? " selected" : "") + '>En planificación</option><option value="draft"' + (!story.status || story.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (story.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (story.status === "complete" ? " selected" : "") + '>Completa</option></select></label></div><label>Sinopsis<textarea name="storyDescription" rows="3" maxlength="6000" placeholder="¿De qué trata la historia?">' + escapeHTML(story.description || "") + '</textarea></label><label>Premisa<textarea name="storyPremise" rows="3" maxlength="6000" placeholder="La idea central y qué hace única esta historia…">' + escapeHTML(story.premise || "") + '</textarea></label><label>Conflicto central<textarea name="storyConflict" rows="3" maxlength="6000" placeholder="Qué quiere el protagonista, qué se lo impide y qué está en juego…">' + escapeHTML(story.conflict || "") + '</textarea></label><label>Arcos narrativos (uno por línea)<textarea name="storyArcs" rows="4" maxlength="12000" placeholder="Personaje: punto de partida → cambio → consecuencia">' + escapeHTML((story.arcs || []).map((arc) => typeof arc === "string" ? arc : arc.title || arc.description || "").join("\n")) + '</textarea></label><div class="location-actions"><button type="submit" class="primary-button">Guardar historia</button><button type="button" id="story-add-chapter-button" class="outline-button">＋ Añadir capítulo</button><button type="button" id="story-delete-button" class="outline-button danger-action">Eliminar historia</button></div><p class="field-help" id="story-editor-status" role="status" aria-live="polite">Los cambios de cada formulario se guardan por separado.</p></form><div class="detail-divider"></div><h3>Capítulos y manuscrito</h3><p class="field-help">Cada capítulo tiene título, resumen, texto íntegro y estado. «Completo» es una marca editorial manual, no una evaluación automática de calidad.</p><div class="story-chapters">' + (chapters || '<div class="empty-state">Esta historia todavía no tiene capítulos. Pulsá «Añadir capítulo» para crear el primero.</div>') + '</div></section>';
   }
 
   function bindStoryEditor(container, story) {
@@ -1262,6 +1262,35 @@
       await saveProject();
       renderDirectory();
     });
+    const importButton = $("#story-import-button", container);
+    const importInput = $("#story-import-file", container);
+    if (importButton && importInput) importButton.addEventListener("click", () => importInput.click());
+    if (importInput) importInput.addEventListener("change", async () => {
+      const file = importInput.files && importInput.files[0];
+      if (!file) return;
+      try {
+        const markdown = await file.text();
+        const parsed = parseMarkdownStory(markdown, file.name);
+        if (!parsed.chapters.length) throw new Error("No encontré capítulos. Usá encabezados «## Capítulo 1 — Título».");
+        if (!confirm("Importar «" + parsed.name + "» con " + parsed.chapters.length + " capítulos reemplazará los campos y capítulos de esta historia. ¿Continuar?")) {
+          importInput.value = "";
+          return;
+        }
+        story.name = parsed.name;
+        story.description = parsed.description;
+        story.premise = parsed.premise;
+        story.conflict = story.conflict || "";
+        story.arcs = parsed.arcs;
+        story.chapters = parsed.chapters;
+        story.status = "draft";
+        await saveProject();
+        renderDirectory();
+      } catch (error) {
+        alert("No se pudo importar el manuscrito: " + error.message);
+      } finally {
+        importInput.value = "";
+      }
+    });
     const exportButton = $("#story-export-button", container);
     if (exportButton) exportButton.addEventListener("click", () => {
       const markdown = "# " + (story.name || "Historia sin título") + "\n\n" +
@@ -1277,6 +1306,37 @@
       link.click();
       URL.revokeObjectURL(url);
     });
+  }
+
+  function parseMarkdownStory(markdown, filename) {
+    const text = String(markdown || "").replace(/\r\n?/g, "\n");
+    const titleMatch = text.match(/^#\s+(.+)$/m);
+    const name = titleMatch ? titleMatch[1].trim() : String(filename || "Historia").replace(/\.md$/i, "").replace(/[-_]+/g, " ");
+    const synopsisMatch = text.match(/^##\s+Sinopsis\s*\n+([\s\S]*?)(?=\n#{1,3}\s|\n---\s*$|$)/im);
+    const description = synopsisMatch ? synopsisMatch[1].trim() : "";
+    const chapterPattern = /^##\s+Cap[ií]tulo\s+(\d+)\s*[—–:-]\s*(.+?)\s*\n([\s\S]*?)(?=^##\s+Cap[ií]tulo\s+\d+\s*[—–:-]|\s*$)/gim;
+    const chapters = [];
+    let match;
+    while ((match = chapterPattern.exec(text)) !== null) {
+      const content = match[3].trim();
+      const summary = content.split(/\n\s*\n/).filter(Boolean).slice(0, 2).join(" ").slice(0, 700);
+      chapters.push({
+        id: "chapter-import-" + String(match[1]).padStart(3, "0") + "-" + Date.now().toString(36),
+        title: match[2].trim(),
+        summary,
+        content,
+        status: "complete"
+      });
+    }
+    const elencoMatch = text.match(/^##\s+Elenco y motores dram[aá]ticos\s*\n([\s\S]*?)(?=\n---|\n##\s+Cap[ií]tulo|$)/im);
+    const arcs = [];
+    if (elencoMatch) {
+      for (const line of elencoMatch[1].split("\n")) {
+        const arc = line.match(/^\s*[-*]\s+\*\*([^*]+)\*\*:\s*(.+)$/);
+        if (arc) arcs.push(arc[1].trim() + ": " + arc[2].trim());
+      }
+    }
+    return { name, description, premise: description, arcs, chapters };
   }
 
   async function createStory() {
