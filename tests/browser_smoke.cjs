@@ -106,6 +106,8 @@ async function run() {
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
     // Character archive: compact search, profile navigation, evidence and temporal separation.
+    await page.locator('.nav-item[data-view="lore"]').click();
+    await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
     await page.locator("#character-archive-query").fill("Ryu");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").getAttribute("data-archive-open"), "CHAR-RYUU-LION");
