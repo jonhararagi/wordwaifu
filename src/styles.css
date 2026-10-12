@@ -202,3 +202,25 @@ select{background:#332d26;color:#e9dfd2}
 .archive-gallery-link{display:inline-block;justify-self:start;padding:10px 12px;border:1px solid #536d50;border-radius:10px;background:#263126;text-decoration:none;font-weight:650}.archive-gallery-link:hover{background:#303e2f;border-color:#88b77f}
 .content-rights-content ul{display:grid;gap:8px;margin:0;padding-left:19px}.content-rights-content>p{line-height:1.9}
 @media(max-width:650px){.footer-actions{align-items:flex-start;flex-direction:column;gap:5px}.archive-more-info-cta{padding:15px}.archive-more-info-dialog,.content-rights-dialog{width:calc(100vw - 16px);max-height:92vh;border-radius:14px}.archive-more-info-content,.content-rights-content{gap:12px;padding:16px}}
+
+/* Warm low-glare finish for the archive's older hard-coded navy components */
+.archive-character-card{border-color:#493e31;background:linear-gradient(150deg,#302920,#25211c)}
+.archive-character-card:hover{border-color:#8b6b43}
+.archive-profile-header{border-color:#504333;background:radial-gradient(ellipse at 95% 0%,rgba(187,148,83,.12),transparent 42%),linear-gradient(145deg,#302920,#25211c)}
+.archive-profile-summary{color:#e1d2bd}
+.archive-state-note{border-left-color:#b9a06d;background:#30291f;color:#e0cfad}
+.archive-profile-tabs{border-color:#504333}
+.archive-profile-tabs [role=tab][aria-selected=true]{border-color:#78603e;background:#3a3023;color:#edc68d}
+.archive-profile-tabs [role=tab]:focus-visible,.archive-moment-card>summary:focus-visible{outline-color:#d4ad73}
+.archive-info-card,.archive-psychology-card,.archive-claim-card,.archive-relationship-card,.archive-timeline-item{border-color:#4f4232;background:#2b261f}
+.archive-info-card p,.archive-psychology-card p,.archive-claim-card p,.archive-relationship-card p,.archive-timeline-item p{color:#e0d4c1}
+.archive-moment-card{border-color:#4c4032;background:linear-gradient(145deg,#302920,#25211c)}
+.archive-moment-card[open]{border-color:#a28355}
+.archive-moment-icon{border-color:#67523a;background:#3b3022;color:#edc68d}
+.archive-empty{border-color:#65523d;background:#29241e;color:#c7b79e}
+.archive-related-link{color:#a9d6ad}
+.archive-unavailable{color:#c0a98a}
+.archive-evidence{border-color:#4c4032;background:#29241e}
+.archive-evidence>summary{color:#d9bf8c}
+.archive-source-links a{color:#abd4ac}
+.archive-badge--continuity{border-color:#665337;background:#3a3023;color:#edc68d}
