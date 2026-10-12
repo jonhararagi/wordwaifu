@@ -109,6 +109,7 @@ async function run() {
     // Story Foundry: create, edit, persist, import the repository's complete Markdown novel, and verify chapter text survives.
     await page.locator('.nav-item[data-view="stories"]').click();
     await page.locator("#story-create-button").click();
+    await page.locator("#story-meta-form").waitFor();
     await page.locator("#story-meta-form [name='storyName']").fill("Historia de prueba");
     await page.locator("#story-meta-form [name='storyDescription']").fill("Sinopsis de prueba para comprobar el guardado.");
     await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
@@ -117,6 +118,7 @@ async function run() {
     await page.locator("#story-meta-form button[type='submit']").click();
     await page.waitForFunction(() => document.querySelector("#save-status")?.textContent.includes("Guardado en IndexedDB"));
     await page.locator("#story-add-chapter-button").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1, { timeout: 5000 });
     assert.equal(await page.locator(".story-chapter-form").count(), 1, "The editor must add a chapter to a story.");
     await page.locator(".story-chapter-form [name='chapterTitle']").fill("Capítulo de prueba");
     await page.locator(".story-chapter-form [name='chapterContent']").fill("Texto de capítulo que debe persistir íntegro.");
