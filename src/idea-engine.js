@@ -99,7 +99,7 @@
       ? "Miedoso y apático, pero con una inteligencia capaz de idear soluciones inesperadas; suele encontrar la salida brillante y luego intenta evitar ser quien la ejecute."
       : "Valentía " + traits.courage + "/100, miedo " + traits.fear + "/100, inteligencia " + traits.intelligence + "/100, ganas de actuar " + traits.attitude + "/100 y empatía " + traits.empathy + "/100.";
     protagonist.personality += " [Perfil de rasgos: " + traitProfile + "]";
-    protagonist.traits = traits;
+    protagonist.traits = { ...traits, gender: input.gender || "auto" };
     protagonist.fearDetail = String(input.fearDetail || "").trim() || (traits.fear >= 65 ? "teme fracasar delante de otros y quedar expuesto" : "teme perder aquello que considera suyo");
     protagonist.signatureAction = String(input.signatureAction || "").trim() || (traits.intelligence >= 70 && traits.attitude <= 30 ? "idea una solución brillante y luego intenta que otra persona la ejecute" : "actúa según su temperamento, aunque complique el plan");
     const worldProfiles = {
@@ -201,7 +201,7 @@
   }
 
   function characterCard(character, index) {
-    return '<article class="idea-character-card"><div class="idea-character-top"><span class="idea-avatar">' + escapeHTML(String(index + 1).padStart(2, "0")) + '</span><div><h3>' + escapeHTML(character.name) + '</h3><p>' + escapeHTML(character.role) + '</p></div></div><p>' + escapeHTML(character.personality) + '</p><dl><dt>Defecto útil para la trama</dt><dd>' + escapeHTML(character.flaw) + '</dd><dt>Deseo</dt><dd>' + escapeHTML(character.motivation) + '</dd></dl></article>';
+    return '<article class="idea-character-card"><div class="idea-character-top"><span class="idea-avatar">' + escapeHTML(String(index + 1).padStart(2, "0")) + '</span><div><h3>' + escapeHTML(character.name) + '</h3><p>' + escapeHTML(character.role) + '</p></div></div><p>' + escapeHTML(character.personality) + '</p>' + (character.traits ? '<p class="idea-trait-summary">Valentía ' + character.traits.courage + ' · Miedo ' + character.traits.fear + ' · Inteligencia ' + character.traits.intelligence + ' · Actitud ' + character.traits.attitude + ' · Empatía ' + character.traits.empathy + '</p>' : '') + '<dl><dt>Defecto útil para la trama</dt><dd>' + escapeHTML(character.flaw) + '</dd><dt>Deseo</dt><dd>' + escapeHTML(character.motivation) + '</dd></dl></article>';
   }
 
   function render(result) {
