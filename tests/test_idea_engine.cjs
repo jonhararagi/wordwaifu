@@ -56,3 +56,16 @@ assert.equal(malfoy.characters[0].name, "Draco Malfoy");
 assert.ok(malfoy.characters.some((character) => character.name === "Harry Potter"));
 assert.ok(malfoy.story.description.includes("empieza a enamorarse de ella"));
 assert.ok(malfoy.story.description.includes("DINÁMICA EN ESCENA"));
+
+const fusion = generate({
+  premise: "Un otaku cerrado que desconfía de las personas y ama ver anime se fusiona con una gatita que ama comer pescado y solo presta atención a quienes la alimentan.",
+  genre: "drama",
+  tone: "balanced"
+});
+assert.equal(fusion.characters[0].name, "Neko");
+assert.match(fusion.characters[0].role, /chica gato nacida de la fusión/);
+assert.ok(fusion.characters[0].fusion.inheritedFromA.includes("amor por el anime"));
+assert.ok(fusion.characters[0].fusion.inheritedFromB.includes("preferencia por el pescado"));
+assert.ok(fusion.characters[0].fusion.emergentTraits.some((trait) => /cuentos/.test(trait)));
+assert.ok(fusion.story.description.includes("EVOLUCIÓN DE FUSIÓN"));
+assert.ok(fusion.story.description.includes("distinguir cuidado genuino de interés"));
