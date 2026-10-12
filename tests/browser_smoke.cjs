@@ -306,6 +306,24 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
+    await page.locator("#archive-tab-timeline").click();
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Viaje para visitar a Astrea"),
+      "The later novel continuity should show Ryu's journey to see Astrea in the timeline.");
+    await page.locator("#archive-tab-relationships").click();
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
+    assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-MAIN-LN");
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-CECIL-BLACKLIZA"]').count() > 0,
+      "Astrea's later-family roster should expose the new captain as a provisional, source-tagged node.");
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-CECIL-BLACKLIZA"]').click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Cecil Blackliza");
+    await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
+    await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    await page.locator("#archive-profile-continuity").selectOption("CONT-AR");
     await page.locator("#archive-tab-summary").click();
     // The summary itself now exposes more than two related people, with a navigable roster graph.
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').count() > 0);
