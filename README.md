@@ -142,3 +142,7 @@ Se pueden investigar herramientas, bibliotecas, referencias visuales y conjuntos
 ## Estado de este documento
 
 Este README define una dirección inicial de trabajo. La hoja de ruta y las decisiones deben actualizarse cuando la inspección del código y las necesidades del propietario aporten evidencia nueva.
+
+## Exploración conectada y poderes
+
+El funcionamiento, las fuentes y los límites actuales del explorador de franquicias y del catálogo de poderes están documentados en [Explorador conectado y catálogo de poderes](docs/CONNECTED_LORE_AND_POWER_CATALOG.md). La base de DanMachi es parcial; Code Geass tiene cobertura inicial, no una enciclopedia completa.
