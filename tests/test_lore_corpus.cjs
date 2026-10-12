@@ -34,10 +34,18 @@ assert.ok(animeRyu.totalMatches > 0);
 assert.ok(animeRyu.results.every(claim => claim.continuityScopes.includes("CONT-ANIME")));
 assert.ok(!animeRyu.results.some(claim => claim.entryId.endsWith("--CONT-AR")));
 const aisLikes = corpus.search(index, { query: "", characterId: "DM-CHAR-AIS", continuity: "ALL", period: "ALL", aspect: "likes", spoiler: "all" });
-assert.equal(aisLikes.totalMatches, 0);
-assert.equal(aisLikes.abstain, true);
-const unsupportedNovel = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
-assert.equal(unsupportedNovel.totalMatches, 0);
+assert.ok(aisLikes.totalMatches > 0, "Roster-backed Ais dossier claims should be discoverable when the corpus contains evidence.");
+assert.equal(aisLikes.abstain, false);
+assert.ok(aisLikes.results.every(claim => claim.sourceIds.length > 0 && claim.sourceUrls.length > 0),
+  "Ais preference/habit results must retain traceable sources.");
+assert.ok(aisLikes.results.some(claim => claim.sourceType === "SECONDARY" &&
+  claim.confidenceNote.includes("fuente secundaria")),
+  "Community-sourced Ais details must remain explicitly marked as secondary evidence.");
+const mainNovelRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(mainNovelRyu.totalMatches > 0, "Ryu's sourced main-novel dossier must be searchable in its own continuity.");
+assert.ok(mainNovelRyu.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")));
+assert.ok(mainNovelRyu.results.some(claim => claim.sourceType === "SECONDARY" &&
+  claim.confidenceNote.includes("fuente secundaria")));
 
 const aliseHistorical = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseHistorical.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-AR"));
