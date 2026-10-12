@@ -1872,7 +1872,7 @@
     body.appendChild(archiveElement("p","","Tipo de evidencia: "+(claim.evidenceType||"no especificado")+" · Verificación: "+(claim.verificationStatus||"unverified")+" · Spoiler: "+(claim.spoilerLevel||"unknown")));
     if(claim.confidenceNote)body.appendChild(archiveElement("p","","Límites: "+claim.confidenceNote));
     const links=archiveElement("div","archive-source-links");
-    (claim.sourceUrls||[]).forEach((url,i)=>{const label=/ga\\.sbcr\\.jp/i.test(url)?"Fuente editorial original (japonés)":/danmachi\\.com/i.test(url)?"Fuente oficial (japonés)":/fandom\\.com/i.test(url)?"Wiki comunitaria (no oficial)":(claim.sourceUrls.length>1?"Abrir fuente "+(i+1):"Abrir fuente");appendLoreLink(links,label,url,true);});
+    (claim.sourceUrls||[]).forEach((url,i)=>{const label=url.includes("ga.sbcr.jp")?"Fuente editorial original (japonés)":url.includes("danmachi.com")?"Fuente oficial (japonés)":url.includes("fandom.com")?"Wiki comunitaria (no oficial)":(claim.sourceUrls.length>1?"Abrir fuente "+(i+1):"Abrir fuente");appendLoreLink(links,label,url,true);});
     if(links.childNodes.length)body.appendChild(links);
     details.appendChild(body);return details;
   }
