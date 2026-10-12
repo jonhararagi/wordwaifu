@@ -201,7 +201,7 @@
         const tags = record.tags || [];
         const name = tags.find(tag => typeof tag === "string" && !/^spoiler/i.test(tag)) || record.id;
         const aliases = unique([name, ...tags.filter(tag => !/familia|multi-era|motivation|leadership|training|loyalty|spoiler|deity|historical state|timeline|provisional/i.test(tag))]);
-        return { id: record.id, name, aliases, profilePath: record.path };
+        return { id: record.id, name, aliases, keywords: unique(tags), profilePath: record.path };
       });
     // Official adaptation references extend discoverability without pretending to be
     // fully researched canonical dossier files. Each entry must have source-backed claims.
@@ -210,7 +210,7 @@
       ? globalThis.WordWaifuOfficialCharacterRoster.list() : [];
     const externalCharacters = officialRoster
       .filter(record => usedIds.has(record.id) && !knownCharacterIds.has(record.id))
-      .map(record => ({ id: record.id, name: record.name, aliases: unique([record.name, ...(record.aliases || [])]) }));
+      .map(record => ({ id: record.id, name: record.name, aliases: unique([record.name, ...(record.aliases || [])]), keywords: unique([record.family, record.role, record.sourceTitle, ...(record.aliases || [])]) }));
     const characters = [...catalogCharacters, ...externalCharacters]
       .sort((a, b) => a.name.localeCompare(b.name, "es"));
     const profileDetails = Object.create(null);
