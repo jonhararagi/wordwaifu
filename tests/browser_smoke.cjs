@@ -323,8 +323,19 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 1,
       "Official adaptation details should appear only in the anime continuity.");
     await page.locator("#archive-tab-relationships").click();
-    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("No hay relaciones interpersonales documentadas"));
-    assert.equal(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count(), 0);
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count() > 0,
+      "Anime-continuity relationships should expose Alise as Ryu's formative captain.");
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').count() > 0,
+      "Anime-continuity relationships should expose the documented Ryu–Kaguya friction/respect dynamic.");
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-LYRA"]').count() > 0,
+      "Anime-continuity relationships should expose Lyra's strategic support.");
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').count() > 0,
+      "Ryu's network should open a named member of the historic Astrea Familia roster.");
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Iska Bra");
+    assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-ANIME");
+    await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.ok(!(await page.locator("#archive-profile-panel").innerText()).includes("La sinopsis presenta a Ryu buscando su idea de justicia"));
     await page.locator("#archive-profile-continuity").selectOption("CONT-AR");
     await page.locator("#archive-profile-spoiler").selectOption("safe-only");
