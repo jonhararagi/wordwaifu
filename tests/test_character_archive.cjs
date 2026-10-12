@@ -82,6 +82,28 @@ assert.ok(!syntheticHistorical.sections.some(section=>section.title==="Perfil of
 const syntheticAnime=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-ANIME",syntheticIndex);
 assert.ok(syntheticAnime.sections.some(section=>section.title==="Perfil oficial del anime"),
   "The anime dossier must retain its own standalone localized heading.");
+const bilingualIndex={...index,profileDetails:{...index.profileDetails,"CHAR-RYUU-LION":{
+  ...index.profileDetails["CHAR-RYUU-LION"],
+  sections:[
+    ...index.profileDetails["CHAR-RYUU-LION"].sections,
+    {heading:"Temporal state A",text:"SYNTHETIC-ENGLISH-HISTORICAL"},
+    {heading:"Temporal state B",text:"SYNTHETIC-ENGLISH-ANIME"},
+    {heading:"Estado temporal A y Estado temporal B",text:"SYNTHETIC-MIXED-HEADING"}
+  ]
+}}};
+const bilingualHistorical=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR",bilingualIndex);
+const bilingualAnime=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-ANIME",bilingualIndex);
+assert.ok(bilingualHistorical.sections.some(section=>section.title==="Temporal state A"),
+  "English historical headings must remain in CONT-AR.");
+assert.ok(!bilingualHistorical.sections.some(section=>section.title==="Temporal state B"),
+  "English anime headings must not leak into CONT-AR.");
+assert.ok(bilingualAnime.sections.some(section=>section.title==="Temporal state B"),
+  "English anime headings must remain in CONT-ANIME.");
+assert.ok(!bilingualAnime.sections.some(section=>section.title==="Temporal state A"),
+  "English historical headings must not leak into CONT-ANIME.");
+assert.ok(!bilingualHistorical.sections.some(section=>section.title==="Estado temporal A y Estado temporal B") &&
+  !bilingualAnime.sections.some(section=>section.title==="Estado temporal A y Estado temporal B"),
+  "A heading mixing both temporal states must be excluded from both continuities.");
 
 assert.ok(!extendedRyu.sections.some(section=>section.title.includes("Estado temporal B")),
   "Anime-only temporal-state details must not leak into the historical Ryu summary.");
