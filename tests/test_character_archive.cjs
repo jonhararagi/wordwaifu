@@ -10,6 +10,9 @@ const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,fi
 const index=corpus.buildIndex(catalog,docs);
 const ryu=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","all");
 assert.ok(ryu&&ryu.claims.every(c=>c.continuityScopes.includes("CONT-AR")));
+const justiceClaim=ryu.claims.find(c=>c.claimId==="DMR-002-CLM-015");
+assert.ok(justiceClaim,"Ryu's documented justice claim must exist in CONT-AR.");
+assert.ok(justiceClaim.aspects.includes("motivation"),"The Ryu justice claim must be classified as motivation: "+JSON.stringify(justiceClaim.aspects));
 assert.ok(ryu.moments.some(m=>m.id==="ryu-justice")&&ryu.moments.some(m=>m.id==="ryu-seven-days"));
 assert.ok(ryu.relationships.some(r=>r.targetId==="CHAR-ALISE-LOVELACE")&&ryu.relationships.some(r=>r.targetId==="CHAR-ASTREA"));
 assert.ok(!ryu.claims.some(c=>c.entryId.endsWith("--CONT-ANIME")));

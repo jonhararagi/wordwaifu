@@ -115,14 +115,15 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
-    await page.locator('[data-profile-tab="personality"]').click();
-    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("justicia"));
+    await page.locator("#archive-tab-personality").click();
+    const personalityText = await page.locator("#archive-profile-panel").innerText();
+    assert.ok(personalityText.toLocaleLowerCase("es").includes("justicia"), "The personality tab must render evidence-backed motivation. Panel text: " + personalityText);
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Sin información suficiente"));
-    await page.locator('[data-profile-tab="moments"]').click();
+    await page.locator("#archive-tab-moments").click();
     assert.ok(await page.locator("#archive-profile-panel [data-moment-id]").count() >= 3);
     await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] > summary').click();
     assert.ok(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] .archive-evidence').count() >= 1);
-    await page.locator('[data-profile-tab="relationships"]').click();
+    await page.locator("#archive-tab-relationships").click();
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count() > 0);
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
@@ -145,7 +146,7 @@ async function run() {
     await page.locator('[data-profile-tab="moments"]').click();
     assert.equal(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"]').count(), 0);
     await page.locator("#archive-spoiler").selectOption("all");
-    await page.locator('[data-profile-tab="sources"]').click();
+    await page.locator("#archive-tab-sources").click();
     await page.locator('#archive-profile-panel details.archive-evidence').first().locator("summary").click();
     assert.ok(await page.locator("#archive-profile-panel .archive-source-links a").count() > 0);
     await page.locator('[data-profile-tab="moments"]').click();

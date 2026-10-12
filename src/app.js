@@ -1988,6 +1988,14 @@
   $("#archive-return-search").addEventListener("click",returnToArchiveDirectory);
   $("#archive-profile-continuity").addEventListener("change",e=>{activeArchiveContinuity=e.target.value;activeArchiveTab="summary";renderArchiveProfile();});
   $("#archive-profile-tabs").addEventListener("click",e=>{const t=e.target.closest("[data-profile-tab]");if(!t)return;activeArchiveTab=t.dataset.profileTab;renderArchiveHeader(activeArchiveProfile);renderArchiveTab();});
+
+  $("#archive-profile-panel").addEventListener("click",e=>{
+    const t=e.target.closest("button[data-profile-tab]");
+    if(!t||!activeArchiveProfile)return;
+    activeArchiveTab=t.dataset.profileTab;
+    renderArchiveHeader(activeArchiveProfile);
+    renderArchiveTab();
+  });
   $("#archive-profile-tabs").addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;const tabs=$("#archive-profile-tabs [role=tab]"),i=tabs.indexOf(e.target.closest("[role=tab]"));if(i<0)return;e.preventDefault();const n=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[n].focus();tabs[n].click();});
   $("#character-archive-profile").addEventListener("click",e=>{const b=e.target.closest("[data-character-link]");if(!b||!loreArchiveIndex.characters.some(c=>c.id===b.dataset.characterLink))return;openArchiveProfile(b.dataset.characterLink,b.dataset.linkContinuity,true);});
   async function prepareLoreView() {
