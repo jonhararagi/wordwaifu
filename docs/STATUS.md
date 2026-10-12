@@ -11,7 +11,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama candidata de integración del producto: `work/integration-mainline-2026-10` (PR #14). La rama de validación de origen `work/integration-validation-fixes-2026-10` se conserva como referencia.
 - `main` verificada el 2026-10-12: `c07ef226a61ad6e48b081890f1e3d96eecb585b5` (sin cambios en esta integración).
-- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), abierto contra `main`, no fusionado, `mergeable=true`; HEAD de código funcional validado `6fb40e1d6a6d9a7c9aeddc607e0b3ca87cdadbd6`.
+- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), abierto contra `main`, no fusionado, `mergeable=true`; último commit funcional de persistencia/papelera `b75c7142f6e33dd03ed16229e9bd2c065ca7e538`, validado con la regresión en `e09db0dda3460b7c7406b3c19eb398a2ee2c0e19`.
 - PR #1, #3, #7, #9, #10 y #12: cerradas como rutas supersedidas, no fusionadas; se conservan las ramas de origen. PR #11: fusionada en la rama de integración de trabajo, no en `main`. No se ha desplegado.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
@@ -26,18 +26,18 @@
 - **WF-004-C.2 · DONE / PASS_REAL histórico:** snapshots previos verificados para los cinco tipos de borrado; límite 25/26 validado. Evidencia histórica: [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita cambios posteriores de C.3.
 
 ## HEAD de código funcional validado más reciente
-- Último commit funcional: `deb48289e143c1a32f687b4ef8337dbf89849211` (rollback del respaldo local cuando la guardia de papelera rechaza un guardado).
-- HEAD de validación que incluye la regresión y el validador estructural actualizado: `aeaaf30fef49828c431c3be1bda9437d368f9ecf`.
-- [Validate WordWaifu — push run 38296993845 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38296993845).
-- [Validate WordWaifu — PR run 38297000005 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38297000005).
-- [DanMachi Lore and Retrieval Integrity — PR run 38297000007 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38297000007).
+- Último commit funcional: `b75c7142f6e33dd03ed16229e9bd2c065ca7e538` (rollback del respaldo local y tombstone mínimo tras borrado permanente).
+- HEAD de validación que incluye la regresión y el validador estructural actualizado: `e09db0dda3460b7c7406b3c19eb398a2ee2c0e19`.
+- [Validate WordWaifu — push run 38297486465 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38296993845).
+- [Validate WordWaifu — PR run 38297492417 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38297000005).
+- [DanMachi Lore and Retrieval Integrity — PR run 38297492488 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38297000007).
 - Chromium confirma CRUD del Panel de arte en IndexedDB y respaldo local, fallos simulados sin falso éxito, papelera y snapshots, expedientes ampliados y separación de Ryu en `CONT-AR` y `CONT-ANIME`.
-- Nueva regresión de pestaña obsoleta: si otra pestaña mueve un universo a la papelera, un autosave atrasado no resucita su respaldo local y la interfaz muestra el rechazo en vez de éxito.
+- Regresiones de pestaña obsoleta: un autosave no puede resucitar un universo en papelera ni recrear un ID tras borrado permanente. El borrado purga el payload y snapshots, conserva solo una marca oculta de ID, y los guardados/activaciones de ese ID se rechazan.
 
 ## WF-004-C.3 — Papelera y recuperación (PARTIAL)
 - IndexedDB v2→v3 añade el almacén `trash`; la API y la UI permiten enviar proyectos a la papelera, listar, restaurar por ID y borrar permanentemente con confirmación.
 - El proyecto activo está protegido y se conservan/restauran sus snapshots. El catálogo y la búsqueda multiverso filtran tombstones.
-- **Hardening de esta iteración:** `write(project)` valida el tombstone dentro de la transacción de escritura; `saveActive(project)` restaura el respaldo previo si detecta la carrera o si no puede verificar la papelera.
+- **Hardening de esta iteración:** `write(project)` valida la marca dentro de la transacción de escritura; `saveActive(project)` restaura el respaldo previo si detecta la carrera o si no puede verificar la papelera. El borrado permanente elimina el payload y los snapshots pero conserva una marca mínima oculta para bloquear pestañas obsoletas.
 - **Regresión de pestaña obsoleta:** el smoke abre una segunda pestaña/contexto, mueve el universo original a papelera y fuerza un autosave de la copia en memoria; verifica que el respaldo del universo hermano se conserva, el ID eliminado no reaparece en el catálogo y el error se muestra sin falso éxito.
 - Chromium verifica que escribir/guardar un ID en papelera se rechace, que el respaldo no sea sobrescrito y que el respaldo de otro universo sobreviva al movimiento y al borrado permanente.
 - **PASS_STATIC:** sintaxis JavaScript y 18 pruebas de esquema.
@@ -50,6 +50,7 @@
 - [x] CI de código y regresión duplicada en verde: sintaxis, 18 pruebas de esquema, Chromium y validación estructural; [#38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741).
 - [x] El respaldo local de otro universo sobrevive al movimiento a papelera y al borrado permanente.
 - [x] Proyectos con el mismo nombre y distintos IDs permanecen aislados en mover/restaurar/borrar.
+- [x] Regresión de borrado permanente: un autosave desde una pestaña obsoleta no recrea el ID; el tombstone mínimo queda oculto en la lista recuperable y no conserva `projectData` ni `snapshots`.
 - [x] Regresión automatizada `PASS_SIMULATED` para `QuotaExceededError`: el respaldo previo se conserva, IndexedDB puede completar el guardado con advertencia y el fallo simultáneo de ambos almacenes rechaza la operación. Smoke Chromium en HEAD `e098e790432578ef1d8e115e82dc90ed4e651960`, [Validate WordWaifu run 38292740554](https://github.com/jonhararagi/wordwaifu/actions/runs/38292740554) y [push run 38292735507](https://github.com/jonhararagi/wordwaifu/actions/runs/38292735507), ambos PASS.
 - [ ] Cuota real agotada o limitación del entorno demostrada y documentada; excepciones inyectadas no equivalen a cuota real.
 - [ ] Revisión visual/manual en Windows 11.
