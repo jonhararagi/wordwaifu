@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="title desc">
+<title id="title">La amenaza de Evilus · recreación conceptual</title>
+<desc id="desc">Una ciudad fantástica envuelta en humo violeta y luz ámbar, con siluetas de aventureras que se preparan para defenderla. Ilustración original no oficial, sin representar una escena literal del libro.</desc>
+<defs>
+<linearGradient id="night" x2="0" y2="1"><stop stop-color="#1e2439"/><stop offset=".6" stop-color="#49364b"/><stop offset="1" stop-color="#b36c59"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#f6b878" stop-opacity=".85"/><stop offset="1" stop-color="#db7654" stop-opacity="0"/></radialGradient>
+<linearGradient id="smoke" x2="1"><stop stop-color="#7b527e" stop-opacity=".1"/><stop offset=".5" stop-color="#9b6794" stop-opacity=".6"/><stop offset="1" stop-color="#4a4569" stop-opacity=".05"/></linearGradient>
+</defs>
+<rect width="640" height="340" fill="url(#night)"/>
+<circle cx="465" cy="167" r="145" fill="url(#glow)"/>
+<circle cx="465" cy="167" r="43" fill="#f1b17a" opacity=".16"/>
+<g fill="url(#smoke)">
+<path d="M0 175Q67 102 153 157T295 159T430 146T640 126V235Q541 207 476 242T314 222T143 240T0 224Z"/>
+<path d="M0 224Q102 172 194 216T368 194T520 216T640 192V270Q538 244 438 278T209 265T0 277Z" opacity=".8"/>
+</g>
+<g fill="#202636">
+<path d="M0 250V201h33v-26h20v74h24v-43h22v-39h15v39h23v-60h19v60h18v44h31v-31h18v-55h20v87h26v-34h16v-17h22v51h18v-66h19v66h20v-29h23v-72h22v72h19v47h25v-29h22v-50h18v79h21v-49h25v-18h14v67h25v-32h24v32h13v90H0Z"/>
+</g>
+<g fill="#f49f6e" opacity=".8"><path d="M63 226l11-24 10 24zM132 226l12-29 9 29zM244 227l10-19 8 19zM368 229l12-24 8 24zM504 221l13-31 9 31z"/></g>
+<path d="M0 287Q111 264 212 286T431 279T640 284V340H0Z" fill="#171f2c"/>
+<!-- defenders in the foreground -->
+<g transform="translate(170 108)">
+<path d="M46 99Q6 129 9 220L0 248H137L119 217Q125 147 87 100Z" fill="#31504f" stroke="#86a5a0" stroke-width="2"/>
+<path d="M31 45Q22 10 55 4Q85 5 86 41L97 78 78 104 30 105 12 76Z" fill="#cfb679"/>
+<path d="M27 42Q3 55 13 118L2 168 23 176 45 111 68 132 95 111 79 62 74 25Z" fill="#e5d19a"/>
+<path d="M31 42Q35 22 56 24Q76 27 77 49L66 68 41 68Z" fill="#eac7a1"/>
+<path d="M36 51l8 2M61 51l7-1" stroke="#426d5b" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M47 68q8 5 15-1" fill="none" stroke="#ac715a" stroke-width="2"/>
+<path d="M119 115 151 226" stroke="#c9d2d3" stroke-width="5" stroke-linecap="round"/>
+<path d="M145 226 154 249" stroke="#d6b980" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g transform="translate(370 127)">
+<path d="M37 92Q2 123 8 220L0 246H121L106 211Q119 145 82 93Z" fill="#694552" stroke="#c08b85" stroke-width="2"/>
+<path d="M24 39Q18 9 49 3Q77 4 79 39L91 71 76 97 27 99 8 72Z" fill="#b8685d"/>
+<path d="M24 38Q9 52 18 96L13 151 36 160 52 103 68 124 92 106 77 60 67 24Z" fill="#ca7c6c"/>
+<path d="M28 39Q31 19 51 23Q70 27 71 47L61 64 38 64Z" fill="#eac6a2"/>
+<path d="M33 48l8 2M54 48l7-1" stroke="#564b47" stroke-width="3.2" stroke-linecap="round"/>
+<path d="M42 65q7 5 14-1" fill="none" stroke="#b87561" stroke-width="2"/>
+<path d="M100 112 133 220" stroke="#c9d2d3" stroke-width="5" stroke-linecap="round"/>
+</g>
+<g stroke="#efba86" stroke-width="2" opacity=".65"><path d="M80 50l17-8M532 75l20 6M448 54l-11 15M290 93l15-4M563 245l18-6"/></g>
+<rect x="0.5" y="0.5" width="639" height="339" fill="none" stroke="#cfb8d0" stroke-opacity=".3"/>
+</svg>

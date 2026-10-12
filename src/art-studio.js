@@ -1,0 +1,356 @@
+(function(root) {
+  "use strict";
+  const DB_NAME = "wordwaifu-art-studio";
+  const DB_VERSION = 1;
+  const STORE = "assignments";
+  const FALLBACK_KEY = "wordwaifu.art.assignments.v1";
+  const MAX_FILE_BYTES = 5 * 1024 * 1024;
+  let databasePromise;
+  const memoryCache = new Map();
+
+  function openDatabase() {
+    if (databasePromise) return databasePromise;
+    databasePromise = new Promise((resolve, reject) => {
+      if (!root.indexedDB) return reject(new Error("IndexedDB no está disponible"));
+      const request = root.indexedDB.open(DB_NAME, DB_VERSION);
+      request.onupgradeneeded = () => {
+        const db = request.result;
+        if (!db.objectStoreNames.contains(STORE)) db.createObjectStore(STORE, { keyPath: "key" });
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error || new Error("No se pudo abrir IndexedDB"));
+    });
+    return databasePromise;
+  }
+
+  function fallbackRead() {
+    try {
+      const value = JSON.parse(root.localStorage.getItem(FALLBACK_KEY) || "{}");
+      return value && typeof value === "object" ? value : {};
+    } catch (_) { return {}; }
+  }
+
+  async function readAll() {
+    let indexedRecords = [];
+    try {
+      const db = await openDatabase();
+      indexedRecords = await new Promise((resolve, reject) => {
+        const request = db.transaction(STORE, "readonly").objectStore(STORE).getAll();
+        request.onsuccess = () => resolve(request.result || []);
+        request.onerror = () => reject(request.error || new Error("No se pudieron leer los recursos de IndexedDB."));
+      });
+    } catch (_) {
+      // If IndexedDB cannot be opened or read, localStorage is the available store.
+      return Object.values(fallbackRead());
+    }
+
+    // A failed IndexedDB write can be safely stored in localStorage even while the
+    // database remains readable. Merge both stores so the gallery does not hide
+    // successful fallback saves; the newest updatedAt wins and IndexedDB wins ties.
+    const records = new Map(indexedRecords.map(record => [record.key, record]));
+    for (const record of Object.values(fallbackRead())) {
+      if (!record || !record.key) continue;
+      const indexedValue = records.get(record.key);
+      if (!indexedValue || String(record.updatedAt || "") > String(indexedValue.updatedAt || "")) {
+        records.set(record.key, record);
+      }
+    }
+    return Array.from(records.values());
+  }
+
+  async function readOne(key) {
+    if (memoryCache.has(key)) return memoryCache.get(key);
+    let indexedValue = null;
+    try {
+      const db = await openDatabase();
+      indexedValue = await new Promise((resolve, reject) => {
+        const request = db.transaction(STORE, "readonly").objectStore(STORE).get(key);
+        request.onsuccess = () => resolve(request.result || null);
+        request.onerror = () => reject(request.error || new Error("No se pudo leer el recurso de IndexedDB."));
+      });
+    } catch (_) {}
+
+    const fallbackValue = fallbackRead()[key] || null;
+    // A failed IndexedDB write may leave an older record readable in the database.
+    // Prefer the fallback copy only when its timestamp proves it is newer.
+    const value = fallbackValue && (!indexedValue ||
+      String(fallbackValue.updatedAt || "") > String(indexedValue.updatedAt || ""))
+      ? fallbackValue : indexedValue;
+    if (value) memoryCache.set(key, value);
+    return value;
+  }
+
+  async function persist(record) {
+    try {
+      const db = await openDatabase();
+      await new Promise((resolve, reject) => {
+        const transaction = db.transaction(STORE, "readwrite");
+        transaction.objectStore(STORE).put(record);
+        transaction.oncomplete = resolve;
+        transaction.onerror = () => reject(transaction.error);
+        transaction.onabort = () => reject(transaction.error || new Error("Guardado cancelado"));
+      });
+      memoryCache.set(record.key, record);
+      // Remove an obsolete fallback copy after the database commit. If cleanup
+      // fails, reads still choose the newest record by updatedAt.
+      const fallback = fallbackRead();
+      if (fallback[record.key]) {
+        delete fallback[record.key];
+        try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); } catch (_) {}
+      }
+      return "indexeddb";
+    } catch (_) {
+      const fallback = fallbackRead();
+      if (record.fileDataUrl && record.fileDataUrl.length > 1400000) {
+        throw new Error("El archivo excede el límite del respaldo local; usá IndexedDB o una URL externa.");
+      }
+      fallback[record.key] = record;
+      try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
+      catch (_) { throw new Error("No hay espacio disponible para guardar este recurso en el navegador."); }
+      memoryCache.set(record.key, record);
+      return "local";
+    }
+  }
+
+  async function removeRecord(key) {
+    // Never report a successful deletion when IndexedDB still contains the record.
+    let db;
+    try {
+      db = await openDatabase();
+    } catch (_) {
+      // IndexedDB is unavailable: the localStorage fallback is the active store.
+      const fallback = fallbackRead();
+      if (fallback[key]) {
+        delete fallback[key];
+        try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
+        catch (_) { throw new Error("No se pudo eliminar el recurso del respaldo local."); }
+      }
+      memoryCache.delete(key);
+      return;
+    }
+
+    await new Promise((resolve, reject) => {
+      let transaction;
+      try {
+        transaction = db.transaction(STORE, "readwrite");
+        transaction.objectStore(STORE).delete(key);
+      } catch (error) {
+        reject(error);
+        return;
+      }
+      transaction.oncomplete = resolve;
+      transaction.onerror = () => reject(transaction.error || new Error("No se pudo eliminar el recurso de IndexedDB."));
+      transaction.onabort = () => reject(transaction.error || new Error("La eliminación del recurso fue cancelada."));
+    });
+
+    memoryCache.delete(key);
+    const fallback = fallbackRead();
+    if (fallback[key]) {
+      delete fallback[key];
+      try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
+      catch (_) { /* IndexedDB deletion succeeded; a stale fallback is not authoritative. */ }
+    }
+  }
+
+  function makeKey(category, entityId) {
+    return String(category || "character").trim().toLowerCase() + ":" + String(entityId || "").trim().toLowerCase();
+  }
+
+  function fileToDataUrl(file) {
+    return new Promise((resolve, reject) => {
+      if (!file || !/^image\/(png|jpeg|webp|gif|svg\+xml|avif)$/i.test(file.type)) {
+        reject(new Error("Elegí una imagen PNG, JPEG, WebP, GIF, SVG o AVIF.")); return;
+      }
+      if (file.size > MAX_FILE_BYTES) { reject(new Error("La imagen supera el límite de 5 MB.")); return; }
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result));
+      reader.onerror = () => reject(new Error("No se pudo leer el archivo seleccionado."));
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function normalizeImageUrl(value) {
+    const input = String(value || "").trim();
+    if (!input) return "";
+    let url;
+    try { url = new URL(input, root.location.href); } catch (_) { throw new Error("La URL de imagen no es válida."); }
+    if (!["http:", "https:"].includes(url.protocol)) throw new Error("La imagen externa debe usar HTTP o HTTPS.");
+    return url.href;
+  }
+
+  async function getAsset(category, entityId) {
+    const record = await readOne(makeKey(category, entityId));
+    if (!record) return null;
+    const src = record.fileDataUrl || record.imageUrl || "";
+    return src ? { ...record, src } : { ...record, src: "" };
+  }
+
+  async function listAssignments() {
+    return (await readAll()).sort((a, b) => String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")));
+  }
+
+  root.WordWaifuArtStudio = Object.freeze({ getAsset, listAssignments, makeKey });
+
+  function $(selector) { return document.querySelector(selector); }
+  function element(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function fillCharacterOptions() {
+    const type = $("#art-target-type"), select = $("#art-target-character"), wrapper = $("#art-character-picker");
+    if (!type || !select) return;
+    wrapper.classList.toggle("hidden", type.value !== "character");
+    select.replaceChildren(new Option("Elegí un personaje…", ""));
+    const roster = root.WordWaifuOfficialCharacterRoster;
+    if (type.value === "character" && roster) {
+      roster.list().sort((a,b)=>a.name.localeCompare(b.name,"es")).forEach(person => {
+        const option = new Option(person.name + " · " + person.id, person.id);
+        option.dataset.name = person.name;
+        select.appendChild(option);
+      });
+    }
+  }
+
+  function syncTargetFromRoster() {
+    const select = $("#art-target-character"), option = select && select.selectedOptions[0];
+    if (!option || !option.value) return;
+    $("#art-target-id").value = option.value;
+    $("#art-target-name").value = option.dataset.name || option.textContent.split(" · ")[0];
+    updatePromptContext(); loadCurrentAssignment();
+  }
+
+  function updatePromptContext() {
+    const type = $("#art-target-type").value, id = $("#art-target-id").value.trim(), name = $("#art-target-name").value.trim();
+    const person = type === "character" && root.WordWaifuOfficialCharacterRoster && root.WordWaifuOfficialCharacterRoster.get(id);
+    $("#art-context").textContent = person
+      ? [person.name, person.role, person.family, person.species].filter(Boolean).join(" · ")
+      : (name || id ? (name || id) + " · " + ({character:"Personaje",object:"Objeto",background:"Fondo"}[type] || type) : "Elegí o escribí una entidad para vincular un recurso.");
+  }
+
+  function generatePrompt() {
+    const type = $("#art-target-type").value, id = $("#art-target-id").value.trim(), name = $("#art-target-name").value.trim();
+    if (!id || !name) throw new Error("Elegí una entidad o completá su nombre e ID antes de generar el prompt.");
+    const person = type === "character" && root.WordWaifuOfficialCharacterRoster && root.WordWaifuOfficialCharacterRoster.get(id);
+    const dossier = type === "character" && root.WordWaifuCharacterDossiers && root.WordWaifuCharacterDossiers.get(id);
+    const description = person ? [person.species, person.role, person.family, person.epithet].filter(Boolean).join("; ") : "";
+    const lines = [
+      "Ilustración original para un proyecto narrativo, recurso de tipo " + ({character:"personaje",object:"objeto o equipamiento",background:"fondo o escenario"}[type] || type) + ".",
+      "ENTIDAD: " + name + " (ID estable: " + id + ").",
+      description ? "REFERENCIAS DE PERSONAJE: " + description + "." : "",
+      dossier ? "DESCRIPCIÓN VISUAL DE REFERENCIA: " + dossier.appearance : "",
+      "ESTILO: " + ($("#art-style").value.trim() || "ilustración de fantasía detallada, acabado profesional y silueta legible") + ".",
+      "ENCUADRE: " + ($("#art-framing").value.trim() || "composición vertical de cuerpo entero, sujeto centrado") + ".",
+      "ATMÓSFERA: " + ($("#art-mood").value.trim() || "coherente con la personalidad y el papel narrativo") + ".",
+      "ILUMINACIÓN: " + ($("#art-lighting").value.trim() || "luz cinematográfica suave con volumen y separación del fondo") + ".",
+      "PALETA: " + ($("#art-palette").value.trim() || "colores coherentes con el diseño de referencia") + ".",
+      type === "character" ? "Mantener rasgos identificables consistentes entre generaciones: rostro, edad aparente, cabello, ojos, complexión, ropa y accesorios. No cambiar la identidad visual entre poses." : "Diseñar el recurso con silueta clara, perspectiva consistente y detalle legible a tamaño pequeño.",
+      "No incluir texto, tipografía, marcas de agua, logotipos, bordes ni elementos de interfaz.",
+      "Salida limpia, fondo controlado y calidad suficiente para una biblioteca de assets de un videojuego o novela visual."
+    ].filter(Boolean);
+    $("#art-prompt").value = lines.join("\n\n");
+    $("#art-status").textContent = "Prompt generado. Editalo libremente antes de guardar.";
+  }
+
+  async function loadCurrentAssignment() {
+    const id = $("#art-target-id").value.trim(), category = $("#art-target-type").value;
+    if (!id) return;
+    const record = await getAsset(category, id);
+    if (!record) return;
+    $("#art-prompt").value = record.prompt || $("#art-prompt").value;
+    $("#art-image-url").value = record.imageUrl || "";
+    const src = record.fileDataUrl || record.imageUrl;
+    if (src) { $("#art-preview").src = src; $("#art-preview-wrap").classList.remove("hidden"); }
+    $("#art-status").textContent = "Recurso recuperado para " + (record.entityName || id) + ".";
+  }
+
+  async function refreshGallery() {
+    const gallery = $("#art-assignments");
+    if (!gallery) return;
+    const records = await listAssignments();
+    // Read first, then replace+render synchronously so overlapping refreshes
+    // cannot append duplicate cards after both awaits complete.
+    gallery.replaceChildren();
+    $("#art-assignment-count").textContent = String(records.length);
+    if (!records.length) { gallery.appendChild(element("p","art-empty","Todavía no hay recursos asignados. Guardá una URL, una imagen o un prompt para empezar.")); return; }
+    records.forEach(record => {
+      const card = element("article","art-assignment-card"), thumb = element("div","art-assignment-thumb");
+      card.dataset.artKey = record.key;
+      const src = record.fileDataUrl || record.imageUrl;
+      if (src) {
+        const image = element("img"); image.src = src; image.alt = ""; image.loading = "lazy";
+        image.addEventListener("error",()=>thumb.replaceChildren(element("span","","Vista previa no disponible")));
+        thumb.appendChild(image);
+      } else thumb.appendChild(element("span","","PROMPT"));
+      const copy = element("div","art-assignment-copy");
+      copy.append(element("strong","",record.entityName || record.entityId),element("span","",record.category + " · " + record.entityId),
+        element("small","",record.prompt ? record.prompt.slice(0,150) + (record.prompt.length>150?"…":"") : (record.imageUrl || "Sin imagen vinculada")));
+      const actions = element("div","art-assignment-actions"), edit = element("button","outline-button","Editar");
+      edit.type="button"; edit.addEventListener("click",()=>{
+        $("#art-target-type").value=record.category;fillCharacterOptions();
+        if(record.category==="character")$("#art-target-character").value=record.entityId;
+        $("#art-target-id").value=record.entityId;$("#art-target-name").value=record.entityName||record.entityId;
+        $("#art-image-url").value=record.imageUrl||"";$("#art-prompt").value=record.prompt||"";
+        if(src){$("#art-preview").src=src;$("#art-preview-wrap").classList.remove("hidden");}
+        updatePromptContext();root.scrollTo({top:0,behavior:"smooth"});
+      });
+      const remove = element("button","quiet-button","Eliminar");
+      remove.type="button";remove.addEventListener("click",async()=>{
+        remove.disabled=true;
+        try {
+          await removeRecord(record.key);
+          await refreshGallery();
+          $("#art-status").textContent="Asignación eliminada.";
+        } catch(error) {
+          $("#art-status").textContent=error.message || "No se pudo eliminar el recurso.";
+        } finally { remove.disabled=false; }
+      });
+      actions.append(edit,remove);copy.appendChild(actions);card.append(thumb,copy);gallery.appendChild(card);
+    });
+  }
+
+  function bind() {
+    if (!$("#art-view")) return;
+    $("#art-target-type").addEventListener("change",()=>{fillCharacterOptions();$("#art-target-character").value="";$("#art-target-id").value="";$("#art-target-name").value="";updatePromptContext();});
+    $("#art-target-character").addEventListener("change",syncTargetFromRoster);
+    ["#art-target-id","#art-target-name"].forEach(selector=>$(selector).addEventListener("input",updatePromptContext));
+    $("#art-generate-prompt").addEventListener("click",()=>{try{generatePrompt();}catch(error){$("#art-status").textContent=error.message;}});
+    $("#art-copy-prompt").addEventListener("click",async()=>{
+      const prompt=$("#art-prompt").value;if(!prompt.trim())return $("#art-status").textContent="No hay prompt para copiar.";
+      try{await navigator.clipboard.writeText(prompt);$("#art-status").textContent="Prompt copiado.";}
+      catch(_){$("#art-prompt").focus();$("#art-prompt").select();$("#art-status").textContent="Seleccioné el prompt; copiá con Ctrl+C.";}
+    });
+    $("#art-image-file").addEventListener("change",async event=>{
+      const file=event.target.files&&event.target.files[0];if(!file)return;
+      try{const data=await fileToDataUrl(file);$("#art-preview").src=data;$("#art-preview-wrap").classList.remove("hidden");$("#art-image-url").value="";$("#art-status").textContent=file.name+" listo para guardar.";}
+      catch(error){$("#art-status").textContent=error.message;event.target.value="";}
+    });
+    $("#art-image-url").addEventListener("change",()=>{
+      try{const url=normalizeImageUrl($("#art-image-url").value);$("#art-image-url").value=url;if(url){$("#art-image-file").value="";$("#art-preview").src=url;$("#art-preview-wrap").classList.remove("hidden");}}
+      catch(error){$("#art-status").textContent=error.message;}
+    });
+    $("#art-preview").addEventListener("error",()=>{$("#art-status").textContent="No se pudo cargar la vista previa. Verificá la URL o elegí un archivo local.";});
+    $("#art-save").addEventListener("click",async()=>{
+      const category=$("#art-target-type").value,id=$("#art-target-id").value.trim(),name=$("#art-target-name").value.trim();
+      if(!id||!name)return $("#art-status").textContent="Completá el nombre y el ID de la entidad.";
+      const file=$("#art-image-file").files&&$("#art-image-file").files[0];
+      try{
+        const url=normalizeImageUrl($("#art-image-url").value),data=file?await fileToDataUrl(file):"";
+        if(!data&&!url&&!$("#art-prompt").value.trim())return $("#art-status").textContent="Agregá una imagen, una URL o un prompt antes de guardar.";
+        const record={key:makeKey(category,id),category,entityId:id,entityName:name,imageUrl:url,fileDataUrl:data,prompt:$("#art-prompt").value.trim(),updatedAt:new Date().toISOString()};
+        const backend=await persist(record);
+        $("#art-status").textContent="Guardado en "+(backend==="indexeddb"?"la biblioteca local del navegador":"el respaldo local")+". Se asignó a "+name+".";
+        $("#art-image-file").value="";await refreshGallery();
+      }catch(error){$("#art-status").textContent=error.message||"No se pudo guardar el recurso.";}
+    });
+    $("#art-clear-form").addEventListener("click",()=>{
+      $("#art-target-id").value="";$("#art-target-name").value="";$("#art-target-character").value="";
+      $("#art-image-url").value="";$("#art-image-file").value="";$("#art-prompt").value="";
+      $("#art-preview-wrap").classList.add("hidden");updatePromptContext();$("#art-status").textContent="Formulario limpio.";
+    });
+    fillCharacterOptions();updatePromptContext();refreshGallery();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded",bind,{once:true}); else bind();
+})(typeof window !== "undefined" ? window : globalThis);

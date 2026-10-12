@@ -1,0 +1,12 @@
+{
+  "name": "WordWaifu browser preview",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "WordWaifu preview",
+      "onAutoForward": "openBrowser",
+      "visibility": "private"
+    }
+  },
+  "postStartCommand": "bash .devcontainer/start-preview.sh"
+}
