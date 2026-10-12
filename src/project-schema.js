@@ -42,6 +42,9 @@
     if (input.relationships !== undefined && !Array.isArray(input.relationships)) {
       errors.push("relationships debe ser una lista.");
     }
+    if (input.powers !== undefined && !Array.isArray(input.powers)) {
+      errors.push("powers debe ser una lista.");
+    }
     if (errors.length) return { valid: false, errors, project: null };
 
     const hasExplicitRelationships = Array.isArray(input.relationships);
@@ -54,6 +57,7 @@
       organizations: Array.isArray(input.organizations) ? input.organizations.map((item) => isRecord(item) ? { ...item } : item) : [],
       relationships: hasExplicitRelationships ? input.relationships.map((item) => isRecord(item) ? { ...item } : item) : [],
       stories: Array.isArray(input.stories) ? input.stories.map((item) => isRecord(item) ? { ...item } : item) : [],
+      powers: Array.isArray(input.powers) ? input.powers.map((item) => isRecord(item) ? { ...item } : item) : [],
       settings: isRecord(input.settings) ? { ...input.settings } : { time: "now" }
     };
 
@@ -85,7 +89,8 @@
       ["events", project.events],
       ["organizations", project.organizations],
       ["relationships", project.relationships],
-      ["stories", project.stories]
+      ["stories", project.stories],
+      ["powers", project.powers]
     ];
     const ids = new Set();
     const byGroup = {};
@@ -294,6 +299,34 @@
       if (!isNonEmptyString(story.name)) errors.push("stories[" + index + "].name debe ser un texto no vacío.");
       if (story.description === undefined || story.description === null) story.description = "";
       if (typeof story.description !== "string") errors.push("stories[" + index + "].description debe ser texto.");
+    });
+
+    project.powers.forEach((power, index) => {
+      const path = "powers[" + index + "]";
+      if (!isRecord(power)) {
+        errors.push(path + " debe ser un objeto.");
+        return;
+      }
+      for (const key of ["family", "category", "profile", "description", "activation", "cost", "limits", "evolution", "consequences", "contract", "inspiration", "source", "status"]) {
+        if (power[key] === undefined || power[key] === null) power[key] = key === "status" ? "proposal" : "";
+        if (typeof power[key] !== "string") errors.push(path + "." + key + " debe ser texto.");
+      }
+      if (power.irreversible === undefined || power.irreversible === null) power.irreversible = false;
+      if (typeof power.irreversible !== "boolean") errors.push(path + ".irreversible debe ser booleano.");
+      if (power.ownerCharacterId === undefined || power.ownerCharacterId === null || power.ownerCharacterId === "") {
+        power.ownerCharacterId = null;
+      } else if (!isNonEmptyString(power.ownerCharacterId)) {
+        errors.push(path + ".ownerCharacterId debe ser un ID o null.");
+      } else if (!characterIds.has(power.ownerCharacterId)) {
+        errors.push(path + ".ownerCharacterId referencia un personaje inexistente: " + power.ownerCharacterId + ".");
+      }
+      if (power.storyId === undefined || power.storyId === null || power.storyId === "") {
+        power.storyId = null;
+      } else if (!isNonEmptyString(power.storyId)) {
+        errors.push(path + ".storyId debe ser un ID o null.");
+      } else if (!byGroup.stories.has(power.storyId)) {
+        errors.push(path + ".storyId referencia una historia inexistente: " + power.storyId + ".");
+      }
     });
 
     if (errors.length) return { valid: false, errors, project: null };
