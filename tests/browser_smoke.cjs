@@ -184,7 +184,6 @@ async function run() {
     process.stdout.write("PASS family explorer: Ryu -> Alise -> Astrea is navigable, family members and outcome are visible, and back restores the prior profile/tab.\\n");
 
     const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
-    const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
     assert.ok(ryuHistoricalPortrait.includes("danmachi4/character/images/chara_tachi_15.png"),
       "Historical Ryu should use the official character reference from the Astrea Record adaptation era.");
     await page.waitForFunction(() => {
