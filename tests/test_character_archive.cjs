@@ -33,4 +33,16 @@ const filtered=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","safe-only");
 assert.ok(!filtered.moments.some(m=>m.id==="ryu-seven-days"));
 assert.equal(archive.list(index,{query:"Ryu"}).filter(c=>c.id==="CHAR-RYUU-LION").length,1);
 assert.ok(ryu.missingContinuities.includes("CONT-MAIN-LN")&&ryu.missingContinuities.includes("CONT-AU"));
+// Expanded character profiles consume existing curated claims rather than inventing data.
+const directory=archive.list(index);
+for(const id of ["DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR"]){
+  assert.ok(directory.some(character=>character.id===id),"Expected expanded archive record: "+id);
+  const item=archive.getProfile(index,id,"CONT-ANIME","all");
+  assert.ok(item&&item.claims.length>0,"Expanded character must expose source-backed claims: "+id);
+}
+const bell=archive.getProfile(index,"DM-CHAR-BELL","CONT-ANIME","all");
+assert.ok(bell.relationships.length>=3,"Bell's source-backed relationship network should include Hestia, Ais and Eina.");
+assert.ok(archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR").references.some(ref=>ref.url.includes("fandom.com/es/wiki/Ryuu_Lion")));
+assert.ok(archive.getExtendedInfo("DM-CHAR-BELL","CONT-ANIME").sections.length>=2);
+assert.equal(archive.getExtendedInfo("DM-CHAR-BELL","CONT-AR"),null,"Do not copy anime profile details into the historical continuity.");
 process.stdout.write("PASS character archive model: continuity, relations, moments, spoiler filtering and unavailable-evidence handling.\\n");
