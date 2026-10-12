@@ -20,26 +20,26 @@ research_source_refs:
 ---
 # Astrea
 
-## Identity
+## Identidad
 
-- **Stable identity ID:** CHAR-ASTREA.
-- **Type:** deity.
-- **Status:** provisional; this entry only records claims in the official web chronology and publisher synopsis.
+- **ID de identidad estable:** CHAR-ASTREA.
+- **Tipo:** deidad.
+- **Estado:** ficha provisional; registra únicamente afirmaciones recogidas en la cronología web oficial y en la sinopsis editorial.
 
-## Documented temporal state · Astrea Record
+## Estado temporal documentado · Astrea Record
 
-- **Continuity:** CONT-AR.
-- **Interval:** the historical period of *Astrea Record*, described approximately seven years before Bell visits Orario.
-- **Evidence:** official material presents Astrea as the goddess under whose guidance Ryu seeks justice and connects her to Astrea Familia, which is presented as rising in the name of justice during the turbulent period.
-- **Claim and sources:** DMR-001-CLM-002, DMR-001-CLM-004; DMR-001-SRC-001, DMR-001-SRC-003.
-- **Related records:** [Ryu Lion / Ryuu Lion](ryuu-lion.md), [Alise Lovelace](alise-lovelace.md), [Familia and organization index](../familias/00-indice-familias.md).
+- **Continuidad:** CONT-AR.
+- **Periodo:** etapa histórica de *Astrea Record*, situada aproximadamente siete años antes de la visita de Bell a Orario.
+- **Evidencia:** el material oficial presenta a Astrea como la diosa bajo cuya guía Ryu busca justicia y la vincula con Astrea Familia, descrita como una Familia que se alza en nombre de la justicia durante un periodo turbulento.
+- **Afirmaciones y fuentes:** DMR-001-CLM-002, DMR-001-CLM-004; DMR-001-SRC-001, DMR-001-SRC-003.
+- **Fichas relacionadas:** [Ryu Lion / Ryuu Lion](ryuu-lion.md), [Alise Lovelace](alise-lovelace.md), [índice de Familias y organizaciones](../familias/00-indice-familias.md).
 
-## Unknown or unverified
+## Información desconocida o sin verificar
 
-The sources in this batch do not establish Astrea’s later location, activity, status, exact dates, complete roster, or what she knows about later events. Do not fill these from inference. Full novel locators remain pending.
+Las fuentes de este lote no establecen la ubicación, actividad, estado, fechas exactas, plantilla completa ni conocimiento de Astrea sobre acontecimientos posteriores. No completar estos vacíos mediante inferencias. Los localizadores de las novelas completas siguen pendientes.
 
 ## Perfil psicológico inicial · DANMACHI-RESEARCH-002
 
-- **Valores, CONT-ANIME/CONT-AR:** el perfil oficial de adaptación la describe como deidad de justicia y orden, misericordiosa y amable; el material de *Astrea Record* la conecta con una Familia que se alza en nombre de la justicia. La frase afectiva se conserva como propia de la adaptación, no como cita de la novela derivada. [DMR-002-CLM-017]
-- **Relaciones y reputación, CONT-ANIME:** la página dice que la querían tanto sus miembros de Familia como ciudadanos de Orario. Esto describe reputación social en esa continuidad, no todas las opiniones privadas. [DMR-002-CLM-018]
-- **Desconocido:** las fuentes consultadas no dan una psicología privada completa, preferencias cotidianas ni estado posterior.
+- **Valores, CONT-ANIME/CONT-AR:** el perfil oficial de la adaptación la describe como deidad de justicia y orden, misericordiosa y amable; el material de *Astrea Record* la conecta con una Familia que se alza en nombre de la justicia. La descripción afectiva se conserva como propia de la adaptación, no como cita de la novela derivada. [DMR-002-CLM-017]
+- **Relaciones y reputación, CONT-ANIME:** la página afirma que tanto los miembros de su Familia como ciudadanos de Orario la apreciaban. Esto describe su reputación social en esa continuidad, no todas las opiniones privadas. [DMR-002-CLM-018]
+- **Desconocido:** las fuentes consultadas no ofrecen una psicología privada completa, preferencias cotidianas ni estado posterior.
