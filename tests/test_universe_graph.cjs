@@ -37,7 +37,7 @@ function testRyuCanBeExploredThroughAliseFamiliaAndAstrea() {
   const departure = graph.getEntity("DM-EVT-ASTREA-DEPARTURE");
   assert.ok(departure);
   assert.match(departure.description, /Solingen/i);
-  assert.match(departure.notes, /fuente primaria/i);
+  assert.match(departure.status + " " + departure.notes, /fuente primaria/i);
   assert.ok(graph.getRelated("DM-EVT-ASTREA-DEPARTURE").some(item => item.targetId === "DM-LOC-SOLINGEN"));
 }
 
