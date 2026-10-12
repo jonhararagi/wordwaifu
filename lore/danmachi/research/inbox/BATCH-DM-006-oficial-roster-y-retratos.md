@@ -1979,3 +1979,600 @@ Las afirmaciones siguientes son paráfrasis breves en español de los perfiles d
 - `verification_status`: source_checked
 - `spoiler_level`: none
 - `confidence_note`: Resumen original de una ficha oficial de adaptación. No debe trasladarse automáticamente a toda la novela ligera ni a otras continuidades.
+
+
+## Ampliación verificada · elenco de DanMachi IV y Sword Oratoria
+
+Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria que antes no aparecían en el directorio. Para integrantes de Astrea Familia cuyos perfiles públicos solo dan nombre, especie y afiliación, se conserva ese límite documental en lugar de inventar una biografía.
+
+### DMR-006-CLM-124 · Daphne Lauros · identity
+- `aspect`: identity
+- `claim`: Daphne Lauros: Antigua integrante de Apollo Familia que se unió a Miach Familia tras la Guerra de Juegos. En las expediciones de la Hestia Familia suele asumir funciones de organización y combate de retaguardia. Afiliación descrita por la fuente: Miach Familia; ex Apollo Familia.
+- `character_id`: CHAR-DAPHNE-LAUROS
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ダフネ・ラウロス; nivel, afiliación, función y relación con Cassandra
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-125 · Daphne Lauros · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Daphne Lauros: Práctica y de carácter directo; suele desconfiar de los sueños proféticos de Cassandra, aunque confía en ella como compañera.
+- `character_id`: CHAR-DAPHNE-LAUROS
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ダフネ・ラウロス; nivel, afiliación, función y relación con Cassandra
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-126 · Daphne Lauros · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Daphne Lauros: Nivel 2; destaca por su juicio táctico y por coordinar al grupo durante las exploraciones. Trabaja a menudo junto a Cassandra Ilion, cuya capacidad profética contrasta con su escepticismo.
+- `character_id`: CHAR-DAPHNE-LAUROS
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ダフネ・ラウロス; nivel, afiliación, función y relación con Cassandra
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-127 · Cassandra Ilion · identity
+- `aspect`: identity
+- `claim`: Cassandra Ilion: Sanadora cuya capacidad incluye sueños proféticos que otras personas suelen encontrar difíciles de creer. Su advertencia antes de una expedición queda desoída en la adaptación. Afiliación descrita por la fuente: Miach Familia.
+- `character_id`: CHAR-CASSANDRA-ILION
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil カサンドラ・イリオン; curación, sueños, nivel y vínculo con Daphne
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-128 · Cassandra Ilion · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Cassandra Ilion: Extremadamente tímida y reservada; admira y sigue el ejemplo de Daphne.
+- `character_id`: CHAR-CASSANDRA-ILION
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil カサンドラ・イリオン; curación, sueños, nivel y vínculo con Daphne
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-129 · Cassandra Ilion · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Cassandra Ilion: Nivel 2; utiliza magia de curación y presenta sueños de naturaleza profética. Mantiene una relación cercana de admiración con Daphne Lauros, aunque ambas difieren al interpretar sus sueños.
+- `character_id`: CHAR-CASSANDRA-ILION
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil カサンドラ・イリオン; curación, sueños, nivel y vínculo con Daphne
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-130 · Kashima Ouka · identity
+- `aspect`: identity
+- `claim`: Kashima Ouka: Guerrero del Lejano Oriente que sirve como uno de los combatientes principales de Takemikazuchi Familia. La ficha oficial lo presenta como un luchador responsable y comprometido con su grupo. Afiliación descrita por la fuente: Takemikazuchi Familia.
+- `character_id`: CHAR-KASHIMA-OUKA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil カシマ・桜花; especie, nivel, función y vínculo con Chigusa
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-131 · Kashima Ouka · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Kashima Ouka: Responsable y dedicado, aunque poco perceptivo ante los sentimientos que otras personas tienen por él.
+- `character_id`: CHAR-KASHIMA-OUKA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil カシマ・桜花; especie, nivel, función y vínculo con Chigusa
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-132 · Kashima Ouka · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Kashima Ouka: Nivel 2; destaca por la disciplina marcial y el combate cuerpo a cuerpo. Es objeto del afecto de Chigusa Hitachi, algo que él no parece advertir.
+- `character_id`: CHAR-KASHIMA-OUKA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil カシマ・桜花; especie, nivel, función y vínculo con Chigusa
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-133 · Hitachi Chigusa · identity
+- `aspect`: identity
+- `claim`: Hitachi Chigusa: Aventurera del Lejano Oriente que apoya a su grupo con arco y funciones de supporter. Su carácter reservado condiciona cómo expresa sus sentimientos. Afiliación descrita por la fuente: Takemikazuchi Familia.
+- `character_id`: CHAR-HITACHI-CHIGUSA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ヒタチ・千草; rol de supporter, nivel y relaciones
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-134 · Hitachi Chigusa · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Hitachi Chigusa: Tímida y discreta; mantiene vínculos antiguos con Mikoto y Haruhime.
+- `character_id`: CHAR-HITACHI-CHIGUSA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ヒタチ・千草; rol de supporter, nivel y relaciones
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-135 · Hitachi Chigusa · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Hitachi Chigusa: Nivel 1; utiliza arco y funciones de apoyo en expediciones. Es amiga de la infancia de Mikoto y Haruhime y está enamorada de Ouka.
+- `character_id`: CHAR-HITACHI-CHIGUSA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ヒタチ・千草; rol de supporter, nivel y relaciones
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-136 · Aisha Belka · identity
+- `aspect`: identity
+- `claim`: Aisha Belka: Combatiente amazona que antes perteneció a Ishtar Familia y después se integró al entorno de Hermes Familia. Ayuda a Haruhime a desarrollar su magia y combate junto a la expedición de Bell. Afiliación descrita por la fuente: Hermes Familia; ex Ishtar Familia.
+- `character_id`: CHAR-AISHA-BELKA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil アイシャ・ベルカ; afiliación, nivel, rol y vínculo con Haruhime
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-137 · Aisha Belka · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Aisha Belka: Audaz, franca y muy segura de sí misma; también actúa como protectora y mentora de Haruhime.
+- `character_id`: CHAR-AISHA-BELKA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil アイシャ・ベルカ; afiliación, nivel, rol y vínculo con Haruhime
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-138 · Aisha Belka · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Aisha Belka: Nivel 4; aventurera experimentada con gran habilidad de combate. Cuida de Haruhime y en ocasiones intenta seducir a Bell, sin que sus acercamientos prosperen.
+- `character_id`: CHAR-AISHA-BELKA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil アイシャ・ベルカ; afiliación, nivel, rol y vínculo con Haruhime
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-139 · Luvis Lilix · identity
+- `aspect`: identity
+- `claim`: Luvis Lilix: Elfo aventurero que había recibido orientación de Eina Tulle. La ficha oficial lo sitúa en una misión de búsqueda en los niveles inferiores y señala su conflicto recurrente con Dormul. Afiliación descrita por la fuente: Modi Familia.
+- `character_id`: CHAR-LUVIS-LILIX
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ルヴィス・リーリックス; nivel, vínculo con Eina y rivalidad con Dormul
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-140 · Luvis Lilix · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Luvis Lilix: Presumido al hablar frente a Eina y competitivo en sus interacciones con Dormul.
+- `character_id`: CHAR-LUVIS-LILIX
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ルヴィス・リーリックス; nivel, vínculo con Eina y rivalidad con Dormul
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-141 · Luvis Lilix · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Luvis Lilix: Nivel 3; aventurero que desciende a niveles inferiores junto a su grupo. Tiene sentimientos por Eina y suele enfrentarse verbalmente con Dormul Bolster.
+- `character_id`: CHAR-LUVIS-LILIX
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ルヴィス・リーリックス; nivel, vínculo con Eina y rivalidad con Dormul
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-142 · Dormul Bolster · identity
+- `aspect`: identity
+- `claim`: Dormul Bolster: Enano aventurero de Magni Familia y antiguo asesorado de Eina. Participa en una expedición al Dungeon y usa armas contundentes. Afiliación descrita por la fuente: Magni Familia.
+- `character_id`: CHAR-DORMUL-BOLSTER
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ドルムル・ボルスタ; afiliación, nivel, carácter y equipo
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-143 · Dormul Bolster · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Dormul Bolster: De trato amable y algo torpe; mantiene una rivalidad con Luvis, aunque ambos pueden colaborar cuando la situación lo exige.
+- `character_id`: CHAR-DORMUL-BOLSTER
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ドルムル・ボルスタ; afiliación, nivel, carácter y equipo
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-144 · Dormul Bolster · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Dormul Bolster: Nivel 3; combate con martillos y posee gran resistencia física para su rango. Rivaliza con Luvis, en parte por sus sentimientos hacia Eina Tulle.
+- `character_id`: CHAR-DORMUL-BOLSTER
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ドルムル・ボルスタ; afiliación, nivel, carácter y equipo
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-145 · Mari (Xenos) · identity
+- `aspect`: identity
+- `claim`: Mari (Xenos): Sirena Xenos que conoce a Bell en los niveles inferiores. Puede moverse con rapidez bajo el agua, pero no puede vivir o desplazarse por la superficie de la misma manera que otros Xenos. Afiliación descrita por la fuente: Xenos; no pertenece a una Familia divina.
+- `character_id`: CHAR-MARI-XENOS
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil マリィ; especie Xenos, entorno acuático y encuentro con Bell
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: mild
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-146 · Mari (Xenos) · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Mari (Xenos): Se apega rápidamente a Bell después de conocerlo.
+- `character_id`: CHAR-MARI-XENOS
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil マリィ; especie Xenos, entorno acuático y encuentro con Bell
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: mild
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-147 · Mari (Xenos) · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Mari (Xenos): Adaptada al desplazamiento acuático; la ficha no le asigna nivel de aventurera. Desarrolla un vínculo afectuoso con Bell tras su primer encuentro.
+- `character_id`: CHAR-MARI-XENOS
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil マリィ; especie Xenos, entorno acuático y encuentro con Bell
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: mild
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-148 · Neoin Unick · identity
+- `aspect`: identity
+- `claim`: Neoin Unick: la ficha oficial consultada confirma que es Humana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
+- `character_id`: CHAR-NEOIN-UNICK
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ノイン・ユニック; especie y afiliación
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-149 · Neese Ranquette · identity
+- `aspect`: identity
+- `claim`: Neese Ranquette: la ficha oficial consultada confirma que es Hombre lobo / Werewolf y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
+- `character_id`: CHAR-NEESE-RANQUETTE
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ネーゼ・ランケット; especie y afiliación
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-150 · Asta Knox · identity
+- `aspect`: identity
+- `claim`: Asta Knox: la ficha oficial consultada confirma que es Enana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
+- `character_id`: CHAR-ASTA-NOX
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil アスタ・ノックス; especie y afiliación
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-151 · Liana Leets · identity
+- `aspect`: identity
+- `claim`: Liana Leets: la ficha oficial consultada confirma que es Humana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
+- `character_id`: CHAR-LIANA-LEETS
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil リャーナ・リーツ; especie y afiliación
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-152 · Selty Throa · identity
+- `aspect`: identity
+- `claim`: Selty Throa: la ficha oficial consultada confirma que es Elfa y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
+- `character_id`: CHAR-SELTTY-THROA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil セルティ・スロア; especie y afiliación
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-153 · Iska Bra · identity
+- `aspect`: identity
+- `claim`: Iska Bra: la ficha oficial consultada confirma que es Amazoness y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
+- `character_id`: CHAR-ISKA-BRA
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil イスカ・ブラ; especie y afiliación
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-154 · Mariyu Leage · identity
+- `aspect`: identity
+- `claim`: Mariyu Leage: la ficha oficial consultada confirma que es Humana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
+- `character_id`: CHAR-MARIYU-LEAGE
+- `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-003
+- `source_title`: DanMachi IV · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil マリュー・レアージュ; especie y afiliación
+- `source_url`: https://danmachi.com/danmachi4/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-155 · Lulune Louie · identity
+- `aspect`: identity
+- `claim`: Lulune Louie: Aventurera de Hermes Familia con experiencia como ladrona; sus habilidades de mapeo son una de sus contribuciones reconocidas. Afiliación descrita por la fuente: Hermes Familia.
+- `character_id`: CHAR-LULUNE-LOUIE
+- `era_or_interval`: Sword Oratoria · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-002
+- `source_title`: Sword Oratoria · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ルルネ・ルーイ; especie, afiliación, mapeo y conducta
+- `source_url`: https://danmachi.com/sword_oratoria/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-156 · Lulune Louie · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Lulune Louie: Impulsiva, propensa a equivocaciones y a decir cosas inoportunas, lo que suele provocar reprimendas de Asfi.
+- `character_id`: CHAR-LULUNE-LOUIE
+- `era_or_interval`: Sword Oratoria · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-002
+- `source_title`: Sword Oratoria · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ルルネ・ルーイ; especie, afiliación, mapeo y conducta
+- `source_url`: https://danmachi.com/sword_oratoria/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-157 · Lulune Louie · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Lulune Louie: Experiencia como ladrona y habilidad de cartografía; el perfil de Sword Oratoria no le asigna un nivel. Trabaja bajo la dirección de Asfi Al Andromeda.
+- `character_id`: CHAR-LULUNE-LOUIE
+- `era_or_interval`: Sword Oratoria · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-002
+- `source_title`: Sword Oratoria · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil ルルネ・ルーイ; especie, afiliación, mapeo y conducta
+- `source_url`: https://danmachi.com/sword_oratoria/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-158 · Tsubaki Collbrande · identity
+- `aspect`: identity
+- `claim`: Tsubaki Collbrande: Herrera de alto nivel que dirige Hephaistos Familia y es reconocida por su extraordinaria habilidad en la forja. Afiliación descrita por la fuente: Hephaistos Familia.
+- `character_id`: CHAR-TSUBAKI-COLBRANDE
+- `era_or_interval`: Sword Oratoria · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-002
+- `source_title`: Sword Oratoria · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil 椿・コルブランド; especie, liderazgo y capacidad como herrera
+- `source_url`: https://danmachi.com/sword_oratoria/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-159 · Tsubaki Collbrande · personality
+- `aspect`: personality
+- `claim`: Personalidad y conducta documentadas para Tsubaki Collbrande: Extrovertida y cercana, suele mostrarse insistente al invitar a otros a celebrar y beber.
+- `character_id`: CHAR-TSUBAKI-COLBRANDE
+- `era_or_interval`: Sword Oratoria · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-002
+- `source_title`: Sword Oratoria · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil 椿・コルブランド; especie, liderazgo y capacidad como herrera
+- `source_url`: https://danmachi.com/sword_oratoria/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+### DMR-006-CLM-160 · Tsubaki Collbrande · abilities_and_relationships
+- `aspect`: abilities_and_relationships
+- `claim`: Función y relaciones documentadas para Tsubaki Collbrande: Maestra herrera; el perfil consultado no especifica un nivel. Dirige Hephaistos Familia y mantiene vínculos profesionales con los aventureros que dependen de su trabajo como herrera.
+- `character_id`: CHAR-TSUBAKI-COLBRANDE
+- `era_or_interval`: Sword Oratoria · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
+- `continuity_scope`: CONT-ANIME
+- `source_id`: DMR-006-SRC-002
+- `source_title`: Sword Oratoria · perfiles oficiales de personajes
+- `source_type`: ADAPTATION
+- `source_locator`: Perfil 椿・コルブランド; especie, liderazgo y capacidad como herrera
+- `source_url`: https://danmachi.com/sword_oratoria/character/
+- `evidence_type`: explicit_character_profile
+- `verification_status`: source_checked
+- `spoiler_level`: none
+- `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
