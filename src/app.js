@@ -1328,7 +1328,7 @@
         status: "complete"
       });
     }
-    const elencoMatch = text.match(/^##\s+Elenco y motores dram[aá]ticos\s*\n([\s\S]*?)(?=\n---|\n##\s+Cap[ií]tulo|$)/im);
+    const elencoMatch = text.match(/^##\s+Elenco y motores dram[aá]ticos\s*\n([\s\S]*?)(?=\n---|\n##\s+Cap[ií]tulo|(?![\s\S]))/im);
     const arcs = [];
     if (elencoMatch) {
       for (const line of elencoMatch[1].split("\n")) {
