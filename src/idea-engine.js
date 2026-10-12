@@ -14,6 +14,11 @@
       { name: "Mara Pixel", role: "estratega de RPG", personality: "analítica hasta para elegir el desayuno, pero pésima leyendo emociones", flaw: "confunde optimizar una vida con vivirla", motivation: "encontrar una forma de volver a casa" },
       { name: "Tadeo Respawn", role: "jugador de juegos difíciles", personality: "dramático, competitivo y valiente solo después de quejarse", flaw: "cree que todo problema tiene una solución explotable", motivation: "demostrar que puede ganar una partida que nadie diseñó para ser justa" }
     ],
+    generalProtagonists: [
+      { name: "Lía Serrano", role: "archivista de ruinas", personality: "observadora, obstinada y más valiente cuando puede fingir que investiga", flaw: "busca explicaciones incluso cuando necesita tomar una decisión", motivation: "descubrir quién borró una parte de la historia del mundo" },
+      { name: "Ivo Mar", role: "exvillano en rehabilitación", personality: "encantador, desconfiado y genuinamente cansado de ser el malo", flaw: "espera traiciones incluso de quienes le ofrecen ayuda", motivation: "hacer algo bueno sin que nadie lo convierta en una leyenda" },
+      { name: "Renata Solís", role: "sanadora de frontera", personality: "práctica, compasiva y feroz cuando alguien abusa de los débiles", flaw: "se responsabiliza por problemas que no puede resolver sola", motivation: "romper el sistema que convierte la ayuda en un lujo" }
+    ],
     goddesses: [
       { name: "Ixchel, Señora de los Hilos", role: "diosa de la luna, la medicina y los destinos enredados", personality: "maternal en público, competitiva y vengativa en los juegos de mesa", flaw: "cura cualquier herida excepto su orgullo", motivation: "evitar que el tejido del mundo se deshaga" },
       { name: "Yax K'in, Dama del Alba Verde", role: "diosa original del crecimiento, las cosechas y las segundas oportunidades", personality: "optimista, intensa y aterradoramente literal", flaw: "resuelve los conflictos haciendo crecer cosas, incluso cuando son monstruos", motivation: "probar que toda ruina puede volver a florecer" },
@@ -61,8 +66,16 @@
   function generate(input = {}) {
     const prompt = String(input.premise || "").trim() || "Un grupo de inadaptados recibe una misión divina que nadie explicó bien.";
     const seed = hash(prompt + "|" + (input.genre || "balanced") + "|" + (input.tone || "balanced") + "|" + generation++);
-    const protagonist = { ...pick(banks.protagonists, seed), id: "char-gen-protagonist-" + seed };
-    const goddesses = banks.goddesses.map((item, index) => ({ ...item, id: "char-gen-goddess-" + seed + "-" + index }));
+    const gamerPremise = /(gamer|videojuego|videojuegos|jugador|isekai|konosuba)/i.test(prompt);
+    const divinePremise = /(diosas?|deidades|pante[oó]n|mitolog[ií]a maya)/i.test(prompt);
+    const protagonistBank = gamerPremise ? banks.protagonists : banks.generalProtagonists;
+    const protagonist = { ...pick(protagonistBank, seed), id: "char-gen-protagonist-" + seed };
+    const goddesses = divinePremise
+      ? banks.goddesses.map((item, index) => ({ ...item, id: "char-gen-goddess-" + seed + "-" + index }))
+      : [];
+    const party = divinePremise ? goddesses : banks.companions.map((item, index) => ({
+      ...item, id: "char-gen-companion-" + seed + "-" + index
+    }));
     const companion = { ...pick(banks.companions, seed >>> 3), id: "char-gen-companion-" + seed };
     const antagonist = { ...pick(banks.antagonists, seed >>> 5), id: "char-gen-antagonist-" + seed };
     const complication = pick(banks.complications, seed >>> 7);
@@ -86,7 +99,16 @@
       : tone === "comedy"
         ? "El absurdo domina el ritmo; debajo de cada chiste queda una consecuencia emocional concreta."
         : "Los personajes pueden ser ridículos en una escena y afrontar con absoluta seriedad una pérdida, una promesa o una decisión moral en la siguiente.";
-    const characters = [protagonist, ...goddesses, companion, antagonist];
+    const characters = divinePremise
+      ? [protagonist, ...goddesses, companion, antagonist]
+      : [protagonist, ...party, antagonist];
+    const groupNames = divinePremise ? goddesses.map((item) => item.name).join(", ") : party.map((item) => item.name).join(", ");
+    const hook = divinePremise
+      ? protagonist.name + ", " + protagonist.role + ", recibe una misión de " + groupNames + ". Las tres aceptan ayudar, pero ninguna coincide en qué significa salvar el mundo."
+      : protagonist.name + ", " + protagonist.role + ", reúne a " + groupNames + " para resolver una crisis que parece sencilla hasta que cada integrante aplica su propia idea de lo correcto.";
+    const groupDynamic = divinePremise
+      ? protagonist.name + " (" + protagonist.personality + ") intenta convertir la misión en una partida explotable. " + goddesses[0].name + " quiere preservar los destinos, " + goddesses[1].name + " insiste en que todo puede crecer de nuevo y " + goddesses[2].name + " oculta una cláusula del pacto. " + companion.name + " aporta una solución que funciona por el motivo equivocado; " + antagonist.name + " parece un burócrata ridículo, pero puede ejecutar una amenaza real."
+      : protagonist.name + " (" + protagonist.personality + ") choca con " + party[0].name + ", " + party[1].name + " y " + party[2].name + ": cada uno tiene una habilidad útil y un defecto que convierte las soluciones simples en nuevos problemas. " + antagonist.name + " parece ridículo, pero su objetivo tiene consecuencias reales.";
     const story = {
       id: "story-generated-" + seed,
       name: String(input.title || "").trim() || title,
@@ -95,15 +117,15 @@
         "CONTINUIDAD / MUNDO: " + (continuity || (mode === "fanfic" ? "Por especificar; no asumir datos de canon." : "Universo original por desarrollar.")),
         "GÉNERO: " + genre,
         "PREMISA DEL AUTOR: " + premiseText,
-        "GANCHO: " + protagonist.name + ", " + protagonist.role + ", recibe una misión de " + goddesses[0].name + ", " + goddesses[1].name + " y " + goddesses[2].name + ". Las tres aceptan ayudar, pero ninguna coincide en qué significa salvar el mundo.",
-        "REPARTO Y TENSIONES: " + protagonist.name + " (" + protagonist.personality + ") intenta convertir la misión en una partida explotable. " + goddesses[0].name + " quiere preservar los destinos, " + goddesses[1].name + " insiste en que todo puede crecer de nuevo y " + goddesses[2].name + " oculta una cláusula del pacto. " + companion.name + " aporta una solución que funciona por el motivo equivocado; " + antagonist.name + " parece un burócrata ridículo, pero puede ejecutar una amenaza real.",
+        "GANCHO: " + hook,
+        "REPARTO Y TENSIONES: " + groupDynamic,
         "CONFLICTO EXTERNO: " + complication + ".",
         "NÚCLEO EMOCIONAL: " + seriousCore + ".",
         "TONO: " + toneNote,
         "ESCENA INICIAL: " + opening + ".",
-        "CAPÍTULO 1 — LA OFERTA: " + protagonist.name + " acepta una recompensa que las diosas describen de tres maneras incompatibles. El grupo descubre la letra pequeña cuando ya es demasiado tarde.",
-        "CAPÍTULO 2 — EL EXPLOIT: el protagonista encuentra una solución técnicamente válida y moralmente desastrosa. " + companion.name + " la empeora intentando ayudar, y " + antagonist.name + " llega para cobrar la consecuencia.",
-        "CAPÍTULO 3 — EL PRECIO: las tres diosas dejan de discutir y revelan por qué la misión importa. El grupo debe elegir entre una victoria fácil que condena a alguien o una solución difícil que exige confiar unos en otros.",
+        "CAPÍTULO 1 — LA OFERTA: " + protagonist.name + " acepta una misión, una deuda o una promesa que el grupo entiende de maneras incompatibles. La letra pequeña aparece cuando ya no pueden retirarse sin perjudicar a alguien.",
+        "CAPÍTULO 2 — EL EXPLOIT: el protagonista encuentra una solución técnicamente válida y moralmente desastrosa. " + party[0].name + " intenta ayudar, empeora el problema y obliga al grupo a pagar una consecuencia real.",
+        "CAPÍTULO 3 — EL PRECIO: el grupo descubre quién saldría perjudicado por la victoria fácil. Deben elegir entre ganar sin esfuerzo y abandonar a alguien, o confiar entre ellos para intentar una solución más difícil.",
         "PROMESA DE LA HISTORIA: cada episodio resuelve un problema absurdo y deja una consecuencia que importa; los personajes pueden hacer payasadas sin que el dolor, los juramentos o el peligro se conviertan en chiste."
       ].join("\\n\\n"),
       status: "draft",
