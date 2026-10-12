@@ -28,6 +28,17 @@ function testRyuCanBeExploredThroughAliseFamiliaAndAstrea() {
   assert.match(family.notes, /fuente primaria/i);
   const goddessLinks = graph.getRelated("DM-ORG-ASTREA-FAMILIA").map(item => item.targetId);
   assert.ok(goddessLinks.includes("CHAR-ASTREA"));
+  assert.ok(goddessLinks.includes("DM-EVT-ASTREA-DEPARTURE"),
+    "The family route should show the later departure as a separate historical event.");
+  const otherFamilies = graph.getRelated("DM-LOC-ORARIO").map(item => item.targetId);
+  for (const id of ["DM-ORG-HESTIA-FAMILIA", "DM-ORG-LOKI-FAMILIA", "DM-ORG-FREYA-FAMILIA", "DM-ORG-HEPHAISTOS-FAMILIA"]) {
+    assert.ok(otherFamilies.includes(id), "Orario should lead to " + id);
+  }
+  const departure = graph.getEntity("DM-EVT-ASTREA-DEPARTURE");
+  assert.ok(departure);
+  assert.match(departure.description, /Solingen/i);
+  assert.match(departure.notes, /fuente primaria/i);
+  assert.ok(graph.getRelated("DM-EVT-ASTREA-DEPARTURE").some(item => item.targetId === "DM-LOC-SOLINGEN"));
 }
 
 function testAnimeAndAstreaRecordContinuitiesRemainSeparate() {
