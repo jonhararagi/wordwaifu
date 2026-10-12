@@ -2487,6 +2487,7 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
     const backgroundAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"));
     assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
+    await page.screenshot({ path: path.join(root, "artifacts", "art-studio.png"), fullPage: true });
     // A user-assigned portrait takes precedence over the linked reference art in the archive.
     await page.locator('.nav-item[data-view="lore"]').click();
     const profileBack = page.locator("#archive-profile-back");
