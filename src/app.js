@@ -2098,6 +2098,61 @@
     else body.appendChild(archiveEmpty("No se ha identificado una lista completa de participantes."));
     body.appendChild(archiveElement("p","","Fuentes y límites del resumen"));moment.claims.forEach(c=>body.appendChild(archiveEvidence(c)));d.appendChild(body);return d;
   }
+  function renderContinuityDossier(profile) {
+    const dossier = profile && profile.officialDossier;
+    if (!dossier) return null;
+    const section = archiveElement("section","archive-section archive-continuity-dossier");
+    const heading = archiveElement("div","archive-section-heading");
+    heading.append(
+      archiveElement("h3","","Expediente de continuidad"),
+      archiveElement("p","",String(profile.continuityLabel || profile.continuity) + " · " +
+        String(dossier.sourceLabel || "Fuente secundaria") + " · investigación original")
+    );
+    section.appendChild(heading);
+    const spoilerLevel = String(dossier.spoilerLevel || "").toLowerCase();
+    if (spoilerLevel === "major" || spoilerLevel === "endgame") {
+      section.appendChild(archiveElement("p","archive-research-note","Contiene spoilers importantes de la continuidad seleccionada."));
+    }
+    [
+      ["Apariencia",dossier.appearance],
+      ["Historia y contexto",dossier.history],
+      ["Personalidad y evolución",dossier.development],
+      ["Perfil de combate",dossier.combatProfile],
+      ["Hábitos y conducta",dossier.habits],
+      ["Función en la historia",dossier.narrativeRole]
+    ].forEach(([label,body]) => {
+      if (!body || !String(body).trim()) return;
+      const block = archiveElement("div","archive-official-detail archive-dossier-detail");
+      block.append(archiveElement("h4","",label),archiveElement("p","",body));
+      section.appendChild(block);
+    });
+    [
+      ["Habilidades y capacidades",dossier.abilities,"name","detail"],
+      ["Relaciones importantes",dossier.relationshipDetails,"name","detail"]
+    ].forEach(([label,items,titleKey,bodyKey]) => {
+      if (!Array.isArray(items) || !items.length) return;
+      const list = archiveElement("section","archive-section archive-continuity-dossier-list");
+      list.appendChild(archiveElement("h4","",label));
+      items.forEach(item => {
+        if (!item || !item[titleKey] || !item[bodyKey]) return;
+        const block = archiveElement("div","archive-official-detail");
+        block.append(archiveElement("h4","",item[titleKey]),archiveElement("p","",item[bodyKey]));
+        list.appendChild(block);
+      });
+      if (list.children.length > 1) section.appendChild(list);
+    });
+    const urls = [...new Set((Array.isArray(dossier.sources) ? dossier.sources : [dossier.sourceUrl]).filter(Boolean))];
+    if (urls.length) {
+      const sources = archiveElement("div","archive-official-source-links");
+      urls.slice(0,5).forEach((url,index) => appendLoreLink(
+        sources,index===0 ? "Abrir fuente del expediente ↗" : "Fuente complementaria "+(index+1)+" ↗",url,true
+      ));
+      section.appendChild(sources);
+    }
+    section.dataset.dossierContinuity = String(profile.continuity || "");
+    return section;
+  }
+
   function renderArchiveSummary(profile){
     const root=archiveElement("div","archive-profile-content"),overview=archiveElement("section","archive-section");
     const top=archiveElement("div","archive-section-heading");top.append(archiveElement("h3","","Estado documentado"),archiveElement("p","","Solo información de la continuidad seleccionada."));overview.appendChild(top);
@@ -2105,6 +2160,8 @@
     identity.append(archiveElement("h4","","Identidad y afiliación"),archiveElement("p","",profile.state.affiliation),archiveElement("p","","ID estable: "+profile.id),archiveGoTab("sources","Ver fuentes"));
     const m=profile.claims.find(c=>(c.aspects||[]).includes("motivation"));motivation.append(archiveElement("h4","","Valores y motivaciones"),archiveElement("p","",m?m.claim:"Sin información suficiente en esta continuidad."),archiveGoTab("personality","Explorar personalidad"));
     grid.append(identity,motivation);overview.appendChild(grid);root.appendChild(overview);
+    const continuityDossier = renderContinuityDossier(profile);
+    if (continuityDossier) root.appendChild(continuityDossier);
     const official = profile.continuity === "CONT-ANIME"
       ? (profile.officialReference ||
         (typeof window.WordWaifuOfficialCharacterRoster !== "undefined" ? window.WordWaifuOfficialCharacterRoster.get(profile.id) : null))
