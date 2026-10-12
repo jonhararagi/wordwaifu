@@ -49,13 +49,25 @@ try:
         ("/lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", b"Astrea Record"),
         ("/lore/danmachi/research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", b"DMR-002-CLM-015"),
         ("/lore/danmachi/research/inbox/BATCH-DM-005-astrea-familia-network.md", b"DMR-003-CLM-001"),
+        ("/lore/danmachi/characters/ryuu-lion.md", b"Ryu Lion / Ryuu Lion"),
+        ("/lore/danmachi/characters/alise-lovelace.md", b"Alise Lovelace"),
+        ("/lore/danmachi/characters/astrea.md", b"Astrea"),
+        ("/lore/danmachi/characters/bell-cranel.md", b"Bell Cranel"),
+        ("/lore/danmachi/characters/hestia.md", b"Hestia"),
+        ("/lore/danmachi/characters/ais-wallenstein.md", b"Ais Wallenstein"),
+        ("/lore/danmachi/characters/eina-tulle.md", b"Eina Tulle"),
+        ("/lore/danmachi/characters/finn-deimne.md", b"Finn Deimne"),
+        ("/lore/danmachi/characters/freya.md", b"Freya"),
+        ("/lore/danmachi/characters/ottar.md", b"Ottar"),
+        ("/lore/danmachi/characters/gojouno-kaguya.md", b"Gojouno Kaguya"),
+        ("/lore/danmachi/characters/lyra.md", b"Lyra"),
     ):
         body = get(route)
         assert marker in body, f"Expected marker not found in {route}"
     get("/.git/config", 404)
     get("/docs/MASTER_VISION.md", 404)
     get("/lore/danmachi/characters/ryuu-lion.md", 404)
-    print("PASS preview server: app shell, JS/CSS, original SVG portraits, catalog and lore documents respond; non-allowlisted paths return 404.")
+    print("PASS preview server: app shell, original SVGs, curated research and 12 allowlisted character dossiers respond; unrelated files remain blocked.")
 finally:
     server.shutdown()
     server.server_close()
