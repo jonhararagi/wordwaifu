@@ -312,10 +312,10 @@
     for (const paragraph of paragraphs.slice(0, 5)) {
       if (result.length + paragraph.length > 1300) {
         const remainder = 1300 - result.length;
-        if (remainder > 100) result += (result ? "\\n\\n" : "") + paragraph.slice(0, remainder).trim();
+        if (remainder > 100) result += (result ? "\n\n" : "") + paragraph.slice(0, remainder).trim();
         break;
       }
-      result += (result ? "\\n\\n" : "") + paragraph;
+      result += (result ? "\n\n" : "") + paragraph;
     }
     return result.trim();
   }
@@ -323,7 +323,7 @@
     try {
       const url = new URL(String(value || ""));
       if (url.protocol !== "https:") return "";
-      if (providerId === "danmachi-wiki" && /(?:^|\\.)wikia\\.nocookie\\.net$/i.test(url.hostname)) return url.href;
+      if (providerId === "danmachi-wiki" && /(?:^|\.)wikia\.nocookie\.net$/i.test(url.hostname)) return url.href;
       if (providerId === "wikipedia-en" && (url.hostname === "upload.wikimedia.org" || url.hostname === "en.wikipedia.org")) return url.href;
     } catch {}
     return "";
