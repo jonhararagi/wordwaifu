@@ -28,6 +28,7 @@
         <button class="nav-item" data-view="timeline"><span>◷</span> Cronología</button>
         <button class="nav-item" data-view="organizations"><span>⚑</span> Organizaciones</button>
         <button class="nav-item" data-view="stories"><span>▤</span> Historias y novelas</button>
+        <button class="nav-item" data-view="ideas"><span>✧</span> Generador de ideas</button>
         <button class="nav-item" data-view="commands"><span>⌘</span> Asistente local</button>
         <button class="nav-item" data-view="lore"><span>⌕</span> Enciclopedia de personajes</button>
         <button class="nav-item" data-view="art"><span>▧</span> Panel de arte</button>
@@ -100,6 +101,26 @@
       </section>
 
       <section id="directory-view" class="directory-view hidden"></section>
+      <section id="idea-view" class="idea-view hidden" aria-labelledby="idea-page-title">
+        <div class="idea-workbench">
+          <section class="idea-controls">
+            <p class="eyebrow">WORDWAIFU · STORY FOUNDRY</p>
+            <h2 id="idea-page-title">Generador de ideas</h2>
+            <p>Combiná premisas, personajes, defectos y conflictos. El motor funciona sin IA ni conexión: genera borradores editables, no canon automático.</p>
+            <form id="idea-form">
+              <label>Título provisional<input id="idea-title" maxlength="120" placeholder="Se propone uno si lo dejás vacío"></label>
+              <label>Semilla de la historia<textarea id="idea-premise" rows="5" maxlength="2400" required>Una fantasía tipo isekai con tres diosas inspiradas en la mitología maya, cada una con una personalidad muy distinta, y un protagonista gamer cínico y pragmático. Todos pueden ser ridículos en lo cotidiano y absolutamente serios cuando hay algo importante en juego.</textarea></label>
+              <label>Género<select id="idea-genre"><option value="balanced">Aventura, comedia y drama</option><option value="comedy">Comedia absurda</option><option value="drama">Drama con humor</option></select></label>
+              <label>Equilibrio tonal<select id="idea-tone"><option value="balanced">Tontos y serios a la vez</option><option value="comedy">Predomina la comedia</option><option value="serious">Consecuencias serias</option></select></label>
+              <div class="idea-form-actions"><button class="primary-button" type="submit">Generar otra propuesta ↗</button><button class="outline-button" id="idea-regenerate" type="button">Variar combinación</button></div>
+            </form>
+            <p class="idea-note">Para fanfics: usá una continuidad y una premisa concreta. Para historias originales: definí el mundo y el problema. Los datos de canon se consultan en la enciclopedia; este motor no inventa fuentes.</p>
+          </section>
+          <section class="idea-results-column">
+            <div id="idea-output" class="idea-output" aria-live="polite"></div>
+          </section>
+        </div>
+      </section>
       <section id="command-view" class="command-view hidden">
         <div class="command-intro"><span class="command-orb">⌘</span><h2>Asistente local</h2><p>Consultá y organizá tu universo con comandos conocidos. No utiliza IA ni envía datos a Internet.</p></div>
         <div id="command-log" class="command-log"><div class="system-message">Probá: «buscar personaje», «listar lugares», «validar continuidad» o «ayuda».</div></div>
@@ -302,6 +323,7 @@
   <script src="./src/art-studio.js" defer></script>
   <script src="./src/lore-corpus.js" defer></script>
   <script src="./src/character-archive.js" defer></script>
+  <script src="./src/idea-engine.js" defer></script>
   <script src="./src/app.js" defer></script>
 </body>
 </html>
