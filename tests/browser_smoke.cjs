@@ -170,6 +170,12 @@ async function run() {
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Sin información suficiente"));
     await page.locator("#archive-tab-moments").click();
     assert.ok(await page.locator("#archive-profile-panel [data-moment-id]").count() >= 3);
+    assert.equal(await page.locator("#archive-profile-panel .archive-moment-art").count(), 3,
+      "Ryu's three curated historical moments should display original conceptual scene art.");
+    await page.waitForFunction(() => {
+      const images = Array.from(document.querySelectorAll("#archive-profile-panel .archive-moment-art"));
+      return images.length === 3 && images.every(img => img.complete && img.naturalWidth > 0);
+    }, null, { timeout: 5000 });
     await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] > summary').click();
     assert.ok(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] .archive-evidence').count() >= 1);
     await page.locator("#archive-tab-relationships").click();
@@ -204,8 +210,14 @@ async function run() {
     assert.equal(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"]').count(), 0);
     await page.locator("#archive-profile-spoiler").selectOption("all");
     await page.locator("#archive-tab-sources").click();
-    await page.locator('#archive-profile-panel details.archive-evidence').first().locator("summary").click();
-    assert.ok(await page.locator("#archive-profile-panel .archive-source-links a").count() > 0);
+    const firstSourceEvidence = page.locator('#archive-profile-panel details.archive-evidence').first();
+    await firstSourceEvidence.locator("summary").click();
+    assert.ok(await firstSourceEvidence.locator(".archive-source-links a").count() > 0);
+    const sourceGroupLabels = await firstSourceEvidence.locator(".archive-source-group-label").allTextContents();
+    assert.ok(sourceGroupLabels[0]?.includes("Lectura en español"),
+      "Spanish-language community reading should appear before primary-language sources.");
+    assert.ok(sourceGroupLabels.some(label => label.includes("Fuentes originales y oficiales")),
+      "Primary and official sources should be identified separately, including Japanese pages.");
     await page.locator("#archive-tab-moments").click();
     const screenshotDirectory = path.join(root, "artifacts");
     fs.mkdirSync(screenshotDirectory, { recursive: true });
@@ -216,10 +228,12 @@ async function run() {
     // Newly curated profiles have local original SVG portraits rather than broken or empty remote images.
     await page.locator("#character-archive-query").fill("Bell Cranel");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
-    const bellPortrait = page.locator("#character-archive-results [data-archive-open='DM-CHAR-BELL'] .archive-portrait-art");
+    const bellCardSelector = "#character-archive-results .archive-character-card:has([data-archive-open='DM-CHAR-BELL'])";
+    const bellPortrait = page.locator(bellCardSelector + " .archive-portrait-art");
     assert.equal(await bellPortrait.count(), 1);
     await page.waitForFunction(() => {
-      const img = document.querySelector("#character-archive-results [data-archive-open='DM-CHAR-BELL'] .archive-portrait-art");
+      const button = document.querySelector("#character-archive-results [data-archive-open='DM-CHAR-BELL']");
+      const img = button?.closest(".archive-character-card")?.querySelector(".archive-portrait-art");
       return !!img && img.complete && img.naturalWidth > 0;
     }, null, { timeout: 5000 });
     process.stdout.write("PASS character archive: compact search, tabs, links, continuity separation, spoiler filtering, evidence and screenshot.\\n");
