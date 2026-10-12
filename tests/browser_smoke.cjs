@@ -1660,7 +1660,7 @@ async function run() {
     const referenceFixture = JSON.parse(JSON.stringify(exportedProject));
     referenceFixture.locations.push({ id:"wf-test-child-location",name:"Distrito de Prueba",type:"Distrito",parentId:targetLocationId,
       description:"Ubicación hija creada para probar la limpieza de referencias.",tags:[],population:"Sin datos",government:"Sin datos",climate:"Sin datos",
-      marker:[430,390],characters:["wf-test-resident","wf-test-witness"],events:["wf-test-event"] });
+      marker:[235,255],characters:["wf-test-resident","wf-test-witness"],events:["wf-test-event"] });
     referenceFixture.locations.push({ id:"wf-test-other-location",name:"Archivo de Prueba",type:"Archivo",parentId:null,
       description:"Ubicación adicional para verificar que editar un acontecimiento cambia sus referencias sin borrar otros lugares.",tags:[],population:"Sin datos",
       government:"Sin datos",climate:"Sin datos",marker:[820,500],characters:[],events:[] });
