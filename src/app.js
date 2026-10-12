@@ -2062,7 +2062,9 @@
     const actions=archiveElement("div","archive-card-actions");
     if(rel.available){const link=archiveElement("button","archive-related-link",rel.label+" · Abrir ficha ↗");link.type="button";link.dataset.characterLink=rel.targetId;link.dataset.linkContinuity=rel.continuity;actions.appendChild(link);}
     else actions.appendChild(archiveElement("span","archive-unavailable","Ficha pendiente; no se creó un enlace roto."));
-    copy.appendChild(actions);rel.claims.forEach(c=>copy.appendChild(archiveEvidence(c)));card.appendChild(copy);return card;
+    copy.appendChild(actions);rel.claims.forEach(c=>copy.appendChild(archiveEvidence(c)));
+    if((rel.sourceLinks||[]).length){const sourceLinks=archiveElement("div","archive-source-links");rel.sourceLinks.forEach(source=>appendLoreLink(sourceLinks,source.label,source.url,true));copy.appendChild(sourceLinks);}
+    card.appendChild(copy);return card;
   }
   function renderArchiveMoment(moment){
     const d=archiveElement("details","archive-moment-card");d.dataset.momentId=moment.id;
