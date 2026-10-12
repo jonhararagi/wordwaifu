@@ -4,7 +4,7 @@ on:
     branches: [feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10]
     paths: [".devcontainer/**","docs/WEB_PREVIEW.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   pull_request:
-    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   workflow_dispatch:
 permissions:
   contents: read
