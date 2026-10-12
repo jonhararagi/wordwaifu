@@ -22,7 +22,7 @@ Estas pistas justifican enlaces de **afiliación compartida**, pero no demuestra
 - `character_id`: CHAR-KAGUYA
 - `aspect`: afiliación y liderazgo
 - `claim`: Una wiki comunitaria en español identifica a Gojouno Kaguya como aventurera y vicecapitana de la Familia Astrea, y la incluye entre sus antiguas integrantes.
-- `era_or_interval`: Periodo histórico de Astrea Familia · fecha interna exacta no fijada en esta entrada.
+- `era_or_interval`: Astrea Record / Era Oscura de Orario · periodo histórico de Astrea Familia; fecha interna exacta pendiente.
 - `continuity_scope`: CONT-AR
 - `source_id`: DMR-003-SRC-001
 - `source_title`: Gojouno Kaguya · DanMachi Wiki en español
