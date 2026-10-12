@@ -181,7 +181,7 @@ function record(index,id){return (index.characters||[]).find(x=>x.id===id)||null
 function claimsFor(index,id){return (index.claims||[]).filter(c=>(c.characterIds||[]).includes(id));}
 function visible(level,filter){const v=String(level||"unknown").toLowerCase();if(filter==="hide-major")return v!=="major"&&v!=="endgame";if(filter==="safe-only")return v==="none"||v==="mild";return true;}
 function ordered(a){return unique(a).sort((x,y)=>{const i=ORDER.indexOf(x),j=ORDER.indexOf(y);return(i<0?99:i)-(j<0?99:j)||x.localeCompare(y);});}
-function defaultState(a){const s=ordered(a);return ["CONT-AR","CONT-MAIN-LN","CROSS-CONTINUITY","CONT-ANIME","CONT-AU"].find(x=>s.includes(x))||s[0]||"";}
+function defaultState(a){const s=ordered(a);return ["CONT-AR","CONT-ANIME","CROSS-CONTINUITY","CONT-MAIN-LN","CONT-AU"].find(x=>s.includes(x))||s[0]||"";}
 function state(id,c){
 const p=META[id];
 if(p&&p.states&&p.states[c])return p.states[c];
