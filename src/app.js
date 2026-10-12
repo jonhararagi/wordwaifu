@@ -1872,7 +1872,7 @@
     body.appendChild(archiveElement("p","","Tipo de evidencia: "+(claim.evidenceType||"no especificado")+" · Verificación: "+(claim.verificationStatus||"unverified")+" · Spoiler: "+(claim.spoilerLevel||"unknown")));
     if(claim.confidenceNote)body.appendChild(archiveElement("p","","Límites: "+claim.confidenceNote));
     const links=archiveElement("div","archive-source-links");
-    (claim.sourceUrls||[]).forEach((url,i)=>appendLoreLink(links,(claim.sourceUrls.length>1?"Abrir fuente "+(i+1):"Abrir fuente original"),url,true));
+    (claim.sourceUrls||[]).forEach((url,i)=>{const label=/ga\\.sbcr\\.jp/i.test(url)?"Fuente editorial original (japonés)":/danmachi\\.com/i.test(url)?"Fuente oficial (japonés)":/fandom\\.com/i.test(url)?"Wiki comunitaria (no oficial)":(claim.sourceUrls.length>1?"Abrir fuente "+(i+1):"Abrir fuente");appendLoreLink(links,label,url,true);});
     if(links.childNodes.length)body.appendChild(links);
     details.appendChild(body);return details;
   }
@@ -1953,7 +1953,7 @@
     const momentSection=archiveElement("section","archive-section"),mh=archiveElement("div","archive-section-heading");mh.append(archiveElement("h3","","Momentos importantes"),archiveGoTab("moments","Ver momentos y contexto"));momentSection.appendChild(mh);
     const moments=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.slice(0,3).forEach(mo=>moments.appendChild(renderArchiveMoment(mo)));else moments.appendChild(archiveEmpty("No hay suficientes acontecimientos curados para esta continuidad."));momentSection.appendChild(moments);root.appendChild(momentSection);
     const more=archiveElement("section","archive-more-info-cta");more.append(archiveElement("h3","","¿Querés conocer mejor a "+profile.name+"?"),archiveElement("p","","Abrí un resumen ampliado con contexto, evolución, límites de la evidencia y referencias en español cuando están disponibles."));
-    const moreButton=archiveElement("button","primary-button","Más info · resumen ampliado ↗");moreButton.type="button";moreButton.dataset.archiveMoreInfo="true";more.appendChild(moreButton);root.appendChild(more);return root;
+    const moreButton=archiveElement("button","primary-button","Más info · resumen ampliado ↗");moreButton.type="button";moreButton.dataset.archiveMoreInfo="true";more.appendChild(moreButton);root.prepend(more);return root;
   }
   function renderArchivePersonality(profile){
     const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Personalidad y psicología"),archiveElement("p","","Cada categoría se completa solo con afirmaciones del estado seleccionado."));root.appendChild(h);
