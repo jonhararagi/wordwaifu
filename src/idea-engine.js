@@ -95,6 +95,24 @@
           id: "char-gen-protagonist-" + seed
         }
       : { ...pick(protagonistBank, seed), id: "char-gen-protagonist-" + seed };
+    const fusionPremise = /(otaku|anime|manga)/i.test(prompt) && /(gatita|gata|gato|pescado)/i.test(prompt) && /(fusion|fusionen|fusionarse|fusionan|fusiona)/i.test(prompt);
+    if (fusionPremise) {
+      protagonist.name = "Neko";
+      protagonist.role = "chica gato nacida de la fusión entre un otaku desconfiado y una gatita que vive por el pescado";
+      protagonist.personality = "reservada y casera; disfruta del anime y los libros de cuentos, desconfía de la gente y concede afecto a quienes demuestran constancia cuidándola, especialmente si comparten pescado";
+      protagonist.flaw = "interpreta la amabilidad como una transacción y se aleja antes de descubrir si alguien podría quererla sin esperar nada a cambio";
+      protagonist.motivation = "encontrar un hogar seguro donde pueda leer, mirar anime y compartir pescado con alguien en quien llegue a confiar";
+      protagonist.fusion = {
+        sourceA: "Un otaku cerrado que desconfía de las personas y encuentra refugio emocional en el anime",
+        sourceB: "Una gatita independiente que disfruta del pescado y solo presta atención a quienes la alimentan",
+        inheritedFromA: ["desconfianza social", "amor por el anime", "necesidad de refugiarse en casa"],
+        inheritedFromB: ["preferencia por el pescado", "afecto selectivo hacia quien la cuida", "curiosidad e independencia felinas"],
+        emergentTraits: ["lee cuentos como forma de sentirse segura", "demuestra cariño quedándose cerca en silencio", "asocia compartir pescado con confianza, no con obediencia"],
+        evolution: "Al principio trata los vínculos como intercambios: comida por compañía. Con experiencias repetidas aprende a distinguir cuidado genuino de interés, sin perder su carácter hogareño ni su preferencia por pocas personas.",
+        conflict: "Quiere que alguien permanezca a su lado, pero sospecha de cualquiera que se acerque sin una razón práctica.",
+        test: "Cuando una persona querida no puede traerle pescado ni ofrecerle nada, debe decidir si quedarse a su lado por voluntad propia."
+      };
+    }
     const traitProfile = traits.courage <= 30 && traits.fear >= 60 && traits.intelligence >= 70 && traits.attitude <= 30
       ? "Miedoso y apático, pero con una inteligencia capaz de idear soluciones inesperadas; suele encontrar la salida brillante y luego intenta evitar ser quien la ejecute."
       : "Valentía " + traits.courage + "/100, miedo " + traits.fear + "/100, inteligencia " + traits.intelligence + "/100, ganas de actuar " + traits.attitude + "/100 y empatía " + traits.empathy + "/100.";
@@ -158,7 +176,9 @@
     const hook = divinePremise
       ? protagonist.name + ", " + protagonist.role + ", recibe una misión de " + groupNames + ". Las tres aceptan ayudar, pero ninguna coincide en qué significa salvar el mundo."
       : protagonist.name + ", " + protagonist.role + ", reúne a " + groupNames + " para resolver una crisis que parece sencilla hasta que cada integrante aplica su propia idea de lo correcto.";
-    const specializedHook = femaleMalfoy
+    const specializedHook = fusionPremise
+      ? "Dos seres que solo confiaban en sus refugios —un otaku que se escondía en el anime y una gatita que se acercaba por pescado— se fusionan en una chica gato. Conserva el gusto por el hogar, los cuentos y el pescado, pero su conflicto central es descubrir si puede elegir a alguien por cariño y no solo por seguridad o alimento."
+      : femaleMalfoy
       ? "La protagonista renace como una versión femenina de Draco Malfoy e intenta llevarse bien con Harry para escapar de las viejas rivalidades familiares. Harry empieza a enamorarse de ella, pero Draco interpreta sus silencios, ayudas y nerviosismo como sospecha o estrategia. La tensión nace de la ironía dramática, la historia compartida y el miedo de ambos a mostrarse vulnerables."
       : novelistPremise
       ? "En su vida anterior, " + protagonist.name + " era novelista y jugador obsesionado con arquetipos románticos de mujeres adultas maduras. Reencarnado en otro mundo, adopta el papel de NPC de una universidad y ensaya una estrategia desconcertante: llamar la atención de las heroínas mediante una actitud protectora, casi maternal. Cree que está interpretando un papel perfecto; ellas empiezan a detectar las grietas entre su fachada y su verdadera personalidad."
@@ -179,6 +199,7 @@
         "PREMISA DEL AUTOR: " + premiseText,
         "GANCHO: " + (specializedHook || hook),
         "REPARTO Y TENSIONES: " + groupDynamic,
+        "EVOLUCIÓN DE FUSIÓN: " + (protagonist.fusion ? protagonist.fusion.sourceA + ". " + protagonist.fusion.sourceB + ". Rasgos heredados: " + protagonist.fusion.inheritedFromA.concat(protagonist.fusion.inheritedFromB).join(", ") + ". Rasgos emergentes: " + protagonist.fusion.emergentTraits.join(", ") + ". Evolución: " + protagonist.fusion.evolution + ". Conflicto: " + protagonist.fusion.conflict + ". Prueba de carácter: " + protagonist.fusion.test + "." : "No aplica: el protagonista no nace de una fusión."),
         "CONTRADICCIÓN DEL PROTAGONISTA: " + (novelistPremise ? "Quiere pasar inadvertido como NPC, pero su instinto de novelista lo lleva a preparar encuentros, diálogos y rescates demasiado convenientes. Su gusto por las mujeres adultas maduras influye en sus expectativas románticas, no le da derecho a manipular los sentimientos de nadie." : "El protagonista debe confrontar la diferencia entre su imagen pública y sus necesidades reales."),
         "ESTRATEGIA SOCIAL: " + (motherlyPremise ? "Ofrece apoyo práctico, recuerda pequeños detalles y actúa como figura protectora; cuando intenta controlar cada resultado, las heroínas le ponen límites y debe aprender a ayudar sin decidir por ellas." : "Los vínculos se desarrollan mediante decisiones, confianza, límites y consecuencias, no por atracción automática."),
         "COMEDIA DE PERSONAJE: " + (npcPremise ? "Cada vez que intenta actuar como un NPC de fondo, su exceso de preparación convierte una interacción corriente en una escena sospechosamente importante." : traits.intelligence >= 70 && traits.attitude <= 30 ? "El protagonista diseña planes brillantes y luego intenta convencer al grupo de que ejecutarlos es trabajo de otra persona." : "El humor nace de la distancia entre lo que el protagonista planea y lo que realmente ocurre."),
