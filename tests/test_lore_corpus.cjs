@@ -11,7 +11,7 @@ const documentPaths = [
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
 assert.equal(index.sourceClaimCount, 30);
-assert.equal(index.entryCount, 32);
+assert.equal(index.entryCount, 33);
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
@@ -28,4 +28,11 @@ assert.equal(aisLikes.totalMatches, 0);
 assert.equal(aisLikes.abstain, true);
 const unsupportedNovel = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.equal(unsupportedNovel.totalMatches, 0);
+
+const aliseHistorical = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(aliseHistorical.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-AR"));
+assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y de ánimo luminoso")));
+const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
+
 process.stdout.write("PASS lore search: 30 source claims, 32 entries, continuity split and abstention verified.\n");

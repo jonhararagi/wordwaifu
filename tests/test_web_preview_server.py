@@ -30,6 +30,7 @@ try:
     assert b"WordWaifu" in shell
     for route, marker in (
         ("/src/lore-corpus.js", b"WordWaifu DanMachi Lore Search"),
+        ("/src/character-archive.js", b"WordWaifuCharacterArchive"),
         ("/src/app.js", b"WordWaifuLoreCorpus"),
         ("/src/styles.css", b".lore-"),
         ("/lore/danmachi/catalog.json", b'"records"'),

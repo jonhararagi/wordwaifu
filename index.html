@@ -29,7 +29,7 @@
         <button class="nav-item" data-view="organizations"><span>⚑</span> Organizaciones</button>
         <button class="nav-item" data-view="stories"><span>▤</span> Historias y novelas</button>
         <button class="nav-item" data-view="commands"><span>⌘</span> Asistente local</button>
-        <button class="nav-item" data-view="lore"><span>⌕</span> Consulta de lore</button>
+        <button class="nav-item" data-view="lore"><span>⌕</span> Enciclopedia de personajes</button>
       </nav>
       <div class="sidebar-bottom">
         <div class="offline-card"><span class="offline-icon">◉</span><div><strong>Modo sin IA</strong><small>Sin API ni conexión requerida</small></div><span class="status-dot"></span></div>
@@ -106,20 +106,56 @@
         <div class="command-chips"><button data-command="ayuda">Ayuda</button><button data-command="listar personajes">Listar personajes</button><button data-command="listar lugares">Listar lugares</button><button data-command="validar continuidad">Validar continuidad</button></div>
       </section>
       <section id="lore-view" class="lore-view hidden">
-        <div class="lore-panel-heading"><div><p class="eyebrow">CORPUS DANMACHI · BÚSQUEDA LOCAL</p><h2>Consulta de lore con fuentes</h2><p>Busca afirmaciones del índice curado. No usa IA, no inventa gustos y distingue continuidad, época y evidencia.</p></div><span class="lore-mode-pill">Sin generación automática</span></div>
-        <form id="lore-search-form" class="lore-search-form">
-          <label class="lore-query-field">Texto de búsqueda<input id="lore-query" type="search" maxlength="180" autocomplete="off" placeholder="Ej.: justicia de Ryu, relación de Bell con Ais"></label>
-          <div class="lore-filter-grid">
-            <label>Personaje<select id="lore-character"><option value="">Cualquier personaje</option></select></label>
-            <label>Continuidad<select id="lore-continuity"><option value="ALL">Todas</option><option value="CONT-AR">Astrea Record (CONT-AR)</option><option value="CONT-ANIME">Adaptación anime</option><option value="CONT-MAIN-LN">Novela principal</option><option value="CONT-GAME">Juego / DanMemo</option><option value="CONT-AU">Historia alternativa (AU)</option><option value="CROSS-CONTINUITY">Comparación entre continuidades</option></select></label>
-            <label>Época o periodo<select id="lore-period"><option value="ALL">Todos los periodos</option><option value="ASTREA_RECORD">Era Oscura / Astrea Record</option><option value="MAIN_STORY">Historia principal / Bell</option><option value="AU">AU del OC</option><option value="OTHER">Otros / editoriales</option></select></label>
-            <label>Aspecto<select id="lore-aspect"><option value="all">Cualquier aspecto</option><option value="personality">Personalidad y temperamento</option><option value="motivation">Motivación y valores</option><option value="likes">Gustos y preferencias</option><option value="fears">Miedos y vulnerabilidades</option><option value="behavior">Conducta y hábitos</option><option value="relationships">Relaciones</option><option value="evolution">Evolución psicológica</option><option value="voice">Voz y forma de hablar</option><option value="general">General / otro</option></select></label>
-            <label>Spoilers<select id="lore-spoiler"><option value="all">Mostrar todos (etiquetados)</option><option value="hide-major">Ocultar major / endgame</option><option value="safe-only">Solo sin spoilers o leves</option></select></label>
+        <header class="lore-panel-heading archive-heading">
+          <div><p class="eyebrow">DANMACHI · ARCHIVO DE PERSONAJES</p><h2>Enciclopedia visual de personajes</h2><p>Explorá identidades, etapas de vida, vínculos y evidencia. Los estados temporales se mantienen separados y los vacíos documentales no se rellenan con suposiciones.</p></div>
+          <span class="lore-mode-pill">Local · sin IA</span>
+        </header>
+        <section id="character-archive-directory" class="character-archive-directory" aria-labelledby="character-archive-title">
+          <div class="archive-directory-heading"><div><p class="eyebrow">ÍNDICE DE PERSONAJES</p><h3 id="character-archive-title">Encontrá una persona</h3><p>Las tarjetas resumen la información disponible. Abrí una ficha para explorar sus estados y fuentes.</p></div>
+            <label class="archive-query-field" for="character-archive-query">Buscar por nombre<input id="character-archive-query" type="search" maxlength="120" autocomplete="off" placeholder="Ryu, Ryuu Lion, Alise Lovelace…"></label>
           </div>
-          <div class="lore-search-actions"><button class="primary-button" type="submit">Buscar en el lore ↗</button><button class="outline-button" id="lore-clear-button" type="button">Limpiar filtros</button></div>
-        </form>
-        <p id="lore-search-status" class="lore-search-status" role="status" aria-live="polite">El índice se carga al abrir esta sección. La consulta es textual y no afirma que el corpus esté completo.</p>
-        <div id="lore-results" class="lore-results"></div>
+          <div class="archive-directory-filters">
+            <label for="archive-continuity">Continuidad<select id="archive-continuity"><option value="ALL">Todas las continuidades disponibles</option><option value="CONT-AR">Astrea Record · CONT-AR</option><option value="CONT-ANIME">Adaptación anime · CONT-ANIME</option><option value="CONT-MAIN-LN">Novela principal · CONT-MAIN-LN</option><option value="CONT-AU">Historia alternativa · CONT-AU</option><option value="CROSS-CONTINUITY">Comparación entre continuidades</option></select></label>
+            <label for="archive-spoiler">Spoilers<select id="archive-spoiler"><option value="all">Mostrar todos, etiquetados</option><option value="hide-major">Ocultar major / endgame</option><option value="safe-only">Solo sin spoilers o leves</option></select></label>
+          </div>
+          <p id="archive-directory-status" class="lore-search-status" role="status" aria-live="polite">Cargando el índice documental…</p>
+          <div id="character-archive-results" class="character-archive-results" role="list" aria-label="Resultados de personajes"></div>
+        </section>
+        <section id="character-archive-profile" class="character-archive-profile hidden" aria-labelledby="archive-profile-name">
+          <div class="archive-profile-actions"><button id="archive-profile-back" type="button" class="outline-button">← Volver</button><button id="archive-return-search" type="button" class="quiet-button">Volver a resultados</button></div>
+          <header class="archive-profile-header">
+            <div id="archive-profile-portrait" class="archive-portrait archive-portrait--large" role="img" aria-label="Marcador visual decorativo; no es retrato oficial"><span id="archive-profile-monogram" aria-hidden="true">R</span><span class="archive-portrait-caption">RETRATO PENDIENTE</span></div>
+            <div class="archive-profile-identity"><p id="archive-profile-eyebrow" class="eyebrow">FICHA DE PERSONAJE · DANMACHI</p><h2 id="archive-profile-name">Ryu Lion</h2><p id="archive-profile-summary" class="archive-profile-summary"></p><div id="archive-profile-badges" class="archive-badge-row"></div>
+              <label class="archive-state-select" for="archive-profile-continuity">Estado temporal y continuidad<select id="archive-profile-continuity"></select></label>
+            </div>
+          </header>
+          <p id="archive-profile-state-note" class="archive-state-note" role="status"></p>
+          <nav id="archive-profile-tabs" class="archive-profile-tabs" role="tablist" aria-label="Secciones de la ficha">
+            <button id="archive-tab-summary" type="button" role="tab" aria-controls="archive-profile-panel" aria-selected="true" tabindex="0" data-profile-tab="summary">Resumen</button>
+            <button id="archive-tab-personality" type="button" role="tab" aria-controls="archive-profile-panel" aria-selected="false" tabindex="-1" data-profile-tab="personality">Personalidad</button>
+            <button id="archive-tab-relationships" type="button" role="tab" aria-controls="archive-profile-panel" aria-selected="false" tabindex="-1" data-profile-tab="relationships">Personas relacionadas</button>
+            <button id="archive-tab-moments" type="button" role="tab" aria-controls="archive-profile-panel" aria-selected="false" tabindex="-1" data-profile-tab="moments">Momentos importantes</button>
+            <button id="archive-tab-timeline" type="button" role="tab" aria-controls="archive-profile-panel" aria-selected="false" tabindex="-1" data-profile-tab="timeline">Cronología</button>
+            <button id="archive-tab-sources" type="button" role="tab" aria-controls="archive-profile-panel" aria-selected="false" tabindex="-1" data-profile-tab="sources">Fuentes y evidencias</button>
+          </nav>
+          <section id="archive-profile-panel" class="archive-profile-panel" role="tabpanel" tabindex="0" aria-labelledby="archive-tab-summary"></section>
+        </section>
+        <details id="lore-research-panel" class="lore-research-panel">
+          <summary>Investigación documental avanzada · consulta de afirmaciones</summary>
+          <p class="archive-research-note">La búsqueda original sigue disponible para filtrar por personaje, continuidad, época, aspecto psicológico y spoilers. Cada resultado conserva su fuente y sus límites.</p>
+          <form id="lore-search-form" class="lore-search-form">
+            <label class="lore-query-field">Texto de búsqueda<input id="lore-query" type="search" maxlength="180" autocomplete="off" placeholder="Ej.: justicia de Ryu, relación de Bell con Ais"></label>
+            <div class="lore-filter-grid">
+              <label>Personaje<select id="lore-character"><option value="">Cualquier personaje</option></select></label>
+              <label>Continuidad<select id="lore-continuity"><option value="ALL">Todas</option><option value="CONT-AR">Astrea Record (CONT-AR)</option><option value="CONT-ANIME">Adaptación anime</option><option value="CONT-MAIN-LN">Novela principal</option><option value="CONT-GAME">Juego / DanMemo</option><option value="CONT-AU">Historia alternativa (AU)</option><option value="CROSS-CONTINUITY">Comparación entre continuidades</option></select></label>
+              <label>Época o periodo<select id="lore-period"><option value="ALL">Todos los periodos</option><option value="ASTREA_RECORD">Era Oscura / Astrea Record</option><option value="MAIN_STORY">Historia principal / Bell</option><option value="AU">AU del OC</option><option value="OTHER">Otros / editoriales</option></select></label>
+              <label>Aspecto<select id="lore-aspect"><option value="all">Cualquier aspecto</option><option value="personality">Personalidad y temperamento</option><option value="motivation">Motivación y valores</option><option value="likes">Gustos y preferencias</option><option value="fears">Miedos y vulnerabilidades</option><option value="behavior">Conducta y hábitos</option><option value="relationships">Relaciones</option><option value="evolution">Evolución psicológica</option><option value="voice">Voz y forma de hablar</option><option value="general">General / otro</option></select></label>
+              <label>Spoilers<select id="lore-spoiler"><option value="all">Mostrar todos (etiquetados)</option><option value="hide-major">Ocultar major / endgame</option><option value="safe-only">Solo sin spoilers o leves</option></select></label>
+            </div>
+            <div class="lore-search-actions"><button class="primary-button" type="submit">Buscar en el lore ↗</button><button class="outline-button" id="lore-clear-button" type="button">Limpiar filtros</button></div>
+          </form>
+          <p id="lore-search-status" class="lore-search-status" role="status" aria-live="polite">El índice se carga al abrir esta sección. La consulta es textual y no afirma que el corpus esté completo.</p><div id="lore-results" class="lore-results"></div>
+        </details>
       </section>
       <footer class="app-footer"><span>WORDWAIFU · TU UNIVERSO, TUS REGLAS</span><span id="save-status">Cambios guardados en este navegador</span></footer>
     </main>
@@ -181,6 +217,7 @@
   <script src="./src/project-schema.js" defer></script>
   <script src="./src/project-repository.js" defer></script>
   <script src="./src/lore-corpus.js" defer></script>
-<script src="./src/app.js" defer></script>
+  <script src="./src/character-archive.js" defer></script>
+  <script src="./src/app.js" defer></script>
 </body>
 </html>

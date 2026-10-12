@@ -117,15 +117,27 @@
       evidenceType: "explicit_character_profile", verificationStatus: "source_checked",
       confidenceNote: "Esta afirmación procede de la adaptación."
     }];
-    if (claim.claimId === "DMR-002-CLM-019") return [{
-      ...claim, entryId: claim.claimId + "--CONT-ANIME", heading: "Alise Lovelace · perfil de adaptación",
-      claim: "El perfil oficial del anime describe a Alise como directa y de ánimo luminoso.",
-      aspect: "personalidad y temperamento", continuityScopes: ["CONT-ANIME"], sourceIds: ["DMR-002-SRC-002"],
-      sourceTitle: "Perfil oficial de personajes de DanMachi IV", sourceType: "ADAPTATION",
-      sourceLocator: "Entrada アリーゼ・ローヴェル.", sourceUrls: ["https://danmachi.com/danmachi4/character"],
-      evidenceType: "explicit_character_profile", verificationStatus: "source_checked",
-      confidenceNote: "Dato de adaptación; el papel histórico está documentado por separado."
-    }];
+    if (claim.claimId === "DMR-002-CLM-019") {
+      const base = { ...claim, characterIds: ["CHAR-ALISE-LOVELACE"] };
+      return [
+        { ...base, entryId: claim.claimId + "--CONT-AR", heading: "Alise Lovelace · capitanía y guía histórica",
+          claim: "La sinopsis editorial identifica a Alise Lovelace como capitana de Astrea Familia y la presenta como guía de Ryu durante su búsqueda de justicia.",
+          aspect: "liderazgo y relación documentada", eraOrInterval: "Periodo histórico de Astrea Record, aproximadamente siete años antes de la llegada de Bell.",
+          continuityScopes: ["CONT-AR"], sourceIds: ["DMR-001-SRC-003"], sourceTitle: "GA Bunko · Astrea Record, volumen 1",
+          sourceType: "official_reference", sourceLocator: "Sinopsis editorial con 団長アリーゼ; Alise como capitana y guía de Ryu.",
+          sourceUrls: ["https://ga.sbcr.jp/product/9784815610173"], evidenceType: "explicit_publisher_synopsis",
+          verificationStatus: "source_checked", spoilerLevel: "mild",
+          confidenceNote: "Sinopsis editorial; no establece toda la historia privada del vínculo ni localizadores internos del volumen." },
+        { ...base, entryId: claim.claimId + "--CONT-ANIME", heading: "Alise Lovelace · temperamento en la adaptación",
+          claim: "El perfil oficial de la adaptación describe a Alise como directa y de ánimo luminoso.",
+          aspect: "personalidad y temperamento", eraOrInterval: "Estado descrito por el perfil oficial de DanMachi IV; fecha interna no establecida.",
+          continuityScopes: ["CONT-ANIME"], sourceIds: ["DMR-002-SRC-002"], sourceTitle: "Perfil oficial de personajes de DanMachi IV",
+          sourceType: "ADAPTATION", sourceLocator: "Entrada アリーゼ・ローヴェル, descripción de temperamento.",
+          sourceUrls: ["https://danmachi.com/danmachi4/character"], evidenceType: "explicit_character_profile",
+          verificationStatus: "source_checked", spoilerLevel: "none",
+          confidenceNote: "Dato de adaptación; no es evidencia de su estado en la novela principal." }
+      ];
+    }
     return [claim];
   }
   function buildIndex(catalog, documents) {

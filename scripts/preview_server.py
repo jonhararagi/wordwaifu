@@ -17,6 +17,7 @@ ALLOWED_FILES = {
     "/src/project-schema.js": "src/project-schema.js",
     "/src/project-repository.js": "src/project-repository.js",
     "/src/lore-corpus.js": "src/lore-corpus.js",
+    "/src/character-archive.js": "src/character-archive.js",
     "/lore/danmachi/catalog.json": "lore/danmachi/catalog.json",
     "/lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md":
         "lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",

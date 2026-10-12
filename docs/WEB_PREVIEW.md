@@ -30,3 +30,5 @@ El servidor tiene una lista permitida de rutas. Publica únicamente **index.html
 ## Comprobaciones
 
 El workflow **DanMachi Lore and Retrieval Integrity** valida la búsqueda local y el navegador Chromium. Entre sus pruebas existentes confirma que Ryu se recupera separada en **CONT-AR** y **CONT-ANIME**, y que una consulta sobre gustos de Ais sin evidencia produce una abstención explícita. El nuevo test del servidor comprueba que las rutas requeridas responden y que archivos fuera de la lista permitida no se exponen.
+
+La enciclopedia de personajes carga además **src/character-archive.js**. Sus retratos son marcadores CSS decorativos, no imágenes oficiales.

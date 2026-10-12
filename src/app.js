@@ -17,7 +17,7 @@
     organizations: ["Organizaciones", "Facciones, gremios y grupos que mueven tu universo."],
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
-    lore: ["Consulta de lore", "Busca afirmaciones de DanMachi con filtros por personaje, época y continuidad."]
+    lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."]
   };
   const demo = {
     schemaVersion: 1,
@@ -1809,6 +1809,187 @@
 
   let loreIndexPromise = null;
   let lorePanelPrepared = false;
+  let loreArchiveIndex = null;
+  let archiveUiPrepared = false;
+  let activeArchiveCharacterId = null;
+  let activeArchiveContinuity = null;
+  let activeArchiveTab = "summary";
+  let activeArchiveProfile = null;
+  const archiveNavigationStack = [];
+
+  function archiveElement(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined && text !== null) node.textContent = text;
+    return node;
+  }
+  function archiveBadge(text, kind) { return archiveElement("span", "archive-badge" + (kind ? " archive-badge--" + kind : ""), text); }
+  function archivePortrait(id, name, large) {
+    const node = archiveElement("div", "archive-portrait" + (large ? " archive-portrait--large" : "") + " archive-portrait--" + String(id||"").toLowerCase().replace(/[^a-z0-9-]/g,""));
+    node.setAttribute("role","img");
+    node.setAttribute("aria-label","Marcador visual decorativo de " + name + "; no es retrato ni ilustración oficial.");
+    node.appendChild(archiveElement("span","",id==="CHAR-ASTREA"?"✧":(String(name||"?").trim().charAt(0).toUpperCase()||"?")));
+    if(large)node.appendChild(archiveElement("span","archive-portrait-caption","RETRATO PENDIENTE"));
+    return node;
+  }
+  function archiveEvidence(claim) {
+    const details=archiveElement("details","archive-evidence"),summary=archiveElement("summary","","Ver evidencia · "+(claim.claimId||claim.entryId||"afirmación")),body=archiveElement("div","archive-evidence-body");
+    details.appendChild(summary);
+    if(claim.sourceTitle)body.appendChild(archiveElement("p","","Fuente: "+claim.sourceTitle));
+    if(claim.sourceIds&&claim.sourceIds.length)body.appendChild(archiveElement("p","","ID(s) de fuente: "+claim.sourceIds.join(", ")));
+    if(claim.sourceLocator)body.appendChild(archiveElement("p","","Localizador / respaldo: "+claim.sourceLocator));
+    if(claim.sourceDocument)body.appendChild(archiveElement("p","","Documento de evidencia: "+claim.sourceDocument));
+    body.appendChild(archiveElement("p","","Continuidad: "+((claim.continuityScopes||[]).join(", ")||"no especificada")));
+    if(claim.eraOrInterval)body.appendChild(archiveElement("p","","Periodo: "+claim.eraOrInterval));
+    body.appendChild(archiveElement("p","","Tipo de evidencia: "+(claim.evidenceType||"no especificado")+" · Verificación: "+(claim.verificationStatus||"unverified")+" · Spoiler: "+(claim.spoilerLevel||"unknown")));
+    if(claim.confidenceNote)body.appendChild(archiveElement("p","","Límites: "+claim.confidenceNote));
+    const links=archiveElement("div","archive-source-links");
+    (claim.sourceUrls||[]).forEach((url,i)=>appendLoreLink(links,(claim.sourceUrls.length>1?"Abrir fuente "+(i+1):"Abrir fuente original"),url,true));
+    if(links.childNodes.length)body.appendChild(links);
+    details.appendChild(body);return details;
+  }
+  function archiveClaimCard(claim) {
+    const card=archiveElement("article","archive-claim-card"),badges=archiveElement("div","archive-badge-row");
+    card.appendChild(archiveElement("h4","",claim.heading||claim.claimId||"Afirmación documentada"));
+    card.appendChild(archiveElement("p","",claim.claim));
+    (claim.continuityScopes||[]).forEach(s=>badges.appendChild(archiveBadge(s,"continuity")));
+    badges.appendChild(archiveBadge(claim.verificationStatus||"unverified","muted"));
+    if(["major","endgame"].includes(String(claim.spoilerLevel||"").toLowerCase()))badges.appendChild(archiveBadge("Spoiler "+claim.spoilerLevel,"spoiler"));
+    card.append(badges,archiveEvidence(claim));return card;
+  }
+  function archiveEmpty(text){return archiveElement("div","archive-empty",text||"Sin información suficiente en las fuentes incorporadas.");}
+  function archiveGoTab(tab,label){const b=archiveElement("button","archive-related-link",label+" →");b.type="button";b.dataset.profileTab=tab;return b;}
+  function renderCharacterDirectory(){
+    if(!loreArchiveIndex||!window.WordWaifuCharacterArchive)return;
+    const results=$("#character-archive-results"),status=$("#archive-directory-status");
+    const items=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:$("#character-archive-query").value,continuity:$("#archive-continuity").value,spoiler:$("#archive-spoiler").value});
+    results.replaceChildren();
+    status.textContent=items.length?items.length+" ficha(s) disponibles. Los retratos son marcadores CSS decorativos, no ilustraciones oficiales.":"No hay fichas que coincidan. Probá otro nombre o una continuidad más amplia.";
+    if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados."));return;}
+    items.forEach(item=>{
+      const card=archiveElement("article","archive-character-card");card.setAttribute("role","listitem");
+      card.appendChild(archivePortrait(item.id,item.name,false));
+      const copy=archiveElement("div","archive-character-copy");copy.appendChild(archiveElement("h4","",item.name));copy.appendChild(archiveElement("p","",item.summary));
+      const badges=archiveElement("div","archive-badge-row");
+      if(item.states.length)item.states.slice(0,3).forEach(st=>{badges.appendChild(archiveBadge(st.code,"continuity"));if(st.affiliation)badges.appendChild(archiveBadge(st.affiliation,"muted"));});
+      else badges.appendChild(archiveBadge("Sin evidencia visible con este filtro","muted"));
+      if(item.verifiedClaimCount)badges.appendChild(archiveBadge(item.verifiedClaimCount+" afirmaciones visibles","muted"));
+      copy.appendChild(badges);
+      const actions=archiveElement("div","archive-card-actions"),open=archiveElement("button","archive-open-button","Abrir ficha ↗");
+      open.type="button";open.dataset.archiveOpen=item.id;open.dataset.archiveContinuity=item.preferredContinuity;actions.appendChild(open);copy.appendChild(actions);card.appendChild(copy);results.appendChild(card);
+    });
+  }
+  function renderArchiveHeader(profile){
+    $("#archive-profile-name").textContent=profile.name;$("#archive-profile-eyebrow").textContent="FICHA DE PERSONAJE · "+profile.id;
+    $("#archive-profile-summary").textContent=profile.state.summary;$("#archive-profile-state-note").textContent=profile.state.period;
+    const p=$("#archive-profile-portrait"),visual=archivePortrait(profile.id,profile.name,true);p.className=visual.className;p.setAttribute("aria-label",visual.getAttribute("aria-label"));p.replaceChildren(...Array.from(visual.childNodes));
+    const badges=$("#archive-profile-badges");badges.replaceChildren();badges.append(archiveBadge(profile.continuityLabel,"continuity"),archiveBadge(profile.state.affiliation,"muted"),archiveBadge("Estado provisional","muted"));
+    if(profile.claims.some(c=>["major","endgame"].includes(String(c.spoilerLevel||"").toLowerCase())))badges.appendChild(archiveBadge("Incluye spoilers","spoiler"));
+    const select=$("#archive-profile-continuity");select.replaceChildren();
+    window.WordWaifuCharacterArchive.continuityOrder.forEach(scope=>{const opt=new Option((window.WordWaifuCharacterArchive.continuityLabels[scope]||scope)+(profile.availableContinuities.includes(scope)?"":" · sin evidencia registrada"),scope);if(!profile.availableContinuities.includes(scope))opt.disabled=true;select.appendChild(opt);});
+    select.value=profile.continuity;$("#archive-profile-back").textContent=archiveNavigationStack.length?"← Volver a ficha anterior":"← Volver a resultados";
+    $("#archive-return-search").classList.remove("hidden");
+    $("#archive-profile-tabs [role=tab]").forEach(tab=>{const yes=tab.dataset.profileTab===activeArchiveTab;tab.setAttribute("aria-selected",yes?"true":"false");tab.tabIndex=yes?0:-1;});
+    $("#archive-profile-panel").setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
+  }
+  function renderArchiveRelationship(rel){
+    const card=archiveElement("article","archive-relationship-card");card.appendChild(archivePortrait(rel.targetId,rel.targetName,false));
+    const copy=archiveElement("div","archive-relationship-copy");copy.appendChild(archiveElement("h4","",rel.targetName));copy.appendChild(archiveElement("p","archive-relationship-type",rel.type+" · "+rel.continuity));copy.appendChild(archiveElement("p","",rel.description));
+    const badges=archiveElement("div","archive-badge-row");badges.append(archiveBadge(rel.continuity,"continuity"),archiveBadge(rel.period,"muted"));copy.appendChild(badges);
+    const actions=archiveElement("div","archive-card-actions");
+    if(rel.available){const link=archiveElement("button","archive-related-link",rel.label+" · Abrir ficha ↗");link.type="button";link.dataset.characterLink=rel.targetId;link.dataset.linkContinuity=rel.continuity;actions.appendChild(link);}
+    else actions.appendChild(archiveElement("span","archive-unavailable","Ficha pendiente; no se creó un enlace roto."));
+    copy.appendChild(actions);rel.claims.forEach(c=>copy.appendChild(archiveEvidence(c)));card.appendChild(copy);return card;
+  }
+  function renderArchiveMoment(moment){
+    const d=archiveElement("details","archive-moment-card");d.dataset.momentId=moment.id;
+    const summary=archiveElement("summary"),icon=archiveElement("span","archive-moment-icon",moment.id.includes("seven")?"◷":moment.id.includes("evilus")?"⚔":"✧");icon.setAttribute("aria-hidden","true");
+    const title=archiveElement("span","archive-moment-title");title.append(archiveElement("strong","",moment.title),archiveElement("small","",moment.period));
+    summary.append(icon,title,archiveElement("span","archive-moment-excerpt",moment.summary));d.appendChild(summary);
+    const body=archiveElement("div","archive-moment-body");body.appendChild(archiveElement("p","",moment.summary));
+    const badges=archiveElement("div","archive-badge-row");if(moment.spoilerLevel!=="none")badges.appendChild(archiveBadge("Spoiler: "+moment.spoilerLevel,["major","endgame"].includes(moment.spoilerLevel)?"spoiler":"muted"));
+    moment.claims.forEach(c=>badges.appendChild(archiveBadge(c.claimId,"muted")));body.appendChild(badges);
+    if(moment.people.length){body.appendChild(archiveElement("p","","Personas con ficha mencionadas en la evidencia:"));const row=archiveElement("div","archive-character-links");moment.people.forEach(person=>{const b=archiveElement("button","archive-related-link",person.name+" ↗");b.type="button";b.dataset.characterLink=person.id;b.dataset.linkContinuity=activeArchiveContinuity;row.appendChild(b);});body.appendChild(row);}
+    else body.appendChild(archiveEmpty("No se ha identificado una lista completa de participantes."));
+    body.appendChild(archiveElement("p","","Fuentes y límites del resumen"));moment.claims.forEach(c=>body.appendChild(archiveEvidence(c)));d.appendChild(body);return d;
+  }
+  function renderArchiveSummary(profile){
+    const root=archiveElement("div","archive-profile-content"),overview=archiveElement("section","archive-section");
+    const top=archiveElement("div","archive-section-heading");top.append(archiveElement("h3","","Estado documentado"),archiveElement("p","","Solo información de la continuidad seleccionada."));overview.appendChild(top);
+    const grid=archiveElement("div","archive-overview-grid"),identity=archiveElement("article","archive-info-card"),motivation=archiveElement("article","archive-info-card");
+    identity.append(archiveElement("h4","","Identidad y afiliación"),archiveElement("p","",profile.state.affiliation),archiveElement("p","","ID estable: "+profile.id),archiveGoTab("sources","Ver fuentes"));
+    const m=profile.claims.find(c=>(c.aspects||[]).includes("motivation"));motivation.append(archiveElement("h4","","Valores y motivaciones"),archiveElement("p","",m?m.claim:"Sin información suficiente en esta continuidad."),archiveGoTab("personality","Explorar personalidad"));
+    grid.append(identity,motivation);overview.appendChild(grid);root.appendChild(overview);
+    const relSection=archiveElement("section","archive-section"),rh=archiveElement("div","archive-section-heading");rh.append(archiveElement("h3","","Personas relacionadas"),archiveGoTab("relationships","Ver red completa"));relSection.appendChild(rh);
+    const relGrid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.slice(0,2).forEach(r=>relGrid.appendChild(renderArchiveRelationship(r)));else relGrid.appendChild(archiveEmpty("No hay vínculos personales respaldados para esta continuidad."));relSection.appendChild(relGrid);root.appendChild(relSection);
+    const momentSection=archiveElement("section","archive-section"),mh=archiveElement("div","archive-section-heading");mh.append(archiveElement("h3","","Momentos importantes"),archiveGoTab("moments","Ver momentos y contexto"));momentSection.appendChild(mh);
+    const moments=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.slice(0,3).forEach(mo=>moments.appendChild(renderArchiveMoment(mo)));else moments.appendChild(archiveEmpty("No hay suficientes acontecimientos curados para esta continuidad."));momentSection.appendChild(moments);root.appendChild(momentSection);return root;
+  }
+  function renderArchivePersonality(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Personalidad y psicología"),archiveElement("p","","Cada categoría se completa solo con afirmaciones del estado seleccionado."));root.appendChild(h);
+    const grid=archiveElement("div","archive-personality-grid");
+    [{key:"motivation",label:"Valores y motivaciones"},{key:"personality",label:"Temperamento y rasgos"},{key:"behavior",label:"Conducta y hábitos"},{key:"likes",label:"Gustos y preferencias"},{key:"fears",label:"Miedos y vulnerabilidades"},{key:"evolution",label:"Evolución emocional y psicológica"},{key:"voice",label:"Forma de hablar"}].forEach(cat=>{
+      const card=archiveElement("article","archive-psychology-card");card.appendChild(archiveElement("h4","",cat.label));
+      const matches=profile.claims.filter(c=>(c.aspects||[]).includes(cat.key));
+      if(!matches.length)card.appendChild(archiveEmpty("Sin información suficiente para esta categoría en "+profile.continuity+"."));
+      else matches.forEach(c=>{card.appendChild(archiveElement("p","",c.claim));card.appendChild(archiveEvidence(c));});grid.appendChild(card);
+    });
+    root.append(grid,archiveElement("p","archive-research-note","No se infieren gustos, temores, diagnósticos, pensamientos privados ni patrones de habla a partir de la ausencia de datos o de un acontecimiento traumático."));return root;
+  }
+  function renderArchiveRelationships(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Personas relacionadas"),archiveElement("p","","Se distingue la guía o afiliación documentada de una amistad, rivalidad o relación no demostrada."));root.appendChild(h);
+    const grid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.forEach(r=>grid.appendChild(renderArchiveRelationship(r)));else grid.appendChild(archiveEmpty("No hay relaciones interpersonales documentadas para "+profile.continuity+". No se trasladan vínculos de otros periodos."));root.appendChild(grid);return root;
+  }
+  function renderArchiveMoments(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Momentos importantes"),archiveElement("p","","Abrí una tarjeta para ver el contexto, las personas mencionadas y su evidencia. Las sinopsis no son el texto íntegro de las novelas."));root.appendChild(h);
+    const grid=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.forEach(m=>grid.appendChild(renderArchiveMoment(m)));else grid.appendChild(archiveEmpty("El corpus no contiene suficientes acontecimientos específicos para crear tarjetas de momentos en esta continuidad."));root.appendChild(grid);return root;
+  }
+  function renderArchiveTimeline(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Cronología documentada"),archiveElement("p","","Usa anclas relativas y volúmenes cuando las fuentes los proporcionan; no inventa fechas absolutas."));root.appendChild(h);
+    if(!profile.timeline.length){root.appendChild(archiveEmpty("No hay cronología suficiente para esta continuidad."));return root;}
+    const list=archiveElement("ol","archive-timeline");profile.timeline.forEach(item=>{const li=archiveElement("li","archive-timeline-item");li.append(archiveElement("h4","",item.title),archiveElement("p","archive-research-note",item.period));item.claims.forEach(c=>{li.appendChild(archiveElement("p","",c.claim));li.appendChild(archiveEvidence(c));});list.appendChild(li);});root.appendChild(list);return root;
+  }
+  function renderArchiveSources(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Fuentes y evidencias"),archiveElement("p","","Cada afirmación conserva IDs, fuente, localizador, continuidad, tipo de evidencia, verificación, periodo, límites y spoiler cuando están disponibles."));root.appendChild(h);
+    root.appendChild(archiveElement("p","archive-research-note",profile.claims.length+" afirmación(es) visibles en "+profile.continuity+" con el filtro de spoilers actual."));
+    if(profile.claims.length){const grid=archiveElement("div","archive-source-grid");profile.claims.forEach(c=>grid.appendChild(archiveClaimCard(c)));root.appendChild(grid);}else root.appendChild(archiveEmpty("No hay afirmaciones visibles con esta combinación de continuidad y spoiler."));
+    if(profile.missingContinuities.length)root.appendChild(archiveElement("p","archive-return-note","Sin evidencia utilizable incorporada para "+profile.missingContinuities.join(" y ")+" en esta ficha. No se sustituye por datos del anime."));
+    return root;
+  }
+  function renderArchiveTab(){
+    const panel=$("#archive-profile-panel");if(!panel||!activeArchiveProfile)return;panel.replaceChildren();
+    const draw={summary:renderArchiveSummary,personality:renderArchivePersonality,relationships:renderArchiveRelationships,moments:renderArchiveMoments,timeline:renderArchiveTimeline,sources:renderArchiveSources};
+    panel.appendChild((draw[activeArchiveTab]||renderArchiveSummary)(activeArchiveProfile));panel.setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
+  }
+  function renderArchiveProfile(){
+    if(!activeArchiveCharacterId||!loreArchiveIndex)return;
+    activeArchiveProfile=window.WordWaifuCharacterArchive.getProfile(loreArchiveIndex,activeArchiveCharacterId,activeArchiveContinuity,$("#archive-spoiler").value);
+    if(!activeArchiveProfile){returnToArchiveDirectory();return;}
+    activeArchiveContinuity=activeArchiveProfile.continuity;
+    $("#character-archive-directory").classList.add("hidden");$("#character-archive-profile").classList.remove("hidden");
+    renderArchiveHeader(activeArchiveProfile);renderArchiveTab();
+  }
+  function openArchiveProfile(id,continuity,remember){
+    if(!loreArchiveIndex||!loreArchiveIndex.characters.some(c=>c.id===id))return;
+    if(remember&&activeArchiveCharacterId&&activeArchiveCharacterId!==id)archiveNavigationStack.push({id:activeArchiveCharacterId,continuity:activeArchiveContinuity,tab:activeArchiveTab});
+    activeArchiveCharacterId=id;const candidate=window.WordWaifuCharacterArchive.getProfile(loreArchiveIndex,id,continuity,$("#archive-spoiler").value);
+    activeArchiveContinuity=candidate?candidate.continuity:"";activeArchiveTab="summary";renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});
+  }
+  function returnToArchiveDirectory(){
+    activeArchiveCharacterId=null;activeArchiveContinuity=null;activeArchiveProfile=null;archiveNavigationStack.length=0;
+    $("#character-archive-profile").classList.add("hidden");$("#character-archive-directory").classList.remove("hidden");renderCharacterDirectory();$("#character-archive-query").focus();
+  }
+  function backInArchiveNavigation(){const old=archiveNavigationStack.pop();if(!old){returnToArchiveDirectory();return;}activeArchiveCharacterId=old.id;activeArchiveContinuity=old.continuity;activeArchiveTab=old.tab;renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto");}
+  $("#character-archive-query").addEventListener("input",()=>{if(loreArchiveIndex)renderCharacterDirectory();else void prepareLoreView().catch(e=>$("#archive-directory-status").textContent="No se pudo preparar el índice: "+e.message);});
+  $("#archive-continuity").addEventListener("change",()=>{if(loreArchiveIndex)renderCharacterDirectory();});
+  $("#archive-spoiler").addEventListener("change",()=>{if(!loreArchiveIndex)return;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
+  $("#character-archive-results").addEventListener("click",e=>{const b=e.target.closest("[data-archive-open]");if(b)openArchiveProfile(b.dataset.archiveOpen,b.dataset.archiveContinuity,false);});
+  $("#archive-profile-back").addEventListener("click",backInArchiveNavigation);
+  $("#archive-return-search").addEventListener("click",returnToArchiveDirectory);
+  $("#archive-profile-continuity").addEventListener("change",e=>{activeArchiveContinuity=e.target.value;activeArchiveTab="summary";renderArchiveProfile();});
+  $("#archive-profile-tabs").addEventListener("click",e=>{const t=e.target.closest("[data-profile-tab]");if(!t)return;activeArchiveTab=t.dataset.profileTab;renderArchiveHeader(activeArchiveProfile);renderArchiveTab();});
+  $("#archive-profile-tabs").addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;const tabs=$("#archive-profile-tabs [role=tab]"),i=tabs.indexOf(e.target.closest("[role=tab]"));if(i<0)return;e.preventDefault();const n=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[n].focus();tabs[n].click();});
+  $("#character-archive-profile").addEventListener("click",e=>{const b=e.target.closest("[data-character-link]");if(!b||!loreArchiveIndex.characters.some(c=>c.id===b.dataset.characterLink))return;openArchiveProfile(b.dataset.characterLink,b.dataset.linkContinuity,true);});
   async function prepareLoreView() {
     const status = $("#lore-search-status");
     status.textContent = "Leyendo las afirmaciones curadas desde el repositorio…";
@@ -1823,6 +2004,8 @@
       lorePanelPrepared = true;
     }
     status.textContent = "Leídas " + index.sourceClaimCount + " afirmaciones; " + index.entryCount + " entradas de búsqueda. Búsqueda textual, sin IA; el corpus aún es parcial.";
+    loreArchiveIndex = index;
+    if (!archiveUiPrepared) { renderCharacterDirectory(); archiveUiPrepared = true; }
     return index;
   }
   function appendLoreLink(container, label, href, external) {
@@ -1871,7 +2054,7 @@
         resultsNode.appendChild(card);
       });
     } catch (error) {
-      status.textContent = "La consulta no pudo completarse: " + error.message + " Abrí WordWaifu desde GitHub Pages o un servidor HTTP local, no como archivo file://.";
+      status.textContent = "La consulta no pudo completarse: " + error.message + " Abrí WordWaifu desde un servidor HTTP (por ejemplo, el puerto privado de Codespaces), no como archivo file://.";
     } finally { button.disabled = false; }
   }
   $("#lore-search-form").addEventListener("submit", event => { void runLoreSearch(event); });

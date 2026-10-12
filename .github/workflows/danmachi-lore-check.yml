@@ -24,12 +24,15 @@ jobs:
         run: |
           node --check src/app.js
           node --check src/lore-corpus.js
+          node --check src/character-archive.js
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check tests/test_lore_corpus.cjs
           node --check tests/browser_smoke.cjs
       - name: Test lore retrieval filters and abstention
         run: node tests/test_lore_corpus.cjs
+      - name: Test character archive model
+        run: node tests/test_character_archive.cjs
       - name: Test private preview file allowlist
         run: python tests/test_web_preview_server.py
       - name: Test project import validation
@@ -42,3 +45,11 @@ jobs:
         run: node tests/browser_smoke.cjs
       - name: Validate catalog and links
         run: node lore/danmachi/tools/check-catalog.mjs
+      - name: Upload character archive screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wordwaifu-character-archive-ryu
+          path: artifacts/character-archive-ryu.png
+          if-no-files-found: ignore
+          retention-days: 14
