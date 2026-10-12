@@ -30,8 +30,8 @@
 - `era_or_interval`: Estado representado en la adaptación indicada por la fuente
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-007-SRC-001
-- `source_title`: Perfil oficial de personajes de DanMachi IV
 - `source_type`: ADAPTATION
+- `source_title`: Perfil oficial de personajes de DanMachi IV
 - `source_locator`: Entradas de Ryu Lion y Alise Lovell, en la sección dedicada a Astrea Familia
 - `source_url`: https://danmachi.com/danmachi4/character/
 - `evidence_type`: explicit_adaptation_profile
@@ -47,8 +47,8 @@
 - `era_or_interval`: Estado representado en la adaptación indicada por la fuente
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-007-SRC-001
-- `source_title`: Perfil oficial de personajes de DanMachi IV
 - `source_type`: ADAPTATION
+- `source_title`: Perfil oficial de personajes de DanMachi IV
 - `source_locator`: Entradas de Ryu Lion y Gojouno Kaguya
 - `source_url`: https://danmachi.com/danmachi4/character/
 - `evidence_type`: explicit_adaptation_profile
@@ -64,8 +64,8 @@
 - `era_or_interval`: Estado representado en la adaptación indicada por la fuente
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-007-SRC-001
-- `source_title`: Perfil oficial de personajes de DanMachi IV
 - `source_type`: ADAPTATION
+- `source_title`: Perfil oficial de personajes de DanMachi IV
 - `source_locator`: Entradas de Ryu Lion y Lyra, sección Astrea Familia
 - `source_url`: https://danmachi.com/danmachi4/character/
 - `evidence_type`: explicit_adaptation_profile
@@ -81,8 +81,8 @@
 - `era_or_interval`: Estado representado en la adaptación indicada por la fuente
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-007-SRC-001
-- `source_title`: Perfiles oficiales de personajes de DanMachi IV
 - `source_type`: ADAPTATION
+- `source_title`: Perfiles oficiales de personajes de DanMachi IV
 - `source_locator`: Listado de personajes de Astrea Familia; perfiles individuales disponibles en el portal
 - `source_url`: https://danmachi.com/danmachi4/character/
 - `evidence_type`: official_adaptation_roster
@@ -100,7 +100,6 @@
 - `source_id`: DMR-007-SRC-004
 - `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
-- `source_type`: OFFICIAL_REFERENCE
 - `source_locator`: Lista de integrantes históricos y datos de afiliación
 - `source_url`: https://danmachi.fandom.com/es/wiki/Familia_Astrea
 - `evidence_type`: community_secondary_roster
@@ -118,7 +117,6 @@
 - `source_id`: DMR-007-SRC-004
 - `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
-- `source_type`: OFFICIAL_REFERENCE
 - `source_locator`: Apartados sobre la primera Familia, el Juggernaut y sus consecuencias
 - `source_url`: https://danmachi.fandom.com/es/wiki/Familia_Astrea
 - `evidence_type`: community_secondary_summary
@@ -136,7 +134,6 @@
 - `source_id`: DMR-007-SRC-004
 - `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
-- `source_type`: OFFICIAL_REFERENCE
 - `source_locator`: Apartado sobre el memorial de las integrantes caídas
 - `source_url`: https://danmachi.fandom.com/es/wiki/Familia_Astrea
 - `evidence_type`: community_secondary_summary
@@ -152,8 +149,8 @@
 - `era_or_interval`: Estado representado en la adaptación indicada por la fuente
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-007-SRC-003
-- `source_title`: Perfiles oficiales de personajes de DanMachi V
 - `source_type`: ADAPTATION
+- `source_title`: Perfiles oficiales de personajes de DanMachi V
 - `source_locator`: Entrada de Astrea y descripción de su residencia posterior
 - `source_url`: https://danmachi.com/danmachi5/character/
 - `evidence_type`: explicit_adaptation_profile
@@ -171,7 +168,6 @@
 - `source_id`: DMR-007-SRC-002
 - `source_type`: OFFICIAL_PUBLISHER
 - `source_title`: GA Bunko · Familia Chronicle: Episode Ryuu 2
-- `source_type`: OFFICIAL_PUBLISHER_OR_SECONDARY
 - `source_locator`: Sinopsis editorial del volumen
 - `source_url`: https://ga.sbcr.jp/product/9784815623692/
 - `evidence_type`: explicit_publisher_synopsis
@@ -189,7 +185,6 @@
 - `source_id`: DMR-007-SRC-004
 - `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
-- `source_type`: OFFICIAL_PUBLISHER_OR_SECONDARY
 - `source_locator`: Apartados de Astrea tras dejar Orario y de su nueva Familia
 - `source_url`: https://danmachi.fandom.com/es/wiki/Familia_Astrea
 - `evidence_type`: community_secondary_summary
@@ -207,7 +202,6 @@
 - `source_id`: DMR-007-SRC-004
 - `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
-- `source_type`: OFFICIAL_PUBLISHER_OR_SECONDARY
 - `source_locator`: Apartado de la segunda generación y listado de miembros
 - `source_url`: https://danmachi.fandom.com/es/wiki/Familia_Astrea
 - `evidence_type`: community_secondary_roster
@@ -225,7 +219,6 @@
 - `source_id`: DMR-007-SRC-005
 - `source_type`: COMMUNITY_SECONDARY_ANALYSIS
 - `source_title`: Ryuu Lion · Relationships · DanMachi Wiki
-- `source_type`: COMMUNITY_SECONDARY_ANALYSIS
 - `source_locator`: Apartados de Alise, Kaguya, Lyra y vínculos con Ryu
 - `source_url`: https://danmachi.fandom.com/wiki/Ryuu_Lion/Relationships
 - `evidence_type`: community_secondary_analysis
