@@ -41,7 +41,7 @@
       });
     } catch (_) {
       // If IndexedDB cannot be opened or read, localStorage is the available store.
-      return Object.values(fallbackRead());
+      return Object.values(fallbackRead()).filter(record => record && record.key && !record.deleted);
     }
 
     // A failed IndexedDB write can be safely stored in localStorage even while the
@@ -55,7 +55,9 @@
         records.set(record.key, record);
       }
     }
-    return Array.from(records.values());
+    // A durable IndexedDB tombstone prevents a stale localStorage copy from
+    // resurrecting an assignment when fallback cleanup failed after deletion.
+    return Array.from(records.values()).filter(record => record && !record.deleted);
   }
 
   async function readOne(key) {
@@ -76,7 +78,11 @@
     const value = fallbackValue && (!indexedValue ||
       String(fallbackValue.updatedAt || "") > String(indexedValue.updatedAt || ""))
       ? fallbackValue : indexedValue;
-    if (value) memoryCache.set(key, value);
+    if (!value || value.deleted) {
+      memoryCache.delete(key);
+      return null;
+    }
+    memoryCache.set(key, value);
     return value;
   }
 
@@ -133,7 +139,9 @@
       let transaction;
       try {
         transaction = db.transaction(STORE, "readwrite");
-        transaction.objectStore(STORE).delete(key);
+        // Keep a small tombstone until a later save overwrites this key. If
+        // localStorage cleanup fails, the newer tombstone wins over stale backup.
+        transaction.objectStore(STORE).put({ key, deleted: true, updatedAt: new Date().toISOString() });
       } catch (error) {
         reject(error);
         return;
@@ -148,7 +156,7 @@
     if (fallback[key]) {
       delete fallback[key];
       try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
-      catch (_) { /* IndexedDB deletion succeeded; a stale fallback is not authoritative. */ }
+      catch (_) { /* The IndexedDB tombstone suppresses this stale copy on future reads. */ }
     }
   }
 
