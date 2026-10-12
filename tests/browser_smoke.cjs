@@ -10,7 +10,8 @@ const mimeTypes = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
-  ".json": "application/json; charset=utf-8"
+  ".json": "application/json; charset=utf-8",
+  ".svg": "image/svg+xml; charset=utf-8"
 };
 
 function createServer() {
@@ -60,10 +61,26 @@ async function run() {
     page.on("pageerror", (error) => pageErrors.push(error.stack || error.message));
     page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
     await page.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
-    await page.waitForFunction(() => {
-      const shell = document.querySelector(".app-shell");
-      return Boolean(shell && !shell.inert);
-    }, { timeout: 5000 });
+    try {
+      await page.waitForFunction(() => {
+        const status = document.querySelector("#save-status")?.textContent || "";
+        return [
+          "Proyecto recuperado y guardado en IndexedDB", "Proyecto cargado desde IndexedDB",
+          "Proyecto recuperado desde el respaldo local", "Guardado en IndexedDB",
+          "Respaldo local disponible", "No se pudo guardar: exportá una copia"
+        ].some(message => status.includes(message)) ||
+          status.startsWith("Proyecto recuperado ·") || status.startsWith("Modo de recuperación");
+      }, { timeout: 10000 });
+    } catch (error) {
+      const diagnostics = await page.evaluate(() => ({
+        saveStatus: document.querySelector("#save-status")?.textContent || null,
+        shellInert: document.querySelector(".app-shell")?.inert ?? null,
+        appModuleLoaded: Boolean(window.WordWaifuLoreCorpus),
+        repositoryLoaded: Boolean(window.WordWaifuProjectRepository)
+      }));
+      process.stdout.write("BOOT_DIAGNOSTICS: " + JSON.stringify({ diagnostics, pageErrors, consoleErrors }) + "\n");
+      throw error;
+    }
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
@@ -89,6 +106,198 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+    // Normal global search discovers an archive character outside the demo project and displays its local portrait.
+    await page.locator('.nav-item[data-view="atlas"]').click();
+    await page.locator("#global-search").fill("Ryu");
+    await page.keyboard.press("Enter");
+    try {
+      await page.waitForFunction(() =>
+        document.querySelector("#view-title")?.textContent === "Enciclopedia de personajes" &&
+        document.querySelector("#character-archive-query")?.value === "Ryu" &&
+        document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').length === 1,
+        null,
+        { timeout: 12000 }
+      );
+    } catch (error) {
+      const diagnostic = await page.evaluate(() => ({
+        viewTitle: document.querySelector("#view-title")?.textContent || null,
+        globalQuery: document.querySelector("#global-search")?.value || null,
+        archiveQuery: document.querySelector("#character-archive-query")?.value || null,
+        directoryStatus: document.querySelector("#archive-directory-status")?.textContent || null,
+        visibleCards: document.querySelectorAll("#character-archive-results [data-archive-open]").length,
+        pageErrors: window.__wordwaifuTestPageErrors || []
+      }));
+      process.stdout.write("GLOBAL_SEARCH_DIAGNOSTICS: " + JSON.stringify(diagnostic) + "\\n");
+      throw error;
+    }
+    await page.waitForFunction(() => {
+      const img = document.querySelector("#character-archive-results .archive-portrait-art");
+      return !!img && img.complete && img.naturalWidth > 0;
+    }, null, { timeout: 5000 });
+    const archiveThemeBg = await page.locator("body").evaluate(el => getComputedStyle(el).backgroundColor);
+    assert.equal(archiveThemeBg, "rgb(33, 30, 26)", "The warm night palette must be active.");
+    // Character archive: compact search, profile navigation, evidence and temporal separation.
+    await page.locator('.nav-item[data-view="lore"]').click();
+    await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
+    assert.equal(await page.locator("#archive-quick-filters [data-archive-scope]").count(), 3);
+    await page.locator('#archive-quick-filters [data-archive-scope="CONT-AR"]').click();
+    assert.equal(await page.locator("#archive-continuity").inputValue(), "CONT-AR", "Quick filter should apply Astrea Record without opening the select.");
+    assert.equal(await page.locator('#archive-quick-filters [data-archive-scope="CONT-AR"]').getAttribute("aria-pressed"), "true");
+    await page.locator("#archive-clear-filters").click();
+    assert.equal(await page.locator("#character-archive-query").inputValue(), "");
+    assert.equal(await page.locator("#archive-continuity").inputValue(), "ALL");
+    assert.equal(await page.locator("#archive-spoiler").inputValue(), "all");
+    assert.equal(await page.locator('#archive-quick-filters [data-archive-scope="ALL"]').getAttribute("aria-pressed"), "true");
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 12, { timeout: 5000 });
+    await page.locator("#character-archive-query").fill("");
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 12, { timeout: 5000 });
+    await page.locator("#character-archive-query").fill("Ryu");
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
+    assert.equal(await page.locator("#character-archive-results [data-archive-open]").getAttribute("data-archive-open"), "CHAR-RYUU-LION");
+    await page.locator('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
+    assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
+    // Expanded reading must open a modal with a Spanish community reference and preserve continuity context.
+    await page.locator("#archive-profile-panel [data-archive-more-info]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, { timeout: 3000 });
+    assert.ok((await page.locator("#archive-more-info-title").innerText()).includes("Ryu Lion"));
+    assert.ok((await page.locator("#archive-more-info-content").innerText()).includes("Referencias para seguir leyendo"));
+    assert.ok(await page.locator("#archive-more-info-content a[href*='danmachi.fandom.com/es/wiki/Ryuu_Lion']").count() > 0);
+    const expandedRyuText = await page.locator("#archive-more-info-content").innerText();
+    assert.ok(expandedRyuText.includes("Estado temporal A"), "More Info must recover the existing historical Ryu dossier.");
+    assert.ok(expandedRyuText.includes("Preguntas abiertas"), "More Info must preserve open research questions from the existing dossier.");
+    assert.ok(!expandedRyuText.includes('Estado temporal B'), "The historical summary must not mix in Ryu's later anime state.");
+    await page.locator("#archive-more-info-close").click();
+    // The visible rights note correctly says that attribution is not a license.
+    await page.locator("#content-rights-open").click();
+    assert.equal(await page.locator("#content-rights-dialog").evaluate(el => el.open), true);
+    assert.ok((await page.locator("#content-rights-dialog").innerText()).includes("ni concede una licencia"));
+    await page.locator("#content-rights-close").click();
+    await page.locator("#archive-tab-personality").click();
+    const personalityText = await page.locator("#archive-profile-panel").innerText();
+    assert.ok(personalityText.toLocaleLowerCase("es").includes("justicia"), "The personality tab must render evidence-backed motivation. Panel text: " + personalityText);
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Sin información suficiente"));
+    await page.locator("#archive-tab-moments").click();
+    assert.ok(await page.locator("#archive-profile-panel [data-moment-id]").count() >= 3);
+    assert.equal(await page.locator("#archive-profile-panel .archive-moment-art").count(), 3,
+      "Ryu's three curated historical moments should display original conceptual scene art.");
+    await page.waitForFunction(() => {
+      const images = Array.from(document.querySelectorAll("#archive-profile-panel .archive-moment-art"));
+      return images.length === 3 && images.every(img => img.complete && img.naturalWidth > 0);
+    }, null, { timeout: 5000 });
+    await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] > summary').click();
+    assert.ok(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] .archive-evidence').count() >= 1);
+    await page.locator("#archive-tab-relationships").click();
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count() > 0);
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
+    assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
+    await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
+    await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    await page.locator("#archive-tab-summary").click();
+    // The summary itself now exposes more than two related people, with a navigable roster graph.
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').count() > 0);
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-LYRA"]').count() > 0);
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').first().click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Gojouno Kaguya");
+    await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
+    assert.ok((await page.locator("#archive-profile-summary").innerText()).includes("Hostess of Fertility"));
+    await page.locator("#archive-tab-relationships").click();
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("No hay relaciones interpersonales documentadas"));
+    assert.equal(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count(), 0);
+    assert.ok(!(await page.locator("#archive-profile-panel").innerText()).includes("La sinopsis presenta a Ryu buscando su idea de justicia"));
+    await page.locator("#archive-profile-continuity").selectOption("CONT-AR");
+    await page.locator("#archive-profile-spoiler").selectOption("safe-only");
+    await page.locator("#archive-tab-moments").click();
+    assert.equal(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"]').count(), 0);
+    await page.locator("#archive-profile-spoiler").selectOption("all");
+    await page.locator("#archive-tab-sources").click();
+    const firstSourceEvidence = page.locator('#archive-profile-panel details.archive-evidence').first();
+    await firstSourceEvidence.locator("summary").click();
+    assert.ok(await firstSourceEvidence.locator(".archive-source-links a").count() > 0);
+    const sourceGroupLabels = await firstSourceEvidence.locator(".archive-source-group-label").allTextContents();
+    assert.ok(sourceGroupLabels[0]?.includes("Lectura en español"),
+      "Spanish-language community reading should appear before primary-language sources.");
+    assert.ok(sourceGroupLabels.some(label => label.includes("Fuentes originales y oficiales")),
+      "Primary and official sources should be identified separately, including Japanese pages.");
+    await page.locator("#archive-tab-moments").click();
+    const screenshotDirectory = path.join(root, "artifacts");
+    fs.mkdirSync(screenshotDirectory, { recursive: true });
+    await page.screenshot({ path: path.join(screenshotDirectory, "character-archive-ryu.png"), fullPage: true });
+    await page.locator("#archive-return-search").click();
+    assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
+    assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
+    // Newly curated profiles have local original SVG portraits rather than broken or empty remote images.
+    await page.locator("#character-archive-query").fill("Bell Cranel");
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
+    const bellCardSelector = "#character-archive-results .archive-character-card:has([data-archive-open='DM-CHAR-BELL'])";
+    const bellPortrait = page.locator(bellCardSelector + " .archive-portrait-art");
+    assert.equal(await bellPortrait.count(), 1);
+    await page.waitForFunction(() => {
+      const button = document.querySelector("#character-archive-results [data-archive-open='DM-CHAR-BELL']");
+      const img = button?.closest(".archive-character-card")?.querySelector(".archive-portrait-art");
+      return !!img && img.complete && img.naturalWidth > 0;
+    }, null, { timeout: 5000 });
+    process.stdout.write("PASS character archive: compact search, tabs, links, continuity separation, spoiler filtering, evidence and screenshot.\\n");
+    await page.locator("#lore-research-panel > summary").click();
+
+// DanMachi lore retrieval: a single UI query must preserve temporal continuity.
+    await page.locator('.nav-item[data-view="lore"]').click();
+    await page.waitForFunction(() => document.querySelector("#lore-search-status")?.textContent.includes("Leídas"), { timeout: 5000 });
+    await page.locator("#lore-character").selectOption("CHAR-RYUU-LION");
+    await page.locator("#lore-continuity").selectOption("CONT-AR");
+    await page.locator("#lore-period").selectOption("ASTREA_RECORD");
+    await page.locator("#lore-aspect").selectOption("all");
+    await page.locator("#lore-spoiler").selectOption("all");
+    await page.locator("#lore-search-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelectorAll(".lore-result").length > 0, { timeout: 5000 });
+    const ryuAr = await page.locator(".lore-result").evaluateAll(nodes => nodes.map(n => ({ claimId:n.dataset.claimId, entryId:n.dataset.entryId, continuity:n.dataset.continuity, text:n.innerText })));
+    assert.ok(ryuAr.some(item => item.claimId === "DMR-002-CLM-015"));
+    assert.ok(ryuAr.every(item => item.continuity === "CONT-AR"));
+    process.stdout.write("PASS lore UI: Ryu in CONT-AR is retrieved separately.\n");
+    await page.locator("#lore-continuity").selectOption("CONT-ANIME");
+    await page.locator("#lore-period").selectOption("ALL");
+    await page.locator("#lore-search-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelectorAll(".lore-result").length > 0, { timeout: 5000 });
+    const ryuAnime = await page.locator(".lore-result").evaluateAll(nodes => nodes.map(n => ({ claimId:n.dataset.claimId, entryId:n.dataset.entryId, continuity:n.dataset.continuity, text:n.innerText })));
+    assert.ok(ryuAnime.some(item => item.entryId.endsWith("--CONT-ANIME") || item.text.includes("Hostess of Fertility")));
+    assert.ok(ryuAnime.every(item => item.continuity === "CONT-ANIME"));
+    process.stdout.write("PASS lore UI: Ryu in CONT-ANIME is retrieved separately.\n");
+    await page.locator("#lore-character").selectOption("DM-CHAR-AIS");
+    await page.locator("#lore-continuity").selectOption("ALL");
+    await page.locator("#lore-aspect").selectOption("likes");
+    await page.locator("#lore-search-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelector("#lore-search-status")?.textContent.includes("No se encontró evidencia"), { timeout: 5000 });
+    assert.equal(await page.locator(".lore-result").count(), 0);
+    process.stdout.write("PASS lore UI: undocumented Ais likes produce explicit abstention.\n");
+    await page.route("https://danmachi.fandom.com/api.php**", route => route.fulfill({
+      status:200, contentType:"application/json",
+      body:JSON.stringify({query:{search:[{title:"Ryuu Lion",snippet:'<span class="searchmatch">Ryuu Lion</span> profile and timeline.'}]}})
+    }));
+    await page.route("https://en.wikipedia.org/w/api.php**", route => route.fulfill({
+      status:200, contentType:"application/json",
+      body:JSON.stringify({query:{search:[{title:"DanMachi",snippet:"A Japanese light novel series."}]}})
+    }));
+    await page.locator("#lore-query").fill("Ryu Lion");
+    await page.locator("#lore-web-search-button").click();
+    await page.waitForFunction(() => document.querySelectorAll("#lore-online-results .lore-online-result-card").length >= 2, {timeout:5000});
+    assert.ok((await page.locator("#lore-online-status").innerText()).includes("pistas secundarias"));
+    assert.ok((await page.locator("#lore-online-results").innerText()).includes("Ryuu Lion"));
+    assert.ok(!((await page.locator("#lore-online-results").innerText()).includes("<span")));
+    await page.locator("#lore-source-directory-details > summary").click();
+    assert.ok((await page.locator("#lore-source-directory").innerText()).includes("GA Bunko"));
+    assert.ok((await page.locator("#lore-source-directory").innerText()).includes("DanMachi Wiki"));
+    process.stdout.write("PASS web UI: mocked wiki lookup, secondary-source warning and official-source directory.\n");
+    await page.locator('.nav-item[data-view="atlas"]').click();
+
     const assertSnapshotContains = async (entityId, collection, reason) => {
       const evidence = await page.evaluate(async ({ entityId, collection, reason }) => {
         const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
@@ -913,7 +1122,9 @@ async function run() {
     await acceptProjectDeleteDialog.accept();
     await acceptProjectDeleteClick;
     await page.waitForFunction((id) => !Array.from(document.querySelector("#project-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
-    const afterProjectDelete = await page.evaluate(async (ids) => {
+    await page.waitForFunction((id) => Array.from(document.querySelector("#project-trash-list").options).some((option) => option.value === id), createdUniverse.id, { timeout: 8000 });
+
+    const afterTrash = await page.evaluate(async (ids) => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const catalog = await repository.listProjects();
       const deletedRecord = await repository.read("projects", ids.target);
@@ -1401,7 +1612,7 @@ async function run() {
       marker:[235,255],characters:["wf-test-resident","wf-test-witness"],events:["wf-test-event"] });
     referenceFixture.locations.push({ id:"wf-test-other-location",name:"Archivo de Prueba",type:"Archivo",parentId:null,
       description:"Ubicación adicional para verificar que editar un acontecimiento cambia sus referencias sin borrar otros lugares.",tags:[],population:"Sin datos",
-      government:"Sin datos",climate:"Sin datos",marker:[640,340],characters:[],events:[] });
+      government:"Sin datos",climate:"Sin datos",marker:[820,500],characters:[],events:[] });
     referenceFixture.characters.push({ id:"wf-test-resident",name:"Habitante de Prueba",age:30,species:"Humana",role:"Habitante",personality:[],
       description:"Personaje vinculado al lugar que se borrará.",motivation:"",flaw:"",
       locationHistory:[{locationId:targetLocationId,from:"chapter1",to:"chapter5"},{locationId:"wf-test-child-location",from:"chapter5",to:"now"}],relationships:[],status:"proposal" });

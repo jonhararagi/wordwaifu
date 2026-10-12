@@ -16,7 +16,8 @@
     timeline: ["Cronología", "Revisá los acontecimientos y los cambios de estado de tu mundo."],
     organizations: ["Organizaciones", "Facciones, gremios y grupos que mueven tu universo."],
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
-    commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."]
+    commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
+    lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."]
   };
   const demo = {
     schemaVersion: 1,
@@ -211,6 +212,8 @@
     updateProjectDeleteControl();
     try { await refreshSnapshotList(); }
     catch (error) { $("#snapshot-status").textContent = "No se pudieron leer los respaldos: " + error.message; }
+    try { await refreshTrashList(); }
+    catch (error) { $("#project-trash-status").textContent = "No se pudo leer la papelera: " + error.message; }
     return projects;
   }
 
@@ -358,6 +361,89 @@
     } finally {
       if (appShell) appShell.inert = false;
       updateSnapshotControls();
+    }
+  }
+
+
+  async function refreshTrashList() {
+    const select = $("#project-trash-list");
+    const previousValue = select.value;
+    select.replaceChildren();
+    const items = await projectRepository.listTrashedProjects();
+    items.forEach((item) => {
+      const option = document.createElement("option");
+      option.value = item.projectId;
+      const deletedAt = new Date(item.deletedAt);
+      const dateLabel = Number.isNaN(deletedAt.getTime()) ? item.deletedAt : deletedAt.toLocaleString("es-AR");
+      option.textContent = item.name + " · " + dateLabel + " · " + item.snapshotCount + " respaldo(s)";
+      option.dataset.projectName = item.name;
+      option.dataset.snapshotCount = String(item.snapshotCount);
+      select.appendChild(option);
+    });
+    if (!items.length) {
+      const option = document.createElement("option");
+      option.value = "";
+      option.textContent = "La papelera está vacía";
+      option.disabled = true;
+      select.appendChild(option);
+    }
+    if (items.some((item) => item.projectId === previousValue)) select.value = previousValue;
+    $("#project-trash-status").textContent = items.length
+      ? items.length + " proyecto(s) recuperable(s). Se conservan sus IDs y respaldos."
+      : "No hay universos en la papelera.";
+    updateProjectTrashControls();
+    return items;
+  }
+
+  function updateProjectTrashControls() {
+    const select = $("#project-trash-list");
+    const restore = $("#project-trash-restore-button");
+    const purge = $("#project-trash-purge-button");
+    if (!select || !restore || !purge) return;
+    const selected = Boolean(select.value && select.selectedOptions[0] && !select.selectedOptions[0].disabled);
+    restore.disabled = !selected;
+    purge.disabled = !selected;
+  }
+
+  async function restoreSelectedTrashedProject() {
+    const projectId = $("#project-trash-list").value;
+    const option = $("#project-trash-list").selectedOptions[0];
+    if (!projectId || !option || option.disabled) return;
+    const projectName = option.dataset.projectName || option.textContent;
+    if (!confirm("Se restaurará «" + projectName + "» (ID: " + projectId + ") al catálogo local. Su identidad original y sus snapshots se conservarán; el proyecto activo no cambiará.")) return;
+    $("#project-trash-restore-button").disabled = true;
+    try {
+      const restored = await projectRepository.restoreTrashedProject(projectId);
+      await refreshProjectList();
+      $("#project-list").value = projectId;
+      updateProjectDeleteControl();
+      $("#project-trash-status").textContent = "Universo «" + projectName + "» restaurado. ID conservado y " +
+        restored.snapshotsPreserved + " respaldo(s) disponibles. Podés abrirlo desde Proyectos guardados.";
+    } catch (error) {
+      $("#project-trash-status").textContent = "No se pudo restaurar el universo: " + error.message;
+    } finally {
+      updateProjectTrashControls();
+    }
+  }
+
+  async function permanentlyDeleteSelectedTrashedProject() {
+    const projectId = $("#project-trash-list").value;
+    const option = $("#project-trash-list").selectedOptions[0];
+    if (!projectId || !option || option.disabled) return;
+    const projectName = option.dataset.projectName || option.textContent;
+    const snapshotCount = Number(option.dataset.snapshotCount) || 0;
+    if (!confirm("BORRADO PERMANENTE\nSe eliminará «" + projectName + "» (ID: " + projectId + ") de la papelera y se destruirán sus " +
+      snapshotCount + " snapshot(s). Esta acción no se puede deshacer. Los demás universos no se modificarán.")) return;
+    $("#project-trash-purge-button").disabled = true;
+    try {
+      const result = await projectRepository.permanentlyDeleteTrashedProject(projectId);
+      await refreshTrashList();
+      $("#project-trash-status").textContent = "Universo «" + projectName + "» borrado permanentemente." +
+        (result.warning ? " " + result.warning : "");
+    } catch (error) {
+      $("#project-trash-status").textContent = "No se pudo vaciar este elemento: " + error.message;
+    } finally {
+      updateProjectTrashControls();
     }
   }
 
@@ -939,13 +1025,17 @@
     $("#breadcrumb-current").textContent = titles[activeView][0];
     $("#view-title").textContent = titles[activeView][0];
     $("#view-subtitle").textContent = titles[activeView][1];
+    $("#global-search").placeholder = activeView === "lore"
+      ? "Buscar en la enciclopedia de personajes…"
+      : "Buscar personajes, lugares o DanMachi…";
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
+    $("#lore-view").classList.toggle("hidden", activeView !== "lore");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "stories");
+    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "stories" || activeView === "lore");
     renderMap();
     renderDetails();
     renderDirectory();
@@ -1828,6 +1918,487 @@
     }
   }
 
+
+  let loreIndexPromise = null;
+  let lorePanelPrepared = false;
+  let onlineSourceDirectoryPrepared = false;
+  let loreArchiveIndex = null;
+  let archiveUiPrepared = false;
+  let activeArchiveCharacterId = null;
+  let activeArchiveContinuity = null;
+  let activeArchiveTab = "summary";
+  let activeArchiveProfile = null;
+  const archiveNavigationStack = [];
+
+  function archiveElement(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined && text !== null) node.textContent = text;
+    return node;
+  }
+  function archiveBadge(text, kind) { return archiveElement("span", "archive-badge" + (kind ? " archive-badge--" + kind : ""), text); }
+  function archivePortrait(id, name, large) {
+    const node = archiveElement("div", "archive-portrait" + (large ? " archive-portrait--large" : "") + " archive-portrait--" + String(id||"").toLowerCase().replace(/[^a-z0-9-]/g,""));
+    const portraitSources = {
+      "CHAR-RYUU-LION": "./assets/character-portraits/ryu-lion.svg",
+      "CHAR-ALISE-LOVELACE": "./assets/character-portraits/alise-lovelace.svg",
+      "CHAR-ASTREA": "./assets/character-portraits/astrea.svg",
+      "CHAR-KAGUYA": "./assets/character-portraits/kaguya.svg",
+      "CHAR-LYRA": "./assets/character-portraits/lyra.svg",
+      "DM-CHAR-BELL": "./assets/character-portraits/bell-cranel.svg",
+      "DM-CHAR-HESTIA": "./assets/character-portraits/hestia.svg",
+      "DM-CHAR-AIS": "./assets/character-portraits/ais-wallenstein.svg",
+      "DM-CHAR-EINA": "./assets/character-portraits/eina-tulle.svg",
+      "CHAR-FINN-DEIMNE": "./assets/character-portraits/finn-deimne.svg",
+      "CHAR-FREYA": "./assets/character-portraits/freya.svg",
+      "CHAR-OTTAR": "./assets/character-portraits/ottar.svg"
+    };
+    const portraitSource = portraitSources[id];
+    node.setAttribute("role","img");
+    node.setAttribute("aria-label", portraitSource
+      ? "Ilustración vectorial original de " + name + ", no oficial."
+      : "Marcador visual decorativo de " + name + "; no es retrato oficial.");
+    if (portraitSource) {
+      const image = document.createElement("img");
+      image.className = "archive-portrait-art";
+      image.src = portraitSource;
+      image.alt = "";
+      image.decoding = "async";
+      image.loading = large ? "eager" : "lazy";
+      node.appendChild(image);
+    } else {
+      node.appendChild(archiveElement("span","",id==="CHAR-ASTREA"?"✧":(String(name||"?").trim().charAt(0).toUpperCase()||"?")));
+    }
+    if(large)node.appendChild(archiveElement("span","archive-portrait-caption",portraitSource?"ILUSTRACIÓN VECTORIAL · NO OFICIAL":"RETRATO PENDIENTE"));
+    return node;
+  }
+  const archiveCommunityReferences={
+    "CHAR-RYUU-LION":{name:"Ryuu Lion",url:"https://danmachi.fandom.com/es/wiki/Ryuu_Lion"},
+    "CHAR-ALISE-LOVELACE":{name:"Alise Lovell",url:"https://danmachi.fandom.com/es/wiki/Alise_Lovell"},
+    "CHAR-ASTREA":{name:"Astrea",url:"https://danmachi.fandom.com/es/wiki/Astrea"},
+    "CHAR-KAGUYA":{name:"Gojouno Kaguya",url:"https://danmachi.fandom.com/es/wiki/Gojouno_Kaguya"},
+    "CHAR-LYRA":{name:"Lyra",url:"https://danmachi.fandom.com/es/wiki/Lyra"},
+    "DM-CHAR-BELL":{name:"Bell Cranel",url:"https://danmachi.fandom.com/es/wiki/Bell_Cranel"},
+    "DM-CHAR-HESTIA":{name:"Hestia",url:"https://danmachi.fandom.com/es/wiki/Hestia"},
+    "DM-CHAR-AIS":{name:"Ais Wallenstein",url:"https://danmachi.fandom.com/es/wiki/Ais_Wallenstein"},
+    "DM-CHAR-EINA":{name:"Eina Tulle",url:"https://danmachi.fandom.com/es/wiki/Eina_Tulle"},
+    "CHAR-FINN-DEIMNE":{name:"Finn Deimne",url:"https://danmachi.fandom.com/es/wiki/Finn_Deimne"},
+    "CHAR-FREYA":{name:"Freya",url:"https://danmachi.fandom.com/es/wiki/Freya"},
+    "CHAR-OTTAR":{name:"Ottar",url:"https://danmachi.fandom.com/es/wiki/Ottar"}
+  };
+  function archiveEvidence(claim) {
+    const details=archiveElement("details","archive-evidence"),summary=archiveElement("summary","","Ver evidencia · "+(claim.claimId||claim.entryId||"afirmación")),body=archiveElement("div","archive-evidence-body");
+    details.appendChild(summary);
+    if(claim.sourceTitle)body.appendChild(archiveElement("p","","Fuente: "+claim.sourceTitle));
+    if(claim.sourceIds&&claim.sourceIds.length)body.appendChild(archiveElement("p","","ID(s) de fuente: "+claim.sourceIds.join(", ")));
+    if(claim.sourceLocator)body.appendChild(archiveElement("p","","Localizador / respaldo: "+claim.sourceLocator));
+    if(claim.sourceDocument)body.appendChild(archiveElement("p","","Documento de evidencia: "+claim.sourceDocument));
+    body.appendChild(archiveElement("p","","Continuidad: "+((claim.continuityScopes||[]).join(", ")||"no especificada")));
+    if(claim.eraOrInterval)body.appendChild(archiveElement("p","","Periodo: "+claim.eraOrInterval));
+    body.appendChild(archiveElement("p","","Tipo de evidencia: "+(claim.evidenceType||"no especificado")+" · Verificación: "+(claim.verificationStatus||"unverified")+" · Spoiler: "+(claim.spoilerLevel||"unknown")));
+    if(claim.confidenceNote)body.appendChild(archiveElement("p","","Límites: "+claim.confidenceNote));
+    const links=archiveElement("div","archive-source-links");
+    const communityRefs=[...new Set(claim.characterIds||[])].map(id=>archiveCommunityReferences[id]).filter(Boolean);
+    const sourceUrls=[...new Set(claim.sourceUrls||[])];
+    const communityEntries=[];
+    const seenCommunityUrls=new Set();
+    [...communityRefs,...sourceUrls.filter(url=>String(url).toLowerCase().includes("fandom.com/es/")).map(url=>({name:"",url}))].forEach(ref=>{
+      if(!ref.url||seenCommunityUrls.has(ref.url))return;
+      seenCommunityUrls.add(ref.url);communityEntries.push(ref);
+    });
+    if(communityEntries.length){
+      links.appendChild(archiveElement("p","archive-source-group-label","Lectura en español · wiki comunitaria, no oficial"));
+      communityEntries.forEach(ref=>appendLoreLink(links,ref.name?"Leer ficha de "+ref.name+" en español":"Leer la referencia comunitaria en español",ref.url,true));
+    }
+    const primaryUrls=sourceUrls.filter(url=>!(String(url).toLowerCase().includes("fandom.com/es/")));
+    if(primaryUrls.length){
+      links.appendChild(archiveElement("p","archive-source-group-label","Fuentes originales y oficiales · algunas páginas están en japonés"));
+      primaryUrls.forEach((url,i)=>{
+        const label=url.includes("ga.sbcr.jp")?"Fuente editorial original (japonés)":url.includes("danmachi.com")?"Fuente oficial del anime (japonés)":(primaryUrls.length>1?"Abrir fuente original "+(i+1):"Abrir fuente original");
+        appendLoreLink(links,label,url,true);
+      });
+    }
+    if(links.childNodes.length)body.appendChild(links);
+    details.appendChild(body);return details;
+  }
+  function archiveClaimCard(claim) {
+    const card=archiveElement("article","archive-claim-card"),badges=archiveElement("div","archive-badge-row");
+    card.appendChild(archiveElement("h4","",claim.heading||claim.claimId||"Afirmación documentada"));
+    card.appendChild(archiveElement("p","",claim.claim));
+    (claim.continuityScopes||[]).forEach(s=>badges.appendChild(archiveBadge(s,"continuity")));
+    badges.appendChild(archiveBadge(claim.verificationStatus||"unverified","muted"));
+    if(["major","endgame"].includes(String(claim.spoilerLevel||"").toLowerCase()))badges.appendChild(archiveBadge("Spoiler "+claim.spoilerLevel,"spoiler"));
+    card.append(badges,archiveEvidence(claim));return card;
+  }
+  function archiveEmpty(text){return archiveElement("div","archive-empty",text||"Sin información suficiente en las fuentes incorporadas.");}
+  function archiveGoTab(tab,label){const b=archiveElement("button","archive-related-link",label+" →");b.type="button";b.dataset.profileTab=tab;return b;}
+  function renderCharacterDirectory(){
+    if(!loreArchiveIndex||!window.WordWaifuCharacterArchive)return;
+    const results=$("#character-archive-results"),status=$("#archive-directory-status");
+    const items=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:$("#character-archive-query").value,continuity:$("#archive-continuity").value,spoiler:$("#archive-spoiler").value});
+    results.replaceChildren();
+    const totalItems=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:"",continuity:"ALL",spoiler:"all"}).length;
+    document.querySelectorAll("#archive-quick-filters [data-archive-scope]").forEach(button=>{
+      button.setAttribute("aria-pressed",button.dataset.archiveScope===$("#archive-continuity").value?"true":"false");
+    });
+    status.textContent=items.length
+      ?items.length+" ficha(s) disponibles (de "+totalItems+"). Selección parcial: todavía no es la enciclopedia completa de DanMachi."
+      :"0 ficha(s) disponibles (de "+totalItems+"). No hay coincidencias; probá otro nombre o una continuidad más amplia.";
+    if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados."));return;}
+    items.forEach(item=>{
+      const card=archiveElement("article","archive-character-card");card.setAttribute("role","listitem");
+      card.appendChild(archivePortrait(item.id,item.name,false));
+      const copy=archiveElement("div","archive-character-copy");copy.appendChild(archiveElement("h4","",item.name));copy.appendChild(archiveElement("p","",item.summary));
+      const badges=archiveElement("div","archive-badge-row");
+      if(item.states.length)item.states.slice(0,3).forEach(st=>{badges.appendChild(archiveBadge(st.code,"continuity"));if(st.affiliation)badges.appendChild(archiveBadge(st.affiliation,"muted"));});
+      else badges.appendChild(archiveBadge("Sin evidencia visible con este filtro","muted"));
+      if(item.verifiedClaimCount)badges.appendChild(archiveBadge(item.verifiedClaimCount+" afirmaciones visibles","muted"));
+      copy.appendChild(badges);
+      const actions=archiveElement("div","archive-card-actions"),open=archiveElement("button","archive-open-button","Abrir ficha ↗");
+      open.type="button";open.dataset.archiveOpen=item.id;open.dataset.archiveContinuity=item.preferredContinuity;actions.appendChild(open);copy.appendChild(actions);card.appendChild(copy);results.appendChild(card);
+    });
+  }
+  function renderArchiveHeader(profile){
+    $("#archive-profile-name").textContent=profile.name;$("#archive-profile-eyebrow").textContent="FICHA DE PERSONAJE · "+profile.id;
+    $("#archive-profile-summary").textContent=profile.state.summary;$("#archive-profile-state-note").textContent=profile.state.period;
+    const p=$("#archive-profile-portrait"),visual=archivePortrait(profile.id,profile.name,true);p.className=visual.className;p.setAttribute("aria-label",visual.getAttribute("aria-label"));p.replaceChildren(...Array.from(visual.childNodes));
+    const badges=$("#archive-profile-badges");badges.replaceChildren();badges.append(archiveBadge(profile.continuityLabel,"continuity"),archiveBadge(profile.state.affiliation,"muted"),archiveBadge("Estado provisional","muted"));
+    if(profile.claims.some(c=>["major","endgame"].includes(String(c.spoilerLevel||"").toLowerCase())))badges.appendChild(archiveBadge("Incluye spoilers","spoiler"));
+    const select=$("#archive-profile-continuity");select.replaceChildren();
+    window.WordWaifuCharacterArchive.continuityOrder.forEach(scope=>{const opt=new Option((window.WordWaifuCharacterArchive.continuityLabels[scope]||scope)+(profile.availableContinuities.includes(scope)?"":" · sin evidencia registrada"),scope);if(!profile.availableContinuities.includes(scope))opt.disabled=true;select.appendChild(opt);});
+    select.value=profile.continuity;$("#archive-profile-spoiler").value=$("#archive-spoiler").value;$("#archive-profile-back").textContent=archiveNavigationStack.length?"← Volver a ficha anterior":"← Volver a resultados";
+    $("#archive-return-search").classList.remove("hidden");
+    $$("#archive-profile-tabs [role=tab]").forEach(tab=>{const yes=tab.dataset.profileTab===activeArchiveTab;tab.setAttribute("aria-selected",yes?"true":"false");tab.tabIndex=yes?0:-1;});
+    $("#archive-profile-panel").setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
+  }
+  function renderArchiveRelationship(rel){
+    const card=archiveElement("article","archive-relationship-card");card.appendChild(archivePortrait(rel.targetId,rel.targetName,false));
+    const copy=archiveElement("div","archive-relationship-copy");copy.appendChild(archiveElement("h4","",rel.targetName));copy.appendChild(archiveElement("p","archive-relationship-type",rel.type+" · "+rel.continuity));copy.appendChild(archiveElement("p","",rel.description));
+    const badges=archiveElement("div","archive-badge-row");badges.append(archiveBadge(rel.continuity,"continuity"),archiveBadge(rel.period,"muted"));copy.appendChild(badges);
+    const actions=archiveElement("div","archive-card-actions");
+    if(rel.available){const link=archiveElement("button","archive-related-link",rel.label+" · Abrir ficha ↗");link.type="button";link.dataset.characterLink=rel.targetId;link.dataset.linkContinuity=rel.continuity;actions.appendChild(link);}
+    else actions.appendChild(archiveElement("span","archive-unavailable","Ficha pendiente; no se creó un enlace roto."));
+    copy.appendChild(actions);rel.claims.forEach(c=>copy.appendChild(archiveEvidence(c)));card.appendChild(copy);return card;
+  }
+  const archiveMomentArt={
+    "ryu-justice":"./assets/lore-moments/ryu-justice.svg",
+    "ryu-evilus":"./assets/lore-moments/ryu-evilus.svg",
+    "ryu-seven-days":"./assets/lore-moments/ryu-seven-days.svg"
+  };
+  function renderArchiveMoment(moment){
+    const d=archiveElement("details","archive-moment-card");d.dataset.momentId=moment.id;
+    const summary=archiveElement("summary"),icon=archiveElement("span","archive-moment-icon",moment.id.includes("seven")?"◷":moment.id.includes("evilus")?"⚔":"✧");icon.setAttribute("aria-hidden","true");
+    const title=archiveElement("span","archive-moment-title");title.append(archiveElement("strong","",moment.title),archiveElement("small","",moment.period));
+    summary.append(icon,title);
+    const artPath=archiveMomentArt[moment.id];
+    if(artPath){
+      const art=archiveElement("img","archive-moment-art");art.src=artPath;art.alt="Recreación conceptual original no oficial: "+moment.title;art.loading="eager";art.decoding="async";art.dataset.momentArt=moment.id;
+      summary.appendChild(art);
+      summary.appendChild(archiveElement("span","archive-moment-art-caption","RECREACIÓN CONCEPTUAL · NO OFICIAL"));
+    }
+    summary.appendChild(archiveElement("span","archive-moment-excerpt",moment.summary));d.appendChild(summary);
+    const body=archiveElement("div","archive-moment-body");body.appendChild(archiveElement("p","",moment.summary));
+    const badges=archiveElement("div","archive-badge-row");if(moment.spoilerLevel!=="none")badges.appendChild(archiveBadge("Spoiler: "+moment.spoilerLevel,["major","endgame"].includes(moment.spoilerLevel)?"spoiler":"muted"));
+    moment.claims.forEach(c=>badges.appendChild(archiveBadge(c.claimId,"muted")));body.appendChild(badges);
+    if(moment.people.length){body.appendChild(archiveElement("p","","Personas con ficha mencionadas en la evidencia:"));const row=archiveElement("div","archive-character-links");moment.people.forEach(person=>{const b=archiveElement("button","archive-related-link",person.name+" ↗");b.type="button";b.dataset.characterLink=person.id;b.dataset.linkContinuity=activeArchiveContinuity;row.appendChild(b);});body.appendChild(row);}
+    else body.appendChild(archiveEmpty("No se ha identificado una lista completa de participantes."));
+    body.appendChild(archiveElement("p","","Fuentes y límites del resumen"));moment.claims.forEach(c=>body.appendChild(archiveEvidence(c)));d.appendChild(body);return d;
+  }
+  function renderArchiveSummary(profile){
+    const root=archiveElement("div","archive-profile-content"),overview=archiveElement("section","archive-section");
+    const top=archiveElement("div","archive-section-heading");top.append(archiveElement("h3","","Estado documentado"),archiveElement("p","","Solo información de la continuidad seleccionada."));overview.appendChild(top);
+    const grid=archiveElement("div","archive-overview-grid"),identity=archiveElement("article","archive-info-card"),motivation=archiveElement("article","archive-info-card");
+    identity.append(archiveElement("h4","","Identidad y afiliación"),archiveElement("p","",profile.state.affiliation),archiveElement("p","","ID estable: "+profile.id),archiveGoTab("sources","Ver fuentes"));
+    const m=profile.claims.find(c=>(c.aspects||[]).includes("motivation"));motivation.append(archiveElement("h4","","Valores y motivaciones"),archiveElement("p","",m?m.claim:"Sin información suficiente en esta continuidad."),archiveGoTab("personality","Explorar personalidad"));
+    grid.append(identity,motivation);overview.appendChild(grid);root.appendChild(overview);
+    const relSection=archiveElement("section","archive-section"),rh=archiveElement("div","archive-section-heading");rh.append(archiveElement("h3","","Personas relacionadas"),archiveGoTab("relationships","Ver red completa"));relSection.appendChild(rh);
+    const relGrid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.slice(0,4).forEach(r=>relGrid.appendChild(renderArchiveRelationship(r)));else relGrid.appendChild(archiveEmpty("No hay vínculos personales respaldados para esta continuidad."));relSection.appendChild(relGrid);root.appendChild(relSection);
+    const momentSection=archiveElement("section","archive-section"),mh=archiveElement("div","archive-section-heading");mh.append(archiveElement("h3","","Momentos importantes"),archiveGoTab("moments","Ver momentos y contexto"));momentSection.appendChild(mh);
+    const moments=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.slice(0,3).forEach(mo=>moments.appendChild(renderArchiveMoment(mo)));else moments.appendChild(archiveEmpty("No hay suficientes acontecimientos curados para esta continuidad."));momentSection.appendChild(moments);root.appendChild(momentSection);
+    const more=archiveElement("section","archive-more-info-cta");more.append(archiveElement("h3","","¿Querés conocer mejor a "+profile.name+"?"),archiveElement("p","","Abrí un resumen ampliado con contexto, evolución, límites de la evidencia y referencias en español cuando están disponibles."));
+    const moreButton=archiveElement("button","primary-button","Más info · resumen ampliado ↗");moreButton.type="button";moreButton.dataset.archiveMoreInfo="true";more.appendChild(moreButton);root.prepend(more);return root;
+  }
+  function renderArchivePersonality(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Personalidad y psicología"),archiveElement("p","","Cada categoría se completa solo con afirmaciones del estado seleccionado."));root.appendChild(h);
+    const grid=archiveElement("div","archive-personality-grid");
+    [{key:"motivation",label:"Valores y motivaciones"},{key:"personality",label:"Temperamento y rasgos"},{key:"behavior",label:"Conducta y hábitos"},{key:"likes",label:"Gustos y preferencias"},{key:"fears",label:"Miedos y vulnerabilidades"},{key:"evolution",label:"Evolución emocional y psicológica"},{key:"voice",label:"Forma de hablar"}].forEach(cat=>{
+      const card=archiveElement("article","archive-psychology-card");card.appendChild(archiveElement("h4","",cat.label));
+      const matches=profile.claims.filter(c=>(c.aspects||[]).includes(cat.key));
+      if(!matches.length)card.appendChild(archiveEmpty("Sin información suficiente para esta categoría en "+profile.continuity+"."));
+      else matches.forEach(c=>{card.appendChild(archiveElement("p","",c.claim));card.appendChild(archiveEvidence(c));});grid.appendChild(card);
+    });
+    root.append(grid,archiveElement("p","archive-research-note","No se infieren gustos, temores, diagnósticos, pensamientos privados ni patrones de habla a partir de la ausencia de datos o de un acontecimiento traumático."));return root;
+  }
+  function renderArchiveRelationships(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Personas relacionadas"),archiveElement("p","","Se distingue la guía o afiliación documentada de una amistad, rivalidad o relación no demostrada."));root.appendChild(h);
+    const grid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.forEach(r=>grid.appendChild(renderArchiveRelationship(r)));else grid.appendChild(archiveEmpty("No hay relaciones interpersonales documentadas para "+profile.continuity+". No se trasladan vínculos de otros periodos."));root.appendChild(grid);return root;
+  }
+  function renderArchiveMoments(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Momentos importantes"),archiveElement("p","","Abrí una tarjeta para ver el contexto, las personas mencionadas y su evidencia. Las sinopsis no son el texto íntegro de las novelas."));root.appendChild(h);
+    const grid=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.forEach(m=>grid.appendChild(renderArchiveMoment(m)));else grid.appendChild(archiveEmpty("El corpus no contiene suficientes acontecimientos específicos para crear tarjetas de momentos en esta continuidad."));root.appendChild(grid);return root;
+  }
+  function renderArchiveTimeline(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Cronología documentada"),archiveElement("p","","Usa anclas relativas y volúmenes cuando las fuentes los proporcionan; no inventa fechas absolutas."));root.appendChild(h);
+    if(!profile.timeline.length){root.appendChild(archiveEmpty("No hay cronología suficiente para esta continuidad."));return root;}
+    const list=archiveElement("ol","archive-timeline");profile.timeline.forEach(item=>{const li=archiveElement("li","archive-timeline-item");li.append(archiveElement("h4","",item.title),archiveElement("p","archive-research-note",item.period));item.claims.forEach(c=>{li.appendChild(archiveElement("p","",c.claim));li.appendChild(archiveEvidence(c));});list.appendChild(li);});root.appendChild(list);return root;
+  }
+  function renderArchiveSources(profile){
+    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Fuentes y evidencias"),archiveElement("p","","Cada afirmación conserva IDs, fuente, localizador, continuidad, tipo de evidencia, verificación, periodo, límites y spoiler cuando están disponibles."));root.appendChild(h);
+    root.appendChild(archiveElement("p","archive-research-note",profile.claims.length+" afirmación(es) visibles en "+profile.continuity+" con el filtro de spoilers actual."));
+    if(profile.claims.length){const grid=archiveElement("div","archive-source-grid");profile.claims.forEach(c=>grid.appendChild(archiveClaimCard(c)));root.appendChild(grid);}else root.appendChild(archiveEmpty("No hay afirmaciones visibles con esta combinación de continuidad y spoiler."));
+    if(profile.missingContinuities.length)root.appendChild(archiveElement("p","archive-return-note","Sin evidencia utilizable incorporada para "+profile.missingContinuities.join(" y ")+" en esta ficha. No se sustituye por datos del anime."));
+    return root;
+  }
+  function openArchiveMoreInfo(){
+    if(!activeArchiveProfile)return;
+    const profile=activeArchiveProfile;
+    const info=window.WordWaifuCharacterArchive.getExtendedInfo(profile.id,profile.continuity,loreArchiveIndex);
+    const dialog=$("#archive-more-info-dialog"),body=$("#archive-more-info-content");
+    $("#archive-more-info-title").textContent=info?info.title:(profile.name+" · resumen ampliado");
+    body.replaceChildren();
+    if(info){
+      body.appendChild(archiveElement("p","archive-more-info-lead",info.summary));
+      if(info.repositoryProfile){
+        const sourceNote=archiveElement("p","archive-more-info-disclaimer",
+          "También se recuperaron notas existentes del repositorio: "+info.repositoryProfile.path+
+          " · estado documental: "+info.repositoryProfile.status+
+          ". Los apartados temporales se muestran por separado; los datos pendientes siguen marcados como tales.");
+        body.appendChild(sourceNote);
+      }
+      (info.sections||[]).forEach(section=>{
+        const block=archiveElement("section","archive-more-info-section");
+        block.append(archiveElement("h3","",section.title),archiveElement("p","",section.text));
+        body.appendChild(block);
+      });
+      const refs=archiveElement("section","archive-more-info-section"),heading=archiveElement("h3","","Referencias para seguir leyendo");
+      refs.appendChild(heading);
+      (info.references||[]).forEach(ref=>{
+        const item=archiveElement("div","archive-more-info-reference");
+        item.appendChild(archiveElement("span","archive-reference-kind",ref.kind==="community"?"WIKI COMUNITARIA · NO OFICIAL":"FUENTE OFICIAL / PRIMARIA"));
+        appendLoreLink(item,ref.label,ref.url,true);
+        refs.appendChild(item);
+      });
+      if(info.galleryUrl){
+        const gallery=archiveElement("a","archive-gallery-link","Ver galería de imágenes en la wiki comunitaria ↗");
+        gallery.href=info.galleryUrl;gallery.target="_blank";gallery.rel="noopener noreferrer";
+        const imageNote=archiveElement("p","archive-research-note","La galería abre fuera de WordWaifu. Las imágenes y sus derechos pertenecen a sus titulares; no se copian al repositorio.");
+        refs.append(imageNote,gallery);
+      }
+      body.appendChild(refs);
+    }else{
+      body.appendChild(archiveElement("p","archive-more-info-lead",profile.state.summary));
+      body.appendChild(archiveElement("p","archive-research-note","El detalle narrativo de esta ficha está pendiente de investigación; no rellenamos los apartados faltantes con datos inventados."));
+      const refs=archiveElement("section","archive-more-info-section");
+      refs.appendChild(archiveElement("h3","","Afirmaciones documentadas"));
+      profile.claims.forEach(claim=>refs.appendChild(archiveClaimCard(claim)));
+      body.appendChild(refs);
+    }
+    if(!dialog.open)dialog.showModal();
+  }
+  function closeDialogFromBackdrop(event){
+    if(event.target===event.currentTarget)event.currentTarget.close();
+  }
+  function renderArchiveTab(){
+    const panel=$("#archive-profile-panel");if(!panel||!activeArchiveProfile)return;panel.replaceChildren();
+    const draw={summary:renderArchiveSummary,personality:renderArchivePersonality,relationships:renderArchiveRelationships,moments:renderArchiveMoments,timeline:renderArchiveTimeline,sources:renderArchiveSources};
+    panel.appendChild((draw[activeArchiveTab]||renderArchiveSummary)(activeArchiveProfile));panel.setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
+  }
+  function renderArchiveProfile(){
+    if(!activeArchiveCharacterId||!loreArchiveIndex)return;
+    activeArchiveProfile=window.WordWaifuCharacterArchive.getProfile(loreArchiveIndex,activeArchiveCharacterId,activeArchiveContinuity,$("#archive-spoiler").value);
+    if(!activeArchiveProfile){returnToArchiveDirectory();return;}
+    activeArchiveContinuity=activeArchiveProfile.continuity;
+    $("#character-archive-directory").classList.add("hidden");$("#character-archive-profile").classList.remove("hidden");
+    renderArchiveHeader(activeArchiveProfile);renderArchiveTab();
+  }
+  function openArchiveProfile(id,continuity,remember){
+    if(!loreArchiveIndex||!loreArchiveIndex.characters.some(c=>c.id===id))return;
+    if(remember&&activeArchiveCharacterId&&activeArchiveCharacterId!==id)archiveNavigationStack.push({id:activeArchiveCharacterId,continuity:activeArchiveContinuity,tab:activeArchiveTab});
+    activeArchiveCharacterId=id;const candidate=window.WordWaifuCharacterArchive.getProfile(loreArchiveIndex,id,continuity,$("#archive-spoiler").value);
+    activeArchiveContinuity=candidate?candidate.continuity:"";activeArchiveTab="summary";renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});
+  }
+  function returnToArchiveDirectory(){
+    activeArchiveCharacterId=null;activeArchiveContinuity=null;activeArchiveProfile=null;archiveNavigationStack.length=0;
+    $("#character-archive-profile").classList.add("hidden");$("#character-archive-directory").classList.remove("hidden");renderCharacterDirectory();$("#character-archive-query").focus();
+  }
+  function backInArchiveNavigation(){const old=archiveNavigationStack.pop();if(!old){returnToArchiveDirectory();return;}activeArchiveCharacterId=old.id;activeArchiveContinuity=old.continuity;activeArchiveTab=old.tab;renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});}
+  $("#character-archive-query").addEventListener("input",()=>{$("#global-search").value=$("#character-archive-query").value;if(loreArchiveIndex)renderCharacterDirectory();else void prepareLoreView().catch(e=>$("#archive-directory-status").textContent="No se pudo preparar el índice: "+e.message);});
+  $("#archive-continuity").addEventListener("change",()=>{if(loreArchiveIndex)renderCharacterDirectory();});
+  $("#archive-quick-filters").addEventListener("click",event=>{
+    const button=event.target.closest("[data-archive-scope]");
+    if(!button)return;
+    $("#archive-continuity").value=button.dataset.archiveScope;
+    if(loreArchiveIndex)renderCharacterDirectory();
+  });
+  $("#archive-clear-filters").addEventListener("click",()=>{
+    $("#character-archive-query").value="";
+    $("#global-search").value="";
+    $("#archive-continuity").value="ALL";
+    $("#archive-spoiler").value="all";
+    $("#archive-profile-spoiler").value="all";
+    if(loreArchiveIndex)renderCharacterDirectory();
+    $("#character-archive-query").focus();
+  });
+  $("#archive-spoiler").addEventListener("change",()=>{if(!loreArchiveIndex)return;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
+  $("#archive-profile-spoiler").addEventListener("change",event=>{if(!loreArchiveIndex)return;$("#archive-spoiler").value=event.target.value;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
+  $("#character-archive-results").addEventListener("click",e=>{const b=e.target.closest("[data-archive-open]");if(b)openArchiveProfile(b.dataset.archiveOpen,b.dataset.archiveContinuity,false);});
+  $("#archive-profile-back").addEventListener("click",backInArchiveNavigation);
+  $("#archive-return-search").addEventListener("click",returnToArchiveDirectory);
+  $("#archive-profile-continuity").addEventListener("change",e=>{activeArchiveContinuity=e.target.value;activeArchiveTab="summary";renderArchiveProfile();});
+  $("#archive-profile-tabs").addEventListener("click",e=>{const t=e.target.closest("[data-profile-tab]");if(!t)return;activeArchiveTab=t.dataset.profileTab;renderArchiveHeader(activeArchiveProfile);renderArchiveTab();});
+
+  $("#archive-profile-panel").addEventListener("click",e=>{
+    const more=e.target.closest("button[data-archive-more-info]");
+    if(more){openArchiveMoreInfo();return;}
+    const t=e.target.closest("button[data-profile-tab]");
+    if(!t||!activeArchiveProfile)return;
+    activeArchiveTab=t.dataset.profileTab;
+    renderArchiveHeader(activeArchiveProfile);
+    renderArchiveTab();
+  });
+  $("#archive-more-info-close").addEventListener("click",()=>$("#archive-more-info-dialog").close());
+  $("#content-rights-open").addEventListener("click",()=>$("#content-rights-dialog").showModal());
+  $("#content-rights-close").addEventListener("click",()=>$("#content-rights-dialog").close());
+  $("#archive-more-info-dialog").addEventListener("click",closeDialogFromBackdrop);
+  $("#content-rights-dialog").addEventListener("click",closeDialogFromBackdrop);
+  $("#archive-profile-tabs").addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;const tabs=$("#archive-profile-tabs [role=tab]"),i=tabs.indexOf(e.target.closest("[role=tab]"));if(i<0)return;e.preventDefault();const n=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[n].focus();tabs[n].click();});
+  $("#character-archive-profile").addEventListener("click",e=>{const b=e.target.closest("[data-character-link]");if(!b||!loreArchiveIndex.characters.some(c=>c.id===b.dataset.characterLink))return;openArchiveProfile(b.dataset.characterLink,b.dataset.linkContinuity,true);});
+  async function prepareLoreView() {
+    const status = $("#lore-search-status");
+    status.textContent = "Leyendo las afirmaciones curadas desde el repositorio…";
+    if (!window.WordWaifuLoreCorpus) throw new Error("El módulo de búsqueda no está cargado.");
+    if (!loreIndexPromise) loreIndexPromise = window.WordWaifuLoreCorpus.load("./lore/danmachi/");
+    const index = await loreIndexPromise;
+    if (!onlineSourceDirectoryPrepared) { renderOnlineSourceDirectory(); onlineSourceDirectoryPrepared = true; }
+    if (!lorePanelPrepared) {
+      const select = $("#lore-character"), selected = select.value;
+      select.replaceChildren(new Option("Cualquier personaje", ""));
+      index.characters.forEach(character => select.appendChild(new Option(character.name, character.id)));
+      select.value = selected;
+      lorePanelPrepared = true;
+    }
+    status.textContent = "Leídas " + index.sourceClaimCount + " afirmaciones; " + index.entryCount + " entradas de búsqueda y " + (index.profileDocumentCount || 0) + " fichas previas recuperadas del repositorio. Búsqueda textual, sin IA; el corpus aún es parcial.";
+    loreArchiveIndex = index;
+    if (!archiveUiPrepared) { renderCharacterDirectory(); archiveUiPrepared = true; }
+    return index;
+  }
+  function appendLoreLink(container, label, href, external) {
+    if (!href) return;
+    let url; try { url = new URL(href, window.location.href); } catch { return; }
+    if (url.protocol !== "https:" && url.protocol !== "http:") return;
+    const link = document.createElement("a"); link.href = url.href; link.textContent = label;
+    if (external) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
+    container.appendChild(link);
+  }
+
+  function renderOnlineSourceDirectory() {
+    const root = $("#lore-source-directory");
+    if (!root || !window.WordWaifuLoreCorpus) return;
+    root.replaceChildren();
+    const sources = window.WordWaifuLoreCorpus.getOnlineSourceDirectory();
+    const groups = [
+      { key:"official", title:"Prioridad alta · fuentes oficiales y editoriales", note:"Usalas para verificar lo que realmente publican. Una página oficial del anime sigue describiendo la adaptación; una sinopsis editorial no reemplaza el libro completo.", badge:"OFICIAL / EDITORIAL" },
+      { key:"community", title:"Apoyo para descubrir referencias · fuentes secundarias", note:"Útiles como índice y mapa de términos; cada afirmación relevante necesita una referencia comprobable antes de aprobarse.", badge:"SECUNDARIA" }
+    ];
+    groups.forEach(group=>{
+      const section=archiveElement("section","lore-source-directory-group");
+      section.append(archiveElement("h4","",group.title),archiveElement("p","lore-online-note",group.note));
+      const grid=archiveElement("div","lore-online-directory-grid");
+      sources.filter(source=>source.category===group.key).forEach(source=>{
+        const card=archiveElement("article","lore-online-source-card");
+        card.append(archiveElement("span","lore-online-tier",group.badge),archiveElement("h5","",source.title),
+          archiveElement("p","",source.coverage),archiveElement("p","lore-online-limit","Límite: "+source.limits));
+        appendLoreLink(card,"Abrir fuente ↗",source.url,true);
+        grid.appendChild(card);
+      });
+      section.appendChild(grid); root.appendChild(section);
+    });
+  }
+  async function runOnlineLoreSearch() {
+    const button=$("#lore-web-search-button"), status=$("#lore-online-status"), root=$("#lore-online-results");
+    root.replaceChildren(); button.disabled=true;
+    try {
+      const index=await prepareLoreView();
+      const typed=$("#lore-query").value.trim();
+      const selectedCharacter=index.characters.find(character=>character.id===$("#lore-character").value);
+      const query=typed||(selectedCharacter?selectedCharacter.name:"DanMachi");
+      status.textContent="Buscando «"+query+"» en dos fuentes secundarias… La respuesta puede depender de su disponibilidad y no confirma canon.";
+      const controller=typeof AbortController==="function"?new AbortController():null;
+      const timeout=controller?setTimeout(()=>controller.abort(),12000):null;
+      let report;
+      try { report=await window.WordWaifuLoreCorpus.searchExternalSources(query,{signal:controller?controller.signal:undefined}); }
+      finally { if(timeout!==null)clearTimeout(timeout); }
+      status.textContent=report.results.length+" resultado(s) web recibido(s) para «"+query+"». Son pistas secundarias: contrastá el dato en una fuente oficial o en el volumen correspondiente antes de marcarlo como confirmado."+
+        (report.hasFailures?" Una o más fuentes no respondieron; abajo queda disponible la búsqueda directa.":"");
+      report.providers.forEach(provider=>{
+        const section=archiveElement("section","lore-online-provider");
+        section.append(archiveElement("h4","",provider.providerLabel),archiveElement("p","lore-online-note",provider.authority+". "+provider.note));
+        if(provider.results.length) provider.results.forEach(hit=>{
+          const card=archiveElement("article","lore-online-result-card");
+          card.append(archiveElement("h5","",hit.title),archiveElement("p","",hit.snippet),archiveElement("span","lore-online-tier","Resultado externo · no verificado"));
+          appendLoreLink(card,"Abrir artículo ↗",hit.url,true); section.appendChild(card);
+        });
+        else {
+          const explanation=provider.error?"No se pudo consultar la API ahora ("+provider.error+"). Podés abrir la búsqueda del sitio directamente.":"La búsqueda no devolvió resultados para esta frase.";
+          section.appendChild(archiveElement("p","lore-online-limit",explanation));
+        }
+        appendLoreLink(section,"Buscar directamente en "+provider.providerLabel+" ↗",provider.searchUrl,true);
+        root.appendChild(section);
+      });
+    } catch(error) {
+      status.textContent="La búsqueda web no se pudo completar: "+(error&&error.message?error.message:"error desconocido")+". El archivo local sigue funcionando; abrí el directorio de fuentes para continuar manualmente.";
+    } finally { button.disabled=false; }
+  }
+
+  async function runLoreSearch(event) {
+    event.preventDefault();
+    const status = $("#lore-search-status"), resultsNode = $("#lore-results"), button = $("#lore-search-form button[type='submit']");
+    resultsNode.replaceChildren(); button.disabled = true;
+    try {
+      const index = await prepareLoreView();
+      const report = window.WordWaifuLoreCorpus.search(index, {
+        query: $("#lore-query").value, characterId: $("#lore-character").value,
+        continuity: $("#lore-continuity").value, period: $("#lore-period").value,
+        aspect: $("#lore-aspect").value, spoiler: $("#lore-spoiler").value, limit: 30
+      });
+      if (!report.results.length) {
+        status.textContent = "No se encontró evidencia en el corpus consultado para esos filtros. Esto no demuestra que el dato no exista en el canon: no inventes una respuesta; busca una fuente o escena que lo documente.";
+        return;
+      }
+      status.textContent = report.totalMatches + " afirmación(es) coincidente(s); mostrando " + report.results.length +
+        ". Se conservan continuidad y nivel de verificación." + (report.truncated ? " Se alcanzó el límite de resultados." : "");
+      report.results.forEach(item => {
+        const card = document.createElement("article"); card.className = "lore-result";
+        card.dataset.claimId = item.claimId; card.dataset.entryId = item.entryId; card.dataset.continuity = item.continuityScopes.join(",");
+        const title = document.createElement("h3"); title.textContent = item.heading || item.claimId;
+        const claim = document.createElement("p"); claim.className = "lore-result-claim"; claim.textContent = item.claim;
+        const meta = document.createElement("p"); meta.className = "lore-result-meta";
+        meta.textContent = ["Personaje: " + (item.characterNames.join(", ") || "general"), "Aspecto: " + item.aspect,
+          "Continuidad: " + item.continuityScopes.join(", "), "Periodo: " + (item.eraOrInterval || item.periodKey || "no determinado"),
+          "Evidencia: " + item.evidenceType, "Verificación: " + item.verificationStatus, "Spoiler: " + item.spoilerLevel].join(" · ");
+        const source = document.createElement("p"); source.className = "lore-result-source";
+        source.textContent = "Fuente: " + (item.sourceTitle || item.sourceIds.join(", ") || "sin título") +
+          (item.sourceLocator ? " · Localizador: " + item.sourceLocator : "");
+        const links = document.createElement("div"); links.className = "lore-result-links";
+        (item.sourceUrls || []).forEach((url, i) => appendLoreLink(links, item.sourceUrls.length > 1 ? "Fuente " + (i + 1) : "Abrir fuente original", url, true));
+        if (item.profilePaths && item.profilePaths[0]) appendLoreLink(links, "Abrir ficha del personaje", "./lore/danmachi/" + item.profilePaths[0], false);
+        card.append(title, claim, meta, source);
+        if (item.confidenceNote) { const note = document.createElement("p"); note.className = "lore-result-note"; note.textContent = "Límite: " + item.confidenceNote; card.appendChild(note); }
+        if (links.childNodes.length) card.appendChild(links);
+        resultsNode.appendChild(card);
+      });
+    } catch (error) {
+      status.textContent = "La consulta no pudo completarse: " + error.message + " Abrí WordWaifu desde un servidor HTTP (por ejemplo, el puerto privado de Codespaces), no como archivo file://.";
+    } finally { button.disabled = false; }
+  }
+  $("#lore-search-form").addEventListener("submit", event => { void runLoreSearch(event); });
+  $("#lore-web-search-button").addEventListener("click", () => { void runOnlineLoreSearch(); });
+  $("#lore-clear-button").addEventListener("click", () => {
+    $("#lore-query").value = ""; $("#lore-character").value = ""; $("#lore-continuity").value = "ALL";
+    $("#lore-period").value = "ALL"; $("#lore-aspect").value = "all"; $("#lore-spoiler").value = "all";
+    $("#lore-results").replaceChildren(); void prepareLoreView().catch(() => {});
+  });
+
   function executeCommand(raw) {
     const command = raw.trim();
     const lower = command.toLowerCase();
@@ -1867,7 +2438,10 @@
     log.scrollTop = log.scrollHeight;
   }
 
-  $$(".nav-item").forEach((button) => button.addEventListener("click", () => navigate(button.dataset.view)));
+  $$(".nav-item").forEach((button) => button.addEventListener("click", () => {
+    navigate(button.dataset.view);
+    if (button.dataset.view === "lore") void prepareLoreView().catch(() => {});
+  }));
   $$(".map-marker").forEach((marker) => {
     const activate = () => showLocation(marker.dataset.location);
     marker.addEventListener("click", activate);
@@ -1888,16 +2462,109 @@
   $("#zoom-in").addEventListener("click", () => { mapScale = Math.min(1.65, mapScale + .12); renderMap(); });
   $("#zoom-out").addEventListener("click", () => { mapScale = Math.max(.75, mapScale - .12); renderMap(); });
   $("#zoom-reset").addEventListener("click", () => { mapScale = 1; renderMap(); });
+  function projectHasGlobalSearchMatch(rawQuery) {
+    const normalize = (value) => String(value || "").trim().toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const needle = normalize(rawQuery);
+    if (!needle) return false;
+    const names = [
+      ...state.characters.map((item) => item.name),
+      ...state.locations.map((item) => item.name),
+      ...state.events.map((item) => item.name || item.title),
+      ...state.organizations.map((item) => item.name),
+      ...state.relationships.map((item) => item.name),
+      ...state.stories.map((item) => item.name || item.title)
+    ];
+    const relevantNames = activeView === "atlas"
+      ? [...state.characters.map((item) => item.name), ...state.locations.map((item) => item.name)]
+      : names;
+    return relevantNames.some((value) => normalize(value).includes(needle));
+  }
+
+  function resetArchiveForGlobalSearch(rawQuery) {
+    const queryField = $("#character-archive-query");
+    if (!queryField) return;
+    queryField.value = rawQuery;
+    if (activeArchiveCharacterId) {
+      activeArchiveCharacterId = null;
+      activeArchiveContinuity = null;
+      activeArchiveProfile = null;
+      archiveNavigationStack.length = 0;
+    }
+    $("#character-archive-profile").classList.add("hidden");
+    $("#character-archive-directory").classList.remove("hidden");
+    if (loreArchiveIndex) renderCharacterDirectory();
+    else void prepareLoreView().then(() => {
+      if (activeView === "lore" && $("#global-search").value.trim() === rawQuery) renderCharacterDirectory();
+    }).catch((error) => {
+      $("#archive-directory-status").textContent = "No se pudo cargar el archivo de DanMachi: " + error.message;
+    });
+  }
+
+  async function searchArchiveFromGlobalSearch(rawQuery, forceOpen = false) {
+    const query = String(rawQuery || "").trim();
+    if (query.length < 2) return;
+    if (activeView === "lore") {
+      resetArchiveForGlobalSearch(query);
+      return;
+    }
+    if (!forceOpen && projectHasGlobalSearchMatch(query)) return;
+
+    // Move to the archive immediately so the search has a visible destination while its
+    // local corpus loads. Do not silently leave the user on the Atlas when there are no
+    // matching claims: the directory can explain that there are no results.
+    navigate("lore");
+    $("#archive-continuity").value = "ALL";
+    $("#archive-spoiler").value = "all";
+    $("#character-archive-query").value = query;
+    $("#character-archive-profile").classList.add("hidden");
+    $("#character-archive-directory").classList.remove("hidden");
+    $("#archive-directory-status").textContent = "Buscando en la enciclopedia de personajes…";
+
+    try {
+      const index = await prepareLoreView();
+      if ($("#global-search").value.trim() !== query || activeView !== "lore") return;
+      if (!window.WordWaifuCharacterArchive) throw new Error("El módulo de fichas no está cargado.");
+      window.WordWaifuCharacterArchive.list(index, { query, continuity: "ALL", spoiler: "all" });
+      renderCharacterDirectory();
+      $("#character-archive-directory").scrollIntoView({ block: "start", behavior: "auto" });
+    } catch (error) {
+      if ($("#global-search").value.trim() === query && activeView === "lore") {
+        $("#archive-directory-status").textContent = "No se pudo cargar el archivo de DanMachi: " + error.message;
+      }
+    }
+  }
+
   $("#global-search").addEventListener("input", () => {
+    const rawQuery = $("#global-search").value.trim();
+    if (activeView === "lore") {
+      resetArchiveForGlobalSearch(rawQuery);
+      return;
+    }
     if (activeView === "atlas") {
-      const query = $("#global-search").value.trim().toLowerCase();
-      const found = state.locations.find((location) => location.name.toLowerCase().includes(query));
+      const query = rawQuery.toLocaleLowerCase("es");
+      const found = state.locations.find((location) => location.name.toLocaleLowerCase("es").includes(query));
       if (query && found) { selectedLocationId = found.id; renderDetails(); renderMap(); }
       else if (query) {
-        const person = state.characters.find((character) => character.name.toLowerCase().includes(query));
+        const person = state.characters.find((character) => character.name.toLocaleLowerCase("es").includes(query));
         if (person) openCharacter(person.id);
       }
     } else renderDirectory();
+    if (rawQuery.length >= 2 && !projectHasGlobalSearchMatch(rawQuery)) {
+      void searchArchiveFromGlobalSearch(rawQuery, false);
+    }
+  });
+  $("#global-search").addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    const query = $("#global-search").value.trim();
+    if (query.length < 2) return;
+    if (activeView === "lore") {
+      event.preventDefault();
+      resetArchiveForGlobalSearch(query);
+      return;
+    }
+    if (projectHasGlobalSearchMatch(query)) return;
+    event.preventDefault();
+    void searchArchiveFromGlobalSearch(query, true);
   });
   $("#add-button").addEventListener("click", addEntity);
   $("#entity-form").addEventListener("submit", handleEntitySubmit);
@@ -1930,6 +2597,12 @@
   $("#trash-restore-button").addEventListener("click", restoreSelectedTrashedProject);
   $("#trash-delete-button").addEventListener("click", permanentlyDeleteSelectedTrashedProject);
   $("#project-open-button").addEventListener("click", openSelectedProject);
+  $("#project-trash-list").addEventListener("change", updateProjectTrashControls);
+  $("#project-trash-refresh-button").addEventListener("click", () => refreshTrashList().catch((error) => {
+    $("#project-trash-status").textContent = "No se pudo actualizar la papelera: " + error.message;
+  }));
+  $("#project-trash-restore-button").addEventListener("click", restoreSelectedTrashedProject);
+  $("#project-trash-purge-button").addEventListener("click", permanentlyDeleteSelectedTrashedProject);
   $("#project-create-button").addEventListener("click", createNamedProject);
   $("#project-close-button").addEventListener("click", () => $("#project-dialog").close());
   $("#create-project-name").addEventListener("input", () => $("#create-project-name").setCustomValidity(""));

@@ -17,7 +17,7 @@
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
 - Workflow de validación configurado para pushes en `main` y `work/**`, PR hacia `main` y `workflow_dispatch`: [`4502475`](https://github.com/jonhararagi/wordwaifu/commit/4502475cdf9b536c0c5d6dbf51a83efc7408ae6d).
 
-## Funcionalidad con evidencia previa
+## Capacidad con evidencia automatizada
 - **WF-001-B:** CRUD de lugares, movimiento SVG y borrado seguro.
 - **WF-002-A/B/C:** CRUD de personajes, acontecimientos y organizaciones con limpieza selectiva de referencias.
 - **WF-003-A:** relaciones con ID estable y proyección compatible.
