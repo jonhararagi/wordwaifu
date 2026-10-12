@@ -2489,7 +2489,7 @@ async function run() {
     assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
 
     // IndexedDB CRUD and reload: edit an existing assignment, reload the app, then delete it.
-    const backgroundCard = page.locator("#art-assignments > .art-assignment-card").first();
+    const backgroundCard = page.locator('#art-assignments [data-art-key="background:bg-orario-night"]');
     await backgroundCard.getByRole("button", { name: "Editar" }).click();
     await page.locator("#art-prompt").fill("Panorámica revisada de Orario bajo la lluvia.");
     await page.locator("#art-save").click();
@@ -2501,7 +2501,7 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
     assert.ok((await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"))).prompt.includes("revisada"),
       "An edited IndexedDB assignment must survive a full page reload.");
-    await page.locator("#art-assignments > .art-assignment-card").first().getByRole("button", { name: "Eliminar" }).click();
+    await page.locator('#art-assignments [data-art-key="background:bg-orario-night"]').getByRole("button", { name: "Eliminar" }).click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
     assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
       "Deleting an IndexedDB assignment must remove it from storage.");
