@@ -175,8 +175,13 @@
   function search(query, options) {
     const settings = options || {}, q = normal(query).trim();
     const records = list(settings);
-    if (!q) return records.slice(0, 80);
+    if (!q) return records.slice(0, 80).filter(entity =>
+      !settings.continuity || settings.continuity === "all" ||
+      String(entity.continuity || "").includes(settings.continuity) ||
+      allEdges().some(edge => (edge.from === entity.id || edge.to === entity.id) && String(edge.continuity || "").includes(settings.continuity))
+    );
     const tokens = q.split(/\s+/).filter(Boolean);
+    const continuityEdges = settings.continuity && settings.continuity !== "all" ? allEdges() : [];
     return records.map(entity => {
       const haystack = normal([
         entity.name, ...(entity.aliases || []), entity.type, entity.summary, entity.description,
@@ -190,7 +195,8 @@
       const exact = normal(entity.name) === q ? 30 : normal(entity.name).startsWith(q) ? 15 : 0;
       return { entity, score:matched ? exact + tokens.length * 2 : -1 };
     }).filter(item => item.score >= 0)
-      .filter(item => !settings.continuity || settings.continuity === "all" || String(item.entity.continuity || "").includes(settings.continuity))
+      .filter(item => !settings.continuity || settings.continuity === "all" || String(item.entity.continuity || "").includes(settings.continuity) ||
+        continuityEdges.some(edge => (edge.from === item.entity.id || edge.to === item.entity.id) && String(edge.continuity || "").includes(settings.continuity)))
       .sort((a,b)=>b.score-a.score || a.entity.name.localeCompare(b.entity.name,"es")).slice(0,80).map(item=>item.entity);
   }
   function getEntity(id) { return allEntities().find(entity => entity.id === id) || null; }
