@@ -6,11 +6,12 @@ Este documento registra únicamente los últimos cambios y el estado comprobado 
 ## Estado remoto verificado
 
 - Rama de trabajo: `feature/danmachi-lore-poc`
-- HEAD verificado: `1b1a6e08c3e53d4a08bce4a7491753ed869eed79`
+- Último commit de código validado: `d9aa8d228cbbfb3f14002999c8add59901939a3e`
 - Rama principal `main`: `c07ef226a61ad6e48b081890f1e3d96eecb585b5`
 - La rama `main` no se modificó. No se fusionó nada, no se creó ningún PR y no se desplegó GitHub Pages.
-- [Commit HEAD](https://github.com/jonhararagi/wordwaifu/commit/1b1a6e08c3e53d4a08bce4a7491753ed869eed79)
-- [CI del HEAD — PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38204109356)
+- [Commit de código validado](https://github.com/jonhararagi/wordwaifu/commit/d9aa8d228cbbfb3f14002999c8add59901939a3e)
+- [CI del código nuevo — PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38204871299)
+- Este documento se actualizará en un commit posterior al código verificado; la referencia de arriba identifica el SHA exacto que ejecutó las pruebas.
 
 ## Qué se hizo
 
@@ -32,11 +33,18 @@ En `tests/browser_smoke.cjs`, el fixture `Archivo de Prueba` pasó de las coorde
 
 - [Commit de corrección del fixture](https://github.com/jonhararagi/wordwaifu/commit/1b1a6e08c3e53d4a08bce4a7491753ed869eed79)
 
+### 3. Panel más simple e interactivo
+
+En el commit `5c10e678` se incorporaron accesos rápidos `Todo el archivo`, `Astrea Record` y `Anime`, un botón `Restablecer` que limpia el término y los filtros de continuidad/spoilers, un contador dinámico de resultados y una nota visible que explica que las 12 fichas actuales son una selección parcial. El estado de los botones se sincroniza con `aria-pressed`; el diseño incluye adaptación para móvil. Se añadió una prueba de navegador que selecciona Astrea Record y después restablece y comprueba todos los filtros. En el siguiente commit se corrigió el sincronizador para usar `querySelectorAll`.
+
+- [Commit de la mejora del panel](https://github.com/jonhararagi/wordwaifu/commit/5c10e6783a3fb9f1d35b322fad5fa345dbc0d5c0)
+- [Commit de la corrección posterior](https://github.com/jonhararagi/wordwaifu/commit/d9aa8d228cbbfb3f14002999c8add59901939a3e)
+
 ## Qué quedó verificado
 
-La ejecución [38204109356](https://github.com/jonhararagi/wordwaifu/actions/runs/38204109356) terminó en `success` para el SHA exacto `1b1a6e08c3e53d4a08bce4a7491753ed869eed79`.
+La ejecución [38204871299](https://github.com/jonhararagi/wordwaifu/actions/runs/38204871299) terminó en `success` para el SHA exacto `d9aa8d228cbbfb3f14002999c8add59901939a3e`.
 
-Las etapas completadas con éxito fueron: sintaxis, pruebas de recuperación del lore y abstención ante datos no documentados, modelo de la enciclopedia, lista permitida del servidor privado, validación del esquema de proyectos, instalación de Playwright y Chromium, smoke test completo en Chromium y validación del catálogo/enlaces Markdown.
+Las etapas completadas con éxito fueron: sintaxis, recuperación del lore y abstención ante datos no documentados, modelo de la enciclopedia, servidor privado y su lista permitida, validación del esquema de proyectos, Playwright y Chromium, smoke test completo en Chromium y validación del catálogo/enlaces Markdown relativos. El test del navegador verificó el funcionamiento de los filtros rápidos y `Restablecer`, además de los flujos existentes.
 
 La salida del smoke test incluye `PASS_REAL: Chromium browser smoke test completed without page errors.` La prueba del servidor confirmó que responden las rutas permitidas de la aplicación, las doce ilustraciones SVG originales de personajes, las tres ilustraciones conceptuales de momentos de Ryu y las doce fichas Markdown autorizadas. La interfaz del navegador verificó la carga real de los retratos de Ryu y Bell y de las tres ilustraciones de momentos de Ryu. Las ilustraciones son originales y no oficiales.
 
@@ -44,7 +52,7 @@ La salida del smoke test incluye `PASS_REAL: Chromium browser smoke test complet
 
 - **Codespaces personal:** no se abrió ni se inspeccionó la instancia personal del usuario. Antes se había reportado un `HTTP 200` para el módulo de fichas y un `HTTP 404` para el retrato de Ryu. La CI limpia pasa, pero eso no demuestra por sí solo que una instancia de Codespaces ya abierta haya reiniciado o dejado atrás la caché/servidor anterior.
 - **Prueba local del retrato en el Codespace:** sigue pendiente ejecutar el chequeo abajo y observar el resultado en esa instancia real.
-- No se amplió en esta última intervención el corpus narrativo ni se añadieron nuevas relaciones o fuentes; el trabajo reciente fue corregir el filtro de continuidad, sus regresiones, la comprobación de inicio y un fixture de navegador.
+- No se amplió en esta última intervención el corpus narrativo ni se añadieron nuevas relaciones o fuentes. El trabajo más reciente se centró en continuidad temporal, estabilidad de las pruebas y simplificación del panel de enciclopedia.
 - No se abrió PR, no se fusionó a `main` y no se publicó GitHub Pages.
 
 ## Próximo paso concreto
@@ -63,4 +71,4 @@ El retrato debe devolver **HTTP 200**. Si devuelve `404`, revisar `/tmp/wordwaif
 
 ## Punto de reanudación
 
-Retomar desde el HEAD `1b1a6e08c3e53d4a08bce4a7491753ed869eed79`, conservar el trabajo en `feature/danmachi-lore-poc`, volver a verificar la vista previa personal y continuar después con la auditoría de profundidad de contenido y referencias. Mantener separadas las continuidades y no presentar inferencias como hechos.
+Retomar desde el código validado `d9aa8d228cbbfb3f14002999c8add59901939a3e` o el HEAD más reciente de `feature/danmachi-lore-poc` (el commit posterior puede contener solo esta actualización documental), volver a verificar la vista previa personal y continuar después con la ampliación verificable del corpus. Mantener separadas las continuidades y no presentar inferencias como hechos.
