@@ -1333,7 +1333,7 @@
     const arcs = [];
     if (elencoMatch) {
       for (const line of elencoMatch[1].split("\n")) {
-        const arc = line.match(/^\\s*[-*]\\s+\\*\\*([^*]+?)(?::)?\\*\\*:?\\s*(.+)$/);
+        const arc = line.match(/^\s*[-*]\s+\*\*([^*]+?)(?::)?\*\*:?\s*(.+)$/);
         if (arc) arcs.push(arc[1].trim() + ": " + arc[2].trim());
       }
     }
