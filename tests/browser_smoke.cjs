@@ -83,6 +83,8 @@ async function run() {
     }
 
     assert.match(await page.title(), /WordWaifu/);
+    assert.equal(await page.locator('script[src="./src/art-studio.js"]').count(), 1,
+      "The Art Studio module must load exactly once to prevent duplicate event handlers and storage writes.");
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
     const appPersistence = await page.evaluate(async () => {
