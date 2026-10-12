@@ -1226,7 +1226,7 @@
       const status = $("#story-editor-status", container);
       if (status) status.textContent = saved ? "Historia guardada en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
     });
-    $(".story-chapter-form", container).forEach((formNode) => formNode.addEventListener("submit", async (event) => {
+    $$(".story-chapter-form", container).forEach((formNode) => formNode.addEventListener("submit", async (event) => {
       event.preventDefault();
       const chapter = story.chapters.find((item) => item.id === formNode.dataset.chapterId);
       if (!chapter) return;
@@ -1240,7 +1240,7 @@
       const status = $("#story-editor-status", container);
       if (status) status.textContent = saved ? "Capítulo guardado en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
     }));
-    $(".story-chapter-form [data-delete-chapter]", container).forEach((button) => button.addEventListener("click", async () => {
+    $$(".story-chapter-form [data-delete-chapter]", container).forEach((button) => button.addEventListener("click", async () => {
       if (!confirm("¿Eliminar este capítulo? Esta acción se guardará en el proyecto actual.")) return;
       story.chapters = story.chapters.filter((chapter) => chapter.id !== button.dataset.deleteChapter);
       await saveProject();
