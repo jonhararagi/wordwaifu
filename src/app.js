@@ -2025,21 +2025,24 @@
     else actions.appendChild(archiveElement("span","archive-unavailable","Ficha pendiente; no se creó un enlace roto."));
     copy.appendChild(actions);rel.claims.forEach(c=>copy.appendChild(archiveEvidence(c)));card.appendChild(copy);return card;
   }
-  const archiveMomentArt={
-    "ryu-justice":"./assets/lore-moments/ryu-justice.svg",
-    "ryu-evilus":"./assets/lore-moments/ryu-evilus.svg",
-    "ryu-seven-days":"./assets/lore-moments/ryu-seven-days.svg"
-  };
   function renderArchiveMoment(moment){
     const d=archiveElement("details","archive-moment-card");d.dataset.momentId=moment.id;
     const summary=archiveElement("summary"),icon=archiveElement("span","archive-moment-icon",moment.id.includes("seven")?"◷":moment.id.includes("evilus")?"⚔":"✧");icon.setAttribute("aria-hidden","true");
     const title=archiveElement("span","archive-moment-title");title.append(archiveElement("strong","",moment.title),archiveElement("small","",moment.period));
     summary.append(icon,title);
-    const artPath=archiveMomentArt[moment.id];
-    if(artPath){
-      const art=archiveElement("img","archive-moment-art");art.src=artPath;art.alt="Recreación conceptual original no oficial: "+moment.title;art.loading="eager";art.decoding="async";art.dataset.momentArt=moment.id;
-      summary.appendChild(art);
-      summary.appendChild(archiveElement("span","archive-moment-art-caption","RECREACIÓN CONCEPTUAL · NO OFICIAL"));
+    if(moment.people.length){
+      const visualReference=archiveElement("div","archive-moment-visual-reference");
+      visualReference.appendChild(archiveElement("p","archive-moment-visual-label",
+        "RETRATOS OFICIALES DE PERSONAJES MENCIONADOS · NO ES UNA IMAGEN DE LA ESCENA"));
+      const strip=archiveElement("div","archive-moment-character-strip");
+      moment.people.slice(0,3).forEach(person=>{
+        const tile=archiveElement("div","archive-moment-character");
+        tile.appendChild(archivePortrait(person.id,person.name,false,activeArchiveContinuity));
+        tile.appendChild(archiveElement("span","archive-moment-character-name",person.name));
+        strip.appendChild(tile);
+      });
+      visualReference.appendChild(strip);
+      summary.appendChild(visualReference);
     }
     summary.appendChild(archiveElement("span","archive-moment-excerpt",moment.summary));d.appendChild(summary);
     const body=archiveElement("div","archive-moment-body");body.appendChild(archiveElement("p","",moment.summary));
