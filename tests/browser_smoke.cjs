@@ -106,6 +106,35 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+    // Story Foundry: create, edit, persist, import the repository's complete Markdown novel, and verify chapter text survives.
+    await page.locator('.nav-item[data-view="stories"]').click();
+    await page.locator("#story-create-button").click();
+    await page.locator("#story-meta-form [name='storyName']").fill("Historia de prueba");
+    await page.locator("#story-meta-form [name='storyDescription']").fill("Sinopsis de prueba para comprobar el guardado.");
+    await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
+    await page.locator("#story-meta-form [name='storyConflict']").fill("Un conflicto verificable.");
+    await page.locator("#story-meta-form [name='storyArcs']").fill("Protagonista: miedo → decisión → cambio");
+    await page.locator("#story-meta-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelector("#save-status")?.textContent.includes("Guardado en IndexedDB"));
+    await page.locator("#story-add-chapter-button").click();
+    assert.equal(await page.locator(".story-chapter-form").count(), 1, "The editor must add a chapter to a story.");
+    await page.locator(".story-chapter-form [name='chapterTitle']").fill("Capítulo de prueba");
+    await page.locator(".story-chapter-form [name='chapterContent']").fill("Texto de capítulo que debe persistir íntegro.");
+    await page.locator(".story-chapter-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1);
+    assert.equal(await page.locator(".story-chapter-form [name='chapterContent']").inputValue(), "Texto de capítulo que debe persistir íntegro.");
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-import-file").setInputFiles({
+      name: "las-campanas-de-asteria.md",
+      mimeType: "text/markdown",
+      buffer: fs.readFileSync(path.join(root, "stories", "original", "las-campanas-de-asteria.md"))
+    });
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 4, { timeout: 5000 });
+    assert.equal(await page.locator("#story-meta-form [name='storyName']").inputValue(), "Las campanas de Asteria");
+    assert.ok((await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue()).length > 500,
+      "Markdown import must preserve the full chapter body, not just its first paragraph.");
+    assert.ok((await page.locator(".story-chapter-form [name='chapterTitle']").nth(3).inputValue()).includes("Un lugar en el mapa"));
+    process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
     await page.locator("#global-search").fill("Ryu");
