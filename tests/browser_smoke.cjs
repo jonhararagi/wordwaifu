@@ -120,6 +120,12 @@ async function run() {
     assert.equal(await ideaPage.locator(".idea-character-card").count(), 6, "Idea lab must produce a full six-character ensemble.");
     assert.ok((await ideaPage.locator("#idea-output").innerText()).includes("NÚCLEO EMOCIONAL"),
       "Generated concepts must include a serious dramatic core as well as comedy.");
+    await ideaPage.locator("#idea-mode").selectOption("fanfic");
+    await ideaPage.locator("#idea-continuity").fill("DanMachi · novelas ligeras · continuidad principal");
+    await ideaPage.locator("#idea-form button[type=submit]").click();
+    const fanficOutline = await ideaPage.locator("#idea-output .idea-synopsis").innerText();
+    assert.ok(fanficOutline.includes("TIPO: FANFIC") && fanficOutline.includes("DanMachi · novelas ligeras · continuidad principal"),
+      "Fanfic mode must preserve the chosen universe and continuity context.");
     await ideaPage.locator("#idea-save-story").click();
     await ideaPage.waitForFunction(() => document.querySelector("#save-status")?.textContent.includes("Guardado"), null, { timeout: 10000 });
     const generatedStoryCount = await ideaPage.evaluate(async () => {
