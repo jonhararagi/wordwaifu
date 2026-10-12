@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Biblioteca local de recursos genéricos de referencia; no son canon ni personajes oficiales.",
+  "assets": [
+    {
+      "id": "ref-fantasy-knight",
+      "title": "Caballero de fantasía",
+      "category": "character",
+      "categoryLabel": "Personaje",
+      "style": "Detailed / fantasy",
+      "description": "Referencia genérica para silueta, armadura, vestuario y presencia de personaje; no es un retrato de DanMachi.",
+      "alt": "Caballero de fantasía genérico, recurso CC0 de referencia.",
+      "file": "assets/visual-library/characters/battleworn-knight.png",
+      "sourceUrl": "https://github.com/SpriteCook/spritecook-free-game-assets/blob/master/examples/detailed-characters-anime/battleworn_knight.png",
+      "sourceRepository": "SpriteCook/spritecook-free-game-assets",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "ref-isometric-house",
+      "title": "Casa isométrica",
+      "category": "location",
+      "categoryLabel": "Lugar",
+      "style": "Isometric / detailed",
+      "description": "Referencia de arquitectura y volumen para lugares; no es un mapa de Asteria.",
+      "alt": "Casa de fantasía isométrica, recurso CC0.",
+      "file": "assets/visual-library/locations/isometric-house.webp",
+      "sourceUrl": "https://github.com/SpriteCook/spritecook-free-game-assets/blob/master/examples/isometric-buildings/animated_house_1.webp",
+      "sourceRepository": "SpriteCook/spritecook-free-game-assets",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "ref-stylized-ground",
+      "title": "Textura de terreno",
+      "category": "texture",
+      "categoryLabel": "Textura",
+      "style": "Stylized / seamless",
+      "description": "Textura para probar superficies y ambientes. No representa cartografía.",
+      "alt": "Textura estilizada de terreno, recurso CC0.",
+      "file": "assets/visual-library/textures/stylized-ground.jpg",
+      "sourceUrl": "https://github.com/SpriteCook/spritecook-free-game-assets/blob/master/examples/stylized-seamless-textures/seamless_stylized_dirt.png",
+      "sourceRepository": "SpriteCook/spritecook-free-game-assets",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "ref-spell-icon",
+      "title": "Icono arcano",
+      "category": "icon",
+      "categoryLabel": "Icono",
+      "style": "Game icon",
+      "description": "Ejemplo de iconografía de fantasía para inventarios y objetos.",
+      "alt": "Icono arcano de fantasía, recurso CC0.",
+      "file": "assets/visual-library/icons/spell-icon-01.png",
+      "sourceUrl": "https://github.com/SpriteCook/spritecook-free-game-assets/blob/master/examples/spell-icon-set/icon_1.png",
+      "sourceRepository": "SpriteCook/spritecook-free-game-assets",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ]
+}

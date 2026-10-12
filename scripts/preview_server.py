@@ -13,6 +13,16 @@ PORT = int(os.environ.get("PORT", "8000"))
 ALLOWED_FILES = {
     "/index.html": "index.html",
     "/src/styles.css": "src/styles.css",
+    "/src/visual-foundry.css": "src/visual-foundry.css",
+    "/src/visual-library.js": "src/visual-library.js",
+    "/assets/visual-library/catalog.json": "assets/visual-library/catalog.json",
+    "/assets/visual-library/characters/battleworn-knight.png": "assets/visual-library/characters/battleworn-knight.png",
+    "/assets/visual-library/textures/stylized-ground.jpg": "assets/visual-library/textures/stylized-ground.jpg",
+    "/assets/visual-library/locations/isometric-house.webp": "assets/visual-library/locations/isometric-house.webp",
+    "/assets/visual-library/icons/spell-icon-01.png": "assets/visual-library/icons/spell-icon-01.png",
+    "/assets/fonts/Cinzel-Variable.ttf": "assets/fonts/Cinzel-Variable.ttf",
+    "/assets/fonts/CrimsonPro-Variable.ttf": "assets/fonts/CrimsonPro-Variable.ttf",
+    "/assets/fonts/JetBrainsMono-Variable.ttf": "assets/fonts/JetBrainsMono-Variable.ttf",
     "/src/app.js": "src/app.js",
     "/src/project-schema.js": "src/project-schema.js",
     "/src/project-repository.js": "src/project-repository.js",
@@ -62,7 +72,7 @@ class PreviewRequestHandler(SimpleHTTPRequestHandler):
         ".js": "text/javascript; charset=utf-8",
         ".json": "application/json; charset=utf-8",
         ".md": "text/markdown; charset=utf-8",
-        ".svg": "image/svg+xml",
+        ".svg": "image/svg+xml", ".png":"image/png", ".jpg":"image/jpeg", ".webp":"image/webp", ".ttf":"font/ttf",
     }
 
     def _authorize_path(self):

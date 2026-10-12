@@ -11,7 +11,7 @@ const mimeTypes = {
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
-  ".svg": "image/svg+xml; charset=utf-8"
+  ".svg": "image/svg+xml; charset=utf-8", ".png":"image/png", ".jpg":"image/jpeg", ".webp":"image/webp", ".ttf":"font/ttf"
 };
 
 function createServer() {
@@ -85,6 +85,18 @@ async function run() {
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
+    await page.locator('.nav-item[data-view="visuals"]').click();
+    await page.waitForFunction(() => document.querySelectorAll("#visual-library-grid .visual-asset-card").length === 4, { timeout: 5000 });
+    await page.waitForFunction(() => Array.from(document.querySelectorAll("#visual-library-grid img")).every(img => img.complete && img.naturalWidth > 0), { timeout: 8000 });
+    await page.locator('#visual-library-filters [data-visual-filter="texture"]').click();
+    assert.equal(await page.locator("#visual-library-grid .visual-asset-card").count(), 1);
+    await page.locator("#visual-library-grid [data-visual-open='ref-stylized-ground']").click();
+    assert.equal(await page.locator("#visual-asset-dialog").evaluate(dialog => dialog.open), true);
+    assert.equal(await page.locator("#visual-asset-dialog-license").innerText(), "CC0 1.0 Universal");
+    assert.ok((await page.locator("#visual-asset-dialog-source").getAttribute("href")).includes("SpriteCook/spritecook-free-game-assets"));
+    await page.locator("#visual-asset-close").click();
+    await page.locator('.nav-item[data-view="atlas"]').click();
+    process.stdout.write("PASS visual library: local images, filters, provenance and licensing are usable.\\n");
     const appPersistence = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const recovery = await repository.loadActive();

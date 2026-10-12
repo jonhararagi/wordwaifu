@@ -48,6 +48,16 @@ try:
         ("/assets/lore-moments/ryu-seven-days.svg", b"conceptual"),
         ("/src/app.js", b"WordWaifuLoreCorpus"),
         ("/src/styles.css", b".lore-"),
+        ("/src/visual-foundry.css", b"Cinzel"),
+        ("/src/visual-library.js", b"WordWaifuVisualLibrary"),
+        ("/assets/visual-library/catalog.json", b'"ref-fantasy-knight"'),
+        ("/assets/visual-library/characters/battleworn-knight.png", b"\\x89PNG"),
+        ("/assets/visual-library/textures/stylized-ground.jpg", b"\\xff\\xd8\\xff"),
+        ("/assets/visual-library/locations/isometric-house.webp", b"RIFF"),
+        ("/assets/visual-library/icons/spell-icon-01.png", b"\\x89PNG"),
+        ("/assets/fonts/Cinzel-Variable.ttf", b"\\x00\\x01"),
+        ("/assets/fonts/CrimsonPro-Variable.ttf", b"\\x00\\x01"),
+        ("/assets/fonts/JetBrainsMono-Variable.ttf", b"\\x00\\x01"),
         ("/lore/danmachi/catalog.json", b'"records"'),
         ("/lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", b"Astrea Record"),
         ("/lore/danmachi/research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", b"DMR-002-CLM-015"),
@@ -71,7 +81,9 @@ try:
     get("/docs/MASTER_VISION.md", 404)
     get("/lore/danmachi/characters/00-indice-personajes.md", 404)
     get("/lore/danmachi/characters/loki.md", 404)
-    print("PASS preview server: app shell, 12 original character portraits, 3 original Ryu scene illustrations, curated research and 12 allowlisted character dossiers respond; unrelated files remain blocked.")
+    get("/assets/visual-library/not-allowlisted.png", 404)
+    get("/assets/fonts/licenses/Cinzel-OFL.txt", 404)
+    print("PASS preview server: app, lore, four allowlisted CC0 visual references, local variable fonts and catalog respond; unrelated files remain blocked.")
 finally:
     server.shutdown()
     server.server_close()

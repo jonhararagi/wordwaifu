@@ -17,7 +17,8 @@
     organizations: ["Organizaciones", "Facciones, gremios y grupos que mueven tu universo."],
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
-    lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."]
+    lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."],
+    visuals: ["Biblioteca visual", "Referencias locales de personajes, lugares, texturas e iconos con procedencia y licencia."]
   };
   const demo = {
     schemaVersion: 1,
@@ -945,15 +946,18 @@
     $("#view-subtitle").textContent = titles[activeView][1];
     $("#global-search").placeholder = activeView === "lore"
       ? "Buscar en la enciclopedia de personajes…"
-      : "Buscar personajes, lugares o DanMachi…";
+      : activeView === "visuals"
+        ? "Buscar recursos visuales, estilos o categorías…"
+        : "Buscar personajes, lugares o DanMachi…";
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $("#lore-view").classList.toggle("hidden", activeView !== "lore");
+    $("#visual-library-view").classList.toggle("hidden", activeView !== "visuals");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "stories" || activeView === "lore");
+    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "stories" || activeView === "lore" || activeView === "visuals");
     renderMap();
     renderDetails();
     renderDirectory();
@@ -2356,9 +2360,10 @@
     log.scrollTop = log.scrollHeight;
   }
 
-  $$(".nav-item").forEach((button) => button.addEventListener("click", () => {
+  $(".nav-item").forEach((button) => button.addEventListener("click", () => {
     navigate(button.dataset.view);
     if (button.dataset.view === "lore") void prepareLoreView().catch(() => {});
+    if (button.dataset.view === "visuals") void window.WordWaifuVisualLibrary?.prepare().catch(() => {});
   }));
   $$(".map-marker").forEach((marker) => {
     const activate = () => showLocation(marker.dataset.location);
@@ -2454,6 +2459,10 @@
 
   $("#global-search").addEventListener("input", () => {
     const rawQuery = $("#global-search").value.trim();
+    if (activeView === "visuals") {
+      window.WordWaifuVisualLibrary?.setQuery(rawQuery);
+      return;
+    }
     if (activeView === "lore") {
       resetArchiveForGlobalSearch(rawQuery);
       return;
@@ -2478,6 +2487,11 @@
     if (activeView === "lore") {
       event.preventDefault();
       resetArchiveForGlobalSearch(query);
+      return;
+    }
+    if (activeView === "visuals") {
+      event.preventDefault();
+      window.WordWaifuVisualLibrary?.setQuery(query);
       return;
     }
     if (projectHasGlobalSearchMatch(query)) return;

@@ -1,10 +1,10 @@
 name: DanMachi Lore and Retrieval Integrity
 on:
   push:
-    branches: [feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10]
-    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+    branches: [feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10, work/visual-foundry-rework-2026-10]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/VISUAL_DIRECTION.md","scripts/preview_server.py","scripts/check-visual-catalog.mjs","tests/**","assets/visual-library/**","assets/fonts/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/visual-library.js","src/visual-foundry.css","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   pull_request:
-    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/VISUAL_DIRECTION.md","scripts/preview_server.py","scripts/check-visual-catalog.mjs","tests/**","assets/visual-library/**","assets/fonts/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/visual-library.js","src/visual-foundry.css","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   workflow_dispatch:
 permissions:
   contents: read
