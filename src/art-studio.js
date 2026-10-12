@@ -295,7 +295,7 @@
       catch(error){$("#art-status").textContent=error.message;event.target.value="";}
     });
     $("#art-image-url").addEventListener("change",()=>{
-      try{const url=normalizeImageUrl($("#art-image-url").value);$("#art-image-url").value=url;if(url){$("#art-preview").src=url;$("#art-preview-wrap").classList.remove("hidden");}}
+      try{const url=normalizeImageUrl($("#art-image-url").value);$("#art-image-url").value=url;if(url){$("#art-image-file").value="";$("#art-preview").src=url;$("#art-preview-wrap").classList.remove("hidden");}}
       catch(error){$("#art-status").textContent=error.message;}
     });
     $("#art-preview").addEventListener("error",()=>{$("#art-status").textContent="No se pudo cargar la vista previa. Verificá la URL o elegí un archivo local.";});
