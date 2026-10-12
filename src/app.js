@@ -1927,7 +1927,7 @@
     const results=$("#character-archive-results"),status=$("#archive-directory-status");
     const items=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:$("#character-archive-query").value,continuity:$("#archive-continuity").value,spoiler:$("#archive-spoiler").value});
     results.replaceChildren();
-    status.textContent=items.length?items.length+" ficha(s) disponibles. Ryu, Alise y Astrea tienen ilustraciones vectoriales originales no oficiales; otros retratos pueden estar pendientes.":"No hay fichas que coincidan. Probá otro nombre o una continuidad más amplia.";
+    status.textContent=items.length?items.length+" ficha(s) disponibles. Las fichas de DanMachi incorporadas incluyen retratos vectoriales originales no oficiales; Ryu también tiene momentos históricos ilustrados.":"No hay fichas que coincidan. Probá otro nombre o una continuidad más amplia.";
     if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados."));return;}
     items.forEach(item=>{
       const card=archiveElement("article","archive-character-card");card.setAttribute("role","listitem");
@@ -1964,11 +1964,23 @@
     else actions.appendChild(archiveElement("span","archive-unavailable","Ficha pendiente; no se creó un enlace roto."));
     copy.appendChild(actions);rel.claims.forEach(c=>copy.appendChild(archiveEvidence(c)));card.appendChild(copy);return card;
   }
+  const archiveMomentArt={
+    "ryu-justice":"./assets/lore-moments/ryu-justice.svg",
+    "ryu-evilus":"./assets/lore-moments/ryu-evilus.svg",
+    "ryu-seven-days":"./assets/lore-moments/ryu-seven-days.svg"
+  };
   function renderArchiveMoment(moment){
     const d=archiveElement("details","archive-moment-card");d.dataset.momentId=moment.id;
     const summary=archiveElement("summary"),icon=archiveElement("span","archive-moment-icon",moment.id.includes("seven")?"◷":moment.id.includes("evilus")?"⚔":"✧");icon.setAttribute("aria-hidden","true");
     const title=archiveElement("span","archive-moment-title");title.append(archiveElement("strong","",moment.title),archiveElement("small","",moment.period));
-    summary.append(icon,title,archiveElement("span","archive-moment-excerpt",moment.summary));d.appendChild(summary);
+    summary.append(icon,title);
+    const artPath=archiveMomentArt[moment.id];
+    if(artPath){
+      const art=archiveElement("img","archive-moment-art");art.src=artPath;art.alt="Recreación conceptual original no oficial: "+moment.title;art.loading="eager";art.decoding="async";art.dataset.momentArt=moment.id;
+      summary.appendChild(art);
+      summary.appendChild(archiveElement("span","archive-moment-art-caption","RECREACIÓN CONCEPTUAL · NO OFICIAL"));
+    }
+    summary.appendChild(archiveElement("span","archive-moment-excerpt",moment.summary));d.appendChild(summary);
     const body=archiveElement("div","archive-moment-body");body.appendChild(archiveElement("p","",moment.summary));
     const badges=archiveElement("div","archive-badge-row");if(moment.spoilerLevel!=="none")badges.appendChild(archiveBadge("Spoiler: "+moment.spoilerLevel,["major","endgame"].includes(moment.spoilerLevel)?"spoiler":"muted"));
     moment.claims.forEach(c=>badges.appendChild(archiveBadge(c.claimId,"muted")));body.appendChild(badges);
