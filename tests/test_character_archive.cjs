@@ -7,7 +7,15 @@ const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
 const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md"];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
-const index=corpus.buildIndex(catalog,docs);
+const profilePaths=[
+  "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
+  "characters/bell-cranel.md","characters/hestia.md","characters/ais-wallenstein.md",
+  "characters/eina-tulle.md","characters/finn-deimne.md","characters/freya.md",
+  "characters/ottar.md","characters/gojouno-kaguya.md","characters/lyra.md"
+];
+const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
+const index=corpus.buildIndex(catalog,docs,profileDocuments);
+assert.equal(index.profileDocumentCount,12,"The archive should expose the 12 existing detailed character files.");
 const ryu=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","all");
 assert.ok(ryu&&ryu.claims.every(c=>c.continuityScopes.includes("CONT-AR")));
 const justiceClaim=ryu.claims.find(c=>c.claimId==="DMR-002-CLM-015");
@@ -34,6 +42,15 @@ assert.ok(ryu.relationships.some(r=>r.targetId==="CHAR-LYRA"&&r.type.includes("f
 const kaguya=archive.getProfile(index,"CHAR-KAGUYA","CONT-AR","all");
 assert.ok(kaguya.claims.some(c=>c.claimId==="DMR-003-CLM-001"));
 assert.ok(archive.getExtendedInfo("CHAR-KAGUYA","CONT-AR").references.some(ref=>ref.kind==="community"));
+const extendedRyu=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR",index);
+assert.ok(extendedRyu.repositoryProfile&&extendedRyu.repositoryProfile.sectionCount>0,
+  "The More Info window must recover the pre-existing character dossier.");
+assert.ok(extendedRyu.sections.some(section=>section.title.includes("Temporal state A")));
+assert.ok(!extendedRyu.sections.some(section=>section.title.includes("Temporal state B")),
+  "Anime-only temporal-state details must not leak into the historical Ryu summary.");
+const extendedBell=archive.getExtendedInfo("DM-CHAR-BELL","CONT-ANIME",index);
+assert.ok(extendedBell.sections.some(section=>section.title==="Anclas de continuidad"),
+  "The More Info window should expose existing author-continuity cautions from the dossier.");
 const filtered=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","safe-only");
 assert.ok(!filtered.moments.some(m=>m.id==="ryu-seven-days"));
 assert.equal(archive.list(index,{query:"Ryu"}).filter(c=>c.id==="CHAR-RYUU-LION").length,1);
