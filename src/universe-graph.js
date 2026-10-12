@@ -108,7 +108,15 @@
   function allEdges() {
     const records = allEntities();
     const known = new Set(records.map(entity => entity.id));
-    return edges.concat(autoFamilyEdges(records)).filter(edge => known.has(edge.from) && known.has(edge.to));
+    const seen = new Set();
+    return edges.concat(autoFamilyEdges(records)).filter(edge => {
+      if (!known.has(edge.from) || !known.has(edge.to)) return false;
+      // Keep the carefully sourced curated edge and discard an auto-generated duplicate for the same pair and continuity.
+      const key = edge.from + "\\u0000" + edge.to + "\\u0000" + (edge.continuity || "unknown");
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
   }
   function list(options) {
     const settings = options || {}, universe = settings.universe || "all", type = settings.type || "all";
