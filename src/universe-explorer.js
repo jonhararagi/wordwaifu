@@ -28,7 +28,7 @@
       "official-reference":"Referencia oficial",
       "official-reference-partial":"Referencia oficial · parcial",
       "official-plus-secondary":"Oficial + fuente secundaria",
-      "official-plus-secondary":"Oficial + fuente secundaria",
+      "curated-dossier-mixed":"Expediente ampliado · fuentes mixtas",
       "index-seed":"Entrada inicial · confirmar",
       "mixed":"Fuentes mixtas"
     };
@@ -124,7 +124,7 @@
     panel.appendChild(el("p","universe-entity-summary",entity.summary||entity.description||"No hay resumen suficiente."));
     if(entity.description&&entity.description!==entity.summary)panel.appendChild(el("p","universe-entity-description",entity.description));
     const facts=el("div","universe-entity-facts");
-    [["Afiliación",entity.affiliation],["Personalidad",entity.personality],["Habilidades / sistema",entity.abilities],["Continuidad",entity.continuity],["Estado de spoilers",entity.spoilerLevel]].forEach(([label,value])=>{
+    [["Apariencia",entity.appearance],["Personalidad",entity.personality],["Historia y trasfondo",entity.history],["Relaciones descritas en el expediente",entity.relationships],["Conflicto personal",entity.conflict],["Afiliación",entity.affiliation],["Habilidades / sistema",entity.abilities],["Continuidad",entity.continuity],["Estado de spoilers",entity.spoilerLevel]].forEach(([label,value])=>{
       if(!value)return;const card=el("article","universe-fact-card");card.append(el("strong","",label),el("p","",value));facts.appendChild(card);
     });
     if(facts.childNodes.length)panel.appendChild(facts);
@@ -149,7 +149,8 @@
     panel.appendChild(section);
     const sources=el("section","universe-sources-section");sources.appendChild(el("h3","","Fuente de referencia"));
     sources.append(el("p","",entity.sourceTitle||"No se ha atribuido una fuente concreta."),el("p","universe-source-note","Calidad: "+sourceQualityLabel(entity.sourceQuality)+" · El nivel de detalle no equivale a cobertura completa."));
-    if(entity.sourceUrl)safeExternalLink(sources,"Abrir referencia original ↗",entity.sourceUrl);
+    const sourceUrls=Array.isArray(entity.sourceUrls)&&entity.sourceUrls.length?entity.sourceUrls:(entity.sourceUrl?[entity.sourceUrl]:[]);
+    Array.from(new Set(sourceUrls)).forEach((url,index)=>safeExternalLink(sources,"Abrir "+(sourceUrls.length>1?"fuente "+(index+1):"referencia original")+" ↗",url));
     panel.appendChild(sources);
     renderResults();
   }
