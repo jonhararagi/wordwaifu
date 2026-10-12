@@ -159,8 +159,12 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
     const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
-    assert.ok(ryuHistoricalPortrait.includes("danmachi4/character/images/chara_tachi_14.png"),
+    assert.ok(ryuHistoricalPortrait.includes("danmachi4/character/images/chara_tachi_15.png"),
       "Historical Ryu should use the official character reference from the Astrea Record adaptation era.");
+    await page.waitForFunction(() => {
+      const img = document.querySelector("#archive-profile-portrait .archive-portrait-art");
+      return !!img && img.complete && img.naturalWidth > 0;
+    }, null, { timeout: 5000 });
     assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-caption").innerText()).includes("NO ESPECÍFICA DE ÉPOCA"),
       "Historical reference art must be clearly labeled as not era-specific.");
     await page.locator("#archive-tab-summary").click();
@@ -201,9 +205,11 @@ async function run() {
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_17.png"));
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_16.png"));
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     await page.locator("#archive-profile-back").click();
@@ -214,6 +220,7 @@ async function run() {
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-LYRA"]').count() > 0);
     await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Gojouno Kaguya");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_18.png"));
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
