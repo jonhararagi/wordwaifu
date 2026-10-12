@@ -166,3 +166,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Decisión de autor pendiente: mantener cinco años de adelanto con override AU, cambiar la fecha o precisar el punto de referencia; aclarar si Bell Cranel existe aparte del OC.
 - Próxima prueba: conflicto de cronología sin override y aceptación de divergencia con override aprobado y acotado.
 - Veredicto: mejora documental incorporada; DanMachi global permanece PARTIAL y la historia AU no está escrita/validada por esta tanda.
+
+
+## DANMACHI-RESEARCH-007 · Red de Astrea Familia y viaje de Ryu
+- Estado: PARTIAL; se añadieron relaciones explícitas de la adaptación, una sinopsis editorial y pistas de roster secundario claramente separadas.
+- Paquete: [BATCH-DM-007](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md).
+- Próxima tarea: cotejar la primera Familia, tragedia/Juggernaut, memorial y roster de Solingen con los volúmenes; no ascender fuentes comunitarias a canon aprobado sin localizadores.
+- Continuidad: perfiles de adaptación (`CONT-ANIME`), etapa histórica (`CONT-AR`), novela posterior (`CONT-MAIN-LN`) y análisis comparativo (`CROSS-CONTINUITY`) permanecen separados.
