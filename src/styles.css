@@ -333,3 +333,21 @@ select{background:#332d26;color:#e9dfd2}
 .archive-dossier-detail p{font-size:13px;line-height:1.85;color:#d1d7dc;max-width:90ch}
 @media(max-width:960px){.art-studio-grid{grid-template-columns:1fr}.art-library-card{order:2}}
 @media(max-width:600px){.art-studio-header{flex-direction:column}.art-studio-stat{width:100%;display:flex;align-items:center;justify-content:center;gap:10px}.art-studio-stat strong{font-size:22px}.art-two-fields,.art-prompt-options{grid-template-columns:1fr}.art-editor-card,.art-library-card{padding:14px}.art-assignment-card{grid-template-columns:68px minmax(0,1fr)}.art-assignment-thumb{height:92px}}
+
+
+/* Story Foundry editor */
+.story-editor{margin:18px 0;padding:20px}
+.story-editor-title,.story-chapter-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.story-editor-title h2{margin:5px 0;font-size:22px}
+.story-editor h3{margin:12px 0}
+.story-editor form label,.story-chapter-form label{display:flex;flex-direction:column;gap:7px;margin:12px 0;color:var(--muted);font-size:12px}
+.story-editor input,.story-editor textarea,.story-editor select,.story-chapter-form input,.story-chapter-form textarea,.story-chapter-form select{width:100%;box-sizing:border-box;background:#111b22;color:#e7edf0;border:1px solid var(--line);border-radius:8px;padding:11px;font:inherit;line-height:1.6}
+.story-editor textarea,.story-chapter-form textarea{resize:vertical;min-height:76px}
+.story-editor input:focus,.story-editor textarea:focus,.story-editor select:focus,.story-chapter-form input:focus,.story-chapter-form textarea:focus{outline:2px solid #c4a46c;outline-offset:1px}
+.story-form-grid{display:grid;grid-template-columns:minmax(0,2fr) minmax(180px,1fr);gap:14px}
+.story-chapters{display:grid;gap:14px;margin-top:14px}
+.story-chapter-card{padding:16px;border:1px solid var(--line);border-radius:12px;background:#141f27}
+.story-chapter-heading{align-items:center;margin-bottom:8px}
+.story-chapter-form textarea[name="chapterContent"]{min-height:280px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;line-height:1.8}
+.story-editor-status{min-height:1.5em}
+@media(max-width:600px){.story-form-grid{grid-template-columns:1fr}.story-editor{padding:14px}.story-chapter-card{padding:11px}.story-editor-title{display:block}}
