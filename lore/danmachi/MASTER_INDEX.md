@@ -53,6 +53,10 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [ERA-10 · Último volumen y final publicado](timeline/eras/10-ultimo-volumen-y-final-publicado.md)
 - [ERA-AU · Cronología alternativa del OC](timeline/eras/AU-oc-y-divergencias.md)
 
+## Investigación de cronología prioritaria
+
+- [DANMACHI-RESEARCH-006 · Cronología Hestia/Bell y puerta de divergencia AU](research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md) — separa evidencia oficial de la fecha secundaria pendiente de verificar y define los criterios para probar la divergencia del OC.
+
 ## 3. Índices por categoría
 
 ### Mundo, sistemas y misterios
