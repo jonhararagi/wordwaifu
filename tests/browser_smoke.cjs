@@ -2542,7 +2542,14 @@ async function run() {
                   });
                 },
                 delete() {
-                  queueMicrotask(() => transaction.oncomplete && transaction.oncomplete());
+                  if (window.__failArtDelete) {
+                    queueMicrotask(() => {
+                      transaction.error = new Error("Simulated IndexedDB delete failure");
+                      if (transaction.onerror) transaction.onerror();
+                    });
+                  } else {
+                    queueMicrotask(() => transaction.oncomplete && transaction.oncomplete());
+                  }
                 }
               };
             }
@@ -2586,10 +2593,20 @@ async function run() {
     await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", null, { timeout: 5000 });
     assert.ok((await fallbackPage.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test"))).prompt.includes("editado"),
       "Fallback edits must survive a full page reload.");
-    await fallbackPage.locator(".art-assignment-card").getByRole("button", { name: "Eliminar" }).click();
-    await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "0", { timeout: 5000 });
+    await fallbackPage.evaluate(() => { window.__failArtDelete = true; });
+    await fallbackPage.locator("#art-assignments > .art-assignment-card").getByRole("button", { name: "Eliminar" }).click();
+    await fallbackPage.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("Simulated IndexedDB delete failure"), null, { timeout: 5000 });
+    assert.equal(await fallbackPage.locator("#art-assignment-count").innerText(), "1",
+      "A failed deletion must not remove the item from the gallery.");
+    assert.ok(await fallbackPage.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test")),
+      "A failed IndexedDB deletion must preserve the fallback record.");
+    assert.ok(!(await fallbackPage.locator("#art-status").innerText()).includes("Asignación eliminada"),
+      "The UI must not announce deletion success after a storage failure.");
+    await fallbackPage.evaluate(() => { window.__failArtDelete = false; });
+    await fallbackPage.locator("#art-assignments > .art-assignment-card").getByRole("button", { name: "Eliminar" }).click();
+    await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "0", null, { timeout: 5000 });
     assert.equal(await fallbackPage.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test")), null,
-      "Fallback deletion must remove the stored assignment.");
+      "Fallback deletion must remove the stored assignment after a successful retry.");
     // A failed localStorage write must be shown as an error and must not create a gallery item.
     await fallbackPage.evaluate(() => {
       const originalSetItem = Storage.prototype.setItem;
