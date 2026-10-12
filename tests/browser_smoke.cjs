@@ -140,7 +140,7 @@ async function run() {
     await page.locator('.nav-item[data-view="lore"]').click();
     await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
     await page.locator("#character-archive-query").fill("");
-    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 10, { timeout: 5000 });
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 12, { timeout: 5000 });
     await page.locator("#character-archive-query").fill("Ryu");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").getAttribute("data-archive-open"), "CHAR-RYUU-LION");
@@ -178,6 +178,13 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
+    await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    // The summary itself now exposes more than two related people, with a navigable roster graph.
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').count() > 0);
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-LYRA"]').count() > 0);
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').first().click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Gojouno Kaguya");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
