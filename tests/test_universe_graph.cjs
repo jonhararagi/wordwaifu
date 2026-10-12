@@ -1,6 +1,7 @@
 const assert = require("node:assert/strict");
 require("../src/official-character-roster.js");
 require("../src/character-dossiers.js");
+require("../src/code-geass-lore.js");
 const graph = require("../src/universe-graph.js");
 
 function testDanmachiRosterIsIncludedAsLinkedEntities() {
