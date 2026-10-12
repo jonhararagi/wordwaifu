@@ -54,6 +54,7 @@ try:
         ("/assets/visual-library/characters/battleworn-knight.png", b"\x89PNG"),
         ("/assets/visual-library/textures/stylized-ground.jpg", b"\xff\xd8\xff"),
         ("/assets/visual-library/locations/isometric-house.webp", b"RIFF"),
+        ("/assets/visual-library/maps/vellum-chart-42-antique.svg", b"<svg"),
         ("/assets/visual-library/icons/spell-icon-01.png", b"\x89PNG"),
         ("/assets/fonts/Cinzel-Variable.ttf", b"\x00\x01"),
         ("/assets/fonts/CrimsonPro-Variable.ttf", b"\x00\x01"),

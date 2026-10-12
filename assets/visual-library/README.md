@@ -6,3 +6,5 @@ Recursos de ejemplo con procedencia y licencia declaradas.
 - `textures/`: superficies y materiales.
 - `icons/`: iconografía.
 Origen: SpriteCook Free Game Assets. Licencia del paquete: CC0 1.0 Universal. Las imágenes no se vinculan automáticamente al canon ni a personajes reales.
+
+El atlas antique de Vellum es un ejemplo CC0 de mapa generado y queda separado de la cartografía canónica de Asteria. Su procedencia está registrada en `catalog.json`.

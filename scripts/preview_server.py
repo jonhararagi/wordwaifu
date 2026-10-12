@@ -19,6 +19,7 @@ ALLOWED_FILES = {
     "/assets/visual-library/characters/battleworn-knight.png": "assets/visual-library/characters/battleworn-knight.png",
     "/assets/visual-library/textures/stylized-ground.jpg": "assets/visual-library/textures/stylized-ground.jpg",
     "/assets/visual-library/locations/isometric-house.webp": "assets/visual-library/locations/isometric-house.webp",
+    "/assets/visual-library/maps/vellum-chart-42-antique.svg": "assets/visual-library/maps/vellum-chart-42-antique.svg",
     "/assets/visual-library/icons/spell-icon-01.png": "assets/visual-library/icons/spell-icon-01.png",
     "/assets/fonts/Cinzel-Variable.ttf": "assets/fonts/Cinzel-Variable.ttf",
     "/assets/fonts/CrimsonPro-Variable.ttf": "assets/fonts/CrimsonPro-Variable.ttf",
