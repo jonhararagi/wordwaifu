@@ -157,6 +157,53 @@ async function run() {
     assert.ok(staleTabEvidence.trashedProjectIds.includes("project-asteria"),
       "The original project must remain recoverable in the trash.");
     process.stdout.write("PASS stale-tab autosave cannot resurrect trashed project.\n");
+
+    // Permanent deletion must leave a minimal hidden tombstone. A tab that still
+    // holds the old project in memory must not be able to recreate it afterward.
+    const permanentPurgeEvidence = await stalePage.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const result = await repository.permanentlyDeleteTrashedProject("project-asteria");
+      const marker = await repository.read("trash", "project-asteria");
+      const visibleTrash = await repository.listTrash();
+      repository.close();
+      return {
+        result,
+        marker,
+        visibleTrashIds: visibleTrash.map((entry) => entry.projectId)
+      };
+    });
+    assert.equal(permanentPurgeEvidence.result.tombstoneRetained, true);
+    assert.equal(permanentPurgeEvidence.marker.permanentlyDeleted, true);
+    assert.equal(permanentPurgeEvidence.marker.projectData, undefined);
+    assert.equal(permanentPurgeEvidence.marker.snapshots, undefined);
+    assert.ok(!permanentPurgeEvidence.visibleTrashIds.includes("project-asteria"),
+      "The permanent tombstone must not appear as a recoverable trash entry.");
+
+    await stalePage.locator("#add-button").click();
+    await stalePage.locator("#entity-name").fill("Edición posterior al borrado");
+    await stalePage.locator('#entity-form button[type="submit"]').click();
+    await stalePage.waitForFunction(() =>
+      (document.querySelector("#save-status")?.textContent || "").toLocaleLowerCase("es").includes("borrado permanentemente"),
+    null, { timeout: 5000 });
+    const afterPermanentStaleSave = await stalePage.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const backupId = repository.readBackup().project?.project?.id || null;
+      const projects = await repository.listProjects();
+      const project = await repository.getProject("project-asteria");
+      const marker = await repository.read("trash", "project-asteria");
+      repository.close();
+      return {
+        backupId,
+        activeProjectIds: projects.map((item) => item.projectId),
+        projectRecovered: Boolean(project),
+        markerStillPresent: Boolean(marker?.permanentlyDeleted)
+      };
+    });
+    assert.equal(afterPermanentStaleSave.backupId, "project-stale-tab-sibling");
+    assert.ok(!afterPermanentStaleSave.activeProjectIds.includes("project-asteria"));
+    assert.equal(afterPermanentStaleSave.projectRecovered, false);
+    assert.equal(afterPermanentStaleSave.markerStillPresent, true);
+    process.stdout.write("PASS permanent-delete tombstone blocks stale-tab resurrection.\n");
     await staleContext.close();
 
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
@@ -637,7 +684,9 @@ async function run() {
       repository.read = originalReadForProject;
       const getProjectBlockedOnUnreadableTrash = getProjectWhenTrashUnreadable === null;
       const permanentDelete = await repository.permanentlyDeleteTrashedProject(projectC.project.id);
-      const permanentlyGone = !(await repository.read("trash", projectC.project.id));
+      const permanentMarker = await repository.read("trash", projectC.project.id);
+      const permanentMarkerRetained = Boolean(permanentMarker?.permanentlyDeleted &&
+        permanentMarker.projectData === undefined && permanentMarker.snapshots === undefined);
       const residualBackupRemoved = localStorage.getItem(storageKey) === null;
 
       repository.close();
@@ -666,7 +715,7 @@ async function run() {
         trashedBackupForSearchWritten, trashedProjectSearchExcluded, trashSearchComplete: trashSearchReport.complete,
         unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten,
         catalogBlockedOnUnreadableTrash, getProjectBlockedOnUnreadableTrash,
-        permanentDelete, permanentlyGone, residualBackupRemoved
+        permanentDelete, permanentMarkerRetained, residualBackupRemoved
       };
     });
     assert.equal(snapshotRepositoryEvidence.migration.version, 3);
@@ -721,7 +770,7 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.trashSearchComplete, true,
       "Trash filtering should remain complete when the trash store is readable.");
     assert.equal(snapshotRepositoryEvidence.permanentDelete.permanentlyDeleted, true);
-    assert.equal(snapshotRepositoryEvidence.permanentlyGone, true);
+    assert.equal(snapshotRepositoryEvidence.permanentMarkerRetained, true);
     assert.equal(snapshotRepositoryEvidence.residualBackupWritten, true);
     assert.equal(snapshotRepositoryEvidence.catalogBlockedOnUnreadableTrash, true,
       "The project catalog must fail closed when IndexedDB opens but trash cannot be read.");
@@ -2571,8 +2620,10 @@ async function run() {
       const afterDelete = await repository.listTrash();
       const leftAfterDelete = await repository.read("projects", leftId);
       const rightTrashAfterDelete = await repository.read("trash", rightId);
+      const rightPermanentMarkerValid = Boolean(rightTrashAfterDelete?.permanentlyDeleted &&
+        rightTrashAfterDelete.projectData === undefined && rightTrashAfterDelete.snapshots === undefined);
       const leftSnapshots = await repository.listSnapshots(leftId);
-      if (!permanentlyDeleted.permanentlyDeleted || rightTrashAfterDelete || !leftAfterDelete ||
+      if (!permanentlyDeleted.permanentlyDeleted || !rightPermanentMarkerValid || !leftAfterDelete ||
           leftAfterDelete.data.project.id !== leftId || afterDelete.some((item) => item.projectId === rightId) ||
           leftSnapshots.length !== restored.snapshotCount) {
         throw new Error("Permanent deletion must affect only the selected duplicate-name ID and preserve the restored project's snapshots.");
