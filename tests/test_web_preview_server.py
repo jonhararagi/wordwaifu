@@ -41,11 +41,14 @@ try:
         ("/assets/character-portraits/finn-deimne.svg", b"Finn Deimne"),
         ("/assets/character-portraits/freya.svg", b"Freya"),
         ("/assets/character-portraits/ottar.svg", b"Ottar"),
+        ("/assets/character-portraits/kaguya.svg", b"Gojouno Kaguya"),
+        ("/assets/character-portraits/lyra.svg", b"Lyra"),
         ("/src/app.js", b"WordWaifuLoreCorpus"),
         ("/src/styles.css", b".lore-"),
         ("/lore/danmachi/catalog.json", b'"records"'),
         ("/lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", b"Astrea Record"),
         ("/lore/danmachi/research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", b"DMR-002-CLM-015"),
+        ("/lore/danmachi/research/inbox/BATCH-DM-005-astrea-familia-network.md", b"DMR-003-CLM-001"),
     ):
         body = get(route)
         assert marker in body, f"Expected marker not found in {route}"
