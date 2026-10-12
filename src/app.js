@@ -1892,7 +1892,7 @@
     const sourceUrls=[...new Set(claim.sourceUrls||[])];
     const communityEntries=[];
     const seenCommunityUrls=new Set();
-    [...communityRefs,...sourceUrls.filter(url=>/fandom\\.com\\/es\\//i.test(url)).map(url=>({name:"",url}))].forEach(ref=>{
+    [...communityRefs,...sourceUrls.filter(url=>String(url).toLowerCase().includes("fandom.com/es/")).map(url=>({name:"",url}))].forEach(ref=>{
       if(!ref.url||seenCommunityUrls.has(ref.url))return;
       seenCommunityUrls.add(ref.url);communityEntries.push(ref);
     });
@@ -1900,7 +1900,7 @@
       links.appendChild(archiveElement("p","archive-source-group-label","Lectura en español · wiki comunitaria, no oficial"));
       communityEntries.forEach(ref=>appendLoreLink(links,ref.name?"Leer ficha de "+ref.name+" en español":"Leer la referencia comunitaria en español",ref.url,true));
     }
-    const primaryUrls=sourceUrls.filter(url=>!(/fandom\\.com\\/es\\//i.test(url)));
+    const primaryUrls=sourceUrls.filter(url=>!(String(url).toLowerCase().includes("fandom.com/es/")));
     if(primaryUrls.length){
       links.appendChild(archiveElement("p","archive-source-group-label","Fuentes originales y oficiales · algunas páginas están en japonés"));
       primaryUrls.forEach((url,i)=>{
