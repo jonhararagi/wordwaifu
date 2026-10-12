@@ -258,6 +258,7 @@
     if (!records.length) { gallery.appendChild(element("p","art-empty","Todavía no hay recursos asignados. Guardá una URL, una imagen o un prompt para empezar.")); return; }
     records.forEach(record => {
       const card = element("article","art-assignment-card"), thumb = element("div","art-assignment-thumb");
+      card.dataset.artKey = record.key;
       const src = record.fileDataUrl || record.imageUrl;
       if (src) {
         const image = element("img"); image.src = src; image.alt = ""; image.loading = "lazy";
