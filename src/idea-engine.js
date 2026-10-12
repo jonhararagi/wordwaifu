@@ -77,10 +77,10 @@
       const value = Number(input.traits && input.traits[key]);
       return [key, Number.isFinite(value) ? Math.max(0, Math.min(100, Math.round(value))) : fallback];
     }));
-    const worldKey = input.world && input.world !== "auto" ? input.world : /(harry\\s*potter|hogwarts)/i.test(prompt) ? "magic-school" : /(isekai|reencarna|otro mundo)/i.test(prompt) ? "isekai" : "original";
-    const dynamicKey = input.dynamic && input.dynamic !== "auto" ? input.dynamic : /malfoy/i.test(prompt) && /harry\\s*potter|hogwarts/i.test(prompt) ? "secret-crush" : motherlyPremise ? "found-family" : traits.intelligence >= 70 && traits.attitude <= 30 ? "reluctant-hero" : "auto";
+    const worldKey = input.world && input.world !== "auto" ? input.world : /(harry\s*potter|hogwarts)/i.test(prompt) ? "magic-school" : /(isekai|reencarna|otro mundo)/i.test(prompt) ? "isekai" : "original";
+    const dynamicKey = input.dynamic && input.dynamic !== "auto" ? input.dynamic : /malfoy/i.test(prompt) && /harry\s*potter|hogwarts/i.test(prompt) ? "secret-crush" : motherlyPremise ? "found-family" : traits.intelligence >= 70 && traits.attitude <= 30 ? "reluctant-hero" : "auto";
     const protagonistBank = gamerPremise ? banks.protagonists : banks.generalProtagonists;
-    const harryPotterPremise = /harry\\s*potter|hogwarts|quidditch/i.test(prompt);
+    const harryPotterPremise = /harry\s*potter|hogwarts|quidditch/i.test(prompt);
     const malfoyPremise = /malfoy/i.test(prompt);
     const femaleMalfoy = harryPotterPremise && malfoyPremise && (input.gender === "woman" || /mujer|femenin|renasca como mujer/i.test(prompt));
     const protagonist = femaleMalfoy
