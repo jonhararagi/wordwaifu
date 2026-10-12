@@ -77,7 +77,7 @@
 - `claim_id`: DMR-007-CLM-004
 - `aspect`: identity and affiliation
 - `claim`: El portal oficial de DanMachi IV ofrece perfiles de integrantes del entorno de Astrea Familia, entre ellas Iska Bra, Noin Unic, Neze Rankett, Asta Knox, Ryana Lietz y Celty Srowa. Sus fichas individuales permiten distinguir sus identidades; los vínculos concretos deben comprobarse por separado.
-- `character_ids`: [CHAR-ISKA-BRA, CHAR-NOIN-UNIC, CHAR-NEZE-RANKETT, CHAR-ASTA-KNOX, CHAR-RYANA-LIETZ, CHAR-CELTY-SROWA, CHAR-MARYUU-REAGE]
+- `character_ids`: [CHAR-ISKA-BRA, CHAR-NOIN-UNIC, CHAR-NEZE-RANKETT, CHAR-ASTA-KNOX, CHAR-RYANA-LIETZ, CHAR-CELTY-SROWA]
 - `era_or_interval`: Estado representado en la adaptación indicada por la fuente
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-007-SRC-001
@@ -98,6 +98,7 @@
 - `era_or_interval`: Astrea Record · Era Oscura de Orario; fecha interna exacta no establecida
 - `continuity_scope`: CONT-AR
 - `source_id`: DMR-007-SRC-004
+- `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
 - `source_type`: OFFICIAL_REFERENCE
 - `source_locator`: Lista de integrantes históricos y datos de afiliación
@@ -115,6 +116,7 @@
 - `era_or_interval`: Astrea Record · Era Oscura de Orario; fecha interna exacta no establecida
 - `continuity_scope`: CONT-AR
 - `source_id`: DMR-007-SRC-004
+- `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
 - `source_type`: OFFICIAL_REFERENCE
 - `source_locator`: Apartados sobre la primera Familia, el Juggernaut y sus consecuencias
@@ -132,6 +134,7 @@
 - `era_or_interval`: Astrea Record · Era Oscura de Orario; fecha interna exacta no establecida
 - `continuity_scope`: CONT-AR
 - `source_id`: DMR-007-SRC-004
+- `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
 - `source_type`: OFFICIAL_REFERENCE
 - `source_locator`: Apartado sobre el memorial de las integrantes caídas
@@ -166,6 +169,7 @@
 - `era_or_interval`: Estado de novela principal / Familia Chronicle; no fusionar automáticamente con el anime
 - `continuity_scope`: CONT-MAIN-LN
 - `source_id`: DMR-007-SRC-002
+- `source_type`: OFFICIAL_PUBLISHER
 - `source_title`: GA Bunko · Familia Chronicle: Episode Ryuu 2
 - `source_type`: OFFICIAL_PUBLISHER_OR_SECONDARY
 - `source_locator`: Sinopsis editorial del volumen
@@ -183,6 +187,7 @@
 - `era_or_interval`: Estado de novela principal / Familia Chronicle; no fusionar automáticamente con el anime
 - `continuity_scope`: CONT-MAIN-LN
 - `source_id`: DMR-007-SRC-004
+- `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
 - `source_type`: OFFICIAL_PUBLISHER_OR_SECONDARY
 - `source_locator`: Apartados de Astrea tras dejar Orario y de su nueva Familia
@@ -200,6 +205,7 @@
 - `era_or_interval`: Estado de novela principal / Familia Chronicle; no fusionar automáticamente con el anime
 - `continuity_scope`: CONT-MAIN-LN
 - `source_id`: DMR-007-SRC-004
+- `source_type`: COMMUNITY_WIKI
 - `source_title`: Familia Astrea · DanMachi Wiki en español
 - `source_type`: OFFICIAL_PUBLISHER_OR_SECONDARY
 - `source_locator`: Apartado de la segunda generación y listado de miembros
@@ -217,6 +223,7 @@
 - `era_or_interval`: Comparación de estados históricos y posteriores; interpretación provisional
 - `continuity_scope`: CROSS-CONTINUITY
 - `source_id`: DMR-007-SRC-005
+- `source_type`: COMMUNITY_SECONDARY_ANALYSIS
 - `source_title`: Ryuu Lion · Relationships · DanMachi Wiki
 - `source_type`: COMMUNITY_SECONDARY_ANALYSIS
 - `source_locator`: Apartados de Alise, Kaguya, Lyra y vínculos con Ryu
