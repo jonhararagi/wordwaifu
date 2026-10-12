@@ -170,3 +170,23 @@ Se consultó el historial de GitHub Actions, no solo la existencia del workflow.
 - HEAD del fix: `4b16e4e926ecaba7ef47b7e3c03e6656210be19a`.
 - Estado al redactar este registro: CI de PR #7 `IN_PROGRESS`; no declarar el fix validado hasta que termine.
 - El historial muestra varios runs cancelados y fallidos recientes en la rama lore. La concurrencia con `cancel-in-progress: true` cancela runs anteriores al llegar pushes nuevos; revisar el run final del HEAD y no interpretar cancelaciones como fallos de pruebas.
+
+
+### Actualización de seguimiento · regresión de continuidad (2026-10-12)
+
+La ejecución CI del PR #7 avanzó después de la primera iteración:
+
+- Run de revisión: https://github.com/jonhararagi/wordwaifu/actions/runs/38200687872
+- En la revisión de pasos, `Test lore retrieval filters and abstention`, `Test character archive model`, `Test private preview file allowlist` y `Test project import validation` finalizaron en `success`.
+- `Install Chromium` seguía `in_progress` en la última consulta. Por tanto, el resultado total del workflow todavía no está confirmado; navegador y validador de catálogo siguen pendientes.
+- La segunda ejecución mostró que no bastaba con corregir el idioma de la prueba: también existía una fuga real de la sección española `Estado temporal B · Perfil oficial del anime` hacia la continuidad histórica. PR #7 ahora corrige el filtro de producción y conserva la prueba que detecta la fuga.
+
+### Riesgo de integración descubierto
+
+PR #1 y PR #3 apuntan ambos a `main` y comparten prácticamente todo el conjunto de fundación (workflow, README, arquitectura, modelo de datos, aplicación, repositorio, esquema y pruebas). PR #3 añade el trabajo de papelera y contratos WF-004-C3. No se deben fusionar ambos a ciegas: primero comparar los cambios incrementales contra el mismo ancestro y elegir un único tren de integración. PR #2 está cerrado sin fusionar y se basa en la rama de fundación; su protección de snapshots debe rebasarse/reaplicarse sobre la línea elegida, no perderse ni incorporarse como copia paralela.
+
+### Próxima prioridad de integración
+
+1. Confirmar el resultado final del run CI de PR #7.
+2. Comparar PR #1, #2 y #3 por diferencias incrementales y dependencias, no solo por el número de archivos.
+3. Elegir un único PR base para integrar el núcleo, preservando snapshots y papelera; luego ejecutar CI sobre esa combinación.
