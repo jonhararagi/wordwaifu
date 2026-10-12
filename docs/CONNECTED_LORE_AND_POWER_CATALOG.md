@@ -20,6 +20,8 @@ El grafo permite seguir el recorrido solicitado:
 3. Regresar a Ryu con **Atrás**, o volver al índice con **Inicio**.
 4. Abrir **Astrea Familia** para ver la deidad, integrantes enlazados y contexto histórico.
 5. Seguir desde ahí a **Astrea**, a la cronología o a otro personaje, sin convertir una coincidencia de afiliación en una supuesta amistad íntima.
+6. Pasar por **Orario** para abrir las rutas hacia Hestia, Loki, Freya o Hephaistos Familia.
+7. Consultar **Astrea deja Orario** y llegar a **Solingen**. El motivo y el destino se muestran como referencia secundaria, pendientes de cotejo con el volumen/capítulo/página original.
 
 Los enlaces muestran el tipo de conexión, su continuidad y calidad de fuente. Se mantienen separadas referencias de **Astrea Record (CONT-AR)** y la etapa del anime (CONT-ANIME); un vínculo no se copia de una etapa a otra sin indicarlo.
 
