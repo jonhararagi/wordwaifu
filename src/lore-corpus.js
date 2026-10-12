@@ -140,7 +140,46 @@
     }
     return [claim];
   }
-  function buildIndex(catalog, documents) {
+  function parseCharacterProfile(markdown, sourceDocument) {
+    const text = String(markdown || "");
+    const front = /^---\s*\r?\n([\s\S]*?)\r?\n---(?:\s|$)/.exec(text);
+    const metadata = front ? front[1] : "";
+    const body = front ? text.slice(front[0].length) : text;
+    const getMeta = (key) => {
+      const match = new RegExp("^" + key + ":\\s*(.*)$", "m").exec(metadata);
+      return match ? clean(match[1].replace(/[\\[\\],]/g, " ")) : "";
+    };
+    const id = getMeta("id");
+    const titleMatch = /^#\s+(.+)$/m.exec(body);
+    const headings = [...body.matchAll(/^##\s+(.+)$/gm)];
+    const sections = headings.map((heading, index) => {
+      const start = heading.index + heading[0].length;
+      const end = index + 1 < headings.length ? headings[index + 1].index : body.length;
+      const sectionText = body.slice(start, end)
+        .replace(/^###\s+(.+)$/gm, "\n$1: ")
+        .replace(/^\s*[-*]\s+/gm, "• ")
+        .replace(/^\s*>\s?/gm, "")
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1")
+        .replace(/\*\*([^*]+)\*\*/g, "$1")
+        .replace(/\*([^*]+)\*/g, "$1")
+        .replace(new RegExp(String.fromCharCode(96) + "([^" + String.fromCharCode(96) + "]+)" + String.fromCharCode(96), "g"), "$1")
+        .replace(/[ \t]+/g, " ")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim();
+      return { heading: clean(heading[1]), text: sectionText };
+    }).filter(section => section.heading && section.text);
+    return {
+      id,
+      title: titleMatch ? clean(titleMatch[1]) : id,
+      status: getMeta("status") || "provisional",
+      continuityScopes: unique(metadata.match(/\bCONT-[A-Z0-9-]+\b/g) || []),
+      sourceRefs: unique(metadata.match(/\bDMR-\d{3}-SRC-\d{3}\b/g) || []),
+      claimRefs: unique(metadata.match(/\bDMR-\d{3}-CLM-\d{3}\b/g) || []),
+      sourceDocument,
+      sections
+    };
+  }
+  function buildIndex(catalog, documents, profileDocuments) {
     const claims = documents.flatMap(doc => parseSource(doc.content, doc.path)).flatMap(splitContinuityClaims)
       .map(claim => ({ ...claim, aspects: getAspects(claim), periodKey: getPeriod(claim) }));
     const usedIds = new Set(claims.flatMap(claim => claim.characterIds));
@@ -152,9 +191,15 @@
         const aliases = unique([name, ...tags.filter(tag => !/familia|multi-era|motivation|leadership|training|loyalty|spoiler|deity|historical state|timeline|provisional/i.test(tag))]);
         return { id: record.id, name, aliases, profilePath: record.path };
       }).sort((a, b) => a.name.localeCompare(b.name, "es"));
+    const profileDetails = Object.create(null);
+    (profileDocuments || []).forEach(document => {
+      const parsed = parseCharacterProfile(document.content, document.path);
+      if (parsed.id) profileDetails[parsed.id] = parsed;
+    });
     return { schemaVersion: 1, indexName: "WordWaifu DanMachi Lore Search", mode: "curated-claims",
       sourceClaimCount: documents.reduce((sum, doc) => sum + parseSource(doc.content, doc.path).length, 0),
-      entryCount: claims.length, characters, claims };
+      entryCount: claims.length, characters, claims, profileDetails,
+      profileDocumentCount: Object.keys(profileDetails).length };
   }
   async function load(basePath) {
     const base = basePath || "./lore/danmachi/";
@@ -165,7 +210,16 @@
     const docs = await Promise.all(responses.slice(1).map(async (response, i) => ({
       path: paths[i + 1], content: await response.text()
     })));
-    return buildIndex(catalog, docs);
+    const detailIds = new Set(["CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR","CHAR-KAGUYA","CHAR-LYRA"]);
+    const profileRecords = (catalog.records || []).filter(record =>
+      detailIds.has(record.id) && typeof record.path === "string" &&
+      record.path.startsWith("characters/") && record.path.endsWith(".md"));
+    const profileResponses = await Promise.all(profileRecords.map(record =>
+      fetch(base + record.path, { cache: "no-cache" }).then(response => {
+        if (!response.ok) throw new Error("No se pudo cargar ficha existente " + record.path + " (HTTP " + response.status + ").");
+        return response.text().then(content => ({ path: record.path, content }));
+      })));
+    return buildIndex(catalog, docs, profileResponses);
   }
   function search(index, options) {
     const settings = options || {};
@@ -200,5 +254,5 @@
     return { results: results.slice(0, limit), totalMatches: results.length, truncated: results.length > limit,
       abstain: results.length === 0, queryTokens };
   }
-  return { load, buildIndex, search, normalize, tokens };
+  return { load, buildIndex, search, normalize, tokens, parseCharacterProfile };
 });
