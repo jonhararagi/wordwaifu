@@ -83,18 +83,43 @@
   }
 
   async function removeRecord(key) {
-    memoryCache.delete(key);
+    // Never report a successful deletion when IndexedDB still contains the record.
+    let db;
     try {
-      const db = await openDatabase();
-      await new Promise((resolve, reject) => {
-        const transaction = db.transaction(STORE, "readwrite");
+      db = await openDatabase();
+    } catch (_) {
+      // IndexedDB is unavailable: the localStorage fallback is the active store.
+      const fallback = fallbackRead();
+      if (fallback[key]) {
+        delete fallback[key];
+        try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
+        catch (_) { throw new Error("No se pudo eliminar el recurso del respaldo local."); }
+      }
+      memoryCache.delete(key);
+      return;
+    }
+
+    await new Promise((resolve, reject) => {
+      let transaction;
+      try {
+        transaction = db.transaction(STORE, "readwrite");
         transaction.objectStore(STORE).delete(key);
-        transaction.oncomplete = resolve;
-        transaction.onerror = () => reject(transaction.error);
-      });
-    } catch (_) {}
+      } catch (error) {
+        reject(error);
+        return;
+      }
+      transaction.oncomplete = resolve;
+      transaction.onerror = () => reject(transaction.error || new Error("No se pudo eliminar el recurso de IndexedDB."));
+      transaction.onabort = () => reject(transaction.error || new Error("La eliminación del recurso fue cancelada."));
+    });
+
+    memoryCache.delete(key);
     const fallback = fallbackRead();
-    if (fallback[key]) { delete fallback[key]; try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); } catch (_) {} }
+    if (fallback[key]) {
+      delete fallback[key];
+      try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
+      catch (_) { /* IndexedDB deletion succeeded; a stale fallback is not authoritative. */ }
+    }
   }
 
   function makeKey(category, entityId) {
@@ -239,7 +264,16 @@
         updatePromptContext();root.scrollTo({top:0,behavior:"smooth"});
       });
       const remove = element("button","quiet-button","Eliminar");
-      remove.type="button";remove.addEventListener("click",async()=>{await removeRecord(record.key);await refreshGallery();$("#art-status").textContent="Asignación eliminada.";});
+      remove.type="button";remove.addEventListener("click",async()=>{
+        remove.disabled=true;
+        try {
+          await removeRecord(record.key);
+          await refreshGallery();
+          $("#art-status").textContent="Asignación eliminada.";
+        } catch(error) {
+          $("#art-status").textContent=error.message || "No se pudo eliminar el recurso.";
+        } finally { remove.disabled=false; }
+      });
       actions.append(edit,remove);copy.appendChild(actions);card.append(thumb,copy);gallery.appendChild(card);
     });
   }
