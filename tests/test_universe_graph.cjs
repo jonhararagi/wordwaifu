@@ -1,5 +1,6 @@
 const assert = require("node:assert/strict");
 require("../src/official-character-roster.js");
+require("../src/character-dossiers.js");
 const graph = require("../src/universe-graph.js");
 
 function testDanmachiRosterIsIncludedAsLinkedEntities() {
@@ -9,7 +10,10 @@ function testDanmachiRosterIsIncludedAsLinkedEntities() {
   assert.ok(ryu);
   assert.equal(ryu.name, "Ryu Lion");
   assert.equal(ryu.universe, "DanMachi");
-  assert.ok(ryu.personality.length > 0);
+  assert.ok(ryu.personality.length > 100, "Ryu should use the extended personality dossier when present.");
+  assert.ok(ryu.history.length > 150, "The connected profile should expose the existing researched history, not only the short roster synopsis.");
+  assert.ok(ryu.relationships.length > 50, "The detailed dossier should expose written relationship context.");
+  assert.ok(ryu.sourceUrls.length >= 2, "Dossier sources and official adaptation links should remain visible.");
   assert.ok(ryu.sourceUrl.startsWith("https://"));
 }
 
