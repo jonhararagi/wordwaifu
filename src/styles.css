@@ -282,3 +282,27 @@ select{background:#332d26;color:#e9dfd2}
 .lore-online-preview img{display:block;width:100%;max-height:180px;object-fit:contain;object-position:left center;background:var(--surface-soft,#eee5d8);border-radius:8px}
 .lore-online-image-credit{margin-top:.3rem!important;font-size:.68rem;line-height:1.4!important;color:var(--muted,#74685b)}
 .lore-online-extract{white-space:pre-line;line-height:1.65!important}
+
+
+/* Detailed character dossiers: information density first, image attribution kept concise. */
+.archive-deep-dossier{margin:22px 0;padding:20px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(150deg,#18252e,#141b24)}
+.archive-deep-dossier>.archive-section-heading{margin-bottom:8px}
+.archive-dossier-prose{padding:15px 0;border-top:1px solid var(--line)}
+.archive-dossier-prose h4,.archive-dossier-list>h4{font-size:13px;font-weight:750;letter-spacing:.02em;margin:0 0 8px;color:var(--text)}
+.archive-dossier-prose p,.archive-dossier-item p{font-size:13px;line-height:1.85;color:#cbd5dc;max-width:100ch;margin:0;white-space:normal}
+.archive-dossier-list{padding:15px 0;border-top:1px solid var(--line)}
+.archive-dossier-item{padding:12px 14px;margin:8px 0;border:1px solid #2b3a46;border-radius:10px;background:#111922}
+.archive-dossier-item h5{font-size:12px;line-height:1.5;margin:0 0 5px;color:#a8e4d6;font-weight:750}
+.archive-dossier-relationship h5{color:#e6d29a}
+.archive-dossier-sourcebar{display:flex;gap:8px 14px;flex-wrap:wrap;align-items:center;padding-top:14px;border-top:1px solid var(--line)}
+.archive-dossier-sourcebar a{font-size:11px;font-weight:700;color:var(--teal);text-decoration:none}
+.archive-dossier-sourcebar a:hover{text-decoration:underline}
+.archive-dossier-source-label{font-size:9px;letter-spacing:.12em;border:1px solid #52626f;border-radius:4px;padding:5px 7px;color:#d6c69c;background:#252c30}
+.archive-dossier-spoiler-note{font-size:11px;color:#f0c78e;background:#342a1d;border-left:3px solid #d1a15f;padding:9px 12px;margin:8px 0 13px;border-radius:4px}
+.archive-official-reference .archive-research-note{font-size:10px;line-height:1.4;margin-top:8px;color:var(--muted)}
+.archive-portrait-caption{max-width:100%;text-wrap:balance}
+@media(max-width:600px){
+ .archive-deep-dossier{padding:14px}
+ .archive-dossier-prose p,.archive-dossier-item p{font-size:12px;line-height:1.75}
+ .archive-dossier-item{padding:10px}
+}

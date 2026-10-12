@@ -81,6 +81,7 @@
     if (/relaci[oó]n|v[ií]nculo|lealtad|afecto|rom[aá]ntic|gu[ií]a|capitana/.test(text)) aspects.push("relationships");
     if (/motivaci[oó]n|objetivo|deseo|valores?|justicia|prop[oó]sito/.test(text)) aspects.push("motivation");
     if (/personalidad|temperamento|car[aá]cter|misericordiosa|amable|luminoso|directa/.test(text)) aspects.push("personality");
+    if (/habilidad|magia|combate|arma|capacidad|poder|t[eé]cnica|repertorio/.test(text)) aspects.push("behavior");
     if (/conducta|comportamiento|liderazgo|presi[oó]n|entrenamiento|h[aá]bito|trabajando|pr[aá]ctico|competencia/.test(text)) aspects.push("behavior");
     return unique(aspects.length ? aspects : ["general"]);
   }
@@ -191,9 +192,74 @@
       sections
     };
   }
+  function claimsFromOfficialRoster(records, existingClaims) {
+    const alreadyCovered = new Set((existingClaims || []).flatMap(claim => claim.characterIds || []));
+    const generated = [];
+    let counter = 1;
+    const make = (record, scope, aspect, heading, claim, dossier) => {
+      if (!claim || !String(claim).trim()) return;
+      const sourceUrl = dossier && dossier.sourceUrl ? dossier.sourceUrl : record.sourcePage;
+      const sourceTitle = dossier && dossier.sourceLabel ? dossier.sourceLabel : (record.sourceTitle || "Perfil oficial de adaptación");
+      const sourceType = dossier && dossier.sourceType ? "SECONDARY" : (record.evidenceType || "official_adaptation_profile");
+      const sourceId = dossier && dossier.sourceType ? "DMR-007-SRC-001" : (record.sourceId || "DMR-006-SRC-001");
+      const claimId = "DMR-008-CLM-" + String(counter++).padStart(3,"0");
+      const period = scope === "CONT-AR" ? "Astrea Record · Era Oscura de Orario"
+        : scope === "CONT-MAIN-LN" ? "Novela ligera principal · el punto temporal depende del pasaje referenciado"
+        : scope === "CROSS-CONTINUITY" ? "Comparación entre novelas, relatos paralelos y adaptaciones"
+        : "Estado descrito por " + (record.sourceTitle || "el perfil de adaptación");
+      generated.push({
+        claimId, entryId: claimId, heading: record.name + " · " + heading, claim: String(claim).trim(),
+        characterIds: [record.id], aspect, eraOrInterval: period,
+        continuityScopes: [scope], sourceIds: [sourceId], sourceTitle, sourceType,
+        sourceLocator: dossier ? "Síntesis original por apartados; consultar el artículo citado y sus referencias primarias." : (record.locator || "Perfil de personaje publicado en la página oficial."),
+        sourceUrls: sourceUrl ? [sourceUrl] : [], evidenceType: dossier ? "original_paraphrase_of_secondary_compendium" : "explicit_character_profile",
+        verificationStatus: dossier ? "secondary_reference_checked" : "source_checked",
+        spoilerLevel: dossier && dossier.spoilerLevel ? dossier.spoilerLevel : "none",
+        confidenceNote: dossier
+          ? "Resumen redactado de forma original a partir de una wiki comunitaria. Es una fuente secundaria y puede combinar novelas y adaptaciones; contrastar hechos finos con el volumen y la continuidad seleccionados."
+          : (record.detailStatus || "Paráfrasis del perfil oficial de adaptación; no representa por sí sola toda la novela ligera."),
+        sourceDocument: dossier ? dossier.sourceUrl : record.sourcePage
+      });
+    };
+    for (const record of records || []) {
+      if (!record || !record.id) continue;
+      const dossierMap = record.dossiers && typeof record.dossiers === "object" ? record.dossiers : {};
+      if (!alreadyCovered.has(record.id)) {
+        const scope = record.continuity || "CONT-ANIME";
+        make(record, scope, "identidad y contexto", "resumen del perfil", record.summary, null);
+        make(record, scope, "personalidad y temperamento", "personalidad", record.personality, null);
+        make(record, scope, "habilidades y combate", "capacidades", record.abilities, null);
+        make(record, scope, "relaciones y vínculos", "relaciones destacadas", record.relationships, null);
+        if (record.detailStatus) make(record, scope, "límites de evidencia", "cobertura documental", record.detailStatus, null);
+      }
+      for (const [scope, dossier] of Object.entries(dossierMap)) {
+        if (!dossier || typeof dossier !== "object") continue;
+        make(record, scope, "apariencia e identidad visual", "apariencia y presentación", dossier.appearance, dossier);
+        make(record, scope, "evolución e historia", "historia y contexto", dossier.history, dossier);
+        make(record, scope, "evolución psicológica", "evolución del personaje", dossier.development, dossier);
+        make(record, scope, "habilidades y combate", "perfil de combate", dossier.combatProfile, dossier);
+        make(record, scope, "hábitos y conducta", "hábitos y detalles distintivos", dossier.habits, dossier);
+        make(record, scope, "motivación y función narrativa", "función narrativa", dossier.narrativeRole, dossier);
+        for (const relation of dossier.relationshipDetails || []) {
+          if (!relation || !relation.name || !relation.detail) continue;
+          make(record, scope, "relaciones y vínculos", "relación con " + relation.name, relation.detail, dossier);
+        }
+        for (const ability of dossier.abilities || []) {
+          if (!ability || !ability.name || !ability.detail) continue;
+          make(record, scope, "habilidades y combate", ability.name, ability.detail, dossier);
+        }
+      }
+    }
+    return generated;
+  }
   function buildIndex(catalog, documents, profileDocuments) {
-    const claims = documents.flatMap(doc => parseSource(doc.content, doc.path)).flatMap(splitContinuityClaims)
+    const parsedClaims = documents.flatMap(doc => parseSource(doc.content, doc.path)).flatMap(splitContinuityClaims)
       .map(claim => ({ ...claim, aspects: getAspects(claim), periodKey: getPeriod(claim) }));
+    const officialRoster = typeof globalThis !== "undefined" && globalThis.WordWaifuOfficialCharacterRoster
+      ? globalThis.WordWaifuOfficialCharacterRoster.list() : [];
+    const generatedClaims = claimsFromOfficialRoster(officialRoster, parsedClaims)
+      .map(claim => ({ ...claim, aspects: getAspects(claim), periodKey: getPeriod(claim) }));
+    const claims = [...parsedClaims, ...generatedClaims];
     const usedIds = new Set(claims.flatMap(claim => claim.characterIds));
     const catalogCharacters = (catalog.records || [])
       .filter(record => ["character", "deity_character"].includes(record.type) && usedIds.has(record.id))
@@ -206,8 +272,6 @@
     // Official adaptation references extend discoverability without pretending to be
     // fully researched canonical dossier files. Each entry must have source-backed claims.
     const knownCharacterIds = new Set(catalogCharacters.map(character => character.id));
-    const officialRoster = typeof globalThis !== "undefined" && globalThis.WordWaifuOfficialCharacterRoster
-      ? globalThis.WordWaifuOfficialCharacterRoster.list() : [];
     const externalCharacters = officialRoster
       .filter(record => usedIds.has(record.id) && !knownCharacterIds.has(record.id))
       .map(record => ({ id: record.id, name: record.name, aliases: unique([record.name, ...(record.aliases || [])]) }));
@@ -219,7 +283,7 @@
       if (parsed.id) profileDetails[parsed.id] = parsed;
     });
     return { schemaVersion: 1, indexName: "WordWaifu DanMachi Lore Search", mode: "curated-claims",
-      sourceClaimCount: documents.reduce((sum, doc) => sum + parseSource(doc.content, doc.path).length, 0),
+      sourceClaimCount: documents.reduce((sum, doc) => sum + parseSource(doc.content, doc.path).length, 0) + generatedClaims.length,
       entryCount: claims.length, characters, claims, profileDetails,
       profileDocumentCount: Object.keys(profileDetails).length };
   }

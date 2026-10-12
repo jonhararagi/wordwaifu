@@ -274,7 +274,27 @@ async function run() {
       const img = button?.closest(".archive-character-card")?.querySelector(".archive-portrait-art");
       return !!img && img.complete && img.naturalWidth > 0;
     }, null, { timeout: 5000 });
-    process.stdout.write("PASS character archive: compact search, tabs, links, continuity separation, spoiler filtering, evidence and screenshot.\\n");
+    await page.locator("#character-archive-results [data-archive-open='DM-CHAR-BELL']").click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent === "Bell Cranel");
+    assert.equal(await page.locator("#archive-profile-continuity").inputValue(),"CONT-MAIN-LN",
+      "Bell should open his deeper main-novel dossier rather than defaulting to a short anime blurb.");
+    await page.locator("#archive-tab-summary").click();
+    const bellDossier = page.locator("#archive-profile-panel .archive-deep-dossier");
+    assert.equal(await bellDossier.count(),1,"Bell's rich dossier must render on the main profile tab.");
+    const bellDossierText = await bellDossier.innerText();
+    for (const section of ["Historia y contexto","Personalidad y evolución","Perfil de combate","Habilidades y capacidades","Relaciones importantes","Función en la historia"]) {
+      assert.ok(bellDossierText.includes(section),"Bell's dossier should render the section: "+section);
+    }
+    assert.ok(bellDossierText.length>2500,"The displayed character dossier must contain substantial information rather than a short synopsis.");
+    assert.ok(await bellDossier.locator("a[href*='danmachi.fandom.com/es/wiki/Bell_Cranel']").count()>0,
+      "The expanded dossier must provide a direct community source link.");
+    await page.screenshot({ path: path.join(screenshotDirectory, "character-archive-bell.png"), fullPage: true });
+    await page.locator("#archive-return-search").click();
+    await page.locator("#character-archive-query").fill("Ryu");
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1);
+    await page.locator("#character-archive-results [data-archive-open='CHAR-RYUU-LION']").click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent === "Ryu Lion");
+    process.stdout.write("PASS character archive: source-rich Bell dossier and historical Ryu continuity are visible.\\n");
     await page.locator("#lore-research-panel > summary").click();
 
 // DanMachi lore retrieval: a single UI query must preserve temporal continuity.
