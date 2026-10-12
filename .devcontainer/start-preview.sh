@@ -33,7 +33,7 @@ stop_stale_preview() {
     return 1
   fi
   local pids
-  pids="$(pgrep -f 'python3 .*/scripts/preview_server\.py' || true)"
+  pids="$(pgrep -f 'python3 .*/scripts/preview_server[.]py' || true)"
   if [[ -n "$pids" ]]; then
     echo "Restarting the existing WordWaifu preview so it loads the latest allowlist..."
     while IFS= read -r pid; do

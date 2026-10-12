@@ -2169,7 +2169,10 @@
       ...state.relationships.map((item) => item.name),
       ...state.stories.map((item) => item.name || item.title)
     ];
-    return names.some((value) => normalize(value).includes(needle));
+    const relevantNames = activeView === "atlas"
+      ? [...state.characters.map((item) => item.name), ...state.locations.map((item) => item.name)]
+      : names;
+    return relevantNames.some((value) => normalize(value).includes(needle));
   }
 
   function resetArchiveForGlobalSearch(rawQuery) {
