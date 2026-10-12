@@ -1944,7 +1944,9 @@
     const relSection=archiveElement("section","archive-section"),rh=archiveElement("div","archive-section-heading");rh.append(archiveElement("h3","","Personas relacionadas"),archiveGoTab("relationships","Ver red completa"));relSection.appendChild(rh);
     const relGrid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.slice(0,2).forEach(r=>relGrid.appendChild(renderArchiveRelationship(r)));else relGrid.appendChild(archiveEmpty("No hay vínculos personales respaldados para esta continuidad."));relSection.appendChild(relGrid);root.appendChild(relSection);
     const momentSection=archiveElement("section","archive-section"),mh=archiveElement("div","archive-section-heading");mh.append(archiveElement("h3","","Momentos importantes"),archiveGoTab("moments","Ver momentos y contexto"));momentSection.appendChild(mh);
-    const moments=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.slice(0,3).forEach(mo=>moments.appendChild(renderArchiveMoment(mo)));else moments.appendChild(archiveEmpty("No hay suficientes acontecimientos curados para esta continuidad."));momentSection.appendChild(moments);root.appendChild(momentSection);return root;
+    const moments=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.slice(0,3).forEach(mo=>moments.appendChild(renderArchiveMoment(mo)));else moments.appendChild(archiveEmpty("No hay suficientes acontecimientos curados para esta continuidad."));momentSection.appendChild(moments);root.appendChild(momentSection);
+    const more=archiveElement("section","archive-more-info-cta");more.append(archiveElement("div","",""),archiveElement("h3","","¿Querés conocer mejor a "+profile.name+"?"),archiveElement("p","","Abrí un resumen ampliado con contexto, evolución, límites de la evidencia y referencias en español cuando están disponibles."));
+    const moreButton=archiveElement("button","primary-button","Más info · resumen ampliado ↗");moreButton.type="button";moreButton.dataset.archiveMoreInfo="true";more.appendChild(moreButton);root.appendChild(more);return root;
   }
   function renderArchivePersonality(profile){
     const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Personalidad y psicología"),archiveElement("p","","Cada categoría se completa solo con afirmaciones del estado seleccionado."));root.appendChild(h);
@@ -1976,6 +1978,48 @@
     if(profile.claims.length){const grid=archiveElement("div","archive-source-grid");profile.claims.forEach(c=>grid.appendChild(archiveClaimCard(c)));root.appendChild(grid);}else root.appendChild(archiveEmpty("No hay afirmaciones visibles con esta combinación de continuidad y spoiler."));
     if(profile.missingContinuities.length)root.appendChild(archiveElement("p","archive-return-note","Sin evidencia utilizable incorporada para "+profile.missingContinuities.join(" y ")+" en esta ficha. No se sustituye por datos del anime."));
     return root;
+  }
+  function openArchiveMoreInfo(){
+    if(!activeArchiveProfile)return;
+    const profile=activeArchiveProfile;
+    const info=window.WordWaifuCharacterArchive.getExtendedInfo(profile.id,profile.continuity);
+    const dialog=$("#archive-more-info-dialog"),body=$("#archive-more-info-content");
+    $("#archive-more-info-title").textContent=info?info.title:(profile.name+" · resumen ampliado");
+    body.replaceChildren();
+    if(info){
+      body.appendChild(archiveElement("p","archive-more-info-lead",info.summary));
+      (info.sections||[]).forEach(section=>{
+        const block=archiveElement("section","archive-more-info-section");
+        block.append(archiveElement("h3","",section.title),archiveElement("p","",section.text));
+        body.appendChild(block);
+      });
+      const refs=archiveElement("section","archive-more-info-section"),heading=archiveElement("h3","","Referencias para seguir leyendo");
+      refs.appendChild(heading);
+      (info.references||[]).forEach(ref=>{
+        const item=archiveElement("div","archive-more-info-reference");
+        item.appendChild(archiveElement("span","archive-reference-kind",ref.kind==="community"?"WIKI COMUNITARIA · NO OFICIAL":"FUENTE OFICIAL / PRIMARIA"));
+        appendLoreLink(item,ref.label,ref.url,true);
+        refs.appendChild(item);
+      });
+      if(info.galleryUrl){
+        const gallery=archiveElement("a","archive-gallery-link","Ver galería de imágenes en la wiki comunitaria ↗");
+        gallery.href=info.galleryUrl;gallery.target="_blank";gallery.rel="noopener noreferrer";
+        const imageNote=archiveElement("p","archive-research-note","La galería abre fuera de WordWaifu. Las imágenes y sus derechos pertenecen a sus titulares; no se copian al repositorio.");
+        refs.append(imageNote,gallery);
+      }
+      body.appendChild(refs);
+    }else{
+      body.appendChild(archiveElement("p","archive-more-info-lead",profile.state.summary));
+      body.appendChild(archiveElement("p","archive-research-note","El detalle narrativo de esta ficha está pendiente de investigación; no rellenamos los apartados faltantes con datos inventados."));
+      const refs=archiveElement("section","archive-more-info-section");
+      refs.appendChild(archiveElement("h3","","Afirmaciones documentadas"));
+      profile.claims.forEach(claim=>refs.appendChild(archiveClaimCard(claim)));
+      body.appendChild(refs);
+    }
+    if(!dialog.open)dialog.showModal();
+  }
+  function closeDialogFromBackdrop(event){
+    if(event.target===event.currentTarget)event.currentTarget.close();
   }
   function renderArchiveTab(){
     const panel=$("#archive-profile-panel");if(!panel||!activeArchiveProfile)return;panel.replaceChildren();
@@ -2012,12 +2056,19 @@
   $("#archive-profile-tabs").addEventListener("click",e=>{const t=e.target.closest("[data-profile-tab]");if(!t)return;activeArchiveTab=t.dataset.profileTab;renderArchiveHeader(activeArchiveProfile);renderArchiveTab();});
 
   $("#archive-profile-panel").addEventListener("click",e=>{
+    const more=e.target.closest("button[data-archive-more-info]");
+    if(more){openArchiveMoreInfo();return;}
     const t=e.target.closest("button[data-profile-tab]");
     if(!t||!activeArchiveProfile)return;
     activeArchiveTab=t.dataset.profileTab;
     renderArchiveHeader(activeArchiveProfile);
     renderArchiveTab();
   });
+  $("#archive-more-info-close").addEventListener("click",()=>$("#archive-more-info-dialog").close());
+  $("#content-rights-open").addEventListener("click",()=>$("#content-rights-dialog").showModal());
+  $("#content-rights-close").addEventListener("click",()=>$("#content-rights-dialog").close());
+  $("#archive-more-info-dialog").addEventListener("click",closeDialogFromBackdrop);
+  $("#content-rights-dialog").addEventListener("click",closeDialogFromBackdrop);
   $("#archive-profile-tabs").addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;const tabs=$("#archive-profile-tabs [role=tab]"),i=tabs.indexOf(e.target.closest("[role=tab]"));if(i<0)return;e.preventDefault();const n=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[n].focus();tabs[n].click();});
   $("#character-archive-profile").addEventListener("click",e=>{const b=e.target.closest("[data-character-link]");if(!b||!loreArchiveIndex.characters.some(c=>c.id===b.dataset.characterLink))return;openArchiveProfile(b.dataset.characterLink,b.dataset.linkContinuity,true);});
   async function prepareLoreView() {
