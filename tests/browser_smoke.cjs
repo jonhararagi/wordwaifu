@@ -154,6 +154,17 @@ async function run() {
     assert.ok((await page.locator("#story-meta-form [name='storyArcs']").inputValue()).split("\n").length >= 4,
       "Markdown import must preserve the protagonist arcs, not stop at the first character. Actual: " + JSON.stringify(await page.locator("#story-meta-form [name='storyArcs']").inputValue()));
     assert.ok((await page.locator(".story-chapter-form [name='chapterTitle']").nth(3).inputValue()).includes("Un lugar en el mapa"));
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-import-file").setInputFiles({ name: "twist-roundtrip.md", mimeType: "text/markdown", buffer: Buffer.from("# Prueba de revelación\n\n## Sinopsis\n\nUna partida altera el mundo.\n\n## Conflicto central\n\nDescubrir el origen del juego.\n\n## Tipo de mundo\n\nurban-supernatural\n\n## Reglas del mundo\n\nCada carta cobra un precio.\n\n## Dinámica del mundo\n\nLas derrotas alteran la ciudad.\n\n## Motor de revelación\n\ncard-contract-game\n\n## Secreto central\n\nLas cartas son entidades mitológicas.\n\n## Pistas y falsas interpretaciones\n\nComparten el mismo sello.\n\n## Momento de revelación\n\nFinal del segundo arco.\n\n## Consecuencias del giro\n\nLos antiguos rivales cooperan.\n\n## Capítulo 1 — El primer duelo\n\nLa carta pronunció un nombre olvidado.", "utf8") });
+    await page.waitForFunction(() => document.querySelector("#story-meta-form [name='storyName']")?.value === "Prueba de revelación", { timeout: 5000 });
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldType']").inputValue(), "urban-supernatural");
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldRules']").inputValue(), "Cada carta cobra un precio.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealType']").inputValue(), "card-contract-game");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealSecret']").inputValue(), "Las cartas son entidades mitológicas.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealClues']").inputValue(), "Comparten el mismo sello.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealTiming']").inputValue(), "Final del segundo arco.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealConsequences']").inputValue(), "Los antiguos rivales cooperan.");
+    process.stdout.write("PASS reveal framework: Markdown import preserves world rules, clues, reveal timing and consequences.\\n");
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
