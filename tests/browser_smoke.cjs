@@ -291,20 +291,33 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#lore-search-status")?.textContent.includes("No se encontró evidencia"), { timeout: 5000 });
     assert.equal(await page.locator(".lore-result").count(), 0);
     process.stdout.write("PASS lore UI: undocumented Ais likes produce explicit abstention.\n");
-    await page.route("https://danmachi.fandom.com/api.php**", route => route.fulfill({
-      status:200, contentType:"application/json",
-      body:JSON.stringify({query:{search:[{title:"Ryuu Lion",snippet:'<span class="searchmatch">Ryuu Lion</span> profile and timeline.'}]}})
-    }));
-    await page.route("https://en.wikipedia.org/w/api.php**", route => route.fulfill({
-      status:200, contentType:"application/json",
-      body:JSON.stringify({query:{search:[{title:"DanMachi",snippet:"A Japanese light novel series."}]}})
-    }));
+    await page.route("https://danmachi.fandom.com/api.php**", route => {
+      const url = new URL(route.request().url());
+      const action = url.searchParams.get("action");
+      const prop = url.searchParams.get("prop");
+      if(action==="parse") return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({parse:{text:{"*":"<aside><p>Hide infobox.</p></aside><p>Ryuu Lion is an elven adventurer whose history spans Astrea Familia and the main story of DanMachi.</p><p>She later works at the Hostess of Fertility.</p>"}}})});
+      if(action==="query"&&prop==="pageimages|info") return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({query:{pages:{"2264":{pageid:2264,title:"Ryuu Lion",canonicalurl:"https://danmachi.fandom.com/wiki/Ryuu_Lion",thumbnail:{source:"https://static.wikia.nocookie.net/dungeon-ni-deai-o-motemeru/images/3/33/Ryuu.png"}}}}})});
+      return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({query:{search:[{pageid:2264,title:"Ryuu Lion",snippet:'<span class="searchmatch">Ryuu Lion</span> profile and timeline.'}]}})});
+    });
+    await page.route("https://en.wikipedia.org/w/api.php**", route => {
+      const url = new URL(route.request().url());
+      const action = url.searchParams.get("action");
+      const prop = url.searchParams.get("prop");
+      if(action==="parse") return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({parse:{text:{"*":"<p>DanMachi is a Japanese light novel series written by Fujino Omori.</p>"}}})});
+      if(action==="query"&&prop==="pageimages|info") return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({query:{pages:{"100":{pageid:100,title:"DanMachi",canonicalurl:"https://en.wikipedia.org/wiki/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a_Dungeon",thumbnail:{source:"https://upload.wikimedia.org/wikipedia/en/a/a2/Danmachi.jpg"}}}}})});
+      return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({query:{search:[{pageid:100,title:"DanMachi",snippet:"A Japanese light novel series."}]}})});
+    });
+    await page.route("https://static.wikia.nocookie.net/**", route => route.fulfill({status:200,contentType:"image/png",body:Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+j8Z0AAAAASUVORK5CYII=","base64")}));
     await page.locator("#lore-query").fill("Ryu Lion");
     await page.locator("#lore-web-search-button").click();
     await page.waitForFunction(() => document.querySelectorAll("#lore-online-results .lore-online-result-card").length >= 2, {timeout:5000});
     assert.ok((await page.locator("#lore-online-status").innerText()).includes("pistas secundarias"));
     assert.ok((await page.locator("#lore-online-results").innerText()).includes("Ryuu Lion"));
     assert.ok(!((await page.locator("#lore-online-results").innerText()).includes("<span")));
+    assert.ok(await page.locator("#lore-online-results .lore-online-preview img").count() >= 1,"External research should display a source-attributed thumbnail where the wiki provides one.");
+    assert.ok((await page.locator("#lore-online-results .lore-online-extract").first().innerText()).includes("elven adventurer"),
+      "External research should show a useful lead excerpt, not only the page search snippet.");
+    assert.ok((await page.locator("#lore-online-results .lore-online-image-credit").first().innerText()).includes("No se guarda"));
     await page.locator("#lore-source-directory-details > summary").click();
     assert.ok((await page.locator("#lore-source-directory").innerText()).includes("GA Bunko"));
     assert.ok((await page.locator("#lore-source-directory").innerText()).includes("DanMachi Wiki"));
