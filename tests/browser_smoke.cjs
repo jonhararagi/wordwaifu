@@ -2458,6 +2458,55 @@ async function run() {
     assert.ok(duplicateNameEvidence.restoredSnapshotCount >= 1, "Restore must preserve the selected project's snapshots.");
     process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\\n");
 
+    // Art Studio: generate a prompt, upload an image, persist the assignment, and apply it to the character portrait.
+    await page.evaluate(() => {
+      for (const dialog of document.querySelectorAll("dialog[open]")) dialog.close();
+    });
+    await page.locator('.nav-item[data-view="art"]').click();
+    await page.waitForFunction(() => Boolean(window.WordWaifuArtStudio && window.WordWaifuCharacterDossiers), { timeout: 5000 });
+    await page.locator("#art-target-type").selectOption("character");
+    await page.locator("#art-target-character").selectOption("DM-CHAR-BELL");
+    await page.locator("#art-generate-prompt").click();
+    const generatedPrompt = await page.locator("#art-prompt").inputValue();
+    assert.ok(generatedPrompt.includes("Bell Cranel") && generatedPrompt.includes("DM-CHAR-BELL"),
+      "The prompt generator must use the selected character identity.");
+    const tinyPng = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a5ioAAAAASUVORK5CYII=", "base64");
+    await page.locator("#art-image-file").setInputFiles({ name: "bell-test.png", mimeType: "image/png", buffer: tinyPng });
+    await page.locator("#art-save").click();
+    await page.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("Se asignó a Bell Cranel"), { timeout: 5000 });
+    assert.equal(await page.locator("#art-assignment-count").innerText(), "1");
+    const customAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("character", "DM-CHAR-BELL"));
+    assert.ok(customAsset.src.startsWith("data:image/png"), "Uploaded art must persist in the local asset library.");
+    assert.ok(customAsset.prompt.includes("Bell Cranel"), "The saved prompt must remain attached to its character.");
+    // Non-character assets use the same stable-ID assignment path.
+    await page.locator("#art-target-type").selectOption("background");
+    await page.locator("#art-target-id").fill("bg-orario-night");
+    await page.locator("#art-target-name").fill("Orario nocturno");
+    await page.locator("#art-prompt").fill("Panorámica nocturna de Orario, luces cálidas y cielo profundo.");
+    await page.locator("#art-save").click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
+    const backgroundAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"));
+    assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
+    await page.screenshot({ path: path.join(root, "artifacts", "art-studio.png"), fullPage: true });
+    // A user-assigned portrait takes precedence over the linked reference art in the archive.
+    await page.locator('.nav-item[data-view="lore"]').click();
+    const profileBack = page.locator("#archive-profile-back");
+    if (await profileBack.isVisible().catch(() => false)) await profileBack.click();
+    await page.locator("#archive-clear-filters").click();
+    await page.locator("#character-archive-query").fill("Bell");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="DM-CHAR-BELL"]').length === 1, { timeout: 5000 });
+    await page.locator('#character-archive-results [data-archive-open="DM-CHAR-BELL"]').click();
+    await page.waitForFunction(() => {
+      const image = document.querySelector("#archive-profile-portrait .archive-portrait-art");
+      return !!image && image.src.startsWith("data:image/png");
+    }, null, { timeout: 5000 });
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Expediente ampliado"),
+      "The profile must show the substantial dossier rather than only the short official synopsis.");
+    const dossierLength = await page.locator("#archive-profile-panel .archive-dossier-detail p").evaluateAll(nodes => nodes.reduce((sum,node)=>sum+node.innerText.length,0));
+    assert.ok(dossierLength > 1200, "The expanded dossier must contain substantial content.");
+    process.stdout.write("PASS art studio: uploaded art persists by entity ID, prompts generate from character data, and custom portraits override the reference image.\\n");
+    process.stdout.write("PASS dossiers: the Bell profile renders extended researched content.\\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {

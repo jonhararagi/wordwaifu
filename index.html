@@ -30,6 +30,7 @@
         <button class="nav-item" data-view="stories"><span>▤</span> Historias y novelas</button>
         <button class="nav-item" data-view="commands"><span>⌘</span> Asistente local</button>
         <button class="nav-item" data-view="lore"><span>⌕</span> Enciclopedia de personajes</button>
+        <button class="nav-item" data-view="art"><span>▧</span> Panel de arte</button>
       </nav>
       <div class="sidebar-bottom">
         <div class="offline-card"><span class="offline-icon">◉</span><div><strong>Modo sin IA</strong><small>Sin API ni conexión requerida</small></div><span class="status-dot"></span></div>
@@ -104,6 +105,29 @@
         <div id="command-log" class="command-log"><div class="system-message">Probá: «buscar personaje», «listar lugares», «validar continuidad» o «ayuda».</div></div>
         <form id="command-form" class="command-form"><input id="command-input" autocomplete="off" placeholder="Escribí un comando local..."><button class="primary-button" type="submit">Ejecutar ↗</button></form>
         <div class="command-chips"><button data-command="ayuda">Ayuda</button><button data-command="listar personajes">Listar personajes</button><button data-command="listar lugares">Listar lugares</button><button data-command="validar continuidad">Validar continuidad</button></div>
+      </section>
+      <section id="art-view" class="art-view hidden" aria-labelledby="art-studio-title">
+        <header class="art-studio-header"><div><p class="eyebrow">WORDWAIFU · ASSET STUDIO</p><h2 id="art-studio-title">Panel de arte</h2><p>Vinculá imágenes locales o externas, guardá prompts y asigná cada recurso a una entidad por ID estable.</p></div><div class="art-studio-stat"><strong id="art-assignment-count">0</strong><span>recursos asignados</span></div></header>
+        <div class="art-studio-grid">
+          <section class="art-editor-card">
+            <div class="art-card-heading"><div><p class="eyebrow">01 · DESTINO</p><h3>¿A qué pertenece?</h3></div><span class="art-step">A</span></div>
+            <label>Tipo de recurso<select id="art-target-type"><option value="character">Personaje</option><option value="object">Objeto / equipamiento</option><option value="background">Fondo / escenario</option></select></label>
+            <label id="art-character-picker">Personaje del catálogo<select id="art-target-character"><option value="">Cargando personajes…</option></select></label>
+            <div class="art-two-fields"><label>ID estable<input id="art-target-id" autocomplete="off" placeholder="CHAR-001 o bg-orario"></label><label>Nombre visible<input id="art-target-name" autocomplete="off" placeholder="Nombre de la entidad"></label></div>
+            <p id="art-context" class="art-context">Elegí o escribí una entidad para vincular un recurso.</p>
+            <div class="art-card-heading art-subheading"><div><p class="eyebrow">02 · RECURSO VISUAL</p><h3>Imagen o placeholder</h3></div><span class="art-step">B</span></div>
+            <label>URL de imagen externa<input id="art-image-url" type="url" inputmode="url" placeholder="https://…/imagen.png"></label>
+            <label class="art-upload-zone"><span class="art-upload-icon">＋</span><strong>Subir imagen local</strong><small>PNG, JPEG, WebP, GIF, SVG o AVIF · máximo 5 MB</small><input id="art-image-file" type="file" accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml,image/avif"></label>
+            <div id="art-preview-wrap" class="art-preview-wrap hidden"><img id="art-preview" alt="Vista previa del recurso visual"><span>VISTA PREVIA</span></div>
+            <div class="art-card-heading art-subheading"><div><p class="eyebrow">03 · GENERACIÓN</p><h3>Prompt de imagen</h3></div><span class="art-step">C</span></div>
+            <div class="art-prompt-options"><label>Estilo<input id="art-style" value="ilustración de fantasía editorial, acabado de alta calidad"></label><label>Encuadre<input id="art-framing" value="retrato vertical de cuerpo entero, silueta clara"></label><label>Atmósfera<input id="art-mood" placeholder="melancólica, heroica, serena…"></label><label>Iluminación<input id="art-lighting" value="luz cinematográfica suave, volumen y detalle"></label><label>Paleta<input id="art-palette" placeholder="colores principales, contraste…"></label></div>
+            <div class="art-inline-actions"><button id="art-generate-prompt" type="button" class="outline-button">Generar prompt</button><button id="art-copy-prompt" type="button" class="quiet-button">Copiar prompt</button></div>
+            <label>Prompt editable<textarea id="art-prompt" rows="9" maxlength="12000" placeholder="Generá un prompt con los datos del personaje o escribí el tuyo…"></textarea></label>
+            <div class="art-save-row"><button id="art-save" type="button" class="primary-button">Guardar y asignar</button><button id="art-clear-form" type="button" class="quiet-button">Limpiar</button></div>
+            <p id="art-status" class="art-status" role="status" aria-live="polite">Los recursos se guardan en este navegador. Las imágenes externas requieren conexión.</p>
+          </section>
+          <aside class="art-library-card"><div class="art-card-heading"><div><p class="eyebrow">BIBLIOTECA LOCAL</p><h3>Asignaciones</h3></div><span class="art-step">∞</span></div><p class="art-library-intro">Cada imagen y prompt queda vinculado a tipo + ID. Podés editar o quitar una asignación sin cambiar el resto del proyecto.</p><div id="art-assignments" class="art-assignments" aria-live="polite"><p class="art-empty">Cargando biblioteca…</p></div></aside>
+        </div>
       </section>
       <section id="lore-view" class="lore-view hidden">
         <header class="lore-panel-heading archive-heading">
@@ -274,8 +298,11 @@
   <script src="./src/project-schema.js" defer></script>
   <script src="./src/project-repository.js" defer></script>
   <script src="./src/official-character-roster.js" defer></script>
+  <script src="./src/character-dossiers.js" defer></script>
+  <script src="./src/art-studio.js" defer></script>
   <script src="./src/lore-corpus.js" defer></script>
   <script src="./src/character-archive.js" defer></script>
   <script src="./src/app.js" defer></script>
+  <script src="./src/art-studio.js" defer></script>
 </body>
 </html>
