@@ -156,7 +156,7 @@ async function run() {
       "The stale autosave must not resurrect the project from localStorage.");
     assert.ok(staleTabEvidence.trashedProjectIds.includes("project-asteria"),
       "The original project must remain recoverable in the trash.");
-    process.stdout.write("PASS stale-tab autosave cannot resurrect trashed project.\\n");
+    process.stdout.write("PASS stale-tab autosave cannot resurrect trashed project.\n");
     await staleContext.close();
 
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
@@ -1721,6 +1721,14 @@ async function run() {
     await page.mouse.down();
     await page.mouse.move(markerBox.x + markerBox.width/2 + 42, markerBox.y + markerBox.height/2 + 26, { steps: 8 });
     await page.mouse.up();
+    await page.waitForFunction(({ id, before }) => {
+      const status = document.querySelector("#save-status")?.textContent || "";
+      if (!status.startsWith("Guardado en IndexedDB")) return false;
+      const raw = localStorage.getItem("wordwaifu.project.v1");
+      if (!raw) return false;
+      const marker = JSON.parse(raw).locations.find((item) => item.id === id)?.marker;
+      return Array.isArray(marker) && Math.hypot(marker[0] - before[0], marker[1] - before[1]) > 10;
+    }, { id: targetLocationId, before: markerBeforeDrag }, { timeout: 5000 });
     const markerAfterDrag = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).locations.find((item) => item.id === id).marker, targetLocationId);
     assert.ok(Math.hypot(markerAfterDrag[0]-markerBeforeDrag[0],markerAfterDrag[1]-markerBeforeDrag[1]) > 10, "Dragging should persist a new map position.");
     assert.ok(markerAfterDrag[0]>=12&&markerAfterDrag[0]<=888&&markerAfterDrag[1]>=12&&markerAfterDrag[1]<=588);
