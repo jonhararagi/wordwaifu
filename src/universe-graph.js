@@ -120,6 +120,13 @@
       return [enriched.id, enriched];
     }));
     dynamicCharacters().forEach(character => { if (!staticById.has(character.id)) staticById.set(character.id, character); });
+    const codeGeassApi = typeof globalThis !== "undefined" ? globalThis.WordWaifuCodeGeassLore : null;
+    if (codeGeassApi && typeof codeGeassApi.list === "function") {
+      codeGeassApi.list().forEach(entity => {
+        const existing = staticById.get(entity.id) || {};
+        staticById.set(entity.id, { ...existing, ...entity });
+      });
+    }
     return Array.from(staticById.values());
   }
   function autoFamilyEdges(records) {
@@ -149,7 +156,9 @@
     const records = allEntities();
     const known = new Set(records.map(entity => entity.id));
     const seen = new Set();
-    return edges.concat(autoFamilyEdges(records)).filter(edge => {
+    const codeGeassApi = typeof globalThis !== "undefined" ? globalThis.WordWaifuCodeGeassLore : null;
+    const canonEdges = codeGeassApi && typeof codeGeassApi.edges === "function" ? codeGeassApi.edges() : [];
+    return canonEdges.concat(edges, autoFamilyEdges(records)).filter(edge => {
       if (!known.has(edge.from) || !known.has(edge.to)) return false;
       // Keep the carefully sourced curated edge and discard an auto-generated duplicate for the same pair and continuity.
       const key = edge.from + "\\u0000" + edge.to + "\\u0000" + (edge.continuity || "unknown");
@@ -190,7 +199,7 @@
     const rows = [DANMACHI, GEASS].map(universe => {
       const records = allEntities().filter(entity => entity.universe === universe);
       const people = records.filter(entity=>entity.type==="Personaje").length;
-      return { universe, total:records.length, characters:people, status:universe===DANMACHI?"referencias de personajes más una red histórica parcial":"solo semilla inicial de personajes y conceptos; no es enciclopedia completa" };
+      return { universe, total:records.length, characters:people, status:universe===DANMACHI?"referencias de personajes más una red histórica parcial":"núcleo ampliado de personajes, poderes, facciones y eventos; no es enciclopedia completa" };
     });
     return rows;
   }
