@@ -154,7 +154,24 @@ const EXTENDED={
 ,"CHAR-KAGUYA":{"CONT-AR":{title:"Gojouno Kaguya · vicecapitana de Astrea Familia",summary:"Una wiki comunitaria en español la presenta como aventurera y vicecapitana de Astrea Familia. WordWaifu la incorpora como ficha provisional y no considera ese dato una verificación oficial hasta cotejarlo con un volumen o capítulo.",sections:[{title:"Lo que sí consta en esta tanda",text:"La referencia comunitaria la identifica como antigua integrante y vicecapitana. Eso permite ubicar su papel dentro de la red de Familia, pero no basta para describir su personalidad, habilidades, historia completa ni sus interacciones con Ryu."},{title:"Qué falta investigar",text:"El siguiente paso es encontrar localizadores de novela para la vicecapitanía, sus decisiones y escenas relevantes. Mientras tanto, la relación con Ryu y Alise se etiqueta como afiliación compartida, no como amistad inventada."}],references:[{label:"Wiki comunitaria en español · Gojouno Kaguya",url:"https://danmachi.fandom.com/es/wiki/Gojouno_Kaguya",kind:"community"},{label:"Wiki comunitaria en español · Familia Astrea",url:"https://danmachi.fandom.com/es/wiki/Familia_Astrea",kind:"community"},{label:"Astrea Record, volumen 1 · editorial GA Bunko (japonés)",url:"https://ga.sbcr.jp/product/9784815610173",kind:"official"}],galleryUrl:"https://danmachi.fandom.com/es/wiki/Gojouno_Kaguya#Galería_de_Imágenes"}},
 "CHAR-LYRA":{"CONT-AR":{title:"Lyra · aventurera de Astrea Familia",summary:"La referencia comunitaria en español la enumera como aventurera y antigua integrante de Astrea Familia. Su ficha permanece deliberadamente breve hasta localizar evidencia primaria sobre su historia y su vínculo específico con otras personas.",sections:[{title:"Afiliación documentada en la referencia",text:"La información incorporada permite colocar a Lyra dentro de la red histórica de Astrea Familia. La pertenencia compartida con Ryu y Alise no demuestra por sí sola una amistad, rivalidad ni una escena concreta."},{title:"Qué falta investigar",text:"Se necesita un localizador de novela o una fuente oficial para describir su personalidad, habilidades, evolución, acontecimientos importantes y vínculos individuales. No rellenaremos esos apartados con rumores o fanon."}],references:[{label:"Wiki comunitaria en español · Lyra",url:"https://danmachi.fandom.com/es/wiki/Lyra",kind:"community"},{label:"Wiki comunitaria en español · Familia Astrea",url:"https://danmachi.fandom.com/es/wiki/Familia_Astrea",kind:"community"},{label:"Astrea Record, volumen 1 · editorial GA Bunko (japonés)",url:"https://ga.sbcr.jp/product/9784815610173",kind:"official"}],galleryUrl:"https://danmachi.fandom.com/es/wiki/Lyra#Galería_de_Imágenes"}}
 };
-function extendedInfo(id,continuity){return EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;}
+function extendedInfo(id,continuity,index){
+const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;
+if(!base)return null;
+const doc=index&&index.profileDetails?index.profileDetails[id]:null;
+if(!doc)return base;
+const scopes=doc.continuityScopes||[];
+if(scopes.length&&!scopes.includes(continuity))return base;
+const sections=(doc.sections||[]).filter(section=>{
+  const heading=String(section.heading||"");
+  if(/perfil psicol[oó]gico inicial/i.test(heading))return false;
+  if(/temporal state a|estado hist[oó]rico|astrea record/i.test(heading)&&/temporal state b|anime/i.test(heading))return false;
+  if(/temporal state a|estado hist[oó]rico|astrea record/i.test(heading)&&continuity!=="CONT-AR")return false;
+  if(/temporal state b|official anime|adaptaci[oó]n anime/i.test(heading)&&continuity!=="CONT-ANIME")return false;
+  if(/perfil oficial de adaptaci[oó]n/i.test(heading)&&continuity!=="CONT-ANIME")return false;
+  return true;
+}).map(section=>({title:section.heading,text:section.text,source:"existing-repository-profile"}));
+return {...base,sections:[...(base.sections||[]),...sections],repositoryProfile:{path:doc.sourceDocument,status:doc.status,sectionCount:sections.length,sourceRefs:doc.sourceRefs||[],claimRefs:doc.claimRefs||[]}};
+}
 
 function unique(a){return Array.from(new Set(a.filter(Boolean)));}
 function record(index,id){return (index.characters||[]).find(x=>x.id===id)||null;}
