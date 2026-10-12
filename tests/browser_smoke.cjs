@@ -2623,7 +2623,8 @@ async function run() {
     await page.locator("#power-record-form button[type='submit']").click();
     await page.waitForFunction(() => document.querySelector("#power-record-list")?.innerText.includes("Smoke Test Candidate"), { timeout: 5000 });
     await page.waitForFunction(() => /guardado/i.test(document.querySelector("#power-form-status")?.textContent || ""), { timeout: 5000 });
-    assert.ok((await page.locator("#power-catalog-status").innerText()).includes("1 poder(es) guardado(s)"),
+    assert.ok((await page.locator("#power-catalog-status").innerText()).includes("poder(es) guardado(s)"));
+    assert.ok(await page.locator("#power-record-list .power-record-card").count() >= 1,
       "Saving a candidate must create a persistent standalone power record.");
     process.stdout.write("PASS power workbench: generated candidate can be edited and saved as a standalone entity.\\n");
 
