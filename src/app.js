@@ -1314,7 +1314,7 @@
     const name = titleMatch ? titleMatch[1].trim() : String(filename || "Historia").replace(/\.md$/i, "").replace(/[-_]+/g, " ");
     const synopsisMatch = text.match(/^##\s+Sinopsis\s*\n+([\s\S]*?)(?=\n#{1,3}\s|\n---\s*$|$)/im);
     const description = synopsisMatch ? synopsisMatch[1].trim() : "";
-    const chapterPattern = /^##\s+Cap[ií]tulo\s+(\d+)\s*[—–:-]\s*(.+?)\s*\n([\s\S]*?)(?=^##\s+Cap[ií]tulo\s+\d+\s*[—–:-]|\s*$)/gim;
+    const chapterPattern = /^##\s+Cap[ií]tulo\s+(\d+)\s*[—–:-]\s*(.+?)\s*\n([\s\S]*?)(?=^##\s+Cap[ií]tulo\s+\d+\s*[—–:-]|(?![\s\S]))/gim;
     const chapters = [];
     let match;
     while ((match = chapterPattern.exec(text)) !== null) {
