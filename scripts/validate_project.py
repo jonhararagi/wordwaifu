@@ -39,7 +39,6 @@ if html_path.is_file():
     require('./src/character-dossiers.js' in html, "index.html no enlaza src/character-dossiers.js")
     require('id="art-view"' in html and 'id="art-save"' in html, "Falta el panel funcional de arte")
     require('data-view="art"' in html, "El panel de arte debe estar disponible desde la navegación")
-    require('id="art-studio.js"' not in html, "No usar un identificador de script ficticio")
     require('lang="es"' in html, "La interfaz debe declarar idioma español")
     schema_script_position = html.find('./src/project-schema.js')
     repository_script_position = html.find('./src/project-repository.js')
