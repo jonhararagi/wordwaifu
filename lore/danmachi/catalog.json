@@ -103,6 +103,7 @@
       "path": "characters/eina-tulle.md",
       "type": "character",
       "tags": [
+        "Eina Tulle",
         "Eina",
         "Guild"
       ],
@@ -114,6 +115,7 @@
       "path": "characters/bell-cranel.md",
       "type": "character",
       "tags": [
+        "Bell Cranel",
         "Bell",
         "identity"
       ],
@@ -125,6 +127,7 @@
       "path": "characters/ais-wallenstein.md",
       "type": "character",
       "tags": [
+        "Ais Wallenstein",
         "Ais",
         "Familia Loki"
       ],
