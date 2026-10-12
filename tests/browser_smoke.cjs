@@ -196,6 +196,9 @@ async function run() {
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
+    assert.equal(await page.locator("#archive-navigation-trail [data-archive-history-index]").count(), 2, "The navigation trail must expose Ryu and Alise as ancestors.");
+    assert.ok((await page.locator("#archive-navigation-trail").innerText()).includes("Ryu Lion"));
+    assert.ok((await page.locator("#archive-navigation-trail").innerText()).includes("Alise Lovelace"));
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     await page.locator("#archive-profile-back").click();
@@ -207,6 +210,11 @@ async function run() {
     await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Gojouno Kaguya");
     await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    await page.locator("#archive-navigation-trail [data-archive-home]").click();
+    assert.equal(await page.locator("#character-archive-profile").isVisible(), false, "Home should return to the directory.");
+    assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu", "Returning home should preserve the search query.");
+    await page.locator('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
     assert.ok((await page.locator("#archive-profile-summary").innerText()).includes("Hostess of Fertility"));
