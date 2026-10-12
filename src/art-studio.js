@@ -46,7 +46,7 @@
 
     // A failed IndexedDB write can be safely stored in localStorage even while the
     // database remains readable. Merge both stores so the gallery does not hide
-    // successful fallback saves; IndexedDB wins when both contain the same key.
+    // successful fallback saves; the newest updatedAt wins and IndexedDB wins ties.
     const records = new Map(indexedRecords.map(record => [record.key, record]));
     for (const record of Object.values(fallbackRead())) {
       if (!record || !record.key) continue;
