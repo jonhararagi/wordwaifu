@@ -1949,7 +1949,29 @@
       open.type="button";open.dataset.archiveOpen=item.id;open.dataset.archiveContinuity=item.preferredContinuity;actions.appendChild(open);copy.appendChild(actions);card.appendChild(copy);results.appendChild(card);
     });
   }
+  function renderArchiveNavigationTrail(profile){
+    const trail=$("#archive-navigation-trail");
+    if(!trail)return;
+    trail.replaceChildren();
+    const home=archiveElement("button","archive-trail-home","⌂ Enciclopedia");
+    home.type="button";home.dataset.archiveHome="true";
+    home.setAttribute("aria-label","Volver al índice de personajes");
+    trail.appendChild(home);
+    const path=archiveNavigationStack.map((entry,index)=>({entry,index,name:(loreArchiveIndex.characters.find(c=>c.id===entry.id)||{}).name||entry.id}));
+    path.forEach(item=>{
+      const separator=archiveElement("span","archive-trail-separator","›");
+      separator.setAttribute("aria-hidden","true");trail.appendChild(separator);
+      const crumb=archiveElement("button","archive-trail-crumb",item.name);
+      crumb.type="button";crumb.dataset.archiveHistoryIndex=String(item.index);
+      crumb.title="Volver a "+item.name;trail.appendChild(crumb);
+    });
+    const separator=archiveElement("span","archive-trail-separator","›");
+    separator.setAttribute("aria-hidden","true");trail.appendChild(separator);
+    const current=archiveElement("span","archive-trail-current",profile.name);
+    current.setAttribute("aria-current","page");trail.appendChild(current);
+  }
   function renderArchiveHeader(profile){
+    renderArchiveNavigationTrail(profile);
     $("#archive-profile-name").textContent=profile.name;$("#archive-profile-eyebrow").textContent="FICHA DE PERSONAJE · "+profile.id;
     $("#archive-profile-summary").textContent=profile.state.summary;$("#archive-profile-state-note").textContent=profile.state.period;
     const p=$("#archive-profile-portrait"),visual=archivePortrait(profile.id,profile.name,true);p.className=visual.className;p.setAttribute("aria-label",visual.getAttribute("aria-label"));p.replaceChildren(...Array.from(visual.childNodes));
@@ -2133,6 +2155,21 @@
   $("#archive-spoiler").addEventListener("change",()=>{if(!loreArchiveIndex)return;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
   $("#archive-profile-spoiler").addEventListener("change",event=>{if(!loreArchiveIndex)return;$("#archive-spoiler").value=event.target.value;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
   $("#character-archive-results").addEventListener("click",e=>{const b=e.target.closest("[data-archive-open]");if(b)openArchiveProfile(b.dataset.archiveOpen,b.dataset.archiveContinuity,false);});
+  $("#archive-navigation-trail").addEventListener("click",event=>{
+    const home=event.target.closest("[data-archive-home]");
+    if(home){returnToArchiveDirectory();return;}
+    const crumb=event.target.closest("[data-archive-history-index]");
+    if(!crumb)return;
+    const index=Number(crumb.dataset.archiveHistoryIndex);
+    if(!Number.isInteger(index)||index<0||index>=archiveNavigationStack.length)return;
+    const destination=archiveNavigationStack[index];
+    archiveNavigationStack=archiveNavigationStack.slice(0,index);
+    activeArchiveCharacterId=destination.id;
+    activeArchiveContinuity=destination.continuity;
+    activeArchiveTab=destination.tab;
+    renderArchiveProfile();
+    $("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});
+  });
   $("#archive-profile-back").addEventListener("click",backInArchiveNavigation);
   $("#archive-return-search").addEventListener("click",returnToArchiveDirectory);
   $("#archive-profile-continuity").addEventListener("change",e=>{activeArchiveContinuity=e.target.value;activeArchiveTab="summary";renderArchiveProfile();});
