@@ -84,10 +84,18 @@ async function run() {
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
+    const designReviewDirectory = path.join(root, "artifacts");
+    fs.mkdirSync(designReviewDirectory, { recursive: true });
+    await page.screenshot({ path: path.join(designReviewDirectory, "atlas-asteria.png"), fullPage: true });
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
     await page.locator('.nav-item[data-view="visuals"]').click();
     await page.waitForFunction(() => document.querySelectorAll("#visual-library-grid .visual-asset-card").length === 5, { timeout: 5000 });
     await page.waitForFunction(() => Array.from(document.querySelectorAll("#visual-library-grid img")).every(img => img.complete && img.naturalWidth > 0), { timeout: 8000 });
+    await page.screenshot({ path: path.join(designReviewDirectory, "visual-library.png"), fullPage: true });
+    await page.locator('.nav-item[data-view="timeline"]').click();
+    await page.screenshot({ path: path.join(designReviewDirectory, "timeline.png"), fullPage: true });
+    await page.locator('.nav-item[data-view="visuals"]').click();
+    await page.locator('#visual-library-filters [data-visual-filter="all"]').click();
     await page.locator('#visual-library-filters [data-visual-filter="texture"]').click();
     assert.equal(await page.locator("#visual-library-grid .visual-asset-card").count(), 1);
     await page.locator("#visual-library-grid [data-visual-open='ref-stylized-ground']").click();
