@@ -79,6 +79,8 @@
       "Respawn en el fin del mundo"
     ], seed >>> 15);
     const premiseText = prompt;
+    const mode = input.mode === "fanfic" ? "fanfic" : "original";
+    const continuity = String(input.continuity || "").trim();
     const toneNote = tone === "serious"
       ? "La comedia nace de las decisiones y las personalidades, pero las consecuencias son reales y persistentes."
       : tone === "comedy"
@@ -89,21 +91,27 @@
       id: "story-generated-" + seed,
       name: String(input.title || "").trim() || title,
       description: [
+        "TIPO: " + (mode === "fanfic" ? "FANFIC" : "HISTORIA ORIGINAL"),
+        "CONTINUIDAD / MUNDO: " + (continuity || (mode === "fanfic" ? "Por especificar; no asumir datos de canon." : "Universo original por desarrollar.")),
         "GÉNERO: " + genre,
         "PREMISA DEL AUTOR: " + premiseText,
-        "GANCHO: Un protagonista gamer de mentalidad pragmática queda atrapado en una misión que trata la burocracia divina como un sistema de juego defectuoso.",
+        "GANCHO: " + protagonist.name + ", " + protagonist.role + ", recibe una misión de " + goddesses[0].name + ", " + goddesses[1].name + " y " + goddesses[2].name + ". Las tres aceptan ayudar, pero ninguna coincide en qué significa salvar el mundo.",
+        "REPARTO Y TENSIONES: " + protagonist.name + " (" + protagonist.personality + ") intenta convertir la misión en una partida explotable. " + goddesses[0].name + " quiere preservar los destinos, " + goddesses[1].name + " insiste en que todo puede crecer de nuevo y " + goddesses[2].name + " oculta una cláusula del pacto. " + companion.name + " aporta una solución que funciona por el motivo equivocado; " + antagonist.name + " parece un burócrata ridículo, pero puede ejecutar una amenaza real.",
         "CONFLICTO EXTERNO: " + complication + ".",
         "NÚCLEO EMOCIONAL: " + seriousCore + ".",
         "TONO: " + toneNote,
         "ESCENA INICIAL: " + opening + ".",
-        "ARCO INICIAL: 1) el grupo acepta una misión por una recompensa engañosa; 2) una solución egoísta empeora el problema; 3) deben colaborar sin dejar de discutir; 4) ganan algo importante, pero el precio revela el conflicto mayor."
-      ].join("\n\n"),
+        "CAPÍTULO 1 — LA OFERTA: " + protagonist.name + " acepta una recompensa que las diosas describen de tres maneras incompatibles. El grupo descubre la letra pequeña cuando ya es demasiado tarde.",
+        "CAPÍTULO 2 — EL EXPLOIT: el protagonista encuentra una solución técnicamente válida y moralmente desastrosa. " + companion.name + " la empeora intentando ayudar, y " + antagonist.name + " llega para cobrar la consecuencia.",
+        "CAPÍTULO 3 — EL PRECIO: las tres diosas dejan de discutir y revelan por qué la misión importa. El grupo debe elegir entre una victoria fácil que condena a alguien o una solución difícil que exige confiar unos en otros.",
+        "PROMESA DE LA HISTORIA: cada episodio resuelve un problema absurdo y deja una consecuencia que importa; los personajes pueden hacer payasadas sin que el dolor, los juramentos o el peligro se conviertan en chiste."
+      ].join("\\n\\n"),
       status: "draft",
       generatedBy: "WordWaifu Rule Engine",
       generatedAt: new Date().toISOString(),
       generatedCharacters: characters.map((character) => character.id)
     };
-    return { story, characters, genre, tone, complication, seriousCore, opening, seed };
+    return { story, characters, genre, tone, mode, continuity, complication, seriousCore, opening, seed };
   }
 
   function characterCard(character, index) {
@@ -159,7 +167,9 @@
         premise: $("#idea-premise").value,
         title: $("#idea-title").value,
         genre: $("#idea-genre").value,
-        tone: $("#idea-tone").value
+        tone: $("#idea-tone").value,
+        mode: $("#idea-mode").value,
+        continuity: $("#idea-continuity").value
       }));
     });
     $("#idea-regenerate").addEventListener("click", () => form.requestSubmit());
