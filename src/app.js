@@ -2322,7 +2322,22 @@
         section.append(archiveElement("h4","",provider.providerLabel),archiveElement("p","lore-online-note",provider.authority+". "+provider.note));
         if(provider.results.length) provider.results.forEach(hit=>{
           const card=archiveElement("article","lore-online-result-card");
-          card.append(archiveElement("h5","",hit.title),archiveElement("p","",hit.snippet),archiveElement("span","lore-online-tier","Resultado externo · no verificado"));
+          if(hit.thumbnailUrl){
+            const preview=archiveElement("figure","lore-online-preview");
+            const image=document.createElement("img");
+            image.src=hit.thumbnailUrl;
+            image.alt="Miniatura de referencia: "+hit.title;
+            image.loading="lazy";
+            image.decoding="async";
+            image.referrerPolicy="strict-origin-when-cross-origin";
+            image.addEventListener("error",()=>preview.remove());
+            preview.appendChild(image);
+            if(hit.imageCredit)preview.appendChild(archiveElement("figcaption","lore-online-image-credit",hit.imageCredit));
+            card.appendChild(preview);
+          }
+          card.appendChild(archiveElement("h5","",hit.title));
+          card.appendChild(archiveElement("p",hit.extract?"lore-online-extract":"",hit.extract||hit.snippet));
+          card.appendChild(archiveElement("span","lore-online-tier",hit.extract?"Resumen de la introducción · fuente secundaria":"Resultado externo · no verificado"));
           appendLoreLink(card,"Abrir artículo ↗",hit.url,true); section.appendChild(card);
         });
         else {
