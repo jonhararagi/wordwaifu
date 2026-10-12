@@ -1871,30 +1871,34 @@
       "CHAR-FREYA": "./assets/character-portraits/freya.svg",
       "CHAR-OTTAR": "./assets/character-portraits/ottar.svg"
     };
-    const official = typeof window.WordWaifuOfficialCharacterRoster !== "undefined"
+    const item = typeof window.WordWaifuOfficialCharacterRoster !== "undefined"
       ? window.WordWaifuOfficialCharacterRoster.get(id) : null;
-    const fallbackSource = portraitSources[id] || "";
     const selectedContinuity = continuity || "ALL";
-    const historicalReference = selectedContinuity === "CONT-AR" && official && official.historicalImageUrl;
-    const mayUseOfficialPortrait = selectedContinuity === "ALL" || selectedContinuity === "CONT-ANIME";
-    const officialSource = historicalReference ? official.historicalImageUrl
-      : mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
+    const historicalReference = selectedContinuity === "CONT-AR" && item && item.historicalImageUrl;
+    const sourceImage = historicalReference ? item.historicalImageUrl : (item && item.imageUrl ? item.imageUrl : "");
+    const localFallback = portraitSources[id] || "";
+    const isCommunityImage = Boolean(item && (item.imageProvider === "community" || /fandom\.com|wikia\.nocookie\.net/i.test(item.sourcePage || "")));
     const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
     node.setAttribute("role", "img");
-    node.setAttribute("aria-label", officialSource
-      ? (historicalReference ? "Retrato oficial de referencia de DanMachi IV; no específico de la época " + selectedContinuity + "."
-        : "Retrato oficial enlazado desde " + (official.sourcePage || "la web oficial") + "; derechos de terceros.")
-      : fallbackSource ? "Ilustración vectorial conceptual original de " + name + ", no oficial."
-      : "Inicial representativa de " + name + "; no hay retrato verificado disponible.");
-    const caption = large ? archiveElement("span","archive-portrait-caption",
-      historicalReference ? "REFERENCIA VISUAL OFICIAL · NO ESPECÍFICA DE ÉPOCA"
-        : officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
+    node.setAttribute("aria-label", sourceImage
+      ? (historicalReference ? "Retrato de referencia para Astrea Record; ilustración oficial de la adaptación, no específica de época."
+        : isCommunityImage ? "Retrato ilustrativo tomado de una wiki comunitaria; la fuente aparece en la ficha."
+        : selectedContinuity !== "ALL" && selectedContinuity !== "CONT-ANIME" ? "Imagen oficial de adaptación; referencia visual, no confirma la época seleccionada."
+        : "Retrato oficial enlazado desde el portal de la adaptación.")
+      : localFallback ? "Ilustración conceptual original de " + name + ", no oficial."
+      : "No hay retrato verificado disponible para " + name + ".");
+    const captionText = historicalReference ? "REF. VISUAL · NO ESPECÍFICA DE ÉPOCA"
+      : sourceImage && isCommunityImage ? "RETRATO DE WIKI · REFERENCIA"
+      : sourceImage && selectedContinuity !== "ALL" && selectedContinuity !== "CONT-ANIME" ? "ARTE DE ADAPTACIÓN · REFERENCIA"
+      : sourceImage ? "ARTE OFICIAL · EXTERNO"
+      : localFallback ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO";
+    const caption = large ? archiveElement("span","archive-portrait-caption",captionText) : null;
     function showInitial() {
       node.replaceChildren(archiveElement("span","",initial));
       if (large) node.appendChild(archiveElement("span","archive-portrait-caption","SIN RETRATO DISPONIBLE"));
       node.setAttribute("aria-label","Sin imagen disponible para " + name + ".");
     }
-    const activeSource = officialSource || fallbackSource;
+    const activeSource = sourceImage || localFallback;
     if (activeSource) {
       const image = document.createElement("img");
       image.className = "archive-portrait-art";
@@ -1904,9 +1908,9 @@
       image.loading = large ? "eager" : "lazy";
       image.referrerPolicy = "strict-origin-when-cross-origin";
       image.addEventListener("error", () => {
-        if (officialSource && fallbackSource && image.src !== new URL(fallbackSource, window.location.href).href) {
-          image.src = fallbackSource;
-          node.setAttribute("aria-label","Ilustración conceptual local de " + name + ", no oficial; el retrato externo no cargó.");
+        if (sourceImage && localFallback && image.src !== new URL(localFallback, window.location.href).href) {
+          image.src = localFallback;
+          node.setAttribute("aria-label","Ilustración conceptual local de " + name + "; el retrato externo no cargó.");
           if (caption) caption.textContent = "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
           return;
         }
@@ -2052,6 +2056,69 @@
     else body.appendChild(archiveEmpty("No se ha identificado una lista completa de participantes."));
     body.appendChild(archiveElement("p","","Fuentes y límites del resumen"));moment.claims.forEach(c=>body.appendChild(archiveEvidence(c)));d.appendChild(body);return d;
   }
+  function renderDeepCharacterDossier(profile) {
+    const dossier = profile.officialDossier;
+    if (!dossier) return null;
+    const root = archiveElement("section","archive-section archive-deep-dossier");
+    const head = archiveElement("div","archive-section-heading");
+    head.append(
+      archiveElement("h3","","Expediente ampliado"),
+      archiveElement("p","",String(dossier.sourceLabel || "Fuente secundaria") + " · resumen original de investigación")
+    );
+    root.appendChild(head);
+    const sections = [
+      ["Apariencia",dossier.appearance],
+      ["Historia y contexto",dossier.history],
+      ["Personalidad y evolución",dossier.development],
+      ["Perfil de combate",dossier.combatProfile],
+      ["Hábitos y conducta",dossier.habits],
+      ["Función en la historia",dossier.narrativeRole]
+    ];
+    sections.forEach(([heading,body])=>{
+      if (!body || !String(body).trim()) return;
+      const article=archiveElement("article","archive-dossier-prose");
+      article.append(archiveElement("h4","",heading),archiveElement("p","",body));
+      root.appendChild(article);
+    });
+    if (Array.isArray(dossier.abilities) && dossier.abilities.length) {
+      const section=archiveElement("section","archive-dossier-list");
+      section.appendChild(archiveElement("h4","","Habilidades y capacidades"));
+      dossier.abilities.forEach(item=>{
+        if(!item||!item.name||!item.detail)return;
+        const article=archiveElement("article","archive-dossier-item");
+        article.append(archiveElement("h5","",item.name),archiveElement("p","",item.detail));
+        section.appendChild(article);
+      });
+      root.appendChild(section);
+    }
+    if (Array.isArray(dossier.relationshipDetails) && dossier.relationshipDetails.length) {
+      const section=archiveElement("section","archive-dossier-list");
+      section.appendChild(archiveElement("h4","","Relaciones importantes"));
+      dossier.relationshipDetails.forEach(item=>{
+        if(!item||!item.name||!item.detail)return;
+        const article=archiveElement("article","archive-dossier-item archive-dossier-relationship");
+        article.append(archiveElement("h5","",item.name),archiveElement("p","",item.detail));
+        section.appendChild(article);
+      });
+      root.appendChild(section);
+    }
+    const sourceBar=archiveElement("div","archive-dossier-sourcebar");
+    const label=archiveElement("span","archive-dossier-source-label",
+      String(dossier.sourceType || "secondary_compendium").includes("secondary") || dossier.sourceType==="secondary_compendium"
+        ? "FUENTE SECUNDARIA" : "FUENTE DE REFERENCIA");
+    sourceBar.appendChild(label);
+    const sources=Array.isArray(dossier.sources)?dossier.sources:[dossier.sourceUrl].filter(Boolean);
+    const uniqueSources=[...new Set(sources.filter(Boolean))];
+    uniqueSources.slice(0,5).forEach((url,index)=>{
+      appendLoreLink(sourceBar,index===0?"Abrir artículo base ↗":"Fuente relacionada "+(index+1)+" ↗",url,true);
+    });
+    root.appendChild(sourceBar);
+    if (String(dossier.spoilerLevel||"").toLowerCase()==="major" || String(dossier.spoilerLevel||"").toLowerCase()==="endgame") {
+      root.insertBefore(archiveElement("p","archive-dossier-spoiler-note","Contiene spoilers importantes de la historia."),root.children[1]||null);
+    }
+    return root;
+  }
+
   function renderArchiveSummary(profile){
     const root=archiveElement("div","archive-profile-content"),overview=archiveElement("section","archive-section");
     const top=archiveElement("div","archive-section-heading");top.append(archiveElement("h3","","Estado documentado"),archiveElement("p","","Solo información de la continuidad seleccionada."));overview.appendChild(top);
@@ -2099,10 +2166,11 @@
       const communitySearch = "https://danmachi.fandom.com/wiki/Special:Search?query=" + encodeURIComponent(official.name);
       appendLoreLink(sourceLinks,"Contrastar en la wiki comunitaria (fuente secundaria) ↗",communitySearch,true);
       officialSection.appendChild(sourceLinks);
-      officialSection.appendChild(archiveElement("p","archive-research-note",
-        "La ilustración se carga desde el dominio oficial y no se copia al repositorio. La wiki comunitaria puede ofrecer más detalle, pero es secundaria y debe contrastarse; sin conexión se usa una ilustración conceptual local si existe."));
+      officialSection.appendChild(archiveElement("p","archive-research-note","Arte e información pertenecen a sus titulares; la fuente está enlazada arriba."));
       root.appendChild(officialSection);
     }
+    const deepDossier=renderDeepCharacterDossier(profile);
+    if(deepDossier)root.appendChild(deepDossier);
     const relSection=archiveElement("section","archive-section"),rh=archiveElement("div","archive-section-heading");rh.append(archiveElement("h3","","Personas relacionadas"),archiveGoTab("relationships","Ver red completa"));relSection.appendChild(rh);
     const relGrid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.slice(0,4).forEach(r=>relGrid.appendChild(renderArchiveRelationship(r)));else relGrid.appendChild(archiveEmpty("No hay vínculos personales respaldados para esta continuidad."));relSection.appendChild(relGrid);root.appendChild(relSection);
     const momentSection=archiveElement("section","archive-section"),mh=archiveElement("div","archive-section-heading");mh.append(archiveElement("h3","","Momentos importantes"),archiveGoTab("moments","Ver momentos y contexto"));momentSection.appendChild(mh);
