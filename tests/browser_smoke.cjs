@@ -151,6 +151,9 @@ async function run() {
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 12, { timeout: 5000 });
     await page.locator("#character-archive-query").fill("");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 12, { timeout: 5000 });
+    await page.locator("#character-archive-query").fill("justicia");
+    await page.waitForFunction(() => Array.from(document.querySelectorAll("#character-archive-results [data-archive-open]")).some(button => button.dataset.archiveOpen === "CHAR-RYUU-LION"), { timeout: 5000 });
+    assert.ok(await page.locator('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').count() > 0, "Archive search must find Ryu by a documented topic, not only by name.");
     await page.locator("#character-archive-query").fill("Ryu");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").getAttribute("data-archive-open"), "CHAR-RYUU-LION");
