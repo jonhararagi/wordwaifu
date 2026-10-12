@@ -21,6 +21,10 @@ for (const character of result.characters) {
   assert.ok(character.motivation);
   assert.ok(character.id);
 }
+const general = generate({ premise: "Una archivista descubre que el reino borró de sus registros a una ciudad entera.", genre: "drama", tone: "balanced" });
+assert.equal(general.characters.length, 5, "A non-divine premise should create a different party rather than forcing three goddesses into every story.");
+assert.ok(general.characters.some((character) => character.role === "archivista de ruinas" || character.role === "exvillano en rehabilitación" || character.role === "sanadora de frontera"));
+assert.ok(!general.characters.some((character) => /diosa/i.test(character.role)));
 const fanfic = generate({ premise, mode: "fanfic", continuity: "DanMachi · novelas ligeras", genre: "balanced", tone: "balanced" });
 assert.ok(fanfic.story.description.includes("TIPO: FANFIC"));
 assert.ok(fanfic.story.description.includes("DanMachi · novelas ligeras"), "Fanfic continuity context must be preserved in the saved outline.");
