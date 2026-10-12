@@ -62,6 +62,9 @@ function testCodeGeassHasAnHonestInitialGraphAndGeassConnections() {
 
 function testSearchAndEveryConnectionHasKnownEndpoints() {
   assert.ok(graph.search("familia", { universe: "DanMachi" }).length > 0);
+  assert.ok(graph.search("corazón", { universe: "Code Geass" }).some(item => item.id === "CG-POWER-ROLO-GEASS"),
+    "Search should index power costs and not just profile titles.");
+  assert.ok(graph.search("Geass", { universe: "Code Geass", continuity: "CONT-R2" }).length > 0);
   for (const edge of graph.allEdges()) {
     assert.ok(graph.getEntity(edge.from), "Unknown source: " + edge.from);
     assert.ok(graph.getEntity(edge.to), "Unknown target: " + edge.to);
