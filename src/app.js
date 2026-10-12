@@ -131,12 +131,6 @@
   function saveProject() {
     const snapshot = structuredClone(state);
     const sequence = ++persistenceSequence;
-    let backup = { written: false, warning: "ProjectRepository no está disponible." };
-    try {
-      if (projectRepository) backup = projectRepository.saveBackup(snapshot);
-    } catch (error) {
-      backup = { written: false, warning: error.message };
-    }
     $("#project-name").textContent = snapshot.project.name;
     $("#save-status").textContent = "Guardando proyecto…";
 
@@ -145,20 +139,25 @@
       return Promise.resolve(false);
     }
 
-    return enqueueRepositoryOperation(() => projectRepository.write(snapshot)).then(() => {
+    // Use the repository's guarded save path: it checks trash tombstones before
+    // touching the compatibility backup and rolls that backup back if a trash
+    // move wins the race against this stale tab's IndexedDB write.
+    return enqueueRepositoryOperation(() => projectRepository.saveActive(snapshot)).then((report) => {
       if (sequence === persistenceSequence) {
-        $("#save-status").textContent = backup.written
-          ? "Guardado en IndexedDB · copia local disponible"
-          : "Guardado en IndexedDB · respaldo local no disponible";
+        if (report.backend === "indexeddb") {
+          $("#save-status").textContent = report.backupWritten
+            ? "Guardado en IndexedDB · copia local disponible"
+            : "Guardado en IndexedDB · respaldo local no disponible";
+        } else {
+          $("#save-status").textContent = "Respaldo local disponible · IndexedDB no disponible";
+        }
       }
-      return true;
-    }).catch(() => {
+      return report.backend === "indexeddb" || report.backend === "localStorage";
+    }).catch((error) => {
       if (sequence === persistenceSequence) {
-        $("#save-status").textContent = backup.written
-          ? "Respaldo local disponible · IndexedDB no disponible"
-          : "No se pudo guardar: exportá una copia";
+        $("#save-status").textContent = "No se pudo guardar: " + (error && error.message ? error.message : "exportá una copia");
       }
-      return Boolean(backup.written);
+      return false;
     });
   }
 
