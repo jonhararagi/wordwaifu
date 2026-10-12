@@ -136,7 +136,10 @@ REL["CHAR-ASTREA"]["CONT-AR"].push(
 {targetId:"CHAR-CELTY-SROWA",label:"Celty Srowa · Familia histórica",type:"Afiliación histórica",description:"La lista de integrantes permite navegar desde la diosa al roster; no demuestra escenas individuales.",refs:["DMR-007-CLM-005"]}
 );
 REL["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
-{targetId:"CHAR-ASTREA",label:"Astrea · visita fuera de Orario",type:"Viaje y objetivo documentados en sinopsis editorial",description:"La sinopsis oficial de Familia Chronicle: Episode Ryuu 2 presenta a Ryu partiendo para visitar a Astrea y buscar fuerza. Este estado no debe confundirse con la relación histórica en Astrea Record.",refs:["DMR-007-CLM-009"]}
+{targetId:"CHAR-ASTREA",label:"Astrea · visita fuera de Orario",type:"Viaje y objetivo documentados en sinopsis editorial",description:"La sinopsis oficial de Familia Chronicle: Episode Ryuu 2 presenta a Ryu partiendo para visitar a Astrea y buscar fuerza. Este estado no debe confundirse con la relación histórica en Astrea Record.",refs:["DMR-007-CLM-009"]},
+{targetId:"CHAR-ALISE-LOVELACE",label:"Alise · legado de la antigua capitania",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria conecta la memoria de Alise con la evolución posterior de Ryu. Se muestra como pista secundaria y no como escena verificada de la novela.",refs:["DMR-007-CLM-012"]},
+{targetId:"CHAR-KAGUYA",label:"Kaguya · legado de las compañeras",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria relaciona el legado de Kaguya con la evolución posterior de Ryu; requiere cotejo con el texto original.",refs:["DMR-007-CLM-012"]},
+{targetId:"CHAR-LYRA",label:"Lyra · legado de las compañeras",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria relaciona el legado de Lyra con la evolución posterior de Ryu; requiere cotejo con el texto original.",refs:["DMR-007-CLM-012"]}
 ];
 REL["CHAR-ASTREA"]["CONT-ANIME"]=[
 {targetId:"CHAR-RYUU-LION",label:"Ryu · vínculo histórico y posterior",type:"Relación entre estados, con continuidad visible",description:"La fuente oficial sitúa a Astrea fuera de Orario con nuevos seguidores. La visita de Ryu se respalda en una sinopsis editorial distinta, no en esta página de adaptación.",refs:["DMR-007-CLM-008"]}
@@ -250,6 +253,21 @@ TIMELINE["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
 ];
 
 
+EXTENDED["CHAR-ASTREA"]["CONT-MAIN-LN"]={
+title:"Astrea · estado posterior y nueva Familia",
+summary:"El material disponible diferencia el perfil oficial del anime —Astrea reside fuera de Orario con nuevos seguidores— de la sinopsis editorial que motiva el viaje de Ryu y del roster secundario asociado a Solingen.",
+sections:[
+{title:"Qué está respaldado oficialmente",text:"El portal oficial de DanMachi V sitúa a Astrea fuera de Orario con nuevos seguidores. La sinopsis de Familia Chronicle: Episode Ryuu 2 describe a Ryu viajando para verla y buscar fuerza."},
+{title:"Qué continúa provisional",text:"Solingen, la composición exacta de la nueva Familia y el rango de cada integrante aparecen en la fuente comunitaria incluida en el lote. Estos datos son rutas de investigación, no afirmaciones aprobadas hasta cotejar el texto de novela."},
+{title:"Cómo seguir explorando",text:"Desde esta ficha se puede abrir a Ryu y a Cecil Blackliza, Iselina, Shau y Ulanda. Cada relación hacia la nueva generación lleva una advertencia de fuente secundaria para no confundir el roster con una biografía completa."}
+],
+references:[
+{label:"Perfil oficial DanMachi V",url:"https://danmachi.com/danmachi5/character/",kind:"official"},
+{label:"GA Bunko · Familia Chronicle: Episode Ryuu 2",url:"https://ga.sbcr.jp/product/9784815623692/",kind:"official"},
+{label:"Familia Astrea · wiki comunitaria en español (secundaria)",url:"https://danmachi.fandom.com/es/wiki/Familia_Astrea",kind:"community"}
+]
+};
+
 EXTENDED["CHAR-RYUU-LION"]["CONT-AR"].sections.push(
 {title:"La red de la primera Astrea Familia",text:"La sinopsis editorial confirma a Alise como capitana y guía de Ryu. Los perfiles de adaptación añaden matices diferentes: la relación con Kaguya incluye fricción y respeto, mientras que Lyra destaca por su perspicacia. El resto del roster se puede recorrer, pero los enlaces a otros miembros solo indican afiliación cuando no hay evidencia individual."},
 {title:"La pérdida y sus límites de evidencia",text:"La investigación incorporada registra la tragedia del Juggernaut y el memorial en el Dungeon como pistas secundarias con spoilers importantes. No se debe convertir una síntesis de wiki en una escena detallada: el lote siguiente debe localizar los pasajes en los volúmenes."}
@@ -333,7 +351,7 @@ return{summary:"Ficha provisional basada únicamente en las afirmaciones de esta
 function refsClaims(index,refs,continuity,filter){return(index.claims||[]).filter(c=>((refs||[]).includes(c.claimId)||(refs||[]).includes(c.entryId))&&(!continuity||(c.continuityScopes||[]).includes(continuity))&&visible(c.spoilerLevel,filter));}
 function worst(claims){const rank={none:0,mild:1,unknown:2,major:3,endgame:4};return claims.reduce((v,c)=>rank[String(c.spoilerLevel||"unknown").toLowerCase()]>rank[v]?String(c.spoilerLevel||"unknown").toLowerCase():v,"none");}
 function list(index,options){const o=options||{},q=String(o.query||"").trim().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(),continuity=String(o.continuity||"ALL"),filter=String(o.spoiler||"all");
-return(index.characters||[]).map(ch=>{const all=claimsFor(index,ch.id), shown=all.filter(c=>visible(c.spoilerLevel,filter)), scopes=ordered(all.flatMap(c=>c.continuityScopes||[])), shownScopes=ordered(shown.flatMap(c=>c.continuityScopes||[]));const target=continuity!=="ALL"&&shownScopes.includes(continuity)?continuity:defaultState(scopes),st=state(ch.id,target),meta=META[ch.id];const official=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(ch.id):null;const displayOverview=meta?meta.overview:(official?official.summary:"Ficha provisional basada en afirmaciones documentadas.");const names=[ch.name,...(ch.aliases||[])].map(value=>String(value).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase());
+return(index.characters||[]).map(ch=>{const all=claimsFor(index,ch.id), shown=all.filter(c=>visible(c.spoilerLevel,filter)), scopes=ordered(all.flatMap(c=>c.continuityScopes||[])), shownScopes=ordered(shown.flatMap(c=>c.continuityScopes||[]));const target=continuity!=="ALL"&&shownScopes.includes(continuity)?continuity:defaultState(scopes),st=state(ch.id,target),meta=META[ch.id];const official=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(ch.id):null;const displayOverview=meta?meta.overview:(official?official.summary:"Ficha provisional basada en afirmaciones documentadas.");const names=[ch.name,...(ch.aliases||[]),...(ch.keywords||[])].map(value=>String(value).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase());
 const matched=!q||names.some(name=>{
   if(name===q||name.startsWith(q+" "))return true;
   // Short queries such as "Ryu" should match token prefixes, not incidental
