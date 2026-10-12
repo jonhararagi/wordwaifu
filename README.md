@@ -41,6 +41,8 @@ Un universo de fantasía original puede tener una gran ciudad central. Al hacer 
 
 Se puede utilizar una obra conocida como referencia de diseño en datos privados de prueba, pero el producto no incluirá automáticamente bases de datos de personajes, mapas o textos protegidos de franquicias ajenas. Los proyectos reales deben ser originales o utilizar contenido con derechos adecuados.
 
+La rama de investigación **feature/danmachi-lore-poc** contiene un prototipo documental de DanMachi para probar continuidad, búsqueda y fichas con referencias. Su contenido está marcado como provisional y distingue fuentes oficiales de wikis comunitarias; las ilustraciones locales son originales y no oficiales. Esta demostración no implica afiliación ni licencia comercial sobre la franquicia, y no autoriza copiar o vender material de terceros. Antes de cualquier distribución pública/comercial hay que revisar licencias, permisos y el procedimiento de reclamaciones descrito en [docs/CONTENT_RIGHTS_AND_TAKEDOWN.md](docs/CONTENT_RIGHTS_AND_TAKEDOWN.md).
+
 ## Tecnología inicial propuesta
 
 - Aplicación web local, utilizable desde el navegador sin servidor remoto.
