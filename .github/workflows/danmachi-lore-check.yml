@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: danmachi-lore-integrity-${{ github.ref }}
+  group: danmachi-lore-integrity-${{ github.ref }}-${{ github.sha }}
   cancel-in-progress: false
 jobs:
   catalog-and-retrieval:
