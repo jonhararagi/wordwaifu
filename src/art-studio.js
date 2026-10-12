@@ -252,8 +252,10 @@
   async function refreshGallery() {
     const gallery = $("#art-assignments");
     if (!gallery) return;
-    gallery.replaceChildren();
     const records = await listAssignments();
+    // Read first, then replace+render synchronously so overlapping refreshes
+    // cannot append duplicate cards after both awaits complete.
+    gallery.replaceChildren();
     $("#art-assignment-count").textContent = String(records.length);
     if (!records.length) { gallery.appendChild(element("p","art-empty","Todavía no hay recursos asignados. Guardá una URL, una imagen o un prompt para empezar.")); return; }
     records.forEach(record => {
