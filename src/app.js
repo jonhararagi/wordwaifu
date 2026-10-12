@@ -2163,7 +2163,7 @@
     const index=Number(crumb.dataset.archiveHistoryIndex);
     if(!Number.isInteger(index)||index<0||index>=archiveNavigationStack.length)return;
     const destination=archiveNavigationStack[index];
-    archiveNavigationStack=archiveNavigationStack.slice(0,index);
+    archiveNavigationStack.splice(index);
     activeArchiveCharacterId=destination.id;
     activeArchiveContinuity=destination.continuity;
     activeArchiveTab=destination.tab;
