@@ -75,8 +75,13 @@
         const trashRequest = tx.objectStore("trash").get(project.project.id);
         trashRequest.onsuccess = () => {
           if (trashRequest.result) {
-            guardError = new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
-            guardError.code = "PROJECT_IN_TRASH";
+            if (trashRequest.result.permanentlyDeleted) {
+              guardError = new Error("Este universo fue borrado permanentemente y su ID no puede volver a guardarse.");
+              guardError.code = "PROJECT_PERMANENTLY_DELETED";
+            } else {
+              guardError = new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
+              guardError.code = "PROJECT_IN_TRASH";
+            }
             tx.abort();
             return;
           }
@@ -377,7 +382,9 @@
         const evaluate = () => {
           if (!projectReady || !trashReady) return;
           if (trashRecord && trashRecord.projectId === projectId) {
-            guardError = new Error("No se puede activar un universo que está en la papelera.");
+            guardError = new Error(trashRecord.permanentlyDeleted
+              ? "No se puede activar un universo borrado permanentemente."
+              : "No se puede activar un universo que está en la papelera.");
             tx.abort();
             return;
           }
@@ -764,13 +771,20 @@
         const request = trash.get(projectId);
         request.onsuccess = () => {
           const record = request.result;
-          if (!record || record.projectId !== projectId) {
-            guardError = new Error("El universo ya no está en la papelera.");
+          if (!record || record.projectId !== projectId || record.permanentlyDeleted) {
+            guardError = new Error(record?.permanentlyDeleted
+              ? "El universo ya fue borrado permanentemente."
+              : "El universo ya no está en la papelera.");
             tx.abort();
             return;
           }
-          // Only remove a compatibility backup after confirming the exact tombstone
-          // exists. An unreadable or malformed backup cannot safely be attributed to an ID.
+          if (!isProject(record.projectData) || record.projectData.project.id !== projectId || !Array.isArray(record.snapshots)) {
+            guardError = new Error("La entrada de papelera no contiene datos recuperables válidos; no se borró.");
+            tx.abort();
+            return;
+          }
+          // Only remove a compatibility backup after confirming the exact trash record.
+          // An unreadable or malformed backup cannot safely be attributed to an ID.
           const backupResult = this.readBackup();
           const backup = backupResult.project;
           if (backupResult.error || (backupResult.raw !== null && !backup)) {
@@ -791,14 +805,26 @@
               return;
             }
           }
-          trash.delete(projectId);
+          // Keep a minimal, hidden permanent tombstone so stale tabs cannot recreate
+          // a project after its recoverable payload has been purged.
+          trash.put({
+            formatVersion: 1,
+            projectId,
+            permanentlyDeleted: true,
+            purgedAt: new Date().toISOString()
+          });
         };
         tx.oncomplete = resolve;
         tx.onerror = () => reject(guardError || tx.error || new Error("Falló el borrado permanente."));
         tx.onabort = () => reject(guardError || tx.error || new Error("El borrado permanente fue cancelado."));
       });
-      if (await this.read("trash", projectId)) throw new Error("IndexedDB no confirmó el borrado permanente.");
-      return { projectId, permanentlyDeleted: true };
+      const marker = await this.read("trash", projectId);
+      if (!marker || marker.projectId !== projectId || !marker.permanentlyDeleted ||
+          marker.projectData !== undefined || marker.snapshots !== undefined ||
+          await this.read("projects", projectId) || (await this.listSnapshots(projectId)).length) {
+        throw new Error("IndexedDB no confirmó el borrado permanente y su marca anti-resurrección.");
+      }
+      return { projectId, permanentlyDeleted: true, tombstoneRetained: true };
     }
 
     async deleteProject(projectId) {
@@ -907,8 +933,10 @@
         }
         if (tombstone) {
           restorePreviousBackup();
-          const error = new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
-          error.code = "PROJECT_IN_TRASH";
+          const error = tombstone.permanentlyDeleted
+            ? new Error("Este universo fue borrado permanentemente y su ID no puede volver a guardarse.")
+            : new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
+          error.code = tombstone.permanentlyDeleted ? "PROJECT_PERMANENTLY_DELETED" : "PROJECT_IN_TRASH";
           throw error;
         }
       }
@@ -917,8 +945,8 @@
         await this.write(project);
         return { backend: "indexeddb", backupWritten, warning: backupError ? backupError.message : null };
       } catch (error) {
-        if (error && error.code === "PROJECT_IN_TRASH") {
-          // A trash move may win after preflight but before the write transaction.
+        if (error && (error.code === "PROJECT_IN_TRASH" || error.code === "PROJECT_PERMANENTLY_DELETED")) {
+          // A trash move or permanent-delete marker may win after preflight but before the write transaction.
           restorePreviousBackup();
           throw error;
         }
