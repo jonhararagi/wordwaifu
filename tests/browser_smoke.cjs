@@ -278,6 +278,24 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#lore-search-status")?.textContent.includes("No se encontró evidencia"), { timeout: 5000 });
     assert.equal(await page.locator(".lore-result").count(), 0);
     process.stdout.write("PASS lore UI: undocumented Ais likes produce explicit abstention.\n");
+    await page.route("https://danmachi.fandom.com/api.php**", route => route.fulfill({
+      status:200, contentType:"application/json",
+      body:JSON.stringify({query:{search:[{title:"Ryuu Lion",snippet:'<span class="searchmatch">Ryuu Lion</span> profile and timeline.'}]}})
+    }));
+    await page.route("https://en.wikipedia.org/w/api.php**", route => route.fulfill({
+      status:200, contentType:"application/json",
+      body:JSON.stringify({query:{search:[{title:"DanMachi",snippet:"A Japanese light novel series."}]}})
+    }));
+    await page.locator("#lore-query").fill("Ryu Lion");
+    await page.locator("#lore-web-search-button").click();
+    await page.waitForFunction(() => document.querySelectorAll("#lore-online-results .lore-online-result-card").length >= 2, {timeout:5000});
+    assert.ok((await page.locator("#lore-online-status").innerText()).includes("pistas secundarias"));
+    assert.ok((await page.locator("#lore-online-results").innerText()).includes("Ryuu Lion"));
+    assert.ok(!((await page.locator("#lore-online-results").innerText()).includes("<span")));
+    await page.locator("#lore-source-directory-details > summary").click();
+    assert.ok((await page.locator("#lore-source-directory").innerText()).includes("GA Bunko"));
+    assert.ok((await page.locator("#lore-source-directory").innerText()).includes("DanMachi Wiki"));
+    process.stdout.write("PASS web UI: mocked wiki lookup, secondary-source warning and official-source directory.\n");
     await page.locator('.nav-item[data-view="atlas"]').click();
 
     const assertSnapshotContains = async (entityId, collection, reason) => {

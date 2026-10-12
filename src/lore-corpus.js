@@ -13,6 +13,18 @@
     "tienen","tengo","quiero","saber","dime","me","te","se","su","mi","tu",
     "el","la","un","y","o","a","de","en","es","lo","le","al","quien","gustan","gusta","gustaria"
   ]);
+  const ONLINE_SOURCE_DIRECTORY = [
+    { id:"official-chronology", category:"official", title:"Cronología oficial de DanMachi", publisher:"Portal oficial de la serie", authority:"Referencia oficial", url:"https://danmachi.com/chronology/", coverage:"Cronología de la serie y obras derivadas, incluida la presentación de Astrea Record.", limits:"Es una referencia oficial de cronología/promoción; no reemplaza el pasaje completo de una novela." },
+    { id:"official-anime-v", category:"official", title:"Perfiles oficiales · DanMachi V", publisher:"Portal oficial del anime", authority:"Referencia oficial de adaptación", url:"https://danmachi.com/danmachi5/character/", coverage:"Perfiles de personajes y estado descrito para la adaptación de la quinta temporada.", limits:"Usar como CONT-ANIME; no transferir automáticamente todos los detalles a la novela ligera." },
+    { id:"official-anime-iv", category:"official", title:"Perfiles oficiales · DanMachi IV", publisher:"Portal oficial del anime", authority:"Referencia oficial de adaptación", url:"https://danmachi.com/danmachi4/character/", coverage:"Perfiles de Astrea Familia y otros personajes de la adaptación.", limits:"La página oficial describe la adaptación; no constituye por sí sola un localizador de la novela." },
+    { id:"official-anime-iii", category:"official", title:"Perfiles oficiales · DanMachi III", publisher:"Portal oficial del anime", authority:"Referencia oficial de adaptación", url:"https://danmachi.com/danmachi3/character/", coverage:"Perfiles publicados para personajes y estados representados en la tercera temporada.", limits:"Comprobar temporada y continuidad antes de reutilizar una afirmación." },
+    { id:"ga-astrea-1", category:"official", title:"GA Bunko · Astrea Record, volumen 1", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial", url:"https://ga.sbcr.jp/product/9784815610173", coverage:"Sinopsis editorial oficial de la primera novela de Astrea Record.", limits:"La sinopsis no equivale al texto íntegro ni permite inventar capítulos, páginas o escenas." },
+    { id:"ga-astrea-2", category:"official", title:"GA Bunko · Astrea Record, volumen 2", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial", url:"https://ga.sbcr.jp/product/9784815610180", coverage:"Sinopsis editorial oficial de la segunda novela de Astrea Record.", limits:"Sirve para afirmaciones realmente presentes en la sinopsis, no para reconstruir cada detalle." },
+    { id:"ga-astrea-3", category:"official", title:"GA Bunko · Astrea Record, volumen 3", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial", url:"https://ga.sbcr.jp/product/9784815617554", coverage:"Sinopsis editorial oficial de la tercera novela de Astrea Record.", limits:"No sustituye la lectura y localización del pasaje en la novela." },
+    { id:"community-fandom", category:"community", title:"DanMachi Wiki · Fandom", publisher:"Wiki comunitaria mantenida por colaboradores", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/DanMachi_Wiki", coverage:"Índice amplio de personajes, familias, términos, volúmenes y cronología.", limits:"Usar para descubrir alias y posibles referencias; revisar las citas y confirmar con fuentes oficiales o novelas." },
+    { id:"community-timeline", category:"community", title:"DanMachi Wiki · Timeline", publisher:"Wiki comunitaria mantenida por colaboradores", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Timeline", coverage:"Mapa de fechas aproximadas y acontecimientos de DanMachi, Sword Oratoria y Astrea Record.", limits:"La cronología puede simplificar o combinar continuidades; verificar cada dato antes de aprobarlo." },
+    { id:"reference-wikipedia", category:"community", title:"Wikipedia · Is It Wrong to Try to Pick Up Girls in a Dungeon?", publisher:"Enciclopedia colaborativa", authority:"Referencia secundaria general", url:"https://en.wikipedia.org/wiki/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a_Dungeon%3F", coverage:"Contexto general de la serie, publicaciones y adaptaciones.", limits:"No es la fuente adecuada para confirmar detalles finos de psicología, relaciones o cronología." }
+  ];
   function normalize(value) {
     return String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
       .toLocaleLowerCase("es").replace(/[^a-z0-9\u3040-\u30ff\u4e00-\u9faf-]+/g, " ")
@@ -254,5 +266,73 @@
     return { results: results.slice(0, limit), totalMatches: results.length, truncated: results.length > limit,
       abstain: results.length === 0, queryTokens };
   }
-  return { load, buildIndex, search, normalize, tokens, parseCharacterProfile };
+
+  function getOnlineSourceDirectory() {
+    return ONLINE_SOURCE_DIRECTORY.map(source => ({ ...source }));
+  }
+  function cleanExternalText(value) {
+    return String(value ?? "").replace(/<[^>]*>/g, " ")
+      .replace(/&nbsp;/gi, " ").replace(/&#160;/g, " ")
+      .replace(/&amp;/gi, "&").replace(/&lt;/gi, "<").replace(/&gt;/gi, ">")
+      .replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'")
+      .replace(/&#(\d+);/g, (all, code) => {
+        const number = Number(code);
+        return Number.isFinite(number) && number > 0 && number <= 0x10ffff ? String.fromCodePoint(number) : all;
+      })
+      .replace(/&#x([0-9a-f]+);/gi, (all, code) => {
+        const number = parseInt(code, 16);
+        return Number.isFinite(number) && number > 0 && number <= 0x10ffff ? String.fromCodePoint(number) : all;
+      })
+      .replace(/\s+/g, " ").trim();
+  }
+  async function searchExternalSources(query, options) {
+    const searchText = String(query ?? "").trim().slice(0, 160);
+    const settings = options || {};
+    if (!searchText) throw new TypeError("Escribí un tema o elegí un personaje antes de buscar en la web.");
+    const fetcher = settings.fetchImpl || settings.fetch || (typeof fetch === "function" ? fetch : null);
+    if (!fetcher) throw new Error("Este entorno no ofrece fetch para consultar fuentes web.");
+    const providers = [
+      { id:"danmachi-wiki", label:"DanMachi Wiki (Fandom)", authority:"Fuente secundaria · wiki comunitaria", note:"Úsala para localizar páginas, nombres alternativos y referencias; no confirma canon por sí sola.", endpoint:"https://danmachi.fandom.com/api.php", searchUrl:"https://danmachi.fandom.com/wiki/Special:Search?query="+encodeURIComponent(searchText), articleUrl:title=>"https://danmachi.fandom.com/wiki/"+encodeURIComponent(String(title||"").replace(/ /g,"_")) },
+      { id:"wikipedia-en", label:"Wikipedia en inglés", authority:"Fuente secundaria · enciclopedia general", note:"Útil para contexto de serie/publicación; normalmente no basta para detalles específicos del canon.", endpoint:"https://en.wikipedia.org/w/api.php", searchUrl:"https://en.wikipedia.org/w/index.php?search="+encodeURIComponent(searchText), articleUrl:title=>"https://en.wikipedia.org/wiki/"+encodeURIComponent(String(title||"").replace(/ /g,"_")) }
+    ];
+    const providerReports = await Promise.all(providers.map(async provider => {
+      try {
+        const url = new URL(provider.endpoint);
+        url.searchParams.set("action","query"); url.searchParams.set("list","search");
+        url.searchParams.set("srsearch",searchText); url.searchParams.set("srnamespace","0");
+        url.searchParams.set("srlimit","5"); url.searchParams.set("srprop","snippet|timestamp");
+        url.searchParams.set("format","json"); url.searchParams.set("origin","*");
+        const request = { method:"GET", mode:"cors", credentials:"omit", cache:"no-store", headers:{Accept:"application/json"} };
+        if(settings.signal) request.signal = settings.signal;
+        const response = await fetcher(url.href,request);
+        if(!response || !response.ok) throw new Error("HTTP "+(response?response.status:"sin respuesta"));
+        const payload = await response.json();
+        const hits = payload && payload.query && Array.isArray(payload.query.search) ? payload.query.search : [];
+        return {
+          providerId:provider.id, providerLabel:provider.label, authority:provider.authority,
+          note:provider.note, searchUrl:provider.searchUrl, error:"",
+          results:hits.slice(0,5).map(hit=>({
+            providerId:provider.id, providerLabel:provider.label, authority:provider.authority,
+            title:cleanExternalText(hit.title)||"Resultado sin título",
+            snippet:cleanExternalText(hit.snippet)||"La fuente no proporcionó un resumen para este resultado.",
+            url:provider.articleUrl(hit.title), updatedAt:typeof hit.timestamp==="string"?hit.timestamp:""
+          }))
+        };
+      } catch(error) {
+        return {
+          providerId:provider.id, providerLabel:provider.label, authority:provider.authority,
+          note:provider.note, searchUrl:provider.searchUrl,
+          error:cleanExternalText(error && error.message ? error.message : "Fuente no disponible"), results:[]
+        };
+      }
+    }));
+    return {
+      query:searchText, providers:providerReports,
+      results:providerReports.flatMap(provider=>provider.results),
+      hasFailures:providerReports.some(provider=>Boolean(provider.error)),
+      sourceDirectory:getOnlineSourceDirectory()
+    };
+  }
+
+  return { load, buildIndex, search, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText };
 });

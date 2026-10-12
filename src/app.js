@@ -1812,6 +1812,7 @@
 
   let loreIndexPromise = null;
   let lorePanelPrepared = false;
+  let onlineSourceDirectoryPrepared = false;
   let loreArchiveIndex = null;
   let archiveUiPrepared = false;
   let activeArchiveCharacterId = null;
@@ -2159,6 +2160,7 @@
     if (!window.WordWaifuLoreCorpus) throw new Error("El módulo de búsqueda no está cargado.");
     if (!loreIndexPromise) loreIndexPromise = window.WordWaifuLoreCorpus.load("./lore/danmachi/");
     const index = await loreIndexPromise;
+    if (!onlineSourceDirectoryPrepared) { renderOnlineSourceDirectory(); onlineSourceDirectoryPrepared = true; }
     if (!lorePanelPrepared) {
       const select = $("#lore-character"), selected = select.value;
       select.replaceChildren(new Option("Cualquier personaje", ""));
@@ -2179,6 +2181,66 @@
     if (external) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
     container.appendChild(link);
   }
+
+  function renderOnlineSourceDirectory() {
+    const root = $("#lore-source-directory");
+    if (!root || !window.WordWaifuLoreCorpus) return;
+    root.replaceChildren();
+    const sources = window.WordWaifuLoreCorpus.getOnlineSourceDirectory();
+    const groups = [
+      { key:"official", title:"Prioridad alta · fuentes oficiales y editoriales", note:"Usalas para verificar lo que realmente publican. Una página oficial del anime sigue describiendo la adaptación; una sinopsis editorial no reemplaza el libro completo.", badge:"OFICIAL / EDITORIAL" },
+      { key:"community", title:"Apoyo para descubrir referencias · fuentes secundarias", note:"Útiles como índice y mapa de términos; cada afirmación relevante necesita una referencia comprobable antes de aprobarse.", badge:"SECUNDARIA" }
+    ];
+    groups.forEach(group=>{
+      const section=archiveElement("section","lore-source-directory-group");
+      section.append(archiveElement("h4","",group.title),archiveElement("p","lore-online-note",group.note));
+      const grid=archiveElement("div","lore-online-directory-grid");
+      sources.filter(source=>source.category===group.key).forEach(source=>{
+        const card=archiveElement("article","lore-online-source-card");
+        card.append(archiveElement("span","lore-online-tier",group.badge),archiveElement("h5","",source.title),
+          archiveElement("p","",source.coverage),archiveElement("p","lore-online-limit","Límite: "+source.limits));
+        appendLoreLink(card,"Abrir fuente ↗",source.url,true);
+        grid.appendChild(card);
+      });
+      section.appendChild(grid); root.appendChild(section);
+    });
+  }
+  async function runOnlineLoreSearch() {
+    const button=$("#lore-web-search-button"), status=$("#lore-online-status"), root=$("#lore-online-results");
+    root.replaceChildren(); button.disabled=true;
+    try {
+      const index=await prepareLoreView();
+      const typed=$("#lore-query").value.trim();
+      const selectedCharacter=index.characters.find(character=>character.id===$("#lore-character").value);
+      const query=typed||(selectedCharacter?selectedCharacter.name:"DanMachi");
+      status.textContent="Buscando «"+query+"» en dos fuentes secundarias… La respuesta puede depender de su disponibilidad y no confirma canon.";
+      const controller=typeof AbortController==="function"?new AbortController():null;
+      const timeout=controller?setTimeout(()=>controller.abort(),12000):null;
+      let report;
+      try { report=await window.WordWaifuLoreCorpus.searchExternalSources(query,{signal:controller?controller.signal:undefined}); }
+      finally { if(timeout!==null)clearTimeout(timeout); }
+      status.textContent=report.results.length+" resultado(s) web recibido(s) para «"+query+"». Son pistas secundarias: contrastá el dato en una fuente oficial o en el volumen correspondiente antes de marcarlo como confirmado."+
+        (report.hasFailures?" Una o más fuentes no respondieron; abajo queda disponible la búsqueda directa.":"");
+      report.providers.forEach(provider=>{
+        const section=archiveElement("section","lore-online-provider");
+        section.append(archiveElement("h4","",provider.providerLabel),archiveElement("p","lore-online-note",provider.authority+". "+provider.note));
+        if(provider.results.length) provider.results.forEach(hit=>{
+          const card=archiveElement("article","lore-online-result-card");
+          card.append(archiveElement("h5","",hit.title),archiveElement("p","",hit.snippet),archiveElement("span","lore-online-tier","Resultado externo · no verificado"));
+          appendLoreLink(card,"Abrir artículo ↗",hit.url,true); section.appendChild(card);
+        });
+        else {
+          const explanation=provider.error?"No se pudo consultar la API ahora ("+provider.error+"). Podés abrir la búsqueda del sitio directamente.":"La búsqueda no devolvió resultados para esta frase.";
+          section.appendChild(archiveElement("p","lore-online-limit",explanation));
+        }
+        appendLoreLink(section,"Buscar directamente en "+provider.providerLabel+" ↗",provider.searchUrl,true);
+        root.appendChild(section);
+      });
+    } catch(error) {
+      status.textContent="La búsqueda web no se pudo completar: "+(error&&error.message?error.message:"error desconocido")+". El archivo local sigue funcionando; abrí el directorio de fuentes para continuar manualmente.";
+    } finally { button.disabled=false; }
+  }
+
   async function runLoreSearch(event) {
     event.preventDefault();
     const status = $("#lore-search-status"), resultsNode = $("#lore-results"), button = $("#lore-search-form button[type='submit']");
@@ -2221,6 +2283,7 @@
     } finally { button.disabled = false; }
   }
   $("#lore-search-form").addEventListener("submit", event => { void runLoreSearch(event); });
+  $("#lore-web-search-button").addEventListener("click", () => { void runOnlineLoreSearch(); });
   $("#lore-clear-button").addEventListener("click", () => {
     $("#lore-query").value = ""; $("#lore-character").value = ""; $("#lore-continuity").value = "ALL";
     $("#lore-period").value = "ALL"; $("#lore-aspect").value = "all"; $("#lore-spoiler").value = "all";

@@ -238,3 +238,25 @@ select{background:#332d26;color:#e9dfd2}
 .archive-quick-filter:focus-visible,.archive-clear-filters:focus-visible{outline:2px solid #d4ad73;outline-offset:3px}
 .archive-clear-filters{min-height:36px;padding:8px 12px;font-size:11px}
 @media(max-width:560px){.archive-directory-toolbar{align-items:stretch}.archive-quick-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.archive-filter-hint{grid-column:1/-1}.archive-clear-filters{align-self:start}}
+
+
+/* Optional web discovery: separated from the curated evidence corpus. */
+.lore-online-panel { margin-top:1.4rem; padding:1rem; border:1px solid var(--line,#d5c6b2); border-radius:14px; background:rgba(255,251,244,.58); }
+.lore-online-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
+.lore-online-heading h3 { margin:0 0 .35rem; }
+.lore-online-heading p { margin:0; max-width:68ch; }
+.lore-online-heading button { flex:0 0 auto; }
+.lore-online-note,.lore-online-limit { color:var(--muted,#74685b); font-size:.88rem; line-height:1.55; }
+.lore-online-results,.lore-source-directory { display:grid; gap:1rem; margin-top:.8rem; }
+.lore-online-provider,.lore-source-directory-group { min-width:0; padding-top:.8rem; border-top:1px solid var(--line,#d5c6b2); }
+.lore-online-provider h4,.lore-source-directory-group h4 { margin:0 0 .35rem; }
+.lore-online-directory-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; }
+.lore-online-result-card,.lore-online-source-card { min-width:0; padding:.8rem; border:1px solid var(--line,#d5c6b2); border-radius:10px; background:var(--surface,#fffdf9); }
+.lore-online-result-card h5,.lore-online-source-card h5 { margin:.35rem 0; font-size:.95rem; }
+.lore-online-result-card p,.lore-online-source-card p { margin:.4rem 0; line-height:1.5; overflow-wrap:anywhere; }
+.lore-online-result-card a,.lore-online-source-card a,.lore-online-provider>a { display:inline-block; margin-top:.35rem; color:var(--accent-strong,#805326); text-underline-offset:3px; }
+.lore-online-tier { display:inline-block; color:var(--muted,#74685b); font-size:.69rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.lore-source-directory-details { margin-top:1rem; border-top:1px solid var(--line,#d5c6b2); padding-top:.8rem; }
+.lore-source-directory-details>summary { cursor:pointer; font-weight:650; }
+.lore-online-limit { overflow-wrap:anywhere; }
+@media(max-width:680px) { .lore-online-heading{flex-direction:column}.lore-online-heading button{width:100%}.lore-online-directory-grid{grid-template-columns:minmax(0,1fr)}.lore-online-panel{padding:.8rem} }

@@ -37,3 +37,47 @@ const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHA
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
 process.stdout.write("PASS lore search: 32 source claims, 35 entries, continuity split and abstention verified.\n");
+
+(async () => {
+  const sourceDirectory = corpus.getOnlineSourceDirectory();
+  assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/chronology")));
+  assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("ga.sbcr.jp/product/9784815610173")));
+  assert.ok(sourceDirectory.some(source => source.category === "community" && source.url.includes("danmachi.fandom.com")));
+  assert.ok(sourceDirectory.every(source => source.title && source.url && source.limits));
+  const requestedUrls = [];
+  const mockFetch = async input => {
+    const url = new URL(input); requestedUrls.push(url);
+    if (url.hostname === "danmachi.fandom.com") return {
+      ok:true,status:200,json:async()=>({query:{search:[{
+        title:"Ryuu Lion",
+        snippet:'<span class="searchmatch">Ryuu Lion</span> appears in Astrea Record &amp; the main series.',
+        timestamp:"2025-01-01T00:00:00Z"
+      }]}})
+    };
+    if (url.hostname === "en.wikipedia.org") return {
+      ok:true,status:200,json:async()=>({query:{search:[{title:"Is It Wrong to Try to Pick Up Girls in a Dungeon?",snippet:"A Japanese light novel series."}]}})
+    };
+    throw new Error("Unexpected mock host: "+url.hostname);
+  };
+  const externalReport=await corpus.searchExternalSources("Ryu Lion",{fetchImpl:mockFetch});
+  assert.equal(requestedUrls.length,2);
+  assert.ok(requestedUrls.every(url=>url.searchParams.get("origin")==="*"));
+  assert.ok(requestedUrls.every(url=>url.searchParams.get("srsearch")==="Ryu Lion"));
+  assert.equal(externalReport.results.length,2);
+  assert.ok(externalReport.results.every(result=>result.authority.includes("secundaria")));
+  assert.ok(externalReport.results[0].snippet.includes("Ryuu Lion"));
+  assert.ok(!externalReport.results[0].snippet.includes("<span"));
+  assert.ok(externalReport.results[0].snippet.includes("& the main series."));
+  assert.equal(externalReport.hasFailures,false);
+  const partialFailure=await corpus.searchExternalSources("Ais",{fetchImpl:async input=>{
+    const url=new URL(input);
+    if(url.hostname==="danmachi.fandom.com")return{ok:false,status:503,json:async()=>({})};
+    return{ok:true,status:200,json:async()=>({query:{search:[{title:"Ais Wallenstein",snippet:"Character overview"}]}})};
+  }});
+  assert.equal(partialFailure.providers.length,2);
+  assert.ok(partialFailure.hasFailures);
+  assert.ok(partialFailure.providers.some(provider=>provider.error&&provider.searchUrl));
+  assert.ok(partialFailure.providers.some(provider=>provider.results.length===1));
+  await assert.rejects(()=>corpus.searchExternalSources(" ",{fetchImpl:mockFetch}),/Escribí un tema/);
+  process.stdout.write("PASS web research: Fandom/Wikipedia search, secondary-source labels, safe snippets and graceful partial failure verified.\n");
+})().catch(error=>{ console.error(error); process.exitCode=1; });
