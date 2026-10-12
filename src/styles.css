@@ -224,3 +224,6 @@ select{background:#332d26;color:#e9dfd2}
 .archive-evidence>summary{color:#d9bf8c}
 .archive-source-links a{color:#abd4ac}
 .archive-badge--continuity{border-color:#665337;background:#3a3023;color:#edc68d}
+
+/* Preserve paragraphs and list-like lines from the recovered character dossiers. */
+.archive-more-info-section>p{white-space:pre-line}
