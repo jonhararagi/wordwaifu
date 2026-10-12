@@ -31,7 +31,61 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Bell_Cranel",
+        "sourceLabel": "DanMachi Wiki · Bell Cranel",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Cabello blanco y ojos rojos, con una apariencia juvenil que hace que otros lo comparen con un conejo. Su equipo cambia conforme crece: empieza con ropa ligera y termina usando armas, protección y accesorios adecuados a los pisos que explora.",
+        "history": "Zeus lo cría en una aldea de montaña con relatos de héroes como parte central de su infancia. Al llegar a Orario busca una Familia y es rechazado por varias; Hestia acaba aceptándolo como su primer miembro. La primera gran ruptura de su vida aventurera ocurre cuando Ais lo salva de un Minotauro: la admiración inicial se convierte en la motivación de entrenar para poder estar a su altura.",
+        "development": "Su crecimiento rápido no significa que nazca como un combatiente experimentado. Bell progresa en estadísticas mucho más rápido que en técnica, y tiene que aprender de instructores y de sus propios errores. En vez de endurecerse hasta perder empatía, suele elegir ayudar a personas que los demás ya consideran perdidas. La crisis de los Xenos lo obliga a aceptar que proteger a otros puede entrar en conflicto con el papel tradicional de aventurero.",
+        "combatProfile": "Combate a gran velocidad con dos cuchillos y busca controlar distancia, ritmo y oportunidades. Firebolt es una magia sin canto que complementa su estilo de ataques rápidos; Argonaut permite concentrar una acción en un golpe muy potente, pero necesita acumular carga y consume resistencia y mente. Sus estadísticas excepcionales para su nivel no borran su menor experiencia técnica frente a veteranos.",
+        "abilities": [
+          {
+            "name": "Liaris Freese",
+            "detail": "La habilidad acelera su crecimiento mientras persista la admiración amorosa que la activa. También hace que su progreso y su situación emocional estén narrativamente ligados."
+          },
+          {
+            "name": "Argonaut",
+            "detail": "Carga energía para reforzar una acción, convirtiéndola en un golpe decisivo. La potencia aumenta con el tiempo de carga y conlleva gasto físico y mental."
+          },
+          {
+            "name": "Firebolt",
+            "detail": "Magia de activación rápida y sin canto, útil para interrumpir o acompañar su avance. Su alcance y precisión contra objetivos veloces son limitaciones prácticas."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Ais Wallenstein",
+            "detail": "Su rescate inicial despierta la admiración que impulsa Liaris Freese. Bell quiere crecer para estar a su lado, mientras que Ais se interesa por su progreso y lo entrena."
+          },
+          {
+            "name": "Hestia",
+            "detail": "Es su diosa, primera líder de Familia y una de las personas a las que Bell considera familia. El vínculo incluye cuidado mutuo y conflictos por el interés romántico de otros personajes."
+          },
+          {
+            "name": "Liliruca Arde",
+            "detail": "Al principio ella se aprovecha de la confianza de Bell; la insistencia de él en tratarla como persona quiebra su desconfianza y transforma su relación en lealtad."
+          },
+          {
+            "name": "Welf Crozzo",
+            "detail": "Se convierte en socio de expediciones y amigo de confianza; Welf aporta equipo, experiencia y una voz directa cuando Bell duda."
+          },
+          {
+            "name": "Ryuu Lion",
+            "detail": "La cooperación en el Dungeon y el entrenamiento crea confianza profunda. La evolución sentimental de Ryuu es un tema importante en los arcos posteriores y está marcada como spoiler."
+          }
+        ],
+        "habits": "Es pésimo ocultando emociones o mentiras y suele mostrar preocupación aun cuando intenta disimularla. Sus decisiones tienden a partir de la empatía antes que del cálculo; eso lo mete en problemas, pero también le gana aliados inesperados.",
+        "narrativeRole": "El personaje sirve para examinar si el ideal de héroe puede ampliarse más allá de matar monstruos y ganar prestigio. Sus arcos lo hacen elegir entre obedecer expectativas colectivas y proteger a individuos concretos.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Bell_Cranel",
+          "https://danmachi.fandom.com/es/wiki/Bell_Cranel/Relaciones"
+        ]
+      }
+    }
   },
   {
     "id": "DM-CHAR-HESTIA",
@@ -59,7 +113,53 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Hestia",
+        "sourceLabel": "DanMachi Wiki · Hestia",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Diosa de baja estatura, cabello negro en dos coletas largas y ojos azules. Su ropa blanca con cintas azules es uno de los diseños más reconocibles de la serie.",
+        "history": "Al descender al Mundo Inferior depende durante un tiempo de Hephaistos y luego se instala en una iglesia abandonada. Tras numerosos intentos fallidos de reclutar seguidores, observa a Bell —también rechazado por otras Familias— y lo convierte en su primer dependiente. La Familia empieza con pocos recursos, por lo que Hestia combina el trabajo cotidiano con el cuidado de Bell y la administración de la vivienda, las armas y las deudas.",
+        "development": "Su comicidad y sus celos no son toda su caracterización. Se muestra tenaz cuando alguien de su Familia necesita ayuda, acepta a quienes otros marginan y mantiene la misma consideración por personas que no pueden ofrecerle poder o prestigio. Su insistencia en conseguir la daga adecuada para Bell es un ejemplo de su voluntad, y su trato con otras deidades revela que la compasión no desaparece aun cuando hay rivalidad.",
+        "combatProfile": "Como diosa no tiene nivel de aventurera ni usa una Falna propia para explorar el Dungeon. Su papel cotidiano es dirigir la Familia, cuidar de sus miembros y conseguir recursos. Su condición divina tiene límites en el Mundo Inferior, pero no debe confundirse su apariencia cómica con incapacidad o falta de poder divino.",
+        "abilities": [
+          {
+            "name": "Falna y actualización de estado",
+            "detail": "Hestia graba y actualiza el estado de los miembros de su Familia; el progreso pertenece al aventurero y la bendición divina, no a una estadística de nivel personal de Hestia."
+          },
+          {
+            "name": "Hestia Knife",
+            "detail": "La daga que entrega a Bell es una obra de gran importancia emocional y práctica; su coste crea una línea cotidiana de deuda y esfuerzo para Hestia."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Bell Cranel",
+            "detail": "Lo elige cuando nadie más lo acepta y lo considera el centro de su Familia. Su cariño es explícito, pero el vínculo también implica responsabilidad y confianza, no solo rivalidad romántica."
+          },
+          {
+            "name": "Hephaistos",
+            "detail": "Amiga que la ayuda al llegar al Mundo Inferior y herrera que termina fabricando el arma de Bell tras la insistencia de Hestia."
+          },
+          {
+            "name": "Loki",
+            "detail": "Mantienen una rivalidad ruidosa, pero Hestia puede reconocer cualidades de otros dioses incluso cuando discute con ellos."
+          },
+          {
+            "name": "Wiene y los Xenos",
+            "detail": "Su compasión se extiende más allá de los aventureros humanos: acepta que Bell proteja a una criatura que muestra conciencia e inocencia."
+          }
+        ],
+        "habits": "Busca trabajos sencillos para contribuir a los gastos de su Familia, tiene debilidad por Bell y reacciona con mucha energía ante amenazas a su vínculo. La fuente comunitaria también destaca su perseverancia para pedir ayuda en nombre de quienes cuida.",
+        "narrativeRole": "Representa hogar y pertenencia para un protagonista que llega sin Familia. Su función cambia de ser la diosa que recluta a Bell a sostener una red diversa de aventureros bajo una idea de familia elegida.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Hestia",
+          "https://danmachi.fandom.com/es/wiki/Familia_Hestia"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-SYR-FLOVA",
@@ -87,7 +187,45 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Syr_Flova",
+        "sourceLabel": "DanMachi Wiki · Syr Flova",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Camarera de Hostess of Fertility reconocible por su presentación amistosa y su trato cercano con los clientes. Su rol público y su historia privada no deben confundirse sin marcar el nivel de spoiler.",
+        "history": "Syr entrega comidas preparadas a Bell y mantiene una relación de apoyo con el entorno de la taberna. Su trasfondo conecta con el poder de Freya y con acuerdos que cambian la forma de interpretar su identidad. La ficha comunitaria contiene revelaciones de trama; por eso esta biografía debe quedar detrás de un aviso de spoiler y enlazar siempre a la fuente secundaria.",
+        "development": "En su faceta pública es sociable y observadora, capaz de detectar cambios de ánimo en quienes la rodean. Su narrativa cuestiona la diferencia entre cuidar genuinamente a alguien y construir una relación desde una identidad prestada. La historia completa no se debe reducir a 'camarera enamorada de Bell'.",
+        "combatProfile": "No se debe tratar su rol público de camarera como una hoja de combate completa. Los datos de la historia principal y de la identidad detrás de ese papel necesitan fichas separadas y spoilers controlados; las capacidades asociadas a su trasfondo deben contrastarse con la entrada específica de Freya/Horn.",
+        "abilities": [
+          {
+            "name": "Observación social",
+            "detail": "La referencia comunitaria describe una capacidad extraordinaria para leer situaciones y manejar conversaciones; esta es una habilidad de caracterización, no una técnica de combate confirmada."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Bell Cranel",
+            "detail": "Le muestra afecto, le ofrece comida y se preocupa por su seguridad. El peso real de ese vínculo depende de las revelaciones sobre su identidad."
+          },
+          {
+            "name": "Mia Grand",
+            "detail": "Trabaja bajo la autoridad de la dueña de la taberna, que la protege y mantiene el funcionamiento del local."
+          },
+          {
+            "name": "Freya / Horn",
+            "detail": "Conexión central y de alto spoiler. La aplicación debe advertir antes de mostrar la explicación de identidades y acuerdos."
+          }
+        ],
+        "habits": "Suele preparar comida para Bell antes de sus expediciones, aunque el resultado es conocido por no siempre ser bueno. Su cortesía esconde una observación mucho más precisa de lo que parece.",
+        "narrativeRole": "Syr presenta un vínculo afectivo bajo una identidad pública que adquiere otros significados cuando el lector conoce el trasfondo. Su arco obliga a separar lo que un personaje representa para otro de la identidad detrás de esa representación.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Syr_Flova",
+          "https://danmachi.fandom.com/es/wiki/Freya"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-LILIRUCA-ARDE",
@@ -116,7 +254,48 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Liliruca_Arde",
+        "sourceLabel": "DanMachi Wiki · Liliruca Arde",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Pallum de baja estatura, capaz de usar su apariencia y equipo para mezclarse con grupos de aventureros. Su función de supporter la lleva a transportar suministros, reunir información y adaptar su aspecto a distintas tareas.",
+        "history": "Nace vinculada a la Familia Soma, pero no recibe el cuidado que un niño necesita y es empujada a ganar dinero para otros. Como no destaca en combate directo, acaba trabajando de supporter y sufre el desprecio de aventureros que la tratan como desechable. Esa experiencia la lleva a desconfiar de los grupos y a engañar a quienes la contratan. Bell rompe gradualmente ese patrón cuando, incluso tras ser traicionado, insiste en verla como una persona digna de ayuda.",
+        "development": "Su cambio no es instantáneo: tarda en creer que la seguridad y el afecto de una Familia puedan ser reales. Ya dentro de Hestia Familia, su inteligencia práctica se convierte en un recurso para todos. Aprende a ejercer responsabilidad, a decir la verdad con más frecuencia y a defender a sus compañeros en vez de buscar únicamente la manera de sobrevivir sola.",
+        "combatProfile": "Su función es táctica y logística más que la lucha frontal. Utiliza astucia, disfraces y transformación Pallum para reconocimiento o infiltración; su contribución en una expedición puede depender de detectar riesgos, conocer rutas y dirigir a compañeros mejor preparados para combatir.",
+        "abilities": [
+          {
+            "name": "Transformación Pallum",
+            "detail": "Puede cambiar su apariencia para adoptar una forma masculina, útil para pasar inadvertida en determinadas tareas."
+          },
+          {
+            "name": "Mando y logística",
+            "detail": "Aprende a coordinar aventureros y a usar sus conocimientos del Dungeon. Su ventaja está en la lectura del escenario y no en competir en fuerza física con combatientes de primera línea."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Bell Cranel",
+            "detail": "El rechazo inicial de Lili nace de su historial de abuso; la insistencia de Bell en ayudarla le permite cambiar su visión de los aventureros. Lo quiere y también se frustra por su ingenuidad."
+          },
+          {
+            "name": "Hestia",
+            "detail": "Se convierte en una figura de autoridad y apoyo dentro de la nueva Familia. La relación también incluye rivalidad verbal por la atención de Bell."
+          },
+          {
+            "name": "Soma",
+            "detail": "La antigua Familia representa el entorno del que Lili busca escapar; su afiliación deja de definir su lealtad cuando encuentra un grupo que la trata de otra forma."
+          }
+        ],
+        "habits": "Observa, calcula riesgos y planea alternativas antes de actuar. A menudo hace de voz pragmática de la Familia, en especial cuando Bell está a punto de lanzarse a una situación sin evaluar el coste.",
+        "narrativeRole": "Lili expone el abuso hacia supporters y cuestiona la imagen idealizada del aventurero. Su arco transforma una persona que manipula para sobrevivir en una organizadora que protege al grupo.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Liliruca_Arde"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-WELF-CROZZO",
@@ -144,7 +323,52 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Welf_Crozzo",
+        "sourceLabel": "DanMachi Wiki · Welf Crozzo",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Herrero y aventurero humano que suele cargar equipo de combate y herramientas de trabajo. Su presencia combina capacidad para luchar con la identidad de artesano que repara y fabrica el equipo del grupo.",
+        "history": "Welf procede de la familia Crozzo, conocida por su legado de espadas mágicas, y crece en Rakia bajo expectativas familiares que no comparte. Cuando su propia habilidad le permite volver a fabricar esas armas, las rechaza por considerar que su poder vuelve dependiente al usuario. Abandona ese entorno y termina trabajando con Bell, donde puede medir su valía por la calidad de su oficio y su compañerismo.",
+        "development": "Su rechazo a las espadas mágicas es una postura ética: no quiere producir armas que le permitan a otra persona depender de un poder prestado y que luego se quiebran. Con el tiempo la postura se vuelve más matizada; aprende a considerar el contexto y a elegir para quién y por qué fabricar un arma. Su objetivo es ser un gran herrero por mérito propio, sin vivir bajo el prestigio del apellido Crozzo.",
+        "combatProfile": "Es un combatiente competente y una persona capaz de defender al grupo mientras piensa como herrero. Prefiere armas pesadas y utiliza su propio equipo para adaptarse al Dungeon. Su gran contribución práctica es diseñar, fabricar y mantener equipo; la magia Will-o'-Wisp puede interrumpir hechizos enemigos, aunque exige buen tiempo de reacción y coordinación.",
+        "abilities": [
+          {
+            "name": "Crozzo Blood",
+            "detail": "La habilidad familiar vinculada a la forja de espadas mágicas es fuente de conflicto personal; Welf no quiere que determine toda su identidad."
+          },
+          {
+            "name": "Will-o'-Wisp",
+            "detail": "Magia anti-hechizo que interrumpe el uso de magia o ataques que dependen de poder mágico. No es una solución universal: el tiempo de preparación y los cantos muy cortos limitan su aplicación."
+          },
+          {
+            "name": "Herrero",
+            "detail": "La calidad de su trabajo y su capacidad de mejorar el equipo son una ventaja estratégica para la Familia, distinta del simple poder en combate."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Bell Cranel",
+            "detail": "Se convierte en un compañero de confianza y figura de hermano mayor. Ambos pueden hablarse de forma directa sin que la amistad dependa del rango."
+          },
+          {
+            "name": "Hephaistos",
+            "detail": "La herrera a quien quiere superar por su propio trabajo; busca reconocimiento profesional, no solo aprobación personal."
+          },
+          {
+            "name": "Liliruca Arde",
+            "detail": "La apoya como parte del núcleo de Hestia Familia y suele aportar una perspectiva práctica cuando el grupo organiza expediciones."
+          }
+        ],
+        "habits": "Es franco, orgulloso de su trabajo y reacio a que se le pida una espada mágica como si ese fuera su único valor. Su orgullo puede volverse terquedad, pero normalmente prioriza la seguridad de sus compañeros.",
+        "narrativeRole": "Welf presenta el oficio como identidad y responsabilidad. Su conflicto no es aprender a hacer un arma más poderosa, sino decidir qué clase de herrero quiere ser y a quién debe servir su talento.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Welf_Crozzo"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-MIKOTO-YAMATO",
@@ -173,7 +397,52 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Yamato_Mikoto",
+        "sourceLabel": "DanMachi Wiki · Yamato Mikoto",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Aventurera procedente del Lejano Oriente, con cabello negro recogido y vestimenta inspirada en un kimono. Su identidad visual y su formación remiten a las artes marciales y a la tradición de su tierra.",
+        "history": "Tras perder a sus padres, crece en el entorno asociado a Takemikazuchi y se incorpora a su Familia. En Orario conoce a Bell y a su grupo; tras las tensiones iniciales, la cooperación en situaciones peligrosas le hace ver las cualidades de los miembros de Hestia. Su compromiso con Haruhime es también una motivación que precede a su unión con ellos.",
+        "development": "Mikoto es seria, honorable y disciplinada. No le agrada sacar ventaja mediante tácticas que considera desleales, como desviar monstruos hacia otro grupo, pero la serie la obliga a sopesar la pureza de las reglas contra la seguridad de las personas. Su lealtad se manifiesta en acciones concretas más que en discursos.",
+        "combatProfile": "Es una luchadora versátil con entrenamiento marcial y manejo de katana y otras armas. Su magia gravitatoria Futsunomitama puede inmovilizar una zona a costa de esfuerzo; las habilidades de búsqueda Yatanokurogarasu y Yatanoshirogarasu ayudan a detectar monstruos conocidos y miembros de su Familia.",
+        "abilities": [
+          {
+            "name": "Futsunomitama",
+            "detail": "Magia gravitatoria con área de efecto: crea una presión que limita los movimientos de los enemigos. Resulta útil para detener o retrasar una amenaza superior, no para sustituir el trabajo ofensivo de todo el grupo."
+          },
+          {
+            "name": "Yatanokurogarasu",
+            "detail": "Permite localizar monstruos dentro de su alcance, aunque la habilidad tiene condiciones para reconocer objetivos."
+          },
+          {
+            "name": "Yatanoshirogarasu",
+            "detail": "Permite buscar a otros miembros de su Familia dentro de un radio establecido; su alcance no sirve para rastrear a cualquier persona."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Takemikazuchi",
+            "detail": "Su dios y maestro de artes marciales. La relación se construye sobre respeto, disciplina y deuda personal."
+          },
+          {
+            "name": "Haruhime",
+            "detail": "Amiga desde antes de los acontecimientos principales y una de las razones de que Mikoto arriesgue mucho por ayudarla."
+          },
+          {
+            "name": "Bell Cranel",
+            "detail": "Aunque sus primeras interacciones son ásperas, Mikoto aprecia su generosidad y acaba cooperando con él sin guardar rencor."
+          }
+        ],
+        "habits": "Su cortesía y disciplina pueden hacerla rígida, pero no la vuelven pasiva. Disfruta los baños termales y respeta el entrenamiento ritual; en una emergencia puede actuar con determinación.",
+        "narrativeRole": "Mikoto conecta el honor tradicional con las decisiones de un grupo que opera en condiciones imperfectas. Su habilidad de apoyo y detección hace visible que una expedición no depende solo del combatiente más fuerte.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Yamato_Mikoto"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-SANJOUNO-HARUHIME",
@@ -202,7 +471,48 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Sanjouno_Haruhime",
+        "sourceLabel": "DanMachi Wiki · Haruhime Sanjouno",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Renard de cabello rubio, ojos verdes, orejas y cola de zorro. Su ropa pasa de la indumentaria tradicional del Lejano Oriente al uniforme de Hestia Familia en la etapa posterior a su rescate.",
+        "history": "Haruhime crece aislada en el Lejano Oriente y encuentra en los cuentos heroicos una vía de escape a la soledad. Después de ser expulsada de su hogar y quedar expuesta a abusos, termina bajo control de la Familia Ishtar. La rescata Bell, cuya acción contradice la idea que ella tenía de que sus experiencias la volvían indigna de ayuda. Su incorporación a Hestia Familia supone recuperar seguridad y amistades.",
+        "development": "Es amable, respetuosa y tímida; la lectura y los cuentos le dan un ideal de heroísmo que inicialmente aplica contra sí misma, como si no pudiera ser salvada. Su arco consiste en aceptar que su valor no depende de lo que le hicieron ni de que tenga habilidad de combate ofensiva. Cuando alguien querido está en peligro puede actuar con una valentía que su timidez no deja prever.",
+        "combatProfile": "Su rol es apoyo mágico y no ataque directo. Uchide no Kozuchi puede aumentar temporalmente el nivel de un aliado; no puede lanzarse sobre sí misma y está sujeta a restricciones de uso. El poder hace que Haruhime influya en una batalla completa, aunque no elimina el riesgo ni reemplaza la preparación de los combatientes.",
+        "abilities": [
+          {
+            "name": "Uchide no Kozuchi",
+            "detail": "Magia de aumento de nivel aplicada a otra persona. Es potente porque eleva temporalmente capacidades y estados, pero tiene límites de objetivo y de reutilización."
+          },
+          {
+            "name": "Canto y apoyo",
+            "detail": "Su aporte es preparar magia de apoyo en condiciones de presión y sostener al grupo; requiere protección y coordinación para no ser interrumpida."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Bell Cranel",
+            "detail": "La rescata y le devuelve la posibilidad de imaginar una vida propia. Su admiración por él nace de ese cambio, no solamente de una fantasía romántica."
+          },
+          {
+            "name": "Mikoto Yamato",
+            "detail": "Mikoto era su amiga antes de Orario y forma parte de la red que intenta protegerla."
+          },
+          {
+            "name": "Hestia Familia",
+            "detail": "Le ofrece seguridad y un espacio de pertenencia después de una vida marcada por el aislamiento y el control de otros."
+          }
+        ],
+        "habits": "Le gustan las historias de héroes y tiende a interpretar los acontecimientos con referencias a cuentos. Puede emocionarse ante experiencias cotidianas que no tuvo oportunidad de vivir durante su aislamiento.",
+        "narrativeRole": "Haruhime muestra que el rescate no termina cuando alguien sale del peligro físico: también necesita recuperar agencia, dignidad y capacidad de decidir qué hacer con su vida.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Sanjouno_Haruhime"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-FREYA",
@@ -230,7 +540,53 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Freya",
+        "sourceLabel": "DanMachi Wiki · Freya",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Diosa de la belleza con apariencia elegante y una presencia que atrae miradas en Orario. Su influencia narrativa procede tanto de su autoridad sobre la Familia Freya como de la forma en que observa a las personas.",
+        "history": "Freya busca almas que le parezcan extraordinarias y construye su Familia reuniendo aventureros poderosos. Cuando reconoce algo inusual en el alma de Bell, su curiosidad se vuelve una prioridad. La relación con Syr y con Horn es una de las líneas de identidad más delicadas de la historia y no debe revelarse en fichas sin aviso de spoiler.",
+        "development": "Es juguetona y coqueta, pero su búsqueda de un alma valiosa puede volverse posesiva. A medida que el interés por Bell se intensifica, deja de aceptar límites externos y pone a prueba a la ciudad para conseguirlo. Este cambio convierte la pregunta de qué significa amar a alguien en un conflicto de poder, libertad y consentimiento, no solo en una rivalidad sentimental.",
+        "combatProfile": "Como diosa no se presenta en una hoja de estado de aventurera. Su peligro central está en el Charm y en la red de combatientes de primer nivel que la obedecen. El poder no consiste solamente en fuerza directa; combina influencia sobrenatural, selección de talentos y una Familia organizada alrededor de ella.",
+        "abilities": [
+          {
+            "name": "Ojo perspicaz",
+            "detail": "La wiki describe una capacidad innata de percibir color e intensidad de las almas y extraer información aproximada de los aventureros."
+          },
+          {
+            "name": "Charm",
+            "detail": "Como diosa de la belleza puede influir en humanos y otros seres. Las condiciones, resistencias y excepciones necesitan leerse en el contexto de los arcos donde se enfrentan esos poderes."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Bell Cranel",
+            "detail": "Freya percibe su alma como excepcional y desea verlo crecer; su interés pasa de observación distante a intento de controlar su destino."
+          },
+          {
+            "name": "Ottar",
+            "detail": "Capitán y ejecutor de la voluntad de la Familia; su lealtad hace posible que Freya cuente con una fuerza organizada."
+          },
+          {
+            "name": "Hedin y Hogni",
+            "detail": "Dos altos ejecutivos con talento y personalidades muy distintas; sus capacidades amplían la influencia de la Familia."
+          },
+          {
+            "name": "Syr / Horn",
+            "detail": "Identidades y acuerdos esenciales para el trasfondo de Freya, con spoilers mayores. La ficha no las reduce a simples alias sin contexto."
+          }
+        ],
+        "habits": "Lee a las personas con atención y pone a prueba a quienes considera interesantes. Su paciencia es limitada cuando desea un resultado; la historia muestra el daño que puede causar cuando su deseo pesa más que la libertad ajena.",
+        "narrativeRole": "Freya es antagonista y fuerza de prueba para el concepto de amor, deseo y agencia personal. La complejidad está en su fascinación por las almas, pero eso no excusa las decisiones de control que toma.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Freya",
+          "https://danmachi.fandom.com/es/wiki/Familia_Freya"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-OTTAR",
@@ -257,7 +613,49 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Ottar",
+        "sourceLabel": "DanMachi Wiki · Ottar",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Guerrero boaz de enorme complexión, representante de la fuerza física y del rigor en la Familia Freya. Su presencia suele actuar como medida de lo que significa enfrentarse a un veterano de primera línea.",
+        "history": "Ottar crece bajo el culto y la exigencia de Freya, convirtiéndose en el capitán de la Familia. Su rango y su fortaleza no se presentan como un fin personal: la fuente comunitaria los vincula con una rutina de entrenamiento casi constante y con el compromiso de mantenerse digno de la diosa a la que sirve.",
+        "development": "La disciplina de Ottar puede parecer fría, pero sus decisiones se rigen por lealtad y por la convicción de que debe volverse más fuerte. No busca notoriedad independiente de Freya; interpreta su fuerza como obligación. Eso lo vuelve un rival formidable, aunque también deja sus deseos personales subordinados a la Familia.",
+        "combatProfile": "Es un combatiente de primera clase centrado en fuerza, resistencia y experiencia. No conviene fijar un único nivel sin citar el estado temporal, porque las fichas oficiales y los acontecimientos novelados describen momentos distintos. Sus escenas sirven para mostrar el límite que separa a los aventureros excepcionales de quienes aún están creciendo.",
+        "abilities": [
+          {
+            "name": "Entrenamiento continuo",
+            "detail": "La rutina y la disciplina forman parte explícita de la caracterización de Ottar; su fortaleza surge de práctica y experiencia, no de una sola técnica mágica."
+          },
+          {
+            "name": "Combate de primera línea",
+            "detail": "Su modo de pelear se apoya en presión directa, resistencia y capacidad para mantener la ofensiva, aunque las técnicas específicas requieren el localizador de la hoja de estado pertinente."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Freya",
+            "detail": "La lealtad hacia su diosa es el vínculo definitorio de Ottar. Defiende su autoridad y responde de manera dura ante insultos o amenazas."
+          },
+          {
+            "name": "Allen Fromel",
+            "detail": "Como capitán, dirige a ejecutivos con personalidad y especialidades distintas; el funcionamiento de la Familia depende de esa jerarquía."
+          },
+          {
+            "name": "Bell Cranel",
+            "detail": "Se convierte en una prueba crucial de las capacidades de Bell. La diferencia de experiencia y poder permite medir cuánto le queda por aprender al protagonista."
+          }
+        ],
+        "habits": "Entrena a diario y mide su vida por la mejora continua. Su reserva no equivale a falta de emociones: expresa su lealtad y respeto mediante acciones y disciplina.",
+        "narrativeRole": "Ottar encarna una fuerza que no puede ser superada por simple valentía. Sirve como referencia para que el protagonista comprenda el peso de la experiencia, la preparación y el coste del combate.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Ottar",
+          "https://danmachi.fandom.com/es/wiki/Familia_Freya"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-ALLEN-FROMEL",
@@ -484,7 +882,45 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Mia_Grand",
+        "sourceLabel": "DanMachi Wiki · Mia Grand",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Enana robusta que dirige la taberna Hostess of Fertility. Su presencia imponente y su actitud directa hacen que clientes y camareras respeten las reglas del establecimiento.",
+        "history": "Mia es una antigua aventurera poderosa que deja la vida de exploración y pasa a dirigir la taberna. El local funciona como lugar de encuentro para aventureros, pero también como hogar para mujeres que han vivido fuera de los espacios que las Familias suelen proteger. Cuando Ryu aparece herida, Mia la recibe y contribuye a que encuentre refugio y trabajo.",
+        "development": "Su dureza en la gestión no excluye una disposición protectora. Actúa como figura materna, impone consecuencias cuando sus empleadas causan problemas y responde personalmente si alguien amenaza a quienes trabajan para ella. La autoridad nace tanto de su carácter como de la reputación que conserva de su pasado.",
+        "combatProfile": "Aunque ya no trabaja como aventurera, la referencia comunitaria le atribuye experiencia y nivel alto en su etapa anterior. Su fuerza se vuelve parte de la autoridad del local: la taberna no es un lugar que los clientes puedan controlar con amenazas.",
+        "abilities": [
+          {
+            "name": "Experiencia de primera clase",
+            "detail": "Su pasado de aventurera explica por qué puede imponer disciplina entre personas acostumbradas a la violencia. Para detallar sus técnicas haría falta consultar su hoja de estado y los pasajes correspondientes."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Ryu Lion",
+            "detail": "La cuida después de la tragedia y le ofrece un empleo, ayudándola a pasar de fugitiva herida a integrante de una comunidad."
+          },
+          {
+            "name": "Syr y las camareras",
+            "detail": "Es su jefa y figura materna; las protege, aunque no les permite ignorar las consecuencias de sus actos."
+          },
+          {
+            "name": "Bell Cranel",
+            "detail": "Al principio lo trata como un cliente y aventurero más, pero el cuidado que muestra por Ryu y el entorno de la taberna lo vuelve una presencia familiar."
+          }
+        ],
+        "habits": "Habla con franqueza y espera obediencia a las reglas. Su forma de expresar afecto suele ser práctica: alimentar, dar refugio y proteger el lugar que considera propio.",
+        "narrativeRole": "Mia transforma una taberna en una forma alternativa de familia. Su pasado y autoridad demuestran que el cuidado de otros también puede nacer de alguien que conoce de primera mano la dureza del Dungeon.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Mia_Grand",
+          "https://danmachi.fandom.com/es/wiki/Anfitriona_de_la_Fertilidad"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-RYUU-LION",
@@ -515,7 +951,94 @@
     "sourceId": "DMR-006-SRC-001",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "Retrato actual de DanMachi V y referencia de DanMachi IV cargados desde la web oficial; no se copian al repositorio."
+    "imageCredit": "Retrato actual de DanMachi V y referencia de DanMachi IV cargados desde la web oficial; no se copian al repositorio.",
+    "dossiers": {
+      "CONT-AR": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Astrea_Record",
+        "sourceLabel": "DanMachi Wiki · Astrea Record",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "En el periodo histórico de Astrea Record su cabello es rubio dorado y viste equipo de aventurera; el cabello verde y el uniforme de camarera corresponden a su etapa posterior en la taberna.",
+        "history": "Antes de llegar a Orario, Ryu vive en un bosque élfico vinculado a un árbol sagrado. Decide marcharse al disgustarse con el desprecio que parte de su pueblo dirige a otras razas. Al incorporarse a Astrea Familia encuentra una comunidad cuyo ideal de justicia le permite reordenar su visión del mundo; Alise, capitana de la Familia, actúa como guía directa durante esta etapa.",
+        "development": "Su ideal de justicia se forma como convicción sincera, pero las circunstancias extremas de la Era Oscura lo ponen bajo presión. La historia de Astrea Record debe leerse como una secuencia de decisiones y pérdidas, no como prueba de que Ryu fue siempre una vengadora o una persona endurecida. Las sinopsis oficiales confirman su búsqueda de justicia y el golpe que los hechos conocidos como los Siete Días de la Muerte dan a esa visión; los detalles escena por escena aún requieren cotejar las novelas.",
+        "combatProfile": "Ryu es una espadachina élfica de gran capacidad y disciplina. Su competencia se forma antes y durante su vida como aventurera, y más adelante se convierte también en una instructora exigente. Esta ficha histórica no le asigna un nivel numérico ni técnicas individuales sin un localizador de volumen y estado concreto.",
+        "abilities": [
+          {
+            "name": "Técnica de espada",
+            "detail": "El combate con espada forma parte de su identidad de aventurera; los detalles de armas, habilidades y rangos deben verificarse contra las hojas de estado de Astrea Record."
+          },
+          {
+            "name": "Disciplina y juicio",
+            "detail": "La experiencia y su código moral influyen en cómo evalúa amenazas y toma decisiones. Esto es un rasgo de caracterización, no una habilidad mágica."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Alise Lovelace",
+            "detail": "Capitana de Astrea Familia y guía documentada de Ryu en la sinopsis editorial. Su influencia es central para la concepción de justicia de Ryu."
+          },
+          {
+            "name": "Astrea",
+            "detail": "Diosa asociada a la Familia y al marco moral de justicia. La relación de Ryu con ese ideal se construye dentro de la Familia, sin que una sola sinopsis detalle todas sus interacciones."
+          },
+          {
+            "name": "Kaguya y Lyra",
+            "detail": "Compañeras del entorno de Astrea Familia. Los detalles de amistad, rivalidad o participación en escenas concretas deben apoyarse en los volúmenes, no deducirse solo de la afiliación."
+          }
+        ],
+        "habits": "Es rigurosa en el entrenamiento y presta mucha atención a la conducta de los demás. Su aversión a la injusticia nace de una experiencia social anterior a Orario y se fortalece dentro de Astrea Familia.",
+        "narrativeRole": "Astrea Record muestra el origen y el desgaste de su idea de justicia. Es un periodo propio y no debe mezclarse con la camarera posterior ni con los acontecimientos de la novela principal.",
+        "sources": [
+          "https://ga.sbcr.jp/product/9784815610173",
+          "https://ga.sbcr.jp/product/9784815610180",
+          "https://danmachi.fandom.com/es/wiki/Astrea_Record"
+        ]
+      },
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Ryuu_Lion",
+        "sourceLabel": "DanMachi Wiki · Ryuu Lion",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Elfa de ojos azules. Su cabello originalmente rubio dorado se vuelve verde después de que las compañeras de la taberna se lo tiñen. Alterna ropa de aventurera con el uniforme de camarera de Hostess of Fertility.",
+        "history": "Tras la caída de Astrea Familia queda viva después de una tragedia en el Dungeon y atraviesa un periodo de culpa y venganza contra quienes considera responsables. Después de sus actos, abandona la vida de aventurera, es encontrada por Syr y recibe cuidado de Mia Grand en la taberna. Su pasado explica parte de su severidad, pero no debe resumirse como si la venganza fuera su única motivación.",
+        "development": "Ryu mantiene una actitud estoica y una brújula moral intensa, pero aprende que la justicia y la venganza no son lo mismo. La cooperación con Bell y los acontecimientos de expediciones posteriores ponen a prueba el aislamiento que impuso sobre sí misma. Su crecimiento no borra la culpa ni las pérdidas: la obliga a decidir cómo seguir viviendo y a aceptar vínculos nuevos sin negar su historia.",
+        "combatProfile": "Es una combatiente experimentada, con dominio de espada y magia élfica. Entrena con dureza y espera disciplina de quienes instruye. En las escenas del Dungeon combina lectura táctica, experiencia y precisión; su fortaleza también viene de años de práctica, no de una sola habilidad que resuelva cualquier combate.",
+        "abilities": [
+          {
+            "name": "Combate con espada",
+            "detail": "Su técnica y su experiencia la convierten en una instructora eficaz, aunque sus entrenamientos pueden ser demasiado severos para aventureros menos preparados."
+          },
+          {
+            "name": "Magia élfica",
+            "detail": "Las fuentes comunitarias describen su dominio mágico, pero esta síntesis no inventa nombres, costes ni rangos de hechizos sin cotejar las hojas de estado relevantes."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Alise Lovelace",
+            "detail": "La capitana y guía histórica continúa siendo una figura moral decisiva para Ryu. Sus recuerdos de Alise mezclan admiración, duelo y culpa."
+          },
+          {
+            "name": "Astrea",
+            "detail": "La diosa a la que sigue vinculada. Ryu procura protegerla de los efectos de su propia venganza y siente que no merece reencontrarse con la Familia perdida."
+          },
+          {
+            "name": "Syr Flova",
+            "detail": "La rescata del borde de la muerte y le ofrece una salida de la vida de fugitiva, facilitando que vuelva a pertenecer a una comunidad."
+          },
+          {
+            "name": "Bell Cranel",
+            "detail": "Bell demuestra confianza en ella incluso cuando otras personas la sospechan; el tiempo compartido en el Dungeon transforma esa confianza. El desarrollo afectivo de esta relación contiene spoilers mayores."
+          }
+        ],
+        "habits": "Tiene una ética de entrenamiento muy estricta, evita el contacto físico casual típico de muchos elfos y suele intervenir cuando alguien querido está en peligro. La wiki también destaca su rechazo a generalizar el resentimiento contra los Crozzo por hechos que no dañaron directamente a su pueblo.",
+        "narrativeRole": "Ryu representa la recuperación después del trauma y el conflicto entre castigar al culpable y recuperar una vida propia. Sus etapas histórica, de fugitiva y de camarera deben aparecer separadas, nunca fundidas en una biografía atemporal.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Ryuu_Lion",
+          "https://danmachi.fandom.com/es/wiki/Ryuu_Lion/Relaciones"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-ANYA-FROMEL",
@@ -627,7 +1150,54 @@
     "sourceId": "DMR-006-SRC-002",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CROSS-CONTINUITY": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Ais_Wallenstein",
+        "sourceLabel": "DanMachi Wiki · Ais Wallenstein",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Aventurera de cabello dorado y ojos dorados, generalmente con equipo de batalla blanco y negro y armadura. Su imagen silenciosa y su reputación como Princesa de la Espada contrastan con una expresión emocional a menudo difícil de interpretar.",
+        "history": "Llega a Loki Familia siendo niña y crece dentro de un entorno de entrenamiento intenso. Su vida está marcada por el deseo de hallar la verdad sobre su madre y por el recuerdo de una pérdida antigua. La historia principal y Sword Oratoria presentan aspectos diferentes de ella: Bell observa su comportamiento externo, mientras que el spin-off dedicado a Loki Familia explora más de sus motivaciones y recuerdos.",
+        "development": "Ais no es indiferente: le cuesta reconocer y comunicar emociones con palabras, y por eso los demás la leen como misteriosa o ingenua. Su fijación con hacerse más fuerte proviene de una meta íntima, no de simple ambición. Entrenar a Bell comienza como una forma de entender su crecimiento, pero su sinceridad y su esfuerzo despiertan en ella un afecto y una curiosidad progresivos.",
+        "combatProfile": "Es una espadachina de primera clase con una forma de luchar directa, disciplinada y orientada a superar rápidamente al enemigo. Ariel la envuelve en poder de viento y aumenta su capacidad ofensiva; su uso depende de magia y control, y no sustituye su habilidad técnica. Su experiencia y su nivel deben anotarse con un estado temporal, porque las fichas de anime y las novelas no siempre describen el mismo momento.",
+        "abilities": [
+          {
+            "name": "Ariel",
+            "detail": "Magia de viento que potencia su movimiento y sus ataques, pieza central de su estilo de combate. La experiencia con esta magia es también parte de su estrategia de crecimiento."
+          },
+          {
+            "name": "Swordsmanship",
+            "detail": "La técnica con la espada es una parte fundamental de su identidad: estudia movimientos, busca eficiencia y entrena de forma constante."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Bell Cranel",
+            "detail": "Lo rescata al principio de la historia. Le intriga su pureza, su esfuerzo y su rápida progresión; se ofrece a entrenarlo y gradualmente deja ver con él más emoción de la que expresa ante otros."
+          },
+          {
+            "name": "Lefiya Viridis",
+            "detail": "Lefiya la admira de manera intensa. Su vínculo combina respeto, compañerismo y la presión que siente Lefiya por alcanzar su nivel."
+          },
+          {
+            "name": "Riveria",
+            "detail": "Figura de autoridad y cuidado dentro de Loki Familia. La relación no es solo jerárquica: Riveria ha participado en su crianza y en su formación."
+          },
+          {
+            "name": "Finn y Loki Familia",
+            "detail": "Ais es una combatiente clave del grupo, aunque su motivación individual no siempre coincide con los objetivos estratégicos de la Familia."
+          }
+        ],
+        "habits": "Es franca y de pocas palabras; puede entender literalmente consejos que otros dicen en broma, y suele expresarse más por acciones que por confesiones. El detalle de su infancia y los traumas asociados a su meta son spoilers altos.",
+        "narrativeRole": "Ais es el ideal al que aspira Bell, pero el lector también descubre que ella misma está atrapada en una historia de pérdida. Sword Oratoria aporta la perspectiva interna que el punto de vista de Bell no puede mostrar.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Ais_Wallenstein",
+          "https://danmachi.fandom.com/wiki/Ais_Wallenstein/Relationships",
+          "https://danmachi.com/sword_oratoria/character/"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-LEFIYA-VIRIDIS",
@@ -655,7 +1225,45 @@
     "sourceId": "DMR-006-SRC-002",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CROSS-CONTINUITY": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Lefiya_Viridis",
+        "sourceLabel": "DanMachi Wiki · Lefiya Viridis",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Elfa maga de Loki Familia, reconocible por su cabello rubio claro y su equipo de lanzadora de hechizos. Su lugar dentro del grupo se define por la magia y por su admiración hacia Ais.",
+        "history": "Lefiya se desarrolla dentro de Loki Familia y encuentra en Ais un referente de heroísmo. Su entrada al grupo de magas de élite requiere trabajo y estudio, y sus capacidades la sitúan como una figura joven con enorme potencial, aunque todavía insegura frente a aventureros veteranos.",
+        "development": "Su admiración por Ais puede impulsarla a entrenar, pero también hacer que se compare de forma poco favorable con ella. A medida que gana experiencia, aprende a valorar su propio conjunto de habilidades en vez de medirse solo por la destreza con la espada de Ais.",
+        "combatProfile": "Maga centrada en hechizos de gran alcance y apoyo, con potencial elevado y una formación mágica que la distingue de otras aventureras. La ejecución de magia exige condiciones y cantos; no debe representarse como una capacidad instantánea o ilimitada.",
+        "abilities": [
+          {
+            "name": "Magia de apoyo y ataque",
+            "detail": "Su repertorio y afinidad mágica son el centro de su rol; los nombres de hechizos y restricciones se deben ligar a la hoja de estado correspondiente."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Ais Wallenstein",
+            "detail": "La admira con una intensidad que puede convertirla en modelo e inseguridad al mismo tiempo."
+          },
+          {
+            "name": "Riveria Ljos Alf",
+            "detail": "Recibe orientación en la formación mágica y el uso disciplinado de sus capacidades."
+          },
+          {
+            "name": "Loki Familia",
+            "detail": "Su desarrollo personal transcurre dentro de un equipo que combina veteranos con jóvenes aventureros."
+          }
+        ],
+        "habits": "Es aplicada y bondadosa, aunque puede volverse celosa o insegura cuando siente que no está a la altura de Ais. Su crecimiento consiste en convertir la admiración en motivación propia.",
+        "narrativeRole": "Lefiya ofrece una mirada de aprendiz sobre los héroes de Loki Familia. Su historia pregunta cómo formar una identidad propia cuando se empieza intentando imitar a alguien admirado.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Lefiya_Viridis",
+          "https://danmachi.com/sword_oratoria/character/"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-TIONA-HIRYUTE",
@@ -683,7 +1291,45 @@
     "sourceId": "DMR-006-SRC-002",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Tiona_Hiryute",
+        "sourceLabel": "DanMachi Wiki · Tiona Hiryute",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Amazoness de energía desbordante y combatiente de primera línea. Su equipo y actitud transmiten una forma de luchar directa; su aspecto alegre no debe confundirse con falta de criterio.",
+        "history": "Crece junto a su hermana Tione dentro de una cultura amazona marcada por el combate. En Loki Familia encuentra un lugar donde su fuerza y su entusiasmo ayudan a mantener cohesionado al grupo. Su admiración por héroes y relatos se refleja en cómo celebra a aventureros que combaten con valor.",
+        "development": "Tiona es franca y expresiva, tiende a ver primero lo admirable en las personas y disfruta de la aventura. La madurez aparece en su capacidad de sostener decisiones difíciles sin perder su buen humor. Su vínculo con Ais y con los miembros más jóvenes de la Familia aporta una dimensión amistosa al entorno de combate.",
+        "combatProfile": "Aventurera de primera línea con gran fuerza física, aguante y uso de armas pesadas. Su estilo es frontal, pero la experiencia le permite controlar el ritmo del combate y aprovechar ventanas de ataque; la ficha no debe tomar el nivel de una temporada como nivel intemporal.",
+        "abilities": [
+          {
+            "name": "Combate físico",
+            "detail": "Su mayor ventaja es la fuerza y la resistencia. Las técnicas nombradas deben quedar ligadas a los estados y hojas de habilidad de la novela."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Tione Hiryute",
+            "detail": "Su hermana gemela mayor; se quieren pese a las diferencias de temperamento y la competitividad que comparten."
+          },
+          {
+            "name": "Ais Wallenstein",
+            "detail": "Amiga de Ais y una de las personas que participa en el entrenamiento de Bell junto a ella."
+          },
+          {
+            "name": "Finn Deimne",
+            "detail": "Lo respeta como capitán de Loki Familia, aunque su relación es principalmente de subordinación y compañerismo."
+          }
+        ],
+        "habits": "Es expresiva, entusiasta y aficionada a relatos heroicos. A menudo verbaliza su admiración de manera espontánea y anima a compañeros que otros subestiman.",
+        "narrativeRole": "Tiona aporta optimismo y conexión interpersonal a una Familia con exigencias tácticas altas. También sirve como ejemplo de que el disfrute del combate puede coexistir con un fuerte sentido de compañerismo.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Tiona_Hiryute",
+          "https://danmachi.com/sword_oratoria/character/"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-TIONE-HIRYUTE",
@@ -711,7 +1357,45 @@
     "sourceId": "DMR-006-SRC-002",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Tione_Hiryute",
+        "sourceLabel": "DanMachi Wiki · Tione Hiryute",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Amazoness y combatiente de primera línea, hermana gemela mayor de Tiona. Su presencia en combate es intensa y física; su conducta en situaciones personales puede contrastar con esa ferocidad.",
+        "history": "La vida de Tione y Tiona comienza bajo una formación amazona que premia la supervivencia y la fuerza. Tione se integra a Loki Familia como ejecutiva y desarrolla un afecto intenso por Finn, que tiñe su comportamiento fuera del combate. La wiki reúne eventos de distintas novelas y el detalle cronológico debe respetar los volúmenes en que aparecen.",
+        "development": "Tione puede pasar de una actitud brutal y directa a mostrarse vulnerable frente a Finn. Ese contraste no es una incoherencia: muestra cuánto le cuesta expresar deseo o miedo sin refugiarse en la violencia. Con su hermana, la relación mezcla cuidado, competitividad y conocimiento mutuo.",
+        "combatProfile": "Especialista de combate cercano, fuerte y agresiva; su estilo busca cerrar distancia e imponerse físicamente. La hoja de estado y el momento temporal deben decidir el nivel y las técnicas exactas.",
+        "abilities": [
+          {
+            "name": "Combate de primera línea",
+            "detail": "Su entrenamiento amazona y la experiencia de Loki Familia le permiten sostener el enfrentamiento cercano. No se inventan nombres de habilidad sin el volumen correspondiente."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Tiona Hiryute",
+            "detail": "Hermana gemela menor y persona que más conoce su carácter. Sus diferencias generan discusiones, pero la relación es profundamente familiar."
+          },
+          {
+            "name": "Finn Deimne",
+            "detail": "Está enamorada de su capitán; ante él puede mostrarse mucho más suave de lo que su reputación de combatiente sugiere."
+          },
+          {
+            "name": "Loki Familia",
+            "detail": "Es una ejecutiva que asume tareas de alto riesgo y protege a sus compañeros en el Dungeon."
+          }
+        ],
+        "habits": "Sus emociones suelen mostrarse con intensidad y, cuando se siente vulnerable, puede responder con agresividad. El afecto hacia Finn expone una faceta que intenta ocultar a los demás.",
+        "narrativeRole": "Tione explora cómo una persona puede ser formidable en batalla y, al mismo tiempo, tener inseguridades íntimas. Su arco familiar con Tiona agrega complejidad a la cultura amazona.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Tione_Hiryute",
+          "https://danmachi.com/sword_oratoria/character/"
+        ]
+      }
+    }
   },
   {
     "id": "DM-CHAR-LOKI",
@@ -766,7 +1450,53 @@
     "sourceId": "DMR-006-SRC-002",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CROSS-CONTINUITY": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Finn_Deimne",
+        "sourceLabel": "DanMachi Wiki · Finn Deimne",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Pallum de apariencia juvenil, capitán de Loki Familia y una de las principales voces estratégicas de Orario. Su aspecto no refleja la autoridad acumulada ni la experiencia de mando.",
+        "history": "Finn nace en una comunidad Pallum marcada por el recuerdo de una antigua figura heroica y por la costumbre de ceder ante razas más fuertes. Reacciona buscando conocimiento e ingenio como forma de resistencia. Dentro de Loki Familia convierte esa idea en liderazgo: no necesita parecer físicamente superior si puede planificar, coordinar y hacer que el grupo actúe con precisión.",
+        "development": "Finn es prudente y calculador, pero no puramente frío. Su ambición de elevar a los Pallum y su responsabilidad con la Familia influyen en decisiones que pueden tener coste personal. Tiene que equilibrar su objetivo colectivo con los sentimientos individuales de quienes dirige; su imagen del héroe se acerca más al estratega que al guerrero solitario.",
+        "combatProfile": "Coordina al grupo en el Dungeon, combina información y lectura del terreno con uso eficaz de habilidades y combate. Su valor no se mide solo por fuerza individual: prepara planes, distribuye tareas y aprovecha el talento de Riveria, Gareth y los ejecutivos. Su nivel exacto debe ligarse a la cronología elegida.",
+        "abilities": [
+          {
+            "name": "Mando táctico",
+            "detail": "Convierte información incompleta en órdenes de equipo y adapta el plan al comportamiento del enemigo."
+          },
+          {
+            "name": "Falna y habilidades de combate",
+            "detail": "La ficha comunitaria describe un aventurero de primera clase; para fijar rangos, habilidades y estado exacto debe cotejarse la hoja de estado del volumen correspondiente."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Riveria Ljos Alf",
+            "detail": "Compañera central en la estructura de mando: ella aporta magia y experiencia, mientras Finn organiza las decisiones tácticas."
+          },
+          {
+            "name": "Gareth Landrock",
+            "detail": "Tercer pilar del liderazgo, responsable de la fuerza y estabilidad en el frente."
+          },
+          {
+            "name": "Tione Hiryute",
+            "detail": "Sus sentimientos hacia Finn contrastan con la forma controlada en que él suele tratar asuntos de Familia. La relación es parte de sus conflictos personales."
+          },
+          {
+            "name": "Loki Familia",
+            "detail": "Ve la Familia como un proyecto para dar poder e identidad a quienes el mundo subestima; las decisiones de Finn suelen tener efecto sobre todos sus miembros."
+          }
+        ],
+        "habits": "Busca información, observa la jerarquía y evita depender únicamente de la fuerza. Su apariencia juvenil puede llevar a otros a subestimarlo, ventaja que aprende a aprovechar.",
+        "narrativeRole": "Finn invierte la expectativa de que la fuerza física es la única vía para cambiar el destino de un grupo marginado. Su liderazgo se evalúa por las personas que puede mantener unidas y llevar de vuelta del Dungeon.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Finn_Deimne",
+          "https://danmachi.fandom.com/es/wiki/Familia_Loki"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-RIVERIA-LJOS-ALF",
@@ -794,7 +1524,53 @@
     "sourceId": "DMR-006-SRC-002",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Riveria_Ljos_Alf",
+        "sourceLabel": "DanMachi Wiki · Riveria Ljos Alf",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Alta elfa de linaje real, reconocida por su porte sereno y su condición de maga de primera clase. Su posición en Loki Familia combina autoridad, experiencia y protección de los miembros jóvenes.",
+        "history": "Riveria renuncia a parte de las expectativas de su linaje para vivir como aventurera y termina en una posición de mando en Loki Familia. Su vida se divide entre el deber hacia los elfos, la lealtad a Loki y la responsabilidad cotidiana de preparar a otros para sobrevivir en el Dungeon.",
+        "development": "Es exigente y poco indulgente con la indisciplina, pero también puede actuar como figura maternal. Su preocupación no se limita a la victoria: intenta que las personas bajo su cuidado regresen con vida y aprendan lo necesario para no repetir errores.",
+        "combatProfile": "Especialista mágica de altísimo nivel y vicecapitana. Su repertorio de hechizos y el uso de cantos concurrentes permiten una potencia y amplitud que contrastan con combatientes centrados en armas. Las habilidades concretas y el nivel deben asociarse a una hoja de estado fechada.",
+        "abilities": [
+          {
+            "name": "Magia de alto rango",
+            "detail": "El perfil comunitario destaca su repertorio y su papel como una de las mayores magas de Orario; cada conjuro concreto exige referencia de novela."
+          },
+          {
+            "name": "Liderazgo del Fairy Force",
+            "detail": "Aprovecha su habilidad para dirigir a un grupo de elfas magas y espadachinas mágicas con coordinación avanzada."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Finn Deimne",
+            "detail": "Compañero de mando con quien coordina las decisiones de Loki Familia."
+          },
+          {
+            "name": "Gareth Landrock",
+            "detail": "Tercer integrante del núcleo de liderazgo y aliado en la protección del grupo."
+          },
+          {
+            "name": "Ais Wallenstein",
+            "detail": "Figura cercana en su crianza y formación; Riveria combina disciplina con cuidado maternal."
+          },
+          {
+            "name": "Lefiya Viridis",
+            "detail": "La guía en el desarrollo de su magia y en el papel que tiene dentro del grupo de elfas."
+          }
+        ],
+        "habits": "Habla con calma y exige preparación, aunque su severidad suele provenir del miedo a perder subordinados. El orgullo élfico y su historia familiar influyen en decisiones importantes.",
+        "narrativeRole": "Riveria conecta la excelencia mágica con la responsabilidad de enseñar y liderar. También da voz a las tensiones entre la identidad de un pueblo y la libertad de elegir el propio destino.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Riveria_Ljos_Alf",
+          "https://danmachi.fandom.com/es/wiki/Familia_Loki"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-GARETH-LANDROCK",
@@ -822,7 +1598,45 @@
     "sourceId": "DMR-006-SRC-002",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Gareth_Landrock",
+        "sourceLabel": "DanMachi Wiki · Gareth Landrock",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Enano veterano de gran complexión y barba, figura de combate de primera línea dentro de Loki Familia. Aporta estabilidad y experiencia al núcleo de mando.",
+        "history": "Gareth es uno de los veteranos que sostienen la organización de Loki Familia desde sus etapas de expansión. Comparte con Finn y Riveria la responsabilidad de mantener a salvo a un grupo que pasa largos periodos en el Dungeon; su experiencia hace de él un referente para los aventureros más jóvenes.",
+        "development": "Su personalidad es franca y práctica; suele valorar la capacidad real y la responsabilidad por encima de la apariencia. Su rol permite mostrar el valor de alguien que no necesita buscar protagonismo para ser indispensable.",
+        "combatProfile": "Aventurero de primera clase conocido por su fuerza, durabilidad y habilidad con armas pesadas. Es un pilar del frente y puede mantener la atención del enemigo para que el equipo ejecute una maniobra. No se fijan estadísticas concretas fuera de un periodo documentado.",
+        "abilities": [
+          {
+            "name": "Fuerza y resistencia",
+            "detail": "Su perfil se centra en la robustez y experiencia de combate, no en magia compleja. Las proezas concretas deben citarse por volumen o escena."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Finn Deimne",
+            "detail": "Compañero del núcleo de mando. Gareth aporta experiencia y fuerza para sostener los planes de Finn."
+          },
+          {
+            "name": "Riveria Ljos Alf",
+            "detail": "Compañera de larga trayectoria; entre los tres reparten responsabilidades estratégicas, mágicas y de combate."
+          },
+          {
+            "name": "Loki Familia",
+            "detail": "La protección de los miembros es una constante de su rol, especialmente cuando la expedición incluye aventureros de menor experiencia."
+          }
+        ],
+        "habits": "Su estilo es directo, práctico y poco dado a dramatizar. Tiende a aconsejar desde la experiencia y a proteger mediante acciones concretas.",
+        "narrativeRole": "Gareth representa la experiencia acumulada y la fortaleza que permite sostener a un grupo cuando los planes fallan. Su relevancia se mide por la estabilidad que aporta a sus compañeros.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Gareth_Landrock",
+          "https://danmachi.fandom.com/es/wiki/Familia_Loki"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-BETE-LOGA",
@@ -850,7 +1664,45 @@
     "sourceId": "DMR-006-SRC-002",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa enlazada; no almacenada en WordWaifu.",
+    "dossiers": {
+      "CONT-MAIN-LN": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Bete_Loga",
+        "sourceLabel": "DanMachi Wiki · Bete Loga",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Hombre lobo de apariencia feroz, integrante ejecutivo de Loki Familia. Su equipo y su postura física refuerzan la impresión de alguien que confía en presionar al adversario de cerca.",
+        "history": "Bete llega a Loki Familia con una actitud hostil, marcada por pérdidas y experiencias que no expresa abiertamente. La historia revela gradualmente que su desprecio verbal por los débiles no significa ausencia de sensibilidad; en ocasiones funciona como un escudo frente a la culpa y el dolor.",
+        "development": "Su carácter agresivo y sarcástico hace que otros lo consideren cruel, pero su conducta en momentos críticos muestra otra lógica: detesta la debilidad porque teme la incapacidad de salvar a quienes le importan. Los arcos de Loki Familia exploran el coste de ese mecanismo defensivo y la posibilidad de que aprenda a cooperar sin convertir el dolor en desprecio.",
+        "combatProfile": "Combatiente rápido de corto alcance y gran agresividad, con estilo orientado a cerrar distancia y explotar sus capacidades físicas. La transformación ligada a la luna y los efectos del equipo deben especificarse solo en estados y escenas concretos.",
+        "abilities": [
+          {
+            "name": "Velocidad y ataque cercano",
+            "detail": "Su ventaja está en la velocidad, presión y experiencia de combate. No se añaden nombres de técnicas sin referencia precisa."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Loki Familia",
+            "detail": "Aunque discute y provoca, forma parte del grupo y acaba actuando por sus compañeros."
+          },
+          {
+            "name": "Ais Wallenstein",
+            "detail": "Contrasta con Ais en la forma de tratar a aventureros débiles; la comparación ayuda a mostrar su severidad."
+          },
+          {
+            "name": "Lena",
+            "detail": "Una relación personal con spoilers que cambia la interpretación de su comportamiento; se mantiene detrás de aviso de spoiler."
+          }
+        ],
+        "habits": "Habla de forma agresiva y puede provocar a compañeros, pero su conducta debe leerse junto con su historia, no solo por sus insultos. El conflicto entre vulnerabilidad y orgullo es central.",
+        "narrativeRole": "Bete plantea si el desprecio hacia la debilidad puede esconder miedo a volver a perder a alguien. Su crecimiento se cuenta con acciones y lealtades que a menudo contradicen su discurso.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Bete_Loga",
+          "https://danmachi.fandom.com/es/wiki/Familia_Loki"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-RAUL-NOORD",
@@ -1073,7 +1925,41 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "Retrato oficial enlazado desde DanMachi IV; no se copia al repositorio. Referencia visual, no específica de época."
+    "imageCredit": "Retrato oficial enlazado desde DanMachi IV; no se copia al repositorio. Referencia visual, no específica de época.",
+    "dossiers": {
+      "CONT-AR": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Astrea",
+        "sourceLabel": "DanMachi Wiki · Astrea",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "mild",
+        "appearance": "Diosa asociada a justicia y orden. En la etapa de Astrea Familia, su presencia se asocia más al principio moral que a la exhibición de poder o a la acumulación de aventureros.",
+        "history": "Astrea dirige una Familia cuya identidad se vincula a proteger a otros y actuar conforme a la justicia durante la Era Oscura de Orario. Las sinopsis editoriales sitúan a Ryu bajo su guía y describen al grupo en el contexto de una ciudad amenazada por Evilus. Los detalles personales deben completarse desde el texto de Astrea Record, no inferirse de su título divino.",
+        "development": "La idea de justicia que representan Astrea y su Familia se convierte en punto de referencia para Ryu. La historia demuestra que una convicción puede ser puesta a prueba por la pérdida; por eso esta ficha registra el ideal que ofrece sin suponer que ella conoce o aprueba todas las decisiones posteriores de Ryu.",
+        "combatProfile": "No es una ficha de aventurera; como diosa, la información relevante es su rol dentro de la Familia y las reglas divinas que limitan el uso de su poder en el Mundo Inferior. Los perfiles del anime y los relatos de Astrea Record son fuentes distintas.",
+        "abilities": [
+          {
+            "name": "Falna y orientación divina",
+            "detail": "Su papel principal consiste en otorgar bendición y dirigir moralmente a su Familia; los efectos específicos de su intervención requieren pasajes primarios."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Ryu Lion",
+            "detail": "Ryu se siente responsable ante Astrea y procura protegerla de las consecuencias de sus decisiones posteriores. La relación incluye devoción y culpa, pero la cronología es esencial."
+          },
+          {
+            "name": "Alise Lovelace",
+            "detail": "Alise actúa como capitana de la Familia; su liderazgo operativo expresa los principios generales asociados a Astrea."
+          }
+        ],
+        "habits": "Se la caracteriza como misericordiosa y amable en los perfiles de adaptación. Para la era histórica, los detalles de conversación y decisiones deben extraerse directamente de Astrea Record.",
+        "narrativeRole": "Astrea articula la justicia como una responsabilidad compartida, no como venganza individual. Su papel ayuda a establecer el contraste central de la trayectoria moral de Ryu.",
+        "sources": [
+          "https://ga.sbcr.jp/product/9784815610173",
+          "https://danmachi.fandom.com/es/wiki/Astrea"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-ALISE-LOVELACE",
@@ -1103,7 +1989,45 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "Retrato oficial enlazado desde DanMachi IV; no se copia al repositorio. Referencia visual, no específica de época."
+    "imageCredit": "Retrato oficial enlazado desde DanMachi IV; no se copia al repositorio. Referencia visual, no específica de época.",
+    "dossiers": {
+      "CONT-AR": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Alise_Lovell",
+        "sourceLabel": "DanMachi Wiki · Alise Lovell",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Aventurera de Astrea Familia reconocible por una presencia enérgica y un estilo directo. Su aspecto y su conducta en la etapa histórica deben distinguirse de cualquier perfil promocional posterior.",
+        "history": "Alise es la capitana de Astrea Familia en el periodo de Astrea Record. Las sinopsis editoriales la presentan como la líder que guía a Ryu mientras esta busca su propia comprensión de justicia. La wiki comunitaria añade contexto a la vida cotidiana y a sus relaciones, pero las escenas específicas requieren cotejo con los tres volúmenes.",
+        "development": "La capitanía de Alise se basa en impulsar a sus compañeras, no solo en dar órdenes. Su carácter luminoso sirve como una referencia moral para Ryu; por eso su pérdida tiene efectos que sobreviven al periodo histórico. Los rasgos de adaptación se usan como apoyo, no para rellenar cualquier momento de la novela.",
+        "combatProfile": "Como capitana de una Familia de aventureras activa durante la Era Oscura, combate y coordina a su grupo en condiciones extremas. Esta ficha no fija nivel, estadísticas o habilidades individuales sin una hoja de estado localizable.",
+        "abilities": [
+          {
+            "name": "Liderazgo de Familia",
+            "detail": "La evidencia editorial confirma su papel como capitana y guía de Ryu. Detalles de táctica, rango y magia requieren el volumen correspondiente."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Ryu Lion",
+            "detail": "Capitana y guía moral; Alise ayuda a Ryu a explorar una concepción propia de justicia y se convierte en una referencia duradera para ella."
+          },
+          {
+            "name": "Astrea",
+            "detail": "La Familia opera bajo la diosa de justicia y orden; la devoción de sus integrantes se conecta con ese principio."
+          },
+          {
+            "name": "Kaguya y Lyra",
+            "detail": "Compañeras de la Familia histórica. No se afirman lazos íntimos individuales sin escenas o localizadores específicos."
+          }
+        ],
+        "habits": "Se la recuerda como directa y de ánimo luminoso en materiales de adaptación, pero cada rasgo psicológico más fino debe anclarse en pasajes de Astrea Record.",
+        "narrativeRole": "Alise representa el ideal comunitario que sostiene a Ryu antes de la catástrofe. Su importancia narrativa deriva tanto de lo que hace como líder como de la huella moral que deja en quienes sobreviven.",
+        "sources": [
+          "https://ga.sbcr.jp/product/9784815610173",
+          "https://danmachi.fandom.com/es/wiki/Alise_Lovell"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-KAGUYA",
@@ -1133,7 +2057,41 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "Retrato oficial enlazado desde DanMachi IV; no se copia al repositorio. Referencia visual, no específica de época."
+    "imageCredit": "Retrato oficial enlazado desde DanMachi IV; no se copia al repositorio. Referencia visual, no específica de época.",
+    "dossiers": {
+      "CONT-AR": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Gojouno_Kaguya",
+        "sourceLabel": "DanMachi Wiki · Gojouno Kaguya",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Aventurera humana y vicecapitana histórica de Astrea Familia. Su ficha necesita conservar el intervalo histórico; no debe mezclarse con personajes de Orario posteriores por compartir nombre o romanización.",
+        "history": "La referencia comunitaria la incluye entre las integrantes de Astrea Familia y la identifica como vicecapitana. Su función la sitúa en el núcleo operativo junto a Alise, Ryu y las demás aventureras en los conflictos de la Era Oscura. La biografía individual queda sujeta a los episodios y hojas de estado localizables en Astrea Record.",
+        "development": "Los perfiles de adaptación la presentan como directa y competente, capaz de reconocer la capacidad de combate de Ryu aunque entre ambas haya fricciones. Esto permite señalar una dinámica de respeto difícil, pero no justificar afirmaciones sobre amistad íntima sin escenas concretas.",
+        "combatProfile": "Combatiente del entorno de Astrea Familia. No se asignan armas, magia, nivel o técnicas concretas hasta identificar un localizador primario por volumen.",
+        "abilities": [
+          {
+            "name": "Combate y coordinación",
+            "detail": "Su rol de vicecapitana sugiere responsabilidad de equipo, pero los detalles técnicos siguen abiertos; la ficha no convierte el rango organizativo en una habilidad probada."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Ryu Lion",
+            "detail": "Pertenecen a la misma Familia histórica y se registran fricciones y reconocimiento de capacidad en la adaptación. El tipo exacto de vínculo debe precisarse con el texto de Astrea Record."
+          },
+          {
+            "name": "Alise Lovelace",
+            "detail": "Ambas forman parte de la estructura de mando histórica; no se inventa el grado de confianza fuera de escenas respaldadas."
+          }
+        ],
+        "habits": "La fuente de adaptación la perfila como frontal, pero esta característica no se generaliza a todas las épocas ni reemplaza el análisis de su conducta en la novela.",
+        "narrativeRole": "Kaguya amplía el roster de la Familia Astrea más allá de Ryu y Alise. Su expediente debe pasar de pertenencia e indicios a hechos individualizados cuando se cotejen los volúmenes.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Gojouno_Kaguya",
+          "https://danmachi.com/danmachi4/character/"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-LYRA",
@@ -1162,7 +2120,41 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "Retrato oficial enlazado desde DanMachi IV; no se copia al repositorio. Referencia visual, no específica de época."
+    "imageCredit": "Retrato oficial enlazado desde DanMachi IV; no se copia al repositorio. Referencia visual, no específica de época.",
+    "dossiers": {
+      "CONT-AR": {
+        "sourceUrl": "https://danmachi.fandom.com/es/wiki/Lyra",
+        "sourceLabel": "DanMachi Wiki · Lyra",
+        "sourceType": "secondary_compendium",
+        "spoilerLevel": "major",
+        "appearance": "Pallum y antigua aventurera de Astrea Familia. Su talla y su formación hacen que su papel se lea desde el ingenio y el apoyo táctico más que desde la fuerza bruta.",
+        "history": "Lyra aparece en el roster de Astrea Familia y los perfiles comunitarios la describen como rápida para leer situaciones y preparar planes. Sigue siendo necesario comprobar los episodios particulares de Astrea Record antes de convertir ese resumen en una cronología individual completa.",
+        "development": "Su valor narrativo se presenta en relación con el equipo: la capacidad de detectar oportunidades, prever problemas y apoyar al grupo ayuda a que los combates no dependan solo de fuerza. Los rasgos personales que no aparecen en la fuente deben permanecer abiertos.",
+        "combatProfile": "Su utilidad se asocia al análisis táctico y a preparar planes de apoyo. No se asignan magia, arma, nivel o habilidad con nombre propio sin una hoja de estado verificable.",
+        "abilities": [
+          {
+            "name": "Lectura de situaciones",
+            "detail": "La adaptación la describe como perspicaz y capaz de planear; es un resumen funcional y no un nombre de habilidad dentro del sistema de Falna."
+          }
+        ],
+        "relationshipDetails": [
+          {
+            "name": "Ryu Lion",
+            "detail": "Ambas pertenecen al contexto histórico de Astrea Familia. La confianza y las escenas compartidas deben corroborarse con el texto primario."
+          },
+          {
+            "name": "Alise Lovelace",
+            "detail": "Forma parte del grupo liderado por Alise; no se infiere una relación privada más específica únicamente por su pertenencia."
+          }
+        ],
+        "habits": "La ficha secundaria destaca rapidez mental y planificación. El resto de sus gustos, temores y forma de hablar queda pendiente de investigación.",
+        "narrativeRole": "Lyra permite modelar funciones de apoyo y estrategia de una Familia histórica; su siguiente paso documental es una ficha con escenas y afirmaciones localizadas.",
+        "sources": [
+          "https://danmachi.fandom.com/es/wiki/Lyra",
+          "https://danmachi.com/danmachi4/character/"
+        ]
+      }
+    }
   },
   {
     "id": "CHAR-DAPHNE-LAUROS",
@@ -1402,9 +2394,9 @@
     "voice": "Maki Kawase",
     "role": "Integrante histórica de Astrea Familia",
     "summary": "La página oficial registra a Neoin como miembro de Astrea Familia y confirma que es humana, pero no ofrece una biografía narrativa extensa en ese perfil.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+    "personality": "",
+    "abilities": "",
+    "relationships": "",
     "source": "S4",
     "image": 20,
     "locator": "Perfil ノイン・ユニック; especie y afiliación",
@@ -1414,7 +2406,8 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu.",
+    "detailStatus": "La ficha oficial de adaptación consultada solo permite identificar al personaje y su pertenencia al grupo. No se conservan descripciones genéricas repetidas como si fueran datos individuales; falta investigación biográfica en fuentes secundarias y en los volúmenes."
   },
   {
     "id": "CHAR-NEESE-RANQUETTE",
@@ -1429,9 +2422,9 @@
     "voice": "Asuna Tomari",
     "role": "Integrante histórica de Astrea Familia",
     "summary": "La ficha oficial la incluye entre los miembros de Astrea Familia y especifica su especie, sin detallar su historia individual.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+    "personality": "",
+    "abilities": "",
+    "relationships": "",
     "source": "S4",
     "image": 21,
     "locator": "Perfil ネーゼ・ランケット; especie y afiliación",
@@ -1441,7 +2434,8 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu.",
+    "detailStatus": "La ficha oficial de adaptación consultada solo permite identificar al personaje y su pertenencia al grupo. No se conservan descripciones genéricas repetidas como si fueran datos individuales; falta investigación biográfica en fuentes secundarias y en los volúmenes."
   },
   {
     "id": "CHAR-ASTA-NOX",
@@ -1456,9 +2450,9 @@
     "voice": "Hikaru Tono",
     "role": "Integrante histórica de Astrea Familia",
     "summary": "La página oficial la identifica como integrante histórica de Astrea Familia y especifica su especie, pero no presenta una biografía detallada.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+    "personality": "",
+    "abilities": "",
+    "relationships": "",
     "source": "S4",
     "image": 22,
     "locator": "Perfil アスタ・ノックス; especie y afiliación",
@@ -1468,7 +2462,8 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu.",
+    "detailStatus": "La ficha oficial de adaptación consultada solo permite identificar al personaje y su pertenencia al grupo. No se conservan descripciones genéricas repetidas como si fueran datos individuales; falta investigación biográfica en fuentes secundarias y en los volúmenes."
   },
   {
     "id": "CHAR-LIANA-LEETS",
@@ -1483,9 +2478,9 @@
     "voice": "Saki Kousaka",
     "role": "Integrante histórica de Astrea Familia",
     "summary": "La ficha oficial la registra en Astrea Familia y la identifica como humana; no ofrece más detalle biográfico en ese perfil.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+    "personality": "",
+    "abilities": "",
+    "relationships": "",
     "source": "S4",
     "image": 23,
     "locator": "Perfil リャーナ・リーツ; especie y afiliación",
@@ -1495,7 +2490,8 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu.",
+    "detailStatus": "La ficha oficial de adaptación consultada solo permite identificar al personaje y su pertenencia al grupo. No se conservan descripciones genéricas repetidas como si fueran datos individuales; falta investigación biográfica en fuentes secundarias y en los volúmenes."
   },
   {
     "id": "CHAR-SELTTY-THROA",
@@ -1510,9 +2506,9 @@
     "voice": "Rina Kawaguchi",
     "role": "Integrante histórica de Astrea Familia",
     "summary": "La página oficial la incluye entre los miembros de Astrea Familia e indica que es elfa; su perfil público consultado no amplía su biografía.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+    "personality": "",
+    "abilities": "",
+    "relationships": "",
     "source": "S4",
     "image": 24,
     "locator": "Perfil セルティ・スロア; especie y afiliación",
@@ -1522,7 +2518,8 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu.",
+    "detailStatus": "La ficha oficial de adaptación consultada solo permite identificar al personaje y su pertenencia al grupo. No se conservan descripciones genéricas repetidas como si fueran datos individuales; falta investigación biográfica en fuentes secundarias y en los volúmenes."
   },
   {
     "id": "CHAR-ISKA-BRA",
@@ -1537,9 +2534,9 @@
     "voice": "Yuuki Hirose",
     "role": "Integrante histórica de Astrea Familia",
     "summary": "La ficha oficial la registra en Astrea Familia e identifica su especie como Amazoness, sin describir una trayectoria individual extensa.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+    "personality": "",
+    "abilities": "",
+    "relationships": "",
     "source": "S4",
     "image": 25,
     "locator": "Perfil イスカ・ブラ; especie y afiliación",
@@ -1549,7 +2546,8 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu.",
+    "detailStatus": "La ficha oficial de adaptación consultada solo permite identificar al personaje y su pertenencia al grupo. No se conservan descripciones genéricas repetidas como si fueran datos individuales; falta investigación biográfica en fuentes secundarias y en los volúmenes."
   },
   {
     "id": "CHAR-MARIYU-LEAGE",
@@ -1564,9 +2562,9 @@
     "voice": "Akira Sekine",
     "role": "Integrante histórica de Astrea Familia",
     "summary": "La página oficial la incluye entre los miembros de Astrea Familia e indica que es humana, pero el perfil no desarrolla otros aspectos biográficos.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+    "personality": "",
+    "abilities": "",
+    "relationships": "",
     "source": "S4",
     "image": 26,
     "locator": "Perfil マリュー・レアージュ; especie y afiliación",
@@ -1576,7 +2574,8 @@
     "sourceId": "DMR-006-SRC-003",
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
+    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu.",
+    "detailStatus": "La ficha oficial de adaptación consultada solo permite identificar al personaje y su pertenencia al grupo. No se conservan descripciones genéricas repetidas como si fueran datos individuales; falta investigación biográfica en fuentes secundarias y en los volúmenes."
   },
   {
     "id": "CHAR-LULUNE-LOUIE",
