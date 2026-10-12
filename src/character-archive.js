@@ -49,6 +49,10 @@ Object.assign(META,{
 "CHAR-ULANDA":{overview:"Ulanda · integrante de la nueva generación de Astrea Familia según una referencia secundaria.",states:{"CONT-MAIN-LN":{summary:"La referencia comunitaria la incluye en el roster posterior de Astrea Familia. No se completa su biografía a partir de una simple mención en el roster.",period:"Etapa posterior a la salida de Astrea de Orario · fecha exacta pendiente.",affiliation:"Nueva Astrea Familia · Solingen (fuente secundaria)"}}}
 });
 
+META["CHAR-RYUU-LION"].states["CONT-MAIN-LN"]={summary:"La sinopsis editorial de Familia Chronicle: Episode Ryuu 2 presenta a Ryu partiendo sola hacia una ciudad de forja para visitar a Astrea y buscar fuerza; el detalle del encuentro requiere el volumen.",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial; fecha interna exacta no fijada aquí.",affiliation:"Aventurera viajando para ver a Astrea"};
+META["CHAR-ASTREA"].states["CONT-ANIME"]={summary:"El perfil oficial posterior de DanMachi V sitúa a Astrea fuera de Orario con nuevos seguidores. Este estado no reemplaza su rol histórico en Astrea Record.",period:"Estado posterior descrito en DanMachi V · fecha interna no fijada.",affiliation:"Diosa · nueva Familia fuera de Orario"};
+META["CHAR-ASTREA"].states["CONT-MAIN-LN"]={summary:"Una sinopsis editorial confirma que Ryu emprende un viaje para ver a Astrea; la ubicación concreta y la composición de la nueva Familia se conservan como pistas secundarias hasta cotejo primario.",period:"Etapa posterior · fuentes editoriales y secundarias separadas.",affiliation:"Astrea · nueva Familia según referencia secundaria"};
+
 const REL={
 "CHAR-RYUU-LION":{"CONT-AR":[
 {targetId:"CHAR-ALISE-LOVELACE",label:"Capitana y guía documentada",type:"Liderazgo / compañerismo",description:"La sinopsis editorial identifica a Alise como capitana y guía de Ryu. No establece toda la historia privada del vínculo.",refs:["DMR-001-CLM-005","DMR-002-CLM-015"]},
@@ -264,6 +268,32 @@ references:[
 {label:"Familia Astrea · wiki comunitaria en español (fuente secundaria)",url:"https://danmachi.fandom.com/es/wiki/Familia_Astrea",kind:"community"}
 ]
 };
+
+
+for(const [id,name,scope,summary,url] of [
+["CHAR-ISKA-BRA","Iska Bra","CONT-AR","El roster secundario la vincula con la primera Familia Astrea; la adaptación oficial también ofrece un perfil. Pertenencia no significa que WordWaifu ya conozca cada relación personal.","https://danmachi.com/danmachi4/character/"],
+["CHAR-MARYUU-REAGE","Maryuu Reage","CONT-AR","La lista comunitaria la enumera entre las integrantes históricas. Falta un perfil primario cotejado, así que no se inventan apariencia o carácter.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"],
+["CHAR-NOIN-UNIC","Noin Unic","CONT-AR","El portal oficial de DanMachi IV ofrece un perfil en el contexto de Astrea Familia; la ficha individual extensa queda pendiente de escenas y localizadores.","https://danmachi.com/danmachi4/character/"],
+["CHAR-NEZE-RANKETT","Neze Rankett","CONT-AR","El portal oficial de DanMachi IV ofrece un perfil en el contexto de Astrea Familia. No se amplía su psicología o historia sin evidencia individual.","https://danmachi.com/danmachi4/character/"],
+["CHAR-ASTA-KNOX","Asta Knox","CONT-AR","El portal oficial de DanMachi IV ofrece un perfil en el contexto de Astrea Familia. Los detalles personales no deben rellenarse por asociación con el grupo.","https://danmachi.com/danmachi4/character/"],
+["CHAR-RYANA-LIETZ","Ryana Lietz","CONT-AR","El portal oficial de DanMachi IV ofrece un perfil en el contexto de Astrea Familia. La ficha actual sirve como nodo consultable y conserva pendientes de investigación individual.","https://danmachi.com/danmachi4/character/"],
+["CHAR-CELTY-SROWA","Celty Srowa","CONT-AR","El portal oficial de DanMachi IV ofrece un perfil en el contexto de Astrea Familia. Se necesitan pasajes y localizadores para ampliar su historia y relaciones.","https://danmachi.com/danmachi4/character/"],
+["CHAR-CECIL-BLACKLIZA","Cecil Blackliza","CONT-MAIN-LN","La referencia comunitaria la identifica como capitana de la nueva Familia Astrea. Rango, historia y acciones quedan provisionales hasta cotejar el pasaje original.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"],
+["CHAR-ISELINA","Iselina","CONT-MAIN-LN","Figura en el roster comunitario de la nueva Familia. Aún no hay biografía individual primaria incorporada a WordWaifu.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"],
+["CHAR-SHAU","Shau","CONT-MAIN-LN","Figura en el roster comunitario de la nueva Familia. Aún no hay biografía individual primaria incorporada a WordWaifu.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"],
+["CHAR-ULANDA","Ulanda","CONT-MAIN-LN","Figura en el roster comunitario de la nueva Familia. Aún no hay biografía individual primaria incorporada a WordWaifu.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"]
+]){
+  if(id==="CHAR-MARYUU-REAGE"||scope==="CONT-MAIN-LN"){
+    EXTENDED[id]={[scope]:{title:name+" · ficha provisional",summary,sections:[{title:"Información disponible",text:summary},{title:"Qué falta",text:"Cotejar identidad, romanización, historia, apariencia, habilidades y relaciones con una fuente primaria; no convertir menciones de roster en biografías completas."}],references:[{label:"Referencia de roster (fuente secundaria)",url,kind:"community"}]}};
+  }else{
+    EXTENDED[id]={"CONT-AR":{title:name+" · red histórica de Astrea Familia",summary,sections:[{title:"Información disponible",text:summary},{title:"Qué falta",text:"Localizar capítulos de Astrea Record para describir apariencia, decisiones y vínculos personales. La arista hacia Ryu demuestra afiliación histórica, no intimidad automáticamente."}],references:[{label:"Perfil oficial de la adaptación DanMachi IV",url:"https://danmachi.com/danmachi4/character/",kind:"official"},{label:"Familia Astrea · fuente secundaria",url:"https://danmachi.fandom.com/es/wiki/Familia_Astrea",kind:"community"}]},
+      "CONT-ANIME":{title:name+" · perfil de adaptación",summary,sections:[{title:"Alcance de la fuente",text:"El portal oficial ofrece un perfil de esta persona dentro del material de adaptación. No equivale a una biografía completa ni acredita por sí solo todas las interacciones en la novela."},{title:"Qué falta",text:"Relacionar las afirmaciones con escenas y pasajes concretos; completar rasgos personales solo cuando estén respaldados."}],references:[{label:"Perfil oficial de personajes DanMachi IV",url,kind:"official"}]}};
+  }
+}
+EXTENDED["CHAR-RYUU-LION"]["CONT-AR"].sections.push(
+{title:"Alise, Kaguya y Lyra: vínculos distintos",text:"El material incorporado no reduce a las compañeras a una etiqueta de amistad uniforme. Alise aparece como capitana y guía; Kaguya como alguien con quien Ryu choca y a quien respeta; Lyra como apoyo estratégico. Los detalles exactos de cada interacción requieren localizar las escenas originales."},
+{title:"Rostro histórico y evidencia",text:"Las imágenes oficiales de personajes se tratan como retratos de referencia, no como ilustraciones de una escena concreta. La descripción visual de cada persona debe apoyarse en el perfil correspondiente y no se improvisa desde una miniatura."}
+);
 
 function extendedInfo(id,continuity,index){
 const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;
