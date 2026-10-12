@@ -295,6 +295,39 @@
       })
       .replace(/\s+/g, " ").trim();
   }
+  function extractExternalLead(html) {
+    let source = String(html || "");
+    source = source
+      .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style\b[\s\S]*?<\/style>/gi, " ")
+      .replace(/<aside\b[\s\S]*?<\/aside>/gi, " ")
+      .replace(/<figure\b[\s\S]*?<\/figure>/gi, " ")
+      .replace(/<table\b[\s\S]*?<\/table>/gi, " ")
+      .replace(/<sup\b[\s\S]*?<\/sup>/gi, " ");
+    const paragraphs = [...source.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)]
+      .map(match => cleanExternalText(match[1]))
+      .filter(text => text.length > 45)
+      .filter(text => !/^(jump to|navigation|contents|references|external links|categories)/i.test(text));
+    let result = "";
+    for (const paragraph of paragraphs.slice(0, 5)) {
+      if (result.length + paragraph.length > 1300) {
+        const remainder = 1300 - result.length;
+        if (remainder > 100) result += (result ? "\\n\\n" : "") + paragraph.slice(0, remainder).trim();
+        break;
+      }
+      result += (result ? "\\n\\n" : "") + paragraph;
+    }
+    return result.trim();
+  }
+  function allowedExternalImageUrl(value, providerId) {
+    try {
+      const url = new URL(String(value || ""));
+      if (url.protocol !== "https:") return "";
+      if (providerId === "danmachi-wiki" && /(?:^|\\.)wikia\\.nocookie\\.net$/i.test(url.hostname)) return url.href;
+      if (providerId === "wikipedia-en" && (url.hostname === "upload.wikimedia.org" || url.hostname === "en.wikipedia.org")) return url.href;
+    } catch {}
+    return "";
+  }
   async function searchExternalSources(query, options) {
     const searchText = String(query ?? "").trim().slice(0, 160);
     const settings = options || {};
@@ -318,15 +351,64 @@
         if(!response || !response.ok) throw new Error("HTTP "+(response?response.status:"sin respuesta"));
         const payload = await response.json();
         const hits = payload && payload.query && Array.isArray(payload.query.search) ? payload.query.search : [];
+        const results = hits.slice(0,5).map(hit=>({
+          providerId:provider.id, providerLabel:provider.label, authority:provider.authority,
+          title:cleanExternalText(hit.title)||"Resultado sin título",
+          snippet:cleanExternalText(hit.snippet)||"La fuente no proporcionó un resumen para este resultado.",
+          extract:"", thumbnailUrl:"", imageCredit:"",
+          url:provider.articleUrl(hit.title), updatedAt:typeof hit.timestamp==="string"?hit.timestamp:"",
+          pageId:Number.isSafeInteger(Number(hit.pageid))&&Number(hit.pageid)>0?Number(hit.pageid):null
+        }));
+        const pageIds = results.map(hit=>hit.pageId).filter(Boolean);
+        if(pageIds.length){
+          try {
+            const imageRequestUrl = new URL(provider.endpoint);
+            imageRequestUrl.searchParams.set("action","query");
+            imageRequestUrl.searchParams.set("prop","pageimages|info");
+            imageRequestUrl.searchParams.set("pageids",pageIds.join("|"));
+            imageRequestUrl.searchParams.set("piprop","thumbnail");
+            imageRequestUrl.searchParams.set("pithumbsize","320");
+            imageRequestUrl.searchParams.set("inprop","url");
+            imageRequestUrl.searchParams.set("format","json");
+            imageRequestUrl.searchParams.set("origin","*");
+            const imageResponse = await fetcher(imageRequestUrl.href,request);
+            if(imageResponse&&imageResponse.ok){
+              const imagePayload=await imageResponse.json();
+              const pages=imagePayload&&imagePayload.query&&imagePayload.query.pages;
+              const pageList=Array.isArray(pages)?pages:Object.values(pages||{});
+              const byId=new Map(pageList.map(page=>[Number(page.pageid),page]));
+              results.forEach(hit=>{
+                const page=byId.get(hit.pageId);
+                if(!page)return;
+                hit.url=typeof page.canonicalurl==="string"&&page.canonicalurl.startsWith("https://")
+                  ?page.canonicalurl:typeof page.fullurl==="string"&&page.fullurl.startsWith("https://")?page.fullurl:hit.url;
+                hit.thumbnailUrl=allowedExternalImageUrl(page.thumbnail&&page.thumbnail.source,provider.id);
+                if(hit.thumbnailUrl)hit.imageCredit="Miniatura alojada por "+provider.label+"; derechos de imagen de sus titulares. No se guarda en WordWaifu.";
+              });
+            }
+          } catch { /* A failed thumbnail lookup must not erase the article search results. */ }
+          const detailHits=results.filter(hit=>hit.pageId).slice(0,3);
+          await Promise.all(detailHits.map(async hit=>{
+            try {
+              const detailUrl=new URL(provider.endpoint);
+              detailUrl.searchParams.set("action","parse");
+              detailUrl.searchParams.set("page",hit.title);
+              detailUrl.searchParams.set("section","0");
+              detailUrl.searchParams.set("prop","text");
+              detailUrl.searchParams.set("format","json");
+              detailUrl.searchParams.set("origin","*");
+              const detailResponse=await fetcher(detailUrl.href,request);
+              if(!detailResponse||!detailResponse.ok)return;
+              const detailPayload=await detailResponse.json();
+              const html=detailPayload&&detailPayload.parse&&detailPayload.parse.text&&detailPayload.parse.text["*"];
+              const extract=extractExternalLead(html);
+              if(extract)hit.extract=extract.slice(0,1300);
+            } catch { /* Keep the safe search snippet if page lead extraction is unavailable. */ }
+          }));
+        }
         return {
           providerId:provider.id, providerLabel:provider.label, authority:provider.authority,
-          note:provider.note, searchUrl:provider.searchUrl, error:"",
-          results:hits.slice(0,5).map(hit=>({
-            providerId:provider.id, providerLabel:provider.label, authority:provider.authority,
-            title:cleanExternalText(hit.title)||"Resultado sin título",
-            snippet:cleanExternalText(hit.snippet)||"La fuente no proporcionó un resumen para este resultado.",
-            url:provider.articleUrl(hit.title), updatedAt:typeof hit.timestamp==="string"?hit.timestamp:""
-          }))
+          note:provider.note, searchUrl:provider.searchUrl, error:"", results
         };
       } catch(error) {
         return {
@@ -344,5 +426,5 @@
     };
   }
 
-  return { load, buildIndex, search, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText };
+  return { load, buildIndex, search, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText, extractExternalLead, allowedExternalImageUrl };
 });
