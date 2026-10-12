@@ -25,10 +25,10 @@ El puerto no es una publicación pública ni una URL permanente. Requiere tu ses
 
 ## Alcance de archivos servido
 
-El servidor tiene una lista permitida de rutas. Publica únicamente **index.html**, los módulos y estilos usados por la app, las tres ilustraciones SVG originales no oficiales de **assets/character-portraits/**, **lore/danmachi/catalog.json** y los documentos **BATCH-DM-003** y **BATCH-DM-004**. Las demás rutas siguen bloqueadas por defecto. Rutas como **.git/config**, **docs/** y los perfiles Markdown individuales responden 404. No cambia el corpus ni sus afirmaciones.
+El servidor tiene una lista permitida de rutas. Publica únicamente **index.html**, los módulos y estilos usados por la app, las doce ilustraciones SVG originales no oficiales de **assets/character-portraits/**, **lore/danmachi/catalog.json** y los documentos **BATCH-DM-003**, **BATCH-DM-004** y **BATCH-DM-005**. Las demás rutas siguen bloqueadas por defecto. Rutas como **.git/config**, **docs/** y los perfiles Markdown individuales responden 404. No cambia el corpus ni sus afirmaciones.
 
 ## Comprobaciones
 
 El workflow **DanMachi Lore and Retrieval Integrity** valida la búsqueda local y el navegador Chromium. Entre sus pruebas existentes confirma que Ryu se recupera separada en **CONT-AR** y **CONT-ANIME**, y que una consulta sobre gustos de Ais sin evidencia produce una abstención explícita. El nuevo test del servidor comprueba que las rutas requeridas responden y que archivos fuera de la lista permitida no se exponen.
 
-La enciclopedia de personajes carga además **src/character-archive.js**. Para Ryu Lion, Alise Lovelace y Astrea incluye ilustraciones vectoriales conceptuales creadas para WordWaifu, marcadas como no oficiales. Otros personajes sin recurso propio conservan un marcador CSS hasta que se incorpore arte permitido y verificado.
+La enciclopedia de personajes carga además **src/character-archive.js**. Para Ryu Lion, Alise (registrada históricamente como Lovelace), Astrea, Bell Cranel, Hestia, Ais Wallenstein, Eina Tulle, Finn Deimne, Freya, Ottar, Gojouno Kaguya y Lyra incluye retratos vectoriales conceptuales creados para WordWaifu y marcados como no oficiales. Las imágenes de las wikis no se copian al repositorio; la enciclopedia ofrece enlaces a galerías comunitarias mientras no se verifiquen licencias de terceros.
