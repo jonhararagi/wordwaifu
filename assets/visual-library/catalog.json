@@ -57,6 +57,21 @@
       "sourceRepository": "SpriteCook/spritecook-free-game-assets",
       "license": "CC0 1.0 Universal",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "ref-vellum-antique-map",
+      "title": "Antique atlas chart · Vellum #42",
+      "category": "map",
+      "categoryLabel": "Mapa",
+      "style": "Antique / hand-drafted",
+      "description": "Mapa generativo detallado con costa, asentamientos, ríos, relieve y cartela. Ejemplo externo de estilo; no representa el canon ni la geografía de Asteria.",
+      "alt": "Carta cartográfica antigua de un mundo ficticio generada por Vellum, con costa, relieve, ríos y asentamientos; recurso CC0 de referencia.",
+      "file": "assets/visual-library/maps/vellum-chart-42-antique.svg",
+      "sourceUrl": "https://github.com/ahl-gram/Vellum/blob/main/design/sub7-chart-rooms/prospect-42-antique.svg",
+      "sourceRepository": "ahl-gram/Vellum",
+      "license": "CC0 1.0 Universal (mapa generado)",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "El código del generador Vellum tiene licencia MIT; su README declara CC0 para los mapas generados. Este archivo es un gráfico generado, no código de Vellum."
     }
   ]
 }

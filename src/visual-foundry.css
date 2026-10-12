@@ -79,3 +79,5 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .atlas-compass .compass-north{fill:#edc980;stroke:#edc980}
 .atlas-scale path{fill:none;stroke:#e5cc91;stroke-width:1.2}
 .atlas-scale text{fill:#e5cc91;font-family:"JetBrains Mono",monospace;font-size:8px;letter-spacing:.6px}
+
+.visual-asset-card[data-category=map] .visual-asset-media img{object-fit:contain;background:#241f19;padding:8px}
