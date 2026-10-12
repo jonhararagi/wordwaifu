@@ -17,7 +17,7 @@ checks = (
     (f"http://127.0.0.1:{port}/assets/lore-moments/ryu-justice.svg", b"Ryu"),
     (f"http://127.0.0.1:{port}/assets/character-portraits/kaguya.svg", b"Gojouno Kaguya"),
     (f"http://127.0.0.1:{port}/lore/danmachi/research/inbox/BATCH-DM-005-astrea-familia-network.md", b"DMR-003-CLM-001"),
-    (f"http://127.0.0.1:{port}/lore/danmachi/characters/ryuu-lion.md", b"Temporal state A"),
+    (f"http://127.0.0.1:{port}/lore/danmachi/characters/ryuu-lion.md", b"Estado temporal A"),
 )
 try:
     for url, marker in checks:
