@@ -135,6 +135,21 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyRevealTiming']").inputValue(), "Final del segundo arco, tras descubrirse el archivo original.");
     assert.equal(await page.locator("#story-meta-form [name='storyRevealConsequences']").inputValue(), "Las reglas del juego cambian y los rivales deben decidir si cooperan.");
     assert.ok((await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue()).includes("III ya no puede desactivarse"), "power evolution and irreversible stage must persist");
+    // Power idea generator appends varied proposals without overwriting the user's hand-written Geass.
+    await page.locator("#story-power-generate-button").click();
+    await page.waitForFunction(() => document.querySelector("#story-power-generator-status")?.textContent.includes("Idea añadida:"), { timeout: 10000 });
+    const firstGeneratedCatalog = await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue();
+    await page.locator("#story-power-generate-button").click();
+    await page.waitForFunction((previous) => {
+      const current = document.querySelector("#story-meta-form [name='storyPowerCatalog']")?.value || "";
+      return current.length > previous.length && (document.querySelector("#story-power-generator-status")?.textContent || "").includes("Idea añadida:");
+    }, firstGeneratedCatalog, { timeout: 10000 });
+    const generatedCatalog = await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue();
+    const generatedNames = Array.from(generatedCatalog.matchAll(/Nombre: ([^\\n]+)/g), match => match[1]).filter(name => name !== "Geas de mandato");
+    assert.ok(generatedCatalog.includes("Geas de mandato"), "generator must preserve the user's existing power");
+    assert.ok(generatedNames.length >= 2 && generatedNames[0] !== generatedNames[1], "successive generation should provide different power ideas");
+    assert.ok(generatedCatalog.includes("Evolución:") && generatedCatalog.includes("Consecuencias:"), "generated ideas must include progression and narrative consequences");
+    process.stdout.write("PASS power generator: appends varied powers, preserves manual entries, and includes evolution and consequences.\\n");
     await page.locator("#story-add-chapter-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1, { timeout: 5000 });
     assert.equal(await page.locator(".story-chapter-form").count(), 1, "The editor must add a chapter to a story.");
