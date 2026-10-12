@@ -916,6 +916,9 @@
     $("#breadcrumb-current").textContent = titles[activeView][0];
     $("#view-title").textContent = titles[activeView][0];
     $("#view-subtitle").textContent = titles[activeView][1];
+    $("#global-search").placeholder = activeView === "lore"
+      ? "Buscar en la enciclopedia de personajes…"
+      : "Buscar personajes, lugares o DanMachi…";
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
@@ -1826,10 +1829,28 @@
   function archiveBadge(text, kind) { return archiveElement("span", "archive-badge" + (kind ? " archive-badge--" + kind : ""), text); }
   function archivePortrait(id, name, large) {
     const node = archiveElement("div", "archive-portrait" + (large ? " archive-portrait--large" : "") + " archive-portrait--" + String(id||"").toLowerCase().replace(/[^a-z0-9-]/g,""));
+    const portraitSources = {
+      "CHAR-RYUU-LION": "./assets/character-portraits/ryu-lion.svg",
+      "CHAR-ALISE-LOVELACE": "./assets/character-portraits/alise-lovelace.svg",
+      "CHAR-ASTREA": "./assets/character-portraits/astrea.svg"
+    };
+    const portraitSource = portraitSources[id];
     node.setAttribute("role","img");
-    node.setAttribute("aria-label","Marcador visual decorativo de " + name + "; no es retrato ni ilustración oficial.");
-    node.appendChild(archiveElement("span","",id==="CHAR-ASTREA"?"✧":(String(name||"?").trim().charAt(0).toUpperCase()||"?")));
-    if(large)node.appendChild(archiveElement("span","archive-portrait-caption","RETRATO PENDIENTE"));
+    node.setAttribute("aria-label", portraitSource
+      ? "Ilustración vectorial original de " + name + ", no oficial."
+      : "Marcador visual decorativo de " + name + "; no es retrato oficial.");
+    if (portraitSource) {
+      const image = document.createElement("img");
+      image.className = "archive-portrait-art";
+      image.src = portraitSource;
+      image.alt = "";
+      image.decoding = "async";
+      image.loading = large ? "eager" : "lazy";
+      node.appendChild(image);
+    } else {
+      node.appendChild(archiveElement("span","",id==="CHAR-ASTREA"?"✧":(String(name||"?").trim().charAt(0).toUpperCase()||"?")));
+    }
+    if(large)node.appendChild(archiveElement("span","archive-portrait-caption",portraitSource?"ILUSTRACIÓN VECTORIAL · NO OFICIAL":"RETRATO PENDIENTE"));
     return node;
   }
   function archiveEvidence(claim) {
@@ -1980,7 +2001,7 @@
     $("#character-archive-profile").classList.add("hidden");$("#character-archive-directory").classList.remove("hidden");renderCharacterDirectory();$("#character-archive-query").focus();
   }
   function backInArchiveNavigation(){const old=archiveNavigationStack.pop();if(!old){returnToArchiveDirectory();return;}activeArchiveCharacterId=old.id;activeArchiveContinuity=old.continuity;activeArchiveTab=old.tab;renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});}
-  $("#character-archive-query").addEventListener("input",()=>{if(loreArchiveIndex)renderCharacterDirectory();else void prepareLoreView().catch(e=>$("#archive-directory-status").textContent="No se pudo preparar el índice: "+e.message);});
+  $("#character-archive-query").addEventListener("input",()=>{$("#global-search").value=$("#character-archive-query").value;if(loreArchiveIndex)renderCharacterDirectory();else void prepareLoreView().catch(e=>$("#archive-directory-status").textContent="No se pudo preparar el índice: "+e.message);});
   $("#archive-continuity").addEventListener("change",()=>{if(loreArchiveIndex)renderCharacterDirectory();});
   $("#archive-spoiler").addEventListener("change",()=>{if(!loreArchiveIndex)return;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
   $("#archive-profile-spoiler").addEventListener("change",event=>{if(!loreArchiveIndex)return;$("#archive-spoiler").value=event.target.value;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
@@ -2136,16 +2157,98 @@
   $("#zoom-in").addEventListener("click", () => { mapScale = Math.min(1.65, mapScale + .12); renderMap(); });
   $("#zoom-out").addEventListener("click", () => { mapScale = Math.max(.75, mapScale - .12); renderMap(); });
   $("#zoom-reset").addEventListener("click", () => { mapScale = 1; renderMap(); });
+  function projectHasGlobalSearchMatch(rawQuery) {
+    const needle = String(rawQuery || "").trim().toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    if (!needle) return false;
+    const fields = [
+      ...state.characters.flatMap((item) => [item.name, item.role, item.species, item.description, item.motivation]),
+      ...state.locations.flatMap((item) => [item.name, item.type, item.description, item.government, item.climate]),
+      ...state.events.flatMap((item) => [item.name, item.title, item.description, item.summary]),
+      ...state.organizations.flatMap((item) => [item.name, item.type, item.description]),
+      ...state.relationships.flatMap((item) => [item.name, item.type, item.description]),
+      ...state.stories.flatMap((item) => [item.name, item.title, item.description, item.premise])
+    ];
+    return fields.some((value) => String(value || "").toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(needle));
+  }
+
+  function resetArchiveForGlobalSearch(rawQuery) {
+    const queryField = $("#character-archive-query");
+    if (!queryField) return;
+    queryField.value = rawQuery;
+    if (activeArchiveCharacterId) {
+      activeArchiveCharacterId = null;
+      activeArchiveContinuity = null;
+      activeArchiveProfile = null;
+      archiveNavigationStack.length = 0;
+    }
+    $("#character-archive-profile").classList.add("hidden");
+    $("#character-archive-directory").classList.remove("hidden");
+    if (loreArchiveIndex) renderCharacterDirectory();
+    else void prepareLoreView().then(() => {
+      if (activeView === "lore" && $("#global-search").value.trim() === rawQuery) renderCharacterDirectory();
+    }).catch((error) => {
+      $("#archive-directory-status").textContent = "No se pudo cargar el archivo de DanMachi: " + error.message;
+    });
+  }
+
+  async function searchArchiveFromGlobalSearch(rawQuery, forceOpen = false) {
+    const query = String(rawQuery || "").trim();
+    if (query.length < 2) return;
+    if (activeView === "lore") {
+      resetArchiveForGlobalSearch(query);
+      return;
+    }
+    if (!forceOpen && projectHasGlobalSearchMatch(query)) return;
+    try {
+      const index = await prepareLoreView();
+      if ($("#global-search").value.trim() !== query) return;
+      if (!window.WordWaifuCharacterArchive) throw new Error("El módulo de fichas no está cargado.");
+      const found = window.WordWaifuCharacterArchive.list(index, { query, continuity: "ALL", spoiler: "all" });
+      if (!found.length && !forceOpen) return;
+      navigate("lore");
+      $("#archive-continuity").value = "ALL";
+      $("#archive-spoiler").value = "all";
+      resetArchiveForGlobalSearch(query);
+      $("#character-archive-directory").scrollIntoView({ block: "start", behavior: "auto" });
+    } catch (error) {
+      if (forceOpen && $("#global-search").value.trim() === query) {
+        navigate("lore");
+        $("#archive-directory-status").textContent = "No se pudo cargar el archivo de DanMachi: " + error.message;
+      }
+    }
+  }
+
   $("#global-search").addEventListener("input", () => {
+    const rawQuery = $("#global-search").value.trim();
+    if (activeView === "lore") {
+      resetArchiveForGlobalSearch(rawQuery);
+      return;
+    }
     if (activeView === "atlas") {
-      const query = $("#global-search").value.trim().toLowerCase();
-      const found = state.locations.find((location) => location.name.toLowerCase().includes(query));
+      const query = rawQuery.toLocaleLowerCase("es");
+      const found = state.locations.find((location) => location.name.toLocaleLowerCase("es").includes(query));
       if (query && found) { selectedLocationId = found.id; renderDetails(); renderMap(); }
       else if (query) {
-        const person = state.characters.find((character) => character.name.toLowerCase().includes(query));
+        const person = state.characters.find((character) => character.name.toLocaleLowerCase("es").includes(query));
         if (person) openCharacter(person.id);
       }
     } else renderDirectory();
+    if (rawQuery.length >= 2 && !projectHasGlobalSearchMatch(rawQuery)) {
+      void searchArchiveFromGlobalSearch(rawQuery, false);
+    }
+  });
+  $("#global-search").addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    const query = $("#global-search").value.trim();
+    if (query.length < 2) return;
+    if (activeView === "lore") {
+      event.preventDefault();
+      resetArchiveForGlobalSearch(query);
+      return;
+    }
+    if (projectHasGlobalSearchMatch(query)) return;
+    event.preventDefault();
+    void searchArchiveFromGlobalSearch(query, true);
   });
   $("#add-button").addEventListener("click", addEntity);
   $("#entity-form").addEventListener("submit", handleEntitySubmit);

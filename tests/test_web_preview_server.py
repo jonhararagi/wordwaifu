@@ -31,6 +31,9 @@ try:
     for route, marker in (
         ("/src/lore-corpus.js", b"WordWaifu DanMachi Lore Search"),
         ("/src/character-archive.js", b"WordWaifuCharacterArchive"),
+        ("/assets/character-portraits/ryu-lion.svg", b"Ryu Lion"),
+        ("/assets/character-portraits/alise-lovelace.svg", b"Alise Lovelace"),
+        ("/assets/character-portraits/astrea.svg", b"Astrea"),
         ("/src/app.js", b"WordWaifuLoreCorpus"),
         ("/src/styles.css", b".lore-"),
         ("/lore/danmachi/catalog.json", b'"records"'),
@@ -42,7 +45,7 @@ try:
     get("/.git/config", 404)
     get("/docs/MASTER_VISION.md", 404)
     get("/lore/danmachi/characters/ryuu-lion.md", 404)
-    print("PASS preview server: app shell, JS/CSS, catalog and both lore documents respond; non-allowlisted paths return 404.")
+    print("PASS preview server: app shell, JS/CSS, original SVG portraits, catalog and lore documents respond; non-allowlisted paths return 404.")
 finally:
     server.shutdown()
     server.server_close()

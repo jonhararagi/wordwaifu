@@ -18,6 +18,9 @@ ALLOWED_FILES = {
     "/src/project-repository.js": "src/project-repository.js",
     "/src/lore-corpus.js": "src/lore-corpus.js",
     "/src/character-archive.js": "src/character-archive.js",
+    "/assets/character-portraits/ryu-lion.svg": "assets/character-portraits/ryu-lion.svg",
+    "/assets/character-portraits/alise-lovelace.svg": "assets/character-portraits/alise-lovelace.svg",
+    "/assets/character-portraits/astrea.svg": "assets/character-portraits/astrea.svg",
     "/lore/danmachi/catalog.json": "lore/danmachi/catalog.json",
     "/lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md":
         "lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
@@ -33,6 +36,7 @@ class PreviewRequestHandler(SimpleHTTPRequestHandler):
         ".js": "text/javascript; charset=utf-8",
         ".json": "application/json; charset=utf-8",
         ".md": "text/markdown; charset=utf-8",
+        ".svg": "image/svg+xml",
     }
 
     def _authorize_path(self):

@@ -25,7 +25,7 @@ El puerto no es una publicación pública ni una URL permanente. Requiere tu ses
 
 ## Alcance de archivos servido
 
-El servidor tiene una lista permitida de rutas. Publica únicamente **index.html**, los módulos y estilos usados por la app, **lore/danmachi/catalog.json** y los documentos **BATCH-DM-003** y **BATCH-DM-004**. Rutas como **.git/config**, **docs/** y los perfiles Markdown individuales responden 404. No cambia el corpus ni sus afirmaciones.
+El servidor tiene una lista permitida de rutas. Publica únicamente **index.html**, los módulos y estilos usados por la app, las tres ilustraciones SVG originales no oficiales de **assets/character-portraits/**, **lore/danmachi/catalog.json** y los documentos **BATCH-DM-003** y **BATCH-DM-004**. Las demás rutas siguen bloqueadas por defecto. Rutas como **.git/config**, **docs/** y los perfiles Markdown individuales responden 404. No cambia el corpus ni sus afirmaciones.
 
 ## Comprobaciones
 
