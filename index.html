@@ -112,6 +112,24 @@
               <label>Uso<select id="idea-mode"><option value="original">Historia original</option><option value="fanfic">Fanfic</option></select></label>
               <label>Universo / continuidad<input id="idea-continuity" maxlength="180" placeholder="Ej.: DanMachi · novelas ligeras · después de X evento"></label>
               <label>Semilla de la historia<textarea id="idea-premise" rows="5" maxlength="2400" required>Una fantasía tipo isekai con tres diosas inspiradas en la mitología maya, cada una con una personalidad muy distinta, y un protagonista gamer cínico y pragmático. Todos pueden ser ridículos en lo cotidiano y absolutamente serios cuando hay algo importante en juego.</textarea></label>
+              <fieldset class="idea-trait-panel">
+                <legend>Personalidad del protagonista · 0–100</legend>
+                <p class="field-help">Los valores cambian cómo piensa, reacciona y resuelve problemas; no son decoración.</p>
+                <label>Valentía <output id="idea-courage-value">20</output><input id="idea-courage" type="range" min="0" max="100" value="20"></label>
+                <label>Miedo / ansiedad <output id="idea-fear-value">50</output><input id="idea-fear" type="range" min="0" max="100" value="50"></label>
+                <label>Inteligencia <output id="idea-intelligence-value">80</output><input id="idea-intelligence" type="range" min="0" max="100" value="80"></label>
+                <label>Actitud / ganas de actuar <output id="idea-attitude-value">10</output><input id="idea-attitude" type="range" min="0" max="100" value="10"></label>
+                <label>Empatía <output id="idea-empathy-value">55</output><input id="idea-empathy" type="range" min="0" max="100" value="55"></label>
+                <label>Género / presentación del protagonista<select id="idea-gender"><option value="auto">Lo decide la premisa</option><option value="woman">Mujer</option><option value="man">Hombre</option><option value="nonbinary">No binario</option></select></label>
+                <label>Mayor miedo<input id="idea-fear-detail" maxlength="240" placeholder="Ej.: que descubran que no pertenece a ese mundo"></label>
+                <label>Acción característica<input id="idea-signature-action" maxlength="240" placeholder="Ej.: improvisa una solución brillante y luego intenta evitar el trabajo"></label>
+              </fieldset>
+              <fieldset class="idea-trait-panel">
+                <legend>Mundo y dinámica</legend>
+                <label>Tipo de mundo<select id="idea-world"><option value="auto">Según la premisa</option><option value="magic-school">Escuela de magia y casas rivales</option><option value="isekai">Isekai / otro mundo</option><option value="urban-fantasy">Fantasía urbana</option><option value="dark-fantasy">Fantasía oscura</option><option value="scifi">Ciencia ficción</option><option value="original">Mundo original libre</option></select></label>
+                <label>Dinámica central<select id="idea-dynamic"><option value="auto">Inferir de la premisa</option><option value="slow-burn">Romance lento y malentendidos</option><option value="rivals">Rivales que aprenden a confiar</option><option value="secret-crush">Uno está enamorado y lo oculta</option><option value="found-family">Familia encontrada / protección</option><option value="reluctant-hero">Genio perezoso que evita actuar</option><option value="politics">Intriga social y política</option><option value="survival">Supervivencia y cooperación</option></select></label>
+                <label>Reglas del mundo<textarea id="idea-world-rules" rows="2" maxlength="500" placeholder="Ej.: la magia requiere contratos; las casas controlan el acceso a los hechizos"></textarea></label>
+              </fieldset>
               <label>Género<select id="idea-genre"><option value="balanced">Aventura, comedia y drama</option><option value="comedy">Comedia absurda</option><option value="drama">Drama con humor</option></select></label>
               <label>Equilibrio tonal<select id="idea-tone"><option value="balanced">Tontos y serios a la vez</option><option value="comedy">Predomina la comedia</option><option value="serious">Consecuencias serias</option></select></label>
               <div class="idea-form-actions"><button class="primary-button" type="submit">Generar otra propuesta ↗</button><button class="outline-button" id="idea-regenerate" type="button">Variar combinación</button></div>
