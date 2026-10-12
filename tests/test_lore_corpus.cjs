@@ -76,7 +76,8 @@ process.stdout.write("PASS lore search: 32 source claims, 35 entries, continuity
   assert.ok(externalReport.results[0].snippet.includes("& the main series."));
   assert.ok(externalReport.results[0].extract.includes("elven adventurer"),"External lookup should include a useful article lead, not only the short search snippet.");
   assert.ok(externalReport.results[0].thumbnailUrl.startsWith("https://static.wikia.nocookie.net/"),"Wiki images should appear as secure external thumbnail links.");
-  assert.ok(externalReport.results[0].imageCredit.includes("rights of image owners")===false,"Image credit text must not claim ownership of fan art.");
+  assert.ok(externalReport.results[0].imageCredit.includes("derechos de imagen"),"Image credit must retain rights attribution.");
+  assert.ok(externalReport.results[0].imageCredit.includes("No se guarda"),"Remote images must not be copied into the local repository.");
   assert.ok(externalReport.results[1].thumbnailUrl.startsWith("https://upload.wikimedia.org/"));
   assert.equal(externalReport.hasFailures,false);
   assert.equal(corpus.allowedExternalImageUrl("http://evil.example/a.png","danmachi-wiki"),"");
