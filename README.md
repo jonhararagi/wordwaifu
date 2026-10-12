@@ -8,7 +8,7 @@ WordWaifu es un proyecto en etapa inicial para explorar una experiencia de apren
 
 - **Fase:** fundación y descubrimiento.
 - **Rama principal:** `main`.
-- **Implementación verificada:** todavía no auditada; el primer commit conocido solo añade un `.gitignore`.
+- **Implementación verificada:** auditoría estática remota del 2026-10-12; el árbol inspeccionado contiene `.gitignore`, este README y `docs/ROADMAP.md`, sin código de aplicación ni manifiesto de dependencias visible en esas rutas.
 - **Regla de honestidad:** no se declarará una función, prueba, publicación o integración como terminada sin evidencia reproducible.
 
 ## Visión de producto
