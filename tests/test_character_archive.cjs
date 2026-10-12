@@ -17,7 +17,7 @@ const profilePaths=[
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
 assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
-assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,58,"The official-source registry should hold the extended character catalog.");
+assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,59,"The official-source registry should hold the extended character catalog, including Eina Tulle.");
 assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-ASFI-AL-ANDROMEDA").voice,"Ai Kayano");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-DIONYSUS").voice,"Masaya Matsukaze");
@@ -106,6 +106,21 @@ for(const id of ["DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","C
 }
 const bell=archive.getProfile(index,"DM-CHAR-BELL","CONT-ANIME","all");
 assert.ok(bell.relationships.length>=3,"Bell's source-backed relationship network should include Hestia, Ais and Eina.");
+const bellMain=archive.getProfile(index,"DM-CHAR-BELL","CONT-MAIN-LN","all");
+assert.ok(bellMain,"Bell must offer a main-novel dossier instead of defaulting only to the anime synopsis.");
+assert.ok(bellMain.officialDossier&&bellMain.officialDossier.history.length>500,"Bell's main-novel profile should expose a substantial historical dossier.");
+assert.ok(bellMain.officialDossier.development.length>400&&bellMain.officialDossier.combatProfile.length>300,"Bell's dossier should include meaningful character development and combat analysis.");
+assert.ok(bellMain.officialDossier.relationshipDetails.length>=4&&bellMain.officialDossier.abilities.length>=2,"Bell's dossier must include multiple researched relationships and abilities.");
+assert.ok(bellMain.claims.length>=10,"The main-novel dossier should contribute searchable evidence items.");
+assert.ok(bellMain.claims.every(claim=>claim.continuityScopes.includes("CONT-MAIN-LN")),"Main-novel claims must not mix with anime profile claims.");
+const bellSafe=archive.getProfile(index,"DM-CHAR-BELL","CONT-MAIN-LN","safe-only");
+assert.ok(!bellSafe.officialDossier,"Major-spoiler dossier must not appear with the safe-only filter.");
+const ryuDossier=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","all");
+assert.ok(ryuDossier.officialDossier&&ryuDossier.officialDossier.history.length>500,"Ryu's Astrea Record dossier must be visible in the historical continuity.");
+assert.ok(ryuDossier.officialDossier.relationshipDetails.some(rel=>rel.name==="Alise Lovelace"),"Historical Ryu dossier should discuss the documented Alise relationship.");
+assert.equal(archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","safe-only").officialDossier,null,"Major-spoiler historical dossier must respect safe-only.");
+const einaMain=archive.getProfile(index,"DM-CHAR-EINA","CONT-MAIN-LN","all");
+assert.ok(einaMain.officialDossier&&einaMain.officialDossier.history.length>300,"Eina needs a detailed dossier, not only an archive card.");
 assert.ok(archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR").references.some(ref=>ref.url.includes("fandom.com/es/wiki/Ryuu_Lion")));
 assert.ok(archive.getExtendedInfo("DM-CHAR-BELL","CONT-ANIME").sections.length>=2);
 assert.equal(archive.getExtendedInfo("DM-CHAR-BELL","CONT-AR"),null,"Do not copy anime profile details into the historical continuity.");
