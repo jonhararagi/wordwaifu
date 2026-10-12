@@ -162,7 +162,7 @@ async function run() {
     // The visible rights note correctly says that attribution is not a license.
     await page.locator("#content-rights-open").click();
     assert.equal(await page.locator("#content-rights-dialog").evaluate(el => el.open), true);
-    assert.ok((await page.locator("#content-rights-dialog").innerText()).includes("no concede una licencia"));
+    assert.ok((await page.locator("#content-rights-dialog").innerText()).includes("ni concede una licencia"));
     await page.locator("#content-rights-close").click();
     await page.locator("#archive-tab-personality").click();
     const personalityText = await page.locator("#archive-profile-panel").innerText();
