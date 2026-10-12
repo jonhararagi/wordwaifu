@@ -1927,7 +1927,13 @@
     const results=$("#character-archive-results"),status=$("#archive-directory-status");
     const items=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:$("#character-archive-query").value,continuity:$("#archive-continuity").value,spoiler:$("#archive-spoiler").value});
     results.replaceChildren();
-    status.textContent=items.length?items.length+" ficha(s) disponibles. Las fichas de DanMachi incorporadas incluyen retratos vectoriales originales no oficiales; Ryu también tiene momentos históricos ilustrados.":"No hay fichas que coincidan. Probá otro nombre o una continuidad más amplia.";
+    const totalItems=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:"",continuity:"ALL",spoiler:"all"}).length;
+    $("#archive-quick-filters [data-archive-scope]").forEach(button=>{
+      button.setAttribute("aria-pressed",button.dataset.archiveScope===$("#archive-continuity").value?"true":"false");
+    });
+    status.textContent=items.length
+      ?items.length+" ficha(s) disponibles (de "+totalItems+"). Selección parcial: todavía no es la enciclopedia completa de DanMachi."
+      :"0 ficha(s) disponibles (de "+totalItems+"). No hay coincidencias; probá otro nombre o una continuidad más amplia.";
     if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados."));return;}
     items.forEach(item=>{
       const card=archiveElement("article","archive-character-card");card.setAttribute("role","listitem");
@@ -2108,6 +2114,21 @@
   function backInArchiveNavigation(){const old=archiveNavigationStack.pop();if(!old){returnToArchiveDirectory();return;}activeArchiveCharacterId=old.id;activeArchiveContinuity=old.continuity;activeArchiveTab=old.tab;renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});}
   $("#character-archive-query").addEventListener("input",()=>{$("#global-search").value=$("#character-archive-query").value;if(loreArchiveIndex)renderCharacterDirectory();else void prepareLoreView().catch(e=>$("#archive-directory-status").textContent="No se pudo preparar el índice: "+e.message);});
   $("#archive-continuity").addEventListener("change",()=>{if(loreArchiveIndex)renderCharacterDirectory();});
+  $("#archive-quick-filters").addEventListener("click",event=>{
+    const button=event.target.closest("[data-archive-scope]");
+    if(!button)return;
+    $("#archive-continuity").value=button.dataset.archiveScope;
+    if(loreArchiveIndex)renderCharacterDirectory();
+  });
+  $("#archive-clear-filters").addEventListener("click",()=>{
+    $("#character-archive-query").value="";
+    $("#global-search").value="";
+    $("#archive-continuity").value="ALL";
+    $("#archive-spoiler").value="all";
+    $("#archive-profile-spoiler").value="all";
+    if(loreArchiveIndex)renderCharacterDirectory();
+    $("#character-archive-query").focus();
+  });
   $("#archive-spoiler").addEventListener("change",()=>{if(!loreArchiveIndex)return;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
   $("#archive-profile-spoiler").addEventListener("change",event=>{if(!loreArchiveIndex)return;$("#archive-spoiler").value=event.target.value;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
   $("#character-archive-results").addEventListener("click",e=>{const b=e.target.closest("[data-archive-open]");if(b)openArchiveProfile(b.dataset.archiveOpen,b.dataset.archiveContinuity,false);});

@@ -227,3 +227,14 @@ select{background:#332d26;color:#e9dfd2}
 
 /* Preserve paragraphs and list-like lines from the recovered character dossiers. */
 .archive-more-info-section>p{white-space:pre-line}
+
+/* Simple archive navigation: quick continuity filters and one-step reset. */
+.archive-directory-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 14px;border:1px solid #494038;border-radius:13px;background:#2b2621}
+.archive-quick-filters{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.archive-filter-hint{margin-right:3px;color:#b6a899;font-size:10px;font-weight:700;letter-spacing:.04em}
+.archive-quick-filter{min-height:36px;padding:8px 12px;border:1px solid #54483b;border-radius:999px;background:#322b24;color:#dfd2c0;font-size:11px;cursor:pointer;transition:background .15s ease,border-color .15s ease,color .15s ease}
+.archive-quick-filter:hover{border-color:#8b6b43;color:#f0e2ca}
+.archive-quick-filter[aria-pressed="true"]{border-color:#9a7a4d;background:#443627;color:#f1d19a;font-weight:750;box-shadow:inset 0 0 0 1px rgba(208,177,132,.12)}
+.archive-quick-filter:focus-visible,.archive-clear-filters:focus-visible{outline:2px solid #d4ad73;outline-offset:3px}
+.archive-clear-filters{min-height:36px;padding:8px 12px;font-size:11px}
+@media(max-width:560px){.archive-directory-toolbar{align-items:stretch}.archive-quick-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.archive-filter-hint{grid-column:1/-1}.archive-clear-filters{align-self:start}}

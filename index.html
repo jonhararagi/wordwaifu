@@ -107,12 +107,21 @@
       </section>
       <section id="lore-view" class="lore-view hidden">
         <header class="lore-panel-heading archive-heading">
-          <div><p class="eyebrow">DANMACHI · ARCHIVO DE PERSONAJES</p><h2>Enciclopedia visual de personajes</h2><p>Explorá identidades, etapas de vida, vínculos y evidencia. Los estados temporales se mantienen separados y los vacíos documentales no se rellenan con suposiciones.</p></div>
+          <div><p class="eyebrow">DANMACHI · ARCHIVO DE PERSONAJES</p><h2>Enciclopedia visual de personajes</h2><p>Explorá identidades, etapas de vida, vínculos y evidencia. Esta selección inicial contiene 12 fichas; todavía no cubre toda la franquicia. Los estados temporales se mantienen separados y los vacíos documentales no se rellenan con suposiciones.</p></div>
           <span class="lore-mode-pill">Local · sin IA</span>
         </header>
         <section id="character-archive-directory" class="character-archive-directory" aria-labelledby="character-archive-title">
           <div class="archive-directory-heading"><div><p class="eyebrow">ÍNDICE DE PERSONAJES</p><h3 id="character-archive-title">Encontrá una persona</h3><p>Las tarjetas resumen la información disponible. Abrí una ficha para explorar sus estados y fuentes.</p></div>
             <label class="archive-query-field" for="character-archive-query">Buscar por nombre<input id="character-archive-query" type="search" maxlength="120" autocomplete="off" placeholder="Ryu, Ryuu Lion, Alise Lovelace…"></label>
+          </div>
+          <div class="archive-directory-toolbar">
+            <div id="archive-quick-filters" class="archive-quick-filters" role="group" aria-label="Filtros rápidos de continuidad">
+              <span class="archive-filter-hint">Acceso rápido</span>
+              <button type="button" class="archive-quick-filter" data-archive-scope="ALL" aria-pressed="true">Todo el archivo</button>
+              <button type="button" class="archive-quick-filter" data-archive-scope="CONT-AR" aria-pressed="false">Astrea Record</button>
+              <button type="button" class="archive-quick-filter" data-archive-scope="CONT-ANIME" aria-pressed="false">Anime</button>
+            </div>
+            <button id="archive-clear-filters" type="button" class="outline-button archive-clear-filters">Restablecer</button>
           </div>
           <div class="archive-directory-filters">
             <label for="archive-continuity">Continuidad<select id="archive-continuity"><option value="ALL">Todas las continuidades disponibles</option><option value="CONT-AR">Astrea Record · CONT-AR</option><option value="CONT-ANIME">Adaptación anime · CONT-ANIME</option><option value="CONT-MAIN-LN">Novela principal · CONT-MAIN-LN</option><option value="CONT-AU">Historia alternativa · CONT-AU</option><option value="CROSS-CONTINUITY">Comparación entre continuidades</option></select></label>

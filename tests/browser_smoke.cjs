@@ -139,6 +139,16 @@ async function run() {
     // Character archive: compact search, profile navigation, evidence and temporal separation.
     await page.locator('.nav-item[data-view="lore"]').click();
     await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
+    assert.equal(await page.locator("#archive-quick-filters [data-archive-scope]").count(), 3);
+    await page.locator('#archive-quick-filters [data-archive-scope="CONT-AR"]').click();
+    assert.equal(await page.locator("#archive-continuity").inputValue(), "CONT-AR", "Quick filter should apply Astrea Record without opening the select.");
+    assert.equal(await page.locator('#archive-quick-filters [data-archive-scope="CONT-AR"]').getAttribute("aria-pressed"), "true");
+    await page.locator("#archive-clear-filters").click();
+    assert.equal(await page.locator("#character-archive-query").inputValue(), "");
+    assert.equal(await page.locator("#archive-continuity").inputValue(), "ALL");
+    assert.equal(await page.locator("#archive-spoiler").inputValue(), "all");
+    assert.equal(await page.locator('#archive-quick-filters [data-archive-scope="ALL"]').getAttribute("aria-pressed"), "true");
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 12, { timeout: 5000 });
     await page.locator("#character-archive-query").fill("");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 12, { timeout: 5000 });
     await page.locator("#character-archive-query").fill("Ryu");
