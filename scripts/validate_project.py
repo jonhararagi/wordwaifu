@@ -16,6 +16,8 @@ schema_path = ROOT / "src" / "project-schema.js"
 schema_test_path = ROOT / "tests" / "test_project_schema.cjs"
 browser_test_path = ROOT / "tests" / "browser_smoke.cjs"
 repository_path = ROOT / "src" / "project-repository.js"
+art_studio_path = ROOT / "src" / "art-studio.js"
+dossier_path = ROOT / "src" / "character-dossiers.js"
 
 require(html_path.is_file(), "Falta index.html")
 require(js_path.is_file(), "Falta src/app.js")
@@ -24,6 +26,8 @@ require(schema_path.is_file(), "Falta src/project-schema.js")
 require(schema_test_path.is_file(), "Falta tests/test_project_schema.cjs")
 require(browser_test_path.is_file(), "Falta tests/browser_smoke.cjs")
 require(repository_path.is_file(), "Falta src/project-repository.js")
+require(art_studio_path.is_file(), "Falta src/art-studio.js")
+require(dossier_path.is_file(), "Falta src/character-dossiers.js")
 
 if html_path.is_file():
     html = html_path.read_text(encoding="utf-8")
@@ -31,12 +35,19 @@ if html_path.is_file():
     require('./src/project-schema.js' in html, "index.html no enlaza src/project-schema.js")
     require('./src/project-repository.js' in html, "index.html no enlaza src/project-repository.js")
     require('./src/app.js' in html, "index.html no enlaza src/app.js")
+    require('./src/art-studio.js' in html, "index.html no enlaza src/art-studio.js")
+    require('./src/character-dossiers.js' in html, "index.html no enlaza src/character-dossiers.js")
+    require('id="art-view"' in html and 'id="art-save"' in html, "Falta el panel funcional de arte")
+    require('data-view="art"' in html, "El panel de arte debe estar disponible desde la navegación")
+    require('id="art-studio.js"' not in html, "No usar un identificador de script ficticio")
     require('lang="es"' in html, "La interfaz debe declarar idioma español")
     schema_script_position = html.find('./src/project-schema.js')
     repository_script_position = html.find('./src/project-repository.js')
+    dossier_script_position = html.find('./src/character-dossiers.js')
+    art_script_position = html.find('./src/art-studio.js')
     app_script_position = html.find('./src/app.js')
     require(schema_script_position >= 0 and repository_script_position >= 0 and app_script_position >= 0 and
-            schema_script_position < repository_script_position < app_script_position,
+            schema_script_position < repository_script_position < dossier_script_position < art_script_position < app_script_position,
             "project-schema.js y project-repository.js deben cargarse antes de app.js")
     ids = re.findall(r'\bid="([^"]+)"', html)
     duplicates = sorted({item for item in ids if ids.count(item) > 1})
