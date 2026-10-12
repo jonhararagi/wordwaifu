@@ -1230,7 +1230,7 @@
     { family: "support", name: "Mapa de posibilidades", category: "percepción / estrategia", potency: "3/5 · no ofensivo", activation: "dibujar el lugar y formular una pregunta concreta", price: "el usuario olvida una ruta que conocía", limits: "muestra posibilidades, no el futuro; decisiones ajenas pueden invalidarlo", evolution: "I marca una salida → II compara tres rutas → III revela una opción oculta junto a una consecuencia inevitable", consequences: "tener más información no garantiza elegir bien y puede hacer que el personaje dude demasiado" },
     { family: "costly", name: "Milagro de ceniza", category: "curación / sacrificio", potency: "5/5 · coste extremo", activation: "quemar un recuerdo escrito por la persona que quiere salvar", price: "el recuerdo desaparece también de la mente de su dueño original", limits: "no resucita a los muertos ni cura heridas que el usuario no comprende", evolution: "I cierra heridas leves → II estabiliza una muerte inminente → III reconstruye un cuerpo a cambio de borrar el vínculo más importante", consequences: "salvar una vida puede destruir la razón por la que el personaje quería salvarla" }
   ];
-  let lastGeneratedPowerIndex = -1;
+  let lastGeneratedPowerName = "";
 
   function bindStoryEditor(container, story) {
     const createButton = $("#story-create-button", container);
@@ -1242,11 +1242,15 @@
       const family = $("#story-power-family", container)?.value || "any";
       const available = powerIdeaLibrary.map((idea, index) => ({ idea, index })).filter(({ idea }) => family === "any" || idea.family === family);
       if (!available.length || !catalog) return;
-      let candidate = available[Math.floor(Math.random() * available.length)];
-      if (available.length > 1 && candidate.index === lastGeneratedPowerIndex) {
-        candidate = available[(available.findIndex(({ index }) => index === candidate.index) + 1) % available.length];
-      }
-      lastGeneratedPowerIndex = candidate.index;
+      // Exclude the immediately previous proposal by name. Use the filtered
+      // candidate pool so a family filter or a second editor cannot break the
+      // "generate another" guarantee.
+      const distinct = available.length > 1
+        ? available.filter(({ idea }) => idea.name !== lastGeneratedPowerName)
+        : available;
+      const pool = distinct.length ? distinct : available;
+      const candidate = pool[Math.floor(Math.random() * pool.length)];
+      lastGeneratedPowerName = candidate.idea.name;
       const idea = candidate.idea;
       const block = [
         "Nombre: " + idea.name,
