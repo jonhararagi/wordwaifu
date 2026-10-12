@@ -111,3 +111,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Los estados Ryu CONT-AR y CONT-ANIME se recuperan por separado; consultas sin evidencia como Ais + gustos devuelven abstención.
 - Validación planificada: pruebas unitarias de recuperación y browser smoke en Chromium dentro de GitHub Actions.
 - Límite: búsqueda textual con corpus parcial; sin LLM, embeddings ni RAG.
+
+
+## DANMACHI-RESEARCH-007 · Red de Astrea Familia, tragedia y viaje de Ryu
+- Estado: PARTIAL. Paquete: [BATCH-DM-007](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md).
+- Añadido: 11 nodos de personajes nuevos (7 del roster histórico, 4 de la generación nueva), 12 afirmaciones con IDs, fuentes, continuidad y nivel de spoiler.
+- Fuentes: perfiles oficiales de DanMachi IV/V y sinopsis editorial de Familia Chronicle: Episode Ryuu 2; roster, tragedia, memorial y Solingen permanecen marcados como secundarios por verificar.
+- Integración: `src/lore-corpus.js` carga el nuevo lote y las fichas; `src/character-archive.js` amplía relaciones, cronología, momentos y expedientes de Ryu/Astrea.
+- QA: prueba de navegador actualizada para recorrer Ryu → Iska Bra → volver a Ryu y verificar los vínculos Ryu–Alise/Kaguya/Lyra en la continuidad del anime. Resultado de CI pendiente.
+- Límite: no se consultaron íntegramente los volúmenes; la investigación global de DanMachi sigue PARTIAL.
