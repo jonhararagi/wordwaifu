@@ -2737,6 +2737,23 @@ async function run() {
       "The profile must show the substantial dossier rather than only the short official synopsis.");
     const dossierLength = await page.locator("#archive-profile-panel .archive-dossier-detail p").evaluateAll(nodes => nodes.reduce((sum,node)=>sum+node.innerText.length,0));
     assert.ok(dossierLength > 1200, "The expanded dossier must contain substantial content.");
+    const bellContinuities = await page.locator("#archive-profile-continuity option").evaluateAll(options => options.map(option => option.value));
+    assert.ok(bellContinuities.includes("CONT-MAIN-LN"), "Bell's profile must expose the main-light-novel continuity when source-backed claims exist.");
+    await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
+    await page.waitForFunction(() => {
+      const dossier = document.querySelector("#archive-profile-panel .archive-continuity-dossier");
+      return dossier && dossier.textContent.includes("Historia y contexto") && dossier.textContent.includes("Bell Cranel");
+    }, null, { timeout: 5000 });
+    const mainNovelDossier = await page.locator("#archive-profile-panel .archive-continuity-dossier").innerText();
+    assert.ok(mainNovelDossier.includes("Zeus") && mainNovelDossier.includes("Liaris Freese"),
+      "Selecting main-novel continuity must render its researched history and named abilities, not only the short anime synopsis.");
+    assert.ok(mainNovelDossier.includes("FUENTE SECUNDARIA") || mainNovelDossier.includes("DanMachi Wiki"),
+      "The continuity dossier must preserve secondary-source attribution.");
+    assert.ok(await page.locator("#archive-profile-panel .archive-continuity-dossier a[href*='danmachi.fandom.com/es/wiki/Bell_Cranel']").count() > 0,
+      "The continuity dossier must link its specific source.");
+    assert.ok(mainNovelDossier.includes("Contiene spoilers importantes"),
+      "Major-spoiler dossiers must warn before presenting continuity-specific details.");
+    process.stdout.write("PASS continuity dossiers: Bell's main-light-novel dossier renders source-backed detail and spoiler warning.\\n");
     process.stdout.write("PASS art studio: uploaded art persists by entity ID, prompts generate from character data, and custom portraits override the reference image.\\n");
     process.stdout.write("PASS dossiers: the Bell profile renders extended researched content.\\n");
 
