@@ -26,16 +26,19 @@
 - **WF-004-C.2 · DONE / PASS_REAL histórico:** snapshots previos verificados para los cinco tipos de borrado; límite 25/26 validado. Evidencia histórica: [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita cambios posteriores de C.3.
 
 ## HEAD de código funcional validado más reciente
-- SHA: `6fb40e1d6a6d9a7c9aeddc607e0b3ca87cdadbd6`.
-- [Validate WordWaifu — PR run 38281175203 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38281175203).
-- [Validate WordWaifu — push run 38281169457 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38281169457).
-- [DanMachi Lore and Retrieval Integrity — run 38281175157 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38281175157).
-- Chromium confirma CRUD del Panel de arte en IndexedDB y respaldo local, fallos simulados sin falso éxito, papelera y snapshots, expedientes ampliados y recuperación separada de Ryu en `CONT-AR` y `CONT-ANIME`.
+- Último commit funcional: `deb48289e143c1a32f687b4ef8337dbf89849211` (rollback del respaldo local cuando la guardia de papelera rechaza un guardado).
+- HEAD de validación que incluye la regresión y el validador estructural actualizado: `aeaaf30fef49828c431c3be1bda9437d368f9ecf`.
+- [Validate WordWaifu — push run 38296993845 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38296993845).
+- [Validate WordWaifu — PR run 38297000005 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38297000005).
+- [DanMachi Lore and Retrieval Integrity — PR run 38297000007 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38297000007).
+- Chromium confirma CRUD del Panel de arte en IndexedDB y respaldo local, fallos simulados sin falso éxito, papelera y snapshots, expedientes ampliados y separación de Ryu en `CONT-AR` y `CONT-ANIME`.
+- Nueva regresión de pestaña obsoleta: si otra pestaña mueve un universo a la papelera, un autosave atrasado no resucita su respaldo local y la interfaz muestra el rechazo en vez de éxito.
 
 ## WF-004-C.3 — Papelera y recuperación (PARTIAL)
 - IndexedDB v2→v3 añade el almacén `trash`; la API y la UI permiten enviar proyectos a la papelera, listar, restaurar por ID y borrar permanentemente con confirmación.
 - El proyecto activo está protegido y se conservan/restauran sus snapshots. El catálogo y la búsqueda multiverso filtran tombstones.
-- **Hardening de esta iteración:** `write(project)` valida el tombstone dentro de la transacción de escritura; `saveActive(project)` consulta la papelera antes de escribir el respaldo local y restaura el respaldo previo si detecta la carrera.
+- **Hardening de esta iteración:** `write(project)` valida el tombstone dentro de la transacción de escritura; `saveActive(project)` restaura el respaldo previo si detecta la carrera o si no puede verificar la papelera.
+- **Regresión de pestaña obsoleta:** el smoke abre una segunda pestaña/contexto, mueve el universo original a papelera y fuerza un autosave de la copia en memoria; verifica que el respaldo del universo hermano se conserva, el ID eliminado no reaparece en el catálogo y el error se muestra sin falso éxito.
 - Chromium verifica que escribir/guardar un ID en papelera se rechace, que el respaldo no sea sobrescrito y que el respaldo de otro universo sobreviva al movimiento y al borrado permanente.
 - **PASS_STATIC:** sintaxis JavaScript y 18 pruebas de esquema.
 - **PASS_REAL:** [CI #38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741), commit de código `2ef649202e1f27db0e0ff0a939e4307933e178de`; sintaxis, 18 pruebas de esquema, Chromium smoke y validador estructural completados.
