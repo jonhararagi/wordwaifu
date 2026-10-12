@@ -158,6 +158,18 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
+    const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
+    assert.ok(ryuHistoricalPortrait.includes("danmachi4/character/images/chara_tachi_15.png"),
+      "Historical Ryu should use the official character reference from the Astrea Record adaptation era.");
+    await page.waitForFunction(() => {
+      const img = document.querySelector("#archive-profile-portrait .archive-portrait-art");
+      return !!img && img.complete && img.naturalWidth > 0;
+    }, null, { timeout: 5000 });
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-caption").innerText()).includes("NO ESPECÍFICA DE ÉPOCA"),
+      "Historical reference art must be clearly labeled as not era-specific.");
+    await page.locator("#archive-tab-summary").click();
+    assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 0,
+      "DanMachi V character data must not leak into the historical Astrea Record dossier.");
     // Expanded reading must open a modal with a Spanish community reference and preserve continuity context.
     await page.locator("#archive-profile-panel [data-archive-more-info]").click();
     await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, { timeout: 3000 });
@@ -180,12 +192,20 @@ async function run() {
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Sin información suficiente"));
     await page.locator("#archive-tab-moments").click();
     assert.ok(await page.locator("#archive-profile-panel [data-moment-id]").count() >= 3);
-    assert.equal(await page.locator("#archive-profile-panel .archive-moment-art").count(), 3,
-      "Ryu's three curated historical moments should display original conceptual scene art.");
+    assert.equal(await page.locator("#archive-profile-panel .archive-moment-art").count(), 0,
+      "Historical moments must not present generic placeholder illustrations as scene art.");
+    assert.equal(await page.locator("#archive-profile-panel .archive-moment-visual-reference").count(), 3,
+      "Each historical moment should show a sourced character-reference strip.");
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("NO ES UNA IMAGEN DE LA ESCENA"),
+      "Reference portraits must not be mistaken for images of a specific canon event.");
     await page.waitForFunction(() => {
-      const images = Array.from(document.querySelectorAll("#archive-profile-panel .archive-moment-art"));
-      return images.length === 3 && images.every(img => img.complete && img.naturalWidth > 0);
-    }, null, { timeout: 5000 });
+      const images = Array.from(document.querySelectorAll("#archive-profile-panel .archive-moment-character .archive-portrait-art"));
+      return images.length >= 3 && images.every(img => img.complete && img.naturalWidth > 0 &&
+        img.currentSrc.includes("danmachi.com/"));
+    }, null, { timeout: 10000 });
+    const momentPortraitUrls = await page.locator("#archive-profile-panel .archive-moment-character .archive-portrait-art").evaluateAll(images => images.map(img => img.currentSrc));
+    assert.ok(momentPortraitUrls.every(url => url.includes("/danmachi4/character/images/chara_tachi_")),
+      "Historical character-reference strips must use the official DanMachi IV/Astrea Record-era portraits.");
     await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] > summary').click();
     assert.ok(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] .archive-evidence').count() >= 1);
     await page.locator("#archive-tab-relationships").click();
@@ -193,9 +213,11 @@ async function run() {
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_17.png"));
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_16.png"));
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     await page.locator("#archive-profile-back").click();
@@ -206,10 +228,16 @@ async function run() {
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-LYRA"]').count() > 0);
     await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Gojouno Kaguya");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_18.png"));
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
     assert.ok((await page.locator("#archive-profile-summary").innerText()).includes("Hostess of Fertility"));
+    const ryuAnimePortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
+    assert.ok(ryuAnimePortrait.includes("danmachi5/character/images/chara_tachi_18.png"), "Ryu's anime state should use the official DanMachi V image.");
+    await page.locator("#archive-tab-summary").click();
+    assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 1,
+      "Official adaptation details should appear only in the anime continuity.");
     await page.locator("#archive-tab-relationships").click();
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("No hay relaciones interpersonales documentadas"));
     assert.equal(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count(), 0);
@@ -235,7 +263,7 @@ async function run() {
     await page.locator("#archive-return-search").click();
     assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
-    // Newly curated profiles have local original SVG portraits rather than broken or empty remote images.
+    // The newly curated anime roster loads an official image from its source host.
     await page.locator("#character-archive-query").fill("Bell Cranel");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
     const bellCardSelector = "#character-archive-results .archive-character-card:has([data-archive-open='DM-CHAR-BELL'])";
@@ -278,20 +306,33 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#lore-search-status")?.textContent.includes("No se encontró evidencia"), { timeout: 5000 });
     assert.equal(await page.locator(".lore-result").count(), 0);
     process.stdout.write("PASS lore UI: undocumented Ais likes produce explicit abstention.\n");
-    await page.route("https://danmachi.fandom.com/api.php**", route => route.fulfill({
-      status:200, contentType:"application/json",
-      body:JSON.stringify({query:{search:[{title:"Ryuu Lion",snippet:'<span class="searchmatch">Ryuu Lion</span> profile and timeline.'}]}})
-    }));
-    await page.route("https://en.wikipedia.org/w/api.php**", route => route.fulfill({
-      status:200, contentType:"application/json",
-      body:JSON.stringify({query:{search:[{title:"DanMachi",snippet:"A Japanese light novel series."}]}})
-    }));
+    await page.route("https://danmachi.fandom.com/api.php**", route => {
+      const url = new URL(route.request().url());
+      const action = url.searchParams.get("action");
+      const prop = url.searchParams.get("prop");
+      if(action==="parse") return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({parse:{text:{"*":"<aside><p>Hide infobox.</p></aside><p>Ryuu Lion is an elven adventurer whose history spans Astrea Familia and the main story of DanMachi.</p><p>She later works at the Hostess of Fertility.</p>"}}})});
+      if(action==="query"&&prop==="pageimages|info") return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({query:{pages:{"2264":{pageid:2264,title:"Ryuu Lion",canonicalurl:"https://danmachi.fandom.com/wiki/Ryuu_Lion",thumbnail:{source:"https://static.wikia.nocookie.net/dungeon-ni-deai-o-motemeru/images/3/33/Ryuu.png"}}}}})});
+      return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({query:{search:[{pageid:2264,title:"Ryuu Lion",snippet:'<span class="searchmatch">Ryuu Lion</span> profile and timeline.'}]}})});
+    });
+    await page.route("https://en.wikipedia.org/w/api.php**", route => {
+      const url = new URL(route.request().url());
+      const action = url.searchParams.get("action");
+      const prop = url.searchParams.get("prop");
+      if(action==="parse") return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({parse:{text:{"*":"<p>DanMachi is a Japanese light novel series written by Fujino Omori.</p>"}}})});
+      if(action==="query"&&prop==="pageimages|info") return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({query:{pages:{"100":{pageid:100,title:"DanMachi",canonicalurl:"https://en.wikipedia.org/wiki/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a_Dungeon",thumbnail:{source:"https://upload.wikimedia.org/wikipedia/en/a/a2/Danmachi.jpg"}}}}})});
+      return route.fulfill({status:200,contentType:"application/json",body:JSON.stringify({query:{search:[{pageid:100,title:"DanMachi",snippet:"A Japanese light novel series."}]}})});
+    });
+    await page.route("https://static.wikia.nocookie.net/**", route => route.fulfill({status:200,contentType:"image/png",body:Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+j8Z0AAAAASUVORK5CYII=","base64")}));
     await page.locator("#lore-query").fill("Ryu Lion");
     await page.locator("#lore-web-search-button").click();
     await page.waitForFunction(() => document.querySelectorAll("#lore-online-results .lore-online-result-card").length >= 2, {timeout:5000});
     assert.ok((await page.locator("#lore-online-status").innerText()).includes("pistas secundarias"));
     assert.ok((await page.locator("#lore-online-results").innerText()).includes("Ryuu Lion"));
     assert.ok(!((await page.locator("#lore-online-results").innerText()).includes("<span")));
+    assert.ok(await page.locator("#lore-online-results .lore-online-preview img").count() >= 1,"External research should display a source-attributed thumbnail where the wiki provides one.");
+    assert.ok((await page.locator("#lore-online-results .lore-online-extract").first().innerText()).includes("elven adventurer"),
+      "External research should show a useful lead excerpt, not only the page search snippet.");
+    assert.ok((await page.locator("#lore-online-results .lore-online-image-credit").first().innerText()).includes("No se guarda"));
     await page.locator("#lore-source-directory-details > summary").click();
     assert.ok((await page.locator("#lore-source-directory").innerText()).includes("GA Bunko"));
     assert.ok((await page.locator("#lore-source-directory").innerText()).includes("DanMachi Wiki"));

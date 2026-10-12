@@ -1855,7 +1855,7 @@
     return node;
   }
   function archiveBadge(text, kind) { return archiveElement("span", "archive-badge" + (kind ? " archive-badge--" + kind : ""), text); }
-  function archivePortrait(id, name, large) {
+  function archivePortrait(id, name, large, continuity) {
     const node = archiveElement("div", "archive-portrait" + (large ? " archive-portrait--large" : "") + " archive-portrait--" + String(id||"").toLowerCase().replace(/[^a-z0-9-]/g,""));
     const portraitSources = {
       "CHAR-RYUU-LION": "./assets/character-portraits/ryu-lion.svg",
@@ -1871,23 +1871,50 @@
       "CHAR-FREYA": "./assets/character-portraits/freya.svg",
       "CHAR-OTTAR": "./assets/character-portraits/ottar.svg"
     };
-    const portraitSource = portraitSources[id];
-    node.setAttribute("role","img");
-    node.setAttribute("aria-label", portraitSource
-      ? "Ilustración vectorial original de " + name + ", no oficial."
-      : "Marcador visual decorativo de " + name + "; no es retrato oficial.");
-    if (portraitSource) {
+    const official = typeof window.WordWaifuOfficialCharacterRoster !== "undefined"
+      ? window.WordWaifuOfficialCharacterRoster.get(id) : null;
+    const fallbackSource = portraitSources[id] || "";
+    const selectedContinuity = continuity || "ALL";
+    const historicalReference = selectedContinuity === "CONT-AR" && official && official.historicalImageUrl;
+    const mayUseOfficialPortrait = selectedContinuity === "ALL" || selectedContinuity === "CONT-ANIME";
+    const officialSource = historicalReference ? official.historicalImageUrl
+      : mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
+    const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
+    node.setAttribute("role", "img");
+    node.setAttribute("aria-label", officialSource
+      ? (historicalReference ? "Retrato oficial de referencia de DanMachi IV; no específico de la época " + selectedContinuity + "."
+        : "Retrato oficial enlazado desde " + (official.sourcePage || "la web oficial") + "; derechos de terceros.")
+      : fallbackSource ? "Ilustración vectorial conceptual original de " + name + ", no oficial."
+      : "Inicial representativa de " + name + "; no hay retrato verificado disponible.");
+    const caption = large ? archiveElement("span","archive-portrait-caption",
+      historicalReference ? "REFERENCIA VISUAL OFICIAL · NO ESPECÍFICA DE ÉPOCA"
+        : officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
+    function showInitial() {
+      node.replaceChildren(archiveElement("span","",initial));
+      if (large) node.appendChild(archiveElement("span","archive-portrait-caption","SIN RETRATO DISPONIBLE"));
+      node.setAttribute("aria-label","Sin imagen disponible para " + name + ".");
+    }
+    const activeSource = officialSource || fallbackSource;
+    if (activeSource) {
       const image = document.createElement("img");
       image.className = "archive-portrait-art";
-      image.src = portraitSource;
+      image.src = activeSource;
       image.alt = "";
       image.decoding = "async";
       image.loading = large ? "eager" : "lazy";
+      image.referrerPolicy = "strict-origin-when-cross-origin";
+      image.addEventListener("error", () => {
+        if (officialSource && fallbackSource && image.src !== new URL(fallbackSource, window.location.href).href) {
+          image.src = fallbackSource;
+          node.setAttribute("aria-label","Ilustración conceptual local de " + name + ", no oficial; el retrato externo no cargó.");
+          if (caption) caption.textContent = "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
+          return;
+        }
+        showInitial();
+      });
       node.appendChild(image);
-    } else {
-      node.appendChild(archiveElement("span","",id==="CHAR-ASTREA"?"✧":(String(name||"?").trim().charAt(0).toUpperCase()||"?")));
-    }
-    if(large)node.appendChild(archiveElement("span","archive-portrait-caption",portraitSource?"ILUSTRACIÓN VECTORIAL · NO OFICIAL":"RETRATO PENDIENTE"));
+    } else node.appendChild(archiveElement("span","",initial));
+    if (caption) node.appendChild(caption);
     return node;
   }
   const archiveCommunityReferences={
@@ -1965,7 +1992,7 @@
     if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados."));return;}
     items.forEach(item=>{
       const card=archiveElement("article","archive-character-card");card.setAttribute("role","listitem");
-      card.appendChild(archivePortrait(item.id,item.name,false));
+      card.appendChild(archivePortrait(item.id,item.name,false,item.preferredContinuity || "ALL"));
       const copy=archiveElement("div","archive-character-copy");copy.appendChild(archiveElement("h4","",item.name));copy.appendChild(archiveElement("p","",item.summary));
       const badges=archiveElement("div","archive-badge-row");
       if(item.states.length)item.states.slice(0,3).forEach(st=>{badges.appendChild(archiveBadge(st.code,"continuity"));if(st.affiliation)badges.appendChild(archiveBadge(st.affiliation,"muted"));});
@@ -1979,7 +2006,7 @@
   function renderArchiveHeader(profile){
     $("#archive-profile-name").textContent=profile.name;$("#archive-profile-eyebrow").textContent="FICHA DE PERSONAJE · "+profile.id;
     $("#archive-profile-summary").textContent=profile.state.summary;$("#archive-profile-state-note").textContent=profile.state.period;
-    const p=$("#archive-profile-portrait"),visual=archivePortrait(profile.id,profile.name,true);p.className=visual.className;p.setAttribute("aria-label",visual.getAttribute("aria-label"));p.replaceChildren(...Array.from(visual.childNodes));
+    const p=$("#archive-profile-portrait"),visual=archivePortrait(profile.id,profile.name,true,profile.continuity);p.className=visual.className;p.setAttribute("aria-label",visual.getAttribute("aria-label"));p.replaceChildren(...Array.from(visual.childNodes));
     const badges=$("#archive-profile-badges");badges.replaceChildren();badges.append(archiveBadge(profile.continuityLabel,"continuity"),archiveBadge(profile.state.affiliation,"muted"),archiveBadge("Estado provisional","muted"));
     if(profile.claims.some(c=>["major","endgame"].includes(String(c.spoilerLevel||"").toLowerCase())))badges.appendChild(archiveBadge("Incluye spoilers","spoiler"));
     const select=$("#archive-profile-continuity");select.replaceChildren();
@@ -1990,7 +2017,7 @@
     $("#archive-profile-panel").setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
   }
   function renderArchiveRelationship(rel){
-    const card=archiveElement("article","archive-relationship-card");card.appendChild(archivePortrait(rel.targetId,rel.targetName,false));
+    const card=archiveElement("article","archive-relationship-card");card.appendChild(archivePortrait(rel.targetId,rel.targetName,false,rel.continuity));
     const copy=archiveElement("div","archive-relationship-copy");copy.appendChild(archiveElement("h4","",rel.targetName));copy.appendChild(archiveElement("p","archive-relationship-type",rel.type+" · "+rel.continuity));copy.appendChild(archiveElement("p","",rel.description));
     const badges=archiveElement("div","archive-badge-row");badges.append(archiveBadge(rel.continuity,"continuity"),archiveBadge(rel.period,"muted"));copy.appendChild(badges);
     const actions=archiveElement("div","archive-card-actions");
@@ -1998,21 +2025,24 @@
     else actions.appendChild(archiveElement("span","archive-unavailable","Ficha pendiente; no se creó un enlace roto."));
     copy.appendChild(actions);rel.claims.forEach(c=>copy.appendChild(archiveEvidence(c)));card.appendChild(copy);return card;
   }
-  const archiveMomentArt={
-    "ryu-justice":"./assets/lore-moments/ryu-justice.svg",
-    "ryu-evilus":"./assets/lore-moments/ryu-evilus.svg",
-    "ryu-seven-days":"./assets/lore-moments/ryu-seven-days.svg"
-  };
   function renderArchiveMoment(moment){
     const d=archiveElement("details","archive-moment-card");d.dataset.momentId=moment.id;
     const summary=archiveElement("summary"),icon=archiveElement("span","archive-moment-icon",moment.id.includes("seven")?"◷":moment.id.includes("evilus")?"⚔":"✧");icon.setAttribute("aria-hidden","true");
     const title=archiveElement("span","archive-moment-title");title.append(archiveElement("strong","",moment.title),archiveElement("small","",moment.period));
     summary.append(icon,title);
-    const artPath=archiveMomentArt[moment.id];
-    if(artPath){
-      const art=archiveElement("img","archive-moment-art");art.src=artPath;art.alt="Recreación conceptual original no oficial: "+moment.title;art.loading="eager";art.decoding="async";art.dataset.momentArt=moment.id;
-      summary.appendChild(art);
-      summary.appendChild(archiveElement("span","archive-moment-art-caption","RECREACIÓN CONCEPTUAL · NO OFICIAL"));
+    if(moment.people.length){
+      const visualReference=archiveElement("div","archive-moment-visual-reference");
+      visualReference.appendChild(archiveElement("p","archive-moment-visual-label",
+        "RETRATOS OFICIALES DE PERSONAJES MENCIONADOS · NO ES UNA IMAGEN DE LA ESCENA"));
+      const strip=archiveElement("div","archive-moment-character-strip");
+      moment.people.slice(0,3).forEach(person=>{
+        const tile=archiveElement("div","archive-moment-character");
+        tile.appendChild(archivePortrait(person.id,person.name,false,activeArchiveContinuity));
+        tile.appendChild(archiveElement("span","archive-moment-character-name",person.name));
+        strip.appendChild(tile);
+      });
+      visualReference.appendChild(strip);
+      summary.appendChild(visualReference);
     }
     summary.appendChild(archiveElement("span","archive-moment-excerpt",moment.summary));d.appendChild(summary);
     const body=archiveElement("div","archive-moment-body");body.appendChild(archiveElement("p","",moment.summary));
@@ -2029,6 +2059,50 @@
     identity.append(archiveElement("h4","","Identidad y afiliación"),archiveElement("p","",profile.state.affiliation),archiveElement("p","","ID estable: "+profile.id),archiveGoTab("sources","Ver fuentes"));
     const m=profile.claims.find(c=>(c.aspects||[]).includes("motivation"));motivation.append(archiveElement("h4","","Valores y motivaciones"),archiveElement("p","",m?m.claim:"Sin información suficiente en esta continuidad."),archiveGoTab("personality","Explorar personalidad"));
     grid.append(identity,motivation);overview.appendChild(grid);root.appendChild(overview);
+    const official = profile.continuity === "CONT-ANIME"
+      ? (profile.officialReference ||
+        (typeof window.WordWaifuOfficialCharacterRoster !== "undefined" ? window.WordWaifuOfficialCharacterRoster.get(profile.id) : null))
+      : null;
+    if (official) {
+      const officialSection = archiveElement("section","archive-section archive-official-reference");
+      const officialHeading = archiveElement("div","archive-section-heading");
+      officialHeading.append(archiveElement("h3","","Ficha de referencia · adaptación oficial"),
+        archiveElement("p","",official.sourceTitle + " · resumen original con atribución"));
+      officialSection.appendChild(officialHeading);
+      officialSection.appendChild(archiveElement("p","archive-official-summary",official.summary));
+      const facts=archiveElement("div","archive-official-facts");
+      [
+        ["Familia / afiliación",official.family],
+        ["Especie",official.species],
+        ["Nivel",official.level == null ? "No indicado en esta referencia" : "Nivel " + official.level],
+        ["Epíteto",official.epithet || "No indicado"],
+        ["Voz",official.voice || "No indicada"],
+        ["Función",official.role || "No indicada"]
+      ].forEach(([label,value])=>{
+        const item=archiveElement("article","archive-official-fact");
+        item.append(archiveElement("span","",label),archiveElement("strong","",String(value)));
+        facts.appendChild(item);
+      });
+      officialSection.appendChild(facts);
+      [
+        ["Personalidad y conducta",official.personality],
+        ["Capacidades y función",official.abilities],
+        ["Vínculos destacados",official.relationships]
+      ].forEach(([headingText,bodyText])=>{
+        if(!bodyText)return;
+        const block=archiveElement("div","archive-official-detail");
+        block.append(archiveElement("h4","",headingText),archiveElement("p","",bodyText));
+        officialSection.appendChild(block);
+      });
+      const sourceLinks=archiveElement("div","archive-official-source-links");
+      appendLoreLink(sourceLinks,"Abrir perfil oficial y fuente de la imagen ↗",official.sourcePage,true);
+      const communitySearch = "https://danmachi.fandom.com/wiki/Special:Search?query=" + encodeURIComponent(official.name);
+      appendLoreLink(sourceLinks,"Contrastar en la wiki comunitaria (fuente secundaria) ↗",communitySearch,true);
+      officialSection.appendChild(sourceLinks);
+      officialSection.appendChild(archiveElement("p","archive-research-note",
+        "La ilustración se carga desde el dominio oficial y no se copia al repositorio. La wiki comunitaria puede ofrecer más detalle, pero es secundaria y debe contrastarse; sin conexión se usa una ilustración conceptual local si existe."));
+      root.appendChild(officialSection);
+    }
     const relSection=archiveElement("section","archive-section"),rh=archiveElement("div","archive-section-heading");rh.append(archiveElement("h3","","Personas relacionadas"),archiveGoTab("relationships","Ver red completa"));relSection.appendChild(rh);
     const relGrid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.slice(0,4).forEach(r=>relGrid.appendChild(renderArchiveRelationship(r)));else relGrid.appendChild(archiveEmpty("No hay vínculos personales respaldados para esta continuidad."));relSection.appendChild(relGrid);root.appendChild(relSection);
     const momentSection=archiveElement("section","archive-section"),mh=archiveElement("div","archive-section-heading");mh.append(archiveElement("h3","","Momentos importantes"),archiveGoTab("moments","Ver momentos y contexto"));momentSection.appendChild(mh);
@@ -2253,7 +2327,22 @@
         section.append(archiveElement("h4","",provider.providerLabel),archiveElement("p","lore-online-note",provider.authority+". "+provider.note));
         if(provider.results.length) provider.results.forEach(hit=>{
           const card=archiveElement("article","lore-online-result-card");
-          card.append(archiveElement("h5","",hit.title),archiveElement("p","",hit.snippet),archiveElement("span","lore-online-tier","Resultado externo · no verificado"));
+          if(hit.thumbnailUrl){
+            const preview=archiveElement("figure","lore-online-preview");
+            const image=document.createElement("img");
+            image.src=hit.thumbnailUrl;
+            image.alt="Miniatura de referencia: "+hit.title;
+            image.loading="lazy";
+            image.decoding="async";
+            image.referrerPolicy="strict-origin-when-cross-origin";
+            image.addEventListener("error",()=>preview.remove());
+            preview.appendChild(image);
+            if(hit.imageCredit)preview.appendChild(archiveElement("figcaption","lore-online-image-credit",hit.imageCredit));
+            card.appendChild(preview);
+          }
+          card.appendChild(archiveElement("h5","",hit.title));
+          card.appendChild(archiveElement("p",hit.extract?"lore-online-extract":"",hit.extract||hit.snippet));
+          card.appendChild(archiveElement("span","lore-online-tier",hit.extract?"Resumen de la introducción · fuente secundaria":"Resultado externo · no verificado"));
           appendLoreLink(card,"Abrir artículo ↗",hit.url,true); section.appendChild(card);
         });
         else {
