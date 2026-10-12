@@ -159,7 +159,10 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
     const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
-    assert.ok(ryuHistoricalPortrait.includes("ryu-lion.svg"), "Historical Ryu must use the conceptual local portrait, not DanMachi V art.");
+    assert.ok(ryuHistoricalPortrait.includes("danmachi4/character/images/chara_tachi_14.png"),
+      "Historical Ryu should use the official character reference from the Astrea Record adaptation era.");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-caption").innerText()).includes("NO ESPECÍFICA DE ÉPOCA"),
+      "Historical reference art must be clearly labeled as not era-specific.");
     await page.locator("#archive-tab-summary").click();
     assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 0,
       "DanMachi V character data must not leak into the historical Astrea Record dossier.");
@@ -216,7 +219,7 @@ async function run() {
     await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
     assert.ok((await page.locator("#archive-profile-summary").innerText()).includes("Hostess of Fertility"));
     const ryuAnimePortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
-    assert.ok(ryuAnimePortrait.includes("chara_tachi_18.png"), "Ryu's anime state should use the official DanMachi V image.");
+    assert.ok(ryuAnimePortrait.includes("danmachi5/character/images/chara_tachi_18.png"), "Ryu's anime state should use the official DanMachi V image.");
     await page.locator("#archive-tab-summary").click();
     assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 1,
       "Official adaptation details should appear only in the anime continuity.");
