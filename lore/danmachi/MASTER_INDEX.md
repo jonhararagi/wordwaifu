@@ -24,6 +24,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Plantilla de arco](templates/registro-arco.md)
 - [Plantilla de capítulo/escena](templates/registro-capitulo-escena.md)
 - [Registro maestro de fuentes](sources/00-registro-fuentes.md)
+- [DMR-007 · Wiki comunitaria como fuente secundaria para expedientes profundos](sources/DMR-007-wiki-comunitaria.md)
 - [Matriz de continuidad entre novela, spin-offs y adaptaciones](continuity/00-matriz-de-continuidad.md)
 - [Índice de arcos narrativos](arcs/00-indice-arcos.md)
 - [Índice de plantillas individuales de los volúmenes](volumes/main/README.md)
