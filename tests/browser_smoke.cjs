@@ -2493,19 +2493,18 @@ async function run() {
     // IndexedDB CRUD and reload: edit an existing assignment, reload the app, then delete it.
     const backgroundCard = page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first();
     await backgroundCard.getByRole("button", { name: "Editar" }).first().click();
+    const originalBackgroundUpdatedAt = backgroundAsset.updatedAt;
     await page.locator("#art-prompt").fill("Panorámica revisada de Orario bajo la lluvia.");
     await page.locator("#art-save").click();
-    await page.waitForFunction(async () => {
+    await page.waitForFunction(async (previousUpdatedAt) => {
       const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
-      return Boolean(asset && asset.prompt.includes("revisada"));
-    }, { timeout: 5000 });
-    assert.ok((await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"))).prompt.includes("revisada"),
-      "Editing an IndexedDB assignment must update its saved prompt.");
+      return Boolean(asset && asset.prompt.includes("revisada") && asset.updatedAt !== previousUpdatedAt);
+    }, originalBackgroundUpdatedAt, { timeout: 5000 });
     await page.reload({ waitUntil: "networkidle" });
     await page.locator('.nav-item[data-view="art"]').click();
-    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", null, { timeout: 5000 });
     assert.ok((await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"))).prompt.includes("revisada"),
-      "An edited IndexedDB assignment must survive a full page reload.");
+      "Editing an IndexedDB assignment must update its saved prompt and survive a full page reload.");
     await page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first().getByRole("button", { name: "Eliminar" }).first().click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
     assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
@@ -2572,15 +2571,17 @@ async function run() {
     assert.equal(await fallbackPage.locator("#art-assignment-count").innerText(), "1",
       "A successful localStorage fallback save must appear in the gallery even when IndexedDB remains readable only as a failing backend.");
     await fallbackPage.locator(".art-assignment-card").getByRole("button", { name: "Editar" }).click();
+    const originalFallbackUpdatedAt = await fallbackPage.evaluate(async () =>
+      (await window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test")).updatedAt);
     await fallbackPage.locator("#art-prompt").fill("Prompt editado y persistido en el respaldo.");
     await fallbackPage.locator("#art-save").click();
-    await fallbackPage.waitForFunction(async () => {
+    await fallbackPage.waitForFunction(async (previousUpdatedAt) => {
       const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test");
-      return Boolean(asset && asset.prompt.includes("editado"));
-    }, { timeout: 5000 });
+      return Boolean(asset && asset.prompt.includes("editado") && asset.updatedAt !== previousUpdatedAt);
+    }, originalFallbackUpdatedAt, { timeout: 5000 });
     await fallbackPage.reload({ waitUntil: "networkidle" });
     await fallbackPage.locator('.nav-item[data-view="art"]').click();
-    await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
+    await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", null, { timeout: 5000 });
     assert.ok((await fallbackPage.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test"))).prompt.includes("editado"),
       "Fallback edits must survive a full page reload.");
     await fallbackPage.locator(".art-assignment-card").getByRole("button", { name: "Eliminar" }).click();
