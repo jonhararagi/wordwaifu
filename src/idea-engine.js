@@ -166,8 +166,10 @@
     form.requestSubmit();
   }
 
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
-  else init();
-
-  window.WordWaifuIdeaEngine = Object.freeze({ generate });
+  if (typeof module === "object" && module.exports) module.exports = Object.freeze({ generate });
+  if (typeof window !== "undefined") window.WordWaifuIdeaEngine = Object.freeze({ generate });
+  if (typeof document !== "undefined") {
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init, { once: true });
+    else init();
+  }
 })();
