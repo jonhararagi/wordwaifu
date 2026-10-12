@@ -181,12 +181,16 @@ function record(index,id){return (index.characters||[]).find(x=>x.id===id)||null
 function claimsFor(index,id){return (index.claims||[]).filter(c=>(c.characterIds||[]).includes(id));}
 function visible(level,filter){const v=String(level||"unknown").toLowerCase();if(filter==="hide-major")return v!=="major"&&v!=="endgame";if(filter==="safe-only")return v==="none"||v==="mild";return true;}
 function ordered(a){return unique(a).sort((x,y)=>{const i=ORDER.indexOf(x),j=ORDER.indexOf(y);return(i<0?99:i)-(j<0?99:j)||x.localeCompare(y);});}
-function defaultState(a){const s=ordered(a);return ["CONT-AR","CONT-ANIME","CROSS-CONTINUITY","CONT-MAIN-LN","CONT-AU"].find(x=>s.includes(x))||s[0]||"";}
+function defaultState(a){const s=ordered(a);return ["CONT-AR","CONT-MAIN-LN","CROSS-CONTINUITY","CONT-ANIME","CONT-AU"].find(x=>s.includes(x))||s[0]||"";}
 function state(id,c){
 const p=META[id];
 if(p&&p.states&&p.states[c])return p.states[c];
 const roster=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(id):null;
-if(roster&&c==="CONT-ANIME")return{summary:roster.summary,period:roster.sourceTitle+" · estado de adaptación; fecha interna no fijada",affiliation:roster.family||"Sin afiliación confirmada"};
+if(roster){
+  const dossier=roster.dossiers&&roster.dossiers[c];
+  if(dossier&&dossier.history)return{summary:dossier.history.slice(0,220)+(dossier.history.length>220?"…":""),period:c==="CONT-AR"?"Astrea Record · Era Oscura de Orario":c==="CONT-MAIN-LN"?"Novela ligera principal · eventos según el volumen consultado":c==="CROSS-CONTINUITY"?"Comparación entre continuidades":c==="CONT-ANIME"?(roster.sourceTitle+" · estado de adaptación"):"Historia alternativa",affiliation:roster.family||"Afiliación descrita en el expediente"};
+  if(c===(roster.continuity||"CONT-ANIME"))return{summary:roster.summary,period:roster.sourceTitle+" · estado de referencia; fecha interna no necesariamente fijada",affiliation:roster.family||"Sin afiliación confirmada"};
+}
 return{summary:"Ficha provisional basada únicamente en las afirmaciones de esta continuidad.",period:"Periodo exacto no establecido.",affiliation:"Sin afiliación suficiente para este estado"};
 }
 function refsClaims(index,refs,continuity,filter){return(index.claims||[]).filter(c=>((refs||[]).includes(c.claimId)||(refs||[]).includes(c.entryId))&&(!continuity||(c.continuityScopes||[]).includes(continuity))&&visible(c.spoilerLevel,filter));}
@@ -207,6 +211,7 @@ const related=(((REL[id]||{})[chosen])||[]).map(r=>{const claims=refsClaims(inde
 const moments=(((MOM[id]||{})[chosen])||[]).map(m=>{const claims=refsClaims(index,m.refs,chosen,filter);return claims.length?{id:m.id,title:m.title,period:m.period,summary:m.summary,claims:claims,spoilerLevel:worst(claims),people:unique(m.people||[]).filter(pid=>record(index,pid)).map(pid=>({id:pid,name:record(index,pid).name}))}:null;}).filter(Boolean);
 let timeline=(((TIMELINE[id]||{})[chosen])||[]).map(t=>{const claims=refsClaims(index,t.refs,chosen,filter);return claims.length?{id:t.id,title:t.title,period:t.period,claims:claims}:null;}).filter(Boolean);
 if(!timeline.length)timeline=shown.map(c=>({id:c.entryId,title:c.heading,period:c.eraOrInterval||"Periodo no determinado",claims:[c]}));
-return{id:ch.id,name:ch.name,aliases:ch.aliases||[],profilePath:ch.profilePath,overview:meta.overview||(official?official.summary:"Ficha provisional basada en evidencia disponible."),continuity:chosen,continuityLabel:LABELS[chosen]||chosen,availableContinuities:scopes,state:state(id,chosen),officialReference:official,claims:shown,allStateClaims:allState,relationships:related,moments:moments,timeline:timeline,missingContinuities:["CONT-MAIN-LN","CONT-AU"].filter(x=>!scopes.includes(x))};}
+const dossier=official&&official.dossiers&&official.dossiers[chosen]&&visible(official.dossiers[chosen].spoilerLevel,filter)?official.dossiers[chosen]:null;
+return{id:ch.id,name:ch.name,aliases:ch.aliases||[],profilePath:ch.profilePath,overview:meta.overview||(dossier?dossier.history:(official?official.summary:"Ficha provisional basada en evidencia disponible.")),continuity:chosen,continuityLabel:LABELS[chosen]||chosen,availableContinuities:scopes,state:state(id,chosen),officialReference:official,officialDossier:dossier,claims:shown,allStateClaims:allState,relationships:related,moments:moments,timeline:timeline,missingContinuities:["CONT-MAIN-LN","CONT-AU"].filter(x=>!scopes.includes(x))};}
 return{list:list,getProfile:profile,getExtendedInfo:extendedInfo,continuityLabels:LABELS,continuityOrder:ORDER,defaultContinuity:defaultState,spoilerVisible:visible};
 });

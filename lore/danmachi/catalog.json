@@ -1244,6 +1244,18 @@
       "path": "research/inbox/BATCH-DM-005-astrea-familia-network.md",
       "type": "character_relationship_batch",
       "status": "present"
+    },
+    {
+      "document_id": "SOURCE-DMR-007",
+      "path": "sources/DMR-007-wiki-comunitaria.md",
+      "type": "secondary_source_register",
+      "status": "present"
+    },
+    {
+      "document_id": "RESEARCH-DM-006",
+      "path": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "type": "character_roster_batch",
+      "status": "present"
     }
   ],
   "lastStructuredSync": {
