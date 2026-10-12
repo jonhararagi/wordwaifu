@@ -1896,7 +1896,7 @@
       image.alt = "";
       image.decoding = "async";
       image.loading = large ? "eager" : "lazy";
-      image.referrerPolicy = "no-referrer";
+      image.referrerPolicy = "strict-origin-when-cross-origin";
       image.addEventListener("error", () => {
         if (officialSource && fallbackSource && image.src !== new URL(fallbackSource, window.location.href).href) {
           image.src = fallbackSource;
@@ -2090,7 +2090,7 @@
         "La ilustración se carga directamente desde el dominio oficial y no está copiada en el repositorio. Los titulares conservan todos los derechos; sin conexión se usa una ilustración conceptual local si existe."));
       root.appendChild(officialSection);
     }
-    const relSection=archiveElement("section","archive-section"),rh=archiveElement("div","archive-profile-heading");rh.append(archiveElement("h3","","Personas relacionadas"),archiveGoTab("relationships","Ver red completa"));relSection.appendChild(rh);
+    const relSection=archiveElement("section","archive-section"),rh=archiveElement("div","archive-section-heading");rh.append(archiveElement("h3","","Personas relacionadas"),archiveGoTab("relationships","Ver red completa"));relSection.appendChild(rh);
     const relGrid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.slice(0,4).forEach(r=>relGrid.appendChild(renderArchiveRelationship(r)));else relGrid.appendChild(archiveEmpty("No hay vínculos personales respaldados para esta continuidad."));relSection.appendChild(relGrid);root.appendChild(relSection);
     const momentSection=archiveElement("section","archive-section"),mh=archiveElement("div","archive-section-heading");mh.append(archiveElement("h3","","Momentos importantes"),archiveGoTab("moments","Ver momentos y contexto"));momentSection.appendChild(mh);
     const moments=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.slice(0,3).forEach(mo=>moments.appendChild(renderArchiveMoment(mo)));else moments.appendChild(archiveEmpty("No hay suficientes acontecimientos curados para esta continuidad."));momentSection.appendChild(moments);root.appendChild(momentSection);
