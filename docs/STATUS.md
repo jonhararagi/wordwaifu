@@ -47,6 +47,7 @@
 - [x] CI de código y regresión duplicada en verde: sintaxis, 18 pruebas de esquema, Chromium y validación estructural; [#38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741).
 - [x] El respaldo local de otro universo sobrevive al movimiento a papelera y al borrado permanente.
 - [x] Proyectos con el mismo nombre y distintos IDs permanecen aislados en mover/restaurar/borrar.
+- [x] Regresión automatizada `PASS_SIMULATED` para `QuotaExceededError`: el respaldo previo se conserva, IndexedDB puede completar el guardado con advertencia y el fallo simultáneo de ambos almacenes rechaza la operación. Smoke Chromium en HEAD `e098e790432578ef1d8e115e82dc90ed4e651960`, [Validate WordWaifu run 38292740554](https://github.com/jonhararagi/wordwaifu/actions/runs/38292740554) y [push run 38292735507](https://github.com/jonhararagi/wordwaifu/actions/runs/38292735507), ambos PASS.
 - [ ] Cuota real agotada o limitación del entorno demostrada y documentada; excepciones inyectadas no equivalen a cuota real.
 - [ ] Revisión visual/manual en Windows 11.
 ## Límites conocidos del producto
@@ -61,4 +62,4 @@ Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs
 ## Actualización de continuidad — plan de cuota y Windows 11 (2026-10-10)
 - Se añadió [`docs/WF-004-C3-QUOTA-WINDOWS-TEST-PLAN.md`](WF-004-C3-QUOTA-WINDOWS-TEST-PLAN.md) para definir evidencia `PASS_SIMULATED` frente a `PASS_REAL`, criterios seguros para investigar cuota real y una lista reproducible de revisión manual en Windows 11.
 - Esta adición es documentación, no una ejecución de pruebas: no acredita cuota real ni inspección Windows.
-- **WF-004-C.3 continúa PARTIAL.** Siguientes pasos: implementar/verificar la regresión automatizada de fallo simulado si aún falta; ejecutar CI; realizar cuota real solo en entorno aislado seguro si es viable; mantener Windows 11 como `NOT_RUN` hasta contar con ejecución real.
+- **WF-004-C.3 continúa PARTIAL.** Siguientes pasos: la regresión automatizada simulada ya está cubierta y pasó en Chromium; mantener cuota real como `NOT_RUN` hasta que pueda probarse con seguridad en un perfil desechable o se documente la limitación del runner; mantener Windows 11 como `NOT_RUN` hasta contar con revisión manual ejecutada.
