@@ -1832,7 +1832,14 @@
     const portraitSources = {
       "CHAR-RYUU-LION": "./assets/character-portraits/ryu-lion.svg",
       "CHAR-ALISE-LOVELACE": "./assets/character-portraits/alise-lovelace.svg",
-      "CHAR-ASTREA": "./assets/character-portraits/astrea.svg"
+      "CHAR-ASTREA": "./assets/character-portraits/astrea.svg",
+      "DM-CHAR-BELL": "./assets/character-portraits/bell-cranel.svg",
+      "DM-CHAR-HESTIA": "./assets/character-portraits/hestia.svg",
+      "DM-CHAR-AIS": "./assets/character-portraits/ais-wallenstein.svg",
+      "DM-CHAR-EINA": "./assets/character-portraits/eina-tulle.svg",
+      "CHAR-FINN-DEIMNE": "./assets/character-portraits/finn-deimne.svg",
+      "CHAR-FREYA": "./assets/character-portraits/freya.svg",
+      "CHAR-OTTAR": "./assets/character-portraits/ottar.svg"
     };
     const portraitSource = portraitSources[id];
     node.setAttribute("role","img");
@@ -1945,7 +1952,7 @@
     const relGrid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.slice(0,2).forEach(r=>relGrid.appendChild(renderArchiveRelationship(r)));else relGrid.appendChild(archiveEmpty("No hay vínculos personales respaldados para esta continuidad."));relSection.appendChild(relGrid);root.appendChild(relSection);
     const momentSection=archiveElement("section","archive-section"),mh=archiveElement("div","archive-section-heading");mh.append(archiveElement("h3","","Momentos importantes"),archiveGoTab("moments","Ver momentos y contexto"));momentSection.appendChild(mh);
     const moments=archiveElement("div","archive-moment-grid");if(profile.moments.length)profile.moments.slice(0,3).forEach(mo=>moments.appendChild(renderArchiveMoment(mo)));else moments.appendChild(archiveEmpty("No hay suficientes acontecimientos curados para esta continuidad."));momentSection.appendChild(moments);root.appendChild(momentSection);
-    const more=archiveElement("section","archive-more-info-cta");more.append(archiveElement("div","",""),archiveElement("h3","","¿Querés conocer mejor a "+profile.name+"?"),archiveElement("p","","Abrí un resumen ampliado con contexto, evolución, límites de la evidencia y referencias en español cuando están disponibles."));
+    const more=archiveElement("section","archive-more-info-cta");more.append(archiveElement("h3","","¿Querés conocer mejor a "+profile.name+"?"),archiveElement("p","","Abrí un resumen ampliado con contexto, evolución, límites de la evidencia y referencias en español cuando están disponibles."));
     const moreButton=archiveElement("button","primary-button","Más info · resumen ampliado ↗");moreButton.type="button";moreButton.dataset.archiveMoreInfo="true";more.appendChild(moreButton);root.appendChild(more);return root;
   }
   function renderArchivePersonality(profile){
