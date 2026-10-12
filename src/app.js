@@ -1889,7 +1889,7 @@
     window.WordWaifuCharacterArchive.continuityOrder.forEach(scope=>{const opt=new Option((window.WordWaifuCharacterArchive.continuityLabels[scope]||scope)+(profile.availableContinuities.includes(scope)?"":" · sin evidencia registrada"),scope);if(!profile.availableContinuities.includes(scope))opt.disabled=true;select.appendChild(opt);});
     select.value=profile.continuity;$("#archive-profile-back").textContent=archiveNavigationStack.length?"← Volver a ficha anterior":"← Volver a resultados";
     $("#archive-return-search").classList.remove("hidden");
-    $("#archive-profile-tabs [role=tab]").forEach(tab=>{const yes=tab.dataset.profileTab===activeArchiveTab;tab.setAttribute("aria-selected",yes?"true":"false");tab.tabIndex=yes?0:-1;});
+    $$("#archive-profile-tabs [role=tab]").forEach(tab=>{const yes=tab.dataset.profileTab===activeArchiveTab;tab.setAttribute("aria-selected",yes?"true":"false");tab.tabIndex=yes?0:-1;});
     $("#archive-profile-panel").setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
   }
   function renderArchiveRelationship(rel){
