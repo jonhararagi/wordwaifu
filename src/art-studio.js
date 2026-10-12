@@ -49,23 +49,33 @@
     // successful fallback saves; IndexedDB wins when both contain the same key.
     const records = new Map(indexedRecords.map(record => [record.key, record]));
     for (const record of Object.values(fallbackRead())) {
-      if (record && record.key && !records.has(record.key)) records.set(record.key, record);
+      if (!record || !record.key) continue;
+      const indexedValue = records.get(record.key);
+      if (!indexedValue || String(record.updatedAt || "") > String(indexedValue.updatedAt || "")) {
+        records.set(record.key, record);
+      }
     }
     return Array.from(records.values());
   }
 
   async function readOne(key) {
     if (memoryCache.has(key)) return memoryCache.get(key);
+    let indexedValue = null;
     try {
       const db = await openDatabase();
-      const value = await new Promise((resolve, reject) => {
+      indexedValue = await new Promise((resolve, reject) => {
         const request = db.transaction(STORE, "readonly").objectStore(STORE).get(key);
         request.onsuccess = () => resolve(request.result || null);
-        request.onerror = () => reject(request.error);
+        request.onerror = () => reject(request.error || new Error("No se pudo leer el recurso de IndexedDB."));
       });
-      if (value) { memoryCache.set(key, value); return value; }
     } catch (_) {}
-    const value = fallbackRead()[key] || null;
+
+    const fallbackValue = fallbackRead()[key] || null;
+    // A failed IndexedDB write may leave an older record readable in the database.
+    // Prefer the fallback copy only when its timestamp proves it is newer.
+    const value = fallbackValue && (!indexedValue ||
+      String(fallbackValue.updatedAt || "") > String(indexedValue.updatedAt || ""))
+      ? fallbackValue : indexedValue;
     if (value) memoryCache.set(key, value);
     return value;
   }
@@ -81,6 +91,13 @@
         transaction.onabort = () => reject(transaction.error || new Error("Guardado cancelado"));
       });
       memoryCache.set(record.key, record);
+      // Remove an obsolete fallback copy after the database commit. If cleanup
+      // fails, reads still choose the newest record by updatedAt.
+      const fallback = fallbackRead();
+      if (fallback[record.key]) {
+        delete fallback[record.key];
+        try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); } catch (_) {}
+      }
       return "indexeddb";
     } catch (_) {
       const fallback = fallbackRead();
