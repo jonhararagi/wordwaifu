@@ -180,6 +180,7 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    await page.locator("#archive-tab-summary").click();
     // The summary itself now exposes more than two related people, with a navigable roster graph.
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').count() > 0);
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-LYRA"]').count() > 0);
