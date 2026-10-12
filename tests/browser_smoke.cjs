@@ -2626,7 +2626,8 @@ async function run() {
                   if (record && record.deleted && !window.__failArtDelete) {
                     queueMicrotask(() => transaction.oncomplete && transaction.oncomplete());
                   } else if (mode === "readwrite") queueMicrotask(() => {
-                    transaction.error = new Error("Simulated IndexedDB write failure");
+                    transaction.error = new Error(record && record.deleted
+                      ? "Simulated IndexedDB delete failure" : "Simulated IndexedDB write failure");
                     if (transaction.onerror) transaction.onerror();
                   });
                 },
