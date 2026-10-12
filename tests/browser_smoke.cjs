@@ -2591,6 +2591,42 @@ async function run() {
     process.stdout.write("PASS art studio: uploaded art persists by entity ID, prompts generate from character data, and custom portraits override the reference image.\\n");
     process.stdout.write("PASS dossiers: the Bell profile renders extended researched content.\\n");
 
+    // Connected lore path: Ryu -> Alise -> back to Ryu, then switch franchise and follow Geass.
+    await page.locator('.nav-item[data-view="universe"]').click();
+    await page.locator("#universe-search").fill("Ryu Lion");
+    await page.waitForFunction(() => document.querySelector('[data-explorer-open="CHAR-RYUU-LION"]') !== null, { timeout: 5000 });
+    await page.locator('[data-explorer-open="CHAR-RYUU-LION"]').click();
+    await page.waitForFunction(() => document.querySelector("#universe-entity-panel h2")?.textContent === "Ryu Lion", { timeout: 5000 });
+    const ryuConnections = await page.locator("#universe-entity-panel").innerText();
+    assert.ok(ryuConnections.includes("Alise Lovelace") && ryuConnections.includes("Astrea Familia"),
+      "Ryu's detail must lead to Alise and Astrea Familia.");
+    await page.locator('#universe-entity-panel [data-explorer-action="open:CHAR-ALISE-LOVELACE"]').click();
+    await page.waitForFunction(() => document.querySelector("#universe-entity-panel h2")?.textContent === "Alise Lovelace", { timeout: 5000 });
+    await page.locator('#universe-entity-panel [data-explorer-action="back"]').click();
+    await page.waitForFunction(() => document.querySelector("#universe-entity-panel h2")?.textContent === "Ryu Lion", { timeout: 5000 });
+    process.stdout.write("PASS connected lore: Ryu -> Alise -> back preserves navigation context.\\n");
+    await page.locator("#universe-filter").selectOption("Code Geass");
+    await page.locator("#universe-search").fill("Lelouch");
+    await page.waitForFunction(() => document.querySelector('[data-explorer-open="CG-CHAR-LELOUCH"]') !== null, { timeout: 5000 });
+    await page.locator('[data-explorer-open="CG-CHAR-LELOUCH"]').click();
+    await page.waitForFunction(() => document.querySelector("#universe-entity-panel h2")?.textContent === "Lelouch Lamperouge", { timeout: 5000 });
+    assert.ok((await page.locator("#universe-entity-panel").innerText()).includes("C.C."));
+    assert.ok((await page.locator("#universe-entity-panel").innerText()).includes("Geass"));
+    process.stdout.write("PASS connected lore: Code Geass seed links Lelouch, C.C. and Geass.\\n");
+
+    // Generated candidates must be editable before becoming standalone project records.
+    await page.locator('.nav-item[data-view="powers"]').click();
+    await page.locator('[data-power-action="generate"]').click();
+    await page.waitForFunction(() => (document.querySelector("#power-name")?.value || "").length > 0, { timeout: 5000 });
+    await page.locator("#power-name").fill("Smoke Test Candidate");
+    await page.locator("#power-description").fill("Ficha creada por la prueba para validar el catálogo individual.");
+    await page.locator("#power-record-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelector("#power-record-list")?.innerText.includes("Smoke Test Candidate"), { timeout: 5000 });
+    await page.waitForFunction(() => /guardado/i.test(document.querySelector("#power-form-status")?.textContent || ""), { timeout: 5000 });
+    assert.ok((await page.locator("#power-catalog-status").innerText()).includes("1 poder(es) guardado(s)"),
+      "Saving a candidate must create a persistent standalone power record.");
+    process.stdout.write("PASS power workbench: generated candidate can be edited and saved as a standalone entity.\\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {
