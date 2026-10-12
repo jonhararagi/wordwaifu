@@ -64,7 +64,12 @@
     const typeLabel=el("label","");typeLabel.appendChild(el("span","","Tipo de ficha"));
     const type=document.createElement("select");type.id="universe-type-filter";
     [["all","Todos los tipos"],["character","Personajes"],["group","Familias / organizaciones"],["power","Poderes / sistemas"],["place","Lugares"],["event","Acontecimientos"],["other","Otros"]].forEach(([v,l])=>type.add(new Option(l,v)));
-    typeLabel.appendChild(type);filters.appendChild(typeLabel);directory.appendChild(filters);
+    typeLabel.appendChild(type);filters.appendChild(typeLabel);
+    const continuityLabel=el("label","");continuityLabel.appendChild(el("span","","Continuidad"));
+    const continuity=document.createElement("select");continuity.id="universe-continuity-filter";
+    [["all","Todas"],["CONT-R1","Code Geass · R1"],["CONT-R2","Code Geass · R2"],["CONT-RESURRECTION","Re;surrection"],["CONT-ANIME","DanMachi · anime"],["CONT-AR","DanMachi · Astrea Record"],["CONT-MAIN-LN","DanMachi · novela principal"]].forEach(([v,l])=>continuity.add(new Option(l,v)));
+    continuityLabel.appendChild(continuity);filters.appendChild(continuityLabel);
+    directory.appendChild(filters);
     const resultsHeading=el("div","universe-results-heading");resultsHeading.append(el("h4","","Resultados"),el("span","","Buscá o seleccioná una ficha"));directory.appendChild(resultsHeading);
     const results=el("div","universe-search-results");results.id="universe-search-results";results.setAttribute("role","list");directory.appendChild(results);
     const status=el("p","field-help","Las fichas y conexiones son parciales y conservan el nivel de fuente.");status.id="universe-explorer-status";status.setAttribute("role","status");directory.appendChild(status);
@@ -73,14 +78,15 @@
     detail.appendChild(el("div","empty-state","Buscá Ryu, Lelouch, una Familia o un sistema de poder para comenzar."));
     layout.appendChild(detail);root.appendChild(layout);
     search.addEventListener("input",renderResults);universe.addEventListener("change",renderResults);type.addEventListener("change",renderResults);
+    continuity.addEventListener("change",()=>{renderResults();if(activeId)renderDetail();});
     root.addEventListener("click",onClick);
     renderResults();
   }
   function renderResults(){
     if(!root||!graph)return;
-    const results=$("#universe-search-results"),query=$("#universe-search").value,universe=$("#universe-filter").value,type=$("#universe-type-filter").value;
+    const results=$("#universe-search-results"),query=$("#universe-search").value,universe=$("#universe-filter").value,type=$("#universe-type-filter").value,continuity=$("#universe-continuity-filter").value;
     results.replaceChildren();
-    const found=graph.search(query,{universe,type:"all"}).filter(entity=>universe==="all"||entity.universe===universe)
+    const found=graph.search(query,{universe,type:"all",continuity}).filter(entity=>universe==="all"||entity.universe===universe)
       .filter(entity=>type==="all"||typeGroup(entity.type)===type).slice(0,80);
     $("#universe-explorer-status").textContent=found.length+" resultados"+(query?" para «"+query+"»":"")+". Cada conexión muestra su continuidad y tipo de evidencia.";
     if(!found.length){results.appendChild(el("div","empty-state","No hay coincidencias con estos filtros. Probá otro nombre o cambiá de franquicia."));return;}
@@ -130,7 +136,8 @@
     });
     if(facts.childNodes.length)panel.appendChild(facts);
     if(entity.notes)panel.appendChild(el("p","universe-source-note","Límites de esta ficha: "+entity.notes));
-    const related=graph.getRelated(entity.id);
+    const selectedContinuity=$("#universe-continuity-filter")?.value || "all";
+    const related=graph.getRelated(entity.id,{continuity:selectedContinuity});
     const section=el("section","universe-related-section");
     const h=el("div","universe-related-heading");h.append(el("h3","","Seguir explorando"),el("span","",related.length+" conexiones"));section.appendChild(h);
     const queryNode=$("#universe-search");
