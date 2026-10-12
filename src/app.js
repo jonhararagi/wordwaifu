@@ -17,7 +17,8 @@
     organizations: ["Organizaciones", "Facciones, gremios y grupos que mueven tu universo."],
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
-    lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."]
+    lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."],
+    art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."]
   };
   const demo = {
     schemaVersion: 1,
@@ -951,9 +952,10 @@
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $("#lore-view").classList.toggle("hidden", activeView !== "lore");
+    $("#art-view").classList.toggle("hidden", activeView !== "art");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", activeView === "commands" || activeView === "stories" || activeView === "lore");
+    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art"].includes(activeView));
     renderMap();
     renderDetails();
     renderDirectory();
@@ -1895,26 +1897,54 @@
       node.setAttribute("aria-label","Sin imagen disponible para " + name + ".");
     }
     const activeSource = officialSource || fallbackSource;
+    let portraitImage = null;
     if (activeSource) {
-      const image = document.createElement("img");
-      image.className = "archive-portrait-art";
-      image.src = activeSource;
-      image.alt = "";
-      image.decoding = "async";
-      image.loading = large ? "eager" : "lazy";
-      image.referrerPolicy = "strict-origin-when-cross-origin";
-      image.addEventListener("error", () => {
-        if (officialSource && fallbackSource && image.src !== new URL(fallbackSource, window.location.href).href) {
-          image.src = fallbackSource;
+      portraitImage = document.createElement("img");
+      portraitImage.className = "archive-portrait-art";
+      portraitImage.src = activeSource;
+      portraitImage.alt = "";
+      portraitImage.decoding = "async";
+      portraitImage.loading = large ? "eager" : "lazy";
+      portraitImage.referrerPolicy = "strict-origin-when-cross-origin";
+      portraitImage.addEventListener("error", () => {
+        if (portraitImage.dataset.customArt === "true" && (officialSource || fallbackSource)) {
+          portraitImage.dataset.customArt = "false";
+          portraitImage.src = officialSource || fallbackSource;
+          if (caption) caption.textContent = officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
+          return;
+        }
+        if (officialSource && fallbackSource && portraitImage.src !== new URL(fallbackSource, window.location.href).href) {
+          portraitImage.src = fallbackSource;
           node.setAttribute("aria-label","Ilustración conceptual local de " + name + ", no oficial; el retrato externo no cargó.");
           if (caption) caption.textContent = "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
           return;
         }
         showInitial();
       });
-      node.appendChild(image);
+      node.appendChild(portraitImage);
     } else node.appendChild(archiveElement("span","",initial));
     if (caption) node.appendChild(caption);
+    if (window.WordWaifuArtStudio && typeof window.WordWaifuArtStudio.getAsset === "function") {
+      window.WordWaifuArtStudio.getAsset("character", id).then(asset => {
+        if (!asset || !asset.src || !node.isConnected) return;
+        let image = portraitImage;
+        if (!image) {
+          image = document.createElement("img");
+          image.className = "archive-portrait-art";
+          image.alt = "";
+          image.decoding = "async";
+          image.loading = large ? "eager" : "lazy";
+          image.addEventListener("error", () => showInitial());
+          node.replaceChildren(image);
+          if (caption) node.appendChild(caption);
+          portraitImage = image;
+        }
+        image.dataset.customArt = "true";
+        image.src = asset.src;
+        node.setAttribute("aria-label", "Arte personalizado asignado a " + name + ".");
+        if (caption) caption.textContent = "ARTE PERSONALIZADO · BIBLIOTECA LOCAL";
+      }).catch(() => {});
+    }
     return node;
   }
   const archiveCommunityReferences={
@@ -2084,6 +2114,25 @@
         facts.appendChild(item);
       });
       officialSection.appendChild(facts);
+      const dossier = window.WordWaifuCharacterDossiers && window.WordWaifuCharacterDossiers.get(profile.id);
+      if (dossier) {
+        const dossierHeading = archiveElement("div","archive-section-heading");
+        dossierHeading.append(archiveElement("h3","","Expediente ampliado"),archiveElement("p","","Contexto narrativo y rasgos concretos · "+official.name));
+        officialSection.appendChild(dossierHeading);
+        [
+          ["Historia y contexto",dossier.history],
+          ["Apariencia y diseño",dossier.appearance],
+          ["Personalidad y conducta",dossier.personality],
+          ["Habilidades y estilo de combate",dossier.abilities],
+          ["Vínculos y dinámica de grupo",dossier.relationships],
+          ["Conflictos y limitaciones",dossier.conflict]
+        ].forEach(([headingText,bodyText])=>{
+          if(!bodyText)return;
+          const block=archiveElement("div","archive-official-detail archive-dossier-detail");
+          block.append(archiveElement("h4","",headingText),archiveElement("p","",bodyText));
+          officialSection.appendChild(block);
+        });
+      }
       [
         ["Personalidad y conducta",official.personality],
         ["Capacidades y función",official.abilities],
@@ -2096,8 +2145,15 @@
       });
       const sourceLinks=archiveElement("div","archive-official-source-links");
       appendLoreLink(sourceLinks,"Abrir perfil oficial y fuente de la imagen ↗",official.sourcePage,true);
-      const communitySearch = "https://danmachi.fandom.com/wiki/Special:Search?query=" + encodeURIComponent(official.name);
-      appendLoreLink(sourceLinks,"Contrastar en la wiki comunitaria (fuente secundaria) ↗",communitySearch,true);
+      const dossierForSources = window.WordWaifuCharacterDossiers && window.WordWaifuCharacterDossiers.get(profile.id);
+      if (dossierForSources) {
+        [...new Set(dossierForSources.sources || [])].forEach((url,index) => {
+          appendLoreLink(sourceLinks,index===0?"Abrir wiki de referencia ↗":"Fuente complementaria ↗",url,true);
+        });
+      } else {
+        const communitySearch = "https://danmachi.fandom.com/wiki/Special:Search?query=" + encodeURIComponent(official.name);
+        appendLoreLink(sourceLinks,"Contrastar en la wiki comunitaria (fuente secundaria) ↗",communitySearch,true);
+      }
       officialSection.appendChild(sourceLinks);
       officialSection.appendChild(archiveElement("p","archive-research-note",
         "La ilustración se carga desde el dominio oficial y no se copia al repositorio. La wiki comunitaria puede ofrecer más detalle, pero es secundaria y debe contrastarse; sin conexión se usa una ilustración conceptual local si existe."));
