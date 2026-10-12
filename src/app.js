@@ -1926,23 +1926,32 @@
     if (caption) node.appendChild(caption);
     if (window.WordWaifuArtStudio && typeof window.WordWaifuArtStudio.getAsset === "function") {
       window.WordWaifuArtStudio.getAsset("character", id).then(asset => {
-        if (!asset || !asset.src || !node.isConnected) return;
-        let image = portraitImage;
-        if (!image) {
-          image = document.createElement("img");
-          image.className = "archive-portrait-art";
-          image.alt = "";
-          image.decoding = "async";
-          image.loading = large ? "eager" : "lazy";
-          image.addEventListener("error", () => showInitial());
-          node.replaceChildren(image);
-          if (caption) node.appendChild(caption);
-          portraitImage = image;
-        }
-        image.dataset.customArt = "true";
-        image.src = asset.src;
-        node.setAttribute("aria-label", "Arte personalizado asignado a " + name + ".");
-        if (caption) caption.textContent = "ARTE PERSONALIZADO · BIBLIOTECA LOCAL";
+        if (!asset || !asset.src) return;
+        // Profile header copies portrait children into a stable container, so
+        // apply the resolved assignment to every connected portrait for this ID.
+        const portraitClass = "archive-portrait--" + String(id||"").toLowerCase().replace(/[^a-z0-9-]/g,"");
+        const targets = node.isConnected ? [node] : Array.from(document.querySelectorAll("." + portraitClass));
+        targets.forEach(target => {
+          let image = target.querySelector(".archive-portrait-art");
+          if (!image) {
+            image = document.createElement("img");
+            image.className = "archive-portrait-art";
+            image.alt = "";
+            image.decoding = "async";
+            image.loading = large ? "eager" : "lazy";
+            image.addEventListener("error", () => {
+              if (officialSource || fallbackSource) image.src = officialSource || fallbackSource;
+              else target.replaceChildren(archiveElement("span","",initial));
+            });
+            target.replaceChildren(image);
+            if (large) target.appendChild(archiveElement("span","archive-portrait-caption","ARTE PERSONALIZADO · BIBLIOTECA LOCAL"));
+          }
+          image.dataset.customArt = "true";
+          image.src = asset.src;
+          target.setAttribute("aria-label", "Arte personalizado asignado a " + name + ".");
+          const targetCaption = target.querySelector(".archive-portrait-caption");
+          if (targetCaption) targetCaption.textContent = "ARTE PERSONALIZADO · BIBLIOTECA LOCAL";
+        });
       }).catch(() => {});
     }
     return node;
