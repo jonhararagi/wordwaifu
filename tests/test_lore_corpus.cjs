@@ -6,12 +6,13 @@ const root = path.join(__dirname, "..", "lore", "danmachi");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
 const documentPaths = [
   "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
-  "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md"
+  "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
+  "research/inbox/BATCH-DM-005-astrea-familia-network.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
-assert.equal(index.sourceClaimCount, 30);
-assert.equal(index.entryCount, 33);
+assert.equal(index.sourceClaimCount, 32);
+assert.equal(index.entryCount, 35);
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
@@ -35,4 +36,4 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 30 source claims, 32 entries, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 32 source claims, 35 entries, continuity split and abstention verified.\n");
