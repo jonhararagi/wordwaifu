@@ -139,7 +139,7 @@
         "CAPÍTULO 2 — EL EXPLOIT: el protagonista encuentra una solución técnicamente válida y moralmente desastrosa. " + party[0].name + " intenta ayudar, empeora el problema y obliga al grupo a pagar una consecuencia real.",
         "CAPÍTULO 3 — EL PRECIO: el grupo descubre quién saldría perjudicado por la victoria fácil. Deben elegir entre ganar sin esfuerzo y abandonar a alguien, o confiar entre ellos para intentar una solución más difícil.",
         "PROMESA DE LA HISTORIA: cada episodio resuelve un problema absurdo y deja una consecuencia que importa; los personajes pueden hacer payasadas sin que el dolor, los juramentos o el peligro se conviertan en chiste."
-      ].join("\\n\\n"),
+      ].join("\n\n"),
       status: "draft",
       generatedBy: "WordWaifu Rule Engine",
       generatedAt: new Date().toISOString(),
