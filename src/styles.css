@@ -351,3 +351,6 @@ select{background:#332d26;color:#e9dfd2}
 .story-chapter-form textarea[name="chapterContent"]{min-height:280px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;line-height:1.8}
 .story-editor-status{min-height:1.5em}
 @media(max-width:600px){.story-form-grid{grid-template-columns:1fr}.story-editor{padding:14px}.story-chapter-card{padding:11px}.story-editor-title{display:block}}
+
+.story-file-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:600px){.story-file-actions{justify-content:flex-start;margin-top:12px}}
