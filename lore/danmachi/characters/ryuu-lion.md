@@ -21,45 +21,45 @@ research_source_refs:
 ---
 # Ryu Lion / Ryuu Lion
 
-## Identity
+## Identidad
 
-- **Stable identity ID:** CHAR-RYUU-LION.
-- **Japanese name in source:** リュー・リオン.
-- **Naming note:** retain both “Ryu Lion” and “Ryuu Lion” as searched romanization variants until the project selects a display convention; do not create separate character IDs.
-- **Overall status:** provisional character record based on official web references. The source pages were checked, but the full novels were not opened.
+- **ID de identidad estable:** CHAR-RYUU-LION.
+- **Nombre japonés en la fuente:** リュー・リオン.
+- **Nota sobre el nombre:** conservar “Ryu Lion” y “Ryuu Lion” como variantes de romanización para búsquedas hasta que el proyecto elija una convención visible. No crear IDs separados.
+- **Estado general:** ficha provisional basada en referencias oficiales consultadas en la web. Se revisaron las páginas de referencia, pero no se consultaron íntegramente las novelas.
 
-## Temporal state A · Astrea Record
+## Estado temporal A · Astrea Record
 
-- **Continuity:** CONT-AR.
-- **Interval:** approximately seven years before Bell visits Orario; relative anchor only.
-- **Evidence:** the official GA Bunko synopsis for *Astrea Record* volume 1 presents Ryu under the goddess Astrea, pursuing her understanding of justice, and guided by Alise, identified as the Familia captain.
-- **Affiliation:** Astrea Familia during the historical period described by the volume 1 synopsis.
-- **Relevant relationships:** Astrea (goddess associated with the Familia) and Alise Lovelace (captain/guide in the synopsis).
-- **Claim and sources:** DMR-001-CLM-002, DMR-001-CLM-005; DMR-001-SRC-001, DMR-001-SRC-003.
-- **Limits:** this is based on an official publisher synopsis, not a chapter/page locator from the complete novel. Do not infer exact age, level, skill set, complete roster or individual fate.
+- **Continuidad:** CONT-AR.
+- **Periodo:** aproximadamente siete años antes de la visita de Bell a Orario; es una referencia temporal relativa.
+- **Evidencia:** la sinopsis oficial de GA Bunko para el volumen 1 de *Astrea Record* presenta a Ryu bajo la diosa Astrea, buscando su propia comprensión de la justicia y guiada por Alise, identificada como capitana de la Familia.
+- **Afiliación:** Astrea Familia durante el periodo histórico descrito por la sinopsis del volumen 1.
+- **Relaciones pertinentes:** Astrea (diosa asociada a la Familia) y Alise Lovelace (capitana y guía en la sinopsis).
+- **Afirmaciones y fuentes:** DMR-001-CLM-002, DMR-001-CLM-005; DMR-001-SRC-001, DMR-001-SRC-003.
+- **Límites:** la ficha se basa en una sinopsis editorial oficial, no en un localizador de capítulo o página de la novela completa. No inferir edad exacta, nivel, habilidades, plantilla completa ni destino individual.
 
-## Temporal state B · Official anime character profile
+## Estado temporal B · Perfil oficial del anime
 
-- **Continuity:** CONT-ANIME, not an automatic substitute for the main light novel.
-- **Interval:** a later state compared with the historical *Astrea Record* synopsis; no exact date is established by the profile.
-- **Evidence:** the official *DanMachi IV* character page lists Ryu in relation to Astrea Familia and Hostess of Fertility, presenting her in the later context as a former adventurer/worker at the establishment.
-- **Claim and source:** DMR-001-CLM-010; DMR-001-SRC-006.
-- **Limits:** this supports organizing states under one likely identity, but the cross-source synthesis remains provisional. Do not silently move anime-only biographical phrasing into the main novel continuity.
+- **Continuidad:** CONT-ANIME; no sustituye automáticamente a la novela ligera principal.
+- **Periodo:** estado posterior en comparación con la sinopsis histórica de *Astrea Record*; el perfil no establece una fecha exacta.
+- **Evidencia:** la página oficial de personajes de *DanMachi IV* relaciona a Ryu con Astrea Familia y Hostess of Fertility, y la presenta en ese contexto posterior como antigua aventurera y trabajadora del establecimiento.
+- **Afirmación y fuente:** DMR-001-CLM-010; DMR-001-SRC-006.
+- **Límites:** esto permite organizar ambos estados bajo una identidad probablemente común, pero la síntesis entre fuentes sigue siendo provisional. No trasladar silenciosamente expresiones biográficas exclusivas del anime a la continuidad de la novela principal.
 
-## Continuity handling
+## Gestión de continuidades
 
-Treat Ryu as a stable identity with separate temporal states. The documented historical affiliation and later profile context must not be collapsed into a single timeless description. In an AU, add separate AU states only when an author-approved divergence changes what happens to her.
+Tratar a Ryu como una identidad estable con estados temporales separados. La afiliación histórica documentada y el contexto posterior del perfil no deben fusionarse en una descripción atemporal. En una historia alternativa (AU), añadir estados propios solo cuando una divergencia aprobada por el autor cambie lo que le ocurre.
 
-## Open questions
+## Preguntas abiertas
 
-- [ ] Check the full *Astrea Record* volumes for internal locators and more detailed character state.
-- [ ] Determine what the primary main-series novel itself establishes about her later role, independent of the anime profile.
-- [ ] Verify exact romanization preferred by the edition used in this lore base.
-- [ ] Capture any AU effects on Ryu only after the author defines the OC’s Family and divergence.
+- [ ] Consultar los volúmenes completos de *Astrea Record* para localizar pasajes internos y documentar con más detalle el estado del personaje.
+- [ ] Determinar qué establece la novela principal sobre su papel posterior, de forma independiente al perfil del anime.
+- [ ] Verificar la romanización preferida por la edición que utilice esta base de lore.
+- [ ] Registrar efectos de la AU sobre Ryu únicamente después de que el autor defina la Familia del personaje original y la divergencia.
 
 ## Perfil psicológico inicial · DANMACHI-RESEARCH-002
 
-- **Estado histórico, CONT-AR:** la sinopsis oficial presenta a Ryu buscando su propia comprensión de la justicia bajo Astrea, con Alise y sus compañeras como guías. Esto muestra una formación moral en desarrollo, no una filosofía acabada e inmutable. [DMR-002-CLM-015]
-- **Bajo presión, CONT-AR:** la sinopsis del volumen 2 dice que las pérdidas durante el periodo luego llamado “Los siete días de la muerte” sacuden su sentido de justicia. El cambio general está en la sinopsis; las escenas exactas y sus consecuencias individuales requieren el volumen. [DMR-002-CLM-016]
-- **Límites:** no inferir gustos cotidianos, miedo específico ni diagnóstico psicológico desde el trauma o la pérdida.
+- **Estado histórico, CONT-AR:** la sinopsis oficial presenta a Ryu buscando su propia comprensión de la justicia bajo Astrea, con Alise y sus compañeras como guías. Esto sugiere una formación moral en desarrollo, no una filosofía acabada e inmutable. [DMR-002-CLM-015]
+- **Bajo presión, CONT-AR:** la sinopsis del volumen 2 indica que las pérdidas durante el periodo luego llamado “Los siete días de la muerte” sacuden su sentido de justicia. El cambio general figura en la sinopsis; las escenas exactas y sus consecuencias individuales requieren consultar el volumen. [DMR-002-CLM-016]
+- **Límites:** no inferir gustos cotidianos, miedos específicos ni diagnósticos psicológicos a partir del trauma o de las pérdidas.
 - **Continuidad:** mantener este estado separado del perfil posterior de taberna en CONT-ANIME.
