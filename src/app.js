@@ -2007,12 +2007,19 @@
   function openArchiveMoreInfo(){
     if(!activeArchiveProfile)return;
     const profile=activeArchiveProfile;
-    const info=window.WordWaifuCharacterArchive.getExtendedInfo(profile.id,profile.continuity);
+    const info=window.WordWaifuCharacterArchive.getExtendedInfo(profile.id,profile.continuity,loreArchiveIndex);
     const dialog=$("#archive-more-info-dialog"),body=$("#archive-more-info-content");
     $("#archive-more-info-title").textContent=info?info.title:(profile.name+" · resumen ampliado");
     body.replaceChildren();
     if(info){
       body.appendChild(archiveElement("p","archive-more-info-lead",info.summary));
+      if(info.repositoryProfile){
+        const sourceNote=archiveElement("p","archive-more-info-disclaimer",
+          "También se recuperaron notas existentes del repositorio: "+info.repositoryProfile.path+
+          " · estado documental: "+info.repositoryProfile.status+
+          ". Los apartados temporales se muestran por separado; los datos pendientes siguen marcados como tales.");
+        body.appendChild(sourceNote);
+      }
       (info.sections||[]).forEach(section=>{
         const block=archiveElement("section","archive-more-info-section");
         block.append(archiveElement("h3","",section.title),archiveElement("p","",section.text));
@@ -2109,7 +2116,7 @@
       select.value = selected;
       lorePanelPrepared = true;
     }
-    status.textContent = "Leídas " + index.sourceClaimCount + " afirmaciones; " + index.entryCount + " entradas de búsqueda. Búsqueda textual, sin IA; el corpus aún es parcial.";
+    status.textContent = "Leídas " + index.sourceClaimCount + " afirmaciones; " + index.entryCount + " entradas de búsqueda y " + (index.profileDocumentCount || 0) + " fichas previas recuperadas del repositorio. Búsqueda textual, sin IA; el corpus aún es parcial.";
     loreArchiveIndex = index;
     if (!archiveUiPrepared) { renderCharacterDirectory(); archiveUiPrepared = true; }
     return index;
