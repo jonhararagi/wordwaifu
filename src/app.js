@@ -2158,17 +2158,18 @@
   $("#zoom-out").addEventListener("click", () => { mapScale = Math.max(.75, mapScale - .12); renderMap(); });
   $("#zoom-reset").addEventListener("click", () => { mapScale = 1; renderMap(); });
   function projectHasGlobalSearchMatch(rawQuery) {
-    const needle = String(rawQuery || "").trim().toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const normalize = (value) => String(value || "").trim().toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const needle = normalize(rawQuery);
     if (!needle) return false;
-    const fields = [
-      ...state.characters.flatMap((item) => [item.name, item.role, item.species, item.description, item.motivation]),
-      ...state.locations.flatMap((item) => [item.name, item.type, item.description, item.government, item.climate]),
-      ...state.events.flatMap((item) => [item.name, item.title, item.description, item.summary]),
-      ...state.organizations.flatMap((item) => [item.name, item.type, item.description]),
-      ...state.relationships.flatMap((item) => [item.name, item.type, item.description]),
-      ...state.stories.flatMap((item) => [item.name, item.title, item.description, item.premise])
+    const names = [
+      ...state.characters.map((item) => item.name),
+      ...state.locations.map((item) => item.name),
+      ...state.events.map((item) => item.name || item.title),
+      ...state.organizations.map((item) => item.name),
+      ...state.relationships.map((item) => item.name),
+      ...state.stories.map((item) => item.name || item.title)
     ];
-    return fields.some((value) => String(value || "").toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g, "").includes(needle));
+    return names.some((value) => normalize(value).includes(needle));
   }
 
   function resetArchiveForGlobalSearch(rawQuery) {

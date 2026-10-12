@@ -108,16 +108,18 @@ async function run() {
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
     await page.locator("#global-search").fill("Ryu");
+    await page.keyboard.press("Enter");
     await page.waitForFunction(() =>
       document.querySelector("#view-title")?.textContent === "Consulta de lore" &&
       document.querySelector("#character-archive-query")?.value === "Ryu" &&
       document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').length === 1,
+      null,
       { timeout: 12000 }
     );
     await page.waitForFunction(() => {
       const img = document.querySelector("#character-archive-results .archive-portrait-art");
       return !!img && img.complete && img.naturalWidth > 0;
-    }, { timeout: 5000 });
+    }, null, { timeout: 5000 });
     const archiveThemeBg = await page.locator("body").evaluate(el => getComputedStyle(el).backgroundColor);
     assert.equal(archiveThemeBg, "rgb(33, 30, 26)", "The warm night palette must be active.");
     // Character archive: compact search, profile navigation, evidence and temporal separation.
