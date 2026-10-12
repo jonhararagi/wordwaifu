@@ -1860,6 +1860,18 @@
     if(large)node.appendChild(archiveElement("span","archive-portrait-caption",portraitSource?"ILUSTRACIÓN VECTORIAL · NO OFICIAL":"RETRATO PENDIENTE"));
     return node;
   }
+  const archiveCommunityReferences={
+    "CHAR-RYUU-LION":{name:"Ryuu Lion",url:"https://danmachi.fandom.com/es/wiki/Ryuu_Lion"},
+    "CHAR-ALISE-LOVELACE":{name:"Alise Lovell",url:"https://danmachi.fandom.com/es/wiki/Alise_Lovell"},
+    "CHAR-ASTREA":{name:"Astrea",url:"https://danmachi.fandom.com/es/wiki/Astrea"},
+    "DM-CHAR-BELL":{name:"Bell Cranel",url:"https://danmachi.fandom.com/es/wiki/Bell_Cranel"},
+    "DM-CHAR-HESTIA":{name:"Hestia",url:"https://danmachi.fandom.com/es/wiki/Hestia"},
+    "DM-CHAR-AIS":{name:"Ais Wallenstein",url:"https://danmachi.fandom.com/es/wiki/Ais_Wallenstein"},
+    "DM-CHAR-EINA":{name:"Eina Tulle",url:"https://danmachi.fandom.com/es/wiki/Eina_Tulle"},
+    "CHAR-FINN-DEIMNE":{name:"Finn Deimne",url:"https://danmachi.fandom.com/es/wiki/Finn_Deimne"},
+    "CHAR-FREYA":{name:"Freya",url:"https://danmachi.fandom.com/es/wiki/Freya"},
+    "CHAR-OTTAR":{name:"Ottar",url:"https://danmachi.fandom.com/es/wiki/Ottar"}
+  };
   function archiveEvidence(claim) {
     const details=archiveElement("details","archive-evidence"),summary=archiveElement("summary","","Ver evidencia · "+(claim.claimId||claim.entryId||"afirmación")),body=archiveElement("div","archive-evidence-body");
     details.appendChild(summary);
@@ -1873,6 +1885,8 @@
     if(claim.confidenceNote)body.appendChild(archiveElement("p","","Límites: "+claim.confidenceNote));
     const links=archiveElement("div","archive-source-links");
     (claim.sourceUrls||[]).forEach((url,i)=>{const label=url.includes("ga.sbcr.jp")?"Fuente editorial original (japonés)":url.includes("danmachi.com")?"Fuente oficial (japonés)":url.includes("fandom.com")?"Wiki comunitaria (no oficial)":(claim.sourceUrls.length>1?"Abrir fuente "+(i+1):"Abrir fuente");appendLoreLink(links,label,url,true);});
+    const communityRefs=[...new Set(claim.characterIds||[])].map(id=>archiveCommunityReferences[id]).filter(Boolean);
+    communityRefs.forEach(ref=>appendLoreLink(links,"Ampliar en español · "+ref.name+" (wiki comunitaria)",ref.url,true));
     if(links.childNodes.length)body.appendChild(links);
     details.appendChild(body);return details;
   }
