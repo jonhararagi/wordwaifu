@@ -2505,16 +2505,6 @@ async function run() {
     assert.deepEqual(editFormState, { category: "background", id: "bg-orario-night", name: "Orario nocturno" },
       "The edit action must load the exact assignment identity before saving.");
     const originalBackgroundUpdatedAt = backgroundAsset.updatedAt;
-    await page.evaluate(() => {
-      window.__artPutLog = [];
-      const originalPut = IDBObjectStore.prototype.put;
-      IDBObjectStore.prototype.put = function(value, ...args) {
-        if (value && value.key && this.transaction && this.transaction.db.name === "wordwaifu-art-studio") {
-          window.__artPutLog.push({ key: value.key, prompt: value.prompt, updatedAt: value.updatedAt });
-        }
-        return originalPut.call(this, value, ...args);
-      };
-    });
     await page.locator("#art-prompt").fill("Panorámica revisada de Orario bajo la lluvia.");
     assert.equal(await page.locator("#art-prompt").inputValue(), "Panorámica revisada de Orario bajo la lluvia.");
     await page.locator("#art-save").click();
@@ -2535,9 +2525,12 @@ async function run() {
         request.onerror = () => reject(request.error);
       });
       db.close();
-      return { assetPrompt: asset?.prompt, indexedPrompt: indexedRecord?.prompt, putLog: window.__artPutLog, status: document.querySelector("#art-status")?.textContent };
+      return { assetPrompt: asset?.prompt, indexedPrompt: indexedRecord?.prompt, status: document.querySelector("#art-status")?.textContent };
     });
-    process.stdout.write("ART_EDIT_IMMEDIATE: " + JSON.stringify(immediateEditEvidence) + "\\n");
+    assert.ok(immediateEditEvidence.indexedPrompt?.includes("revisada"),
+      "The IndexedDB transaction must durably store the edited prompt before reload.");
+    assert.ok(immediateEditEvidence.status?.includes("biblioteca local del navegador"),
+      "The edit must report the primary IndexedDB backend, not silently fall back.");
     await page.reload({ waitUntil: "networkidle" });
     await page.locator('.nav-item[data-view="art"]').click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", null, { timeout: 5000 });
@@ -2557,7 +2550,7 @@ async function run() {
       const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
       return { assetPrompt: asset?.prompt, indexedPrompt: indexedRecord?.prompt, fallbackPrompt: fallback["background:bg-orario-night"]?.prompt };
     });
-    process.stdout.write("ART_EDIT_EVIDENCE: " + JSON.stringify(persistedEditEvidence) + "\\n");
+
     assert.ok(persistedEditEvidence.assetPrompt?.includes("revisada") && persistedEditEvidence.indexedPrompt?.includes("revisada"),
       "Editing an IndexedDB assignment must update its saved prompt and survive a full page reload.");
     await page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first().getByRole("button", { name: "Eliminar" }).first().click();
