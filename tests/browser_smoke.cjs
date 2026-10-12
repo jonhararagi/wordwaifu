@@ -2616,8 +2616,10 @@ async function run() {
                   queueMicrotask(() => request.onsuccess && request.onsuccess());
                   return request;
                 },
-                put() {
-                  if (mode === "readwrite") queueMicrotask(() => {
+                put(record) {
+                  if (record && record.deleted && !window.__failArtDelete) {
+                    queueMicrotask(() => transaction.oncomplete && transaction.oncomplete());
+                  } else if (mode === "readwrite") queueMicrotask(() => {
                     transaction.error = new Error("Simulated IndexedDB write failure");
                     if (transaction.onerror) transaction.onerror();
                   });
