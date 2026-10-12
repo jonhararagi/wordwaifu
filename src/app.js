@@ -1855,7 +1855,7 @@
     return node;
   }
   function archiveBadge(text, kind) { return archiveElement("span", "archive-badge" + (kind ? " archive-badge--" + kind : ""), text); }
-  function archivePortrait(id, name, large) {
+  function archivePortrait(id, name, large, continuity) {
     const node = archiveElement("div", "archive-portrait" + (large ? " archive-portrait--large" : "") + " archive-portrait--" + String(id||"").toLowerCase().replace(/[^a-z0-9-]/g,""));
     const portraitSources = {
       "CHAR-RYUU-LION": "./assets/character-portraits/ryu-lion.svg",
@@ -1874,7 +1874,9 @@
     const official = typeof window.WordWaifuOfficialCharacterRoster !== "undefined"
       ? window.WordWaifuOfficialCharacterRoster.get(id) : null;
     const fallbackSource = portraitSources[id] || "";
-    const officialSource = official && official.imageUrl ? official.imageUrl : "";
+    const selectedContinuity = continuity || "ALL";
+    const mayUseOfficialPortrait = selectedContinuity === "ALL" || selectedContinuity === "CONT-ANIME";
+    const officialSource = mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
     const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
     node.setAttribute("role", "img");
     node.setAttribute("aria-label", officialSource
@@ -1986,7 +1988,7 @@
     if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados."));return;}
     items.forEach(item=>{
       const card=archiveElement("article","archive-character-card");card.setAttribute("role","listitem");
-      card.appendChild(archivePortrait(item.id,item.name,false));
+      card.appendChild(archivePortrait(item.id,item.name,false,item.preferredContinuity || "ALL"));
       const copy=archiveElement("div","archive-character-copy");copy.appendChild(archiveElement("h4","",item.name));copy.appendChild(archiveElement("p","",item.summary));
       const badges=archiveElement("div","archive-badge-row");
       if(item.states.length)item.states.slice(0,3).forEach(st=>{badges.appendChild(archiveBadge(st.code,"continuity"));if(st.affiliation)badges.appendChild(archiveBadge(st.affiliation,"muted"));});
@@ -2000,7 +2002,7 @@
   function renderArchiveHeader(profile){
     $("#archive-profile-name").textContent=profile.name;$("#archive-profile-eyebrow").textContent="FICHA DE PERSONAJE · "+profile.id;
     $("#archive-profile-summary").textContent=profile.state.summary;$("#archive-profile-state-note").textContent=profile.state.period;
-    const p=$("#archive-profile-portrait"),visual=archivePortrait(profile.id,profile.name,true);p.className=visual.className;p.setAttribute("aria-label",visual.getAttribute("aria-label"));p.replaceChildren(...Array.from(visual.childNodes));
+    const p=$("#archive-profile-portrait"),visual=archivePortrait(profile.id,profile.name,true,profile.continuity);p.className=visual.className;p.setAttribute("aria-label",visual.getAttribute("aria-label"));p.replaceChildren(...Array.from(visual.childNodes));
     const badges=$("#archive-profile-badges");badges.replaceChildren();badges.append(archiveBadge(profile.continuityLabel,"continuity"),archiveBadge(profile.state.affiliation,"muted"),archiveBadge("Estado provisional","muted"));
     if(profile.claims.some(c=>["major","endgame"].includes(String(c.spoilerLevel||"").toLowerCase())))badges.appendChild(archiveBadge("Incluye spoilers","spoiler"));
     const select=$("#archive-profile-continuity");select.replaceChildren();
@@ -2011,7 +2013,7 @@
     $("#archive-profile-panel").setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
   }
   function renderArchiveRelationship(rel){
-    const card=archiveElement("article","archive-relationship-card");card.appendChild(archivePortrait(rel.targetId,rel.targetName,false));
+    const card=archiveElement("article","archive-relationship-card");card.appendChild(archivePortrait(rel.targetId,rel.targetName,false,rel.continuity));
     const copy=archiveElement("div","archive-relationship-copy");copy.appendChild(archiveElement("h4","",rel.targetName));copy.appendChild(archiveElement("p","archive-relationship-type",rel.type+" · "+rel.continuity));copy.appendChild(archiveElement("p","",rel.description));
     const badges=archiveElement("div","archive-badge-row");badges.append(archiveBadge(rel.continuity,"continuity"),archiveBadge(rel.period,"muted"));copy.appendChild(badges);
     const actions=archiveElement("div","archive-card-actions");
@@ -2050,8 +2052,10 @@
     identity.append(archiveElement("h4","","Identidad y afiliación"),archiveElement("p","",profile.state.affiliation),archiveElement("p","","ID estable: "+profile.id),archiveGoTab("sources","Ver fuentes"));
     const m=profile.claims.find(c=>(c.aspects||[]).includes("motivation"));motivation.append(archiveElement("h4","","Valores y motivaciones"),archiveElement("p","",m?m.claim:"Sin información suficiente en esta continuidad."),archiveGoTab("personality","Explorar personalidad"));
     grid.append(identity,motivation);overview.appendChild(grid);root.appendChild(overview);
-    const official = profile.officialReference ||
-      (typeof window.WordWaifuOfficialCharacterRoster !== "undefined" ? window.WordWaifuOfficialCharacterRoster.get(profile.id) : null);
+    const official = profile.continuity === "CONT-ANIME"
+      ? (profile.officialReference ||
+        (typeof window.WordWaifuOfficialCharacterRoster !== "undefined" ? window.WordWaifuOfficialCharacterRoster.get(profile.id) : null))
+      : null;
     if (official) {
       const officialSection = archiveElement("section","archive-section archive-official-reference");
       const officialHeading = archiveElement("div","archive-section-heading");
