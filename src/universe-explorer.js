@@ -15,7 +15,7 @@
   }
   function typeGroup(type){
     if(/personaje/i.test(type))return "character";
-    if(/familia|organizaci[oó]n|imperio|movimiento/i.test(type))return "group";
+    if(/familia|organizaci[oó]n|imperio|movimiento|orden|cuerpo militar/i.test(type))return "group";
     if(/sistema de poder|poder/i.test(type))return "power";
     if(/lugar|ciudad/i.test(type))return "place";
     if(/periodo|acontecimiento|plan/i.test(type))return "event";
@@ -29,6 +29,7 @@
       "official-reference-partial":"Referencia oficial · parcial",
       "official-plus-secondary":"Oficial + fuente secundaria",
       "curated-dossier-mixed":"Expediente ampliado · fuentes mixtas",
+      "official-canon-profile":"Perfil oficial de adaptación",
       "index-seed":"Entrada inicial · confirmar",
       "mixed":"Fuentes mixtas"
     };
@@ -124,7 +125,7 @@
     panel.appendChild(el("p","universe-entity-summary",entity.summary||entity.description||"No hay resumen suficiente."));
     if(entity.description&&entity.description!==entity.summary)panel.appendChild(el("p","universe-entity-description",entity.description));
     const facts=el("div","universe-entity-facts");
-    [["Apariencia",entity.appearance],["Personalidad",entity.personality],["Historia y trasfondo",entity.history],["Relaciones descritas en el expediente",entity.relationships],["Conflicto personal",entity.conflict],["Afiliación",entity.affiliation],["Habilidades / sistema",entity.abilities],["Continuidad",entity.continuity],["Estado de spoilers",entity.spoilerLevel]].forEach(([label,value])=>{
+    [["Apariencia",entity.appearance],["Personalidad y conducta",entity.personality],["Historia y trasfondo",entity.history],["Relaciones descritas en el expediente",entity.relationships],["Objetivos y motivación",entity.goals],["Valores",entity.values],["Miedo o contradicción",entity.fear],["Arco / evolución",entity.characterArc],["Qué sabe en esta etapa",entity.knowledgeScope],["Conflicto personal",entity.conflict],["Afiliación",entity.affiliation],["Habilidades / sistema",entity.abilities],["Activación del poder",entity.activation],["Costes",entity.cost],["Límites",entity.limits],["Evolución del poder",entity.evolution],["Consecuencias",entity.consequences],["Continuidad",entity.continuity],["Estado de spoilers",entity.spoilerLevel]].forEach(([label,value])=>{
       if(!value)return;const card=el("article","universe-fact-card");card.append(el("strong","",label),el("p","",value));facts.appendChild(card);
     });
     if(facts.childNodes.length)panel.appendChild(facts);
