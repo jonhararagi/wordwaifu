@@ -156,3 +156,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - La consulta Ais + gustos debe abstenerse cuando no existan afirmaciones de apoyo.
 - Pruebas: casos unitarios y browser smoke en GitHub Actions.
 - Límite: búsqueda textual normalizada sobre los 30 claims actuales. No es IA, no usa RAG y no cubre toda la franquicia.
+
+
+## DANMACHI-RESEARCH-006 · Hestia/Bell y puerta de divergencia AU
+- Estado: PARTIAL; afirmaciones oficiales de cronología inicial y Astrea Record documentadas por separado; intervalo de seis meses para el descenso de Hestia sigue siendo evidencia secundaria.
+- Paquete: [DANMACHI-RESEARCH-006](research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md).
+- Fuente oficial: episodio 1 del anime indica que Bell llevaba medio mes como único miembro de Hestia Familia al ocurrir el incidente inicial; cronología oficial sitúa Astrea Record siete años antes y usa el término オラリオの暗黒期.
+- Fuente secundaria: DanMachi Wiki propone seis meses entre el descenso de Hestia y el inicio de la serie; no se eleva a canon aprobado sin localizador primario.
+- Decisión de autor pendiente: mantener cinco años de adelanto con override AU, cambiar la fecha o precisar el punto de referencia; aclarar si Bell Cranel existe aparte del OC.
+- Próxima prueba: conflicto de cronología sin override y aceptación de divergencia con override aprobado y acotado.
+- Veredicto: mejora documental incorporada; DanMachi global permanece PARTIAL y la historia AU no está escrita/validada por esta tanda.
