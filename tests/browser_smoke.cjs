@@ -2459,6 +2459,9 @@ async function run() {
     process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\\n");
 
     // Art Studio: generate a prompt, upload an image, persist the assignment, and apply it to the character portrait.
+    await page.evaluate(() => {
+      for (const dialog of document.querySelectorAll("dialog[open]")) dialog.close();
+    });
     await page.locator('.nav-item[data-view="art"]').click();
     await page.waitForFunction(() => Boolean(window.WordWaifuArtStudio && window.WordWaifuCharacterDossiers), { timeout: 5000 });
     await page.locator("#art-target-type").selectOption("character");
