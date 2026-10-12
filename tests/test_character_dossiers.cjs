@@ -3,7 +3,7 @@ require("../src/character-dossiers.js");
 const api = globalThis.WordWaifuCharacterDossiers;
 assert.ok(api, "Character dossier registry should load in Node.");
 const all = api.list();
-assert.ok(all.length >= 15, "The archive should include at least 15 researched extended dossiers.");
+assert.ok(all.length >= 30, "The archive should include at least 15 researched extended dossiers.");
 for (const dossier of all) {
   for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) {
     assert.ok(typeof dossier[field] === "string" && dossier[field].length >= 100,
