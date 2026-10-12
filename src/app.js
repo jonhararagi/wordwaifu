@@ -1884,6 +1884,7 @@
     const isCommunityImage = Boolean(official && (official.imageProvider === "community" || /fandom\.com|wikia\.nocookie\.net/i.test(official.sourcePage || "")));
     const portraitSourceLabel = isCommunityImage ? "REFERENCIA COMUNITARIA · NO OFICIAL" : "IMAGEN OFICIAL · ENLACE EXTERNO";
     node.dataset.imageProvider = officialSource ? (isCommunityImage ? "community" : "official") : fallbackSource ? "local" : "none";
+    node.dataset.sourceProvider = historicalReference ? "official" : (official && official.imageProvider) || (officialSource ? "official" : fallbackSource ? "local" : "none");
     const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
     node.setAttribute("role", "img");
     node.setAttribute("aria-label", officialSource
