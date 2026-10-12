@@ -116,7 +116,7 @@ async function run() {
     await page.locator("#story-meta-form [name='storyConflict']").fill("Un conflicto verificable.");
     await page.locator("#story-meta-form [name='storyArcs']").fill("Protagonista: miedo → decisión → cambio");
     await page.locator("#story-meta-form button[type='submit']").click();
-    await page.waitForFunction(() => document.querySelector("#save-status")?.textContent.includes("Guardado en IndexedDB"));
+    await page.waitForFunction(() => document.querySelector("#story-editor-status")?.textContent.includes("Historia guardada en el proyecto local."), { timeout: 10000 });
     await page.locator("#story-add-chapter-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1, { timeout: 5000 });
     assert.equal(await page.locator(".story-chapter-form").count(), 1, "The editor must add a chapter to a story.");
