@@ -21,6 +21,13 @@ ALLOWED_FILES = {
     "/assets/character-portraits/ryu-lion.svg": "assets/character-portraits/ryu-lion.svg",
     "/assets/character-portraits/alise-lovelace.svg": "assets/character-portraits/alise-lovelace.svg",
     "/assets/character-portraits/astrea.svg": "assets/character-portraits/astrea.svg",
+    "/assets/character-portraits/bell-cranel.svg": "assets/character-portraits/bell-cranel.svg",
+    "/assets/character-portraits/hestia.svg": "assets/character-portraits/hestia.svg",
+    "/assets/character-portraits/ais-wallenstein.svg": "assets/character-portraits/ais-wallenstein.svg",
+    "/assets/character-portraits/eina-tulle.svg": "assets/character-portraits/eina-tulle.svg",
+    "/assets/character-portraits/finn-deimne.svg": "assets/character-portraits/finn-deimne.svg",
+    "/assets/character-portraits/freya.svg": "assets/character-portraits/freya.svg",
+    "/assets/character-portraits/ottar.svg": "assets/character-portraits/ottar.svg",
     "/lore/danmachi/catalog.json": "lore/danmachi/catalog.json",
     "/lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md":
         "lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
