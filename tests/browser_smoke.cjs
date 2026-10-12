@@ -142,10 +142,10 @@ async function run() {
     assert.equal(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count(), 0);
     assert.ok(!(await page.locator("#archive-profile-panel").innerText()).includes("La sinopsis presenta a Ryu buscando su idea de justicia"));
     await page.locator("#archive-profile-continuity").selectOption("CONT-AR");
-    await page.locator("#archive-spoiler").selectOption("safe-only");
+    await page.locator("#archive-profile-spoiler").selectOption("safe-only");
     await page.locator("#archive-tab-moments").click();
     assert.equal(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"]').count(), 0);
-    await page.locator("#archive-spoiler").selectOption("all");
+    await page.locator("#archive-profile-spoiler").selectOption("all");
     await page.locator("#archive-tab-sources").click();
     await page.locator('#archive-profile-panel details.archive-evidence').first().locator("summary").click();
     assert.ok(await page.locator("#archive-profile-panel .archive-source-links a").count() > 0);

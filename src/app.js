@@ -1887,7 +1887,7 @@
     if(profile.claims.some(c=>["major","endgame"].includes(String(c.spoilerLevel||"").toLowerCase())))badges.appendChild(archiveBadge("Incluye spoilers","spoiler"));
     const select=$("#archive-profile-continuity");select.replaceChildren();
     window.WordWaifuCharacterArchive.continuityOrder.forEach(scope=>{const opt=new Option((window.WordWaifuCharacterArchive.continuityLabels[scope]||scope)+(profile.availableContinuities.includes(scope)?"":" · sin evidencia registrada"),scope);if(!profile.availableContinuities.includes(scope))opt.disabled=true;select.appendChild(opt);});
-    select.value=profile.continuity;$("#archive-profile-back").textContent=archiveNavigationStack.length?"← Volver a ficha anterior":"← Volver a resultados";
+    select.value=profile.continuity;$("#archive-profile-spoiler").value=$("#archive-spoiler").value;$("#archive-profile-back").textContent=archiveNavigationStack.length?"← Volver a ficha anterior":"← Volver a resultados";
     $("#archive-return-search").classList.remove("hidden");
     $$("#archive-profile-tabs [role=tab]").forEach(tab=>{const yes=tab.dataset.profileTab===activeArchiveTab;tab.setAttribute("aria-selected",yes?"true":"false");tab.tabIndex=yes?0:-1;});
     $("#archive-profile-panel").setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
@@ -1983,6 +1983,7 @@
   $("#character-archive-query").addEventListener("input",()=>{if(loreArchiveIndex)renderCharacterDirectory();else void prepareLoreView().catch(e=>$("#archive-directory-status").textContent="No se pudo preparar el índice: "+e.message);});
   $("#archive-continuity").addEventListener("change",()=>{if(loreArchiveIndex)renderCharacterDirectory();});
   $("#archive-spoiler").addEventListener("change",()=>{if(!loreArchiveIndex)return;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
+  $("#archive-profile-spoiler").addEventListener("change",event=>{if(!loreArchiveIndex)return;$("#archive-spoiler").value=event.target.value;if(activeArchiveCharacterId)renderArchiveProfile();else renderCharacterDirectory();});
   $("#character-archive-results").addEventListener("click",e=>{const b=e.target.closest("[data-archive-open]");if(b)openArchiveProfile(b.dataset.archiveOpen,b.dataset.archiveContinuity,false);});
   $("#archive-profile-back").addEventListener("click",backInArchiveNavigation);
   $("#archive-return-search").addEventListener("click",returnToArchiveDirectory);
