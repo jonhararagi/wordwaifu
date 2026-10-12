@@ -39,7 +39,7 @@ La migración IndexedDB debe conservar `projects`, `metadata` y `snapshots`. La 
 - [x] Enviar a papelera el proyecto activo falla sin mutaciones; cubierto por la prueba del repositorio.
 - [x] Restaurar recupera el mismo ID, los datos y los snapshots; cubierto por Chromium CI #38022402137.
 - [x] Un conflicto de ID rechaza la restauración sin sobrescritura; la entrada de papelera permanece recuperable.
-- [ ] Proyectos con nombres idénticos permanecen aislados por ID.
+- [x] Proyectos con nombres idénticos permanecen aislados por ID.
 - [x] Borrado permanente solo afecta al ID confirmado; se limpia únicamente un respaldo local con el mismo ID y solo después de validar la entrada de papelera. Un ID ausente no puede borrar respaldos.
 - [x] Fallo simulado al retirar el respaldo local: la papelera permanece intacta y el borrado permanente se rechaza explícitamente.
 - [x] Aborto de restauración por snapshot inconsistente: la transacción revierte la escritura del proyecto y los snapshots parciales y conserva la entrada de papelera.
