@@ -96,7 +96,7 @@ async function run() {
     assert.ok((await page.locator("#visual-asset-dialog-source").getAttribute("href")).includes("SpriteCook/spritecook-free-game-assets"));
     await page.locator("#visual-asset-close").click();
     await page.locator('.nav-item[data-view="atlas"]').click();
-    process.stdout.write("PASS visual library: local images, filters, provenance and licensing are usable.\\n");
+    process.stdout.write("PASS visual library: local images, filters, provenance and licensing are usable.\n");
     const appPersistence = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const recovery = await repository.loadActive();
@@ -139,7 +139,7 @@ async function run() {
         visibleCards: document.querySelectorAll("#character-archive-results [data-archive-open]").length,
         pageErrors: window.__wordwaifuTestPageErrors || []
       }));
-      process.stdout.write("GLOBAL_SEARCH_DIAGNOSTICS: " + JSON.stringify(diagnostic) + "\\n");
+      process.stdout.write("GLOBAL_SEARCH_DIAGNOSTICS: " + JSON.stringify(diagnostic) + "\n");
       throw error;
     }
     await page.waitForFunction(() => {
@@ -258,7 +258,7 @@ async function run() {
       const img = button?.closest(".archive-character-card")?.querySelector(".archive-portrait-art");
       return !!img && img.complete && img.naturalWidth > 0;
     }, null, { timeout: 5000 });
-    process.stdout.write("PASS character archive: compact search, tabs, links, continuity separation, spoiler filtering, evidence and screenshot.\\n");
+    process.stdout.write("PASS character archive: compact search, tabs, links, continuity separation, spoiler filtering, evidence and screenshot.\n");
     await page.locator("#lore-research-panel > summary").click();
 
 // DanMachi lore retrieval: a single UI query must preserve temporal continuity.
@@ -325,7 +325,7 @@ async function run() {
       }, { entityId, collection, reason });
       assert.equal(evidence.exists, true, "Expected a verified pre-delete snapshot for " + entityId + ".");
       assert.equal(evidence.retained, true, "The snapshot must preserve the prior " + collection + " record.");
-      process.stdout.write("PASS pre-delete snapshot: " + reason + " preserves " + entityId + ".\\n");
+      process.stdout.write("PASS pre-delete snapshot: " + reason + " preserves " + entityId + ".\n");
     };
 
 
@@ -350,7 +350,7 @@ async function run() {
     assert.ok(preImportSnapshots.some((snapshot) => snapshot.reason === "before-import" && snapshot.valid),
       "Successful import must leave a verified snapshot of the pre-import project.");
     const preImportSnapshotId = preImportSnapshots.find((snapshot) => snapshot.reason === "before-import" && snapshot.valid).id;
-    process.stdout.write("PASS import safety: valid import creates a verified snapshot before replacement.\\n");
+    process.stdout.write("PASS import safety: valid import creates a verified snapshot before replacement.\n");
 
     // Upgrade a real v1 database without losing its projects, then exercise versioned snapshots.
     const snapshotRepositoryEvidence = await page.evaluate(async () => {
@@ -641,7 +641,7 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.unrelatedBackupWritten, true);
     assert.equal(snapshotRepositoryEvidence.missingTrashRejected, true);
     assert.equal(snapshotRepositoryEvidence.unrelatedBackupPreserved, true, "An ID absent from trash must not trigger deletion of any local backup.");
-    process.stdout.write("PASS trash repository: v1->v3 migration, active-project guard, snapshot retention, restore and permanent delete verified.\\n");
+    process.stdout.write("PASS trash repository: v1->v3 migration, active-project guard, snapshot retention, restore and permanent delete verified.\n");
 
     // Visible snapshot controls create, restore and delete while preserving the active universe ID.
     await page.locator("#manage-projects-button").click();
@@ -652,7 +652,7 @@ async function run() {
       .some((option) => option.dataset.reason === "manual"));
     const uiSnapshotId = await page.locator('#snapshot-list option[data-reason="manual"]').first().getAttribute("value");
     assert.ok(uiSnapshotId);
-    process.stdout.write("PASS snapshot UI create: a verified project snapshot appears in the project manager.\\n");
+    process.stdout.write("PASS snapshot UI create: a verified project snapshot appears in the project manager.\n");
     await page.locator("#project-close-button").click();
 
     await page.locator("#add-button").click();
@@ -679,7 +679,7 @@ async function run() {
     assert.equal(restoredUiState.characters.some((item) => item.name === "Temporal de snapshot"), false);
     const automaticSnapshotId = await page.locator('#snapshot-list option[data-reason="before-restore"]').getAttribute("value");
     assert.ok(automaticSnapshotId, "Restore must keep an automatic snapshot of the previous state.");
-    process.stdout.write("PASS snapshot UI restore: active project ID stays stable and a pre-restore snapshot is retained.\\n");
+    process.stdout.write("PASS snapshot UI restore: active project ID stays stable and a pre-restore snapshot is retained.\n");
 
     for (const snapshotId of [uiSnapshotId, automaticSnapshotId]) {
       await page.locator("#snapshot-list").selectOption(snapshotId);
@@ -703,7 +703,7 @@ async function run() {
     assert.equal(await page.locator('#snapshot-list option[value="' + uiSnapshotId + '"]').count(), 0);
     assert.equal(await page.locator('#snapshot-list option[value="' + automaticSnapshotId + '"]').count(), 0);
     await page.locator("#project-close-button").click();
-    process.stdout.write("PASS snapshot UI delete: selected copies require confirmation; older snapshots and the project survive.\\n");
+    process.stdout.write("PASS snapshot UI delete: selected copies require confirmation; older snapshots and the project survive.\n");
 
 
     const backupOnlyDeleteGuard = await page.evaluate(async () => {
@@ -875,7 +875,7 @@ async function run() {
     assert.equal(afterMasterSearch.otherCount, 1);
     assert.equal(afterMasterSearch.otherName, "Universo Multiverso QA");
     assert.match(await page.locator("#master-search-status").innerText(), /Búsqueda completa/);
-    process.stdout.write("PASS master index: duplicate entity IDs in separate universes return distinct project-scoped hits without changing or mutating the active project.\\n");
+    process.stdout.write("PASS master index: duplicate entity IDs in separate universes return distinct project-scoped hits without changing or mutating the active project.\n");
 
     // Search selected fields, not only entity names; diacritics should not block matching.
     await page.locator("#master-search-query").fill("cartografa");
@@ -883,7 +883,7 @@ async function run() {
     await page.locator("#master-search-button").click();
     await page.waitForFunction(() => document.querySelectorAll("#master-search-results .master-search-result").length === 1, null, { timeout: 5000 });
     assert.match(await page.locator("#master-search-results .master-search-result").innerText(), /Mira Solenne/);
-    process.stdout.write("PASS master index selected fields: role search is accent-insensitive.\\n");
+    process.stdout.write("PASS master index selected fields: role search is accent-insensitive.\n");
 
     await page.locator("#master-search-query").fill("capital");
     await page.locator("#master-search-type").selectOption("location");
@@ -891,7 +891,7 @@ async function run() {
     await page.waitForFunction(() => document.querySelectorAll("#master-search-results .master-search-result").length === 1);
     assert.match(await page.locator("#master-search-results .master-search-result").innerText(), /Asteria/);
     assert.match(await page.locator("#master-search-status").innerText(), /Búsqueda completa/);
-    process.stdout.write("PASS master index type filter: location tags and categories are searchable.\\n");
+    process.stdout.write("PASS master index type filter: location tags and categories are searchable.\n");
 
     await page.locator("#master-search-query").fill("termino-imposible-sin-resultados");
     await page.locator("#master-search-type").selectOption("all");
@@ -899,7 +899,7 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#master-search-status")?.textContent.includes("0 coincidencia"), null, { timeout: 5000 });
     assert.match(await page.locator("#master-search-results").innerText(), /No se encontraron coincidencias/);
     assert.match(await page.locator("#master-search-status").innerText(), /Búsqueda completa/);
-    process.stdout.write("PASS master index empty result: zero matches are reported only after a complete scan.\\n");
+    process.stdout.write("PASS master index empty result: zero matches are reported only after a complete scan.\n");
 
     await page.evaluate(() => {
       const prototype = window.WordWaifuProjectRepository.ProjectRepository.prototype;
@@ -931,7 +931,7 @@ async function run() {
       return active?.value;
     });
     assert.equal(activeAfterPartialSearch, "project-asteria");
-    process.stdout.write("PASS master index partial failure: IndexedDB read failure is explicit and never claims full coverage.\\n");
+    process.stdout.write("PASS master index partial failure: IndexedDB read failure is explicit and never claims full coverage.\n");
 
     const performMiraSearch = async () => {
       await page.locator("#master-search-query").fill("Mira");
@@ -956,7 +956,7 @@ async function run() {
       return active?.value;
     });
     assert.equal(activeAfterMissingDestination, "project-asteria");
-    process.stdout.write("PASS master index stale destination: missing project is refused and active universe is preserved.\\n");
+    process.stdout.write("PASS master index stale destination: missing project is refused and active universe is preserved.\n");
 
     // Simulate a stale entity ID from a hit cached before the record changed.
     await performMiraSearch();
@@ -971,7 +971,7 @@ async function run() {
       return active?.value;
     });
     assert.equal(activeAfterMissingEntity, "project-asteria");
-    process.stdout.write("PASS master index stale entity: missing ID is refused without opening a similarly named record.\\n");
+    process.stdout.write("PASS master index stale entity: missing ID is refused without opening a similarly named record.\n");
 
     // Simulate a target write that can only fall back to localStorage. Switching must roll back.
     await performMiraSearch();
@@ -998,7 +998,7 @@ async function run() {
       prototype.saveActive = window.__originalSaveActiveForContextOpen;
       delete window.__originalSaveActiveForContextOpen;
     });
-    process.stdout.write("PASS master index persistence failure: switching is rolled back to the previous universe.\\n");
+    process.stdout.write("PASS master index persistence failure: switching is rolled back to the previous universe.\n");
 
     // A valid result from the active project opens its exact ID without switching universes.
     await performMiraSearch();
@@ -1013,7 +1013,7 @@ async function run() {
     assert.equal(focusedCurrentEntity.tag, "H2");
     assert.equal(focusedCurrentEntity.text, "Mira Solenne");
     assert.equal(focusedCurrentEntity.inDetails, true);
-    process.stdout.write("PASS master index focus: exact active-project character receives keyboard focus.\\n");
+    process.stdout.write("PASS master index focus: exact active-project character receives keyboard focus.\n");
     const activeAfterCurrentOpen = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const active = await repository.read("metadata", "activeProjectId");
@@ -1021,7 +1021,7 @@ async function run() {
       return active?.value;
     });
     assert.equal(activeAfterCurrentOpen, "project-asteria");
-    process.stdout.write("PASS master index contextual open: active-project result focuses its exact character ID.\\n");
+    process.stdout.write("PASS master index contextual open: active-project result focuses its exact character ID.\n");
 
     // The second universe reuses the same character ID but stores a different character.
     await page.locator("#manage-projects-button").click();
@@ -1038,7 +1038,7 @@ async function run() {
     assert.equal(focusedOtherEntity.tag, "H2");
     assert.equal(focusedOtherEntity.text, "Mira de Niebla");
     assert.equal(focusedOtherEntity.inDetails, true);
-    process.stdout.write("PASS master index focus: exact character in a second universe receives keyboard focus.\\n");
+    process.stdout.write("PASS master index focus: exact character in a second universe receives keyboard focus.\n");
     const activeAfterOtherOpen = await page.evaluate(async (createdId) => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
       const active = await repository.read("metadata", "activeProjectId");
@@ -1050,7 +1050,7 @@ async function run() {
     assert.equal(activeAfterOtherOpen.activeId, createdUniverse.id);
     assert.equal(activeAfterOtherOpen.originalCharacterCount, 4);
     assert.equal(activeAfterOtherOpen.targetName, "Universo Multiverso QA");
-    process.stdout.write("PASS master index contextual open: matching entity IDs in separate universes open the correct project-scoped character.\\n");
+    process.stdout.write("PASS master index contextual open: matching entity IDs in separate universes open the correct project-scoped character.\n");
 
     await page.locator("#manage-projects-button").click();
     await page.locator("#project-close-button").click();
@@ -1178,7 +1178,7 @@ async function run() {
     assert.equal(afterProjectDelete.compatibilityBackupId, "project-asteria", "Moving an unrelated project to trash must preserve the active project's local backup.");
     assert.equal(afterProjectDelete.compatibilityBackupName, "Las Crónicas de Asteria");
     assert.equal(afterProjectDelete.compatibilityBackupCharacters, 4, "The unrelated backup must not be replaced with the deleted project's contents.");
-    process.stdout.write("PASS project trash action: exact ID moved to trash, snapshots and unrelated backup retained, neighbor and active universe preserved.\\n");
+    process.stdout.write("PASS project trash action: exact ID moved to trash, snapshots and unrelated backup retained, neighbor and active universe preserved.\n");
     await page.locator("#project-close-button").click();
 
     const initialPanel = await page.locator("#details-panel").innerHTML();
@@ -1307,9 +1307,9 @@ async function run() {
     assert.equal(repositoryReport.tombstoneCatalogExcludedProject, true, "A tombstoned project must remain absent from the normal catalog.");
     assert.equal(repositoryReport.tombstoneBackupPreserved, true, "Rejected writes must not replace the compatibility backup for a tombstoned ID.");
     assert.match(repositoryReport.tombstoneWarning, /papelera/i);
-    process.stdout.write("PASS repository migration: localStorage stays as backup until IndexedDB is verified.\\n");
-    process.stdout.write("PASS repository recovery: newest local backup repairs stale IndexedDB.\\n");
-    process.stdout.write("PASS repository fallback: localStorage works when IndexedDB is unavailable.\\n");
+    process.stdout.write("PASS repository migration: localStorage stays as backup until IndexedDB is verified.\n");
+    process.stdout.write("PASS repository recovery: newest local backup repairs stale IndexedDB.\n");
+    process.stdout.write("PASS repository fallback: localStorage works when IndexedDB is unavailable.\n");
 
     // A local-storage cleanup failure must never be reported as a permanent delete.
     const trashFailureReport = await page.evaluate(async () => {
@@ -1365,7 +1365,7 @@ async function run() {
     assert.equal(trashFailureReport.trashRecordPreserved, true, "A failed permanent delete must preserve the trash entry.");
     assert.equal(trashFailureReport.activeRecordRemoved, true);
     assert.equal(trashFailureReport.backupPreserved, true, "The failing storage fixture must not silently drop the backup.");
-    process.stdout.write("PASS trash failure boundary: backup cleanup denial preserves trash and rejects permanent deletion.\\n");
+    process.stdout.write("PASS trash failure boundary: backup cleanup denial preserves trash and rejects permanent deletion.\n");
 
     // Corrupt a trash snapshot deliberately to force an abort after the project and first snapshot have been queued.
     const trashAbortReport = await page.evaluate(async () => {
@@ -1417,7 +1417,7 @@ async function run() {
     assert.equal(trashAbortReport.projectWriteRolledBack, true, "An aborted restoration must not leave a partial project.");
     assert.equal(trashAbortReport.snapshotWriteRolledBack, true, "An aborted restoration must roll back earlier snapshot writes in the same transaction.");
     assert.equal(trashAbortReport.trashPreserved, true, "An aborted restoration must keep the original trash entry recoverable.");
-    process.stdout.write("PASS trash atomicity: malformed snapshot abort rolls back project and snapshots, preserving trash.\\n");
+    process.stdout.write("PASS trash atomicity: malformed snapshot abort rolls back project and snapshots, preserving trash.\n");
 
     // A malformed local backup cannot be safely assigned to any project ID.
     const malformedBackupReport = await page.evaluate(async () => {
@@ -1468,7 +1468,7 @@ async function run() {
     assert.equal(malformedBackupReport.permanentDeleteRejected, true, "Permanent deletion must stop if a local backup cannot be parsed and attributed.");
     assert.equal(malformedBackupReport.trashPreserved, true);
     assert.equal(malformedBackupReport.malformedBackupPreserved, true, "Unknown backup data must not be silently removed.");
-    process.stdout.write("PASS trash malformed backup: unknown backup preserved and permanent deletion blocked.\\n");
+    process.stdout.write("PASS trash malformed backup: unknown backup preserved and permanent deletion blocked.\n");
 
     const forestMarker = page.locator('g.map-marker[data-location="loc-velado"]').first();
     await forestMarker.click();
@@ -2024,7 +2024,7 @@ async function run() {
     assert.equal(firstRelationship.relationship.status, "canon");
     assert.ok(firstRelationship.source.relationships.includes(createdCharacter.id));
     assert.ok(firstRelationship.target.relationships.includes("wf-test-witness"));
-    process.stdout.write("PASS relationship create: canonical record and reciprocal projection are saved.\\n");
+    process.stdout.write("PASS relationship create: canonical record and reciprocal projection are saved.\n");
 
     // Same pair + same type is blocked; a distinct type between that pair is allowed.
     await page.locator("#add-button").click();
@@ -2047,7 +2047,7 @@ async function run() {
     await page.locator("#selected-relationship-details h2").getByText("Rivalidad todavía viva").waitFor();
     const secondRelationship = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.find((item) => item.name === "Rivalidad todavía viva"));
     assert.ok(secondRelationship);
-    process.stdout.write("PASS relationship uniqueness: duplicate pair/type rejected; another type accepted.\\n");
+    process.stdout.write("PASS relationship uniqueness: duplicate pair/type rejected; another type accepted.\n");
 
     const relationshipIdBeforeEdit = firstRelationship.relationship.id;
     await page.locator('[data-relationship="' + relationshipIdBeforeEdit + '"]').click();
@@ -2061,13 +2061,13 @@ async function run() {
     const editedRelationship = await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.find((item) => item.id === id), relationshipIdBeforeEdit);
     assert.equal(editedRelationship.id, relationshipIdBeforeEdit, "Editing a relationship must preserve its ID.");
     assert.equal(editedRelationship.relationshipType, "alliance");
-    process.stdout.write("PASS relationship edit: stable ID and canonical fields update.\\n");
+    process.stdout.write("PASS relationship edit: stable ID and canonical fields update.\n");
 
     await page.reload({waitUntil:"networkidle"});
     await page.locator('.nav-item[data-view="relationships"]').click();
     await page.locator('[data-relationship="' + relationshipIdBeforeEdit + '"]').click();
     await page.locator("#selected-relationship-details h2").getByText("Alianza reconstruida").waitFor();
-    process.stdout.write("PASS relationship persistence: edits survive reload.\\n");
+    process.stdout.write("PASS relationship persistence: edits survive reload.\n");
 
     const deleteRelationshipDialogPromise = page.waitForEvent("dialog");
     const deleteRelationshipClick = page.locator("#delete-relationship-button").click();
@@ -2084,7 +2084,7 @@ async function run() {
     assert.ok(afterRelationshipDelete.characters.some((item) => item.id === "wf-test-witness"), "The source character must survive.");
     assert.ok(afterRelationshipDelete.characters.some((item) => item.id === createdCharacter.id), "The target character must survive.");
     assert.equal(validateAndNormalizeProject(afterRelationshipDelete).valid, true, "Deleting a relationship should leave a valid graph.");
-    process.stdout.write("PASS relationship delete: one edge removed; both character records survive.\\n");
+    process.stdout.write("PASS relationship delete: one edge removed; both character records survive.\n");
 
     await page.reload({waitUntil:"networkidle"});
     const relationshipExportPromise = page.waitForEvent("download");
@@ -2102,7 +2102,7 @@ async function run() {
     await relationshipImportAlert.accept();
     await relationshipImport;
     assert.ok(await page.evaluate((id) => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.some((item) => item.id === id), secondRelationship.id));
-    process.stdout.write("PASS relationship export/import: IDs and graph survive round-trip.\\n");
+    process.stdout.write("PASS relationship export/import: IDs and graph survive round-trip.\n");
 
     // IndexedDB must restore the app even if the local compatibility backup is absent.
     const persistedBeforeBackupRemoval = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")));
@@ -2126,7 +2126,7 @@ async function run() {
     assert.equal(databaseOnlyRecovery.backend, "indexeddb");
     assert.equal(databaseOnlyRecovery.projectId, persistedBeforeBackupRemoval.project.id);
     assert.equal(databaseOnlyRecovery.relationshipFound, true);
-    process.stdout.write("PASS app persistence recovery: IndexedDB restores the current project and relationships without localStorage backup.\\n");
+    process.stdout.write("PASS app persistence recovery: IndexedDB restores the current project and relationships without localStorage backup.\n");
 
     // Slow consecutive IndexedDB writes to ensure the queue persists the newest state last.
     await page.locator('.nav-item[data-view="organizations"]').click();
@@ -2172,7 +2172,7 @@ async function run() {
       prototype.write = window.__wordWaifuOriginalRepositoryWrite;
       delete window.__wordWaifuOriginalRepositoryWrite;
     });
-    process.stdout.write("PASS persistence burst: consecutive writes leave local backup and IndexedDB at the newest snapshot.\\n");
+    process.stdout.write("PASS persistence burst: consecutive writes leave local backup and IndexedDB at the newest snapshot.\n");
 
     // A real integrated write failure must preserve the immediate local backup and report fallback honestly.
     await page.evaluate(() => {
@@ -2202,7 +2202,7 @@ async function run() {
     assert.equal(failedWriteEvidence.backupHasNewRecord, true);
     assert.equal(failedWriteEvidence.indexedDBHasNewRecord, false, "Injected transaction failure should leave IndexedDB unchanged.");
     assert.match(failedWriteEvidence.status, /Respaldo local disponible/);
-    process.stdout.write("PASS integrated write failure: local backup survives and the UI reports fallback instead of claiming IndexedDB success.\\n");
+    process.stdout.write("PASS integrated write failure: local backup survives and the UI reports fallback instead of claiming IndexedDB success.\n");
 
     // If neither backend accepts an import, the active project must remain unchanged.
     const unpersistableCandidate = await page.evaluate(() => {
@@ -2246,7 +2246,7 @@ async function run() {
     });
     assert.equal(await page.locator("#project-name").innerText(), activeNameBeforeRejectedImport);
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).project.name), activeNameBeforeRejectedImport);
-    process.stdout.write("PASS rejected import: if both persistence backends fail, active state and backup remain unchanged.\\n");
+    process.stdout.write("PASS rejected import: if both persistence backends fail, active state and backup remain unchanged.\n");
 
     const failedStorageExportPromise = page.waitForEvent("download");
     await page.locator("#export-button").click();
@@ -2257,7 +2257,7 @@ async function run() {
     assert.equal(failedStorageExportValidation.valid, true, failedStorageExportValidation.errors.join("\\n"));
     assert.equal(failedStorageExportProject.project.name, activeNameBeforeRejectedImport);
     assert.ok(failedStorageExportProject.organizations.some((item) => item.name === "Solo en respaldo local"));
-    process.stdout.write("PASS export after storage failure: valid active project remains downloadable from memory.\\n");
+    process.stdout.write("PASS export after storage failure: valid active project remains downloadable from memory.\n");
 
     const deleteProtectionAtCap = await page.evaluate(async () => {
       const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
@@ -2290,7 +2290,7 @@ async function run() {
     const relationshipPreservedAtCap = await page.evaluate((id) =>
       JSON.parse(localStorage.getItem("wordwaifu.project.v1")).relationships.some((item) => item.id === id), secondRelationship.id);
     assert.equal(relationshipPreservedAtCap, true, "A full snapshot store must block a relationship deletion.");
-    process.stdout.write("PASS fail-closed deletion: reaching 25 snapshots preserves the entity and explains the refusal.\\n");
+    process.stdout.write("PASS fail-closed deletion: reaching 25 snapshots preserves the entity and explains the refusal.\n");
 
     // Exercise the actual trash controls, including restore and permanent deletion.
     const trashUiSeed = await page.evaluate(async () => {
@@ -2362,7 +2362,7 @@ async function run() {
     });
     assert.equal(backupAfterPermanentDelete.projectId, trashUiSeed.backupProjectId, "Permanent deletion of a trashed universe must preserve a backup owned by another universe.");
     assert.equal(backupAfterPermanentDelete.name, trashUiSeed.backupProjectName);
-    process.stdout.write("PASS trash UI: list, restore by exact ID, permanent deletion, and preservation of an unrelated local backup.\\n");
+    process.stdout.write("PASS trash UI: list, restore by exact ID, permanent deletion, and preservation of an unrelated local backup.\n");
 
     // Same display name must never collapse identity across trash operations.
     const duplicateNameEvidence = await page.evaluate(async () => {
@@ -2427,7 +2427,7 @@ async function run() {
     assert.notEqual(duplicateNameEvidence.leftId, duplicateNameEvidence.rightId);
     assert.equal(duplicateNameEvidence.leftSurvivedRightDelete, true);
     assert.ok(duplicateNameEvidence.restoredSnapshotCount >= 1, "Restore must preserve the selected project's snapshots.");
-    process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\\n");
+    process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\n");
 
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
