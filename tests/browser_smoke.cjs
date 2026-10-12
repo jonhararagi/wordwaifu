@@ -2682,6 +2682,24 @@ async function run() {
       const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test");
       return Boolean(asset && asset.prompt.includes("editado") && asset.updatedAt !== previousUpdatedAt);
     }, originalFallbackUpdatedAt, { timeout: 5000 });
+    // Simulate a second tab writing a newer fallback version while this tab's
+    // in-memory cache still contains the earlier assignment. Reads must reconcile
+    // against persistent storage instead of returning the stale cache entry.
+    await fallbackPage.evaluate(() => {
+      const key = "background:bg-fallback-test";
+      const storageKey = "wordwaifu.art.assignments.v1";
+      const records = JSON.parse(localStorage.getItem(storageKey) || "{}");
+      records[key] = {
+        ...records[key],
+        prompt: "Prompt editado desde otra pestaña y persistido en el respaldo.",
+        updatedAt: "9999-12-31T23:59:59.999Z"
+      };
+      localStorage.setItem(storageKey, JSON.stringify(records));
+    });
+    const crossTabAsset = await fallbackPage.evaluate(async () =>
+      window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test"));
+    assert.ok(crossTabAsset?.prompt.includes("otra pestaña"),
+      "A cached assignment must not hide a newer localStorage edit from another tab.");
     await fallbackPage.reload({ waitUntil: "networkidle" });
     await fallbackPage.locator('.nav-item[data-view="art"]').click();
     await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", null, { timeout: 5000 });
