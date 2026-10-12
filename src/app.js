@@ -365,88 +365,6 @@
   }
 
 
-  async function refreshTrashList() {
-    const select = $("#project-trash-list");
-    const previousValue = select.value;
-    select.replaceChildren();
-    const items = await projectRepository.listTrashedProjects();
-    items.forEach((item) => {
-      const option = document.createElement("option");
-      option.value = item.projectId;
-      const deletedAt = new Date(item.deletedAt);
-      const dateLabel = Number.isNaN(deletedAt.getTime()) ? item.deletedAt : deletedAt.toLocaleString("es-AR");
-      option.textContent = item.name + " · " + dateLabel + " · " + item.snapshotCount + " respaldo(s)";
-      option.dataset.projectName = item.name;
-      option.dataset.snapshotCount = String(item.snapshotCount);
-      select.appendChild(option);
-    });
-    if (!items.length) {
-      const option = document.createElement("option");
-      option.value = "";
-      option.textContent = "La papelera está vacía";
-      option.disabled = true;
-      select.appendChild(option);
-    }
-    if (items.some((item) => item.projectId === previousValue)) select.value = previousValue;
-    $("#project-trash-status").textContent = items.length
-      ? items.length + " proyecto(s) recuperable(s). Se conservan sus IDs y respaldos."
-      : "No hay universos en la papelera.";
-    updateProjectTrashControls();
-    return items;
-  }
-
-  function updateProjectTrashControls() {
-    const select = $("#project-trash-list");
-    const restore = $("#project-trash-restore-button");
-    const purge = $("#project-trash-purge-button");
-    if (!select || !restore || !purge) return;
-    const selected = Boolean(select.value && select.selectedOptions[0] && !select.selectedOptions[0].disabled);
-    restore.disabled = !selected;
-    purge.disabled = !selected;
-  }
-
-  async function restoreSelectedTrashedProject() {
-    const projectId = $("#project-trash-list").value;
-    const option = $("#project-trash-list").selectedOptions[0];
-    if (!projectId || !option || option.disabled) return;
-    const projectName = option.dataset.projectName || option.textContent;
-    if (!confirm("Se restaurará «" + projectName + "» (ID: " + projectId + ") al catálogo local. Su identidad original y sus snapshots se conservarán; el proyecto activo no cambiará.")) return;
-    $("#project-trash-restore-button").disabled = true;
-    try {
-      const restored = await projectRepository.restoreTrashedProject(projectId);
-      await refreshProjectList();
-      $("#project-list").value = projectId;
-      updateProjectDeleteControl();
-      $("#project-trash-status").textContent = "Universo «" + projectName + "» restaurado. ID conservado y " +
-        restored.snapshotsPreserved + " respaldo(s) disponibles. Podés abrirlo desde Proyectos guardados.";
-    } catch (error) {
-      $("#project-trash-status").textContent = "No se pudo restaurar el universo: " + error.message;
-    } finally {
-      updateProjectTrashControls();
-    }
-  }
-
-  async function permanentlyDeleteSelectedTrashedProject() {
-    const projectId = $("#project-trash-list").value;
-    const option = $("#project-trash-list").selectedOptions[0];
-    if (!projectId || !option || option.disabled) return;
-    const projectName = option.dataset.projectName || option.textContent;
-    const snapshotCount = Number(option.dataset.snapshotCount) || 0;
-    if (!confirm("BORRADO PERMANENTE\nSe eliminará «" + projectName + "» (ID: " + projectId + ") de la papelera y se destruirán sus " +
-      snapshotCount + " snapshot(s). Esta acción no se puede deshacer. Los demás universos no se modificarán.")) return;
-    $("#project-trash-purge-button").disabled = true;
-    try {
-      const result = await projectRepository.permanentlyDeleteTrashedProject(projectId);
-      await refreshTrashList();
-      $("#project-trash-status").textContent = "Universo «" + projectName + "» borrado permanentemente." +
-        (result.warning ? " " + result.warning : "");
-    } catch (error) {
-      $("#project-trash-status").textContent = "No se pudo vaciar este elemento: " + error.message;
-    } finally {
-      updateProjectTrashControls();
-    }
-  }
-
   function updateProjectDeleteControl() {
     const button = $("#project-delete-button");
     const help = $("#project-delete-help");
@@ -2597,12 +2515,6 @@
   $("#trash-restore-button").addEventListener("click", restoreSelectedTrashedProject);
   $("#trash-delete-button").addEventListener("click", permanentlyDeleteSelectedTrashedProject);
   $("#project-open-button").addEventListener("click", openSelectedProject);
-  $("#project-trash-list").addEventListener("change", updateProjectTrashControls);
-  $("#project-trash-refresh-button").addEventListener("click", () => refreshTrashList().catch((error) => {
-    $("#project-trash-status").textContent = "No se pudo actualizar la papelera: " + error.message;
-  }));
-  $("#project-trash-restore-button").addEventListener("click", restoreSelectedTrashedProject);
-  $("#project-trash-purge-button").addEventListener("click", permanentlyDeleteSelectedTrashedProject);
   $("#project-create-button").addEventListener("click", createNamedProject);
   $("#project-close-button").addEventListener("click", () => $("#project-dialog").close());
   $("#create-project-name").addEventListener("input", () => $("#create-project-name").setCustomValidity(""));
