@@ -25,6 +25,7 @@
   `;
   function init() {
     if (document.getElementById("art-studio-dialog")) return;
+    let editingId = null;
     const style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
     const nav = document.querySelector(".main-nav");
     if (nav) {
@@ -72,8 +73,8 @@
       if (!entity) return status("Indicá la entidad que recibirá el recurso.");
       if (!url && !uploaded) return status("Agregá una URL HTTPS o subí un archivo de imagen.");
       const items = read();
-      const item = { id: (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2)), kind: $("#art-kind").value, entity, title: $("#art-title").value.trim() || entity, url: url || "", imageData: uploaded ? preview : "", prompt: $("#art-prompt").value.trim(), notes: $("#art-notes").value.trim(), updatedAt: new Date().toISOString() };
-      try { items.unshift(item); write(items); $("#art-file").value = ""; status("Recurso guardado y vinculado a " + entity + "."); render(); }
+      const item = { id: editingId || (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2)), kind: $("#art-kind").value, entity, title: $("#art-title").value.trim() || entity, url: url || "", imageData: uploaded ? preview : "", prompt: $("#art-prompt").value.trim(), notes: $("#art-notes").value.trim(), updatedAt: new Date().toISOString() };
+      try { const existing = items.findIndex((entry) => entry.id === editingId); if (existing >= 0) items[existing] = item; else items.unshift(item); write(items); editingId = null; $("#art-file").value = ""; status("Recurso guardado y vinculado a " + entity + "."); render(); }
       catch (_) { status("No hay espacio local suficiente. Probá con una imagen más pequeña o una URL HTTPS."); }
     });
     $("#art-clear").addEventListener("click", clearForm);
@@ -87,12 +88,12 @@
       const items = read(), item = items.find((entry) => entry.id === button.dataset.id); if (!item) return;
       if (button.dataset.action === "delete") { if (!window.confirm("¿Eliminar este vínculo de la biblioteca local?")) return; write(items.filter((entry) => entry.id !== item.id)); render(); status("Vínculo eliminado."); }
       if (button.dataset.action === "edit") {
-        $("#art-kind").value = item.kind; $("#art-entity").value = item.entity; $("#art-title").value = item.title; $("#art-url").value = item.url; $("#art-prompt").value = item.prompt; $("#art-notes").value = item.notes;
+        editingId = item.id; $("#art-kind").value = item.kind; $("#art-entity").value = item.entity; $("#art-title").value = item.title; $("#art-url").value = item.url; $("#art-prompt").value = item.prompt; $("#art-notes").value = item.notes;
         $("#art-preview").src = item.imageData || item.url || "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
         status("Recurso cargado para editar. Al guardar se creará una versión actualizada en la biblioteca.");
       }
     });
-    function clearForm() { $("#art-studio-form").reset(); $("#art-preview").src = "data:image/gif;base64,R0lGODlhAQABAAAAACw="; status(""); }
+    function clearForm() { editingId = null; $("#art-studio-form").reset(); $("#art-preview").src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="; status(""); }
     function status(message) { $("#art-status").textContent = message; }
     function render() {
       const items = read(); $("#art-count").textContent = "(" + items.length + ")";
