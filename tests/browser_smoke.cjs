@@ -2495,6 +2495,13 @@ async function run() {
     // IndexedDB CRUD and reload: edit an existing assignment, reload the app, then delete it.
     const backgroundCard = page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first();
     await backgroundCard.getByRole("button", { name: "Editar" }).first().click();
+    const editFormState = await page.evaluate(() => ({
+      category: document.querySelector("#art-target-type")?.value,
+      id: document.querySelector("#art-target-id")?.value,
+      name: document.querySelector("#art-target-name")?.value
+    }));
+    assert.deepEqual(editFormState, { category: "background", id: "bg-orario-night", name: "Orario nocturno" },
+      "The edit action must load the exact assignment identity before saving.");
     const originalBackgroundUpdatedAt = backgroundAsset.updatedAt;
     await page.locator("#art-prompt").fill("Panorámica revisada de Orario bajo la lluvia.");
     await page.locator("#art-save").click();
@@ -2505,7 +2512,24 @@ async function run() {
     await page.reload({ waitUntil: "networkidle" });
     await page.locator('.nav-item[data-view="art"]').click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", null, { timeout: 5000 });
-    assert.ok((await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"))).prompt.includes("revisada"),
+    const persistedEditEvidence = await page.evaluate(async () => {
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
+      const db = await new Promise((resolve, reject) => {
+        const request = indexedDB.open("wordwaifu-art-studio", 1);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+      const indexedRecord = await new Promise((resolve, reject) => {
+        const request = db.transaction("assignments", "readonly").objectStore("assignments").get("background:bg-orario-night");
+        request.onsuccess = () => resolve(request.result || null);
+        request.onerror = () => reject(request.error);
+      });
+      db.close();
+      const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
+      return { assetPrompt: asset?.prompt, indexedPrompt: indexedRecord?.prompt, fallbackPrompt: fallback["background:bg-orario-night"]?.prompt };
+    });
+    process.stdout.write("ART_EDIT_EVIDENCE: " + JSON.stringify(persistedEditEvidence) + "\\n");
+    assert.ok(persistedEditEvidence.assetPrompt?.includes("revisada") && persistedEditEvidence.indexedPrompt?.includes("revisada"),
       "Editing an IndexedDB assignment must update its saved prompt and survive a full page reload.");
     await page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first().getByRole("button", { name: "Eliminar" }).first().click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
