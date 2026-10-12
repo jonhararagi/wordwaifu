@@ -17,6 +17,10 @@ const profilePaths=[
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
 assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
+assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,58,"The official-source registry should hold the extended character catalog.");
+assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
+assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-ASFI-AL-ANDROMEDA").voice,"Ai Kayano");
+assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-DIONYSUS").voice,"Masaya Matsukaze");
 assert.ok(archive.list(index).length >= 58,"The directory should include the expanded S4/S5 and Sword Oratoria cast, beyond the 12 deep dossiers.");
 const addedCast=["CHAR-DAPHNE-LAUROS","CHAR-CASSANDRA-ILION","CHAR-KASHIMA-OUKA","CHAR-HITACHI-CHIGUSA","CHAR-AISHA-BELKA","CHAR-LUVIS-LILIX","CHAR-DORMUL-BOLSTER","CHAR-MARI-XENOS","CHAR-NEOIN-UNICK","CHAR-NEESE-RANQUETTE","CHAR-ASTA-NOX","CHAR-LIANA-LEETS","CHAR-SELTTY-THROA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE","CHAR-LULUNE-LOUIE","CHAR-TSUBAKI-COLBRANDE"];
 for(const id of addedCast){
