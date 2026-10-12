@@ -108,6 +108,40 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+    // The idea lab runs offline and persists its output inside an isolated browser profile.
+    const ideaContext = await browser.newContext();
+    const ideaPage = await ideaContext.newPage();
+    const ideaErrors = [];
+    ideaPage.on("pageerror", (error) => ideaErrors.push(error.stack || error.message));
+    await ideaPage.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
+    await ideaPage.waitForFunction(() => (document.querySelector("#save-status")?.textContent || "").includes("IndexedDB"), null, { timeout: 10000 });
+    await ideaPage.locator('.nav-item[data-view="ideas"]').click();
+    await ideaPage.locator("#idea-output").waitFor({ state: "visible" });
+    assert.equal(await ideaPage.locator(".idea-character-card").count(), 6, "Idea lab must produce a full six-character ensemble.");
+    assert.ok((await ideaPage.locator("#idea-output").innerText()).includes("NÚCLEO EMOCIONAL"),
+      "Generated concepts must include a serious dramatic core as well as comedy.");
+    await ideaPage.locator("#idea-save-story").click();
+    await ideaPage.waitForFunction(() => document.querySelector("#save-status")?.textContent.includes("Guardado"), null, { timeout: 10000 });
+    const generatedStoryCount = await ideaPage.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const loaded = await repository.loadActive();
+      repository.close();
+      return (loaded.project.stories || []).length;
+    });
+    assert.equal(generatedStoryCount, 1, "Saving a generated idea must persist it as a story in the active project.");
+    await ideaPage.locator('.nav-item[data-view="ideas"]').click();
+    await ideaPage.locator("#idea-add-cast").click();
+    await ideaPage.waitForFunction(() => document.querySelector("#save-status")?.textContent.includes("Guardado"), null, { timeout: 10000 });
+    const generatedCharacterCount = await ideaPage.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const loaded = await repository.loadActive();
+      repository.close();
+      return loaded.project.characters.length;
+    });
+    assert.equal(generatedCharacterCount, 10, "Saving the generated cast must add six editable proposals to the universe.");
+    assert.deepEqual(ideaErrors, [], "Idea generator must not raise browser errors: " + ideaErrors.join("; "));
+    await ideaContext.close();
+    process.stdout.write("PASS_REAL: idea lab generates a six-character ensemble, preserves a serious core, and saves stories and character proposals to IndexedDB.\\n");
     // A second tab can move this universe to trash while this page still has
     // its old in-memory state. Autosave must not write that stale state into
     // localStorage before the IndexedDB tombstone guard rejects it.
