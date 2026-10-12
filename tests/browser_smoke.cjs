@@ -2474,6 +2474,8 @@ async function run() {
     await page.locator("#art-image-file").setInputFiles({ name: "bell-test.png", mimeType: "image/png", buffer: tinyPng });
     await page.locator("#art-save").click();
     await page.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("Se asignó a Bell Cranel"), { timeout: 5000 });
+    assert.ok((await page.locator("#art-status").innerText()).includes("biblioteca local del navegador"),
+      "The primary storage test must verify that IndexedDB, not the local fallback, handled the save.");
     assert.equal(await page.locator("#art-assignment-count").innerText(), "1");
     const customAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("character", "DM-CHAR-BELL"));
     assert.ok(customAsset.src.startsWith("data:image/png"), "Uploaded art must persist in the local asset library.");
