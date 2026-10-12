@@ -2289,6 +2289,27 @@
       copy.appendChild(action);person.appendChild(copy);members.appendChild(person);
     });
     card.append(archiveElement("h5","archive-family-subheading","Integrantes con ficha disponible"),members);
+    if((group.dynamics||[]).length){
+      card.appendChild(archiveElement("h5","archive-family-subheading","Cómo se relacionaban"));
+      const dynamics=archiveElement("div","archive-family-dynamics");
+      group.dynamics.forEach(item=>{
+        const relation=archiveElement("article","archive-family-dynamic");
+        relation.appendChild(archiveElement("strong","",item.title));
+        const people=archiveElement("div","archive-family-dynamic-people");
+        [item.fromId,item.toId].forEach(id=>{
+          const person=group.members.find(member=>member.id===id)||group.leader&&group.leader.id===id? (group.members.find(member=>member.id===id)||group.leader):group.deity&&group.deity.id===id?group.deity:null;
+          if(!person)return;
+          const link=archiveElement("button","archive-related-link",person.name+" ↗");link.type="button";
+          link.dataset.characterLink=person.id;link.dataset.linkContinuity=group.continuity;people.appendChild(link);
+        });
+        if(people.childNodes.length)relation.appendChild(people);
+        relation.appendChild(archiveElement("p","",item.text));
+        const ref=archiveElement("div","archive-source-links");
+        appendLoreLink(ref,(item.sourceKind==="community"?"Referencia comunitaria · ":"Fuente oficial · ")+(item.sourceLabel||"Consultar fuente"),item.sourceUrl,true);
+        relation.appendChild(ref);dynamics.appendChild(relation);
+      });
+      card.appendChild(dynamics);
+    }
     const milestones=(group.milestones||[]).filter(item=>window.WordWaifuCharacterArchive.spoilerVisible(item.spoilerLevel||"unknown",filter));
     if(milestones.length){
       card.appendChild(archiveElement("h5","archive-family-subheading","Historia y desenlace"));
