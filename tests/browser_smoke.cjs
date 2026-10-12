@@ -139,6 +139,8 @@ async function run() {
     // Character archive: compact search, profile navigation, evidence and temporal separation.
     await page.locator('.nav-item[data-view="lore"]').click();
     await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
+    await page.locator("#character-archive-query").fill("");
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length >= 10, { timeout: 5000 });
     await page.locator("#character-archive-query").fill("Ryu");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").getAttribute("data-archive-open"), "CHAR-RYUU-LION");
@@ -146,6 +148,18 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
+    // Expanded reading must open a modal with a Spanish community reference and preserve continuity context.
+    await page.locator("#archive-profile-panel [data-archive-more-info]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, { timeout: 3000 });
+    assert.ok((await page.locator("#archive-more-info-title").innerText()).includes("Ryu Lion"));
+    assert.ok((await page.locator("#archive-more-info-content").innerText()).includes("Referencias para seguir leyendo"));
+    assert.ok(await page.locator("#archive-more-info-content a[href*='danmachi.fandom.com/es/wiki/Ryuu_Lion']").count() > 0);
+    await page.locator("#archive-more-info-close").click();
+    // The visible rights note correctly says that attribution is not a license.
+    await page.locator("#content-rights-open").click();
+    assert.equal(await page.locator("#content-rights-dialog").evaluate(el => el.open), true);
+    assert.ok((await page.locator("#content-rights-dialog").innerText()).includes("no concede una licencia"));
+    await page.locator("#content-rights-close").click();
     await page.locator("#archive-tab-personality").click();
     const personalityText = await page.locator("#archive-profile-panel").innerText();
     assert.ok(personalityText.toLocaleLowerCase("es").includes("justicia"), "The personality tab must render evidence-backed motivation. Panel text: " + personalityText);
@@ -187,6 +201,15 @@ async function run() {
     await page.locator("#archive-return-search").click();
     assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
+    // Newly curated profiles have local original SVG portraits rather than broken or empty remote images.
+    await page.locator("#character-archive-query").fill("Bell Cranel");
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
+    const bellPortrait = page.locator("#character-archive-results [data-archive-open='DM-CHAR-BELL'] .archive-portrait-art");
+    assert.equal(await bellPortrait.count(), 1);
+    await page.waitForFunction(() => {
+      const img = document.querySelector("#character-archive-results [data-archive-open='DM-CHAR-BELL'] .archive-portrait-art");
+      return !!img && img.complete && img.naturalWidth > 0;
+    }, null, { timeout: 5000 });
     process.stdout.write("PASS character archive: compact search, tabs, links, continuity separation, spoiler filtering, evidence and screenshot.\\n");
     await page.locator("#lore-research-panel > summary").click();
 
