@@ -2487,6 +2487,85 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
     const backgroundAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"));
     assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
+
+    // IndexedDB CRUD and reload: edit an existing assignment, reload the app, then delete it.
+    const backgroundCard = page.locator(".art-assignment-card").filter({ hasText: "Orario nocturno" });
+    await backgroundCard.getByRole("button", { name: "Editar" }).click();
+    await page.locator("#art-prompt").fill("Panorámica revisada de Orario bajo la lluvia.");
+    await page.locator("#art-save").click();
+    await page.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("Se asignó a Orario nocturno"), { timeout: 5000 });
+    assert.ok((await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"))).prompt.includes("revisada"),
+      "Editing an IndexedDB assignment must update its saved prompt.");
+    await page.reload({ waitUntil: "networkidle" });
+    await page.locator('.nav-item[data-view="art"]').click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
+    assert.ok((await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"))).prompt.includes("revisada"),
+      "An edited IndexedDB assignment must survive a full page reload.");
+    await page.locator(".art-assignment-card").filter({ hasText: "Orario nocturno" }).getByRole("button", { name: "Eliminar" }).click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
+    assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
+      "Deleting an IndexedDB assignment must remove it from storage.");
+
+    // Simulate IndexedDB being unavailable: fallback assignments must support create/edit/reload/delete.
+    const fallbackPage = await context.newPage();
+    await fallbackPage.addInitScript(() => {
+      Object.defineProperty(window, "indexedDB", {
+        configurable: true,
+        value: {
+          open() {
+            const request = {};
+            queueMicrotask(() => {
+              request.error = new Error("Simulated IndexedDB unavailable");
+              if (typeof request.onerror === "function") request.onerror();
+            });
+            return request;
+          }
+        }
+      });
+    });
+    await fallbackPage.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
+    await fallbackPage.locator('.nav-item[data-view="art"]').click();
+    await fallbackPage.waitForFunction(() => Boolean(window.WordWaifuArtStudio), { timeout: 5000 });
+    await fallbackPage.locator("#art-target-type").selectOption("background");
+    await fallbackPage.locator("#art-target-id").fill("bg-fallback-test");
+    await fallbackPage.locator("#art-target-name").fill("Escenario de respaldo");
+    await fallbackPage.locator("#art-prompt").fill("Primer prompt guardado en localStorage.");
+    await fallbackPage.locator("#art-save").click();
+    await fallbackPage.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("respaldo local"), { timeout: 5000 });
+    assert.equal(await fallbackPage.locator("#art-assignment-count").innerText(), "1",
+      "A successful localStorage fallback save must appear in the gallery even when IndexedDB remains readable only as a failing backend.");
+    await fallbackPage.locator(".art-assignment-card").getByRole("button", { name: "Editar" }).click();
+    await fallbackPage.locator("#art-prompt").fill("Prompt editado y persistido en el respaldo.");
+    await fallbackPage.locator("#art-save").click();
+    await fallbackPage.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("respaldo local"), { timeout: 5000 });
+    await fallbackPage.reload({ waitUntil: "networkidle" });
+    await fallbackPage.locator('.nav-item[data-view="art"]').click();
+    await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
+    assert.ok((await fallbackPage.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test"))).prompt.includes("editado"),
+      "Fallback edits must survive a full page reload.");
+    await fallbackPage.locator(".art-assignment-card").getByRole("button", { name: "Eliminar" }).click();
+    await fallbackPage.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "0", { timeout: 5000 });
+    assert.equal(await fallbackPage.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-fallback-test")), null,
+      "Fallback deletion must remove the stored assignment.");
+    // A failed localStorage write must be shown as an error and must not create a gallery item.
+    await fallbackPage.evaluate(() => {
+      const originalSetItem = Storage.prototype.setItem;
+      Storage.prototype.setItem = function(key, value) {
+        if (key === "wordwaifu.art.assignments.v1") throw new DOMException("Simulated quota exceeded", "QuotaExceededError");
+        return originalSetItem.call(this, key, value);
+      };
+    });
+    await fallbackPage.locator("#art-target-id").fill("bg-failed-save");
+    await fallbackPage.locator("#art-target-name").fill("Guardado fallido");
+    await fallbackPage.locator("#art-prompt").fill("Este recurso no debe aparecer como guardado.");
+    await fallbackPage.locator("#art-save").click();
+    await fallbackPage.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("No hay espacio disponible"), { timeout: 5000 });
+    assert.equal(await fallbackPage.locator("#art-assignment-count").innerText(), "0",
+      "A failed fallback write must not be shown as a successful saved assignment.");
+    assert.equal(await fallbackPage.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-failed-save")), null);
+    await fallbackPage.close();
+    process.stdout.write("PASS_REAL: Art Studio IndexedDB and localStorage fallback create/edit/reload/delete; simulated quota failure never reports success.\\n");
+
     await page.screenshot({ path: path.join(root, "artifacts", "art-studio.png"), fullPage: true });
     // A user-assigned portrait takes precedence over the linked reference art in the archive.
     await page.locator('.nav-item[data-view="lore"]').click();
