@@ -192,12 +192,20 @@ async function run() {
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Sin información suficiente"));
     await page.locator("#archive-tab-moments").click();
     assert.ok(await page.locator("#archive-profile-panel [data-moment-id]").count() >= 3);
-    assert.equal(await page.locator("#archive-profile-panel .archive-moment-art").count(), 3,
-      "Ryu's three curated historical moments should display original conceptual scene art.");
+    assert.equal(await page.locator("#archive-profile-panel .archive-moment-art").count(), 0,
+      "Historical moments must not present generic placeholder illustrations as scene art.");
+    assert.equal(await page.locator("#archive-profile-panel .archive-moment-visual-reference").count(), 3,
+      "Each historical moment should show a sourced character-reference strip.");
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("NO ES UNA IMAGEN DE LA ESCENA"),
+      "Reference portraits must not be mistaken for images of a specific canon event.");
     await page.waitForFunction(() => {
-      const images = Array.from(document.querySelectorAll("#archive-profile-panel .archive-moment-art"));
-      return images.length === 3 && images.every(img => img.complete && img.naturalWidth > 0);
-    }, null, { timeout: 5000 });
+      const images = Array.from(document.querySelectorAll("#archive-profile-panel .archive-moment-character .archive-portrait-art"));
+      return images.length >= 3 && images.every(img => img.complete && img.naturalWidth > 0 &&
+        img.currentSrc.includes("danmachi.com/"));
+    }, null, { timeout: 10000 });
+    const momentPortraitUrls = await page.locator("#archive-profile-panel .archive-moment-character .archive-portrait-art").evaluateAll(images => images.map(img => img.currentSrc));
+    assert.ok(momentPortraitUrls.every(url => url.includes("/danmachi4/character/images/chara_tachi_")),
+      "Historical character-reference strips must use the official DanMachi IV/Astrea Record-era portraits.");
     await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] > summary').click();
     assert.ok(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] .archive-evidence').count() >= 1);
     await page.locator("#archive-tab-relationships").click();
