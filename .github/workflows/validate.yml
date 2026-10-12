@@ -34,8 +34,10 @@ jobs:
           node --check src/universe-graph.js
           node --check src/universe-explorer.js
           node --check src/power-workbench.js
+          node --check src/code-geass-lore.js
           node --check tests/test_power_catalog.cjs
           node --check tests/test_universe_graph.cjs
+          node --check tests/test_code_geass_lore.cjs
           node --check tests/test_character_dossiers.cjs
           node --check tests/test_project_schema.cjs
           node --check tests/browser_smoke.cjs
@@ -45,6 +47,8 @@ jobs:
         run: node tests/test_power_catalog.cjs
       - name: Test connected lore graph
         run: node tests/test_universe_graph.cjs
+      - name: Test Code Geass canon corpus
+        run: node tests/test_code_geass_lore.cjs
       - name: Test extended character dossiers
         run: node tests/test_character_dossiers.cjs
       - name: Install pinned Playwright
