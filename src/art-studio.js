@@ -65,7 +65,7 @@
       if (file.size > MAX_UPLOAD) { status("El archivo supera el límite de 3 MiB. Usá una imagen optimizada o una URL."); $("#art-file").value = ""; return; }
       try { $("#art-preview").src = await toDataURL(file); $("#art-url").value = ""; status("Archivo listo para guardar."); } catch (_) { status("No se pudo leer el archivo."); }
     });
-    $("#art-form").addEventListener("submit", (event) => {
+    $("#art-studio-form").addEventListener("submit", (event) => {
       event.preventDefault();
       const entity = $("#art-entity").value.trim(), url = safeURL($("#art-url").value), preview = $("#art-preview").src;
       const uploaded = preview.startsWith("data:image/") && preview !== "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
@@ -92,7 +92,7 @@
         status("Recurso cargado para editar. Al guardar se creará una versión actualizada en la biblioteca.");
       }
     });
-    function clearForm() { $("#art-form").reset(); $("#art-preview").src = "data:image/gif;base64,R0lGODlhAQABAAAAACw="; status(""); }
+    function clearForm() { $("#art-studio-form").reset(); $("#art-preview").src = "data:image/gif;base64,R0lGODlhAQABAAAAACw="; status(""); }
     function status(message) { $("#art-status").textContent = message; }
     function render() {
       const items = read(); $("#art-count").textContent = "(" + items.length + ")";
