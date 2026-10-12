@@ -80,7 +80,12 @@
     const worldKey = input.world && input.world !== "auto" ? input.world : /(harry\\s*potter|hogwarts)/i.test(prompt) ? "magic-school" : /(isekai|reencarna|otro mundo)/i.test(prompt) ? "isekai" : "original";
     const dynamicKey = input.dynamic && input.dynamic !== "auto" ? input.dynamic : /malfoy/i.test(prompt) && /harry\\s*potter|hogwarts/i.test(prompt) ? "secret-crush" : motherlyPremise ? "found-family" : traits.intelligence >= 70 && traits.attitude <= 30 ? "reluctant-hero" : "auto";
     const protagonistBank = gamerPremise ? banks.protagonists : banks.generalProtagonists;
-    const protagonist = novelistPremise
+    const harryPotterPremise = /harry\\s*potter|hogwarts|quidditch/i.test(prompt);
+    const malfoyPremise = /malfoy/i.test(prompt);
+    const femaleMalfoy = harryPotterPremise && malfoyPremise && (input.gender === "woman" || /mujer|femenin|renasca como mujer/i.test(prompt));
+    const protagonist = femaleMalfoy
+      ? { name: "Draco Malfoy", role: "heredera de la familia Malfoy y estudiante de Hogwarts en una versión femenina del personaje", personality: "orgullosa, aguda y defensiva; usa la ironía para ocultar que no sabe cómo reparar sus vínculos", flaw: "interpreta cada gesto amable como una trampa y teme perder el estatus que la protege", motivation: "cambiar su relación con Harry sin admitir que él empieza a verla de otra manera", id: "char-gen-protagonist-" + seed }
+      : novelistPremise
       ? {
           name: "Damián Varela",
           role: npcPremise ? "novelista reencarnado que interpreta a un NPC universitario" : "novelista reencarnado",
@@ -124,6 +129,9 @@
     }));
     const companion = { ...pick(banks.companions, seed >>> 3), id: "char-gen-companion-" + seed };
     const antagonist = { ...pick(banks.antagonists, seed >>> 5), id: "char-gen-antagonist-" + seed };
+    const secretHarry = femaleMalfoy
+      ? { name: "Harry Potter", role: "compañero de Hogwarts que empieza a enamorarse de Draco sin saber cómo decírselo", personality: "valiente, leal y torpe al ocultar una ternura inesperada", flaw: "disimula sus sentimientos y termina enviando señales contradictorias", motivation: "acercarse a Draco por quien es, sin tratarla como alguien a quien debe salvar", id: "char-gen-harry-" + seed }
+      : null;
     const complication = pick(banks.complications, seed >>> 7);
     const seriousCore = pick(banks.seriousCores, seed >>> 9);
     const opening = pick(banks.openingScenes, seed >>> 11);
@@ -141,14 +149,18 @@
       : tone === "comedy"
         ? "El absurdo domina el ritmo; debajo de cada chiste queda una consecuencia emocional concreta."
         : "Los personajes pueden ser ridículos en una escena y afrontar con absoluta seriedad una pérdida, una promesa o una decisión moral en la siguiente.";
-    const characters = divinePremise
-      ? [protagonist, ...goddesses, companion, antagonist]
-      : [protagonist, ...party, antagonist];
+    const characters = femaleMalfoy
+      ? [protagonist, secretHarry, ...party.slice(0, 2), antagonist]
+      : divinePremise
+        ? [protagonist, ...goddesses, companion, antagonist]
+        : [protagonist, ...party, antagonist];
     const groupNames = divinePremise ? goddesses.map((item) => item.name).join(", ") : party.map((item) => item.name).join(", ");
     const hook = divinePremise
       ? protagonist.name + ", " + protagonist.role + ", recibe una misión de " + groupNames + ". Las tres aceptan ayudar, pero ninguna coincide en qué significa salvar el mundo."
       : protagonist.name + ", " + protagonist.role + ", reúne a " + groupNames + " para resolver una crisis que parece sencilla hasta que cada integrante aplica su propia idea de lo correcto.";
-    const specializedHook = novelistPremise
+    const specializedHook = femaleMalfoy
+      ? "La protagonista renace como una versión femenina de Draco Malfoy e intenta llevarse bien con Harry para escapar de las viejas rivalidades familiares. Harry empieza a enamorarse de ella, pero Draco interpreta sus silencios, ayudas y nerviosismo como sospecha o estrategia. La tensión nace de la ironía dramática, la historia compartida y el miedo de ambos a mostrarse vulnerables."
+      : novelistPremise
       ? "En su vida anterior, " + protagonist.name + " era novelista y jugador obsesionado con arquetipos románticos de mujeres adultas maduras. Reencarnado en otro mundo, adopta el papel de NPC de una universidad y ensaya una estrategia desconcertante: llamar la atención de las heroínas mediante una actitud protectora, casi maternal. Cree que está interpretando un papel perfecto; ellas empiezan a detectar las grietas entre su fachada y su verdadera personalidad."
       : "";
     const groupDynamic = divinePremise
@@ -170,6 +182,7 @@
         "CONTRADICCIÓN DEL PROTAGONISTA: " + (novelistPremise ? "Quiere pasar inadvertido como NPC, pero su instinto de novelista lo lleva a preparar encuentros, diálogos y rescates demasiado convenientes. Su gusto por las mujeres adultas maduras influye en sus expectativas románticas, no le da derecho a manipular los sentimientos de nadie." : "El protagonista debe confrontar la diferencia entre su imagen pública y sus necesidades reales."),
         "ESTRATEGIA SOCIAL: " + (motherlyPremise ? "Ofrece apoyo práctico, recuerda pequeños detalles y actúa como figura protectora; cuando intenta controlar cada resultado, las heroínas le ponen límites y debe aprender a ayudar sin decidir por ellas." : "Los vínculos se desarrollan mediante decisiones, confianza, límites y consecuencias, no por atracción automática."),
         "COMEDIA DE PERSONAJE: " + (npcPremise ? "Cada vez que intenta actuar como un NPC de fondo, su exceso de preparación convierte una interacción corriente en una escena sospechosamente importante." : traits.intelligence >= 70 && traits.attitude <= 30 ? "El protagonista diseña planes brillantes y luego intenta convencer al grupo de que ejecutarlos es trabajo de otra persona." : "El humor nace de la distancia entre lo que el protagonista planea y lo que realmente ocurre."),
+        "DINÁMICA EN ESCENA: " + (femaleMalfoy ? "Harry busca excusas para estar cerca de Draco, recuerda detalles que dice no recordar y se pone nervioso cuando ella confía en otra persona. Draco interpreta esos gestos como maniobras políticas y responde con sarcasmo; cada acto de confianza debilita su lectura equivocada. El romance avanza por decisiones y conversaciones, no por destino obligatorio." : "Cada relación cambia por acciones observables, malentendidos, límites y consecuencias."),
         "CONFLICTO EXTERNO: " + complication + ".",
         "NÚCLEO EMOCIONAL: " + seriousCore + ".",
         "TONO: " + toneNote,
@@ -242,10 +255,28 @@
         genre: $("#idea-genre").value,
         tone: $("#idea-tone").value,
         mode: $("#idea-mode").value,
-        continuity: $("#idea-continuity").value
+        continuity: $("#idea-continuity").value,
+        gender: $("#idea-gender").value,
+        world: $("#idea-world").value,
+        dynamic: $("#idea-dynamic").value,
+        worldRules: $("#idea-world-rules").value,
+        fearDetail: $("#idea-fear-detail").value,
+        signatureAction: $("#idea-signature-action").value,
+        traits: {
+          courage: Number($("#idea-courage").value),
+          fear: Number($("#idea-fear").value),
+          intelligence: Number($("#idea-intelligence").value),
+          attitude: Number($("#idea-attitude").value),
+          empathy: Number($("#idea-empathy").value)
+        }
       }));
     });
     $("#idea-regenerate").addEventListener("click", () => form.requestSubmit());
+    ["courage", "fear", "intelligence", "attitude", "empathy"].forEach((trait) => {
+      const slider = $("#idea-" + trait);
+      const output = $("#idea-" + trait + "-value");
+      if (slider && output) slider.addEventListener("input", () => { output.value = slider.value; output.textContent = slider.value; });
+    });
     form.requestSubmit();
   }
 
