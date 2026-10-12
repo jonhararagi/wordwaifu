@@ -108,6 +108,57 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+    // A second tab can move this universe to trash while this page still has
+    // its old in-memory state. Autosave must not write that stale state into
+    // localStorage before the IndexedDB tombstone guard rejects it.
+    const staleContext = await browser.newContext();
+    const stalePage = await staleContext.newPage();
+    await stalePage.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
+    await stalePage.waitForFunction(() => {
+      const status = document.querySelector("#save-status")?.textContent || "";
+      return status.includes("IndexedDB") && !status.includes("Guardando");
+    }, null, { timeout: 10000 });
+    const staleTabSetup = await stalePage.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const original = await repository.read("projects", "project-asteria");
+      if (!original?.data) throw new Error("The stale-tab fixture project was not persisted.");
+      const sibling = JSON.parse(JSON.stringify(original.data));
+      sibling.project = { ...sibling.project, id: "project-stale-tab-sibling", name: "Universo hermano de prueba" };
+      await repository.saveActive(sibling);
+      const moved = await repository.moveProjectToTrash("project-asteria");
+      const backupId = repository.readBackup().project?.project?.id || null;
+      repository.close();
+      return { moved: moved.moved, backupId };
+    });
+    assert.equal(staleTabSetup.moved, true);
+    assert.equal(staleTabSetup.backupId, "project-stale-tab-sibling");
+    await stalePage.locator("#add-button").click();
+    await stalePage.locator("#entity-name").fill("Personaje de pestaña obsoleta");
+    await stalePage.locator('#entity-form button[type="submit"]').click();
+    await stalePage.waitForFunction(() =>
+      (document.querySelector("#save-status")?.textContent || "").includes("está en la papelera"),
+    null, { timeout: 5000 });
+    const staleTabEvidence = await stalePage.evaluate(async () => {
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository();
+      const backupId = repository.readBackup().project?.project?.id || null;
+      const projects = await repository.listProjects();
+      const trash = await repository.listTrash();
+      repository.close();
+      return {
+        backupId,
+        activeProjectIds: projects.map((project) => project.projectId),
+        trashedProjectIds: trash.map((project) => project.projectId)
+      };
+    });
+    assert.equal(staleTabEvidence.backupId, "project-stale-tab-sibling",
+      "A rejected stale-tab autosave must preserve the previous local backup.");
+    assert.ok(!staleTabEvidence.activeProjectIds.includes("project-asteria"),
+      "The stale autosave must not resurrect the project from localStorage.");
+    assert.ok(staleTabEvidence.trashedProjectIds.includes("project-asteria"),
+      "The original project must remain recoverable in the trash.");
+    process.stdout.write("PASS stale-tab autosave cannot resurrect trashed project.\\n");
+    await staleContext.close();
+
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
     await page.locator("#global-search").fill("Ryu");
