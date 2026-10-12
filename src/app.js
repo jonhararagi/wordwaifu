@@ -1222,8 +1222,9 @@
       story.status = String(form.get("storyStatus") || "draft");
       story.arcs = String(form.get("storyArcs") || "").split("\n").map((line) => line.trim()).filter(Boolean);
       const saved = await saveProject();
-      $("#story-editor-status", container).textContent = saved ? "Historia guardada en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
       renderDirectory();
+      const status = $("#story-editor-status", container);
+      if (status) status.textContent = saved ? "Historia guardada en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
     });
     $(".story-chapter-form", container).forEach((formNode) => formNode.addEventListener("submit", async (event) => {
       event.preventDefault();
