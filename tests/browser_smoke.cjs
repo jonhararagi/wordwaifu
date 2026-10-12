@@ -129,7 +129,7 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').click();
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
