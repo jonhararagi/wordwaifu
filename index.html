@@ -160,9 +160,41 @@
           <p id="lore-search-status" class="lore-search-status" role="status" aria-live="polite">El índice se carga al abrir esta sección. La consulta es textual y no afirma que el corpus esté completo.</p><div id="lore-results" class="lore-results"></div>
         </details>
       </section>
-      <footer class="app-footer"><span>WORDWAIFU · TU UNIVERSO, TUS REGLAS</span><span id="save-status">Cambios guardados en este navegador</span></footer>
+      <footer class="app-footer"><span>WORDWAIFU · TU UNIVERSO, TUS REGLAS</span><span class="footer-actions"><button type="button" id="content-rights-open" class="quiet-button">Derechos y contenido</button><span id="save-status">Cambios guardados en este navegador</span></span></footer>
     </main>
   </div>
+
+  <dialog id="archive-more-info-dialog" class="entity-dialog archive-more-info-dialog" aria-labelledby="archive-more-info-title">
+    <article class="archive-more-info-content">
+      <header class="dialog-heading">
+        <div><p class="eyebrow">ENCICLOPEDIA · LECTURA AMPLIADA</p><h2 id="archive-more-info-title">Más información</h2></div>
+        <button type="button" id="archive-more-info-close" class="icon-button" aria-label="Cerrar información ampliada">✕</button>
+      </header>
+      <p class="archive-more-info-disclaimer">Resumen original de WordWaifu. Los hechos se limitan a la continuidad elegida; las referencias comunitarias se identifican como tales.</p>
+      <div id="archive-more-info-content" class="archive-more-info-body"></div>
+    </article>
+  </dialog>
+  <dialog id="content-rights-dialog" class="entity-dialog content-rights-dialog" aria-labelledby="content-rights-title">
+    <article class="content-rights-content">
+      <header class="dialog-heading">
+        <div><p class="eyebrow">TRANSPARENCIA Y RESPETO A LOS TITULARES</p><h2 id="content-rights-title">Derechos, licencias y solicitudes</h2></div>
+        <button type="button" id="content-rights-close" class="icon-button" aria-label="Cerrar política de contenido">✕</button>
+      </header>
+      <p>WordWaifu no reclama la propiedad de personajes, marcas, ilustraciones, novelas, anime ni otros materiales de franquicias ajenas. Sus derechos permanecen en sus titulares reales. La presencia de una referencia, resumen o enlace no transfiere derechos ni concede permiso para copiar, publicar, adaptar o vender ese material.</p>
+      <h3>Cómo tratamos el contenido de terceros</h3>
+      <ul>
+        <li>Priorizamos resúmenes redactados por WordWaifu, fragmentos mínimos cuando sean necesarios, atribución y enlaces a la fuente.</li>
+        <li>Las wikis son referencias comunitarias, no fuentes oficiales. El texto, las imágenes y otros elementos de una misma página pueden tener titulares o licencias diferentes.</li>
+        <li>Las imágenes oficiales, fanart, traducciones y otros archivos no se incorporan al repositorio como si fueran propios. Para distribuirlos o explotarlos comercialmente, hace falta comprobar la licencia o conseguir autorización cuando corresponda.</li>
+        <li>Las prácticas de fanworks o doujinshi varían según el titular, la obra, el país y el uso concreto; no se consideran una autorización universal.</li>
+      </ul>
+      <h3>Correcciones y retirada</h3>
+      <p>Si una persona titular o representante autorizado identifica material que considera infractor, puede informar la URL afectada, el contenido concreto y la base de su reclamación mediante un canal de contacto que el responsable del proyecto habilite. La solicitud se revisará con prontitud y el material podrá ocultarse mientras se evalúa. Si corresponde, se retirará del proyecto y del repositorio bajo nuestro control.</p>
+      <p>Una política de retirada no sustituye una licencia ni garantiza que el uso original fuera válido. Tampoco permite borrar automáticamente copias, cachés o bifurcaciones ajenas. Antes de una publicación pública debe habilitarse un canal de contacto apropiado para las reclamaciones.</p>
+      <p class="archive-research-note">Esta nota explica la intención del proyecto y no es asesoramiento jurídico. Las reglas aplicables dependen de la jurisdicción y del material concreto.</p>
+    </article>
+  </dialog>
+
   <dialog id="project-dialog" class="entity-dialog project-dialog" aria-labelledby="project-dialog-title">
     <div class="project-manager-content">
       <div class="dialog-heading"><div><p class="eyebrow">MULTIVERSO LOCAL</p><h2 id="project-dialog-title">Gestionar proyectos</h2></div><button type="button" id="project-close-button" class="icon-button" aria-label="Cerrar gestor de proyectos">✕</button></div>
