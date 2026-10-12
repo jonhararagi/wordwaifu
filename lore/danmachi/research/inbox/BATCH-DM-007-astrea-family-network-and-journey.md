@@ -214,8 +214,8 @@
 - `aspect`: legacy and character evolution
 - `claim`: La fuente comunitaria conecta la memoria de Alise, Kaguya y Lyra con la evolución posterior de Ryu y su forma de recurrir a la magia asociada a Astrea Record. Se conserva como lectura secundaria con spoilers, no como análisis psicológico definitivo.
 - `character_ids`: [CHAR-RYUU-LION, CHAR-ALISE-LOVELACE, CHAR-KAGUYA, CHAR-LYRA, CHAR-ASTREA]
-- `era_or_interval`: Comparación de estados históricos y posteriores; interpretación provisional
-- `continuity_scope`: CROSS-CONTINUITY
+- `era_or_interval`: Estado posterior de la novela principal; interpretación secundaria de los vínculos históricos
+- `continuity_scope`: CONT-MAIN-LN
 - `source_id`: DMR-007-SRC-005
 - `source_type`: COMMUNITY_SECONDARY_ANALYSIS
 - `source_title`: Ryuu Lion · Relationships · DanMachi Wiki
