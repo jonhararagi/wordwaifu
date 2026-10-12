@@ -155,9 +155,9 @@ async function run() {
     assert.ok((await page.locator("#archive-more-info-content").innerText()).includes("Referencias para seguir leyendo"));
     assert.ok(await page.locator("#archive-more-info-content a[href*='danmachi.fandom.com/es/wiki/Ryuu_Lion']").count() > 0);
     const expandedRyuText = await page.locator("#archive-more-info-content").innerText();
-    assert.ok(expandedRyuText.includes("Temporal state A"), "More Info must recover the existing historical Ryu dossier.");
-    assert.ok(expandedRyuText.includes("Open questions"), "More Info must preserve open research questions from the existing dossier.");
-    assert.ok(!expandedRyuText.includes('Temporal state B'), "The historical summary must not mix in Ryu's later anime state.");
+    assert.ok(expandedRyuText.includes("Estado temporal A"), "More Info must recover the existing historical Ryu dossier.");
+    assert.ok(expandedRyuText.includes("Preguntas abiertas"), "More Info must preserve open research questions from the existing dossier.");
+    assert.ok(!expandedRyuText.includes('Estado temporal B'), "The historical summary must not mix in Ryu's later anime state.");
     await page.locator("#archive-more-info-close").click();
     // The visible rights note correctly says that attribution is not a license.
     await page.locator("#content-rights-open").click();
