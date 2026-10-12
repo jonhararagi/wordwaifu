@@ -45,8 +45,8 @@ assert.ok(archive.getExtendedInfo("CHAR-KAGUYA","CONT-AR").references.some(ref=>
 const extendedRyu=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR",index);
 assert.ok(extendedRyu.repositoryProfile&&extendedRyu.repositoryProfile.sectionCount>0,
   "The More Info window must recover the pre-existing character dossier.");
-assert.ok(extendedRyu.sections.some(section=>section.title.includes("Temporal state A")));
-assert.ok(!extendedRyu.sections.some(section=>section.title.includes("Temporal state B")),
+assert.ok(extendedRyu.sections.some(section=>section.title.includes("Estado temporal A")));
+assert.ok(!extendedRyu.sections.some(section=>section.title.includes("Estado temporal B")),
   "Anime-only temporal-state details must not leak into the historical Ryu summary.");
 const extendedBell=archive.getExtendedInfo("DM-CHAR-BELL","CONT-ANIME",index);
 assert.ok(extendedBell.sections.some(section=>section.title==="Anclas de continuidad"),
