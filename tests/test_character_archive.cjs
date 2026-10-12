@@ -7,6 +7,7 @@ const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
 const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md"];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
+// Temporary validation-only touch: execute the complete lore and Chromium CI against the current feature base.
 const index=corpus.buildIndex(catalog,docs);
 const ryu=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","all");
 assert.ok(ryu&&ryu.claims.every(c=>c.continuityScopes.includes("CONT-AR")));
