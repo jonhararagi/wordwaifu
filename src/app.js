@@ -1161,8 +1161,10 @@
     } else {
       heading = "Historias y novelas";
       items = state.stories.map((story) => '<article class="entity-card story-card' + (story.id === selectedStoryId ? ' selected' : '') + '" data-story="' + escapeHTML(story.id) + '" tabindex="0" role="button" aria-pressed="' + String(story.id === selectedStoryId) + '"><span class="avatar">▤</span><h3>' + escapeHTML(story.name) + '</h3><p>' + escapeHTML(story.description || "Sinopsis pendiente.") + '</p></article>');
-      if (!items.length) items = ['<div class="empty-state">Todavía no hay novelas registradas. La próxima fase incorporará premisas, arcos, capítulos y escenas. Podés crear personajes y lugares mientras tanto.</div>'];
+      if (!items.length) items = ['<div class="empty-state">Todavía no hay historias en este universo. Creá una novela para empezar a guardar premisa, conflictos, arcos y capítulos.</div>'];
     }
+    const selectedStory = activeView === "stories" ? state.stories.find((story) => story.id === selectedStoryId) : null;
+    const selectedStoryHTML = activeView === "stories" ? renderStoryEditor(selectedStory) : "";
     const selectedEvent = activeView === "timeline" ? state.events.find((event) => event.id === selectedEventId) : null;
     const selectedOrganization = activeView === "organizations" ? (state.organizations || []).find((item) => item.id === selectedOrganizationId) : null;
     const selectedRelationship = activeView === "relationships" ? (state.relationships || []).find((item) => item.id === selectedRelationshipId) : null;
@@ -1178,7 +1180,8 @@
       const target = characterById(selectedRelationship.targetCharacterId);
       return '<section id="selected-relationship-details" class="selected-event-card"><div class="event-detail-heading"><div><p class="eyebrow">RELACIÓN SELECCIONADA</p><h2>' + escapeHTML(selectedRelationship.name) + '</h2></div><span class="tag">' + escapeHTML(selectedRelationship.status || "proposal") + '</span></div><p>' + escapeHTML((source ? source.name : "Personaje eliminado") + " ↔ " + (target ? target.name : "Personaje eliminado")) + '</p><div class="detail-meta"><div><span>Personaje A</span><strong>' + escapeHTML(source ? source.name : "No disponible") + '</strong></div><div><span>Personaje B</span><strong>' + escapeHTML(target ? target.name : "No disponible") + '</strong></div><div><span>Tipo</span><strong>' + escapeHTML(relationshipTypeLabel(selectedRelationship.relationshipType)) + '</strong></div><div><span>Estado del canon</span><strong>' + escapeHTML(selectedRelationship.status || "proposal") + '</strong></div></div><div class="detail-divider"></div><p>' + escapeHTML(selectedRelationship.description || "Sin descripción registrada.") + '</p><div class="location-actions"><button type="button" id="edit-relationship-button" class="outline-button">Editar relación</button><button type="button" id="delete-relationship-button" class="outline-button danger-action">Eliminar relación</button></div></section>';
     })() : "";
-    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span></div>' + selectedEventHTML + selectedOrganizationHTML + selectedRelationshipHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>';
+    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span>' + (activeView === "stories" ? '<button type="button" id="story-create-button" class="primary-button">＋ Nueva historia</button>' : '') + '</div>' + selectedEventHTML + selectedOrganizationHTML + selectedRelationshipHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>' + selectedStoryHTML;
+    if (activeView === "stories") bindStoryEditor(container, selectedStory);
     if (selectedEvent) {
       $("#edit-event-button").addEventListener("click", () => editEvent(selectedEvent.id));
       $("#delete-event-button").addEventListener("click", () => deleteEvent(selectedEvent.id));
@@ -1191,6 +1194,99 @@
       $("#edit-relationship-button").addEventListener("click", () => editRelationship(selectedRelationship.id));
       $("#delete-relationship-button").addEventListener("click", () => deleteRelationship(selectedRelationship.id));
     }
+  }
+
+
+  function renderStoryEditor(story) {
+    if (!story) {
+      return '<section class="story-editor selected-event-card"><p class="eyebrow">TALLER DE NOVELAS</p><h2>Una historia, desde la idea hasta el manuscrito</h2><p>Creá una historia para guardar sinopsis, premisa, conflicto central, arcos y capítulos editables. Los cambios se guardan en el proyecto local y viajan con su exportación JSON.</p><p class="field-help">Elegí una historia de la lista o pulsá «Nueva historia».</p></section>';
+    }
+    if (!Array.isArray(story.chapters)) story.chapters = [];
+    if (!Array.isArray(story.arcs)) story.arcs = [];
+    const chapters = story.chapters.map((chapter, index) => '<article class="story-chapter-card"><div class="story-chapter-heading"><span class="tag">Capítulo ' + (index + 1) + '</span><span class="tag">' + escapeHTML(chapter.status || "borrador") + '</span></div><form class="story-chapter-form" data-chapter-id="' + escapeHTML(chapter.id) + '"><label>Título del capítulo<input name="chapterTitle" maxlength="180" required value="' + escapeHTML(chapter.title || "") + '"></label><label>Resumen del capítulo<textarea name="chapterSummary" rows="2" maxlength="4000">' + escapeHTML(chapter.summary || "") + '</textarea></label><label>Manuscrito<textarea name="chapterContent" rows="12" maxlength="200000" placeholder="Escribí acá el capítulo completo…">' + escapeHTML(chapter.content || "") + '</textarea></label><label>Estado<select name="chapterStatus"><option value="outline"' + (chapter.status === "outline" ? " selected" : "") + '>Esquema</option><option value="draft"' + (!chapter.status || chapter.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (chapter.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (chapter.status === "complete" ? " selected" : "") + '>Completo</option></select></label><div class="location-actions"><button class="primary-button" type="submit">Guardar capítulo</button><button class="outline-button danger-action" type="button" data-delete-chapter="' + escapeHTML(chapter.id) + '">Eliminar capítulo</button></div></form></article>').join("");
+    const completeCount = story.chapters.filter((chapter) => chapter.status === "complete").length;
+    return '<section class="story-editor selected-event-card"><div class="story-editor-title"><div><p class="eyebrow">EDITOR DE HISTORIAS · BORRADOR LOCAL</p><h2>' + escapeHTML(story.name || "Historia sin título") + '</h2><p>' + story.chapters.length + ' capítulos · ' + completeCount + ' completos</p></div><button type="button" id="story-export-button" class="outline-button">Exportar manuscrito .md</button></div><form id="story-meta-form" data-story-id="' + escapeHTML(story.id) + '"><div class="story-form-grid"><label>Título<input name="storyName" required maxlength="180" value="' + escapeHTML(story.name || "") + '"></label><label>Estado<select name="storyStatus"><option value="idea"' + (story.status === "idea" ? " selected" : "") + '>Idea</option><option value="outline"' + (story.status === "outline" ? " selected" : "") + '>En planificación</option><option value="draft"' + (!story.status || story.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (story.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (story.status === "complete" ? " selected" : "") + '>Completa</option></select></label></div><label>Sinopsis<textarea name="storyDescription" rows="3" maxlength="6000" placeholder="¿De qué trata la historia?">' + escapeHTML(story.description || "") + '</textarea></label><label>Premisa<textarea name="storyPremise" rows="3" maxlength="6000" placeholder="La idea central y qué hace única esta historia…">' + escapeHTML(story.premise || "") + '</textarea></label><label>Conflicto central<textarea name="storyConflict" rows="3" maxlength="6000" placeholder="Qué quiere el protagonista, qué se lo impide y qué está en juego…">' + escapeHTML(story.conflict || "") + '</textarea></label><label>Arcos narrativos (uno por línea)<textarea name="storyArcs" rows="4" maxlength="12000" placeholder="Personaje: punto de partida → cambio → consecuencia">' + escapeHTML((story.arcs || []).map((arc) => typeof arc === "string" ? arc : arc.title || arc.description || "").join("\n")) + '</textarea></label><div class="location-actions"><button type="submit" class="primary-button">Guardar historia</button><button type="button" id="story-add-chapter-button" class="outline-button">＋ Añadir capítulo</button><button type="button" id="story-delete-button" class="outline-button danger-action">Eliminar historia</button></div><p class="field-help" id="story-editor-status" role="status" aria-live="polite">Los cambios de cada formulario se guardan por separado.</p></form><div class="detail-divider"></div><h3>Capítulos y manuscrito</h3><p class="field-help">Cada capítulo tiene título, resumen, texto íntegro y estado. «Completo» es una marca editorial manual, no una evaluación automática de calidad.</p><div class="story-chapters">' + (chapters || '<div class="empty-state">Esta historia todavía no tiene capítulos. Pulsá «Añadir capítulo» para crear el primero.</div>') + '</div></section>';
+  }
+
+  function bindStoryEditor(container, story) {
+    const createButton = $("#story-create-button", container);
+    if (createButton) createButton.addEventListener("click", createStory);
+    const metaForm = $("#story-meta-form", container);
+    if (metaForm) metaForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = new FormData(metaForm);
+      story.name = String(form.get("storyName") || "").trim();
+      story.description = String(form.get("storyDescription") || "").trim();
+      story.premise = String(form.get("storyPremise") || "").trim();
+      story.conflict = String(form.get("storyConflict") || "").trim();
+      story.status = String(form.get("storyStatus") || "draft");
+      story.arcs = String(form.get("storyArcs") || "").split("\n").map((line) => line.trim()).filter(Boolean);
+      const saved = await saveProject();
+      $("#story-editor-status", container).textContent = saved ? "Historia guardada en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
+      renderDirectory();
+    });
+    $(".story-chapter-form", container).forEach((formNode) => formNode.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const chapter = story.chapters.find((item) => item.id === formNode.dataset.chapterId);
+      if (!chapter) return;
+      const form = new FormData(formNode);
+      chapter.title = String(form.get("chapterTitle") || "").trim();
+      chapter.summary = String(form.get("chapterSummary") || "").trim();
+      chapter.content = String(form.get("chapterContent") || "");
+      chapter.status = String(form.get("chapterStatus") || "draft");
+      const saved = await saveProject();
+      renderDirectory();
+      const status = $("#story-editor-status", container);
+      if (status) status.textContent = saved ? "Capítulo guardado en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
+    }));
+    $(".story-chapter-form [data-delete-chapter]", container).forEach((button) => button.addEventListener("click", async () => {
+      if (!confirm("¿Eliminar este capítulo? Esta acción se guardará en el proyecto actual.")) return;
+      story.chapters = story.chapters.filter((chapter) => chapter.id !== button.dataset.deleteChapter);
+      await saveProject();
+      renderDirectory();
+    }));
+    const addChapter = $("#story-add-chapter-button", container);
+    if (addChapter) addChapter.addEventListener("click", async () => {
+      const number = story.chapters.length + 1;
+      story.chapters.push({ id: "chapter-" + Date.now().toString(36) + "-" + number, title: "Capítulo " + number, summary: "", content: "", status: "draft" });
+      await saveProject();
+      renderDirectory();
+      const firstField = container.querySelector(".story-chapter-form:last-of-type input[name='chapterTitle']");
+      if (firstField) firstField.focus();
+    });
+    const deleteStory = $("#story-delete-button", container);
+    if (deleteStory) deleteStory.addEventListener("click", async () => {
+      if (!confirm("¿Eliminar la historia y todos sus capítulos? Exportá una copia antes si querés conservarla.")) return;
+      state.stories = state.stories.filter((item) => item.id !== story.id);
+      selectedStoryId = null;
+      await saveProject();
+      renderDirectory();
+    });
+    const exportButton = $("#story-export-button", container);
+    if (exportButton) exportButton.addEventListener("click", () => {
+      const markdown = "# " + (story.name || "Historia sin título") + "\n\n" +
+        "## Sinopsis\n\n" + (story.description || "Sinopsis pendiente.") + "\n\n" +
+        "## Premisa\n\n" + (story.premise || "Premisa pendiente.") + "\n\n" +
+        "## Conflicto central\n\n" + (story.conflict || "Conflicto pendiente.") + "\n\n" +
+        "## Arcos narrativos\n\n" + (story.arcs || []).map((arc) => "- " + (typeof arc === "string" ? arc : arc.title || arc.description || "")).join("\n") + "\n\n" +
+        (story.chapters || []).map((chapter, index) => "## Capítulo " + (index + 1) + ": " + (chapter.title || "Sin título") + "\n\n" + (chapter.summary ? "> " + chapter.summary + "\n\n" : "") + (chapter.content || "_Capítulo sin redactar._") + "\n").join("\n");
+      const url = URL.createObjectURL(new Blob([markdown], { type: "text/markdown;charset=utf-8" }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = (story.name || "historia").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9_-]+/g, "-").replace(/^-+|-+$/g, "").toLowerCase() + ".md";
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  async function createStory() {
+    if (!Array.isArray(state.stories)) state.stories = [];
+    const story = { id: "story-" + Date.now().toString(36), name: "Nueva historia", description: "", premise: "", conflict: "", arcs: [], chapters: [], status: "idea" };
+    state.stories.push(story);
+    selectedStoryId = story.id;
+    activeView = "stories";
+    await saveProject();
+    render();
   }
 
   function matches(value, query) { return !query || String(value).toLowerCase().includes(query); }
