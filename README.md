@@ -67,10 +67,11 @@ El prototipo incluye atlas, CRUD de las entidades principales, relaciones, catá
 ## Archivo de historias originales
 
 - [Archivo y formato de almacenamiento](stories/README.md)
+- [Dinámica de mundos: distopías, cyberpunk, apocalipsis, postapocalipsis, comedia insular y mundos híbridos](docs/WORLD_DYNAMICS.md)
 - [Las campanas de Asteria — manuscrito completo en cuatro capítulos](stories/original/las-campanas-de-asteria.md)
 - [Paquete JSON estructurado de la historia](stories/original/las-campanas-de-asteria.json)
 
-La historia se guarda como Markdown legible y como JSON con IDs, arcos y capítulos. El editor de capítulos dentro de la aplicación aún debe integrarse; no se presenta como una función ya terminada.
+El editor de historias permite guardar el tipo de mundo, sus reglas y sus dinámicas junto con los metadatos y capítulos. La selección de un arquetipo no genera automáticamente una biblia de mundo completa: esa lógica y sus validaciones deben crecer por etapas.
 
 ## Continuidad del trabajo
 
