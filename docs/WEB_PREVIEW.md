@@ -14,7 +14,7 @@ https://codespaces.new/jonhararagi/wordwaifu?quickstart=1&ref=feature%2Fdanmachi
 2. Confirmá que la rama seleccionada sea **feature/danmachi-lore-poc**. Creá el Codespace únicamente si tu cuota incluida está disponible y tus ajustes de facturación no permiten un gasto no deseado.
 3. El contenedor ejecuta **.devcontainer/start-preview.sh** al arrancar. El servidor estático usa Python de la biblioteca estándar, sin npm install, extensiones obligatorias, claves API ni proveedor externo.
 4. Abrí el panel **Ports** y usá el enlace del puerto **8000** si el navegador no se abre automáticamente. La visibilidad está configurada como **Private**: solo quien creó el Codespace, autenticado en GitHub, puede acceder.
-5. La app se sirve desde la raíz **/**; así **src/lore-corpus.js** y las rutas relativas **./lore/danmachi/catalog.json** y los dos documentos Markdown se resuelven bajo el mismo origen.
+5. La app se sirve desde la raíz **/**; así **src/lore-corpus.js** y las rutas relativas **./lore/danmachi/catalog.json** y los tres documentos Markdown se resuelven bajo el mismo origen.
 6. Cerrá la sesión de preview y eliminá el Codespace cuando termines para no mantener almacenamiento consumido.
 
 ## Límite importante: facturación y acceso
