@@ -11,7 +11,7 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama candidata de integración del producto: `work/integration-mainline-2026-10` (PR #14). La rama de validación de origen `work/integration-validation-fixes-2026-10` se conserva como referencia.
 - `main` verificada el 2026-10-12: `c07ef226a61ad6e48b081890f1e3d96eecb585b5` (sin cambios en esta integración).
-- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), abierto contra `main`, no fusionado, `mergeable=true`; HEAD de código `7cf83c63c8d263eb54a5ab8650bbd4872551448b`.
+- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), abierto contra `main`, no fusionado, `mergeable=true`; HEAD de código funcional validado `6fb40e1d6a6d9a7c9aeddc607e0b3ca87cdadbd6`.
 - PR #1, #3, #7, #9, #10 y #12: cerradas como rutas supersedidas, no fusionadas; se conservan las ramas de origen. PR #11: fusionada en la rama de integración de trabajo, no en `main`. No se ha desplegado.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
@@ -25,11 +25,11 @@
 - **WF-004-C.1 · PARCIAL:** snapshots versionados, migración IndexedDB v1→v2, restauración con copia previa y respaldo antes de importar.
 - **WF-004-C.2 · DONE / PASS_REAL histórico:** snapshots previos verificados para los cinco tipos de borrado; límite 25/26 validado. Evidencia histórica: [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita cambios posteriores de C.3.
 
-## HEAD de integración validado más reciente
-- SHA: `7cf83c63c8d263eb54a5ab8650bbd4872551448b`.
-- [Validate WordWaifu — PR run 38280567102 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38280567102).
-- [Validate WordWaifu — push run 38280558226 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38280558226).
-- [DanMachi Lore and Retrieval Integrity — run 38280567224 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38280567224).
+## HEAD de código funcional validado más reciente
+- SHA: `6fb40e1d6a6d9a7c9aeddc607e0b3ca87cdadbd6`.
+- [Validate WordWaifu — PR run 38281175203 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38281175203).
+- [Validate WordWaifu — push run 38281169457 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38281169457).
+- [DanMachi Lore and Retrieval Integrity — run 38281175157 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38281175157).
 - Chromium confirma CRUD del Panel de arte en IndexedDB y respaldo local, fallos simulados sin falso éxito, papelera y snapshots, expedientes ampliados y recuperación separada de Ryu en `CONT-AR` y `CONT-ANIME`.
 
 ## WF-004-C.3 — Papelera y recuperación (PARTIAL)
