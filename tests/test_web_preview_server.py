@@ -43,6 +43,9 @@ try:
         ("/assets/character-portraits/ottar.svg", b"Ottar"),
         ("/assets/character-portraits/kaguya.svg", b"Gojouno Kaguya"),
         ("/assets/character-portraits/lyra.svg", b"Lyra"),
+        ("/assets/lore-moments/ryu-justice.svg", b"Ryu"),
+        ("/assets/lore-moments/ryu-evilus.svg", b"Evilus"),
+        ("/assets/lore-moments/ryu-seven-days.svg", b"Los siete días"),
         ("/src/app.js", b"WordWaifuLoreCorpus"),
         ("/src/styles.css", b".lore-"),
         ("/lore/danmachi/catalog.json", b'"records"'),
@@ -68,7 +71,7 @@ try:
     get("/docs/MASTER_VISION.md", 404)
     get("/lore/danmachi/characters/00-indice-personajes.md", 404)
     get("/lore/danmachi/characters/loki.md", 404)
-    print("PASS preview server: app shell, original SVGs, curated research and 12 allowlisted character dossiers respond; unrelated files remain blocked.")
+    print("PASS preview server: app shell, 12 original character portraits, 3 original Ryu scene illustrations, curated research and 12 allowlisted character dossiers respond; unrelated files remain blocked.")
 finally:
     server.shutdown()
     server.server_close()
