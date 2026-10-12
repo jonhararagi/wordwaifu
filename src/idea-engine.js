@@ -69,9 +69,9 @@
     const gamerPremise = /(gamer|videojuego|videojuegos|jugador|isekai|konosuba)/i.test(prompt);
     const divinePremise = /(diosas?|deidades|pante[oó]n|mitolog[ií]a maya)/i.test(prompt);
     const novelistPremise = /(novelista|novelista|escritor|escribe novelas)/i.test(prompt);
-    const npcPremise = /\\bNPC\\b|personaje no jugable|personaje secundario/i.test(prompt);
+    const npcPremise = /\bNPC\b|personaje no jugable|personaje secundario/i.test(prompt);
     const motherlyPremise = /madre protectora|maternal|actuando como una madre|figura materna|protectora/i.test(prompt);
-    const milfPremise = /\\bMILF\\b|mujeres maduras|mujer madura|maduras/i.test(prompt);
+    const milfPremise = /\bMILF\b|mujeres maduras|mujer madura|maduras/i.test(prompt);
     const protagonistBank = gamerPremise ? banks.protagonists : banks.generalProtagonists;
     const protagonist = novelistPremise
       ? {
