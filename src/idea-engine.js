@@ -83,14 +83,10 @@
     const opening = pick(banks.openingScenes, seed >>> 11);
     const genre = pick(banks.genres[input.genre] || banks.genres.balanced, seed >>> 13);
     const tone = input.tone || "balanced";
-    const title = pick([
-      "Manual de supervivencia para elegidos por accidente",
-      "Tres diosas, cero tutoriales",
-      "La party que los cielos quieren desinstalar",
-      "Crónicas del gremio incompetente",
-      "No era parte de la misión divina",
-      "Respawn en el fin del mundo"
-    ], seed >>> 15);
+    const titleOptions = divinePremise
+      ? ["Tres diosas, cero tutoriales", "La party que los cielos quieren desinstalar", "No era parte de la misión divina", "Respawn en el fin del mundo"]
+      : ["Manual para sobrevivir a una profecía", "El gremio de las malas decisiones", "La última verdad del reino", "Nadie pidió ser el héroe", "Crónicas de una misión imposible"];
+    const title = pick(titleOptions, seed >>> 15);
     const premiseText = prompt;
     const mode = input.mode === "fanfic" ? "fanfic" : "original";
     const continuity = String(input.continuity || "").trim();
