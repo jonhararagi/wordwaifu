@@ -40,12 +40,23 @@ Fuentes de referencia:
 
 ### Code Geass
 
-Se añade un **índice de cobertura inicial**, con fichas de Lelouch, C.C., Suzaku, Kallen y Nunnally; nodos para Britannia, Black Knights, Geass y Zero Requiem; y conexiones navegables entre los conceptos principales. Zero Requiem está marcado como spoiler mayor.
+Code Geass ya tiene una **capa de canon ampliada**, no solo un listado de nombres. Incluye perfiles narrativos conectados para Lelouch, C.C., Suzaku, Kallen, Nunnally, Shirley, Euphemia, Cornelia, Schneizel, Charles, Rolo, Mao, V.V., Nina, Marianne y Jeremiah; además de Britannia, Black Knights, Geass Order y Knights of the Round.
 
-Las fichas no pretenden ser expedientes completos: las entradas que no tienen evidencia primaria localizada están rotuladas como iniciales o pendientes de verificar. El perfil oficial de Lelouch of the Re;surrection sirve como punto de partida, pero no acredita por sí solo todos los detalles de R1, R2 y sus demás continuidades.
+Cada perfil contempla personalidad observable, historia, relaciones, conflicto, objetivo, valores, miedo/contradicción, arco y **qué sabe el personaje en cada etapa**. La sección de poderes distingue el Geass de obediencia de Lelouch, la suspensión temporal percibida de Rolo, la lectura mental de Mao, la alteración de recuerdos de Charles y el Código/inmortalidad. No se trata a todos los Geass como una habilidad uniforme: las fichas tienen activación, coste, límites y consecuencias propios.
 
-Fuente de referencia:
-- [Code Geass: Lelouch of the Re;surrection — página oficial de personajes](https://geass.jp/R-geass/character.php)
+El grafo conecta relaciones personales, facciones, poderes y acontecimientos como la Zona Administrativa Especial de Japón, la Rebelión Negra, la segunda batalla de Tokio/FLEIJA y Zero Requiem. Se muestran los enlaces a perfiles y episodios oficiales de R1/R2. Los spoilers mayores llevan etiqueta; las etapas televisivas se mantienen separadas de la continuidad cinematográfica Re;surrection.
+
+Fuentes oficiales de referencia:
+- [Code Geass R1 — perfiles de personaje](https://geass.jp/first/chara_04.html)
+- [Code Geass R1 — episodio 1](https://geass.jp/first/story_01.html)
+- [Code Geass R1 — episodio 22: la Zona Administrativa Especial](https://geass.jp/first/story_22.html)
+- [Code Geass R2 — perfil de Suzaku](https://geass.jp/r2/chara_03.html)
+- [Code Geass R2 — perfil de Rolo y su Geass](https://geass.jp/r2/chara_02.html)
+- [Code Geass R2 — perfil de Schneizel](https://geass.jp/r2/chara_47.html)
+- [Code Geass R2 — perfil de Charles](https://geass.jp/r2/chara_17.html)
+- [Code Geass: Lelouch of the Re;surrection — personajes](https://geass.jp/R-geass/character.php)
+
+**Límite real:** esta es una base ampliada y enlazada, no una enciclopedia completa de todos los personajes, novelas derivadas, películas y spin-offs. Hay personajes secundarios y detalles de episodio que todavía faltan. Una referencia oficial general no se usa como prueba de un hecho que no describe.
 
 ## Generador de poderes
 
