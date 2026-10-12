@@ -282,13 +282,6 @@ async function run() {
     const einaPortraitLabel = await page.locator(einaCardSelector + " .archive-portrait").getAttribute("aria-label");
     assert.ok(/wiki comunitaria/i.test(einaPortraitLabel || "") && !/retrato oficial/i.test(einaPortraitLabel || ""),
       "A community-sourced Eina portrait must be labelled as a community reference, never official art.");
-    await page.locator("#character-archive-query").fill("Eina Tulle");
-    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, null, { timeout: 5000 });
-    const einaCardSelector = "#character-archive-results .archive-character-card:has([data-archive-open='DM-CHAR-EINA'])";
-    const einaPortrait = page.locator(einaCardSelector + " .archive-portrait");
-    assert.equal(await einaPortrait.getAttribute("data-image-provider"), "community");
-    assert.ok(/wiki comunitaria/i.test((await einaPortrait.getAttribute("aria-label")) || ""),
-      "A community-sourced Eina portrait must never be presented as official art.");
     process.stdout.write("PASS character archive: compact search, tabs, links, continuity separation, spoiler filtering, evidence and screenshot.\\n");
     await page.locator("#lore-research-panel > summary").click();
 

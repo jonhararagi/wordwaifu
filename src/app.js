@@ -1881,7 +1881,7 @@
     const mayUseOfficialPortrait = selectedContinuity === "ALL" || selectedContinuity === "CONT-ANIME";
     const officialSource = historicalReference ? official.historicalImageUrl
       : mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
-    const isCommunityImage = Boolean(official && (official.imageProvider === "community" || /fandom\\.com|wikia\\.nocookie\\.net/i.test(official.sourcePage || "")));
+    const isCommunityImage = Boolean(official && (official.imageProvider === "community" || /fandom\.com|wikia\.nocookie\.net/i.test(official.sourcePage || "")));
     const portraitSourceLabel = isCommunityImage ? "REFERENCIA COMUNITARIA · NO OFICIAL" : "IMAGEN OFICIAL · ENLACE EXTERNO";
     node.dataset.imageProvider = officialSource ? (isCommunityImage ? "community" : "official") : fallbackSource ? "local" : "none";
     const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
