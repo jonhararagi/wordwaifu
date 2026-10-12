@@ -115,8 +115,14 @@ async function run() {
     await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
     await page.locator("#story-meta-form [name='storyConflict']").fill("Un conflicto verificable.");
     await page.locator("#story-meta-form [name='storyArcs']").fill("Protagonista: miedo → decisión → cambio");
+    await page.locator("#story-meta-form [name='storyWorldType']").selectOption("active-apocalypse-military-sf");
+    await page.locator("#story-meta-form [name='storyWorldRules']").fill("La humanidad vive tras defensas; las salidas consumen recursos escasos.");
+    await page.locator("#story-meta-form [name='storyWorldDynamics']").fill("Cada derrota reduce el territorio seguro y aumenta la presión sobre civiles y soldados.");
     await page.locator("#story-meta-form button[type='submit']").click();
     await page.waitForFunction(() => document.querySelector("#story-editor-status")?.textContent.includes("Historia guardada en el proyecto local."), { timeout: 10000 });
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldType']").inputValue(), "active-apocalypse-military-sf");
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldRules']").inputValue(), "La humanidad vive tras defensas; las salidas consumen recursos escasos.");
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldDynamics']").inputValue(), "Cada derrota reduce el territorio seguro y aumenta la presión sobre civiles y soldados.");
     await page.locator("#story-add-chapter-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1, { timeout: 5000 });
     assert.equal(await page.locator(".story-chapter-form").count(), 1, "The editor must add a chapter to a story.");
