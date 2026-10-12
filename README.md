@@ -69,6 +69,7 @@ El prototipo incluye atlas, CRUD de las entidades principales, relaciones, catá
 - [Archivo y formato de almacenamiento](stories/README.md)
 - [Dinámica de mundos: distopías, cyberpunk, apocalipsis, postapocalipsis, comedia insular y mundos híbridos](docs/WORLD_DYNAMICS.md)
 - [Motores de misterio, juegos de cartas sobrenaturales, identidades ocultas y plot twists](docs/STORY_REVEALS.md)
+- [Sistemas de poderes: categorías, activación, costes, contratos y evolución irreversible](docs/POWER_SYSTEMS.md)
 - [Las campanas de Asteria — manuscrito completo en cuatro capítulos](stories/original/las-campanas-de-asteria.md)
 - [Paquete JSON estructurado de la historia](stories/original/las-campanas-de-asteria.json)
 
