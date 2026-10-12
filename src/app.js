@@ -1928,7 +1928,7 @@
     const items=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:$("#character-archive-query").value,continuity:$("#archive-continuity").value,spoiler:$("#archive-spoiler").value});
     results.replaceChildren();
     const totalItems=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:"",continuity:"ALL",spoiler:"all"}).length;
-    $("#archive-quick-filters [data-archive-scope]").forEach(button=>{
+    document.querySelectorAll("#archive-quick-filters [data-archive-scope]").forEach(button=>{
       button.setAttribute("aria-pressed",button.dataset.archiveScope===$("#archive-continuity").value?"true":"false");
     });
     status.textContent=items.length
