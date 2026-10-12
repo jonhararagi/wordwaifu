@@ -234,6 +234,7 @@
       }
       for (const [scope, dossier] of Object.entries(dossierMap)) {
         if (!dossier || typeof dossier !== "object") continue;
+        make(record, scope, "apariencia e identidad visual", "apariencia y presentación", dossier.appearance, dossier);
         make(record, scope, "evolución e historia", "historia y contexto", dossier.history, dossier);
         make(record, scope, "evolución psicológica", "evolución del personaje", dossier.development, dossier);
         make(record, scope, "habilidades y combate", "perfil de combate", dossier.combatProfile, dossier);
