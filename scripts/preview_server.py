@@ -28,11 +28,15 @@ ALLOWED_FILES = {
     "/assets/character-portraits/finn-deimne.svg": "assets/character-portraits/finn-deimne.svg",
     "/assets/character-portraits/freya.svg": "assets/character-portraits/freya.svg",
     "/assets/character-portraits/ottar.svg": "assets/character-portraits/ottar.svg",
+    "/assets/character-portraits/kaguya.svg": "assets/character-portraits/kaguya.svg",
+    "/assets/character-portraits/lyra.svg": "assets/character-portraits/lyra.svg",
     "/lore/danmachi/catalog.json": "lore/danmachi/catalog.json",
     "/lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md":
         "lore/danmachi/research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
     "/lore/danmachi/research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md":
         "lore/danmachi/research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
+    "/lore/danmachi/research/inbox/BATCH-DM-005-astrea-familia-network.md":
+        "lore/danmachi/research/inbox/BATCH-DM-005-astrea-familia-network.md",
 }
 
 class PreviewRequestHandler(SimpleHTTPRequestHandler):
