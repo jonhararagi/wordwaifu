@@ -108,3 +108,23 @@
 - [ ] Consultar una edición legítima del texto de *Episode Freya* y localizar capítulo/página de la escena de Ottar antes de aprobar nombres o niveles como claims de la continuidad elegida.
 - [ ] Abrir y verificar el contexto original de las publicaciones de Fujino Omori citadas para la Emperatriz; si el acceso a la publicación original no permite comprobar contexto, mantenerla como pista secundaria.
 - [ ] No registrar como hecho de continuidad principal nada procedente del escenario alternativo de note.com sin una fuente independiente que lo sostenga en esa continuidad.
+
+
+## Cuarta pasada: acceso a la vista previa oficial y límites de los tuits (2026-10-13)
+
+14. **Portal oficial de DanMachi — vista previa promocional de Episode Freya**  
+    https://danmachi.com/news/news227.php  
+    El portal oficial anunció el 2024-09-07 una publicación gratuita temporal de extractos de *Familia Chronicle episode Freya*, concretamente «最強の起源» y «それぞれの昔日». El enlace de prueba lleva al lector oficial BinB/Romancer. En esta sesión, el lector no expuso el cuerpo del texto a la herramienta de consulta (solo mostró el marco del lector/comentarios), por lo que **no se obtuvo un localizador interno ni se verificó el pasaje nivel 8/nivel 9**. Es una vía legítima de consulta localizada, no evidencia de que el pasaje concreto se haya cotejado.
+
+15. **Tuits atribuidos a Fujino Omori sobre la Emperatriz**  
+    https://twitter.com/fujinoomori/status/1281196180009975809  
+    https://twitter.com/fujinoomori/status/1283396877187088384  
+    La página española de Emperatriz los cita, pero las páginas directas de X/Twitter no pudieron recuperarse en esta sesión y las búsquedas no devolvieron el contenido original de esos IDs. Por tanto, no se ha verificado su texto, fecha/contexto conversacional ni qué afirmación respalda cada uno. Mantener las afirmaciones asociadas en estado secundario y no citarlas como declaraciones del autor verificadas.
+
+### Estado actualizado de tareas
+
+- [x] Localizar el enlace oficial a la vista previa de *Episode Freya* desde el portal de la franquicia.
+- [x] Registrar qué extractos anuncia el portal: «最強の起源» y «それぞれの昔日».
+- [x] Registrar el límite real de acceso: el lector se abre, pero el texto no fue legible en la herramienta usada; no se inventa capítulo, página ni cita.
+- [ ] Consultar manualmente la vista previa oficial o una edición legítima legible y registrar el localizador preciso de la escena de Ottar.
+- [ ] Obtener el contenido original de ambos tuits por un medio accesible y comprobar el contexto; hasta entonces, no aprobar las afirmaciones de la wiki que dependen de ellos.
