@@ -31,8 +31,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 89);
-assert.equal(index.entryCount, 92);
+assert.equal(index.sourceClaimCount, 92);
+assert.equal(index.entryCount, 95);
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
@@ -77,7 +77,7 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 89 source claims, 92 entries, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 92 source claims, 95 entries, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();
