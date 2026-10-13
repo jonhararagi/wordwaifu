@@ -68,7 +68,7 @@
         },
         {
           "type": "can_pair_with",
-          "targetId": "SYS-CARD-Pакт"
+          "targetId": "SYS-CARD-PACT"
         }
       ]
     },
