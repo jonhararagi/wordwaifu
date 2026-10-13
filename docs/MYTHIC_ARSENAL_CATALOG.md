@@ -22,7 +22,7 @@ Cada registro tiene un ID estable, tipo, tradición, región, estado, resumen, e
 4. En el caso de este catálogo, buscar una reliquia o entidad y saltar a sus pactos, cartas, variantes o tradición relacionada.
 5. Volver al registro anterior o al índice sin crear fichas duplicadas.
 
-El JSON ya establece los IDs y relaciones necesarios para esa navegación de datos; la integración visual completa como módulo de catálogo es una tarea de interfaz separada y no debe darse por terminada solo por existir este archivo.
+La interfaz del módulo ya permite buscar, filtrar por tipo/tradición/estado, abrir una ficha, seguir relaciones salientes y entrantes, volver a la ficha anterior o regresar al índice. Los datos y la interfaz siguen separados para poder ampliar el catálogo sin duplicar código.
 
 ## Modelo para una carta invocable
 
@@ -59,7 +59,7 @@ Criterios de aceptación del catálogo:
 - [x] Etiquetas de búsqueda y mazos iniciales.
 - [x] Relaciones navegables por ID.
 - [x] Diferenciación entre tradición, objeto histórico y mecánica inventada.
-- [ ] Validador automatizado de IDs y referencias del catálogo.
-- [ ] Interfaz visual con búsqueda, filtros por región/tipo/tradición y ficha de detalle.
+- [x] Validador automatizado de IDs y referencias del catálogo.
+- [x] Interfaz visual con búsqueda, filtros por tipo/tradición/estado y ficha de detalle.\n- [x] Navegación por relaciones salientes y entrantes con retorno al registro anterior o al índice.
 - [ ] Fuentes específicas y cotejo bibliográfico entrada por entrada.
 - [ ] Integración de estas entidades con las fichas y relaciones generales de WordWaifu sin duplicar registros.
