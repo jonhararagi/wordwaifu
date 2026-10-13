@@ -103,6 +103,7 @@
       renderSavedProposals();
     });
     renderSavedProposals();
+    if (window.WordWaifuMythicProjectState) document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposals-loaded", {detail: window.WordWaifuMythicProjectState}));
     generateProposal();
   }
 
@@ -191,6 +192,19 @@
       .map(relation => '<button class="mythic-link" data-open-entity="' + esc(other.id) + '">' + esc(other.name) +
         ' <span class="mythic-chip">vínculo entrante</span></button>'));
     const sourceNotes = entity.sourceNotes ? '<p><strong>Notas de procedencia:</strong> ' + esc(entity.sourceNotes) + '</p>' : "";
+    const sourceById = new Map((catalog.sources || []).map(source => [source.id, source]));
+    const sourceLinks = (entity.sourceIds || []).map(id => sourceById.get(id)).filter(Boolean)
+      .map(source => '<a class="mythic-link" href="' + esc(source.url) + '" target="_blank" rel="noopener noreferrer">' + esc(source.title) + ' ↗</a>').join("");
+    const artifact = entity.artifactProfile;
+    const artifactDetails = artifact ? '<section class="mythic-relation-group"><h4>Ficha de arma / reliquia</h4>' +
+      '<p><strong>Categoría:</strong> ' + esc(artifact.objectCategory || entity.kind) + '</p>' +
+      '<p><strong>Capacidades descritas:</strong> ' + esc((artifact.documentedCapabilities || []).join(" · ")) + '</p>' +
+      '<p><strong>Condiciones de uso:</strong> ' + esc(artifact.useConditions || "No especificadas en esta ficha.") + '</p>' +
+      '<p><strong>Costes y límites documentales:</strong> ' + esc(artifact.costsAndLimits || "No especificados.") + '</p>' +
+      '<p><strong>Riesgos de interpretación / uso:</strong> ' + esc(artifact.risks || "No especificados.") + '</p>' +
+      '<p><strong>Mecánicas de adaptación:</strong> ' + esc(artifact.adaptationMechanics || "No registradas.") + '</p>' +
+      ((artifact.evolutionStages || []).length ? '<p><strong>Etapas de evolución ficticia:</strong> ' + esc(artifact.evolutionStages.join(" · ")) + '</p>' : "") +
+      '</section>' : "";
     const creative = entity.creativeHook ? '<section class="mythic-relation-group"><h4>Idea de adaptación (no es un dato mitológico)</h4><p>' + esc(entity.creativeHook) + '</p></section>' : "";
     $("#mythic-catalog-count").textContent = "Ficha · " + entity.id;
     $("#mythic-catalog-content").innerHTML =
@@ -198,8 +212,9 @@
       '<div class="mythic-meta">' + chip(kindLabels[entity.kind] || entity.kind) + chip(labels[entity.status] || entity.status) +
       chip(entity.tradition) + chip(entity.region) + '</div><h3>' + esc(entity.name) + '</h3><p>' + esc(entity.summary) + '</p>' +
       (entity.tags?.length ? '<div class="mythic-tags">' + entity.tags.map(chip).join("") + '</div>' : "") +
-      sourceNotes + creative +
-      '<section class="mythic-relation-group"><h4>Relaciones para seguir explorando</h4><div class="mythic-relations">' +
+      sourceNotes + artifactDetails + creative +
+      (sourceLinks ? '<section class="mythic-relation-group"><h4>Fuentes y referencias</h4><div class="mythic-relations">' + sourceLinks + '</div></section>' : "") +
+      '<section class="mythic-relation-group"><h4>Relaciones para seguir explorando</h4><div class="mythic-relations">';
       (relations || '<p>Esta ficha todavía no tiene relaciones salientes registradas.</p>') + '</div></section>' +
       '<section class="mythic-relation-group"><h4>También se llega desde</h4><div class="mythic-relations">' +
       (incoming.join("") || '<p>No hay vínculos entrantes registrados todavía.</p>') + '</div></section></article>';
