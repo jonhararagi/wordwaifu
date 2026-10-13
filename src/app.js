@@ -1234,7 +1234,7 @@
       const family = $("#story-power-family", container)?.value || "any";
       const available = powerIdeaLibrary.map((idea, index) => ({ idea, index })).filter(({ idea }) => family === "any" || idea.family === family);
       if (!available.length || !catalog) return;
-      const existingNames = new Set((catalog.value.match(/^Nombre:\\s*(.+)$/gm) || []).map((line) => line.replace(/^Nombre:\\s*/, "").trim().toLocaleLowerCase("es")));
+      const existingNames = new Set((catalog.value.match(/^Nombre:\s*(.+)$/gm) || []).map((line) => line.replace(/^Nombre:\s*/, "").trim().toLocaleLowerCase("es")));
       const unseen = available.filter(({ idea, index }) => !existingNames.has(idea.name.toLocaleLowerCase("es")) && index !== lastGeneratedPowerIndex);
       const fallback = available.filter(({ idea }) => !existingNames.has(idea.name.toLocaleLowerCase("es")));
       const candidates = unseen.length ? unseen : fallback;
@@ -1402,7 +1402,7 @@
     const description = synopsisMatch ? synopsisMatch[1].trim() : "";
     const chapterPattern = /^##\s+Cap[ií]tulo\s+(\d+)\s*[—–:-]\s*(.+?)\s*\n([\s\S]*?)(?=^##\s+Cap[ií]tulo\s+\d+\s*[—–:-]|(?![\s\S]))/gim;
     const readSection = (heading) => {
-      const header = new RegExp("^##\\s+" + heading + "\\s*$", "im");
+      const header = new RegExp("^##\s+" + heading + "\s*$", "im");
       const found = header.exec(text);
       if (!found) return "";
       const start = found.index + found[0].length;
