@@ -351,10 +351,10 @@ verification_status: stub
 - accessed_at: 2026-10-13
 - locator_type: publisher_product_page
 - locator: Campo de fecha de publicación y sinopsis oficial del volumen 21.
-- claims_supported: [DMR-011-CLM-002]
+- claims_supported: [DMR-011-CLM-002, DMR-008-CLM-022, DMR-008-CLM-023, DMR-008-CLM-024]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN
-- reliability_note: Confirma metadatos editoriales y sinopsis, no el texto completo ni el estado final de toda la serie.
+- reliability_note: Confirma metadatos editoriales y sinopsis, no el texto completo ni el estado final de toda la serie. Las afirmaciones de trama permanecen como resúmenes provisionales; no son localizadores de capítulos.
 - conflicting_sources: []
 - rights_note: No copiar la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-011
