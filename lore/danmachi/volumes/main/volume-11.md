@@ -1,96 +1,44 @@
-# DanMachi · Volumen principal 11
+---
+dossier_id: VOL-MAIN-11
+universe: danmachi
+document_type: volume_dossier
+series: main_light_novel
+volume_number: 11
+continuity_scope: CONT-MAIN-LN
+status: provisional_summary
+source_url: https://ga.sbcr.jp/product/9784797388121/
+claim_id: DMR-008-CLM-011
+tags: ["Xenos", "Asterius", "Loki Familia", "reputación"]
+---
+# DanMachi · Volumen 11: El regreso de los Xenos y Asterius
 
-## Estado del registro
-- volume_id: DM-LN-MAIN-11
-- series: main_light_novel
-- volume_number: 11
-- official_title: PENDING_BIBLIOGRAPHIC_VERIFICATION
-- publication_data: PENDING_BIBLIOGRAPHIC_VERIFICATION
-- edition_language: PENDING
-- summary_status: stub
-- canon_status: not_assessed
-- duplicate_review: pending
-- spoiler_level: unknown
-- source_ids: []
-- source_locators: []
+> **Estado:** resumen original para navegación. No es un análisis cotejado capítulo a capítulo. El dato editorial enlazado no demuestra por sí solo cada detalle del resumen.
 
-> Esta es una plantilla de cobertura para el volumen numerado 11. Su existencia en este índice no declara título, fecha de publicación, contenido ni que este sea el último volumen de la serie. Completar solo tras identificar una edición y fuente bibliográfica confiables.
+## Sinopsis original
 
-## 1. Índice bibliográfico
-- Título oficial en la edición elegida:
-- Título original si se puede comprobar:
-- Autor/editorial:
-- Fecha de publicación comprobada:
-- Idioma/edición:
-- Fuente bibliográfica:
-- Volumen anterior:
-- Volumen siguiente:
-- Estado de publicación: unknown / announced / published / superseded_by_new_edition
+Tras la crisis alrededor de Wiene, Bell afronta el coste de sus decisiones y el deterioro de su reputación. La operación para ayudar a los Xenos culmina en una confrontación que vuelve a plantear qué significa ser un héroe frente a una ciudad que puede rechazarlo.
 
-## 2. Capítulos y arcos
-| Chapter / section | Title | Arc ID | Source locator | Status |
-|---|---|---|---|---|
-| PENDING | PENDING | PENDING | PENDING | stub |
+## Hitos narrativos
 
-## 3. Acontecimientos
-| Event ID | Resumen original breve | Participantes | Lugar | Tiempo relativo | Fuente/localizador | Verificación |
-|---|---|---|---|---|---|---|
-| PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | stub |
+Se prepara el retorno de los Xenos; las facciones de Orario se cruzan con la operación; Asterius enfrenta a Bell.
 
-## 4. Personajes y cambios de estado
-- Nuevas apariciones:
-- Cambios de afiliación/Familia:
-- Edad/estado/ubicación por periodo:
-- Conocimiento adquirido por cada personaje:
-- Relaciones que cambian:
-- Habilidades, magia o equipo introducidos/alterados:
-- Fuentes y localizadores:
+## Cambios de estado
 
-## 5. Mundo y continuidad
-- Lugares nuevos o modificados:
-- Reglas nuevas, excepciones o explicaciones:
-- Monstruos/amenazas:
-- Misiones/expediciones:
-- Economía, política o estado de Orario:
-- Consecuencias de acontecimientos previos:
-- Eventos que deben enlazarse con registros existentes:
-- Posibles contradicciones con otros volúmenes:
+La tensión entre imagen pública y convicción moral se vuelve duradera. El progreso de Bell se mide frente a un rival capaz de exigirle mucho.
 
-## 6. Misterios, pistas y spoilers
-- Preguntas introducidas:
-- Pistas:
-- Revelaciones al lector:
-- Qué saben los personajes y desde cuándo:
-- Misterios resueltos:
-- Misterios que siguen abiertos:
-- Nivel de spoiler:
-- Fuente/localizador exacto:
+## Personajes vinculados
 
-## 7. Revisión de duplicados
-- Personas y alias comparados:
-- Eventos comparados por participantes/lugar/tiempo:
-- Lugares y nombres alternativos comparados:
-- Reglas y habilidades comparadas:
-- Duplicados fusionados:
-- Candidatos que permanecen sin resolver:
+- DM-CHAR-BELL
 
-## 8. Pendientes y criterios de salida
-- [ ] Datos bibliográficos verificados.
-- [ ] Acontecimientos extraídos sin copiar texto extenso protegido.
-- [ ] Fuentes/localizadores anotados.
-- [ ] IDs enlazados con índices globales.
-- [ ] Orden de publicación separado de cronología interna.
-- [ ] Contradicciones y ambigüedades registradas.
-- [ ] Revisión de duplicados completada.
-- [ ] Catalog.json actualizado.
-- [ ] Validador de catálogo pasa.
+- **Arco de trabajo:** Xenos · resolución pública.
+- **Continuidad:** `CONT-MAIN-LN`; no mezclar automáticamente con anime, manga, juegos, spin-offs ni AU.
+- **Fuente editorial:** [GA文庫 / SB Creative · volumen 11](https://ga.sbcr.jp/product/9784797388121/).
 
-## 9. Resumen de trabajo de la tanda
-- batch_id:
-- records_created:
-- records_updated:
-- source_checks:
-- duplicate_checks:
-- unresolved_conflicts:
-- reviewer_notes:
-- next_action:
+## Cotejo todavía pendiente
+
+- [ ] Registrar los capítulos y títulos en una edición concreta.
+- [ ] Extraer acontecimientos con IDs, participantes y localizadores exactos.
+- [ ] Verificar cambios de Falna, nivel, equipo, heridas, afiliaciones y relaciones.
+- [ ] Separar qué sabe cada personaje de lo que conoce el lector.
+- [ ] Comparar duplicados con los demás volúmenes.
+- **Estado de búsqueda:** `provisional_summary`; claim `DMR-008-CLM-011`; spoilers major.
