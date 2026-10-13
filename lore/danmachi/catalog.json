@@ -1507,6 +1507,12 @@
       "path": "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
       "type": "parallel_story_claim_index",
       "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "RESEARCH-DM-010",
+      "path": "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
+      "type": "organization_dossier_claim_index",
+      "status": "present_partial_source_checked"
     }
   ],
   "lastStructuredSync": {
