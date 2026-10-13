@@ -182,3 +182,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Índice: [volúmenes principales](volumes/00-indice-volumenes-y-arcos.md).
 - Siguiente paso: extraer eventos por capítulo, crear fichas faltantes y conectar relaciones con tipo, estado temporal y fuente.
 - Mantener por separado CONT-MAIN-LN, CONT-ANIME, CONT-AR y CONT-AU. El volumen 22 figura anunciado para fecha futura al corte de esta tanda; no se inventa su trama ni un final.
+
+
+## DANMACHI-RESEARCH-009 — Historias paralelas y crónicas
+
+- Estado: 11 afirmaciones indexadas; resúmenes editoriales, no cotejo integral.
+- Paquete: `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md`.
+- Próximo trabajo: secuencia de eventos de Astrea Record, relaciones por integrante de Astrea Familia, sincronización de Sword Oratoria y extracción de escenas por Familia Chronicle.

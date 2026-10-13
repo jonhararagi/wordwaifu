@@ -21,3 +21,6 @@ Cuando el inventario bibliográfico verifique un volumen principal adicional, cr
 4. Actualizar personajes, Familias, lugares, reglas y misterios.
 5. Comparar posibles duplicados con volúmenes anteriores.
 6. Ejecutar validador y guardar evidencia.
+
+
+Las historias paralelas tienen dossiers bajo `lore/danmachi/volumes/side/`; su paquete de búsqueda es `lore/danmachi/research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md`.

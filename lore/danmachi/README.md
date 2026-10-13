@@ -110,3 +110,8 @@ La meta es cubrir desde las eras antiguas hasta el último volumen principal pub
 ## Cobertura inicial de la novela principal
 
 La tanda [DANMACHI-RESEARCH-008](research/inbox/BATCH-DM-008-main-story-volume-map.md) incorpora dossiers provisionales de los volúmenes 1–21 y sus afirmaciones al corpus de búsqueda. No es una historia completa verificada: faltan localizadores internos y extracción evento por evento.
+
+
+## Historias paralelas
+
+La tanda `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md` incorpora Astrea Record, Sword Oratoria y crónicas centradas en Ryu, Freya, Asfi y Haze al buscador. La cobertura sigue marcada como provisional hasta cotejar cada capítulo.

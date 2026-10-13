@@ -119,3 +119,20 @@ Antes de marcar un volumen como cross_checked:
 - [Volumen 21](main/volume-21.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
 
 - [DANMACHI-RESEARCH-008 · afirmaciones de volúmenes 1–21](../research/inbox/BATCH-DM-008-main-story-volume-map.md)
+
+
+## Historias paralelas y crónicas
+
+- [Astrea Record I](side/astrea-record-01.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Astrea Record II](side/astrea-record-02.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Astrea Record III](side/astrea-record-03.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Sword Oratoria 1](side/sword-oratoria-01.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Sword Oratoria 12](side/sword-oratoria-12.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Sword Oratoria 13](side/sword-oratoria-13.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Familia Chronicle: Ryu](side/familia-chronicle-ryu-01.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Familia Chronicle: Ryu II](side/familia-chronicle-ryu-02.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Familia Chronicle: Freya](side/familia-chronicle-freya.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Familia Chronicle: Asfi](side/familia-chronicle-asfi.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+- [Familia Chronicle: Haze](side/familia-chronicle-haze.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+
+- Paquete de búsqueda: `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md`.

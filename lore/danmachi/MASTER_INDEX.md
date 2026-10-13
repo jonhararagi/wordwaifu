@@ -154,3 +154,8 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 ## 7. Regla de honestidad
 
 Esta estructura busca cubrir la historia publicada desde las eras más antiguas hasta el último volumen que pueda verificarse. No significa que la cronología, todas las fichas o el final estén completos. Un índice vacío es mejor que un dato inventado.
+
+## Historias paralelas y crónicas
+
+- [DANMACHI-RESEARCH-009 · Astrea Record, Sword Oratoria y Familia Chronicle](research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md) — once afirmaciones provisionales ya indexadas en el buscador.
+- Dossiers: [índice de volúmenes y líneas paralelas](volumes/00-indice-volumenes-y-arcos.md).

@@ -128,3 +128,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Integración: `src/lore-corpus.js` carga el lote para búsqueda por personaje, continuidad, periodo y aspecto.
 - Estado: `provisional_summary`; no se presenta como cotejo completo de la novela ni como final de la serie.
 - Pendiente: eventos atómicos y localizadores internos en la edición primaria.
+
+
+## DANMACHI-RESEARCH-009 · Líneas paralelas y crónicas
+
+- Dossiers: Astrea Record I–III, Sword Oratoria 1/12/13 y Familia Chronicle de Ryu, Ryu II, Freya, Asfi y Haze.
+- Integración: 11 afirmaciones añadidas a `src/lore-corpus.js`; búsqueda cubierta por pruebas.
+- Estado: `provisional_summary`; faltan localizadores de capítulo, cronología atómica y cotejo individual de relaciones.
