@@ -54,4 +54,25 @@ assert.ok(lokiCatalogEntry, "Loki research batch must be indexed in catalog.json
 assert.equal(lokiCatalogEntry.path, "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md");
 assert.ok(fs.existsSync(path.join(lore, lokiCatalogEntry.path)), "Catalogued Loki research batch must exist.");
 
-process.stdout.write("PASS DanMachi Hestia and Loki Familia dossiers: substantive content, source IDs, claim IDs, continuity labels and catalog entry verified.\n");
+
+const astreaPath = path.join(lore, "familias/astrea-familia.md");
+const astreaResearchPath = path.join(lore, "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md");
+const astrea = fs.readFileSync(astreaPath, "utf8");
+const astreaResearch = fs.readFileSync(astreaResearchPath, "utf8");
+assert.ok(astrea.length >= 6000, "Astrea Familia dossier must be substantial enough for writing scenes.");
+assert.ok(astrea.includes("CONT-AR") && astrea.includes("CONT-ANIME"), "Astrea dossier must separate Astrea Record and anime continuity.");
+assert.ok(astrea.includes("## Datos no establecidos en este lote"), "Astrea dossier must preserve unknowns.");
+for (const id of ["DMR-001-SRC-003", "DMR-001-SRC-004", "DMR-001-SRC-005", "DMR-002-SRC-002"]) {
+  assert.ok(sourceIds.has(id), "Astrea dossier source is not registered: " + id);
+  assert.ok(astrea.includes(id), "Astrea dossier does not cite source: " + id);
+}
+for (const id of ["DMR-006-CLM-001", "DMR-006-CLM-002", "DMR-006-CLM-003", "DMR-006-CLM-004"]) {
+  assert.ok(astreaResearch.includes("### " + id), "Missing Astrea claim definition: " + id);
+  assert.ok(astrea.includes(id), "Astrea dossier does not reference claim: " + id);
+}
+assert.ok(catalog.records.some(entry => entry.id === "DM-FAM-ASTREA" && entry.path === "familias/astrea-familia.md"), "Astrea Familia must be an entity in catalog.json.");
+const astreaCatalogEntry = catalog.documents.find(entry => entry.document_id === "RESEARCH-DM-012");
+assert.ok(astreaCatalogEntry, "Astrea research batch must be indexed in catalog.json.");
+assert.ok(fs.existsSync(path.join(lore, astreaCatalogEntry.path)), "Catalogued Astrea research batch must exist.");
+
+process.stdout.write("PASS DanMachi Hestia, Loki and Astrea Familia dossiers: substantive content, source IDs, claim IDs, continuity labels and catalog entry verified.\n");
