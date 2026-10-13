@@ -4,6 +4,8 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 
 ## 1. Guías de trabajo
 
+- [Matriz de integración DanMachi — auditoría 2026-10](../../docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md) — estado de ramas, riesgos de sobrescritura y gates de validación; no implica que la integración esté cerrada.
+
 - [README y estado de la base](README.md)
 - [Catálogo JSON de IDs, tipos, etiquetas y rutas](catalog.json)
 - [Buscador local de lore en WordWaifu](../../src/lore-corpus.js).
