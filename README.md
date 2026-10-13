@@ -64,6 +64,10 @@ El prototipo incluye atlas, CRUD de las entidades principales, relaciones, catá
 - [Modo offline](docs/OFFLINE_FIRST.md)
 - [Investigación técnica comparativa](docs/TECHNICAL_RESEARCH.md)
 
+## Catálogo de entidades míticas y reliquias
+
+- [Catálogo navegable de mitología, armas, reliquias y sistema de cartas](docs/MYTHIC_ARSENAL_CATALOG.md) · [Datos estructurados](data/catalog/mythic-arsenal.json)
+
 ## Archivo de historias originales
 
 - [Archivo y formato de almacenamiento](stories/README.md)
