@@ -2592,6 +2592,11 @@ async function run() {
     await page.evaluate(() => { for (const dialog of document.querySelectorAll("dialog[open]")) dialog.close(); });
     await page.locator('.nav-item[data-view="mythic-catalog"]').click();
     await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("75 / 75"), null, { timeout: 10000 });
+    const firstNameAscending = await page.locator("#mythic-catalog-content .mythic-card h3").first().innerText();
+    await page.locator("#mythic-sort").selectOption("name-desc");
+    const firstNameDescending = await page.locator("#mythic-catalog-content .mythic-card h3").first().innerText();
+    assert.notEqual(firstNameDescending, firstNameAscending, "sorting Z–A should change the first catalog result");
+    await page.locator("#mythic-sort").selectOption("name");
     await page.locator("#mythic-search").fill("Pombero");
     await page.locator('#mythic-catalog-content [data-open-entity="LAT-GUA-POMBERO"]').click();
     assert.ok((await page.locator("#mythic-catalog-content").innerText()).includes("Pombero"),
