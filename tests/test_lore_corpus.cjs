@@ -18,6 +18,8 @@ const documentPaths = [
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
 const familyEntities = corpus.searchEntities(catalog, { type: "familia" });
+assert.ok(Array.isArray(index.entityRecords), "Loaded lore index must expose typed catalog entities for the UI.");
+assert.ok(index.entityRecords.some(entity => entity.id === "DM-FAM-HESTIA"));
 assert.ok(familyEntities.totalMatches >= 3, "Typed entity search must expose the Familia catalog records.");
 assert.ok(familyEntities.results.every(entity => entity.type === "familia"), "Familia filter must not leak characters or events.");
 assert.ok(familyEntities.results.some(entity => entity.id === "DM-FAM-HESTIA"));
