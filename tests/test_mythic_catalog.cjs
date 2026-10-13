@@ -87,7 +87,7 @@ assert.ok(catalogModule.includes("form.totalityAttack"), "detail view must rende
 for (const fieldId of ["mythic-draft-weapon", "mythic-draft-outfit", "mythic-draft-totality-attack", "mythic-draft-manifestation-name"]) {
   assert.ok(catalogModule.includes(fieldId), "mythic proposal editor must expose " + fieldId);
 }
-assert.ok(catalogModule.includes("weapon:$("#mythic-draft-weapon").value.trim()"), "proposal persistence must store the weapon field separately");
-assert.ok(catalogModule.includes("totalityAttack:$("#mythic-draft-totality-attack").value.trim()"), "proposal persistence must store the totality attack separately");
+assert.ok(catalogModule.includes('weapon:$("#mythic-draft-weapon").value.trim()'), "proposal persistence must store the weapon field separately");
+assert.ok(catalogModule.includes('totalityAttack:$("#mythic-draft-totality-attack").value.trim()'), "proposal persistence must store the totality attack separately");
 
 console.log("Mythic catalog validation passed: " + catalog.entities.length + " entities (" + americanCount + " American/Latin American), " + (catalog.starterDecks || []).length + " starter decks.");
