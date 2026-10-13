@@ -66,3 +66,11 @@ Una tanda no se cierra solo por cantidad de fichas. Debe incluir:
 ## Política para cronología hasta el final
 
 La cobertura pretende abarcar desde los periodos antiguos hasta el último contenido principal oficialmente publicado. No se marcará el final de la serie como completado hasta verificar la bibliografía y localizar las fuentes finales publicadas. Predicciones, teorías de fans y futuras decisiones de la AU se mantienen separadas del canon publicado.
+
+## Navegación bidireccional de relaciones (archivo de personajes)
+
+- Las relaciones canónicas visibles se filtran por continuidad y por las afirmaciones fuente disponibles; no deben mostrarse como hechos si sus referencias no están cargadas o quedan ocultas por el filtro de spoilers.
+- `src/character-archive.js` mantiene temporalmente el mapa de aristas `REL` en código. `getRelationships(index, id, continuity, filter)` devuelve las aristas salientes y genera enlaces inversos de navegación para las aristas entrantes, conservando el sentido original en `direction` y describiendo la procedencia del vínculo.
+- Un enlace inverso **no convierte** una relación dirigida en una afirmación simétrica: por ejemplo, “lidera” no implica que ambos personajes lideren al otro. Solo permite volver al origen desde el destino.
+- La prueba `tests/test_character_archive.cjs` comprueba el recorrido Ryu → Kaguya → Ryu, ausencia de destinos duplicados y presencia de evidencia en la continuidad elegida.
+- Limitación de arquitectura pendiente: las aristas siguen embebidas en JavaScript y el archivo consultable continúa centrado en personajes. La siguiente migración debe mover relaciones a registros estables del catálogo con `sourceId`, `targetId`, `type`, `continuity`, `period`, `eventId`, `sourceRefs` y `confidence`, y ampliar el explorador a Familias, eventos, lugares, conceptos y objetos sin duplicar la fuente de verdad.
