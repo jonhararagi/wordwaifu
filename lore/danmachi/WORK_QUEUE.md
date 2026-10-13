@@ -211,3 +211,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Confirmar CI del último commit, incluido el validador de catálogo y las pruebas de navegador.
 - [ ] Reconstruir las afiliaciones históricas por evento y por volumen; los perfiles promocionales no fijan la fecha de ingreso.
 - [ ] Continuar con Familia Astrea y el roster histórico de sus integrantes, manteniendo la procedencia secundaria claramente marcada.
+
+
+## DANMACHI-RESEARCH-012 · Familia Astrea: justicia y roster histórico
+- Estado: PARTIAL; expediente integrado en `familias/astrea-familia.md`.
+- [x] Crear un registro de Familia con ID estable y continuidad separada.
+- [x] Relacionar Astrea, Alise y Ryu con evidencia de sinopsis oficial.
+- [x] Añadir cuatro afirmaciones trazables y enlazarlas al registro de fuentes.
+- [x] Mantener Kaguya/Lyra como pistas secundarias, sin promoverlas a canon verificado.
+- [ ] Extender pruebas automatizadas a Familia Astrea y comprobar el CI del último commit.
+- [ ] Cotejar los volúmenes completos de *Astrea Record* para construir eventos y relaciones por escena.
+- [ ] Registrar roster histórico completo solo cuando existan fuentes identificables por integrante.
