@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "universeId": "danmachi",
-  "title": "DanMachi Lore PoC",
-  "status": "provisional_structure_with_unverified_lore",
-  "note": "Catalog is a navigation and dedup aid. Records in draft/provisional state must not be used as decisive canon evidence. reservedIds are candidates not yet created as files.",
+  "title": "DanMachi Lore · Corpus de búsqueda con resúmenes provisionales",
+  "status": "provisional_summaries_with_source_labeled_claims",
+  "note": "Dossiers para navegación y recuperación. Un resumen o una sinopsis editorial no equivale a canon confirmado capítulo a capítulo. Mantener separados CONT-MAIN-LN, CONT-AR, adaptaciones y CONT-AU.",
   "records": [
     {
       "id": "DM-CANON-INDEX-001",
@@ -1273,122 +1273,122 @@
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-01",
       "path": "volumes/main/volume-01.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-02",
       "path": "volumes/main/volume-02.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-03",
       "path": "volumes/main/volume-03.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-04",
       "path": "volumes/main/volume-04.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-05",
       "path": "volumes/main/volume-05.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-06",
       "path": "volumes/main/volume-06.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-07",
       "path": "volumes/main/volume-07.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-08",
       "path": "volumes/main/volume-08.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-09",
       "path": "volumes/main/volume-09.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-10",
       "path": "volumes/main/volume-10.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-11",
       "path": "volumes/main/volume-11.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-12",
       "path": "volumes/main/volume-12.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-13",
       "path": "volumes/main/volume-13.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-14",
       "path": "volumes/main/volume-14.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-15",
       "path": "volumes/main/volume-15.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-16",
       "path": "volumes/main/volume-16.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-17",
       "path": "volumes/main/volume-17.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-18",
       "path": "volumes/main/volume-18.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-19",
       "path": "volumes/main/volume-19.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-20",
       "path": "volumes/main/volume-20.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-CHARACTER-TEMPORAL-VARIANTS",
@@ -1423,17 +1423,29 @@
       "path": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
       "type": "character_relationship_research",
       "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-21",
+      "path": "volumes/main/volume-21.md",
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "RESEARCH-DM-008",
+      "path": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "type": "main_story_volume_claim_index",
+      "status": "present_provisional_summary"
     }
   ],
   "lastStructuredSync": {
-    "branch": "feature/danmachi-lore-poc",
-    "source": "GitHub recursive tree audit",
-    "treeSha": "19cd2abf885a52e955f672411215bc8173881cf8",
-    "trackedLoreFiles": 112,
+    "branch": "work/story-completion-danmachi-audit-2026-10",
+    "source": "Git tree commit created for the current lore coverage batch",
+    "treeSha": "aceae2a06e856d3f8c38fc03df28d1db39acc772",
+    "trackedLoreFiles": 114,
     "records": 32,
     "reservedIds": 70,
-    "supportingDocuments": 80,
-    "sourceCommit": "7ad54c5e614619da1c00fac8ad27f015bbdb9c5d",
-    "syncNote": "Counts verified against the complete repository tree at sourceCommit. The following index/template correction changes file contents but not the 112 tracked paths."
+    "supportingDocuments": 82,
+    "sourceCommit": "56223c6a19df2c122128d1ad7ca48ae2c1b3b204",
+    "syncNote": "Snapshot count updated after adding volume-21.md and BATCH-DM-008; volume dossiers remain provisional until primary-text locators are added."
   }
 }

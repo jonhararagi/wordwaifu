@@ -6,13 +6,12 @@ Los archivos \`volume-01.md\` a \`volume-20.md\` son espacios iniciales de captu
 
 Cuando el inventario bibliográfico verifique un volumen principal adicional, crear su ficha con la misma plantilla y añadirla al índice maestro y al catálogo. No cerrar ERA-10 hasta verificar la publicación y si existe o no un final canónico publicado.
 
-## Estado de estos espacios
+## Estado de los dossiers
 
-- Títulos oficiales: pendientes.
-- Fechas de publicación: pendientes.
-- Resúmenes: vacíos a propósito.
-- Localizadores: pendientes.
-- Contenido canónico cotejado en estos stubs: ninguno.
+- Volúmenes 1–21: primera sinopsis original, hitos narrativos y cambios de estado para orientar la navegación.
+- Títulos y localizadores de capítulo/página: pendientes de cotejo en la edición primaria elegida.
+- Todos los resúmenes llevan estado `provisional_summary`; no sirven como prueba final de detalles minuciosos.
+- El lote de afirmaciones cargado en el buscador es `research/inbox/BATCH-DM-008-main-story-volume-map.md`.
 
 ## Orden de trabajo
 

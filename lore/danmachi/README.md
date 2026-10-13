@@ -106,3 +106,7 @@ La idea de que el OC llegue cinco años antes y ya se encuentre con Hestia podr�
 ## Política de cronología
 
 La meta es cubrir desde las eras antiguas hasta el último volumen principal publicado y verificable. “Época Dorada” permanece como denominación provisional hasta localizar su significado en las fuentes. No se asumirá cuántos volúmenes tiene la serie ni se inventará el final si el cierre no está publicado.
+
+## Cobertura inicial de la novela principal
+
+La tanda [DANMACHI-RESEARCH-008](research/inbox/BATCH-DM-008-main-story-volume-map.md) incorpora dossiers provisionales de los volúmenes 1–21 y sus afirmaciones al corpus de búsqueda. No es una historia completa verificada: faltan localizadores internos y extracción evento por evento.

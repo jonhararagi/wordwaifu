@@ -173,3 +173,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Paquete: [BATCH-DM-007](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md).
 - Próxima tarea: cotejar la primera Familia, tragedia/Juggernaut, memorial y roster de Solingen con los volúmenes; no ascender fuentes comunitarias a canon aprobado sin localizadores.
 - Continuidad: perfiles de adaptación (`CONT-ANIME`), etapa histórica (`CONT-AR`), novela posterior (`CONT-MAIN-LN`) y análisis comparativo (`CROSS-CONTINUITY`) permanecen separados.
+
+
+## DANMACHI-RESEARCH-008 · Novela principal, volúmenes 1–21
+
+- Estado: dossiers de orientación incorporados; localizadores completos por capítulo pendientes.
+- Paquete: [afirmaciones y fuentes editoriales](research/inbox/BATCH-DM-008-main-story-volume-map.md).
+- Índice: [volúmenes principales](volumes/00-indice-volumenes-y-arcos.md).
+- Siguiente paso: extraer eventos por capítulo, crear fichas faltantes y conectar relaciones con tipo, estado temporal y fuente.
+- Mantener por separado CONT-MAIN-LN, CONT-ANIME, CONT-AR y CONT-AU. El volumen 22 figura anunciado para fecha futura al corte de esta tanda; no se inventa su trama ni un final.

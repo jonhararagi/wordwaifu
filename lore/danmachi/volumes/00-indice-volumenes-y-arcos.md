@@ -93,3 +93,29 @@ Antes de marcar un volumen como cross_checked:
 6. Registrar qué información es revelación para el lector y cuál conocen los personajes.
 7. Verificar que no se haya copiado texto extenso protegido.
 8. Dejar una lista de preguntas pendientes y casos que deben probarse.
+
+## Dossiers narrativos provisionales por volumen
+
+- [Volumen 1](main/volume-01.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 2](main/volume-02.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 3](main/volume-03.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 4](main/volume-04.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 5](main/volume-05.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 6](main/volume-06.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 7](main/volume-07.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 8](main/volume-08.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 9](main/volume-09.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 10](main/volume-10.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 11](main/volume-11.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 12](main/volume-12.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 13](main/volume-13.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 14](main/volume-14.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 15](main/volume-15.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 16](main/volume-16.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 17](main/volume-17.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 18](main/volume-18.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 19](main/volume-19.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 20](main/volume-20.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+- [Volumen 21](main/volume-21.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
+
+- [DANMACHI-RESEARCH-008 · afirmaciones de volúmenes 1–21](../research/inbox/BATCH-DM-008-main-story-volume-map.md)

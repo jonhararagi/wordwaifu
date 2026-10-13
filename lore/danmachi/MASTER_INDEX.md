@@ -53,6 +53,11 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [ERA-10 · Último volumen y final publicado](timeline/eras/10-ultimo-volumen-y-final-publicado.md)
 - [ERA-AU · Cronología alternativa del OC](timeline/eras/AU-oc-y-divergencias.md)
 
+## Cobertura inicial de novela principal
+
+- [DANMACHI-RESEARCH-008 · Mapa narrativo de los volúmenes 1–21](research/inbox/BATCH-DM-008-main-story-volume-map.md) — resúmenes provisionales indexados por el buscador; faltan localizadores por capítulo.
+- [Índice de volúmenes](volumes/00-indice-volumenes-y-arcos.md).
+
 ## Investigación de cronología prioritaria
 
 - [DANMACHI-RESEARCH-006 · Cronología Hestia/Bell y puerta de divergencia AU](research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md) — separa evidencia oficial de la fecha secundaria pendiente de verificar y define los criterios para probar la divergencia del OC.

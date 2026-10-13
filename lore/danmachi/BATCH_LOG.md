@@ -120,3 +120,11 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Integración: `src/lore-corpus.js` carga el nuevo lote y las fichas; `src/character-archive.js` amplía relaciones, cronología, momentos y expedientes de Ryu/Astrea.
 - QA: prueba de navegador actualizada para recorrer Ryu → Iska Bra → volver a Ryu y verificar los vínculos Ryu–Alise/Kaguya/Lyra en la continuidad del anime. Resultado de CI pendiente; las pruebas de índice/relaciones se ejecutaron en el entorno de integración. La validación Playwright de GitHub Actions no está confirmada.
 - Límite: no se consultaron íntegramente los volúmenes; la investigación global de DanMachi sigue PARTIAL.
+
+
+## DANMACHI-RESEARCH-008 · Mapa provisional de volúmenes 1–21
+
+- Resultado: dossiers de orientación en `volumes/main/volume-01.md` a `volume-21.md` y un archivo con 21 afirmaciones para recuperación.
+- Integración: `src/lore-corpus.js` carga el lote para búsqueda por personaje, continuidad, periodo y aspecto.
+- Estado: `provisional_summary`; no se presenta como cotejo completo de la novela ni como final de la serie.
+- Pendiente: eventos atómicos y localizadores internos en la edición primaria.
