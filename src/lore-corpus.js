@@ -289,6 +289,32 @@
       abstain: results.length === 0, queryTokens };
   }
 
+  function searchEntities(catalog, options) {
+    const settings = options || {};
+    const requestedType = normalize(settings.type || settings.entityType || "all");
+    const queryTokens = tokens(settings.query || "");
+    const allowedTypes = new Set(["all", "familia", "character", "character_group", "deity_character", "setting",
+      "institution_and_location", "world_rule", "chronology", "event", "author_event", "index"]);
+    if (!allowedTypes.has(requestedType)) {
+      return { results: [], totalMatches: 0, truncated: false, abstain: true, queryTokens,
+        error: "Tipo de entidad no reconocido: " + requestedType };
+    }
+    const records = Array.isArray(catalog && catalog.records) ? catalog.records : [];
+    const results = records.filter(record => {
+      if (!record || typeof record.id !== "string" || typeof record.type !== "string") return false;
+      if (requestedType !== "all" && normalize(record.type) !== requestedType) return false;
+      const tags = Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : [];
+      const haystack = normalize([record.id, record.path, record.type, record.status, record.priority, ...tags].join(" "));
+      return queryTokens.every(token => tokenMatches(haystack, token));
+    }).map(record => ({
+      id: record.id, path: record.path || "", type: record.type, status: record.status || "unknown",
+      priority: record.priority || "normal", tags: Array.isArray(record.tags) ? record.tags.slice() : []
+    })).sort((a, b) => a.id.localeCompare(b.id, "en"));
+    const limit = Number.isInteger(settings.limit) ? Math.max(1, Math.min(settings.limit, 100)) : 50;
+    return { results: results.slice(0, limit), totalMatches: results.length, truncated: results.length > limit,
+      abstain: results.length === 0, queryTokens };
+  }
+
   function getOnlineSourceDirectory() {
     return ONLINE_SOURCE_DIRECTORY.map(source => ({ ...source }));
   }
@@ -438,5 +464,5 @@
     };
   }
 
-  return { load, buildIndex, search, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText, extractExternalLead, allowedExternalImageUrl };
+  return { load, buildIndex, search, searchEntities, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText, extractExternalLead, allowedExternalImageUrl };
 });
