@@ -227,3 +227,9 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Afirmación:** DMR-008-CLM-027 registra que la respuesta oficial identifica a Zeus Familia y Hera Familia conjuntamente como quienes derrotaron a Behemoth y Leviathan.
 - **Límite:** no se infiere qué Familia derrotó a qué monstruo, el momento de la caída de ambas Familias ni el resultado contra el Dragón Negro.
 - **QA:** se amplían los conteos esperados del corpus a 98 afirmaciones y 101 entradas y se añade una prueba de recuperación.
+
+
+## DANMACHI-RESEARCH-017 · Registro de evento para las victorias de las Tres Grandes Misiones
+- Se creó `events/candidates/EVT-DM-GREAT-QUESTS-001.md` para separar el hecho respaldado (resultado conjunto contra Behemoth y Leviathan) de la cronología que sigue desconocida.
+- Se enlazó con `DMR-008-CLM-027` y `DMR-011-SRC-005`, el candidato de expedición contra el Dragón Negro y el candidato de caída de Zeus/Hera.
+- Se añadió al catálogo y a los índices de eventos y cronología. No se marcó como evento completo/verificado en todos sus detalles.
