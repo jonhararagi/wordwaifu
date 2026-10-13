@@ -3004,7 +3004,8 @@
   function publishMythicProjectState() {
     window.WordWaifuMythicProjectState = {
       proposals: Array.isArray(state.mythicProposals) ? state.mythicProposals : [],
-      stories: Array.isArray(state.stories) ? state.stories : []
+      stories: Array.isArray(state.stories) ? state.stories : [],
+      relations: Array.isArray(state.mythicRelations) ? state.mythicRelations : []
     };
     document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposals-loaded", {
       detail: window.WordWaifuMythicProjectState
@@ -3022,6 +3023,34 @@
     $("#mythic-generator-status").textContent = saved
       ? "Propuesta guardada en el proyecto. Se incluirá al exportar JSON."
       : "No se confirmó el guardado; revisá el estado de persistencia antes de cerrar.";
+    publishMythicProjectState();
+  });
+
+  document.addEventListener("wordwaifu:mythic-relation-save", async (event) => {
+    const relation = event.detail && event.detail.relation;
+    if (!relation || typeof relation.id !== "string" || !relation.id ||
+        typeof relation.sourceId !== "string" || typeof relation.targetId !== "string" ||
+        !relation.sourceId || !relation.targetId || relation.sourceId === relation.targetId ||
+        typeof relation.type !== "string" || !relation.type) return;
+    if (!Array.isArray(state.mythicRelations)) state.mythicRelations = [];
+    const previous = state.mythicRelations.findIndex(item => item && item.id === relation.id);
+    if (previous >= 0) state.mythicRelations[previous] = structuredClone(relation);
+    else state.mythicRelations.push(structuredClone(relation));
+    const saved = await saveProject();
+    $("#mythic-generator-status").textContent = saved
+      ? "Relación guardada en el proyecto."
+      : "No se confirmó el guardado del vínculo; revisá la persistencia.";
+    publishMythicProjectState();
+  });
+
+  document.addEventListener("wordwaifu:mythic-relation-delete", async (event) => {
+    const id = event.detail && event.detail.id;
+    if (typeof id !== "string" || !Array.isArray(state.mythicRelations)) return;
+    state.mythicRelations = state.mythicRelations.filter(item => item && item.id !== id);
+    const saved = await saveProject();
+    $("#mythic-generator-status").textContent = saved
+      ? "Relación del proyecto eliminada."
+      : "No se confirmó la eliminación del vínculo.";
     publishMythicProjectState();
   });
 
