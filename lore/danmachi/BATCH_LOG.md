@@ -213,3 +213,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Recuperación: los tres claims quedan enlazados al registro de fuente DMR-011-SRC-002 y se añadieron pruebas de búsqueda por tema.
 - Conteos esperados: 95 afirmaciones de fuente y 98 entradas.
 - Límite: la fuente es la sinopsis editorial; no se inventaron capítulos, páginas, supervivientes completos ni secuencia interna. El cotejo del texto íntegro sigue pendiente.
+
+
+## DANMACHI-RESEARCH-015 · Cotejo del fragmento público del volumen 21
+- Se inspeccionó el lector público oficial enlazado desde GA Bunko: tabla de contenidos, prólogo y apertura del capítulo «一章　アイズＳＯＳ».
+- Se añadieron dos paráfrasis de evidencia primaria limitada al fragmento visible; no se inventaron números de página.
+- Se distingue la sinopsis editorial del texto de muestra; el volumen completo sigue pendiente de cotejo capítulo por capítulo.
+- Fuente: https://ga.sbcr.jp/product/9784815632946/ · https://ul.sbcr.jp/GA-aIMd4 · https://r.voyager.co.jp/epm/e1_535248_22082025135526/
