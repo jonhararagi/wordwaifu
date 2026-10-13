@@ -220,3 +220,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se añadieron dos paráfrasis de evidencia primaria limitada al fragmento visible; no se inventaron números de página.
 - Se distingue la sinopsis editorial del texto de muestra; el volumen completo sigue pendiente de cotejo capítulo por capítulo.
 - Fuente: https://ga.sbcr.jp/product/9784815632946/ · https://ul.sbcr.jp/GA-aIMd4 · https://r.voyager.co.jp/epm/e1_535248_22082025135526/
+
+
+## DANMACHI-RESEARCH-016 · Ancla oficial para Zeus/Hera y dos Grandes Misiones
+- **Fuente:** prueba oficial de conocimiento de DanMachi, pregunta 1, https://danmachi.com/center-test/normal.html.
+- **Afirmación:** DMR-008-CLM-027 registra que la respuesta oficial identifica a Zeus Familia y Hera Familia conjuntamente como quienes derrotaron a Behemoth y Leviathan.
+- **Límite:** no se infiere qué Familia derrotó a qué monstruo, el momento de la caída de ambas Familias ni el resultado contra el Dragón Negro.
+- **QA:** se amplían los conteos esperados del corpus a 98 afirmaciones y 101 entradas y se añade una prueba de recuperación.
