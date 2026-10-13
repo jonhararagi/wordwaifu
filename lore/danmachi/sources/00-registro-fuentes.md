@@ -382,6 +382,27 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-014
 - verification_status: source_checked_excerpt_only
 
+## DMR-011-SRC-005 · Prueba oficial de selección de aventureros, nivel intermedio
+- source_id: DMR-011-SRC-005
+- title: 冒険者選抜中央試験 中級編
+- creator_or_publisher: Portal oficial de DanMachi
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi; prueba oficial de conocimiento de franquicia
+- volume_or_edition: Página web interactiva, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/center-test/normal.html
+- accessed_at: 2026-10-13
+- locator_type: quiz_question_and_answer
+- locator: Pregunta 1; respuesta correcta: «ゼウス・ファミリア» y «ヘラ・ファミリア» derrotaron a «陸の王者ベヒーモス» y «海の覇王リヴァイアサン».
+- claims_supported: [DMR-008-CLM-027]
+- events_supported: []
+- continuity_scope: CROSS-CONTINUITY; referencia oficial de franquicia
+- reliability_note: La página oficial confirma la respuesta de la prueba. Es una fuente de referencia auxiliar, no sustituto de una escena o pasaje de la novela para reconstruir secuencia, bajas o cronología detallada.
+- conflicting_sources: []
+- rights_note: Registrar la respuesta como paráfrasis breve, sin copiar el cuestionario completo.
+- verified_by: DANMACHI-RESEARCH-016
+- verification_status: source_checked
+
 ## DMR-011-SRC-003 · DanMachi, volumen principal 22
 - source_id: DMR-011-SRC-003
 - title: ダンジョンに出会いを求めるのは間違っているだろうか22
