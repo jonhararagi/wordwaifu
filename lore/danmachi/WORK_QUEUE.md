@@ -245,3 +245,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Actualizar ERA-10 y registrar fuentes DMR-011-SRC-001–003.
 - [ ] Volver a verificar el estado editorial después del 2026-12-15.
 - [ ] Cotejar los acontecimientos del volumen 21 con localizadores internos; la sinopsis editorial no basta para cerrar su contenido.
+
+
+## DANMACHI-RESEARCH-016 · Ancla histórica de las Tres Grandes Misiones
+- [x] Verificar en una referencia oficial de franquicia que Zeus Familia y Hera Familia son la respuesta conjunta para las derrotas de Behemoth y Leviathan.
+- [x] Registrar fuente y afirmación recuperable DMR-008-CLM-027 con continuidad auxiliar explícita.
+- [ ] Localizar en novela principal o relato oficial narrativo el periodo, las expediciones, roster y caída de Zeus/Hera Familia.
+- [ ] Verificar qué se afirma exactamente sobre la misión del Dragón Negro, sus bajas, supervivientes y consecuencias; no extrapolar desde la respuesta del cuestionario.
