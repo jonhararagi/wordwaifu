@@ -20,6 +20,8 @@ Esta lista contiene preguntas de investigación, no respuestas. Se irán marcand
 
 ## Zeus, Hera y Dragón Negro
 
+- [x] Referencia oficial auxiliar consultada el 2026-10-13: Zeus Familia y Hera Familia derrotaron conjuntamente a Behemoth y Leviathan (prueba oficial de franquicia; sin fecha interna ni asignación individual por Familia). Fuente: https://danmachi.com/center-test/normal.html. Claim: DMR-008-CLM-027.
+
 - [ ] Fecha relativa de auge de las Familias Zeus y Hera.
 - [ ] Identidad y estado de los miembros importantes durante las expediciones.
 - [ ] Qué información se da sobre el Dragón Negro y con qué nivel de certeza.
