@@ -10,7 +10,7 @@
 ## Afirmaciones trazables
 
 ### DMR-004-CLM-001 · Estado inicial de Bell y Hestia Familia
-- `claim_id`: DMR-004-SRC-001
+- `claim_id`: DMR-004-CLM-001
 - `claim`: La sinopsis oficial del episodio 1 presenta a Bell como aventurero novato y único miembro de Hestia Familia en el punto temporal descrito, aproximadamente medio mes después de recibir la protección de Hestia.
 - `character_ids`: [DM-CHAR-BELL, DM-CHAR-HESTIA]
 - `aspect`: organización, estado inicial, afiliación
@@ -33,7 +33,7 @@
 - **Límite:** no se afirma que la sinopsis sustituya el cotejo de la novela ligera volumen 1.
 
 ### DMR-004-CLM-002 · Peligro en la primera incursión descrita
-- `claim_id`: DMR-004-SRC-001
+- `claim_id`: DMR-004-CLM-002
 - `claim`: La sinopsis del episodio 1 sitúa a Bell en peligro ante un monstruo de alto nivel que no esperaba encontrar en el quinto piso y describe la intervención de una espadachina.
 - `character_ids`: [DM-CHAR-BELL]
 - `aspect`: acontecimiento, peligro, Dungeon
@@ -56,7 +56,7 @@
 - **Límite:** no se añade aquí identidad, motivación interna ni diálogo que la sinopsis no especifique.
 
 ### DMR-004-CLM-003 · Hestia como deidad principal y apoyo económico
-- `claim_id`: DMR-004-SRC-001
+- `claim_id`: DMR-004-CLM-003
 - `claim`: El perfil oficial de DanMachi IV identifica a Hestia como deidad principal de la Familia, asociada al fuego y al horno, afectuosa con Bell y dispuesta a trabajar en empleos ocasionales para ayudar al sustento.
 - `character_ids`: [DM-CHAR-HESTIA, DM-CHAR-BELL]
 - `aspect`: liderazgo, personalidad, recursos
@@ -79,7 +79,7 @@
 - **Límite:** el perfil no cuantifica ingresos, gastos ni presupuesto.
 
 ### DMR-004-CLM-004 · Liliruca Arde como supporter y gestora
-- `claim_id`: DMR-004-SRC-001
+- `claim_id`: DMR-004-CLM-004
 - `claim`: El perfil oficial presenta a Liliruca Arde como supporter inteligente y juiciosa; en el estado descrito, gestiona la caja familiar y se menciona una deuda considerable.
 - `character_ids`: [DM-CHAR-BELL, DM-CHAR-HESTIA]
 - `aspect`: rol, recursos, competencia
@@ -102,7 +102,7 @@
 - **Límite:** la deuda y el cargo se conservan como estado del perfil, no como condición eterna de cualquier continuidad.
 
 ### DMR-004-CLM-005 · Welf Crozzo como herrero y compañero de Bell
-- `claim_id`: DMR-004-SRC-001
+- `claim_id`: DMR-004-CLM-005
 - `claim`: El perfil oficial presenta a Welf como herrero combatiente, ligado a Bell por un contrato de trabajo exclusivo y como figura de hermano mayor.
 - `character_ids`: [DM-CHAR-BELL]
 - `aspect`: equipo, oficio, relación
@@ -125,7 +125,7 @@
 - **Límite:** no se infiere que Welf haya fabricado todas las armas de Bell.
 
 ### DMR-004-CLM-006 · Mikoto y Haruhime: competencias diferenciadas
-- `claim_id`: DMR-004-SRC-001
+- `claim_id`: DMR-004-CLM-006
 - `claim`: El perfil oficial describe a Mikoto como aventurera del Extremo Oriente con entrenamiento marcial y magia, y a Haruhime como usuaria de una magia rara denominada 妖術 y admiradora de Bell.
 - `character_ids`: [DM-CHAR-BELL, DM-CHAR-HESTIA]
 - `aspect`: competencias, magia, relaciones
