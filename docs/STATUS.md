@@ -10,8 +10,8 @@
 ## GitHub y control de cambios
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama candidata de integración del producto: `work/integration-mainline-2026-10` (PR #14). La rama de validación de origen `work/integration-validation-fixes-2026-10` se conserva como referencia.
-- `main` verificada el 2026-10-12: `c07ef226a61ad6e48b081890f1e3d96eecb585b5` (sin cambios en esta integración).
-- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), abierto contra `main`, no fusionado, `mergeable=true`; último commit funcional de persistencia/papelera `b75c7142f6e33dd03ed16229e9bd2c065ca7e538`, validado con la regresión en `e09db0dda3460b7c7406b3c19eb398a2ee2c0e19`.
+- `main` verificada el 2026-10-13: `bca375e171740edf8b6f770226b4797b8ade5ad6` (PR #14 integrada mediante squash).
+- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), fusionada el 2026-10-13. La app, el corpus inicial de DanMachi, el archivo de personajes, la navegación de integrantes de Familia, el Art Studio y las protecciones de papelera ya están en `main`. Esta rama integra además el Taller de historias y worldbuilding; los gates de cuota real de almacenamiento y revisión manual en Windows siguen pendientes.
 - PR #1, #3, #7, #9, #10 y #12: cerradas como rutas supersedidas, no fusionadas; se conservan las ramas de origen. PR #11: fusionada en la rama de integración de trabajo, no en `main`. No se ha desplegado.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
