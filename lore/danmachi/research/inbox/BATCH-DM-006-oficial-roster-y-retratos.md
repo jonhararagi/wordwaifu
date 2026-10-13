@@ -2372,7 +2372,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-148 · Neoin Unick · identity
 - `aspect`: identity
 - `claim`: Neoin Unick: la ficha oficial consultada confirma que es Humana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-NEOIN-UNICK
+- `character_id`: CHAR-NOIN-UNIC
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2388,7 +2388,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-149 · Neese Ranquette · identity
 - `aspect`: identity
 - `claim`: Neese Ranquette: la ficha oficial consultada confirma que es Hombre lobo / Werewolf y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-NEESE-RANQUETTE
+- `character_id`: CHAR-NEZE-RANKETT
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2404,7 +2404,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-150 · Asta Knox · identity
 - `aspect`: identity
 - `claim`: Asta Knox: la ficha oficial consultada confirma que es Enana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-ASTA-NOX
+- `character_id`: CHAR-ASTA-KNOX
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2420,7 +2420,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-151 · Liana Leets · identity
 - `aspect`: identity
 - `claim`: Liana Leets: la ficha oficial consultada confirma que es Humana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-LIANA-LEETS
+- `character_id`: CHAR-RYANA-LIETZ
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2436,7 +2436,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-152 · Selty Throa · identity
 - `aspect`: identity
 - `claim`: Selty Throa: la ficha oficial consultada confirma que es Elfa y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-SELTTY-THROA
+- `character_id`: CHAR-CELTY-SROWA
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
