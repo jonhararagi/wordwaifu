@@ -2604,6 +2604,10 @@ async function run() {
     await page.locator("#mythic-draft-title").fill("Propuesta editada de prueba");
     await page.locator("#mythic-save-draft").click();
     await page.waitForFunction(() => (document.querySelector("#mythic-saved-proposals")?.innerText || "").includes("Propuesta editada de prueba"), null, { timeout: 10000 });
+    await page.locator('#mythic-saved-proposals [data-promote-proposal]').click();
+    await page.waitForFunction(() => (document.querySelector("#directory-view")?.innerText || "").includes("Propuesta editada de prueba"), null, { timeout: 10000 });
+    await page.locator('.nav-item[data-view="mythic-catalog"]').click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-saved-proposals")?.innerText || "").includes("Propuesta editada de prueba"), null, { timeout: 10000 });
     await page.locator('#mythic-saved-proposals [data-delete-proposal]').click();
     await page.waitForFunction(() => !(document.querySelector("#mythic-saved-proposals")?.innerText || "").includes("Propuesta editada de prueba"), null, { timeout: 10000 });
     process.stdout.write("PASS mythic generator: editable proposals persist across reload and support delete.\\n");
