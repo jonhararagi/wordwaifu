@@ -1234,10 +1234,16 @@
       const family = $("#story-power-family", container)?.value || "any";
       const available = powerIdeaLibrary.map((idea, index) => ({ idea, index })).filter(({ idea }) => family === "any" || idea.family === family);
       if (!available.length || !catalog) return;
-      let candidate = available[Math.floor(Math.random() * available.length)];
-      if (available.length > 1 && candidate.index === lastGeneratedPowerIndex) {
-        candidate = available[(available.findIndex(({ index }) => index === candidate.index) + 1) % available.length];
+      const existingNames = new Set((catalog.value.match(/^Nombre:\\s*(.+)$/gm) || []).map((line) => line.replace(/^Nombre:\\s*/, "").trim().toLocaleLowerCase("es")));
+      const unseen = available.filter(({ idea, index }) => !existingNames.has(idea.name.toLocaleLowerCase("es")) && index !== lastGeneratedPowerIndex);
+      const fallback = available.filter(({ idea }) => !existingNames.has(idea.name.toLocaleLowerCase("es")));
+      const candidates = unseen.length ? unseen : fallback;
+      if (!candidates.length) {
+        const status = $("#story-power-generator-status", container);
+        if (status) status.textContent = "No quedan ideas nuevas en esta familia. Cambiá el filtro para explorar otras, sin duplicar las que ya guardaste.";
+        return;
       }
+      const candidate = candidates[Math.floor(Math.random() * candidates.length)];
       lastGeneratedPowerIndex = candidate.index;
       const idea = candidate.idea;
       const block = [
