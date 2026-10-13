@@ -15,7 +15,7 @@ Si el pasaje del volumen 15 corresponde al marco temporal de *Astrea Record*, la
 
 - **Referencia oficial de cronología:** portal oficial de la serie, https://danmachi.com/chronology/. Confirma el ancla aproximada de siete años para *Astrea Record*, pero no menciona en ese bloque la expedición de Zeus/Hera.
 - **Pista de novela principal:** volumen 15 de *Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka*, conversación de Alise sobre la situación de Orario y los cinco años posteriores al fracaso contra el Dragón Negro. La búsqueda web encontró el texto en una copia no editorial; no se debe registrar esa copia como edición autorizada ni usar su paginación como localizador final.
-- **Referencia editorial para identificar la edición:** página oficial GA Bunko de la novela 15 pendiente de localizar con ISBN y URL exactos antes de registrar la ficha fuente.
+- **Identificación editorial oficial:** GA Bunko, *ダンジョンに出会いを求めるのは間違っているだろうか15*, Fujino Omori, ISBN 978-4-7973-9622-5, publicación aproximada 2019-06-15: https://ga.sbcr.jp/product/9784797396225/. La página identifica la edición y ofrece sinopsis general; no confirma por sí sola el pasaje de los cinco años.
 
 ## Lo que todavía NO queda demostrado
 
@@ -28,7 +28,7 @@ Si el pasaje del volumen 15 corresponde al marco temporal de *Astrea Record*, la
 
 ## Siguiente paso de verificación
 
-1. Encontrar y registrar la ficha editorial oficial exacta del volumen 15.
+1. Registrar la ficha editorial oficial exacta del volumen 15 en el registro maestro, con alcance limitado a metadatos editoriales hasta cotejar el pasaje.
 2. Verificar el pasaje en una edición legítima o vista previa oficial y capturar capítulo/sección/página solo si es visible.
 3. Si se confirma el intervalo de cinco años, registrar el vínculo temporal como relativo y derivado, con la operación explícita «aprox. 7 + 5», sin inventar año absoluto.
 4. Mantener separados los eventos de derrota del Dragón Negro y pérdida de posición de ambas Familias hasta que una fuente describa su relación precisa.
