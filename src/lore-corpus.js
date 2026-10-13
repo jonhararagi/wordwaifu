@@ -30,6 +30,16 @@
       .toLocaleLowerCase("es").replace(/[^a-z0-9\u3040-\u30ff\u4e00-\u9faf-]+/g, " ")
       .trim().replace(/\s+/g, " ");
   }
+  // Small, explicit morphology bridges common Spanish noun/verb forms without
+  // weakening the all-query-terms-must-match rule for unrelated words.
+  const SEARCH_SYNONYMS = Object.freeze({
+    venganza: ["venganza", "vengar", "vengarse"],
+    vengar: ["venganza", "vengar", "vengarse"],
+    vengarse: ["venganza", "vengar", "vengarse"]
+  });
+  function tokenMatches(haystack, token) {
+    return (SEARCH_SYNONYMS[token] || [token]).some(form => haystack.includes(form));
+  }
   function tokens(value) { return normalize(value).split(" ").filter(t => t.length >= 2 && !STOP_WORDS.has(t)); }
   function clean(value) {
     return String(value ?? "").trim()
@@ -266,7 +276,7 @@
       const haystack = normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
         claim.continuityScopes.join(" "), claim.aspects.join(" "), aliases.join(" "), claim.sourceTitle,
         claim.sourceLocator, claim.sourceIds.join(" "), claim.claimId, claim.entryId].join(" "));
-      const foundTokens = queryTokens.filter(token => haystack.includes(token));
+      const foundTokens = queryTokens.filter(token => tokenMatches(haystack, token));
       if (queryTokens.length && foundTokens.length !== queryTokens.length) continue;
       results.push({ ...claim, characterNames: characterRecords.map(character => character.name),
         profilePaths: characterRecords.map(character => character.profilePath).filter(Boolean),
