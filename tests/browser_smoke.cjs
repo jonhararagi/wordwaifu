@@ -2615,6 +2615,13 @@ async function run() {
     await page.locator("#mythic-relation-type").selectOption("inspired_by");
     await page.locator("[data-save-relation]").click();
     await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("Macuahuitl"), null, { timeout: 10000 });
+    await page.reload();
+    await page.waitForFunction(() => Boolean(document.querySelector("#project-name")?.textContent), null, { timeout: 10000 });
+    await page.locator('.nav-item[data-view="mythic-catalog"]').click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("69 / 69"), null, { timeout: 10000 });
+    await page.locator("#mythic-search").fill("Pombero");
+    await page.locator('#mythic-catalog-content [data-open-entity="LAT-GUA-POMBERO"]').click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("Macuahuitl"), null, { timeout: 10000 });
     await page.locator('#mythic-catalog-content [data-edit-relation]').click();
     await page.locator("#mythic-relation-type").selectOption("contracts_with");
     await page.locator("[data-save-relation]").click();
