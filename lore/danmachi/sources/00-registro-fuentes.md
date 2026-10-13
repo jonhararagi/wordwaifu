@@ -360,6 +360,28 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-011
 - verification_status: source_checked
 
+## DMR-011-SRC-004 · Muestra pública oficial del texto del volumen 21
+- source_id: DMR-011-SRC-004
+- title: ダンジョンに出会いを求めるのは間違っているだろうか21 · 試し読み
+- creator_or_publisher: GA文庫 / SB Creative; lector público Voyager
+- source_type: PRIMARY_MAIN
+- series: DanMachi, serie principal
+- volume_or_edition: Volumen 21; fragmento de muestra pública
+- language: Japonés
+- publication_date: 2025-10-15 aproximadamente, según ficha editorial
+- official_url: https://ul.sbcr.jp/GA-aIMd4
+- accessed_at: 2026-10-13
+- locator_type: chapter_heading_and_visible_excerpt
+- locator: Tabla de contenidos con «プロローグ　セカイ迷作劇場» y «一章　アイズＳＯＳ»; apertura visible del prólogo y capítulo 1. El lector no mostró paginación impresa ordinaria en las páginas inspeccionadas.
+- claims_supported: [DMR-008-CLM-025, DMR-008-CLM-026]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Muestra pública del texto de la novela abierta desde la ficha editorial oficial. Evidencia primaria limitada estrictamente al fragmento visible; no demuestra contenido de capítulos completos o páginas no accesibles.
+- conflicting_sources: []
+- rights_note: Solo paráfrasis originales breves; no copiar extractos extensos.
+- verified_by: DANMACHI-RESEARCH-014
+- verification_status: source_checked_excerpt_only
+
 ## DMR-011-SRC-003 · DanMachi, volumen principal 22
 - source_id: DMR-011-SRC-003
 - title: ダンジョンに出会いを求めるのは間違っているだろうか22
