@@ -165,8 +165,8 @@ async function run() {
     assert.equal(await premiseField.inputValue(), "El bosque resultaba oscuro.", "clicking a synonym must replace the selected word in the active text field");
     await page.locator("#story-word-query").fill("grow");
     await page.locator("#story-word-search-button").click();
-    assert.ok(await page.locator("#story-word-results").getByRole("button", { name: "prosperar", exact: true }).count(), "word helper must support English input with Spanish alternatives");
-    assert.ok(await page.locator("#story-word-results").getByRole("button", { name: "decaer", exact: true }).count(), "word helper must display antonyms/contrasts");
+    assert.ok(await page.locator("#story-word-results").getByRole("button", { name: "flourish", exact: true }).count(), "word helper must support English input with Spanish alternatives");
+    assert.ok(await page.locator("#story-word-results").getByRole("button", { name: "wither", exact: true }).count(), "word helper must display antonyms/contrasts");
     process.stdout.write("PASS word alternatives: searches synonyms/antonyms and replaces selected text.\\n");
     await page.locator("#story-add-chapter-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1, { timeout: 5000 });
