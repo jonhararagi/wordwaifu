@@ -3,24 +3,39 @@ id: CHAR-MARIYU-LEAGE
 universe: danmachi
 type: character
 status: provisional
-continuity_scope: CONT-AR
+continuity_scope: CONT-ANIME
 source_refs:
+  - DMR-007-SRC-001
   - DMR-007-SRC-004
 claim_refs:
+  - DMR-006-CLM-154
   - DMR-007-CLM-005
-verification_status: provisional_secondary_or_adaptation
+  - DMR-007-CLM-021
+verification_status: source_checked_official_profile
+aliases:
+  - "Mariyu Reage"
+  - "Maryuu Reage"
+  - "マリュー・レアージュ"
 ---
-# Mariyu Leage / Mariyu Reage
+# Mariyu Leage
 
-**Estado de la ficha:** provisional. Se creó para que el roster pueda explorarse desde las relaciones de WordWaifu; no debe interpretarse como una biografía completa ni como canon totalmente cotejado.
+**Alcance de esta ficha:** perfil de la adaptación oficial; se mantiene separado del detalle de Astrea Record y de inferencias novelísticas.
 
-## Información disponible
+## Datos identificados
 
-La referencia comunitaria la enumera entre las integrantes históricas de Astrea Familia. Su ficha permanece mínima porque esa pertenencia todavía necesita cotejo directo con la novela o un perfil oficial.
+- **Especie:** Humana.
+- **Voz japonesa registrada por el portal oficial:** Akira Sekine.
+- **Afiliación disponible:** Astrea Familia en el roster oficial de DanMachi IV.
+- **Retrato oficial de referencia:** https://danmachi.com/danmachi4/character/images/chara_tachi_26.png
+- **Procedencia:** enlazado desde el sitio oficial; no se copia ni se presenta como imagen de una escena concreta.
+ 
+El perfil oficial escribe マリュー・レアージュ, la identifica como humana y la incluye en Astrea Familia. WordWaifu mantiene un ID canónico y hace que las romanizaciones Mariyu Leage, Mariyu Reage y Maryuu Reage lleven a la misma ficha.
 
-## Continuidad y fuentes
+## Relaciones y navegación
 
-- **Continuidad de lectura:** CONT-AR.
-- Referencia: https://danmachi.fandom.com/es/wiki/Familia_Astrea
-- Afirmaciones incorporadas: DMR-007-CLM-005.
-- Pendiente: localizar el pasaje del volumen o capítulo original, verificar romanización y completar historia individual, personalidad, habilidades y relaciones con evidencia.
+- **Astrea Familia:** el vínculo de afiliación permite recorrer el roster. No demuestra por sí solo amistad íntima, rivalidad, una escena compartida ni confianza personal con Ryu.
+- **Ryu Lion / Astrea:** los enlaces de WordWaifu se rotulan según la evidencia de la continuidad seleccionada. No hay que trasladar automáticamente relaciones de la adaptación a todas las novelas.
+
+## Pendiente de investigación
+
+historia individual, nivel, habilidades y relaciones de escena, pendientes de fuentes primarias. Las fuentes comunitarias sirven para encontrar nombres y rutas, pero no se convierten en canon aprobado sin capítulo o página localizable.
