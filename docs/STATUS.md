@@ -1,4 +1,15 @@
 # Estado de WordWaifu
+# Actualización de auditoría DanMachi — 2026-10-13
+
+- Rama candidata autorizada: `work/story-completion-danmachi-audit-2026-10`.
+- Se añadió regresión de búsqueda de entidades Familia con consultas naturales en español (Hestia, Loki y Astrea), alias de tipo y abstención ante nombres de personajes: commit [41be465](https://github.com/jonhararagi/wordwaifu/commit/41be465681f7fae12c2d6d419a5562a09edbe4b2).
+- Se reconcilió la cola DanMachi con el estado real del filtro de entidades: commit [bcd5c19](https://github.com/jonhararagi/wordwaifu/commit/bcd5c19fe6811ad7f57a1470299bc4908850b15d).
+- La rama contiene una prueba automatizada para `searchEntities`; **no se declara aprobada** hasta que exista evidencia de ejecución sobre el commit candidato actual.
+- Estado de CI del candidato: pendiente de verificación. El conector disponible no devolvió runs de push ni checks para el SHA inspeccionado; eso no equivale a CI fallida ni aprobada.
+- No se ha realizado merge, no se ha publicado ni cerrado PR y no se ha modificado `main` ni otras ramas remotas en esta iteración.
+
+---
+
 
 ## Resumen
 - Producto: WordWaifu · World & Story Foundry.
