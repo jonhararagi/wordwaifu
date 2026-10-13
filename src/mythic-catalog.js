@@ -32,10 +32,23 @@
     const query = $("#mythic-search").value.trim().toLocaleLowerCase("es");
     const kind = $("#mythic-kind").value, tradition = $("#mythic-tradition").value, status = $("#mythic-status").value;
     return catalog.entities.filter(entity => {
-      const haystack = [entity.name, entity.summary, entity.tradition, entity.region, entity.status, entity.kind, ...(entity.aliases||[]), ...(entity.attributes||[]), ...(entity.domains||[]), ...(entity.tags||[])]
-        .join(" ").toLocaleLowerCase("es");
+      const artifact = entity.artifactProfile || {};
+      const sourceText = (entity.sourceIds || []).map(id => (catalog.sources || []).find(source => source.id === id))
+        .filter(Boolean).map(source => [source.title, source.use, source.url].join(" "));
+      const haystack = [entity.name, entity.summary, entity.tradition, entity.region, entity.status, entity.kind,
+        entity.sourceNotes, entity.creativeHook, ...(entity.aliases||[]), ...(entity.attributes||[]), ...(entity.domains||[]),
+        ...(entity.tags||[]), ...(entity.relations||[]).map(relation => relation.type),
+        ...(artifact.documentedCapabilities||[]), artifact.useConditions, artifact.adaptationMechanics, ...sourceText]
+        .filter(Boolean).join(" ").toLocaleLowerCase("es");
       return (!query || haystack.includes(query)) && (!kind || entity.kind === kind) &&
         (!tradition || entity.tradition === tradition) && (!status || entity.status === status);
+    }).sort((a,b) => {
+      const order = $("#mythic-sort")?.value || "name";
+      const collator = new Intl.Collator("es", { sensitivity: "base", numeric: true });
+      if (order === "name-desc") return collator.compare(b.name, a.name);
+      if (order === "tradition") return collator.compare(a.tradition, b.tradition) || collator.compare(a.name, b.name);
+      if (order === "kind") return collator.compare(a.kind, b.kind) || collator.compare(a.name, b.name);
+      return collator.compare(a.name, b.name);
     });
   }
   function chip(text) { return '<span class="mythic-chip">' + esc(text) + '</span>'; }
@@ -216,7 +229,8 @@
     const sourceNotes = entity.sourceNotes ? '<p><strong>Notas de procedencia:</strong> ' + esc(entity.sourceNotes) + '</p>' : "";
     const sourceById = new Map((catalog.sources || []).map(source => [source.id, source]));
     const sourceLinks = (entity.sourceIds || []).map(id => sourceById.get(id)).filter(Boolean)
-      .map(source => '<a class="mythic-link" href="' + esc(source.url) + '" target="_blank" rel="noopener noreferrer">' + esc(source.title) + ' ↗</a>').join("");
+      .map(source => '<div class="mythic-source-item"><a class="mythic-link" href="' + esc(source.url) + '" target="_blank" rel="noopener noreferrer">' +
+        esc(source.title) + ' ↗</a><p>' + esc(source.use || "Referencia contextual; no implica que respalde todas las afirmaciones de esta ficha.") + '</p></div>').join("");
     const artifact = entity.artifactProfile;
     const artifactDetails = artifact ? '<section class="mythic-relation-group"><h4>Ficha de arma / reliquia</h4>' +
       '<p><strong>Categoría:</strong> ' + esc(artifact.objectCategory || entity.kind) + '</p>' +
@@ -277,8 +291,9 @@
       if (previous) openEntity(previous, false); else renderList();
     }
   });
-  ["mythic-search","mythic-kind","mythic-tradition","mythic-status"].forEach(id => {
-    $("#" + id).addEventListener(id === "mythic-search" ? "input" : "change", renderList);
+  ["mythic-search","mythic-kind","mythic-tradition","mythic-status","mythic-sort"].forEach(id => {
+    const control = $("#" + id);
+    if (control) control.addEventListener(id === "mythic-search" ? "input" : "change", renderList);
   });
   fetch("./data/catalog/mythic-arsenal.json").then(response => {
     if (!response.ok) throw new Error("HTTP " + response.status);
