@@ -155,3 +155,20 @@
 - [ ] Seguir buscando una edición legítima legible de *Episode Freya* o una referencia primaria alternativa con localizador de la escena nivel 8/9.
 - [ ] Comprobar la referencia exacta de la wiki española de Emperatriz a cada tuit; mantener separado el texto recuperado de la interpretación de la wiki.
 - [ ] No convertir el hipotético «podría tener una posibilidad» en una victoria confirmada, ni rellenar el nombre civil o los huecos AU.
+
+
+## Sexta pasada: rastreo del capítulo sin acceso al texto primario (2026-10-13)
+
+19. **Reseña comunitaria japonesa de Episode Freya — pista de capítulo**  
+    https://www.kashiwa1969.online/familia-chronicles-episode-2-review/  
+    Reseña secundaria fechada en el sitio el 2026-05-15. El índice de búsqueda asocia «最強の起源» con una retrospectiva sobre Ottar y contiene una mención a la «女帝» de nivel 9 que lo deja con vida y parece impulsarlo a hacerse más fuerte. La página es una reseña/comentario, no la novela, y su resumen no aporta un localizador editorial verificable; conservarla exclusivamente como pista para orientar una lectura legítima del capítulo. No promover el detalle ni deducir identidad, cronología o causalidad desde esta reseña.
+
+20. **Reseña japonesa contemporánea a la publicación**  
+    https://bluets8.hatenadiary.jp/entry/2019/12/19/175000  
+    Entrada fechada 2019-12-19 sobre el volumen publicado en diciembre de 2019. Su descripción general presenta el pasado de Ottar y los días pasados de los aventureros más fuertes como material incluido, pero no ofrece un localizador de la escena de nivel 8/9 en el texto recuperado. Es contexto secundario bibliográfico, no confirmación del pasaje.
+
+### Resultado de la búsqueda secundaria
+
+- Se obtuvo una pista más concreta para revisar el capítulo «最強の起源», pero **la escena nivel 8/9 sigue sin fuente primaria legible ni localizador interno**.
+- El lector BinB oficial continúa mostrando únicamente el marco del visor y un mensaje técnico; no se intentó sortear sus controles.
+- Próximo paso correcto: consultar una edición legítima del libro y registrar capítulo/página/sección, o localizar una fuente primaria pública que cite expresamente el pasaje. Hasta entonces, mantener los nombres/niveles como pista secundaria.
