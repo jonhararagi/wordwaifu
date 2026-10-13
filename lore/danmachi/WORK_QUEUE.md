@@ -282,10 +282,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Registrar que el texto describe a Meteria a través de Alfia, pero usa un escenario alternativo en el que Alfia/Zald crían a Bell; no importar sus sucesos a la continuidad principal.
 - [x] Localizar la ficha editorial oficial de *Familia Chronicle: Episode Freya* (GA Bunko, ISBN 978-4-8156-0464-6), que confirma la obra como fuente potencial sobre el pasado de Ottar.
 - [ ] Cotejar en una edición legítima de *Episode Freya* la escena de los aventureros nivel 8/9 y obtener localizador interno antes de aprobar nombres, niveles o cronología.
-- [ ] Verificar contexto y contenido de las publicaciones del autor citadas para la Emperatriz.
+- [x] Recuperar el contenido visible original de los dos tuits de Omori citados; registrar por separado qué dice cada uno y no extrapolar el segundo a la Emperatriz.
 - [x] Localizar el lector oficial de vista previa de *Episode Freya* desde el portal de DanMachi; los extractos anunciados son «最強の起源» y «それぞれの昔日».
 - [x] Registrar que el lector no expuso el texto en la herramienta de consulta; la escena nivel 8/9 sigue sin cotejo primario.
-- [x] Intentar abrir los dos tuits citados para la Emperatriz; X/Twitter no devolvió el contenido, así que las afirmaciones dependientes siguen siendo pistas secundarias.
+- [x] Primer intento de abrir los dos tuits: X/Twitter no devolvió contenido en esa sesión.
+- [x] Reintento mediante extracción directa de página: ambos textos y fechas se recuperaron; el del 9 de julio describe una posibilidad hipotética de Alfia frente a la Emperatriz de nivel 9, y el del 15 de julio trata de una vicecapitana sin identificar por sí solo a la Emperatriz.
+- [x] Reintentar el visor oficial BinB embebido: tampoco expone el texto de las páginas, por lo que el pasaje nivel 8/9 de Episode Freya sigue sin localizador primario.
 
 - Paquete actualizado: [DANMACHI-RESEARCH-019](research/inbox/DANMACHI-RESEARCH-019-wiki-triangulation-es-en-ja.md).
 - Regla de continuidad: publicación del autor no equivale automáticamente a continuidad principal; el relato alternativo se etiqueta como tal. Los campos de historia propia AU siguen vacíos hasta que el autor los complete.
