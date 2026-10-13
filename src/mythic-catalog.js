@@ -35,10 +35,13 @@
       const artifact = entity.artifactProfile || {};
       const sourceText = (entity.sourceIds || []).map(id => (catalog.sources || []).find(source => source.id === id))
         .filter(Boolean).map(source => [source.title, source.use, source.url].join(" "));
+      const manifestations = entity.heroicManifestations?.forms || [];
+      const manifestationText = manifestations.flatMap(form => [form.name, form.stage, form.role, form.weapon, form.outfit, form.totalityAttack, form.creativeStatus]);
       const haystack = [entity.name, entity.summary, entity.tradition, entity.region, entity.status, entity.kind,
         entity.sourceNotes, entity.creativeHook, ...(entity.aliases||[]), ...(entity.attributes||[]), ...(entity.domains||[]),
         ...(entity.tags||[]), ...(entity.relations||[]).map(relation => relation.type),
-        ...(artifact.documentedCapabilities||[]), artifact.useConditions, artifact.adaptationMechanics, ...sourceText]
+        ...(artifact.documentedCapabilities||[]), artifact.useConditions, artifact.adaptationMechanics,
+        entity.heroicManifestations?.identityPresentation, entity.heroicManifestations?.designRule, ...manifestationText, ...sourceText]
         .filter(Boolean).join(" ").toLocaleLowerCase("es");
       return (!query || haystack.includes(query)) && (!kind || entity.kind === kind) &&
         (!tradition || entity.tradition === tradition) && (!status || entity.status === status);
@@ -242,6 +245,19 @@
       ((artifact.evolutionStages || []).length ? '<p><strong>Etapas de evolución ficticia:</strong> ' + esc(artifact.evolutionStages.join(" · ")) + '</p>' : "") +
       '</section>' : "";
     const creative = entity.creativeHook ? '<section class="mythic-relation-group"><h4>Idea de adaptación (no es un dato mitológico)</h4><p>' + esc(entity.creativeHook) + '</p></section>' : "";
+    const manifestations = entity.heroicManifestations;
+    const manifestationDetails = manifestations ? '<section class="mythic-relation-group"><h4>Manifestaciones heroicas · arma, mito y ataque</h4>' +
+      '<p><strong>Presentación:</strong> ' + esc(manifestations.identityPresentation || "Variantes de diseño") + '</p>' +
+      '<p>' + esc(manifestations.designRule || "Cada forma reúne tres pilares de diseño.") + '</p>' +
+      '<div class="mythic-manifestation-grid">' + (manifestations.forms || []).map(form =>
+        '<article class="mythic-saved-proposal"><h4>' + esc(form.name) + '</h4>' +
+        '<p><strong>Etapa:</strong> ' + esc(form.stage || "Sin especificar") + '</p>' +
+        '<p><strong>Rol:</strong> ' + esc(form.role || "Sin especificar") + '</p>' +
+        '<p><strong>1 · Arma característica / arma natural:</strong> ' + esc(form.weapon || "Pendiente de definir") + '</p>' +
+        '<p><strong>2 · Vestimenta / símbolo del mito:</strong> ' + esc(form.outfit || "Pendiente de definir") + '</p>' +
+        '<p><strong>3 · Ataque que resume el mito:</strong> ' + esc(form.totalityAttack || "Pendiente de definir") + '</p>' +
+        '<p class="field-help">' + esc(form.creativeStatus || "Distinguir la adaptación del dato documentado.") + '</p></article>'
+      ).join("") + '</div></section>' : "";
     $("#mythic-catalog-count").textContent = "Ficha · " + entity.id;
     $("#mythic-catalog-content").innerHTML =
       '<article class="mythic-detail"><div class="mythic-detail-actions"><button class="mythic-link" data-catalog-back>← Volver</button><button class="mythic-link" data-catalog-index>Ver índice completo</button></div>' +
@@ -257,7 +273,7 @@
         (entity.researchProfile.documentedVariants ? '<p><strong>Variantes registradas:</strong> ' + esc(entity.researchProfile.documentedVariants) + '</p>' : '') +
         (entity.researchProfile.sourceLimitations ? '<p><strong>Límites de las fuentes:</strong> ' + esc(entity.researchProfile.sourceLimitations) + '</p>' : '') +
         (entity.researchProfile.creativeBoundary ? '<p><strong>Límite de adaptación:</strong> ' + esc(entity.researchProfile.creativeBoundary) + '</p>' : '') + '</section>' : "") +
-      artifactDetails + creative +
+      artifactDetails + manifestationDetails + creative +
       (sourceLinks ? '<section class="mythic-relation-group"><h4>Fuentes y referencias</h4><div class="mythic-relations">' + sourceLinks + '</div></section>' : "") +
       '<section class="mythic-relation-group"><h4>Relaciones para seguir explorando</h4><div class="mythic-relations">' +
       (relations || '<p>Esta ficha todavía no tiene relaciones salientes registradas.</p>') + '</div></section>' +
