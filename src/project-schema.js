@@ -45,6 +45,9 @@
     if (input.mythicProposals !== undefined && !Array.isArray(input.mythicProposals)) {
       errors.push("mythicProposals debe ser una lista.");
     }
+    if (input.mythicRelations !== undefined && !Array.isArray(input.mythicRelations)) {
+      errors.push("mythicRelations debe ser una lista.");
+    }
     if (errors.length) return { valid: false, errors, project: null };
 
     const hasExplicitRelationships = Array.isArray(input.relationships);
@@ -58,6 +61,7 @@
       relationships: hasExplicitRelationships ? input.relationships.map((item) => isRecord(item) ? { ...item } : item) : [],
       stories: Array.isArray(input.stories) ? input.stories.map((item) => isRecord(item) ? { ...item } : item) : [],
       mythicProposals: Array.isArray(input.mythicProposals) ? input.mythicProposals.map((item) => isRecord(item) ? { ...item } : item) : [],
+      mythicRelations: Array.isArray(input.mythicRelations) ? input.mythicRelations.map((item) => isRecord(item) ? { ...item } : item) : [],
       settings: isRecord(input.settings) ? { ...input.settings } : { time: "now" }
     };
 
@@ -90,7 +94,8 @@
       ["organizations", project.organizations],
       ["relationships", project.relationships],
       ["stories", project.stories],
-      ["mythicProposals", project.mythicProposals]
+      ["mythicProposals", project.mythicProposals],
+      ["mythicRelations", project.mythicRelations]
     ];
     const ids = new Set();
     const byGroup = {};
@@ -109,11 +114,22 @@
           ids.add(item.id);
           byGroup[groupName].add(item.id);
         }
-        if (!isNonEmptyString(item.name) && groupName !== "events" && groupName !== "mythicProposals") {
+        if (!isNonEmptyString(item.name) && groupName !== "events" && groupName !== "mythicProposals" && groupName !== "mythicRelations") {
           errors.push(itemPath + ".name debe ser un texto no vacío.");
         }
       });
     }
+    project.mythicRelations.forEach((relation, index) => {
+      const path = "mythicRelations[" + index + "]";
+      for (const key of ["sourceId", "targetId", "type"]) {
+        if (!isNonEmptyString(relation[key])) errors.push(path + "." + key + " debe ser un texto no vacío.");
+      }
+      if (relation.sourceId && relation.targetId && relation.sourceId === relation.targetId) {
+        errors.push(path + " no puede relacionar una entidad consigo misma.");
+      }
+      if (relation.createdAt !== undefined && typeof relation.createdAt !== "string") errors.push(path + ".createdAt debe ser texto.");
+    });
+
     project.mythicProposals.forEach((proposal, index) => {
       const path = "mythicProposals[" + index + "]";
       if (!isNonEmptyString(proposal.title)) errors.push(path + ".title debe ser un texto no vacío.");
