@@ -1,0 +1,50 @@
+# Matriz de integración — auditoría DanMachi (2026-10-13)
+
+## Alcance y regla de seguridad
+
+- Candidata examinada: `work/story-completion-danmachi-audit-2026-10`.
+- Commit de auditoría más reciente al redactar esta matriz: `cceb20c83b6cdc5c4d47693ea7c7420d385c5a68`.
+- No se fusionó ninguna rama, no se alteró `main` y no se publicó ni cerró ningún PR.
+- Los estados de grafo son comparaciones de refs; **divergido no significa que una función falte**, y una ruta presente no prueba equivalencia funcional. Los SHA de blob solo prueban igualdad exacta del archivo examinado.
+
+## Matriz por rama
+
+| Rama fuente | Grafo frente a la candidata | Evidencia de árbol inspeccionada | Decisión segura |
+|---|---|---|---|
+| `work/integration-wordwaifu-lore-trash-2026-10` | Antecesora; candidata por delante, 0 detrás | `src/project-repository.js` tiene el mismo blob SHA que la candidata | Equivalencia confirmada para ese archivo; no cherry-pick duplicado. |
+| `work/wf-004-c3-project-trash` | Antecesora; candidata por delante, 0 detrás | `src/project-repository.js` coincide exactamente | La implementación de papelera está en la línea de la candidata; conservar pruebas de tombstones/snapshots. |
+| `work/story-foundry-integration-2026-10-13` | Divergida; 61 commits detrás en la comparación inicial | `stories/README.md` coincide exactamente | El índice de historias coincide; auditar por separado los archivos ejecutables antes de declarar toda la rama equivalente. |
+| `work/art-studio-and-character-dossiers-2026-10` | Divergida; 32 detrás en la comparación inicial | `src/character-dossiers.js` coincide; `src/art-studio.js` difiere | No reemplazar el Art Studio de la candidata por el de origen. Comparar el diff funcional restante antes de cualquier cherry-pick. |
+| `work/danmachi-cast-coverage-images-2026-10` | Divergida; 47 detrás | `assets/character-portraits/ryu-lion.svg` coincide; `src/official-character-roster.js` difiere | Retrato confirmado idéntico; el roster requiere diff de comportamiento/datos. |
+| `work/danmachi-dossier-depth-2026-10` | Divergida; 3 detrás | La candidata tiene `lore/danmachi/familias/astrea-familia.md` y `tests/test_danmachi_family_dossier.cjs`; esas rutas no existen en la rama consultada | Diferencia de estructura confirmada; no aplicar cambios por sobrescritura de directorios. |
+| `work/connected-lore-power-catalog-2026-10` | Divergida; 46 detrás | `src/project-schema.js` difiere; `src/mythic-catalog.js` no existe en esa ref | La candidata contiene una evolución posterior del esquema/catálogo; comparar únicamente cambios únicos aún ausentes. |
+| `work/integration-mainline-2026-10` | Divergida; 31 detrás | `src/project-repository.js` difiere | No sustituir el repositorio actual; revisar las diferencias de persistencia y recuperación una por una. |
+| `work/integration-validation-fixes-2026-10` | Divergida; 38 detrás | `tests/browser_smoke.cjs` difiere; la candidata incluye la regresión del conteo del catálogo | Mantener la prueba nueva; revisar si la rama aporta otros arreglos únicos. |
+| `work/visual-foundry-rework-2026-10` | Divergida; 8 detrás | `src/art-studio.js` no existe en la ref consultada | No se puede tratar como reemplazo directo del módulo actual; comparar el resto del árbol. |
+| `work/wf-004-c2-destructive-snapshots` | Divergida; 4 detrás | No se confirmó igualdad global de snapshots | Revisión pendiente de deltas de retención, restauración y borrado permanente; no cherry-pick masivo. |
+| `work/family-navigation-ci-status-2026-10-13` | Divergida; 6 detrás | `src/lore-corpus.js` difiere | El filtro por entidad Familia ya está en la candidata; comparar cualquier mejora adicional de navegación/CI antes de integrar. |
+| `work/story-foundry-generator-2026-10` | Divergida; 60 detrás | `src/app.js` difiere | El smoke de la candidata ya ejercita editor e importación de historias; la equivalencia total de generación sigue sin demostrarse. |
+| `work/audit-baseline-2026-10-12` | Divergida; 8 detrás | Rama de referencia de auditoría; no se ha demostrado que su árbol sea mejor que la candidata | Usar como evidencia histórica, no como base de sobrescritura. |
+| `feature/danmachi-lore-poc` | Divergida; historial antiguo separado | No se encontró equivalencia de árbol completa | Tratar como fuente histórica; incorporar solo hechos/cambios únicos tras validar continuidad y fuentes. |
+| `fix/lore-archive-spanish-continuity-test` | Divergida; historial antiguo separado | La candidata conserva pruebas de continuidad en `tests/test_lore_corpus.cjs` | La corrección de continuidad está representada en la suite actual; revisar commits exclusivos antes de cerrar equivalencia. |
+| `verify/lore-depth-ci` | Divergida; historial antiguo separado | La candidata contiene workflows y validadores de DanMachi, pero no se probó identidad total de árboles | Comparar workflows/fixtures específicos; no asumir que una rama de verificación está integrada por su nombre. |
+
+## Pruebas y regresiones
+
+- `tests/test_lore_corpus.cjs`: añadidas consultas de regresión para «Familia de Astrea», «Loki Familia», «Familia Hestia» y abstención ante «Bell Cranel».
+- `tests/browser_smoke.cjs`: el test ya no codifica el antiguo total 75/75. Lee el total del archivo fuente `data/catalog/mythic-arsenal.json` (80 entidades en la ref inspeccionada) y exige que la interfaz muestre ese total completo; restablece filtros antes de comprobarlo.
+- El smoke de navegador anterior falló en [run 38477415589](https://github.com/jonhararagi/wordwaifu/actions/runs/38477415589) y [run 38477722186](https://github.com/jonhararagi/wordwaifu/actions/runs/38477722186) porque la aserción esperaba 75/75 aunque el JSON contenía 80 entidades.
+- Para el commit `a97c85a`, [Validate WordWaifu #959](https://github.com/jonhararagi/wordwaifu/actions/runs/38477722186) terminó en fallo y [DanMachi Lore and Retrieval Integrity #476](https://github.com/jonhararagi/wordwaifu/actions/runs/38477722203) estaba en espera de la ejecución anterior. El arreglo del conteo está en commits posteriores; **su CI no se declara aprobado en este documento**.
+
+## Orden seguro de integración restante
+
+1. Mantener esta rama como candidata y conservar sus versiones actuales de `src/project-repository.js`, `src/app.js`, `src/art-studio.js`, `src/official-character-roster.js` y `src/lore-corpus.js` hasta comparar cada diff.
+2. Resolver deltas únicos de persistencia/snapshots y sus pruebas, sin reemplazar el repositorio por la rama antigua.
+3. Resolver deltas únicos de expedientes, roster y continuidad, conservando etiquetas de canon, adaptación y AU.
+4. Resolver deltas únicos de arte/panel visual y catálogo de poderes/mitología.
+5. Ejecutar validación estructural, pruebas de corpus y catálogo, smoke de navegador y workflows en el SHA final.
+6. Detenerse antes de mergear o cerrar PR; requiere autorización explícita.
+
+## Límites de la auditoría
+
+No se afirma que todos los commits exclusivos de cada rama estén incorporados. El grafo de varias ramas está divergido y varias implementaciones presentan SHA distintos; por eso queda pendiente la comparación semántica archivo por archivo de sus deltas únicos. No se debe declarar integración total ni ausencia de cambios huérfanos hasta cerrar esa comparación y obtener CI verde en el commit final.
