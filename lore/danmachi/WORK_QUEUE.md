@@ -39,6 +39,7 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [x] Recopilar la información editorial oficial sobre Astrea Familia, Ryu, Alise y Evilus.
 - [x] Distinguir el evento original de DanMemo y la trilogía novelada.
 - [ ] Consultar directamente los volúmenes 1–3 y guardar localizadores internos.
+- [x] Para el volumen 21, atomizar tres hechos de la sinopsis editorial en claims recuperables; [ ] conseguir/cotejar el texto íntegro y añadir capítulo/página/sección antes de subir su estado a verificado.
 - [ ] Verificar estados posteriores de Ryu, Astrea y Alise mediante fuente de continuidad adecuada.
 - [ ] Investigar por separado la cronología de Hestia/Bell y el orden de eventos de Zeus/Hera.
 - [ ] Mantener sin resolver el roster del OC y el punto de divergencia hasta decisión expresa del autor.
