@@ -14,9 +14,10 @@ const americanCount = catalog.entities.filter(entity => (entity.tags || []).some
 assert.ok(americanCount >= 20, "catalog must contain at least 20 American/Latin American entries");
 assert.ok(catalog.entities.some(entity => entity.kind === "deity") && catalog.entities.some(entity => entity.kind === "folklore_entity") && catalog.entities.some(entity => entity.kind.includes("weapon") || entity.kind === "sacred_relic"), "catalog must cover figures, folklore, and objects");
 for (const entity of catalog.entities) {
-  for (const key of ["id", "name", "kind", "tradition", "region", "status", "summary"]) {
+  for (const key of ["id", "name", "kind", "tradition", "region", "status", "summary", "confidence"]) {
     assert.ok(typeof entity[key] === "string" && entity[key].trim(), entity.id + " missing " + key);
   }
+  assert.ok(Array.isArray(entity.aliases) && Array.isArray(entity.attributes) && Array.isArray(entity.domains), entity.id + " missing searchable structured metadata");
   for (const sourceId of entity.sourceIds || []) assert.ok(sourceIds.has(sourceId), entity.id + " references missing source " + sourceId);
   if (!["original", "creative_adaptation"].includes(entity.status)) assert.ok((entity.sourceIds || []).length > 0, entity.id + " lacks source references");
   for (const figureId of entity.artifactProfile?.associatedFigureIds || []) assert.ok(byId.has(figureId), entity.id + " artifact profile references missing figure " + figureId);
