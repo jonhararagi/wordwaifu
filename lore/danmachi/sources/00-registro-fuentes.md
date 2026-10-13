@@ -292,3 +292,26 @@ verification_status: stub
 - rights_note: Resumir con palabras propias.
 - verified_by: DANMACHI-RESEARCH-004
 - verification_status: source_checked
+
+
+## DMR-005-SRC-001 · Perfiles oficiales de Sword Oratoria
+
+- source_id: DMR-005-SRC-001
+- title: CHARACTER キャラクター | TVアニメ「ソード・オラトリア」公式サイト
+- creator_or_publisher: Portal oficial del anime Sword Oratoria
+- source_type: ADAPTATION
+- series: Sword Oratoria, adaptación anime
+- volume_or_edition: Página de personajes, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/sword_oratoria/character/
+- accessed_at: 2026-10-13
+- locator_type: character_profile
+- locator: Sección ロキ・ファミリア y perfiles de アイズ・ヴァレンシュタイン, レフィーヤ・ウィリディス, ティオナ・ヒリュテ, ティオネ・ヒリュテ, ロキ, フィン・ディムナ, リヴェリア・リヨス・アールヴ, ガレス・ランドロック, ベート・ローガ y ラウル・ノールド.
+- claims_supported: [DMR-005-CLM-001, DMR-005-CLM-002, DMR-005-CLM-003, DMR-005-CLM-004, DMR-005-CLM-005, DMR-005-CLM-006, DMR-005-CLM-007, DMR-005-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-SO; comparative reference only for CONT-MAIN-LN
+- reliability_note: Página oficial de adaptación abierta directamente. Los cargos, edades y niveles son los descritos por esa página, no una cronología exhaustiva de la novela.
+- conflicting_sources: []
+- rights_note: Parafrasear rasgos y funciones; no reproducir las descripciones extensas.
+- verified_by: DANMACHI-RESEARCH-005
+- verification_status: source_checked
