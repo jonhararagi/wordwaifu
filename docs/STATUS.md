@@ -33,7 +33,6 @@
 - El árbol exacto de PR #16 (`e76dc2b5c31b6e1286db04d2a393114fa878d0cb`) pasó Chromium browser smoke, la validación de estructura y el validador DanMachi.
 - [Validate WordWaifu — run 38386054444 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38386054444).
 - [DanMachi Lore and Retrieval Integrity — run 38386054860 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38386054860).
--//github.com/jonhararagi/wordwaifu/actions/runs/38297000007).
 - Chromium confirma CRUD del Panel de arte en IndexedDB y respaldo local, fallos simulados sin falso éxito, papelera y snapshots, expedientes ampliados y separación de Ryu en `CONT-AR` y `CONT-ANIME`.
 - Regresiones de pestaña obsoleta: un autosave no puede resucitar un universo en papelera ni recrear un ID tras borrado permanente. El borrado purga el payload y snapshots, conserva solo una marca oculta de ID, y los guardados/activaciones de ese ID se rechazan.
 
