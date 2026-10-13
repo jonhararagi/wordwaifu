@@ -1321,7 +1321,8 @@
       if (!entry) {
         const empty = document.createElement("p"); empty.className = "field-help"; empty.textContent = "Todavía no hay una entrada local para «" + query + "». Probá una forma base o una palabra cercana. El diccionario se puede ampliar."; wordResults.appendChild(empty); return;
       }
-      const isEnglish = ["grow", "grew", "grown"].includes(normalized);\n      [["Sinónimos", isEnglish && entry.englishSynonyms ? entry.englishSynonyms : entry.synonyms], ["Antónimos y contrastes", isEnglish && entry.englishAntonyms ? entry.englishAntonyms : entry.antonyms]].forEach(([heading, words]) => {
+      const isEnglish = ["grow", "grew", "grown"].includes(normalized);
+      [["Sinónimos", isEnglish && entry.englishSynonyms ? entry.englishSynonyms : entry.synonyms], ["Antónimos y contrastes", isEnglish && entry.englishAntonyms ? entry.englishAntonyms : entry.antonyms]].forEach(([heading, words]) => {
         const group = document.createElement("div"); group.className = "story-word-group";
         const title = document.createElement("h4"); title.textContent = heading; group.appendChild(title);
         const list = document.createElement("div"); list.className = "power-generator-controls";
