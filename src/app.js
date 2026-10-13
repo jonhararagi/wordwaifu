@@ -2723,7 +2723,7 @@
       const card = archiveElement("article", "danmachi-entity-card");
       card.setAttribute("role", "listitem");
       const heading = archiveElement("div", "danmachi-entity-card-heading");
-      heading.append(archiveElement("h4", "", entity.tags.find(tag => tag && !/^(roster|high|low|medium)$/i.test(tag)) || entity.id),
+      heading.append(archiveElement("h4", "", entity.type === "familia" ? "Familia " + (entity.tags.find(tag => tag && !/^(roster|high|low|medium)$/i.test(tag)) || entity.id) : (entity.tags.find(tag => tag && !/^(roster|high|low|medium)$/i.test(tag)) || entity.id)),
         archiveElement("span", "danmachi-entity-type", entity.type));
       card.appendChild(heading);
       card.appendChild(archiveElement("p", "danmachi-entity-meta", entity.id + " · Estado: " + entity.status + " · Prioridad: " + entity.priority));
