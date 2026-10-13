@@ -3402,7 +3402,7 @@
       "relations": [
         {
           "type": "defeated_in_myth_by",
-          "targetId": "GRC-ACHILLES"
+          "targetId": "GRC-THESEUS"
         }
       ],
       "sourceIds": [
@@ -3474,6 +3474,105 @@
             "weapon": "Cuernos negros y embestidas que rompen estructuras, pero desorientan al propio monstruo.",
             "outfit": "Máscara quebrada, cadenas y muros móviles como elementos de diseño ficticio.",
             "totalityAttack": "Ariadna no Encuentra la Salida — el campo se convierte en un laberinto opresivo; cada uso reduce también la orientación del Minotauro.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRC-THESEUS",
+      "name": "Teseo",
+      "kind": "culture_hero",
+      "tradition": "Griega / cretense en la tradición literaria",
+      "region": "Ática y Creta en el ciclo mítico",
+      "status": "mythology_reference",
+      "summary": "Héroe ateniense asociado, en el relato más conocido, con la entrada al laberinto de Creta y la derrota del Minotauro gracias a la ayuda de Ariadna.",
+      "creativeHook": "Su fuerza no reside únicamente en el combate: el hilo, la preparación y la capacidad de regresar convierten la historia en un héroe de navegación táctica.",
+      "tags": [
+        "griega",
+        "héroe",
+        "teseo",
+        "laberinto",
+        "minotauro",
+        "ariadna",
+        "lily",
+        "épica",
+        "dark"
+      ],
+      "relations": [
+        {
+          "type": "defeats_in_myth",
+          "targetId": "GRC-MINOTAUR"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-1911-MINOTAUR"
+      ],
+      "sourceNotes": "Referencia secundaria para el ciclo del Minotauro y Teseo. Los detalles de las formas y técnicas son una adaptación creativa, no una reconstrucción de un único relato antiguo.",
+      "aliases": [
+        "Theseus"
+      ],
+      "attributes": [
+        "laberinto",
+        "astucia",
+        "regreso",
+        "héroe",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "navegación",
+        "combate",
+        "resolución de pruebas",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "baseFigureId": "GRC-THESEUS",
+        "identityPresentation": "Héroe del laberinto / variantes de diseño",
+        "designRule": "Cada forma tiene arma, símbolo de vestimenta y ataque que reúne la historia. Las etapas Lily, épica y Dark son propuestas originales de WordWaifu.",
+        "forms": [
+          {
+            "id": "theseus-lily",
+            "name": "Teseo · Lily",
+            "stage": "Juvenil / potencial",
+            "role": "El héroe que aprende que sobrevivir depende también de recordar el camino.",
+            "weapon": "Espada corta de entrenamiento y una madeja de hilo resistente.",
+            "outfit": "Túnica de viajero con una pequeña bobina de hilo como emblema.",
+            "totalityAttack": "Primer Hilo — marca un tramo seguro del laberinto y permite volver sobre los propios pasos.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "theseus-initial",
+            "name": "Teseo · Inicial",
+            "stage": "Héroe reconocible",
+            "role": "La victoria depende de la astucia, la ayuda y la posibilidad de regresar.",
+            "weapon": "Espada corta y ovillo de hilo de Ariadna como herramientas complementarias.",
+            "outfit": "Túnica de viaje, brazal de bronce y el hilo visible atado a la muñeca.",
+            "totalityAttack": "El Camino de Ariadna — un ataque preciso seguido de una ruta de retirada que evita quedar atrapado.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "theseus-epic",
+            "name": "Teseo · Épico",
+            "stage": "Héroe del laberinto",
+            "role": "La totalidad del mito: entrar en el laberinto, vencer al monstruo y encontrar la salida.",
+            "weapon": "Espada heroica y el hilo como reliquia táctica.",
+            "outfit": "Manto cretense, brazaletes de bronce y un patrón de laberinto bordado.",
+            "totalityAttack": "Laberinto, Centro y Salida — revela temporalmente las rutas, localiza el núcleo de la amenaza y abre una retirada; requiere haber trazado el camino antes.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "theseus-dark",
+            "name": "Teseo · Dark",
+            "stage": "Héroe extraviado",
+            "role": "El lado trágico de la victoria: sobrevivir no significa salir indemne ni conservar todos los vínculos.",
+            "weapon": "Espada oscura y un hilo que se deshace; pierde precisión si ignora sus marcas.",
+            "outfit": "Manto desgarrado y ovillo ennegrecido, símbolo de abandono y pérdida de orientación.",
+            "totalityAttack": "Sin Ariadna no Hay Regreso — encierra al enemigo en rutas falsas, pero cada uso borra también parte del propio camino del héroe.",
             "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
           }
         ]
