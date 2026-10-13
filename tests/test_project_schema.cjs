@@ -268,6 +268,7 @@ function testRelationshipIDsAreGloballyUnique() {
 function testMythicProposalsPersistAndValidateReferences() {
   const input = validProject();
   input.stories = [{ id: "story-a", title: "La primera invocación", name: "La primera invocación" }];
+  input.mythicRelations = [{ id: "mythic-rel-a", sourceId: "LAT-MEX-QUETZALCOATL", targetId: "WEAPON-MACUAHUITL", type: "inspiration", createdAt: "2026-10-13T12:00:00.000Z" }];
   input.mythicProposals = [{
     id: "mythic-proposal-a", title: "Eco de Quetzalcóatl", modes: ["weapon", "cards"],
     concept: "Personaje original inspirado en una fuente documentada.",
@@ -279,16 +280,23 @@ function testMythicProposalsPersistAndValidateReferences() {
   const result = validateAndNormalizeProject(input);
   assert.equal(result.valid, true, result.errors.join("\\n"));
   assert.deepEqual(result.project.mythicProposals, input.mythicProposals);
+  assert.deepEqual(result.project.mythicRelations, input.mythicRelations);
   const exported = JSON.stringify(result.project);
   const imported = validateAndNormalizeProject(JSON.parse(exported));
   assert.equal(imported.valid, true, imported.errors.join("\\n"));
   assert.deepEqual(imported.project.mythicProposals, input.mythicProposals);
+  assert.deepEqual(imported.project.mythicRelations, input.mythicRelations);
 
   const broken = structuredClone(input);
   broken.mythicProposals[0].storyId = "story-missing";
   const brokenResult = validateAndNormalizeProject(broken);
   assert.equal(brokenResult.valid, false);
   assert.match(brokenResult.errors.join("\\n"), /storyId apunta a una historia inexistente/);
+  const selfRelation = structuredClone(input);
+  selfRelation.mythicRelations[0].targetId = selfRelation.mythicRelations[0].sourceId;
+  const selfResult = validateAndNormalizeProject(selfRelation);
+  assert.equal(selfResult.valid, false);
+  assert.match(selfResult.errors.join("\\n"), /no puede relacionar una entidad consigo misma/);
 }
 
 const tests = [
