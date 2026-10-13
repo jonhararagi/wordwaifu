@@ -283,6 +283,17 @@ MOM["CHAR-RYUU-LION"]["CONT-AR"].push(
 {id:"ryu-memorial",title:"El memorial para las compañeras caídas",period:"Dungeon · ubicación secundaria asociada al piso 18",summary:"La fuente comunitaria afirma que Ryu recuerda a las integrantes perdidas mediante un memorial. Debe localizarse la escena en la novela antes de tratar el detalle como verificado.",refs:["DMR-007-CLM-007"],people:["CHAR-RYUU-LION"]}
 );
 
+EXTENDED["CHAR-MARIYU-LEAGE"]["CONT-ANIME"]={
+title:"Mariyu Leage · identidad y afiliación oficial",
+summary:"El perfil oficial la identifica como humana y miembro de Astrea Familia. La página usa el nombre マリュー・レアージュ; Mariyu Reage y Maryuu Reage se guardan como alias de búsqueda, no como personas distintas.",
+sections:[
+{title:"Datos respaldados",text:"Especie: humana. Voz japonesa: Akira Sekine. Afiliación: Astrea Familia en el portal oficial de DanMachi IV."},
+{title:"Variantes de romanización",text:"WordWaifu usa CHAR-MARIYU-LEAGE como ID estable, pero las búsquedas Mariyu Leage, Mariyu Reage, Maryuu Reage y マリュー・レアージュ abren la misma ficha."},
+{title:"Límites",text:"La entrada oficial no aporta una biografía individual extensa, ni basta para inventar su nivel, personalidad, habilidades o relaciones de escena."}
+],
+references:[{label:"Perfil oficial DanMachi IV · Mariyu Reage",url:"https://danmachi.com/danmachi4/character/",kind:"official"}],
+galleryUrl:"https://danmachi.com/danmachi4/character/images/chara_tachi_26.png"
+};
 MOM["CHAR-RYUU-LION"]["CONT-ANIME"].push(
 {id:"ryu-family-justice",title:"La misión y caída de Astrea Familia",period:"DanMachi IV · episodio 20",summary:"La sinopsis oficial presenta a la primera Familia como protectora de los débiles y combatiente contra el mal; su nombre desaparece en la oscuridad del Dungeon, dejando a Ryu como única superviviente conocida. La causa detallada del desastre requiere cotejar los episodios y el texto de Astrea Record.",refs:["DMR-007-CLM-026"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-ALISE-LOVELACE","CHAR-KAGUYA","CHAR-LYRA"]}
 );
