@@ -2752,7 +2752,21 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-MET-COLLECTION"
       ],
-      "sourceNotes": "Comparar cultos y contextos romanos propios antes de equipararlo con Ares."
+      "sourceNotes": "Comparar cultos y contextos romanos propios antes de equipararlo con Ares.",
+      "aliases": [
+        "Mars"
+      ],
+      "attributes": [
+        "guerra",
+        "protección",
+        "agricultura"
+      ],
+      "domains": [
+        "guerra",
+        "protección",
+        "agricultura"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "ROM-MINERVA",
@@ -2772,7 +2786,21 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-MET-COLLECTION"
       ],
-      "sourceNotes": "La equivalencia Minerva-Atenea es histórica y cultural; sus cultos romanos no se reducen a una traducción exacta del panteón griego."
+      "sourceNotes": "La equivalencia Minerva-Atenea es histórica y cultural; sus cultos romanos no se reducen a una traducción exacta del panteón griego.",
+      "aliases": [
+        "Minerva"
+      ],
+      "attributes": [
+        "sabiduría",
+        "oficios",
+        "estrategia"
+      ],
+      "domains": [
+        "sabiduría",
+        "oficios",
+        "estrategia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "CHN-NEZHA",
@@ -2792,7 +2820,19 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-MET-COLLECTION"
       ],
-      "sourceNotes": "Distinguir tradiciones religiosas, novelas clásicas y adaptaciones modernas; no tratar todas las armas populares de Nezha como un único inventario antiguo."
+      "sourceNotes": "Distinguir tradiciones religiosas, novelas clásicas y adaptaciones modernas; no tratar todas las armas populares de Nezha como un único inventario antiguo.",
+      "aliases": [
+        "哪吒"
+      ],
+      "attributes": [
+        "héroe divino",
+        "armas"
+      ],
+      "domains": [
+        "héroe divino",
+        "armas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "CHN-SUNWUKONG",
@@ -2811,7 +2851,20 @@
       "sourceIds": [
         "SRC-BRITANNICA-JOURNEY-WEST"
       ],
-      "sourceNotes": "Es una figura literaria de la novela clásica; separar el texto y sus versiones de las adaptaciones audiovisuales modernas."
+      "sourceNotes": "Es una figura literaria de la novela clásica; separar el texto y sus versiones de las adaptaciones audiovisuales modernas.",
+      "aliases": [
+        "Sun Wu-k'ung",
+        "Rey Mono"
+      ],
+      "attributes": [
+        "Rey Mono",
+        "transformación"
+      ],
+      "domains": [
+        "Rey Mono",
+        "transformación"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "AFR-AKAN-ANANSI",
@@ -2832,7 +2885,19 @@
         "SRC-BRITANNICA-ANANSI",
         "SRC-UNESCO-LIVING"
       ],
-      "sourceNotes": "Las versiones de Anansi en el Caribe y otras diásporas tienen historias propias; no asumir una forma única o estática."
+      "sourceNotes": "Las versiones de Anansi en el Caribe y otras diásporas tienen historias propias; no asumir una forma única o estática.",
+      "aliases": [
+        "Ananse"
+      ],
+      "attributes": [
+        "araña",
+        "ingenio"
+      ],
+      "domains": [
+        "araña",
+        "ingenio"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "AFR-YOR-OSHUN",
@@ -2853,7 +2918,22 @@
         "SRC-UNESCO-OSUN",
         "SRC-UNESCO-LIVING"
       ],
-      "sourceNotes": "Tradición religiosa viva: usar fuentes comunitarias y respetar las diferencias entre prácticas yoruba y tradiciones afroatlánticas."
+      "sourceNotes": "Tradición religiosa viva: usar fuentes comunitarias y respetar las diferencias entre prácticas yoruba y tradiciones afroatlánticas.",
+      "aliases": [
+        "Ọ̀ṣun",
+        "Oshun"
+      ],
+      "attributes": [
+        "río",
+        "cuidado",
+        "fertilidad"
+      ],
+      "domains": [
+        "río",
+        "cuidado",
+        "fertilidad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     }
   ],
   "starterDecks": [
