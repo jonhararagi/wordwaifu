@@ -309,8 +309,13 @@ async function run() {
     await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] > summary').click();
     assert.ok(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] .archive-evidence').count() >= 1);
     await page.locator("#archive-tab-relationships").click();
-    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count() > 0);
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').click();
+    const familyNetwork = page.locator('#archive-profile-panel .archive-family-network[data-family-name="Astrea Familia"]');
+    assert.equal(await familyNetwork.count(), 1, "Ryu's historical relationship tab should expose a dedicated Astrea Familia network.");
+    for (const memberId of ["CHAR-ALISE-LOVELACE", "CHAR-ASTREA", "CHAR-KAGUYA", "CHAR-LYRA"]) {
+      assert.ok(await familyNetwork.locator('[data-character-link="' + memberId + '"]').count() > 0,
+        "Astrea Familia network should provide a navigable profile for " + memberId + ".");
+    }
+    await familyNetwork.locator('[data-character-link="CHAR-ALISE-LOVELACE"]').click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_17.png"));
