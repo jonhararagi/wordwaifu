@@ -744,6 +744,644 @@
           "targetId": "SYS-CARD-PACT"
         }
       ]
+    },
+    {
+      "id": "LAT-MEX-MICTLAN",
+      "name": "Mictlantecuhtli",
+      "kind": "deity",
+      "tradition": "Nahua / mexica",
+      "region": "Mesoamérica central",
+      "status": "mythology_reference",
+      "summary": "Señor del Mictlan, el ámbito de los muertos en la religión mexica; aparece en relatos y representaciones rituales junto con Mictecacíhuatl.",
+      "tags": [
+        "americano",
+        "mexica",
+        "muerte",
+        "inframundo"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-SMITHSONIAN-NMAI"
+      ],
+      "sourceNotes": "Referencia de síntesis: contrastar con estudios y fuentes nahuas; no reducir la muerte mexica a una equivalencia automática con el infierno cristiano.",
+      "relations": [
+        {
+          "type": "underworld_association",
+          "targetId": "LAT-MEX-QUETZALCOATL"
+        }
+      ]
+    },
+    {
+      "id": "LAT-MEX-COYOL",
+      "name": "Coyolxauhqui",
+      "kind": "deity",
+      "tradition": "Mexica",
+      "region": "Mesoamérica central",
+      "status": "mythology_reference",
+      "summary": "Figura divina cuya derrota a manos de Huitzilopochtli forma parte del relato del nacimiento del dios y se representa en el monolito de Coyolxauhqui.",
+      "tags": [
+        "americano",
+        "mexica",
+        "luna",
+        "mito de origen"
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-BRITISH-MUSEUM"
+      ],
+      "sourceNotes": "El monolito arqueológico es evidencia material de su importancia ritual; las interpretaciones del mito deben citar la fuente concreta.",
+      "relations": [
+        {
+          "type": "mythic_conflict",
+          "targetId": "LAT-MEX-HUITZILOPOCHTLI"
+        }
+      ]
+    },
+    {
+      "id": "LAT-MEX-XOCHI",
+      "name": "Xochiquetzal",
+      "kind": "deity",
+      "tradition": "Nahua / mexica",
+      "region": "Mesoamérica central",
+      "status": "mythology_reference",
+      "summary": "Deidad asociada en fuentes nahuas con flores, belleza, amor, sexualidad y actividades artesanales; sus atributos cambian según época y fuente.",
+      "tags": [
+        "americano",
+        "mexica",
+        "flores",
+        "arte",
+        "amor"
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "No convertir asociaciones de fuentes coloniales en una descripción universal de todas las comunidades nahuas."
+    },
+    {
+      "id": "LAT-MAY-ITZAMNA",
+      "name": "Itzamná",
+      "kind": "deity",
+      "tradition": "Maya yucateca",
+      "region": "Península de Yucatán",
+      "status": "mythology_reference",
+      "summary": "Deidad importante en fuentes coloniales yucatecas, vinculada en distintas interpretaciones con creación, conocimiento y escritura; la identificación iconográfica es discutida.",
+      "tags": [
+        "americano",
+        "maya",
+        "conocimiento",
+        "escritura"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-SMITHSONIAN-NMAI"
+      ],
+      "sourceNotes": "La identificación de figuras mayas antiguas con nombres coloniales debe tratarse con cautela; evitar presentarla como consenso absoluto."
+    },
+    {
+      "id": "LAT-MAY-CHAAC",
+      "name": "Chaac",
+      "kind": "deity",
+      "tradition": "Maya yucateca",
+      "region": "Península de Yucatán",
+      "status": "mythology_reference",
+      "summary": "Deidad de la lluvia vinculada a la agricultura y a las peticiones rituales de agua en fuentes mayas yucatecas.",
+      "tags": [
+        "americano",
+        "maya",
+        "lluvia",
+        "agricultura",
+        "agua"
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las figuras y nombres de deidades de lluvia varían entre regiones mayas y periodos históricos."
+    },
+    {
+      "id": "LAT-AND-MAMQUILLA",
+      "name": "Mama Quilla",
+      "kind": "deity",
+      "tradition": "Inca / Andes",
+      "region": "Andes centrales",
+      "status": "mythology_reference",
+      "summary": "Deidad lunar inca descrita en fuentes coloniales como hermana y consorte de Inti; asociada con el calendario y ciclos rituales.",
+      "tags": [
+        "americano",
+        "inca",
+        "luna",
+        "calendario"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "El parentesco divino se registra en relatos coloniales; distinguir las versiones y la perspectiva de los cronistas.",
+      "relations": [
+        {
+          "type": "associated_deity",
+          "targetId": "LAT-AND-INTI"
+        }
+      ]
+    },
+    {
+      "id": "LAT-AND-ILLAPA",
+      "name": "Illapa",
+      "kind": "deity",
+      "tradition": "Andina / inca",
+      "region": "Andes centrales",
+      "status": "mythology_reference",
+      "summary": "Nombre asociado en fuentes andinas coloniales con trueno, rayo y lluvia; las denominaciones y funciones regionales no son idénticas en todas las comunidades.",
+      "tags": [
+        "americano",
+        "andino",
+        "trueno",
+        "rayo",
+        "lluvia"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "La documentación procede en parte de cronistas coloniales; comprobar equivalencias regionales antes de generalizar."
+    },
+    {
+      "id": "LAT-AND-MANCO",
+      "name": "Manco Cápac",
+      "kind": "culture_hero",
+      "tradition": "Inca / Andes",
+      "region": "Cusco y Andes centrales",
+      "status": "mythology_reference",
+      "summary": "Fundador ancestral del linaje inca en tradiciones de origen conservadas en fuentes coloniales, con variantes sobre su procedencia y relación con Mama Ocllo.",
+      "tags": [
+        "americano",
+        "inca",
+        "fundación",
+        "héroe cultural"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Los relatos de fundación tienen versiones diferentes; no deben leerse sin más como crónica histórica verificable."
+    },
+    {
+      "id": "LAT-GUA-TEJU",
+      "name": "Teju Jagua",
+      "kind": "folklore_entity",
+      "tradition": "Guaraní y folclores regionales",
+      "region": "Paraguay y regiones guaraníes",
+      "status": "mythology_reference",
+      "summary": "Ser de relatos guaraníes paraguayos, descrito en recopilaciones modernas como una criatura con rasgos de lagarto y múltiples cabezas; las versiones populares varían.",
+      "tags": [
+        "americano",
+        "guaraní",
+        "criatura",
+        "folclore"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "La descripción específica se difunde sobre todo mediante recopilaciones y folclore regional moderno; no atribuirla por igual a todos los pueblos guaraníes."
+    },
+    {
+      "id": "LAT-BRA-SACI",
+      "name": "Saci-Pererê",
+      "kind": "folklore_entity",
+      "tradition": "Folclore brasileño",
+      "region": "Brasil",
+      "status": "mythology_reference",
+      "summary": "Personaje del folclore brasileño, comúnmente representado como un ser travieso de una sola pierna que aparece y desaparece en remolinos; sus representaciones modernas también tienen historia editorial.",
+      "tags": [
+        "americano",
+        "brasileño",
+        "travesura",
+        "viento",
+        "folclore"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Las imágenes populares actuales están influidas por recopilaciones literarias y cultura de masas; distinguirlas de variantes orales."
+    },
+    {
+      "id": "LAT-AND-MAMACOCHA",
+      "name": "Mama Cocha",
+      "kind": "deity",
+      "tradition": "Andina",
+      "region": "Costa y Andes andinos",
+      "status": "mythology_reference",
+      "summary": "Nombre quechua asociado con la madre del mar y con aguas marítimas en tradiciones andinas; las prácticas y significados son regionales.",
+      "tags": [
+        "americano",
+        "andino",
+        "mar",
+        "agua"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "No tratarla como una diosa idéntica en todas las comunidades andinas ni asignarle poderes de ficción como hechos documentados."
+    },
+    {
+      "id": "LAT-AR-LALLORONA",
+      "name": "La Llorona",
+      "kind": "folklore_entity",
+      "tradition": "Folclores latinoamericanos (variantes regionales)",
+      "region": "México y otras regiones de América Latina",
+      "status": "mythology_reference",
+      "summary": "Figura de leyenda oral con versiones regionales muy diversas, a menudo vinculada al lamento, el agua y relatos de pérdida; no posee una única versión panlatinoamericana.",
+      "tags": [
+        "americano",
+        "leyenda oral",
+        "agua",
+        "lamento",
+        "variantes regionales"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Las versiones son cambiantes y no deben atribuirse a un pueblo específico sin fuente local concreta."
+    },
+    {
+      "id": "LAT-CHL-CALEUCHE",
+      "name": "El Caleuche",
+      "kind": "folklore_entity",
+      "tradition": "Folclore chilote",
+      "region": "Archipiélago de Chiloé, Chile",
+      "status": "mythology_reference",
+      "summary": "Barco sobrenatural de relatos chilotes, asociado a navegantes misteriosos y apariciones nocturnas; las narraciones se transmiten en versiones locales.",
+      "tags": [
+        "americano",
+        "chilote",
+        "mar",
+        "barco espectral",
+        "folclore"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Folclore regional de Chiloé; no presentarlo como creencia uniforme de todo Chile ni como dato histórico literal."
+    },
+    {
+      "id": "GRC-ATHENA",
+      "name": "Atenea",
+      "kind": "deity",
+      "tradition": "Griega",
+      "region": "Grecia antigua y mundo mediterráneo",
+      "status": "mythology_reference",
+      "summary": "Diosa asociada con sabiduría, estrategia bélica y oficios; Atenea Polias tuvo especial importancia cívica en Atenas.",
+      "tags": [
+        "griega",
+        "sabiduría",
+        "estrategia",
+        "artes"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Consultar también los cultos locales y las fuentes antiguas; sus funciones cambian entre relatos y lugares."
+    },
+    {
+      "id": "GRC-HERMES",
+      "name": "Hermes",
+      "kind": "deity",
+      "tradition": "Griega",
+      "region": "Mundo griego antiguo",
+      "status": "mythology_reference",
+      "summary": "Dios mensajero y protector de viajeros, comerciantes y ciertos límites; también guía almas al inframundo en fuentes antiguas.",
+      "tags": [
+        "griega",
+        "mensajero",
+        "viajes",
+        "fronteras"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las funciones son múltiples y dependen del culto y la fuente."
+    },
+    {
+      "id": "GRC-HERACLES",
+      "name": "Heracles",
+      "kind": "culture_hero",
+      "tradition": "Griega",
+      "region": "Mundo mediterráneo antiguo",
+      "status": "mythology_reference",
+      "summary": "Héroe famoso por los trabajos impuestos por Euristeo; sus relatos incluyen fuerza extraordinaria, sufrimiento y apoteosis en algunas tradiciones.",
+      "tags": [
+        "griega",
+        "héroe",
+        "pruebas",
+        "fuerza"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "No confundir las distintas listas y ordenamientos de sus trabajos en fuentes antiguas."
+    },
+    {
+      "id": "GRC-MEDUSA",
+      "name": "Medusa",
+      "kind": "mythic_entity",
+      "tradition": "Griega",
+      "region": "Mundo griego antiguo",
+      "status": "mythology_reference",
+      "summary": "Una de las Gorgonas; en el relato más conocido su mirada convierte en piedra y Perseo la vence usando un reflejo. El relato de su origen cambia entre autores.",
+      "tags": [
+        "griega",
+        "gorgona",
+        "mirada",
+        "monstruo"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "La historia de Medusa difiere notablemente entre Hesíodo, Ovidio y recepciones posteriores."
+    },
+    {
+      "id": "EGY-ISIS",
+      "name": "Isis",
+      "kind": "deity",
+      "tradition": "Egipcia antigua",
+      "region": "Valle del Nilo y Mediterráneo antiguo",
+      "status": "mythology_reference",
+      "summary": "Diosa vinculada con la realeza, la maternidad y la protección; el mito de Osiris y Horus fue central en su culto, que se extendió por el Mediterráneo.",
+      "tags": [
+        "egipcia",
+        "protección",
+        "realeza",
+        "magia"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "Los cultos y atributos evolucionaron a través de largos periodos históricos."
+    },
+    {
+      "id": "EGY-ANUBIS",
+      "name": "Anubis",
+      "kind": "deity",
+      "tradition": "Egipcia antigua",
+      "region": "Valle del Nilo",
+      "status": "mythology_reference",
+      "summary": "Deidad representada con rasgos de chacal, relacionada con la preparación funeraria y la protección de los muertos.",
+      "tags": [
+        "egipcia",
+        "funerario",
+        "protección",
+        "más allá"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "La función de Anubis se transforma con la evolución del culto funerario egipcio."
+    },
+    {
+      "id": "EGY-RA",
+      "name": "Ra",
+      "kind": "deity",
+      "tradition": "Egipcia antigua",
+      "region": "Heliópolis y valle del Nilo",
+      "status": "mythology_reference",
+      "summary": "Dios solar cuya importancia fue central en la religión egipcia; se combinó con otras divinidades en distintas épocas, como Amón-Ra.",
+      "tags": [
+        "egipcia",
+        "sol",
+        "cielo",
+        "realeza"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las teologías egipcias variaron históricamente; evitar una única genealogía fija."
+    },
+    {
+      "id": "NOR-ODIN",
+      "name": "Odín",
+      "kind": "deity",
+      "tradition": "Nórdica",
+      "region": "Escandinavia y mundo germánico del norte",
+      "status": "mythology_reference",
+      "summary": "Dios asociado con soberanía, poesía, conocimiento y guerra; las fuentes medievales preservan tradiciones previas con mediaciones cristianas.",
+      "tags": [
+        "nórdica",
+        "sabiduría",
+        "poesía",
+        "guerra"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "La mayor parte de los relatos escritos conservados proviene de fuentes medievales, no de transcripciones neutrales de la era vikinga."
+    },
+    {
+      "id": "NOR-LOKI",
+      "name": "Loki",
+      "kind": "mythic_entity",
+      "tradition": "Nórdica",
+      "region": "Tradiciones escandinavas medievales",
+      "status": "mythology_reference",
+      "summary": "Figura ambigua de los relatos nórdicos, asociada con engaños, cambios de forma y conflictos con los dioses; las fuentes no ofrecen un perfil uniforme.",
+      "tags": [
+        "nórdica",
+        "cambio de forma",
+        "engaño",
+        "ambigüedad"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Evitar reducir a Loki a un equivalente simple del diablo cristiano."
+    },
+    {
+      "id": "NOR-FENRIR",
+      "name": "Fenrir",
+      "kind": "mythic_entity",
+      "tradition": "Nórdica",
+      "region": "Tradiciones escandinavas medievales",
+      "status": "mythology_reference",
+      "summary": "Lobo monstruoso destinado a romper sus ataduras y participar en los acontecimientos del Ragnarök según fuentes nórdicas medievales.",
+      "tags": [
+        "nórdica",
+        "lobo",
+        "destino",
+        "Ragnarök"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "La narración conservada depende especialmente de fuentes eddicas medievales."
+    },
+    {
+      "id": "JPN-AMATERASU",
+      "name": "Amaterasu",
+      "kind": "deity",
+      "tradition": "Japonesa / sintoísta",
+      "region": "Archipiélago japonés",
+      "status": "mythology_reference",
+      "summary": "Deidad solar central en el Kojiki y el Nihon Shoki; el episodio de su retiro en una cueva explica el retorno de la luz en una narración fundacional.",
+      "tags": [
+        "japonesa",
+        "sol",
+        "cueva",
+        "mito fundacional"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las crónicas imperiales escritas reflejan también contextos políticos y rituales de su compilación."
+    },
+    {
+      "id": "JPN-SUSANOO",
+      "name": "Susanoo",
+      "kind": "deity",
+      "tradition": "Japonesa / sintoísta",
+      "region": "Archipiélago japonés",
+      "status": "mythology_reference",
+      "summary": "Deidad de relatos del Kojiki y el Nihon Shoki, asociada con tormentas y episodios de exilio, conflicto y victoria sobre Yamata-no-Orochi.",
+      "tags": [
+        "japonesa",
+        "tormenta",
+        "serpiente",
+        "hazañas"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Los relatos y atributos varían entre las crónicas y cultos locales."
+    },
+    {
+      "id": "HIN-GANESHA",
+      "name": "Ganesha",
+      "kind": "deity",
+      "tradition": "Hinduismo",
+      "region": "Asia meridional y diásporas",
+      "status": "mythology_reference",
+      "summary": "Deidad reconocible por su cabeza de elefante, invocada en muchas tradiciones hindúes al comenzar actividades y asociada con sabiduría y remoción de obstáculos.",
+      "tags": [
+        "hindú",
+        "sabiduría",
+        "inicios",
+        "obstáculos"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "El culto y las historias de origen son diversos entre regiones, textos y tradiciones."
+    },
+    {
+      "id": "MES-ISHTAR",
+      "name": "Ishtar / Inanna",
+      "kind": "deity",
+      "tradition": "Mesopotámica",
+      "region": "Mesopotamia",
+      "status": "mythology_reference",
+      "summary": "Inanna en sumerio e Ishtar en acadio son figuras relacionadas por continuidad y sincretismo, asociadas con amor, poder y guerra en fuentes mesopotámicas.",
+      "tags": [
+        "mesopotámica",
+        "amor",
+        "guerra",
+        "poder"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "No son simplemente nombres intercambiables en todos los periodos; distinguir tradiciones sumerias y acadias."
+    },
+    {
+      "id": "CELT-CU",
+      "name": "Cú Chulainn",
+      "kind": "culture_hero",
+      "tradition": "Irlandesa / ciclo del Ulster",
+      "region": "Irlanda medieval literaria",
+      "status": "mythology_reference",
+      "summary": "Héroe del ciclo del Ulster, especialmente del Táin Bó Cúailnge; los textos preservados son manuscritos medievales con capas de composición diversas.",
+      "tags": [
+        "celta",
+        "irlandesa",
+        "héroe",
+        "ciclo del Ulster"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Distinguir la literatura medieval conservada de una reconstrucción segura de la religión precristiana."
+    },
+    {
+      "id": "GRC-AEGIS",
+      "name": "Égida",
+      "kind": "sacred_relic",
+      "tradition": "Griega",
+      "region": "Mundo griego antiguo",
+      "status": "mythology_reference",
+      "summary": "Objeto protector asociado sobre todo con Zeus y Atenea; su representación y descripción varían, incluyendo piel o escudo protector en fuentes e imágenes.",
+      "tags": [
+        "griega",
+        "protección",
+        "Atenea",
+        "Zeus",
+        "reliquia"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "La égida no tiene una única forma material constante; cualquier mecánica de barrera mágica debe marcarse como adaptación.",
+      "relations": [
+        {
+          "type": "associated_with",
+          "targetId": "GRC-ATHENA"
+        }
+      ]
+    },
+    {
+      "id": "GRC-CADUCEUS",
+      "name": "Caduceo de Hermes",
+      "kind": "sacred_relic",
+      "tradition": "Griega",
+      "region": "Mundo griego antiguo",
+      "status": "mythology_reference",
+      "summary": "Bastón de Hermes, comúnmente representado con dos serpientes y alas en iconografía posterior; no debe confundirse con la vara de Asclepio, símbolo médico distinto.",
+      "tags": [
+        "griega",
+        "Hermes",
+        "bastón",
+        "símbolo"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las propiedades de curación atribuidas al caduceo en cultura moderna no equivalen a un poder antiguo universalmente documentado.",
+      "relations": [
+        {
+          "type": "associated_with",
+          "targetId": "GRC-HERMES"
+        }
+      ]
+    },
+    {
+      "id": "GRC-ACHILLES",
+      "name": "Aquiles",
+      "kind": "culture_hero",
+      "tradition": "Griega",
+      "region": "Ciclo troyano",
+      "status": "mythology_reference",
+      "summary": "Principal guerrero aqueo de la Ilíada; el motivo de su talón vulnerable pertenece a tradiciones posteriores y no es la narración central de la Ilíada.",
+      "tags": [
+        "griega",
+        "héroe",
+        "guerra de Troya",
+        "vulnerabilidad"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Separar Homero de elaboraciones tardías como la inmersión en la Estigia."
     }
   ],
   "starterDecks": [
@@ -835,6 +1473,48 @@
       "title": "UNESCO — Intangible Cultural Heritage",
       "url": "https://ich.unesco.org/",
       "use": "Contexto sobre tradiciones vivas; buscar entradas específicas antes de atribuir una práctica a toda una cultura."
+    },
+    {
+      "id": "SRC-BRITANNICA-ATHENA",
+      "title": "Encyclopaedia Britannica — Athena",
+      "url": "https://www.britannica.com/topic/Athena-Greek-mythology",
+      "use": "Referencia secundaria para atributos y variantes de Atenea."
+    },
+    {
+      "id": "SRC-BRITANNICA-ISIS",
+      "title": "Encyclopaedia Britannica — Isis",
+      "url": "https://www.britannica.com/topic/Isis-Egyptian-goddess",
+      "use": "Referencia secundaria sobre Isis y su culto."
+    },
+    {
+      "id": "SRC-BRITANNICA-ANUBIS",
+      "title": "Encyclopaedia Britannica — Anubis",
+      "url": "https://www.britannica.com/topic/Anubis",
+      "use": "Referencia secundaria sobre la función funeraria de Anubis."
+    },
+    {
+      "id": "SRC-BRITANNICA-RA",
+      "title": "Encyclopaedia Britannica — Re",
+      "url": "https://www.britannica.com/topic/Re",
+      "use": "Referencia secundaria para la deidad solar egipcia."
+    },
+    {
+      "id": "SRC-PRIMARY-KOJIKI",
+      "title": "Kojiki / Nihon Shoki — crónicas japonesas",
+      "url": "https://www.britannica.com/topic/Kojiki",
+      "use": "Contexto bibliográfico de los relatos de Amaterasu y Susanoo; consultar traducciones críticas para citas específicas."
+    },
+    {
+      "id": "SRC-PRIMARY-EDDA",
+      "title": "Eddas — tradición literaria nórdica medieval",
+      "url": "https://www.britannica.com/topic/Edda",
+      "use": "Contexto bibliográfico para Odín, Loki y Fenrir; los textos preservados son medievales."
+    },
+    {
+      "id": "SRC-PRIMARY-ULSTER",
+      "title": "Ulster Cycle — tradición literaria irlandesa",
+      "url": "https://www.britannica.com/topic/Ulster-cycle",
+      "use": "Contexto bibliográfico para Cú Chulainn; distinguir literatura medieval de reconstrucción histórica."
     }
   ],
   "qualityGates": [
@@ -842,6 +1522,8 @@
     "Los poderes, costes, rarezas y reglas de combate inventados se etiquetan como adaptación creativa u original.",
     "Las relaciones apuntan a IDs existentes; no duplicar biografías dentro de cartas.",
     "Una entidad de tradición viva no se presenta automáticamente como subordinada del protagonista.",
-    "Antes de publicar, sustituir las fuentes generales por fuentes específicas por entrada y documentar variantes regionales."
+    "Antes de publicar, sustituir las fuentes generales por fuentes específicas por entrada y documentar variantes regionales.",
+    "Las entidades nuevas indican fuentes de contexto y advierten cuando la atribución es regional, discutida o mediada por recopilaciones modernas.",
+    "Los atributos mágicos jugables se separan de los datos mitológicos mediante creativeHook y el estado de la ficha."
   ]
 }
