@@ -418,3 +418,21 @@ select{background:#332d26;color:#e9dfd2}
 .mythic-saved-proposal{padding:.8rem 0;border-top:1px solid var(--line,#293443);display:grid;gap:.45rem}
 .mythic-saved-proposal p{overflow-wrap:anywhere}
 @media(max-width:760px){.mythic-generator-fields,.mythic-generator-modes{grid-template-columns:1fr}.mythic-generator-actions{align-items:stretch}}
+
+
+/* DanMachi typed entity browser */
+.danmachi-entity-browser{display:grid;gap:13px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.danmachi-entity-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.danmachi-entity-heading h3{margin:3px 0 7px;font-size:20px}
+.danmachi-entity-heading p:not(.eyebrow){max-width:760px;margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+.danmachi-entity-filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,.5fr) auto;align-items:end;gap:10px}
+.danmachi-entity-filters label{display:grid;gap:6px;color:var(--muted);font-size:11px}
+.danmachi-entity-filters input,.danmachi-entity-filters select{width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;background:#0f151d;color:var(--text);padding:10px}
+.danmachi-entity-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.danmachi-entity-card{min-width:0;padding:13px;border:1px solid var(--line);border-radius:11px;background:var(--panel-soft,rgba(0,0,0,.08))}
+.danmachi-entity-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.danmachi-entity-card h4{margin:0;font-size:14px;overflow-wrap:anywhere}
+.danmachi-entity-type{flex-shrink:0;padding:4px 7px;border:1px solid var(--line);border-radius:999px;color:var(--accent,var(--muted));font-size:10px}
+.danmachi-entity-meta,.danmachi-entity-tags{margin:8px 0 0;color:var(--muted);font-size:11px;line-height:1.55;overflow-wrap:anywhere}
+.danmachi-entity-empty{grid-column:1/-1;margin:0;padding:18px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:12px}
+@media(max-width:680px){.danmachi-entity-heading{flex-direction:column}.danmachi-entity-filters{grid-template-columns:1fr}.danmachi-entity-results{grid-template-columns:1fr}}
