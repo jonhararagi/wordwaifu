@@ -233,3 +233,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se creó `events/candidates/EVT-DM-GREAT-QUESTS-001.md` para separar el hecho respaldado (resultado conjunto contra Behemoth y Leviathan) de la cronología que sigue desconocida.
 - Se enlazó con `DMR-008-CLM-027` y `DMR-011-SRC-005`, el candidato de expedición contra el Dragón Negro y el candidato de caída de Zeus/Hera.
 - Se añadió al catálogo y a los índices de eventos y cronología. No se marcó como evento completo/verificado en todos sus detalles.
+
+## DANMACHI-RESEARCH-018 · Pista temporal del Dragón Negro
+- **Edición oficial identificada:** GA Bunko, volumen principal 15, ISBN 978-4-7973-9622-5, https://ga.sbcr.jp/product/9784797396225/.
+- **Pista no editorial:** una búsqueda textual encontró en el volumen 15 una intervención de Alise que menciona cinco años desde el fracaso de Zeus/Hera contra el Dragón Negro. La copia consultada no se registra como edición autorizada ni como localizador final.
+- **Cruce temporal provisional:** la cronología oficial sitúa *Astrea Record* aproximadamente siete años antes de la llegada de Bell (https://danmachi.com/chronology/). Si el pasaje del volumen 15 comparte ese marco, la derrota sería aproximadamente doce años antes de Bell. No es todavía un hecho canónico registrado: depende de confirmar la escena y su ancla.
+- **Límite:** la ficha editorial identifica la edición, no demuestra el contenido del pasaje. Sin año absoluto, sin fecha exacta y sin fusionar la derrota con la caída/expulsión de las Familias.
+- **Paquete de trabajo:** `research/inbox/BATCH-DM-009-black-dragon-relative-chronology.md`.
