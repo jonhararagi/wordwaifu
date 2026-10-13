@@ -3203,9 +3203,21 @@
     while (existingIds.has(id)) id = baseId + "-" + suffix++;
     const character = {
       id, name: proposal.title, age: null, species: "Por definir", role: "Personaje original · portador / invocador",
-      personality: [], description: [proposal.concept, proposal.ability, proposal.activation ? "Activación: " + proposal.activation : "",
+      personality: [], description: [proposal.concept, proposal.ability,
+        proposal.manifestationName ? "Manifestación: " + proposal.manifestationName + (proposal.manifestationStage ? " · " + proposal.manifestationStage : "") : "",
+        proposal.weapon ? "Arma característica / arma natural: " + proposal.weapon : "",
+        proposal.outfit ? "Vestimenta / símbolo del mito: " + proposal.outfit : "",
+        proposal.totalityAttack ? "Ataque que resume el mito: " + proposal.totalityAttack : "",
+        proposal.activation ? "Activación: " + proposal.activation : "",
         proposal.cost ? "Coste: " + proposal.cost : "", proposal.risk ? "Riesgos: " + proposal.risk : "",
         proposal.progression ? "Evolución: " + proposal.progression : ""].filter(Boolean).join("\\n\\n"),
+      mythicManifestation: {
+        name: proposal.manifestationName || "",
+        stage: proposal.manifestationStage || "",
+        weapon: proposal.weapon || "",
+        outfit: proposal.outfit || "",
+        totalityAttack: proposal.totalityAttack || ""
+      },
       motivation: "Integrar la inspiración mitológica como una adaptación propia, sin asumir que el personaje sea la figura original.",
       flaw: proposal.weakness || "Debilidad por definir.", relationships: [], locationHistory: [], status: "draft",
       mythicEntityIds: Array.isArray(proposal.entityIds) ? proposal.entityIds.slice() : [],
