@@ -32,3 +32,11 @@ Si el pasaje del volumen 15 corresponde al marco temporal de *Astrea Record*, la
 2. Verificar el pasaje en una edición legítima o vista previa oficial y capturar capítulo/sección/página solo si es visible.
 3. Si se confirma el intervalo de cinco años, registrar el vínculo temporal como relativo y derivado, con la operación explícita «aprox. 7 + 5», sin inventar año absoluto.
 4. Mantener separados los eventos de derrota del Dragón Negro y pérdida de posición de ambas Familias hasta que una fuente describa su relación precisa.
+
+## Comprobación de la vista previa oficial (2026-10-13)
+
+La ficha editorial enlaza una vista previa pública oficial de BinB: https://r.binb.jp/epm/e1_111424_25042019141419/ (enlace desde https://ga.sbcr.jp/product/9784797396225/).
+
+Se probó la búsqueda interna del lector con `Alise`, `アリーゼ`, `五年`, `五年前`, `ゼウス`, `ヘラ` y `黒竜`; el lector devolvió cero coincidencias para todos los términos. Por tanto, **el pasaje de los cinco años no queda verificado por la vista previa pública disponible** y no hay capítulo ni página que pueda registrarse como localizador. Esto no demuestra que el pasaje no esté en el volumen completo: solo indica que no aparece en el material de vista previa accesible y buscable.
+
+La inferencia «aprox. 7 + 5 = aprox. 12 años antes de Bell» sigue siendo condicional y no debe ascender a dato canónico. Mantener el estado preliminar hasta conseguir un localizador primario verificable para el pasaje.
