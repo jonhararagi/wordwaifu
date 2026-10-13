@@ -57,3 +57,34 @@
 ## Veredicto
 
 **PARTIAL / SECONDARY-LEAD-ONLY.** Se amplió el mapa de pistas multilingüe y se identificó una posible confusión de cronologías que debe evitarse. No se aprobaron claims canónicos nuevos a partir de estas wikis.
+
+
+## Segunda pasada de búsqueda (mismo día)
+
+7. **Wiki española — Meteria**  
+   https://danmachi.fandom.com/es/wiki/Meteria  
+   El extracto relaciona a Meteria con Hera Familia y atribuye a una nota del autor en note.com información sobre su personalidad. La wiki sostiene que dio a luz a Bell después de la derrota de Zeus/Hera y que falleció por su enfermedad. Mantener la pista biográfica, pero verificar cada afirmación en la nota del autor o el texto narrativo antes de elevarla a claim aprobado.
+
+8. **Wiki española — Emperatriz (女帝)**  
+   https://danmachi.fandom.com/es/wiki/Emperatriz  
+   El extracto identifica a la Emperatriz como capitana de Hera Familia, nivel 9, y cita publicaciones de Fujino Omori y *Astrea Record* volumen 3, capítulo 8 para distintas afirmaciones. Esta es una pista especialmente útil porque ofrece referencias rastreables; aún falta abrir y cotejar cada referencia y comprobar qué afirma exactamente.
+
+9. **Wiki española — Bell Cranel**  
+   https://danmachi.fandom.com/es/wiki/Bell_Cranel  
+   El extracto resume la relación de Bell con un miembro de Zeus Familia y Meteria, y el papel de Zeus como cuidador. Es una pista para verificar filiación y cronología en fuentes narrativas, no una fuente primaria.
+
+10. **Wiki española — Familia Chronicle: Episode Freya / sinopsis**  
+    https://danmachi.fandom.com/es/wiki/Familia_Chronicle_Episode_Freya/Sinopsis  
+    El extracto incluye una escena retrospectiva: Ottar recuerda enfrentamientos con Zeus/Hera y describe a un aventurero nivel 8 de Zeus y una aventurera nivel 9 de Hera. Este es un posible localizador narrativo indirecto para los capitanes, pero el resumen de wiki no sustituye el texto de *Episode Freya* ni prueba por sí solo la fecha de la expedición.
+
+11. **Referencia oficial editorial — anuncio de publicaciones de GA Bunko**  
+    https://ga.sbcr.jp/bunko_blog/orio/20260522/  
+    El anuncio oficial visible anuncia *DanMachi* volumen 22 para diciembre de 2026 y describe el Dragón Negro como pieza central de la fase final. Es contexto editorial actual, no prueba de acontecimientos históricos pasados.
+
+### Nuevas tareas concretas derivadas
+
+- [ ] Abrir la nota original de Fujino Omori citada por la página de Meteria y registrar solo sus afirmaciones explícitas.
+- [ ] Comprobar los tuits del autor citados en la página de Emperatriz, preservando el contexto y la fecha.
+- [ ] Buscar en *Familia Chronicle: Episode Freya* la escena de los capitanes; registrar volumen/capítulo/página según la edición que se pueda consultar legítimamente.
+- [ ] Separar el dato «capitana de Hera nivel 9» del nombre civil: el extracto solo muestra el alias «Emperatriz» y no autoriza a inventarle un nombre.
+- [ ] Actualizar el mapa de personajes/relaciones solo después de registrar fuente y continuidad; no usar las wikis para llenar campos de historia AU.
