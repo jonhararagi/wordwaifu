@@ -5,7 +5,7 @@ const path = require("node:path");
 const file = path.join(__dirname, "..", "data", "catalog", "mythic-arsenal.json");
 const catalog = JSON.parse(fs.readFileSync(file, "utf8"));
 const ui = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
-const module = fs.readFileSync(path.join(__dirname, "..", "src", "mythic-catalog.js"), "utf8");
+const catalogModule = fs.readFileSync(path.join(__dirname, "..", "src", "mythic-catalog.js"), "utf8");
 const app = fs.readFileSync(path.join(__dirname, "..", "src", "app.js"), "utf8");
 assert.equal(catalog.schemaVersion, 1);
 assert.ok(Array.isArray(catalog.entities) && catalog.entities.length >= 60, "catalog must contain at least 60 meaningful records");
@@ -46,8 +46,8 @@ for (const entity of catalog.entities) {
   }
 }
 assert.ok(ui.includes('id="mythic-sort"'), "catalog must expose sorting");
-assert.ok(module.includes("data-catalog-back"), "catalog must offer back navigation");
-assert.ok(module.includes("source.use"), "source scope must be visible in the detail");
+assert.ok(catalogModule.includes("data-catalog-back"), "catalog must offer back navigation");
+assert.ok(catalogModule.includes("source.use"), "source scope must be visible in the detail");
 assert.ok(app.includes("wordwaifu:mythic-relation-save"), "project-owned relations must be saved");
 assert.ok(app.includes("wordwaifu:mythic-proposal-save"), "proposals must use project persistence");
 assert.ok(app.includes("mythicEntityIds"), "created characters must retain mythic reference IDs");
