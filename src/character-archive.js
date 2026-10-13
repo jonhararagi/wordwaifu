@@ -259,10 +259,7 @@ MOM["CHAR-RYUU-LION"]["CONT-ANIME"].push(
 {id:"ryu-lyra-support",title:"Una compañera de confianza estratégica",period:"Perfil oficial de DanMachi IV · Astrea Familia",summary:"El perfil oficial destaca la perspicacia de Lyra en la red histórica de Ryu.",refs:["DMR-007-CLM-003"],people:["CHAR-RYUU-LION","CHAR-LYRA"]}
 );
 
-MOM["CHAR-RYUU-LION"]["CONT-MAIN-LN"].push(
-{id:"ryu-city-forge",title:"El viaje hacia la Ciudad Forjadora de Espadas",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",summary:"Ryu deja Orario sola y viaja hacia el este para visitar a Astrea, buscar fuerza y seguir adelante después de cinco años de determinación.",refs:["DMR-007-CLM-009","DMR-007-CLM-013"],people:["CHAR-RYUU-LION","CHAR-ASTREA"]},
-{id:"ryu-astrea-orders-stay",title:"Astrea le ordena quedarse y responder",period:"Familia Chronicle: Episode Ryuu 2 · al llegar a la ciudad",summary:"Ryu choca con las nuevas seguidoras de Astrea; la diosa no le permite regresar de inmediato y le ordena quedarse en la Ciudad Forjadora de Espadas, pidiéndole que dé su respuesta.",refs:["DMR-007-CLM-014"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]}
-);
+
 
 MOM["CHAR-RYUU-LION"]["CONT-AR"].push(
 {id:"ryu-loss-legacy",title:"La primera Familia Astrea y sus pérdidas",period:"Era Oscura · fuente secundaria",summary:"Una referencia comunitaria conecta el fin de la primera Familia con el Juggernaut y el trauma de Ryu. Es un resumen con spoilers, pendiente de cotejo por volumen.",refs:["DMR-007-CLM-006"],people:["CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-KAGUYA","CHAR-LYRA"]},
@@ -273,7 +270,8 @@ MOM["CHAR-RYUU-LION"]["CONT-ANIME"].push(
 {id:"ryu-family-justice",title:"La misión y caída de Astrea Familia",period:"DanMachi IV · episodio 20",summary:"La sinopsis oficial presenta a la primera Familia como protectora de los débiles y combatiente contra el mal; su nombre desaparece en la oscuridad del Dungeon, dejando a Ryu como única superviviente conocida. La causa detallada del desastre requiere cotejar los episodios y el texto de Astrea Record.",refs:["DMR-007-CLM-026"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-ALISE-LOVELACE","CHAR-KAGUYA","CHAR-LYRA"]}
 );
 MOM["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
-{id:"ryu-visit-astrea",title:"Viajar para reencontrarse con Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",summary:"Ryu parte sola para visitar a la diosa, buscar fuerza y avanzar después de años de determinación; la sinopsis no reemplaza el relato del volumen.",refs:["DMR-007-CLM-009"],people:["CHAR-RYUU-LION","CHAR-ASTREA"]}
+{id:"ryu-visit-astrea",title:"Viajar para reencontrarse con Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",summary:"Ryu parte sola desde Orario hacia la Ciudad Forjadora de Espadas, al este, para visitar a Astrea, buscar fuerza y seguir adelante tras cinco años de determinación.",refs:["DMR-007-CLM-009","DMR-007-CLM-013"],people:["CHAR-RYUU-LION","CHAR-ASTREA"]},
+{id:"ryu-astrea-orders-stay",title:"Astrea le ordena quedarse y responder",period:"Familia Chronicle: Episode Ryuu 2 · al llegar a la ciudad",summary:"Ryu choca con las nuevas seguidoras de Astrea. La diosa no le permite regresar de inmediato y le ordena permanecer en la Ciudad Forjadora de Espadas, pidiéndole que dé su respuesta.",refs:["DMR-007-CLM-014"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]}
 ];
 MOM["CHAR-ASTREA"]["CONT-ANIME"]=[
 {id:"astrea-outside-orario",title:"Astrea fuera de Orario",period:"Perfil de adaptación DanMachi V",summary:"El perfil oficial posterior la sitúa fuera de Orario con nuevos seguidores, un estado que se mantiene separado de la Familia histórica.",refs:["DMR-007-CLM-008"],people:["CHAR-ASTREA"]}
