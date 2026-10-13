@@ -155,6 +155,19 @@ async function run() {
     assert.equal(new Set(generatedNames).size, generatedNames.length, "generator must not duplicate names already in the catalog or earlier proposals");
     assert.ok(generatedCatalog.includes("Evolución:") && generatedCatalog.includes("Consecuencias:"), "generated ideas must include progression and narrative consequences");
     process.stdout.write("PASS power generator: appends varied powers, preserves manual entries, and includes evolution and consequences.\\n");
+    // Synonym/antonym helper finds Spanish and English entries and replaces selected manuscript text without losing the draft.
+    const premiseField = page.locator("#story-meta-form [name='storyPremise']");
+    await premiseField.fill("El bosque era oscuro.");
+    await premiseField.evaluate((node) => node.setSelectionRange(10, 13));
+    await page.locator("#story-word-query").fill("era");
+    await page.locator("#story-word-search-button").click();
+    await page.getByRole("button", { name: "resultaba", exact: true }).click();
+    assert.equal(await premiseField.inputValue(), "El bosque resultaba oscuro.", "clicking a synonym must replace the selected word in the active text field");
+    await page.locator("#story-word-query").fill("grow");
+    await page.locator("#story-word-search-button").click();
+    assert.ok(await page.locator("#story-word-results").getByRole("button", { name: "prosperar", exact: true }).count(), "word helper must support English input with Spanish alternatives");
+    assert.ok(await page.locator("#story-word-results").getByRole("button", { name: "decaer", exact: true }).count(), "word helper must display antonyms/contrasts");
+    process.stdout.write("PASS word alternatives: searches synonyms/antonyms and replaces selected text.\\n");
     await page.locator("#story-add-chapter-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1, { timeout: 5000 });
     assert.equal(await page.locator(".story-chapter-form").count(), 1, "The editor must add a chapter to a story.");
