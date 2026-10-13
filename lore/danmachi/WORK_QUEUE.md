@@ -189,3 +189,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Estado: 11 afirmaciones indexadas; resúmenes editoriales, no cotejo integral.
 - Paquete: `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md`.
 - Próximo trabajo: secuencia de eventos de Astrea Record, relaciones por integrante de Astrea Familia, sincronización de Sword Oratoria y extracción de escenas por Familia Chronicle.
+
+
+## DANMACHI-RESEARCH-010 · Familia Hestia: expediente de organización con fuentes
+- Estado: PARTIAL; ampliación incorporada en `familias/hestia-familia.md`.
+- [x] Registrar dos páginas oficiales de adaptación con IDs de fuente y localizadores descriptivos.
+- [x] Separar estado inicial de Bell y snapshot de roster de DanMachi IV.
+- [x] Añadir relaciones y utilidad narrativa sin convertirlas en relaciones universales o atemporales.
+- [x] Documentar unknowns sobre sede, economía completa, cambios de miembros y localizadores de novela.
+- [ ] Ejecutar/confirmar CI del commit final de la tanda.
+- [ ] Cotejar la misma estructura contra el texto de novela ligera, por volumen/capítulo, sin elevar automáticamente los perfiles de anime a canon de novela.
+- [ ] Repetir el trabajo para Familia Loki y Familia Astrea con relaciones por miembro y periodos.
