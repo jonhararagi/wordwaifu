@@ -1242,7 +1242,7 @@
     { words: ["perdió", "perdio", "perder"], synonyms: ["fue derrotado", "cedió", "malogró", "extravío", "dejó escapar"], antonyms: ["ganó", "venció", "recuperó", "conservó"], note: "Perder un objeto, un combate o una oportunidad requiere alternativas distintas." }
   ];
   function normalizeWord(value) {
-    return String(value || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("es").trim();
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").trim();
   }
 
   const powerIdeaLibrary = [
