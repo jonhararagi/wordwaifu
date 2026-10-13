@@ -149,7 +149,7 @@ async function run() {
       return current.length > previous.length && (document.querySelector("#story-power-generator-status")?.textContent || "").includes("Idea añadida:");
     }, firstGeneratedCatalog, { timeout: 10000 });
     const generatedCatalog = await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue();
-    const generatedNames = generatedCatalog.split("\\n").filter(line => line.startsWith("Nombre: ")).map(line => line.slice("Nombre: ".length));
+    const generatedNames = generatedCatalog.split("\n").filter(line => line.startsWith("Nombre: ")).map(line => line.slice("Nombre: ".length));
     assert.ok(generatedCatalog.includes("Geas de mandato"), "generator must preserve the user's existing power");
     assert.ok(generatedNames.length >= 3, "both generated proposals should be appended alongside the user's existing power");
     assert.equal(new Set(generatedNames).size, generatedNames.length, "generator must not duplicate names already in the catalog or earlier proposals");
@@ -319,7 +319,7 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-MAIN-LN");
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-CECIL-BLACKLIZA"]').count() > 0,
       "Astrea's later-family roster should expose the new captain as a provisional, source-tagged node.");
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-CECIL-BLACKLIZA"]').click();
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-CECIL-BLACKLIZA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Cecil Blackliza");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
