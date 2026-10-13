@@ -467,7 +467,19 @@
           "type": "associated_with",
           "targetId": "LAT-MEX-HUITZILOPOCHTLI"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma histórica",
+        "associatedFigureIds": [],
+        "documentedCapabilities": [
+          "Arma de madera con filos de obsidiana descrita en fuentes históricas sobre Mesoamérica."
+        ],
+        "useConditions": "Uso físico como arma; las condiciones mágicas son ficción.",
+        "costsAndLimits": "El filo y el cuerpo del arma pueden dañarse; no posee propiedades sobrenaturales demostradas.",
+        "risks": "Lesiones graves; el registro no propone mecánicas de combate real.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Si una historia le atribuye energía espiritual o evolución, etiquetarlo como adaptación original."
+      }
     },
     {
       "id": "WEAPON-EXCALIBUR",
@@ -489,7 +501,21 @@
           "type": "shares_archetype",
           "targetId": "WEAPON-GUNGNIR"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma legendaria",
+        "associatedFigureIds": [
+          "ART-KING-ARTHUR"
+        ],
+        "documentedCapabilities": [
+          "Arma asociada al rey Arturo en la materia artúrica; sus propiedades varían según las versiones."
+        ],
+        "useConditions": "Depende del relato o adaptación elegida.",
+        "costsAndLimits": "No existe un conjunto único de propiedades compartido por todas las versiones.",
+        "risks": "Confundir versiones medievales y reinterpretaciones modernas.",
+        "evolutionStages": [],
+        "adaptationMechanics": "La capacidad de elegir portador, sellos o poderes elementales es una regla ficticia que debe declararse."
+      }
     },
     {
       "id": "WEAPON-GUNGNIR",
@@ -512,7 +538,21 @@
           "type": "shares_archetype",
           "targetId": "WEAPON-EXCALIBUR"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma legendaria",
+        "associatedFigureIds": [
+          "NOR-ODIN"
+        ],
+        "documentedCapabilities": [
+          "Lanza asociada con Odín en la tradición nórdica."
+        ],
+        "useConditions": "Condiciones de uso dependen de la fuente y la adaptación.",
+        "costsAndLimits": "No hay una mecánica universalmente documentada de retorno automático o acierto infalible.",
+        "risks": "Las habilidades de precisión absoluta son adaptación.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Los efectos sobrenaturales concretos deben marcarse como ficción."
+      }
     },
     {
       "id": "WEAPON-MJOLNIR",
@@ -534,7 +574,21 @@
           "type": "can_pair_with",
           "targetId": "LAT-MEX-HUITZILOPOCHTLI"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma legendaria",
+        "associatedFigureIds": [
+          "NOR-THOR"
+        ],
+        "documentedCapabilities": [
+          "Martillo asociado con Thor; los relatos lo vinculan con el trueno y con enfrentamientos contra gigantes."
+        ],
+        "useConditions": "Varía entre fuentes y adaptaciones.",
+        "costsAndLimits": "Las condiciones modernas de dignidad del portador no son una regla uniforme de todas las fuentes nórdicas.",
+        "risks": "No presentar las reglas de Marvel u otras adaptaciones como tradición antigua.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Retorno a la mano, selección del portador y ataques elementales pueden definirse como mecánicas originales."
+      }
     },
     {
       "id": "WEAPON-KUSANAGI",
@@ -556,7 +610,22 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "espada sagrada / regalia",
+        "associatedFigureIds": [
+          "JPN-SUSANOO",
+          "JPN-AMATERASU"
+        ],
+        "documentedCapabilities": [
+          "Espada regalia japonesa vinculada en el mito con Susanoo y en tradiciones posteriores con la regalia imperial."
+        ],
+        "useConditions": "Su papel depende de la crónica y de la tradición ritual.",
+        "costsAndLimits": "No se le atribuye aquí un conjunto de poderes de combate verificables.",
+        "risks": "No confundir la narración mítica con afirmaciones arqueológicas sobre el objeto físico conservado.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Cortes dimensionales o control del viento son añadidos ficticios."
+      }
     },
     {
       "id": "WEAPON-VAJRA",
@@ -578,7 +647,21 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "objeto ritual / arma divina",
+        "associatedFigureIds": [
+          "HIN-INDRA"
+        ],
+        "documentedCapabilities": [
+          "Símbolo ritual budista e hinduista; en relatos védicos se vincula como arma con Indra."
+        ],
+        "useConditions": "El uso ritual varía entre tradiciones religiosas.",
+        "costsAndLimits": "No equiparar significado ritual contemporáneo con un poder de combate literal.",
+        "risks": "Evitar descontextualizar un objeto religioso como mero accesorio bélico.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Descargas de rayo o barreras son mecánicas de ficción."
+      }
     },
     {
       "id": "WEAPON-TRISHULA",
@@ -600,7 +683,21 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma / atributo divino",
+        "associatedFigureIds": [
+          "HIN-SHIVA"
+        ],
+        "documentedCapabilities": [
+          "Tridente asociado iconográficamente con Shiva."
+        ],
+        "useConditions": "Asociación y uso simbólico dependen de la tradición y representación.",
+        "costsAndLimits": "No hay una lista única de habilidades sobrenaturales separable de la interpretación religiosa.",
+        "risks": "No confundir símbolo devocional con evidencia de capacidades físicas sobrenaturales.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Manipulación temporal o de tres planos es adaptación si se usa en la historia."
+      }
     },
     {
       "id": "RELIC-ARK-ALLIANCE",
@@ -622,7 +719,19 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "reliquia textual / objeto sagrado",
+        "associatedFigureIds": [],
+        "documentedCapabilities": [
+          "Objeto sagrado descrito en textos bíblicos hebreos como contenedor de las tablas del pacto; su interpretación pertenece a tradiciones religiosas."
+        ],
+        "useConditions": "No se propone un uso de invocación como hecho histórico.",
+        "costsAndLimits": "No se afirma una localización actual ni una capacidad sobrenatural verificable.",
+        "risks": "Distinguir tradición textual, creencia religiosa e hipótesis arqueológica.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Sellos, entidades vinculadas o efectos de combate son invención narrativa."
+      }
     },
     {
       "id": "SYS-CARD-PACT",
@@ -1337,7 +1446,21 @@
           "type": "associated_with",
           "targetId": "GRC-ATHENA"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "objeto protector / atributo divino",
+        "associatedFigureIds": [
+          "GRC-ATHENA"
+        ],
+        "documentedCapabilities": [
+          "Objeto protector asociado con Zeus y Atenea en fuentes e imágenes griegas."
+        ],
+        "useConditions": "Descripción y forma cambian según fuente.",
+        "costsAndLimits": "No existe una especificación técnica única.",
+        "risks": "La barrera impenetrable es una adaptación concreta, no un hecho histórico.",
+        "evolutionStages": [],
+        "adaptationMechanics": "La duración y el coste de una barrera se definen por historia."
+      }
     },
     {
       "id": "GRC-CADUCEUS",
@@ -1362,7 +1485,21 @@
           "type": "associated_with",
           "targetId": "GRC-HERMES"
         }
-      ]
+      ],
+      "artifactProfile": {
+        "objectCategory": "bastón simbólico",
+        "associatedFigureIds": [
+          "GRC-HERMES"
+        ],
+        "documentedCapabilities": [
+          "Bastón asociado con Hermes; el símbolo médico de Asclepio es distinto."
+        ],
+        "useConditions": "Su papel es simbólico y mitológico según fuente.",
+        "costsAndLimits": "No atribuir automáticamente capacidades curativas.",
+        "risks": "Confundirlo con el bastón de Asclepio perpetúa una asociación moderna incorrecta.",
+        "evolutionStages": [],
+        "adaptationMechanics": "La curación mágica debe marcarse como adaptación original."
+      }
     },
     {
       "id": "GRC-ACHILLES",
@@ -1382,6 +1519,172 @@
         "SRC-BRITANNICA-MYTH"
       ],
       "sourceNotes": "Separar Homero de elaboraciones tardías como la inmersión en la Estigia."
+    },
+    {
+      "id": "NOR-THOR",
+      "name": "Thor",
+      "kind": "deity",
+      "tradition": "Nórdica",
+      "region": "Escandinavia y mundo germánico del norte",
+      "status": "mythology_reference",
+      "summary": "Dios del trueno y protector en tradiciones nórdicas; los relatos medievales lo vinculan con Mjölnir y sus viajes contra gigantes.",
+      "tags": [
+        "nórdica",
+        "trueno",
+        "protección",
+        "fuerza"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-THOR",
+        "SRC-PRIMARY-EDDA"
+      ],
+      "sourceNotes": "Las fuentes eddicas son medievales y sus relatos no constituyen una descripción uniforme de todas las prácticas precristianas.",
+      "relations": [
+        {
+          "type": "wields_in_myth",
+          "targetId": "WEAPON-MJOLNIR"
+        }
+      ]
+    },
+    {
+      "id": "HIN-SHIVA",
+      "name": "Shiva",
+      "kind": "deity",
+      "tradition": "Hinduismo",
+      "region": "Asia meridional y diásporas",
+      "status": "mythology_reference",
+      "summary": "Deidad mayor de tradiciones hinduistas, con formas y funciones diversas; suele representarse con el tridente trishula.",
+      "tags": [
+        "hindú",
+        "transformación",
+        "yoga",
+        "tridente"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-SHIVA"
+      ],
+      "sourceNotes": "Shiva no tiene un perfil único: las teologías, devociones y representaciones cambian entre tradiciones.",
+      "relations": [
+        {
+          "type": "associated_weapon",
+          "targetId": "WEAPON-TRISHULA"
+        }
+      ]
+    },
+    {
+      "id": "HIN-INDRA",
+      "name": "Indra",
+      "kind": "deity",
+      "tradition": "Védica / hinduismo",
+      "region": "Asia meridional",
+      "status": "mythology_reference",
+      "summary": "Deidad prominente en himnos védicos, asociada con tormenta y victoria; su atributo vajra se vincula con el rayo en relatos posteriores.",
+      "tags": [
+        "védica",
+        "trueno",
+        "rayo",
+        "guerra"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-INDRA"
+      ],
+      "sourceNotes": "La posición y atributos de Indra evolucionan entre los textos védicos y tradiciones hinduistas posteriores.",
+      "relations": [
+        {
+          "type": "associated_weapon",
+          "targetId": "WEAPON-VAJRA"
+        }
+      ]
+    },
+    {
+      "id": "ART-KING-ARTHUR",
+      "name": "Rey Arturo",
+      "kind": "culture_hero",
+      "tradition": "Materia artúrica",
+      "region": "Britania legendaria y literatura medieval europea",
+      "status": "mythology_reference",
+      "summary": "Rey legendario de la materia artúrica, cuya imagen se desarrolló en textos medievales; la relación exacta entre tradición, literatura e historia es debatida.",
+      "tags": [
+        "artúrica",
+        "rey legendario",
+        "caballería",
+        "Excalibur"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-ARTHUR"
+      ],
+      "sourceNotes": "No existe consenso que permita tratar las biografías literarias de Arturo como una historia comprobada.",
+      "relations": [
+        {
+          "type": "associated_weapon",
+          "targetId": "WEAPON-EXCALIBUR"
+        }
+      ]
+    },
+    {
+      "id": "ARMOR-ACHILLES",
+      "name": "Armadura de Aquiles",
+      "kind": "mythic_armor",
+      "tradition": "Griega",
+      "region": "Ciclo troyano / Ilíada",
+      "status": "mythology_reference",
+      "summary": "Armadura elaborada por Hefesto para Aquiles en el canto XVIII de la Ilíada; el escudo recibe una descripción extensa que representa escenas del mundo.",
+      "tags": [
+        "griega",
+        "armadura",
+        "Aquiles",
+        "Ilíada",
+        "escudo"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "El objeto pertenece al poema épico; su simbolismo literario no demuestra que una armadura histórica tuviera esas propiedades.",
+      "relations": [
+        {
+          "type": "worn_by_in_myth",
+          "targetId": "GRC-ACHILLES"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "armadura de epopeya",
+        "associatedFigureIds": [
+          "GRC-ACHILLES"
+        ],
+        "documentedCapabilities": [
+          "Armadura y escudo elaborados por Hefesto para Aquiles en la Ilíada."
+        ],
+        "useConditions": "Objeto narrativo del poema épico.",
+        "costsAndLimits": "Las propiedades son literarias y no una especificación de equipo histórico.",
+        "risks": "No atribuir invulnerabilidad absoluta al conjunto sin aclarar la versión.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Protección absoluta o poderes de escudo deben ser reglas ficticias."
+      }
+    },
+    {
+      "id": "JPN-OROCHI",
+      "name": "Yamata-no-Orochi",
+      "kind": "folklore_entity",
+      "tradition": "Japonesa / sintoísta",
+      "region": "Izumo, Japón (en el relato)",
+      "status": "mythology_reference",
+      "summary": "Serpiente monstruosa de ocho cabezas y ocho colas derrotada por Susanoo en el relato conservado en el Kojiki y el Nihon Shoki.",
+      "tags": [
+        "japonesa",
+        "serpiente",
+        "monstruo",
+        "Susanoo"
+      ],
+      "sourceIds": [
+        "SRC-PRIMARY-KOJIKI"
+      ],
+      "sourceNotes": "La forma exacta y el significado del relato varían según la fuente y las interpretaciones posteriores.",
+      "relations": [
+        {
+          "type": "defeated_by_in_myth",
+          "targetId": "JPN-SUSANOO"
+        }
+      ]
     }
   ],
   "starterDecks": [
@@ -1515,6 +1818,30 @@
       "title": "Ulster Cycle — tradición literaria irlandesa",
       "url": "https://www.britannica.com/topic/Ulster-cycle",
       "use": "Contexto bibliográfico para Cú Chulainn; distinguir literatura medieval de reconstrucción histórica."
+    },
+    {
+      "id": "SRC-BRITANNICA-THOR",
+      "title": "Encyclopaedia Britannica — Thor",
+      "url": "https://www.britannica.com/topic/Thor-Germanic-deity",
+      "use": "Referencia secundaria sobre Thor y sus atributos."
+    },
+    {
+      "id": "SRC-BRITANNICA-SHIVA",
+      "title": "Encyclopaedia Britannica — Shiva",
+      "url": "https://www.britannica.com/topic/Shiva",
+      "use": "Referencia secundaria sobre las tradiciones de Shiva."
+    },
+    {
+      "id": "SRC-BRITANNICA-INDRA",
+      "title": "Encyclopaedia Britannica — Indra",
+      "url": "https://www.britannica.com/topic/Indra",
+      "use": "Referencia secundaria sobre Indra en las tradiciones védicas e hinduistas."
+    },
+    {
+      "id": "SRC-BRITANNICA-ARTHUR",
+      "title": "Encyclopaedia Britannica — King Arthur",
+      "url": "https://www.britannica.com/topic/King-Arthur",
+      "use": "Referencia secundaria sobre el desarrollo literario de la materia artúrica."
     }
   ],
   "qualityGates": [
