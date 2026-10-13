@@ -10,6 +10,10 @@ WordWaifu reúne en un único objetivo herramientas que normalmente quedan separ
 
 La especificación consolidada de producto, la separación entre WordWaifu y BotImagen, el atlas multitemporal, el índice maestro, la generación narrativa y el protocolo Cerebro/Obrero están en [docs/MASTER_VISION.md](docs/MASTER_VISION.md). Ese documento distingue las decisiones de producto de las funciones que aún están pendientes de implementación.
 
+## Escritura y vocabulario
+
+El editor incluye un [buscador local de sinónimos y antónimos](docs/WORD_CHOICES.md) para explorar alternativas y reemplazar texto seleccionado sin enviar el manuscrito a una API. El vocabulario disponible es inicial y contextual, no un tesauro exhaustivo.
+
 ## La visión
 
 Imaginá un atlas interactivo de un universo ficticio. Abrís el mapa del mundo, seleccionás una ciudad y encontrás sus distritos, edificios, facciones, acontecimientos y personajes. Cada personaje tiene una ficha completa y una ubicación por fecha o capítulo. Desde ahí podés seguir sus viajes, relaciones, conflictos y apariciones en la historia.
