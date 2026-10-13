@@ -394,6 +394,58 @@ El volumen 21 se incorpora como volumen principal publicado al corte del 12 de o
 - `confidence_note`: Afirmación breve para recuperar el mapa del volumen. No demuestra el orden exacto de escenas, estadísticas, diálogos o motivaciones privadas; verificar el texto primario y su localizador antes de aprobar un detalle.
 
 
+### DMR-008-CLM-022 · La expedición de Loki Familia fracasa y Ais queda atrapada en el piso 60
+- `claim_id`: DMR-008-CLM-022
+- `claim`: La sinopsis editorial del volumen 21 presenta la expedición de Loki Familia como un fracaso y afirma que Ais y otros integrantes quedan atrapados en el piso 60 del Dungeon.
+- `character_ids`: [DM-CHAR-AIS, CHAR-FINN-DEIMNE]
+- `aspect`: expedición, peligro, estado de personajes, continuidad
+- `era_or_interval`: Historia principal, volumen 21; orden de escenas y estados individuales pendientes de cotejo
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-002
+- `source_title`: GA Bunko / SB Creative · DanMachi, volumen 21
+- `source_type`: official_publisher_page
+- `source_locator`: Sinopsis editorial oficial; no hay capítulo ni página cotejados
+- `source_url`: https://ga.sbcr.jp/product/9784815632946/
+- `evidence_type`: provisional_original_summary
+- `verification_status`: provisional_summary
+- `spoiler_level`: major
+- `confidence_note`: La ficha editorial respalda el resumen de la situación general, no una lista completa de supervivientes, su ubicación exacta en cada escena ni el orden de acontecimientos del texto íntegro.
+
+### DMR-008-CLM-023 · Orario prepara una movilización general para el rescate
+- `claim_id`: DMR-008-CLM-023
+- `claim`: La sinopsis editorial describe una respuesta de Orario que pretende movilizar a toda la ciudad para resistir la crisis y alcanzar a quienes quedaron atrapados en las profundidades.
+- `character_ids`: [DM-CHAR-BELL, DM-CHAR-HESTIA, CHAR-FINN-DEIMNE]
+- `aspect`: rescate, movilización, respuesta de Orario, continuidad
+- `era_or_interval`: Historia principal, volumen 21; detalles operativos requieren localizadores internos
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-002
+- `source_title`: GA Bunko / SB Creative · DanMachi, volumen 21
+- `source_type`: official_publisher_page
+- `source_locator`: Sinopsis editorial oficial; no hay capítulo ni página cotejados
+- `source_url`: https://ga.sbcr.jp/product/9784815632946/
+- `evidence_type`: provisional_original_summary
+- `verification_status`: provisional_summary
+- `spoiler_level`: major
+- `confidence_note`: «Toda Orario» refleja la formulación promocional de la sinopsis; no identifica por sí sola cada participante, orden de mando o despliegue.
+
+### DMR-008-CLM-024 · Bell regresa del extremo norte y recibe la noticia de la expedición fallida
+- `claim_id`: DMR-008-CLM-024
+- `claim`: Según la sinopsis editorial, Bell vuelve del extremo norte y se entera de la noticia de que la expedición de Loki Familia fracasó y Ais y otros quedaron atrapados en el piso 60.
+- `character_ids`: [DM-CHAR-BELL, DM-CHAR-AIS]
+- `aspect`: Bell, noticia, transición narrativa, continuidad
+- `era_or_interval`: Historia principal, volumen 21; secuencia de capítulos pendiente de cotejo
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-002
+- `source_title`: GA Bunko / SB Creative · DanMachi, volumen 21
+- `source_type`: official_publisher_page
+- `source_locator`: Sinopsis editorial oficial; no hay capítulo ni página cotejados
+- `source_url`: https://ga.sbcr.jp/product/9784815632946/
+- `evidence_type`: provisional_original_summary
+- `verification_status`: provisional_summary
+- `spoiler_level`: major
+- `confidence_note`: La relación entre el regreso de Bell y la noticia está en la sinopsis editorial; no se infiere un orden completo ni motivaciones privadas de la novela.
+
+
 ## Pendiente para considerar completa la historia
 
 1. Cotejar título, edición, capítulos y localizadores exactos en la novela principal.
