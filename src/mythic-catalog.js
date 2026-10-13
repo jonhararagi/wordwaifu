@@ -77,7 +77,8 @@
       '<label>Riesgos y consecuencias<textarea id="mythic-draft-risk" rows="2"></textarea></label>' +
       '<label>Evolución desbloqueable<textarea id="mythic-draft-progression" rows="2"></textarea></label>' +
       '<label>Debilidad / conflicto<textarea id="mythic-draft-weakness" rows="2"></textarea></label>' +
-      '<label>Historia del proyecto<select id="mythic-draft-story"><option value="">Sin vincular todavía</option></select></label></div>' +
+      '<label>Historia del proyecto<select id="mythic-draft-story"><option value="">Sin vincular todavía</option></select></label>' +
+      '<label>Capítulo / escena de uso<input id="mythic-draft-chapter" maxlength="200" placeholder="Ej.: Capítulo 3 · duelo en el santuario"></label></div>' +
       '<p id="mythic-draft-source" class="field-help">La figura inspiradora aparecerá aquí.</p>' +
       '<div class="mythic-generator-actions"><button type="button" class="mythic-link" id="mythic-save-draft">Guardar en proyecto</button><button type="button" class="mythic-link" id="mythic-cancel-edit">Descartar cambios</button><span id="mythic-generator-status" role="status" aria-live="polite">Generar no guarda automáticamente.</span></div>' +
       '<section class="mythic-relation-group"><h4>Propuestas guardadas en este proyecto</h4><div id="mythic-saved-proposals"><p class="field-help">Cargando propuestas…</p></div></section>';
@@ -93,8 +94,10 @@
     $("#mythic-saved-proposals").addEventListener("click", event => {
       const edit=event.target.closest("[data-edit-proposal]");
       const remove=event.target.closest("[data-delete-proposal]");
+      const promote=event.target.closest("[data-promote-proposal]");
       if(edit){const item=savedProposals.find(p=>p.id===edit.dataset.editProposal);if(item)fillDraft(item);}
       if(remove){document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposal-delete",{detail:{id:remove.dataset.deleteProposal}}));}
+      if(promote){document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposal-promote",{detail:{id:promote.dataset.promoteProposal}}));}
     });
     document.addEventListener("wordwaifu:mythic-proposals-loaded", event => {
       savedProposals=Array.isArray(event.detail?.proposals)?event.detail.proposals:[];
@@ -142,6 +145,7 @@
     $("#mythic-draft-progression").value=pick(sample.progression);
     $("#mythic-draft-weakness").value=pick(sample.weakness);
     $("#mythic-draft-story").value="";
+    $("#mythic-draft-chapter").value="";
     $("#mythic-draft-source").textContent="Inspiración: "+entity.name+" · "+entity.tradition+" · ID "+entity.id+". Estado de la ficha: "+(labels[entity.status]||entity.status)+".";
     $("#mythic-draft-source").dataset.entityId=entity.id;
     $("#mythic-generator-status").textContent="Propuesta nueva sin guardar. Podés editarla o generar otra.";
@@ -150,6 +154,7 @@
     editingProposalId=item.id;
     for(const key of ["title","concept","ability","activation","cost","risk","progression","weakness"])$("#mythic-draft-"+key).value=item[key]||"";
     $("#mythic-draft-story").value=item.storyId||"";
+    $("#mythic-draft-chapter").value=item.chapterReference||"";
     $("#mythic-draft-source").textContent="Inspiración registrada: "+(item.entityIds||[]).join(", ")+". Podés editar y volver a guardar.";
     $("#mythic-draft-source").dataset.entityId=(item.entityIds||[])[0]||"";
     $("#mythic-generator-status").textContent="Editando propuesta guardada.";
@@ -163,14 +168,14 @@
       title,modes,concept:$("#mythic-draft-concept").value,ability:$("#mythic-draft-ability").value,
       activation:$("#mythic-draft-activation").value,cost:$("#mythic-draft-cost").value,
       risk:$("#mythic-draft-risk").value,progression:$("#mythic-draft-progression").value,
-      weakness:$("#mythic-draft-weakness").value,storyId:$("#mythic-draft-story").value||null,
+      weakness:$("#mythic-draft-weakness").value,storyId:$("#mythic-draft-story").value||null,chapterReference:$("#mythic-draft-chapter").value.trim(),
       entityIds:entityId?[entityId]:[],status:"draft",updatedAt:new Date().toISOString()};
     document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposal-save",{detail:{proposal}}));
     $("#mythic-generator-status").textContent="Enviando al proyecto para guardar…";
   }
   function renderSavedProposals(){
     const target=$("#mythic-saved-proposals");if(!target)return;
-    target.innerHTML=savedProposals.length?savedProposals.map(item=>'<div class="mythic-saved-proposal"><strong>'+esc(item.title)+'</strong><p>'+esc(item.concept||"")+'</p><span class="mythic-chip">'+esc((item.modes||[]).map(modeNamesKey=>modeNames[modeNamesKey]||modeNamesKey).join(" + "))+'</span><div class="mythic-generator-actions"><button type="button" class="mythic-link" data-edit-proposal="'+esc(item.id)+'">Editar</button><button type="button" class="mythic-link" data-delete-proposal="'+esc(item.id)+'">Eliminar</button></div></div>').join(""):'<p class="field-help">Todavía no hay propuestas guardadas en este proyecto.</p>';
+    target.innerHTML=savedProposals.length?savedProposals.map(item=>'<div class="mythic-saved-proposal"><strong>'+esc(item.title)+'</strong><p>'+esc(item.concept||"")+'</p><span class="mythic-chip">'+esc((item.modes||[]).map(modeNamesKey=>modeNames[modeNamesKey]||modeNamesKey).join(" + "))+'</span><div class="mythic-generator-actions"><button type="button" class="mythic-link" data-edit-proposal="'+esc(item.id)+'">Editar</button><button type="button" class="mythic-link" data-promote-proposal="'+esc(item.id)+'">Crear personaje</button><button type="button" class="mythic-link" data-delete-proposal="'+esc(item.id)+'">Eliminar</button></div></div>').join(""):'<p class="field-help">Todavía no hay propuestas guardadas en este proyecto.</p>';
   }
 
   function renderList() {
