@@ -49,7 +49,9 @@
   let lastGeneratedEntityId = null;
   let savedProposals = [];
   let savedStories = [];
+  let savedRelations = [];
   let editingProposalId = null;
+  let editingRelationId = null;
 
   function mountGenerator() {
     if ($("#mythic-generator-panel")) return;
@@ -96,6 +98,7 @@
     document.addEventListener("wordwaifu:mythic-proposals-loaded", event => {
       savedProposals=Array.isArray(event.detail?.proposals)?event.detail.proposals:[];
       savedStories=Array.isArray(event.detail?.stories)?event.detail.stories:[];
+      savedRelations=Array.isArray(event.detail?.relations)?event.detail.relations:[];
       const storySelect=$("#mythic-draft-story"), previous=storySelect.value;
       storySelect.replaceChildren(new Option("Sin vincular todavía",""));
       savedStories.forEach(story=>storySelect.add(new Option(story.title||story.name||story.id,story.id)));
@@ -181,16 +184,28 @@
     if (!entity) return;
     if (push && selectedId && selectedId !== id) history.push(selectedId);
     selectedId = id;
-    const relations = (entity.relations || []).map(relation => {
+    const outgoing = [
+      ...(entity.relations || []).map(relation => ({...relation, projectOwned:false})),
+      ...savedRelations.filter(relation => relation.sourceId === id).map(relation => ({...relation, projectOwned:true}))
+    ];
+    const relations = outgoing.map(relation => {
       const target = catalog.entities.find(item => item.id === relation.targetId);
       if (!target) return "";
-      return '<button class="mythic-link" data-open-entity="' + esc(target.id) + '">' + esc(target.name) +
-        ' <span class="mythic-chip">' + esc(relation.type.replaceAll("_"," ")) + '</span></button>';
+      const link = '<button class="mythic-link" data-open-entity="' + esc(target.id) + '">' + esc(target.name) +
+        ' <span class="mythic-chip">' + esc(String(relation.type).replaceAll("_"," ")) + '</span></button>';
+      return relation.projectOwned ? '<div class="mythic-saved-proposal">' + link +
+        '<div class="mythic-generator-actions"><button type="button" class="mythic-link" data-edit-relation="' + esc(relation.id) + '">Editar vínculo</button>' +
+        '<button type="button" class="mythic-link" data-delete-relation="' + esc(relation.id) + '">Quitar vínculo</button></div></div>' : link;
     }).join("");
     const incoming = catalog.entities.flatMap(other => (other.relations||[])
       .filter(relation => relation.targetId === id)
       .map(relation => '<button class="mythic-link" data-open-entity="' + esc(other.id) + '">' + esc(other.name) +
         ' <span class="mythic-chip">vínculo entrante</span></button>'));
+    incoming.push(...savedRelations.filter(relation => relation.targetId === id).map(relation => {
+      const source=catalog.entities.find(item=>item.id===relation.sourceId);
+      return source ? '<button class="mythic-link" data-open-entity="' + esc(source.id) + '">' + esc(source.name) +
+        ' <span class="mythic-chip">vínculo del proyecto · ' + esc(String(relation.type).replaceAll("_"," ")) + '</span></button>' : "";
+    }));
     const sourceNotes = entity.sourceNotes ? '<p><strong>Notas de procedencia:</strong> ' + esc(entity.sourceNotes) + '</p>' : "";
     const sourceById = new Map((catalog.sources || []).map(source => [source.id, source]));
     const sourceLinks = (entity.sourceIds || []).map(id => sourceById.get(id)).filter(Boolean)
@@ -214,14 +229,37 @@
       (entity.tags?.length ? '<div class="mythic-tags">' + entity.tags.map(chip).join("") + '</div>' : "") +
       sourceNotes + artifactDetails + creative +
       (sourceLinks ? '<section class="mythic-relation-group"><h4>Fuentes y referencias</h4><div class="mythic-relations">' + sourceLinks + '</div></section>' : "") +
-      '<section class="mythic-relation-group"><h4>Relaciones para seguir explorando</h4><div class="mythic-relations">';
+      '<section class="mythic-relation-group"><h4>Relaciones para seguir explorando</h4><div class="mythic-relations">' +
       (relations || '<p>Esta ficha todavía no tiene relaciones salientes registradas.</p>') + '</div></section>' +
       '<section class="mythic-relation-group"><h4>También se llega desde</h4><div class="mythic-relations">' +
-      (incoming.join("") || '<p>No hay vínculos entrantes registrados todavía.</p>') + '</div></section></article>';
+      (incoming.filter(Boolean).join("") || '<p>No hay vínculos entrantes registrados todavía.</p>') + '</div></section>' +
+      '<section class="mythic-relation-group"><h4>Crear / editar relación del proyecto</h4>' +
+      '<div class="mythic-generator-fields"><label>Destino<select id="mythic-relation-target">' +
+      '<option value="">Elegí una entidad relacionada</option>' + catalog.entities.filter(item=>item.id!==id).map(item=>'<option value="' + esc(item.id) + '">' + esc(item.name + " · " + item.id) + '</option>').join("") +
+      '</select></label><label>Tipo de vínculo<select id="mythic-relation-type">' +
+      '<option value="associated_with">Asociación</option><option value="wields_in_myth">Porta en el mito</option><option value="inspired_by">Inspirado en</option><option value="rival_of">Rivalidad</option><option value="family_of">Parentesco</option><option value="ally_of">Alianza</option><option value="invokes">Invoca</option><option value="contracts_with">Contrato</option><option value="appears_in">Aparece en</option><option value="custom">Otro vínculo</option>' +
+      '</select></label></div><div class="mythic-generator-actions"><button type="button" class="mythic-link" data-save-relation>Guardar vínculo en el proyecto</button><span id="mythic-relation-status">Los vínculos personalizados se guardan con el proyecto, sin alterar la ficha de referencia.</span></div></section></article>';
   }
   root.addEventListener("click", event => {
+    const saveRelation = event.target.closest("[data-save-relation]");
+    const editRelation = event.target.closest("[data-edit-relation]");
+    const deleteRelation = event.target.closest("[data-delete-relation]");
+    if (saveRelation) {
+      const targetId=$("#mythic-relation-target").value, type=$("#mythic-relation-type").value;
+      if(!targetId || targetId===selectedId){$("#mythic-relation-status").textContent="Elegí un destino distinto de la ficha actual.";return;}
+      const relation={id:editingRelationId||("mythic-relation-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7)),
+        sourceId:selectedId,targetId,type,createdAt:new Date().toISOString()};
+      document.dispatchEvent(new CustomEvent("wordwaifu:mythic-relation-save",{detail:{relation}}));
+      $("#mythic-relation-status").textContent="Guardando vínculo…";return;
+    }
+    if (editRelation) {
+      const relation=savedRelations.find(item=>item.id===editRelation.dataset.editRelation);
+      if(relation && relation.sourceId===selectedId){editingRelationId=relation.id;$("#mythic-relation-target").value=relation.targetId;$("#mythic-relation-type").value=relation.type;$("#mythic-relation-status").textContent="Editando vínculo guardado. Cambiá destino o tipo y guardá.";}
+      return;
+    }
+    if (deleteRelation) { document.dispatchEvent(new CustomEvent("wordwaifu:mythic-relation-delete",{detail:{id:deleteRelation.dataset.deleteRelation}})); return; }
     const opener = event.target.closest("[data-open-entity]");
-    if (opener) { openEntity(opener.dataset.openEntity); return; }
+    if (opener) { editingRelationId=null; openEntity(opener.dataset.openEntity); return; }
     if (event.target.closest("[data-catalog-index]")) { history.length = 0; renderList(); return; }
     if (event.target.closest("[data-catalog-back]")) {
       const previous = history.pop();
