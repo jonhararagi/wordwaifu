@@ -18,6 +18,7 @@ for (const entity of catalog.entities) {
     assert.ok(typeof entity[key] === "string" && entity[key].trim(), entity.id + " missing " + key);
   }
   for (const sourceId of entity.sourceIds || []) assert.ok(sourceIds.has(sourceId), entity.id + " references missing source " + sourceId);
+  if (!["original", "creative_adaptation"].includes(entity.status)) assert.ok((entity.sourceIds || []).length > 0, entity.id + " lacks source references");
   for (const figureId of entity.artifactProfile?.associatedFigureIds || []) assert.ok(byId.has(figureId), entity.id + " artifact profile references missing figure " + figureId);
   for (const relation of entity.relations || []) assert.ok(byId.has(relation.targetId), entity.id + " has broken relation target " + relation.targetId);
   for (const relation of entity.relations || []) {
