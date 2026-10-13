@@ -2578,7 +2578,7 @@ async function run() {
     // Mythic catalog: close any dialog left by earlier CRUD scenarios, then verify the expanded real catalog.
     await page.evaluate(() => { for (const dialog of document.querySelectorAll("dialog[open]")) dialog.close(); });
     await page.locator('.nav-item[data-view="mythic-catalog"]').click();
-    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("69 / 69"), null, { timeout: 10000 });
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("75 / 75"), null, { timeout: 10000 });
     await page.locator("#mythic-search").fill("Pombero");
     await page.locator('#mythic-catalog-content [data-open-entity="LAT-GUA-POMBERO"]').click();
     assert.ok((await page.locator("#mythic-catalog-content").innerText()).includes("Pombero"),
@@ -2622,7 +2622,7 @@ async function run() {
     await page.reload();
     await page.waitForFunction(() => Boolean(document.querySelector("#project-name")?.textContent), null, { timeout: 10000 });
     await page.locator('.nav-item[data-view="mythic-catalog"]').click();
-    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("69 / 69"), null, { timeout: 10000 });
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("75 / 75"), null, { timeout: 10000 });
     await page.locator("#mythic-search").fill("Pombero");
     await page.locator('#mythic-catalog-content [data-open-entity="LAT-GUA-POMBERO"]').click();
     await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("Macuahuitl"), null, { timeout: 10000 });
