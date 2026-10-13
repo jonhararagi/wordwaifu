@@ -8,19 +8,29 @@ source_refs:
   - DMR-007-SRC-004
 claim_refs:
   - DMR-007-CLM-011
-verification_status: provisional_secondary_or_adaptation
+verification_status: secondary_source_pending_primary_corroboration
+aliases:
+  - "nueva Astrea Familia"
+  - "Solingen"
 ---
 # Iselina
 
-**Estado de la ficha:** provisional. Se creó para que el roster pueda explorarse desde las relaciones de WordWaifu; no debe interpretarse como una biografía completa ni como canon totalmente cotejado.
+**Alcance de esta ficha:** nodo provisional de la etapa posterior; las afirmaciones provienen de una referencia comunitaria y requieren cotejo con el texto original.
 
-## Información disponible
+## Datos identificados
 
-La referencia comunitaria la enumera entre las integrantes de la nueva Familia Astrea asociada a Solingen. La ficha queda intencionalmente mínima hasta cotejar nombre, función e interacciones con un volumen o capítulo.
+- **Especie:** No establecido en las fuentes incorporadas.
+- **Voz japonesa registrada por el portal oficial:** No documentada.
+- **Afiliación disponible:** nueva generación asociada a Astrea y Solingen, todavía por confirmar con fuente primaria.
 
-## Continuidad y fuentes
+ 
+La lista comunitaria la incluye en la generación posterior asociada a Astrea. Esta entrada solo permite abrir un nodo de búsqueda; no se atribuyen rango, personalidad ni habilidades.
 
-- **Continuidad de lectura:** CONT-MAIN-LN.
-- Referencia: https://danmachi.fandom.com/es/wiki/Familia_Astrea
-- Afirmaciones incorporadas: DMR-007-CLM-011.
-- Pendiente: localizar el pasaje del volumen o capítulo original, verificar romanización y completar historia individual, personalidad, habilidades y relaciones con evidencia.
+## Relaciones y navegación
+
+- **Astrea Familia:** el vínculo de afiliación permite recorrer el roster. No demuestra por sí solo amistad íntima, rivalidad, una escena compartida ni confianza personal con Ryu.
+- **Ryu Lion / Astrea:** los enlaces de WordWaifu se rotulan según la evidencia de la continuidad seleccionada. No hay que trasladar automáticamente relaciones de la adaptación a todas las novelas.
+
+## Pendiente de investigación
+
+confirmación primaria de identidad, especie, nivel, aspecto, personalidad, escenas y relaciones. Las fuentes comunitarias sirven para encontrar nombres y rutas, pero no se convierten en canon aprobado sin capítulo o página localizable.
