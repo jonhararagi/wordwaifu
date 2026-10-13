@@ -583,6 +583,20 @@
       ],
       "status": "provisional",
       "priority": "normal"
+    },
+    {
+      "id": "DM-FAM-ASTREA",
+      "path": "familias/astrea-familia.md",
+      "type": "familia",
+      "tags": [
+        "Astrea",
+        "Astrea Familia",
+        "Ryu Lion",
+        "Alise Lovelace",
+        "Astrea Record"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -1517,6 +1531,12 @@
     {
       "document_id": "RESEARCH-DM-011",
       "path": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "type": "organization_dossier_claim_index",
+      "status": "present_partial_source_checked"
+    },
+    {
+      "document_id": "RESEARCH-DM-012",
+      "path": "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
       "type": "organization_dossier_claim_index",
       "status": "present_partial_source_checked"
     }
