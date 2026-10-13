@@ -135,3 +135,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Dossiers: Astrea Record I–III, Sword Oratoria 1/12/13 y Familia Chronicle de Ryu, Ryu II, Freya, Asfi y Haze.
 - Integración: 11 afirmaciones añadidas a `src/lore-corpus.js`; búsqueda cubierta por pruebas.
 - Estado: `provisional_summary`; faltan localizadores de capítulo, cronología atómica y cotejo individual de relaciones.
+
+
+## Misión de integración · navegación inversa y recuperación de términos
+
+- Rama: `work/story-completion-danmachi-audit-2026-10`.
+- Cambios: `src/character-archive.js` deriva enlaces de navegación inversos a partir de las relaciones con evidencia existentes; `tests/test_character_archive.cjs` comprueba Ryu ↔ Kaguya, ausencia de destinos duplicados y evidencia; `src/lore-corpus.js` permite recuperar `venganza`/`vengar`/`vengarse` como variantes explícitas; `tests/test_lore_corpus.cjs` ajusta la búsqueda del reencuentro para usar términos presentes en la afirmación.
+- Continuidad y procedencia: las aristas se siguen mostrando únicamente cuando hay afirmaciones de la continuidad seleccionada y estas superan el filtro de spoilers. La relación inversa se identifica como navegación, no como una nueva afirmación canónica simétrica.
+- Estado de validación: JavaScript y pruebas de lore/personajes han pasado en GitHub Actions en la revisión actual; los trabajos de navegador y validación de estructura todavía deben terminar antes de cerrar esta tanda.
+- Límite: esto mejora la navegación del archivo de personajes, pero no termina la migración de relaciones a datos independientes ni habilita aún un explorador genérico de Familias, lugares, eventos, objetos y conceptos.
