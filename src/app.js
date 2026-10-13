@@ -2692,9 +2692,51 @@
     }
     status.textContent = "Leídas " + index.sourceClaimCount + " afirmaciones; " + index.entryCount + " entradas de búsqueda y " + (index.profileDocumentCount || 0) + " fichas previas recuperadas del repositorio. Búsqueda textual, sin IA; el corpus aún es parcial.";
     loreArchiveIndex = index;
+    renderDanmachiEntityCatalog();
     if (!archiveUiPrepared) { renderCharacterDirectory(); archiveUiPrepared = true; }
     return index;
   }
+  function renderDanmachiEntityCatalog() {
+    const root = $("#danmachi-entity-results");
+    const status = $("#danmachi-entity-status");
+    const count = $("#danmachi-entity-count");
+    if (!root || !window.WordWaifuLoreCorpus || !loreArchiveIndex) return;
+    const report = window.WordWaifuLoreCorpus.searchEntities(
+      { records: loreArchiveIndex.entityRecords || [] },
+      { type: $("#danmachi-entity-type").value, query: $("#danmachi-entity-query").value, limit: 60 }
+    );
+    root.replaceChildren();
+    count.textContent = (loreArchiveIndex.entityRecords || []).length + " registros";
+    if (report.error) {
+      status.textContent = report.error;
+      root.appendChild(archiveElement("p", "danmachi-entity-empty", "Elegí un tipo válido para consultar el catálogo."));
+      return;
+    }
+    status.textContent = report.totalMatches + " entidad(es) coincidente(s)" +
+      (report.truncated ? "; se muestran las primeras " + report.results.length + "." : ".") +
+      " El estado de revisión es el del catálogo y no implica verificación total del canon.";
+    if (!report.results.length) {
+      root.appendChild(archiveElement("p", "danmachi-entity-empty", "No hay entidades coincidentes. Probá otro término o seleccioná «Todos los tipos»."));
+      return;
+    }
+    report.results.forEach(entity => {
+      const card = archiveElement("article", "danmachi-entity-card");
+      card.setAttribute("role", "listitem");
+      const heading = archiveElement("div", "danmachi-entity-card-heading");
+      heading.append(archiveElement("h4", "", entity.tags.find(tag => tag && !/^(roster|high|low|medium)$/i.test(tag)) || entity.id),
+        archiveElement("span", "danmachi-entity-type", entity.type));
+      card.appendChild(heading);
+      card.appendChild(archiveElement("p", "danmachi-entity-meta", entity.id + " · Estado: " + entity.status + " · Prioridad: " + entity.priority));
+      if (entity.tags.length) card.appendChild(archiveElement("p", "danmachi-entity-tags", "Etiquetas: " + entity.tags.join(", ")));
+      if (entity.path) {
+        const links = archiveElement("div", "lore-result-links");
+        appendLoreLink(links, "Abrir expediente ↗", "./lore/danmachi/" + entity.path, false);
+        card.appendChild(links);
+      }
+      root.appendChild(card);
+    });
+  }
+
   function appendLoreLink(container, label, href, external) {
     if (!href) return;
     let url; try { url = new URL(href, window.location.href); } catch { return; }
@@ -2819,6 +2861,13 @@
       status.textContent = "La consulta no pudo completarse: " + error.message + " Abrí WordWaifu desde un servidor HTTP (por ejemplo, el puerto privado de Codespaces), no como archivo file://.";
     } finally { button.disabled = false; }
   }
+  $("#danmachi-entity-query").addEventListener("input", () => renderDanmachiEntityCatalog());
+  $("#danmachi-entity-type").addEventListener("change", () => renderDanmachiEntityCatalog());
+  $("#danmachi-entity-reset").addEventListener("click", () => {
+    $("#danmachi-entity-query").value = "";
+    $("#danmachi-entity-type").value = "all";
+    renderDanmachiEntityCatalog();
+  });
   $("#lore-search-form").addEventListener("submit", event => { void runLoreSearch(event); });
   $("#lore-web-search-button").addEventListener("click", () => { void runOnlineLoreSearch(); });
   $("#lore-clear-button").addEventListener("click", () => {
