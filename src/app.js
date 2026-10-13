@@ -3002,9 +3002,12 @@
   $("#global-search").addEventListener("keydown", (event) => { if (event.key === "Escape") { event.target.value = ""; renderDirectory(); } });
 
   function publishMythicProjectState() {
+    window.WordWaifuMythicProjectState = {
+      proposals: Array.isArray(state.mythicProposals) ? state.mythicProposals : [],
+      stories: Array.isArray(state.stories) ? state.stories : []
+    };
     document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposals-loaded", {
-      detail: { proposals: Array.isArray(state.mythicProposals) ? state.mythicProposals : [],
-        stories: Array.isArray(state.stories) ? state.stories : [] }
+      detail: window.WordWaifuMythicProjectState
     }));
   }
 
