@@ -32,7 +32,7 @@
     const query = $("#mythic-search").value.trim().toLocaleLowerCase("es");
     const kind = $("#mythic-kind").value, tradition = $("#mythic-tradition").value, status = $("#mythic-status").value;
     return catalog.entities.filter(entity => {
-      const haystack = [entity.name, entity.summary, entity.tradition, entity.region, entity.status, ...(entity.tags||[]), entity.kind]
+      const haystack = [entity.name, entity.summary, entity.tradition, entity.region, entity.status, entity.kind, ...(entity.aliases||[]), ...(entity.attributes||[]), ...(entity.domains||[]), ...(entity.tags||[])]
         .join(" ").toLocaleLowerCase("es");
       return (!query || haystack.includes(query)) && (!kind || entity.kind === kind) &&
         (!tradition || entity.tradition === tradition) && (!status || entity.status === status);
@@ -50,6 +50,7 @@
   let savedProposals = [];
   let savedStories = [];
   let savedRelations = [];
+  let brokenRelations = [];
   let editingProposalId = null;
   let editingRelationId = null;
 
@@ -175,7 +176,7 @@
   function renderList() {
     selectedId = null;
     const entities = visibleEntities();
-    $("#mythic-catalog-count").textContent = entities.length + " / " + catalog.entities.length + " fichas";
+    $("#mythic-catalog-count").textContent = entities.length + " / " + catalog.entities.length + " fichas" + (brokenRelations.length ? " · ⚠ " + brokenRelations.length + " vínculos rotos" : "");
     $("#mythic-catalog-content").innerHTML = entities.length
       ? '<div class="mythic-catalog-grid">' + entities.map(card).join("") + '</div>'
       : '<div class="mythic-empty">No hay coincidencias. Probá otro nombre, tradición o filtro.</div>';
@@ -227,6 +228,10 @@
       '<article class="mythic-detail"><div class="mythic-detail-actions"><button class="mythic-link" data-catalog-back>← Volver</button><button class="mythic-link" data-catalog-index>Ver índice completo</button></div>' +
       '<div class="mythic-meta">' + chip(kindLabels[entity.kind] || entity.kind) + chip(labels[entity.status] || entity.status) +
       chip(entity.tradition) + chip(entity.region) + '</div><h3>' + esc(entity.name) + '</h3><p>' + esc(entity.summary) + '</p>' +
+      (entity.aliases?.length ? '<p><strong>Nombres alternativos:</strong> ' + esc(entity.aliases.join(" · ")) + '</p>' : "") +
+      (entity.attributes?.length ? '<p><strong>Atributos registrados:</strong> ' + esc(entity.attributes.join(" · ")) + '</p>' : "") +
+      (entity.domains?.length ? '<p><strong>Dominios / asociaciones:</strong> ' + esc(entity.domains.join(" · ")) + '</p>' : "") +
+      (entity.confidence ? '<p><strong>Tratamiento de la evidencia:</strong> ' + esc(entity.confidence.replaceAll("_"," ")) + '</p>' : "") +
       (entity.tags?.length ? '<div class="mythic-tags">' + entity.tags.map(chip).join("") + '</div>' : "") +
       sourceNotes + artifactDetails + creative +
       (sourceLinks ? '<section class="mythic-relation-group"><h4>Fuentes y referencias</h4><div class="mythic-relations">' + sourceLinks + '</div></section>' : "") +
@@ -280,8 +285,8 @@
     fillSelect("mythic-tradition", data.entities.map(entity => entity.tradition));
     // Check all relation targets before rendering; broken links are reported, not silently followed.
     const ids = new Set(data.entities.map(entity => entity.id));
-    const broken = data.entities.flatMap(entity => (entity.relations||[]).filter(relation => !ids.has(relation.targetId)).map(relation => entity.id + " → " + relation.targetId));
-    if (broken.length) console.error("Mythic catalog contains broken relations:", broken);
+    brokenRelations = data.entities.flatMap(entity => (entity.relations||[]).filter(relation => !ids.has(relation.targetId)).map(relation => entity.id + " → " + relation.targetId));
+    if (brokenRelations.length) console.error("Mythic catalog contains broken relations:", brokenRelations);
     renderList();
   }).catch(error => {
     $("#mythic-catalog-count").textContent = "No disponible";
