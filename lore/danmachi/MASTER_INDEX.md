@@ -85,6 +85,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice de lugares](places/00-indice-lugares.md)
 - [Familia Hestia](familias/hestia-familia.md)
 - [Familia Loki](familias/loki-familia.md)
+- [Familia Astrea](familias/astrea-familia.md) — expediente histórico parcial con fuentes y continuidad separadas.
 
 ### Volúmenes, arcos y adaptación
 - [Índice de volúmenes y arcos](volumes/00-indice-volumenes-y-arcos.md)
