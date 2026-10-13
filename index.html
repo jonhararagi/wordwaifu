@@ -30,6 +30,7 @@
         <button class="nav-item" data-view="stories"><span>▤</span> Historias y novelas</button>
         <button class="nav-item" data-view="commands"><span>⌘</span> Asistente local</button>
         <button class="nav-item" data-view="lore"><span>⌕</span> Enciclopedia de personajes</button>
+        <button class="nav-item" data-view="mythic-catalog"><span>✧</span> Catálogo mítico</button>
         <button class="nav-item" data-view="art"><span>▧</span> Panel de arte</button>
       </nav>
       <div class="sidebar-bottom">
@@ -105,6 +106,16 @@
         <div id="command-log" class="command-log"><div class="system-message">Probá: «buscar personaje», «listar lugares», «validar continuidad» o «ayuda».</div></div>
         <form id="command-form" class="command-form"><input id="command-input" autocomplete="off" placeholder="Escribí un comando local..."><button class="primary-button" type="submit">Ejecutar ↗</button></form>
         <div class="command-chips"><button data-command="ayuda">Ayuda</button><button data-command="listar personajes">Listar personajes</button><button data-command="listar lugares">Listar lugares</button><button data-command="validar continuidad">Validar continuidad</button></div>
+      </section>
+      <section id="mythic-catalog-view" class="mythic-catalog-view hidden" aria-labelledby="mythic-catalog-title">
+        <header class="mythic-catalog-heading"><div><p class="eyebrow">WORDWAIFU · ARCHIVO DE ENTIDADES</p><h2 id="mythic-catalog-title">Catálogo mítico, armas y reliquias</h2><p>Buscá por nombre, tradición, región o función. Abrí una ficha, seguí sus relaciones y volvé atrás sin perder el hilo.</p></div><span id="mythic-catalog-count" class="mythic-count">Cargando catálogo…</span></header>
+        <div class="mythic-filters">
+          <label>Buscar<input id="mythic-search" type="search" placeholder="Ej.: Pombero, arma, invocación…" autocomplete="off"></label>
+          <label>Tipo<select id="mythic-kind"><option value="">Todos los tipos</option></select></label>
+          <label>Tradición<select id="mythic-tradition"><option value="">Todas las tradiciones</option></select></label>
+          <label>Estado<select id="mythic-status"><option value="">Todos los estados</option><option value="mythology_reference">Referencia mitológica</option><option value="historical_reference">Referencia histórica</option><option value="creative_adaptation">Adaptación creativa</option><option value="original">Original</option></select></label>
+        </div>
+        <div id="mythic-catalog-content" class="mythic-catalog-content" aria-live="polite"><p class="field-help">Cargando fichas…</p></div>
       </section>
       <section id="art-view" class="art-view hidden" aria-labelledby="art-studio-title">
         <header class="art-studio-header"><div><p class="eyebrow">WORDWAIFU · ASSET STUDIO</p><h2 id="art-studio-title">Panel de arte</h2><p>Vinculá imágenes locales o externas, guardá prompts y asigná cada recurso a una entidad por ID estable.</p></div><div class="art-studio-stat"><strong id="art-assignment-count">0</strong><span>recursos asignados</span></div></header>
@@ -302,6 +313,7 @@
   <script src="./src/art-studio.js" defer></script>
   <script src="./src/lore-corpus.js" defer></script>
   <script src="./src/character-archive.js" defer></script>
+  <script src="./src/mythic-catalog.js" defer></script>
   <script src="./src/app.js" defer></script>
   <script src="./src/art-studio.js" defer></script>
 </body>
