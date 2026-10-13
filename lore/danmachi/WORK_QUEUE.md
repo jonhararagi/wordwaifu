@@ -275,3 +275,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Verificar roster histórico, niveles, récord real de exploración y fecha/efectos de la expulsión mediante fuentes con localizadores.
 - [ ] Incorporar claims recuperables solo después de identificar evidencia suficiente y continuidad adecuada.
 - Regla: las wikis ayudan a encontrar y traducir datos; la coincidencia entre wikis no equivale a confirmación primaria. No rellenar historias AU ni incógnitas autorales.
+
+
+### Seguimiento de DANMACHI-RESEARCH-019 — fuentes originales rastreadas (2026-10-13)
+- [x] Abrir la publicación original de Fujino Omori citada por la ficha española de Meteria: `note.com/fujinoomori/n/n629829ac3fe4`.
+- [x] Registrar que el texto describe a Meteria a través de Alfia, pero usa un escenario alternativo en el que Alfia/Zald crían a Bell; no importar sus sucesos a la continuidad principal.
+- [x] Localizar la ficha editorial oficial de *Familia Chronicle: Episode Freya* (GA Bunko, ISBN 978-4-8156-0464-6), que confirma la obra como fuente potencial sobre el pasado de Ottar.
+- [ ] Cotejar en una edición legítima de *Episode Freya* la escena de los aventureros nivel 8/9 y obtener localizador interno antes de aprobar nombres, niveles o cronología.
+- [ ] Verificar contexto y contenido de las publicaciones del autor citadas para la Emperatriz.
+- Paquete actualizado: [DANMACHI-RESEARCH-019](research/inbox/DANMACHI-RESEARCH-019-wiki-triangulation-es-en-ja.md).
+- Regla de continuidad: publicación del autor no equivale automáticamente a continuidad principal; el relato alternativo se etiqueta como tal. Los campos de historia propia AU siguen vacíos hasta que el autor los complete.
