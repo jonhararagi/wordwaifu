@@ -539,7 +539,7 @@
       "priority": "critical"
     },
     {
-      "id": "DM-RESEARCH-BATCH-007",
+      "id": "DANMACHI-RESEARCH-007",
       "path": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
       "type": "research",
       "tags": [
@@ -552,7 +552,7 @@
       "priority": "high"
     },
     {
-      "id": "DM-RESEARCH-BATCH-008",
+      "id": "DANMACHI-RESEARCH-008",
       "path": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
       "type": "research",
       "tags": [
@@ -564,7 +564,7 @@
       "priority": "normal"
     },
     {
-      "id": "DM-RESEARCH-BATCH-009",
+      "id": "DANMACHI-RESEARCH-009",
       "path": "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
       "type": "research",
       "tags": [
@@ -576,7 +576,7 @@
       "priority": "normal"
     },
     {
-      "id": "DM-RESEARCH-BATCH-010",
+      "id": "DANMACHI-RESEARCH-010",
       "path": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
       "type": "research",
       "tags": [
