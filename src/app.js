@@ -1402,7 +1402,7 @@
     const description = synopsisMatch ? synopsisMatch[1].trim() : "";
     const chapterPattern = /^##\s+Cap[ií]tulo\s+(\d+)\s*[—–:-]\s*(.+?)\s*\n([\s\S]*?)(?=^##\s+Cap[ií]tulo\s+\d+\s*[—–:-]|(?![\s\S]))/gim;
     const readSection = (heading) => {
-      const header = new RegExp("^##\s+" + heading + "\s*$", "im");
+      const header = new RegExp("^##\\s+" + heading + "\\s*$", "im");
       const found = header.exec(text);
       if (!found) return "";
       const start = found.index + found[0].length;
