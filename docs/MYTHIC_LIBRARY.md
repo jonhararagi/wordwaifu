@@ -5,13 +5,13 @@ La aplicación carga el catálogo de referencia desde `data/catalog/mythic-arsen
 ## Esquema del catálogo
 
 - `schemaVersion`: versión del formato.
-- `entities[]`: `id` estable, `name`, `kind`, `tradition`, `region`, `status`, `summary`, `tags[]`, `sourceNotes`, `sourceIds[]`, `relations[]`.
+- `entities[]`: `id` estable, `name`, `aliases[]`, `kind`, `tradition`, `region`, `status`, `summary`, `attributes[]`, `domains[]`, `confidence`, `tags[]`, `sourceNotes`, `sourceIds[]`, `relations[]`.
 - `relations[]`: `type` y `targetId`; las relaciones entrantes se muestran también para permitir navegar en ambos sentidos.
-- `artifactProfile` (solo para objetos que lo necesitan): `objectCategory`, `associatedFigureIds[]`, `documentedCapabilities[]`, `useConditions`, `costsAndLimits`, `risks`, `evolutionStages[]` y `adaptationMechanics`.
+- `artifactProfile` (solo para objetos que lo necesitan): `objectCategory`, `associatedFigureIds[]`, `documentedCapabilities[]`, `useConditions`, `costsAndLimits`, `risks`, `evolutionStages[]` y `adaptationMechanics`. La interfaz muestra esta ficha diferenciada y enlaza las figuras asociadas.
 - `sources[]`: `id`, `title`, `url` y `use`. Las notas advierten cuando una interpretación es regional, discutida o procede de fuentes coloniales o recopilaciones modernas.
 - `starterDecks[]`: colecciones iniciales de IDs del catálogo, no personajes ni proyectos independientes.
 
-Los estados distinguen `mythology_reference`, `historical_reference`, `creative_adaptation` y `original`. Una capacidad jugable inventada debe describirse como adaptación; no debe atribuirse a una cultura como hecho documentado. En especial, las tradiciones americanas conservan etiquetas culturales y regionales específicas en vez de tratarse como un panteón unificado.
+Todos los registros exponen los campos de alias, atributos, dominios y tratamiento de evidencia; los alias y atributos pueden quedar vacíos si no hay variantes fiables que registrar. Los estados distinguen `mythology_reference`, `historical_reference`, `creative_adaptation` y `original`. Una capacidad jugable inventada debe describirse como adaptación; no debe atribuirse a una cultura como hecho documentado. En especial, las tradiciones americanas conservan etiquetas culturales y regionales específicas en vez de tratarse como un panteón unificado.
 
 ## Relaciones y adaptaciones de proyecto
 
