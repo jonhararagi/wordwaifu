@@ -235,7 +235,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Corregir IDs de claim duplicados detectados por la primera ejecución de CI.
 - [x] Separar el claim de Astrea histórica del perfil de adaptación para que una afirmación no mezcle CONT-AR y CONT-ANIME.
 - [ ] Confirmar que los workflows de recuperación, validación de catálogo, navegador y estructura concluyan con éxito en el último commit.
-- [ ] Ampliar el modelo de búsqueda para filtrar directamente por entidad de tipo Familia, no solo por personajes relacionados.
+- [x] Implementar búsqueda directa por entidades de tipo Familia en `searchEntities`; el filtro devuelve registros `familia` sin mezclar personajes/eventos. Regresión ampliada en `tests/test_lore_corpus.cjs` para Hestia, Loki, Astrea, variantes de consulta en español y abstención ante nombres de personajes. La ejecución CI del commit de prueba queda pendiente de evidencia.
 
 
 ## DANMACHI-RESEARCH-011 · Estado bibliográfico actualizado (2026-10-13)
