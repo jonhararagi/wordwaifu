@@ -1513,6 +1513,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
       "type": "organization_dossier_claim_index",
       "status": "present_partial_source_checked"
+    },
+    {
+      "document_id": "RESEARCH-DM-011",
+      "path": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "type": "organization_dossier_claim_index",
+      "status": "present_partial_source_checked"
     }
   ],
   "lastStructuredSync": {
