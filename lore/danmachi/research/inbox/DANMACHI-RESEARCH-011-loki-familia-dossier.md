@@ -9,7 +9,7 @@
 ## Afirmaciones trazables
 
 ### DMR-005-CLM-001 · Loki y la dirección de la Familia
-- `claim_id`: undefined
+- `claim_id`: DMR-005-CLM-001
 - `claim`: La página oficial identifica a Loki como diosa principal de Familia Loki, líder de una organización grande, y señala su antipatía personal hacia Hestia.
 - `character_ids`: [DM-CHAR-LOKI]
 - `aspect`: liderazgo, relaciones entre Familias
@@ -32,7 +32,7 @@
 - **Límite:** no se deduce una guerra política entre Familias ni una cronología completa de su relación.
 
 ### DMR-005-CLM-002 · Finn como capitán
-- `claim_id`: undefined
+- `claim_id`: DMR-005-CLM-002
 - `claim`: Finn Deimne es presentado como capitán; la página destaca su capacidad para organizar una gran Familia y su inteligencia, y advierte que su apariencia juvenil no fija su edad real.
 - `character_ids`: [CHAR-FINN-DEIMNE]
 - `aspect`: liderazgo, organización
@@ -54,7 +54,7 @@
 - **Estado:** source_checked.
 
 ### DMR-005-CLM-003 · Riveria como vicecapitana
-- `claim_id`: undefined
+- `claim_id`: DMR-005-CLM-003
 - `claim`: Riveria es presentada como maga de prestigio, de origen real élfico, vicecapitana y figura maternal para los miembros.
 - `character_ids`: []
 - `aspect`: liderazgo, rol, origen
@@ -77,7 +77,7 @@
 - **Límite:** la descripción no significa que todo miembro obedezca siempre sin conflicto.
 
 ### DMR-005-CLM-004 · Gareth como veterano
-- `claim_id`: undefined
+- `claim_id`: DMR-005-CLM-004
 - `claim`: Gareth es descrito como enano aventurero de primera clase y veterano entre los dirigentes, con gran resistencia física.
 - `character_ids`: []
 - `aspect`: rol, capacidades, liderazgo
@@ -100,7 +100,7 @@
 - **Límite:** no se fija fecha absoluta de ingreso ni secuencia completa de expediciones.
 
 ### DMR-005-CLM-005 · Ais y Lefiya
-- `claim_id`: undefined
+- `claim_id`: DMR-005-CLM-005
 - `claim`: Ais es descrita como espadachina reservada y objeto de admiración de Bell y Lefiya; Lefiya como maga elfa que admira intensamente a Ais.
 - `character_ids`: [DM-CHAR-AIS, DM-CHAR-BELL]
 - `aspect`: personalidad, admiración, relaciones
@@ -123,7 +123,7 @@
 - **Límite:** admiración no equivale por sí sola a amistad recíproca idéntica.
 
 ### DMR-005-CLM-006 · Tiona y Tione
-- `claim_id`: undefined
+- `claim_id`: DMR-005-CLM-006
 - `claim`: La fuente identifica a Tiona y Tione como hermanas gemelas, amazonas y aventureras de primera clase; presenta a Tiona como amiga de Ais y a Tione como enamorada de Finn.
 - `character_ids`: []
 - `aspect`: familia, relaciones, personalidad
@@ -146,7 +146,7 @@
 - **Límite:** no se infiere reciprocidad de Finn ni ausencia de conflicto entre las gemelas.
 
 ### DMR-005-CLM-007 · Bete Loga como combatiente de primera clase
-- `claim_id`: undefined
+- `claim_id`: DMR-005-CLM-007
 - `claim`: Bete es descrito como hombre lobo y aventurero de primera clase, con estilo de combate que usa botas metálicas y patadas reforzadas con magia; la página señala su trato verbal agresivo.
 - `character_ids`: []
 - `aspect`: combate, equipo, personalidad
@@ -169,7 +169,7 @@
 - **Límite:** la rudeza no prueba que odie a todos sus compañeros.
 
 ### DMR-005-CLM-008 · Raul y el mando delegado
-- `claim_id`: undefined
+- `claim_id`: DMR-005-CLM-008
 - `claim`: Raul es descrito como aventurero humano de nivel 4 en el perfil consultado; pese a su inseguridad, realiza tareas de apoyo y Finn confía en él para dirigir miembros de menor rango durante emergencias.
 - `character_ids`: [CHAR-FINN-DEIMNE]
 - `aspect`: apoyo, mando delegado
