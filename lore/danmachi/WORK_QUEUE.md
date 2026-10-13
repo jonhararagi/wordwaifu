@@ -234,3 +234,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Separar el claim de Astrea histórica del perfil de adaptación para que una afirmación no mezcle CONT-AR y CONT-ANIME.
 - [ ] Confirmar que los workflows de recuperación, validación de catálogo, navegador y estructura concluyan con éxito en el último commit.
 - [ ] Ampliar el modelo de búsqueda para filtrar directamente por entidad de tipo Familia, no solo por personajes relacionados.
+
+
+## DANMACHI-RESEARCH-011 · Estado bibliográfico actualizado (2026-10-13)
+- [x] Verificar la cronología oficial de Astrea Record como ancla relativa aproximada de siete años antes de la llegada de Bell.
+- [x] Verificar en GA Bunko el volumen principal 21 como último publicado comprobado.
+- [x] Registrar el volumen 22 como anunciado para el 2026-12-15, no como ya publicado.
+- [x] Actualizar ERA-10 y registrar fuentes DMR-011-SRC-001–003.
+- [ ] Volver a verificar el estado editorial después del 2026-12-15.
+- [ ] Cotejar los acontecimientos del volumen 21 con localizadores internos; la sinopsis editorial no basta para cerrar su contenido.
