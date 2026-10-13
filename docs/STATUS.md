@@ -10,9 +10,12 @@
 ## GitHub y control de cambios
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama candidata de integración del producto: `work/integration-mainline-2026-10` (PR #14). La rama de validación de origen `work/integration-validation-fixes-2026-10` se conserva como referencia.
-- `main` verificada el 2026-10-13: `bca375e171740edf8b6f770226b4797b8ade5ad6` (PR #14 integrada mediante squash).
-- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), fusionada el 2026-10-13. La app, el corpus inicial de DanMachi, el archivo de personajes, la navegación de integrantes de Familia, el Art Studio y las protecciones de papelera ya están en `main`. Esta rama integra además el Taller de historias y worldbuilding; los gates de cuota real de almacenamiento y revisión manual en Windows siguen pendientes.
-- PR #1, #3, #7, #9, #10 y #12: cerradas como rutas supersedidas, no fusionadas; se conservan las ramas de origen. PR #11: fusionada en la rama de integración de trabajo, no en `main`. No se ha desplegado.
+- `main` verificada el 2026-10-13: `11a5ed555b703109d06d9044252e64084901b5fc` (PR #14 y PR #16 integradas mediante squash).
+- PR #14: [integración de producto](https://github.com/jonhararagi/wordwaifu/pull/14), fusionada el 2026-10-13. La app, el corpus inicial de DanMachi, el archivo de personajes, la navegación de integrantes de Familia, el Art Studio y las protecciones de papelera están en `main`.
+- PR #16: [Story Foundry + ampliación del corpus DanMachi](https://github.com/jonhararagi/wordwaifu/pull/16), fusionada el 2026-10-13. `main` incluye el editor de historias, generador de poderes, campos de dinámicas/revelaciones, panteón y reparto coral; el catálogo DanMachi tiene 50 registros y 95 documentos, con el volumen 21, 11 expedientes adicionales y resúmenes de historias paralelas. El material no verificado está marcado como provisional.
+- [Validate WordWaifu — PR #16, run 38386054444 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38386054444); [DanMachi Lore and Retrieval Integrity — run 38386054860 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38386054860). La regresión de navegador valida Ryu → Alise → Astrea → cronología y regreso por historial.
+- Los gates restantes son la cuota real de almacenamiento y la revisión visual manual en Windows; no se declaran cerrados.
+- PR #1, #3, #7, #9, #10, #12 y #15: cerradas como rutas supersedidas. PR #11: fusionada en la rama de integración de trabajo, no en `main`. PR #14 y #16 están fusionadas en `main`. No se ha desplegado.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
 - Workflow de validación configurado para pushes en `main` y `work/**`, PR hacia `main` y `workflow_dispatch`: [`4502475`](https://github.com/jonhararagi/wordwaifu/commit/4502475cdf9b536c0c5d6dbf51a83efc7408ae6d).
@@ -26,11 +29,11 @@
 - **WF-004-C.2 · DONE / PASS_REAL histórico:** snapshots previos verificados para los cinco tipos de borrado; límite 25/26 validado. Evidencia histórica: [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita cambios posteriores de C.3.
 
 ## HEAD de código funcional validado más reciente
-- Último commit funcional: `b75c7142f6e33dd03ed16229e9bd2c065ca7e538` (rollback del respaldo local y tombstone mínimo tras borrado permanente).
-- HEAD de validación que incluye la regresión y el validador estructural actualizado: `e09db0dda3460b7c7406b3c19eb398a2ee2c0e19`.
-- [Validate WordWaifu — push run 38297486465 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38296993845).
-- [Validate WordWaifu — PR run 38297492417 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38297000005).
-- [DanMachi Lore and Retrieval Integrity — PR run 38297492488 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38297000007).
+- Integración consolidada en `main`: `11a5ed555b703109d06d9044252e64084901b5fc`.
+- El árbol exacto de PR #16 (`e76dc2b5c31b6e1286db04d2a393114fa878d0cb`) pasó Chromium browser smoke, la validación de estructura y el validador DanMachi.
+- [Validate WordWaifu — run 38386054444 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38386054444).
+- [DanMachi Lore and Retrieval Integrity — run 38386054860 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38386054860).
+-//github.com/jonhararagi/wordwaifu/actions/runs/38297000007).
 - Chromium confirma CRUD del Panel de arte en IndexedDB y respaldo local, fallos simulados sin falso éxito, papelera y snapshots, expedientes ampliados y separación de Ryu en `CONT-AR` y `CONT-ANIME`.
 - Regresiones de pestaña obsoleta: un autosave no puede resucitar un universo en papelera ni recrear un ID tras borrado permanente. El borrado purga el payload y snapshots, conserva solo una marca oculta de ID, y los guardados/activaciones de ese ID se rechazan.
 
