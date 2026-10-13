@@ -37,7 +37,7 @@ const META={
 
 Object.assign(META,{
 "CHAR-ISKA-BRA":{overview:"Iska Bra · integrante de la red histórica de Astrea Familia. La ficha inicial prioriza procedencia y navegación, sin rellenar huecos biográficos.",states:{"CONT-AR":{summary:"La referencia de roster comunitaria la sitúa en la primera Astrea Familia; el portal oficial de DanMachi IV aporta un perfil de adaptación de este personaje.",period:"Astrea Record · Era Oscura; fecha individual no establecida.",affiliation:"Astrea Familia · afiliación histórica provisional"}}},
-"CHAR-MARYUU-REAGE":{overview:"Maryuu Reage · integrante de la primera generación según el roster secundario; necesita una verificación primaria individual.",states:{"CONT-AR":{summary:"La referencia comunitaria la incluye en la red histórica de Astrea Familia. No se agregan todavía rasgos personales o acciones individuales.",period:"Periodo histórico de Astrea Familia · fecha no establecida.",affiliation:"Astrea Familia · roster secundario"}}},
+"CHAR-MARIYU-LEAGE":{overview:"Maryuu Reage · integrante de la primera generación según el roster secundario; necesita una verificación primaria individual.",states:{"CONT-AR":{summary:"La referencia comunitaria la incluye en la red histórica de Astrea Familia. No se agregan todavía rasgos personales o acciones individuales.",period:"Periodo histórico de Astrea Familia · fecha no establecida.",affiliation:"Astrea Familia · roster secundario"}}},
 "CHAR-NOIN-UNIC":{overview:"Noin Unic · ficha provisional del roster histórico, con referencia a un perfil de la adaptación.",states:{"CONT-AR":{summary:"La referencia comunitaria la enumera entre las integrantes históricas. Su perfil oficial de adaptación permite consultar la representación visual, pero se requieren escenas para describir relaciones individuales.",period:"Astrea Record / representación de la adaptación · fecha interna no establecida.",affiliation:"Astrea Familia · afiliación histórica"}}},
 "CHAR-NEZE-RANKETT":{overview:"Neze Rankett · ficha provisional del roster histórico.",states:{"CONT-AR":{summary:"El personaje figura entre las integrantes históricas de Astrea Familia en las referencias incorporadas. Esta ficha no inventa personalidad ni actos particulares.",period:"Astrea Record / representación de la adaptación · fecha interna no establecida.",affiliation:"Astrea Familia · afiliación histórica"}}},
 "CHAR-ASTA-KNOX":{overview:"Asta Knox · ficha provisional del roster histórico.",states:{"CONT-AR":{summary:"El personaje figura entre las integrantes históricas de Astrea Familia en las referencias incorporadas. Su biografía y sus vínculos particulares permanecen pendientes.",period:"Astrea Record / representación de la adaptación · fecha interna no establecida.",affiliation:"Astrea Familia · afiliación histórica"}}},
@@ -52,6 +52,37 @@ Object.assign(META,{
 META["CHAR-RYUU-LION"].states["CONT-MAIN-LN"]={summary:"La sinopsis editorial de Familia Chronicle: Episode Ryuu 2 presenta a Ryu partiendo sola hacia una ciudad de forja para visitar a Astrea y buscar fuerza; el detalle del encuentro requiere el volumen.",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial; fecha interna exacta no fijada aquí.",affiliation:"Aventurera viajando para ver a Astrea"};
 META["CHAR-ASTREA"].states["CONT-ANIME"]={summary:"El perfil oficial posterior de DanMachi V sitúa a Astrea fuera de Orario con nuevos seguidores. Este estado no reemplaza su rol histórico en Astrea Record.",period:"Estado posterior descrito en DanMachi V · fecha interna no fijada.",affiliation:"Diosa · nueva Familia fuera de Orario"};
 META["CHAR-ASTREA"].states["CONT-MAIN-LN"]={summary:"Una sinopsis editorial confirma que Ryu emprende un viaje para ver a Astrea; la ubicación concreta y la composición de la nueva Familia se conservan como pistas secundarias hasta cotejo primario.",period:"Etapa posterior · fuentes editoriales y secundarias separadas.",affiliation:"Astrea · nueva Familia según referencia secundaria"};
+
+
+META["CHAR-RYUU-LION"].states["CONT-MAIN-LN"]={
+summary:"La sinopsis editorial de Familia Chronicle: Episode Ryuu 2 presenta a Ryu saliendo sola de Orario hacia la Ciudad Forjadora de Espadas, al este, para ver a Astrea y buscar fuerza. Al llegar, choca con las nuevas seguidoras de la diosa y Astrea le ordena quedarse allí y darle una respuesta.",
+period:"Familia Chronicle: Episode Ryuu 2 · mientras Orario se prepara para el War Game Hestia–Freya; cinco años después del empeño que menciona la sinopsis.",
+affiliation:"Ryu en viaje; Astrea y nuevas seguidoras fuera de Orario (la ubicación de Solingen sigue siendo dato secundario)"
+};
+META["CHAR-ALISE-LOVELACE"].states["CONT-ANIME"]={
+summary:"El perfil oficial de DanMachi IV la describe como humana de nivel 4 y capitana histórica. Suele ser frontal y sincera, pero a veces actúa de forma despreocupada e irresponsable para su puesto; aun así, sus compañeras la quieren y confían en ella. Su principio es guardar la justicia en el corazón, no blandirla, y reverencia a Astrea.",
+period:"Perfil oficial DanMachi IV · recuerdo de la antigua Astrea Familia; no usar como estado atemporal.",
+affiliation:"Astrea Familia · capitana histórica"
+};
+META["CHAR-KAGUYA"].states["CONT-ANIME"]={
+summary:"El perfil oficial la identifica como humana de nivel 4, procedente del Lejano Oriente y vicecapitana. Es una combatiente cuerpo a cuerpo notable; su apariencia refinada contrasta con un habla áspera. Choca repetidamente con Ryu, aunque ambas reconocen la capacidad de la otra.",
+period:"Perfil oficial DanMachi IV · representación histórica de Astrea Familia.",
+affiliation:"Astrea Familia · vicecapitana"
+};
+META["CHAR-LYRA"].states["CONT-ANIME"]={
+summary:"La ficha oficial presenta a Lyra como Pallum de nivel 3, perspicaz, astuta y rápida para leer situaciones. Sus observaciones pueden ir al centro del problema; contribuye a coordinar al grupo, y Ryu confía en ella casi tanto como en Alise. Su epíteto se romaniza como Sly Rat (狡鼠).",
+period:"Perfil oficial DanMachi IV · representación histórica de Astrea Familia.",
+affiliation:"Astrea Familia · aventurera y apoyo táctico"
+};
+META["CHAR-ASTREA"].states["CONT-ANIME"]={
+summary:"El perfil oficial de DanMachi IV describe a Astrea como diosa de justicia y orden, misericordiosa y amable, muy apreciada por su Familia y la ciudadanía. En la adaptación, la primera Familia defendía a los débiles y combatía el mal; tras el desastre del Dungeon, solo Ryu quedó como superviviente conocida.",
+period:"Recuerdo de la Era Oscura mostrado en DanMachi IV; el perfil posterior de DanMachi V la sitúa fuera de Orario con nuevas seguidoras.",
+affiliation:"Diosa de justicia y orden · Astrea Familia histórica"
+};
+META["CHAR-MARIYU-LEAGE"]={
+overview:"Mariyu Leage (también buscable como Mariyu Reage o Maryuu Reage) · integrante humana de Astrea Familia según el perfil oficial de DanMachi IV.",
+states:{"CONT-ANIME":{summary:"El perfil oficial la identifica como humana y la incluye en Astrea Familia; no desarrolla su psicología o acciones individuales en esa entrada.",period:"Perfil oficial DanMachi IV · Astrea Familia histórica.",affiliation:"Astrea Familia · integrante histórica"}}
+};
 
 const REL={
 "CHAR-RYUU-LION":{"CONT-AR":[
@@ -108,7 +139,7 @@ REL["CHAR-ASTREA"]["CONT-AR"].push(
 
 REL["CHAR-RYUU-LION"]["CONT-AR"].push(
 {targetId:"CHAR-ISKA-BRA",label:"Iska Bra · integrante histórica",type:"Afiliación compartida · roster secundario",description:"El roster comunitario la enumera entre las integrantes de la primera Astrea Familia. La arista prueba pertenencia al grupo, no amistad individual.",refs:["DMR-007-CLM-005"]},
-{targetId:"CHAR-MARYUU-REAGE",label:"Maryuu Reage · integrante histórica",type:"Afiliación compartida · roster secundario",description:"La lista comunitaria la enumera como parte de la primera Familia. La pertenencia debe cotejarse con los volúmenes.",refs:["DMR-007-CLM-005"]},
+{targetId:"CHAR-MARIYU-LEAGE",label:"Maryuu Reage · integrante histórica",type:"Afiliación compartida · roster secundario",description:"La lista comunitaria la enumera como parte de la primera Familia. La pertenencia debe cotejarse con los volúmenes.",refs:["DMR-007-CLM-005"]},
 {targetId:"CHAR-NOIN-UNIC",label:"Noin Unic · integrante histórica",type:"Afiliación compartida",description:"Figura en el roster histórico de Astrea Familia. No se infiere una amistad o escena personal a partir de la membresía.",refs:["DMR-007-CLM-005"]},
 {targetId:"CHAR-NEZE-RANKETT",label:"Neze Rankett · integrante histórica",type:"Afiliación compartida",description:"Figura en el roster histórico de Astrea Familia. No se infiere una amistad o escena personal a partir de la membresía.",refs:["DMR-007-CLM-005"]},
 {targetId:"CHAR-ASTA-KNOX",label:"Asta Knox · integrante histórica",type:"Afiliación compartida",description:"Figura en el roster histórico de Astrea Familia. Los vínculos individuales necesitan pasajes específicos.",refs:["DMR-007-CLM-005"]},
@@ -128,7 +159,7 @@ REL["CHAR-RYUU-LION"]["CONT-ANIME"]=[
 ];
 REL["CHAR-ASTREA"]["CONT-AR"].push(
 {targetId:"CHAR-ISKA-BRA",label:"Iska Bra · Familia histórica",type:"Afiliación histórica",description:"El roster secundario la enumera entre las integrantes de la primera Familia asociada a Astrea.",refs:["DMR-007-CLM-005"]},
-{targetId:"CHAR-MARYUU-REAGE",label:"Maryuu Reage · Familia histórica",type:"Afiliación histórica · secundaria",description:"La lista comunitaria la incluye en el roster histórico; falta cotejo directo con la novela.",refs:["DMR-007-CLM-005"]},
+{targetId:"CHAR-MARIYU-LEAGE",label:"Maryuu Reage · Familia histórica",type:"Afiliación histórica · secundaria",description:"La lista comunitaria la incluye en el roster histórico; falta cotejo directo con la novela.",refs:["DMR-007-CLM-005"]},
 {targetId:"CHAR-NOIN-UNIC",label:"Noin Unic · Familia histórica",type:"Afiliación histórica",description:"La lista de integrantes permite navegar desde la diosa al roster; no demuestra escenas individuales.",refs:["DMR-007-CLM-005"]},
 {targetId:"CHAR-NEZE-RANKETT",label:"Neze Rankett · Familia histórica",type:"Afiliación histórica",description:"La lista de integrantes permite navegar desde la diosa al roster; no demuestra escenas individuales.",refs:["DMR-007-CLM-005"]},
 {targetId:"CHAR-ASTA-KNOX",label:"Asta Knox · Familia histórica",type:"Afiliación histórica",description:"La lista de integrantes permite navegar desde la diosa al roster; no demuestra escenas individuales.",refs:["DMR-007-CLM-005"]},
@@ -136,14 +167,12 @@ REL["CHAR-ASTREA"]["CONT-AR"].push(
 {targetId:"CHAR-CELTY-SROWA",label:"Celty Srowa · Familia histórica",type:"Afiliación histórica",description:"La lista de integrantes permite navegar desde la diosa al roster; no demuestra escenas individuales.",refs:["DMR-007-CLM-005"]}
 );
 REL["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
-{targetId:"CHAR-ASTREA",label:"Astrea · visita fuera de Orario",type:"Viaje y objetivo documentados en sinopsis editorial",description:"La sinopsis oficial de Familia Chronicle: Episode Ryuu 2 presenta a Ryu partiendo para visitar a Astrea y buscar fuerza. Este estado no debe confundirse con la relación histórica en Astrea Record.",refs:["DMR-007-CLM-009"]},
+{targetId:"CHAR-ASTREA",label:"Astrea · viaje y conflicto en la Ciudad Forjadora",type:"Viaje y conflicto documentados en sinopsis editorial",description:"La sinopsis oficial sitúa a Ryu viajando desde Orario para ver a Astrea, buscando fuerza; al llegar, la diosa le ordena permanecer en la Ciudad Forjadora de Espadas y responder a la situación con sus nuevas seguidoras.",refs:["DMR-007-CLM-009","DMR-007-CLM-013","DMR-007-CLM-014"]},
 {targetId:"CHAR-ALISE-LOVELACE",label:"Alise · legado de la antigua capitania",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria conecta la memoria de Alise con la evolución posterior de Ryu. Se muestra como pista secundaria y no como escena verificada de la novela.",refs:["DMR-007-CLM-012"]},
 {targetId:"CHAR-KAGUYA",label:"Kaguya · legado de las compañeras",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria relaciona el legado de Kaguya con la evolución posterior de Ryu; requiere cotejo con el texto original.",refs:["DMR-007-CLM-012"]},
 {targetId:"CHAR-LYRA",label:"Lyra · legado de las compañeras",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria relaciona el legado de Lyra con la evolución posterior de Ryu; requiere cotejo con el texto original.",refs:["DMR-007-CLM-012"]}
 ];
-REL["CHAR-ASTREA"]["CONT-ANIME"]=[
-{targetId:"CHAR-RYUU-LION",label:"Ryu · vínculo histórico y posterior",type:"Relación entre estados, con continuidad visible",description:"La fuente oficial sitúa a Astrea fuera de Orario con nuevos seguidores. La visita de Ryu se respalda en una sinopsis editorial distinta, no en esta página de adaptación.",refs:["DMR-007-CLM-008"]}
-];
+// No anime-continuity relationship edge is inferred from the Astrea V profile alone.
 REL["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
 {targetId:"CHAR-RYUU-LION",label:"Ryu · visita a la diosa",type:"Encuentro posterior",description:"La sinopsis oficial de Familia Chronicle describe el viaje de Ryu para ver a Astrea; detalles adicionales del encuentro requieren el volumen.",refs:["DMR-007-CLM-009"]},
 {targetId:"CHAR-CECIL-BLACKLIZA",label:"Cecil Blackliza · nueva capitana (fuente secundaria)",type:"Nueva generación · pendiente de cotejo",description:"El roster comunitario identifica a Cecil como capitana de la nueva Familia. Se mantiene como fuente secundaria.",refs:["DMR-007-CLM-011"]},
@@ -229,9 +258,19 @@ MOM["CHAR-RYUU-LION"]["CONT-ANIME"].push(
 {id:"ryu-kaguya-friction",title:"Desacuerdo que convive con el respeto",period:"Perfil oficial de DanMachi IV · Astrea Familia",summary:"La adaptación describe una relación con roces frecuentes entre Ryu y Kaguya y respeto por sus capacidades.",refs:["DMR-007-CLM-002"],people:["CHAR-RYUU-LION","CHAR-KAGUYA"]},
 {id:"ryu-lyra-support",title:"Una compañera de confianza estratégica",period:"Perfil oficial de DanMachi IV · Astrea Familia",summary:"El perfil oficial destaca la perspicacia de Lyra en la red histórica de Ryu.",refs:["DMR-007-CLM-003"],people:["CHAR-RYUU-LION","CHAR-LYRA"]}
 );
+
+MOM["CHAR-RYUU-LION"]["CONT-MAIN-LN"].push(
+{id:"ryu-city-forge",title:"El viaje hacia la Ciudad Forjadora de Espadas",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",summary:"Ryu deja Orario sola y viaja hacia el este para visitar a Astrea, buscar fuerza y seguir adelante después de cinco años de determinación.",refs:["DMR-007-CLM-009","DMR-007-CLM-013"],people:["CHAR-RYUU-LION","CHAR-ASTREA"]},
+{id:"ryu-astrea-orders-stay",title:"Astrea le ordena quedarse y responder",period:"Familia Chronicle: Episode Ryuu 2 · al llegar a la ciudad",summary:"Ryu choca con las nuevas seguidoras de Astrea; la diosa no le permite regresar de inmediato y le ordena quedarse en la Ciudad Forjadora de Espadas, pidiéndole que dé su respuesta.",refs:["DMR-007-CLM-014"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]}
+);
+
 MOM["CHAR-RYUU-LION"]["CONT-AR"].push(
 {id:"ryu-loss-legacy",title:"La primera Familia Astrea y sus pérdidas",period:"Era Oscura · fuente secundaria",summary:"Una referencia comunitaria conecta el fin de la primera Familia con el Juggernaut y el trauma de Ryu. Es un resumen con spoilers, pendiente de cotejo por volumen.",refs:["DMR-007-CLM-006"],people:["CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-KAGUYA","CHAR-LYRA"]},
 {id:"ryu-memorial",title:"El memorial para las compañeras caídas",period:"Dungeon · ubicación secundaria asociada al piso 18",summary:"La fuente comunitaria afirma que Ryu recuerda a las integrantes perdidas mediante un memorial. Debe localizarse la escena en la novela antes de tratar el detalle como verificado.",refs:["DMR-007-CLM-007"],people:["CHAR-RYUU-LION"]}
+);
+
+MOM["CHAR-RYUU-LION"]["CONT-ANIME"].push(
+{id:"ryu-family-justice",title:"La misión y caída de Astrea Familia",period:"DanMachi IV · episodio 20",summary:"La sinopsis oficial presenta a la primera Familia como protectora de los débiles y combatiente contra el mal; su nombre desaparece en la oscuridad del Dungeon, dejando a Ryu como única superviviente conocida. La causa detallada del desastre requiere cotejar los episodios y el texto de Astrea Record.",refs:["DMR-007-CLM-026"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-ALISE-LOVELACE","CHAR-KAGUYA","CHAR-LYRA"]}
 );
 MOM["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
 {id:"ryu-visit-astrea",title:"Viajar para reencontrarse con Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",summary:"Ryu parte sola para visitar a la diosa, buscar fuerza y avanzar después de años de determinación; la sinopsis no reemplaza el relato del volumen.",refs:["DMR-007-CLM-009"],people:["CHAR-RYUU-LION","CHAR-ASTREA"]}
@@ -242,12 +281,21 @@ MOM["CHAR-ASTREA"]["CONT-ANIME"]=[
 MOM["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
 {id:"astrea-new-family",title:"Una nueva generación de Familia",period:"Etapa posterior · roster comunitario",summary:"La fuente secundaria enumera una nueva generación y una sede asociada a Solingen. Quedan pendientes localizadores primarios para rango, roster y ubicación.",refs:["DMR-007-CLM-010","DMR-007-CLM-011"],people:["CHAR-ASTREA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]}
 ];
+MOM["CHAR-ASTREA"]["CONT-ANIME"].push(
+{id:"astrea-first-familia-fall",title:"La primera Familia Astrea protege a los débiles",period:"DanMachi IV · episodio 20 · spoiler mayor",summary:"La sinopsis oficial recuerda a la Familia como defensora de los débiles y de la justicia; la historia del episodio habla de su desaparición en el Dungeon y del único superviviente conocido, Ryu.",refs:["DMR-007-CLM-025","DMR-007-CLM-026"],people:["CHAR-ASTREA","CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-KAGUYA","CHAR-LYRA"]}
+);
+
 TIMELINE["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
-{id:"t-ryu-visit-astrea",title:"Viaje para visitar a Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",refs:["DMR-007-CLM-009"]}
+{id:"t-ryu-visit-astrea",title:"Viaje para visitar a Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",refs:["DMR-007-CLM-009","DMR-007-CLM-013"]},
+{id:"t-ryu-stays-city",title:"Astrea le pide quedarse en la Ciudad Forjadora",period:"Familia Chronicle: Episode Ryuu 2 · tras su llegada",refs:["DMR-007-CLM-014"]}
 ];
 TIMELINE["CHAR-ASTREA"]["CONT-ANIME"].push(
 {id:"t-astrea-outside-orario",title:"Astrea reside fuera de Orario",period:"Perfil de adaptación DanMachi V",refs:["DMR-007-CLM-008"]}
 );
+TIMELINE["CHAR-ASTREA"]["CONT-ANIME"].push(
+{id:"t-astrea-first-familia",title:"La primera Astrea Familia y su desaparición",period:"DanMachi IV · episodio 20 · adaptación",refs:["DMR-007-CLM-025","DMR-007-CLM-026"]}
+);
+
 TIMELINE["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
 {id:"t-astrea-new-family",title:"Nueva generación de Astrea Familia",period:"Etapa posterior · referencia secundaria",refs:["DMR-007-CLM-010","DMR-007-CLM-011"]}
 ];
@@ -266,6 +314,35 @@ references:[
 {label:"GA Bunko · Familia Chronicle: Episode Ryuu 2",url:"https://ga.sbcr.jp/product/9784815623692/",kind:"official"},
 {label:"Familia Astrea · wiki comunitaria en español (secundaria)",url:"https://danmachi.fandom.com/es/wiki/Familia_Astrea",kind:"community"}
 ]
+};
+
+
+EXTENDED["CHAR-ALISE-LOVELACE"]["CONT-ANIME"]={
+title:"Alise Lovell · capitana y código de justicia",
+summary:"El perfil oficial describe una capitana sincera y frontal, a veces despreocupada para su responsabilidad, pero querida y respetada; entiende la justicia como algo que se guarda en el corazón y reverencia a Astrea.",
+sections:[
+{title:"Liderazgo sin idealización",text:"Alise combina energía y franqueza con momentos de descuido. Las compañeras la siguen no porque cada decisión sea perfecta, sino pese a sus defectos y por el respeto y cariño que existe dentro del grupo."},
+{title:"Idea de justicia",text:"Su principio no consiste en blandir la justicia como un arma: la lleva en el corazón. Este matiz ayuda a entender qué tipo de referencia moral representa para Ryu."}
+],
+references:[{label:"Perfil oficial DanMachi IV · Alise Lovell",url:"https://danmachi.com/danmachi4/character/",kind:"official"},{label:"GA Bunko · Astrea Record 1",url:"https://ga.sbcr.jp/product/9784815610173",kind:"official"}]
+};
+EXTENDED["CHAR-KAGUYA"]["CONT-ANIME"]={
+title:"Gojouno Kaguya · vicecapitana, combatiente y fricción con Ryu",
+summary:"La adaptación la describe como una combatiente muy capaz, de nivel 4 y procedente del Lejano Oriente. Su exterior refinado contrasta con su habla áspera; discute con Ryu y aun así respeta su capacidad.",
+sections:[
+{title:"Papel dentro de Astrea Familia",text:"Kaguya es vicecapitana y una de las mejores luchadoras cuerpo a cuerpo del grupo. No es solo una compañera nominal: su capacidad y su fricción con Ryu forman parte del retrato oficial."},
+{title:"Relación con Ryu",text:"La adaptación destaca que chocan repetidamente pero reconocen las habilidades de la otra. Por ello la relación está etiquetada como fricción y respeto, no como amistad incondicional."}
+],
+references:[{label:"Perfil oficial DanMachi IV · Gojouno Kaguya",url:"https://danmachi.com/danmachi4/character/",kind:"official"}]
+};
+EXTENDED["CHAR-LYRA"]["CONT-ANIME"]={
+title:"Lyra · inteligencia táctica y confianza de Ryu",
+summary:"El perfil oficial la identifica como Pallum de nivel 3, perspicaz, astuta y rápida para juzgar situaciones. Ryu confía en ella casi tanto como en Alise; su ayuda también coordina al grupo.",
+sections:[
+{title:"Cómo ayuda al grupo",text:"Lyra no solo pertenece a Astrea Familia: observa, evalúa y expresa críticas directas que permiten poner el foco en lo que importa. La adaptación la presenta como una voz táctica capaz de hacer que las demás se alineen."},
+{title:"Ryu y Lyra",text:"La fuente oficial señala una confianza especialmente alta de Ryu hacia Lyra, situada por debajo de la que deposita en Alise. Es más específico que inferir cercanía a partir de una afiliación común."}
+],
+references:[{label:"Perfil oficial DanMachi IV · Lyra",url:"https://danmachi.com/danmachi4/character/",kind:"official"}]
 };
 
 EXTENDED["CHAR-RYUU-LION"]["CONT-AR"].sections.push(
@@ -290,7 +367,7 @@ references:[
 
 for(const [id,name,scope,summary,url] of [
 ["CHAR-ISKA-BRA","Iska Bra","CONT-AR","El roster secundario la vincula con la primera Familia Astrea; la adaptación oficial también ofrece un perfil. Pertenencia no significa que WordWaifu ya conozca cada relación personal.","https://danmachi.com/danmachi4/character/"],
-["CHAR-MARYUU-REAGE","Maryuu Reage","CONT-AR","La lista comunitaria la enumera entre las integrantes históricas. Falta un perfil primario cotejado, así que no se inventan apariencia o carácter.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"],
+["CHAR-MARIYU-LEAGE","Mariyu Reage","CONT-AR","La lista comunitaria la enumera entre las integrantes históricas. Falta un perfil primario cotejado, así que no se inventan apariencia o carácter.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"],
 ["CHAR-NOIN-UNIC","Noin Unic","CONT-AR","El portal oficial de DanMachi IV ofrece un perfil en el contexto de Astrea Familia; la ficha individual extensa queda pendiente de escenas y localizadores.","https://danmachi.com/danmachi4/character/"],
 ["CHAR-NEZE-RANKETT","Neze Rankett","CONT-AR","El portal oficial de DanMachi IV ofrece un perfil en el contexto de Astrea Familia. No se amplía su psicología o historia sin evidencia individual.","https://danmachi.com/danmachi4/character/"],
 ["CHAR-ASTA-KNOX","Asta Knox","CONT-AR","El portal oficial de DanMachi IV ofrece un perfil en el contexto de Astrea Familia. Los detalles personales no deben rellenarse por asociación con el grupo.","https://danmachi.com/danmachi4/character/"],
@@ -301,7 +378,7 @@ for(const [id,name,scope,summary,url] of [
 ["CHAR-SHAU","Shau","CONT-MAIN-LN","Figura en el roster comunitario de la nueva Familia. Aún no hay biografía individual primaria incorporada a WordWaifu.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"],
 ["CHAR-ULANDA","Ulanda","CONT-MAIN-LN","Figura en el roster comunitario de la nueva Familia. Aún no hay biografía individual primaria incorporada a WordWaifu.","https://danmachi.fandom.com/es/wiki/Familia_Astrea"]
 ]){
-  if(id==="CHAR-MARYUU-REAGE"||scope==="CONT-MAIN-LN"){
+  if(id==="CHAR-MARIYU-LEAGE"||scope==="CONT-MAIN-LN"){
     EXTENDED[id]={[scope]:{title:name+" · ficha provisional",summary,sections:[{title:"Información disponible",text:summary},{title:"Qué falta",text:"Cotejar identidad, romanización, historia, apariencia, habilidades y relaciones con una fuente primaria; no convertir menciones de roster en biografías completas."}],references:[{label:"Referencia de roster (fuente secundaria)",url,kind:"community"}]}};
   }else{
     EXTENDED[id]={"CONT-AR":{title:name+" · red histórica de Astrea Familia",summary,sections:[{title:"Información disponible",text:summary},{title:"Qué falta",text:"Localizar capítulos de Astrea Record para describir apariencia, decisiones y vínculos personales. La arista hacia Ryu demuestra afiliación histórica, no intimidad automáticamente."}],references:[{label:"Perfil oficial de la adaptación DanMachi IV",url:"https://danmachi.com/danmachi4/character/",kind:"official"},{label:"Familia Astrea · fuente secundaria",url:"https://danmachi.fandom.com/es/wiki/Familia_Astrea",kind:"community"}]},
