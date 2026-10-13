@@ -42,7 +42,11 @@
           "targetId": "SYS-CARD-PACT"
         }
       ],
-      "sourceNotes": "No asignar una jerarquía o biografía única a todas las versiones."
+      "sourceNotes": "No asignar una jerarquía o biografía única a todas las versiones.",
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ]
     },
     {
       "id": "LAT-MAP-TRENGT",
@@ -70,6 +74,10 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -93,6 +101,10 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -117,6 +129,10 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -140,6 +156,10 @@
           "type": "related_tradition",
           "targetId": "LAT-GUA-POMBERO"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -163,6 +183,10 @@
           "type": "related_tradition",
           "targetId": "LAT-GUA-POMBERO"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -186,6 +210,10 @@
           "type": "related_tradition",
           "targetId": "LAT-BRA-BOITATA"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -210,6 +238,10 @@
           "type": "related_tradition",
           "targetId": "LAT-BRA-CURUPIRA"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -233,6 +265,10 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -257,6 +293,10 @@
           "type": "thematic_counterpart",
           "targetId": "LAT-AND-SUPAY"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -280,6 +320,10 @@
           "type": "related_deity",
           "targetId": "LAT-AND-VIRACOCHA"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -303,6 +347,10 @@
           "type": "related_deity",
           "targetId": "LAT-AND-INTI"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -326,6 +374,10 @@
           "type": "thematic_counterpart",
           "targetId": "LAT-AND-PACHAMAMA"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -350,6 +402,10 @@
           "type": "related_deity",
           "targetId": "LAT-MEX-TEZCATLIPOCA"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -374,6 +430,10 @@
           "type": "thematic_rival",
           "targetId": "LAT-MEX-QUETZALCOATL"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -397,6 +457,10 @@
           "type": "can_pair_with",
           "targetId": "WEAPON-MACUAHUITL"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -420,6 +484,10 @@
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
       ]
     },
     {
@@ -444,6 +512,11 @@
           "type": "paired_myth",
           "targetId": "LAT-MAY-IXCHEL"
         }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING",
+        "SRC-POPOL-VUH"
       ]
     },
     {
@@ -479,7 +552,11 @@
         "risks": "Lesiones graves; el registro no propone mecánicas de combate real.",
         "evolutionStages": [],
         "adaptationMechanics": "Si una historia le atribuye energía espiritual o evolución, etiquetarlo como adaptación original."
-      }
+      },
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ]
     },
     {
       "id": "WEAPON-EXCALIBUR",
@@ -519,7 +596,10 @@
         "risks": "Confundir versiones medievales y reinterpretaciones modernas.",
         "evolutionStages": [],
         "adaptationMechanics": "La capacidad de elegir portador, sellos o poderes elementales es una regla ficticia que debe declararse."
-      }
+      },
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ]
     },
     {
       "id": "WEAPON-GUNGNIR",
@@ -560,7 +640,11 @@
         "risks": "Las habilidades de precisión absoluta son adaptación.",
         "evolutionStages": [],
         "adaptationMechanics": "Los efectos sobrenaturales concretos deben marcarse como ficción."
-      }
+      },
+      "sourceIds": [
+        "SRC-PRIMARY-EDDA",
+        "SRC-BRITANNICA-MYTH"
+      ]
     },
     {
       "id": "WEAPON-MJOLNIR",
@@ -600,7 +684,11 @@
         "risks": "No presentar las reglas de Marvel u otras adaptaciones como tradición antigua.",
         "evolutionStages": [],
         "adaptationMechanics": "Retorno a la mano, selección del portador y ataques elementales pueden definirse como mecánicas originales."
-      }
+      },
+      "sourceIds": [
+        "SRC-PRIMARY-EDDA",
+        "SRC-BRITANNICA-MYTH"
+      ]
     },
     {
       "id": "WEAPON-KUSANAGI",
@@ -645,7 +733,11 @@
         "risks": "No confundir la narración mítica con afirmaciones arqueológicas sobre el objeto físico conservado.",
         "evolutionStages": [],
         "adaptationMechanics": "Cortes dimensionales o control del viento son añadidos ficticios."
-      }
+      },
+      "sourceIds": [
+        "SRC-PRIMARY-KOJIKI",
+        "SRC-BRITANNICA-MYTH"
+      ]
     },
     {
       "id": "WEAPON-VAJRA",
@@ -685,7 +777,10 @@
         "risks": "Evitar descontextualizar un objeto religioso como mero accesorio bélico.",
         "evolutionStages": [],
         "adaptationMechanics": "Descargas de rayo o barreras son mecánicas de ficción."
-      }
+      },
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ]
     },
     {
       "id": "WEAPON-TRISHULA",
@@ -725,7 +820,10 @@
         "risks": "No confundir símbolo devocional con evidencia de capacidades físicas sobrenaturales.",
         "evolutionStages": [],
         "adaptationMechanics": "Manipulación temporal o de tres planos es adaptación si se usa en la historia."
-      }
+      },
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ]
     },
     {
       "id": "RELIC-ARK-ALLIANCE",
@@ -759,7 +857,11 @@
         "risks": "Distinguir tradición textual, creencia religiosa e hipótesis arqueológica.",
         "evolutionStages": [],
         "adaptationMechanics": "Sellos, entidades vinculadas o efectos de combate son invención narrativa."
-      }
+      },
+      "sourceIds": [
+        "SRC-MET-COLLECTION",
+        "SRC-BRITISH-MUSEUM"
+      ]
     },
     {
       "id": "SYS-CARD-PACT",
