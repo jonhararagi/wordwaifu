@@ -275,11 +275,12 @@ async function run() {
     assert.ok(personalityText.toLocaleLowerCase("es").includes("justicia"), "The personality tab must render evidence-backed motivation. Panel text: " + personalityText);
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Sin información suficiente"));
     await page.locator("#archive-tab-moments").click();
-    assert.ok(await page.locator("#archive-profile-panel [data-moment-id]").count() >= 3);
+    const historicalMomentCount = await page.locator("#archive-profile-panel [data-moment-id]").count();
+    assert.ok(historicalMomentCount >= 3);
     assert.equal(await page.locator("#archive-profile-panel .archive-moment-art").count(), 0,
       "Historical moments must not present generic placeholder illustrations as scene art.");
-    assert.equal(await page.locator("#archive-profile-panel .archive-moment-visual-reference").count(), 3,
-      "Each historical moment should show a sourced character-reference strip.");
+    assert.equal(await page.locator("#archive-profile-panel .archive-moment-visual-reference").count(), historicalMomentCount,
+      "Every historical moment should show one sourced character-reference strip, even as the dossier grows.");
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("NO ES UNA IMAGEN DE LA ESCENA"),
       "Reference portraits must not be mistaken for images of a specific canon event.");
     await page.waitForFunction(() => {
