@@ -9,7 +9,7 @@
 ## Afirmaciones trazables
 
 ### DMR-006-CLM-001 · Referencia temporal y orientación colectiva
-- `claim_id`: undefined
+- `claim_id`: DMR-006-CLM-001
 - `claim`: La sinopsis editorial del volumen 1 sitúa Astrea Record aproximadamente siete años antes de la llegada de Bell a Orario y presenta a Astrea Familia como una Familia que se alza en nombre de la justicia.
 - `character_ids`: [CHAR-ASTREA, CHAR-ALISE-LOVELACE, CHAR-RYUU-LION]
 - `aspect`: periodo, valores, identidad colectiva
@@ -32,7 +32,7 @@
 - **Límite:** referencia relativa, no fecha absoluta ni cronología completa.
 
 ### DMR-006-CLM-002 · Astrea como deidad guía
-- `claim_id`: undefined
+- `claim_id`: DMR-006-CLM-002
 - `claim`: La sinopsis editorial presenta a Astrea como la diosa bajo cuya guía Ryu busca su propia comprensión de la justicia; el perfil de adaptación la describe como deidad asociada a justicia y orden.
 - `character_ids`: [CHAR-ASTREA, CHAR-RYUU-LION]
 - `aspect`: deidad, valores, guía
@@ -55,7 +55,7 @@
 - **Límite:** no combinar la caracterización del anime con la novela sin marcar la procedencia.
 
 ### DMR-006-CLM-003 · Alise como capitana y guía de Ryu
-- `claim_id`: undefined
+- `claim_id`: DMR-006-CLM-003
 - `claim`: La sinopsis editorial del volumen 1 identifica a Alise como capitana de Astrea Familia y la presenta guiando a Ryu.
 - `character_ids`: [CHAR-ALISE-LOVELACE, CHAR-RYUU-LION]
 - `aspect`: liderazgo, relación documentada
@@ -78,7 +78,7 @@
 - **Límite:** no establece edad, nivel, historial completo ni destino posterior.
 
 ### DMR-006-CLM-004 · El conflicto histórico afecta el sentido de justicia de Ryu
-- `claim_id`: undefined
+- `claim_id`: DMR-006-CLM-004
 - `claim`: La sinopsis editorial del volumen 2 relaciona las pérdidas del periodo llamado posteriormente Los siete días de la muerte con una sacudida al sentido de justicia de Ryu; el volumen 3 resume una escalada del conflicto con Evilus.
 - `character_ids`: [CHAR-RYUU-LION, CHAR-ASTREA, CHAR-ALISE-LOVELACE]
 - `aspect`: conflicto, evolución, justicia
