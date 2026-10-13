@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
   "universeId": "danmachi",
-  "title": "DanMachi Lore · Corpus de búsqueda con resúmenes provisionales",
+  "title": "DanMachi Lore · Corpus navegable con resúmenes provisionales",
   "status": "provisional_summaries_with_source_labeled_claims",
-  "note": "Dossiers para navegación y recuperación. Un resumen o una sinopsis editorial no equivale a canon confirmado capítulo a capítulo. Mantener separados CONT-MAIN-LN, CONT-AR, adaptaciones y CONT-AU.",
+  "note": "El corpus incluye novela principal y líneas paralelas con continuidad etiquetada. Resumen editorial no equivale a cotejo de capítulo. No mezclar CONT-MAIN-LN, CONT-AR, CONT-ANIME o CONT-AU.",
   "records": [
     {
       "id": "DM-CANON-INDEX-001",
@@ -1435,17 +1435,87 @@
       "path": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
       "type": "main_story_volume_claim_index",
       "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-ASTREA-RECORD-01",
+      "path": "volumes/side/astrea-record-01.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-ASTREA-RECORD-02",
+      "path": "volumes/side/astrea-record-02.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-ASTREA-RECORD-03",
+      "path": "volumes/side/astrea-record-03.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-SWORD-ORATORIA-01",
+      "path": "volumes/side/sword-oratoria-01.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-SWORD-ORATORIA-12",
+      "path": "volumes/side/sword-oratoria-12.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-SWORD-ORATORIA-13",
+      "path": "volumes/side/sword-oratoria-13.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-RYU-01",
+      "path": "volumes/side/familia-chronicle-ryu-01.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-RYU-02",
+      "path": "volumes/side/familia-chronicle-ryu-02.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-FREYA",
+      "path": "volumes/side/familia-chronicle-freya.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-ASFI",
+      "path": "volumes/side/familia-chronicle-asfi.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-HAZE",
+      "path": "volumes/side/familia-chronicle-haze.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "RESEARCH-DM-009",
+      "path": "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
+      "type": "parallel_story_claim_index",
+      "status": "present_provisional_summary"
     }
   ],
   "lastStructuredSync": {
     "branch": "work/story-completion-danmachi-audit-2026-10",
-    "source": "Git tree commit created for the current lore coverage batch",
-    "treeSha": "aceae2a06e856d3f8c38fc03df28d1db39acc772",
-    "trackedLoreFiles": 114,
-    "records": 32,
-    "reservedIds": 70,
-    "supportingDocuments": 82,
-    "sourceCommit": "56223c6a19df2c122128d1ad7ca48ae2c1b3b204",
-    "syncNote": "Snapshot count updated after adding volume-21.md and BATCH-DM-008; volume dossiers remain provisional until primary-text locators are added."
+    "sourceCommit": "622369265b08712e4440087e7361f5151e9402d2",
+    "trackedLoreFiles": 164,
+    "records": 45,
+    "reservedIds": 68,
+    "supportingDocuments": 97,
+    "syncNote": "Se incorporan Astrea Record 1–3, Sword Oratoria 1/12/13 y Familia Chronicle Ryu 1/2, Freya, Asfi y Haze. Los resúmenes son provisionales hasta cotejo por capítulo."
   }
 }

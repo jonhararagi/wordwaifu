@@ -8,12 +8,13 @@ const documentPaths = [
   "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
   "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
   "research/inbox/BATCH-DM-005-astrea-familia-network.md",
-  "research/inbox/BATCH-DM-008-main-story-volume-map.md"
+  "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+  "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
-assert.equal(index.sourceClaimCount, 53);
-assert.equal(index.entryCount, 56);
+assert.equal(index.sourceClaimCount, 64);
+assert.equal(index.entryCount, 67);
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
@@ -21,6 +22,7 @@ assert.ok(historicalRyu.totalMatches > 0);
 assert.ok(historicalRyu.results.every(claim => claim.continuityScopes.includes("CONT-AR")));
 assert.ok(!historicalRyu.results.some(claim => claim.entryId.endsWith("--CONT-ANIME")));
 assert.ok(historicalRyu.results.some(claim => claim.claimId === "DMR-002-CLM-015"));
+assert.ok(historicalRyu.results.some(claim => claim.claimId === "DMR-009-CLM-001"));
 const animeRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(animeRyu.totalMatches > 0);
 assert.ok(animeRyu.results.every(claim => claim.continuityScopes.includes("CONT-ANIME")));
@@ -31,6 +33,10 @@ assert.equal(aisLikes.abstain, true);
 const mainRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(mainRyu.results.some(claim => claim.claimId === "DMR-008-CLM-013" || claim.claimId === "DMR-008-CLM-014"), "volume dossiers should make Ryu discoverable in the main-story continuity");
 assert.ok(mainRyu.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")));
+const ryuChronicle = corpus.search(index, { query: "Ciudad Forjadora", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ryuChronicle.results.some(claim => claim.claimId === "DMR-009-CLM-008"));
+const swordOratoria = corpus.search(index, { query: "Loki Familia", characterId: "CHAR-FINN-DEIMNE", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(swordOratoria.results.some(claim => claim.claimId === "DMR-009-CLM-004" || claim.claimId === "DMR-009-CLM-005"));
 const unsupportedNovelPreference = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "likes", spoiler: "all" });
 assert.equal(unsupportedNovelPreference.totalMatches, 0, "a personal preference cannot be filled in without evidence, even when the character appears in the main-story corpus.");
 
@@ -40,7 +46,7 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 53 source claims, 56 entries, volume retrieval, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 64 source claims, 67 entries, main and side-story retrieval, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();
