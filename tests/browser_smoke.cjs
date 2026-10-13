@@ -2575,9 +2575,10 @@ async function run() {
     assert.ok(duplicateNameEvidence.restoredSnapshotCount >= 1, "Restore must preserve the selected project's snapshots.");
     process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\\n");
 
-    // Mythic catalog: search a Latin American figure, follow its summon-system relation, then return to the prior record.
+    // Mythic catalog: close any dialog left by earlier CRUD scenarios, then verify the expanded real catalog.
+    await page.evaluate(() => { for (const dialog of document.querySelectorAll("dialog[open]")) dialog.close(); });
     await page.locator('.nav-item[data-view="mythic-catalog"]').click();
-    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("31 / 31"), null, { timeout: 5000 });
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("69 / 69"), null, { timeout: 10000 });
     await page.locator("#mythic-search").fill("Pombero");
     await page.locator('#mythic-catalog-content [data-open-entity="LAT-GUA-POMBERO"]').click();
     assert.ok((await page.locator("#mythic-catalog-content").innerText()).includes("Pombero"),
@@ -2587,6 +2588,40 @@ async function run() {
     await page.locator("#mythic-catalog-content [data-catalog-back]").click();
     await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("Pombero"), null, { timeout: 5000 });
     process.stdout.write("PASS mythic catalog: search, entity dossier, relation navigation and backtracking work.\\n");
+
+    // Generator proposals persist in the active project, survive reload, and remain editable/deletable.
+    await page.locator("#mythic-generate").click();
+    await page.locator("#mythic-draft-title").fill("Propuesta de prueba guardable");
+    await page.locator("#mythic-draft-concept").fill("Personaje original para comprobar persistencia e importación.");
+    await page.locator("#mythic-save-draft").click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-generator-status")?.textContent || "").includes("Propuesta guardada"), null, { timeout: 10000 });
+    await page.waitForFunction(() => (document.querySelector("#mythic-saved-proposals")?.innerText || "").includes("Propuesta de prueba guardable"), null, { timeout: 5000 });
+    await page.reload();
+    await page.waitForFunction(() => Boolean(document.querySelector("#project-name")?.textContent), null, { timeout: 10000 });
+    await page.locator('.nav-item[data-view="mythic-catalog"]').click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-saved-proposals")?.innerText || "").includes("Propuesta de prueba guardable"), null, { timeout: 10000 });
+    await page.locator('#mythic-saved-proposals [data-edit-proposal]').click();
+    await page.locator("#mythic-draft-title").fill("Propuesta editada de prueba");
+    await page.locator("#mythic-save-draft").click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-saved-proposals")?.innerText || "").includes("Propuesta editada de prueba"), null, { timeout: 10000 });
+    await page.locator('#mythic-saved-proposals [data-delete-proposal]').click();
+    await page.waitForFunction(() => !(document.querySelector("#mythic-saved-proposals")?.innerText || "").includes("Propuesta editada de prueba"), null, { timeout: 10000 });
+    process.stdout.write("PASS mythic generator: editable proposals persist across reload and support delete.\\n");
+
+    // Project-level mythic relation creation, edit and deletion must not mutate the source catalog.
+    await page.locator("#mythic-search").fill("Pombero");
+    await page.locator('#mythic-catalog-content [data-open-entity="LAT-GUA-POMBERO"]').click();
+    await page.locator("#mythic-relation-target").selectOption("WEAPON-MACUAHUITL");
+    await page.locator("#mythic-relation-type").selectOption("inspired_by");
+    await page.locator("[data-save-relation]").click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("Macuahuitl"), null, { timeout: 10000 });
+    await page.locator('#mythic-catalog-content [data-edit-relation]').click();
+    await page.locator("#mythic-relation-type").selectOption("contracts_with");
+    await page.locator("[data-save-relation]").click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("contracts with"), null, { timeout: 10000 });
+    await page.locator('#mythic-catalog-content [data-delete-relation]').click();
+    await page.waitForFunction(() => !(document.querySelector("#mythic-catalog-content")?.innerText || "").includes("contracts with"), null, { timeout: 10000 });
+    process.stdout.write("PASS mythic relations: project-only link create/edit/delete and reverse navigation work.\\n");
 
     // Art Studio: generate a prompt, upload an image, persist the assignment, and apply it to the character portrait.
     await page.evaluate(() => {
