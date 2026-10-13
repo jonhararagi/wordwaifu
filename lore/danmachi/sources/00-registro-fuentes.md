@@ -247,3 +247,48 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-002
 - verification_status: source_checked
 
+
+
+## DMR-004-SRC-001 · Perfiles oficiales de personajes de DanMachi IV
+
+- source_id: DMR-004-SRC-001
+- title: キャラクター | アニメ「ダンまち」シリーズ公式サイト
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi IV
+- volume_or_edition: Página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi4/character
+- accessed_at: 2026-10-13
+- locator_type: character_profile
+- locator: Sección ヘスティア・ファミリア y perfiles de ベル・クラネル, ヘスティア, リリルカ・アーデ, ヴェルフ・クロッゾ, ヤマト・命 y サンジョウノ・春姫.
+- claims_supported: [DMR-004-CLM-001, DMR-004-CLM-003, DMR-004-CLM-004, DMR-004-CLM-005, DMR-004-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación consultada directamente. Los perfiles describen el estado editorial de la adaptación; no prueban por sí solos el momento exacto de cada cambio en la novela ligera.
+- conflicting_sources: []
+- rights_note: Guardar paráfrasis y hechos breves; no copiar descripciones extensas.
+- verified_by: DANMACHI-RESEARCH-004
+- verification_status: source_checked
+
+## DMR-004-SRC-002 · Sinopsis oficial del episodio 1
+
+- source_id: DMR-004-SRC-002
+- title: 第1話 - ストーリー | TVアニメ「ダンまち」公式サイト
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi, primera temporada
+- volume_or_edition: Episodio 1; página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi/story/episode1.html
+- accessed_at: 2026-10-13
+- locator_type: episode_synopsis
+- locator: Sinopsis del episodio 1; pasaje que describe a Bell como nuevo aventurero y único miembro de Hestia Familia desde hace medio mes.
+- claims_supported: [DMR-004-CLM-001, DMR-004-CLM-002]
+- events_supported: [EVT-DM-BELL-MEETS-HESTIA-001]
+- continuity_scope: CONT-ANIME
+- reliability_note: Sinopsis oficial de adaptación; se usa para el estado de apertura del anime. La correspondencia precisa con el texto de la novela ligera requiere cotejo separado.
+- conflicting_sources: []
+- rights_note: Resumir con palabras propias.
+- verified_by: DANMACHI-RESEARCH-004
+- verification_status: source_checked
