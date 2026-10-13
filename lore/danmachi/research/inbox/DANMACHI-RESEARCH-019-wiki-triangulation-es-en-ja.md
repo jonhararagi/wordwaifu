@@ -128,3 +128,30 @@
 - [x] Registrar el límite real de acceso: el lector se abre, pero el texto no fue legible en la herramienta usada; no se inventa capítulo, página ni cita.
 - [ ] Consultar manualmente la vista previa oficial o una edición legítima legible y registrar el localizador preciso de la escena de Ottar.
 - [ ] Obtener el contenido original de ambos tuits por un medio accesible y comprobar el contexto; hasta entonces, no aprobar las afirmaciones de la wiki que dependen de ellos.
+
+
+## Quinta pasada: recuperación directa de las publicaciones de X y reintento del lector (2026-10-13)
+
+16. **Publicación original de Fujino Omori — #三周年解説 / Alfia**  
+    https://x.com/fujinoomori/status/1281196180009975809  
+    Consulta directa con extracción de página: autor mostrado 大森藤ノ (@fujinoomori), fecha 2020-07-09. El texto recuperado describe a Alfia como una combatiente extraordinaria y señala que era especialmente joven entre los mandos de Hera Familia. Añade que Alfia o Zald, por su capacidad, podrían compensar diferencias de nivel y que Alfia tendría «una posibilidad» contra la Emperatriz de nivel 9 (女帝); es una posibilidad expresada por el autor, no una afirmación de victoria ni prueba de nombre civil, roster completo o fecha de la expedición. La página expone además publicaciones encadenadas de la misma fecha que requieren registro individual si se usan como evidencia.  
+    **Estado:** fuente primaria recuperada; apta para sostener únicamente el texto explícito y su carácter hipotético.
+
+17. **Publicación original de Fujino Omori — pregunta sobre la vicecapitana de una Familia**  
+    https://x.com/fujinoomori/status/1283396877187088384  
+    Consulta directa con extracción de página: autor mostrado 大森藤ノ (@fujinoomori), fecha 2020-07-15. El texto responde una pregunta sobre la fuerza cuerpo a cuerpo de una vicecapitana, sus dos kodachi ocultas, una comparación con Ryuu y Alise, y la condición hipotética de que habría sido más fuerte que Tsubaki si hubiese alcanzado nivel 5. El texto visible no identifica por sí solo a la Emperatriz ni demuestra una afirmación sobre ella; no usarlo para respaldar datos de la Emperatriz sin resolver primero la referencia/personaje exacto.  
+    **Estado:** fuente primaria recuperada; asociación específica con la ficha «Emperatriz» no demostrada.
+
+18. **Reintento del lector oficial BinB de Episode Freya**  
+    https://r.binb.jp/epm/e1_358215_18062024160902/  
+    https://r.binb.jp/epm/e1_358215_18062024160902/core/binbReader.html?iframe=true&sm&ver=1.6930.2304&cid=DgIdFluu5uyKJbQw&msgorgn=https%3A%2F%2Fr.binb.jp%2F  
+    La página editorial accesible identifica la muestra ampliada de *Familia Chronicle episode Freya*, a Fujino Omori como autor y confirma que el libro incluye material sobre el pasado de Ottar. Se consultó también el URL del visor incrustado: solo devolvió un mensaje técnico ficticio de idioma, sin texto de las páginas. Por ello, no se obtuvo el capítulo ni el pasaje sobre los aventureros nivel 8/9. No se intentó eludir controles del lector ni acceder a contenido no expuesto públicamente por la vista previa.
+
+### Corrección de estado de la cuarta pasada
+
+- [x] Recuperar el contenido original del tuit de Omori del 2020-07-09 y registrar fecha, alcance y matiz hipotético.
+- [x] Recuperar el contenido original del tuit de Omori del 2020-07-15 y registrar que no demuestra por sí solo una afirmación sobre la Emperatriz.
+- [x] Reintentar el URL del visor oficial y confirmar que tampoco expone texto interno legible a la herramienta.
+- [ ] Seguir buscando una edición legítima legible de *Episode Freya* o una referencia primaria alternativa con localizador de la escena nivel 8/9.
+- [ ] Comprobar la referencia exacta de la wiki española de Emperatriz a cada tuit; mantener separado el texto recuperado de la interpretación de la wiki.
+- [ ] No convertir el hipotético «podría tener una posibilidad» en una victoria confirmada, ni rellenar el nombre civil o los huecos AU.
