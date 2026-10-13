@@ -107,7 +107,92 @@ async function run() {
     assert.equal(appPersistence.recordName, appPersistence.projectName, "The app boot must persist the initial project to IndexedDB.");
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
-    process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+// Story Foundry: create, edit, persist, import the repository's complete Markdown novel, and verify chapter text survives.
+    await page.locator('.nav-item[data-view="stories"]').click();
+    await page.locator("#story-create-button").click();
+    await page.locator("#story-meta-form").waitFor();
+    await page.locator("#story-meta-form [name='storyName']").fill("Historia de prueba");
+    await page.locator("#story-meta-form [name='storyDescription']").fill("Sinopsis de prueba para comprobar el guardado.");
+    await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
+    await page.locator("#story-meta-form [name='storyConflict']").fill("Un conflicto verificable.");
+    await page.locator("#story-meta-form [name='storyArcs']").fill("Protagonista: miedo → decisión → cambio");
+    await page.locator("#story-meta-form [name='storyWorldType']").selectOption("active-apocalypse-military-sf");
+    await page.locator("#story-meta-form [name='storyWorldRules']").fill("La humanidad vive tras defensas; las salidas consumen recursos escasos.");
+    await page.locator("#story-meta-form [name='storyWorldDynamics']").fill("Cada derrota reduce el territorio seguro y aumenta la presión sobre civiles y soldados.");
+    await page.locator("#story-meta-form [name='storyRevealType']").selectOption("card-contract-game");
+    await page.locator("#story-meta-form [name='storyRevealSecret']").fill("Las dos cartas centrales son entidades mitológicas creadas por la misma autora.");
+    await page.locator("#story-meta-form [name='storyRevealClues']").fill("Las cartas comparten un símbolo antiguo y reaccionan antes de que se anuncie cada duelo.");
+    await page.locator("#story-meta-form [name='storyRevealTiming']").fill("Final del segundo arco, tras descubrirse el archivo original.");
+    await page.locator("#story-meta-form [name='storyRevealConsequences']").fill("Las reglas del juego cambian y los rivales deben decidir si cooperan.");
+    await page.locator("#story-meta-form [name='storyPantheon']").fill("Diosa A: quiere recuperar su libertad, discute con el protagonista y protege a una amiga por una deuda antigua.");
+    await page.locator("#story-meta-form [name='storyEnsemble']").fill("Piloto: teme fallar | rivalidad con el equipo | salva a un compañero | aprende a confiar | capítulos 2 y 5.");
+    await page.locator("#story-meta-form [name='storyPowerCatalog']").fill("Nombre: Geas de mandato\nCategoría: mental / contrato\nPotencia: 4/5 · Técnica: alta\nActivación: contacto visual directo y orden verbal\nPrecio: erosiona la identidad\nLímites: una orden por objetivo\nEvolución: I control breve → II compulsión → III ya no puede desactivarse\nConsecuencias: el poder altera las relaciones.");
+    await page.locator("#story-meta-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelector("#story-editor-status")?.textContent.includes("Historia guardada en el proyecto local."), { timeout: 10000 });
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldType']").inputValue(), "active-apocalypse-military-sf");
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldRules']").inputValue(), "La humanidad vive tras defensas; las salidas consumen recursos escasos.");
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldDynamics']").inputValue(), "Cada derrota reduce el territorio seguro y aumenta la presión sobre civiles y soldados.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealType']").inputValue(), "card-contract-game");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealSecret']").inputValue(), "Las dos cartas centrales son entidades mitológicas creadas por la misma autora.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealClues']").inputValue(), "Las cartas comparten un símbolo antiguo y reaccionan antes de que se anuncie cada duelo.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealTiming']").inputValue(), "Final del segundo arco, tras descubrirse el archivo original.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealConsequences']").inputValue(), "Las reglas del juego cambian y los rivales deben decidir si cooperan.");
+    assert.equal(await page.locator("#story-meta-form [name='storyPantheon']").inputValue(), "Diosa A: quiere recuperar su libertad, discute con el protagonista y protege a una amiga por una deuda antigua.");
+    assert.equal(await page.locator("#story-meta-form [name='storyEnsemble']").inputValue(), "Piloto: teme fallar | rivalidad con el equipo | salva a un compañero | aprende a confiar | capítulos 2 y 5.");
+    assert.ok((await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue()).includes("III ya no puede desactivarse"), "power evolution and irreversible stage must persist");
+    // Power idea generator appends varied proposals without overwriting the user's hand-written Geass.
+    await page.locator("#story-power-generate-button").click();
+    await page.waitForFunction(() => document.querySelector("#story-power-generator-status")?.textContent.includes("Idea añadida:"), { timeout: 10000 });
+    const firstGeneratedCatalog = await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue();
+    await page.locator("#story-power-generate-button").click();
+    await page.waitForFunction((previous) => {
+      const current = document.querySelector("#story-meta-form [name='storyPowerCatalog']")?.value || "";
+      return current.length > previous.length && (document.querySelector("#story-power-generator-status")?.textContent || "").includes("Idea añadida:");
+    }, firstGeneratedCatalog, { timeout: 10000 });
+    const generatedCatalog = await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue();
+    const generatedNames = generatedCatalog.split("\n").filter(line => line.startsWith("Nombre: ")).map(line => line.slice("Nombre: ".length));
+    assert.ok(generatedCatalog.includes("Geas de mandato"), "generator must preserve the user's existing power");
+    assert.ok(generatedNames.length >= 3, "both generated proposals should be appended alongside the user's existing power");
+    assert.equal(new Set(generatedNames).size, generatedNames.length, "generator must not duplicate names already in the catalog or earlier proposals");
+    assert.ok(generatedCatalog.includes("Evolución:") && generatedCatalog.includes("Consecuencias:"), "generated ideas must include progression and narrative consequences");
+    process.stdout.write("PASS power generator: appends varied powers, preserves manual entries, and includes evolution and consequences.\\n");
+    await page.locator("#story-add-chapter-button").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1, { timeout: 5000 });
+    assert.equal(await page.locator(".story-chapter-form").count(), 1, "The editor must add a chapter to a story.");
+    await page.locator(".story-chapter-form [name='chapterTitle']").fill("Capítulo de prueba");
+    await page.locator(".story-chapter-form [name='chapterContent']").fill("Texto de capítulo que debe persistir íntegro.");
+    await page.locator(".story-chapter-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1);
+    assert.equal(await page.locator(".story-chapter-form [name='chapterContent']").inputValue(), "Texto de capítulo que debe persistir íntegro.");
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-import-file").setInputFiles({
+      name: "las-campanas-de-asteria.md",
+      mimeType: "text/markdown",
+      buffer: fs.readFileSync(path.join(root, "stories", "original", "las-campanas-de-asteria.md"))
+    });
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 4, { timeout: 5000 });
+    assert.equal(await page.locator("#story-meta-form [name='storyName']").inputValue(), "Las campanas de Asteria");
+    assert.ok((await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue()).length > 500,
+      "Markdown import must preserve the full chapter body, not just its first paragraph.");
+    assert.ok((await page.locator("#story-meta-form [name='storyArcs']").inputValue()).split("\n").length >= 4,
+      "Markdown import must preserve the protagonist arcs, not stop at the first character. Actual: " + JSON.stringify(await page.locator("#story-meta-form [name='storyArcs']").inputValue()));
+    assert.ok((await page.locator(".story-chapter-form [name='chapterTitle']").nth(3).inputValue()).includes("Un lugar en el mapa"));
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-import-file").setInputFiles({ name: "twist-roundtrip.md", mimeType: "text/markdown", buffer: Buffer.from("# Prueba de revelación\n\n## Sinopsis\n\nUna partida altera el mundo.\n\n## Conflicto central\n\nDescubrir el origen del juego.\n\n## Tipo de mundo\n\nurban-supernatural\n\n## Reglas del mundo\n\nCada carta cobra un precio.\n\n## Dinámica del mundo\n\nLas derrotas alteran la ciudad.\n\n## Motor de revelación\n\ncard-contract-game\n\n## Secreto central\n\nLas cartas son entidades mitológicas.\n\n## Pistas y falsas interpretaciones\n\nComparten el mismo sello.\n\n## Momento de revelación\n\nFinal del segundo arco.\n\n## Consecuencias del giro\n\nLos antiguos rivales cooperan.\n\n## Panteón y papel de las diosas\n\nLa diosa quiere recuperar su libertad y protege a una amiga por una deuda antigua.\n\n## Reparto coral y arcos individuales\n\nPiloto: miedo al fracaso | rivalidad con el equipo | aprende a confiar.\n\n## Catálogo de poderes y evolución\n\nNombre: Geas de mandato\nCategoría: mental / contrato\nPotencia: 4/5\nActivación: contacto visual directo\nPrecio: erosiona la identidad\nEvolución: I control breve → III ya no puede desactivarse\n\n## Capítulo 1 — El primer duelo\n\nLa carta pronunció un nombre olvidado.", "utf8") });
+    await page.waitForFunction(() => document.querySelector("#story-meta-form [name='storyName']")?.value === "Prueba de revelación", { timeout: 5000 });
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldType']").inputValue(), "urban-supernatural");
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldRules']").inputValue(), "Cada carta cobra un precio.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealType']").inputValue(), "card-contract-game");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealSecret']").inputValue(), "Las cartas son entidades mitológicas.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealClues']").inputValue(), "Comparten el mismo sello.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealTiming']").inputValue(), "Final del segundo arco.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRevealConsequences']").inputValue(), "Los antiguos rivales cooperan.");
+    assert.ok((await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue()).includes("III ya no puede desactivarse"), "Markdown import must preserve power evolution rules");
+    assert.equal(await page.locator("#story-meta-form [name='storyPantheon']").inputValue(), "La diosa quiere recuperar su libertad y protege a una amiga por una deuda antigua.");
+    assert.equal(await page.locator("#story-meta-form [name='storyEnsemble']").inputValue(), "Piloto: miedo al fracaso | rivalidad con el equipo | aprende a confiar.");
+    process.stdout.write("PASS reveal framework: Markdown import preserves world rules, clues, reveal timing and consequences.\\n");
+    process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
+        process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
     // A second tab can move this universe to trash while this page still has
     // its old in-memory state. Autosave must not write that stale state into
     // localStorage before the IndexedDB tombstone guard rejects it.
