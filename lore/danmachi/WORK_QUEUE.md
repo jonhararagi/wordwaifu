@@ -200,3 +200,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Ejecutar/confirmar CI del commit final de la tanda.
 - [ ] Cotejar la misma estructura contra el texto de novela ligera, por volumen/capítulo, sin elevar automáticamente los perfiles de anime a canon de novela.
 - [ ] Repetir el trabajo para Familia Loki y Familia Astrea con relaciones por miembro y periodos.
+
+
+## DANMACHI-RESEARCH-011 · Familia Loki: expediente de liderazgo y relaciones
+- Estado: PARTIAL; ampliación integrada en `familias/loki-familia.md`.
+- [x] Registrar fuente oficial de Sword Oratoria y sus perfiles por nombre.
+- [x] Separar roles documentados (capitán, vicecapitana, veteranos) de inferencias sobre autoridad en escenas.
+- [x] Registrar ocho afirmaciones trazables con continuidad `CONT-SO`.
+- [x] Añadir reglas de AU para no sustituir a Bell ni reescribir el roster canónico por inferencia.
+- [ ] Confirmar CI del último commit, incluido el validador de catálogo y las pruebas de navegador.
+- [ ] Reconstruir las afiliaciones históricas por evento y por volumen; los perfiles promocionales no fijan la fecha de ingreso.
+- [ ] Continuar con Familia Astrea y el roster histórico de sus integrantes, manteniendo la procedencia secundaria claramente marcada.
