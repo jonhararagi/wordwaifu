@@ -1,5 +1,5 @@
 ---
-id: CHAR-MARYUU-REAGE
+id: CHAR-MARIYU-LEAGE
 universe: danmachi
 type: character
 status: provisional
@@ -10,7 +10,7 @@ claim_refs:
   - DMR-007-CLM-005
 verification_status: provisional_secondary_or_adaptation
 ---
-# Maryuu Reage
+# Mariyu Leage / Mariyu Reage
 
 **Estado de la ficha:** provisional. Se creó para que el roster pueda explorarse desde las relaciones de WordWaifu; no debe interpretarse como una biografía completa ni como canon totalmente cotejado.
 
