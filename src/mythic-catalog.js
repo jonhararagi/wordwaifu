@@ -13,7 +13,7 @@
     original: "Original"
   };
   const kindLabels = {
-    mythic_entity:"Entidad mítica", mythic_pair:"Par mítico", culture_hero:"Héroe cultural",
+    mythic_entity:"Entidad mítica", mythic_pair:"Par mítico", culture_hero:"Héroe cultural", mythic_armor:"Armadura legendaria", spirit_avatar:"Espíritu / avatar invocable", legendary_hero:"Héroe legendario",
     folklore_entity:"Entidad folclórica", deity:"Deidad", deity_creator:"Deidad creadora",
     underworld_figure:"Figura del inframundo", hero_pair:"Pareja heroica", historical_weapon:"Arma histórica",
     legendary_weapon:"Arma legendaria", sacred_sword:"Espada sagrada", ritual_object_weapon:"Objeto ritual",
