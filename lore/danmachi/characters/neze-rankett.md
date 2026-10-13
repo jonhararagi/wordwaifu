@@ -19,23 +19,22 @@ aliases:
 ---
 # Neze Rankett
 
-**Alcance de esta ficha:** perfil de la adaptación oficial; se mantiene separado del detalle de Astrea Record y de inferencias novelísticas.
+**Alcance:** perfil de la adaptación oficial; mantenerlo separado del detalle de Astrea Record y de cualquier inferencia novelística.
 
 ## Datos identificados
 
 - **Especie:** Mujer lobo (werewolf).
 - **Voz japonesa registrada por el portal oficial:** Asuna Tomari.
-- **Afiliación disponible:** Astrea Familia en el roster oficial de DanMachi IV.
+- **Afiliación:** integrante de Astrea Familia en el roster oficial de DanMachi IV.
 - **Retrato oficial de referencia:** https://danmachi.com/danmachi4/character/images/chara_tachi_21.png
-- **Procedencia:** enlazado desde el sitio oficial; no se copia ni se presenta como imagen de una escena concreta.
- 
+- **Procedencia de la imagen:** enlazada desde el sitio oficial; no se copia ni se presenta como ilustración de una escena concreta.
+
 El perfil oficial la identifica como mujer lobo y miembro de Astrea Familia. La ficha visual no aporta una historia personal extensa ni establece todas sus relaciones.
 
 ## Relaciones y navegación
 
-- **Astrea Familia:** el vínculo de afiliación permite recorrer el roster. No demuestra por sí solo amistad íntima, rivalidad, una escena compartida ni confianza personal con Ryu.
-- **Ryu Lion / Astrea:** los enlaces de WordWaifu se rotulan según la evidencia de la continuidad seleccionada. No hay que trasladar automáticamente relaciones de la adaptación a todas las novelas.
+Astrea Familia permite recorrer el roster, pero la afiliación compartida no demuestra por sí sola amistad íntima, rivalidad o confianza personal con Ryu. WordWaifu debe mostrar los vínculos individuales solo con una fuente que los sostenga.
 
 ## Pendiente de investigación
 
-nivel, habilidades individuales, acciones, arco y relaciones específicas. Las fuentes comunitarias sirven para encontrar nombres y rutas, pero no se convierten en canon aprobado sin capítulo o página localizable.
+nivel, habilidades individuales, acciones, arco y relaciones específicas. No se rellena el hueco biográfico con suposiciones a partir del retrato.
