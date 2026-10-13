@@ -102,7 +102,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: publisher_synopsis
 - locator: Sinopsis editorial; localizar «約七年前», «リュー・リオン», «団長アリーゼ» y «闇派閥(イヴィルス)».
-- claims_supported: [DMR-001-CLM-002, DMR-001-CLM-005, DMR-001-CLM-006, DMR-001-CLM-010, DMR-006-CLM-001, DMR-006-CLM-003]
+- claims_supported: [DMR-001-CLM-002, DMR-001-CLM-005, DMR-001-CLM-006, DMR-001-CLM-010, DMR-006-CLM-001, DMR-006-CLM-002, DMR-006-CLM-003]
 - events_supported: []
 - continuity_scope: CONT-AR
 - reliability_note: Sinopsis oficial abierta directamente; volumen íntegro y localizadores internos pendientes.
