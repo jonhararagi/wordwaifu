@@ -1,3 +1,12 @@
+---
+id: DANMACHI-RESEARCH-008
+universe: danmachi
+type: research
+status: provisional
+continuity_scope: CONT-MAIN-LN
+spoiler_level: major
+---
+
 # DANMACHI-RESEARCH-008 · Mapa de la novela principal, volúmenes 1–21
 
 - **Fecha de corte:** 2026-10-12.
