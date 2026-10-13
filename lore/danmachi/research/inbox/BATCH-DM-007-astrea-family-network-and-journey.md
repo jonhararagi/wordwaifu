@@ -1,3 +1,12 @@
+---
+id: DANMACHI-RESEARCH-007
+universe: danmachi
+type: research
+status: provisional
+continuity_scope: mixed
+spoiler_level: major
+---
+
 # WORDWAIFU · DANMACHI-RESEARCH-007
 ## Red ampliada de Astrea Familia, tragedia histórica y viaje de Ryu
 
