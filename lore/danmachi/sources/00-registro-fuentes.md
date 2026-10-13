@@ -315,3 +315,69 @@ verification_status: stub
 - rights_note: Parafrasear rasgos y funciones; no reproducir las descripciones extensas.
 - verified_by: DANMACHI-RESEARCH-005
 - verification_status: source_checked
+
+
+## DMR-011-SRC-001 · Cronología oficial de la franquicia
+- source_id: DMR-011-SRC-001
+- title: 年表 | アニメ「ダンまち」シリーズ公式サイト
+- creator_or_publisher: Portal oficial de DanMachi
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi; cronología de obra principal, derivados y adaptaciones
+- volume_or_edition: Página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/chronology/
+- accessed_at: 2026-10-13
+- locator_type: webpage_section
+- locator: Bloque de Astrea Record; expresiones «7年前» y «オラリオの暗黒期».
+- claims_supported: [DMR-011-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-AR; cronología oficial de franquicia
+- reliability_note: Fuente oficial de cronología promocional; útil para anclas relativas, no para fechas absolutas ni para reemplazar novelas.
+- conflicting_sources: []
+- rights_note: Resumir con palabras propias.
+- verified_by: DANMACHI-RESEARCH-011
+- verification_status: source_checked
+
+## DMR-011-SRC-002 · DanMachi, volumen principal 21
+- source_id: DMR-011-SRC-002
+- title: ダンジョンに出会いを求めるのは間違っているだろうか21
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, serie principal
+- volume_or_edition: Volumen 21; ISBN 978-4-8156-3294-6
+- language: Japonés
+- publication_date: 2025-10-15 aproximadamente, según editorial
+- official_url: https://ga.sbcr.jp/product/9784815632946/
+- accessed_at: 2026-10-13
+- locator_type: publisher_product_page
+- locator: Campo de fecha de publicación y sinopsis oficial del volumen 21.
+- claims_supported: [DMR-011-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Confirma metadatos editoriales y sinopsis, no el texto completo ni el estado final de toda la serie.
+- conflicting_sources: []
+- rights_note: No copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-011
+- verification_status: source_checked
+
+## DMR-011-SRC-003 · DanMachi, volumen principal 22
+- source_id: DMR-011-SRC-003
+- title: ダンジョンに出会いを求めるのは間違っているだろうか22
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, serie principal
+- volume_or_edition: Volumen 22; ISBN 978-4-8156-4290-7
+- language: Japonés
+- publication_date: 2026-12-15 prevista, según editorial
+- official_url: https://ga.sbcr.jp/product/9784815642907/
+- accessed_at: 2026-10-13
+- locator_type: publisher_product_page
+- locator: Campo de fecha de publicación prevista; ficha consultada antes de esa fecha.
+- claims_supported: [DMR-011-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Anuncio bibliográfico futuro al momento de consulta; verificar la fecha efectiva tras el lanzamiento.
+- conflicting_sources: []
+- rights_note: Registrar solo metadatos y notas propias.
+- verified_by: DANMACHI-RESEARCH-011
+- verification_status: source_checked
