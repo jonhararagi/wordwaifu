@@ -145,6 +145,21 @@
           <div><p class="eyebrow">DANMACHI · ARCHIVO DE PERSONAJES</p><h2>Enciclopedia visual de personajes</h2><p>Directorio ampliado con resúmenes, afiliación, especie, rango, relaciones y retratos enlazados desde perfiles oficiales de DanMachi V, Sword Oratoria y DanMachi IV. Las fichas extensas con continuidad histórica y expediente de evidencia siguen siendo una capa de investigación aparte; la adaptación no se presenta como canon universal.</p></div>
           <span class="lore-mode-pill">Local · sin IA</span>
         </header>
+        <section id="danmachi-entity-browser" class="danmachi-entity-browser" aria-labelledby="danmachi-entity-browser-title">
+          <div class="danmachi-entity-heading">
+            <div><p class="eyebrow">CATÁLOGO TIPADO · DANMACHI</p><h3 id="danmachi-entity-browser-title">Familias y otras entidades</h3><p>Buscá organizaciones, personajes, dioses, lugares, reglas y acontecimientos en el catálogo del repositorio. Los resultados enlazan al expediente registrado; el estado indica si la ficha está completa o sigue en revisión.</p></div>
+            <span id="danmachi-entity-count" class="mythic-count">Cargando catálogo…</span>
+          </div>
+          <div class="danmachi-entity-filters">
+            <label for="danmachi-entity-query">Buscar por nombre, ID o etiquetas<input id="danmachi-entity-query" type="search" maxlength="120" placeholder="Hestia, Astrea, Ryu Lion…" autocomplete="off"></label>
+            <label for="danmachi-entity-type">Tipo de entidad<select id="danmachi-entity-type">
+              <option value="all">Todos los tipos</option><option value="familia">Familia</option><option value="character">Personaje</option><option value="deity_character">Deidad / personaje divino</option><option value="character_group">Grupo de personajes</option><option value="institution_and_location">Institución o lugar</option><option value="setting">Marco del mundo</option><option value="world_rule">Regla del mundo</option><option value="chronology">Cronología</option><option value="event">Acontecimiento</option><option value="author_event">Evento editorial / autoría</option><option value="index">Índice</option>
+            </select></label>
+            <button id="danmachi-entity-reset" class="outline-button" type="button">Restablecer</button>
+          </div>
+          <p id="danmachi-entity-status" class="lore-search-status" role="status" aria-live="polite">El catálogo tipado se prepara al abrir la enciclopedia.</p>
+          <div id="danmachi-entity-results" class="danmachi-entity-results" role="list" aria-label="Entidades del catálogo DanMachi"></div>
+        </section>
         <section id="character-archive-directory" class="character-archive-directory" aria-labelledby="character-archive-title">
           <div class="archive-directory-heading"><div><p class="eyebrow">ÍNDICE DE PERSONAJES</p><h3 id="character-archive-title">Encontrá una persona</h3><p>Las tarjetas resumen la información disponible. Abrí una ficha para explorar sus estados y fuentes.</p></div>
             <label class="archive-query-field" for="character-archive-query">Buscar por nombre<input id="character-archive-query" type="search" maxlength="120" autocomplete="off" placeholder="Ryu, Ryuu Lion, Alise Lovelace…"></label>
