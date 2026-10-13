@@ -141,6 +141,17 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 | Último volumen/final | Sí | Procedimiento vacío intencionalmente | Pendiente de confirmar publicación |
 | AU del OC | Sí | Premisa inicial | Decisiones abiertas |
 
+## 6A. Cobertura ampliada pendiente de validación primaria
+
+Los siguientes expedientes ya están catalogados para búsqueda local, pero mantienen estado **provisional** hasta cotejar sus afirmaciones con fuentes primarias y localizadores específicos:
+
+- Personajes adicionales: Iska Bra, Mariyu Reage, Noin Unic, Neze Rankett, Asta Knox, Ryana Lietz, Celty Srowa, Cecil Blackliza, Iselina, Shau y Ulanda.
+- [Red de Astrea Familia y recorrido de Ryu](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md).
+- [Mapa de volúmenes de la historia principal](research/inbox/BATCH-DM-008-main-story-volume-map.md).
+- [Relatos paralelos y crónicas](research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md).
+- [Salida de Astrea y venganza de Ryu](research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md).
+- [Evento candidato: salida de Astrea](events/candidates/EVT-DM-ASTREA-DEPARTURE-001.md).
+
 ## 7. Regla de honestidad
 
 Esta estructura busca cubrir la historia publicada desde las eras más antiguas hasta el último volumen que pueda verificarse. No significa que la cronología, todas las fichas o el final estén completos. Un índice vacío es mejor que un dato inventado.
