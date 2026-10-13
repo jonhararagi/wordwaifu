@@ -2575,6 +2575,19 @@ async function run() {
     assert.ok(duplicateNameEvidence.restoredSnapshotCount >= 1, "Restore must preserve the selected project's snapshots.");
     process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\\n");
 
+    // Mythic catalog: search a Latin American figure, follow its summon-system relation, then return to the prior record.
+    await page.locator('.nav-item[data-view="mythic-catalog"]').click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("31 / 31"), null, { timeout: 5000 });
+    await page.locator("#mythic-search").fill("Pombero");
+    await page.locator('#mythic-catalog-content [data-open-entity="LAT-GUA-POMBERO"]').click();
+    assert.ok((await page.locator("#mythic-catalog-content").innerText()).includes("Pombero"),
+      "The mythic catalog should open the selected entity dossier.");
+    await page.locator('#mythic-catalog-content [data-open-entity="SYS-CARD-PACT"]').click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("Contrato de Invocación"), null, { timeout: 5000 });
+    await page.locator("#mythic-catalog-content [data-catalog-back]").click();
+    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("Pombero"), null, { timeout: 5000 });
+    process.stdout.write("PASS mythic catalog: search, entity dossier, relation navigation and backtracking work.\\n");
+
     // Art Studio: generate a prompt, upload an image, persist the assignment, and apply it to the character portrait.
     await page.evaluate(() => {
       for (const dialog of document.querySelectorAll("dialog[open]")) dialog.close();
