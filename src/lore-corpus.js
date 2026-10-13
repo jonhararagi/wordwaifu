@@ -297,8 +297,8 @@
     const settings = options || {};
     const requestedType = normalize(settings.type || settings.entityType || "all");
     const queryTokens = tokens(settings.query || "");
-    const allowedTypes = new Set(["all", "familia", "character", "character_group", "deity_character", "setting",
-      "institution_and_location", "world_rule", "chronology", "event", "author_event", "index"]);
+    const allowedTypes = new Set(["all", "familia", "character", "character group", "deity character", "setting",
+      "institution and location", "world rule", "chronology", "event", "author event", "index"]);
     if (!allowedTypes.has(requestedType)) {
       return { results: [], totalMatches: 0, truncated: false, abstain: true, queryTokens,
         error: "Tipo de entidad no reconocido: " + requestedType };
