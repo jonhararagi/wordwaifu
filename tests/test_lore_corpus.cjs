@@ -156,5 +156,14 @@ process.stdout.write("PASS lore search: 95 source claims, 98 entries, volume 21 
   assert.ok(partialFailure.providers.some(provider=>provider.error&&provider.searchUrl));
   assert.ok(partialFailure.providers.some(provider=>provider.results.length===1));
   await assert.rejects(()=>corpus.searchExternalSources(" ",{fetchImpl:mockFetch}),/Escribí un tema/);
+  // Regression: family retrieval accepts natural Spanish name order and never leaks characters.
+  const astreaSpanish = corpus.searchEntities(catalog, { type: "familia", query: "Familia de Astrea" });
+  assert.deepEqual(astreaSpanish.results.map(entity => entity.id), ["DM-FAM-ASTREA"]);
+  assert.ok(astreaSpanish.results.every(entity => entity.type === "familia"));
+  const lokiAlias = corpus.searchEntities(catalog, { entityType: "FAMILIA", query: "Loki Familia" });
+  assert.deepEqual(lokiAlias.results.map(entity => entity.id), ["DM-FAM-LOKI"]);
+  const hestiaAlias = corpus.searchEntities(catalog, { type: "familia", query: "Familia Hestia" });
+  assert.deepEqual(hestiaAlias.results.map(entity => entity.id), ["DM-FAM-HESTIA"]);
+  assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "Bell Cranel" }).abstain, true);
   process.stdout.write("PASS web research: Fandom/Wikipedia search, secondary-source labels, safe snippets and graceful partial failure verified.\n");
 })().catch(error=>{ console.error(error); process.exitCode=1; });
