@@ -25,7 +25,7 @@ jobs:
           node-version: "22"
       - name: Check JavaScript syntax
         run: |
-          node --check src/app.js
+          node --check src/app.js\n          node --check src/mythic-catalog.js
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check src/art-studio.js
@@ -33,7 +33,7 @@ jobs:
           node --check tests/test_character_dossiers.cjs
           node --check tests/test_project_schema.cjs
           node --check tests/browser_smoke.cjs
-      - name: Test project import validation
+      - name: Validate mythic catalog IDs and relations\n        run: node tests/test_mythic_catalog.cjs\n      - name: Test project import validation
         run: node tests/test_project_schema.cjs
       - name: Test extended character dossiers
         run: node tests/test_character_dossiers.cjs
