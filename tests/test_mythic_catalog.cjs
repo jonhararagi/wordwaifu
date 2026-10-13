@@ -7,6 +7,7 @@ const catalog = JSON.parse(fs.readFileSync(file, "utf8"));
 const ui = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
 const catalogModule = fs.readFileSync(path.join(__dirname, "..", "src", "mythic-catalog.js"), "utf8");
 const app = fs.readFileSync(path.join(__dirname, "..", "src", "app.js"), "utf8");
+const moduleText = fs.readFileSync(path.join(__dirname, "..", "src", "mythic-catalog.js"), "utf8");
 assert.equal(catalog.schemaVersion, 1);
 assert.ok(Array.isArray(catalog.entities) && catalog.entities.length >= 60, "catalog must contain at least 60 meaningful records");
 const ids = catalog.entities.map(entity => entity.id);
@@ -51,6 +52,13 @@ assert.ok(catalogModule.includes("source.use"), "source scope must be visible in
 assert.ok(app.includes("wordwaifu:mythic-relation-save"), "project-owned relations must be saved");
 assert.ok(app.includes("wordwaifu:mythic-proposal-save"), "proposals must use project persistence");
 assert.ok(app.includes("mythicEntityIds"), "created characters must retain mythic reference IDs");
+for (const id of ["LAT-MAP-TRENGT","LAT-TEH-ELAL","LAT-GUA-POMBERO","LAT-GUA-JASYJATERE"]) {
+  const entry = byId.get(id);
+  assert.ok(entry.researchProfile && entry.researchProfile.narrativeContext, id + " should have a source-aware narrative profile");
+  assert.ok(entry.researchProfile.documentedVariants && entry.researchProfile.sourceLimitations && entry.researchProfile.creativeBoundary, id + " should separate variants, source limits and creative adaptations");
+  for (const sourceId of entry.sourceIds) assert.ok(sourceIds.has(sourceId), id + " references missing source " + sourceId);
+}
+assert.ok(moduleText.includes("entity.researchProfile"), "entry UI must render research profiles");
 for (const deck of catalog.starterDecks || []) {
   for (const id of deck.entityIds) assert.ok(byId.has(id), deck.id + " references missing entity " + id);
 }

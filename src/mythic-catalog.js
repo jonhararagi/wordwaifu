@@ -252,7 +252,12 @@
       (entity.domains?.length ? '<p><strong>Dominios / asociaciones:</strong> ' + esc(entity.domains.join(" · ")) + '</p>' : "") +
       (entity.confidence ? '<p><strong>Tratamiento de la evidencia:</strong> ' + esc(entity.confidence.replaceAll("_"," ")) + '</p>' : "") +
       (entity.tags?.length ? '<div class="mythic-tags">' + entity.tags.map(chip).join("") + '</div>' : "") +
-      sourceNotes + artifactDetails + creative +
+      sourceNotes +
+      (entity.researchProfile ? '<section class="mythic-relation-group"><h4>Contexto narrativo documentado</h4><p>' + esc(entity.researchProfile.narrativeContext || "Sin síntesis específica incorporada.") + '</p>' +
+        (entity.researchProfile.documentedVariants ? '<p><strong>Variantes registradas:</strong> ' + esc(entity.researchProfile.documentedVariants) + '</p>' : '') +
+        (entity.researchProfile.sourceLimitations ? '<p><strong>Límites de las fuentes:</strong> ' + esc(entity.researchProfile.sourceLimitations) + '</p>' : '') +
+        (entity.researchProfile.creativeBoundary ? '<p><strong>Límite de adaptación:</strong> ' + esc(entity.researchProfile.creativeBoundary) + '</p>' : '') + '</section>' : "") +
+      artifactDetails + creative +
       (sourceLinks ? '<section class="mythic-relation-group"><h4>Fuentes y referencias</h4><div class="mythic-relations">' + sourceLinks + '</div></section>' : "") +
       '<section class="mythic-relation-group"><h4>Relaciones para seguir explorando</h4><div class="mythic-relations">' +
       (relations || '<p>Esta ficha todavía no tiene relaciones salientes registradas.</p>') + '</div></section>' +

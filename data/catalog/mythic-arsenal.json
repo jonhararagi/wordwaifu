@@ -90,7 +90,8 @@
       ],
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
-        "SRC-UNESCO-LIVING"
+        "SRC-UNESCO-LIVING",
+        "SRC-SCIELO-TRENTREN-CAICAI"
       ],
       "aliases": [
         "Trengtreng y Kaikai",
@@ -107,7 +108,13 @@
         "cataclismo"
       ],
       "confidence": "referencia_secundaria_con_variantes",
-      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo.",
+      "researchProfile": {
+        "narrativeContext": "Un estudio publicado en SciELO describe a Trentrenvilú y Caicaivilú como serpientes contrapuestas en relatos sobre la inundación y la supervivencia humana. La versión resumida habla de refugio en zonas altas y de transformaciones de quienes no alcanzan a escapar.",
+        "documentedVariants": "El artículo sitúa la circulación del relato en La Araucanía y Chiloé y revisa varios registros escritos históricos. No se debe asumir que los nombres, episodios ni la interpretación cultural sean idénticos en todas las comunidades.",
+        "sourceLimitations": "Síntesis secundaria de un artículo académico; las fuentes coloniales y folklóricas citadas deben leerse en su contexto. Esta ficha no sustituye versiones orales comunitarias ni permite generalizar a todos los pueblos mapuche.",
+        "creativeBoundary": "Las mecánicas de control del agua, elevación del terreno o cartas rivales son propuestas de ficción. No son poderes de juego documentados en la fuente."
+      }
     },
     {
       "id": "LAT-TEH-ELAL",
@@ -133,7 +140,9 @@
       ],
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
-        "SRC-UNESCO-LIVING"
+        "SRC-UNESCO-LIVING",
+        "SRC-MUSEO-ROCA-ELAL-FIRE",
+        "SRC-INAPL-ELAL-CYCLE"
       ],
       "aliases": [],
       "attributes": [
@@ -143,7 +152,13 @@
         "viaje"
       ],
       "confidence": "referencia_secundaria_con_variantes",
-      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo.",
+      "researchProfile": {
+        "narrativeContext": "El Museo Roca presenta a Elal dentro de relatos tehuelches sobre el origen del fuego: el fuego se obtiene para que las personas puedan cocinar y afrontar el frío patagónico. La institución señala que las narraciones fueron recogidas de distintos interlocutores tehuelches por Alejandra Siffredi en la década de 1960.",
+        "documentedVariants": "El estudio de Alejandra Siffredi analiza el ciclo de Elal y la relación entre mito, conciencia histórica y contacto intercultural. El corpus incluye variantes y no debe congelarse como una biografía única.",
+        "sourceLimitations": "La nota del museo es una síntesis divulgativa; el artículo académico ofrece un marco de análisis del ciclo, no una licencia para fusionar todos los episodios en una sola versión.",
+        "creativeBoundary": "Una función jugable de guía, supervivencia o transmisión del conocimiento puede inspirarse en estos temas, pero las estadísticas, invocaciones y poderes de combate deben etiquetarse como creación original."
+      }
     },
     {
       "id": "LAT-GUA-POMBERO",
@@ -170,7 +185,9 @@
       ],
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
-        "SRC-UNESCO-LIVING"
+        "SRC-UNESCO-LIVING",
+        "SRC-BCN-PY-POMBERO-JASY",
+        "SRC-TAPEAVIRU-PARAGUAY-SURVEY"
       ],
       "aliases": [
         "Pomberito (variante regional)"
@@ -186,7 +203,13 @@
         "pacto"
       ],
       "confidence": "referencia_secundaria_con_variantes",
-      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo.",
+      "researchProfile": {
+        "narrativeContext": "La Biblioteca del Congreso Nacional de Paraguay registra una investigación de 2005 dedicada a creencias contemporáneas sobre Pombero y Jasy Jateré. La Fundación Tapé Avirú documenta un sondeo de 2020 sobre conocimiento actual de personajes mitológicos paraguayos e incluye al Pombero.",
+        "documentedVariants": "Las fuentes consultadas aquí acreditan investigación y presencia cultural contemporánea, pero no proporcionan un inventario exhaustivo de versiones orales locales. Las variantes concretas deben añadirse solo al consultar sus textos o testimonios.",
+        "sourceLimitations": "La ficha de la Biblioteca es metadato bibliográfico y el sondeo de la Fundación mide reconocimiento actual; ninguno de los dos debe presentarse como una fuente primaria completa del relato.",
+        "creativeBoundary": "El sigilo, rastreo y contrato de reciprocidad del campo creativeHook son ideas de adaptación. No deben venderse como poderes tradicionales probados por estos registros bibliográficos."
+      }
     },
     {
       "id": "LAT-GUA-JASYJATERE",
@@ -212,7 +235,9 @@
       ],
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
-        "SRC-UNESCO-LIVING"
+        "SRC-UNESCO-LIVING",
+        "SRC-BCN-PY-POMBERO-JASY",
+        "SRC-TAPEAVIRU-PARAGUAY-SURVEY"
       ],
       "aliases": [],
       "attributes": [
@@ -224,7 +249,13 @@
         "tiempo"
       ],
       "confidence": "referencia_secundaria_con_variantes",
-      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo.",
+      "researchProfile": {
+        "narrativeContext": "El catálogo de la Biblioteca del Congreso Nacional registra trabajos sobre Jasy Jateré, incluido un estudio de 2005 que también aborda creencias sobre Pombero. La Fundación Tapé Avirú lo incluye entre las figuras consultadas en su sondeo paraguayo de 2020.",
+        "documentedVariants": "La información recuperada acredita que existen estudios y registros contemporáneos sobre la figura, pero no basta para resumir con seguridad todos los motivos regionales ni sus cambios históricos.",
+        "sourceLimitations": "Los metadatos de catálogo no sustituyen la lectura de las investigaciones. No se agregan aquí detalles del relato que no estén visibles en las fuentes consultadas.",
+        "creativeBoundary": "Ilusión, distracción o alteración temporal son opciones de diseño ficticio; no son afirmaciones tradicionales respaldadas por estas referencias."
+      }
     },
     {
       "id": "LAT-GUA-KURUPI",
@@ -3109,6 +3140,36 @@
       "title": "UNESCO World Heritage Centre — Osun-Osogbo Sacred Grove",
       "url": "https://whc.unesco.org/en/list/1118/",
       "use": "Contexto sobre el sitio sagrado vinculado a Osun; no sustituye fuentes comunitarias específicas sobre la orisha."
+    },
+    {
+      "id": "SRC-SCIELO-TRENTREN-CAICAI",
+      "title": "SciELO Chile — «Corrientes de pensamiento mágico…», sección sobre Trentrenvilú y Caicaivilú (2022)",
+      "url": "https://www.scielo.cl/scielo.php?pid=S0716-27902022000100197&script=sci_arttext",
+      "use": "Estudio que compara la circulación oral y los registros escritos de versiones mapuche, incluida su presencia en La Araucanía y Chiloé. Respalda el historial de versiones, no una versión única universal."
+    },
+    {
+      "id": "SRC-MUSEO-ROCA-ELAL-FIRE",
+      "title": "Museo Roca — «El cuento del matuasto. El mito tehuelche sobre el origen del fuego»",
+      "url": "https://museoroca.cultura.gob.ar/noticia/el-mito-tehuelche-sobre-el-origen-del-fuego-el-cuento-del-matuasto/",
+      "use": "Síntesis institucional argentina sobre relatos tehuelches del origen del fuego asociados a Elal; informa que los relatos recogidos por Alejandra Siffredi presentan variantes."
+    },
+    {
+      "id": "SRC-INAPL-ELAL-CYCLE",
+      "title": "Alejandra Siffredi — «La atenuación de las fronteras entre mito e historia: la expresión del contacto en el ciclo de Elal»",
+      "url": "https://revistas.inapl.gob.ar/index.php/cuadernos/article/view/476",
+      "use": "Estudio académico del ciclo de Elal y de la interacción entre memoria histórica, mito y contacto intercultural. Úsese para evitar tratar el corpus como relato fijo e inmutable."
+    },
+    {
+      "id": "SRC-BCN-PY-POMBERO-JASY",
+      "title": "Biblioteca y Archivo Central del Congreso Nacional de Paraguay — catálogo de «Creencia actual de los alumnos sobre los Mitos (Pombero y Jasy Jatere)»",
+      "url": "https://catalogo.bacn.gov.py/opac_css/index.php?id=1566&lvl=notice_display",
+      "use": "Registro bibliográfico de un estudio de 2005 sobre creencias contemporáneas en torno a Pombero y Jasy Jateré. Es una ficha de catálogo, no el texto completo; no respalda detalles no visibles en sus metadatos."
+    },
+    {
+      "id": "SRC-TAPEAVIRU-PARAGUAY-SURVEY",
+      "title": "Fundación Tapé Avirú — «Primer sondeo sobre personajes mitológicos del Paraguay»",
+      "url": "https://fundaciontapeaviru.org.py/informe-de-sondeo/",
+      "use": "Sondeo comunitario realizado en 2020 sobre conocimiento actual de figuras folclóricas paraguayas, incluido Pombero y Jasy Jateré. Sirve para documentar presencia cultural contemporánea, no para fijar una versión antigua única."
     }
   ],
   "qualityGates": [
