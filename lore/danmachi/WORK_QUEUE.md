@@ -263,3 +263,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Verificar el pasaje en una edición legítima completa y obtener localizador interno estable.
 - [ ] Solo tras obtener localizador primario, decidir si registrar una relación temporal relativa en los eventos; no inferir año absoluto, roster ni causalidad institucional.
 - Regla de autoría: los datos ausentes permanecen desconocidos; los espacios para la historia propia se mantienen en `CONT-AU` y nunca se completan por inferencia.
+
+
+## DANMACHI-RESEARCH-019 — Triangulación inicial de wikis ES/EN/JA
+- Estado: PARTIAL / SECONDARY-LEAD-ONLY; se consultaron extractos de wiki en español e inglés y una wiki japonesa de DanMemo, más una página oficial japonesa para contraste de personajes.
+- Paquete: [DANMACHI-RESEARCH-019-wiki-triangulation-es-en-ja.md](research/inbox/DANMACHI-RESEARCH-019-wiki-triangulation-es-en-ja.md).
+- [x] Registrar enlaces exactos, idioma, límites de acceso y alcance de los extractos.
+- [x] Separar el «hace cinco años» del incidente Astrea/Juggernaut de la pista no verificada de Zeus/Hera; no son el mismo acontecimiento.
+- [x] Registrar como pistas secundarias los nombres/niveles de Zeus Familia y el supuesto piso 71, sin elevarlos a canon aprobado.
+- [ ] Rastrear las referencias de las wikis a novela, Astrea Record, Sword Oratoria, DanMemo u otras fuentes oficiales.
+- [ ] Verificar roster histórico, niveles, récord real de exploración y fecha/efectos de la expulsión mediante fuentes con localizadores.
+- [ ] Incorporar claims recuperables solo después de identificar evidencia suficiente y continuidad adecuada.
+- Regla: las wikis ayudan a encontrar y traducir datos; la coincidencia entre wikis no equivale a confirmación primaria. No rellenar historias AU ni incógnitas autorales.
