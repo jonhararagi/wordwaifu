@@ -1,6 +1,6 @@
 (function(root,factory){"use strict";const api=factory();if(typeof module==="object"&&module.exports)module.exports=api;else root.WordWaifuCharacterArchive=api;})(typeof globalThis!=="undefined"?globalThis:this,function(){
 "use strict";
-const LABELS={"CONT-AR":"Astrea Record · Era Oscura","CONT-ANIME":"Adaptación anime · DanMachi IV","CONT-MAIN-LN":"Novela principal","CONT-AU":"Historia alternativa (AU)","CROSS-CONTINUITY":"Comparación entre continuidades"};
+const LABELS={"CONT-AR":"Astrea Record · Era Oscura","CONT-ANIME":"Adaptación anime · perfiles oficiales","CONT-MAIN-LN":"Novela principal","CONT-AU":"Historia alternativa (AU)","CROSS-CONTINUITY":"Comparación entre continuidades"};
 const ORDER=["CONT-AR","CONT-ANIME","CONT-MAIN-LN","CONT-AU","CROSS-CONTINUITY"];
 const META={
 "CHAR-RYUU-LION":{
@@ -82,6 +82,23 @@ affiliation:"Diosa de justicia y orden · Astrea Familia histórica"
 META["CHAR-MARIYU-LEAGE"]={
 overview:"Mariyu Leage (también buscable como Mariyu Reage o Maryuu Reage) · integrante humana de Astrea Familia según el perfil oficial de DanMachi IV.",
 states:{"CONT-ANIME":{summary:"El perfil oficial la identifica como humana y la incluye en Astrea Familia; no desarrolla su psicología o acciones individuales en esa entrada.",period:"Perfil oficial DanMachi IV · Astrea Familia histórica.",affiliation:"Astrea Familia · integrante histórica"}}
+};
+
+
+for(const [id,summary,period,affiliation] of [
+["CHAR-ISKA-BRA","La ficha oficial la identifica como Amazoness y miembro de Astrea Familia; no fija nivel ni historia individual en ese perfil.","DanMachi IV · perfil oficial de personaje.","Astrea Familia · integrante histórica"],
+["CHAR-NOIN-UNIC","El portal oficial la identifica como humana y miembro de Astrea Familia. La voz japonesa registrada es Maki Kawase; el perfil no detalla su historia particular.","DanMachi IV · perfil oficial de personaje.","Astrea Familia · integrante histórica"],
+["CHAR-NEZE-RANKETT","La ficha oficial la identifica como mujer lobo y miembro de Astrea Familia. La voz japonesa registrada es Asuna Tomari; nivel e historia individual no establecidos por esa entrada.","DanMachi IV · perfil oficial de personaje.","Astrea Familia · integrante histórica"],
+["CHAR-ASTA-KNOX","El perfil oficial la identifica como enana y miembro de Astrea Familia. La voz japonesa registrada es Hikaru Tono; no se asignan nivel ni habilidades no listadas.","DanMachi IV · perfil oficial de personaje.","Astrea Familia · integrante histórica"],
+["CHAR-RYANA-LIETZ","El portal oficial la identifica como humana y miembro de Astrea Familia. La voz japonesa registrada es Saki Kousaka; la entrada pública no aporta una biografía extensa.","DanMachi IV · perfil oficial de personaje.","Astrea Familia · integrante histórica"],
+["CHAR-CELTY-SROWA","El perfil oficial la identifica como elfa y miembro de Astrea Familia. La voz japonesa registrada es Rina Kawaguchi; la entrada consultada no establece nivel ni habilidades.","DanMachi IV · perfil oficial de personaje.","Astrea Familia · integrante histórica"]
+]){
+ META[id].states["CONT-ANIME"]={summary,period,affiliation};
+}
+META["CHAR-MARIYU-LEAGE"].states["CONT-ANIME"]={
+summary:"La ficha oficial escribe マリュー・レアージュ, la identifica como humana y miembro de Astrea Familia; el portal registra a Akira Sekine como voz japonesa. Los alias Mariyu Reage y Maryuu Reage apuntan a este mismo ID.",
+period:"DanMachi IV · perfil oficial de personaje.",
+affiliation:"Astrea Familia · integrante histórica"
 };
 
 const REL={
@@ -174,7 +191,7 @@ REL["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
 ];
 // No anime-continuity relationship edge is inferred from the Astrea V profile alone.
 REL["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
-{targetId:"CHAR-RYUU-LION",label:"Ryu · visita a la diosa",type:"Encuentro posterior",description:"La sinopsis oficial de Familia Chronicle describe el viaje de Ryu para ver a Astrea; detalles adicionales del encuentro requieren el volumen.",refs:["DMR-007-CLM-009"]},
+{targetId:"CHAR-RYUU-LION",label:"Ryu · viaje y conflicto en la Ciudad Forjadora",type:"Encuentro y conflicto documentados en sinopsis editorial",description:"Ryu viaja desde Orario para visitar a Astrea; al llegar, choca con las nuevas seguidoras y la diosa le ordena quedarse en la Ciudad Forjadora de Espadas y dar su respuesta.",refs:["DMR-007-CLM-009","DMR-007-CLM-013","DMR-007-CLM-014"]},
 {targetId:"CHAR-CECIL-BLACKLIZA",label:"Cecil Blackliza · nueva capitana (fuente secundaria)",type:"Nueva generación · pendiente de cotejo",description:"El roster comunitario identifica a Cecil como capitana de la nueva Familia. Se mantiene como fuente secundaria.",refs:["DMR-007-CLM-011"]},
 {targetId:"CHAR-ISELINA",label:"Iselina · nueva generación (fuente secundaria)",type:"Nueva generación · afiliación provisional",description:"Aparece en la lista comunitaria de la nueva Familia. No se atribuye rango o historia individual.",refs:["DMR-007-CLM-011"]},
 {targetId:"CHAR-SHAU",label:"Shau · nueva generación (fuente secundaria)",type:"Nueva generación · afiliación provisional",description:"Aparece en la lista comunitaria de la nueva Familia. No se atribuye rango o historia individual.",refs:["DMR-007-CLM-011"]},
@@ -342,6 +359,34 @@ sections:[
 ],
 references:[{label:"Perfil oficial DanMachi IV · Lyra",url:"https://danmachi.com/danmachi4/character/",kind:"official"}]
 };
+
+
+const officialRosterDetails=[
+["CHAR-ISKA-BRA","Iska Bra","Amazoness","Yuuki Hirose","https://danmachi.com/danmachi4/character/images/chara_tachi_25.png","DMR-007-CLM-020"],
+["CHAR-NOIN-UNIC","Noin Unic","Humana","Maki Kawase","https://danmachi.com/danmachi4/character/images/chara_tachi_20.png","DMR-007-CLM-015"],
+["CHAR-NEZE-RANKETT","Neze Rankett","Mujer lobo (werewolf)","Asuna Tomari","https://danmachi.com/danmachi4/character/images/chara_tachi_21.png","DMR-007-CLM-016"],
+["CHAR-ASTA-KNOX","Asta Knox","Enana","Hikaru Tono","https://danmachi.com/danmachi4/character/images/chara_tachi_22.png","DMR-007-CLM-017"],
+["CHAR-RYANA-LIETZ","Ryana Lietz","Humana","Saki Kousaka","https://danmachi.com/danmachi4/character/images/chara_tachi_23.png","DMR-007-CLM-018"],
+["CHAR-CELTY-SROWA","Celty Srowa","Elfa","Rina Kawaguchi","https://danmachi.com/danmachi4/character/images/chara_tachi_24.png","DMR-007-CLM-019"],
+["CHAR-MARIYU-LEAGE","Mariyu Leage","Humana","Akira Sekine","https://danmachi.com/danmachi4/character/images/chara_tachi_26.png","DMR-007-CLM-021"]
+];
+for(const [id,name,species,voice,url,claim] of officialRosterDetails){
+  const refs=[{label:"Perfil oficial DanMachi IV · "+name,url:"https://danmachi.com/danmachi4/character/",kind:"official"}];
+  const existing=EXTENDED[id]||{};
+  existing["CONT-ANIME"]={
+    title:name+" · identidad y afiliación oficial",
+    summary:"El perfil oficial identifica a "+name+" como "+species+" y miembro de Astrea Familia. La voz japonesa registrada es "+voice+". No se infiere una biografía, nivel o poder que el perfil no establezca.",
+    sections:[
+      {title:"Datos respaldados",text:"Especie: "+species+". Voz japonesa: "+voice+". Afiliación en el roster de DanMachi IV: Astrea Familia."},
+      {title:"Qué no se debe inventar",text:"La página pública no establece en esta entrada una biografía individual completa, por lo que nivel, habilidades y decisiones particulares quedan pendientes de pasajes o fuentes adicionales."},
+      {title:"Retrato y procedencia",text:"Se enlaza el retrato oficial como referencia visual. No se trata de una ilustración de una escena concreta ni se almacena una copia en WordWaifu."}
+    ],
+    references:refs,
+    galleryUrl:url,
+    sourceClaims:[claim]
+  };
+  EXTENDED[id]=existing;
+}
 
 EXTENDED["CHAR-RYUU-LION"]["CONT-AR"].sections.push(
 {title:"La red de la primera Astrea Familia",text:"La sinopsis editorial confirma a Alise como capitana y guía de Ryu. Los perfiles de adaptación añaden matices diferentes: la relación con Kaguya incluye fricción y respeto, mientras que Lyra destaca por su perspicacia. El resto del roster se puede recorrer, pero los enlaces a otros miembros solo indican afiliación cuando no hay evidencia individual."},
