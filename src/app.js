@@ -18,7 +18,8 @@
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
     lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."],
-    art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."]
+    art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."],
+    "mythic-catalog": ["Catálogo mítico", "Explorá entidades, armas, reliquias y pactos conectados por relaciones."]
   };
   const demo = {
     schemaVersion: 1,
@@ -947,15 +948,17 @@
     $("#global-search").placeholder = activeView === "lore"
       ? "Buscar en la enciclopedia de personajes…"
       : "Buscar personajes, lugares o DanMachi…";
+    $("#global-search").closest(".search-box").classList.toggle("hidden", activeView === "mythic-catalog");
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $("#lore-view").classList.toggle("hidden", activeView !== "lore");
     $("#art-view").classList.toggle("hidden", activeView !== "art");
+    $("#mythic-catalog-view").classList.toggle("hidden", activeView !== "mythic-catalog");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art"].includes(activeView));
+    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art", "mythic-catalog"].includes(activeView));
     renderMap();
     renderDetails();
     renderDirectory();
