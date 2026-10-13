@@ -53,6 +53,7 @@ Dos escenas que describen el mismo acontecimiento deben enlazarse a un solo ID c
 
 - [Índice de eventos candidatos](../events/00-indice-candidatos.md)
 - Descenso de las deidades: `EVT-DM-DESCENT-001`.
+- Zeus/Hera y derrotas de Behemoth/Leviathan: `EVT-DM-GREAT-QUESTS-001` (resultado respaldado por referencia oficial; fecha y secuencia pendientes).
 - Zeus/Hera y Dragón Negro: `EVT-DM-ZH-OEBD-001`.
 - Caída/pérdida de posición de Zeus y Hera: `EVT-DM-ZH-FALL-001`.
 - Llegada de Hestia al mundo inferior: `EVT-DM-HESTIA-DESCENT-001`.
