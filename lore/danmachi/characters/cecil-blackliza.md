@@ -9,19 +9,30 @@ source_refs:
 claim_refs:
   - DMR-007-CLM-010
   - DMR-007-CLM-011
-verification_status: provisional_secondary_or_adaptation
+verification_status: secondary_source_pending_primary_corroboration
+aliases:
+  - "Cecil"
+  - "nueva Astrea Familia"
+  - "Solingen"
 ---
 # Cecil Blackliza
 
-**Estado de la ficha:** provisional. Se creó para que el roster pueda explorarse desde las relaciones de WordWaifu; no debe interpretarse como una biografía completa ni como canon totalmente cotejado.
+**Alcance de esta ficha:** nodo provisional de la etapa posterior; las afirmaciones provienen de una referencia comunitaria y requieren cotejo con el texto original.
 
-## Información disponible
+## Datos identificados
 
-La referencia comunitaria enumera a Cecil Blackliza como capitana de la nueva generación de Astrea Familia. El rango se conserva como provisional hasta verificar el pasaje de novela, y la ficha no atribuye decisiones o personalidad sin evidencia.
+- **Especie:** No establecido en las fuentes incorporadas.
+- **Voz japonesa registrada por el portal oficial:** No documentada.
+- **Afiliación disponible:** nueva generación asociada a Astrea y Solingen, todavía por confirmar con fuente primaria.
 
-## Continuidad y fuentes
+ 
+Una referencia comunitaria la enumera entre los miembros de la nueva Familia Astrea y la identifica como capitana. Esta condición es provisional porque falta el localizador directo de novela.
 
-- **Continuidad de lectura:** CONT-MAIN-LN.
-- Referencia: https://danmachi.fandom.com/es/wiki/Familia_Astrea
-- Afirmaciones incorporadas: DMR-007-CLM-010, DMR-007-CLM-011.
-- Pendiente: localizar el pasaje del volumen o capítulo original, verificar romanización y completar historia individual, personalidad, habilidades y relaciones con evidencia.
+## Relaciones y navegación
+
+- **Astrea Familia:** el vínculo de afiliación permite recorrer el roster. No demuestra por sí solo amistad íntima, rivalidad, una escena compartida ni confianza personal con Ryu.
+- **Ryu Lion / Astrea:** los enlaces de WordWaifu se rotulan según la evidencia de la continuidad seleccionada. No hay que trasladar automáticamente relaciones de la adaptación a todas las novelas.
+
+## Pendiente de investigación
+
+confirmación primaria de capitanía, especie, nivel, aspecto, voz, personalidad, escenas y cronología. Las fuentes comunitarias sirven para encontrar nombres y rutas, pero no se convierten en canon aprobado sin capítulo o página localizable.
