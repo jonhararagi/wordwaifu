@@ -65,4 +65,24 @@ for (const deck of catalog.starterDecks || []) {
 for (const required of ["LAT-GUA-POMBERO", "LAT-MAP-PILLAN", "LAT-MEX-QUETZALCOATL", "WEAPON-MACUAHUITL", "SYS-CARD-PACT", "SYS-CARD-AVATAR"]) {
   assert.ok(byId.has(required), "catalog is missing expected entry " + required);
 }
+
+const heroicProfiles = ["GRC-HERACLES", "GRC-HERACLES-FEM", "GRC-MEDUSA"];
+for (const id of heroicProfiles) {
+  const entity = byId.get(id);
+  assert.ok(entity && entity.heroicManifestations, id + " must expose structured heroic manifestations");
+  const profile = entity.heroicManifestations;
+  assert.ok(profile.designRule && profile.baseFigureId, id + " manifestation set needs a design rule and base figure");
+  assert.equal(profile.forms.length, 4, id + " must define four form stages");
+  assert.equal(new Set(profile.forms.map(form => form.id)).size, 4, id + " form IDs must be unique");
+  for (const form of profile.forms) {
+    for (const key of ["id", "name", "stage", "weapon", "outfit", "totalityAttack", "creativeStatus"]) {
+      assert.ok(typeof form[key] === "string" && form[key].trim(), id + "/" + form.id + " missing " + key);
+    }
+  }
+  assert.ok(entity.sourceIds.every(sourceId => sourceIds.has(sourceId)), id + " references missing source");
+}
+assert.ok(byId.get("GRC-HERACLES-FEM").relations.some(relation => relation.targetId === "GRC-HERACLES"), "female Heracles adaptation must link to the mythic reference");
+assert.ok(catalogModule.includes("entity.heroicManifestations"), "detail view must render heroic manifestations");
+assert.ok(catalogModule.includes("form.totalityAttack"), "detail view must render the myth-totality attack");
+
 console.log("Mythic catalog validation passed: " + catalog.entities.length + " entities (" + americanCount + " American/Latin American), " + (catalog.starterDecks || []).length + " starter decks.");
