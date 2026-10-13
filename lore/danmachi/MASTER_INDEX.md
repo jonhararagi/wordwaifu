@@ -7,6 +7,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [README y estado de la base](README.md)
 - [Catálogo JSON de IDs, tipos, etiquetas y rutas](catalog.json)
 - [Buscador local de lore en WordWaifu](../../src/lore-corpus.js).
+- Navegación de relaciones en el archivo: ver [control de calidad y deduplicación](QUALITY_AND_DEDUP.md#navegacion-bidireccional-de-relaciones-archivo-de-personajes).
 - [Control de calidad y duplicados](QUALITY_AND_DEDUP.md)
 - [Cola ordenada de trabajo](WORK_QUEUE.md)
 - [Registro de tandas](BATCH_LOG.md)
