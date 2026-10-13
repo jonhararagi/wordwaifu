@@ -128,6 +128,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [DANMACHI-RESEARCH-002 · Psicología de personajes y auditoría de retrieval](research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md)
 - [DANMACHI-RESEARCH-007 · Red ampliada de Astrea Familia y viaje de Ryu](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md) — relaciones, roster histórico, viaje de Ryu y nueva generación, con continuidad y procedencia separadas.
 - [DANMACHI-RESEARCH-010 · Familia Hestia: roster, funciones y límites de continuidad](research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md) — seis afirmaciones rastreables, fuentes oficiales de adaptación y unknowns preservados.
+- [DANMACHI-RESEARCH-011 · Familia Loki: cargos, perfiles y red de relaciones](research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md) — ocho afirmaciones trazables y snapshot oficial de Sword Oratoria.
 
 ## 5. Prioridades de verificación
 
