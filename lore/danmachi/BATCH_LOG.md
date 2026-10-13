@@ -204,3 +204,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Fuentes registradas: DMR-011-SRC-001 a DMR-011-SRC-003.
 - Resultado: ERA-10 ya puede indicar que el volumen 21 es el último publicado comprobado y que el final canónico sigue pendiente; no se declara finalizada la serie.
 - Pendientes: verificar el lanzamiento efectivo del volumen 22 después de la fecha anunciada y cotejar el volumen 21 por capítulo/escena.
+
+
+## DANMACHI-RESEARCH-014 · Atomización de la sinopsis editorial del volumen 21
+- Fecha de consulta: 2026-10-13
+- Fuente consultada: ficha oficial de GA Bunko del volumen 21, https://ga.sbcr.jp/product/9784815632946/.
+- Cambios: se añadieron DMR-008-CLM-022 a DMR-008-CLM-024 para separar la expedición fallida y el piso 60, la movilización de Orario y el regreso de Bell con la noticia.
+- Recuperación: los tres claims quedan enlazados al registro de fuente DMR-011-SRC-002 y se añadieron pruebas de búsqueda por tema.
+- Conteos esperados: 95 afirmaciones de fuente y 98 entradas.
+- Límite: la fuente es la sinopsis editorial; no se inventaron capítulos, páginas, supervivientes completos ni secuencia interna. El cotejo del texto íntegro sigue pendiente.
