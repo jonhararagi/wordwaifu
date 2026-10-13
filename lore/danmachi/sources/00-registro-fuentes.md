@@ -424,3 +424,28 @@ verification_status: stub
 - rights_note: Registrar solo metadatos y notas propias.
 - verified_by: DANMACHI-RESEARCH-011
 - verification_status: source_checked
+
+---
+
+## DMR-011-SRC-006 · DanMachi, volumen principal 15 (identificación editorial)
+
+- source_id: DMR-011-SRC-006
+- title: ダンジョンに出会いを求めるのは間違っているだろうか15
+- creator_or_publisher: 大森藤ノ / GA文庫 (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 15; ISBN 978-4-7973-9622-5
+- language: Japonés
+- publication_date: 2019-06-15 aproximadamente, según ficha editorial
+- official_url: https://ga.sbcr.jp/product/9784797396225/
+- accessed_at: 2026-10-13
+- locator_type: publisher_metadata
+- locator: Ficha oficial del volumen 15; solo identifica edición y metadatos editoriales. No usar la sinopsis para respaldar el pasaje temporal de Alise.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN; metadatos editoriales únicamente
+- reliability_note: Fuente oficial para identificar la edición. El contenido narrativo sobre el intervalo de cinco años está pendiente de verificación en una vista previa o edición legítima con localizador estable.
+- conflicting_sources: []
+- rights_note: Registrar notas breves propias.
+- verified_by: DANMACHI-RESEARCH-018
+- verification_status: source_checked_metadata_only
