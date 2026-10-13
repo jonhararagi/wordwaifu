@@ -184,14 +184,14 @@ REL["CHAR-ASTREA"]["CONT-AR"].push(
 {targetId:"CHAR-CELTY-SROWA",label:"Celty Srowa · Familia histórica",type:"Afiliación histórica",description:"La lista de integrantes permite navegar desde la diosa al roster; no demuestra escenas individuales.",refs:["DMR-007-CLM-005"]}
 );
 REL["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
-{targetId:"CHAR-ASTREA",label:"Astrea · viaje y conflicto en la Ciudad Forjadora",type:"Viaje y conflicto documentados en sinopsis editorial",description:"La sinopsis oficial sitúa a Ryu viajando desde Orario para ver a Astrea, buscando fuerza; al llegar, la diosa le ordena permanecer en la Ciudad Forjadora de Espadas y responder a la situación con sus nuevas seguidoras.",refs:["DMR-007-CLM-009","DMR-007-CLM-013","DMR-007-CLM-014"]},
+{targetId:"CHAR-ASTREA",label:"Astrea · viaje y conflicto en la Ciudad Forjadora",type:"Viaje y conflicto documentados en sinopsis editorial",description:"La sinopsis editorial confirma el viaje de Ryu y la orden de Astrea de quedarse. Una fuente secundaria explica que, años antes, Ryu había pedido a Astrea salir de Orario para no presenciar su venganza; el motivo de la partida continúa pendiente de cotejo primario.",refs:["DMR-007-CLM-009","DMR-007-CLM-013","DMR-007-CLM-014","DMR-010-CLM-002","DMR-010-CLM-005","DMR-010-CLM-006"]},
 {targetId:"CHAR-ALISE-LOVELACE",label:"Alise · legado de la antigua capitania",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria conecta la memoria de Alise con la evolución posterior de Ryu. Se muestra como pista secundaria y no como escena verificada de la novela.",refs:["DMR-007-CLM-012"]},
 {targetId:"CHAR-KAGUYA",label:"Kaguya · legado de las compañeras",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria relaciona el legado de Kaguya con la evolución posterior de Ryu; requiere cotejo con el texto original.",refs:["DMR-007-CLM-012"]},
 {targetId:"CHAR-LYRA",label:"Lyra · legado de las compañeras",type:"Memoria/legado · fuente secundaria",description:"Una fuente comunitaria relaciona el legado de Lyra con la evolución posterior de Ryu; requiere cotejo con el texto original.",refs:["DMR-007-CLM-012"]}
 ];
 // No anime-continuity relationship edge is inferred from the Astrea V profile alone.
 REL["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
-{targetId:"CHAR-RYUU-LION",label:"Ryu · viaje y conflicto en la Ciudad Forjadora",type:"Encuentro y conflicto documentados en sinopsis editorial",description:"Ryu viaja desde Orario para visitar a Astrea; al llegar, choca con las nuevas seguidoras y la diosa le ordena quedarse en la Ciudad Forjadora de Espadas y dar su respuesta.",refs:["DMR-007-CLM-009","DMR-007-CLM-013","DMR-007-CLM-014"]},
+{targetId:"CHAR-RYUU-LION",label:"Ryu · viaje y conflicto en la Ciudad Forjadora",type:"Encuentro y conflicto documentados en sinopsis editorial",description:"Ryu viaja para ver a Astrea y recibe la orden de quedarse. Una referencia secundaria indica que Astrea ya había salido de Orario a petición de Ryu, quien quería evitar que presenciara la venganza tras la tragedia de su antigua Familia; esta razón no está todavía cotejada con un localizador de novela.",refs:["DMR-007-CLM-009","DMR-007-CLM-013","DMR-007-CLM-014","DMR-010-CLM-002","DMR-010-CLM-005","DMR-010-CLM-006"]},
 {targetId:"CHAR-CECIL-BLACKLIZA",label:"Cecil Blackliza · nueva capitana (fuente secundaria)",type:"Nueva generación · pendiente de cotejo",description:"El roster comunitario identifica a Cecil como capitana de la nueva Familia. Se mantiene como fuente secundaria.",refs:["DMR-007-CLM-011"]},
 {targetId:"CHAR-ISELINA",label:"Iselina · nueva generación (fuente secundaria)",type:"Nueva generación · afiliación provisional",description:"Aparece en la lista comunitaria de la nueva Familia. No se atribuye rango o historia individual.",refs:["DMR-007-CLM-011"]},
 {targetId:"CHAR-SHAU",label:"Shau · nueva generación (fuente secundaria)",type:"Nueva generación · afiliación provisional",description:"Aparece en la lista comunitaria de la nueva Familia. No se atribuye rango o historia individual.",refs:["DMR-007-CLM-011"]},
@@ -299,22 +299,29 @@ MOM["CHAR-RYUU-LION"]["CONT-ANIME"].push(
 {id:"ryu-family-justice",title:"La misión y caída de Astrea Familia",period:"DanMachi IV · episodio 20",summary:"La sinopsis oficial presenta a la primera Familia como protectora de los débiles y combatiente contra el mal; su nombre desaparece en la oscuridad del Dungeon, dejando a Ryu como única superviviente conocida. La causa detallada del desastre requiere cotejar los episodios y el texto de Astrea Record.",refs:["DMR-007-CLM-026"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-ALISE-LOVELACE","CHAR-KAGUYA","CHAR-LYRA"]}
 );
 MOM["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
-{id:"ryu-visit-astrea",title:"Viajar para reencontrarse con Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",summary:"Ryu parte sola desde Orario hacia la Ciudad Forjadora de Espadas, al este, para visitar a Astrea, buscar fuerza y seguir adelante tras cinco años de determinación.",refs:["DMR-007-CLM-009","DMR-007-CLM-013"],people:["CHAR-RYUU-LION","CHAR-ASTREA"]},
-{id:"ryu-astrea-orders-stay",title:"Astrea le ordena quedarse y responder",period:"Familia Chronicle: Episode Ryuu 2 · al llegar a la ciudad",summary:"Ryu choca con las nuevas seguidoras de Astrea. La diosa no le permite regresar de inmediato y le ordena permanecer en la Ciudad Forjadora de Espadas, pidiéndole que dé su respuesta.",refs:["DMR-007-CLM-014"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]}
+{id:"ryu-astrea-departure",title:"Ryu pide a Astrea que salga de Orario",period:"Después de la tragedia de Astrea Familia · evidencia secundaria",summary:"Una referencia secundaria indica que Ryu pidió a Astrea que abandonara Orario porque había decidido vengarse y no quería que la diosa presenciara esa etapa. El motivo está pendiente de cotejo con un pasaje primario.",refs:["DMR-010-CLM-002"],people:["CHAR-RYUU-LION","CHAR-ASTREA"]},
+{id:"ryu-revenge-rampage",title:"La campaña de venganza y sus consecuencias",period:"Después de la partida de Astrea · orden relativo",summary:"La referencia secundaria describe la campaña de Ryu contra Rudra Familia y personas ligadas a Evilus, tras la cual queda marcada como fugitiva. Las escenas y la cronología exacta requieren verificación primaria.",refs:["DMR-010-CLM-003"],people:["CHAR-RYUU-LION"]},
+{id:"ryu-rescue-and-recovery",title:"Syr y Mia ayudan a Ryu a sobrevivir",period:"Después de la campaña de venganza · orden relativo",summary:"La referencia secundaria señala que Ryu acaba herida y es encontrada por Syr; Mia la atiende y Ryu comienza una etapa nueva en Hostess of Fertility.",refs:["DMR-010-CLM-004"],people:["CHAR-RYUU-LION"]},
+{id:"ryu-visit-astrea",title:"Viajar para reencontrarse con Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",summary:"Ryu parte sola de Orario hacia la Ciudad Forjadora de Espadas, al este, para visitar a Astrea y buscar fuerza tras años de determinación. La sinopsis confirma el viaje, no cada detalle de los años de separación.",refs:["DMR-010-CLM-005","DMR-010-CLM-006"],people:["CHAR-RYUU-LION","CHAR-ASTREA"]},
+{id:"ryu-astrea-orders-stay",title:"Astrea le ordena quedarse y responder",period:"Familia Chronicle: Episode Ryuu 2 · al llegar a la ciudad",summary:"Ryu choca con las nuevas seguidoras de Astrea. La diosa no permite su regreso inmediato y le pide que permanezca allí y dé una respuesta.",refs:["DMR-010-CLM-005"],people:["CHAR-RYUU-LION","CHAR-ASTREA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]}
 ];
 MOM["CHAR-ASTREA"]["CONT-ANIME"]=[
 {id:"astrea-outside-orario",title:"Astrea fuera de Orario",period:"Perfil de adaptación DanMachi V",summary:"El perfil oficial posterior la sitúa fuera de Orario con nuevos seguidores, un estado que se mantiene separado de la Familia histórica.",refs:["DMR-007-CLM-008"],people:["CHAR-ASTREA"]}
 ];
 MOM["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
-{id:"astrea-new-family",title:"Una nueva generación de Familia",period:"Etapa posterior · roster comunitario",summary:"La fuente secundaria enumera una nueva generación y una sede asociada a Solingen. Quedan pendientes localizadores primarios para rango, roster y ubicación.",refs:["DMR-007-CLM-010","DMR-007-CLM-011"],people:["CHAR-ASTREA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]}
+{id:"astrea-departure-from-orario",title:"Astrea sale de Orario a petición de Ryu",period:"Tras la caída de la primera Astrea Familia · fuente secundaria",summary:"Una referencia secundaria atribuye la partida a la petición de Ryu, quien quería que Astrea no presenciara la venganza que estaba a punto de emprender. El motivo sigue pendiente de localizar en la novela.",refs:["DMR-010-CLM-002"],people:["CHAR-ASTREA","CHAR-RYUU-LION"]},
+{id:"astrea-later-family",title:"Astrea vive fuera de Orario con nuevas seguidoras",period:"Estado posterior · antes del War Game Hestia–Freya",summary:"La sinopsis editorial de Episode Ryuu 2 confirma que Ryu viaja para verla y entra en conflicto con nuevas seguidoras de Astrea. El roster detallado de la nueva Familia requiere cotejo.",refs:["DMR-010-CLM-005","DMR-010-CLM-006"],people:["CHAR-ASTREA","CHAR-RYUU-LION","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]}
 ];
 MOM["CHAR-ASTREA"]["CONT-ANIME"].push(
 {id:"astrea-first-familia-fall",title:"La primera Familia Astrea protege a los débiles",period:"DanMachi IV · episodio 20 · spoiler mayor",summary:"La sinopsis oficial recuerda a la Familia como defensora de los débiles y de la justicia; la historia del episodio habla de su desaparición en el Dungeon y del único superviviente conocido, Ryu.",refs:["DMR-007-CLM-025","DMR-007-CLM-026"],people:["CHAR-ASTREA","CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-KAGUYA","CHAR-LYRA"]}
 );
 
 TIMELINE["CHAR-RYUU-LION"]["CONT-MAIN-LN"]=[
-{id:"t-ryu-visit-astrea",title:"Viaje para visitar a Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",refs:["DMR-007-CLM-009","DMR-007-CLM-013"]},
-{id:"t-ryu-stays-city",title:"Astrea le pide quedarse en la Ciudad Forjadora",period:"Familia Chronicle: Episode Ryuu 2 · tras su llegada",refs:["DMR-007-CLM-014"]}
+{id:"t-ryu-astrea-departure",title:"Ryu pide a Astrea que salga de Orario",period:"Después de la tragedia · motivo secundario pendiente de fuente primaria",refs:["DMR-010-CLM-002"]},
+{id:"t-ryu-revenge",title:"Campaña de venganza",period:"Después de la partida de Astrea · orden relativo",refs:["DMR-010-CLM-003"]},
+{id:"t-ryu-rescue",title:"Rescate y recuperación de Ryu",period:"Después de la venganza · orden relativo",refs:["DMR-010-CLM-004"]},
+{id:"t-ryu-visit-astrea",title:"Viaje para visitar a Astrea",period:"Familia Chronicle: Episode Ryuu 2 · sinopsis editorial",refs:["DMR-010-CLM-005","DMR-010-CLM-006"]},
+{id:"t-ryu-stays-city",title:"Astrea le pide quedarse en la Ciudad Forjadora",period:"Familia Chronicle: Episode Ryuu 2 · tras su llegada",refs:["DMR-010-CLM-005"]}
 ];
 TIMELINE["CHAR-ASTREA"]["CONT-ANIME"].push(
 {id:"t-astrea-outside-orario",title:"Astrea reside fuera de Orario",period:"Perfil de adaptación DanMachi V",refs:["DMR-007-CLM-008"]}
@@ -324,7 +331,8 @@ TIMELINE["CHAR-ASTREA"]["CONT-ANIME"].push(
 );
 
 TIMELINE["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
-{id:"t-astrea-new-family",title:"Nueva generación de Astrea Familia",period:"Etapa posterior · referencia secundaria",refs:["DMR-007-CLM-010","DMR-007-CLM-011"]}
+{id:"t-astrea-departure",title:"Astrea sale de Orario a petición de Ryu",period:"Después de la tragedia · fuente secundaria pendiente de cotejo",refs:["DMR-010-CLM-002"]},
+{id:"t-astrea-new-location",title:"Astrea vive fuera de Orario con nuevas seguidoras",period:"Estado posterior · sinopsis editorial de Episode Ryuu 2",refs:["DMR-010-CLM-005","DMR-010-CLM-006"]}
 ];
 
 
@@ -444,6 +452,27 @@ EXTENDED["CHAR-RYUU-LION"]["CONT-AR"].sections.push(
 {title:"Alise, Kaguya y Lyra: vínculos distintos",text:"El material incorporado no reduce a las compañeras a una etiqueta de amistad uniforme. Alise aparece como capitana y guía; Kaguya como alguien con quien Ryu choca y a quien respeta; Lyra como apoyo estratégico. Los detalles exactos de cada interacción requieren localizar las escenas originales."},
 {title:"Rostro histórico y evidencia",text:"Las imágenes oficiales de personajes se tratan como retratos de referencia, no como ilustraciones de una escena concreta. La descripción visual de cada persona debe apoyarse en el perfil correspondiente y no se improvisa desde una miniatura."}
 );
+
+
+EXTENDED["CHAR-ASTREA"]["CONT-MAIN-LN"].sections.unshift(
+{title:"Por qué salió de Orario · evidencia secundaria",text:"Una fuente secundaria señala que Astrea se marchó a petición de Ryu, que no quería que la diosa presenciara la venganza tras la tragedia de Astrea Familia. El motivo aún no tiene aquí localizador de capítulo de la novela; la sinopsis oficial de Familia Chronicle: Episode Ryuu 2 confirma solo su ubicación posterior y el viaje de Ryu para verla."}
+);
+EXTENDED["CHAR-RYUU-LION"]["CONT-MAIN-LN"]={
+title:"Ryu · tragedia, separación y reencuentro con Astrea",
+summary:"La etapa posterior a Astrea Familia enlaza la tragedia, la petición de Ryu para que Astrea salga de Orario, la venganza y la vida posterior de Ryu. Los pasos de venganza y rescate están documentados aquí con fuente secundaria; el viaje posterior y el conflicto con la nueva generación de Astrea figuran en la sinopsis editorial.",
+sections:[
+{title:"La partida de Astrea",text:"La referencia secundaria dice que Ryu pidió a Astrea salir de Orario porque no quería que la diosa presenciara la venganza. No se presenta como hecho confirmado capítulo a capítulo."},
+{title:"La venganza y el rescate",text:"La misma fuente secundaria conecta la campaña de Ryu contra los responsables con su condición de fugitiva y el paso posterior a Hostess of Fertility, después de ser encontrada por Syr y atendida por Mia."},
+{title:"El reencuentro",text:"La ficha editorial de Familia Chronicle: Episode Ryuu 2 confirma que Ryu viaja sola a la Ciudad Forjadora de Espadas para ver a Astrea, y que la diosa no le permite regresar de inmediato y le pide una respuesta."}
+],
+references:[
+{label:"Familia Chronicle: Episode Ryuu 2 · editorial oficial",url:"https://ga.sbcr.jp/product/9784815623692/",kind:"official"},
+{label:"Ryuu Lion · referencia secundaria",url:"https://danmachi.fandom.com/es/wiki/Ryuu_Lion",kind:"community"},
+{label:"DanMachi IV · episodio 20",url:"https://danmachi.com/danmachi4/story/index.php?slideNum=1",kind:"official"}
+]
+};
+META["CHAR-ASTREA"].states["CONT-MAIN-LN"].summary += " Una fuente secundaria atribuye su salida original de Orario a una petición de Ryu para no presenciar la venganza; el motivo requiere localizador primario.";
+META["CHAR-RYUU-LION"].states["CONT-MAIN-LN"].summary += " La separación de Astrea y los episodios de venganza y rescate se conservan como resumen secundario; el reencuentro y la orden de quedarse se apoyan en una sinopsis editorial.";
 
 function extendedInfo(id,continuity,index){
 const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;

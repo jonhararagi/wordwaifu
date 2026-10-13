@@ -6,7 +6,7 @@ const corpus=require("../src/lore-corpus.js");
 const archive=require("../src/character-archive.js");
 const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
-const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md"];
+const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
@@ -96,7 +96,16 @@ assert.ok(extendedBell.sections.some(section=>section.title==="Anclas de continu
 const filtered=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","safe-only");
 assert.ok(!filtered.moments.some(m=>m.id==="ryu-seven-days"));
 assert.equal(archive.list(index,{query:"Ryu"}).filter(c=>c.id==="CHAR-RYUU-LION").length,1);
-assert.ok(ryu.missingContinuities.includes("CONT-MAIN-LN")&&ryu.missingContinuities.includes("CONT-AU"));
+assert.ok(!ryu.missingContinuities.includes("CONT-MAIN-LN")&&ryu.missingContinuities.includes("CONT-AU"));
+const ryuMain=archive.getProfile(index,"CHAR-RYUU-LION","CONT-MAIN-LN","all");
+assert.ok(ryuMain.moments.some(m=>m.id==="ryu-astrea-departure"),"The archive should tell why Ryu asked Astrea to leave, with evidence status.");
+assert.ok(ryuMain.moments.some(m=>m.id==="ryu-revenge-rampage"));
+assert.ok(ryuMain.moments.some(m=>m.id==="ryu-rescue-and-recovery"));
+assert.ok(ryuMain.moments.some(m=>m.id==="ryu-visit-astrea"));
+const astreaMain=archive.getProfile(index,"CHAR-ASTREA","CONT-MAIN-LN","all");
+assert.ok(astreaMain.moments.some(m=>m.id==="astrea-departure-from-orario"));
+assert.ok(astreaMain.relationships.some(r=>r.targetId==="CHAR-RYUU-LION"));
+assert.ok(archive.getExtendedInfo("CHAR-ASTREA","CONT-MAIN-LN").sections.some(s=>s.title.includes("Por qué salió de Orario")));
 // Expanded character profiles consume existing curated claims rather than inventing data.
 const directory=archive.list(index);
 for(const id of ["DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR"]){
