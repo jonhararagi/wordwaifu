@@ -2921,6 +2921,35 @@ async function run() {
     process.stdout.write("PASS_REAL: Art Studio IndexedDB and localStorage fallback create/edit/reload/delete; simulated quota failure never reports success.\\n");
 
     await page.screenshot({ path: path.join(root, "artifacts", "art-studio.png"), fullPage: true });
+    // Connected family explorer: Ryu -> Alise -> Astrea, with browser back preserving the prior dossier.
+    await page.locator('.nav-item[data-view="lore"]').click();
+    const familyBack = page.locator("#archive-profile-back");
+    if (await familyBack.isVisible().catch(() => false)) await familyBack.click();
+    await page.locator("#archive-clear-filters").click();
+    await page.locator("#character-archive-query").fill("Ryu Lion");
+    await page.waitForFunction(() => [...document.querySelectorAll("#character-archive-results [data-archive-open]")].some(node => node.closest(".archive-character-card")?.innerText.includes("Ryu Lion")), null, { timeout: 5000 });
+    await page.locator("#character-archive-results .archive-character-card").filter({ hasText: "Ryu Lion" }).locator("[data-archive-open]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent.includes("Ryu Lion"), null, { timeout: 5000 });
+    await page.locator("#archive-profile-continuity").selectOption("CONT-AR");
+    await page.locator('#archive-profile-tabs [data-profile-tab="relationships"]').click();
+    await page.waitForFunction(() => !!document.querySelector(".archive-family-network"), null, { timeout: 5000 });
+    const familyHeading = await page.locator(".archive-family-network").innerText();
+    assert.ok(familyHeading.includes("Astrea Familia"), "Ryu's historical profile must expose a navigable Astrea Familia network.");
+    assert.ok(familyHeading.includes("Alise Lovelace"), "The family network must make Alise discoverable without inventing a friendship edge.");
+    await page.locator(".archive-family-network [data-character-link]").filter({ hasText: "Alise Lovelace" }).click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent.includes("Alise Lovelace"), null, { timeout: 5000 });
+    await page.locator('#archive-profile-tabs [data-profile-tab="relationships"]').click();
+    await page.waitForFunction(() => !!document.querySelector(".archive-family-network"), null, { timeout: 5000 });
+    await page.locator(".archive-family-network [data-character-link]").filter({ hasText: "Astrea" }).click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent.trim() === "Astrea", null, { timeout: 5000 });
+    await page.locator('#archive-profile-tabs [data-profile-tab="timeline"]').click();
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Cronología documentada"), "The goddess dossier must expose its documented timeline.");
+    await page.locator("#archive-profile-back").click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent.includes("Alise Lovelace"), null, { timeout: 5000 });
+    await page.locator("#archive-profile-back").click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent.includes("Ryu Lion"), null, { timeout: 5000 });
+    process.stdout.write("PASS connected family navigation: Ryu -> Alise -> Astrea -> timeline, then back through the exact dossier path.\\n");
+
     // A user-assigned portrait takes precedence over the linked reference art in the archive.
     await page.locator('.nav-item[data-view="lore"]').click();
     const profileBack = page.locator("#archive-profile-back");
