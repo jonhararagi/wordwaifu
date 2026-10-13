@@ -66,7 +66,7 @@ for (const required of ["LAT-GUA-POMBERO", "LAT-MAP-PILLAN", "LAT-MEX-QUETZALCOA
   assert.ok(byId.has(required), "catalog is missing expected entry " + required);
 }
 
-const heroicProfiles = ["GRC-HERACLES", "GRC-HERACLES-FEM", "GRC-MEDUSA"];
+const heroicProfiles = ["GRC-HERACLES", "GRC-HERACLES-FEM", "GRC-MEDUSA", "GRC-HYDRA-LERNAEAN", "GRC-CERBERUS", "GRC-MINOTAUR", "GRC-THESEUS"];
 for (const id of heroicProfiles) {
   const entity = byId.get(id);
   assert.ok(entity && entity.heroicManifestations, id + " must expose structured heroic manifestations");
@@ -84,5 +84,10 @@ for (const id of heroicProfiles) {
 assert.ok(byId.get("GRC-HERACLES-FEM").relations.some(relation => relation.targetId === "GRC-HERACLES"), "female Heracles adaptation must link to the mythic reference");
 assert.ok(catalogModule.includes("entity.heroicManifestations"), "detail view must render heroic manifestations");
 assert.ok(catalogModule.includes("form.totalityAttack"), "detail view must render the myth-totality attack");
+for (const fieldId of ["mythic-draft-weapon", "mythic-draft-outfit", "mythic-draft-totality-attack", "mythic-draft-manifestation-name"]) {
+  assert.ok(catalogModule.includes(fieldId), "mythic proposal editor must expose " + fieldId);
+}
+assert.ok(catalogModule.includes("weapon:$("#mythic-draft-weapon").value.trim()"), "proposal persistence must store the weapon field separately");
+assert.ok(catalogModule.includes("totalityAttack:$("#mythic-draft-totality-attack").value.trim()"), "proposal persistence must store the totality attack separately");
 
 console.log("Mythic catalog validation passed: " + catalog.entities.length + " entities (" + americanCount + " American/Latin American), " + (catalog.starterDecks || []).length + " starter decks.");
