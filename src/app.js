@@ -3054,6 +3054,37 @@
     publishMythicProjectState();
   });
 
+  document.addEventListener("wordwaifu:mythic-proposal-promote", async (event) => {
+    const proposalId = event.detail && event.detail.id;
+    const proposal = Array.isArray(state.mythicProposals) ? state.mythicProposals.find(item => item && item.id === proposalId) : null;
+    if (!proposal) return;
+    const baseId = "mythic-character-" + Date.now().toString(36);
+    let id = baseId, suffix = 1;
+    const existingIds = new Set(state.characters.map(character => character && character.id).filter(Boolean));
+    while (existingIds.has(id)) id = baseId + "-" + suffix++;
+    const character = {
+      id, name: proposal.title, age: null, species: "Por definir", role: "Personaje original · portador / invocador",
+      personality: [], description: [proposal.concept, proposal.ability, proposal.activation ? "Activación: " + proposal.activation : "",
+        proposal.cost ? "Coste: " + proposal.cost : "", proposal.risk ? "Riesgos: " + proposal.risk : "",
+        proposal.progression ? "Evolución: " + proposal.progression : ""].filter(Boolean).join("\\n\\n"),
+      motivation: "Integrar la inspiración mitológica como una adaptación propia, sin asumir que el personaje sea la figura original.",
+      flaw: proposal.weakness || "Debilidad por definir.", relationships: [], locationHistory: [], status: "draft",
+      mythicEntityIds: Array.isArray(proposal.entityIds) ? proposal.entityIds.slice() : [],
+      mythicProposalId: proposal.id, storyId: proposal.storyId || null,
+      chapterReference: proposal.chapterReference || ""
+    };
+    state.characters.push(character);
+    const saved = await saveProject();
+    if (saved) {
+      activeView = "characters";
+      selectedCharacterId = id;
+      render();
+      $("#save-status").textContent = "Personaje creado desde la propuesta mitológica y guardado en el proyecto.";
+    } else {
+      $("#mythic-generator-status").textContent = "No se confirmó el guardado del personaje; revisá la persistencia.";
+    }
+  });
+
   document.addEventListener("wordwaifu:mythic-proposal-delete", async (event) => {
     const id = event.detail && event.detail.id;
     if (typeof id !== "string" || !Array.isArray(state.mythicProposals)) return;
