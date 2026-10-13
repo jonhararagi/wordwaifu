@@ -46,7 +46,20 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [
+        "Pillán",
+        "Pillanes (plural en algunas fuentes)"
+      ],
+      "attributes": [
+        "fuego",
+        "tormenta"
+      ],
+      "domains": [
+        "fuego",
+        "tormenta"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-MAP-TRENGT",
@@ -78,7 +91,23 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [
+        "Trengtreng y Kaikai",
+        "Treng-Treng y Kai-Kai"
+      ],
+      "attributes": [
+        "agua",
+        "tierra",
+        "cataclismo"
+      ],
+      "domains": [
+        "agua",
+        "tierra",
+        "cataclismo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-TEH-ELAL",
@@ -105,7 +134,16 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "viaje"
+      ],
+      "domains": [
+        "viaje"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-GUA-POMBERO",
@@ -133,7 +171,22 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [
+        "Pomberito (variante regional)"
+      ],
+      "attributes": [
+        "monte",
+        "sigilo",
+        "pacto"
+      ],
+      "domains": [
+        "monte",
+        "sigilo",
+        "pacto"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-GUA-JASYJATERE",
@@ -160,7 +213,18 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "ilusión",
+        "tiempo"
+      ],
+      "domains": [
+        "ilusión",
+        "tiempo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-GUA-KURUPI",
@@ -187,7 +251,21 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [
+        "Kurupí",
+        "Kurupi"
+      ],
+      "attributes": [
+        "trampa",
+        "atadura"
+      ],
+      "domains": [
+        "trampa",
+        "atadura"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-BRA-CURUPIRA",
@@ -214,7 +292,20 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "bosque",
+        "protección",
+        "rastreo"
+      ],
+      "domains": [
+        "bosque",
+        "protección",
+        "rastreo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-BRA-BOITATA",
@@ -242,7 +333,20 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "fuego",
+        "luz",
+        "protección"
+      ],
+      "domains": [
+        "fuego",
+        "luz",
+        "protección"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-BRA-IARA",
@@ -269,7 +373,20 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "agua",
+        "canto",
+        "encanto"
+      ],
+      "domains": [
+        "agua",
+        "canto",
+        "encanto"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-AND-PACHAMAMA",
@@ -297,7 +414,22 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "tierra",
+        "fertilidad",
+        "reciprocidad",
+        "tradición viva"
+      ],
+      "domains": [
+        "tierra",
+        "fertilidad",
+        "reciprocidad",
+        "tradición viva"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-AND-INTI",
@@ -324,7 +456,20 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "sol",
+        "luz",
+        "realeza"
+      ],
+      "domains": [
+        "sol",
+        "luz",
+        "realeza"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-AND-VIRACOCHA",
@@ -351,7 +496,18 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "creación",
+        "orden"
+      ],
+      "domains": [
+        "creación",
+        "orden"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-AND-SUPAY",
@@ -378,7 +534,20 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "inframundo",
+        "sombra",
+        "pacto"
+      ],
+      "domains": [
+        "inframundo",
+        "sombra",
+        "pacto"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-MEX-QUETZALCOATL",
@@ -406,7 +575,25 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [
+        "Quetzalcóatl",
+        "Quetzalcoatl"
+      ],
+      "attributes": [
+        "mesoamericano",
+        "serpiente emplumada",
+        "viento",
+        "conocimiento"
+      ],
+      "domains": [
+        "mesoamericano",
+        "serpiente emplumada",
+        "viento",
+        "conocimiento"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-MEX-TEZCATLIPOCA",
@@ -434,7 +621,24 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [
+        "Tezcatlipoca"
+      ],
+      "attributes": [
+        "noche",
+        "destino",
+        "espejo",
+        "engaño"
+      ],
+      "domains": [
+        "noche",
+        "destino",
+        "espejo",
+        "engaño"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-MEX-HUITZILOPOCHTLI",
@@ -461,7 +665,22 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [
+        "Huitzilopochtli"
+      ],
+      "attributes": [
+        "sol",
+        "guerra",
+        "voluntad"
+      ],
+      "domains": [
+        "sol",
+        "guerra",
+        "voluntad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-MAY-IXCHEL",
@@ -488,7 +707,20 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "sanación",
+        "tejido",
+        "luna"
+      ],
+      "domains": [
+        "sanación",
+        "tejido",
+        "luna"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "LAT-MAY-HERO-TWINS",
@@ -517,7 +749,25 @@
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING",
         "SRC-POPOL-VUH"
-      ]
+      ],
+      "aliases": [
+        "Hunahpú e Ixbalanqué",
+        "Hunahpu and Xbalanque"
+      ],
+      "attributes": [
+        "Popol Vuh",
+        "gemelos",
+        "ingenio",
+        "inframundo"
+      ],
+      "domains": [
+        "Popol Vuh",
+        "gemelos",
+        "ingenio",
+        "inframundo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "WEAPON-MACUAHUITL",
@@ -556,7 +806,23 @@
       "sourceIds": [
         "SRC-SMITHSONIAN-NMAI",
         "SRC-UNESCO-LIVING"
-      ]
+      ],
+      "aliases": [
+        "Macuahuitl",
+        "Macuahuitl (ortografía española histórica: maquahuitl)"
+      ],
+      "attributes": [
+        "mesoamericano",
+        "arma histórica",
+        "obsidiana"
+      ],
+      "domains": [
+        "mesoamericano",
+        "arma histórica",
+        "obsidiana"
+      ],
+      "confidence": "referencia_histórica_con_contexto",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "WEAPON-EXCALIBUR",
@@ -599,7 +865,22 @@
       },
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "arma legendaria",
+        "espada",
+        "realeza",
+        "prueba"
+      ],
+      "domains": [
+        "arma legendaria",
+        "espada",
+        "realeza",
+        "prueba"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "WEAPON-GUNGNIR",
@@ -644,7 +925,26 @@
       "sourceIds": [
         "SRC-PRIMARY-EDDA",
         "SRC-BRITANNICA-MYTH"
-      ]
+      ],
+      "aliases": [
+        "Gungnir"
+      ],
+      "attributes": [
+        "arma legendaria",
+        "lanza",
+        "Odín",
+        "juramento",
+        "precisión"
+      ],
+      "domains": [
+        "arma legendaria",
+        "lanza",
+        "Odín",
+        "juramento",
+        "precisión"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "WEAPON-MJOLNIR",
@@ -688,7 +988,25 @@
       "sourceIds": [
         "SRC-PRIMARY-EDDA",
         "SRC-BRITANNICA-MYTH"
-      ]
+      ],
+      "aliases": [
+        "Mjölnir",
+        "Mjolnir"
+      ],
+      "attributes": [
+        "arma legendaria",
+        "martillo",
+        "trueno",
+        "protección"
+      ],
+      "domains": [
+        "arma legendaria",
+        "martillo",
+        "trueno",
+        "protección"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "WEAPON-KUSANAGI",
@@ -737,7 +1055,25 @@
       "sourceIds": [
         "SRC-PRIMARY-KOJIKI",
         "SRC-BRITANNICA-MYTH"
-      ]
+      ],
+      "aliases": [
+        "Kusanagi-no-Tsurugi",
+        "Ame-no-Murakumo-no-Tsurugi"
+      ],
+      "attributes": [
+        "espada sagrada",
+        "Japón",
+        "viento",
+        "reliquia"
+      ],
+      "domains": [
+        "espada sagrada",
+        "Japón",
+        "viento",
+        "reliquia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "WEAPON-VAJRA",
@@ -780,7 +1116,22 @@
       },
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "reliquia",
+        "ritual",
+        "rayo",
+        "indestructibilidad"
+      ],
+      "domains": [
+        "reliquia",
+        "ritual",
+        "rayo",
+        "indestructibilidad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "WEAPON-TRISHULA",
@@ -823,7 +1174,25 @@
       },
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
-      ]
+      ],
+      "aliases": [
+        "Trishula",
+        "Trishul"
+      ],
+      "attributes": [
+        "reliquia",
+        "tridente",
+        "Shiva",
+        "tres aspectos"
+      ],
+      "domains": [
+        "reliquia",
+        "tridente",
+        "Shiva",
+        "tres aspectos"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "RELIC-ARK-ALLIANCE",
@@ -861,7 +1230,22 @@
       "sourceIds": [
         "SRC-MET-COLLECTION",
         "SRC-BRITISH-MUSEUM"
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "reliquia",
+        "pacto",
+        "protección",
+        "objeto sagrado"
+      ],
+      "domains": [
+        "reliquia",
+        "pacto",
+        "protección",
+        "objeto sagrado"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
     },
     {
       "id": "SYS-CARD-PACT",
@@ -888,7 +1272,23 @@
           "type": "supports",
           "targetId": "SYS-CARD-RESONANCE"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "cartas",
+        "reliquias",
+        "invocación",
+        "contrato",
+        "mecánica original"
+      ],
+      "domains": [
+        "cartas",
+        "reliquias",
+        "invocación",
+        "contrato",
+        "mecánica original"
+      ],
+      "confidence": "ficción_de_diseño"
     },
     {
       "id": "SYS-CARD-AVATAR",
@@ -915,7 +1315,23 @@
           "type": "progression",
           "targetId": "SYS-CARD-RESONANCE"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "cartas",
+        "avatar",
+        "transformación",
+        "fusión",
+        "riesgo"
+      ],
+      "domains": [
+        "cartas",
+        "avatar",
+        "transformación",
+        "fusión",
+        "riesgo"
+      ],
+      "confidence": "ficción_de_diseño"
     },
     {
       "id": "SYS-CARD-RESONANCE",
@@ -938,7 +1354,23 @@
           "type": "requires",
           "targetId": "SYS-CARD-PACT"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "progresión",
+        "evolución",
+        "cartas",
+        "irreversible",
+        "continuidad"
+      ],
+      "domains": [
+        "progresión",
+        "evolución",
+        "cartas",
+        "irreversible",
+        "continuidad"
+      ],
+      "confidence": "ficción_de_diseño"
     },
     {
       "id": "SYS-CARD-ARCHETYPES",
@@ -960,7 +1392,21 @@
           "type": "supports",
           "targetId": "SYS-CARD-PACT"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "filtro",
+        "cartas",
+        "roles",
+        "catálogo"
+      ],
+      "domains": [
+        "filtro",
+        "cartas",
+        "roles",
+        "catálogo"
+      ],
+      "confidence": "ficción_de_diseño"
     },
     {
       "id": "SYS-CARD-ETHICS",
@@ -982,7 +1428,21 @@
           "type": "supports",
           "targetId": "SYS-CARD-PACT"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "reglas",
+        "agencia",
+        "pacto",
+        "consecuencias"
+      ],
+      "domains": [
+        "reglas",
+        "agencia",
+        "pacto",
+        "consecuencias"
+      ],
+      "confidence": "ficción_de_diseño"
     },
     {
       "id": "LAT-MEX-MICTLAN",
@@ -1008,7 +1468,20 @@
           "type": "underworld_association",
           "targetId": "LAT-MEX-QUETZALCOATL"
         }
-      ]
+      ],
+      "aliases": [
+        "Mictlantecuhtli",
+        "Mictlantecutli (variante ortográfica)"
+      ],
+      "attributes": [
+        "muerte",
+        "inframundo"
+      ],
+      "domains": [
+        "muerte",
+        "inframundo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-MEX-COYOL",
@@ -1034,7 +1507,17 @@
           "type": "mythic_conflict",
           "targetId": "LAT-MEX-HUITZILOPOCHTLI"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "luna",
+        "mito de origen"
+      ],
+      "domains": [
+        "luna",
+        "mito de origen"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-MEX-XOCHI",
@@ -1055,7 +1538,19 @@
         "SRC-SMITHSONIAN-NMAI",
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "No convertir asociaciones de fuentes coloniales en una descripción universal de todas las comunidades nahuas."
+      "sourceNotes": "No convertir asociaciones de fuentes coloniales en una descripción universal de todas las comunidades nahuas.",
+      "aliases": [],
+      "attributes": [
+        "flores",
+        "arte",
+        "amor"
+      ],
+      "domains": [
+        "flores",
+        "arte",
+        "amor"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-MAY-ITZAMNA",
@@ -1075,7 +1570,17 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-SMITHSONIAN-NMAI"
       ],
-      "sourceNotes": "La identificación de figuras mayas antiguas con nombres coloniales debe tratarse con cautela; evitar presentarla como consenso absoluto."
+      "sourceNotes": "La identificación de figuras mayas antiguas con nombres coloniales debe tratarse con cautela; evitar presentarla como consenso absoluto.",
+      "aliases": [],
+      "attributes": [
+        "conocimiento",
+        "escritura"
+      ],
+      "domains": [
+        "conocimiento",
+        "escritura"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-MAY-CHAAC",
@@ -1096,7 +1601,19 @@
         "SRC-SMITHSONIAN-NMAI",
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Las figuras y nombres de deidades de lluvia varían entre regiones mayas y periodos históricos."
+      "sourceNotes": "Las figuras y nombres de deidades de lluvia varían entre regiones mayas y periodos históricos.",
+      "aliases": [],
+      "attributes": [
+        "lluvia",
+        "agricultura",
+        "agua"
+      ],
+      "domains": [
+        "lluvia",
+        "agricultura",
+        "agua"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-AND-MAMQUILLA",
@@ -1122,7 +1639,19 @@
           "type": "associated_deity",
           "targetId": "LAT-AND-INTI"
         }
-      ]
+      ],
+      "aliases": [
+        "Mama Killa"
+      ],
+      "attributes": [
+        "luna",
+        "calendario"
+      ],
+      "domains": [
+        "luna",
+        "calendario"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-AND-ILLAPA",
@@ -1143,7 +1672,19 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-MET-COLLECTION"
       ],
-      "sourceNotes": "La documentación procede en parte de cronistas coloniales; comprobar equivalencias regionales antes de generalizar."
+      "sourceNotes": "La documentación procede en parte de cronistas coloniales; comprobar equivalencias regionales antes de generalizar.",
+      "aliases": [],
+      "attributes": [
+        "trueno",
+        "rayo",
+        "lluvia"
+      ],
+      "domains": [
+        "trueno",
+        "rayo",
+        "lluvia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-AND-MANCO",
@@ -1162,7 +1703,15 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Los relatos de fundación tienen versiones diferentes; no deben leerse sin más como crónica histórica verificable."
+      "sourceNotes": "Los relatos de fundación tienen versiones diferentes; no deben leerse sin más como crónica histórica verificable.",
+      "aliases": [],
+      "attributes": [
+        "fundación"
+      ],
+      "domains": [
+        "fundación"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-GUA-TEJU",
@@ -1181,7 +1730,11 @@
       "sourceIds": [
         "SRC-UNESCO-LIVING"
       ],
-      "sourceNotes": "La descripción específica se difunde sobre todo mediante recopilaciones y folclore regional moderno; no atribuirla por igual a todos los pueblos guaraníes."
+      "sourceNotes": "La descripción específica se difunde sobre todo mediante recopilaciones y folclore regional moderno; no atribuirla por igual a todos los pueblos guaraníes.",
+      "aliases": [],
+      "attributes": [],
+      "domains": [],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-BRA-SACI",
@@ -1201,7 +1754,17 @@
       "sourceIds": [
         "SRC-UNESCO-LIVING"
       ],
-      "sourceNotes": "Las imágenes populares actuales están influidas por recopilaciones literarias y cultura de masas; distinguirlas de variantes orales."
+      "sourceNotes": "Las imágenes populares actuales están influidas por recopilaciones literarias y cultura de masas; distinguirlas de variantes orales.",
+      "aliases": [],
+      "attributes": [
+        "travesura",
+        "viento"
+      ],
+      "domains": [
+        "travesura",
+        "viento"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-AND-MAMACOCHA",
@@ -1221,7 +1784,17 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-UNESCO-LIVING"
       ],
-      "sourceNotes": "No tratarla como una diosa idéntica en todas las comunidades andinas ni asignarle poderes de ficción como hechos documentados."
+      "sourceNotes": "No tratarla como una diosa idéntica en todas las comunidades andinas ni asignarle poderes de ficción como hechos documentados.",
+      "aliases": [],
+      "attributes": [
+        "mar",
+        "agua"
+      ],
+      "domains": [
+        "mar",
+        "agua"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-AR-LALLORONA",
@@ -1241,7 +1814,21 @@
       "sourceIds": [
         "SRC-UNESCO-LIVING"
       ],
-      "sourceNotes": "Las versiones son cambiantes y no deben atribuirse a un pueblo específico sin fuente local concreta."
+      "sourceNotes": "Las versiones son cambiantes y no deben atribuirse a un pueblo específico sin fuente local concreta.",
+      "aliases": [],
+      "attributes": [
+        "leyenda oral",
+        "agua",
+        "lamento",
+        "variantes regionales"
+      ],
+      "domains": [
+        "leyenda oral",
+        "agua",
+        "lamento",
+        "variantes regionales"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "LAT-CHL-CALEUCHE",
@@ -1261,7 +1848,19 @@
       "sourceIds": [
         "SRC-UNESCO-LIVING"
       ],
-      "sourceNotes": "Folclore regional de Chiloé; no presentarlo como creencia uniforme de todo Chile ni como dato histórico literal."
+      "sourceNotes": "Folclore regional de Chiloé; no presentarlo como creencia uniforme de todo Chile ni como dato histórico literal.",
+      "aliases": [],
+      "attributes": [
+        "chilote",
+        "mar",
+        "barco espectral"
+      ],
+      "domains": [
+        "chilote",
+        "mar",
+        "barco espectral"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "GRC-ATHENA",
@@ -1280,7 +1879,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Consultar también los cultos locales y las fuentes antiguas; sus funciones cambian entre relatos y lugares."
+      "sourceNotes": "Consultar también los cultos locales y las fuentes antiguas; sus funciones cambian entre relatos y lugares.",
+      "aliases": [],
+      "attributes": [
+        "sabiduría",
+        "estrategia",
+        "artes"
+      ],
+      "domains": [
+        "sabiduría",
+        "estrategia",
+        "artes"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "GRC-HERMES",
@@ -1299,7 +1910,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Las funciones son múltiples y dependen del culto y la fuente."
+      "sourceNotes": "Las funciones son múltiples y dependen del culto y la fuente.",
+      "aliases": [],
+      "attributes": [
+        "mensajero",
+        "viajes",
+        "fronteras"
+      ],
+      "domains": [
+        "mensajero",
+        "viajes",
+        "fronteras"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "GRC-HERACLES",
@@ -1318,7 +1941,17 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "No confundir las distintas listas y ordenamientos de sus trabajos en fuentes antiguas."
+      "sourceNotes": "No confundir las distintas listas y ordenamientos de sus trabajos en fuentes antiguas.",
+      "aliases": [],
+      "attributes": [
+        "pruebas",
+        "fuerza"
+      ],
+      "domains": [
+        "pruebas",
+        "fuerza"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "GRC-MEDUSA",
@@ -1337,7 +1970,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "La historia de Medusa difiere notablemente entre Hesíodo, Ovidio y recepciones posteriores."
+      "sourceNotes": "La historia de Medusa difiere notablemente entre Hesíodo, Ovidio y recepciones posteriores.",
+      "aliases": [],
+      "attributes": [
+        "gorgona",
+        "mirada",
+        "monstruo"
+      ],
+      "domains": [
+        "gorgona",
+        "mirada",
+        "monstruo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "EGY-ISIS",
@@ -1357,7 +2002,19 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-MET-COLLECTION"
       ],
-      "sourceNotes": "Los cultos y atributos evolucionaron a través de largos periodos históricos."
+      "sourceNotes": "Los cultos y atributos evolucionaron a través de largos periodos históricos.",
+      "aliases": [],
+      "attributes": [
+        "protección",
+        "realeza",
+        "magia"
+      ],
+      "domains": [
+        "protección",
+        "realeza",
+        "magia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "EGY-ANUBIS",
@@ -1377,7 +2034,19 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-MET-COLLECTION"
       ],
-      "sourceNotes": "La función de Anubis se transforma con la evolución del culto funerario egipcio."
+      "sourceNotes": "La función de Anubis se transforma con la evolución del culto funerario egipcio.",
+      "aliases": [],
+      "attributes": [
+        "funerario",
+        "protección",
+        "más allá"
+      ],
+      "domains": [
+        "funerario",
+        "protección",
+        "más allá"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "EGY-RA",
@@ -1396,7 +2065,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Las teologías egipcias variaron históricamente; evitar una única genealogía fija."
+      "sourceNotes": "Las teologías egipcias variaron históricamente; evitar una única genealogía fija.",
+      "aliases": [],
+      "attributes": [
+        "sol",
+        "cielo",
+        "realeza"
+      ],
+      "domains": [
+        "sol",
+        "cielo",
+        "realeza"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "NOR-ODIN",
@@ -1415,7 +2096,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "La mayor parte de los relatos escritos conservados proviene de fuentes medievales, no de transcripciones neutrales de la era vikinga."
+      "sourceNotes": "La mayor parte de los relatos escritos conservados proviene de fuentes medievales, no de transcripciones neutrales de la era vikinga.",
+      "aliases": [],
+      "attributes": [
+        "sabiduría",
+        "poesía",
+        "guerra"
+      ],
+      "domains": [
+        "sabiduría",
+        "poesía",
+        "guerra"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "NOR-LOKI",
@@ -1434,7 +2127,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Evitar reducir a Loki a un equivalente simple del diablo cristiano."
+      "sourceNotes": "Evitar reducir a Loki a un equivalente simple del diablo cristiano.",
+      "aliases": [],
+      "attributes": [
+        "cambio de forma",
+        "engaño",
+        "ambigüedad"
+      ],
+      "domains": [
+        "cambio de forma",
+        "engaño",
+        "ambigüedad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "NOR-FENRIR",
@@ -1453,7 +2158,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "La narración conservada depende especialmente de fuentes eddicas medievales."
+      "sourceNotes": "La narración conservada depende especialmente de fuentes eddicas medievales.",
+      "aliases": [],
+      "attributes": [
+        "lobo",
+        "destino",
+        "Ragnarök"
+      ],
+      "domains": [
+        "lobo",
+        "destino",
+        "Ragnarök"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "JPN-AMATERASU",
@@ -1472,7 +2189,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Las crónicas imperiales escritas reflejan también contextos políticos y rituales de su compilación."
+      "sourceNotes": "Las crónicas imperiales escritas reflejan también contextos políticos y rituales de su compilación.",
+      "aliases": [],
+      "attributes": [
+        "sol",
+        "cueva",
+        "mito fundacional"
+      ],
+      "domains": [
+        "sol",
+        "cueva",
+        "mito fundacional"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "JPN-SUSANOO",
@@ -1491,7 +2220,17 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Los relatos y atributos varían entre las crónicas y cultos locales."
+      "sourceNotes": "Los relatos y atributos varían entre las crónicas y cultos locales.",
+      "aliases": [],
+      "attributes": [
+        "tormenta",
+        "hazañas"
+      ],
+      "domains": [
+        "tormenta",
+        "hazañas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "HIN-GANESHA",
@@ -1510,7 +2249,19 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "El culto y las historias de origen son diversos entre regiones, textos y tradiciones."
+      "sourceNotes": "El culto y las historias de origen son diversos entre regiones, textos y tradiciones.",
+      "aliases": [],
+      "attributes": [
+        "sabiduría",
+        "inicios",
+        "obstáculos"
+      ],
+      "domains": [
+        "sabiduría",
+        "inicios",
+        "obstáculos"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "MES-ISHTAR",
@@ -1530,7 +2281,19 @@
         "SRC-BRITANNICA-MYTH",
         "SRC-MET-COLLECTION"
       ],
-      "sourceNotes": "No son simplemente nombres intercambiables en todos los periodos; distinguir tradiciones sumerias y acadias."
+      "sourceNotes": "No son simplemente nombres intercambiables en todos los periodos; distinguir tradiciones sumerias y acadias.",
+      "aliases": [],
+      "attributes": [
+        "amor",
+        "guerra",
+        "poder"
+      ],
+      "domains": [
+        "amor",
+        "guerra",
+        "poder"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "CELT-CU",
@@ -1549,7 +2312,17 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Distinguir la literatura medieval conservada de una reconstrucción segura de la religión precristiana."
+      "sourceNotes": "Distinguir la literatura medieval conservada de una reconstrucción segura de la religión precristiana.",
+      "aliases": [],
+      "attributes": [
+        "irlandesa",
+        "ciclo del Ulster"
+      ],
+      "domains": [
+        "irlandesa",
+        "ciclo del Ulster"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "GRC-AEGIS",
@@ -1590,7 +2363,21 @@
         "risks": "La barrera impenetrable es una adaptación concreta, no un hecho histórico.",
         "evolutionStages": [],
         "adaptationMechanics": "La duración y el coste de una barrera se definen por historia."
-      }
+      },
+      "aliases": [],
+      "attributes": [
+        "protección",
+        "Atenea",
+        "Zeus",
+        "reliquia"
+      ],
+      "domains": [
+        "protección",
+        "Atenea",
+        "Zeus",
+        "reliquia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "GRC-CADUCEUS",
@@ -1629,7 +2416,19 @@
         "risks": "Confundirlo con el bastón de Asclepio perpetúa una asociación moderna incorrecta.",
         "evolutionStages": [],
         "adaptationMechanics": "La curación mágica debe marcarse como adaptación original."
-      }
+      },
+      "aliases": [],
+      "attributes": [
+        "Hermes",
+        "bastón",
+        "símbolo"
+      ],
+      "domains": [
+        "Hermes",
+        "bastón",
+        "símbolo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "GRC-ACHILLES",
@@ -1648,7 +2447,17 @@
       "sourceIds": [
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Separar Homero de elaboraciones tardías como la inmersión en la Estigia."
+      "sourceNotes": "Separar Homero de elaboraciones tardías como la inmersión en la Estigia.",
+      "aliases": [],
+      "attributes": [
+        "guerra de Troya",
+        "vulnerabilidad"
+      ],
+      "domains": [
+        "guerra de Troya",
+        "vulnerabilidad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "NOR-THOR",
@@ -1674,7 +2483,19 @@
           "type": "wields_in_myth",
           "targetId": "WEAPON-MJOLNIR"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "trueno",
+        "protección",
+        "fuerza"
+      ],
+      "domains": [
+        "trueno",
+        "protección",
+        "fuerza"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "HIN-SHIVA",
@@ -1699,7 +2520,19 @@
           "type": "associated_weapon",
           "targetId": "WEAPON-TRISHULA"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "transformación",
+        "yoga",
+        "tridente"
+      ],
+      "domains": [
+        "transformación",
+        "yoga",
+        "tridente"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "HIN-INDRA",
@@ -1724,7 +2557,21 @@
           "type": "associated_weapon",
           "targetId": "WEAPON-VAJRA"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "védica",
+        "trueno",
+        "rayo",
+        "guerra"
+      ],
+      "domains": [
+        "védica",
+        "trueno",
+        "rayo",
+        "guerra"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "ART-KING-ARTHUR",
@@ -1749,7 +2596,22 @@
           "type": "associated_weapon",
           "targetId": "WEAPON-EXCALIBUR"
         }
-      ]
+      ],
+      "aliases": [
+        "Arthur",
+        "Arturo"
+      ],
+      "attributes": [
+        "rey legendario",
+        "caballería",
+        "Excalibur"
+      ],
+      "domains": [
+        "rey legendario",
+        "caballería",
+        "Excalibur"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "ARMOR-ACHILLES",
@@ -1789,7 +2651,21 @@
         "risks": "No atribuir invulnerabilidad absoluta al conjunto sin aclarar la versión.",
         "evolutionStages": [],
         "adaptationMechanics": "Protección absoluta o poderes de escudo deben ser reglas ficticias."
-      }
+      },
+      "aliases": [],
+      "attributes": [
+        "armadura",
+        "Aquiles",
+        "Ilíada",
+        "escudo"
+      ],
+      "domains": [
+        "armadura",
+        "Aquiles",
+        "Ilíada",
+        "escudo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "JPN-OROCHI",
@@ -1814,7 +2690,17 @@
           "type": "defeated_by_in_myth",
           "targetId": "JPN-SUSANOO"
         }
-      ]
+      ],
+      "aliases": [],
+      "attributes": [
+        "monstruo",
+        "Susanoo"
+      ],
+      "domains": [
+        "monstruo",
+        "Susanoo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     },
     {
       "id": "JPN-KITSUNE",
@@ -1835,7 +2721,18 @@
         "SRC-UNESCO-LIVING",
         "SRC-BRITANNICA-MYTH"
       ],
-      "sourceNotes": "Kitsune abarca relatos regionales y literarios distintos; no atribuir a todos los zorros sobrenaturales las mismas capacidades ni tratarlos como una sola entidad individual."
+      "sourceNotes": "Kitsune abarca relatos regionales y literarios distintos; no atribuir a todos los zorros sobrenaturales las mismas capacidades ni tratarlos como una sola entidad individual.",
+      "aliases": [
+        "Kitsune",
+        "狐"
+      ],
+      "attributes": [
+        "transformación"
+      ],
+      "domains": [
+        "transformación"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
     }
   ],
   "starterDecks": [
