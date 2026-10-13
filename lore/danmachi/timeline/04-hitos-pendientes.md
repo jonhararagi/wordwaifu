@@ -46,8 +46,8 @@ Esta lista contiene preguntas de investigación, no respuestas. Se irán marcand
 
 ## Último volumen y cierre
 
-- [ ] Confirmar cuál es el último volumen principal publicado en la edición utilizada.
-- [ ] Registrar su título, fecha de publicación verificable y contenido pertinente.
+- [x] Confirmado por ficha editorial el 2026-10-13: volumen principal 21 publicado; volumen 22 anunciado para 2026-12-15.
+- [x] Registradas las fechas editoriales y fuentes oficiales para los volúmenes 21 y 22; [ ] el contenido del volumen 21 aún necesita localizadores por capítulo/escena.
 - [ ] Separar el cierre publicado de teorías de fans y predicciones.
-- [ ] Si la serie no está concluida, marcar “final de obra pendiente”; no inventar un desenlace.
+- [x] La serie sigue en curso en la fecha de consulta; mantener “final de obra pendiente” y no inventar un desenlace.
 - [ ] Cuando exista un final publicado, crear un informe de estado final para personajes, Familias, misterios y líneas argumentales.
