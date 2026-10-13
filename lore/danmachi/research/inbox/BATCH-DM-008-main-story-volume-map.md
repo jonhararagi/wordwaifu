@@ -405,3 +405,62 @@ El volumen 21 se incorpora como volumen principal publicado al corte del 12 de o
 7. No dar por concluida la serie ni resolver destinos aún no publicados por inferencia.
 
 Esta tanda es una capa navegable inicial, no una declaración de canon completo ni verificado capítulo a capítulo.
+
+
+## DANMACHI-RESEARCH-011 · Ancla cronológica oficial y estado bibliográfico (2026-10-13)
+
+### DMR-011-CLM-001 · Astrea Record se sitúa aproximadamente siete años antes de la llegada de Bell
+- `claim_id`: DMR-011-CLM-001
+- `claim`: La cronología oficial de la franquicia sitúa *Astrea Record* siete años antes y lo describe como una historia de la Era Oscura de Orario, en la que una Familia que proclama la justicia se alza frente al caos y la violencia.
+- `character_ids`: [CHAR-RYUU-LION, CHAR-ASTREA, CHAR-ALISE-LOVELACE]
+- `aspect`: cronología relativa, Astrea Familia, Era Oscura
+- `era_or_interval`: Aproximadamente siete años antes de la llegada de Bell a Orario
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-011-SRC-001
+- `source_title`: Cronología oficial de DanMachi
+- `source_type`: official_reference
+- `source_locator`: Bloque de アストレア・レコード; texto «7年前» y «オラリオの暗黒期»
+- `source_url`: https://danmachi.com/chronology/
+- `evidence_type`: explicit_official_timeline
+- `verification_status`: source_checked
+- `spoiler_level`: major
+- `confidence_note`: Ancla relativa oficial; no define una fecha absoluta ni los límites completos de la Era Oscura. No prueba que “Época Dorada” sea un término canónico equivalente.
+
+### DMR-011-CLM-002 · El volumen 21 es el último volumen principal publicado comprobado en la consulta
+- `claim_id`: DMR-011-CLM-002
+- `claim`: La ficha editorial oficial de GA Bunko registra el volumen 21 de la serie principal con fecha de publicación aproximada del 15 de octubre de 2025 y una sinopsis que continúa los sucesos del volumen 20; para esta auditoría bibliográfica, el volumen 21 es el último volumen principal cuya publicación se comprobó como ya realizada.
+- `character_ids`: [DM-CHAR-BELL, CHAR-FINN-DEIMNE, CHAR-AIS]
+- `aspect`: bibliografía, estado de publicación, continuidad principal
+- `era_or_interval`: Publicación consultada al 2026-10-13
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-002
+- `source_title`: GA Bunko · DanMachi volumen 21
+- `source_type`: official_publisher_page
+- `source_locator`: Ficha de producto; campo de fecha de publicación y sinopsis editorial
+- `source_url`: https://ga.sbcr.jp/product/9784815632946/
+- `evidence_type`: explicit_publisher_bibliography
+- `verification_status`: source_checked
+- `spoiler_level`: endgame
+- `confidence_note`: Confirma la ficha y fecha editorial, no una lectura completa del volumen ni el estado final de todos los personajes.
+
+### DMR-011-CLM-003 · El volumen 22 figura anunciado para una fecha futura, no como volumen ya publicado
+- `claim_id`: DMR-011-CLM-003
+- `claim`: En el catálogo editorial consultado, el volumen 22 de la serie principal figura con fecha prevista de publicación del 15 de diciembre de 2026. En la fecha de esta auditoría, 13 de octubre de 2026, se registra como anunciado/futuro y no se incorpora como acontecimiento publicado ni como final de la obra.
+- `character_ids`: [DM-CHAR-BELL]
+- `aspect`: bibliografía, publicación futura, límite de cronología
+- `era_or_interval`: Consulta del 2026-10-13; fecha prevista 2026-12-15
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-003
+- `source_title`: GA Bunko · DanMachi volumen 22
+- `source_type`: official_publisher_page
+- `source_locator`: Ficha de producto; fecha prevista de publicación
+- `source_url`: https://ga.sbcr.jp/product/9784815642907/
+- `evidence_type`: explicit_publisher_catalog
+- `verification_status`: source_checked
+- `spoiler_level`: endgame
+- `confidence_note`: La fecha es la anunciada por el editor y puede cambiar. El volumen aún no se trata como publicado en esta auditoría; verificar nuevamente tras la fecha prevista.
+
+### Resultado y límite
+- Se ha cerrado la comprobación bibliográfica del volumen principal más reciente ya publicado a fecha de consulta: volumen 21.
+- El volumen 22 está anunciado para diciembre de 2026, por lo que no se afirma que la serie esté concluida.
+- El contenido del volumen 21 todavía necesita cotejo interno por capítulo/escena; esta actualización no convierte sus sinopsis editoriales en evidencia primaria de cada acontecimiento.
