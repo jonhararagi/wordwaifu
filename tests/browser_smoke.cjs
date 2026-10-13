@@ -2615,6 +2615,7 @@ async function run() {
     process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\\n");
 
     // Mythic catalog: close any dialog left by earlier CRUD scenarios, then verify the expanded real catalog.
+    const expectedMythicEntityCount = JSON.parse(fs.readFileSync(path.join(root, "data/catalog/mythic-arsenal.json"), "utf8")).entities.length;
     await page.evaluate(() => { for (const dialog of document.querySelectorAll("dialog[open]")) dialog.close(); });
     await page.locator('.nav-item[data-view="mythic-catalog"]').click();
     // Navigation preserves catalog filters; reset them explicitly before asserting the full count.
@@ -2623,7 +2624,10 @@ async function run() {
     await page.locator("#mythic-tradition").selectOption("");
     await page.locator("#mythic-status").selectOption("");
     await page.locator("#mythic-sort").selectOption("name");
-    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("75 / 75"), null, { timeout: 10000 });
+    await page.waitForFunction(expectedCount => {
+      const label = document.querySelector("#mythic-catalog-count")?.textContent || "";
+      return label.startsWith(expectedCount + " / " + expectedCount + " fichas");
+    }, expectedMythicEntityCount, { timeout: 10000 });
     const firstNameAscending = await page.locator("#mythic-catalog-content .mythic-card h3").first().innerText();
     await page.locator("#mythic-sort").selectOption("name-desc");
     const firstNameDescending = await page.locator("#mythic-catalog-content .mythic-card h3").first().innerText();
@@ -2678,7 +2682,10 @@ async function run() {
     await page.locator("#mythic-tradition").selectOption("");
     await page.locator("#mythic-status").selectOption("");
     await page.locator("#mythic-sort").selectOption("name");
-    await page.waitForFunction(() => (document.querySelector("#mythic-catalog-count")?.textContent || "").includes("75 / 75"), null, { timeout: 10000 });
+    await page.waitForFunction(expectedCount => {
+      const label = document.querySelector("#mythic-catalog-count")?.textContent || "";
+      return label.startsWith(expectedCount + " / " + expectedCount + " fichas");
+    }, expectedMythicEntityCount, { timeout: 10000 });
     await page.locator("#mythic-search").fill("Pombero");
     await page.locator('#mythic-catalog-content [data-open-entity="LAT-GUA-POMBERO"]').click();
     await page.waitForFunction(() => (document.querySelector("#mythic-catalog-content")?.innerText || "").includes("Macuahuitl"), null, { timeout: 10000 });
