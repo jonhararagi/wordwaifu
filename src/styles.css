@@ -436,3 +436,21 @@ select{background:#332d26;color:#e9dfd2}
 .danmachi-entity-meta,.danmachi-entity-tags{margin:8px 0 0;color:var(--muted);font-size:11px;line-height:1.55;overflow-wrap:anywhere}
 .danmachi-entity-empty{grid-column:1/-1;margin:0;padding:18px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:12px}
 @media(max-width:680px){.danmachi-entity-heading{flex-direction:column}.danmachi-entity-filters{grid-template-columns:1fr}.danmachi-entity-results{grid-template-columns:1fr}}
+
+
+/* Structured heroic forms: keep the three myth-design pillars readable on desktop and mobile. */
+.mythic-manifestation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 0.85rem;
+  margin-top: 0.9rem;
+}
+.mythic-manifestation-grid > .mythic-saved-proposal {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line, rgba(148, 163, 184, 0.25));
+  border-radius: 0.85rem;
+}
+.mythic-manifestation-grid > .mythic-saved-proposal h4 {
+  margin-top: 0;
+}
