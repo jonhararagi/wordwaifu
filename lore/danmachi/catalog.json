@@ -1475,6 +1475,78 @@
       "path": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
       "type": "character_roster_batch",
       "status": "present"
+    },
+    {
+      "document_id": "VOLUME-MAIN-21",
+      "path": "volumes/main/volume-21.md",
+      "type": "main_light_novel_volume",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-ASTREA-RECORD-01",
+      "path": "volumes/side/astrea-record-01.md",
+      "type": "side_story_volume",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-ASTREA-RECORD-02",
+      "path": "volumes/side/astrea-record-02.md",
+      "type": "side_story_volume",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-ASTREA-RECORD-03",
+      "path": "volumes/side/astrea-record-03.md",
+      "type": "side_story_volume",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-FAMILIA-CHRONICLE-ASFI",
+      "path": "volumes/side/familia-chronicle-asfi.md",
+      "type": "side_story",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-FAMILIA-CHRONICLE-FREYA",
+      "path": "volumes/side/familia-chronicle-freya.md",
+      "type": "side_story",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-FAMILIA-CHRONICLE-HAZE",
+      "path": "volumes/side/familia-chronicle-haze.md",
+      "type": "side_story",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-FAMILIA-CHRONICLE-RYU-01",
+      "path": "volumes/side/familia-chronicle-ryu-01.md",
+      "type": "side_story",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-FAMILIA-CHRONICLE-RYU-02",
+      "path": "volumes/side/familia-chronicle-ryu-02.md",
+      "type": "side_story",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-SWORD-ORATORIA-01",
+      "path": "volumes/side/sword-oratoria-01.md",
+      "type": "side_story_volume",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-SWORD-ORATORIA-12",
+      "path": "volumes/side/sword-oratoria-12.md",
+      "type": "side_story_volume",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-SWORD-ORATORIA-13",
+      "path": "volumes/side/sword-oratoria-13.md",
+      "type": "side_story_volume",
+      "status": "present"
     }
   ],
   "lastStructuredSync": {
