@@ -1455,6 +1455,8 @@
     render();
   }
 
+  function matches(value, query) { return !query || String(value).toLowerCase().includes(query); }
+
   function openCharacter(id) {
     const character = characterById(id);
     if (!character) return;
