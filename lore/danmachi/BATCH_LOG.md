@@ -111,3 +111,11 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Los estados Ryu CONT-AR y CONT-ANIME se recuperan por separado; consultas sin evidencia como Ais + gustos devuelven abstención.
 - Validación planificada: pruebas unitarias de recuperación y browser smoke en Chromium dentro de GitHub Actions.
 - Límite: búsqueda textual con corpus parcial; sin LLM, embeddings ni RAG.
+
+
+## DANMACHI-COVERAGE-002 · Integración de expedientes y red de Astrea Familia
+
+- Estado: contenido incorporado al catálogo en la rama de integración; validación automatizada pendiente.
+- Añadidos 11 expedientes provisionales de personajes, el evento candidato de salida de Astrea y cuatro paquetes de investigación complementarios.
+- `catalog.json` amplía el índice de 34 a 50 registros. Los nuevos registros se etiquetan como provisionales y no se presentan como canon primario verificado.
+- La interfaz mantiene separadas la afiliación a Astrea Familia y las relaciones interpersonales demostradas.

@@ -1160,8 +1160,10 @@
     } else {
       heading = "Historias y novelas";
       items = state.stories.map((story) => '<article class="entity-card story-card' + (story.id === selectedStoryId ? ' selected' : '') + '" data-story="' + escapeHTML(story.id) + '" tabindex="0" role="button" aria-pressed="' + String(story.id === selectedStoryId) + '"><span class="avatar">▤</span><h3>' + escapeHTML(story.name) + '</h3><p>' + escapeHTML(story.description || "Sinopsis pendiente.") + '</p></article>');
-      if (!items.length) items = ['<div class="empty-state">Todavía no hay novelas registradas. La próxima fase incorporará premisas, arcos, capítulos y escenas. Podés crear personajes y lugares mientras tanto.</div>'];
+      if (!items.length) items = ['<div class="empty-state">Todavía no hay historias en este universo. Creá una novela para empezar a guardar premisa, conflictos, arcos y capítulos.</div>'];
     }
+    const selectedStory = activeView === "stories" ? state.stories.find((story) => story.id === selectedStoryId) : null;
+    const selectedStoryHTML = activeView === "stories" ? renderStoryEditor(selectedStory) : "";
     const selectedEvent = activeView === "timeline" ? state.events.find((event) => event.id === selectedEventId) : null;
     const selectedOrganization = activeView === "organizations" ? (state.organizations || []).find((item) => item.id === selectedOrganizationId) : null;
     const selectedRelationship = activeView === "relationships" ? (state.relationships || []).find((item) => item.id === selectedRelationshipId) : null;
@@ -1177,7 +1179,8 @@
       const target = characterById(selectedRelationship.targetCharacterId);
       return '<section id="selected-relationship-details" class="selected-event-card"><div class="event-detail-heading"><div><p class="eyebrow">RELACIÓN SELECCIONADA</p><h2>' + escapeHTML(selectedRelationship.name) + '</h2></div><span class="tag">' + escapeHTML(selectedRelationship.status || "proposal") + '</span></div><p>' + escapeHTML((source ? source.name : "Personaje eliminado") + " ↔ " + (target ? target.name : "Personaje eliminado")) + '</p><div class="detail-meta"><div><span>Personaje A</span><strong>' + escapeHTML(source ? source.name : "No disponible") + '</strong></div><div><span>Personaje B</span><strong>' + escapeHTML(target ? target.name : "No disponible") + '</strong></div><div><span>Tipo</span><strong>' + escapeHTML(relationshipTypeLabel(selectedRelationship.relationshipType)) + '</strong></div><div><span>Estado del canon</span><strong>' + escapeHTML(selectedRelationship.status || "proposal") + '</strong></div></div><div class="detail-divider"></div><p>' + escapeHTML(selectedRelationship.description || "Sin descripción registrada.") + '</p><div class="location-actions"><button type="button" id="edit-relationship-button" class="outline-button">Editar relación</button><button type="button" id="delete-relationship-button" class="outline-button danger-action">Eliminar relación</button></div></section>';
     })() : "";
-    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span></div>' + selectedEventHTML + selectedOrganizationHTML + selectedRelationshipHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>';
+    container.innerHTML = '<div class="directory-heading"><h2>' + heading + '</h2><span class="tag">' + items.length + ' resultados</span>' + (activeView === "stories" ? '<button type="button" id="story-create-button" class="primary-button">＋ Nueva historia</button>' : '') + '</div>' + selectedEventHTML + selectedOrganizationHTML + selectedRelationshipHTML + '<div class="entity-grid">' + (items.length ? items.join("") : '<div class="empty-state">No hay resultados para esta búsqueda.</div>') + '</div>' + selectedStoryHTML;
+    if (activeView === "stories") bindStoryEditor(container, selectedStory);
     if (selectedEvent) {
       $("#edit-event-button").addEventListener("click", () => editEvent(selectedEvent.id));
       $("#delete-event-button").addEventListener("click", () => deleteEvent(selectedEvent.id));
@@ -1190,6 +1193,266 @@
       $("#edit-relationship-button").addEventListener("click", () => editRelationship(selectedRelationship.id));
       $("#delete-relationship-button").addEventListener("click", () => deleteRelationship(selectedRelationship.id));
     }
+  }
+
+
+  function renderStoryEditor(story) {
+    if (!story) {
+      return '<section class="story-editor selected-event-card"><p class="eyebrow">TALLER DE NOVELAS</p><h2>Una historia, desde la idea hasta el manuscrito</h2><p>Creá una historia para guardar sinopsis, premisa, conflicto central, arcos y capítulos editables. Los cambios se guardan en el proyecto local y viajan con su exportación JSON.</p><p class="field-help">Elegí una historia de la lista o pulsá «Nueva historia».</p></section>';
+    }
+    if (!Array.isArray(story.chapters)) story.chapters = [];
+    if (!Array.isArray(story.arcs)) story.arcs = [];
+    const chapters = story.chapters.map((chapter, index) => '<article class="story-chapter-card"><div class="story-chapter-heading"><span class="tag">Capítulo ' + (index + 1) + '</span><span class="tag">' + escapeHTML(chapter.status || "borrador") + '</span></div><form class="story-chapter-form" data-chapter-id="' + escapeHTML(chapter.id) + '"><label>Título del capítulo<input name="chapterTitle" maxlength="180" required value="' + escapeHTML(chapter.title || "") + '"></label><label>Resumen del capítulo<textarea name="chapterSummary" rows="2" maxlength="4000">' + escapeHTML(chapter.summary || "") + '</textarea></label><label>Manuscrito<textarea name="chapterContent" rows="12" maxlength="200000" placeholder="Escribí acá el capítulo completo…">' + escapeHTML(chapter.content || "") + '</textarea></label><label>Estado<select name="chapterStatus"><option value="outline"' + (chapter.status === "outline" ? " selected" : "") + '>Esquema</option><option value="draft"' + (!chapter.status || chapter.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (chapter.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (chapter.status === "complete" ? " selected" : "") + '>Completo</option></select></label><div class="location-actions"><button class="primary-button" type="submit">Guardar capítulo</button><button class="outline-button danger-action" type="button" data-delete-chapter="' + escapeHTML(chapter.id) + '">Eliminar capítulo</button></div></form></article>').join("");
+    const completeCount = story.chapters.filter((chapter) => chapter.status === "complete").length;
+    return '<section class="story-editor selected-event-card"><div class="story-editor-title"><div><p class="eyebrow">EDITOR DE HISTORIAS · BORRADOR LOCAL</p><h2>' + escapeHTML(story.name || "Historia sin título") + '</h2><p>' + story.chapters.length + ' capítulos · ' + completeCount + ' completos</p></div><div class="story-file-actions"><button type="button" id="story-import-button" class="outline-button">Importar manuscrito .md</button><input type="file" id="story-import-file" accept=".md,text/markdown,text/plain" hidden><button type="button" id="story-export-button" class="outline-button">Exportar manuscrito .md</button></div></div><form id="story-meta-form" data-story-id="' + escapeHTML(story.id) + '"><div class="story-form-grid"><label>Título<input name="storyName" required maxlength="180" value="' + escapeHTML(story.name || "") + '"></label><label>Estado<select name="storyStatus"><option value="idea"' + (story.status === "idea" ? " selected" : "") + '>Idea</option><option value="outline"' + (story.status === "outline" ? " selected" : "") + '>En planificación</option><option value="draft"' + (!story.status || story.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (story.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (story.status === "complete" ? " selected" : "") + '>Completa</option></select></label></div><label>Sinopsis<textarea name="storyDescription" rows="3" maxlength="6000" placeholder="¿De qué trata la historia?">' + escapeHTML(story.description || "") + '</textarea></label><label>Premisa<textarea name="storyPremise" rows="3" maxlength="6000" placeholder="La idea central y qué hace única esta historia…">' + escapeHTML(story.premise || "") + '</textarea></label><label>Conflicto central<textarea name="storyConflict" rows="3" maxlength="6000" placeholder="Qué quiere el protagonista, qué se lo impide y qué está en juego…">' + escapeHTML(story.conflict || "") + '</textarea></label><label>Arcos narrativos (uno por línea)<textarea name="storyArcs" rows="4" maxlength="12000" placeholder="Personaje: punto de partida → cambio → consecuencia">' + escapeHTML((story.arcs || []).map((arc) => typeof arc === "string" ? arc : arc.title || arc.description || "").join("\n")) + '</textarea></label><label>Tipo de mundo<select name="storyWorldType"><option value="unspecified"' + (!story.worldType || story.worldType === "unspecified" ? " selected" : "") + '>Sin definir</option><option value="cyberpunk-dystopia"' + (story.worldType === "cyberpunk-dystopia" ? " selected" : "") + '>Distopía cyberpunk (ej. Cyberpunk 2999)</option><option value="conventional-dystopia"' + (story.worldType === "conventional-dystopia" ? " selected" : "") + '>Distopía social o política</option><option value="post-apocalypse"' + (story.worldType === "post-apocalypse" ? " selected" : "") + '>Postapocalipsis: supervivencia después del colapso</option><option value="active-apocalypse-military-sf"' + (story.worldType === "active-apocalypse-military-sf" ? " selected" : "") + '>Apocalipsis activo, militar o ciencia ficción (ej. Muv-Luv)</option><option value="isolated-island-comedy"' + (story.worldType === "isolated-island-comedy" ? " selected" : "") + '>Isla aislada, comedia y convivencia (ej. Nagasare Airantou)</option><option value="superpower-action"' + (story.worldType === "superpower-action" ? " selected" : "") + '>Acción y sociedades de superpoderes</option><option value="fantasy-adventure"' + (story.worldType === "fantasy-adventure" ? " selected" : "") + '>Fantasía y aventura</option><option value="urban-supernatural"' + (story.worldType === "urban-supernatural" ? " selected" : "") + '>Sobrenatural urbano</option><option value="mecha-war"' + (story.worldType === "mecha-war" ? " selected" : "") + '>Mecha, guerra y conflicto geopolítico</option><option value="slice-of-life-comedy"' + (story.worldType === "slice-of-life-comedy" ? " selected" : "") + '>Comedia cotidiana y relaciones</option><option value="other"' + (story.worldType === "other" ? " selected" : "") + '>Otro / híbrido</option></select></label><label>Reglas del mundo<textarea name="storyWorldRules" rows="3" maxlength="10000" placeholder="Tecnología, poderes, recursos, instituciones, límites y consecuencias…">' + escapeHTML(story.worldRules || "") + '</textarea></label><label>Dinámica y presión del mundo<textarea name="storyWorldDynamics" rows="4" maxlength="12000" placeholder="Qué fuerzas cambian el mundo; cómo afecta a la vida diaria, los conflictos, el tono y las decisiones de los personajes…">' + escapeHTML(story.worldDynamics || "") + '</textarea></label><label>Motor de misterio o revelación<select name="storyRevealType"><option value="none"' + (!story.revealType || story.revealType === "none" ? " selected" : "") + '>Sin definir</option><option value="hidden-identity"' + (story.revealType === "hidden-identity" ? " selected" : "") + '>Identidad oculta (aliado, camarera, rival…)</option><option value="immortal-secret-nature"' + (story.revealType === "immortal-secret-nature" ? " selected" : "") + '>Naturaleza secreta / inmortalidad</option><option value="mythic-origin"' + (story.revealType === "mythic-origin" ? " selected" : "") + '>Origen mitológico o creación antigua</option><option value="card-contract-game"' + (story.revealType === "card-contract-game" ? " selected" : "") + '>Juego de cartas, pactos o contratos sobrenaturales</option><option value="double-identity-faction"' + (story.revealType === "double-identity-faction" ? " selected" : "") + '>Doble identidad / facción infiltrada</option><option value="betrayal-allegiance"' + (story.revealType === "betrayal-allegiance" ? " selected" : "") + '>Traición o lealtad ambigua</option><option value="false-world-truth"' + (story.revealType === "false-world-truth" ? " selected" : "") + '>La verdad del mundo contradice lo que todos creen</option><option value="other"' + (story.revealType === "other" ? " selected" : "") + '>Otro mecanismo</option></select></label><label>Secreto central<textarea name="storyRevealSecret" rows="3" maxlength="8000" placeholder="Qué es realmente el personaje, objeto, juego o mito; quién lo sabe y quién lo ignora…">' + escapeHTML(story.revealSecret || "") + '</textarea></label><label>Pistas, reglas y falsas interpretaciones<textarea name="storyRevealClues" rows="4" maxlength="10000" placeholder="Pistas visibles antes del giro, reglas del juego, contradicciones y explicaciones alternativas plausibles…">' + escapeHTML(story.revealClues || "") + '</textarea></label><label>Momento y forma de la revelación<textarea name="storyRevealTiming" rows="3" maxlength="6000" placeholder="En qué arco/capítulo se descubre y qué evidencia hace imposible negarlo…">' + escapeHTML(story.revealTiming || "") + '</textarea></label><label>Consecuencias después del giro<textarea name="storyRevealConsequences" rows="4" maxlength="10000" placeholder="Qué cambia en las alianzas, objetivos, reglas, riesgos y escenas posteriores; evitar que todo vuelva a la normalidad…">' + escapeHTML(story.revealConsequences || "") + '</textarea></label><section class="power-generator-panel" aria-labelledby="power-generator-title"><h3 id="power-generator-title">Generador rápido de poderes</h3><p class="field-help">Elegí una familia o dejá «Sorpresa». Cada clic propone una idea distinta; no reemplaza lo que ya escribiste. Generá varias hasta encontrar una chispa.</p><div class="power-generator-controls"><label>Familia<select id="story-power-family"><option value="any">Sorpresa · cualquier tipo</option><option value="mental">Mental / percepción</option><option value="physical">Físico / transformación</option><option value="technical">Técnico / estratégico</option><option value="pact">Pacto / contrato</option><option value="costly">Poder con alto coste</option><option value="support">Apoyo / información</option></select></label><button type="button" id="story-power-generate-button" class="outline-button">↻ Generar otro poder</button></div><p id="story-power-generator-status" class="field-help" role="status" aria-live="polite">Las propuestas son ideas originales de ejemplo. Podés editarlas libremente.</p></section><label>Panteón y papel de las diosas<textarea name="storyPantheon" rows="5" maxlength="12000" placeholder="Para cada diosa: nombre, personalidad, deseo propio, relación con el protagonista y sus amigos, favor concedido, límites, precio y arco personal. ¿Qué quiere ella que no dependa del protagonista?">' + escapeHTML(story.pantheon || "") + '</textarea></label><p class="field-help">La diosa es un personaje, no solo una máquina de conceder poderes: puede tener objetivos, vínculos, errores, humor, conflictos y una historia propia.</p><label>Reparto coral y arcos individuales<textarea name="storyEnsemble" rows="7" maxlength="20000" placeholder="Personaje: objetivo propio | conflicto | vínculo con el grupo | decisión decisiva | cambio | capítulos donde lleva el foco. Incluí al protagonista y a sus amigos.">' + escapeHTML(story.ensemble || "") + '</textarea></label><p class="field-help">Pensá el equipo como una historia coral: cada amigo puede protagonizar capítulos o mini-arcos, tomar decisiones que cambien la trama y resolver problemas que el protagonista no puede resolver. El protagonista conecta la historia; no tiene que monopolizarla.</p><label>Catálogo de poderes y evolución (un poder por bloque) <textarea name="storyPowerCatalog" rows="10" maxlength="30000" placeholder="Cada poder generado se agrega aquí. También podés escribir uno a mano.">' + escapeHTML(story.powerCatalog || "") + '</textarea></label><p class="field-help">Cada bloque incluye activación, coste, límites, evolución y consecuencias. Guardá la historia para persistir el catálogo. Las reglas irreversibles deben mantenerse en la continuidad.</p><p class="field-help">Un giro debe estar preparado por pistas y cambiar decisiones o relaciones. El formulario organiza el plan; no inventa automáticamente una revelación ni demuestra que esté bien construida.</p><p class="field-help">El tipo es solo una categoría: documentá reglas, presión cotidiana, recursos, riesgos y cómo las decisiones de los personajes cambian el mundo.</p><div class="location-actions"><button type="submit" class="primary-button">Guardar historia</button><button type="button" id="story-add-chapter-button" class="outline-button">＋ Añadir capítulo</button><button type="button" id="story-delete-button" class="outline-button danger-action">Eliminar historia</button></div><p class="field-help" id="story-editor-status" role="status" aria-live="polite">Los cambios de cada formulario se guardan por separado.</p></form><div class="detail-divider"></div><h3>Capítulos y manuscrito</h3><p class="field-help">Cada capítulo tiene título, resumen, texto íntegro y estado. «Completo» es una marca editorial manual, no una evaluación automática de calidad.</p><div class="story-chapters">' + (chapters || '<div class="empty-state">Esta historia todavía no tiene capítulos. Pulsá «Añadir capítulo» para crear el primero.</div>') + '</div></section>';
+  }
+
+  const powerIdeaLibrary = [
+    { family: "mental", name: "Eco de intención", category: "mental / lectura parcial", potency: "2/5 · técnica alta", activation: "mantener una conversación y escuchar una frase completa", price: "absorbe por unos minutos una emoción ajena", limits: "no revela pensamientos ni recuerdos; las mentiras emocionales confunden la lectura", evolution: "I percibe emociones → II distingue intención inmediata → III queda una emoción residual que puede confundirse con la propia", consequences: "el usuario puede dejar de reconocer qué siente de verdad" },
+    { family: "mental", name: "Geas de mandato", category: "mental / imposición", potency: "4/5 · técnica media", activation: "contacto visual directo y una orden verbal breve", price: "cada uso erosiona un recuerdo personal", limits: "una orden por objetivo; no puede obligar a realizar lo físicamente imposible", evolution: "I impulso de segundos → II compulsión duradera → III el mandato queda activo y ya no puede desactivarse", consequences: "aliados temen al usuario y la última etapa puede convertir una orden en una condena" },
+    { family: "physical", name: "Armadura de deuda", category: "físico / defensa", potency: "4/5 · técnica baja", activation: "recibir voluntariamente un golpe mientras protege a otra persona", price: "el daño absorbido aparece después como fatiga y lesiones", limits: "no protege de venenos, asfixia ni daño interno acumulado", evolution: "I endurece la piel → II cubre el cuerpo → III protege a un grupo, pero transfiere el daño a una sola persona elegida", consequences: "proteger a todos puede poner al usuario frente a una elección imposible" },
+    { family: "technical", name: "Geometría de combate", category: "técnico / estrategia", potency: "3/5 · técnica muy alta", activation: "observar el espacio y marcar tres puntos con la mano", price: "consume concentración; un error provoca vértigo", limits: "solo altera trayectorias dentro de un área visible y no crea fuerza", evolution: "I desvía objetos pequeños → II redirige ataques → III prepara una zona automática que también puede atrapar aliados", consequences: "el poder premia la preparación, pero castiga la improvisación y los espacios desconocidos" },
+    { family: "pact", name: "Contrato del testigo", category: "pacto / información", potency: "3/5 · poder condicionado", activation: "dos partes dicen en voz alta qué verdad prometen proteger", price: "romper el pacto borra un recuerdo compartido", limits: "no obliga a decir la verdad; solo detecta una ruptura consciente del acuerdo", evolution: "I percibe la ruptura → II ambos sienten el coste → III el contrato sobrevive a la muerte de una parte", consequences: "la seguridad depende de definir con precisión las palabras del acuerdo" },
+    { family: "costly", name: "Minuto hipotecado", category: "temporal / coste vital", potency: "5/5 · uso excepcional", activation: "romper un objeto propio que tenga valor sentimental", price: "pierde de forma permanente un minuto de su futuro", limits: "no revierte muertes ni cambia hechos que el usuario no presenció", evolution: "I repite un movimiento → II retrocede unos segundos → III congela una escena, pero sacrifica años de vida", consequences: "cada victoria reduce el futuro disponible y vuelve visible el precio de abusar del poder" },
+    { family: "support", name: "Archivo de huellas", category: "información / apoyo", potency: "2/5 · utilidad alta", activation: "tocar un objeto abandonado durante al menos diez segundos", price: "el usuario sueña con un fragmento de la última emoción ligada al objeto", limits: "no muestra imágenes exactas ni identifica automáticamente a una persona", evolution: "I percibe emoción → II distingue una acción reciente → III reconstruye una secuencia incompleta que también incluye una pista falsa", consequences: "la investigación avanza, pero interpretar mal una huella puede acusar a un inocente" },
+    { family: "physical", name: "Cuerpo de vidrio", category: "transformación / reflejo", potency: "4/5 · defensa y contraataque", activation: "recibir luz reflejada en la piel", price: "cada impacto recibido deja una grieta que reduce la movilidad", limits: "en oscuridad total no se activa; las grietas no desaparecen durante el combate", evolution: "I refleja luz → II devuelve un ataque una vez → III refleja una técnica completa, pero el cuerpo queda frágil permanentemente", consequences: "la forma más poderosa puede dejar al personaje incapaz de volver al frente" },
+    { family: "technical", name: "Inventario imposible", category: "espacial / preparación", potency: "3/5 · técnica alta", activation: "guardar un objeto en un bolsillo cosido por el propio usuario", price: "cada objeto guardado borra temporalmente el nombre de algo querido", limits: "solo conserva objetos pequeños y no permite guardar seres vivos", evolution: "I un objeto → II varios objetos etiquetados → III almacena un objeto enorme, pero pierde de forma permanente un nombre importante", consequences: "la utilidad logística compite con la identidad y los recuerdos del usuario" },
+    { family: "pact", name: "Préstamo de la bestia", category: "pacto / transformación", potency: "variable · riesgo alto", activation: "pedir permiso a una entidad dormida dentro de una marca", price: "la entidad reclama control del cuerpo por el mismo tiempo prestado", limits: "el usuario no puede elegir qué rasgo presta la entidad", evolution: "I sentidos agudos → II fuerza y forma parcial → III transformación completa con riesgo de no recuperar el control", consequences: "cada uso fortalece la relación con una entidad cuyas intenciones no son del todo conocidas" },
+    { family: "support", name: "Mapa de posibilidades", category: "percepción / estrategia", potency: "3/5 · no ofensivo", activation: "dibujar el lugar y formular una pregunta concreta", price: "el usuario olvida una ruta que conocía", limits: "muestra posibilidades, no el futuro; decisiones ajenas pueden invalidarlo", evolution: "I marca una salida → II compara tres rutas → III revela una opción oculta junto a una consecuencia inevitable", consequences: "tener más información no garantiza elegir bien y puede hacer que el personaje dude demasiado" },
+    { family: "costly", name: "Milagro de ceniza", category: "curación / sacrificio", potency: "5/5 · coste extremo", activation: "quemar un recuerdo escrito por la persona que quiere salvar", price: "el recuerdo desaparece también de la mente de su dueño original", limits: "no resucita a los muertos ni cura heridas que el usuario no comprende", evolution: "I cierra heridas leves → II estabiliza una muerte inminente → III reconstruye un cuerpo a cambio de borrar el vínculo más importante", consequences: "salvar una vida puede destruir la razón por la que el personaje quería salvarla" }
+  ];
+  let lastGeneratedPowerIndex = -1;
+
+  function bindStoryEditor(container, story) {
+    const createButton = $("#story-create-button", container);
+    if (createButton) createButton.addEventListener("click", createStory);
+    const metaForm = $("#story-meta-form", container);
+    const generatePowerButton = $("#story-power-generate-button", container);
+    if (generatePowerButton) generatePowerButton.addEventListener("click", async () => {
+      const catalog = $("[name='storyPowerCatalog']", container);
+      const family = $("#story-power-family", container)?.value || "any";
+      const available = powerIdeaLibrary.map((idea, index) => ({ idea, index })).filter(({ idea }) => family === "any" || idea.family === family);
+      if (!available.length || !catalog) return;
+      const existingNames = new Set((catalog.value.match(/^Nombre:\s*(.+)$/gm) || []).map((line) => line.replace(/^Nombre:\s*/, "").trim().toLocaleLowerCase("es")));
+      const unseen = available.filter(({ idea, index }) => !existingNames.has(idea.name.toLocaleLowerCase("es")) && index !== lastGeneratedPowerIndex);
+      const fallback = available.filter(({ idea }) => !existingNames.has(idea.name.toLocaleLowerCase("es")));
+      const candidates = unseen.length ? unseen : fallback;
+      if (!candidates.length) {
+        const status = $("#story-power-generator-status", container);
+        if (status) status.textContent = "No quedan ideas nuevas en esta familia. Cambiá el filtro para explorar otras, sin duplicar las que ya guardaste.";
+        return;
+      }
+      const candidate = candidates[Math.floor(Math.random() * candidates.length)];
+      lastGeneratedPowerIndex = candidate.index;
+      const idea = candidate.idea;
+      const block = [
+        "Nombre: " + idea.name,
+        "Categoría: " + idea.category,
+        "Potencia: " + idea.potency,
+        "Activación: " + idea.activation,
+        "Precio: " + idea.price,
+        "Límites: " + idea.limits,
+        "Evolución: " + idea.evolution,
+        "Consecuencias: " + idea.consequences
+      ].join("\n");
+      catalog.value = catalog.value.trim() ? catalog.value.trim() + "\n\n---\n\n" + block : block;
+      story.powerCatalog = catalog.value;
+      const status = $("#story-power-generator-status", container);
+      if (status) status.textContent = "Idea añadida: " + idea.name + ". Generá otra o editá el bloque; el catálogo no se sobrescribió.";
+      const saved = await saveProject();
+      const editorStatus = $("#story-editor-status", container);
+      if (editorStatus) editorStatus.textContent = saved ? "Poder añadido y guardado en el proyecto local." : "Poder añadido en pantalla, pero no se confirmó el guardado. Exportá el proyecto JSON.";
+    });
+    if (metaForm) metaForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const form = new FormData(metaForm);
+      story.name = String(form.get("storyName") || "").trim();
+      story.description = String(form.get("storyDescription") || "").trim();
+      story.premise = String(form.get("storyPremise") || "").trim();
+      story.conflict = String(form.get("storyConflict") || "").trim();
+      story.worldType = String(form.get("storyWorldType") || "unspecified");
+      story.worldRules = String(form.get("storyWorldRules") || "").trim();
+      story.worldDynamics = String(form.get("storyWorldDynamics") || "").trim();
+      story.revealType = String(form.get("storyRevealType") || "none");
+      story.revealSecret = String(form.get("storyRevealSecret") || "").trim();
+      story.revealClues = String(form.get("storyRevealClues") || "").trim();
+      story.revealTiming = String(form.get("storyRevealTiming") || "").trim();
+      story.revealConsequences = String(form.get("storyRevealConsequences") || "").trim();
+      story.powerCatalog = String(form.get("storyPowerCatalog") || "").trim();
+      story.pantheon = String(form.get("storyPantheon") || "").trim();
+      story.ensemble = String(form.get("storyEnsemble") || "").trim();
+      story.status = String(form.get("storyStatus") || "draft");
+      story.arcs = String(form.get("storyArcs") || "").split("\n").map((line) => line.trim()).filter(Boolean);
+      const saved = await saveProject();
+      renderDirectory();
+      const status = $("#story-editor-status", container);
+      if (status) status.textContent = saved ? "Historia guardada en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
+    });
+    $$(".story-chapter-form", container).forEach((formNode) => formNode.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const chapter = story.chapters.find((item) => item.id === formNode.dataset.chapterId);
+      if (!chapter) return;
+      const form = new FormData(formNode);
+      chapter.title = String(form.get("chapterTitle") || "").trim();
+      chapter.summary = String(form.get("chapterSummary") || "").trim();
+      chapter.content = String(form.get("chapterContent") || "");
+      chapter.status = String(form.get("chapterStatus") || "draft");
+      const saved = await saveProject();
+      renderDirectory();
+      const status = $("#story-editor-status", container);
+      if (status) status.textContent = saved ? "Capítulo guardado en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
+    }));
+    $$(".story-chapter-form [data-delete-chapter]", container).forEach((button) => button.addEventListener("click", async () => {
+      if (!confirm("¿Eliminar este capítulo? Esta acción se guardará en el proyecto actual.")) return;
+      story.chapters = story.chapters.filter((chapter) => chapter.id !== button.dataset.deleteChapter);
+      await saveProject();
+      renderDirectory();
+    }));
+    const addChapter = $("#story-add-chapter-button", container);
+    if (addChapter) addChapter.addEventListener("click", async () => {
+      const number = story.chapters.length + 1;
+      story.chapters.push({ id: "chapter-" + Date.now().toString(36) + "-" + number, title: "Capítulo " + number, summary: "", content: "", status: "draft" });
+      await saveProject();
+      renderDirectory();
+      const firstField = container.querySelector(".story-chapter-form:last-of-type input[name='chapterTitle']");
+      if (firstField) firstField.focus();
+    });
+    const deleteStory = $("#story-delete-button", container);
+    if (deleteStory) deleteStory.addEventListener("click", async () => {
+      if (!confirm("¿Eliminar la historia y todos sus capítulos? Exportá una copia antes si querés conservarla.")) return;
+      state.stories = state.stories.filter((item) => item.id !== story.id);
+      selectedStoryId = null;
+      await saveProject();
+      renderDirectory();
+    });
+    const importButton = $("#story-import-button", container);
+    const importInput = $("#story-import-file", container);
+    if (importButton && importInput) importButton.addEventListener("click", () => importInput.click());
+    if (importInput) importInput.addEventListener("change", async () => {
+      const file = importInput.files && importInput.files[0];
+      if (!file) return;
+      try {
+        const markdown = await file.text();
+        const parsed = parseMarkdownStory(markdown, file.name);
+        if (!parsed.chapters.length) throw new Error("No encontré capítulos. Usá encabezados «## Capítulo 1 — Título».");
+        if (!confirm("Importar «" + parsed.name + "» con " + parsed.chapters.length + " capítulos reemplazará los campos y capítulos de esta historia. ¿Continuar?")) {
+          importInput.value = "";
+          return;
+        }
+        story.name = parsed.name;
+        story.description = parsed.description;
+        story.premise = parsed.premise;
+        story.conflict = parsed.conflict || story.conflict || "";
+        story.worldType = parsed.worldType || "unspecified";
+        story.worldRules = parsed.worldRules || "";
+        story.worldDynamics = parsed.worldDynamics || "";
+        story.revealType = parsed.revealType || "none";
+        story.revealSecret = parsed.revealSecret || "";
+        story.revealClues = parsed.revealClues || "";
+        story.revealTiming = parsed.revealTiming || "";
+        story.revealConsequences = parsed.revealConsequences || "";
+        story.powerCatalog = parsed.powerCatalog || "";
+        story.pantheon = parsed.pantheon || "";
+        story.ensemble = parsed.ensemble || "";
+        story.arcs = parsed.arcs;
+        story.chapters = parsed.chapters;
+        story.status = "draft";
+        await saveProject();
+        renderDirectory();
+      } catch (error) {
+        alert("No se pudo importar el manuscrito: " + error.message);
+      } finally {
+        importInput.value = "";
+      }
+    });
+    const exportButton = $("#story-export-button", container);
+    if (exportButton) exportButton.addEventListener("click", () => {
+      const markdown = "# " + (story.name || "Historia sin título") + "\n\n" +
+        "## Sinopsis\n\n" + (story.description || "Sinopsis pendiente.") + "\n\n" +
+        "## Premisa\n\n" + (story.premise || "Premisa pendiente.") + "\n\n" +
+        "## Conflicto central\n\n" + (story.conflict || "Conflicto pendiente.") + "\n\n" +
+        "## Tipo de mundo\n\n" + (story.worldType || "unspecified") + "\n\n" +
+        "## Reglas del mundo\n\n" + (story.worldRules || "") + "\n\n" +
+        "## Dinámica del mundo\n\n" + (story.worldDynamics || "") + "\n\n" +
+        "## Motor de revelación\n\n" + (story.revealType || "none") + "\n\n" +
+        "## Secreto central\n\n" + (story.revealSecret || "") + "\n\n" +
+        "## Pistas y falsas interpretaciones\n\n" + (story.revealClues || "") + "\n\n" +
+        "## Momento de revelación\n\n" + (story.revealTiming || "") + "\n\n" +
+        "## Consecuencias del giro\n\n" + (story.revealConsequences || "") + "\n\n" +
+        "## Panteón y papel de las diosas\n\n" + (story.pantheon || "") + "\n\n" +
+        "## Reparto coral y arcos individuales\n\n" + (story.ensemble || "") + "\n\n" +
+        "## Catálogo de poderes y evolución\n\n" + (story.powerCatalog || "") + "\n\n" +
+        "## Arcos narrativos\n\n" + (story.arcs || []).map((arc) => "- " + (typeof arc === "string" ? arc : arc.title || arc.description || "")).join("\n") + "\n\n" +
+        (story.chapters || []).map((chapter, index) => "## Capítulo " + (index + 1) + ": " + (chapter.title || "Sin título") + "\n\n" + (chapter.summary ? "> " + chapter.summary + "\n\n" : "") + (chapter.content || "_Capítulo sin redactar._") + "\n").join("\n");
+      const url = URL.createObjectURL(new Blob([markdown], { type: "text/markdown;charset=utf-8" }));
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = (story.name || "historia").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9_-]+/g, "-").replace(/^-+|-+$/g, "").toLowerCase() + ".md";
+      link.click();
+      URL.revokeObjectURL(url);
+    });
+  }
+
+  function parseMarkdownStory(markdown, filename) {
+    const text = String(markdown || "").replace(/\r\n?/g, "\n");
+    const titleMatch = text.match(/^#\s+(.+)$/m);
+    const name = titleMatch ? titleMatch[1].trim() : String(filename || "Historia").replace(/\.md$/i, "").replace(/[-_]+/g, " ");
+    const synopsisMatch = text.match(/^##\s+Sinopsis\s*\n+([\s\S]*?)(?=\n#{1,3}\s|\n---\s*$|$)/im);
+    const description = synopsisMatch ? synopsisMatch[1].trim() : "";
+    const chapterPattern = /^##\s+Cap[ií]tulo\s+(\d+)\s*[—–:-]\s*(.+?)\s*\n([\s\S]*?)(?=^##\s+Cap[ií]tulo\s+\d+\s*[—–:-]|(?![\s\S]))/gim;
+    const readSection = (heading) => {
+      const header = new RegExp("^##\\s+" + heading + "\\s*$", "im");
+      const found = header.exec(text);
+      if (!found) return "";
+      const start = found.index + found[0].length;
+      const remainder = text.slice(start).replace(/^\s*\n/, "");
+      const nextHeading = remainder.search(/^#{1,3}\s/m);
+      return (nextHeading < 0 ? remainder : remainder.slice(0, nextHeading)).trim();
+    };
+    const conflict = readSection("Conflicto central");
+    const worldType = readSection("Tipo de mundo");
+    const worldRules = readSection("Reglas del mundo");
+    const worldDynamics = readSection("Dinámica del mundo");
+    const revealType = readSection("Motor de revelación");
+    const revealSecret = readSection("Secreto central");
+    const revealClues = readSection("Pistas y falsas interpretaciones");
+    const revealTiming = readSection("Momento de revelación");
+    const revealConsequences = readSection("Consecuencias del giro");
+    const powerCatalog = readSection("Catálogo de poderes y evolución");
+    const pantheon = readSection("Panteón y papel de las diosas");
+    const ensemble = readSection("Reparto coral y arcos individuales");
+    const chapters = [];
+    let match;
+    while ((match = chapterPattern.exec(text)) !== null) {
+      const content = match[3].trim();
+      const summary = content.split(/\n\s*\n/).filter(Boolean).slice(0, 2).join(" ").slice(0, 700);
+      chapters.push({
+        id: "chapter-import-" + String(match[1]).padStart(3, "0") + "-" + Date.now().toString(36),
+        title: match[2].trim(),
+        summary,
+        content,
+        status: "complete"
+      });
+    }
+    const elencoMatch = text.match(/^##\s+Elenco y motores dram[aá]ticos\s*\n([\s\S]*?)(?=\n---|\n##\s+Cap[ií]tulo|(?![\s\S]))/im);
+    const arcs = [];
+    if (elencoMatch) {
+      for (const line of elencoMatch[1].split("\n")) {
+        const arc = line.match(/^\s*[-*]\s+\*\*([^*]+?)(?::)?\*\*:?\s*(.+)$/);
+        if (arc) arcs.push(arc[1].trim() + ": " + arc[2].trim());
+      }
+    }
+    return { name, description, premise: description, conflict, worldType, worldRules, worldDynamics, revealType, revealSecret, revealClues, revealTiming, revealConsequences, powerCatalog, pantheon, ensemble, arcs, chapters };
+  }
+
+  async function createStory() {
+    if (!Array.isArray(state.stories)) state.stories = [];
+    const story = { id: "story-" + Date.now().toString(36), name: "Nueva historia", description: "", premise: "", conflict: "", worldType: "unspecified", worldRules: "", worldDynamics: "", revealType: "none", revealSecret: "", revealClues: "", revealTiming: "", revealConsequences: "", powerCatalog: "", arcs: [], chapters: [], status: "idea" };
+    state.stories.push(story);
+    selectedStoryId = story.id;
+    activeView = "stories";
+    await saveProject();
+    render();
   }
 
   function matches(value, query) { return !query || String(value).toLowerCase().includes(query); }

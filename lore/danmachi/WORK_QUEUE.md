@@ -156,3 +156,11 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - La consulta Ais + gustos debe abstenerse cuando no existan afirmaciones de apoyo.
 - Pruebas: casos unitarios y browser smoke en GitHub Actions.
 - Límite: búsqueda textual normalizada sobre los 30 claims actuales. No es IA, no usa RAG y no cubre toda la franquicia.
+
+
+## DANMACHI-COVERAGE-002 · Expedientes adicionales de Astrea Record
+
+- Estado: integrados al catálogo local; verificación de fuentes primarias pendiente.
+- Añadidos 11 expedientes de personajes y cuatro paquetes de investigación sobre la red de Astrea Familia, el mapa de volúmenes, relatos paralelos y la salida de Astrea/venganza de Ryu.
+- Evento de salida de Astrea registrado como candidato provisional, no como hecho cerrado sin evidencia.
+- Próximo paso: revisar cada claim con fuente, localizador, continuidad, periodo y nivel de spoiler; no inferir amistad a partir de afiliación.

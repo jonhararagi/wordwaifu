@@ -39,3 +39,10 @@ Esto no significa que WordWaifu esté terminado. La integración ahora incorpora
 - [Derechos de contenido y retirada](docs/CONTENT_RIGHTS_AND_TAKEDOWN.md)
 
 Cada función importante debe cumplir el protocolo **INSPECT → PLAN → EXECUTE → VERIFY → PERSIST → REPORT**. No se declara terminada una función por la mera existencia de un archivo: debe haber evidencia reproducible y resultados de validación del commit candidato.
+
+
+### Taller de historias y worldbuilding
+- [Dinámica de mundos](docs/WORLD_DYNAMICS.md)
+- [Revelaciones y secretos](docs/STORY_REVEALS.md)
+- [Sistemas de poderes](docs/POWER_SYSTEMS.md)
+- [Panteón y reparto coral](docs/ENSEMBLE_STORIES_AND_PANTHEON.md)

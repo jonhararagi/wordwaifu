@@ -19,6 +19,10 @@ Este índice separa eventos preliminares que necesitan verificación de los acon
 
 Las fichas anteriores son candidatos de conocimiento general y no se consideran fuente canónica verificada hasta que se cotejen sus afirmaciones con un localizador primario.
 
+## Historia de Astrea Familia — candidato pendiente de verificación
+
+- [Salida de Astrea](candidates/EVT-DM-ASTREA-DEPARTURE-001.md) · `EVT-DM-ASTREA-DEPARTURE-001` · Provisional; cotejar cronología y motivaciones con fuentes primarias.
+
 ## Línea alternativa del OC: propuestas de autor
 
 - [Llegada del OC a Orario](au/AU-EVT-OC-ARRIVAL-001.md) · AU-EVT-OC-ARRIVAL-001
