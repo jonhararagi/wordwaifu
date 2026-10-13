@@ -546,6 +546,23 @@ Esta tanda es una capa navegable inicial, no una declaración de canon completo 
 - `spoiler_level`: endgame
 - `confidence_note`: La fecha es la anunciada por el editor y puede cambiar. El volumen aún no se trata como publicado en esta auditoría; verificar nuevamente tras la fecha prevista.
 
+### DMR-008-CLM-027 · Zeus Familia y Hera Familia derrotaron a Behemoth y Leviathan
+- `claim_id`: DMR-008-CLM-027
+- `claim`: Una prueba oficial de conocimiento de la franquicia identifica conjuntamente a Zeus Familia y Hera Familia como las Familias que derrotaron a Behemoth, el Rey de la Tierra, y a Leviathan, el Rey del Mar, dos de las Tres Grandes Misiones. La fuente no asigna en esa pregunta un monstruo concreto a cada Familia.
+- `character_ids`: []
+- `aspect`: historia antigua, Zeus Familia, Hera Familia, Tres Grandes Misiones
+- `era_or_interval`: Historia previa a la llegada de Bell; fecha absoluta y secuencia precisa no indicadas por esta fuente
+- `continuity_scope`: CROSS-CONTINUITY; referencia oficial de franquicia, no pasaje directo de novela
+- `source_id`: DMR-011-SRC-005
+- `source_title`: DanMachi · Prueba oficial de selección de aventureros, nivel intermedio
+- `source_type`: official_franchise_reference
+- `source_locator`: Pregunta 1 y respuesta correcta de la página oficial «冒険者選抜中央試験 中級編»
+- `source_url`: https://danmachi.com/center-test/normal.html
+- `evidence_type`: official_quiz_answer
+- `verification_status`: source_checked
+- `spoiler_level`: major
+- `confidence_note`: La respuesta oficial respalda el resultado conjunto de las dos Familias. No establece cuándo cayeron, quién sobrevivió, la composición de sus rosters, ni el desenlace de la misión contra el Dragón Negro. Esos datos siguen pendientes de fuentes narrativas con localizadores.
+
 ### Resultado y límite
 - Se ha cerrado la comprobación bibliográfica del volumen principal más reciente ya publicado a fecha de consulta: volumen 21.
 - El volumen 22 está anunciado para diciembre de 2026, por lo que no se afirma que la serie esté concluida.
