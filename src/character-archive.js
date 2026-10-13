@@ -521,12 +521,28 @@ const matched=!q||names.some(name=>{
   return name.includes(q);
 });
 return{id:ch.id,name:ch.name,aliases:ch.aliases||[],profilePath:ch.profilePath,overview:displayOverview,summary:continuity==="ALL"?displayOverview:st.summary,preferredContinuity:target,availableContinuities:scopes,states:(continuity==="ALL"?shownScopes:shownScopes.filter(x=>x===continuity)).map(x=>({code:x,label:LABELS[x]||x,affiliation:state(ch.id,x).affiliation})),affiliation:st.affiliation,period:st.period,verifiedClaimCount:shown.length,matched,hasScope:continuity==="ALL"||shownScopes.includes(continuity)};}).filter(x=>x.matched&&x.hasScope).sort((a,b)=>a.name.localeCompare(b.name,"es"));}
+function relationshipLinks(index,id,continuity,filter){
+  const direct=(((REL[id]||{})[continuity])||[]).map(r=>({sourceId:id,targetId:r.targetId,label:r.label,type:r.type,description:r.description,refs:r.refs,direction:"outgoing"}));
+  const directTargets=new Set(direct.map(r=>r.targetId));
+  const incoming=[];
+  for(const [sourceId,scopes] of Object.entries(REL)){
+    if(sourceId===id)continue;
+    for(const edge of ((scopes||{})[continuity]||[])){
+      if(edge.targetId!==id||directTargets.has(sourceId))continue;
+      incoming.push({sourceId,targetId:sourceId,label:(record(index,sourceId)?.name||sourceId)+" · vínculo relacionado",type:edge.type,description:"Enlace inverso para navegación. La ficha de origen registra la relación "+sourceId+" → "+id+": "+edge.description,refs:edge.refs,direction:"incoming"});
+    }
+  }
+  return [...direct,...incoming].map(r=>{
+    const claims=refsClaims(index,r.refs,continuity,filter),target=record(index,r.targetId);
+    return claims.length?{sourceId:r.sourceId,targetId:r.targetId,targetName:target?target.name:r.targetId,available:!!target,label:r.label,type:r.type,description:r.description,continuity,period:state(id,continuity).period,claims,direction:r.direction}:null;
+  }).filter(Boolean);
+}
 function profile(index,id,continuity,filter){const ch=record(index,id);if(!ch)return null;const all=claimsFor(index,id),scopes=ordered(all.flatMap(c=>c.continuityScopes||[])),chosen=continuity&&scopes.includes(continuity)?continuity:defaultState(scopes),allState=all.filter(c=>(c.continuityScopes||[]).includes(chosen)),shown=allState.filter(c=>visible(c.spoilerLevel,filter)),meta=META[id]||{states:{}};
 const official=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(id):null;
-const related=(((REL[id]||{})[chosen])||[]).map(r=>{const claims=refsClaims(index,r.refs,chosen,filter),target=record(index,r.targetId);return claims.length?{targetId:r.targetId,targetName:target?target.name:r.targetId,available:!!target,label:r.label,type:r.type,description:r.description,continuity:chosen,period:state(id,chosen).period,claims:claims}:null;}).filter(Boolean);
+const related=relationshipLinks(index,id,chosen,filter);
 const moments=(((MOM[id]||{})[chosen])||[]).map(m=>{const claims=refsClaims(index,m.refs,chosen,filter);return claims.length?{id:m.id,title:m.title,period:m.period,summary:m.summary,claims:claims,spoilerLevel:worst(claims),people:unique(m.people||[]).filter(pid=>record(index,pid)).map(pid=>({id:pid,name:record(index,pid).name}))}:null;}).filter(Boolean);
 let timeline=(((TIMELINE[id]||{})[chosen])||[]).map(t=>{const claims=refsClaims(index,t.refs,chosen,filter);return claims.length?{id:t.id,title:t.title,period:t.period,claims:claims}:null;}).filter(Boolean);
 if(!timeline.length)timeline=shown.map(c=>({id:c.entryId,title:c.heading,period:c.eraOrInterval||"Periodo no determinado",claims:[c]}));
 return{id:ch.id,name:ch.name,aliases:ch.aliases||[],profilePath:ch.profilePath,overview:meta.overview||(official?official.summary:"Ficha provisional basada en evidencia disponible."),continuity:chosen,continuityLabel:LABELS[chosen]||chosen,availableContinuities:scopes,state:state(id,chosen),officialReference:official,claims:shown,allStateClaims:allState,relationships:related,moments:moments,timeline:timeline,missingContinuities:["CONT-MAIN-LN","CONT-AU"].filter(x=>!scopes.includes(x))};}
-return{list:list,getProfile:profile,getExtendedInfo:extendedInfo,continuityLabels:LABELS,continuityOrder:ORDER,defaultContinuity:defaultState,spoilerVisible:visible};
+return{list:list,getProfile:profile,getExtendedInfo:extendedInfo,getRelationships:relationshipLinks,continuityLabels:LABELS,continuityOrder:ORDER,defaultContinuity:defaultState,spoilerVisible:visible};
 });
