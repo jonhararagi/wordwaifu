@@ -352,6 +352,8 @@ async function run() {
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Iska Bra");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-ANIME");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_25.png"),
+      "Iska should use the linked official DanMachi IV portrait.");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.ok(!(await page.locator("#archive-profile-panel").innerText()).includes("La sinopsis presenta a Ryu buscando su idea de justicia"));
