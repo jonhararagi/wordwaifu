@@ -500,6 +500,10 @@
         {
           "type": "shares_archetype",
           "targetId": "WEAPON-GUNGNIR"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "ART-KING-ARTHUR"
         }
       ],
       "artifactProfile": {
@@ -537,6 +541,10 @@
         {
           "type": "shares_archetype",
           "targetId": "WEAPON-EXCALIBUR"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "NOR-ODIN"
         }
       ],
       "artifactProfile": {
@@ -573,6 +581,10 @@
         {
           "type": "can_pair_with",
           "targetId": "LAT-MEX-HUITZILOPOCHTLI"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "NOR-THOR"
         }
       ],
       "artifactProfile": {
@@ -609,6 +621,14 @@
         {
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "JPN-SUSANOO"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "JPN-AMATERASU"
         }
       ],
       "artifactProfile": {
@@ -646,6 +666,10 @@
         {
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "HIN-INDRA"
         }
       ],
       "artifactProfile": {
@@ -682,6 +706,10 @@
         {
           "type": "can_pair_with",
           "targetId": "SYS-CARD-PACT"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "HIN-SHIVA"
         }
       ],
       "artifactProfile": {
@@ -1685,6 +1713,27 @@
           "targetId": "JPN-SUSANOO"
         }
       ]
+    },
+    {
+      "id": "JPN-KITSUNE",
+      "name": "Kitsune",
+      "kind": "spirit_avatar",
+      "tradition": "Japonesa / folclore",
+      "region": "Japón",
+      "status": "mythology_reference",
+      "summary": "Zorro de relatos y folclores japoneses, que puede aparecer como animal, ser sobrenatural o figura transformadora según la narración; no existe un único perfil uniforme.",
+      "tags": [
+        "japonesa",
+        "espíritu",
+        "transformación",
+        "zorro",
+        "folclore"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Kitsune abarca relatos regionales y literarios distintos; no atribuir a todos los zorros sobrenaturales las mismas capacidades ni tratarlos como una sola entidad individual."
     }
   ],
   "starterDecks": [
