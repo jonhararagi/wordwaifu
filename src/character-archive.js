@@ -283,6 +283,7 @@ MOM["CHAR-RYUU-LION"]["CONT-AR"].push(
 {id:"ryu-memorial",title:"El memorial para las compañeras caídas",period:"Dungeon · ubicación secundaria asociada al piso 18",summary:"La fuente comunitaria afirma que Ryu recuerda a las integrantes perdidas mediante un memorial. Debe localizarse la escena en la novela antes de tratar el detalle como verificado.",refs:["DMR-007-CLM-007"],people:["CHAR-RYUU-LION"]}
 );
 
+EXTENDED["CHAR-MARIYU-LEAGE"]=EXTENDED["CHAR-MARIYU-LEAGE"]||{};
 EXTENDED["CHAR-MARIYU-LEAGE"]["CONT-ANIME"]={
 title:"Mariyu Leage · identidad y afiliación oficial",
 summary:"El perfil oficial la identifica como humana y miembro de Astrea Familia. La página usa el nombre マリュー・レアージュ; Mariyu Reage y Maryuu Reage se guardan como alias de búsqueda, no como personas distintas.",
