@@ -17,11 +17,11 @@ Todos los registros exponen los campos de alias, atributos, dominios y tratamien
 
 Las relaciones incluidas en el JSON son referencias curatoriales del catálogo. Los vínculos creados en la interfaz se guardan en `mythicRelations[]` dentro del proyecto activo, con `id`, `sourceId`, `targetId`, `type` y `createdAt`; pueden editarse o eliminarse sin cambiar la fuente central. La ficha muestra vínculos salientes y entrantes.
 
-Las propuestas generadas se guardan por separado en `mythicProposals[]`. Cada propuesta conserva los modos seleccionados, `entityIds[]`, el texto editable de concepto, habilidad, activación, coste, riesgo, progresión y debilidad, y un `storyId` opcional. La referencia a una ficha central evita duplicar sus metadatos; las diferencias quedan en la propuesta narrativa.
+Las propuestas generadas se guardan por separado en `mythicProposals[]`. Cada propuesta conserva los modos seleccionados, `entityIds[]`, el texto editable de concepto, habilidad, activación, coste, riesgo, progresión y debilidad, y un `storyId` y `chapterReference` opcionales. La propuesta se puede convertir explícitamente en un personaje editable del proyecto; el personaje conserva `mythicEntityIds[]` y `mythicProposalId` para rastrear su inspiración sin copiar la ficha central. La referencia a una ficha central evita duplicar sus metadatos; las diferencias quedan en la propuesta narrativa.
 
 ## Generador
 
-La Forja admite cuatro modos combinables: portador de armas, reencarnación/encarnación, invocador de cartas e invocador de reliquias. La generación no guarda automáticamente. Se puede editar, volver a generar, vincular a una historia del proyecto, guardar, editar una propuesta guardada y eliminarla.
+La Forja admite cuatro modos combinables: portador de armas, reencarnación/encarnación, invocador de cartas e invocador de reliquias. La generación no guarda automáticamente. Se puede editar, volver a generar, vincular a una historia y capítulo del proyecto, guardar, editar, convertir en personaje editable y eliminar una propuesta guardada.
 
 ## Añadir registros y fuentes
 
