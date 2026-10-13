@@ -16,7 +16,7 @@
 - `aspect`: organización, estado inicial, afiliación
 - `era_or_interval`: Inicio de la historia; episodio 1 de la adaptación
 - `continuity_scope`: CONT-ANIME
-- `source_id`: DMR-004-SRC-001
+- `source_id`: DMR-004-SRC-002
 - `source_title`: Sinopsis oficial del episodio 1
 - `source_type`: ADAPTATION
 - `source_locator`: Sinopsis del episodio 1, presentación de Bell como único seguidor de Hestia
@@ -39,7 +39,7 @@
 - `aspect`: acontecimiento, peligro, Dungeon
 - `era_or_interval`: Inicio de la historia; episodio 1
 - `continuity_scope`: CONT-ANIME
-- `source_id`: DMR-004-SRC-001
+- `source_id`: DMR-004-SRC-002
 - `source_title`: Sinopsis oficial del episodio 1
 - `source_type`: ADAPTATION
 - `source_locator`: Sinopsis oficial del episodio 1
