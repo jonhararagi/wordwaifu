@@ -274,7 +274,7 @@ function testMythicProposalsPersistAndValidateReferences() {
     concept: "Personaje original inspirado en una fuente documentada.",
     ability: "Mecánica ficticia declarada como adaptación.", activation: "Nombrar el pacto.",
     cost: "Fatiga temporal.", risk: "El vínculo puede negarse.", progression: "Desbloqueo tras una promesa.",
-    weakness: "El poder no resuelve conflictos personales.", entityIds: ["LAT-MEX-QUETZALCOATL"],
+    weakness: "El poder no resuelve conflictos personales.", chapterReference: "Capítulo 4 · pacto en el santuario", entityIds: ["LAT-MEX-QUETZALCOATL"],
     storyId: "story-a", status: "draft", updatedAt: "2026-10-13T12:00:00.000Z"
   }];
   const result = validateAndNormalizeProject(input);
