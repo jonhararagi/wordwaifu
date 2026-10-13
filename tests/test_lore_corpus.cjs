@@ -29,6 +29,8 @@ const astreaEntity = corpus.searchEntities(catalog, { entityType: "familia", que
 assert.deepEqual(astreaEntity.results.map(entity => entity.id), ["DM-FAM-ASTREA"], "Entity query must locate Astrea Familia by its catalog tag.");
 assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe esta familia" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
+assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
+assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
 assert.equal(index.sourceClaimCount, 89);
 assert.equal(index.entryCount, 92);
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
