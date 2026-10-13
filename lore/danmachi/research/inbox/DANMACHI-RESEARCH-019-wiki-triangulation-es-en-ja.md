@@ -88,3 +88,23 @@
 - [ ] Buscar en *Familia Chronicle: Episode Freya* la escena de los capitanes; registrar volumen/capítulo/página según la edición que se pueda consultar legítimamente.
 - [ ] Separar el dato «capitana de Hera nivel 9» del nombre civil: el extracto solo muestra el alias «Emperatriz» y no autoriza a inventarle un nombre.
 - [ ] Actualizar el mapa de personajes/relaciones solo después de registrar fuente y continuidad; no usar las wikis para llenar campos de historia AU.
+
+
+## Tercera pasada: referencias originales rastreadas (2026-10-13)
+
+12. **Publicación de Fujino Omori en note.com — 「それは遥か彼方の静穏の夢」**  
+    https://note.com/fujinoomori/n/n629829ac3fe4  
+    Autor: 大森藤ノ; fecha visible: 2020-08-28. Se abrió el texto original. En el pasaje visible, Alfia describe a su hermana Meteria como amable, de salud frágil, querida por otros y de cabello blanco; también menciona una reacción de Hera relacionada con un dulce (líneas visibles del artículo, especialmente 75–100 y 121–135). **Límite de continuidad decisivo:** el texto presenta un escenario alternativo en el que Alfia y Zald crían a Bell; no trasladar sus sucesos ni decisiones a la continuidad principal. Puede usarse como material escrito por el autor para estudiar la representación de Meteria/Alfia, etiquetado como relato alternativo del autor, y debe distinguirse de una afirmación narrativa de la línea principal.
+
+13. **Ficha editorial oficial japonesa — Familia Chronicle: Episode Freya**  
+    https://ga.sbcr.jp/product/9784815604646/  
+    GA Bunko identifica a Fujino Omori como autor, fecha de publicación aproximada 2019-12-13 e ISBN 978-4-8156-0464-6. La descripción editorial dice que la obra incluye una historia que profundiza en el pasado de Ottar. Esto confirma la existencia y pertinencia de la obra como fuente primaria potencial; **no confirma por sí solo** la escena concreta de los aventureros nivel 8 y nivel 9 ni los nombres Maxim/Emperatriz.
+
+### Resultado de cotejo y cambios de estado
+
+- [x] Abrir la nota original de Fujino Omori citada por la página española de Meteria.
+- [x] Registrar el alcance explícito del texto visible y advertir que su escenario es alternativo; no mezclarlo con la continuidad principal.
+- [x] Localizar la ficha editorial oficial de *Familia Chronicle: Episode Freya* como fuente primaria potencial.
+- [ ] Consultar una edición legítima del texto de *Episode Freya* y localizar capítulo/página de la escena de Ottar antes de aprobar nombres o niveles como claims de la continuidad elegida.
+- [ ] Abrir y verificar el contexto original de las publicaciones de Fujino Omori citadas para la Emperatriz; si el acceso a la publicación original no permite comprobar contexto, mantenerla como pista secundaria.
+- [ ] No registrar como hecho de continuidad principal nada procedente del escenario alternativo de note.com sin una fuente independiente que lo sostenga en esa continuidad.
