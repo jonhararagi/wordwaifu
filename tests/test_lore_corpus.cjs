@@ -17,6 +17,16 @@ const documentPaths = [
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
+const familyEntities = corpus.searchEntities(catalog, { type: "familia" });
+assert.ok(familyEntities.totalMatches >= 3, "Typed entity search must expose the Familia catalog records.");
+assert.ok(familyEntities.results.every(entity => entity.type === "familia"), "Familia filter must not leak characters or events.");
+assert.ok(familyEntities.results.some(entity => entity.id === "DM-FAM-HESTIA"));
+assert.ok(familyEntities.results.some(entity => entity.id === "DM-FAM-LOKI"));
+assert.ok(familyEntities.results.some(entity => entity.id === "DM-FAM-ASTREA"));
+const astreaEntity = corpus.searchEntities(catalog, { entityType: "familia", query: "Astrea" });
+assert.deepEqual(astreaEntity.results.map(entity => entity.id), ["DM-FAM-ASTREA"], "Entity query must locate Astrea Familia by its catalog tag.");
+assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe esta familia" }).abstain, true);
+assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(index.sourceClaimCount, 89);
 assert.equal(index.entryCount, 92);
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
