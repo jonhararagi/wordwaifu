@@ -1390,141 +1390,6 @@
     "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
   },
   {
-    "id": "CHAR-NEOIN-UNICK",
-    "name": "Neoin Unick",
-    "aliases": [
-      "ノイン・ユニック"
-    ],
-    "family": "Astrea Familia (histórica)",
-    "species": "Humana",
-    "level": null,
-    "epithet": "No indicado",
-    "voice": "Maki Kawase",
-    "role": "Integrante histórica de Astrea Familia",
-    "summary": "La página oficial registra a Neoin como miembro de Astrea Familia y confirma que es humana, pero no ofrece una biografía narrativa extensa en ese perfil.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
-    "source": "S4",
-    "image": 20,
-    "locator": "Perfil ノイン・ユニック; especie y afiliación",
-    "imageUrl": "https://danmachi.com/danmachi4/character/images/chara_tachi_20.png",
-    "sourcePage": "https://danmachi.com/danmachi4/character/",
-    "sourceTitle": "DanMachi IV · perfiles oficiales de personajes",
-    "sourceId": "DMR-006-SRC-003",
-    "evidenceType": "official_adaptation_profile",
-    "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
-  },
-  {
-    "id": "CHAR-NEESE-RANQUETTE",
-    "name": "Neese Ranquette",
-    "aliases": [
-      "ネーゼ・ランケット"
-    ],
-    "family": "Astrea Familia (histórica)",
-    "species": "Hombre lobo / Werewolf",
-    "level": null,
-    "epithet": "No indicado",
-    "voice": "Asuna Tomari",
-    "role": "Integrante histórica de Astrea Familia",
-    "summary": "La ficha oficial la incluye entre los miembros de Astrea Familia y especifica su especie, sin detallar su historia individual.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
-    "source": "S4",
-    "image": 21,
-    "locator": "Perfil ネーゼ・ランケット; especie y afiliación",
-    "imageUrl": "https://danmachi.com/danmachi4/character/images/chara_tachi_21.png",
-    "sourcePage": "https://danmachi.com/danmachi4/character/",
-    "sourceTitle": "DanMachi IV · perfiles oficiales de personajes",
-    "sourceId": "DMR-006-SRC-003",
-    "evidenceType": "official_adaptation_profile",
-    "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
-  },
-  {
-    "id": "CHAR-ASTA-NOX",
-    "name": "Asta Knox",
-    "aliases": [
-      "アスタ・ノックス"
-    ],
-    "family": "Astrea Familia (histórica)",
-    "species": "Enana",
-    "level": null,
-    "epithet": "No indicado",
-    "voice": "Hikaru Tono",
-    "role": "Integrante histórica de Astrea Familia",
-    "summary": "La página oficial la identifica como integrante histórica de Astrea Familia y especifica su especie, pero no presenta una biografía detallada.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
-    "source": "S4",
-    "image": 22,
-    "locator": "Perfil アスタ・ノックス; especie y afiliación",
-    "imageUrl": "https://danmachi.com/danmachi4/character/images/chara_tachi_22.png",
-    "sourcePage": "https://danmachi.com/danmachi4/character/",
-    "sourceTitle": "DanMachi IV · perfiles oficiales de personajes",
-    "sourceId": "DMR-006-SRC-003",
-    "evidenceType": "official_adaptation_profile",
-    "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
-  },
-  {
-    "id": "CHAR-LIANA-LEETS",
-    "name": "Liana Leets",
-    "aliases": [
-      "リャーナ・リーツ"
-    ],
-    "family": "Astrea Familia (histórica)",
-    "species": "Humana",
-    "level": null,
-    "epithet": "No indicado",
-    "voice": "Saki Kousaka",
-    "role": "Integrante histórica de Astrea Familia",
-    "summary": "La ficha oficial la registra en Astrea Familia y la identifica como humana; no ofrece más detalle biográfico en ese perfil.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
-    "source": "S4",
-    "image": 23,
-    "locator": "Perfil リャーナ・リーツ; especie y afiliación",
-    "imageUrl": "https://danmachi.com/danmachi4/character/images/chara_tachi_23.png",
-    "sourcePage": "https://danmachi.com/danmachi4/character/",
-    "sourceTitle": "DanMachi IV · perfiles oficiales de personajes",
-    "sourceId": "DMR-006-SRC-003",
-    "evidenceType": "official_adaptation_profile",
-    "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
-  },
-  {
-    "id": "CHAR-SELTTY-THROA",
-    "name": "Selty Throa",
-    "aliases": [
-      "セルティ・スロア"
-    ],
-    "family": "Astrea Familia (histórica)",
-    "species": "Elfa",
-    "level": null,
-    "epithet": "No indicado",
-    "voice": "Rina Kawaguchi",
-    "role": "Integrante histórica de Astrea Familia",
-    "summary": "La página oficial la incluye entre los miembros de Astrea Familia e indica que es elfa; su perfil público consultado no amplía su biografía.",
-    "personality": "No establecida por la ficha oficial consultada.",
-    "abilities": "No detalladas por la ficha oficial consultada.",
-    "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
-    "source": "S4",
-    "image": 24,
-    "locator": "Perfil セルティ・スロア; especie y afiliación",
-    "imageUrl": "https://danmachi.com/danmachi4/character/images/chara_tachi_24.png",
-    "sourcePage": "https://danmachi.com/danmachi4/character/",
-    "sourceTitle": "DanMachi IV · perfiles oficiales de personajes",
-    "sourceId": "DMR-006-SRC-003",
-    "evidenceType": "official_adaptation_profile",
-    "continuity": "CONT-ANIME",
-    "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
-  },
-  {
     "id": "CHAR-ISKA-BRA",
     "name": "Iska Bra",
     "aliases": [
@@ -1636,14 +1501,14 @@
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
     "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen oficial enlazada desde el sitio original; no almacenada en WordWaifu."
-  }
-,
+  },
   {
     "id": "CHAR-NOIN-UNIC",
     "name": "Noin Unic",
     "aliases": [
       "ノイン・ユニック",
-      "Noin"
+      "Noin",
+      "Neoin Unick"
     ],
     "family": "Astrea Familia (histórica)",
     "species": "Humana",
@@ -1671,7 +1536,8 @@
     "name": "Neze Rankett",
     "aliases": [
       "ネーゼ・ランケット",
-      "Neze"
+      "Neze",
+      "Neese Ranquette"
     ],
     "family": "Astrea Familia (histórica)",
     "species": "Mujer lobo (Werewolf)",
@@ -1699,7 +1565,9 @@
     "name": "Asta Knox",
     "aliases": [
       "アスタ・ノックス",
-      "Asta"
+      "Asta",
+      "Asta Knox",
+      "Asta Nox"
     ],
     "family": "Astrea Familia (histórica)",
     "species": "Enana",
@@ -1727,7 +1595,8 @@
     "name": "Ryana Lietz",
     "aliases": [
       "リャーナ・リーツ",
-      "Ryana"
+      "Ryana",
+      "Liana Leets"
     ],
     "family": "Astrea Familia (histórica)",
     "species": "Humana",
@@ -1755,7 +1624,8 @@
     "name": "Celty Srowa",
     "aliases": [
       "セルティ・スロア",
-      "Celty"
+      "Celty",
+      "Selty Throa"
     ],
     "family": "Astrea Familia (histórica)",
     "species": "Elfa",
