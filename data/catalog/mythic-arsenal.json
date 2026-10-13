@@ -1,0 +1,847 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "mythic-arsenal-v1",
+  "title": "Atlas de entidades, reliquias y cartas míticas",
+  "language": "es",
+  "purpose": "Base creativa para historias de invocación, avatares, reencarnaciones y armas legendarias.",
+  "rules": {
+    "statusValues": [
+      "mythology_reference",
+      "historical_reference",
+      "creative_adaptation",
+      "original"
+    ],
+    "truthPolicy": "Las descripciones de tradición son resúmenes prudentes; las habilidades de combate, rarezas, costes y efectos jugables se etiquetan como adaptación creativa.",
+    "respectPolicy": "Las tradiciones vivas se tratan como culturas, no como listas de poderes intercambiables. Registrar variantes regionales y evitar afirmar que existe una única versión definitiva.",
+    "navigation": "Cada registro tiene ID estable, relaciones por ID y tags de búsqueda."
+  },
+  "entities": [
+    {
+      "id": "LAT-MAP-PILLAN",
+      "name": "Pillán",
+      "kind": "mythic_entity",
+      "tradition": "Mapuche",
+      "region": "Wallmapu / sur andino",
+      "status": "mythology_reference",
+      "summary": "Seres espirituales poderosos vinculados en distintas narraciones mapuche con fuerzas volcánicas, tormentas y antepasados; las interpretaciones varían por fuente y contexto.",
+      "creativeHook": "Una presencia de fuego y memoria territorial que no puede ser dominada como una simple herramienta.",
+      "tags": [
+        "latinoamericano",
+        "mapuche",
+        "fuego",
+        "tormenta",
+        "espíritu"
+      ],
+      "relations": [
+        {
+          "type": "tradition_context",
+          "targetId": "LAT-MAP-TRENGT"
+        },
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "sourceNotes": "No asignar una jerarquía o biografía única a todas las versiones."
+    },
+    {
+      "id": "LAT-MAP-TRENGT",
+      "name": "Treng Treng y Kai Kai",
+      "kind": "mythic_pair",
+      "tradition": "Mapuche",
+      "region": "Wallmapu / sur andino",
+      "status": "mythology_reference",
+      "summary": "Serpientes poderosas asociadas en relatos mapuche con tierra y agua; el enfrentamiento explica un gran cataclismo y la supervivencia de la humanidad en distintas versiones.",
+      "creativeHook": "Dos cartas rivales: una altera el terreno y otra domina inundaciones. El conflicto entre ellas puede ser una condición narrativa, no una simple combinación de daño.",
+      "tags": [
+        "latinoamericano",
+        "mapuche",
+        "serpiente",
+        "agua",
+        "tierra",
+        "cataclismo"
+      ],
+      "relations": [
+        {
+          "type": "paired_myth",
+          "targetId": "LAT-MAP-PILLAN"
+        },
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-Pакт"
+        }
+      ]
+    },
+    {
+      "id": "LAT-TEH-ELAL",
+      "name": "Elal",
+      "kind": "culture_hero",
+      "tradition": "Tehuelche / Aónikenk",
+      "region": "Patagonia",
+      "status": "mythology_reference",
+      "summary": "Héroe cultural de relatos tehuelches asociado con el orden del mundo y la transmisión de conocimientos; los relatos tienen variantes.",
+      "creativeHook": "Invocación de exploración y supervivencia que enseña técnicas o abre rutas, en vez de ser únicamente un combatiente.",
+      "tags": [
+        "latinoamericano",
+        "tehuelche",
+        "patagonia",
+        "héroe cultural",
+        "viaje"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "LAT-GUA-POMBERO",
+      "name": "Pombero",
+      "kind": "folklore_entity",
+      "tradition": "Guaraní y folclores regionales",
+      "region": "Paraguay y nordeste argentino, con variantes regionales",
+      "status": "mythology_reference",
+      "summary": "Figura del folclore regional asociada con el monte, la noche y reglas de respeto o reciprocidad que cambian según la tradición local.",
+      "creativeHook": "Carta de sigilo, rastreo y pactos: sus favores tienen obligaciones y no se activan si el portador rompe una regla acordada.",
+      "tags": [
+        "latinoamericano",
+        "guaraní",
+        "folclore",
+        "monte",
+        "sigilo",
+        "pacto"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "LAT-GUA-JASYJATERE",
+      "name": "Jasy Jateré",
+      "kind": "folklore_entity",
+      "tradition": "Guaraní y folclores regionales",
+      "region": "Paraguay y regiones vecinas",
+      "status": "mythology_reference",
+      "summary": "Ser del folclore guaraní con representaciones regionales relacionadas con la siesta, el monte y la infancia; no existe una ficha única universal.",
+      "creativeHook": "Entidad de distracción, espejismos y control del ritmo del combate; limitar su efecto a un área y una ventana temporal.",
+      "tags": [
+        "latinoamericano",
+        "guaraní",
+        "folclore",
+        "ilusión",
+        "tiempo"
+      ],
+      "relations": [
+        {
+          "type": "related_tradition",
+          "targetId": "LAT-GUA-POMBERO"
+        }
+      ]
+    },
+    {
+      "id": "LAT-GUA-KURUPI",
+      "name": "Kurupí",
+      "kind": "folklore_entity",
+      "tradition": "Guaraní y folclores regionales",
+      "region": "Paraguay y nordeste argentino",
+      "status": "mythology_reference",
+      "summary": "Figura del folclore con variantes notables en su apariencia y función narrativa según región y época.",
+      "creativeHook": "Diseñar una versión propia centrada en ataduras, trampas o control del espacio, identificándola claramente como adaptación.",
+      "tags": [
+        "latinoamericano",
+        "guaraní",
+        "folclore",
+        "trampa",
+        "atadura"
+      ],
+      "relations": [
+        {
+          "type": "related_tradition",
+          "targetId": "LAT-GUA-POMBERO"
+        }
+      ]
+    },
+    {
+      "id": "LAT-BRA-CURUPIRA",
+      "name": "Curupira",
+      "kind": "folklore_entity",
+      "tradition": "Folclore brasileño",
+      "region": "Brasil",
+      "status": "mythology_reference",
+      "summary": "Protector del bosque en muchas versiones, reconocible por sus pies orientados hacia atrás y su capacidad de desorientar a quienes dañan el monte.",
+      "creativeHook": "Invocación defensiva de territorio: distorsiona rastros y protege aliados dentro de un bosque, pero pierde fuerza en entornos artificiales.",
+      "tags": [
+        "latinoamericano",
+        "brasileño",
+        "bosque",
+        "protección",
+        "rastreo"
+      ],
+      "relations": [
+        {
+          "type": "related_tradition",
+          "targetId": "LAT-BRA-BOITATA"
+        }
+      ]
+    },
+    {
+      "id": "LAT-BRA-BOITATA",
+      "name": "Boitatá",
+      "kind": "folklore_entity",
+      "tradition": "Folclore brasileño",
+      "region": "Brasil",
+      "status": "mythology_reference",
+      "summary": "Ser legendario representado a menudo como una gran serpiente de fuego o luz, asociado con la protección de campos y vegetación frente al fuego destructivo.",
+      "creativeHook": "Carta de luz y fuego que detecta amenazas en la oscuridad; su poder aumenta al proteger un lugar, no al arrasarlo.",
+      "tags": [
+        "latinoamericano",
+        "brasileño",
+        "serpiente",
+        "fuego",
+        "luz",
+        "protección"
+      ],
+      "relations": [
+        {
+          "type": "related_tradition",
+          "targetId": "LAT-BRA-CURUPIRA"
+        }
+      ]
+    },
+    {
+      "id": "LAT-BRA-IARA",
+      "name": "Iara",
+      "kind": "folklore_entity",
+      "tradition": "Folclore brasileño",
+      "region": "Amazonía y Brasil, con variaciones",
+      "status": "mythology_reference",
+      "summary": "Figura acuática del folclore brasileño que suele aparecer como mujer vinculada a ríos, canto y atracción peligrosa; las versiones varían.",
+      "creativeHook": "Carta de canto, percepción y control acuático. El coste puede ser que la invocación atraiga atención o exija agua cercana.",
+      "tags": [
+        "latinoamericano",
+        "brasileño",
+        "agua",
+        "canto",
+        "encanto"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "LAT-AND-PACHAMAMA",
+      "name": "Pachamama",
+      "kind": "deity",
+      "tradition": "Tradiciones andinas",
+      "region": "Andes centrales y meridionales",
+      "status": "mythology_reference",
+      "summary": "Figura sagrada de la tierra y la fertilidad en diversas tradiciones andinas vivas; sus significados y prácticas dependen de la comunidad y región.",
+      "creativeHook": "No tratarla como una mascota invocable. Puede funcionar mejor como pacto territorial, obligación de reciprocidad o fuerza que responde a acciones del protagonista.",
+      "tags": [
+        "latinoamericano",
+        "andino",
+        "tierra",
+        "fertilidad",
+        "reciprocidad",
+        "tradición viva"
+      ],
+      "relations": [
+        {
+          "type": "thematic_counterpart",
+          "targetId": "LAT-AND-SUPAY"
+        }
+      ]
+    },
+    {
+      "id": "LAT-AND-INTI",
+      "name": "Inti",
+      "kind": "deity",
+      "tradition": "Inca / tradiciones andinas",
+      "region": "Andes",
+      "status": "mythology_reference",
+      "summary": "Deidad solar central en la religión estatal inca; las prácticas e interpretaciones históricas requieren contexto y no equivalen a una única tradición andina actual.",
+      "creativeHook": "Reliquia solar que revela verdades bajo luz directa, pero no puede crear información que el portador desconoce.",
+      "tags": [
+        "latinoamericano",
+        "inca",
+        "sol",
+        "luz",
+        "realeza"
+      ],
+      "relations": [
+        {
+          "type": "related_deity",
+          "targetId": "LAT-AND-VIRACOCHA"
+        }
+      ]
+    },
+    {
+      "id": "LAT-AND-VIRACOCHA",
+      "name": "Viracocha",
+      "kind": "deity_creator",
+      "tradition": "Inca / Andes",
+      "region": "Andes",
+      "status": "mythology_reference",
+      "summary": "Deidad creadora en relatos andinos e incas, con versiones y nombres que varían según fuentes y contextos históricos.",
+      "creativeHook": "Entidad de creación y restauración con límites severos: puede recomponer estructuras, pero no devolver sin coste una vida perdida.",
+      "tags": [
+        "latinoamericano",
+        "andino",
+        "inca",
+        "creación",
+        "orden"
+      ],
+      "relations": [
+        {
+          "type": "related_deity",
+          "targetId": "LAT-AND-INTI"
+        }
+      ]
+    },
+    {
+      "id": "LAT-AND-SUPAY",
+      "name": "Supay",
+      "kind": "underworld_figure",
+      "tradition": "Andina; usos históricos y regionales diversos",
+      "region": "Andes",
+      "status": "mythology_reference",
+      "summary": "Nombre y figura asociados en distintas fuentes con el mundo subterráneo y entidades de ese ámbito; la interpretación fue cambiando con el contacto colonial.",
+      "creativeHook": "Pacto de descenso, sombras o resistencia al miedo, con cláusulas y consecuencias explícitas. No reducir todas las creencias andinas a una equivalencia simple con el diablo cristiano.",
+      "tags": [
+        "latinoamericano",
+        "andino",
+        "inframundo",
+        "sombra",
+        "pacto"
+      ],
+      "relations": [
+        {
+          "type": "thematic_counterpart",
+          "targetId": "LAT-AND-PACHAMAMA"
+        }
+      ]
+    },
+    {
+      "id": "LAT-MEX-QUETZALCOATL",
+      "name": "Quetzalcóatl",
+      "kind": "deity",
+      "tradition": "Nahua / mesoamericana",
+      "region": "Centro de México y tradiciones relacionadas",
+      "status": "mythology_reference",
+      "summary": "Deidad mesoamericana asociada, según época y tradición, con la serpiente emplumada, conocimiento, viento y otros dominios.",
+      "creativeHook": "Carta de conocimiento, movilidad aérea y renovación. La invocación puede requerir que el portador comparta o enseñe algo en lugar de acumular poder.",
+      "tags": [
+        "latinoamericano",
+        "mesoamericano",
+        "nahua",
+        "serpiente emplumada",
+        "viento",
+        "conocimiento"
+      ],
+      "relations": [
+        {
+          "type": "related_deity",
+          "targetId": "LAT-MEX-TEZCATLIPOCA"
+        }
+      ]
+    },
+    {
+      "id": "LAT-MEX-TEZCATLIPOCA",
+      "name": "Tezcatlipoca",
+      "kind": "deity",
+      "tradition": "Nahua / mexica",
+      "region": "Centro de México",
+      "status": "mythology_reference",
+      "summary": "Deidad compleja vinculada, entre otros aspectos, con la noche, el destino, el conflicto y el espejo humeante; sus atributos dependen del contexto ritual e histórico.",
+      "creativeHook": "Carta de engaño y percepción que muestra posibilidades, pero cada uso revela también algo del invocador.",
+      "tags": [
+        "latinoamericano",
+        "mexica",
+        "noche",
+        "destino",
+        "espejo",
+        "engaño"
+      ],
+      "relations": [
+        {
+          "type": "thematic_rival",
+          "targetId": "LAT-MEX-QUETZALCOATL"
+        }
+      ]
+    },
+    {
+      "id": "LAT-MEX-HUITZILOPOCHTLI",
+      "name": "Huitzilopochtli",
+      "kind": "deity",
+      "tradition": "Mexica",
+      "region": "Centro de México",
+      "status": "mythology_reference",
+      "summary": "Deidad mexica vinculada con el sol y la guerra, de importancia central en la religión estatal mexica.",
+      "creativeHook": "Manifestación de avance y voluntad de combate con alto coste de agotamiento y consecuencias sociales en el mundo de la historia.",
+      "tags": [
+        "latinoamericano",
+        "mexica",
+        "sol",
+        "guerra",
+        "voluntad"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "WEAPON-MACUAHUITL"
+        }
+      ]
+    },
+    {
+      "id": "LAT-MAY-IXCHEL",
+      "name": "Ix Chel",
+      "kind": "deity",
+      "tradition": "Maya",
+      "region": "Área maya",
+      "status": "mythology_reference",
+      "summary": "Deidad maya con asociaciones que pueden incluir medicina, parto, tejido y aspectos lunares en fuentes y periodos concretos; las atribuciones no deben mezclarse sin contexto.",
+      "creativeHook": "Carta de restauración, tejido de barreras o tratamiento de heridas; sanar no borra automáticamente trauma ni consecuencias.",
+      "tags": [
+        "latinoamericano",
+        "maya",
+        "sanación",
+        "tejido",
+        "luna"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "LAT-MAY-HERO-TWINS",
+      "name": "Hunahpú e Ixbalanqué",
+      "kind": "hero_pair",
+      "tradition": "Maya K’iche’ · Popol Vuh",
+      "region": "Tierras altas de Guatemala",
+      "status": "mythology_reference",
+      "summary": "Gemelos heroicos del Popol Vuh que atraviesan pruebas del inframundo mediante ingenio, cooperación y transformación.",
+      "creativeHook": "Dos cartas que funcionan mejor juntas: una prepara la solución y la otra ejecuta el engaño; separarlas reduce sus opciones.",
+      "tags": [
+        "latinoamericano",
+        "maya",
+        "Popol Vuh",
+        "gemelos",
+        "ingenio",
+        "inframundo"
+      ],
+      "relations": [
+        {
+          "type": "paired_myth",
+          "targetId": "LAT-MAY-IXCHEL"
+        }
+      ]
+    },
+    {
+      "id": "WEAPON-MACUAHUITL",
+      "name": "Macuahuitl",
+      "kind": "historical_weapon",
+      "tradition": "Mexica / Mesoamérica",
+      "region": "Centro de México",
+      "status": "historical_reference",
+      "summary": "Arma histórica de madera con filos de obsidiana; no es una deidad ni debe etiquetarse como arma sobrenatural histórica.",
+      "creativeHook": "Reliquia de corte que pierde filo o se astilla si se fuerza contra una defensa inadecuada; cualquier magia añadida será una adaptación propia.",
+      "tags": [
+        "latinoamericano",
+        "mesoamericano",
+        "mexica",
+        "arma histórica",
+        "obsidiana"
+      ],
+      "relations": [
+        {
+          "type": "associated_with",
+          "targetId": "LAT-MEX-HUITZILOPOCHTLI"
+        }
+      ]
+    },
+    {
+      "id": "WEAPON-EXCALIBUR",
+      "name": "Excalibur",
+      "kind": "legendary_weapon",
+      "tradition": "Materia artúrica",
+      "region": "Tradición literaria británica",
+      "status": "mythology_reference",
+      "summary": "Espada legendaria asociada al rey Arturo; las versiones distinguen de distintas maneras Excalibur y la espada de la piedra.",
+      "creativeHook": "Arma que reconoce un compromiso y no solo una genealogía; su poder no garantiza liderazgo ni virtud.",
+      "tags": [
+        "arma legendaria",
+        "espada",
+        "realeza",
+        "prueba"
+      ],
+      "relations": [
+        {
+          "type": "shares_archetype",
+          "targetId": "WEAPON-GUNGNIR"
+        }
+      ]
+    },
+    {
+      "id": "WEAPON-GUNGNIR",
+      "name": "Gungnir",
+      "kind": "legendary_weapon",
+      "tradition": "Nórdica",
+      "region": "Escandinavia literaria y mitológica",
+      "status": "mythology_reference",
+      "summary": "Lanza de Odín en fuentes nórdicas; su descripción y función dependen del texto de referencia.",
+      "creativeHook": "Reliquia de precisión y juramentos: una vez declarada la intención, no se puede cambiar el objetivo sin pagar el coste pactado.",
+      "tags": [
+        "arma legendaria",
+        "lanza",
+        "Odín",
+        "juramento",
+        "precisión"
+      ],
+      "relations": [
+        {
+          "type": "shares_archetype",
+          "targetId": "WEAPON-EXCALIBUR"
+        }
+      ]
+    },
+    {
+      "id": "WEAPON-MJOLNIR",
+      "name": "Mjölnir",
+      "kind": "legendary_weapon",
+      "tradition": "Nórdica",
+      "region": "Escandinavia",
+      "status": "mythology_reference",
+      "summary": "Martillo de Thor asociado con el trueno y la protección; los detalles varían entre fuentes y objetos arqueológicos relacionados.",
+      "creativeHook": "Golpe de impacto y defensa; regresa al portador solo si este acepta proteger a alguien, no por simple conveniencia.",
+      "tags": [
+        "arma legendaria",
+        "martillo",
+        "trueno",
+        "protección"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "LAT-MEX-HUITZILOPOCHTLI"
+        }
+      ]
+    },
+    {
+      "id": "WEAPON-KUSANAGI",
+      "name": "KUSANAGI-NO-TSURUGI",
+      "kind": "sacred_sword",
+      "tradition": "Japonesa / sintoísta",
+      "region": "Japón",
+      "status": "mythology_reference",
+      "summary": "Espada sagrada dentro de la tradición imperial japonesa y los relatos asociados a Susanoo y Yamato Takeru.",
+      "creativeHook": "Reliquia que corta corrientes de viento o abre paso entre obstáculos, pero exige precisión y disciplina.",
+      "tags": [
+        "espada sagrada",
+        "Japón",
+        "viento",
+        "reliquia"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "WEAPON-VAJRA",
+      "name": "Vajra",
+      "kind": "ritual_object_weapon",
+      "tradition": "Tradiciones védicas y budistas",
+      "region": "Asia meridional y regiones budistas",
+      "status": "mythology_reference",
+      "summary": "Objeto ritual con significados diversos, asociado en tradiciones védicas con Indra y en budismo vajrayana con indestructibilidad y método.",
+      "creativeHook": "Artefacto de estabilidad que rompe ilusiones o sostiene barreras; tratar sus significados religiosos con contexto, no solo como arma genérica.",
+      "tags": [
+        "reliquia",
+        "ritual",
+        "rayo",
+        "indestructibilidad"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "WEAPON-TRISHULA",
+      "name": "Trishula",
+      "kind": "divine_weapon",
+      "tradition": "Hinduismo",
+      "region": "Asia meridional",
+      "status": "mythology_reference",
+      "summary": "Tridente asociado especialmente con Shiva y con simbolismos religiosos que cambian según tradición y representación.",
+      "creativeHook": "Tres modos de uso que no pueden activarse simultáneamente: creación, conservación y destrucción como adaptación de juego, no como definición universal del símbolo.",
+      "tags": [
+        "reliquia",
+        "tridente",
+        "Shiva",
+        "tres aspectos"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "RELIC-ARK-ALLIANCE",
+      "name": "Arca de la Alianza",
+      "kind": "sacred_relic",
+      "tradition": "Tradiciones judías y textos bíblicos",
+      "region": "Levante antiguo",
+      "status": "mythology_reference",
+      "summary": "Objeto sagrado descrito en la Biblia hebrea; su historia posterior y ubicación son cuestiones distintas y debatidas.",
+      "creativeHook": "Reliquia sellada que protege un pacto y no debe convertirse en un arma ordinaria; usarla como ficción requiere respeto por su carácter sagrado.",
+      "tags": [
+        "reliquia",
+        "pacto",
+        "protección",
+        "objeto sagrado"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "SYS-CARD-PACT",
+      "name": "Contrato de Invocación",
+      "kind": "summoning_mechanic",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Sistema narrativo",
+      "status": "original",
+      "summary": "El portador usa una carta, reliquia o sello como interfaz para pedir la manifestación de una entidad. La entidad conserva voluntad, condiciones y límites propios.",
+      "creativeHook": "El contrato registra precio, duración, alcance, consentimiento, cláusula de salida y consecuencias por incumplimiento.",
+      "tags": [
+        "cartas",
+        "reliquias",
+        "invocación",
+        "contrato",
+        "mecánica original"
+      ],
+      "relations": [
+        {
+          "type": "supports",
+          "targetId": "SYS-CARD-AVATAR"
+        },
+        {
+          "type": "supports",
+          "targetId": "SYS-CARD-RESONANCE"
+        }
+      ]
+    },
+    {
+      "id": "SYS-CARD-AVATAR",
+      "name": "Manifestación / Avatar",
+      "kind": "summoning_mechanic",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Sistema narrativo",
+      "status": "original",
+      "summary": "El protagonista no invoca un cuerpo separado: manifiesta por tiempo limitado una forma, arma o atributo del pacto.",
+      "creativeHook": "Escala de riesgo: rasgos parciales, avatar completo y fusión. Cada etapa añade potencia y pérdida temporal de control o identidad.",
+      "tags": [
+        "cartas",
+        "avatar",
+        "transformación",
+        "fusión",
+        "riesgo"
+      ],
+      "relations": [
+        {
+          "type": "requires",
+          "targetId": "SYS-CARD-PACT"
+        },
+        {
+          "type": "progression",
+          "targetId": "SYS-CARD-RESONANCE"
+        }
+      ]
+    },
+    {
+      "id": "SYS-CARD-RESONANCE",
+      "name": "Resonancia y Evolución",
+      "kind": "progression_system",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Sistema narrativo",
+      "status": "original",
+      "summary": "Las cartas evolucionan por decisiones, vínculos y pruebas narrativas, no solo por experiencia numérica.",
+      "creativeHook": "Etapas sugeridas: sello dormido, primera respuesta, pacto consciente, manifestación plena y forma irreversible. Cada etapa debe tener requisito, coste, señal visible y consecuencia.",
+      "tags": [
+        "progresión",
+        "evolución",
+        "cartas",
+        "irreversible",
+        "continuidad"
+      ],
+      "relations": [
+        {
+          "type": "requires",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "SYS-CARD-ARCHETYPES",
+      "name": "Familias de cartas",
+      "kind": "system_taxonomy",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Sistema narrativo",
+      "status": "original",
+      "summary": "Taxonomía para filtrar cartas por función, no por una escala única de rareza.",
+      "creativeHook": "Roles: combatiente, guardián, explorador, sanador, engañador, sabio, invocador, montura, arma, territorio y entidad de coste narrativo.",
+      "tags": [
+        "filtro",
+        "cartas",
+        "roles",
+        "catálogo"
+      ],
+      "relations": [
+        {
+          "type": "supports",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    },
+    {
+      "id": "SYS-CARD-ETHICS",
+      "name": "Consentimiento y agencia de la entidad",
+      "kind": "world_rule",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Reglas del mundo",
+      "status": "original",
+      "summary": "Una entidad invocada no es automáticamente una herramienta obediente. Puede negociar, negarse, interpretar órdenes o exigir reparación.",
+      "creativeHook": "Las cartas pueden registrar afinidad, confianza, límites y acuerdos. Forzar una invocación genera deuda, inestabilidad o ruptura del vínculo.",
+      "tags": [
+        "reglas",
+        "agencia",
+        "pacto",
+        "consecuencias"
+      ],
+      "relations": [
+        {
+          "type": "supports",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ]
+    }
+  ],
+  "starterDecks": [
+    {
+      "id": "DECK-LATAM-ANCESTRAL",
+      "name": "Ecos del territorio",
+      "description": "Cartas inspiradas en relatos latinoamericanos, con énfasis en territorio, reciprocidad, supervivencia y memoria. No presupone que todas las entidades acepten combate.",
+      "entityIds": [
+        "LAT-MAP-PILLAN",
+        "LAT-MAP-TRENGT",
+        "LAT-TEH-ELAL",
+        "LAT-GUA-POMBERO",
+        "LAT-GUA-JASYJATERE",
+        "LAT-BRA-CURUPIRA",
+        "LAT-BRA-BOITATA",
+        "LAT-BRA-IARA",
+        "LAT-AND-PACHAMAMA",
+        "LAT-AND-INTI",
+        "LAT-AND-VIRACOCHA",
+        "LAT-AND-SUPAY",
+        "LAT-MEX-QUETZALCOATL",
+        "LAT-MEX-TEZCATLIPOCA",
+        "LAT-MEX-HUITZILOPOCHTLI",
+        "LAT-MAY-IXCHEL",
+        "LAT-MAY-HERO-TWINS"
+      ]
+    },
+    {
+      "id": "DECK-RELICS-WORLD",
+      "name": "Reliquias y armas legendarias",
+      "description": "Objetos con tradición documentada que pueden recibir reglas mágicas nuevas si se etiquetan como adaptación.",
+      "entityIds": [
+        "WEAPON-MACUAHUITL",
+        "WEAPON-EXCALIBUR",
+        "WEAPON-GUNGNIR",
+        "WEAPON-MJOLNIR",
+        "WEAPON-KUSANAGI",
+        "WEAPON-VAJRA",
+        "WEAPON-TRISHULA",
+        "RELIC-ARK-ALLIANCE"
+      ]
+    },
+    {
+      "id": "DECK-SYSTEM-CORE",
+      "name": "Núcleo del sistema de invocación",
+      "description": "Reglas originales que hacen jugable el concepto de cartas, reliquias, avatares y evolución.",
+      "entityIds": [
+        "SYS-CARD-PACT",
+        "SYS-CARD-AVATAR",
+        "SYS-CARD-RESONANCE",
+        "SYS-CARD-ARCHETYPES",
+        "SYS-CARD-ETHICS"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-BRITANNICA-MYTH",
+      "title": "Encyclopaedia Britannica — Mythology and historical reference articles",
+      "url": "https://www.britannica.com/topic/mythology",
+      "use": "Punto de partida general; no reemplaza fuentes comunitarias o académicas específicas."
+    },
+    {
+      "id": "SRC-SMITHSONIAN-NMAI",
+      "title": "National Museum of the American Indian",
+      "url": "https://americanindian.si.edu/",
+      "use": "Contexto indígena y recursos educativos; verificar cada afirmación con la página concreta usada."
+    },
+    {
+      "id": "SRC-MET-COLLECTION",
+      "title": "The Metropolitan Museum of Art — Collection",
+      "url": "https://www.metmuseum.org/art/collection",
+      "use": "Objetos históricos y contexto material; útil para distinguir artefactos históricos de armas mágicas ficticias."
+    },
+    {
+      "id": "SRC-BRITISH-MUSEUM",
+      "title": "The British Museum — Collection",
+      "url": "https://www.britishmuseum.org/collection",
+      "use": "Contexto material y cultural de objetos; no asumir que un objeto de colección prueba un relato sobrenatural."
+    },
+    {
+      "id": "SRC-POPOL-VUH",
+      "title": "Popol Vuh — referencia bibliográfica y versiones de traducción",
+      "url": "https://www.worldhistory.org/Popol_Vuh/",
+      "use": "Introducción secundaria al texto k’iche’; cotejar con ediciones críticas para uso académico."
+    },
+    {
+      "id": "SRC-UNESCO-LIVING",
+      "title": "UNESCO — Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/",
+      "use": "Contexto sobre tradiciones vivas; buscar entradas específicas antes de atribuir una práctica a toda una cultura."
+    }
+  ],
+  "qualityGates": [
+    "Toda entidad debe tener ID estable, nombre, tipo, tradición, región, estado y resumen.",
+    "Los poderes, costes, rarezas y reglas de combate inventados se etiquetan como adaptación creativa u original.",
+    "Las relaciones apuntan a IDs existentes; no duplicar biografías dentro de cartas.",
+    "Una entidad de tradición viva no se presenta automáticamente como subordinada del protagonista.",
+    "Antes de publicar, sustituir las fuentes generales por fuentes específicas por entrada y documentar variantes regionales."
+  ]
+}
