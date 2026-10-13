@@ -191,3 +191,16 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Incidencia detectada y corregida durante CI:** una primera ejecución reveló IDs de claim duplicados/mal asignados en los campos de recuperación; se corrigieron en los tres paquetes antes de la siguiente validación.
 - **Continuidad:** una afirmación que mezclaba el papel histórico de Astrea con su perfil de anime se dividió en dos claims independientes (`DMR-006-CLM-002` en `CONT-AR` y `DMR-006-CLM-005` en `CONT-ANIME`); el test de navegador había detectado la mezcla y ahora el modelo conserva una continuidad por afirmación.
 - **Estado final de CI:** pendiente de confirmar en la ejecución correspondiente al último commit; no declarar la misión global completa por este lote.
+
+
+## DANMACHI-RESEARCH-011 · Ancla cronológica oficial y límite bibliográfico de la saga principal
+- Fecha de consulta: 2026-10-13
+- Estado: source_checked para cronología oficial y metadatos editoriales; el cotejo capítulo por capítulo del volumen 21 sigue pendiente.
+- Paquete de evidencia: se añadió una sección con tres afirmaciones atómicas al [mapa narrativo de volúmenes principales](research/inbox/BATCH-DM-008-main-story-volume-map.md).
+- Fuentes: cronología oficial de DanMachi; fichas oficiales GA Bunko de los volúmenes 21 y 22.
+- Hallazgo cronológico: *Astrea Record* se presenta como situado siete años antes y dentro de la Era Oscura de Orario; es una ancla relativa, no una cronología absoluta de toda la historia antigua.
+- Hallazgo bibliográfico: volumen 21 publicado aproximadamente el 2025-10-15; volumen 22 anunciado para 2026-12-15, fecha futura respecto de la consulta.
+- Afirmaciones: DMR-011-CLM-001 a DMR-011-CLM-003.
+- Fuentes registradas: DMR-011-SRC-001 a DMR-011-SRC-003.
+- Resultado: ERA-10 ya puede indicar que el volumen 21 es el último publicado comprobado y que el final canónico sigue pendiente; no se declara finalizada la serie.
+- Pendientes: verificar el lanzamiento efectivo del volumen 22 después de la fecha anunciada y cotejar el volumen 21 por capítulo/escena.
