@@ -2733,6 +2733,127 @@
         "transformación"
       ],
       "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "ROM-MARS",
+      "name": "Marte",
+      "kind": "deity",
+      "tradition": "Romana",
+      "region": "Roma antigua y Mediterráneo",
+      "status": "mythology_reference",
+      "summary": "Dios romano de la guerra y protector de la comunidad, con asociaciones agrícolas en cultos antiguos; no es una simple copia de Ares griego.",
+      "tags": [
+        "romana",
+        "guerra",
+        "protección",
+        "agricultura"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "Comparar cultos y contextos romanos propios antes de equipararlo con Ares."
+    },
+    {
+      "id": "ROM-MINERVA",
+      "name": "Minerva",
+      "kind": "deity",
+      "tradition": "Romana",
+      "region": "Roma antigua y Mediterráneo",
+      "status": "mythology_reference",
+      "summary": "Diosa romana asociada con sabiduría, oficios y estrategia; su identificación con Atenea se desarrolló mediante procesos de equivalencia cultural.",
+      "tags": [
+        "romana",
+        "sabiduría",
+        "oficios",
+        "estrategia"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "La equivalencia Minerva-Atenea es histórica y cultural; sus cultos romanos no se reducen a una traducción exacta del panteón griego."
+    },
+    {
+      "id": "CHN-NEZHA",
+      "name": "Nezha",
+      "kind": "deity",
+      "tradition": "China / religión popular y literatura",
+      "region": "China",
+      "status": "mythology_reference",
+      "summary": "Figura divina y heroica de la religión popular china y de relatos literarios, especialmente conocida por su juventud, armas extraordinarias y conflictos con seres celestes; las versiones varían.",
+      "tags": [
+        "china",
+        "héroe divino",
+        "literatura",
+        "armas"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "Distinguir tradiciones religiosas, novelas clásicas y adaptaciones modernas; no tratar todas las armas populares de Nezha como un único inventario antiguo."
+    },
+    {
+      "id": "CHN-SUNWUKONG",
+      "name": "Sun Wukong",
+      "kind": "culture_hero",
+      "tradition": "China / literatura clásica",
+      "region": "China",
+      "status": "mythology_reference",
+      "summary": "Rey Mono, protagonista de Viaje al Oeste; la novela combina motivos religiosos, folclóricos y literarios. Sus transformaciones y bastón mágico pertenecen al relato literario.",
+      "tags": [
+        "china",
+        "Rey Mono",
+        "transformación",
+        "literatura"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-JOURNEY-WEST"
+      ],
+      "sourceNotes": "Es una figura literaria de la novela clásica; separar el texto y sus versiones de las adaptaciones audiovisuales modernas."
+    },
+    {
+      "id": "AFR-AKAN-ANANSI",
+      "name": "Anansi",
+      "kind": "folklore_entity",
+      "tradition": "Akan / África occidental y diásporas",
+      "region": "Ghana y tradiciones de la diáspora africana",
+      "status": "mythology_reference",
+      "summary": "Figura araña y embaucador de relatos akan, conocida por historias de ingenio y transmisión de cuentos; las versiones cambian entre comunidades y diásporas.",
+      "tags": [
+        "africana",
+        "akan",
+        "araña",
+        "ingenio",
+        "relato oral"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-ANANSI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Las versiones de Anansi en el Caribe y otras diásporas tienen historias propias; no asumir una forma única o estática."
+    },
+    {
+      "id": "AFR-YOR-OSHUN",
+      "name": "Ọ̀ṣun / Oshun",
+      "kind": "deity",
+      "tradition": "Yoruba / religiones de África occidental y diásporas",
+      "region": "Territorios yoruba, actual Nigeria y Benín; diásporas",
+      "status": "mythology_reference",
+      "summary": "Orisha asociada con el río, la fertilidad, el cuidado y la prosperidad en tradiciones yoruba y afroatlánticas; sus atributos y prácticas devocionales son diversos.",
+      "tags": [
+        "africana",
+        "yoruba",
+        "río",
+        "cuidado",
+        "fertilidad"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-OSUN",
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Tradición religiosa viva: usar fuentes comunitarias y respetar las diferencias entre prácticas yoruba y tradiciones afroatlánticas."
     }
   ],
   "starterDecks": [
@@ -2890,6 +3011,24 @@
       "title": "Encyclopaedia Britannica — King Arthur",
       "url": "https://www.britannica.com/topic/King-Arthur",
       "use": "Referencia secundaria sobre el desarrollo literario de la materia artúrica."
+    },
+    {
+      "id": "SRC-BRITANNICA-JOURNEY-WEST",
+      "title": "Encyclopaedia Britannica — Journey to the West",
+      "url": "https://www.britannica.com/topic/Journey-to-the-West",
+      "use": "Contexto bibliográfico para distinguir a Sun Wukong como personaje literario clásico."
+    },
+    {
+      "id": "SRC-BRITANNICA-ANANSI",
+      "title": "Encyclopaedia Britannica — Anansi",
+      "url": "https://www.britannica.com/topic/Ananse",
+      "use": "Referencia secundaria sobre el personaje de relatos akan y sus variantes."
+    },
+    {
+      "id": "SRC-UNESCO-OSUN",
+      "title": "UNESCO World Heritage Centre — Osun-Osogbo Sacred Grove",
+      "url": "https://whc.unesco.org/en/list/1118/",
+      "use": "Contexto sobre el sitio sagrado vinculado a Osun; no sustituye fuentes comunitarias específicas sobre la orisha."
     }
   ],
   "qualityGates": [
