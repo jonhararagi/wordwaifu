@@ -25,7 +25,7 @@
     const node = $("#" + id);
     for (const value of [...new Set(values.filter(Boolean))].sort((a,b)=>a.localeCompare(b,"es"))) {
       const option = document.createElement("option");
-      option.value = value; option.textContent = value; node.appendChild(option);
+      option.value = value; option.textContent = id === "mythic-kind" ? (kindLabels[value] || value) : value; node.appendChild(option);
     }
   }
   function visibleEntities() {
