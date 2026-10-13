@@ -3176,6 +3176,308 @@
           }
         ]
       }
+    },
+    {
+      "id": "GRC-HYDRA-LERNAEAN",
+      "name": "Hidra de Lerna",
+      "kind": "mythic_entity",
+      "tradition": "Griega",
+      "region": "Lerna / Argólida en el ciclo heroico griego",
+      "status": "mythology_reference",
+      "summary": "Monstruo acuático de múltiples cabezas cuya regeneración vuelve insuficiente la decapitación simple; uno de los trabajos de Heracles. El número de cabezas y los detalles varían entre relatos.",
+      "creativeHook": "En combate, obliga a resolver el mecanismo de regeneración en vez de repetir ataques; fuego, cooperación y sellado del cuello pueden ser condiciones de una adaptación jugable.",
+      "tags": [
+        "griega",
+        "monstruo",
+        "hidra",
+        "regeneración",
+        "veneno",
+        "heracles",
+        "lily",
+        "épica",
+        "dark"
+      ],
+      "relations": [
+        {
+          "type": "opposed_in_myth",
+          "targetId": "GRC-HERACLES"
+        },
+        {
+          "type": "shares_mythic_cycle",
+          "targetId": "GRC-CERBERUS"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-1911-HYDRA"
+      ],
+      "sourceNotes": "La fuente es una enciclopedia histórica secundaria. Los detalles exactos de cabezas y veneno dependen de la versión; las habilidades jugables se etiquetan como ficción.",
+      "aliases": [
+        "Hidra de Lerna",
+        "Lernaean Hydra"
+      ],
+      "attributes": [
+        "regeneración",
+        "múltiples cabezas",
+        "monstruo",
+        "trabajos de Heracles",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "regeneración",
+        "veneno",
+        "supervivencia",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "baseFigureId": "GRC-HYDRA-LERNAEAN",
+        "identityPresentation": "Monstruo serpentino / variantes de regeneración",
+        "designRule": "Cada forma se define con tres pilares: arma (objeto o arma natural), vestimenta/símbolo y ataque que condensa el mito. Lily, épica y Dark son plantillas creativas de WordWaifu salvo indicación expresa de fuente.",
+        "forms": [
+          {
+            "id": "hydra-lily",
+            "name": "Hidra · Larva",
+            "stage": "Juvenil / latente",
+            "role": "La amenaza aún pequeña que crece si se la combate sin comprenderla.",
+            "weapon": "Mordida y dos cabezas incipientes; la regeneración tarda en activarse.",
+            "outfit": "Escamas húmedas, collar de juncos y barro de Lerna como símbolos de su guarida.",
+            "totalityAttack": "La Primera Cabeza — una mordida venenosa y una cabeza señuelo; la regeneración solo ocurre si no se sella la herida.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "hydra-initial",
+            "name": "Hidra · Inicial",
+            "stage": "Monstruo reconocible",
+            "role": "La regla central del mito: atacar sin método agrava el peligro.",
+            "weapon": "Múltiples cabezas mordedoras y cuello extensible; regeneración condicionada al daño recibido.",
+            "outfit": "Cresta de escamas, restos de juncos y marcas de barro del pantano.",
+            "totalityAttack": "Corte que se Multiplica — cada cuello cortado amenaza con producir nuevas cabezas salvo que se interrumpa la regeneración.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "hydra-epic",
+            "name": "Hidra · Épica",
+            "stage": "Manifestación plena",
+            "role": "La totalidad del trabajo: regeneración, cooperación heroica y superación mediante estrategia.",
+            "weapon": "Cabezas múltiples coordinadas y veneno; una cabeza central puede ser tratada como núcleo en esta adaptación.",
+            "outfit": "Armadura orgánica de escamas y corona de cabezas; diseño original inspirado en la iconografía del monstruo.",
+            "totalityAttack": "Las Nueve Mareas de Lerna — asedio multidireccional de cabezas; solo se vence coordinando el sellado de las heridas y el núcleo.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "hydra-dark",
+            "name": "Hidra · Dark",
+            "stage": "Cataclismo / regeneración descontrolada",
+            "role": "El miedo a un mal que se reproduce con cada intento de destruirlo; mecánica original.",
+            "weapon": "Regeneración acelerada y veneno que contamina el terreno; la criatura pierde control del crecimiento.",
+            "outfit": "Escamas ennegrecidas, cabezas espectrales y barro tóxico como diseño ficticio.",
+            "totalityAttack": "Pantano sin Fin — las heridas se multiplican en una zona peligrosa que amenaza también a la Hidra y a sus aliados.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRC-CERBERUS",
+      "name": "Cerbero",
+      "kind": "mythic_entity",
+      "tradition": "Griega",
+      "region": "Inframundo griego",
+      "status": "mythology_reference",
+      "summary": "Perro guardián del inframundo que impide escapar a los muertos. Su número de cabezas y apariencia cambian según fuentes y representaciones.",
+      "creativeHook": "No es solo una bestia de daño: su papel de guardián permite crear poderes de frontera, vigilancia, contención y custodia de portales.",
+      "tags": [
+        "griega",
+        "monstruo",
+        "inframundo",
+        "guardián",
+        "tres cabezas",
+        "heracles"
+      ],
+      "relations": [
+        {
+          "type": "captured_in_myth_by",
+          "targetId": "GRC-HERACLES"
+        },
+        {
+          "type": "shares_mythic_cycle",
+          "targetId": "GRC-HYDRA-LERNAEAN"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-1911-CERBERUS"
+      ],
+      "sourceNotes": "La tradición tiene representaciones variables (incluidas diferencias en el número de cabezas). La estética exacta y las mecánicas de combate son adaptación creativa.",
+      "aliases": [
+        "Kerberos",
+        "Can Cerbero"
+      ],
+      "attributes": [
+        "guardián",
+        "inframundo",
+        "límite",
+        "custodia",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "inframundo",
+        "vigilancia",
+        "frontera",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "baseFigureId": "GRC-CERBERUS",
+        "identityPresentation": "Bestia guardiana / custodio del umbral",
+        "designRule": "Cada forma se define con tres pilares: arma (objeto o arma natural), vestimenta/símbolo y ataque que condensa el mito. Lily, épica y Dark son plantillas creativas de WordWaifu salvo indicación expresa de fuente.",
+        "forms": [
+          {
+            "id": "cerberus-lily",
+            "name": "Cerbero · Cachorro",
+            "stage": "Juvenil / latente",
+            "role": "El guardián que aprende qué debe proteger.",
+            "weapon": "Mordida, olfato sobrenatural y ladrido de alarma; tres cabezas como diseño común, no único.",
+            "outfit": "Collar de hierro y pequeñas cadenas como símbolo de su deber de guardia.",
+            "totalityAttack": "Ladrido del Umbral — revela a quien intenta cruzar una frontera prohibida y lo obliga a detenerse por un instante.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "cerberus-initial",
+            "name": "Cerbero · Inicial",
+            "stage": "Guardián reconocible",
+            "role": "Su función mítica de permitir la entrada y frustrar la salida.",
+            "weapon": "Mordida coordinada de sus cabezas y cuerpo capaz de bloquear una salida.",
+            "outfit": "Collar oscuro, cadenas y pelaje de ceniza; representación creativa del guardián del inframundo.",
+            "totalityAttack": "Nadie Sale del Hades — cierre de una ruta de escape y embestida contra quien intenta cruzarla sin permiso.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "cerberus-epic",
+            "name": "Cerbero · Épico",
+            "stage": "Custodio pleno",
+            "role": "La totalidad del guardián: límite entre mundos, custodia y prueba heroica de Heracles.",
+            "weapon": "Tres ataques coordinados, olfato para rastrear almas y mordida de contención.",
+            "outfit": "Arnés de hierro infernal, cadenas ceremoniales y marcas de la puerta del inframundo.",
+            "totalityAttack": "Las Tres Fauces del Umbral — cada cabeza controla una función: rastrear, contener y castigar la fuga; sus límites se pueden explotar mediante negociación o permiso.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "cerberus-dark",
+            "name": "Cerbero · Dark",
+            "stage": "Guardián desatado",
+            "role": "El deber de custodiar convertido en prisión y violencia sin juicio.",
+            "weapon": "Fauces que atacan toda presencia cercana; el instinto de custodia se vuelve indiscriminado.",
+            "outfit": "Cadenas rotas, humo negro y ojos incandescentes como diseño original.",
+            "totalityAttack": "La Puerta que Devora — cierra una zona y ataca a cualquiera que cruce; el precio es que tampoco distingue aliados ni inocentes.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRC-MINOTAUR",
+      "name": "Minotauro",
+      "kind": "mythic_entity",
+      "tradition": "Griega / cretense en la tradición literaria",
+      "region": "Creta y el Laberinto",
+      "status": "mythology_reference",
+      "summary": "Monstruo con cuerpo humano y cabeza de toro, encerrado en el laberinto de Creta y vencido por Teseo en el relato más conocido.",
+      "creativeHook": "Diseño centrado en persecución, fuerza, orientación y dominio del laberinto; el monstruo puede ser peligroso por controlar el espacio, no solo por golpear fuerte.",
+      "tags": [
+        "griega",
+        "cretense",
+        "monstruo",
+        "toro",
+        "laberinto",
+        "teseo"
+      ],
+      "relations": [
+        {
+          "type": "defeated_in_myth_by",
+          "targetId": "GRC-ACHILLES"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-1911-MINOTAUR"
+      ],
+      "sourceNotes": "La fuente resume una versión literaria conocida y también recoge interpretaciones posteriores especulativas; estas no se presentan como hechos probados. Las formas alternativas son creación de WordWaifu.",
+      "aliases": [
+        "Minotauro de Creta",
+        "Asterión (nombre en algunas tradiciones)"
+      ],
+      "attributes": [
+        "laberinto",
+        "fuerza",
+        "toro",
+        "encierro",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "persecución",
+        "territorio",
+        "fuerza",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "baseFigureId": "GRC-MINOTAUR",
+        "identityPresentation": "Monstruo taurino / señor del laberinto",
+        "designRule": "Cada forma se define con tres pilares: arma (objeto o arma natural), vestimenta/símbolo y ataque que condensa el mito. Lily, épica y Dark son plantillas creativas de WordWaifu salvo indicación expresa de fuente.",
+        "forms": [
+          {
+            "id": "minotaur-lily",
+            "name": "Minotauro · Larva",
+            "stage": "Juvenil / latente",
+            "role": "El monstruo criado en encierro y la amenaza que aún está creciendo.",
+            "weapon": "Cuernos cortos, embestida limitada y olfato para rastrear intrusos.",
+            "outfit": "Capa de lino áspero y cuerda de Ariadna como símbolo narrativo, no indumentaria antigua confirmada.",
+            "totalityAttack": "Primer Giro del Laberinto — embiste por un corredor y fuerza al rival a elegir entre retroceder o quedar acorralado.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "minotaur-initial",
+            "name": "Minotauro · Inicial",
+            "stage": "Monstruo reconocible",
+            "role": "Fuerza monstruosa ligada al encierro y al espacio cerrado.",
+            "weapon": "Cuernos, embestida y fuerza para derribar muros débiles.",
+            "outfit": "Taparrabo de cuero, brazales de bronce y polvo del laberinto.",
+            "totalityAttack": "La Carga de Asterión — carrera recta devastadora que se vuelve predecible si el rival conoce el terreno.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "minotaur-epic",
+            "name": "Minotauro · Épico",
+            "stage": "Señor del laberinto",
+            "role": "La totalidad del mito: monstruo, encierro, laberinto y victoria de la astucia sobre la fuerza.",
+            "weapon": "Cuernos reforzados, oído para localizar pasos y control de rutas dentro de su territorio.",
+            "outfit": "Armadura de bronce cretense de diseño original, máscara taurina y motivos geométricos del laberinto.",
+            "totalityAttack": "El Laberinto se Cierra — altera las rutas y fuerza al enemigo a enfrentarse al monstruo; la salida sigue existiendo si se resuelve la ruta o el hilo conductor.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "minotaur-dark",
+            "name": "Minotauro · Dark",
+            "stage": "Horror del encierro",
+            "role": "El coste trágico de ser reducido a monstruo y prisionero; interpretación original.",
+            "weapon": "Cuernos negros y embestidas que rompen estructuras, pero desorientan al propio monstruo.",
+            "outfit": "Máscara quebrada, cadenas y muros móviles como elementos de diseño ficticio.",
+            "totalityAttack": "Ariadna no Encuentra la Salida — el campo se convierte en un laberinto opresivo; cada uso reduce también la orientación del Minotauro.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          }
+        ]
+      }
     }
   ],
   "starterDecks": [
@@ -3381,6 +3683,24 @@
       "title": "Fundación Tapé Avirú — «Primer sondeo sobre personajes mitológicos del Paraguay»",
       "url": "https://fundaciontapeaviru.org.py/informe-de-sondeo/",
       "use": "Sondeo comunitario realizado en 2020 sobre conocimiento actual de figuras folclóricas paraguayas, incluido Pombero y Jasy Jateré. Sirve para documentar presencia cultural contemporánea, no para fijar una versión antigua única."
+    },
+    {
+      "id": "SRC-BRITANNICA-1911-HYDRA",
+      "title": "Encyclopaedia Britannica (1911) — Hydra (mythology), transcripción histórica",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hydra_%28mythology%29",
+      "use": "Referencia histórica secundaria para el ciclo de la Hidra de Lerna, las cabezas que se regeneran y el trabajo de Heracles; no es una fuente primaria ni representa todas las variantes."
+    },
+    {
+      "id": "SRC-BRITANNICA-1911-CERBERUS",
+      "title": "Encyclopaedia Britannica (1911) — Cerberus, transcripción histórica",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Cerberus",
+      "use": "Referencia histórica secundaria sobre Cerbero como guardián del inframundo y sus representaciones variables; no debe tomarse como descripción única de todas las fuentes antiguas."
+    },
+    {
+      "id": "SRC-BRITANNICA-1911-MINOTAUR",
+      "title": "Encyclopaedia Britannica (1911) — Minotaur, transcripción histórica",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Minotaur",
+      "use": "Referencia histórica secundaria sobre el Minotauro, el laberinto y el relato de Teseo; las interpretaciones especulativas de la página se tratan como tales."
     }
   ],
   "qualityGates": [
