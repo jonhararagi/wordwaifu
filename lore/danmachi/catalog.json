@@ -597,6 +597,20 @@
       ],
       "status": "source_checked_partial",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-GREAT-QUESTS-001",
+      "path": "events/candidates/EVT-DM-GREAT-QUESTS-001.md",
+      "type": "event",
+      "tags": [
+        "Zeus Familia",
+        "Hera Familia",
+        "Behemoth",
+        "Leviathan",
+        "Three Great Quests"
+      ],
+      "status": "provisional_reference_checked",
+      "priority": "high"
     }
   ],
   "reservedIds": [
