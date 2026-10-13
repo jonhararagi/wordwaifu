@@ -3001,6 +3001,38 @@
   $$(".command-chips button").forEach((button) => button.addEventListener("click", () => executeCommand(button.dataset.command)));
   $("#global-search").addEventListener("keydown", (event) => { if (event.key === "Escape") { event.target.value = ""; renderDirectory(); } });
 
+  function publishMythicProjectState() {
+    document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposals-loaded", {
+      detail: { proposals: Array.isArray(state.mythicProposals) ? state.mythicProposals : [],
+        stories: Array.isArray(state.stories) ? state.stories : [] }
+    }));
+  }
+
+  document.addEventListener("wordwaifu:mythic-proposal-save", async (event) => {
+    const proposal = event.detail && event.detail.proposal;
+    if (!proposal || typeof proposal.id !== "string" || !proposal.id || typeof proposal.title !== "string" || !proposal.title.trim()) return;
+    if (!Array.isArray(state.mythicProposals)) state.mythicProposals = [];
+    const previous = state.mythicProposals.findIndex(item => item && item.id === proposal.id);
+    if (previous >= 0) state.mythicProposals[previous] = structuredClone(proposal);
+    else state.mythicProposals.push(structuredClone(proposal));
+    const saved = await saveProject();
+    $("#mythic-generator-status").textContent = saved
+      ? "Propuesta guardada en el proyecto. Se incluirá al exportar JSON."
+      : "No se confirmó el guardado; revisá el estado de persistencia antes de cerrar.";
+    publishMythicProjectState();
+  });
+
+  document.addEventListener("wordwaifu:mythic-proposal-delete", async (event) => {
+    const id = event.detail && event.detail.id;
+    if (typeof id !== "string" || !Array.isArray(state.mythicProposals)) return;
+    state.mythicProposals = state.mythicProposals.filter(item => item && item.id !== id);
+    const saved = await saveProject();
+    $("#mythic-generator-status").textContent = saved
+      ? "Propuesta eliminada del proyecto."
+      : "No se confirmó la eliminación; revisá el estado de persistencia.";
+    publishMythicProjectState();
+  });
+
   async function initializeApplication() {
     const appShell = document.querySelector(".app-shell");
     if (appShell) appShell.inert = true;
@@ -3033,9 +3065,11 @@
             : "Proyecto cargado desde el respaldo local";
       }
       render();
+      publishMythicProjectState();
     } catch (error) {
       state = ensureRelationshipStore(loadProject());
       render();
+      publishMythicProjectState();
       const saved = await saveProject();
       if (!saved) $("#save-status").textContent = "Modo de recuperación · exportá una copia: " + error.message;
     } finally {
