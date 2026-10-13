@@ -446,6 +446,40 @@ El volumen 21 se incorpora como volumen principal publicado al corte del 12 de o
 - `confidence_note`: La relación entre el regreso de Bell y la noticia está en la sinopsis editorial; no se infiere un orden completo ni motivaciones privadas de la novela.
 
 
+### DMR-008-CLM-025 · El capítulo inicial confirma el anuncio del fracaso de la expedición en el piso 60
+- `claim_id`: DMR-008-CLM-025
+- `claim`: En la muestra pública del capítulo «一章　アイズＳＯＳ», la noticia inicial anuncia que la expedición fracasó y que la fuerza aliada fue aniquilada en el piso 60; Bell pregunta urgentemente por Ais, Finn y los demás.
+- `character_ids`: [DM-CHAR-BELL, DM-CHAR-AIS]
+- `aspect`: apertura de capítulo, expedición, respuesta de Bell, continuidad
+- `era_or_interval`: Historia principal, volumen 21, capítulo «一章　アイズＳＯＳ»; muestra pública consultada el 2026-10-13
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-004
+- `source_title`: GA Bunko / SB Creative · muestra pública oficial del volumen 21
+- `source_type`: primary_text_excerpt
+- `source_locator`: Tabla de contenidos y apertura visible del capítulo «一章　アイズＳＯＳ» en el lector público; sin número de página impreso visible
+- `source_url`: https://r.voyager.co.jp/epm/e1_535248_22082025135526/
+- `evidence_type`: primary_excerpt_paraphrase
+- `verification_status`: source_checked_excerpt_only
+- `spoiler_level`: major
+- `confidence_note`: Cotejado directamente en la muestra pública del texto. Solo verifica el fragmento visible, no el capítulo completo ni todo el volumen.
+
+### DMR-008-CLM-026 · El prólogo presenta a Ais en una escena de pesadilla oscura
+- `claim_id`: DMR-008-CLM-026
+- `claim`: La muestra pública del prólogo «プロローグ　セカイ迷作劇場» presenta a Ais en una oscuridad desorientadora, con imágenes violentas y una presencia amenazante asociada a una «jaula de hielo».
+- `character_ids`: [DM-CHAR-AIS]
+- `aspect`: prólogo, atmósfera, Ais, continuidad
+- `era_or_interval`: Historia principal, volumen 21, prólogo «プロローグ　セカイ迷作劇場»; muestra pública consultada el 2026-10-13
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-004
+- `source_title`: GA Bunko / SB Creative · muestra pública oficial del volumen 21
+- `source_type`: primary_text_excerpt
+- `source_locator`: Prólogo visible en el lector público; sin número de página impreso visible
+- `source_url`: https://r.voyager.co.jp/epm/e1_535248_22082025135526/
+- `evidence_type`: primary_excerpt_paraphrase
+- `verification_status`: source_checked_excerpt_only
+- `spoiler_level`: major
+- `confidence_note`: Paráfrasis limitada a las páginas de muestra observadas. No fija la interpretación completa de la escena ni demuestra su cronología relativa más allá de su ubicación como prólogo.
+
 ## Pendiente para considerar completa la historia
 
 1. Cotejar título, edición, capítulos y localizadores exactos en la novela principal.
