@@ -228,6 +228,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 
 ## DANMACHI-RESEARCH-013 · Integración de Familias en búsqueda global
 - Estado: IMPLEMENTADO; confirmación completa de CI del commit más reciente pendiente.
+- Regresión de navegador encontrada en CI: la prueba asumía que navegar al catálogo limpiaba filtros previos. Se corrigió la precondición de la prueba para restablecer búsqueda, tipo, tradición, estado y orden antes de exigir 75/75; no se relajó la aserción. Ver `tests/browser_smoke.cjs` y workflow 38477415589 (fallo anterior en la línea 2620).
 - [x] Añadir los paquetes 010–012 a la carga de `src/lore-corpus.js`.
 - [x] Registrar las fuentes oficiales nuevas en el directorio de fuentes en línea.
 - [x] Convertir 19 afirmaciones de Familia a campos legibles por el parser de recuperación.
