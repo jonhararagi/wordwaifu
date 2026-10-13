@@ -250,5 +250,6 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 ## DANMACHI-RESEARCH-016 · Ancla histórica de las Tres Grandes Misiones
 - [x] Verificar en una referencia oficial de franquicia que Zeus Familia y Hera Familia son la respuesta conjunta para las derrotas de Behemoth y Leviathan.
 - [x] Registrar fuente y afirmación recuperable DMR-008-CLM-027 con continuidad auxiliar explícita.
+- [x] Crear el registro de evento `EVT-DM-GREAT-QUESTS-001`, enlazarlo al catálogo y a los índices de eventos/cronología sin declararlo cronológicamente completo.
 - [ ] Localizar en novela principal o relato oficial narrativo el periodo, las expediciones, roster y caída de Zeus/Hera Familia.
 - [ ] Verificar qué se afirma exactamente sobre la misión del Dragón Negro, sus bajas, supervivientes y consecuencias; no extrapolar desde la respuesta del cuestionario.
