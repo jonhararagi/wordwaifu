@@ -42,6 +42,9 @@
     if (input.relationships !== undefined && !Array.isArray(input.relationships)) {
       errors.push("relationships debe ser una lista.");
     }
+    if (input.mythicProposals !== undefined && !Array.isArray(input.mythicProposals)) {
+      errors.push("mythicProposals debe ser una lista.");
+    }
     if (errors.length) return { valid: false, errors, project: null };
 
     const hasExplicitRelationships = Array.isArray(input.relationships);
@@ -54,6 +57,7 @@
       organizations: Array.isArray(input.organizations) ? input.organizations.map((item) => isRecord(item) ? { ...item } : item) : [],
       relationships: hasExplicitRelationships ? input.relationships.map((item) => isRecord(item) ? { ...item } : item) : [],
       stories: Array.isArray(input.stories) ? input.stories.map((item) => isRecord(item) ? { ...item } : item) : [],
+      mythicProposals: Array.isArray(input.mythicProposals) ? input.mythicProposals.map((item) => isRecord(item) ? { ...item } : item) : [],
       settings: isRecord(input.settings) ? { ...input.settings } : { time: "now" }
     };
 
@@ -85,7 +89,8 @@
       ["events", project.events],
       ["organizations", project.organizations],
       ["relationships", project.relationships],
-      ["stories", project.stories]
+      ["stories", project.stories],
+      ["mythicProposals", project.mythicProposals]
     ];
     const ids = new Set();
     const byGroup = {};
@@ -104,11 +109,27 @@
           ids.add(item.id);
           byGroup[groupName].add(item.id);
         }
-        if (!isNonEmptyString(item.name) && groupName !== "events") {
+        if (!isNonEmptyString(item.name) && groupName !== "events" && groupName !== "mythicProposals") {
           errors.push(itemPath + ".name debe ser un texto no vacío.");
         }
       });
     }
+    project.mythicProposals.forEach((proposal, index) => {
+      const path = "mythicProposals[" + index + "]";
+      if (!isNonEmptyString(proposal.title)) errors.push(path + ".title debe ser un texto no vacío.");
+      for (const key of ["concept", "ability", "activation", "cost", "risk", "progression", "weakness"]) {
+        if (proposal[key] === undefined || proposal[key] === null) proposal[key] = "";
+        if (typeof proposal[key] !== "string") errors.push(path + "." + key + " debe ser texto.");
+      }
+      hasStringArray(proposal, "modes", path, errors);
+      hasStringArray(proposal, "entityIds", path, errors);
+      if (proposal.storyId !== undefined && proposal.storyId !== null &&
+          (!isNonEmptyString(proposal.storyId) || !project.stories.some(story => isRecord(story) && story.id === proposal.storyId))) {
+        errors.push(path + ".storyId apunta a una historia inexistente.");
+      }
+      if (proposal.updatedAt !== undefined && typeof proposal.updatedAt !== "string") errors.push(path + ".updatedAt debe ser texto.");
+    });
+
     if (errors.length) return { valid: false, errors, project: null };
 
     const locationIds = byGroup.locations;
