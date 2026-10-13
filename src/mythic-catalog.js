@@ -104,6 +104,7 @@
       savedStories.forEach(story=>storySelect.add(new Option(story.title||story.name||story.id,story.id)));
       if(savedStories.some(story=>story.id===previous))storySelect.value=previous;
       renderSavedProposals();
+      if (selectedId && catalog) openEntity(selectedId, false);
     });
     renderSavedProposals();
     if (window.WordWaifuMythicProjectState) document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposals-loaded", {detail: window.WordWaifuMythicProjectState}));
