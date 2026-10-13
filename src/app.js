@@ -1215,7 +1215,7 @@
   const wordAlternatives = [
     { words: ["era", "fue", "ser", "estaba", "estar"], synonyms: ["resultaba", "parecía", "representaba", "se encontraba", "existía"], antonyms: ["no era", "dejó de ser", "se volvió distinto", "desapareció"], note: "«Ser/era» no tiene un antónimo universal: elegí según el sentido de la oración." },
     { words: ["salió", "salio", "salir", "sale", "salieron"], synonyms: ["partió", "se marchó", "abandonó el lugar", "emergió", "apareció", "se dirigió hacia"], antonyms: ["entró", "regresó", "permaneció", "se quedó"], note: "«Emergió» funciona para salir de algo; «partió» para irse." },
-    { words: ["grow", "grew", "grown", "crecer", "creció", "crecio", "crece"], synonyms: ["aumentar", "desarrollarse", "expandirse", "madurar", "florecer", "prosperar"], antonyms: ["disminuir", "encogerse", "marchitarse", "estancarse", "decaer"], note: "Incluye formas en inglés y español; elegí una alternativa del mismo idioma que tu frase." },
+    { words: ["grow", "grew", "grown", "crecer", "creció", "crecio", "crece"], synonyms: ["aumentar", "desarrollarse", "expandirse", "madurar", "florecer", "prosperar"], antonyms: ["disminuir", "encogerse", "marchitarse", "estancarse", "decaer"], englishSynonyms: ["increase", "expand", "develop", "flourish", "thrive", "mature"], englishAntonyms: ["shrink", "decline", "diminish", "stagnate", "wither", "decrease"], note: "Incluye alternativas en inglés y español; elegí una opción del mismo idioma y sentido que tu frase." },
     { words: ["dijo", "decir", "dice", "dijo"], synonyms: ["afirmó", "respondió", "declaró", "murmuró", "susurró", "replicó", "confesó", "protestó"], antonyms: ["calló", "guardó silencio", "se abstuvo de responder"], note: "El verbo de diálogo debe reflejar cómo habla el personaje, no solo reemplazar «dijo»." },
     { words: ["miró", "miro", "mirar", "observó", "observo"], synonyms: ["contempló", "examinó", "escudriñó", "atisbó", "fijó la vista", "echó un vistazo"], antonyms: ["apartó la mirada", "ignoró", "evitó mirar"], note: "«Escudriñó» implica atención intensa; «atisbó», una mirada breve o parcial." },
     { words: ["caminó", "camino", "caminar"], synonyms: ["avanzó", "anduvo", "deambuló", "recorrió", "se encaminó", "marchó"], antonyms: ["se detuvo", "se quedó quieto", "retrocedió"], note: "Elegí según ritmo, dirección e intención." },
@@ -1321,7 +1321,7 @@
       if (!entry) {
         const empty = document.createElement("p"); empty.className = "field-help"; empty.textContent = "Todavía no hay una entrada local para «" + query + "». Probá una forma base o una palabra cercana. El diccionario se puede ampliar."; wordResults.appendChild(empty); return;
       }
-      [["Sinónimos", entry.synonyms], ["Antónimos y contrastes", entry.antonyms]].forEach(([heading, words]) => {
+      const isEnglish = ["grow", "grew", "grown"].includes(normalized);\n      [["Sinónimos", isEnglish && entry.englishSynonyms ? entry.englishSynonyms : entry.synonyms], ["Antónimos y contrastes", isEnglish && entry.englishAntonyms ? entry.englishAntonyms : entry.antonyms]].forEach(([heading, words]) => {
         const group = document.createElement("div"); group.className = "story-word-group";
         const title = document.createElement("h4"); title.textContent = heading; group.appendChild(title);
         const list = document.createElement("div"); list.className = "power-generator-controls";
