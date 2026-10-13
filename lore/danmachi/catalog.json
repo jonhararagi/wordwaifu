@@ -1,0 +1,1272 @@
+{
+  "schemaVersion": 2,
+  "universeId": "danmachi",
+  "title": "DanMachi Lore PoC",
+  "status": "provisional_structure_with_unverified_lore",
+  "note": "Catalog is a navigation and dedup aid. Records in draft/provisional state must not be used as decisive canon evidence. reservedIds are candidates not yet created as files.",
+  "records": [
+    {
+      "id": "DM-CANON-INDEX-001",
+      "path": "canon/00-indice-canon.md",
+      "type": "index",
+      "tags": [
+        "index",
+        "canon"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "DM-WORLD-001",
+      "path": "canon/01-mundo-orario.md",
+      "type": "setting",
+      "tags": [
+        "Orario",
+        "world",
+        "city"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-FALNA-001",
+      "path": "canon/02-falna-familias.md",
+      "type": "world_rule",
+      "tags": [
+        "Falna",
+        "Familia",
+        "deities"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-GUILD-001",
+      "path": "canon/03-dungeon-y-guild.md",
+      "type": "institution_and_location",
+      "tags": [
+        "Dungeon",
+        "Guild",
+        "registration"
+      ],
+      "status": "draft",
+      "priority": "critical"
+    },
+    {
+      "id": "DM-ADVENTURERS-001",
+      "path": "canon/04-aventureros-y-progresion.md",
+      "type": "world_rule",
+      "tags": [
+        "adventurers",
+        "status",
+        "levels"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-MONSTERS-001",
+      "path": "canon/05-monstruos-y-piedras-magicas.md",
+      "type": "world_rule",
+      "tags": [
+        "monsters",
+        "magic stones",
+        "Dungeon"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-CHAR-HESTIA",
+      "path": "characters/hestia.md",
+      "type": "character",
+      "tags": [
+        "Hestia",
+        "timeline"
+      ],
+      "status": "draft",
+      "priority": "critical"
+    },
+    {
+      "id": "DM-CHAR-LOKI",
+      "path": "characters/loki.md",
+      "type": "character",
+      "tags": [
+        "Loki",
+        "Familia Loki"
+      ],
+      "status": "draft",
+      "priority": "high"
+    },
+    {
+      "id": "DM-CHAR-EINA",
+      "path": "characters/eina-tulle.md",
+      "type": "character",
+      "tags": [
+        "Eina Tulle",
+        "Eina",
+        "Guild"
+      ],
+      "status": "draft",
+      "priority": "critical"
+    },
+    {
+      "id": "DM-CHAR-BELL",
+      "path": "characters/bell-cranel.md",
+      "type": "character",
+      "tags": [
+        "Bell Cranel",
+        "Bell",
+        "identity"
+      ],
+      "status": "draft",
+      "priority": "high"
+    },
+    {
+      "id": "DM-CHAR-AIS",
+      "path": "characters/ais-wallenstein.md",
+      "type": "character",
+      "tags": [
+        "Ais Wallenstein",
+        "Ais",
+        "Familia Loki"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-CHAR-LOKI-LEADERS",
+      "path": "characters/finn-riveria-gareth.md",
+      "type": "character_group",
+      "tags": [
+        "Finn",
+        "Riveria",
+        "Gareth"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-FAM-HESTIA",
+      "path": "familias/hestia-familia.md",
+      "type": "familia",
+      "tags": [
+        "Hestia",
+        "Bell"
+      ],
+      "status": "draft",
+      "priority": "high"
+    },
+    {
+      "id": "DM-FAM-LOKI",
+      "path": "familias/loki-familia.md",
+      "type": "familia",
+      "tags": [
+        "Loki",
+        "roster"
+      ],
+      "status": "draft",
+      "priority": "high"
+    },
+    {
+      "id": "DM-TIMELINE-ALERTS",
+      "path": "timeline/01-alertas-cronologia.md",
+      "type": "chronology",
+      "tags": [
+        "timeline",
+        "Hestia",
+        "Bell",
+        "OC"
+      ],
+      "status": "provisional_inference",
+      "priority": "critical"
+    },
+    {
+      "id": "DM-EVENT-CANDIDATES-INDEX",
+      "path": "events/00-indice-candidatos.md",
+      "type": "index",
+      "tags": [
+        "events",
+        "timeline",
+        "AU"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-DESCENT-001",
+      "path": "events/candidates/EVT-DM-DESCENT-001.md",
+      "type": "event",
+      "tags": [
+        "deities",
+        "ancient history"
+      ],
+      "status": "pending_verification",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-ZH-OEBD-001",
+      "path": "events/candidates/EVT-DM-ZH-OEBD-001.md",
+      "type": "event",
+      "tags": [
+        "Zeus Familia",
+        "Hera Familia",
+        "Black Dragon"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-ZH-FALL-001",
+      "path": "events/candidates/EVT-DM-ZH-FALL-001.md",
+      "type": "event",
+      "tags": [
+        "Zeus Familia",
+        "Hera Familia",
+        "history"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-HESTIA-DESCENT-001",
+      "path": "events/candidates/EVT-DM-HESTIA-DESCENT-001.md",
+      "type": "event",
+      "tags": [
+        "Hestia",
+        "timeline"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-BELL-MEETS-HESTIA-001",
+      "path": "events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Hestia",
+        "Familia"
+      ],
+      "status": "pending_verification",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-EINA-ADVISOR-001",
+      "path": "events/candidates/EVT-DM-EINA-ADVISOR-001.md",
+      "type": "event",
+      "tags": [
+        "Eina",
+        "Guild",
+        "Bell"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "AU-EVT-OC-ARRIVAL-001",
+      "path": "events/au/AU-EVT-OC-ARRIVAL-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "arrival",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "critical"
+    },
+    {
+      "id": "AU-EVT-OC-EINA-001",
+      "path": "events/au/AU-EVT-OC-EINA-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "Eina",
+        "Dungeon",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "critical"
+    },
+    {
+      "id": "AU-EVT-OC-LOKI-RECRUITMENT-001",
+      "path": "events/au/AU-EVT-OC-LOKI-RECRUITMENT-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "Loki",
+        "Familia",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "high"
+    },
+    {
+      "id": "AU-EVT-LOKI-NAMES-OC-BELL-001",
+      "path": "events/au/AU-EVT-LOKI-NAMES-OC-BELL-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "Loki",
+        "Bell",
+        "identity",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "critical"
+    },
+    {
+      "id": "CHAR-RYUU-LION",
+      "path": "characters/ryuu-lion.md",
+      "type": "character",
+      "tags": [
+        "Ryu Lion",
+        "Ryuu Lion",
+        "Astrea Record",
+        "multi-era"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ASTREA",
+      "path": "characters/astrea.md",
+      "type": "deity_character",
+      "tags": [
+        "Astrea",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ALISE-LOVELACE",
+      "path": "characters/alise-lovelace.md",
+      "type": "character",
+      "tags": [
+        "Alise Lovelace",
+        "Astrea Familia",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-FINN-DEIMNE",
+      "path": "characters/finn-deimne.md",
+      "type": "character",
+      "tags": [
+        "Finn Deimne",
+        "Loki Familia",
+        "leadership",
+        "command"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-FREYA",
+      "path": "characters/freya.md",
+      "type": "deity_character",
+      "tags": [
+        "Freya",
+        "Freya Familia",
+        "Bell",
+        "motivation",
+        "spoiler"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-OTTAR",
+      "path": "characters/ottar.md",
+      "type": "character",
+      "tags": [
+        "Ottar",
+        "Freya Familia",
+        "training",
+        "loyalty"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-KAGUYA",
+      "path": "characters/gojouno-kaguya.md",
+      "type": "character",
+      "tags": [
+        "Gojouno Kaguya",
+        "Kaguya",
+        "Familia Astrea",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-LYRA",
+      "path": "characters/lyra.md",
+      "type": "character",
+      "tags": [
+        "Lyra",
+        "Familia Astrea",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    }
+  ],
+  "reservedIds": [
+    {
+      "id": "CHAR-RIVERIA-LJOS-ALF",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-GARETH-LANDROCK",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-BETE-LOGA",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-TIONA-HIRYUTE",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-TIONE-HIRYUTE",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-LEFIYA-VIRIDIS",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-WELF-CROZZO",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-LILIRUCA-ARDE",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-MIKOTO-YAMATO",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-SANJOUNO-HARUHIME",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-HERMES",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-OURANOS",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-FELS",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-GANESHA",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-ZEUS",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-HERA",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-ALFIA",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-ZARD",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-METERIA",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-ALBERT-WALDSTEIN",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-ARIA",
+      "type": "character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-HEPHAISTOS",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-MIACH",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-TAKEMIKAZUCHI",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-SOMA",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-DIAN-CECHT",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-DEMETER",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-ISHTAR",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-APOLLO",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "CHAR-ARTEMIS",
+      "type": "deity_character",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-FREYA",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-ZEUS",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-HERA",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-ASTREA",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-HEPHAISTOS",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-MIACH",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-TAKEMIKAZUCHI",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-SOMA",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-DIAN-CECHT",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-GANESHA",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-HERMES",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-DEMETER",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-ISHTAR",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "FAM-APOLLO",
+      "type": "familia",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-ORARIO",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-DUNGEON",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-BABEL",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-GUILD",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-HOSTESS",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-HESTIA-HOME",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-LOKI-MANOR",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-FREYA-MANOR",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-HEPHAISTOS-SHOP",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "LOC-DAEDALUS-STREET",
+      "type": "location",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-FALNA",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-LEVEL",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-EXCELIA",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-MAGIC",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-SKILLS",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-DUNGEON-ENTRY",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-DUNGEON-FLOORS",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-MONSTERS",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-MAGIC-STONES",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-DROP-ITEMS",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-FAMILIA-MEMBERSHIP",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-LEVEL-DIFFERENCE",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-GODS-LIMITS",
+      "type": "rule",
+      "status": "candidate_not_created"
+    },
+    {
+      "id": "RULE-DUNGEON-MYSTERIES",
+      "type": "rule",
+      "status": "candidate_not_created"
+    }
+  ],
+  "documents": [
+    {
+      "document_id": "DOC-PREMISE",
+      "path": "01-premisa-autor.md",
+      "type": "author_premise",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-RECORD-SCHEMA",
+      "path": "02-plantilla-registro.md",
+      "type": "generic_template",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-REVIEW-PROTOCOL",
+      "path": "03-protocolo-revision.md",
+      "type": "review_protocol",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-TEST-BANK",
+      "path": "04-banco-pruebas.md",
+      "type": "test_suite",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-SOURCE-POLICY",
+      "path": "05-fuentes-y-verificacion.md",
+      "type": "source_policy",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-AUTHOR-DECISIONS",
+      "path": "06-registro-decisiones.md",
+      "type": "author_decisions",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-REVIEW-PROMPT",
+      "path": "07-prompt-revision.md",
+      "type": "review_prompt",
+      "status": "present"
+    },
+    {
+      "document_id": "BATCH-LOG",
+      "path": "BATCH_LOG.md",
+      "type": "batch_log",
+      "status": "present"
+    },
+    {
+      "document_id": "MASTER-INDEX",
+      "path": "MASTER_INDEX.md",
+      "type": "master_index",
+      "status": "present"
+    },
+    {
+      "document_id": "QUALITY-DEDUP",
+      "path": "QUALITY_AND_DEDUP.md",
+      "type": "quality_gate",
+      "status": "present"
+    },
+    {
+      "document_id": "README",
+      "path": "README.md",
+      "type": "readme",
+      "status": "present"
+    },
+    {
+      "document_id": "WORK-QUEUE",
+      "path": "WORK_QUEUE.md",
+      "type": "work_queue",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-ARCS-00-INDICE-ARCOS",
+      "path": "arcs/00-indice-arcos.md",
+      "type": "arc_index",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-OC-PREMISE-EVAL",
+      "path": "au/01-evaluacion-premisa-oc.md",
+      "type": "au_evaluation",
+      "status": "present"
+    },
+    {
+      "document_id": "GOD-INDEX",
+      "path": "canon/06-indice-deidades.md",
+      "type": "entity_index",
+      "status": "present"
+    },
+    {
+      "document_id": "MYSTERY-INDEX",
+      "path": "canon/07-indice-misterios-y-revelaciones.md",
+      "type": "mystery_index",
+      "status": "present"
+    },
+    {
+      "document_id": "MAGIC-INDEX",
+      "path": "canon/08-indice-magia-habilidades-y-equipo.md",
+      "type": "ability_index",
+      "status": "present"
+    },
+    {
+      "document_id": "MONSTER-INDEX",
+      "path": "canon/09-indice-monstruos-y-amenazas.md",
+      "type": "monster_index",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-CATALOG",
+      "path": "catalog.json",
+      "type": "catalog_file",
+      "status": "present"
+    },
+    {
+      "document_id": "CHARACTER-INDEX",
+      "path": "characters/00-indice-personajes.md",
+      "type": "entity_index",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-CONTINUITY-00-MATRIZ-DE-CONTINUIDAD",
+      "path": "continuity/00-matriz-de-continuidad.md",
+      "type": "continuity_policy",
+      "status": "present"
+    },
+    {
+      "document_id": "FAMILIA-INDEX",
+      "path": "familias/00-indice-familias.md",
+      "type": "entity_index",
+      "status": "present"
+    },
+    {
+      "document_id": "PLACE-INDEX",
+      "path": "places/00-indice-lugares.md",
+      "type": "entity_index",
+      "status": "present"
+    },
+    {
+      "document_id": "RULE-INDEX",
+      "path": "rules/00-indice-reglas.md",
+      "type": "entity_index",
+      "status": "present"
+    },
+    {
+      "document_id": "SOURCES-INDEX",
+      "path": "sources/00-registro-fuentes.md",
+      "type": "source_registry",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-ARC",
+      "path": "templates/registro-arco.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-TEMPLATES-REGISTRO-CAPITULO-ESCENA",
+      "path": "templates/registro-capitulo-escena.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-ERA",
+      "path": "templates/registro-epoca.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-EVENT",
+      "path": "templates/registro-evento.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-FAMILY",
+      "path": "templates/registro-familia.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-ABILITY",
+      "path": "templates/registro-habilidad-equipo.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-PLACE",
+      "path": "templates/registro-lugar.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-MYSTERY",
+      "path": "templates/registro-misterio.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-MONSTER",
+      "path": "templates/registro-monstruo.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-CHARACTER",
+      "path": "templates/registro-personaje.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-RULE",
+      "path": "templates/registro-regla.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-RELATIONSHIP",
+      "path": "templates/registro-relacion.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TEMPLATE-VOLUME",
+      "path": "templates/registro-volumen.md",
+      "type": "template",
+      "status": "present"
+    },
+    {
+      "document_id": "TIMELINE-MAP",
+      "path": "timeline/00-mapa-de-eras.md",
+      "type": "timeline_index",
+      "status": "present"
+    },
+    {
+      "document_id": "TIMELINE-RULES",
+      "path": "timeline/02-reglas-de-cronologia.md",
+      "type": "temporal_model",
+      "status": "present"
+    },
+    {
+      "document_id": "EVENT-INDEX",
+      "path": "timeline/03-indice-eventos.md",
+      "type": "event_index",
+      "status": "present"
+    },
+    {
+      "document_id": "PENDING-MILESTONES",
+      "path": "timeline/04-hitos-pendientes.md",
+      "type": "research_queue",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-00",
+      "path": "timeline/eras/00-era-antigua-y-terminologia.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-01",
+      "path": "timeline/eras/01-descenso-de-deidades.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-02",
+      "path": "timeline/eras/02-formacion-orario-y-dungeon.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-03",
+      "path": "timeline/eras/03-historia-de-heroes-y-familias.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-04",
+      "path": "timeline/eras/04-auge-zeus-hera-y-dragon-negro.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-05",
+      "path": "timeline/eras/05-caida-zeus-hera-y-consecuencias.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-06",
+      "path": "timeline/eras/06-periodo-previo-a-bell.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-07",
+      "path": "timeline/eras/07-inicio-de-la-historia-principal.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-08",
+      "path": "timeline/eras/08-arcos-posteriores-y-spoilers.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-09",
+      "path": "timeline/eras/09-relatos-paralelos-y-continuidades.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-10",
+      "path": "timeline/eras/10-ultimo-volumen-y-final-publicado.md",
+      "type": "era_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "ERA-AU",
+      "path": "timeline/eras/AU-oc-y-divergencias.md",
+      "type": "au_timeline",
+      "status": "present"
+    },
+    {
+      "document_id": "CHECK-CATALOG",
+      "path": "tools/check-catalog.mjs",
+      "type": "integrity_checker",
+      "status": "present"
+    },
+    {
+      "document_id": "VOLUME-INDEX",
+      "path": "volumes/00-indice-volumenes-y-arcos.md",
+      "type": "publication_index",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-README",
+      "path": "volumes/main/README.md",
+      "type": "volume_index",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-01",
+      "path": "volumes/main/volume-01.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-02",
+      "path": "volumes/main/volume-02.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-03",
+      "path": "volumes/main/volume-03.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-04",
+      "path": "volumes/main/volume-04.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-05",
+      "path": "volumes/main/volume-05.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-06",
+      "path": "volumes/main/volume-06.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-07",
+      "path": "volumes/main/volume-07.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-08",
+      "path": "volumes/main/volume-08.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-09",
+      "path": "volumes/main/volume-09.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-10",
+      "path": "volumes/main/volume-10.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-11",
+      "path": "volumes/main/volume-11.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-12",
+      "path": "volumes/main/volume-12.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-13",
+      "path": "volumes/main/volume-13.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-14",
+      "path": "volumes/main/volume-14.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-15",
+      "path": "volumes/main/volume-15.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-16",
+      "path": "volumes/main/volume-16.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-17",
+      "path": "volumes/main/volume-17.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-18",
+      "path": "volumes/main/volume-18.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-19",
+      "path": "volumes/main/volume-19.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-20",
+      "path": "volumes/main/volume-20.md",
+      "type": "volume_stub",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-CHARACTER-TEMPORAL-VARIANTS",
+      "path": "characters/01-identidad-y-variantes-temporales.md",
+      "type": "character_continuity_model",
+      "status": "present"
+    },
+    {
+      "path": "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
+      "type": "research_package",
+      "status": "present"
+    },
+    {
+      "path": "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
+      "type": "research_package",
+      "status": "present"
+    },
+    {
+      "document_id": "RESEARCH-DM-005",
+      "path": "research/inbox/BATCH-DM-005-astrea-familia-network.md",
+      "type": "character_relationship_batch",
+      "status": "present"
+    },
+    {
+      "document_id": "SOURCE-DMR-007",
+      "path": "sources/DMR-007-wiki-comunitaria.md",
+      "type": "secondary_source_register",
+      "status": "present"
+    },
+    {
+      "document_id": "RESEARCH-DM-006",
+      "path": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "type": "character_roster_batch",
+      "status": "present"
+    }
+  ],
+  "lastStructuredSync": {
+    "branch": "feature/danmachi-lore-poc",
+    "source": "GitHub recursive tree audit",
+    "treeSha": "19cd2abf885a52e955f672411215bc8173881cf8",
+    "trackedLoreFiles": 112,
+    "records": 32,
+    "reservedIds": 70,
+    "supportingDocuments": 80,
+    "sourceCommit": "7ad54c5e614619da1c00fac8ad27f015bbdb9c5d",
+    "syncNote": "Counts verified against the complete repository tree at sourceCommit. The following index/template correction changes file contents but not the 112 tracked paths."
+  }
+}

@@ -1,0 +1,62 @@
+name: DanMachi Lore and Retrieval Integrity
+on:
+  push:
+    branches: [feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+  pull_request:
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: danmachi-lore-integrity-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
+jobs:
+  catalog-and-retrieval:
+    name: Catalog, retrieval and browser smoke
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check JavaScript syntax
+        run: |
+          bash -n .devcontainer/start-preview.sh
+          node --check src/app.js
+          node --check src/lore-corpus.js
+          node --check src/character-archive.js
+          node --check src/character-dossiers.js
+          node --check src/art-studio.js
+          node --check src/project-schema.js
+          node --check src/project-repository.js
+          node --check tests/test_lore_corpus.cjs
+          node --check tests/browser_smoke.cjs
+      - name: Test lore retrieval filters and abstention
+        run: node tests/test_lore_corpus.cjs
+      - name: Test character archive model
+        run: node tests/test_character_archive.cjs
+      - name: Test extended character dossiers
+        run: node tests/test_character_dossiers.cjs
+      - name: Test private preview file allowlist
+        run: python tests/test_web_preview_server.py
+      - name: Test project import validation
+        run: node tests/test_project_schema.cjs
+      - name: Install pinned Playwright
+        run: npm install --no-save --no-package-lock playwright@1.55.0
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run browser smoke
+        run: node tests/browser_smoke.cjs
+      - name: Validate catalog and links
+        run: node lore/danmachi/tools/check-catalog.mjs
+      - name: Upload character archive screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wordwaifu-character-archive-ryu
+          path: |
+            artifacts/character-archive-ryu.png
+            artifacts/art-studio.png
+          if-no-files-found: ignore
+          retention-days: 14

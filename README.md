@@ -1,48 +1,41 @@
-# WordWaifu
+# WordWaifu — World & Story Foundry
 
-**Aprende palabras. Conoce personajes. Recuerda más.**
+**Taller local y offline-first para construir mundos de ficción, explorar su canon en atlas interactivos y desarrollar historias con herramientas deterministas.**
 
-WordWaifu es un proyecto en etapa inicial para explorar una experiencia de aprendizaje de vocabulario con identidad anime: sesiones breves, práctica activa, progreso visible y personajes que acompañan al estudiante. Esta definición es una hipótesis de producto, no una afirmación de funciones ya implementadas.
+WordWaifu reúne atlas, biblia narrativa, fichas de personajes, relaciones, cronología, continuidad, biblioteca visual y planificación de historias. El núcleo está pensado para funcionar en el navegador sin una API de IA obligatoria y con proyectos guardados localmente.
 
-## Estado actual
+## Evolución del producto
 
-- **Fase:** fundación y descubrimiento.
-- **Rama principal:** `main`.
-- **Implementación verificada:** todavía no auditada; el primer commit conocido solo añade un `.gitignore`.
-- **Regla de honestidad:** no se declarará una función, prueba, publicación o integración como terminada sin evidencia reproducible.
+La descripción inicial en `main` planteaba una experiencia de aprendizaje de vocabulario con identidad anime. Esta integración amplía ese punto de partida hacia un taller de construcción de mundos y narrativa. Se conservan como principios la privacidad por defecto, el progreso comprensible, la accesibilidad, las pruebas reproducibles y el uso responsable de contenido con derechos.
 
-## Visión de producto
+Para mantener trazabilidad, se archivan la visión original y la descripción completa de la rama de integración en:
+- [Visión original del producto](docs/README-INITIAL-PRODUCT-VISION.md)
+- [Descripción completa de World & Story Foundry](docs/README-WORLD-STORY-FOUNDRY.md)
 
-Construir una aplicación cuidada y competitiva, con la calidad de experiencia que se espera de un producto comercial, manteniendo el proyecto comprensible, accesible y sostenible.
+## Módulos
 
-Principios iniciales:
+- **World Atlas:** navegación por lugares, regiones y puntos de interés.
+- **Canon Core:** personajes, lugares, organizaciones, acontecimientos y relaciones con IDs estables.
+- **Character Forge / Lore Forge:** fichas, expedientes, fuentes y corpus de conocimiento.
+- **Timeline / Continuity Guard:** separación temporal y filtros para no mezclar continuidades.
+- **Visual Library / Art Studio:** prompts y recursos vinculados a entidades, con almacenamiento local y respaldo.
+- **Project Trash:** snapshots, restauración y borrado controlado.
+- **Story / Novel Forge:** planificación de historias y documentos narrativos.
 
-1. **Aprendizaje primero.** Los personajes hacen la práctica más atractiva, pero nunca sustituyen un método de aprendizaje útil.
-2. **Recuerdo activo.** Priorizar recuperación de memoria, repetición espaciada, ejemplos en contexto y explicación de errores.
-3. **Progreso que se entiende.** Mostrar dominio y próximas acciones con claridad, sin métricas engañosas.
-4. **Diseño adaptable.** Planificar desde el comienzo para móvil y escritorio, con accesibilidad y rendimiento razonables.
-5. **Privacidad por defecto.** No incluir secretos, credenciales ni datos personales en el repositorio; recopilar lo mínimo necesario.
-6. **Calidad comprobable.** Cada función importante necesita criterios de aceptación y pruebas apropiadas.
-7. **Arte y licencias responsables.** Preferir contenido original, dominio público o licencias compatibles. No copiar recursos de terceros solo porque el uso previsto sea no comercial.
+## Estado verificable
 
-## Ruta de trabajo propuesta
+La rama de integración contiene el prototipo de atlas, CRUD de entidades, relaciones, persistencia local, papelera, archivo de personajes, expedientes ampliados y panel de arte. En el commit de origen `74021ef9b43d728ce10aef999b71578bcaabfac2`, las acciones **Validate WordWaifu** y **DanMachi Lore and Retrieval Integrity** terminaron en verde, incluyendo CRUD del panel de arte con IndexedDB y respaldo local, fallos simulados de almacenamiento, atribución de imágenes comunitarias y regresiones de continuidad. La instantánea de esta PR vuelve a ejecutar sus propias validaciones.
 
-Consulta [la hoja de ruta](docs/ROADMAP.md) para las etapas, puertas de calidad y condiciones de salida.
+Esto no significa que WordWaifu esté terminado. La integración ahora incorpora una sola vez los datos y fuentes compartidos por las PR #9 y #10: roster de 59 personajes, atribución comunitaria de Eina, `DMR-007`, `BATCH-DM-006` y claims de expedientes por continuidad. No se copia la segunda interfaz `renderDeepCharacterDossier` porque la PR #11 ya aporta un panel de expedientes ampliados; las PR #9 y #10 siguen abiertas para revisar su UI de consulta externa y decidir si esos datos se integran en el panel existente. Ninguna PR de integración se ha fusionado en `main`.
 
-### Próximo paso inmediato
+## Documentación
 
-Inspeccionar el árbol real del repositorio, identificar tecnología y archivos existentes, fijar el alcance mínimo viable y crear una primera experiencia ejecutable con pruebas. No se debe elegir arquitectura definitiva antes de confirmar el contenido actual del repositorio y los objetivos de uso.
+- [Visión maestra](docs/MASTER_VISION.md)
+- [Estado del proyecto](docs/STATUS.md)
+- [Hoja de ruta](docs/ROADMAP.md)
+- [Arquitectura](docs/ARCHITECTURE.md)
+- [Modelo de datos](docs/DATA_MODEL.md)
+- [Modo offline](docs/OFFLINE_FIRST.md)
+- [Derechos de contenido y retirada](docs/CONTENT_RIGHTS_AND_TAKEDOWN.md)
 
-## Cómo se trabajará
-
-Protocolo de cada tarea: **INSPECT → PLAN → EXECUTE → VERIFY → PERSIST → REPORT**.
-
-Los informes deben indicar tarea, estado, HEAD antes/después, archivos afectados, comandos y pruebas ejecutadas, evidencia y bloqueos. Distinguir explícitamente entre prueba real, comprobación estática y trabajo no ejecutado.
-
-## Uso de recursos externos
-
-Se pueden investigar herramientas, bibliotecas, referencias visuales y conjuntos de datos. Antes de incorporar cualquier recurso, registrar origen, licencia, atribución exigida, restricciones de redistribución y si permite el uso previsto. Los recursos con condiciones incompatibles se mantienen fuera del producto distribuido; si se usan temporalmente para evaluación, se documentan y se eliminan antes de la entrega. Las marcas, personajes y materiales protegidos no se consideran libres por el mero hecho de que el proyecto no sea comercial.
-
-## Estado de este documento
-
-Este README define una dirección inicial de trabajo. La hoja de ruta y las decisiones deben actualizarse cuando la inspección del código y las necesidades del propietario aporten evidencia nueva.
+Cada función importante debe cumplir el protocolo **INSPECT → PLAN → EXECUTE → VERIFY → PERSIST → REPORT**. No se declara terminada una función por la mera existencia de un archivo: debe haber evidencia reproducible y resultados de validación del commit candidato.
