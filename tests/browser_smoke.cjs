@@ -3021,11 +3021,11 @@ async function run() {
     const familyHeading = await page.locator(".archive-family-network").innerText();
     assert.ok(familyHeading.includes("Astrea Familia"), "Ryu's historical profile must expose a navigable Astrea Familia network.");
     assert.ok(familyHeading.includes("Alise Lovelace"), "The family network must make Alise discoverable without inventing a friendship edge.");
-    await page.locator(".archive-family-network [data-character-link]").filter({ hasText: "Alise Lovelace" }).click();
+    await page.locator(".archive-family-network .archive-relationship-card").filter({ hasText: "Alise Lovelace" }).locator("[data-character-link]").click();
     await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent.includes("Alise Lovelace"), null, { timeout: 5000 });
     await page.locator('#archive-profile-tabs [data-profile-tab="relationships"]').click();
     await page.waitForFunction(() => !!document.querySelector(".archive-family-network"), null, { timeout: 5000 });
-    await page.locator(".archive-family-network [data-character-link]").filter({ hasText: "Astrea" }).click();
+    await page.locator(".archive-family-network .archive-relationship-card").filter({ hasText: "Astrea" }).locator("[data-character-link]").click();
     await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent.trim() === "Astrea", null, { timeout: 5000 });
     await page.locator('#archive-profile-tabs [data-profile-tab="timeline"]').click();
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Cronología documentada"), "The goddess dossier must expose its documented timeline.");
