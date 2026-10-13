@@ -106,6 +106,19 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+    // Mythic catalog: monster forms expose the three mandatory design pillars and are searchable by form details.
+    await page.locator('.nav-item[data-view="mythic-catalog"]').click();
+    await page.locator("#mythic-search").fill("Hidra de Lerna");
+    await page.locator('#mythic-catalog-content [data-open-entity="GRC-HYDRA-LERNAEAN"]').click();
+    const hydraDossier = await page.locator("#mythic-catalog-content").innerText();
+    assert.match(hydraDossier, /Manifestaciones heroicas/);
+    assert.match(hydraDossier, /Arma característica \/ arma natural/);
+    assert.match(hydraDossier, /Vestimenta \/ símbolo del mito/);
+    assert.match(hydraDossier, /Ataque que resume el mito/);
+    assert.match(hydraDossier, /Hidra · Lily/);
+    assert.match(hydraDossier, /Hidra · Épica/);
+    assert.match(hydraDossier, /Hidra · Dark/);
+    process.stdout.write("PASS mythic catalog: Hydra dossier renders four forms and the three weapon/outfit/myth-attack pillars.\\n");
     // Story Foundry: create, edit, persist, import the repository's complete Markdown novel, and verify chapter text survives.
     await page.locator('.nav-item[data-view="stories"]').click();
     await page.locator("#story-create-button").click();
