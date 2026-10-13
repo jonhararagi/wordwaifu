@@ -88,6 +88,11 @@
       '<label>Nombre / concepto<input id="mythic-draft-title" maxlength="160"></label>' +
       '<label>Historia y origen<textarea id="mythic-draft-concept" rows="3"></textarea></label>' +
       '<label>Habilidad (adaptación original)<textarea id="mythic-draft-ability" rows="3"></textarea></label>' +
+      '<label>Manifestación / forma<input id="mythic-draft-manifestation-name" maxlength="120" placeholder="Ej.: Heracles · Épica"></label>' +
+      '<label>Etapa de la forma<input id="mythic-draft-manifestation-stage" maxlength="120" placeholder="Ej.: Lily, inicial, épica o Dark"></label>' +
+      '<label>1 · Arma característica / arma natural<textarea id="mythic-draft-weapon" rows="2" placeholder="Arma legendaria o facultad corporal del monstruo"></textarea></label>' +
+      '<label>2 · Vestimenta / símbolo del mito<textarea id="mythic-draft-outfit" rows="2" placeholder="Armadura, piel, máscara, corona, reliquia o marcas"></textarea></label>' +
+      '<label>3 · Ataque que resuma la totalidad del mito<textarea id="mythic-draft-totality-attack" rows="3" placeholder="Hazaña, tragedia, maldición, transformación y destino"></textarea></label>' +
       '<label>Activación y condiciones<textarea id="mythic-draft-activation" rows="2"></textarea></label>' +
       '<label>Coste y limitaciones<textarea id="mythic-draft-cost" rows="2"></textarea></label>' +
       '<label>Riesgos y consecuencias<textarea id="mythic-draft-risk" rows="2"></textarea></label>' +
@@ -155,6 +160,12 @@
     $("#mythic-draft-title").value="Eco de "+entity.name+" · "+pick(["La deuda del umbral","El pacto incompleto","La reliquia despierta","La segunda voz","El precio del retorno"]);
     $("#mythic-draft-concept").value="Personaje original: "+pick(["una archivista que descubre una herencia contradictoria","un explorador que hereda una promesa ajena","una estratega que teme depender de una fuerza que no comprende","un aprendiz que debe negociar con una presencia antigua"])+". Modo: "+modeText+". Figura de referencia: "+entity.name+" ("+entity.tradition+"). "+entity.summary;
     $("#mythic-draft-ability").value="Adaptación ficticia: "+pick(["materializa durante unos instantes un arma simbólica ligada a la historia de la figura","manifiesta un atributo limitado mediante una carta que conserva voluntad propia","hereda un eco de memoria que revela una pista, pero no predice el futuro","invoca una protección breve cuyo alcance depende de un acuerdo explícito"])+". Esta mecánica es original de WordWaifu y no una afirmación sobre la tradición.";
+    const firstForm = entity.heroicManifestations?.forms?.[0];
+    $("#mythic-draft-manifestation-name").value=firstForm?.name||entity.name+" · Inicial";
+    $("#mythic-draft-manifestation-stage").value=firstForm?.stage||"Inicial / forma base";
+    $("#mythic-draft-weapon").value=firstForm?.weapon||"Pendiente de diseño: elegir un arma u órgano ofensivo que se relacione con el mito de "+entity.name+".";
+    $("#mythic-draft-outfit").value=firstForm?.outfit||"Pendiente de diseño: elegir una vestimenta o símbolo que represente la historia de "+entity.name+".";
+    $("#mythic-draft-totality-attack").value=firstForm?.totalityAttack||"Pendiente de diseño: crear una técnica que reúna las hazañas, tragedia o destino de "+entity.name+".";
     $("#mythic-draft-activation").value=pick(sample.activation);
     $("#mythic-draft-cost").value=pick(sample.cost);
     $("#mythic-draft-risk").value=pick(sample.risk);
@@ -169,6 +180,7 @@
   function fillDraft(item){
     editingProposalId=item.id;
     for(const key of ["title","concept","ability","activation","cost","risk","progression","weakness"])$("#mythic-draft-"+key).value=item[key]||"";
+    for(const [key,field] of [["manifestation-name","manifestationName"],["manifestation-stage","manifestationStage"],["weapon","weapon"],["outfit","outfit"],["totality-attack","totalityAttack"]])$("#mythic-draft-"+key).value=item[field]||"";
     $("#mythic-draft-story").value=item.storyId||"";
     $("#mythic-draft-chapter").value=item.chapterReference||"";
     $("#mythic-draft-source").textContent="Inspiración registrada: "+(item.entityIds||[]).join(", ")+". Podés editar y volver a guardar.";
@@ -179,9 +191,16 @@
     const title=$("#mythic-draft-title").value.trim();
     if(!title){$("#mythic-generator-status").textContent="La propuesta necesita un nombre.";return;}
     const modes=currentModes();if(!modes.length){$("#mythic-generator-status").textContent="Seleccioná al menos un modo.";return;}
+    const pillars=[["#mythic-draft-manifestation-name","Nombre de la manifestación"],["#mythic-draft-weapon","arma característica"],["#mythic-draft-outfit","vestimenta o símbolo"],["#mythic-draft-totality-attack","ataque que represente el mito"]];
+    const missing=pillars.filter(([selector])=>!$(selector).value.trim()).map(([,label])=>label);
+    if(missing.length){$("#mythic-generator-status").textContent="Completá la manifestación y sus tres pilares: "+missing.join(", ")+ ".";return;}
     const entityId=$("#mythic-draft-source").dataset.entityId;
     const proposal={id:editingProposalId||("mythic-proposal-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,7)),
       title,modes,concept:$("#mythic-draft-concept").value,ability:$("#mythic-draft-ability").value,
+      manifestationName:$("#mythic-draft-manifestation-name").value.trim(),
+      manifestationStage:$("#mythic-draft-manifestation-stage").value.trim(),
+      weapon:$("#mythic-draft-weapon").value.trim(),outfit:$("#mythic-draft-outfit").value.trim(),
+      totalityAttack:$("#mythic-draft-totality-attack").value.trim(),
       activation:$("#mythic-draft-activation").value,cost:$("#mythic-draft-cost").value,
       risk:$("#mythic-draft-risk").value,progression:$("#mythic-draft-progression").value,
       weakness:$("#mythic-draft-weakness").value,storyId:$("#mythic-draft-story").value||null,chapterReference:$("#mythic-draft-chapter").value.trim(),
@@ -191,7 +210,7 @@
   }
   function renderSavedProposals(){
     const target=$("#mythic-saved-proposals");if(!target)return;
-    target.innerHTML=savedProposals.length?savedProposals.map(item=>'<div class="mythic-saved-proposal"><strong>'+esc(item.title)+'</strong><p>'+esc(item.concept||"")+'</p><span class="mythic-chip">'+esc((item.modes||[]).map(modeNamesKey=>modeNames[modeNamesKey]||modeNamesKey).join(" + "))+'</span><div class="mythic-generator-actions"><button type="button" class="mythic-link" data-edit-proposal="'+esc(item.id)+'">Editar</button><button type="button" class="mythic-link" data-promote-proposal="'+esc(item.id)+'">Crear personaje</button><button type="button" class="mythic-link" data-delete-proposal="'+esc(item.id)+'">Eliminar</button></div></div>').join(""):'<p class="field-help">Todavía no hay propuestas guardadas en este proyecto.</p>';
+    target.innerHTML=savedProposals.length?savedProposals.map(item=>'<div class="mythic-saved-proposal"><strong>'+esc(item.title)+'</strong><p>'+esc(item.concept||"")+'</p>'+(item.manifestationName?'<p><strong>'+esc(item.manifestationName)+'</strong> · '+esc(item.manifestationStage||"")+'</p><p><strong>Arma:</strong> '+esc(item.weapon||"")+'</p><p><strong>Vestimenta / símbolo:</strong> '+esc(item.outfit||"")+'</p><p><strong>Ataque total del mito:</strong> '+esc(item.totalityAttack||"")+'</p>':'')+'<span class="mythic-chip">'+esc((item.modes||[]).map(modeNamesKey=>modeNames[modeNamesKey]||modeNamesKey).join(" + "))+'</span><div class="mythic-generator-actions"><button type="button" class="mythic-link" data-edit-proposal="'+esc(item.id)+'">Editar</button><button type="button" class="mythic-link" data-promote-proposal="'+esc(item.id)+'">Crear personaje</button><button type="button" class="mythic-link" data-delete-proposal="'+esc(item.id)+'">Eliminar</button></div></div>').join(""):'<p class="field-help">Todavía no hay propuestas guardadas en este proyecto.</p>';
   }
 
   function renderList() {
