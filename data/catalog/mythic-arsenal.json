@@ -1976,13 +1976,66 @@
       "aliases": [],
       "attributes": [
         "pruebas",
-        "fuerza"
+        "fuerza",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
       ],
       "domains": [
         "pruebas",
-        "fuerza"
+        "fuerza",
+        "manifestaciones heroicas"
       ],
-      "confidence": "referencia_secundaria_con_variantes"
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "designRule": "Cada manifestación debe contener exactamente tres pilares editables: arma característica (incluye armas naturales en monstruos), vestimenta/símbolo del mito y ataque que condense el arco mítico. La apariencia o género alternativos son decisiones de adaptación; no cambian automáticamente los hechos de la fuente.",
+        "baseFigureId": "GRC-HERACLES",
+        "identityPresentation": "Masculina · adaptación de diseño",
+        "forms": [
+          {
+            "id": "heracles-m-lily",
+            "name": "Heracles · Lily",
+            "stage": "Juvenil / potencial",
+            "role": "Crecimiento; fuerza aún disciplinada por aprendizaje.",
+            "weapon": "Arco de caza y flechas de entrenamiento; adaptación basada en su destreza con distintas armas.",
+            "outfit": "Túnica corta de viajero y pequeña piel de león todavía sin trofeos completos.",
+            "totalityAttack": "Primer Trabajo: la promesa del león — un disparo abre una oportunidad y el héroe debe terminar la prueba con sus propias manos.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-m-initial",
+            "name": "Heracles · Inicial",
+            "stage": "Héroe reconocible",
+            "role": "Fuerza, resistencia y victoria obtenida mediante esfuerzo.",
+            "weapon": "Clava de madera de olivo, arma de combate asociada a su imagen popular.",
+            "outfit": "Piel del león de Nemea sobre una túnica de viajero; símbolo de una prueba superada.",
+            "totalityAttack": "El León de Nemea — embiste, desarma y neutraliza una defensa; no es un ataque universal irresistible.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-m-epic",
+            "name": "Heracles · Épico",
+            "stage": "Cima heroica",
+            "role": "La totalidad de los trabajos, el sufrimiento, la perseverancia y la elevación final.",
+            "weapon": "Arco y clava; el arma usada cambia según la prueba y el enemigo.",
+            "outfit": "Piel del león convertida en manto heroico, con doce marcas que recuerdan los trabajos sin afirmar que todas sean una armadura antigua.",
+            "totalityAttack": "Los Doce Trabajos: Camino de la Apoteosis — encadena respuestas distintas a amenazas distintas; el poder completo exige superar una condición por cada trabajo invocado.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-m-dark",
+            "name": "Heracles · Dark",
+            "stage": "Trágico / desbordado",
+            "role": "El precio trágico de la fuerza y la pérdida de control; no es una forma tradicional documentada.",
+            "weapon": "Clava ennegrecida y fuerza física sin control fino; variante ficticia.",
+            "outfit": "Piel del león oscurecida y vendas rotas como representación visual de culpa y violencia.",
+            "totalityAttack": "La Locura del Héroe — una oleada devastadora que también amenaza aliados y deja agotamiento o culpa persistente después del uso.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          }
+        ]
+      }
     },
     {
       "id": "GRC-MEDUSA",
@@ -2006,14 +2059,67 @@
       "attributes": [
         "gorgona",
         "mirada",
-        "monstruo"
+        "monstruo",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
       ],
       "domains": [
         "gorgona",
         "mirada",
-        "monstruo"
+        "monstruo",
+        "manifestaciones heroicas"
       ],
-      "confidence": "referencia_secundaria_con_variantes"
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "designRule": "En monstruos, el pilar «arma» puede ser una facultad corporal o rasgo monstruoso, no necesariamente un objeto fabricado. Las formas Lily/épica/dark son plantillas creativas y no se atribuyen a las fuentes antiguas.",
+        "baseFigureId": "GRC-MEDUSA",
+        "identityPresentation": "Monstruo / Gorgona · variantes de diseño",
+        "forms": [
+          {
+            "id": "medusa-lily",
+            "name": "Medusa · Joven / Lily (adaptación)",
+            "stage": "Juvenil / latente",
+            "role": "El temor a la propia mirada y la identidad anterior a la monstruosidad.",
+            "weapon": "Cabello de serpientes pequeñas; la mirada petrificante aparece solo de forma intermitente.",
+            "outfit": "Velo gris y broche con forma de gorgoneion como símbolo protector/amenazante.",
+            "totalityAttack": "La Mirada que Despierta — fija por instantes una parte del cuerpo del adversario; la petrificación total no está disponible en esta etapa.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "medusa-initial",
+            "name": "Medusa · Inicial",
+            "stage": "Gorgona reconocible",
+            "role": "El peligro de la mirada, el cuerpo monstruoso y el enfrentamiento con Perseo.",
+            "weapon": "Mirada petrificante y serpientes como defensa natural; la activación requiere línea de visión.",
+            "outfit": "Túnica antigua y cinturón de escamas; el rostro de Gorgona funciona como emblema mítico.",
+            "totalityAttack": "Ojos de la Gorgona — amenaza con petrificar a quien la mira directamente; espejos, reflejos o evitar la mirada son contramedidas narrativas, no una garantía universal.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "medusa-epic",
+            "name": "Medusa · Épica",
+            "stage": "Manifestación mítica plena",
+            "role": "La totalidad del mito de Medusa: monstruosidad, derrota ante Perseo y persistencia de su imagen como arma.",
+            "weapon": "Mirada de Gorgona y serpientes coordinadas como armas naturales.",
+            "outfit": "Manto de escamas, ornamento de bronce y un velo ceremonial inspirado en representaciones posteriores; el diseño exacto es creativo.",
+            "totalityAttack": "La Cabeza que Vence al Héroe — combina mirada, serpientes y control del espacio; culmina en el motivo de la cabeza de Gorgona usada como poder contra otros enemigos.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "medusa-dark",
+            "name": "Medusa · Dark",
+            "stage": "Venganza / horror trágico",
+            "role": "La violencia del mito, el miedo proyectado y la pérdida de control; interpretación original de WordWaifu.",
+            "weapon": "Mirada petrificante amplificada y serpientes que atacan sin distinguir amenazas de aliados.",
+            "outfit": "Armadura de obsidiana ficticia, velo rasgado y escamas oscuras; no es indumentaria antigua documentada.",
+            "totalityAttack": "La Maldición del Reflejo — convierte el campo de batalla en una red de líneas de visión peligrosas; el uso indiscriminado puede petrificar también el entorno y aislarla.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          }
+        ]
+      }
     },
     {
       "id": "EGY-ISIS",
@@ -2965,6 +3071,111 @@
         "fertilidad"
       ],
       "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "GRC-HERACLES-FEM",
+      "name": "Heracles (interpretación femenina)",
+      "kind": "culture_hero",
+      "tradition": "Griega · adaptación de género",
+      "region": "Adaptación creativa basada en el mito griego",
+      "status": "creative_adaptation",
+      "summary": "Relectura femenina original de Heracles para WordWaifu. Conserva como inspiración los trabajos, el león de Nemea, la resistencia y el coste trágico; no se presenta como variante de una fuente griega antigua.",
+      "creativeHook": "Diseñar una heroína cuya identidad no se reduzca a cambiar el modelo corporal: sus cuatro manifestaciones reinterpretan aprendizaje, prueba, apoteosis y tragedia.",
+      "tags": [
+        "griega",
+        "heracles",
+        "heroína",
+        "doce trabajos",
+        "adaptación creativa",
+        "lily",
+        "épica",
+        "dark"
+      ],
+      "relations": [
+        {
+          "type": "gender_reinterpretation_of",
+          "targetId": "GRC-HERACLES"
+        },
+        {
+          "type": "shares_mythic_cycle",
+          "targetId": "GRC-MEDUSA"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "La fuente enlazada sirve como contexto del mito base de Heracles, no como evidencia de una Heracles femenina antigua ni de estas formas. Las cuatro manifestaciones y sus técnicas son originales de WordWaifu.",
+      "aliases": [
+        "Heracles femenina",
+        "Hércules femenina (nombre alternativo de búsqueda)"
+      ],
+      "attributes": [
+        "trabajos",
+        "fuerza",
+        "perseverancia",
+        "tragedia",
+        "reinterpretación femenina",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "pruebas",
+        "fuerza",
+        "resistencia",
+        "apoteosis",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "adaptacion_creativa_de_referencia_mitologica",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "designRule": "Tres pilares editables por forma: arma, vestimenta/símbolo y ataque total del mito. La relectura femenina es ficción de WordWaifu, no una identidad histórica antigua confirmada.",
+        "baseFigureId": "GRC-HERACLES",
+        "identityPresentation": "Femenina · reinterpretación creativa de WordWaifu",
+        "forms": [
+          {
+            "id": "heracles-f-lily",
+            "name": "Heracles · Lily (femenina)",
+            "stage": "Juvenil / potencial",
+            "role": "La promesa de convertirse en heroína a través de pruebas reales.",
+            "weapon": "Arco recurvo de viaje con una flecha de madera sin adornos.",
+            "outfit": "Túnica clara, brazaletes de entrenamiento y una capa corta que anticipa la piel del león.",
+            "totalityAttack": "La Primera Prueba — una flecha marca el punto débil y la heroína debe acercarse para completar el trabajo; el ataque recompensa valentía, no distancia infinita.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-f-initial",
+            "name": "Heracles · Inicial (femenina)",
+            "stage": "Héroe reconocible",
+            "role": "Fuerza física, ingenio y resistencia ante lo que parece invulnerable.",
+            "weapon": "Clava de olivo con empuñadura envuelta en cuero.",
+            "outfit": "Piel del león de Nemea llevada como manto protector, junto a una túnica de viaje funcional.",
+            "totalityAttack": "El León de Nemea — una carga frontal que rompe una defensa y permite inmovilizar al enemigo si la usuaria soporta el contraataque.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-f-epic",
+            "name": "Heracles · Épica (femenina)",
+            "stage": "Cima heroica",
+            "role": "La totalidad del ciclo: trabajo, sacrificio, persistencia y trascendencia.",
+            "weapon": "Clava y arco, alternados según el trabajo representado.",
+            "outfit": "Manto de león con doce sellos luminosos; cada sello recuerda una prueba distinta y no otorga automáticamente todas sus recompensas.",
+            "totalityAttack": "Los Doce Trabajos: Corona de la Inquebrantable — adapta su efecto al desafío actual y solo alcanza su potencia final tras pagar el coste de la prueba elegida.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-f-dark",
+            "name": "Heracles · Dark (femenina)",
+            "stage": "Trágico / desbordado",
+            "role": "La tragedia de la fuerza sin dominio y el coste de la violencia; variante original.",
+            "weapon": "Clava fracturada cubierta de sombras; la fuerza aumenta y la precisión disminuye.",
+            "outfit": "Piel del león ennegrecida, corona de espinas de bronce como símbolo ficticio de culpa y un manto desgarrado.",
+            "totalityAttack": "La Heroína que Teme a su Fuerza — descarga brutal que destruye defensas, pero puede herir aliados y deja una deuda física o emocional acumulativa.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          }
+        ]
+      }
     }
   ],
   "starterDecks": [
