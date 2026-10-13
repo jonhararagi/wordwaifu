@@ -133,7 +133,7 @@
     project.mythicProposals.forEach((proposal, index) => {
       const path = "mythicProposals[" + index + "]";
       if (!isNonEmptyString(proposal.title)) errors.push(path + ".title debe ser un texto no vacío.");
-      for (const key of ["concept", "ability", "activation", "cost", "risk", "progression", "weakness"]) {
+      for (const key of ["concept", "ability", "activation", "cost", "risk", "progression", "weakness", "chapterReference"]) {
         if (proposal[key] === undefined || proposal[key] === null) proposal[key] = "";
         if (typeof proposal[key] !== "string") errors.push(path + "." + key + " debe ser texto.");
       }
@@ -214,6 +214,9 @@
       const path = "characters[" + index + "]";
       hasStringArray(character, "personality", path, errors);
       hasStringArray(character, "relationships", path, errors);
+      hasStringArray(character, "mythicEntityIds", path, errors);
+      if (character.mythicProposalId !== undefined && character.mythicProposalId !== null && typeof character.mythicProposalId !== "string") errors.push(path + ".mythicProposalId debe ser texto o null.");
+      if (character.chapterReference !== undefined && typeof character.chapterReference !== "string") errors.push(path + ".chapterReference debe ser texto.");
       if (!Array.isArray(character.locationHistory)) character.locationHistory = [];
       character.locationHistory.forEach((entry, entryIndex) => {
         const entryPath = path + ".locationHistory[" + entryIndex + "]";
