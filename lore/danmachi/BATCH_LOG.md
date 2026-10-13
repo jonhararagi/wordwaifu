@@ -144,3 +144,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Continuidad y procedencia: las aristas se siguen mostrando únicamente cuando hay afirmaciones de la continuidad seleccionada y estas superan el filtro de spoilers. La relación inversa se identifica como navegación, no como una nueva afirmación canónica simétrica.
 - Estado de validación: JavaScript y pruebas de lore/personajes han pasado en GitHub Actions en la revisión actual; los trabajos de navegador y validación de estructura todavía deben terminar antes de cerrar esta tanda.
 - Límite: esto mejora la navegación del archivo de personajes, pero no termina la migración de relaciones a datos independientes ni habilita aún un explorador genérico de Familias, lugares, eventos, objetos y conceptos.
+
+
+## DANMACHI-RESEARCH-010 · Expediente ampliado de Familia Hestia
+
+- **Estado:** PARTIAL; expediente de organización ampliado con hechos editoriales trazables y límites de continuidad explícitos.
+- **Archivos:** `familias/hestia-familia.md`; registro de fuentes `sources/00-registro-fuentes.md`.
+- **Fuentes nuevas:** perfil oficial de personajes de DanMachi IV y sinopsis oficial del episodio 1. Registradas como `DMR-004-SRC-001` y `DMR-004-SRC-002`, con URLs, localizadores de sección, continuidad, afirmaciones apoyadas y límites.
+- **Contenido incorporado:** estado de apertura con Bell como único miembro descrito por la sinopsis del episodio; instantánea del roster en la adaptación; funciones descritas de Hestia, Bell, Liliruca, Welf, Mikoto y Haruhime; dinámica narrativa, límites para escenas, reglas para modelar cambios de roster y campos que siguen desconocidos.
+- **Control de continuidad:** los perfiles de DanMachi IV permanecen en `CONT-ANIME`; no se usan para afirmar sin cotejo que cada detalle aparece igual en `CONT-MAIN-LN`. No se inventan fechas absolutas, niveles entre temporadas, cantidades económicas ni localizadores de novela.
+- **QA pendiente al registrar esta tanda:** ejecución del validador de catálogo, pruebas de lore y prueba de navegador tras el último commit; la CI debe confirmarse por ejecución.
+- **Próximo lote:** ampliar expedientes de Familias y personajes centrales con la misma estructura de afirmaciones, relaciones, estado temporal y fuentes; priorizar cotejo de novela ligera por volumen/capítulo.
