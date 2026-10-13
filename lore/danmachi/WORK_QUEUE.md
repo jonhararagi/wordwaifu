@@ -257,7 +257,9 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 ## DANMACHI-RESEARCH-018 · Pista temporal del Dragón Negro
 - Estado: PRELIMINAR; la relación temporal no se promueve a claim canónico.
 - [x] Encontrar la ficha editorial oficial del volumen 15 (GA Bunko, ISBN 978-4-7973-9622-5).
-- [x] Documentar como pista no editorial el pasaje localizado sobre cinco años desde el fracaso contra el Dragón Negro.
+- [x] Registrar como pista no verificada que una copia no editorial contiene una referencia a cinco años; no usar esa copia como evidencia canónica ni como localizador.
 - [x] Comparar esa pista con el ancla oficial aproximada de siete años de *Astrea Record*, dejando explícito que «aprox. 12 años antes de Bell» es una deducción condicional.
-- [ ] Verificar el pasaje en muestra/edición legítima y obtener localizador interno estable.
-- [ ] Solo entonces decidir si registrar una relación temporal relativa en los eventos; no inferir año absoluto, roster ni causalidad institucional.
+- [x] Comprobar la vista previa oficial del volumen 15: los términos buscados no dieron coincidencias; la vista previa no verifica el pasaje.
+- [ ] Verificar el pasaje en una edición legítima completa y obtener localizador interno estable.
+- [ ] Solo tras obtener localizador primario, decidir si registrar una relación temporal relativa en los eventos; no inferir año absoluto, roster ni causalidad institucional.
+- Regla de autoría: los datos ausentes permanecen desconocidos; los espacios para la historia propia se mantienen en `CONT-AU` y nunca se completan por inferencia.
