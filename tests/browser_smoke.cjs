@@ -119,6 +119,19 @@ async function run() {
     assert.match(hydraDossier, /Hidra · Épica/);
     assert.match(hydraDossier, /Hidra · Dark/);
     process.stdout.write("PASS mythic catalog: Hydra dossier renders four forms and the three weapon/outfit/myth-attack pillars.\\n");
+    await page.locator("#mythic-draft-title").fill("Prueba de manifestación editable");
+    await page.locator("#mythic-draft-manifestation-name").fill("Hidra · Prueba");
+    await page.locator("#mythic-draft-manifestation-stage").fill("Épica");
+    await page.locator("#mythic-draft-weapon").fill("Cabezas regenerativas");
+    await page.locator("#mythic-draft-outfit").fill("Escamas de Lerna");
+    await page.locator("#mythic-draft-totality-attack").fill("La regeneración obliga a resolver la raíz del mal");
+    await page.locator("#mythic-save-draft").click();
+    await page.waitForFunction(() => document.querySelector("#mythic-generator-status")?.textContent.includes("Propuesta guardada en el proyecto"), { timeout: 5000 });
+    const savedManifestation = await page.locator("#mythic-saved-proposals").innerText();
+    assert.match(savedManifestation, /Cabezas regenerativas/);
+    assert.match(savedManifestation, /Escamas de Lerna/);
+    assert.match(savedManifestation, /La regeneración obliga a resolver la raíz del mal/);
+    process.stdout.write("PASS mythic editor: weapon, mythic outfit and totality attack are independently editable and saved in the project.\\n");
     // Story Foundry: create, edit, persist, import the repository's complete Markdown novel, and verify chapter text survives.
     await page.locator('.nav-item[data-view="stories"]').click();
     await page.locator("#story-create-button").click();
