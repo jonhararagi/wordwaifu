@@ -19,23 +19,22 @@ aliases:
 ---
 # Celty Srowa
 
-**Alcance de esta ficha:** perfil de la adaptación oficial; se mantiene separado del detalle de Astrea Record y de inferencias novelísticas.
+**Alcance:** perfil de la adaptación oficial; mantenerlo separado del detalle de Astrea Record.
 
 ## Datos identificados
 
 - **Especie:** Elfa.
-- **Voz japonesa registrada por el portal oficial:** Rina Kawaguchi.
-- **Afiliación disponible:** Astrea Familia en el roster oficial de DanMachi IV.
+- **Voz japonesa:** Rina Kawaguchi.
+- **Afiliación:** Astrea Familia en el roster oficial de DanMachi IV.
 - **Retrato oficial de referencia:** https://danmachi.com/danmachi4/character/images/chara_tachi_24.png
 - **Procedencia:** enlazado desde el sitio oficial; no se copia ni se presenta como imagen de una escena concreta.
- 
+
 La ficha oficial la identifica como elfa e integrante de Astrea Familia. La presencia de un retrato y una afiliación no permite inventar su nivel, habilidades o vínculos privados.
 
 ## Relaciones y navegación
 
-- **Astrea Familia:** el vínculo de afiliación permite recorrer el roster. No demuestra por sí solo amistad íntima, rivalidad, una escena compartida ni confianza personal con Ryu.
-- **Ryu Lion / Astrea:** los enlaces de WordWaifu se rotulan según la evidencia de la continuidad seleccionada. No hay que trasladar automáticamente relaciones de la adaptación a todas las novelas.
+La ficha se puede abrir desde la red de Astrea Familia. Una afiliación compartida no demuestra por sí sola amistad, rivalidad o confianza personal con Ryu; esos vínculos deben aparecer ligados a un claim y su fuente.
 
 ## Pendiente de investigación
 
-historia individual, nivel, capacidades y vínculos con localizadores primarios. Las fuentes comunitarias sirven para encontrar nombres y rutas, pero no se convierten en canon aprobado sin capítulo o página localizable.
+historia individual, nivel, capacidades y vínculos con localizadores primarios. La información secundaria ayuda a encontrar posibles rutas, pero no se considera canon aprobado hasta localizar el pasaje correspondiente.
