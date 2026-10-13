@@ -179,3 +179,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Límite:** sinopsis editoriales no reemplazan localizadores internos de los volúmenes; el resultado sigue parcial y las continuidades CONT-AR/CONT-ANIME se conservan separadas.
 - **QA:** pendiente la ejecución final de CI para este commit y la extensión de las pruebas de procedencia a los tres expedientes de Familia.
 - **Siguiente paso:** mapear cada integrante y evento de Astrea Record por volumen/escena cuando se disponga de los textos, y ampliar el grafo de relaciones con periodos y fuentes.
+
+
+## DANMACHI-RESEARCH-013 · Integración de los tres expedientes de Familia en búsqueda global
+
+- **Alcance:** conectar los nuevos expedientes de Hestia, Loki y Astrea con el recuperador de WordWaifu; evitar que los documentos queden únicamente como Markdown.
+- **Integración de código:** `src/lore-corpus.js` ahora carga los paquetes DANMACHI-RESEARCH-010, 011 y 012 y expone los dos nuevos directorios oficiales de fuente (perfiles de Sword Oratoria y sinopsis del episodio 1).
+- **Afirmaciones recuperables:** 18 claims con IDs estables, IDs de personajes cuando hay una entidad registrada, continuidad, aspecto, fuente, localizador, URL, estado de verificación y nota de confianza.
+- **Pruebas:** `tests/test_lore_corpus.cjs` incluye búsquedas por el estado inicial de Hestia Familia, liderazgo de Loki Familia y capitanía de Alise en Astrea Familia; los conteos esperados se actualizan a 88 claims de fuente y 91 entradas tras las expansiones de continuidad existentes.
+- **Integridad:** `tests/test_danmachi_family_dossier.cjs` comprueba profundidad mínima, referencias, claims, continuidades y entradas de catálogo para los tres expedientes. `validate.yml` ejecuta el validador de catálogo y esta prueba.
+- **Incidencia detectada y corregida durante CI:** una primera ejecución reveló IDs de claim duplicados/mal asignados en los campos de recuperación; se corrigieron en los tres paquetes antes de la siguiente validación.
+- **Estado final de CI:** pendiente de confirmar en la ejecución correspondiente al último commit; no declarar la misión global completa por este lote.
