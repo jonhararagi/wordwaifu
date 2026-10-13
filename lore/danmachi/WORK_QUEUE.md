@@ -222,3 +222,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Extender pruebas automatizadas a Familia Astrea y comprobar el CI del último commit.
 - [ ] Cotejar los volúmenes completos de *Astrea Record* para construir eventos y relaciones por escena.
 - [ ] Registrar roster histórico completo solo cuando existan fuentes identificables por integrante.
+
+
+## DANMACHI-RESEARCH-013 · Integración de Familias en búsqueda global
+- Estado: IMPLEMENTADO; confirmación completa de CI del commit más reciente pendiente.
+- [x] Añadir los paquetes 010–012 a la carga de `src/lore-corpus.js`.
+- [x] Registrar las fuentes oficiales nuevas en el directorio de fuentes en línea.
+- [x] Convertir 18 afirmaciones de Familia a campos legibles por el parser de recuperación.
+- [x] Añadir pruebas de búsqueda para estado inicial de Hestia Familia, liderazgo de Loki Familia y capitanía de Alise.
+- [x] Corregir IDs de claim duplicados detectados por la primera ejecución de CI.
+- [ ] Confirmar que los workflows de recuperación, validación de catálogo, navegador y estructura concluyan con éxito en el último commit.
+- [ ] Ampliar el modelo de búsqueda para filtrar directamente por entidad de tipo Familia, no solo por personajes relacionados.
