@@ -115,7 +115,7 @@ async function run() {
     assert.match(hydraDossier, /Arma característica \/ arma natural/);
     assert.match(hydraDossier, /Vestimenta \/ símbolo del mito/);
     assert.match(hydraDossier, /Ataque que resume el mito/);
-    assert.match(hydraDossier, /Hidra · Lily/);
+    assert.match(hydraDossier, /Hidra · Larva/);
     assert.match(hydraDossier, /Hidra · Épica/);
     assert.match(hydraDossier, /Hidra · Dark/);
     process.stdout.write("PASS mythic catalog: Hydra dossier renders four forms and the three weapon/outfit/myth-attack pillars.\\n");
