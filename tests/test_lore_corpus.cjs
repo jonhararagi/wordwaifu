@@ -9,12 +9,13 @@ const documentPaths = [
   "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
   "research/inbox/BATCH-DM-005-astrea-familia-network.md",
   "research/inbox/BATCH-DM-008-main-story-volume-map.md",
-  "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md"
+  "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
+  "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
-assert.equal(index.sourceClaimCount, 64);
-assert.equal(index.entryCount, 67);
+assert.equal(index.sourceClaimCount, 70);
+assert.equal(index.entryCount, 73);
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
@@ -23,6 +24,10 @@ assert.ok(historicalRyu.results.every(claim => claim.continuityScopes.includes("
 assert.ok(!historicalRyu.results.some(claim => claim.entryId.endsWith("--CONT-ANIME")));
 assert.ok(historicalRyu.results.some(claim => claim.claimId === "DMR-002-CLM-015"));
 assert.ok(historicalRyu.results.some(claim => claim.claimId === "DMR-009-CLM-001"));
+  const departure = corpus.search(index, { query: "Ryu Astrea venganza", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+  assert.ok(departure.results.some(claim => claim.claimId === "DMR-010-CLM-002"), "The Astrea departure reason should be searchable with secondary-source status.");
+  const laterAstrea = corpus.search(index, { query: "Ciudad Forjadora", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+  assert.ok(laterAstrea.results.some(claim => claim.claimId === "DMR-010-CLM-005"), "The later Ryu-Astrea meeting should remain searchable from the publisher summary.");
 const animeRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(animeRyu.totalMatches > 0);
 assert.ok(animeRyu.results.every(claim => claim.continuityScopes.includes("CONT-ANIME")));
