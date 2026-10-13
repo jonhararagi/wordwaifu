@@ -216,7 +216,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: character_profile
 - locator: Entradas アストレア, アリーゼ・ローヴェル y perfiles de Astrea Familia, incluida リュー・リオン.
-- claims_supported: [DMR-002-CLM-017, DMR-002-CLM-018, DMR-002-CLM-019, DMR-002-CLM-020, DMR-006-CLM-002]
+- claims_supported: [DMR-002-CLM-017, DMR-002-CLM-018, DMR-002-CLM-019, DMR-002-CLM-020, DMR-006-CLM-005]
 - events_supported: []
 - continuity_scope: CONT-ANIME; comparación auxiliar con CONT-AR
 - reliability_note: Perfil oficial de adaptación; no se transfiere automáticamente a la novela ligera.
