@@ -401,3 +401,20 @@ select{background:#332d26;color:#e9dfd2}
 .mythic-empty { padding:1.5rem; border:1px dashed var(--border,#d0d5dd); border-radius:12px; }
 @media(max-width:760px){.mythic-filters{grid-template-columns:1fr 1fr}.mythic-catalog-heading{display:block}.mythic-count{display:inline-flex;margin-top:.6rem}}
 @media(max-width:460px){.mythic-filters{grid-template-columns:1fr}}
+
+
+.mythic-generator-panel{margin:1rem 0;padding:1rem;display:grid;gap:.9rem;background:var(--panel,#141b25);border:1px solid var(--line,#293443);border-radius:14px}
+.mythic-generator-panel h3,.mythic-generator-panel h4{margin:.1rem 0}
+.mythic-generator-panel p{margin:0;color:var(--muted,#93a2b1);line-height:1.5}
+.mythic-generator-modes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}
+.mythic-generator-modes label{display:flex;align-items:center;gap:.5rem;padding:.65rem;border:1px solid var(--line,#293443);border-radius:9px}
+.mythic-generator-modes input{accent-color:var(--teal,#71d6c2)}
+.mythic-generator-actions{display:flex;align-items:end;flex-wrap:wrap;gap:.6rem}
+.mythic-generator-actions label{display:grid;gap:.35rem;flex:1;min-width:180px}
+.mythic-generator-actions span{font-size:.8rem;color:var(--muted,#93a2b1)}
+.mythic-generator-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.mythic-generator-fields label{display:grid;gap:.35rem;color:var(--muted,#93a2b1);font-size:.85rem}
+.mythic-generator-fields input,.mythic-generator-fields textarea,.mythic-generator-fields select{width:100%;padding:.65rem;border:1px solid var(--line,#293443);border-radius:8px;background:var(--bg,#0d1118);color:var(--text,#eef3f6);resize:vertical}
+.mythic-saved-proposal{padding:.8rem 0;border-top:1px solid var(--line,#293443);display:grid;gap:.45rem}
+.mythic-saved-proposal p{overflow-wrap:anywhere}
+@media(max-width:760px){.mythic-generator-fields,.mythic-generator-modes{grid-template-columns:1fr}.mythic-generator-actions{align-items:stretch}}
