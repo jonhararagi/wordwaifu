@@ -265,6 +265,32 @@ function testRelationshipIDsAreGloballyUnique() {
   assert.match(result.errors.join("\\n"), /ID duplicado/);
 }
 
+function testMythicProposalsPersistAndValidateReferences() {
+  const input = validProject();
+  input.stories = [{ id: "story-a", title: "La primera invocación", name: "La primera invocación" }];
+  input.mythicProposals = [{
+    id: "mythic-proposal-a", title: "Eco de Quetzalcóatl", modes: ["weapon", "cards"],
+    concept: "Personaje original inspirado en una fuente documentada.",
+    ability: "Mecánica ficticia declarada como adaptación.", activation: "Nombrar el pacto.",
+    cost: "Fatiga temporal.", risk: "El vínculo puede negarse.", progression: "Desbloqueo tras una promesa.",
+    weakness: "El poder no resuelve conflictos personales.", entityIds: ["LAT-MEX-QUETZALCOATL"],
+    storyId: "story-a", status: "draft", updatedAt: "2026-10-13T12:00:00.000Z"
+  }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\\n"));
+  assert.deepEqual(result.project.mythicProposals, input.mythicProposals);
+  const exported = JSON.stringify(result.project);
+  const imported = validateAndNormalizeProject(JSON.parse(exported));
+  assert.equal(imported.valid, true, imported.errors.join("\\n"));
+  assert.deepEqual(imported.project.mythicProposals, input.mythicProposals);
+
+  const broken = structuredClone(input);
+  broken.mythicProposals[0].storyId = "story-missing";
+  const brokenResult = validateAndNormalizeProject(broken);
+  assert.equal(brokenResult.valid, false);
+  assert.match(brokenResult.errors.join("\\n"), /storyId apunta a una historia inexistente/);
+}
+
 const tests = [
   testValidProjectNormalizesOptionalFields,
   testMissingOptionalFieldsReceiveSafeDefaults,
@@ -283,7 +309,8 @@ const tests = [
   testValidatesExplicitRelationshipsAndBuildsCompatibilityProjection,
   testRejectsInvalidRelationshipEndpointsAndSelfLinks,
   testRejectsDuplicateRelationshipPairsAndTypes,
-  testRelationshipIDsAreGloballyUnique
+  testRelationshipIDsAreGloballyUnique,
+  testMythicProposalsPersistAndValidateReferences
 ];
 
 for (const test of tests) {
