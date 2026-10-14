@@ -508,3 +508,16 @@ select{background:#332d26;color:#e9dfd2}
 @media(max-width:600px){.universe-explorer-header,.power-view-header{display:block}}
 @media(max-width:600px){.universe-explorer-header>button,.power-view-actions{margin-top:10px}}
 @media(max-width:900px){.power-workbench-grid{grid-template-columns:1fr}.power-form-grid{grid-template-columns:1fr}.power-view-header{display:block}.power-view-actions{margin-top:10px}}
+
+
+/* Story Foundry: narrative blueprint, character design fields, and act preview. */
+.story-foundry-planner{margin:1.2rem 0;padding:1.1rem;border:1px solid var(--line,#344054);border-radius:14px;background:var(--panel-soft,rgba(148,163,184,.045))}
+.story-foundry-planner h3{margin:.2rem 0 .5rem;font-size:1.15rem}
+.story-foundry-planner>.story-form-grid{margin-top:.9rem}
+.story-foundry-planner .story-form-grid label{min-width:0}
+.story-foundry-planner input[type=number],.story-foundry-planner select,.story-foundry-planner textarea{box-sizing:border-box;width:100%;min-width:0;border:1px solid var(--line,#344054);border-radius:8px;background:#101920;color:var(--text,#e7edf0);padding:10px;font:inherit;line-height:1.5}
+.story-outline-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px;margin-top:12px}
+.story-outline-preview h4{grid-column:1/-1;margin:0}
+.story-outline-preview p{margin:0;padding:10px;border:1px solid var(--line,#344054);border-radius:8px;color:var(--muted,#a7b2bd);font-size:12px;line-height:1.5}
+.story-outline-preview p strong{color:var(--text,#e7edf0)}
+@media(max-width:680px){.story-foundry-planner{padding:.8rem}.story-foundry-planner .story-form-grid{grid-template-columns:1fr}}
