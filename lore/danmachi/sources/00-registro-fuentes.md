@@ -449,3 +449,29 @@ verification_status: stub
 - rights_note: Registrar notas breves propias.
 - verified_by: DANMACHI-RESEARCH-018
 - verification_status: source_checked_metadata_only
+
+
+---
+
+## DMR-012-SRC-001 · DanMachi, volumen principal 1 (descripción general de Orario y el Dungeon)
+
+- source_id: DMR-012-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか
+- creator_or_publisher: 大森藤ノ / GA文庫 (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 1; ISBN 978-4-7973-7280-9
+- language: Japonés
+- publication_date: 2013-01-13 aproximadamente, según ficha editorial
+- official_url: https://ga.sbcr.jp/product/9784797372809/
+- accessed_at: 2026-10-14
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial del volumen 1; identifica Orario como ciudad laberíntica que posee el Dungeon subterráneo y presenta la llegada del aspirante a aventurero Bell y su encuentro con Hestia.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; descripción editorial general
+- reliability_note: Fuente oficial para los metadatos y el marco de la sinopsis. No sustituye el texto íntegro del volumen ni respalda detalles de pisos, reglas, rutas o escenas no descritas en esa página.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-012
+- verification_status: source_checked_for_publisher_synopsis_only
