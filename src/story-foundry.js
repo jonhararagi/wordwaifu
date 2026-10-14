@@ -148,5 +148,88 @@
     const chosen = opts.worldType && opts.worldType !== "unspecified" ? choose : variants[seed % variants.length];
     return { ...chosen, worldType: type, seed, label: type === "unspecified" ? ["Fantasía de coste", "Distopía de infraestructura", "Misterio sobrenatural"][seed % 3] : type };
   }
-  return { generateOutline, summarizeActs, generateConcept };
+  function generateCharacter(options) {
+    const opts = options || {};
+    const role = ["protagonist", "companion", "antagonist", "romantic-interest"].includes(opts.role) ? opts.role : "protagonist";
+    const seed = Math.abs(Math.floor(Number(opts.seed) || 0));
+    const worldType = String(opts.worldType || "fantasy-adventure");
+    const cyber = /cyber|dystopia|post-apocalypse|military-sf|mecha|superpower/i.test(worldType);
+    const supernatural = /supernatural|fantasy|myth|magic/i.test(worldType);
+    const names = [
+      ["Iria", "Narel", "Vera", "Tarin", "Mael", "Sira", "Lior", "Nadia"],
+      ["Kael", "Noa", "Eren", "Mina", "Darian", "Luz", "Yuna", "Rai"],
+      ["Veyra", "Damián", "Selene", "Orvek", "Mara", "Ivo", "Neris", "Gael"]
+    ];
+    const desires = [
+      "demostrar que puede reparar el daño causado por una decisión pasada",
+      "proteger a su comunidad sin convertirse en su dueño",
+      "descubrir quién alteró los registros que sostienen su identidad",
+      "conseguir independencia sin abandonar a quienes dependen de ella",
+      "encontrar a una persona desaparecida y aceptar una respuesta inesperada",
+      "reformar una institución sin provocar el desastre que teme"
+    ];
+    const fears = [
+      "repetir el error que destruyó su antigua alianza",
+      "ser querido solo por la utilidad de sus capacidades",
+      "perder el control cuando alguien depende de su juicio",
+      "descubrir que su recuerdo más importante es falso",
+      "pedir ayuda y quedar en deuda con alguien peligroso",
+      "alcanzar su objetivo y descubrir que ya no sabe quién es"
+    ];
+    const virtues = ["observadora y leal", "ingenioso y paciente", "valiente y compasiva", "disciplinado y curioso", "carismática y pragmática", "creativo y protector"];
+    const flaws = ["confunde cuidar con decidir por los demás", "oculta información para evitar discusiones", "abandona planes cuando no puede controlarlos", "convierte cada desacuerdo en una prueba de lealtad", "se aferra a una primera impresión", "acepta demasiadas responsabilidades y luego culpa al equipo"];
+    const powers = cyber
+      ? ["leer patrones en redes desconectadas", "improvisar herramientas con piezas incompatibles", "anticipar movimientos por análisis táctico", "interferir sensores a corta distancia"]
+      : supernatural
+        ? ["percibir rastros emocionales en lugares", "alterar una propiedad física por unos segundos", "escuchar ecos de acontecimientos pasados", "crear un vínculo temporal con una criatura"]
+        : ["trazar rutas que revelan posibilidades", "convertir un juramento en protección temporal", "detectar puntos débiles tras observar al rival", "compartir energía a través de un objeto marcado"];
+    const costs = [
+      "cada uso consume un recuerdo menor y deja una laguna verificable",
+      "la habilidad necesita preparación y falla bajo presión o con información incompleta",
+      "el poder transfiere parte del daño a un objeto o aliado que debe consentir",
+      "el efecto dura poco y deja una señal que el antagonista puede rastrear",
+      "la capacidad exige un recurso escaso y no puede repetirse dos veces seguidas"
+    ];
+    const arcs = [
+      "pasar de actuar en solitario a delegar decisiones y aceptar límites ajenos",
+      "dejar de medir su valor por los sacrificios que está dispuesto a hacer",
+      "aprender que conocer una verdad no concede derecho a decidir por los demás",
+      "reemplazar la necesidad de tener razón por la capacidad de reparar el daño",
+      "construir confianza mediante acciones comprobables, no promesas"
+    ];
+    const relation = {
+      protagonist: "Su decisión inicial pone en marcha el conflicto principal; debe aprender a pedir ayuda antes de que su defecto haga irreversible una pérdida.",
+      companion: "Tiene un objetivo propio que a veces contradice al protagonista; aporta una competencia que el personaje principal no posee y puede negarse a obedecer.",
+      antagonist: "Persigue un orden que considera necesario y puede señalar un coste real de la solución heroica; cruza una línea moral que el relato debe hacer visible.",
+      "romantic-interest": "La relación progresa por confianza, desacuerdos y límites respetados; el interés amoroso conserva metas, vínculos y decisiones independientes."
+    };
+    const roleOffset = { protagonist: 0, companion: 1, antagonist: 2, "romantic-interest": 1 }[role];
+    const name = opts.name && String(opts.name).trim() ? String(opts.name).trim() : names[roleOffset][seed % names[roleOffset].length];
+    const desire = desires[(seed + roleOffset) % desires.length];
+    const fear = fears[(seed * 3 + roleOffset) % fears.length];
+    const virtue = virtues[(seed * 5 + roleOffset) % virtues.length];
+    const flaw = flaws[(seed * 7 + roleOffset) % flaws.length];
+    const power = powers[(seed * 11 + roleOffset) % powers.length];
+    const cost = costs[(seed * 13 + roleOffset) % costs.length];
+    const arc = arcs[(seed * 17 + roleOffset) % arcs.length];
+    const roleNames = { protagonist: "Protagonista", companion: "Compañero/a o coprotagonista", antagonist: "Antagonista", "romantic-interest": "Interés amoroso" };
+    return {
+      role, name, label: roleNames[role], worldType,
+      profile: roleNames[role] + ": " + name + ". Deseo: " + desire + ". Miedo: " + fear + ".",
+      personality: name + " es " + virtue + ", pero " + flaw + ". Bajo presión, esta contradicción provoca decisiones con consecuencias y no desaparece tras una sola conversación.",
+      ability: power + (cyber ? " (tecnología)" : supernatural ? " (sobrenatural)" : " (fantasía)"),
+      limitation: cost,
+      arc: arcs[(seed * 19 + roleOffset) % arcs.length],
+      narrativeFunction: relation[role],
+      summary: [
+        roleNames[role] + ": " + name,
+        "Deseo y necesidad: " + desire + "; necesita " + arc + ".",
+        "Personalidad: " + virtue + "; defecto activo: " + flaw + ".",
+        "Capacidad: " + power + ". Límite/coste: " + cost + ".",
+        "Función y relaciones: " + relation[role]
+      ].join("\\n")
+    };
+  }
+
+  return { generateOutline, summarizeActs, generateConcept, generateCharacter };
 });
