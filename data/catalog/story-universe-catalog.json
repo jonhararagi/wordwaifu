@@ -323,11 +323,143 @@
         "conflict": "un protagonista interpreta los hechos como teatro personal mientras sus aliados descubren una conspiración auténtica"
       },
       "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "to-love-ru",
+      "title": "To Love-Ru",
+      "type": "manga-anime",
+      "genres": [
+        "romantic-comedy",
+        "sci-fi",
+        "harem"
+      ],
+      "motifs": [
+        "enredos románticos",
+        "tecnología alienígena",
+        "identidades y secretos",
+        "comedia de malentendidos"
+      ],
+      "generatorSeeds": {
+        "world": "una ciudad cotidiana conectada con civilizaciones extraterrestres, inventos imposibles y visitantes con agendas propias",
+        "conflict": "un artefacto o visitante alienígena transforma un malentendido romántico en una crisis que exige decisiones sinceras"
+      },
+      "integrationStatus": "starter-corpus"
+    },
+    {
+      "id": "high-school-dxd",
+      "title": "High School DxD",
+      "type": "light-novel-anime",
+      "genres": [
+        "supernatural-action",
+        "fantasy",
+        "romance"
+      ],
+      "motifs": [
+        "facciones sobrenaturales",
+        "pactos y jerarquías",
+        "poder con evolución",
+        "lealtad y ambición"
+      ],
+      "generatorSeeds": {
+        "world": "una ciudad moderna donde demonios, ángeles y otras facciones compiten mediante pactos, linajes y reglas sobrenaturales",
+        "conflict": "un poder recién despertado atrae facciones rivales y obliga al protagonista a equilibrar vínculos personales, entrenamiento y política sobrenatural"
+      },
+      "integrationStatus": "starter-corpus"
+    },
+    {
+      "id": "madoka-magica",
+      "title": "Puella Magi Madoka Magica",
+      "type": "anime-franchise",
+      "genres": [
+        "dark-fantasy",
+        "psychological-drama",
+        "magical-girls"
+      ],
+      "motifs": [
+        "contratos con precio oculto",
+        "deseos y consecuencias",
+        "ciclos temporales",
+        "esperanza y desesperación"
+      ],
+      "generatorSeeds": {
+        "world": "una ciudad aparentemente normal donde las chicas mágicas combaten amenazas surrealistas bajo reglas de contrato incompletas",
+        "conflict": "un deseo parece resolver una tragedia, pero su coste oculto obliga al grupo a reconsiderar qué significa salvar a alguien"
+      },
+      "integrationStatus": "starter-corpus"
+    },
+    {
+      "id": "selector-wixoss",
+      "title": "selector infected WIXOSS / WIXOSS",
+      "type": "anime-franchise",
+      "genres": [
+        "psychological-drama",
+        "supernatural",
+        "game"
+      ],
+      "motifs": [
+        "juego de cartas con consecuencias",
+        "deseos personales",
+        "identidad y memoria",
+        "amistad bajo presión"
+      ],
+      "generatorSeeds": {
+        "world": "un juego de cartas conecta a jugadoras con avatares y reglas sobrenaturales cuyos riesgos no son evidentes al principio",
+        "conflict": "una victoria acerca a una protagonista a su deseo, pero revela que las reglas del juego afectan a la identidad y a sus relaciones"
+      },
+      "integrationStatus": "starter-corpus"
+    },
+    {
+      "id": "akame-ga-kill",
+      "title": "Akame ga Kill!",
+      "type": "manga-anime",
+      "genres": [
+        "dark-fantasy",
+        "action",
+        "political-drama"
+      ],
+      "motifs": [
+        "régimen corrupto",
+        "armas imperiales singulares",
+        "rebelión y represalias",
+        "coste irreversible de la guerra"
+      ],
+      "generatorSeeds": {
+        "world": "un imperio autoritario donde armas legendarias y élites militares deciden el poder mientras una resistencia clandestina intenta cambiar el régimen",
+        "conflict": "una operación contra la corrupción obliga al equipo a escoger entre el objetivo estratégico, proteger civiles y asumir pérdidas irreversibles"
+      },
+      "integrationStatus": "starter-corpus"
+    },
+    {
+      "id": "symphogear",
+      "title": "Senki Zesshō Symphogear",
+      "type": "anime-original",
+      "genres": [
+        "action",
+        "science-fantasy",
+        "music"
+      ],
+      "motifs": [
+        "armaduras activadas por canto",
+        "combate sincronizado",
+        "herencia y sacrificio",
+        "amistad y coordinación de equipo"
+      ],
+      "generatorSeeds": {
+        "world": "un mundo amenazado por entidades anómalas donde combatientes sincronizan armaduras reliquia mediante voz, voluntad y energía",
+        "conflict": "una nueva amenaza rompe la sincronía del equipo y obliga a cada combatiente a afrontar el coste personal de convertir su voz en arma"
+      },
+      "integrationStatus": "starter-corpus"
     }
   ],
   "canonDossierPriority": [
     "my-hero-academia",
-    "one-punch-man"
+    "one-punch-man",
+    "to-love-ru",
+    "high-school-dxd",
+    "madoka-magica",
+    "selector-wixoss",
+    "akame-ga-kill",
+    "symphogear"
   ],
   "statusLegend": {
     "existing-canon-work-in-progress": "Hay material previo del universo, pero la auditoría de canon y cobertura sigue abierta.",
