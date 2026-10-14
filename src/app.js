@@ -1520,6 +1520,15 @@
         story.description = parsed.description;
         story.premise = parsed.premise;
         story.conflict = parsed.conflict || story.conflict || "";
+        story.chapterCount = parsed.chapterCount || parsed.chapters.length || story.chapterCount || 30;
+        story.endingType = parsed.endingType || "closed";
+        story.protagonistProfile = parsed.protagonistProfile || "";
+        story.personalityDesign = parsed.personalityDesign || "";
+        story.companionProfiles = parsed.companionProfiles || "";
+        story.antagonistProfile = parsed.antagonistProfile || "";
+        story.traumaArc = parsed.traumaArc || "";
+        story.romanceArc = parsed.romanceArc || "";
+        story.powerRules = parsed.powerRules || "";
         story.worldType = parsed.worldType || "unspecified";
         story.worldRules = parsed.worldRules || "";
         story.worldDynamics = parsed.worldDynamics || "";
@@ -1607,6 +1616,15 @@
     const powerCatalog = readSection("Catálogo de poderes y evolución");
     const pantheon = readSection("Panteón y papel de las diosas");
     const ensemble = readSection("Reparto coral y arcos individuales");
+    const chapterCount = Math.max(0, Math.min(500, Math.floor(Number(readSection("Cantidad de capítulos planificados")) || 0)));
+    const endingType = readSection("Tipo de desenlace").trim().toLowerCase() === "open" ? "open" : "closed";
+    const protagonistProfile = readSection("Perfil del protagonista");
+    const personalityDesign = readSection("Personalidad y defectos");
+    const companionProfiles = readSection("Compañeros y coprotagonistas");
+    const antagonistProfile = readSection("Antagonista");
+    const traumaArc = readSection("Trauma y recuperación");
+    const romanceArc = readSection("Arco romántico");
+    const powerRules = readSection("Límites de poderes");
     const chapters = [];
     let match;
     while ((match = chapterPattern.exec(text)) !== null) {
@@ -1628,7 +1646,7 @@
         if (arc) arcs.push(arc[1].trim() + ": " + arc[2].trim());
       }
     }
-    return { name, description, premise: description, conflict, worldType, worldRules, worldDynamics, revealType, revealSecret, revealClues, revealTiming, revealConsequences, powerCatalog, pantheon, ensemble, arcs, chapters };
+    return { name, description, premise: description, conflict, worldType, worldRules, worldDynamics, chapterCount, endingType, protagonistProfile, personalityDesign, companionProfiles, antagonistProfile, traumaArc, romanceArc, powerRules, revealType, revealSecret, revealClues, revealTiming, revealConsequences, powerCatalog, pantheon, ensemble, arcs, chapters };
   }
 
   async function createStory() {
