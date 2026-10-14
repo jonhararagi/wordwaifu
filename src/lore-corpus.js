@@ -17,6 +17,8 @@
     { id:"official-chronology", category:"official", title:"Cronología oficial de DanMachi", publisher:"Portal oficial de la serie", authority:"Referencia oficial", url:"https://danmachi.com/chronology/", coverage:"Cronología de la serie y obras derivadas, incluida la presentación de Astrea Record.", limits:"Es una referencia oficial de cronología/promoción; no reemplaza el pasaje completo de una novela." },
     { id:"official-anime-v", category:"official", title:"Perfiles oficiales · DanMachi V", publisher:"Portal oficial del anime", authority:"Referencia oficial de adaptación", url:"https://danmachi.com/danmachi5/character/", coverage:"Perfiles de personajes y estado descrito para la adaptación de la quinta temporada.", limits:"Usar como CONT-ANIME; no transferir automáticamente todos los detalles a la novela ligera." },
     { id:"official-anime-iv", category:"official", title:"Perfiles oficiales · DanMachi IV", publisher:"Portal oficial del anime", authority:"Referencia oficial de adaptación", url:"https://danmachi.com/danmachi4/character/", coverage:"Perfiles de Astrea Familia y otros personajes de la adaptación.", limits:"La página oficial describe la adaptación; no constituye por sí sola un localizador de la novela." },
+    { id:"official-sword-oratoria", category:"official", title:"Perfiles oficiales · Sword Oratoria", publisher:"Portal oficial del anime Sword Oratoria", authority:"Referencia oficial de adaptación", url:"https://danmachi.com/sword_oratoria/character/", coverage:"Perfiles de Loki Familia y personajes relacionados de Sword Oratoria.", limits:"Los cargos, edades y niveles corresponden al perfil de adaptación; no equivalen a una cronología exhaustiva de la novela." },
+    { id:"official-anime-episode1", category:"official", title:"Sinopsis oficial · DanMachi episodio 1", publisher:"Portal oficial del anime DanMachi", authority:"Sinopsis oficial de adaptación", url:"https://danmachi.com/danmachi/story/episode1.html", coverage:"Punto de apertura de Bell y estado inicial de Hestia Familia en la sinopsis.", limits:"Usar como CONT-ANIME; cotejar el volumen 1 antes de atribuir todos los detalles a la novela." },
     { id:"official-anime-iii", category:"official", title:"Perfiles oficiales · DanMachi III", publisher:"Portal oficial del anime", authority:"Referencia oficial de adaptación", url:"https://danmachi.com/danmachi3/character/", coverage:"Perfiles publicados para personajes y estados representados en la tercera temporada.", limits:"Comprobar temporada y continuidad antes de reutilizar una afirmación." },
     { id:"ga-astrea-1", category:"official", title:"GA Bunko · Astrea Record, volumen 1", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial", url:"https://ga.sbcr.jp/product/9784815610173", coverage:"Sinopsis editorial oficial de la primera novela de Astrea Record.", limits:"La sinopsis no equivale al texto íntegro ni permite inventar capítulos, páginas o escenas." },
     { id:"ga-astrea-2", category:"official", title:"GA Bunko · Astrea Record, volumen 2", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial", url:"https://ga.sbcr.jp/product/9784815610180", coverage:"Sinopsis editorial oficial de la segunda novela de Astrea Record.", limits:"Sirve para afirmaciones realmente presentes en la sinopsis, no para reconstruir cada detalle." },
@@ -29,6 +31,16 @@
     return String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
       .toLocaleLowerCase("es").replace(/[^a-z0-9\u3040-\u30ff\u4e00-\u9faf-]+/g, " ")
       .trim().replace(/\s+/g, " ");
+  }
+  // Small, explicit morphology bridges common Spanish noun/verb forms without
+  // weakening the all-query-terms-must-match rule for unrelated words.
+  const SEARCH_SYNONYMS = Object.freeze({
+    venganza: ["venganza", "vengar", "vengarse"],
+    vengar: ["venganza", "vengar", "vengarse"],
+    vengarse: ["venganza", "vengar", "vengarse"]
+  });
+  function tokenMatches(haystack, token) {
+    return (SEARCH_SYNONYMS[token] || [token]).some(form => haystack.includes(form));
   }
   function tokens(value) { return normalize(value).split(" ").filter(t => t.length >= 2 && !STOP_WORDS.has(t)); }
   function clean(value) {
@@ -81,7 +93,6 @@
     if (/relaci[oó]n|v[ií]nculo|lealtad|afecto|rom[aá]ntic|gu[ií]a|capitana/.test(text)) aspects.push("relationships");
     if (/motivaci[oó]n|objetivo|deseo|valores?|justicia|prop[oó]sito/.test(text)) aspects.push("motivation");
     if (/personalidad|temperamento|car[aá]cter|misericordiosa|amable|luminoso|directa/.test(text)) aspects.push("personality");
-    if (/habilidad|magia|combate|arma|capacidad|poder|t[eé]cnica|repertorio/.test(text)) aspects.push("behavior");
     if (/conducta|comportamiento|liderazgo|presi[oó]n|entrenamiento|h[aá]bito|trabajando|pr[aá]ctico|competencia/.test(text)) aspects.push("behavior");
     return unique(aspects.length ? aspects : ["general"]);
   }
@@ -195,6 +206,7 @@
   function claimsFromOfficialRoster(records, existingClaims) {
     const alreadyCovered = new Set((existingClaims || []).flatMap(claim => claim.characterIds || []));
     const generated = [];
+    const usedClaimIds = new Set((existingClaims || []).map(claim => claim.claimId).filter(Boolean));
     let counter = 1;
     const make = (record, scope, aspect, heading, claim, dossier) => {
       if (!claim || !String(claim).trim()) return;
@@ -202,7 +214,9 @@
       const sourceTitle = dossier && dossier.sourceLabel ? dossier.sourceLabel : (record.sourceTitle || "Perfil oficial de adaptación");
       const sourceType = dossier && dossier.sourceType ? "SECONDARY" : (record.evidenceType || "official_adaptation_profile");
       const sourceId = dossier && dossier.sourceType ? "DMR-007-SRC-001" : (record.sourceId || "DMR-006-SRC-001");
-      const claimId = "DMR-008-CLM-" + String(counter++).padStart(3,"0");
+      let claimId;
+      do { claimId = "DMR-008-CLM-" + String(counter++).padStart(3,"0"); } while (usedClaimIds.has(claimId));
+      usedClaimIds.add(claimId);
       const period = scope === "CONT-AR" ? "Astrea Record · Era Oscura de Orario"
         : scope === "CONT-MAIN-LN" ? "Novela ligera principal · el punto temporal depende del pasaje referenciado"
         : scope === "CROSS-CONTINUITY" ? "Comparación entre novelas, relatos paralelos y adaptaciones"
@@ -267,14 +281,14 @@
         const tags = record.tags || [];
         const name = tags.find(tag => typeof tag === "string" && !/^spoiler/i.test(tag)) || record.id;
         const aliases = unique([name, ...tags.filter(tag => !/familia|multi-era|motivation|leadership|training|loyalty|spoiler|deity|historical state|timeline|provisional/i.test(tag))]);
-        return { id: record.id, name, aliases, profilePath: record.path };
+        return { id: record.id, name, aliases, keywords: unique(tags), profilePath: record.path };
       });
     // Official adaptation references extend discoverability without pretending to be
     // fully researched canonical dossier files. Each entry must have source-backed claims.
     const knownCharacterIds = new Set(catalogCharacters.map(character => character.id));
     const externalCharacters = officialRoster
       .filter(record => usedIds.has(record.id) && !knownCharacterIds.has(record.id))
-      .map(record => ({ id: record.id, name: record.name, aliases: unique([record.name, ...(record.aliases || [])]) }));
+      .map(record => ({ id: record.id, name: record.name, aliases: unique([record.name, ...(record.aliases || [])]), keywords: unique([record.family, record.role, record.sourceTitle, ...(record.aliases || [])]) }));
     const characters = [...catalogCharacters, ...externalCharacters]
       .sort((a, b) => a.name.localeCompare(b.name, "es"));
     const profileDetails = Object.create(null);
@@ -283,20 +297,24 @@
       if (parsed.id) profileDetails[parsed.id] = parsed;
     });
     return { schemaVersion: 1, indexName: "WordWaifu DanMachi Lore Search", mode: "curated-claims",
-      sourceClaimCount: documents.reduce((sum, doc) => sum + parseSource(doc.content, doc.path).length, 0) + generatedClaims.length,
+      sourceClaimCount: documents.reduce((sum, doc) => sum + parseSource(doc.content, doc.path).length, 0),
       entryCount: claims.length, characters, claims, profileDetails,
+      entityRecords: (catalog.records || []).filter(record => record && typeof record.id === "string" && typeof record.type === "string").map(record => ({
+        id: record.id, path: record.path || "", type: record.type, status: record.status || "unknown",
+        priority: record.priority || "normal", tags: Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : []
+      })),
       profileDocumentCount: Object.keys(profileDetails).length };
   }
   async function load(basePath) {
     const base = basePath || "./lore/danmachi/";
-    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md"];
+    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md", "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md", "research/inbox/BATCH-DM-008-main-story-volume-map.md", "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md", "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md", "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md"];
     const responses = await Promise.all(paths.map(path => fetch(base + path, { cache: "no-cache" })));
     for (let i = 0; i < responses.length; i++) if (!responses[i].ok) throw new Error("No se pudo cargar " + paths[i] + " (HTTP " + responses[i].status + ").");
     const catalog = await responses[0].json();
     const docs = await Promise.all(responses.slice(1).map(async (response, i) => ({
       path: paths[i + 1], content: await response.text()
     })));
-    const detailIds = new Set(["CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR","CHAR-KAGUYA","CHAR-LYRA"]);
+    const detailIds = new Set(["CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR","CHAR-KAGUYA","CHAR-LYRA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE","CHAR-NOIN-UNIC","CHAR-NEZE-RANKETT","CHAR-ASTA-KNOX","CHAR-RYANA-LIETZ","CHAR-CELTY-SROWA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]);
     const profileRecords = (catalog.records || []).filter(record =>
       detailIds.has(record.id) && typeof record.path === "string" &&
       record.path.startsWith("characters/") && record.path.endsWith(".md"));
@@ -330,13 +348,39 @@
       const haystack = normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
         claim.continuityScopes.join(" "), claim.aspects.join(" "), aliases.join(" "), claim.sourceTitle,
         claim.sourceLocator, claim.sourceIds.join(" "), claim.claimId, claim.entryId].join(" "));
-      const foundTokens = queryTokens.filter(token => haystack.includes(token));
+      const foundTokens = queryTokens.filter(token => tokenMatches(haystack, token));
       if (queryTokens.length && foundTokens.length !== queryTokens.length) continue;
       results.push({ ...claim, characterNames: characterRecords.map(character => character.name),
         profilePaths: characterRecords.map(character => character.profilePath).filter(Boolean),
         score: queryTokens.length ? foundTokens.length * 10 : 1 });
     }
     results.sort((a, b) => b.score - a.score || a.claimId.localeCompare(b.claimId, "en") || a.entryId.localeCompare(b.entryId, "en"));
+    return { results: results.slice(0, limit), totalMatches: results.length, truncated: results.length > limit,
+      abstain: results.length === 0, queryTokens };
+  }
+
+  function searchEntities(catalog, options) {
+    const settings = options || {};
+    const requestedType = normalize(settings.type || settings.entityType || "all");
+    const queryTokens = tokens(settings.query || "");
+    const allowedTypes = new Set(["all", "familia", "character", "character group", "deity character", "setting",
+      "institution and location", "world rule", "chronology", "event", "author event", "index"]);
+    if (!allowedTypes.has(requestedType)) {
+      return { results: [], totalMatches: 0, truncated: false, abstain: true, queryTokens,
+        error: "Tipo de entidad no reconocido: " + requestedType };
+    }
+    const records = Array.isArray(catalog && catalog.records) ? catalog.records : [];
+    const results = records.filter(record => {
+      if (!record || typeof record.id !== "string" || typeof record.type !== "string") return false;
+      if (requestedType !== "all" && normalize(record.type) !== requestedType) return false;
+      const tags = Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : [];
+      const haystack = normalize([record.id, record.path, record.type, record.status, record.priority, ...tags].join(" "));
+      return queryTokens.every(token => tokenMatches(haystack, token));
+    }).map(record => ({
+      id: record.id, path: record.path || "", type: record.type, status: record.status || "unknown",
+      priority: record.priority || "normal", tags: Array.isArray(record.tags) ? record.tags.slice() : []
+    })).sort((a, b) => a.id.localeCompare(b.id, "en"));
+    const limit = Number.isInteger(settings.limit) ? Math.max(1, Math.min(settings.limit, 100)) : 50;
     return { results: results.slice(0, limit), totalMatches: results.length, truncated: results.length > limit,
       abstain: results.length === 0, queryTokens };
   }
@@ -490,5 +534,5 @@
     };
   }
 
-  return { load, buildIndex, search, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText, extractExternalLead, allowedExternalImageUrl };
+  return { load, buildIndex, search, searchEntities, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText, extractExternalLead, allowedExternalImageUrl };
 });

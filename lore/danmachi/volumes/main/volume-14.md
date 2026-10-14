@@ -1,96 +1,45 @@
-# DanMachi · Volumen principal 14
+---
+dossier_id: VOL-MAIN-14
+universe: danmachi
+document_type: volume_dossier
+series: main_light_novel
+volume_number: 14
+continuity_scope: CONT-MAIN-LN
+status: provisional_summary
+source_url: https://ga.sbcr.jp/product/9784797396201/
+claim_id: DMR-008-CLM-014
+tags: ["Ryu Lion", "piso 37", "supervivencia", "pasado"]
+---
+# DanMachi · Volumen 14: Bell y Ryu en el piso 37
 
-## Estado del registro
-- volume_id: DM-LN-MAIN-14
-- series: main_light_novel
-- volume_number: 14
-- official_title: PENDING_BIBLIOGRAPHIC_VERIFICATION
-- publication_data: PENDING_BIBLIOGRAPHIC_VERIFICATION
-- edition_language: PENDING
-- summary_status: stub
-- canon_status: not_assessed
-- duplicate_review: pending
-- spoiler_level: unknown
-- source_ids: []
-- source_locators: []
+> **Estado:** resumen original para navegación. No es un análisis cotejado capítulo a capítulo. El dato editorial enlazado no demuestra por sí solo cada detalle del resumen.
 
-> Esta es una plantilla de cobertura para el volumen numerado 14. Su existencia en este índice no declara título, fecha de publicación, contenido ni que este sea el último volumen de la serie. Completar solo tras identificar una edición y fuente bibliográfica confiables.
+## Sinopsis original
 
-## 1. Índice bibliográfico
-- Título oficial en la edición elegida:
-- Título original si se puede comprobar:
-- Autor/editorial:
-- Fecha de publicación comprobada:
-- Idioma/edición:
-- Fuente bibliográfica:
-- Volumen anterior:
-- Volumen siguiente:
-- Estado de publicación: unknown / announced / published / superseded_by_new_edition
+Bell y Ryu quedan aislados en un nivel profundo del Dungeon, con recursos limitados y una amenaza mortal. Sobrevivir exige que confíen el uno en el otro y conecta el presente de Ryu con pérdidas pasadas y una comprensión herida de la justicia.
 
-## 2. Capítulos y arcos
-| Chapter / section | Title | Arc ID | Source locator | Status |
-|---|---|---|---|---|
-| PENDING | PENDING | PENDING | PENDING | stub |
+## Hitos narrativos
 
-## 3. Acontecimientos
-| Event ID | Resumen original breve | Participantes | Lugar | Tiempo relativo | Fuente/localizador | Verificación |
-|---|---|---|---|---|---|---|
-| PENDING | PENDING | PENDING | PENDING | PENDING | PENDING | stub |
+Bell y Ryu afrontan la supervivencia en el piso 37; sus compañeros también deben escapar; recuerdos revelan partes del pasado de Ryu.
 
-## 4. Personajes y cambios de estado
-- Nuevas apariciones:
-- Cambios de afiliación/Familia:
-- Edad/estado/ubicación por periodo:
-- Conocimiento adquirido por cada personaje:
-- Relaciones que cambian:
-- Habilidades, magia o equipo introducidos/alterados:
-- Fuentes y localizadores:
+## Cambios de estado
 
-## 5. Mundo y continuidad
-- Lugares nuevos o modificados:
-- Reglas nuevas, excepciones o explicaciones:
-- Monstruos/amenazas:
-- Misiones/expediciones:
-- Economía, política o estado de Orario:
-- Consecuencias de acontecimientos previos:
-- Eventos que deben enlazarse con registros existentes:
-- Posibles contradicciones con otros volúmenes:
+La relación Bell–Ryu atraviesa una experiencia extrema. La historia de Ryu se conecta con decisiones y pérdidas pasadas; no se la debe reducir solo a su trauma.
 
-## 6. Misterios, pistas y spoilers
-- Preguntas introducidas:
-- Pistas:
-- Revelaciones al lector:
-- Qué saben los personajes y desde cuándo:
-- Misterios resueltos:
-- Misterios que siguen abiertos:
-- Nivel de spoiler:
-- Fuente/localizador exacto:
+## Personajes vinculados
 
-## 7. Revisión de duplicados
-- Personas y alias comparados:
-- Eventos comparados por participantes/lugar/tiempo:
-- Lugares y nombres alternativos comparados:
-- Reglas y habilidades comparadas:
-- Duplicados fusionados:
-- Candidatos que permanecen sin resolver:
+- CHAR-RYUU-LION
+- DM-CHAR-BELL
 
-## 8. Pendientes y criterios de salida
-- [ ] Datos bibliográficos verificados.
-- [ ] Acontecimientos extraídos sin copiar texto extenso protegido.
-- [ ] Fuentes/localizadores anotados.
-- [ ] IDs enlazados con índices globales.
-- [ ] Orden de publicación separado de cronología interna.
-- [ ] Contradicciones y ambigüedades registradas.
-- [ ] Revisión de duplicados completada.
-- [ ] Catalog.json actualizado.
-- [ ] Validador de catálogo pasa.
+- **Arco de trabajo:** Gran Catarata · supervivencia.
+- **Continuidad:** `CONT-MAIN-LN`; no mezclar automáticamente con anime, manga, juegos, spin-offs ni AU.
+- **Fuente editorial:** [GA文庫 / SB Creative · volumen 14](https://ga.sbcr.jp/product/9784797396201/).
 
-## 9. Resumen de trabajo de la tanda
-- batch_id:
-- records_created:
-- records_updated:
-- source_checks:
-- duplicate_checks:
-- unresolved_conflicts:
-- reviewer_notes:
-- next_action:
+## Cotejo todavía pendiente
+
+- [ ] Registrar los capítulos y títulos en una edición concreta.
+- [ ] Extraer acontecimientos con IDs, participantes y localizadores exactos.
+- [ ] Verificar cambios de Falna, nivel, equipo, heridas, afiliaciones y relaciones.
+- [ ] Separar qué sabe cada personaje de lo que conoce el lector.
+- [ ] Comparar duplicados con los demás volúmenes.
+- **Estado de búsqueda:** `provisional_summary`; claim `DMR-008-CLM-014`; spoilers major.

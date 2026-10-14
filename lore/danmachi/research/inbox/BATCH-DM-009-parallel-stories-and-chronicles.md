@@ -1,12 +1,3 @@
----
-id: DANMACHI-RESEARCH-009
-universe: danmachi
-type: research
-status: provisional
-continuity_scope: mixed
-spoiler_level: major
----
-
 # DANMACHI-RESEARCH-009 · Historias paralelas y crónicas
 
 - Fecha de corte: 2026-10-12.

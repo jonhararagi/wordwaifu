@@ -1,22 +1,266 @@
 {
   "schemaVersion": 2,
   "universeId": "danmachi",
-  "title": "DanMachi Lore PoC",
-  "status": "provisional_structure_with_unverified_lore",
-  "note": "Catalog is a navigation and dedup aid. Records in draft/provisional state must not be used as decisive canon evidence. reservedIds are candidates not yet created as files. Additional character dossiers and research records are provisional until source review; don't treat unverified claims as definitive canon.",
+  "title": "DanMachi Lore · Corpus navegable con resúmenes provisionales",
+  "status": "provisional_summaries_with_source_labeled_claims",
+  "note": "El corpus incluye novela principal y líneas paralelas con continuidad etiquetada. Resumen editorial no equivale a cotejo de capítulo. No mezclar CONT-MAIN-LN, CONT-AR, CONT-ANIME o CONT-AU.",
   "records": [
     {
-      "id": "AU-EVT-LOKI-NAMES-OC-BELL-001",
-      "path": "events/au/AU-EVT-LOKI-NAMES-OC-BELL-001.md",
-      "type": "author_event",
+      "id": "DM-CANON-INDEX-001",
+      "path": "canon/00-indice-canon.md",
+      "type": "index",
       "tags": [
-        "OC",
+        "index",
+        "canon"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "DM-WORLD-001",
+      "path": "canon/01-mundo-orario.md",
+      "type": "setting",
+      "tags": [
+        "Orario",
+        "world",
+        "city"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-FALNA-001",
+      "path": "canon/02-falna-familias.md",
+      "type": "world_rule",
+      "tags": [
+        "Falna",
+        "Familia",
+        "deities"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-GUILD-001",
+      "path": "canon/03-dungeon-y-guild.md",
+      "type": "institution_and_location",
+      "tags": [
+        "Dungeon",
+        "Guild",
+        "registration"
+      ],
+      "status": "draft",
+      "priority": "critical"
+    },
+    {
+      "id": "DM-ADVENTURERS-001",
+      "path": "canon/04-aventureros-y-progresion.md",
+      "type": "world_rule",
+      "tags": [
+        "adventurers",
+        "status",
+        "levels"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-MONSTERS-001",
+      "path": "canon/05-monstruos-y-piedras-magicas.md",
+      "type": "world_rule",
+      "tags": [
+        "monsters",
+        "magic stones",
+        "Dungeon"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-CHAR-HESTIA",
+      "path": "characters/hestia.md",
+      "type": "character",
+      "tags": [
+        "Hestia",
+        "timeline"
+      ],
+      "status": "draft",
+      "priority": "critical"
+    },
+    {
+      "id": "DM-CHAR-LOKI",
+      "path": "characters/loki.md",
+      "type": "character",
+      "tags": [
         "Loki",
+        "Familia Loki"
+      ],
+      "status": "draft",
+      "priority": "high"
+    },
+    {
+      "id": "DM-CHAR-EINA",
+      "path": "characters/eina-tulle.md",
+      "type": "character",
+      "tags": [
+        "Eina Tulle",
+        "Eina",
+        "Guild"
+      ],
+      "status": "draft",
+      "priority": "critical"
+    },
+    {
+      "id": "DM-CHAR-BELL",
+      "path": "characters/bell-cranel.md",
+      "type": "character",
+      "tags": [
+        "Bell Cranel",
         "Bell",
-        "identity",
+        "identity"
+      ],
+      "status": "draft",
+      "priority": "high"
+    },
+    {
+      "id": "DM-CHAR-AIS",
+      "path": "characters/ais-wallenstein.md",
+      "type": "character",
+      "tags": [
+        "Ais Wallenstein",
+        "Ais",
+        "Familia Loki"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-CHAR-LOKI-LEADERS",
+      "path": "characters/finn-riveria-gareth.md",
+      "type": "character_group",
+      "tags": [
+        "Finn",
+        "Riveria",
+        "Gareth"
+      ],
+      "status": "draft",
+      "priority": "normal"
+    },
+    {
+      "id": "DM-FAM-HESTIA",
+      "path": "familias/hestia-familia.md",
+      "type": "familia",
+      "tags": [
+        "Hestia",
+        "Bell"
+      ],
+      "status": "draft",
+      "priority": "high"
+    },
+    {
+      "id": "DM-FAM-LOKI",
+      "path": "familias/loki-familia.md",
+      "type": "familia",
+      "tags": [
+        "Loki",
+        "roster"
+      ],
+      "status": "draft",
+      "priority": "high"
+    },
+    {
+      "id": "DM-TIMELINE-ALERTS",
+      "path": "timeline/01-alertas-cronologia.md",
+      "type": "chronology",
+      "tags": [
+        "timeline",
+        "Hestia",
+        "Bell",
+        "OC"
+      ],
+      "status": "provisional_inference",
+      "priority": "critical"
+    },
+    {
+      "id": "DM-EVENT-CANDIDATES-INDEX",
+      "path": "events/00-indice-candidatos.md",
+      "type": "index",
+      "tags": [
+        "events",
+        "timeline",
         "AU"
       ],
-      "status": "proposed_author_event",
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-DESCENT-001",
+      "path": "events/candidates/EVT-DM-DESCENT-001.md",
+      "type": "event",
+      "tags": [
+        "deities",
+        "ancient history"
+      ],
+      "status": "pending_verification",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-ZH-OEBD-001",
+      "path": "events/candidates/EVT-DM-ZH-OEBD-001.md",
+      "type": "event",
+      "tags": [
+        "Zeus Familia",
+        "Hera Familia",
+        "Black Dragon"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-ZH-FALL-001",
+      "path": "events/candidates/EVT-DM-ZH-FALL-001.md",
+      "type": "event",
+      "tags": [
+        "Zeus Familia",
+        "Hera Familia",
+        "history"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-HESTIA-DESCENT-001",
+      "path": "events/candidates/EVT-DM-HESTIA-DESCENT-001.md",
+      "type": "event",
+      "tags": [
+        "Hestia",
+        "timeline"
+      ],
+      "status": "pending_verification",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-BELL-MEETS-HESTIA-001",
+      "path": "events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Hestia",
+        "Familia"
+      ],
+      "status": "pending_verification",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-EINA-ADVISOR-001",
+      "path": "events/candidates/EVT-DM-EINA-ADVISOR-001.md",
+      "type": "event",
+      "tags": [
+        "Eina",
+        "Guild",
+        "Bell"
+      ],
+      "status": "pending_verification",
       "priority": "critical"
     },
     {
@@ -58,16 +302,188 @@
       "priority": "high"
     },
     {
+      "id": "AU-EVT-LOKI-NAMES-OC-BELL-001",
+      "path": "events/au/AU-EVT-LOKI-NAMES-OC-BELL-001.md",
+      "type": "author_event",
+      "tags": [
+        "OC",
+        "Loki",
+        "Bell",
+        "identity",
+        "AU"
+      ],
+      "status": "proposed_author_event",
+      "priority": "critical"
+    },
+    {
+      "id": "CHAR-RYUU-LION",
+      "path": "characters/ryuu-lion.md",
+      "type": "character",
+      "tags": [
+        "Ryu Lion",
+        "Ryuu Lion",
+        "Astrea Record",
+        "multi-era",
+        "Astrea Familia",
+        "Familia Astrea",
+        "Ryu",
+        "Ryuu"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ASTREA",
+      "path": "characters/astrea.md",
+      "type": "deity_character",
+      "tags": [
+        "Astrea",
+        "Astrea Familia",
+        "Astrea Record",
+        "Familia Astrea",
+        "Solingen"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
       "id": "CHAR-ALISE-LOVELACE",
       "path": "characters/alise-lovelace.md",
       "type": "character",
       "tags": [
         "Alise Lovelace",
         "Astrea Familia",
-        "Astrea Record"
+        "Astrea Record",
+        "Familia Astrea",
+        "Alise",
+        "Alise Lovell"
       ],
       "status": "provisional",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-FINN-DEIMNE",
+      "path": "characters/finn-deimne.md",
+      "type": "character",
+      "tags": [
+        "Finn Deimne",
+        "Loki Familia",
+        "leadership",
+        "command"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-FREYA",
+      "path": "characters/freya.md",
+      "type": "deity_character",
+      "tags": [
+        "Freya",
+        "Freya Familia",
+        "Bell",
+        "motivation",
+        "spoiler"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-OTTAR",
+      "path": "characters/ottar.md",
+      "type": "character",
+      "tags": [
+        "Ottar",
+        "Freya Familia",
+        "training",
+        "loyalty"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-KAGUYA",
+      "path": "characters/gojouno-kaguya.md",
+      "type": "character",
+      "tags": [
+        "Gojouno Kaguya",
+        "Kaguya",
+        "Familia Astrea",
+        "Astrea Record",
+        "Astrea Familia"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-LYRA",
+      "path": "characters/lyra.md",
+      "type": "character",
+      "tags": [
+        "Lyra",
+        "Familia Astrea",
+        "Astrea Record",
+        "Astrea Familia"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-ISKA-BRA",
+      "path": "characters/iska-bra.md",
+      "type": "character",
+      "tags": [
+        "Iska Bra",
+        "Iska",
+        "Astrea Familia",
+        "Astrea Record",
+        "Familia Astrea"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-MARIYU-LEAGE",
+      "path": "characters/maryuu-reage.md",
+      "type": "character",
+      "tags": [
+        "Mariyu Leage",
+        "Mariyu Reage",
+        "Maryuu Reage",
+        "Astrea Familia",
+        "Familia Astrea",
+        "Astrea Record"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-NOIN-UNIC",
+      "path": "characters/noin-unic.md",
+      "type": "character",
+      "tags": [
+        "Noin Unic",
+        "Astrea Familia",
+        "Astrea Record",
+        "Familia Astrea",
+        "Neoin Unick"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-NEZE-RANKETT",
+      "path": "characters/neze-rankett.md",
+      "type": "character",
+      "tags": [
+        "Neze Rankett",
+        "Astrea Familia",
+        "Astrea Record",
+        "Familia Astrea",
+        "Neese Ranquette"
+      ],
+      "status": "provisional",
+      "priority": "normal"
     },
     {
       "id": "CHAR-ASTA-KNOX",
@@ -79,6 +495,34 @@
         "Astrea Record",
         "Familia Astrea",
         "Asta Nox"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-RYANA-LIETZ",
+      "path": "characters/ryana-lietz.md",
+      "type": "character",
+      "tags": [
+        "Ryana Lietz",
+        "Astrea Familia",
+        "Astrea Record",
+        "Familia Astrea",
+        "Liana Leets"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-CELTY-SROWA",
+      "path": "characters/celty-srowa.md",
+      "type": "character",
+      "tags": [
+        "Celty Srowa",
+        "Astrea Familia",
+        "Astrea Record",
+        "Familia Astrea",
+        "Selty Throa"
       ],
       "status": "provisional",
       "priority": "normal"
@@ -99,33 +543,6 @@
       "priority": "normal"
     },
     {
-      "id": "CHAR-CELTY-SROWA",
-      "path": "characters/celty-srowa.md",
-      "type": "character",
-      "tags": [
-        "Celty Srowa",
-        "Astrea Familia",
-        "Astrea Record",
-        "Familia Astrea",
-        "Selty Throa"
-      ],
-      "status": "provisional",
-      "priority": "normal"
-    },
-    {
-      "id": "CHAR-FINN-DEIMNE",
-      "path": "characters/finn-deimne.md",
-      "type": "character",
-      "tags": [
-        "Finn Deimne",
-        "Loki Familia",
-        "leadership",
-        "command"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
       "id": "CHAR-ISELINA",
       "path": "characters/iselina.md",
       "type": "character",
@@ -138,128 +555,6 @@
       ],
       "status": "provisional",
       "priority": "normal"
-    },
-    {
-      "id": "CHAR-ISKA-BRA",
-      "path": "characters/iska-bra.md",
-      "type": "character",
-      "tags": [
-        "Iska Bra",
-        "Iska",
-        "Astrea Familia",
-        "Astrea Record",
-        "Familia Astrea"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "CHAR-KAGUYA",
-      "path": "characters/gojouno-kaguya.md",
-      "type": "character",
-      "tags": [
-        "Gojouno Kaguya",
-        "Kaguya",
-        "Familia Astrea",
-        "Astrea Record"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "CHAR-LYRA",
-      "path": "characters/lyra.md",
-      "type": "character",
-      "tags": [
-        "Lyra",
-        "Familia Astrea",
-        "Astrea Record"
-      ],
-      "status": "provisional",
-      "priority": "normal"
-    },
-    {
-      "id": "CHAR-MARIYU-LEAGE",
-      "path": "characters/maryuu-reage.md",
-      "type": "character",
-      "tags": [
-        "Mariyu Leage",
-        "Mariyu Reage",
-        "Maryuu Reage",
-        "Astrea Familia",
-        "Familia Astrea",
-        "Astrea Record"
-      ],
-      "status": "provisional",
-      "priority": "normal"
-    },
-    {
-      "id": "CHAR-NEZE-RANKETT",
-      "path": "characters/neze-rankett.md",
-      "type": "character",
-      "tags": [
-        "Neze Rankett",
-        "Astrea Familia",
-        "Astrea Record",
-        "Familia Astrea",
-        "Neese Ranquette"
-      ],
-      "status": "provisional",
-      "priority": "normal"
-    },
-    {
-      "id": "CHAR-NOIN-UNIC",
-      "path": "characters/noin-unic.md",
-      "type": "character",
-      "tags": [
-        "Noin Unic",
-        "Astrea Familia",
-        "Astrea Record",
-        "Familia Astrea",
-        "Neoin Unick"
-      ],
-      "status": "provisional",
-      "priority": "normal"
-    },
-    {
-      "id": "CHAR-OTTAR",
-      "path": "characters/ottar.md",
-      "type": "character",
-      "tags": [
-        "Ottar",
-        "Freya Familia",
-        "training",
-        "loyalty"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "CHAR-RYANA-LIETZ",
-      "path": "characters/ryana-lietz.md",
-      "type": "character",
-      "tags": [
-        "Ryana Lietz",
-        "Astrea Familia",
-        "Astrea Record",
-        "Familia Astrea",
-        "Liana Leets"
-      ],
-      "status": "provisional",
-      "priority": "normal"
-    },
-    {
-      "id": "CHAR-RYUU-LION",
-      "path": "characters/ryuu-lion.md",
-      "type": "character",
-      "tags": [
-        "Ryu Lion",
-        "Ryuu Lion",
-        "Astrea Record",
-        "multi-era"
-      ],
-      "status": "provisional",
-      "priority": "high"
     },
     {
       "id": "CHAR-SHAU",
@@ -290,351 +585,45 @@
       "priority": "normal"
     },
     {
-      "id": "DM-CHAR-AIS",
-      "path": "characters/ais-wallenstein.md",
-      "type": "character",
-      "tags": [
-        "Ais Wallenstein",
-        "Ais",
-        "Familia Loki"
-      ],
-      "status": "draft",
-      "priority": "normal"
-    },
-    {
-      "id": "DM-CHAR-BELL",
-      "path": "characters/bell-cranel.md",
-      "type": "character",
-      "tags": [
-        "Bell Cranel",
-        "Bell",
-        "identity"
-      ],
-      "status": "draft",
-      "priority": "high"
-    },
-    {
-      "id": "DM-CHAR-EINA",
-      "path": "characters/eina-tulle.md",
-      "type": "character",
-      "tags": [
-        "Eina Tulle",
-        "Eina",
-        "Guild"
-      ],
-      "status": "draft",
-      "priority": "critical"
-    },
-    {
-      "id": "DM-CHAR-HESTIA",
-      "path": "characters/hestia.md",
-      "type": "character",
-      "tags": [
-        "Hestia",
-        "timeline"
-      ],
-      "status": "draft",
-      "priority": "critical"
-    },
-    {
-      "id": "DM-CHAR-LOKI",
-      "path": "characters/loki.md",
-      "type": "character",
-      "tags": [
-        "Loki",
-        "Familia Loki"
-      ],
-      "status": "draft",
-      "priority": "high"
-    },
-    {
-      "id": "DM-CHAR-LOKI-LEADERS",
-      "path": "characters/finn-riveria-gareth.md",
-      "type": "character_group",
-      "tags": [
-        "Finn",
-        "Riveria",
-        "Gareth"
-      ],
-      "status": "draft",
-      "priority": "normal"
-    },
-    {
-      "id": "DM-TIMELINE-ALERTS",
-      "path": "timeline/01-alertas-cronologia.md",
-      "type": "chronology",
-      "tags": [
-        "timeline",
-        "Hestia",
-        "Bell",
-        "OC"
-      ],
-      "status": "provisional_inference",
-      "priority": "critical"
-    },
-    {
-      "id": "CHAR-ASTREA",
-      "path": "characters/astrea.md",
-      "type": "deity_character",
+      "id": "DM-FAM-ASTREA",
+      "path": "familias/astrea-familia.md",
+      "type": "familia",
       "tags": [
         "Astrea",
         "Astrea Familia",
+        "Ryu Lion",
+        "Alise Lovelace",
         "Astrea Record"
       ],
-      "status": "provisional",
+      "status": "source_checked_partial",
       "priority": "high"
     },
     {
-      "id": "CHAR-FREYA",
-      "path": "characters/freya.md",
-      "type": "deity_character",
-      "tags": [
-        "Freya",
-        "Freya Familia",
-        "Bell",
-        "motivation",
-        "spoiler"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "EVT-DM-ASTREA-DEPARTURE-001",
-      "path": "events/candidates/EVT-DM-ASTREA-DEPARTURE-001.md",
-      "type": "event",
-      "tags": [
-        "Astrea",
-        "Ryu",
-        "departure",
-        "history"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "EVT-DM-BELL-MEETS-HESTIA-001",
-      "path": "events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md",
-      "type": "event",
-      "tags": [
-        "Bell",
-        "Hestia",
-        "Familia"
-      ],
-      "status": "pending_verification",
-      "priority": "high"
-    },
-    {
-      "id": "EVT-DM-DESCENT-001",
-      "path": "events/candidates/EVT-DM-DESCENT-001.md",
-      "type": "event",
-      "tags": [
-        "deities",
-        "ancient history"
-      ],
-      "status": "pending_verification",
-      "priority": "high"
-    },
-    {
-      "id": "EVT-DM-EINA-ADVISOR-001",
-      "path": "events/candidates/EVT-DM-EINA-ADVISOR-001.md",
-      "type": "event",
-      "tags": [
-        "Eina",
-        "Guild",
-        "Bell"
-      ],
-      "status": "pending_verification",
-      "priority": "critical"
-    },
-    {
-      "id": "EVT-DM-HESTIA-DESCENT-001",
-      "path": "events/candidates/EVT-DM-HESTIA-DESCENT-001.md",
-      "type": "event",
-      "tags": [
-        "Hestia",
-        "timeline"
-      ],
-      "status": "pending_verification",
-      "priority": "critical"
-    },
-    {
-      "id": "EVT-DM-ZH-FALL-001",
-      "path": "events/candidates/EVT-DM-ZH-FALL-001.md",
+      "id": "EVT-DM-GREAT-QUESTS-001",
+      "path": "events/candidates/EVT-DM-GREAT-QUESTS-001.md",
       "type": "event",
       "tags": [
         "Zeus Familia",
         "Hera Familia",
-        "history"
+        "Behemoth",
+        "Leviathan",
+        "Three Great Quests"
       ],
-      "status": "pending_verification",
-      "priority": "critical"
-    },
-    {
-      "id": "EVT-DM-ZH-OEBD-001",
-      "path": "events/candidates/EVT-DM-ZH-OEBD-001.md",
-      "type": "event",
-      "tags": [
-        "Zeus Familia",
-        "Hera Familia",
-        "Black Dragon"
-      ],
-      "status": "pending_verification",
-      "priority": "critical"
-    },
-    {
-      "id": "DM-FAM-HESTIA",
-      "path": "familias/hestia-familia.md",
-      "type": "familia",
-      "tags": [
-        "Hestia",
-        "Bell"
-      ],
-      "status": "draft",
+      "status": "provisional_reference_checked",
       "priority": "high"
     },
     {
-      "id": "DM-FAM-LOKI",
-      "path": "familias/loki-familia.md",
-      "type": "familia",
-      "tags": [
-        "Loki",
-        "roster"
-      ],
-      "status": "draft",
-      "priority": "high"
-    },
-    {
-      "id": "DM-CANON-INDEX-001",
-      "path": "canon/00-indice-canon.md",
-      "type": "index",
-      "tags": [
-        "index",
-        "canon"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "DM-EVENT-CANDIDATES-INDEX",
-      "path": "events/00-indice-candidatos.md",
-      "type": "index",
-      "tags": [
-        "events",
-        "timeline",
-        "AU"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "DM-GUILD-001",
-      "path": "canon/03-dungeon-y-guild.md",
-      "type": "institution_and_location",
+      "id": "LOC-DUNGEON",
+      "path": "places/dungeon.md",
+      "type": "location",
       "tags": [
         "Dungeon",
-        "Guild",
-        "registration"
-      ],
-      "status": "draft",
-      "priority": "critical"
-    },
-    {
-      "id": "DANMACHI-RESEARCH-007",
-      "path": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "type": "research",
-      "tags": [
-        "Astrea Familia",
-        "Ryu",
-        "relationships",
-        "network"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "DANMACHI-RESEARCH-008",
-      "path": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
-      "type": "research",
-      "tags": [
-        "volumes",
-        "arcs",
-        "timeline"
-      ],
-      "status": "provisional",
-      "priority": "normal"
-    },
-    {
-      "id": "DANMACHI-RESEARCH-009",
-      "path": "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
-      "type": "research",
-      "tags": [
-        "side stories",
-        "chronicles",
-        "continuity"
-      ],
-      "status": "provisional",
-      "priority": "normal"
-    },
-    {
-      "id": "DANMACHI-RESEARCH-010",
-      "path": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
-      "type": "research",
-      "tags": [
-        "Astrea",
-        "Ryu",
-        "revenge",
-        "departure"
-      ],
-      "status": "provisional",
-      "priority": "high"
-    },
-    {
-      "id": "DM-WORLD-001",
-      "path": "canon/01-mundo-orario.md",
-      "type": "setting",
-      "tags": [
         "Orario",
-        "world",
-        "city"
+        "aventureros",
+        "exploración"
       ],
-      "status": "draft",
-      "priority": "normal"
-    },
-    {
-      "id": "DM-ADVENTURERS-001",
-      "path": "canon/04-aventureros-y-progresion.md",
-      "type": "world_rule",
-      "tags": [
-        "adventurers",
-        "status",
-        "levels"
-      ],
-      "status": "draft",
-      "priority": "normal"
-    },
-    {
-      "id": "DM-FALNA-001",
-      "path": "canon/02-falna-familias.md",
-      "type": "world_rule",
-      "tags": [
-        "Falna",
-        "Familia",
-        "deities"
-      ],
-      "status": "draft",
-      "priority": "normal"
-    },
-    {
-      "id": "DM-MONSTERS-001",
-      "path": "canon/05-monstruos-y-piedras-magicas.md",
-      "type": "world_rule",
-      "tags": [
-        "monsters",
-        "magic stones",
-        "Dungeon"
-      ],
-      "status": "draft",
-      "priority": "normal"
+      "status": "source_checked_partial",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -860,11 +849,6 @@
     },
     {
       "id": "LOC-ORARIO",
-      "type": "location",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "LOC-DUNGEON",
       "type": "location",
       "status": "candidate_not_created"
     },
@@ -1325,122 +1309,122 @@
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-01",
       "path": "volumes/main/volume-01.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-02",
       "path": "volumes/main/volume-02.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-03",
       "path": "volumes/main/volume-03.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-04",
       "path": "volumes/main/volume-04.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-05",
       "path": "volumes/main/volume-05.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-06",
       "path": "volumes/main/volume-06.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-07",
       "path": "volumes/main/volume-07.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-08",
       "path": "volumes/main/volume-08.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-09",
       "path": "volumes/main/volume-09.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-10",
       "path": "volumes/main/volume-10.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-11",
       "path": "volumes/main/volume-11.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-12",
       "path": "volumes/main/volume-12.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-13",
       "path": "volumes/main/volume-13.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-14",
       "path": "volumes/main/volume-14.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-15",
       "path": "volumes/main/volume-15.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-16",
       "path": "volumes/main/volume-16.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-17",
       "path": "volumes/main/volume-17.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-18",
       "path": "volumes/main/volume-18.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-19",
       "path": "volumes/main/volume-19.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-20",
       "path": "volumes/main/volume-20.md",
-      "type": "volume_stub",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
       "document_id": "DOC-CHARACTER-TEMPORAL-VARIANTS",
@@ -1465,99 +1449,127 @@
       "status": "present"
     },
     {
-      "document_id": "SOURCE-DMR-007",
-      "path": "sources/DMR-007-wiki-comunitaria.md",
-      "type": "secondary_source_register",
-      "status": "present"
-    },
-    {
       "document_id": "RESEARCH-DM-006",
-      "path": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
-      "type": "character_roster_batch",
+      "path": "research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md",
+      "type": "timeline_verification_batch",
       "status": "present"
     },
     {
-      "document_id": "VOLUME-MAIN-21",
+      "document_id": "RESEARCH-DM-007",
+      "path": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+      "type": "character_relationship_research",
+      "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-MAIN-VOLUME-21",
       "path": "volumes/main/volume-21.md",
-      "type": "main_light_novel_volume",
-      "status": "present"
+      "type": "volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
-      "document_id": "VOLUME-ASTREA-RECORD-01",
+      "document_id": "RESEARCH-DM-008",
+      "path": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "type": "main_story_volume_claim_index",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-ASTREA-RECORD-01",
       "path": "volumes/side/astrea-record-01.md",
-      "type": "side_story_volume",
-      "status": "present"
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
-      "document_id": "VOLUME-ASTREA-RECORD-02",
+      "document_id": "DOC-SIDE-ASTREA-RECORD-02",
       "path": "volumes/side/astrea-record-02.md",
-      "type": "side_story_volume",
-      "status": "present"
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
-      "document_id": "VOLUME-ASTREA-RECORD-03",
+      "document_id": "DOC-SIDE-ASTREA-RECORD-03",
       "path": "volumes/side/astrea-record-03.md",
-      "type": "side_story_volume",
-      "status": "present"
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
-      "document_id": "VOLUME-FAMILIA-CHRONICLE-ASFI",
-      "path": "volumes/side/familia-chronicle-asfi.md",
-      "type": "side_story",
-      "status": "present"
-    },
-    {
-      "document_id": "VOLUME-FAMILIA-CHRONICLE-FREYA",
-      "path": "volumes/side/familia-chronicle-freya.md",
-      "type": "side_story",
-      "status": "present"
-    },
-    {
-      "document_id": "VOLUME-FAMILIA-CHRONICLE-HAZE",
-      "path": "volumes/side/familia-chronicle-haze.md",
-      "type": "side_story",
-      "status": "present"
-    },
-    {
-      "document_id": "VOLUME-FAMILIA-CHRONICLE-RYU-01",
-      "path": "volumes/side/familia-chronicle-ryu-01.md",
-      "type": "side_story",
-      "status": "present"
-    },
-    {
-      "document_id": "VOLUME-FAMILIA-CHRONICLE-RYU-02",
-      "path": "volumes/side/familia-chronicle-ryu-02.md",
-      "type": "side_story",
-      "status": "present"
-    },
-    {
-      "document_id": "VOLUME-SWORD-ORATORIA-01",
+      "document_id": "DOC-SIDE-SWORD-ORATORIA-01",
       "path": "volumes/side/sword-oratoria-01.md",
-      "type": "side_story_volume",
-      "status": "present"
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
-      "document_id": "VOLUME-SWORD-ORATORIA-12",
+      "document_id": "DOC-SIDE-SWORD-ORATORIA-12",
       "path": "volumes/side/sword-oratoria-12.md",
-      "type": "side_story_volume",
-      "status": "present"
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
     },
     {
-      "document_id": "VOLUME-SWORD-ORATORIA-13",
+      "document_id": "DOC-SIDE-SWORD-ORATORIA-13",
       "path": "volumes/side/sword-oratoria-13.md",
-      "type": "side_story_volume",
-      "status": "present"
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-RYU-01",
+      "path": "volumes/side/familia-chronicle-ryu-01.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-RYU-02",
+      "path": "volumes/side/familia-chronicle-ryu-02.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-FREYA",
+      "path": "volumes/side/familia-chronicle-freya.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-ASFI",
+      "path": "volumes/side/familia-chronicle-asfi.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-HAZE",
+      "path": "volumes/side/familia-chronicle-haze.md",
+      "type": "side_volume_dossier",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "RESEARCH-DM-009",
+      "path": "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
+      "type": "parallel_story_claim_index",
+      "status": "present_provisional_summary"
+    },
+    {
+      "document_id": "RESEARCH-DM-010",
+      "path": "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
+      "type": "organization_dossier_claim_index",
+      "status": "present_partial_source_checked"
+    },
+    {
+      "document_id": "RESEARCH-DM-011",
+      "path": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "type": "organization_dossier_claim_index",
+      "status": "present_partial_source_checked"
+    },
+    {
+      "document_id": "RESEARCH-DM-012",
+      "path": "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+      "type": "organization_dossier_claim_index",
+      "status": "present_partial_source_checked"
     }
   ],
   "lastStructuredSync": {
-    "branch": "feature/danmachi-lore-poc",
-    "source": "GitHub recursive tree audit",
-    "treeSha": "19cd2abf885a52e955f672411215bc8173881cf8",
-    "trackedLoreFiles": 112,
-    "records": 32,
-    "reservedIds": 70,
-    "supportingDocuments": 80,
-    "sourceCommit": "7ad54c5e614619da1c00fac8ad27f015bbdb9c5d",
-    "syncNote": "Counts verified against the complete repository tree at sourceCommit. The following index/template correction changes file contents but not the 112 tracked paths."
+    "branch": "work/story-completion-danmachi-audit-2026-10",
+    "sourceCommit": "622369265b08712e4440087e7361f5151e9402d2",
+    "trackedLoreFiles": 165,
+    "records": 48,
+    "reservedIds": 67,
+    "supportingDocuments": 100,
+    "syncNote": "Extensión manual verificada: LOC-DUNGEON se promueve de ID reservado a registro navegable con fuente editorial oficial y límites explícitos. No equivale a un cotejo completo de pisos, reglas o capítulos."
   }
 }

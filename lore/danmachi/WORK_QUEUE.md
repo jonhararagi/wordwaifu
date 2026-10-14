@@ -158,9 +158,149 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Límite: búsqueda textual normalizada sobre los 30 claims actuales. No es IA, no usa RAG y no cubre toda la franquicia.
 
 
-## DANMACHI-COVERAGE-002 · Expedientes adicionales de Astrea Record
+## DANMACHI-RESEARCH-006 · Hestia/Bell y puerta de divergencia AU
+- Estado: PARTIAL; afirmaciones oficiales de cronología inicial y Astrea Record documentadas por separado; intervalo de seis meses para el descenso de Hestia sigue siendo evidencia secundaria.
+- Paquete: [DANMACHI-RESEARCH-006](research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md).
+- Fuente oficial: episodio 1 del anime indica que Bell llevaba medio mes como único miembro de Hestia Familia al ocurrir el incidente inicial; cronología oficial sitúa Astrea Record siete años antes y usa el término オラリオの暗黒期.
+- Fuente secundaria: DanMachi Wiki propone seis meses entre el descenso de Hestia y el inicio de la serie; no se eleva a canon aprobado sin localizador primario.
+- Decisión de autor pendiente: mantener cinco años de adelanto con override AU, cambiar la fecha o precisar el punto de referencia; aclarar si Bell Cranel existe aparte del OC.
+- Próxima prueba: conflicto de cronología sin override y aceptación de divergencia con override aprobado y acotado.
+- Veredicto: mejora documental incorporada; DanMachi global permanece PARTIAL y la historia AU no está escrita/validada por esta tanda.
 
-- Estado: integrados al catálogo local; verificación de fuentes primarias pendiente.
-- Añadidos 11 expedientes de personajes y cuatro paquetes de investigación sobre la red de Astrea Familia, el mapa de volúmenes, relatos paralelos y la salida de Astrea/venganza de Ryu.
-- Evento de salida de Astrea registrado como candidato provisional, no como hecho cerrado sin evidencia.
-- Próximo paso: revisar cada claim con fuente, localizador, continuidad, periodo y nivel de spoiler; no inferir amistad a partir de afiliación.
+
+## DANMACHI-RESEARCH-007 · Red de Astrea Familia y viaje de Ryu
+- Estado: PARTIAL; se añadieron relaciones explícitas de la adaptación, una sinopsis editorial y pistas de roster secundario claramente separadas.
+- Paquete: [BATCH-DM-007](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md).
+- Próxima tarea: cotejar la primera Familia, tragedia/Juggernaut, memorial y roster de Solingen con los volúmenes; no ascender fuentes comunitarias a canon aprobado sin localizadores.
+- Continuidad: perfiles de adaptación (`CONT-ANIME`), etapa histórica (`CONT-AR`), novela posterior (`CONT-MAIN-LN`) y análisis comparativo (`CROSS-CONTINUITY`) permanecen separados.
+
+
+## DANMACHI-RESEARCH-008 · Novela principal, volúmenes 1–21
+
+- Estado: dossiers de orientación incorporados; localizadores completos por capítulo pendientes.
+- Paquete: [afirmaciones y fuentes editoriales](research/inbox/BATCH-DM-008-main-story-volume-map.md).
+- Índice: [volúmenes principales](volumes/00-indice-volumenes-y-arcos.md).
+- Siguiente paso: extraer eventos por capítulo, crear fichas faltantes y conectar relaciones con tipo, estado temporal y fuente.
+- [x] Atomizar tres hechos de la sinopsis editorial del volumen 21 en claims recuperables y enlazarlos a la fuente oficial.
+- [ ] Conseguir/cotejar el texto íntegro del volumen 21 y añadir capítulo/página/sección; no elevar las sinopsis a evidencia de escena.
+- Mantener por separado CONT-MAIN-LN, CONT-ANIME, CONT-AR y CONT-AU. El volumen 22 figura anunciado para fecha futura al corte de esta tanda; no se inventa su trama ni un final.
+
+
+## DANMACHI-RESEARCH-009 — Historias paralelas y crónicas
+
+- Estado: 11 afirmaciones indexadas; resúmenes editoriales, no cotejo integral.
+- Paquete: `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md`.
+- Próximo trabajo: secuencia de eventos de Astrea Record, relaciones por integrante de Astrea Familia, sincronización de Sword Oratoria y extracción de escenas por Familia Chronicle.
+
+
+## DANMACHI-RESEARCH-010 · Familia Hestia: expediente de organización con fuentes
+- Estado: PARTIAL; ampliación incorporada en `familias/hestia-familia.md`.
+- [x] Registrar dos páginas oficiales de adaptación con IDs de fuente y localizadores descriptivos.
+- [x] Separar estado inicial de Bell y snapshot de roster de DanMachi IV.
+- [x] Añadir relaciones y utilidad narrativa sin convertirlas en relaciones universales o atemporales.
+- [x] Documentar unknowns sobre sede, economía completa, cambios de miembros y localizadores de novela.
+- [ ] Ejecutar/confirmar CI del commit final de la tanda.
+- [ ] Cotejar la misma estructura contra el texto de novela ligera, por volumen/capítulo, sin elevar automáticamente los perfiles de anime a canon de novela.
+- [ ] Repetir el trabajo para Familia Loki y Familia Astrea con relaciones por miembro y periodos.
+
+
+## DANMACHI-RESEARCH-011 · Familia Loki: expediente de liderazgo y relaciones
+- Estado: PARTIAL; ampliación integrada en `familias/loki-familia.md`.
+- [x] Registrar fuente oficial de Sword Oratoria y sus perfiles por nombre.
+- [x] Separar roles documentados (capitán, vicecapitana, veteranos) de inferencias sobre autoridad en escenas.
+- [x] Registrar ocho afirmaciones trazables con continuidad `CONT-SO`.
+- [x] Añadir reglas de AU para no sustituir a Bell ni reescribir el roster canónico por inferencia.
+- [ ] Confirmar CI del último commit, incluido el validador de catálogo y las pruebas de navegador.
+- [ ] Reconstruir las afiliaciones históricas por evento y por volumen; los perfiles promocionales no fijan la fecha de ingreso.
+- [ ] Continuar con Familia Astrea y el roster histórico de sus integrantes, manteniendo la procedencia secundaria claramente marcada.
+
+
+## DANMACHI-RESEARCH-012 · Familia Astrea: justicia y roster histórico
+- Estado: PARTIAL; expediente integrado en `familias/astrea-familia.md`.
+- [x] Crear un registro de Familia con ID estable y continuidad separada.
+- [x] Relacionar Astrea, Alise y Ryu con evidencia de sinopsis oficial.
+- [x] Añadir cuatro afirmaciones trazables y enlazarlas al registro de fuentes.
+- [x] Mantener Kaguya/Lyra como pistas secundarias, sin promoverlas a canon verificado.
+- [ ] Extender pruebas automatizadas a Familia Astrea y comprobar el CI del último commit.
+- [ ] Cotejar los volúmenes completos de *Astrea Record* para construir eventos y relaciones por escena.
+- [ ] Registrar roster histórico completo solo cuando existan fuentes identificables por integrante.
+
+
+## DANMACHI-RESEARCH-013 · Integración de Familias en búsqueda global
+- Estado: IMPLEMENTADO; confirmación completa de CI del commit más reciente pendiente.
+- Regresión de navegador encontrada en CI: el smoke tenía el total 75/75 codificado, pero el catálogo canónico ya contiene 80 entidades. Se corrigió la raíz: el test ahora obtiene el total de `data/catalog/mythic-arsenal.json`, exige que todos estén visibles y restablece los filtros antes de comprobarlo. El cambio no reduce la cobertura; valida contra la fuente de verdad. Evidencia del fallo anterior: workflows 38477415589 y 38477722186; ambos expiraron por la aserción de total en `tests/browser_smoke.cjs`.
+- [x] Añadir los paquetes 010–012 a la carga de `src/lore-corpus.js`.
+- [x] Registrar las fuentes oficiales nuevas en el directorio de fuentes en línea.
+- [x] Convertir 19 afirmaciones de Familia a campos legibles por el parser de recuperación.
+- [x] Añadir pruebas de búsqueda para estado inicial de Hestia Familia, liderazgo de Loki Familia y capitanía de Alise.
+- [x] Corregir IDs de claim duplicados detectados por la primera ejecución de CI.
+- [x] Separar el claim de Astrea histórica del perfil de adaptación para que una afirmación no mezcle CONT-AR y CONT-ANIME.
+- [ ] Confirmar que los workflows de recuperación, validación de catálogo, navegador y estructura concluyan con éxito en el último commit.
+- [x] Implementar búsqueda directa por entidades de tipo Familia en `searchEntities`; el filtro devuelve registros `familia` sin mezclar personajes/eventos. Regresión ampliada en `tests/test_lore_corpus.cjs` para Hestia, Loki, Astrea, variantes de consulta en español y abstención ante nombres de personajes. La ejecución CI del commit de prueba queda pendiente de evidencia.
+
+
+## DANMACHI-RESEARCH-011 · Estado bibliográfico actualizado (2026-10-13)
+- [x] Verificar la cronología oficial de Astrea Record como ancla relativa aproximada de siete años antes de la llegada de Bell.
+- [x] Verificar en GA Bunko el volumen principal 21 como último publicado comprobado.
+- [x] Registrar el volumen 22 como anunciado para el 2026-12-15, no como ya publicado.
+- [x] Actualizar ERA-10 y registrar fuentes DMR-011-SRC-001–003.
+- [ ] Volver a verificar el estado editorial después del 2026-12-15.
+- [ ] Cotejar los acontecimientos del volumen 21 con localizadores internos; la sinopsis editorial no basta para cerrar su contenido.
+
+
+## DANMACHI-RESEARCH-016 · Ancla histórica de las Tres Grandes Misiones
+- [x] Verificar en una referencia oficial de franquicia que Zeus Familia y Hera Familia son la respuesta conjunta para las derrotas de Behemoth y Leviathan.
+- [x] Registrar fuente y afirmación recuperable DMR-008-CLM-027 con continuidad auxiliar explícita.
+- [x] Crear el registro de evento `EVT-DM-GREAT-QUESTS-001`, enlazarlo al catálogo y a los índices de eventos/cronología sin declararlo cronológicamente completo.
+- [ ] Localizar en novela principal o relato oficial narrativo el periodo, las expediciones, roster y caída de Zeus/Hera Familia.
+- [ ] Verificar qué se afirma exactamente sobre la misión del Dragón Negro, sus bajas, supervivientes y consecuencias; no extrapolar desde la respuesta del cuestionario.
+
+## DANMACHI-RESEARCH-018 · Pista temporal del Dragón Negro
+- Estado: PRELIMINAR; la relación temporal no se promueve a claim canónico.
+- [x] Encontrar la ficha editorial oficial del volumen 15 (GA Bunko, ISBN 978-4-7973-9622-5).
+- [x] Registrar como pista no verificada que una copia no editorial contiene una referencia a cinco años; no usar esa copia como evidencia canónica ni como localizador.
+- [x] Comparar esa pista con el ancla oficial aproximada de siete años de *Astrea Record*, dejando explícito que «aprox. 12 años antes de Bell» es una deducción condicional.
+- [x] Comprobar la vista previa oficial del volumen 15: los términos buscados no dieron coincidencias; la vista previa no verifica el pasaje.
+- [ ] Verificar el pasaje en una edición legítima completa y obtener localizador interno estable.
+- [ ] Solo tras obtener localizador primario, decidir si registrar una relación temporal relativa en los eventos; no inferir año absoluto, roster ni causalidad institucional.
+- Regla de autoría: los datos ausentes permanecen desconocidos; los espacios para la historia propia se mantienen en `CONT-AU` y nunca se completan por inferencia.
+
+
+## DANMACHI-RESEARCH-019 — Triangulación inicial de wikis ES/EN/JA
+- Estado: PARTIAL / SECONDARY-LEAD-ONLY; se consultaron extractos de wiki en español e inglés y una wiki japonesa de DanMemo, más una página oficial japonesa para contraste de personajes.
+- Paquete: [DANMACHI-RESEARCH-019-wiki-triangulation-es-en-ja.md](research/inbox/DANMACHI-RESEARCH-019-wiki-triangulation-es-en-ja.md).
+- [x] Registrar enlaces exactos, idioma, límites de acceso y alcance de los extractos.
+- [x] Separar el «hace cinco años» del incidente Astrea/Juggernaut de la pista no verificada de Zeus/Hera; no son el mismo acontecimiento.
+- [x] Registrar como pistas secundarias los nombres/niveles de Zeus Familia y el supuesto piso 71, sin elevarlos a canon aprobado.
+- [ ] Rastrear las referencias de las wikis a novela, Astrea Record, Sword Oratoria, DanMemo u otras fuentes oficiales.
+- [ ] Verificar roster histórico, niveles, récord real de exploración y fecha/efectos de la expulsión mediante fuentes con localizadores.
+- [ ] Incorporar claims recuperables solo después de identificar evidencia suficiente y continuidad adecuada.
+- Regla: las wikis ayudan a encontrar y traducir datos; la coincidencia entre wikis no equivale a confirmación primaria. No rellenar historias AU ni incógnitas autorales.
+
+
+### Seguimiento de DANMACHI-RESEARCH-019 — fuentes originales rastreadas (2026-10-13)
+- [x] Abrir la publicación original de Fujino Omori citada por la ficha española de Meteria: `note.com/fujinoomori/n/n629829ac3fe4`.
+- [x] Registrar que el texto describe a Meteria a través de Alfia, pero usa un escenario alternativo en el que Alfia/Zald crían a Bell; no importar sus sucesos a la continuidad principal.
+- [x] Localizar la ficha editorial oficial de *Familia Chronicle: Episode Freya* (GA Bunko, ISBN 978-4-8156-0464-6), que confirma la obra como fuente potencial sobre el pasado de Ottar.
+- [ ] Cotejar en una edición legítima de *Episode Freya* la escena de los aventureros nivel 8/9 y obtener localizador interno antes de aprobar nombres, niveles o cronología.
+- [x] Recuperar el contenido visible original de los dos tuits de Omori citados; registrar por separado qué dice cada uno y no extrapolar el segundo a la Emperatriz.
+- [x] Localizar el lector oficial de vista previa de *Episode Freya* desde el portal de DanMachi; los extractos anunciados son «最強の起源» y «それぞれの昔日».
+- [x] Registrar que el lector no expuso el texto en la herramienta de consulta; la escena nivel 8/9 sigue sin cotejo primario.
+- [x] Primer intento de abrir los dos tuits: X/Twitter no devolvió contenido en esa sesión.
+- [x] Reintento mediante extracción directa de página: ambos textos y fechas se recuperaron; el del 9 de julio describe una posibilidad hipotética de Alfia frente a la Emperatriz de nivel 9, y el del 15 de julio trata de una vicecapitana sin identificar por sí solo a la Emperatriz.
+- [x] Reintentar el visor oficial BinB embebido: tampoco expone el texto de las páginas, por lo que el pasaje nivel 8/9 de Episode Freya sigue sin localizador primario.
+
+- Paquete actualizado: [DANMACHI-RESEARCH-019](research/inbox/DANMACHI-RESEARCH-019-wiki-triangulation-es-en-ja.md).
+- Regla de continuidad: publicación del autor no equivale automáticamente a continuidad principal; el relato alternativo se etiqueta como tal. Los campos de historia propia AU siguen vacíos hasta que el autor los complete.
+
+
+## DANMACHI-RESEARCH-020 · Lugares principales y topología del Dungeon
+
+- Estado: PARTIAL; primera ficha de lugar integrada al catálogo navegable.
+- [x] Añadir `places/dungeon.md` con identidad, función narrativa, relaciones hacia Orario/Guild/Bell/Hestia y límites de certeza.
+- [x] Registrar la ficha editorial oficial de GA文庫 para el volumen 1 como `DMR-012-SRC-001`; la fuente respalda la descripción general de Orario y el Dungeon, no detalles de pisos ni escenas concretas.
+- [x] Promover `LOC-DUNGEON` de ID reservado a registro activo; actualizar el índice de lugares y validar unicidad de IDs.
+- [ ] Crear fichas separadas para Guild como institución y sede física, Babel, Hostess of Fertility y residencia de Hestia cuando las fuentes permitan definir su alcance.
+- [ ] Cotejar pisos, accesos, monstruos, recursos, reglas de expedición y peligros con fuentes por volumen/capítulo.
+- [ ] Añadir enlaces inversos desde los índices de canon, eventos y personajes solo cuando el destino sea una relación sustentada.
+- Regla: la sinopsis editorial es fuente oficial de alcance general, no sustituto del texto íntegro; no inventar geografía ni localizadores.

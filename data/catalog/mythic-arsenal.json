@@ -1,0 +1,3814 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "mythic-arsenal-v1",
+  "title": "Atlas de entidades, reliquias y cartas míticas",
+  "language": "es",
+  "purpose": "Base creativa para historias de invocación, avatares, reencarnaciones y armas legendarias.",
+  "rules": {
+    "statusValues": [
+      "mythology_reference",
+      "historical_reference",
+      "creative_adaptation",
+      "original"
+    ],
+    "truthPolicy": "Las descripciones de tradición son resúmenes prudentes; las habilidades de combate, rarezas, costes y efectos jugables se etiquetan como adaptación creativa.",
+    "respectPolicy": "Las tradiciones vivas se tratan como culturas, no como listas de poderes intercambiables. Registrar variantes regionales y evitar afirmar que existe una única versión definitiva.",
+    "navigation": "Cada registro tiene ID estable, relaciones por ID y tags de búsqueda."
+  },
+  "entities": [
+    {
+      "id": "LAT-MAP-PILLAN",
+      "name": "Pillán",
+      "kind": "mythic_entity",
+      "tradition": "Mapuche",
+      "region": "Wallmapu / sur andino",
+      "status": "mythology_reference",
+      "summary": "Seres espirituales poderosos vinculados en distintas narraciones mapuche con fuerzas volcánicas, tormentas y antepasados; las interpretaciones varían por fuente y contexto.",
+      "creativeHook": "Una presencia de fuego y memoria territorial que no puede ser dominada como una simple herramienta.",
+      "tags": [
+        "latinoamericano",
+        "mapuche",
+        "fuego",
+        "tormenta",
+        "espíritu"
+      ],
+      "relations": [
+        {
+          "type": "tradition_context",
+          "targetId": "LAT-MAP-TRENGT"
+        },
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "sourceNotes": "No asignar una jerarquía o biografía única a todas las versiones.",
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [
+        "Pillán",
+        "Pillanes (plural en algunas fuentes)"
+      ],
+      "attributes": [
+        "fuego",
+        "tormenta"
+      ],
+      "domains": [
+        "fuego",
+        "tormenta"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-MAP-TRENGT",
+      "name": "Treng Treng y Kai Kai",
+      "kind": "mythic_pair",
+      "tradition": "Mapuche",
+      "region": "Wallmapu / sur andino",
+      "status": "mythology_reference",
+      "summary": "Serpientes poderosas asociadas en relatos mapuche con tierra y agua; el enfrentamiento explica un gran cataclismo y la supervivencia de la humanidad en distintas versiones.",
+      "creativeHook": "Dos cartas rivales: una altera el terreno y otra domina inundaciones. El conflicto entre ellas puede ser una condición narrativa, no una simple combinación de daño.",
+      "tags": [
+        "latinoamericano",
+        "mapuche",
+        "serpiente",
+        "agua",
+        "tierra",
+        "cataclismo"
+      ],
+      "relations": [
+        {
+          "type": "paired_myth",
+          "targetId": "LAT-MAP-PILLAN"
+        },
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING",
+        "SRC-SCIELO-TRENTREN-CAICAI"
+      ],
+      "aliases": [
+        "Trengtreng y Kaikai",
+        "Treng-Treng y Kai-Kai"
+      ],
+      "attributes": [
+        "agua",
+        "tierra",
+        "cataclismo"
+      ],
+      "domains": [
+        "agua",
+        "tierra",
+        "cataclismo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo.",
+      "researchProfile": {
+        "narrativeContext": "Un estudio publicado en SciELO describe a Trentrenvilú y Caicaivilú como serpientes contrapuestas en relatos sobre la inundación y la supervivencia humana. La versión resumida habla de refugio en zonas altas y de transformaciones de quienes no alcanzan a escapar.",
+        "documentedVariants": "El artículo sitúa la circulación del relato en La Araucanía y Chiloé y revisa varios registros escritos históricos. No se debe asumir que los nombres, episodios ni la interpretación cultural sean idénticos en todas las comunidades.",
+        "sourceLimitations": "Síntesis secundaria de un artículo académico; las fuentes coloniales y folklóricas citadas deben leerse en su contexto. Esta ficha no sustituye versiones orales comunitarias ni permite generalizar a todos los pueblos mapuche.",
+        "creativeBoundary": "Las mecánicas de control del agua, elevación del terreno o cartas rivales son propuestas de ficción. No son poderes de juego documentados en la fuente."
+      }
+    },
+    {
+      "id": "LAT-TEH-ELAL",
+      "name": "Elal",
+      "kind": "culture_hero",
+      "tradition": "Tehuelche / Aónikenk",
+      "region": "Patagonia",
+      "status": "mythology_reference",
+      "summary": "Héroe cultural de relatos tehuelches asociado con el orden del mundo y la transmisión de conocimientos; los relatos tienen variantes.",
+      "creativeHook": "Invocación de exploración y supervivencia que enseña técnicas o abre rutas, en vez de ser únicamente un combatiente.",
+      "tags": [
+        "latinoamericano",
+        "tehuelche",
+        "patagonia",
+        "héroe cultural",
+        "viaje"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING",
+        "SRC-MUSEO-ROCA-ELAL-FIRE",
+        "SRC-INAPL-ELAL-CYCLE"
+      ],
+      "aliases": [],
+      "attributes": [
+        "viaje"
+      ],
+      "domains": [
+        "viaje"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo.",
+      "researchProfile": {
+        "narrativeContext": "El Museo Roca presenta a Elal dentro de relatos tehuelches sobre el origen del fuego: el fuego se obtiene para que las personas puedan cocinar y afrontar el frío patagónico. La institución señala que las narraciones fueron recogidas de distintos interlocutores tehuelches por Alejandra Siffredi en la década de 1960.",
+        "documentedVariants": "El estudio de Alejandra Siffredi analiza el ciclo de Elal y la relación entre mito, conciencia histórica y contacto intercultural. El corpus incluye variantes y no debe congelarse como una biografía única.",
+        "sourceLimitations": "La nota del museo es una síntesis divulgativa; el artículo académico ofrece un marco de análisis del ciclo, no una licencia para fusionar todos los episodios en una sola versión.",
+        "creativeBoundary": "Una función jugable de guía, supervivencia o transmisión del conocimiento puede inspirarse en estos temas, pero las estadísticas, invocaciones y poderes de combate deben etiquetarse como creación original."
+      }
+    },
+    {
+      "id": "LAT-GUA-POMBERO",
+      "name": "Pombero",
+      "kind": "folklore_entity",
+      "tradition": "Guaraní y folclores regionales",
+      "region": "Paraguay y nordeste argentino, con variantes regionales",
+      "status": "mythology_reference",
+      "summary": "Figura del folclore regional asociada con el monte, la noche y reglas de respeto o reciprocidad que cambian según la tradición local.",
+      "creativeHook": "Carta de sigilo, rastreo y pactos: sus favores tienen obligaciones y no se activan si el portador rompe una regla acordada.",
+      "tags": [
+        "latinoamericano",
+        "guaraní",
+        "folclore",
+        "monte",
+        "sigilo",
+        "pacto"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING",
+        "SRC-BCN-PY-POMBERO-JASY",
+        "SRC-TAPEAVIRU-PARAGUAY-SURVEY"
+      ],
+      "aliases": [
+        "Pomberito (variante regional)"
+      ],
+      "attributes": [
+        "monte",
+        "sigilo",
+        "pacto"
+      ],
+      "domains": [
+        "monte",
+        "sigilo",
+        "pacto"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo.",
+      "researchProfile": {
+        "narrativeContext": "La Biblioteca del Congreso Nacional de Paraguay registra una investigación de 2005 dedicada a creencias contemporáneas sobre Pombero y Jasy Jateré. La Fundación Tapé Avirú documenta un sondeo de 2020 sobre conocimiento actual de personajes mitológicos paraguayos e incluye al Pombero.",
+        "documentedVariants": "Las fuentes consultadas aquí acreditan investigación y presencia cultural contemporánea, pero no proporcionan un inventario exhaustivo de versiones orales locales. Las variantes concretas deben añadirse solo al consultar sus textos o testimonios.",
+        "sourceLimitations": "La ficha de la Biblioteca es metadato bibliográfico y el sondeo de la Fundación mide reconocimiento actual; ninguno de los dos debe presentarse como una fuente primaria completa del relato.",
+        "creativeBoundary": "El sigilo, rastreo y contrato de reciprocidad del campo creativeHook son ideas de adaptación. No deben venderse como poderes tradicionales probados por estos registros bibliográficos."
+      }
+    },
+    {
+      "id": "LAT-GUA-JASYJATERE",
+      "name": "Jasy Jateré",
+      "kind": "folklore_entity",
+      "tradition": "Guaraní y folclores regionales",
+      "region": "Paraguay y regiones vecinas",
+      "status": "mythology_reference",
+      "summary": "Ser del folclore guaraní con representaciones regionales relacionadas con la siesta, el monte y la infancia; no existe una ficha única universal.",
+      "creativeHook": "Entidad de distracción, espejismos y control del ritmo del combate; limitar su efecto a un área y una ventana temporal.",
+      "tags": [
+        "latinoamericano",
+        "guaraní",
+        "folclore",
+        "ilusión",
+        "tiempo"
+      ],
+      "relations": [
+        {
+          "type": "related_tradition",
+          "targetId": "LAT-GUA-POMBERO"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING",
+        "SRC-BCN-PY-POMBERO-JASY",
+        "SRC-TAPEAVIRU-PARAGUAY-SURVEY"
+      ],
+      "aliases": [],
+      "attributes": [
+        "ilusión",
+        "tiempo"
+      ],
+      "domains": [
+        "ilusión",
+        "tiempo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo.",
+      "researchProfile": {
+        "narrativeContext": "El catálogo de la Biblioteca del Congreso Nacional registra trabajos sobre Jasy Jateré, incluido un estudio de 2005 que también aborda creencias sobre Pombero. La Fundación Tapé Avirú lo incluye entre las figuras consultadas en su sondeo paraguayo de 2020.",
+        "documentedVariants": "La información recuperada acredita que existen estudios y registros contemporáneos sobre la figura, pero no basta para resumir con seguridad todos los motivos regionales ni sus cambios históricos.",
+        "sourceLimitations": "Los metadatos de catálogo no sustituyen la lectura de las investigaciones. No se agregan aquí detalles del relato que no estén visibles en las fuentes consultadas.",
+        "creativeBoundary": "Ilusión, distracción o alteración temporal son opciones de diseño ficticio; no son afirmaciones tradicionales respaldadas por estas referencias."
+      }
+    },
+    {
+      "id": "LAT-GUA-KURUPI",
+      "name": "Kurupí",
+      "kind": "folklore_entity",
+      "tradition": "Guaraní y folclores regionales",
+      "region": "Paraguay y nordeste argentino",
+      "status": "mythology_reference",
+      "summary": "Figura del folclore con variantes notables en su apariencia y función narrativa según región y época.",
+      "creativeHook": "Diseñar una versión propia centrada en ataduras, trampas o control del espacio, identificándola claramente como adaptación.",
+      "tags": [
+        "latinoamericano",
+        "guaraní",
+        "folclore",
+        "trampa",
+        "atadura"
+      ],
+      "relations": [
+        {
+          "type": "related_tradition",
+          "targetId": "LAT-GUA-POMBERO"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [
+        "Kurupí",
+        "Kurupi"
+      ],
+      "attributes": [
+        "trampa",
+        "atadura"
+      ],
+      "domains": [
+        "trampa",
+        "atadura"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-BRA-CURUPIRA",
+      "name": "Curupira",
+      "kind": "folklore_entity",
+      "tradition": "Folclore brasileño",
+      "region": "Brasil",
+      "status": "mythology_reference",
+      "summary": "Protector del bosque en muchas versiones, reconocible por sus pies orientados hacia atrás y su capacidad de desorientar a quienes dañan el monte.",
+      "creativeHook": "Invocación defensiva de territorio: distorsiona rastros y protege aliados dentro de un bosque, pero pierde fuerza en entornos artificiales.",
+      "tags": [
+        "latinoamericano",
+        "brasileño",
+        "bosque",
+        "protección",
+        "rastreo"
+      ],
+      "relations": [
+        {
+          "type": "related_tradition",
+          "targetId": "LAT-BRA-BOITATA"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [],
+      "attributes": [
+        "bosque",
+        "protección",
+        "rastreo"
+      ],
+      "domains": [
+        "bosque",
+        "protección",
+        "rastreo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-BRA-BOITATA",
+      "name": "Boitatá",
+      "kind": "folklore_entity",
+      "tradition": "Folclore brasileño",
+      "region": "Brasil",
+      "status": "mythology_reference",
+      "summary": "Ser legendario representado a menudo como una gran serpiente de fuego o luz, asociado con la protección de campos y vegetación frente al fuego destructivo.",
+      "creativeHook": "Carta de luz y fuego que detecta amenazas en la oscuridad; su poder aumenta al proteger un lugar, no al arrasarlo.",
+      "tags": [
+        "latinoamericano",
+        "brasileño",
+        "serpiente",
+        "fuego",
+        "luz",
+        "protección"
+      ],
+      "relations": [
+        {
+          "type": "related_tradition",
+          "targetId": "LAT-BRA-CURUPIRA"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [],
+      "attributes": [
+        "fuego",
+        "luz",
+        "protección"
+      ],
+      "domains": [
+        "fuego",
+        "luz",
+        "protección"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-BRA-IARA",
+      "name": "Iara",
+      "kind": "folklore_entity",
+      "tradition": "Folclore brasileño",
+      "region": "Amazonía y Brasil, con variaciones",
+      "status": "mythology_reference",
+      "summary": "Figura acuática del folclore brasileño que suele aparecer como mujer vinculada a ríos, canto y atracción peligrosa; las versiones varían.",
+      "creativeHook": "Carta de canto, percepción y control acuático. El coste puede ser que la invocación atraiga atención o exija agua cercana.",
+      "tags": [
+        "latinoamericano",
+        "brasileño",
+        "agua",
+        "canto",
+        "encanto"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [],
+      "attributes": [
+        "agua",
+        "canto",
+        "encanto"
+      ],
+      "domains": [
+        "agua",
+        "canto",
+        "encanto"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-AND-PACHAMAMA",
+      "name": "Pachamama",
+      "kind": "deity",
+      "tradition": "Tradiciones andinas",
+      "region": "Andes centrales y meridionales",
+      "status": "mythology_reference",
+      "summary": "Figura sagrada de la tierra y la fertilidad en diversas tradiciones andinas vivas; sus significados y prácticas dependen de la comunidad y región.",
+      "creativeHook": "No tratarla como una mascota invocable. Puede funcionar mejor como pacto territorial, obligación de reciprocidad o fuerza que responde a acciones del protagonista.",
+      "tags": [
+        "latinoamericano",
+        "andino",
+        "tierra",
+        "fertilidad",
+        "reciprocidad",
+        "tradición viva"
+      ],
+      "relations": [
+        {
+          "type": "thematic_counterpart",
+          "targetId": "LAT-AND-SUPAY"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [],
+      "attributes": [
+        "tierra",
+        "fertilidad",
+        "reciprocidad",
+        "tradición viva"
+      ],
+      "domains": [
+        "tierra",
+        "fertilidad",
+        "reciprocidad",
+        "tradición viva"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-AND-INTI",
+      "name": "Inti",
+      "kind": "deity",
+      "tradition": "Inca / tradiciones andinas",
+      "region": "Andes",
+      "status": "mythology_reference",
+      "summary": "Deidad solar central en la religión estatal inca; las prácticas e interpretaciones históricas requieren contexto y no equivalen a una única tradición andina actual.",
+      "creativeHook": "Reliquia solar que revela verdades bajo luz directa, pero no puede crear información que el portador desconoce.",
+      "tags": [
+        "latinoamericano",
+        "inca",
+        "sol",
+        "luz",
+        "realeza"
+      ],
+      "relations": [
+        {
+          "type": "related_deity",
+          "targetId": "LAT-AND-VIRACOCHA"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [],
+      "attributes": [
+        "sol",
+        "luz",
+        "realeza"
+      ],
+      "domains": [
+        "sol",
+        "luz",
+        "realeza"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-AND-VIRACOCHA",
+      "name": "Viracocha",
+      "kind": "deity_creator",
+      "tradition": "Inca / Andes",
+      "region": "Andes",
+      "status": "mythology_reference",
+      "summary": "Deidad creadora en relatos andinos e incas, con versiones y nombres que varían según fuentes y contextos históricos.",
+      "creativeHook": "Entidad de creación y restauración con límites severos: puede recomponer estructuras, pero no devolver sin coste una vida perdida.",
+      "tags": [
+        "latinoamericano",
+        "andino",
+        "inca",
+        "creación",
+        "orden"
+      ],
+      "relations": [
+        {
+          "type": "related_deity",
+          "targetId": "LAT-AND-INTI"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [],
+      "attributes": [
+        "creación",
+        "orden"
+      ],
+      "domains": [
+        "creación",
+        "orden"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-AND-SUPAY",
+      "name": "Supay",
+      "kind": "underworld_figure",
+      "tradition": "Andina; usos históricos y regionales diversos",
+      "region": "Andes",
+      "status": "mythology_reference",
+      "summary": "Nombre y figura asociados en distintas fuentes con el mundo subterráneo y entidades de ese ámbito; la interpretación fue cambiando con el contacto colonial.",
+      "creativeHook": "Pacto de descenso, sombras o resistencia al miedo, con cláusulas y consecuencias explícitas. No reducir todas las creencias andinas a una equivalencia simple con el diablo cristiano.",
+      "tags": [
+        "latinoamericano",
+        "andino",
+        "inframundo",
+        "sombra",
+        "pacto"
+      ],
+      "relations": [
+        {
+          "type": "thematic_counterpart",
+          "targetId": "LAT-AND-PACHAMAMA"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [],
+      "attributes": [
+        "inframundo",
+        "sombra",
+        "pacto"
+      ],
+      "domains": [
+        "inframundo",
+        "sombra",
+        "pacto"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-MEX-QUETZALCOATL",
+      "name": "Quetzalcóatl",
+      "kind": "deity",
+      "tradition": "Nahua / mesoamericana",
+      "region": "Centro de México y tradiciones relacionadas",
+      "status": "mythology_reference",
+      "summary": "Deidad mesoamericana asociada, según época y tradición, con la serpiente emplumada, conocimiento, viento y otros dominios.",
+      "creativeHook": "Carta de conocimiento, movilidad aérea y renovación. La invocación puede requerir que el portador comparta o enseñe algo en lugar de acumular poder.",
+      "tags": [
+        "latinoamericano",
+        "mesoamericano",
+        "nahua",
+        "serpiente emplumada",
+        "viento",
+        "conocimiento"
+      ],
+      "relations": [
+        {
+          "type": "related_deity",
+          "targetId": "LAT-MEX-TEZCATLIPOCA"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [
+        "Quetzalcóatl",
+        "Quetzalcoatl"
+      ],
+      "attributes": [
+        "mesoamericano",
+        "serpiente emplumada",
+        "viento",
+        "conocimiento"
+      ],
+      "domains": [
+        "mesoamericano",
+        "serpiente emplumada",
+        "viento",
+        "conocimiento"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-MEX-TEZCATLIPOCA",
+      "name": "Tezcatlipoca",
+      "kind": "deity",
+      "tradition": "Nahua / mexica",
+      "region": "Centro de México",
+      "status": "mythology_reference",
+      "summary": "Deidad compleja vinculada, entre otros aspectos, con la noche, el destino, el conflicto y el espejo humeante; sus atributos dependen del contexto ritual e histórico.",
+      "creativeHook": "Carta de engaño y percepción que muestra posibilidades, pero cada uso revela también algo del invocador.",
+      "tags": [
+        "latinoamericano",
+        "mexica",
+        "noche",
+        "destino",
+        "espejo",
+        "engaño"
+      ],
+      "relations": [
+        {
+          "type": "thematic_rival",
+          "targetId": "LAT-MEX-QUETZALCOATL"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [
+        "Tezcatlipoca"
+      ],
+      "attributes": [
+        "noche",
+        "destino",
+        "espejo",
+        "engaño"
+      ],
+      "domains": [
+        "noche",
+        "destino",
+        "espejo",
+        "engaño"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-MEX-HUITZILOPOCHTLI",
+      "name": "Huitzilopochtli",
+      "kind": "deity",
+      "tradition": "Mexica",
+      "region": "Centro de México",
+      "status": "mythology_reference",
+      "summary": "Deidad mexica vinculada con el sol y la guerra, de importancia central en la religión estatal mexica.",
+      "creativeHook": "Manifestación de avance y voluntad de combate con alto coste de agotamiento y consecuencias sociales en el mundo de la historia.",
+      "tags": [
+        "latinoamericano",
+        "mexica",
+        "sol",
+        "guerra",
+        "voluntad"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "WEAPON-MACUAHUITL"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [
+        "Huitzilopochtli"
+      ],
+      "attributes": [
+        "sol",
+        "guerra",
+        "voluntad"
+      ],
+      "domains": [
+        "sol",
+        "guerra",
+        "voluntad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-MAY-IXCHEL",
+      "name": "Ix Chel",
+      "kind": "deity",
+      "tradition": "Maya",
+      "region": "Área maya",
+      "status": "mythology_reference",
+      "summary": "Deidad maya con asociaciones que pueden incluir medicina, parto, tejido y aspectos lunares en fuentes y periodos concretos; las atribuciones no deben mezclarse sin contexto.",
+      "creativeHook": "Carta de restauración, tejido de barreras o tratamiento de heridas; sanar no borra automáticamente trauma ni consecuencias.",
+      "tags": [
+        "latinoamericano",
+        "maya",
+        "sanación",
+        "tejido",
+        "luna"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [],
+      "attributes": [
+        "sanación",
+        "tejido",
+        "luna"
+      ],
+      "domains": [
+        "sanación",
+        "tejido",
+        "luna"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "LAT-MAY-HERO-TWINS",
+      "name": "Hunahpú e Ixbalanqué",
+      "kind": "hero_pair",
+      "tradition": "Maya K’iche’ · Popol Vuh",
+      "region": "Tierras altas de Guatemala",
+      "status": "mythology_reference",
+      "summary": "Gemelos heroicos del Popol Vuh que atraviesan pruebas del inframundo mediante ingenio, cooperación y transformación.",
+      "creativeHook": "Dos cartas que funcionan mejor juntas: una prepara la solución y la otra ejecuta el engaño; separarlas reduce sus opciones.",
+      "tags": [
+        "latinoamericano",
+        "maya",
+        "Popol Vuh",
+        "gemelos",
+        "ingenio",
+        "inframundo"
+      ],
+      "relations": [
+        {
+          "type": "paired_myth",
+          "targetId": "LAT-MAY-IXCHEL"
+        }
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING",
+        "SRC-POPOL-VUH"
+      ],
+      "aliases": [
+        "Hunahpú e Ixbalanqué",
+        "Hunahpu and Xbalanque"
+      ],
+      "attributes": [
+        "Popol Vuh",
+        "gemelos",
+        "ingenio",
+        "inframundo"
+      ],
+      "domains": [
+        "Popol Vuh",
+        "gemelos",
+        "ingenio",
+        "inframundo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "WEAPON-MACUAHUITL",
+      "name": "Macuahuitl",
+      "kind": "historical_weapon",
+      "tradition": "Mexica / Mesoamérica",
+      "region": "Centro de México",
+      "status": "historical_reference",
+      "summary": "Arma histórica de madera con filos de obsidiana; no es una deidad ni debe etiquetarse como arma sobrenatural histórica.",
+      "creativeHook": "Reliquia de corte que pierde filo o se astilla si se fuerza contra una defensa inadecuada; cualquier magia añadida será una adaptación propia.",
+      "tags": [
+        "latinoamericano",
+        "mesoamericano",
+        "mexica",
+        "arma histórica",
+        "obsidiana"
+      ],
+      "relations": [
+        {
+          "type": "associated_with",
+          "targetId": "LAT-MEX-HUITZILOPOCHTLI"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma histórica",
+        "associatedFigureIds": [],
+        "documentedCapabilities": [
+          "Arma de madera con filos de obsidiana descrita en fuentes históricas sobre Mesoamérica."
+        ],
+        "useConditions": "Uso físico como arma; las condiciones mágicas son ficción.",
+        "costsAndLimits": "El filo y el cuerpo del arma pueden dañarse; no posee propiedades sobrenaturales demostradas.",
+        "risks": "Lesiones graves; el registro no propone mecánicas de combate real.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Si una historia le atribuye energía espiritual o evolución, etiquetarlo como adaptación original."
+      },
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "aliases": [
+        "Macuahuitl",
+        "Macuahuitl (ortografía española histórica: maquahuitl)"
+      ],
+      "attributes": [
+        "mesoamericano",
+        "arma histórica",
+        "obsidiana"
+      ],
+      "domains": [
+        "mesoamericano",
+        "arma histórica",
+        "obsidiana"
+      ],
+      "confidence": "referencia_histórica_con_contexto",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "WEAPON-EXCALIBUR",
+      "name": "Excalibur",
+      "kind": "legendary_weapon",
+      "tradition": "Materia artúrica",
+      "region": "Tradición literaria británica",
+      "status": "mythology_reference",
+      "summary": "Espada legendaria asociada al rey Arturo; las versiones distinguen de distintas maneras Excalibur y la espada de la piedra.",
+      "creativeHook": "Arma que reconoce un compromiso y no solo una genealogía; su poder no garantiza liderazgo ni virtud.",
+      "tags": [
+        "arma legendaria",
+        "espada",
+        "realeza",
+        "prueba"
+      ],
+      "relations": [
+        {
+          "type": "shares_archetype",
+          "targetId": "WEAPON-GUNGNIR"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "ART-KING-ARTHUR"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma legendaria",
+        "associatedFigureIds": [
+          "ART-KING-ARTHUR"
+        ],
+        "documentedCapabilities": [
+          "Arma asociada al rey Arturo en la materia artúrica; sus propiedades varían según las versiones."
+        ],
+        "useConditions": "Depende del relato o adaptación elegida.",
+        "costsAndLimits": "No existe un conjunto único de propiedades compartido por todas las versiones.",
+        "risks": "Confundir versiones medievales y reinterpretaciones modernas.",
+        "evolutionStages": [],
+        "adaptationMechanics": "La capacidad de elegir portador, sellos o poderes elementales es una regla ficticia que debe declararse."
+      },
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "aliases": [],
+      "attributes": [
+        "arma legendaria",
+        "espada",
+        "realeza",
+        "prueba"
+      ],
+      "domains": [
+        "arma legendaria",
+        "espada",
+        "realeza",
+        "prueba"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "WEAPON-GUNGNIR",
+      "name": "Gungnir",
+      "kind": "legendary_weapon",
+      "tradition": "Nórdica",
+      "region": "Escandinavia literaria y mitológica",
+      "status": "mythology_reference",
+      "summary": "Lanza de Odín en fuentes nórdicas; su descripción y función dependen del texto de referencia.",
+      "creativeHook": "Reliquia de precisión y juramentos: una vez declarada la intención, no se puede cambiar el objetivo sin pagar el coste pactado.",
+      "tags": [
+        "arma legendaria",
+        "lanza",
+        "Odín",
+        "juramento",
+        "precisión"
+      ],
+      "relations": [
+        {
+          "type": "shares_archetype",
+          "targetId": "WEAPON-EXCALIBUR"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "NOR-ODIN"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma legendaria",
+        "associatedFigureIds": [
+          "NOR-ODIN"
+        ],
+        "documentedCapabilities": [
+          "Lanza asociada con Odín en la tradición nórdica."
+        ],
+        "useConditions": "Condiciones de uso dependen de la fuente y la adaptación.",
+        "costsAndLimits": "No hay una mecánica universalmente documentada de retorno automático o acierto infalible.",
+        "risks": "Las habilidades de precisión absoluta son adaptación.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Los efectos sobrenaturales concretos deben marcarse como ficción."
+      },
+      "sourceIds": [
+        "SRC-PRIMARY-EDDA",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "aliases": [
+        "Gungnir"
+      ],
+      "attributes": [
+        "arma legendaria",
+        "lanza",
+        "Odín",
+        "juramento",
+        "precisión"
+      ],
+      "domains": [
+        "arma legendaria",
+        "lanza",
+        "Odín",
+        "juramento",
+        "precisión"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "WEAPON-MJOLNIR",
+      "name": "Mjölnir",
+      "kind": "legendary_weapon",
+      "tradition": "Nórdica",
+      "region": "Escandinavia",
+      "status": "mythology_reference",
+      "summary": "Martillo de Thor asociado con el trueno y la protección; los detalles varían entre fuentes y objetos arqueológicos relacionados.",
+      "creativeHook": "Golpe de impacto y defensa; regresa al portador solo si este acepta proteger a alguien, no por simple conveniencia.",
+      "tags": [
+        "arma legendaria",
+        "martillo",
+        "trueno",
+        "protección"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "LAT-MEX-HUITZILOPOCHTLI"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "NOR-THOR"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma legendaria",
+        "associatedFigureIds": [
+          "NOR-THOR"
+        ],
+        "documentedCapabilities": [
+          "Martillo asociado con Thor; los relatos lo vinculan con el trueno y con enfrentamientos contra gigantes."
+        ],
+        "useConditions": "Varía entre fuentes y adaptaciones.",
+        "costsAndLimits": "Las condiciones modernas de dignidad del portador no son una regla uniforme de todas las fuentes nórdicas.",
+        "risks": "No presentar las reglas de Marvel u otras adaptaciones como tradición antigua.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Retorno a la mano, selección del portador y ataques elementales pueden definirse como mecánicas originales."
+      },
+      "sourceIds": [
+        "SRC-PRIMARY-EDDA",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "aliases": [
+        "Mjölnir",
+        "Mjolnir"
+      ],
+      "attributes": [
+        "arma legendaria",
+        "martillo",
+        "trueno",
+        "protección"
+      ],
+      "domains": [
+        "arma legendaria",
+        "martillo",
+        "trueno",
+        "protección"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "WEAPON-KUSANAGI",
+      "name": "KUSANAGI-NO-TSURUGI",
+      "kind": "sacred_sword",
+      "tradition": "Japonesa / sintoísta",
+      "region": "Japón",
+      "status": "mythology_reference",
+      "summary": "Espada sagrada dentro de la tradición imperial japonesa y los relatos asociados a Susanoo y Yamato Takeru.",
+      "creativeHook": "Reliquia que corta corrientes de viento o abre paso entre obstáculos, pero exige precisión y disciplina.",
+      "tags": [
+        "espada sagrada",
+        "Japón",
+        "viento",
+        "reliquia"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "JPN-SUSANOO"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "JPN-AMATERASU"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "espada sagrada / regalia",
+        "associatedFigureIds": [
+          "JPN-SUSANOO",
+          "JPN-AMATERASU"
+        ],
+        "documentedCapabilities": [
+          "Espada regalia japonesa vinculada en el mito con Susanoo y en tradiciones posteriores con la regalia imperial."
+        ],
+        "useConditions": "Su papel depende de la crónica y de la tradición ritual.",
+        "costsAndLimits": "No se le atribuye aquí un conjunto de poderes de combate verificables.",
+        "risks": "No confundir la narración mítica con afirmaciones arqueológicas sobre el objeto físico conservado.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Cortes dimensionales o control del viento son añadidos ficticios."
+      },
+      "sourceIds": [
+        "SRC-PRIMARY-KOJIKI",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "aliases": [
+        "Kusanagi-no-Tsurugi",
+        "Ame-no-Murakumo-no-Tsurugi"
+      ],
+      "attributes": [
+        "espada sagrada",
+        "Japón",
+        "viento",
+        "reliquia"
+      ],
+      "domains": [
+        "espada sagrada",
+        "Japón",
+        "viento",
+        "reliquia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "WEAPON-VAJRA",
+      "name": "Vajra",
+      "kind": "ritual_object_weapon",
+      "tradition": "Tradiciones védicas y budistas",
+      "region": "Asia meridional y regiones budistas",
+      "status": "mythology_reference",
+      "summary": "Objeto ritual con significados diversos, asociado en tradiciones védicas con Indra y en budismo vajrayana con indestructibilidad y método.",
+      "creativeHook": "Artefacto de estabilidad que rompe ilusiones o sostiene barreras; tratar sus significados religiosos con contexto, no solo como arma genérica.",
+      "tags": [
+        "reliquia",
+        "ritual",
+        "rayo",
+        "indestructibilidad"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "HIN-INDRA"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "objeto ritual / arma divina",
+        "associatedFigureIds": [
+          "HIN-INDRA"
+        ],
+        "documentedCapabilities": [
+          "Símbolo ritual budista e hinduista; en relatos védicos se vincula como arma con Indra."
+        ],
+        "useConditions": "El uso ritual varía entre tradiciones religiosas.",
+        "costsAndLimits": "No equiparar significado ritual contemporáneo con un poder de combate literal.",
+        "risks": "Evitar descontextualizar un objeto religioso como mero accesorio bélico.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Descargas de rayo o barreras son mecánicas de ficción."
+      },
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "aliases": [],
+      "attributes": [
+        "reliquia",
+        "ritual",
+        "rayo",
+        "indestructibilidad"
+      ],
+      "domains": [
+        "reliquia",
+        "ritual",
+        "rayo",
+        "indestructibilidad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "WEAPON-TRISHULA",
+      "name": "Trishula",
+      "kind": "divine_weapon",
+      "tradition": "Hinduismo",
+      "region": "Asia meridional",
+      "status": "mythology_reference",
+      "summary": "Tridente asociado especialmente con Shiva y con simbolismos religiosos que cambian según tradición y representación.",
+      "creativeHook": "Tres modos de uso que no pueden activarse simultáneamente: creación, conservación y destrucción como adaptación de juego, no como definición universal del símbolo.",
+      "tags": [
+        "reliquia",
+        "tridente",
+        "Shiva",
+        "tres aspectos"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        },
+        {
+          "type": "associated_with",
+          "targetId": "HIN-SHIVA"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "arma / atributo divino",
+        "associatedFigureIds": [
+          "HIN-SHIVA"
+        ],
+        "documentedCapabilities": [
+          "Tridente asociado iconográficamente con Shiva."
+        ],
+        "useConditions": "Asociación y uso simbólico dependen de la tradición y representación.",
+        "costsAndLimits": "No hay una lista única de habilidades sobrenaturales separable de la interpretación religiosa.",
+        "risks": "No confundir símbolo devocional con evidencia de capacidades físicas sobrenaturales.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Manipulación temporal o de tres planos es adaptación si se usa en la historia."
+      },
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "aliases": [
+        "Trishula",
+        "Trishul"
+      ],
+      "attributes": [
+        "reliquia",
+        "tridente",
+        "Shiva",
+        "tres aspectos"
+      ],
+      "domains": [
+        "reliquia",
+        "tridente",
+        "Shiva",
+        "tres aspectos"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "RELIC-ARK-ALLIANCE",
+      "name": "Arca de la Alianza",
+      "kind": "sacred_relic",
+      "tradition": "Tradiciones judías y textos bíblicos",
+      "region": "Levante antiguo",
+      "status": "mythology_reference",
+      "summary": "Objeto sagrado descrito en la Biblia hebrea; su historia posterior y ubicación son cuestiones distintas y debatidas.",
+      "creativeHook": "Reliquia sellada que protege un pacto y no debe convertirse en un arma ordinaria; usarla como ficción requiere respeto por su carácter sagrado.",
+      "tags": [
+        "reliquia",
+        "pacto",
+        "protección",
+        "objeto sagrado"
+      ],
+      "relations": [
+        {
+          "type": "can_pair_with",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "reliquia textual / objeto sagrado",
+        "associatedFigureIds": [],
+        "documentedCapabilities": [
+          "Objeto sagrado descrito en textos bíblicos hebreos como contenedor de las tablas del pacto; su interpretación pertenece a tradiciones religiosas."
+        ],
+        "useConditions": "No se propone un uso de invocación como hecho histórico.",
+        "costsAndLimits": "No se afirma una localización actual ni una capacidad sobrenatural verificable.",
+        "risks": "Distinguir tradición textual, creencia religiosa e hipótesis arqueológica.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Sellos, entidades vinculadas o efectos de combate son invención narrativa."
+      },
+      "sourceIds": [
+        "SRC-MET-COLLECTION",
+        "SRC-BRITISH-MUSEUM"
+      ],
+      "aliases": [],
+      "attributes": [
+        "reliquia",
+        "pacto",
+        "protección",
+        "objeto sagrado"
+      ],
+      "domains": [
+        "reliquia",
+        "pacto",
+        "protección",
+        "objeto sagrado"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "sourceNotes": "Fuente(s) de contexto enlazadas; confirmar los detalles específicos en la fuente primaria, estudio especializado o fuente comunitaria pertinente antes de convertirlos en canon narrativo."
+    },
+    {
+      "id": "SYS-CARD-PACT",
+      "name": "Contrato de Invocación",
+      "kind": "summoning_mechanic",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Sistema narrativo",
+      "status": "original",
+      "summary": "El portador usa una carta, reliquia o sello como interfaz para pedir la manifestación de una entidad. La entidad conserva voluntad, condiciones y límites propios.",
+      "creativeHook": "El contrato registra precio, duración, alcance, consentimiento, cláusula de salida y consecuencias por incumplimiento.",
+      "tags": [
+        "cartas",
+        "reliquias",
+        "invocación",
+        "contrato",
+        "mecánica original"
+      ],
+      "relations": [
+        {
+          "type": "supports",
+          "targetId": "SYS-CARD-AVATAR"
+        },
+        {
+          "type": "supports",
+          "targetId": "SYS-CARD-RESONANCE"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "cartas",
+        "reliquias",
+        "invocación",
+        "contrato",
+        "mecánica original"
+      ],
+      "domains": [
+        "cartas",
+        "reliquias",
+        "invocación",
+        "contrato",
+        "mecánica original"
+      ],
+      "confidence": "ficción_de_diseño"
+    },
+    {
+      "id": "SYS-CARD-AVATAR",
+      "name": "Manifestación / Avatar",
+      "kind": "summoning_mechanic",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Sistema narrativo",
+      "status": "original",
+      "summary": "El protagonista no invoca un cuerpo separado: manifiesta por tiempo limitado una forma, arma o atributo del pacto.",
+      "creativeHook": "Escala de riesgo: rasgos parciales, avatar completo y fusión. Cada etapa añade potencia y pérdida temporal de control o identidad.",
+      "tags": [
+        "cartas",
+        "avatar",
+        "transformación",
+        "fusión",
+        "riesgo"
+      ],
+      "relations": [
+        {
+          "type": "requires",
+          "targetId": "SYS-CARD-PACT"
+        },
+        {
+          "type": "progression",
+          "targetId": "SYS-CARD-RESONANCE"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "cartas",
+        "avatar",
+        "transformación",
+        "fusión",
+        "riesgo"
+      ],
+      "domains": [
+        "cartas",
+        "avatar",
+        "transformación",
+        "fusión",
+        "riesgo"
+      ],
+      "confidence": "ficción_de_diseño"
+    },
+    {
+      "id": "SYS-CARD-RESONANCE",
+      "name": "Resonancia y Evolución",
+      "kind": "progression_system",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Sistema narrativo",
+      "status": "original",
+      "summary": "Las cartas evolucionan por decisiones, vínculos y pruebas narrativas, no solo por experiencia numérica.",
+      "creativeHook": "Etapas sugeridas: sello dormido, primera respuesta, pacto consciente, manifestación plena y forma irreversible. Cada etapa debe tener requisito, coste, señal visible y consecuencia.",
+      "tags": [
+        "progresión",
+        "evolución",
+        "cartas",
+        "irreversible",
+        "continuidad"
+      ],
+      "relations": [
+        {
+          "type": "requires",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "progresión",
+        "evolución",
+        "cartas",
+        "irreversible",
+        "continuidad"
+      ],
+      "domains": [
+        "progresión",
+        "evolución",
+        "cartas",
+        "irreversible",
+        "continuidad"
+      ],
+      "confidence": "ficción_de_diseño"
+    },
+    {
+      "id": "SYS-CARD-ARCHETYPES",
+      "name": "Familias de cartas",
+      "kind": "system_taxonomy",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Sistema narrativo",
+      "status": "original",
+      "summary": "Taxonomía para filtrar cartas por función, no por una escala única de rareza.",
+      "creativeHook": "Roles: combatiente, guardián, explorador, sanador, engañador, sabio, invocador, montura, arma, territorio y entidad de coste narrativo.",
+      "tags": [
+        "filtro",
+        "cartas",
+        "roles",
+        "catálogo"
+      ],
+      "relations": [
+        {
+          "type": "supports",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "filtro",
+        "cartas",
+        "roles",
+        "catálogo"
+      ],
+      "domains": [
+        "filtro",
+        "cartas",
+        "roles",
+        "catálogo"
+      ],
+      "confidence": "ficción_de_diseño"
+    },
+    {
+      "id": "SYS-CARD-ETHICS",
+      "name": "Consentimiento y agencia de la entidad",
+      "kind": "world_rule",
+      "tradition": "Diseño original de WordWaifu",
+      "region": "Reglas del mundo",
+      "status": "original",
+      "summary": "Una entidad invocada no es automáticamente una herramienta obediente. Puede negociar, negarse, interpretar órdenes o exigir reparación.",
+      "creativeHook": "Las cartas pueden registrar afinidad, confianza, límites y acuerdos. Forzar una invocación genera deuda, inestabilidad o ruptura del vínculo.",
+      "tags": [
+        "reglas",
+        "agencia",
+        "pacto",
+        "consecuencias"
+      ],
+      "relations": [
+        {
+          "type": "supports",
+          "targetId": "SYS-CARD-PACT"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "reglas",
+        "agencia",
+        "pacto",
+        "consecuencias"
+      ],
+      "domains": [
+        "reglas",
+        "agencia",
+        "pacto",
+        "consecuencias"
+      ],
+      "confidence": "ficción_de_diseño"
+    },
+    {
+      "id": "LAT-MEX-MICTLAN",
+      "name": "Mictlantecuhtli",
+      "kind": "deity",
+      "tradition": "Nahua / mexica",
+      "region": "Mesoamérica central",
+      "status": "mythology_reference",
+      "summary": "Señor del Mictlan, el ámbito de los muertos en la religión mexica; aparece en relatos y representaciones rituales junto con Mictecacíhuatl.",
+      "tags": [
+        "americano",
+        "mexica",
+        "muerte",
+        "inframundo"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-SMITHSONIAN-NMAI"
+      ],
+      "sourceNotes": "Referencia de síntesis: contrastar con estudios y fuentes nahuas; no reducir la muerte mexica a una equivalencia automática con el infierno cristiano.",
+      "relations": [
+        {
+          "type": "underworld_association",
+          "targetId": "LAT-MEX-QUETZALCOATL"
+        }
+      ],
+      "aliases": [
+        "Mictlantecuhtli",
+        "Mictlantecutli (variante ortográfica)"
+      ],
+      "attributes": [
+        "muerte",
+        "inframundo"
+      ],
+      "domains": [
+        "muerte",
+        "inframundo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-MEX-COYOL",
+      "name": "Coyolxauhqui",
+      "kind": "deity",
+      "tradition": "Mexica",
+      "region": "Mesoamérica central",
+      "status": "mythology_reference",
+      "summary": "Figura divina cuya derrota a manos de Huitzilopochtli forma parte del relato del nacimiento del dios y se representa en el monolito de Coyolxauhqui.",
+      "tags": [
+        "americano",
+        "mexica",
+        "luna",
+        "mito de origen"
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-BRITISH-MUSEUM"
+      ],
+      "sourceNotes": "El monolito arqueológico es evidencia material de su importancia ritual; las interpretaciones del mito deben citar la fuente concreta.",
+      "relations": [
+        {
+          "type": "mythic_conflict",
+          "targetId": "LAT-MEX-HUITZILOPOCHTLI"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "luna",
+        "mito de origen"
+      ],
+      "domains": [
+        "luna",
+        "mito de origen"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-MEX-XOCHI",
+      "name": "Xochiquetzal",
+      "kind": "deity",
+      "tradition": "Nahua / mexica",
+      "region": "Mesoamérica central",
+      "status": "mythology_reference",
+      "summary": "Deidad asociada en fuentes nahuas con flores, belleza, amor, sexualidad y actividades artesanales; sus atributos cambian según época y fuente.",
+      "tags": [
+        "americano",
+        "mexica",
+        "flores",
+        "arte",
+        "amor"
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "No convertir asociaciones de fuentes coloniales en una descripción universal de todas las comunidades nahuas.",
+      "aliases": [],
+      "attributes": [
+        "flores",
+        "arte",
+        "amor"
+      ],
+      "domains": [
+        "flores",
+        "arte",
+        "amor"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-MAY-ITZAMNA",
+      "name": "Itzamná",
+      "kind": "deity",
+      "tradition": "Maya yucateca",
+      "region": "Península de Yucatán",
+      "status": "mythology_reference",
+      "summary": "Deidad importante en fuentes coloniales yucatecas, vinculada en distintas interpretaciones con creación, conocimiento y escritura; la identificación iconográfica es discutida.",
+      "tags": [
+        "americano",
+        "maya",
+        "conocimiento",
+        "escritura"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-SMITHSONIAN-NMAI"
+      ],
+      "sourceNotes": "La identificación de figuras mayas antiguas con nombres coloniales debe tratarse con cautela; evitar presentarla como consenso absoluto.",
+      "aliases": [],
+      "attributes": [
+        "conocimiento",
+        "escritura"
+      ],
+      "domains": [
+        "conocimiento",
+        "escritura"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-MAY-CHAAC",
+      "name": "Chaac",
+      "kind": "deity",
+      "tradition": "Maya yucateca",
+      "region": "Península de Yucatán",
+      "status": "mythology_reference",
+      "summary": "Deidad de la lluvia vinculada a la agricultura y a las peticiones rituales de agua en fuentes mayas yucatecas.",
+      "tags": [
+        "americano",
+        "maya",
+        "lluvia",
+        "agricultura",
+        "agua"
+      ],
+      "sourceIds": [
+        "SRC-SMITHSONIAN-NMAI",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las figuras y nombres de deidades de lluvia varían entre regiones mayas y periodos históricos.",
+      "aliases": [],
+      "attributes": [
+        "lluvia",
+        "agricultura",
+        "agua"
+      ],
+      "domains": [
+        "lluvia",
+        "agricultura",
+        "agua"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-AND-MAMQUILLA",
+      "name": "Mama Quilla",
+      "kind": "deity",
+      "tradition": "Inca / Andes",
+      "region": "Andes centrales",
+      "status": "mythology_reference",
+      "summary": "Deidad lunar inca descrita en fuentes coloniales como hermana y consorte de Inti; asociada con el calendario y ciclos rituales.",
+      "tags": [
+        "americano",
+        "inca",
+        "luna",
+        "calendario"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "El parentesco divino se registra en relatos coloniales; distinguir las versiones y la perspectiva de los cronistas.",
+      "relations": [
+        {
+          "type": "associated_deity",
+          "targetId": "LAT-AND-INTI"
+        }
+      ],
+      "aliases": [
+        "Mama Killa"
+      ],
+      "attributes": [
+        "luna",
+        "calendario"
+      ],
+      "domains": [
+        "luna",
+        "calendario"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-AND-ILLAPA",
+      "name": "Illapa",
+      "kind": "deity",
+      "tradition": "Andina / inca",
+      "region": "Andes centrales",
+      "status": "mythology_reference",
+      "summary": "Nombre asociado en fuentes andinas coloniales con trueno, rayo y lluvia; las denominaciones y funciones regionales no son idénticas en todas las comunidades.",
+      "tags": [
+        "americano",
+        "andino",
+        "trueno",
+        "rayo",
+        "lluvia"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "La documentación procede en parte de cronistas coloniales; comprobar equivalencias regionales antes de generalizar.",
+      "aliases": [],
+      "attributes": [
+        "trueno",
+        "rayo",
+        "lluvia"
+      ],
+      "domains": [
+        "trueno",
+        "rayo",
+        "lluvia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-AND-MANCO",
+      "name": "Manco Cápac",
+      "kind": "culture_hero",
+      "tradition": "Inca / Andes",
+      "region": "Cusco y Andes centrales",
+      "status": "mythology_reference",
+      "summary": "Fundador ancestral del linaje inca en tradiciones de origen conservadas en fuentes coloniales, con variantes sobre su procedencia y relación con Mama Ocllo.",
+      "tags": [
+        "americano",
+        "inca",
+        "fundación",
+        "héroe cultural"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Los relatos de fundación tienen versiones diferentes; no deben leerse sin más como crónica histórica verificable.",
+      "aliases": [],
+      "attributes": [
+        "fundación"
+      ],
+      "domains": [
+        "fundación"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-GUA-TEJU",
+      "name": "Teju Jagua",
+      "kind": "folklore_entity",
+      "tradition": "Guaraní y folclores regionales",
+      "region": "Paraguay y regiones guaraníes",
+      "status": "mythology_reference",
+      "summary": "Ser de relatos guaraníes paraguayos, descrito en recopilaciones modernas como una criatura con rasgos de lagarto y múltiples cabezas; las versiones populares varían.",
+      "tags": [
+        "americano",
+        "guaraní",
+        "criatura",
+        "folclore"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "La descripción específica se difunde sobre todo mediante recopilaciones y folclore regional moderno; no atribuirla por igual a todos los pueblos guaraníes.",
+      "aliases": [],
+      "attributes": [],
+      "domains": [],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-BRA-SACI",
+      "name": "Saci-Pererê",
+      "kind": "folklore_entity",
+      "tradition": "Folclore brasileño",
+      "region": "Brasil",
+      "status": "mythology_reference",
+      "summary": "Personaje del folclore brasileño, comúnmente representado como un ser travieso de una sola pierna que aparece y desaparece en remolinos; sus representaciones modernas también tienen historia editorial.",
+      "tags": [
+        "americano",
+        "brasileño",
+        "travesura",
+        "viento",
+        "folclore"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Las imágenes populares actuales están influidas por recopilaciones literarias y cultura de masas; distinguirlas de variantes orales.",
+      "aliases": [],
+      "attributes": [
+        "travesura",
+        "viento"
+      ],
+      "domains": [
+        "travesura",
+        "viento"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-AND-MAMACOCHA",
+      "name": "Mama Cocha",
+      "kind": "deity",
+      "tradition": "Andina",
+      "region": "Costa y Andes andinos",
+      "status": "mythology_reference",
+      "summary": "Nombre quechua asociado con la madre del mar y con aguas marítimas en tradiciones andinas; las prácticas y significados son regionales.",
+      "tags": [
+        "americano",
+        "andino",
+        "mar",
+        "agua"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "No tratarla como una diosa idéntica en todas las comunidades andinas ni asignarle poderes de ficción como hechos documentados.",
+      "aliases": [],
+      "attributes": [
+        "mar",
+        "agua"
+      ],
+      "domains": [
+        "mar",
+        "agua"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-AR-LALLORONA",
+      "name": "La Llorona",
+      "kind": "folklore_entity",
+      "tradition": "Folclores latinoamericanos (variantes regionales)",
+      "region": "México y otras regiones de América Latina",
+      "status": "mythology_reference",
+      "summary": "Figura de leyenda oral con versiones regionales muy diversas, a menudo vinculada al lamento, el agua y relatos de pérdida; no posee una única versión panlatinoamericana.",
+      "tags": [
+        "americano",
+        "leyenda oral",
+        "agua",
+        "lamento",
+        "variantes regionales"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Las versiones son cambiantes y no deben atribuirse a un pueblo específico sin fuente local concreta.",
+      "aliases": [],
+      "attributes": [
+        "leyenda oral",
+        "agua",
+        "lamento",
+        "variantes regionales"
+      ],
+      "domains": [
+        "leyenda oral",
+        "agua",
+        "lamento",
+        "variantes regionales"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "LAT-CHL-CALEUCHE",
+      "name": "El Caleuche",
+      "kind": "folklore_entity",
+      "tradition": "Folclore chilote",
+      "region": "Archipiélago de Chiloé, Chile",
+      "status": "mythology_reference",
+      "summary": "Barco sobrenatural de relatos chilotes, asociado a navegantes misteriosos y apariciones nocturnas; las narraciones se transmiten en versiones locales.",
+      "tags": [
+        "americano",
+        "chilote",
+        "mar",
+        "barco espectral",
+        "folclore"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Folclore regional de Chiloé; no presentarlo como creencia uniforme de todo Chile ni como dato histórico literal.",
+      "aliases": [],
+      "attributes": [
+        "chilote",
+        "mar",
+        "barco espectral"
+      ],
+      "domains": [
+        "chilote",
+        "mar",
+        "barco espectral"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "GRC-ATHENA",
+      "name": "Atenea",
+      "kind": "deity",
+      "tradition": "Griega",
+      "region": "Grecia antigua y mundo mediterráneo",
+      "status": "mythology_reference",
+      "summary": "Diosa asociada con sabiduría, estrategia bélica y oficios; Atenea Polias tuvo especial importancia cívica en Atenas.",
+      "tags": [
+        "griega",
+        "sabiduría",
+        "estrategia",
+        "artes"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Consultar también los cultos locales y las fuentes antiguas; sus funciones cambian entre relatos y lugares.",
+      "aliases": [],
+      "attributes": [
+        "sabiduría",
+        "estrategia",
+        "artes"
+      ],
+      "domains": [
+        "sabiduría",
+        "estrategia",
+        "artes"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "GRC-HERMES",
+      "name": "Hermes",
+      "kind": "deity",
+      "tradition": "Griega",
+      "region": "Mundo griego antiguo",
+      "status": "mythology_reference",
+      "summary": "Dios mensajero y protector de viajeros, comerciantes y ciertos límites; también guía almas al inframundo en fuentes antiguas.",
+      "tags": [
+        "griega",
+        "mensajero",
+        "viajes",
+        "fronteras"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las funciones son múltiples y dependen del culto y la fuente.",
+      "aliases": [],
+      "attributes": [
+        "mensajero",
+        "viajes",
+        "fronteras"
+      ],
+      "domains": [
+        "mensajero",
+        "viajes",
+        "fronteras"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "GRC-HERACLES",
+      "name": "Heracles",
+      "kind": "culture_hero",
+      "tradition": "Griega",
+      "region": "Mundo mediterráneo antiguo",
+      "status": "mythology_reference",
+      "summary": "Héroe famoso por los trabajos impuestos por Euristeo; sus relatos incluyen fuerza extraordinaria, sufrimiento y apoteosis en algunas tradiciones.",
+      "tags": [
+        "griega",
+        "héroe",
+        "pruebas",
+        "fuerza"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "No confundir las distintas listas y ordenamientos de sus trabajos en fuentes antiguas.",
+      "aliases": [],
+      "attributes": [
+        "pruebas",
+        "fuerza",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "pruebas",
+        "fuerza",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "designRule": "Cada manifestación debe contener exactamente tres pilares editables: arma característica (incluye armas naturales en monstruos), vestimenta/símbolo del mito y ataque que condense el arco mítico. La apariencia o género alternativos son decisiones de adaptación; no cambian automáticamente los hechos de la fuente.",
+        "baseFigureId": "GRC-HERACLES",
+        "identityPresentation": "Masculina · adaptación de diseño",
+        "forms": [
+          {
+            "id": "heracles-m-lily",
+            "name": "Heracles · Lily",
+            "stage": "Juvenil / potencial",
+            "role": "Crecimiento; fuerza aún disciplinada por aprendizaje.",
+            "weapon": "Arco de caza y flechas de entrenamiento; adaptación basada en su destreza con distintas armas.",
+            "outfit": "Túnica corta de viajero y pequeña piel de león todavía sin trofeos completos.",
+            "totalityAttack": "Primer Trabajo: la promesa del león — un disparo abre una oportunidad y el héroe debe terminar la prueba con sus propias manos.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-m-initial",
+            "name": "Heracles · Inicial",
+            "stage": "Héroe reconocible",
+            "role": "Fuerza, resistencia y victoria obtenida mediante esfuerzo.",
+            "weapon": "Clava de madera de olivo, arma de combate asociada a su imagen popular.",
+            "outfit": "Piel del león de Nemea sobre una túnica de viajero; símbolo de una prueba superada.",
+            "totalityAttack": "El León de Nemea — embiste, desarma y neutraliza una defensa; no es un ataque universal irresistible.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-m-epic",
+            "name": "Heracles · Épico",
+            "stage": "Cima heroica",
+            "role": "La totalidad de los trabajos, el sufrimiento, la perseverancia y la elevación final.",
+            "weapon": "Arco y clava; el arma usada cambia según la prueba y el enemigo.",
+            "outfit": "Piel del león convertida en manto heroico, con doce marcas que recuerdan los trabajos sin afirmar que todas sean una armadura antigua.",
+            "totalityAttack": "Los Doce Trabajos: Camino de la Apoteosis — encadena respuestas distintas a amenazas distintas; el poder completo exige superar una condición por cada trabajo invocado.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-m-dark",
+            "name": "Heracles · Dark",
+            "stage": "Trágico / desbordado",
+            "role": "El precio trágico de la fuerza y la pérdida de control; no es una forma tradicional documentada.",
+            "weapon": "Clava ennegrecida y fuerza física sin control fino; variante ficticia.",
+            "outfit": "Piel del león oscurecida y vendas rotas como representación visual de culpa y violencia.",
+            "totalityAttack": "La Locura del Héroe — una oleada devastadora que también amenaza aliados y deja agotamiento o culpa persistente después del uso.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRC-MEDUSA",
+      "name": "Medusa",
+      "kind": "mythic_entity",
+      "tradition": "Griega",
+      "region": "Mundo griego antiguo",
+      "status": "mythology_reference",
+      "summary": "Una de las Gorgonas; en el relato más conocido su mirada convierte en piedra y Perseo la vence usando un reflejo. El relato de su origen cambia entre autores.",
+      "tags": [
+        "griega",
+        "gorgona",
+        "mirada",
+        "monstruo"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "La historia de Medusa difiere notablemente entre Hesíodo, Ovidio y recepciones posteriores.",
+      "aliases": [],
+      "attributes": [
+        "gorgona",
+        "mirada",
+        "monstruo",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "gorgona",
+        "mirada",
+        "monstruo",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "designRule": "En monstruos, el pilar «arma» puede ser una facultad corporal o rasgo monstruoso, no necesariamente un objeto fabricado. Las formas Lily/épica/dark son plantillas creativas y no se atribuyen a las fuentes antiguas.",
+        "baseFigureId": "GRC-MEDUSA",
+        "identityPresentation": "Monstruo / Gorgona · variantes de diseño",
+        "forms": [
+          {
+            "id": "medusa-lily",
+            "name": "Medusa · Joven / Lily (adaptación)",
+            "stage": "Juvenil / latente",
+            "role": "El temor a la propia mirada y la identidad anterior a la monstruosidad.",
+            "weapon": "Cabello de serpientes pequeñas; la mirada petrificante aparece solo de forma intermitente.",
+            "outfit": "Velo gris y broche con forma de gorgoneion como símbolo protector/amenazante.",
+            "totalityAttack": "La Mirada que Despierta — fija por instantes una parte del cuerpo del adversario; la petrificación total no está disponible en esta etapa.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "medusa-initial",
+            "name": "Medusa · Inicial",
+            "stage": "Gorgona reconocible",
+            "role": "El peligro de la mirada, el cuerpo monstruoso y el enfrentamiento con Perseo.",
+            "weapon": "Mirada petrificante y serpientes como defensa natural; la activación requiere línea de visión.",
+            "outfit": "Túnica antigua y cinturón de escamas; el rostro de Gorgona funciona como emblema mítico.",
+            "totalityAttack": "Ojos de la Gorgona — amenaza con petrificar a quien la mira directamente; espejos, reflejos o evitar la mirada son contramedidas narrativas, no una garantía universal.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "medusa-epic",
+            "name": "Medusa · Épica",
+            "stage": "Manifestación mítica plena",
+            "role": "La totalidad del mito de Medusa: monstruosidad, derrota ante Perseo y persistencia de su imagen como arma.",
+            "weapon": "Mirada de Gorgona y serpientes coordinadas como armas naturales.",
+            "outfit": "Manto de escamas, ornamento de bronce y un velo ceremonial inspirado en representaciones posteriores; el diseño exacto es creativo.",
+            "totalityAttack": "La Cabeza que Vence al Héroe — combina mirada, serpientes y control del espacio; culmina en el motivo de la cabeza de Gorgona usada como poder contra otros enemigos.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "medusa-dark",
+            "name": "Medusa · Dark",
+            "stage": "Venganza / horror trágico",
+            "role": "La violencia del mito, el miedo proyectado y la pérdida de control; interpretación original de WordWaifu.",
+            "weapon": "Mirada petrificante amplificada y serpientes que atacan sin distinguir amenazas de aliados.",
+            "outfit": "Armadura de obsidiana ficticia, velo rasgado y escamas oscuras; no es indumentaria antigua documentada.",
+            "totalityAttack": "La Maldición del Reflejo — convierte el campo de batalla en una red de líneas de visión peligrosas; el uso indiscriminado puede petrificar también el entorno y aislarla.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "EGY-ISIS",
+      "name": "Isis",
+      "kind": "deity",
+      "tradition": "Egipcia antigua",
+      "region": "Valle del Nilo y Mediterráneo antiguo",
+      "status": "mythology_reference",
+      "summary": "Diosa vinculada con la realeza, la maternidad y la protección; el mito de Osiris y Horus fue central en su culto, que se extendió por el Mediterráneo.",
+      "tags": [
+        "egipcia",
+        "protección",
+        "realeza",
+        "magia"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "Los cultos y atributos evolucionaron a través de largos periodos históricos.",
+      "aliases": [],
+      "attributes": [
+        "protección",
+        "realeza",
+        "magia"
+      ],
+      "domains": [
+        "protección",
+        "realeza",
+        "magia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "EGY-ANUBIS",
+      "name": "Anubis",
+      "kind": "deity",
+      "tradition": "Egipcia antigua",
+      "region": "Valle del Nilo",
+      "status": "mythology_reference",
+      "summary": "Deidad representada con rasgos de chacal, relacionada con la preparación funeraria y la protección de los muertos.",
+      "tags": [
+        "egipcia",
+        "funerario",
+        "protección",
+        "más allá"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "La función de Anubis se transforma con la evolución del culto funerario egipcio.",
+      "aliases": [],
+      "attributes": [
+        "funerario",
+        "protección",
+        "más allá"
+      ],
+      "domains": [
+        "funerario",
+        "protección",
+        "más allá"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "EGY-RA",
+      "name": "Ra",
+      "kind": "deity",
+      "tradition": "Egipcia antigua",
+      "region": "Heliópolis y valle del Nilo",
+      "status": "mythology_reference",
+      "summary": "Dios solar cuya importancia fue central en la religión egipcia; se combinó con otras divinidades en distintas épocas, como Amón-Ra.",
+      "tags": [
+        "egipcia",
+        "sol",
+        "cielo",
+        "realeza"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las teologías egipcias variaron históricamente; evitar una única genealogía fija.",
+      "aliases": [],
+      "attributes": [
+        "sol",
+        "cielo",
+        "realeza"
+      ],
+      "domains": [
+        "sol",
+        "cielo",
+        "realeza"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "NOR-ODIN",
+      "name": "Odín",
+      "kind": "deity",
+      "tradition": "Nórdica",
+      "region": "Escandinavia y mundo germánico del norte",
+      "status": "mythology_reference",
+      "summary": "Dios asociado con soberanía, poesía, conocimiento y guerra; las fuentes medievales preservan tradiciones previas con mediaciones cristianas.",
+      "tags": [
+        "nórdica",
+        "sabiduría",
+        "poesía",
+        "guerra"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "La mayor parte de los relatos escritos conservados proviene de fuentes medievales, no de transcripciones neutrales de la era vikinga.",
+      "aliases": [],
+      "attributes": [
+        "sabiduría",
+        "poesía",
+        "guerra"
+      ],
+      "domains": [
+        "sabiduría",
+        "poesía",
+        "guerra"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "NOR-LOKI",
+      "name": "Loki",
+      "kind": "mythic_entity",
+      "tradition": "Nórdica",
+      "region": "Tradiciones escandinavas medievales",
+      "status": "mythology_reference",
+      "summary": "Figura ambigua de los relatos nórdicos, asociada con engaños, cambios de forma y conflictos con los dioses; las fuentes no ofrecen un perfil uniforme.",
+      "tags": [
+        "nórdica",
+        "cambio de forma",
+        "engaño",
+        "ambigüedad"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Evitar reducir a Loki a un equivalente simple del diablo cristiano.",
+      "aliases": [],
+      "attributes": [
+        "cambio de forma",
+        "engaño",
+        "ambigüedad"
+      ],
+      "domains": [
+        "cambio de forma",
+        "engaño",
+        "ambigüedad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "NOR-FENRIR",
+      "name": "Fenrir",
+      "kind": "mythic_entity",
+      "tradition": "Nórdica",
+      "region": "Tradiciones escandinavas medievales",
+      "status": "mythology_reference",
+      "summary": "Lobo monstruoso destinado a romper sus ataduras y participar en los acontecimientos del Ragnarök según fuentes nórdicas medievales.",
+      "tags": [
+        "nórdica",
+        "lobo",
+        "destino",
+        "Ragnarök"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "La narración conservada depende especialmente de fuentes eddicas medievales.",
+      "aliases": [],
+      "attributes": [
+        "lobo",
+        "destino",
+        "Ragnarök"
+      ],
+      "domains": [
+        "lobo",
+        "destino",
+        "Ragnarök"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "JPN-AMATERASU",
+      "name": "Amaterasu",
+      "kind": "deity",
+      "tradition": "Japonesa / sintoísta",
+      "region": "Archipiélago japonés",
+      "status": "mythology_reference",
+      "summary": "Deidad solar central en el Kojiki y el Nihon Shoki; el episodio de su retiro en una cueva explica el retorno de la luz en una narración fundacional.",
+      "tags": [
+        "japonesa",
+        "sol",
+        "cueva",
+        "mito fundacional"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las crónicas imperiales escritas reflejan también contextos políticos y rituales de su compilación.",
+      "aliases": [],
+      "attributes": [
+        "sol",
+        "cueva",
+        "mito fundacional"
+      ],
+      "domains": [
+        "sol",
+        "cueva",
+        "mito fundacional"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "JPN-SUSANOO",
+      "name": "Susanoo",
+      "kind": "deity",
+      "tradition": "Japonesa / sintoísta",
+      "region": "Archipiélago japonés",
+      "status": "mythology_reference",
+      "summary": "Deidad de relatos del Kojiki y el Nihon Shoki, asociada con tormentas y episodios de exilio, conflicto y victoria sobre Yamata-no-Orochi.",
+      "tags": [
+        "japonesa",
+        "tormenta",
+        "serpiente",
+        "hazañas"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Los relatos y atributos varían entre las crónicas y cultos locales.",
+      "aliases": [],
+      "attributes": [
+        "tormenta",
+        "hazañas"
+      ],
+      "domains": [
+        "tormenta",
+        "hazañas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "HIN-GANESHA",
+      "name": "Ganesha",
+      "kind": "deity",
+      "tradition": "Hinduismo",
+      "region": "Asia meridional y diásporas",
+      "status": "mythology_reference",
+      "summary": "Deidad reconocible por su cabeza de elefante, invocada en muchas tradiciones hindúes al comenzar actividades y asociada con sabiduría y remoción de obstáculos.",
+      "tags": [
+        "hindú",
+        "sabiduría",
+        "inicios",
+        "obstáculos"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "El culto y las historias de origen son diversos entre regiones, textos y tradiciones.",
+      "aliases": [],
+      "attributes": [
+        "sabiduría",
+        "inicios",
+        "obstáculos"
+      ],
+      "domains": [
+        "sabiduría",
+        "inicios",
+        "obstáculos"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "MES-ISHTAR",
+      "name": "Ishtar / Inanna",
+      "kind": "deity",
+      "tradition": "Mesopotámica",
+      "region": "Mesopotamia",
+      "status": "mythology_reference",
+      "summary": "Inanna en sumerio e Ishtar en acadio son figuras relacionadas por continuidad y sincretismo, asociadas con amor, poder y guerra en fuentes mesopotámicas.",
+      "tags": [
+        "mesopotámica",
+        "amor",
+        "guerra",
+        "poder"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "No son simplemente nombres intercambiables en todos los periodos; distinguir tradiciones sumerias y acadias.",
+      "aliases": [],
+      "attributes": [
+        "amor",
+        "guerra",
+        "poder"
+      ],
+      "domains": [
+        "amor",
+        "guerra",
+        "poder"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "CELT-CU",
+      "name": "Cú Chulainn",
+      "kind": "culture_hero",
+      "tradition": "Irlandesa / ciclo del Ulster",
+      "region": "Irlanda medieval literaria",
+      "status": "mythology_reference",
+      "summary": "Héroe del ciclo del Ulster, especialmente del Táin Bó Cúailnge; los textos preservados son manuscritos medievales con capas de composición diversas.",
+      "tags": [
+        "celta",
+        "irlandesa",
+        "héroe",
+        "ciclo del Ulster"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Distinguir la literatura medieval conservada de una reconstrucción segura de la religión precristiana.",
+      "aliases": [],
+      "attributes": [
+        "irlandesa",
+        "ciclo del Ulster"
+      ],
+      "domains": [
+        "irlandesa",
+        "ciclo del Ulster"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "GRC-AEGIS",
+      "name": "Égida",
+      "kind": "sacred_relic",
+      "tradition": "Griega",
+      "region": "Mundo griego antiguo",
+      "status": "mythology_reference",
+      "summary": "Objeto protector asociado sobre todo con Zeus y Atenea; su representación y descripción varían, incluyendo piel o escudo protector en fuentes e imágenes.",
+      "tags": [
+        "griega",
+        "protección",
+        "Atenea",
+        "Zeus",
+        "reliquia"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "La égida no tiene una única forma material constante; cualquier mecánica de barrera mágica debe marcarse como adaptación.",
+      "relations": [
+        {
+          "type": "associated_with",
+          "targetId": "GRC-ATHENA"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "objeto protector / atributo divino",
+        "associatedFigureIds": [
+          "GRC-ATHENA"
+        ],
+        "documentedCapabilities": [
+          "Objeto protector asociado con Zeus y Atenea en fuentes e imágenes griegas."
+        ],
+        "useConditions": "Descripción y forma cambian según fuente.",
+        "costsAndLimits": "No existe una especificación técnica única.",
+        "risks": "La barrera impenetrable es una adaptación concreta, no un hecho histórico.",
+        "evolutionStages": [],
+        "adaptationMechanics": "La duración y el coste de una barrera se definen por historia."
+      },
+      "aliases": [],
+      "attributes": [
+        "protección",
+        "Atenea",
+        "Zeus",
+        "reliquia"
+      ],
+      "domains": [
+        "protección",
+        "Atenea",
+        "Zeus",
+        "reliquia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "GRC-CADUCEUS",
+      "name": "Caduceo de Hermes",
+      "kind": "sacred_relic",
+      "tradition": "Griega",
+      "region": "Mundo griego antiguo",
+      "status": "mythology_reference",
+      "summary": "Bastón de Hermes, comúnmente representado con dos serpientes y alas en iconografía posterior; no debe confundirse con la vara de Asclepio, símbolo médico distinto.",
+      "tags": [
+        "griega",
+        "Hermes",
+        "bastón",
+        "símbolo"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Las propiedades de curación atribuidas al caduceo en cultura moderna no equivalen a un poder antiguo universalmente documentado.",
+      "relations": [
+        {
+          "type": "associated_with",
+          "targetId": "GRC-HERMES"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "bastón simbólico",
+        "associatedFigureIds": [
+          "GRC-HERMES"
+        ],
+        "documentedCapabilities": [
+          "Bastón asociado con Hermes; el símbolo médico de Asclepio es distinto."
+        ],
+        "useConditions": "Su papel es simbólico y mitológico según fuente.",
+        "costsAndLimits": "No atribuir automáticamente capacidades curativas.",
+        "risks": "Confundirlo con el bastón de Asclepio perpetúa una asociación moderna incorrecta.",
+        "evolutionStages": [],
+        "adaptationMechanics": "La curación mágica debe marcarse como adaptación original."
+      },
+      "aliases": [],
+      "attributes": [
+        "Hermes",
+        "bastón",
+        "símbolo"
+      ],
+      "domains": [
+        "Hermes",
+        "bastón",
+        "símbolo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "GRC-ACHILLES",
+      "name": "Aquiles",
+      "kind": "culture_hero",
+      "tradition": "Griega",
+      "region": "Ciclo troyano",
+      "status": "mythology_reference",
+      "summary": "Principal guerrero aqueo de la Ilíada; el motivo de su talón vulnerable pertenece a tradiciones posteriores y no es la narración central de la Ilíada.",
+      "tags": [
+        "griega",
+        "héroe",
+        "guerra de Troya",
+        "vulnerabilidad"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Separar Homero de elaboraciones tardías como la inmersión en la Estigia.",
+      "aliases": [],
+      "attributes": [
+        "guerra de Troya",
+        "vulnerabilidad"
+      ],
+      "domains": [
+        "guerra de Troya",
+        "vulnerabilidad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "NOR-THOR",
+      "name": "Thor",
+      "kind": "deity",
+      "tradition": "Nórdica",
+      "region": "Escandinavia y mundo germánico del norte",
+      "status": "mythology_reference",
+      "summary": "Dios del trueno y protector en tradiciones nórdicas; los relatos medievales lo vinculan con Mjölnir y sus viajes contra gigantes.",
+      "tags": [
+        "nórdica",
+        "trueno",
+        "protección",
+        "fuerza"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-THOR",
+        "SRC-PRIMARY-EDDA"
+      ],
+      "sourceNotes": "Las fuentes eddicas son medievales y sus relatos no constituyen una descripción uniforme de todas las prácticas precristianas.",
+      "relations": [
+        {
+          "type": "wields_in_myth",
+          "targetId": "WEAPON-MJOLNIR"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "trueno",
+        "protección",
+        "fuerza"
+      ],
+      "domains": [
+        "trueno",
+        "protección",
+        "fuerza"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "HIN-SHIVA",
+      "name": "Shiva",
+      "kind": "deity",
+      "tradition": "Hinduismo",
+      "region": "Asia meridional y diásporas",
+      "status": "mythology_reference",
+      "summary": "Deidad mayor de tradiciones hinduistas, con formas y funciones diversas; suele representarse con el tridente trishula.",
+      "tags": [
+        "hindú",
+        "transformación",
+        "yoga",
+        "tridente"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-SHIVA"
+      ],
+      "sourceNotes": "Shiva no tiene un perfil único: las teologías, devociones y representaciones cambian entre tradiciones.",
+      "relations": [
+        {
+          "type": "associated_weapon",
+          "targetId": "WEAPON-TRISHULA"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "transformación",
+        "yoga",
+        "tridente"
+      ],
+      "domains": [
+        "transformación",
+        "yoga",
+        "tridente"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "HIN-INDRA",
+      "name": "Indra",
+      "kind": "deity",
+      "tradition": "Védica / hinduismo",
+      "region": "Asia meridional",
+      "status": "mythology_reference",
+      "summary": "Deidad prominente en himnos védicos, asociada con tormenta y victoria; su atributo vajra se vincula con el rayo en relatos posteriores.",
+      "tags": [
+        "védica",
+        "trueno",
+        "rayo",
+        "guerra"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-INDRA"
+      ],
+      "sourceNotes": "La posición y atributos de Indra evolucionan entre los textos védicos y tradiciones hinduistas posteriores.",
+      "relations": [
+        {
+          "type": "associated_weapon",
+          "targetId": "WEAPON-VAJRA"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "védica",
+        "trueno",
+        "rayo",
+        "guerra"
+      ],
+      "domains": [
+        "védica",
+        "trueno",
+        "rayo",
+        "guerra"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "ART-KING-ARTHUR",
+      "name": "Rey Arturo",
+      "kind": "culture_hero",
+      "tradition": "Materia artúrica",
+      "region": "Britania legendaria y literatura medieval europea",
+      "status": "mythology_reference",
+      "summary": "Rey legendario de la materia artúrica, cuya imagen se desarrolló en textos medievales; la relación exacta entre tradición, literatura e historia es debatida.",
+      "tags": [
+        "artúrica",
+        "rey legendario",
+        "caballería",
+        "Excalibur"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-ARTHUR"
+      ],
+      "sourceNotes": "No existe consenso que permita tratar las biografías literarias de Arturo como una historia comprobada.",
+      "relations": [
+        {
+          "type": "associated_weapon",
+          "targetId": "WEAPON-EXCALIBUR"
+        }
+      ],
+      "aliases": [
+        "Arthur",
+        "Arturo"
+      ],
+      "attributes": [
+        "rey legendario",
+        "caballería",
+        "Excalibur"
+      ],
+      "domains": [
+        "rey legendario",
+        "caballería",
+        "Excalibur"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "ARMOR-ACHILLES",
+      "name": "Armadura de Aquiles",
+      "kind": "mythic_armor",
+      "tradition": "Griega",
+      "region": "Ciclo troyano / Ilíada",
+      "status": "mythology_reference",
+      "summary": "Armadura elaborada por Hefesto para Aquiles en el canto XVIII de la Ilíada; el escudo recibe una descripción extensa que representa escenas del mundo.",
+      "tags": [
+        "griega",
+        "armadura",
+        "Aquiles",
+        "Ilíada",
+        "escudo"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "El objeto pertenece al poema épico; su simbolismo literario no demuestra que una armadura histórica tuviera esas propiedades.",
+      "relations": [
+        {
+          "type": "worn_by_in_myth",
+          "targetId": "GRC-ACHILLES"
+        }
+      ],
+      "artifactProfile": {
+        "objectCategory": "armadura de epopeya",
+        "associatedFigureIds": [
+          "GRC-ACHILLES"
+        ],
+        "documentedCapabilities": [
+          "Armadura y escudo elaborados por Hefesto para Aquiles en la Ilíada."
+        ],
+        "useConditions": "Objeto narrativo del poema épico.",
+        "costsAndLimits": "Las propiedades son literarias y no una especificación de equipo histórico.",
+        "risks": "No atribuir invulnerabilidad absoluta al conjunto sin aclarar la versión.",
+        "evolutionStages": [],
+        "adaptationMechanics": "Protección absoluta o poderes de escudo deben ser reglas ficticias."
+      },
+      "aliases": [],
+      "attributes": [
+        "armadura",
+        "Aquiles",
+        "Ilíada",
+        "escudo"
+      ],
+      "domains": [
+        "armadura",
+        "Aquiles",
+        "Ilíada",
+        "escudo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "JPN-OROCHI",
+      "name": "Yamata-no-Orochi",
+      "kind": "folklore_entity",
+      "tradition": "Japonesa / sintoísta",
+      "region": "Izumo, Japón (en el relato)",
+      "status": "mythology_reference",
+      "summary": "Serpiente monstruosa de ocho cabezas y ocho colas derrotada por Susanoo en el relato conservado en el Kojiki y el Nihon Shoki.",
+      "tags": [
+        "japonesa",
+        "serpiente",
+        "monstruo",
+        "Susanoo"
+      ],
+      "sourceIds": [
+        "SRC-PRIMARY-KOJIKI"
+      ],
+      "sourceNotes": "La forma exacta y el significado del relato varían según la fuente y las interpretaciones posteriores.",
+      "relations": [
+        {
+          "type": "defeated_by_in_myth",
+          "targetId": "JPN-SUSANOO"
+        }
+      ],
+      "aliases": [],
+      "attributes": [
+        "monstruo",
+        "Susanoo"
+      ],
+      "domains": [
+        "monstruo",
+        "Susanoo"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "JPN-KITSUNE",
+      "name": "Kitsune",
+      "kind": "spirit_avatar",
+      "tradition": "Japonesa / folclore",
+      "region": "Japón",
+      "status": "mythology_reference",
+      "summary": "Zorro de relatos y folclores japoneses, que puede aparecer como animal, ser sobrenatural o figura transformadora según la narración; no existe un único perfil uniforme.",
+      "tags": [
+        "japonesa",
+        "espíritu",
+        "transformación",
+        "zorro",
+        "folclore"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-LIVING",
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "Kitsune abarca relatos regionales y literarios distintos; no atribuir a todos los zorros sobrenaturales las mismas capacidades ni tratarlos como una sola entidad individual.",
+      "aliases": [
+        "Kitsune",
+        "狐"
+      ],
+      "attributes": [
+        "transformación"
+      ],
+      "domains": [
+        "transformación"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "ROM-MARS",
+      "name": "Marte",
+      "kind": "deity",
+      "tradition": "Romana",
+      "region": "Roma antigua y Mediterráneo",
+      "status": "mythology_reference",
+      "summary": "Dios romano de la guerra y protector de la comunidad, con asociaciones agrícolas en cultos antiguos; no es una simple copia de Ares griego.",
+      "tags": [
+        "romana",
+        "guerra",
+        "protección",
+        "agricultura"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "Comparar cultos y contextos romanos propios antes de equipararlo con Ares.",
+      "aliases": [
+        "Mars"
+      ],
+      "attributes": [
+        "guerra",
+        "protección",
+        "agricultura"
+      ],
+      "domains": [
+        "guerra",
+        "protección",
+        "agricultura"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "ROM-MINERVA",
+      "name": "Minerva",
+      "kind": "deity",
+      "tradition": "Romana",
+      "region": "Roma antigua y Mediterráneo",
+      "status": "mythology_reference",
+      "summary": "Diosa romana asociada con sabiduría, oficios y estrategia; su identificación con Atenea se desarrolló mediante procesos de equivalencia cultural.",
+      "tags": [
+        "romana",
+        "sabiduría",
+        "oficios",
+        "estrategia"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "La equivalencia Minerva-Atenea es histórica y cultural; sus cultos romanos no se reducen a una traducción exacta del panteón griego.",
+      "aliases": [
+        "Minerva"
+      ],
+      "attributes": [
+        "sabiduría",
+        "oficios",
+        "estrategia"
+      ],
+      "domains": [
+        "sabiduría",
+        "oficios",
+        "estrategia"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "CHN-NEZHA",
+      "name": "Nezha",
+      "kind": "deity",
+      "tradition": "China / religión popular y literatura",
+      "region": "China",
+      "status": "mythology_reference",
+      "summary": "Figura divina y heroica de la religión popular china y de relatos literarios, especialmente conocida por su juventud, armas extraordinarias y conflictos con seres celestes; las versiones varían.",
+      "tags": [
+        "china",
+        "héroe divino",
+        "literatura",
+        "armas"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH",
+        "SRC-MET-COLLECTION"
+      ],
+      "sourceNotes": "Distinguir tradiciones religiosas, novelas clásicas y adaptaciones modernas; no tratar todas las armas populares de Nezha como un único inventario antiguo.",
+      "aliases": [
+        "哪吒"
+      ],
+      "attributes": [
+        "héroe divino",
+        "armas"
+      ],
+      "domains": [
+        "héroe divino",
+        "armas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "CHN-SUNWUKONG",
+      "name": "Sun Wukong",
+      "kind": "culture_hero",
+      "tradition": "China / literatura clásica",
+      "region": "China",
+      "status": "mythology_reference",
+      "summary": "Rey Mono, protagonista de Viaje al Oeste; la novela combina motivos religiosos, folclóricos y literarios. Sus transformaciones y bastón mágico pertenecen al relato literario.",
+      "tags": [
+        "china",
+        "Rey Mono",
+        "transformación",
+        "literatura"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-JOURNEY-WEST"
+      ],
+      "sourceNotes": "Es una figura literaria de la novela clásica; separar el texto y sus versiones de las adaptaciones audiovisuales modernas.",
+      "aliases": [
+        "Sun Wu-k'ung",
+        "Rey Mono"
+      ],
+      "attributes": [
+        "Rey Mono",
+        "transformación"
+      ],
+      "domains": [
+        "Rey Mono",
+        "transformación"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "AFR-AKAN-ANANSI",
+      "name": "Anansi",
+      "kind": "folklore_entity",
+      "tradition": "Akan / África occidental y diásporas",
+      "region": "Ghana y tradiciones de la diáspora africana",
+      "status": "mythology_reference",
+      "summary": "Figura araña y embaucador de relatos akan, conocida por historias de ingenio y transmisión de cuentos; las versiones cambian entre comunidades y diásporas.",
+      "tags": [
+        "africana",
+        "akan",
+        "araña",
+        "ingenio",
+        "relato oral"
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-ANANSI",
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Las versiones de Anansi en el Caribe y otras diásporas tienen historias propias; no asumir una forma única o estática.",
+      "aliases": [
+        "Ananse"
+      ],
+      "attributes": [
+        "araña",
+        "ingenio"
+      ],
+      "domains": [
+        "araña",
+        "ingenio"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "AFR-YOR-OSHUN",
+      "name": "Ọ̀ṣun / Oshun",
+      "kind": "deity",
+      "tradition": "Yoruba / religiones de África occidental y diásporas",
+      "region": "Territorios yoruba, actual Nigeria y Benín; diásporas",
+      "status": "mythology_reference",
+      "summary": "Orisha asociada con el río, la fertilidad, el cuidado y la prosperidad en tradiciones yoruba y afroatlánticas; sus atributos y prácticas devocionales son diversos.",
+      "tags": [
+        "africana",
+        "yoruba",
+        "río",
+        "cuidado",
+        "fertilidad"
+      ],
+      "sourceIds": [
+        "SRC-UNESCO-OSUN",
+        "SRC-UNESCO-LIVING"
+      ],
+      "sourceNotes": "Tradición religiosa viva: usar fuentes comunitarias y respetar las diferencias entre prácticas yoruba y tradiciones afroatlánticas.",
+      "aliases": [
+        "Ọ̀ṣun",
+        "Oshun"
+      ],
+      "attributes": [
+        "río",
+        "cuidado",
+        "fertilidad"
+      ],
+      "domains": [
+        "río",
+        "cuidado",
+        "fertilidad"
+      ],
+      "confidence": "referencia_secundaria_con_variantes"
+    },
+    {
+      "id": "GRC-HERACLES-FEM",
+      "name": "Heracles (interpretación femenina)",
+      "kind": "culture_hero",
+      "tradition": "Griega · adaptación de género",
+      "region": "Adaptación creativa basada en el mito griego",
+      "status": "creative_adaptation",
+      "summary": "Relectura femenina original de Heracles para WordWaifu. Conserva como inspiración los trabajos, el león de Nemea, la resistencia y el coste trágico; no se presenta como variante de una fuente griega antigua.",
+      "creativeHook": "Diseñar una heroína cuya identidad no se reduzca a cambiar el modelo corporal: sus cuatro manifestaciones reinterpretan aprendizaje, prueba, apoteosis y tragedia.",
+      "tags": [
+        "griega",
+        "heracles",
+        "heroína",
+        "doce trabajos",
+        "adaptación creativa",
+        "lily",
+        "épica",
+        "dark"
+      ],
+      "relations": [
+        {
+          "type": "gender_reinterpretation_of",
+          "targetId": "GRC-HERACLES"
+        },
+        {
+          "type": "shares_mythic_cycle",
+          "targetId": "GRC-MEDUSA"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-MYTH"
+      ],
+      "sourceNotes": "La fuente enlazada sirve como contexto del mito base de Heracles, no como evidencia de una Heracles femenina antigua ni de estas formas. Las cuatro manifestaciones y sus técnicas son originales de WordWaifu.",
+      "aliases": [
+        "Heracles femenina",
+        "Hércules femenina (nombre alternativo de búsqueda)"
+      ],
+      "attributes": [
+        "trabajos",
+        "fuerza",
+        "perseverancia",
+        "tragedia",
+        "reinterpretación femenina",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "pruebas",
+        "fuerza",
+        "resistencia",
+        "apoteosis",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "adaptacion_creativa_de_referencia_mitologica",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "designRule": "Tres pilares editables por forma: arma, vestimenta/símbolo y ataque total del mito. La relectura femenina es ficción de WordWaifu, no una identidad histórica antigua confirmada.",
+        "baseFigureId": "GRC-HERACLES",
+        "identityPresentation": "Femenina · reinterpretación creativa de WordWaifu",
+        "forms": [
+          {
+            "id": "heracles-f-lily",
+            "name": "Heracles · Lily (femenina)",
+            "stage": "Juvenil / potencial",
+            "role": "La promesa de convertirse en heroína a través de pruebas reales.",
+            "weapon": "Arco recurvo de viaje con una flecha de madera sin adornos.",
+            "outfit": "Túnica clara, brazaletes de entrenamiento y una capa corta que anticipa la piel del león.",
+            "totalityAttack": "La Primera Prueba — una flecha marca el punto débil y la heroína debe acercarse para completar el trabajo; el ataque recompensa valentía, no distancia infinita.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-f-initial",
+            "name": "Heracles · Inicial (femenina)",
+            "stage": "Héroe reconocible",
+            "role": "Fuerza física, ingenio y resistencia ante lo que parece invulnerable.",
+            "weapon": "Clava de olivo con empuñadura envuelta en cuero.",
+            "outfit": "Piel del león de Nemea llevada como manto protector, junto a una túnica de viaje funcional.",
+            "totalityAttack": "El León de Nemea — una carga frontal que rompe una defensa y permite inmovilizar al enemigo si la usuaria soporta el contraataque.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-f-epic",
+            "name": "Heracles · Épica (femenina)",
+            "stage": "Cima heroica",
+            "role": "La totalidad del ciclo: trabajo, sacrificio, persistencia y trascendencia.",
+            "weapon": "Clava y arco, alternados según el trabajo representado.",
+            "outfit": "Manto de león con doce sellos luminosos; cada sello recuerda una prueba distinta y no otorga automáticamente todas sus recompensas.",
+            "totalityAttack": "Los Doce Trabajos: Corona de la Inquebrantable — adapta su efecto al desafío actual y solo alcanza su potencia final tras pagar el coste de la prueba elegida.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          },
+          {
+            "id": "heracles-f-dark",
+            "name": "Heracles · Dark (femenina)",
+            "stage": "Trágico / desbordado",
+            "role": "La tragedia de la fuerza sin dominio y el coste de la violencia; variante original.",
+            "weapon": "Clava fracturada cubierta de sombras; la fuerza aumenta y la precisión disminuye.",
+            "outfit": "Piel del león ennegrecida, corona de espinas de bronce como símbolo ficticio de culpa y un manto desgarrado.",
+            "totalityAttack": "La Heroína que Teme a su Fuerza — descarga brutal que destruye defensas, pero puede herir aliados y deja una deuda física o emocional acumulativa.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir estas formas ni técnicas al mito antiguo como si fueran canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRC-HYDRA-LERNAEAN",
+      "name": "Hidra de Lerna",
+      "kind": "mythic_entity",
+      "tradition": "Griega",
+      "region": "Lerna / Argólida en el ciclo heroico griego",
+      "status": "mythology_reference",
+      "summary": "Monstruo acuático de múltiples cabezas cuya regeneración vuelve insuficiente la decapitación simple; uno de los trabajos de Heracles. El número de cabezas y los detalles varían entre relatos.",
+      "creativeHook": "En combate, obliga a resolver el mecanismo de regeneración en vez de repetir ataques; fuego, cooperación y sellado del cuello pueden ser condiciones de una adaptación jugable.",
+      "tags": [
+        "griega",
+        "monstruo",
+        "hidra",
+        "regeneración",
+        "veneno",
+        "heracles",
+        "lily",
+        "épica",
+        "dark"
+      ],
+      "relations": [
+        {
+          "type": "opposed_in_myth",
+          "targetId": "GRC-HERACLES"
+        },
+        {
+          "type": "shares_mythic_cycle",
+          "targetId": "GRC-CERBERUS"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-1911-HYDRA"
+      ],
+      "sourceNotes": "La fuente es una enciclopedia histórica secundaria. Los detalles exactos de cabezas y veneno dependen de la versión; las habilidades jugables se etiquetan como ficción.",
+      "aliases": [
+        "Hidra de Lerna",
+        "Lernaean Hydra"
+      ],
+      "attributes": [
+        "regeneración",
+        "múltiples cabezas",
+        "monstruo",
+        "trabajos de Heracles",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "regeneración",
+        "veneno",
+        "supervivencia",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "baseFigureId": "GRC-HYDRA-LERNAEAN",
+        "identityPresentation": "Monstruo serpentino / variantes de regeneración",
+        "designRule": "Cada forma se define con tres pilares: arma (objeto o arma natural), vestimenta/símbolo y ataque que condensa el mito. Lily, épica y Dark son plantillas creativas de WordWaifu salvo indicación expresa de fuente.",
+        "forms": [
+          {
+            "id": "hydra-lily",
+            "name": "Hidra · Larva",
+            "stage": "Juvenil / latente",
+            "role": "La amenaza aún pequeña que crece si se la combate sin comprenderla.",
+            "weapon": "Mordida y dos cabezas incipientes; la regeneración tarda en activarse.",
+            "outfit": "Escamas húmedas, collar de juncos y barro de Lerna como símbolos de su guarida.",
+            "totalityAttack": "La Primera Cabeza — una mordida venenosa y una cabeza señuelo; la regeneración solo ocurre si no se sella la herida.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "hydra-initial",
+            "name": "Hidra · Inicial",
+            "stage": "Monstruo reconocible",
+            "role": "La regla central del mito: atacar sin método agrava el peligro.",
+            "weapon": "Múltiples cabezas mordedoras y cuello extensible; regeneración condicionada al daño recibido.",
+            "outfit": "Cresta de escamas, restos de juncos y marcas de barro del pantano.",
+            "totalityAttack": "Corte que se Multiplica — cada cuello cortado amenaza con producir nuevas cabezas salvo que se interrumpa la regeneración.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "hydra-epic",
+            "name": "Hidra · Épica",
+            "stage": "Manifestación plena",
+            "role": "La totalidad del trabajo: regeneración, cooperación heroica y superación mediante estrategia.",
+            "weapon": "Cabezas múltiples coordinadas y veneno; una cabeza central puede ser tratada como núcleo en esta adaptación.",
+            "outfit": "Armadura orgánica de escamas y corona de cabezas; diseño original inspirado en la iconografía del monstruo.",
+            "totalityAttack": "Las Nueve Mareas de Lerna — asedio multidireccional de cabezas; solo se vence coordinando el sellado de las heridas y el núcleo.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "hydra-dark",
+            "name": "Hidra · Dark",
+            "stage": "Cataclismo / regeneración descontrolada",
+            "role": "El miedo a un mal que se reproduce con cada intento de destruirlo; mecánica original.",
+            "weapon": "Regeneración acelerada y veneno que contamina el terreno; la criatura pierde control del crecimiento.",
+            "outfit": "Escamas ennegrecidas, cabezas espectrales y barro tóxico como diseño ficticio.",
+            "totalityAttack": "Pantano sin Fin — las heridas se multiplican en una zona peligrosa que amenaza también a la Hidra y a sus aliados.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRC-CERBERUS",
+      "name": "Cerbero",
+      "kind": "mythic_entity",
+      "tradition": "Griega",
+      "region": "Inframundo griego",
+      "status": "mythology_reference",
+      "summary": "Perro guardián del inframundo que impide escapar a los muertos. Su número de cabezas y apariencia cambian según fuentes y representaciones.",
+      "creativeHook": "No es solo una bestia de daño: su papel de guardián permite crear poderes de frontera, vigilancia, contención y custodia de portales.",
+      "tags": [
+        "griega",
+        "monstruo",
+        "inframundo",
+        "guardián",
+        "tres cabezas",
+        "heracles"
+      ],
+      "relations": [
+        {
+          "type": "captured_in_myth_by",
+          "targetId": "GRC-HERACLES"
+        },
+        {
+          "type": "shares_mythic_cycle",
+          "targetId": "GRC-HYDRA-LERNAEAN"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-1911-CERBERUS"
+      ],
+      "sourceNotes": "La tradición tiene representaciones variables (incluidas diferencias en el número de cabezas). La estética exacta y las mecánicas de combate son adaptación creativa.",
+      "aliases": [
+        "Kerberos",
+        "Can Cerbero"
+      ],
+      "attributes": [
+        "guardián",
+        "inframundo",
+        "límite",
+        "custodia",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "inframundo",
+        "vigilancia",
+        "frontera",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "baseFigureId": "GRC-CERBERUS",
+        "identityPresentation": "Bestia guardiana / custodio del umbral",
+        "designRule": "Cada forma se define con tres pilares: arma (objeto o arma natural), vestimenta/símbolo y ataque que condensa el mito. Lily, épica y Dark son plantillas creativas de WordWaifu salvo indicación expresa de fuente.",
+        "forms": [
+          {
+            "id": "cerberus-lily",
+            "name": "Cerbero · Cachorro",
+            "stage": "Juvenil / latente",
+            "role": "El guardián que aprende qué debe proteger.",
+            "weapon": "Mordida, olfato sobrenatural y ladrido de alarma; tres cabezas como diseño común, no único.",
+            "outfit": "Collar de hierro y pequeñas cadenas como símbolo de su deber de guardia.",
+            "totalityAttack": "Ladrido del Umbral — revela a quien intenta cruzar una frontera prohibida y lo obliga a detenerse por un instante.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "cerberus-initial",
+            "name": "Cerbero · Inicial",
+            "stage": "Guardián reconocible",
+            "role": "Su función mítica de permitir la entrada y frustrar la salida.",
+            "weapon": "Mordida coordinada de sus cabezas y cuerpo capaz de bloquear una salida.",
+            "outfit": "Collar oscuro, cadenas y pelaje de ceniza; representación creativa del guardián del inframundo.",
+            "totalityAttack": "Nadie Sale del Hades — cierre de una ruta de escape y embestida contra quien intenta cruzarla sin permiso.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "cerberus-epic",
+            "name": "Cerbero · Épico",
+            "stage": "Custodio pleno",
+            "role": "La totalidad del guardián: límite entre mundos, custodia y prueba heroica de Heracles.",
+            "weapon": "Tres ataques coordinados, olfato para rastrear almas y mordida de contención.",
+            "outfit": "Arnés de hierro infernal, cadenas ceremoniales y marcas de la puerta del inframundo.",
+            "totalityAttack": "Las Tres Fauces del Umbral — cada cabeza controla una función: rastrear, contener y castigar la fuga; sus límites se pueden explotar mediante negociación o permiso.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "cerberus-dark",
+            "name": "Cerbero · Dark",
+            "stage": "Guardián desatado",
+            "role": "El deber de custodiar convertido en prisión y violencia sin juicio.",
+            "weapon": "Fauces que atacan toda presencia cercana; el instinto de custodia se vuelve indiscriminado.",
+            "outfit": "Cadenas rotas, humo negro y ojos incandescentes como diseño original.",
+            "totalityAttack": "La Puerta que Devora — cierra una zona y ataca a cualquiera que cruce; el precio es que tampoco distingue aliados ni inocentes.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRC-MINOTAUR",
+      "name": "Minotauro",
+      "kind": "mythic_entity",
+      "tradition": "Griega / cretense en la tradición literaria",
+      "region": "Creta y el Laberinto",
+      "status": "mythology_reference",
+      "summary": "Monstruo con cuerpo humano y cabeza de toro, encerrado en el laberinto de Creta y vencido por Teseo en el relato más conocido.",
+      "creativeHook": "Diseño centrado en persecución, fuerza, orientación y dominio del laberinto; el monstruo puede ser peligroso por controlar el espacio, no solo por golpear fuerte.",
+      "tags": [
+        "griega",
+        "cretense",
+        "monstruo",
+        "toro",
+        "laberinto",
+        "teseo"
+      ],
+      "relations": [
+        {
+          "type": "defeated_in_myth_by",
+          "targetId": "GRC-THESEUS"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-1911-MINOTAUR"
+      ],
+      "sourceNotes": "La fuente resume una versión literaria conocida y también recoge interpretaciones posteriores especulativas; estas no se presentan como hechos probados. Las formas alternativas son creación de WordWaifu.",
+      "aliases": [
+        "Minotauro de Creta",
+        "Asterión (nombre en algunas tradiciones)"
+      ],
+      "attributes": [
+        "laberinto",
+        "fuerza",
+        "toro",
+        "encierro",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "persecución",
+        "territorio",
+        "fuerza",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "baseFigureId": "GRC-MINOTAUR",
+        "identityPresentation": "Monstruo taurino / señor del laberinto",
+        "designRule": "Cada forma se define con tres pilares: arma (objeto o arma natural), vestimenta/símbolo y ataque que condensa el mito. Lily, épica y Dark son plantillas creativas de WordWaifu salvo indicación expresa de fuente.",
+        "forms": [
+          {
+            "id": "minotaur-lily",
+            "name": "Minotauro · Larva",
+            "stage": "Juvenil / latente",
+            "role": "El monstruo criado en encierro y la amenaza que aún está creciendo.",
+            "weapon": "Cuernos cortos, embestida limitada y olfato para rastrear intrusos.",
+            "outfit": "Capa de lino áspero y cuerda de Ariadna como símbolo narrativo, no indumentaria antigua confirmada.",
+            "totalityAttack": "Primer Giro del Laberinto — embiste por un corredor y fuerza al rival a elegir entre retroceder o quedar acorralado.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "minotaur-initial",
+            "name": "Minotauro · Inicial",
+            "stage": "Monstruo reconocible",
+            "role": "Fuerza monstruosa ligada al encierro y al espacio cerrado.",
+            "weapon": "Cuernos, embestida y fuerza para derribar muros débiles.",
+            "outfit": "Taparrabo de cuero, brazales de bronce y polvo del laberinto.",
+            "totalityAttack": "La Carga de Asterión — carrera recta devastadora que se vuelve predecible si el rival conoce el terreno.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "minotaur-epic",
+            "name": "Minotauro · Épico",
+            "stage": "Señor del laberinto",
+            "role": "La totalidad del mito: monstruo, encierro, laberinto y victoria de la astucia sobre la fuerza.",
+            "weapon": "Cuernos reforzados, oído para localizar pasos y control de rutas dentro de su territorio.",
+            "outfit": "Armadura de bronce cretense de diseño original, máscara taurina y motivos geométricos del laberinto.",
+            "totalityAttack": "El Laberinto se Cierra — altera las rutas y fuerza al enemigo a enfrentarse al monstruo; la salida sigue existiendo si se resuelve la ruta o el hilo conductor.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "minotaur-dark",
+            "name": "Minotauro · Dark",
+            "stage": "Horror del encierro",
+            "role": "El coste trágico de ser reducido a monstruo y prisionero; interpretación original.",
+            "weapon": "Cuernos negros y embestidas que rompen estructuras, pero desorientan al propio monstruo.",
+            "outfit": "Máscara quebrada, cadenas y muros móviles como elementos de diseño ficticio.",
+            "totalityAttack": "Ariadna no Encuentra la Salida — el campo se convierte en un laberinto opresivo; cada uso reduce también la orientación del Minotauro.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          }
+        ]
+      }
+    },
+    {
+      "id": "GRC-THESEUS",
+      "name": "Teseo",
+      "kind": "culture_hero",
+      "tradition": "Griega / cretense en la tradición literaria",
+      "region": "Ática y Creta en el ciclo mítico",
+      "status": "mythology_reference",
+      "summary": "Héroe ateniense asociado, en el relato más conocido, con la entrada al laberinto de Creta y la derrota del Minotauro gracias a la ayuda de Ariadna.",
+      "creativeHook": "Su fuerza no reside únicamente en el combate: el hilo, la preparación y la capacidad de regresar convierten la historia en un héroe de navegación táctica.",
+      "tags": [
+        "griega",
+        "héroe",
+        "teseo",
+        "laberinto",
+        "minotauro",
+        "ariadna",
+        "lily",
+        "épica",
+        "dark"
+      ],
+      "relations": [
+        {
+          "type": "defeats_in_myth",
+          "targetId": "GRC-MINOTAUR"
+        }
+      ],
+      "sourceIds": [
+        "SRC-BRITANNICA-1911-MINOTAUR"
+      ],
+      "sourceNotes": "Referencia secundaria para el ciclo del Minotauro y Teseo. Los detalles de las formas y técnicas son una adaptación creativa, no una reconstrucción de un único relato antiguo.",
+      "aliases": [
+        "Theseus"
+      ],
+      "attributes": [
+        "laberinto",
+        "astucia",
+        "regreso",
+        "héroe",
+        "manifestaciones heroicas",
+        "arma característica",
+        "vestimenta mítica",
+        "ataque total del mito"
+      ],
+      "domains": [
+        "navegación",
+        "combate",
+        "resolución de pruebas",
+        "manifestaciones heroicas"
+      ],
+      "confidence": "referencia_secundaria_con_variantes",
+      "heroicManifestations": {
+        "profileType": "heroic_mythic_manifestation_set",
+        "baseFigureId": "GRC-THESEUS",
+        "identityPresentation": "Héroe del laberinto / variantes de diseño",
+        "designRule": "Cada forma tiene arma, símbolo de vestimenta y ataque que reúne la historia. Las etapas Lily, épica y Dark son propuestas originales de WordWaifu.",
+        "forms": [
+          {
+            "id": "theseus-lily",
+            "name": "Teseo · Lily",
+            "stage": "Juvenil / potencial",
+            "role": "El héroe que aprende que sobrevivir depende también de recordar el camino.",
+            "weapon": "Espada corta de entrenamiento y una madeja de hilo resistente.",
+            "outfit": "Túnica de viajero con una pequeña bobina de hilo como emblema.",
+            "totalityAttack": "Primer Hilo — marca un tramo seguro del laberinto y permite volver sobre los propios pasos.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "theseus-initial",
+            "name": "Teseo · Inicial",
+            "stage": "Héroe reconocible",
+            "role": "La victoria depende de la astucia, la ayuda y la posibilidad de regresar.",
+            "weapon": "Espada corta y ovillo de hilo de Ariadna como herramientas complementarias.",
+            "outfit": "Túnica de viaje, brazal de bronce y el hilo visible atado a la muñeca.",
+            "totalityAttack": "El Camino de Ariadna — un ataque preciso seguido de una ruta de retirada que evita quedar atrapado.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "theseus-epic",
+            "name": "Teseo · Épico",
+            "stage": "Héroe del laberinto",
+            "role": "La totalidad del mito: entrar en el laberinto, vencer al monstruo y encontrar la salida.",
+            "weapon": "Espada heroica y el hilo como reliquia táctica.",
+            "outfit": "Manto cretense, brazaletes de bronce y un patrón de laberinto bordado.",
+            "totalityAttack": "Laberinto, Centro y Salida — revela temporalmente las rutas, localiza el núcleo de la amenaza y abre una retirada; requiere haber trazado el camino antes.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          },
+          {
+            "id": "theseus-dark",
+            "name": "Teseo · Dark",
+            "stage": "Héroe extraviado",
+            "role": "El lado trágico de la victoria: sobrevivir no significa salir indemne ni conservar todos los vínculos.",
+            "weapon": "Espada oscura y un hilo que se deshace; pierde precisión si ignora sus marcas.",
+            "outfit": "Manto desgarrado y ovillo ennegrecido, símbolo de abandono y pérdida de orientación.",
+            "totalityAttack": "Sin Ariadna no Hay Regreso — encierra al enemigo en rutas falsas, pero cada uso borra también parte del propio camino del héroe.",
+            "creativeStatus": "Adaptación creativa de WordWaifu; no atribuir esta forma o técnica a las fuentes antiguas como si fuera canon."
+          }
+        ]
+      }
+    }
+  ],
+  "starterDecks": [
+    {
+      "id": "DECK-LATAM-ANCESTRAL",
+      "name": "Ecos del territorio",
+      "description": "Cartas inspiradas en relatos latinoamericanos, con énfasis en territorio, reciprocidad, supervivencia y memoria. No presupone que todas las entidades acepten combate.",
+      "entityIds": [
+        "LAT-MAP-PILLAN",
+        "LAT-MAP-TRENGT",
+        "LAT-TEH-ELAL",
+        "LAT-GUA-POMBERO",
+        "LAT-GUA-JASYJATERE",
+        "LAT-BRA-CURUPIRA",
+        "LAT-BRA-BOITATA",
+        "LAT-BRA-IARA",
+        "LAT-AND-PACHAMAMA",
+        "LAT-AND-INTI",
+        "LAT-AND-VIRACOCHA",
+        "LAT-AND-SUPAY",
+        "LAT-MEX-QUETZALCOATL",
+        "LAT-MEX-TEZCATLIPOCA",
+        "LAT-MEX-HUITZILOPOCHTLI",
+        "LAT-MAY-IXCHEL",
+        "LAT-MAY-HERO-TWINS"
+      ]
+    },
+    {
+      "id": "DECK-RELICS-WORLD",
+      "name": "Reliquias y armas legendarias",
+      "description": "Objetos con tradición documentada que pueden recibir reglas mágicas nuevas si se etiquetan como adaptación.",
+      "entityIds": [
+        "WEAPON-MACUAHUITL",
+        "WEAPON-EXCALIBUR",
+        "WEAPON-GUNGNIR",
+        "WEAPON-MJOLNIR",
+        "WEAPON-KUSANAGI",
+        "WEAPON-VAJRA",
+        "WEAPON-TRISHULA",
+        "RELIC-ARK-ALLIANCE"
+      ]
+    },
+    {
+      "id": "DECK-SYSTEM-CORE",
+      "name": "Núcleo del sistema de invocación",
+      "description": "Reglas originales que hacen jugable el concepto de cartas, reliquias, avatares y evolución.",
+      "entityIds": [
+        "SYS-CARD-PACT",
+        "SYS-CARD-AVATAR",
+        "SYS-CARD-RESONANCE",
+        "SYS-CARD-ARCHETYPES",
+        "SYS-CARD-ETHICS"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-BRITANNICA-MYTH",
+      "title": "Encyclopaedia Britannica — Mythology and historical reference articles",
+      "url": "https://www.britannica.com/topic/mythology",
+      "use": "Punto de partida general; no reemplaza fuentes comunitarias o académicas específicas."
+    },
+    {
+      "id": "SRC-SMITHSONIAN-NMAI",
+      "title": "National Museum of the American Indian",
+      "url": "https://americanindian.si.edu/",
+      "use": "Contexto indígena y recursos educativos; verificar cada afirmación con la página concreta usada."
+    },
+    {
+      "id": "SRC-MET-COLLECTION",
+      "title": "The Metropolitan Museum of Art — Collection",
+      "url": "https://www.metmuseum.org/art/collection",
+      "use": "Objetos históricos y contexto material; útil para distinguir artefactos históricos de armas mágicas ficticias."
+    },
+    {
+      "id": "SRC-BRITISH-MUSEUM",
+      "title": "The British Museum — Collection",
+      "url": "https://www.britishmuseum.org/collection",
+      "use": "Contexto material y cultural de objetos; no asumir que un objeto de colección prueba un relato sobrenatural."
+    },
+    {
+      "id": "SRC-POPOL-VUH",
+      "title": "Popol Vuh — referencia bibliográfica y versiones de traducción",
+      "url": "https://www.worldhistory.org/Popol_Vuh/",
+      "use": "Introducción secundaria al texto k’iche’; cotejar con ediciones críticas para uso académico."
+    },
+    {
+      "id": "SRC-UNESCO-LIVING",
+      "title": "UNESCO — Intangible Cultural Heritage",
+      "url": "https://ich.unesco.org/",
+      "use": "Contexto sobre tradiciones vivas; buscar entradas específicas antes de atribuir una práctica a toda una cultura."
+    },
+    {
+      "id": "SRC-BRITANNICA-ATHENA",
+      "title": "Encyclopaedia Britannica — Athena",
+      "url": "https://www.britannica.com/topic/Athena-Greek-mythology",
+      "use": "Referencia secundaria para atributos y variantes de Atenea."
+    },
+    {
+      "id": "SRC-BRITANNICA-ISIS",
+      "title": "Encyclopaedia Britannica — Isis",
+      "url": "https://www.britannica.com/topic/Isis-Egyptian-goddess",
+      "use": "Referencia secundaria sobre Isis y su culto."
+    },
+    {
+      "id": "SRC-BRITANNICA-ANUBIS",
+      "title": "Encyclopaedia Britannica — Anubis",
+      "url": "https://www.britannica.com/topic/Anubis",
+      "use": "Referencia secundaria sobre la función funeraria de Anubis."
+    },
+    {
+      "id": "SRC-BRITANNICA-RA",
+      "title": "Encyclopaedia Britannica — Re",
+      "url": "https://www.britannica.com/topic/Re",
+      "use": "Referencia secundaria para la deidad solar egipcia."
+    },
+    {
+      "id": "SRC-PRIMARY-KOJIKI",
+      "title": "Kojiki / Nihon Shoki — crónicas japonesas",
+      "url": "https://www.britannica.com/topic/Kojiki",
+      "use": "Contexto bibliográfico de los relatos de Amaterasu y Susanoo; consultar traducciones críticas para citas específicas."
+    },
+    {
+      "id": "SRC-PRIMARY-EDDA",
+      "title": "Eddas — tradición literaria nórdica medieval",
+      "url": "https://www.britannica.com/topic/Edda",
+      "use": "Contexto bibliográfico para Odín, Loki y Fenrir; los textos preservados son medievales."
+    },
+    {
+      "id": "SRC-PRIMARY-ULSTER",
+      "title": "Ulster Cycle — tradición literaria irlandesa",
+      "url": "https://www.britannica.com/topic/Ulster-cycle",
+      "use": "Contexto bibliográfico para Cú Chulainn; distinguir literatura medieval de reconstrucción histórica."
+    },
+    {
+      "id": "SRC-BRITANNICA-THOR",
+      "title": "Encyclopaedia Britannica — Thor",
+      "url": "https://www.britannica.com/topic/Thor-Germanic-deity",
+      "use": "Referencia secundaria sobre Thor y sus atributos."
+    },
+    {
+      "id": "SRC-BRITANNICA-SHIVA",
+      "title": "Encyclopaedia Britannica — Shiva",
+      "url": "https://www.britannica.com/topic/Shiva",
+      "use": "Referencia secundaria sobre las tradiciones de Shiva."
+    },
+    {
+      "id": "SRC-BRITANNICA-INDRA",
+      "title": "Encyclopaedia Britannica — Indra",
+      "url": "https://www.britannica.com/topic/Indra",
+      "use": "Referencia secundaria sobre Indra en las tradiciones védicas e hinduistas."
+    },
+    {
+      "id": "SRC-BRITANNICA-ARTHUR",
+      "title": "Encyclopaedia Britannica — King Arthur",
+      "url": "https://www.britannica.com/topic/King-Arthur",
+      "use": "Referencia secundaria sobre el desarrollo literario de la materia artúrica."
+    },
+    {
+      "id": "SRC-BRITANNICA-JOURNEY-WEST",
+      "title": "Encyclopaedia Britannica — Journey to the West",
+      "url": "https://www.britannica.com/topic/Journey-to-the-West",
+      "use": "Contexto bibliográfico para distinguir a Sun Wukong como personaje literario clásico."
+    },
+    {
+      "id": "SRC-BRITANNICA-ANANSI",
+      "title": "Encyclopaedia Britannica — Anansi",
+      "url": "https://www.britannica.com/topic/Ananse",
+      "use": "Referencia secundaria sobre el personaje de relatos akan y sus variantes."
+    },
+    {
+      "id": "SRC-UNESCO-OSUN",
+      "title": "UNESCO World Heritage Centre — Osun-Osogbo Sacred Grove",
+      "url": "https://whc.unesco.org/en/list/1118/",
+      "use": "Contexto sobre el sitio sagrado vinculado a Osun; no sustituye fuentes comunitarias específicas sobre la orisha."
+    },
+    {
+      "id": "SRC-SCIELO-TRENTREN-CAICAI",
+      "title": "SciELO Chile — «Corrientes de pensamiento mágico…», sección sobre Trentrenvilú y Caicaivilú (2022)",
+      "url": "https://www.scielo.cl/scielo.php?pid=S0716-27902022000100197&script=sci_arttext",
+      "use": "Estudio que compara la circulación oral y los registros escritos de versiones mapuche, incluida su presencia en La Araucanía y Chiloé. Respalda el historial de versiones, no una versión única universal."
+    },
+    {
+      "id": "SRC-MUSEO-ROCA-ELAL-FIRE",
+      "title": "Museo Roca — «El cuento del matuasto. El mito tehuelche sobre el origen del fuego»",
+      "url": "https://museoroca.cultura.gob.ar/noticia/el-mito-tehuelche-sobre-el-origen-del-fuego-el-cuento-del-matuasto/",
+      "use": "Síntesis institucional argentina sobre relatos tehuelches del origen del fuego asociados a Elal; informa que los relatos recogidos por Alejandra Siffredi presentan variantes."
+    },
+    {
+      "id": "SRC-INAPL-ELAL-CYCLE",
+      "title": "Alejandra Siffredi — «La atenuación de las fronteras entre mito e historia: la expresión del contacto en el ciclo de Elal»",
+      "url": "https://revistas.inapl.gob.ar/index.php/cuadernos/article/view/476",
+      "use": "Estudio académico del ciclo de Elal y de la interacción entre memoria histórica, mito y contacto intercultural. Úsese para evitar tratar el corpus como relato fijo e inmutable."
+    },
+    {
+      "id": "SRC-BCN-PY-POMBERO-JASY",
+      "title": "Biblioteca y Archivo Central del Congreso Nacional de Paraguay — catálogo de «Creencia actual de los alumnos sobre los Mitos (Pombero y Jasy Jatere)»",
+      "url": "https://catalogo.bacn.gov.py/opac_css/index.php?id=1566&lvl=notice_display",
+      "use": "Registro bibliográfico de un estudio de 2005 sobre creencias contemporáneas en torno a Pombero y Jasy Jateré. Es una ficha de catálogo, no el texto completo; no respalda detalles no visibles en sus metadatos."
+    },
+    {
+      "id": "SRC-TAPEAVIRU-PARAGUAY-SURVEY",
+      "title": "Fundación Tapé Avirú — «Primer sondeo sobre personajes mitológicos del Paraguay»",
+      "url": "https://fundaciontapeaviru.org.py/informe-de-sondeo/",
+      "use": "Sondeo comunitario realizado en 2020 sobre conocimiento actual de figuras folclóricas paraguayas, incluido Pombero y Jasy Jateré. Sirve para documentar presencia cultural contemporánea, no para fijar una versión antigua única."
+    },
+    {
+      "id": "SRC-BRITANNICA-1911-HYDRA",
+      "title": "Encyclopaedia Britannica (1911) — Hydra (mythology), transcripción histórica",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Hydra_%28mythology%29",
+      "use": "Referencia histórica secundaria para el ciclo de la Hidra de Lerna, las cabezas que se regeneran y el trabajo de Heracles; no es una fuente primaria ni representa todas las variantes."
+    },
+    {
+      "id": "SRC-BRITANNICA-1911-CERBERUS",
+      "title": "Encyclopaedia Britannica (1911) — Cerberus, transcripción histórica",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Cerberus",
+      "use": "Referencia histórica secundaria sobre Cerbero como guardián del inframundo y sus representaciones variables; no debe tomarse como descripción única de todas las fuentes antiguas."
+    },
+    {
+      "id": "SRC-BRITANNICA-1911-MINOTAUR",
+      "title": "Encyclopaedia Britannica (1911) — Minotaur, transcripción histórica",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Minotaur",
+      "use": "Referencia histórica secundaria sobre el Minotauro, el laberinto y el relato de Teseo; las interpretaciones especulativas de la página se tratan como tales."
+    }
+  ],
+  "qualityGates": [
+    "Toda entidad debe tener ID estable, nombre, tipo, tradición, región, estado y resumen.",
+    "Los poderes, costes, rarezas y reglas de combate inventados se etiquetan como adaptación creativa u original.",
+    "Las relaciones apuntan a IDs existentes; no duplicar biografías dentro de cartas.",
+    "Una entidad de tradición viva no se presenta automáticamente como subordinada del protagonista.",
+    "Antes de publicar, sustituir las fuentes generales por fuentes específicas por entrada y documentar variantes regionales.",
+    "Las entidades nuevas indican fuentes de contexto y advierten cuando la atribución es regional, discutida o mediada por recopilaciones modernas.",
+    "Los atributos mágicos jugables se separan de los datos mitológicos mediante creativeHook y el estado de la ficha."
+  ]
+}

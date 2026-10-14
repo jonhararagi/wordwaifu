@@ -102,7 +102,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: publisher_synopsis
 - locator: Sinopsis editorial; localizar «約七年前», «リュー・リオン», «団長アリーゼ» y «闇派閥(イヴィルス)».
-- claims_supported: [DMR-001-CLM-002, DMR-001-CLM-005, DMR-001-CLM-006, DMR-001-CLM-010]
+- claims_supported: [DMR-001-CLM-002, DMR-001-CLM-005, DMR-001-CLM-006, DMR-001-CLM-010, DMR-006-CLM-001, DMR-006-CLM-002, DMR-006-CLM-003]
 - events_supported: []
 - continuity_scope: CONT-AR
 - reliability_note: Sinopsis oficial abierta directamente; volumen íntegro y localizadores internos pendientes.
@@ -125,7 +125,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: publisher_synopsis
 - locator: Sinopsis que contiene «後に『死の七日間』と呼ばれる» y describe la ofensiva de Evilus.
-- claims_supported: [DMR-001-CLM-007]
+- claims_supported: [DMR-001-CLM-007, DMR-006-CLM-004]
 - events_supported: []
 - continuity_scope: CONT-AR
 - reliability_note: Resumen oficial; no fija duración exacta ni todos los hitos.
@@ -148,7 +148,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: publisher_synopsis
 - locator: Sinopsis que comienza «迷宮から大最悪を喚び出しオラリオを破壊せんとする闇派閥».
-- claims_supported: [DMR-001-CLM-008]
+- claims_supported: [DMR-001-CLM-008, DMR-006-CLM-004]
 - events_supported: []
 - continuity_scope: CONT-AR
 - reliability_note: Sinopsis oficial; no reconstruye resultados individuales.
@@ -216,7 +216,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: character_profile
 - locator: Entradas アストレア, アリーゼ・ローヴェル y perfiles de Astrea Familia, incluida リュー・リオン.
-- claims_supported: [DMR-002-CLM-017, DMR-002-CLM-018, DMR-002-CLM-019, DMR-002-CLM-020]
+- claims_supported: [DMR-002-CLM-017, DMR-002-CLM-018, DMR-002-CLM-019, DMR-002-CLM-020, DMR-006-CLM-005]
 - events_supported: []
 - continuity_scope: CONT-ANIME; comparación auxiliar con CONT-AR
 - reliability_note: Perfil oficial de adaptación; no se transfiere automáticamente a la novela ligera.
@@ -247,3 +247,231 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-002
 - verification_status: source_checked
 
+
+
+## DMR-004-SRC-001 · Perfiles oficiales de personajes de DanMachi IV
+
+- source_id: DMR-004-SRC-001
+- title: キャラクター | アニメ「ダンまち」シリーズ公式サイト
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi IV
+- volume_or_edition: Página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi4/character
+- accessed_at: 2026-10-13
+- locator_type: character_profile
+- locator: Sección ヘスティア・ファミリア y perfiles de ベル・クラネル, ヘスティア, リリルカ・アーデ, ヴェルフ・クロッゾ, ヤマト・命 y サンジョウノ・春姫.
+- claims_supported: [DMR-004-CLM-001, DMR-004-CLM-003, DMR-004-CLM-004, DMR-004-CLM-005, DMR-004-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación consultada directamente. Los perfiles describen el estado editorial de la adaptación; no prueban por sí solos el momento exacto de cada cambio en la novela ligera.
+- conflicting_sources: []
+- rights_note: Guardar paráfrasis y hechos breves; no copiar descripciones extensas.
+- verified_by: DANMACHI-RESEARCH-004
+- verification_status: source_checked
+
+## DMR-004-SRC-002 · Sinopsis oficial del episodio 1
+
+- source_id: DMR-004-SRC-002
+- title: 第1話 - ストーリー | TVアニメ「ダンまち」公式サイト
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi, primera temporada
+- volume_or_edition: Episodio 1; página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi/story/episode1.html
+- accessed_at: 2026-10-13
+- locator_type: episode_synopsis
+- locator: Sinopsis del episodio 1; pasaje que describe a Bell como nuevo aventurero y único miembro de Hestia Familia desde hace medio mes.
+- claims_supported: [DMR-004-CLM-001, DMR-004-CLM-002]
+- events_supported: [EVT-DM-BELL-MEETS-HESTIA-001]
+- continuity_scope: CONT-ANIME
+- reliability_note: Sinopsis oficial de adaptación; se usa para el estado de apertura del anime. La correspondencia precisa con el texto de la novela ligera requiere cotejo separado.
+- conflicting_sources: []
+- rights_note: Resumir con palabras propias.
+- verified_by: DANMACHI-RESEARCH-004
+- verification_status: source_checked
+
+
+## DMR-005-SRC-001 · Perfiles oficiales de Sword Oratoria
+
+- source_id: DMR-005-SRC-001
+- title: CHARACTER キャラクター | TVアニメ「ソード・オラトリア」公式サイト
+- creator_or_publisher: Portal oficial del anime Sword Oratoria
+- source_type: ADAPTATION
+- series: Sword Oratoria, adaptación anime
+- volume_or_edition: Página de personajes, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/sword_oratoria/character/
+- accessed_at: 2026-10-13
+- locator_type: character_profile
+- locator: Sección ロキ・ファミリア y perfiles de アイズ・ヴァレンシュタイン, レフィーヤ・ウィリディス, ティオナ・ヒリュテ, ティオネ・ヒリュテ, ロキ, フィン・ディムナ, リヴェリア・リヨス・アールヴ, ガレス・ランドロック, ベート・ローガ y ラウル・ノールド.
+- claims_supported: [DMR-005-CLM-001, DMR-005-CLM-002, DMR-005-CLM-003, DMR-005-CLM-004, DMR-005-CLM-005, DMR-005-CLM-006, DMR-005-CLM-007, DMR-005-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-SO; comparative reference only for CONT-MAIN-LN
+- reliability_note: Página oficial de adaptación abierta directamente. Los cargos, edades y niveles son los descritos por esa página, no una cronología exhaustiva de la novela.
+- conflicting_sources: []
+- rights_note: Parafrasear rasgos y funciones; no reproducir las descripciones extensas.
+- verified_by: DANMACHI-RESEARCH-005
+- verification_status: source_checked
+
+
+## DMR-011-SRC-001 · Cronología oficial de la franquicia
+- source_id: DMR-011-SRC-001
+- title: 年表 | アニメ「ダンまち」シリーズ公式サイト
+- creator_or_publisher: Portal oficial de DanMachi
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi; cronología de obra principal, derivados y adaptaciones
+- volume_or_edition: Página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/chronology/
+- accessed_at: 2026-10-13
+- locator_type: webpage_section
+- locator: Bloque de Astrea Record; expresiones «7年前» y «オラリオの暗黒期».
+- claims_supported: [DMR-011-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-AR; cronología oficial de franquicia
+- reliability_note: Fuente oficial de cronología promocional; útil para anclas relativas, no para fechas absolutas ni para reemplazar novelas.
+- conflicting_sources: []
+- rights_note: Resumir con palabras propias.
+- verified_by: DANMACHI-RESEARCH-011
+- verification_status: source_checked
+
+## DMR-011-SRC-002 · DanMachi, volumen principal 21
+- source_id: DMR-011-SRC-002
+- title: ダンジョンに出会いを求めるのは間違っているだろうか21
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, serie principal
+- volume_or_edition: Volumen 21; ISBN 978-4-8156-3294-6
+- language: Japonés
+- publication_date: 2025-10-15 aproximadamente, según editorial
+- official_url: https://ga.sbcr.jp/product/9784815632946/
+- accessed_at: 2026-10-13
+- locator_type: publisher_product_page
+- locator: Campo de fecha de publicación y sinopsis oficial del volumen 21.
+- claims_supported: [DMR-011-CLM-002, DMR-008-CLM-022, DMR-008-CLM-023, DMR-008-CLM-024]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Confirma metadatos editoriales y sinopsis, no el texto completo ni el estado final de toda la serie. Las afirmaciones de trama permanecen como resúmenes provisionales; no son localizadores de capítulos.
+- conflicting_sources: []
+- rights_note: No copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-011
+- verification_status: source_checked
+
+## DMR-011-SRC-004 · Muestra pública oficial del texto del volumen 21
+- source_id: DMR-011-SRC-004
+- title: ダンジョンに出会いを求めるのは間違っているだろうか21 · 試し読み
+- creator_or_publisher: GA文庫 / SB Creative; lector público Voyager
+- source_type: PRIMARY_MAIN
+- series: DanMachi, serie principal
+- volume_or_edition: Volumen 21; fragmento de muestra pública
+- language: Japonés
+- publication_date: 2025-10-15 aproximadamente, según ficha editorial
+- official_url: https://ul.sbcr.jp/GA-aIMd4
+- accessed_at: 2026-10-13
+- locator_type: chapter_heading_and_visible_excerpt
+- locator: Tabla de contenidos con «プロローグ　セカイ迷作劇場» y «一章　アイズＳＯＳ»; apertura visible del prólogo y capítulo 1. El lector no mostró paginación impresa ordinaria en las páginas inspeccionadas.
+- claims_supported: [DMR-008-CLM-025, DMR-008-CLM-026]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Muestra pública del texto de la novela abierta desde la ficha editorial oficial. Evidencia primaria limitada estrictamente al fragmento visible; no demuestra contenido de capítulos completos o páginas no accesibles.
+- conflicting_sources: []
+- rights_note: Solo paráfrasis originales breves; no copiar extractos extensos.
+- verified_by: DANMACHI-RESEARCH-014
+- verification_status: source_checked_excerpt_only
+
+## DMR-011-SRC-005 · Prueba oficial de selección de aventureros, nivel intermedio
+- source_id: DMR-011-SRC-005
+- title: 冒険者選抜中央試験 中級編
+- creator_or_publisher: Portal oficial de DanMachi
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi; prueba oficial de conocimiento de franquicia
+- volume_or_edition: Página web interactiva, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/center-test/normal.html
+- accessed_at: 2026-10-13
+- locator_type: quiz_question_and_answer
+- locator: Pregunta 1; respuesta correcta: «ゼウス・ファミリア» y «ヘラ・ファミリア» derrotaron a «陸の王者ベヒーモス» y «海の覇王リヴァイアサン».
+- claims_supported: [DMR-008-CLM-027]
+- events_supported: []
+- continuity_scope: CROSS-CONTINUITY; referencia oficial de franquicia
+- reliability_note: La página oficial confirma la respuesta de la prueba. Es una fuente de referencia auxiliar, no sustituto de una escena o pasaje de la novela para reconstruir secuencia, bajas o cronología detallada.
+- conflicting_sources: []
+- rights_note: Registrar la respuesta como paráfrasis breve, sin copiar el cuestionario completo.
+- verified_by: DANMACHI-RESEARCH-016
+- verification_status: source_checked
+
+## DMR-011-SRC-003 · DanMachi, volumen principal 22
+- source_id: DMR-011-SRC-003
+- title: ダンジョンに出会いを求めるのは間違っているだろうか22
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, serie principal
+- volume_or_edition: Volumen 22; ISBN 978-4-8156-4290-7
+- language: Japonés
+- publication_date: 2026-12-15 prevista, según editorial
+- official_url: https://ga.sbcr.jp/product/9784815642907/
+- accessed_at: 2026-10-13
+- locator_type: publisher_product_page
+- locator: Campo de fecha de publicación prevista; ficha consultada antes de esa fecha.
+- claims_supported: [DMR-011-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Anuncio bibliográfico futuro al momento de consulta; verificar la fecha efectiva tras el lanzamiento.
+- conflicting_sources: []
+- rights_note: Registrar solo metadatos y notas propias.
+- verified_by: DANMACHI-RESEARCH-011
+- verification_status: source_checked
+
+---
+
+## DMR-011-SRC-006 · DanMachi, volumen principal 15 (identificación editorial)
+
+- source_id: DMR-011-SRC-006
+- title: ダンジョンに出会いを求めるのは間違っているだろうか15
+- creator_or_publisher: 大森藤ノ / GA文庫 (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 15; ISBN 978-4-7973-9622-5
+- language: Japonés
+- publication_date: 2019-06-15 aproximadamente, según ficha editorial
+- official_url: https://ga.sbcr.jp/product/9784797396225/
+- accessed_at: 2026-10-13
+- locator_type: publisher_metadata
+- locator: Ficha oficial del volumen 15; solo identifica edición y metadatos editoriales. No usar la sinopsis para respaldar el pasaje temporal de Alise.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN; metadatos editoriales únicamente
+- reliability_note: Fuente oficial para identificar la edición. El contenido narrativo sobre el intervalo de cinco años está pendiente de verificación en una vista previa o edición legítima con localizador estable.
+- conflicting_sources: []
+- rights_note: Registrar notas breves propias.
+- verified_by: DANMACHI-RESEARCH-018
+- verification_status: source_checked_metadata_only
+
+
+---
+
+## DMR-012-SRC-001 · DanMachi, volumen principal 1 (descripción general de Orario y el Dungeon)
+
+- source_id: DMR-012-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか
+- creator_or_publisher: 大森藤ノ / GA文庫 (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 1; ISBN 978-4-7973-7280-9
+- language: Japonés
+- publication_date: 2013-01-13 aproximadamente, según ficha editorial
+- official_url: https://ga.sbcr.jp/product/9784797372809/
+- accessed_at: 2026-10-14
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial del volumen 1; identifica Orario como ciudad laberíntica que posee el Dungeon subterráneo y presenta la llegada del aspirante a aventurero Bell y su encuentro con Hestia.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; descripción editorial general
+- reliability_note: Fuente oficial para los metadatos y el marco de la sinopsis. No sustituye el texto íntegro del volumen ni respalda detalles de pisos, reglas, rutas o escenas no descritas en esa página.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-020
+- verification_status: source_checked_for_publisher_synopsis_only

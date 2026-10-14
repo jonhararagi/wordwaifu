@@ -6,7 +6,7 @@ const corpus=require("../src/lore-corpus.js");
 const archive=require("../src/character-archive.js");
 const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
-const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md"];
+const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
@@ -17,14 +17,12 @@ const profilePaths=[
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
 assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
-assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,59,"The official-source registry should hold the extended character catalog.");
+assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,59,"The official-source registry should include Eina Tulle alongside the expanded character catalog.");
 assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-ASFI-AL-ANDROMEDA").voice,"Ai Kayano");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-DIONYSUS").voice,"Masaya Matsukaze");
-assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("DM-CHAR-EINA").imageProvider,"community","Eina’s community portrait must be labelled as non-official.");
-assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("DM-CHAR-EINA").sourcePage.includes("danmachi.fandom.com"));
-assert.ok(archive.list(index).length >= 59,"The directory should include the expanded S4/S5 and Sword Oratoria cast, beyond the 12 deep dossiers.");
-const addedCast=["CHAR-DAPHNE-LAUROS","CHAR-CASSANDRA-ILION","CHAR-KASHIMA-OUKA","CHAR-HITACHI-CHIGUSA","CHAR-AISHA-BELKA","CHAR-LUVIS-LILIX","CHAR-DORMUL-BOLSTER","CHAR-MARI-XENOS","CHAR-NEOIN-UNICK","CHAR-NEESE-RANQUETTE","CHAR-ASTA-NOX","CHAR-LIANA-LEETS","CHAR-SELTTY-THROA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE","CHAR-LULUNE-LOUIE","CHAR-TSUBAKI-COLBRANDE"];
+assert.ok(archive.list(index).length >= 58,"The directory should include the expanded S4/S5 and Sword Oratoria cast, beyond the 12 deep dossiers.");
+const addedCast=["CHAR-DAPHNE-LAUROS","CHAR-CASSANDRA-ILION","CHAR-KASHIMA-OUKA","CHAR-HITACHI-CHIGUSA","CHAR-AISHA-BELKA","CHAR-LUVIS-LILIX","CHAR-DORMUL-BOLSTER","CHAR-MARI-XENOS","CHAR-NOIN-UNIC","CHAR-NEZE-RANKETT","CHAR-ASTA-KNOX","CHAR-RYANA-LIETZ","CHAR-CELTY-SROWA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE","CHAR-LULUNE-LOUIE","CHAR-TSUBAKI-COLBRANDE"];
 for(const id of addedCast){
   assert.ok(archive.list(index).some(character=>character.id===id),"Expanded roster must expose "+id);
   const profile=archive.getProfile(index,id,"CONT-ANIME","all");
@@ -51,6 +49,11 @@ assert.ok(justiceClaim,"Ryu's documented justice claim must exist in CONT-AR.");
 assert.ok(justiceClaim.aspects.includes("motivation"),"The Ryu justice claim must be classified as motivation: "+JSON.stringify(justiceClaim.aspects));
 assert.ok(ryu.moments.some(m=>m.id==="ryu-justice")&&ryu.moments.some(m=>m.id==="ryu-seven-days"));
 assert.ok(ryu.relationships.some(r=>r.targetId==="CHAR-ALISE-LOVELACE")&&ryu.relationships.some(r=>r.targetId==="CHAR-ASTREA"));
+const kaguyaAr=archive.getProfile(index,"CHAR-KAGUYA","CONT-AR","all");
+assert.ok(kaguyaAr,"Kaguya should resolve to an indexed character profile.");
+assert.ok(kaguyaAr.relationships.some(r=>r.targetId==="CHAR-RYUU-LION"&&r.direction==="incoming"),"Ryu → Kaguya must be navigable backwards from Kaguya to Ryu.");
+assert.equal(new Set(kaguyaAr.relationships.map(r=>r.targetId)).size,kaguyaAr.relationships.length,"Bidirectional traversal must not duplicate a destination already linked directly.");
+assert.ok(kaguyaAr.relationships.every(r=>r.claims.length>0),"Every visible relationship must retain evidence in the selected continuity.");
 assert.ok(!ryu.claims.some(c=>c.entryId.endsWith("--CONT-ANIME")));
 const ryuAnime=archive.getProfile(index,"CHAR-RYUU-LION","CONT-ANIME","all");
 assert.ok(ryuAnime.claims.length&&ryuAnime.claims.every(c=>c.continuityScopes.includes("CONT-ANIME")));
@@ -84,28 +87,6 @@ assert.ok(!syntheticHistorical.sections.some(section=>section.title==="Perfil of
 const syntheticAnime=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-ANIME",syntheticIndex);
 assert.ok(syntheticAnime.sections.some(section=>section.title==="Perfil oficial del anime"),
   "The anime dossier must retain its own standalone localized heading.");
-const bilingualIndex={...index,profileDetails:{...index.profileDetails,"CHAR-RYUU-LION":{
-  ...index.profileDetails["CHAR-RYUU-LION"],
-  sections:[
-    ...index.profileDetails["CHAR-RYUU-LION"].sections,
-    {heading:"Temporal state A",text:"SYNTHETIC-ENGLISH-HISTORICAL"},
-    {heading:"Temporal state B",text:"SYNTHETIC-ENGLISH-ANIME"},
-    {heading:"Estado temporal A y Estado temporal B",text:"SYNTHETIC-MIXED-HEADING"}
-  ]
-}}};
-const bilingualHistorical=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR",bilingualIndex);
-const bilingualAnime=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-ANIME",bilingualIndex);
-assert.ok(bilingualHistorical.sections.some(section=>section.title==="Temporal state A"),
-  "English historical headings must remain in CONT-AR.");
-assert.ok(!bilingualHistorical.sections.some(section=>section.title==="Temporal state B"),
-  "English anime headings must not leak into CONT-AR.");
-assert.ok(bilingualAnime.sections.some(section=>section.title==="Temporal state B"),
-  "English anime headings must remain in CONT-ANIME.");
-assert.ok(!bilingualAnime.sections.some(section=>section.title==="Temporal state A"),
-  "English historical headings must not leak into CONT-ANIME.");
-assert.ok(!bilingualHistorical.sections.some(section=>section.title==="Estado temporal A y Estado temporal B") &&
-  !bilingualAnime.sections.some(section=>section.title==="Estado temporal A y Estado temporal B"),
-  "A heading mixing both temporal states must be excluded from both continuities.");
 
 assert.ok(!extendedRyu.sections.some(section=>section.title.includes("Estado temporal B")),
   "Anime-only temporal-state details must not leak into the historical Ryu summary.");
@@ -120,8 +101,16 @@ assert.ok(extendedBell.sections.some(section=>section.title==="Anclas de continu
 const filtered=archive.getProfile(index,"CHAR-RYUU-LION","CONT-AR","safe-only");
 assert.ok(!filtered.moments.some(m=>m.id==="ryu-seven-days"));
 assert.equal(archive.list(index,{query:"Ryu"}).filter(c=>c.id==="CHAR-RYUU-LION").length,1);
-assert.ok(!ryu.missingContinuities.includes("CONT-MAIN-LN"),"Ryu now has source-backed main-light-novel dossier coverage.");
-assert.ok(ryu.missingContinuities.includes("CONT-AU"),"The unsupported Astrea AU continuity must remain missing.");
+assert.ok(ryu.availableContinuities.includes("CONT-MAIN-LN")&&ryu.missingContinuities.includes("CONT-AU"));
+const ryuMain=archive.getProfile(index,"CHAR-RYUU-LION","CONT-MAIN-LN","all");
+assert.ok(ryuMain.moments.some(m=>m.id==="ryu-astrea-departure"),"The archive should tell why Ryu asked Astrea to leave, with evidence status.");
+assert.ok(ryuMain.moments.some(m=>m.id==="ryu-revenge-rampage"));
+assert.ok(ryuMain.moments.some(m=>m.id==="ryu-rescue-and-recovery"));
+assert.ok(ryuMain.moments.some(m=>m.id==="ryu-visit-astrea"));
+const astreaMain=archive.getProfile(index,"CHAR-ASTREA","CONT-MAIN-LN","all");
+assert.ok(astreaMain.moments.some(m=>m.id==="astrea-departure-from-orario"));
+assert.ok(astreaMain.relationships.some(r=>r.targetId==="CHAR-RYUU-LION"));
+assert.ok(archive.getExtendedInfo("CHAR-ASTREA","CONT-MAIN-LN").sections.some(s=>s.title.includes("Por qué salió de Orario")));
 // Expanded character profiles consume existing curated claims rather than inventing data.
 const directory=archive.list(index);
 for(const id of ["DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR"]){

@@ -2372,7 +2372,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-148 · Neoin Unick · identity
 - `aspect`: identity
 - `claim`: Neoin Unick: la ficha oficial consultada confirma que es Humana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-NEOIN-UNICK
+- `character_id`: CHAR-NOIN-UNIC
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2388,7 +2388,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-149 · Neese Ranquette · identity
 - `aspect`: identity
 - `claim`: Neese Ranquette: la ficha oficial consultada confirma que es Hombre lobo / Werewolf y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-NEESE-RANQUETTE
+- `character_id`: CHAR-NEZE-RANKETT
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2404,7 +2404,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-150 · Asta Knox · identity
 - `aspect`: identity
 - `claim`: Asta Knox: la ficha oficial consultada confirma que es Enana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-ASTA-NOX
+- `character_id`: CHAR-ASTA-KNOX
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2420,7 +2420,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-151 · Liana Leets · identity
 - `aspect`: identity
 - `claim`: Liana Leets: la ficha oficial consultada confirma que es Humana y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-LIANA-LEETS
+- `character_id`: CHAR-RYANA-LIETZ
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2436,7 +2436,7 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 ### DMR-006-CLM-152 · Selty Throa · identity
 - `aspect`: identity
 - `claim`: Selty Throa: la ficha oficial consultada confirma que es Elfa y la sitúa en Astrea Familia (histórica), pero no incluye una biografía individual desarrollada.
-- `character_id`: CHAR-SELTTY-THROA
+- `character_id`: CHAR-CELTY-SROWA
 - `era_or_interval`: DanMachi IV · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-003
@@ -2576,3 +2576,25 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 - `verification_status`: source_checked
 - `spoiler_level`: none
 - `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+## DMR-006-SRC-004 · Perfil oficial de personajes de DanMachi III
+
+- URL: https://danmachi.com/danmachi3/character/index.html
+- Alcance: ficha de adaptación de エイナ・チュール (Eina Tulle); especie medio elfa, función como recepcionista/asesora del Gremio y apoyo informativo a Bell.
+- Límite: referencia oficial del anime, no prueba por sí sola todos los detalles de la novela ligera. No se asignan nivel, epíteto, habilidades de combate ni URL de retrato si la ficha consultada no los respalda.
+
+### DMR-006-CLM-161 · Eina Tulle · identity_and_role
+- aspect: identity_and_role
+- claim: El perfil oficial de la tercera temporada identifica a Eina Tulle como medio elfa, recepcionista y asesora del Gremio, asignada a orientar a Bell sobre el Dungeon y la ciudad.
+- character_id: DM-CHAR-EINA
+- era_or_interval: DanMachi III · estado descrito por la adaptación; fecha interna no fijada
+- continuity_scope: CONT-ANIME
+- source_id: DMR-006-SRC-004
+- source_title: DanMachi III · perfiles oficiales de personajes
+- source_type: ADAPTATION
+- source_locator: Entrada エイナ・チュール; especie y función de asesora
+- source_url: https://danmachi.com/danmachi3/character/index.html
+- evidence_type: explicit_character_profile
+- verification_status: source_checked
+- spoiler_level: none
+- confidence_note: Paráfrasis propia de un perfil oficial de adaptación. El registro deja nivel, epíteto y retrato sin afirmar cuando no están establecidos aquí.

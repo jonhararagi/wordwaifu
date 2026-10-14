@@ -75,13 +75,10 @@
         const trashRequest = tx.objectStore("trash").get(project.project.id);
         trashRequest.onsuccess = () => {
           if (trashRequest.result) {
-            if (trashRequest.result.permanentlyDeleted) {
-              guardError = new Error("Este universo fue borrado permanentemente y su ID no puede volver a guardarse.");
-              guardError.code = "PROJECT_PERMANENTLY_DELETED";
-            } else {
-              guardError = new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
-              guardError.code = "PROJECT_IN_TRASH";
-            }
+            guardError = trashRequest.result.permanentlyDeleted
+              ? new Error("Este universo fue borrado permanentemente y su ID no puede volver a guardarse.")
+              : new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
+            guardError.code = trashRequest.result.permanentlyDeleted ? "PROJECT_PERMANENTLY_DELETED" : "PROJECT_IN_TRASH";
             tx.abort();
             return;
           }
@@ -783,8 +780,8 @@
             tx.abort();
             return;
           }
-          // Only remove a compatibility backup after confirming the exact trash record.
-          // An unreadable or malformed backup cannot safely be attributed to an ID.
+          // Only remove a compatibility backup after confirming the exact tombstone
+          // exists. An unreadable or malformed backup cannot safely be attributed to an ID.
           const backupResult = this.readBackup();
           const backup = backupResult.project;
           if (backupResult.error || (backupResult.raw !== null && !backup)) {
@@ -805,8 +802,7 @@
               return;
             }
           }
-          // Keep a minimal, hidden permanent tombstone so stale tabs cannot recreate
-          // a project after its recoverable payload has been purged.
+          // Retain a minimal anti-resurrection marker after purging recoverable data.
           trash.put({
             formatVersion: 1,
             projectId,
@@ -902,10 +898,26 @@
 
     async saveActive(project) {
       if (!isProject(project)) throw new Error("El proyecto debe contener project.id.");
+      // If IndexedDB is available, check the tombstone before touching the single
+      // compatibility backup. If IndexedDB itself is unavailable, preserve the
+      // existing localStorage-only fallback; write() repeats this guard atomically.
+      let dbAvailable = false;
+      if (this.indexedDB && typeof this.indexedDB.open === "function") {
+        try { await this.open(); dbAvailable = true; } catch { /* Let the documented localStorage fallback handle unavailable IndexedDB. */ }
+      }
+      if (dbAvailable) {
+        let tombstone;
+        try { tombstone = await this.read("trash", project.project.id); }
+        catch (error) { throw new Error("No se pudo verificar la papelera; el proyecto no se guardó. " + error.message); }
+        if (tombstone) {
+          const error = tombstone.permanentlyDeleted
+            ? new Error("Este universo fue borrado permanentemente y su ID no puede volver a guardarse.")
+            : new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
+          error.code = tombstone.permanentlyDeleted ? "PROJECT_PERMANENTLY_DELETED" : "PROJECT_IN_TRASH";
+          throw error;
+        }
+      }
 
-      // Stage the compatibility backup synchronously so UI edits and exports see
-      // the latest candidate immediately. If the trash guard rejects this save,
-      // restore the exact prior backup before surfacing the failure.
       const previousBackup = this.readBackup();
       const backup = this.saveBackup(project);
       const backupWritten = backup.written;
@@ -915,38 +927,16 @@
         try {
           if (previousBackup.raw === null) this.localStorage.removeItem(this.storageKey);
           else this.localStorage.setItem(this.storageKey, previousBackup.raw);
-        } catch { /* Preserve the authoritative error if storage rollback is unavailable. */ }
+        } catch { /* Preserve the authoritative tombstone error if rollback is unavailable. */ }
       };
-
-      // If IndexedDB is available, check the tombstone before the write. write()
-      // repeats this guard atomically to cover a trash move racing this preflight.
-      let dbAvailable = false;
-      if (this.indexedDB && typeof this.indexedDB.open === "function") {
-        try { await this.open(); dbAvailable = true; } catch { /* Keep the documented localStorage-only fallback. */ }
-      }
-      if (dbAvailable) {
-        let tombstone;
-        try { tombstone = await this.read("trash", project.project.id); }
-        catch (error) {
-          restorePreviousBackup();
-          throw new Error("No se pudo verificar la papelera; el proyecto no se guardó. " + error.message);
-        }
-        if (tombstone) {
-          restorePreviousBackup();
-          const error = tombstone.permanentlyDeleted
-            ? new Error("Este universo fue borrado permanentemente y su ID no puede volver a guardarse.")
-            : new Error("El ID de este universo está en la papelera. Restauralo explícitamente antes de volver a guardarlo.");
-          error.code = tombstone.permanentlyDeleted ? "PROJECT_PERMANENTLY_DELETED" : "PROJECT_IN_TRASH";
-          throw error;
-        }
-      }
 
       try {
         await this.write(project);
         return { backend: "indexeddb", backupWritten, warning: backupError ? backupError.message : null };
       } catch (error) {
         if (error && (error.code === "PROJECT_IN_TRASH" || error.code === "PROJECT_PERMANENTLY_DELETED")) {
-          // A trash move or permanent-delete marker may win after preflight but before the write transaction.
+          // A trash move or permanent-delete marker may win after preflight but
+          // before the write transaction. Never leave a compatibility ghost.
           restorePreviousBackup();
           throw error;
         }

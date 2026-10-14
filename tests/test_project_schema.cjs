@@ -265,6 +265,60 @@ function testRelationshipIDsAreGloballyUnique() {
   assert.match(result.errors.join("\\n"), /ID duplicado/);
 }
 
+function testMythicProposalsPersistAndValidateReferences() {
+  const input = validProject();
+  input.stories = [{ id: "story-a", title: "La primera invocación", name: "La primera invocación" }];
+  input.mythicRelations = [{ id: "mythic-rel-a", sourceId: "LAT-MEX-QUETZALCOATL", targetId: "WEAPON-MACUAHUITL", type: "inspiration", createdAt: "2026-10-13T12:00:00.000Z" }];
+  input.mythicProposals = [{
+    id: "mythic-proposal-a", title: "Eco de Quetzalcóatl", modes: ["weapon", "cards"],
+    concept: "Personaje original inspirado en una fuente documentada.",
+    ability: "Mecánica ficticia declarada como adaptación.", activation: "Nombrar el pacto.",
+    cost: "Fatiga temporal.", risk: "El vínculo puede negarse.", progression: "Desbloqueo tras una promesa.",
+    weakness: "El poder no resuelve conflictos personales.", chapterReference: "Capítulo 4 · pacto en el santuario", entityIds: ["LAT-MEX-QUETZALCOATL"],
+    storyId: "story-a", status: "draft", updatedAt: "2026-10-13T12:00:00.000Z"
+  }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\\n"));
+  assert.deepEqual(result.project.mythicProposals, input.mythicProposals);
+  assert.deepEqual(result.project.mythicRelations, input.mythicRelations);
+  const exported = JSON.stringify(result.project);
+  const imported = validateAndNormalizeProject(JSON.parse(exported));
+  assert.equal(imported.valid, true, imported.errors.join("\\n"));
+  assert.deepEqual(imported.project.mythicProposals, input.mythicProposals);
+  assert.deepEqual(imported.project.mythicRelations, input.mythicRelations);
+
+  const broken = structuredClone(input);
+  broken.mythicProposals[0].storyId = "story-missing";
+  const brokenResult = validateAndNormalizeProject(broken);
+  assert.equal(brokenResult.valid, false);
+  assert.match(brokenResult.errors.join("\\n"), /storyId apunta a una historia inexistente/);
+  const selfRelation = structuredClone(input);
+  selfRelation.mythicRelations[0].targetId = selfRelation.mythicRelations[0].sourceId;
+  const selfResult = validateAndNormalizeProject(selfRelation);
+  assert.equal(selfResult.valid, false);
+  assert.match(selfResult.errors.join("\\n"), /no puede relacionar una entidad consigo misma/);
+}
+
+function testPowersNormalizePersistAndValidateReferences() {
+  const input = validProject();
+  input.stories = [{ id: "story-a", name: "Historia A", description: "" }];
+  input.powers = [{ id: "power-a", name: "Eco de la guardiana", family: "mental", category: "Percepción", profile: "Defensa", description: "Detecta intenciones hostiles.", activation: "Observar al objetivo.", cost: "Agotamiento leve.", limits: "No revela pensamientos.", evolution: "Mayor alcance con práctica.", consequences: "Puede generar falsos positivos.", contract: "Ninguno.", inspiration: "Original.", source: "Propuesta propia.", status: "proposal", irreversible: false, ownerCharacterId: "char-a", storyId: "story-a" }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\\n"));
+  assert.equal(result.project.powers.length, 1);
+  assert.equal(result.project.powers[0].ownerCharacterId, "char-a");
+  assert.equal(result.project.powers[0].storyId, "story-a");
+  const roundTrip = validateAndNormalizeProject(JSON.parse(JSON.stringify(result.project)));
+  assert.equal(roundTrip.valid, true, roundTrip.errors.join("\\n"));
+  assert.deepEqual(roundTrip.project.powers, result.project.powers);
+  const missingOwner = structuredClone(input); missingOwner.powers[0].ownerCharacterId = "char-missing";
+  assert.match(validateAndNormalizeProject(missingOwner).errors.join("\\n"), /ownerCharacterId referencia un personaje inexistente/);
+  const missingStory = structuredClone(input); missingStory.powers[0].storyId = "story-missing";
+  assert.match(validateAndNormalizeProject(missingStory).errors.join("\\n"), /storyId referencia una historia inexistente/);
+  const badFlag = structuredClone(input); badFlag.powers[0].irreversible = "yes";
+  assert.match(validateAndNormalizeProject(badFlag).errors.join("\\n"), /irreversible debe ser booleano/);
+}
+
 const tests = [
   testValidProjectNormalizesOptionalFields,
   testMissingOptionalFieldsReceiveSafeDefaults,
@@ -283,7 +337,9 @@ const tests = [
   testValidatesExplicitRelationshipsAndBuildsCompatibilityProjection,
   testRejectsInvalidRelationshipEndpointsAndSelfLinks,
   testRejectsDuplicateRelationshipPairsAndTypes,
-  testRelationshipIDsAreGloballyUnique
+  testRelationshipIDsAreGloballyUnique,
+  testMythicProposalsPersistAndValidateReferences,
+  testPowersNormalizePersistAndValidateReferences
 ];
 
 for (const test of tests) {

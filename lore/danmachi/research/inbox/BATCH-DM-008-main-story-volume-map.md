@@ -1,12 +1,3 @@
----
-id: DANMACHI-RESEARCH-008
-universe: danmachi
-type: research
-status: provisional
-continuity_scope: CONT-MAIN-LN
-spoiler_level: major
----
-
 # DANMACHI-RESEARCH-008 · Mapa de la novela principal, volúmenes 1–21
 
 - **Fecha de corte:** 2026-10-12.
@@ -403,6 +394,92 @@ El volumen 21 se incorpora como volumen principal publicado al corte del 12 de o
 - `confidence_note`: Afirmación breve para recuperar el mapa del volumen. No demuestra el orden exacto de escenas, estadísticas, diálogos o motivaciones privadas; verificar el texto primario y su localizador antes de aprobar un detalle.
 
 
+### DMR-008-CLM-022 · La expedición de Loki Familia fracasa y Ais queda atrapada en el piso 60
+- `claim_id`: DMR-008-CLM-022
+- `claim`: La sinopsis editorial del volumen 21 presenta la expedición de Loki Familia como un fracaso y afirma que Ais y otros integrantes quedan atrapados en el piso 60 del Dungeon.
+- `character_ids`: [DM-CHAR-AIS, CHAR-FINN-DEIMNE]
+- `aspect`: expedición, peligro, estado de personajes, continuidad
+- `era_or_interval`: Historia principal, volumen 21; orden de escenas y estados individuales pendientes de cotejo
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-002
+- `source_title`: GA Bunko / SB Creative · DanMachi, volumen 21
+- `source_type`: official_publisher_page
+- `source_locator`: Sinopsis editorial oficial; no hay capítulo ni página cotejados
+- `source_url`: https://ga.sbcr.jp/product/9784815632946/
+- `evidence_type`: provisional_original_summary
+- `verification_status`: provisional_summary
+- `spoiler_level`: major
+- `confidence_note`: La ficha editorial respalda el resumen de la situación general, no una lista completa de supervivientes, su ubicación exacta en cada escena ni el orden de acontecimientos del texto íntegro.
+
+### DMR-008-CLM-023 · Orario prepara una movilización general para el rescate
+- `claim_id`: DMR-008-CLM-023
+- `claim`: La sinopsis editorial describe una respuesta de Orario que pretende movilizar a toda la ciudad para resistir la crisis y alcanzar a quienes quedaron atrapados en las profundidades.
+- `character_ids`: [DM-CHAR-BELL, DM-CHAR-HESTIA, CHAR-FINN-DEIMNE]
+- `aspect`: rescate, movilización, respuesta de Orario, continuidad
+- `era_or_interval`: Historia principal, volumen 21; detalles operativos requieren localizadores internos
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-002
+- `source_title`: GA Bunko / SB Creative · DanMachi, volumen 21
+- `source_type`: official_publisher_page
+- `source_locator`: Sinopsis editorial oficial; no hay capítulo ni página cotejados
+- `source_url`: https://ga.sbcr.jp/product/9784815632946/
+- `evidence_type`: provisional_original_summary
+- `verification_status`: provisional_summary
+- `spoiler_level`: major
+- `confidence_note`: «Toda Orario» refleja la formulación promocional de la sinopsis; no identifica por sí sola cada participante, orden de mando o despliegue.
+
+### DMR-008-CLM-024 · Bell regresa del extremo norte y recibe la noticia de la expedición fallida
+- `claim_id`: DMR-008-CLM-024
+- `claim`: Según la sinopsis editorial, Bell vuelve del extremo norte y se entera de la noticia de que la expedición de Loki Familia fracasó y Ais y otros quedaron atrapados en el piso 60.
+- `character_ids`: [DM-CHAR-BELL, DM-CHAR-AIS]
+- `aspect`: Bell, noticia, transición narrativa, continuidad
+- `era_or_interval`: Historia principal, volumen 21; secuencia de capítulos pendiente de cotejo
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-002
+- `source_title`: GA Bunko / SB Creative · DanMachi, volumen 21
+- `source_type`: official_publisher_page
+- `source_locator`: Sinopsis editorial oficial; no hay capítulo ni página cotejados
+- `source_url`: https://ga.sbcr.jp/product/9784815632946/
+- `evidence_type`: provisional_original_summary
+- `verification_status`: provisional_summary
+- `spoiler_level`: major
+- `confidence_note`: La relación entre el regreso de Bell y la noticia está en la sinopsis editorial; no se infiere un orden completo ni motivaciones privadas de la novela.
+
+
+### DMR-008-CLM-025 · El capítulo inicial confirma el anuncio del fracaso de la expedición en el piso 60
+- `claim_id`: DMR-008-CLM-025
+- `claim`: En la muestra pública del capítulo «一章　アイズＳＯＳ», la noticia inicial anuncia que la expedición fracasó y que la fuerza aliada fue aniquilada en el piso 60; Bell pregunta urgentemente por Ais, Finn y los demás.
+- `character_ids`: [DM-CHAR-BELL, DM-CHAR-AIS]
+- `aspect`: apertura de capítulo, expedición, respuesta de Bell, continuidad
+- `era_or_interval`: Historia principal, volumen 21, capítulo «一章　アイズＳＯＳ»; muestra pública consultada el 2026-10-13
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-004
+- `source_title`: GA Bunko / SB Creative · muestra pública oficial del volumen 21
+- `source_type`: primary_text_excerpt
+- `source_locator`: Tabla de contenidos y apertura visible del capítulo «一章　アイズＳＯＳ» en el lector público; sin número de página impreso visible
+- `source_url`: https://r.voyager.co.jp/epm/e1_535248_22082025135526/
+- `evidence_type`: primary_excerpt_paraphrase
+- `verification_status`: source_checked_excerpt_only
+- `spoiler_level`: major
+- `confidence_note`: Cotejado directamente en la muestra pública del texto. Solo verifica el fragmento visible, no el capítulo completo ni todo el volumen.
+
+### DMR-008-CLM-026 · El prólogo presenta a Ais en una escena de pesadilla oscura
+- `claim_id`: DMR-008-CLM-026
+- `claim`: La muestra pública del prólogo «プロローグ　セカイ迷作劇場» presenta a Ais en una oscuridad desorientadora, con imágenes violentas y una presencia amenazante asociada a una «jaula de hielo».
+- `character_ids`: [DM-CHAR-AIS]
+- `aspect`: prólogo, atmósfera, Ais, continuidad
+- `era_or_interval`: Historia principal, volumen 21, prólogo «プロローグ　セカイ迷作劇場»; muestra pública consultada el 2026-10-13
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-004
+- `source_title`: GA Bunko / SB Creative · muestra pública oficial del volumen 21
+- `source_type`: primary_text_excerpt
+- `source_locator`: Prólogo visible en el lector público; sin número de página impreso visible
+- `source_url`: https://r.voyager.co.jp/epm/e1_535248_22082025135526/
+- `evidence_type`: primary_excerpt_paraphrase
+- `verification_status`: source_checked_excerpt_only
+- `spoiler_level`: major
+- `confidence_note`: Paráfrasis limitada a las páginas de muestra observadas. No fija la interpretación completa de la escena ni demuestra su cronología relativa más allá de su ubicación como prólogo.
+
 ## Pendiente para considerar completa la historia
 
 1. Cotejar título, edición, capítulos y localizadores exactos en la novela principal.
@@ -414,3 +491,79 @@ El volumen 21 se incorpora como volumen principal publicado al corte del 12 de o
 7. No dar por concluida la serie ni resolver destinos aún no publicados por inferencia.
 
 Esta tanda es una capa navegable inicial, no una declaración de canon completo ni verificado capítulo a capítulo.
+
+
+## DANMACHI-RESEARCH-011 · Ancla cronológica oficial y estado bibliográfico (2026-10-13)
+
+### DMR-011-CLM-001 · Astrea Record se sitúa aproximadamente siete años antes de la llegada de Bell
+- `claim_id`: DMR-011-CLM-001
+- `claim`: La cronología oficial de la franquicia sitúa *Astrea Record* siete años antes y lo describe como una historia de la Era Oscura de Orario, en la que una Familia que proclama la justicia se alza frente al caos y la violencia.
+- `character_ids`: [CHAR-RYUU-LION, CHAR-ASTREA, CHAR-ALISE-LOVELACE]
+- `aspect`: cronología relativa, Astrea Familia, Era Oscura
+- `era_or_interval`: Aproximadamente siete años antes de la llegada de Bell a Orario
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-011-SRC-001
+- `source_title`: Cronología oficial de DanMachi
+- `source_type`: official_reference
+- `source_locator`: Bloque de アストレア・レコード; texto «7年前» y «オラリオの暗黒期»
+- `source_url`: https://danmachi.com/chronology/
+- `evidence_type`: explicit_official_timeline
+- `verification_status`: source_checked
+- `spoiler_level`: major
+- `confidence_note`: Ancla relativa oficial; no define una fecha absoluta ni los límites completos de la Era Oscura. No prueba que “Época Dorada” sea un término canónico equivalente.
+
+### DMR-011-CLM-002 · El volumen 21 es el último volumen principal publicado comprobado en la consulta
+- `claim_id`: DMR-011-CLM-002
+- `claim`: La ficha editorial oficial de GA Bunko registra el volumen 21 de la serie principal con fecha de publicación aproximada del 15 de octubre de 2025 y una sinopsis que continúa los sucesos del volumen 20; para esta auditoría bibliográfica, el volumen 21 es el último volumen principal cuya publicación se comprobó como ya realizada.
+- `character_ids`: [DM-CHAR-BELL, CHAR-FINN-DEIMNE, CHAR-AIS]
+- `aspect`: bibliografía, estado de publicación, continuidad principal
+- `era_or_interval`: Publicación consultada al 2026-10-13
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-002
+- `source_title`: GA Bunko · DanMachi volumen 21
+- `source_type`: official_publisher_page
+- `source_locator`: Ficha de producto; campo de fecha de publicación y sinopsis editorial
+- `source_url`: https://ga.sbcr.jp/product/9784815632946/
+- `evidence_type`: explicit_publisher_bibliography
+- `verification_status`: source_checked
+- `spoiler_level`: endgame
+- `confidence_note`: Confirma la ficha y fecha editorial, no una lectura completa del volumen ni el estado final de todos los personajes.
+
+### DMR-011-CLM-003 · El volumen 22 figura anunciado para una fecha futura, no como volumen ya publicado
+- `claim_id`: DMR-011-CLM-003
+- `claim`: En el catálogo editorial consultado, el volumen 22 de la serie principal figura con fecha prevista de publicación del 15 de diciembre de 2026. En la fecha de esta auditoría, 13 de octubre de 2026, se registra como anunciado/futuro y no se incorpora como acontecimiento publicado ni como final de la obra.
+- `character_ids`: [DM-CHAR-BELL]
+- `aspect`: bibliografía, publicación futura, límite de cronología
+- `era_or_interval`: Consulta del 2026-10-13; fecha prevista 2026-12-15
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-011-SRC-003
+- `source_title`: GA Bunko · DanMachi volumen 22
+- `source_type`: official_publisher_page
+- `source_locator`: Ficha de producto; fecha prevista de publicación
+- `source_url`: https://ga.sbcr.jp/product/9784815642907/
+- `evidence_type`: explicit_publisher_catalog
+- `verification_status`: source_checked
+- `spoiler_level`: endgame
+- `confidence_note`: La fecha es la anunciada por el editor y puede cambiar. El volumen aún no se trata como publicado en esta auditoría; verificar nuevamente tras la fecha prevista.
+
+### DMR-008-CLM-027 · Zeus Familia y Hera Familia derrotaron a Behemoth y Leviathan
+- `claim_id`: DMR-008-CLM-027
+- `claim`: Una prueba oficial de conocimiento de la franquicia identifica conjuntamente a Zeus Familia y Hera Familia como las Familias que derrotaron a Behemoth, el Rey de la Tierra, y a Leviathan, el Rey del Mar, dos de las Tres Grandes Misiones. La fuente no asigna en esa pregunta un monstruo concreto a cada Familia.
+- `character_ids`: []
+- `aspect`: historia antigua, Zeus Familia, Hera Familia, Tres Grandes Misiones
+- `era_or_interval`: Historia previa a la llegada de Bell; fecha absoluta y secuencia precisa no indicadas por esta fuente
+- `continuity_scope`: CROSS-CONTINUITY; referencia oficial de franquicia, no pasaje directo de novela
+- `source_id`: DMR-011-SRC-005
+- `source_title`: DanMachi · Prueba oficial de selección de aventureros, nivel intermedio
+- `source_type`: official_franchise_reference
+- `source_locator`: Pregunta 1 y respuesta correcta de la página oficial «冒険者選抜中央試験 中級編»
+- `source_url`: https://danmachi.com/center-test/normal.html
+- `evidence_type`: official_quiz_answer
+- `verification_status`: source_checked
+- `spoiler_level`: major
+- `confidence_note`: La respuesta oficial respalda el resultado conjunto de las dos Familias. No establece cuándo cayeron, quién sobrevivió, la composición de sus rosters, ni el desenlace de la misión contra el Dragón Negro. Esos datos siguen pendientes de fuentes narrativas con localizadores.
+
+### Resultado y límite
+- Se ha cerrado la comprobación bibliográfica del volumen principal más reciente ya publicado a fecha de consulta: volumen 21.
+- El volumen 22 está anunciado para diciembre de 2026, por lo que no se afirma que la serie esté concluida.
+- El contenido del volumen 21 todavía necesita cotejo interno por capítulo/escena; esta actualización no convierte sus sinopsis editoriales en evidencia primaria de cada acontecimiento.
