@@ -54,6 +54,8 @@ jobs:
         run: node tests/browser_smoke.cjs
       - name: Validate catalog and links
         run: node lore/danmachi/tools/check-catalog.mjs
+      - name: Report reproducible lore coverage metrics
+        run: node lore/danmachi/tools/report-coverage.mjs
       - name: Upload character archive screenshot
         if: always()
         uses: actions/upload-artifact@v4
