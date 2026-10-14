@@ -76,11 +76,18 @@
   function firstMeaningfulLine(value) {
     const line = clean(value).split(/\n/).map(item => item.trim()).find(Boolean) || "";
     const labelled = line.match(/^(?:protagonista|protagonista principal|personaje focal|objetivo|meta|antagonista|coprotagonista)\s*[:—-]\s*(.+)$/i);
-    return (labelled ? labelled[1] : line).replace(/^[-*•]+\s*/, "").slice(0, 220);
+    return (labelled ? labelled[1] : line).replace(/^[-*•]+\s*/, "").split(/\s*[|;]/, 1)[0].slice(0, 160);
   }
 
+  const shortStoryPhase = {
+    key: "Arco completo",
+    purpose: "condensar presentación, conflicto, caída y resolución en una única decisión con consecuencias",
+    beats: [{ title: "Del detonante a la resolución", action: "presentar una necesidad, forzar una elección difícil y mostrar el precio de resolver el conflicto", turn: "el protagonista consigue una respuesta inmediata, pero el cierre revela qué cambió y qué coste queda" }]
+  };
+
   function phaseFor(index, count) {
-    const position = count === 1 ? 1 : index / (count - 1);
+    if (count === 1) return shortStoryPhase;
+    const position = index / (count - 1);
     return phases.find(phase => position >= phase.start && (position < phase.end || phase.end === 1)) || phases[phases.length - 1];
   }
 
@@ -107,19 +114,24 @@
     const arcs = Array.isArray(input.arcs) ? input.arcs.map(clean).filter(Boolean) : [];
     const old = Array.isArray(input.existingChapters) ? input.existingChapters : [];
     const storyId = clean(input.storyId) || "story";
+    const excerpt = (label, value, limit = 180) => {
+      const text = clean(value);
+      if (!text) return "";
+      return label + ": " + (text.length > limit ? text.slice(0, limit - 1).trimEnd() + "…" : text);
+    };
     const detail = [
-      premise ? "Premisa: " + premise : "",
-      conflict ? "Conflicto: " + conflict : "",
-      world ? "Reglas que deben respetarse: " + world : "",
-      worldDynamics ? "Presiones del mundo: " + worldDynamics : "",
-      personality ? "Voz y personalidad: " + personality : "",
-      romance ? "Vínculo afectivo: " + romance : "",
-      trauma ? "Heridas y recuperación: " + trauma : "",
-      powers ? "Poderes, costes y límites: " + powers : "",
-      ensemble ? "Arcos del reparto coral: " + ensemble : "",
-      pantheon ? "Agencia del panteón: " + pantheon : "",
-      reveal ? "Revelación y pistas: " + reveal : "",
-      arcs.length ? "Arcos que deben avanzar: " + arcs.join("; ") : ""
+      excerpt("Premisa", premise, 240),
+      excerpt("Conflicto", conflict, 240),
+      excerpt("Reglas que deben respetarse", world),
+      excerpt("Presiones del mundo", worldDynamics),
+      excerpt("Voz y personalidad", personality),
+      excerpt("Vínculo afectivo", romance),
+      excerpt("Heridas y recuperación", trauma),
+      excerpt("Poderes, costes y límites", powers),
+      excerpt("Arcos del reparto coral", ensemble),
+      excerpt("Agencia del panteón", pantheon),
+      excerpt("Revelación y pistas", reveal),
+      arcs.length ? excerpt("Arcos que deben avanzar", arcs.join("; "), 220) : ""
     ].filter(Boolean);
     const protagonistGoal = conflict || premise || "el conflicto central que se definirá en la biblia narrativa";
     return Array.from({ length: count }, (_, index) => {
