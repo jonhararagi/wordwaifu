@@ -69,4 +69,4 @@ assert.ok(world.premise && world.rules && world.pressure && world.factions && wo
 const max = generateOutline({ chapterCount: 9999 });
 assert.equal(max.chapters.length, 500, "generation is capped to avoid accidental huge projects");
 
-process.stdout.write("PASS story structure generator: chapter counts, phase continuity, wiki-reference context, open/closed endings, and single-chapter edge case.\\n");
+process.stdout.write("PASS story structure generator: chapter counts, phase continuity, wiki-reference context, open/closed endings, and single-chapter edge case.\n");
