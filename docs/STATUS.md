@@ -2,11 +2,11 @@
 # Auditoría de candidata DanMachi — 2026-10-14
 
 - Rama autorizada de trabajo: `work/story-completion-danmachi-audit-2026-10`.
-- Último SHA de candidata con CI general confirmado en esta auditoría: `472bebe6d74a08e5b8e22664bb754a2d095e61b8`; [Validate WordWaifu #962 terminó en success](https://github.com/jonhararagi/wordwaifu/actions/runs/38478133451).
+- Evidencia de CI general posterior al commit de la matriz: [Validate WordWaifu #965 terminó en success](https://github.com/jonhararagi/wordwaifu/actions/runs/38512183270) para el SHA exacto `a3a37ec39f9f983e4255b7347c958a9a6b052bf0`; la prueba Chromium de esa ejecución valida ese SHA, no los commits posteriores.
 - Después de ese SHA se añadieron cuatro commits documentales/índice en esta misma rama: el enlace al índice maestro, la reconciliación del estado, la corrección de referencias obsoletas y la ampliación de la matriz con dos ramas adicionales. La punta actual de la rama, por tanto, **no está cubierta por el CI de #962**; hay que verificar los workflows en el SHA final.
-- Para el SHA `472bebe6...`, el workflow `DanMachi Lore and Retrieval Integrity` no tiene ejecución exacta registrada. No se interpreta la ausencia de run como fallo ni como aprobación.
+- Para el SHA `a3a37ec39f9f983e4255b7347c958a9a6b052bf0`, el workflow `DanMachi Lore and Retrieval Integrity` no tiene ejecución exacta registrada ([consulta por SHA](https://api.github.com/repos/jonhararagi/wordwaifu/actions/workflows/danmachi-lore-check.yml/runs?head_sha=a3a37ec39f9f983e4255b7347c958a9a6b052bf0&per_page=100)). La ausencia de ejecución no equivale a fallo ni a aprobación.
 - La matriz de integración está en [`docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md`](INTEGRATION_DANMACHI_AUDIT_2026-10.md). La comparación de ramas encontró diferencias de árbol y commits divergidos; igualdad de un archivo no acredita integración de toda una rama. La auditoría semántica de los deltas exclusivos sigue pendiente.
-- `tests/browser_smoke.cjs` corrige el conteo obsoleto de catálogo leyendo el número esperado de `data/catalog/mythic-arsenal.json` en vez de fijarlo en 75. El CI general verde de #962 valida ese commit, no la punta actual de la rama.
+- `tests/browser_smoke.cjs` corrige el conteo obsoleto de catálogo leyendo el número esperado de `data/catalog/mythic-arsenal.json` en vez de fijarlo en 75. La suite completa de `Validate WordWaifu #965` pasó en `a3a37ec`; los commits posteriores siguen requiriendo validación en la punta.
 - Investigación primaria de *Episode Freya* / Emperatriz: pendiente. La ficha editorial oficial y las publicaciones originales de Omori se registraron como pistas; la escena de aventureros de nivel 8/9 no pudo cotejarse con texto primario accesible. No elevar nombres, niveles ni cronología a canon verificado.
 - No se ha ejecutado merge ni se ha modificado `main` ni ramas remotas no autorizadas en esta iteración. No se ha publicado ni cerrado PR.
 
