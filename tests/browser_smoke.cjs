@@ -229,6 +229,24 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyPantheon']").inputValue(), "La diosa quiere recuperar su libertad y protege a una amiga por una deuda antigua.");
     assert.equal(await page.locator("#story-meta-form [name='storyEnsemble']").inputValue(), "Piloto: miedo al fracaso | rivalidad con el equipo | aprende a confiar.");
     process.stdout.write("PASS reveal framework: Markdown import preserves world rules, clues, reveal timing and consequences.\\n");
+    // Story Foundry: the chapter-count control produces an editable outline and a coherent selected ending.
+    await page.locator("#story-plan-count").fill("10");
+    await page.locator("#story-plan-ending").selectOption("open");
+    await page.locator("#story-plan-hero").fill("Iria Test");
+    await page.locator("#story-plan-companion").fill("Noel Test");
+    await page.locator("#story-plan-villain").fill("El Consejo");
+    await page.locator("#story-plan-world").fill("Puerto de Ceniza");
+    await page.locator("#story-plan-power").fill("Eco de memoria");
+    await page.locator("#story-plan-generate-button").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-card").length === 10, { timeout: 10000 });
+    assert.ok((await page.locator(".story-chapter-card").first().innerText()).includes("Iria Test"), "generated chapter summaries should use the chosen protagonist");
+    assert.ok((await page.locator(".story-chapter-card").last().innerText()).includes("pregunta mayor"), "open ending should leave a forward-looking question");
+    assert.ok((await page.locator("#story-meta-form [name='storyArcs']").inputValue()).includes("Presentación y detonante"), "generated outline should persist narrative phases as arcs");
+    assert.equal(await page.locator("#story-plan-ending").inputValue(), "open");
+    await page.locator("#story-plan-count").fill("1");
+    await page.locator("#story-plan-generate-button").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-card").length === 1, { timeout: 10000 });
+    process.stdout.write("PASS Story Foundry: 10-chapter outline, open ending, cast inputs, saved arcs and 1-chapter edge case.\\n");
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
