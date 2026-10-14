@@ -1310,12 +1310,25 @@
         {name:"Resolución y consecuencias",start:0,end:0,goal:"resolver el arco y mostrar el mundo transformado",beat: ending==="open"?"El conflicto inmediato cambia de forma, pero una nueva evidencia abre una pregunta mayor.":ending==="arc"?"El objetivo del arco se resuelve y aparece una consecuencia que prepara la siguiente etapa.":"Las decisiones tienen consecuencias duraderas y el conflicto central obtiene una respuesta clara."}
       ];
       const weights=[0.16,0.22,0.17,0.16,0.19,0.10];
-      const activePhases=phases.slice(0,Math.min(phases.length,count));
-      const weightTotal=activePhases.reduce((sum,phase)=>sum+weights[phases.indexOf(phase)],0);
+      // Keep every essential dramatic beat even in a one- or two-chapter story.
+      // When the requested length is short, merge adjacent phases instead of
+      // silently dropping the fall, climax or resolution.
+      const phaseCount=Math.min(phases.length,count);
+      const activePhases=Array.from({length:phaseCount},(_,groupIndex)=>{
+        const members=phases.map((phase,index)=>({phase,index})).filter(({index})=>Math.floor(index*phaseCount/phases.length)===groupIndex);
+        return {
+          name:members.map(({phase})=>phase.name).join(" + "),
+          goal:members.map(({phase})=>phase.goal).join("; "),
+          beat:members.map(({phase})=>phase.beat).join(" "),
+          weight:members.reduce((sum,{index})=>sum+weights[index],0),
+          start:0,end:0
+        };
+      });
+      const weightTotal=activePhases.reduce((sum,phase)=>sum+phase.weight,0);
       let cursor=1, cumulative=0;
       activePhases.forEach((phase,index)=>{
         phase.start=cursor;
-        cumulative+=weights[phases.indexOf(phase)];
+        cumulative+=phase.weight;
         phase.end=index===activePhases.length-1?count:Math.max(cursor,Math.min(count-(activePhases.length-index-1),Math.round(count*cumulative/weightTotal)));
         cursor=phase.end+1;
       });
@@ -1323,8 +1336,9 @@
       for(let n=1;n<=count;n++){
         const phase=activePhases.find((item)=>n>=item.start&&n<=item.end)||activePhases[activePhases.length-1];
         const local=n-phase.start+1, span=Math.max(1,phase.end-phase.start+1);
-        const midpoint=local===1?"introduce una pregunta concreta":local===span?"cerrar esta fase con una decisión y una consecuencia":"complicar el objetivo y revelar información parcial";
-        chapterRows.push({id:"chapter-"+Date.now().toString(36)+"-"+n,title:"Capítulo "+n+": "+phase.name,summary:"Objetivo dramático: "+phase.goal+". En este capítulo, "+cast.hero+" debe "+midpoint+". Contexto: "+premise+". Obstáculo: "+conflict+". Desarrollo: "+phase.beat+" Mantener presentes el límite de "+cast.power+" y el coste emocional relacionado con "+cast.wound+". Cada avance debe proceder de una decisión, preparación o colaboración; evitar soluciones gratuitas.",content:"",status:"outline",phase:phase.name});
+        const midpoint=local===1?"abrir una pregunta dramática y tomar una primera decisión":local===span?"cerrar esta fase con una decisión irreversible y sus consecuencias":"complicar el objetivo, cambiar una relación y revelar información parcial";
+        const chapterBeat=span===1?phase.beat:(local===1?phase.beat.split(" ").slice(0,45).join(" "):phase.beat);
+        chapterRows.push({id:"chapter-"+Date.now().toString(36)+"-"+n,title:"Capítulo "+n+": "+phase.name,summary:"Objetivo dramático: "+phase.goal+". En este capítulo, "+cast.hero+" debe "+midpoint+". Contexto: "+premise+". Obstáculo: "+conflict+". Desarrollo: "+chapterBeat+" Mundo y reglas: "+worldRules+". Poder y coste: "+cast.power+" debe tener límites observables; la presión emocional se relaciona con "+cast.wound+". Cierre: dejar una consecuencia concreta que obligue al siguiente capítulo a responder o cambiar de estrategia. Evitar soluciones gratuitas.",content:"",status:"outline",phase:phase.name});
       }
       story.chapters=chapterRows;
       story.status="outline";
@@ -1338,7 +1352,14 @@
       story.characterWound=cast.wound;
       story.signaturePower=cast.power;
       story.worldRules=worldRules;
-      story.ensemble="Protagonista: "+cast.hero+" | deseo: convertir su problema en una elección propia | herida/temor: "+cast.wound+" | cambio: aprende a pedir ayuda sin ceder su responsabilidad.\nCompañero/coprotagonista: "+cast.companion+" | objetivo propio: resolver su conflicto aunque el protagonista no esté presente | decisión decisiva: contradice al grupo cuando la estrategia amenaza sus principios.\nAntagonista: "+cast.villain+" | objetivo comprensible: imponer una solución que considera necesaria | método: convierte personas en recursos | punto ciego: confunde control con estabilidad.\nInterés amoroso: "+cast.romance+" | vínculo basado en reciprocidad, límites y objetivos propios.";
+      story.characterDossiers=[
+        {role:"Protagonista",name:cast.hero,desire:"alcanzar la meta externa sin perder aquello que da sentido a su vida",need:"reconocer el coste de sus decisiones y aceptar ayuda sin delegar responsabilidad",personality:"decidido, observador y vulnerable ante su propio punto ciego",flaw:"confunde insistir con tener razón",wound:cast.wound,power:cast.power,powerLimit:"cada uso consume un recurso definido y deja una consecuencia que los rivales pueden explotar",arc:"confianza inicial → éxito parcial → falsa seguridad → pérdida → estrategia humilde → decisión con coste"},
+        {role:"Compañero/coprotagonista",name:cast.companion,desire:"cumplir un objetivo propio incluso si el protagonista fracasa",need:"decidir qué lealtades merecen mantenerse y cuáles deben renegociarse",personality:"ingenioso, crítico y capaz de actuar bajo presión",flaw:"oculta información para conservar autonomía",wound:"una promesa o deuda que entra en conflicto con la misión",power:"habilidad complementaria al protagonista",powerLimit:"no puede resolver el conflicto principal sin cooperación ni preparación",arc:"alianza práctica → desacuerdo → ruptura o límite → elección libre de volver"},
+        {role:"Antagonista",name:cast.villain,desire:"imponer una solución que considera necesaria",need:"enfrentarse al daño que su sistema causa a quienes trata como recursos",personality:"persuasivo, disciplinado y convencido de su propia lógica",flaw:"confunde control con estabilidad",wound:"un fracaso anterior convertido en justificación",power:"ventaja institucional, táctica o sobrenatural",powerLimit:"depende de una regla, recurso o apoyo que puede perderse",arc:"presión indirecta → respuesta al progreso → explotación del punto ciego → confrontación ideológica"},
+        {role:"Interés amoroso opcional",name:cast.romance,desire:"proteger su proyecto y conservar autonomía",need:"negociar confianza sin convertirse en premio ni salvación del protagonista",personality:"franco, competente y con límites propios",flaw:"se retira antes de expresar una necesidad",wound:"no especificada; solo definirla si la historia lo necesita",power:"competencia propia relevante para el conflicto",powerLimit:"no está obligado a resolver ni reparar el arco del protagonista",arc:"interés y fricción → confianza ganada → conflicto de objetivos → elección recíproca o separación digna"}
+      ];
+      story.ensemble=story.characterDossiers.map((character)=>character.role+": "+character.name+"\nDeseo: "+character.desire+"\nNecesidad: "+character.need+"\nPersonalidad: "+character.personality+"\nDefecto: "+character.flaw+"\nHerida: "+character.wound+"\nPoder/capacidad: "+character.power+"\nLímite y coste: "+character.powerLimit+"\nArco: "+character.arc).join("\n\n");
+      story.worldBible={setting:cast.world,rules:worldRules,conflict,powerAndCost:cast.power,emotionalPressure:cast.wound,genre,endingType:ending};
       story.arcs=activePhases.map((phase)=>"Capítulos "+phase.start+"–"+phase.end+": "+phase.name+" — "+phase.goal);
       const saved=await saveProject();
       renderDirectory();
