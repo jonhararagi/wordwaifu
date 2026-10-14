@@ -2968,7 +2968,8 @@ async function run() {
     await page.locator("#story-outline-romance").fill("Romance lento, opcional, basado en confianza");
     await page.locator("#story-outline-trauma").fill("La pérdida pasada le dificulta pedir ayuda");
     await page.locator("#story-outline-reference").fill("Resumen de referencia estilo wiki: el mundo se conecta por rutas vivas.");
-    const originalChapterContent = await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue().catch(() => "");
+    const existingChapterCount = await page.locator(".story-chapter-form [name='chapterContent']").count();
+    const originalChapterContent = existingChapterCount ? await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue() : "";
     if (originalChapterContent) page.once("dialog", dialog => dialog.accept());
     await page.locator("#story-outline-generate-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length >= 30, null, { timeout: 10000 });
