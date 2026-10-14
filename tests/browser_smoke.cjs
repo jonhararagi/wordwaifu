@@ -2808,6 +2808,103 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
     const backgroundAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"));
     assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
+    // IndexedDB CRUD and reload: edit an existing assignment, reload the app, then delete it.
+    const backgroundCard = page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first();
+    await backgroundCard.getByRole("button", { name: "Editar" }).first().click();
+    const editFormState = await page.evaluate(() => ({
+      category: document.querySelector("#art-target-type")?.value,
+      id: document.querySelector("#art-target-id")?.value,
+      name: document.querySelector("#art-target-name")?.value
+    }));
+    assert.deepEqual(editFormState, { category: "background", id: "bg-orario-night", name: "Orario nocturno" },
+      "The edit action must load the exact assignment identity before saving.");
+    const originalBackgroundUpdatedAt = backgroundAsset.updatedAt;
+    await page.locator("#art-prompt").fill("Panorámica revisada de Orario bajo la lluvia.");
+    assert.equal(await page.locator("#art-prompt").inputValue(), "Panorámica revisada de Orario bajo la lluvia.");
+    await page.locator("#art-save").click();
+    await page.waitForFunction(async (previousUpdatedAt) => {
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
+      return Boolean(asset && asset.prompt.includes("revisada") && asset.updatedAt !== previousUpdatedAt);
+    }, originalBackgroundUpdatedAt, { timeout: 5000 });
+    const immediateEditEvidence = await page.evaluate(async () => {
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
+      const db = await new Promise((resolve, reject) => {
+        const request = indexedDB.open("wordwaifu-art-studio", 1);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+      const indexedRecord = await new Promise((resolve, reject) => {
+        const request = db.transaction("assignments", "readonly").objectStore("assignments").get("background:bg-orario-night");
+        request.onsuccess = () => resolve(request.result || null);
+        request.onerror = () => reject(request.error);
+      });
+      db.close();
+      return { assetPrompt: asset?.prompt, indexedPrompt: indexedRecord?.prompt, status: document.querySelector("#art-status")?.textContent };
+    });
+    assert.ok(immediateEditEvidence.indexedPrompt?.includes("revisada"),
+      "The IndexedDB transaction must durably store the edited prompt before reload.");
+    assert.ok(immediateEditEvidence.status?.includes("biblioteca local del navegador"),
+      "The edit must report the primary IndexedDB backend, not silently fall back.");
+    await page.reload({ waitUntil: "networkidle" });
+    await page.locator('.nav-item[data-view="art"]').click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", null, { timeout: 5000 });
+    const persistedEditEvidence = await page.evaluate(async () => {
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
+      const db = await new Promise((resolve, reject) => {
+        const request = indexedDB.open("wordwaifu-art-studio", 1);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      });
+      const indexedRecord = await new Promise((resolve, reject) => {
+        const request = db.transaction("assignments", "readonly").objectStore("assignments").get("background:bg-orario-night");
+        request.onsuccess = () => resolve(request.result || null);
+        request.onerror = () => reject(request.error);
+      });
+      db.close();
+      const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
+      return { assetPrompt: asset?.prompt, indexedPrompt: indexedRecord?.prompt, fallbackPrompt: fallback["background:bg-orario-night"]?.prompt };
+    });
+
+    assert.ok(persistedEditEvidence.assetPrompt?.includes("revisada") && persistedEditEvidence.indexedPrompt?.includes("revisada"),
+      "Editing an IndexedDB assignment must update its saved prompt and survive a full page reload.");
+    // Seed a stale fallback copy, then force its cleanup to fail after IndexedDB deletion.
+    // The durable IndexedDB tombstone must prevent this stale copy reappearing after reload.
+    await page.evaluate(async () => {
+      const key = "background:bg-orario-night";
+      const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
+      const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
+      fallback[key] = { ...asset };
+      localStorage.setItem("wordwaifu.art.assignments.v1", JSON.stringify(fallback));
+      const nativeSetItem = Storage.prototype.setItem;
+      Storage.prototype.setItem = function(storageKey, value) {
+        if (storageKey === "wordwaifu.art.assignments.v1") {
+          throw new DOMException("Simulated fallback cleanup failure", "QuotaExceededError");
+        }
+        return nativeSetItem.call(this, storageKey, value);
+      };
+    });
+    await page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first().getByRole("button", { name: "Eliminar" }).first().click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", { timeout: 5000 });
+    assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
+      "Deleting an IndexedDB assignment must remove it from active storage.");
+    assert.ok(await page.evaluate(() => {
+      const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
+      return Boolean(fallback["background:bg-orario-night"]?.prompt?.includes("revisada"));
+    }), "The failure simulation must leave the stale fallback copy in place.");
+
+    await page.reload({ waitUntil: "networkidle" });
+    await page.locator('.nav-item[data-view="art"]').click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", null, { timeout: 5000 });
+    assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
+      "A stale localStorage copy must not resurrect an IndexedDB-deleted assignment after reload.");
+    // Keep this regression isolated from the following mock-storage scenario.
+    await page.evaluate(() => {
+      const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
+      delete fallback["background:bg-orario-night"];
+      localStorage.setItem("wordwaifu.art.assignments.v1", JSON.stringify(fallback));
+    });
+    process.stdout.write("PASS art deletion tombstone: stale fallback cleanup failure cannot resurrect a deleted assignment.\\n");
+
     // A localStorage-only art assignment remains visible even if IndexedDB opens but the write fell back.
     const fallbackArtRecord = { key: "background:art-fallback-only", category: "background", entityId: "art-fallback-only", entityName: "Fallback solo local", imageUrl: "", fileDataUrl: "", prompt: "Registro de respaldo local.", updatedAt: new Date().toISOString() };
     await page.evaluate(record => {
