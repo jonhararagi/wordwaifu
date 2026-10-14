@@ -922,21 +922,22 @@
       const backup = this.saveBackup(project);
       const backupWritten = backup.written;
       const backupError = backup.warning ? new Error(backup.warning) : null;
+      const restorePreviousBackup = () => {
+        if (!backupWritten || !this.localStorage || previousBackup.error) return;
+        try {
+          if (previousBackup.raw === null) this.localStorage.removeItem(this.storageKey);
+          else this.localStorage.setItem(this.storageKey, previousBackup.raw);
+        } catch { /* Preserve the authoritative tombstone error if rollback is unavailable. */ }
+      };
 
       try {
         await this.write(project);
         return { backend: "indexeddb", backupWritten, warning: backupError ? backupError.message : null };
       } catch (error) {
         if (error && (error.code === "PROJECT_IN_TRASH" || error.code === "PROJECT_PERMANENTLY_DELETED")) {
-          // The tombstone may have appeared between the preflight and the write
-          // transaction. Restore the prior compatibility backup rather than
-          // leaving a ghost project under an ID that the repository rejects.
-          try {
-            if (this.localStorage) {
-              if (previousBackup.raw === null) this.localStorage.removeItem(this.storageKey);
-              else this.localStorage.setItem(this.storageKey, previousBackup.raw);
-            }
-          } catch { /* Keep the authoritative tombstone; surface the guard below. */ }
+          // A trash move or permanent-delete marker may win after preflight but
+          // before the write transaction. Never leave a compatibility ghost.
+          restorePreviousBackup();
           throw error;
         }
         if (backupWritten) return { backend: "localStorage", backupWritten: true, warning: "IndexedDB no se verificó; se conserva el respaldo local: " + error.message };
