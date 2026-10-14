@@ -22,7 +22,7 @@ assert.equal(closed.chapters[0].act, "opening");
 assert.equal(closed.chapters[29].act, "ending");
 assert.match(closed.chapters[0].summary, /Mira quiere encontrar la ruta borrada/);
 assert.match(closed.chapters[12].summary, /Kael protege la frontera/);
-assert.match(closed.chapters[20].summary, /falsa seguridad|victoria/i);
+assert.equal(closed.chapters[22].act, "false-security", "Chapter 23 of a 30-chapter novel should begin the false-security and fall phase.");
 assert.match(closed.chapters[29].summary, /Resolver el conflicto principal/);
 assert.ok(closed.acts.some(act => act.start <= 23 && act.end >= 23), "The outline should include the fall/false-security phase around chapter 23 for a 30-chapter novel.");
 const open = generateOutline({ count: 12, endingType: "open", story });
