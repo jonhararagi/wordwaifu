@@ -2993,7 +2993,7 @@ async function run() {
     await page.waitForFunction(() => (document.querySelector("#story-ingredients-status")?.textContent || "").includes("Semilla de mundo añadida"), null, { timeout: 10000 });
     assert.ok((await page.locator("#story-meta-form [name='storyWorldRules']").inputValue()).includes("reglas:"));
     assert.ok((await page.locator("#story-meta-form [name='storyWorldDynamics']").inputValue()).includes("Gancho inicial:"));
-    process.stdout.write("PASS story generators: 30-chapter outline, open ending, wiki reference, manuscript preservation, villain seed, and world rules.\\n");
+    process.stdout.write("PASS story generators: 30-chapter outline, open ending, wiki reference, manuscript preservation, villain seed, and world rules.\n");
 
     // Structured power workbench: create a record, save, reload, and recover it.
     await page.locator('[data-view="powers"]').click();
