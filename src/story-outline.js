@@ -47,7 +47,7 @@
   ];
 
   function clean(value, fallback) {
-    const text = String(value || "").replace(/\\s+/g, " ").trim();
+    const text = String(value || "").replace(/\s+/g, " ").trim();
     return text ? text.slice(0, 360) : fallback;
   }
 
@@ -74,7 +74,7 @@
     const dynamics = clean(story.worldDynamics, "las tensiones entre comunidades y facciones");
     const reveal = clean(story.revealSecret, "la verdad detrás del conflicto visible");
     const clues = clean(story.revealClues, "las pistas que se sembraron en escenas anteriores");
-    const arcs = Array.isArray(story.arcs) ? story.arcs.map((arc) => clean(arc, "")).filter(Boolean) : String(story.arcs || "").split("\\n").map((arc) => clean(arc, "")).filter(Boolean);
+    const arcs = Array.isArray(story.arcs) ? story.arcs.map((arc) => clean(arc, "")).filter(Boolean) : String(story.arcs || "").split("\n").map((arc) => clean(arc, "")).filter(Boolean);
     const endingEvent = {
       closed: "El protagonista resuelve el conflicto central y la escena final muestra qué cambió, qué se perdió y qué responsabilidad queda.",
       open: "El conflicto inmediato se resuelve, pero una consecuencia nueva y concreta abre una posibilidad futura sin interrumpir arbitrariamente la acción.",
