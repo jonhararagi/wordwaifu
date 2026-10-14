@@ -1282,97 +1282,97 @@
       }
       if (story.chapters.length && !confirm("Se regenerarán los títulos y resúmenes del índice. Los manuscritos, IDs y estados existentes se conservarán. ¿Continuar?")) return;
       const ending = String(form.get("storyEndingType") || "closed");
-      const cast = String(form.get("storyCastPlan") || "").trim();
-      const personality = String(form.get("storyPersonalityPlan") || "").trim();
-      const antagonist = String(form.get("storyAntagonistPlan") || "").trim();
-      const romance = String(form.get("storyRomancePlan") || "").trim();
-      const trauma = String(form.get("storyTraumaPlan") || "").trim();
-      const premise = String(form.get("storyPremise") || "").trim();
-      const conflict = String(form.get("storyConflict") || "").trim();
-      const world = String(form.get("storyWorldRules") || "").trim();
-      const powers = String(form.get("storyPowerCatalog") || "").trim();
-      const arcs = String(form.get("storyArcs") || "").split("\n").map(line => line.trim()).filter(Boolean);
-      const phases = [
-        { key: "Presentación", start: 0, end: 0.12, purpose: "presentar el mundo, la rutina, los personajes, sus deseos y la primera anomalía", beats: ["mostrar una rutina concreta antes de alterarla", "presentar una relación mediante una acción, no solo descripción", "hacer visible una regla del mundo y su coste", "plantear una decisión pequeña con consecuencias", "introducir el incidente que vuelve imposible seguir igual"] },
-        { key: "Progreso y complicaciones", start: 0.12, end: 0.35, purpose: "construir alianzas, entrenar habilidades, explorar el mundo y lograr avances con costes", beats: ["probar una estrategia y revelar una limitación", "dar al coprotagonista una decisión que cambie el plan", "obtener una victoria parcial que abra un problema mayor", "profundizar un vínculo mediante conflicto y cooperación", "mostrar al antagonista adaptándose a los avances del elenco"] },
-        { key: "Escalada y punto medio", start: 0.35, end: 0.55, purpose: "elevar el riesgo, revelar información y obligar al protagonista a revisar su estrategia", beats: ["revelar una pista que reinterprete una escena previa", "hacer que un poder o recurso cobre un precio tangible", "forzar una alianza incómoda o una ruptura", "convertir el objetivo inicial en algo más complejo", "mostrar que la oposición entiende mejor una debilidad del grupo"] },
-        { key: "Falsa seguridad y caída", start: 0.55, end: 0.76, purpose: "hacer que una victoria aparente genere exceso de confianza y una derrota causal", beats: ["conceder una victoria que parezca confirmar el método del héroe", "mostrar la arrogancia o el punto ciego que esa victoria alimenta", "hacer que el antagonista explote una regla ya establecida", "cobrar una consecuencia por una decisión anterior", "quebrar una alianza, recurso o creencia central", "obligar al elenco a asumir responsabilidad en vez de buscar un atajo"] },
-        { key: "Reconstrucción y clímax", start: 0.76, end: 0.92, purpose: "integrar lo aprendido y resolver el conflicto mediante decisiones con precio", beats: ["reformular el objetivo tras aceptar una verdad incómoda", "combinar habilidades del elenco en lugar de una solución milagrosa", "hacer que el protagonista renuncie a una ventaja dañina", "confrontar al antagonista con la contradicción de su objetivo", "pagar una deuda sembrada en capítulos anteriores"] },
-        { key: "Desenlace", start: 0.92, end: 1, purpose: "mostrar consecuencias y cerrar o abrir deliberadamente las preguntas principales", beats: ["mostrar el coste inmediato de la resolución", "dar a cada personaje central una consecuencia concreta", "reflejar cómo cambió el mundo o la relación principal", "dejar una imagen final que dialogue con el comienzo"] }
-      ];
-      const endingLine = ending === "open"
-        ? "El final debe resolver el arco emocional inmediato, pero dejar una pregunta central, una consecuencia o una nueva ruta abierta; no cortar arbitrariamente en mitad de la acción."
-        : ending === "bittersweet"
-          ? "El conflicto principal llega a una resolución, pero una pérdida irreversible impide que la victoria sea gratuita."
-          : ending === "cliffhanger"
-            ? "Cerrar el arco del volumen en lo posible y terminar con una revelación o decisión que cambie el tablero; no sustituir el desarrollo por un corte sin preparación."
-            : "Resolver el conflicto principal y mostrar consecuencias suficientes para que el lector entienda qué cambió; las subtramas secundarias pueden continuar.";
-      story.chapterCount = count;
-      story.endingType = ending;
-      story.castPlan = cast; story.personalityPlan = personality; story.antagonistPlan = antagonist; story.romancePlan = romance; story.traumaPlan = trauma;
-      story.name = String(form.get("storyName") || story.name).trim();
-      story.description = String(form.get("storyDescription") || "").trim();
-      story.premise = premise; story.conflict = conflict;
-      story.worldRules = world; story.powerCatalog = powers;
-      story.arcs = arcs;
-      const oldChapters = story.chapters.slice();
-      story.chapters = Array.from({ length: count }, (_, index) => {
-        const n = index + 1, position = count === 1 ? 1 : (index / (count - 1));
-        const phase = phases.find(item => position >= item.start && (position < item.end || item.end === 1)) || phases[phases.length - 1];
-        const phaseChapters = Array.from({ length: count }, (_, j) => j + 1).filter(num => {
-          const pos = count === 1 ? 1 : ((num - 1) / (count - 1));
-          return pos >= phase.start && (pos < phase.end || phase.end === 1);
-        });
-        const within = Math.max(0, phaseChapters.indexOf(n));
-        const beat = phase.beats[within % phase.beats.length];
-        const existing = oldChapters[index] || {};
-        const title = (phase.key + ": " + beat.charAt(0).toLocaleUpperCase("es") + beat.slice(1)).slice(0, 180);
-        const context = [
-          premise ? "Premisa a desarrollar: " + premise : "",
-          conflict ? "Conflicto central: " + conflict : "",
-          cast ? "Elenco y objetivos: " + cast.slice(0, 240) : "",
-          personality ? "Personalidad y voz: " + personality.slice(0, 240) : "",
-          antagonist ? "Oposición: " + antagonist.slice(0, 240) : "",
-          romance ? "Vínculo afectivo: " + romance.slice(0, 200) : "",
-          trauma ? "Heridas y recuperación: " + trauma.slice(0, 200) : "",
-          world ? "Reglas del mundo que deben respetarse: " + world.slice(0, 240) : "",
-          powers ? "Poderes y costes registrados: " + powers.slice(0, 240) : "",
-          arcs.length ? "Arcos que deben avanzar: " + arcs.join("; ").slice(0, 300) : ""
-        ].filter(Boolean);
-        const endingNote = n === count ? " " + endingLine : "";
-        const summary = "Función del tramo: " + phase.purpose + ". En este capítulo: " + beat + ". La escena debe mostrar quién toma la decisión, qué intenta conseguir, qué obstáculo concreto aparece, qué precio paga y qué cambia al final. " +
-          (context.length ? context.join(" ") + " " : "Concretá aquí la acción específica, la localización, el personaje focal y la consecuencia causal; evitá resolverlo con una coincidencia.") +
-          (n === 1 ? " Establecé una imagen o situación inicial que pueda contrastar con el desenlace." : "") +
-          (n === count ? endingNote : " Cerrá con una consecuencia, una pregunta o una nueva complicación que empuje al capítulo siguiente.");
-        return { id: existing.id || ("chapter-" + Date.now().toString(36) + "-" + n), title, summary: summary.slice(0, 4000), content: existing.content || "", status: existing.status || "outline" };
+      const forge = window.WordWaifuStoryForge;
+      if (!forge || typeof forge.generateOutline !== "function") {
+        if (status) status.textContent = "El módulo de generación narrativa no está cargado. Recargá la aplicación antes de continuar.";
+        return;
+      }
+      const read = name => String(form.get(name) || "").trim();
+      const countFields = {
+        storyName: read("storyName") || story.name,
+        status: read("storyStatus") || "outline",
+        description: read("storyDescription"),
+        premise: read("storyPremise"),
+        conflict: read("storyConflict"),
+        castPlan: read("storyCastPlan"),
+        personalityPlan: read("storyPersonalityPlan"),
+        antagonistPlan: read("storyAntagonistPlan"),
+        romancePlan: read("storyRomancePlan"),
+        traumaPlan: read("storyTraumaPlan"),
+        worldType: read("storyWorldType") || "unspecified",
+        worldRules: read("storyWorldRules"),
+        worldDynamics: read("storyWorldDynamics"),
+        revealType: read("storyRevealType") || "none",
+        revealSecret: read("storyRevealSecret"),
+        revealClues: read("storyRevealClues"),
+        revealTiming: read("storyRevealTiming"),
+        revealConsequences: read("storyRevealConsequences"),
+        powerCatalog: read("storyPowerCatalog"),
+        pantheon: read("storyPantheon"),
+        ensemble: read("storyEnsemble"),
+        arcs: read("storyArcs").split("\n").map(line => line.trim()).filter(Boolean)
+      };
+      Object.assign(story, {
+        name: countFields.storyName,
+        status: countFields.status,
+        description: countFields.description,
+        premise: countFields.premise,
+        conflict: countFields.conflict,
+        chapterCount: count,
+        endingType: ending,
+        castPlan: countFields.castPlan,
+        personalityPlan: countFields.personalityPlan,
+        antagonistPlan: countFields.antagonistPlan,
+        romancePlan: countFields.romancePlan,
+        traumaPlan: countFields.traumaPlan,
+        worldType: countFields.worldType,
+        worldRules: countFields.worldRules,
+        worldDynamics: countFields.worldDynamics,
+        revealType: countFields.revealType,
+        revealSecret: countFields.revealSecret,
+        revealClues: countFields.revealClues,
+        revealTiming: countFields.revealTiming,
+        revealConsequences: countFields.revealConsequences,
+        powerCatalog: countFields.powerCatalog,
+        pantheon: countFields.pantheon,
+        ensemble: countFields.ensemble,
+        arcs: countFields.arcs
+      });
+      story.chapters = forge.generateOutline({
+        storyId: story.id,
+        chapterCount: count,
+        endingType: ending,
+        existingChapters: story.chapters,
+        ...countFields
       });
       const saved = await saveProject();
       renderDirectory();
-      const nextStatus = $("#story-outline-status", container);
-      if (nextStatus) nextStatus.textContent = (saved ? "Índice de " : "Índice generado en pantalla, pero no se confirmó el guardado. Exportá el proyecto JSON. Se crearon ") + count + " capítulos con función narrativa y resumen; los manuscritos existentes se conservaron.";
-      if (!saved) return;
+      const nextStatus = $("#story-outline-status");
+      if (nextStatus) nextStatus.textContent = (saved ? "Índice guardado: " : "Índice generado en pantalla, pero no se confirmó el guardado. Exportá el proyecto JSON. ") + count + " capítulos con resúmenes vinculados a la premisa, el conflicto, el elenco, el mundo y sus reglas. Los manuscritos, IDs y estados existentes se conservaron.";
     });
     const auditOutlineButton = $("#story-audit-outline-button", container);
     if (auditOutlineButton) auditOutlineButton.addEventListener("click", () => {
       const status = $("#story-outline-status", container);
-      const chapters = story.chapters || [];
-      const issues = [];
-      const expected = Math.max(1, Math.min(500, Number(story.chapterCount) || chapters.length || 1));
-      if (chapters.length !== expected) issues.push("El índice tiene " + chapters.length + " capítulos, pero el plan pide " + expected + ".");
-      if (!chapters.length) issues.push("Todavía no existe un índice de capítulos.");
-      chapters.forEach((chapter, index) => {
-        if (!String(chapter.title || "").trim()) issues.push("Capítulo " + (index + 1) + ": falta título.");
-        if (!String(chapter.summary || "").trim()) issues.push("Capítulo " + (index + 1) + ": falta resumen.");
+      const form = metaForm ? new FormData(metaForm) : null;
+      const forge = window.WordWaifuStoryForge;
+      if (!forge || typeof forge.auditOutline !== "function") {
+        if (status) status.textContent = "El módulo de auditoría narrativa no está cargado.";
+        return;
+      }
+      const read = name => form ? String(form.get(name) || "").trim() : "";
+      const result = forge.auditOutline({
+        chapterCount: form ? Number(form.get("storyChapterCount")) : story.chapterCount,
+        chapters: story.chapters || [],
+        premise: read("storyPremise") || story.premise,
+        conflict: read("storyConflict") || story.conflict,
+        castPlan: read("storyCastPlan") || story.castPlan,
+        antagonistPlan: read("storyAntagonistPlan") || story.antagonistPlan
       });
-      if (!String(story.premise || "").trim()) issues.push("Falta una premisa; el índice puede ser genérico.");
-      if (!String(story.conflict || "").trim()) issues.push("Falta el conflicto central.");
-      if (!String(story.castPlan || "").trim()) issues.push("Falta definir protagonistas/coprotagonistas y sus objetivos.");
-      if (!String(story.antagonistPlan || "").trim()) issues.push("Falta una fuerza opositora concreta.");
-      if (issues.length) {
-        if (status) status.textContent = "Auditoría: " + issues.length + " observaciones. " + issues.slice(0, 8).join(" ");
-      } else if (status) status.textContent = "Auditoría básica aprobada: " + chapters.length + " capítulos tienen título y resumen. Esto no sustituye la revisión literaria ni la continuidad.";
+      if (status) status.textContent = result.valid
+        ? "Auditoría estructural aprobada: " + result.chapterCount + " capítulos con títulos y resúmenes, cantidad coherente y sin IDs duplicados. Esto no sustituye la revisión literaria ni la auditoría de continuidad."
+        : "Auditoría: " + result.issues.length + " observaciones. " + result.issues.slice(0, 8).join(" ");
     });
-    const generatePowerButton = $("#story-power-generate-button", container);
+        const generatePowerButton = $("#story-power-generate-button", container);
     if (generatePowerButton) generatePowerButton.addEventListener("click", async () => {
       const catalog = $("[name='storyPowerCatalog']", container);
       const family = $("#story-power-family", container)?.value || "any";
