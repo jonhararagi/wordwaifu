@@ -6,6 +6,8 @@
 
 ## Métricas reproducibles
 
+La distribución actual se puede recalcular desde el catálogo y el mapa de volúmenes con `node lore/danmachi/tools/report-coverage.mjs`. El workflow de integridad ejecuta ese informe y falla si faltan números de volumen en el mapa o aparecen duplicados. La métrica global de toda la historia se mantiene como no calculable; no se infiere desde el número de registros.
+
 | Indicador | Resultado | Qué significa |
 |---|---:|---|
 | Volúmenes principales publicados con resumen provisional | 21/21 = **100 %** | Hay un mapa narrativo por volumen principal publicado al corte. No equivale a revisar cada escena. |
