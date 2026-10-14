@@ -1,13 +1,16 @@
 # Estado de WordWaifu
-# Actualización de auditoría DanMachi — 2026-10-13
+# Auditoría de candidata DanMachi — 2026-10-14
 
-- Rama candidata autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- Se añadió regresión de búsqueda de entidades Familia con consultas naturales en español (Hestia, Loki y Astrea), alias de tipo y abstención ante nombres de personajes: commit [41be465](https://github.com/jonhararagi/wordwaifu/commit/41be465681f7fae12c2d6d419a5562a09edbe4b2).
-- Se reconcilió la cola DanMachi con el estado real del filtro de entidades: commit [bcd5c19](https://github.com/jonhararagi/wordwaifu/commit/bcd5c19fe6811ad7f57a1470299bc4908850b15d).
-- La rama contiene una prueba automatizada para `searchEntities`; **no se declara aprobada** hasta que exista evidencia de ejecución sobre el commit candidato actual.
-- Estado de CI del candidato: pendiente de verificación. El conector disponible no devolvió runs de push ni checks para el SHA inspeccionado; eso no equivale a CI fallida ni aprobada.
-- No se ha realizado merge, no se ha publicado ni cerrado PR y no se ha modificado `main` ni otras ramas remotas en esta iteración.
+- Rama autorizada de trabajo: `work/story-completion-danmachi-audit-2026-10`.
+- Último SHA de candidata con CI general confirmado en esta auditoría: `472bebe6d74a08e5b8e22664bb754a2d095e61b8`; [Validate WordWaifu #962 terminó en success](https://github.com/jonhararagi/wordwaifu/actions/runs/38478133451).
+- La rama avanzó después de ese SHA: la comparación contra el ref actual informa **1 commit adicional** que modifica `lore/danmachi/MASTER_INDEX.md`. Por tanto, el resultado de #962 **no acredita el HEAD actual**; su SHA completo y CI final deben verificarse antes de declarar cierre.
+- Para el SHA `472bebe6...`, el workflow `DanMachi Lore and Retrieval Integrity` no tiene ejecución exacta registrada. No se interpreta la ausencia de run como fallo ni como aprobación.
+- La matriz de integración está en [`docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md`](INTEGRATION_DANMACHI_AUDIT_2026-10.md). La comparación de ramas encontró diferencias de árbol y commits divergidos; igualdad de un archivo no acredita integración de toda una rama. La auditoría semántica de los deltas exclusivos sigue pendiente.
+- `tests/browser_smoke.cjs` corrige el conteo obsoleto de catálogo leyendo el número esperado de `data/catalog/mythic-arsenal.json` en vez de fijarlo en 75. El CI general verde de #962 valida ese commit, no la punta actual de la rama.
+- Investigación primaria de *Episode Freya* / Emperatriz: pendiente. La ficha editorial oficial y las publicaciones originales de Omori se registraron como pistas; la escena de aventureros de nivel 8/9 no pudo cotejarse con texto primario accesible. No elevar nombres, niveles ni cronología a canon verificado.
+- No se ha ejecutado merge ni se ha modificado `main` ni ramas remotas no autorizadas en esta iteración. No se ha publicado ni cerrado PR.
 
+**Veredicto:** candidata en progreso, no cerrada. Antes del cierre faltan el SHA exacto actual, ejecución satisfactoria de ambos workflows aplicables en esa punta, prueba real de navegador en la punta final y comparación semántica de los deltas exclusivos de las ramas relevantes.
 ---
 
 
