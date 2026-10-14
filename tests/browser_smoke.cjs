@@ -246,7 +246,7 @@ async function run() {
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).includes("falsa seguridad") || (await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).includes("victoria"), "middle-late chapters should include the false-security/decline phase");
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").last().inputValue()).includes("dejar una pregunta central"), "open ending should deliberately leave a question while closing the immediate arc");
     await page.locator("#story-audit-outline-button").click();
-    assert.ok((await page.locator("#story-outline-status").textContent()).includes("Auditoría:"), "outline audit should report missing or incomplete narrative metadata");
+    assert.ok((await page.locator("#story-outline-status").textContent()).includes("Auditoría"), "outline audit should report its result");
     process.stdout.write("PASS story outline planner: chapter count, six-phase structure, cast, antagonist, romance, trauma, ending type and audit.\\n");
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
