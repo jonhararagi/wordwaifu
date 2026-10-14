@@ -8,6 +8,8 @@
     : null;
   let persistenceQueue = Promise.resolve();
   let persistenceSequence = 0;
+  let globalSearchDebounce = null;
+  let entityCatalogDebounce = null;
   const titles = {
     atlas: ["Atlas del mundo", "Explorá lugares, encontrá personajes y recorré la historia de tu mundo."],
     characters: ["Personajes", "Fichas conectadas con lugares, relaciones y acontecimientos."],
@@ -2990,7 +2992,13 @@
       status.textContent = "La consulta no pudo completarse: " + error.message + " Abrí WordWaifu desde un servidor HTTP (por ejemplo, el puerto privado de Codespaces), no como archivo file://.";
     } finally { button.disabled = false; }
   }
-  $("#danmachi-entity-query").addEventListener("input", () => renderDanmachiEntityCatalog());
+  $("#danmachi-entity-query").addEventListener("input", () => {
+    if (entityCatalogDebounce !== null) clearTimeout(entityCatalogDebounce);
+    entityCatalogDebounce = setTimeout(() => {
+      entityCatalogDebounce = null;
+      renderDanmachiEntityCatalog();
+    }, 120);
+  });
   $("#danmachi-entity-type").addEventListener("change", () => renderDanmachiEntityCatalog());
   $("#danmachi-entity-reset").addEventListener("click", () => {
     $("#danmachi-entity-query").value = "";
@@ -3141,23 +3149,28 @@
   }
 
   $("#global-search").addEventListener("input", () => {
-    const rawQuery = $("#global-search").value.trim();
-    if (activeView === "lore") {
-      resetArchiveForGlobalSearch(rawQuery);
-      return;
-    }
-    if (activeView === "atlas") {
-      const query = rawQuery.toLocaleLowerCase("es");
-      const found = state.locations.find((location) => location.name.toLocaleLowerCase("es").includes(query));
-      if (query && found) { selectedLocationId = found.id; renderDetails(); renderMap(); }
-      else if (query) {
-        const person = state.characters.find((character) => character.name.toLocaleLowerCase("es").includes(query));
-        if (person) openCharacter(person.id);
+    if (globalSearchDebounce !== null) clearTimeout(globalSearchDebounce);
+    // Coalesce fast keystrokes into one render/search pass for low-power devices.
+    globalSearchDebounce = setTimeout(() => {
+      globalSearchDebounce = null;
+      const rawQuery = $("#global-search").value.trim();
+      if (activeView === "lore") {
+        resetArchiveForGlobalSearch(rawQuery);
+        return;
       }
-    } else renderDirectory();
-    if (rawQuery.length >= 2 && !projectHasGlobalSearchMatch(rawQuery)) {
-      void searchArchiveFromGlobalSearch(rawQuery, false);
-    }
+      if (activeView === "atlas") {
+        const query = rawQuery.toLocaleLowerCase("es");
+        const found = state.locations.find((location) => location.name.toLocaleLowerCase("es").includes(query));
+        if (query && found) { selectedLocationId = found.id; renderDetails(); renderMap(); }
+        else if (query) {
+          const person = state.characters.find((character) => character.name.toLocaleLowerCase("es").includes(query));
+          if (person) openCharacter(person.id);
+        }
+      } else renderDirectory();
+      if (rawQuery.length >= 2 && !projectHasGlobalSearchMatch(rawQuery)) {
+        void searchArchiveFromGlobalSearch(rawQuery, false);
+      }
+    }, 120);
   });
   $("#global-search").addEventListener("keydown", (event) => {
     if (event.key !== "Enter") return;
