@@ -1,18 +1,20 @@
 # Estado de WordWaifu
-# Auditoría de candidata DanMachi — 2026-10-14
+## Estado operativo de integración — 2026-10-14
 
-- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`. No se modifica `main`, no se hace merge y no se abre/cierra PR.
-- **Último SHA de código/lore con ambos workflows confirmados:** `f16adcecb4f8c03cdf20f9a44761475f9d5781e6`. [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519704317) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519704363).
-- **Auditoría de ramas y matriz confirmadas:** `0a1b7f10bad7fc2c9c0ef0d013379ffa55346cd8`. [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519803216) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519803119). Esta actualización de estado crea otro commit documental; su CI debe comprobarse en su propio SHA y no se da por verde por herencia.
-- **DanMachi — catálogo estructurado actual:** 48 registros activos, 67 IDs reservados, 100 documentos de apoyo y 165 archivos registrados por la sincronización. La comprobación del catálogo detecta 151 archivos Markdown. Tipos: 22 personajes, 2 registros de deidad, 1 grupo de personajes, 3 Familias, 7 eventos, 4 eventos de autor/AU, 3 reglas del mundo, 1 escenario, 1 institución/lugar, 1 lugar nuevo, 1 cronología y 2 índices.
-- **Estado honesto de esas 48 fichas:** 0 completas según el criterio estricto de verificación; 25 parciales/provisionales; 23 pendientes (borradores, verificación pendiente o propuestas de AU/autor). Los índices y documentos de investigación no cuentan automáticamente como fichas terminadas.
-- **Roster de adaptación:** 59 identidades únicas. Se incorporaron 24 expedientes de investigación específicos por continuidad procedentes de la rama de integración, conservando los IDs/alias normalizados de la candidata. La UI ahora muestra esos apartados en la continuidad seleccionada, con fuente secundaria y nivel de spoilers explícitos. Los 33 perfiles de `src/character-dossiers.js` se conservan.
-- **Nuevo lugar integrado:** `LOC-DUNGEON`, ficha parcial con fuente editorial oficial del volumen 1 registrada como `DMR-012-SRC-001`. La fuente respalda el marco general de Orario/Dungeon, no la topología interna ni detalles de escenas. La ficha, el índice, el catálogo, la cola y la bitácora quedaron enlazados.
-- **Comparación de ramas actualizada:** candidata `f16adcecb4f8c03cdf20f9a44761475f9d5781e6` frente a `main` `675587f5ef50abd48382a07fc167ca08a26cae3f`: divergidas; candidata +626 / `main` +6 commits exclusivos desde la base común. Los conteos del grafo no equivalen a cherry-picks automáticos. La matriz registra 19 ramas fuente adicionales.
-- **Deltas de mainline:** se conservaron las funciones propias de la candidata y se portaron selectivamente los 24 dossiers. Aún queda revisión semántica de la generación de afirmaciones desde el roster en `src/lore-corpus.js`, y de los deltas de snapshots, editor/generador y persistencia; no se reemplazaron módulos completos.
-- **Canon pendiente:** la escena de aventureros de nivel 8/9 atribuida a *Episode Freya* / Emperatriz sigue sin localizador primario suficiente. No se promueven nombres, niveles ni cronología a canon confirmado.
-- **Rate limit consultado:** el endpoint público anónimo devolvió 57/60 solicitudes REST core y 57/60 code search restantes, con search 10/10; GraphQL 0/0. Esto describe la cuota anónima pública, **no** la cuota OAuth de la conexión GitHub, cuyo endpoint de rate limit no está expuesto por las acciones disponibles. Las operaciones de esta sesión siguieron respondiendo.
-- **Veredicto:** los cambios recientes están guardados en la candidata y los dos workflows pasaron en los SHAs citados. La misión global **no está cerrada**: la cobertura del canon y la consolidación semántica de todas las ramas siguen incompletas; no se autoriza merge por inferencia.
+- **HEAD actual de `main` antes de esta actualización documental:** `4e6010df3b52ec64d9d04aa3c27ac7510ce831f8`. La integración de código/lore ya está publicada en `main`.
+- **PR de integración:** [#18](https://github.com/jonhararagi/wordwaifu/pull/18), fusionada mediante squash en `97ca5cd757ba804d2d8ea017221e0c5aca02e202). La rama de reconciliación y la candidata original siguen conservadas.
+- **Validación del HEAD final de la PR antes del merge:** [DanMachi Lore and Retrieval Integrity #534](https://github.com/jonhararagi/wordwaifu/actions/runs/38560004222) y [Validate WordWaifu #1027](https://github.com/jonhararagi/wordwaifu/actions/runs/38560004249): ambos `success`, mismo SHA `09868364d53b1bfc75f383ef27bdb9d27490435b`.
+- **Corrección post-merge del trigger de DanMachi:** se agregó `main` al filtro `push.branches` y se actualizó la auditoría en el commit `4e6010df3b52ec64d9d04aa3c27ac7510ce831f8`. Los workflows están volviendo a correr en ese HEAD; no se marca su resultado hasta que GitHub Actions finalice.
+- **Estrategia de integración:** en lugar de fusionar los 647 commits históricos de la candidata, se reconciliaron 86 rutas (23 nuevas, 63 actualizadas) sobre la base vigente de `main`. Se preservaron los tres archivos exclusivos de `main`: `docs/README-INITIAL-PRODUCT-VISION.md`, `docs/README-WORLD-STORY-FOUNDRY.md` y `lore/danmachi/sources/DMR-007-wiki-comunitaria.md`.
+- **DanMachi — catálogo estructurado:** 48 registros activos, 67 IDs reservados, 100 documentos de apoyo y 165 archivos rastreados. La validación de catálogo confirma estructura y enlaces, no aprobación factual completa.
+- **Estado honesto de las fichas:** 0 completas bajo el criterio estricto, 25 parciales/provisionales y 23 pendientes. No se promueven expedientes a canon confirmado sin evidencia primaria suficiente.
+- **Roster de adaptación:** 59 identidades únicas; se conservan los 33 perfiles de `src/character-dossiers.js` y 24 expedientes de investigación por continuidad. Los niveles de fuente y spoilers continúan explícitos.
+- **Pendientes factuales:** auditoría por ID y fuente del roster; resolución documentada de la diferencia entre recuperación estructurada y generación automática de claims desde el roster; verificación primaria de las fichas pendientes. La escena atribuida a *Episode Freya* / Emperatriz sigue sin localizador primario suficiente.
+- **Pendientes de producto:** prueba real de cuota de almacenamiento y revisión visual manual en Windows 11 siguen siendo gates distintos de CI.
+- **Veredicto:** el bloqueo de integración a `main` quedó resuelto mediante PR #18. La integración no significa que todo el canon o todos los gates manuales estén completados.
+
+## Snapshot histórico de la auditoría previa
+Los registros por debajo del separador incluyen historiales y resultados antiguos de otras iteraciones; no deben prevalecer sobre el estado operativo actual de esta sección.
 
 
 ---
@@ -23,14 +25,14 @@
 - Objetivo: aplicación local/offline-first para organizar universos, canon, atlas temporal, personajes, relaciones, acontecimientos, organizaciones e historias/novelas.
 - **Avance global estimado: 19%** de la visión completa; estimación de alcance, no métrica de líneas de código ni de cobertura.
 - Tecnología: HTML/CSS/JavaScript, SVG, IndexedDB y respaldo de compatibilidad en localStorage.
-- WordWaifu gestiona canon y planificación narrativa; BotImagen gestiona recursos visuales. La candidata de esta rama consolida módulos de historias, lore, expedientes, arte y papelera, pero la integración global sigue en revisión y no debe declararse cerrada.
+- WordWaifu gestiona canon y planificación narrativa; BotImagen gestiona recursos visuales. Atlas, lore, expedientes, arte, papelera, Story Foundry, catálogo de poderes y catálogo mitológico quedaron reconciliados en `main` mediante PR #18. La cobertura factual y algunos gates manuales siguen parciales.
 
 ## GitHub y control de cambios
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada de esta misión: `work/story-completion-danmachi-audit-2026-10`. Las referencias a ramas de tareas anteriores en esta sección son contexto histórico, no la rama activa de esta auditoría.
-- `main`: el SHA indicado en la documentación histórica corresponde al commit inicial y está obsoleto; consultar el ref actual antes de cualquier integración. Esta misión no modifica `main`.
+- `main` se actualizó en esta misión: PR #18 está fusionada; el HEAD operativo se registra al inicio de este documento. No usar los SHA históricos de la sección antigua como estado actual.
 - La comparación de ramas fechada el 2026-10-10 que sigue en el historial es histórica; no acredita la relación actual entre esta candidata y `main`.
-- Las referencias a PR que aparecen en el historial de esta sección corresponden a una instantánea antigua y no deben usarse como estado actual sin volver a consultar GitHub. En esta misión no se ha creado, modificado, fusionado ni cerrado ningún PR.
+- La lista de PR que aparece en el historial de esta sección es una instantánea antigua. Estado vigente: [PR #18](https://github.com/jonhararagi/wordwaifu/pull/18) integrada en `main`.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
 - Workflow de validación configurado para pushes en `main` y `work/**`, PR hacia `main` y `workflow_dispatch`: [`4502475`](https://github.com/jonhararagi/wordwaifu/commit/4502475cdf9b536c0c5d6dbf51a83efc7408ae6d).
@@ -70,7 +72,7 @@
 - WF-004-C.3 permanece parcial hasta superar los gates pendientes.
 
 ## Protocolo de continuidad
-Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, CI y PR antes de escribir. Mantener una tarea activa por agente. No tocar `main`, fusionar ni abrir PR sin autorización.
+Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, CI y PR antes de escribir. Mantener una tarea activa por agente. Para nuevas integraciones, usar rama basada en `main`, CI verde en el SHA exacto y PR revisable; no usar force push ni borrar ramas.
 
 
 ## Actualización de continuidad — plan de cuota y Windows 11 (2026-10-10)
