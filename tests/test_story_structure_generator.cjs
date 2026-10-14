@@ -55,6 +55,17 @@ assert.equal(single.phases[0].key, "compressed");
 assert.equal(single.phases[0].start, 1);
 assert.equal(single.phases[0].end, 1);
 
+const villain = require("../src/story-structure-generator.js").generateCharacterSeed("villain", 0);
+assert.equal(villain.role, "Antagonista principal");
+assert.ok(villain.personality && villain.goal && villain.flaw && villain.trauma && villain.ability && villain.limit && villain.arc,
+  "character proposals must include personality, motivation, flaw, trauma, ability, limits, and an arc");
+const companion = require("../src/story-structure-generator.js").generateCharacterSeed("companion", 1);
+assert.equal(companion.archetype, "La ingeniera tranquila");
+const world = require("../src/story-structure-generator.js").generateWorldSeed("urban-supernatural", 0);
+assert.equal(world.type, "urban-supernatural");
+assert.ok(world.premise && world.rules && world.pressure && world.factions && world.hook,
+  "world proposals must include premise, rules, pressures, factions, and a story hook");
+
 const max = generateOutline({ chapterCount: 9999 });
 assert.equal(max.chapters.length, 500, "generation is capped to avoid accidental huge projects");
 
