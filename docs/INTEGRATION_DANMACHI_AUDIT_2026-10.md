@@ -50,3 +50,15 @@
 ## Límites de la auditoría
 
 No se afirma que todos los commits exclusivos de cada rama estén incorporados. El grafo de varias ramas está divergido y varias implementaciones presentan SHA distintos; por eso queda pendiente la comparación semántica archivo por archivo de sus deltas únicos. No se debe declarar integración total ni ausencia de cambios huérfanos hasta cerrar esa comparación y obtener CI verde en el commit final.
+
+## Revisión semántica focalizada posterior a la matriz inicial
+
+Fecha de revisión: 2026-10-14. Esta sección registra comparaciones concretas; no convierte la matriz en una afirmación de integración completa.
+
+- **Snapshots/papelera** (work/wf-004-c2-destructive-snapshots): src/project-repository.js fuente tiene 666 líneas y no contiene marcadores de tombstone; la candidata tiene 982 líneas y sí contiene rutas de tombstone, restauración y evaluación de borrado. Decisión: conservar la candidata; no copiar el archivo antiguo. Revisar pruebas exclusivas de la rama como delta histórico, no como reemplazo.
+- **Roster de personajes** (work/danmachi-cast-coverage-images-2026-10): el archivo fuente usa alias/nombres alternativos para Noin/Neoin, Neze/Neese, Asta, Ryana/Liana y Celty/Selty; no son cinco personajes nuevos. Sí se encontró una omisión real en la candidata: Eina Tulle no figuraba en src/official-character-roster.js, aunque el perfil oficial de DanMachi III la documenta. Se añadió una ficha limitada a especie y función verificadas, con nivel/epíteto sin afirmar y sin inventar una URL de imagen. La regresión correspondiente está en tests/test_official_character_roster.cjs.
+- **Explorador de Familias** (work/feature-connected-family-explorer-2026-10): src/lore-corpus.js de la candidata es más extenso (473 frente a 431 líneas) y contiene más referencias explícitas a Familia y búsqueda. No se reemplaza; siguen pendientes las diferencias funcionales específicas de commits exclusivos.
+- **Generador/editor** (work/story-foundry-generator-2026-10): src/app.js de la candidata es más extenso (3296 frente a 2887 líneas) y contiene más referencias a historias, generación, importación y exportación. No se copia la versión fuente antigua; faltan comparaciones de comportamiento para cambios únicos concretos.
+- **Catálogo de poderes** (work/connected-lore-power-catalog-2026-10): su src/project-schema.js contiene referencias a campos de poder ausentes del esquema actual, pero su rama no incluye el módulo integrado src/mythic-catalog.js. No se traslada el esquema en bloque; el delta requiere identificar qué campos tienen consumidores reales y qué validaciones son compatibles con el modelo actual.
+
+**Estado tras esta revisión:** una omisión de roster fue corregida con fuente oficial y prueba dedicada. La auditoría semántica de todas las ramas divergentes sigue abierta; no se declara integración total, no se realiza merge y no se modifica main.

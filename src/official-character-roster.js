@@ -1647,6 +1647,30 @@
     "evidenceType": "official_adaptation_profile",
     "continuity": "CONT-ANIME",
     "imageCredit": "Retrato enlazado desde el portal oficial de DanMachi IV; no almacenado en WordWaifu."
+  },
+  {
+    "id": "DM-CHAR-EINA",
+    "name": "Eina Tulle",
+    "aliases": ["Eina", "エイナ・チュール"],
+    "family": "Guild · asesora de aventureros",
+    "species": "Media elfa",
+    "level": null,
+    "epithet": "No indicado",
+    "voice": "Haruka Tomatsu",
+    "role": "Recepcionista y asesora del Gremio; orienta a Bell Cranel",
+    "summary": "El perfil oficial de la tercera temporada la identifica como medio elfa, recepcionista y asesora del Gremio, asignada a Bell y capaz de orientarlo sobre el Dungeon y la ciudad.",
+    "personality": "No establecida por el perfil oficial consultado.",
+    "abilities": "El perfil destaca sus conocimientos del Dungeon y de Orario como asesora; no le atribuye habilidades de combate.",
+    "relationships": "Es la asesora asignada a Bell Cranel; no se infieren vínculos personales adicionales.",
+    "source": "S3",
+    "image": null,
+    "locator": "Entrada エイナ・チュール; especie, función de asesora y relación profesional con Bell",
+    "sourcePage": "https://danmachi.com/danmachi3/character/index.html",
+    "sourceTitle": "DanMachi III · perfiles oficiales de personajes",
+    "sourceId": "DMR-006-SRC-004",
+    "evidenceType": "official_adaptation_profile",
+    "continuity": "CONT-ANIME",
+    "imageCredit": "Sin retrato enlazado en este registro; no se inventa una ruta de imagen."
   }
 ];
   const byId = Object.fromEntries(records.map(record => [record.id, record]));

@@ -2576,3 +2576,25 @@ Se añaden personajes de los perfiles oficiales de DanMachi IV y Sword Oratoria 
 - `verification_status`: source_checked
 - `spoiler_level`: none
 - `confidence_note`: Paráfrasis propia de un perfil oficial de adaptación. Para personajes con ficha escueta, los vacíos se conservan en lugar de inventar rasgos o relaciones.
+
+## DMR-006-SRC-004 · Perfil oficial de personajes de DanMachi III
+
+- URL: https://danmachi.com/danmachi3/character/index.html
+- Alcance: ficha de adaptación de エイナ・チュール (Eina Tulle); especie medio elfa, función como recepcionista/asesora del Gremio y apoyo informativo a Bell.
+- Límite: referencia oficial del anime, no prueba por sí sola todos los detalles de la novela ligera. No se asignan nivel, epíteto, habilidades de combate ni URL de retrato si la ficha consultada no los respalda.
+
+### DMR-006-CLM-161 · Eina Tulle · identity_and_role
+- aspect: identity_and_role
+- claim: El perfil oficial de la tercera temporada identifica a Eina Tulle como medio elfa, recepcionista y asesora del Gremio, asignada a orientar a Bell sobre el Dungeon y la ciudad.
+- character_id: DM-CHAR-EINA
+- era_or_interval: DanMachi III · estado descrito por la adaptación; fecha interna no fijada
+- continuity_scope: CONT-ANIME
+- source_id: DMR-006-SRC-004
+- source_title: DanMachi III · perfiles oficiales de personajes
+- source_type: ADAPTATION
+- source_locator: Entrada エイナ・チュール; especie y función de asesora
+- source_url: https://danmachi.com/danmachi3/character/index.html
+- evidence_type: explicit_character_profile
+- verification_status: source_checked
+- spoiler_level: none
+- confidence_note: Paráfrasis propia de un perfil oficial de adaptación. El registro deja nivel, epíteto y retrato sin afirmar cuando no están establecidos aquí.
