@@ -1397,10 +1397,21 @@
       const expected = Math.max(1, Math.min(500, Number(story.chapterCount) || chapters.length || 1));
       if (chapters.length !== expected) issues.push("El índice tiene " + chapters.length + " capítulos, pero el plan pide " + expected + ".");
       if (!chapters.length) issues.push("Todavía no existe un índice de capítulos.");
+      const seenSummaries = new Set();
       chapters.forEach((chapter, index) => {
         if (!String(chapter.title || "").trim()) issues.push("Capítulo " + (index + 1) + ": falta título.");
         if (!String(chapter.summary || "").trim()) issues.push("Capítulo " + (index + 1) + ": falta resumen.");
+        const summaryKey = String(chapter.summary || "").trim().toLocaleLowerCase("es");
+        if (summaryKey && seenSummaries.has(summaryKey)) issues.push("Capítulo " + (index + 1) + ": resumen duplicado.");
+        if (summaryKey) seenSummaries.add(summaryKey);
       });
+      const finalSummary = String(chapters[chapters.length - 1]?.summary || "");
+      if (chapters.length && story.endingType === "open" && !/pregunta central|ruta abierta|posibilidad/i.test(finalSummary)) {
+        issues.push("El último capítulo no respeta explícitamente el contrato de final abierto.");
+      }
+      if (chapters.length && story.endingType === "closed" && !/resolver el conflicto principal|resolución/i.test(finalSummary)) {
+        issues.push("El último capítulo no explicita la resolución del conflicto principal.");
+      }
       if (!String(story.premise || "").trim()) issues.push("Falta una premisa; el índice puede ser genérico.");
       if (!String(story.conflict || "").trim()) issues.push("Falta el conflicto central.");
       if (!String(story.castPlan || "").trim()) issues.push("Falta definir protagonistas/coprotagonistas y sus objetivos.");
