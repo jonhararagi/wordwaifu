@@ -1330,16 +1330,16 @@
       story.arcs = arcs;
       const oldChapters = story.chapters.slice();
       story.chapters = Array.from({ length: count }, (_, index) => {
-        const n = index + 1, position = count === 1 ? 1 : (index / (count - 1));
+        const n = index + 1, position = count === 1 ? 0 : (index / (count - 1));
         const phase = phases.find(item => position >= item.start && (position < item.end || item.end === 1)) || phases[phases.length - 1];
         const phaseChapters = Array.from({ length: count }, (_, j) => j + 1).filter(num => {
-          const pos = count === 1 ? 1 : ((num - 1) / (count - 1));
+          const pos = count === 1 ? 0 : ((num - 1) / (count - 1));
           return pos >= phase.start && (pos < phase.end || phase.end === 1);
         });
         const within = Math.max(0, phaseChapters.indexOf(n));
         const beat = phase.beats[within % phase.beats.length];
         const existing = oldChapters[index] || {};
-        const title = (phase.key + ": " + beat.charAt(0).toLocaleUpperCase("es") + beat.slice(1)).slice(0, 180);
+        const title = ("Capítulo " + n + " — " + phase.key + ": " + beat.charAt(0).toLocaleUpperCase("es") + beat.slice(1)).slice(0, 180);
         const context = [
           premise ? "Premisa a desarrollar: " + premise : "",
           conflict ? "Conflicto central: " + conflict : "",
