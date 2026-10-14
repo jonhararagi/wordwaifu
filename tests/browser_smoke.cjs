@@ -1765,8 +1765,10 @@ async function run() {
     await asteriaMarker.press("Enter");
     assert.equal(await page.locator("#details-panel h2").innerText(), "Asteria");
     await page.locator("#global-search").fill("Puerto Umbría");
+    await page.waitForFunction(() => document.querySelector("#details-panel h2")?.textContent === "Puerto Umbría");
     assert.equal(await page.locator("#details-panel h2").innerText(), "Puerto Umbría");
     await page.locator("#global-search").fill("Mira");
+    await page.waitForFunction(() => document.querySelector("#details-panel h2")?.textContent === "Mira Solenne");
     assert.equal(await page.locator("#details-panel h2").innerText(), "Mira Solenne");
     process.stdout.write("PASS controls: layer filtering, keyboard marker activation and global search work.\n");
 
