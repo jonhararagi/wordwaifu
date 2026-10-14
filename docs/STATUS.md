@@ -1,16 +1,17 @@
 # Estado de WordWaifu
 # Auditoría de candidata DanMachi — 2026-10-14
 
-- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- **Último SHA con ambos workflows confirmados:** `29dbe526f43afd72c1de2f06857d373d560674f7`.
-- [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38514547917) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38514547959) terminaron en éxito para ese SHA exacto.
-- Cambios de esta iteración: roster de adaptación ampliado a 59 registros con Eina Tulle y prueba de fuente oficial; catálogo estructurado de poderes integrado como panel independiente del catálogo mitológico; persistencia JSON, validación de referencias a personajes/historias y prueba de creación/guardado/recarga en Chromium.
-- Pruebas en verde en el SHA citado: sintaxis, catálogo mitológico, generador de poderes, esquema/importación, expedientes, roster oficial, catálogo DanMachi, expediente de Familia Hestia, smoke de navegador y validador estructural.
-- La candidata sigue abierta para integración total: quedan por comparar semánticamente deltas exclusivos de snapshots, arte, roster, explorador de Familias y editor/generador narrativo. Los módulos de franquicias adicionales y explorador de universos de la rama de poderes no se incorporaron sin auditoría independiente.
-- Episode Freya / Emperatriz: la confirmación primaria de la escena de aventureros de nivel 8/9 sigue pendiente. No elevar nombres, niveles ni cronología a canon verificado sin localizador primario.
-- Seguridad: no se realizó merge, no se modificó `main`, no se actualizaron otras ramas remotas y no se creó ni cerró un PR.
+- Rama de trabajo autorizada: `work/story-completion-danmachi-audit-2026-10`.
+- **Último SHA funcional con ambos workflows confirmados:** `bbc42acd7160dcd222cd439895201621bc3f662f`.
+- [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38515600587) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38515600602) pasaron en ese mismo SHA, incluyendo Chromium.
+- Cambios funcionales incluidos en esa validación: roster de 59 registros con Eina Tulle y fuente de adaptación; catálogo editable de poderes con persistencia JSON y referencias validadas; red de afiliación de Familia por continuidad; lectura combinada del panel de arte; marca anti-resurrección después del borrado permanente.
+- Regresiones verificadas en navegador: crear/guardar/recargar un poder; conservar recursos del respaldo local cuando IndexedDB sigue siendo legible; navegar de Bell a integrantes de Hestia Familia; rechazar guardados y activaciones de IDs borrados permanentemente.
+- **Integración total aún abierta:** faltan deltas semánticos de ramas divergentes de snapshots, roster, editor/generador de historias y corpus de Familias. No se incorporan en bloque los módulos de franquicias adicionales ni el explorador de universos de la rama de poderes.
+- Canon pendiente: la escena de aventureros de nivel 8/9 atribuida a Episode Freya / Emperatriz sigue sin localizador primario suficiente. No se promueven nombres, niveles ni cronología a canon confirmado.
+- Seguridad: no se realizó merge, no se modificó `main`, no se alteraron ramas remotas no autorizadas y no se creó ni cerró PR.
+- Esta sincronización actualiza únicamente documentación de estado y matriz; las ejecuciones de CI de su SHA documental se registran aparte y no se confunden con el SHA funcional anterior.
 
-**Veredicto:** validación general y específica de DanMachi aprobadas para `29dbe526...`; la integración completa no se declara terminada mientras queden deltas funcionales sin revisar.
+**Veredicto:** el SHA funcional `bbc42acd...` superó ambos workflows. La candidata sigue sin autorización para merge mientras queden diferencias funcionales necesarias sin revisar.
 ---
 
 

@@ -34,12 +34,11 @@
 ## Pruebas y regresiones
 
 - `tests/test_lore_corpus.cjs`: regresiones de búsqueda de Familias y abstención ante entidades que no son Familia.
-- `tests/test_official_character_roster.cjs`: 59 IDs únicos; Eina Tulle conserva nombre japonés, especie, procedencia oficial de DanMachi III y ausencia explícita de nivel/URL de imagen no verificados.
-- `tests/test_power_catalog.cjs`: variedad de familias, candidatos originales, modo sorpresa y no persistencia automática.
-- `tests/test_project_schema.cjs`: `powers[]` valida campos, IDs, referencias opcionales a personaje e historia, tipo booleano de irreversibilidad y round-trip JSON.
-- `tests/browser_smoke.cjs`: además de historias, papelera, arte, continuidad y catálogo mitológico, crea una ficha de poder, la guarda, recarga la página y comprueba su recuperación.
-- El conteo de catálogo mitológico se obtiene de `data/catalog/mythic-arsenal.json`; la prueba restablece filtros antes de comprobar el total, en lugar de fijar un número histórico.
-- En `29dbe526f43afd72c1de2f06857d373d560674f7`, [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38514547917) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38514547959) finalizaron ambos en `success`, incluyendo Chromium.
+- `tests/test_official_character_roster.cjs`: 59 IDs únicos; Eina Tulle conserva nombre japonés, procedencia oficial de DanMachi III y nivel/URL de retrato sin afirmar cuando no están respaldados.
+- `tests/test_power_catalog.cjs` y `tests/test_project_schema.cjs`: generación de candidatos originales; `powers[]` persiste y valida campos, IDs y referencias opcionales a personajes/historias.
+- `tests/browser_smoke.cjs`: creación/edición/importación de historias; papelera y snapshots; borrado permanente con marca anti-resurrección; lectura combinada del respaldo local del panel de arte; red de Familia; catálogo mitológico; crear/guardar/recargar una ficha de poder.
+- El conteo del catálogo mitológico se deriva de `data/catalog/mythic-arsenal.json`; la prueba restablece filtros antes de comprobar el total.
+- En el SHA funcional `bbc42acd7160dcd222cd439895201621bc3f662f`, [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38515600587) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38515600602) finalizaron ambos en `success` e incluyeron Chromium.
 ## Orden seguro de integración restante
 
 1. Mantener esta rama como candidata y conservar sus versiones actuales de `src/project-repository.js`, `src/app.js`, `src/art-studio.js`, `src/official-character-roster.js` y `src/lore-corpus.js` hasta comparar cada diff.
@@ -64,4 +63,4 @@ Fecha de revisión: 2026-10-14. Esta sección registra comparaciones concretas; 
 - **Generador/editor** (work/story-foundry-generator-2026-10): src/app.js de la candidata es más extenso (3296 frente a 2887 líneas) y contiene más referencias a historias, generación, importación y exportación. No se copia la versión fuente antigua; faltan comparaciones de comportamiento para cambios únicos concretos.
 - **Catálogo de poderes** (work/connected-lore-power-catalog-2026-10): se integraron selectivamente src/power-catalog.js y src/power-workbench.js como módulos separados del catálogo mitológico; se añadieron el panel navegable, campos estructurados, vínculos opcionales a personaje e historia, validación de powers[] y pruebas de persistencia en navegador. No se importaron los módulos de franquicias adicionales ni el explorador de universos de esa rama porque requieren auditoría independiente de sus datos y rutas.
 
-**Estado tras esta revisión:** la omisión de roster se corrigió con fuente oficial, el catálogo estructurado de poderes quedó integrado y ambos workflows pasaron en `29dbe526f43afd72c1de2f06857d373d560674f7`. La auditoría semántica de todas las ramas divergentes sigue abierta; no se declara integración total, no se realiza merge y no se modifica `main`.
+**Estado tras esta revisión:** la omisión de roster se corrigió con fuente oficial, el catálogo estructurado de poderes, la red de Familia, la lectura combinada de arte y la marca anti-resurrección quedaron integrados. Ambos workflows pasaron en el SHA funcional `bbc42acd7160dcd222cd439895201621bc3f662f`. La auditoría semántica de todas las ramas divergentes sigue abierta; no se declara integración total, no se realiza merge y no se modifica `main`.
