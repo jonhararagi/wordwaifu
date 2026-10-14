@@ -149,7 +149,7 @@ La biblioteca visual avanzada, el procesamiento de imágenes, los prompts de ilu
 
 ## 9. Generador de Historias y Lore
 
-El generador de historias es el propósito central de WordWaifu: convertir una idea en un plan de novela coherente y editable, conectado con el canon del proyecto. El primer núcleo local ya está integrado en el editor de Historias y novelas: permite elegir entre 1 y 500 capítulos, final abierto/cerrado y contexto de protagonistas, elenco, romance, traumas y resumen de referencia; genera un índice por fases con resumen para cada capítulo. Es un planificador por reglas, no un modelo de IA ni un redactor automático de manuscritos completos. Las propuestas deben revisarse y aprobarse por el autor.
+El generador de historias es el propósito central de WordWaifu: convertir una idea en un plan de novela coherente y editable, conectado con el canon del proyecto. El primer núcleo local ya está integrado en el editor de Historias y novelas: permite elegir entre 1 y 500 capítulos, final abierto/cerrado y contexto de protagonistas, elenco, romance, traumas y resumen de referencia; genera un índice por fases con resumen para cada capítulo. El mismo núcleo ofrece semillas editables de personajes y mundos, mientras que el generador de poderes ya existente cubre las propuestas de habilidades. Las semillas de personaje incluyen personalidad, objetivo, defecto, trauma, vínculos, capacidad, límite y arco; las de mundo incluyen premisa, reglas, presión social, facciones y gancho inicial. Es un planificador por reglas, no un modelo de IA ni un redactor automático de manuscritos completos. Las propuestas deben revisarse y aprobarse por el autor.
 
 ### Perfil de ADN narrativo
 Una obra de referencia puede desglosarse en categorías como:
