@@ -82,7 +82,7 @@
     const arcs = Array.isArray(story.arcs) ? story.arcs.map((arc) => clean(arc, "")).filter(Boolean) : String(story.arcs || "").split("\n").map((arc) => clean(arc, "")).filter(Boolean);
     const endingEvent = {
       closed: "El protagonista resuelve el conflicto central y la escena final muestra qué cambió, qué se perdió y qué responsabilidad queda.",
-      open: "El conflicto inmediato se resuelve, pero una consecuencia nueva y concreta abre una posibilidad futura sin interrumpir arbitrariamente la acción.",
+      open: "El conflicto inmediato se resuelve y el desenlace debe dejar una pregunta central mediante una consecuencia nueva y concreta que abre posibilidades futuras, sin interrumpir arbitrariamente la acción.",
       bittersweet: "El protagonista alcanza una resolución real, pero debe aceptar una pérdida irreversible que cambia el significado de la victoria.",
       cliffhanger: "El arco inmediato llega a una consecuencia decisiva y una revelación preparada cambia el tablero justo antes del cierre."
     }[ending];
@@ -109,7 +109,8 @@
         "El reparto coral tiene objetivos propios que afectan la escena: " + ensemble + ".",
         arcs.length ? "Arco que avanza en esta entrega: " + arcs[(n - 1) % arcs.length] + "." : ""
       ].filter(Boolean);
-      const summary = event[1] + " Premisa que guía esta entrega: " + premise + ". Conflicto que determina las consecuencias: " + conflict + ". " + beats[(n - 1) % beats.length] + " El capítulo termina con una consecuencia observable que obliga a cambiar el siguiente paso del elenco.";
+      const phaseNote = "Tramo narrativo: " + phase.key.toLocaleLowerCase("es") + (n === 1 ? " — presentar el mundo y la premisa mediante una situación concreta." : ".");
+      const summary = event[1] + " " + phaseNote + " Premisa que guía esta entrega: " + premise + ". Conflicto que determina las consecuencias: " + conflict + ". " + beats[(n - 1) % beats.length] + " El capítulo termina con una consecuencia observable que obliga a cambiar el siguiente paso del elenco.";
       return {
         id: prior.id || ("chapter-" + Date.now().toString(36) + "-" + n),
         title: (phase.key + " — " + event[0]).slice(0, 180),
