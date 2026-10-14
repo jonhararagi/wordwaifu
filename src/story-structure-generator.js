@@ -161,5 +161,57 @@
     };
   }
 
-  return { generateOutline, clampCount, PHASES };
+  const CHARACTER_SEEDS = {
+    protagonist: [
+      { role: "Protagonista", archetype: "La estratega que teme depender de otros", personality: "observadora, orgullosa, metódica y protectora", goal: "demostrar que puede resolver la crisis sin repetir el error de su mentor", flaw: "confunde pedir ayuda con perder el control", trauma: "una decisión pasada dejó a alguien atrás; no se cura de golpe", relationship: "choca con quien improvisa, pero escucha a quien demuestra criterio", ability: "detecta patrones y prepara planes alternativos", limit: "se bloquea cuando faltan datos y su plan exige confiar", arc: "pasa de controlarlo todo a delegar con responsabilidad" },
+      { role: "Protagonista", archetype: "El optimista que no sabe rendirse", personality: "cálido, impulsivo, curioso y competitivo", goal: "proteger a su comunidad y probar que su origen no determina su futuro", flaw: "promete más de lo que puede sostener", trauma: "teme volver a ser abandonado y oculta el miedo tras humor", relationship: "inspira lealtad, pero agota a quienes deben reparar sus impulsos", ability: "aprende rápido bajo presión", limit: "mejorar no elimina la falta de experiencia ni el coste físico", arc: "aprende que perseverar también significa cambiar de estrategia" }
+    ],
+    companion: [
+      { role: "Compañero", archetype: "La piloto hiperactiva", personality: "valiente, bromista, impulsiva y apasionada por las máquinas", goal: "crear una máquina capaz de salvar una ruta imposible", flaw: "arriesga demasiado para demostrar que no es reemplazable", trauma: "sobrevivió a un accidente del que otros la culpan", relationship: "alivia la tensión del grupo y discute con la persona más cauta", ability: "improvisa reparaciones y maniobras en segundos", limit: "sus arreglos temporales fallan si el equipo ignora el mantenimiento", arc: "deja de confundir valor con ponerse siempre en peligro" },
+      { role: "Compañero", archetype: "La ingeniera tranquila", personality: "curiosa, paciente, directa y de mente abierta", goal: "comprender las reglas reales del sistema de poderes", flaw: "analiza tanto que retrasa decisiones urgentes", trauma: "un descubrimiento anterior dañó la confianza de su familia", relationship: "hace preguntas incómodas y puede ser la única que detecta la mentira", ability: "convierte observaciones pequeñas en soluciones prácticas", limit: "necesita tiempo, herramientas y cooperación para probar hipótesis", arc: "aprende a actuar con incertidumbre sin abandonar el rigor" }
+    ],
+    coprotagonist: [
+      { role: "Coprotagonista", archetype: "La guardiana que tiene su propia misión", personality: "disciplinada, reservada, leal y obstinada", goal: "reformar la institución que protege a su ciudad", flaw: "obedece procedimientos incluso cuando perjudican a inocentes", trauma: "perdió a su unidad por una orden que nunca cuestionó", relationship: "es aliada del protagonista, no su subordinada; puede negarse a seguirlo", ability: "coordina equipos y lee el terreno", limit: "no puede proteger a todos ni controlar decisiones ajenas", arc: "aprende a asumir responsabilidad moral además de obedecer reglas" }
+    ],
+    rival: [
+      { role: "Rival", archetype: "El prodigio que necesita tener razón", personality: "brillante, orgulloso, disciplinado y mordaz", goal: "probar que su método es superior y evitar que su familia pierda influencia", flaw: "interpreta toda ayuda como una deuda o humillación", trauma: "solo recibió afecto cuando ganaba", relationship: "obliga al protagonista a mejorar y a veces detecta peligros antes que sus aliados", ability: "ejecución técnica impecable", limit: "se adapta mal a situaciones que no puede dominar", arc: "distingue competencia de valor personal" }
+    ],
+    villain: [
+      { role: "Antagonista principal", archetype: "El reformador que acepta sacrificios ajenos", personality: "sereno, persuasivo, paciente y paternalista", goal: "imponer una paz estable eliminando las decisiones que considera peligrosas", flaw: "cree que conocer el objetivo le da derecho a decidir por todos", trauma: "vivió una catástrofe causada por decisiones libres y teme repetirla", relationship: "puede apreciar sinceramente al protagonista y aun así oponerse a su libertad", ability: "controla información, incentivos y alianzas", limit: "sus planes dependen de que la gente siga aceptando el sistema", arc: "se enfrenta a las víctimas concretas de la seguridad que promete" },
+      { role: "Villana recurrente", archetype: "La superviviente que cobra todas las deudas", personality: "ingeniosa, desconfiada, encantadora y vengativa", goal: "recuperar a su gente y destruir el pacto que los convirtió en moneda de cambio", flaw: "castiga también a quienes podrían ayudarla", trauma: "fue traicionada por una alianza que parecía justa", relationship: "coopera por interés, nunca por obediencia automática", ability: "negociación, engaño y redes de favores", limit: "cada favor genera enemigos y no puede comprar confianza real", arc: "decide si romper el ciclo exige renunciar a una venganza" }
+    ],
+    "romantic-interest": [
+      { role: "Interés amoroso", archetype: "La persona que no idealiza al protagonista", personality: "afectuosa, sarcástica, independiente y perceptiva", goal: "construir una vida que no dependa de salvar o ser salvada", flaw: "se distancia cuando teme perder autonomía", trauma: "una relación anterior convirtió el cariño en control", relationship: "apoya al protagonista, pero establece límites y puede rechazar sus decisiones", ability: "reconoce cambios emocionales y dice verdades difíciles", limit: "no puede reparar el trauma de otra persona por amor", arc: "aprende a pedir cercanía sin renunciar a su independencia" }
+    ],
+    mentor: [
+      { role: "Mentor", archetype: "La veterana que enseña también con sus errores", personality: "práctica, irónica, reservada y generosa", goal: "preparar a la siguiente generación para un peligro que ella no pudo detener", flaw: "oculta información para proteger a sus alumnos", trauma: "su antigua victoria tuvo un coste que nunca explicó", relationship: "guía al protagonista pero puede equivocarse y rendir cuentas", ability: "experiencia, contactos y lectura de riesgos", limit: "sus métodos pertenecen a otra época y no resuelven el nuevo conflicto", arc: "pasa de proteger mediante secretos a confiar conocimiento" }
+    ],
+    wildcard: [
+      { role: "Personaje comodín", archetype: "El testigo que cambia de bando por principios", personality: "observador, ambiguo, paciente y mordaz", goal: "exponer una verdad aunque pierda su lugar seguro", flaw: "espera demasiado antes de comprometerse", trauma: "vio cómo una versión oficial destruyó la vida de un inocente", relationship: "puede ayudar al grupo o frustrarlo si manipula los hechos", ability: "conecta testimonios y encuentra contradicciones", limit: "no tiene fuerza ni autoridad suficientes para imponer la verdad", arc: "pasa de observar el daño a asumir el riesgo de intervenir" }
+    ]
+  };
+
+  const WORLD_SEEDS = [
+    { type: "fantasy-adventure", title: "Fantasía de rutas vivas", premise: "Las rutas cambian según los pactos entre ciudades y criaturas antiguas.", rules: "La magia exige un intercambio verificable; romper un pacto altera el territorio.", pressure: "Los comerciantes, viajeros y familias dependen de caminos que pueden desaparecer.", factions: "cartógrafos, custodios de pactos y contrabandistas de rutas", hook: "Un mapa muestra una ciudad que todos recuerdan pero que ya no existe." },
+    { type: "active-apocalypse-military-sf", title: "Apocalipsis en expansión", premise: "La humanidad sobrevive tras defensas móviles mientras el territorio seguro disminuye.", rules: "Cada salida consume combustible, suministros y capacidad de reparación; no hay recursos infinitos.", pressure: "Las decisiones militares protegen unas zonas a costa de exponer otras.", factions: "mando central, equipos de exploración y comunidades evacuadas", hook: "Una señal llega desde una zona declarada perdida y usa el código de una unidad desaparecida." },
+    { type: "urban-supernatural", title: "Sobrenatural urbano de contratos", premise: "Los fenómenos sobrenaturales se ocultan dentro de servicios cotidianos y acuerdos legales.", rules: "Todo pacto concede una ventaja concreta y cobra un precio proporcional pero no siempre inmediato.", pressure: "La ciudad mantiene su normalidad mientras las deudas sobrenaturales se acumulan.", factions: "mediadores, deudores, entidades y funcionarios que niegan el fenómeno", hook: "Un contrato firmado por alguien fallecido empieza a cobrarse a sus herederos." },
+    { type: "cyberpunk-dystopia", title: "Distopía de identidades alquiladas", premise: "La ciudadanía depende de una identidad digital que puede alquilarse, editarse o revocarse.", rules: "Cada modificación deja un rastro auditable y una deuda; borrar un registro nunca borra sus consecuencias sociales.", pressure: "Quienes pierden su identidad no pueden acceder a vivienda, salud ni transporte.", factions: "consorcios, cooperativas de identidad y auditores clandestinos", hook: "Una persona sin identidad aparece registrada como propietaria de la infraestructura central." },
+    { type: "mecha-war", title: "Guerra de máquinas vinculadas", premise: "Las máquinas de combate responden a equipos humanos que comparten una interfaz sensorial.", rules: "El rendimiento depende de la coordinación y el desgaste psicológico; sincronizarse no elimina el trauma.", pressure: "Cada victoria militar deja secuelas físicas, políticas y civiles.", factions: "escuadrones, fabricantes, mandos y movimientos antibélicos", hook: "Una máquina responde a una señal de una piloto que nunca fue reclutada." },
+    { type: "slice-of-life-comedy", title: "Comedia de convivencia insular", premise: "Un grupo de desconocidos debe sostener una comunidad aislada con recursos limitados.", rules: "Cada mejora exige trabajo compartido y toda decisión afecta a la convivencia.", pressure: "Pequeñas disputas por comida, tareas y privacidad revelan valores incompatibles.", factions: "comité vecinal, inventores, comerciantes y quienes quieren marcharse", hook: "El único barco disponible vuelve con una lista de pasajeros que nadie recuerda." }
+  ];
+
+  function generateCharacterSeed(role, variant) {
+    const key = CHARACTER_SEEDS[role] ? role : "wildcard";
+    const options = CHARACTER_SEEDS[key];
+    const seed = options[Math.abs(Number(variant) || 0) % options.length];
+    return { ...seed, roleKey: key, isProposal: true };
+  }
+
+  function generateWorldSeed(worldType, variant) {
+    const filtered = worldType && worldType !== "any" ? WORLD_SEEDS.filter(item => item.type === worldType) : WORLD_SEEDS;
+    const options = filtered.length ? filtered : WORLD_SEEDS;
+    return { ...options[Math.abs(Number(variant) || 0) % options.length], isProposal: true };
+  }
+
+  return { generateOutline, clampCount, PHASES, generateCharacterSeed, generateWorldSeed };
 });
