@@ -1290,7 +1290,16 @@
       const premise = String(form.get("storyPremise") || "").trim();
       const conflict = String(form.get("storyConflict") || "").trim();
       const world = String(form.get("storyWorldRules") || "").trim();
+      const worldDynamics = String(form.get("storyWorldDynamics") || "").trim();
+      const worldType = String(form.get("storyWorldType") || "unspecified");
+      const revealType = String(form.get("storyRevealType") || "none");
+      const revealSecret = String(form.get("storyRevealSecret") || "").trim();
+      const revealClues = String(form.get("storyRevealClues") || "").trim();
+      const revealTiming = String(form.get("storyRevealTiming") || "").trim();
+      const revealConsequences = String(form.get("storyRevealConsequences") || "").trim();
       const powers = String(form.get("storyPowerCatalog") || "").trim();
+      const pantheon = String(form.get("storyPantheon") || "").trim();
+      const ensemble = String(form.get("storyEnsemble") || "").trim();
       const arcs = String(form.get("storyArcs") || "").split("\n").map(line => line.trim()).filter(Boolean);
       const phases = [
         { key: "Presentación", start: 0, end: 0.12, purpose: "presentar el mundo, la rutina, los personajes, sus deseos y la primera anomalía", beats: ["mostrar una rutina concreta antes de alterarla", "presentar una relación mediante una acción, no solo descripción", "hacer visible una regla del mundo y su coste", "plantear una decisión pequeña con consecuencias", "introducir el incidente que vuelve imposible seguir igual"] },
@@ -1312,8 +1321,12 @@
       story.castPlan = cast; story.personalityPlan = personality; story.antagonistPlan = antagonist; story.romancePlan = romance; story.traumaPlan = trauma;
       story.name = String(form.get("storyName") || story.name).trim();
       story.description = String(form.get("storyDescription") || "").trim();
+      story.status = String(form.get("storyStatus") || story.status || "outline");
       story.premise = premise; story.conflict = conflict;
-      story.worldRules = world; story.powerCatalog = powers;
+      story.worldType = worldType; story.worldRules = world; story.worldDynamics = worldDynamics;
+      story.revealType = revealType; story.revealSecret = revealSecret; story.revealClues = revealClues;
+      story.revealTiming = revealTiming; story.revealConsequences = revealConsequences;
+      story.powerCatalog = powers; story.pantheon = pantheon; story.ensemble = ensemble;
       story.arcs = arcs;
       const oldChapters = story.chapters.slice();
       story.chapters = Array.from({ length: count }, (_, index) => {
@@ -1336,14 +1349,38 @@
           romance ? "Vínculo afectivo: " + romance.slice(0, 200) : "",
           trauma ? "Heridas y recuperación: " + trauma.slice(0, 200) : "",
           world ? "Reglas del mundo que deben respetarse: " + world.slice(0, 240) : "",
-          powers ? "Poderes y costes registrados: " + powers.slice(0, 240) : "",
+          worldDynamics ? "Presión y cambios del mundo: " + worldDynamics.slice(0, 220) : "",
+          powers ? "Poderes, límites y costes: " + powers.slice(0, 240) : "",
+          revealType !== "none" ? "Motor de revelación: " + revealType + (revealSecret ? "; verdad oculta: " + revealSecret.slice(0, 180) : "") + (revealClues ? "; pistas: " + revealClues.slice(0, 160) : "") + (revealTiming ? "; momento previsto: " + revealTiming.slice(0, 120) : "") + (revealConsequences ? "; consecuencias: " + revealConsequences.slice(0, 160) : "") : "",
+          pantheon ? "Panteón y fuerzas míticas: " + pantheon.slice(0, 180) : "",
+          ensemble ? "Reparto coral y arcos individuales: " + ensemble.slice(0, 200) : "",
           arcs.length ? "Arcos que deben avanzar: " + arcs.join("; ").slice(0, 300) : ""
         ].filter(Boolean);
-        const endingNote = n === count ? " " + endingLine : "";
-        const summary = "Función del tramo: " + phase.purpose + ". En este capítulo: " + beat + ". La escena debe mostrar quién toma la decisión, qué intenta conseguir, qué obstáculo concreto aparece, qué precio paga y qué cambia al final. " +
-          (context.length ? context.join(" ") + " " : "Concretá aquí la acción específica, la localización, el personaje focal y la consecuencia causal; evitá resolverlo con una coincidencia.") +
-          (n === 1 ? " Establecé una imagen o situación inicial que pueda contrastar con el desenlace." : "") +
-          (n === count ? endingNote : " Cerrá con una consecuencia, una pregunta o una nueva complicación que empuje al capítulo siguiente.");
+        const progress = Math.round(position * 100);
+        const milestone = position < 0.12
+          ? "sembrar una pregunta dramática y una necesidad del protagonista"
+          : position < 0.35
+            ? "convertir el primer aprendizaje en una mejora visible con una limitación nueva"
+            : position < 0.55
+              ? "cambiar la interpretación del conflicto y elevar el precio de continuar"
+              : position < 0.76
+                ? "hacer que el éxito aparente revele el punto ciego y active una pérdida causal"
+                : position < 0.92
+                  ? "aplicar lo aprendido en una decisión irreversible que exige cooperación"
+                  : "mostrar la consecuencia concreta de la decisión final y el nuevo equilibrio";
+        const focus = [
+          "objetivo inmediato y obstáculo verificable",
+          "elección del protagonista y desacuerdo de un aliado",
+          "regla del mundo puesta a prueba bajo presión",
+          "coste o límite de una habilidad que obliga a improvisar",
+          "consecuencia que modifica una relación o una alianza",
+          "pista que adquiere un significado nuevo"
+        ][(n - 1) % 6];
+        const chapterArc = "Hito del capítulo " + n + "/" + count + " (" + progress + "%): " + milestone + ". Foco concreto: " + focus + ".";
+        const summary = "Función del tramo: " + phase.purpose + ". En este capítulo: " + beat + ". " + chapterArc + " La escena debe identificar quién actúa, qué quiere conseguir, qué obstáculo concreto aparece, qué precio paga y qué cambia al final. " +
+          (context.length ? context.join(" ") + " " : "Definí una acción específica, localización, personaje focal y consecuencia causal; evitá resolver el conflicto con una coincidencia.") +
+          (n === 1 ? " Establecé una imagen inicial, una promesa narrativa y una pregunta que pueda contrastar con el desenlace." : "") +
+          (n === count ? " " + endingLine : " Cerrá con una consecuencia o una nueva complicación causal que empuje al capítulo siguiente.");
         return { id: existing.id || ("chapter-" + Date.now().toString(36) + "-" + n), title, summary: summary.slice(0, 4000), content: existing.content || "", status: existing.status || "outline" };
       });
       const saved = await saveProject();
