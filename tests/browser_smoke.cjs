@@ -229,6 +229,25 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyPantheon']").inputValue(), "La diosa quiere recuperar su libertad y protege a una amiga por una deuda antigua.");
     assert.equal(await page.locator("#story-meta-form [name='storyEnsemble']").inputValue(), "Piloto: miedo al fracaso | rivalidad con el equipo | aprende a confiar.");
     process.stdout.write("PASS reveal framework: Markdown import preserves world rules, clues, reveal timing and consequences.\\n");
+    // Full-story planner: requested chapter count, ending contract, cast/antagonist fields and six-phase index persist.
+    await page.locator("#story-meta-form [name='storyChapterCount']").fill("12");
+    await page.locator("#story-meta-form [name='storyEndingType']").selectOption("open");
+    await page.locator("#story-meta-form [name='storyCastPlan']").fill("Mara quiere salvar el barrio; Ivo, coprotagonista, busca exponer a la corporación.");
+    await page.locator("#story-meta-form [name='storyAntagonistPlan']").fill("La directora quiere mantener el orden a cualquier precio y controla el suministro de energía.");
+    await page.locator("#story-meta-form [name='storyRomancePlan']").fill("Mara e Ivo aprenden a confiar pese a sus métodos opuestos.");
+    await page.locator("#story-meta-form [name='storyTraumaPlan']").fill("Mara evita pedir ayuda tras una pérdida; el arco debe mostrar apoyo y recaídas.");
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-generate-outline-button").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 12, { timeout: 10000 });
+    assert.equal(await page.locator("#story-meta-form [name='storyChapterCount']").inputValue(), "12");
+    assert.equal(await page.locator("#story-meta-form [name='storyEndingType']").inputValue(), "open");
+    assert.equal(await page.locator("#story-meta-form [name='storyCastPlan']").inputValue(), "Mara quiere salvar el barrio; Ivo, coprotagonista, busca exponer a la corporación.");
+    assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("presentar el mundo"), "opening chapters should introduce the world and premise");
+    assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).includes("falsa seguridad") || (await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).includes("victoria"), "middle-late chapters should include the false-security/decline phase");
+    assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").last().inputValue()).includes("dejar una pregunta central"), "open ending should deliberately leave a question while closing the immediate arc");
+    await page.locator("#story-audit-outline-button").click();
+    assert.ok((await page.locator("#story-outline-status").textContent()).includes("Auditoría:"), "outline audit should report missing or incomplete narrative metadata");
+    process.stdout.write("PASS story outline planner: chapter count, six-phase structure, cast, antagonist, romance, trauma, ending type and audit.\\n");
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
