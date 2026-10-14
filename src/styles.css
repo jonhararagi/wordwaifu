@@ -356,6 +356,19 @@ select{background:#332d26;color:#e9dfd2}
 @media(max-width:600px){.story-file-actions{justify-content:flex-start;margin-top:12px}}
 
 
+/* Story Foundry: full-novel outline planner. */
+.story-outline-planner{
+  margin:1.25rem 0;
+  padding:1rem;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--panel);
+}
+.story-outline-planner h3{margin:0 0 .45rem}
+.story-outline-planner .location-actions{display:flex;gap:.65rem;flex-wrap:wrap;margin:.85rem 0}
+.story-outline-planner #story-outline-status{margin:.5rem 0 0;line-height:1.6}
+.story-outline-planner input[type=number]{max-width:100%;box-sizing:border-box}
+
 /* Story Foundry: compact controls for the local power-idea generator. */
 .power-generator-panel {
   margin: 1.25rem 0;
