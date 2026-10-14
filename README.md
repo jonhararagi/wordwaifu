@@ -10,6 +10,10 @@ WordWaifu reúne en un único objetivo herramientas que normalmente quedan separ
 
 La especificación consolidada de producto, la separación entre WordWaifu y BotImagen, el atlas multitemporal, el índice maestro, la generación narrativa y el protocolo Cerebro/Obrero están en [docs/MASTER_VISION.md](docs/MASTER_VISION.md). Ese documento distingue las decisiones de producto de las funciones que aún están pendientes de implementación.
 
+## Generador narrativo: propósito central
+
+WordWaifu existe para transformar una idea en un mundo consistente y ese mundo en una historia planificada: personajes, coprotagonistas, villanos, vínculos, poderes con límites, traumas opcionales, arcos de evolución, índices y capítulos. El contrato de producto y la estructura de arcos adaptativa están en [Story Foundry](docs/STORY_FOUNDRY_SPEC.md). La especificación distingue el plan narrativo de la generación de prosa completa y define cómo usar resúmenes de wikis como referencias sin confundir canon, fanon y propuestas.
+
 ## Escritura y vocabulario
 
 El editor incluye un [buscador local de sinónimos y antónimos](docs/WORD_CHOICES.md) para explorar alternativas y reemplazar texto seleccionado sin enviar el manuscrito a una API. El vocabulario disponible es inicial y contextual, no un tesauro exhaustivo.
