@@ -2868,7 +2868,7 @@ async function run() {
     assert.ok(persistedEditEvidence.assetPrompt?.includes("revisada") && persistedEditEvidence.indexedPrompt?.includes("revisada"),
       "Editing an IndexedDB assignment must update its saved prompt and survive a full page reload.");
     // Seed a stale fallback copy, then force its cleanup to fail after IndexedDB deletion.
-    // The durable IndexedDB tombstone must prevent this stale copy reappearing after reload.
+    // The persisted localStorage tombstone must prevent this stale copy reappearing after reload.
     await page.evaluate(async () => {
       const key = "background:bg-orario-night";
       const asset = await window.WordWaifuArtStudio.getAsset("background", "bg-orario-night");
@@ -2891,12 +2891,20 @@ async function run() {
       const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
       return Boolean(fallback["background:bg-orario-night"]?.prompt?.includes("revisada"));
     }), "The failure simulation must leave the stale fallback copy in place.");
+    assert.ok(await page.evaluate(() => {
+      const tombstones = JSON.parse(localStorage.getItem("wordwaifu.art.deleted.v1") || "[]");
+      return tombstones.includes("background:bg-orario-night");
+    }), "Deletion must persist a tombstone before relying on fallback cleanup.");
 
     await page.reload({ waitUntil: "networkidle" });
     await page.locator('.nav-item[data-view="art"]').click();
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "1", null, { timeout: 5000 });
     assert.equal(await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night")), null,
       "A stale localStorage copy must not resurrect an IndexedDB-deleted assignment after reload.");
+    assert.ok(await page.evaluate(() => {
+      const tombstones = JSON.parse(localStorage.getItem("wordwaifu.art.deleted.v1") || "[]");
+      return tombstones.includes("background:bg-orario-night");
+    }), "The deletion tombstone must survive the full page reload.");
     // Keep this regression isolated from the following mock-storage scenario.
     await page.evaluate(() => {
       const fallback = JSON.parse(localStorage.getItem("wordwaifu.art.assignments.v1") || "{}");
