@@ -8,13 +8,13 @@
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
   const text = (value, fallback) => String(value == null ? "" : value).trim() || fallback;
   const phases = [
-    { key: "opening", name: "Presentación y promesa", start: 0, end: 0.12 },
-    { key: "setup", name: "Mundo, elenco y problema", start: 0.12, end: 0.34 },
-    { key: "progress", name: "Progreso, vínculos y primeras victorias", start: 0.34, end: 0.57 },
-    { key: "false-security", name: "Falsa seguridad y caída", start: 0.57, end: 0.72 },
-    { key: "response", name: "Consecuencias y nueva estrategia", start: 0.72, end: 0.84 },
-    { key: "climax", name: "Clímax y decisión irreversible", start: 0.84, end: 0.96 },
-    { key: "ending", name: "Desenlace y consecuencias", start: 0.96, end: 1.001 }
+    { key: "opening", name: "Presentación y promesa", start: 0, end: 0.10 },
+    { key: "setup", name: "Mundo, elenco y problema", start: 0.10, end: 0.34 },
+    { key: "progress", name: "Progreso, vínculos y primeras victorias", start: 0.34, end: 0.74 },
+    { key: "false-security", name: "Falsa seguridad y caída", start: 0.74, end: 0.84 },
+    { key: "response", name: "Consecuencias y nueva estrategia", start: 0.84, end: 0.91 },
+    { key: "climax", name: "Clímax y decisión irreversible", start: 0.91, end: 0.98 },
+    { key: "ending", name: "Desenlace y consecuencias", start: 0.98, end: 1.001 }
   ];
   function phaseFor(index, count) {
     const progress = count <= 1 ? 1 : index / (count - 1);
