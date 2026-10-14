@@ -1549,6 +1549,15 @@
         "## Premisa\n\n" + (story.premise || "Premisa pendiente.") + "\n\n" +
         "## Conflicto central\n\n" + (story.conflict || "Conflicto pendiente.") + "\n\n" +
         "## Tipo de mundo\n\n" + (story.worldType || "unspecified") + "\n\n" +
+        "## Cantidad de capítulos planificados\n\n" + (story.chapterCount || story.chapters.length || 30) + "\n\n" +
+        "## Tipo de desenlace\n\n" + (story.endingType || "closed") + "\n\n" +
+        "## Perfil del protagonista\n\n" + (story.protagonistProfile || "") + "\n\n" +
+        "## Personalidad y defectos\n\n" + (story.personalityDesign || "") + "\n\n" +
+        "## Compañeros y coprotagonistas\n\n" + (story.companionProfiles || "") + "\n\n" +
+        "## Antagonista\n\n" + (story.antagonistProfile || "") + "\n\n" +
+        "## Trauma y recuperación\n\n" + (story.traumaArc || "") + "\n\n" +
+        "## Arco romántico\n\n" + (story.romanceArc || "") + "\n\n" +
+        "## Límites de poderes\n\n" + (story.powerRules || "") + "\n\n" +
         "## Reglas del mundo\n\n" + (story.worldRules || "") + "\n\n" +
         "## Dinámica del mundo\n\n" + (story.worldDynamics || "") + "\n\n" +
         "## Motor de revelación\n\n" + (story.revealType || "none") + "\n\n" +
