@@ -2957,7 +2957,10 @@ async function run() {
 
     // Story Foundry: generate an editable 30-chapter index, keep an existing manuscript, and select an open ending.
     await page.locator('.nav-item[data-view="stories"]').click();
-    await page.locator("#story-meta-form").waitFor({ state: "visible" });
+    if (!(await page.locator("#story-meta-form").isVisible().catch(() => false))) {
+      await page.locator("#story-create-button").click();
+      await page.locator("#story-meta-form").waitFor({ state: "visible", timeout: 10000 });
+    }
     await page.locator("#story-outline-count").fill("30");
     await page.locator("#story-outline-ending").selectOption("open");
     await page.locator("#story-outline-protagonist").fill("Mira, una cartógrafa que teme depender del equipo");
@@ -2966,7 +2969,7 @@ async function run() {
     await page.locator("#story-outline-trauma").fill("La pérdida pasada le dificulta pedir ayuda");
     await page.locator("#story-outline-reference").fill("Resumen de referencia estilo wiki: el mundo se conecta por rutas vivas.");
     const originalChapterContent = await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue().catch(() => "");
-    page.once("dialog", dialog => dialog.accept());
+    if (originalChapterContent) page.once("dialog", dialog => dialog.accept());
     await page.locator("#story-outline-generate-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length >= 30, null, { timeout: 10000 });
     assert.equal(await page.locator(".story-chapter-form").count(), originalChapterContent ? 31 : 30,
