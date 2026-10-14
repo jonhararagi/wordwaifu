@@ -335,6 +335,24 @@ select{background:#332d26;color:#e9dfd2}
 @media(max-width:600px){.art-studio-header{flex-direction:column}.art-studio-stat{width:100%;display:flex;align-items:center;justify-content:center;gap:10px}.art-studio-stat strong{font-size:22px}.art-two-fields,.art-prompt-options{grid-template-columns:1fr}.art-editor-card,.art-library-card{padding:14px}.art-assignment-card{grid-template-columns:68px minmax(0,1fr)}.art-assignment-thumb{height:92px}}
 
 
+
+/* Story Foundry: long-form story and chapter-index generator. */
+.story-outline-generator{display:grid;gap:1rem;margin:1.1rem 0 1.4rem;padding:1.1rem;border:1px solid var(--line);border-radius:14px;background:rgba(148,163,184,.045)}
+.story-outline-generator h3{margin:.1rem 0 .4rem}
+.story-outline-generator p{margin:.25rem 0;line-height:1.55}
+.story-outline-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.story-outline-controls label{display:flex;flex-direction:column;gap:.4rem;color:var(--muted);font-size:12px}
+.story-outline-controls input,.story-outline-controls select,.story-outline-controls textarea{width:100%;min-width:0;box-sizing:border-box;background:#111b22;color:#e7edf0;border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit}
+.story-outline-controls .story-outline-reference{grid-column:1/-1}
+.story-outline-actions{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.story-outline-actions .field-help{flex:1 1 260px}
+.story-outline-phases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}
+.story-outline-phase{padding:.8rem;border:1px solid var(--line);border-radius:10px;background:rgba(148,163,184,.04)}
+.story-outline-phase strong,.story-outline-phase span{display:block}
+.story-outline-phase span{margin:.25rem 0;color:var(--teal);font-size:.8rem;font-weight:700}
+.story-outline-phase p{font-size:.86rem;color:var(--muted)}
+@media(max-width:700px){.story-outline-controls,.story-outline-phases{grid-template-columns:1fr}.story-outline-controls .story-outline-reference{grid-column:auto}.story-outline-generator{padding:.8rem}}
+
 /* Story Foundry editor */
 .story-editor{margin:18px 0;padding:20px}
 .story-editor-title,.story-chapter-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
