@@ -42,6 +42,10 @@ for (const role of ["protagonist", "companion", "antagonist", "romantic-interest
   assert.equal(character.role, role);
   assert.ok(character.name && character.profile && character.personality);
   assert.ok(character.ability && character.limitation && character.arc && character.narrativeFunction);
+  assert.ok(character.age && character.species && character.appearance && character.voice);
+  assert.ok(character.secret && character.signatureItem);
+  assert.match(character.summary, /Apariencia y presencia/);
+  assert.match(character.summary, /Secreto/);
   assert.match(character.summary, /Deseo y necesidad/);
   assert.match(character.summary, /Límite\/coste/);
 }
