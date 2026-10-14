@@ -230,6 +230,14 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyEnsemble']").inputValue(), "Piloto: miedo al fracaso | rivalidad con el equipo | aprende a confiar.");
     process.stdout.write("PASS reveal framework: Markdown import preserves world rules, clues, reveal timing and consequences.\\n");
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
+    // Story Foundry concept generation populates an editable premise, world, cast, trauma, romance and power rules.
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-generate-concept-button").click();
+    await page.waitForFunction(() => (document.querySelector("#story-foundry-status")?.textContent || "").includes("Concept"), { timeout: 10000 });
+    assert.ok((await page.locator("#story-meta-form [name='storyPremise']").inputValue()).length > 40);
+    assert.ok((await page.locator("#story-meta-form [name='storyProtagonistProfile']").inputValue()).length > 40);
+    assert.ok((await page.locator("#story-meta-form [name='storyAntagonistProfile']").inputValue()).length > 40);
+    assert.ok((await page.locator("#story-meta-form [name='storyPowerRules']").inputValue()).includes("coste") || (await page.locator("#story-meta-form [name='storyPowerRules']").inputValue()).includes("recuerdo"));
     // Story Foundry end-to-end: generate a 30-chapter arc plan, then regenerate as a 12-chapter open ending.
     await page.locator("#story-meta-form [name='storyChapterCount']").fill("30");
     await page.locator("#story-meta-form [name='storyEndingType']").selectOption("closed");
