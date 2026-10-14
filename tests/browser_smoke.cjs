@@ -732,7 +732,33 @@ async function run() {
       repository.read = originalReadForProject;
       const getProjectBlockedOnUnreadableTrash = getProjectWhenTrashUnreadable === null;
       const permanentDelete = await repository.permanentlyDeleteTrashedProject(projectC.project.id);
-      const permanentlyGone = !(await repository.read("trash", projectC.project.id));
+      const permanentMarker = await repository.read("trash", projectC.project.id);
+      const permanentMarkerRetained = Boolean(permanentMarker?.permanentlyDeleted &&
+        permanentMarker.projectData === undefined && permanentMarker.snapshots === undefined);
+      const permanentMarkerHiddenFromTrashList = !(await repository.listTrash()).some(item => item.projectId === projectC.project.id);
+      let permanentSaveRejected = false;
+      try { await repository.saveActive(projectC); }
+      catch (error) { permanentSaveRejected = error.code === "PROJECT_PERMANENTLY_DELETED"; }
+      let permanentWriteRejected = false;
+      try { await repository.write(projectC); }
+      catch (error) { permanentWriteRejected = error.code === "PROJECT_PERMANENTLY_DELETED"; }
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").put({ projectId: projectC.project.id, data: projectC });
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not seed stale record beside permanent tombstone."));
+        tx.onabort = () => reject(tx.error || new Error("Stale permanent-delete fixture aborted."));
+      });
+      let permanentActivationRejected = false;
+      try { await repository.activateProject(projectC.project.id); }
+      catch (error) { permanentActivationRejected = /borrado permanentemente/i.test(error.message); }
+      await new Promise((resolve, reject) => {
+        const tx = database.transaction("projects", "readwrite");
+        tx.objectStore("projects").delete(projectC.project.id);
+        tx.oncomplete = resolve;
+        tx.onerror = () => reject(tx.error || new Error("Could not clean permanent-delete fixture."));
+        tx.onabort = () => reject(tx.error || new Error("Permanent-delete fixture cleanup aborted."));
+      });
       const residualBackupRemoved = localStorage.getItem(storageKey) === null;
 
       repository.close();
@@ -761,7 +787,7 @@ async function run() {
         trashedBackupForSearchWritten, trashedProjectSearchExcluded, trashSearchComplete: trashSearchReport.complete,
         unrelatedBackupWritten, missingTrashRejected, unrelatedBackupPreserved, residualBackupWritten,
         catalogBlockedOnUnreadableTrash, getProjectBlockedOnUnreadableTrash,
-        permanentDelete, permanentlyGone, residualBackupRemoved
+        permanentDelete, permanentMarkerRetained, permanentMarkerHiddenFromTrashList, permanentSaveRejected, permanentWriteRejected, permanentActivationRejected, residualBackupRemoved
       };
     });
     assert.equal(snapshotRepositoryEvidence.migration.version, 3);
@@ -816,7 +842,11 @@ async function run() {
     assert.equal(snapshotRepositoryEvidence.trashSearchComplete, true,
       "Trash filtering should remain complete when the trash store is readable.");
     assert.equal(snapshotRepositoryEvidence.permanentDelete.permanentlyDeleted, true);
-    assert.equal(snapshotRepositoryEvidence.permanentlyGone, true);
+    assert.equal(snapshotRepositoryEvidence.permanentMarkerRetained, true, "Permanent deletion must retain a minimal anti-resurrection marker.");
+    assert.equal(snapshotRepositoryEvidence.permanentMarkerHiddenFromTrashList, true, "Purged tombstones must not appear as recoverable trash entries.");
+    assert.equal(snapshotRepositoryEvidence.permanentSaveRejected, true, "A stale tab must not recreate a permanently deleted project via saveActive.");
+    assert.equal(snapshotRepositoryEvidence.permanentWriteRejected, true, "Atomic writes must reject a permanently deleted ID.");
+    assert.equal(snapshotRepositoryEvidence.permanentActivationRejected, true, "A stale duplicate project record must not reactivate a permanently deleted ID.");
     assert.equal(snapshotRepositoryEvidence.residualBackupWritten, true);
     assert.equal(snapshotRepositoryEvidence.catalogBlockedOnUnreadableTrash, true,
       "The project catalog must fail closed when IndexedDB opens but trash cannot be read.");

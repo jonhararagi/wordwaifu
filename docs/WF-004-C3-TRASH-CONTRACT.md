@@ -71,3 +71,8 @@ El código y las pruebas de esta rama pasan en [CI #38022402137](https://github.
 - CI ejecutada en GitHub Actions: [#38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741), todas las etapas en PASS.
 
 WF-004-C.3 permanece PARTIAL hasta que se documente/pruebe el comportamiento bajo cuota real y se complete la revisión manual de Windows 11.
+
+
+## Borrado permanente y anti-resurrección
+
+El borrado permanente elimina el payload recuperable y los snapshots, pero conserva en IndexedDB una marca mínima `{ projectId, permanentlyDeleted: true, purgedAt }`. La marca no contiene datos del proyecto ni snapshots y queda oculta en el listado de papelera. Las operaciones `write`, `saveActive` y `activateProject` deben rechazar ese ID, incluso si una pestaña antigua intenta reinsertar una copia en `projects` o un respaldo en localStorage. Una restauración normal no puede convertir una marca permanente en un proyecto recuperable.
