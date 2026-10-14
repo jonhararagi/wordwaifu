@@ -267,7 +267,12 @@
     return generated;
   }
   function buildIndex(catalog, documents, profileDocuments) {
-    const parsedClaims = documents.flatMap(doc => parseSource(doc.content, doc.path)).flatMap(splitContinuityClaims)
+    // Parse each source once. The old path parsed every Markdown document again
+    // just to count claims, doubling a meaningful part of startup CPU work.
+    const parsedDocuments = documents.map(doc => ({
+      path: doc.path, content: doc.content, parsedClaims: parseSource(doc.content, doc.path)
+    }));
+    const parsedClaims = parsedDocuments.flatMap(doc => doc.parsedClaims).flatMap(splitContinuityClaims)
       .map(claim => ({ ...claim, aspects: getAspects(claim), periodKey: getPeriod(claim) }));
     const officialRoster = typeof globalThis !== "undefined" && globalThis.WordWaifuOfficialCharacterRoster
       ? globalThis.WordWaifuOfficialCharacterRoster.list() : [];
@@ -291,14 +296,29 @@
       .map(record => ({ id: record.id, name: record.name, aliases: unique([record.name, ...(record.aliases || [])]), keywords: unique([record.family, record.role, record.sourceTitle, ...(record.aliases || [])]) }));
     const characters = [...catalogCharacters, ...externalCharacters]
       .sort((a, b) => a.name.localeCompare(b.name, "es"));
+    const characterById = new Map(characters.map(character => [character.id, character]));
+
+    // All matches receive the same score for a given query (every token must
+    // match), so sorting once here preserves search order without sorting every
+    // result set. Cache normalized searchable text so keystrokes do not rebuild
+    // long strings and normalize them repeatedly.
+    claims.sort((a, b) => a.claimId.localeCompare(b.claimId, "en") || a.entryId.localeCompare(b.entryId, "en"));
+    claims.forEach(claim => {
+      const linkedCharacters = (claim.characterIds || []).map(id => characterById.get(id)).filter(Boolean);
+      const aliases = linkedCharacters.flatMap(character => character.aliases || []);
+      claim._searchText = normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
+        (claim.continuityScopes || []).join(" "), (claim.aspects || []).join(" "), aliases.join(" "),
+        claim.sourceTitle, claim.sourceLocator, (claim.sourceIds || []).join(" "), claim.claimId, claim.entryId].join(" "));
+    });
     const profileDetails = Object.create(null);
     (profileDocuments || []).forEach(document => {
       const parsed = parseCharacterProfile(document.content, document.path);
       if (parsed.id) profileDetails[parsed.id] = parsed;
     });
     return { schemaVersion: 1, indexName: "WordWaifu DanMachi Lore Search", mode: "curated-claims",
-      sourceClaimCount: documents.reduce((sum, doc) => sum + parseSource(doc.content, doc.path).length, 0),
+      sourceClaimCount: parsedDocuments.reduce((sum, doc) => sum + doc.parsedClaims.length, 0),
       entryCount: claims.length, characters, claims, profileDetails,
+      _characterById: characterById,
       entityRecords: (catalog.records || []).filter(record => record && typeof record.id === "string" && typeof record.type === "string").map(record => ({
         id: record.id, path: record.path || "", type: record.type, status: record.status || "unknown",
         priority: record.priority || "normal", tags: Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : []
@@ -308,7 +328,7 @@
   async function load(basePath) {
     const base = basePath || "./lore/danmachi/";
     const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md", "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md", "research/inbox/BATCH-DM-008-main-story-volume-map.md", "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md", "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md", "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md"];
-    const responses = await Promise.all(paths.map(path => fetch(base + path, { cache: "no-cache" })));
+    const responses = await Promise.all(paths.map(path => fetch(base + path)));
     for (let i = 0; i < responses.length; i++) if (!responses[i].ok) throw new Error("No se pudo cargar " + paths[i] + " (HTTP " + responses[i].status + ").");
     const catalog = await responses[0].json();
     const docs = await Promise.all(responses.slice(1).map(async (response, i) => ({
@@ -319,7 +339,7 @@
       detailIds.has(record.id) && typeof record.path === "string" &&
       record.path.startsWith("characters/") && record.path.endsWith(".md"));
     const profileResponses = await Promise.all(profileRecords.map(record =>
-      fetch(base + record.path, { cache: "no-cache" }).then(response => {
+      fetch(base + record.path).then(response => {
         if (!response.ok) throw new Error("No se pudo cargar ficha existente " + record.path + " (HTTP " + response.status + ").");
         return response.text().then(content => ({ path: record.path, content }));
       })));
@@ -334,7 +354,7 @@
     const aspect = String(settings.aspect || "all");
     const spoiler = String(settings.spoiler || "all");
     const limit = Number.isInteger(settings.limit) ? Math.max(1, Math.min(settings.limit, 100)) : 20;
-    const characterMap = new Map((index.characters || []).map(character => [character.id, character]));
+    const characterMap = index._characterById || new Map((index.characters || []).map(character => [character.id, character]));
     const results = [];
     for (const claim of index.claims || []) {
       if (characterId && !claim.characterIds.includes(characterId)) continue;
@@ -344,9 +364,9 @@
       if (spoiler === "hide-major" && ["major", "endgame"].includes(claim.spoilerLevel)) continue;
       if (spoiler === "safe-only" && !["none", "mild"].includes(claim.spoilerLevel)) continue;
       const characterRecords = (claim.characterIds || []).map(id => characterMap.get(id)).filter(Boolean);
-      const aliases = characterRecords.flatMap(character => character.aliases || []);
-      const haystack = normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
-        claim.continuityScopes.join(" "), claim.aspects.join(" "), aliases.join(" "), claim.sourceTitle,
+      const haystack = claim._searchText || normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
+        claim.continuityScopes.join(" "), claim.aspects.join(" "),
+        characterRecords.flatMap(character => character.aliases || []).join(" "), claim.sourceTitle,
         claim.sourceLocator, claim.sourceIds.join(" "), claim.claimId, claim.entryId].join(" "));
       const foundTokens = queryTokens.filter(token => tokenMatches(haystack, token));
       if (queryTokens.length && foundTokens.length !== queryTokens.length) continue;
@@ -354,7 +374,7 @@
         profilePaths: characterRecords.map(character => character.profilePath).filter(Boolean),
         score: queryTokens.length ? foundTokens.length * 10 : 1 });
     }
-    results.sort((a, b) => b.score - a.score || a.claimId.localeCompare(b.claimId, "en") || a.entryId.localeCompare(b.entryId, "en"));
+    // index.claims is pre-sorted by the same tie-breaker used previously.
     return { results: results.slice(0, limit), totalMatches: results.length, truncated: results.length > limit,
       abstain: results.length === 0, queryTokens };
   }
