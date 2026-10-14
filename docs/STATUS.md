@@ -3,7 +3,7 @@
 
 - Rama autorizada de trabajo: `work/story-completion-danmachi-audit-2026-10`.
 - Último SHA de candidata con CI general confirmado en esta auditoría: `472bebe6d74a08e5b8e22664bb754a2d095e61b8`; [Validate WordWaifu #962 terminó en success](https://github.com/jonhararagi/wordwaifu/actions/runs/38478133451).
-- La rama avanzó después de ese SHA: la comparación contra el ref actual informa **1 commit adicional** que modifica `lore/danmachi/MASTER_INDEX.md`. Por tanto, el resultado de #962 **no acredita el HEAD actual**; su SHA completo y CI final deben verificarse antes de declarar cierre.
+- Después de ese SHA se añadieron cuatro commits documentales/índice en esta misma rama: el enlace al índice maestro, la reconciliación del estado, la corrección de referencias obsoletas y la ampliación de la matriz con dos ramas adicionales. La punta actual de la rama, por tanto, **no está cubierta por el CI de #962**; hay que verificar los workflows en el SHA final.
 - Para el SHA `472bebe6...`, el workflow `DanMachi Lore and Retrieval Integrity` no tiene ejecución exacta registrada. No se interpreta la ausencia de run como fallo ni como aprobación.
 - La matriz de integración está en [`docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md`](INTEGRATION_DANMACHI_AUDIT_2026-10.md). La comparación de ramas encontró diferencias de árbol y commits divergidos; igualdad de un archivo no acredita integración de toda una rama. La auditoría semántica de los deltas exclusivos sigue pendiente.
 - `tests/browser_smoke.cjs` corrige el conteo obsoleto de catálogo leyendo el número esperado de `data/catalog/mythic-arsenal.json` en vez de fijarlo en 75. El CI general verde de #962 valida ese commit, no la punta actual de la rama.
@@ -25,8 +25,8 @@
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada de esta misión: `work/story-completion-danmachi-audit-2026-10`. Las referencias a ramas de tareas anteriores en esta sección son contexto histórico, no la rama activa de esta auditoría.
 - `main`: el SHA indicado en la documentación histórica corresponde al commit inicial y está obsoleto; consultar el ref actual antes de cualquier integración. Esta misión no modifica `main`.
-- Comparación comprobada el 2026-10-10: rama de trabajo **por delante de main / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
-- PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar; su head corresponde a otra rama. PR #3: [abierto, no fusionado](https://github.com/jonhararagi/wordwaifu/pull/3), head `work/wf-004-c3-project-trash`; no fue creado ni modificado en esta iteración. No se abrió otro PR ni se hizo merge.
+- La comparación de ramas fechada el 2026-10-10 que sigue en el historial es histórica; no acredita la relación actual entre esta candidata y `main`.
+- Las referencias a PR que aparecen en el historial de esta sección corresponden a una instantánea antigua y no deben usarse como estado actual sin volver a consultar GitHub. En esta misión no se ha creado, modificado, fusionado ni cerrado ningún PR.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
 - Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
 - Workflow de validación configurado para pushes en `main` y `work/**`, PR hacia `main` y `workflow_dispatch`: [`4502475`](https://github.com/jonhararagi/wordwaifu/commit/4502475cdf9b536c0c5d6dbf51a83efc7408ae6d).
