@@ -853,11 +853,6 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "LOC-DUNGEON",
-      "type": "location",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "LOC-BABEL",
       "type": "location",
       "status": "candidate_not_created"
@@ -1573,8 +1568,8 @@
     "sourceCommit": "622369265b08712e4440087e7361f5151e9402d2",
     "trackedLoreFiles": 165,
     "records": 48,
-    "reservedIds": 68,
+    "reservedIds": 67,
     "supportingDocuments": 100,
-    "syncNote": "Extensión manual verificada: se añade LOC-DUNGEON como registro navegable con fuente editorial oficial y límites explícitos. No equivale a un cotejo completo de pisos, reglas o capítulos."
+    "syncNote": "Extensión manual verificada: LOC-DUNGEON se promueve de ID reservado a registro navegable con fuente editorial oficial y límites explícitos. No equivale a un cotejo completo de pisos, reglas o capítulos."
   }
 }
