@@ -19,7 +19,8 @@
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
     lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."],
     art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."],
-    "mythic-catalog": ["Catálogo mítico", "Explorá entidades, armas, reliquias y pactos conectados por relaciones."]
+    "mythic-catalog": ["Catálogo mítico", "Explorá entidades, armas, reliquias y pactos conectados por relaciones."],
+    powers: ["Poderes y habilidades", "Guardá cada poder como una ficha conectada a personajes e historias."]
   };
   const demo = {
     schemaVersion: 1,
@@ -106,6 +107,7 @@
       if (!source.relationships.includes(target.id)) source.relationships.push(target.id);
       if (!target.relationships.includes(source.id)) target.relationships.push(source.id);
     });
+    if (!Array.isArray(project.powers)) project.powers = [];
     return project;
   }
 
@@ -956,12 +958,14 @@
     $("#lore-view").classList.toggle("hidden", activeView !== "lore");
     $("#art-view").classList.toggle("hidden", activeView !== "art");
     $("#mythic-catalog-view").classList.toggle("hidden", activeView !== "mythic-catalog");
+    $("#powers-view").classList.toggle("hidden", activeView !== "powers");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art", "mythic-catalog"].includes(activeView));
+    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art", "mythic-catalog", "powers"].includes(activeView));
     renderMap();
     renderDetails();
     renderDirectory();
+    if (window.WordWaifuPowerWorkbench) window.WordWaifuPowerWorkbench.refresh(state);
   }
 
   function mapPointFromPointer(event) {
@@ -3290,6 +3294,12 @@
       if (appShell) appShell.inert = false;
     }
   }
+
+  if (window.WordWaifuPowerWorkbench) window.WordWaifuPowerWorkbench.mount({
+    root: $("#powers-view"),
+    getProject: () => state,
+    onSave: saveProject
+  });
 
   initializeApplication();
 })(); 

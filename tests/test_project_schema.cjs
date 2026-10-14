@@ -299,6 +299,26 @@ function testMythicProposalsPersistAndValidateReferences() {
   assert.match(selfResult.errors.join("\\n"), /no puede relacionar una entidad consigo misma/);
 }
 
+function testPowersNormalizePersistAndValidateReferences() {
+  const input = validProject();
+  input.stories = [{ id: "story-a", name: "Historia A", description: "" }];
+  input.powers = [{ id: "power-a", name: "Eco de la guardiana", family: "mental", category: "Percepción", profile: "Defensa", description: "Detecta intenciones hostiles.", activation: "Observar al objetivo.", cost: "Agotamiento leve.", limits: "No revela pensamientos.", evolution: "Mayor alcance con práctica.", consequences: "Puede generar falsos positivos.", contract: "Ninguno.", inspiration: "Original.", source: "Propuesta propia.", status: "proposal", irreversible: false, ownerCharacterId: "char-a", storyId: "story-a" }];
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\\n"));
+  assert.equal(result.project.powers.length, 1);
+  assert.equal(result.project.powers[0].ownerCharacterId, "char-a");
+  assert.equal(result.project.powers[0].storyId, "story-a");
+  const roundTrip = validateAndNormalizeProject(JSON.parse(JSON.stringify(result.project)));
+  assert.equal(roundTrip.valid, true, roundTrip.errors.join("\\n"));
+  assert.deepEqual(roundTrip.project.powers, result.project.powers);
+  const missingOwner = structuredClone(input); missingOwner.powers[0].ownerCharacterId = "char-missing";
+  assert.match(validateAndNormalizeProject(missingOwner).errors.join("\\n"), /ownerCharacterId referencia un personaje inexistente/);
+  const missingStory = structuredClone(input); missingStory.powers[0].storyId = "story-missing";
+  assert.match(validateAndNormalizeProject(missingStory).errors.join("\\n"), /storyId referencia una historia inexistente/);
+  const badFlag = structuredClone(input); badFlag.powers[0].irreversible = "yes";
+  assert.match(validateAndNormalizeProject(badFlag).errors.join("\\n"), /irreversible debe ser booleano/);
+}
+
 const tests = [
   testValidProjectNormalizesOptionalFields,
   testMissingOptionalFieldsReceiveSafeDefaults,
@@ -318,7 +338,8 @@ const tests = [
   testRejectsInvalidRelationshipEndpointsAndSelfLinks,
   testRejectsDuplicateRelationshipPairsAndTypes,
   testRelationshipIDsAreGloballyUnique,
-  testMythicProposalsPersistAndValidateReferences
+  testMythicProposalsPersistAndValidateReferences,
+  testPowersNormalizePersistAndValidateReferences
 ];
 
 for (const test of tests) {

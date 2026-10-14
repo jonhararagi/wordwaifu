@@ -2746,6 +2746,21 @@ async function run() {
     process.stdout.write("PASS art studio: uploaded art persists by entity ID, prompts generate from character data, and custom portraits override the reference image.\\n");
     process.stdout.write("PASS dossiers: the Bell profile renders extended researched content.\\n");
 
+    // Structured power workbench: create a record, save, reload, and recover it.
+    await page.locator('[data-view="powers"]').click();
+    await page.locator("#power-record-form").waitFor({ state: "visible" });
+    await page.locator('#power-record-form [name="name"]').fill("Smoke power persistence");
+    await page.locator('#power-record-form [name="family"]').selectOption("mental");
+    await page.locator('#power-record-form [name="category"]').fill("Mental / percepción");
+    await page.locator('#power-record-form [name="description"]').fill("Registro de prueba para validar persistencia estructurada.");
+    await page.locator('#power-record-form [name="activation"]').fill("Concentrarse durante un instante.");
+    await page.locator('#power-record-form [name="cost"]').fill("Fatiga breve.");
+    await page.locator('#power-record-form button[type="submit"]').click();
+    await page.waitForFunction(() => document.querySelector("#power-record-list")?.textContent.includes("Smoke power persistence"), null, { timeout: 10000 });
+    await page.reload({ waitUntil: "networkidle" });
+    await page.waitForFunction(() => (document.querySelector("#save-status")?.textContent || "").length > 0, null, { timeout: 10000 });
+    await page.locator('[data-view="powers"]').click();
+    await page.waitForFunction(() => document.querySelector("#power-record-list")?.textContent.includes("Smoke power persistence"), null, { timeout: 10000 });
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {
