@@ -33,8 +33,8 @@ Un modelo de IA podría integrarse en el futuro como módulo opcional. Nunca ser
 - **Character Forge:** generador de personajes por plantillas, tablas, reglas de compatibilidad y edición manual.
 - **Lore Forge:** historia del mundo, culturas, sistemas mágicos, facciones, leyendas y reglas.
 - **Timeline:** acontecimientos globales y personales, fechas, causalidad y continuidad.
-- **Story Forge:** premisas, conflictos, arcos, subtramas y esquemas de historias.
-- **Novel Forge:** estructura por volúmenes, capítulos y escenas, con borradores Markdown.
+- **Story Forge:** generador local de índices de novela; elegí 1–500 capítulos y final abierto/cerrado, definí protagonistas, elenco, romance, traumas y contexto de referencia; propone presentación, progreso, falsa seguridad, caída, clímax y consecuencias.
+- **Novel Forge:** capítulos editables con título, resumen, manuscrito y estado; los esquemas se pueden revisar antes de redactar y exportar a Markdown.
 - **Continuity Guard:** validaciones deterministas para detectar referencias rotas, contradicciones temporales y datos faltantes.
 - **Command Desk:** pestaña tipo chat que ejecuta comandos locales conocidos, consulta el canon y lanza generadores. No fingirá comprender lenguaje libre como un LLM.
 - **Visual Library:** referencias e imágenes vinculadas a entidades, con procedencia y metadatos. La generación de imágenes queda fuera del núcleo offline inicial.
@@ -75,6 +75,7 @@ El prototipo incluye atlas, CRUD de las entidades principales, relaciones, catá
 ## Archivo de historias originales
 
 - [Archivo y formato de almacenamiento](stories/README.md)
+- [Propósito, estructura por fases y límites del generador de historias](docs/STORY_GENERATOR.md)
 - [Dinámica de mundos: distopías, cyberpunk, apocalipsis, postapocalipsis, comedia insular y mundos híbridos](docs/WORLD_DYNAMICS.md)
 - [Motores de misterio, juegos de cartas sobrenaturales, identidades ocultas y plot twists](docs/STORY_REVEALS.md)
 - [Sistemas de poderes: categorías, activación, costes, contratos y evolución irreversible](docs/POWER_SYSTEMS.md)
