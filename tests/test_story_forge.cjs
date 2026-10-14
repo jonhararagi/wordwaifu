@@ -13,6 +13,7 @@ function base(overrides = {}) {
     antagonistPlan: "Antagonista: el Consejo de Gremios, que borra barrios para conservar el poder.",
     romancePlan: "Mira y Kael desarrollan confianza lenta, con límites y desacuerdos.",
     traumaPlan: "Mira evita hablar de la desaparición de su hermana; su recuperación exige pedir ayuda.",
+    worldType: "fantasy-adventure",
     worldRules: "Los mapas cambian solo cuando se destruye un testimonio original.",
     worldDynamics: "Los gremios controlan el transporte y la memoria pública.",
     powerCatalog: "Cartografía de eco: revela rutas perdidas, pero borra un recuerdo propio.",
@@ -42,9 +43,11 @@ function testSummariesUseStorySpecificDetailsAndDramaticCausality() {
   for (const phrase of [
     "Mira descubre mapas", "Mira debe demostrar", "Consejo de Gremios",
     "Cartografía de eco", "La diosa de las rutas", "Mira y Kael",
-    "desaparición de su hermana", "Los gremios controlan"
+    "desaparición de su hermana", "Los gremios controlan", "Tipo de mundo: fantasía y aventura"
   ]) assert.ok(joined.includes(phrase), "Missing story context in generated outline: " + phrase);
   assert.ok(chapters[0].summary.includes("La historia abre"));
+  assert.match(forge.generateOutline(base({ chapterCount: 1 }))[0].title, /Arco completo/);
+  assert.match(forge.generateOutline(base({ chapterCount: 1 }))[0].summary, /presentar una necesidad.*precio de resolver el conflicto/);
   assert.ok(chapters[9].summary.includes("resuelve el conflicto principal"));
   assert.ok(chapters.every(chapter => chapter.summary.includes("Giro y consecuencia:")));
 }
