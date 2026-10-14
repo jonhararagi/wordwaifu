@@ -26,6 +26,8 @@ jobs:
       - name: Check JavaScript syntax
         run: |
           node --check src/app.js
+          node --check src/story-structure-generator.js
+          node --check tests/test_story_structure_generator.cjs
           node --check src/mythic-catalog.js
           node --check src/power-catalog.js
           node --check src/power-workbench.js
@@ -40,6 +42,8 @@ jobs:
           node --check tests/test_mythic_catalog.cjs
           node --check tests/test_power_catalog.cjs
           node --check tests/browser_smoke.cjs
+      - name: Test story structure generator
+        run: node tests/test_story_structure_generator.cjs
       - name: Validate mythic catalog IDs and relations
         run: node tests/test_mythic_catalog.cjs
       - name: Test power catalog generator
