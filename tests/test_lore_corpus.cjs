@@ -67,6 +67,17 @@ const stableSecond = corpus.search(index, stableQuery);
 assert.deepEqual(stableSecond.results.map(claim => claim.claimId + "|" + claim.entryId),
   stableFirst.results.map(claim => claim.claimId + "|" + claim.entryId));
 assert.ok(!Object.keys(stableFirst.results[0] || {}).includes("_searchText"), "Cached text must not be copied into result records.");
+const rankingIndex = { characters: [], claims: [
+  { claimId: "DMR-TEST-002", entryId: "ENTRY-002", heading: "Mención de una expedición",
+    claim: "El informe trata sobre Astrea Record y su cronología.", characterIds: [], continuityScopes: [],
+    aspects: [], sourceIds: [], sourceTitle: "", sourceLocator: "", periodKey: "", aspect: "" },
+  { claimId: "DMR-TEST-001", entryId: "ENTRY-001", heading: "Astrea Record",
+    claim: "Cronología documentada.", characterIds: [], continuityScopes: [],
+    aspects: [], sourceIds: [], sourceTitle: "", sourceLocator: "", periodKey: "", aspect: "" }
+] };
+const ranked = corpus.search(rankingIndex, { query: "Astrea Record", limit: 10 });
+assert.equal(ranked.results[0].claimId, "DMR-TEST-001",
+  "Exact heading matches should rank above incidental body mentions without AI.");
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
 assert.ok(historicalRyu.totalMatches > 0);
 assert.ok(historicalRyu.results.every(claim => claim.continuityScopes.includes("CONT-AR")));
