@@ -323,10 +323,23 @@
       const parsed = parseCharacterProfile(document.content, document.path);
       if (parsed.id) profileDetails[parsed.id] = parsed;
     });
+
+    // Build a reverse index once. Character cards and profiles repeatedly ask
+    // for claims by character; scanning every claim for every character on each
+    // keystroke turns directory filtering into O(characters × claims).
+    const claimsByCharacter = new Map();
+    for (const claim of claims) {
+      for (const characterId of claim.characterIds || []) {
+        if (!claimsByCharacter.has(characterId)) claimsByCharacter.set(characterId, []);
+        claimsByCharacter.get(characterId).push(claim);
+      }
+    }
+
     return { schemaVersion: 1, indexName: "WordWaifu DanMachi Lore Search", mode: "curated-claims",
       sourceClaimCount: parsedDocuments.reduce((sum, doc) => sum + doc.parsedClaims.length, 0),
       entryCount: claims.length, characters, claims, profileDetails,
       _characterById: characterById,
+      _claimsByCharacter: claimsByCharacter,
       entityRecords: (catalog.records || []).filter(record => record && typeof record.id === "string" && typeof record.type === "string").map(record => ({
         id: record.id, path: record.path || "", type: record.type, status: record.status || "unknown",
         priority: record.priority || "normal", tags: Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : []
