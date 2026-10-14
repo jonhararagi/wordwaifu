@@ -55,6 +55,18 @@ assert.ok(ancientFamilias.results.some(claim => claim.claimId === "DMR-008-CLM-0
 
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
+// Performance regression guards: search metadata is precomputed once and must
+// not leak into result objects; pre-sorting preserves deterministic retrieval.
+assert.ok(index.claims.every(claim => typeof claim._searchText === "string" && !Object.keys(claim).includes("_searchText")));
+assert.deepEqual(index.claims.map(claim => claim.claimId + "|" + claim.entryId),
+  [...index.claims].sort((a, b) => a.claimId.localeCompare(b.claimId, "en") || a.entryId.localeCompare(b.entryId, "en"))
+    .map(claim => claim.claimId + "|" + claim.entryId));
+const stableQuery = { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all", limit: 10 };
+const stableFirst = corpus.search(index, stableQuery);
+const stableSecond = corpus.search(index, stableQuery);
+assert.deepEqual(stableSecond.results.map(claim => claim.claimId + "|" + claim.entryId),
+  stableFirst.results.map(claim => claim.claimId + "|" + claim.entryId));
+assert.ok(!Object.keys(stableFirst.results[0] || {}).includes("_searchText"), "Cached text must not be copied into result records.");
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
 assert.ok(historicalRyu.totalMatches > 0);
 assert.ok(historicalRyu.results.every(claim => claim.continuityScopes.includes("CONT-AR")));
