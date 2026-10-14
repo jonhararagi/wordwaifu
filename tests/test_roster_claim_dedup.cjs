@@ -19,7 +19,7 @@ const paths = [
   "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md"
 ];
 const documents = paths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
-const parsedIds = new Set(documents.flatMap(doc => doc.content.match(/DMR-\\d+-CLM-\\d+/g) || []));
+const parsedIds = new Set(documents.flatMap(doc => doc.content.match(/DMR-\d+-CLM-\d+/g) || []));
 const index = corpus.buildIndex(catalog, documents);
 const generated = index.claims.filter(claim => !parsedIds.has(claim.claimId));
 assert.ok(generated.length > 0, "Official roster dossiers must contribute searchable claims.");
