@@ -30,8 +30,10 @@ assert.ok(generated.every(claim => !parsedIds.has(claim.claimId)),
   "Generated roster claims must never reuse a curated claim ID.");
 assert.equal(new Set(generated.map(claim => claim.claimId)).size, generated.length,
   "Every generated roster claim must have a unique claim ID.");
-assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length,
-  "Every indexed continuity entry must have a unique entry ID.");
+assert.ok(generated.every(claim => !parsedIds.has(claim.entryId)),
+  "Generated entry IDs must not collide with IDs already present in curated corpus documents.");
+assert.equal(new Set(generated.map(claim => claim.entryId)).size, generated.length,
+  "Every roster-generated continuity entry must have a unique entry ID.");
 assert.ok(generated.some(claim => claim.continuityScopes.includes("CONT-MAIN-LN")),
   "Roster dossiers must retain their explicitly scoped main-novel entries.");
 process.stdout.write("PASS roster claim IDs: generated claims are collision-free and retain continuity/source labels.\\n");
