@@ -8,9 +8,10 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+# Keep runs isolated by commit: a newer push must not cancel the validation evidence for an earlier SHA.
 concurrency:
-  group: danmachi-lore-integrity-${{ github.ref }}
-  cancel-in-progress: true
+  group: danmachi-lore-integrity-${{ github.ref }}-${{ github.sha }}
+  cancel-in-progress: false
 jobs:
   catalog-and-retrieval:
     name: Catalog, retrieval and browser smoke
