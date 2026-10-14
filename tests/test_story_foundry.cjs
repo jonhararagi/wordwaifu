@@ -18,7 +18,7 @@ assert.ok(plan.synopsis.includes("Iria"));
 assert.ok(plan.chapters.every(ch=>ch.summary&&ch.status==="outline"));
 for (const count of [1,2,5,10,22,30,100,501,0,-3]) {
  const generated=generateStoryPlan({chapterCount:count});
- const expected=Math.max(1,Math.min(500,Math.floor(count)||30));
+ const expected=count<=0?30:Math.max(1,Math.min(500,Math.floor(count)||30));
  assert.equal(generated.chapterCount,expected);
  assert.deepEqual(generated.chapters.map(ch=>ch.number),Array.from({length:expected},(_,i)=>i+1));
 }
