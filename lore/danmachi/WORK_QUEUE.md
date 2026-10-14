@@ -292,3 +292,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 
 - Paquete actualizado: [DANMACHI-RESEARCH-019](research/inbox/DANMACHI-RESEARCH-019-wiki-triangulation-es-en-ja.md).
 - Regla de continuidad: publicación del autor no equivale automáticamente a continuidad principal; el relato alternativo se etiqueta como tal. Los campos de historia propia AU siguen vacíos hasta que el autor los complete.
+
+
+## DANMACHI-RESEARCH-020 · Lugares principales y topología del Dungeon
+
+- Estado: PARTIAL; primera ficha de lugar integrada al catálogo navegable.
+- [x] Añadir `places/dungeon.md` con identidad, función narrativa, relaciones hacia Orario/Guild/Bell/Hestia y límites de certeza.
+- [x] Registrar la ficha editorial oficial de GA文庫 para el volumen 1 como `DMR-012-SRC-001`; la fuente respalda la descripción general de Orario y el Dungeon, no detalles de pisos ni escenas concretas.
+- [x] Promover `LOC-DUNGEON` de ID reservado a registro activo; actualizar el índice de lugares y validar unicidad de IDs.
+- [ ] Crear fichas separadas para Guild como institución y sede física, Babel, Hostess of Fertility y residencia de Hestia cuando las fuentes permitan definir su alcance.
+- [ ] Cotejar pisos, accesos, monstruos, recursos, reglas de expedición y peligros con fuentes por volumen/capítulo.
+- [ ] Añadir enlaces inversos desde los índices de canon, eventos y personajes solo cuando el destino sea una relación sustentada.
+- Regla: la sinopsis editorial es fuente oficial de alcance general, no sustituto del texto íntegro; no inventar geografía ni localizadores.
