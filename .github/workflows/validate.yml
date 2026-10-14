@@ -60,5 +60,7 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Run browser smoke test
         run: node tests/browser_smoke.cjs
+      - name: Check idle performance contract
+        run: node tests/test_idle_performance_contract.cjs
       - name: Check project structure
         run: python scripts/validate_project.py
