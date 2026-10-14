@@ -74,3 +74,13 @@ Fecha de revisión: 2026-10-14. Esta sección registra comparaciones concretas; 
 - **Persistencia:** `main` contiene un helper local `restorePreviousBackup`; la candidata ya incluye rollback explícito del respaldo en las rutas de guardado, papelera y restauración. Se conserva la implementación actual y no se copia `src/project-repository.js` entero.
 - **Corpus:** `main` contiene `claimsFromOfficialRoster`, mientras la candidata mantiene filtros y búsqueda de entidades adicionales. La equivalencia semántica del retrieval y la posible integración selectiva de afirmaciones generadas sigue pendiente de revisar; no se declara equivalencia por el mero hecho de que ambas tengan un corpus.
 - **Decisión de seguridad:** no se modifica `main`, no se fusiona la rama completa ni se abre/cierra PR. Los deltas restantes se integrarán únicamente cuando la intención y las pruebas permitan demostrar que no duplican ni degradan las funciones de la candidata.
+
+
+## Inventario de PRs revisado en GitHub — 2026-10-14
+
+- **Abiertos:** 0 PRs abiertos en el repositorio.
+- **Cerrados/integrados:** 15 PRs encontrados; 4 muestran un commit de merge y 11 están cerrados sin merge.
+- **Integrados:** [#8 roster y retratos](https://github.com/jonhararagi/wordwaifu/pull/8) → `3698cb3`; [#11 panel de arte y 33 expedientes](https://github.com/jonhararagi/wordwaifu/pull/11) → `42aee93`; [#14 integración de atlas, papelera, lore y arte](https://github.com/jonhararagi/wordwaifu/pull/14) → `bca375e`; [#16 Story Foundry y corpus ampliado](https://github.com/jonhararagi/wordwaifu/pull/16) → `11a5ed5`.
+- **Cerrados sin merge:** [#1](https://github.com/jonhararagi/wordwaifu/pull/1), [#2](https://github.com/jonhararagi/wordwaifu/pull/2), [#3](https://github.com/jonhararagi/wordwaifu/pull/3), [#5](https://github.com/jonhararagi/wordwaifu/pull/5), [#6](https://github.com/jonhararagi/wordwaifu/pull/6), [#7](https://github.com/jonhararagi/wordwaifu/pull/7), [#9](https://github.com/jonhararagi/wordwaifu/pull/9), [#10](https://github.com/jonhararagi/wordwaifu/pull/10), [#12](https://github.com/jonhararagi/wordwaifu/pull/12), [#13](https://github.com/jonhararagi/wordwaifu/pull/13) y [#15](https://github.com/jonhararagi/wordwaifu/pull/15).
+- **Rutas duplicadas/sustituidas explícitamente:** #13 fue cerrada por duplicar la ruta de integración #14; #15 fue sustituida por #16; #6 documenta que la integración posterior quedó en #14/#16. El cierre no se interpreta como merge.
+- Esta consulta fue de solo lectura; no se abrió, cerró ni modificó ningún PR. El inventario de PRs describe la historia de GitHub, no sustituye la comparación semántica de ramas fuente.
