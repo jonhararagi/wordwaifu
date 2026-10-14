@@ -1324,7 +1324,7 @@
         return;
       }
       const existing = String(field.value || "").trim();
-      field.value = existing ? existing + "\\n\\n" + generated.summary : generated.summary;
+      field.value = existing ? existing + "\n\n" + generated.summary : generated.summary;
       story[target[1]] = field.value;
       if (role === "protagonist") {
         const personalityField = metaForm.elements.storyPersonalityDesign;
