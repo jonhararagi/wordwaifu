@@ -2955,6 +2955,31 @@ async function run() {
     process.stdout.write("PASS art studio: uploaded art persists by entity ID, prompts generate from character data, and custom portraits override the reference image.\\n");
     process.stdout.write("PASS dossiers: the Bell profile renders extended researched content.\\n");
 
+    // Story Foundry: generate an editable 30-chapter index, keep an existing manuscript, and select an open ending.
+    await page.locator('.nav-item[data-view="stories"]').click();
+    await page.locator("#story-meta-form").waitFor({ state: "visible" });
+    await page.locator("#story-outline-count").fill("30");
+    await page.locator("#story-outline-ending").selectOption("open");
+    await page.locator("#story-outline-protagonist").fill("Mira, una cartógrafa que teme depender del equipo");
+    await page.locator("#story-outline-cast").fill("Una ingeniera curiosa y una oficial desconfiada");
+    await page.locator("#story-outline-romance").fill("Romance lento, opcional, basado en confianza");
+    await page.locator("#story-outline-trauma").fill("La pérdida pasada le dificulta pedir ayuda");
+    await page.locator("#story-outline-reference").fill("Resumen de referencia estilo wiki: el mundo se conecta por rutas vivas.");
+    const originalChapterContent = await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue().catch(() => "");
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-outline-generate-button").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length >= 30, null, { timeout: 10000 });
+    assert.equal(await page.locator(".story-chapter-form").count(), originalChapterContent ? 31 : 30,
+      "Generating a new index must preserve an existing manuscript chapter and append the requested outline.");
+    assert.ok((await page.locator("#story-outline-generator-status").innerText()).includes("final abierto"));
+    assert.equal(await page.locator(".story-outline-phase").count(), 6, "The index must display all six narrative phases.");
+    const generatedSummaries = await page.locator(".story-chapter-form [name='chapterSummary']").evaluateAll(nodes => nodes.map(node => node.value));
+    assert.ok(generatedSummaries.some(summary => summary.includes("FINAL ABIERTO")), "The final chapter must follow the selected open-ending mode.");
+    assert.ok(generatedSummaries.some(summary => summary.includes("Resumen de referencia estilo wiki")), "The reference summary must inform the outline.");
+    if (originalChapterContent) assert.equal(await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue(), originalChapterContent,
+      "Generating an outline must not overwrite existing chapter manuscript text.");
+    process.stdout.write("PASS story outline generator: 30-chapter phase plan, open ending, wiki reference context, and manuscript preservation.\\n");
+
     // Structured power workbench: create a record, save, reload, and recover it.
     await page.locator('[data-view="powers"]').click();
     await page.locator("#power-record-form").waitFor({ state: "visible" });
