@@ -35,6 +35,22 @@ Los rangos se calculan según la cantidad solicitada, sin fijar siempre los cap�
 
 Son guías, no leyes. Comedia episódica, misterio, romance e historias corales necesitan plantillas adaptadas. En una serie larga, cada arco debe tener una pregunta dramática y una recompensa parcial.
 
+## Ejemplo de índice para una historia de 30 capítulos
+
+Es una distribución orientativa; el generador debe ajustar rangos si cambia la cantidad de capítulos o el género.
+
+| Capítulos | Arco | Propósito dramático |
+|---|---|---|
+| 1–3 | Presentación y detonante | Presentar protagonista, mundo, deseo, relaciones esenciales y el problema que lo obliga a actuar. |
+| 4–9 | Progreso y primeras consecuencias | Primeros objetivos, reglas del mundo, aliados, pequeñas victorias y costes visibles. |
+| 10–15 | Expansión y complicaciones | Nuevos lugares o facciones, relaciones que cambian y una revelación que complica la meta. |
+| 16–20 | Cima aparente y falsa seguridad | El protagonista parece haber encontrado la fórmula; señales anteriores revelan un punto ciego. |
+| 21–24 | Caída y replanteamiento | Fracaso causado por ese punto ciego, pérdida, consecuencias y revisión de prioridades. |
+| 25–28 | Nueva estrategia y confrontación | Aplicar el aprendizaje, reparar o redefinir vínculos y ejecutar el plan final. |
+| 29–30 | Clímax y resolución | Decisión decisiva, desenlace del conflicto principal y consecuencias; en final abierto queda una pregunta futura deliberada. |
+
+Cada capítulo debe contestar internamente: **¿qué quiere el personaje en esta escena, qué se lo impide, qué decisión toma y qué cambia al final?** El resumen no debería limitarse a repetir acontecimientos: debe registrar avance, coste, emoción dominante y la semilla que prepara capítulos posteriores.
+
 ## Datos mínimos de cada capítulo
 
 - ID estable, número y título editable.
