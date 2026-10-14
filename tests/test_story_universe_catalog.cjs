@@ -29,7 +29,13 @@ assert.ok(ids.has("konosuba"));
 assert.ok(ids.has("sentouin"));
 assert.ok(ids.has("my-hero-academia"));
 assert.ok(ids.has("one-punch-man"));
-assert.deepEqual(catalog.canonDossierPriority, ["my-hero-academia", "one-punch-man"]);
+assert.ok(ids.has("to-love-ru"));
+assert.ok(ids.has("high-school-dxd"));
+assert.ok(ids.has("madoka-magica"));
+assert.ok(ids.has("selector-wixoss"));
+assert.ok(ids.has("akame-ga-kill"));
+assert.ok(ids.has("symphogear"));
+assert.deepEqual(catalog.canonDossierPriority, ["my-hero-academia", "one-punch-man", "to-love-ru", "high-school-dxd", "madoka-magica", "selector-wixoss", "akame-ga-kill", "symphogear"]);
 assert.ok(app.includes('id="story-plan-inspiration"'), "Story Foundry needs an inspiration selector");
 assert.ok(app.includes('profiles[inspiration]'), "selected inspiration must affect the generated conflict");
 for (const [file, expected] of [
