@@ -2,6 +2,12 @@
 
 Este es el punto de entrada para continuar el trabajo sin repetir registros. El contenido canónico sigue siendo provisional hasta que las fichas tengan fuentes y localizadores cotejados.
 
+## Estado de cobertura al 2026-10-14
+
+- **100 % de cobertura de mapa provisional de la novela principal publicada al corte:** 21/21 volúmenes tienen resumen de orientación.
+- **0 % con localizadores internos de capítulo/página cotejados en ese lote** y **0/48 registros plenamente aprobados**; el corpus no es todavía exhaustivo.
+- Informe con métricas, estados exactos, huecos críticos y prioridades: [Cobertura y cierre factual](COVERAGE_STATUS_2026-10-14.md).
+
 ## 1. Guías de trabajo
 
 - [Matriz de integración DanMachi — auditoría 2026-10](../../docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md) — estado de ramas, riesgos de sobrescritura y gates de validación; no implica que la integración esté cerrada.
