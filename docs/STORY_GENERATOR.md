@@ -17,7 +17,7 @@ WordWaifu existe para ayudar a convertir una idea en una historia desarrollable 
 
 ## Función implementada en este cambio
 
-El editor de «Historias y novelas» incluye un generador local de estructura por reglas. Pide la cantidad de capítulos (1–500), tipo de final, protagonistas, elenco, romance, traumas y un resumen de referencia opcional. Crea capítulos con estado `outline`, sin inventar que ya existe un manuscrito.
+El editor de «Historias y novelas» incluye un generador local de estructura por reglas y generadores de semillas para personajes y mundos. El índice pide la cantidad de capítulos (1–500), tipo de final, protagonistas, elenco, romance, traumas y un resumen de referencia opcional. Crea capítulos con estado `outline`, sin inventar que ya existe un manuscrito. Las semillas de personajes proponen personalidad, objetivo, defecto, trauma, relación con el grupo, capacidad, límite y arco; las semillas de mundo proponen premisa, reglas, presión social, facciones y gancho inicial. El generador de poderes ya existente sigue siendo una herramienta separada.
 
 El índice reparte el arco entre:
 
