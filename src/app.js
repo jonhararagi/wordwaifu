@@ -1302,7 +1302,7 @@
         arcs: arcLines,
         oldChapters: story.chapters
       };
-      if (!root.WordWaifuStoryOutline || typeof root.WordWaifuStoryOutline.generateOutline !== "function") {
+      if (!window.WordWaifuStoryOutline || typeof window.WordWaifuStoryOutline.generateOutline !== "function") {
         if (status) status.textContent = "No se cargó el motor narrativo. Recargá la página; no se modificó el índice.";
         return;
       }
@@ -1333,7 +1333,7 @@
       story.pantheon = read("storyPantheon");
       story.ensemble = read("storyEnsemble");
       story.arcs = arcLines;
-      story.chapters = root.WordWaifuStoryOutline.generateOutline(input);
+      story.chapters = window.WordWaifuStoryOutline.generateOutline(input);
       const saved = await saveProject();
       renderDirectory();
       const nextStatus = $("#story-outline-status", container);
