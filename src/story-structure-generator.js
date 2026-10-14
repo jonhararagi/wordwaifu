@@ -106,7 +106,7 @@
     const chapters = [];
 
     for (let index = 0; index < count; index += 1) {
-      const progress = count === 1 ? 1 : index / (count - 1);
+      const progress = count === 1 ? 1 : index / count;
       const phase = phaseFor(progress);
       const phaseIndex = PHASES.findIndex(item => item.key === phase.key);
       const [beatTitle, beat] = chooseBeat(phase, phaseIndex, index);
