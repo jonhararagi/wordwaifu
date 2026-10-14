@@ -1457,6 +1457,16 @@
       story.ensemble = String(form.get("storyEnsemble") || "").trim();
       story.status = String(form.get("storyStatus") || "draft");
       story.arcs = String(form.get("storyArcs") || "").split("\n").map((line) => line.trim()).filter(Boolean);
+      story.outlinePrefs = {
+        chapterCount: Math.max(1, Math.min(500, Number($("#story-outline-count", container)?.value || 24))),
+        ending: $("#story-outline-ending", container)?.value === "open" ? "open" : "closed",
+        protagonist: $("#story-outline-protagonist", container)?.value || "",
+        cast: $("#story-outline-cast", container)?.value || "",
+        romance: $("#story-outline-romance", container)?.value || "",
+        trauma: $("#story-outline-trauma", container)?.value || "",
+        referenceSummary: $("#story-outline-reference", container)?.value || ""
+      };
+      story.sourceSummary = story.outlinePrefs.referenceSummary;
       const saved = await saveProject();
       renderDirectory();
       const status = $("#story-editor-status", container);
