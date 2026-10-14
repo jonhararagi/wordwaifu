@@ -160,3 +160,43 @@ La historia de la candidata original tiene 647 commits exclusivos frente a los 6
 - **Lo que los checks no certifican:** aprobación factual de todos los expedientes DanMachi, ni revisión visual manual en Windows. El catálogo sigue provisional y esos límites no se convierten en «completado» solo por CI verde.
 
 Esta ruta elimina el problema de historial: el cambio propuesto para `main` queda como un conjunto revisable de 86 archivos y dos commits sobre el HEAD de `main`, en vez de intentar fusionar 647 commits como si fueran todos deltas pendientes. La integración definitiva depende de los checks sobre la revisión final de esta rama.
+
+
+## Addendum de cierre posterior a la fusión — 2026-10-14
+
+Este addendum actualiza los estados operativos descritos en las secciones anteriores. Las notas históricas de preparación de la PR no deben interpretarse como el estado actual.
+
+### Integración de código
+
+- **PR #18:** fusionada por el propietario del repositorio el 2026-10-14 a las 11:56:41 UTC.
+- **Commit de squash de la PR:** `97ca5cd757ba804d2d8ea017221e0c5aca02e202`.
+- **HEAD de `main` verificado después de los commits de seguimiento:** `b1367c0126ad14e90913293d642bda74ed038cb5`.
+- **Validate WordWaifu #1031:** aprobado en el HEAD `b1367c0126ad14e90913293d642bda74ed038cb5` — https://github.com/jonhararagi/wordwaifu/actions/runs/38560675575
+- **DanMachi Lore and Retrieval Integrity #537:** aprobado en el mismo HEAD — https://github.com/jonhararagi/wordwaifu/actions/runs/38560675658
+
+### Regresión de persistencia del Panel de arte
+
+La revisión de `main` confirma que la protección contra resurrección de asignaciones borradas está integrada y tiene cobertura en `tests/browser_smoke.cjs`:
+
+- `src/art-studio.js` persiste las marcas en `wordwaifu.art.deleted.v1`.
+- La lectura de la galería filtra claves marcadas como borradas incluso si queda una copia antigua en el respaldo local.
+- La prueba simula que falla la limpieza de `wordwaifu.art.assignments.v1`, recarga la aplicación y comprueba que la copia obsoleta no reaparece.
+- La misma prueba comprueba que editar una asignación se conserva en IndexedDB tras una recarga completa.
+
+El workflow #537 ejecutó el trabajo `Catalog, retrieval and browser smoke` con resultado `success`; no hace falta duplicar este arreglo en una rama posterior.
+
+### Límite de cierre del catálogo
+
+El catálogo sigue marcado explícitamente como provisional. En el snapshot revisado contiene 48 registros, 67 IDs reservados y 100 documentos de apoyo. Los estados de los 48 registros son:
+
+| Estado | Cantidad |
+|---|---:|
+| `provisional` | 21 |
+| `draft` | 13 |
+| `pending_verification` | 6 |
+| `proposed_author_event` | 4 |
+| `source_checked_partial` | 2 |
+| `provisional_inference` | 1 |
+| `provisional_reference_checked` | 1 |
+
+No hay registros declarados completos en este snapshot. Los checks de CI demuestran integridad estructural, recuperación y pruebas automatizadas; no equivalen a cotejar todos los hechos con capítulos o fuentes primarias. Por tanto, el **cierre de integración de código está verificado**, pero el **cierre editorial/factual del catálogo sigue pendiente** hasta que los registros se cotejen y actualicen con evidencia primaria trazable.
