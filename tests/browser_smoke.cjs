@@ -239,7 +239,8 @@ async function run() {
     await page.locator("#story-plan-power").fill("Eco de memoria");
     await page.locator("#story-plan-generate-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-card").length === 10, { timeout: 10000 });
-    assert.ok((await page.locator(".story-chapter-card").first().innerText()).includes("Iria Test"), "generated chapter summaries should use the chosen protagonist");
+    assert.ok((await page.locator(".story-chapter-card").first().innerText()).includes("Objetivo dramático:"), "generated chapter should include its dramatic objective");
+    assert.ok((await page.locator("#story-meta-form [name='storyEnsemble']").inputValue()).includes("Iria Test"), "generated cast should preserve the chosen protagonist in the ensemble plan");
     assert.ok((await page.locator(".story-chapter-card").last().innerText()).includes("pregunta mayor"), "open ending should leave a forward-looking question");
     assert.ok((await page.locator("#story-meta-form [name='storyArcs']").inputValue()).includes("Presentación y detonante"), "generated outline should persist narrative phases as arcs");
     assert.equal(await page.locator("#story-plan-ending").inputValue(), "open");
