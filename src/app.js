@@ -1305,8 +1305,9 @@
       });
       story.arcs = generated.acts.map((act) => ({title:act.range + " · " + act.title, key:act.key, start:act.start, end:act.end}));
       const saved = await saveProject();
-      if (status) status.textContent = "Índice generado: " + count + " capítulos, " + generated.acts.length + " tramos narrativos y " + (story.endingType === "open" ? "final abierto" : "final cerrado") + ". " + (saved ? "Guardado en el proyecto." : "El guardado no se confirmó; exportá el proyecto JSON.");
       renderDirectory();
+      const refreshedStatus = $("#story-foundry-status");
+      if (refreshedStatus) refreshedStatus.textContent = "Índice generado: " + count + " capítulos, " + generated.acts.length + " tramos narrativos y " + (story.endingType === "open" ? "final abierto" : "final cerrado") + ". " + (saved ? "Guardado en el proyecto." : "El guardado no se confirmó; exportá el proyecto JSON.");
     });
     const generatePowerButton = $("#story-power-generate-button", container);
     if (generatePowerButton) generatePowerButton.addEventListener("click", async () => {
