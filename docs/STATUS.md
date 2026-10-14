@@ -19,12 +19,12 @@
 - Objetivo: aplicación local/offline-first para organizar universos, canon, atlas temporal, personajes, relaciones, acontecimientos, organizaciones e historias/novelas.
 - **Avance global estimado: 19%** de la visión completa; estimación de alcance, no métrica de líneas de código ni de cobertura.
 - Tecnología: HTML/CSS/JavaScript, SVG, IndexedDB y respaldo de compatibilidad en localStorage.
-- WordWaifu gestiona canon y planificación narrativa; BotImagen gestiona recursos visuales. La integración todavía no está implementada.
+- WordWaifu gestiona canon y planificación narrativa; BotImagen gestiona recursos visuales. La candidata de esta rama consolida módulos de historias, lore, expedientes, arte y papelera, pero la integración global sigue en revisión y no debe declararse cerrada.
 
 ## GitHub y control de cambios
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama activa WF-004-C.3: `work/wf-004-c3-project-trash`.
-- `main`: `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`.
+- Rama autorizada de esta misión: `work/story-completion-danmachi-audit-2026-10`. Las referencias a ramas de tareas anteriores en esta sección son contexto histórico, no la rama activa de esta auditoría.
+- `main`: el SHA indicado en la documentación histórica corresponde al commit inicial y está obsoleto; consultar el ref actual antes de cualquier integración. Esta misión no modifica `main`.
 - Comparación comprobada el 2026-10-10: rama de trabajo **por delante de main / 0 behind** respecto de `main`; esto describe la historia acumulada de la rama, no 220 tareas completadas.
 - PR #1: [abierto en borrador](https://github.com/jonhararagi/wordwaifu/pull/1), sin fusionar; su head corresponde a otra rama. PR #3: [abierto, no fusionado](https://github.com/jonhararagi/wordwaifu/pull/3), head `work/wf-004-c3-project-trash`; no fue creado ni modificado en esta iteración. No se abrió otro PR ni se hizo merge.
 - Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
