@@ -136,6 +136,15 @@ async function run() {
     await page.locator('.nav-item[data-view="stories"]').click();
     await page.locator("#story-create-button").click();
     await page.locator("#story-meta-form").waitFor();
+    // The offline story-bible generator should fill blank planning fields without overwriting user-authored notes.
+    await page.locator("#story-meta-form [name='storyWorldType']").selectOption("superpower-action");
+    await page.locator("#story-meta-form [name='storyCastPlan']").fill("Mi protagonista manual: quiere proteger a su hermana y desconfía de los héroes.");
+    await page.locator("#story-bible-generate-button").click();
+    assert.equal(await page.locator("#story-meta-form [name='storyCastPlan']").inputValue(), "Mi protagonista manual: quiere proteger a su hermana y desconfía de los héroes.", "story bible generation must preserve non-empty user notes");
+    assert.ok((await page.locator("#story-meta-form [name='storyPersonalityPlan']").inputValue()).includes("Protagonista:"), "story bible generator should propose distinct character voices");
+    assert.ok((await page.locator("#story-meta-form [name='storyWorldRules']").inputValue()).includes("Cada poder tiene condición"), "superpower world seed should establish power conditions and limits");
+    assert.ok((await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue()).includes("Contramedida:"), "power seed should include a countermeasure, not only a power fantasy");
+    assert.ok((await page.locator("#story-bible-status").textContent()).includes("campos vacíos"), "generator should report how many blank fields it filled");
     await page.locator("#story-meta-form [name='storyName']").fill("Historia de prueba");
     await page.locator("#story-meta-form [name='storyDescription']").fill("Sinopsis de prueba para comprobar el guardado.");
     await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
