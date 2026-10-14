@@ -1,4 +1,16 @@
 # Estado de WordWaifu
+
+## Actualización de producto — WordWaifu Story Foundry (2026-10-14)
+
+- **Propósito principal:** convertir una idea en una historia completa y coherente, enlazando mundo, personajes, personalidades, poderes, relaciones, villanos, intereses amorosos, heridas emocionales, arcos y capítulos.
+- **Rama de implementación:** `work/story-generator-core-2026-10-14`. Esta rama parte de la `main` posterior a la PR #18; los cambios de Story Foundry no se han fusionado en `main`.
+- **Índice de novela:** implementado en el editor «Historias y novelas». Permite elegir 1–500 capítulos y final abierto/cerrado, incorpora premisa/conflicto, protagonistas, elenco, romance, trauma y resumen de referencia, y propone resúmenes editables para presentación, progreso, falsa seguridad, caída, clímax y resolución.
+- **Semillas de personaje y mundo:** implementadas como propuestas editables. Los personajes incluyen personalidad, objetivo, defecto, trauma, vínculo, capacidad, límite y arco; los mundos incluyen premisa, reglas, presión social, facciones y gancho. El generador de poderes ya existente sigue separado.
+- **Referencias tipo wiki:** se aceptan como contexto de referencia. Deben distinguirse los hechos atribuidos a la obra fuente, la interpretación y las propuestas originales; una wiki comunitaria no se presenta como fuente primaria.
+- **Persistencia y protección:** los capítulos con manuscrito se conservan al generar un índice nuevo; el generador no los sobrescribe silenciosamente. Los resultados se guardan como esquemas editables, no se marcan como manuscritos completos.
+- **Evidencia funcional:** [Validate WordWaifu #1081](https://github.com/jonhararagi/wordwaifu/actions/runs/38572910615) — `success`, incluido el smoke test de Chromium para el índice de 30 capítulos, final abierto, contexto tipo wiki, conservación del manuscrito y generadores de personaje/mundo.
+- **Limitación explícita:** el núcleo actual es local y basado en reglas. No genera todavía prosa completa mediante IA ni completa automáticamente todos los perfiles de personajes, villanos, romances y mundos; esos son siguientes módulos de producto. El índice requiere revisión humana.
+
 ## Estado operativo de integración — 2026-10-14
 
 - **HEAD actual de `main` antes de esta actualización documental:** `4e6010df3b52ec64d9d04aa3c27ac7510ce831f8`. La integración de código/lore ya está publicada en `main`.
