@@ -252,7 +252,7 @@ async function run() {
     assert.equal(new Set(generatedTitles).size, 12, "generated chapter titles must be unique and numbered");
     assert.ok(generatedTitles.every((title, index) => title.startsWith("Capítulo " + (index + 1) + " — ")), "every generated title must expose its stable chapter number and narrative phase");
     assert.equal(new Set(generatedSummaries).size, 12, "each chapter needs a distinct summary rather than repeated generic text");
-    assert.ok(generatedSummaries.some(summary => summary.includes("Dinámica y cambios del mundo")), "outline generation must carry world dynamics into chapter guidance");
+    assert.ok(generatedSummaries.some(summary => summary.includes("Presión y cambios del mundo")), "outline generation must carry world dynamics into chapter guidance");
     assert.ok(generatedSummaries.some(summary => summary.includes("Motor de revelación")), "outline generation must carry mystery/reveal setup into chapter guidance");
     assert.ok(generatedSummaries.some(summary => summary.includes("Panteón y fuerzas míticas")), "outline generation must carry mythic worldbuilding into chapter guidance");
     assert.equal(await page.locator("#story-meta-form [name='storyChapterCount']").inputValue(), "12");
