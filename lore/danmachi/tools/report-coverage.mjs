@@ -41,7 +41,7 @@ if (!catalog || !Array.isArray(catalog.records)) errors.push("catalog.records mu
 const volumeText = readText(volumeMapPath);
 const publishedMatch = volumeText.match(/El volumen (\d+) se incorpora como volumen principal publicado al corte/i);
 const publishedMainVolumeCount = publishedMatch ? Number(publishedMatch[1]) : null;
-const volumeBlocks = [...volumeText.matchAll(/^### DMR-008-CLM-\d{3} · Volumen (\d{1,2}):[^\n]*\n([\s\S]*?)(?=^### |^## |$)/gm)];
+const volumeBlocks = [...volumeText.matchAll(/^### DMR-008-CLM-\d{3} · Volumen (\d{1,2}):[^\n]*\n([\s\S]*?)(?=^### |^## |$(?![\s\S]))/gm)];
 const volumeNumbers = [...new Set(volumeBlocks.map(match => Number(match[1])))].sort((a, b) => a - b);
 const internalLocatorPattern = /\b(?:cap[ií]tulo|chapter|p[aá]gina|page|escena|scene)\s*(?:n[úu]m(?:ero)?\.?\s*)?(?:\d+|[ivxlcdm]+)\b/i;
 const unverifiedLocatorPattern = /no cotejad|not checked|sin localizador|pendiente de cotejo/i;
