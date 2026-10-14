@@ -335,7 +335,7 @@ async function run() {
     assert.ok(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] .archive-evidence').count() >= 1);
     await page.locator("#archive-tab-relationships").click();
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').count() > 0);
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').click();
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_17.png"));
@@ -353,7 +353,7 @@ async function run() {
       "The later novel continuity should show Ryu's journey to see Astrea in the timeline.");
     await page.locator("#archive-tab-relationships").click();
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').click();
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-MAIN-LN");
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-CECIL-BLACKLIZA"]').count() > 0,
@@ -390,7 +390,7 @@ async function run() {
       "Anime-continuity relationships should expose Lyra's strategic support.");
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').count() > 0,
       "Ryu's network should open a named member of the historic Astrea Familia roster.");
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').click();
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Iska Bra");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-ANIME");
     assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_25.png"),
