@@ -2621,8 +2621,10 @@ async function run() {
       const afterDelete = await repository.listTrash();
       const leftAfterDelete = await repository.read("projects", leftId);
       const rightTrashAfterDelete = await repository.read("trash", rightId);
+      const rightPermanentMarkerRetained = Boolean(rightTrashAfterDelete?.permanentlyDeleted &&
+        rightTrashAfterDelete.projectData === undefined && rightTrashAfterDelete.snapshots === undefined);
       const leftSnapshots = await repository.listSnapshots(leftId);
-      if (!permanentlyDeleted.permanentlyDeleted || rightTrashAfterDelete || !leftAfterDelete ||
+      if (!permanentlyDeleted.permanentlyDeleted || !rightPermanentMarkerRetained || !leftAfterDelete ||
           leftAfterDelete.data.project.id !== leftId || afterDelete.some((item) => item.projectId === rightId) ||
           leftSnapshots.length !== restored.snapshotCount) {
         throw new Error("Permanent deletion must affect only the selected duplicate-name ID and preserve the restored project's snapshots.");
@@ -2635,12 +2637,14 @@ async function run() {
         leftId, rightId, sameName: left.project.name,
         restoredSnapshotCount: restored.snapshotCount,
         trashIdsAfterRestore: afterRestore.map((item) => item.projectId),
+        rightPermanentMarkerRetained: true,
         leftSurvivedRightDelete: true
       };
     });
     assert.equal(duplicateNameEvidence.sameName, "Universo Nombre Duplicado");
     assert.notEqual(duplicateNameEvidence.leftId, duplicateNameEvidence.rightId);
     assert.equal(duplicateNameEvidence.leftSurvivedRightDelete, true);
+    assert.equal(duplicateNameEvidence.rightPermanentMarkerRetained, true, "Permanent deletion keeps a minimal marker without recoverable payload.");
     assert.ok(duplicateNameEvidence.restoredSnapshotCount >= 1, "Restore must preserve the selected project's snapshots.");
     process.stdout.write("PASS duplicate-name trash isolation: same-name projects remain distinct by ID across move, restore, and permanent deletion.\\n");
 
@@ -2756,6 +2760,23 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
     const backgroundAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"));
     assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
+    // A localStorage-only art assignment remains visible even if IndexedDB opens but the write fell back.
+    const fallbackArtRecord = { key: "background:art-fallback-only", category: "background", entityId: "art-fallback-only", entityName: "Fallback solo local", imageUrl: "", fileDataUrl: "", prompt: "Registro de respaldo local.", updatedAt: new Date().toISOString() };
+    await page.evaluate(record => {
+      const key = "wordwaifu.art.assignments.v1";
+      const existing = JSON.parse(localStorage.getItem(key) || "{}");
+      existing[record.key] = record;
+      localStorage.setItem(key, JSON.stringify(existing));
+    }, fallbackArtRecord);
+    const fallbackArtVisible = await page.evaluate(async key => (await window.WordWaifuArtStudio.listAssignments()).some(record => record.key === key), fallbackArtRecord.key);
+    assert.equal(fallbackArtVisible, true, "The gallery reader must merge fallback records even when IndexedDB itself is readable.");
+    await page.evaluate(key => {
+      const storeKey = "wordwaifu.art.assignments.v1";
+      const existing = JSON.parse(localStorage.getItem(storeKey) || "{}");
+      delete existing[key];
+      localStorage.setItem(storeKey, JSON.stringify(existing));
+    }, fallbackArtRecord.key);
+    process.stdout.write("PASS art fallback merge: localStorage-only assignments remain visible when IndexedDB reads succeed.\\n");
     await page.screenshot({ path: path.join(root, "artifacts", "art-studio.png"), fullPage: true });
     // A user-assigned portrait takes precedence over the linked reference art in the archive.
     await page.locator('.nav-item[data-view="lore"]').click();
