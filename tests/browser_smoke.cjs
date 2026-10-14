@@ -238,6 +238,18 @@ async function run() {
     assert.ok((await page.locator("#story-meta-form [name='storyProtagonistProfile']").inputValue()).length > 40);
     assert.ok((await page.locator("#story-meta-form [name='storyAntagonistProfile']").inputValue()).length > 40);
     assert.ok((await page.locator("#story-meta-form [name='storyPowerRules']").inputValue()).includes("coste") || (await page.locator("#story-meta-form [name='storyPowerRules']").inputValue()).includes("recuerdo"));
+    // Character Forge inside Story Foundry: append a full role-specific dossier without erasing existing cast notes.
+    const companionsBeforeCharacter = await page.locator("#story-meta-form [name='storyCompanionProfiles']").inputValue();
+    await page.locator("#story-character-role").selectOption("companion");
+    await page.locator("#story-character-name").fill("Nerea Prueba");
+    await page.locator("#story-generate-character-button").click();
+    await page.waitForFunction(() => (document.querySelector("#story-foundry-status")?.textContent || "").includes("Ficha generada"), { timeout: 10000 });
+    const generatedCompanion = await page.locator("#story-meta-form [name='storyCompanionProfiles']").inputValue();
+    assert.ok(generatedCompanion.includes("Nerea Prueba"), "the character generator must respect the supplied name");
+    assert.ok(generatedCompanion.includes("Apariencia y presencia") && generatedCompanion.includes("Secreto:") && generatedCompanion.includes("Límite/coste:"),
+      "the generated character sheet must include appearance, secret, and ability cost");
+    assert.ok(generatedCompanion.startsWith(companionsBeforeCharacter), "the generator must append to, not overwrite, existing companion notes");
+    process.stdout.write("PASS Character Forge in Story Foundry: role-aware dossier appends without overwriting existing notes.\\n");
     // Story Foundry end-to-end: generate a 30-chapter arc plan, then regenerate as a 12-chapter open ending.
     await page.locator("#story-meta-form [name='storyChapterCount']").fill("30");
     await page.locator("#story-meta-form [name='storyEndingType']").selectOption("closed");
