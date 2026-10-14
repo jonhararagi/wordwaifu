@@ -39,6 +39,14 @@ Un modelo de IA podría integrarse en el futuro como módulo opcional. Nunca ser
 - **Command Desk:** pestaña tipo chat que ejecuta comandos locales conocidos, consulta el canon y lanza generadores. No fingirá comprender lenguaje libre como un LLM.
 - **Visual Library:** referencias e imágenes vinculadas a entidades, con procedencia y metadatos. La generación de imágenes queda fuera del núcleo offline inicial.
 
+## Story Foundry: propósito central y generadores
+
+La finalidad principal de WordWaifu es transformar una idea en un universo narrativo y convertir ese universo en una historia planificada, editable y exportable. El flujo conecta generadores de mundos, personajes, poderes, relaciones, conflictos, arcos y capítulos; no se limita a guardar fichas ni a producir una sinopsis.
+
+El planificador permite elegir entre 1 y 500 capítulos y un final abierto o cerrado. Genera un índice con fases dramáticas proporcionales, objetivos y resúmenes por capítulo; los perfiles y el manuscrito siguen siendo editables. El generador de personajes ofrece borradores por rol con deseo, miedo, personalidad, defecto, capacidad, coste, secreto, apariencia, voz y arco narrativo.
+
+Leé el [contrato funcional de Story Foundry](docs/STORY_FOUNDRY_SPEC.md) para el propósito del producto, los generadores previstos, las reglas de continuidad y los criterios de aceptación. La especificación diferencia explícitamente capacidades implementadas de módulos todavía pendientes.
+
 ## Demostración de la experiencia objetivo
 
 Un universo de fantasía original puede tener una gran ciudad central. Al hacer clic en ella se abre una ficha de ciudad con distritos, gremios, establecimientos, residentes y acontecimientos. Al seleccionar un personaje se muestra su personalidad, edad, historia, relaciones y lugares donde estuvo. Un selector temporal permite cambiar entre «estado actual», «antes del incidente» y «capítulo 12».
@@ -135,7 +143,7 @@ Consulta [la hoja de ruta](docs/ROADMAP.md) para las etapas, puertas de calidad 
 
 ### Próximo paso inmediato
 
-Inspeccionar el árbol real del repositorio, identificar tecnología y archivos existentes, fijar el alcance mínimo viable y crear una primera experiencia ejecutable con pruebas. No se debe elegir arquitectura definitiva antes de confirmar el contenido actual del repositorio y los objetivos de uso.
+Completar la validación de interfaz y pruebas de Story Foundry: generador de personajes por rol, conservación de fichas existentes, planificación para historias cortas y largas, finales abiertos/cerrados y persistencia tras recargar. Después, cerrar los huecos de World Forge, Power Forge y Continuity Guard de acuerdo con el contrato funcional, sin declarar terminados los submódulos que aún no tengan pruebas.
 
 ## Cómo se trabajará
 
