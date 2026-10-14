@@ -7,6 +7,8 @@
   const MAX_FILE_BYTES = 5 * 1024 * 1024;
   let databasePromise;
   const memoryCache = new Map();
+  // Prevent deleted fallback records from reappearing during the current session.
+  const deletedKeys = new Set();
 
   function openDatabase() {
     if (databasePromise) return databasePromise;
@@ -49,12 +51,13 @@
     // successful fallback saves; IndexedDB wins when both contain the same key.
     const records = new Map(indexedRecords.map(record => [record.key, record]));
     for (const record of Object.values(fallbackRead())) {
-      if (record && record.key && !records.has(record.key)) records.set(record.key, record);
+      if (record && record.key && !records.has(record.key) && !deletedKeys.has(record.key)) records.set(record.key, record);
     }
-    return Array.from(records.values());
+    return Array.from(records.values()).filter(record => record && !deletedKeys.has(record.key));
   }
 
   async function readOne(key) {
+    if (deletedKeys.has(key)) return null;
     if (memoryCache.has(key)) return memoryCache.get(key);
     try {
       const db = await openDatabase();
@@ -80,6 +83,7 @@
         transaction.onerror = () => reject(transaction.error);
         transaction.onabort = () => reject(transaction.error || new Error("Guardado cancelado"));
       });
+      deletedKeys.delete(record.key);
       memoryCache.set(record.key, record);
       return "indexeddb";
     } catch (_) {
@@ -90,6 +94,7 @@
       fallback[record.key] = record;
       try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
       catch (_) { throw new Error("No hay espacio disponible para guardar este recurso en el navegador."); }
+      deletedKeys.delete(record.key);
       memoryCache.set(record.key, record);
       return "local";
     }
@@ -108,6 +113,7 @@
         try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
         catch (_) { throw new Error("No se pudo eliminar el recurso del respaldo local."); }
       }
+      deletedKeys.add(key);
       memoryCache.delete(key);
       return;
     }
@@ -126,12 +132,13 @@
       transaction.onabort = () => reject(transaction.error || new Error("La eliminación del recurso fue cancelada."));
     });
 
+    deletedKeys.add(key);
     memoryCache.delete(key);
     const fallback = fallbackRead();
     if (fallback[key]) {
       delete fallback[key];
       try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
-      catch (_) { /* IndexedDB deletion succeeded; a stale fallback is not authoritative. */ }
+      catch (_) { throw new Error("El recurso se eliminó de IndexedDB, pero no se pudo limpiar el respaldo local; la copia de respaldo podría reaparecer al reiniciar el navegador."); }
     }
   }
 
