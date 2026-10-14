@@ -1327,12 +1327,18 @@
         {name:"Resolución y consecuencias",start:0,end:0,goal:"resolver el arco y mostrar el mundo transformado",beat: ending==="open"?"El conflicto inmediato cambia de forma, pero una nueva evidencia abre una pregunta mayor.":ending==="arc"?"El objetivo del arco se resuelve y aparece una consecuencia que prepara la siguiente etapa.":"Las decisiones tienen consecuencias duraderas y el conflicto central obtiene una respuesta clara."}
       ];
       const weights=[0.16,0.22,0.17,0.16,0.19,0.10];
-      let cursor=1;
-      phases.forEach((phase,index)=>{phase.start=cursor;phase.end=index===phases.length-1?count:Math.max(cursor,Math.min(count,Math.round(count*weights.slice(0,index+1).reduce((a,b)=>a+b,0))));cursor=phase.end+1;});
-      phases.forEach((phase,index)=>{if(phase.start>count){phase.start=count;phase.end=count;} if(index>0)phase.start=phases[index-1].end+1; if(phase.end<phase.start)phase.end=phase.start;});
+      const activePhases=phases.slice(0,Math.min(phases.length,count));
+      const weightTotal=activePhases.reduce((sum,phase)=>sum+weights[phases.indexOf(phase)],0);
+      let cursor=1, cumulative=0;
+      activePhases.forEach((phase,index)=>{
+        phase.start=cursor;
+        cumulative+=weights[phases.indexOf(phase)];
+        phase.end=index===activePhases.length-1?count:Math.max(cursor,Math.min(count-(activePhases.length-index-1),Math.round(count*cumulative/weightTotal)));
+        cursor=phase.end+1;
+      });
       const chapterRows=[];
       for(let n=1;n<=count;n++){
-        const phase=phases.find((item)=>n>=item.start&&n<=item.end)||phases[phases.length-1];
+        const phase=activePhases.find((item)=>n>=item.start&&n<=item.end)||activePhases[activePhases.length-1];
         const local=n-phase.start+1, span=Math.max(1,phase.end-phase.start+1);
         const midpoint=local===1?"introduce una pregunta concreta":local===span?"cerrar esta fase con una decisión y una consecuencia":"complicar el objetivo y revelar información parcial";
         chapterRows.push({id:"chapter-"+Date.now().toString(36)+"-"+n,title:"Capítulo "+n+": "+phase.name,summary:"Objetivo dramático: "+phase.goal+". En este capítulo, "+cast.hero+" debe "+midpoint+". Contexto: "+premise+". Obstáculo: "+conflict+". Desarrollo: "+phase.beat+" Mantener presentes el límite de "+cast.power+" y el coste emocional relacionado con "+cast.wound+". Cada avance debe proceder de una decisión, preparación o colaboración; evitar soluciones gratuitas.",content:"",status:"outline",phase:phase.name});
@@ -1350,11 +1356,11 @@
       story.signaturePower=cast.power;
       story.worldRules=worldRules;
       story.ensemble="Protagonista: "+cast.hero+" | deseo: convertir su problema en una elección propia | herida/temor: "+cast.wound+" | cambio: aprende a pedir ayuda sin ceder su responsabilidad.\nCompañero/coprotagonista: "+cast.companion+" | objetivo propio: resolver su conflicto aunque el protagonista no esté presente | decisión decisiva: contradice al grupo cuando la estrategia amenaza sus principios.\nAntagonista: "+cast.villain+" | objetivo comprensible: imponer una solución que considera necesaria | método: convierte personas en recursos | punto ciego: confunde control con estabilidad.\nInterés amoroso: "+cast.romance+" | vínculo basado en reciprocidad, límites y objetivos propios.";
-      story.arcs=phases.filter((phase)=>phase.start<=count).map((phase)=>"Capítulos "+phase.start+"–"+phase.end+": "+phase.name+" — "+phase.goal);
+      story.arcs=activePhases.map((phase)=>"Capítulos "+phase.start+"–"+phase.end+": "+phase.name+" — "+phase.goal);
       const saved=await saveProject();
       renderDirectory();
-      const status=$("#story-plan-status",container);
-      if(status)status.textContent=(saved?"Índice generado y guardado. ":"Índice generado en pantalla; el guardado no se confirmó. ")+count+" capítulos · "+phases.filter(p=>p.start<=count).map(p=>p.name+" ("+p.start+"–"+p.end+")").join(" · ")+". Revisá y editá cada resumen; son una primera escaleta, no un manuscrito terminado.";
+      const status=$("#story-plan-status");
+      if(status)status.textContent=(saved?"Índice generado y guardado. ":"Índice generado en pantalla; el guardado no se confirmó. ")+count+" capítulos · "+activePhases.map(p=>p.name+" ("+p.start+"–"+p.end+")").join(" · ")+". Revisá y editá cada resumen; son una primera escaleta, no un manuscrito terminado.";
     });
     const generatePowerButton = $("#story-power-generate-button", container);
     if (generatePowerButton) generatePowerButton.addEventListener("click", async () => {
