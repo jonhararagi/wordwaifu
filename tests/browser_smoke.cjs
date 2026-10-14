@@ -264,6 +264,24 @@ async function run() {
     assert.ok(await page.evaluate(() => document.querySelectorAll(".story-chapter-form [name='chapterSummary']")[11]?.value.includes("final abierto")), "Open ending should close the emotional arc while leaving a deliberate question.");
     assert.ok((await page.locator("#story-foundry-status").innerText()).includes("final abierto"));
     process.stdout.write("PASS Story Foundry UI: configurable chapter count, act index, character design inputs, collapse phase and open ending.\\n");
+    // Markdown roundtrip must retain the planning controls and generated profiles, not only chapter prose.
+    const markdownDownloadPromise = page.waitForEvent("download");
+    await page.locator("#story-export-button").click();
+    const markdownDownload = await markdownDownloadPromise;
+    const markdownStream = await markdownDownload.createReadStream();
+    const markdownChunks = [];
+    for await (const chunk of markdownStream) markdownChunks.push(chunk);
+    const exportedStoryMarkdown = Buffer.concat(markdownChunks);
+    assert.ok(exportedStoryMarkdown.toString("utf8").includes("## Cantidad de capítulos planificados"));
+    assert.ok(exportedStoryMarkdown.toString("utf8").includes("## Perfil del protagonista"));
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-import-file").setInputFiles({name:"story-foundry-roundtrip.md",mimeType:"text/markdown",buffer:exportedStoryMarkdown});
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form [name='chapterTitle']").length === 12, null, {timeout:10000});
+    assert.equal(await page.locator("#story-meta-form [name='storyChapterCount']").inputValue(),"12");
+    assert.equal(await page.locator("#story-meta-form [name='storyEndingType']").inputValue(),"open");
+    assert.ok((await page.locator("#story-meta-form [name='storyProtagonistProfile']").inputValue()).length > 40);
+    assert.ok((await page.locator("#story-meta-form [name='storyPowerRules']").inputValue()).length > 20);
+    process.stdout.write("PASS Story Foundry Markdown: chapter plan, ending mode and creative profiles survive export/import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
     await page.locator("#global-search").fill("Ryu");
