@@ -1,7 +1,7 @@
 name: DanMachi Lore and Retrieval Integrity
 on:
   push:
-    branches: [main, feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10, work/story-completion-danmachi-audit-2026-10, work/mainline-reconciliation-2026-10-14]
+    branches: [main, feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10, work/story-completion-danmachi-audit-2026-10, work/mainline-reconciliation-2026-10-14, work/post-merge-closure-audit-2026-10-14]
     paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/project-repository.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   pull_request:
     paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
