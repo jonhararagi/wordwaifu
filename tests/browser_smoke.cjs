@@ -248,7 +248,14 @@ async function run() {
     await page.locator("#story-plan-count").fill("1");
     await page.locator("#story-plan-generate-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-card").length === 1, { timeout: 10000 });
-    process.stdout.write("PASS Story Foundry: 10-chapter outline, open ending, cast inputs, saved arcs and 1-chapter edge case.\\n");
+    assert.ok((await page.locator(".story-chapter-form [name='chapterTitle']").first().inputValue()).includes("Resolución y consecuencias"), "one-chapter stories must retain a climax/resolution phase instead of stopping at the introduction");
+    const compactSummary = await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue();
+    assert.ok(compactSummary.includes("nueva evidencia abre una pregunta mayor"), "a one-chapter open ending must retain the forward-looking resolution beat");
+    const compactArcs = await page.locator("#story-meta-form [name='storyArcs']").inputValue();
+    assert.ok(compactArcs.includes("Resolución y consecuencias"), "compact story arc plan must include resolution");
+    const dossiers = await page.locator("#story-meta-form [name='storyEnsemble']").inputValue();
+    assert.ok(dossiers.includes("Necesidad:") && dossiers.includes("Personalidad:") && dossiers.includes("Límite y coste:"), "character generator must save structured profiles, not only role labels");
+    process.stdout.write("PASS Story Foundry: adaptive 10- and 1-chapter outlines preserve resolution, open ending and structured character dossiers.\\n");
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
