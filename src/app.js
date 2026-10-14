@@ -1292,7 +1292,6 @@
       const world = String(form.get("storyWorldRules") || "").trim();
       const powers = String(form.get("storyPowerCatalog") || "").trim();
       const arcs = String(form.get("storyArcs") || "").split("\n").map(line => line.trim()).filter(Boolean);
-      const ending = String(form.get("storyEndingType") || "closed");
       // Persist every narrative control represented in the form before building
       // the outline; generation must not silently discard fields the user edited.
       story.chapterCount = count;
