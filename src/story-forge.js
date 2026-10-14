@@ -64,7 +64,7 @@
 
   const endingNotes = {
     closed: "El final resuelve el conflicto principal y muestra consecuencias suficientes para entender qué cambió; las subtramas secundarias solo quedan abiertas si se señala deliberadamente.",
-    open: "El conflicto inmediato y el arco emocional reciben una respuesta, pero queda abierta una pregunta central o una consecuencia con pistas previas; no termina por un corte arbitrario.",
+    open: "El conflicto inmediato y el arco emocional reciben una respuesta, pero el final debe dejar una pregunta central o una consecuencia preparada por pistas previas; no termina por un corte arbitrario.",
     bittersweet: "El conflicto principal se resuelve, pero una pérdida irreversible impide que la victoria sea gratuita; la pérdida debe derivarse de decisiones o reglas ya presentadas.",
     cliffhanger: "El arco principal del volumen avanza hasta una decisión o revelación preparada que cambia el tablero; el corte no sustituye el desarrollo ni la resolución parcial."
   };
@@ -165,6 +165,7 @@
         : "Completar la premisa, la motivación del protagonista y las reglas del mundo para concretar este resumen.";
       const summary = [
         "Resumen propuesto — " + phase.key + ".",
+        "Función del tramo: " + phase.purpose + ".",
         (isFirst ? "La historia abre mostrando el mundo y la situación inicial. " : "") +
           protagonist + " intenta avanzar frente a «" + protagonistGoal + "».",
         "Acción central: " + beat.action + ".",
