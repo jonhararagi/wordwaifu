@@ -110,7 +110,7 @@
         arcs.length ? "Arco que avanza en esta entrega: " + arcs[(n - 1) % arcs.length] + "." : ""
       ].filter(Boolean);
       const phaseNote = "Tramo narrativo: " + phase.key.toLocaleLowerCase("es") + (n === 1 ? " — presentar el mundo y la premisa mediante una situación concreta." : ".");
-      const summary = event[1] + " " + phaseNote + " Premisa que guía esta entrega: " + premise + ". Conflicto que determina las consecuencias: " + conflict + ". " + beats[(n - 1) % beats.length] + " El capítulo termina con una consecuencia observable que obliga a cambiar el siguiente paso del elenco.";
+      const summary = event[1] + " " + phaseNote + " Premisa que guía esta entrega: " + premise + ". Conflicto que determina las consecuencias: " + conflict + ". Reparto coral con agencia propia: " + ensemble + ". Fuerzas míticas y sus intereses: " + pantheon + ". " + beats[(n - 1) % beats.length] + " El capítulo termina con una consecuencia observable que obliga a cambiar el siguiente paso del elenco.";
       return {
         id: prior.id || ("chapter-" + Date.now().toString(36) + "-" + n),
         title: (phase.key + " — " + event[0]).slice(0, 180),
