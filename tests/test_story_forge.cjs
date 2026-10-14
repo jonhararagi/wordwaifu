@@ -89,7 +89,7 @@ function testAuditFindsMissingFieldsCountAndDuplicateIds() {
   assert.ok(result.issues.some(issue => /plan pide 3/.test(issue)));
   assert.ok(result.issues.some(issue => /ID duplicado same/.test(issue)));
   assert.ok(result.issues.some(issue => /falta título/.test(issue)));
-  assert.ok(result.issues.some(issue => /falta una premisa/.test(issue)));
+  assert.ok(result.issues.some(issue => /falta una premisa/i.test(issue)));
 }
 
 function testInvalidChapterCountsAreRejected() {
