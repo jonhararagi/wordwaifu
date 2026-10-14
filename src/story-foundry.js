@@ -197,12 +197,51 @@
       "reemplazar la necesidad de tener razón por la capacidad de reparar el daño",
       "construir confianza mediante acciones comprobables, no promesas"
     ];
+    const appearances = [
+      "cabello corto con una franja clara, manos marcadas por el trabajo y ropa reparada con cuidado",
+      "ojos atentos, postura reservada y una cicatriz pequeña que nunca explica espontáneamente",
+      "figura atlética, dedos manchados de tinta o grasa y un abrigo lleno de bolsillos útiles",
+      "rasgos serenos, expresión difícil de leer y un accesorio heredado que mantiene siempre consigo",
+      "aspecto desordenado, sonrisa rápida y señales visibles de noches sin dormir",
+      "presencia elegante, movimientos medidos y una prenda práctica que contradice su imagen formal"
+    ];
+    const voices = [
+      "habla con precisión y hace preguntas antes de comprometerse",
+      "usa humor seco para evitar hablar de lo que le duele",
+      "elige pocas palabras y demuestra afecto resolviendo problemas concretos",
+      "explica demasiado cuando teme que no le crean",
+      "negocia con calma, pero se vuelve tajante cuando alguien cruza un límite",
+      "piensa en voz alta y cambia de opinión cuando aparece evidencia mejor"
+    ];
+    const secrets = [
+      "conserva una prueba que podría absolver a su rival, pero también incriminar a alguien querido",
+      "alteró una decisión pasada y dejó que otra persona cargara con la culpa",
+      "conoce una ruta o regla que mantiene a salvo al grupo, aunque su origen sea moralmente dudoso",
+      "recibió ayuda de la facción a la que ahora se opone",
+      "teme que su talento dependa de una condición que no puede controlar",
+      "ha prometido algo incompatible con su objetivo actual"
+    ];
+    const items = [
+      "un cuaderno con páginas arrancadas",
+      "una herramienta heredada que necesita reparaciones",
+      "una moneda marcada que funciona como prueba de una deuda",
+      "un mapa con una zona deliberadamente borrada",
+      "un objeto cotidiano que perteneció a alguien desaparecido",
+      "un dispositivo o amuleto que registra el coste de cada uso de su capacidad"
+    ];
+    const species = cyber
+      ? ["humano/a", "humano/a con implantes", "persona modificada por exposición ambiental", "operador/a con identidad digital fragmentada"]
+      : supernatural
+        ? ["humano/a", "persona vinculada a una entidad", "descendiente de una comunidad no humana", "ser transformado parcialmente por un pacto"]
+        : ["humano/a", "elfo/a o equivalente cultural", "viajero/a de una frontera mágica", "persona marcada por un pacto antiguo"];
+    const ageBands = ["adolescencia tardía", "veintitantos", "treintaypocos", "mediana edad", "edad avanzada con experiencia de campo"];
     const relation = {
       protagonist: "Su decisión inicial pone en marcha el conflicto principal; debe aprender a pedir ayuda antes de que su defecto haga irreversible una pérdida.",
       companion: "Tiene un objetivo propio que a veces contradice al protagonista; aporta una competencia que el personaje principal no posee y puede negarse a obedecer.",
       antagonist: "Persigue un orden que considera necesario y puede señalar un coste real de la solución heroica; cruza una línea moral que el relato debe hacer visible.",
       "romantic-interest": "La relación progresa por confianza, desacuerdos y límites respetados; el interés amoroso conserva metas, vínculos y decisiones independientes."
     };
+    const roleNames = { protagonist: "Protagonista", companion: "Compañero/a o coprotagonista", antagonist: "Antagonista", "romantic-interest": "Interés amoroso" };
     const roleOffset = { protagonist: 0, companion: 1, antagonist: 2, "romantic-interest": 1 }[role];
     const name = opts.name && String(opts.name).trim() ? String(opts.name).trim() : names[roleOffset][seed % names[roleOffset].length];
     const desire = desires[(seed + roleOffset) % desires.length];
@@ -212,22 +251,32 @@
     const power = powers[(seed * 11 + roleOffset) % powers.length];
     const cost = costs[(seed * 13 + roleOffset) % costs.length];
     const arc = arcs[(seed * 17 + roleOffset) % arcs.length];
-    const roleNames = { protagonist: "Protagonista", companion: "Compañero/a o coprotagonista", antagonist: "Antagonista", "romantic-interest": "Interés amoroso" };
+    const appearance = appearances[(seed * 23 + roleOffset) % appearances.length];
+    const voice = voices[(seed * 29 + roleOffset) % voices.length];
+    const secret = secrets[(seed * 31 + roleOffset) % secrets.length];
+    const signatureItem = items[(seed * 37 + roleOffset) % items.length];
+    const speciesType = species[(seed * 41 + roleOffset) % species.length];
+    const age = ageBands[(seed * 43 + roleOffset) % ageBands.length];
+    const personality = name + " es " + virtue + ", pero " + flaw + ". Bajo presión, esta contradicción provoca decisiones con consecuencias y no desaparece tras una sola conversación.";
+    const ability = power + (cyber ? " (tecnología)" : supernatural ? " (sobrenatural)" : " (fantasía)");
+    const limitation = cost;
+    const narrativeFunction = relation[role];
+    const summary = [
+      roleNames[role] + ": " + name + " · edad: " + age + " · especie/origen: " + speciesType + ".",
+      "Apariencia y presencia: " + appearance + ".",
+      "Deseo y necesidad: " + desire + "; necesita " + arc + ". Miedo central: " + fear + ".",
+      "Personalidad: " + virtue + "; defecto activo: " + flaw + ". Voz: " + voice + ".",
+      "Capacidad: " + power + ". Límite/coste: " + cost + ".",
+      "Secreto: " + secret + ". Objeto distintivo: " + signatureItem + ".",
+      "Función y relaciones: " + relation[role]
+    ].join("\n");
     return {
       role, name, label: roleNames[role], worldType,
-      profile: roleNames[role] + ": " + name + ". Deseo: " + desire + ". Miedo: " + fear + ".",
-      personality: name + " es " + virtue + ", pero " + flaw + ". Bajo presión, esta contradicción provoca decisiones con consecuencias y no desaparece tras una sola conversación.",
-      ability: power + (cyber ? " (tecnología)" : supernatural ? " (sobrenatural)" : " (fantasía)"),
-      limitation: cost,
+      profile: roleNames[role] + ": " + name + ". Edad aproximada: " + age + ". Especie/origen: " + speciesType + ". Deseo: " + desire + ". Miedo: " + fear + ".",
+      age, species: speciesType, appearance, voice, secret, signatureItem,
+      personality, ability, limitation,
       arc: arcs[(seed * 19 + roleOffset) % arcs.length],
-      narrativeFunction: relation[role],
-      summary: [
-        roleNames[role] + ": " + name,
-        "Deseo y necesidad: " + desire + "; necesita " + arc + ".",
-        "Personalidad: " + virtue + "; defecto activo: " + flaw + ".",
-        "Capacidad: " + power + ". Límite/coste: " + cost + ".",
-        "Función y relaciones: " + relation[role]
-      ].join("\\n")
+      narrativeFunction, summary
     };
   }
 
