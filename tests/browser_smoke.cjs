@@ -239,6 +239,13 @@ async function run() {
     await page.locator("#story-plan-villain").fill("El Consejo");
     await page.locator("#story-plan-world").fill("Puerto de Ceniza");
     await page.locator("#story-plan-power").fill("Eco de memoria");
+    await page.locator("#story-plan-cast-button").click();
+    assert.notEqual(await page.locator("#story-plan-hero").inputValue(), "Iria Test", "propose-another-cast must replace previously filled character fields");
+    await page.locator("#story-plan-hero").fill("Iria Test");
+    await page.locator("#story-plan-companion").fill("Noel Test");
+    await page.locator("#story-plan-villain").fill("El Consejo");
+    await page.locator("#story-plan-world").fill("Puerto de Ceniza");
+    await page.locator("#story-plan-power").fill("Eco de memoria");
     await page.locator("#story-plan-generate-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-card").length === 10, { timeout: 10000 });
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("Objetivo dramático:"), "generated chapter summary should include its dramatic objective");
