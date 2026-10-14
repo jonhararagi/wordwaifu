@@ -232,6 +232,8 @@ async function run() {
     // Story Foundry: the chapter-count control produces an editable outline and a coherent selected ending.
     await page.locator("#story-plan-count").fill("10");
     await page.locator("#story-plan-ending").selectOption("open");
+    await page.locator("#story-plan-universe-mode").selectOption("fanfiction");
+    await page.locator("#story-plan-canon-reference").fill("https://example.test/wiki/canon");
     await page.locator("#story-plan-hero").fill("Iria Test");
     await page.locator("#story-plan-companion").fill("Noel Test");
     await page.locator("#story-plan-villain").fill("El Consejo");
@@ -242,6 +244,11 @@ async function run() {
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("Objetivo dramático:"), "generated chapter summary should include its dramatic objective");
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("Iria Test"), "generated chapter summary should use the chosen protagonist");
     assert.ok((await page.locator("#story-meta-form [name='storyEnsemble']").inputValue()).includes("Iria Test"), "generated cast should preserve the chosen protagonist in the ensemble plan");
+    const storyMetadata = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).stories.at(-1));
+    assert.equal(storyMetadata.universeMode, "fanfiction", "story should persist the selected canon mode");
+    assert.equal(storyMetadata.canonReference, "https://example.test/wiki/canon", "story should persist the declared wiki/canon source");
+    assert.ok(storyMetadata.worldBible.sourcePolicy.includes("redacción propia"), "story bible should preserve the policy for original summaries and source attribution");
+    assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("respetar el canon"), "fanfiction outline should remind the author to preserve canon and label divergences");
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").last().inputValue()).includes("pregunta mayor"), "open ending should leave a forward-looking question");
     assert.ok((await page.locator("#story-meta-form [name='storyArcs']").inputValue()).includes("Presentación y detonante"), "generated outline should persist narrative phases as arcs");
     assert.equal(await page.locator("#story-plan-ending").inputValue(), "open");
