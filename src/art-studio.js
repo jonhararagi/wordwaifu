@@ -36,6 +36,10 @@
 
   function clearDeleted(key) {
     const keys = readDeletedKeys();
+    if (!keys.has(key)) {
+      deletedKeys.delete(key);
+      return;
+    }
     keys.delete(key);
     writeDeletedKeys(keys);
     deletedKeys.delete(key);
