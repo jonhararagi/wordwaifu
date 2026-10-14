@@ -29,6 +29,8 @@ jobs:
           node --check src/mythic-catalog.js
           node --check src/power-catalog.js
           node --check src/power-workbench.js
+          node --check src/story-outline-generator.js
+          node --check tests/test_story_outline_generator.cjs
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check src/art-studio.js
@@ -44,6 +46,8 @@ jobs:
         run: node tests/test_mythic_catalog.cjs
       - name: Test power catalog generator
         run: node tests/test_power_catalog.cjs
+      - name: Test concrete story outline generator
+        run: node tests/test_story_outline_generator.cjs
       - name: Test project import validation
         run: node tests/test_project_schema.cjs
       - name: Test extended character dossiers
