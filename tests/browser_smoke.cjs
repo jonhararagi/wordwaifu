@@ -244,6 +244,9 @@ async function run() {
     await page.locator("#story-meta-form [name='storyAntagonistPlan']").fill("La directora quiere mantener el orden a cualquier precio y controla el suministro de energía.");
     await page.locator("#story-meta-form [name='storyRomancePlan']").fill("Mara e Ivo aprenden a confiar pese a sus métodos opuestos.");
     await page.locator("#story-meta-form [name='storyTraumaPlan']").fill("Mara evita pedir ayuda tras una pérdida; el arco debe mostrar apoyo y recaídas.");
+    await page.locator("#story-meta-form [name='storyPremise']").fill("Mara quiere salvar el barrio inundado antes de que la corporación cierre las compuertas.");
+    await page.locator("#story-meta-form [name='storyConflict']").fill("La corporación controla las compuertas y oculta el mapa de evacuación.");
+    await page.locator("#story-meta-form [name='storyWorldRules']").fill("Las compuertas solo pueden abrirse con una clave física custodiada por el gremio.");
     page.once("dialog", dialog => dialog.accept());
     await page.locator("#story-generate-outline-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 12, { timeout: 10000 });
@@ -251,9 +254,12 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyEndingType']").inputValue(), "open");
     assert.equal(await page.locator("#story-meta-form [name='storyCastPlan']").inputValue(), "Mara quiere salvar el barrio; Ivo, coprotagonista, busca exponer a la corporación.");
     assert.equal(await page.locator("#story-meta-form [name='storyPersonalityPlan']").inputValue(), "Mara usa humor defensivo y evita pedir ayuda; Ivo habla con precisión y desconfía de las instituciones.");
-    assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("presentar el mundo"), "opening chapters should introduce the world and premise");
-    assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).includes("falsa seguridad") || (await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).includes("victoria"), "middle-late chapters should include the false-security/decline phase");
-    assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").last().inputValue()).includes("dejar una pregunta central"), "open ending should deliberately leave a question while closing the immediate arc");
+    const openingSummary = await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue();
+    assert.ok(openingSummary.includes("Mara") && openingSummary.includes("barrio") && openingSummary.includes("compuertas"), "opening chapters should describe an event grounded in the protagonist, goal and world rules");
+    const declineSummary = await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue();
+    assert.ok(/falsa seguridad|victoria|éxito visible|oposición cobra la deuda|decisión anterior/i.test(declineSummary), "middle-late chapters should include the false-security/decline phase");
+    const endingSummary = await page.locator(".story-chapter-form [name='chapterSummary']").last().inputValue();
+    assert.ok(endingSummary.includes("abre una pregunta nueva") && endingSummary.includes("conflicto inmediato"), "open ending should leave a deliberate question after resolving the immediate conflict");
     await page.locator("#story-audit-outline-button").click();
     assert.ok((await page.locator("#story-outline-status").textContent()).includes("Auditoría"), "outline audit should report its result");
     process.stdout.write("PASS story outline planner: chapter count, six-phase structure, cast, antagonist, romance, trauma, ending type and audit.\\n");
