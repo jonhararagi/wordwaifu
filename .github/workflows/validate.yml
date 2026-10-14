@@ -31,6 +31,9 @@ jobs:
           node --check src/power-workbench.js
           node --check src/project-schema.js
           node --check src/project-repository.js
+          node --check src/story-foundry.js
+          node --check tests/test_story_foundry.cjs
+          node --check tests/test_story_universe_catalog.cjs
           node --check src/art-studio.js
           node --check src/character-dossiers.js
           node --check tests/test_character_dossiers.cjs
@@ -40,6 +43,10 @@ jobs:
           node --check tests/test_mythic_catalog.cjs
           node --check tests/test_power_catalog.cjs
           node --check tests/browser_smoke.cjs
+      - name: Test Story Foundry chapter and arc generator
+        run: node tests/test_story_foundry.cjs
+      - name: Test story universe catalog and inspiration presets
+        run: node tests/test_story_universe_catalog.cjs
       - name: Validate mythic catalog IDs and relations
         run: node tests/test_mythic_catalog.cjs
       - name: Test power catalog generator
