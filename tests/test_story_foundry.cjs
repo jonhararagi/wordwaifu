@@ -14,6 +14,10 @@ const story = {
   powerRules: "Cada mapa usado borra un recuerdo del cartógrafo.",
   worldRules: "Los mapas registran y modifican recuerdos."
 };
+const concept = require("../src/story-foundry.js").generateConcept({ worldType: "urban-supernatural", seed: 2 });
+assert.ok(concept.premise && concept.conflict && concept.worldRules && concept.worldDynamics);
+assert.ok(concept.protagonistProfile && concept.personalityDesign && concept.companionProfiles && concept.antagonistProfile);
+assert.ok(concept.traumaArc && concept.romanceArc && concept.powerRules);
 const closed = generateOutline({ count: 30, endingType: "closed", story });
 assert.equal(closed.chapters.length, 30);
 assert.equal(closed.chapters[0].number, 1);
