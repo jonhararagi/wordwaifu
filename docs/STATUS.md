@@ -2,7 +2,7 @@
 ## Estado operativo de integración — 2026-10-14
 
 - **HEAD actual de `main` antes de esta actualización documental:** `4e6010df3b52ec64d9d04aa3c27ac7510ce831f8`. La integración de código/lore ya está publicada en `main`.
-- **PR de integración:** [#18](https://github.com/jonhararagi/wordwaifu/pull/18), fusionada mediante squash en `97ca5cd757ba804d2d8ea017221e0c5aca02e202). La rama de reconciliación y la candidata original siguen conservadas.
+- **PR de integración:** [#18](https://github.com/jonhararagi/wordwaifu/pull/18), fusionada mediante squash en `97ca5cd757ba804d2d8ea017221e0c5aca02e202`). La rama de reconciliación y la candidata original siguen conservadas.
 - **Validación del HEAD final de la PR antes del merge:** [DanMachi Lore and Retrieval Integrity #534](https://github.com/jonhararagi/wordwaifu/actions/runs/38560004222) y [Validate WordWaifu #1027](https://github.com/jonhararagi/wordwaifu/actions/runs/38560004249): ambos `success`, mismo SHA `09868364d53b1bfc75f383ef27bdb9d27490435b`.
 - **Corrección post-merge del trigger de DanMachi:** se agregó `main` al filtro `push.branches` y se actualizó la auditoría en el commit `4e6010df3b52ec64d9d04aa3c27ac7510ce831f8`. Los workflows están volviendo a correr en ese HEAD; no se marca su resultado hasta que GitHub Actions finalice.
 - **Estrategia de integración:** en lugar de fusionar los 647 commits históricos de la candidata, se reconciliaron 86 rutas (23 nuevas, 63 actualizadas) sobre la base vigente de `main`. Se preservaron los tres archivos exclusivos de `main`: `docs/README-INITIAL-PRODUCT-VISION.md`, `docs/README-WORLD-STORY-FOUNDRY.md` y `lore/danmachi/sources/DMR-007-wiki-comunitaria.md`.
