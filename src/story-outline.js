@@ -65,6 +65,10 @@
     const premise = clean(story.premise || story.description, "la meta personal del protagonista");
     const conflict = clean(story.conflict, "la fuerza que impide alcanzar esa meta");
     const cast = clean(story.castPlan || story.ensemble, "el protagonista y sus compañeros");
+    const castNames = Array.from(String(story.castPlan || story.ensemble || "").matchAll(/\\b([A-ZÁÉÍÓÚÑ][\\p{L}'’-]{1,30})\\b/gu), (match) => match[1])
+      .filter((name) => !["El", "La", "Los", "Las", "Protagonista", "Personaje", "Personajes", "Equipo", "Antagonista"].includes(name));
+    const protagonist = castNames[0] || "El protagonista";
+    const companion = castNames[1] || "un compañero";
     const personality = clean(story.personalityPlan, "sus diferencias de carácter");
     const antagonist = clean(story.antagonistPlan, "la fuerza opositora");
     const romance = clean(story.romancePlan, "el vínculo afectivo principal");
@@ -110,7 +114,12 @@
         arcs.length ? "Arco que avanza en esta entrega: " + arcs[(n - 1) % arcs.length] + "." : ""
       ].filter(Boolean);
       const phaseNote = "Tramo narrativo: " + phase.key.toLocaleLowerCase("es") + (n === 1 ? " — presentar el mundo y la premisa mediante una situación concreta." : ".");
-      const summary = event[1] + " " + phaseNote + " Premisa que guía esta entrega: " + premise + ". Conflicto que determina las consecuencias: " + conflict + ". Reparto coral con agencia propia: " + ensemble + ". Fuerzas míticas y sus intereses: " + pantheon + ". " + beats[(n - 1) % beats.length] + " El capítulo termina con una consecuencia observable que obliga a cambiar el siguiente paso del elenco.";
+      const eventText = event[1]
+        .replace(/\\b(?:el|la) protagonista\\b/gi, protagonist)
+        .replace(/\\bprotagonista\\b/gi, protagonist)
+        .replace(/\\b(?:el|la) coprotagonista\\b/gi, companion)
+        .replace(/\\b(?:el|la) antagonista\\b/gi, "la oposición (" + antagonist + ")");
+      const summary = eventText + " " + phaseNote + " Premisa que guía esta entrega: " + premise + ". Conflicto que determina las consecuencias: " + conflict + ". Reparto coral con agencia propia: " + ensemble + ". Fuerzas míticas y sus intereses: " + pantheon + ". " + beats[(n - 1) % beats.length] + " El capítulo termina con una consecuencia observable que obliga a cambiar el siguiente paso del elenco.";
       return {
         id: prior.id || ("chapter-" + Date.now().toString(36) + "-" + n),
         title: (phase.key + " — " + event[0]).slice(0, 180),
