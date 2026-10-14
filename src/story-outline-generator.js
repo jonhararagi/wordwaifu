@@ -39,7 +39,7 @@
     ]},
     { key: "Desenlace", from: 0.92, to: 1, beats: [
       ["El coste se vuelve visible", (c) => "Tras la resolución, " + c.hero + " comprueba qué se perdió y qué se salvó al perseguir «" + c.goal + "». Una consecuencia material o relacional confirma que la victoria no devuelve el mundo al estado inicial."],
-      ["Cada vínculo cambia", (c) => c.hero + " y " + c.ally + " negocian cómo continuar después de «" + c.conflict + "». Un gesto concreto demuestra qué cambió en la confianza, el romance o la cooperación sin declarar que todos los problemas desaparecieron."],
+      ["Cada vínculo cambia", (c) => c.hero + " y " + c.ally + " negocian cómo continuar después de «" + c.conflict + "». " + c.romance + " Un gesto concreto demuestra qué cambió en la confianza, el romance o la cooperación sin declarar que todos los problemas desaparecieron."],
       ["La nueva normalidad", (c) => "La comunidad afectada por " + c.world + " adapta una costumbre, norma o distribución de recursos como consecuencia de las decisiones del elenco. " + c.hero + " ve el efecto práctico de su evolución en personas que antes no podía proteger."],
       ["La última pregunta", (c) => "Una señal nueva aparece después de que " + c.hero + " cierre el conflicto inmediato. El detalle conecta con una pista anterior y plantea una posibilidad futura sin invalidar la resolución ya alcanzada."]
     ]}
