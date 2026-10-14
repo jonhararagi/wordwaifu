@@ -104,6 +104,20 @@
     const antagonist = firstMeaningfulLine(input.antagonistPlan) || "la fuerza opositora";
     const world = clean(input.worldRules);
     const worldDynamics = clean(input.worldDynamics);
+    const worldTypes = {
+      "cyberpunk-dystopia": "distopía cyberpunk",
+      "conventional-dystopia": "distopía social o política",
+      "post-apocalypse": "postapocalipsis",
+      "active-apocalypse-military-sf": "apocalipsis activo o ciencia ficción militar",
+      "isolated-island-comedy": "isla aislada, convivencia y comedia",
+      "superpower-action": "acción y sociedades de superpoderes",
+      "fantasy-adventure": "fantasía y aventura",
+      "urban-supernatural": "sobrenatural urbano",
+      "mecha-war": "mecha, guerra y conflicto geopolítico",
+      "slice-of-life-comedy": "comedia cotidiana y relaciones",
+      "other": "mundo híbrido u original"
+    };
+    const worldType = worldTypes[clean(input.worldType)] || "";
     const powers = clean(input.powerCatalog);
     const romance = clean(input.romancePlan);
     const trauma = clean(input.traumaPlan);
@@ -122,6 +136,7 @@
     const detail = [
       excerpt("Premisa", premise, 240),
       excerpt("Conflicto", conflict, 240),
+      excerpt("Tipo de mundo", worldType),
       excerpt("Reglas que deben respetarse", world),
       excerpt("Presiones del mundo", worldDynamics),
       excerpt("Voz y personalidad", personality),
