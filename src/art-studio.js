@@ -337,6 +337,10 @@
           await refreshGallery();
           $("#art-status").textContent="Asignación eliminada.";
         } catch(error) {
+          // The IndexedDB delete may have succeeded while fallback cleanup failed.
+          // Refresh from durable state so the deleted card disappears but the
+          // warning remains visible; if deletion itself failed, the card remains.
+          await refreshGallery();
           $("#art-status").textContent=error.message || "No se pudo eliminar el recurso.";
         } finally { remove.disabled=false; }
       });
