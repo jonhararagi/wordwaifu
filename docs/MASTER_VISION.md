@@ -149,7 +149,7 @@ La biblioteca visual avanzada, el procesamiento de imágenes, los prompts de ilu
 
 ## 9. Generador de Historias y Lore
 
-El generador será un módulo de WordWaifu, pero se construirá después de estabilizar el canon, la persistencia y el atlas. Su función es convertir referencias y preferencias en propuestas coherentes que el autor puede editar y aprobar.
+El generador de historias es el propósito central de WordWaifu: convertir una idea en un plan de novela coherente y editable, conectado con el canon del proyecto. El primer núcleo local ya está integrado en el editor de Historias y novelas: permite elegir entre 1 y 500 capítulos, final abierto/cerrado y contexto de protagonistas, elenco, romance, traumas y resumen de referencia; genera un índice por fases con resumen para cada capítulo. Es un planificador por reglas, no un modelo de IA ni un redactor automático de manuscritos completos. Las propuestas deben revisarse y aprobarse por el autor.
 
 ### Perfil de ADN narrativo
 Una obra de referencia puede desglosarse en categorías como:
@@ -171,6 +171,21 @@ Estos perfiles son ejemplos de categorías que deben documentarse y verificarse.
 
 ### Constructor de combinaciones
 Cada ingrediente podrá marcarse como excluido, opcional, secundario o central, o ponderarse en un rango. Se podrán mezclar principios narrativos generales de distintas referencias para proponer un universo original. Se debe explicar qué papel cumple cada ingrediente y detectar incompatibilidades o tensiones, sin afirmar que todas las ideas pueden convivir automáticamente.
+
+### Índice de novela por cantidad de capítulos
+
+El generador debe preguntar cuántos capítulos tendrá la historia y si el final será abierto o cerrado. La estructura se adapta al número elegido, sin imponer siempre la misma cantidad:
+
+1. **Presentación y detonante:** protagonistas, mundo, promesa de género y problema inicial.
+2. **Progreso y vínculos:** avances verificables, nuevas capacidades con coste, agencia del elenco y evolución de relaciones.
+3. **Techo provisional y falsa seguridad:** una victoria razonable convence al protagonista de que su método funciona; las pistas ya existentes anuncian el límite.
+4. **Caída y replanteamiento:** se cobran los costes, la estrategia fracasa y los compañeros pueden resolver problemas que el protagonista no puede.
+5. **Clímax:** decisión difícil, reglas previamente establecidas y consecuencias irreversibles; no se permite una habilidad salvadora sin preparación.
+6. **Resolución:** mostrar el nuevo estado del mundo y cerrar los arcos según el tipo de final.
+
+Ejemplo de una novela de 30 capítulos: la presentación puede ocupar aproximadamente los capítulos 1–3; el progreso, 4–11; la falsa seguridad y su grieta, 12–17; la caída, 18–23; el clímax, 24–28; y la resolución, 29–30. Son rangos adaptables, no una ley universal. En historias más largas, cada fase puede contener varios mini-arcos y subtramas.
+
+Los resúmenes de wiki pueden servir como contexto para una obra existente, pero deben mantener su procedencia y distinguir hechos de la fuente, interpretación y propuestas originales. No convertir una wiki comunitaria en fuente primaria ni presentar contenido inventado como canon. El generador actual incorpora ese resumen como contexto orientativo en el primer capítulo; el uso avanzado de fuentes, citas y recuperación documental debe ampliarse en etapas posteriores.
 
 ### Sinopsis → protagonista → elenco → lore → novela
 El flujo ideal:
@@ -240,7 +255,7 @@ Después:
 5. Fichas compactas y expedientes completos, red de relaciones y fuentes.
 6. Migración planificada a TypeScript + React + Vite sin perder el prototipo funcional.
 7. Generadores deterministas de personajes, lugares y otros recursos narrativos.
-8. Generador de historias/lore, perfiles de ADN narrativo, sinopsis, protagonistas, elenco y arcos.
+8. Ampliar el generador de historias/lore: perfiles de ADN narrativo, generadores de protagonistas/elenco/villanos/poderes, integración de fuentes, escenas y manuscrito.
 9. Novel Studio y Continuity Guard.
 10. Content Guard y exportación con revisión previa.
 11. Biblioteca de medios enlazada, mapas avanzados, importadores autorizados y posibles adaptadores opcionales de IA.
