@@ -63,7 +63,7 @@ Fecha de revisión: 2026-10-14. Esta sección registra comparaciones concretas; 
 - **Generador/editor** (work/story-foundry-generator-2026-10): src/app.js de la candidata es más extenso (3296 frente a 2887 líneas) y contiene más referencias a historias, generación, importación y exportación. No se copia la versión fuente antigua; faltan comparaciones de comportamiento para cambios únicos concretos.
 - **Catálogo de poderes** (work/connected-lore-power-catalog-2026-10): se integraron selectivamente src/power-catalog.js y src/power-workbench.js como módulos separados del catálogo mitológico; se añadieron el panel navegable, campos estructurados, vínculos opcionales a personaje e historia, validación de powers[] y pruebas de persistencia en navegador. No se importaron los módulos de franquicias adicionales ni el explorador de universos de esa rama porque requieren auditoría independiente de sus datos y rutas.
 
-**Estado tras esta revisión:** la omisión de roster se corrigió con fuente oficial, el catálogo estructurado de poderes, la red de Familia, la lectura combinada de arte y la marca anti-resurrección quedaron integrados. Ambos workflows pasaron en el SHA funcional `bbc42acd7160dcd222cd439895201621bc3f662f`. La auditoría semántica de todas las ramas divergentes sigue abierta; no se declara integración total, no se realiza merge y no se modifica `main`.
+**Estado de aquella revisión:** la omisión de roster se corrigió con fuente oficial, el catálogo estructurado de poderes, la red de Familia, la lectura combinada de arte y la marca anti-resurrección quedaron integrados. Los workflows pasaron en el SHA `bbc42acd7160dcd222cd439895201621bc3f662f`. Esa nota era un snapshot histórico; la reconciliación con `main` se documenta en la sección final.
 
 ## Reconciliación actual de la candidata con `main` — 2026-10-14
 
@@ -73,12 +73,12 @@ Fecha de revisión: 2026-10-14. Esta sección registra comparaciones concretas; 
 - **Interfaz de expedientes:** se añadió a la candidata un renderizador que muestra el dossier asociado a la continuidad elegida, sus apartados, fuentes y avisos de spoilers. El material de wiki se etiqueta explícitamente como fuente secundaria; no se presenta como canon primario ni sustituye los 33 perfiles de `src/character-dossiers.js`.
 - **Persistencia:** `main` contiene un helper local `restorePreviousBackup`; la candidata ya incluye rollback explícito del respaldo en las rutas de guardado, papelera y restauración. Se conserva la implementación actual y no se copia `src/project-repository.js` entero.
 - **Corpus:** `main` contiene `claimsFromOfficialRoster`, mientras la candidata mantiene filtros y búsqueda de entidades adicionales. La equivalencia semántica del retrieval y la posible integración selectiva de afirmaciones generadas sigue pendiente de revisar; no se declara equivalencia por el mero hecho de que ambas tengan un corpus.
-- **Decisión de seguridad:** no se modifica `main`, no se fusiona la rama completa ni se abre/cierra PR. Los deltas restantes se integrarán únicamente cuando la intención y las pruebas permitan demostrar que no duplican ni degradan las funciones de la candidata.
+- **Decisión de seguridad de la auditoría inicial:** no se modificó `main`, ni se fusionó la candidata ni se abrió/cerró PR durante esa revisión. Luego se preparó una rama de reconciliación basada directamente en `main`, con CI separado.
 
 
 ## Inventario de PRs revisado en GitHub — 2026-10-14
 
-- **Abiertos:** 0 PRs abiertos en el repositorio.
+- **Abiertos en la consulta original:** 0 PRs (snapshot anterior a la rama de reconciliación; no representa el estado posterior).
 - **Cerrados/integrados:** 15 PRs encontrados; 4 muestran un commit de merge y 11 están cerrados sin merge.
 - **Integrados:** [#8 roster y retratos](https://github.com/jonhararagi/wordwaifu/pull/8) → `3698cb3`; [#11 panel de arte y 33 expedientes](https://github.com/jonhararagi/wordwaifu/pull/11) → `42aee93`; [#14 integración de atlas, papelera, lore y arte](https://github.com/jonhararagi/wordwaifu/pull/14) → `bca375e`; [#16 Story Foundry y corpus ampliado](https://github.com/jonhararagi/wordwaifu/pull/16) → `11a5ed5`.
 - **Cerrados sin merge:** [#1](https://github.com/jonhararagi/wordwaifu/pull/1), [#2](https://github.com/jonhararagi/wordwaifu/pull/2), [#3](https://github.com/jonhararagi/wordwaifu/pull/3), [#5](https://github.com/jonhararagi/wordwaifu/pull/5), [#6](https://github.com/jonhararagi/wordwaifu/pull/6), [#7](https://github.com/jonhararagi/wordwaifu/pull/7), [#9](https://github.com/jonhararagi/wordwaifu/pull/9), [#10](https://github.com/jonhararagi/wordwaifu/pull/10), [#12](https://github.com/jonhararagi/wordwaifu/pull/12), [#13](https://github.com/jonhararagi/wordwaifu/pull/13) y [#15](https://github.com/jonhararagi/wordwaifu/pull/15).
@@ -105,7 +105,7 @@ La comparación se repitió contra los refs actuales de GitHub, no contra los co
 - La divergencia de archivos no se considera automáticamente un defecto: cada cambio debe demostrar comportamiento ausente y una prueba que falle antes y pase después.
 - El retrieval del corpus no se declara equivalente entre ramas. La candidata conserva la búsqueda estructurada y el filtro de entidades; la generación automática de afirmaciones de `main` queda clasificada como delta no portado por riesgo concreto de duplicación, no como trabajo supuestamente integrado.
 - Los conteos históricos de commits de secciones anteriores son snapshots fechados. La comprobación viva más reciente del 2026-10-14 da candidata +646 / `main` +6 desde la base común `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`; ver la sección de estado actual al final.
-- No se modifica `main`, no se crea un merge commit, no se abre/cierra PR y no se borran ramas. El cierre funcional definitivo sigue condicionado a las pruebas de corpus/roster/persistencia y a la verificación de las fuentes primarias pendientes; esta auditoría no etiqueta esos requisitos como completados.
+- Al cerrar aquella comparación no se modificó `main`, no se creó un merge commit, no se abrió/cerró PR y no se borraron ramas. Las limitaciones factuales del catálogo siguen vigentes; la reconciliación de árbol queda descrita en la sección final.
 
 
 ## Estado vivo posterior — 2026-10-14 (HEAD `fbbeeee6d80bdf3fcdd963d70c4696587c7cb2a5`)
@@ -141,4 +141,22 @@ Esto significa que el catálogo sigue sin registros declarados como completos/ap
 - Compare actual: candidata +646 commits y `main` +6 respecto de la base común. No se realizó merge ni se modificó `main`.
 - Los seis commits exclusivos de `main` incluyen dos cambios documentales iniciales, los merges #14/#16 y sus actualizaciones documentales. Las funciones de atlas/lore/arte, Story Foundry y navegación de familias ya están presentes selectivamente en la candidata; las diferencias restantes deben probarse por comportamiento, no portarse mediante reemplazo masivo.
 - Pendientes reales: cerrar la comparación semántica de `src/lore-corpus.js` (generación/deduplicación de claims), completar auditoría por ID de roster y fuentes, resolver expedientes DanMachi solo cuando haya evidencia primaria y documentar los deltas funcionales restantes con pruebas de regresión.
-- Restricciones conservadas: no tocar `main`, no crear merge commit, no abrir/cerrar PR, no borrar ramas.
+- Estado al cierre de esta revisión: `main` sirvió como padre directo de la rama de reconciliación. No se borraron ramas ni se hizo force push. La PR y la integración final se gestionan a partir de esta rama y sus controles, no de los 647 commits exclusivos de la candidata.
+
+
+## Reconciliación de árbol preparada para integrar en main — 2026-10-14
+
+La historia de la candidata original tiene 647 commits exclusivos frente a los 6 exclusivos de `main`, por lo que no se debe usar el historial completo como una operación automática. La comparación de árboles demostró que la integración puede hacerse como un cambio acotado desde el HEAD vigente de `main`.
+
+- **Base:** `main` en `675587f5ef50abd48382a07fc167ca08a26cae3f`.
+- **Árbol funcional de origen:** candidata validada `aa020ad50484f3dd1734432cadca971da3a02e47`.
+- **Rama de reconciliación:** `work/mainline-reconciliation-2026-10-14`.
+- **Primer commit de integración:** `6d8fa74a6edf135d74c015586aeec8ca61c01406`, hijo directo de `main`; la rama no hereda el historial divergente.
+- **Contenido reconciliado:** 86 rutas copiadas selectivamente desde el árbol validado (23 rutas nuevas y 63 versiones actualizadas). Se conservaron además las tres rutas que existen solo en `main`: `docs/README-INITIAL-PRODUCT-VISION.md`, `docs/README-WORLD-STORY-FOUNDRY.md` y `lore/danmachi/sources/DMR-007-wiki-comunitaria.md`.
+- **Workflows en el mismo HEAD de integración `b9aa066879aadbf4e5dbe1ad406c350aa5ec944f`:**
+  - [DanMachi Lore and Retrieval Integrity #532](https://github.com/jonhararagi/wordwaifu/actions/runs/38559650533): `success`.
+  - [Validate WordWaifu #1025](https://github.com/jonhararagi/wordwaifu/actions/runs/38559650446): `success`.
+- El workflow de DanMachi incluye ahora el nombre de la rama de reconciliación en sus filtros de `push`, para que futuras correcciones en esta rama sigan verificándose.
+- **Lo que los checks no certifican:** aprobación factual de todos los expedientes DanMachi, ni revisión visual manual en Windows. El catálogo sigue provisional y esos límites no se convierten en «completado» solo por CI verde.
+
+Esta ruta elimina el problema de historial: el cambio propuesto para `main` queda como un conjunto revisable de 86 archivos y dos commits sobre el HEAD de `main`, en vez de intentar fusionar 647 commits como si fueran todos deltas pendientes. La integración definitiva depende de los checks sobre la revisión final de esta rama.
