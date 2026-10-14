@@ -1278,7 +1278,7 @@
         return forceNew ? "" : value;
       };
       const choose = (items) => items[Math.floor(Math.random() * items.length)];
-      const inspiration=read("#story-plan-inspiration")||"original";
+      const inspiration=$( "#story-plan-inspiration", container)?.value || "original";
       const profiles={
         "danmachi":{world:"una ciudad-fortaleza con mazmorras, gremios, familias y facciones divinas",conflict:"una expedición revela que las reglas conocidas de la mazmorra están cambiando",power:"una habilidad con crecimiento medible, límites claros y coste en combate"},
         "my-hero-academia":{world:"una sociedad donde las habilidades extraordinarias están reguladas y el heroísmo es una profesión pública",conflict:"una crisis pone a prueba la diferencia entre salvar personas, obedecer reglas y proteger la reputación",power:"una habilidad singular con ventaja táctica, limitación física y consecuencias sociales"},
