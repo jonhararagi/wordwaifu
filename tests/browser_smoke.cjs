@@ -136,6 +136,15 @@ async function run() {
     await page.locator('.nav-item[data-view="stories"]').click();
     await page.locator("#story-create-button").click();
     await page.locator("#story-meta-form").waitFor();
+    // The offline story-bible generator should fill blank planning fields without overwriting user-authored notes.
+    await page.locator("#story-meta-form [name='storyWorldType']").selectOption("superpower-action");
+    await page.locator("#story-meta-form [name='storyCastPlan']").fill("Mi protagonista manual: quiere proteger a su hermana y desconfía de los héroes.");
+    await page.locator("#story-bible-generate-button").click();
+    assert.equal(await page.locator("#story-meta-form [name='storyCastPlan']").inputValue(), "Mi protagonista manual: quiere proteger a su hermana y desconfía de los héroes.", "story bible generation must preserve non-empty user notes");
+    assert.ok((await page.locator("#story-meta-form [name='storyPersonalityPlan']").inputValue()).includes("Protagonista:"), "story bible generator should propose distinct character voices");
+    assert.ok((await page.locator("#story-meta-form [name='storyWorldRules']").inputValue()).includes("Cada poder tiene condición"), "superpower world seed should establish power conditions and limits");
+    assert.ok((await page.locator("#story-meta-form [name='storyPowerCatalog']").inputValue()).includes("Contramedida:"), "power seed should include a countermeasure, not only a power fantasy");
+    assert.ok((await page.locator("#story-bible-status").textContent()).includes("campos vacíos"), "generator should report how many blank fields it filled");
     await page.locator("#story-meta-form [name='storyName']").fill("Historia de prueba");
     await page.locator("#story-meta-form [name='storyDescription']").fill("Sinopsis de prueba para comprobar el guardado.");
     await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
@@ -247,6 +256,14 @@ async function run() {
     page.once("dialog", dialog => dialog.accept());
     await page.locator("#story-generate-outline-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 12, { timeout: 10000 });
+    const generatedTitles = await page.locator(".story-chapter-form [name='chapterTitle']").evaluateAll(nodes => nodes.map(node => node.value));
+    const generatedSummaries = await page.locator(".story-chapter-form [name='chapterSummary']").evaluateAll(nodes => nodes.map(node => node.value));
+    assert.equal(new Set(generatedTitles).size, 12, "generated chapter titles must be unique and numbered");
+    assert.ok(generatedTitles.every((title, index) => title.startsWith("Capítulo " + (index + 1) + " — ")), "every generated title must expose its stable chapter number and narrative phase");
+    assert.equal(new Set(generatedSummaries).size, 12, "each chapter needs a distinct summary rather than repeated generic text");
+    assert.ok(generatedSummaries.some(summary => summary.includes("Presión y cambios del mundo")), "outline generation must carry world dynamics into chapter guidance");
+    assert.ok(generatedSummaries.some(summary => summary.includes("Motor de revelación")), "outline generation must carry mystery/reveal setup into chapter guidance");
+    assert.ok(generatedSummaries.some(summary => summary.includes("Panteón y fuerzas míticas")), "outline generation must carry mythic worldbuilding into chapter guidance");
     assert.equal(await page.locator("#story-meta-form [name='storyChapterCount']").inputValue(), "12");
     assert.equal(await page.locator("#story-meta-form [name='storyEndingType']").inputValue(), "open");
     assert.equal(await page.locator("#story-meta-form [name='storyCastPlan']").inputValue(), "Mara quiere salvar el barrio; Ivo, coprotagonista, busca exponer a la corporación.");
