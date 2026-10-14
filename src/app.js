@@ -1317,7 +1317,7 @@
       story.pantheon = String(form.get("storyPantheon") || "").trim();
       story.ensemble = String(form.get("storyEnsemble") || "").trim();
       story.status = String(form.get("storyStatus") || story.status || "draft");
-      story.arcs = String(form.get("storyArcs") || "").split("\\n").map((line) => line.trim()).filter(Boolean);
+      story.arcs = String(form.get("storyArcs") || "").split("\n").map((line) => line.trim()).filter(Boolean);
       const outlineGenerator = window.WordWaifuStoryOutline;
       if (!outlineGenerator || typeof outlineGenerator.buildOutline !== "function") {
         if (status) status.textContent = "No se cargó el generador narrativo. Recargá la página; no se modificaron los capítulos.";
