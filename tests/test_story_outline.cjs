@@ -39,7 +39,7 @@ assert.ok(chapters.some(ch => ch.summary.includes("La magia consume recuerdos"))
 assert.ok(chapters.some(ch => ch.summary.includes("ceniza azul")));
 assert.ok(chapters.some(ch => ch.summary.includes("La diosa del umbral")));
 assert.ok(chapters.some(ch => ch.summary.includes("la contrabandista Sera")));
-assert.ok(chapters[9].summary.includes("una posibilidad futura"));
+assert.ok(chapters[9].summary.includes("posibilidades futuras"));
 assert.ok(chapters[9].summary.includes("la ciudad de ceniza"));
 const prior = [{ id: "keep-id", title: "old", summary: "old", content: "manuscrito guardado", status: "draft" }];
 const regenerated = buildOutline({ count: 2, ending: "bittersweet", story, oldChapters: prior });
