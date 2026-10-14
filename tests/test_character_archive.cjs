@@ -16,6 +16,12 @@ const profilePaths=[
 ];
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
+assert.ok(index._claimsByCharacter instanceof Map,"The corpus should pre-group claims by character for low-cost directory filtering.");
+for(const character of index.characters){
+  const expected=index.claims.filter(claim=>(claim.characterIds||[]).includes(character.id));
+  assert.deepEqual(index._claimsByCharacter.get(character.id)||[],expected,
+    "The reverse index must preserve every claim and its order for "+character.id);
+}
 assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,59,"The official-source registry should include Eina Tulle alongside the expanded character catalog.");
 assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
