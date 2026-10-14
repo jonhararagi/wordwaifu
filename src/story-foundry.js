@@ -134,7 +134,6 @@
       conflict: "Resolver una serie de desapariciones antes de perder la única memoria que le permite reconocer a la persona que busca.",
       worldRules: "Lo sobrenatural deja rastros locales y verificables, pero nunca responde a todas las preguntas. Los rituales requieren condiciones, testigos y un precio concreto.",
       worldDynamics: "Las instituciones niegan los fenómenos, los barrios desarrollan reglas de supervivencia y los rumores mezclan pruebas reales con interpretaciones falsas.",
-      worldDynamicsDuplicate: "Las instituciones niegan los fenómenos, los barrios desarrollan reglas de supervivencia y los rumores mezclan pruebas reales con interpretaciones falsas.",
       protagonistProfile: "Un estudiante observador busca a su amiga desaparecida y registra cada pista para no depender de su memoria.",
       personalityDesign: "Empático, desconfiado y persistente; intenta proteger a los demás ocultándoles riesgos y termina aislándose.",
       companionProfiles: "Una investigadora escéptica verifica evidencias; un médium rival conoce rituales pero cobra favores; una amiga mantiene el vínculo con la vida cotidiana.",
