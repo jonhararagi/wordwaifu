@@ -1548,6 +1548,12 @@
         story.description = parsed.description;
         story.premise = parsed.premise;
         story.conflict = parsed.conflict || story.conflict || "";
+        story.chapterCount = parsed.chapterCount || parsed.chapters.length || 24;
+        story.endingType = parsed.endingType || "closed";
+        story.castPlan = parsed.castPlan || "";
+        story.antagonistPlan = parsed.antagonistPlan || "";
+        story.romancePlan = parsed.romancePlan || "";
+        story.traumaPlan = parsed.traumaPlan || "";
         story.worldType = parsed.worldType || "unspecified";
         story.worldRules = parsed.worldRules || "";
         story.worldDynamics = parsed.worldDynamics || "";
