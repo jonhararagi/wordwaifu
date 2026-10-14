@@ -306,11 +306,16 @@
     claims.forEach(claim => {
       const linkedCharacters = (claim.characterIds || []).map(id => characterById.get(id)).filter(Boolean);
       const aliases = linkedCharacters.flatMap(character => character.aliases || []);
-      Object.defineProperty(claim, "_searchText", {
-        value: normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
-          (claim.continuityScopes || []).join(" "), (claim.aspects || []).join(" "), aliases.join(" "),
-          claim.sourceTitle, claim.sourceLocator, (claim.sourceIds || []).join(" "), claim.claimId, claim.entryId].join(" ")),
-        enumerable: false
+      Object.defineProperties(claim, {
+        _searchText: {
+          value: normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
+            (claim.continuityScopes || []).join(" "), (claim.aspects || []).join(" "), aliases.join(" "),
+            claim.sourceTitle, claim.sourceLocator, (claim.sourceIds || []).join(" "), claim.claimId, claim.entryId].join(" ")),
+          enumerable: false
+        },
+        _searchHeading: { value: normalize(claim.heading), enumerable: false },
+        _searchClaim: { value: normalize(claim.claim), enumerable: false },
+        _searchSource: { value: normalize([claim.sourceTitle, claim.sourceLocator, (claim.sourceIds || []).join(" ")].join(" ")), enumerable: false }
       });
     });
     const profileDetails = Object.create(null);
@@ -350,6 +355,7 @@
   }
   function search(index, options) {
     const settings = options || {};
+    const normalizedQuery = normalize(settings.query || "");
     const queryTokens = tokens(settings.query || "");
     const characterId = String(settings.characterId || "");
     const continuity = String(settings.continuity || "ALL");
@@ -373,11 +379,25 @@
         claim.sourceLocator, claim.sourceIds.join(" "), claim.claimId, claim.entryId].join(" "));
       const foundTokens = queryTokens.filter(token => tokenMatches(haystack, token));
       if (queryTokens.length && foundTokens.length !== queryTokens.length) continue;
+
+      // Deterministic librarian-style ranking: exact phrase in the heading first,
+      // then heading term coverage, claim-body relevance, and source metadata.
+      // It is deliberately lexical, auditable, and requires no model or GPU.
+      let score = queryTokens.length ? foundTokens.length * 10 : 1;
+      if (queryTokens.length) {
+        const heading = claim._searchHeading || normalize(claim.heading);
+        const body = claim._searchClaim || normalize(claim.claim);
+        const source = claim._searchSource || normalize([claim.sourceTitle, claim.sourceLocator, (claim.sourceIds || []).join(" ")].join(" "));
+        if (normalizedQuery && heading.includes(normalizedQuery)) score += 100;
+        else if (queryTokens.every(token => tokenMatches(heading, token))) score += 50;
+        if (normalizedQuery && body.includes(normalizedQuery)) score += 30;
+        else if (queryTokens.every(token => tokenMatches(body, token))) score += 15;
+        if (normalizedQuery && source.includes(normalizedQuery)) score += 8;
+      }
       results.push({ ...claim, characterNames: characterRecords.map(character => character.name),
-        profilePaths: characterRecords.map(character => character.profilePath).filter(Boolean),
-        score: queryTokens.length ? foundTokens.length * 10 : 1 });
+        profilePaths: characterRecords.map(character => character.profilePath).filter(Boolean), score });
     }
-    // index.claims is pre-sorted by the same tie-breaker used previously.
+    results.sort((a, b) => b.score - a.score || a.claimId.localeCompare(b.claimId, "en") || a.entryId.localeCompare(b.entryId, "en"));
     return { results: results.slice(0, limit), totalMatches: results.length, truncated: results.length > limit,
       abstain: results.length === 0, queryTokens };
   }
