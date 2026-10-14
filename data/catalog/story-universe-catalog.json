@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 1,
+  "title": "WordWaifu — Catálogo de universos e inspiración narrativa",
+  "purpose": "Permite orientar el generador por subgénero, tono y convenciones narrativas. No sustituye las fichas de canon, las fuentes ni los resúmenes de cada obra.",
+  "sourcePolicy": "Separar hechos de canon, interpretación, hipótesis de fans y propuestas originales. Usar resúmenes con redacción propia; no copiar capítulos ni texto de wikis.",
+  "entries": [
+    {
+      "id": "danmachi",
+      "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon? (DanMachi)",
+      "type": "anime-light-novel",
+      "genres": [
+        "fantasy",
+        "action"
+      ],
+      "motifs": [
+        "mazmorras",
+        "familias y facciones",
+        "progresión",
+        "dioses entre mortales"
+      ],
+      "generatorSeeds": {
+        "world": "una ciudad-fortaleza con niveles subterráneos, gremios y facciones rivales",
+        "conflict": "una expedición revela que las reglas conocidas de la mazmorra están cambiando"
+      },
+      "integrationStatus": "existing-canon-work-in-progress"
+    },
+    {
+      "id": "my-hero-academia",
+      "title": "My Hero Academia / Boku no Hero Academia",
+      "type": "manga-anime",
+      "genres": [
+        "action",
+        "drama"
+      ],
+      "motifs": [
+        "sociedad de poderes",
+        "academia",
+        "licencias y responsabilidad",
+        "imagen pública del héroe"
+      ],
+      "generatorSeeds": {
+        "world": "una sociedad donde las habilidades extraordinarias están reguladas y el heroísmo es una profesión pública",
+        "conflict": "una crisis pone a prueba la diferencia entre salvar personas, obedecer las reglas y proteger la reputación"
+      },
+      "integrationStatus": "canon-dossier-needed"
+    },
+    {
+      "id": "one-punch-man",
+      "title": "One-Punch Man",
+      "type": "manga-anime",
+      "genres": [
+        "action",
+        "comedy"
+      ],
+      "motifs": [
+        "sátira superheroica",
+        "asociación de héroes",
+        "amenazas crecientes",
+        "reconocimiento y mérito"
+      ],
+      "generatorSeeds": {
+        "world": "ciudades protegidas por una asociación de héroes con rangos, patrocinadores y alertas de desastre",
+        "conflict": "una amenaza absurda supera la burocracia heroica mientras el verdadero salvador pasa inadvertido"
+      },
+      "integrationStatus": "canon-dossier-needed"
+    },
+    {
+      "id": "code-geass",
+      "title": "Code Geass",
+      "type": "anime",
+      "genres": [
+        "scifi",
+        "action",
+        "mystery"
+      ],
+      "motifs": [
+        "rebelión",
+        "estrategia política",
+        "identidad secreta",
+        "mechas",
+        "consecuencias morales"
+      ],
+      "generatorSeeds": {
+        "world": "un imperio tecnocrático dividido por ocupación, propaganda y unidades de combate pilotadas",
+        "conflict": "un estratega enmascarado busca derribar el régimen y descubre que cada victoria también fortalece a un rival"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "gundam-witch",
+      "title": "Mobile Suit Gundam: The Witch from Mercury",
+      "type": "anime",
+      "genres": [
+        "scifi",
+        "drama",
+        "action"
+      ],
+      "motifs": [
+        "mechas",
+        "academia corporativa",
+        "duelos",
+        "conflictos empresariales",
+        "ética tecnológica"
+      ],
+      "generatorSeeds": {
+        "world": "una academia espacial controlada por conglomerados donde los duelos deciden privilegios y el desarrollo de armas tiene costes humanos",
+        "conflict": "una piloto y su unidad experimental quedan atrapadas entre rivalidades empresariales, secretos tecnológicos y una crisis política"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "gundam",
+      "title": "Mobile Suit Gundam (franquicia)",
+      "type": "anime-franchise",
+      "genres": [
+        "scifi",
+        "war-drama"
+      ],
+      "motifs": [
+        "guerra espacial",
+        "pilotos",
+        "máquinas de combate",
+        "civiles afectados",
+        "ciclos de represalia"
+      ],
+      "generatorSeeds": {
+        "world": "colonias espaciales y potencias terrestres en una guerra donde los pilotos son jóvenes y las decisiones estratégicas afectan a civiles",
+        "conflict": "una tripulación improvisada debe sobrevivir al conflicto sin perder su humanidad"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "average-abilities",
+      "title": "Didn't I Say to Make My Abilities Average in the Next Life?!",
+      "type": "light-novel-anime",
+      "genres": [
+        "fantasy",
+        "comedy",
+        "isekai"
+      ],
+      "motifs": [
+        "reencarnación",
+        "poder desbalanceado",
+        "aventureras",
+        "identidad oculta",
+        "comedia de expectativas"
+      ],
+      "generatorSeeds": {
+        "world": "un mundo de fantasía donde una aventurera reencarnada intenta llevar una vida corriente pese a una capacidad extraordinaria",
+        "conflict": "cada intento de pasar desapercibida convierte una tarea sencilla en una hazaña que atrae más atención"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "saving-80000-gold",
+      "title": "Saving 80,000 Gold in Another World for My Retirement",
+      "type": "light-novel-anime",
+      "genres": [
+        "isekai",
+        "fantasy",
+        "comedy",
+        "commerce"
+      ],
+      "motifs": [
+        "viaje entre mundos",
+        "arbitraje comercial",
+        "preparación",
+        "supervivencia económica",
+        "negociación"
+      ],
+      "generatorSeeds": {
+        "world": "dos mundos con niveles tecnológicos distintos conectados por una habilidad de tránsito limitada",
+        "conflict": "una protagonista convierte información y comercio entre mundos en un plan de seguridad económica mientras evita que sus ventajas la expongan"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "potion-danomi",
+      "title": "I Shall Survive Using Potions!",
+      "type": "light-novel-anime",
+      "genres": [
+        "isekai",
+        "fantasy",
+        "comedy"
+      ],
+      "motifs": [
+        "reencarnación",
+        "pociones creadas a medida",
+        "ingenio",
+        "negociación",
+        "reglas de habilidad"
+      ],
+      "generatorSeeds": {
+        "world": "un reino de fantasía donde una recién llegada puede crear recipientes y pociones bajo reglas que debe aprender a explotar",
+        "conflict": "una habilidad aparentemente sencilla cambia el equilibrio local y obliga a su usuaria a negociar, ocultarse o huir"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "noucome",
+      "title": "NouCome — My Mental Choices Are Completely Interfering with My School Romantic Comedy",
+      "type": "light-novel-anime",
+      "genres": [
+        "comedy",
+        "romance",
+        "school"
+      ],
+      "motifs": [
+        "elecciones absurdas",
+        "comedia de situación",
+        "romance escolar",
+        "escalada de consecuencias"
+      ],
+      "generatorSeeds": {
+        "world": "una comedia escolar donde una condición sobrenatural obliga al protagonista a elegir entre opciones ridículas con consecuencias sociales",
+        "conflict": "cada solución a una elección imposible provoca un problema mayor para el protagonista y su grupo"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "konosuba",
+      "title": "KonoSuba: God's Blessing on This Wonderful World!",
+      "type": "light-novel-anime",
+      "genres": [
+        "fantasy",
+        "comedy",
+        "isekai"
+      ],
+      "motifs": [
+        "grupo disfuncional",
+        "misiones fallidas",
+        "aventura paródica",
+        "deudas",
+        "victorias con costes ridículos"
+      ],
+      "generatorSeeds": {
+        "world": "un mundo de gremios y monstruos donde un grupo de aventureros con habilidades incompatibles acepta trabajos por dinero",
+        "conflict": "una misión sencilla se descontrola porque cada integrante persigue su propio objetivo y la solución empeora el problema"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "sentouin",
+      "title": "Combatants Will Be Dispatched! / Sentouin, Hakenshimasu!",
+      "type": "light-novel-anime",
+      "genres": [
+        "scifi",
+        "comedy",
+        "fantasy"
+      ],
+      "motifs": [
+        "agente cínico",
+        "organización invasora",
+        "fantasía y tecnología",
+        "misiones inmorales",
+        "humor irreverente"
+      ],
+      "generatorSeeds": {
+        "world": "una organización tecnológica envía agentes a conquistar un mundo de fantasía y mide el éxito con una puntuación moral deliberadamente torcida",
+        "conflict": "un agente oportunista debe cumplir una misión de expansión mientras su equipo disfuncional y los habitantes locales complican cada orden"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "re-zero",
+      "title": "Re:Zero − Starting Life in Another World",
+      "type": "light-novel-anime",
+      "genres": [
+        "fantasy",
+        "isekai",
+        "psychological-drama"
+      ],
+      "motifs": [
+        "bucle temporal",
+        "costes emocionales",
+        "misterios",
+        "dependencia y confianza"
+      ],
+      "generatorSeeds": {
+        "world": "un reino de fantasía donde una anomalía temporal permite repetir ciertos acontecimientos, pero no evita el desgaste emocional",
+        "conflict": "el protagonista intenta cambiar un resultado trágico reuniendo información sin poder compartir fácilmente lo que recuerda"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "overlord",
+      "title": "Overlord",
+      "type": "light-novel-anime",
+      "genres": [
+        "dark-fantasy",
+        "isekai",
+        "politics"
+      ],
+      "motifs": [
+        "poder desproporcionado",
+        "conquista",
+        "lealtad",
+        "malentendidos políticos"
+      ],
+      "generatorSeeds": {
+        "world": "un mundo de fantasía donde una entidad muy poderosa debe gobernar subordinados que interpretan cada gesto como un plan maestro",
+        "conflict": "la expansión de un poder casi imparable genera dilemas de gobierno, diplomacia y consecuencias para la población"
+      },
+      "integrationStatus": "catalogue-reference"
+    },
+    {
+      "id": "eminence-in-shadow",
+      "title": "The Eminence in Shadow",
+      "type": "light-novel-anime",
+      "genres": [
+        "fantasy",
+        "action",
+        "comedy"
+      ],
+      "motifs": [
+        "identidad secreta",
+        "organización clandestina",
+        "drama malinterpretado",
+        "acción estilizada"
+      ],
+      "generatorSeeds": {
+        "world": "un reino de fantasía con una organización secreta real cuyas conspiraciones coinciden accidentalmente con las fantasías de su líder",
+        "conflict": "un protagonista interpreta los hechos como teatro personal mientras sus aliados descubren una conspiración auténtica"
+      },
+      "integrationStatus": "catalogue-reference"
+    }
+  ],
+  "canonDossierPriority": [
+    "my-hero-academia",
+    "one-punch-man"
+  ],
+  "statusLegend": {
+    "existing-canon-work-in-progress": "Hay material previo del universo, pero la auditoría de canon y cobertura sigue abierta.",
+    "canon-dossier-needed": "Prioridad explícita para construir corpus de canon, personajes, facciones, cronología y fuentes.",
+    "catalogue-reference": "Perfil de inspiración para el generador; todavía no es una enciclopedia canónica completa."
+  }
+}
