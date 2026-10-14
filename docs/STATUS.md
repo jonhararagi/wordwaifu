@@ -1,17 +1,20 @@
 # Estado de WordWaifu
 # Auditoría de candidata DanMachi — 2026-10-14
 
-- Rama de trabajo autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- **Último SHA funcional con ambos workflows confirmados:** `bbc42acd7160dcd222cd439895201621bc3f662f`.
-- [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38515600587) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38515600602) pasaron en ese mismo SHA, incluyendo Chromium.
-- Cambios funcionales incluidos en esa validación: roster de 59 registros con Eina Tulle y fuente de adaptación; catálogo editable de poderes con persistencia JSON y referencias validadas; red de afiliación de Familia por continuidad; lectura combinada del panel de arte; marca anti-resurrección después del borrado permanente.
-- Regresiones verificadas en navegador: crear/guardar/recargar un poder; conservar recursos del respaldo local cuando IndexedDB sigue siendo legible; navegar de Bell a integrantes de Hestia Familia; rechazar guardados y activaciones de IDs borrados permanentemente.
-- **Integración total aún abierta:** faltan deltas semánticos de ramas divergentes de snapshots, roster, editor/generador de historias y corpus de Familias. No se incorporan en bloque los módulos de franquicias adicionales ni el explorador de universos de la rama de poderes.
-- Canon pendiente: la escena de aventureros de nivel 8/9 atribuida a Episode Freya / Emperatriz sigue sin localizador primario suficiente. No se promueven nombres, niveles ni cronología a canon confirmado.
-- Seguridad: no se realizó merge, no se modificó `main`, no se alteraron ramas remotas no autorizadas y no se creó ni cerró PR.
-- Esta sincronización actualiza únicamente documentación de estado y matriz; las ejecuciones de CI de su SHA documental se registran aparte y no se confunden con el SHA funcional anterior.
+- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`. No se modifica `main`, no se hace merge y no se abre/cierra PR.
+- **Último SHA de código/lore con ambos workflows confirmados:** `f16adcecb4f8c03cdf20f9a44761475f9d5781e6`. [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519704317) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519704363).
+- **Auditoría de ramas y matriz confirmadas:** `0a1b7f10bad7fc2c9c0ef0d013379ffa55346cd8`. [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519803216) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519803119). Esta actualización de estado crea otro commit documental; su CI debe comprobarse en su propio SHA y no se da por verde por herencia.
+- **DanMachi — catálogo estructurado actual:** 48 registros activos, 67 IDs reservados, 100 documentos de apoyo y 165 archivos registrados por la sincronización. La comprobación del catálogo detecta 151 archivos Markdown. Tipos: 22 personajes, 2 registros de deidad, 1 grupo de personajes, 3 Familias, 7 eventos, 4 eventos de autor/AU, 3 reglas del mundo, 1 escenario, 1 institución/lugar, 1 lugar nuevo, 1 cronología y 2 índices.
+- **Estado honesto de esas 48 fichas:** 0 completas según el criterio estricto de verificación; 25 parciales/provisionales; 23 pendientes (borradores, verificación pendiente o propuestas de AU/autor). Los índices y documentos de investigación no cuentan automáticamente como fichas terminadas.
+- **Roster de adaptación:** 59 identidades únicas. Se incorporaron 24 expedientes de investigación específicos por continuidad procedentes de la rama de integración, conservando los IDs/alias normalizados de la candidata. La UI ahora muestra esos apartados en la continuidad seleccionada, con fuente secundaria y nivel de spoilers explícitos. Los 33 perfiles de `src/character-dossiers.js` se conservan.
+- **Nuevo lugar integrado:** `LOC-DUNGEON`, ficha parcial con fuente editorial oficial del volumen 1 registrada como `DMR-012-SRC-001`. La fuente respalda el marco general de Orario/Dungeon, no la topología interna ni detalles de escenas. La ficha, el índice, el catálogo, la cola y la bitácora quedaron enlazados.
+- **Comparación de ramas actualizada:** candidata `f16adcecb4f8c03cdf20f9a44761475f9d5781e6` frente a `main` `675587f5ef50abd48382a07fc167ca08a26cae3f`: divergidas; candidata +626 / `main` +6 commits exclusivos desde la base común. Los conteos del grafo no equivalen a cherry-picks automáticos. La matriz registra 19 ramas fuente adicionales.
+- **Deltas de mainline:** se conservaron las funciones propias de la candidata y se portaron selectivamente los 24 dossiers. Aún queda revisión semántica de la generación de afirmaciones desde el roster en `src/lore-corpus.js`, y de los deltas de snapshots, editor/generador y persistencia; no se reemplazaron módulos completos.
+- **Canon pendiente:** la escena de aventureros de nivel 8/9 atribuida a *Episode Freya* / Emperatriz sigue sin localizador primario suficiente. No se promueven nombres, niveles ni cronología a canon confirmado.
+- **Rate limit consultado:** el endpoint público anónimo devolvió 57/60 solicitudes REST core y 57/60 code search restantes, con search 10/10; GraphQL 0/0. Esto describe la cuota anónima pública, **no** la cuota OAuth de la conexión GitHub, cuyo endpoint de rate limit no está expuesto por las acciones disponibles. Las operaciones de esta sesión siguieron respondiendo.
+- **Veredicto:** los cambios recientes están guardados en la candidata y los dos workflows pasaron en los SHAs citados. La misión global **no está cerrada**: la cobertura del canon y la consolidación semántica de todas las ramas siguen incompletas; no se autoriza merge por inferencia.
 
-**Veredicto:** el SHA funcional `bbc42acd...` superó ambos workflows. La candidata sigue sin autorización para merge mientras queden diferencias funcionales necesarias sin revisar.
+
 ---
 
 
