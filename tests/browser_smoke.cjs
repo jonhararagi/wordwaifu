@@ -254,6 +254,12 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyEndingType']").inputValue(), "open");
     assert.equal(await page.locator("#story-meta-form [name='storyCastPlan']").inputValue(), "Mara quiere salvar el barrio; Ivo, coprotagonista, busca exponer a la corporación.");
     assert.equal(await page.locator("#story-meta-form [name='storyPersonalityPlan']").inputValue(), "Mara usa humor defensivo y evita pedir ayuda; Ivo habla con precisión y desconfía de las instituciones.");
+    assert.equal(await page.locator("#story-meta-form [name='storyAntagonistPlan']").inputValue(), "La directora quiere mantener el orden a cualquier precio y controla el suministro de energía.");
+    assert.equal(await page.locator("#story-meta-form [name='storyRomancePlan']").inputValue(), "Mara e Ivo aprenden a confiar pese a sus métodos opuestos.");
+    assert.equal(await page.locator("#story-meta-form [name='storyTraumaPlan']").inputValue(), "Mara evita pedir ayuda tras una pérdida; el arco debe mostrar apoyo y recaídas.");
+    assert.equal(await page.locator("#story-meta-form [name='storyPremise']").inputValue(), "Mara quiere salvar el barrio inundado antes de que la corporación cierre las compuertas.");
+    assert.equal(await page.locator("#story-meta-form [name='storyConflict']").inputValue(), "La corporación controla las compuertas y oculta el mapa de evacuación.");
+    assert.equal(await page.locator("#story-meta-form [name='storyWorldRules']").inputValue(), "Las compuertas solo pueden abrirse con una clave física custodiada por el gremio.");
     const openingSummary = await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue();
     assert.ok(openingSummary.includes("Mara") && openingSummary.includes("barrio") && openingSummary.includes("compuertas"), "opening chapters should describe an event grounded in the protagonist, goal and world rules");
     const declineSummary = await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue();
