@@ -2978,7 +2978,18 @@ async function run() {
     assert.ok(generatedSummaries.some(summary => summary.includes("Resumen de referencia estilo wiki")), "The reference summary must inform the outline.");
     if (originalChapterContent) assert.equal(await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue(), originalChapterContent,
       "Generating an outline must not overwrite existing chapter manuscript text.");
-    process.stdout.write("PASS story outline generator: 30-chapter phase plan, open ending, wiki reference context, and manuscript preservation.\\n");
+    await page.locator("#story-character-role").selectOption("villain");
+    await page.locator("#story-character-generate-button").click();
+    await page.waitForFunction(() => (document.querySelector("#story-ingredients-status")?.textContent || "").includes("Propuesta añadida"), null, { timeout: 10000 });
+    const generatedEnsemble = await page.locator("#story-meta-form [name='storyEnsemble']").inputValue();
+    assert.ok(generatedEnsemble.includes("Antagonista principal") && generatedEnsemble.includes("Herida o trauma:") && generatedEnsemble.includes("Arco posible:"),
+      "Character seed generation must include antagonist role, trauma, and a personal arc.");
+    await page.locator("#story-world-kind").selectOption("urban-supernatural");
+    await page.locator("#story-world-generate-button").click();
+    await page.waitForFunction(() => (document.querySelector("#story-ingredients-status")?.textContent || "").includes("Semilla de mundo añadida"), null, { timeout: 10000 });
+    assert.ok((await page.locator("#story-meta-form [name='storyWorldRules']").inputValue()).includes("reglas:"));
+    assert.ok((await page.locator("#story-meta-form [name='storyWorldDynamics']").inputValue()).includes("Gancho inicial:"));
+    process.stdout.write("PASS story generators: 30-chapter outline, open ending, wiki reference, manuscript preservation, villain seed, and world rules.\\n");
 
     // Structured power workbench: create a record, save, reload, and recover it.
     await page.locator('[data-view="powers"]').click();
