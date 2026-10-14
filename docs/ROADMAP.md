@@ -51,24 +51,28 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 **Gate:** el mismo personaje aparece en diferentes lugares en distintos momentos sin duplicar su ficha.
 
 ## Fase 4 — Generadores sin IA
-**Estimación:** 3–6 días.
-- Catálogos editables de especies, rasgos, objetivos, defectos y trasfondos.
-- Reglas de compatibilidad y plantillas narrativas.
-- Semilla reproducible.
-- Propuestas que requieren aprobación.
-- Generadores de personajes, ciudades, facciones y conflictos.
+**Estado:** PARTIAL · primer núcleo Story Foundry integrado en rama de trabajo.
+- [x] Semillas editables de personajes: personalidad, objetivo, defecto, trauma, vínculo, capacidad, límite y arco.
+- [x] Semillas de mundo: premisa, reglas, presión social, facciones y gancho.
+- [x] Generador de poderes existente, con coste, límites y evolución.
+- [x] Las propuestas se añaden sin sobrescribir en silencio el material ya escrito.
+- [ ] Ampliar catálogos y variaciones para especies, culturas, ciudades, facciones y conflictos.
+- [ ] Añadir semillas reproducibles configurables y detección de incompatibilidades.
 
-**Gate:** resultados válidos, editables y reproducibles; las reglas incompatibles se detectan.
+**Gate restante:** ampliar cobertura de catálogos y validar combinaciones; las plantillas actuales son puntos de partida, no generación exhaustiva.
 
 ## Fase 5 — Historia y novela
-**Estimación:** 3–7 días.
-- Premisa, actos, arcos y subtramas.
-- Volúmenes, capítulos y escenas.
-- Editor Markdown local.
-- Referencias a personajes, lugares y eventos.
-- Exportación de manuscrito.
+**Estado:** PARTIAL · índice de novela implementado; generación de manuscrito completo pendiente.
+- [x] Elegir cantidad de capítulos (1–500) y final abierto/cerrado.
+- [x] Generar resúmenes por capítulo y fases adaptadas: presentación, progreso, falsa seguridad, caída, clímax y resolución.
+- [x] Incorporar resumen de referencia tipo wiki como contexto orientativo.
+- [x] Conservar capítulos con manuscrito al añadir un nuevo índice.
+- [x] Editor local de título, resumen, manuscrito y estado; importación/exportación Markdown existente.
+- [ ] Crear actos, arcos y subtramas con dependencias explícitas.
+- [ ] Expandir resúmenes a escenas y borradores de capítulo.
+- [ ] Vincular propuestas aprobadas a fichas canónicas y ejecutar auditoría de continuidad entre capítulos.
 
-**Gate:** producir un esquema completo y un borrador organizado a partir de un proyecto existente.
+**Gate restante:** generar un esquema completo y editable desde un proyecto existente, expandirlo a manuscrito y pasar la auditoría de continuidad.
 
 ## Fase 6 — Continuity Guard
 **Estimación:** 2–5 días.
@@ -99,6 +103,13 @@ Estimaciones iniciales orientativas para un desarrollador con asistencia de herr
 8. Extensiones visuales e IA opcional.
 
 No saltar directamente a generadores masivos antes de demostrar que el canon y las relaciones sobreviven a la edición y a la recarga.
+
+## Registro de implementación — Story Foundry (2026-10-14)
+
+- Núcleo en `src/story-structure-generator.js`; integración en `src/app.js`; estilos en `src/styles.css`.
+- Pruebas unitarias en `tests/test_story_structure_generator.cjs` y regresión de navegador en `tests/browser_smoke.cjs`.
+- **PASS_REAL:** [Validate WordWaifu #1081](https://github.com/jonhararagi/wordwaifu/actions/runs/38572910615), incluida ejecución de Chromium.
+- La validación final sobre el HEAD documental más reciente debe confirmarse en GitHub Actions; no se confunde la ejecución anterior con una prueba de un SHA posterior.
 
 ## Extensión consolidada de visión (objetivos posteriores, no funciones ya entregadas)
 
