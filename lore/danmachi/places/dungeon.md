@@ -5,6 +5,7 @@ type: location
 status: source_checked_partial
 confidence: high for its central role as Orario's underground labyrinth; low for unverified floor-by-floor details in this dossier
 continuity_scope: CONT-MAIN-LN
+source_refs: [DMR-012-SRC-001]
 source_url: https://ga.sbcr.jp/product/9784797372809/
 tags: [Dungeon, Orario, aventureros, exploración, recursos]
 ---
