@@ -498,7 +498,12 @@ return {...base,sections:[...(base.sections||[]),...sections],repositoryProfile:
 
 function unique(a){return Array.from(new Set(a.filter(Boolean)));}
 function record(index,id){return (index.characters||[]).find(x=>x.id===id)||null;}
-function claimsFor(index,id){return (index.claims||[]).filter(c=>(c.characterIds||[]).includes(id));}
+function claimsFor(index,id){
+  const grouped=index&&index._claimsByCharacter;
+  if(grouped instanceof Map)return grouped.get(id)||[];
+  // Compatibility for hand-built test fixtures and older index snapshots.
+  return (index&&index.claims||[]).filter(c=>(c.characterIds||[]).includes(id));
+}
 function visible(level,filter){const v=String(level||"unknown").toLowerCase();if(filter==="hide-major")return v!=="major"&&v!=="endgame";if(filter==="safe-only")return v==="none"||v==="mild";return true;}
 function ordered(a){return unique(a).sort((x,y)=>{const i=ORDER.indexOf(x),j=ORDER.indexOf(y);return(i<0?99:i)-(j<0?99:j)||x.localeCompare(y);});}
 function defaultState(a){const s=ordered(a);return ["CONT-AR","CONT-ANIME","CROSS-CONTINUITY","CONT-MAIN-LN","CONT-AU"].find(x=>s.includes(x))||s[0]||"";}
