@@ -2550,12 +2550,12 @@
     const rosterApi = window.WordWaifuOfficialCharacterRoster;
     if (!rosterApi || !loreArchiveIndex) return null;
     const raw = String((profile.officialReference && profile.officialReference.family) || profile.state.affiliation || "");
-    const parts = raw.split(/\\s*;\\s*/).filter(Boolean);
+    const parts = raw.split(/\s*;\s*/).filter(Boolean);
     let chosenPart;
     if (profile.continuity === "CONT-AR") chosenPart = parts.find(part => /familia/i.test(part)) || parts[0];
     else if (profile.continuity === "CONT-ANIME") chosenPart = parts.find(part => /estado del anime|hostess of fertility/i.test(part)) || parts.find(part => /familia/i.test(part)) || parts[0];
     else chosenPart = parts.find(part => /familia/i.test(part)) || parts[0];
-    const familyName = String(chosenPart || "").replace(/\\s*\\([^)]*\\)/g, "").trim();
+    const familyName = String(chosenPart || "").replace(/\s*\([^)]*\)/g, "").trim();
     if (!familyName) return null;
     const members = rosterApi.list().filter(member => {
       if (!member || member.id === profile.id || !String(member.family || "").toLowerCase().includes(familyName.toLowerCase())) return false;
