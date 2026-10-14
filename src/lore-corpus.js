@@ -306,9 +306,12 @@
     claims.forEach(claim => {
       const linkedCharacters = (claim.characterIds || []).map(id => characterById.get(id)).filter(Boolean);
       const aliases = linkedCharacters.flatMap(character => character.aliases || []);
-      claim._searchText = normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
-        (claim.continuityScopes || []).join(" "), (claim.aspects || []).join(" "), aliases.join(" "),
-        claim.sourceTitle, claim.sourceLocator, (claim.sourceIds || []).join(" "), claim.claimId, claim.entryId].join(" "));
+      Object.defineProperty(claim, "_searchText", {
+        value: normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
+          (claim.continuityScopes || []).join(" "), (claim.aspects || []).join(" "), aliases.join(" "),
+          claim.sourceTitle, claim.sourceLocator, (claim.sourceIds || []).join(" "), claim.claimId, claim.entryId].join(" ")),
+        enumerable: false
+      });
     });
     const profileDetails = Object.create(null);
     (profileDocuments || []).forEach(document => {
