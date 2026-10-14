@@ -23,4 +23,15 @@ assert.equal(eina.evidenceType, "official_adaptation_profile");
 assert.equal(eina.continuity, "CONT-ANIME");
 assert.equal(eina.imageUrl, undefined, "Do not invent an official image URL");
 
-process.stdout.write("PASS official character roster: " + entries.length + " unique records; Eina Tulle has official adaptation provenance.\n");
+const continuityDossiers = entries.filter(entry => entry.dossiers && Object.keys(entry.dossiers).length);
+assert.equal(continuityDossiers.length, 24, "Preserve continuity-specific research dossiers from the integration source.");
+assert.ok(continuityDossiers.every(entry => Object.values(entry.dossiers).every(dossier =>
+  typeof dossier.sourceUrl === "string" && dossier.sourceUrl.startsWith("https://") &&
+  typeof dossier.sourceLabel === "string" && dossier.sourceLabel.length > 0 &&
+  ["major", "endgame", "mild", "none", "unknown"].includes(dossier.spoilerLevel)
+)), "Every continuity dossier must retain source attribution and a spoiler level.");
+assert.ok(roster.get("CHAR-RYUU-LION").dossiers["CONT-AR"], "Ryu's historical Astrea Record dossier must remain available.");
+assert.equal(roster.get("DM-CHAR-BELL").dossiers["CONT-MAIN-LN"].sourceType, "secondary_compendium",
+  "Community research must remain labeled as secondary, not official primary canon.");
+
+process.stdout.write("PASS official character roster: " + entries.length + " unique records; 24 continuity-scoped research dossiers retain source and spoiler metadata.\\n");
