@@ -72,8 +72,13 @@
     const world = clean(story.worldRules, "las reglas y límites establecidos para este mundo");
     const powers = clean(story.powerCatalog, "los recursos y poderes disponibles y sus costes");
     const dynamics = clean(story.worldDynamics, "las tensiones entre comunidades y facciones");
+    const worldType = clean(story.worldType, "el género narrativo elegido");
+    const pantheon = clean(story.pantheon, "las fuerzas míticas que actúan en este mundo");
+    const ensemble = clean(story.ensemble, "los objetivos propios de los compañeros");
     const reveal = clean(story.revealSecret, "la verdad detrás del conflicto visible");
     const clues = clean(story.revealClues, "las pistas que se sembraron en escenas anteriores");
+    const revealTiming = clean(story.revealTiming, "el momento previsto para la revelación");
+    const revealConsequences = clean(story.revealConsequences, "las consecuencias que tendrá la revelación");
     const arcs = Array.isArray(story.arcs) ? story.arcs.map((arc) => clean(arc, "")).filter(Boolean) : String(story.arcs || "").split("\n").map((arc) => clean(arc, "")).filter(Boolean);
     const endingEvent = {
       closed: "El protagonista resuelve el conflicto central y la escena final muestra qué cambió, qué se perdió y qué responsabilidad queda.",
@@ -98,10 +103,13 @@
         "La capacidad disponible y su coste se expresan en: " + powers + ".",
         "Cambio de personalidad o dilema interno: " + personality + "; herida que influye en la decisión: " + trauma + ".",
         "Vínculo afectivo puesto a prueba: " + romance + ".",
-        "Pista o revelación que avanza: " + reveal + "; indicios que deben cobrar sentido: " + clues + ".",
+        "Pista o revelación que avanza: " + reveal + "; indicios que deben cobrar sentido: " + clues + "; momento previsto: " + revealTiming + "; consecuencia: " + revealConsequences + ".",
+        "El género y sus convenciones son: " + worldType + ".",
+        "La dimensión mítica del mundo interviene mediante: " + pantheon + ".",
+        "El reparto coral tiene objetivos propios que afectan la escena: " + ensemble + ".",
         arcs.length ? "Arco que avanza en esta entrega: " + arcs[(n - 1) % arcs.length] + "." : ""
       ].filter(Boolean);
-      const summary = event[1] + " " + beats[(n - 1) % beats.length] + " El capítulo termina con una consecuencia observable que obliga a cambiar el siguiente paso del elenco.";
+      const summary = event[1] + " Premisa que guía esta entrega: " + premise + ". Conflicto que determina las consecuencias: " + conflict + ". " + beats[(n - 1) % beats.length] + " El capítulo termina con una consecuencia observable que obliga a cambiar el siguiente paso del elenco.";
       return {
         id: prior.id || ("chapter-" + Date.now().toString(36) + "-" + n),
         title: (phase.key + " — " + event[0]).slice(0, 180),
