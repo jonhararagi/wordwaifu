@@ -84,7 +84,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice maestro de personajes](characters/00-indice-personajes.md)
 - [Índice de deidades](canon/06-indice-deidades.md)
 - [Índice de Familias y organizaciones](familias/00-indice-familias.md)
-- [Índice de lugares](places/00-indice-lugares.md)
+- [Índice de lugares](places/00-indice-lugares.md) — incluye el expediente parcial del [Dungeon](places/dungeon.md), con fuente editorial y límites de certeza.
 - [Familia Hestia](familias/hestia-familia.md)
 - [Familia Loki](familias/loki-familia.md)
 - [Familia Astrea](familias/astrea-familia.md) — expediente histórico parcial con fuentes y continuidad separadas.
@@ -149,6 +149,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 |---|---|---|---|
 | Plantillas y protocolo | Sí | Sí | No aplica |
 | Personajes iniciales | Sí | Sí | Pendiente |
+| Lugares principales | Índice + ficha parcial del Dungeon | Marco general sustentado por fuente editorial | Pisos, rutas y reglas internas pendientes |
 | Reglas generales | Sí | Parcial | Pendiente |
 | Eras antiguas | Sí | Esqueleto/preguntas | Pendiente |
 | Zeus/Hera y Dragón Negro | Sí | Esqueleto/preguntas | Pendiente |
