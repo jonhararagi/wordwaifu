@@ -113,8 +113,7 @@
       antagonistProfile: "Una regente mantiene el sistema porque cree que una catástrofe mayor mataría a millones. No se considera malvada y ofrece alternativas con costes reales.",
       traumaArc: "La protagonista carga con la desaparición de un familiar. Su miedo la lleva a ocultar información; la recuperación exige confiar, asumir consecuencias y aceptar que no puede salvar a todos.",
       romanceArc: "Opcional: una relación lenta con alguien que cuestiona sus métodos. La confianza crece por decisiones coherentes, límites respetados y desacuerdos reparados.",
-      powerRules: "Cada hechizo consume tiempo, memoria o materia. La progresión mejora precisión y control, no elimina el precio; usar magia con información incompleta puede dañar a aliados.",
-      worldDynamics: "Los cambios mágicos alteran rutas comerciales, leyes, costumbres y el acceso desigual a la salud."
+      powerRules: "Cada hechizo consume tiempo, memoria o materia. La progresión mejora precisión y control, no elimina el precio; usar magia con información incompleta puede dañar a aliados."
     };
     const dystopia = {
       premise: "Una técnica de mantenimiento descubre que el sistema que promete proteger a la población está fabricando las emergencias que justifican su autoridad.",
