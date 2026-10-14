@@ -33,8 +33,9 @@ Un modelo de IA podría integrarse en el futuro como módulo opcional. Nunca ser
 - **Character Forge:** generador de personajes por plantillas, tablas, reglas de compatibilidad y edición manual.
 - **Lore Forge:** historia del mundo, culturas, sistemas mágicos, facciones, leyendas y reglas.
 - **Timeline:** acontecimientos globales y personales, fechas, causalidad y continuidad.
-- **Story Forge:** premisas, conflictos, arcos, subtramas y esquemas de historias.
-- **Novel Forge:** estructura por volúmenes, capítulos y escenas, con borradores Markdown.
+- **Story Forge:** convierte una idea en un plan narrativo editable con personajes, personalidad y voz, mundo, poderes y costes, coprotagonistas, antagonista, romance, trauma, subtramas y progresión dramática.
+- **Novel Forge:** planifica de 1 a 500 capítulos, define final cerrado/abierto/agridulce/cliffhanger, genera títulos y resúmenes por capítulo en seis etapas, conserva manuscritos y audita campos narrativos básicos. La generación local es estructural, no redacción automática de capítulos completos.
+- **Contrato funcional y fases narrativas:** [Story Forge — propósito y contrato](docs/STORY_FORGE_BLUEPRINT.md).
 - **Continuity Guard:** validaciones deterministas para detectar referencias rotas, contradicciones temporales y datos faltantes.
 - **Command Desk:** pestaña tipo chat que ejecuta comandos locales conocidos, consulta el canon y lanza generadores. No fingirá comprender lenguaje libre como un LLM.
 - **Visual Library:** referencias e imágenes vinculadas a entidades, con procedencia y metadatos. La generación de imágenes queda fuera del núcleo offline inicial.
