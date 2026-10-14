@@ -1062,7 +1062,11 @@
     const dynamicLayer = $("#dynamic-markers");
     if (dynamicLayer) {
       dynamicLayer.replaceChildren();
-      state.locations.filter((location) => !$$(".map-marker:not(.event-marker)").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
+      // Build the static-marker lookup once; scanning the SVG for each location
+      // made map rebuilds quadratic as a world grew.
+      const existingLocationIds = new Set($(".map-marker:not(.event-marker)")
+        .map(marker => marker.dataset.location).filter(Boolean));
+      state.locations.filter(location => !existingLocationIds.has(location.id)).forEach((location) => {
         const point = Array.isArray(location.marker) ? location.marker : [450, 300];
         if (!Array.isArray(location.marker)) location.marker = point;
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
