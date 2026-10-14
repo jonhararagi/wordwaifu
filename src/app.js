@@ -1324,7 +1324,7 @@
         story.pantheon = String(form.get("storyPantheon") || story.pantheon || "").trim();
         story.ensemble = String(form.get("storyEnsemble") || story.ensemble || "").trim();
         story.status = String(form.get("storyStatus") || story.status || "idea");
-        story.arcs = String(form.get("storyArcs") || "").split("\\n").map(line => line.trim()).filter(Boolean);
+        story.arcs = String(form.get("storyArcs") || "").split("\n").map(line => line.trim()).filter(Boolean);
       }
       story.outlinePrefs = prefs;
       story.sourceSummary = prefs.referenceSummary;
