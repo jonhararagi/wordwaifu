@@ -136,12 +136,12 @@ Snapshot de `lore/danmachi/catalog.json` en el mismo HEAD: 48 registros activos,
 
 Esto significa que el catálogo sigue sin registros declarados como completos/approved. No se debe presentar la validación estructural verde como aprobación factual de esos expedientes.
 
-### Diferencia viva entre ramas y siguiente bloque de trabajo
+### Snapshot histórico de divergencia previo a la reconciliación
 
-- Compare actual: candidata +646 commits y `main` +6 respecto de la base común. No se realizó merge ni se modificó `main`.
-- Los seis commits exclusivos de `main` incluyen dos cambios documentales iniciales, los merges #14/#16 y sus actualizaciones documentales. Las funciones de atlas/lore/arte, Story Foundry y navegación de familias ya están presentes selectivamente en la candidata; las diferencias restantes deben probarse por comportamiento, no portarse mediante reemplazo masivo.
-- Pendientes reales: cerrar la comparación semántica de `src/lore-corpus.js` (generación/deduplicación de claims), completar auditoría por ID de roster y fuentes, resolver expedientes DanMachi solo cuando haya evidencia primaria y documentar los deltas funcionales restantes con pruebas de regresión.
-- Estado al cierre de esta revisión: `main` sirvió como padre directo de la rama de reconciliación. No se borraron ramas ni se hizo force push. La PR y la integración final se gestionan a partir de esta rama y sus controles, no de los 647 commits exclusivos de la candidata.
+- Snapshot previo a la PR #18: candidata +647 commits y `main` +6 respecto de la base común `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`. Ese conteo describe la divergencia histórica causada por integraciones previas mediante squash; no es el número de cambios pendientes de portar.
+- La candidata y `main` habían incorporado las funciones principales a través de historiales diferentes. La PR #18 reconcilió los árboles por contenido, preservó los tres archivos exclusivos de `main` y dejó el historial candidato intacto para trazabilidad.
+- Pendientes de contenido que sobreviven al merge: cerrar las diferencias semánticas restantes del generador automático de claims de `main` sin reintroducir duplicados; completar la auditoría factual del roster por ID y fuente; y subir los expedientes DanMachi de estado provisional solo cuando exista evidencia primaria suficiente.
+- Estado al cierre de esta revisión: la PR #18 quedó fusionada en `main` mediante squash commit `97ca5cd757ba804d2d8ea017221e0c5aca02e202`. La rama candidata original y la rama de reconciliación se conservan; no se borraron ramas ni se hizo force push.
 
 
 ## Reconciliación de árbol preparada para integrar en main — 2026-10-14
