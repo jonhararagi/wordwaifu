@@ -12,7 +12,7 @@
   function normalizeOptions(input = {}) {
     const options = { ...DEFAULTS, ...(input && typeof input === "object" ? input : {}) };
     const requested = Number(options.chapterCount);
-    options.chapterCount = clamp(Number.isFinite(requested) ? Math.floor(requested) : 30, 1, 500);
+    options.chapterCount = clamp(Number.isFinite(requested) && requested > 0 ? Math.floor(requested) : 30, 1, 500);
     options.ending = options.ending === "open" ? "open" : "closed";
     options.title = text(options.title, DEFAULTS.title) || DEFAULTS.title;
     for (const key of ["genre","premise","world","protagonist","protagonistGoal","centralConflict","companion","antagonist","loveInterest","trauma","power","tone"]) options[key] = text(options[key]);
