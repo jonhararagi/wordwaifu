@@ -611,6 +611,19 @@
       ],
       "status": "provisional_reference_checked",
       "priority": "high"
+    },
+    {
+      "id": "LOC-DUNGEON",
+      "path": "places/dungeon.md",
+      "type": "location",
+      "tags": [
+        "Dungeon",
+        "Orario",
+        "aventureros",
+        "exploración"
+      ],
+      "status": "source_checked_partial",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -1558,10 +1571,10 @@
   "lastStructuredSync": {
     "branch": "work/story-completion-danmachi-audit-2026-10",
     "sourceCommit": "622369265b08712e4440087e7361f5151e9402d2",
-    "trackedLoreFiles": 164,
-    "records": 45,
+    "trackedLoreFiles": 165,
+    "records": 48,
     "reservedIds": 68,
-    "supportingDocuments": 97,
-    "syncNote": "Se incorporan Astrea Record 1–3, Sword Oratoria 1/12/13 y Familia Chronicle Ryu 1/2, Freya, Asfi y Haze. Los resúmenes son provisionales hasta cotejo por capítulo."
+    "supportingDocuments": 100,
+    "syncNote": "Extensión manual verificada: se añade LOC-DUNGEON como registro navegable con fuente editorial oficial y límites explícitos. No equivale a un cotejo completo de pisos, reglas o capítulos."
   }
 }
