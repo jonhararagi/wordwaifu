@@ -84,3 +84,25 @@ Fecha de revisión: 2026-10-14. Esta sección registra comparaciones concretas; 
 - **Cerrados sin merge:** [#1](https://github.com/jonhararagi/wordwaifu/pull/1), [#2](https://github.com/jonhararagi/wordwaifu/pull/2), [#3](https://github.com/jonhararagi/wordwaifu/pull/3), [#5](https://github.com/jonhararagi/wordwaifu/pull/5), [#6](https://github.com/jonhararagi/wordwaifu/pull/6), [#7](https://github.com/jonhararagi/wordwaifu/pull/7), [#9](https://github.com/jonhararagi/wordwaifu/pull/9), [#10](https://github.com/jonhararagi/wordwaifu/pull/10), [#12](https://github.com/jonhararagi/wordwaifu/pull/12), [#13](https://github.com/jonhararagi/wordwaifu/pull/13) y [#15](https://github.com/jonhararagi/wordwaifu/pull/15).
 - **Rutas duplicadas/sustituidas explícitamente:** #13 fue cerrada por duplicar la ruta de integración #14; #15 fue sustituida por #16; #6 documenta que la integración posterior quedó en #14/#16. El cierre no se interpreta como merge.
 - Esta consulta fue de solo lectura; no se abrió, cerró ni modificó ningún PR. El inventario de PRs describe la historia de GitHub, no sustituye la comparación semántica de ramas fuente.
+
+
+## Cierre de comparación viva de corpus y persistencia — 2026-10-14
+
+La comparación se repitió contra los refs actuales de GitHub, no contra los conteos históricos de esta matriz. Resultado del grafo: candidata +629 commits exclusivos y `main` +6 desde la base común `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`. Es un grafo divergido, no una autorización para fusionar automáticamente.
+
+### Deltas de implementación medidos por blob
+
+| Archivo | Blob en main | Blob en candidata | Diferencia de comportamiento identificada | Decisión |
+|---|---|---|---|---|
+| `src/lore-corpus.js` | `b6daaf8a7d8de973bd91719ccf26b667cc1ee77a` | `c4cd6cbc4a6026a8a3483c77d615b7f2f92f7313` | `main` crea afirmaciones a partir del roster (`claimsFromOfficialRoster`); la candidata ofrece `searchEntities` y `tokenMatches`, y su índice cuenta 98 afirmaciones fuente / 101 entradas en la prueba de corpus. | No copiar la generación de afirmaciones sin una prueba de deduplicación por personaje, continuidad y fuente. El generador de `main` añade también afirmaciones de dossiers aunque ya existan afirmaciones documentales para ese personaje; importarlo sin adaptar la deduplicación cambiaría los conteos y puede introducir solapamientos. La búsqueda estructurada de la candidata se conserva. |
+| `src/project-repository.js` | `c605f878de7ec898d603f62addfe78dc481d4089` | `238018631f56c192969ba03af518176cd72569ea` | `main` conserva `restorePreviousBackup`; la candidata tiene un método menos, con rollback explícito y reglas de tombstone en las rutas de guardado/activación. | No copiar el helper aislado sin demostrar un camino de error que la candidata no cubra. Mantener las pruebas de borrado permanente y no-resurrección como criterio. |
+| `src/official-character-roster.js` | `8cae08937062bba746fd5501dd96a086fa97d188` | `dd82ac5306a7e66df077e79a0cc2deea40177406` | Los blobs difieren, pero no hay diferencia de nombres de funciones que justifique un reemplazo total; los alias deben tratarse como normalizaciones, no como personajes nuevos. | Mantener roster candidato y verificar diferencias de datos por ID, continuidad y URL de fuente antes de portar registros. |
+| `src/project-schema.js` | `9f739d3629a743e55ce386b2bc81ece3e67d966e` | `89173c987396e04025e776f2babe32b403c1f5ae` | La candidata es mayor (21.721 caracteres frente a 16.968) e incluye validación del modelo de poderes/historias. | No sustituir por el esquema más corto de `main`; la reducción podría eliminar contratos de datos añadidos. |
+| `src/art-studio.js` | `341601c2edc3f84fedbaf1d286764650328d2388` | `e2c62e8f3c222eb70f28ff4eb3438fe74592dcd5` | Los dos módulos tienen distinta extensión y el trabajo previo ya añadió lectura combinada de IndexedDB y respaldo local por ID. | No reemplazo por bloque; conservar el test de recuperación de galería. |
+
+### Criterio de cierre aplicado
+
+- La divergencia de archivos no se considera automáticamente un defecto: cada cambio debe demostrar comportamiento ausente y una prueba que falle antes y pase después.
+- El retrieval del corpus no se declara equivalente entre ramas. La candidata conserva la búsqueda estructurada y el filtro de entidades; la generación automática de afirmaciones de `main` queda clasificada como delta no portado por riesgo concreto de duplicación, no como trabajo supuestamente integrado.
+- Los conteos históricos de commits de secciones anteriores son snapshots fechados. Para esta comparación viva prevalecen +629/+6 y los SHA de blobs de la tabla.
+- No se modifica `main`, no se crea un merge commit, no se abre/cierra PR y no se borran ramas. El cierre funcional definitivo sigue condicionado a las pruebas de corpus/roster/persistencia y a la verificación de las fuentes primarias pendientes; esta auditoría no etiqueta esos requisitos como completados.
