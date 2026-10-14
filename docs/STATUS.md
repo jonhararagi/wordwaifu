@@ -3,14 +3,14 @@
 
 - Rama autorizada de trabajo: `work/story-completion-danmachi-audit-2026-10`.
 - Evidencia de CI general posterior al commit de la matriz: [Validate WordWaifu #965 terminó en success](https://github.com/jonhararagi/wordwaifu/actions/runs/38512183270) para el SHA exacto `a3a37ec39f9f983e4255b7347c958a9a6b052bf0`; la prueba Chromium de esa ejecución valida ese SHA, no los commits posteriores.
-- Después de ese SHA se añadieron cuatro commits documentales/índice en esta misma rama: el enlace al índice maestro, la reconciliación del estado, la corrección de referencias obsoletas y la ampliación de la matriz con dos ramas adicionales. La punta actual de la rama, por tanto, **no está cubierta por el CI de #962**; hay que verificar los workflows en el SHA final.
+- Después de ese SHA se actualizaron el índice maestro, esta bitácora y la matriz de integración, y se corrigió el workflow de DanMachi para que cada SHA tenga su propia ejecución sin cancelar la validación anterior. El workflow ahora también se activa cuando cambian esta bitácora o la matriz. Por tanto, el resultado de #962 **no acredita la punta actual**; los dos workflows deben comprobarse por SHA exacto.
 - Para el SHA `a3a37ec39f9f983e4255b7347c958a9a6b052bf0`, el workflow `DanMachi Lore and Retrieval Integrity` no tiene ejecución exacta registrada ([consulta por SHA](https://api.github.com/repos/jonhararagi/wordwaifu/actions/workflows/danmachi-lore-check.yml/runs?head_sha=a3a37ec39f9f983e4255b7347c958a9a6b052bf0&per_page=100)). La ausencia de ejecución no equivale a fallo ni a aprobación.
 - La matriz de integración está en [`docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md`](INTEGRATION_DANMACHI_AUDIT_2026-10.md). La comparación de ramas encontró diferencias de árbol y commits divergidos; igualdad de un archivo no acredita integración de toda una rama. La auditoría semántica de los deltas exclusivos sigue pendiente.
 - `tests/browser_smoke.cjs` corrige el conteo obsoleto de catálogo leyendo el número esperado de `data/catalog/mythic-arsenal.json` en vez de fijarlo en 75. La suite completa de `Validate WordWaifu #965` pasó en `a3a37ec`; los commits posteriores siguen requiriendo validación en la punta.
 - Investigación primaria de *Episode Freya* / Emperatriz: pendiente. La ficha editorial oficial y las publicaciones originales de Omori se registraron como pistas; la escena de aventureros de nivel 8/9 no pudo cotejarse con texto primario accesible. No elevar nombres, niveles ni cronología a canon verificado.
 - No se ha ejecutado merge ni se ha modificado `main` ni ramas remotas no autorizadas en esta iteración. No se ha publicado ni cerrado PR.
 
-**Veredicto:** candidata en progreso, no cerrada. Antes del cierre faltan el SHA exacto actual, ejecución satisfactoria de ambos workflows aplicables en esa punta, prueba real de navegador en la punta final y comparación semántica de los deltas exclusivos de las ramas relevantes.
+**Veredicto:** candidata en progreso, no cerrada. La siguiente ejecución debe acreditar el SHA que incorpora esta bitácora, con `Validate WordWaifu` y `DanMachi Lore and Retrieval Integrity` ambos verdes; luego hay que revisar sus resultados de Chromium y completar la comparación semántica de los deltas exclusivos. El SHA exacto de entrega se registra en el informe de esta misión.
 ---
 
 
