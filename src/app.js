@@ -1064,7 +1064,7 @@
       dynamicLayer.replaceChildren();
       // Build the static-marker lookup once; scanning the SVG for each location
       // made map rebuilds quadratic as a world grew.
-      const existingLocationIds = new Set($(".map-marker:not(.event-marker)")
+      const existingLocationIds = new Set(Array.from(document.querySelectorAll(".map-marker:not(.event-marker)"))
         .map(marker => marker.dataset.location).filter(Boolean));
       state.locations.filter(location => !existingLocationIds.has(location.id)).forEach((location) => {
         const point = Array.isArray(location.marker) ? location.marker : [450, 300];
