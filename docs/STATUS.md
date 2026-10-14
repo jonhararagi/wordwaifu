@@ -1,16 +1,16 @@
 # Estado de WordWaifu
 # Auditoría de candidata DanMachi — 2026-10-14
 
-- Rama autorizada de trabajo: `work/story-completion-danmachi-audit-2026-10`.
-- Último SHA con ambos workflows confirmados en esta auditoría antes de esta sincronización documental: `312f997dee35aea0d9449bafcf08a69800edf061`. [Validate WordWaifu #972: success](https://github.com/jonhararagi/wordwaifu/actions/runs/38512563749) y [DanMachi Lore and Retrieval Integrity #483: success](https://github.com/jonhararagi/wordwaifu/actions/runs/38512563619). En ambos se completaron con éxito los pasos de sintaxis, catálogos/relaciones, importación, expedientes y Chromium.
-- Después de ese SHA se actualizaron el índice maestro, esta bitácora y la matriz de integración, y se corrigió el workflow de DanMachi para que cada SHA tenga su propia ejecución sin cancelar la validación anterior. El workflow ahora también se activa cuando cambian esta bitácora o la matriz. Por tanto, el resultado de #965 **no acredita la punta actual**; los dos workflows deben comprobarse por SHA exacto.
-- La ausencia histórica de ejecución de DanMachi para `a3a37ec39f9f983e4255b7347c958a9a6b052bf0` queda resuelta en el SHA posterior `312f997...`, cuyo workflow específico terminó en success. La última sincronización de esta bitácora dispara nuevas ejecuciones porque `docs/STATUS.md` está incluido en los filtros de ruta; comprobar el SHA de esa punta antes del cierre.
-- La matriz de integración está en [`docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md`](INTEGRATION_DANMACHI_AUDIT_2026-10.md). La comparación de ramas encontró diferencias de árbol y commits divergidos; igualdad de un archivo no acredita integración de toda una rama. La auditoría semántica de los deltas exclusivos sigue pendiente.
-- `tests/browser_smoke.cjs` corrige el conteo obsoleto de catálogo leyendo el número esperado de `data/catalog/mythic-arsenal.json` en vez de fijarlo en 75. En `312f997...`, tanto `Validate WordWaifu #972` como `DanMachi Lore and Retrieval Integrity #483` ejecutaron Chromium y terminaron correctamente; la última edición de esta bitácora genera un SHA nuevo que requiere confirmar ambos runs otra vez.
-- Investigación primaria de *Episode Freya* / Emperatriz: pendiente. La ficha editorial oficial y las publicaciones originales de Omori se registraron como pistas; la escena de aventureros de nivel 8/9 no pudo cotejarse con texto primario accesible. No elevar nombres, niveles ni cronología a canon verificado.
-- No se ha ejecutado merge ni se ha modificado `main` ni ramas remotas no autorizadas en esta iteración. No se ha publicado ni cerrado PR.
+- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
+- **Último SHA con ambos workflows confirmados:** `29dbe526f43afd72c1de2f06857d373d560674f7`.
+- [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38514547917) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38514547959) terminaron en éxito para ese SHA exacto.
+- Cambios de esta iteración: roster de adaptación ampliado a 59 registros con Eina Tulle y prueba de fuente oficial; catálogo estructurado de poderes integrado como panel independiente del catálogo mitológico; persistencia JSON, validación de referencias a personajes/historias y prueba de creación/guardado/recarga en Chromium.
+- Pruebas en verde en el SHA citado: sintaxis, catálogo mitológico, generador de poderes, esquema/importación, expedientes, roster oficial, catálogo DanMachi, expediente de Familia Hestia, smoke de navegador y validador estructural.
+- La candidata sigue abierta para integración total: quedan por comparar semánticamente deltas exclusivos de snapshots, arte, roster, explorador de Familias y editor/generador narrativo. Los módulos de franquicias adicionales y explorador de universos de la rama de poderes no se incorporaron sin auditoría independiente.
+- Episode Freya / Emperatriz: la confirmación primaria de la escena de aventureros de nivel 8/9 sigue pendiente. No elevar nombres, niveles ni cronología a canon verificado sin localizador primario.
+- Seguridad: no se realizó merge, no se modificó `main`, no se actualizaron otras ramas remotas y no se creó ni cerró un PR.
 
-**Veredicto:** candidata en progreso, no cerrada. Ambos workflows pasaron en `312f997...`; esta sincronización documental posterior activa ambos workflows por los filtros de ruta. El cierre depende de verificar sus resultados en el nuevo SHA y de completar la comparación semántica de los deltas exclusivos. El SHA exacto de entrega se registra en el informe de esta misión.
+**Veredicto:** validación general y específica de DanMachi aprobadas para `29dbe526...`; la integración completa no se declara terminada mientras queden deltas funcionales sin revisar.
 ---
 
 
