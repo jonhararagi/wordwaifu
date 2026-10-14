@@ -4,6 +4,7 @@ const http = require("node:http");
 const path = require("node:path");
 const { chromium } = require("playwright");
 const { validateAndNormalizeProject } = require("../src/project-schema.js");
+require("./test_story_outline.cjs");
 
 const root = path.resolve(__dirname, "..");
 const mimeTypes = {
