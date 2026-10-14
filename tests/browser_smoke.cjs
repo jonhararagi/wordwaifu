@@ -1476,11 +1476,52 @@ async function run() {
       const tombstoneBackup = JSON.parse(localStorage.getItem(tombstoneStorageKey));
       const tombstoneBackupPreserved = tombstoneBackup.project.name === seed.project.name;
 
+      // Simulate a trash move winning after saveActive's preflight but before its write transaction.
+      const raceStorageKey = "wordwaifu.repository-test.race.v1";
+      const raceDatabaseName = "wordwaifu.repository-test.race.v1";
+      const raceSeed = {
+        ...seed,
+        project: { ...seed.project, id: "repository-race-project", name: "Respaldo previo intacto" }
+      };
+      localStorage.setItem(raceStorageKey, JSON.stringify(raceSeed));
+      const raceRepository = new api.ProjectRepository({ storageKey: raceStorageKey, databaseName: raceDatabaseName });
+      const originalRaceWrite = raceRepository.write.bind(raceRepository);
+      raceRepository.write = async function (candidate) {
+        const db = await this.open();
+        await new Promise((resolve, reject) => {
+          const tx = db.transaction(["trash"], "readwrite");
+          tx.objectStore("trash").put({
+            projectId: candidate.project.id, formatVersion: 1,
+            projectData: candidate, snapshots: []
+          });
+          tx.oncomplete = resolve;
+          tx.onerror = () => reject(tx.error || new Error("Race tombstone fixture failed."));
+          tx.onabort = () => reject(tx.error || new Error("Race tombstone fixture aborted."));
+        });
+        return originalRaceWrite(candidate);
+      };
+      let raceSaveRejected = false;
+      try {
+        await raceRepository.saveActive({
+          ...raceSeed, project: { ...raceSeed.project, name: "No debe quedar como respaldo fantasma" }
+        });
+      } catch (error) { raceSaveRejected = error.code === "PROJECT_IN_TRASH"; }
+      const raceBackup = JSON.parse(localStorage.getItem(raceStorageKey));
+      const raceBackupRestored = raceBackup.project.name === "Respaldo previo intacto";
+
       migrationRepository.close();
       recoveryRepository.close();
       verificationRepository.close();
       fallbackRepository.close();
       tombstoneRepository.close();
+      raceRepository.close();
+      await new Promise((resolve, reject) => {
+        const request = indexedDB.deleteDatabase(raceDatabaseName);
+        request.onsuccess = resolve;
+        request.onerror = () => reject(request.error || new Error("Race test database cleanup failed."));
+        request.onblocked = () => reject(new Error("Race test database cleanup was blocked."));
+      });
+      localStorage.removeItem(raceStorageKey);
       await new Promise((resolve, reject) => {
         const request = indexedDB.deleteDatabase(databaseName);
         request.onsuccess = resolve;
@@ -1506,6 +1547,7 @@ async function run() {
         tombstoneProjectWasNotResurrected: !tombstoneProject,
         tombstoneCatalogExcludedProject: !tombstoneCatalog.some((item) => item.projectId === seed.project.id),
         tombstoneBackupPreserved,
+        raceSaveRejected, raceBackupRestored,
         tombstoneWarning: tombstoneLoad.warning
       };
     });
@@ -1525,6 +1567,8 @@ async function run() {
     assert.equal(repositoryReport.tombstoneProjectWasNotResurrected, true, "Startup must not recreate a project that has a trash record.");
     assert.equal(repositoryReport.tombstoneCatalogExcludedProject, true, "A tombstoned project must remain absent from the normal catalog.");
     assert.equal(repositoryReport.tombstoneBackupPreserved, true, "Rejected writes must not replace the compatibility backup for a tombstoned ID.");
+    assert.equal(repositoryReport.raceSaveRejected, true, "A tombstone created after preflight must reject the racing save.");
+    assert.equal(repositoryReport.raceBackupRestored, true, "A racing tombstone must restore the exact previous compatibility backup.");
     assert.match(repositoryReport.tombstoneWarning, /papelera/i);
     process.stdout.write("PASS repository migration: localStorage stays as backup until IndexedDB is verified.\\n");
     process.stdout.write("PASS repository recovery: newest local backup repairs stale IndexedDB.\\n");
