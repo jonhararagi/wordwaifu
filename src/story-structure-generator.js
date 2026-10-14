@@ -147,11 +147,16 @@
       chapterCount: count,
       ending,
       generatedAt,
-      phases: PHASES.map(phase => {
-        const start = Math.floor(phase.start * count) + 1;
-        const end = Math.max(start, Math.ceil(phase.end * count));
-        return { key: phase.key, title: phase.title, start: Math.min(count, start), end: Math.min(count, end), purpose: phase.purpose };
-      }).filter(phase => phase.start <= phase.end),
+      phases: (() => {
+        if (count === 1) return [{ key: "compressed", title: "Arco completo condensado", start: 1, end: 1, purpose: "Un solo capítulo debe condensar presentación, decisión, clímax y consecuencia; conviene ampliar la extensión si querés progresión gradual." }];
+        let previousEnd = 0;
+        return PHASES.map((phase, index) => {
+          const start = previousEnd + 1;
+          const end = index === PHASES.length - 1 ? count : Math.max(previousEnd, Math.ceil(phase.end * count));
+          previousEnd = end;
+          return { key: phase.key, title: phase.title, start, end, purpose: phase.purpose };
+        }).filter(phase => phase.start <= count && phase.start <= phase.end);
+      })(),
       chapters
     };
   }
