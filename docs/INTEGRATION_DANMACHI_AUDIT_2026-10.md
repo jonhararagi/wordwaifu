@@ -28,8 +28,8 @@
 | `work/story-foundry-generator-2026-10` | Divergida; candidata +590 / fuente +60 commits exclusivos (2026-10-14) | `src/app.js` difiere | El smoke de la candidata ya ejercita editor e importación de historias; la equivalencia total de generación sigue sin demostrarse. |
 | `work/audit-baseline-2026-10-12` | Divergida; candidata +590 / fuente +8 commits exclusivos (2026-10-14) | Rama de referencia de auditoría; no se ha demostrado que su árbol sea mejor que la candidata | Usar como evidencia histórica, no como base de sobrescritura. |
 | `feature/danmachi-lore-poc` | Divergida; candidata +450 / fuente +253 commits exclusivos (2026-10-14) | No se encontró equivalencia de árbol completa | Tratar como fuente histórica; incorporar solo hechos/cambios únicos tras validar continuidad y fuentes. |
-| `fix/lore-archive-spanish-continuity-test` | Divergida; historial antiguo separado | La candidata conserva pruebas de continuidad en `tests/test_lore_corpus.cjs` | La corrección de continuidad está representada en la suite actual; revisar commits exclusivos antes de cerrar equivalencia. |
-| `verify/lore-depth-ci` | Divergida; historial antiguo separado | La candidata contiene workflows y validadores de DanMachi, pero no se probó identidad total de árboles | Comparar workflows/fixtures específicos; no asumir que una rama de verificación está integrada por su nombre. |
+| `fix/lore-archive-spanish-continuity-test` | Divergida; candidata +450 / fuente +239 commits exclusivos (2026-10-14) | La candidata conserva pruebas de continuidad en `tests/test_lore_corpus.cjs` | La corrección de continuidad está representada en la suite actual; revisar commits exclusivos antes de cerrar equivalencia. |
+| `verify/lore-depth-ci` | Divergida; candidata +450 / fuente +208 commits exclusivos (2026-10-14) | La candidata contiene workflows y validadores de DanMachi, pero no se probó identidad total de árboles | Comparar workflows/fixtures específicos; no asumir que una rama de verificación está integrada por su nombre. |
 
 ## Pruebas y regresiones
 
