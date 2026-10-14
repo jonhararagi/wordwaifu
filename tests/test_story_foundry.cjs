@@ -36,4 +36,28 @@ assert.ok(open.chapters.every(chapter => chapter.title && chapter.summary && cha
 assert.deepEqual(summarizeActs(closed.chapters).map(act => act.key), closed.acts.map(act => act.key));
 assert.equal(generateOutline({ count: 0, story }).chapters.length, 30);
 assert.equal(generateOutline({ count: 800, story }).chapters.length, 500);
-console.log("PASS Story Foundry: chapter count, act ranges, story-field integration, and open/closed endings.");
+const { generateCharacter } = require("../src/story-foundry.js");
+for (const role of ["protagonist", "companion", "antagonist", "romantic-interest"]) {
+  const character = generateCharacter({ role, worldType: "fantasy-adventure", seed: 17 });
+  assert.equal(character.role, role);
+  assert.ok(character.name && character.profile && character.personality);
+  assert.ok(character.ability && character.limitation && character.arc && character.narrativeFunction);
+  assert.match(character.summary, /Deseo y necesidad/);
+  assert.match(character.summary, /Límite\/coste/);
+}
+assert.equal(
+  generateCharacter({ role: "protagonist", seed: 31 }).summary,
+  generateCharacter({ role: "protagonist", seed: 31 }).summary,
+  "The character generator must be deterministic for a given seed."
+);
+assert.notEqual(
+  generateCharacter({ role: "protagonist", seed: 31 }).summary,
+  generateCharacter({ role: "protagonist", seed: 32 }).summary,
+  "A different seed should produce a different character design."
+);
+assert.match(
+  generateCharacter({ role: "companion", worldType: "cyberpunk-dystopia", seed: 5 }).ability,
+  /tecnología/
+);
+assert.equal(generateCharacter({ role: "antagonist", name: "Vesper", seed: 4 }).name, "Vesper");
+console.log("PASS Story Foundry: chapter count, act ranges, story-field integration, endings, and role-aware character generation.");
