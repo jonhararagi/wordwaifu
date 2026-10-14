@@ -32,9 +32,12 @@ jobs:
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check tests/test_lore_corpus.cjs
+          node --check tests/test_roster_claim_dedup.cjs
           node --check tests/browser_smoke.cjs
       - name: Test lore retrieval filters and abstention
         run: node tests/test_lore_corpus.cjs
+      - name: Test roster-generated claim ID uniqueness
+        run: node tests/test_roster_claim_dedup.cjs
       - name: Test character archive model
         run: node tests/test_character_archive.cjs
       - name: Test extended character dossiers
