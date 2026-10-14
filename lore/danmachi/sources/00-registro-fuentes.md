@@ -473,5 +473,5 @@ verification_status: stub
 - reliability_note: Fuente oficial para los metadatos y el marco de la sinopsis. No sustituye el texto íntegro del volumen ni respalda detalles de pisos, reglas, rutas o escenas no descritas en esa página.
 - conflicting_sources: []
 - rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
-- verified_by: DANMACHI-RESEARCH-012
+- verified_by: DANMACHI-RESEARCH-020
 - verification_status: source_checked_for_publisher_synopsis_only
