@@ -8,6 +8,7 @@ assert.ok(roster, "Official adaptation roster module must load");
 const entries = roster.list();
 const ids = entries.map(entry => entry.id);
 assert.equal(new Set(ids).size, ids.length, "Roster IDs must be unique");
+assert.equal(entries.length, 59, "Roster count should include the restored Eina Tulle record.");
 
 const eina = roster.get("DM-CHAR-EINA");
 assert.ok(eina, "Eina Tulle must be present in the official adaptation roster");
