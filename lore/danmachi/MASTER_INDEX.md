@@ -4,9 +4,12 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 
 ## 1. Guías de trabajo
 
+- [Matriz de integración DanMachi — auditoría 2026-10](../../docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md) — estado de ramas, riesgos de sobrescritura y gates de validación; no implica que la integración esté cerrada.
+
 - [README y estado de la base](README.md)
 - [Catálogo JSON de IDs, tipos, etiquetas y rutas](catalog.json)
 - [Buscador local de lore en WordWaifu](../../src/lore-corpus.js).
+- Navegación de relaciones en el archivo: ver [control de calidad y deduplicación](QUALITY_AND_DEDUP.md#navegacion-bidireccional-de-relaciones-archivo-de-personajes).
 - [Control de calidad y duplicados](QUALITY_AND_DEDUP.md)
 - [Cola ordenada de trabajo](WORK_QUEUE.md)
 - [Registro de tandas](BATCH_LOG.md)
@@ -53,6 +56,15 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [ERA-10 · Último volumen y final publicado](timeline/eras/10-ultimo-volumen-y-final-publicado.md)
 - [ERA-AU · Cronología alternativa del OC](timeline/eras/AU-oc-y-divergencias.md)
 
+## Cobertura inicial de novela principal
+
+- [DANMACHI-RESEARCH-008 · Mapa narrativo de los volúmenes 1–21](research/inbox/BATCH-DM-008-main-story-volume-map.md) — resúmenes provisionales indexados por el buscador; faltan localizadores por capítulo.
+- [Índice de volúmenes](volumes/00-indice-volumenes-y-arcos.md).
+
+## Investigación de cronología prioritaria
+
+- [DANMACHI-RESEARCH-006 · Cronología Hestia/Bell y puerta de divergencia AU](research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md) — separa evidencia oficial de la fecha secundaria pendiente de verificar y define los criterios para probar la divergencia del OC.
+
 ## 3. Índices por categoría
 
 ### Mundo, sistemas y misterios
@@ -72,9 +84,10 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice maestro de personajes](characters/00-indice-personajes.md)
 - [Índice de deidades](canon/06-indice-deidades.md)
 - [Índice de Familias y organizaciones](familias/00-indice-familias.md)
-- [Índice de lugares](places/00-indice-lugares.md)
+- [Índice de lugares](places/00-indice-lugares.md) — incluye el expediente parcial del [Dungeon](places/dungeon.md), con fuente editorial y límites de certeza.
 - [Familia Hestia](familias/hestia-familia.md)
 - [Familia Loki](familias/loki-familia.md)
+- [Familia Astrea](familias/astrea-familia.md) — expediente histórico parcial con fuentes y continuidad separadas.
 
 ### Volúmenes, arcos y adaptación
 - [Índice de volúmenes y arcos](volumes/00-indice-volumenes-y-arcos.md)
@@ -116,6 +129,10 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 
 - [DANMACHI-RESEARCH-001 · Era Oscura de Orario y personajes multiepoca](research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md)
 - [DANMACHI-RESEARCH-002 · Psicología de personajes y auditoría de retrieval](research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md)
+- [DANMACHI-RESEARCH-007 · Red ampliada de Astrea Familia y viaje de Ryu](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md) — relaciones, roster histórico, viaje de Ryu y nueva generación, con continuidad y procedencia separadas.
+- [DANMACHI-RESEARCH-010 · Familia Hestia: roster, funciones y límites de continuidad](research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md) — seis afirmaciones rastreables, fuentes oficiales de adaptación y unknowns preservados.
+- [DANMACHI-RESEARCH-011 · Familia Loki: cargos, perfiles y red de relaciones](research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md) — ocho afirmaciones trazables y snapshot oficial de Sword Oratoria.
+- [DANMACHI-RESEARCH-012 · Familia Astrea: justicia, liderazgo y continuidad histórica](research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md) — sinopsis editoriales oficiales, Alise como capitana y vacíos históricos explícitos.
 
 ## 5. Prioridades de verificación
 
@@ -132,6 +149,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 |---|---|---|---|
 | Plantillas y protocolo | Sí | Sí | No aplica |
 | Personajes iniciales | Sí | Sí | Pendiente |
+| Lugares principales | Índice + ficha parcial del Dungeon | Marco general sustentado por fuente editorial | Pisos, rutas y reglas internas pendientes |
 | Reglas generales | Sí | Parcial | Pendiente |
 | Eras antiguas | Sí | Esqueleto/preguntas | Pendiente |
 | Zeus/Hera y Dragón Negro | Sí | Esqueleto/preguntas | Pendiente |
@@ -141,19 +159,11 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 | Último volumen/final | Sí | Procedimiento vacío intencionalmente | Pendiente de confirmar publicación |
 | AU del OC | Sí | Premisa inicial | Decisiones abiertas |
 
-## 6A. Cobertura ampliada pendiente de validación primaria
-
-Los siguientes expedientes ya están catalogados para búsqueda local, pero mantienen estado **provisional** hasta cotejar sus afirmaciones con fuentes primarias y localizadores específicos:
-
-- Personajes adicionales: Iska Bra, Mariyu Reage, Noin Unic, Neze Rankett, Asta Knox, Ryana Lietz, Celty Srowa, Cecil Blackliza, Iselina, Shau y Ulanda.
-- [Red de Astrea Familia y recorrido de Ryu](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md).
-- [Mapa de volúmenes de la historia principal](research/inbox/BATCH-DM-008-main-story-volume-map.md).
-- [Relatos paralelos y crónicas](research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md).
-- [Salida de Astrea y venganza de Ryu](research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md).
-- [Evento candidato: salida de Astrea](events/candidates/EVT-DM-ASTREA-DEPARTURE-001.md).
-
 ## 7. Regla de honestidad
 
 Esta estructura busca cubrir la historia publicada desde las eras más antiguas hasta el último volumen que pueda verificarse. No significa que la cronología, todas las fichas o el final estén completos. Un índice vacío es mejor que un dato inventado.
-- `research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md` — cobertura del elenco y referencias visuales; las imágenes comunitarias no se presentan como oficiales.
-- `sources/DMR-007-wiki-comunitaria.md` — registro de la wiki comunitaria como fuente secundaria, con límites de continuidad y atribución.
+
+## Historias paralelas y crónicas
+
+- [DANMACHI-RESEARCH-009 · Astrea Record, Sword Oratoria y Familia Chronicle](research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md) — once afirmaciones provisionales ya indexadas en el buscador.
+- Dossiers: [índice de volúmenes y líneas paralelas](volumes/00-indice-volumenes-y-arcos.md).

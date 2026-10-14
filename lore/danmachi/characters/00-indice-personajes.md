@@ -88,22 +88,3 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 3. Zeus/Hera, Alfia y Zard con localizadores y marcas de spoiler.
 4. Bell/Hestia/Eina/Ais en novela principal, por escena.
 5. Personal de la taberna y estados de Freya Familia.
-
-
-### Astrea Record — expedientes adicionales provisionales
-
-Estos expedientes se incorporaron al catálogo navegable; su estado provisional no equivale a verificación completa de canon:
-
-- [Iska Bra](iska-bra.md) · `CHAR-ISKA-BRA`
-- [Mariyu Reage](maryuu-reage.md) · `CHAR-MARIYU-LEAGE`
-- [Noin Unic](noin-unic.md) · `CHAR-NOIN-UNIC`
-- [Neze Rankett](neze-rankett.md) · `CHAR-NEZE-RANKETT`
-- [Asta Knox](asta-knox.md) · `CHAR-ASTA-KNOX`
-- [Ryana Lietz](ryana-lietz.md) · `CHAR-RYANA-LIETZ`
-- [Celty Srowa](celty-srowa.md) · `CHAR-CELTY-SROWA`
-- [Cecil Blackliza](cecil-blackliza.md) · `CHAR-CECIL-BLACKLIZA`
-- [Iselina](iselina.md) · `CHAR-ISELINA`
-- [Shau](shau.md) · `CHAR-SHAU`
-- [Ulanda](ulanda.md) · `CHAR-ULANDA`
-
-La afiliación común a una Familia no debe representarse automáticamente como amistad personal; consultar los expedientes y las fuentes antes de afirmar vínculos.

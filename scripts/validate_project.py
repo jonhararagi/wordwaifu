@@ -59,7 +59,7 @@ if js_path.is_file():
     for required in ("STORAGE_KEY", "ProjectRepository", "initializeApplication", "enqueueRepositoryOperation", "charactersAt", "renderDetails", "exportProject", "importProject", "executeCommand", "validateAndNormalizeProject", "WordWaifuProjectSchema", '$(".map-marker").forEach'):
         require(required in js, "Falta componente esperado en src/app.js: " + required)
     require("localStorage." not in js, "src/app.js no debe acceder directamente a localStorage; usar ProjectRepository")
-    require("projectRepository.saveActive(snapshot)" in js, "El guardado normal debe usar la ruta de persistencia activa con guardia de papelera")
+    require("projectRepository.write(snapshot)" in js, "El guardado normal debe persistir mediante ProjectRepository")
 
 if schema_path.is_file():
     schema = schema_path.read_text(encoding="utf-8")

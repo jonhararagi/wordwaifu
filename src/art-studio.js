@@ -4,9 +4,46 @@
   const DB_VERSION = 1;
   const STORE = "assignments";
   const FALLBACK_KEY = "wordwaifu.art.assignments.v1";
+  const DELETED_KEY = "wordwaifu.art.deleted.v1";
   const MAX_FILE_BYTES = 5 * 1024 * 1024;
   let databasePromise;
   const memoryCache = new Map();
+  // Keep a session cache, but persist deletion tombstones so stale fallback copies
+  // cannot reappear after a reload when localStorage cleanup fails.
+  const deletedKeys = new Set();
+
+  function readDeletedKeys() {
+    try {
+      const value = JSON.parse(root.localStorage.getItem(DELETED_KEY) || "[]");
+      return new Set(Array.isArray(value) ? value.filter(key => typeof key === "string") : []);
+    } catch (_) { return new Set(); }
+  }
+
+  function writeDeletedKeys(keys) {
+    root.localStorage.setItem(DELETED_KEY, JSON.stringify(Array.from(keys)));
+  }
+
+  function isDeleted(key, persisted = readDeletedKeys()) {
+    return deletedKeys.has(key) || persisted.has(key);
+  }
+
+  function markDeleted(key) {
+    const keys = readDeletedKeys();
+    keys.add(key);
+    writeDeletedKeys(keys);
+    deletedKeys.add(key);
+  }
+
+  function clearDeleted(key) {
+    const keys = readDeletedKeys();
+    if (!keys.has(key)) {
+      deletedKeys.delete(key);
+      return;
+    }
+    keys.delete(key);
+    writeDeletedKeys(keys);
+    deletedKeys.delete(key);
+  }
 
   function openDatabase() {
     if (databasePromise) return databasePromise;
@@ -31,6 +68,7 @@
   }
 
   async function readAll() {
+    const persistedDeleted = readDeletedKeys();
     let indexedRecords = [];
     try {
       const db = await openDatabase();
@@ -41,54 +79,38 @@
       });
     } catch (_) {
       // If IndexedDB cannot be opened or read, localStorage is the available store.
-      return Object.values(fallbackRead()).filter(record => record && record.key && !record.deleted);
+      return Object.values(fallbackRead()).filter(record => record && !isDeleted(record.key, persistedDeleted));
     }
 
     // A failed IndexedDB write can be safely stored in localStorage even while the
     // database remains readable. Merge both stores so the gallery does not hide
-    // successful fallback saves; the newest updatedAt wins and IndexedDB wins ties.
+    // successful fallback saves; IndexedDB wins when both contain the same key.
     const records = new Map(indexedRecords.map(record => [record.key, record]));
     for (const record of Object.values(fallbackRead())) {
-      if (!record || !record.key) continue;
-      const indexedValue = records.get(record.key);
-      if (!indexedValue || String(record.updatedAt || "") > String(indexedValue.updatedAt || "")) {
-        records.set(record.key, record);
-      }
+      if (record && record.key && !records.has(record.key) && !isDeleted(record.key, persistedDeleted)) records.set(record.key, record);
     }
-    // A durable IndexedDB tombstone prevents a stale localStorage copy from
-    // resurrecting an assignment when fallback cleanup failed after deletion.
-    return Array.from(records.values()).filter(record => record && !record.deleted);
+    return Array.from(records.values()).filter(record => record && !isDeleted(record.key, persistedDeleted));
   }
 
   async function readOne(key) {
-    // The cache is only a hint, not the source of truth: another tab may have
-    // saved a newer fallback copy or written an IndexedDB deletion tombstone.
-    // Always reconcile persistent stores before returning an assignment.
-    let indexedValue = null;
+    if (isDeleted(key)) return null;
+    if (memoryCache.has(key)) return memoryCache.get(key);
     try {
       const db = await openDatabase();
-      indexedValue = await new Promise((resolve, reject) => {
+      const value = await new Promise((resolve, reject) => {
         const request = db.transaction(STORE, "readonly").objectStore(STORE).get(key);
         request.onsuccess = () => resolve(request.result || null);
-        request.onerror = () => reject(request.error || new Error("No se pudo leer el recurso de IndexedDB."));
+        request.onerror = () => reject(request.error);
       });
+      if (value) { memoryCache.set(key, value); return value; }
     } catch (_) {}
-
-    const fallbackValue = fallbackRead()[key] || null;
-    // A failed IndexedDB write may leave an older record readable in the database.
-    // Prefer the fallback copy only when its timestamp proves it is newer.
-    const value = fallbackValue && (!indexedValue ||
-      String(fallbackValue.updatedAt || "") > String(indexedValue.updatedAt || ""))
-      ? fallbackValue : indexedValue;
-    if (!value || value.deleted) {
-      memoryCache.delete(key);
-      return null;
-    }
-    memoryCache.set(key, value);
+    const value = fallbackRead()[key] || null;
+    if (value) memoryCache.set(key, value);
     return value;
   }
 
   async function persist(record) {
+    let backend = "indexeddb";
     try {
       const db = await openDatabase();
       await new Promise((resolve, reject) => {
@@ -98,16 +120,8 @@
         transaction.onerror = () => reject(transaction.error);
         transaction.onabort = () => reject(transaction.error || new Error("Guardado cancelado"));
       });
-      memoryCache.set(record.key, record);
-      // Remove an obsolete fallback copy after the database commit. If cleanup
-      // fails, reads still choose the newest record by updatedAt.
-      const fallback = fallbackRead();
-      if (fallback[record.key]) {
-        delete fallback[record.key];
-        try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); } catch (_) {}
-      }
-      return "indexeddb";
     } catch (_) {
+      backend = "local";
       const fallback = fallbackRead();
       if (record.fileDataUrl && record.fileDataUrl.length > 1400000) {
         throw new Error("El archivo excede el límite del respaldo local; usá IndexedDB o una URL externa.");
@@ -115,50 +129,59 @@
       fallback[record.key] = record;
       try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
       catch (_) { throw new Error("No hay espacio disponible para guardar este recurso en el navegador."); }
-      memoryCache.set(record.key, record);
-      return "local";
     }
+    try { clearDeleted(record.key); }
+    catch (_) { throw new Error("El recurso se guardó, pero no se pudo retirar su marca de borrado; liberá espacio y volvé a guardar para reactivarlo."); }
+    memoryCache.set(record.key, record);
+    return backend;
   }
 
   async function removeRecord(key) {
-    // Never report a successful deletion when IndexedDB still contains the record.
+    // Persist the tombstone first. If storage cannot record it, refuse deletion
+    // rather than risk resurrecting a stale fallback copy after a reload.
+    try { markDeleted(key); }
+    catch (_) { throw new Error("No se pudo guardar la marca anti-resurrección; el recurso no se eliminó."); }
+    memoryCache.delete(key);
+
     let db;
     try {
       db = await openDatabase();
     } catch (_) {
-      // IndexedDB is unavailable: the localStorage fallback is the active store.
+      // IndexedDB is unavailable: localStorage is the active store. The tombstone
+      // still protects against a stale copy if fallback cleanup cannot be written.
       const fallback = fallbackRead();
       if (fallback[key]) {
         delete fallback[key];
         try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
-        catch (_) { throw new Error("No se pudo eliminar el recurso del respaldo local."); }
+        catch (_) { throw new Error("El recurso quedó marcado como eliminado, pero no se pudo limpiar el respaldo local."); }
       }
-      memoryCache.delete(key);
       return;
     }
 
-    await new Promise((resolve, reject) => {
-      let transaction;
-      try {
-        transaction = db.transaction(STORE, "readwrite");
-        // Keep a small tombstone until a later save overwrites this key. If
-        // localStorage cleanup fails, the newer tombstone wins over stale backup.
-        transaction.objectStore(STORE).put({ key, deleted: true, updatedAt: new Date().toISOString() });
-      } catch (error) {
-        reject(error);
-        return;
-      }
-      transaction.oncomplete = resolve;
-      transaction.onerror = () => reject(transaction.error || new Error("No se pudo eliminar el recurso de IndexedDB."));
-      transaction.onabort = () => reject(transaction.error || new Error("La eliminación del recurso fue cancelada."));
-    });
+    try {
+      await new Promise((resolve, reject) => {
+        let transaction;
+        try {
+          transaction = db.transaction(STORE, "readwrite");
+          transaction.objectStore(STORE).delete(key);
+        } catch (error) {
+          reject(error);
+          return;
+        }
+        transaction.oncomplete = resolve;
+        transaction.onerror = () => reject(transaction.error || new Error("No se pudo eliminar el recurso de IndexedDB."));
+        transaction.onabort = () => reject(transaction.error || new Error("La eliminación del recurso fue cancelada."));
+      });
+    } catch (error) {
+      try { clearDeleted(key); } catch (_) {}
+      throw error;
+    }
 
-    memoryCache.delete(key);
     const fallback = fallbackRead();
     if (fallback[key]) {
       delete fallback[key];
       try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
-      catch (_) { /* The IndexedDB tombstone suppresses this stale copy on future reads. */ }
+      catch (_) { throw new Error("El recurso se eliminó de IndexedDB, pero no se pudo limpiar el respaldo local; la marca anti-resurrección impedirá que reaparezca."); }
     }
   }
 
@@ -280,7 +303,7 @@
     const gallery = $("#art-assignments");
     if (!gallery) return;
     const records = await listAssignments();
-    // Read first, then replace+render synchronously so overlapping refreshes
+    // Read first, then replace and render synchronously so overlapping refreshes
     // cannot append duplicate cards after both awaits complete.
     gallery.replaceChildren();
     $("#art-assignment-count").textContent = String(records.length);
@@ -314,6 +337,10 @@
           await refreshGallery();
           $("#art-status").textContent="Asignación eliminada.";
         } catch(error) {
+          // The IndexedDB delete may have succeeded while fallback cleanup failed.
+          // Refresh from durable state so the deleted card disappears but the
+          // warning remains visible; if deletion itself failed, the card remains.
+          await refreshGallery();
           $("#art-status").textContent=error.message || "No se pudo eliminar el recurso.";
         } finally { remove.disabled=false; }
       });

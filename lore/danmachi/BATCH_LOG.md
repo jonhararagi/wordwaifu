@@ -113,9 +113,138 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Límite: búsqueda textual con corpus parcial; sin LLM, embeddings ni RAG.
 
 
-## DANMACHI-COVERAGE-002 · Integración de expedientes y red de Astrea Familia
+## DANMACHI-RESEARCH-007 · Red de Astrea Familia, tragedia y viaje de Ryu
+- Estado: PARTIAL. Paquete: [BATCH-DM-007](research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md).
+- Añadido: 11 perfiles ampliados en el grafo: 7 integrantes históricos (incluida Mariyu/Maryuu normalizada a un solo ID), 4 integrantes de la nueva generación y rasgos oficiales añadidos a Alise, Kaguya, Lyra y Astrea, 26 afirmaciones con IDs, fuentes, continuidad y nivel de spoiler.
+- Fuentes: perfiles oficiales de DanMachi IV/V y sinopsis editorial de Familia Chronicle: Episode Ryuu 2; la orden de Astrea de que Ryu permanezca en la Ciudad Forjadora de Espadas ya está respaldada por la sinopsis editorial. Juggernaut, memorial y Solingen permanecen marcados como datos secundarios por verificar.
+- Integración: `src/lore-corpus.js` carga el nuevo lote y las fichas; `src/character-archive.js` amplía relaciones, cronología, momentos y expedientes de Ryu/Astrea.
+- QA: prueba de navegador actualizada para recorrer Ryu → Iska Bra → volver a Ryu y verificar los vínculos Ryu–Alise/Kaguya/Lyra en la continuidad del anime. Resultado de CI pendiente; las pruebas de índice/relaciones se ejecutaron en el entorno de integración. La validación Playwright de GitHub Actions no está confirmada.
+- Límite: no se consultaron íntegramente los volúmenes; la investigación global de DanMachi sigue PARTIAL.
 
-- Estado: contenido incorporado al catálogo en la rama de integración; validación automatizada pendiente.
-- Añadidos 11 expedientes provisionales de personajes, el evento candidato de salida de Astrea y cuatro paquetes de investigación complementarios.
-- `catalog.json` amplía el índice de 34 a 50 registros. Los nuevos registros se etiquetan como provisionales y no se presentan como canon primario verificado.
-- La interfaz mantiene separadas la afiliación a Astrea Familia y las relaciones interpersonales demostradas.
+
+## DANMACHI-RESEARCH-008 · Mapa provisional de volúmenes 1–21
+
+- Resultado: dossiers de orientación en `volumes/main/volume-01.md` a `volume-21.md` y un archivo con 21 afirmaciones para recuperación.
+- Integración: `src/lore-corpus.js` carga el lote para búsqueda por personaje, continuidad, periodo y aspecto.
+- Estado: `provisional_summary`; no se presenta como cotejo completo de la novela ni como final de la serie.
+- Pendiente: eventos atómicos y localizadores internos en la edición primaria.
+
+
+## DANMACHI-RESEARCH-009 · Líneas paralelas y crónicas
+
+- Dossiers: Astrea Record I–III, Sword Oratoria 1/12/13 y Familia Chronicle de Ryu, Ryu II, Freya, Asfi y Haze.
+- Integración: 11 afirmaciones añadidas a `src/lore-corpus.js`; búsqueda cubierta por pruebas.
+- Estado: `provisional_summary`; faltan localizadores de capítulo, cronología atómica y cotejo individual de relaciones.
+
+
+## Misión de integración · navegación inversa y recuperación de términos
+
+- Rama: `work/story-completion-danmachi-audit-2026-10`.
+- Cambios: `src/character-archive.js` deriva enlaces de navegación inversos a partir de las relaciones con evidencia existentes; `tests/test_character_archive.cjs` comprueba Ryu ↔ Kaguya, ausencia de destinos duplicados y evidencia; `src/lore-corpus.js` permite recuperar `venganza`/`vengar`/`vengarse` como variantes explícitas; `tests/test_lore_corpus.cjs` ajusta la búsqueda del reencuentro para usar términos presentes en la afirmación.
+- Continuidad y procedencia: las aristas se siguen mostrando únicamente cuando hay afirmaciones de la continuidad seleccionada y estas superan el filtro de spoilers. La relación inversa se identifica como navegación, no como una nueva afirmación canónica simétrica.
+- Estado de validación: JavaScript y pruebas de lore/personajes han pasado en GitHub Actions en la revisión actual; los trabajos de navegador y validación de estructura todavía deben terminar antes de cerrar esta tanda.
+- Límite: esto mejora la navegación del archivo de personajes, pero no termina la migración de relaciones a datos independientes ni habilita aún un explorador genérico de Familias, lugares, eventos, objetos y conceptos.
+
+
+## DANMACHI-RESEARCH-010 · Expediente ampliado de Familia Hestia
+
+- **Estado:** PARTIAL; expediente de organización ampliado con hechos editoriales trazables y límites de continuidad explícitos.
+- **Archivos:** `familias/hestia-familia.md`; registro de fuentes `sources/00-registro-fuentes.md`.
+- **Fuentes nuevas:** perfil oficial de personajes de DanMachi IV y sinopsis oficial del episodio 1. Registradas como `DMR-004-SRC-001` y `DMR-004-SRC-002`, con URLs, localizadores de sección, continuidad, afirmaciones apoyadas y límites.
+- **Contenido incorporado:** estado de apertura con Bell como único miembro descrito por la sinopsis del episodio; instantánea del roster en la adaptación; funciones descritas de Hestia, Bell, Liliruca, Welf, Mikoto y Haruhime; dinámica narrativa, límites para escenas, reglas para modelar cambios de roster y campos que siguen desconocidos.
+- **Control de continuidad:** los perfiles de DanMachi IV permanecen en `CONT-ANIME`; no se usan para afirmar sin cotejo que cada detalle aparece igual en `CONT-MAIN-LN`. No se inventan fechas absolutas, niveles entre temporadas, cantidades económicas ni localizadores de novela.
+- **QA pendiente al registrar esta tanda:** ejecución del validador de catálogo, pruebas de lore y prueba de navegador tras el último commit; la CI debe confirmarse por ejecución.
+- **Próximo lote:** ampliar expedientes de Familias y personajes centrales con la misma estructura de afirmaciones, relaciones, estado temporal y fuentes; priorizar cotejo de novela ligera por volumen/capítulo.
+
+
+## DANMACHI-RESEARCH-011 · Expediente ampliado de Familia Loki
+
+- **Estado:** PARTIAL; organización, liderazgo y relaciones descritos desde una fuente oficial de adaptación.
+- **Archivos:** `familias/loki-familia.md`; `sources/00-registro-fuentes.md`; `research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md`; `catalog.json`.
+- **Fuente:** página oficial de personajes de *Sword Oratoria*, registrada como `DMR-005-SRC-001`.
+- **Afirmaciones:** ocho IDs de claim para Loki, Finn, Riveria, Gareth, Ais, Lefiya, Tiona, Tione, Bete y Raul; las afirmaciones de la misma sección se agrupan cuando comparten evidencia y continuidad.
+- **Integración:** el expediente de Familia Loki ahora contiene estructura de mando, snapshot de roster, relaciones explícitas, pautas para escribir escenas y reglas para registrar el ingreso del OC como divergencia AU.
+- **Límites:** `CONT-SO` no se trata como prueba automática de cada estado de `CONT-MAIN-LN`; membresías históricas, localizadores de novela y cronología de expediciones siguen pendientes.
+- **QA:** el validador de catálogo y la nueva prueba del expediente Hestia se añadieron al workflow `Validate WordWaifu`; ejecución de CI para el último commit pendiente al momento de registrar este lote.
+- **Siguiente paso:** repetir la extracción por eventos para el roster histórico de Loki Familia y ampliar Astrea Familia sin convertir afiliación compartida en amistad inferida.
+
+
+## DANMACHI-RESEARCH-012 · Expediente histórico de Familia Astrea
+
+- **Estado:** PARTIAL; ficha de organización creada e indexada con fuentes editoriales oficiales y perfiles de adaptación separados.
+- **Archivos:** `familias/astrea-familia.md`; `research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md`; `catalog.json`; `sources/00-registro-fuentes.md`; `MASTER_INDEX.md`.
+- **Fuentes:** sinopsis oficiales de *Astrea Record* I–III y perfiles oficiales de DanMachi IV ya registrados en el registro maestro.
+- **Afirmaciones:** cuatro claims con IDs para la referencia temporal relativa, Astrea como guía, Alise como capitana y el impacto del conflicto histórico sobre el sentido de justicia de Ryu.
+- **Calidad:** no se afirma que el roster histórico esté completo. Kaguya y Lyra permanecen como pistas secundarias en un paquete separado. Afiliación no se convierte en amistad; no se inventan edades, niveles ni destinos.
+- **Límite:** sinopsis editoriales no reemplazan localizadores internos de los volúmenes; el resultado sigue parcial y las continuidades CONT-AR/CONT-ANIME se conservan separadas.
+- **QA:** pendiente la ejecución final de CI para este commit y la extensión de las pruebas de procedencia a los tres expedientes de Familia.
+- **Siguiente paso:** mapear cada integrante y evento de Astrea Record por volumen/escena cuando se disponga de los textos, y ampliar el grafo de relaciones con periodos y fuentes.
+
+
+## DANMACHI-RESEARCH-013 · Integración de los tres expedientes de Familia en búsqueda global
+
+- **Alcance:** conectar los nuevos expedientes de Hestia, Loki y Astrea con el recuperador de WordWaifu; evitar que los documentos queden únicamente como Markdown.
+- **Integración de código:** `src/lore-corpus.js` ahora carga los paquetes DANMACHI-RESEARCH-010, 011 y 012 y expone los dos nuevos directorios oficiales de fuente (perfiles de Sword Oratoria y sinopsis del episodio 1).
+- **Afirmaciones recuperables:** 18 claims con IDs estables, IDs de personajes cuando hay una entidad registrada, continuidad, aspecto, fuente, localizador, URL, estado de verificación y nota de confianza.
+- **Pruebas:** `tests/test_lore_corpus.cjs` incluye búsquedas por el estado inicial de Hestia Familia, liderazgo de Loki Familia y capitanía de Alise en Astrea Familia; los conteos esperados se actualizan a 89 claims de fuente y 92 entradas tras las expansiones de continuidad existentes.
+- **Integridad:** `tests/test_danmachi_family_dossier.cjs` comprueba profundidad mínima, referencias, claims, continuidades y entradas de catálogo para los tres expedientes. `validate.yml` ejecuta el validador de catálogo y esta prueba.
+- **Incidencia detectada y corregida durante CI:** una primera ejecución reveló IDs de claim duplicados/mal asignados en los campos de recuperación; se corrigieron en los tres paquetes antes de la siguiente validación.
+- **Continuidad:** una afirmación que mezclaba el papel histórico de Astrea con su perfil de anime se dividió en dos claims independientes (`DMR-006-CLM-002` en `CONT-AR` y `DMR-006-CLM-005` en `CONT-ANIME`); el test de navegador había detectado la mezcla y ahora el modelo conserva una continuidad por afirmación.
+- **Estado final de CI:** pendiente de confirmar en la ejecución correspondiente al último commit; no declarar la misión global completa por este lote.
+
+
+## DANMACHI-RESEARCH-011 · Ancla cronológica oficial y límite bibliográfico de la saga principal
+- Fecha de consulta: 2026-10-13
+- Estado: source_checked para cronología oficial y metadatos editoriales; el cotejo capítulo por capítulo del volumen 21 sigue pendiente.
+- Paquete de evidencia: se añadió una sección con tres afirmaciones atómicas al [mapa narrativo de volúmenes principales](research/inbox/BATCH-DM-008-main-story-volume-map.md).
+- Fuentes: cronología oficial de DanMachi; fichas oficiales GA Bunko de los volúmenes 21 y 22.
+- Hallazgo cronológico: *Astrea Record* se presenta como situado siete años antes y dentro de la Era Oscura de Orario; es una ancla relativa, no una cronología absoluta de toda la historia antigua.
+- Hallazgo bibliográfico: volumen 21 publicado aproximadamente el 2025-10-15; volumen 22 anunciado para 2026-12-15, fecha futura respecto de la consulta.
+- Afirmaciones: DMR-011-CLM-001 a DMR-011-CLM-003.
+- Fuentes registradas: DMR-011-SRC-001 a DMR-011-SRC-003.
+- Resultado: ERA-10 ya puede indicar que el volumen 21 es el último publicado comprobado y que el final canónico sigue pendiente; no se declara finalizada la serie.
+- Pendientes: verificar el lanzamiento efectivo del volumen 22 después de la fecha anunciada y cotejar el volumen 21 por capítulo/escena.
+
+
+## DANMACHI-RESEARCH-014 · Atomización de la sinopsis editorial del volumen 21
+- Fecha de consulta: 2026-10-13
+- Fuente consultada: ficha oficial de GA Bunko del volumen 21, https://ga.sbcr.jp/product/9784815632946/.
+- Cambios: se añadieron DMR-008-CLM-022 a DMR-008-CLM-024 para separar la expedición fallida y el piso 60, la movilización de Orario y el regreso de Bell con la noticia.
+- Recuperación: los tres claims quedan enlazados al registro de fuente DMR-011-SRC-002 y se añadieron pruebas de búsqueda por tema.
+- Conteos esperados: 95 afirmaciones de fuente y 98 entradas.
+- Límite: la fuente es la sinopsis editorial; no se inventaron capítulos, páginas, supervivientes completos ni secuencia interna. El cotejo del texto íntegro sigue pendiente.
+
+
+## DANMACHI-RESEARCH-015 · Cotejo del fragmento público del volumen 21
+- Se inspeccionó el lector público oficial enlazado desde GA Bunko: tabla de contenidos, prólogo y apertura del capítulo «一章　アイズＳＯＳ».
+- Se añadieron dos paráfrasis de evidencia primaria limitada al fragmento visible; no se inventaron números de página.
+- Se distingue la sinopsis editorial del texto de muestra; el volumen completo sigue pendiente de cotejo capítulo por capítulo.
+- Fuente: https://ga.sbcr.jp/product/9784815632946/ · https://ul.sbcr.jp/GA-aIMd4 · https://r.voyager.co.jp/epm/e1_535248_22082025135526/
+
+
+## DANMACHI-RESEARCH-016 · Ancla oficial para Zeus/Hera y dos Grandes Misiones
+- **Fuente:** prueba oficial de conocimiento de DanMachi, pregunta 1, https://danmachi.com/center-test/normal.html.
+- **Afirmación:** DMR-008-CLM-027 registra que la respuesta oficial identifica a Zeus Familia y Hera Familia conjuntamente como quienes derrotaron a Behemoth y Leviathan.
+- **Límite:** no se infiere qué Familia derrotó a qué monstruo, el momento de la caída de ambas Familias ni el resultado contra el Dragón Negro.
+- **QA:** se amplían los conteos esperados del corpus a 98 afirmaciones y 101 entradas y se añade una prueba de recuperación.
+
+
+## DANMACHI-RESEARCH-017 · Registro de evento para las victorias de las Tres Grandes Misiones
+- Se creó `events/candidates/EVT-DM-GREAT-QUESTS-001.md` para separar el hecho respaldado (resultado conjunto contra Behemoth y Leviathan) de la cronología que sigue desconocida.
+- Se enlazó con `DMR-008-CLM-027` y `DMR-011-SRC-005`, el candidato de expedición contra el Dragón Negro y el candidato de caída de Zeus/Hera.
+- Se añadió al catálogo y a los índices de eventos y cronología. No se marcó como evento completo/verificado en todos sus detalles.
+
+## DANMACHI-RESEARCH-018 · Pista temporal del Dragón Negro
+- **Edición oficial identificada:** GA Bunko, volumen principal 15, ISBN 978-4-7973-9622-5, https://ga.sbcr.jp/product/9784797396225/.
+- **Pista no editorial:** una búsqueda textual encontró en el volumen 15 una intervención de Alise que menciona cinco años desde el fracaso de Zeus/Hera contra el Dragón Negro. La copia consultada no se registra como edición autorizada ni como localizador final.
+- **Cruce temporal provisional:** la cronología oficial sitúa *Astrea Record* aproximadamente siete años antes de la llegada de Bell (https://danmachi.com/chronology/). Si el pasaje del volumen 15 comparte ese marco, la derrota sería aproximadamente doce años antes de Bell. No es todavía un hecho canónico registrado: depende de confirmar la escena y su ancla.
+- **Límite:** la ficha editorial identifica la edición, no demuestra el contenido del pasaje. Sin año absoluto, sin fecha exacta y sin fusionar la derrota con la caída/expulsión de las Familias.
+- **Paquete de trabajo:** `research/inbox/BATCH-DM-009-black-dragon-relative-chronology.md`.
+
+
+## DANMACHI-RESEARCH-020 · Primer expediente navegable de ubicación: Dungeon
+
+- Se añadió `places/dungeon.md`, con una descripción original de la función del Dungeon, relaciones internas hacia Orario, Guild, Bell y Hestia, reglas de continuidad y tareas de investigación pendientes.
+- Se registró `DMR-012-SRC-001`: ficha editorial oficial de GA文庫 para el volumen principal 1, consultada el 2026-10-14. Su alcance se limita al marco general de Orario, el laberinto subterráneo y la premisa de Bell/Hestia; no prueba detalles de pisos, reglas o escenas no descritas.
+- Se añadió `LOC-DUNGEON` al catálogo estructurado y al índice de lugares, retirándolo de `reservedIds` para evitar una colisión entre ID reservado y registro activo.
+- Estado: PARTIAL. Los pisos, accesos, topología detallada, monstruos y reglas de expedición siguen pendientes de cotejo con fuentes por volumen/capítulo.

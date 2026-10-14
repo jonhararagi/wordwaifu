@@ -37,6 +37,19 @@ No atribuir niveles, heridas, muertes, cargos ni acciones a un personaje sin una
 - Versiones divergentes:
 - Estado: pending_verification.
 
+## Huecos reservados para historia propia (AU)
+
+Estos campos son intencionalmente vacíos. No describen canon y no deben completarse automáticamente.
+
+- Punto de divergencia decidido por el autor:
+- Escena o acontecimiento propio:
+- Personajes propios que intervienen:
+- Cambio respecto del canon:
+- Consecuencias dentro de la AU:
+- Decisión/confirmación del autor:
+
+Regla: cuando el autor los complete, mantenerlos etiquetados como `CONT-AU`; no convertirlos en afirmaciones de canon ni usarlos para rellenar los campos de verificación anteriores.
+
 ## Relaciones
 - ERA-04.
 - ERA-05.

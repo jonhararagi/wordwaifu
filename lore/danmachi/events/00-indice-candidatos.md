@@ -11,6 +11,7 @@ Este índice separa eventos preliminares que necesitan verificación de los acon
 ## Historia canónica: candidatos pendientes de verificar
 
 - [Descenso de las deidades](candidates/EVT-DM-DESCENT-001.md) · EVT-DM-DESCENT-001
+- [Zeus/Hera: derrotas de Behemoth y Leviathan](candidates/EVT-DM-GREAT-QUESTS-001.md) · EVT-DM-GREAT-QUESTS-001
 - [Zeus/Hera y el Dragón Negro](candidates/EVT-DM-ZH-OEBD-001.md) · EVT-DM-ZH-OEBD-001
 - [Pérdida de poder/caída de Zeus y Hera Familia](candidates/EVT-DM-ZH-FALL-001.md) · EVT-DM-ZH-FALL-001
 - [Llegada de Hestia al mundo inferior](candidates/EVT-DM-HESTIA-DESCENT-001.md) · EVT-DM-HESTIA-DESCENT-001
@@ -18,10 +19,6 @@ Este índice separa eventos preliminares que necesitan verificación de los acon
 - [Eina asesora a Bell a través de la Guild](candidates/EVT-DM-EINA-ADVISOR-001.md) · EVT-DM-EINA-ADVISOR-001
 
 Las fichas anteriores son candidatos de conocimiento general y no se consideran fuente canónica verificada hasta que se cotejen sus afirmaciones con un localizador primario.
-
-## Historia de Astrea Familia — candidato pendiente de verificación
-
-- [Salida de Astrea](candidates/EVT-DM-ASTREA-DEPARTURE-001.md) · `EVT-DM-ASTREA-DEPARTURE-001` · Provisional; cotejar cronología y motivaciones con fuentes primarias.
 
 ## Línea alternativa del OC: propuestas de autor
 

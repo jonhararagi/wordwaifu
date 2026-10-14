@@ -103,3 +103,8 @@ La papelera es una tienda separada y no un flag mutable dentro del objeto del un
 - `restoreTrashedProject(projectId)` valida el proyecto, verifica que no haya una colisión en `projects`, devuelve el registro con la misma identidad y retira su entrada de papelera. No cambia el puntero del proyecto activo.
 - `permanentlyDeleteTrashedProject(projectId)` exige una entrada válida en la papelera, protege el proyecto activo y elimina solo los snapshots con el mismo `projectId`.
 - La purga es irreversible y explícita en la interfaz. No existe caducidad automática de la papelera en esta versión.
+
+
+### Power / Ability (implemented in the project prototype)
+
+The root collection powers[] stores one independent power/ability record per stable ID. Fields include name, family, category, profile, description, activation, cost, limits, evolution, consequences, contract, inspiration, source, status and irreversible. Optional ownerCharacterId and storyId must resolve to existing character/story IDs; absent references normalize to null. The collection survives project JSON import/export and is validated with the same project schema. It is distinct from mythicProposals[]: a proposal is a creative seed, while a power record is an editable project asset.

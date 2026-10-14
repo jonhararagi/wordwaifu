@@ -1,12 +1,3 @@
----
-id: DANMACHI-RESEARCH-010
-universe: danmachi
-type: research
-status: provisional
-continuity_scope: mixed
-spoiler_level: major
----
-
 # DANMACHI-RESEARCH-010 · La salida de Astrea y la venganza de Ryu
 
 - **Estado:** mezcla controlada de afirmaciones oficiales y secundarias.

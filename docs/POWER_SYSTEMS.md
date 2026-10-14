@@ -56,3 +56,8 @@ Una ficha de poder puede usar esta plantilla en el editor:
 `Nombre / categoría / perfil / potencia y alcance / activación / coste / límites / contramedidas / etapas / requisito de evolución / cambios irreversibles / quién conoce la regla`
 
 El catálogo del editor se conserva como texto estructurado por bloques y puede exportarse/importarse junto con el manuscrito Markdown. El registro facilita la continuidad; no significa que la aplicación ya simule o balancee automáticamente cada poder.
+
+
+## Catálogo estructurado de poderes
+
+El panel «Poderes y habilidades» permite crear, editar, buscar y eliminar fichas independientes. Cada registro separa activación, coste, límites, evolución, consecuencias, contrato, inspiración y fuente; puede vincularse por ID estable a un personaje y a una historia. El generador solo prepara un candidato original y no lo persiste hasta que se confirma el formulario. El esquema valida referencias y preserva powers[] en importación/exportación. No se deben presentar las plantillas del generador como habilidades canónicas.

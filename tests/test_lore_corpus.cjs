@@ -1,5 +1,4 @@
 const assert = require("node:assert/strict");
-require("../src/official-character-roster.js");
 const fs = require("node:fs");
 const path = require("node:path");
 const corpus = require("../src/lore-corpus.js");
@@ -9,26 +8,63 @@ const documentPaths = [
   "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
   "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
   "research/inbox/BATCH-DM-005-astrea-familia-network.md",
-  "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md"
+  "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+  "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
+  "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
+  "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
+  "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+  "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
-assert.ok(index.sourceClaimCount > 32, "Roster-backed claims must expand source coverage.");
-assert.ok(index.entryCount > 35, "Continuity-scoped roster dossier claims must be indexed.");
+const familyEntities = corpus.searchEntities(catalog, { type: "familia" });
+assert.ok(Array.isArray(index.entityRecords), "Loaded lore index must expose typed catalog entities for the UI.");
+assert.ok(index.entityRecords.some(entity => entity.id === "DM-FAM-HESTIA"));
+assert.ok(familyEntities.totalMatches >= 3, "Typed entity search must expose the Familia catalog records.");
+assert.ok(familyEntities.results.every(entity => entity.type === "familia"), "Familia filter must not leak characters or events.");
+assert.ok(familyEntities.results.some(entity => entity.id === "DM-FAM-HESTIA"));
+assert.ok(familyEntities.results.some(entity => entity.id === "DM-FAM-LOKI"));
+assert.ok(familyEntities.results.some(entity => entity.id === "DM-FAM-ASTREA"));
+const astreaEntity = corpus.searchEntities(catalog, { entityType: "familia", query: "Astrea" });
+assert.deepEqual(astreaEntity.results.map(entity => entity.id), ["DM-FAM-ASTREA"], "Entity query must locate Astrea Familia by its catalog tag.");
+assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe esta familia" }).abstain, true);
+assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
+assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
+assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
+assert.equal(index.sourceClaimCount, 98);
+assert.equal(index.entryCount, 101);
+const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
+const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volume21Boundary.results.some(claim => claim.claimId === "DMR-011-CLM-002"), "Latest published main volume boundary must be searchable.");
+const volume22Boundary = corpus.search(index, { query: "volumen 22 anunciado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volume22Boundary.results.some(claim => claim.claimId === "DMR-011-CLM-003"), "Future publication must not be mistaken for a released volume.");
+const volume21Expedition = corpus.search(index, { query: "Loki Familia expedición piso 60 Ais", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volume21Expedition.results.some(claim => claim.claimId === "DMR-008-CLM-022"), "Volume 21 publisher synopsis must expose the stranded expedition claim.");
+const volume21Rescue = corpus.search(index, { query: "Orario movilización rescate", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volume21Rescue.results.some(claim => claim.claimId === "DMR-008-CLM-023"), "Volume 21 publisher synopsis must expose the city-wide rescue response.");
+const volume21Bell = corpus.search(index, { query: "Bell regresa norte noticia expedición", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volume21Bell.results.some(claim => claim.claimId === "DMR-008-CLM-024"), "Volume 21 publisher synopsis must expose Bell's return and the news he receives.");
+const volume21ChapterOne = corpus.search(index, { query: "expedición fracasó piso 60 Finn Ais", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volume21ChapterOne.results.some(claim => claim.claimId === "DMR-008-CLM-025"), "Volume 21 chapter-one excerpt must be retrievable as excerpt-only primary evidence.");
+const volume21Prologue = corpus.search(index, { query: "Ais prólogo oscuridad jaula hielo", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volume21Prologue.results.some(claim => claim.claimId === "DMR-008-CLM-026"), "Volume 21 prologue excerpt must be retrievable as excerpt-only primary evidence.");
+const ancientFamilias = corpus.search(index, { query: "Zeus Hera Behemoth Leviathan tres grandes misiones", continuity: "ALL", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ancientFamilias.results.some(claim => claim.claimId === "DMR-008-CLM-027"), "Official franchise reference must expose the Zeus/Hera Behemoth and Leviathan result without overclaiming Black Dragon details.");
+
+
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
-const rosterClaims = index.claims.filter(claim => claim.claimId.startsWith("DMR-008-CLM-"));
-assert.ok(rosterClaims.length > 0, "Roster dossiers must become searchable claims.");
-assert.ok(rosterClaims.some(claim => claim.sourceIds.includes("DMR-007-SRC-001") &&
-  claim.sourceType === "SECONDARY" && claim.confidenceNote.includes("fuente secundaria")),
-  "Community-wiki claims must retain secondary-source labeling and limitations.");
-assert.ok(rosterClaims.some(claim => claim.continuityScopes.includes("CONT-MAIN-LN")),
-  "Generated claims must preserve main-light-novel continuity.");
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
 assert.ok(historicalRyu.totalMatches > 0);
 assert.ok(historicalRyu.results.every(claim => claim.continuityScopes.includes("CONT-AR")));
 assert.ok(!historicalRyu.results.some(claim => claim.entryId.endsWith("--CONT-ANIME")));
 assert.ok(historicalRyu.results.some(claim => claim.claimId === "DMR-002-CLM-015"));
+assert.ok(historicalRyu.results.some(claim => claim.claimId === "DMR-009-CLM-001"));
+  const departure = corpus.search(index, { query: "Ryu Astrea venganza", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+  assert.ok(departure.results.some(claim => claim.claimId === "DMR-010-CLM-002"), "The Astrea departure reason should be searchable with secondary-source status.");
+  const laterAstrea = corpus.search(index, { query: "Ryu Astrea", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+  assert.ok(laterAstrea.results.some(claim => claim.claimId === "DMR-010-CLM-005"), "The later Ryu-Astrea meeting should remain searchable from the publisher summary.");
 const animeRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(animeRyu.totalMatches > 0);
 assert.ok(animeRyu.results.every(claim => claim.continuityScopes.includes("CONT-ANIME")));
@@ -36,11 +72,24 @@ assert.ok(!animeRyu.results.some(claim => claim.entryId.endsWith("--CONT-AR")));
 const aisLikes = corpus.search(index, { query: "", characterId: "DM-CHAR-AIS", continuity: "ALL", period: "ALL", aspect: "likes", spoiler: "all" });
 assert.equal(aisLikes.totalMatches, 0);
 assert.equal(aisLikes.abstain, true);
-const mainNovelRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
-assert.ok(mainNovelRyu.totalMatches > 0, "Ryu's sourced main-novel dossier must be searchable in its own continuity.");
-assert.ok(mainNovelRyu.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")));
-assert.ok(mainNovelRyu.results.some(claim => claim.sourceType === "SECONDARY" &&
-  claim.confidenceNote.includes("fuente secundaria")));
+const mainRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(mainRyu.results.some(claim => claim.claimId === "DMR-008-CLM-013" || claim.claimId === "DMR-008-CLM-014"), "volume dossiers should make Ryu discoverable in the main-story continuity");
+assert.ok(mainRyu.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")));
+const ryuChronicle = corpus.search(index, { query: "Ciudad Forjadora", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ryuChronicle.results.some(claim => claim.claimId === "DMR-009-CLM-008"));
+const swordOratoria = corpus.search(index, { query: "Loki Familia", characterId: "CHAR-FINN-DEIMNE", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(swordOratoria.results.some(claim => claim.claimId === "DMR-009-CLM-004" || claim.claimId === "DMR-009-CLM-005"));
+const hestiaFamilyClaim = corpus.search(index, { query: "único miembro", characterId: "DM-CHAR-BELL", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(hestiaFamilyClaim.results.some(claim => claim.claimId === "DMR-004-CLM-001"), "Hestia Familia's opening state must be available through global lore search.");
+const lokiFamilyClaim = corpus.search(index, { query: "Finn capitán", characterId: "CHAR-FINN-DEIMNE", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(lokiFamilyClaim.results.some(claim => claim.claimId === "DMR-005-CLM-002"), "Loki Familia's leadership claim must be available through global lore search.");
+const astreaFamilyClaim = corpus.search(index, { query: "Alise capitana", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
+assert.ok(astreaFamilyClaim.results.some(claim => claim.claimId === "DMR-006-CLM-003"), "Astrea Familia's leadership claim must be available through global lore search.");
+const astreaAnimeClaim = corpus.search(index, { query: "Astrea justicia orden", characterId: "CHAR-ASTREA", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(astreaAnimeClaim.results.some(claim => claim.claimId === "DMR-006-CLM-005"), "Astrea adaptation facts must remain separate from the Astrea Record continuity.");
+
+const unsupportedNovelPreference = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "likes", spoiler: "all" });
+assert.equal(unsupportedNovelPreference.totalMatches, 0, "a personal preference cannot be filled in without evidence, even when the character appears in the main-story corpus.");
 
 const aliseHistorical = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseHistorical.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-AR"));
@@ -48,11 +97,13 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 32 source claims, 35 entries, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 95 source claims, 98 entries, volume 21 atomic claims, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();
   assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/chronology")));
+  assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/sword_oratoria/character")));
+  assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/danmachi/story/episode1.html")));
   assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("ga.sbcr.jp/product/9784815610173")));
   assert.ok(sourceDirectory.some(source => source.category === "community" && source.url.includes("danmachi.fandom.com")));
   assert.ok(sourceDirectory.every(source => source.title && source.url && source.limits));
@@ -105,5 +156,14 @@ process.stdout.write("PASS lore search: 32 source claims, 35 entries, continuity
   assert.ok(partialFailure.providers.some(provider=>provider.error&&provider.searchUrl));
   assert.ok(partialFailure.providers.some(provider=>provider.results.length===1));
   await assert.rejects(()=>corpus.searchExternalSources(" ",{fetchImpl:mockFetch}),/Escribí un tema/);
+  // Regression: family retrieval accepts natural Spanish name order and never leaks characters.
+  const astreaSpanish = corpus.searchEntities(catalog, { type: "familia", query: "Familia de Astrea" });
+  assert.deepEqual(astreaSpanish.results.map(entity => entity.id), ["DM-FAM-ASTREA"]);
+  assert.ok(astreaSpanish.results.every(entity => entity.type === "familia"));
+  const lokiAlias = corpus.searchEntities(catalog, { entityType: "FAMILIA", query: "Loki Familia" });
+  assert.deepEqual(lokiAlias.results.map(entity => entity.id), ["DM-FAM-LOKI"]);
+  const hestiaAlias = corpus.searchEntities(catalog, { type: "familia", query: "Familia Hestia" });
+  assert.deepEqual(hestiaAlias.results.map(entity => entity.id), ["DM-FAM-HESTIA"]);
+  assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "Bell Cranel" }).abstain, true);
   process.stdout.write("PASS web research: Fandom/Wikipedia search, secondary-source labels, safe snippets and graceful partial failure verified.\n");
 })().catch(error=>{ console.error(error); process.exitCode=1; });

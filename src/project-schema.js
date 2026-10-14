@@ -42,6 +42,15 @@
     if (input.relationships !== undefined && !Array.isArray(input.relationships)) {
       errors.push("relationships debe ser una lista.");
     }
+    if (input.mythicProposals !== undefined && !Array.isArray(input.mythicProposals)) {
+      errors.push("mythicProposals debe ser una lista.");
+    }
+    if (input.mythicRelations !== undefined && !Array.isArray(input.mythicRelations)) {
+      errors.push("mythicRelations debe ser una lista.");
+    }
+    if (input.powers !== undefined && !Array.isArray(input.powers)) {
+      errors.push("powers debe ser una lista.");
+    }
     if (errors.length) return { valid: false, errors, project: null };
 
     const hasExplicitRelationships = Array.isArray(input.relationships);
@@ -54,6 +63,9 @@
       organizations: Array.isArray(input.organizations) ? input.organizations.map((item) => isRecord(item) ? { ...item } : item) : [],
       relationships: hasExplicitRelationships ? input.relationships.map((item) => isRecord(item) ? { ...item } : item) : [],
       stories: Array.isArray(input.stories) ? input.stories.map((item) => isRecord(item) ? { ...item } : item) : [],
+      mythicProposals: Array.isArray(input.mythicProposals) ? input.mythicProposals.map((item) => isRecord(item) ? { ...item } : item) : [],
+      mythicRelations: Array.isArray(input.mythicRelations) ? input.mythicRelations.map((item) => isRecord(item) ? { ...item } : item) : [],
+      powers: Array.isArray(input.powers) ? input.powers.map((item) => isRecord(item) ? { ...item } : item) : [],
       settings: isRecord(input.settings) ? { ...input.settings } : { time: "now" }
     };
 
@@ -85,7 +97,10 @@
       ["events", project.events],
       ["organizations", project.organizations],
       ["relationships", project.relationships],
-      ["stories", project.stories]
+      ["stories", project.stories],
+      ["mythicProposals", project.mythicProposals],
+      ["mythicRelations", project.mythicRelations],
+      ["powers", project.powers]
     ];
     const ids = new Set();
     const byGroup = {};
@@ -104,11 +119,38 @@
           ids.add(item.id);
           byGroup[groupName].add(item.id);
         }
-        if (!isNonEmptyString(item.name) && groupName !== "events") {
+        if (!isNonEmptyString(item.name) && groupName !== "events" && groupName !== "mythicProposals" && groupName !== "mythicRelations") {
           errors.push(itemPath + ".name debe ser un texto no vacío.");
         }
       });
     }
+    project.mythicRelations.forEach((relation, index) => {
+      const path = "mythicRelations[" + index + "]";
+      for (const key of ["sourceId", "targetId", "type"]) {
+        if (!isNonEmptyString(relation[key])) errors.push(path + "." + key + " debe ser un texto no vacío.");
+      }
+      if (relation.sourceId && relation.targetId && relation.sourceId === relation.targetId) {
+        errors.push(path + " no puede relacionar una entidad consigo misma.");
+      }
+      if (relation.createdAt !== undefined && typeof relation.createdAt !== "string") errors.push(path + ".createdAt debe ser texto.");
+    });
+
+    project.mythicProposals.forEach((proposal, index) => {
+      const path = "mythicProposals[" + index + "]";
+      if (!isNonEmptyString(proposal.title)) errors.push(path + ".title debe ser un texto no vacío.");
+      for (const key of ["concept", "ability", "activation", "cost", "risk", "progression", "weakness", "chapterReference"]) {
+        if (proposal[key] === undefined || proposal[key] === null) proposal[key] = "";
+        if (typeof proposal[key] !== "string") errors.push(path + "." + key + " debe ser texto.");
+      }
+      hasStringArray(proposal, "modes", path, errors);
+      hasStringArray(proposal, "entityIds", path, errors);
+      if (proposal.storyId !== undefined && proposal.storyId !== null &&
+          (!isNonEmptyString(proposal.storyId) || !project.stories.some(story => isRecord(story) && story.id === proposal.storyId))) {
+        errors.push(path + ".storyId apunta a una historia inexistente.");
+      }
+      if (proposal.updatedAt !== undefined && typeof proposal.updatedAt !== "string") errors.push(path + ".updatedAt debe ser texto.");
+    });
+
     if (errors.length) return { valid: false, errors, project: null };
 
     const locationIds = byGroup.locations;
@@ -177,6 +219,9 @@
       const path = "characters[" + index + "]";
       hasStringArray(character, "personality", path, errors);
       hasStringArray(character, "relationships", path, errors);
+      hasStringArray(character, "mythicEntityIds", path, errors);
+      if (character.mythicProposalId !== undefined && character.mythicProposalId !== null && typeof character.mythicProposalId !== "string") errors.push(path + ".mythicProposalId debe ser texto o null.");
+      if (character.chapterReference !== undefined && typeof character.chapterReference !== "string") errors.push(path + ".chapterReference debe ser texto.");
       if (!Array.isArray(character.locationHistory)) character.locationHistory = [];
       character.locationHistory.forEach((entry, entryIndex) => {
         const entryPath = path + ".locationHistory[" + entryIndex + "]";
@@ -296,6 +341,22 @@
       if (typeof story.description !== "string") errors.push("stories[" + index + "].description debe ser texto.");
     });
 
+    project.powers.forEach((power, index) => {
+      const path = "powers[" + index + "]";
+      if (!isRecord(power)) { errors.push(path + " debe ser un objeto."); return; }
+      for (const key of ["family", "category", "profile", "description", "activation", "cost", "limits", "evolution", "consequences", "contract", "inspiration", "source", "status"]) {
+        if (power[key] === undefined || power[key] === null) power[key] = key === "status" ? "proposal" : "";
+        if (typeof power[key] !== "string") errors.push(path + "." + key + " debe ser texto.");
+      }
+      if (power.irreversible === undefined || power.irreversible === null) power.irreversible = false;
+      if (typeof power.irreversible !== "boolean") errors.push(path + ".irreversible debe ser booleano.");
+      if (power.ownerCharacterId === undefined || power.ownerCharacterId === null || power.ownerCharacterId === "") power.ownerCharacterId = null;
+      else if (!isNonEmptyString(power.ownerCharacterId)) errors.push(path + ".ownerCharacterId debe ser un ID o null.");
+      else if (!characterIds.has(power.ownerCharacterId)) errors.push(path + ".ownerCharacterId referencia un personaje inexistente: " + power.ownerCharacterId + ".");
+      if (power.storyId === undefined || power.storyId === null || power.storyId === "") power.storyId = null;
+      else if (!isNonEmptyString(power.storyId)) errors.push(path + ".storyId debe ser un ID o null.");
+      else if (!byGroup.stories.has(power.storyId)) errors.push(path + ".storyId referencia una historia inexistente: " + power.storyId + ".");
+    });
     if (errors.length) return { valid: false, errors, project: null };
     return { valid: true, errors: [], project };
   }

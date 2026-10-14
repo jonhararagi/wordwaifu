@@ -18,7 +18,9 @@
     stories: ["Historias y novelas", "Organizá premisas, conflictos, arcos y capítulos."],
     commands: ["Asistente local", "Comandos deterministas para consultar tu proyecto sin IA."],
     lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."],
-    art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."]
+    art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."],
+    "mythic-catalog": ["Catálogo mítico", "Explorá entidades, armas, reliquias y pactos conectados por relaciones."],
+    powers: ["Poderes y habilidades", "Guardá cada poder como una ficha conectada a personajes e historias."]
   };
   const demo = {
     schemaVersion: 1,
@@ -105,6 +107,7 @@
       if (!source.relationships.includes(target.id)) source.relationships.push(target.id);
       if (!target.relationships.includes(source.id)) target.relationships.push(source.id);
     });
+    if (!Array.isArray(project.powers)) project.powers = [];
     return project;
   }
 
@@ -131,6 +134,12 @@
   function saveProject() {
     const snapshot = structuredClone(state);
     const sequence = ++persistenceSequence;
+    let backup = { written: false, warning: "ProjectRepository no está disponible." };
+    try {
+      if (projectRepository) backup = projectRepository.saveBackup(snapshot);
+    } catch (error) {
+      backup = { written: false, warning: error.message };
+    }
     $("#project-name").textContent = snapshot.project.name;
     $("#save-status").textContent = "Guardando proyecto…";
 
@@ -139,25 +148,20 @@
       return Promise.resolve(false);
     }
 
-    // Use the repository's guarded save path: it checks trash tombstones before
-    // touching the compatibility backup and rolls that backup back if a trash
-    // move wins the race against this stale tab's IndexedDB write.
-    return enqueueRepositoryOperation(() => projectRepository.saveActive(snapshot)).then((report) => {
+    return enqueueRepositoryOperation(() => projectRepository.write(snapshot)).then(() => {
       if (sequence === persistenceSequence) {
-        if (report.backend === "indexeddb") {
-          $("#save-status").textContent = report.backupWritten
-            ? "Guardado en IndexedDB · copia local disponible"
-            : "Guardado en IndexedDB · respaldo local no disponible";
-        } else {
-          $("#save-status").textContent = "Respaldo local disponible · IndexedDB no disponible";
-        }
+        $("#save-status").textContent = backup.written
+          ? "Guardado en IndexedDB · copia local disponible"
+          : "Guardado en IndexedDB · respaldo local no disponible";
       }
-      return report.backend === "indexeddb" || report.backend === "localStorage";
-    }).catch((error) => {
+      return true;
+    }).catch(() => {
       if (sequence === persistenceSequence) {
-        $("#save-status").textContent = "No se pudo guardar: " + (error && error.message ? error.message : "exportá una copia");
+        $("#save-status").textContent = backup.written
+          ? "Respaldo local disponible · IndexedDB no disponible"
+          : "No se pudo guardar: exportá una copia";
       }
-      return false;
+      return Boolean(backup.written);
     });
   }
 
@@ -946,18 +950,22 @@
     $("#global-search").placeholder = activeView === "lore"
       ? "Buscar en la enciclopedia de personajes…"
       : "Buscar personajes, lugares o DanMachi…";
+    $("#global-search").closest(".search-box").classList.toggle("hidden", activeView === "mythic-catalog");
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
     $("#command-view").classList.toggle("hidden", activeView !== "commands");
     $("#lore-view").classList.toggle("hidden", activeView !== "lore");
     $("#art-view").classList.toggle("hidden", activeView !== "art");
+    $("#mythic-catalog-view").classList.toggle("hidden", activeView !== "mythic-catalog");
+    $("#powers-view").classList.toggle("hidden", activeView !== "powers");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art"].includes(activeView));
+    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art", "mythic-catalog", "powers"].includes(activeView));
     renderMap();
     renderDetails();
     renderDirectory();
+    if (window.WordWaifuPowerWorkbench) window.WordWaifuPowerWorkbench.refresh(state);
   }
 
   function mapPointFromPointer(event) {
@@ -1204,7 +1212,41 @@
     if (!Array.isArray(story.arcs)) story.arcs = [];
     const chapters = story.chapters.map((chapter, index) => '<article class="story-chapter-card"><div class="story-chapter-heading"><span class="tag">Capítulo ' + (index + 1) + '</span><span class="tag">' + escapeHTML(chapter.status || "borrador") + '</span></div><form class="story-chapter-form" data-chapter-id="' + escapeHTML(chapter.id) + '"><label>Título del capítulo<input name="chapterTitle" maxlength="180" required value="' + escapeHTML(chapter.title || "") + '"></label><label>Resumen del capítulo<textarea name="chapterSummary" rows="2" maxlength="4000">' + escapeHTML(chapter.summary || "") + '</textarea></label><label>Manuscrito<textarea name="chapterContent" rows="12" maxlength="200000" placeholder="Escribí acá el capítulo completo…">' + escapeHTML(chapter.content || "") + '</textarea></label><label>Estado<select name="chapterStatus"><option value="outline"' + (chapter.status === "outline" ? " selected" : "") + '>Esquema</option><option value="draft"' + (!chapter.status || chapter.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (chapter.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (chapter.status === "complete" ? " selected" : "") + '>Completo</option></select></label><div class="location-actions"><button class="primary-button" type="submit">Guardar capítulo</button><button class="outline-button danger-action" type="button" data-delete-chapter="' + escapeHTML(chapter.id) + '">Eliminar capítulo</button></div></form></article>').join("");
     const completeCount = story.chapters.filter((chapter) => chapter.status === "complete").length;
-    return '<section class="story-editor selected-event-card"><div class="story-editor-title"><div><p class="eyebrow">EDITOR DE HISTORIAS · BORRADOR LOCAL</p><h2>' + escapeHTML(story.name || "Historia sin título") + '</h2><p>' + story.chapters.length + ' capítulos · ' + completeCount + ' completos</p></div><div class="story-file-actions"><button type="button" id="story-import-button" class="outline-button">Importar manuscrito .md</button><input type="file" id="story-import-file" accept=".md,text/markdown,text/plain" hidden><button type="button" id="story-export-button" class="outline-button">Exportar manuscrito .md</button></div></div><form id="story-meta-form" data-story-id="' + escapeHTML(story.id) + '"><div class="story-form-grid"><label>Título<input name="storyName" required maxlength="180" value="' + escapeHTML(story.name || "") + '"></label><label>Estado<select name="storyStatus"><option value="idea"' + (story.status === "idea" ? " selected" : "") + '>Idea</option><option value="outline"' + (story.status === "outline" ? " selected" : "") + '>En planificación</option><option value="draft"' + (!story.status || story.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (story.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (story.status === "complete" ? " selected" : "") + '>Completa</option></select></label></div><label>Sinopsis<textarea name="storyDescription" rows="3" maxlength="6000" placeholder="¿De qué trata la historia?">' + escapeHTML(story.description || "") + '</textarea></label><label>Premisa<textarea name="storyPremise" rows="3" maxlength="6000" placeholder="La idea central y qué hace única esta historia…">' + escapeHTML(story.premise || "") + '</textarea></label><label>Conflicto central<textarea name="storyConflict" rows="3" maxlength="6000" placeholder="Qué quiere el protagonista, qué se lo impide y qué está en juego…">' + escapeHTML(story.conflict || "") + '</textarea></label><label>Arcos narrativos (uno por línea)<textarea name="storyArcs" rows="4" maxlength="12000" placeholder="Personaje: punto de partida → cambio → consecuencia">' + escapeHTML((story.arcs || []).map((arc) => typeof arc === "string" ? arc : arc.title || arc.description || "").join("\n")) + '</textarea></label><label>Tipo de mundo<select name="storyWorldType"><option value="unspecified"' + (!story.worldType || story.worldType === "unspecified" ? " selected" : "") + '>Sin definir</option><option value="cyberpunk-dystopia"' + (story.worldType === "cyberpunk-dystopia" ? " selected" : "") + '>Distopía cyberpunk (ej. Cyberpunk 2999)</option><option value="conventional-dystopia"' + (story.worldType === "conventional-dystopia" ? " selected" : "") + '>Distopía social o política</option><option value="post-apocalypse"' + (story.worldType === "post-apocalypse" ? " selected" : "") + '>Postapocalipsis: supervivencia después del colapso</option><option value="active-apocalypse-military-sf"' + (story.worldType === "active-apocalypse-military-sf" ? " selected" : "") + '>Apocalipsis activo, militar o ciencia ficción (ej. Muv-Luv)</option><option value="isolated-island-comedy"' + (story.worldType === "isolated-island-comedy" ? " selected" : "") + '>Isla aislada, comedia y convivencia (ej. Nagasare Airantou)</option><option value="superpower-action"' + (story.worldType === "superpower-action" ? " selected" : "") + '>Acción y sociedades de superpoderes</option><option value="fantasy-adventure"' + (story.worldType === "fantasy-adventure" ? " selected" : "") + '>Fantasía y aventura</option><option value="urban-supernatural"' + (story.worldType === "urban-supernatural" ? " selected" : "") + '>Sobrenatural urbano</option><option value="mecha-war"' + (story.worldType === "mecha-war" ? " selected" : "") + '>Mecha, guerra y conflicto geopolítico</option><option value="slice-of-life-comedy"' + (story.worldType === "slice-of-life-comedy" ? " selected" : "") + '>Comedia cotidiana y relaciones</option><option value="other"' + (story.worldType === "other" ? " selected" : "") + '>Otro / híbrido</option></select></label><label>Reglas del mundo<textarea name="storyWorldRules" rows="3" maxlength="10000" placeholder="Tecnología, poderes, recursos, instituciones, límites y consecuencias…">' + escapeHTML(story.worldRules || "") + '</textarea></label><label>Dinámica y presión del mundo<textarea name="storyWorldDynamics" rows="4" maxlength="12000" placeholder="Qué fuerzas cambian el mundo; cómo afecta a la vida diaria, los conflictos, el tono y las decisiones de los personajes…">' + escapeHTML(story.worldDynamics || "") + '</textarea></label><label>Motor de misterio o revelación<select name="storyRevealType"><option value="none"' + (!story.revealType || story.revealType === "none" ? " selected" : "") + '>Sin definir</option><option value="hidden-identity"' + (story.revealType === "hidden-identity" ? " selected" : "") + '>Identidad oculta (aliado, camarera, rival…)</option><option value="immortal-secret-nature"' + (story.revealType === "immortal-secret-nature" ? " selected" : "") + '>Naturaleza secreta / inmortalidad</option><option value="mythic-origin"' + (story.revealType === "mythic-origin" ? " selected" : "") + '>Origen mitológico o creación antigua</option><option value="card-contract-game"' + (story.revealType === "card-contract-game" ? " selected" : "") + '>Juego de cartas, pactos o contratos sobrenaturales</option><option value="double-identity-faction"' + (story.revealType === "double-identity-faction" ? " selected" : "") + '>Doble identidad / facción infiltrada</option><option value="betrayal-allegiance"' + (story.revealType === "betrayal-allegiance" ? " selected" : "") + '>Traición o lealtad ambigua</option><option value="false-world-truth"' + (story.revealType === "false-world-truth" ? " selected" : "") + '>La verdad del mundo contradice lo que todos creen</option><option value="other"' + (story.revealType === "other" ? " selected" : "") + '>Otro mecanismo</option></select></label><label>Secreto central<textarea name="storyRevealSecret" rows="3" maxlength="8000" placeholder="Qué es realmente el personaje, objeto, juego o mito; quién lo sabe y quién lo ignora…">' + escapeHTML(story.revealSecret || "") + '</textarea></label><label>Pistas, reglas y falsas interpretaciones<textarea name="storyRevealClues" rows="4" maxlength="10000" placeholder="Pistas visibles antes del giro, reglas del juego, contradicciones y explicaciones alternativas plausibles…">' + escapeHTML(story.revealClues || "") + '</textarea></label><label>Momento y forma de la revelación<textarea name="storyRevealTiming" rows="3" maxlength="6000" placeholder="En qué arco/capítulo se descubre y qué evidencia hace imposible negarlo…">' + escapeHTML(story.revealTiming || "") + '</textarea></label><label>Consecuencias después del giro<textarea name="storyRevealConsequences" rows="4" maxlength="10000" placeholder="Qué cambia en las alianzas, objetivos, reglas, riesgos y escenas posteriores; evitar que todo vuelva a la normalidad…">' + escapeHTML(story.revealConsequences || "") + '</textarea></label><section class="power-generator-panel" aria-labelledby="power-generator-title"><h3 id="power-generator-title">Generador rápido de poderes</h3><p class="field-help">Elegí una familia o dejá «Sorpresa». Cada clic propone una idea distinta; no reemplaza lo que ya escribiste. Generá varias hasta encontrar una chispa.</p><div class="power-generator-controls"><label>Familia<select id="story-power-family"><option value="any">Sorpresa · cualquier tipo</option><option value="mental">Mental / percepción</option><option value="physical">Físico / transformación</option><option value="technical">Técnico / estratégico</option><option value="pact">Pacto / contrato</option><option value="costly">Poder con alto coste</option><option value="support">Apoyo / información</option></select></label><button type="button" id="story-power-generate-button" class="outline-button">↻ Generar otro poder</button></div><p id="story-power-generator-status" class="field-help" role="status" aria-live="polite">Las propuestas son ideas originales de ejemplo. Podés editarlas libremente.</p></section><label>Panteón y papel de las diosas<textarea name="storyPantheon" rows="5" maxlength="12000" placeholder="Para cada diosa: nombre, personalidad, deseo propio, relación con el protagonista y sus amigos, favor concedido, límites, precio y arco personal. ¿Qué quiere ella que no dependa del protagonista?">' + escapeHTML(story.pantheon || "") + '</textarea></label><p class="field-help">La diosa es un personaje, no solo una máquina de conceder poderes: puede tener objetivos, vínculos, errores, humor, conflictos y una historia propia.</p><label>Reparto coral y arcos individuales<textarea name="storyEnsemble" rows="7" maxlength="20000" placeholder="Personaje: objetivo propio | conflicto | vínculo con el grupo | decisión decisiva | cambio | capítulos donde lleva el foco. Incluí al protagonista y a sus amigos.">' + escapeHTML(story.ensemble || "") + '</textarea></label><p class="field-help">Pensá el equipo como una historia coral: cada amigo puede protagonizar capítulos o mini-arcos, tomar decisiones que cambien la trama y resolver problemas que el protagonista no puede resolver. El protagonista conecta la historia; no tiene que monopolizarla.</p><label>Catálogo de poderes y evolución (un poder por bloque) <textarea name="storyPowerCatalog" rows="10" maxlength="30000" placeholder="Cada poder generado se agrega aquí. También podés escribir uno a mano.">' + escapeHTML(story.powerCatalog || "") + '</textarea></label><p class="field-help">Cada bloque incluye activación, coste, límites, evolución y consecuencias. Guardá la historia para persistir el catálogo. Las reglas irreversibles deben mantenerse en la continuidad.</p><p class="field-help">Un giro debe estar preparado por pistas y cambiar decisiones o relaciones. El formulario organiza el plan; no inventa automáticamente una revelación ni demuestra que esté bien construida.</p><p class="field-help">El tipo es solo una categoría: documentá reglas, presión cotidiana, recursos, riesgos y cómo las decisiones de los personajes cambian el mundo.</p><div class="location-actions"><button type="submit" class="primary-button">Guardar historia</button><button type="button" id="story-add-chapter-button" class="outline-button">＋ Añadir capítulo</button><button type="button" id="story-delete-button" class="outline-button danger-action">Eliminar historia</button></div><p class="field-help" id="story-editor-status" role="status" aria-live="polite">Los cambios de cada formulario se guardan por separado.</p></form><div class="detail-divider"></div><h3>Capítulos y manuscrito</h3><p class="field-help">Cada capítulo tiene título, resumen, texto íntegro y estado. «Completo» es una marca editorial manual, no una evaluación automática de calidad.</p><div class="story-chapters">' + (chapters || '<div class="empty-state">Esta historia todavía no tiene capítulos. Pulsá «Añadir capítulo» para crear el primero.</div>') + '</div></section>';
+    return '<section class="story-editor selected-event-card"><div class="story-editor-title"><div><p class="eyebrow">EDITOR DE HISTORIAS · BORRADOR LOCAL</p><h2>' + escapeHTML(story.name || "Historia sin título") + '</h2><p>' + story.chapters.length + ' capítulos · ' + completeCount + ' completos</p></div><div class="story-file-actions"><button type="button" id="story-import-button" class="outline-button">Importar manuscrito .md</button><input type="file" id="story-import-file" accept=".md,text/markdown,text/plain" hidden><button type="button" id="story-export-button" class="outline-button">Exportar manuscrito .md</button></div></div><form id="story-meta-form" data-story-id="' + escapeHTML(story.id) + '"><div class="story-form-grid"><label>Título<input name="storyName" required maxlength="180" value="' + escapeHTML(story.name || "") + '"></label><label>Estado<select name="storyStatus"><option value="idea"' + (story.status === "idea" ? " selected" : "") + '>Idea</option><option value="outline"' + (story.status === "outline" ? " selected" : "") + '>En planificación</option><option value="draft"' + (!story.status || story.status === "draft" ? " selected" : "") + '>Borrador</option><option value="revision"' + (story.status === "revision" ? " selected" : "") + '>En revisión</option><option value="complete"' + (story.status === "complete" ? " selected" : "") + '>Completa</option></select></label></div><label>Sinopsis<textarea name="storyDescription" rows="3" maxlength="6000" placeholder="¿De qué trata la historia?">' + escapeHTML(story.description || "") + '</textarea></label><label>Premisa<textarea name="storyPremise" rows="3" maxlength="6000" placeholder="La idea central y qué hace única esta historia…">' + escapeHTML(story.premise || "") + '</textarea></label><label>Conflicto central<textarea name="storyConflict" rows="3" maxlength="6000" placeholder="Qué quiere el protagonista, qué se lo impide y qué está en juego…">' + escapeHTML(story.conflict || "") + '</textarea></label><label>Arcos narrativos (uno por línea)<textarea name="storyArcs" rows="4" maxlength="12000" placeholder="Personaje: punto de partida → cambio → consecuencia">' + escapeHTML((story.arcs || []).map((arc) => typeof arc === "string" ? arc : arc.title || arc.description || "").join("\n")) + '</textarea></label><label>Tipo de mundo<select name="storyWorldType"><option value="unspecified"' + (!story.worldType || story.worldType === "unspecified" ? " selected" : "") + '>Sin definir</option><option value="cyberpunk-dystopia"' + (story.worldType === "cyberpunk-dystopia" ? " selected" : "") + '>Distopía cyberpunk (ej. Cyberpunk 2999)</option><option value="conventional-dystopia"' + (story.worldType === "conventional-dystopia" ? " selected" : "") + '>Distopía social o política</option><option value="post-apocalypse"' + (story.worldType === "post-apocalypse" ? " selected" : "") + '>Postapocalipsis: supervivencia después del colapso</option><option value="active-apocalypse-military-sf"' + (story.worldType === "active-apocalypse-military-sf" ? " selected" : "") + '>Apocalipsis activo, militar o ciencia ficción (ej. Muv-Luv)</option><option value="isolated-island-comedy"' + (story.worldType === "isolated-island-comedy" ? " selected" : "") + '>Isla aislada, comedia y convivencia (ej. Nagasare Airantou)</option><option value="superpower-action"' + (story.worldType === "superpower-action" ? " selected" : "") + '>Acción y sociedades de superpoderes</option><option value="fantasy-adventure"' + (story.worldType === "fantasy-adventure" ? " selected" : "") + '>Fantasía y aventura</option><option value="urban-supernatural"' + (story.worldType === "urban-supernatural" ? " selected" : "") + '>Sobrenatural urbano</option><option value="mecha-war"' + (story.worldType === "mecha-war" ? " selected" : "") + '>Mecha, guerra y conflicto geopolítico</option><option value="slice-of-life-comedy"' + (story.worldType === "slice-of-life-comedy" ? " selected" : "") + '>Comedia cotidiana y relaciones</option><option value="other"' + (story.worldType === "other" ? " selected" : "") + '>Otro / híbrido</option></select></label><label>Reglas del mundo<textarea name="storyWorldRules" rows="3" maxlength="10000" placeholder="Tecnología, poderes, recursos, instituciones, límites y consecuencias…">' + escapeHTML(story.worldRules || "") + '</textarea></label><label>Dinámica y presión del mundo<textarea name="storyWorldDynamics" rows="4" maxlength="12000" placeholder="Qué fuerzas cambian el mundo; cómo afecta a la vida diaria, los conflictos, el tono y las decisiones de los personajes…">' + escapeHTML(story.worldDynamics || "") + '</textarea></label><label>Motor de misterio o revelación<select name="storyRevealType"><option value="none"' + (!story.revealType || story.revealType === "none" ? " selected" : "") + '>Sin definir</option><option value="hidden-identity"' + (story.revealType === "hidden-identity" ? " selected" : "") + '>Identidad oculta (aliado, camarera, rival…)</option><option value="immortal-secret-nature"' + (story.revealType === "immortal-secret-nature" ? " selected" : "") + '>Naturaleza secreta / inmortalidad</option><option value="mythic-origin"' + (story.revealType === "mythic-origin" ? " selected" : "") + '>Origen mitológico o creación antigua</option><option value="card-contract-game"' + (story.revealType === "card-contract-game" ? " selected" : "") + '>Juego de cartas, pactos o contratos sobrenaturales</option><option value="double-identity-faction"' + (story.revealType === "double-identity-faction" ? " selected" : "") + '>Doble identidad / facción infiltrada</option><option value="betrayal-allegiance"' + (story.revealType === "betrayal-allegiance" ? " selected" : "") + '>Traición o lealtad ambigua</option><option value="false-world-truth"' + (story.revealType === "false-world-truth" ? " selected" : "") + '>La verdad del mundo contradice lo que todos creen</option><option value="other"' + (story.revealType === "other" ? " selected" : "") + '>Otro mecanismo</option></select></label><label>Secreto central<textarea name="storyRevealSecret" rows="3" maxlength="8000" placeholder="Qué es realmente el personaje, objeto, juego o mito; quién lo sabe y quién lo ignora…">' + escapeHTML(story.revealSecret || "") + '</textarea></label><label>Pistas, reglas y falsas interpretaciones<textarea name="storyRevealClues" rows="4" maxlength="10000" placeholder="Pistas visibles antes del giro, reglas del juego, contradicciones y explicaciones alternativas plausibles…">' + escapeHTML(story.revealClues || "") + '</textarea></label><label>Momento y forma de la revelación<textarea name="storyRevealTiming" rows="3" maxlength="6000" placeholder="En qué arco/capítulo se descubre y qué evidencia hace imposible negarlo…">' + escapeHTML(story.revealTiming || "") + '</textarea></label><label>Consecuencias después del giro<textarea name="storyRevealConsequences" rows="4" maxlength="10000" placeholder="Qué cambia en las alianzas, objetivos, reglas, riesgos y escenas posteriores; evitar que todo vuelva a la normalidad…">' + escapeHTML(story.revealConsequences || "") + '</textarea></label><section class="power-generator-panel" aria-labelledby="power-generator-title"><h3 id="power-generator-title">Generador rápido de poderes</h3><p class="field-help">Elegí una familia o dejá «Sorpresa». Cada clic propone una idea distinta; no reemplaza lo que ya escribiste. Generá varias hasta encontrar una chispa.</p><div class="power-generator-controls"><label>Familia<select id="story-power-family"><option value="any">Sorpresa · cualquier tipo</option><option value="mental">Mental / percepción</option><option value="physical">Físico / transformación</option><option value="technical">Técnico / estratégico</option><option value="pact">Pacto / contrato</option><option value="costly">Poder con alto coste</option><option value="support">Apoyo / información</option></select></label><button type="button" id="story-power-generate-button" class="outline-button">↻ Generar otro poder</button></div><p id="story-power-generator-status" class="field-help" role="status" aria-live="polite">Las propuestas son ideas originales de ejemplo. Podés editarlas libremente.</p></section><section class="power-generator-panel word-alternatives-panel" aria-labelledby="word-alternatives-title"><h3 id="word-alternatives-title">Buscador de sinónimos y antónimos</h3><p class="field-help">Buscá una palabra en español o inglés. Seleccioná una palabra en el manuscrito o en un campo de texto y pulsá una alternativa para reemplazarla; después guardá el capítulo o la historia. Las sugerencias dependen del contexto.</p><div class="power-generator-controls"><label>Palabra o expresión<input id="story-word-query" type="search" maxlength="80" placeholder="Ej.: era, salió, grow, dijo, oscuro"></label><button type="button" id="story-word-search-button" class="outline-button">Buscar alternativas</button></div><div class="story-word-results" id="story-word-results" aria-live="polite"><p class="field-help">Probá con «era», «salió», «grow», «dijo» o «miró».</p></div><p id="story-word-status" class="field-help" role="status" aria-live="polite">No cambia el texto hasta que elijas una alternativa.</p></section><label>Panteón y papel de las diosas<textarea name="storyPantheon" rows="5" maxlength="12000" placeholder="Para cada diosa: nombre, personalidad, deseo propio, relación con el protagonista y sus amigos, favor concedido, límites, precio y arco personal. ¿Qué quiere ella que no dependa del protagonista?">' + escapeHTML(story.pantheon || "") + '</textarea></label><p class="field-help">La diosa es un personaje, no solo una máquina de conceder poderes: puede tener objetivos, vínculos, errores, humor, conflictos y una historia propia.</p><label>Reparto coral y arcos individuales<textarea name="storyEnsemble" rows="7" maxlength="20000" placeholder="Personaje: objetivo propio | conflicto | vínculo con el grupo | decisión decisiva | cambio | capítulos donde lleva el foco. Incluí al protagonista y a sus amigos.">' + escapeHTML(story.ensemble || "") + '</textarea></label><p class="field-help">Pensá el equipo como una historia coral: cada amigo puede protagonizar capítulos o mini-arcos, tomar decisiones que cambien la trama y resolver problemas que el protagonista no puede resolver. El protagonista conecta la historia; no tiene que monopolizarla.</p><label>Catálogo de poderes y evolución (un poder por bloque) <textarea name="storyPowerCatalog" rows="10" maxlength="30000" placeholder="Cada poder generado se agrega aquí. También podés escribir uno a mano.">' + escapeHTML(story.powerCatalog || "") + '</textarea></label><p class="field-help">Cada bloque incluye activación, coste, límites, evolución y consecuencias. Guardá la historia para persistir el catálogo. Las reglas irreversibles deben mantenerse en la continuidad.</p><p class="field-help">Un giro debe estar preparado por pistas y cambiar decisiones o relaciones. El formulario organiza el plan; no inventa automáticamente una revelación ni demuestra que esté bien construida.</p><p class="field-help">El tipo es solo una categoría: documentá reglas, presión cotidiana, recursos, riesgos y cómo las decisiones de los personajes cambian el mundo.</p><div class="location-actions"><button type="submit" class="primary-button">Guardar historia</button><button type="button" id="story-add-chapter-button" class="outline-button">＋ Añadir capítulo</button><button type="button" id="story-delete-button" class="outline-button danger-action">Eliminar historia</button></div><p class="field-help" id="story-editor-status" role="status" aria-live="polite">Los cambios de cada formulario se guardan por separado.</p></form><div class="detail-divider"></div><h3>Capítulos y manuscrito</h3><p class="field-help">Cada capítulo tiene título, resumen, texto íntegro y estado. «Completo» es una marca editorial manual, no una evaluación automática de calidad.</p><div class="story-chapters">' + (chapters || '<div class="empty-state">Esta historia todavía no tiene capítulos. Pulsá «Añadir capítulo» para crear el primero.</div>') + '</div></section>';
+  }
+
+  // Diccionario local de apoyo editorial. Las alternativas dependen del contexto; no son sustituciones automáticas.
+  const wordAlternatives = [
+    { words: ["era", "fue", "ser", "estaba", "estar"], synonyms: ["resultaba", "parecía", "representaba", "se encontraba", "existía"], antonyms: ["no era", "dejó de ser", "se volvió distinto", "desapareció"], note: "«Ser/era» no tiene un antónimo universal: elegí según el sentido de la oración." },
+    { words: ["salió", "salio", "salir", "sale", "salieron"], synonyms: ["partió", "se marchó", "abandonó el lugar", "emergió", "apareció", "se dirigió hacia"], antonyms: ["entró", "regresó", "permaneció", "se quedó"], note: "«Emergió» funciona para salir de algo; «partió» para irse." },
+    { words: ["grow", "grew", "grown", "crecer", "creció", "crecio", "crece"], synonyms: ["aumentar", "desarrollarse", "expandirse", "madurar", "florecer", "prosperar"], antonyms: ["disminuir", "encogerse", "marchitarse", "estancarse", "decaer"], englishSynonyms: ["increase", "expand", "develop", "flourish", "thrive", "mature"], englishAntonyms: ["shrink", "decline", "diminish", "stagnate", "wither", "decrease"], note: "Incluye alternativas en inglés y español; elegí una opción del mismo idioma y sentido que tu frase." },
+    { words: ["dijo", "decir", "dice", "dijo"], synonyms: ["afirmó", "respondió", "declaró", "murmuró", "susurró", "replicó", "confesó", "protestó"], antonyms: ["calló", "guardó silencio", "se abstuvo de responder"], note: "El verbo de diálogo debe reflejar cómo habla el personaje, no solo reemplazar «dijo»." },
+    { words: ["miró", "miro", "mirar", "observó", "observo"], synonyms: ["contempló", "examinó", "escudriñó", "atisbó", "fijó la vista", "echó un vistazo"], antonyms: ["apartó la mirada", "ignoró", "evitó mirar"], note: "«Escudriñó» implica atención intensa; «atisbó», una mirada breve o parcial." },
+    { words: ["caminó", "camino", "caminar"], synonyms: ["avanzó", "anduvo", "deambuló", "recorrió", "se encaminó", "marchó"], antonyms: ["se detuvo", "se quedó quieto", "retrocedió"], note: "Elegí según ritmo, dirección e intención." },
+    { words: ["corrió", "corrio", "correr"], synonyms: ["se apresuró", "sprintó", "salió disparado", "se lanzó", "huyó"], antonyms: ["caminó", "frenó", "se detuvo", "avanzó lentamente"], note: "«Huyó» añade intención de escapar; no es un sinónimo neutral." },
+    { words: ["era feliz", "feliz", "alegre", "alegría"], synonyms: ["contento", "dichoso", "radiante", "eufórico", "animado", "jubiloso"], antonyms: ["triste", "abatido", "desdichado", "desanimado"], note: "La intensidad cambia: «eufórico» es más fuerte que «contento»." },
+    { words: ["triste", "tristeza", "abatido"], synonyms: ["melancólico", "afligido", "desolado", "apenado", "decaído"], antonyms: ["alegre", "animado", "esperanzado", "jubiloso"], note: "«Desolado» expresa una tristeza más intensa." },
+    { words: ["grande", "enorme"], synonyms: ["inmenso", "vasto", "gigantesco", "colosal", "amplio", "monumental"], antonyms: ["pequeño", "diminuto", "reducido", "estrecho"], note: "«Vasto» suele describir extensión; «colosal», tamaño extraordinario." },
+    { words: ["pequeño", "pequeno", "diminuto"], synonyms: ["reducido", "minúsculo", "breve", "menudo", "compacto"], antonyms: ["grande", "enorme", "gigantesco", "vasto"], note: "«Breve» encaja mejor con tiempo o duración que con tamaño físico." },
+    { words: ["rápido", "rapido", "veloz"], synonyms: ["veloz", "acelerado", "ágil", "fugaz", "precipitado", "vertiginoso"], antonyms: ["lento", "pausado", "gradual", "perezoso"], note: "«Precipitado» puede implicar falta de cuidado." },
+    { words: ["lento", "lentamente"], synonyms: ["pausado", "gradual", "parsimonioso", "moroso", "poco a poco"], antonyms: ["rápido", "veloz", "acelerado", "instantáneo"], note: "«Parsimonioso» puede sugerir calma deliberada." },
+    { words: ["miedo", "temor", "asustado"], synonyms: ["pavor", "terror", "aprensión", "inquietud", "recelo", "espanto"], antonyms: ["valor", "confianza", "serenidad", "audacia"], note: "«Inquietud» es más leve; «terror» mucho más intenso." },
+    { words: ["oscuro", "oscuridad"], synonyms: ["sombrío", "tenebroso", "lúgubre", "opaco", "umbralado"], antonyms: ["luminoso", "claro", "radiante", "iluminado"], note: "También puede describir tono, ambiente o moralidad; revisá el contexto." },
+    { words: ["luz", "luminoso"], synonyms: ["claridad", "resplandor", "brillo", "fulgor", "destello"], antonyms: ["oscuridad", "sombra", "penumbra", "tiniebla"], note: "«Destello» es breve; «resplandor» puede ser sostenido." },
+    { words: ["poderoso", "poderosa", "fuerte"], synonyms: ["potente", "dominante", "formidable", "arrollador", "influyente", "robusto"], antonyms: ["débil", "vulnerable", "impotente", "frágil"], note: "La fuerza física, la influencia y el poder mágico no son exactamente lo mismo." },
+    { words: ["débil", "debil"], synonyms: ["frágil", "vulnerable", "precario", "endeble", "agotado"], antonyms: ["fuerte", "robusto", "resistente", "poderoso"], note: "«Agotado» describe un estado temporal, no una falta permanente de fuerza." },
+    { words: ["hermoso", "hermosa", "bonito", "bonita"], synonyms: ["bello", "precioso", "espléndido", "atractivo", "deslumbrante", "grácil"], antonyms: ["feo", "desagradable", "grotesco", "tosco"], note: "La belleza puede ser física, emocional o estética." },
+    { words: ["feo", "fea"], synonyms: ["desagradable", "tosco", "deforme", "grotesco", "poco agraciado"], antonyms: ["hermoso", "bello", "atractivo", "armonioso"], note: "No todas las alternativas tienen el mismo tono ni son adecuadas para personas." },
+    { words: ["comenzó", "comenzo", "comenzar", "empezó", "empezo"], synonyms: ["inició", "emprendió", "arrancó", "dio comienzo", "se puso a"], antonyms: ["terminó", "concluyó", "finalizó", "abandonó"], note: "«Abandonó» significa dejar una actividad, no necesariamente acabarla." },
+    { words: ["terminó", "termino", "terminar", "acabó", "acabo"], synonyms: ["concluyó", "finalizó", "completó", "culminó", "cerró"], antonyms: ["comenzó", "inició", "continuó", "prosiguió"], note: "«Completó» sugiere que se alcanzó el objetivo." },
+    { words: ["saber", "sabía", "sabia", "conocer"], synonyms: ["comprender", "entender", "reconocer", "dominar", "estar al tanto"], antonyms: ["ignorar", "desconocer", "confundirse", "no advertir"], note: "«Saber» un dato y «conocer» a una persona tienen usos diferentes." },
+    { words: ["ayudó", "ayudo", "ayudar"], synonyms: ["asistió", "socorrió", "respaldó", "auxilió", "colaboró", "tendió una mano"], antonyms: ["obstaculizó", "perjudicó", "abandonó", "entorpeció"], note: "El antónimo depende de si se trata de apoyo, rescate o cooperación." },
+    { words: ["atacó", "ataco", "atacar"], synonyms: ["arremetió", "embistió", "agredió", "asaltó", "se abalanzó sobre"], antonyms: ["defendió", "protegió", "retrocedió", "se retiró"], note: "Defender puede ser el contraste narrativo, aunque no sea antónimo estricto." },
+    { words: ["ganó", "gano", "ganar"], synonyms: ["venció", "triunfó", "prevaleció", "se impuso", "consiguió"], antonyms: ["perdió", "fracasó", "fue derrotado", "cedió"], note: "«Consiguió» necesita un objeto; no siempre significa vencer a alguien." },
+    { words: ["perdió", "perdio", "perder"], synonyms: ["fue derrotado", "cedió", "malogró", "extravío", "dejó escapar"], antonyms: ["ganó", "venció", "recuperó", "conservó"], note: "Perder un objeto, un combate o una oportunidad requiere alternativas distintas." }
+  ];
+  function normalizeWord(value) {
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").trim();
   }
 
   const powerIdeaLibrary = [
@@ -1263,6 +1305,62 @@
       const editorStatus = $("#story-editor-status", container);
       if (editorStatus) editorStatus.textContent = saved ? "Poder añadido y guardado en el proyecto local." : "Poder añadido en pantalla, pero no se confirmó el guardado. Exportá el proyecto JSON.";
     });
+    let lastWritingField = null;
+    container.addEventListener("focusin", (event) => {
+      if (event.target && event.target.tagName === "TEXTAREA" && !event.target.closest(".word-alternatives-panel")) lastWritingField = event.target;
+    });
+    const wordQuery = $("#story-word-query", container);
+    const wordResults = $("#story-word-results", container);
+    const wordStatus = $("#story-word-status", container);
+    const findWordButton = $("#story-word-search-button", container);
+    const renderWordResults = () => {
+      if (!wordQuery || !wordResults) return;
+      const query = wordQuery.value.trim();
+      wordResults.replaceChildren();
+      if (!query) {
+        const empty = document.createElement("p"); empty.className = "field-help"; empty.textContent = "Escribí una palabra para buscar alternativas."; wordResults.appendChild(empty); return;
+      }
+      const normalized = normalizeWord(query);
+      const entry = wordAlternatives.find((item) => item.words.some((word) => normalizeWord(word) === normalized));
+      if (!entry) {
+        const empty = document.createElement("p"); empty.className = "field-help"; empty.textContent = "Todavía no hay una entrada local para «" + query + "». Probá una forma base o una palabra cercana. El diccionario se puede ampliar."; wordResults.appendChild(empty); return;
+      }
+      const isEnglish = ["grow", "grew", "grown"].includes(normalized);
+      [["Sinónimos", isEnglish && entry.englishSynonyms ? entry.englishSynonyms : entry.synonyms], ["Antónimos y contrastes", isEnglish && entry.englishAntonyms ? entry.englishAntonyms : entry.antonyms]].forEach(([heading, words]) => {
+        const group = document.createElement("div"); group.className = "story-word-group";
+        const title = document.createElement("h4"); title.textContent = heading; group.appendChild(title);
+        const list = document.createElement("div"); list.className = "power-generator-controls";
+        words.forEach((word) => {
+          const button = document.createElement("button"); button.type = "button"; button.className = "outline-button story-word-choice"; button.textContent = word;
+          button.addEventListener("click", () => {
+            if (!lastWritingField || !container.contains(lastWritingField)) {
+              if (wordStatus) wordStatus.textContent = "Primero seleccioná una palabra en un campo de texto o manuscrito; después elegí la alternativa.";
+              return;
+            }
+            const field = lastWritingField;
+            const value = field.value;
+            let start = field.selectionStart == null ? value.length : field.selectionStart;
+            let end = field.selectionEnd == null ? start : field.selectionEnd;
+            if (start === end) {
+              const needle = query;
+              const before = value.slice(0, start);
+              const found = normalizeWord(before).lastIndexOf(normalizeWord(needle));
+              if (found >= 0) { start = found; end = found + needle.length; }
+            }
+            field.setRangeText(word, start, end, "select");
+            field.dispatchEvent(new Event("input", { bubbles: true }));
+            field.focus();
+            if (wordStatus) wordStatus.textContent = "Alternativa insertada: «" + word + "». Guardá el capítulo o la historia para conservar el cambio.";
+          });
+          list.appendChild(button);
+        });
+        group.appendChild(list);
+        if (entry.note) { const note = document.createElement("p"); note.className = "field-help"; note.textContent = entry.note; group.appendChild(note); }
+        wordResults.appendChild(group);
+      });
+    };
+    if (findWordButton) findWordButton.addEventListener("click", renderWordResults);
+    if (wordQuery) wordQuery.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); renderWordResults(); } });
     if (metaForm) metaForm.addEventListener("submit", async (event) => {
       event.preventDefault();
       const form = new FormData(metaForm);
@@ -2143,21 +2241,16 @@
     const mayUseOfficialPortrait = selectedContinuity === "ALL" || selectedContinuity === "CONT-ANIME";
     const officialSource = historicalReference ? official.historicalImageUrl
       : mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
-    const isCommunityImage = Boolean(official && (official.imageProvider === "community" || /fandom\.com|wikia\.nocookie\.net/i.test(official.sourcePage || "")));
-    const portraitSourceLabel = isCommunityImage ? "REFERENCIA COMUNITARIA · NO OFICIAL" : "IMAGEN OFICIAL · ENLACE EXTERNO";
-    node.dataset.imageProvider = officialSource ? (isCommunityImage ? "community" : "official") : fallbackSource ? "local" : "none";
-    node.dataset.sourceProvider = historicalReference ? "official" : (official && official.imageProvider) || (officialSource ? "official" : fallbackSource ? "local" : "none");
     const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
     node.setAttribute("role", "img");
     node.setAttribute("aria-label", officialSource
       ? (historicalReference ? "Retrato oficial de referencia de DanMachi IV; no específico de la época " + selectedContinuity + "."
-        : isCommunityImage ? "Retrato de referencia tomado de una wiki comunitaria; no es una imagen oficial. La fuente comunitaria se cita en la ficha."
         : "Retrato oficial enlazado desde " + (official.sourcePage || "la web oficial") + "; derechos de terceros.")
       : fallbackSource ? "Ilustración vectorial conceptual original de " + name + ", no oficial."
       : "Inicial representativa de " + name + "; no hay retrato verificado disponible.");
     const caption = large ? archiveElement("span","archive-portrait-caption",
       historicalReference ? "REFERENCIA VISUAL OFICIAL · NO ESPECÍFICA DE ÉPOCA"
-        : officialSource ? portraitSourceLabel : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
+        : officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
     function showInitial() {
       node.replaceChildren(archiveElement("span","",initial));
       if (large) node.appendChild(archiveElement("span","archive-portrait-caption","SIN RETRATO DISPONIBLE"));
@@ -2177,12 +2270,11 @@
         if (portraitImage.dataset.customArt === "true" && (officialSource || fallbackSource)) {
           portraitImage.dataset.customArt = "false";
           portraitImage.src = officialSource || fallbackSource;
-          if (caption) caption.textContent = officialSource ? portraitSourceLabel : "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
+          if (caption) caption.textContent = officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
           return;
         }
         if (officialSource && fallbackSource && portraitImage.src !== new URL(fallbackSource, window.location.href).href) {
           portraitImage.src = fallbackSource;
-          node.dataset.imageProvider = "local";
           node.setAttribute("aria-label","Ilustración conceptual local de " + name + ", no oficial; el retrato externo no cargó.");
           if (caption) caption.textContent = "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
           return;
@@ -2216,7 +2308,6 @@
           }
           image.dataset.customArt = "true";
           image.src = asset.src;
-          target.dataset.imageProvider = "custom-local";
           target.setAttribute("aria-label", "Arte personalizado asignado a " + name + ".");
           const targetCaption = target.querySelector(".archive-portrait-caption");
           if (targetCaption) targetCaption.textContent = "ARTE PERSONALIZADO · BIBLIOTECA LOCAL";
@@ -2360,70 +2451,73 @@
     else body.appendChild(archiveEmpty("No se ha identificado una lista completa de participantes."));
     body.appendChild(archiveElement("p","","Fuentes y límites del resumen"));moment.claims.forEach(c=>body.appendChild(archiveEvidence(c)));d.appendChild(body);return d;
   }
-  function renderContinuityDossier(profile) {
-    const dossier = profile && profile.officialDossier;
-    if (!dossier) return null;
-    const section = archiveElement("section","archive-section archive-continuity-dossier");
-    const heading = archiveElement("div","archive-section-heading");
-    heading.append(
-      archiveElement("h3","","Expediente de continuidad"),
-      archiveElement("p","",String(profile.continuityLabel || profile.continuity) + " · " +
-        String(dossier.sourceLabel || "Fuente secundaria") + " · investigación original")
-    );
+  function renderRosterContinuityDossier(profile){
+    const roster=window.WordWaifuOfficialCharacterRoster;
+    const record=roster&&roster.get(profile.id);
+    const dossier=record&&record.dossiers&&record.dossiers[profile.continuity];
+    if(!dossier)return null;
+    const section=archiveElement("section","archive-section archive-continuity-dossier");
+    const heading=archiveElement("div","archive-section-heading");
+    heading.append(archiveElement("h3","","Expediente de continuidad · "+(profile.continuityLabel||profile.continuity)));
+    heading.append(archiveElement("p","",String(dossier.sourceLabel||"Fuente secundaria")+" · resumen de investigación"));
     section.appendChild(heading);
-    const spoilerLevel = String(dossier.spoilerLevel || "").toLowerCase();
-    if (spoilerLevel === "major" || spoilerLevel === "endgame") {
-      section.appendChild(archiveElement("p","archive-research-note","Contiene spoilers importantes de la continuidad seleccionada."));
+    if(dossier.sourceType==="secondary_compendium"){
+      section.appendChild(archiveElement("p","archive-research-note","Fuente secundaria de consulta. Estos apuntes ayudan a explorar la ficha, pero no equivalen a una verificación de fuente primaria ni a un localizador de novela."));
+    }
+    const spoiler=String(dossier.spoilerLevel||"").toLowerCase();
+    if(["major","endgame"].includes(spoiler)){
+      section.appendChild(archiveElement("p","archive-research-note","Incluye spoilers importantes de esta continuidad."));
     }
     [
       ["Apariencia",dossier.appearance],
       ["Historia y contexto",dossier.history],
       ["Personalidad y evolución",dossier.development],
-      ["Perfil de combate",dossier.combatProfile],
+      ["Capacidades y combate",dossier.combatProfile],
       ["Hábitos y conducta",dossier.habits],
-      ["Función en la historia",dossier.narrativeRole]
-    ].forEach(([label,body]) => {
-      if (!body || !String(body).trim()) return;
-      const block = archiveElement("div","archive-official-detail archive-dossier-detail");
-      block.append(archiveElement("h4","",label),archiveElement("p","",body));
+      ["Función narrativa",dossier.narrativeRole]
+    ].forEach(([label,value])=>{
+      if(!value||!String(value).trim())return;
+      const block=archiveElement("div","archive-official-detail archive-dossier-detail");
+      block.append(archiveElement("h4","",label),archiveElement("p","",String(value)));
       section.appendChild(block);
     });
     [
-      ["Habilidades y capacidades",dossier.abilities,"name","detail"],
-      ["Relaciones importantes",dossier.relationshipDetails,"name","detail"]
-    ].forEach(([label,items,titleKey,bodyKey]) => {
-      if (!Array.isArray(items) || !items.length) return;
-      const list = archiveElement("section","archive-section archive-continuity-dossier-list");
-      list.appendChild(archiveElement("h4","",label));
-      items.forEach(item => {
-        if (!item || !item[titleKey] || !item[bodyKey]) return;
-        const block = archiveElement("div","archive-official-detail");
-        block.append(archiveElement("h4","",item[titleKey]),archiveElement("p","",item[bodyKey]));
-        list.appendChild(block);
+      ["Habilidades y capacidades",dossier.abilities],
+      ["Relaciones importantes",dossier.relationshipDetails]
+    ].forEach(([label,items])=>{
+      if(!Array.isArray(items)||!items.length)return;
+      const group=archiveElement("section","archive-continuity-list");
+      group.appendChild(archiveElement("h4","",label));
+      const list=archiveElement("ul","archive-continuity-items");
+      items.forEach(item=>{
+        const li=archiveElement("li","");
+        if(typeof item==="string"){li.textContent=item;}
+        else{
+          const name=String(item&&item.name||item&&item.title||"Detalle");
+          li.appendChild(archiveElement("strong","",name));
+          const detail=String(item&&item.detail||item&&item.description||"");
+          if(detail)li.appendChild(archiveElement("p","",detail));
+        }
+        list.appendChild(li);
       });
-      if (list.children.length > 1) section.appendChild(list);
+      group.appendChild(list);section.appendChild(group);
     });
-    const urls = [...new Set((Array.isArray(dossier.sources) ? dossier.sources : [dossier.sourceUrl]).filter(Boolean))];
-    if (urls.length) {
-      const sources = archiveElement("div","archive-official-source-links");
-      urls.slice(0,5).forEach((url,index) => appendLoreLink(
-        sources,index===0 ? "Abrir fuente del expediente ↗" : "Fuente complementaria "+(index+1)+" ↗",url,true
-      ));
-      section.appendChild(sources);
+    const urls=[dossier.sourceUrl,...(Array.isArray(dossier.sources)?dossier.sources:[])].filter((url,index,all)=>typeof url==="string"&&url.startsWith("https://")&&all.indexOf(url)===index);
+    if(urls.length){
+      const links=archiveElement("div","archive-official-source-links");
+      urls.forEach((url,index)=>appendLoreLink(links,index===0?"Abrir fuente de referencia ↗":"Fuente complementaria "+index+" ↗",url,true));
+      section.appendChild(links);
     }
-    section.dataset.dossierContinuity = String(profile.continuity || "");
     return section;
   }
-
-  function renderArchiveSummary(profile){
+    function renderArchiveSummary(profile){
     const root=archiveElement("div","archive-profile-content"),overview=archiveElement("section","archive-section");
     const top=archiveElement("div","archive-section-heading");top.append(archiveElement("h3","","Estado documentado"),archiveElement("p","","Solo información de la continuidad seleccionada."));overview.appendChild(top);
     const grid=archiveElement("div","archive-overview-grid"),identity=archiveElement("article","archive-info-card"),motivation=archiveElement("article","archive-info-card");
     identity.append(archiveElement("h4","","Identidad y afiliación"),archiveElement("p","",profile.state.affiliation),archiveElement("p","","ID estable: "+profile.id),archiveGoTab("sources","Ver fuentes"));
     const m=profile.claims.find(c=>(c.aspects||[]).includes("motivation"));motivation.append(archiveElement("h4","","Valores y motivaciones"),archiveElement("p","",m?m.claim:"Sin información suficiente en esta continuidad."),archiveGoTab("personality","Explorar personalidad"));
     grid.append(identity,motivation);overview.appendChild(grid);root.appendChild(overview);
-    const continuityDossier = renderContinuityDossier(profile);
-    if (continuityDossier) root.appendChild(continuityDossier);
+    const continuityDossier=renderRosterContinuityDossier(profile);if(continuityDossier)root.appendChild(continuityDossier);
     const official = profile.continuity === "CONT-ANIME"
       ? (profile.officialReference ||
         (typeof window.WordWaifuOfficialCharacterRoster !== "undefined" ? window.WordWaifuOfficialCharacterRoster.get(profile.id) : null))
@@ -2512,53 +2606,63 @@
     });
     root.append(grid,archiveElement("p","archive-research-note","No se infieren gustos, temores, diagnósticos, pensamientos privados ni patrones de habla a partir de la ausencia de datos o de un acontecimiento traumático."));return root;
   }
-  function renderArchiveFamilyNetwork(profile){
-    const rosterApi=window.WordWaifuOfficialCharacterRoster;
-    if(!rosterApi||!loreArchiveIndex)return null;
-    const raw=String((profile.officialReference&&profile.officialReference.family)||profile.state.affiliation||"");
-    const parts=raw.split(/\s*;\s*/).filter(Boolean);
+  function renderArchiveFamilyNetwork(profile) {
+    const rosterApi = window.WordWaifuOfficialCharacterRoster;
+    if (!rosterApi || !loreArchiveIndex) return null;
+    const raw = String((profile.officialReference && profile.officialReference.family) || profile.state.affiliation || "");
+    const parts = raw.split(/\s*;\s*/).filter(Boolean);
     let chosenPart;
-    if(profile.continuity==="CONT-AR")chosenPart=parts.find(part=>/familia/i.test(part))||parts[0];
-    else if(profile.continuity==="CONT-ANIME")chosenPart=parts.find(part=>/estado del anime|hostess of fertility/i.test(part))||parts.find(part=>/familia/i.test(part))||parts[0];
-    else chosenPart=parts.find(part=>/familia/i.test(part))||parts[0];
-    const familyName=String(chosenPart||"").replace(/\s*\([^)]*\)/g,"").trim();
-    if(!familyName)return null;
-    const members=rosterApi.list().filter(member=>{
-      if(!member||member.id===profile.id||!String(member.family||"").toLowerCase().includes(familyName.toLowerCase()))return false;
-      if(!loreArchiveIndex.characters.some(character=>character.id===member.id))return false;
-      return loreArchiveIndex.claims.some(claim=>(claim.characterIds||[]).includes(member.id)&&(claim.continuityScopes||[]).includes(profile.continuity));
+    if (profile.continuity === "CONT-AR") chosenPart = parts.find(part => /familia/i.test(part)) || parts[0];
+    else if (profile.continuity === "CONT-ANIME") chosenPart = parts.find(part => /estado del anime|hostess of fertility/i.test(part)) || parts.find(part => /familia/i.test(part)) || parts[0];
+    else chosenPart = parts.find(part => /familia/i.test(part)) || parts[0];
+    const familyName = String(chosenPart || "").replace(/\s*\([^)]*\)/g, "").trim();
+    if (!familyName) return null;
+    const members = rosterApi.list().filter(member => {
+      if (!member || member.id === profile.id || !String(member.family || "").toLowerCase().includes(familyName.toLowerCase())) return false;
+      if (!loreArchiveIndex.characters.some(character => character.id === member.id)) return false;
+      return loreArchiveIndex.claims.some(claim => (claim.characterIds || []).includes(member.id) &&
+        (claim.continuityScopes || []).includes(profile.continuity));
     });
-    if(!members.length)return null;
-    const section=archiveElement("section","archive-section archive-family-network");
-    section.dataset.familyName=familyName;
-    const heading=archiveElement("div","archive-section-heading");
-    heading.append(archiveElement("h3","", "Explorar "+familyName),archiveElement("p","",members.length+" integrantes con información en "+profile.continuity+". Compartir Familia acredita afiliación, no necesariamente amistad; abrí una ficha y usá «Volver» para regresar."));
+    if (!members.length) return null;
+    const section = archiveElement("section", "archive-section archive-family-network");
+    section.dataset.familyName = familyName;
+    const heading = archiveElement("div", "archive-section-heading");
+    heading.append(
+      archiveElement("h3", "", "Explorar " + familyName),
+      archiveElement("p", "", members.length + " integrantes con información en " + profile.continuity +
+        ". Compartir Familia acredita afiliación, no necesariamente amistad; abrí una ficha y usá «Volver» para regresar.")
+    );
     section.appendChild(heading);
-    const grid=archiveElement("div","archive-related-grid");
-    members.forEach(member=>grid.appendChild(renderArchiveRelationship({
-      targetId:member.id,
-      targetName:member.name,
-      available:true,
-      label:"Explorar integrante",
-      type:"Afiliación de Familia",
-      description:"La ficha de referencia asocia a esta persona con "+familyName+". La relación personal concreta debe consultarse por separado.",
-      continuity:profile.continuity,
-      period:profile.state.period,
-      claims:[]
+    const grid = archiveElement("div", "archive-related-grid");
+    members.forEach(member => grid.appendChild(renderArchiveRelationship({
+      targetId: member.id,
+      targetName: member.name,
+      available: true,
+      label: "Explorar integrante",
+      type: "Afiliación de Familia",
+      description: "La ficha de referencia asocia a esta persona con " + familyName +
+        ". La relación personal concreta debe consultarse por separado.",
+      continuity: profile.continuity,
+      period: profile.state.period,
+      claims: []
     })));
     section.appendChild(grid);
     return section;
   }
-  function renderArchiveRelationships(profile){
-    const root=archiveElement("div","archive-profile-content");
-    const familyNetwork=renderArchiveFamilyNetwork(profile);
-    if(familyNetwork)root.appendChild(familyNetwork);
-    const section=archiveElement("section","archive-section"),h=archiveElement("div","archive-section-heading");
-    h.append(archiveElement("h3","","Personas relacionadas"),archiveElement("p","","Se distingue la guía o afiliación documentada de una amistad, rivalidad o relación no demostrada."));
-    section.appendChild(h);
-    const grid=archiveElement("div","archive-related-grid");
-    if(profile.relationships.length)profile.relationships.forEach(r=>grid.appendChild(renderArchiveRelationship(r)));
-    else grid.appendChild(archiveEmpty("No hay relaciones interpersonales documentadas para "+profile.continuity+". No se trasladan vínculos de otros periodos."));
+  function renderArchiveRelationships(profile) {
+    const root = archiveElement("div", "archive-profile-content");
+    const familyNetwork = renderArchiveFamilyNetwork(profile);
+    if (familyNetwork) root.appendChild(familyNetwork);
+    const section = archiveElement("section", "archive-section");
+    const heading = archiveElement("div", "archive-section-heading");
+    heading.append(
+      archiveElement("h3", "", "Personas relacionadas"),
+      archiveElement("p", "", "Se distingue la guía o afiliación documentada de una amistad, rivalidad o relación no demostrada.")
+    );
+    section.appendChild(heading);
+    const grid = archiveElement("div", "archive-related-grid");
+    if (profile.relationships.length) profile.relationships.forEach(relationship => grid.appendChild(renderArchiveRelationship(relationship)));
+    else grid.appendChild(archiveEmpty("No hay relaciones interpersonales documentadas para " + profile.continuity + ". No se trasladan vínculos de otros periodos."));
     section.appendChild(grid);
     root.appendChild(section);
     return root;
@@ -2709,9 +2813,51 @@
     }
     status.textContent = "Leídas " + index.sourceClaimCount + " afirmaciones; " + index.entryCount + " entradas de búsqueda y " + (index.profileDocumentCount || 0) + " fichas previas recuperadas del repositorio. Búsqueda textual, sin IA; el corpus aún es parcial.";
     loreArchiveIndex = index;
+    renderDanmachiEntityCatalog();
     if (!archiveUiPrepared) { renderCharacterDirectory(); archiveUiPrepared = true; }
     return index;
   }
+  function renderDanmachiEntityCatalog() {
+    const root = $("#danmachi-entity-results");
+    const status = $("#danmachi-entity-status");
+    const count = $("#danmachi-entity-count");
+    if (!root || !window.WordWaifuLoreCorpus || !loreArchiveIndex) return;
+    const report = window.WordWaifuLoreCorpus.searchEntities(
+      { records: loreArchiveIndex.entityRecords || [] },
+      { type: $("#danmachi-entity-type").value, query: $("#danmachi-entity-query").value, limit: 60 }
+    );
+    root.replaceChildren();
+    count.textContent = (loreArchiveIndex.entityRecords || []).length + " registros";
+    if (report.error) {
+      status.textContent = report.error;
+      root.appendChild(archiveElement("p", "danmachi-entity-empty", "Elegí un tipo válido para consultar el catálogo."));
+      return;
+    }
+    status.textContent = report.totalMatches + " entidad(es) coincidente(s)" +
+      (report.truncated ? "; se muestran las primeras " + report.results.length + "." : ".") +
+      " El estado de revisión es el del catálogo y no implica verificación total del canon.";
+    if (!report.results.length) {
+      root.appendChild(archiveElement("p", "danmachi-entity-empty", "No hay entidades coincidentes. Probá otro término o seleccioná «Todos los tipos»."));
+      return;
+    }
+    report.results.forEach(entity => {
+      const card = archiveElement("article", "danmachi-entity-card");
+      card.setAttribute("role", "listitem");
+      const heading = archiveElement("div", "danmachi-entity-card-heading");
+      heading.append(archiveElement("h4", "", entity.type === "familia" ? "Familia " + (entity.tags.find(tag => tag && !/^(roster|high|low|medium)$/i.test(tag)) || entity.id) : (entity.tags.find(tag => tag && !/^(roster|high|low|medium)$/i.test(tag)) || entity.id)),
+        archiveElement("span", "danmachi-entity-type", entity.type));
+      card.appendChild(heading);
+      card.appendChild(archiveElement("p", "danmachi-entity-meta", entity.id + " · Estado: " + entity.status + " · Prioridad: " + entity.priority));
+      if (entity.tags.length) card.appendChild(archiveElement("p", "danmachi-entity-tags", "Etiquetas: " + entity.tags.join(", ")));
+      if (entity.path) {
+        const links = archiveElement("div", "lore-result-links");
+        appendLoreLink(links, "Abrir expediente ↗", "./lore/danmachi/" + entity.path, false);
+        card.appendChild(links);
+      }
+      root.appendChild(card);
+    });
+  }
+
   function appendLoreLink(container, label, href, external) {
     if (!href) return;
     let url; try { url = new URL(href, window.location.href); } catch { return; }
@@ -2836,6 +2982,13 @@
       status.textContent = "La consulta no pudo completarse: " + error.message + " Abrí WordWaifu desde un servidor HTTP (por ejemplo, el puerto privado de Codespaces), no como archivo file://.";
     } finally { button.disabled = false; }
   }
+  $("#danmachi-entity-query").addEventListener("input", () => renderDanmachiEntityCatalog());
+  $("#danmachi-entity-type").addEventListener("change", () => renderDanmachiEntityCatalog());
+  $("#danmachi-entity-reset").addEventListener("click", () => {
+    $("#danmachi-entity-query").value = "";
+    $("#danmachi-entity-type").value = "all";
+    renderDanmachiEntityCatalog();
+  });
   $("#lore-search-form").addEventListener("submit", event => { void runLoreSearch(event); });
   $("#lore-web-search-button").addEventListener("click", () => { void runOnlineLoreSearch(); });
   $("#lore-clear-button").addEventListener("click", () => {
@@ -3108,6 +3261,113 @@
   $$(".command-chips button").forEach((button) => button.addEventListener("click", () => executeCommand(button.dataset.command)));
   $("#global-search").addEventListener("keydown", (event) => { if (event.key === "Escape") { event.target.value = ""; renderDirectory(); } });
 
+  function publishMythicProjectState() {
+    window.WordWaifuMythicProjectState = {
+      proposals: Array.isArray(state.mythicProposals) ? state.mythicProposals : [],
+      stories: Array.isArray(state.stories) ? state.stories : [],
+      relations: Array.isArray(state.mythicRelations) ? state.mythicRelations : []
+    };
+    document.dispatchEvent(new CustomEvent("wordwaifu:mythic-proposals-loaded", {
+      detail: window.WordWaifuMythicProjectState
+    }));
+  }
+
+  document.addEventListener("wordwaifu:mythic-proposal-save", async (event) => {
+    const proposal = event.detail && event.detail.proposal;
+    if (!proposal || typeof proposal.id !== "string" || !proposal.id || typeof proposal.title !== "string" || !proposal.title.trim()) return;
+    if (!Array.isArray(state.mythicProposals)) state.mythicProposals = [];
+    const previous = state.mythicProposals.findIndex(item => item && item.id === proposal.id);
+    if (previous >= 0) state.mythicProposals[previous] = structuredClone(proposal);
+    else state.mythicProposals.push(structuredClone(proposal));
+    const saved = await saveProject();
+    $("#mythic-generator-status").textContent = saved
+      ? "Propuesta guardada en el proyecto. Se incluirá al exportar JSON."
+      : "No se confirmó el guardado; revisá el estado de persistencia antes de cerrar.";
+    publishMythicProjectState();
+  });
+
+  document.addEventListener("wordwaifu:mythic-relation-save", async (event) => {
+    const relation = event.detail && event.detail.relation;
+    if (!relation || typeof relation.id !== "string" || !relation.id ||
+        typeof relation.sourceId !== "string" || typeof relation.targetId !== "string" ||
+        !relation.sourceId || !relation.targetId || relation.sourceId === relation.targetId ||
+        typeof relation.type !== "string" || !relation.type) return;
+    if (!Array.isArray(state.mythicRelations)) state.mythicRelations = [];
+    const previous = state.mythicRelations.findIndex(item => item && item.id === relation.id);
+    if (previous >= 0) state.mythicRelations[previous] = structuredClone(relation);
+    else state.mythicRelations.push(structuredClone(relation));
+    const saved = await saveProject();
+    $("#mythic-generator-status").textContent = saved
+      ? "Relación guardada en el proyecto."
+      : "No se confirmó el guardado del vínculo; revisá la persistencia.";
+    publishMythicProjectState();
+  });
+
+  document.addEventListener("wordwaifu:mythic-relation-delete", async (event) => {
+    const id = event.detail && event.detail.id;
+    if (typeof id !== "string" || !Array.isArray(state.mythicRelations)) return;
+    state.mythicRelations = state.mythicRelations.filter(item => item && item.id !== id);
+    const saved = await saveProject();
+    $("#mythic-generator-status").textContent = saved
+      ? "Relación del proyecto eliminada."
+      : "No se confirmó la eliminación del vínculo.";
+    publishMythicProjectState();
+  });
+
+  document.addEventListener("wordwaifu:mythic-proposal-promote", async (event) => {
+    const proposalId = event.detail && event.detail.id;
+    const proposal = Array.isArray(state.mythicProposals) ? state.mythicProposals.find(item => item && item.id === proposalId) : null;
+    if (!proposal) return;
+    const baseId = "mythic-character-" + Date.now().toString(36);
+    let id = baseId, suffix = 1;
+    const existingIds = new Set(state.characters.map(character => character && character.id).filter(Boolean));
+    while (existingIds.has(id)) id = baseId + "-" + suffix++;
+    const character = {
+      id, name: proposal.title, age: null, species: "Por definir", role: "Personaje original · portador / invocador",
+      personality: [], description: [proposal.concept, proposal.ability,
+        proposal.manifestationName ? "Manifestación: " + proposal.manifestationName + (proposal.manifestationStage ? " · " + proposal.manifestationStage : "") : "",
+        proposal.weapon ? "Arma característica / arma natural: " + proposal.weapon : "",
+        proposal.outfit ? "Vestimenta / símbolo del mito: " + proposal.outfit : "",
+        proposal.totalityAttack ? "Ataque que resume el mito: " + proposal.totalityAttack : "",
+        proposal.activation ? "Activación: " + proposal.activation : "",
+        proposal.cost ? "Coste: " + proposal.cost : "", proposal.risk ? "Riesgos: " + proposal.risk : "",
+        proposal.progression ? "Evolución: " + proposal.progression : ""].filter(Boolean).join("\\n\\n"),
+      mythicManifestation: {
+        name: proposal.manifestationName || "",
+        stage: proposal.manifestationStage || "",
+        weapon: proposal.weapon || "",
+        outfit: proposal.outfit || "",
+        totalityAttack: proposal.totalityAttack || ""
+      },
+      motivation: "Integrar la inspiración mitológica como una adaptación propia, sin asumir que el personaje sea la figura original.",
+      flaw: proposal.weakness || "Debilidad por definir.", relationships: [], locationHistory: [], status: "draft",
+      mythicEntityIds: Array.isArray(proposal.entityIds) ? proposal.entityIds.slice() : [],
+      mythicProposalId: proposal.id, storyId: proposal.storyId || null,
+      chapterReference: proposal.chapterReference || ""
+    };
+    state.characters.push(character);
+    const saved = await saveProject();
+    if (saved) {
+      activeView = "characters";
+      selectedCharacterId = id;
+      render();
+      $("#save-status").textContent = "Personaje creado desde la propuesta mitológica y guardado en el proyecto.";
+    } else {
+      $("#mythic-generator-status").textContent = "No se confirmó el guardado del personaje; revisá la persistencia.";
+    }
+  });
+
+  document.addEventListener("wordwaifu:mythic-proposal-delete", async (event) => {
+    const id = event.detail && event.detail.id;
+    if (typeof id !== "string" || !Array.isArray(state.mythicProposals)) return;
+    state.mythicProposals = state.mythicProposals.filter(item => item && item.id !== id);
+    const saved = await saveProject();
+    $("#mythic-generator-status").textContent = saved
+      ? "Propuesta eliminada del proyecto."
+      : "No se confirmó la eliminación; revisá el estado de persistencia.";
+    publishMythicProjectState();
+  });
+
   async function initializeApplication() {
     const appShell = document.querySelector(".app-shell");
     if (appShell) appShell.inert = true;
@@ -3140,15 +3400,23 @@
             : "Proyecto cargado desde el respaldo local";
       }
       render();
+      publishMythicProjectState();
     } catch (error) {
       state = ensureRelationshipStore(loadProject());
       render();
+      publishMythicProjectState();
       const saved = await saveProject();
       if (!saved) $("#save-status").textContent = "Modo de recuperación · exportá una copia: " + error.message;
     } finally {
       if (appShell) appShell.inert = false;
     }
   }
+
+  if (window.WordWaifuPowerWorkbench) window.WordWaifuPowerWorkbench.mount({
+    root: $("#powers-view"),
+    getProject: () => state,
+    onSave: saveProject
+  });
 
   initializeApplication();
 })(); 

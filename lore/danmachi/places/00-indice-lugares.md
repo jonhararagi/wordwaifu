@@ -1,15 +1,15 @@
 # Índice maestro de lugares
 
-Índice de lugares por completar. Los nombres de trabajo se deben normalizar con las fuentes y la traducción de edición elegida.
+Índice de entidades geográficas e institucionales separadas. Los nombres de trabajo se normalizan con las fuentes y la traducción de edición elegida; las fichas parciales indican explícitamente qué afirmaciones están verificadas y qué datos siguen pendientes.
 
 ## Orario y sus instituciones
 
 | ID sugerido | Lugar | Relaciones para investigar | Estado |
 |---|---|---|---|
-| LOC-ORARIO | Orario | Ciudad central, Dungeon, Guild, Familias | Prioridad crítica |
-| LOC-DUNGEON | Dungeon | Pisos, accesos, monstruos y expediciones | Prioridad crítica |
-| LOC-BABEL | Torre de Babel | Entrada/relación con Dungeon, funciones institucionales | Alta |
-| LOC-GUILD | Sede de la Guild | Registro, misiones, asesores, Eina | Crítica |
+| DM-WORLD-001 | [Orario](../canon/01-mundo-orario.md) | Ciudad central, Dungeon, Guild, Familias | Ficha general provisional; falta cotejo interno de novelas |
+| [LOC-DUNGEON](dungeon.md) | Dungeon | Orario, Guild, aventureros, pisos y expediciones | Ficha de ubicación parcial; fuente editorial oficial para el marco general |
+| LOC-BABEL | Torre de Babel | Relación espacial con Dungeon y funciones institucionales | Candidato; ficha individual pendiente de fuentes |
+| LOC-GUILD | Sede de la Guild | Registro, misiones, asesores, Eina | Candidato; separar edificio físico de institución |
 | LOC-HOSTESS | Hostess of Fertility | Syr, Ryuu y elenco de la taberna | Alta |
 | LOC-HESTIA-HOME | Residencia inicial de Hestia Familia | Bell y eventos tempranos | Alta |
 | LOC-LOKI-MANOR | Residencia de Loki Familia | Miembros, reuniones, preparación de expediciones | Alta |
