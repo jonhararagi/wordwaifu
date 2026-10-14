@@ -1576,6 +1576,12 @@
         "## Sinopsis\n\n" + (story.description || "Sinopsis pendiente.") + "\n\n" +
         "## Premisa\n\n" + (story.premise || "Premisa pendiente.") + "\n\n" +
         "## Conflicto central\n\n" + (story.conflict || "Conflicto pendiente.") + "\n\n" +
+        "## Cantidad de capítulos\n\n" + String(story.chapterCount || (story.chapters || []).length || 24) + "\n\n" +
+        "## Tipo de final\n\n" + (story.endingType || "closed") + "\n\n" +
+        "## Personajes centrales y objetivos\n\n" + (story.castPlan || "") + "\n\n" +
+        "## Antagonista o fuerza opositora\n\n" + (story.antagonistPlan || "") + "\n\n" +
+        "## Romance y vínculos afectivos\n\n" + (story.romancePlan || "") + "\n\n" +
+        "## Traumas, heridas y recuperación\n\n" + (story.traumaPlan || "") + "\n\n" +
         "## Tipo de mundo\n\n" + (story.worldType || "unspecified") + "\n\n" +
         "## Reglas del mundo\n\n" + (story.worldRules || "") + "\n\n" +
         "## Dinámica del mundo\n\n" + (story.worldDynamics || "") + "\n\n" +
@@ -1615,6 +1621,12 @@
       return (nextHeading < 0 ? remainder : remainder.slice(0, nextHeading)).trim();
     };
     const conflict = readSection("Conflicto central");
+    const chapterCount = Number.parseInt(readSection("Cantidad de capítulos"), 10);
+    const endingType = readSection("Tipo de final") || "closed";
+    const castPlan = readSection("Personajes centrales y objetivos");
+    const antagonistPlan = readSection("Antagonista o fuerza opositora");
+    const romancePlan = readSection("Romance y vínculos afectivos");
+    const traumaPlan = readSection("Traumas, heridas y recuperación");
     const worldType = readSection("Tipo de mundo");
     const worldRules = readSection("Reglas del mundo");
     const worldDynamics = readSection("Dinámica del mundo");
@@ -1647,7 +1659,7 @@
         if (arc) arcs.push(arc[1].trim() + ": " + arc[2].trim());
       }
     }
-    return { name, description, premise: description, conflict, worldType, worldRules, worldDynamics, revealType, revealSecret, revealClues, revealTiming, revealConsequences, powerCatalog, pantheon, ensemble, arcs, chapters };
+    return { name, description, premise: description, conflict, chapterCount: Number.isInteger(chapterCount) && chapterCount > 0 ? Math.min(500, chapterCount) : (chapters.length || 24), endingType: ["closed", "open", "bittersweet", "cliffhanger"].includes(endingType) ? endingType : "closed", castPlan, antagonistPlan, romancePlan, traumaPlan, worldType, worldRules, worldDynamics, revealType, revealSecret, revealClues, revealTiming, revealConsequences, powerCatalog, pantheon, ensemble, arcs, chapters };
   }
 
   async function createStory() {
