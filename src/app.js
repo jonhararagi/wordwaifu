@@ -2546,9 +2546,66 @@
     });
     root.append(grid,archiveElement("p","archive-research-note","No se infieren gustos, temores, diagnósticos, pensamientos privados ni patrones de habla a partir de la ausencia de datos o de un acontecimiento traumático."));return root;
   }
-  function renderArchiveRelationships(profile){
-    const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Personas relacionadas"),archiveElement("p","","Se distingue la guía o afiliación documentada de una amistad, rivalidad o relación no demostrada."));root.appendChild(h);
-    const grid=archiveElement("div","archive-related-grid");if(profile.relationships.length)profile.relationships.forEach(r=>grid.appendChild(renderArchiveRelationship(r)));else grid.appendChild(archiveEmpty("No hay relaciones interpersonales documentadas para "+profile.continuity+". No se trasladan vínculos de otros periodos."));root.appendChild(grid);return root;
+  function renderArchiveFamilyNetwork(profile) {
+    const rosterApi = window.WordWaifuOfficialCharacterRoster;
+    if (!rosterApi || !loreArchiveIndex) return null;
+    const raw = String((profile.officialReference && profile.officialReference.family) || profile.state.affiliation || "");
+    const parts = raw.split(/\\s*;\\s*/).filter(Boolean);
+    let chosenPart;
+    if (profile.continuity === "CONT-AR") chosenPart = parts.find(part => /familia/i.test(part)) || parts[0];
+    else if (profile.continuity === "CONT-ANIME") chosenPart = parts.find(part => /estado del anime|hostess of fertility/i.test(part)) || parts.find(part => /familia/i.test(part)) || parts[0];
+    else chosenPart = parts.find(part => /familia/i.test(part)) || parts[0];
+    const familyName = String(chosenPart || "").replace(/\\s*\\([^)]*\\)/g, "").trim();
+    if (!familyName) return null;
+    const members = rosterApi.list().filter(member => {
+      if (!member || member.id === profile.id || !String(member.family || "").toLowerCase().includes(familyName.toLowerCase())) return false;
+      if (!loreArchiveIndex.characters.some(character => character.id === member.id)) return false;
+      return loreArchiveIndex.claims.some(claim => (claim.characterIds || []).includes(member.id) &&
+        (claim.continuityScopes || []).includes(profile.continuity));
+    });
+    if (!members.length) return null;
+    const section = archiveElement("section", "archive-section archive-family-network");
+    section.dataset.familyName = familyName;
+    const heading = archiveElement("div", "archive-section-heading");
+    heading.append(
+      archiveElement("h3", "", "Explorar " + familyName),
+      archiveElement("p", "", members.length + " integrantes con información en " + profile.continuity +
+        ". Compartir Familia acredita afiliación, no necesariamente amistad; abrí una ficha y usá «Volver» para regresar.")
+    );
+    section.appendChild(heading);
+    const grid = archiveElement("div", "archive-related-grid");
+    members.forEach(member => grid.appendChild(renderArchiveRelationship({
+      targetId: member.id,
+      targetName: member.name,
+      available: true,
+      label: "Explorar integrante",
+      type: "Afiliación de Familia",
+      description: "La ficha de referencia asocia a esta persona con " + familyName +
+        ". La relación personal concreta debe consultarse por separado.",
+      continuity: profile.continuity,
+      period: profile.state.period,
+      claims: []
+    })));
+    section.appendChild(grid);
+    return section;
+  }
+  function renderArchiveRelationships(profile) {
+    const root = archiveElement("div", "archive-profile-content");
+    const familyNetwork = renderArchiveFamilyNetwork(profile);
+    if (familyNetwork) root.appendChild(familyNetwork);
+    const section = archiveElement("section", "archive-section");
+    const heading = archiveElement("div", "archive-section-heading");
+    heading.append(
+      archiveElement("h3", "", "Personas relacionadas"),
+      archiveElement("p", "", "Se distingue la guía o afiliación documentada de una amistad, rivalidad o relación no demostrada.")
+    );
+    section.appendChild(heading);
+    const grid = archiveElement("div", "archive-related-grid");
+    if (profile.relationships.length) profile.relationships.forEach(relationship => grid.appendChild(renderArchiveRelationship(relationship)));
+    else grid.appendChild(archiveEmpty("No hay relaciones interpersonales documentadas para " + profile.continuity + ". No se trasladan vínculos de otros periodos."));
+    section.appendChild(grid);
+    root.appendChild(section);
+    return root;
   }
   function renderArchiveMoments(profile){
     const root=archiveElement("div","archive-section"),h=archiveElement("div","archive-section-heading");h.append(archiveElement("h3","","Momentos importantes"),archiveElement("p","","Abrí una tarjeta para ver el contexto, las personas mencionadas y su evidencia. Las sinopsis no son el texto íntegro de las novelas."));root.appendChild(h);

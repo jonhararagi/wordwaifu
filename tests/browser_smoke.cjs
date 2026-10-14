@@ -2790,6 +2790,11 @@ async function run() {
       const image = document.querySelector("#archive-profile-portrait .archive-portrait-art");
       return !!image && image.src.startsWith("data:image/png");
     }, null, { timeout: 5000 });
+    await page.locator('[data-profile-tab="relationships"]').click();
+    await page.waitForFunction(() => (document.querySelector("#archive-profile-panel")?.innerText || "").includes("Explorar Hestia Familia"), null, { timeout: 10000 });
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Afiliación de Familia"), "The relationship tab should distinguish family membership from personal relationships.");
+    await page.locator("#archive-tab-summary").click();
+    await page.waitForFunction(() => (document.querySelector("#archive-profile-panel")?.innerText || "").includes("Expediente ampliado"), null, { timeout: 10000 });
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Expediente ampliado"),
       "The profile must show the substantial dossier rather than only the short official synopsis.");
     const dossierLength = await page.locator("#archive-profile-panel .archive-dossier-detail p").evaluateAll(nodes => nodes.reduce((sum,node)=>sum+node.innerText.length,0));
