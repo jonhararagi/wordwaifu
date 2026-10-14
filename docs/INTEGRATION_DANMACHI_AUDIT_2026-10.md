@@ -104,5 +104,41 @@ La comparación se repitió contra los refs actuales de GitHub, no contra los co
 
 - La divergencia de archivos no se considera automáticamente un defecto: cada cambio debe demostrar comportamiento ausente y una prueba que falle antes y pase después.
 - El retrieval del corpus no se declara equivalente entre ramas. La candidata conserva la búsqueda estructurada y el filtro de entidades; la generación automática de afirmaciones de `main` queda clasificada como delta no portado por riesgo concreto de duplicación, no como trabajo supuestamente integrado.
-- Los conteos históricos de commits de secciones anteriores son snapshots fechados. Para esta comparación viva prevalecen +629/+6 y los SHA de blobs de la tabla.
+- Los conteos históricos de commits de secciones anteriores son snapshots fechados. La comprobación viva más reciente del 2026-10-14 da candidata +646 / `main` +6 desde la base común `15a9e0677bf27596dfaef97b5b7d7dfd1569eb98`; ver la sección de estado actual al final.
 - No se modifica `main`, no se crea un merge commit, no se abre/cierra PR y no se borran ramas. El cierre funcional definitivo sigue condicionado a las pruebas de corpus/roster/persistencia y a la verificación de las fuentes primarias pendientes; esta auditoría no etiqueta esos requisitos como completados.
+
+
+## Estado vivo posterior — 2026-10-14 (HEAD `fbbeeee6d80bdf3fcdd963d70c4696587c7cb2a5`)
+
+### Validación de CI del HEAD exacto
+
+- [DanMachi Lore and Retrieval Integrity #530](https://github.com/jonhararagi/wordwaifu/actions/runs/38552041877): `success`; job `Catalog, retrieval and browser smoke` completado.
+- [Validate WordWaifu #1021](https://github.com/jonhararagi/wordwaifu/actions/runs/38552041932): `success`; job `validate` completado.
+- Ambos runs corresponden al mismo SHA `fbbeeee6d80bdf3fcdd963d70c4696587c7cb2a5`. El resultado valida el árbol actual de la candidata; no certifica cobertura canónica completa ni integración semántica de cada rama.
+
+### Corrección de Panel de arte verificada
+
+La prueba de regresión que se había añadido desde `main` falló inicialmente porque la implementación candidata no persistía la marca anti-resurrección entre recargas. La corrección final:
+
+- Persiste los IDs eliminados en `wordwaifu.art.deleted.v1`.
+- Filtra las marcas persistidas tanto en lectura de galería como en lectura individual.
+- Registra la marca antes de borrar para impedir resurrección si falla la limpieza del respaldo.
+- Mantiene la marca si la eliminación en IndexedDB tuvo éxito pero no pudo limpiarse la copia de respaldo.
+- Limpia la marca al guardar de nuevo el mismo recurso y evita escribir en localStorage cuando no existe marca previa.
+- Refresca la galería después de un error de eliminación parcial y conserva el mensaje de advertencia.
+- Añade regresión explícita para confirmar que la marca existe antes y después de una recarga completa.
+
+Commits funcionales relacionados: [`dddc9c1`](https://github.com/jonhararagi/wordwaifu/commit/dddc9c1488c78c03f0bb60ed2adc229009d7135c), [`e4ed9f7`](https://github.com/jonhararagi/wordwaifu/commit/e4ed9f781c994c6eff17b9b6ca399e5ff178b9dc), [`7c16bfa`](https://github.com/jonhararagi/wordwaifu/commit/7c16bfa778306ec45f480bf2ff552addb0692db4) y [`fbbeeee`](https://github.com/jonhararagi/wordwaifu/commit/fbbeeee6d80bdf3fcdd963d70c4696587c7cb2a5).
+
+### Inventario estructurado actual
+
+Snapshot de `lore/danmachi/catalog.json` en el mismo HEAD: 48 registros activos, 67 IDs reservados, 100 documentos de apoyo y 165 archivos rastreados. Los estados de los 48 registros son: 21 `provisional`, 13 `draft`, 1 `provisional_inference`, 6 `pending_verification`, 4 `proposed_author_event`, 2 `source_checked_partial` y 1 `provisional_reference_checked`.
+
+Esto significa que el catálogo sigue sin registros declarados como completos/approved. No se debe presentar la validación estructural verde como aprobación factual de esos expedientes.
+
+### Diferencia viva entre ramas y siguiente bloque de trabajo
+
+- Compare actual: candidata +646 commits y `main` +6 respecto de la base común. No se realizó merge ni se modificó `main`.
+- Los seis commits exclusivos de `main` incluyen dos cambios documentales iniciales, los merges #14/#16 y sus actualizaciones documentales. Las funciones de atlas/lore/arte, Story Foundry y navegación de familias ya están presentes selectivamente en la candidata; las diferencias restantes deben probarse por comportamiento, no portarse mediante reemplazo masivo.
+- Pendientes reales: cerrar la comparación semántica de `src/lore-corpus.js` (generación/deduplicación de claims), completar auditoría por ID de roster y fuentes, resolver expedientes DanMachi solo cuando haya evidencia primaria y documentar los deltas funcionales restantes con pruebas de regresión.
+- Restricciones conservadas: no tocar `main`, no crear merge commit, no abrir/cerrar PR, no borrar ramas.
