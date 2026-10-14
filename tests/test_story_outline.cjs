@@ -34,6 +34,7 @@ assert.ok(chapters[0].title && chapters[9].title);
 assert.ok(chapters.every(ch => ch.summary.length > 80));
 assert.ok(chapters.every(ch => !/mostrar una limitación|concretá aquí|la escena debe mostrar/i.test(ch.summary)));
 assert.ok(chapters.some(ch => ch.summary.includes("Mara busca rescatar a su hermano")));
+assert.ok(chapters[1].summary.includes("Mara necesita"), "event beats should use the protagonist's actual name, not a generic placeholder");
 assert.ok(chapters.some(ch => ch.summary.includes("La consejera Veyra")));
 assert.ok(chapters.some(ch => ch.summary.includes("La magia consume recuerdos")));
 assert.ok(chapters.some(ch => ch.summary.includes("ceniza azul")));
