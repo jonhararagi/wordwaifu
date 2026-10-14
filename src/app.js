@@ -962,10 +962,18 @@
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
     $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art", "mythic-catalog", "powers"].includes(activeView));
-    renderMap();
-    renderDetails();
-    renderDirectory();
-    if (window.WordWaifuPowerWorkbench) window.WordWaifuPowerWorkbench.refresh(state);
+    // Render only the active surface. Rebuilding the hidden SVG map, atlas
+    // details and directory on every navigation/save wastes CPU and creates DOM
+    // churn on low-power machines.
+    if (activeView === "atlas") {
+      renderMap();
+      renderDetails();
+    } else if (["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView)) {
+      renderDirectory();
+    }
+    if (activeView === "powers" && window.WordWaifuPowerWorkbench) {
+      window.WordWaifuPowerWorkbench.refresh(state);
+    }
   }
 
   function mapPointFromPointer(event) {
