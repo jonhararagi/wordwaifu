@@ -230,6 +230,58 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyEnsemble']").inputValue(), "Piloto: miedo al fracaso | rivalidad con el equipo | aprende a confiar.");
     process.stdout.write("PASS reveal framework: Markdown import preserves world rules, clues, reveal timing and consequences.\\n");
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
+    // Story Foundry concept generation populates an editable premise, world, cast, trauma, romance and power rules.
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-generate-concept-button").click();
+    await page.waitForFunction(() => (document.querySelector("#story-foundry-status")?.textContent || "").includes("Concept"), { timeout: 10000 });
+    assert.ok((await page.locator("#story-meta-form [name='storyPremise']").inputValue()).length > 40);
+    assert.ok((await page.locator("#story-meta-form [name='storyProtagonistProfile']").inputValue()).length > 40);
+    assert.ok((await page.locator("#story-meta-form [name='storyAntagonistProfile']").inputValue()).length > 40);
+    assert.ok((await page.locator("#story-meta-form [name='storyPowerRules']").inputValue()).includes("coste") || (await page.locator("#story-meta-form [name='storyPowerRules']").inputValue()).includes("recuerdo"));
+    // Story Foundry end-to-end: generate a 30-chapter arc plan, then regenerate as a 12-chapter open ending.
+    await page.locator("#story-meta-form [name='storyChapterCount']").fill("30");
+    await page.locator("#story-meta-form [name='storyEndingType']").selectOption("closed");
+    await page.locator("#story-meta-form [name='storyProtagonistProfile']").fill("Mira quiere descubrir quién borró una ciudad del mapa.");
+    await page.locator("#story-meta-form [name='storyPersonalityDesign']").fill("Es observadora, obstinada y teme volver a fallar.");
+    await page.locator("#story-meta-form [name='storyCompanionProfiles']").fill("Kael protege la frontera; Noa negocia con información y deudas.");
+    await page.locator("#story-meta-form [name='storyAntagonistProfile']").fill("El consejo cree que borrar recuerdos evita una guerra.");
+    await page.locator("#story-meta-form [name='storyTraumaArc']").fill("Mira perdió a su hermana durante una expedición.");
+    await page.locator("#story-meta-form [name='storyRomanceArc']").fill("La confianza crece entre aliados que discrepan.");
+    await page.locator("#story-meta-form [name='storyPowerRules']").fill("Cada mapa usado borra un recuerdo del cartógrafo.");
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-generate-outline-button").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form [name='chapterTitle']").length === 30, null, { timeout: 10000 });
+    const outlineDomCounts = await page.evaluate(() => ({forms:document.querySelectorAll(".story-chapter-form").length,titles:document.querySelectorAll(".story-chapter-form [name='chapterTitle']").length,storyTitle:document.querySelector("#story-meta-form [name='storyName']")?.value,errors:window.__wordwaifuTestPageErrors || []}));
+    process.stdout.write("STORY_FOUNDRY_DOM: " + JSON.stringify(outlineDomCounts) + "\\n");
+    assert.equal(await page.evaluate(() => document.querySelectorAll(".story-chapter-form [name='chapterTitle']")[22]?.value.startsWith("Capítulo 23")), true);
+    assert.ok(await page.evaluate(() => document.querySelectorAll(".story-chapter-form [name='chapterSummary']")[22]?.value.includes("falsa seguridad")), "chapter 23 should begin the planned fall for a 30-chapter story");
+    assert.ok((await page.locator("#story-outline-preview").innerText()).includes("Clímax"), "The generated index must expose act ranges.");
+    await page.locator("#story-meta-form [name='storyChapterCount']").fill("12");
+    await page.locator("#story-meta-form [name='storyEndingType']").selectOption("open");
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-generate-outline-button").click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form [name='chapterTitle']").length === 12, null, { timeout: 10000 });
+    assert.ok(await page.evaluate(() => document.querySelectorAll(".story-chapter-form [name='chapterSummary']")[11]?.value.includes("final abierto")), "Open ending should close the emotional arc while leaving a deliberate question.");
+    assert.ok((await page.locator("#story-foundry-status").innerText()).includes("final abierto"));
+    process.stdout.write("PASS Story Foundry UI: configurable chapter count, act index, character design inputs, collapse phase and open ending.\\n");
+    // Markdown roundtrip must retain the planning controls and generated profiles, not only chapter prose.
+    const markdownDownloadPromise = page.waitForEvent("download");
+    await page.locator("#story-export-button").click();
+    const markdownDownload = await markdownDownloadPromise;
+    const markdownStream = await markdownDownload.createReadStream();
+    const markdownChunks = [];
+    for await (const chunk of markdownStream) markdownChunks.push(chunk);
+    const exportedStoryMarkdown = Buffer.concat(markdownChunks);
+    assert.ok(exportedStoryMarkdown.toString("utf8").includes("## Cantidad de capítulos planificados"));
+    assert.ok(exportedStoryMarkdown.toString("utf8").includes("## Perfil del protagonista"));
+    page.once("dialog", dialog => dialog.accept());
+    await page.locator("#story-import-file").setInputFiles({name:"story-foundry-roundtrip.md",mimeType:"text/markdown",buffer:exportedStoryMarkdown});
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form [name='chapterTitle']").length === 12, null, {timeout:10000});
+    assert.equal(await page.locator("#story-meta-form [name='storyChapterCount']").inputValue(),"12");
+    assert.equal(await page.locator("#story-meta-form [name='storyEndingType']").inputValue(),"open");
+    assert.ok((await page.locator("#story-meta-form [name='storyProtagonistProfile']").inputValue()).length > 40);
+    assert.ok((await page.locator("#story-meta-form [name='storyPowerRules']").inputValue()).length > 20);
+    process.stdout.write("PASS Story Foundry Markdown: chapter plan, ending mode and creative profiles survive export/import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
     await page.locator("#global-search").fill("Ryu");
