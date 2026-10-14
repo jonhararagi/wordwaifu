@@ -250,7 +250,9 @@ async function run() {
     await page.locator("#story-meta-form [name='storyPowerRules']").fill("Cada mapa usado borra un recuerdo del cartógrafo.");
     page.once("dialog", dialog => dialog.accept());
     await page.locator("#story-generate-outline-button").click();
-    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 30, { timeout: 10000 });
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form [name='chapterTitle']").length === 30, null, { timeout: 10000 });
+    const outlineDomCounts = await page.evaluate(() => ({forms:document.querySelectorAll(".story-chapter-form").length,titles:document.querySelectorAll(".story-chapter-form [name='chapterTitle']").length,storyTitle:document.querySelector("#story-meta-form [name='storyName']")?.value,errors:window.__wordwaifuTestPageErrors || []}));
+    process.stdout.write("STORY_FOUNDRY_DOM: " + JSON.stringify(outlineDomCounts) + "\\n");
     assert.equal(await page.locator(".story-chapter-form [name='chapterTitle']").nth(22).inputValue().startsWith("Capítulo 23"), true);
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").nth(22).inputValue()).includes("falsa seguridad"), "chapter 23 should begin the planned fall for a 30-chapter story");
     assert.ok((await page.locator("#story-outline-preview").innerText()).includes("Clímax"), "The generated index must expose act ranges.");
@@ -258,7 +260,7 @@ async function run() {
     await page.locator("#story-meta-form [name='storyEndingType']").selectOption("open");
     page.once("dialog", dialog => dialog.accept());
     await page.locator("#story-generate-outline-button").click();
-    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 12, { timeout: 10000 });
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form [name='chapterTitle']").length === 12, null, { timeout: 10000 });
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").nth(11).inputValue()).includes("final abierto"), "Open ending should close the emotional arc while leaving a deliberate question.");
     assert.ok((await page.locator("#story-foundry-status").innerText()).includes("final abierto"));
     process.stdout.write("PASS Story Foundry UI: configurable chapter count, act index, character design inputs, collapse phase and open ending.\\n");
