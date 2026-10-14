@@ -2451,13 +2451,73 @@
     else body.appendChild(archiveEmpty("No se ha identificado una lista completa de participantes."));
     body.appendChild(archiveElement("p","","Fuentes y límites del resumen"));moment.claims.forEach(c=>body.appendChild(archiveEvidence(c)));d.appendChild(body);return d;
   }
-  function renderArchiveSummary(profile){
+  function renderRosterContinuityDossier(profile){
+    const roster=window.WordWaifuOfficialCharacterRoster;
+    const record=roster&&roster.get(profile.id);
+    const dossier=record&&record.dossiers&&record.dossiers[profile.continuity];
+    if(!dossier)return null;
+    const section=archiveElement("section","archive-section archive-continuity-dossier");
+    const heading=archiveElement("div","archive-section-heading");
+    heading.append(archiveElement("h3","","Expediente de continuidad · "+(profile.continuityLabel||profile.continuity)));
+    heading.append(archiveElement("p","",String(dossier.sourceLabel||"Fuente secundaria")+" · resumen de investigación"));
+    section.appendChild(heading);
+    if(dossier.sourceType==="secondary_compendium"){
+      section.appendChild(archiveElement("p","archive-research-note","Fuente secundaria de consulta. Estos apuntes ayudan a explorar la ficha, pero no equivalen a una verificación de fuente primaria ni a un localizador de novela."));
+    }
+    const spoiler=String(dossier.spoilerLevel||"").toLowerCase();
+    if(["major","endgame"].includes(spoiler)){
+      section.appendChild(archiveElement("p","archive-research-note","Incluye spoilers importantes de esta continuidad."));
+    }
+    [
+      ["Apariencia",dossier.appearance],
+      ["Historia y contexto",dossier.history],
+      ["Personalidad y evolución",dossier.development],
+      ["Capacidades y combate",dossier.combatProfile],
+      ["Hábitos y conducta",dossier.habits],
+      ["Función narrativa",dossier.narrativeRole]
+    ].forEach(([label,value])=>{
+      if(!value||!String(value).trim())return;
+      const block=archiveElement("div","archive-official-detail archive-dossier-detail");
+      block.append(archiveElement("h4","",label),archiveElement("p","",String(value)));
+      section.appendChild(block);
+    });
+    [
+      ["Habilidades y capacidades",dossier.abilities],
+      ["Relaciones importantes",dossier.relationshipDetails]
+    ].forEach(([label,items])=>{
+      if(!Array.isArray(items)||!items.length)return;
+      const group=archiveElement("section","archive-continuity-list");
+      group.appendChild(archiveElement("h4","",label));
+      const list=archiveElement("ul","archive-continuity-items");
+      items.forEach(item=>{
+        const li=archiveElement("li","");
+        if(typeof item==="string"){li.textContent=item;}
+        else{
+          const name=String(item&&item.name||item&&item.title||"Detalle");
+          li.appendChild(archiveElement("strong","",name));
+          const detail=String(item&&item.detail||item&&item.description||"");
+          if(detail)li.appendChild(archiveElement("p","",detail));
+        }
+        list.appendChild(li);
+      });
+      group.appendChild(list);section.appendChild(group);
+    });
+    const urls=[dossier.sourceUrl,...(Array.isArray(dossier.sources)?dossier.sources:[])].filter((url,index,all)=>typeof url==="string"&&url.startsWith("https://")&&all.indexOf(url)===index);
+    if(urls.length){
+      const links=archiveElement("div","archive-official-source-links");
+      urls.forEach((url,index)=>appendLoreLink(links,index===0?"Abrir fuente de referencia ↗":"Fuente complementaria "+index+" ↗",url,true));
+      section.appendChild(links);
+    }
+    return section;
+  }
+    function renderArchiveSummary(profile){
     const root=archiveElement("div","archive-profile-content"),overview=archiveElement("section","archive-section");
     const top=archiveElement("div","archive-section-heading");top.append(archiveElement("h3","","Estado documentado"),archiveElement("p","","Solo información de la continuidad seleccionada."));overview.appendChild(top);
     const grid=archiveElement("div","archive-overview-grid"),identity=archiveElement("article","archive-info-card"),motivation=archiveElement("article","archive-info-card");
     identity.append(archiveElement("h4","","Identidad y afiliación"),archiveElement("p","",profile.state.affiliation),archiveElement("p","","ID estable: "+profile.id),archiveGoTab("sources","Ver fuentes"));
     const m=profile.claims.find(c=>(c.aspects||[]).includes("motivation"));motivation.append(archiveElement("h4","","Valores y motivaciones"),archiveElement("p","",m?m.claim:"Sin información suficiente en esta continuidad."),archiveGoTab("personality","Explorar personalidad"));
     grid.append(identity,motivation);overview.appendChild(grid);root.appendChild(overview);
+    const continuityDossier=renderRosterContinuityDossier(profile);if(continuityDossier)root.appendChild(continuityDossier);
     const official = profile.continuity === "CONT-ANIME"
       ? (profile.officialReference ||
         (typeof window.WordWaifuOfficialCharacterRoster !== "undefined" ? window.WordWaifuOfficialCharacterRoster.get(profile.id) : null))
