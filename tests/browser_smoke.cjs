@@ -247,6 +247,13 @@ async function run() {
     page.once("dialog", dialog => dialog.accept());
     await page.locator("#story-generate-outline-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 12, { timeout: 10000 });
+    const generatedTitles = await page.locator(".story-chapter-form [name='chapterTitle']").evaluateAll(nodes => nodes.map(node => node.value));
+    const generatedSummaries = await page.locator(".story-chapter-form [name='chapterSummary']").evaluateAll(nodes => nodes.map(node => node.value));
+    assert.equal(new Set(generatedTitles).size, 12, "generated chapter titles must be unique and numbered");
+    assert.equal(new Set(generatedSummaries).size, 12, "each chapter needs a distinct summary rather than repeated generic text");
+    assert.ok(generatedSummaries.some(summary => summary.includes("Dinámica y cambios del mundo")), "outline generation must carry world dynamics into chapter guidance");
+    assert.ok(generatedSummaries.some(summary => summary.includes("Motor de revelación")), "outline generation must carry mystery/reveal setup into chapter guidance");
+    assert.ok(generatedSummaries.some(summary => summary.includes("Panteón y fuerzas míticas")), "outline generation must carry mythic worldbuilding into chapter guidance");
     assert.equal(await page.locator("#story-meta-form [name='storyChapterCount']").inputValue(), "12");
     assert.equal(await page.locator("#story-meta-form [name='storyEndingType']").inputValue(), "open");
     assert.equal(await page.locator("#story-meta-form [name='storyCastPlan']").inputValue(), "Mara quiere salvar el barrio; Ivo, coprotagonista, busca exponer a la corporación.");
