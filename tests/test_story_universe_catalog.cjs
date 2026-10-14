@@ -32,4 +32,13 @@ assert.ok(ids.has("one-punch-man"));
 assert.deepEqual(catalog.canonDossierPriority, ["my-hero-academia", "one-punch-man"]);
 assert.ok(app.includes('id="story-plan-inspiration"'), "Story Foundry needs an inspiration selector");
 assert.ok(app.includes('profiles[inspiration]'), "selected inspiration must affect the generated conflict");
+for (const [file, expected] of [
+  ["lore/my-hero-academia/README.md", "Quirks"],
+  ["lore/one-punch-man/README.md", "Hero Association"]
+]) {
+  const dossier = fs.readFileSync(path.join(root, file), "utf8");
+  assert.ok(dossier.includes(expected), file + " needs a canon starter summary");
+  assert.ok(dossier.includes("starter-corpus"), file + " must not claim complete coverage");
+  assert.ok(/https:\/\//.test(dossier), file + " needs traceable source links");
+}
 console.log("PASS story universe catalog: " + catalog.entries.length + " entries, selectable presets, generator hooks and canon-dossier priorities");
