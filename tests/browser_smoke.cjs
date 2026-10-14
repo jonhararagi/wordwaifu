@@ -294,6 +294,10 @@ async function run() {
     await page.locator("#archive-tab-summary").click();
     assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 0,
       "DanMachi V character data must not leak into the historical Astrea Record dossier.");
+    assert.equal(await page.locator("#archive-profile-panel .archive-continuity-dossier").count(), 1,
+      "The selected Astrea Record profile should expose its continuity-scoped research dossier.");
+    assert.ok((await page.locator("#archive-profile-panel .archive-continuity-dossier").innerText()).includes("Fuente secundaria de consulta"),
+      "A community research dossier must be labeled secondary and must not be presented as verified primary canon.");
     // Expanded reading must open a modal with a Spanish community reference and preserve continuity context.
     await page.locator("#archive-profile-panel [data-archive-more-info]").click();
     await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, { timeout: 3000 });
