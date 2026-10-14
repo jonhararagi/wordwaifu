@@ -46,9 +46,9 @@
   ];
 
   function firstSentence(value, fallback) {
-    const clean = String(value || "").replace(/\\s+/g, " ").trim();
+    const clean = String(value || "").replace(/\s+/g, " ").trim();
     if (!clean) return fallback;
-    const first = clean.split(/\\n|[.!?](?:\\s|$)/, 1)[0].trim();
+    const first = clean.split(/\n|[.!?](?:\s|$)/, 1)[0].trim();
     return (first || clean).slice(0, 220);
   }
 
