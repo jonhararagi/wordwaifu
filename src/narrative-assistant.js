@@ -50,7 +50,14 @@
   button.addEventListener("click", openDialog);
   $("na-close").addEventListener("click", () => { dialog.dataset.open = "false"; consent.checked = false; syncConsent(); });
   dialog.addEventListener("click", (event) => { if (event.target === dialog) { dialog.dataset.open = "false"; consent.checked = false; syncConsent(); } });
-  consent.addEventListener("change", syncConsent); source.addEventListener("input", syncConsent);
+  function revokeConsentOnEdit() {
+    if (consent.checked) consent.checked = false;
+    syncConsent();
+  }
+  consent.addEventListener("change", syncConsent);
+  source.addEventListener("input", revokeConsentOnEdit);
+  context.addEventListener("input", revokeConsentOnEdit);
+  task.addEventListener("change", revokeConsentOnEdit);
   copyButton.addEventListener("click", async () => {
     if (!consent.checked || !source.value.trim()) return;
     const prompt = buildPrompt();
