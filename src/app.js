@@ -1586,8 +1586,14 @@
       story.reviewContinuity = continuity ? continuity.value : "CONT-MAIN-LN";
       const roster = window.WordWaifuOfficialCharacterRoster && typeof window.WordWaifuOfficialCharacterRoster.list === "function"
         ? window.WordWaifuOfficialCharacterRoster.list() : [];
+      const chapterIndex = story.chapters.findIndex((item) => item.id === chapter.id);
+      const previousChapters = story.chapters.slice(0, Math.max(0, chapterIndex)).map((item, index) => ({
+        id: item.id, number: Number(item.number) || index + 1, title: item.title || ("Capítulo " + (index + 1)), content: String(item.content || "")
+      }));
       const report = window.WordWaifuFanficReview.analyze(manuscript.value, {
         characters: state.characters, roster, continuity: story.reviewContinuity,
+        chapterNumber: chapterIndex + 1, chapterTitle: chapter.title,
+        previousChapters,
         exceptions: Array.isArray(chapter.reviewExceptions) ? chapter.reviewExceptions : []
       });
       const formData = new FormData(formNode);
