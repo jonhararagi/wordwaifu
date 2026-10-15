@@ -210,6 +210,15 @@ async function run() {
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1, { timeout: 5000 });
     assert.equal(await page.locator(".story-chapter-form").count(), 1, "The editor must add a chapter to a story.");
     await page.locator(".story-chapter-form [name='chapterTitle']").fill("Capítulo de prueba");
+    await page.locator(".story-chapter-form [name='chapterContent']").fill("Eina Tulle le dijo «Vete de una vez a la Dungeon, no hace falta que te quedes a registrarte».");
+    await page.locator(".story-chapter-form .story-review-button").click();
+    await page.waitForFunction(() => document.querySelector(".story-chapter-form .fanfic-review-results")?.textContent.includes("Eina"), { timeout: 10000 });
+    const reviewText = await page.locator(".story-chapter-form .fanfic-review-results").innerText();
+    assert.match(reviewText, /Eina/i, "the local reviewer should identify the character in a potentially atypical dialogue");
+    assert.match(reviewText, /Evidencia y procedencia/i, "review findings should expose evidence and provenance");
+    assert.ok(await page.locator(".story-chapter-form .fanfic-review-issue").count(), "the reviewer should render an actionable issue card");
+    await page.locator(".story-chapter-form .fanfic-review-issue").getByRole("button", { name: /recordar excepción/i }).click();
+    await page.waitForFunction(() => document.querySelector(".story-chapter-form .fanfic-review-issue")?.textContent.includes("Excepción guardada"), { timeout: 5000 });
     await page.locator(".story-chapter-form [name='chapterContent']").fill("Texto de capítulo que debe persistir íntegro.");
     await page.locator(".story-chapter-form button[type='submit']").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 1);
