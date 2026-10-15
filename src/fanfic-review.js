@@ -155,7 +155,12 @@
           reason: "Este diálogo suena brusco o desentendido. Puede contrastar con la función profesional o el perfil documentado del personaje, pero el contexto de la escena podría justificarlo.",
           evidence: [profile.role && "Función: " + profile.role, profile.personality && "Perfil: " + profile.personality, dossierEvidence && "Expediente complementario: " + profile.secondary.label + " (fuente secundaria)"].filter(Boolean).join("\n") || "La ficha no ofrece evidencia suficiente para afirmar que el diálogo contradiga el canon.",
           source: profile.source + (dossierEvidence ? " + " + profile.secondary.label : ""),
-          suggestions: ["Mantener el diálogo y marcarlo como divergencia intencional (enojo, urgencia o cambio de relación).", "Añadir una frase que muestre por qué abandona su conducta habitual.", "Reformular el tono sin cambiar la intención de la escena."]
+          suggestions: ["Mantener el diálogo y marcarlo como divergencia intencional (enojo, urgencia o cambio de relación).", "Añadir una frase que muestre por qué abandona su conducta habitual.", "Reformular el tono sin cambiar la intención de la escena."],
+          alternatives: [
+            "«Antes de que vayas a la Dungeon, tenemos que terminar el registro. Necesito comprobar que salgas con la información correcta». (si la prioridad es su deber profesional)",
+            "«No tenemos tiempo para completar el trámite ahora. Andá, pero volvé al Gremio en cuanto puedas para regularizarlo». (si hay una urgencia real)",
+            "«Estoy demasiado preocupada para discutir esto ahora. Hacé lo que tengas que hacer, pero prometeme que vas a volver». (si el tono brusco encubre miedo o enojo)"
+          ]
         });
       });
     });
