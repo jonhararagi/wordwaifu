@@ -64,8 +64,8 @@
   });
   function openProvider(url) {
     if (!consent.checked || !source.value.trim()) return;
-    const opened = window.open(url, "_blank", "noopener,noreferrer");
-    status.textContent = opened ? "Servicio abierto en otra pestaña. Pegá manualmente el prompt copiado; WordWaifu no transmite datos." : "El navegador bloqueó la pestaña. Permití ventanas emergentes o abrí el servicio manualmente.";
+    window.open(url, "_blank", "noopener,noreferrer");
+    status.textContent = "Se solicitó abrir el servicio en otra pestaña. Si todavía no copiaste el prompt, volvé aquí y usá Copiar prompt autorizado. Pegá y enviá manualmente; WordWaifu no transmite datos.";
   }
   chatgptButton.addEventListener("click", () => openProvider(CHATGPT_URL));
   geminiButton.addEventListener("click", () => openProvider(GEMINI_URL));
