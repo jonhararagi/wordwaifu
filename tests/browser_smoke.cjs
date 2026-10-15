@@ -246,6 +246,10 @@ async function run() {
     await page.locator("#story-plan-villain").fill("El Consejo");
     await page.locator("#story-plan-world").fill("Puerto de Ceniza");
     await page.locator("#story-plan-power").fill("Eco de memoria");
+    // These unsaved metadata edits must be consumed by the same generate action.
+    await page.locator("#story-meta-form [name='storyDescription']").fill("Sinopsis de prueba para comprobar el guardado.");
+    await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
+    await page.locator("#story-meta-form [name='storyConflict']").fill("Un conflicto verificable.");
     await page.evaluate(() => {
       const foundry=window.WordWaifuStoryFoundry;
       if(!foundry) throw new Error("Story Foundry module did not load before the application.");
