@@ -90,6 +90,10 @@ También se registran como ramas separadas el anime (temporadas 1 y 2), la pelí
 
 El JSON añade una matriz inicial de relaciones entre personajes/facciones y una cronología de hitos. Son índices narrativos por arco, no sustituyen todavía el registro de cada capítulo o episodio.
 
+## Guía de volúmenes de la novela ligera
+
+`light-novel-volume-guide.json` es el mapa de trabajo prioritario de la continuidad principal. Cubre de forma inicial los volúmenes 1–7 mediante resúmenes originales, temas de mundo y tramas, referencias editoriales y una lista de controles para futuras comparaciones. La sinopsis de editorial solo acredita el alcance general del volumen: no demuestra por sí sola detalles de capítulos. Todos los capítulos permanecen pendientes de indexación y cotejo en el texto de la novela; la comparación con episodios también está marcada como pendiente cuando no existe una correspondencia comprobada. `tests/test_eminence_in_shadow_light_novel_guide.cjs` protege esta distinción y evita declarar cobertura granular ficticia.
+
 ## Guía de episodios del anime
 
 Se añadió `anime-episode-guide.json` con resúmenes originales para los 20 episodios de la temporada 1 y los 12 de la temporada 2. Cada registro conserva número, título, arco, continuidad de anime y enlace de referencia. Los resúmenes son síntesis narrativas por episodio, no transcripciones ni sustitutos de una verificación escena por escena. El test `tests/test_eminence_in_shadow_episode_guide.cjs` comprueba cobertura, IDs, fuentes y separación de continuidad.
@@ -105,7 +109,7 @@ El dossier ahora incluye fichas funcionales adicionales para agentes de Shadow G
 3. Matriz temporal de relaciones, lealtades y conocimiento por personaje.
 4. Censo de las Siete Rondas y células del Culto.
 5. Catálogo de técnicas, reliquias, experimentos, límites y costes.
-6. Resúmenes originales por volumen de novela ligera y por episodio de anime, con separación explícita de adaptaciones.
+6. Indexación y resúmenes originales de cada capítulo de novela ligera, con localizadores primarios; después, comparación escena por escena con la adaptación.
 7. Pruebas de integridad, IDs estables, fuentes y validación de continuidad.
 
 No cambiar el estado a `complete` hasta cerrar esas tareas.
