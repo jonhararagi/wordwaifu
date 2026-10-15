@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "eminence-in-shadow-light-novel-volume-guide",
+  "universeId": "eminence-in-shadow",
+  "title": "The Eminence in Shadow — guía de lectura de novela ligera",
+  "language": "es",
+  "integrationStatus": "volume-map-initial",
+  "primaryContinuity": "light-novel",
+  "policy": "La novela ligera publicada es la continuidad principal. Los resúmenes son paráfrasis originales y no transcripciones. La sinopsis editorial solo respalda el alcance general del volumen; los detalles granulares requieren cotejo del texto y localizador exacto.",
+  "chapterCoveragePolicy": {
+    "requiredFields": [
+      "volume",
+      "chapterId",
+      "chapterTitleIfVerified",
+      "summary",
+      "characters",
+      "events",
+      "worldbuilding",
+      "characterKnowledge",
+      "spoilerLevel",
+      "sourceUrl",
+      "locator",
+      "verificationStatus"
+    ],
+    "rule": "No inventar títulos, cantidad de capítulos, páginas, escenas ni localizadores. Un volumen no queda cubierto a nivel de capítulo hasta que cada capítulo tenga una ficha cotejada.",
+    "statuses": [
+      "publisher-blurb-only",
+      "chapter-index-pending",
+      "chapter-summary-pending",
+      "primary-text-checked",
+      "adaptation-compared"
+    ]
+  },
+  "volumes": [
+    {
+      "volume": 1,
+      "continuity": "light-novel",
+      "arcIds": [
+        "origin",
+        "academy"
+      ],
+      "coverage": "origin-and-academy",
+      "summary": "Presenta a Cid Kagenou y su ideal de convertirse en una figura que gobierna desde las sombras. Tras renacer en un mundo con magia, convierte su fantasía de una organización secreta en una actuación que acaba coincidiendo con una conspiración real. El volumen establece la diferencia entre lo que Cid cree estar representando y lo que sus aliadas entienden como una misión auténtica.",
+      "narrativeThreads": [
+        "Identidad cotidiana frente a identidad encubierta",
+        "La distancia entre intención, interpretación y consecuencias",
+        "Primeros vínculos con las aliadas y la amenaza que Cid imagina"
+      ],
+      "worldbuildingTopics": [
+        "Magia y entrenamiento",
+        "Organización clandestina",
+        "Posesión demoníaca y rumores sobre el Culto"
+      ],
+      "publisherEvidence": "publisher-blurb",
+      "sourceUrl": "https://yenpress.com/titles/9781975359058-the-eminence-in-shadow-vol-1-light-novel",
+      "chapterCoverage": {
+        "status": "chapter-index-pending",
+        "verifiedChapterCount": null,
+        "chapters": []
+      },
+      "adaptationComparison": {
+        "status": "not-yet-compared",
+        "animeEpisodes": [
+          "s1-e01",
+          "s1-e02",
+          "s1-e03",
+          "s1-e04",
+          "s1-e05"
+        ],
+        "note": "Correspondencia orientativa por arco; no afirma equivalencia capítulo-episodio."
+      },
+      "spoilerLevel": "mild"
+    },
+    {
+      "volume": 2,
+      "continuity": "light-novel",
+      "arcIds": [
+        "sanctuary",
+        "goddess-trial"
+      ],
+      "coverage": "sanctuary-and-goddess-trial",
+      "summary": "La visita a la Tierra Sagrada y el juicio de la diosa conectan la aventura de Cid con figuras del pasado y con el Santuario. Shadow Garden busca información sobre la posesión y el Culto, mientras la lectura que Cid hace de los acontecimientos sigue siendo distinta de la de quienes investigan la amenaza.",
+      "narrativeThreads": [
+        "Investigación de Shadow Garden frente a la improvisación de Cid",
+        "Historia antigua y revelaciones parciales",
+        "Diferencias entre lo que el lector y cada personaje saben"
+      ],
+      "worldbuildingTopics": [
+        "Santuario y reliquias",
+        "Memoria histórica",
+        "Posesión y experimentación"
+      ],
+      "publisherEvidence": "publisher-blurb",
+      "sourceUrl": "https://yenpress.com/titles/9781975387006-the-eminence-in-shadow-vol-2-light-novel",
+      "chapterCoverage": {
+        "status": "chapter-index-pending",
+        "verifiedChapterCount": null,
+        "chapters": []
+      },
+      "adaptationComparison": {
+        "status": "not-yet-compared",
+        "animeEpisodes": [
+          "s1-e10",
+          "s1-e11",
+          "s1-e12",
+          "s1-e13",
+          "s1-e14"
+        ],
+        "note": "Correspondencia orientativa por arco; cotejar antes de atribuir una escena a un capítulo."
+      },
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 3,
+      "continuity": "light-novel",
+      "arcIds": [
+        "lawless-city",
+        "blood-queen"
+      ],
+      "coverage": "lawless-city-and-blood-queen",
+      "summary": "La Ciudad sin Ley concentra la lucha entre facciones alrededor de la Reina de Sangre y otros poderes locales. Shadow Garden actúa con sus propios objetivos y Shadow entra en conflicto con fuerzas que buscan imponer su dominio; la política criminal y la amenaza vampírica alteran las reglas del enfrentamiento.",
+      "narrativeThreads": [
+        "Competencia entre poderes que no comparten información",
+        "Control territorial y reputación",
+        "Objetivos propios de Shadow Garden dentro del caos local"
+      ],
+      "worldbuildingTopics": [
+        "Ciudad sin Ley",
+        "Facciones criminales",
+        "Amenaza vampírica"
+      ],
+      "publisherEvidence": "publisher-blurb",
+      "sourceUrl": "https://yenpress.com/titles/9781975315771-the-eminence-in-shadow-vol-3-light-novel",
+      "chapterCoverage": {
+        "status": "chapter-index-pending",
+        "verifiedChapterCount": null,
+        "chapters": []
+      },
+      "adaptationComparison": {
+        "status": "not-yet-compared",
+        "animeEpisodes": [
+          "s1-e15",
+          "s1-e16",
+          "s1-e17",
+          "s1-e18",
+          "s1-e19",
+          "s1-e20"
+        ],
+        "note": "Correspondencia orientativa por arco; no afirma equivalencia capítulo-episodio."
+      },
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 4,
+      "continuity": "light-novel",
+      "arcIds": [
+        "orianna-crisis"
+      ],
+      "coverage": "orianna-crisis",
+      "summary": "La crisis de Oriana combina el matrimonio político de Rose, la legitimidad del poder y la disputa por el futuro del reino. Cid interviene guiado por su propia agenda escénica, mientras distintas facciones persiguen objetivos políticos y estratégicos que no deben reducirse a un único plan.",
+      "narrativeThreads": [
+        "Deber personal frente a identidad y gobierno",
+        "Legitimidad política y manipulación",
+        "Intervención de Shadow y consecuencias para Rose"
+      ],
+      "worldbuildingTopics": [
+        "Reino de Oriana",
+        "Matrimonio político",
+        "Facciones y sucesión"
+      ],
+      "publisherEvidence": "publisher-blurb",
+      "sourceUrl": "https://yenpress.com/titles/9781975341855-the-eminence-in-shadow-vol-4-light-novel",
+      "chapterCoverage": {
+        "status": "chapter-index-pending",
+        "verifiedChapterCount": null,
+        "chapters": []
+      },
+      "adaptationComparison": {
+        "status": "not-yet-compared",
+        "animeEpisodes": [
+          "s2-e01",
+          "s2-e02",
+          "s2-e03",
+          "s2-e04",
+          "s2-e05"
+        ],
+        "note": "Correspondencia orientativa por arco; cotejar los cambios de orden y las escenas."
+      },
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 5,
+      "continuity": "light-novel",
+      "arcIds": [
+        "missing-students",
+        "ancient-script"
+      ],
+      "coverage": "missing-students-and-ancient-script",
+      "summary": "La desaparición de estudiantes y el caso de Claire abren una investigación relacionada con escritura antigua y círculos mágicos. Zeta se incorpora a la línea de acontecimientos. Los datos de este volumen deben registrar por separado los hechos observados, las hipótesis de los personajes y lo que sigue sin ser comprendido.",
+      "narrativeThreads": [
+        "Investigación y desapariciones",
+        "Interpretaciones incompatibles de las pruebas",
+        "Participación y objetivos de Zeta"
+      ],
+      "worldbuildingTopics": [
+        "Escritura antigua",
+        "Círculos mágicos",
+        "Pistas y conocimiento parcial"
+      ],
+      "publisherEvidence": "publisher-blurb",
+      "sourceUrl": "https://yenpress.com/titles/9781975375263-the-eminence-in-shadow-vol-5-light-novel",
+      "chapterCoverage": {
+        "status": "chapter-index-pending",
+        "verifiedChapterCount": null,
+        "chapters": []
+      },
+      "adaptationComparison": {
+        "status": "not-yet-compared",
+        "animeEpisodes": [],
+        "note": "No asignar episodios sin una correspondencia de adaptación comprobada."
+      },
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 6,
+      "continuity": "light-novel",
+      "arcIds": [
+        "thirteen-nightblades",
+        "jack-the-ripper"
+      ],
+      "coverage": "thirteen-nightblades-and-jack-the-ripper",
+      "summary": "La corrupción de Midgar se vincula con las Trece Espadas Nocturnas y con las relaciones entre la nobleza y el Culto. La figura de Jack el Destripador cambia la forma en que puede actuar el poder clandestino. El registro debe distinguir operaciones confirmadas, rumores públicos e identidades que los personajes todavía no han conectado.",
+      "narrativeThreads": [
+        "Corrupción institucional",
+        "Identidad clandestina como instrumento político",
+        "Diferencia entre rumor, información y hecho"
+      ],
+      "worldbuildingTopics": [
+        "Nobleza de Midgar",
+        "Redes clandestinas",
+        "Reputación pública y encubrimiento"
+      ],
+      "publisherEvidence": "publisher-blurb",
+      "sourceUrl": "https://yenpress.com/titles/9798855406993-the-eminence-in-shadow-vol-6-light-novel",
+      "chapterCoverage": {
+        "status": "chapter-index-pending",
+        "verifiedChapterCount": null,
+        "chapters": []
+      },
+      "adaptationComparison": {
+        "status": "not-yet-compared",
+        "animeEpisodes": [],
+        "note": "No asignar episodios sin una correspondencia de adaptación comprobada."
+      },
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 7,
+      "continuity": "light-novel",
+      "arcIds": [
+        "elven-succession"
+      ],
+      "coverage": "elven-succession",
+      "summary": "La disputa sucesoria en el país de los elfos lleva a varias facciones a presentar combatientes. Alpha opera bajo una identidad encubierta y Cid vuelve a adoptar un papel de intermediario sombrío alrededor de una aspirante al trono. El estado editorial debe comprobarse por idioma y edición, sin confundir anuncio con disponibilidad local.",
+      "narrativeThreads": [
+        "Sucesión y legitimidad",
+        "Operaciones encubiertas de Alpha",
+        "Papel asumido por Cid frente a objetivos ajenos"
+      ],
+      "worldbuildingTopics": [
+        "Sociedad élfica",
+        "Facciones sucesorias",
+        "Identidad encubierta"
+      ],
+      "publisherEvidence": "publisher-blurb",
+      "sourceUrl": "https://yenpress.com/titles/9798855447224-the-eminence-in-shadow-vol-7-light-novel",
+      "editionNote": "La ficha enlazada corresponde a la edición inglesa anunciada para marzo de 2027; la edición japonesa debe comprobarse por separado.",
+      "chapterCoverage": {
+        "status": "chapter-index-pending",
+        "verifiedChapterCount": null,
+        "chapters": []
+      },
+      "adaptationComparison": {
+        "status": "not-yet-compared",
+        "animeEpisodes": [],
+        "note": "No asignar episodios sin una correspondencia de adaptación comprobada."
+      },
+      "spoilerLevel": "moderate"
+    }
+  ],
+  "completionGate": [
+    "Cada capítulo debe tener resumen original y localizador cotejado en el texto de la novela ligera.",
+    "Las escenas de anime se comparan después y nunca rellenan automáticamente huecos de la novela.",
+    "Los cambios de conocimiento, identidades, relaciones, heridas, alianzas y secretos se rastrean por punto de la historia.",
+    "Los datos de sinopsis editorial no se elevan a evidencia de capítulo.",
+    "La cobertura completa exige censo de personajes, facciones, técnicas y continuidad posterior a los volúmenes iniciales."
+  ]
+}
