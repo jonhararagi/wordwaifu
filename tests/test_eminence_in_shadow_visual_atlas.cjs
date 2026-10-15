@@ -3,6 +3,7 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
+const vm = require("node:vm");
 const root = path.resolve(__dirname, "..");
 const atlasPath = path.join(root, "lore/eminence-in-shadow/atlas.html");
 const catalogPath = path.join(root, "lore/eminence-in-shadow/visual-catalog.json");
@@ -10,6 +11,9 @@ const readmePath = path.join(root, "lore/eminence-in-shadow/README.md");
 const html = fs.readFileSync(atlasPath, "utf8");
 const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
 const readme = fs.readFileSync(readmePath, "utf8");
+const inlineScript = html.match(/<script>([\\s\\S]*?)<\\/script>/);
+assert.ok(inlineScript, "atlas must contain its interaction script");
+new vm.Script(inlineScript[1]);
 assert.match(html, /id="shadow-map"/, "interactive Shadow map must exist");
 assert.match(html, /data-tab="characters"/, "character image gallery must be navigable");
 assert.match(html, /data-tab="powers"/, "powers section must be navigable");
