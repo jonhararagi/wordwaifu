@@ -527,23 +527,6 @@
       "narrativeUse": "Une economía, venganza, política criminal y alianzas de conveniencia."
     },
     {
-      "id": "rose-oriana-cult",
-      "name": "Rose Oriana (continuidad política)",
-      "role": "personaje con estado narrativo cambiante",
-      "personality": [
-        "determinada",
-        "leal a sus ideales"
-      ],
-      "motivation": "Equilibrar su identidad personal con las consecuencias de asumir un papel político.",
-      "abilities": [
-        "combate y capacidad de liderazgo"
-      ],
-      "relationships": [
-        "Registrar por arco; no duplicar esta ficha como una segunda persona en bases de datos, sino como un estado alternativo de Rose."
-      ],
-      "narrativeUse": "Ejemplo de ficha con estados temporales para mantener continuidad."
-    },
-    {
       "id": "christina-hope",
       "name": "Christina Hope",
       "role": "estudiante noble y figura secundaria de los conflictos de Midgar",
