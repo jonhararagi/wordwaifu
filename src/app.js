@@ -1671,7 +1671,7 @@
         resultsNode.appendChild(card);
       });
     }));
-    $(".story-chapter-form [data-delete-chapter]", container).forEach((button) => button.addEventListener("click", async () => {
+    $$(".story-chapter-form [data-delete-chapter]", container).forEach((button) => button.addEventListener("click", async () => {
       if (!confirm("¿Eliminar este capítulo? Esta acción se guardará en el proyecto actual.")) return;
       story.chapters = story.chapters.filter((chapter) => chapter.id !== button.dataset.deleteChapter);
       await saveProject();
