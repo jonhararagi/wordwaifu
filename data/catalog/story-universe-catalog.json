@@ -316,13 +316,21 @@
         "identidad secreta",
         "organización clandestina",
         "drama malinterpretado",
-        "acción estilizada"
+        "acción estilizada",
+        "doble identidad",
+        "organización de agentes",
+        "poder mágico y experimentación",
+        "academias y nobleza",
+        "conspiración histórica",
+        "lealtad y autonomía",
+        "comedia por información asimétrica"
       ],
       "generatorSeeds": {
-        "world": "un reino de fantasía con una organización secreta real cuyas conspiraciones coinciden accidentalmente con las fantasías de su líder",
-        "conflict": "un protagonista interpreta los hechos como teatro personal mientras sus aliados descubren una conspiración auténtica"
+        "world": "Un continente de fantasía con reinos, academias, órdenes de caballería y cultos clandestinos; la magia depende de talento, control corporal y conocimiento, mientras una organización secreta crece bajo identidades encubiertas.",
+        "conflict": "Una operación aparentemente teatral de una figura enmascarada descubre una conspiración real; aliados y enemigos interpretan la misma información de formas incompatibles y cada victoria pública amenaza con revelar identidades.",
+        "power": "Magia controlada con precisión, refuerzo físico, detección y ocultación; las capacidades dependen del control, entrenamiento, información, recursos y coste de exponerse."
       },
-      "integrationStatus": "catalogue-reference"
+      "integrationStatus": "starter-corpus"
     },
     {
       "id": "to-love-ru",
@@ -459,11 +467,13 @@
     "madoka-magica",
     "selector-wixoss",
     "akame-ga-kill",
-    "symphogear"
+    "symphogear",
+    "eminence-in-shadow"
   ],
   "statusLegend": {
     "existing-canon-work-in-progress": "Hay material previo del universo, pero la auditoría de canon y cobertura sigue abierta.",
     "canon-dossier-needed": "Prioridad explícita para construir corpus de canon, personajes, facciones, cronología y fuentes.",
-    "catalogue-reference": "Perfil de inspiración para el generador; todavía no es una enciclopedia canónica completa."
+    "catalogue-reference": "Perfil de inspiración para el generador; todavía no es una enciclopedia canónica completa.",
+    "starter-corpus": "Existe un expediente inicial estructurado con reglas, elenco, facciones, arcos y fuentes de orientación; la cobertura por volumen/episodio y la verificación individual de cada afirmación siguen en progreso."
   }
 }
