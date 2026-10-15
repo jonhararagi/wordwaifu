@@ -6,6 +6,7 @@ const root = path.resolve(__dirname, "..");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "data/catalog/story-universe-catalog.json"), "utf8"));
 const dossier = JSON.parse(fs.readFileSync(path.join(root, "lore/eminence-in-shadow/canon-dossier.json"), "utf8"));
 const readme = fs.readFileSync(path.join(root, "lore/eminence-in-shadow/README.md"), "utf8");
+const app = fs.readFileSync(path.join(root, "src/app.js"), "utf8");
 const entry = catalog.entries.find(item => item.id === "eminence-in-shadow");
 assert.ok(entry, "Eminence in Shadow must remain selectable in the universe catalog");
 assert.equal(entry.integrationStatus, "starter-corpus", "coverage status must not overclaim completeness");
@@ -21,4 +22,9 @@ assert.ok(dossier.generatorRules.length >= 8, "generator needs explicit continui
 assert.ok(dossier.sources.some(source => source.type === "official-primary" && /^https:\/\//.test(source.url)), "official source links are required");
 assert.ok(readme.includes("Pendiente para declarar cobertura completa"), "remaining coverage gaps must be explicit");
 assert.ok(readme.includes("starter-corpus"), "readme must be honest about current status");
+assert.ok(app.includes("romanceOptions:[\"sin romance: lealtad, rivalidad y secreto\""), "Story Foundry should offer universe-specific romance options");
+assert.ok(app.includes("profile && profile.heroes"), "Story Foundry should use universe-specific protagonist suggestions");
+assert.ok(app.includes("profile && profile.companions"), "Story Foundry should use universe-specific companion suggestions");
+assert.ok(app.includes("profile && profile.antagonists"), "Story Foundry should use universe-specific antagonist suggestions");
+assert.ok(app.includes("profile && profile.wounds"), "Story Foundry should use universe-specific wound/conflict seeds");
 console.log("PASS Eminence in Shadow dossier: " + dossier.characters.length + " character entries, " + dossier.organizations.length + " organizations, " + dossier.storyArcs.length + " arcs, continuity separation and source policy");
