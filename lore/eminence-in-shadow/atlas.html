@@ -66,23 +66,15 @@ main{padding:20px clamp(12px,3vw,40px) 50px;max-width:1600px;margin:auto}.notice
 </section>
 
 <section id="section-powers" class="section">
-<p class="section-intro">Fichas de referencia con iconografía original de WordWaifu. No son capturas oficiales ni representan un fotograma concreto; sirven para distinguir familias de habilidades y evitar inventar estadísticas.</p><div class="visual-cards">
-<article class="visual-card"><div class="sigil">✧</div><h3>Control y compresión mágica</h3><p>Dominio fino del flujo mágico, contención y liberación. La calidad del control y el entrenamiento importan; no convertir el rendimiento excepcional de Shadow en una norma del elenco.</p><small>Continuidad: novela ligera · referencia general</small></article>
-<article class="visual-card"><div class="sigil">⚡</div><h3>Refuerzo corporal</h3><p>Aplicación de magia al movimiento, la fuerza, la resistencia y la precisión. Registrar quién lo demuestra y en qué escena antes de asignar un nivel concreto.</p><small>Continuidad: novela ligera / adaptación por verificar</small></article>
-<article class="visual-card"><div class="sigil">◈</div><h3>I Am Atomic</h3><p>Técnica insignia de Shadow, presentada como una liberación mágica de escala extraordinaria. No es una habilidad genérica ni una medida de poder para personajes originales.</p><small>Referencia visual: anime · evidencia narrativa por volumen/episodio</small></article>
-<article class="visual-card"><div class="sigil">〰</div><h3>Esgrima y combate técnico</h3><p>Distancia, lectura del rival, postura, ritmo y aperturas. La ficha de cada combate debe conservar el contexto y no inventar estadísticas numéricas.</p><small>Ilustración conceptual propia</small></article>
-<article class="visual-card"><div class="sigil">◉</div><h3>Posesión demoníaca</h3><p>Fenómeno ligado a inestabilidad mágica, persecución y experimentación. No reducirlo a una enfermedad genérica ni asumir causas sin evidencia.</p><small>Contiene spoilers · dosificar según punto de corte</small></article>
-<article class="visual-card"><div class="sigil">⌁</div><h3>Sigilo e inteligencia</h3><p>Infiltración, identidades encubiertas, vigilancia y redes de información. Las operaciones deben registrar riesgo, recursos y consecuencias.</p><small>Shadow Garden / Culto de Diablos</small></article>
-</div></section>
-
-<section id="section-equipment" class="section">
-<p class="section-intro">Índice visual inicial de objetos y conceptos de mundo. Los iconos son esquemas originales de navegación; no sustituyen una imagen oficial ni confirman que cada objeto tenga un diseño canónico idéntico en todas las adaptaciones.</p><div class="visual-cards">
-<article class="visual-card"><div class="sigil">⚔</div><h3>Espadas y equipo de combate</h3><p>Relacionar cada arma con su usuario, continuidad, primera aparición, materiales y estado. El dossier actual no justifica atribuir un arma única a cada personaje sin referencia.</p><small>Imagen: iconografía original · fuente de detalle pendiente</small></article>
-<article class="visual-card"><div class="sigil">◇</div><h3>Reliquias y círculos mágicos</h3><p>Registrar función demostrada, activación, limitaciones, consecuencias y volumen/capítulo. Mantener separados los diseños vistos en el anime y las descripciones escritas.</p><small>Ilustración conceptual propia</small></article>
-<article class="visual-card"><div class="sigil">⬡</div><h3>Vestimenta y equipo de Shadow Garden</h3><p>La ropa oscura y la estética de la organización son referencia visual de adaptación. Los detalles exactos deben citar el perfil o material oficial del personaje.</p><small>Ver retratos oficiales en la sección de personajes</small></article>
-</div></section>
-
-<section id="section-sources" class="section">
+<p class="section-intro">Catálogo conectado con <code>combat-techniques.json</code>: 16 capacidades, técnicas, especialidades y sistemas. Cada ficha conserva usuario, límites, evidencia y continuidades; las entradas son referencias funcionales, no estadísticas oficiales ni citas de capítulo verificadas.</p>
+<div class="gallery-tools"><input id="technique-search" type="search" placeholder="Buscar técnica, personaje o límite…" aria-label="Buscar técnicas"><select id="technique-filter" aria-label="Filtrar tipo de técnica"><option value="">Todos los tipos</option></select></div>
+<div id="technique-catalog" class="visual-cards" aria-live="polite"><p class="notice">Cargando catálogo de técnicas…</p></div>
+<p class="section-intro">Fuente de datos: <a href="combat-techniques.json">abrir catálogo JSON ↗</a>. Las entradas con confianza general requieren cotejo de escena antes de usarse como afirmaciones granulares de canon.</p>
+</section><section id="section-equipment" class="section">
+<p class="section-intro">Objetos y sistemas registrados en el catálogo de combate. Se distingue el equipo identificable de las reliquias y mecanismos narrativos; las fichas no inventan nombres de armas cuando el corpus no los acredita.</p>
+<div id="equipment-catalog" class="visual-cards" aria-live="polite"><p class="notice">Cargando equipo y sistemas…</p></div>
+<p class="section-intro">Para revisar todas las propiedades y su nivel de confianza, <a href="combat-techniques.json">consultá el catálogo de origen ↗</a>.</p>
+</section><section id="section-sources" class="section">
 <div class="panel details"><h2>Fuentes, derechos y método</h2><p><strong>Canon narrativo:</strong> novela ligera publicada, con volumen y capítulo como localizadores primarios. El anime es una continuidad de adaptación y referencia visual separada. La web novel es una rama divergente.</p><p><strong>Galería de personajes:</strong> las imágenes se cargan directamente desde el sitio oficial del anime y no se reempaquetan en este repositorio. Derechos de las imágenes y personajes reservados a sus titulares.</p><p><strong>Uso educativo/no comercial:</strong> la intención sin fines de lucro no concede automáticamente permiso de reproducción. Por eso se usa enlace remoto a la fuente oficial, atribución visible y un mapa original esquemático; para redistribuir copias, capturas o ilustraciones oficiales se necesita comprobar los términos y permisos aplicables.</p><p><strong>Integridad cartográfica:</strong> no se afirma que las posiciones del SVG sean coordenadas canónicas. Lugares con nombre incompleto, geografía no cotejada o localización ambigua quedan expresamente marcados como provisionales.</p><h3>Referencias oficiales</h3><ul><li><a href="https://shadow-garden.jp/1st/character/" target="_blank" rel="noreferrer">Sitio oficial del anime · personajes</a></li><li><a href="https://shadow-garden.jp/1st/" target="_blank" rel="noreferrer">Sitio oficial del anime · temporada 1</a></li><li><a href="https://yenpress.com/series/the-eminence-in-shadow-light-novel" target="_blank" rel="noreferrer">Yen Press · serie de novela ligera</a></li><li><a href="https://yenpress.com/series/the-eminence-in-shadow-manga" target="_blank" rel="noreferrer">Yen Press · manga</a></li><li><a href="https://www.kadokawa.co.jp/" target="_blank" rel="noreferrer">KADOKAWA · editorial original</a></li></ul><p><strong>Estado:</strong> atlas inicial funcional; falta cotejo granular de localizaciones con volumen/capítulo y ampliar el catálogo visual de objetos, escenarios y técnicas con fuentes específicas.</p></div>
 </section>
 </main>
@@ -118,9 +110,39 @@ function showPlace(id){const p=places[id];if(!p)return;document.querySelectorAll
 document.querySelectorAll(".map-marker").forEach(n=>{n.addEventListener("click",()=>showPlace(n.dataset.id));n.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();showPlace(n.dataset.id)}})});
 document.getElementById("showLabels").addEventListener("change",e=>document.querySelectorAll("#map-pins text").forEach(t=>t.style.display=e.target.checked?"":"none"));
 function renderGallery(){const q=document.getElementById("character-search").value.toLowerCase().trim(),f=document.getElementById("character-filter").value;const list=characters.filter(c=>(!f||c.group===f)&&(c.name+" "+c.role).toLowerCase().includes(q));document.getElementById("character-gallery").innerHTML=list.map((c,i)=>'<article class="art-card"><figure><img loading="lazy" src="'+esc(c.img)+'" alt="Retrato oficial del anime: '+esc(c.name)+'" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="fallback" hidden>'+esc(c.name.split(" ").map(s=>s[0]).join("").slice(0,3))+'</span></figure><div class="card-body"><h3>'+esc(c.name)+'</h3><p>'+esc(c.role)+'</p><p>Fuente visual: adaptación anime</p><div class="card-links"><a href="'+esc(c.page)+'" target="_blank" rel="noreferrer">Ficha oficial ↗</a><a href="'+esc(c.img)+'" target="_blank" rel="noreferrer">Ver original sin marca ↗</a></div></div></article>').join("")||'<p>No hay resultados.</p>';}
+const techniqueTypeLabels={"general":"Capacidad general","equipment":"Equipo","signature-technique":"Técnica insignia","tactical-method":"Método táctico","specialty":"Especialidad","artifact-system":"Sistema de reliquia","supernatural-state":"Estado sobrenatural","combat-context":"Contexto de combate"};
+let techniqueEntries=[];
+function renderTechniqueCatalog(){
+ const q=(document.getElementById("technique-search")?.value||"").toLowerCase().trim();
+ const f=document.getElementById("technique-filter")?.value||"";
+ const list=techniqueEntries.filter(t=>(!f||t.type===f)&&(t.name+" "+t.owner+" "+t.description+" "+t.limits).toLowerCase().includes(q));
+ const card=t=>'<article class="visual-card"><div class="sigil">'+(t.type==="equipment"?"⬡":t.type==="signature-technique"?"✦":t.type==="artifact-system"?"◇":t.type==="specialty"?"✧":"⚔")+'</div><h3>'+esc(t.name)+'</h3><p><strong>Tipo:</strong> '+esc(techniqueTypeLabels[t.type]||t.type)+' · <strong>Usuario:</strong> '+esc(t.owner)+'</p><p>'+esc(t.description)+'</p><p><strong>Límites:</strong> '+esc(t.limits)+'</p><small>Continuidad: '+esc((t.continuity||[]).join(", "))+' · '+esc(t.confidence||"confianza no indicada")+'</small></article>';
+ document.getElementById("technique-catalog").innerHTML=list.map(card).join("")||'<p>No hay resultados para esos filtros.</p>';
+ const equipment=techniqueEntries.filter(t=>["equipment","artifact-system"].includes(t.type));
+ document.getElementById("equipment-catalog").innerHTML=equipment.map(card).join("")||'<p>No hay objetos o sistemas documentados todavía.</p>';
+}
+async function loadTechniqueCatalog(){
+ try{
+  const response=await fetch("./combat-techniques.json");
+  if(!response.ok)throw new Error("HTTP "+response.status);
+  const data=await response.json();
+  if(!Array.isArray(data.entries))throw new Error("Formato de catálogo inválido");
+  techniqueEntries=data.entries;
+  const filter=document.getElementById("technique-filter");
+  [...new Set(techniqueEntries.map(t=>t.type))].forEach(type=>{const option=document.createElement("option");option.value=type;option.textContent=techniqueTypeLabels[type]||type;filter.appendChild(option);});
+  renderTechniqueCatalog();
+ }catch(error){
+  const msg='<p>No se pudo cargar el catálogo desde esta ubicación. Abrí WordWaifu desde GitHub Pages o un servidor local para habilitar la lectura de JSON. <a href="combat-techniques.json">Abrir el archivo de datos</a>.</p>';
+  document.getElementById("technique-catalog").innerHTML=msg;
+  document.getElementById("equipment-catalog").innerHTML=msg;
+ }
+}
+document.getElementById("technique-search").addEventListener("input",renderTechniqueCatalog);
+document.getElementById("technique-filter").addEventListener("change",renderTechniqueCatalog);
+
 document.getElementById("character-search").addEventListener("input",renderGallery);document.getElementById("character-filter").addEventListener("change",renderGallery);
 document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-tab]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));document.querySelectorAll(".section").forEach(x=>x.classList.toggle("active",x.id==="section-"+b.dataset.tab));}));
-showPlace("midgar");renderGallery();
+showPlace("midgar");renderGallery();loadTechniqueCatalog();
 })();
 </script>
 </body></html>
