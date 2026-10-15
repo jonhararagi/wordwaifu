@@ -17,6 +17,10 @@ assert.ok(dossier.continuities.some(item => item.id === "web-novel" && item.stat
 assert.ok(dossier.characters.length >= 20, "dossier should provide a useful initial cast");
 assert.ok(dossier.organizations.length >= 5, "dossier should map core factions");
 assert.ok(dossier.storyArcs.length >= 6, "dossier should map major narrative arcs");
+assert.ok(dossier.volumeGuide.length >= 7, "dossier should map the first seven light-novel volumes");
+assert.ok(dossier.mediaCatalog.some(item => item.id === "movie-lost-echoes"), "announced movie should be tracked separately");
+assert.ok(dossier.relationships.length >= 15, "dossier should map character and faction relationships");
+assert.ok(dossier.chronology.length >= 10, "dossier should include a narrative chronology");
 assert.ok(dossier.powerSystem.categories.length >= 5, "power system should include multiple categories");
 assert.ok(dossier.generatorRules.length >= 8, "generator needs explicit continuity and narrative rules");
 assert.ok(dossier.sources.some(source => source.type === "official-primary" && /^https:\/\//.test(source.url)), "official source links are required");
