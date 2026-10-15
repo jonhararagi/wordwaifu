@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "universeId": "eminence-in-shadow",
+  "title": "The Eminence in Shadow — catálogo visual",
+  "language": "es",
+  "status": "initial-visual-corpus",
+  "visualPolicy": {
+    "canonPriority": "light-novel",
+    "adaptationImages": "Visual reference only; anime art does not prove light-novel-only details.",
+    "mapStatus": "schematic-not-to-scale",
+    "copyright": "Official images are hotlinked from the rights-holder's official anime site; this repository does not mirror them. Noncommercial educational intent is not a blanket license to redistribute copies.",
+    "sourceAttributionRequired": true
+  },
+  "atlas": {
+    "path": "atlas.html",
+    "type": "interactive-svg-map-and-visual-catalog",
+    "locations": [
+      {
+        "id": "midgar",
+        "name": "Reino de Midgar",
+        "continuity": "light-novel",
+        "certainty": "regional-schematic",
+        "sourceUrl": "https://yenpress.com/series/the-eminence-in-shadow-light-novel"
+      },
+      {
+        "id": "academy",
+        "name": "Academia de Midgar",
+        "continuity": "light-novel-and-anime",
+        "certainty": "illustrative-pin-not-canonical-coordinate",
+        "sourceUrl": "https://shadow-garden.jp/1st/character/"
+      },
+      {
+        "id": "orianna",
+        "name": "Reino de Oriana",
+        "continuity": "light-novel",
+        "certainty": "regional-schematic",
+        "sourceUrl": "https://yenpress.com/titles/9781975341855-the-eminence-in-shadow-vol-4-light-novel"
+      },
+      {
+        "id": "lawless",
+        "name": "Ciudad sin Ley",
+        "continuity": "light-novel",
+        "certainty": "illustrative-pin-not-canonical-coordinate",
+        "sourceUrl": "https://yenpress.com/titles/9781975315771-the-eminence-in-shadow-vol-3-light-novel"
+      },
+      {
+        "id": "sanctuary",
+        "name": "Santuario",
+        "continuity": "light-novel",
+        "certainty": "illustrative-pin-not-canonical-coordinate",
+        "sourceUrl": "https://yenpress.com/titles/9781975387006-the-eminence-in-shadow-vol-2-light-novel"
+      },
+      {
+        "id": "sacred",
+        "name": "Tierra Sagrada",
+        "continuity": "light-novel",
+        "certainty": "illustrative-pin-not-canonical-coordinate",
+        "sourceUrl": "https://yenpress.com/titles/9781975387006-the-eminence-in-shadow-vol-2-light-novel"
+      },
+      {
+        "id": "elf",
+        "name": "País élfico / disputa sucesoria",
+        "continuity": "light-novel",
+        "certainty": "official-name-and-geography-pending",
+        "sourceUrl": "https://yenpress.com/titles/9798855447224-the-eminence-in-shadow-vol-7-light-novel"
+      },
+      {
+        "id": "japan",
+        "name": "Japón contemporáneo",
+        "continuity": "light-novel-and-anime",
+        "certainty": "separate-world-not-physical-route",
+        "sourceUrl": "https://yenpress.com/titles/9781975359058-the-eminence-in-shadow-vol-1-light-novel"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "cid-shadow",
+      "name": "Cid Kagenou / Shadow",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara1_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara1.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "alpha",
+      "name": "Alpha",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara4_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara4.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "beta",
+      "name": "Beta",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara5_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara5.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara6_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara6.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "delta",
+      "name": "Delta",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara7_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara7.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "epsilon",
+      "name": "Epsilon",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara8_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara8.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "zeta",
+      "name": "Zeta",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara9_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara9.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "eta",
+      "name": "Eta",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara10_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara10.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "alexia",
+      "name": "Alexia Midgar",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara2_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara2.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "rose",
+      "name": "Rose Oriana",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara12_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara12.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "claire",
+      "name": "Claire Kagenou",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara11_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara11.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora",
+      "imageUrl": "https://shadow-garden.jp/1st/assets/img/character/chara26_main1.png",
+      "sourceUrl": "https://shadow-garden.jp/1st/character/chara26.php",
+      "kind": "official-anime-image",
+      "hosting": "external-hotlink",
+      "rights": "copyright-holder-retains-rights",
+      "continuity": "anime-visual-reference"
+    }
+  ],
+  "visualConcepts": [
+    {
+      "id": "magic-control",
+      "name": "Control y compresión mágica",
+      "kind": "original-icon",
+      "evidence": "general-rule",
+      "sourceStatus": "needs-volume-chapter-locator"
+    },
+    {
+      "id": "physical-reinforcement",
+      "name": "Refuerzo corporal",
+      "kind": "original-icon",
+      "evidence": "general-rule",
+      "sourceStatus": "needs-volume-chapter-locator"
+    },
+    {
+      "id": "i-am-atomic",
+      "name": "I Am Atomic",
+      "kind": "original-icon",
+      "evidence": "signature-technique",
+      "sourceStatus": "needs-scene-locator"
+    },
+    {
+      "id": "swordsmanship",
+      "name": "Esgrima y combate técnico",
+      "kind": "original-icon",
+      "evidence": "general-rule",
+      "sourceStatus": "needs-scene-locator"
+    },
+    {
+      "id": "possessed",
+      "name": "Posesión demoníaca",
+      "kind": "original-icon",
+      "evidence": "worldbuilding",
+      "sourceStatus": "spoiler-gated"
+    },
+    {
+      "id": "stealth-intelligence",
+      "name": "Sigilo e inteligencia",
+      "kind": "original-icon",
+      "evidence": "organization-practice",
+      "sourceStatus": "needs-scene-locator"
+    },
+    {
+      "id": "swords-equipment",
+      "name": "Espadas y equipo",
+      "kind": "original-icon",
+      "evidence": "conceptual-only",
+      "sourceStatus": "individual-weapon-census-pending"
+    },
+    {
+      "id": "artifacts",
+      "name": "Reliquias y círculos mágicos",
+      "kind": "original-icon",
+      "evidence": "conceptual-only",
+      "sourceStatus": "individual-artifact-census-pending"
+    }
+  ],
+  "completionGates": [
+    "Cotejar ubicaciones con la novela ligera por volumen/capítulo antes de fijar geografía.",
+    "No presentar posiciones esquemáticas como coordenadas canónicas.",
+    "Añadir armas, reliquias, escenarios y poderes solo con fuente y continuidad etiquetadas.",
+    "Revisar disponibilidad y permisos antes de descargar o redistribuir imágenes oficiales.",
+    "Añadir imágenes generadas originales cuando exista un flujo de generación autorizado; no atribuir ilustraciones originales a los titulares de la obra."
+  ]
+}
