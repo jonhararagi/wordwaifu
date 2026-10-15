@@ -1,0 +1,827 @@
+{
+  "schemaVersion": 1,
+  "id": "eminence-in-shadow",
+  "title": "The Eminence in Shadow / Kage no Jitsuryokusha ni Naritakute!",
+  "language": "es",
+  "integrationStatus": "starter-corpus",
+  "canonPolicy": {
+    "summary": "Expediente de trabajo para creación narrativa; no es una transcripción ni una enciclopedia cerrada.",
+    "sources": "Resúmenes y descripciones redactados de forma original. Las fuentes enlazadas orientan la verificación; una referencia general no prueba por sí sola cada detalle.",
+    "continuityRule": "No mezclar automáticamente novela ligera, web novel, manga y anime. Registrar versión y punto de la historia en cada proyecto.",
+    "spoilerPolicy": "Este archivo contiene spoilers de premisa, personajes, organizaciones y arcos. Los detalles finos de volúmenes posteriores deben verificarse antes de marcarse como definitivos."
+  },
+  "continuities": [
+    {
+      "id": "light-novel",
+      "label": "Novela ligera principal",
+      "status": "primary",
+      "notes": "Continuidad prioritaria para las reglas y la progresión narrativa. Verificar cada acontecimiento contra el volumen concreto."
+    },
+    {
+      "id": "anime",
+      "label": "Adaptación anime",
+      "status": "adaptation",
+      "notes": "Puede cambiar el ritmo, el orden, la puesta en escena y el nivel de detalle. Registrar temporada y episodio al citar un evento."
+    },
+    {
+      "id": "manga",
+      "label": "Adaptación manga",
+      "status": "adaptation",
+      "notes": "Tratamiento visual y cómico propio; no usar una escena exclusiva del manga como prueba automática de la novela."
+    },
+    {
+      "id": "web-novel",
+      "label": "Web novel",
+      "status": "divergent",
+      "notes": "Tratar como rama divergente, especialmente tras cambios de desarrollo respecto de la novela ligera. No fusionar sus eventos con la continuidad principal sin etiqueta."
+    }
+  ],
+  "setting": {
+    "premise": "Minoru Kageno muere en su mundo de origen y renace como Cid Kagenou en un mundo donde la magia existe. En vez de aspirar al protagonismo convencional, organiza su vida para convertirse en una figura que actúa desde las sombras. Sus improvisaciones y fantasías escénicas se cruzan con una amenaza conspirativa auténtica.",
+    "geographyAndPolities": [
+      {
+        "id": "midgar",
+        "name": "Reino de Midgar",
+        "role": "Centro político, noble y académico de buena parte de la historia; sede de la academia donde convergen linajes, rivalidades y secretos."
+      },
+      {
+        "id": "orianna",
+        "name": "Reino de Oriana",
+        "role": "Estado asociado con la cultura artística y con conflictos de sucesión, poder y control político."
+      },
+      {
+        "id": "lawless-city",
+        "name": "Ciudad sin Ley",
+        "role": "Territorio de facciones criminales, luchadores y reglas de supervivencia distintas a las de las cortes."
+      },
+      {
+        "id": "sanctuary",
+        "name": "Santuario",
+        "role": "Espacio vinculado con experimentos, reliquias, memoria histórica y revelaciones sobre la amenaza demoníaca."
+      },
+      {
+        "id": "japan",
+        "name": "Japón contemporáneo",
+        "role": "Mundo de origen de Minoru; reaparece como continuidad y escenario relevante en desarrollos posteriores."
+      }
+    ],
+    "rules": [
+      {
+        "id": "magic",
+        "rule": "La magia es una capacidad entrenable, pero su control y volumen varían entre individuos; la técnica, la práctica y la comprensión importan tanto como la fuerza bruta."
+      },
+      {
+        "id": "possessed",
+        "rule": "La posesión demoníaca se relaciona con una manifestación inestable de poder y con la persecución histórica de ciertas mujeres; no debe presentarse como una simple enfermedad sin contexto."
+      },
+      {
+        "id": "cult",
+        "rule": "El Culto de Diablos opera como una organización real y antigua; sus células, rangos, recursos y secretos no equivalen a una sola conspiración local."
+      },
+      {
+        "id": "shadow-garden",
+        "rule": "Shadow Garden es una red clandestina con agentes, células y recursos propios. La interpretación que sus integrantes hacen de Cid difiere radicalmente de la intención con que él actúa."
+      },
+      {
+        "id": "artifacts",
+        "rule": "Reliquias, tecnología antigua y experimentación pueden revelar o amplificar poder, pero no deben tratarse como magia ilimitada sin costes ni condiciones."
+      },
+      {
+        "id": "secrecy",
+        "rule": "La identidad pública y la identidad encubierta son motores causales: una revelación altera alianzas, exposición, reputación y capacidad de operar."
+      }
+    ]
+  },
+  "organizations": [
+    {
+      "id": "shadow-garden",
+      "name": "Shadow Garden",
+      "alignment": "anti-cult / clandestine",
+      "leader": "Cid Kagenou / Shadow",
+      "purpose": "Combatir el Culto de Diablos y sus operaciones, recopilar información y desmantelar su red.",
+      "notes": "Sus integrantes creen en la misión y en la autoridad de Shadow; muchas de sus decisiones son estratégicas, no meras actuaciones."
+    },
+    {
+      "id": "cult-of-diablos",
+      "name": "Culto de Diablos",
+      "alignment": "antagonistic",
+      "leader": "estructura jerárquica; figuras centrales varían por arco",
+      "purpose": "Preservar el poder de su organización mediante investigación, control político, reliquias y experimentos asociados a Diablos.",
+      "notes": "No reducirlo a un grupo uniforme: existen células, dirigentes, Caballeros de las Rondas y objetivos particulares."
+    },
+    {
+      "id": "seven-shades",
+      "name": "Las Siete Sombras",
+      "alignment": "Shadow Garden",
+      "leader": "Shadow",
+      "purpose": "Núcleo de las primeras subordinadas y principales organizadoras de la expansión de Shadow Garden.",
+      "members": [
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Epsilon",
+        "Zeta",
+        "Eta"
+      ],
+      "notes": "Cada una desarrolla una especialidad y una visión propia de la misión; no son intercambiables."
+    },
+    {
+      "id": "midgar-royalty",
+      "name": "Casa real y élites de Midgar",
+      "alignment": "mixed",
+      "purpose": "Mantener la autoridad del reino, la academia y el equilibrio entre familias nobles.",
+      "notes": "La información incompleta y la política de sucesión crean conflictos que no siempre se resuelven mediante combate."
+    },
+    {
+      "id": "knight-order",
+      "name": "Órdenes de caballería y fuerzas estatales",
+      "alignment": "mixed",
+      "purpose": "Proteger instituciones y sostener el orden público.",
+      "notes": "Sus miembros pueden ser rivales, aliados circunstanciales o víctimas de la desinformación del Culto."
+    },
+    {
+      "id": "lawless-factions",
+      "name": "Facciones de la Ciudad sin Ley",
+      "alignment": "mixed",
+      "purpose": "Controlar territorio, recursos, reputación y oportunidades de combate.",
+      "notes": "La fuerza y el miedo tienen valor político local; las alianzas suelen ser temporales."
+    },
+    {
+      "id": "orianna-state",
+      "name": "Corte y facciones de Oriana",
+      "alignment": "mixed",
+      "purpose": "Competir por legitimidad, gobierno y control cultural del reino.",
+      "notes": "La trama de Rose muestra cómo la identidad personal choca con el deber estatal y la manipulación externa."
+    }
+  ],
+  "powerSystem": {
+    "principles": [
+      "El control fino de la magia y del cuerpo diferencia a los combatientes expertos.",
+      "La experiencia y la preparación pueden permitir que un personaje inferior en fuerza bruta sobreviva mediante información, terreno o engaño.",
+      "Las técnicas de Shadow combinan refuerzo, compresión y liberación de magia; su escala es excepcional y no debe asignarse como estándar a personajes originales.",
+      "La posesión, las reliquias y la experimentación introducen riesgos, vulnerabilidades y consecuencias físicas o políticas.",
+      "La ocultación de identidad y de intención es una ventaja táctica, pero el exceso de secreto también produce malentendidos."
+    ],
+    "categories": [
+      {
+        "id": "magic-control",
+        "name": "Control mágico",
+        "description": "Percepción, circulación, contención y liberación de energía; depende de técnica y entrenamiento."
+      },
+      {
+        "id": "physical-reinforcement",
+        "name": "Refuerzo corporal",
+        "description": "Uso de magia para aumentar velocidad, fuerza, resistencia y precisión."
+      },
+      {
+        "id": "swordsmanship",
+        "name": "Esgrima y combate técnico",
+        "description": "Lectura del rival, tempo, postura, distancia y explotación de aperturas."
+      },
+      {
+        "id": "specialized-techniques",
+        "name": "Técnicas singulares",
+        "description": "Métodos propios de un individuo; registrar condición de activación, alcance, límite y coste."
+      },
+      {
+        "id": "artifacts-and-experiments",
+        "name": "Reliquias y experimentación",
+        "description": "Objetos o procedimientos que pueden alterar acceso a información o poder; documentar origen y efectos comprobados."
+      },
+      {
+        "id": "stealth-and-intelligence",
+        "name": "Sigilo e inteligencia",
+        "description": "Infiltración, identidades falsas, vigilancia, redes de información y control de rumores."
+      }
+    ],
+    "signatureTechnique": {
+      "name": "I Am Atomic",
+      "owner": "Shadow",
+      "description": "Técnica extrema que concentra y libera una cantidad abrumadora de poder mágico en un ataque de escala excepcional.",
+      "constraints": "No usar como habilidad genérica; la escala depende del dominio extraordinario de Shadow y la escena concreta."
+    }
+  },
+  "characters": [
+    {
+      "id": "cid-kagenou",
+      "name": "Cid Kagenou / Shadow",
+      "role": "protagonista; fundador y figura central de Shadow Garden",
+      "personality": [
+        "teatral",
+        "pragmático en el combate",
+        "obsesionado con el ideal de eminencia en las sombras",
+        "opaco para quienes lo rodean"
+      ],
+      "motivation": "Representar el arquetipo del poder secreto y controlar cuándo aparecer y desaparecer.",
+      "abilities": [
+        "control mágico excepcional",
+        "combate cuerpo a cuerpo y con espada",
+        "infiltración y actuación",
+        "técnica I Am Atomic"
+      ],
+      "relationships": [
+        "Las Siete Sombras lo veneran como líder; él no comprende plenamente cuánto han construido a partir de sus palabras y actos."
+      ],
+      "narrativeUse": "El contraste entre la intención performativa de Cid y las consecuencias reales crea comedia, tensión y escalada."
+    },
+    {
+      "id": "alpha",
+      "name": "Alpha",
+      "role": "primera de las Siete Sombras; líder operativa",
+      "personality": [
+        "serena",
+        "estratégica",
+        "leal",
+        "disciplinada"
+      ],
+      "motivation": "Convertir la misión de Shadow en una organización eficaz y derrotar al Culto.",
+      "abilities": [
+        "combate mágico refinado",
+        "liderazgo",
+        "planificación y coordinación"
+      ],
+      "relationships": [
+        "Mantiene autoridad operativa sobre Shadow Garden y gran respeto por Shadow."
+      ],
+      "narrativeUse": "Representa el coste administrativo y estratégico de convertir una leyenda en una organización real."
+    },
+    {
+      "id": "beta",
+      "name": "Beta",
+      "role": "Sombra; agente, cronista y escritora",
+      "personality": [
+        "observadora",
+        "devota",
+        "imaginativa",
+        "competitiva"
+      ],
+      "motivation": "Servir a Shadow y registrar o interpretar sus acciones.",
+      "abilities": [
+        "espada y magia",
+        "infiltración",
+        "recopilación de información",
+        "escritura"
+      ],
+      "relationships": [
+        "Su lectura de Shadow está influida por la admiración y por su interpretación de sus actos."
+      ],
+      "narrativeUse": "Conecta propaganda, relato heroico y malentendidos sobre la figura de Shadow."
+    },
+    {
+      "id": "gamma",
+      "name": "Gamma",
+      "role": "Sombra; desarrollo económico y administración",
+      "personality": [
+        "inteligente",
+        "formal",
+        "torpe físicamente en comparación con sus compañeras"
+      ],
+      "motivation": "Financiar y ampliar la red con estructuras comerciales.",
+      "abilities": [
+        "gestión",
+        "finanzas",
+        "conocimiento económico"
+      ],
+      "relationships": [
+        "Su infraestructura comercial sostiene operaciones de Shadow Garden."
+      ],
+      "narrativeUse": "Hace visible que la organización requiere logística y capital además de combatientes."
+    },
+    {
+      "id": "delta",
+      "name": "Delta",
+      "role": "Sombra; combatiente de fuerza excepcional",
+      "personality": [
+        "impulsiva",
+        "directa",
+        "competitiva",
+        "instintiva"
+      ],
+      "motivation": "Combatir, cazar y ganarse la aprobación de Shadow.",
+      "abilities": [
+        "fuerza y sentidos excepcionales",
+        "combate agresivo",
+        "rastreo"
+      ],
+      "relationships": [
+        "Su lealtad es intensa, pero su estilo necesita dirección."
+      ],
+      "narrativeUse": "Contrasta la planificación con la potencia directa y los impulsos."
+    },
+    {
+      "id": "epsilon",
+      "name": "Epsilon",
+      "role": "Sombra; especialista en presentación y control mágico",
+      "personality": [
+        "orgullosa",
+        "meticulosa",
+        "sensible a la imagen pública"
+      ],
+      "motivation": "Perfeccionar su imagen, técnica y posición.",
+      "abilities": [
+        "control mágico preciso",
+        "combate con espada",
+        "actuación y música"
+      ],
+      "relationships": [
+        "La comparación con otras Sombras influye en su competitividad."
+      ],
+      "narrativeUse": "Explora la relación entre identidad, apariencia, disciplina y reconocimiento."
+    },
+    {
+      "id": "zeta",
+      "name": "Zeta",
+      "role": "Sombra; operaciones encubiertas",
+      "personality": [
+        "independiente",
+        "reservada",
+        "orientada a objetivos"
+      ],
+      "motivation": "Asegurar la victoria de Shadow Garden mediante operaciones que otros no ven.",
+      "abilities": [
+        "infiltración",
+        "inteligencia",
+        "acción independiente"
+      ],
+      "relationships": [
+        "Su autonomía puede crear tensiones con la cadena de mando."
+      ],
+      "narrativeUse": "Introduce dilemas sobre los límites de la lealtad y la legitimidad de los métodos secretos."
+    },
+    {
+      "id": "eta",
+      "name": "Eta",
+      "role": "Sombra; investigación y tecnología",
+      "personality": [
+        "analítica",
+        "absorta en sus proyectos",
+        "poco convencional"
+      ],
+      "motivation": "Investigar fenómenos y ampliar conocimiento útil para la organización.",
+      "abilities": [
+        "investigación",
+        "ingeniería y experimentación",
+        "análisis"
+      ],
+      "relationships": [
+        "Su trabajo aporta recursos, pero sus prioridades no siempre coinciden con la sensibilidad de otros."
+      ],
+      "narrativeUse": "Permite explorar el peligro de experimentar con poder sin comprender todas las consecuencias."
+    },
+    {
+      "id": "claire-kagenou",
+      "name": "Claire Kagenou",
+      "role": "hermana mayor de Cid",
+      "personality": [
+        "protectora",
+        "enérgica",
+        "orgullosa"
+      ],
+      "motivation": "Proteger a su hermano y probar su propia capacidad como combatiente.",
+      "abilities": [
+        "esgrima",
+        "magia y combate entrenado"
+      ],
+      "relationships": [
+        "Su cercanía con Cid contrasta con su desconocimiento de su identidad secreta."
+      ],
+      "narrativeUse": "La familia pone en riesgo la separación entre la vida ordinaria y la vida clandestina."
+    },
+    {
+      "id": "alexia-midgar",
+      "name": "Alexia Midgar",
+      "role": "princesa y estudiante de la academia",
+      "personality": [
+        "aguda",
+        "orgullosa",
+        "pragmática",
+        "más compleja de lo que aparenta"
+      ],
+      "motivation": "Definir su propio valor en una corte que juzga linaje, técnica y utilidad.",
+      "abilities": [
+        "esgrima",
+        "lectura política",
+        "capacidad de negociación"
+      ],
+      "relationships": [
+        "Su relación con Cid comienza bajo expectativas erróneas y evoluciona a través de sospechas y crisis."
+      ],
+      "narrativeUse": "Sirve para el choque entre apariencia social, poder real y observación incompleta."
+    },
+    {
+      "id": "iris-midgar",
+      "name": "Iris Midgar",
+      "role": "princesa y combatiente de alto rango",
+      "personality": [
+        "disciplinada",
+        "orgullosa",
+        "responsable"
+      ],
+      "motivation": "Defender el reino y preservar la autoridad de la corona.",
+      "abilities": [
+        "combate con espada",
+        "liderazgo militar"
+      ],
+      "relationships": [
+        "Su posición la enfrenta a la brecha entre el poder estatal y Shadow."
+      ],
+      "narrativeUse": "Muestra cómo una institución puede interpretar mal una amenaza que supera su marco de referencia."
+    },
+    {
+      "id": "rose-oriana",
+      "name": "Rose Oriana",
+      "role": "princesa de Oriana y figura central de un conflicto de sucesión",
+      "personality": [
+        "idealista",
+        "decidida",
+        "capaz de sacrificio"
+      ],
+      "motivation": "Actuar según sus convicciones aunque el deber político y los vínculos la pongan en peligro.",
+      "abilities": [
+        "esgrima",
+        "magia",
+        "liderazgo bajo presión"
+      ],
+      "relationships": [
+        "Su vínculo con Cid y Shadow Garden se transforma según la continuidad y el arco."
+      ],
+      "narrativeUse": "La tensión entre identidad, deber, amor y legitimidad estatal."
+    },
+    {
+      "id": "sherry-barnett",
+      "name": "Sherry Barnett",
+      "role": "investigadora brillante ligada a la academia",
+      "personality": [
+        "inteligente",
+        "educada",
+        "emocionalmente vulnerable"
+      ],
+      "motivation": "Comprender la magia y las reliquias, y dar sentido a pérdidas personales.",
+      "abilities": [
+        "investigación",
+        "análisis de artefactos",
+        "conocimiento académico"
+      ],
+      "relationships": [
+        "Sus lazos familiares y su confianza en ciertas autoridades se convierten en factores de vulnerabilidad."
+      ],
+      "narrativeUse": "Conecta conocimiento científico, manipulación y consecuencias personales."
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora / Bruja de la Calamidad",
+      "role": "figura histórica sobrenatural vinculada a Diablos y al Santuario",
+      "personality": [
+        "enigmática",
+        "melancólica",
+        "capaz de ironía"
+      ],
+      "motivation": "Su historia y objetivos deben registrarse por etapa y revelación, no reducirse a una etiqueta.",
+      "abilities": [
+        "poder sobrenatural excepcional",
+        "relación con el Santuario y los recuerdos"
+      ],
+      "relationships": [
+        "La conexión con Cid y las revelaciones históricas requiere control de spoilers."
+      ],
+      "narrativeUse": "Es un punto de unión entre mito, memoria, experimentación y verdad histórica."
+    },
+    {
+      "id": "beatrix",
+      "name": "Beatrix",
+      "role": "espadachina de renombre conocida como diosa de la guerra",
+      "personality": [
+        "directa",
+        "segura",
+        "competitiva"
+      ],
+      "motivation": "Encontrar un rival y actuar según su propio criterio.",
+      "abilities": [
+        "esgrima de élite",
+        "percepción de combate"
+      ],
+      "relationships": [
+        "Sus encuentros con Shadow evidencian la diferencia entre reputación pública y poder real."
+      ],
+      "narrativeUse": "Permite medir el estándar de los mejores combatientes reconocidos."
+    },
+    {
+      "id": "yukime",
+      "name": "Yukime",
+      "role": "líder influyente de la Ciudad sin Ley y figura de la economía clandestina",
+      "personality": [
+        "calculadora",
+        "paciente",
+        "ambiciosa"
+      ],
+      "motivation": "Aumentar su autonomía y ajustar cuentas con poderes que la dañaron.",
+      "abilities": [
+        "estrategia",
+        "redes comerciales",
+        "combate y negociación"
+      ],
+      "relationships": [
+        "La alianza con Shadow Garden se construye por intereses convergentes, no por obediencia simple."
+      ],
+      "narrativeUse": "Une economía, venganza, política criminal y alianzas de conveniencia."
+    },
+    {
+      "id": "rose-oriana-cult",
+      "name": "Rose Oriana (continuidad política)",
+      "role": "personaje con estado narrativo cambiante",
+      "personality": [
+        "determinada",
+        "leal a sus ideales"
+      ],
+      "motivation": "Equilibrar su identidad personal con las consecuencias de asumir un papel político.",
+      "abilities": [
+        "combate y capacidad de liderazgo"
+      ],
+      "relationships": [
+        "Registrar por arco; no duplicar esta ficha como una segunda persona en bases de datos, sino como un estado alternativo de Rose."
+      ],
+      "narrativeUse": "Ejemplo de ficha con estados temporales para mantener continuidad."
+    },
+    {
+      "id": "christina-hope",
+      "name": "Christina Hope",
+      "role": "estudiante noble y figura secundaria de los conflictos de Midgar",
+      "personality": [
+        "observadora",
+        "orgullosa",
+        "capaz de decisiones difíciles"
+      ],
+      "motivation": "Proteger su posición y entender las fuerzas que trastocan el orden social.",
+      "abilities": [
+        "habilidades de combate y lectura social, según etapa"
+      ],
+      "relationships": [
+        "Los detalles de su evolución deben vincularse al volumen o episodio que los presenta."
+      ],
+      "narrativeUse": "Amplía las consecuencias sociales de la acción clandestina fuera del elenco principal."
+    },
+    {
+      "id": "annerose",
+      "name": "Annerose",
+      "role": "espadachina y combatiente de otra región",
+      "personality": [
+        "disciplinada",
+        "competitiva",
+        "honorable"
+      ],
+      "motivation": "Medir su fuerza y mejorar mediante enfrentamientos significativos.",
+      "abilities": [
+        "esgrima",
+        "combate mágico"
+      ],
+      "relationships": [
+        "Su papel depende de la continuidad y del arco en el que aparece."
+      ],
+      "narrativeUse": "Contrapunto a las escuelas de combate y a las jerarquías de Midgar."
+    },
+    {
+      "id": "gettan",
+      "name": "Gettan",
+      "role": "antagonista relacionado con el conflicto de la Ciudad sin Ley",
+      "personality": [
+        "implacable",
+        "calculador"
+      ],
+      "motivation": "Conservar o aumentar poder mediante violencia y control.",
+      "abilities": [
+        "combate",
+        "uso de fuerza e influencia"
+      ],
+      "relationships": [
+        "Su historia se enlaza con Yukime y con las luchas de poder locales."
+      ],
+      "narrativeUse": "Muestra cómo el antagonismo puede tener raíces personales y económicas."
+    },
+    {
+      "id": "crimson",
+      "name": "Crimson",
+      "role": "figura antagonista vinculada a la Ciudad sin Ley",
+      "personality": [
+        "depredadora",
+        "ambiciosa"
+      ],
+      "motivation": "Mantener dominio en un entorno gobernado por fuerza y temor.",
+      "abilities": [
+        "combate",
+        "influencia sobre su facción"
+      ],
+      "relationships": [
+        "Sus alianzas son instrumentales y sujetas a traición."
+      ],
+      "narrativeUse": "Representa la violencia organizada fuera de las instituciones formales."
+    },
+    {
+      "id": "juggernaut",
+      "name": "Juggernaut",
+      "role": "combatiente temido de la Ciudad sin Ley",
+      "personality": [
+        "agresivo",
+        "dominante"
+      ],
+      "motivation": "Imponerse en el orden brutal de la ciudad.",
+      "abilities": [
+        "fuerza y combate de alto riesgo"
+      ],
+      "relationships": [
+        "Su posición se entiende dentro del equilibrio entre facciones locales."
+      ],
+      "narrativeUse": "Prueba de supervivencia para personajes que no controlan el tablero político."
+    },
+    {
+      "id": "goldoh",
+      "name": "Goldoh Kinmeki",
+      "role": "luchador y figura de combate",
+      "personality": [
+        "orgulloso",
+        "tenaz"
+      ],
+      "motivation": "Proteger su honor y demostrar su capacidad.",
+      "abilities": [
+        "combate físico"
+      ],
+      "relationships": [
+        "La relación con Quinton refleja rivalidad y cooperación situacional."
+      ],
+      "narrativeUse": "Permite representar la cultura de combate como reputación y espectáculo."
+    },
+    {
+      "id": "quinton",
+      "name": "Quinton",
+      "role": "luchador asociado al circuito de combate",
+      "personality": [
+        "duro",
+        "competitivo"
+      ],
+      "motivation": "Sobrevivir y mantener reputación en un entorno hostil.",
+      "abilities": [
+        "combate físico y táctico"
+      ],
+      "relationships": [
+        "Con Goldoh comparte rivalidad y objetivos temporales."
+      ],
+      "narrativeUse": "Complementa el elenco de luchadores fuera de las academias."
+    },
+    {
+      "id": "akane-nishino",
+      "name": "Akane Nishino",
+      "role": "personaje asociado al Japón contemporáneo y a la continuidad posterior",
+      "personality": [
+        "reservada",
+        "marcada por experiencias traumáticas"
+      ],
+      "motivation": "Recuperar control sobre su vida tras verse atrapada en acontecimientos extraordinarios.",
+      "abilities": [
+        "No asignar poderes de fantasía sin verificar el punto de continuidad."
+      ],
+      "relationships": [
+        "Su presencia y estado deben etiquetarse por continuidad; no mezclar sin aviso sus acontecimientos con arcos tempranos del anime."
+      ],
+      "narrativeUse": "Conecta el mundo de origen con los desarrollos posteriores y exige especial cuidado de spoilers."
+    }
+  ],
+  "storyArcs": [
+    {
+      "id": "origin-and-shadow-aspiration",
+      "label": "Origen y fantasía de convertirse en Shadow",
+      "scope": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "summary": "La experiencia previa de Minoru fija su obsesión con el poder oculto. La reencarnación le da un mundo donde entrenar y construir una identidad que existe al margen de los héroes convencionales.",
+      "function": "Establece la ironía entre la intención personal y el efecto real de sus acciones."
+    },
+    {
+      "id": "academy-and-alexia",
+      "label": "Academia de Midgar y el caso Alexia",
+      "scope": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "summary": "La vida escolar y una relación aparentemente cotidiana abren la puerta a desapariciones, sospechas y a la primera exposición clara del conflicto entre la explicación oficial y la red clandestina.",
+      "function": "Cruza comedia social, identidad secreta y amenaza institucional."
+    },
+    {
+      "id": "shadow-garden-emergence",
+      "label": "Nacimiento y expansión de Shadow Garden",
+      "scope": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "summary": "Las primeras aliadas convierten un relato que Cid considera improvisado en una misión organizada contra enemigos que resultan existir realmente.",
+      "function": "Define el motor de información asimétrica que sostiene la serie."
+    },
+    {
+      "id": "sanctuary-and-aurora",
+      "label": "Santuario, reliquias y la Bruja de la Calamidad",
+      "scope": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "summary": "La búsqueda de respuestas sobre poderes y reliquias revela capas de historia que cuestionan la versión oficial del pasado.",
+      "function": "Amplía el misterio histórico y el sistema de poder."
+    },
+    {
+      "id": "lawless-city",
+      "label": "Ciudad sin Ley",
+      "scope": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "summary": "La trama se desplaza a un territorio donde el poder se negocia mediante facciones, luchadores, economía clandestina y alianzas frágiles.",
+      "function": "Prueba la capacidad de Shadow Garden fuera del orden estatal."
+    },
+    {
+      "id": "john-smith-and-the-economic-conflict",
+      "label": "John Smith y la guerra económica",
+      "scope": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "summary": "Una identidad encubierta y una operación financiera enfrentan intereses comerciales y la estructura de Shadow Garden; las decisiones de Cid producen efectos que los demás interpretan como estrategia.",
+      "function": "Demuestra que los secretos económicos pueden ser tan peligrosos como las armas."
+    },
+    {
+      "id": "orianna-crisis",
+      "label": "Crisis de Oriana y legitimidad política",
+      "scope": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "summary": "El destino de Rose se entrelaza con la disputa por el control del reino y con la capacidad del Culto para manipular instituciones.",
+      "function": "Convierte una decisión íntima en crisis nacional."
+    },
+    {
+      "id": "later-world-crossings",
+      "label": "Revelaciones posteriores y cruce de mundos",
+      "scope": [
+        "light-novel",
+        "web-novel"
+      ],
+      "summary": "Los acontecimientos posteriores expanden el alcance geográfico y las conexiones con el mundo moderno; esta zona requiere fichado por volumen para evitar mezclar versiones.",
+      "function": "Abre nuevas reglas de mundo y obliga a registrar el canon por continuidad."
+    }
+  ],
+  "generatorRules": [
+    "Seleccionar primero la continuidad y el punto de corte; no generar spoilers posteriores al punto elegido.",
+    "Conservar la asimetría de información: Cid, Shadow Garden, el Culto y las instituciones no conocen los mismos hechos.",
+    "No hacer que todos los personajes comprendan el plan de Cid; la discrepancia entre intención, interpretación y resultado es central.",
+    "Las victorias deben dejar consecuencias logísticas, políticas, sociales o de exposición.",
+    "Los personajes originales no deben superar gratuitamente a Shadow ni desplazar a las Siete Sombras sin justificación, límites y consecuencias.",
+    "Las facciones necesitan objetivos, recursos, información parcial y conflictos internos; no actuar como una masa uniforme.",
+    "Las técnicas de poder deben tener condición de uso, alcance, limitaciones y coste; evitar poderes omnipotentes sin reglas.",
+    "Los intereses románticos, traumas y relaciones de fanfiction deben marcarse como propuesta original, no como canon.",
+    "Cada capítulo generado debe registrar el estado de identidades, heridas, alianzas, sospechas, recursos y secretos revelados.",
+    "Separar siempre hechos canónicos confirmados, interpretaciones y material original."
+  ],
+  "sources": [
+    {
+      "id": "official-anime",
+      "type": "official-primary",
+      "title": "Sitio oficial del anime",
+      "url": "https://shadow-garden.jp/",
+      "use": "Referencias oficiales de adaptación, personajes, temporadas y anuncios; la cobertura varía por sección."
+    },
+    {
+      "id": "yen-press-ln",
+      "type": "publisher",
+      "title": "Yen Press — The Eminence in Shadow (light novel)",
+      "url": "https://yenpress.com/series/the-eminence-in-shadow-light-novel",
+      "use": "Ediciones oficiales en inglés y datos editoriales; no sustituye la lectura del volumen citado."
+    },
+    {
+      "id": "yen-press-manga",
+      "type": "publisher",
+      "title": "Yen Press — The Eminence in Shadow (manga)",
+      "url": "https://yenpress.com/series/the-eminence-in-shadow-manga",
+      "use": "Datos editoriales de la adaptación manga; mantenerla separada de la novela ligera."
+    },
+    {
+      "id": "kadokawa",
+      "type": "publisher",
+      "title": "KADOKAWA",
+      "url": "https://www.kadokawa.co.jp/",
+      "use": "Catálogo editorial japonés; localizar la ficha del volumen concreto al verificar detalles."
+    }
+  ],
+  "coverageGaps": [
+    "Censo exhaustivo de personajes secundarios por volumen y episodio, con alias y primera aparición.",
+    "Cronología evento por evento con referencias de volumen, capítulo, temporada y episodio.",
+    "Registro completo de las Siete Rondas y de las células del Culto, incluyendo estado y sucesión.",
+    "Matriz de relaciones con evolución temporal y conocimiento que posee cada personaje.",
+    "Inventario de técnicas, reliquias y experimentos con límites, costes y evidencia por continuidad.",
+    "Resúmenes por volumen y episodio verificados contra fuentes primarias; este dossier no debe etiquetarse como enciclopedia completa hasta cerrar esas brechas."
+  ]
+}
