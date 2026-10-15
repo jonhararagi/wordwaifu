@@ -113,3 +113,12 @@ El dossier ahora incluye fichas funcionales adicionales para agentes de Shadow G
 7. Pruebas de integridad, IDs estables, fuentes y validación de continuidad.
 
 No cambiar el estado a `complete` hasta cerrar esas tareas.
+
+
+## Atlas interactivo y catálogo visual
+
+- [Abrir atlas visual interactivo](atlas.html): mapa SVG con marcadores seleccionables, fichas de lugares, filtros de personajes, galería oficial y secciones de poderes, técnicas, armas y reliquias.
+- [Catálogo visual y procedencia de medios](visual-catalog.json): URLs exactas de imágenes oficiales, atribución, continuidad visual, nivel de certeza cartográfica y tareas de verificación.
+- [Prueba del atlas](../../tests/test_eminence_in_shadow_visual_atlas.cjs): valida los marcadores, las fuentes de las imágenes, las etiquetas de incertidumbre y los avisos de derechos.
+
+El mapa es un esquema editorial de WordWaifu, **no una cartografía oficial ni a escala**. Las ubicaciones relativas sirven para navegar por el corpus y no prueban fronteras, distancias ni rutas canónicas. Los retratos se cargan desde el sitio oficial del anime y no se copian al repositorio; son referencias visuales de la adaptación, no evidencia narrativa de la novela ligera. La intención educativa y no comercial no elimina por sí sola los derechos de autor.
