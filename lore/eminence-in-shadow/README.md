@@ -67,6 +67,17 @@ Estos son resúmenes de función narrativa, redactados de forma original; no sus
 
 Los enlaces editoriales sirven para localizar material oficial. Antes de convertir un detalle concreto en hecho verificado, registrar el volumen/capítulo/episodio y la fuente exacta.
 
+
+## Cobertura editorial y adaptaciones
+
+El expediente ahora incluye un mapa inicial de los volúmenes 1–7 de la novela ligera, con resúmenes breves redactados de forma original y enlaces a sus fichas editoriales. La disponibilidad puede diferir por idioma: comprobar edición y fecha antes de presentar un volumen como publicado en español o inglés.
+
+También se registran como ramas separadas el anime (temporadas 1 y 2), la película anunciada **Lost Echoes**, el manga principal, *Master of Garden — Seven Shadows Chronicles*, *Shadow Gaiden* y la web novel divergente. Las adaptaciones y los derivados no deben fusionarse en una cronología única sin etiquetas.
+
+## Relaciones y cronología
+
+El JSON añade una matriz inicial de relaciones entre personajes/facciones y una cronología de hitos. Son índices narrativos por arco, no sustituyen todavía el registro de cada capítulo o episodio.
+
 ## Pendiente para declarar cobertura completa
 
 1. Censo de secundarios por volumen/episodio y alias.
