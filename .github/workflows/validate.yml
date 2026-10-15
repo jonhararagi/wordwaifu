@@ -35,6 +35,7 @@ jobs:
           node --check tests/test_story_foundry.cjs
           node --check tests/test_story_universe_catalog.cjs
           node --check tests/test_eminence_in_shadow_dossier.cjs
+          node --check tests/test_eminence_in_shadow_episode_guide.cjs
           node --check src/art-studio.js
           node --check src/character-dossiers.js
           node --check tests/test_character_dossiers.cjs
@@ -50,6 +51,8 @@ jobs:
         run: node tests/test_story_universe_catalog.cjs
       - name: Validate Eminence in Shadow canon dossier foundations
         run: node tests/test_eminence_in_shadow_dossier.cjs
+      - name: Validate Eminence in Shadow anime episode guide
+        run: node tests/test_eminence_in_shadow_episode_guide.cjs
       - name: Validate mythic catalog IDs and relations
         run: node tests/test_mythic_catalog.cjs
       - name: Test power catalog generator
