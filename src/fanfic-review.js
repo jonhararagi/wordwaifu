@@ -164,6 +164,25 @@
         });
       });
     });
+    const actionRisk = /(abandonó|abandonar|dejó solo|dejó sola|se negó a ayudar|ignoró la petición|huyó sin avisar|robó|traicionó|traicionar)/i;
+    sentences.forEach(sentence => {
+      if (!actionRisk.test(sentence.text)) return;
+      const inSentence = mentions.filter(mention => mention.start < sentence.end && mention.end > sentence.start);
+      unique(inSentence.map(mention => mention.profile.id)).forEach(id => {
+        const profile = profiles.find(item => item.id === id);
+        const cues = [profile.role, profile.personality, profile.summary, profile.motivations, profile.secondary && profile.secondary.personality].filter(Boolean).join(" ");
+        if (!/responsable|precavid|prudente|cuidad|protector|compasiv|ayuda|servicio|atención|leal|honest|defiende|protege|asiste/i.test(cues)) return;
+        add({
+          rule: "possible-characterization-drift", severity: "review", confidence: "low",
+          profileId: profile.id, character: profile.name, excerpt: sentence.text,
+          start: sentence.start, end: sentence.end,
+          reason: "Esta acción podría contrastar con los rasgos o deberes documentados del personaje. La regla es deliberadamente prudente: una crisis, una orden o un cambio de carácter pueden justificarla.",
+          evidence: [profile.role && "Función: " + profile.role, profile.personality && "Perfil: " + profile.personality, profile.secondary && profile.secondary.personality && "Expediente complementario: " + profile.secondary.label + " (fuente secundaria): " + profile.secondary.personality].filter(Boolean).join("\\n") || "Evidencia conductual limitada.",
+          source: profile.source + (profile.secondary ? " + " + profile.secondary.label : ""),
+          suggestions: ["Añadir el motivo, la presión o la consecuencia que explique la acción.", "Mantenerla y registrarla como una divergencia intencional.", "Revisar si la acción pertenece realmente a este personaje."]
+        });
+      });
+    });
     const factPatterns = [
       { key:"death", positive:/(murió|muerto|muerta|falleció|asesinaron|está muerto|está muerta)/i, negative:/(está vivo|está viva|sigue vivo|sigue viva|sobrevivió)/i, label:"estado de vida" },
       { key:"injury", positive:/(herida grave|pierna rota|brazo roto|está herido|está herida|sangraba profusamente)/i, negative:/(se recuperó por completo|herida curada|ya no está herido|ya no está herida)/i, label:"estado físico" }
