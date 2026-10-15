@@ -3017,6 +3017,15 @@ async function run() {
     atlasPage.on("pageerror", error => atlasPageErrors.push(error.stack || error.message));
     await atlasPage.goto("http://127.0.0.1:" + address.port + "/lore/eminence-in-shadow/atlas.html", { waitUntil: "networkidle" });
     assert.match(await atlasPage.title(), /Atlas de The Eminence in Shadow/);
+    // The schematic map must remain operable from the keyboard and respect its label toggle.
+    const oriannaMarker = atlasPage.locator('#map-pins [data-id="orianna"]');
+    await oriannaMarker.focus();
+    await atlasPage.keyboard.press("Enter");
+    assert.match(await atlasPage.locator("#place-details h2").innerText(), /Oriana/i, "Keyboard activation must open the selected map place.");
+    await atlasPage.locator("#showLabels").uncheck();
+    assert.equal(await atlasPage.locator("#map-pins [data-id] text").first().evaluate(node => getComputedStyle(node).display), "none", "The label toggle must hide map labels.");
+    await atlasPage.locator("#showLabels").check();
+    assert.notEqual(await atlasPage.locator("#map-pins [data-id] text").first().evaluate(node => getComputedStyle(node).display), "none", "The label toggle must restore map labels.");
     await atlasPage.locator('[data-tab="powers"]').click();
     await atlasPage.waitForFunction(() => document.querySelectorAll("#technique-catalog .visual-card").length === 16, null, { timeout: 5000 });
     assert.ok((await atlasPage.locator("#technique-catalog").innerText()).includes("I Am Atomic"), "The atlas must load the signature technique from combat-techniques.json.");
