@@ -32,6 +32,8 @@ jobs:
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check src/story-foundry.js
+          node --check src/fanfic-review.js
+          node --check tests/test_fanfic_review.cjs
           node --check tests/test_story_foundry.cjs
           node --check tests/test_story_universe_catalog.cjs
           node --check src/art-studio.js
@@ -45,6 +47,8 @@ jobs:
           node --check tests/browser_smoke.cjs
       - name: Test Story Foundry chapter and arc generator
         run: node tests/test_story_foundry.cjs
+      - name: Test offline fanfiction review and author exceptions
+        run: node tests/test_fanfic_review.cjs
       - name: Test story universe catalog and inspiration presets
         run: node tests/test_story_universe_catalog.cjs
       - name: Validate mythic catalog IDs and relations
