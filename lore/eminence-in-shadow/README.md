@@ -13,6 +13,18 @@ Dar a Story Foundry material concreto para generar fanfiction, protagonistas, co
 - **Manga:** adaptación con ritmo y tratamiento cómico propios.
 - **Web novel:** rama divergente; no importar automáticamente sus acontecimientos a la novela ligera.
 
+## Jerarquía de canon y fidelidad de adaptación
+
+**La novela ligera publicada es la continuidad principal por defecto.** El anime sirve como adaptación complementaria para consultar puesta en escena, voz, música, diseño visual y diferencias de adaptación; no reemplaza las explicaciones, motivaciones, monólogos ni secuencias de la novela ligera.
+
+- Si la novela ligera contiene una explicación que el anime resume o no muestra, conservarla como dato principal y registrar la diferencia con referencias concretas.
+- Etiquetar cada dato como novela ligera, anime, manga o web novel; no combinar continuidades silenciosamente.
+- Una escena que solo se ha comprobado en el anime debe quedar marcada como pendiente de contraste con la novela ligera antes de presentarse como canon de esta.
+- No atribuir cambios a censura, tono familiar o clasificación demográfica sin evidencia específica: primero documentar la diferencia verificable.
+- Si no se dispone de volumen y capítulo concretos, indicar el nivel de confianza y dejar el detalle pendiente, en vez de inventar una cita.
+
+La guía de episodios existente documenta **la continuidad del anime**; no debe utilizarse como sustituto de una guía de capítulos de la novela ligera. La siguiente fase prioritaria es construir resúmenes por volumen y capítulo de novela ligera, con referencias verificables y un registro de diferencias frente al anime.
+
 ## Premisa y motor narrativo
 
 Minoru Kageno renace como Cid Kagenou en un mundo con magia. Su objetivo personal es representar a una eminencia oculta: alguien que controla los acontecimientos desde las sombras sin reclamar el protagonismo público. Sus improvisaciones dan origen a Shadow Garden, cuyos miembros interpretan sus actos como instrucciones estratégicas. Al mismo tiempo, el Culto de Diablos y sus conspiraciones son reales. La historia se alimenta de esa brecha de información: Cid cree estar representando un papel, mientras otras personas arriesgan su vida siguiendo una misión auténtica.
