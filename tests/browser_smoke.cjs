@@ -3011,6 +3011,28 @@ async function run() {
     await page.waitForFunction(() => (document.querySelector("#save-status")?.textContent || "").length > 0, null, { timeout: 10000 });
     await page.locator('[data-view="powers"]').click();
     await page.waitForFunction(() => document.querySelector("#power-record-list")?.textContent.includes("Smoke power persistence"), null, { timeout: 10000 });
+    // Shadow atlas: exercise real browser loading of the external technique JSON and its interactive filters.
+    const atlasPage = await context.newPage();
+    const atlasPageErrors = [];
+    atlasPage.on("pageerror", error => atlasPageErrors.push(error.stack || error.message));
+    await atlasPage.goto("http://127.0.0.1:" + address.port + "/lore/eminence-in-shadow/atlas.html", { waitUntil: "networkidle" });
+    assert.match(await atlasPage.title(), /Atlas de The Eminence in Shadow/);
+    await atlasPage.locator('[data-tab="powers"]').click();
+    await atlasPage.waitForFunction(() => document.querySelectorAll("#technique-catalog .visual-card").length === 16, null, { timeout: 5000 });
+    assert.ok((await atlasPage.locator("#technique-catalog").innerText()).includes("I Am Atomic"), "The atlas must load the signature technique from combat-techniques.json.");
+    await atlasPage.locator("#technique-search").fill("I Am Atomic");
+    assert.equal(await atlasPage.locator("#technique-catalog .visual-card").count(), 1, "Technique search must narrow the live catalog.");
+    assert.ok((await atlasPage.locator("#technique-catalog").innerText()).includes("Límites:"), "The technique detail must expose its limits.");
+    await atlasPage.locator("#technique-search").fill("");
+    await atlasPage.locator("#technique-filter").selectOption("specialty");
+    assert.ok(await atlasPage.locator("#technique-catalog .visual-card").count() > 0);
+    assert.ok((await atlasPage.locator("#technique-catalog").innerText()).includes("Alpha"), "Type filter must retain matching specialist records.");
+    await atlasPage.locator('[data-tab="equipment"]').click();
+    await atlasPage.waitForFunction(() => document.querySelectorAll("#equipment-catalog .visual-card").length >= 2, null, { timeout: 5000 });
+    assert.ok((await atlasPage.locator("#equipment-catalog").innerText()).includes("Traje de slime de Shadow"));
+    assert.deepEqual(atlasPageErrors, [], "Unexpected Shadow atlas browser errors: " + atlasPageErrors.join("; "));
+    await atlasPage.close();
+    process.stdout.write("PASS Shadow atlas: JSON catalog loads, 16 technique cards render, search/type filters work, and equipment entries appear.\\n");
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {
