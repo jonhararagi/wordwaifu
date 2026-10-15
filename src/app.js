@@ -1632,7 +1632,22 @@
           issue.suggestions.forEach((suggestion) => { const li = document.createElement("li"); li.textContent = suggestion; list.appendChild(li); });
           card.appendChild(list);
         }
+        if (Array.isArray(issue.alternatives) && issue.alternatives.length) {
+          const alternativeTitle = document.createElement("strong"); alternativeTitle.textContent = "Ejemplos de reformulación (borradores, no canon):"; card.appendChild(alternativeTitle);
+          const alternatives = document.createElement("ul");
+          issue.alternatives.forEach((alternative) => { const li = document.createElement("li"); li.textContent = alternative; alternatives.appendChild(li); });
+          card.appendChild(alternatives);
+        }
         const actions = document.createElement("div"); actions.className = "location-actions";
+        const selectFragment = document.createElement("button"); selectFragment.type = "button"; selectFragment.className = "quiet-button"; selectFragment.textContent = "Seleccionar fragmento";
+        selectFragment.addEventListener("click", () => {
+          let start = Number.isInteger(issue.start) ? issue.start : manuscript.value.indexOf(issue.excerpt);
+          let end = Number.isInteger(issue.end) ? issue.end : start + String(issue.excerpt || "").length;
+          if (start < 0) return;
+          manuscript.focus();
+          manuscript.setSelectionRange(Math.max(0, start), Math.min(manuscript.value.length, Math.max(start, end)));
+        });
+        actions.appendChild(selectFragment);
         const intentional = document.createElement("button"); intentional.type = "button"; intentional.className = "outline-button"; intentional.textContent = "Es intencional; recordar excepción";
         intentional.addEventListener("click", async () => {
           if (!Array.isArray(chapter.reviewExceptions)) chapter.reviewExceptions = [];
