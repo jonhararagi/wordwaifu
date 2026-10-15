@@ -85,6 +85,14 @@ async function run() {
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
+    const assistantStorageBefore = await page.evaluate(() => ({
+      localStorage: Object.entries(localStorage).sort(([a], [b]) => a.localeCompare(b)),
+      sessionStorage: Object.entries(sessionStorage).sort(([a], [b]) => a.localeCompare(b))
+    }));
+    const assistantExternalRequests = [];
+    page.on("request", (request) => {
+      if (!request.url().startsWith("http://127.0.0.1:")) assistantExternalRequests.push(request.url());
+    });
     await page.locator("#narrative-assistant-open").click();
     assert.equal(await page.locator("#narrative-assistant-dialog").getAttribute("data-open"), "true");
     assert.equal(await page.evaluate(() => document.activeElement?.id), "na-task", "Opening the dialog should move keyboard focus inside it.");
@@ -110,6 +118,12 @@ async function run() {
     await page.locator("#na-close").click();
     assert.equal(await page.locator("#na-consent").isChecked(), false, "Closing the micro-window must revoke the transient consent.");
     assert.equal(await page.evaluate(() => document.activeElement?.id), "narrative-assistant-open", "Closing the dialog must restore focus to its opener.");
+    const assistantStorageAfter = await page.evaluate(() => ({
+      localStorage: Object.entries(localStorage).sort(([a], [b]) => a.localeCompare(b)),
+      sessionStorage: Object.entries(sessionStorage).sort(([a], [b]) => a.localeCompare(b))
+    }));
+    assert.deepEqual(assistantStorageAfter, assistantStorageBefore, "The assistant must not persist fragment/context/task or consent in web storage.");
+    assert.deepEqual(assistantExternalRequests, [], "Editing and closing the assistant must not make external network requests.");
     process.stdout.write("PASS narrative assistant: sharing controls require explicit consent and reset on close.\\n");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
     const appPersistence = await page.evaluate(async () => {
