@@ -122,3 +122,6 @@ No cambiar el estado a `complete` hasta cerrar esas tareas.
 - [Prueba del atlas](../../tests/test_eminence_in_shadow_visual_atlas.cjs): valida los marcadores, las fuentes de las imágenes, las etiquetas de incertidumbre y los avisos de derechos.
 
 El mapa es un esquema editorial de WordWaifu, **no una cartografía oficial ni a escala**. Las ubicaciones relativas sirven para navegar por el corpus y no prueban fronteras, distancias ni rutas canónicas. Los retratos se cargan desde el sitio oficial del anime y no se copian al repositorio; son referencias visuales de la adaptación, no evidencia narrativa de la novela ligera. La intención educativa y no comercial no elimina por sí sola los derechos de autor.
+
+
+**Actualización visual:** el atlas usa una cartografía plana 2D con marcadores seleccionables, rosa de los vientos y líneas narrativas discontinuas. Los contornos son ilustrativos, no fronteras oficiales. La galería añade una pequeña sobreimpresión de copyright en la vista; «Ver original sin marca» abre la imagen fuente original sin modificarla.
