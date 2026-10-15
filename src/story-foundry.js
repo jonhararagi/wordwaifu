@@ -23,7 +23,7 @@
     return options;
   }
   const ARC_BEATS = [
-    { key:"setup", name:"Detonante", purpose:"Alterar el equilibrio y obligar al protagonista a elegir una primera respuesta." },
+    { key:"setup", name:"Presentación y detonante", purpose:"Alterar el equilibrio y obligar al protagonista a elegir una primera respuesta." },
     { key:"investigation", name:"Investigación y compromiso", purpose:"Probar una hipótesis, descubrir una regla y comprometer recursos o confianza." },
     { key:"bond", name:"Alianza bajo presión", purpose:"Poner una relación a prueba mediante objetivos incompatibles y una decisión observable." },
     { key:"reversal", name:"Reverso y coste", purpose:"Hacer que un éxito parcial revele un precio, una deuda o una limitación ignorada." },
