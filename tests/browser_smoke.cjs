@@ -300,7 +300,7 @@ async function run() {
       return !!img && img.complete && img.naturalWidth > 0;
     }, null, { timeout: 5000 });
     const archiveThemeBg = await page.locator("body").evaluate(el => getComputedStyle(el).backgroundColor);
-    assert.equal(archiveThemeBg, "rgb(33, 30, 26)", "The warm night palette must be active.");
+    assert.equal(archiveThemeBg, "rgb(11, 13, 22)", "The premium dark archive palette must be active.");
     // Character archive: compact search, profile navigation, evidence and temporal separation.
     await page.locator('.nav-item[data-view="lore"]').click();
     await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
