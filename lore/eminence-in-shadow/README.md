@@ -102,6 +102,11 @@ Se añadió `anime-episode-guide.json` con resúmenes originales para los 20 epi
 
 El dossier ahora incluye fichas funcionales adicionales para agentes de Shadow Garden, figuras de la Ciudad sin Ley, adversarios del Culto y participantes de la crisis de Oriana. `combat-techniques.json` separa técnicas insignia, capacidades generales, equipo, especialidades y métodos tácticos; sus límites son reglas para una generación coherente y no deben confundirse con estadísticas oficiales no verificadas.
 
+
+## Atlas visual conectado al catálogo de combate
+
+El atlas (`atlas.html`) ahora carga `combat-techniques.json` como fuente de verdad para las fichas de poderes, técnicas, especialidades, equipo y sistemas de reliquias. La pestaña de poderes permite buscar por nombre, usuario, descripción o límites y filtrar por tipo; la sección de equipo separa los registros de equipamiento y sistemas de artefactos. El atlas conserva las etiquetas de continuidad y confianza y no presenta el catálogo inicial como una enciclopedia cerrada. La prueba `tests/test_eminence_in_shadow_visual_atlas.cjs` comprueba la conexión y los filtros.
+
 ## Pendiente para declarar cobertura completa
 
 1. Censo de secundarios por volumen/episodio y alias.
