@@ -153,7 +153,19 @@ async function run() {
     await page.locator("#story-meta-form [name='storyEnsemble']").fill("Piloto: teme fallar | rivalidad con el equipo | salva a un compañero | aprende a confiar | capítulos 2 y 5.");
     await page.locator("#story-meta-form [name='storyPowerCatalog']").fill("Nombre: Geas de mandato\nCategoría: mental / contrato\nPotencia: 4/5 · Técnica: alta\nActivación: contacto visual directo y orden verbal\nPrecio: erosiona la identidad\nLímites: una orden por objetivo\nEvolución: I control breve → II compulsión → III ya no puede desactivarse\nConsecuencias: el poder altera las relaciones.");
     await page.locator("#story-meta-form button[type='submit']").click();
-    await page.waitForFunction(() => document.querySelector("#story-editor-status")?.textContent.includes("Historia guardada en el proyecto local."), { timeout: 10000 });
+    try {
+      await page.waitForFunction(() => document.querySelector("#story-editor-status")?.textContent.includes("Historia guardada en el proyecto local."), { timeout: 10000 });
+    } catch (error) {
+      const diagnostics = await page.evaluate(() => ({
+        storyStatus: document.querySelector("#story-editor-status")?.textContent || null,
+        saveStatus: document.querySelector("#save-status")?.textContent || null,
+        storyFormPresent: Boolean(document.querySelector("#story-meta-form")),
+        storyFormValid: document.querySelector("#story-meta-form")?.checkValidity() ?? null,
+        storyCount: document.querySelectorAll(".story-chapter-form").length
+      }));
+      process.stdout.write("STORY_SAVE_DIAGNOSTICS: " + JSON.stringify({ diagnostics, pageErrors, consoleErrors }) + "\\n");
+      throw error;
+    }
     assert.equal(await page.locator("#story-meta-form [name='storyWorldType']").inputValue(), "active-apocalypse-military-sf");
     assert.equal(await page.locator("#story-meta-form [name='storyWorldRules']").inputValue(), "La humanidad vive tras defensas; las salidas consumen recursos escasos.");
     assert.equal(await page.locator("#story-meta-form [name='storyWorldDynamics']").inputValue(), "Cada derrota reduce el territorio seguro y aumenta la presión sobre civiles y soldados.");
