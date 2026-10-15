@@ -7,10 +7,12 @@ const vm = require("node:vm");
 const root = path.resolve(__dirname, "..");
 const atlasPath = path.join(root, "lore/eminence-in-shadow/atlas.html");
 const catalogPath = path.join(root, "lore/eminence-in-shadow/visual-catalog.json");
+const techniquePath = path.join(root, "lore/eminence-in-shadow/combat-techniques.json");
 const readmePath = path.join(root, "lore/eminence-in-shadow/README.md");
 const appHtmlPath = path.join(root, "index.html");
 const html = fs.readFileSync(atlasPath, "utf8");
 const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
+const techniques = JSON.parse(fs.readFileSync(techniquePath, "utf8"));
 const readme = fs.readFileSync(readmePath, "utf8");
 const appHtml = fs.readFileSync(appHtmlPath, "utf8");
 const inlineScript = html.split("<script>")[1]?.split("</script>")[0];
@@ -36,6 +38,13 @@ assert.match(html, /id="technique-filter"/, "power catalog must filter by techni
 assert.match(html, /id="equipment-catalog"/, "equipment section must render catalog-backed entries");
 assert.match(html, /fetch\("\.\/combat-techniques\.json"\)/, "atlas must load the maintained combat-techniques source of truth");
 assert.match(html, /Límites:/, "technique cards must expose limitations, not only names");
+assert.equal(techniques.entries.length, 16, "atlas should consume the existing sixteen-entry combat catalog");
+for (const technique of techniques.entries) {
+  assert.ok(technique.id && technique.name && technique.type && technique.owner, "each technique requires stable identity, type, and owner");
+  assert.ok(technique.description && technique.limits && technique.evidence, technique.id + " needs description, limits, and evidence notes");
+  assert.ok(Array.isArray(technique.continuity) && technique.continuity.length, technique.id + " needs continuity labels");
+}
+
 
 assert.equal(catalog.atlas.locations.length, 8, "expected initial eight location records");
 assert.equal(catalog.images.length, 12, "expected twelve sourced official character images");
