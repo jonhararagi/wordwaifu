@@ -797,14 +797,472 @@
       "title": "KADOKAWA",
       "url": "https://www.kadokawa.co.jp/",
       "use": "Catálogo editorial japonés; localizar la ficha del volumen concreto al verificar detalles."
+    },
+    {
+      "id": "official-books-page",
+      "type": "official-primary",
+      "title": "Sitio oficial del anime — libros y adaptaciones",
+      "url": "https://shadow-garden.jp/2nd/book/",
+      "use": "Comprobar listado japonés de novelas, manga y series derivadas; el catálogo puede actualizarse."
+    },
+    {
+      "id": "yen-press-volume-1",
+      "type": "publisher",
+      "title": "Yen Press — novela ligera, volumen 1",
+      "url": "https://yenpress.com/titles/9781975359058-the-eminence-in-shadow-vol-1-light-novel",
+      "use": "Sinopsis editorial del arco de origen; paráfrasis propia."
+    },
+    {
+      "id": "yen-press-volume-2",
+      "type": "publisher",
+      "title": "Yen Press — novela ligera, volumen 2",
+      "url": "https://yenpress.com/titles/9781975387006-the-eminence-in-shadow-vol-2-light-novel",
+      "use": "Sinopsis editorial de Tierra Sagrada y Santuario; paráfrasis propia."
+    },
+    {
+      "id": "yen-press-volume-3",
+      "type": "publisher",
+      "title": "Yen Press — novela ligera, volumen 3",
+      "url": "https://yenpress.com/titles/9781975315771-the-eminence-in-shadow-vol-3-light-novel",
+      "use": "Sinopsis editorial de Ciudad sin Ley; paráfrasis propia."
+    },
+    {
+      "id": "yen-press-volume-4",
+      "type": "publisher",
+      "title": "Yen Press — novela ligera, volumen 4",
+      "url": "https://yenpress.com/titles/9781975341855-the-eminence-in-shadow-vol-4-light-novel",
+      "use": "Sinopsis editorial de la crisis de Oriana; paráfrasis propia."
+    },
+    {
+      "id": "yen-press-volume-5",
+      "type": "publisher",
+      "title": "Yen Press — novela ligera, volumen 5",
+      "url": "https://yenpress.com/titles/9781975375263-the-eminence-in-shadow-vol-5-light-novel",
+      "use": "Sinopsis editorial de las desapariciones y la investigación de Claire; paráfrasis propia."
+    },
+    {
+      "id": "yen-press-volume-6",
+      "type": "publisher",
+      "title": "Yen Press — novela ligera, volumen 6",
+      "url": "https://yenpress.com/titles/9798855406993-the-eminence-in-shadow-vol-6-light-novel",
+      "use": "Sinopsis editorial de las Trece Espadas Nocturnas y Jack el Destripador; paráfrasis propia."
+    },
+    {
+      "id": "yen-press-volume-7",
+      "type": "publisher",
+      "title": "Yen Press — novela ligera, volumen 7",
+      "url": "https://yenpress.com/titles/9798855447224-the-eminence-in-shadow-vol-7-light-novel",
+      "use": "Sinopsis editorial de la sucesión élfica; comprobar idioma y fecha de edición antes de describir disponibilidad."
     }
   ],
   "coverageGaps": [
-    "Censo exhaustivo de personajes secundarios por volumen y episodio, con alias y primera aparición.",
-    "Cronología evento por evento con referencias de volumen, capítulo, temporada y episodio.",
+    "Guía episodio por episodio de las dos temporadas del anime, con orden, divergencias y referencias a la escena concreta.",
+    "Registro capítulo por capítulo de los volúmenes de novela ligera y manga, con referencias primarias y resúmenes originales.",
+    "Censo exhaustivo de personajes secundarios por volumen/episodio y alias.",
     "Registro completo de las Siete Rondas y de las células del Culto, incluyendo estado y sucesión.",
-    "Matriz de relaciones con evolución temporal y conocimiento que posee cada personaje.",
+    "Matriz temporal de relaciones, lealtades, conocimiento y cambios de estado por arco.",
     "Inventario de técnicas, reliquias y experimentos con límites, costes y evidencia por continuidad.",
-    "Resúmenes por volumen y episodio verificados contra fuentes primarias; este dossier no debe etiquetarse como enciclopedia completa hasta cerrar esas brechas."
+    "Corpus específico de las series derivadas Master of Garden — Seven Shadows Chronicles y Shadow Gaiden.",
+    "Verificación de la película Lost Echoes cuando se publiquen sinopsis y materiales oficiales suficientes.",
+    "Separación de la web novel respecto de la novela ligera en cada acontecimiento divergente."
+  ],
+  "mediaCatalog": [
+    {
+      "id": "light-novel-main",
+      "type": "light-novel",
+      "label": "Novela ligera principal",
+      "scope": "Canon principal",
+      "status": "tracked-volumes-1-7",
+      "notes": "La ficha editorial en inglés consultada lista los volúmenes 1–6 y una página editorial para el volumen 7; el sitio japonés oficial de la adaptación anuncia el volumen 7 japonés. Registrar edición/idioma al referenciar un volumen."
+    },
+    {
+      "id": "anime-season-1",
+      "type": "anime-season",
+      "label": "Anime · temporada 1",
+      "scope": "Adaptación",
+      "status": "released",
+      "sourceUrl": "https://shadow-garden.jp/1st/",
+      "notes": "Adaptación propia con ritmo, montaje y énfasis visual; usar episodio exacto al verificar un evento."
+    },
+    {
+      "id": "anime-season-2",
+      "type": "anime-season",
+      "label": "Anime · temporada 2",
+      "scope": "Adaptación",
+      "status": "released",
+      "sourceUrl": "https://shadow-garden.jp/2nd/",
+      "notes": "Doce episodios anunciados en el sitio oficial; mantener su orden y los detalles exclusivos de adaptación separados."
+    },
+    {
+      "id": "movie-lost-echoes",
+      "type": "anime-film",
+      "label": "The Eminence in Shadow: Lost Echoes",
+      "scope": "Adaptación cinematográfica",
+      "status": "announced-production",
+      "sourceUrl": "https://shadow-garden.jp/",
+      "notes": "La web oficial presenta la película como proyecto anunciado. No inventar fecha de estreno, escenas ni desenlace mientras no haya información oficial confirmada."
+    },
+    {
+      "id": "manga-main",
+      "type": "manga",
+      "label": "Manga principal",
+      "scope": "Adaptación",
+      "status": "ongoing",
+      "sourceUrl": "https://yenpress.com/series/the-eminence-in-shadow-manga",
+      "notes": "Mantener diferencias de ritmo, gags y encuadre respecto de la novela ligera."
+    },
+    {
+      "id": "master-of-garden-seven-shadows",
+      "type": "manga-spinoff",
+      "label": "Master of Garden — Seven Shadows Chronicles",
+      "scope": "Derivado",
+      "status": "separate-branch",
+      "sourceUrl": "https://shadow-garden.jp/2nd/book/",
+      "notes": "Tratar como material derivado relacionado con las Siete Sombras, no como una sustitución del relato principal."
+    },
+    {
+      "id": "shadow-gaiden",
+      "type": "manga-spinoff",
+      "label": "Shadow Gaiden",
+      "scope": "Derivado",
+      "status": "separate-branch",
+      "sourceUrl": "https://shadow-garden.jp/2nd/book/",
+      "notes": "Registrar como rama derivada con su propia secuencia de publicaciones."
+    },
+    {
+      "id": "web-novel",
+      "type": "web-novel",
+      "label": "Web novel original",
+      "scope": "Rama divergente",
+      "status": "divergent",
+      "notes": "No fusionar automáticamente con la novela ligera; desde ciertos puntos las líneas argumentales divergen."
+    }
+  ],
+  "volumeGuide": [
+    {
+      "volume": 1,
+      "continuity": "light-novel",
+      "coverage": "origin-and-academy",
+      "summary": "Presenta la aspiración de Cid de operar como figura oculta, su renacimiento y el modo en que un relato inventado sobre una secta acaba conectando con una amenaza real. Introduce las primeras aliadas y el conflicto entre la lectura de Cid y la de quienes lo rodean.",
+      "sourceUrl": "https://yenpress.com/titles/9781975359058-the-eminence-in-shadow-vol-1-light-novel",
+      "evidence": "publisher-blurb",
+      "spoilerLevel": "mild"
+    },
+    {
+      "volume": 2,
+      "continuity": "light-novel",
+      "coverage": "sanctuary-and-goddess-trial",
+      "summary": "La visita a la Tierra Sagrada y el juicio de la diosa ponen a Cid en contacto con figuras del pasado y abren el Santuario. Shadow Garden obtiene pistas sobre las personas poseídas y el Culto de Diablos, mientras Cid sigue interpretando los sucesos desde su fantasía de actuación.",
+      "sourceUrl": "https://yenpress.com/titles/9781975387006-the-eminence-in-shadow-vol-2-light-novel",
+      "evidence": "publisher-blurb",
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 3,
+      "continuity": "light-novel",
+      "coverage": "lawless-city-and-blood-queen",
+      "summary": "La Ciudad sin Ley concentra el conflicto alrededor de la Reina de Sangre y sus gobernantes. La identidad Shadow entra en competencia con otras fuerzas mientras Shadow Garden persigue objetivos propios en medio de la amenaza vampírica.",
+      "sourceUrl": "https://yenpress.com/titles/9781975315771-the-eminence-in-shadow-vol-3-light-novel",
+      "evidence": "publisher-blurb",
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 4,
+      "continuity": "light-novel",
+      "coverage": "orianna-crisis",
+      "summary": "La crisis de Oriana gira en torno al matrimonio político previsto para Rose y a la lucha por el poder en el reino. Cid interviene con su propia agenda escénica, mientras la boda sirve de punto de convergencia para intereses políticos más amplios.",
+      "sourceUrl": "https://yenpress.com/titles/9781975341855-the-eminence-in-shadow-vol-4-light-novel",
+      "evidence": "publisher-blurb",
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 5,
+      "continuity": "light-novel",
+      "coverage": "missing-students-and-ancient-script",
+      "summary": "Desapariciones en la academia y el caso de Claire llevan a una investigación que mezcla escritura antigua, círculos mágicos y señales que distintos personajes interpretan de maneras incompatibles. Zeta se involucra en la búsqueda.",
+      "sourceUrl": "https://yenpress.com/titles/9781975375263-the-eminence-in-shadow-vol-5-light-novel",
+      "evidence": "publisher-blurb",
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 6,
+      "continuity": "light-novel",
+      "coverage": "thirteen-nightblades-and-jack-the-ripper",
+      "summary": "La corrupción de Midgar se conecta con una camarilla conocida como las Trece Espadas Nocturnas y con los vínculos entre nobles y el Culto. La aparición de Jack el Destripador cambia la forma en que el poder clandestino puede intervenir en la capital.",
+      "sourceUrl": "https://yenpress.com/titles/9798855406993-the-eminence-in-shadow-vol-6-light-novel",
+      "evidence": "publisher-blurb",
+      "spoilerLevel": "moderate"
+    },
+    {
+      "volume": 7,
+      "continuity": "light-novel",
+      "coverage": "elven-succession",
+      "summary": "Una disputa por la sucesión en el país de los elfos lleva a varias facciones a presentar combatientes. Alpha opera bajo una identidad encubierta y Cid asume otro papel de intermediario sombrío en torno a una joven aspirante al trono.",
+      "sourceUrl": "https://yenpress.com/titles/9798855447224-the-eminence-in-shadow-vol-7-light-novel",
+      "evidence": "publisher-blurb",
+      "editionNote": "La página consultada corresponde a la edición inglesa anunciada para marzo de 2027; el sitio japonés oficial registra el volumen 7 en su catálogo de libros.",
+      "spoilerLevel": "moderate"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "cid-kagenou",
+      "to": "alpha",
+      "type": "leader-and-interpreter",
+      "summary": "Cid la rescató y le ofreció una explicación que ella interpreta como revelación histórica; Alpha organiza la misión con una fe y un criterio estratégico que él no comprende del todo."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "beta",
+      "type": "leader-and-chronicler",
+      "summary": "Beta convierte las apariciones y frases de Shadow en relatos que amplifican su leyenda; su admiración condiciona su lectura de los hechos."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "gamma",
+      "type": "leader-and-infrastructure",
+      "summary": "Gamma traduce la misión en recursos económicos y estructuras comerciales, demostrando que la organización necesita una base material."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "delta",
+      "type": "leader-and-combatant",
+      "summary": "La lealtad de Delta se expresa de forma directa y competitiva; necesita objetivos claros para encauzar su fuerza."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "epsilon",
+      "type": "leader-and-rivalry",
+      "summary": "Epsilon busca excelencia y reconocimiento; la presencia de Shadow y la comparación con las demás Sombras influyen en su conducta."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "zeta",
+      "type": "leader-and-autonomous-agent",
+      "summary": "Zeta opera con un alto grado de independencia; sus métodos y objetivos pueden generar tensión entre eficacia y control organizativo."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "eta",
+      "type": "leader-and-researcher",
+      "summary": "Eta transforma recursos y hallazgos en investigación; su curiosidad puede entrar en conflicto con la seguridad y el bienestar de otros."
+    },
+    {
+      "from": "alpha",
+      "to": "beta",
+      "type": "colleagues",
+      "summary": "Ambas pertenecen al núcleo de Shadow Garden, pero desempeñan funciones diferentes: coordinación operativa frente a información, infiltración y relato."
+    },
+    {
+      "from": "alpha",
+      "to": "gamma",
+      "type": "operational-and-financial",
+      "summary": "La coordinación de operaciones depende de la infraestructura económica y logística desarrollada por Gamma."
+    },
+    {
+      "from": "alpha",
+      "to": "zeta",
+      "type": "command-and-autonomy",
+      "summary": "La relación representa el equilibrio entre la cadena de mando y las operaciones independientes."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "claire-kagenou",
+      "type": "siblings",
+      "summary": "Claire se preocupa por Cid y desea protegerlo; desconoce la dimensión de su identidad secreta, lo que crea riesgo de exposición y comedia de malentendidos."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "alexia-midgar",
+      "type": "school-and-suspicion",
+      "summary": "La relación empieza bajo expectativas sociales y personales erróneas; las crisis posteriores alimentan la sospecha y la curiosidad de Alexia."
+    },
+    {
+      "from": "cid-kagenou",
+      "to": "rose-oriana",
+      "type": "crossed-identities-and-duty",
+      "summary": "Rose queda atrapada entre convicciones personales, deber político y las intervenciones de Shadow; no reducir el vínculo a romance ni asumir que todos los formatos lo desarrollan igual."
+    },
+    {
+      "from": "rose-oriana",
+      "to": "iris-midgar",
+      "type": "political-opposition",
+      "summary": "Sus trayectorias reflejan formas distintas de responder a la legitimidad estatal, la seguridad y las amenazas clandestinas."
+    },
+    {
+      "from": "rose-oriana",
+      "to": "cult-of-diablos",
+      "type": "target-and-manipulation",
+      "summary": "La crisis de Oriana muestra cómo una organización clandestina puede explotar el poder institucional y los vínculos personales."
+    },
+    {
+      "from": "yukime",
+      "to": "cid-kagenou",
+      "type": "strategic-alliance",
+      "summary": "Su colaboración se sostiene en intereses convergentes y en la utilidad mutua, no en obediencia automática."
+    },
+    {
+      "from": "yukime",
+      "to": "gettan",
+      "type": "personal-conflict",
+      "summary": "El conflicto conecta la ambición de poder de la Ciudad sin Ley con la historia personal de Yukime."
+    },
+    {
+      "from": "aurora",
+      "to": "sanctuary",
+      "type": "historical-and-mystery-link",
+      "summary": "Aurora está vinculada a revelaciones sobre el pasado, la posesión y el origen de ciertos poderes; sus datos deben segmentarse por spoilers."
+    },
+    {
+      "from": "shadow-garden",
+      "to": "cult-of-diablos",
+      "type": "secret-war",
+      "summary": "Shadow Garden combate una red real que sus miembros conocen mejor que Cid en numerosos momentos; el conflicto no es una invención de la organización."
+    },
+    {
+      "from": "alexia-midgar",
+      "to": "sherry-barnett",
+      "type": "investigation",
+      "summary": "La academia y sus secretos conectan la curiosidad política de Alexia con la investigación de Sherry, aunque cada una maneja información y motivaciones distintas."
+    }
+  ],
+  "chronology": [
+    {
+      "order": 1,
+      "period": "vida anterior",
+      "event": "Minoru desarrolla su ideal de convertirse en una figura poderosa que interviene desde las sombras.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "premise"
+    },
+    {
+      "order": 2,
+      "period": "renacimiento",
+      "event": "Minoru renace como Cid Kagenou en un mundo donde la magia puede entrenarse.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "premise"
+    },
+    {
+      "order": 3,
+      "period": "infancia y entrenamiento",
+      "event": "Cid cultiva capacidades de combate y construye una identidad teatral para actuar como eminencia oculta.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "broad-event"
+    },
+    {
+      "order": 4,
+      "period": "primeras aliadas",
+      "event": "Cid ayuda a Alpha y el relato que inventa sobre el Culto empieza a convertirse en el marco de una organización real.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "broad-event"
+    },
+    {
+      "order": 5,
+      "period": "fundación",
+      "event": "Las primeras Sombras convierten la misión en Shadow Garden y desarrollan sus propias operaciones.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "broad-event"
+    },
+    {
+      "order": 6,
+      "period": "academia de Midgar",
+      "event": "La identidad ordinaria de Cid convive con conflictos escolares, la relación con Alexia y una investigación sobre la amenaza clandestina.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "arc-level"
+    },
+    {
+      "order": 7,
+      "period": "Tierra Sagrada y Santuario",
+      "event": "La prueba de la diosa y las reliquias abren una investigación más profunda sobre la posesión y el Culto.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "arc-level"
+    },
+    {
+      "order": 8,
+      "period": "Ciudad sin Ley",
+      "event": "Shadow Garden y Cid se cruzan con la Reina de Sangre y los gobernantes criminales locales.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "arc-level"
+    },
+    {
+      "order": 9,
+      "period": "conflicto económico",
+      "event": "Una identidad encubierta de Cid afecta la economía y pone a prueba la confianza dentro de Shadow Garden.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "arc-level"
+    },
+    {
+      "order": 10,
+      "period": "crisis de Oriana",
+      "event": "La situación de Rose se convierte en una lucha por el futuro político del reino.",
+      "continuity": [
+        "light-novel",
+        "anime",
+        "manga"
+      ],
+      "confidence": "arc-level"
+    },
+    {
+      "order": 11,
+      "period": "desapariciones posteriores",
+      "event": "Nuevas desapariciones y señales antiguas conectan a Claire, Zeta y otros personajes con una capa más profunda del misterio.",
+      "continuity": [
+        "light-novel"
+      ],
+      "confidence": "volume-5-publisher-summary"
+    },
+    {
+      "order": 12,
+      "period": "conspiración de Midgar",
+      "event": "Una camarilla noble vinculada al Culto queda expuesta en el contexto de la figura de Jack el Destripador.",
+      "continuity": [
+        "light-novel"
+      ],
+      "confidence": "volume-6-publisher-summary"
+    },
+    {
+      "order": 13,
+      "period": "sucesión élfica",
+      "event": "Una disputa por el trono élfico reúne facciones y combatientes, con Alpha y Cid operando bajo identidades distintas.",
+      "continuity": [
+        "light-novel"
+      ],
+      "confidence": "volume-7-publisher-summary"
+    }
   ]
 }
