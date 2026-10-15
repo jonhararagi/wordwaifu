@@ -1572,7 +1572,7 @@
       const status = $("#story-editor-status", container);
       if (status) status.textContent = saved ? "Capítulo guardado en el proyecto local." : "No se pudo confirmar el guardado. Exportá el proyecto JSON como respaldo.";
     }));
-    $(".story-review-button", container).forEach((button) => button.addEventListener("click", async () => {
+    $$(".story-review-button", container).forEach((button) => button.addEventListener("click", async () => {
       const formNode = button.closest(".story-chapter-form");
       const chapter = formNode && story.chapters.find((item) => item.id === formNode.dataset.chapterId);
       const resultsNode = formNode && formNode.querySelector(".fanfic-review-results");
