@@ -31,7 +31,7 @@ for (const count of [2,5,22,100,501,0,-3]) {
 }
 assert.equal(normalizeOptions({ending:"anything"}).ending,"closed");
 assert.equal(normalizeOptions({ending:"arc"}).ending,"arc");
-assert.equal(chapterFunction(1,1,"arc").key,"inciting");
+assert.equal(chapterFunction(1,1,"arc").key,"arc_transition");
 const plan = generateStoryPlan({...input, chapterCount:10, ending:"arc"});
 assert.equal(plan.ending.terminalState,"arc-complete");
 assert.match(plan.chapters.at(-1).summary,/siguiente arco/i);
