@@ -1626,7 +1626,7 @@
         const card = document.createElement("article");
         card.className = "fanfic-review-issue";
         const heading = document.createElement("h4");
-        heading.textContent = issue.character + " · " + (issue.rule === "possible-characterization-drift" ? "Posible desviación de caracterización" : issue.rule === "possible-continuity-contradiction" ? "Posible contradicción interna" : issue.rule === "ambiguous-attribution" ? "Atribución de diálogo ambigua" : "Datos insuficientes");
+        heading.textContent = issue.character + " · " + (issue.rule === "possible-characterization-drift" ? "Posible desviación de caracterización" : issue.rule === "possible-continuity-contradiction" ? "Posible contradicción interna" : issue.rule === "possible-ability-limit-contradiction" ? "Posible contradicción de límite de habilidad" : issue.rule === "ambiguous-attribution" ? "Atribución de diálogo ambigua" : "Datos insuficientes");
         card.appendChild(heading);
         const excerpt = document.createElement("blockquote"); excerpt.textContent = "«" + issue.excerpt + "»"; card.appendChild(excerpt);
         const reason = document.createElement("p"); reason.textContent = issue.reason; card.appendChild(reason);
