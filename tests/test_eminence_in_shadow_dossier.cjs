@@ -14,6 +14,9 @@ assert.equal(entry.integrationStatus, "starter-corpus", "coverage status must no
 assert.ok(catalog.canonDossierPriority.includes("eminence-in-shadow"), "universe should be prioritized for dossier completion");
 assert.equal(dossier.id, "eminence-in-shadow");
 assert.equal(dossier.integrationStatus, "starter-corpus");
+assert.equal(dossier.canonPolicy.primaryContinuity, "light-novel", "light novel must be the default primary continuity");
+assert.ok(dossier.canonPolicy.adaptationComparisonRules.length >= 4, "adaptation policy must preserve light-novel priority and uncertainty");
+assert.ok(dossier.generatorRules.some(rule => rule.includes("novela ligera como fuente canónica por defecto")), "generator must default to light-novel canon");
 assert.ok(dossier.continuities.some(item => item.id === "web-novel" && item.status === "divergent"), "web novel continuity must be marked divergent");
 assert.ok(dossier.characters.length >= 35, "dossier should include a substantial named cast beyond the initial leads");
 assert.ok(dossier.organizations.length >= 5, "dossier should map core factions");
