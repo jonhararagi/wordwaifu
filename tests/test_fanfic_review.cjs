@@ -15,6 +15,9 @@ result = analyze('Eina Tulle le dijo «Vete de una vez a la Dungeon, no hace fal
 assert.ok(!result.issues.some(issue => issue.key === drift.key), "intentional divergences must be suppressible");
 result = analyze('Bell Cranel murió en el último combate. Bell sigue vivo al día siguiente.', { roster });
 assert.ok(result.issues.some(issue => issue.rule === "possible-continuity-contradiction" && issue.relatedSpans.length === 2), "contradiction should point to both fragments");
+result = analyze('Bell sigue vivo al día siguiente.', { roster, chapterNumber:5, chapterTitle:"El regreso", previousChapters:[{ number:4, title:"El combate", content:"Bell Cranel murió en el último combate." }] });
+const crossChapter = result.issues.find(issue => issue.rule === "possible-continuity-contradiction");
+assert.ok(crossChapter && crossChapter.relatedSpans.some(span => span.current === false) && crossChapter.relatedSpans.some(span => span.current === true), "review must compare the current chapter with earlier saved chapters");
 result = analyze('Una persona desconocida entró y dijo «No me importa».', { roster:[] });
 assert.equal(result.issues.length, 0, "unknown characters should not trigger invented diagnoses");
 result = analyze('Eina y Bell se miraron. «Tenemos que irnos», dijo Eina.', { roster });
