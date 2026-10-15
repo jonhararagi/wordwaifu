@@ -1354,7 +1354,7 @@
         protagonistGoal:story.protagonistGoal||conflict,centralConflict:conflict,
         companion:cast.companion,antagonist:cast.villain,loveInterest:cast.romance,
         trauma:cast.wound,power:cast.power,tone:story.tone||"Aventura y drama",
-        ending:ending==="open"?"open":"closed",chapterCount:count
+        ending:["closed","open","arc"].includes(ending)?ending:"closed",chapterCount:count
       });
       const phases=[
         {name:"Presentación y detonante",start:0,end:0,goal:"presentar mundo, deseo, reparto y problema",beat:"Una anomalía rompe la rutina de "+cast.hero+" y obliga al elenco a tomar posición."},
@@ -1379,6 +1379,7 @@
           end:arc.endChapter
         };
       });
+      const previousChapters=Array.isArray(story.chapters)?story.chapters:[];
       const chapterRows=[];
       for(let n=1;n<=count;n++){
         const foundryChapter=generatedPlan.chapters[n-1];
@@ -1386,7 +1387,9 @@
         const local=n-phase.start+1, span=Math.max(1,phase.end-phase.start+1);
         const midpoint=local===1?"abrir una pregunta dramática y tomar una primera decisión":local===span?"cerrar esta fase con una decisión irreversible y sus consecuencias":"complicar el objetivo, cambiar una relación y revelar información parcial";
         const chapterBeat=span===1?phase.beat:(local===1?phase.beat.split(" ").slice(0,45).join(" "):phase.beat);
-        chapterRows.push({id:"chapter-"+Date.now().toString(36)+"-"+n,title:generatedPlan.chapterCount===1?"Resolución y consecuencias":"Capítulo "+n+": "+foundryChapter.arcName,storyFoundryArcKey:foundryChapter.arcKey,summary:"Story Foundry: "+foundryChapter.summary+" Objetivo dramático: "+phase.goal+". En este capítulo, "+cast.hero+" debe "+midpoint+". Contexto: "+premise+". Obstáculo: "+conflict+". Desarrollo: "+chapterBeat+" Mundo y reglas: "+worldRules+". Poder y coste: "+cast.power+" debe tener límites observables; la presión emocional se relaciona con "+cast.wound+". Continuidad: "+(universeMode==="fanfiction"?"respetar el canon de la obra y etiquetar las divergencias":universeMode==="mixed"?"señalar qué reglas pertenecen al canon y cuáles son aportes originales":"mantener coherencia interna del universo original")+(canonReference?" Fuente de referencia declarada: "+canonReference+". Verificar los hechos contra la fuente; no presentar teorías de fans como canon.":"")+". Cierre: dejar una consecuencia concreta que obligue al siguiente capítulo a responder o cambiar de estrategia. Evitar soluciones gratuitas.",content:"",status:"outline",phase:phase.name});
+        const prior=previousChapters.find(item=>item&&(item.number===n||item.id==="chapter-"+n||item.id==="CH-"+String(n).padStart(3,"0")))||{};
+        const generatedSummary="Función: "+foundryChapter.narrativeFunction+". Objetivo: "+foundryChapter.objective+". Obstáculo: "+foundryChapter.obstacle+". Decisión: "+foundryChapter.decision+". Cambio: "+foundryChapter.change+". Consecuencia: "+foundryChapter.consequence+". Contexto: "+premise+". Reglas del mundo: "+worldRules+". Poder y coste: "+cast.power+". Herida emocional: "+cast.wound+". Continuidad: "+(universeMode==="fanfiction"?"respetar el canon de la obra y etiquetar las divergencias":universeMode==="mixed"?"señalar qué reglas pertenecen al canon y cuáles son aportes originales":"mantener coherencia interna del universo original")+(canonReference?" Fuente declarada: "+canonReference+". Verificar hechos contra la fuente.":"");
+        chapterRows.push({...prior,id:prior.id||("chapter-"+Date.now().toString(36)+"-"+n),number:n,title:prior.title|| (n===count?(ending==="closed"?"Resolución final":ending==="arc"?"Cierre del arco":"Pregunta abierta"):"Capítulo "+n+": "+foundryChapter.arcName),storyFoundryArcKey:foundryChapter.arcKey,narrativeFunction:foundryChapter.narrativeFunction,objective:foundryChapter.objective,obstacle:foundryChapter.obstacle,decision:foundryChapter.decision,change:foundryChapter.change,consequence:foundryChapter.consequence,summary:generatedSummary+(prior.notes?"\n\nNotas del usuario (conservadas): "+prior.notes:""),content:prior.content||"",notes:prior.notes||"",status:prior.status||"outline",phase:phase.name});
       }
       const previousDossiers=Array.isArray(story.characterDossiers)?story.characterDossiers:[];
       const ensembleField=container.querySelector("[name='storyEnsemble']");
