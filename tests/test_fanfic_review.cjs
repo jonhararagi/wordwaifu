@@ -8,6 +8,8 @@ const roster = [
 let result = analyze('Eina Tulle le dijo «Vete de una vez a la Dungeon, no hace falta que te quedes a registrarte».', { roster });
 assert.ok(result.issues.some(issue => issue.rule === "possible-characterization-drift"), "Eina's brusque dialogue should be a review prompt");
 assert.ok(result.issues.find(issue => issue.rule === "possible-characterization-drift").evidence.includes("secundaria"), "evidence must preserve secondary-source provenance");
+result = analyze("Eina Tulle abandonó su puesto y dejó solo al aventurero.", { roster });
+assert.ok(result.issues.some(issue => issue.rule === "possible-characterization-drift"), "potentially atypical actions should also be reviewable");
 assert.ok(!result.issues.some(issue => issue.severity === "error"), "the engine must not claim a canon violation");
 const drift = result.issues.find(issue => issue.rule === "possible-characterization-drift");
 const exception = exceptionFor(drift);
