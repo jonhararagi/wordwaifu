@@ -47,9 +47,15 @@
     else if (!source.value.trim()) status.textContent = "Agregá el fragmento que querés compartir.";
     else status.textContent = "Autorización activa para copiar el prompt. No hay envío automático.";
   }
+  function closeDialog() {
+    dialog.dataset.open = "false";
+    consent.checked = false;
+    syncConsent();
+    button.focus();
+  }
   button.addEventListener("click", openDialog);
-  $("na-close").addEventListener("click", () => { dialog.dataset.open = "false"; consent.checked = false; syncConsent(); });
-  dialog.addEventListener("click", (event) => { if (event.target === dialog) { dialog.dataset.open = "false"; consent.checked = false; syncConsent(); } });
+  $("na-close").addEventListener("click", closeDialog);
+  dialog.addEventListener("click", (event) => { if (event.target === dialog) closeDialog(); });
   function revokeConsentOnEdit() {
     if (consent.checked) consent.checked = false;
     syncConsent();
@@ -76,5 +82,18 @@
   }
   chatgptButton.addEventListener("click", () => openProvider(CHATGPT_URL));
   geminiButton.addEventListener("click", () => openProvider(GEMINI_URL));
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && dialog.dataset.open === "true") { dialog.dataset.open = "false"; consent.checked = false; syncConsent(); } });
+  document.addEventListener("keydown", (event) => {
+    if (dialog.dataset.open !== "true") return;
+    if (event.key === "Escape") { event.preventDefault(); closeDialog(); return; }
+    if (event.key !== "Tab") return;
+    const focusable = Array.from(dialog.querySelectorAll('button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [href], [tabindex]:not([tabindex="-1"])'))
+      .filter((element) => element.getAttribute("aria-hidden") !== "true");
+    if (!focusable.length) { event.preventDefault(); return; }
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+      event.preventDefault(); first.focus();
+    }
+  });
 })();
