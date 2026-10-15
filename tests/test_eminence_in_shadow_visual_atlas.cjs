@@ -13,7 +13,7 @@ const html = fs.readFileSync(atlasPath, "utf8");
 const catalog = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
 const readme = fs.readFileSync(readmePath, "utf8");
 const appHtml = fs.readFileSync(appHtmlPath, "utf8");
-const inlineScript = html.match(/<script>([\\s\\S]*?)<\\/script>/);
+const inlineScript = html.split("<script>")[1]?.split("</script>")[0];
 assert.ok(inlineScript, "atlas must contain its interaction script");
 new vm.Script(inlineScript[1]);
 assert.match(html, /id="shadow-map"/, "interactive Shadow map must exist");
