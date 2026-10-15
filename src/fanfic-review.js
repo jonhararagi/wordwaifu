@@ -23,7 +23,7 @@
         role: clean(record.role), personality: known(record.personality),
         summary: clean(record.summary), motivations: clean(record.motivations || dossier.motivation || dossier.development),
         voice: clean(record.voiceNotes || record.dialogueStyle || ""),
-        abilities: clean(record.abilities || dossier.combatProfile || ""),
+        abilities: clean([typeof record.abilities === "string" ? record.abilities : "", dossier.combatProfile, Array.isArray(dossier.abilities) ? dossier.abilities.map(ability => [ability.name, ability.detail].filter(Boolean).join(": ")).join(" ") : ""].filter(Boolean).join(" ")),
         source, sourceType: record.evidenceType || "reference_record",
         continuity: selectedContinuity || record.continuity || "unspecified",
         secondary: dossier && Object.keys(dossier).length > 0 ? {
@@ -180,6 +180,22 @@
           evidence: [profile.role && "Función: " + profile.role, profile.personality && "Perfil: " + profile.personality, profile.secondary && profile.secondary.personality && "Expediente complementario: " + profile.secondary.label + " (fuente secundaria): " + profile.secondary.personality].filter(Boolean).join("\\n") || "Evidencia conductual limitada.",
           source: profile.source + (profile.secondary ? " + " + profile.secondary.label : ""),
           suggestions: ["Añadir el motivo, la presión o la consecuencia que explique la acción.", "Mantenerla y registrarla como una divergencia intencional.", "Revisar si la acción pertenece realmente a este personaje."]
+        });
+      });
+    });
+    sentences.forEach(sentence => {
+      const inSentence = mentions.filter(mention => mention.start < sentence.end && mention.end > sentence.start);
+      unique(inSentence.map(mention => mention.profile.id)).forEach(id => {
+        const profile = profiles.find(item => item.id === id);
+        if (!/Argonaut/i.test(profile.abilities) || !/Argonaut/i.test(sentence.text) || !/(sin cargar|sin carga|sin coste|sin costo|sin gastar (resistencia|mente)|sin agotamiento|instantáneamente y sin esfuerzo)/i.test(sentence.text)) return;
+        add({
+          rule: "possible-ability-limit-contradiction", severity: "review", confidence: "medium-low",
+          profileId: profile.id, character: profile.name, excerpt: sentence.text,
+          start: sentence.start, end: sentence.end,
+          reason: "La escena parece usar Argonaut sin una carga o coste que el expediente describe como parte de la habilidad. Podría ser una evolución, una regla nueva o una excepción deliberada.",
+          evidence: "Perfil de capacidades: " + profile.abilities + "\\nFuente: " + profile.source + (profile.secondary ? " + " + profile.secondary.label + " (" + profile.secondary.type + ")" : ""),
+          source: profile.source + (profile.secondary ? " + " + profile.secondary.label : ""),
+          suggestions: ["Mostrar la carga o el coste antes o después del golpe.", "Establecer que esta versión de la habilidad tiene una regla nueva.", "Marcarlo como divergencia AU si es intencional."]
         });
       });
     });
