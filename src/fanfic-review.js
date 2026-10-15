@@ -7,7 +7,7 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   "use strict";
   const clean = value => String(value == null ? "" : value).trim();
-  const known = value => { const result = clean(value); return /^(no establecido|no establecida|desconocido|desconocida|unknown|pendiente|n\/?a)$/i.test(result) ? "" : result; };
+  const known = value => { const result = clean(value); return /(no establecido|no establecida|desconocido|desconocida|unknown|pendiente|^n\\/?a$)/i.test(result) ? "" : result; };
   const escapeRegExp = value => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const unique = values => Array.from(new Set(values.filter(Boolean)));
   function collectProfiles(projectCharacters = [], roster = [], selectedContinuity = "CONT-MAIN-LN") {
