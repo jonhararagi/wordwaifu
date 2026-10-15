@@ -7,9 +7,11 @@
   "visualPolicy": {
     "canonPriority": "light-novel",
     "adaptationImages": "Visual reference only; anime art does not prove light-novel-only details.",
-    "mapStatus": "schematic-not-to-scale",
+    "mapStatus": "flat-2d-schematic-navigation-map",
     "copyright": "Official images are hotlinked from the rights-holder's official anime site; this repository does not mirror them. Noncommercial educational intent is not a blanket license to redistribute copies.",
-    "sourceAttributionRequired": true
+    "sourceAttributionRequired": true,
+    "displayOverlay": "Small CSS-only copyright/source watermark in WordWaifu preview; original external image URL remains available via direct link. The source file is not modified.",
+    "mapGeometry": "Original illustrative coastlines and narrative links; not canonical borders, distances, or travel routes."
   },
   "atlas": {
     "path": "atlas.html",
