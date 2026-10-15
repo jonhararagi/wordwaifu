@@ -7,46 +7,43 @@
   "use strict";
   const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
   const text = (v, fallback = "") => typeof v === "string" ? v.trim() : fallback;
+  const ENDINGS = Object.freeze({
+    closed: { label: "Final cerrado", purpose: "Resolver el conflicto central y mostrar consecuencias duraderas; no dejar la meta principal pendiente." },
+    open: { label: "Final abierto", purpose: "Resolver o transformar el conflicto inmediato y dejar una pregunta significativa sin respuesta deliberada." },
+    arc: { label: "Final de arco", purpose: "Cerrar el objetivo de este arco y dejar una consecuencia concreta que impulse el siguiente arco, sin fingir que terminó toda la historia." }
+  });
   const DEFAULTS = Object.freeze({ title:"Historia sin título", genre:"Fantasía", premise:"", world:"", protagonist:"", protagonistGoal:"", centralConflict:"", companion:"", antagonist:"", loveInterest:"", trauma:"", power:"", tone:"Aventura y drama", ending:"closed", chapterCount:30 });
-
   function normalizeOptions(input = {}) {
     const options = { ...DEFAULTS, ...(input && typeof input === "object" ? input : {}) };
     const requested = Number(options.chapterCount);
     options.chapterCount = clamp(Number.isFinite(requested) && requested > 0 ? Math.floor(requested) : 30, 1, 500);
-    options.ending = options.ending === "open" ? "open" : "closed";
+    options.ending = Object.prototype.hasOwnProperty.call(ENDINGS, options.ending) ? options.ending : "closed";
     options.title = text(options.title, DEFAULTS.title) || DEFAULTS.title;
     for (const key of ["genre","premise","world","protagonist","protagonistGoal","centralConflict","companion","antagonist","loveInterest","trauma","power","tone"]) options[key] = text(options[key]);
     return options;
   }
-
+  const ARC_BEATS = [
+    { key:"setup", name:"Detonante", purpose:"Alterar el equilibrio y obligar al protagonista a elegir una primera respuesta." },
+    { key:"investigation", name:"Investigación y compromiso", purpose:"Probar una hipótesis, descubrir una regla y comprometer recursos o confianza." },
+    { key:"bond", name:"Alianza bajo presión", purpose:"Poner una relación a prueba mediante objetivos incompatibles y una decisión observable." },
+    { key:"reversal", name:"Reverso y coste", purpose:"Hacer que un éxito parcial revele un precio, una deuda o una limitación ignorada." },
+    { key:"revelation", name:"Revelación y ruptura", purpose:"Cambiar la interpretación de hechos previos y alterar la estrategia o una alianza." },
+    { key:"choice", name:"Decisión sin salida limpia", purpose:"Forzar una elección entre valores, con pérdidas reales y consecuencias para terceros." },
+    { key:"confrontation", name:"Confrontación", purpose:"Aplicar lo aprendido contra la oposición, explotando reglas y debilidades ya establecidas." },
+    { key:"aftermath", name:"Consecuencias y nuevo equilibrio", purpose:"Mostrar qué cambió, qué se perdió y qué problema nace de la decisión." }
+  ];
   function makeArcs(count) {
-    const beats = [
-      { key:"setup", name:"Presentación y detonante", start:0, end:0.10, purpose:"Presentar mundo, elenco esencial, situación inicial y problema que rompe el equilibrio." },
-      { key:"progress", name:"Progreso y primeras consecuencias", start:0.10, end:0.30, purpose:"Definir objetivos, aliados, reglas y costes; el protagonista consigue avances parciales." },
-      { key:"growth", name:"Expansión y complicaciones", start:0.30, end:0.50, purpose:"Ampliar el mundo, profundizar relaciones y revelar la complejidad real del conflicto." },
-      { key:"false_security", name:"Cima aparente y falsa seguridad", start:0.50, end:0.67, purpose:"El protagonista parece dominar la situación; exceso de confianza o debilidad sembrada produce el retroceso." },
-      { key:"fallout", name:"Caída, pérdida y replanteamiento", start:0.67, end:0.80, purpose:"La estrategia falla, llegan consecuencias y el protagonista reconoce su error o límite." },
-      { key:"final_push", name:"Nueva estrategia y confrontación", start:0.80, end:0.94, purpose:"Aplicar lo aprendido, resolver tensiones y afrontar el conflicto central." },
-      { key:"resolution", name:"Clímax y resolución", start:0.94, end:1, purpose:"Resolver el conflicto principal y mostrar costes, cambios y estado final del mundo." }
-    ];
+    const n = Math.max(1, Math.floor(Number(count) || 1));
+    const arcCount = Math.min(ARC_BEATS.length, n);
     const ranges = [];
-    let cursor = 1;
-    for (let i = 0; i < beats.length; i++) {
-      const beat = beats[i];
-      const start = i === 0 ? 1 : Math.floor(beat.start * count) + 1;
-      const end = i === beats.length - 1 ? count : Math.floor(beat.end * count);
-      if (end < start || start > count) continue;
-      const actualStart = Math.max(cursor, start), actualEnd = Math.min(count, end);
-      if (actualStart <= actualEnd) {
-        ranges.push({ key:beat.key, name:beat.name, startChapter:actualStart, endChapter:actualEnd, purpose:beat.purpose });
-        cursor = actualEnd + 1;
-      }
+    for (let i = 0; i < arcCount; i++) {
+      const startChapter = Math.floor(i * n / arcCount) + 1;
+      const endChapter = Math.floor((i + 1) * n / arcCount);
+      const beat = ARC_BEATS[Math.min(ARC_BEATS.length - 1, Math.floor(i * ARC_BEATS.length / arcCount))];
+      ranges.push({ key:beat.key, name:beat.name, startChapter, endChapter, purpose:beat.purpose });
     }
-    if (!ranges.length) return [{ key:"complete_arc", name:"Arco completo", startChapter:1, endChapter:count, purpose:"Presentar el conflicto, desarrollar consecuencias y resolverlo según el final elegido." }];
-    if (cursor <= count) ranges[ranges.length - 1].endChapter = count;
     return ranges;
   }
-
   function buildSynopsis(o) {
     const parts = [];
     if (o.protagonist) parts.push(o.protagonist);
@@ -55,19 +52,43 @@
     if (o.centralConflict) parts.push("mientras se enfrenta a " + o.centralConflict);
     return parts.length ? parts.join(" ") + "." : (o.premise || "Una historia por desarrollar a partir de una premisa, un mundo y un conflicto central.");
   }
-
+  function chapterFunction(index, count, ending) {
+    const role = ARC_BEATS[(index - 1) % ARC_BEATS.length];
+    if (index === 1) return { ...ARC_BEATS[0], key:"inciting", name:"Detonante", purpose:"Presentar una situación concreta, una necesidad y una anomalía que exija actuar." };
+    if (index === count) return { ...ARC_BEATS[7], key:ending === "closed" ? "resolution" : ending === "arc" ? "arc_transition" : "open_question", name:ending === "closed" ? "Resolución final" : ending === "arc" ? "Cierre de arco y transición" : "Resolución parcial y pregunta abierta", purpose:ENDINGS[ending].purpose };
+    return role;
+  }
   function generateStoryPlan(input = {}) {
     const options = normalizeOptions(input), arcs = makeArcs(options.chapterCount), chapters = [];
-    for (const arc of arcs) for (let n = arc.startChapter; n <= arc.endChapter; n++) {
-      const role = n === 1 ? "Abrir con una escena concreta, presentar una necesidad y activar el conflicto." :
-        n === options.chapterCount ? (options.ending === "open" ? "Resolver el conflicto inmediato y dejar una pregunta o cambio futuro deliberado." : "Resolver el conflicto central y mostrar consecuencias concretas.") :
-        "Hacer avanzar una meta, relación, revelación o consecuencia; evitar escenas que no cambien nada.";
-      const beats = [];
-      if (options.protagonist) beats.push("Protagonista: " + options.protagonist);
-      if (options.protagonistGoal) beats.push("Meta: " + options.protagonistGoal);
-      if (options.centralConflict) beats.push("Conflicto: " + options.centralConflict);
-      if (options.world) beats.push("Mundo: " + options.world);
-      chapters.push({ id:"CH-" + String(n).padStart(3,"0"), number:n, title:n === 1 ? "El comienzo" : n === options.chapterCount ? (options.ending === "open" ? "La puerta entreabierta" : "Las consecuencias") : "Capítulo " + n, arcKey:arc.key, arcName:arc.name, summary:"Objetivo dramático: " + role + " Etapa: " + arc.purpose, beats, status:"outline" });
+    const context = [
+      options.protagonist && "Protagonista: " + options.protagonist,
+      options.protagonistGoal && "Meta: " + options.protagonistGoal,
+      options.centralConflict && "Conflicto: " + options.centralConflict,
+      options.world && "Reglas y entorno: " + options.world,
+      options.companion && "Relación clave: " + options.companion,
+      options.antagonist && "Oposición: " + options.antagonist,
+      options.loveInterest && "Vínculo afectivo: " + options.loveInterest,
+      options.trauma && "Herida emocional: " + options.trauma,
+      options.power && "Poder, límites y coste por definir en escena: " + options.power
+    ].filter(Boolean);
+    for (let n = 1; n <= options.chapterCount; n++) {
+      const arc = arcs.find(item => n >= item.startChapter && n <= item.endChapter) || arcs[arcs.length - 1];
+      const fn = chapterFunction(n, options.chapterCount, options.ending);
+      const previous = n > 1 ? chapterFunction(n - 1, options.chapterCount, options.ending) : null;
+      const goal = n === 1 ? "Conseguir información o recurso suficiente para responder al detonante" : n === options.chapterCount ? (options.ending === "closed" ? "Resolver la meta principal y asumir su coste" : options.ending === "arc" ? "Completar el objetivo del arco y abrir una nueva obligación" : "Resolver la urgencia inmediata y elegir qué pregunta seguirá sin respuesta") : fn.purpose;
+      const obstacle = n === 1 ? "La información es incompleta y actuar implica riesgo" : (options.antagonist ? "La oposición de " + options.antagonist + " explota una limitación o una información incompleta" : "Una restricción del mundo, un recurso escaso o una lealtad incompatible impide la solución fácil");
+      const decision = n === 1 ? "El protagonista decide intervenir pese a no comprender todas las reglas" : n === options.chapterCount && options.ending === "closed" ? "Elegir una solución definitiva y aceptar qué no puede salvarse" : n === options.chapterCount && options.ending === "arc" ? "Aceptar la victoria local y comprometerse con el problema que esta revela" : n === options.chapterCount ? "Resolver la urgencia sin cerrar artificialmente la pregunta mayor" : "Elegir entre una ganancia inmediata y el coste que impondría a una relación, recurso o principio";
+      const change = n === 1 ? "La rutina queda rota y el objetivo se vuelve concreto" : "La información, la confianza, la capacidad o la posición de poder cambia de forma verificable";
+      const consequence = n === options.chapterCount ? ENDINGS[options.ending].purpose : "La decisión crea una deuda, pista, pérdida o nueva condición que el capítulo siguiente debe reconocer";
+      const beats = context.slice();
+      chapters.push({
+        id:"CH-" + String(n).padStart(3,"0"), number:n,
+        title:n === 1 ? "La ruptura del equilibrio" : n === options.chapterCount ? (options.ending === "closed" ? "El precio de la respuesta" : options.ending === "arc" ? "Una victoria, otra frontera" : "La pregunta que permanece") : fn.name + ": " + (n % 2 ? "la elección" : "su precio"),
+        arcKey:arc.key, arcName:arc.name, narrativeFunction:fn.key,
+        objective:goal, obstacle, decision, change, consequence,
+        summary:fn.purpose + " Objetivo: " + goal + ". Obstáculo: " + obstacle + ". Decisión: " + decision + ". Cambio: " + change + ". Consecuencia: " + consequence + ".",
+        beats, status:"outline"
+      });
     }
     const cast = [["protagonist","Protagonista",options.protagonist],["companion","Compañero/a o coprotagonista",options.companion],["antagonist","Antagonista o villano",options.antagonist],["loveInterest","Interés amoroso",options.loveInterest]].filter(x=>x[2]).map(([role,label,description])=>({role,label,description}));
     const development = [
@@ -76,7 +97,7 @@
       options.power && {type:"power",label:"Poder, talento o recurso",description:options.power},
       options.centralConflict && {type:"conflict",label:"Conflicto central",description:options.centralConflict}
     ].filter(Boolean);
-    return { schemaVersion:1, generator:"WordWaifu Story Foundry", title:options.title, genre:options.genre, tone:options.tone, premise:options.premise, world:options.world, ending:{type:options.ending,label:options.ending==="open"?"Final abierto":"Final cerrado"}, requestedChapterCount:options.chapterCount, chapterCount:chapters.length, synopsis:buildSynopsis(options), cast, development, arcs, chapters, continuityChecklist:["Cada capítulo modifica el estado de la historia o la comprensión del lector.","Los poderes y recursos tienen límites, costes y consecuencias verificables.","Las relaciones evolucionan mediante decisiones y acciones, no solo declaraciones.","La caída nace de causas sembradas previamente, no de un giro arbitrario.",options.ending==="open"?"El conflicto inmediato avanza o se resuelve parcialmente, pero queda una pregunta deliberada.":"El conflicto principal obtiene una resolución comprensible y satisfactoria."], limitations:["El resultado es un esquema determinista editable, no capítulos literarios completos.","Las propuestas deben revisarse contra el canon, las fuentes y la continuidad del proyecto."] };
+    return { schemaVersion:1, generator:"WordWaifu Story Foundry", title:options.title, genre:options.genre, tone:options.tone, premise:options.premise, world:options.world, ending:{type:options.ending,label:ENDINGS[options.ending].label,terminalState:options.ending==="closed"?"resolved":options.ending==="arc"?"arc-complete":"open"}, requestedChapterCount:options.chapterCount, chapterCount:chapters.length, synopsis:buildSynopsis(options), cast, development, arcs, chapters, continuityChecklist:["Cada capítulo modifica el estado de la historia o la comprensión del lector.","Los poderes y recursos tienen límites, costes y consecuencias verificables.","Las relaciones evolucionan mediante decisiones y acciones, no solo declaraciones.","Las consecuencias de cada capítulo deben ser reconocidas por el siguiente.",ENDINGS[options.ending].purpose], limitations:["El resultado es un esquema determinista editable, no capítulos literarios completos.","Las propuestas deben revisarse contra el canon, las fuentes y la continuidad del proyecto."] };
   }
-  return { generateStoryPlan, normalizeOptions, makeArcs };
+  return { generateStoryPlan, normalizeOptions, makeArcs, chapterFunction, ENDINGS };
 });
