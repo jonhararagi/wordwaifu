@@ -82,6 +82,10 @@ El JSON añade una matriz inicial de relaciones entre personajes/facciones y una
 
 Se añadió `anime-episode-guide.json` con resúmenes originales para los 20 episodios de la temporada 1 y los 12 de la temporada 2. Cada registro conserva número, título, arco, continuidad de anime y enlace de referencia. Los resúmenes son síntesis narrativas por episodio, no transcripciones ni sustitutos de una verificación escena por escena. El test `tests/test_eminence_in_shadow_episode_guide.cjs` comprueba cobertura, IDs, fuentes y separación de continuidad.
 
+## Reparto ampliado y catálogo de combate
+
+El dossier ahora incluye fichas funcionales adicionales para agentes de Shadow Garden, figuras de la Ciudad sin Ley, adversarios del Culto y participantes de la crisis de Oriana. `combat-techniques.json` separa técnicas insignia, capacidades generales, equipo, especialidades y métodos tácticos; sus límites son reglas para una generación coherente y no deben confundirse con estadísticas oficiales no verificadas.
+
 ## Pendiente para declarar cobertura completa
 
 1. Censo de secundarios por volumen/episodio y alias.
