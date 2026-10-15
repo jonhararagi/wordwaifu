@@ -85,6 +85,15 @@ async function run() {
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
+    await page.locator("#narrative-assistant-open").click();
+    assert.equal(await page.locator("#narrative-assistant-dialog").getAttribute("data-open"), "true");
+    assert.equal(await page.locator("#na-copy").isDisabled(), true, "Prompt copying must be disabled before explicit consent.");
+    await page.locator("#na-source").fill("Fragmento de prueba, sin datos privados.");
+    await page.locator("#na-consent").check();
+    assert.equal(await page.locator("#na-copy").isDisabled(), false, "Explicit consent plus a non-empty fragment should enable copying.");
+    await page.locator("#na-close").click();
+    assert.equal(await page.locator("#na-consent").isChecked(), false, "Closing the micro-window must revoke the transient consent.");
+    process.stdout.write("PASS narrative assistant: sharing controls require explicit consent and reset on close.\\n");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
     const appPersistence = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
