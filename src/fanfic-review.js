@@ -7,6 +7,7 @@
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   "use strict";
   const clean = value => String(value == null ? "" : value).trim();
+  const known = value => { const result = clean(value); return /^(no establecido|no establecida|desconocido|desconocida|unknown|pendiente|n\/?a)$/i.test(result) ? "" : result; };
   const escapeRegExp = value => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const unique = values => Array.from(new Set(values.filter(Boolean)));
   function collectProfiles(projectCharacters = [], roster = [], selectedContinuity = "CONT-MAIN-LN") {
@@ -19,7 +20,7 @@
       const profile = {
         id: record.id || record.name, name: record.name,
         aliases: unique([record.name].concat(Array.isArray(record.aliases) ? record.aliases : [])),
-        role: clean(record.role), personality: clean(record.personality),
+        role: clean(record.role), personality: known(record.personality),
         summary: clean(record.summary), motivations: clean(record.motivations || dossier.motivation || dossier.development),
         voice: clean(record.voiceNotes || record.dialogueStyle || ""),
         abilities: clean(record.abilities || dossier.combatProfile || ""),
@@ -28,7 +29,7 @@
         secondary: dossier && Object.keys(dossier).length > 0 ? {
           label: clean(dossier.sourceLabel || "Expediente complementario"),
           type: clean(dossier.sourceType || "secondary_compendium"),
-          personality: clean(dossier.personality || dossier.development || ""),
+          personality: clean(dossier.personality || dossier.habits || dossier.development || ""),
           history: clean(dossier.history || "")
         } : null
       };
@@ -108,7 +109,7 @@
     const mentionedProfiles = unique(mentions.map(m => m.profile.id)).map(id => profiles.find(p => p.id === id)).filter(Boolean);
     if (!text.trim()) return { issues: [], profiles: [], summary: "Escribí o pegá un fragmento del manuscrito para revisarlo.", analyzedCharacters: [] };
     mentionedProfiles.forEach(profile => {
-      const hasEvidence = Boolean(profile.personality || profile.role || profile.summary || profile.motivations || profile.abilities || profile.secondary);
+      const hasEvidence = Boolean(profile.personality || profile.motivations || profile.abilities || (profile.secondary && (profile.secondary.personality || profile.secondary.history)));
       if (!hasEvidence) add({
         rule: "insufficient-profile", severity: "info", confidence: "low", profileId: profile.id,
         character: profile.name, excerpt: profile.name,
