@@ -78,6 +78,10 @@ También se registran como ramas separadas el anime (temporadas 1 y 2), la pelí
 
 El JSON añade una matriz inicial de relaciones entre personajes/facciones y una cronología de hitos. Son índices narrativos por arco, no sustituyen todavía el registro de cada capítulo o episodio.
 
+## Guía de episodios del anime
+
+Se añadió `anime-episode-guide.json` con resúmenes originales para los 20 episodios de la temporada 1 y los 12 de la temporada 2. Cada registro conserva número, título, arco, continuidad de anime y enlace de referencia. Los resúmenes son síntesis narrativas por episodio, no transcripciones ni sustitutos de una verificación escena por escena. El test `tests/test_eminence_in_shadow_episode_guide.cjs` comprueba cobertura, IDs, fuentes y separación de continuidad.
+
 ## Pendiente para declarar cobertura completa
 
 1. Censo de secundarios por volumen/episodio y alias.
