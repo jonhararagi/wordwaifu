@@ -168,28 +168,53 @@
       { key:"death", positive:/(murió|muerto|muerta|falleció|asesinaron|está muerto|está muerta)/i, negative:/(está vivo|está viva|sigue vivo|sigue viva|sobrevivió)/i, label:"estado de vida" },
       { key:"injury", positive:/(herida grave|pierna rota|brazo roto|está herido|está herida|sangraba profusamente)/i, negative:/(se recuperó por completo|herida curada|ya no está herido|ya no está herida)/i, label:"estado físico" }
     ];
+    const documents = (Array.isArray(options.previousChapters) ? options.previousChapters : [])
+      .filter(chapter => chapter && typeof chapter.content === "string" && chapter.content.trim())
+      .map((chapter, index) => ({
+        text: chapter.content, current: false,
+        chapterNumber: chapter.number || index + 1, chapterTitle: chapter.title || ("Capítulo " + (chapter.number || index + 1))
+      }))
+      .concat([{ text, current: true, chapterNumber: options.chapterNumber || "actual", chapterTitle: options.chapterTitle || "Capítulo actual" }]);
+    documents.forEach(document => {
+      document.sentences = sentenceRanges(document.text);
+      document.mentions = document.current ? mentions : findCharacterMentions(document.text, profiles);
+    });
     factPatterns.forEach(pattern => {
       const occurrences = [];
-      sentences.forEach(sentence => {
-        const relevant = mentions.filter(m => m.start < sentence.end && m.end > sentence.start);
-        unique(relevant.map(m=>m.profile.id)).forEach(id => {
-          const profile = profiles.find(p=>p.id===id);
-          const pos = pattern.positive.test(sentence.text), neg = pattern.negative.test(sentence.text);
-          if (pos || neg) occurrences.push({ sentence, profile, state: pos ? "positive" : "negative" });
+      documents.forEach(document => {
+        document.sentences.forEach(sentence => {
+          const relevant = document.mentions.filter(m => m.start < sentence.end && m.end > sentence.start);
+          unique(relevant.map(m=>m.profile.id)).forEach(id => {
+            const profile = profiles.find(p=>p.id===id);
+            const positive = pattern.positive.test(sentence.text);
+            const negative = pattern.negative.test(sentence.text);
+            if (positive || negative) occurrences.push({
+              sentence, profile, state: positive ? "positive" : "negative",
+              current: document.current, chapterNumber: document.chapterNumber, chapterTitle: document.chapterTitle
+            });
+          });
         });
       });
       occurrences.forEach((current, index) => occurrences.slice(index+1).forEach(other => {
-        if (current.profile.id !== other.profile.id || current.state === other.state) return;
-        const pair = [current,other].sort((a,b)=>a.sentence.start-b.sentence.start);
+        if (current.profile.id !== other.profile.id || current.state === other.state || (!current.current && !other.current)) return;
+        const pair = [current,other].sort((a,b)=>Number(a.current)-Number(b.current) || a.sentence.start-b.sentence.start);
+        const currentOccurrences = pair.filter(item => item.current);
+        const selected = currentOccurrences.length > 1
+          ? { start: currentOccurrences[0].sentence.start, end: currentOccurrences[currentOccurrences.length - 1].sentence.end }
+          : { start: currentOccurrences[0].sentence.start, end: currentOccurrences[0].sentence.end };
+        const descriptions = pair.map(item => item.chapterTitle + ": " + item.sentence.text);
         add({
-          rule: "possible-continuity-contradiction", severity: "review", confidence: "low",
+          rule: "possible-continuity-contradiction", severity: "review", confidence: pair.some(item=>!item.current) ? "medium-low" : "low",
           profileId: current.profile.id, character: current.profile.name,
-          excerpt: pair.map(item=>item.sentence.text).join(" … "),
-          start: pair[0].sentence.start, end: pair[1].sentence.end,
-          relatedSpans: pair.map(item=>({start:item.sentence.start,end:item.sentence.end,text:item.sentence.text})),
-          reason: "Dos fragmentos del mismo manuscrito parecen describir estados incompatibles de " + pattern.label + ". Una elipsis temporal, una falsa muerte o una curación explicada pueden resolverlo.",
-          evidence: "Fragmento A: " + pair[0].sentence.text + "\nFragmento B: " + pair[1].sentence.text,
-          source: "Continuidad interna del borrador",
+          excerpt: descriptions.join(" … "),
+          start: selected.start, end: selected.end,
+          relatedSpans: pair.map(item=>({
+            start:item.sentence.start,end:item.sentence.end,text:item.sentence.text,
+            chapterNumber:item.chapterNumber,chapterTitle:item.chapterTitle,current:item.current
+          })),
+          reason: "Dos fragmentos del manuscrito parecen describir estados incompatibles de " + pattern.label + ". " + (pair.some(item=>!item.current) ? "La comparación incluye un capítulo anterior; una elipsis temporal, una falsa muerte o una recuperación explicada pueden resolverlo." : "Una elipsis temporal, una falsa muerte o una recuperación explicada pueden resolverlo."),
+          evidence: descriptions.join("\\n"),
+          source: "Memoria de continuidad interna del proyecto",
           suggestions: ["Añadir la transición o explicación que falta.", "Corregir el fragmento que no representa la continuidad deseada.", "Marcar la contradicción como intencional si forma parte de un giro."]
         });
       }));
