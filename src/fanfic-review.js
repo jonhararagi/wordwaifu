@@ -9,12 +9,12 @@
   const clean = value => String(value == null ? "" : value).trim();
   const escapeRegExp = value => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const unique = values => Array.from(new Set(values.filter(Boolean)));
-  function collectProfiles(projectCharacters = [], roster = []) {
+  function collectProfiles(projectCharacters = [], roster = [], selectedContinuity = "CONT-MAIN-LN") {
     const byKey = new Map();
     (Array.isArray(roster) ? roster : []).forEach(record => {
       if (!record || !clean(record.name)) return;
       const dossierMap = record.dossiers && typeof record.dossiers === "object" ? record.dossiers : {};
-      const dossier = dossierMap[record.continuity] || dossierMap["CONT-MAIN-LN"] || dossierMap["CONT-ANIME"] || Object.values(dossierMap)[0] || {};
+      const dossier = dossierMap[selectedContinuity] || dossierMap[record.continuity] || dossierMap["CONT-MAIN-LN"] || dossierMap["CONT-ANIME"] || Object.values(dossierMap)[0] || {};
       const source = record.sourceTitle || record.sourcePage || "Registro de adaptación";
       const profile = {
         id: record.id || record.name, name: record.name,
@@ -24,7 +24,7 @@
         voice: clean(record.voiceNotes || record.dialogueStyle || ""),
         abilities: clean(record.abilities || dossier.combatProfile || ""),
         source, sourceType: record.evidenceType || "reference_record",
-        continuity: record.continuity || "unspecified",
+        continuity: selectedContinuity || record.continuity || "unspecified",
         secondary: dossier && Object.keys(dossier).length > 0 ? {
           label: clean(dossier.sourceLabel || "Expediente complementario"),
           type: clean(dossier.sourceType || "secondary_compendium"),
@@ -92,7 +92,7 @@
   }
   function analyze(textInput, options = {}) {
     const text = String(textInput || "");
-    const profiles = collectProfiles(options.characters, options.roster);
+    const profiles = collectProfiles(options.characters, options.roster, options.continuity || "CONT-MAIN-LN");
     const mentions = findCharacterMentions(text, profiles);
     const sentences = sentenceRanges(text);
     const quotes = quoteRanges(text);
