@@ -8,7 +8,16 @@
     "summary": "Expediente de trabajo para creación narrativa; no es una transcripción ni una enciclopedia cerrada.",
     "sources": "Resúmenes y descripciones redactados de forma original. Las fuentes enlazadas orientan la verificación; una referencia general no prueba por sí sola cada detalle.",
     "continuityRule": "No mezclar automáticamente novela ligera, web novel, manga y anime. Registrar versión y punto de la historia en cada proyecto.",
-    "spoilerPolicy": "Este archivo contiene spoilers de premisa, personajes, organizaciones y arcos. Los detalles finos de volúmenes posteriores deben verificarse antes de marcarse como definitivos."
+    "spoilerPolicy": "Este archivo contiene spoilers de premisa, personajes, organizaciones y arcos. Los detalles finos de volúmenes posteriores deben verificarse antes de marcarse como definitivos.",
+    "primaryContinuity": "light-novel",
+    "adaptationPriority": "La novela ligera publicada es la fuente narrativa prioritaria. El anime se utiliza para documentar la adaptación, nunca para sobrescribir silenciosamente un hecho confirmado de la novela ligera.",
+    "adaptationComparisonRules": [
+      "Cuando haya diferencia entre novela ligera y anime, conservar ambos registros con etiquetas de continuidad y referencia de volumen/capítulo o temporada/episodio.",
+      "Si el anime omite, abrevia, reordena o altera una explicación presente en la novela, mantener la explicación de la novela en la ficha principal y registrar la diferencia como nota de adaptación solo cuando esté verificada.",
+      "No asumir que una escena está ausente de la novela solo porque no aparezca en el anime, ni atribuir una diferencia a censura o clasificación demográfica sin evidencia concreta.",
+      "Si un detalle solo está confirmado en el anime, marcarlo como anime-only/no verificado en novela ligera hasta contrastarlo con el volumen correspondiente.",
+      "Si las fuentes discrepan o falta la referencia primaria exacta, marcar el dato como pendiente de verificación en vez de resolverlo por intuición."
+    ]
   },
   "continuities": [
     {
@@ -1061,7 +1070,10 @@
     "Las técnicas de poder deben tener condición de uso, alcance, limitaciones y coste; evitar poderes omnipotentes sin reglas.",
     "Los intereses románticos, traumas y relaciones de fanfiction deben marcarse como propuesta original, no como canon.",
     "Cada capítulo generado debe registrar el estado de identidades, heridas, alianzas, sospechas, recursos y secretos revelados.",
-    "Separar siempre hechos canónicos confirmados, interpretaciones y material original."
+    "Separar siempre hechos canónicos confirmados, interpretaciones y material original.",
+    "Usar la novela ligera como fuente canónica por defecto para hechos, motivaciones, reglas, secuencias y progresión; el usuario puede elegir explícitamente una continuidad alternativa.",
+    "No sustituir explicaciones, monólogos, motivaciones o consecuencias de la novela ligera por la versión más breve del anime.",
+    "Al comparar adaptaciones, registrar por separado lo confirmado en novela ligera, lo adaptado por el anime y lo todavía no verificado; no afirmar que un cambio se debe a censura o demografía sin fuente."
   ],
   "sources": [
     {
