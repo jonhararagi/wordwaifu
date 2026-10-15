@@ -659,3 +659,23 @@ td,th{border-color:#30364e}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
+
+
+/* Offline fanfiction reviewer */
+.fanfic-review-panel{margin:1rem 0;padding:1rem;border:1px solid var(--line,#d7dce5);border-radius:14px;background:var(--surface-soft,#f8fafc);display:grid;gap:.8rem}
+.fanfic-review-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.fanfic-review-head strong{display:block;font-size:1rem}
+.fanfic-review-head p{margin:.25rem 0 0;color:var(--muted,#667085);font-size:.88rem}
+.fanfic-review-panel>label{max-width:22rem}
+.fanfic-review-results{display:grid;gap:.75rem}
+.fanfic-review-summary{font-weight:650;margin:0}
+.fanfic-profile-evidence,.fanfic-review-issue{padding:.9rem;border:1px solid var(--line,#d7dce5);border-radius:10px;background:var(--surface,#fff);min-width:0}
+.fanfic-profile-evidence summary{cursor:pointer;font-weight:650}
+.fanfic-profile-evidence p{white-space:pre-wrap;overflow-wrap:anywhere;margin:.5rem 0 0}
+.fanfic-review-issue h4{margin:0 0 .6rem;font-size:1rem}
+.fanfic-review-issue blockquote{margin:.6rem 0;padding:.65rem .8rem;border-left:3px solid var(--accent,#7c6ee6);background:var(--surface-soft,#f8fafc);white-space:pre-wrap;overflow-wrap:anywhere}
+.fanfic-review-issue p,.fanfic-review-issue li{overflow-wrap:anywhere}
+.fanfic-review-evidence{white-space:pre-wrap;padding:.7rem;border-radius:8px;background:var(--surface-soft,#f8fafc);font-size:.9rem}
+.fanfic-review-issue ul{padding-left:1.4rem}
+.fanfic-review-issue .location-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.8rem}
+.fanfic-review-dismissed{opacity:.72;border-style:dashed}
