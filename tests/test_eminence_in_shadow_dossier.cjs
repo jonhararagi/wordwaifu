@@ -6,6 +6,7 @@ const root = path.resolve(__dirname, "..");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "data/catalog/story-universe-catalog.json"), "utf8"));
 const dossier = JSON.parse(fs.readFileSync(path.join(root, "lore/eminence-in-shadow/canon-dossier.json"), "utf8"));
 const readme = fs.readFileSync(path.join(root, "lore/eminence-in-shadow/README.md"), "utf8");
+const techniques = JSON.parse(fs.readFileSync(path.join(root, "lore/eminence-in-shadow/combat-techniques.json"), "utf8"));
 const app = fs.readFileSync(path.join(root, "src/app.js"), "utf8");
 const entry = catalog.entries.find(item => item.id === "eminence-in-shadow");
 assert.ok(entry, "Eminence in Shadow must remain selectable in the universe catalog");
@@ -14,7 +15,7 @@ assert.ok(catalog.canonDossierPriority.includes("eminence-in-shadow"), "universe
 assert.equal(dossier.id, "eminence-in-shadow");
 assert.equal(dossier.integrationStatus, "starter-corpus");
 assert.ok(dossier.continuities.some(item => item.id === "web-novel" && item.status === "divergent"), "web novel continuity must be marked divergent");
-assert.ok(dossier.characters.length >= 20, "dossier should provide a useful initial cast");
+assert.ok(dossier.characters.length >= 35, "dossier should include a substantial named cast beyond the initial leads");
 assert.ok(dossier.organizations.length >= 5, "dossier should map core factions");
 assert.ok(dossier.storyArcs.length >= 6, "dossier should map major narrative arcs");
 assert.ok(dossier.volumeGuide.length >= 7, "dossier should map the first seven light-novel volumes");
@@ -22,6 +23,9 @@ assert.ok(dossier.mediaCatalog.some(item => item.id === "movie-lost-echoes"), "a
 assert.ok(dossier.relationships.length >= 15, "dossier should map character and faction relationships");
 assert.ok(dossier.chronology.length >= 10, "dossier should include a narrative chronology");
 assert.ok(dossier.powerSystem.categories.length >= 5, "power system should include multiple categories");
+assert.ok(techniques.entries.length >= 15, "combat technique catalog should include named and general capabilities");
+assert.ok(techniques.entries.some(item => item.id === "i-am-atomic" && item.type === "signature-technique"), "Shadow signature technique should be classified distinctly");
+assert.ok(techniques.entries.every(item => item.continuity.includes("anime") && item.continuity.includes("light-novel")), "technique entries must preserve continuity labels");
 assert.ok(dossier.generatorRules.length >= 8, "generator needs explicit continuity and narrative rules");
 assert.ok(dossier.sources.some(source => source.type === "official-primary" && /^https:\/\//.test(source.url)), "official source links are required");
 assert.ok(readme.includes("Pendiente para declarar cobertura completa"), "remaining coverage gaps must be explicit");
@@ -31,4 +35,4 @@ assert.ok(app.includes("profile && profile.heroes"), "Story Foundry should use u
 assert.ok(app.includes("profile && profile.companions"), "Story Foundry should use universe-specific companion suggestions");
 assert.ok(app.includes("profile && profile.antagonists"), "Story Foundry should use universe-specific antagonist suggestions");
 assert.ok(app.includes("profile && profile.wounds"), "Story Foundry should use universe-specific wound/conflict seeds");
-console.log("PASS Eminence in Shadow dossier: " + dossier.characters.length + " character entries, " + dossier.organizations.length + " organizations, " + dossier.storyArcs.length + " arcs, continuity separation and source policy");
+console.log("PASS Eminence in Shadow dossier: " + dossier.characters.length + " character entries, " + dossier.organizations.length + " organizations, " + dossier.storyArcs.length + " arcs, " + techniques.entries.length + " combat references, continuity separation and source policy");
