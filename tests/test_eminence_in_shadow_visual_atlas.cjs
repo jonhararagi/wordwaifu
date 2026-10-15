@@ -25,6 +25,11 @@ assert.match(html, /map-warning/i, "map must disclose schematic/non-canonical ge
 assert.match(html, /character-search/, "character gallery must be searchable");
 assert.match(html, /shadow-garden\.jp\/1st\/assets\/img\/character\/chara1_main1\.png/, "must reference exact official image URL");
 assert.match(html, /derechos reservados/i, "official artwork rights must be disclosed");
+assert.match(html, /© DERECHOS RESERVADOS/, "displayed official art must carry a small copyright watermark");
+assert.match(html, /Ver original sin marca/, "each displayed official image must link to the unmodified source image");
+assert.match(html, /CARTOGRAFÍA 2D/, "atlas must present a flat 2D cartographic layout");
+assert.match(html, /translate\(925 85\)/, "2D map must include a compass rose");
+assert.match(html, /stroke-dasharray="5 6"/, "map must visually distinguish narrative connections");
 assert.equal(catalog.atlas.locations.length, 8, "expected initial eight location records");
 assert.equal(catalog.images.length, 12, "expected twelve sourced official character images");
 for (const image of catalog.images) {
