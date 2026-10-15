@@ -15,7 +15,7 @@ const readme = fs.readFileSync(readmePath, "utf8");
 const appHtml = fs.readFileSync(appHtmlPath, "utf8");
 const inlineScript = html.split("<script>")[1]?.split("</script>")[0];
 assert.ok(inlineScript, "atlas must contain its interaction script");
-new vm.Script(inlineScript[1]);
+new vm.Script(inlineScript);
 assert.match(html, /id="shadow-map"/, "interactive Shadow map must exist");
 assert.match(html, /data-tab="characters"/, "character image gallery must be navigable");
 assert.match(html, /data-tab="powers"/, "powers section must be navigable");
