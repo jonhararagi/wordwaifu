@@ -165,8 +165,8 @@
       });
     });
     const factPatterns = [
-      { key:"death", positive:/\b(murió|muerto|muerta|falleció|asesinaron|está muerto|está muerta)\b/i, negative:/\b(está vivo|está viva|sigue vivo|sigue viva|sobrevivió)\b/i, label:"estado de vida" },
-      { key:"injury", positive:/\b(herida grave|pierna rota|brazo roto|está herido|está herida|sangraba profusamente)\b/i, negative:/\b(se recuperó por completo|herida curada|ya no está herido|ya no está herida)\b/i, label:"estado físico" }
+      { key:"death", positive:/(murió|muerto|muerta|falleció|asesinaron|está muerto|está muerta)/i, negative:/(está vivo|está viva|sigue vivo|sigue viva|sobrevivió)/i, label:"estado de vida" },
+      { key:"injury", positive:/(herida grave|pierna rota|brazo roto|está herido|está herida|sangraba profusamente)/i, negative:/(se recuperó por completo|herida curada|ya no está herido|ya no está herida)/i, label:"estado físico" }
     ];
     factPatterns.forEach(pattern => {
       const occurrences = [];
