@@ -247,6 +247,7 @@ async function run() {
     await page.locator("#story-plan-world").fill("Puerto de Ceniza");
     await page.locator("#story-plan-power").fill("Eco de memoria");
     // These unsaved metadata edits must be consumed by the same generate action.
+    await page.locator("#story-meta-form [name='storyName']").fill("Historia de prueba");
     await page.locator("#story-meta-form [name='storyDescription']").fill("Sinopsis de prueba para comprobar el guardado.");
     await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
     await page.locator("#story-meta-form [name='storyConflict']").fill("Un conflicto verificable.");
