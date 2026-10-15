@@ -30,6 +30,13 @@ assert.match(html, /Ver original sin marca/, "each displayed official image must
 assert.match(html, /CARTOGRAFÍA 2D/, "atlas must present a flat 2D cartographic layout");
 assert.match(html, /translate\(925 85\)/, "2D map must include a compass rose");
 assert.match(html, /stroke-dasharray="5 6"/, "map must visually distinguish narrative connections");
+assert.match(html, /id="technique-catalog"/, "power section must render the structured technique catalog");
+assert.match(html, /id="technique-search"/, "power catalog must be searchable");
+assert.match(html, /id="technique-filter"/, "power catalog must filter by technique type");
+assert.match(html, /id="equipment-catalog"/, "equipment section must render catalog-backed entries");
+assert.match(html, /fetch\("\.\/combat-techniques\.json"\)/, "atlas must load the maintained combat-techniques source of truth");
+assert.match(html, /Límites:/, "technique cards must expose limitations, not only names");
+
 assert.equal(catalog.atlas.locations.length, 8, "expected initial eight location records");
 assert.equal(catalog.images.length, 12, "expected twelve sourced official character images");
 for (const image of catalog.images) {
