@@ -54,6 +54,7 @@
   }
   function chapterFunction(index, count, ending) {
     const role = ARC_BEATS[(index - 1) % ARC_BEATS.length];
+    if (count === 1) return { ...ARC_BEATS[7], key:ending === "closed" ? "resolution" : ending === "arc" ? "arc_transition" : "open_question", name:ending === "closed" ? "Detonante y resolución" : ending === "arc" ? "Detonante y cierre de arco" : "Detonante y pregunta abierta", purpose:"En una historia de un capítulo, presentar el conflicto, forzar una decisión y comprimir el cambio y sus consecuencias en una resolución coherente. " + ENDINGS[ending].purpose };
     if (index === 1) return { ...ARC_BEATS[0], key:"inciting", name:"Detonante", purpose:"Presentar una situación concreta, una necesidad y una anomalía que exija actuar." };
     if (index === count) return { ...ARC_BEATS[7], key:ending === "closed" ? "resolution" : ending === "arc" ? "arc_transition" : "open_question", name:ending === "closed" ? "Resolución final" : ending === "arc" ? "Cierre de arco y transición" : "Resolución parcial y pregunta abierta", purpose:ENDINGS[ending].purpose };
     return role;
