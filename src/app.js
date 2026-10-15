@@ -1334,10 +1334,28 @@
       const universeMode=read("#story-plan-universe-mode")||"original";
       const canonReference=read("#story-plan-canon-reference");
       const cast=makeCast();
-      const title=story.name||"La historia";
-      const premise=story.premise||story.description||"una decisión que alterará el equilibrio del mundo";
-      const conflict=story.conflict||(profiles[inspiration]&&profiles[inspiration].conflict)||("resolver la amenaza de "+cast.villain+" sin destruir aquello que "+cast.hero+" intenta proteger");
-      const worldRules=story.worldRules||("Escenario: "+cast.world+". Poder/recurso: "+cast.power+". Todo uso debe tener límites, coste y consecuencias visibles.");
+      const readMeta=(name)=>{
+        const field=metaForm?.elements.namedItem(name);
+        return field?field.value.trim():null;
+      };
+      const title=readMeta("storyName")??story.name??"La historia";
+      const description=readMeta("storyDescription")??story.description??"";
+      const premise=readMeta("storyPremise")??story.premise??story.description??"una decisión que alterará el equilibrio del mundo";
+      const conflict=readMeta("storyConflict")??story.conflict??((profiles[inspiration]&&profiles[inspiration].conflict)||("resolver la amenaza de "+cast.villain+" sin destruir aquello que "+cast.hero+" intenta proteger"));
+      const worldRules=readMeta("storyWorldRules")??story.worldRules??("Escenario: "+cast.world+". Poder/recurso: "+cast.power+". Todo uso debe tener límites, coste y consecuencias visibles.");
+      const storyFoundry=window.WordWaifuStoryFoundry;
+      if(!storyFoundry||typeof storyFoundry.generateStoryPlan!=="function"){
+        const status=$("#story-plan-status",container);
+        if(status)status.textContent="No se pudo cargar Story Foundry; no se modificó la historia.";
+        return;
+      }
+      const generatedPlan=storyFoundry.generateStoryPlan({
+        title,genre,premise,world:cast.world,protagonist:cast.hero,
+        protagonistGoal:story.protagonistGoal||conflict,centralConflict:conflict,
+        companion:cast.companion,antagonist:cast.villain,loveInterest:cast.romance,
+        trauma:cast.wound,power:cast.power,tone:story.tone||"Aventura y drama",
+        ending:ending==="open"?"open":"closed",chapterCount:count
+      });
       const phases=[
         {name:"Presentación y detonante",start:0,end:0,goal:"presentar mundo, deseo, reparto y problema",beat:"Una anomalía rompe la rutina de "+cast.hero+" y obliga al elenco a tomar posición."},
         {name:"Progreso y primeras victorias",start:0,end:0,goal:"ganar capacidades, aliados y comprensión",beat:"Una victoria verificable demuestra progreso, pero revela un precio y una nueva limitación."},
@@ -1350,33 +1368,37 @@
       // Keep every essential dramatic beat even in a one- or two-chapter story.
       // When the requested length is short, merge adjacent phases instead of
       // silently dropping the fall, climax or resolution.
-      const phaseCount=Math.min(phases.length,count);
-      const activePhases=Array.from({length:phaseCount},(_,groupIndex)=>{
-        const members=phases.map((phase,index)=>({phase,index})).filter(({index})=>Math.floor(index*phaseCount/phases.length)===groupIndex);
+      const activePhases=generatedPlan.arcs.map((arc,index)=>{
+        const sourceIndex=generatedPlan.arcs.length===1?phases.length-1:Math.min(phases.length-1,Math.floor(index*phases.length/generatedPlan.arcs.length));
+        const source=phases[sourceIndex];
         return {
-          name:members.map(({phase})=>phase.name).join(" + "),
-          goal:members.map(({phase})=>phase.goal).join("; "),
-          beat:members.map(({phase})=>phase.beat).join(" "),
-          weight:members.reduce((sum,{index})=>sum+weights[index],0),
-          start:0,end:0
+          name:generatedPlan.chapterCount===1?"Resolución y consecuencias":arc.name,
+          goal:arc.purpose+"; "+source.goal,
+          beat:source.beat,
+          start:arc.startChapter,
+          end:arc.endChapter
         };
-      });
-      const weightTotal=activePhases.reduce((sum,phase)=>sum+phase.weight,0);
-      let cursor=1, cumulative=0;
-      activePhases.forEach((phase,index)=>{
-        phase.start=cursor;
-        cumulative+=phase.weight;
-        phase.end=index===activePhases.length-1?count:Math.max(cursor,Math.min(count-(activePhases.length-index-1),Math.round(count*cumulative/weightTotal)));
-        cursor=phase.end+1;
       });
       const chapterRows=[];
       for(let n=1;n<=count;n++){
+        const foundryChapter=generatedPlan.chapters[n-1];
         const phase=activePhases.find((item)=>n>=item.start&&n<=item.end)||activePhases[activePhases.length-1];
         const local=n-phase.start+1, span=Math.max(1,phase.end-phase.start+1);
         const midpoint=local===1?"abrir una pregunta dramática y tomar una primera decisión":local===span?"cerrar esta fase con una decisión irreversible y sus consecuencias":"complicar el objetivo, cambiar una relación y revelar información parcial";
         const chapterBeat=span===1?phase.beat:(local===1?phase.beat.split(" ").slice(0,45).join(" "):phase.beat);
-        chapterRows.push({id:"chapter-"+Date.now().toString(36)+"-"+n,title:"Capítulo "+n+": "+phase.name,summary:"Objetivo dramático: "+phase.goal+". En este capítulo, "+cast.hero+" debe "+midpoint+". Contexto: "+premise+". Obstáculo: "+conflict+". Desarrollo: "+chapterBeat+" Mundo y reglas: "+worldRules+". Poder y coste: "+cast.power+" debe tener límites observables; la presión emocional se relaciona con "+cast.wound+". Continuidad: "+(universeMode==="fanfiction"?"respetar el canon de la obra y etiquetar las divergencias":universeMode==="mixed"?"señalar qué reglas pertenecen al canon y cuáles son aportes originales":"mantener coherencia interna del universo original")+(canonReference?" Fuente de referencia declarada: "+canonReference+". Verificar los hechos contra la fuente; no presentar teorías de fans como canon.":"")+". Cierre: dejar una consecuencia concreta que obligue al siguiente capítulo a responder o cambiar de estrategia. Evitar soluciones gratuitas.",content:"",status:"outline",phase:phase.name});
+        chapterRows.push({id:"chapter-"+Date.now().toString(36)+"-"+n,title:generatedPlan.chapterCount===1?"Resolución y consecuencias":"Capítulo "+n+": "+foundryChapter.arcName,storyFoundryArcKey:foundryChapter.arcKey,summary:"Story Foundry: "+foundryChapter.summary+" Objetivo dramático: "+phase.goal+". En este capítulo, "+cast.hero+" debe "+midpoint+". Contexto: "+premise+". Obstáculo: "+conflict+". Desarrollo: "+chapterBeat+" Mundo y reglas: "+worldRules+". Poder y coste: "+cast.power+" debe tener límites observables; la presión emocional se relaciona con "+cast.wound+". Continuidad: "+(universeMode==="fanfiction"?"respetar el canon de la obra y etiquetar las divergencias":universeMode==="mixed"?"señalar qué reglas pertenecen al canon y cuáles son aportes originales":"mantener coherencia interna del universo original")+(canonReference?" Fuente de referencia declarada: "+canonReference+". Verificar los hechos contra la fuente; no presentar teorías de fans como canon.":"")+". Cierre: dejar una consecuencia concreta que obligue al siguiente capítulo a responder o cambiar de estrategia. Evitar soluciones gratuitas.",content:"",status:"outline",phase:phase.name});
       }
+      const previousDossiers=Array.isArray(story.characterDossiers)?story.characterDossiers:[];
+      const ensembleField=container.querySelector("[name='storyEnsemble']");
+      const currentEnsemble=ensembleField?.value.trim()||story.ensemble||"";
+      const previousGeneratedEnsemble=story.generatedEnsemble||"";
+      const authoredEnsemble=previousGeneratedEnsemble&&currentEnsemble.startsWith(previousGeneratedEnsemble)
+        ? currentEnsemble.slice(previousGeneratedEnsemble.length).trim()
+        : currentEnsemble;
+      story.name=title;
+      story.description=description;
+      story.premise=premise;
+      story.conflict=conflict;
       story.chapters=chapterRows;
       story.status="outline";
       story.endingType=ending;
@@ -1392,14 +1414,20 @@
       story.characterWound=cast.wound;
       story.signaturePower=cast.power;
       story.worldRules=worldRules;
-      story.characterDossiers=[
+      const generatedDossiers=[
         {role:"Protagonista",name:cast.hero,desire:"alcanzar la meta externa sin perder aquello que da sentido a su vida",need:"reconocer el coste de sus decisiones y aceptar ayuda sin delegar responsabilidad",personality:cast.heroPersonality,flaw:"confunde insistir con tener razón",wound:cast.wound,power:cast.power,powerLimit:"cada uso consume un recurso definido y deja una consecuencia que los rivales pueden explotar",arc:"confianza inicial → éxito parcial → falsa seguridad → pérdida → estrategia humilde → decisión con coste"},
         {role:"Compañero/coprotagonista",name:cast.companion,desire:"cumplir un objetivo propio incluso si el protagonista fracasa",need:"decidir qué lealtades merecen mantenerse y cuáles deben renegociarse",personality:cast.companionPersonality,flaw:"oculta información para conservar autonomía",wound:"una promesa o deuda que entra en conflicto con la misión",power:"habilidad complementaria al protagonista",powerLimit:"no puede resolver el conflicto principal sin cooperación ni preparación",arc:"alianza práctica → desacuerdo → ruptura o límite → elección libre de volver"},
         {role:"Antagonista",name:cast.villain,desire:"imponer una solución que considera necesaria",need:"enfrentarse al daño que su sistema causa a quienes trata como recursos",personality:cast.villainPersonality,flaw:"confunde control con estabilidad",wound:"un fracaso anterior convertido en justificación",power:"ventaja institucional, táctica o sobrenatural",powerLimit:"depende de una regla, recurso o apoyo que puede perderse",arc:"presión indirecta → respuesta al progreso → explotación del punto ciego → confrontación ideológica"},
         {role:"Interés amoroso opcional",name:cast.romance,desire:"proteger su proyecto y conservar autonomía",need:"negociar confianza sin convertirse en premio ni salvación del protagonista",personality:cast.romancePersonality,flaw:"se retira antes de expresar una necesidad",wound:"no especificada; solo definirla si la historia lo necesita",power:"competencia propia relevante para el conflicto",powerLimit:"no está obligado a resolver ni reparar el arco del protagonista",arc:"interés y fricción → confianza ganada → conflicto de objetivos → elección recíproca o separación digna"}
       ];
-      story.ensemble=story.characterDossiers.map((character)=>character.role+": "+character.name+"\nDeseo: "+character.desire+"\nNecesidad: "+character.need+"\nPersonalidad: "+character.personality+"\nDefecto: "+character.flaw+"\nHerida: "+character.wound+"\nPoder/capacidad: "+character.power+"\nLímite y coste: "+character.powerLimit+"\nArco: "+character.arc).join("\n\n");
-      story.worldBible={setting:cast.world,rules:worldRules,conflict,powerAndCost:cast.power,emotionalPressure:cast.wound,genre,endingType:ending,universeMode,inspiration,canonReference,sourcePolicy:"Las wikis y fuentes sirven para resumir y verificar el canon con redacción propia; separar hechos oficiales, fanon, interpretación y aportes originales."};
+      story.characterDossiers=generatedDossiers.map((dossier)=>{
+        const previous=previousDossiers.find((item)=>item&&item.role===dossier.role);
+        return previous?{...dossier,...previous,role:dossier.role,name:dossier.name}:dossier;
+      });
+      const generatedEnsemble=story.characterDossiers.map((character)=>character.role+": "+character.name+"\nDeseo: "+character.desire+"\nNecesidad: "+character.need+"\nPersonalidad: "+character.personality+"\nDefecto: "+character.flaw+"\nHerida: "+character.wound+"\nPoder/capacidad: "+character.power+"\nLímite y coste: "+character.powerLimit+"\nArco: "+character.arc).join("\n\n");
+      story.generatedEnsemble=generatedEnsemble;
+      story.ensemble=[generatedEnsemble,authoredEnsemble&&authoredEnsemble!==generatedEnsemble?"Notas editadas:\n"+authoredEnsemble:""].filter(Boolean).join("\n\n");
+      story.worldBible={...(story.worldBible||{}),setting:cast.world,rules:worldRules,conflict,powerAndCost:cast.power,emotionalPressure:cast.wound,genre,endingType:ending,universeMode,inspiration,canonReference,sourcePolicy:"Las wikis y fuentes sirven para resumir y verificar el canon con redacción propia; separar hechos oficiales, fanon, interpretación y aportes originales."};
       story.arcs=activePhases.map((phase)=>"Capítulos "+phase.start+"–"+phase.end+": "+phase.name+" — "+phase.goal);
       const saved=await saveProject();
       renderDirectory();

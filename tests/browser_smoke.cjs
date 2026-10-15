@@ -246,8 +246,35 @@ async function run() {
     await page.locator("#story-plan-villain").fill("El Consejo");
     await page.locator("#story-plan-world").fill("Puerto de Ceniza");
     await page.locator("#story-plan-power").fill("Eco de memoria");
+    await page.evaluate(() => {
+      const foundry=window.WordWaifuStoryFoundry;
+      if(!foundry) throw new Error("Story Foundry module did not load before the application.");
+      const original=foundry.generateStoryPlan.bind(foundry);
+      window.__storyFoundryCalls=[];
+      foundry.generateStoryPlan=(options)=>{
+        const plan=original(options);
+        window.__storyFoundryCalls.push({options,plan});
+        return plan;
+      };
+    });
     await page.locator("#story-plan-generate-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-card").length === 10, { timeout: 10000 });
+    const integratedPlan = await page.evaluate(() => window.__storyFoundryCalls.at(-1));
+    assert.equal(integratedPlan.options.protagonist, "Iria Test");
+    assert.equal(integratedPlan.options.companion, "Noel Test");
+    assert.equal(integratedPlan.options.antagonist, "El Consejo");
+    assert.equal(integratedPlan.options.power, "Eco de memoria");
+    assert.equal(integratedPlan.options.premise, "Una premisa editable.");
+    assert.equal(integratedPlan.options.centralConflict, "Un conflicto verificable.");
+    assert.equal(integratedPlan.plan.chapterCount, 10);
+    const integratedStory = await page.evaluate(() => JSON.parse(localStorage.getItem("wordwaifu.project.v1")).stories.at(-1));
+    assert.equal(integratedStory.chapters[0].storyFoundryArcKey, integratedPlan.plan.chapters[0].arcKey);
+    assert.equal(integratedStory.name, "Historia de prueba", "generation must preserve edited story metadata");
+    assert.equal(integratedStory.description, "Sinopsis de prueba para comprobar el guardado.");
+    assert.equal(integratedStory.premise, "Una premisa editable.");
+    assert.equal(integratedStory.conflict, "Un conflicto verificable.");
+    assert.ok(integratedStory.ensemble.includes("Piloto: miedo al fracaso"), "generation must retain user-edited ensemble notes");
+    process.stdout.write("PASS Story Foundry integration: UI choices reach generateStoryPlan and its arc output is saved with edited story fields preserved.\\n");
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("Objetivo dramático:"), "generated chapter summary should include its dramatic objective");
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("Iria Test"), "generated chapter summary should use the chosen protagonist");
     assert.ok((await page.locator("#story-meta-form [name='storyEnsemble']").inputValue()).includes("Iria Test"), "generated cast should preserve the chosen protagonist in the ensemble plan");
@@ -269,6 +296,29 @@ async function run() {
     assert.ok(compactArcs.includes("Resolución y consecuencias"), "compact story arc plan must include resolution");
     const dossiers = await page.locator("#story-meta-form [name='storyEnsemble']").inputValue();
     assert.ok(dossiers.includes("Necesidad:") && dossiers.includes("Personalidad:") && dossiers.includes("Límite y coste:"), "character generator must save structured profiles, not only role labels");
+    // A new project must start without stories, then the original project must restore its saved chapter.
+    const firstProjectStoryId=await page.locator(".story-card").filter({hasText:"Historia de prueba"}).getAttribute("data-story");
+    const firstProjectChapterTitle=await page.locator(".story-chapter-form [name='chapterTitle']").inputValue();
+    const firstProjectChapterSummary=await page.locator(".story-chapter-form [name='chapterSummary']").inputValue();
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-dialog").waitFor({state:"visible"});
+    await page.locator("#create-project-name").fill("Aislamiento de historias B");
+    await page.locator("#project-create-button").click();
+    await page.waitForFunction(() => document.querySelector("#project-name")?.textContent === "Aislamiento de historias B", {timeout:8000});
+    await page.locator('.nav-item[data-view="stories"]').click();
+    assert.equal(await page.locator(".story-card").count(),0,"a new project must not inherit the first project's stories");
+    assert.match(await page.locator(".entity-grid .empty-state").innerText(),/Todavía no hay historias/);
+    await page.locator("#manage-projects-button").click();
+    await page.locator("#project-dialog").waitFor({state:"visible"});
+    await page.locator("#project-list").selectOption("project-asteria");
+    await page.locator("#project-open-button").click();
+    await page.waitForFunction(() => document.querySelector("#project-name")?.textContent === "Las Crónicas de Asteria", {timeout:8000});
+    await page.locator('.nav-item[data-view="stories"]').click();
+    await page.locator('.story-card[data-story="' + firstProjectStoryId + '"]').click();
+    await page.waitForFunction(() => document.querySelectorAll(".story-chapter-card").length === 1, {timeout:8000});
+    assert.equal(await page.locator(".story-chapter-form [name='chapterTitle']").inputValue(),firstProjectChapterTitle);
+    assert.equal(await page.locator(".story-chapter-form [name='chapterSummary']").inputValue(),firstProjectChapterSummary);
+    process.stdout.write("PASS story isolation: a second project starts empty and the first project's saved chapter returns intact.\\n");
     process.stdout.write("PASS Story Foundry: adaptive 10- and 1-chapter outlines preserve resolution, open ending and structured character dossiers.\\n");
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
@@ -300,7 +350,8 @@ async function run() {
       return !!img && img.complete && img.naturalWidth > 0;
     }, null, { timeout: 5000 });
     const archiveThemeBg = await page.locator("body").evaluate(el => getComputedStyle(el).backgroundColor);
-    assert.equal(archiveThemeBg, "rgb(33, 30, 26)", "The warm night palette must be active.");
+    // The latest visual refresh intentionally uses the dark violet #0b0d16 base token.
+    assert.equal(archiveThemeBg, "rgb(11, 13, 22)", "The current anime archive palette must be active.");
     // Character archive: compact search, profile navigation, evidence and temporal separation.
     await page.locator('.nav-item[data-view="lore"]').click();
     await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
