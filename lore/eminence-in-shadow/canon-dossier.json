@@ -666,6 +666,300 @@
         "Su presencia y estado deben etiquetarse por continuidad; no mezclar sin aviso sus acontecimientos con arcos tempranos del anime."
       ],
       "narrativeUse": "Conecta el mundo de origen con los desarrollos posteriores y exige especial cuidado de spoilers."
+    },
+    {
+      "id": "nu",
+      "name": "Nu",
+      "role": "agente de Shadow Garden y operadora encubierta",
+      "personality": [
+        "disciplinada",
+        "observadora",
+        "leal a Shadow Garden"
+      ],
+      "motivation": "Cumplir misiones de inteligencia y actuar sin comprometer la estructura clandestina.",
+      "abilities": [
+        "infiltración",
+        "combate con magia",
+        "recopilación de información"
+      ],
+      "relationships": [
+        "Opera bajo la estructura de Shadow Garden y transmite información sobre amenazas en la capital."
+      ],
+      "narrativeUse": "Permite introducir informes, identidades falsas y misiones de inteligencia sin dar omnisciencia al protagonista."
+    },
+    {
+      "id": "lambda",
+      "name": "Lambda",
+      "role": "instructora y combatiente de Shadow Garden",
+      "personality": [
+        "estricta",
+        "directa",
+        "disciplinada"
+      ],
+      "motivation": "Mantener la preparación y la eficacia de los miembros de la organización.",
+      "abilities": [
+        "entrenamiento de combate",
+        "uso de espada",
+        "coordinación táctica"
+      ],
+      "relationships": [
+        "Forma y coordina agentes; sus prioridades son operativas, no teatrales."
+      ],
+      "narrativeUse": "Sirve como mentora exigente o fuente de conflicto sobre preparación y disciplina."
+    },
+    {
+      "id": "chi",
+      "name": "Chi",
+      "role": "miembro de Shadow Garden",
+      "personality": [
+        "reservada",
+        "atenta",
+        "orientada a la misión"
+      ],
+      "motivation": "Cumplir las tareas asignadas y proteger los secretos de la organización.",
+      "abilities": [
+        "combate mágico",
+        "operaciones de apoyo"
+      ],
+      "relationships": [
+        "Trabaja dentro de la estructura de Shadow Garden."
+      ],
+      "narrativeUse": "Puede poblar escenas de equipo y mostrar que la organización excede a sus figuras más famosas."
+    },
+    {
+      "id": "omega",
+      "name": "Omega",
+      "role": "agente de Shadow Garden asociada a operaciones de alto nivel",
+      "personality": [
+        "serena",
+        "competente",
+        "reservada"
+      ],
+      "motivation": "Ejecutar operaciones y sostener la red de agentes.",
+      "abilities": [
+        "infiltración",
+        "combate",
+        "coordinación"
+      ],
+      "relationships": [
+        "Forma parte de la red de agentes que extiende el alcance de Shadow Garden."
+      ],
+      "narrativeUse": "Útil para operaciones paralelas y para representar la escala de la organización."
+    },
+    {
+      "id": "victoria",
+      "name": "Victoria",
+      "role": "combatiente de élite vinculada a Shadow Garden",
+      "personality": [
+        "intensa",
+        "devota",
+        "competitiva"
+      ],
+      "motivation": "Encontrar propósito y demostrar su valor a través de la misión.",
+      "abilities": [
+        "combate mágico de alto nivel",
+        "esgrima",
+        "presión ofensiva"
+      ],
+      "relationships": [
+        "Su lealtad a Shadow Garden y su reverencia por Shadow condicionan sus decisiones."
+      ],
+      "narrativeUse": "Permite explorar cómo la organización recluta combatientes poderosos y cómo la devoción puede volverse peligrosa."
+    },
+    {
+      "id": "mary",
+      "name": "Mary",
+      "role": "vampira cazadora y combatiente de la Ciudad sin Ley",
+      "personality": [
+        "cautelosa",
+        "experimentada",
+        "resuelta"
+      ],
+      "motivation": "Sobrevivir a las amenazas vampíricas y evitar que la violencia de la ciudad se extienda.",
+      "abilities": [
+        "combate con espada",
+        "conocimiento de vampiros",
+        "supervivencia urbana"
+      ],
+      "relationships": [
+        "Cruza caminos con Claire durante la crisis de la luna roja y la Reina de Sangre."
+      ],
+      "narrativeUse": "Aporta conocimiento local y una perspectiva práctica sobre el peligro vampírico."
+    },
+    {
+      "id": "elisabeth",
+      "name": "Elisabeth, Reina de Sangre",
+      "role": "figura vampírica central del arco de la Ciudad sin Ley",
+      "personality": [
+        "imponente",
+        "trágica",
+        "dominada por una condición peligrosa"
+      ],
+      "motivation": "Su retorno desencadena una lucha por el control y por la contención de su naturaleza vampírica.",
+      "abilities": [
+        "poder vampírico excepcional",
+        "regeneración y fuerza sobrenatural según la escena"
+      ],
+      "relationships": [
+        "Su regreso afecta a Mary, Claire y las facciones de la Ciudad sin Ley."
+      ],
+      "narrativeUse": "Antagonista trágica: no reducirla a maldad simple; distinguir voluntad, condición y manipulación."
+    },
+    {
+      "id": "perv-asshat",
+      "name": "Perv Asshat",
+      "role": "noble y conspirador en la crisis de Oriana",
+      "personality": [
+        "calculador",
+        "abusivo",
+        "ambicioso"
+      ],
+      "motivation": "Usar la crisis política y la coerción para hacerse con poder en Oriana.",
+      "abilities": [
+        "manipulación política",
+        "alianzas con el Culto",
+        "control de rehenes"
+      ],
+      "relationships": [
+        "Presiona a Rose mediante la captura de su madre y colabora con fuerzas hostiles al reino."
+      ],
+      "narrativeUse": "Representa el abuso institucional y la amenaza política, no un rival que deba resolverse solo con fuerza."
+    },
+    {
+      "id": "doem-ketsuhat",
+      "name": "Doem Ketsuhat",
+      "role": "figura política vinculada a la conspiración de Oriana",
+      "personality": [
+        "oportunista",
+        "manipulador",
+        "ambicioso"
+      ],
+      "motivation": "Aprovechar el conflicto entre Oriana y Midgar para expandir su influencia.",
+      "abilities": [
+        "diplomacia coercitiva",
+        "maniobra política",
+        "uso de aliados"
+      ],
+      "relationships": [
+        "Su agenda política se entrecruza con la crisis de Rose y los planes del Culto."
+      ],
+      "narrativeUse": "Antagonista de intriga estatal; mantener separados sus objetivos personales de la estrategia general del Culto."
+    },
+    {
+      "id": "nelson",
+      "name": "Nelson",
+      "role": "sacerdote y agente del Culto en el Santuario",
+      "personality": [
+        "fanático",
+        "frío",
+        "dispuesto a experimentar"
+      ],
+      "motivation": "Preservar los secretos y el poder del Culto usando los mecanismos del Santuario.",
+      "abilities": [
+        "magia amplificada por el Santuario",
+        "control del entorno y de recursos experimentales"
+      ],
+      "relationships": [
+        "Se enfrenta a Alpha y Shadow durante la investigación del Santuario."
+      ],
+      "narrativeUse": "Conecta la religión institucional, la experimentación y la historia manipulada."
+    },
+    {
+      "id": "lutheran-barnett",
+      "name": "Lutheran Barnett",
+      "role": "investigador y figura paterna de Sherry, implicado en los secretos de la academia",
+      "personality": [
+        "ambicioso",
+        "calculador",
+        "obsesionado con resultados"
+      ],
+      "motivation": "Perseguir objetivos personales mediante investigación y acceso a recursos prohibidos.",
+      "abilities": [
+        "investigación mágica",
+        "maniobra institucional"
+      ],
+      "relationships": [
+        "Su historia se conecta con Sherry y con los secretos que rodean a la academia."
+      ],
+      "narrativeUse": "Permite tratar la corrupción de la investigación y el daño familiar causado por secretos."
+    },
+    {
+      "id": "zenon-griffey",
+      "name": "Zenon Griffey",
+      "role": "caballero y antagonista del arco de Alexia",
+      "personality": [
+        "arrogante",
+        "ambicioso",
+        "violento"
+      ],
+      "motivation": "Obtener poder y ascender dentro de la estructura del Culto.",
+      "abilities": [
+        "esgrima",
+        "refuerzo mágico",
+        "combate ofensivo"
+      ],
+      "relationships": [
+        "Se convierte en enemigo de Shadow durante la crisis de Alexia."
+      ],
+      "narrativeUse": "Rival temprano que muestra cómo la ambición institucional se combina con el poder mágico."
+    },
+    {
+      "id": "mordred",
+      "name": "Mordred",
+      "role": "figura de alto rango vinculada al Culto y a sus planes de escala mayor",
+      "personality": [
+        "calculador",
+        "orgulloso",
+        "estratégico"
+      ],
+      "motivation": "Impulsar los objetivos de la organización y aprovechar poderes o recursos antiguos.",
+      "abilities": [
+        "combate de alto nivel",
+        "conocimiento de la estructura del Culto"
+      ],
+      "relationships": [
+        "Su relevancia pertenece a una etapa posterior; no adelantarla en historias con punto de corte temprano."
+      ],
+      "narrativeUse": "Reservar para tramas posteriores y controlar spoilers por continuidad."
+    },
+    {
+      "id": "fenrir",
+      "name": "Fenrir",
+      "role": "combatiente de alto rango asociado a los Caballeros de las Rondas",
+      "personality": [
+        "dominante",
+        "seguro de su fuerza",
+        "agresivo"
+      ],
+      "motivation": "Ejercer poder dentro de la jerarquía de combate del Culto.",
+      "abilities": [
+        "esgrima avanzada",
+        "refuerzo mágico",
+        "presión de combate"
+      ],
+      "relationships": [
+        "Representa el escalón de amenaza que separa a los combatientes ordinarios de la élite del Culto."
+      ],
+      "narrativeUse": "Escalar desafíos sin convertirlo en una medida universal del poder de todos los miembros del Culto."
+    },
+    {
+      "id": "reina-oriana",
+      "name": "Reina Oriana",
+      "role": "reina y madre de Rose",
+      "personality": [
+        "protectora",
+        "políticamente vulnerable",
+        "afectada por la crisis del reino"
+      ],
+      "motivation": "Proteger a su hija y la estabilidad de Oriana.",
+      "abilities": [
+        "autoridad política",
+        "influencia cortesana"
+      ],
+      "relationships": [
+        "Su captura se usa para presionar a Rose durante la conspiración."
+      ],
+      "narrativeUse": "Humaniza el costo familiar de la lucha política y crea objetivos de rescate con consecuencias."
     }
   ],
   "storyArcs": [
@@ -864,7 +1158,8 @@
     "Inventario de técnicas, reliquias y experimentos con límites, costes y evidencia por continuidad.",
     "Corpus específico de las series derivadas Master of Garden — Seven Shadows Chronicles y Shadow Gaiden.",
     "Verificación de la película Lost Echoes cuando se publiquen sinopsis y materiales oficiales suficientes.",
-    "Separación de la web novel respecto de la novela ligera en cada acontecimiento divergente."
+    "Separación de la web novel respecto de la novela ligera en cada acontecimiento divergente.",
+    "Completar las fichas secundarias y las apariciones exactas de personajes por episodio/volumen; las nuevas entradas de este bloque son fichas funcionales iniciales, no un censo exhaustivo."
   ],
   "mediaCatalog": [
     {
