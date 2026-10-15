@@ -1,0 +1,18 @@
+"use strict";
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
+const root = path.resolve(__dirname, "..");
+const guide = JSON.parse(fs.readFileSync(path.join(root, "lore/eminence-in-shadow/light-novel-volume-guide.json"), "utf8"));
+const dossier = JSON.parse(fs.readFileSync(path.join(root, "lore/eminence-in-shadow/canon-dossier.json"), "utf8"));
+const readme = fs.readFileSync(path.join(root, "lore/eminence-in-shadow/README.md"), "utf8");
+assert.equal(guide.primaryContinuity, "light-novel");
+assert.equal(guide.volumes.length, 7, "initial LN guide should cover volumes 1–7");
+assert.ok(guide.volumes.every(v => v.continuity === "light-novel" && v.summary.length > 150), "every volume needs an original, substantive summary");
+assert.ok(guide.volumes.every(v => /^https:\/\//.test(v.sourceUrl)), "every volume needs an editorial source");
+assert.ok(guide.volumes.every(v => v.chapterCoverage.status === "chapter-index-pending" && v.chapterCoverage.chapters.length === 0), "do not pretend chapter-level coverage exists before primary-text verification");
+assert.ok(guide.volumes.every(v => v.adaptationComparison.status === "not-yet-compared"), "adaptation comparison must remain explicitly pending");
+assert.ok(guide.completionGate.length >= 5);
+assert.equal(dossier.canonPolicy.primaryContinuity, "light-novel");
+assert.ok(readme.includes("light-novel-volume-guide.json"), "README must link the LN volume guide");
+console.log("PASS Eminence in Shadow LN guide: " + guide.volumes.length + " volumes, primary-continuity labels, source links, and honest chapter/adaptation coverage gates");
