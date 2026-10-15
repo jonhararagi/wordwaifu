@@ -1,0 +1,238 @@
+{
+  "id": "eminence-in-shadow-combat-techniques",
+  "universeId": "eminence-in-shadow",
+  "language": "es",
+  "integrationStatus": "reference-catalog-initial",
+  "policy": "Distinguir técnicas nombradas, capacidades generales, equipo y métodos tácticos. No inventar nombres canónicos ni convertir una descripción funcional en una técnica oficial. Las limitaciones son reglas para generación coherente, no siempre debilidades expresas en el canon.",
+  "entries": [
+    {
+      "id": "magic-control",
+      "name": "Control mágico",
+      "type": "general",
+      "owner": "combatants",
+      "description": "Manipular el flujo y la densidad de la magia para sostener técnicas, reforzar el cuerpo o ejecutar ataques.",
+      "limits": "El dominio depende de entrenamiento y precisión; no atribuir el nivel de Shadow a personajes comunes.",
+      "evidence": "El sistema de magia se describe en la continuidad principal; comprobar escenas antes de asignar niveles.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "body-reinforcement",
+      "name": "Refuerzo corporal",
+      "type": "general",
+      "owner": "combatants",
+      "description": "Aplicar magia para mejorar fuerza, velocidad, resistencia y respuesta durante el combate.",
+      "limits": "El gasto, el control y la diferencia de habilidad importan; el refuerzo no elimina heridas ni errores tácticos.",
+      "evidence": "Capacidad general del sistema de combate.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "swordsmanship",
+      "name": "Esgrima y lectura del rival",
+      "type": "general",
+      "owner": "Cid Kagenou / Shadow; Alpha; Iris; Beatrix; otros combatientes",
+      "description": "Combinar postura, distancia, tempo y lectura de movimientos para crear aperturas.",
+      "limits": "La destreza depende del oponente, el entorno y la información disponible; no convertir el rango social en prueba automática de superioridad.",
+      "evidence": "Representado a lo largo de los arcos de academia, torneo y capital.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "shadow-slime-suit",
+      "name": "Traje de slime de Shadow",
+      "type": "equipment",
+      "owner": "Cid Kagenou / Shadow",
+      "description": "Equipo adaptable que puede adoptar formas de ropa, armadura ligera y armas, reforzando su identidad visual y flexibilidad táctica.",
+      "limits": "No tratarlo como armadura invulnerable ni como tecnología común; registrar la forma concreta mostrada en cada escena.",
+      "evidence": "Elemento recurrente de la representación de Shadow.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "i-am-atomic",
+      "name": "I Am Atomic",
+      "type": "signature-technique",
+      "owner": "Cid Kagenou / Shadow",
+      "description": "Técnica extrema que concentra y libera una cantidad abrumadora de poder mágico en un ataque de gran escala.",
+      "limits": "Exclusiva de la escala excepcional de Shadow; no copiarla como habilidad inicial de personajes originales ni asumir que cualquier rival puede resistirla.",
+      "evidence": "Técnica insignia mostrada en la adaptación y la novela ligera.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "shadow-infiltration",
+      "name": "Infiltración e identidad de Shadow",
+      "type": "tactical-method",
+      "owner": "Cid Kagenou / Shadow",
+      "description": "Usar disfraces, actuación, control del ritmo y ocultación de capacidades para aparecer como una figura distinta de Cid.",
+      "limits": "La identidad puede ser descubierta por observación, contradicciones o consecuencias; no borrar automáticamente todas las sospechas.",
+      "evidence": "Método central de la premisa.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "alpha-command",
+      "name": "Mando táctico de Alpha",
+      "type": "specialty",
+      "owner": "Alpha",
+      "description": "Coordinar operaciones, interpretar informes y mantener la disciplina estratégica de Shadow Garden.",
+      "limits": "Alpha no comparte toda la información con todas las agentes; los planes pueden fallar por información parcial o iniciativas autónomas.",
+      "evidence": "Función operativa de Alpha como primera de las Siete Sombras.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "beta-intelligence",
+      "name": "Inteligencia y crónica de Beta",
+      "type": "specialty",
+      "owner": "Beta",
+      "description": "Recopilar información, infiltrarse y convertir hechos en relatos que consolidan la leyenda de Shadow.",
+      "limits": "Sus relatos reflejan interpretación y admiración; no usarlos como fuente neutral de todos los hechos.",
+      "evidence": "Especialidad narrativa de Beta.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "gamma-commerce",
+      "name": "Infraestructura comercial de Gamma",
+      "type": "specialty",
+      "owner": "Gamma",
+      "description": "Sostener recursos, redes comerciales y capacidad logística mediante Mitsugoshi.",
+      "limits": "El poder económico depende de confianza, suministros, información y competencia; una crisis comercial puede amenazar operaciones.",
+      "evidence": "Arco económico de la segunda temporada.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "delta-predatory-combat",
+      "name": "Combate físico de Delta",
+      "type": "specialty",
+      "owner": "Delta",
+      "description": "Imponer presión con fuerza, velocidad y agresividad, resolviendo enfrentamientos de forma directa.",
+      "limits": "Su estilo puede ser explotado mediante terreno, distracción o una estrategia que evite el choque frontal.",
+      "evidence": "Perfil de combate de Delta.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "epsilon-magic-control",
+      "name": "Control mágico y presentación de Epsilon",
+      "type": "specialty",
+      "owner": "Epsilon",
+      "description": "Usar control mágico refinado y una imagen cuidadosamente construida para infiltrarse y actuar con precisión.",
+      "limits": "Su atención a la presentación puede generar tensión personal; la magia exige concentración y no elimina la posibilidad de engaño rival.",
+      "evidence": "Especialidad de Epsilon dentro de las Siete Sombras.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "zeta-independent-operations",
+      "name": "Operaciones autónomas de Zeta",
+      "type": "specialty",
+      "owner": "Zeta",
+      "description": "Operar con independencia y perseguir objetivos mediante redes de información y acciones encubiertas.",
+      "limits": "La autonomía puede entrar en conflicto con la cadena de mando y con otros planes; no asumir que todos sus objetivos están comunicados a Alpha.",
+      "evidence": "Perfil de operaciones encubiertas de Zeta.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "eta-research",
+      "name": "Investigación de Eta",
+      "type": "specialty",
+      "owner": "Eta",
+      "description": "Investigar artefactos, magia y tecnología para convertir hallazgos en herramientas o conocimiento útil.",
+      "limits": "La curiosidad científica puede desplazar consideraciones éticas o de seguridad; resultados experimentales necesitan evidencia y límites.",
+      "evidence": "Perfil de investigación de Eta.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "sanctuary-memory-system",
+      "name": "Memorias y mecanismos del Santuario",
+      "type": "artifact-system",
+      "owner": "Santuario; Nelson; Aurora",
+      "description": "El Santuario contiene mecanismos y recuerdos que conectan el presente con secretos históricos y con la investigación del Culto.",
+      "limits": "Acceso y significado dependen del contexto; no tratar recuerdos parciales como una historia completa ni transferirlos a otra continuidad sin marca.",
+      "evidence": "Arco del Santuario y la prueba de la Diosa.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "vampiric-power",
+      "name": "Poder vampírico de la Reina de Sangre",
+      "type": "supernatural-state",
+      "owner": "Elisabeth",
+      "description": "La condición vampírica de Elisabeth la convierte en una amenaza extraordinaria durante la crisis de la luna roja.",
+      "limits": "Distinguir poder, estado alterado y voluntad personal; no asumir control perfecto ni reducir el conflicto a una pelea convencional.",
+      "evidence": "Arco de la Ciudad sin Ley.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    },
+    {
+      "id": "bushin-tournament-techniques",
+      "name": "Técnicas del Festival Bushin",
+      "type": "combat-context",
+      "owner": "Jimina Seinen / Cid; Iris; Annerose; otros participantes",
+      "description": "El torneo pone a prueba estilos, preparación y lectura pública de las capacidades de cada combatiente.",
+      "limits": "Las actuaciones están condicionadas por identidades ocultas y por reglas de competición; el resultado no equivale a una escala universal de poder.",
+      "evidence": "Arco del Festival Bushin.",
+      "continuity": [
+        "light-novel",
+        "anime"
+      ],
+      "confidence": "broad-reference; verify scene-specific details"
+    }
+  ],
+  "coverageGaps": [
+    "Añadir referencias exactas por volumen/capítulo o episodio para cada técnica.",
+    "Completar nombres oficiales de técnicas solo cuando una fuente primaria los confirme.",
+    "Registrar coste, alcance, condiciones y contramedidas por escena, evitando inventar estadísticas numéricas."
+  ]
+}
