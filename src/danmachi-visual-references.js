@@ -134,11 +134,14 @@ function renderWatermarkBlob(ref,options){
  return new Promise((resolve,reject)=>{const img=new Image();img.onerror=()=>reject(new Error("No se pudo decodificar el archivo local para exportarlo."));img.onload=()=>{
   const canvas=document.createElement("canvas");canvas.width=img.naturalWidth;canvas.height=img.naturalHeight;const ctx=canvas.getContext("2d");
   if(!ctx){reject(new Error("Canvas no está disponible; el original queda intacto."));return;}ctx.drawImage(img,0,0);
-  const scale=Math.max(1,Math.min(canvas.width,canvas.height)/450),fontSize=Math.max(10,Math.round(13*scale)),margin=Math.max(6,Math.round(8*scale));
+  const scale=Math.min(canvas.width,canvas.height)/720,fontSize=Math.max(8,Math.min(28,Math.round(14*scale))),margin=Math.max(4,Math.round(8*scale)),padding=Math.max(3,Math.round(6*scale));
   const credit=String(ref.creditLine||ref.creatorOrRightsholder||"Titular unknown"),mark=String(options.text||"WordWaifu · copia marcada").trim().slice(0,100)||"WordWaifu · copia marcada";
-  const line2=("Crédito: "+credit).slice(0,180),stripH=Math.min(canvas.height,Math.ceil(fontSize*3.25+margin*2)),pos=["top-left","top-right","bottom-left","bottom-right"].includes(options.position)?options.position:"bottom-right",y=pos.startsWith("top")?0:Math.max(0,canvas.height-stripH);
-  ctx.save();ctx.fillStyle="rgba(0,0,0,0.76)";ctx.fillRect(0,y,canvas.width,stripH);ctx.fillStyle="#fff";ctx.font="bold "+fontSize+"px sans-serif";ctx.textBaseline="top";ctx.shadowColor="rgba(0,0,0,0.85)";ctx.shadowBlur=2;
-  ctx.fillText(mark,margin,y+margin,Math.max(1,canvas.width-margin*2));ctx.font=Math.max(9,fontSize-2)+"px sans-serif";ctx.fillText(line2,margin,y+margin+fontSize+3,Math.max(1,canvas.width-margin*2));ctx.restore();
+  const line1=mark.slice(0,80),line2=("Crédito: "+credit).slice(0,100),pos=["top-left","top-right","bottom-left","bottom-right"].includes(options.position)?options.position:"bottom-right";
+  ctx.save();ctx.font="bold "+fontSize+"px sans-serif";const textWidth=Math.max(ctx.measureText(line1).width,ctx.measureText(line2).width);
+  const boxWidth=Math.min(Math.max(1,canvas.width-margin*2),Math.ceil(textWidth+padding*2)),boxHeight=Math.min(Math.max(1,canvas.height-margin*2),Math.ceil(fontSize*2+padding*2+2));
+  const left=pos.endsWith("left")?margin:Math.max(margin,canvas.width-margin-boxWidth),top=pos.startsWith("top")?margin:Math.max(margin,canvas.height-margin-boxHeight);
+  ctx.fillStyle="rgba(0,0,0,0.78)";ctx.fillRect(Math.max(0,left),Math.max(0,top),boxWidth,boxHeight);ctx.fillStyle="#fff";ctx.textBaseline="top";ctx.shadowColor="rgba(0,0,0,0.9)";ctx.shadowBlur=2;
+  ctx.fillText(line1,left+padding,top+padding,Math.max(1,boxWidth-padding*2));ctx.font=Math.max(7,fontSize-2)+"px sans-serif";ctx.fillText(line2,left+padding,top+padding+fontSize+2,Math.max(1,boxWidth-padding*2));ctx.restore();
   canvas.toBlob(blob=>blob?resolve(blob):reject(new Error("No se pudo crear la copia marcada; el original permanece sin cambios.")),"image/png");
  };img.src=ref.fileDataUrl;});
 }
@@ -146,9 +149,8 @@ async function exportWatermarkedCopy(id,options){
  options=options||{};if(options.confirmed!==true)throw new Error("La exportación necesita una confirmación explícita.");
  const api=root.WordWaifuArtStudio;if(!api||typeof api.getVisualReference!=="function")throw new Error("La biblioteca local no está disponible.");
  const ref=await api.getVisualReference(id);if(!canExportWatermarkedCopy(ref))throw new Error("Bloqueado: el estado de derechos no permite modificar ni exportar una copia.");
- const blob=await renderWatermarkBlob(ref,options),href=URL.createObjectURL(blob),anchor=node("a"),slug=String(ref.title||"referencia").normalize("NFKD").replace(/[^a-zA-Z0-9-]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70)||"referencia";
- anchor.href=href;anchor.download=slug+"-watermarked.png";document.body.append(anchor);anchor.click();anchor.remove();setTimeout(()=>URL.revokeObjectURL(href),1500);
- return {exported:true,originalPreserved:true,filename:anchor.download};
+ const blob=await renderWatermarkBlob(ref,options),href=URL.createObjectURL(blob),slug=String(ref.title||"referencia").normalize("NFKD").replace(/[^a-zA-Z0-9-]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70)||"referencia";
+ return {exported:true,originalPreserved:true,filename:slug+"-watermarked.png",href};
 }
 function bindLocalForm(){
  const form=$("#dm-visual-local-form");if(!form||form.dataset.bound==="true")return;form.dataset.bound="true";
@@ -183,10 +185,15 @@ async function handleActions(event){
  if(exp){
   const confirmed=root.confirm("La copia exportada modificará el archivo y conservará el crédito. Confirmás que declaraste derechos que permiten modificar y exportar este recurso? La marca de agua no concede derechos.");
   if(!confirmed)return;const text=($("#dm-visual-watermark-text")||{}).value||"WordWaifu · copia marcada",position=($("#dm-visual-watermark-position")||{}).value||"bottom-right";
-  exp.disabled=true;try{const result=await exportWatermarkedCopy(exp.dataset.visualExport,{confirmed:true,text,position});setStatus("Se exportó "+result.filename+". El original local no fue modificado.");}
-  catch(error){setStatus(error.message||"No se pudo exportar la copia marcada.");}finally{exp.disabled=false;}return;
- }
- const del=event.target.closest("[data-visual-remove]");
+  exp.disabled=true;try{
+   const result=await exportWatermarkedCopy(exp.dataset.visualExport,{confirmed:true,text,position});
+   const card=exp.closest(".dm-visual-reference-card");if(!card)throw new Error("No se encontró la tarjeta para entregar la copia marcada.");
+   const previous=card.querySelector("[data-marked-download]");if(previous){try{URL.revokeObjectURL(previous.href);}catch(_){}previous.remove();}
+   const link=node("a","dm-visual-action dm-visual-export","Descargar copia marcada ↓");link.href=result.href;link.download=result.filename;link.dataset.markedDownload=exp.dataset.visualExport;link.rel="noopener";
+   link.addEventListener("click",()=>{setStatus("Descarga solicitada: "+result.filename+". El original local no fue modificado.");setTimeout(()=>URL.revokeObjectURL(result.href),30000);},{once:true});
+   card.append(link);setStatus("Copia marcada preparada. Pulsá “Descargar copia marcada” para guardarla; el original no se modificó.");
+  }catch(error){setStatus(error.message||"No se pudo exportar la copia marcada.");}finally{exp.disabled=false;}return;
+  const del=event.target.closest("[data-visual-remove]");
  if(del){if(!root.confirm("Eliminar esta referencia del almacenamiento de este navegador?"))return;
   try{await root.WordWaifuArtStudio.removeVisualReference(del.dataset.visualRemove);invalidateLocalReferences();setStatus("Referencia eliminada del almacenamiento local del navegador.");await renderGeneral();refreshTimelineCards();}
   catch(error){setStatus(error.message||"No se pudo confirmar la eliminación.");}}
