@@ -11,6 +11,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-001 · Zald — candidato de investigación
 - `claim_id`: DMR-013-CLM-001
+- `claim`: Zald figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-ZALD
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -27,6 +28,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-002 · Alfia — candidato de investigación
 - `claim_id`: DMR-013-CLM-002
+- `claim`: Alfia figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-ALFIA
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -43,6 +45,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-003 · Erebus — candidato de investigación
 - `claim_id`: DMR-013-CLM-003
+- `claim`: Erebus figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-EREBUS
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -59,6 +62,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-004 · Rudra — candidato de investigación
 - `claim_id`: DMR-013-CLM-004
+- `claim`: Rudra figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-RUDRA
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -75,6 +79,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-005 · Jura Halmer — candidato de investigación
 - `claim_id`: DMR-013-CLM-005
+- `claim`: Jura Halmer figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-JURA-HALMER
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -91,6 +96,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-006 · Vito — candidato de investigación
 - `claim_id`: DMR-013-CLM-006
+- `claim`: Vito figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-VITO
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -107,6 +113,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-007 · Olivas Act — candidato de investigación
 - `claim_id`: DMR-013-CLM-007
+- `claim`: Olivas Act figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-OLIVAS-ACT
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -123,6 +130,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-008 · Ardee Varma — candidato de investigación
 - `claim_id`: DMR-013-CLM-008
+- `claim`: Ardee Varma figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-ARDEE-VARMA
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -139,6 +147,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-009 · Valletta Grede — candidato de investigación
 - `claim_id`: DMR-013-CLM-009
+- `claim`: Valletta Grede figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-VALLETTA-GREDE
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -155,6 +164,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-010 · Barca Perdix — candidato de investigación
 - `claim_id`: DMR-013-CLM-010
+- `claim`: Barca Perdix figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-BARCA-PERDIX
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -171,6 +181,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-011 · Basram — candidato de investigación
 - `claim_id`: DMR-013-CLM-011
+- `claim`: Basram figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-BASRAM
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -187,6 +198,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-012 · Dis Sisters — candidato de investigación
 - `claim_id`: DMR-013-CLM-012
+- `claim`: Dis Sisters figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-DIS-SISTERS
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -203,6 +215,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-013 · Thanatos — candidato de investigación
 - `claim_id`: DMR-013-CLM-013
+- `claim`: Thanatos figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-THANATOS
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -219,6 +232,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-014 · Apate — candidato de investigación
 - `claim_id`: DMR-013-CLM-014
+- `claim`: Apate figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-APATE
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -235,6 +249,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-015 · Alecto — candidato de investigación
 - `claim_id`: DMR-013-CLM-015
+- `claim`: Alecto figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-ALECTO
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -251,6 +266,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-016 · Airmid-Teasanare — candidato de investigación
 - `claim_id`: DMR-013-CLM-016
+- `claim`: Airmid figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-AIRMID
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -267,6 +283,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-017 · Miach — candidato de investigación
 - `claim_id`: DMR-013-CLM-017
+- `claim`: Miach figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-MIACH
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -283,6 +300,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-018 · Naaza Erisuis — candidato de investigación
 - `claim_id`: DMR-013-CLM-018
+- `claim`: Naaza figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-NAAZA
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -299,6 +317,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-019 · Dian Cecht — candidato de investigación
 - `claim_id`: DMR-013-CLM-019
+- `claim`: Dian Cecht figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-DIAN-CECHT
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -315,6 +334,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-020 · Hephaistos — candidato de investigación
 - `claim_id`: DMR-013-CLM-020
+- `claim`: Hephaistos figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-HEPHAISTOS
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -331,6 +351,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-021 · Goibniu — candidato de investigación
 - `claim_id`: DMR-013-CLM-021
+- `claim`: Goibniu figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-GOIBNIU
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -347,6 +368,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-022 · Samira — candidato de investigación
 - `claim_id`: DMR-013-CLM-022
+- `claim`: Samira figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-SAMIRA
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
@@ -363,6 +385,7 @@ continuity: CONT-AR
 
 ### DMR-013-CLM-023 · Selenia — candidato de investigación
 - `claim_id`: DMR-013-CLM-023
+- `claim`: Selenia figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-SELENIA
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
