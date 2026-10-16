@@ -131,7 +131,89 @@ function validateDataset(data){
   }
   if(data&&data.anchor&&data.anchor.sources)for(const url of data.anchor.sources)try{if(new URL(url).protocol!=="https:")errors.push("Anchor source must use HTTPS: "+url);}catch{errors.push("Invalid anchor source URL: "+url);}
  }
- return {valid:errors.length===0,errors,eraCount:eras.length,eventCount:events.length,temporalModelVersion:legacyTemporalModel?0:data&&data.temporalModelVersion,legacyTemporalModel,temporalEventCount:legacyTemporalModel?0:events.filter(event=>event.temporal).length};
+ const spatialReport=validateLocationModel(data);errors.push(...spatialReport.errors);return {valid:errors.length===0,errors,eraCount:eras.length,eventCount:events.length,temporalModelVersion:legacyTemporalModel?0:data&&data.temporalModelVersion,legacyTemporalModel,temporalEventCount:legacyTemporalModel?0:events.filter(event=>event.temporal).length,locationCount:spatialReport.locationCount,locationRefCount:spatialReport.locationRefCount,unknownEventCount:spatialReport.unknownEventCount,provisionalEventCount:spatialReport.provisionalEventCount};
+}
+function validateLocationModel(data){
+ const errors=[];
+ const locations=Array.isArray(data&&data.locations)?data.locations:[];
+ const events=Array.isArray(data&&data.events)?data.events:[];
+ const map=data&&data.mapPresentation;
+ if(!map||map.type!=="non_geographic_relationship_schematic"||map.hasGeographicCoordinates!==false||map.scale!==null)errors.push("Map must be explicitly non-geographic and have no scale/coordinates.");
+ if(!Array.isArray(data&&data.locations)||locations.length===0)errors.push("Timeline map requires a location registry.");
+ const byId=new Map();
+ for(const place of locations){
+  if(!place.id)errors.push("Location registry entry has no id.");
+  else if(byId.has(place.id))errors.push("Duplicate timeline location id: "+place.id);
+  else byId.set(place.id,place);
+  if(place.type!=="location")errors.push("Location "+place.id+" has incompatible entity type.");
+  if(typeof place.name!=="string"||!place.name.trim())errors.push("Location "+place.id+" has no display name.");
+  if(typeof place.recordPath!=="string"||!place.recordPath.startsWith("places/")||!place.recordPath.endsWith(".md"))errors.push("Location "+place.id+" has an invalid record path.");
+  if(!Array.isArray(place.sourceUrls)||place.sourceUrls.length===0)errors.push("Location "+place.id+" has no source URLs.");
+  for(const url of place.sourceUrls||[])try{if(new URL(url).protocol!=="https:")errors.push("Location source must be HTTPS: "+place.id);}catch{errors.push("Invalid location source URL: "+place.id);}
+  if(place.coordinates!==undefined&&place.coordinates!==null)errors.push("Non-geographic map must not contain geographic coordinates: "+place.id);
+ }
+ for(const place of locations){
+  for(const relation of place.relationships||[]){
+   if(!byId.has(relation.locationId))errors.push("Unknown related location "+relation.locationId+" from "+place.id);
+   if(typeof relation.relationship!=="string"||!relation.relationship)errors.push("Missing relation kind for location "+place.id);
+   if(!Array.isArray(relation.sourceUrls)||!relation.sourceUrls.length)errors.push("Location relationship has no source URLs: "+place.id);
+   for(const url of relation.sourceUrls||[])if(!(place.sourceUrls||[]).includes(url)&&!(byId.get(relation.locationId)?.sourceUrls||[]).includes(url))errors.push("Location relationship source is not attached to either place: "+place.id+" -> "+relation.locationId);
+  }
+ }
+ const allowedRelationships=new Set(["event_place","broad_setting","related_context"]);
+ const allowedStatuses=new Set(["verified","provisional"]);
+ const allowedPrecision=new Set(["city_level","dungeon_general","floor_context"]);
+ for(const event of events){
+  const assessment=event.locationAssessment,refs=Array.isArray(event.locationRefs)?event.locationRefs:[];
+  if(!assessment||!["verified","provisional","unknown"].includes(assessment.status))errors.push("Event "+event.id+" missing/invalid location assessment.");
+  else if(assessment.status==="unknown"){
+   if(refs.length!==0)errors.push("Unknown-location event must not carry location refs: "+event.id);
+   if(assessment.spatialPrecision!=="unknown")errors.push("Unknown-location event must use unknown spatial precision: "+event.id);
+   if(typeof assessment.reason!=="string"||!assessment.reason.trim())errors.push("Unknown-location event needs a reason: "+event.id);
+  }else{
+   if(refs.length===0)errors.push("Located event needs at least one location ref: "+event.id);
+   if(!allowedPrecision.has(assessment.spatialPrecision))errors.push("Located event has invalid spatial precision: "+event.id);
+   const hasProvisional=refs.some(ref=>ref.verificationStatus==="provisional");
+   if(assessment.status==="verified"&&hasProvisional)errors.push("Event marked verified has provisional refs: "+event.id);
+   if(assessment.status==="provisional"&&!hasProvisional)errors.push("Event marked provisional must include a provisional ref: "+event.id);
+   if(typeof assessment.reason!=="string"||!assessment.reason.trim())errors.push("Located event needs location reasoning: "+event.id);
+  }
+  const seen=new Set();
+  for(const ref of refs){
+   if(!byId.has(ref.locationId))errors.push("Event "+event.id+" references missing location "+ref.locationId);
+   if(seen.has(ref.locationId))errors.push("Event "+event.id+" repeats location ref "+ref.locationId);
+   seen.add(ref.locationId);
+   if(!allowedRelationships.has(ref.relationship))errors.push("Event "+event.id+" has invalid location relationship: "+ref.relationship);
+   if(!allowedStatuses.has(ref.verificationStatus))errors.push("Event "+event.id+" has invalid location verification status.");
+   if(!allowedPrecision.has(ref.spatialPrecision))errors.push("Event "+event.id+" has invalid spatial precision.");
+   if(typeof ref.context!=="string"||!ref.context.trim())errors.push("Event "+event.id+" location ref needs an explanatory context.");
+   if(!Array.isArray(ref.sourceUrls)||!ref.sourceUrls.length)errors.push("Event "+event.id+" location ref has no source URLs.");
+   const place=byId.get(ref.locationId);
+   const attached=new Set([...(event.sources||[]).map(s=>s.url),...(place&&place.sourceUrls||[])]);
+   for(const url of ref.sourceUrls||[]){
+    if(!attached.has(url))errors.push("Location ref source not linked to event or place on "+event.id+": "+url);
+    try{if(new URL(url).protocol!=="https:")errors.push("Location ref source must be HTTPS on "+event.id);}catch{errors.push("Invalid location ref source URL on "+event.id);}
+   }
+  }
+ }
+ return {valid:errors.length===0,errors,locationCount:locations.length,locationRefCount:events.reduce((n,e)=>n+(Array.isArray(e.locationRefs)?e.locationRefs.length:0),0),unknownEventCount:events.filter(e=>e.locationAssessment&&e.locationAssessment.status==="unknown").length,provisionalEventCount:events.filter(e=>e.locationAssessment&&e.locationAssessment.status==="provisional").length};
+}
+function validateLocationCatalog(data,catalog,existingPaths){
+ const errors=[];
+ const records=Array.isArray(catalog&&catalog.records)?catalog.records:[];
+ const recordIds=new Set(),duplicates=new Set();
+ for(const record of records){if(recordIds.has(record.id))duplicates.add(record.id);recordIds.add(record.id);}
+ for(const id of duplicates)errors.push("Duplicate catalog record ID: "+id);
+ for(const place of (data&&data.locations)||[]){
+  const matches=records.filter(record=>record.id===place.id);
+  if(matches.length===0){errors.push("Location ID missing from DanMachi catalog: "+place.id);continue;}
+  if(matches.length>1)errors.push("Location ID is duplicated in DanMachi catalog: "+place.id);
+  const record=matches[0];
+  if(record.type!=="location")errors.push("Catalog entity type for "+place.id+" must be location, got "+record.type);
+  if(record.path!==place.recordPath)errors.push("Location/catalog path mismatch for "+place.id+": "+place.recordPath+" != "+record.path);
+  if(existingPaths&&typeof existingPaths.has==="function"&&!existingPaths.has(place.recordPath))errors.push("Location fiche path does not exist: "+place.recordPath);
+ }
+ return {valid:errors.length===0,errors};
 }
 function mount(){
  const panel=document.getElementById("danmachi-timeline-panel");
@@ -245,5 +327,5 @@ function mount(){
  }).catch(error=>{status.textContent="No se pudo cargar el mapa histórico: "+error.message+". La enciclopedia de personajes sigue disponible.";});
 }
 if(typeof document!=="undefined"){if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount);else mount();}
-return{validateDataset:validateDataset,mount:mount,temporalKindLabel:temporalKindLabel,temporalDescription:temporalDescription};
+return{validateDataset:validateDataset,validateLocationCatalog:validateLocationCatalog,mount:mount,temporalKindLabel:temporalKindLabel,temporalDescription:temporalDescription};
 });

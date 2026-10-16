@@ -37,10 +37,13 @@ if(!eventMap.has("EVT-DM-JUGGERNAUT-RETURN-001")||eventMap.get("EVT-DM-JUGGERNAU
 if(!records.has("MON-DM-JUGGERNAUT-001"))errors.push("Missing Juggernaut entity record");
 if((timeline.events||[]).filter(e=>(e.relatedEntities||[]).some(r=>r.id==="MON-DM-JUGGERNAUT-001")).length<2)errors.push("Juggernaut entity must link to two distinct event appearances");
 for(const record of catalog.records||[]){const file=path.resolve(root,record.path||"");if(!record.id||!record.path||!file.startsWith(root+path.sep)||!fs.existsSync(file))errors.push("Missing/unsafe record path "+record.path);}
+const knownLocationPaths=new Set((catalog.records||[]).filter(record=>record.path&&fs.existsSync(path.resolve(root,record.path))).map(record=>record.path));
+const locationCatalogReport=timelineValidator.validateLocationCatalog(timeline,catalog,knownLocationPaths);
+if(!locationCatalogReport.valid)for(const error of locationCatalogReport.errors)errors.push("Location catalog: "+error);
 const temporalReport=timelineValidator.validateDataset(timeline);
 if(!temporalReport.valid)for(const error of temporalReport.errors)errors.push("Temporal model: "+error);
 if(temporalReport.legacyTemporalModel)errors.push("Current DanMachi timeline dataset must use the explicit temporal model.");
 if(temporalReport.temporalEventCount!==15)errors.push("Expected typed temporal model on 15 events; got "+temporalReport.temporalEventCount+".");
-console.log("DanMachi timeline check: "+timeline.eras.length+" eras, "+timeline.events.length+" events, "+catalog.records.length+" catalog records; temporal model v"+temporalReport.temporalModelVersion+".");
+console.log("DanMachi timeline check: "+timeline.eras.length+" eras, "+timeline.events.length+" events, "+catalog.records.length+" catalog records; temporal model v"+temporalReport.temporalModelVersion+"; "+temporalReport.locationCount+" places / "+temporalReport.locationRefCount+" location links / "+temporalReport.unknownEventCount+" unknown / "+temporalReport.provisionalEventCount+" provisional events.");
 if(errors.length){for(const e of errors)console.error("ERROR: "+e);console.error("FAILED with "+errors.length+" error(s).");process.exit(1);}
-console.log("PASS: era hierarchy, source routes, catalog links, T−7/T−5 separation and repeated Juggernaut appearances validated.");
+console.log("PASS: era hierarchy, source routes, catalog links, T−7/T−5 separation, event-to-place references, place type/path integrity and no-coordinate schematic validated.");
