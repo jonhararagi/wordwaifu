@@ -65,3 +65,18 @@ Dos escenas que describen el mismo acontecimiento deben enlazarse a un solo ID c
 - Loki llama “Bell” al OC: `AU-EVT-LOKI-NAMES-OC-BELL-001` (propuesta del autor).
 
 Estos registros facilitan la siguiente tanda, pero las seis entradas de canon siguen pendientes de cotejo y las cuatro entradas AU requieren decisión expresa del autor.
+
+
+## Sucesos conectados al mapa interactivo
+
+- [Astrea Record · campaña contra Evilus](../events/timeline/EVT-DM-AR-ERA-001.md) · T−7 · CONT-AR.
+- [Tragedia de Astrea Familia/Juggernaut](../events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md) · T−5 · CONT-MAIN-LN.
+- [Secuelas y venganza de Ryu](../events/timeline/EVT-DM-RYUU-REVENGE-001.md) · después de T−5 y antes de T0.
+- [Llegada de Bell](../events/timeline/EVT-DM-BELL-ARRIVAL-001.md) · T0.
+- [Ais rescata a Bell del Minotauro](../events/timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md) · poco después de T0.
+- [Bell persigue a Ryu y la trama conduce a Jura](../events/timeline/EVT-DM-RYUU-JURA-PURSUIT-001.md) · vol. 13.
+- [Nueva aparición del Juggernaut](../events/timeline/EVT-DM-JUGGERNAUT-RETURN-001.md) · historia principal.
+- [Crisis de Bell y Ryu en el piso 37](../events/timeline/EVT-DM-JUGGERNAUT-DEFEAT-001.md) · vol. 14.
+- [Juggernaut: ficha de amenaza](../monsters/juggernaut.md) · un ID para varias apariciones.
+
+La presencia en este índice no significa cotejo de cada página; el estado aparece en los datos de cada evento.

@@ -61,7 +61,9 @@ function mount(){
   return wrap;
  }
  function appendPersonChip(list,person,event){
-  if(person.id&&person.kind!=="monster"&&person.kind!=="faction"&&person.kind!=="threat"&&person.kind!=="organization"){
+  if(person.id&&person.registered===true&&person.kind==="monster"){
+   const b=node("button","dm-timeline-person",person.name+" · ficha de amenaza");b.type="button";b.dataset.timelineEntity=person.id;b.dataset.timelineEntityName=person.name;b.dataset.timelineEntityKind=person.kind;b.title="Buscar la ficha tipada de "+person.name;list.append(b);
+  }else if(person.id&&person.kind!=="monster"&&person.kind!=="faction"&&person.kind!=="threat"&&person.kind!=="organization"){
    const b=node("button","dm-timeline-person",person.name);b.type="button";b.dataset.timelineCharacter=person.id;b.dataset.timelineCharacterName=person.name;b.dataset.timelineContinuity=event.continuityScopes[0]||"ALL";b.title="Abrir ficha disponible de "+person.name;list.append(b);
   }else{
    const chip=node("span","dm-timeline-person dm-timeline-person--plain",person.name+(person.registered===true?" · ficha del catálogo":""));if(person.note)chip.title=person.note;list.append(chip);
@@ -100,6 +102,10 @@ function mount(){
  }
  function activateTab(name){activeTab=name==="events"?"events":"eras";draw();}
  function openEvent(id){activeEventId=id;activeTab="events";draw();const target=document.getElementById("dm-event-"+id);if(target)target.scrollIntoView({behavior:"smooth",block:"center"});}
+ function openCatalogEntity(name,kind){
+  const browser=document.getElementById("danmachi-entity-browser"),query=document.getElementById("danmachi-entity-query"),type=document.getElementById("danmachi-entity-type");
+  if(!browser||!query||!type)return;type.value=kind||"all";query.value=name;query.dispatchEvent(new Event("input",{bubbles:true}));type.dispatchEvent(new Event("change",{bubbles:true}));browser.scrollIntoView({behavior:"smooth",block:"start"});
+ }
  function openCharacter(id,name,preferredContinuity){
   const continuitySelect=document.getElementById("archive-continuity"),search=document.getElementById("character-archive-query"),results=document.getElementById("character-archive-results");
   if(!search||!results)return;
@@ -115,6 +121,7 @@ function mount(){
  panel.addEventListener("click",event=>{
   const tab=event.target.closest("[data-dm-timeline-tab]");if(tab){activateTab(tab.dataset.dmTimelineTab);return;}
   const opener=event.target.closest("[data-timeline-open-event]");if(opener){openEvent(opener.dataset.timelineOpenEvent);return;}
+  const entity=event.target.closest("[data-timeline-entity]");if(entity){openCatalogEntity(entity.dataset.timelineEntityName,entity.dataset.timelineEntityKind);return;}
   const person=event.target.closest("[data-timeline-character]");if(person){openCharacter(person.dataset.timelineCharacter,person.dataset.timelineCharacterName,person.dataset.timelineContinuity);return;}
  });
  tabs.forEach(tab=>tab.addEventListener("click",()=>activateTab(tab.dataset.dmTimelineTab)));

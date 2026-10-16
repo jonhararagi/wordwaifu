@@ -35,6 +35,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 ## 2. Cronología desde las eras antiguas hasta el cierre publicado
 
 ### Mapa maestro
+- [Mapa interactivo de épocas y acontecimientos históricos](timeline/eras-and-events.json) — alimenta el árbol y la línea de eventos de la enciclopedia, con T0, T−7 y T−5 separados.
 - [Mapa de eras y terminología](timeline/00-mapa-de-eras.md)
 - [Índice maestro de eventos](timeline/03-indice-eventos.md)
 - [Índice de eventos candidatos documentados](events/00-indice-candidatos.md)

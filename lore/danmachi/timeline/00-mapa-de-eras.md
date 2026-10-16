@@ -49,3 +49,16 @@ No se considerará “completa” mientras:
 La etiqueta oficial localizada es **オラリオの暗黒期** (“Era Oscura de Orario”) y está asociada en el portal oficial a *Astrea Record*. Las páginas oficiales sitúan esa historia aproximadamente siete años antes de la visita de Bell a Orario. La base la cataloga dentro de ERA-06 como una franja histórica delimitada por la evidencia actualmente disponible, no como sinónimo de la historia antigua completa.
 
 Las páginas consultadas no identifican “Época Dorada” como traducción equivalente. Tampoco fijan fecha absoluta, duración completa o todos los acontecimientos de esa era. Véanse [ERA-06](eras/06-periodo-previo-a-bell.md) y el [paquete de evidencia](../research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md).
+
+
+## Mapa interactivo conectado a WordWaifu
+
+El archivo [eras-and-events.json](eras-and-events.json) alimenta dos vistas de la enciclopedia: **Árbol de épocas** y **Acontecimientos históricos · línea temporal**. El árbol separa macroperiodos y subperiodos; la línea muestra fecha relativa, continuidad, personajes enlazados y rutas de evidencia.
+
+### Ancla y barreras anti-mezcla
+
+- T0 = llegada de Bell a Orario; T−7 = unos siete años antes y T−5 = unos cinco años antes. Son referencias relativas, no fechas absolutas.
+- Astrea Record permanece en CONT-AR, T−7; la retrospectiva de la tragedia de Astrea Familia/Juggernaut permanece en CONT-MAIN-LN, T−5.
+- El retorno del Juggernaut durante los volúmenes 13–14 tiene eventos propios, meses después de T0. Es una aparición distinta, no el mismo evento de la masacre histórica.
+- Los conteos diarios secundarios se etiquetan como aproximaciones. Una sinopsis editorial no se presenta como verificación de páginas de una novela.
+- Cada personaje conserva un ID único; sus apariciones históricas se enlazan desde cada evento sin reemplazar silenciosamente su estado posterior.

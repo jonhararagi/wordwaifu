@@ -30,6 +30,12 @@ try:
     assert b"WordWaifu" in shell
     for route, marker in (
         ("/src/lore-corpus.js", b"WordWaifu DanMachi Lore Search"),
+        ("/src/danmachi-timeline.js", b"WordWaifuDanMachiTimeline"),
+        ("/lore/danmachi/timeline/eras-and-events.json", b"ERA-04A-ASTREA-RECORD"),
+        ("/lore/danmachi/research/inbox/BATCH-DM-014-dark-era-temporal-boundaries.md", b"DMR-014-CLM-001"),
+        ("/lore/danmachi/characters/dark-era/alfia.md", b"Alfia"),
+        ("/lore/danmachi/events/timeline/EVT-DM-AR-ERA-001.md", b"Astrea Record"),
+        ("/lore/danmachi/monsters/juggernaut.md", b"Juggernaut"),
         ("/src/character-archive.js", b"WordWaifuCharacterArchive"),
         ("/assets/character-portraits/ryu-lion.svg", b"Ryu Lion"),
         ("/assets/character-portraits/alise-lovelace.svg", b"Alise Lovelace"),
@@ -71,7 +77,7 @@ try:
     get("/docs/MASTER_VISION.md", 404)
     get("/lore/danmachi/characters/00-indice-personajes.md", 404)
     get("/lore/danmachi/characters/loki.md", 404)
-    print("PASS preview server: app shell, 12 original character portraits, 3 original Ryu scene illustrations, curated research and 12 allowlisted character dossiers respond; unrelated files remain blocked.")
+    print("PASS preview server: app shell, illustrations, curated corpus dependencies, interactive timeline, event dossiers and app-loaded character profiles respond; unrelated files remain blocked.")
 finally:
     server.shutdown()
     server.server_close()

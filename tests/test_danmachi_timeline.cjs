@@ -1,0 +1,20 @@
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const path=require("node:path");
+const timeline=require("../src/danmachi-timeline.js");
+const root=path.resolve(__dirname,"..");
+const data=JSON.parse(fs.readFileSync(path.join(root,"lore/danmachi/timeline/eras-and-events.json"),"utf8"));
+const report=timeline.validateDataset(data);
+assert.equal(report.valid,true,report.errors.join("\n"));
+assert.ok(report.eraCount>=9,"expected a useful tree of eras");
+assert.ok(report.eventCount>=14,"expected distinct historical events");
+const events=new Map(data.events.map(e=>[e.id,e]));
+assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
+assert.match(events.get("EVT-DM-AR-ERA-001").dateLabel,/T[−-]7/);
+assert.match(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").dateLabel,/T[−-]5/);
+assert.notEqual(events.get("EVT-DM-AR-ERA-001").eraId,events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").eraId);
+assert.notEqual(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").id,events.get("EVT-DM-JUGGERNAUT-RETURN-001").id);
+assert.ok(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").relatedEntities.some(x=>x.id==="MON-DM-JUGGERNAUT-001"));
+assert.ok(events.get("EVT-DM-JUGGERNAUT-RETURN-001").relatedEntities.some(x=>x.id==="MON-DM-JUGGERNAUT-001"));
+for(const event of data.events){assert.ok(event.continuityScopes.length,event.id+" missing continuity");assert.ok(event.sources.length,event.id+" missing sources");assert.ok(event.dateLabel,event.id+" missing date/uncertainty");}
+console.log("PASS DanMachi timeline: T0 anchor, era hierarchy, continuity boundaries and historical-event separation.");

@@ -1007,6 +1007,132 @@
       ],
       "status": "pending_primary_text_check",
       "priority": "normal"
+    },
+    {
+      "id": "EVT-DM-AR-ERA-001",
+      "path": "events/timeline/EVT-DM-AR-ERA-001.md",
+      "type": "event",
+      "tags": [
+        "Astrea Record",
+        "Era Oscura",
+        "T-7",
+        "Astrea Familia",
+        "Evilus",
+        "CONT-AR"
+      ],
+      "status": "official_publisher_timeframe_primary_scene_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "path": "events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md",
+      "type": "event",
+      "tags": [
+        "Astrea Familia",
+        "Juggernaut",
+        "T-5",
+        "Ryu Lion",
+        "Jura Halmer",
+        "CONT-MAIN-LN"
+      ],
+      "status": "secondary_timeline_primary_page_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-RYUU-REVENGE-001",
+      "path": "events/timeline/EVT-DM-RYUU-REVENGE-001.md",
+      "type": "event",
+      "tags": [
+        "Ryu Lion",
+        "venganza",
+        "Evilus",
+        "T-5 to T0",
+        "CONT-MAIN-LN"
+      ],
+      "status": "retrospective_primary_page_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-BELL-ARRIVAL-001",
+      "path": "events/timeline/EVT-DM-BELL-ARRIVAL-001.md",
+      "type": "event",
+      "tags": [
+        "Bell Cranel",
+        "llegada a Orario",
+        "T0",
+        "anchor"
+      ],
+      "status": "official_chronology_anchor_scene_check_pending",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-BELL-AIS-MINOTAUR-001",
+      "path": "events/timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md",
+      "type": "event",
+      "tags": [
+        "Bell Cranel",
+        "Ais Wallenstein",
+        "Minotauro",
+        "volumen 1"
+      ],
+      "status": "publisher_scope_primary_scene_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-RYUU-JURA-PURSUIT-001",
+      "path": "events/timeline/EVT-DM-RYUU-JURA-PURSUIT-001.md",
+      "type": "event",
+      "tags": [
+        "Ryu Lion",
+        "Jura Halmer",
+        "Bell Cranel",
+        "volumen 13"
+      ],
+      "status": "publisher_volume_scope_secondary_day_count",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-JUGGERNAUT-RETURN-001",
+      "path": "events/timeline/EVT-DM-JUGGERNAUT-RETURN-001.md",
+      "type": "event",
+      "tags": [
+        "Jura Halmer",
+        "Juggernaut",
+        "Bell Cranel",
+        "Ryu Lion",
+        "volumen 13"
+      ],
+      "status": "publisher_scope_primary_scene_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-JUGGERNAUT-DEFEAT-001",
+      "path": "events/timeline/EVT-DM-JUGGERNAUT-DEFEAT-001.md",
+      "type": "event",
+      "tags": [
+        "Bell Cranel",
+        "Ryu Lion",
+        "Juggernaut",
+        "piso 37",
+        "volumen 14"
+      ],
+      "status": "publisher_volume_scope_primary_outcome_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "MON-DM-JUGGERNAUT-001",
+      "path": "monsters/juggernaut.md",
+      "type": "monster",
+      "tags": [
+        "Juggernaut",
+        "Dungeon",
+        "threat",
+        "Astrea Familia",
+        "Ryu Lion",
+        "Jura Halmer"
+      ],
+      "status": "provisional_primary_scene_check_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [

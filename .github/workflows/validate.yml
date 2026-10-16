@@ -39,6 +39,8 @@ jobs:
           node --check src/art-studio.js
           node --check src/character-dossiers.js
           node --check tests/test_character_dossiers.cjs
+          node --check tests/test_danmachi_timeline.cjs
+          node --check lore/danmachi/tools/check-timeline.mjs
           node --check tests/test_official_character_roster.cjs
           node --check tests/test_danmachi_family_dossier.cjs
           node --check tests/test_project_schema.cjs
@@ -63,6 +65,10 @@ jobs:
         run: node tests/test_official_character_roster.cjs
       - name: Validate DanMachi lore catalog links and IDs
         run: node lore/danmachi/tools/check-catalog.mjs
+      - name: Validate DanMachi era tree and historical-event timeline
+        run: node lore/danmachi/tools/check-timeline.mjs
+      - name: Test DanMachi timeline hierarchy and continuity separation
+        run: node tests/test_danmachi_timeline.cjs
       - name: Test DanMachi Hestia Familia dossier evidence
         run: node tests/test_danmachi_family_dossier.cjs
       - name: Install pinned Playwright

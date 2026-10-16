@@ -32,3 +32,17 @@ Las propuestas del autor no son canon ni se convierten en overrides aprobados au
 ## Regla de duplicación
 
 Antes de crear otro evento, compara ID, nombres alternativos, participantes, periodo, lugar y consecuencias. Un flashback o relato desde otro punto de vista suele ser otra referencia al mismo evento, no un evento nuevo.
+
+## Eventos históricos conectados al mapa interactivo
+
+- [Astrea Record · campaña contra Evilus, T−7](timeline/EVT-DM-AR-ERA-001.md)
+- [Tragedia de Astrea Familia/Juggernaut, T−5](timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md)
+- [Venganza de Ryu contra remanentes de Evilus](timeline/EVT-DM-RYUU-REVENGE-001.md)
+- [Llegada de Bell, T0](timeline/EVT-DM-BELL-ARRIVAL-001.md)
+- [Ais rescata a Bell del Minotauro](timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md)
+- [Bell persigue a Ryu en la trama de Jura](timeline/EVT-DM-RYUU-JURA-PURSUIT-001.md)
+- [Nueva aparición del Juggernaut](timeline/EVT-DM-JUGGERNAUT-RETURN-001.md)
+- [Crisis de Bell y Ryu en el piso 37](timeline/EVT-DM-JUGGERNAUT-DEFEAT-001.md)
+- [Ficha de amenaza Juggernaut](../monsters/juggernaut.md)
+
+El Juggernaut conserva una sola ficha enlazada a apariciones separadas. Astrea Record T−7, la retrospectiva T−5 y la crisis de los volúmenes 13–14 no se colapsan en un evento.

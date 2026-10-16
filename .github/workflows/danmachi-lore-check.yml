@@ -2,7 +2,7 @@ name: DanMachi Lore and Retrieval Integrity
 on:
   push:
     branches: [feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10, work/story-completion-danmachi-audit-2026-10]
-    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/project-repository.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/danmachi-timeline.js","src/project-repository.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   pull_request:
     paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   workflow_dispatch:
@@ -26,6 +26,8 @@ jobs:
           bash -n .devcontainer/start-preview.sh
           node --check src/app.js
           node --check src/lore-corpus.js
+          node --check src/danmachi-timeline.js
+          node --check lore/danmachi/tools/check-timeline.mjs
           node --check src/character-archive.js
           node --check src/character-dossiers.js
           node --check src/art-studio.js
@@ -34,6 +36,7 @@ jobs:
           node --check src/fanfic-review.js
           node --check tests/test_fanfic_review.cjs
           node --check tests/test_lore_corpus.cjs
+          node --check tests/test_danmachi_timeline.cjs
           node --check tests/test_roster_claim_dedup.cjs
           node --check tests/browser_smoke.cjs
       - name: Test lore retrieval filters and abstention
