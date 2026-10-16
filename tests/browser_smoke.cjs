@@ -590,14 +590,18 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.equal(await page.locator("#archive-profile-tabs [role=tab]").count(), 6);
     const ryuHistoricalPortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
-    assert.ok(ryuHistoricalPortrait.includes("danmachi4/character/images/chara_tachi_15.png"),
-      "Historical Ryu should use the official character reference from the Astrea Record adaptation era.");
+    assert.ok(ryuHistoricalPortrait.includes("./assets/character-portraits/ryu-lion.svg"),
+      "Historical Ryu must use the original local concept portrait instead of embedding a remote adaptation image.");
+    const ryuHistoricalSourceLink = page.locator("#archive-profile-portrait .archive-portrait-source-link");
+    assert.equal(await ryuHistoricalSourceLink.getAttribute("href"), "https://danmachi.com/danmachi4/character/",
+      "The historical adaptation image must remain available through its own official source page, not the later DanMachi V page.");
+    assert.match(await ryuHistoricalSourceLink.getAttribute("aria-label"), /no se incrusta/i);
     await page.waitForFunction(() => {
       const img = document.querySelector("#archive-profile-portrait .archive-portrait-art");
       return !!img && img.complete && img.naturalWidth > 0;
     }, null, { timeout: 5000 });
-    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-caption").innerText()).includes("NO ESPECÍFICA DE ÉPOCA"),
-      "Historical reference art must be clearly labeled as not era-specific.");
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-caption").innerText()).includes("ILUSTRACIÓN ORIGINAL"),
+      "The displayed concept art must be labeled as original and non-official; it must not be confused with the historical adaptation portrait.");
     await page.locator("#archive-tab-summary").click();
     assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 0,
       "DanMachi V character data must not leak into the historical Astrea Record dossier.");

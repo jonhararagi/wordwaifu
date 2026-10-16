@@ -2557,7 +2557,9 @@
       node.appendChild(portraitImage);
     } else node.appendChild(archiveElement("span","",initial));
     if (caption) node.appendChild(caption);
-    const officialPage = official && typeof official.sourcePage === "string" ? official.sourcePage.trim() : "";
+    const officialPageValue = official && historicalReference && typeof official.historicalSourcePage === "string"
+      ? official.historicalSourcePage : official && official.sourcePage;
+    const officialPage = typeof officialPageValue === "string" ? officialPageValue.trim() : "";
     if (officialSource && /^https:\/\//i.test(officialPage)) {
       let validOfficialPage = false;
       try { const parsed = new URL(officialPage); validOfficialPage = parsed.protocol === "https:" && !parsed.username && !parsed.password; } catch (_) {}

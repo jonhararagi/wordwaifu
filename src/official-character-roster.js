@@ -947,6 +947,7 @@
     "locator": "Entrada リュー・リオン; pasado, nivel y estado posterior",
     "historicalImageUrl": "https://danmachi.com/danmachi4/character/images/chara_tachi_15.png",
     "historicalImageCaption": "Retrato oficial de referencia de DanMachi IV; no específico de época.",
+    "historicalSourcePage": "https://danmachi.com/danmachi4/character/",
     "imageUrl": "https://danmachi.com/danmachi5/character/images/chara_tachi_18.png",
     "sourcePage": "https://danmachi.com/danmachi5/character/",
     "sourceTitle": "DanMachi V · perfiles oficiales de personajes",
