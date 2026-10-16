@@ -439,7 +439,7 @@ async function run() {
     const externalRequestListener=request=>{if(new URL(request.url()).origin!==smokePageOrigin)externalRequestsBeforeVisuals.push(request.url());};
     page.on("request",externalRequestListener);
     await page.locator("#dm-visual-import-details > summary").click();
-    const syntheticPng={name:"synthetic-visual-fixture.png",mimeType:"image/png",buffer:Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+j8Z0AAAAASUVORK5CYII=","base64")};
+    const syntheticPng={name:"synthetic-visual-fixture.png",mimeType:"image/png",buffer:Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAFElEQVR4nGPU6LnDAANMDEgANwcATnABmCa87JAAAAAASUVORK5CYII=","base64")};
     await page.locator("#dm-visual-title").fill("Fixture local pendiente");
     await page.locator("#dm-visual-file").setInputFiles(syntheticPng);
     await page.locator("#dm-visual-holder").fill("Fixture sintético de CI");
