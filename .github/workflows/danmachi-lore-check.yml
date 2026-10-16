@@ -31,6 +31,9 @@ jobs:
           node --check src/character-archive.js
           node --check src/character-dossiers.js
           node --check src/art-studio.js
+          node --check src/danmachi-timeline.js
+          node --check src/danmachi-visual-references.js
+          node --check tests/test_danmachi_visual_references.cjs
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check src/fanfic-review.js
@@ -41,6 +44,8 @@ jobs:
           node --check tests/browser_smoke.cjs
       - name: Test lore retrieval filters and abstention
         run: node tests/test_lore_corpus.cjs
+      - name: Test rights-aware DanMachi visual reference registry and watermark gates
+        run: node tests/test_danmachi_visual_references.cjs
       - name: Test roster-generated claim ID uniqueness
         run: node tests/test_roster_claim_dedup.cjs
       - name: Test character archive model
