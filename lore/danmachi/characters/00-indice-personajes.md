@@ -6,35 +6,42 @@
 
 “Era Oscura” es una etiqueta temporal, no una continuidad por sí sola. No crear duplicados porque cambie la época o porque la AU altere la historia.
 
-Este índice mezcla registros existentes y candidatos para futuras fichas. La columna de ID indica si el registro ya existe o si es solo una propuesta. No crear una ficha nueva si el ID canónico ya está asignado.
+Este índice distingue entre registros del roster, expedientes de la aplicación y evidencia cotejada con la novela. Tener un expediente en src/character-dossiers.js NO significa que la psicología, la cronología y las relaciones estén verificadas exhaustivamente en la novela ligera. En datos con fuentes de adaptación o wiki, la interfaz debe conservar esa procedencia y la revisión primaria pendiente. No crear una ficha nueva si el ID canónico ya está asignado.
+
+## Criterio de cobertura
+
+- **Expediente de aplicación existente:** WordWaifu tiene texto utilizable para el personaje; no equivale a canon completo.
+- **Cotejo de novela pendiente:** no convertir detalles de wikis, anime o resúmenes editoriales en hechos de `CONT-MAIN-LN` sin localizador comprobable.
+- **Control de coherencia:** no marcar como error una emoción o relación AU solo porque no aparezca en la ficha. La advertencia debe señalar un hecho/rasgo documentado y su evidencia; si falta evidencia, mostrar «sin verificar».
 
 ## Personajes centrales
 
 | ID | Nombre principal | Alias a comprobar | Grupo/relaciones de búsqueda | Estado |
 |---|---|---|---|---|
-| DM-CHAR-BELL | Bell Cranel | Bell | Hestia Familia, Loki, Ais, Eina, Freya | Ficha inicial existente |
-| DM-CHAR-HESTIA | Hestia | Hestia | Hestia Familia, Bell | Ficha inicial existente |
+| DM-CHAR-BELL | Bell Cranel | Bell | Hestia Familia, Loki, Ais, Eina, Freya | Expediente de aplicación existente; cotejo de LN pendiente |
+| DM-CHAR-HESTIA | Hestia | Hestia | Hestia Familia, Bell | Expediente de aplicación existente; cotejo de LN pendiente |
 | DM-CHAR-LOKI | Loki | Loki | Loki Familia | Ficha inicial existente |
-| DM-CHAR-EINA | Eina Tulle | Eina | Guild, Bell | Ficha inicial existente |
-| DM-CHAR-AIS | Ais Wallenstein | Ais | Loki Familia, Bell | Ficha inicial existente |
+| DM-CHAR-EINA | Eina Tulle | Eina | Guild, Bell | Expediente de aplicación existente; cotejo de LN pendiente |
+| DM-CHAR-AIS | Ais Wallenstein | Ais | Loki Familia, Bell | Expediente de aplicación existente; cotejo de LN pendiente |
 | DM-CHAR-LOKI-LEADERS | Finn/Riveria/Gareth (grupo provisional) | No tratar como una persona | Loki Familia | Registro grupal existente; crear fichas individuales cuando se investiguen |
-| CHAR-FINN-DEIMNE | [Finn Deimne](finn-deimne.md) | Finn | Loki Familia; liderazgo | Ficha provisional; perfil de adaptación |
-| CHAR-RIVERIA-LJOS-ALF | Riveria Ljos Alf | Riveria | Loki Familia | Candidato, ficha individual pendiente |
-| CHAR-GARETH-LANDROCK | Gareth Landrock | Gareth | Loki Familia | Candidato, ficha individual pendiente |
-| CHAR-BETE-LOGA | Bete Loga | Bete | Loki Familia | Candidato pendiente |
-| CHAR-TIONA-HIRYUTE | Tiona Hiryute | Tiona | Loki Familia | Candidato pendiente |
-| CHAR-TIONE-HIRYUTE | Tione Hiryute | Tione | Loki Familia | Candidato pendiente |
-| CHAR-LEFIYA-VIRIDIS | Lefiya Viridis | Lefiya | Loki Familia, Sword Oratoria | Candidato pendiente |
-| CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Candidato pendiente |
-| CHAR-LILIRUCA-ARDE | Liliruca Arde | Lili | Hestia Familia | Candidato pendiente |
-| CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Candidato pendiente |
-| CHAR-SANJOUNO-HARUHIME | Sanjouno Haruhime | Haruhime | Hestia Familia, Ishtar historia | Candidato pendiente |
-| CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia (estado histórico); Hostess of Fertility (perfil de adaptación) | Ficha provisional con estados separados por continuidad |
-| CHAR-FREYA | [Freya](freya.md) | Syr como alias/identidad por verificar con cuidado | Freya Familia, Bell; relaciones con spoiler | Ficha provisional; perfil de adaptación; spoiler mayor |
-| CHAR-OTTAR | [Ottar](ottar.md) | Ottar | Freya Familia, entrenamiento, lealtad | Ficha provisional; perfil de adaptación |
+| CHAR-FINN-DEIMNE | [Finn Deimne](finn-deimne.md) | Finn | Loki Familia; liderazgo | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-RIVERIA-LJOS-ALF | Riveria Ljos Alf | Riveria | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-GARETH-LANDROCK | Gareth Landrock | Gareth | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-BETE-LOGA | Bete Loga | Bete | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-TIONA-HIRYUTE | Tiona Hiryute | Tiona | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-TIONE-HIRYUTE | Tione Hiryute | Tione | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-LEFIYA-VIRIDIS | Lefiya Viridis | Lefiya | Loki Familia, Sword Oratoria | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-RAUL-NOORD | [Raul Nord](raul-nord.md) | Raul; ラウル・ノールド | Loki Familia; coordinación de miembros de menor rango | Expediente existente; perfil oficial de adaptación localizado; cotejo de LN pendiente |
+| CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-LILIRUCA-ARDE | Liliruca Arde | Lili | Hestia Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-SANJOUNO-HARUHIME | Sanjouno Haruhime | Haruhime | Hestia Familia, Ishtar historia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia (estado histórico); Hostess of Fertility (perfil de adaptación) | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-FREYA | [Freya](freya.md) | Syr como alias/identidad por verificar con cuidado | Freya Familia, Bell; relaciones con spoiler | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-OTTAR | [Ottar](ottar.md) | Ottar | Freya Familia, entrenamiento, lealtad | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-HERMES | Hermes | Hermes | Hermes Familia, Bell | Candidato pendiente |
 | CHAR-OURANOS | Ouranos | Ouranos | Guild, Fels | Candidato pendiente |
-| CHAR-FELS | Fels | Fels | Ouranos, Guild | Candidato pendiente |
+| CHAR-FELS | Fels | Fels | Ouranos, Guild | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-GANESHA | Ganesha | Ganesha | Ganesha Familia, ciudad | Candidato pendiente |
 
 ## Historia previa, héroes y relatos paralelos
@@ -43,10 +50,10 @@ Este índice mezcla registros existentes y candidatos para futuras fichas. La co
 |---|---|---|---|
 | CHAR-ZEUS | Zeus | Zeus Familia, historia antigua | Candidato pendiente |
 | CHAR-HERA | Hera | Hera Familia, historia antigua | Candidato pendiente |
-| CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Candidato pendiente |
-| CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Astrea Familia; guía/capitana de Ryu en sinopsis editorial | Ficha provisional; estado histórico con fuente web oficial |
-| CHAR-KAGUYA | Kaguya | Kaguya | Astrea Familia | Candidato pendiente |
-| CHAR-LYRA | Lyra | Lyra | Astrea Familia | Candidato pendiente |
+| CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Astrea Familia; guía/capitana de Ryu en sinopsis editorial | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-KAGUYA | Kaguya | Kaguya | Astrea Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-LYRA | Lyra | Lyra | Astrea Familia | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-ALFIA | Alfia | Alfia | Historia Zeus/Hera | Candidato pendiente; spoilers |
 | CHAR-ZARD | Zard | Zard/Zald: romanización a verificar por edición | Historia Zeus/Hera | Candidato pendiente; spoilers |
 | CHAR-METERIA | Meteria | Meteria | Historia de Bell y Zeus/Hera | Candidato pendiente; spoilers |
@@ -88,3 +95,19 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 3. Zeus/Hera, Alfia y Zard con localizadores y marcas de spoiler.
 4. Bell/Hestia/Eina/Ais en novela principal, por escena.
 5. Personal de la taberna y estados de Freya Familia.
+
+## Expedientes de la aplicación no enumerados en las tablas anteriores
+
+| ID | Nombre | Estado |
+|---|---|---|
+| CHAR-CHLOE-ROLO | Chloe Rollo | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-MIA-GRAND | Mia Grand | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-HEDIN-SELLAND | Hedin Selland | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-HOGNI-RAGNAR | Hogni Ragnar | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-ANYA-FROMEL | Anya Fromel | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-SYR-FLOVA | Syr Flova | Expediente de aplicación existente; revisar alias/identidad con control de spoiler |
+| CHAR-DAPHNE-LAUROS | Daphne Lauros | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-CASSANDRA-ILION | Cassandra Ilion | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-AISHA-BELKA | Aisha Belka | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-FELS | Fels | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-FILVIS-CHALIA | Filvis Chalia | Expediente de aplicación existente; cotejo de LN y spoilers de Sword Oratoria pendientes |
