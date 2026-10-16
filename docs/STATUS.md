@@ -4,7 +4,7 @@
 
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- HEAD BEFORE real al iniciar TLM-004: `8960fdd11ecff5fd66d69c1bae221a13f12342c4` no; valor inicial comprobado: `9a492e69f649fefc16fa24d4658a2e134d76bf7b`.
+- HEAD BEFORE real al iniciar TLM-004: `9a492e69f649fefc16fa24d4658a2e134d76bf7b`.
 - HEAD esperado que figuraba en la orden pero no coincidía con el ref consultado: `f863f8ff0be9d5007b0781a613af5d69f8795c8d`.
 - SHA de implementación TLM-004 con CI verificado: `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.
 - TLM-001: DONE como auditoría documental; el atlas/producto completo sigue PARTIAL.
