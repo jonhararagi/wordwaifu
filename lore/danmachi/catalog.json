@@ -624,6 +624,21 @@
       ],
       "status": "source_checked_partial",
       "priority": "critical"
+    },
+    {
+      "id": "CHAR-RAUL-NOORD",
+      "path": "characters/raul-nord.md",
+      "type": "character",
+      "tags": [
+        "Raul Nord",
+        "Raul",
+        "Loki Familia",
+        "support",
+        "command",
+        "CONT-SO"
+      ],
+      "status": "provisional",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -1563,13 +1578,5 @@
       "status": "present_partial_source_checked"
     }
   ],
-  "lastStructuredSync": {
-    "branch": "work/story-completion-danmachi-audit-2026-10",
-    "sourceCommit": "622369265b08712e4440087e7361f5151e9402d2",
-    "trackedLoreFiles": 165,
-    "records": 48,
-    "reservedIds": 67,
-    "supportingDocuments": 100,
-    "syncNote": "Extensión manual verificada: LOC-DUNGEON se promueve de ID reservado a registro navegable con fuente editorial oficial y límites explícitos. No equivale a un cotejo completo de pisos, reglas o capítulos."
-  }
+  "lastStructuredSync": "2026-10-16"
 }
