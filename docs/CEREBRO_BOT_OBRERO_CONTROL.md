@@ -94,16 +94,18 @@ Alcance exclusivo de esta fase: contrato temporal estructurado, migración conse
 - El atlas completo se mantiene PARTIAL. TLM-004 y TLM-005 siguen NOT_STARTED.
 
 ### TLM-004 — Panoramas e imágenes de referencia con procedencia
-**Estado: NOT_STARTED — fuera de TLM-002; no hay autorización de ejecución en este cierre.**
+**Estado: IN_PROGRESS — autorizado por CEREBRO.** Contrato vinculante: [docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md).
 
-- Inspeccionar primero el diálogo y la política existentes en `docs/CONTENT_RIGHTS_AND_TAKEDOWN.md` y la UI.
-- Separar: enlaces a imágenes oficiales externas, imágenes aportadas por el usuario con derechos/permiso, y recursos propios o con licencia compatible.
-- Registrar fuente, autor/titular cuando se conozca, URL, licencia/permiso, continuidad y elemento/evento al que corresponde.
-- No descargar ni incorporar automáticamente imágenes oficiales de anime/novelas al repositorio sin permiso/licencia compatible.
-- Si se implementa marca de agua en recursos que el usuario está autorizado a modificar, que sea visible y configurable, y que no oculte atribución. La marca de agua **no concede derechos** ni vuelve legal una copia no autorizada.
-- Mantener la aplicación funcional sin red: las imágenes externas pueden fallar; las imágenes locales permitidas deben tener alternativa/placeholder.
+- Hacer una sección de “Referencias visuales” útil para acontecimientos y lugares DanMachi; no forzar imágenes para cada evento.
+- Registrar ID estable del recurso, URL/página fuente, autor/titular conocido, licencia/permiso o estado pendiente, continuidad, spoilers, evento/lugar y modo de almacenamiento.
+- Para arte oficial remoto, preferir abrir la fuente original; previsualizar solo cuando el origen y las condiciones de uso/embebido lo permitan. No descargar ni comitear imágenes oficiales sin permiso/licencia compatible.
+- Permitir archivos locales propios/licenciados/permitidos a través del almacenamiento del navegador existente, sin subirlos al repo o a servicios remotos.
+- Separar overlay de atribución en UI de exportación de copia con watermark. Exportar una versión marcada solo cuando los derechos permitan modificación/exportación y el usuario lo confirme.
+- Nunca tratar “uso educativo/personal”, atribución ni marca de agua como licencia automática.
+- Respetar continuidad y spoilers: retrato de adaptación anime (CONT-ANIME) no equivale a una escena de novela principal. Mostrar placeholder si una imagen falla o no puede mostrarse.
+- Evitar metadatos dispersos o un formulario gigante; integrar la galería contextual al panel existente.
 
-Criterio: cada imagen tiene procedencia y tratamiento de derechos explícitos; la UI no promete que “uso educativo/personal” o una marca de agua autoricen su reproducción.
+Cierre: referencias con procedencia clara, recursos locales que no salen del navegador, controles de watermark honestos, tests/CI por SHA y ninguna imagen oficial no autorizada añadida al repo.
 
 ### TLM-005 — Verificación de extremo a extremo
 **Estado: NOT_STARTED; depende de TLM-002 a TLM-004.**
@@ -130,6 +132,7 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 | 2026-10-16 | TLM-001 — Auditoría del Atlas temporal | DONE (aceptada por CEREBRO) | commit `1611254124e6fa2eb1186a803fca0bc712ef6dab`; CI runs `38934243074` y `38934243080` PASS en ese SHA | Atlas PARTIAL; 0/15 eventos conectados a lugares; fechas libres; TLM-002 autorizada. |
 | 2026-10-16 | TLM-002 — Modelo temporal explícito | DONE / PASS_CI | 4d75c97aa690ddba73ec6ef09eb0fbefef06d342; runs 38941141919 y 38941142159 success | 15 eventos migrados; dateLabel intacto; esquema aditivo; geografía e imágenes no tocadas. Ver docs/TLM-002-TEMPORAL-MODEL-REPORT.md. |
 | 2026-10-16 | TLM-003 — Conexión cronología/mapa | DONE / PASS_CI | c9fa2d05de3bb81526523202bea0fb5cb058ae06; runs 38950288434 y 38950288325 success | 15 eventos evaluados; 2 lugares, 9 referencias, esquema no geográfico; ver informe TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md. |
+| 2026-10-16 | TLM-004 — Panoramas visuales y procedencia | IN_PROGRESS | `docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md`; HEAD anterior `67c48d55601a372653c425e1517cfe4f6c322813` | Única tarea activa. No incorporar imágenes oficiales no autorizadas; separar visualización remota, archivos locales y watermark. |
 
 ## 8. Plantilla de reporte del BOT OBRERO
 
