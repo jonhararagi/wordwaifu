@@ -279,7 +279,11 @@ function mount(){
   const eventList=node("div","dm-map-place-events");eventList.append(node("strong","","Acontecimientos visibles con este vínculo ("+refs.length+")"));
   if(refs.length){refs.forEach(({event,ref})=>{const row=node("div","dm-map-event-link");row.append(node("span","dm-map-ref-status",verificationLabel(ref.verificationStatus)+" · "+relationshipLabel(ref.relationship)),node("span","",event.dateLabel+" — "+event.title));const openEventButton=node("button","dm-timeline-event-link","Abrir acontecimiento");openEventButton.type="button";openEventButton.dataset.timelineOpenEvent=event.id;openEventButton.dataset.timelineReturnPlace=place.id;row.append(openEventButton);eventList.append(row);});}
   else eventList.append(node("p","dm-timeline-empty","No hay acontecimientos vinculados a este lugar con los filtros actuales."));
-  card.append(eventList);return card;
+  card.append(eventList);
+  const visualSection=node("section","dm-place-visual-references");visualSection.dataset.visualLocationId=place.id;card.append(visualSection);
+  if(globalThis.WordWaifuDanMachiVisualReferences)globalThis.WordWaifuDanMachiVisualReferences.renderInto(visualSection,{locationId:place.id,continuity:continuity.value});
+  else visualSection.append(node("p","dm-visual-placeholder","Sin referencia visual disponible."));
+  return card;
  }
  function drawMapView(items){
   if(!mapRoot)return;
@@ -344,7 +348,11 @@ function mount(){
   const sources=node("div","dm-event-sources");sources.append(node("strong","","Rutas de verificación"));
   (event.sources||[]).forEach(source=>{const a=node("a","dm-event-source-link",source.label);a.href=source.url;a.target="_blank";a.rel="noopener noreferrer";a.title=source.note||source.label;sources.append(a);});
   if(event.detailPath){const a=node("a","dm-event-record-link","Abrir expediente del acontecimiento ↗");a.href="https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/"+event.detailPath;a.target="_blank";a.rel="noopener noreferrer";sources.append(a);}
-  card.append(sources);article.append(dot,card);return article;
+  card.append(sources);
+  const visualSection=node("section","dm-event-visual-references");visualSection.dataset.visualEventId=event.id;card.append(visualSection);
+  if(globalThis.WordWaifuDanMachiVisualReferences)globalThis.WordWaifuDanMachiVisualReferences.renderInto(visualSection,{eventId:event.id,continuity:continuity.value});
+  else visualSection.append(node("p","dm-visual-placeholder","Sin referencia visual disponible."));
+  article.append(dot,card);return article;
  }
  function draw(){
   if(!data)return;
