@@ -1,3 +1,15 @@
+# Actualización operativa — 2026-10-16
+
+- **Rama autorizada activa:** `work/story-completion-danmachi-audit-2026-10`.
+- **Control persistente de agentes:** [`docs/CEREBRO_BOT_OBRERO_CONTROL.md`](CEREBRO_BOT_OBRERO_CONTROL.md).
+- **Única tarea activa:** TLM-001 — auditoría real de la cronología DanMachi y su conexión con el mapa. No empezar TLM-002 antes de documentar brechas y evidencia.
+- **HEAD de código/lore anterior al arranque de esta organización:** `0fae322ddd17dfe8fa63952d018c5c95cd8578c7`; los dos workflows de validación constan como exitosos para ese SHA en el estado entregado al Cerebro. La documentación de control añadida después no ha sido validada por esos workflows salvo que una ejecución posterior lo confirme.
+- **HEAD actual de rama tras crear el protocolo:** `49b8b2cdb2e96b08427b2206fcd0e5d6fbd0c50c` (documentación). No declarar CI verde para este SHA sin consultar Actions.
+- **Límites:** no tocar `main`, no fusionar ramas, no abrir/cerrar PR sin autorización expresa.
+- **Siguiente paso del Obrero:** leer el control persistente y auditar los archivos actuales indicados en TLM-001; publicar matriz de brechas, actualizar este estado y sobrescribir `docs/DONE.md` con el punto de reanudación vigente.
+
+---
+
 # Estado de WordWaifu
 # Auditoría de candidata DanMachi — 2026-10-14
 
