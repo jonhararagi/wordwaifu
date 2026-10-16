@@ -143,6 +143,7 @@ function bindLocalForm(){
  form.addEventListener("submit",async ev=>{
   ev.preventDefault();const api=root.WordWaifuArtStudio,fileInput=$("#dm-visual-file"),file=fileInput&&fileInput.files&&fileInput.files[0];
   if(!api||!file){setStatus("Elegí una imagen local antes de guardar.");return;}
+  setStatus("Guardando referencia visual en el almacenamiento local…");
   const usageStatus=$("#dm-visual-usage-status").value;
   try{
    const fileDataUrl=await api.fileToDataUrl(file),id="USER-VIS-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,8).toUpperCase();
