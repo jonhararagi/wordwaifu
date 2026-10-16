@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "universeId": "danmachi",
   "title": "DanMachi Lore · Corpus navegable con resúmenes provisionales",
-  "status": "provisional_summaries_with_source_labeled_claims",
+  "status": "in_progress_research",
   "note": "El corpus incluye novela principal y líneas paralelas con continuidad etiquetada. Resumen editorial no equivale a cotejo de capítulo. No mezclar CONT-MAIN-LN, CONT-AR, CONT-ANIME o CONT-AU.",
   "records": [
     {
@@ -642,106 +642,130 @@
     },
     {
       "id": "CHAR-DARK-ZALD",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/zald.md",
       "type": "character",
       "tags": [
         "Zald",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-ALFIA",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/alfia.md",
       "type": "character",
       "tags": [
         "Alfia",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-EREBUS",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/erebus.md",
       "type": "character",
       "tags": [
         "Erebus",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-RUDRA",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/rudra.md",
       "type": "character",
       "tags": [
         "Rudra",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-JURA-HALMER",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/jura-halmer.md",
       "type": "character",
       "tags": [
         "Jura Halmer",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-MAIN-LN",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-VITO",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/vito.md",
       "type": "character",
       "tags": [
         "Vito",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-OLIVAS-ACT",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/olivas-act.md",
       "type": "character",
       "tags": [
         "Olivas Act",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-MAIN-LN",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-ARDEE-VARMA",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/ardee-varma.md",
       "type": "character",
       "tags": [
         "Ardee Varma",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
