@@ -6,15 +6,132 @@ const root=path.resolve(__dirname,"..");
 const data=JSON.parse(fs.readFileSync(path.join(root,"lore/danmachi/timeline/eras-and-events.json"),"utf8"));
 const report=timeline.validateDataset(data);
 assert.equal(report.valid,true,report.errors.join("\n"));
-assert.ok(report.eraCount>=9,"expected a useful tree of eras");
-assert.ok(report.eventCount>=14,"expected distinct historical events");
-const events=new Map(data.events.map(e=>[e.id,e]));
+assert.equal(report.temporalModelVersion,1);
+assert.equal(report.legacyTemporalModel,false);
+assert.equal(report.eraCount,10);
+assert.equal(report.eventCount,15);
+assert.equal(report.temporalEventCount,15);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
-assert.match(events.get("EVT-DM-AR-ERA-001").dateLabel,/T[−-]7/);
-assert.match(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").dateLabel,/T[−-]5/);
-assert.notEqual(events.get("EVT-DM-AR-ERA-001").eraId,events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").eraId);
-assert.notEqual(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").id,events.get("EVT-DM-JUGGERNAUT-RETURN-001").id);
-assert.ok(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").relatedEntities.some(x=>x.id==="MON-DM-JUGGERNAUT-001"));
-assert.ok(events.get("EVT-DM-JUGGERNAUT-RETURN-001").relatedEntities.some(x=>x.id==="MON-DM-JUGGERNAUT-001"));
-for(const event of data.events){assert.ok(event.continuityScopes.length,event.id+" missing continuity");assert.ok(event.sources.length,event.id+" missing sources");assert.ok(event.dateLabel,event.id+" missing date/uncertainty");}
-console.log("PASS DanMachi timeline: T0 anchor, era hierarchy, continuity boundaries and historical-event separation.");
+assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
+
+const expectedKinds={
+ "EVT-DM-DESCENT-001":"unknown",
+ "EVT-DM-GREAT-QUESTS-001":"relative_order",
+ "EVT-DM-ZH-OEBD-001":"relative_order",
+ "EVT-DM-ZH-FALL-001":"relative_order",
+ "EVT-DM-AR-ERA-001":"relative_offset",
+ "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001":"relative_offset",
+ "EVT-DM-RYUU-REVENGE-001":"relative_order",
+ "EVT-DM-HESTIA-DESCENT-001":"relative_order",
+ "EVT-DM-BELL-ARRIVAL-001":"anchor",
+ "EVT-DM-BELL-MEETS-HESTIA-001":"relative_order",
+ "EVT-DM-BELL-AIS-MINOTAUR-001":"relative_order",
+ "EVT-DM-EINA-ADVISOR-001":"relative_order",
+ "EVT-DM-RYUU-JURA-PURSUIT-001":"relative_order",
+ "EVT-DM-JUGGERNAUT-RETURN-001":"relative_order",
+ "EVT-DM-JUGGERNAUT-DEFEAT-001":"relative_order"
+};
+const expectedLabels={
+ "EVT-DM-DESCENT-001":"Fecha absoluta no fijada",
+ "EVT-DM-GREAT-QUESTS-001":"Antes de T0 · fecha y orden exacto pendientes",
+ "EVT-DM-ZH-OEBD-001":"Antes de T0 · fecha pendiente",
+ "EVT-DM-ZH-FALL-001":"Antes de T0 · fecha y causa exactas pendientes",
+ "EVT-DM-AR-ERA-001":"T−7 · aproximadamente siete años antes de Bell",
+ "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001":"T−5 · aproximadamente cinco años antes de Bell",
+ "EVT-DM-RYUU-REVENGE-001":"Después de T−5 y antes de T0 · duración sin fijar",
+ "EVT-DM-HESTIA-DESCENT-001":"Antes de T0 · posición exacta respecto de T−7/T−5 abierta",
+ "EVT-DM-BELL-ARRIVAL-001":"T0 · ancla de la historia principal",
+ "EVT-DM-BELL-MEETS-HESTIA-001":"Poco después de T0 · fecha exacta abierta",
+ "EVT-DM-BELL-AIS-MINOTAUR-001":"Inicio de la historia · poco después de T0",
+ "EVT-DM-EINA-ADVISOR-001":"Primeros volúmenes · secuencia exacta pendiente",
+ "EVT-DM-RYUU-JURA-PURSUIT-001":"Meses después de T0 · arco del volumen 13; día exacto abierto",
+ "EVT-DM-JUGGERNAUT-RETURN-001":"Volúmenes 13–14 · meses después de T0",
+ "EVT-DM-JUGGERNAUT-DEFEAT-001":"Continuación en el volumen 14 · fecha interna abierta"
+};
+const events=new Map(data.events.map(e=>[e.id,e]));
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"The 15 existing event IDs must be retained exactly.");
+for(const [id,kind] of Object.entries(expectedKinds)){
+ const event=events.get(id);
+ assert.equal(event.temporal.kind,kind,id+" temporal variant");
+ assert.equal(event.narrativeOrigin.kind,"published_reference",id+" origin is independent from evidence/continuity");
+ assert.equal(event.dateLabel,expectedLabels[id],id+" legacy dateLabel remains unchanged");
+ assert.ok(event.temporal.sourceUrls.length>0,id+" keeps temporal source traceability");
+ assert.ok(event.temporal.sourceUrls.every(url=>event.sources.some(source=>source.url===url)),id+" temporal sources must belong to its own source list");
+ assert.ok(event.detailPath,id+" must preserve detailPath");
+}
+assert.equal(data.events.filter(e=>e.temporal.kind==="absolute_date").length,0,"No unsupported calendar date may be added to the live DanMachi timeline.");
+assert.equal(events.get("EVT-DM-AR-ERA-001").temporal.amount,7);
+assert.equal(events.get("EVT-DM-AR-ERA-001").temporal.unit,"year");
+assert.equal(events.get("EVT-DM-AR-ERA-001").temporal.precision,"approximate");
+assert.equal(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").temporal.amount,5);
+assert.equal(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").temporal.precision,"approximate");
+assert.equal(events.get("EVT-DM-AR-ERA-001").continuityScopes.includes("CONT-AR"),true);
+assert.equal(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").continuityScopes.includes("CONT-AR"),false,"T−5 remains separate from Astrea Record T−7");
+assert.equal(events.get("EVT-DM-BELL-ARRIVAL-001").temporal.anchorId,"T0-BELL-ARRIVAL");
+assert.equal(Object.hasOwn(events.get("EVT-DM-BELL-ARRIVAL-001").temporal,"value"),false,"T0 must not be rendered as a calendar date");
+assert.deepEqual(events.get("EVT-DM-RYUU-REVENGE-001").temporal.referenceIds,["EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001","T0-BELL-ARRIVAL"]);
+assert.equal(events.get("EVT-DM-RYUU-REVENGE-001").temporal.distanceKnown,false);
+assert.ok(data.events.every(e=>!["user_hypothesis","user_plan","author_au"].includes(e.narrativeOrigin.kind)),"No hypothetical event may be inserted into the live reference timeline.");
+assert.equal(timeline.temporalKindLabel(events.get("EVT-DM-AR-ERA-001").temporal),"Desplazamiento relativo · aproximado");
+assert.equal(timeline.temporalKindLabel(events.get("EVT-DM-DESCENT-001").temporal),"Tiempo desconocido / pendiente");
+assert.equal(timeline.temporalKindLabel(events.get("EVT-DM-BELL-ARRIVAL-001").temporal),"Ancla relativa · no es fecha de calendario");
+
+// Test-only events exercise supported temporal variants without adding them to the saved canon dataset.
+const fixtureUrl="https://example.test/temporal-model-fixture";
+function fixture(temporal,originKind,scopes){
+ const clone=structuredClone(data);
+ const record={
+  id:"TEST-TEMPORAL-FIXTURE-"+clone.events.length,
+  title:"Synthetic temporal-model test fixture",
+  eraId:"ERA-05-MAIN-START",
+  dateLabel:"Test fixture only",
+  summary:"Not a DanMachi lore record; generated only inside this test.",
+  continuityScopes:scopes||["CONT-AU"],
+  evidenceStatus:"test_fixture",
+  narrativeOrigin:{kind:originKind||"user_plan"},
+  sources:[{label:"Synthetic test fixture (not fetched)",url:fixtureUrl,kind:"test_fixture",note:"Non-production test fixture; not evidence for any DanMachi claim."}],
+  temporal:{...structuredClone(temporal),sourceUrls:[fixtureUrl]}
+ };
+ clone.events.push(record);
+ return {clone,record};
+}
+const validFixtures=[
+ {name:"calendar date with explicit calendar",origin:"user_plan",scopes:["CONT-AU"],temporal:{kind:"absolute_date",value:"2042-03-04",calendar:"gregorian",precision:"day"}},
+ {name:"approximate bounded interval",origin:"user_plan",scopes:["CONT-AU"],temporal:{kind:"approximate_interval",lower:{value:"2040-01-01",calendar:"gregorian",precision:"day"},upper:{value:"2041-01-01",calendar:"gregorian",precision:"day"},precision:"approximate"}},
+ {name:"approximate offset from T0",origin:"published_reference",scopes:["CONT-AR"],temporal:{kind:"relative_offset",anchorId:"T0-BELL-ARRIVAL",direction:"before",amount:7,unit:"year",precision:"approximate"}},
+ {name:"relative order without duration",origin:"published_reference",scopes:["CONT-MAIN-LN"],temporal:{kind:"relative_order",relation:"between",referenceIds:["EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001","T0-BELL-ARRIVAL"],distanceKnown:false,precision:"order_only"}},
+ {name:"unknown time with reason",origin:"published_reference",scopes:["CONT-MAIN-LN"],temporal:{kind:"unknown",reason:"Primary locator not available.",precision:"unknown"}},
+ {name:"user hypothesis isolated from canon",origin:"user_hypothesis",scopes:["CONT-UNVERIFIED"],temporal:{kind:"unknown",reason:"User hypothesis fixture.",precision:"unknown"}},
+ {name:"user plan placed in AU",origin:"user_plan",scopes:["CONT-AU"],temporal:{kind:"relative_order",relation:"after",referenceIds:["T0-BELL-ARRIVAL"],distanceKnown:false,precision:"order_only"}},
+ {name:"author AU distinct from published origin",origin:"author_au",scopes:["CONT-AU"],temporal:{kind:"relative_order",relation:"after",referenceIds:["T0-BELL-ARRIVAL"],distanceKnown:false,precision:"order_only"}}
+];
+for(const item of validFixtures){
+ const sample=fixture(item.temporal,item.origin,item.scopes);
+ const result=timeline.validateDataset(sample.clone);
+ assert.equal(result.valid,true,item.name+": "+result.errors.join("; "));
+}
+function assertInvalid(change,needle){
+ const sample=fixture({kind:"unknown",reason:"Fixture reason.",precision:"unknown"},"user_plan",["CONT-AU"]);
+ change(sample.record,sample.clone);
+ const result=timeline.validateDataset(sample.clone);
+ assert.equal(result.valid,false,"fixture should be rejected");
+ assert.ok(result.errors.some(error=>error.includes(needle)),"Expected validation error containing "+needle+"; actual: "+result.errors.join("; "));
+}
+assertInvalid((event)=>{event.temporal.kind="nonsense";},"invalid temporal kind");
+assertInvalid((event)=>{event.temporal={kind:"relative_offset",anchorId:"MISSING-ANCHOR",direction:"before",amount:7,unit:"year",precision:"approximate",sourceUrls:[fixtureUrl]};},"unknown anchor");
+assertInvalid((event)=>{event.temporal={kind:"relative_offset",anchorId:"T0-BELL-ARRIVAL",direction:"before",amount:7,unit:"fortnight",precision:"approximate",sourceUrls:[fixtureUrl]};},"Invalid relative offset unit");
+assertInvalid((event)=>{event.temporal={kind:"approximate_interval",lower:{value:"2041-01-01",calendar:"gregorian",precision:"day"},upper:{value:"2040-01-01",calendar:"gregorian",precision:"day"},precision:"approximate",sourceUrls:[fixtureUrl]};},"lower bound must precede upper bound");
+assertInvalid((event)=>{event.temporal={kind:"absolute_date",value:"2042-02",calendar:"gregorian",precision:"day",sourceUrls:[fixtureUrl]};},"Invalid absolute calendar date/precision");
+assertInvalid((event)=>{event.temporal={kind:"relative_order",relation:"after",referenceIds:["NO-SUCH-REF"],distanceKnown:false,precision:"order_only",sourceUrls:[fixtureUrl]};},"Missing temporal reference");
+assertInvalid((event)=>{event.temporal.sourceUrls=["https://example.test/not-in-event-sources"];},"does not belong to event");
+assertInvalid((event)=>{event.narrativeOrigin={kind:"user_plan"};event.continuityScopes=["CONT-MAIN-LN"]; },"cannot silently enter published continuity");
+assertInvalid((event)=>{event.temporal={kind:"absolute_date",value:"2042-02-30",calendar:"gregorian",precision:"day",sourceUrls:[fixtureUrl]};},"Invalid absolute calendar date/precision");
+const legacy=structuredClone(data);
+delete legacy.temporalModelVersion;
+delete legacy.anchor.eventId;
+legacy.events.forEach(event=>{delete event.temporal;delete event.narrativeOrigin;});
+const legacyReport=timeline.validateDataset(legacy);
+assert.equal(legacyReport.valid,true,"legacy v1 data must remain loadable through an explicit compatibility path: "+legacyReport.errors.join("; "));
+assert.equal(legacyReport.legacyTemporalModel,true);
+assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
+process.stdout.write("PASS DanMachi temporal model: all 15 records migrated conservatively; 6 temporal variants, origin separation, source/reference/unit/precision validation and legacy compatibility verified.\n");

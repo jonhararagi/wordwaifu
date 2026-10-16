@@ -8,13 +8,15 @@
     "definition": "Ancla relativa de trabajo. T−7 significa aproximadamente siete años antes; T−5 aproximadamente cinco años antes. T+ mide tiempo posterior a T0. Ninguna etiqueta T sustituye una fecha absoluta.",
     "sources": [
       "https://danmachi.com/chronology/"
-    ]
+    ],
+    "eventId": "EVT-DM-BELL-ARRIVAL-001"
   },
   "policies": [
     "Fechas relativas no se convierten en años de calendario sin fuente.",
     "CONT-AR, CONT-MAIN-LN, CONT-GAME, CONT-ANIME y CONT-AU son capas distintas; un evento del juego no se presume idéntico a cada escena de la novela revisada.",
     "Una sinopsis editorial acredita el resumen general que publica, no una escena/página de la novela.",
-    "La identidad de un personaje se mantiene única; cada evento conserva su aparición, relaciones y estado temporal."
+    "La identidad de un personaje se mantiene única; cada evento conserva su aparición, relaciones y estado temporal.",
+    "Cada acontecimiento incluye temporal (modelo versionado y validable); dateLabel se conserva para compatibilidad y presentación, no como única fuente de ordenación."
   ],
   "continuities": [
     {
@@ -171,7 +173,18 @@
           "kind": "official",
           "note": "Referencia de cronología promocional; cada afirmación depende del contenido mostrado."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "unknown",
+        "precision": "unknown",
+        "reason": "La ruta oficial consultada no fija una fecha de calendario para este hito; falta localizador primario de la escena y no se infiere el orden entre llegadas divinas.",
+        "sourceUrls": [
+          "https://danmachi.com/chronology/"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-GREAT-QUESTS-001",
@@ -201,7 +214,23 @@
           "kind": "internal",
           "note": "Secuencia y fechas todavía abiertas."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "before",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Antes de T0; fecha y orden respecto de las demás expediciones no documentados.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-GREAT-QUESTS-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-ZH-OEBD-001",
@@ -236,7 +265,23 @@
           "kind": "internal",
           "note": "Fecha y secuencia requieren cotejo primario."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "before",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Antes de T0; distancia a T0 y posición respecto de otras expediciones desconocidas.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-ZH-OEBD-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-ZH-FALL-001",
@@ -271,7 +316,23 @@
           "kind": "internal",
           "note": "Falta el localizador primario por escena."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "before",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Antes de T0; la fecha y secuencia causal exactas siguen pendientes.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-ZH-FALL-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-AR-ERA-001",
@@ -369,7 +430,24 @@
           "kind": "publisher",
           "note": "Resumen editorial del periodo y los personajes principales."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "precision": "approximate",
+        "anchorId": "T0-BELL-ARRIVAL",
+        "direction": "before",
+        "amount": 7,
+        "unit": "year",
+        "qualifier": "Aproximadamente siete años antes de T0; la fuente editorial fija el marco temporal, no cada escena individual.",
+        "sourceUrls": [
+          "https://danmachi.com/chronology/",
+          "https://ga.sbcr.jp/product/9784815610173/",
+          "https://yenpress.com/titles/9781975379889-astrea-record-vol-1-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
@@ -427,7 +505,23 @@
           "kind": "secondary",
           "note": "Pista para ubicar el recuerdo T−5; cotejo primario pendiente."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "precision": "approximate",
+        "anchorId": "T0-BELL-ARRIVAL",
+        "direction": "before",
+        "amount": 5,
+        "unit": "year",
+        "qualifier": "Aproximadamente cinco años antes de T0; pista secundaria con cotejo de página primaria pendiente.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "https://danmachi.fandom.com/wiki/Timeline"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-RYUU-REVENGE-001",
@@ -478,7 +572,25 @@
           "kind": "secondary",
           "note": "Ruta para ubicar hechos retrospectivos, no sustituto del texto principal."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "between",
+        "referenceIds": [
+          "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Entre la tragedia T−5 y T0; duración e hitos intermedios no calculables.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "https://danmachi.fandom.com/wiki/Timeline"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-HESTIA-DESCENT-001",
@@ -509,7 +621,23 @@
           "kind": "internal",
           "note": "Posición temporal exacta pendiente."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "before",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Antes de T0; su posición respecto de T−7 y T−5 no está establecida.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-HESTIA-DESCENT-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-BELL-ARRIVAL-001",
@@ -540,7 +668,19 @@
           "kind": "official",
           "note": "Hito oficial; no publica una fecha de calendario."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "anchor",
+        "precision": "anchor",
+        "anchorId": "T0-BELL-ARRIVAL",
+        "qualifier": "Ancla relativa; no equivale a una fecha de calendario.",
+        "sourceUrls": [
+          "https://danmachi.com/chronology/"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-BELL-MEETS-HESTIA-001",
@@ -577,7 +717,23 @@
           "kind": "internal",
           "note": "Localizador de capítulo pendiente."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Poco después de T0; el capítulo/localizador y la cantidad de días son desconocidos.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-BELL-AIS-MINOTAUR-001",
@@ -621,7 +777,23 @@
           "kind": "official",
           "note": "Punto de entrada cronológico; capítulo/página pendiente."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "La etiqueta lo sitúa poco después de T0; no especifica intervalo numérico ni localizador de escena.",
+        "sourceUrls": [
+          "https://danmachi.com/chronology/"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-EINA-ADVISOR-001",
@@ -658,7 +830,23 @@
           "kind": "internal",
           "note": "Capítulo exacto pendiente."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Dentro de los primeros volúmenes según la etiqueta existente; orden y capítulo exactos pendientes.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-EINA-ADVISOR-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-RYUU-JURA-PURSUIT-001",
@@ -707,7 +895,24 @@
           "kind": "secondary",
           "note": "Pista para localizar fechas internas, pendiente de cotejo primario."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Marco editorial del volumen 13 y meses después de T0 según la etiqueta actual; día exacto no fijado.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "https://danmachi.fandom.com/wiki/Timeline"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-JUGGERNAUT-RETURN-001",
@@ -764,7 +969,24 @@
           "kind": "secondary",
           "note": "Referencia de apoyo, no canon primario."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Marco de los volúmenes 13–14 descrito como meses después de T0; no se fuerza una distancia numérica.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_13/Synopsis"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     },
     {
       "id": "EVT-DM-JUGGERNAUT-DEFEAT-001",
@@ -809,7 +1031,24 @@
           "kind": "publisher",
           "note": "Confirma el marco de Bell/Ryu varados en los pisos 27 y 37, no cada detalle de escena."
         }
-      ]
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Continuación en el volumen 14; fecha interna y distancia exacta respecto de T0 permanecen abiertas.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     }
-  ]
+  ],
+  "temporalModelVersion": 1
 }

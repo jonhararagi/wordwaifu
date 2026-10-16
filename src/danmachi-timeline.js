@@ -1,10 +1,57 @@
 (function(root,factory){"use strict";const api=factory();if(typeof module==="object"&&module.exports)module.exports=api;else root.WordWaifuDanMachiTimeline=api;})(typeof globalThis!=="undefined"?globalThis:this,function(){
 "use strict";
+function temporalKindLabel(temporal){
+ if(!temporal)return "Tiempo sin normalizar";
+ const labels={absolute_date:"Fecha de calendario",approximate_interval:"Intervalo aproximado",relative_offset:"Desplazamiento relativo",relative_order:"Orden relativo · distancia no calculable",unknown:"Tiempo desconocido / pendiente",anchor:"Ancla relativa · no es fecha de calendario"};
+ const base=labels[temporal.kind]||"Clase temporal no reconocida";
+ if(temporal.kind==="absolute_date"){
+  const precision={day:"día",month:"mes",year:"año"}[temporal.precision]||"precisión pendiente";
+  return base+" · precisión "+precision;
+ }
+ if(temporal.kind==="relative_offset")return base+(temporal.precision==="approximate"?" · aproximado":temporal.precision==="estimated"?" · estimado":"");
+ return base;
+}
+function temporalDescription(temporal){
+ if(!temporal)return "Registro heredado sin modelo temporal estructurado.";
+ if(temporal.kind==="absolute_date")return "Fecha "+temporal.value+" según calendario "+temporal.calendar+"; precisión "+temporal.precision+".";
+ if(temporal.kind==="approximate_interval")return "Intervalo aproximado entre "+temporal.lower.value+" y "+temporal.upper.value+" (calendario "+temporal.lower.calendar+").";
+ if(temporal.kind==="relative_offset")return "Desplazamiento "+temporal.direction+" del ancla "+temporal.anchorId+": aproximadamente "+temporal.amount+" "+temporal.unit+".";
+ if(temporal.kind==="relative_order")return temporal.qualifier||("Relación "+temporal.relation+" respecto de "+temporal.referenceIds.join(", ")+"; no se calcula distancia.");
+ if(temporal.kind==="unknown")return temporal.reason;
+ if(temporal.kind==="anchor")return "Ancla "+temporal.anchorId+"; no es una fecha de calendario.";
+ return "Clase temporal sin descripción válida.";
+}
+function isValidDateValue(value,calendar,precision){
+ if(typeof value!=="string"||typeof calendar!=="string"||!calendar.trim())return false;
+ if(!["day","month","year"].includes(precision))return false;
+ const pattern=precision==="day"?/^\d{4}-\d{2}-\d{2}$/:precision==="month"?/^\d{4}-\d{2}$/:/^\d{4}$/;
+ if(!pattern.test(value))return false;
+ const year=Number(value.slice(0,4));
+ if(!Number.isInteger(year)||year<1)return false;
+ if(precision!=="year"){
+  const month=Number(value.slice(5,7));
+  if(month<1||month>12)return false;
+ }
+ if(calendar.toLowerCase()==="gregorian"&&precision==="day"){
+  const parsed=new Date(value+"T00:00:00.000Z");
+  if(!Number.isFinite(parsed.getTime())||parsed.toISOString().slice(0,10)!==value)return false;
+ }
+ if(calendar.toLowerCase()==="gregorian"&&precision==="month"){
+  const parsed=new Date(value+"-01T00:00:00.000Z");
+  if(!Number.isFinite(parsed.getTime())||parsed.toISOString().slice(0,7)!==value)return false;
+ }
+ return true;
+}
+function dateComparable(bound){
+ if(bound.precision==="year")return bound.value+"-01-01";
+ if(bound.precision==="month")return bound.value+"-01";
+ return bound.value;
+}
 function validateDataset(data){
  const errors=[];
  if(!data||data.schemaVersion!==1||data.universeId!=="danmachi")errors.push("Timeline schema or universe mismatch.");
  if(!data.anchor||data.anchor.id!=="T0-BELL-ARRIVAL")errors.push("Missing T0 Bell-arrival anchor.");
- const eras=Array.isArray(data.eras)?data.eras:[],events=Array.isArray(data.events)?data.events:[];
+ const eras=Array.isArray(data&&data.eras)?data.eras:[],events=Array.isArray(data&&data.events)?data.events:[];
  const eraIds=new Set(),eventIds=new Set();
  for(const era of eras){if(!era.id)errors.push("Era without id.");else if(eraIds.has(era.id))errors.push("Duplicate era id: "+era.id);else eraIds.add(era.id);}
  for(const era of eras){if(era.parentId&&!eraIds.has(era.parentId))errors.push("Orphan era "+era.id+" -> "+era.parentId);}
@@ -19,7 +66,72 @@ function validateDataset(data){
   if(!Array.isArray(event.sources)||!event.sources.length)errors.push("Event "+event.id+" missing source route.");
   for(const source of event.sources||[]){try{if(new URL(source.url).protocol!=="https:")errors.push("Non-HTTPS source in "+event.id);}catch{errors.push("Invalid source URL in "+event.id);}}
  }
- return {valid:errors.length===0,errors,eraCount:eras.length,eventCount:events.length};
+ const legacyTemporalModel=Boolean(data&&data.temporalModelVersion===undefined&&events.every(event=>!event.temporal&&!event.narrativeOrigin));
+ if(data&&data.temporalModelVersion!==1&&!legacyTemporalModel)errors.push("Unsupported or missing temporalModelVersion.");
+ const temporalKinds=new Set(["absolute_date","approximate_interval","relative_offset","relative_order","unknown","anchor"]);
+ const originKinds=new Set(["published_reference","user_hypothesis","user_plan","author_au"]);
+ const units=new Set(["second","minute","hour","day","week","month","year","decade","century"]);
+ const knownRefs=new Set([data&&data.anchor&&data.anchor.id,...events.map(event=>event.id)].filter(Boolean));
+ if(!legacyTemporalModel){
+  for(const event of events){
+   const temporal=event.temporal,origins=event.narrativeOrigin;
+   if(!temporal||typeof temporal!=="object"){errors.push("Event "+event.id+" missing temporal object.");continue;}
+   if(!temporalKinds.has(temporal.kind))errors.push("Event "+event.id+" has invalid temporal kind: "+temporal.kind);
+   if(!Array.isArray(temporal.sourceUrls)||temporal.sourceUrls.length===0)errors.push("Event "+event.id+" missing temporal source references.");
+   const attachedSources=new Set((event.sources||[]).map(source=>source&&source.url).filter(Boolean));
+   for(const url of temporal.sourceUrls||[]){
+    if(!attachedSources.has(url))errors.push("Temporal source does not belong to event "+event.id+": "+url);
+    try{if(new URL(url).protocol!=="https:")errors.push("Temporal source is not HTTPS on "+event.id+": "+url);}catch{errors.push("Invalid temporal source URL on "+event.id+": "+url);}
+   }
+   if(temporal.kind==="absolute_date"){
+    if(!["day","month","year"].includes(temporal.precision)||!isValidDateValue(temporal.value,temporal.calendar,temporal.precision))errors.push("Invalid absolute calendar date/precision on "+event.id);
+   }else if(temporal.kind==="approximate_interval"){
+    if(temporal.precision!=="approximate")errors.push("Approximate interval must use approximate precision on "+event.id);
+    const lower=temporal.lower,upper=temporal.upper;
+    if(!lower||!upper||!isValidDateValue(lower.value,lower.calendar,lower.precision)||!isValidDateValue(upper.value,upper.calendar,upper.precision)){
+     errors.push("Invalid interval bounds on "+event.id);
+    }else{
+     if(String(lower.calendar).toLowerCase()!==String(upper.calendar).toLowerCase())errors.push("Interval calendars do not match on "+event.id);
+     if(dateComparable(lower)>=dateComparable(upper))errors.push("Interval lower bound must precede upper bound on "+event.id);
+    }
+   }else if(temporal.kind==="relative_offset"){
+    if(!data.anchor||temporal.anchorId!==data.anchor.id)errors.push("Relative offset has unknown anchor on "+event.id+": "+temporal.anchorId);
+    if(!["before","after"].includes(temporal.direction))errors.push("Relative offset has invalid direction on "+event.id);
+    if(typeof temporal.amount!=="number"||!Number.isFinite(temporal.amount)||temporal.amount<=0)errors.push("Relative offset amount must be a positive number on "+event.id);
+    if(!units.has(temporal.unit))errors.push("Invalid relative offset unit on "+event.id+": "+temporal.unit);
+    if(!["approximate","estimated","exact"].includes(temporal.precision))errors.push("Invalid relative offset precision on "+event.id);
+   }else if(temporal.kind==="relative_order"){
+    if(!["before","after","between","overlaps"].includes(temporal.relation))errors.push("Invalid relative order relation on "+event.id);
+    if(!Array.isArray(temporal.referenceIds)||temporal.referenceIds.length===0)errors.push("Relative order needs references on "+event.id);
+    else for(const id of temporal.referenceIds)if(!knownRefs.has(id))errors.push("Missing temporal reference on "+event.id+": "+id);
+    if(temporal.relation==="between"&&(!Array.isArray(temporal.referenceIds)||temporal.referenceIds.length!==2))errors.push("Between requires exactly two temporal references on "+event.id);
+    if(temporal.relation!=="between"&&Array.isArray(temporal.referenceIds)&&temporal.referenceIds.length!==1)errors.push("This relative order relation requires exactly one reference on "+event.id);
+    if(temporal.distanceKnown!==false)errors.push("Relative order must not invent a calculable distance on "+event.id);
+    if(temporal.precision!=="order_only")errors.push("Relative order must use order_only precision on "+event.id);
+   }else if(temporal.kind==="unknown"){
+    if(temporal.precision!=="unknown")errors.push("Unknown time must use unknown precision on "+event.id);
+    if(typeof temporal.reason!=="string"||!temporal.reason.trim())errors.push("Unknown time needs a reason on "+event.id);
+   }else if(temporal.kind==="anchor"){
+    if(!data.anchor||temporal.anchorId!==data.anchor.id)errors.push("Anchor event points to an unknown anchor on "+event.id);
+    if(temporal.precision!=="anchor")errors.push("Anchor event must use anchor precision on "+event.id);
+    if(Object.prototype.hasOwnProperty.call(temporal,"value"))errors.push("Anchor event must not define a calendar value on "+event.id);
+   }
+   if(!origins||!originKinds.has(origins.kind))errors.push("Event "+event.id+" missing or invalid narrativeOrigin.");
+   else{
+    const scopes=Array.isArray(event.continuityScopes)?event.continuityScopes:[];
+    if(["user_hypothesis","user_plan"].includes(origins.kind)&&(scopes.includes("CONT-MAIN-LN")||scopes.includes("CONT-AR"))&&origins.approvedCrossContinuity!==true)errors.push("Hypothesis/plan cannot silently enter published continuity on "+event.id);
+    if(["user_hypothesis","user_plan"].includes(origins.kind)&&!scopes.some(scope=>["CONT-AU","CONT-UNVERIFIED"].includes(scope))&&origins.approvedCrossContinuity!==true)errors.push("Hypothesis/plan needs AU or unverified continuity on "+event.id);
+    if(origins.kind==="author_au"&&!scopes.includes("CONT-AU"))errors.push("Author AU origin requires CONT-AU on "+event.id);
+   }
+  }
+  if(data&&data.anchor&&data.anchor.eventId){
+   const anchorEvent=events.find(event=>event.id===data.anchor.eventId);
+   if(!anchorEvent)errors.push("Anchor event reference is missing: "+data.anchor.eventId);
+   else if(!anchorEvent.temporal||anchorEvent.temporal.kind!=="anchor"||anchorEvent.temporal.anchorId!==data.anchor.id)errors.push("Anchor event must use the anchor temporal variant: "+data.anchor.eventId);
+  }
+  if(data&&data.anchor&&data.anchor.sources)for(const url of data.anchor.sources)try{if(new URL(url).protocol!=="https:")errors.push("Anchor source must use HTTPS: "+url);}catch{errors.push("Invalid anchor source URL: "+url);}
+ }
+ return {valid:errors.length===0,errors,eraCount:eras.length,eventCount:events.length,temporalModelVersion:legacyTemporalModel?0:data&&data.temporalModelVersion,legacyTemporalModel,temporalEventCount:legacyTemporalModel?0:events.filter(event=>event.temporal).length};
 }
 function mount(){
  const panel=document.getElementById("danmachi-timeline-panel");
@@ -38,7 +150,7 @@ function mount(){
   return data.events.filter(event=>{
    if(scope!=="ALL"&&!event.continuityScopes.includes(scope))return false;
    if(eraFilter.value!=="ALL"&&event.eraId!==eraFilter.value)return false;
-   if(q){const parts=[event.id,event.title,event.dateLabel,event.summary,...(event.participants||[]).map(p=>p.name+" "+p.role),...(event.relatedEntities||[]).map(p=>p.name)].join(" ").toLocaleLowerCase();if(!parts.includes(q))return false;}
+   if(q){const parts=[event.id,event.title,event.dateLabel,event.summary,temporalKindLabel(event.temporal),event.temporal&&event.temporal.qualifier,event.temporal&&event.temporal.reason,...(event.participants||[]).map(p=>p.name+" "+p.role),...(event.relatedEntities||[]).map(p=>p.name)].join(" ").toLocaleLowerCase();if(!parts.includes(q))return false;}
    return true;
   }).sort((a,b)=>(a.sortIndex||a.sortOrder||0)-(b.sortIndex||b.sortOrder||0)||a.id.localeCompare(b.id));
  }
@@ -72,7 +184,7 @@ function mount(){
  function renderEventCard(event){
   const article=node("article","dm-historical-event"+(activeEventId===event.id?" is-selected":""));article.id="dm-event-"+event.id;
   const dot=node("span","dm-event-dot"),card=node("div","dm-event-card"),head=node("div","dm-event-card-heading");
-  head.append(node("span","dm-event-date",event.dateLabel),node("span","dm-event-evidence",evidenceLabel(event.evidenceStatus)));
+  const temporalBadge=node("span","dm-event-temporal dm-event-temporal--"+(event.temporal&&event.temporal.kind||"legacy"),temporalKindLabel(event.temporal));temporalBadge.dataset.temporalKind=event.temporal&&event.temporal.kind||"legacy";temporalBadge.title=temporalDescription(event.temporal);head.append(node("span","dm-event-date",event.dateLabel),temporalBadge,node("span","dm-event-evidence",evidenceLabel(event.evidenceStatus)));
   card.append(head,node("h4","",event.title),node("p","dm-event-summary",event.summary));
   if((event.participants||[]).length){const block=node("div","dm-event-participants");block.append(node("strong","","Personajes vinculados"));const chips=node("div","dm-event-person-list");event.participants.forEach(person=>appendPersonChip(chips,person,event));block.append(chips);card.append(block);}
   if((event.relatedEntities||[]).length){const block=node("div","dm-event-related");block.append(node("strong","","Antagonistas, amenazas y expedientes relacionados"));const chips=node("div","dm-event-person-list");event.relatedEntities.forEach(person=>appendPersonChip(chips,person,event));block.append(chips);card.append(block);}
@@ -133,5 +245,5 @@ function mount(){
  }).catch(error=>{status.textContent="No se pudo cargar el mapa histórico: "+error.message+". La enciclopedia de personajes sigue disponible.";});
 }
 if(typeof document!=="undefined"){if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount);else mount();}
-return{validateDataset:validateDataset,mount:mount};
+return{validateDataset:validateDataset,mount:mount,temporalKindLabel:temporalKindLabel,temporalDescription:temporalDescription};
 });

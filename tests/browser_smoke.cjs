@@ -380,6 +380,23 @@ async function run() {
     assert.equal(archiveThemeBg, "rgb(11, 13, 22)", "The current anime archive palette must be active.");
     // Character archive: compact search, profile navigation, evidence and temporal separation.
     await page.locator('.nav-item[data-view="lore"]').click();
+    await page.waitForFunction(() => document.querySelector("#dm-timeline-status")?.textContent.includes("15 acontecimientos visibles"), null, { timeout: 10000 });
+    assert.equal(await page.locator("#dm-timeline-events-view .dm-historical-event").count(), 15, "The temporal UI must render all 15 typed events.");
+    const astreaTemporalBadge = page.locator("#dm-event-EVT-DM-AR-ERA-001 .dm-event-temporal");
+    assert.equal(await astreaTemporalBadge.getAttribute("data-temporal-kind"), "relative_offset");
+    assert.ok((await astreaTemporalBadge.innerText()).includes("aproximado"), "The relative T-7 offset must visibly retain approximate precision.");
+    const t0TemporalBadge = page.locator("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-temporal");
+    assert.equal(await t0TemporalBadge.getAttribute("data-temporal-kind"), "anchor");
+    assert.ok((await t0TemporalBadge.innerText()).includes("no es fecha de calendario"), "T0 must be shown as a relative anchor, not an absolute date.");
+    const unknownTemporalBadge = page.locator("#dm-event-EVT-DM-DESCENT-001 .dm-event-temporal");
+    assert.equal(await unknownTemporalBadge.getAttribute("data-temporal-kind"), "unknown");
+    assert.ok((await unknownTemporalBadge.innerText()).includes("desconocido"), "Unknown time must stay explicitly unknown.");
+    await page.locator('#dm-timeline-continuity').selectOption("CONT-AR");
+    assert.equal(await page.locator("#dm-timeline-events-view .dm-historical-event").count(), 1, "The structured time display must retain continuity filtering.");
+    await page.locator('#dm-timeline-continuity').selectOption("ALL");
+    await page.locator('[data-dm-timeline-tab="events"]').click();
+    assert.equal(await page.locator("#dm-timeline-events-view .dm-historical-event").count(), 15, "The historical event lane must retain all events after switching tabs.");
+    await page.locator('[data-dm-timeline-tab="eras"]').click();
     await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
     assert.equal(await page.locator("#archive-quick-filters [data-archive-scope]").count(), 3);
     await page.locator('#archive-quick-filters [data-archive-scope="CONT-AR"]').click();
