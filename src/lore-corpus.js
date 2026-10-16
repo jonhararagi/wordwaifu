@@ -226,7 +226,7 @@
         characterIds: [record.id], aspect, eraOrInterval: period,
         continuityScopes: [scope], sourceIds: [sourceId], sourceTitle, sourceType,
         sourceLocator: dossier ? "Síntesis original por apartados; consultar el artículo citado y sus referencias primarias." : (record.locator || "Perfil de personaje publicado en la página oficial."),
-        sourceUrls: sourceUrl ? [sourceUrl] : [], evidenceType: dossier ? "original_paraphrase_of_secondary_compendium" : "explicit_character_profile",
+        sourceUrls: dossier && Array.isArray(dossier.sources) ? unique([...(sourceUrl ? [sourceUrl] : []), ...dossier.sources.filter(url => typeof url === "string" && url.startsWith("https://"))]) : (sourceUrl ? [sourceUrl] : []), evidenceType: dossier ? "original_paraphrase_of_secondary_compendium" : "explicit_character_profile",
         verificationStatus: dossier ? "secondary_reference_checked" : "source_checked",
         spoilerLevel: dossier && dossier.spoilerLevel ? dossier.spoilerLevel : "none",
         confidenceNote: dossier
@@ -262,6 +262,27 @@
           if (!ability || !ability.name || !ability.detail) continue;
           make(record, scope, "habilidades y combate", ability.name, ability.detail, dossier);
         }
+      }
+      // Standalone narrative dossiers are also part of retrieval. Do not duplicate a
+      // character/continuity already represented by a richer nested dossier.
+      const standalone = typeof globalThis !== "undefined" && globalThis.WordWaifuCharacterDossiers
+        ? globalThis.WordWaifuCharacterDossiers.get(record.id) : null;
+      if (standalone && !dossierMap["CONT-MAIN-LN"]) {
+        const sourceUrls = Array.isArray(standalone.sources) ? standalone.sources.filter(url => typeof url === "string" && url.startsWith("https://")) : [];
+        const secondaryUrl = sourceUrls.find(url => url.includes("fandom.com")) || sourceUrls[0] || record.sourcePage;
+        const retrievalDossier = {
+          sourceUrl: secondaryUrl,
+          sourceLabel: "Expediente ampliado WordWaifu · referencia secundaria por contrastar",
+          sourceType: "secondary_compendium",
+          spoilerLevel: "unknown",
+          sources: sourceUrls
+        };
+        make(record, "CONT-MAIN-LN", "apariencia e identidad visual", "apariencia y presentación", standalone.appearance, retrievalDossier);
+        make(record, "CONT-MAIN-LN", "evolución e historia", "historia y contexto", standalone.history, retrievalDossier);
+        make(record, "CONT-MAIN-LN", "evolución psicológica", "personalidad y conducta", standalone.personality, retrievalDossier);
+        make(record, "CONT-MAIN-LN", "habilidades y combate", "habilidades y estilo de combate", standalone.abilities, retrievalDossier);
+        make(record, "CONT-MAIN-LN", "relaciones y vínculos", "vínculos y dinámica de grupo", standalone.relationships, retrievalDossier);
+        make(record, "CONT-MAIN-LN", "límites de evidencia", "conflictos, límites e incertidumbres", standalone.conflict, retrievalDossier);
       }
     }
     return generated;
