@@ -472,6 +472,13 @@ async function run() {
     assert.equal(pendingLocal.allowModifyExport,false);
     assert.equal(await page.locator('[data-visual-export="'+pendingLocal.id+'"]').count(),0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),pendingLocal.id),false);
+    await page.locator("#dm-visual-title").fill("Fixture raster corrupto");
+    await page.locator("#dm-visual-file").setInputFiles({name:"broken-image.png",mimeType:"image/png",buffer:Buffer.from("esto no es PNG")});
+    await page.locator("#dm-visual-holder").fill("Fixture sintético de CI");
+    await page.locator("#dm-visual-usage-status").selectOption("pending_review");
+    await page.locator("#dm-visual-local-form button[type='submit']").click();
+    await page.waitForFunction(()=>document.querySelector("#dm-visual-status")?.textContent.includes("no se guardó"),null,{timeout:5000});
+    assert.equal(await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).some(item=>item.title==="Fixture raster corrupto")),false,"Corrupt image bytes must not be persisted as a successful visual reference.");
     await page.locator("#dm-visual-title").fill("Fixture local autorizado");
     await page.locator("#dm-visual-file").setInputFiles(syntheticPng);
     await page.locator("#dm-visual-holder").fill("Autor de fixture de CI");
@@ -522,6 +529,9 @@ async function run() {
     await page.waitForFunction(id=>!!document.querySelector('#dm-timeline-map-view [data-location-id="LOC-ORARIO"] .dm-place-visual-references [data-visual-reference-id="'+id+'"]'),authorizedLocal.id,{timeout:5000});
     assert.ok(await page.locator('#dm-timeline-map-view [data-location-id="LOC-ORARIO"] .dm-place-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]').count()>0,
       "The same local reference must appear on its explicitly linked place fiche.");
+    const localEventCard=page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]');
+    assert.equal(await localEventCard.locator("a.dm-visual-source-link").count(),0,"A local work without a source URL must not link back to the application itself.");
+    assert.match(await localEventCard.innerText(),/Fuente externa no indicada/);
     await page.context().setOffline(true);
     await page.locator("#dm-timeline-query").fill("Bell llega a Orario");
     await page.waitForFunction(()=>(document.querySelector("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references")?.innerText||"").includes("Fixture local autorizado"),null,{timeout:5000});

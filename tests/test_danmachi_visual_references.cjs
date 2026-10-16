@@ -19,11 +19,18 @@ assert.ok(dataset.visualReferences.every(row=>row.storageMode==="remote"&&row.wa
 const bad=JSON.parse(JSON.stringify(dataset));bad.visualReferences.push({...bad.visualReferences[0]});assert.equal(visual.validateDataset(bad,timelineData).valid,false,"Duplicate IDs must be rejected.");
 const insecure=JSON.parse(JSON.stringify(dataset));insecure.visualReferences[0].sourcePageUrl="javascript:alert(1)";assert.equal(visual.validateDataset(insecure,timelineData).valid,false,"Non-HTTPS source URLs must be rejected.");
 const fakeEvent=JSON.parse(JSON.stringify(dataset));fakeEvent.visualReferences[1].relatedEventIds=["EVT-NOT-REAL"];assert.equal(visual.validateDataset(fakeEvent,timelineData).valid,false,"Unknown event relations must be rejected.");
+const wrongContinuity=JSON.parse(JSON.stringify(dataset));wrongContinuity.visualReferences[0].relatedEventIds=["EVT-DM-BELL-ARRIVAL-001"];assert.equal(visual.validateDataset(wrongContinuity,timelineData).valid,false,"An anime reference must not be linked as a main-novel event reference.");
+const wrongCoverage=JSON.parse(JSON.stringify(dataset));wrongCoverage.eventCoverage.find(row=>row.eventId==="EVT-DM-BELL-ARRIVAL-001").referenceIds=["DM-VIS-REF-YEN-VOL14-001"];assert.equal(visual.validateDataset(wrongCoverage,timelineData).valid,false,"Coverage must agree with explicit event relations.");
+const badPolicy=JSON.parse(JSON.stringify(dataset));badPolicy.visualReferences[0].watermarkPolicy="apply_to_authorized_copy";assert.equal(visual.validateDataset(badPolicy,timelineData).valid,false,"A remote reference must not be eligible for marked-copy export.");
+const badSourceKind=JSON.parse(JSON.stringify(dataset));badSourceKind.visualReferences[0].sourceKind="assumed_permission";assert.equal(visual.validateDataset(badSourceKind,timelineData).valid,false,"Undocumented source kinds must be rejected.");
 const missing=JSON.parse(JSON.stringify(dataset));missing.locationCoverage.pop();assert.equal(visual.validateDataset(missing,timelineData).valid,false,"Missing place assessments must be rejected.");
-function record(overrides={}){return{id:"USER-VIS-UNIT-000001",storageMode:"browser_local",usageStatus:"user_owned",allowModifyExport:true,fileDataUrl:"data:image/png;base64,AAAA",...overrides};}
+function record(overrides={}){return{id:"USER-VIS-UNIT-000001",storageMode:"browser_local",usageStatus:"user_owned",allowModifyExport:true,watermarkPolicy:"apply_to_authorized_copy",fileDataUrl:"data:image/png;base64,AAAA",...overrides};}
 assert.equal(visual.canExportWatermarkedCopy(record()),true);
+assert.equal(visual.canExportWatermarkedCopy(record({watermarkPolicy:"none"})),false,"A record without the explicit export policy must be denied.");
 assert.equal(visual.canExportWatermarkedCopy(record({usageStatus:"pending_review",allowModifyExport:false})),false);
+assert.equal(visual.canExportWatermarkedCopy(record({usageStatus:"pending_review",allowModifyExport:true})),false,"pending_review stays blocked even if stale metadata claims export rights.");
 assert.equal(visual.canExportWatermarkedCopy(record({usageStatus:"blocked",allowModifyExport:false})),false);
+assert.equal(visual.canExportWatermarkedCopy(record({usageStatus:"blocked",allowModifyExport:true})),false,"blocked stays blocked even if stale metadata claims export rights.");
 assert.equal(visual.canExportWatermarkedCopy(record({usageStatus:"external_reference",storageMode:"remote"})),false);
 assert.equal(visual.canExportWatermarkedCopy(record({usageStatus:"licensed",allowModifyExport:false})),false);
 assert.equal(visual.canExportWatermarkedCopy(record({usageStatus:"permission_recorded",fileDataUrl:"data:image/svg+xml;base64,AAAA"})),false);

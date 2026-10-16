@@ -1,6 +1,9 @@
 (function(root) {
 "use strict";
 const allowedStatuses = new Set(["external_reference","user_owned","licensed","permission_recorded","pending_review","blocked"]);
+const sourceKinds = new Set(["official","publisher","user_provided","original_art","open_license","permission_granted","community","other"]);
+const storageModes = new Set(["remote","browser_local","bundled_original"]);
+const watermarkPolicies = new Set(["none","overlay_reference","apply_to_authorized_copy"]);
 const spoilerRank = {none:0,minor:1,major:2,critical:3};
 let registry=null,timeline=null,mounted=false,localReferenceCache=null,localReferencePromise=null,localReferenceVersion=0;
 const $=selector=>document.querySelector(selector);
@@ -9,6 +12,7 @@ function safeHttps(value,optional){const raw=String(value||"").trim();if(!raw)re
 function validateDataset(data,timelineData){
  const errors=[],refs=Array.isArray(data&&data.visualReferences)?data.visualReferences:[];
  const refIds=new Set(),eventIds=new Set((timelineData&&timelineData.events||[]).map(x=>x.id)),locationIds=new Set((timelineData&&timelineData.locations||[]).map(x=>x.id));
+ const eventById=new Map((timelineData&&timelineData.events||[]).map(x=>[x.id,x]));
  const scopes=new Set((timelineData&&timelineData.continuities||[]).map(x=>x.id));
  if(!data||data.schemaVersion!==1||data.universeId!=="danmachi")errors.push("Unsupported visual-reference registry schema.");
  if(!Array.isArray(data&&data.eventCoverage)||data.eventCoverage.length!==eventIds.size)errors.push("Every timeline event must receive one visual assessment.");
@@ -21,13 +25,24 @@ function validateDataset(data,timelineData){
   if(!ref||!safeHttps(ref.sourcePageUrl,false))errors.push("Visual reference requires a safe HTTPS source page.");
   if(ref&&ref.assetUrl&&!safeHttps(ref.assetUrl,false))errors.push("Visual reference assetUrl must be HTTPS without credentials.");
   if(!ref||!allowedStatuses.has(ref.usageStatus))errors.push("Visual reference has invalid usage status.");
+  if(!ref||!sourceKinds.has(ref.sourceKind))errors.push("Visual reference has an invalid sourceKind.");
+  if(!ref||!storageModes.has(ref.storageMode))errors.push("Visual reference has an invalid storageMode.");
+  if(!ref||!watermarkPolicies.has(ref.watermarkPolicy))errors.push("Visual reference has an invalid watermarkPolicy.");
   if(!ref||!ref.creatorOrRightsholder)errors.push("Visual reference must name the holder or explicitly use unknown.");
   if(!ref||!scopes.has(ref.continuityScope))errors.push("Visual reference continuity is unknown.");
   if(!ref||!Object.prototype.hasOwnProperty.call(spoilerRank,ref.spoilerLevel))errors.push("Visual reference spoiler level is invalid.");
   if(ref&&ref.licenseUrl&&!safeHttps(ref.licenseUrl,false))errors.push("License URL must be HTTPS.");
+  if(!ref||!Array.isArray(ref.relatedEventIds))errors.push("Visual reference relatedEventIds must be an array.");
+  if(!ref||!Array.isArray(ref.relatedLocationIds))errors.push("Visual reference relatedLocationIds must be an array.");
   if(ref&&(ref.relatedEventIds||[]).some(id=>!eventIds.has(id)))errors.push("Visual reference points to an unknown event: "+ref.id);
   if(ref&&(ref.relatedLocationIds||[]).some(id=>!locationIds.has(id)))errors.push("Visual reference points to an unknown location: "+ref.id);
-  if(ref&&ref.storageMode==="remote"&&!["link_only","link_only_pending_embedding_review"].includes(ref.previewPolicy))errors.push("Remote images cannot be embedded until their conditions are verified.");
+  for(const id of ref&&Array.isArray(ref.relatedEventIds)?ref.relatedEventIds:[]){
+   const event=eventById.get(id);
+   if(event&&ref.continuityScope!=="CROSS-CONTINUITY"&&!(event.continuityScopes||[]).includes(ref.continuityScope))errors.push("Visual reference continuity conflicts with linked event "+id+": "+ref.id);
+  }
+  if(ref&&ref.storageMode==="remote"&& !["link_only","link_only_pending_embedding_review"].includes(ref.previewPolicy))errors.push("Remote images cannot be embedded until their conditions are verified.");
+  if(ref&&ref.storageMode==="remote"&&ref.watermarkPolicy==="apply_to_authorized_copy")errors.push("Remote references cannot offer marked-copy export.");
+  if(ref&&ref.watermarkPolicy==="apply_to_authorized_copy"&&(!["user_owned","licensed","permission_recorded"].includes(ref.usageStatus)||ref.allowModifyExport!==true))errors.push("Marked-copy policy requires declared rights and explicit modification permission.");
   if(ref&&ref.usageStatus==="external_reference"&&ref.watermarkPolicy!=="none")errors.push("External reference cannot offer a transformed export.");
  }
  function validateCoverage(items,keyName,knownIds){
@@ -37,7 +52,12 @@ function validateDataset(data,timelineData){
    if(!knownIds.has(id))errors.push("Visual coverage references unknown "+keyName+": "+id);
    if(seen.has(id))errors.push("Duplicate visual coverage: "+id);seen.add(id);
    if(!item||!states.has(item.status))errors.push("Invalid visual coverage status for "+id);
-   if(item&&(item.referenceIds||[]).some(refId=>!refIds.has(refId)))errors.push("Visual coverage contains unknown visual reference: "+id);
+   for(const refId of item&&Array.isArray(item.referenceIds)?item.referenceIds:[]){
+    if(!refIds.has(refId)){errors.push("Visual coverage contains unknown visual reference: "+id);continue;}
+    const ref=refs.find(candidate=>candidate.id===refId);
+    if(ref&&keyName==="eventId"&&!(ref.relatedEventIds||[]).includes(id))errors.push("Event visual coverage disagrees with the reference relation: "+id+" / "+refId);
+    if(ref&&keyName==="locationId"&&!(ref.relatedLocationIds||[]).includes(id))errors.push("Place visual coverage disagrees with the reference relation: "+id+" / "+refId);
+   }
    if(!item||!String(item.reason||"").trim())errors.push("Visual assessment requires a reason: "+id);
   }
   for(const id of knownIds)if(!seen.has(id))errors.push("Missing visual assessment: "+id);
@@ -47,7 +67,7 @@ function validateDataset(data,timelineData){
 }
 function canExportWatermarkedCopy(record){
  if(!record)return false;const ref=record.visualReference||record,status=ref.usageStatus,fileDataUrl=record.fileDataUrl||ref.fileDataUrl||"";
- return ref.storageMode==="browser_local"&&["user_owned","licensed","permission_recorded"].includes(status)&&ref.allowModifyExport===true&&/^data:image\/(png|jpeg|webp|gif|avif);base64,/i.test(fileDataUrl)&&!["pending_review","blocked","external_reference"].includes(status);
+ return ref.storageMode==="browser_local"&&ref.watermarkPolicy==="apply_to_authorized_copy"&&["user_owned","licensed","permission_recorded"].includes(status)&&ref.allowModifyExport===true&&/^data:image\/(png|jpeg|webp|gif|avif);base64,/i.test(fileDataUrl)&&!["pending_review","blocked","external_reference"].includes(status);
 }
 function openPreview(ref){
  const dialog=node("dialog","dm-visual-lightbox"),close=node("button","dm-visual-lightbox-close","Cerrar");
@@ -111,7 +131,11 @@ function appendCard(container,ref,local){
  card.append(node("p","dm-visual-credit-line","Crédito/titular: "+(ref.creditLine||ref.creatorOrRightsholder||"unknown")));
  if(ref.licenseName)card.append(node("p","dm-visual-meta","Licencia declarada: "+ref.licenseName+(ref.licenseUrl?" · "+ref.licenseUrl:"")));
  if(ref.permissionEvidence)card.append(node("p","dm-visual-meta","Evidencia de permiso declarada: "+ref.permissionEvidence));
- const source=node("a","dm-visual-source-link","Abrir fuente original ↗");source.href=ref.sourcePageUrl;source.target="_blank";source.rel="noopener noreferrer";source.referrerPolicy="no-referrer";card.append(source);
+ if(safeHttps(ref.sourcePageUrl,false)){
+  const source=node("a","dm-visual-source-link","Abrir fuente original ↗");source.href=ref.sourcePageUrl;source.target="_blank";source.rel="noopener noreferrer";source.referrerPolicy="no-referrer";card.append(source);
+ }else{
+  card.append(node("p","dm-visual-placeholder",local?"Fuente externa no indicada; el archivo permanece local y no se crea un enlace remoto.":"La fuente original no está disponible como enlace HTTPS seguro."));
+ }
  card.append(node("p","dm-visual-rights-note","Atribución, marca de agua y uso personal/educativo no sustituyen una licencia o permiso."));
  if(local&&canExportWatermarkedCopy(ref)){const exp=node("button","dm-visual-action dm-visual-export","Exportar copia marcada");exp.type="button";exp.dataset.visualExport=ref.id;card.append(exp);}
  if(local){const remove=node("button","dm-visual-action dm-visual-remove","Eliminar del almacenamiento local");remove.type="button";remove.dataset.visualRemove=ref.id;card.append(remove);}
@@ -162,6 +186,14 @@ async function exportWatermarkedCopy(id,options){
  const blob=await renderWatermarkBlob(ref,options),href=URL.createObjectURL(blob),slug=String(ref.title||"referencia").normalize("NFKD").replace(/[^a-zA-Z0-9-]+/g,"-").replace(/^-+|-+$/g,"").slice(0,70)||"referencia";
  return {exported:true,originalPreserved:true,filename:slug+"-watermarked.png",href};
 }
+function decodeRasterImage(dataUrl){
+ return new Promise((resolve,reject)=>{
+  const image=new Image();
+  image.onload=()=>image.naturalWidth>0&&image.naturalHeight>0?resolve(true):reject(new Error("La imagen local no se pudo decodificar; no se guardó."));
+  image.onerror=()=>reject(new Error("La imagen local no se pudo decodificar; no se guardó."));
+  image.src=dataUrl;
+ });
+}
 function bindLocalForm(){
  const form=$("#dm-visual-local-form");if(!form||form.dataset.bound==="true")return;form.dataset.bound="true";
  form.addEventListener("submit",async ev=>{
@@ -170,7 +202,9 @@ function bindLocalForm(){
   setStatus("Guardando referencia visual en el almacenamiento local…");
   const usageStatus=$("#dm-visual-usage-status").value;
   try{
-   const fileDataUrl=await api.fileToDataUrl(file),id="USER-VIS-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,8).toUpperCase();
+   const fileDataUrl=await api.fileToDataUrl(file);
+   await decodeRasterImage(fileDataUrl);
+   const id="USER-VIS-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,8).toUpperCase();
    const eventId=$("#dm-visual-event").value,locationId=$("#dm-visual-location").value,requestedModify=$("#dm-visual-allow-modify").checked;
    const allowModifyExport=requestedModify&&["user_owned","licensed","permission_recorded"].includes(usageStatus);
    const record={id,title:$("#dm-visual-title").value.trim(),caption:$("#dm-visual-caption").value.trim(),sourcePageUrl:$("#dm-visual-source-url").value.trim(),
