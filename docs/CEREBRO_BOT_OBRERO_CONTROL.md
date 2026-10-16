@@ -1,0 +1,152 @@
+# CEREBRO / BOT OBRERO — Control operativo de WordWaifu
+
+**Documento de mando persistente.** Leer este archivo junto con `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/ROADMAP.md` y `docs/DONE.md` al iniciar o recuperar una sesión.
+
+## 1. Roles
+
+### CEREBRO (dirección, alcance y aceptación)
+- Convierte los objetivos del usuario en fases pequeñas, con identificador estable y criterios verificables.
+- Define qué se puede cambiar, riesgos, pruebas y condiciones para declarar DONE.
+- Revisa la evidencia presentada por el Obrero; no convierte propuestas ni revisiones estáticas en resultados de ejecución.
+- Mantiene este registro coherente con STATUS y DONE.
+
+### BOT OBRERO (ejecución en GitHub)
+- Comprueba rama y HEAD antes de actuar; lee el contexto pertinente.
+- Ejecuta solo la tarea activa y modifica directamente el repositorio.
+- Añade o actualiza pruebas y documentación; ejecuta las pruebas disponibles.
+- Registra SHA anterior/posterior, archivos, resultados, limitaciones y el siguiente paso exacto.
+- No cambia `main`, no integra ramas ni crea/cierra PR sin autorización explícita del usuario.
+
+## 2. Reglas de continuidad obligatorias
+
+1. La fuente de verdad es el estado GitHub de la rama autorizada, no el recuerdo de una conversación.
+2. Antes de escribir, volver a leer la rama y comprobar si el trabajo ya existe para evitar duplicados.
+3. Una sola tarea activa por vez. No iniciar la siguiente hasta aceptar o bloquear la actual.
+4. Cada entrega actualiza los documentos pertinentes y sobrescribe `docs/DONE.md` con el punto de reanudación más reciente.
+5. Si se interrumpe el chat, el próximo agente debe comenzar por este documento, `docs/STATUS.md` y `docs/DONE.md`; después verificar el HEAD real.
+6. No afirmar que algo está implementado por haberlo planificado; ni que funciona por existir código; ni que una prueba pasó si no hay resultado asociado al SHA exacto.
+7. No borrar, reescribir masivamente ni reemplazar módulos completos sin una razón demostrada y un alcance aprobado.
+8. Mantener WordWaifu utilizable sin IA, Ollama, GPU ni servicios remotos obligatorios. Los generadores deterministas/locales son el camino base.
+
+## 3. Estados y evidencia
+
+- `DONE`: criterios de aceptación cumplidos con evidencia suficiente.
+- `IN_PROGRESS`: tarea activa; todavía no cumple todos los criterios.
+- `BLOCKED`: no puede avanzar; documentar causa, evidencia y acción para desbloquear.
+- `NOT_STARTED`: aprobada, aún no iniciada.
+- `DEFERRED`: deliberadamente aplazada, con motivo.
+- `PASS_REAL`: ejecución real observada en el entorno nombrado.
+- `PASS_CI`: workflow CI exitoso para el SHA indicado.
+- `PASS_STATIC`: inspección estática; no implica funcionamiento en navegador.
+- `NOT_RUN` / `UNKNOWN` / `PARTIAL`: prueba no ejecutada / evidencia desconocida / validación parcial.
+
+Una fase solo puede cerrarse cuando sus criterios de aceptación estén enumerados y cada uno tenga evidencia o una excepción aprobada claramente indicada.
+
+## 4. Flujo de trabajo por tarea
+
+`INSPECT → PLAN → EXECUTE → VERIFY → PERSIST → REPORT`
+
+En cada tarea se registrará:
+- ID, objetivo y exclusiones.
+- Rama autorizada, HEAD BEFORE y HEAD AFTER.
+- Archivos modificados.
+- Criterios de aceptación y pruebas vinculadas al SHA.
+- Riesgos, bloqueos y trabajo restante.
+- Próxima acción concreta.
+- Estado de `main` y PR: indicar expresamente si no se tocaron.
+
+## 5. Programa de trabajo: atlas temporal de DanMachi e imágenes de referencia
+
+Objetivo del usuario: poder entender **cuándo** ocurre cada hecho o combate y **en qué zona del mapa** sucede, admitiendo fechas aproximadas o planes hipotéticos sin confundirlos con canon; además, disponer de panoramas visuales útiles sin tratar una marca de agua como permiso de copyright.
+
+### TLM-001 — Auditar el estado real de la cronología y el mapa
+**Estado: IN_PROGRESS — siguiente tarea del BOT OBRERO.**
+
+Alcance:
+- Inspeccionar `src/danmachi-timeline.js`, `lore/danmachi/timeline/eras-and-events.json`, `src/lore-corpus.js`, `index.html`, `src/styles.css`, pruebas y documentación del atlas.
+- Confirmar qué filtros temporales, enlaces a personajes/lugares, continuidad, fuentes y ubicación ya funcionan; no duplicar lo existente.
+- Identificar cómo se representa actualmente una fecha relativa, aproximada, desconocida o hipotética, y cómo un evento se conecta a una localización del mapa.
+- Revisar pruebas disponibles y ejecutar las pertinentes si el entorno lo permite.
+- Entregar una matriz requisito / implementación encontrada / evidencia / brecha / archivo candidato.
+
+Criterios de aceptación:
+- [ ] HEAD y rama reales registrados.
+- [ ] Auditoría basada en los archivos actuales, no solo en notas previas.
+- [ ] Cada brecha incluye evidencia o está marcada UNKNOWN.
+- [ ] No se hacen cambios funcionales antes de conocer el estado actual.
+- [ ] Informe persistido en GitHub y punto de reanudación actualizado.
+
+### TLM-002 — Modelo temporal explícito
+**Estado: NOT_STARTED; depende de TLM-001.**
+
+Diseñar e implementar, sin romper datos existentes:
+- fecha exacta, intervalo aproximado, fecha relativa a un ancla, orden conocido sin fecha, fecha desconocida e hipótesis/plan;
+- precisión y fuente de la fecha;
+- continuidad separada: canon confirmado, canon aproximado/en investigación, hipótesis del usuario, planificación de historia y AU;
+- evento de combate con participantes, resultado/consecuencias cuando estén respaldados, y vínculos por IDs a lugar/personajes;
+- distinción visual y textual clara entre hechos publicados y eventos inventados.
+
+Criterio: los eventos sin fecha exacta se pueden ordenar o filtrar sin inventar una fecha de calendario ni contaminar el canon.
+
+### TLM-003 — Cronología conectada al mapa
+**Estado: NOT_STARTED; depende de TLM-001 y TLM-002.**
+
+- Vincular eventos a ubicaciones existentes mediante IDs estables.
+- Mostrar ubicación en el mapa cuando esté respaldada; marcar explícitamente “ubicación desconocida” cuando no lo esté.
+- Permitir filtrar por época/era, continuidad, personajes, combate y nivel de certeza.
+- Desde un evento abrir su ficha, personajes y lugar; conservar el contexto temporal al navegar.
+- No inventar coordenadas ni localizaciones canónicas.
+
+Criterio: elegir un período muestra únicamente eventos y presencias compatibles con ese período, y los enlaces no duplican fichas.
+
+### TLM-004 — Panoramas e imágenes de referencia con procedencia
+**Estado: NOT_STARTED; depende de TLM-001.**
+
+- Inspeccionar primero el diálogo y la política existentes en `docs/CONTENT_RIGHTS_AND_TAKEDOWN.md` y la UI.
+- Separar: enlaces a imágenes oficiales externas, imágenes aportadas por el usuario con derechos/permiso, y recursos propios o con licencia compatible.
+- Registrar fuente, autor/titular cuando se conozca, URL, licencia/permiso, continuidad y elemento/evento al que corresponde.
+- No descargar ni incorporar automáticamente imágenes oficiales de anime/novelas al repositorio sin permiso/licencia compatible.
+- Si se implementa marca de agua en recursos que el usuario está autorizado a modificar, que sea visible y configurable, y que no oculte atribución. La marca de agua **no concede derechos** ni vuelve legal una copia no autorizada.
+- Mantener la aplicación funcional sin red: las imágenes externas pueden fallar; las imágenes locales permitidas deben tener alternativa/placeholder.
+
+Criterio: cada imagen tiene procedencia y tratamiento de derechos explícitos; la UI no promete que “uso educativo/personal” o una marca de agua autoricen su reproducción.
+
+### TLM-005 — Verificación de extremo a extremo
+**Estado: NOT_STARTED; depende de TLM-002 a TLM-004.**
+
+- Añadir pruebas para fechas exactas/relativas/desconocidas/hipotéticas, filtros de continuidad, enlaces a lugares y ausencia de coordenadas inventadas.
+- Probar la UI de cronología y mapa en navegador/CI.
+- Registrar resultados reales y CI para los SHAs exactos.
+- Comprobar regresiones de búsqueda, dossiers, navegación y funcionamiento offline.
+
+Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas las limitaciones conocidas documentadas.
+
+## 6. Estado inicial de este programa
+
+- Existe una cronología DanMachi previa con eras/eventos y ancla relativa; esto es una base parcial, no prueba de cronología completa.
+- La cobertura, precisión temporal, relación con ubicaciones y tratamiento visual deben reconfirmarse en TLM-001.
+- La petición de imágenes no autoriza copiar recursos oficiales al repositorio.
+- No se ha declarado ninguna de TLM-001 a TLM-005 terminada por anticipado.
+
+## 7. Registro de entregas
+
+| Fecha (UTC) | Tarea | Estado | SHA / evidencia | Nota |
+|---|---|---|---|---|
+| 2026-10-16 | Establecer control persistente Cerebro/Obrero y programa TLM | IN_PROGRESS | Ver commit de este documento y `docs/DONE.md` | TLM-001 queda como única tarea activa. |
+
+## 8. Plantilla de reporte del BOT OBRERO
+
+```text
+Tarea:
+Estado:
+Rama:
+HEAD BEFORE:
+HEAD AFTER:
+Archivos:
+Criterios cumplidos / pendientes:
+Pruebas y resultado (incluye SHA exacto):
+Evidencia PASS_REAL / PASS_CI / PASS_STATIC / NOT_RUN / UNKNOWN:
+Bloqueos:
+main/PR:
+Próxima acción exacta:
+```
