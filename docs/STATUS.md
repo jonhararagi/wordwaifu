@@ -7,12 +7,13 @@
 - SHA de implementación verificado: c9fa2d05de3bb81526523202bea0fb5cb058ae06.
 - TLM-001: DONE como auditoría documental; producto/atlas PARTIAL.
 - TLM-002: DONE / PASS_CI, con modelo temporal estructurado y 15 registros migrados.
-- TLM-003: DONE / PASS_CI. Los 15 eventos están evaluados individualmente; 2 fichas de lugar, 9 vínculos, 4 eventos verificados, 5 provisionales y 6 sin ubicación.
-- PASS_CI para el SHA de implementación: [Validate WordWaifu #38950288434](https://github.com/jonhararagi/wordwaifu/actions/runs/38950288434) y [DanMachi Lore and Retrieval Integrity #38950288325](https://github.com/jonhararagi/wordwaifu/actions/runs/38950288325), ambos success en c9fa2d05de3bb81526523202bea0fb5cb058ae06.
-- Informe: docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md; esquema espacial: docs/DANMACHI-LOCATION-MODEL.md.
-- El panel de DanMachi usa un esquema relacional no geográfico y sin escala. No se modificó src/app.js, el mapa Asteria ni el almacenamiento del proyecto. No se añadieron imágenes ni coordenadas.
-- TLM-004: NOT_STARTED (imágenes/derechos). Próxima tarea cuando se ordene.
-- TLM-005: NOT_STARTED (verificación end-to-end integral).
+- TLM-003: DONE / PASS_CI; CEREBRO aceptó el cierre documental `67c48d55601a372653c425e1517cfe4f6c322813`. Los 15 eventos se evaluaron individualmente; 2 fichas de lugar, 9 vínculos, 4 eventos verificados, 5 provisionales y 6 unknown.
+- PASS_CI en el cierre documental exacto: [Validate WordWaifu #38950807146](https://github.com/jonhararagi/wordwaifu/actions/runs/38950807146) y [DanMachi Lore and Retrieval Integrity #38950807317](https://github.com/jonhararagi/wordwaifu/actions/runs/38950807317), ambos success en `67c48d55601a372653c425e1517cfe4f6c322813`.
+- Informe: [docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md](TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md); esquema espacial: [docs/DANMACHI-LOCATION-MODEL.md](DANMACHI-LOCATION-MODEL.md).
+- El panel DanMachi usa un esquema relacional no geográfico y sin escala. No se modificó src/app.js, el mapa Asteria ni el almacenamiento del proyecto. No se añadieron imágenes ni coordenadas.
+- **HEAD previo al contrato TLM-004:** `5263e8214091083cba87bc2b1cde0e202b6c959d` (control actualizado; los workflows del nuevo SHA documental aún deben comprobarse).
+- **TLM-004: IN_PROGRESS** — referencias visuales, panoramas, procedencia y política de watermark. Contrato: [docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md). Única tarea activa.
+- **TLM-005:** NOT_STARTED (verificación end-to-end integral y revisión visual/manual).
 - Revisión visual manual en Windows 11: NOT_RUN. Node/Playwright local de este agente: NOT_RUN; CI real sí ejecutado.
 - main no modificada; ningún merge y ningún PR creado, cerrado o modificado. La referencia de rama tras el cierre documental es el HEAD más reciente.
 
