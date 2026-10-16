@@ -193,7 +193,8 @@ async function handleActions(event){
    link.addEventListener("click",()=>{setStatus("Descarga solicitada: "+result.filename+". El original local no fue modificado.");setTimeout(()=>URL.revokeObjectURL(result.href),30000);},{once:true});
    card.append(link);setStatus("Copia marcada preparada. Pulsá “Descargar copia marcada” para guardarla; el original no se modificó.");
   }catch(error){setStatus(error.message||"No se pudo exportar la copia marcada.");}finally{exp.disabled=false;}return;
-  const del=event.target.closest("[data-visual-remove]");
+ }
+ const del=event.target.closest("[data-visual-remove]");
  if(del){if(!root.confirm("Eliminar esta referencia del almacenamiento de este navegador?"))return;
   try{await root.WordWaifuArtStudio.removeVisualReference(del.dataset.visualRemove);invalidateLocalReferences();setStatus("Referencia eliminada del almacenamiento local del navegador.");await renderGeneral();refreshTimelineCards();}
   catch(error){setStatus(error.message||"No se pudo confirmar la eliminación.");}}
