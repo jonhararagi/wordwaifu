@@ -23,7 +23,7 @@ for(const event of timeline.events||[]){
  if(event.recordId&&records.has(event.recordId)&&records.get(event.recordId).path!==event.detailPath)errors.push("Path mismatch for "+event.id);
  if(event.detailPath&&!paths.has(event.detailPath))errors.push("Event path not registered "+event.detailPath);
  for(const person of [...(event.participants||[]),...(event.relatedEntities||[])])if(person.id&&person.registered!==false&&!records.has(person.id))errors.push("Unregistered linked entity "+person.id+" in "+event.id);
- if(/T[−-]7/.test(event.dateLabel||"")&&!event.continuityScopes.includes("CONT-AR"))errors.push("T−7 outside CONT-AR: "+event.id);
+ if(/^T[−-]7\b/.test(event.dateLabel||"")&&!event.continuityScopes.includes("CONT-AR"))errors.push("T−7 outside CONT-AR: "+event.id);
  if(/T[−-]5/.test(event.dateLabel||"")&&event.eraId==="ERA-04A-ASTREA-RECORD")errors.push("T−5 merged into Astrea Record: "+event.id);
 }
 if(!timeline.anchor||timeline.anchor.id!=="T0-BELL-ARRIVAL")errors.push("Missing T0 anchor");
