@@ -307,7 +307,8 @@
       relationships: "Finn es la referencia de mando más importante: le delega la coordinación de miembros de menor rango. Raul trabaja dentro de la red de apoyo de Loki Familia; compartir afiliación con Ais, Bete, Riveria o los demás no demuestra por sí solo una amistad íntima con cada uno. La fuente secundaria describe una admiración intensa hacia Finn, pendiente de localización en la novela.",
       conflict: "La tensión útil del personaje es la distancia entre su temor e inseguridad y la responsabilidad que otros le confían. En escenas íntimas puede ser amable, torpe, leal o tierno si el contexto de la historia lo justifica; esos comportamientos no son contradicciones automáticas. El corrector solo debería advertir contradicciones contra hechos o rasgos documentados con evidencia, no castigar una emoción nueva por no aparecer en un resumen.",
       sources: ["https://danmachi.com/sword_oratoria/character/", "https://danmachi.fandom.com/wiki/Raul_Nord", "https://danmachi.fandom.com/es/wiki/Raul_Nord"]
-    }  };
+    }
+  };
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({
     get: id => dossiers[id] ? clone(dossiers[id]) : null,
