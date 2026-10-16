@@ -477,11 +477,23 @@ async function run() {
     await page.waitForFunction(id=>document.querySelector('[data-visual-export="'+id+'"]')!==null,authorizedLocal.id,{timeout:5000});
     assert.ok(await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').count()>0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),authorizedLocal.id),true);
+    await page.waitForFunction(id=>{
+      const image=document.querySelector('[data-visual-reference-id="'+id+'"] .dm-visual-thumbnail');
+      return !!image&&image.complete&&image.naturalWidth>0;
+    },authorizedLocal.id,{timeout:5000});
     const originalBefore=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
-    const visualDownloadPromise=page.waitForEvent("download"),visualExportDialog=page.waitForEvent("dialog");
+    const visualDownloadPromise=page.waitForEvent("download",{timeout:10000}).catch(()=>null),visualExportDialog=page.waitForEvent("dialog");
     await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').click();
     const rightsDialog=await visualExportDialog;assert.equal(rightsDialog.type(),"confirm");await rightsDialog.accept();
-    const markedDownload=await visualDownloadPromise;assert.match(markedDownload.suggestedFilename(),/watermarked\.png$/);
+    await page.waitForFunction(()=>{
+      const status=document.querySelector("#dm-visual-status")?.textContent||"";
+      return status.startsWith("Se exportó ")||status.startsWith("No se pudo exportar")||status.startsWith("Bloqueado:")||status.startsWith("La copia exportada")||status.includes("decodificar el archivo local");
+    },null,{timeout:10000});
+    const watermarkStatus=await page.locator("#dm-visual-status").innerText();
+    assert.ok(watermarkStatus.startsWith("Se exportó "),"Watermark export did not complete: "+watermarkStatus);
+    const markedDownload=await visualDownloadPromise;
+    assert.ok(markedDownload,"Export reported success but Chromium did not produce a download.");
+    assert.match(markedDownload.suggestedFilename(),/watermarked\.png$/);
     const originalAfter=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     assert.equal(originalAfter,originalBefore,"Export must not alter the original local image.");
     assert.match(await page.locator('[data-visual-reference-id="'+authorizedLocal.id+'"]').innerText(),/Overlay informativo de interfaz/);
