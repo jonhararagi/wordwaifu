@@ -488,8 +488,9 @@ async function run() {
     },authorizedLocal.id,{timeout:5000});
     const originalBefore=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     const visualExportDialog=page.waitForEvent("dialog");
-    await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
+    const visualExportClick=page.locator('[data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
     const rightsDialog=await visualExportDialog;assert.equal(rightsDialog.type(),"confirm");await rightsDialog.accept();
+    await visualExportClick;
     await page.waitForFunction(()=>{
       const status=document.querySelector("#dm-visual-status")?.textContent||"";
       return status.includes("Copia marcada preparada")||status.includes("No se pudo")||status.includes("Bloqueado:");
