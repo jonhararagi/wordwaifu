@@ -490,8 +490,9 @@ async function run() {
     assert.ok(authorizedLocal&&authorizedLocal.allowModifyExport,"No authorized visual record was observed after sequential retries.");
     assert.deepEqual(authorizedLocal.relatedEventIds,["EVT-DM-BELL-ARRIVAL-001"],"The authorized fixture must retain its chosen event relation after the form reset.");
     assert.deepEqual(authorizedLocal.relatedLocationIds,["LOC-ORARIO"],"The authorized fixture must retain its place relation after the form reset.");
-    await page.waitForFunction(id=>document.querySelector('[data-visual-export="'+id+'"]')!==null,authorizedLocal.id,{timeout:5000});
-    assert.ok(await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').count()>0);
+    await page.locator('[data-dm-timeline-tab="events"]').click();
+    await page.waitForFunction(id=>document.querySelector('#dm-timeline-events-view [data-visual-export="'+id+'"]')!==null,authorizedLocal.id,{timeout:5000});
+    assert.ok(await page.locator('#dm-timeline-events-view [data-visual-export="'+authorizedLocal.id+'"]').count()>0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),authorizedLocal.id),true);
     await page.waitForFunction(id=>{
       const image=document.querySelector('[data-visual-reference-id="'+id+'"] .dm-visual-thumbnail');
@@ -499,7 +500,7 @@ async function run() {
     },authorizedLocal.id,{timeout:5000});
     const originalBefore=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     const visualExportDialog=page.waitForEvent("dialog");
-    const visualExportClick=page.locator('#dm-visual-reference-general [data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
+    const visualExportClick=page.locator('#dm-timeline-events-view [data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
     const rightsDialog=await visualExportDialog;assert.equal(rightsDialog.type(),"confirm");await rightsDialog.accept();
     await visualExportClick;
     await page.waitForFunction(()=>{
