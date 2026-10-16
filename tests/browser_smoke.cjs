@@ -499,7 +499,7 @@ async function run() {
     },authorizedLocal.id,{timeout:5000});
     const originalBefore=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     const visualExportDialog=page.waitForEvent("dialog");
-    const visualExportClick=page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
+    const visualExportClick=page.locator('#dm-visual-reference-general [data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
     const rightsDialog=await visualExportDialog;assert.equal(rightsDialog.type(),"confirm");await rightsDialog.accept();
     await visualExportClick;
     await page.waitForFunction(()=>{
