@@ -387,7 +387,7 @@
     const settings = options || {};
     const requestedType = normalize(settings.type || settings.entityType || "all");
     const queryTokens = tokens(settings.query || "");
-    const allowedTypes = new Set(["all", "familia", "character", "character group", "deity character", "setting",
+    const allowedTypes = new Set(["all", "familia", "character", "character group", "deity character", "monster", "setting",
       "institution and location", "world rule", "chronology", "event", "author event", "index"]);
     if (!allowedTypes.has(requestedType)) {
       return { results: [], totalMatches: 0, truncated: false, abstain: true, queryTokens,

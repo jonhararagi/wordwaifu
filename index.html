@@ -148,6 +148,24 @@
           <div><p class="eyebrow">DANMACHI · ARCHIVO DE PERSONAJES</p><h2>Enciclopedia visual de personajes</h2><p>Directorio ampliado con resúmenes, afiliación, especie, rango, relaciones y retratos enlazados desde perfiles oficiales de DanMachi V, Sword Oratoria y DanMachi IV. Las fichas extensas con continuidad histórica y expediente de evidencia siguen siendo una capa de investigación aparte; la adaptación no se presenta como canon universal.</p></div>
           <span class="lore-mode-pill">Local · sin IA</span>
         </header>
+        <section id="danmachi-timeline-panel" class="danmachi-timeline-panel" aria-labelledby="dm-timeline-title">
+          <header class="dm-timeline-heading">
+            <div><p class="eyebrow">DANMACHI · MAPA TEMPORAL</p><h3 id="dm-timeline-title">Árbol de épocas y acontecimientos históricos</h3><p>Cronología de DanMachi separada del mapa de tu mundo original. Cada suceso conserva su continuidad, fecha relativa, personajes enlazados y ruta de evidencia. Las dudas se etiquetan en vez de convertirse en hechos.</p></div>
+            <div class="dm-timeline-anchor" title="Ancla relativa, no fecha de calendario">T0 · Llegada de Bell</div>
+          </header>
+          <nav class="dm-timeline-tabs" role="tablist" aria-label="Vistas del mapa temporal">
+            <button type="button" class="dm-timeline-tab is-active" data-dm-timeline-tab="eras" role="tab" aria-selected="true">Árbol de épocas</button>
+            <button type="button" class="dm-timeline-tab" data-dm-timeline-tab="events" role="tab" aria-selected="false">Acontecimientos históricos · línea temporal</button>
+          </nav>
+          <div class="dm-timeline-controls">
+            <label for="dm-timeline-query">Buscar época, acontecimiento, personaje o antagonista<input id="dm-timeline-query" type="search" maxlength="160" placeholder="Ryu, Jura, Juggernaut, Astrea Record…"></label>
+            <label for="dm-timeline-continuity">Continuidad / versión<select id="dm-timeline-continuity"><option value="ALL">Todas las continuidades, separadas</option></select></label>
+            <label for="dm-timeline-era-filter">Época<select id="dm-timeline-era-filter"><option value="ALL">Todas las épocas</option></select></label>
+          </div>
+          <p id="dm-timeline-status" class="dm-timeline-status" role="status" aria-live="polite">Preparando el mapa temporal local…</p>
+          <div id="dm-timeline-eras-view" class="dm-timeline-eras" role="region" aria-label="Árbol jerárquico de épocas"></div>
+          <div id="dm-timeline-events-view" class="dm-timeline-events-view hidden" role="region" aria-label="Línea temporal de acontecimientos históricos"></div>
+        </section>
         <section id="danmachi-entity-browser" class="danmachi-entity-browser" aria-labelledby="danmachi-entity-browser-title">
           <div class="danmachi-entity-heading">
             <div><p class="eyebrow">CATÁLOGO TIPADO · DANMACHI</p><h3 id="danmachi-entity-browser-title">Familias y otras entidades</h3><p>Buscá organizaciones, personajes, dioses, lugares, reglas y acontecimientos en el catálogo del repositorio. Los resultados enlazan al expediente registrado; el estado indica si la ficha está completa o sigue en revisión.</p></div>
@@ -336,6 +354,7 @@
   <script src="./src/power-workbench.js" defer></script>
   <script src="./src/story-foundry.js" defer></script>
   <script src="./src/fanfic-review.js" defer></script>
+  <script src="./src/danmachi-timeline.js" defer></script>
   <script src="./src/app.js" defer></script>
   <script src="./src/art-studio.js" defer></script>
 </body>
