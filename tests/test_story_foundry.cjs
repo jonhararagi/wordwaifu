@@ -18,7 +18,7 @@ for (const ending of ["closed","open","arc"]) {
     assert.ok(plan.chapters.every(ch=>ch.objective&&ch.obstacle&&ch.decision&&ch.change&&ch.consequence));
     assert.equal(plan.chapters[0].previousChapterId, null, "the opening chapter must not invent a predecessor");
     assert.ok(plan.chapters[0].continuityFrom.includes("estado inicial"));
-    assert.ok(plan.chapters.slice(1).every((ch,i)=>ch.previousChapterId===plan.chapters[i].id && ch.continuityFrom.includes(plan.chapters[i].number.toString().padStart(3,"0"))), "each later chapter must explicitly inherit continuity from its immediate predecessor");
+    assert.ok(plan.chapters.slice(1).every((ch,i)=>ch.previousChapterId===plan.chapters[i].id && ch.continuityFrom===plan.chapters[i].consequence), "each later chapter must inherit the exact consequence of its immediate predecessor");
     if (count > 1) {
       assert.ok(plan.chapters.some((ch,i)=>i>0&&ch.narrativeFunction!==plan.chapters[i-1].narrativeFunction), "adjacent chapters must vary narrative function");
       assert.ok(plan.chapters.some((ch,i)=>i>0&&ch.objective!==plan.chapters[i-1].objective), "adjacent chapters must not reuse the same objective");
