@@ -639,6 +639,305 @@
       ],
       "status": "provisional",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-ZALD",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Zald",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-ALFIA",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Alfia",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-EREBUS",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Erebus",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-RUDRA",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Rudra",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-JURA-HALMER",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Jura Halmer",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-VITO",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Vito",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-OLIVAS-ACT",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Olivas Act",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-ARDEE-VARMA",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Ardee Varma",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-VALLETTA-GREDE",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Valletta Grede",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-BARCA-PERDIX",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Barca Perdix",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-BASRAM",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Basram",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-DIS-SISTERS",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Dis Sisters",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-THANATOS",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Thanatos",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-APATE",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Apate",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-ALECTO",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Alecto",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-AIRMID",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Airmid Teasanare",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-MIACH",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Miach",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-NAAZA",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Naaza Erisuis",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-DIAN-CECHT",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Dian Cecht",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-HEPHAISTOS",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Hephaistos",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-GOIBNIU",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Goibniu",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-SAMIRA",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Samira",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DARK-SELENIA",
+      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "type": "character",
+      "tags": [
+        "Selenia",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check"
+      ],
+      "status": "pending_source_verification",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
