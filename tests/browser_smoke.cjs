@@ -452,7 +452,7 @@ async function run() {
     await page.locator("#dm-visual-local-form button[type='submit']").click();
     await page.waitForFunction(async()=> (document.querySelector("#dm-visual-status")?.textContent.includes("Guardado en") && (await window.WordWaifuArtStudio.listVisualReferences()).some(item=>item.title==="Fixture local pendiente")),null,{timeout:10000});
     const pendingLocal=await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).find(item=>item.title==="Fixture local pendiente")||null);
-    assert.ok(pendingLocal&&pendingLocal.storageMode==="browser_local");
+    assert.ok(pendingLocal&&pendingLocal.storageMode==="browser_local","Local reference lookup/metadata mismatch: "+JSON.stringify({pendingLocal,all:await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).map(item=>({id:item.id,title:item.title,storageMode:item.storageMode,keys:Object.keys(item)})))}));
     assert.equal(pendingLocal.allowModifyExport,false);
     assert.equal(await page.locator('[data-visual-export="'+pendingLocal.id+'"]').count(),0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),pendingLocal.id),false);
