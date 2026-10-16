@@ -2,10 +2,10 @@
 
 **Autoriza:** CEREBRO  
 **Ejecuta:** BOT OBRERO  
-**Estado:** IN_PROGRESS — tarea activa única  
+**Estado:** DONE — implementación y workflows CI completados.  
 **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`  
 **Dependencias aceptadas:** TLM-001 (auditoría) y TLM-002 (modelo temporal explícito).  
-**HEAD previo a la activación:** `10561399ae476c9c196cb3f97aca93e42df16987`; volver a comprobar el HEAD real antes de cualquier cambio.  
+**HEAD previo documental registrado por el contrato:** `10561399ae476c9c196cb3f97aca93e42df16987`. **HEAD BEFORE real de esta ejecución:** `c859e3c822bfea7f8b73a8f959eb29a856736d27`. **SHA de implementación PASS_CI:** `c9fa2d05de3bb81526523202bea0fb5cb058ae06`.  
 **Restricciones:** no modificar `main`; no fusionar ramas ni abrir/cerrar/modificar PR sin autorización explícita.
 
 ## 1. Objetivo
@@ -117,15 +117,15 @@ Modificar solo los archivos necesarios. Antes de cambiar el SVG general de `src/
 
 ## 8. Criterios de cierre
 
-- [ ] Informe individual de ubicación para los 15 eventos: referencias, clase espacial, estado de verificación, fuente/razón, o motivo de UNKNOWN.
-- [ ] Fichas/índice de lugares usados son coherentes; cualquier registro nuevo tiene fuente trazable.
-- [ ] Mapa/esquema DanMachi consume IDs del corpus y está conectado al filtro temporal/continuidad, sin afectar proyectos del usuario.
-- [ ] Navegación evento↔lugar probada; ubicaciones desconocidas/provisionales claramente marcadas.
-- [ ] Pruebas de modelo, validador y navegador aplicables añadidas y en verde en CI para el SHA de implementación.
-- [ ] No se inventan coordenadas ni se modifican hechos temporales/canónicos fuera del alcance.
-- [ ] `docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md` registra la tabla por evento, los archivos y las limitaciones.
-- [ ] `docs/STATUS.md`, este contrato y `docs/CEREBRO_BOT_OBRERO_CONTROL.md` reflejan el resultado; `docs/DONE.md` queda sobrescrito con el punto real de reanudación.
-- [ ] TLM-004 y TLM-005 siguen pendientes salvo autorización separada.
+- [x] Informe individual de ubicación para los 15 eventos: referencias, clase espacial, estado de verificación, fuente/razón, o motivo de UNKNOWN.
+- [x] Fichas/índice de lugares usados son coherentes; cualquier registro nuevo tiene fuente trazable.
+- [x] Mapa/esquema DanMachi consume IDs del corpus y está conectado al filtro temporal/continuidad, sin afectar proyectos del usuario.
+- [x] Navegación evento↔lugar probada; ubicaciones desconocidas/provisionales claramente marcadas.
+- [x] Pruebas de modelo, validador y navegador aplicables añadidas y en verde en CI para el SHA de implementación.
+- [x] No se inventan coordenadas ni se modifican hechos temporales/canónicos fuera del alcance.
+- [x] `docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md` registra la tabla por evento, los archivos y las limitaciones.
+- [x] `docs/STATUS.md`, este contrato y `docs/CEREBRO_BOT_OBRERO_CONTROL.md` reflejan el resultado; `docs/DONE.md` queda sobrescrito con el punto real de reanudación.
+- [x] TLM-004 y TLM-005 siguen pendientes salvo autorización separada.
 
 ## 9. Plantilla de entrega
 
@@ -145,3 +145,19 @@ Limitaciones y eventos aún desconocidos:
 main/PR:
 Próxima acción exacta:
 ```
+
+
+## Resultado de ejecución (2026-10-16)
+
+- Informe completo con tabla individual por evento: docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md.
+- Contrato del modelo espacial: docs/DANMACHI-LOCATION-MODEL.md.
+- HEAD BEFORE real: c859e3c822bfea7f8b73a8f959eb29a856736d27.
+- SHA de implementación con ambos workflows success: c9fa2d05de3bb81526523202bea0fb5cb058ae06.
+- [Validate WordWaifu #38950288434](https://github.com/jonhararagi/wordwaifu/actions/runs/38950288434) y [DanMachi Lore and Retrieval Integrity #38950288325](https://github.com/jonhararagi/wordwaifu/actions/runs/38950288325): ambos success, asociados al SHA de implementación.
+- Dataset: 2 fichas de ubicación, 9 vínculos de evento, 4 acontecimientos espaciales verificados, 5 provisionales y 6 sin ubicación demostrable. Los 15 IDs/eventos permanecen.
+- LOC-ORARIO se crea con la sinopsis editorial oficial GA del volumen 1 (DMR-012-SRC-001); LOC-DUNGEON se reutiliza. No se añaden coordenadas ni plano de pisos.
+- El mapa es un esquema relacional explícitamente no geográfico/sin escala dentro del panel DanMachi. No se tocó src/app.js, el mapa de Asteria ni el almacenamiento de proyectos.
+- NOT_RUN local: no se ejecutaron Node/Playwright en este agente. PASS_CI corresponde a GitHub Actions real. Revisión visual manual Windows 11 sigue NOT_RUN.
+- main, ramas externas y PR no fueron modificados; no hubo merges. TLM-004/TLM-005 permanecen NOT_STARTED.
+
+**TLM-003: DONE.** El atlas/producto completo sigue PARTIAL por trabajo visual/derechos y verificación end-to-end aún pendientes.

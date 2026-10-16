@@ -84,16 +84,14 @@ Criterios de aceptación:
 Alcance exclusivo de esta fase: contrato temporal estructurado, migración conservadora de los 15 eventos, validación, pruebas y presentación básica de la clase/precisión temporal. Mantener fecha, evidencia, origen narrativo y continuidad como dimensiones diferenciadas. No conectar ubicaciones al mapa ni trabajar en imágenes; quedan en TLM-003/TLM-004.
 
 ### TLM-003 — Cronología conectada al mapa
-**Estado: IN_PROGRESS — autorizado por CEREBRO.** Contrato vinculante: [docs/TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md](TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md).
+**Estado: DONE / PASS_CI** para el SHA de implementación c9fa2d05de3bb81526523202bea0fb5cb058ae06. Informe: docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md; modelo: docs/DANMACHI-LOCATION-MODEL.md. Workflows [Validate WordWaifu #38950288434](https://github.com/jonhararagi/wordwaifu/actions/runs/38950288434) y [DanMachi Lore and Retrieval Integrity #38950288325](https://github.com/jonhararagi/wordwaifu/actions/runs/38950288325) están en success para ese SHA.
 
-- Evaluar los 15 acontecimientos de forma individual y justificar toda ubicación con evidencia.
-- Vincularlos por IDs estables a fichas de lugar. Reusar LOC-DUNGEON; crear LOC-ORARIO solo si la fuente/documentación existente justifica la identidad y relación espacial.
-- Separar lugar del evento, zona amplia, contexto relacionado, candidato provisional y ubicación desconocida.
-- Construir una vista DanMachi de lugares/eventos conectada al tiempo y continuidad, sin contaminar el atlas de Asteria ni los proyectos del usuario.
-- Sin coordenadas inventadas; cuando no haya coordenadas geográficas verificadas, mostrar un esquema de relaciones rotulado como no geográfico/no a escala.
-- Probar navegación evento ↔ lugar, filtros, estado vacío y ausencia de duplicados.
-
-TLM-003 no incluye imágenes, watermarking ni ampliar de forma general el corpus. Criterio: mapa DanMachi útil y enlazado por IDs, lugares/eventos trazables, UNKNOWN visible y pruebas/CI sobre SHA exacto.
+- Evaluados los 15 eventos: 4 referencias verificadas, 5 provisionales y 6 sin ubicación, con 9 vínculos por ID.
+- LOC-ORARIO creado con fuente editorial GA Bunko del volumen 1 (DMR-012-SRC-001); LOC-DUNGEON reutilizado.
+- La nueva vista es un esquema relacional no geográfico y sin escala; usa los mismos filtros de búsqueda, era y continuidad que el timeline.
+- Navegación evento → lugar → evento relacionado → retorno probada en Chromium; el test confirma que no se cambia el almacenamiento del proyecto activo.
+- No se modificó src/app.js, el mapa Asteria, main o PR; no se añadieron imágenes ni coordenadas. Node/Playwright local y revisión manual Windows 11 siguen NOT_RUN.
+- El atlas completo se mantiene PARTIAL. TLM-004 y TLM-005 siguen NOT_STARTED.
 
 ### TLM-004 — Panoramas e imágenes de referencia con procedencia
 **Estado: NOT_STARTED — fuera de TLM-002; no hay autorización de ejecución en este cierre.**
@@ -131,7 +129,7 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 | 2026-10-16 | Establecer control persistente Cerebro/Obrero y programa TLM | DONE | Ver commit de control y docs/DONE.md | TLM-001 quedó completada como auditoría documental; las brechas funcionales siguen PARTIAL. |
 | 2026-10-16 | TLM-001 — Auditoría del Atlas temporal | DONE (aceptada por CEREBRO) | commit `1611254124e6fa2eb1186a803fca0bc712ef6dab`; CI runs `38934243074` y `38934243080` PASS en ese SHA | Atlas PARTIAL; 0/15 eventos conectados a lugares; fechas libres; TLM-002 autorizada. |
 | 2026-10-16 | TLM-002 — Modelo temporal explícito | DONE / PASS_CI | 4d75c97aa690ddba73ec6ef09eb0fbefef06d342; runs 38941141919 y 38941142159 success | 15 eventos migrados; dateLabel intacto; esquema aditivo; geografía e imágenes no tocadas. Ver docs/TLM-002-TEMPORAL-MODEL-REPORT.md. |
-| 2026-10-16 | TLM-003 — Conexión cronología/mapa | IN_PROGRESS | `docs/TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md` | Única tarea activa. Lugar por ID; esquema no geográfico si no hay coordenadas; no contaminar Asteria; TLM-004/TLM-005 quedan pendientes. |
+| 2026-10-16 | TLM-003 — Conexión cronología/mapa | DONE / PASS_CI | c9fa2d05de3bb81526523202bea0fb5cb058ae06; runs 38950288434 y 38950288325 success | 15 eventos evaluados; 2 lugares, 9 referencias, esquema no geográfico; ver informe TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md. |
 
 ## 8. Plantilla de reporte del BOT OBRERO
 
