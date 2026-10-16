@@ -433,6 +433,12 @@ async function run() {
     assert.ok(await page.locator("#dm-visual-reference-general .dm-visual-placeholder").count() > 0);
     assert.equal(await page.locator("#dm-visual-reference-general img").count(),0,"Remote official art is link-only until embedding conditions are verified.");
     assert.ok(await page.locator("#dm-visual-reference-general a[href='https://danmachi.com/danmachi5/character/']").count()>0);
+    await page.locator("#dm-visual-spoiler-cap").selectOption("none");
+    await page.waitForFunction(()=>(document.querySelector("#dm-visual-reference-general")?.innerText||"").includes("ocultas por el límite de spoilers"),null,{timeout:5000});
+    assert.equal(await page.locator('#dm-visual-reference-general [data-visual-reference-id="DM-VIS-REF-BELL-ANIME-PROFILE-001"]').count(),0,
+      "The anime portrait must be hidden below its spoiler level.");
+    await page.locator("#dm-visual-spoiler-cap").selectOption("minor");
+    await page.waitForFunction(()=>document.querySelector('#dm-visual-reference-general [data-visual-reference-id="DM-VIS-REF-BELL-ANIME-PROFILE-001"]')!==null,null,{timeout:5000});
     const projectStoreBeforeVisuals=await page.evaluate(()=>localStorage.getItem("wordwaifu.project.v1"));
     const externalRequestsBeforeVisuals=[];
     const smokePageOrigin=new URL(page.url()).origin;
@@ -470,7 +476,7 @@ async function run() {
     await page.locator("#dm-visual-holder").fill("Autor de fixture de CI");
     await page.locator("#dm-visual-usage-status").selectOption("user_owned");
     await page.locator("#dm-visual-event").selectOption("EVT-DM-BELL-ARRIVAL-001");
-    await page.locator("#dm-visual-location").selectOption("");
+    await page.locator("#dm-visual-location").selectOption("LOC-ORARIO");
     await page.locator("#dm-visual-allow-modify").check();
     await page.locator("#dm-visual-credit").fill("Autor de fixture de CI · obra propia sintética");
     await page.locator("#dm-visual-local-form button[type='submit']").click();
@@ -482,6 +488,7 @@ async function run() {
     }
     assert.ok(authorizedLocal&&authorizedLocal.allowModifyExport,"No authorized visual record was observed after sequential retries.");
     assert.deepEqual(authorizedLocal.relatedEventIds,["EVT-DM-BELL-ARRIVAL-001"],"The authorized fixture must retain its chosen event relation after the form reset.");
+    assert.deepEqual(authorizedLocal.relatedLocationIds,["LOC-ORARIO"],"The authorized fixture must retain its place relation after the form reset.");
     await page.waitForFunction(id=>document.querySelector('[data-visual-export="'+id+'"]')!==null,authorizedLocal.id,{timeout:5000});
     assert.ok(await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').count()>0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),authorizedLocal.id),true);
@@ -491,7 +498,7 @@ async function run() {
     },authorizedLocal.id,{timeout:5000});
     const originalBefore=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     const visualExportDialog=page.waitForEvent("dialog");
-    const visualExportClick=page.locator('[data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
+    const visualExportClick=page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
     const rightsDialog=await visualExportDialog;assert.equal(rightsDialog.type(),"confirm");await rightsDialog.accept();
     await visualExportClick;
     await page.waitForFunction(()=>{
@@ -505,27 +512,32 @@ async function run() {
     const markedDownload=await visualDownloadPromise;assert.match(markedDownload.suggestedFilename(),/watermarked\.png$/);
     const originalAfter=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     assert.equal(originalAfter,originalBefore,"Export must not alter the original local image.");
-    assert.match(await page.locator('[data-visual-reference-id="'+authorizedLocal.id+'"]').innerText(),/Overlay informativo de interfaz/);
+    assert.match(await page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]').innerText(),/Overlay informativo de interfaz/);
     await page.locator("#dm-timeline-query").fill("Bell llega a Orario");
     await page.waitForFunction(()=>(document.querySelector("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references")?.innerText||"").includes("Fixture local autorizado"),null,{timeout:5000});
     assert.ok(await page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]').count()>0,
       "The specific authorized local image must appear on its linked timeline event, not just any local preview.");
+    await page.waitForFunction(id=>!!document.querySelector('#dm-timeline-map-view [data-location-id="LOC-ORARIO"] .dm-place-visual-references [data-visual-reference-id="'+id+'"]'),authorizedLocal.id,{timeout:5000});
+    assert.ok(await page.locator('#dm-timeline-map-view [data-location-id="LOC-ORARIO"] .dm-place-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]').count()>0,
+      "The same local reference must appear on its explicitly linked place fiche.");
     await page.context().setOffline(true);
     await page.locator("#dm-timeline-query").fill("Bell llega a Orario");
     await page.waitForFunction(()=>(document.querySelector("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references")?.innerText||"").includes("Fixture local autorizado"),null,{timeout:5000});
     assert.ok(await page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]').count()>0,
       "The linked authorized reference must remain visible while offline.");
+    assert.ok(await page.locator('#dm-timeline-map-view [data-location-id="LOC-ORARIO"] .dm-place-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]').count()>0,
+      "The place-linked preview must remain visible while offline.");
     await page.context().setOffline(false);
     page.off("request",externalRequestListener);
     assert.deepEqual(externalRequestsBeforeVisuals,[],"Visual references must not request remote image bytes or upload user files.");
     assert.equal(await page.evaluate(()=>localStorage.getItem("wordwaifu.project.v1")),projectStoreBeforeVisuals,"Local visual storage must not contaminate Asteria project storage.");
     const removeAuthorizedDialog=page.waitForEvent("dialog");
-    const removeAuthorizedClick=page.locator('[data-visual-remove="'+authorizedLocal.id+'"]').click({force:true});
+    const removeAuthorizedClick=page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-remove="'+authorizedLocal.id+'"]').click({force:true});
     const removeAuthorizedConfirm=await removeAuthorizedDialog;assert.equal(removeAuthorizedConfirm.type(),"confirm");await removeAuthorizedConfirm.accept();
     await removeAuthorizedClick;
     await page.waitForFunction(id=>!document.querySelector('[data-visual-reference-id="'+id+'"]'),authorizedLocal.id,{timeout:5000});
     const removePendingDialog=page.waitForEvent("dialog");
-    const removePendingClick=page.locator('[data-visual-remove="'+pendingLocal.id+'"]').click({force:true});
+    const removePendingClick=page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-remove="'+pendingLocal.id+'"]').click({force:true});
     const removePendingConfirm=await removePendingDialog;assert.equal(removePendingConfirm.type(),"confirm");await removePendingConfirm.accept();
     await removePendingClick;
     await page.waitForFunction(id=>!document.querySelector('[data-visual-reference-id="'+id+'"]'),pendingLocal.id,{timeout:5000});
