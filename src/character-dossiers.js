@@ -389,6 +389,199 @@
       conflict: "La información disponible necesita una revisión de escenas para evitar que una ficha breve se presente como biografía completa. Mantener explícita la incertidumbre.",
       sources: ["https://danmachi.fandom.com/es/wiki/Lulune_Louie", "https://danmachi.fandom.com/wiki/Hermes_Familia"]
     }
+,
+    "CHAR-ALLEN-FROMEL": {
+      "appearance": "Hombre felino de la Freya Familia, reconocible por sus rasgos de gato y su equipo de aventurero. Para detalles finos de vestimenta, usar el retrato oficial de la adaptación elegida.",
+      "history": "Allen Fromel pertenece al núcleo de combatientes de la Freya Familia y actúa como uno de sus ejecutores más peligrosos. Su trayectoria está estrechamente ligada a la estructura interna de esa Familia y a los acontecimientos del arco de Freya. La cronología exacta de sus decisiones debe mostrarse con avisos de spoiler y distinguir los hechos de novela de los resúmenes de adaptación.",
+      "personality": "Arisco, orgulloso y agresivo en el trato; su conducta puede ser hostil incluso con aliados. Esa aspereza no debe interpretarse como prueba de que carezca de lealtad o de motivos propios: las escenas concretas y el contexto de su pasado importan para entender sus decisiones.",
+      "abilities": "Es un aventurero de primera línea de gran velocidad y peligro en combate. Registrar nivel, habilidades y técnicas por etapa narrativa; no inferir que todos sus atributos o capacidades permanecen iguales durante toda la historia.",
+      "relationships": "Su vínculo principal es con Freya y con los ejecutivos de la Freya Familia. La cercanía institucional no demuestra por sí sola amistad con cada miembro; los vínculos individuales deben enlazarse a escenas o fuentes.",
+      "conflict": "Su hostilidad y su orgullo pueden chocar con la cooperación que exige una Familia poderosa. El verificador narrativo no debe prohibir una escena vulnerable o amable si no contradice una acción o un hecho documentado.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/",
+        "https://danmachi.fandom.com/wiki/Allen_Fromel"
+      ]
+    },
+    "CHAR-GULLIVER-BROTHERS": {
+      "appearance": "Cuatro hermanos pallum que funcionan como una unidad de combate dentro de la Freya Familia. Conviene mostrar la imagen de grupo oficial y no fusionar sus identidades individuales cuando la escena requiera distinguirlos.",
+      "history": "Los Gulliver Brothers son miembros de la Freya Familia conocidos por actuar coordinadamente. Su condición de hermanos y su trabajo en conjunto son datos centrales; las biografías individuales y el reparto exacto de acciones deben permanecer separados cuando las fuentes no los atribuyan con claridad a uno de ellos.",
+      "personality": "Su caracterización pública enfatiza la coordinación fraternal y la eficacia grupal. No atribuir automáticamente a cada hermano una personalidad idéntica ni inventar diferencias individuales sin evidencia.",
+      "abilities": "Su principal rasgo de combate es la cooperación entre los cuatro, que les permite funcionar como una unidad táctica. Las técnicas específicas, límites y datos individuales deben verificarse por separado antes de incorporarse a escenas o reglas del generador.",
+      "relationships": "La relación fraternal es explícita y su afiliación los conecta con Freya. Otros vínculos personales deben llevar evidencia independiente, no derivarse únicamente de pertenecer a la misma Familia.",
+      "conflict": "El trabajo en equipo es una fortaleza, pero la narración debe conservar la identidad de cada hermano y explicar qué aporta cada uno. Si la fuente no individualiza un dato, debe registrarse como colectivo o pendiente.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/",
+        "https://danmachi.fandom.com/wiki/Gulliver_Brothers"
+      ]
+    },
+    "CHAR-HORN": {
+      "appearance": "Mujer vinculada a la Freya Familia y a la identidad pública de Syr. Los retratos y la presentación visual deben seguir la continuidad elegida; la ficha debe advertir que su expediente contiene spoilers importantes.",
+      "history": "Horn está ligada a Freya y a la historia de Syr Flova. Su papel se entiende a través de la relación entre identidad, sustitución y los acuerdos que rodean a Freya; no debe resumirse como si fuera simplemente otra camarera de Hostess of Fertility. Mostrar los detalles de su pasado detrás de una advertencia de spoiler.",
+      "personality": "Su conducta está atravesada por el deber hacia Freya y por emociones que no siempre coinciden con ese deber. Evitar reducirla a una sola etiqueta moral: las motivaciones deben explicarse mediante acontecimientos y decisiones concretas.",
+      "abilities": "Su vínculo con Freya incluye capacidades y consecuencias que requieren referencia narrativa específica. No trasladar automáticamente a Horn las habilidades de Freya ni atribuir poderes no documentados.",
+      "relationships": "Freya es la relación central de su expediente; Syr es una identidad y un vínculo narrativo inseparable de los acontecimientos que la implican. La relación con Bell debe describirse según la etapa y con aviso de spoiler.",
+      "conflict": "La tensión entre lealtad, identidad y voluntad propia es esencial. El verificador debe considerar el contexto de las revelaciones y no etiquetar como contradicción una reacción emocional nueva por no aparecer en un resumen.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/",
+        "https://danmachi.fandom.com/wiki/Horn"
+      ]
+    },
+    "CHAR-HEITH-VELVET": {
+      "appearance": "Mujer elfa asociada a la Freya Familia, con presencia de sanadora y atuendo propio de su función. Los detalles visuales deben seguir la referencia oficial de la adaptación en uso.",
+      "history": "Heith Velvet forma parte de la Freya Familia y es reconocida por su función de apoyo médico. Su papel cobra relevancia cuando las consecuencias de los enfrentamientos requieren atención y recuperación; los detalles de sus apariciones deben ordenarse por volumen o adaptación.",
+      "personality": "Su perfil se debe leer a través de su trabajo de sanadora y sus interacciones documentadas. No asumir que una persona compasiva carece de dureza, ni atribuirle un temperamento completo a partir de una sola escena.",
+      "abilities": "Se asocia con magia y conocimientos de curación. Registrar nombres, alcance y límites de las técnicas solo cuando haya evidencia concreta; no equiparar automáticamente su capacidad a la de otros sanadores.",
+      "relationships": "Su afiliación a Freya Familia define el contexto profesional y social. Las relaciones con Freya, Allen y los demás ejecutivos deben describirse individualmente cuando exista respaldo narrativo.",
+      "conflict": "La responsabilidad de curar puede entrar en tensión con las órdenes y los objetivos de una Familia de combate. La ficha debe separar la función confirmada de las interpretaciones sobre sus convicciones.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/",
+        "https://danmachi.fandom.com/wiki/Heith_Velvet"
+      ]
+    },
+    "CHAR-VAN-FREYA": {
+      "appearance": "Aventurero pallum de la Freya Familia. Para los rasgos visuales concretos, usar el retrato oficial de la continuidad seleccionada.",
+      "history": "Van pertenece a la Freya Familia y figura entre sus miembros registrados. La ficha de adaptación ofrece una referencia de su identidad y afiliación, pero una biografía completa requiere localizar sus acciones en las novelas y distinguirlas de los datos del roster.",
+      "personality": "No convertir la afiliación a Freya en una personalidad predeterminada. Añadir rasgos estables únicamente cuando puedan apoyarse en diálogos o decisiones localizables.",
+      "abilities": "El nivel, las habilidades y la especialidad de combate deben registrarse por etapa narrativa y con evidencia. No inferir técnicas a partir de la especie pallum o del rango de la Familia.",
+      "relationships": "Su pertenencia a Freya Familia es el vínculo institucional confirmado. Amistades, rivalidades y lealtades personales requieren referencias independientes.",
+      "conflict": "La brecha principal es documental: antes de asignarle motivaciones específicas, deben identificarse escenas que las sostengan. El contenido ausente debe aparecer como pendiente, no como debilidad inventada.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/",
+        "https://danmachi.fandom.com/wiki/Van"
+      ]
+    },
+    "CHAR-LUNOIRE-FAUST": {
+      "appearance": "Chienthrope de aspecto canino que trabaja en Hostess of Fertility. El diseño y el uniforme deben seguir la ficha oficial de Sword Oratoria.",
+      "history": "Lunoire Faust trabaja como camarera en Hostess of Fertility y forma parte del entorno cotidiano de la taberna. Su presencia la conecta con Mia Grand y con las demás empleadas, pero su trabajo civil no debe confundirse con una ficha de combate ni con una biografía exhaustiva.",
+      "personality": "El registro debe basarse en las interacciones mostradas. La afiliación laboral no basta para atribuirle rasgos de carácter; los cambios de humor o las respuestas distintas según el cliente no son contradicciones automáticas.",
+      "abilities": "No atribuir nivel, magia o técnicas de combate sin una fuente específica. Su función de camarera y su especie son datos distintos de una hoja de habilidades.",
+      "relationships": "Su vínculo confirmado es el trabajo en Hostess of Fertility. Las relaciones con Syr, Mia, Anya y Chloe deben explicarse por escenas compartidas, sin presumir intimidad solo por compartir lugar de trabajo.",
+      "conflict": "La ficha debe evitar rellenar los vacíos de un personaje secundario con rasgos genéricos. Las escenas futuras pueden ampliar el expediente sin que los campos actualmente desconocidos se consideren errores.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/",
+        "https://danmachi.fandom.com/wiki/Lunoire_Faust"
+      ]
+    },
+    "CHAR-DIONYSUS": {
+      "appearance": "Dios que aparece en la continuidad de Sword Oratoria. Su aspecto y atuendo deben corresponder al material visual de esa adaptación, no a diseños externos o interpretaciones mitológicas.",
+      "history": "Dionysus dirige una Familia y participa en los acontecimientos de Sword Oratoria que rodean a Filvis y a los incidentes del Dungeon. La lectura de su historia depende de revelaciones posteriores; cualquier resumen de su papel debe indicar el nivel de spoiler y diferenciar apariencia pública de hechos revelados.",
+      "personality": "Se presenta con modales sociables y una actitud que puede parecer razonable, pero la evaluación de sus motivos requiere atender a los acontecimientos completos. No convertir una primera impresión en una conclusión definitiva ni omitir las revelaciones que cambian su interpretación.",
+      "abilities": "Como dios, no tiene nivel de aventurero ni estadísticas de Falna. Las capacidades, recursos o medios asociados a su plan deben describirse únicamente con referencias concretas y sin trasladarle habilidades de otros dioses.",
+      "relationships": "Filvis Chalia es una relación central para comprender su papel. Su Familia y los integrantes de Loki Familia quedan vinculados a los acontecimientos de Sword Oratoria; el expediente debe especificar cuándo una relación es pública y cuándo depende de una revelación.",
+      "conflict": "La distancia entre la imagen pública y los motivos revelados es parte del conflicto narrativo. El corrector debe usar hechos y fuentes, no una etiqueta de 'bueno' o 'malo' para decidir qué reacciones puede tener.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/",
+        "https://danmachi.fandom.com/wiki/Dionysus"
+      ]
+    },
+    "CHAR-REVIS": {
+      "appearance": "Figura humanoide vinculada a los acontecimientos del Dungeon y al conflicto de Sword Oratoria. No fijar detalles visuales más específicos que los respaldados por la referencia de la continuidad.",
+      "history": "Revis es una antagonista relevante en Sword Oratoria y participa en los acontecimientos relacionados con los planes que amenazan Orario. Su identidad, acciones y relación con los monstruos requieren aviso de spoiler y una cronología basada en las novelas, porque los resúmenes breves pueden ocultar revelaciones importantes.",
+      "personality": "Determinada, hostil y orientada a sus objetivos, aunque sus motivos no deben reducirse a una simple maldad sin contexto. Describir su conducta a partir de decisiones verificables y separar motivación explícita de interpretación.",
+      "abilities": "Es una combatiente peligrosa en el conflicto de Sword Oratoria. Sus capacidades concretas, transformaciones o ventajas deben registrarse por separado con referencias, sin inventar estadísticas o reglas a partir de su papel de antagonista.",
+      "relationships": "Sus vínculos principales se explican mediante los acontecimientos de Sword Oratoria y los personajes que se enfrentan a ella. No inferir una relación personal a partir de una mera coincidencia en el mismo conflicto.",
+      "conflict": "La tensión entre sus objetivos y la supervivencia de otros personajes debe representarse mediante acciones y consecuencias. Los juicios de personalidad no sustituyen la evidencia narrativa.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/",
+        "https://danmachi.fandom.com/wiki/Revis"
+      ]
+    },
+    "CHAR-MARI-XENOS": {
+      "appearance": "Sirena Xenos adaptada al entorno acuático. Su cuerpo y movilidad dependen del agua, por lo que no debe dibujarse o describirse como si se desplazara por tierra del mismo modo que un aventurero humano.",
+      "history": "Mari aparece en los niveles inferiores del Dungeon y conoce a Bell durante los acontecimientos de DanMachi IV. La referencia de adaptación la identifica como sirena Xenos y la vincula a un entorno acuático. Los detalles más amplios de su historia deben seguir la continuidad y los pasajes donde aparece.",
+      "personality": "Se apega a Bell después de conocerlo y manifiesta una actitud afectuosa. No ampliar esa relación a un romance definido ni atribuirle motivaciones complejas sin escenas que las sostengan.",
+      "abilities": "Su adaptación acuática le permite desplazarse en el agua con eficacia. No asignar nivel de aventurera ni habilidades de Falna sin evidencia; sus capacidades biológicas no son equivalentes a una hoja de estado.",
+      "relationships": "Bell es el vínculo personal más destacado en su aparición. Su condición de Xenos la conecta con el grupo de seres inteligentes del Dungeon, pero cada relación individual requiere evidencia adicional.",
+      "conflict": "Su entorno y sus limitaciones de movilidad condicionan qué escenas resultan plausibles. El generador debe respetar esas condiciones físicas sin convertirlas en una prohibición absoluta de escenas nuevas que expliquen cómo se resuelve la dificultad.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/",
+        "https://danmachi.fandom.com/wiki/Mari"
+      ]
+    },
+    "CHAR-ISKA-BRA": {
+      "appearance": "Amazoness y miembro histórica de Astrea Familia. Para la apariencia exacta, utilizar el retrato oficial de DanMachi IV y no completar rasgos ausentes por estereotipo.",
+      "history": "El portal oficial de DanMachi IV la incluye entre las integrantes de Astrea Familia e identifica su especie como amazoness. El perfil consultado no desarrolla una biografía individual extensa, por lo que no se debe inventar su pasado, nivel o acciones durante la Era Oscura.",
+      "personality": "No establecida por la ficha oficial consultada. Incorporar rasgos cuando se localicen diálogos o decisiones concretas en novelas, adaptaciones o materiales oficiales.",
+      "abilities": "La ficha oficial consultada no detalla nivel, magia ni habilidades. Mantener esos campos como no verificados hasta obtener evidencia individual.",
+      "relationships": "Su afiliación histórica a Astrea Familia está documentada. No deducir amistad íntima, parentesco o rivalidad con cada integrante por compartir Familia.",
+      "conflict": "La falta de una biografía extensa es una brecha de investigación, no una invitación a rellenar la ficha con clichés. La interfaz debe indicar claramente qué se sabe y qué no.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/",
+        "https://danmachi.fandom.com/es/wiki/Iska_Bra"
+      ]
+    },
+    "CHAR-MARIYU-LEAGE": {
+      "appearance": "Humana e integrante histórica de Astrea Familia. Los rasgos físicos deben limitarse al retrato oficial y a descripciones localizadas en el texto.",
+      "history": "La ficha oficial de DanMachi IV la enumera entre las integrantes de Astrea Familia e identifica su especie como humana. El perfil breve no establece por sí solo una biografía, nivel o lista de hazañas individuales; esos datos requieren investigación adicional.",
+      "personality": "No establecida por el perfil oficial consultado. No asignar automáticamente idealismo, valentía o temperamento por su pertenencia a una Familia conocida por su sentido de justicia.",
+      "abilities": "No detalladas por la ficha oficial consultada. Dejar nivel, magia, habilidades y especialidad como pendientes hasta localizar una fuente individual.",
+      "relationships": "La pertenencia a Astrea Familia es el vínculo confirmado en el registro. Las relaciones con Astraea, Alise u otras integrantes deben incluir evidencia de interacción cuando se describan como personales.",
+      "conflict": "Su ficha debe preservar la diferencia entre afiliación confirmada y biografía todavía no investigada. El sistema narrativo no debe usar campos desconocidos como si fueran rasgos negativos o restricciones canónicas.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/",
+        "https://danmachi.fandom.com/es/wiki/Mariyu_Leage"
+      ]
+    },
+    "CHAR-NOIN-UNIC": {
+      "appearance": "Humana e integrante histórica de Astrea Familia. Usar el retrato de DanMachi IV para la apariencia y evitar extrapolar detalles no visibles.",
+      "history": "El perfil oficial de DanMachi IV identifica a Noin Unic como humana y la incluye en Astrea Familia. La fuente de adaptación no aporta una historia personal extensa, así que los acontecimientos específicos de su vida deben localizarse antes de incorporarse como hechos.",
+      "personality": "No establecida por el perfil oficial consultado. Registrar únicamente rasgos apoyados en diálogos o acciones identificables; no inferir una personalidad completa a partir del grupo.",
+      "abilities": "El perfil oficial consultado no especifica nivel, magia ni técnicas. Los campos permanecen pendientes de verificación.",
+      "relationships": "Su afiliación a Astrea Familia está documentada. No se debe convertir la pertenencia al grupo en prueba de una amistad concreta o de un vínculo familiar.",
+      "conflict": "La tarea pendiente es localizar evidencia individual y evitar que la escasez de información se convierta en invención. Las escenas originales pueden proponer rasgos nuevos si se marcan como creación y no como canon.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/",
+        "https://danmachi.fandom.com/wiki/Noin_Unic"
+      ]
+    },
+    "CHAR-NEZE-RANKETT": {
+      "appearance": "Mujer lobo (werewolf) e integrante histórica de Astrea Familia. Los detalles de apariencia deben respetar el retrato oficial de DanMachi IV.",
+      "history": "La ficha oficial la identifica como mujer lobo y miembro de Astrea Familia. No desarrolla una cronología individual extensa; los hechos de su vida durante la Era Oscura requieren referencias narrativas concretas y no deben inventarse a partir de su especie.",
+      "personality": "No establecida por el perfil oficial consultado. Evitar atribuirle impulsividad, ferocidad o instintos específicos solo por ser una mujer lobo.",
+      "abilities": "El perfil oficial no detalla nivel ni habilidades. Cualquier ventaja racial, magia o técnica debe documentarse por separado y con una fuente específica.",
+      "relationships": "La afiliación a Astrea Familia es el vínculo confirmado. Las relaciones con las demás integrantes requieren escenas o referencias individuales.",
+      "conflict": "La ficha necesita investigación adicional antes de poder describir una psicología o un historial de combate completos. La incertidumbre debe mantenerse visible en vez de ocultarse con frases genéricas.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/",
+        "https://danmachi.fandom.com/wiki/Neze_Rankett"
+      ]
+    },
+    "CHAR-ASTA-KNOX": {
+      "appearance": "Enana e integrante histórica de Astrea Familia. Usar el retrato oficial de DanMachi IV y no añadir rasgos visuales que no aparezcan en la referencia.",
+      "history": "El portal oficial de DanMachi IV identifica a Asta Knox como enana y la incluye en el roster de Astrea Familia. El perfil no ofrece una biografía extensa ni establece por sí solo sus hazañas o rango durante la Era Oscura.",
+      "personality": "No establecida por el perfil oficial consultado. No inferir testarudez, dureza o destreza artesanal por su especie enana.",
+      "abilities": "No detalladas por la fuente oficial consultada. Mantener sin confirmar nivel, magia, habilidades y especialidad de combate.",
+      "relationships": "La afiliación histórica a Astrea Familia está documentada. Las relaciones personales necesitan pruebas individuales, no inferencias basadas en la composición del grupo.",
+      "conflict": "La brecha actual es de documentación individual. Debe quedar como tarea de investigación y no como un vacío rellenado con estereotipos.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/",
+        "https://danmachi.fandom.com/wiki/Asta_Knox"
+      ]
+    },
+    "CHAR-RYANA-LIETZ": {
+      "appearance": "Humana e integrante histórica de Astrea Familia. La apariencia debe basarse en la imagen oficial de DanMachi IV o en una descripción textual localizable.",
+      "history": "La ficha oficial de DanMachi IV la registra como humana y miembro de Astrea Familia. El perfil de adaptación no desarrolla una trayectoria individual extensa, por lo que su cronología y contribuciones concretas quedan pendientes de investigación.",
+      "personality": "No establecida por el perfil oficial consultado. Añadir rasgos únicamente a partir de escenas verificables, sin asignar automáticamente un carácter idealista por su afiliación.",
+      "abilities": "La fuente oficial consultada no detalla nivel, magia o técnicas. No inventar estadísticas ni especialidad.",
+      "relationships": "Su pertenencia a Astrea Familia es el vínculo confirmado. Cualquier amistad, rivalidad o relación de mentoría debe sustentarse en una interacción documentada.",
+      "conflict": "La ficha debe diferenciar la identidad confirmada de los campos todavía desconocidos. El generador puede permitir interpretaciones creativas, pero debe marcarlas fuera del canon.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/",
+        "https://danmachi.fandom.com/wiki/Ryana_Lietz"
+      ]
+    },
+    "CHAR-CELTY-SROWA": {
+      "appearance": "Elfa e integrante histórica de Astrea Familia. El diseño debe seguir el retrato oficial de DanMachi IV y no mezclar versiones visuales.",
+      "history": "La ficha oficial de DanMachi IV identifica a Celty Srowa como elfa y la incluye entre las integrantes de Astrea Familia. El perfil no describe una biografía extensa, por lo que no deben inventarse sus acciones específicas ni su posición durante la Era Oscura.",
+      "personality": "No establecida por el perfil oficial consultado. Evitar deducir orgullo, reserva o temperamento a partir de su especie élfica.",
+      "abilities": "La fuente oficial consultada no detalla nivel, magia ni habilidades. Registrar esos campos como pendientes de verificación.",
+      "relationships": "La pertenencia histórica a Astrea Familia está confirmada; no se atribuyen relaciones personales sin escenas o fuentes individuales.",
+      "conflict": "Su expediente requiere investigación de fuentes primarias y secundarias identificables. La ausencia de datos debe mostrarse como tal, no como una contradicción ni como una limitación permanente del personaje.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/",
+        "https://danmachi.fandom.com/wiki/Celty_Srowa"
+      ]
+    }
   };
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({
