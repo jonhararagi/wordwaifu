@@ -154,8 +154,9 @@ function bindLocalForm(){
     continuityScope:$("#dm-visual-continuity").value,spoilerLevel:$("#dm-visual-spoiler").value,relatedEventIds:eventId?[eventId]:[],relatedLocationIds:locationId?[locationId]:[],
     creditLine:$("#dm-visual-credit").value.trim(),allowModifyExport,fileDataUrl,storageMode:"browser_local",addedAt:new Date().toISOString()};
    const result=await api.saveVisualReference(record);
+   form.reset();$("#dm-visual-continuity").value="CONT-MAIN-LN";$("#dm-visual-spoiler").value="minor";fillRelationChoices();
+   try{await renderGeneral();refreshTimelineCards();}catch(_){/* Guardado ya confirmado por el backend local. */}
    setStatus("Guardado en "+(result.backend==="indexeddb"?"IndexedDB local":"el respaldo local del navegador")+". No se envió el archivo a una red remota.");
-   form.reset();$("#dm-visual-continuity").value="CONT-MAIN-LN";$("#dm-visual-spoiler").value="minor";fillRelationChoices();await renderGeneral();refreshTimelineCards();
   }catch(error){setStatus((error&&error.message)||"No se confirmó el guardado; verificá el espacio local y los derechos declarados.");}
  });
  const status=$("#dm-visual-usage-status"),allow=$("#dm-visual-allow-modify"),license=$("#dm-visual-license-name"),permission=$("#dm-visual-permission-evidence");

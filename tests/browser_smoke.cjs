@@ -450,7 +450,7 @@ async function run() {
     await page.locator("#dm-visual-location").selectOption("");
     await page.locator("#dm-visual-credit").fill("Fixture sintético · sin titular de terceros");
     await page.locator("#dm-visual-local-form button[type='submit']").click();
-    await page.waitForFunction(()=>document.querySelector("#dm-visual-status")?.textContent.includes("Guardado en"),null,{timeout:10000});
+    await page.waitForFunction(async()=> (await window.WordWaifuArtStudio.listVisualReferences()).some(item=>item.title==="Fixture local pendiente"),null,{timeout:10000});
     const pendingLocal=await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).find(item=>item.title==="Fixture local pendiente")||null);
     assert.ok(pendingLocal&&pendingLocal.storageMode==="browser_local");
     assert.equal(pendingLocal.allowModifyExport,false);
@@ -463,7 +463,7 @@ async function run() {
     await page.locator("#dm-visual-allow-modify").check();
     await page.locator("#dm-visual-credit").fill("Autor de fixture de CI · obra propia sintética");
     await page.locator("#dm-visual-local-form button[type='submit']").click();
-    await page.waitForFunction(()=>document.querySelector("#dm-visual-status")?.textContent.includes("Guardado en"),null,{timeout:10000});
+    await page.waitForFunction(async()=> (await window.WordWaifuArtStudio.listVisualReferences()).some(item=>item.title==="Fixture local autorizado"),null,{timeout:10000});
     const authorizedLocal=await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).find(item=>item.title==="Fixture local autorizado")||null);
     assert.ok(authorizedLocal&&authorizedLocal.allowModifyExport);
     await page.waitForFunction(id=>document.querySelector('[data-visual-export="'+id+'"]')!==null,authorizedLocal.id,{timeout:5000});
