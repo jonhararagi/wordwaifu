@@ -40,3 +40,10 @@ La sinopsis consultada no establece la edad, el nivel, las habilidades, la histo
 - **Temperamento y valores:** la sinopsis de *Astrea Record* la identifica como capitana que guía a Ryu durante su búsqueda de justicia. El perfil de adaptación la describe como franca y de ánimo luminoso. Mantener ambos datos ligados a sus fuentes y continuidades, no como rasgos atemporales. [DMR-002-CLM-019]
 - **Liderazgo y vínculos:** el perfil de adaptación indica que inspira confianza en sus compañeras pese a un estilo poco convencional. Esto ayuda a describir la dinámica del grupo, pero no demuestra que todas sus decisiones sean acertadas. [DMR-002-CLM-020]
 - **Desconocido:** no inferir edad, gustos, miedos ni destino posterior por ausencia de información.
+
+
+## Revisión individual para la Era Oscura: liderazgo
+
+Square Enix identifica a Alise como capitana y señala que, aunque puede parecer despreocupada, sus compañeras confían en ella y la aprecian. Es una tensión más útil para escribirla que limitarla a «capitana alegre». **Ruta de lectura:** volumen 1, capítulo 1 «Astrea Familia»; capítulos 4 y 7 son rutas secundarias para rastrear la influencia de Alise en la búsqueda de justicia de Ryuu. Página primaria aún por registrar.
+
+Fuentes: https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/ · https://danmachi.com/news/news131.php · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1.

@@ -38,3 +38,10 @@ La ficha se puede abrir desde la red de Astrea Familia. Una afiliación comparti
 ## Pendiente de investigación
 
 nivel, capacidades, historia individual, decisiones y relaciones de escena. La información secundaria ayuda a encontrar posibles rutas, pero no se considera canon aprobado hasta localizar el pasaje correspondiente.
+
+
+## Revisión individual para la Era Oscura: historia propia
+
+El índice del volumen 3 enumera una historia extra «Asta Knox», primera parada para recuperar su voz y función particular. No inferir oficio de herrera, testarudez, nivel ni fuerza excepcional por su especie enana. Registrar página y escena que expliquen su contribución concreta a la Familia.
+
+Fuentes: https://danmachi.fandom.com/es/wiki/Asta_Knox · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3 · https://danmachi.com/danmachi4/character/.

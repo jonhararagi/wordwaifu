@@ -38,3 +38,10 @@ Astrea Familia permite recorrer el roster, pero la afiliación compartida no dem
 ## Pendiente de investigación
 
 rol particular en escenas, nivel, habilidades, historia y personalidad, pendientes de localizadores. No se rellena el hueco biográfico con suposiciones a partir del retrato.
+
+
+## Revisión individual para la Era Oscura: historia propia
+
+El índice del volumen 3 enumera una historia extra «Noin Unic»: es el primer destino para encontrar su voz y decisiones individuales. Algunos datos de raza/nivel están en resúmenes secundarios, no verificados por página. No atribuirle un temperamento genérico de sanadora, idealista o reservada por pertenecer a Astrea Familia.
+
+Fuentes: https://danmachi.fandom.com/wiki/Minor_Characters · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3 · https://danmachi.com/danmachi4/character/.

@@ -38,3 +38,10 @@ Astrea Familia permite recorrer el roster, pero la afiliación compartida no dem
 ## Pendiente de investigación
 
 historia individual, nivel, habilidades y relaciones de escena, pendientes de fuentes primarias. No se rellena el hueco biográfico con suposiciones a partir del retrato.
+
+
+## Revisión individual para la Era Oscura: apoyo y curación
+
+Las fuentes secundarias describen a Maryuu Reage (también buscable como Mariyu Reage/Mariyu Leage) como compañera protectora que usaría Rea Vindemia y una maza. El punto de lectura prioritario son las escenas de curación durante el combate contra Alfia; las comparaciones de versiones dicen que la novela revisada amplía partes de esa secuencia. El alcance y las limitaciones de la magia requieren página de escena antes de marcarlos como confirmados.
+
+Fuentes: https://danmachi.fandom.com/wiki/Minor_Characters · https://danmachi.fandom.com/wiki/DanMachi_~Memoria_Freese~/Astraea_Record · https://danmachi.com/danmachi4/character/.

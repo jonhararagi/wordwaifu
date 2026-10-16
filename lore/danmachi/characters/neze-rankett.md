@@ -38,3 +38,10 @@ Astrea Familia permite recorrer el roster, pero la afiliación compartida no dem
 ## Pendiente de investigación
 
 nivel, habilidades individuales, acciones, arco y relaciones específicas. No se rellena el hueco biográfico con suposiciones a partir del retrato.
+
+
+## Revisión individual para la Era Oscura: historia propia
+
+El índice del volumen 1 enumera una historia especial «Neze Rankett». Consultarla para documentar trayectoria, voz y decisiones individuales. Las fuentes comunitarias la identifican como mujer lobo y aventurera, pero no debe deducirse de su especie un estilo de combate, ferocidad o impulsividad. La página de la edición y su escena siguen pendientes.
+
+Fuentes: https://danmachi.fandom.com/wiki/Astraea_Familia · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1 · https://danmachi.com/danmachi4/character/.

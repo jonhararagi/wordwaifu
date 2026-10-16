@@ -38,3 +38,10 @@ La ficha se puede abrir desde la red de Astrea Familia. Una afiliación comparti
 ## Pendiente de investigación
 
 historia individual, nivel, capacidades y vínculos con localizadores primarios. La información secundaria ayuda a encontrar posibles rutas, pero no se considera canon aprobado hasta localizar el pasaje correspondiente.
+
+
+## Revisión individual para la Era Oscura: curiosidad y retaguardia
+
+El índice del volumen 1 lista una historia especial «Celty Srowa». Las referencias secundarias la describen como elfa curiosa e inteligente y como maga de retaguardia. Esos detalles dan una ruta de lectura concreta, pero no constituyen verificación primaria hasta revisar la historia especial. No fijar hechizos o límites mecánicos sin escena.
+
+Fuentes: https://danmachi.fandom.com/wiki/Celty_Srowa · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1 · https://danmachi.com/danmachi4/character/.

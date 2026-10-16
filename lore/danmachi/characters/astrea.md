@@ -43,3 +43,10 @@ Las fuentes de este lote no establecen la ubicación, actividad, estado, fechas 
 - **Valores, CONT-ANIME/CONT-AR:** el perfil oficial de la adaptación la describe como deidad de justicia y orden, misericordiosa y amable; el material de *Astrea Record* la conecta con una Familia que se alza en nombre de la justicia. La descripción afectiva se conserva como propia de la adaptación, no como cita de la novela derivada. [DMR-002-CLM-017]
 - **Relaciones y reputación, CONT-ANIME:** la página afirma que tanto los miembros de su Familia como ciudadanos de Orario la apreciaban. Esto describe su reputación social en esa continuidad, no todas las opiniones privadas. [DMR-002-CLM-018]
 - **Desconocido:** las fuentes consultadas no ofrecen una psicología privada completa, preferencias cotidianas ni estado posterior.
+
+
+## Revisión individual para la Era Oscura: fuentes y límites
+
+La publicación oficial confirma que *Astrea Record* se editó en tres novelas revisadas por Fujino Omori a partir del evento original de Memoria Freese. La presentación oficial del manga relaciona a Astrea con el ideal de justicia. **Ruta de lectura:** volumen 1, capítulo 1, «Astrea Familia»; el índice público da el título, pero no hemos cotejado la página del texto primario. No convertir el rol divino en una biografía privada inventada.
+
+Fuentes: https://danmachi.com/news/news131.php · https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/ · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1.

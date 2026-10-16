@@ -132,3 +132,14 @@ Este grupo se considera **pendiente de cotejo de alcance**: incluirlo en el mapa
 5. Añadir pruebas que fallen si el inventario de Era Oscura contiene nombres sin estado explícito (`present`, `missing`, `needs_source_check`, `AU_only` o `not_applicable`) o si una ficha mezcla `CONT-AR` con `CONT-MAIN-LN` sin declarar el alcance.
 
 **Criterio de cierre:** no declarar la cobertura histórica completa hasta que cada identidad relevante tenga estado de cobertura explícito y cada afirmación importante tenga una fuente y un localizador comprobables. Tener una ficha con texto genérico no cuenta como cobertura completa.
+
+
+## BATCH-DM-014: expedientes individuales y corrección temporal
+
+Se añadieron ocho expedientes individuales en `characters/dark-era/` y se amplió la cobertura narrativa/localizadores de las doce fichas de Astrea/Astrea Familia. La red de búsqueda queda preparada para recuperar los 20 claims del lote 014. Los datos secundarios se identifican como tales; ninguna afirmación se da por verificada por página si todavía solo tiene una ruta de índice.
+
+Corrección temporal: el núcleo de *Astrea Record* se sitúa aproximadamente siete años antes de Bell. Jura Halmer y el incidente del Juggernaut corresponden, en fuentes secundarias, a una fase posterior, alrededor de cinco años antes; su claim pasa a `CONT-MAIN-LN`. Olivas Act se separa igualmente del filtro `CONT-AR` por tener como ruta principal Sword Oratoria 3. Ocho candidatos de apoyo de cronología incierta pasan a `CONT-UNVERIFIED`. El cálculo de periodo del buscador respeta ahora el scope explícito antes de aplicar heurísticas textuales.
+
+Ardee Varma no se añade a Astrea Familia: el perfil oficial de Square Enix la clasifica como integrante de Ganesha Familia. Se conserva el roster oficial de adaptación separado de las fichas históricas.
+
+**Pendiente real:** verificar pasajes de la edición de las novelas por volumen, capítulo y página; no se inventaron páginas. La publicación oficial confirma que la novela revisa el evento original de Memoria Freese, por lo que ambos materiales deben permanecer separados.

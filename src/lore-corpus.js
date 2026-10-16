@@ -99,6 +99,9 @@
   function getPeriod(claim) {
     const text = (claim.eraOrInterval + " " + claim.claim + " " + claim.heading).toLowerCase();
     if (/au del oc|continuidad au|historia alternativa|au-/.test(text)) return "AU";
+    const scopes = Array.isArray(claim.continuityScopes) ? claim.continuityScopes : [];
+    if (scopes.includes("CONT-UNVERIFIED")) return "OTHER";
+    if (scopes.includes("CONT-MAIN-LN") && !scopes.includes("CONT-AR")) return "MAIN_STORY";
     if (/astrea record|era oscura|siete a[nñ]os antes|t[-−]7|死の七日間/.test(text)) return "ASTREA_RECORD";
     if (/historia principal|danmachi (iii|iv|v)|estado representado en danmachi|inicio de bell|bell cranel/.test(text)) return "MAIN_STORY";
     return "OTHER";
@@ -328,14 +331,14 @@
   }
   async function load(basePath) {
     const base = basePath || "./lore/danmachi/";
-    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md", "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md", "research/inbox/BATCH-DM-008-main-story-volume-map.md", "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md", "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md", "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md", "research/inbox/BATCH-DM-013-dark-era-missing-characters.md"];
+    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md", "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md", "research/inbox/BATCH-DM-008-main-story-volume-map.md", "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md", "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md", "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md", "research/inbox/BATCH-DM-013-dark-era-missing-characters.md", "research/inbox/BATCH-DM-014-dark-era-temporal-boundaries.md"];
     const responses = await Promise.all(paths.map(path => fetch(base + path, { cache: "no-cache" })));
     for (let i = 0; i < responses.length; i++) if (!responses[i].ok) throw new Error("No se pudo cargar " + paths[i] + " (HTTP " + responses[i].status + ").");
     const catalog = await responses[0].json();
     const docs = await Promise.all(responses.slice(1).map(async (response, i) => ({
       path: paths[i + 1], content: await response.text()
     })));
-    const detailIds = new Set(["CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR","CHAR-KAGUYA","CHAR-LYRA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE","CHAR-NOIN-UNIC","CHAR-NEZE-RANKETT","CHAR-ASTA-KNOX","CHAR-RYANA-LIETZ","CHAR-CELTY-SROWA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]);
+    const detailIds = new Set(["CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR","CHAR-KAGUYA","CHAR-LYRA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE","CHAR-NOIN-UNIC","CHAR-NEZE-RANKETT","CHAR-ASTA-KNOX","CHAR-RYANA-LIETZ","CHAR-CELTY-SROWA","CHAR-DARK-ZALD","CHAR-DARK-ALFIA","CHAR-DARK-EREBUS","CHAR-DARK-RUDRA","CHAR-DARK-JURA-HALMER","CHAR-DARK-VITO","CHAR-DARK-OLIVAS-ACT","CHAR-DARK-ARDEE-VARMA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]);
     const profileRecords = (catalog.records || []).filter(record =>
       detailIds.has(record.id) && typeof record.path === "string" &&
       record.path.startsWith("characters/") && record.path.endsWith(".md"));

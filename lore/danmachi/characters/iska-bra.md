@@ -38,3 +38,10 @@ Astrea Familia permite recorrer el roster, pero la afiliación compartida no dem
 ## Pendiente de investigación
 
 nivel, trayectoria individual, habilidades, decisiones y vínculos personales con localizadores de novela. No se rellena el hueco biográfico con suposiciones a partir del retrato.
+
+
+## Revisión individual para la Era Oscura: moda y autocuidado
+
+Las fuentes secundarias presentan a Iska como una amazoness interesada en moda y maquillaje, y conectan su interés con aprender a cuidarse tras exigirse demasiado por un orfanato. Ruta primaria: volumen 1, historia especial «Iska Bra». No escribirla como superficial ni fijar los efectos de su estilo de combate sin comprobar esa historia especial.
+
+Fuentes: https://danmachi.fandom.com/es/wiki/Iska_Bra · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1 · https://danmachi.com/danmachi4/character/.

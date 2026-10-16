@@ -63,3 +63,12 @@ Tratar a Ryu como una identidad estable con estados temporales separados. La afi
 - **Bajo presión, CONT-AR:** la sinopsis del volumen 2 indica que las pérdidas durante el periodo luego llamado “Los siete días de la muerte” sacuden su sentido de justicia. El cambio general figura en la sinopsis; las escenas exactas y sus consecuencias individuales requieren consultar el volumen. [DMR-002-CLM-016]
 - **Límites:** no inferir gustos cotidianos, miedos específicos ni diagnósticos psicológicos a partir del trauma o de las pérdidas.
 - **Continuidad:** mantener este estado separado del perfil posterior de taberna en CONT-ANIME.
+
+
+## Revisión individual para la Era Oscura: mapa de escenas
+
+La página oficial de Square Enix describe a Ryuu bajo Astrea Familia buscando una justicia en la que pueda creer junto a Alise y sus compañeras. **Rutas de lectura:** volumen 1, capítulo 1 «Astrea Familia»; volumen 1, capítulo 4 «Questioning Justice»; volumen 3, capítulo 9 y epílogo para el desenlace. Estos títulos proceden de índices secundarios y no sustituyen la anotación de página de la edición consultada.
+
+No adelantar el estado posterior de anime, volumen 13 o *Familia Chronicle* a escenas de la etapa de siete años antes de Bell.
+
+Fuentes: https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/ · https://danmachi.com/news/news131.php · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1 · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3.

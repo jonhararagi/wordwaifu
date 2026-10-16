@@ -82,12 +82,12 @@ continuity: CONT-AR
 - `claim`: Jura Halmer figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-JURA-HALMER
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Aproximadamente cinco años antes de Bell; fase posterior del arco de Jura/Juggernaut
+- `continuity_scope`: CONT-MAIN-LN
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
-- `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
+- `source_locator`: DanMachi vol. 13, arco «Encounter and Vow»; página por verificar en edición publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Jura_Halmer
 - `evidence_type`: discovery_lead_only
 - `verification_status`: needs_source_check
@@ -116,12 +116,12 @@ continuity: CONT-AR
 - `claim`: Olivas Act figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-OLIVAS-ACT
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Arco Vendetta/Enyo; fecha relativa al relato histórico aún sin confirmar
+- `continuity_scope`: CONT-MAIN-LN
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
-- `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
+- `source_locator`: Sword Oratoria vol. 3, arco Vendetta/Olivas; no dar por confirmada una aparición en otro intervalo
 - `source_url`: https://danmachi.fandom.com/wiki/Olivas_Act
 - `evidence_type`: discovery_lead_only
 - `verification_status`: needs_source_check
@@ -269,133 +269,133 @@ continuity: CONT-AR
 - `claim`: Airmid figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-AIRMID
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Periodo histórico individual aún sin confirmar; candidato de apoyo (Airmid)
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
 - `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Airmid_Teasanare
 - `evidence_type`: discovery_lead_only
-- `verification_status`: needs_source_check
+- `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
-- `confidence_note`: Esta entrada registra un nombre candidato para investigar, no confirma por sí sola su aparición, afiliación, acciones, personalidad ni estado en la Era Oscura. Verificar la novela publicada y anotar localizador exacto antes de usar como hecho.
+- `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.
 
 ### DMR-013-CLM-017 · Miach — candidato de investigación
 - `claim_id`: DMR-013-CLM-017
 - `claim`: Miach figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-MIACH
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Periodo histórico individual aún sin confirmar; candidato de apoyo (Miach)
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
 - `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Miach
 - `evidence_type`: discovery_lead_only
-- `verification_status`: needs_source_check
+- `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
-- `confidence_note`: Esta entrada registra un nombre candidato para investigar, no confirma por sí sola su aparición, afiliación, acciones, personalidad ni estado en la Era Oscura. Verificar la novela publicada y anotar localizador exacto antes de usar como hecho.
+- `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.
 
 ### DMR-013-CLM-018 · Naaza Erisuis — candidato de investigación
 - `claim_id`: DMR-013-CLM-018
 - `claim`: Naaza figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-NAAZA
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Periodo histórico individual aún sin confirmar; candidato de apoyo (Naaza)
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
 - `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Naaza_Erisuis
 - `evidence_type`: discovery_lead_only
-- `verification_status`: needs_source_check
+- `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
-- `confidence_note`: Esta entrada registra un nombre candidato para investigar, no confirma por sí sola su aparición, afiliación, acciones, personalidad ni estado en la Era Oscura. Verificar la novela publicada y anotar localizador exacto antes de usar como hecho.
+- `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.
 
 ### DMR-013-CLM-019 · Dian Cecht — candidato de investigación
 - `claim_id`: DMR-013-CLM-019
 - `claim`: Dian Cecht figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-DIAN-CECHT
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Periodo histórico individual aún sin confirmar; candidato de apoyo (Dian Cecht)
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
 - `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Dian_Cecht
 - `evidence_type`: discovery_lead_only
-- `verification_status`: needs_source_check
+- `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
-- `confidence_note`: Esta entrada registra un nombre candidato para investigar, no confirma por sí sola su aparición, afiliación, acciones, personalidad ni estado en la Era Oscura. Verificar la novela publicada y anotar localizador exacto antes de usar como hecho.
+- `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.
 
 ### DMR-013-CLM-020 · Hephaistos — candidato de investigación
 - `claim_id`: DMR-013-CLM-020
 - `claim`: Hephaistos figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-HEPHAISTOS
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Periodo histórico individual aún sin confirmar; candidato de apoyo (Hephaistos)
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
 - `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Hephaistos
 - `evidence_type`: discovery_lead_only
-- `verification_status`: needs_source_check
+- `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
-- `confidence_note`: Esta entrada registra un nombre candidato para investigar, no confirma por sí sola su aparición, afiliación, acciones, personalidad ni estado en la Era Oscura. Verificar la novela publicada y anotar localizador exacto antes de usar como hecho.
+- `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.
 
 ### DMR-013-CLM-021 · Goibniu — candidato de investigación
 - `claim_id`: DMR-013-CLM-021
 - `claim`: Goibniu figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-GOIBNIU
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Periodo histórico individual aún sin confirmar; candidato de apoyo (Goibniu)
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
 - `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Goibniu
 - `evidence_type`: discovery_lead_only
-- `verification_status`: needs_source_check
+- `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
-- `confidence_note`: Esta entrada registra un nombre candidato para investigar, no confirma por sí sola su aparición, afiliación, acciones, personalidad ni estado en la Era Oscura. Verificar la novela publicada y anotar localizador exacto antes de usar como hecho.
+- `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.
 
 ### DMR-013-CLM-022 · Samira — candidato de investigación
 - `claim_id`: DMR-013-CLM-022
 - `claim`: Samira figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-SAMIRA
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Periodo histórico individual aún sin confirmar; candidato de apoyo (Samira)
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
 - `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Samira
 - `evidence_type`: discovery_lead_only
-- `verification_status`: needs_source_check
+- `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
-- `confidence_note`: Esta entrada registra un nombre candidato para investigar, no confirma por sí sola su aparición, afiliación, acciones, personalidad ni estado en la Era Oscura. Verificar la novela publicada y anotar localizador exacto antes de usar como hecho.
+- `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.
 
 ### DMR-013-CLM-023 · Selenia — candidato de investigación
 - `claim_id`: DMR-013-CLM-023
 - `claim`: Selenia figura como candidato en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada de Astrea Record antes de tratarse como canon.
 - `character_id`: CHAR-DARK-SELENIA
 - `aspect`: cobertura e identidad histórica
-- `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `era_or_interval`: Periodo histórico individual aún sin confirmar; candidato de apoyo (Selenia)
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
 - `source_locator`: Página de índice o artículo comunitario enlazado; localizar después volumen, capítulo y escena de la novela publicada
 - `source_url`: https://danmachi.fandom.com/wiki/Selenia
 - `evidence_type`: discovery_lead_only
-- `verification_status`: needs_source_check
+- `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
-- `confidence_note`: Esta entrada registra un nombre candidato para investigar, no confirma por sí sola su aparición, afiliación, acciones, personalidad ni estado en la Era Oscura. Verificar la novela publicada y anotar localizador exacto antes de usar como hecho.
+- `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.

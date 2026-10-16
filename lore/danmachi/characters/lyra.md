@@ -27,3 +27,9 @@ La referencia comunitaria la presenta como aventurera y antigua integrante de la
 - Wiki comunitaria en español: https://danmachi.fandom.com/es/wiki/Lyra
 - Página de roster de la Familia Astrea: https://danmachi.fandom.com/es/wiki/Familia_Astrea
 - Pendiente: encontrar volúmenes/capítulos que documenten su carácter, habilidades, historia y relaciones.
+
+## Revisión individual para la Era Oscura: voz propia
+
+Las referencias secundarias describen a Lyra como pallum directa y contraria, de habla brusca, y como una persona a quien Ryuu recurre para hablar de sus preocupaciones. El índice del volumen 3 enumera una historia extra «Lyra», que debe consultarse para reconstruir voz y trayectoria. Ratts Phil, Agile Salt, Mūs Mine y Wingus Smite aparecen en tablas comunitarias; sus efectos no quedan fijados sin revisar el material adicional.
+
+Fuentes: https://danmachi.fandom.com/wiki/Lyra · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3 · https://danmachi.fandom.com/es/wiki/Magia.
