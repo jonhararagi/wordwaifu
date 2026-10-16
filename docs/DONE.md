@@ -1,53 +1,58 @@
 PARTIAL
 
-# WordWaifu — Punto de continuidad CEREBRO / BOT OBRERO
+# WordWaifu — Punto de continuidad del CEREBRO / BOT OBRERO
 
-**Tarea cerrada en esta entrega:** TLM-001 — Auditoría del Atlas temporal de DanMachi  
-**Fecha:** 2026-10-16  
-**Estado de la auditoría:** DONE (evidencia persistida).  
-**Estado del producto atlas:** PARTIAL; las brechas funcionales no se repararon en esta tarea.  
-**Informe:** docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md
+**Última actualización:** 2026-10-16  
+**Resultado funcional:** el atlas temporal-geográfico continúa PARTIAL.  
+**Tarea activa única:** TLM-002 — contrato e implementación del modelo temporal explícito.
 
-## Rama y HEAD
+## Estado aceptado por CEREBRO
 
-- Repositorio: jonhararagi/wordwaifu.
-- Rama autorizada: work/story-completion-danmachi-audit-2026-10.
-- HEAD BEFORE de la auditoría: 8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478 (verificado con la referencia GitHub justo antes de crear la documentación).
-- SHA de código/datos auditados: 8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478.
-- HEAD AFTER: el commit documental que contiene esta versión de DONE.md y el informe TLM-001; consulta el SHA de cierre devuelto en la entrega y el ref actual de la rama. Git no permite incrustar el SHA final de un commit dentro del propio árbol que determina ese SHA.
-- main: no modificada por TLM-001.
-- PRs: no abiertos, modificados, cerrados ni fusionados.
-- Código y JSON: no modificados en esta tarea. Solo se persisten auditoría y controles de continuidad.
+- **TLM-001 — DONE como auditoría documental**, no como finalización del producto.
+- Informe: [`docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md`](TLM-001-ATLAS-TEMPORAL-AUDIT.md).
+- Commit que cerró la auditoría: [`1611254124e6fa2eb1186a803fca0bc712ef6dab`](https://github.com/jonhararagi/wordwaifu/commit/1611254124e6fa2eb1186a803fca0bc712ef6dab).
+- **PASS_CI** para ese SHA: [Validate WordWaifu #38934243074](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243074) y [DanMachi Lore and Retrieval Integrity #38934243080](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243080), ambos `success`.
+- Hallazgos críticos: ninguno de los 15 eventos posee un ID de ubicación; no hay modelo de fecha estructurado; los controles de continuidad no demuestran que existan eventos en todas ellas; el panel temporal carece de pruebas UI específicas.
+- Ningún cambio funcional del atlas fue incluido en TLM-001.
 
-## Hallazgos confirmados
+## Rama y límites
 
-- Cronología UI: 10 épocas, 15 eventos, 7 opciones de continuidad, búsqueda textual y filtro por era.
-- No hay ningún evento con un campo de ubicación ID/coords que lo conecte al mapa. La cronología de DanMachi y el mapa SVG del proyecto son módulos distintos.
-- No hay modelo temporal estructurado para fecha exacta, aproximación, relación al ancla, intervalo, orden sin fecha, desconocido o hipótesis. Las etiquetas actuales son texto libre.
-- Los eventos solo usan CONT-MAIN-LN (14) y CONT-AR (1); GAME, ANIME, AU y UNVERIFIED tienen selectores, pero ningún evento.
-- Las 15 rutas detailPath se comprobaron existentes y la validación de catálogo/rutas está automatizada.
-- El registro de perfiles enlaza imágenes oficiales externas durante runtime y anota crédito/no almacenamiento. No se incorporaron imágenes nuevas. El crédito y la marca de agua no dan permiso de reproducción.
-- El panel interactivo de cronología no tiene prueba de navegador específica en tests/browser_smoke.cjs.
-- Matriz completa, archivos, evidencias y pruebas futuras: docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md.
+- Repositorio: `jonhararagi/wordwaifu`.
+- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
+- HEAD del cierre de TLM-001: `1611254124e6fa2eb1186a803fca0bc712ef6dab`.
+- HEAD previo a esta actualización de continuidad: `301995f49392e2f6603d8dfbeb9deaae437bf4c2` (actualización documental de estado).
+- HEAD AFTER: consultar la referencia real de rama en GitHub tras este commit de DONE; no escribir el SHA final dentro del mismo árbol que lo produce.
+- `main`: no modificada.
+- PRs: no abiertos, fusionados, cerrados ni modificados.
+- CI de los commits documentales posteriores a `1611254`: no asumir éxito por herencia; verificar workflows ligados al SHA más reciente.
 
-## Pruebas / evidencia
+## TLM-002 — orden activa
 
-- **PASS_CI** para el SHA auditado 8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478: [Validate WordWaifu run #38933332552](https://github.com/jonhararagi/wordwaifu/actions/runs/38933332552), conclusion success. El workflow contiene el check-timeline, test_danmachi_timeline y browser_smoke.
-- **PASS_CI histórico cercano**, no atribuido al SHA auditado: [DanMachi Lore and Retrieval Integrity run #38933298969](https://github.com/jonhararagi/wordwaifu/actions/runs/38933298969), success para c65300608bb74a31bdc917fc5824ca7e5f98e4bb.
-- **NOT_RUN:** comandos locales de Node/Playwright por este agente.
-- **NOT_RUN:** revisión manual en Windows 11.
-- Las pruebas existentes no acreditan todavía el modelo temporal-geográfico ni los controles UI ausentes.
+Contrato y criterios completos: [`docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md`](TLM-002-TEMPORAL-MODEL-CONTRACT.md).
 
-## Próxima tarea exacta
+El BOT OBRERO debe implementar un modelo estructurado y validable que distinga:
+- fecha absoluta solo cuando la fuente y el calendario lo permitan;
+- intervalo aproximado con límites respaldados;
+- desplazamiento relativo a un ancla, conservando precisión;
+- orden relativo sin distancia calculable;
+- fecha desconocida/pendiente;
+- hipótesis, plan narrativo y AU sin confundirlos con el estado de evidencia o con continuidad.
 
-**TLM-002 — Modelo temporal explícito**, no iniciada aquí.
+Debe migrar de manera conservadora los 15 eventos existentes, conservar `dateLabel` por compatibilidad o probar una migración explícita, conservar fuentes y `detailPath`, mantener T0 como ancla relativa y añadir validación/pruebas de cada variante. La UI debe comunicar clase y precisión sin exagerar la certeza. No añadir fechas absolutas por inferencia.
 
-Criterio de arranque: esquema retrocompatible que distingue fecha absoluta confirmada, intervalo aproximado, fecha relativa a T0, orden conocido sin fecha, desconocido e hipótesis/AU; metadatos de fuente y precisión independientes de la continuidad; pruebas que prohíban inventar fechas; y validación de no regresión de los 15 eventos actuales. Después, TLM-003 conectará eventos a lugares mediante IDs estables, sin asignar localizaciones no respaldadas.
+### Fuera de alcance de TLM-002
 
-No empezar TLM-002 sin la orden de trabajo correspondiente.
+- No conectar acontecimientos al mapa geográfico ni inventar localizaciones/coordenadas.
+- No incorporar imágenes de anime/novelas ni desarrollar marcas de agua.
+- No rellenar huecos de canon con wikis o inferencias.
+- No modificar `main`, fusionar ramas ni alterar PR.
 
-## Contexto global
+## Próxima acción exacta
 
-- Avance global estimado heredado de STATUS: 19% de la visión completa. Es una estimación de alcance, no una medición de cobertura; TLM-001 no aumenta la funcionalidad del producto.
-- TIMER para la próxima fase: una iteración dedicada al esquema y sus pruebas, con evaluación separada de la UI/mapa. Reestimar al comenzar TLM-002 según los hallazgos de esquema/migración.
-- No modificar main, no fusionar ramas y no modificar PR sin autorización expresa.
+**BOT OBRERO: ejecutar TLM-002 conforme a `docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md`.** Antes de escribir, comprobar el HEAD actual y leer el contrato y `docs/WORK_PROTOCOL.md`. Entregar informe con variante de esquema, correspondencia de los 15 eventos, archivos, pruebas ligadas al SHA, limitaciones y estado final. Después actualizar `docs/STATUS.md` y sobrescribir este archivo con el nuevo punto de reanudación.
+
+## Protocolo de reanudación si se corta el chat
+
+1. Abrir [control Cerebro/Obrero](CEREBRO_BOT_OBRERO_CONTROL.md), [STATUS](STATUS.md), este DONE y el [contrato TLM-002](TLM-002-TEMPORAL-MODEL-CONTRACT.md).
+2. Consultar el HEAD real de la rama autorizada y los workflows asociados.
+3. Retomar TLM-002 solamente; no comenzar TLM-003 hasta que TLM-002 tenga criterios verificados y cierre persistido.
