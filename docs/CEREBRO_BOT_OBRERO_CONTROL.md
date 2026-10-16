@@ -110,14 +110,17 @@ Alcance exclusivo de esta fase: contrato temporal estructurado, migración conse
 Cierre: referencias procedentes; referencias oficiales remotas link-only; recursos del usuario locales; exportación marcada sometida a derechos y confirmación; pruebas y CI PASS en SHA exacto. La enciclopedia/cobertura total de DanMachi y TLM-005 permanecen fuera de este cierre.
 
 ### TLM-005 — Verificación de extremo a extremo
-**Estado: NOT_STARTED; depende de TLM-002 a TLM-004.**
+**Estado: IN_PROGRESS; única tarea activa.** Contrato normativo: [docs/TLM-005-END-TO-END-VERIFICATION-CONTRACT.md](TLM-005-END-TO-END-VERIFICATION-CONTRACT.md).
 
-- Añadir pruebas para fechas exactas/relativas/desconocidas/hipotéticas, filtros de continuidad, enlaces a lugares y ausencia de coordenadas inventadas.
-- Probar la UI de cronología y mapa en navegador/CI.
-- Registrar resultados reales y CI para los SHAs exactos.
-- Comprobar regresiones de búsqueda, dossiers, navegación y funcionamiento offline.
+- HEAD BEFORE al activarse: `ff1622e33ed7c324ebe1bc7c789f12b38296f464`; consultar la rama viva y CI otra vez antes de hacer cambios.
+- Probar temporal `absolute_date`, `approximate_interval`, `relative_offset`, `relative_order`, `unknown` y `anchor` sin elevar fixtures hipotéticos a canon.
+- Ejecutar browser E2E de filtros de continuidad/búsqueda/era, evento → lugar → evento relacionado → vuelta, navegación de fichas/dossiers y aislamiento de Asteria.
+- Verificar enlaces/fuentes visuales TLM-004, placeholders/offline, no incrustación oficial sin permiso, almacenamiento local sin upload, exportación marcada con permisos y conservación del original.
+- Corregir únicamente defectos reproducibles del alcance y añadir pruebas a la suite existente sin duplicación innecesaria.
+- Registrar resultados por SHA exacto; ambos workflows deben estar en `success` para el HEAD documental final. `PASS_REAL`, `PASS_CI`, `PASS_STATIC` y `NOT_RUN` no son intercambiables.
+- Revisión manual Windows 11 y Node/Playwright local permanecen `NOT_RUN` hasta que una ejecución real las respalde.
+- Criterio de cierre: cobertura automatizada pertinente verde, informe TLM-005 persistido, STATUS/control/DONE alineados, limitaciones reales indicadas. El programa TLM no completa por sí mismo el canon global DanMachi.
 
-Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas las limitaciones conocidas documentadas.
 
 ## 6. Estado inicial de este programa
 
@@ -135,6 +138,7 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 | 2026-10-16 | TLM-002 — Modelo temporal explícito | DONE / PASS_CI | 4d75c97aa690ddba73ec6ef09eb0fbefef06d342; runs 38941141919 y 38941142159 success | 15 eventos migrados; dateLabel intacto; esquema aditivo; geografía e imágenes no tocadas. Ver docs/TLM-002-TEMPORAL-MODEL-REPORT.md. |
 | 2026-10-16 | TLM-003 — Conexión cronología/mapa | DONE / PASS_CI | c9fa2d05de3bb81526523202bea0fb5cb058ae06; runs 38950288434 y 38950288325 success | 15 eventos evaluados; 2 lugares, 9 referencias, esquema no geográfico; ver informe TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md. |
 | 2026-10-16 | TLM-004 — Panoramas visuales y procedencia | DONE / PASS_CI | SHA de implementación `8960fdd11ecff5fd66d69c1bae221a13f12342c4`; Validate #38967733362 (reintento) y DanMachi #38967733260 success; ver informe TLM-004 | Seis referencias externas link-only; 15 eventos + 2 lugares evaluados; storage local, gates de permisos/watermark y archivo de personajes sin embed remoto no verificado. TLM-005 y revisión manual Windows 11 pendientes. |
+| 2026-10-16 | Activación TLM-005 — verificación end-to-end | IN_PROGRESS | Contrato `docs/TLM-005-END-TO-END-VERIFICATION-CONTRACT.md`; baseline TLM-004 documental `ff1622e33ed7c324ebe1bc7c789f12b38296f464`; runs 38968385611 y 38968385564 success en ese SHA | Única tarea activa. Revisar temporal, mapa relacional, navegación, continuidad, búsqueda/dossiers, procedencia/rights, offline y aislamiento Asteria. Windows 11 manual y Node/Playwright local no se consideran ejecutados sin evidencia. |
 
 ## 8. Plantilla de reporte del BOT OBRERO
 
