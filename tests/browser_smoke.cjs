@@ -435,7 +435,8 @@ async function run() {
     assert.ok(await page.locator("#dm-visual-reference-general a[href='https://danmachi.com/danmachi5/character/']").count()>0);
     const projectStoreBeforeVisuals=await page.evaluate(()=>localStorage.getItem("wordwaifu.project.v1"));
     const externalRequestsBeforeVisuals=[];
-    const externalRequestListener=request=>{if(new URL(request.url()).origin!==new URL(location.href).origin)externalRequestsBeforeVisuals.push(request.url());};
+    const smokePageOrigin=new URL(page.url()).origin;
+    const externalRequestListener=request=>{if(new URL(request.url()).origin!==smokePageOrigin)externalRequestsBeforeVisuals.push(request.url());};
     page.on("request",externalRequestListener);
     await page.locator("#dm-visual-import-details > summary").click();
     const syntheticPng={name:"synthetic-visual-fixture.png",mimeType:"image/png",buffer:Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+j8Z0AAAAASUVORK5CYII=","base64")};
@@ -465,6 +466,7 @@ async function run() {
     await page.waitForFunction(()=>document.querySelector("#dm-visual-status")?.textContent.includes("Guardado en"),null,{timeout:10000});
     const authorizedLocal=await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).find(item=>item.title==="Fixture local autorizado")||null);
     assert.ok(authorizedLocal&&authorizedLocal.allowModifyExport);
+    await page.waitForFunction(id=>document.querySelector('[data-visual-export="'+id+'"]')!==null,authorizedLocal.id,{timeout:5000});
     assert.ok(await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').count()>0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),authorizedLocal.id),true);
     const originalBefore=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);

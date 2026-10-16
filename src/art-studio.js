@@ -191,8 +191,8 @@
 
   function fileToDataUrl(file) {
     return new Promise((resolve, reject) => {
-      if (!file || !/^image\/(png|jpeg|webp|gif|avif)$/i.test(file.type)) {
-        reject(new Error("Elegí una imagen raster PNG, JPEG, WebP, GIF o AVIF; SVG no se admite como archivo activo.")); return;
+      if (!file || !/^image\/(png|jpeg|webp|gif|svg\+xml|avif)$/i.test(file.type)) {
+        reject(new Error("Elegí una imagen PNG, JPEG, WebP, GIF, SVG o AVIF.")); return;
       }
       if (file.size > MAX_FILE_BYTES) { reject(new Error("La imagen supera el límite de 5 MB.")); return; }
       const reader = new FileReader();
