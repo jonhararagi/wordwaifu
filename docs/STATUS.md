@@ -1,3 +1,19 @@
+# ESTADO ACTUAL — TLM-005 ACTIVA
+**Actualizado:** 2026-10-16. Este bloque prevalece sobre el historial que sigue.
+
+- Repositorio: `jonhararagi/wordwaifu`.
+- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
+- TLM-004: **ACEPTADA por CEREBRO — DONE / PASS_CI**. HEAD documental final comprobado: `ff1622e33ed7c324ebe1bc7c789f12b38296f464`.
+- Evidencia exacta del HEAD documental TLM-004: [Validate WordWaifu #38968385611 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38968385611) y [DanMachi Lore and Retrieval Integrity #38968385564 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38968385564). Ambos reportan `head_sha=ff1622e33ed7c324ebe1bc7c789f12b38296f464`.
+- SHA de implementación funcional TLM-004: `8960fdd11ecff5fd66d69c1bae221a13f12342c4`; el cierre no confunde este SHA con el documental.
+- **Única tarea activa: TLM-005 — Verificación end-to-end.** Contrato: [TLM-005-END-TO-END-VERIFICATION-CONTRACT.md](TLM-005-END-TO-END-VERIFICATION-CONTRACT.md). Commit que añadió el contrato: `3b3cd5348a85af87139b2f348d36a27dadae195a`.
+- HEAD BEFORE TLM-005 al activarla: `ff1622e33ed7c324ebe1bc7c789f12b38296f464`. El HEAD vivo debe consultarse antes de empezar y tras la última actualización documental.
+- Revisión manual Windows 11: `NOT_RUN` hasta evidencia real. No afirmar inspección manual ni ejecución local de Node/Playwright sin resultados observados.
+- Estado de producto: atlas/enciclopedia global DanMachi sigue `PARTIAL`; no convertir TLM-005 en afirmación de canon completo.
+- Límites invariables: no modificar `main`, no fusionar ramas y no abrir/cerrar/modificar PR.
+
+---
+
 # Estado operativo actual de WordWaifu — CEREBRO / BOT OBRERO
 
 **Este bloque prevalece sobre las notas históricas siguientes cuando expresen estados anteriores.**
