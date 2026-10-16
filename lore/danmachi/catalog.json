@@ -1133,6 +1133,19 @@
       ],
       "status": "provisional_primary_scene_check_pending",
       "priority": "high"
+    },
+    {
+      "id": "LOC-ORARIO",
+      "type": "location",
+      "path": "places/orario.md",
+      "status": "source_checked_partial",
+      "priority": "critical",
+      "tags": [
+        "Orario",
+        "ciudad",
+        "Dungeon",
+        "lugar"
+      ]
     }
   ],
   "reservedIds": [
@@ -1354,11 +1367,6 @@
     {
       "id": "FAM-APOLLO",
       "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "LOC-ORARIO",
-      "type": "location",
       "status": "candidate_not_created"
     },
     {

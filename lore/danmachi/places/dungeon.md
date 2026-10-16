@@ -29,7 +29,7 @@ Este registro describe la función general confirmada por la fuente editorial; n
 
 ## Relaciones navegables
 
-- **Orario:** el Dungeon forma parte de la identidad geográfica y narrativa de la ciudad. Véase [Orario y el mundo de DanMachi](../canon/01-mundo-orario.md).
+- **Orario:** el Dungeon es el laberinto subterráneo asociado a la ciudad según la sinopsis editorial del volumen 1. Véase la ficha geográfica [LOC-ORARIO](orario.md) y el escenario narrativo [Orario y el mundo de DanMachi](../canon/01-mundo-orario.md).
 - **Guild:** institución que organiza y regula parte de la actividad aventurera; la relación institucional debe ampliarse con fuentes y reglas concretas en el expediente [Dungeon y Guild](../canon/03-dungeon-y-guild.md).
 - **Bell Cranel:** su historia como aventurero está ligada a la exploración del Dungeon. Véase [Bell Cranel](../characters/bell-cranel.md).
 - **Hestia:** la presentación editorial vincula el comienzo de Bell en Orario con su encuentro con la diosa y la formación de una Familia. Véase [Hestia](../characters/hestia.md).

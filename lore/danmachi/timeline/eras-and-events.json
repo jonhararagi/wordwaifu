@@ -184,7 +184,13 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La fuente citada no especifica una ciudad, región o lugar de llegada; «mundo inferior» no basta para asignar Orario."
+      },
+      "locationRefs": []
     },
     {
       "id": "EVT-DM-GREAT-QUESTS-001",
@@ -230,7 +236,13 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "El expediente conserva la secuencia y ubicación de estas expediciones como pendientes; no se infiere que todas ocurrieran en el Dungeon."
+      },
+      "locationRefs": []
     },
     {
       "id": "EVT-DM-ZH-OEBD-001",
@@ -281,7 +293,13 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La fuente enlazada es un candidato interno y no localiza el enfrentamiento con suficiente precisión para vincular una ficha geográfica."
+      },
+      "locationRefs": []
     },
     {
       "id": "EVT-DM-ZH-FALL-001",
@@ -332,7 +350,13 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La caída de las Familias no tiene un lugar confirmado por la evidencia actual."
+      },
+      "locationRefs": []
     },
     {
       "id": "EVT-DM-AR-ERA-001",
@@ -447,7 +471,24 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La cronología oficial sitúa Astrea Record en la Era Oscura de Orario; es un marco urbano general, no la ubicación de cada escena."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "broad_setting",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Marco general de la Era Oscura de Orario; no identifica edificio, barrio ni lugar de cada escena.",
+          "sourceUrls": [
+            "https://danmachi.com/chronology/"
+          ]
+        }
+      ]
     },
     {
       "id": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
@@ -521,7 +562,25 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "dungeon_general",
+        "reason": "El expediente relaciona el hecho con el Juggernaut y una cronología secundaria pendiente de cotejo primario; el Dungeon es contexto relacionado, no lugar confirmado de la tragedia."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "related_context",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "dungeon_general",
+          "context": "Contexto relacionado por la amenaza; la evidencia no localiza directamente la tragedia T−5 dentro del Dungeon.",
+          "sourceUrls": [
+            "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+            "https://danmachi.fandom.com/wiki/Timeline"
+          ]
+        }
+      ]
     },
     {
       "id": "EVT-DM-RYUU-REVENGE-001",
@@ -590,7 +649,13 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La evidencia vincula la venganza de Ryu con la retrospectiva, pero no determina dónde ocurrieron los actos de persecución."
+      },
+      "locationRefs": []
     },
     {
       "id": "EVT-DM-HESTIA-DESCENT-001",
@@ -637,7 +702,13 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La llegada al mundo inferior no demuestra que el punto de llegada fuera Orario ni permite asignar un lugar concreto."
+      },
+      "locationRefs": []
     },
     {
       "id": "EVT-DM-BELL-ARRIVAL-001",
@@ -680,7 +751,24 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La cronología oficial nombra la llegada de Bell a Orario; la relación se limita al nivel de ciudad, sin coordenadas ni punto urbano."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Llegada a la ciudad de Orario; la fuente no fija puerta, calle ni coordenadas.",
+          "sourceUrls": [
+            "https://danmachi.com/chronology/"
+          ]
+        }
+      ]
     },
     {
       "id": "EVT-DM-BELL-MEETS-HESTIA-001",
@@ -716,6 +804,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md",
           "kind": "internal",
           "note": "Localizador de capítulo pendiente."
+        },
+        {
+          "label": "GA文庫 · volumen 1, Orario y Dungeon",
+          "kind": "publisher",
+          "note": "Sinopsis editorial oficial: Orario es una ciudad que posee el Dungeon; no determina ubicación exacta de escenas.",
+          "url": "https://ga.sbcr.jp/product/9784797372809/"
         }
       ],
       "temporal": {
@@ -733,7 +827,24 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La sinopsis editorial del volumen 1 presenta el encuentro de Bell con Hestia en el marco de Orario; no identifica un edificio o punto urbano."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Ciudad identificada a nivel general; no se infiere una residencia o edificio concreto.",
+          "sourceUrls": [
+            "https://ga.sbcr.jp/product/9784797372809/"
+          ]
+        }
+      ]
     },
     {
       "id": "EVT-DM-BELL-AIS-MINOTAUR-001",
@@ -776,6 +887,12 @@
           "url": "https://danmachi.com/chronology/",
           "kind": "official",
           "note": "Punto de entrada cronológico; capítulo/página pendiente."
+        },
+        {
+          "label": "Yen Press · novela principal, volumen 1",
+          "kind": "publisher",
+          "note": "Sinopsis editorial del volumen 1; respalda el marco general de Orario/Dungeon, no un localizador interno de escena.",
+          "url": "https://yenpress.com/titles/9780316340137-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-1-light-novel"
         }
       ],
       "temporal": {
@@ -793,7 +910,25 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "dungeon_general",
+        "reason": "La relación con el Dungeon es un candidato coherente con el evento y su marco publicado, pero el localizador primario de la escena sigue pendiente; no se asigna piso."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "dungeon_general",
+          "context": "Candidato a nivel Dungeon. Sin piso ni coordenada; cotejo primario de escena pendiente.",
+          "sourceUrls": [
+            "https://danmachi.com/chronology/",
+            "https://yenpress.com/titles/9780316340137-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-1-light-novel"
+          ]
+        }
+      ]
     },
     {
       "id": "EVT-DM-EINA-ADVISOR-001",
@@ -829,6 +964,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-EINA-ADVISOR-001.md",
           "kind": "internal",
           "note": "Capítulo exacto pendiente."
+        },
+        {
+          "label": "GA文庫 · volumen 1, Orario y Dungeon",
+          "kind": "publisher",
+          "note": "Sinopsis editorial oficial: Orario es una ciudad que posee el Dungeon; no determina ubicación exacta de escenas.",
+          "url": "https://ga.sbcr.jp/product/9784797372809/"
         }
       ],
       "temporal": {
@@ -846,7 +987,25 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "city_level",
+        "reason": "Orario es solo contexto urbano de la actividad de la Guild; el lugar físico exacto de la asesoría no está documentado."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "related_context",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "city_level",
+          "context": "Contexto urbano general de la Guild; no confirma el sitio de la conversación con Eina.",
+          "sourceUrls": [
+            "https://ga.sbcr.jp/product/9784797372809/",
+            "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-EINA-ADVISOR-001.md"
+          ]
+        }
+      ]
     },
     {
       "id": "EVT-DM-RYUU-JURA-PURSUIT-001",
@@ -912,7 +1071,25 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "dungeon_general",
+        "reason": "La sinopsis del volumen 13 y la referencia secundaria sitúan el arco en el marco de Rivira/Jura, pero falta cotejo primario del lugar preciso de persecución."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "related_context",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "dungeon_general",
+          "context": "Contexto relacionado del arco de Rivira/Jura; no implica que toda la persecución ocurra en un único punto del Dungeon.",
+          "sourceUrls": [
+            "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+            "https://danmachi.fandom.com/wiki/Timeline"
+          ]
+        }
+      ]
     },
     {
       "id": "EVT-DM-JUGGERNAUT-RETURN-001",
@@ -986,7 +1163,25 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "dungeon_general",
+        "reason": "La nueva aparición se relaciona con el arco del volumen 13 y el Dungeon, pero el localizador de la escena sigue pendiente; no se asigna zona ni piso."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "related_context",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "dungeon_general",
+          "context": "Contexto del arco del Juggernaut; no se afirma una posición concreta ni se trazan rutas.",
+          "sourceUrls": [
+            "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+            "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_13/Synopsis"
+          ]
+        }
+      ]
     },
     {
       "id": "EVT-DM-JUGGERNAUT-DEFEAT-001",
@@ -1047,8 +1242,78 @@
       },
       "narrativeOrigin": {
         "kind": "published_reference"
-      }
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "dungeon_general",
+        "reason": "La sinopsis editorial del volumen 14 coloca a Bell y Ryu profundamente dentro del Dungeon. El vínculo se limita al Dungeon general; no crea una ficha de piso ni coordenadas."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "dungeon_general",
+          "context": "Dentro del Dungeon durante la crisis descrita como piso 37; sin ficha de piso ni coordenada.",
+          "sourceUrls": [
+            "https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel"
+          ]
+        }
+      ]
     }
   ],
-  "temporalModelVersion": 1
+  "temporalModelVersion": 1,
+  "locations": [
+    {
+      "id": "LOC-ORARIO",
+      "type": "location",
+      "recordPath": "places/orario.md",
+      "name": "Orario",
+      "verificationStatus": "verified",
+      "spatialPrecision": "city_level",
+      "description": "Ciudad laberíntica asociada a la historia principal de Bell y al Dungeon.",
+      "sourceUrls": [
+        "https://ga.sbcr.jp/product/9784797372809/"
+      ],
+      "relationships": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "associated_with",
+          "sourceUrls": [
+            "https://ga.sbcr.jp/product/9784797372809/"
+          ],
+          "label": "Orario posee el Dungeon subterráneo; solo se representa la relación general."
+        }
+      ]
+    },
+    {
+      "id": "LOC-DUNGEON",
+      "type": "location",
+      "recordPath": "places/dungeon.md",
+      "name": "Dungeon",
+      "verificationStatus": "verified",
+      "spatialPrecision": "dungeon_general",
+      "description": "Laberinto subterráneo asociado a Orario. No se registra topología de pisos ni coordenadas.",
+      "sourceUrls": [
+        "https://ga.sbcr.jp/product/9784797372809/"
+      ],
+      "relationships": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "associated_with",
+          "sourceUrls": [
+            "https://ga.sbcr.jp/product/9784797372809/"
+          ],
+          "label": "El Dungeon está asociado geográfica y narrativamente a Orario."
+        }
+      ]
+    }
+  ],
+  "mapPresentation": {
+    "type": "non_geographic_relationship_schematic",
+    "label": "Esquema de relaciones · no geográfico · sin escala",
+    "hasGeographicCoordinates": false,
+    "scale": null,
+    "note": "Los nodos representan fichas y vínculos documentados del corpus. El orden visual no es orientación, distancia, coordenadas, barrios, rutas ni topología canónica."
+  }
 }

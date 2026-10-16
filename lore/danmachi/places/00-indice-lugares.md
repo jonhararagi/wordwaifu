@@ -6,7 +6,8 @@
 
 | ID sugerido | Lugar | Relaciones para investigar | Estado |
 |---|---|---|---|
-| DM-WORLD-001 | [Orario](../canon/01-mundo-orario.md) | Ciudad central, Dungeon, Guild, Familias | Ficha general provisional; falta cotejo interno de novelas |
+| DM-WORLD-001 | [Orario y el mundo de DanMachi](../canon/01-mundo-orario.md) | Escenario narrativo general, ciudad, Guild y Familias | Setting provisional; no sustituye una ficha geográfica |
+| [LOC-ORARIO](orario.md) | Orario | Ciudad vinculada al Dungeon y al inicio de la historia de Bell | Fuente editorial oficial para identidad general; sin coordenadas ni plano urbano |
 | [LOC-DUNGEON](dungeon.md) | Dungeon | Orario, Guild, aventureros, pisos y expediciones | Ficha de ubicación parcial; fuente editorial oficial para el marco general |
 | LOC-BABEL | Torre de Babel | Relación espacial con Dungeon y funciones institucionales | Candidato; ficha individual pendiente de fuentes |
 | LOC-GUILD | Sede de la Guild | Registro, misiones, asesores, Eina | Candidato; separar edificio físico de institución |
