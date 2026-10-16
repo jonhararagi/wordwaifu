@@ -765,3 +765,5 @@ td,th{border-color:#30364e}
 .dm-visual-lightbox-close{float:right;border:1px solid var(--line);border-radius:7px;background:#1c2a36;color:var(--text);padding:6px 9px;cursor:pointer}
 @media(max-width:760px){.dm-visual-controls,.dm-visual-local-form,.dm-visual-rights-grid{grid-template-columns:1fr}.dm-visual-full-row,.dm-visual-checkbox,.dm-visual-caption-label,.dm-visual-form-actions{grid-column:1}.dm-visual-references-panel{padding:10px}}
 
+
+.dm-visual-watermark-placement-note{grid-column:1/-1}

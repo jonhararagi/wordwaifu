@@ -430,6 +430,7 @@ async function run() {
     // TLM-004: remote official portraits stay source links; local resources preview offline and obey rights gates.
     await page.waitForFunction(() => (document.querySelector("#dm-visual-status")?.textContent || "").includes("referencias registradas"), null, { timeout: 10000 });
     assert.ok((await page.locator("#dm-visual-reference-general").innerText()).includes("Bell Cranel"));
+    assert.ok((await page.locator("#dm-visual-watermark-placement-note").innerText()).includes("no detecta caras"));
     assert.ok(await page.locator("#dm-visual-reference-general .dm-visual-placeholder").count() > 0);
     assert.equal(await page.locator("#dm-visual-reference-general img").count(),0,"Remote official art is link-only until embedding conditions are verified.");
     assert.ok(await page.locator("#dm-visual-reference-general a[href='https://danmachi.com/danmachi5/character/']").count()>0);
