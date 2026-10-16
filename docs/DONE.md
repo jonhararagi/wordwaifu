@@ -1,58 +1,57 @@
 PARTIAL
 
-# WordWaifu — Punto de continuidad del CEREBRO / BOT OBRERO
+# WordWaifu — Punto de continuidad CEREBRO / BOT OBRERO
 
-**Última actualización:** 2026-10-16  
-**Resultado funcional:** el atlas temporal-geográfico continúa PARTIAL.  
-**Tarea activa única:** TLM-002 — contrato e implementación del modelo temporal explícito.
+**Tarea cerrada:** TLM-002 — Modelo temporal explícito  
+**Fecha:** 2026-10-16  
+**Estado de TLM-002:** DONE / PASS_CI  
+**Estado del atlas completo:** PARTIAL — falta TLM-003 (conexión geográfica), TLM-004 (imágenes/procedencia) y gates end-to-end/manuales pendientes.
 
-## Estado aceptado por CEREBRO
+## Rama y HEAD
 
-- **TLM-001 — DONE como auditoría documental**, no como finalización del producto.
-- Informe: [`docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md`](TLM-001-ATLAS-TEMPORAL-AUDIT.md).
-- Commit que cerró la auditoría: [`1611254124e6fa2eb1186a803fca0bc712ef6dab`](https://github.com/jonhararagi/wordwaifu/commit/1611254124e6fa2eb1186a803fca0bc712ef6dab).
-- **PASS_CI** para ese SHA: [Validate WordWaifu #38934243074](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243074) y [DanMachi Lore and Retrieval Integrity #38934243080](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243080), ambos `success`.
-- Hallazgos críticos: ninguno de los 15 eventos posee un ID de ubicación; no hay modelo de fecha estructurado; los controles de continuidad no demuestran que existan eventos en todas ellas; el panel temporal carece de pruebas UI específicas.
-- Ningún cambio funcional del atlas fue incluido en TLM-001.
+- Repositorio: jonhararagi/wordwaifu.
+- Rama autorizada: work/story-completion-danmachi-audit-2026-10.
+- HEAD BEFORE: a97206f2ecb7f4f50aec6146160dbe0fe9a0e85f.
+- SHA de implementación validado: 4d75c97aa690ddba73ec6ef09eb0fbefef06d342.
+- HEAD AFTER documental: consultar la referencia real de la rama después del commit que sobrescribe este archivo.
+- main: no modificada.
+- PR: no abierto, cerrado, modificado ni fusionado.
 
-## Rama y límites
+## Informe y contrato
 
-- Repositorio: `jonhararagi/wordwaifu`.
-- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- HEAD del cierre de TLM-001: `1611254124e6fa2eb1186a803fca0bc712ef6dab`.
-- HEAD previo a esta actualización de continuidad: `301995f49392e2f6603d8dfbeb9deaae437bf4c2` (actualización documental de estado).
-- HEAD AFTER: consultar la referencia real de rama en GitHub tras este commit de DONE; no escribir el SHA final dentro del mismo árbol que lo produce.
-- `main`: no modificada.
-- PRs: no abiertos, fusionados, cerrados ni modificados.
-- CI de los commits documentales posteriores a `1611254`: no asumir éxito por herencia; verificar workflows ligados al SHA más reciente.
+- Informe: docs/TLM-002-TEMPORAL-MODEL-REPORT.md.
+- Contrato completado: docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md.
+- Esquema: docs/DANMACHI-TEMPORAL-MODEL.md.
 
-## TLM-002 — orden activa
+## Trabajo realizado
 
-Contrato y criterios completos: [`docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md`](TLM-002-TEMPORAL-MODEL-CONTRACT.md).
+- Conservado schemaVersion 1 y dateLabel; añadido temporalModelVersion 1.
+- Migrados los 15 eventos sin modificar IDs, dateLabel, evidenceStatus, continuityScopes, fuentes ni detailPath.
+- Tipos migrados: 1 unknown, 11 relative_order, 2 relative_offset y 1 anchor.
+- T0 queda como ancla, no una fecha de calendario. T−7 y T−5 son desplazamientos aproximados con fuentes enlazadas; T−5 sigue con verificación primaria pendiente.
+- Incluidos absolute_date y approximate_interval como variantes probadas con fixtures sintéticos en memoria; no se añadieron fechas absolutas ni intervalos inventados al dataset real.
+- narrativeOrigin separa published_reference, user_hypothesis, user_plan y author_au de evidenceStatus y continuityScopes.
+- El validador comprueba versiones, variantes, precisión, calendario, límites de intervalo, anclas/referencias, unidades, fuentes enlazadas y reglas de continuidad de hipótesis/planes.
+- La UI muestra clase/precisión temporal aparte del dateLabel y del estado de evidencia.
+- Se preserva compatibilidad para dataset heredado completo sin los campos nuevos; las mezclas de esquema se rechazan.
+- No se conectaron lugares ni se añadieron imágenes.
 
-El BOT OBRERO debe implementar un modelo estructurado y validable que distinga:
-- fecha absoluta solo cuando la fuente y el calendario lo permitan;
-- intervalo aproximado con límites respaldados;
-- desplazamiento relativo a un ancla, conservando precisión;
-- orden relativo sin distancia calculable;
-- fecha desconocida/pendiente;
-- hipótesis, plan narrativo y AU sin confundirlos con el estado de evidencia o con continuidad.
+## Pruebas — PASS_CI para el SHA de implementación 4d75c97aa690ddba73ec6ef09eb0fbefef06d342
 
-Debe migrar de manera conservadora los 15 eventos existentes, conservar `dateLabel` por compatibilidad o probar una migración explícita, conservar fuentes y `detailPath`, mantener T0 como ancla relativa y añadir validación/pruebas de cada variante. La UI debe comunicar clase y precisión sin exagerar la certeza. No añadir fechas absolutas por inferencia.
-
-### Fuera de alcance de TLM-002
-
-- No conectar acontecimientos al mapa geográfico ni inventar localizaciones/coordenadas.
-- No incorporar imágenes de anime/novelas ni desarrollar marcas de agua.
-- No rellenar huecos de canon con wikis o inferencias.
-- No modificar `main`, fusionar ramas ni alterar PR.
+- [Validate WordWaifu #38941141919](https://github.com/jonhararagi/wordwaifu/actions/runs/38941141919) — success; incluye sintaxis, verificador temporal, tests temporales/catálogo y Chromium browser smoke.
+- [DanMachi Lore and Retrieval Integrity #38941142159](https://github.com/jonhararagi/wordwaifu/actions/runs/38941142159) — success; incluye sintaxis, pruebas del corpus/catálogo y Chromium browser smoke.
+- NOT_RUN local: no se ejecutaron comandos Node/Playwright desde este agente; no se presenta la inspección estática como ejecución.
+- NOT_RUN: inspección visual/manual en Windows 11.
+- Los tests con fechas absolutas/intervalos son fixtures aislados y no forman parte del canon publicado.
 
 ## Próxima acción exacta
 
-**BOT OBRERO: ejecutar TLM-002 conforme a `docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md`.** Antes de escribir, comprobar el HEAD actual y leer el contrato y `docs/WORK_PROTOCOL.md`. Entregar informe con variante de esquema, correspondencia de los 15 eventos, archivos, pruebas ligadas al SHA, limitaciones y estado final. Después actualizar `docs/STATUS.md` y sobrescribir este archivo con el nuevo punto de reanudación.
+**TLM-003 — conexión temporal-geográfica del atlas**, cuando se ordene. Vincular eventos y lugares mediante IDs estables; no inventar coordenadas ni ubicaciones, y mostrar “ubicación desconocida” cuando no haya evidencia.
 
-## Protocolo de reanudación si se corta el chat
+No iniciar TLM-004 ni TLM-005 dentro de este cierre. El atlas completo permanece PARTIAL.
 
-1. Abrir [control Cerebro/Obrero](CEREBRO_BOT_OBRERO_CONTROL.md), [STATUS](STATUS.md), este DONE y el [contrato TLM-002](TLM-002-TEMPORAL-MODEL-CONTRACT.md).
-2. Consultar el HEAD real de la rama autorizada y los workflows asociados.
-3. Retomar TLM-002 solamente; no comenzar TLM-003 hasta que TLM-002 tenga criterios verificados y cierre persistido.
+## Recuperación
+
+1. Leer docs/CEREBRO_BOT_OBRERO_CONTROL.md, docs/STATUS.md y este DONE.
+2. Verificar el HEAD actual y los workflows del SHA documental más reciente.
+3. Retomar TLM-003 solo tras la orden correspondiente; no repetir la migración TLM-002.

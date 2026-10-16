@@ -12,10 +12,10 @@ Todas las variantes requieren sourceUrls: una lista no vacía de URLs HTTPS que 
 
 | kind | Campos relevantes | Significado |
 |---|---|---|
-| absolute_date | value, calendar, precision: day / month / year | Fecha calendárica; value debe concordar con la precisión. El calendario es obligatorio. Ningún evento actual usa esta variante. |
+| absolute_date | value, calendar, precision: day, month o year | Fecha calendárica; value debe concordar con la precisión. El calendario es obligatorio. Ningún evento actual usa esta variante. |
 | approximate_interval | lower, upper, precision: approximate | Límites temporales respaldados. Cada límite tiene value, calendar y precision. Calendarios distintos o límites invertidos son inválidos. Ningún evento actual se ajusta a límites publicados justificables. |
-| relative_offset | anchorId, direction: before / after, amount, unit, precision: approximate / estimated / exact | Desplazamiento numérico respecto a un ancla explícita. La cantidad es positiva; unit usa second, minute, hour, day, week, month, year, decade o century. |
-| relative_order | relation: before / after / between / overlaps, referenceIds, distanceKnown: false, precision: order_only | Orden/correspondencia sin calcular una distancia. between requiere exactamente dos referencias; otras relaciones, una. Todas las referencias deben existir como evento o ancla. |
+| relative_offset | anchorId, direction: before / after, amount, unit, precision: approximate, estimated o exact | Desplazamiento numérico respecto a un ancla explícita. La cantidad es positiva; unit usa second, minute, hour, day, week, month, year, decade o century. |
+| relative_order | relation: before, after, between u overlaps, referenceIds, distanceKnown: false, precision: order_only | Orden/correspondencia sin calcular una distancia. between requiere exactamente dos referencias; otras relaciones, una. Todas las referencias deben existir como evento o ancla. |
 | unknown | reason, precision: unknown | La fecha no está establecida; exige motivo y no permite fabricar valor de fecha. |
 | anchor | anchorId, precision: anchor | El propio evento define el ancla de trabajo; no es una fecha calendárica. |
 

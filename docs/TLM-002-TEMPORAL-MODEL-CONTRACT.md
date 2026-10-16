@@ -2,10 +2,10 @@
 
 **Autoriza:** CEREBRO  
 **Ejecuta:** BOT OBRERO  
-**Estado:** IN_PROGRESS  
+**Estado:** DONE — implementación y verificación CI completadas.  
 **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`  
 **Dependencia:** TLM-001 aceptada como auditoría documental.  
-**Base de trabajo inicial:** HEAD `1611254124e6fa2eb1186a803fca0bc712ef6dab`; comprobar el HEAD real antes de empezar.  
+**Base de trabajo inicial:** HEAD `1611254124e6fa2eb1186a803fca0bc712ef6dab`. **HEAD BEFORE real:** `a97206f2ecb7f4f50aec6146160dbe0fe9a0e85f`. **SHA de implementación validado:** `4d75c97aa690ddba73ec6ef09eb0fbefef06d342`.  
 **No tocar:** `main`; no merge ni cambios de PR sin autorización expresa.
 
 ## Objetivo
@@ -61,17 +61,17 @@ No es obligatorio que la representación interna copie estos textos literalmente
 
 ## Criterios de aceptación
 
-- [ ] Contrato temporal documentado: variantes, tipos, campos requeridos/opcionales, reglas de ordenación, validación, compatibilidad y ejemplos.
-- [ ] Los 15 acontecimientos existentes tienen datos temporales tipados y cada asignación es justificable.
-- [ ] Las etiquetas `dateLabel` siguen disponibles o se migra de forma explícita y probada; no hay regresión de render.
-- [ ] El validador detecta variantes inválidas, anclas rotas, unidades inválidas, intervalos invertidos, precisión incompatible, referencias faltantes y fuentes temporales que no pertenecen al evento.
-- [ ] Se prueba que T−7 y T−5 permanecen aproximados y distintos; T0 continúa sin año/mes/día; un estado desconocido no se transforma en una fecha.
-- [ ] Hay fixtures de prueba para fecha absoluta, intervalo aproximado, relativo a ancla, orden relativo, desconocido, hipótesis y plan/AU; los fixtures hipotéticos no se insertan como hechos de canon.
-- [ ] Se conserva la separación de continuidad y los 15 `detailPath` actuales.
-- [ ] La UI indica la clase/precisión temporal sin mostrar certeza que los datos no tienen.
-- [ ] Las pruebas existentes y nuevas terminan en PASS para el SHA exacto en CI. Si una prueba no puede ejecutarse, se deja NOT_RUN con causa y no se declara DONE.
-- [ ] Se actualizan `docs/STATUS.md`, este documento con resultado, y se sobrescribe `docs/DONE.md` como punto de recuperación.
-- [ ] No se añadió integración geográfica ni imágenes; eso queda en TLM-003/TLM-004.
+- [x] Contrato temporal documentado: variantes, tipos, campos requeridos/opcionales, reglas de ordenación, validación, compatibilidad y ejemplos.
+- [x] Los 15 acontecimientos existentes tienen datos temporales tipados y cada asignación es justificable.
+- [x] Las etiquetas `dateLabel` siguen disponibles o se migra de forma explícita y probada; no hay regresión de render.
+- [x] El validador detecta variantes inválidas, anclas rotas, unidades inválidas, intervalos invertidos, precisión incompatible, referencias faltantes y fuentes temporales que no pertenecen al evento.
+- [x] Se prueba que T−7 y T−5 permanecen aproximados y distintos; T0 continúa sin año/mes/día; un estado desconocido no se transforma en una fecha.
+- [x] Hay fixtures de prueba para fecha absoluta, intervalo aproximado, relativo a ancla, orden relativo, desconocido, hipótesis y plan/AU; los fixtures hipotéticos no se insertan como hechos de canon.
+- [x] Se conserva la separación de continuidad y los 15 `detailPath` actuales.
+- [x] La UI indica la clase/precisión temporal sin mostrar certeza que los datos no tienen.
+- [x] Las pruebas existentes y nuevas terminan en PASS para el SHA exacto en CI. Si una prueba no puede ejecutarse, se deja NOT_RUN con causa y no se declara DONE.
+- [x] Se actualizan `docs/STATUS.md`, este documento con resultado, y se sobrescribe `docs/DONE.md` como punto de recuperación.
+- [x] No se añadió integración geográfica ni imágenes; eso queda en TLM-003/TLM-004.
 
 ## Archivos candidatos a inspeccionar/modificar
 
@@ -89,3 +89,17 @@ No es obligatorio que la representación interna copie estos textos literalmente
 ## Entrega requerida
 
 Informe en GitHub con: HEAD BEFORE/AFTER, archivos, variante de esquema elegida y razón, tabla de migración de 15 eventos, pruebas con SHA, resultados PASS_CI/PASS_STATIC/NOT_RUN, limitaciones, estado de la fase y siguiente tarea exacta. Si una ambigüedad de modelado afecta la compatibilidad o puede borrar significado existente, detener el cambio destructivo y documentar la alternativa sin inventar datos.
+
+
+## Resultado de ejecución — cierre TLM-002 (2026-10-16)
+
+- Modelo documentado: docs/DANMACHI-TEMPORAL-MODEL.md.
+- Informe de correspondencia de los 15 IDs: docs/TLM-002-TEMPORAL-MODEL-REPORT.md.
+- Implementación y datos: commit 4d75c97aa690ddba73ec6ef09eb0fbefef06d342.
+- PASS_CI: Validate WordWaifu #38941141919 y DanMachi Lore and Retrieval Integrity #38941142159, ambos success en ese SHA; ambos ejecutaron browser smoke y el workflow de lore ejecutó también la validación de catálogo/enlaces.
+- NOT_RUN local: este agente no ejecutó Node/Playwright localmente; la ejecución observada corresponde al CI real anterior.
+- Se conserva schemaVersion 1 y dateLabel; temporalModelVersion 1 añade temporal/narrativeOrigin. El modelo actual tiene 1 unknown, 11 relative_order, 2 relative_offset y 1 anchor. Ningún evento actual usa absolute_date ni approximate_interval porque los 15 registros no acreditan fechas calendáricas ni límites numéricos para esos tipos.
+- Se mantienen evidenceStatus y continuityScopes originales, sin convertir published_reference en sinónimo de canon confirmado. No se añadieron hipótesis/eventos ficticios al dataset.
+- No se incorporaron ubicaciones, coordenadas ni imágenes; TLM-003 y TLM-004 no se iniciaron.
+
+**TLM-002: DONE.** El producto completo del atlas sigue PARTIAL por las brechas geográficas, de cobertura y de verificación documentadas en TLM-001.

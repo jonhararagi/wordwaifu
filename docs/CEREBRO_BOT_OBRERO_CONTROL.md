@@ -79,7 +79,7 @@ Criterios de aceptación:
 - [x] Informe persistido, STATUS actualizado y DONE sobrescrito con punto de reanudación.
 
 ### TLM-002 — Modelo temporal explícito
-**Estado: IN_PROGRESS — autorizado por CEREBRO.** Orden y criterios completos en [TLM-002 — Contrato del modelo temporal](TLM-002-TEMPORAL-MODEL-CONTRACT.md).
+**Estado: DONE — implementación y CI confirmados para el SHA 4d75c97aa690ddba73ec6ef09eb0fbefef06d342.** Ver informe TLM-002-TEMPORAL-MODEL-REPORT.md, contrato TLM-002-TEMPORAL-MODEL-CONTRACT.md y modelo DANMACHI-TEMPORAL-MODEL.md.
 
 Alcance exclusivo de esta fase: contrato temporal estructurado, migración conservadora de los 15 eventos, validación, pruebas y presentación básica de la clase/precisión temporal. Mantener fecha, evidencia, origen narrativo y continuidad como dimensiones diferenciadas. No conectar ubicaciones al mapa ni trabajar en imágenes; quedan en TLM-003/TLM-004.
 
@@ -95,7 +95,7 @@ Alcance exclusivo de esta fase: contrato temporal estructurado, migración conse
 Criterio: elegir un período muestra únicamente eventos y presencias compatibles con ese período, y los enlaces no duplican fichas.
 
 ### TLM-004 — Panoramas e imágenes de referencia con procedencia
-**Estado: IN_PROGRESS — autorizado por CEREBRO; ejecutar el contrato registrado en [TLM-002](TLM-002-TEMPORAL-MODEL-CONTRACT.md).**
+**Estado: NOT_STARTED — fuera de TLM-002; no hay autorización de ejecución en este cierre.**
 
 - Inspeccionar primero el diálogo y la política existentes en `docs/CONTENT_RIGHTS_AND_TAKEDOWN.md` y la UI.
 - Separar: enlaces a imágenes oficiales externas, imágenes aportadas por el usuario con derechos/permiso, y recursos propios o con licencia compatible.
@@ -121,7 +121,7 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 - Existe una cronología DanMachi previa con eras/eventos y ancla relativa; esto es una base parcial, no prueba de cronología completa.
 - TLM-001 ya confirmó cobertura/precisión temporal y desconexión geográfica en `docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md`; la implementación sigue incompleta.
 - La petición de imágenes no autoriza copiar recursos oficiales al repositorio.
-- TLM-001 está DONE como auditoría; el producto/atlas sigue PARTIAL. TLM-002 es la única tarea activa; TLM-003, TLM-004 y TLM-005 permanecen NOT_STARTED.
+- TLM-001 está DONE como auditoría; el producto/atlas sigue PARTIAL. TLM-002 está DONE; la implementación del atlas sigue PARTIAL. TLM-003 es la siguiente fase aún NOT_STARTED; TLM-004 y TLM-005 también siguen NOT_STARTED.
 
 ## 7. Registro de entregas
 
@@ -129,7 +129,8 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 |---|---|---|---|---|
 | 2026-10-16 | Establecer control persistente Cerebro/Obrero y programa TLM | DONE | Ver commit de control y docs/DONE.md | TLM-001 quedó completada como auditoría documental; las brechas funcionales siguen PARTIAL. |
 | 2026-10-16 | TLM-001 — Auditoría del Atlas temporal | DONE (aceptada por CEREBRO) | commit `1611254124e6fa2eb1186a803fca0bc712ef6dab`; CI runs `38934243074` y `38934243080` PASS en ese SHA | Atlas PARTIAL; 0/15 eventos conectados a lugares; fechas libres; TLM-002 autorizada. |
-| 2026-10-16 | TLM-002 — Modelo temporal explícito | IN_PROGRESS | `docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md` | Una sola tarea activa. Mantener canon/evidencia/continuidad/origen narrativo separados; no tocar geografía ni imágenes.
+| 2026-10-16 | TLM-002 — Modelo temporal explícito | DONE / PASS_CI | 4d75c97aa690ddba73ec6ef09eb0fbefef06d342; runs 38941141919 y 38941142159 success | 15 eventos migrados; dateLabel intacto; esquema aditivo; geografía e imágenes no tocadas. Ver docs/TLM-002-TEMPORAL-MODEL-REPORT.md. |
+| 2026-10-16 | Próxima fase | NOT_STARTED | TLM-003 pendiente de orden | Conectar eventos a lugares por IDs estables; no inventar ubicaciones ni coordenadas. |
 
 ## 8. Plantilla de reporte del BOT OBRERO
 

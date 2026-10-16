@@ -2,19 +2,19 @@
 
 **Este bloque prevalece sobre las notas históricas siguientes cuando expresen estados anteriores.**
 
-- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
-- **HEAD de inicio de auditoría TLM-001:** `8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478`.
-- **HEAD de cierre de TLM-001:** `1611254124e6fa2eb1186a803fca0bc712ef6dab`.
-- **TLM-001:** DONE como auditoría; **producto/atlas: PARTIAL**.
-- **Verificación CEREBRO de CI en el SHA de cierre TLM-001:** [Validate WordWaifu #38934243074](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243074) y [DanMachi Lore and Retrieval Integrity #38934243080](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243080), ambos terminados en `success` para `1611254124e6fa2eb1186a803fca0bc712ef6dab`.
-- **Hallazgos críticos:** 0/15 eventos enlazados a ubicaciones por ID; etiquetas temporales en texto libre; la cronología DanMachi no consulta el mapa SVG general del proyecto.
-- **Única tarea activa:** **TLM-002 — modelo temporal explícito**, con orden y criterios persistidos en [`docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md`](TLM-002-TEMPORAL-MODEL-CONTRACT.md).
-- **TLM-003:** conexión de eventos a lugares, NOT_STARTED.
-- **TLM-004:** panoramas/imágenes y procedencia, NOT_STARTED.
-- **TLM-005:** verificación end-to-end, NOT_STARTED.
-- **Control de agentes:** [`docs/CEREBRO_BOT_OBRERO_CONTROL.md`](CEREBRO_BOT_OBRERO_CONTROL.md).
-- **Punto de reanudación:** [`docs/DONE.md`](DONE.md).
-- **Límites:** `main` sin modificaciones; sin merge ni creación/cierre/cambio de PR. El commit documental más reciente no se considera validado por los workflows anteriores salvo que una ejecución asociada a ese SHA lo confirme.
+- **Rama autorizada:** work/story-completion-danmachi-audit-2026-10.
+- **HEAD BEFORE de TLM-002:** a97206f2ecb7f4f50aec6146160dbe0fe9a0e85f.
+- **SHA de implementación validado en CI:** 4d75c97aa690ddba73ec6ef09eb0fbefef06d342.
+- **TLM-002 — DONE:** modelo temporal estructurado añadido en compatibilidad aditiva; 15 eventos migrados; dateLabel, fuentes, IDs, evidenceStatus, continuityScopes y detailPath preservados.
+- **PASS_CI para el SHA de implementación:** [Validate WordWaifu #38941141919](https://github.com/jonhararagi/wordwaifu/actions/runs/38941141919) y [DanMachi Lore and Retrieval Integrity #38941142159](https://github.com/jonhararagi/wordwaifu/actions/runs/38941142159), ambos success en 4d75c97aa690ddba73ec6ef09eb0fbefef06d342.
+- **Limitaciones del producto:** el atlas permanece PARTIAL: los acontecimientos siguen sin estar vinculados a ubicaciones geográficas, cobertura de algunas continuidades pendiente, revisión visual manual de Windows 11 NOT_RUN.
+- **Siguiente tarea:** TLM-003 — conectar acontecimientos con lugares mediante IDs estables. Sigue NOT_STARTED; no se inició en TLM-002.
+- **TLM-004:** imágenes y procedencia, NOT_STARTED; no se descargaron ni añadieron imágenes.
+- **TLM-005:** verificación end-to-end más amplia, NOT_STARTED.
+- **Informe TLM-002:** [docs/TLM-002-TEMPORAL-MODEL-REPORT.md](TLM-002-TEMPORAL-MODEL-REPORT.md).
+- **Contrato y esquema:** [docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md](TLM-002-TEMPORAL-MODEL-CONTRACT.md) y [docs/DANMACHI-TEMPORAL-MODEL.md](DANMACHI-TEMPORAL-MODEL.md).
+- main sigue sin modificaciones; no hubo merges ni operaciones con PR. Consultar la referencia de rama para el HEAD posterior exacto del cierre documental.
+
 
 ---
 
