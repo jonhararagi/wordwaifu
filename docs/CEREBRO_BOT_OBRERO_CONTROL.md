@@ -60,7 +60,9 @@ En cada tarea se registrará:
 Objetivo del usuario: poder entender **cuándo** ocurre cada hecho o combate y **en qué zona del mapa** sucede, admitiendo fechas aproximadas o planes hipotéticos sin confundirlos con canon; además, disponer de panoramas visuales útiles sin tratar una marca de agua como permiso de copyright.
 
 ### TLM-001 — Auditar el estado real de la cronología y el mapa
-**Estado: DONE — auditoría persistida en [docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md](TLM-001-ATLAS-TEMPORAL-AUDIT.md). La funcionalidad del atlas sigue PARTIAL; TLM-002 no se inició.**
+**Estado: DONE — auditoría aceptada por CEREBRO.**
+
+Evidencia: [informe TLM-001](TLM-001-ATLAS-TEMPORAL-AUDIT.md), commit `1611254124e6fa2eb1186a803fca0bc712ef6dab`; [Validate WordWaifu #38934243074](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243074) y [DanMachi Lore and Retrieval Integrity #38934243080](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243080), ambos success para ese SHA. El atlas funcional continúa PARTIAL.
 
 Alcance:
 - Inspeccionar `src/danmachi-timeline.js`, `lore/danmachi/timeline/eras-and-events.json`, `src/lore-corpus.js`, `index.html`, `src/styles.css`, pruebas y documentación del atlas.
@@ -77,16 +79,9 @@ Criterios de aceptación:
 - [x] Informe persistido, STATUS actualizado y DONE sobrescrito con punto de reanudación.
 
 ### TLM-002 — Modelo temporal explícito
-**Estado: NOT_STARTED; la auditoría TLM-001 ya está registrada, pero esta fase requiere una orden nueva y no se inició durante la auditoría.**
+**Estado: IN_PROGRESS — autorizado por CEREBRO.** Orden y criterios completos en [TLM-002 — Contrato del modelo temporal](TLM-002-TEMPORAL-MODEL-CONTRACT.md).
 
-Diseñar e implementar, sin romper datos existentes:
-- fecha exacta, intervalo aproximado, fecha relativa a un ancla, orden conocido sin fecha, fecha desconocida e hipótesis/plan;
-- precisión y fuente de la fecha;
-- continuidad separada: canon confirmado, canon aproximado/en investigación, hipótesis del usuario, planificación de historia y AU;
-- evento de combate con participantes, resultado/consecuencias cuando estén respaldados, y vínculos por IDs a lugar/personajes;
-- distinción visual y textual clara entre hechos publicados y eventos inventados.
-
-Criterio: los eventos sin fecha exacta se pueden ordenar o filtrar sin inventar una fecha de calendario ni contaminar el canon.
+Alcance exclusivo de esta fase: contrato temporal estructurado, migración conservadora de los 15 eventos, validación, pruebas y presentación básica de la clase/precisión temporal. Mantener fecha, evidencia, origen narrativo y continuidad como dimensiones diferenciadas. No conectar ubicaciones al mapa ni trabajar en imágenes; quedan en TLM-003/TLM-004.
 
 ### TLM-003 — Cronología conectada al mapa
 **Estado: NOT_STARTED; depende de TLM-001 y TLM-002.**
