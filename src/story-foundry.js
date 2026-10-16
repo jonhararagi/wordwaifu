@@ -85,7 +85,7 @@
       chapters.push({
         id:"CH-" + String(n).padStart(3,"0"), number:n,
         previousChapterId:n > 1 ? "CH-" + String(n - 1).padStart(3,"0") : null,
-        continuityFrom:n > 1 ? "La consecuencia del capítulo " + String(n - 1).padStart(3,"0") + " debe condicionar la situación inicial, los recursos disponibles o la relación que se pone a prueba." : "Establecer el estado inicial, las reglas relevantes y la primera anomalía sin presuponer acontecimientos anteriores.",
+        continuityFrom:n > 1 ? chapters[chapters.length - 1].consequence : "Establecer el estado inicial, las reglas relevantes y la primera anomalía sin presuponer acontecimientos anteriores.",
         title:n === 1 ? "La ruptura del equilibrio" : n === options.chapterCount ? (options.ending === "closed" ? "El precio de la respuesta" : options.ending === "arc" ? "Una victoria, otra frontera" : "La pregunta que permanece") : fn.name + ": " + (n % 2 ? "la elección" : "su precio"),
         arcKey:arc.key, arcName:arc.name, narrativeFunction:fn.key,
         objective:goal, obstacle, decision, change, consequence,
