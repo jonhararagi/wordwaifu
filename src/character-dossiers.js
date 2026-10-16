@@ -388,8 +388,7 @@
       relationships: "Su afiliación la conecta con Hermes y con otros miembros de su grupo. Los vínculos personales deben incluir la razón y el contexto narrativo, no solo nombres asociados.",
       conflict: "La información disponible necesita una revisión de escenas para evitar que una ficha breve se presente como biografía completa. Mantener explícita la incertidumbre.",
       sources: ["https://danmachi.fandom.com/es/wiki/Lulune_Louie", "https://danmachi.fandom.com/wiki/Hermes_Familia"]
-    }
-,
+    },
     "CHAR-ALLEN-FROMEL": {
       "appearance": "Hombre felino de la Freya Familia, reconocible por sus rasgos de gato y su equipo de aventurero. Para detalles finos de vestimenta, usar el retrato oficial de la adaptación elegida.",
       "history": "Allen Fromel pertenece al núcleo de combatientes de la Freya Familia y actúa como uno de sus ejecutores más peligrosos. Su trayectoria está estrechamente ligada a la estructura interna de esa Familia y a los acontecimientos del arco de Freya. La cronología exacta de sus decisiones debe mostrarse con avisos de spoiler y distinguir los hechos de novela de los resúmenes de adaptación.",
