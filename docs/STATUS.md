@@ -1,143 +1,37 @@
-# ESTADO ACTUAL — TLM-005 ACTIVA
-**Actualizado:** 2026-10-16. Este bloque prevalece sobre el historial que sigue.
+# ESTADO ACTUAL — TLM-005 CERRADA / PASS_CI
+
+**Actualizado:** 2026-10-16. Este bloque prevalece sobre cualquier estado histórico a continuación.
 
 - Repositorio: `jonhararagi/wordwaifu`.
-- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- TLM-004: **ACEPTADA por CEREBRO — DONE / PASS_CI**. HEAD documental final comprobado: `ff1622e33ed7c324ebe1bc7c789f12b38296f464`.
-- Evidencia exacta del HEAD documental TLM-004: [Validate WordWaifu #38968385611 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38968385611) y [DanMachi Lore and Retrieval Integrity #38968385564 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38968385564). Ambos reportan `head_sha=ff1622e33ed7c324ebe1bc7c789f12b38296f464`.
-- SHA de implementación funcional TLM-004: `8960fdd11ecff5fd66d69c1bae221a13f12342c4`; el cierre no confunde este SHA con el documental.
-- **Única tarea activa: TLM-005 — Verificación end-to-end.** Contrato: [TLM-005-END-TO-END-VERIFICATION-CONTRACT.md](TLM-005-END-TO-END-VERIFICATION-CONTRACT.md). Commit que añadió el contrato: `3b3cd5348a85af87139b2f348d36a27dadae195a`.
-- HEAD BEFORE TLM-005 al activarla: `ff1622e33ed7c324ebe1bc7c789f12b38296f464`. El HEAD vivo debe consultarse antes de empezar y tras la última actualización documental.
-- Revisión manual Windows 11: `NOT_RUN` hasta evidencia real. No afirmar inspección manual ni ejecución local de Node/Playwright sin resultados observados.
-- Estado de producto: atlas/enciclopedia global DanMachi sigue `PARTIAL`; no convertir TLM-005 en afirmación de canon completo.
-- Límites invariables: no modificar `main`, no fusionar ramas y no abrir/cerrar/modificar PR.
+- Rama: `work/story-completion-danmachi-audit-2026-10`.
+- HEAD BEFORE real al iniciar TLM-005: `4c2fa980bb2d7bb4e88c246a5178544bfe24d2a3`.
+- SHA de implementación probada: `cd918d4294e3141155e5bda2a5ae0cd9999a618e`.
+- TLM-001: DONE como auditoría; el producto/atlas sigue PARTIAL.
+- TLM-002: DONE / PASS_CI; modelo temporal tipado y migración conservadora de los 15 eventos.
+- TLM-003: DONE / PASS_CI; 15 eventos evaluados, dos lugares, nueve vínculos; esquema no geográfico.
+- TLM-004: DONE / PASS_CI; procedencia, almacenamiento local y gates de derechos/exportación.
+- TLM-005: DONE / PASS_CI para el SHA funcional indicado; informe: [TLM-005 — Verificación end-to-end](TLM-005-END-TO-END-VERIFICATION-REPORT.md).
+- CI para la implementación `cd918d4294e3141155e5bda2a5ae0cd9999a618e`: [Validate WordWaifu #38977028108 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38977028108) y [DanMachi Lore and Retrieval Integrity #38977028080 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38977028080). Ambos tienen `head_sha=cd918d4294e3141155e5bda2a5ae0cd9999a618e`.
+- Cambios funcionales de TLM-005: reglas del modelo temporal para ancla única, puntero de ancla requerido y rechazo de autorreferencias/ciclos de orden; regresiones unitarias y browser E2E de búsqueda temporal y arranque frío con solicitudes externas bloqueadas.
+- La prueba de arranque frío conserva disponibles los archivos del origen local, muestra 15 eventos y placeholders para imágenes oficiales sin embedding autorizado, y verifica que el proyecto activo del contexto principal sigue siendo Asteria.
+- `PASS_CI`: pruebas y Chromium ejecutados en GitHub Actions en el SHA funcional.
+- `PASS_STATIC`: revisión estática de código, contratos, datos y tests.
+- `PASS_REAL`: NOT_RUN para ejecución local directa del agente.
+- Revisión visual/manual Windows 11: NOT_RUN. No se afirma haberla realizado.
+- El atlas/enciclopedia global DanMachi permanece PARTIAL. No se inventaron fechas, ubicaciones, coordenadas ni afirmaciones de canon; siguen explícitos los datos desconocidos/provisionales.
+- `main` no se modificó; no hubo merge ni PR creado, cerrado o modificado.
+- El HEAD documental final es el tip real de esta rama después del commit de cierre; el CI debe ser success en ambos workflows para ese SHA exacto, y sus URLs se registran en la entrega final.
 
----
+## Matriz de cierre TLM-005
 
-# Estado operativo actual de WordWaifu — CEREBRO / BOT OBRERO
-
-**Este bloque prevalece sobre las notas históricas siguientes cuando expresen estados anteriores.**
-
-- Repositorio: `jonhararagi/wordwaifu`.
-- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- HEAD BEFORE real al iniciar TLM-004: `9a492e69f649fefc16fa24d4658a2e134d76bf7b`.
-- HEAD esperado que figuraba en la orden pero no coincidía con el ref consultado: `f863f8ff0be9d5007b0781a613af5d69f8795c8d`.
-- SHA de implementación TLM-004 con CI verificado: `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.
-- TLM-001: DONE como auditoría documental; el atlas/producto completo sigue PARTIAL.
-- TLM-002: DONE / PASS_CI; modelo temporal estructurado y 15 eventos migrados.
-- TLM-003: DONE / PASS_CI; 15 eventos evaluados, 2 fichas de lugar y 9 vínculos; mapa relacional no geográfico.
-- TLM-004: DONE / PASS_CI en el SHA de implementación anterior. Informe: [TLM-004 — Panoramas visuales y procedencia](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-REPORT.md).
-- Gate validado: [Validate WordWaifu #38967733362, intento 2](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733362) y [DanMachi Lore and Retrieval Integrity #38967733260](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733260), ambos success para `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.
-- Los retratos oficiales remotos se conservan como procedencia y se consultan por enlaces HTTPS; no se incrustan sin verificación de las condiciones de uso. No se descargaron ni comitearon imágenes oficiales.
-- Los recursos locales se almacenan mediante la biblioteca existente `WordWaifuArtStudio` (IndexedDB y respaldo local); no se suben a GitHub ni a servicios remotos. La exportación marcada requiere derechos explícitos, política habilitada y confirmación del usuario; conserva el original.
-- `src/app.js` se modificó de forma acotada para eliminar la incrustación remota no verificada de retratos en el archivo de personajes. No se modificó el almacenamiento de Asteria, `main` ni ningún PR.
-- TLM-005: NOT_STARTED y pendiente. Revisión visual/manual de Windows 11: NOT_RUN. Node/Playwright local del agente: NOT_RUN; se ejecutó CI real de Chromium.
-- El atlas y la enciclopedia global de DanMachi siguen parciales; esta tarea cierra el sistema visual/rights-contract, no la cobertura completa del canon.
-- El HEAD documental final es el ref de esta rama después del commit que actualiza este bloque; consultar la referencia de GitHub para el SHA exacto.
-- `main` permanece sin modificar; no se hizo merge ni se abrió/cerró/modificó PR.
-
----
-
-## Registro histórico: cierre documental inicial de TLM-001 — 2026-10-16
-
-## Cierre documental de TLM-001
-
-- Auditoría: [TLM-001 — Auditoría del Atlas temporal de DanMachi](TLM-001-ATLAS-TEMPORAL-AUDIT.md).
-- HEAD BEFORE: `8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478`.
-- Estado de código revisado: el SHA anterior; no hubo cambios funcionales en esta tarea.
-- **PASS_CI** para ese SHA: [Validate WordWaifu run #38933332552](https://github.com/jonhararagi/wordwaifu/actions/runs/38933332552) ejecutó el verificador de cronología, test de cronología y browser smoke y terminó en success.
-- **NOT_RUN local:** este agente no ejecutó Node/Playwright en un entorno local; la evidencia de ejecución se limita al CI enlazado. Revisión manual Windows 11: NOT_RUN.
-- Brecha prioritaria confirmada: no hay locationId/locationIds/placeIds/coordinates/mapPointId en ninguno de los 15 eventos; las fechas no tienen un esquema estructurado; el panel de cronología no tiene cobertura UI dedicada en browser_smoke.cjs.
-- TLM-001 está DONE como auditoría; la implementación del atlas está PARTIAL. TLM-002 sigue NOT_STARTED y no se trabajó en ella.
-
----
-
-- **Rama autorizada activa:** `work/story-completion-danmachi-audit-2026-10`.
-- **Control persistente de agentes:** [`docs/CEREBRO_BOT_OBRERO_CONTROL.md`](CEREBRO_BOT_OBRERO_CONTROL.md).
-- **TLM-001:** DONE como auditoría registrada en [docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md](TLM-001-ATLAS-TEMPORAL-AUDIT.md). El producto/atlas sigue PARTIAL; no se empezó TLM-002.
-- **HEAD de código/lore anterior al arranque de esta organización:** `0fae322ddd17dfe8fa63952d018c5c95cd8578c7`; los dos workflows de validación constan como exitosos para ese SHA en el estado entregado al Cerebro. La documentación de control añadida después no ha sido validada por esos workflows salvo que una ejecución posterior lo confirme.
-- **HEAD BEFORE de TLM-001:** `8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478`, comprobado en el ref de la rama justo antes de la auditoría. El HEAD de cierre es el commit documental que guarda este informe, STATUS, control y DONE; el SHA exacto de cierre se indica en la entrega y en el ref actual de la rama.
-- **Límites:** no tocar `main`, no fusionar ramas, no abrir/cerrar PR sin autorización expresa.
-- **Siguiente paso:** TLM-002 — diseñar el modelo temporal explícito (fecha absoluta/aproximada/relativa/orden desconocido/hipótesis) y sus pruebas. No empezar hasta recibir una orden para esa fase.
-
----
-
-# Estado de WordWaifu
-# Auditoría de candidata DanMachi — 2026-10-14
-
-- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`. No se modifica `main`, no se hace merge y no se abre/cierra PR.
-- **Último SHA de código/lore con ambos workflows confirmados:** `f16adcecb4f8c03cdf20f9a44761475f9d5781e6`. [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519704317) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519704363).
-- **Auditoría de ramas y matriz confirmadas:** `0a1b7f10bad7fc2c9c0ef0d013379ffa55346cd8`. [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519803216) y [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38519803119). Esta actualización de estado crea otro commit documental; su CI debe comprobarse en su propio SHA y no se da por verde por herencia.
-- **DanMachi — catálogo estructurado actual:** 48 registros activos, 67 IDs reservados, 100 documentos de apoyo y 165 archivos registrados por la sincronización. La comprobación del catálogo detecta 151 archivos Markdown. Tipos: 22 personajes, 2 registros de deidad, 1 grupo de personajes, 3 Familias, 7 eventos, 4 eventos de autor/AU, 3 reglas del mundo, 1 escenario, 1 institución/lugar, 1 lugar nuevo, 1 cronología y 2 índices.
-- **Estado honesto de esas 48 fichas:** 0 completas según el criterio estricto de verificación; 25 parciales/provisionales; 23 pendientes (borradores, verificación pendiente o propuestas de AU/autor). Los índices y documentos de investigación no cuentan automáticamente como fichas terminadas.
-- **Roster de adaptación:** 59 identidades únicas. Se incorporaron 24 expedientes de investigación específicos por continuidad procedentes de la rama de integración, conservando los IDs/alias normalizados de la candidata. La UI ahora muestra esos apartados en la continuidad seleccionada, con fuente secundaria y nivel de spoilers explícitos. Los 33 perfiles de `src/character-dossiers.js` se conservan.
-- **Nuevo lugar integrado:** `LOC-DUNGEON`, ficha parcial con fuente editorial oficial del volumen 1 registrada como `DMR-012-SRC-001`. La fuente respalda el marco general de Orario/Dungeon, no la topología interna ni detalles de escenas. La ficha, el índice, el catálogo, la cola y la bitácora quedaron enlazados.
-- **Comparación de ramas actualizada:** candidata `f16adcecb4f8c03cdf20f9a44761475f9d5781e6` frente a `main` `675587f5ef50abd48382a07fc167ca08a26cae3f`: divergidas; candidata +626 / `main` +6 commits exclusivos desde la base común. Los conteos del grafo no equivalen a cherry-picks automáticos. La matriz registra 19 ramas fuente adicionales.
-- **Deltas de mainline:** se conservaron las funciones propias de la candidata y se portaron selectivamente los 24 dossiers. Aún queda revisión semántica de la generación de afirmaciones desde el roster en `src/lore-corpus.js`, y de los deltas de snapshots, editor/generador y persistencia; no se reemplazaron módulos completos.
-- **Canon pendiente:** la escena de aventureros de nivel 8/9 atribuida a *Episode Freya* / Emperatriz sigue sin localizador primario suficiente. No se promueven nombres, niveles ni cronología a canon confirmado.
-- **Rate limit consultado:** el endpoint público anónimo devolvió 57/60 solicitudes REST core y 57/60 code search restantes, con search 10/10; GraphQL 0/0. Esto describe la cuota anónima pública, **no** la cuota OAuth de la conexión GitHub, cuyo endpoint de rate limit no está expuesto por las acciones disponibles. Las operaciones de esta sesión siguieron respondiendo.
-- **Veredicto:** los cambios recientes están guardados en la candidata y los dos workflows pasaron en los SHAs citados. La misión global **no está cerrada**: la cobertura del canon y la consolidación semántica de todas las ramas siguen incompletas; no se autoriza merge por inferencia.
-
-
----
-
-
-## Resumen
-- Producto: WordWaifu · World & Story Foundry.
-- Objetivo: aplicación local/offline-first para organizar universos, canon, atlas temporal, personajes, relaciones, acontecimientos, organizaciones e historias/novelas.
-- **Avance global estimado: 19%** de la visión completa; estimación de alcance, no métrica de líneas de código ni de cobertura.
-- Tecnología: HTML/CSS/JavaScript, SVG, IndexedDB y respaldo de compatibilidad en localStorage.
-- WordWaifu gestiona canon y planificación narrativa; BotImagen gestiona recursos visuales. La candidata de esta rama consolida módulos de historias, lore, expedientes, arte y papelera, pero la integración global sigue en revisión y no debe declararse cerrada.
-
-## GitHub y control de cambios
-- Repositorio: `jonhararagi/wordwaifu`.
-- Rama autorizada de esta misión: `work/story-completion-danmachi-audit-2026-10`. Las referencias a ramas de tareas anteriores en esta sección son contexto histórico, no la rama activa de esta auditoría.
-- `main`: el SHA indicado en la documentación histórica corresponde al commit inicial y está obsoleto; consultar el ref actual antes de cualquier integración. Esta misión no modifica `main`.
-- La comparación de ramas fechada el 2026-10-10 que sigue en el historial es histórica; no acredita la relación actual entre esta candidata y `main`.
-- Las referencias a PR que aparecen en el historial de esta sección corresponden a una instantánea antigua y no deben usarse como estado actual sin volver a consultar GitHub. En esta misión no se ha creado, modificado, fusionado ni cerrado ningún PR.
-- Guardias y regresión de activación: [`6c80626`](https://github.com/jonhararagi/wordwaifu/commit/6c80626a75b4791db296d47eb7d524608ea8977b), [`d6a4d96`](https://github.com/jonhararagi/wordwaifu/commit/d6a4d96c57243bd8ca0bb4a01a1da486894ccb35).
-- Registro de continuidad: [`aea71f6`](https://github.com/jonhararagi/wordwaifu/commit/aea71f6240eaef99ba0e5201416e361e9c8ad4ea).
-- Workflow de validación configurado para pushes en `main` y `work/**`, PR hacia `main` y `workflow_dispatch`: [`4502475`](https://github.com/jonhararagi/wordwaifu/commit/4502475cdf9b536c0c5d6dbf51a83efc7408ae6d).
-
-## Capacidad con evidencia automatizada
-- **WF-001-B:** CRUD de lugares, movimiento SVG y borrado seguro.
-- **WF-002-A/B/C:** CRUD de personajes, acontecimientos y organizaciones con limpieza selectiva de referencias.
-- **WF-003-A:** relaciones con ID estable y proyección compatible.
-- **WF-004-B:** catálogo multiverso y búsqueda contextual por IDs.
-- **WF-004-C.1 · PARCIAL:** snapshots versionados, migración IndexedDB v1→v2, restauración con copia previa y respaldo antes de importar.
-- **WF-004-C.2 · DONE / PASS_REAL histórico:** snapshots previos verificados para los cinco tipos de borrado; límite 25/26 validado. Evidencia histórica: [CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869). No acredita cambios posteriores de C.3.
-
-## HEAD de código validado más reciente
-- SHA: `327360caa66875becbd11e5563fc2988196553a4`.
-- CI: [#38022402137 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137).
-
-## WF-004-C.3 — Papelera y recuperación (PARTIAL)
-- IndexedDB v2→v3 añade el almacén `trash`; la API y la UI permiten enviar proyectos a la papelera, listar, restaurar por ID y borrar permanentemente con confirmación.
-- El proyecto activo está protegido y se conservan/restauran sus snapshots. El catálogo y la búsqueda multiverso filtran tombstones.
-- **Hardening de esta iteración:** `write(project)` valida el tombstone dentro de la transacción de escritura; `saveActive(project)` consulta la papelera antes de escribir el respaldo local y restaura el respaldo previo si detecta la carrera.
-- Chromium verifica que escribir/guardar un ID en papelera se rechace, que el respaldo no sea sobrescrito y que el respaldo de otro universo sobreviva al movimiento y al borrado permanente.
-- **PASS_STATIC:** sintaxis JavaScript y 18 pruebas de esquema.
-- **PASS_REAL:** [CI #38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741), commit de código `2ef649202e1f27db0e0ff0a939e4307933e178de`; sintaxis, 18 pruebas de esquema, Chromium smoke y validador estructural completados.
-- **PASS_REAL:** el smoke ahora crea dos universos con el mismo nombre y distintos IDs, mueve ambos a papelera, restaura uno, borra permanentemente el otro y verifica que sus snapshots e identidad no se mezclan.
-- **NOT_RUN:** cuota real agotada; una excepción simulada no se presenta como cuota real. Revisión visual/manual en Windows 11 también sigue pendiente.
-- **PARTIAL:** quedan los gates de cuota real y revisión manual en Windows 11.
-
-## Gates pendientes — WF-004-C.3 sigue PARTIAL
-- [x] CI de código y regresión duplicada en verde: sintaxis, 18 pruebas de esquema, Chromium y validación estructural; [#38023966741](https://github.com/jonhararagi/wordwaifu/actions/runs/38023966741).
-- [x] El respaldo local de otro universo sobrevive al movimiento a papelera y al borrado permanente.
-- [x] Proyectos con el mismo nombre y distintos IDs permanecen aislados en mover/restaurar/borrar.
-- [ ] Cuota real agotada o limitación del entorno demostrada y documentada; excepciones inyectadas no equivalen a cuota real.
-- [ ] Revisión visual/manual en Windows 11.
-## Límites conocidos del producto
-- Novel Studio completo, generación narrativa avanzada, Continuity Guard integral e integración con BotImagen siguen pendientes.
-- La inspección visual manual en Windows 11 no está acreditada.
-- WF-004-C.3 permanece parcial hasta superar los gates pendientes.
-
-## Protocolo de continuidad
-Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs/WORK_PROTOCOL.md`, `docs/MASTER_VISION.md`, `docs/DATA_MODEL.md` y `docs/TECHNICAL_RESEARCH.md`. Verificar HEAD, CI y PR antes de escribir. Mantener una tarea activa por agente. No tocar `main`, fusionar ni abrir PR sin autorización.
-
-
-## Actualización de continuidad — plan de cuota y Windows 11 (2026-10-10)
-- Se añadió [`docs/WF-004-C3-QUOTA-WINDOWS-TEST-PLAN.md`](WF-004-C3-QUOTA-WINDOWS-TEST-PLAN.md) para definir evidencia `PASS_SIMULATED` frente a `PASS_REAL`, criterios seguros para investigar cuota real y una lista reproducible de revisión manual en Windows 11.
-- Esta adición es documentación, no una ejecución de pruebas: no acredita cuota real ni inspección Windows.
-- **WF-004-C.3 continúa PARTIAL.** Siguientes pasos: implementar/verificar la regresión automatizada de fallo simulado si aún falta; ejecutar CI; realizar cuota real solo en entorno aislado seguro si es viable; mantener Windows 11 como `NOT_RUN` hasta contar con ejecución real.
+| Requisito | Resultado |
+|---|---|
+| Modelo temporal y seis variantes | PASS_CI |
+| 15 eventos / dos lugares, estado de evidencia e incertidumbre | PASS_CI |
+| Filtros, búsqueda temporal y continuidad | PASS_CI |
+| Evento → lugar → evento relacionado → retorno | PASS_CI |
+| Dossiers, relaciones, spoilers y separación de continuidades | PASS_CI |
+| Procedencia visual, derechos, watermark, original intacto y offline | PASS_CI |
+| Arranque limpio con origen externo bloqueado y aislamiento Asteria | PASS_CI |
+| Node/Playwright local del agente | NOT_RUN |
+| Inspección manual Windows 11 | NOT_RUN |

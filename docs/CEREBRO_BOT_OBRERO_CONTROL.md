@@ -91,7 +91,7 @@ Alcance exclusivo de esta fase: contrato temporal estructurado, migración conse
 - La nueva vista es un esquema relacional no geográfico y sin escala; usa los mismos filtros de búsqueda, era y continuidad que el timeline.
 - Navegación evento → lugar → evento relacionado → retorno probada en Chromium; el test confirma que no se cambia el almacenamiento del proyecto activo.
 - No se modificó src/app.js, el mapa Asteria, main o PR; no se añadieron imágenes ni coordenadas. Node/Playwright local y revisión manual Windows 11 siguen NOT_RUN.
-- El atlas/enciclopedia global se mantiene PARTIAL. TLM-004 está DONE / PASS_CI para el SHA de implementación registrado; TLM-005 sigue NOT_STARTED y requiere verificación end-to-end/manual.
+- El atlas/enciclopedia global se mantiene PARTIAL. TLM-004 está DONE / PASS_CI y TLM-005 queda DONE / PASS_CI para el SHA funcional `cd918d4294e3141155e5bda2a5ae0cd9999a618e`. La inspección manual Windows 11 y la ejecución local Node/Playwright permanecen NOT_RUN.
 
 ### TLM-004 — Panoramas e imágenes de referencia con procedencia
 **Estado: DONE / PASS_CI para el SHA de implementación `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.** Informe: [docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-REPORT.md](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-REPORT.md).
@@ -110,24 +110,26 @@ Alcance exclusivo de esta fase: contrato temporal estructurado, migración conse
 Cierre: referencias procedentes; referencias oficiales remotas link-only; recursos del usuario locales; exportación marcada sometida a derechos y confirmación; pruebas y CI PASS en SHA exacto. La enciclopedia/cobertura total de DanMachi y TLM-005 permanecen fuera de este cierre.
 
 ### TLM-005 — Verificación de extremo a extremo
-**Estado: IN_PROGRESS; única tarea activa.** Contrato normativo: [docs/TLM-005-END-TO-END-VERIFICATION-CONTRACT.md](TLM-005-END-TO-END-VERIFICATION-CONTRACT.md).
+**Estado: DONE / PASS_CI para el SHA funcional `cd918d4294e3141155e5bda2a5ae0cd9999a618e`.** Informe: [docs/TLM-005-END-TO-END-VERIFICATION-REPORT.md](TLM-005-END-TO-END-VERIFICATION-REPORT.md).
 
-- HEAD BEFORE al activarse: `ff1622e33ed7c324ebe1bc7c789f12b38296f464`; consultar la rama viva y CI otra vez antes de hacer cambios.
-- Probar temporal `absolute_date`, `approximate_interval`, `relative_offset`, `relative_order`, `unknown` y `anchor` sin elevar fixtures hipotéticos a canon.
-- Ejecutar browser E2E de filtros de continuidad/búsqueda/era, evento → lugar → evento relacionado → vuelta, navegación de fichas/dossiers y aislamiento de Asteria.
-- Verificar enlaces/fuentes visuales TLM-004, placeholders/offline, no incrustación oficial sin permiso, almacenamiento local sin upload, exportación marcada con permisos y conservación del original.
-- Corregir únicamente defectos reproducibles del alcance y añadir pruebas a la suite existente sin duplicación innecesaria.
-- Registrar resultados por SHA exacto; ambos workflows deben estar en `success` para el HEAD documental final. `PASS_REAL`, `PASS_CI`, `PASS_STATIC` y `NOT_RUN` no son intercambiables.
-- Revisión manual Windows 11 y Node/Playwright local permanecen `NOT_RUN` hasta que una ejecución real las respalde.
-- Criterio de cierre: cobertura automatizada pertinente verde, informe TLM-005 persistido, STATUS/control/DONE alineados, limitaciones reales indicadas. El programa TLM no completa por sí mismo el canon global DanMachi.
+- HEAD BEFORE real: `4c2fa980bb2d7bb4e88c246a5178544bfe24d2a3`. SHA funcional: `cd918d4294e3141155e5bda2a5ae0cd9999a618e`.
+- `src/danmachi-timeline.js` ahora exige `anchor.eventId` en el esquema v1; solo el acontecimiento designado puede usar la variante `anchor`; autorreferencias/ciclos de orden temporal se rechazan. La compatibilidad heredada permanece.
+- `tests/test_danmachi_timeline.cjs` cubre las seis variantes, presentación/precisión, ancla única, autorreferencias/ciclos, datos espaciales unknown/provisional y catálogo/lugares. Fechas calendáricas sintéticas aparecen solo en memoria de prueba, no en el dataset de canon.
+- `tests/browser_smoke.cjs` prueba búsqueda de estado desconocido y offset T−7, navegación evento ↔ lugar ↔ evento relacionado ↔ vuelta, y un arranque limpio en Chromium con todos los orígenes externos bloqueados salvo el servidor local.
+- El arranque frío valida carga de 15 eventos, mapa relacional no geográfico, placeholders de retratos oficiales, y que la sesión principal conserve `project-asteria` / `Las Crónicas de Asteria`.
+- Las suites de búsqueda/dossiers/continuidad, derechos visuales TLM-004, watermark, original preservado y offline siguen verdes.
+- [Validate WordWaifu #38977028108 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38977028108) y [DanMachi Lore and Retrieval Integrity #38977028080 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38977028080), ambos en `head_sha=cd918d4294e3141155e5bda2a5ae0cd9999a618e`. Estos son resultados de CI del SHA funcional; el mismo contrato exige CI adicional en el HEAD documental final creado a continuación.
+- Evidencia: `PASS_CI` para las pruebas y Chromium en Actions; `PASS_STATIC` para inspección de módulos y datos. Ejecución local Node/Playwright del agente: `NOT_RUN`. Inspección manual Windows 11: `NOT_RUN`.
+- Sin cambio de canon/datasets o coordenadas. La cobertura global DanMachi se mantiene PARTIAL.
 
+TLM-005 cierra las pruebas automatizables de alcance; no completa el canon global ni sustituye la inspección manual.
 
 ## 6. Estado inicial de este programa
 
 - Existe una cronología DanMachi previa con eras/eventos y ancla relativa; esto es una base parcial, no prueba de cronología completa.
 - TLM-001 ya confirmó cobertura/precisión temporal y desconexión geográfica en `docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md`; la implementación sigue incompleta.
 - La petición de imágenes no autoriza copiar recursos oficiales al repositorio.
-- TLM-001 está DONE como auditoría; TLM-002 y TLM-003 están DONE / PASS_CI para sus SHAs registrados; TLM-004 está DONE / PASS_CI para `8960fdd11ecff5fd66d69c1bae221a13f12342c4`. El producto/atlas global sigue PARTIAL. TLM-005 continúa NOT_STARTED; la revisión manual Windows 11 está NOT_RUN.
+- TLM-001 está DONE como auditoría; TLM-002, TLM-003 y TLM-004 están DONE / PASS_CI para sus SHAs registrados; TLM-005 está DONE / PASS_CI para `cd918d4294e3141155e5bda2a5ae0cd9999a618e`. El producto/atlas global sigue PARTIAL. La revisión manual Windows 11 y la ejecución local Node/Playwright siguen NOT_RUN.
 
 ## 7. Registro de entregas
 
@@ -138,7 +140,7 @@ Cierre: referencias procedentes; referencias oficiales remotas link-only; recurs
 | 2026-10-16 | TLM-002 — Modelo temporal explícito | DONE / PASS_CI | 4d75c97aa690ddba73ec6ef09eb0fbefef06d342; runs 38941141919 y 38941142159 success | 15 eventos migrados; dateLabel intacto; esquema aditivo; geografía e imágenes no tocadas. Ver docs/TLM-002-TEMPORAL-MODEL-REPORT.md. |
 | 2026-10-16 | TLM-003 — Conexión cronología/mapa | DONE / PASS_CI | c9fa2d05de3bb81526523202bea0fb5cb058ae06; runs 38950288434 y 38950288325 success | 15 eventos evaluados; 2 lugares, 9 referencias, esquema no geográfico; ver informe TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md. |
 | 2026-10-16 | TLM-004 — Panoramas visuales y procedencia | DONE / PASS_CI | SHA de implementación `8960fdd11ecff5fd66d69c1bae221a13f12342c4`; Validate #38967733362 (reintento) y DanMachi #38967733260 success; ver informe TLM-004 | Seis referencias externas link-only; 15 eventos + 2 lugares evaluados; storage local, gates de permisos/watermark y archivo de personajes sin embed remoto no verificado. TLM-005 y revisión manual Windows 11 pendientes. |
-| 2026-10-16 | Activación TLM-005 — verificación end-to-end | IN_PROGRESS | Contrato `docs/TLM-005-END-TO-END-VERIFICATION-CONTRACT.md`; baseline TLM-004 documental `ff1622e33ed7c324ebe1bc7c789f12b38296f464`; runs 38968385611 y 38968385564 success en ese SHA | Única tarea activa. Revisar temporal, mapa relacional, navegación, continuidad, búsqueda/dossiers, procedencia/rights, offline y aislamiento Asteria. Windows 11 manual y Node/Playwright local no se consideran ejecutados sin evidencia. |
+| 2026-10-16 | TLM-005 — Verificación end-to-end | DONE / PASS_CI en implementación | `cd918d4294e3141155e5bda2a5ae0cd9999a618e`; Validate #38977028108 y DanMachi #38977028080 success; informe `docs/TLM-005-END-TO-END-VERIFICATION-REPORT.md` | Añadidas guardas de ancla temporal/ciclos, regresiones de seis variantes, búsqueda temporal UI y arranque Chromium con orígenes externos bloqueados/aislamiento Asteria. Windows 11 y ejecución local siguen NOT_RUN; atlas global PARTIAL. |
 
 ## 8. Plantilla de reporte del BOT OBRERO
 
