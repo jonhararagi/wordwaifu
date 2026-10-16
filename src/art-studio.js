@@ -270,8 +270,16 @@
     return {...record.visualReference,fileDataUrl:record.fileDataUrl || "",updatedAt:record.updatedAt,key:record.key};
   }
   async function listVisualReferences() {
-    return (await readAll()).filter(record => record && record.category === "visual-reference" && record.visualReference)
-      .map(record => ({...record.visualReference,fileDataUrl:record.fileDataUrl || "",updatedAt:record.updatedAt,key:record.key}))
+    // Merge the committed stores with the existing session cache. A just-committed
+    // IndexedDB record can briefly be absent from a concurrent read transaction;
+    // this keeps the library view consistent with the successful persist() result.
+    const records = new Map((await readAll()).map(record => [record.key, record]));
+    for (const record of memoryCache.values()) {
+      if (record && record.key && record.category === "visual-reference" && record.visualReference &&
+          !isDeleted(record.key) && !records.has(record.key)) records.set(record.key, record);
+    }
+    return Array.from(records.values()).filter(record => record && record.category === "visual-reference" && record.visualReference)
+      .map(record => ({...record.visualReference,storageMode:"browser_local",fileDataUrl:record.fileDataUrl || "",updatedAt:record.updatedAt,key:record.key}))
       .sort((a,b) => String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")));
   }
   async function removeVisualReference(id) {

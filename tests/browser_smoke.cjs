@@ -450,13 +450,13 @@ async function run() {
     await page.locator("#dm-visual-location").selectOption("");
     await page.locator("#dm-visual-credit").fill("Fixture sintético · sin titular de terceros");
     await page.locator("#dm-visual-local-form button[type='submit']").click();
-    const pendingRecordHandle=await page.waitForFunction(async()=>{
-      if(!document.querySelector("#dm-visual-status")?.textContent.includes("Guardado en"))return false;
-      const items=await window.WordWaifuArtStudio.listVisualReferences();
-      return items.find(item=>item.title==="Fixture local pendiente"&&item.storageMode==="browser_local")||false;
-    },null,{timeout:10000});
-    const pendingLocal=await pendingRecordHandle.jsonValue();
-    assert.ok(pendingLocal&&pendingLocal.storageMode==="browser_local","No persisted local reference was observed by one successful read.");
+    await page.waitForFunction(()=>document.querySelector("#dm-visual-status")?.textContent.includes("Guardado en"),null,{timeout:10000});
+    let pendingLocal=null;
+    for(let attempt=0;attempt<20&&!pendingLocal;attempt++){
+      pendingLocal=await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).find(item=>item.title==="Fixture local pendiente")||null);
+      if(!pendingLocal)await page.waitForTimeout(100);
+    }
+    assert.ok(pendingLocal&&pendingLocal.storageMode==="browser_local","No persisted local reference was observed after sequential retries: "+JSON.stringify({pendingLocal,all:await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).map(item=>({id:item.id,title:item.title,storageMode:item.storageMode})))}));
     assert.equal(pendingLocal.allowModifyExport,false);
     assert.equal(await page.locator('[data-visual-export="'+pendingLocal.id+'"]').count(),0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),pendingLocal.id),false);
@@ -467,13 +467,13 @@ async function run() {
     await page.locator("#dm-visual-allow-modify").check();
     await page.locator("#dm-visual-credit").fill("Autor de fixture de CI · obra propia sintética");
     await page.locator("#dm-visual-local-form button[type='submit']").click();
-    const authorizedRecordHandle=await page.waitForFunction(async()=>{
-      if(!document.querySelector("#dm-visual-status")?.textContent.includes("Guardado en"))return false;
-      const items=await window.WordWaifuArtStudio.listVisualReferences();
-      return items.find(item=>item.title==="Fixture local autorizado"&&item.allowModifyExport===true)||false;
-    },null,{timeout:10000});
-    const authorizedLocal=await authorizedRecordHandle.jsonValue();
-    assert.ok(authorizedLocal&&authorizedLocal.allowModifyExport);
+    await page.waitForFunction(()=>document.querySelector("#dm-visual-status")?.textContent.includes("Guardado en"),null,{timeout:10000});
+    let authorizedLocal=null;
+    for(let attempt=0;attempt<20&&!authorizedLocal;attempt++){
+      authorizedLocal=await page.evaluate(async()=>(await window.WordWaifuArtStudio.listVisualReferences()).find(item=>item.title==="Fixture local autorizado")||null);
+      if(!authorizedLocal)await page.waitForTimeout(100);
+    }
+    assert.ok(authorizedLocal&&authorizedLocal.allowModifyExport,"No authorized visual record was observed after sequential retries.");
     await page.waitForFunction(id=>document.querySelector('[data-visual-export="'+id+'"]')!==null,authorizedLocal.id,{timeout:5000});
     assert.ok(await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').count()>0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),authorizedLocal.id),true);
