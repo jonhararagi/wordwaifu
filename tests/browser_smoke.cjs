@@ -470,10 +470,10 @@ async function run() {
     assert.ok(await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').count()>0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),authorizedLocal.id),true);
     const originalBefore=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
-    const downloadPromise=page.waitForEvent("download"),exportDialog=page.waitForEvent("dialog");
+    const visualDownloadPromise=page.waitForEvent("download"),visualExportDialog=page.waitForEvent("dialog");
     await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').click();
-    const rightsDialog=await exportDialog;assert.equal(rightsDialog.type(),"confirm");await rightsDialog.accept();
-    const markedDownload=await downloadPromise;assert.match(markedDownload.suggestedFilename(),/watermarked\.png$/);
+    const rightsDialog=await visualExportDialog;assert.equal(rightsDialog.type(),"confirm");await rightsDialog.accept();
+    const markedDownload=await visualDownloadPromise;assert.match(markedDownload.suggestedFilename(),/watermarked\.png$/);
     const originalAfter=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     assert.equal(originalAfter,originalBefore,"Export must not alter the original local image.");
     assert.match(await page.locator('[data-visual-reference-id="'+authorizedLocal.id+'"]').innerText(),/Overlay informativo de interfaz/);
