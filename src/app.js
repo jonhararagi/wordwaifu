@@ -2722,7 +2722,7 @@
     if(moment.people.length){
       const visualReference=archiveElement("div","archive-moment-visual-reference");
       visualReference.appendChild(archiveElement("p","archive-moment-visual-label",
-        "RETRATOS OFICIALES DE PERSONAJES MENCIONADOS · NO ES UNA IMAGEN DE LA ESCENA"));
+        "PERSONAJES MENCIONADOS · ARTE CONCEPTUAL/INICIALES LOCALES; FUENTES OFICIALES POR ENLACE · NO ES UNA IMAGEN DE LA ESCENA"));
       const strip=archiveElement("div","archive-moment-character-strip");
       moment.people.slice(0,3).forEach(person=>{
         const tile=archiveElement("div","archive-moment-character");

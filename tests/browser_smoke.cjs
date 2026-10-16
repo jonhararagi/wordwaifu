@@ -638,14 +638,14 @@ async function run() {
       "Every historical moment should show one sourced character-reference strip, even as the dossier grows.");
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("NO ES UNA IMAGEN DE LA ESCENA"),
       "Reference portraits must not be mistaken for images of a specific canon event.");
-    await page.waitForFunction(() => {
-      const images = Array.from(document.querySelectorAll("#archive-profile-panel .archive-moment-character .archive-portrait-art"));
-      return images.length >= 3 && images.every(img => img.complete && img.naturalWidth > 0 &&
-        img.currentSrc.includes("danmachi.com/"));
-    }, null, { timeout: 10000 });
-    const momentPortraitUrls = await page.locator("#archive-profile-panel .archive-moment-character .archive-portrait-art").evaluateAll(images => images.map(img => img.currentSrc));
-    assert.ok(momentPortraitUrls.every(url => url.includes("/danmachi4/character/images/chara_tachi_")),
-      "Historical character-reference strips must use the official DanMachi IV/Astrea Record-era portraits.");
+    assert.ok(await page.locator("#archive-profile-panel .archive-moment-character").count() >= 3,
+      "Historical moment reference strips must retain navigable character tiles.");
+    const momentPortraitAudit = await page.locator("#archive-profile-panel .archive-moment-character .archive-portrait-art").evaluateAll(images =>
+      images.map(img => ({ src: img.currentSrc, origin: new URL(img.currentSrc).origin })));
+    assert.ok(momentPortraitAudit.every(item => item.src.startsWith("data:image/") || item.origin === location.origin),
+      "Unverified official portraits must not be embedded in historical moment strips.");
+    assert.ok(await page.locator("#archive-profile-panel .archive-moment-character .archive-portrait-source-link").count() >= 1,
+      "Official portrait pages must remain available as source links in historical moment strips.");
     await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] > summary').click();
     assert.ok(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"] .archive-evidence').count() >= 1);
     await page.locator("#archive-tab-relationships").click();
