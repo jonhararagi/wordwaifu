@@ -100,7 +100,7 @@ Criterio: los eventos sin fecha exacta se pueden ordenar o filtrar sin inventar 
 Criterio: elegir un período muestra únicamente eventos y presencias compatibles con ese período, y los enlaces no duplican fichas.
 
 ### TLM-004 — Panoramas e imágenes de referencia con procedencia
-**Estado: NOT_STARTED; depende de TLM-001.**
+**Estado: IN_PROGRESS — autorizado por CEREBRO; ejecutar el contrato registrado en [TLM-002](TLM-002-TEMPORAL-MODEL-CONTRACT.md).**
 
 - Inspeccionar primero el diálogo y la política existentes en `docs/CONTENT_RIGHTS_AND_TAKEDOWN.md` y la UI.
 - Separar: enlaces a imágenes oficiales externas, imágenes aportadas por el usuario con derechos/permiso, y recursos propios o con licencia compatible.
@@ -124,9 +124,9 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 ## 6. Estado inicial de este programa
 
 - Existe una cronología DanMachi previa con eras/eventos y ancla relativa; esto es una base parcial, no prueba de cronología completa.
-- La cobertura, precisión temporal, relación con ubicaciones y tratamiento visual deben reconfirmarse en TLM-001.
+- TLM-001 ya confirmó cobertura/precisión temporal y desconexión geográfica en `docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md`; la implementación sigue incompleta.
 - La petición de imágenes no autoriza copiar recursos oficiales al repositorio.
-- No se ha declarado ninguna de TLM-001 a TLM-005 terminada por anticipado.
+- TLM-001 está DONE como auditoría; el producto/atlas sigue PARTIAL. TLM-002 es la única tarea activa; TLM-003, TLM-004 y TLM-005 permanecen NOT_STARTED.
 
 ## 7. Registro de entregas
 
