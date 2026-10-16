@@ -519,8 +519,16 @@ async function run() {
     page.off("request",externalRequestListener);
     assert.deepEqual(externalRequestsBeforeVisuals,[],"Visual references must not request remote image bytes or upload user files.");
     assert.equal(await page.evaluate(()=>localStorage.getItem("wordwaifu.project.v1")),projectStoreBeforeVisuals,"Local visual storage must not contaminate Asteria project storage.");
-    await page.evaluate(async ids=>Promise.all(ids.map(id=>window.WordWaifuArtStudio.removeVisualReference(id))),[pendingLocal.id,authorizedLocal.id]);
-    await page.waitForFunction(()=>!document.querySelector('[data-visual-reference-id^="USER-VIS-"]'),null,{timeout:5000});
+    const removeAuthorizedDialog=page.waitForEvent("dialog");
+    const removeAuthorizedClick=page.locator('[data-visual-remove="'+authorizedLocal.id+'"]').click({force:true});
+    const removeAuthorizedConfirm=await removeAuthorizedDialog;assert.equal(removeAuthorizedConfirm.type(),"confirm");await removeAuthorizedConfirm.accept();
+    await removeAuthorizedClick;
+    await page.waitForFunction(id=>!document.querySelector('[data-visual-reference-id="'+id+'"]'),authorizedLocal.id,{timeout:5000});
+    const removePendingDialog=page.waitForEvent("dialog");
+    const removePendingClick=page.locator('[data-visual-remove="'+pendingLocal.id+'"]').click({force:true});
+    const removePendingConfirm=await removePendingDialog;assert.equal(removePendingConfirm.type(),"confirm");await removePendingConfirm.accept();
+    await removePendingClick;
+    await page.waitForFunction(id=>!document.querySelector('[data-visual-reference-id="'+id+'"]'),pendingLocal.id,{timeout:5000});
     process.stdout.write("PASS TLM-004 browser: source links, local raster preview/storage, rights gates, confirmed watermark export, preserved original, offline preview, zero external requests and Asteria isolation.\\n");
 
     await page.locator('[data-dm-timeline-tab="map"]').click();
