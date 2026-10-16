@@ -1,12 +1,24 @@
 # Actualización operativa — 2026-10-16
 
+## Cierre documental de TLM-001
+
+- Auditoría: [TLM-001 — Auditoría del Atlas temporal de DanMachi](TLM-001-ATLAS-TEMPORAL-AUDIT.md).
+- HEAD BEFORE: `8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478`.
+- Estado de código revisado: el SHA anterior; no hubo cambios funcionales en esta tarea.
+- **PASS_CI** para ese SHA: [Validate WordWaifu run #38933332552](https://github.com/jonhararagi/wordwaifu/actions/runs/38933332552) ejecutó el verificador de cronología, test de cronología y browser smoke y terminó en success.
+- **NOT_RUN local:** este agente no ejecutó Node/Playwright en un entorno local; la evidencia de ejecución se limita al CI enlazado. Revisión manual Windows 11: NOT_RUN.
+- Brecha prioritaria confirmada: no hay locationId/locationIds/placeIds/coordinates/mapPointId en ninguno de los 15 eventos; las fechas no tienen un esquema estructurado; el panel de cronología no tiene cobertura UI dedicada en browser_smoke.cjs.
+- TLM-001 está DONE como auditoría; la implementación del atlas está PARTIAL. TLM-002 sigue NOT_STARTED y no se trabajó en ella.
+
+---
+
 - **Rama autorizada activa:** `work/story-completion-danmachi-audit-2026-10`.
 - **Control persistente de agentes:** [`docs/CEREBRO_BOT_OBRERO_CONTROL.md`](CEREBRO_BOT_OBRERO_CONTROL.md).
-- **Única tarea activa:** TLM-001 — auditoría real de la cronología DanMachi y su conexión con el mapa. No empezar TLM-002 antes de documentar brechas y evidencia.
+- **TLM-001:** DONE como auditoría registrada en [docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md](TLM-001-ATLAS-TEMPORAL-AUDIT.md). El producto/atlas sigue PARTIAL; no se empezó TLM-002.
 - **HEAD de código/lore anterior al arranque de esta organización:** `0fae322ddd17dfe8fa63952d018c5c95cd8578c7`; los dos workflows de validación constan como exitosos para ese SHA en el estado entregado al Cerebro. La documentación de control añadida después no ha sido validada por esos workflows salvo que una ejecución posterior lo confirme.
-- **HEAD actual de rama tras crear el protocolo:** `49b8b2cdb2e96b08427b2206fcd0e5d6fbd0c50c` (documentación). No declarar CI verde para este SHA sin consultar Actions.
+- **HEAD BEFORE de TLM-001:** `8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478`, comprobado en el ref de la rama justo antes de la auditoría. El HEAD de cierre es el commit documental que guarda este informe, STATUS, control y DONE; el SHA exacto de cierre se indica en la entrega y en el ref actual de la rama.
 - **Límites:** no tocar `main`, no fusionar ramas, no abrir/cerrar PR sin autorización expresa.
-- **Siguiente paso del Obrero:** leer el control persistente y auditar los archivos actuales indicados en TLM-001; publicar matriz de brechas, actualizar este estado y sobrescribir `docs/DONE.md` con el punto de reanudación vigente.
+- **Siguiente paso:** TLM-002 — diseñar el modelo temporal explícito (fecha absoluta/aproximada/relativa/orden desconocido/hipótesis) y sus pruebas. No empezar hasta recibir una orden para esa fase.
 
 ---
 

@@ -60,7 +60,7 @@ En cada tarea se registrará:
 Objetivo del usuario: poder entender **cuándo** ocurre cada hecho o combate y **en qué zona del mapa** sucede, admitiendo fechas aproximadas o planes hipotéticos sin confundirlos con canon; además, disponer de panoramas visuales útiles sin tratar una marca de agua como permiso de copyright.
 
 ### TLM-001 — Auditar el estado real de la cronología y el mapa
-**Estado: IN_PROGRESS — siguiente tarea del BOT OBRERO.**
+**Estado: DONE — auditoría persistida en [docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md](TLM-001-ATLAS-TEMPORAL-AUDIT.md). La funcionalidad del atlas sigue PARTIAL; TLM-002 no se inició.**
 
 Alcance:
 - Inspeccionar `src/danmachi-timeline.js`, `lore/danmachi/timeline/eras-and-events.json`, `src/lore-corpus.js`, `index.html`, `src/styles.css`, pruebas y documentación del atlas.
@@ -70,14 +70,14 @@ Alcance:
 - Entregar una matriz requisito / implementación encontrada / evidencia / brecha / archivo candidato.
 
 Criterios de aceptación:
-- [ ] HEAD y rama reales registrados.
-- [ ] Auditoría basada en los archivos actuales, no solo en notas previas.
-- [ ] Cada brecha incluye evidencia o está marcada UNKNOWN.
-- [ ] No se hacen cambios funcionales antes de conocer el estado actual.
-- [ ] Informe persistido en GitHub y punto de reanudación actualizado.
+- [x] HEAD y rama reales registrados: HEAD BEFORE 8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478.
+- [x] Auditoría basada en los archivos actuales; matriz incluida en docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md.
+- [x] Cada brecha incluye evidencia, incertidumbre o prueba necesaria.
+- [x] No se hicieron cambios funcionales antes de comprobar el estado actual.
+- [x] Informe persistido, STATUS actualizado y DONE sobrescrito con punto de reanudación.
 
 ### TLM-002 — Modelo temporal explícito
-**Estado: NOT_STARTED; depende de TLM-001.**
+**Estado: NOT_STARTED; la auditoría TLM-001 ya está registrada, pero esta fase requiere una orden nueva y no se inició durante la auditoría.**
 
 Diseñar e implementar, sin romper datos existentes:
 - fecha exacta, intervalo aproximado, fecha relativa a un ancla, orden conocido sin fecha, fecha desconocida e hipótesis/plan;
@@ -132,7 +132,8 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 
 | Fecha (UTC) | Tarea | Estado | SHA / evidencia | Nota |
 |---|---|---|---|---|
-| 2026-10-16 | Establecer control persistente Cerebro/Obrero y programa TLM | IN_PROGRESS | Ver commit de este documento y `docs/DONE.md` | TLM-001 queda como única tarea activa. |
+| 2026-10-16 | Establecer control persistente Cerebro/Obrero y programa TLM | DONE | Ver commit de control y docs/DONE.md | TLM-001 quedó completada como auditoría documental; las brechas funcionales siguen PARTIAL. |
+| 2026-10-16 | TLM-001 — Auditoría del Atlas temporal | DONE (auditoría) | docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md; CI run 38933332552 PASS para HEAD 8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478 | No se modificó código ni se inició TLM-002. Próximo gate: modelar fechas y después conectar cronología/mapa.
 
 ## 8. Plantilla de reporte del BOT OBRERO
 
