@@ -89,6 +89,8 @@ function fixture(temporal,originKind,scopes){
   continuityScopes:scopes||["CONT-AU"],
   evidenceStatus:"test_fixture",
   narrativeOrigin:{kind:originKind||"user_plan"},
+  locationAssessment:{status:"unknown",spatialPrecision:"unknown",reason:"Synthetic temporal fixture has no geographic claim."},
+  locationRefs:[],
   sources:[{label:"Synthetic test fixture (not fetched)",url:fixtureUrl,kind:"test_fixture",note:"Non-production test fixture; not evidence for any DanMachi claim."}],
   temporal:{...structuredClone(temporal),sourceUrls:[fixtureUrl]}
  };
