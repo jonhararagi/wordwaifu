@@ -2,7 +2,7 @@
 "use strict";
 const allowedStatuses = new Set(["external_reference","user_owned","licensed","permission_recorded","pending_review","blocked"]);
 const spoilerRank = {none:0,minor:1,major:2,critical:3};
-let registry=null,timeline=null,mounted=false,localReferenceCache=null,localReferencePromise=null;
+let registry=null,timeline=null,mounted=false,localReferenceCache=null,localReferencePromise=null,localReferenceVersion=0;
 const $=selector=>document.querySelector(selector);
 function node(tag,className,text){const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined&&text!==null)el.textContent=String(text);return el;}
 function safeHttps(value,optional){const raw=String(value||"").trim();if(!raw)return Boolean(optional);try{const u=new URL(raw);return u.protocol==="https:"&&!u.username&&!u.password;}catch(_){return false;}}
@@ -60,18 +60,28 @@ function continuityLabel(value){return ({"CONT-MAIN-LN":"Novela principal","CONT
 function spoilerLabel(value){return ({none:"Sin spoiler",minor:"Spoiler menor",major:"Spoiler importante",critical:"Spoiler crítico"})[value]||"Spoiler pendiente";}
 function spoilerCap(){return ($("#dm-visual-spoiler-cap")||{}).value||"minor";}
 function filteredBySpoiler(ref){return (spoilerRank[ref.spoilerLevel]??2)<=(spoilerRank[spoilerCap()]??1);}
-function invalidateLocalReferences(){localReferenceCache=null;localReferencePromise=null;}
+function invalidateLocalReferences(){localReferenceVersion++;localReferenceCache=null;localReferencePromise=null;}
 async function localReferences(){
  if(localReferenceCache)return localReferenceCache;
  if(localReferencePromise)return localReferencePromise;
  const api=root.WordWaifuArtStudio;
  if(!api||typeof api.listVisualReferences!=="function")return [];
- localReferencePromise=(async()=>{
-  try{localReferenceCache=await api.listVisualReferences();return localReferenceCache;}
-  catch(_){localReferenceCache=[];return localReferenceCache;}
-  finally{localReferencePromise=null;}
+ const version=localReferenceVersion;
+ let pending;
+ pending=(async()=>{
+  let records=[],succeeded=true;
+  try{records=await api.listVisualReferences();}
+  catch(_){succeeded=false;records=[];}
+  // A late read from before a save/removal must not overwrite the newer cache
+  // or clear a newer in-flight request started after invalidation.
+  if(version===localReferenceVersion){
+   if(succeeded)localReferenceCache=records;
+   if(localReferencePromise===pending)localReferencePromise=null;
+  }
+  return records;
  })();
- return localReferencePromise;
+ localReferencePromise=pending;
+ return pending;
 }
 function matches(ref,options){
  const eventId=options.eventId||"",locationId=options.locationId||"";

@@ -504,12 +504,14 @@ async function run() {
     assert.equal(originalAfter,originalBefore,"Export must not alter the original local image.");
     assert.match(await page.locator('[data-visual-reference-id="'+authorizedLocal.id+'"]').innerText(),/Overlay informativo de interfaz/);
     await page.locator("#dm-timeline-query").fill("Bell llega a Orario");
-    await page.waitForFunction(()=>document.querySelector("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-visual-thumbnail")?.src.startsWith("data:image/"),null,{timeout:5000});
-    assert.ok((await page.locator("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references").innerText()).includes("Fixture local autorizado"));
+    await page.waitForFunction(()=>(document.querySelector("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references")?.innerText||"").includes("Fixture local autorizado"),null,{timeout:5000});
+    assert.ok(await page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]').count()>0,
+      "The specific authorized local image must appear on its linked timeline event, not just any local preview.");
     await page.context().setOffline(true);
     await page.locator("#dm-timeline-query").fill("Bell llega a Orario");
-    await page.waitForFunction(()=>document.querySelector("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-visual-thumbnail")?.src.startsWith("data:image/"),null,{timeout:5000});
-    assert.ok((await page.locator("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references").innerText()).includes("Fixture local autorizado"));
+    await page.waitForFunction(()=>(document.querySelector("#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references")?.innerText||"").includes("Fixture local autorizado"),null,{timeout:5000});
+    assert.ok(await page.locator('#dm-event-EVT-DM-BELL-ARRIVAL-001 .dm-event-visual-references [data-visual-reference-id="'+authorizedLocal.id+'"]').count()>0,
+      "The linked authorized reference must remain visible while offline.");
     await page.context().setOffline(false);
     page.off("request",externalRequestListener);
     assert.deepEqual(externalRequestsBeforeVisuals,[],"Visual references must not request remote image bytes or upload user files.");
