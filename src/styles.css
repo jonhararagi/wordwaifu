@@ -767,3 +767,6 @@ td,th{border-color:#30364e}
 
 
 .dm-visual-watermark-placement-note{grid-column:1/-1}
+
+/* Remote official portraits stay link-only until embedding permission is verified. */
+.archive-portrait-source-link{position:absolute;z-index:4;right:5px;top:5px;display:inline-flex;align-items:center;justify-content:center;min-width:19px;min-height:19px;padding:2px 4px;border:1px solid rgba(226,245,236,.55);border-radius:6px;background:rgba(10,18,23,.92);color:#c4f4d4;font-size:13px;font-weight:800;line-height:1;text-decoration:none}.archive-portrait-source-link:hover,.archive-portrait-source-link:focus-visible{background:#173b29;color:#fff;outline:2px solid #9de9b4;outline-offset:1px}

@@ -2513,21 +2513,23 @@
     const officialSource = historicalReference ? official.historicalImageUrl
       : mayUseOfficialPortrait && official && official.imageUrl ? official.imageUrl : "";
     const initial = String(name || "?").trim().charAt(0).toUpperCase() || "?";
-    node.setAttribute("role", "img");
-    node.setAttribute("aria-label", officialSource
-      ? (historicalReference ? "Retrato oficial de referencia de DanMachi IV; no específico de la época " + selectedContinuity + "."
-        : "Retrato oficial enlazado desde " + (official.sourcePage || "la web oficial") + "; derechos de terceros.")
-      : fallbackSource ? "Ilustración vectorial conceptual original de " + name + ", no oficial."
+    node.setAttribute("role", officialSource ? "group" : "img");
+    node.setAttribute("aria-label", fallbackSource
+      ? "Ilustración vectorial conceptual original de " + name + ", no oficial." +
+        (officialSource ? " El retrato oficial no se incrusta; se ofrece un enlace a la fuente." : "")
+      : officialSource ? "Retrato oficial no incrustado. Abrí la página oficial enlazada para consultarlo."
       : "Inicial representativa de " + name + "; no hay retrato verificado disponible.");
     const caption = large ? archiveElement("span","archive-portrait-caption",
-      historicalReference ? "REFERENCIA VISUAL OFICIAL · NO ESPECÍFICA DE ÉPOCA"
-        : officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL" : "SIN RETRATO VERIFICADO") : null;
+      fallbackSource ? "ILUSTRACIÓN ORIGINAL · NO OFICIAL"
+        : officialSource ? "RETRATO NO INCRUSTADO · VER FUENTE" : "SIN RETRATO VERIFICADO") : null;
     function showInitial() {
       node.replaceChildren(archiveElement("span","",initial));
       if (large) node.appendChild(archiveElement("span","archive-portrait-caption","SIN RETRATO DISPONIBLE"));
       node.setAttribute("aria-label","Sin imagen disponible para " + name + ".");
     }
-    const activeSource = officialSource || fallbackSource;
+    // Official remote portrait URLs remain provenance metadata, not image src.
+    // Embedding is disabled until terms/permission for that use are verified.
+    const activeSource = fallbackSource;
     let portraitImage = null;
     if (activeSource) {
       portraitImage = document.createElement("img");
@@ -2538,13 +2540,13 @@
       portraitImage.loading = large ? "eager" : "lazy";
       portraitImage.referrerPolicy = "strict-origin-when-cross-origin";
       portraitImage.addEventListener("error", () => {
-        if (portraitImage.dataset.customArt === "true" && (officialSource || fallbackSource)) {
+        if (portraitImage.dataset.customArt === "true" && fallbackSource) {
           portraitImage.dataset.customArt = "false";
-          portraitImage.src = officialSource || fallbackSource;
-          if (caption) caption.textContent = officialSource ? "IMAGEN OFICIAL · ENLACE EXTERNO" : "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
+          portraitImage.src = fallbackSource;
+          if (caption) caption.textContent = "ILUSTRACIÓN ORIGINAL · NO OFICIAL";
           return;
         }
-        if (officialSource && fallbackSource && portraitImage.src !== new URL(fallbackSource, window.location.href).href) {
+        if (fallbackSource && portraitImage.src !== new URL(fallbackSource, window.location.href).href) {
           portraitImage.src = fallbackSource;
           node.setAttribute("aria-label","Ilustración conceptual local de " + name + ", no oficial; el retrato externo no cargó.");
           if (caption) caption.textContent = "ILUSTRACIÓN DE RESPALDO · NO OFICIAL";
@@ -2555,6 +2557,21 @@
       node.appendChild(portraitImage);
     } else node.appendChild(archiveElement("span","",initial));
     if (caption) node.appendChild(caption);
+    const officialPage = official && typeof official.sourcePage === "string" ? official.sourcePage.trim() : "";
+    if (officialSource && /^https:\/\//i.test(officialPage)) {
+      let validOfficialPage = false;
+      try { const parsed = new URL(officialPage); validOfficialPage = parsed.protocol === "https:" && !parsed.username && !parsed.password; } catch (_) {}
+      if (validOfficialPage) {
+        const sourceLink = archiveElement("a", "archive-portrait-source-link", "↗");
+        sourceLink.href = officialPage;
+        sourceLink.target = "_blank";
+        sourceLink.rel = "noopener noreferrer";
+        sourceLink.referrerPolicy = "no-referrer";
+        sourceLink.title = "Abrir la página oficial de referencia; el retrato remoto no está incrustado.";
+        sourceLink.setAttribute("aria-label", "Abrir fuente oficial del retrato de referencia de " + name + ". La imagen remota no se incrusta.");
+        node.appendChild(sourceLink);
+      }
+    }
     if (window.WordWaifuArtStudio && typeof window.WordWaifuArtStudio.getAsset === "function") {
       window.WordWaifuArtStudio.getAsset("character", id).then(asset => {
         if (!asset || !asset.src) return;
@@ -2571,7 +2588,7 @@
             image.decoding = "async";
             image.loading = large ? "eager" : "lazy";
             image.addEventListener("error", () => {
-              if (officialSource || fallbackSource) image.src = officialSource || fallbackSource;
+              if (fallbackSource) image.src = fallbackSource;
               else target.replaceChildren(archiveElement("span","",initial));
             });
             target.replaceChildren(image);

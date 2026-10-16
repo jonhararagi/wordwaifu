@@ -1,6 +1,8 @@
 /* Official adaptation reference registry for DanMachi.
  * Summaries are original Spanish paraphrases, not copied source text.
- * Artwork is loaded from official pages at runtime; never rehosted here.
+ * Remote portrait URLs are provenance references only. The UI displays source links,
+ * not remote image previews, until embedding terms/permission are verified.
+ * Nothing here downloads or rehosts artwork.
  */
 (function(root) {
   "use strict";

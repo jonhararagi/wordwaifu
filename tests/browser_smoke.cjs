@@ -375,6 +375,16 @@ async function run() {
       const img = document.querySelector("#character-archive-results .archive-portrait-art");
       return !!img && img.complete && img.naturalWidth > 0;
     }, null, { timeout: 5000 });
+    const ryuPortraitAudit = await page.locator("#character-archive-results .archive-character-card:has([data-archive-open='CHAR-RYUU-LION'])").evaluate(card => {
+      const img = card.querySelector(".archive-portrait-art");
+      const link = card.querySelector(".archive-portrait-source-link");
+      return { imageOrigin: img ? new URL(img.src).origin : null, pageOrigin: location.origin,
+        sourceHref: link ? link.href : null, label: link ? link.getAttribute("aria-label") : null };
+    });
+    assert.equal(ryuPortraitAudit.imageOrigin, ryuPortraitAudit.pageOrigin, "Unverified official portrait bytes must not be embedded remotely in the character archive.");
+    assert.ok(ryuPortraitAudit.sourceHref && new URL(ryuPortraitAudit.sourceHref).protocol === "https:", "The official portrait must remain available as a safe source link.");
+    assert.match(ryuPortraitAudit.sourceHref, /^https:\/\/danmachi\.com\//, "The provenance link must point to the official DanMachi page.");
+    assert.match(ryuPortraitAudit.label, /no se incrusta/i, "The source link must explain that the remote portrait is not embedded.");
     const archiveThemeBg = await page.locator("body").evaluate(el => getComputedStyle(el).backgroundColor);
     // The latest visual refresh intentionally uses the dark violet #0b0d16 base token.
     assert.equal(archiveThemeBg, "rgb(11, 13, 22)", "The current anime archive palette must be active.");
