@@ -640,9 +640,10 @@ async function run() {
       "Reference portraits must not be mistaken for images of a specific canon event.");
     assert.ok(await page.locator("#archive-profile-panel .archive-moment-character").count() >= 3,
       "Historical moment reference strips must retain navigable character tiles.");
+    const archiveOrigin = await page.evaluate(() => window.location.origin);
     const momentPortraitAudit = await page.locator("#archive-profile-panel .archive-moment-character .archive-portrait-art").evaluateAll(images =>
       images.map(img => ({ src: img.currentSrc, origin: new URL(img.currentSrc).origin })));
-    assert.ok(momentPortraitAudit.every(item => item.src.startsWith("data:image/") || item.origin === location.origin),
+    assert.ok(momentPortraitAudit.every(item => item.src.startsWith("data:image/") || item.origin === archiveOrigin),
       "Unverified official portraits must not be embedded in historical moment strips.");
     assert.ok(await page.locator("#archive-profile-panel .archive-moment-character .archive-portrait-source-link").count() >= 1,
       "Official portrait pages must remain available as source links in historical moment strips.");
