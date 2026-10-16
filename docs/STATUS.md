@@ -8,7 +8,8 @@
 - **TLM-002 — DONE:** modelo temporal estructurado añadido en compatibilidad aditiva; 15 eventos migrados; dateLabel, fuentes, IDs, evidenceStatus, continuityScopes y detailPath preservados.
 - **PASS_CI para el SHA de implementación:** [Validate WordWaifu #38941141919](https://github.com/jonhararagi/wordwaifu/actions/runs/38941141919) y [DanMachi Lore and Retrieval Integrity #38941142159](https://github.com/jonhararagi/wordwaifu/actions/runs/38941142159), ambos success en 4d75c97aa690ddba73ec6ef09eb0fbefef06d342.
 - **Limitaciones del producto:** el atlas permanece PARTIAL: los acontecimientos siguen sin estar vinculados a ubicaciones geográficas, cobertura de algunas continuidades pendiente, revisión visual manual de Windows 11 NOT_RUN.
-- **Siguiente tarea:** TLM-003 — conectar acontecimientos con lugares mediante IDs estables. Sigue NOT_STARTED; no se inició en TLM-002.
+- **HEAD previo a activar TLM-003:** `a723776c557956a8e702229b2a5f8ec4e9f26b1c` (contrato TLM-003 + actualización de control; aún no CI-verified en este estado).
+- **TLM-003 — IN_PROGRESS:** conexión temporal-geográfica del atlas, autorizada por CEREBRO. Contrato: [docs/TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md](TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md). Esta es la única tarea activa.
 - **TLM-004:** imágenes y procedencia, NOT_STARTED; no se descargaron ni añadieron imágenes.
 - **TLM-005:** verificación end-to-end más amplia, NOT_STARTED.
 - **Informe TLM-002:** [docs/TLM-002-TEMPORAL-MODEL-REPORT.md](TLM-002-TEMPORAL-MODEL-REPORT.md).
