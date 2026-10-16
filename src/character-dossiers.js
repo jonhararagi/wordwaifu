@@ -298,8 +298,16 @@
       relationships: "Dionysus ejerce una influencia decisiva sobre su trayectoria. Lefiya y los miembros de Loki Familia quedan vinculados a su historia a través de investigaciones y enfrentamientos que cambian su lectura de los hechos. Las relaciones que construye están atravesadas por secretos y por la dificultad de confiar.",
       conflict: "El deseo de ser aceptada puede entrar en conflicto con la identidad que intenta ocultar. Su historia plantea cuánto de una persona puede juzgarse por sus actos cuando otros han intervenido en las condiciones que la formaron.",
       sources: ["https://danmachi.fandom.com/wiki/Filvis_Chalia", "https://danmachi.com/sword_oratoria/character/"]
-    }
-  };
+    },
+    "CHAR-RAUL-NOORD": {
+      appearance: "Humano de aspecto corriente, cabello oscuro corto y puntiagudo y ojos marrones según la referencia secundaria. Su equipo incluye ropa de aventurero y una espada; los detalles visuales proceden de la ficha comunitaria, no de una descripción cotejada en la novela.",
+      history: "Pertenece a la Familia Loki y ocupa una función práctica entre sus miembros: la referencia oficial de Sword Oratoria indica que suele encargarse de tareas cotidianas y trabajo de supporter. En emergencias, Finn confía en él para dirigir a los miembros de menor rango. El perfil oficial de adaptación lo sitúa en nivel 4, dato ligado a ese snapshot y no una constante para toda la cronología.",
+      personality: "Preocupadizo y vacilante al afrontar el peligro, con inseguridad visible pese a su nivel. No es simplemente inútil ni un cobarde plano: sigue cumpliendo tareas, intenta responder a las responsabilidades delegadas y puede funcionar como apoyo humano y reconocible frente a los miembros excepcionales de la Familia. La fuente secundaria amplía esta idea con su baja autoestima, su esfuerzo por mejorar y su admiración por Finn; esos matices deben cotejarse con los pasajes de las novelas antes de marcarlos como canon primario.",
+      abilities: "El perfil oficial de Sword Oratoria le asigna nivel 4 en la etapa descrita y lo presenta como capaz de coordinar a integrantes de menor rango cuando la situación lo requiere. Las fuentes consultadas aquí no bastan para confirmar una lista exhaustiva de habilidades, magia, estadísticas o técnicas exclusivas; no inventarlas.",
+      relationships: "Finn es la referencia de mando más importante: le delega la coordinación de miembros de menor rango. Raul trabaja dentro de la red de apoyo de Loki Familia; compartir afiliación con Ais, Bete, Riveria o los demás no demuestra por sí solo una amistad íntima con cada uno. La fuente secundaria describe una admiración intensa hacia Finn, pendiente de localización en la novela.",
+      conflict: "La tensión útil del personaje es la distancia entre su temor e inseguridad y la responsabilidad que otros le confían. En escenas íntimas puede ser amable, torpe, leal o tierno si el contexto de la historia lo justifica; esos comportamientos no son contradicciones automáticas. El corrector solo debería advertir contradicciones contra hechos o rasgos documentados con evidencia, no castigar una emoción nueva por no aparecer en un resumen.",
+      sources: ["https://danmachi.com/sword_oratoria/character/", "https://danmachi.fandom.com/wiki/Raul_Nord", "https://danmachi.fandom.com/es/wiki/Raul_Nord"]
+    }  };
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({
     get: id => dossiers[id] ? clone(dossiers[id]) : null,
