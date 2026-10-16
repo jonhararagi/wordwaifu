@@ -106,6 +106,47 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+
+    // TLM-005 cold-start probe: keep same-origin files available but abort all external requests.
+    // The isolated context starts without storage shared with the main Asteria session.
+    const blockedExternalRequests=[];
+    const probeOrigin="http://127.0.0.1:"+address.port;
+    const offlineProbeContext=await browser.newContext();
+    const offlineProbePage=await offlineProbeContext.newPage();
+    await offlineProbePage.route("**/*",async route=>{
+      const requestUrl=route.request().url();
+      let isLocal=false;
+      try{isLocal=new URL(requestUrl).origin===probeOrigin;}catch(_){}
+      if(!isLocal){blockedExternalRequests.push(requestUrl);await route.abort("blockedbyclient");return;}
+      await route.continue();
+    });
+    await offlineProbePage.goto(probeOrigin+"/",{waitUntil:"networkidle",timeout:20000});
+    assert.equal(await offlineProbePage.locator("#project-name").innerText(),"Las Crónicas de Asteria",
+      "A clean context must boot its isolated Asteria project with external requests blocked.");
+    await offlineProbePage.locator('.nav-item[data-view="lore"]').click();
+    await offlineProbePage.waitForFunction(()=>document.querySelector("#dm-timeline-status")?.textContent.includes("15 acontecimientos visibles"),null,{timeout:10000});
+    assert.equal(await offlineProbePage.locator("#dm-timeline-events-view .dm-historical-event").count(),15,
+      "The timeline must load its same-origin JSON while external origins are blocked.");
+    await offlineProbePage.locator('[data-dm-timeline-tab="map"]').click();
+    await offlineProbePage.waitForFunction(()=>document.querySelector("#dm-timeline-map-view .dm-map-nongeographic-warning")?.textContent.includes("NO GEOGRÁFICO"),null,{timeout:10000});
+    await offlineProbePage.waitForFunction(()=>document.querySelector("#dm-visual-status")?.textContent.includes("referencias registradas"),null,{timeout:10000});
+    assert.ok(await offlineProbePage.locator("#dm-visual-reference-general .dm-visual-placeholder").count()>0,
+      "Official references must fall back to placeholders while external requests are blocked.");
+    assert.equal(await offlineProbePage.locator("#dm-visual-reference-general img").count(),0,
+      "Official remote art must not be embedded during a clean, external-blocked start.");
+    assert.ok(blockedExternalRequests.every(url=>new URL(url).origin!==probeOrigin),
+      "The probe must only abort non-local origins.");
+    const mainProjectAfterProbe=await page.evaluate(async()=>{
+      const repository=new window.WordWaifuProjectRepository.ProjectRepository();
+      const recovery=await repository.loadActive();
+      const activeId=recovery.project?.project?.id||null;
+      repository.close();
+      return {id:activeId,name:recovery.project?.project?.name||null};
+    });
+    assert.equal(mainProjectAfterProbe.id,"project-asteria","The isolated cold-start probe must not overwrite the main context's active project.");
+    assert.equal(mainProjectAfterProbe.name,"Las Crónicas de Asteria");
+    await offlineProbeContext.close();
+    process.stdout.write("PASS TLM-005 cold start: same-origin timeline and placeholders work with external requests blocked; Asteria storage remains isolated.\n");
     // Mythic catalog: monster forms expose the three mandatory design pillars and are searchable by form details.
     await page.locator('.nav-item[data-view="mythic-catalog"]').click();
     await page.locator("#mythic-search").fill("Hidra de Lerna");
