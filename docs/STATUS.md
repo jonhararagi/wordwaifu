@@ -2,20 +2,23 @@
 
 **Este bloque prevalece sobre las notas históricas siguientes cuando expresen estados anteriores.**
 
-- Rama autorizada: work/story-completion-danmachi-audit-2026-10.
-- HEAD BEFORE real de TLM-003: c859e3c822bfea7f8b73a8f959eb29a856736d27.
-- SHA de implementación verificado: c9fa2d05de3bb81526523202bea0fb5cb058ae06.
-- TLM-001: DONE como auditoría documental; producto/atlas PARTIAL.
-- TLM-002: DONE / PASS_CI, con modelo temporal estructurado y 15 registros migrados.
-- TLM-003: DONE / PASS_CI; CEREBRO aceptó el cierre documental `67c48d55601a372653c425e1517cfe4f6c322813`. Los 15 eventos se evaluaron individualmente; 2 fichas de lugar, 9 vínculos, 4 eventos verificados, 5 provisionales y 6 unknown.
-- PASS_CI en el cierre documental exacto: [Validate WordWaifu #38950807146](https://github.com/jonhararagi/wordwaifu/actions/runs/38950807146) y [DanMachi Lore and Retrieval Integrity #38950807317](https://github.com/jonhararagi/wordwaifu/actions/runs/38950807317), ambos success en `67c48d55601a372653c425e1517cfe4f6c322813`.
-- Informe: [docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md](TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md); esquema espacial: [docs/DANMACHI-LOCATION-MODEL.md](DANMACHI-LOCATION-MODEL.md).
-- El panel DanMachi usa un esquema relacional no geográfico y sin escala. No se modificó src/app.js, el mapa Asteria ni el almacenamiento del proyecto. No se añadieron imágenes ni coordenadas.
-- **HEAD previo al contrato TLM-004:** `5263e8214091083cba87bc2b1cde0e202b6c959d` (control actualizado; los workflows del nuevo SHA documental aún deben comprobarse).
-- **TLM-004: IN_PROGRESS** — referencias visuales, panoramas, procedencia y política de watermark. Contrato: [docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md). Única tarea activa.
-- **TLM-005:** NOT_STARTED (verificación end-to-end integral y revisión visual/manual).
-- Revisión visual manual en Windows 11: NOT_RUN. Node/Playwright local de este agente: NOT_RUN; CI real sí ejecutado.
-- main no modificada; ningún merge y ningún PR creado, cerrado o modificado. La referencia de rama tras el cierre documental es el HEAD más reciente.
+- Repositorio: `jonhararagi/wordwaifu`.
+- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
+- HEAD BEFORE real al iniciar TLM-004: `8960fdd11ecff5fd66d69c1bae221a13f12342c4` no; valor inicial comprobado: `9a492e69f649fefc16fa24d4658a2e134d76bf7b`.
+- HEAD esperado que figuraba en la orden pero no coincidía con el ref consultado: `f863f8ff0be9d5007b0781a613af5d69f8795c8d`.
+- SHA de implementación TLM-004 con CI verificado: `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.
+- TLM-001: DONE como auditoría documental; el atlas/producto completo sigue PARTIAL.
+- TLM-002: DONE / PASS_CI; modelo temporal estructurado y 15 eventos migrados.
+- TLM-003: DONE / PASS_CI; 15 eventos evaluados, 2 fichas de lugar y 9 vínculos; mapa relacional no geográfico.
+- TLM-004: DONE / PASS_CI en el SHA de implementación anterior. Informe: [TLM-004 — Panoramas visuales y procedencia](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-REPORT.md).
+- Gate validado: [Validate WordWaifu #38967733362, intento 2](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733362) y [DanMachi Lore and Retrieval Integrity #38967733260](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733260), ambos success para `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.
+- Los retratos oficiales remotos se conservan como procedencia y se consultan por enlaces HTTPS; no se incrustan sin verificación de las condiciones de uso. No se descargaron ni comitearon imágenes oficiales.
+- Los recursos locales se almacenan mediante la biblioteca existente `WordWaifuArtStudio` (IndexedDB y respaldo local); no se suben a GitHub ni a servicios remotos. La exportación marcada requiere derechos explícitos, política habilitada y confirmación del usuario; conserva el original.
+- `src/app.js` se modificó de forma acotada para eliminar la incrustación remota no verificada de retratos en el archivo de personajes. No se modificó el almacenamiento de Asteria, `main` ni ningún PR.
+- TLM-005: NOT_STARTED y pendiente. Revisión visual/manual de Windows 11: NOT_RUN. Node/Playwright local del agente: NOT_RUN; se ejecutó CI real de Chromium.
+- El atlas y la enciclopedia global de DanMachi siguen parciales; esta tarea cierra el sistema visual/rights-contract, no la cobertura completa del canon.
+- El HEAD documental final es el ref de esta rama después del commit que actualiza este bloque; consultar la referencia de GitHub para el SHA exacto.
+- `main` permanece sin modificar; no se hizo merge ni se abrió/cerró/modificó PR.
 
 ---
 

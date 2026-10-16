@@ -1,15 +1,17 @@
 # TLM-004 — Panoramas visuales y procedencia
 
-**Estado al corte de implementación:** IN_PROGRESS — pendiente de validar CI en el SHA publicado.  
+**Estado de implementación:** DONE / PASS_CI para el SHA de código indicado abajo.  
 **Rama:** `work/story-completion-danmachi-audit-2026-10`  
-**HEAD BEFORE verificado:** `f863f8ff0be9d5007b0781a613af5d69f8795c8d`  
-**SHA de implementación:** se registrará en el cierre documental después de comprobar CI.  
-**Alcance:** registro visual validable, enlaces externos seguros, archivos locales y exportación marcada sujeta a derechos, integrados al atlas existente.  
-**Límites:** no se descargó ni comiteó ninguna imagen oficial; no se modificó `src/app.js`, Asteria, `main` ni PR.
+**HEAD BEFORE real al iniciar TLM-004:** `9a492e69f649fefc16fa24d4658a2e134d76bf7b`.  
+**HEAD documental indicado en la orden que no coincidía con la rama:** `f863f8ff0be9d5007b0781a613af5d69f8795c8d`.  
+**SHA de implementación validada:** `8960fdd11ecff5fd66d69c1bae221a13f12342c4`. La referencia de rama posterior a este cierre documental es el HEAD documental final.  
+**CI sobre el SHA de implementación:** [Validate WordWaifu #38967733362 — intento 2, success](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733362) y [DanMachi Lore and Retrieval Integrity #38967733260 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733260). El primer intento de Validate se interrumpió por una interacción interceptada entre marcadores de mapa fuera del módulo visual; el reintento del mismo SHA pasó.  
+**Alcance:** registro validable integrado al atlas existente, enlaces externos seguros, recursos raster del usuario almacenados solo en el navegador y exportación marcada sujeta a derechos.  
+**Límites:** no se descargó ni se añadió ninguna imagen oficial al repositorio. Se modificó puntualmente `src/app.js` porque la auditoría demostró que el archivo de personajes incrustaba retratos oficiales remotos sin verificación de permiso de embedding; el cambio suprime esa incrustación y ofrece arte conceptual local/enlaces a las fuentes. No se alteró el almacenamiento de Asteria, `main` ni ningún PR. La revisión manual en Windows 11 sigue `NOT_RUN`; TLM-005 continúa pendiente.
 
 ## Hallazgos y decisión de uso
 
-- `src/official-character-roster.js` ya contiene URLs directas de perfiles de adaptación. El retrato de Bell de DanMachi V se registra como `CONT-ANIME`, sin relación con eventos/lugares y sin incrustarlo mientras no se verifique el permiso/condición de embed.
+- `src/official-character-roster.js` conserva URLs de procedencia de retratos oficiales. Se auditaron 58 URLs distintas del campo `imageUrl` y 5 referencias históricas `historicalImageUrl`; ninguna se usa como `img.src` remoto en el archivo de personajes. En su lugar se muestra ilustración conceptual local original (etiquetada como no oficial) o inicial, con enlace HTTPS a la página oficial y `noopener noreferrer`. Ryu en continuidad histórica enlaza a DanMachi IV; su continuidad de anime enlaza a DanMachi V. Estas referencias no prueban la apariencia exacta en una escena de novela.
 - `src/art-studio.js` ya conserva recursos locales en IndexedDB con respaldo en `localStorage`, marcas de borrado y límite de 5 MB. Se amplía esta biblioteca existente; no se crea otra base de datos ni un endpoint remoto.
 - Páginas oficiales/editoriales se muestran como tarjetas de contexto y enlaces a la fuente. Una página editorial no se describe como imagen de escena ni como licencia para copiar su portada.
 - Se registraron seis fuentes/referencias externas, todas link-only mientras no se verifique la incrustación. No se usan capturas, imágenes copiadas ni scraping de wikis.
@@ -43,7 +45,7 @@
 
 ## Modelo y derechos
 
-Cada referencia incluye ID estable, tipo de medio, título/caption, URL fuente, titular conocido o `unknown`, tipo de fuente, estado de uso, licencia/permiso, continuidad, spoilers, eventos/lugares relacionados, crédito, modo de almacenamiento, política de watermark y limitaciones. El validador rechaza IDs duplicados, URLs no HTTPS, referencias a entidades inexistentes y evaluaciones faltantes.
+Cada referencia incluye ID estable, tipo de medio, título/caption, URL fuente HTTPS, titular conocido o `unknown`, tipo de fuente, estado de uso, licencia/permiso, continuidad, spoilers, eventos/lugares relacionados, crédito, modo de almacenamiento, política de watermark y límites. El validador rechaza IDs duplicados, tipos no admitidos, URLs inseguras, relaciones a eventos/lugares inexistentes, incompatibilidad de continuidad entre referencia y evento, diferencias entre relaciones y cobertura y evaluaciones faltantes. El tipo `licensed_material` también está reconocido para los recursos licenciados declarados por el formulario local.
 
 ### Recursos externos
 
@@ -57,9 +59,11 @@ La interfaz acepta PNG/JPEG/WebP/GIF/AVIF raster, hasta 5 MB, y rechaza SVG acti
 
 El overlay HTML/CSS de crédito no altera la imagen. La exportación PNG exige recurso local con estado `user_owned`, `licensed` o `permission_recorded`, `allowModifyExport=true`, imagen raster decodificable y confirmación explícita. Se conserva el original. `pending_review`, `blocked`, referencias externas y recursos sin permiso explícito no muestran botón y son rechazados por el guard. Marca de agua, atribución y uso personal/educativo no son autorización.
 
-## Evidencia pendiente de CI
+## Resultado de pruebas y límites
 
-- Unidades: esquema, IDs, URL segura, continuidad y cobertura de 15 eventos + 2 lugares; estados de exportación.
-- Browser smoke: tarjetas/placeholder, almacenamiento local, overlay/crédito, exportación confirmada, original intacto, preview offline, ausencia de solicitud remota y aislamiento Asteria.
-- Revisión manual Windows 11: `NOT_RUN`; TLM-005 permanece separada.
-- Se añadirán resultados de CI en el cierre documental tras verificar el SHA exacto.
+- `tests/test_danmachi_visual_references.cjs`: PASS en ambos workflows para `8960fdd11ecff5fd66d69c1bae221a13f12342c4`. Cubre esquema/IDs, URL segura, relaciones, continuidad, cobertura de 15 eventos y 2 lugares y bloqueo de exportación marcada para políticas o estados no autorizados.
+- Browser smoke de TLM-004: PASS en Chromium de CI. Verifica enlaces y placeholders, alta de raster local, rechazo de bytes corruptos, guardado/lectura local, overlay de atribución, confirmación explícita, exportación PNG, conservación del original, preview offline, cero solicitudes de red para las imágenes locales y aislamiento de Asteria.
+- El archivo de personajes se verificó con Ryu, Alise, Astrea, Kaguya e Iska en sus continuidades: ningún retrato oficial remoto se incrusta; las fuentes oficiales permanecen accesibles mediante enlaces y las tiras de momentos advierten que no representan imágenes de la escena.
+- [Validate WordWaifu #38967733362 — intento 2](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733362) y [DanMachi Lore and Retrieval Integrity #38967733260](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733260): success para `8960fdd11ecff5fd66d69c1bae221a13f12342c4`. El primer intento de Validate falló porque el marcador de un fixture de mapa interceptó el clic de otro marcador; el reintento del mismo SHA pasó. No se modificó el código de mapas para ocultar esa flaqueza.
+- Revisión manual Windows 11: `NOT_RUN`. Las pruebas fueron ejecutadas por GitHub Actions/Chromium, no localmente por este agente.
+- TLM-005 sigue NOT_STARTED y pendiente de una revisión end-to-end dedicada. El atlas global todavía es parcial; TLM-004 no pretende completar el canon, añadir escenas no comprobadas ni conceder derechos sobre fuentes externas.

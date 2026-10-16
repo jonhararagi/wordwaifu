@@ -1,78 +1,49 @@
-PARTIAL
+DONE
 
-# WordWaifu — Punto de continuidad del CEREBRO / BOT OBRERO
+# WordWaifu — Punto de recuperación del CEREBRO / BOT OBRERO
 
 **Actualizado:** 2026-10-16  
-**Estado del atlas DanMachi:** funcionalidad ampliada, pero aún PARTIAL en cobertura espacial y visual.  
-**TLM-001:** DONE como auditoría.  
-**TLM-002:** DONE / PASS_CI.  
-**TLM-003:** DONE / PASS_CI y aceptada por CEREBRO.  
-**Tarea activa única:** **TLM-004 — panoramas y referencias visuales con procedencia, permisos y tratamiento de marca de agua.**
+**Estado TLM-004:** DONE / PASS_CI sobre el SHA de implementación `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.  
+**Estado del atlas/enciclopedia global DanMachi:** PARTIAL; TLM-004 cierra los panoramas/procedencia y controles de derechos, no la cobertura completa del canon.  
+**TLM-005:** NOT_STARTED; revisión manual de Windows 11 NOT_RUN.
 
-## Rama y HEAD
+## Rama, HEAD y CI
 
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- HEAD del cierre documental TLM-003: `67c48d55601a372653c425e1517cfe4f6c322813`.
-- HEAD previo a esta actualización de continuidad: `c983cf57f9084eab32ff251cb8fc5a3f2843f51e`.
-- Consultar la referencia de rama para el HEAD AFTER exacto de este archivo.
-- `main`: no modificada.
-- PRs: no abiertos, fusionados, cerrados ni modificados.
-- Los workflows TLM-003 citados abajo validan su SHA de cierre; no se atribuye automáticamente ese resultado a commits de control/documentación posteriores. Verificar CI por el SHA actual al terminar TLM-004.
+- HEAD BEFORE real al iniciar TLM-004: `9a492e69f649fefc16fa24d4658a2e134d76bf7b`.
+- SHA de implementación con CI verificado: `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.
+- La orden documental mencionaba `f863f8ff0be9d5007b0781a613af5d69f8795c8d`, pero el ref real consultado antes de escribir apuntaba a `9a492e69f649fefc16fa24d4658a2e134d76bf7b`; se siguió el HEAD real mediante actualización con expected SHA.
+- [Validate WordWaifu #38967733362, intento 2 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733362).
+- [DanMachi Lore and Retrieval Integrity #38967733260 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733260).
+- El primer intento de Validate para este SHA se interrumpió por un clic interceptado entre dos marcadores superpuestos en un fixture de mapa no relacionado con TLM-004; se reintentó el job fallido y el intento 2 pasó. El workflow dedicado DanMachi pasó en su primer intento para el mismo SHA.
+- Consultar la referencia de GitHub para obtener el HEAD documental exacto tras el commit que persiste este punto de recuperación.
 
-## TLM-003 — cierre aceptado por CEREBRO
+## Implementación
 
-- Cierre: [`67c48d55601a372653c425e1517cfe4f6c322813`](https://github.com/jonhararagi/wordwaifu/commit/67c48d55601a372653c425e1517cfe4f6c322813).
-- Informe: [`docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md`](TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md).
-- Modelo espacial: [`docs/DANMACHI-LOCATION-MODEL.md`](DANMACHI-LOCATION-MODEL.md).
-- [Validate WordWaifu #38950807146](https://github.com/jonhararagi/wordwaifu/actions/runs/38950807146) y [DanMachi Lore and Retrieval Integrity #38950807317](https://github.com/jonhararagi/wordwaifu/actions/runs/38950807317): ambos `success` en el SHA exacto de cierre.
-- Evaluados 15 acontecimientos; 2 fichas de lugar (`LOC-ORARIO`, `LOC-DUNGEON`), 9 referencias, 4 estados espaciales verificados, 5 provisionales y 6 desconocidos.
-- La vista es un esquema relacional **no geográfico y sin escala**, no un mapa con coordenadas. Las ubicaciones sin respaldo siguen desconocidas.
-- No se modificó el mapa Asteria ni se importaron datos de DanMachi al proyecto local del usuario.
-- Revisión visual/manual Windows 11: `NOT_RUN`.
+- `src/danmachi-visual-references.js`: validación del catálogo, relaciones coherentes entre referencias/cobertura, scopes de continuidad, política explícita de exportación y enlace seguro o placeholder si falta la fuente.
+- `lore/danmachi/visual-references.json` y `src/danmachi-visual-references.js`: registro estable de seis referencias externas; evaluaciones explícitas para 15 acontecimientos y dos lugares. Las páginas editoriales/oficiales son contexto, no prueba automática de una imagen reutilizable ni de una escena.
+- `src/art-studio.js`: reutilizado sin crear una segunda biblioteca. Los recursos del usuario se guardan en IndexedDB/localStorage del navegador, con límite existente de 5 MB, sin subir bytes a GitHub o servicios remotos.
+- `src/app.js`, `src/official-character-roster.js`, `index.html`, `src/styles.css`: los retratos oficiales de adaptación quedan como metadatos de procedencia y enlaces HTTPS. Si no hay autorización de embedding verificada, no se asignan a `img.src`; la interfaz muestra arte conceptual local claramente no oficial o inicial y enlace a la página de origen. Ryu histórico enlaza a DanMachi IV y su ficha anime a DanMachi V.
+- `tests/test_danmachi_visual_references.cjs` y `tests/browser_smoke.cjs`: validación de schema/continuidad/cobertura, fuentes seguras, enlaces/placeholders, navegación de fichas, upload local raster, rechazo de archivo corrupto, permiso/export gate, crédito/overlay, export PNG con confirmación, original preservado, vista offline, ausencia de solicitudes remotas para recursos locales y aislamiento Asteria.
 
-## TLM-004 — orden activa de trabajo
+## Derechos y límite de exportación
 
-Contrato completo y vinculante: [`docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md`](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md).
+- La exportación marcada requiere `watermarkPolicy="apply_to_authorized_copy"`, recurso almacenado localmente, estado `user_owned`, `licensed` o `permission_recorded`, `allowModifyExport=true`, raster decodificable y confirmación explícita.
+- Se mantiene separado el overlay de atribución del archivo exportado. La copia marcada no reemplaza ni modifica el original.
+- `pending_review`, `blocked`, referencias externas o recursos sin autorización explícita no ofrecen ni superan el guard de exportación.
+- Ni la marca de agua, ni la atribución ni el uso personal/educativo autorizan por sí mismos a copiar o transformar una imagen.
+- No se descargaron ni comitearon imágenes oficiales, no se hizo scraping de wikis, y no se atribuyó una imagen de anime a una escena de novela sin evidencia.
 
-Objetivo: añadir referencias visuales útiles a la cronología y lugares sin fingir cobertura y sin mezclar continuidad de anime con canon de novela. Se inspeccionaron previamente los sistemas existentes y consta que:
+## Cierre, pendientes y siguiente paso
 
-- `src/official-character-roster.js` ya apunta a algunos retratos remotos oficiales y declara que no se almacenan en el repositorio.
-- `src/art-studio.js` ya ofrece recursos por URL/archivo y persistencia local mediante IndexedDB con fallback local; verificar el comportamiento real antes de extenderlo.
-- `docs/CONTENT_RIGHTS_AND_TAKEDOWN.md` advierte que atribución/enlace, uso educativo/personal o marca de agua no conceden por sí solos licencia o permiso.
-- La cronología de DanMachi ahora tiene la vista espacial TLM-003; agregar la sección “Referencias visuales” contextual allí, no duplicar galerías por cada módulo.
+- TLM-001: DONE como auditoría documental.
+- TLM-002: DONE / PASS_CI.
+- TLM-003: DONE / PASS_CI; modelo relacional de lugares no geográfico.
+- TLM-004: DONE / PASS_CI en `8960fdd11ecff5fd66d69c1bae221a13f12342c4`, con los workflows citados arriba.
+- TLM-005: NOT_STARTED; queda pendiente la inspección visual/manual en Windows 11 y la validación end-to-end correspondiente. **No se ha declarado realizada.**
+- No se ha modificado `main`, no se ha hecho merge y no se ha abierto/cerrado/modificado ningún PR.
+- `src/app.js` se modificó únicamente para cerrar la brecha indispensable de incrustación remota de retratos oficiales sin permiso verificado; no se modificó el almacenamiento Asteria.
+- El HEAD documental de este cierre se obtiene consultando `work/story-completion-danmachi-audit-2026-10` después del commit que guarda estos archivos. El SHA de implementación funcional validado permanece `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.
 
-### Tarea del BOT OBRERO
-
-1. Comprobar el HEAD actual; leer contrato, protocolo, estado, modelo de ubicaciones y política de derechos.
-2. Auditar los 15 eventos y los lugares para identificar candidatos visuales pertinentes, sin obligar a que cada elemento tenga imagen.
-3. Definir y validar un registro de recursos visuales con IDs estables, fuente/página, titular conocido, licencia/permiso/estado pendiente, continuidad, nivel de spoiler y referencias al evento/lugar.
-4. Para material oficial externo, priorizar enlaces a páginas oficiales/editoriales. Solo previsualizar imágenes remotas si el origen/condiciones permiten ese uso y pasa el allowlist existente. No descargar ni comitear imágenes oficiales, capturas, scans, portadas ni ilustraciones de terceros sin licencia/permiso compatible.
-5. Permitir archivos propios/licenciados aportados por el usuario en almacenamiento del navegador; no subirlos a GitHub ni enviarlos a endpoints remotos.
-6. Separar overlay informativo de atribución en la UI de exportación de una copia con marca de agua. Exportar una copia marcada solo con derechos que permitan modificar/exportar y confirmación explícita. Conservar intacto el original.
-7. No etiquetar por defecto un recurso como autorizado porque diga “uso educativo” o “uso personal”; no presentar la marca de agua como permiso. Los recursos pendientes/bloqueados no deben tener ruta de exportación.
-8. Mostrar continuidad correcta y spoilers; un retrato de adaptación no es evidencia visual de una escena específica de la novela.
-9. Añadir pruebas para previews/links, placeholders, créditos, estado de derechos, watermark gate, recursos locales, offline y aislamiento del proyecto activo.
-10. Publicar `docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-REPORT.md`, actualizar STATUS/control y sobrescribir DONE al cerrar.
-
-### Fuera de alcance
-
-- Descarga en lote de imágenes oficiales o incorporar material sin derechos verificados.
-- Usar marcas de agua para tratar de legitimar una copia no autorizada.
-- Hacer scraping de wikis o copiarles imágenes.
-- Declarar completada la revisión global visual/manual de Windows 11; TLM-005 sigue separada.
-- Tocar `main`, fusionar ramas o cambiar PR.
-
-## Estado de fases
-
-| Fase | Estado | Evidencia / siguiente paso |
-|---|---|---|
-| TLM-001 — Auditoría | DONE | `docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md` |
-| TLM-002 — Modelo temporal | DONE / PASS_CI | `docs/TLM-002-TEMPORAL-MODEL-REPORT.md` |
-| TLM-003 — Conexión cronología/mapa | DONE / PASS_CI | `docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md`; cierre `67c48d5` |
-| TLM-004 — Referencias visuales y procedencia | IN_PROGRESS | Ejecutar `docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md` |
-| TLM-005 — Validación integral y revisión visual | NOT_STARTED | Solo comenzar con el trabajo visual/funcional anterior integrado y revisable |
-
-## Recuperación tras interrupción
-
-Leer `docs/CEREBRO_BOT_OBRERO_CONTROL.md`, `docs/STATUS.md`, este DONE y el contrato TLM-004. Comprobar la rama y el SHA actual de GitHub antes de escribir; evitar repetir commits ya aplicados. Retomar únicamente TLM-004. Cuando se cierre, TLM-005 será la siguiente tarea, si los criterios y pruebas justifican ese paso.
+**Próxima tarea:** mantener TLM-005 pendiente hasta iniciar y documentar su revisión dedicada; no asumir revisión manual ni añadir nuevos módulos dentro de TLM-004.

@@ -91,21 +91,23 @@ Alcance exclusivo de esta fase: contrato temporal estructurado, migración conse
 - La nueva vista es un esquema relacional no geográfico y sin escala; usa los mismos filtros de búsqueda, era y continuidad que el timeline.
 - Navegación evento → lugar → evento relacionado → retorno probada en Chromium; el test confirma que no se cambia el almacenamiento del proyecto activo.
 - No se modificó src/app.js, el mapa Asteria, main o PR; no se añadieron imágenes ni coordenadas. Node/Playwright local y revisión manual Windows 11 siguen NOT_RUN.
-- El atlas completo se mantiene PARTIAL. TLM-004 y TLM-005 siguen NOT_STARTED.
+- El atlas/enciclopedia global se mantiene PARTIAL. TLM-004 está DONE / PASS_CI para el SHA de implementación registrado; TLM-005 sigue NOT_STARTED y requiere verificación end-to-end/manual.
 
 ### TLM-004 — Panoramas e imágenes de referencia con procedencia
-**Estado: IN_PROGRESS — autorizado por CEREBRO.** Contrato vinculante: [docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md).
+**Estado: DONE / PASS_CI para el SHA de implementación `8960fdd11ecff5fd66d69c1bae221a13f12342c4`.** Informe: [docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-REPORT.md](TLM-004-VISUAL-REFERENCES-AND-RIGHTS-REPORT.md).
 
-- Hacer una sección de “Referencias visuales” útil para acontecimientos y lugares DanMachi; no forzar imágenes para cada evento.
-- Registrar ID estable del recurso, URL/página fuente, autor/titular conocido, licencia/permiso o estado pendiente, continuidad, spoilers, evento/lugar y modo de almacenamiento.
-- Para arte oficial remoto, preferir abrir la fuente original; previsualizar solo cuando el origen y las condiciones de uso/embebido lo permitan. No descargar ni comitear imágenes oficiales sin permiso/licencia compatible.
-- Permitir archivos locales propios/licenciados/permitidos a través del almacenamiento del navegador existente, sin subirlos al repo o a servicios remotos.
-- Separar overlay de atribución en UI de exportación de copia con watermark. Exportar una versión marcada solo cuando los derechos permitan modificación/exportación y el usuario lo confirme.
-- Nunca tratar “uso educativo/personal”, atribución ni marca de agua como licencia automática.
-- Respetar continuidad y spoilers: retrato de adaptación anime (CONT-ANIME) no equivale a una escena de novela principal. Mostrar placeholder si una imagen falla o no puede mostrarse.
-- Evitar metadatos dispersos o un formulario gigante; integrar la galería contextual al panel existente.
+- Registro estable `lore/danmachi/visual-references.json`: seis referencias link-only, procedencia, titulares/estado de derechos, continuidad, spoilers y relaciones; cobertura explícita para los 15 acontecimientos y las dos fichas de lugar. Las referencias contextuales no se presentan como ilustraciones de escena.
+- Se reutiliza `src/art-studio.js` / `WordWaifuArtStudio` y su almacenamiento del navegador; no se creó una segunda biblioteca ni un servicio remoto.
+- Los retratos oficiales de adaptación permanecen como URLs de procedencia y enlaces HTTPS. El archivo de personajes muestra arte conceptual local claramente no oficial o inicial; sin permiso de embedding no asigna los retratos remotos a `img.src`.
+- Recursos raster propios/licenciados/permitidos se guardan solo en el navegador. Los bytes corruptos se rechazan antes del guardado; la UI solo informa éxito cuando el backend local confirma persistencia.
+- Overlay de crédito separado de la exportación marcada. La copia PNG solo se ofrece con `apply_to_authorized_copy`, `user_owned`/`licensed`/`permission_recorded`, `allowModifyExport=true`, raster decodificable y confirmación explícita; el original se conserva. `pending_review`, `blocked` y referencias externas no pueden exportarse.
+- Ninguna atribución, marca de agua o etiqueta personal/educativa se trata como autorización. Ninguna imagen oficial se descargó o comiteó; no se hizo scraping de wikis.
+- Pruebas de unidad y navegador TLM-004: PASS. Browser smoke cubre navegación, tarjetas/placeholders, enlaces, preview local/offline, almacenamiento, watermark gate, original preservado, cero solicitudes remotas de imágenes locales y aislamiento Asteria.
+- CI exacto en `8960fdd11ecff5fd66d69c1bae221a13f12342c4`: [Validate WordWaifu #38967733362 — intento 2](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733362) y [DanMachi Lore and Retrieval Integrity #38967733260](https://github.com/jonhararagi/wordwaifu/actions/runs/38967733260), ambos success. El primer intento de Validate encontró una intercepción de clic entre marcadores de un fixture de mapa fuera del módulo visual; el reintento del mismo SHA pasó.
+- Se cambió `src/app.js` solo tras demostrar la dependencia indispensable: el archivo incrustaba retratos oficiales remotos sin permiso verificado. No se modificó almacenamiento Asteria, `main` ni PR.
+- TLM-005 queda pendiente. Revisión manual Windows 11: `NOT_RUN`; Node/Playwright local del agente: `NOT_RUN`. Solo se declara la evidencia de GitHub Actions/Chromium que realmente se ejecutó.
 
-Cierre: referencias con procedencia clara, recursos locales que no salen del navegador, controles de watermark honestos, tests/CI por SHA y ninguna imagen oficial no autorizada añadida al repo.
+Cierre: referencias procedentes; referencias oficiales remotas link-only; recursos del usuario locales; exportación marcada sometida a derechos y confirmación; pruebas y CI PASS en SHA exacto. La enciclopedia/cobertura total de DanMachi y TLM-005 permanecen fuera de este cierre.
 
 ### TLM-005 — Verificación de extremo a extremo
 **Estado: NOT_STARTED; depende de TLM-002 a TLM-004.**
@@ -122,7 +124,7 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 - Existe una cronología DanMachi previa con eras/eventos y ancla relativa; esto es una base parcial, no prueba de cronología completa.
 - TLM-001 ya confirmó cobertura/precisión temporal y desconexión geográfica en `docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md`; la implementación sigue incompleta.
 - La petición de imágenes no autoriza copiar recursos oficiales al repositorio.
-- TLM-001 está DONE como auditoría; el producto/atlas sigue PARTIAL. TLM-002 está DONE; la implementación del atlas sigue PARTIAL. TLM-003 es la siguiente fase aún NOT_STARTED; TLM-004 y TLM-005 también siguen NOT_STARTED.
+- TLM-001 está DONE como auditoría; TLM-002 y TLM-003 están DONE / PASS_CI para sus SHAs registrados; TLM-004 está DONE / PASS_CI para `8960fdd11ecff5fd66d69c1bae221a13f12342c4`. El producto/atlas global sigue PARTIAL. TLM-005 continúa NOT_STARTED; la revisión manual Windows 11 está NOT_RUN.
 
 ## 7. Registro de entregas
 
@@ -132,7 +134,7 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 | 2026-10-16 | TLM-001 — Auditoría del Atlas temporal | DONE (aceptada por CEREBRO) | commit `1611254124e6fa2eb1186a803fca0bc712ef6dab`; CI runs `38934243074` y `38934243080` PASS en ese SHA | Atlas PARTIAL; 0/15 eventos conectados a lugares; fechas libres; TLM-002 autorizada. |
 | 2026-10-16 | TLM-002 — Modelo temporal explícito | DONE / PASS_CI | 4d75c97aa690ddba73ec6ef09eb0fbefef06d342; runs 38941141919 y 38941142159 success | 15 eventos migrados; dateLabel intacto; esquema aditivo; geografía e imágenes no tocadas. Ver docs/TLM-002-TEMPORAL-MODEL-REPORT.md. |
 | 2026-10-16 | TLM-003 — Conexión cronología/mapa | DONE / PASS_CI | c9fa2d05de3bb81526523202bea0fb5cb058ae06; runs 38950288434 y 38950288325 success | 15 eventos evaluados; 2 lugares, 9 referencias, esquema no geográfico; ver informe TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md. |
-| 2026-10-16 | TLM-004 — Panoramas visuales y procedencia | IN_PROGRESS | `docs/TLM-004-VISUAL-REFERENCES-AND-RIGHTS-CONTRACT.md`; HEAD anterior `67c48d55601a372653c425e1517cfe4f6c322813` | Única tarea activa. No incorporar imágenes oficiales no autorizadas; separar visualización remota, archivos locales y watermark. |
+| 2026-10-16 | TLM-004 — Panoramas visuales y procedencia | DONE / PASS_CI | SHA de implementación `8960fdd11ecff5fd66d69c1bae221a13f12342c4`; Validate #38967733362 (reintento) y DanMachi #38967733260 success; ver informe TLM-004 | Seis referencias externas link-only; 15 eventos + 2 lugares evaluados; storage local, gates de permisos/watermark y archivo de personajes sin embed remoto no verificado. TLM-005 y revisión manual Windows 11 pendientes. |
 
 ## 8. Plantilla de reporte del BOT OBRERO
 
