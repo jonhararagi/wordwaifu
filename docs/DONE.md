@@ -2,56 +2,80 @@ PARTIAL
 
 # WordWaifu — Punto de continuidad CEREBRO / BOT OBRERO
 
-**Tarea cerrada:** TLM-002 — Modelo temporal explícito  
-**Fecha:** 2026-10-16  
-**Estado de TLM-002:** DONE / PASS_CI  
-**Estado del atlas completo:** PARTIAL — falta TLM-003 (conexión geográfica), TLM-004 (imágenes/procedencia) y gates end-to-end/manuales pendientes.
+**Última actualización:** 2026-10-16  
+**Estado del atlas temporal-geográfico:** PARTIAL.  
+**TLM-001:** DONE como auditoría.  
+**TLM-002:** DONE / PASS_CI y aceptada por CEREBRO.  
+**Tarea activa única:** **TLM-003 — conectar cronología DanMachi con un mapa/esquema de lugares por IDs estables.**
 
 ## Rama y HEAD
 
-- Repositorio: jonhararagi/wordwaifu.
-- Rama autorizada: work/story-completion-danmachi-audit-2026-10.
-- HEAD BEFORE: a97206f2ecb7f4f50aec6146160dbe0fe9a0e85f.
-- SHA de implementación validado: 4d75c97aa690ddba73ec6ef09eb0fbefef06d342.
-- HEAD AFTER documental: consultar la referencia real de la rama después del commit que sobrescribe este archivo.
-- main: no modificada.
-- PR: no abierto, cerrado, modificado ni fusionado.
+- Repositorio: `jonhararagi/wordwaifu`.
+- Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
+- HEAD de cierre TLM-002 confirmado por workflows: `10561399ae476c9c196cb3f97aca93e42df16987`.
+- HEAD previo al cierre de esta actualización documental: `c05e1266700fab41b0b2e3adc77b4222f0e53689`.
+- Consultar la referencia real de la rama para el HEAD AFTER exacto; no incrustar el SHA final dentro del mismo árbol que lo genera.
+- `main`: no modificada.
+- PRs: no abiertos, fusionados, cerrados ni modificados.
+- Los workflows de TLM-002 no validan automáticamente los commits documentales posteriores. Comprobar CI ligado al SHA nuevo al finalizar cada tarea.
 
-## Informe y contrato
+## TLM-002 aceptada
 
-- Informe: docs/TLM-002-TEMPORAL-MODEL-REPORT.md.
-- Contrato completado: docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md.
-- Esquema: docs/DANMACHI-TEMPORAL-MODEL.md.
+- Implementación: [`4d75c97aa690ddba73ec6ef09eb0fbefef06d342`](https://github.com/jonhararagi/wordwaifu/commit/4d75c97aa690ddba73ec6ef09eb0fbefef06d342).
+- Cierre documental: [`10561399ae476c9c196cb3f97aca93e42df16987`](https://github.com/jonhararagi/wordwaifu/commit/10561399ae476c9c196cb3f97aca93e42df16987).
+- [Informe TLM-002](TLM-002-TEMPORAL-MODEL-REPORT.md) y [esquema temporal](DANMACHI-TEMPORAL-MODEL.md).
+- PASS_CI para el HEAD documental final: [Validate WordWaifu #38941639636](https://github.com/jonhararagi/wordwaifu/actions/runs/38941639636) y [DanMachi Lore and Retrieval Integrity #38941639826](https://github.com/jonhararagi/wordwaifu/actions/runs/38941639826), ambos success.
+- Los 15 eventos conservan IDs, dateLabel, fuentes, evidencia, continuidad y expedientes; cada uno posee modelo temporal estructurado. Ninguna fecha exacta se inventó.
+- Revisión visual/manual Windows 11: NOT_RUN.
 
-## Trabajo realizado
+## TLM-003 — contrato activo
 
-- Conservado schemaVersion 1 y dateLabel; añadido temporalModelVersion 1.
-- Migrados los 15 eventos sin modificar IDs, dateLabel, evidenceStatus, continuityScopes, fuentes ni detailPath.
-- Tipos migrados: 1 unknown, 11 relative_order, 2 relative_offset y 1 anchor.
-- T0 queda como ancla, no una fecha de calendario. T−7 y T−5 son desplazamientos aproximados con fuentes enlazadas; T−5 sigue con verificación primaria pendiente.
-- Incluidos absolute_date y approximate_interval como variantes probadas con fixtures sintéticos en memoria; no se añadieron fechas absolutas ni intervalos inventados al dataset real.
-- narrativeOrigin separa published_reference, user_hypothesis, user_plan y author_au de evidenceStatus y continuityScopes.
-- El validador comprueba versiones, variantes, precisión, calendario, límites de intervalo, anclas/referencias, unidades, fuentes enlazadas y reglas de continuidad de hipótesis/planes.
-- La UI muestra clase/precisión temporal aparte del dateLabel y del estado de evidencia.
-- Se preserva compatibilidad para dataset heredado completo sin los campos nuevos; las mezclas de esquema se rechazan.
-- No se conectaron lugares ni se añadieron imágenes.
+Contrato operativo obligatorio: [`docs/TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md`](TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md).
 
-## Pruebas — PASS_CI para el SHA de implementación 4d75c97aa690ddba73ec6ef09eb0fbefef06d342
+### Objetivo
 
-- [Validate WordWaifu #38941141919](https://github.com/jonhararagi/wordwaifu/actions/runs/38941141919) — success; incluye sintaxis, verificador temporal, tests temporales/catálogo y Chromium browser smoke.
-- [DanMachi Lore and Retrieval Integrity #38941142159](https://github.com/jonhararagi/wordwaifu/actions/runs/38941142159) — success; incluye sintaxis, pruebas del corpus/catálogo y Chromium browser smoke.
-- NOT_RUN local: no se ejecutaron comandos Node/Playwright desde este agente; no se presenta la inspección estática como ejecución.
-- NOT_RUN: inspección visual/manual en Windows 11.
-- Los tests con fechas absolutas/intervalos son fixtures aislados y no forman parte del canon publicado.
+Conectar cada evento con las fichas de lugar pertinentes por ID estable y construir una vista geográfica/esquemática de DanMachi desde el panel temporal existente. Debe permitir navegar evento → lugar → otros eventos relacionados, conservando el filtro temporal y de continuidad.
 
-## Próxima acción exacta
+### Hallazgos que guían la ejecución
 
-**TLM-003 — conexión temporal-geográfica del atlas**, cuando se ordene. Vincular eventos y lugares mediante IDs estables; no inventar coordenadas ni ubicaciones, y mostrar “ubicación desconocida” cuando no haya evidencia.
+- `lore/danmachi/timeline/eras-and-events.json` tiene 15 eventos y no estaban conectados a lugares en el cierre TLM-001.
+- `lore/danmachi/places/dungeon.md` registra `LOC-DUNGEON` con evidencia editorial de su papel general y relación con Orario.
+- `lore/danmachi/canon/01-mundo-orario.md` usa `DM-WORLD-001` como ficha de escenario provisional; no tratarlo automáticamente como lugar geográfico ya normalizado.
+- `lore/danmachi/canon/03-dungeon-y-guild.md` mezcla contexto institucional y lugar y conserva dudas de verificación.
+- El mapa SVG de `src/app.js` pertenece a los universos/proyectos locales del usuario. No insertar automáticamente lugares DanMachi en el proyecto Asteria ni sobreescribir `project.locations`.
+- No hay permiso para inventar coordenadas, barrios, pisos, rutas ni topología. Si solo se conocen relaciones jerárquicas, la vista debe rotularse como esquema no geográfico/no a escala.
+- Es posible que no todos los eventos puedan asociarse a un lugar confirmado. Evaluar los 15 individualmente; mostrar “Ubicación desconocida”/“Ubicación por verificar” en vez de fingir cobertura.
 
-No iniciar TLM-004 ni TLM-005 dentro de este cierre. El atlas completo permanece PARTIAL.
+### Trabajo requerido
 
-## Recuperación
+1. Verificar HEAD actual y leer el contrato TLM-003, TLM-001, el modelo temporal y el protocolo de trabajo.
+2. Crear un modelo de `locationRefs` o equivalente con IDs estables y tipos espaciales diferenciados: lugar del evento, zona amplia o contexto relacionado; separar estado de verificación y precisión espacial.
+3. Reutilizar `LOC-DUNGEON`. Crear `LOC-ORARIO` solo si puede respaldarse y documentarse con fuentes apropiadas; mantener catálogo/índice/dossier sincronizados.
+4. Añadir al dataset una decisión justificada para cada uno de los 15 eventos. Las referencias provisionales deben mostrarse como candidatas, no como hechos confirmados.
+5. Implementar mapa/esquema DanMachi conectado al tiempo y continuidad. El layout visual no puede confundirse con coordenadas canónicas.
+6. Añadir pruebas de validación del modelo, enlaces, filtros, estados unknown/provisional, ausencia de coordenadas falsas y aislamiento frente al proyecto Asteria.
+7. Ejecutar los workflows y registrar los resultados para el SHA exacto. NOT_RUN local/Windows debe seguir etiquetado honestamente.
+8. Publicar `docs/TLM-003-TIMELINE-MAP-INTEGRATION-REPORT.md`, actualizar STATUS y sobrescribir DONE con el punto de reanudación al finalizar.
 
-1. Leer docs/CEREBRO_BOT_OBRERO_CONTROL.md, docs/STATUS.md y este DONE.
-2. Verificar el HEAD actual y los workflows del SHA documental más reciente.
-3. Retomar TLM-003 solo tras la orden correspondiente; no repetir la migración TLM-002.
+### Fuera de alcance
+
+- No incorporar imágenes de anime/novelas ni desarrollar marcas de agua: TLM-004.
+- No hacer una revisión visual integral Windows/end-to-end de todo el producto más allá de las pruebas de este cambio: se mantiene en TLM-005.
+- No expandir el canon ni añadir datos sin trazabilidad.
+- No modificar `main`, fusionar ramas o alterar PR.
+
+## Estado de fases
+
+| Fase | Estado | Evidencia / siguiente paso |
+|---|---|---|
+| TLM-001 — Auditoría temporal/geográfica | DONE | `docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md` |
+| TLM-002 — Modelo temporal estructurado | DONE / PASS_CI | `docs/TLM-002-TEMPORAL-MODEL-REPORT.md`; workflows #38941639636 y #38941639826 |
+| TLM-003 — Conectar cronología y mapa | IN_PROGRESS | Ejecutar el contrato `docs/TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md` |
+| TLM-004 — Panoramas/imágenes y procedencia | NOT_STARTED | No copiar recursos oficiales sin permisos/licencias compatibles |
+| TLM-005 — Verificación end-to-end y revisión visual | NOT_STARTED | Pruebas finales; Windows manual solo tras realizarla |
+
+## Recuperación si ChatGPT se interrumpe
+
+1. Leer [control CEREBRO/BOT OBRERO](CEREBRO_BOT_OBRERO_CONTROL.md), [STATUS](STATUS.md), este archivo y el [contrato TLM-003](TLM-003-TIMELINE-MAP-INTEGRATION-CONTRACT.md).
+2. Verificar el HEAD real y workflows de la rama autorizada.
+3. Continuar únicamente TLM-003; no repetir la migración TLM-002 y no iniciar TLM-004/TLM-005 dentro de esta tarea.
