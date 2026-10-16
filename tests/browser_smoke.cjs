@@ -469,6 +469,8 @@ async function run() {
     await page.locator("#dm-visual-file").setInputFiles(syntheticPng);
     await page.locator("#dm-visual-holder").fill("Autor de fixture de CI");
     await page.locator("#dm-visual-usage-status").selectOption("user_owned");
+    await page.locator("#dm-visual-event").selectOption("EVT-DM-BELL-ARRIVAL-001");
+    await page.locator("#dm-visual-location").selectOption("");
     await page.locator("#dm-visual-allow-modify").check();
     await page.locator("#dm-visual-credit").fill("Autor de fixture de CI · obra propia sintética");
     await page.locator("#dm-visual-local-form button[type='submit']").click();
@@ -479,6 +481,7 @@ async function run() {
       if(!authorizedLocal)await page.waitForTimeout(100);
     }
     assert.ok(authorizedLocal&&authorizedLocal.allowModifyExport,"No authorized visual record was observed after sequential retries.");
+    assert.deepEqual(authorizedLocal.relatedEventIds,["EVT-DM-BELL-ARRIVAL-001"],"The authorized fixture must retain its chosen event relation after the form reset.");
     await page.waitForFunction(id=>document.querySelector('[data-visual-export="'+id+'"]')!==null,authorizedLocal.id,{timeout:5000});
     assert.ok(await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').count()>0);
     assert.equal(await page.evaluate(async id=>window.WordWaifuDanMachiVisualReferences.canExportWatermarkedCopy(await window.WordWaifuArtStudio.getVisualReference(id)),authorizedLocal.id),true);
