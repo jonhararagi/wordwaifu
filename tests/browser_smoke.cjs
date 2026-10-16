@@ -498,7 +498,7 @@ async function run() {
     assert.match(watermarkStatus,/Copia marcada preparada/,"Watermark generation failed: "+watermarkStatus);
     const visualDownloadPromise=page.waitForEvent("download",{timeout:10000});
     await page.locator('[data-marked-download="'+authorizedLocal.id+'"]').click();
-    const markedDownload=await visualDownloadPromise;assert.match(markedDownload.suggestedFilename(),/watermarked\\.png$/);
+    const markedDownload=await visualDownloadPromise;assert.match(markedDownload.suggestedFilename(),/watermarked\.png$/);
     const originalAfter=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     assert.equal(originalAfter,originalBefore,"Export must not alter the original local image.");
     assert.match(await page.locator('[data-visual-reference-id="'+authorizedLocal.id+'"]').innerText(),/Overlay informativo de interfaz/);
