@@ -128,7 +128,8 @@ Criterio: pruebas verdes, revisión visual realizada o marcada NOT_RUN, y todas 
 | Fecha (UTC) | Tarea | Estado | SHA / evidencia | Nota |
 |---|---|---|---|---|
 | 2026-10-16 | Establecer control persistente Cerebro/Obrero y programa TLM | DONE | Ver commit de control y docs/DONE.md | TLM-001 quedó completada como auditoría documental; las brechas funcionales siguen PARTIAL. |
-| 2026-10-16 | TLM-001 — Auditoría del Atlas temporal | DONE (auditoría) | docs/TLM-001-ATLAS-TEMPORAL-AUDIT.md; CI run 38933332552 PASS para HEAD 8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478 | No se modificó código ni se inició TLM-002. Próximo gate: modelar fechas y después conectar cronología/mapa.
+| 2026-10-16 | TLM-001 — Auditoría del Atlas temporal | DONE (aceptada por CEREBRO) | commit `1611254124e6fa2eb1186a803fca0bc712ef6dab`; CI runs `38934243074` y `38934243080` PASS en ese SHA | Atlas PARTIAL; 0/15 eventos conectados a lugares; fechas libres; TLM-002 autorizada. |
+| 2026-10-16 | TLM-002 — Modelo temporal explícito | IN_PROGRESS | `docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md` | Una sola tarea activa. Mantener canon/evidencia/continuidad/origen narrativo separados; no tocar geografía ni imágenes.
 
 ## 8. Plantilla de reporte del BOT OBRERO
 
