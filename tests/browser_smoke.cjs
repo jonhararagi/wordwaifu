@@ -401,6 +401,15 @@ async function run() {
     const unknownTemporalBadge = page.locator("#dm-event-EVT-DM-DESCENT-001 .dm-event-temporal");
     assert.equal(await unknownTemporalBadge.getAttribute("data-temporal-kind"), "unknown");
     assert.ok((await unknownTemporalBadge.innerText()).includes("desconocido"), "Unknown time must stay explicitly unknown.");
+    await page.locator("#dm-timeline-query").fill("Tiempo desconocido / pendiente");
+    await page.waitForFunction(() => document.querySelectorAll("#dm-timeline-events-view .dm-historical-event").length === 1, null, { timeout: 5000 });
+    assert.equal(await page.locator("#dm-timeline-events-view .dm-historical-event").first().getAttribute("id"), "dm-event-EVT-DM-DESCENT-001",
+      "Searching for unknown temporal status must retrieve the unknown-time event without assigning a date.");
+    await page.locator("#dm-timeline-query").fill("Aproximadamente siete años antes de T0");
+    await page.waitForFunction(() => document.querySelectorAll("#dm-timeline-events-view .dm-historical-event").length === 1, null, { timeout: 5000 });
+    assert.equal(await page.locator("#dm-timeline-events-view .dm-historical-event").first().getAttribute("id"), "dm-event-EVT-DM-AR-ERA-001",
+      "Searching approximate temporal qualifiers must retrieve T−7 without converting it to an exact calendar date.");
+    await page.locator("#dm-timeline-query").fill("");
     await page.locator('#dm-timeline-continuity').selectOption("CONT-AR");
     assert.equal(await page.locator("#dm-timeline-events-view .dm-historical-event").count(), 1, "The structured time display must retain continuity filtering.");
     await page.locator('#dm-timeline-continuity').selectOption("ALL");

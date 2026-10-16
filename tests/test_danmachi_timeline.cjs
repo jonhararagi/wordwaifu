@@ -76,6 +76,23 @@ assert.equal(timeline.temporalKindLabel(events.get("EVT-DM-AR-ERA-001").temporal
 assert.equal(timeline.temporalKindLabel(events.get("EVT-DM-DESCENT-001").temporal),"Tiempo desconocido / pendiente");
 assert.equal(timeline.temporalKindLabel(events.get("EVT-DM-BELL-ARRIVAL-001").temporal),"Ancla relativa · no es fecha de calendario");
 
+// All six temporal variants are rendered with deterministic, uncertainty-preserving labels.
+// The calendar values below belong to synthetic test fixtures and are not saved as DanMachi canon.
+const displayCases=[
+ {temporal:{kind:"absolute_date",value:"2042-03-04",calendar:"gregorian",precision:"day"},label:"Fecha de calendario · precisión día",description:"2042-03-04"},
+ {temporal:{kind:"approximate_interval",lower:{value:"2040-01-01",calendar:"gregorian",precision:"day"},upper:{value:"2041-01-01",calendar:"gregorian",precision:"day"},precision:"approximate"},label:"Intervalo aproximado",description:"2040-01-01"},
+ {temporal:{kind:"relative_offset",anchorId:"T0-BELL-ARRIVAL",direction:"before",amount:7,unit:"year",precision:"approximate"},label:"Desplazamiento relativo · aproximado",description:"aproximadamente 7 year"},
+ {temporal:{kind:"relative_order",relation:"after",referenceIds:["T0-BELL-ARRIVAL"],distanceKnown:false,precision:"order_only",qualifier:"Después del ancla; distancia desconocida."},label:"Orden relativo · distancia no calculable",description:"distancia desconocida"},
+ {temporal:{kind:"unknown",reason:"No hay localizador primario suficiente.",precision:"unknown"},label:"Tiempo desconocido / pendiente",description:"No hay localizador primario"},
+ {temporal:{kind:"anchor",anchorId:"T0-BELL-ARRIVAL",precision:"anchor"},label:"Ancla relativa · no es fecha de calendario",description:"no es una fecha de calendario"}
+];
+for(const item of displayCases){
+ assert.equal(timeline.temporalKindLabel(item.temporal),item.label,item.temporal.kind+" must retain a clear temporal label");
+ const description=timeline.temporalDescription(item.temporal);
+ assert.ok(description.includes(item.description),item.temporal.kind+" description should preserve its temporal meaning: "+description);
+ assert.ok(!/\b(?:undefined|null)\b/i.test(description),item.temporal.kind+" description must not expose missing values");
+}
+
 // Test-only events exercise supported temporal variants without adding them to the saved canon dataset.
 const fixtureUrl="https://example.test/temporal-model-fixture";
 function fixture(temporal,originKind,scopes){
@@ -112,6 +129,12 @@ for(const item of validFixtures){
  const result=timeline.validateDataset(sample.clone);
  assert.equal(result.valid,true,item.name+": "+result.errors.join("; "));
 }
+// Exercise a valid anchor variant by mutating only an in-memory test copy of the designated T0 event.
+const validAnchorFixture=structuredClone(data);
+const validAnchorEvent=validAnchorFixture.events.find(event=>event.id===validAnchorFixture.anchor.eventId);
+validAnchorEvent.sources.push({label:"Synthetic anchor fixture (not fetched)",url:fixtureUrl,kind:"test_fixture",note:"Test-only source; not canon evidence."});
+validAnchorEvent.temporal={kind:"anchor",anchorId:validAnchorFixture.anchor.id,precision:"anchor",qualifier:"Synthetic anchor fixture only.",sourceUrls:[fixtureUrl]};
+assert.equal(timeline.validateDataset(validAnchorFixture).valid,true,"A valid anchor fixture must remain valid without adding a second anchor event.");
 function assertInvalid(change,needle){
  const sample=fixture({kind:"unknown",reason:"Fixture reason.",precision:"unknown"},"user_plan",["CONT-AU"]);
  change(sample.record,sample.clone);
@@ -125,9 +148,31 @@ assertInvalid((event)=>{event.temporal={kind:"relative_offset",anchorId:"T0-BELL
 assertInvalid((event)=>{event.temporal={kind:"approximate_interval",lower:{value:"2041-01-01",calendar:"gregorian",precision:"day"},upper:{value:"2040-01-01",calendar:"gregorian",precision:"day"},precision:"approximate",sourceUrls:[fixtureUrl]};},"lower bound must precede upper bound");
 assertInvalid((event)=>{event.temporal={kind:"absolute_date",value:"2042-02",calendar:"gregorian",precision:"day",sourceUrls:[fixtureUrl]};},"Invalid absolute calendar date/precision");
 assertInvalid((event)=>{event.temporal={kind:"relative_order",relation:"after",referenceIds:["NO-SUCH-REF"],distanceKnown:false,precision:"order_only",sourceUrls:[fixtureUrl]};},"Missing temporal reference");
+assertInvalid((event)=>{event.temporal={kind:"relative_order",relation:"after",referenceIds:[event.id],distanceKnown:false,precision:"order_only",sourceUrls:[fixtureUrl]};},"cannot reference itself");
+const extraAnchor=structuredClone(data);
+const secondAnchor=extraAnchor.events.find(event=>event.id==="EVT-DM-GREAT-QUESTS-001");
+secondAnchor.temporal={kind:"anchor",anchorId:extraAnchor.anchor.id,precision:"anchor",qualifier:"Synthetic invalid duplicate anchor fixture.",sourceUrls:[secondAnchor.sources[0].url]};
+const extraAnchorReport=timeline.validateDataset(extraAnchor);
+assert.equal(extraAnchorReport.valid,false,"Only the declared T0 event may use the anchor temporal variant.");
+assert.ok(extraAnchorReport.errors.some(error=>error.includes("Only declared anchor event may use anchor temporal variant")),extraAnchorReport.errors.join("; "));
+const missingAnchorPointer=structuredClone(data);
+delete missingAnchorPointer.anchor.eventId;
+const missingAnchorPointerReport=timeline.validateDataset(missingAnchorPointer);
+assert.equal(missingAnchorPointerReport.valid,false,"The structured temporal model must point to its declared anchor event.");
+assert.ok(missingAnchorPointerReport.errors.some(error=>error.includes("requires anchor.eventId")),missingAnchorPointerReport.errors.join("; "));
 assertInvalid((event)=>{event.temporal.sourceUrls=["https://example.test/not-in-event-sources"];},"does not belong to event");
 assertInvalid((event)=>{event.narrativeOrigin={kind:"user_plan"};event.continuityScopes=["CONT-MAIN-LN"]; },"cannot silently enter published continuity");
 assertInvalid((event)=>{event.temporal={kind:"absolute_date",value:"2042-02-30",calendar:"gregorian",precision:"day",sourceUrls:[fixtureUrl]};},"Invalid absolute calendar date/precision");
+const cycleFixture=fixture({kind:"relative_order",relation:"after",referenceIds:["T0-BELL-ARRIVAL"],distanceKnown:false,precision:"order_only"},"user_plan",["CONT-AU"]);
+const cycleLeft=cycleFixture.record;
+const cycleRight=structuredClone(cycleLeft);
+cycleRight.id="TEST-TEMPORAL-FIXTURE-RIGHT";
+cycleLeft.temporal={kind:"relative_order",relation:"before",referenceIds:[cycleRight.id],distanceKnown:false,precision:"order_only",sourceUrls:[fixtureUrl]};
+cycleRight.temporal={kind:"relative_order",relation:"before",referenceIds:[cycleLeft.id],distanceKnown:false,precision:"order_only",sourceUrls:[fixtureUrl]};
+cycleFixture.clone.events.push(cycleRight);
+const temporalCycleReport=timeline.validateDataset(cycleFixture.clone);
+assert.equal(temporalCycleReport.valid,false,"Mutually ordered synthetic events must be rejected as a temporal contradiction.");
+assert.ok(temporalCycleReport.errors.some(error=>error.includes("Temporal relative-order cycle detected")),temporalCycleReport.errors.join("; "));
 const legacy=structuredClone(data);
 delete legacy.temporalModelVersion;
 delete legacy.anchor.eventId;

@@ -68,6 +68,7 @@ function validateDataset(data){
  }
  const legacyTemporalModel=Boolean(data&&data.temporalModelVersion===undefined&&events.every(event=>!event.temporal&&!event.narrativeOrigin));
  if(data&&data.temporalModelVersion!==1&&!legacyTemporalModel)errors.push("Unsupported or missing temporalModelVersion.");
+ if(!legacyTemporalModel&&(!data||!data.anchor||typeof data.anchor.eventId!=="string"||!data.anchor.eventId.trim()))errors.push("Temporal model v1 requires anchor.eventId.");
  const temporalKinds=new Set(["absolute_date","approximate_interval","relative_offset","relative_order","unknown","anchor"]);
  const originKinds=new Set(["published_reference","user_hypothesis","user_plan","author_au"]);
  const units=new Set(["second","minute","hour","day","week","month","year","decade","century"]);
@@ -104,6 +105,7 @@ function validateDataset(data){
     if(!["before","after","between","overlaps"].includes(temporal.relation))errors.push("Invalid relative order relation on "+event.id);
     if(!Array.isArray(temporal.referenceIds)||temporal.referenceIds.length===0)errors.push("Relative order needs references on "+event.id);
     else for(const id of temporal.referenceIds)if(!knownRefs.has(id))errors.push("Missing temporal reference on "+event.id+": "+id);
+    if(Array.isArray(temporal.referenceIds)&&temporal.referenceIds.includes(event.id))errors.push("Temporal relative order cannot reference itself on "+event.id);
     if(temporal.relation==="between"&&(!Array.isArray(temporal.referenceIds)||temporal.referenceIds.length!==2))errors.push("Between requires exactly two temporal references on "+event.id);
     if(temporal.relation!=="between"&&Array.isArray(temporal.referenceIds)&&temporal.referenceIds.length!==1)errors.push("This relative order relation requires exactly one reference on "+event.id);
     if(temporal.distanceKnown!==false)errors.push("Relative order must not invent a calculable distance on "+event.id);
@@ -113,6 +115,7 @@ function validateDataset(data){
     if(typeof temporal.reason!=="string"||!temporal.reason.trim())errors.push("Unknown time needs a reason on "+event.id);
    }else if(temporal.kind==="anchor"){
     if(!data.anchor||temporal.anchorId!==data.anchor.id)errors.push("Anchor event points to an unknown anchor on "+event.id);
+    if(data.anchor&&data.anchor.eventId&&event.id!==data.anchor.eventId)errors.push("Only declared anchor event may use anchor temporal variant on "+event.id);
     if(temporal.precision!=="anchor")errors.push("Anchor event must use anchor precision on "+event.id);
     if(Object.prototype.hasOwnProperty.call(temporal,"value"))errors.push("Anchor event must not define a calendar value on "+event.id);
    }
@@ -128,6 +131,35 @@ function validateDataset(data){
    const anchorEvent=events.find(event=>event.id===data.anchor.eventId);
    if(!anchorEvent)errors.push("Anchor event reference is missing: "+data.anchor.eventId);
    else if(!anchorEvent.temporal||anchorEvent.temporal.kind!=="anchor"||anchorEvent.temporal.anchorId!==data.anchor.id)errors.push("Anchor event must use the anchor temporal variant: "+data.anchor.eventId);
+  }
+  if(!legacyTemporalModel){
+   // Event-to-event relative-order constraints must not contain cycles. The
+   // symbolic T0 anchor is not an event ID and is deliberately not an edge.
+   // "overlaps" is not a strict ordering relation and is excluded.
+   const graph=new Map(events.map(event=>[event.id,[]]));
+   for(const event of events){
+    const temporal=event.temporal;
+    if(!temporal||temporal.kind!=="relative_order"||temporal.relation==="overlaps"||!Array.isArray(temporal.referenceIds))continue;
+    for(const referenceId of temporal.referenceIds){
+     if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(event.id).push(referenceId);
+    }
+   }
+   const state=new Map(),stack=[];
+   let reportedCycle=false;
+   function visitOrder(eventId){
+    state.set(eventId,1);stack.push(eventId);
+    for(const target of graph.get(eventId)||[]){
+     if(state.get(target)===1){
+      if(!reportedCycle){
+       const start=stack.indexOf(target);
+       errors.push("Temporal relative-order cycle detected: "+stack.slice(start).concat(target).join(" -> "));
+       reportedCycle=true;
+      }
+     }else if(!state.has(target))visitOrder(target);
+    }
+    stack.pop();state.set(eventId,2);
+   }
+   for(const eventId of graph.keys())if(!state.has(eventId))visitOrder(eventId);
   }
   if(data&&data.anchor&&data.anchor.sources)for(const url of data.anchor.sources)try{if(new URL(url).protocol!=="https:")errors.push("Anchor source must use HTTPS: "+url);}catch{errors.push("Invalid anchor source URL: "+url);}
  }
