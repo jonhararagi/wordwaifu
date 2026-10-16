@@ -308,6 +308,88 @@
       conflict: "La tensión útil del personaje es la distancia entre su temor e inseguridad y la responsabilidad que otros le confían. En escenas íntimas puede ser amable, torpe, leal o tierno si el contexto de la historia lo justifica; esos comportamientos no son contradicciones automáticas. El corrector solo debería advertir contradicciones contra hechos o rasgos documentados con evidencia, no castigar una emoción nueva por no aparecer en un resumen.",
       sources: ["https://danmachi.com/sword_oratoria/character/", "https://danmachi.fandom.com/wiki/Raul_Nord", "https://danmachi.fandom.com/es/wiki/Raul_Nord"]
     }
+
+    "DM-CHAR-LOKI": {
+      appearance: "Diosa de la Familia Loki. La apariencia y vestimenta deben mostrarse según la continuidad seleccionada y la referencia visual disponible, sin convertir detalles de una adaptación en hechos universales.",
+      history: "Desciende al Mundo Inferior y dirige la Loki Familia, una de las principales fuerzas de Orario. Su grupo reúne aventureros de alto nivel y participa en expediciones y conflictos centrales de la ciudad. Para una cronología concreta, los acontecimientos deben ordenarse por novela o adaptación.",
+      personality: "Extrovertida, provocadora, competitiva y aficionada a bromear, especialmente con otras deidades. Esa fachada cómica no elimina su capacidad para evaluar riesgos, dirigir a sus aventureros y actuar con seriedad cuando su Familia está amenazada.",
+      abilities: "Como diosa no tiene un nivel de aventurera ni debe recibir estadísticas de Falna. Su influencia principal es social y organizativa: dirige una Familia poderosa y participa en decisiones entre deidades. No atribuirle técnicas de combate de aventurero sin una fuente específica.",
+      relationships: "Finn, Riveria, Gareth, Ais, Bete y los demás miembros forman parte de su Familia, pero la naturaleza de cada vínculo debe describirse individualmente y con contexto. Mantiene una rivalidad cómica con Hestia; esa rivalidad no equivale por sí sola a enemistad absoluta.",
+      conflict: "Su humor y su competitividad pueden ocultar la presión de mantener a una Familia de primera línea. Una escena seria, afectuosa o vulnerable no es contradicción automática: debe contrastarse con un hecho explícito o un patrón documentado, no con un resumen superficial.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Loki", "https://danmachi.fandom.com/es/wiki/Familia_Loki"]
+    },
+    "CHAR-OURANOS": {
+      appearance: "Dios vinculado a la Guild y a los rituales que sostienen el orden de Orario. Los detalles físicos deben cotejarse con la referencia de la continuidad elegida antes de usarlos como evidencia visual.",
+      history: "Permanece en la sede de la Guild y realiza una función ritual relacionada con el Dungeon. Su papel y sus decisiones se comprenden mejor a la luz de los secretos institucionales y de los acontecimientos de las novelas; evitar revelar esos datos sin aviso de spoiler.",
+      personality: "Reservado, solemne y orientado a mantener el equilibrio de Orario. Sus acciones no deben reducirse a pasividad: su posición implica responsabilidades y decisiones cuyos motivos requieren contexto narrativo.",
+      abilities: "No asignarle nivel de aventurero. Su función está asociada a un ritual divino y a la estructura de la Guild; cualquier efecto concreto debe quedar vinculado a una fuente narrativa verificable.",
+      relationships: "La Guild constituye el marco institucional de su actuación. Los vínculos con otros dioses, la Guild y las amenazas del Dungeon deben separarse de las inferencias que solo surgen al conocer revelaciones posteriores.",
+      conflict: "La tensión central enfrenta la preservación del orden con la necesidad de responder a amenazas que no pueden resolverse mediante procedimientos ordinarios. Los motivos ocultos requieren evidencia antes de clasificarse como hechos.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Ouranos", "https://danmachi.fandom.com/wiki/Ouranos"]
+    },
+    "CHAR-ASFI-AL-ANDROMEDA": {
+      appearance: "Humana de cabello oscuro, asociada con la Familia Hermes y con el uso de equipo de apoyo para las expediciones. Los detalles específicos de atuendo deben confirmarse en la referencia visual de la adaptación.",
+      history: "Es una aventurera y creadora de objetos mágicos que cumple funciones importantes para Hermes y sus compañeros. Su conocimiento técnico y su participación en operaciones de apoyo la hacen relevante más allá de su capacidad de combate.",
+      personality: "Práctica, competente y poco impresionada por la teatralidad de Hermes. Tiende a valorar la preparación y la utilidad concreta; no debe confundirse su actitud profesional con ausencia de afecto o lealtad.",
+      abilities: "Su perfil se asocia con la creación y utilización de objetos mágicos y con habilidades de aventurera. Los nombres, límites y costes de cada objeto o habilidad deben documentarse por separado; no inferir una lista completa a partir de su oficio.",
+      relationships: "Trabaja estrechamente con Hermes y presta apoyo a operaciones que requieren planificación y equipo. La colaboración funcional no demuestra automáticamente intimidad personal con todos los integrantes de la Familia.",
+      conflict: "Debe equilibrar la preparación metódica con encargos de Hermes que pueden ser impredecibles. Su competencia puede justificar que actúe con calma bajo presión, sin convertirla en infalible.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Asfi_Al_Andromeda", "https://danmachi.fandom.com/wiki/Asfi_Al_Andromeda"]
+    },
+    "CHAR-KASHIMA-OUKA": {
+      appearance: "Aventurero humano de la Familia Takemikazuchi. Para detalles de aspecto y equipo, usar la ficha visual de la adaptación correspondiente y no mezclar diseños entre continuidades.",
+      history: "Forma parte de la Familia Takemikazuchi y participa en las actividades de sus compañeros en Orario. Su trayectoria debe ordenarse según los acontecimientos de las novelas y la adaptación; no asumir que el orden del anime cubre todos sus matices.",
+      personality: "Se muestra como un compañero con sentido de responsabilidad y una relación estrecha con su grupo. Las afirmaciones más específicas sobre temperamento, miedos o evolución deben sostenerse con escenas localizables.",
+      abilities: "Es un aventurero cuyo nivel y capacidades deben registrarse con fecha narrativa. No añadir técnicas, estadísticas o habilidades especiales sin una referencia concreta.",
+      relationships: "Está vinculado a Takemikazuchi y a los miembros de su Familia, incluidos Mikoto y Chigusa. Cada relación debe indicar el motivo del vínculo y el momento en que se establece.",
+      conflict: "Su papel debe evaluarse a través de decisiones y escenas concretas, no a partir de una etiqueta genérica de compañero leal. La información que no esté localizada queda como pendiente de verificación.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Kashima_Ouka", "https://danmachi.fandom.com/wiki/Takemikazuchi_Familia"]
+    },
+    "CHAR-HITACHI-CHIGUSA": {
+      appearance: "Aventurera humana de la Familia Takemikazuchi. Los rasgos físicos concretos deben comprobarse con la ficha de personaje de la adaptación o con una descripción localizada en las novelas.",
+      history: "Forma parte de la Familia Takemikazuchi y mantiene vínculos con Mikoto y los demás miembros. Su historia está relacionada con las actividades de la Familia y con las expediciones en las que participa.",
+      personality: "Su caracterización debe apoyarse en sus acciones y diálogos, evitando convertir una impresión breve en un rasgo permanente. La timidez, el valor o la preocupación pueden variar según el contexto sin constituir por sí mismos contradicciones.",
+      abilities: "Las capacidades de combate y apoyo deben registrarse con la continuidad y etapa en que se observan. No atribuir magia, nivel ni habilidades no confirmadas.",
+      relationships: "Mikoto, Ouka y Takemikazuchi son referencias importantes para situarla dentro de su Familia. La ficha final debe explicar qué escenas sustentan cada relación.",
+      conflict: "El expediente debe diferenciar hechos narrados de interpretaciones sobre su personalidad. Los detalles todavía no localizados se mantienen como pendientes, no como canon confirmado.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Hitachi_Chigusa", "https://danmachi.fandom.com/wiki/Takemikazuchi_Familia"]
+    },
+    "CHAR-TSUBAKI-COLBRANDE": {
+      appearance: "Herrera enana y aventurera de la Familia Hephaistos, reconocible por su parche en el ojo y su presencia imponente. Los detalles del diseño deben vincularse a la adaptación utilizada.",
+      history: "Dirige la sucursal de la forja de Hephaistos en Orario y destaca como artesana de primer nivel. Su papel combina la producción de equipo con la experiencia práctica de una aventurera, por lo que no debe tratarse únicamente como personaje de taller.",
+      personality: "Directa, enérgica y orgullosa de su oficio. Evalúa a las personas por su trabajo y determinación; su franqueza puede parecer intimidante, pero no implica que sea incapaz de respetar a otros.",
+      abilities: "Su principal especialidad es la herrería y la fabricación de equipo de alta calidad. Las armas concretas, materiales, límites y resultados deben enlazarse con fuentes específicas, sin asumir que todo objeto asociado a su taller fue fabricado personalmente por ella.",
+      relationships: "Está vinculada a Hephaistos y a la red de herreros de Orario. Sus interacciones con Welf y otros aventureros deben describirse según las escenas documentadas, distinguiendo relación profesional de amistad.",
+      conflict: "Su orgullo artesanal exige equilibrar calidad, recursos y necesidades de quienes dependen de su equipo. La ficha debe mostrar su criterio profesional y no limitarla a una lista de armas.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Tsubaki_Colbrande", "https://danmachi.fandom.com/wiki/Hephaistos_Familia"]
+    },
+    "CHAR-DORMUL-BOLSTER": {
+      appearance: "Enano aventurero de la Familia Ganesha. La descripción visual exacta debe cotejarse con el material de referencia de la adaptación.",
+      history: "Participa en las actividades de la Familia Ganesha y en la vida aventurera de Orario. La ficha debe ampliar su trayectoria a partir de escenas y volúmenes localizados, sin rellenar los periodos no documentados con conjeturas.",
+      personality: "Los rasgos individuales deben apoyarse en diálogos y decisiones observables. No asignar automáticamente una personalidad estereotípica por su especie o por pertenecer a una Familia concreta.",
+      abilities: "Su nivel, estilo de combate y capacidades deben registrarse por etapa narrativa con referencias concretas. No añadir técnicas o estadísticas por analogía con otros enanos.",
+      relationships: "Su pertenencia a Ganesha Familia establece un vínculo institucional; las relaciones personales necesitan evidencia adicional y una explicación del contexto.",
+      conflict: "La prioridad es distinguir su participación confirmada en la historia de los detalles aún no investigados. La ausencia de información no debe convertirse en una debilidad inventada.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Dormul_Bolster", "https://danmachi.fandom.com/wiki/Ganesha_Familia"]
+    },
+    "CHAR-LUVIS-LILIX": {
+      appearance: "Elfo aventurero vinculado a la Familia Ganesha. Los rasgos físicos específicos deben verificarse con el material visual o textual de referencia.",
+      history: "Figura entre los miembros registrados de la Familia Ganesha. Para completar su historia hace falta identificar los episodios y volúmenes en que aparece; no atribuirle una biografía extensa que las fuentes consultadas no sostienen.",
+      personality: "No se deben convertir datos escasos en una personalidad cerrada. Los rasgos se incorporarán cuando existan escenas localizables, manteniendo separados los hechos y las inferencias.",
+      abilities: "Nivel, magia, habilidades y especialidad de combate permanecen sin confirmar en este expediente hasta localizar evidencia específica.",
+      relationships: "La afiliación a Ganesha Familia es un vínculo confirmado por el registro; cualquier amistad, rivalidad o parentesco requiere respaldo independiente.",
+      conflict: "Su principal brecha documental es la falta de una síntesis basada en escenas verificables. El sistema debe mostrar 'sin verificar' en los campos no investigados.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Luvis_Lilix", "https://danmachi.fandom.com/wiki/Ganesha_Familia"]
+    },
+    "CHAR-LULUNE-LOUIE": {
+      appearance: "Miembro de la Familia Hermes y aventurera pallum. Los detalles visuales y el equipo deben contrastarse con la ficha de adaptación correspondiente.",
+      history: "Participa en las actividades de la Familia Hermes y aparece vinculada a expediciones y operaciones de sus compañeros. Su cronología y contribuciones específicas deben ampliarse a partir de referencias localizables.",
+      personality: "La ficha debe reflejar sus acciones observadas sin atribuirle rasgos por defecto debido a su especie o afiliación. Los detalles no corroborados deben permanecer abiertos.",
+      abilities: "Registrar únicamente nivel, habilidades y funciones de apoyo confirmados en la etapa correspondiente. No inferir capacidades por el papel general de la Familia Hermes.",
+      relationships: "Su afiliación la conecta con Hermes y con otros miembros de su grupo. Los vínculos personales deben incluir la razón y el contexto narrativo, no solo nombres asociados.",
+      conflict: "La información disponible necesita una revisión de escenas para evitar que una ficha breve se presente como biografía completa. Mantener explícita la incertidumbre.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Lulune_Louie", "https://danmachi.fandom.com/wiki/Hermes_Familia"]
+    }
   };
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({
