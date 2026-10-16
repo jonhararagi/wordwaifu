@@ -98,7 +98,19 @@ for(const [id,summary,period,affiliation] of [
 META["CHAR-MARIYU-LEAGE"].states["CONT-ANIME"]={
 summary:"La ficha oficial escribe マリュー・レアージュ, la identifica como humana y miembro de Astrea Familia; el portal registra a Akira Sekine como voz japonesa. Los alias Mariyu Reage y Maryuu Reage apuntan a este mismo ID.",
 period:"DanMachi IV · perfil oficial de personaje.",
-affiliation:"Astrea Familia · integrante histórica"
+affiliation:"Astrea Familia · integrante histórica",
+
+"CHAR-LILIRUCA-ARDE":{overview:"Pallum y supporter con dos estados de afiliación: antigua integrante de Soma Familia y miembro posterior de Hestia Familia. Los detalles de novela siguen etiquetados según su fuente.",states:{
+"CONT-MAIN-LN":{summary:"La ficha editorial del volumen 6 confirma que Lili es capturada por Soma Familia antes del War Game. Su historial más amplio y la salida de la Familia se mantienen como resumen comunitario hasta localizar el texto original.",period:"Historia principal · conflicto del volumen 6; secuencia detallada pendiente de cotejo.",affiliation:"Soma Familia (histórica); Hestia Familia (posterior, según resumen secundario)"},
+"CONT-ANIME":{summary:"El perfil oficial de DanMachi IV la presenta como supporter de Hestia Familia y describe que Bell la ayudó. Es evidencia de adaptación, no un sustituto de la novela principal.",period:"Estado de la adaptación DanMachi IV; fecha interna exacta no fijada.",affiliation:"Hestia Familia · supporter"}}},
+"CHAR-SOMA":{overview:"Soma es la deidad patrona de Soma Familia, asociada por compendios secundarios a la elaboración de bebidas. Sus decisiones durante la crisis y reforma necesitan cotejo primario.",states:{"CONT-MAIN-LN":{summary:"La fuente comunitaria lo presenta como cabeza de la Familia y describe una etapa de alejamiento seguida de reforma. Se conservan esos hechos como secundarios hasta localizar las escenas originales.",period:"Arco de Soma Familia; intervalo exacto pendiente.",affiliation:"Deidad patrona / cabeza de Soma Familia"}}},
+"CHAR-ZANIS-LUSTRA":{overview:"Antiguo capitán reportado de Soma Familia. Los detalles de cargo, conducta y desenlace se mantienen con procedencia secundaria y spoilers.",states:{"CONT-MAIN-LN":{summary:"Compendios comunitarios lo identifican como antiguo capitán y describen abuso de autoridad. Las alegaciones requieren cotejo con la novela; la acusación sobre Canoe no demuestra culpabilidad de Lili.",period:"Periodo anterior al cambio de capitanía; fecha no fijada.",affiliation:"Soma Familia · antiguo capitán reportado"}}},
+"CHAR-CHANDRA-IHIT":{overview:"Capitán posterior reportado de Soma Familia. El perfil comunitario ofrece una pista de sus acciones, pero no un dossier primario completo.",states:{"CONT-MAIN-LN":{summary:"La fuente secundaria lo identifica como capitán y le atribuye desaprobación de Zanis y ayuda a Lili. El orden de sucesión y las escenas permanecen pendientes de verificación.",period:"Estado posterior al de Zanis según compendio; fecha no fijada.",affiliation:"Soma Familia · capitán reportado"}}},
+"CHAR-CANOE-BELWAY":{overview:"Identidad de roster vinculada a Soma Familia cuyo estado y destino no se resuelven por completo en esta evidencia.",states:{"CONT-MAIN-LN":{summary:"Una lista comunitaria lo registra como miembro anterior y un resumen refiere una acusación de Zanis sobre su desaparición. No se determina causa, circunstancia ni responsabilidad.",period:"Conflicto de Soma Familia alrededor del volumen 6; momento exacto no fijado.",affiliation:"Soma Familia · miembro anterior reportado"}}},
+"CHAR-TSUKINOKAMI-KAEDE":{overview:"Ficha de roster para una identidad listada por fuentes comunitarias; descripción y biografía individual no localizadas.",states:{"CONT-MAIN-LN":{summary:"La categoría comunitaria la enumera entre miembros de Soma Familia y una referencia secundaria indica Hume Bunny. No se han verificado nivel, habilidades ni acciones.",period:"Intervalo de afiliación por confirmar.",affiliation:"Soma Familia · roster secundario"}}},
+"CHAR-SHINONOME-MOMIJI":{overview:"Ficha de roster para una identidad asociada a Soma Familia, sin biografía individual primaria localizada.",states:{"CONT-MAIN-LN":{summary:"La lista comunitaria la enumera como miembro; la especie Renard se conserva como dato secundario. No se añaden habilidades, nivel, personalidad ni escena no localizados.",period:"Intervalo de afiliación por confirmar.",affiliation:"Soma Familia · roster secundario"}}},
+"CHAR-COCO-COLLINS":{overview:"Ficha de roster para una identidad asociada a Soma Familia; el registro individual sigue pendiente de evidencia primaria.",states:{"CONT-MAIN-LN":{summary:"La lista comunitaria la enumera como miembro y una referencia secundaria la identifica como Pallum. No se infieren rol de supporter, habilidades ni relaciones íntimas.",period:"Intervalo de afiliación por confirmar.",affiliation:"Soma Familia · roster secundario"}}}
+
 };
 
 const REL={
@@ -197,6 +209,44 @@ REL["CHAR-ASTREA"]["CONT-MAIN-LN"]=[
 {targetId:"CHAR-SHAU",label:"Shau · nueva generación (fuente secundaria)",type:"Nueva generación · afiliación provisional",description:"Aparece en la lista comunitaria de la nueva Familia. No se atribuye rango o historia individual.",refs:["DMR-007-CLM-011"]},
 {targetId:"CHAR-ULANDA",label:"Ulanda · nueva generación (fuente secundaria)",type:"Nueva generación · afiliación provisional",description:"Aparece en la lista comunitaria de la nueva Familia. No se atribuye rango o historia individual.",refs:["DMR-007-CLM-011"]}
 ];
+Object.assign(REL,{
+
+"CHAR-LILIRUCA-ARDE":{"CONT-MAIN-LN":[
+{targetId:"CHAR-SOMA",label:"Afiliación histórica",type:"Afiliación",description:"La fuente secundaria sitúa a Lili primero en Soma Familia; la ficha editorial confirma que la Familia la captura antes del War Game, sin describir por sí sola cada escena.",refs:["DMR-013-CLM-002"]},
+{targetId:"CHAR-ZANIS-LUSTRA",label:"Conflicto de liberación reportado",type:"Conflicto",description:"La relación surge del resumen secundario del conflicto de Lili; los detalles y el desenlace aún requieren un localizador primario.",refs:["DMR-013-CLM-002","DMR-013-CLM-003"]},
+{targetId:"CHAR-CHANDRA-IHIT",label:"Ayuda reportada durante la salida",type:"Intervención",description:"Una fuente comunitaria atribuye a Chandra ayuda a Lili; debe verificarse la escena en la novela.",refs:["DMR-013-CLM-004"]},
+{targetId:"CHAR-CANOE-BELWAY",label:"Acusación no resuelta",type:"Acusación / evidencia pendiente",description:"Un resumen comunitario refiere que Zanis acusa a Lili por la desaparición de Canoe. La acusación no se trata como prueba de responsabilidad.",refs:["DMR-013-CLM-005"]}
+],"CONT-ANIME":[{targetId:"DM-CHAR-BELL",label:"Bell la ayuda",type:"Ayuda documentada en adaptación",description:"El perfil oficial de DanMachi IV presenta a Bell como quien ayuda a Lili. Esta arista se mantiene en CONT-ANIME.",refs:["DMR-013-CLM-010"]}]},
+"CHAR-SOMA":{"CONT-MAIN-LN":[
+{targetId:"CHAR-LILIRUCA-ARDE",label:"Antigua integrante",type:"Patronazgo / afiliación por periodo",description:"La afiliación histórica de Lili se documenta con una ficha editorial y un resumen comunitario, con grados de evidencia separados.",refs:["DMR-013-CLM-002"]},
+{targetId:"CHAR-ZANIS-LUSTRA",label:"Antiguo capitán reportado",type:"Gobierno de Familia",description:"La fuente comunitaria describe a Zanis como antiguo capitán.",refs:["DMR-013-CLM-003"]},
+{targetId:"CHAR-CHANDRA-IHIT",label:"Capitanía posterior reportada",type:"Gobierno de Familia",description:"Chandra aparece como capitán posterior en referencias secundarias; escena de sucesión pendiente.",refs:["DMR-013-CLM-004"]},
+{targetId:"CHAR-TSUKINOKAMI-KAEDE",label:"Miembro en roster",type:"Afiliación organizativa",description:"La categoría comunitaria lista a Kaede bajo Soma Familia; no prueba relación personal.",refs:["DMR-013-CLM-006"]},
+{targetId:"CHAR-SHINONOME-MOMIJI",label:"Miembro en roster",type:"Afiliación organizativa",description:"La categoría comunitaria lista a Momiji bajo Soma Familia; no prueba relación personal.",refs:["DMR-013-CLM-007"]},
+{targetId:"CHAR-COCO-COLLINS",label:"Miembro en roster",type:"Afiliación organizativa",description:"La categoría comunitaria lista a Coco bajo Soma Familia; no prueba relación personal.",refs:["DMR-013-CLM-008"]},
+{targetId:"CHAR-CANOE-BELWAY",label:"Integrante anterior",type:"Afiliación / destino no resuelto",description:"Canoe aparece como integrante anterior; su destino no se resuelve aquí.",refs:["DMR-013-CLM-005"]}
+]},
+"CHAR-ZANIS-LUSTRA":{"CONT-MAIN-LN":[
+{targetId:"CHAR-SOMA",label:"Capitán bajo su deidad patrona",type:"Afiliación / autoridad",description:"Zanis figura como antiguo capitán de la Familia de Soma en referencias secundarias.",refs:["DMR-013-CLM-003"]},
+{targetId:"CHAR-CHANDRA-IHIT",label:"Relevo de capitanía reportado",type:"Cambio de liderazgo",description:"Las wikis describen estados de capitanía sucesivos; cronología y escena necesitan verificación.",refs:["DMR-013-CLM-003","DMR-013-CLM-004"]},
+{targetId:"CHAR-LILIRUCA-ARDE",label:"Conflicto y acusación",type:"Conflicto / acusación",description:"El resumen comunitario refiere una acusación sobre Canoe dirigida contra Lili; no se registra como prueba independiente.",refs:["DMR-013-CLM-003","DMR-013-CLM-005"]},
+{targetId:"CHAR-CANOE-BELWAY",label:"Acusación sobre su desaparición",type:"Acusación / evidencia pendiente",description:"El resumen atribuye a Zanis una acusación pero no establece causa de ausencia ni responsabilidad.",refs:["DMR-013-CLM-005"]}
+]},
+"CHAR-CHANDRA-IHIT":{"CONT-MAIN-LN":[
+{targetId:"CHAR-SOMA",label:"Capitán bajo la deidad patrona",type:"Afiliación / liderazgo",description:"Chandra aparece como capitán posterior de Soma Familia según el roster comunitario.",refs:["DMR-013-CLM-004"]},
+{targetId:"CHAR-ZANIS-LUSTRA",label:"Capitán anterior",type:"Cambio de liderazgo",description:"Referencia secundaria que presenta los cargos como sucesivos.",refs:["DMR-013-CLM-003","DMR-013-CLM-004"]},
+{targetId:"CHAR-LILIRUCA-ARDE",label:"Ayuda reportada",type:"Intervención",description:"La fuente comunitaria le atribuye ayuda a Lili; la escena original todavía debe localizarse.",refs:["DMR-013-CLM-004"]}
+]},
+"CHAR-CANOE-BELWAY":{"CONT-MAIN-LN":[
+{targetId:"CHAR-ZANIS-LUSTRA",label:"Acusación sobre su desaparición",type:"Acusación / evidencia pendiente",description:"El resumen comunitario refiere el reclamo de Zanis, sin establecer causa o circunstancias de ausencia.",refs:["DMR-013-CLM-005"]},
+{targetId:"CHAR-LILIRUCA-ARDE",label:"Nombrada en una acusación",type:"Acusación / evidencia pendiente",description:"La acusación no se transforma en prueba de culpabilidad de Lili.",refs:["DMR-013-CLM-005"]}
+]},
+"CHAR-TSUKINOKAMI-KAEDE":{"CONT-MAIN-LN":[{targetId:"CHAR-SOMA",label:"Afiliación reportada",type:"Afiliación organizativa",description:"El roster comunitario incluye a Kaede en Soma Familia; relación institucional, no personal.",refs:["DMR-013-CLM-006"]}]},
+"CHAR-SHINONOME-MOMIJI":{"CONT-MAIN-LN":[{targetId:"CHAR-SOMA",label:"Afiliación reportada",type:"Afiliación organizativa",description:"El roster comunitario incluye a Momiji en Soma Familia; relación institucional, no personal.",refs:["DMR-013-CLM-007"]}]},
+"CHAR-COCO-COLLINS":{"CONT-MAIN-LN":[{targetId:"CHAR-SOMA",label:"Afiliación reportada",type:"Afiliación organizativa",description:"El roster comunitario incluye a Coco en Soma Familia; relación institucional, no personal.",refs:["DMR-013-CLM-008"]}]}
+
+});
+
 for(const id of ["CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA"]){
   REL[id]={"CONT-MAIN-LN":[{targetId:"CHAR-ASTREA",label:"Astrea · diosa de la nueva Familia",type:"Afiliación secundaria",description:"La lista comunitaria sitúa a esta integrante en la nueva Familia asociada a Astrea. Se mantiene pendiente de cotejo con la novela.",refs:["DMR-007-CLM-011"]}]};
 }

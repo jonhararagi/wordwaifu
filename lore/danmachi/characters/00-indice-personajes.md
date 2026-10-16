@@ -33,7 +33,7 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-LEFIYA-VIRIDIS | Lefiya Viridis | Lefiya | Loki Familia, Sword Oratoria | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-RAUL-NOORD | [Raul Nord](raul-nord.md) | Raul; ラウル・ノールド | Loki Familia; coordinación de miembros de menor rango | Expediente existente; perfil oficial de adaptación localizado; cotejo de LN pendiente |
 | CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-LILIRUCA-ARDE | Liliruca Arde | Lili | Hestia Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior) | Ficha individual y expediente integrados; fuentes mixtas; cotejo primario pendiente |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-SANJOUNO-HARUHIME | Sanjouno Haruhime | Haruhime | Hestia Familia, Ishtar historia | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia (estado histórico); Hostess of Fertility (perfil de adaptación) | Expediente de aplicación existente; cotejo de LN pendiente |
@@ -111,3 +111,18 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 | CHAR-AISHA-BELKA | Aisha Belka | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-FELS | Fels | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-FILVIS-CHALIA | Filvis Chalia | Expediente de aplicación existente; cotejo de LN y spoilers de Sword Oratoria pendientes |
+
+
+## Familia Soma · fichas individuales y límites de evidencia
+
+| ID | Nombre / alias | Afiliación o función reportada | Estado |
+|---|---|---|---|
+| CHAR-SOMA | [Soma](soma.md) / Sōma | Deidad patrona de Soma Familia | Referencia comunitaria secundaria; fuente primaria pendiente |
+| CHAR-ZANIS-LUSTRA | [Zanis Lustra](zanis-lustra.md) / Gandharva | Antiguo capitán reportado | Secundaria; rol y desenlace requieren cotejo |
+| CHAR-CHANDRA-IHIT | [Chandra Ihit](chandra-ihit.md) | Capitán posterior reportado | Secundaria; escenas individuales pendientes |
+| CHAR-CANOE-BELWAY | [Canoe Belway](canoe-belway.md) | Antiguo miembro; destino no resuelto en esta ficha | Secundaria; una acusación no prueba culpabilidad |
+| CHAR-TSUKINOKAMI-KAEDE | [Tsukinokami Kaede](tsukinokami-kaede.md) | Integrante listada por roster comunitario | Solo roster; perfil primario pendiente |
+| CHAR-SHINONOME-MOMIJI | [Shinonome Momiji](shinonome-momiji.md) | Integrante listada por roster comunitario | Solo roster; perfil primario pendiente |
+| CHAR-COCO-COLLINS | [Coco Collins](coco-collins.md) | Integrante listada por roster comunitario | Solo roster; perfil primario pendiente |
+
+La ficha de [Soma Familia](../familias/soma-familia.md) reúne afiliaciones por periodo. No asumas que todos los nombres de esta tabla fueron miembros activos al mismo tiempo. Las wikis se utilizan aquí como fuentes de descubrimiento etiquetadas, no como prueba de capítulos/páginas de la novela.

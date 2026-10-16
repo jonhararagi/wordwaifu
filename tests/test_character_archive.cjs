@@ -7,6 +7,7 @@ const archive=require("../src/character-archive.js");
 const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
 const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"];
+paths.push("research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md");
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
@@ -118,6 +119,27 @@ for(const id of ["DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","C
   const item=archive.getProfile(index,id,"CONT-ANIME","all");
   assert.ok(item&&item.claims.length>0,"Expanded character must expose source-backed claims: "+id);
 }
+
+const somaBatchIds=["CHAR-LILIRUCA-ARDE","CHAR-SOMA","CHAR-ZANIS-LUSTRA","CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY","CHAR-TSUKINOKAMI-KAEDE","CHAR-SHINONOME-MOMIJI","CHAR-COCO-COLLINS"];
+for(const id of somaBatchIds){
+  assert.ok(archive.list(index).some(character=>character.id===id),"Soma batch must enter the searchable archive: "+id);
+  const profile=archive.getProfile(index,id,"CONT-MAIN-LN","all");
+  assert.ok(profile&&profile.claims.length>0,"Soma batch profile must retain source-linked claims: "+id);
+}
+const liliSomaProfile=archive.getProfile(index,"CHAR-LILIRUCA-ARDE","CONT-MAIN-LN","all");
+assert.ok(liliSomaProfile.relationships.some(link=>link.targetId==="CHAR-SOMA"),"Lili must link to the historic Soma Familia affiliation.");
+assert.ok(liliSomaProfile.relationships.some(link=>link.targetId==="CHAR-ZANIS-LUSTRA"),"Lili must link to the source-qualified Zanis conflict.");
+assert.ok(liliSomaProfile.relationships.some(link=>link.targetId==="CHAR-CHANDRA-IHIT"),"Lili must link to Chandra's reported intervention.");
+assert.ok(liliSomaProfile.relationships.some(link=>link.targetId==="CHAR-CANOE-BELWAY"),"Canoe's unresolved case must be navigable without asserting guilt.");
+const liliAnimeProfile=archive.getProfile(index,"CHAR-LILIRUCA-ARDE","CONT-ANIME","all");
+assert.ok(liliAnimeProfile.claims.some(claim=>claim.claimId==="DMR-013-CLM-010"),"Official adaptation evidence must support the separate Lili adaptation state.");
+assert.ok(liliAnimeProfile.claims.every(claim=>claim.continuityScopes.includes("CONT-ANIME")),"The adaptation-only Lili claims must not leak into main-novel continuity.");
+const somaProfile=archive.getProfile(index,"CHAR-SOMA","CONT-MAIN-LN","all");
+assert.ok(somaProfile.relationships.some(link=>link.targetId==="CHAR-ZANIS-LUSTRA"),"Soma's archive profile should link to Zanis with a cited role.");
+assert.ok(somaProfile.relationships.some(link=>link.targetId==="CHAR-TSUKINOKAMI-KAEDE"),"Roster-only members should be navigable as separate identities.");
+const zanisProfile=archive.getProfile(index,"CHAR-ZANIS-LUSTRA","CONT-MAIN-LN","all");
+assert.ok(zanisProfile.relationships.some(link=>link.targetId==="CHAR-CANOE-BELWAY"),"Zanis-to-Canoe is an allegation edge with explicit evidence limits.");
+
 const bell=archive.getProfile(index,"DM-CHAR-BELL","CONT-ANIME","all");
 assert.ok(bell.relationships.length>=3,"Bell's source-backed relationship network should include Hestia, Ais and Eina.");
 assert.ok(archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR").references.some(ref=>ref.url.includes("fandom.com/es/wiki/Ryuu_Lion")));

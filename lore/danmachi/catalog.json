@@ -1146,6 +1146,132 @@
         "Dungeon",
         "lugar"
       ]
+    },
+    {
+      "id": "CHAR-LILIRUCA-ARDE",
+      "path": "characters/liliruca-arde.md",
+      "type": "character",
+      "tags": [
+        "Liliruca Arde",
+        "Lili",
+        "Familia Soma",
+        "Familia Hestia",
+        "supporter"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-SOMA",
+      "path": "characters/soma.md",
+      "type": "deity_character",
+      "tags": [
+        "Soma",
+        "Sōma",
+        "ソーマ",
+        "Soma Familia",
+        "brewing",
+        "deity"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ZANIS-LUSTRA",
+      "path": "characters/zanis-lustra.md",
+      "type": "character",
+      "tags": [
+        "Zanis Lustra",
+        "Zanis",
+        "Gandharva",
+        "Familia Soma",
+        "former captain"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-CHANDRA-IHIT",
+      "path": "characters/chandra-ihit.md",
+      "type": "character",
+      "tags": [
+        "Chandra Ihit",
+        "Chandra",
+        "Shandora Ihito",
+        "Familia Soma",
+        "dwarf",
+        "captain"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-CANOE-BELWAY",
+      "path": "characters/canoe-belway.md",
+      "type": "character",
+      "tags": [
+        "Canoe Belway",
+        "Canoe",
+        "Familia Soma",
+        "former member",
+        "deceased",
+        "spoiler"
+      ],
+      "status": "secondary_reference_disputed_details_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-TSUKINOKAMI-KAEDE",
+      "path": "characters/tsukinokami-kaede.md",
+      "type": "character",
+      "tags": [
+        "Tsukinokami Kaede",
+        "Kaede",
+        "Familia Soma",
+        "Hume Bunny"
+      ],
+      "status": "secondary_roster_reference_individual_profile_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-SHINONOME-MOMIJI",
+      "path": "characters/shinonome-momiji.md",
+      "type": "character",
+      "tags": [
+        "Shinonome Momiji",
+        "Momiji",
+        "Familia Soma",
+        "Renard"
+      ],
+      "status": "secondary_roster_reference_individual_profile_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-COCO-COLLINS",
+      "path": "characters/coco-collins.md",
+      "type": "character",
+      "tags": [
+        "Coco Collins",
+        "Coco",
+        "Familia Soma",
+        "Pallum"
+      ],
+      "status": "secondary_roster_reference_individual_profile_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "FAM-SOMA",
+      "path": "familias/soma-familia.md",
+      "type": "familia",
+      "tags": [
+        "Soma Familia",
+        "Soma",
+        "Liliruca Arde",
+        "Zanis Lustra",
+        "Chandra Ihit"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -1181,11 +1307,6 @@
     },
     {
       "id": "CHAR-WELF-CROZZO",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-LILIRUCA-ARDE",
       "type": "character",
       "status": "candidate_not_created"
     },
@@ -1270,11 +1391,6 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "CHAR-SOMA",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "CHAR-DIAN-CECHT",
       "type": "deity_character",
       "status": "candidate_not_created"
@@ -1331,11 +1447,6 @@
     },
     {
       "id": "FAM-TAKEMIKAZUCHI",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-SOMA",
       "type": "familia",
       "status": "candidate_not_created"
     },
@@ -2078,6 +2189,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
       "type": "organization_dossier_claim_index",
       "status": "present_partial_source_checked"
+    },
+    {
+      "document_id": "RESEARCH-DM-013",
+      "path": "research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md",
+      "type": "character_relationship_research",
+      "status": "secondary_reference_partial_primary_check_pending"
     }
   ],
   "lastStructuredSync": "2026-10-16"

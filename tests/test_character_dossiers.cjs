@@ -3,7 +3,7 @@ require("../src/character-dossiers.js");
 const api = globalThis.WordWaifuCharacterDossiers;
 assert.ok(api, "Character dossier registry should load in Node.");
 const all = api.list();
-assert.ok(all.length >= 30, "The archive should include at least 15 researched extended dossiers.");
+assert.ok(all.length >= 37, "The archive must retain existing dossiers and seven new Soma Familia members.");
 for (const dossier of all) {
   for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) {
     assert.ok(typeof dossier[field] === "string" && dossier[field].length >= 100,
@@ -19,4 +19,20 @@ assert.ok(api.get("CHAR-RYUU-LION").history.includes("piso 37"), "Ryuu's dossier
 assert.equal(api.get("MISSING-ID"), null, "Unknown characters should return null.");
 bell.history = "mutated";
 assert.notEqual(api.get("DM-CHAR-BELL").history, "mutated", "Callers must not mutate the shared dossier catalog.");
+
+const somaBatchIds = [
+  "CHAR-LILIRUCA-ARDE","CHAR-SOMA","CHAR-ZANIS-LUSTRA","CHAR-CHANDRA-IHIT",
+  "CHAR-CANOE-BELWAY","CHAR-TSUKINOKAMI-KAEDE","CHAR-SHINONOME-MOMIJI","CHAR-COCO-COLLINS"
+];
+for (const id of somaBatchIds) {
+  const dossier = api.get(id);
+  assert.ok(dossier, id + " must have an application dossier.");
+  for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) {
+    assert.ok(dossier[field].length >= 100, id + " must explain evidence limits for " + field + ".");
+  }
+  assert.ok(dossier.sources.some(url => url.startsWith("https://")), id + " must retain provenance URLs.");
+}
+assert.ok(api.get("CHAR-LILIRUCA-ARDE").history.includes("Soma Familia"), "Lili must preserve the former-family context in her application profile.");
+assert.ok(api.get("CHAR-CHANDRA-IHIT").relationships.includes("Zanis"), "Chandra and Zanis must remain separate linked identities.");
+
 process.stdout.write("PASS character dossiers: " + all.length + " profiles with six substantive sections and source URLs.\\n");

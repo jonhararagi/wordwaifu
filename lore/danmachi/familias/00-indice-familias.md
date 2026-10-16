@@ -5,15 +5,15 @@ Esta es una lista de investigación. El estado de una Familia puede variar por a
 | ID | Nombre | Tipo/función de búsqueda | Estado |
 |---|---|---|---|
 | DM-FAM-HESTIA | Hestia Familia | Grupo central de la historia | Ficha inicial existente |
-| DM-FAM-LOKI | Loki Familia | Aventureros de alto nivel, expediciones, Sword Oratoria | Ficha inicial existente |
+| DM-FAM-LOKI | [Loki Familia](loki-familia.md) | Aventureros de alto nivel, expediciones, Sword Oratoria | Ficha existente; ampliar roster individual por periodos |
 | FAM-FREYA | Freya Familia | Facción poderosa e historia principal | Candidato pendiente |
 | FAM-ZEUS | Zeus Familia | Historia antigua y grandes expediciones | Candidato pendiente |
 | FAM-HERA | Hera Familia | Historia antigua y grandes expediciones | Candidato pendiente |
-| FAM-ASTREA | Astrea Familia | Pasado de Ryuu y relatos relacionados | Candidato pendiente |
+| DM-FAM-ASTREA | [Astrea Familia](astrea-familia.md) | Pasado de Ryu/Ryuu y Astrea Record | Ficha existente; roster histórico parcial; separar CONT-AR y CONT-ANIME |
 | FAM-HEPHAISTOS | Hephaistos Familia | Herrería y equipo | Candidato pendiente |
 | FAM-MIACH | Miach Familia | Medicina y personajes vinculados | Candidato pendiente |
 | FAM-TAKEMIKAZUCHI | Takemikazuchi Familia | Mikoto y miembros relacionados | Candidato pendiente |
-| FAM-SOMA | Soma Familia | Liliruca y conflictos iniciales | Candidato pendiente |
+| FAM-SOMA | [Soma Familia](soma-familia.md) | Soma, Liliruca, roster y cambios de capitanía | Ficha añadida; roster secundario parcial; cotejo primario pendiente |
 | FAM-DIAN-CECHT | Dian Cecht Familia | Curación y medicina | Candidato pendiente |
 | FAM-GANESHA | Ganesha Familia | Institución, seguridad y eventos de ciudad | Candidato pendiente |
 | FAM-HERMES | Hermes Familia | Investigaciones, viajes y Bell | Candidato pendiente |

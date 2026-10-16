@@ -800,6 +800,26 @@ async function run() {
     await page.locator("#archive-return-search").click();
     assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
+
+    // Soma Familia coverage: search a real record, switch continuity, then traverse cited relations.
+    await page.locator("#character-archive-query").fill("Liliruca Arde");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-LILIRUCA-ARDE"]').length === 1, { timeout: 10000 });
+    await page.locator('#character-archive-results [data-archive-open="CHAR-LILIRUCA-ARDE"]').click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent === "Liliruca Arde", null, { timeout: 10000 });
+    await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
+    await page.locator('#archive-profile-tabs [data-profile-tab="relationships"]').click();
+    await page.waitForFunction(() => {
+      const root = document.querySelector("#archive-profile-panel");
+      return !!root?.querySelector('[data-character-link="CHAR-SOMA"]')
+        && !!root.querySelector('[data-character-link="CHAR-ZANIS-LUSTRA"]')
+        && !!root.querySelector('[data-character-link="CHAR-CHANDRA-IHIT"]');
+    }, null, { timeout: 10000 });
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("secundaria") ||
+      (await page.locator("#archive-profile-panel").innerText()).includes("Fuente"),
+      "Soma Familia relation links must retain their evidence context.");
+    await page.locator("#archive-profile-back").click();
+    await page.waitForFunction(() => document.querySelector("#character-archive-query")?.value === "Liliruca Arde");
+
     // The newly curated anime roster loads an official image from its source host.
     await page.locator("#character-archive-query").fill("Bell Cranel");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });

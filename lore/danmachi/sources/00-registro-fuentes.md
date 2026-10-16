@@ -475,3 +475,152 @@ verification_status: stub
 - rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-020
 - verification_status: source_checked_for_publisher_synopsis_only
+
+
+---
+
+## DMR-013-SRC-001 · Soma Familia (compendio comunitario)
+- source_id: DMR-013-SRC-001
+- title: Soma Familia
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Soma_Familia
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead, descripción de organización y roster de miembros.
+- claims_supported: [DMR-013-CLM-003, DMR-013-CLM-004, DMR-013-CLM-009]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Sirve para localizar nombres y afirmaciones a contrastar. No reemplaza el texto de la novela y los miembros deben representarse por periodo.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-013-SRC-002 · Soma (compendio comunitario)
+- source_id: DMR-013-SRC-002
+- title: Soma
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Soma
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead biográfico y sección de la Familia.
+- claims_supported: [DMR-013-CLM-001, DMR-013-CLM-009]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: La caracterización y reforma requieren cotejo con novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-013-SRC-003 · Zanis Lustra (compendio comunitario)
+- source_id: DMR-013-SRC-003
+- title: Zanis Lustra
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Zanis_Lustra
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead biográfico, alias y rol histórico reportado.
+- claims_supported: [DMR-013-CLM-003, DMR-013-CLM-005]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Nivel, apariencia, cargo y desenlace aún requieren localizador primario.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-013-SRC-004 · Chandra Ihit (compendio comunitario)
+- source_id: DMR-013-SRC-004
+- title: Chandra Ihit
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Chandra_Ihit
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead biográfico y cargo de capitán reportado.
+- claims_supported: [DMR-013-CLM-004]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Fuente breve; no respalda habilidades inventadas ni psicología exhaustiva.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-013-SRC-005 · Liliruca Arde (compendio comunitario en español)
+- source_id: DMR-013-SRC-005
+- title: Liliruca Arde
+- creator_or_publisher: Comunidad DanMachi Wiki (ES)
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/es/wiki/Liliruca_Arde
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead, afiliaciones y descripción del personaje.
+- claims_supported: [DMR-013-CLM-002]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Detalles de arco y psicología necesitan verificación en la novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-013-SRC-006 · Category: Soma Familia (compendio comunitario)
+- source_id: DMR-013-SRC-006
+- title: Category: Soma Familia
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Category:Soma_Familia
+- accessed_at: 2026-10-16
+- locator_type: category_member_listing
+- locator: Páginas listadas bajo la categoría Soma Familia.
+- claims_supported: [DMR-013-CLM-005, DMR-013-CLM-006, DMR-013-CLM-007, DMR-013-CLM-008]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Fuente de descubrimiento de nombres; no confirma escenas, roster activo por periodo ni biografías.
+- conflicting_sources: []
+- rights_note: Registrar nombres/paráfrasis propias; no copiar arte.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_roster_reference
+
+## DMR-013-SRC-007 · DanMachi, volumen principal 6 (ficha editorial oficial)
+- source_id: DMR-013-SRC-007
+- title: ダンジョンに出会いを求めるのは間違っているだろうか6
+- creator_or_publisher: Fujino Omori / GA Bunko (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 6
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784797380583/
+- accessed_at: 2026-10-16
+- locator_type: publisher_synopsis
+- locator: Ficha y sinopsis editorial del volumen 6; captura de Lili por Soma Familia antes del War Game.
+- claims_supported: [DMR-013-CLM-002]
+- continuity_scope: CONT-MAIN-LN; descripción editorial, sin capítulo/página
+- reliability_note: No utilizar como prueba de las escenas privadas de Zanis, Chandra o Canoe; no es texto íntegro de la novela.
+- conflicting_sources: []
+- rights_note: Resumen original; no copiar la sinopsis completa.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: source_checked_publisher_synopsis_only
+
+## DMR-013-SRC-008 · Perfiles oficiales DanMachi IV (adaptación)
+- source_id: DMR-013-SRC-008
+- title: DanMachi IV · character profiles
+- creator_or_publisher: Producción oficial de DanMachi
+- source_type: OFFICIAL_ADAPTATION_REFERENCE
+- series: DanMachi anime
+- official_url: https://danmachi.com/danmachi4/character/
+- accessed_at: 2026-10-16
+- locator_type: adaptation_character_profile
+- locator: Perfil oficial de Liliruca Arde.
+- claims_supported: [DMR-013-CLM-010]
+- continuity_scope: CONT-ANIME
+- reliability_note: Sirve para el estado descrito por la adaptación, no para validar capítulo/página de la novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis; no descargar o incrustar retratos no autorizados.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: source_checked_adaptation_profile
