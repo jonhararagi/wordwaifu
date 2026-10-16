@@ -770,197 +770,242 @@
     },
     {
       "id": "CHAR-DARK-VALLETTA-GREDE",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/valletta-grede.md",
       "type": "character",
       "tags": [
         "Valletta Grede",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-BARCA-PERDIX",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/barca-perdix.md",
       "type": "character",
       "tags": [
         "Barca Perdix",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
-      "priority": "normal"
+      "status": "pending_primary_text_check",
+      "priority": "high"
     },
     {
       "id": "CHAR-DARK-BASRAM",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/basram.md",
       "type": "character",
       "tags": [
         "Basram",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
-      "priority": "normal"
+      "status": "pending_primary_text_check",
+      "priority": "high"
     },
     {
       "id": "CHAR-DARK-DIS-SISTERS",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/dis-sisters.md",
       "type": "character",
       "tags": [
         "Dis Sisters",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
-      "priority": "normal"
+      "status": "pending_primary_text_check",
+      "priority": "high"
     },
     {
       "id": "CHAR-DARK-THANATOS",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/thanatos.md",
       "type": "character",
       "tags": [
         "Thanatos",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "high"
     },
     {
       "id": "CHAR-DARK-APATE",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/apate.md",
       "type": "character",
       "tags": [
         "Apate",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
-      "priority": "normal"
+      "status": "pending_primary_text_check",
+      "priority": "high"
     },
     {
       "id": "CHAR-DARK-ALECTO",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/alecto.md",
       "type": "character",
       "tags": [
         "Alecto",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
-      "priority": "normal"
+      "status": "pending_primary_text_check",
+      "priority": "high"
     },
     {
       "id": "CHAR-DARK-AIRMID",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/airmid-teasanare.md",
       "type": "character",
       "tags": [
         "Airmid Teasanare",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-UNVERIFIED",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-MIACH",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/miach.md",
       "type": "character",
       "tags": [
         "Miach",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-UNVERIFIED",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-NAAZA",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/naaza-erisuis.md",
       "type": "character",
       "tags": [
         "Naaza Erisuis",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-UNVERIFIED",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-DIAN-CECHT",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/dian-cecht.md",
       "type": "character",
       "tags": [
         "Dian Cecht",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-UNVERIFIED",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-HEPHAISTOS",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/hephaistos.md",
       "type": "character",
       "tags": [
         "Hephaistos",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-UNVERIFIED",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-GOIBNIU",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/goibniu.md",
       "type": "character",
       "tags": [
         "Goibniu",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-UNVERIFIED",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-SAMIRA",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/samira.md",
       "type": "character",
       "tags": [
         "Samira",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-UNVERIFIED",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-SELENIA",
-      "path": "research/inbox/BATCH-DM-013-dark-era-missing-characters.md",
+      "path": "characters/dark-era/selenia.md",
       "type": "character",
       "tags": [
         "Selenia",
         "Era Oscura",
         "Astrea Record",
-        "needs source check"
+        "needs source check",
+        "CONT-UNVERIFIED",
+        "individual dossier",
+        "primary page pending"
       ],
-      "status": "pending_source_verification",
+      "status": "pending_primary_text_check",
       "priority": "normal"
     }
   ],

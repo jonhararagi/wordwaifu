@@ -143,3 +143,10 @@ Corrección temporal: el núcleo de *Astrea Record* se sitúa aproximadamente si
 Ardee Varma no se añade a Astrea Familia: el perfil oficial de Square Enix la clasifica como integrante de Ganesha Familia. Se conserva el roster oficial de adaptación separado de las fichas históricas.
 
 **Pendiente real:** verificar pasajes de la edición de las novelas por volumen, capítulo y página; no se inventaron páginas. La publicación oficial confirma que la novela revisa el evento original de Memoria Freese, por lo que ambos materiales deben permanecer separados.
+
+
+## Rutas individuales de los 23 candidatos
+
+Los 23 registros `CHAR-DARK-*` tienen rutas independientes en `characters/dark-era/`; se evitó que 15 identidades diferentes compartieran el archivo cuyo frontmatter solo identifica el lote colectivo. Los ocho expedientes prioritarios contienen síntesis desarrolladas y rutas de lectura; los otros quince permanecen como fichas de investigación individual con verificación primaria pendiente.
+
+Valletta Grede, Barca Perdix, Basram, Dis Sisters, Thanatos, Apate y Alecto continúan como candidatos de facción/antagonistas pendientes de cotejo primario. Airmid, Miach, Naaza, Dian Cecht, Hephaistos, Goibniu, Samira y Selenia quedan con `CONT-UNVERIFIED`: la presencia en la etapa temporal no está demostrada y no deben añadirse por defecto a escenas históricas.
