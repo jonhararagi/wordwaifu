@@ -219,10 +219,10 @@ function mount(){
  const panel=document.getElementById("danmachi-timeline-panel");
  if(!panel||panel.dataset.initialized==="true")return;
  panel.dataset.initialized="true";
- const status=panel.querySelector("#dm-timeline-status"),eraRoot=panel.querySelector("#dm-timeline-eras-view"),eventRoot=panel.querySelector("#dm-timeline-events-view");
+ const status=panel.querySelector("#dm-timeline-status"),eraRoot=panel.querySelector("#dm-timeline-eras-view"),eventRoot=panel.querySelector("#dm-timeline-events-view"),mapRoot=panel.querySelector("#dm-timeline-map-view");
  const query=panel.querySelector("#dm-timeline-query"),continuity=panel.querySelector("#dm-timeline-continuity"),eraFilter=panel.querySelector("#dm-timeline-era-filter");
  const tabs=Array.from(panel.querySelectorAll("[data-dm-timeline-tab]"));
- let data=null,activeTab="eras",activeEventId="";
+ let data=null,activeTab="eras",activeEventId="",selectedPlaceId="",returnEventId="",returnPlaceId="";
  const esc=value=>String(value==null?"":value);
  function node(tag,className,text){const n=document.createElement(tag);if(className)n.className=className;if(text!=null)n.textContent=text;return n;}
  function matchedEvents(){
@@ -232,7 +232,7 @@ function mount(){
   return data.events.filter(event=>{
    if(scope!=="ALL"&&!event.continuityScopes.includes(scope))return false;
    if(eraFilter.value!=="ALL"&&event.eraId!==eraFilter.value)return false;
-   if(q){const parts=[event.id,event.title,event.dateLabel,event.summary,temporalKindLabel(event.temporal),event.temporal&&event.temporal.qualifier,event.temporal&&event.temporal.reason,...(event.participants||[]).map(p=>p.name+" "+p.role),...(event.relatedEntities||[]).map(p=>p.name)].join(" ").toLocaleLowerCase();if(!parts.includes(q))return false;}
+   if(q){const placeNames=(event.locationRefs||[]).map(ref=>{const place=(data.locations||[]).find(item=>item.id===ref.locationId);return place?place.name:"";});const parts=[event.id,event.title,event.dateLabel,event.summary,temporalKindLabel(event.temporal),event.temporal&&event.temporal.qualifier,event.temporal&&event.temporal.reason,...placeNames,...(event.participants||[]).map(p=>p.name+" "+p.role),...(event.relatedEntities||[]).map(p=>p.name)].join(" ").toLocaleLowerCase();if(!parts.includes(q))return false;}
    return true;
   }).sort((a,b)=>(a.sortIndex||a.sortOrder||0)-(b.sortIndex||b.sortOrder||0)||a.id.localeCompare(b.id));
  }
@@ -263,6 +263,66 @@ function mount(){
    const chip=node("span","dm-timeline-person dm-timeline-person--plain",person.name+(person.registered===true?" · ficha del catálogo":""));if(person.note)chip.title=person.note;list.append(chip);
   }
  }
+ function locationById(id){return (data&&data.locations||[]).find(place=>place.id===id)||null;}
+ function verificationLabel(value){return value==="verified"?"Verificado":value==="provisional"?"Provisional · verificar":"Ubicación desconocida";}
+ function relationshipLabel(value){return value==="event_place"?"Lugar del acontecimiento":value==="broad_setting"?"Escenario amplio":"Contexto relacionado";}
+ function locationRecordUrl(place){return "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/"+place.recordPath;}
+ function locationSourceLinks(parent,urls){(urls||[]).forEach(url=>{const a=node("a","dm-event-source-link","Fuente de ubicación ↗");a.href=url;a.target="_blank";a.rel="noopener noreferrer";a.title=url;parent.append(a);});}
+ function openPlace(id,fromEventId){if(fromEventId)returnEventId=fromEventId;else if(!selectedPlaceId)returnEventId="";selectedPlaceId=id;returnPlaceId="";activeTab="map";draw();if(mapRoot)mapRoot.scrollIntoView({behavior:"smooth",block:"start"});}
+ function renderPlaceNode(place,items){
+  const refs=items.flatMap(event=>(event.locationRefs||[]).filter(ref=>ref.locationId===place.id).map(ref=>({event,ref})));
+  const card=node("section","dm-map-place-card");card.dataset.locationId=place.id;
+  const head=node("div","dm-map-place-heading");head.append(node("span","dm-map-place-id",place.id),node("span","dm-map-place-status",verificationLabel(place.verificationStatus)));
+  card.append(head,node("h4","",place.name),node("p","dm-map-place-description",place.description),node("p","dm-map-place-note","Ficha de corpus · sin coordenadas canónicas · nodo no geográfico."));
+  const open=node("button","dm-timeline-location-link","Abrir ficha y eventos relacionados");open.type="button";open.dataset.timelineOpenPlace=place.id;card.append(open);
+  if((place.relationships||[]).length){const rels=node("div","dm-map-place-relations");rels.append(node("strong","","Relaciones documentadas (sin distancia)"));place.relationships.forEach(relation=>{const target=locationById(relation.locationId);if(!target)return;const row=node("div","dm-map-place-relation");row.append(node("span","","Relación general: "+place.name+" ↔ "+target.name));const button=node("button","dm-timeline-location-link","Ver "+target.name);button.type="button";button.dataset.timelineOpenPlace=target.id;row.append(button);rels.append(row);});card.append(rels);}
+  const eventList=node("div","dm-map-place-events");eventList.append(node("strong","","Acontecimientos visibles con este vínculo ("+refs.length+")"));
+  if(refs.length){refs.forEach(({event,ref})=>{const row=node("div","dm-map-event-link");row.append(node("span","dm-map-ref-status",verificationLabel(ref.verificationStatus)+" · "+relationshipLabel(ref.relationship)),node("span","",event.dateLabel+" — "+event.title));const openEventButton=node("button","dm-timeline-event-link","Abrir acontecimiento");openEventButton.type="button";openEventButton.dataset.timelineOpenEvent=event.id;openEventButton.dataset.timelineReturnPlace=place.id;row.append(openEventButton);eventList.append(row);});}
+  else eventList.append(node("p","dm-timeline-empty","No hay acontecimientos vinculados a este lugar con los filtros actuales."));
+  card.append(eventList);return card;
+ }
+ function drawMapView(items){
+  if(!mapRoot)return;
+  mapRoot.replaceChildren();
+  const summary=node("div","dm-map-summary");
+  summary.append(node("p","dm-map-nongeographic-warning","ESQUEMA RELACIONAL · NO GEOGRÁFICO · SIN ESCALA. La posición y el orden de las tarjetas no son coordenadas, orientación, distancia, rutas, barrios ni topología del mundo."));
+  const linked=items.filter(event=>(event.locationRefs||[]).length>0);
+  const provisional=items.filter(event=>event.locationAssessment&&event.locationAssessment.status==="provisional");
+  const unknown=items.filter(event=>!event.locationRefs||event.locationRefs.length===0);
+  const counts=node("div","dm-map-counts");
+  counts.append(node("span","dm-map-count","Vinculados: "+linked.length),node("span","dm-map-count dm-map-count--provisional","Provisionales: "+provisional.length),node("span","dm-map-count dm-map-count--unknown","Sin ubicación: "+unknown.length));
+  summary.append(counts);mapRoot.append(summary);
+  if(selectedPlaceId){
+   const place=locationById(selectedPlaceId);
+   if(!place){mapRoot.append(node("p","dm-timeline-empty","La ficha de lugar seleccionada ya no existe en el registro local."));return;}
+   const detail=node("section","dm-map-place-detail");
+   const title=node("div","dm-map-place-detail-heading");
+   title.append(node("span","dm-map-place-id",place.id),node("h3","",""+place.name),node("span","dm-map-place-status",verificationLabel(place.verificationStatus)));
+   detail.append(title,node("p","dm-map-place-description",place.description),node("p","dm-map-place-note","Modelo espacial: esquema relacional no geográfico. Coordenadas: no disponibles."));
+   const links=node("div","dm-map-place-links");
+   const fiche=node("a","dm-event-record-link","Abrir ficha de lugar ↗");fiche.href=locationRecordUrl(place);fiche.target="_blank";fiche.rel="noopener noreferrer";links.append(fiche);
+   locationSourceLinks(links,place.sourceUrls);detail.append(links);
+   if(returnEventId&&items.some(event=>event.id===returnEventId)){const back=node("button","dm-timeline-return-link","Volver al acontecimiento desde el que abrí este lugar");back.type="button";back.dataset.timelineReturnEvent=returnEventId;detail.append(back);}
+   if((place.relationships||[]).length){
+    const relationships=node("div","dm-map-place-relations");relationships.append(node("strong","","Relaciones documentadas · sin posición geográfica"));
+    place.relationships.forEach(relation=>{const target=locationById(relation.locationId);if(!target)return;const row=node("div","dm-map-place-relation");row.append(node("span","","Asociado con "+target.name+" · sin distancia"));const b=node("button","dm-timeline-location-link","Abrir "+target.name);b.type="button";b.dataset.timelineOpenPlace=target.id;row.append(b);relationships.append(row);});
+    detail.append(relationships);
+   }
+   const related=items.filter(event=>(event.locationRefs||[]).some(ref=>ref.locationId===place.id));
+   const relatedSection=node("div","dm-map-place-events");relatedSection.append(node("h4","","Acontecimientos relacionados visibles ("+related.length+")"));
+   if(related.length){related.forEach(event=>{const ref=event.locationRefs.find(r=>r.locationId===place.id),row=node("div","dm-map-event-link");row.append(node("span","dm-map-ref-status",verificationLabel(ref.verificationStatus)+" · "+relationshipLabel(ref.relationship)),node("span","",event.dateLabel+" — "+event.title));const b=node("button","dm-timeline-event-link","Abrir acontecimiento");b.type="button";b.dataset.timelineOpenEvent=event.id;b.dataset.timelineReturnPlace=place.id;row.append(b);relatedSection.append(row);});}
+   else relatedSection.append(node("p","dm-timeline-empty","No hay eventos relacionados con los filtros actuales."));
+   detail.append(relatedSection);mapRoot.append(detail);return;
+  }
+  const registry=node("div","dm-map-place-registry");registry.append(node("h3","","Lugares del corpus DanMachi"));const grid=node("div","dm-map-place-grid");
+  (data.locations||[]).forEach(place=>grid.append(renderPlaceNode(place,items)));
+  if(!grid.childElementCount)grid.append(node("p","dm-timeline-empty","No hay fichas de lugar cargadas."));
+  registry.append(grid);mapRoot.append(registry);
+  const unlocated=node("section","dm-map-unlocated");unlocated.append(node("h3","","Acontecimientos sin ubicación demostrable ("+unknown.length+")"));
+  if(unknown.length){unknown.forEach(event=>{const row=node("div","dm-map-unlocated-event");row.append(node("span","dm-map-ref-status","Ubicación desconocida"),node("span","",event.dateLabel+" — "+event.title),node("p","",event.locationAssessment&&event.locationAssessment.reason||"No hay evidencia de ubicación."));const b=node("button","dm-timeline-event-link","Abrir acontecimiento");b.type="button";b.dataset.timelineOpenEvent=event.id;row.append(b);unlocated.append(row);});}
+  else unlocated.append(node("p","dm-timeline-empty","Todos los eventos visibles tienen algún vínculo espacial documentado; algunos siguen provisionales."));
+  mapRoot.append(unlocated);
+ }
  function renderEventCard(event){
   const article=node("article","dm-historical-event"+(activeEventId===event.id?" is-selected":""));article.id="dm-event-"+event.id;
   const dot=node("span","dm-event-dot"),card=node("div","dm-event-card"),head=node("div","dm-event-card-heading");
@@ -270,6 +330,17 @@ function mount(){
   card.append(head,node("h4","",event.title),node("p","dm-event-summary",event.summary));
   if((event.participants||[]).length){const block=node("div","dm-event-participants");block.append(node("strong","","Personajes vinculados"));const chips=node("div","dm-event-person-list");event.participants.forEach(person=>appendPersonChip(chips,person,event));block.append(chips);card.append(block);}
   if((event.relatedEntities||[]).length){const block=node("div","dm-event-related");block.append(node("strong","","Antagonistas, amenazas y expedientes relacionados"));const chips=node("div","dm-event-person-list");event.relatedEntities.forEach(person=>appendPersonChip(chips,person,event));block.append(chips);card.append(block);}
+  const locationBlock=node("div","dm-event-locations");locationBlock.append(node("strong","","Lugar / contexto espacial"));
+  if((event.locationRefs||[]).length){
+   const locationChips=node("div","dm-event-location-list");
+   event.locationRefs.forEach(ref=>{const place=locationById(ref.locationId);if(!place)return;const b=node("button","dm-timeline-location-link",place.name+" · "+verificationLabel(ref.verificationStatus)+" · "+relationshipLabel(ref.relationship));b.type="button";b.dataset.timelineOpenPlace=place.id;b.dataset.timelineFromEvent=event.id;b.title=ref.context||relationshipLabel(ref.relationship);locationChips.append(b);});
+   locationBlock.append(locationChips);
+  }else{
+   locationBlock.append(node("span","dm-timeline-unlocated-badge","Ubicación desconocida"));
+   if(event.locationAssessment&&event.locationAssessment.reason)locationBlock.append(node("p","dm-event-location-reason",event.locationAssessment.reason));
+  }
+  if(returnPlaceId&&activeEventId===event.id){const backToPlace=node("button","dm-timeline-return-link","Volver a la ficha de lugar");backToPlace.type="button";backToPlace.dataset.timelineReturnPlace=returnPlaceId;locationBlock.append(backToPlace);}
+  card.append(locationBlock);
   const sources=node("div","dm-event-sources");sources.append(node("strong","","Rutas de verificación"));
   (event.sources||[]).forEach(source=>{const a=node("a","dm-event-source-link",source.label);a.href=source.url;a.target="_blank";a.rel="noopener noreferrer";a.title=source.note||source.label;sources.append(a);});
   if(event.detailPath){const a=node("a","dm-event-record-link","Abrir expediente del acontecimiento ↗");a.href="https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/"+event.detailPath;a.target="_blank";a.rel="noopener noreferrer";sources.append(a);}
@@ -292,10 +363,12 @@ function mount(){
   data.eras.slice().sort((a,b)=>a.order-b.order).forEach(era=>eraFilter.appendChild(new Option(era.title,era.id)));
   eraFilter.value=data.eras.some(era=>era.id===selectedEra)?selectedEra:"ALL";
   tabs.forEach(tab=>{const chosen=tab.dataset.dmTimelineTab===activeTab;tab.setAttribute("aria-selected",chosen?"true":"false");tab.classList.toggle("is-active",chosen);});
-  eraRoot.classList.toggle("hidden",activeTab!=="eras");eventRoot.classList.toggle("hidden",activeTab!=="events");
+  drawMapView(items);eraRoot.classList.toggle("hidden",activeTab!=="eras");eventRoot.classList.toggle("hidden",activeTab!=="events");mapRoot.classList.toggle("hidden",activeTab!=="map");
  }
- function activateTab(name){activeTab=name==="events"?"events":"eras";draw();}
- function openEvent(id){activeEventId=id;activeTab="events";draw();const target=document.getElementById("dm-event-"+id);if(target)target.scrollIntoView({behavior:"smooth",block:"center"});}
+ function activateTab(name){activeTab=name==="events"?"events":name==="map"?"map":"eras";draw();}
+ function openEvent(id,fromPlaceId){activeEventId=id;returnPlaceId=fromPlaceId||"";if(!fromPlaceId)returnEventId="";selectedPlaceId="";activeTab="events";draw();const target=document.getElementById("dm-event-"+id);if(target)target.scrollIntoView({behavior:"smooth",block:"center"});}
+ function returnToEvent(id){selectedPlaceId="";returnEventId="";returnPlaceId="";openEvent(id);}
+ function returnToPlace(id){selectedPlaceId=id;returnPlaceId="";activeTab="map";draw();if(mapRoot)mapRoot.scrollIntoView({behavior:"smooth",block:"start"});}
  function openCatalogEntity(name,kind){
   const browser=document.getElementById("danmachi-entity-browser"),query=document.getElementById("danmachi-entity-query"),type=document.getElementById("danmachi-entity-type");
   if(!browser||!query||!type)return;type.value=kind||"all";query.value=name;query.dispatchEvent(new Event("input",{bubbles:true}));type.dispatchEvent(new Event("change",{bubbles:true}));browser.scrollIntoView({behavior:"smooth",block:"start"});
@@ -314,7 +387,10 @@ function mount(){
  }
  panel.addEventListener("click",event=>{
   const tab=event.target.closest("[data-dm-timeline-tab]");if(tab){activateTab(tab.dataset.dmTimelineTab);return;}
-  const opener=event.target.closest("[data-timeline-open-event]");if(opener){openEvent(opener.dataset.timelineOpenEvent);return;}
+  const opener=event.target.closest("[data-timeline-open-event]");if(opener){openEvent(opener.dataset.timelineOpenEvent,opener.dataset.timelineReturnPlace||"");return;}
+  const placeOpener=event.target.closest("[data-timeline-open-place]");if(placeOpener){openPlace(placeOpener.dataset.timelineOpenPlace,placeOpener.dataset.timelineFromEvent||"");return;}
+  const eventReturn=event.target.closest("[data-timeline-return-event]");if(eventReturn){returnToEvent(eventReturn.dataset.timelineReturnEvent);return;}
+  const placeReturn=event.target.closest("[data-timeline-return-place]");if(placeReturn){returnToPlace(placeReturn.dataset.timelineReturnPlace);return;}
   const entity=event.target.closest("[data-timeline-entity]");if(entity){openCatalogEntity(entity.dataset.timelineEntityName,entity.dataset.timelineEntityKind);return;}
   const person=event.target.closest("[data-timeline-character]");if(person){openCharacter(person.dataset.timelineCharacter,person.dataset.timelineCharacterName,person.dataset.timelineContinuity);return;}
  });
