@@ -2,7 +2,7 @@
 "use strict";
 const allowedStatuses = new Set(["external_reference","user_owned","licensed","permission_recorded","pending_review","blocked"]);
 const spoilerRank = {none:0,minor:1,major:2,critical:3};
-let registry=null,timeline=null,mounted=false;
+let registry=null,timeline=null,mounted=false,localReferenceCache=null,localReferencePromise=null;
 const $=selector=>document.querySelector(selector);
 function node(tag,className,text){const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined&&text!==null)el.textContent=String(text);return el;}
 function safeHttps(value,optional){const raw=String(value||"").trim();if(!raw)return Boolean(optional);try{const u=new URL(raw);return u.protocol==="https:"&&!u.username&&!u.password;}catch(_){return false;}}
@@ -60,7 +60,19 @@ function continuityLabel(value){return ({"CONT-MAIN-LN":"Novela principal","CONT
 function spoilerLabel(value){return ({none:"Sin spoiler",minor:"Spoiler menor",major:"Spoiler importante",critical:"Spoiler crítico"})[value]||"Spoiler pendiente";}
 function spoilerCap(){return ($("#dm-visual-spoiler-cap")||{}).value||"minor";}
 function filteredBySpoiler(ref){return (spoilerRank[ref.spoilerLevel]??2)<=(spoilerRank[spoilerCap()]??1);}
-async function localReferences(){const api=root.WordWaifuArtStudio;if(!api||typeof api.listVisualReferences!=="function")return[];try{return await api.listVisualReferences();}catch(_){return[];}}
+function invalidateLocalReferences(){localReferenceCache=null;localReferencePromise=null;}
+async function localReferences(){
+ if(localReferenceCache)return localReferenceCache;
+ if(localReferencePromise)return localReferencePromise;
+ const api=root.WordWaifuArtStudio;
+ if(!api||typeof api.listVisualReferences!=="function")return [];
+ localReferencePromise=(async()=>{
+  try{localReferenceCache=await api.listVisualReferences();return localReferenceCache;}
+  catch(_){localReferenceCache=[];return localReferenceCache;}
+  finally{localReferencePromise=null;}
+ })();
+ return localReferencePromise;
+}
 function matches(ref,options){
  const eventId=options.eventId||"",locationId=options.locationId||"";
  if(eventId&&!(ref.relatedEventIds||[]).includes(eventId))return false;
@@ -150,11 +162,12 @@ function bindLocalForm(){
    const eventId=$("#dm-visual-event").value,locationId=$("#dm-visual-location").value,requestedModify=$("#dm-visual-allow-modify").checked;
    const allowModifyExport=requestedModify&&["user_owned","licensed","permission_recorded"].includes(usageStatus);
    const record={id,title:$("#dm-visual-title").value.trim(),caption:$("#dm-visual-caption").value.trim(),sourcePageUrl:$("#dm-visual-source-url").value.trim(),
-    creatorOrRightsholder:$("#dm-visual-holder").value.trim(),sourceKind:usageStatus==="user_owned"?"original_art":usageStatus==="licensed"?"open_license":usageStatus==="permission_recorded"?"permission_granted":"user_provided",
+    creatorOrRightsholder:$("#dm-visual-holder").value.trim(),sourceKind:usageStatus==="user_owned"?"original_art":usageStatus==="licensed"?"licensed_material":usageStatus==="permission_recorded"?"permission_granted":"user_provided",
     usageStatus,licenseName:$("#dm-visual-license-name").value.trim(),licenseUrl:$("#dm-visual-license-url").value.trim(),permissionEvidence:$("#dm-visual-permission-evidence").value.trim(),
     continuityScope:$("#dm-visual-continuity").value,spoilerLevel:$("#dm-visual-spoiler").value,relatedEventIds:eventId?[eventId]:[],relatedLocationIds:locationId?[locationId]:[],
     creditLine:$("#dm-visual-credit").value.trim(),allowModifyExport,fileDataUrl,storageMode:"browser_local",addedAt:new Date().toISOString()};
    const result=await api.saveVisualReference(record);
+   invalidateLocalReferences();
    form.reset();$("#dm-visual-continuity").value="CONT-MAIN-LN";$("#dm-visual-spoiler").value="minor";fillRelationChoices();
    try{await renderGeneral();refreshTimelineCards();}catch(_){/* Guardado ya confirmado por el backend local. */}
    setStatus("Guardado en "+(result.backend==="indexeddb"?"IndexedDB local":"el respaldo local del navegador")+". No se envió el archivo a una red remota.");
@@ -175,7 +188,7 @@ async function handleActions(event){
  }
  const del=event.target.closest("[data-visual-remove]");
  if(del){if(!root.confirm("Eliminar esta referencia del almacenamiento de este navegador?"))return;
-  try{await root.WordWaifuArtStudio.removeVisualReference(del.dataset.visualRemove);setStatus("Referencia eliminada del almacenamiento local del navegador.");await renderGeneral();refreshTimelineCards();}
+  try{await root.WordWaifuArtStudio.removeVisualReference(del.dataset.visualRemove);invalidateLocalReferences();setStatus("Referencia eliminada del almacenamiento local del navegador.");await renderGeneral();refreshTimelineCards();}
   catch(error){setStatus(error.message||"No se pudo confirmar la eliminación.");}}
 }
 async function mount(){
@@ -192,7 +205,7 @@ async function mount(){
  }catch(error){setStatus("Registro visual seguro no disponible: "+(error.message||"error de validación")+". Las fichas y la navegación temporal siguen disponibles.");}
 }
 if(typeof document!=="undefined"){if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});else mount();}
-const api={validateDataset,canExportWatermarkedCopy,renderInto,renderGeneral,exportWatermarkedCopy,mount};
+const api={validateDataset,canExportWatermarkedCopy,renderInto,renderGeneral,mount};
 root.WordWaifuDanMachiVisualReferences=Object.freeze(api);
 if(typeof module==="object"&&module.exports)module.exports=api;
 })(typeof globalThis!=="undefined"?globalThis:this);

@@ -440,6 +440,11 @@ async function run() {
     page.on("request",externalRequestListener);
     await page.locator("#dm-visual-import-details > summary").click();
     const syntheticPng={name:"synthetic-visual-fixture.png",mimeType:"image/png",buffer:Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAFElEQVR4nGPU6LnDAANMDEgANwcATnABmCa87JAAAAAASUVORK5CYII=","base64")};
+    await page.locator("#dm-visual-usage-status").selectOption("licensed");
+    assert.equal(await page.locator("#dm-visual-license-name").evaluate(el=>el.required),true,"A licensed asset requires a declared license name.");
+    await page.locator("#dm-visual-usage-status").selectOption("permission_recorded");
+    assert.equal(await page.locator("#dm-visual-permission-evidence").evaluate(el=>el.required),true,"A permission-recorded asset requires evidence metadata.");
+    await page.locator("#dm-visual-usage-status").selectOption("pending_review");
     await page.locator("#dm-visual-title").fill("Fixture local pendiente");
     await page.locator("#dm-visual-file").setInputFiles(syntheticPng);
     await page.locator("#dm-visual-holder").fill("Fixture sintético de CI");
@@ -483,7 +488,7 @@ async function run() {
     },authorizedLocal.id,{timeout:5000});
     const originalBefore=await page.evaluate(async id=>(await window.WordWaifuArtStudio.getVisualReference(id)).fileDataUrl,authorizedLocal.id);
     const visualDownloadPromise=page.waitForEvent("download",{timeout:10000}).catch(()=>null),visualExportDialog=page.waitForEvent("dialog");
-    await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').click();
+    await page.locator('[data-visual-export="'+authorizedLocal.id+'"]').click({force:true});
     const rightsDialog=await visualExportDialog;assert.equal(rightsDialog.type(),"confirm");await rightsDialog.accept();
     await page.waitForFunction(()=>{
       const status=document.querySelector("#dm-visual-status")?.textContent||"";
