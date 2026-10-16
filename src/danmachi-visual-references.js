@@ -1,7 +1,7 @@
 (function(root) {
 "use strict";
 const allowedStatuses = new Set(["external_reference","user_owned","licensed","permission_recorded","pending_review","blocked"]);
-const sourceKinds = new Set(["official","publisher","user_provided","original_art","open_license","permission_granted","community","other"]);
+const sourceKinds = new Set(["official","publisher","user_provided","original_art","licensed_material","open_license","permission_granted","community","other"]);
 const storageModes = new Set(["remote","browser_local","bundled_original"]);
 const watermarkPolicies = new Set(["none","overlay_reference","apply_to_authorized_copy"]);
 const spoilerRank = {none:0,minor:1,major:2,critical:3};

@@ -654,11 +654,18 @@ async function run() {
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ALISE-LOVELACE"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
-    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_17.png"));
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("/assets/character-portraits/alise-lovelace.svg"),
+      "Alise's historical ficha must use local original concept art, not embed the official DanMachi IV portrait.");
+    assert.equal(await page.locator("#archive-profile-portrait .archive-portrait-source-link").getAttribute("href"), "https://danmachi.com/danmachi4/character/",
+      "Alise's official profile remains reachable by a source link.");
+    assert.match(await page.locator("#archive-profile-portrait .archive-portrait-source-link").getAttribute("aria-label"), /no se incrusta/i);
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
-    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_16.png"));
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("/assets/character-portraits/astrea.svg"),
+      "Astrea's ficha must use local original concept art, not embed the official DanMachi IV portrait.");
+    assert.equal(await page.locator("#archive-profile-portrait .archive-portrait-source-link").getAttribute("href"), "https://danmachi.com/danmachi4/character/",
+      "Astrea's official profile remains reachable by a source link.");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     await page.locator("#archive-profile-back").click();
@@ -687,13 +694,19 @@ async function run() {
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-LYRA"]').count() > 0);
     await page.locator('#archive-profile-panel [data-character-link="CHAR-KAGUYA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Gojouno Kaguya");
-    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_18.png"));
+    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("/assets/character-portraits/kaguya.svg"),
+      "Kaguya's historical ficha must use local original concept art, not embed the official DanMachi IV portrait.");
+    assert.equal(await page.locator("#archive-profile-portrait .archive-portrait-source-link").getAttribute("href"), "https://danmachi.com/danmachi4/character/",
+      "Kaguya's official profile remains reachable by a source link.");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
     assert.ok((await page.locator("#archive-profile-summary").innerText()).includes("Hostess of Fertility"));
     const ryuAnimePortrait = await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src");
-    assert.ok(ryuAnimePortrait.includes("danmachi5/character/images/chara_tachi_18.png"), "Ryu's anime state should use the official DanMachi V image.");
+    assert.ok(ryuAnimePortrait.includes("/assets/character-portraits/ryu-lion.svg"),
+      "Ryu's anime-state ficha should use local original concept art, not embed the official DanMachi V portrait.");
+    assert.equal(await page.locator("#archive-profile-portrait .archive-portrait-source-link").getAttribute("href"), "https://danmachi.com/danmachi5/character/",
+      "Ryu's DanMachi V portrait page remains a source link for the anime state.");
     await page.locator("#archive-tab-summary").click();
     assert.equal(await page.locator("#archive-profile-panel .archive-official-reference").count(), 1,
       "Official adaptation details should appear only in the anime continuity.");
@@ -709,8 +722,10 @@ async function run() {
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Iska Bra");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-ANIME");
-    assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_25.png"),
-      "Iska should use the linked official DanMachi IV portrait.");
+    assert.equal(await page.locator("#archive-profile-portrait .archive-portrait-art").count(), 0,
+      "Without an original local portrait for Iska, the archive must show its initial placeholder rather than embed an official portrait.");
+    assert.equal(await page.locator("#archive-profile-portrait .archive-portrait-source-link").getAttribute("href"), "https://danmachi.com/danmachi4/character/",
+      "Iska's official profile remains reachable by source link.");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.ok(!(await page.locator("#archive-profile-panel").innerText()).includes("La sinopsis presenta a Ryu buscando su idea de justicia"));
