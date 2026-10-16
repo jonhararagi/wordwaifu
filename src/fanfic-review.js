@@ -16,22 +16,35 @@
       if (!record || !clean(record.name)) return;
       const dossierMap = record.dossiers && typeof record.dossiers === "object" ? record.dossiers : {};
       const dossier = dossierMap[selectedContinuity] || dossierMap[record.continuity] || dossierMap["CONT-MAIN-LN"] || dossierMap["CONT-ANIME"] || Object.values(dossierMap)[0] || {};
+      const expandedDossier = typeof globalThis !== "undefined" && globalThis.WordWaifuCharacterDossiers
+        ? globalThis.WordWaifuCharacterDossiers.get(record.id) : null;
+      const hasContinuityDossier = Boolean(dossierMap[selectedContinuity] || dossierMap[record.continuity] || dossierMap["CONT-MAIN-LN"] || dossierMap["CONT-ANIME"] || Object.keys(dossierMap).length);
+      const narrativeDossier = hasContinuityDossier ? dossier : (expandedDossier || dossier);
       const source = record.sourceTitle || record.sourcePage || "Registro de adaptación";
       const profile = {
         id: record.id || record.name, name: record.name,
         aliases: unique([record.name].concat(Array.isArray(record.aliases) ? record.aliases : [])),
-        role: clean(record.role), personality: known(record.personality),
-        summary: clean(record.summary), motivations: clean(record.motivations || dossier.motivation || dossier.development),
+        role: clean(record.role), personality: known([record.personality, expandedDossier && expandedDossier.personality].filter(Boolean).join(" ")),
+        summary: clean([record.summary, expandedDossier && expandedDossier.history].filter(Boolean).join(" ")), motivations: clean(record.motivations || narrativeDossier.motivation || narrativeDossier.development || (expandedDossier && expandedDossier.conflict)),
         voice: clean(record.voiceNotes || record.dialogueStyle || ""),
-        abilities: clean([typeof record.abilities === "string" ? record.abilities : "", dossier.combatProfile, Array.isArray(dossier.abilities) ? dossier.abilities.map(ability => [ability.name, ability.detail].filter(Boolean).join(": ")).join(" ") : ""].filter(Boolean).join(" ")),
+        abilities: clean([typeof record.abilities === "string" ? record.abilities : "", narrativeDossier.combatProfile, Array.isArray(narrativeDossier.abilities) ? narrativeDossier.abilities.map(ability => [ability.name, ability.detail].filter(Boolean).join(": ")).join(" ") : "", expandedDossier && expandedDossier.abilities].filter(Boolean).join(" ")),
         source, sourceType: record.evidenceType || "reference_record",
         continuity: selectedContinuity || record.continuity || "unspecified",
-        secondary: dossier && Object.keys(dossier).length > 0 ? {
-          label: clean(dossier.sourceLabel || "Expediente complementario"),
-          type: clean(dossier.sourceType || "secondary_compendium"),
-          personality: clean(dossier.personality || dossier.habits || dossier.development || ""),
-          history: clean(dossier.history || "")
-        } : null
+        secondary: narrativeDossier && Object.keys(narrativeDossier).length > 0 ? {
+          label: clean(narrativeDossier.sourceLabel || (expandedDossier && "Expediente ampliado WordWaifu") || "Expediente complementario"),
+          type: clean(narrativeDossier.sourceType || "secondary_compendium"),
+          personality: clean(narrativeDossier.personality || narrativeDossier.habits || narrativeDossier.development || (expandedDossier && expandedDossier.personality) || ""),
+          history: clean(narrativeDossier.history || (expandedDossier && expandedDossier.history) || ""),
+          conflict: clean(expandedDossier && expandedDossier.conflict),
+          sources: Array.isArray(expandedDossier && expandedDossier.sources) ? expandedDossier.sources : []
+        } : (expandedDossier ? {
+          label: "Expediente ampliado WordWaifu · referencia por contrastar",
+          type: "secondary_compendium",
+          personality: clean(expandedDossier.personality),
+          history: clean(expandedDossier.history),
+          conflict: clean(expandedDossier.conflict),
+          sources: Array.isArray(expandedDossier.sources) ? expandedDossier.sources : []
+        } : null)
       };
       byKey.set(profile.id, profile);
     });
