@@ -1,4 +1,24 @@
-# Actualización operativa — 2026-10-16
+# Estado operativo actual de WordWaifu — CEREBRO / BOT OBRERO
+
+**Este bloque prevalece sobre las notas históricas siguientes cuando expresen estados anteriores.**
+
+- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
+- **HEAD de inicio de auditoría TLM-001:** `8d404bc7f365ce4fd4165f4c0c6e04ee6eed5478`.
+- **HEAD de cierre de TLM-001:** `1611254124e6fa2eb1186a803fca0bc712ef6dab`.
+- **TLM-001:** DONE como auditoría; **producto/atlas: PARTIAL**.
+- **Verificación CEREBRO de CI en el SHA de cierre TLM-001:** [Validate WordWaifu #38934243074](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243074) y [DanMachi Lore and Retrieval Integrity #38934243080](https://github.com/jonhararagi/wordwaifu/actions/runs/38934243080), ambos terminados en `success` para `1611254124e6fa2eb1186a803fca0bc712ef6dab`.
+- **Hallazgos críticos:** 0/15 eventos enlazados a ubicaciones por ID; etiquetas temporales en texto libre; la cronología DanMachi no consulta el mapa SVG general del proyecto.
+- **Única tarea activa:** **TLM-002 — modelo temporal explícito**, con orden y criterios persistidos en [`docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md`](TLM-002-TEMPORAL-MODEL-CONTRACT.md).
+- **TLM-003:** conexión de eventos a lugares, NOT_STARTED.
+- **TLM-004:** panoramas/imágenes y procedencia, NOT_STARTED.
+- **TLM-005:** verificación end-to-end, NOT_STARTED.
+- **Control de agentes:** [`docs/CEREBRO_BOT_OBRERO_CONTROL.md`](CEREBRO_BOT_OBRERO_CONTROL.md).
+- **Punto de reanudación:** [`docs/DONE.md`](DONE.md).
+- **Límites:** `main` sin modificaciones; sin merge ni creación/cierre/cambio de PR. El commit documental más reciente no se considera validado por los workflows anteriores salvo que una ejecución asociada a ese SHA lo confirme.
+
+---
+
+## Registro histórico: cierre documental inicial de TLM-001 — 2026-10-16
 
 ## Cierre documental de TLM-001
 
