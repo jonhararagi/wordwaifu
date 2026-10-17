@@ -9,9 +9,11 @@ source_refs:
   - DMR-013-SRC-001
   - DMR-013-SRC-002
   - DMR-013-SRC-008
+  - DMR-013-SRC-014
 claim_refs:
   - DMR-013-CLM-001
   - DMR-013-CLM-009
+  - DMR-013-CLM-019
 tags: [Soma, Sōma, ソーマ, Soma Familia, deity, brewing]
 ---
 # Soma
@@ -20,6 +22,14 @@ tags: [Soma, Sōma, ソーマ, Soma Familia, deity, brewing]
 - **ID estable:** `CHAR-SOMA`; deidad conocida como Soma / Sōma (ソーマ), también llamada informalmente “dios Soma” en resúmenes. No se asignan otros alias sin fuente.
 - **Tipo:** dios del mundo inferior y cabeza de Soma Familia en los resúmenes consultados.
 - **Estado:** expediente individual nuevo. La referencia de origen es comunitaria/secundaria; falta cotejar el texto de la novela.
+
+## Anclaje editorial del arco temprano
+
+La sinopsis oficial de GA Bunko para el volumen 2 vincula la reputación problemática de Soma Familia con el misterio del «神酒» (bebida divina). Esta fuente confirma el marco que la editorial usa para presentar el conflicto; **no atribuye por sí sola cada abuso a Soma ni demuestra toda la explicación secundaria sobre la administración de la Familia**.
+
+- **Claim:** DMR-013-CLM-019.
+- **Fuente:** DMR-013-SRC-014 · https://ga.sbcr.jp/product/9784797373073/.
+- **Límite:** la atención que Soma presta a la elaboración, su reacción a los hechos, el relevo de capitanía y la reforma posterior requieren localizar las escenas de la novela.
 
 ## Descripción y función
 Soma es conocido dentro del corpus por su dedicación a la elaboración de bebidas, una actividad que desplaza durante un tiempo su atención de las obligaciones hacia los seguidores de su Familia. Los resúmenes comunitarios describen una organización en la que la obsesión por una bebida extraordinaria, el dinero y la negligencia de su líder alimentan un entorno abusivo. Esta explicación resume una fuente secundaria y no reemplaza el estudio de las decisiones que Soma toma en las escenas originales.
@@ -43,7 +53,7 @@ La ficha no atribuye técnicas de combate, Falna, nivel o poderes específicos: 
 - **`CONT-ANIME`:** usar solo cuando el perfil de adaptación respalda explícitamente el punto consultado; no trasladar automáticamente detalles de wiki a esta continuidad.
 - **Spoilers:** moderados/altos por la reforma de la Familia.
 - **Fuente secundaria principal:** https://danmachi.fandom.com/wiki/Soma y https://danmachi.fandom.com/wiki/Soma_Familia .
-- **Fuente editorial oficial limitada:** https://ga.sbcr.jp/product/9784797380583/ .
+- **Fuentes editoriales oficiales limitadas:** volumen 2 (marco de Soma Familia y «神酒»): https://ga.sbcr.jp/product/9784797373073/ ; volumen 6 (Lili capturada antes del War Game): https://ga.sbcr.jp/product/9784797380583/ .
 - **Pendiente:** localizadores de volumen/capítulo/página para su ausencia, el conflicto con Lili y la reforma posterior.
 
 

@@ -9,9 +9,11 @@ source_refs:
   - DMR-013-SRC-005
   - DMR-013-SRC-007
   - DMR-013-SRC-008
+  - DMR-013-SRC-014
 claim_refs:
   - DMR-013-CLM-002
   - DMR-013-CLM-010
+  - DMR-013-CLM-018
 tags: [Liliruca Arde, Lili, Familia Soma, Familia Hestia, supporter]
 ---
 # Liliruca Arde
@@ -26,6 +28,14 @@ tags: [Liliruca Arde, Lili, Familia Soma, Familia Hestia, supporter]
 - **Etapa temprana — Familia Soma:** aparece vinculada a Soma Familia. El resumen secundario atribuye a su experiencia maltrato, explotación económica y supervivencia como supporter. La ficha editorial oficial del volumen 6 confirma de forma limitada que Lili es capturada por Soma Familia antes del conflicto de War Game; no respalda por sí sola cada detalle narrativo secundario.
 - **Tras romper con Soma — Familia Hestia:** el resumen de la trama la sitúa incorporándose a Hestia Familia tras la intervención de Bell y la resolución del conflicto. La página oficial del anime IV la presenta ya como supporter de Hestia Familia; esta última afirmación se mantiene en `CONT-ANIME`, sin hacerla pasar por un localizador de la novela.
 - **Orden temporal exacto:** para reconstruir las escenas, cambios de Falna y niveles hace falta cotejar los volúmenes principales correspondientes. Esta ficha no asigna fechas absolutas ni nivela todas sus etapas.
+
+## Anclaje editorial del primer equipo · volumen 2
+
+La sinopsis oficial de GA Bunko para el volumen 2 presenta a Lili ofreciéndose como supporter a Bell y resume que forman equipo para explorar el Dungeon. Esto permite representar una **relación inicial de trabajo** entre ambos en `CONT-MAIN-LN` sin depender únicamente de la wiki. La fuente es editorial y resumida: no da capítulo/página, no demuestra cuánto tarda en construirse la confianza ni respalda todos los detalles del pasado de Lili.
+
+- **Claim:** DMR-013-CLM-018.
+- **Fuente:** DMR-013-SRC-014 · https://ga.sbcr.jp/product/9784797373073/.
+- **Límite:** el pasado, los engaños, las acciones individuales, el cambio de Falna y las capacidades detalladas siguen pendientes de cotejo con el texto del volumen.
 
 ## Descripción y papel narrativo
 Lili combina conocimientos prácticos de expedición, tamaño discreto y experiencia en el trabajo de apoyo. Su utilidad no se reduce a cargar equipo: la información, la gestión de provisiones, la lectura de riesgos y la coordinación pueden determinar si un grupo regresa vivo. La descripción de su pasado como alguien que aprendió a desconfiar es un resumen secundario, no una evaluación psicológica validada escena por escena. El perfil oficial del anime destaca su inteligencia y su capacidad estratégica dentro de la continuidad de adaptación.
@@ -44,7 +54,7 @@ Su papel de supporter prioriza exploración auxiliar, logística, observación y
 - **`CONT-MAIN-LN`:** el volumen 6, según la ficha editorial, confirma la captura de Lili por Soma Familia antes del War Game. Los detalles de la salida, su pasado, la conducta de Zanis y el estado de Canoe se etiquetan **referencia secundaria; localizador primario pendiente**.
 - **`CONT-ANIME`:** la ficha oficial de DanMachi IV la presenta como supporter de Hestia Familia y vincula su historia con Bell. No transferir esta descripción como si fuera evidencia de capítulo de novela.
 - **Spoilers:** moderados para la salida de Soma y la formación del equipo; el motivo/revelación tardío atribuido a Lili por wikis se omite de la afirmación canónica hasta una verificación primaria explícita.
-- **Fuentes:** GA Bunko, volumen 6 (sinopsis editorial): https://ga.sbcr.jp/product/9784797380583/ ; perfil oficial de DanMachi IV: https://danmachi.com/danmachi4/character/ ; referencia secundaria comunitaria: https://danmachi.fandom.com/es/wiki/Liliruca_Arde .
+- **Fuentes oficiales editoriales:** GA Bunko, volumen 2 (sinopsis sobre el primer equipo con Bell y el contexto de Soma Familia): https://ga.sbcr.jp/product/9784797373073/ ; volumen 6 (captura de Lili por Soma Familia antes del War Game): https://ga.sbcr.jp/product/9784797380583/ ; perfil de adaptación DanMachi IV: https://danmachi.com/danmachi4/character/ . **Referencia secundaria:** https://danmachi.fandom.com/es/wiki/Liliruca_Arde .
 - **Pendiente:** capítulos y páginas de la novela principal para afiliación, cambio de capitanía, escenas, habilidades y relaciones; no confundir sinopsis editorial, wiki y adaptación.
 
 

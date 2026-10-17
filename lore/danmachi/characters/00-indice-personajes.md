@@ -62,7 +62,7 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-LOKI-STARK | [Stark](stark.md) | スターク; Sutāku; manga roster | CONT-MANGA; reported Sword Oratoria manga member | Manga-source only; light-novel identity not verified |
 | CHAR-LOKI-COCO-MANGA | [Coco (Loki Familia manga character)](coco-loki.md) | ココ; Koko; manga roster | CONT-MANGA; reported Sword Oratoria manga member | Manga-source only; light-novel identity not verified |
 | CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior) | Ficha individual y expediente integrados; fuentes mixtas; cotejo primario pendiente |
+| CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior); Bell | Sinopsis oficial vol. 2: primer equipo con Bell; vol. 6: captura por Soma Familia; biografía y escenas detalladas pendientes de cotejo primario |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-SANJOUNO-HARUHIME | Sanjouno Haruhime | Haruhime | Hestia Familia, Ishtar historia | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia (estado histórico); Hostess of Fertility (perfil de adaptación) | Expediente de aplicación existente; cotejo de LN pendiente |

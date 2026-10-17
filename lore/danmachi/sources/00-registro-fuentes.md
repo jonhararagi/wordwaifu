@@ -1337,3 +1337,27 @@ verification_status: stub
 - rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
 - verification_status: secondary_reference_primary_locator_pending
+
+
+---
+
+## DMR-013-SRC-014 · DanMachi, volumen principal 2 (ficha editorial oficial)
+- source_id: DMR-013-SRC-014
+- title: ダンジョンに出会いを求めるのは間違っているだろうか2
+- creator_or_publisher: Fujino Omori / GA Bunko (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 2; ISBN 978-4-7973-7307-3
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784797373073/
+- accessed_at: 2026-10-17
+- locator_type: publisher_synopsis
+- locator: La sinopsis editorial presenta a Lili como supporter que propone formar equipo con Bell; resume su exploración conjunta inicial y menciona la mala reputación de Soma Familia y el misterio del «神酒» (bebida divina).
+- claims_supported: [DMR-013-CLM-018, DMR-013-CLM-019]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; descripción editorial, sin capítulo/página
+- reliability_note: Fuente oficial para el marco resumido por la editorial. No respalda por sí sola cada detalle del pasado de Lili, las acciones particulares de Zanis o Chandra, los niveles, la psicología ni los detalles técnicos de la bebida.
+- conflicting_sources: []
+- rights_note: Resumir con palabras propias; no reproducir la sinopsis completa.
+- verified_by: DANMACHI-COVERAGE-003
+- verification_status: source_checked_publisher_synopsis_only

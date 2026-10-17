@@ -11,11 +11,13 @@ source_refs:
   - DMR-013-SRC-006
   - DMR-013-SRC-007
   - DMR-013-SRC-008
+  - DMR-013-SRC-014
 claim_refs:
   - DMR-013-CLM-001
   - DMR-013-CLM-003
   - DMR-013-CLM-004
   - DMR-013-CLM-009
+  - DMR-013-CLM-019
 tags: [Soma Familia, Soma, Liliruca Arde, Zanis Lustra, Chandra Ihit, beverages]
 ---
 # Soma Familia
@@ -42,6 +44,12 @@ Los estados siguientes son los indicados por las fuentes secundarias consultadas
 | [Tsukinokami Kaede](../characters/tsukinokami-kaede.md) | Integrante que aparece en la lista actual consultada | Ficha individual y periodo por verificar |
 | [Shinonome Momiji](../characters/shinonome-momiji.md) | Integrante que aparece en la lista actual consultada | Especie reportada como Renard; resto pendiente |
 | [Coco Collins](../characters/coco-collins.md) | Integrante que aparece en la lista actual consultada | Especie reportada como Pallum; resto pendiente |
+
+## Dos anclajes editoriales: volúmenes 2 y 6
+
+- **Volumen 2 — DMR-013-SRC-014 / DMR-013-CLM-019:** la sinopsis editorial presenta la mala reputación de Soma Familia y el misterio del «神酒» como parte del arco temprano. No especifica el papel de cada integrante ni confirma la biografía completa de Soma.
+- **Volumen 6 — DMR-013-SRC-007 / DMR-013-CLM-002 y 011:** la sinopsis oficial confirma que Lili es capturada por Soma Familia antes del War Game. Es una pista editorial del conflicto y no reemplaza un localizador de capítulo/página.
+- **Consecuencia para la ficha:** las entradas de la tabla siguen distinguiendo entre función de organización, roster comunitario y dato editorial verificable. No se elevan los nombres/cargos de Zanis o Chandra, ni la acusación sobre Canoe, a hechos confirmados solo porque existan estas sinopsis.
 
 ## Relaciones y eventos para navegar
 - La relación entre Soma y la organización es patronazgo; no sustituirla por una relación personal equivalente a cada integrante.

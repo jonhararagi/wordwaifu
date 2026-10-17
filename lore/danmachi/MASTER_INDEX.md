@@ -65,6 +65,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 ## Investigación de cronología prioritaria
 
 - [DANMACHI-RESEARCH-006 · Cronología Hestia/Bell y puerta de divergencia AU](research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md) — separa evidencia oficial de la fecha secundaria pendiente de verificar y define los criterios para probar la divergencia del OC.
+- [DANMACHI-RESEARCH-013 · Soma Familia, Liliruca y roster de miembros](research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md) — distingue sinopsis oficiales de los volúmenes 2/6, perfil de adaptación y detalles secundarios pendientes.
 
 ## 3. Índices por categoría
 

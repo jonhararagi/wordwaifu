@@ -99,6 +99,17 @@
 - `verification_status`: source_checked_adaptation_profile
 - `reliability_note`: Fuente oficial para el retrato de adaptación, su condición de supporter y su afiliación en ese estado; no sustituye texto de la novela principal.
 
+### DMR-013-SRC-014 · DanMachi, volumen principal 2 · ficha editorial oficial
+- `source_id`: DMR-013-SRC-014
+- `title`: ダンジョンに出会いを求めるのは間違っているだろうか2
+- `source_type`: OFFICIAL_REFERENCE
+- `source_url`: https://ga.sbcr.jp/product/9784797373073/
+- `volume_or_edition`: Volumen 2 de la novela principal; ISBN 978-4-7973-7307-3
+- `continuity_scope`: CONT-MAIN-LN; sinopsis editorial
+- `source_locator`: Sinopsis publicada por GA Bunko: Lili se presenta como supporter, forma equipo con Bell y ambos exploran el Dungeon; se mencionan la reputación de Soma Familia y el «神酒».
+- `verification_status`: source_checked_publisher_synopsis_only
+- `reliability_note`: Fuente oficial pero resumida. No es un pasaje del volumen y no resuelve el pasado completo de Lili, los detalles de abusos, cargos, niveles o la psicología de los personajes.
+
 ## Afirmaciones trazables
 
 ### DMR-013-CLM-001 · Soma es cabeza de Soma Familia y está asociado a la elaboración de bebidas
@@ -296,3 +307,35 @@ Perfiles comunitarios de juego las presentan como amigas desde la infancia y las
 
 ## DMR-013-CLM-017 · Coco Collins y desambiguación
 El perfil comunitario asocia a Coco Collins con Orario Rhapsodia y el grupo de Kaede/Momiji. Existe una figura llamada Coco en referencias manga de Loki Familia; no hay evidencia de identidad compartida. Sources: DMR-013-SRC-011 and DMR-018-SRC-001.
+
+### DMR-013-CLM-018 · La sinopsis editorial del volumen 2 sitúa el primer equipo narrativo de Lili y Bell
+- `claim_id`: DMR-013-CLM-018
+- `claim`: La sinopsis oficial del volumen 2 presenta a Lili como una joven que se ofrece como supporter a Bell; ambos forman pareja de exploración y avanzan juntos por el Dungeon en el resumen editorial.
+- `character_ids`: [CHAR-LILIRUCA-ARDE, DM-CHAR-BELL]
+- `aspect`: primer vínculo de trabajo / afiliación funcional
+- `era_or_interval`: Arco temprano de la novela principal; orden relativo editorial, sin fecha absoluta
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-013-SRC-014
+- `source_title`: DanMachi, volumen 2 · ficha editorial oficial
+- `source_type`: OFFICIAL_REFERENCE
+- `source_locator`: Sinopsis editorial de GA Bunko, https://ga.sbcr.jp/product/9784797373073/
+- `evidence_type`: publisher_synopsis_claim
+- `verification_status`: source_checked_publisher_synopsis_only
+- `spoiler_level`: mild
+- `confidence_note`: Respalda el marco resumido por la editorial, no la transcripción de escenas, duración exacta de la alianza, nivel, equipo técnico ni evolución psicológica escena por escena.
+
+### DMR-013-CLM-019 · La sinopsis del volumen 2 enlaza el conflicto de Soma Familia con el misterio del «神酒»
+- `claim_id`: DMR-013-CLM-019
+- `claim`: La sinopsis oficial del volumen 2 dice que Soma Familia tiene mala reputación y presenta el «神酒» (bebida divina) como misterio narrativo asociado al contexto de la Familia. No identifica por sí sola a cada responsable ni acredita todos los detalles de la crisis descritos por fuentes secundarias.
+- `character_ids`: [CHAR-SOMA, CHAR-LILIRUCA-ARDE]
+- `aspect`: contexto organizativo y pista narrativa
+- `era_or_interval`: Arco temprano de Soma Familia; secuencia detallada pendiente
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-013-SRC-014
+- `source_title`: DanMachi, volumen 2 · ficha editorial oficial
+- `source_type`: OFFICIAL_REFERENCE
+- `source_locator`: Sinopsis editorial de GA Bunko, https://ga.sbcr.jp/product/9784797373073/
+- `evidence_type`: publisher_synopsis_claim
+- `verification_status`: source_checked_publisher_synopsis_only
+- `spoiler_level`: mild
+- `confidence_note`: El resumen no permite deducir por sí solo la composición total del roster, la culpabilidad individual, los niveles, métodos de elaboración ni la posterior reforma de la Familia.
