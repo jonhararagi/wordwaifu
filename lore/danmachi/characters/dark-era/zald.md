@@ -38,7 +38,9 @@ Las referencias le atribuyen Deus Ambrosia y mejoras al consumir presas poderosa
 
 ## Relaciones
 
-Zeus Familia es su contexto de formación; Ottar es su contraparte en el combate final descrito por las fuentes secundarias. No convertir similitudes de roles en amistad.
+- **[Zeus Familia](../../familias/zeus-familia.md) / [Zeus](../zeus.md):** afiliación histórica reportada por las fuentes secundarias.
+- **[Maxim](../maxim.md):** capitán reportado de esa Familia en el periodo histórico; no se supone amistad ni presencia conjunta en un combate específico.
+Zeus Familia es su contexto de formación según referencias secundarias; Ottar es su contraparte en el combate final descrito por las fuentes secundarias. No convertir similitudes de roles en amistad.
 
 ## Conflicto narrativo
 
