@@ -1890,9 +1890,41 @@ async function run() {
     assert.deepEqual(markerAfterReload, markerAfterDrag, "Moved marker coordinates should survive a reload.");
     process.stdout.write("PASS persistence: edited location and marker coordinates survive a reload.\n");
 
+    // Blob URLs must stay alive through the initiating click task. Firefox has
+    // reported that synchronous revokeObjectURL() can prevent the download.
+    await page.evaluate(() => {
+      const nativeRevoke = URL.revokeObjectURL.bind(URL);
+      window.__wordWaifuOriginalRevokeObjectURL = URL.revokeObjectURL;
+      window.__wordWaifuRevokeCalls = [];
+      window.__wordWaifuRevokeDuringClick = false;
+      window.__wordWaifuExportClickActive = false;
+      URL.revokeObjectURL = function(url) {
+        if (window.__wordWaifuExportClickActive) window.__wordWaifuRevokeDuringClick = true;
+        window.__wordWaifuRevokeCalls.push(url);
+        return nativeRevoke(url);
+      };
+      document.querySelector("#export-button").addEventListener("click", () => {
+        window.__wordWaifuExportClickActive = true;
+        queueMicrotask(() => { window.__wordWaifuExportClickActive = false; });
+      }, { capture: true });
+    });
     const downloadPromise = page.waitForEvent("download");
     await page.locator("#export-button").click();
     const download = await downloadPromise;
+    await page.waitForFunction(() => (window.__wordWaifuRevokeCalls || []).length === 1, null, { timeout: 5000 });
+    const revocationTiming = await page.evaluate(() => ({
+      duringClick: window.__wordWaifuRevokeDuringClick,
+      calls: window.__wordWaifuRevokeCalls.length
+    }));
+    assert.equal(revocationTiming.duringClick, false, "Export blob URL must not be revoked inside the initiating click task.");
+    assert.equal(revocationTiming.calls, 1, "Export blob URL must be revoked after the download is scheduled.");
+    await page.evaluate(() => {
+      URL.revokeObjectURL = window.__wordWaifuOriginalRevokeObjectURL;
+      delete window.__wordWaifuOriginalRevokeObjectURL;
+      delete window.__wordWaifuRevokeCalls;
+      delete window.__wordWaifuRevokeDuringClick;
+      delete window.__wordWaifuExportClickActive;
+    });
     const exportedPath = await download.path();
     assert.ok(exportedPath, "Export should produce a local JSON download.");
     const exportedProject = JSON.parse(fs.readFileSync(exportedPath, "utf8"));

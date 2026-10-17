@@ -146,3 +146,17 @@ Una sola evaluación del módulo mantiene un único conjunto de listeners; la pr
 - [MDN — IndexedDB: uso y transacciones](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB): IndexedDB es asíncrono y transaccional; la app sigue esperando la confirmación de la transacción antes de limpiar la marca.
 - [MDN — evento `complete` de IDBTransaction](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete_event): el evento marca que la transacción terminó y confirmó sus operaciones.
 
+
+
+## 2026-10-17 · Revocación prematura de la URL de exportación JSON
+
+### Incidencia encontrada y corrección
+- `exportProject()` creaba una URL `blob:`, iniciaba una descarga con `anchor.click()` y revocaba la URL en la misma tarea síncrona. Ese orden tiene una regresión documentada en Firefox: Bugzilla #1282407 describe que revocar inmediatamente después de `click()` puede impedir que aparezca la descarga, mientras que diferir la revocación con un temporizador de cero milisegundos permite que comience.
+- La aplicación ahora ejecuta `setTimeout(() => URL.revokeObjectURL(url), 0)`. La URL sigue liberándose, pero después de la tarea que inicia la descarga.
+- La prueba de Chromium envuelve temporalmente `URL.revokeObjectURL` y falla si la revocación ocurre durante el propio clic; también exige que se revoque exactamente una vez y conserva la prueba de lectura/validación del JSON descargado.
+
+### Fuentes técnicas consultadas
+- [Mozilla Bugzilla #1282407 — revokeObjectURL breaks blob download with download attribute](https://bugzilla.mozilla.org/show_bug.cgi?id=1282407): incidencia de compatibilidad y comparación directa del orden de revocación.
+- [MDN — Blob URLs](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/blob): las URLs deben revocarse cuando ya no se necesitan, pero no antes de que el consumidor haya terminado de utilizarlas.
+- [MDN — URL.revokeObjectURL()](https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL_static): referencia de API para liberar URLs temporales.
+

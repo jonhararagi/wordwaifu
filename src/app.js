@@ -2242,7 +2242,9 @@
     anchor.href = url;
     anchor.download = (state.project.name.toLowerCase().replace(/[^a-z0-9]+/g, "-") || "wordwaifu-project") + ".json";
     anchor.click();
-    URL.revokeObjectURL(url);
+    // The download consumes this blob URL asynchronously in some browsers.
+    // Defer revocation until after the click task so Firefox can start the download.
+    setTimeout(() => URL.revokeObjectURL(url), 0);
     $("#save-status").textContent = "Proyecto exportado";
   }
 
