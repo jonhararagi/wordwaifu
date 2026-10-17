@@ -601,6 +601,21 @@
       "priority": "high"
     },
     {
+      "id": "CHAR-HERA",
+      "path": "characters/hera.md",
+      "type": "deity_character",
+      "tags": [
+        "Hera",
+        "ヘラ",
+        "Hera Familia",
+        "Zeus Familia",
+        "history",
+        "Great Quests"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
+    },
+    {
       "id": "CHAR-ISELINA",
       "path": "characters/iselina.md",
       "type": "character",
@@ -1157,6 +1172,36 @@
       "priority": "normal"
     },
     {
+      "id": "CHAR-MAXIM",
+      "path": "characters/maxim.md",
+      "type": "character",
+      "tags": [
+        "Maxim",
+        "マキシム",
+        "Zeus Familia",
+        "captain",
+        "historical roster"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-METERIA",
+      "path": "characters/dark-era/meteria.md",
+      "type": "character",
+      "tags": [
+        "Meteria",
+        "メーテリア",
+        "Hera Familia",
+        "Alfia",
+        "Bell Cranel",
+        "history",
+        "major spoiler"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
+    },
+    {
       "id": "CHAR-NEZE-RANKETT",
       "path": "characters/neze-rankett.md",
       "type": "character",
@@ -1374,6 +1419,21 @@
         "former captain"
       ],
       "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ZEUS",
+      "path": "characters/zeus.md",
+      "type": "deity_character",
+      "tags": [
+        "Zeus",
+        "ゼウス",
+        "Zeus Familia",
+        "Bell Cranel",
+        "history",
+        "Great Quests"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -1774,6 +1834,23 @@
       "priority": "critical"
     },
     {
+      "id": "FAM-HERA",
+      "path": "familias/hera-familia.md",
+      "type": "familia",
+      "tags": [
+        "Hera Familia",
+        "Hera",
+        "Zeus Familia",
+        "Great Quests",
+        "Behemoth",
+        "Leviathan",
+        "Alfia",
+        "Meteria"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "critical"
+    },
+    {
       "id": "FAM-SOMA",
       "path": "familias/soma-familia.md",
       "type": "familia",
@@ -1786,6 +1863,22 @@
       ],
       "status": "secondary_reference_partial_primary_check_pending",
       "priority": "high"
+    },
+    {
+      "id": "FAM-ZEUS",
+      "path": "familias/zeus-familia.md",
+      "type": "familia",
+      "tags": [
+        "Zeus Familia",
+        "Zeus",
+        "Hera Familia",
+        "Great Quests",
+        "Behemoth",
+        "Leviathan",
+        "One-Eyed Black Dragon"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "critical"
     },
     {
       "id": "LOC-DUNGEON",
@@ -1866,29 +1959,18 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "CHAR-ZEUS",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-HERA",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "CHAR-ALFIA",
       "type": "character",
-      "status": "candidate_not_created"
+      "status": "identity_crosswalk_to_existing_record",
+      "canonicalRecordId": "CHAR-DARK-ALFIA",
+      "note": "Use the existing historical Alfia dossier; do not create a duplicate CHAR-ALFIA profile."
     },
     {
       "id": "CHAR-ZARD",
       "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-METERIA",
-      "type": "character",
-      "status": "candidate_not_created"
+      "status": "identity_crosswalk_to_existing_record",
+      "canonicalRecordId": "CHAR-DARK-ZALD",
+      "note": "Use the existing historical Zald dossier; keep Zard/Zald variants pending edition-level reconciliation."
     },
     {
       "id": "CHAR-ALBERT-WALDSTEIN",
@@ -1942,16 +2024,6 @@
     },
     {
       "id": "FAM-FREYA",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-ZEUS",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-HERA",
       "type": "familia",
       "status": "candidate_not_created"
     },
@@ -2762,7 +2834,13 @@
       "path": "research/inbox/DANMACHI-RESEARCH-020-soma-relationship-network.md",
       "type": "character_relationship_research",
       "status": "secondary_mixed_source_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-021",
+      "path": "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md",
+      "type": "deity_family_research",
+      "status": "secondary_reference_primary_locator_pending"
     }
   ],
-  "lastStructuredSync": "2026-10-16"
+  "lastStructuredSync": "2026-10-17"
 }
