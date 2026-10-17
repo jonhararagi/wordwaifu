@@ -1,14 +1,29 @@
-# DANMACHI-COVERAGE-002 — preflight de CI (2026-10-17)
+# DANMACHI-COVERAGE-002 — entrega de red de personajes y validación CI (2026-10-17)
 
-**Estado:** IN_PROGRESS. No se declara cerrada la cobertura ni la validación completa.
+**Estado de la misión:** IN_PROGRESS. La tanda funcional está validada por CI, pero la enciclopedia global sigue PARTIAL; no se afirma cobertura total de DanMachi.
 
-- HEAD observado antes de este checkpoint: `414db0e6a9c1a22c8c3f723a7844bffbacf9a583` en `work/story-completion-danmachi-audit-2026-10`.
-- `Validate WordWaifu`: `success`, ejecución 1531, SHA exacto `414db0e6a9c1a22c8c3f723a7844bffbacf9a583` ([run](https://github.com/jonhararagi/wordwaifu/actions/runs/39003430425)).
-- `DanMachi Lore and Retrieval Integrity`: la última ejecución observada antes de este checkpoint fue `success` para `7ec6d98fc3ec491d86de163ec6b6fae7b5b28b2b`, no para el HEAD anterior ([run](https://github.com/jonhararagi/wordwaifu/actions/runs/39003428308)). Por tanto, falta evidencia de ese workflow para el SHA exacto del HEAD anterior.
-- El flujo admite `workflow_dispatch`, pero el intento por interfaz web no pudo despacharlo porque GitHub solicitó iniciar sesión; no se finge una ejecución manual. Este cambio de `docs/STATUS.md` es un push real cubierto por el filtro del workflow de lore y debe generar una ejecución en el nuevo SHA. Verificar las dos conclusiones para el nuevo HEAD antes de considerar satisfecha esta etapa.
-- No se tocó `main`, no se fusionaron ramas ni se abrieron/cerraron PR.
+- **Repositorio / rama autorizada:** `jonhararagi/wordwaifu` / `work/story-completion-danmachi-audit-2026-10`.
+- **SHA funcional verificado:** `4efe1844c2c8adfb832f77db398f38e3409ee68c`.
+- **`Validate WordWaifu #1533`:** **SUCCESS** en el SHA exacto ([ejecución](https://github.com/jonhararagi/wordwaifu/actions/runs/39004303215)).
+- **`DanMachi Lore and Retrieval Integrity #792`:** **SUCCESS** en el SHA exacto ([ejecución](https://github.com/jonhararagi/wordwaifu/actions/runs/39004303375)).
+- **Validación de catálogo y enlaces:** paso `Validate catalog and links` completado con éxito dentro de DanMachi Lore and Retrieval Integrity #792. `Validate WordWaifu` completó también las pruebas de sintaxis, IDs/catálogo, cronología, continuidad, expedientes y browser smoke.
+- **Archivos funcionales cambiados en el SHA verificado:** `lore/danmachi/characters/gojouno-kaguya.md`, `lore/danmachi/characters/lyra.md`, `lore/danmachi/familias/astrea-familia.md`, `lore/danmachi/characters/00-indice-personajes.md`, `lore/danmachi/familias/zeus-familia.md`, `lore/danmachi/familias/hera-familia.md`.
+- **Astrea:** las fichas de Kaguya y Lyra ahora documentan identidad, variantes, capacidades/datos específicos solo en `CONT-ANIME`, vínculos concretos respaldados por DMR-007 y límites para `CONT-AR`. No se presentan los detalles de adaptación como escenas cotejadas de novela.
+- **Zeus/Hera:** ambos expedientes incorporan tablas navegables de relaciones/identidades, reutilizan IDs existentes y diferencian fuente oficial auxiliar de roster secundario. La capitanía desconocida de Hera sigue sin identidad inferida; el padre de Bell tampoco recibe una identidad inventada.
+- **Catálogo:** 134 registros; esta tanda no crea registros duplicados ni agrega IDs nuevos. El número de registros no se interpreta como porcentaje de cobertura.
+- **Pruebas locales:** NOT_RUN desde esta interfaz. Evidencia válida de ejecución: CI en los SHA/enlaces indicados.
+- **Integridad de ramas:** `main` intacta; no se fusionaron ramas ni se abrieron, cerraron o integraron PR.
+
+## Brechas abiertas
+
+1. Cotejar en la edición publicada de *Astrea Record* los capítulos/páginas y acciones individuales de Kaguya y Lyra; su ficha oficial actual es fuente de adaptación, no una fuente sustitutiva de la novela.
+2. Recuperar roster histórico y cambios por periodo de Astrea Familia, supervivientes y nuevos miembros sin mezclar generaciones.
+3. Localizadores primarios para Maxim, Alfia y Meteria; roster, nivel/cargo y cronología de Zeus/Hera siguen secundarios salvo la victoria conjunta contra Behemoth y Leviathan citada en DMR-008-CLM-027/DMR-011-SRC-005.
+4. Identidad y nivel reportado de la capitanía histórica de Hera permanecen no resueltos.
+5. Seguir los expedientes pendientes de Loki, Soma, dioses y familias; no dar la cobertura global por cerrada por el tamaño del catálogo.
 
 ---
+
 
 # ESTADO ACTUAL — DANMACHI-COVERAGE-001 EN PROGRESO
 

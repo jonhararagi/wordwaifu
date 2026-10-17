@@ -2,6 +2,20 @@
 
 **Documento de mando persistente.** Leer este archivo junto con `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/ROADMAP.md` y `docs/DONE.md` al iniciar o recuperar una sesión.
 
+## DANMACHI-COVERAGE-002 — último punto persistido (2026-10-17)
+
+- **Estado de la misión global:** IN_PROGRESS; la enciclopedia DanMachi permanece PARTIAL.
+- **SHA de la tanda funcional validada:** `4efe1844c2c8adfb832f77db398f38e3409ee68c`.
+- **CI exacto:** Validate WordWaifu #1533 SUCCESS (https://github.com/jonhararagi/wordwaifu/actions/runs/39004303215) y DanMachi Lore and Retrieval Integrity #792 SUCCESS (https://github.com/jonhararagi/wordwaifu/actions/runs/39004303375), ambos para el mismo SHA.
+- **Implementado:** fichas individuales navegables de Gojouno Kaguya y Lyra ampliadas; redes relacionales con procedencia en Astrea, Zeus y Hera; índice de personajes actualizado. Se corrigió una clasificación obsoleta de Kaguya/Lyra que las reducía a pistas comunitarias, diferenciando perfil oficial de adaptación y evidencia primaria aún pendiente.
+- **Regla probatoria:** no elevar `CONT-ANIME` a `CONT-AR`; los cargos, niveles y epítetos de Kaguya/Lyra en la ficha actual describen el estado de adaptación. Los capítulos/páginas de *Astrea Record* quedan pendientes.
+- **IDs:** se reutilizaron IDs existentes. No se creó ID para el capitán no identificado de Hera ni para el padre de Bell.
+- **Brechas prioritarias:** roster histórico de Astrea por fecha, localizadores primarios para Zeus/Hera/Maxim/Alfia/Meteria, identidad no resuelta de la capitanía de Hera y más cobertura de miembros de Loki/Soma y deidades/familias. 134 registros no equivalen a enciclopedia completa.
+- **Restricciones respetadas:** `main` sin cambios; sin merges ni operaciones de PR. Validación local NOT_RUN; la evidencia viene de Actions, enlazada arriba.
+- **Reanudación:** comprobar el HEAD actual de la rama autorizada y los dos workflows para el siguiente commit antes de declarar PASS_CI; no repetir auditoría sin un cambio de contenido real.
+
+
+
 ## 1. Roles
 
 ### CEREBRO (dirección, alcance y aceptación)
