@@ -1008,3 +1008,70 @@ verification_status: stub
 - rights_note: Resumir en palabras propias y enlazar la fuente.
 - verified_by: DANMACHI-RESEARCH-007
 - verification_status: official_episode_synopsis_checked
+
+
+## DMR-017-SRC-001 · Loki Familia — roster comunitario
+
+- source_id: DMR-017-SRC-001
+- title: Loki Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria
+- volume_or_edition: Artículo web dinámico; tabla de miembros
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Loki_Familia
+- accessed_at: 2026-10-16
+- locator_type: community_article_section
+- locator: Tabla de miembros; filas de Narvi Roll y Cruz Bussell
+- claims_supported: [DMR-017-CLM-001, DMR-017-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-MANGA; CONT-ANIME (según la referencia)
+- reliability_note: Fuente secundaria para localizar nombres y atribuciones de afiliación/rol; no sustituye el texto de la novela.
+- conflicting_sources: [La forma Narfi usada en notas anteriores del repo aún no está comparada directamente con ナルヴィ・ロール en la edición primaria.]
+- rights_note: Paráfrasis original; no copiar prosa ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-017-SRC-002 · Narvi Roll — referencia comunitaria individual
+
+- source_id: DMR-017-SRC-002
+- title: Narvi Roll
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria
+- volume_or_edition: Artículo web dinámico; debut atribuido a Sword Oratoria volumen 4
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Narvi_Roll
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Japanese name, Romaji, Affiliation, Debuts
+- claims_supported: [DMR-017-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Fuente secundaria reporta ナルヴィ・ロール, romanización Naruvī Rōru y debut en el volumen 4. No confirma por sí sola si la forma Narfi que figura en las notas del repo es la misma identidad.
+- conflicting_sources: [Repositorio: Narfi; wiki: Narvi Roll.]
+- rights_note: Paráfrasis original; no copiar prosa ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_identity_crosswalk_pending
+
+## DMR-017-SRC-003 · Cruz Bussell — referencia comunitaria individual
+
+- source_id: DMR-017-SRC-003
+- title: Cruz Bussell
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria
+- volume_or_edition: Artículo web dinámico; debut atribuido a Sword Oratoria volumen 4
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Cruz_Bussell
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Japanese name, Romaji, Affiliation, Debuts
+- claims_supported: [DMR-017-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-MANGA; CONT-ANIME (según la referencia)
+- reliability_note: Fuente secundaria identifica el nombre completo クルス・バッセル y lo atribuye a la Familia Loki; sus valores de especie/nivel y escenas deben verificarse por etapa.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar prosa ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending

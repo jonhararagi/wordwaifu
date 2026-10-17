@@ -736,9 +736,11 @@
         "Familia Loki",
         "supporting member",
         "Sword Oratoria",
-        "expedition"
+        "expedition",
+        "Cruz Bussell",
+        "クルス・バッセル"
       ],
-      "status": "primary_novel_locator_identified_details_partial",
+      "status": "secondary_reference_primary_locator_pending",
       "priority": "normal"
     },
     {
@@ -781,9 +783,12 @@
         "Familia Loki",
         "supporter",
         "Sword Oratoria",
-        "expedition"
+        "expedition",
+        "Narvi",
+        "Narvi Roll",
+        "ナルヴィ・ロール"
       ],
-      "status": "primary_novel_locator_identified_details_partial",
+      "status": "secondary_reference_identity_crosswalk_pending",
       "priority": "normal"
     },
     {
@@ -2423,6 +2428,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-016-loki-tertiary-roster.md",
       "type": "character_relationship_research",
       "status": "secondary_reference_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-017",
+      "path": "research/inbox/DANMACHI-RESEARCH-017-loki-name-reconciliation.md",
+      "type": "character_relationship_research",
+      "status": "secondary_reference_identity_crosswalk_pending"
     }
   ],
   "lastStructuredSync": "2026-10-16"

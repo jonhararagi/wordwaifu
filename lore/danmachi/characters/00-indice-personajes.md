@@ -35,6 +35,8 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-LOKI-AKI | [Aki](aki.md) | Anakitty Autumn (alias secundario) | Loki Familia; vigilancia del campamento en Sword Oratoria vol. 4 | El nombre completo se conserva como alias de recuperación pendiente de fuente primaria |
 | CHAR-LOKI-ELFY-COLETTE | [Elfy Colette](elfy-colette.md) | Elfy; Lomoire (alias secundario) | Loki Familia; maga / magia de fuego reportadas | Referencia comunitaria; datos primarios pendientes |
 | CHAR-LOKI-RAKTA-HAZE | [Rakta Haze](rakta-haze.md) | Rakta | Loki Familia; integrante reportada | Referencia comunitaria; escena y nivel por periodo pendientes |
+| CHAR-LOKI-NARFI | [Narvi Roll](narfi.md) | Narvi; Narfi (etiqueta anterior, identidad por cotejar); ナルヴィ・ロール | Loki Familia; debut en Sword Oratoria vol. 4 según fuente secundaria | Correspondencia de identidad y localizador primario pendientes; ID legado conservado |
+| CHAR-LOKI-CRUZ | [Cruz Bussell](cruz.md) | Cruz; クルス・バッセル | Loki Familia; debut en Sword Oratoria vol. 4 según fuente secundaria | Nombre completo reportado por fuente comunitaria; capítulo/página primaria pendientes |
 | CHAR-LOKI-ARCS | [Arcs](arcs.md) | Ākusu; アークス | Loki Familia; aventurero nivel 4 reportado | Referencia comunitaria; ficha primaria y nivel por etapa pendientes |
 | CHAR-LOKI-CYNTHIA | [Cynthia](cynthia.md) | Shinshia; シンシア | Loki Familia; maga reportada | Referencia comunitaria; nivel, raza y hechizos desconocidos |
 | CHAR-LOKI-ORBA | [Orba](orba.md) | Oruba; オルバ | Loki Familia; clasificación aventurero/ayudante en conflicto | Referencia comunitaria; resolver función con fuente primaria |
