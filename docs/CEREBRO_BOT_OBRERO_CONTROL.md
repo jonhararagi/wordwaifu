@@ -165,10 +165,10 @@ Próxima acción exacta:
 **Estado: IN_PROGRESS.** No es una auditoría de cierre ni declara completa la enciclopedia.
 
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- Tanda funcional registrada en el HEAD `7c6ecebcdfc12722a6e769df17012bb8d995bbdd`: perfiles individuales provisionales de Aki y Alicia Forestlight, sus IDs en `lore/danmachi/catalog.json` y enlaces desde `lore/danmachi/familias/loki-familia.md`.
-- IDs nuevos: `CHAR-LOKI-AKI`, `CHAR-LOKI-ALICIA-FORESTLIGHT`. El catálogo pasó de 97 a 99 registros; ambos estados requieren cotejo primario.
+- Tanda funcional registrada en los commits funcionales `7c6ecebcdfc12722a6e769df17012bb8d995bbdd`, `332139154515ebcd37d8f74a2dd0bc8638d55dc0`: perfiles individuales provisionales de Aki, Alicia Forestlight y Leene Arshe, sus IDs en `lore/danmachi/catalog.json` y enlaces desde `lore/danmachi/familias/loki-familia.md`.
+- IDs nuevos: `CHAR-LOKI-AKI`, `CHAR-LOKI-ALICIA-FORESTLIGHT` y `CHAR-LEENE-ARSHE`. El catálogo pasó de 97 a 100 registros; los tres estados requieren cotejo primario. Leene se etiqueta con foco en `CONT-SO`/adaptación y spoilers.
 - Comprobación de recuperación: las fichas de Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya existen en el directorio correcto y tienen metadatos de procedencia/continuidad. No duplicarlas ni contar como creadas en esta tanda.
-- La edición del índice de Familia Loki añade navegación a Aki y Alicia y advierte que la lista de miembros y la cronología no son exhaustivas.
-- **Pendiente de verificación:** validar el esquema del catálogo, enlaces, búsqueda y regresiones mediante los validadores del repositorio; comprobar los workflows para el SHA funcional y para el HEAD documental exacto. No se declara PASS_CI con la evidencia disponible en esta sesión.
+- La edición del índice de Familia Loki añade navegación a Aki, Alicia y Leene, y advierte que la lista de miembros y la cronología no son exhaustivas.
+- **Pendiente de verificación:** validar el esquema del catálogo, enlaces, búsqueda y regresiones mediante los validadores del repositorio; comprobar los workflows para el SHA funcional y para el HEAD documental exacto. La consulta de runs disponible no devolvió resultados porque filtra ejecuciones disparadas por PR; el CI requerido permanece UNKNOWN/PENDING. No se declara PASS_CI con la evidencia disponible en esta sesión.
 - **Siguiente acción concreta:** continuar con la siguiente tanda de miembros confirmados de Familia Loki y completar fichas individuales existentes antes de ampliar el roster; revisar después Familia Astrea sin mezclar `CONT-MAIN-LN`, `CONT-AR` y adaptaciones.
 - `main` no se modificó. No se hicieron merges ni operaciones sobre PR.
