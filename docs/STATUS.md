@@ -1,3 +1,18 @@
+# ESTADO ACTUAL — DANMACHI-COVERAGE-001 EN PROGRESO
+
+**Actualizado:** 2026-10-16. Este bloque registra la tanda de cobertura individual iniciada en esta sesión; no sustituye ni cierra el trabajo global.
+
+- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
+- **HEAD funcional observado antes de documentación:** `7c6ecebcdfc12722a6e769df17012bb8d995bbdd` (enlace de navegación desde Familia Loki).
+- **Cambios funcionales de esta tanda:** añadidas las fichas `lore/danmachi/characters/aki.md` y `lore/danmachi/characters/alicia-forestlight.md`; añadidos sus registros estables al catálogo (`CHAR-LOKI-AKI`, `CHAR-LOKI-ALICIA-FORESTLIGHT`); enlazadas desde `lore/danmachi/familias/loki-familia.md`.
+- **Cobertura y cautela:** ambas fichas se marcan como referencias secundarias con verificación primaria pendiente. No asignan nivel, historia personal ni relaciones específicas sin localizador. El catálogo sube de 97 a 99 registros.
+- **Integridad de archivos:** las fichas de Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya existían en `lore/danmachi/characters/`; se comprobó su presencia y sus metadatos. No se cuentan como nuevas fichas de esta tanda.
+- **Validación local:** no ejecutada desde esta interfaz. **CI para el SHA funcional nuevo:** pendiente de verificación; no declarar PASS_CI hasta comprobar el SHA exacto.
+- **Enciclopedia global DanMachi:** PARTIAL. Las fichas de Soma siguen pendientes de cotejo primario; faltan otros miembros ordinarios de Loki y la Familia Astrea conserva brechas de cronología/continuidad.
+- `main` no se modificó; no se hicieron merges ni se abrió/cerró/modificó PR.
+
+---
+
 # ESTADO ACTUAL — TLM-005 CERRADA / PASS_CI
 
 **Actualizado:** 2026-10-16. Este bloque prevalece sobre cualquier estado histórico a continuación.
