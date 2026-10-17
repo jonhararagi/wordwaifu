@@ -1423,6 +1423,20 @@
       ],
       "status": "primary_novel_locator_identified_details_partial",
       "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-CRUZ",
+      "path": "characters/cruz.md",
+      "type": "character",
+      "tags": [
+        "Cruz",
+        "Familia Loki",
+        "supporting member",
+        "Sword Oratoria",
+        "expedition"
+      ],
+      "status": "primary_novel_locator_identified_details_partial",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
