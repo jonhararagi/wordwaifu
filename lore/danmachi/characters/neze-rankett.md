@@ -45,3 +45,9 @@ nivel, habilidades individuales, acciones, arco y relaciones específicas. No se
 El índice del volumen 1 enumera una historia especial «Neze Rankett». Consultarla para documentar trayectoria, voz y decisiones individuales. Las fuentes comunitarias la identifican como mujer lobo y aventurera, pero no debe deducirse de su especie un estilo de combate, ferocidad o impulsividad. La página de la edición y su escena siguen pendientes.
 
 Fuentes: https://danmachi.fandom.com/wiki/Astraea_Familia · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1 · https://danmachi.com/danmachi4/character/.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, las descripciones de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.

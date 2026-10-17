@@ -45,3 +45,9 @@ historia individual, nivel, habilidades y relaciones de escena, pendientes de fu
 Las fuentes secundarias describen a Maryuu Reage (también buscable como Mariyu Reage/Mariyu Leage) como compañera protectora que usaría Rea Vindemia y una maza. El punto de lectura prioritario son las escenas de curación durante el combate contra Alfia; las comparaciones de versiones dicen que la novela revisada amplía partes de esa secuencia. El alcance y las limitaciones de la magia requieren página de escena antes de marcarlos como confirmados.
 
 Fuentes: https://danmachi.fandom.com/wiki/Minor_Characters · https://danmachi.fandom.com/wiki/DanMachi_~Memoria_Freese~/Astraea_Record · https://danmachi.com/danmachi4/character/.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, las descripciones de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.

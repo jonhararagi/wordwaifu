@@ -45,3 +45,9 @@ nivel, capacidades, historia individual, decisiones y relaciones de escena. La i
 El índice del volumen 3 enumera una historia extra «Asta Knox», primera parada para recuperar su voz y función particular. No inferir oficio de herrera, testarudez, nivel ni fuerza excepcional por su especie enana. Registrar página y escena que expliquen su contribución concreta a la Familia.
 
 Fuentes: https://danmachi.fandom.com/es/wiki/Asta_Knox · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3 · https://danmachi.com/danmachi4/character/.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, las descripciones de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.

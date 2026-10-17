@@ -45,3 +45,9 @@ nivel, trayectoria individual, habilidades, decisiones y vínculos personales co
 Las fuentes secundarias presentan a Iska como una amazoness interesada en moda y maquillaje, y conectan su interés con aprender a cuidarse tras exigirse demasiado por un orfanato. Ruta primaria: volumen 1, historia especial «Iska Bra». No escribirla como superficial ni fijar los efectos de su estilo de combate sin comprobar esa historia especial.
 
 Fuentes: https://danmachi.fandom.com/es/wiki/Iska_Bra · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1 · https://danmachi.com/danmachi4/character/.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, las descripciones de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.
