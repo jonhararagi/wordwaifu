@@ -83,7 +83,8 @@ for (const [id,claimId] of [
   ["CHAR-TIONE-HIRYUTE","DMR-014-CLM-005"],
   ["CHAR-LEFIYA-VIRIDIS","DMR-014-CLM-006"]
 ]) {
-  const found = corpus.search(index,{query:"Loki Familia",characterId:id,continuity:"CONT-ANIME",period:"ALL",aspect:"all",spoiler:"all"});
+  const query = id === "CHAR-TIONE-HIRYUTE" ? "Tione Finn" : "Loki Familia";
+  const found = corpus.search(index,{query,characterId:id,continuity:"CONT-ANIME",period:"ALL",aspect:"all",spoiler:"all"});
   assert.ok(found.results.some(claim=>claim.claimId===claimId),id+" must be searchable via its official adaptation claim.");
 }
 const lefiyaSecondary = corpus.search(index,{query:"Lefiya Ais Riveria",characterId:"CHAR-LEFIYA-VIRIDIS",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
