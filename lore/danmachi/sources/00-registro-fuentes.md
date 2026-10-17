@@ -1383,3 +1383,24 @@ verification_status: stub
 - rights_note: Parafrasear la sinopsis; no reproducirla extensamente.
 - verified_by: DANMACHI-COVERAGE-005
 - verification_status: source_checked_publisher_synopsis_only
+
+## DMR-022-SRC-002 · Muestra pública autorizada de Sword Oratoria, volumen 4
+- source_id: DMR-022-SRC-002
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア４ — 試し読み
+- creator_or_publisher: BOOK☆WALKER / contenido editorial distribuido por SB Creative
+- source_type: PRIMARY_SIDE
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Muestra pública del volumen 4; vista previa web de 30 páginas
+- language: Japonés
+- official_url: https://bookwalker.jp/de46a7007a-c3c7-4804-ab0d-c23beba67739/
+- accessed_at: 2026-10-17
+- locator_type: public_sample_range
+- locator: El visor público expone 30 páginas iniciales (1/30–30/30), con material introductorio y el marcador «『遠征』六日前。». La muestra no llega al briefing de expedición investigado ni expone アキ, ナルヴィ・ロール, クルス・バッセル, アリシア o ラウル.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Es una muestra autorizada del texto, pero el segmento accesible es insuficiente para cotejar la escena objetivo. Que los nombres no aparezcan en el tramo mostrado no es evidencia de que estén ausentes del volumen completo.
+- conflicting_sources: []
+- rights_note: No copiar pasajes extensos; registrar solo el rango público y el límite de verificación.
+- verified_by: DANMACHI-COVERAGE-005
+- verification_status: sample_checked_target_scene_not_in_public_range

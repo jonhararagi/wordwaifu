@@ -37,3 +37,19 @@ La revisión encontró referencias que no apoyaban las escenas descritas en dos 
 - Abrir una edición autorizada completa o una muestra pública que efectivamente incluya la escena; guardar la edición utilizada y el número de capítulo/página que se vea.
 - Añadir únicamente notas propias y afirmaciones atómicas sobre los detalles comprobados; no almacenar pasajes extensos.
 - Si el texto pertinente no está disponible para cotejo, mantener la escena como `primary_locator_pending` y continuar con otro pasaje comprobable. No inventar páginas ni elevar el resumen de una wiki a canon.
+
+
+## Verificación de muestra pública — BOOK☆WALKER
+
+- **Fuente:** DMR-022-SRC-002.
+- **Página de la obra:** https://bookwalker.jp/de46a7007a-c3c7-4804-ab0d-c23beba67739/
+- **Enlace de 試し読み:** https://bookwalker.jp/de46a7007a-c3c7-4804-ab0d-c23beba67739/?sample=1
+- **Visor público:** https://viewer-trial.bookwalker.jp/03/21/viewer.html?cid=46a7007a-c3c7-4804-ab0d-c23beba67739&cty=0
+- **Rango accesible:** visor con 30 páginas de muestra (contador 1/30 a 30/30); material inicial, incluidos los encabezados `プロローグ◆決意の朝に……？`, `前章◆そして少年は` y el marcador `『遠征』六日前。`.
+- **Resultado:** el contenido de esas páginas no alcanza el briefing que se intenta cotejar. Ninguno de los nombres アキ, ナルヴィ・ロール, クルス・バッセル, アリシア o ラウル aparece en la muestra pública observada.
+- **Límite:** la muestra es insuficiente para aceptar o rechazar la escena narrada en la ficha comunitaria. No debe inferirse que los personajes o el briefing no aparezcan en el volumen completo; se concluye solamente que no están visibles en el tramo gratuito consultado.
+- **Estado tras comprobar la muestra:** continúa pendiente un localizador individual de novela para Aki, Narvi/Narfi, Cruz y Alicia. No se añadieron claims canónicos desde la ausencia en un extracto limitado.
+
+## Ajuste de la próxima tarea
+
+La búsqueda del pasaje exacto en una edición autorizada completa sigue bloqueada porque la muestra pública no llega a esa escena. El trabajo puede continuar con otro recurso verificable o con la siguiente prioridad de roster (Rakta, *Sword Oratoria* vol. 2), pero cualquier afirmación sobre escenas concretas debe esperar hasta que el texto pertinente sea accesible.

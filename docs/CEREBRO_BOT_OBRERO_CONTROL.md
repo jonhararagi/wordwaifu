@@ -1,3 +1,18 @@
+## DANMACHI-COVERAGE-005 — procedencia Sword Oratoria vol. 4 y corrección de renderizado (2026-10-17)
+
+- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios, sin merges ni operaciones de PR.
+- **Alcance de lore:** corregida la trazabilidad de Aki y Alicia; sus escenas del briefing ya no se presentan como pasajes primarios cotejados. El registro editorial de GA Bunko y la vista previa autorizada están delimitados por alcance.
+- **Fuentes nuevas:** `DMR-022-SRC-001` (sinopsis oficial de volumen 4; contexto general) y `DMR-022-SRC-002` (muestra BOOK☆WALKER de 30 páginas iniciales; no llega a la escena buscada). La muestra no menciona a Aki/Narvi/Cruz/Alicia/Raul en el segmento revisado; esto no prueba que estén ausentes en el volumen completo.
+- **Fichas/catálogo:** Aki = `secondary_reference_primary_locator_pending`; Alicia = `primary_novel_locator_pending`. Estados de frontmatter e índice estructurado sincronizados; Narfi/Narvi Roll y Cruz/Cruz Bussell conservan IDs únicos provisionales. No se crearon IDs de personaje.
+- **Documentación:** se añadió `RESEARCH-DM-022` y quedó indexado en el catálogo. Recuento observado tras esta tanda: 134 registros / 110 documentos; el número no equivale a porcentaje de cobertura.
+- **Corrección funcional incidental validada:** la eliminación de referencias visuales podía terminar siendo sobreescrita por una renderización asíncrona antigua. `src/danmachi-visual-references.js` ahora descarta resultados con versión de caché obsoleta.
+- **CI del fix funcional exacto `eefd4ae5e0d6d81d244ae9efe324d14c4e480cf7`:** Validate WordWaifu #1541 SUCCESS (https://github.com/jonhararagi/wordwaifu/actions/runs/39011017441); DanMachi Lore and Retrieval Integrity #799 SUCCESS (https://github.com/jonhararagi/wordwaifu/actions/runs/39011017430).
+- **Validación local:** NOT_RUN desde esta interfaz. El checkpoint documental que incorpora la muestra y sincroniza estos documentos debe validarse también por ambos workflows en su SHA final.
+- **Estado general:** DanMachi IN_PROGRESS; enciclopedia PARTIAL.
+- **Siguiente acción:** seguir con la siguiente prioridad (Rakta, Sword Oratoria vol. 2) buscando un localizador directo; no inferir raza, nivel por etapa, miedo o relación a partir solo de wikis.
+
+---
+
 ## DANMACHI-COVERAGE-004 — checkpoint de matriz Loki (2026-10-17)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`.

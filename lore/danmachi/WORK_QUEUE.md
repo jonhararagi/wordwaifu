@@ -322,7 +322,8 @@ La matriz mejora navegación y control de cobertura, pero **no** declara complet
 - [x] Cotejar la ficha editorial oficial de GA Bunko para el alcance general del volumen.
 - [x] Detectar y corregir referencias irrelevantes en las fichas de Aki y Alicia; rebajar el estado de ambas escenas a pendiente de localizador primario.
 - [x] Mantener Narfi/Narvi Roll y Cruz/Cruz Bussell como identidades con datos secundarios, sin convertir el briefing descrito por notas heredadas en hecho cotejado.
-- [ ] Consultar el texto de una edición autorizada y registrar los localizadores reales del briefing, la vigilancia del campamento y la selección del grupo de apoyo.
+- [x] Inspeccionar la muestra pública autorizada de BOOK☆WALKER: 30 páginas iniciales, sin llegar al briefing ni exponer los nombres buscados. Este resultado acota el acceso; no prueba ausencia en el volumen completo.
+- [ ] Consultar el texto de una edición autorizada que sí incluya el briefing y registrar los localizadores reales de vigilancia del campamento y selección del grupo de apoyo.
 - [ ] Solo después de ese cotejo, convertir los hechos visibles en claims/relaciones atómicas por personaje.
 - **Estado:** PARTIAL / bloqueado en el cotejo de la escena individual. Fuente editorial: `DMR-022-SRC-001` (sinopsis; alcance general solamente).
 - **Siguiente paso:** conseguir/abrir el texto autorizado o una muestra que contenga la escena; si no es accesible, seguir con otro pasaje comprobable en lugar de rellenar huecos.
