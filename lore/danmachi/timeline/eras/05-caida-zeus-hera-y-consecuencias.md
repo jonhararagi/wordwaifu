@@ -21,3 +21,9 @@ Acontecimientos que causaron el fin o pérdida de posición de Zeus Familia y He
 
 ## Regla
 No etiquetar “disuelta”, “destruida”, “expulsada” o “derrotada” como sinónimos. Usar la situación exacta respaldada por la fuente y dejar las incertidumbres visibles.
+
+## Dossiers y terminología de estado
+
+- Enlazar [Zeus Familia](../../familias/zeus-familia.md), [Hera Familia](../../familias/hera-familia.md) y el evento candidato [EVT-DM-ZH-FALL-001](../../events/candidates/EVT-DM-ZH-FALL-001.md).
+- Las referencias comunitarias DMR-021-SRC-001/002 reportan pérdida de posición y posible salida/expulsión; falta evidencia primaria suficiente para fijar causa, orden y términos institucionales. No marcar ambos grupos como “disueltos” automáticamente.
+- Mantener diferencia entre derrota militar, pérdida de prestigio, expulsión, inactividad, disolución y dispersión; el estado de cada deidad tras el evento sigue abierto.
