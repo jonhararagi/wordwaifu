@@ -1379,7 +1379,7 @@
         "Loki Familia",
         "supporting member"
       ],
-      "status": "secondary_roster_reference_primary_check_pending",
+      "status": "primary_novel_locator_identified_details_partial",
       "priority": "normal"
     },
     {
@@ -1393,7 +1393,7 @@
         "elf",
         "supporting member"
       ],
-      "status": "secondary_roster_reference_primary_check_pending",
+      "status": "primary_novel_locator_identified_details_partial",
       "priority": "normal"
     },
     {
@@ -1409,6 +1409,20 @@
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-LOKI-NARFI",
+      "path": "characters/narfi.md",
+      "type": "character",
+      "tags": [
+        "Narfi",
+        "Familia Loki",
+        "supporter",
+        "Sword Oratoria",
+        "expedition"
+      ],
+      "status": "primary_novel_locator_identified_details_partial",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
