@@ -1,45 +1,48 @@
-DONE / RECOVERY POINT — WordWaifu · TLM-005 end-to-end
+# DONE / PUNTO DE RECUPERACIÓN — DANMACHI-COVERAGE-001
 
-**Actualizado:** 2026-10-16.  
-**TLM-005:** DONE / PASS_CI para la implementación `cd918d4294e3141155e5bda2a5ae0cd9999a618e`.  
-**Atlas/enciclopedia global DanMachi:** PARTIAL; no declarar completitud del canon.  
-**Única tarea TLM de este mandato:** cerrada. Revisión manual Windows 11 y ejecución local del agente permanecen NOT_RUN.
+**Actualizado:** 2026-10-16. **Estado de misión:** IN_PROGRESS; la enciclopedia global permanece PARTIAL.
 
-## Repositorio y HEAD
+## Rama y SHAs
 
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- HEAD BEFORE real al empezar TLM-005: `4c2fa980bb2d7bb4e88c246a5178544bfe24d2a3`.
-- SHA de implementación funcional validada por CI: `cd918d4294e3141155e5bda2a5ae0cd9999a618e`.
-- El HEAD documental final es el tip real de la rama después del commit que guarda este punto de recuperación. Consultar la referencia de la rama y exigir que ambos workflows pasen ese SHA exacto.
-- [Validate WordWaifu #38977028108 — success para la implementación](https://github.com/jonhararagi/wordwaifu/actions/runs/38977028108).
-- [DanMachi Lore and Retrieval Integrity #38977028080 — success para la implementación](https://github.com/jonhararagi/wordwaifu/actions/runs/38977028080).
+- HEAD funcional de esta tanda antes de actualizar documentación: `7c6ecebcdfc12722a6e769df17012bb8d995bbdd`.
+- Commit de STATUS: `77ddc5083f365cf71c61ee075465d24f953e1740`.
+- Commit de control operativo: `b68a5a7d612a6ffeafdb963fe11a7b6f00af0035`.
+- El SHA de este punto de recuperación será el commit que actualiza este archivo; comprobar el tip real de la rama y ambos workflows en ese SHA exacto antes de afirmar CI exitoso.
 
-## Cambios ejecutados
+## Entrega funcional de esta tanda
 
-- `src/danmachi-timeline.js`: la versión 1 exige el puntero `anchor.eventId`; solo ese evento puede usar `temporal.kind="anchor"`; referencias temporales que se autorreferencian y ciclos entre relaciones de orden son rechazados. Se conserva compatibilidad explícita con datos heredados.
-- `tests/test_danmachi_timeline.cjs`: regresiones para las seis variantes, etiquetas/descripciones, puntero de ancla requerido, ancla duplicada, autorreferencia y ciclo temporal. Las fechas de prueba son sintéticas, in-memory y no se escriben al canon.
-- `tests/browser_smoke.cjs`: E2E de búsqueda por tiempo unknown y T−7 aproximado, navegación evento→lugar→evento→vuelta, y arranque limpio con orígenes no locales bloqueados.
-- La regresión de arranque frío verifica que el contenido same-origin funciona, que las imágenes oficiales quedan como placeholders/enlaces y que la sesión principal preserva Asteria. Se mantiene todo dentro del harness Chromium existente; no se creó almacenamiento paralelo.
+- Añadido `lore/danmachi/characters/aki.md`, ID `CHAR-LOKI-AKI`.
+- Añadido `lore/danmachi/characters/alicia-forestlight.md`, ID `CHAR-LOKI-ALICIA-FORESTLIGHT`.
+- Actualizado `lore/danmachi/catalog.json`: catálogo de 97 a 99 registros, sin reutilizar IDs existentes.
+- Actualizado `lore/danmachi/familias/loki-familia.md` con enlaces a ambas fichas y advertencia de que el roster/cronología no son exhaustivos.
+- Ambas fichas se etiquetan como referencias secundarias con localizador primario pendiente. No se inventaron nivel, historia individual, habilidades ni relaciones personales.
+- Confirmado que ya existían, en su ubicación canónica, los expedientes individuales de Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit; conservan estado provisional y verificación primaria pendiente. No se cuentan como nuevas fichas de esta tanda.
 
-## Pruebas y evidencia
+## Archivos modificados
 
-- **PASS_CI** — [Validate WordWaifu #38977028108](https://github.com/jonhararagi/wordwaifu/actions/runs/38977028108) para `cd918d4294e3141155e5bda2a5ae0cd9999a618e`.
-- **PASS_CI** — [DanMachi Lore and Retrieval Integrity #38977028080](https://github.com/jonhararagi/wordwaifu/actions/runs/38977028080) para `cd918d4294e3141155e5bda2a5ae0cd9999a618e`.
-- Comandos reales ejecutados por Actions: `node --check src/danmachi-timeline.js`, `node --check tests/test_danmachi_timeline.cjs`, `node --check tests/browser_smoke.cjs`, `node tests/test_danmachi_timeline.cjs`, `node tests/test_danmachi_visual_references.cjs`, `node tests/test_lore_corpus.cjs`, `node tests/test_character_archive.cjs`, `node tests/test_character_dossiers.cjs`, `node tests/test_project_schema.cjs`, `node tests/test_fanfic_review.cjs`, `node lore/danmachi/tools/check-timeline.mjs` y `node tests/browser_smoke.cjs`.
-- El browser smoke emitió explícitamente: `PASS TLM-005 cold start: same-origin timeline and placeholders work with external requests blocked; Asteria storage remains isolated.`
-- **PASS_STATIC:** comparación de fuentes/contrato/datos y suites existentes antes de modificar.
-- **PASS_REAL:** NOT_RUN para ejecución local directa del agente; el entorno de navegador real fue GitHub Actions/Chromium.
-- **NOT_RUN:** revisión visual/manual Windows 11. No se declara realizada.
+1. `lore/danmachi/characters/aki.md` — creado.
+2. `lore/danmachi/characters/alicia-forestlight.md` — creado.
+3. `lore/danmachi/catalog.json` — dos registros añadidos.
+4. `lore/danmachi/familias/loki-familia.md` — enlaces navegables y cautelas.
+5. `docs/STATUS.md` — estado de tarea actualizado.
+6. `docs/CEREBRO_BOT_OBRERO_CONTROL.md` — punto operativo persistente.
+7. `docs/DONE.md` — este punto de recuperación.
 
-## Límites y seguridad
+## Verificación y límites
 
-- Se mantienen los 15 eventos y dos lugares; no se añadió fecha calendárica ni coordenadas a los datos canónicos. Seis eventos siguen con ubicación desconocida, como exige la evidencia disponible.
-- El esquema del mapa sigue siendo no geográfico, sin escala ni coordenadas.
-- Se conservan los gates visuales TLM-004: fuentes oficiales remotas link-only, almacenamiento local, permisos explícitos para exportar watermark, original intacto y protección del proyecto Asteria.
-- El atlas y la enciclopedia global DanMachi permanecen PARTIAL, aunque las pruebas end-to-end automatizables aquí especificadas pasan.
-- `main` no se modificó, no hubo merge y no se abrió/cerró/modificó ningún PR.
+- **Validación local:** NOT_RUN en esta interfaz.
+- **Validate WordWaifu / DanMachi Lore and Retrieval Integrity:** pendiente de comprobar para el SHA funcional y para el HEAD documental exacto. No declarar PASS_CI sin resultados asociados a esos SHA.
+- **main:** no modificado.
+- **PR:** no creados, cerrados ni modificados.
+- **No se hizo merge.**
+- La rama contenía ya los expedientes de Soma y varios miembros de las Familias Loki/Astrea; la presencia en el catálogo no equivale a una biografía completa ni a canon primario verificado.
 
-## Próxima acción concreta
+## Brechas y siguiente acción exacta
 
-Confirmar CI de `Validate WordWaifu` y `DanMachi Lore and Retrieval Integrity` en el HEAD documental de este commit. Después no iniciar otra fase TLM sin autorización. Si se desea acreditar presentación visual manual, ejecutar y registrar aparte la inspección Windows 11; hasta entonces debe permanecer `NOT_RUN`.
+1. Verificar HEAD real y CI exacto para el cierre documental de esta tanda.
+2. Continuar inmediatamente con los miembros secundarios/ordinarios confirmados de Familia Loki que aún carezcan de ficha individual sustancial; evitar duplicar los perfiles existentes.
+3. Añadir relaciones y fuentes primarias localizables por afirmación; conservar la incertidumbre de los perfiles solo respaldados por roster secundario.
+4. Continuar con Familia Astrea, preservando por separado `CONT-MAIN-LN`, `CONT-AR` y adaptaciones.
+5. Completar después dioses/Familias faltantes y ejecutar validadores, sin declarar completa la enciclopedia hasta que la cobertura esté realmente demostrada.
