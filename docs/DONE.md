@@ -1,3 +1,16 @@
+## DANMACHI-COVERAGE-006 — reconciliación de escenas de Rakta Haze (2026-10-17)
+
+- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios, sin merge ni operaciones de PR.
+- **Corrección principal:** se separó el reporte del piso 37 en *Sword Oratoria* vol. 2 de la escena atribuida por fuente comunitaria a la historia extra «花束の代わりに捧ぐ狼の咆哮», asociada al vol. 12.
+- **Procedencia:** DMR-023-SRC-001 es secundaria y describe el bonus; DMR-023-SRC-002 es la ficha oficial de `掌編集２`, que confirma el alcance general de la recopilación, pero no confirma por separado la historia individual.
+- **Fichas y claims:** `CHAR-LOKI-RAKTA-HAZE` conserva el mismo ID y `secondary_reference_primary_locator_pending`. DMR-015-CLM-002 se limita al reporte del vol. 2/piso 37; DMR-023-CLM-001 registra la escena del cementerio como pista secundaria; DMR-023-CLM-002 describe solo el alcance editorial general. No se añadieron claims primarios verificados.
+- **Catálogo:** 134 registros / 111 documentos. Las cantidades miden estructura, no completitud.
+- **Siguiente paso:** cotejar el pasaje del piso 37 y el relato bonus por separado, usando texto autorizado. No transferirlos a anime sin evidencia.
+- **Pruebas locales:** NOT_RUN; validar ambos workflows para el SHA documental final.
+- **Estado global:** DanMachi IN_PROGRESS; enciclopedia PARTIAL.
+
+---
+
 ## DANMACHI-COVERAGE-005 — procedencia Sword Oratoria vol. 4 y corrección de renderizado (2026-10-17)
 
 - **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios, sin merges ni operaciones de PR.

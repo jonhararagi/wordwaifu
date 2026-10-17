@@ -311,7 +311,8 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Separar el roster en perfiles oficiales de adaptación, secundarios con localizador primario pendiente, terciarios de roster comunitario y manga/juego-only.
 - [x] Añadir enlaces de identidad existentes sin crear IDs nuevos ni trasladar continuidades.
 - [ ] Cotejar primero *Sword Oratoria* vol. 4: briefing de Aki, Narfi/Narvi, Cruz y miembros de apoyo.
-- [ ] Cotejar *Sword Oratoria* vol. 2 para la escena de Rakta y piso 37.
+- [x] Investigar el reporte de Rakta para *Sword Oratoria* vol. 2 y separar la escena del piso 37 del escondite detrás de Gareth ante Bete, atribuido por fuente secundaria a una historia extra asociada al vol. 12.
+- [ ] Cotejar el pasaje del piso 37 en *Sword Oratoria* vol. 2 con texto autorizado; verificar por separado el relato «花束の代わりに捧ぐ狼の咆哮» en la recopilación oficial `掌編集２` (ISBN 978-4-8156-1967-1).
 - [ ] Cotejar *DanMachi* vol. 10 / *Sword Oratoria* vol. 6 para Elfy y el alias Lomoire.
 - [ ] Cotejar *Sword Oratoria* vol. 7 para Arcs, Cynthia y Orba; resolver la discrepancia de ocupación de Orba.
 - [ ] Mantener manga/juego separados de novela ligera; no promover una ficha por la mera presencia de un nombre en una wiki.
@@ -327,4 +328,12 @@ La matriz mejora navegación y control de cobertura, pero **no** declara complet
 - [ ] Solo después de ese cotejo, convertir los hechos visibles en claims/relaciones atómicas por personaje.
 - **Estado:** PARTIAL / bloqueado en el cotejo de la escena individual. Fuente editorial: `DMR-022-SRC-001` (sinopsis; alcance general solamente).
 - **Siguiente paso:** conseguir/abrir el texto autorizado o una muestra que contenga la escena; si no es accesible, seguir con otro pasaje comprobable en lugar de rellenar huecos.
+
+## DANMACHI-COVERAGE-006 — reconciliación de escenas de Rakta
+- [x] Separar el reporte de *Sword Oratoria* vol. 2 (piso 37) de la historia corta reportada como bonus de vol. 12 (cementerio antes del segundo asalto a Knossos).
+- [x] Corregir la ficha y DMR-015-CLM-002 para que el escondite detrás de Gareth no quede atribuido automáticamente al piso 37.
+- [x] Registrar la referencia comunitaria del relato y la ficha editorial oficial de `掌編集２`, que aporta una ruta de verificación autorizada.
+- [ ] Consultar el texto autorizado de ambas escenas y registrar capítulo/página reales. La sinopsis de la recopilación no confirma individualmente esta historia.
+- **Estado:** PARTIAL; corrección de continuidad/procedencia hecha, ninguna escena promovida a canon primario cotejado.
+- **Documento:** `RESEARCH-DM-023`.
 

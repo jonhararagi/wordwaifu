@@ -12,11 +12,11 @@
 - **Límite:** la ficha registra pistas de identidad, rol y relación en estado secundario; no declara edad, nivel o habilidades como canon primario.
 - **Estado:** secondary_reference_primary_locator_pending.
 
-## DMR-015-CLM-002 · Rakta Haze
-- **Afirmación resumida:** una ficha comunitaria la identifica como miembro de Loki Familia, Hume Bunny y nivel 3 en su instantánea. Resume una escena de Sword Oratoria donde se mostraría nerviosa en una expedición al piso 37 y se coloca tras Gareth ante Bete.
+## DMR-015-CLM-002 · Rakta Haze — reporte secundario del volumen 2
+- **Afirmación resumida:** la ficha comunitaria de Rakta Haze la asocia con Loki Familia y reporta una aparición en *Sword Oratoria*, volumen 2, vinculada a una expedición al piso 37; también lista Hume Bunny como raza y nivel 3 en su instantánea. Esos valores son pistas secundarias y no se fijan como estado permanente.
 - **Fuente:** DMR-015-SRC-002.
-- **Localizador indicado por la fuente:** Sword Oratoria, volumen 2; capítulo, página y edición autorizada pendientes.
-- **Límite:** la reacción corresponde a una escena, no prueba una personalidad global ni una relación estable con Gareth o Bete.
+- **Localizador indicado por la referencia:** *Sword Oratoria*, volumen 2; capítulo, página y edición autorizada pendientes.
+- **Límite:** el reporte de piso 37 no se mezcla con la escena de Rakta escondiéndose detrás de Gareth ante Bete; esa segunda escena se atribuye por separado a la historia extra «花束の代わりに捧ぐ狼の咆哮», asociada secundariamente al volumen 12 (DMR-023-CLM-001).
 - **Estado:** secondary_reference_primary_locator_pending.
 
 ## DMR-015-CLM-003 · Aki / Anakitty Autumn (alias por confirmar en fuente primaria)
@@ -27,6 +27,7 @@
 
 ## Próximas acciones
 1. Cotejar cada nombre y los pasajes indicados en ediciones autorizadas, sin inventar páginas/capítulos.
-2. Añadir relaciones y niveles por periodo solo con evidencia identificable.
-3. Investigar otros miembros nombrados en rosters y priorizar los que puedan localizarse en texto primario.
-4. Mantener separadas novela principal, Sword Oratoria, anime, manga y AU.
+2. Para Rakta, cotejar por separado el pasaje de *Sword Oratoria* vol. 2 sobre el piso 37 y la historia extra del vol. 12; no fusionar escenas hasta leer ambas fuentes autorizadas.
+3. Añadir relaciones y niveles por periodo solo con evidencia identificable.
+4. Investigar otros miembros nombrados en rosters y priorizar los que puedan localizarse en texto primario.
+5. Mantener separadas novela principal, Sword Oratoria, anime, manga y AU.

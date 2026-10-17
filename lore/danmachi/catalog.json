@@ -2846,6 +2846,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-022-sword-oratoria-vol4-source-audit.md",
       "type": "source_provenance_audit",
       "status": "official_publisher_synopsis_and_public_sample_checked_scene_not_in_sample"
+    },
+    {
+      "document_id": "RESEARCH-DM-023",
+      "path": "research/inbox/DANMACHI-RESEARCH-023-rakta-scene-reconciliation.md",
+      "type": "character_continuity_reconciliation",
+      "status": "secondary_scene_split_official_compilation_located_primary_text_pending"
     }
   ],
   "lastStructuredSync": "2026-10-17"

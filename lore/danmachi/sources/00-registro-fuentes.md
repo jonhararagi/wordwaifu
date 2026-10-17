@@ -1404,3 +1404,46 @@ verification_status: stub
 - rights_note: No copiar pasajes extensos; registrar solo el rango público y el límite de verificación.
 - verified_by: DANMACHI-COVERAGE-005
 - verification_status: sample_checked_target_scene_not_in_public_range
+
+## DMR-023-SRC-001 · A Wolf's Roar Offered Instead of a Bouquet — referencia secundaria de historia extra
+- source_id: DMR-023-SRC-001
+- title: A Wolf's Roar Offered Instead of a Bouquet (花束の代わりに捧ぐ狼の咆哮)
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Historia corta promocional reportada para compradores de Sword Oratoria, volumen 12, en Gamers
+- language: Inglés, con título japonés indicado en la ficha
+- official_url: https://danmachi.fandom.com/wiki/A_Wolf%27s_Roar_Offered_Instead_of_a_Bouquet
+- accessed_at: 2026-10-17
+- locator_type: secondary_story_summary
+- locator: Summary / Characters; la página atribuye el relato a una bonificación comercial de Sword Oratoria vol. 12 y resume la escena de Bete, Gareth y Rakta en el cementerio de aventureros.
+- claims_supported: [DMR-023-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Referencia secundaria para localizar el relato; la escena y su orden no se consideran cotejados en el texto completo.
+- conflicting_sources: [DMR-015-CLM-002 mezclaba el escondite detrás de Gareth con el reporte secundario del vol. 2.]
+- rights_note: Conservar un resumen original breve; no copiar la historia.
+- verified_by: DANMACHI-COVERAGE-006
+- verification_status: secondary_reference_primary_short_story_check_pending
+
+## DMR-023-SRC-002 · DanMachi Short Stories Compilation, volumen 2
+- source_id: DMR-023-SRC-002
+- title: ダンジョンに出会いを求めるのは間違っているだろうか 掌編集２
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi; recopilación oficial de historias cortas
+- volume_or_edition: 掌編集２; ISBN 978-4-8156-1967-1
+- language: Japonés
+- publication_date: 2023-05-15
+- official_url: https://www.sbcr.jp/product/4815619671/
+- accessed_at: 2026-10-17
+- locator_type: publisher_synopsis
+- locator: Ficha editorial; la descripción indica que la recopilación reúne historias cortas de bonificación de tiendas y ediciones limitadas, incluyendo contenidos asociados a Sword Oratoria hasta el volumen 12.
+- claims_supported: [DMR-023-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-MAIN-LN; CONT-FAMILIA-CHRONICLE
+- reliability_note: Fuente oficial para la existencia y alcance general de la recopilación. La sinopsis no identifica individualmente «花束の代わりに捧ぐ狼の咆哮» ni verifica por sí sola sus escenas.
+- conflicting_sources: []
+- rights_note: Parafrasear la sinopsis editorial.
+- verified_by: DANMACHI-COVERAGE-006
+- verification_status: source_checked_publisher_synopsis_only

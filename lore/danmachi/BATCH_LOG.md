@@ -277,3 +277,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Muestra pública:** BOOK☆WALKER, vista de 30 páginas iniciales, revisada en https://viewer-trial.bookwalker.jp/03/21/viewer.html?cid=46a7007a-c3c7-4804-ab0d-c23beba67739&cty=0. El visor no llega al briefing y no expone los nombres buscados. Se registra como `DMR-022-SRC-002`; no es prueba negativa sobre el volumen completo.
 - **Fix de renderizado:** la corrección anti-render obsoleto está en `eefd4ae5e0d6d81d244ae9efe324d14c4e480cf7`. Validate WordWaifu #1541 SUCCESS (https://github.com/jonhararagi/wordwaifu/actions/runs/39011017441) y DanMachi Lore and Retrieval Integrity #799 SUCCESS (https://github.com/jonhararagi/wordwaifu/actions/runs/39011017430), ambos en el SHA exacto `eefd4ae5e0d6d81d244ae9efe324d14c4e480cf7`.
 
+## DANMACHI-COVERAGE-006 · Separación de las dos escenas reportadas de Rakta Haze (2026-10-17)
+
+- **Estado:** PARTIAL; se corrigió una mezcla de escenas basada en resúmenes secundarios. Ninguna de las dos escenas se cotejó en el texto completo.
+- **Hallazgo:** la escena de Rakta escondiéndose detrás de Gareth ante Bete se atribuye por una referencia comunitaria a «A Wolf's Roar Offered Instead of a Bouquet» (花束の代わりに捧ぐ狼の咆哮), historia corta promocional asociada a *Sword Oratoria* vol. 12; el contexto reportado es el cementerio de aventureros antes del segundo asalto a Knossos. No debe confundirse con el reporte diferente de la expedición al piso 37 en el volumen 2.
+- **Fuentes añadidas:** `DMR-023-SRC-001`, referencia comunitaria (https://danmachi.fandom.com/wiki/A_Wolf%27s_Roar_Offered_Instead_of_a_Bouquet); `DMR-023-SRC-002`, ficha oficial de `掌編集２`, ISBN 978-4-8156-1967-1 (https://www.sbcr.jp/product/4815619671/). La editorial confirma el alcance general de la recopilación, pero no verifica el relato individual.
+- **Contenido cambiado:** `characters/rakta-haze.md` separa Momento A (vol. 2/piso 37) y Momento B (historia corta asociada al vol. 12); elimina `CONT-ANIME` sin evidencia independiente; limita relaciones con Gareth/Bete a la escena reportada.
+- **Investigación:** se corrigió `DMR-015-CLM-002` y se añadió `DMR-023-CLM-001` (resumen secundario de la historia extra) y `DMR-023-CLM-002` (alcance editorial de la recopilación).
+- **Catálogo:** 134 registros; se añadió `RESEARCH-DM-023`, para un total de 111 documentos. No se crearon IDs de personaje ni claims de canon primario confirmados.
+- **Siguiente verificación primaria:** revisar el texto/índice de `掌編集２` y revisar aparte *Sword Oratoria* vol. 2 para el piso 37. No inventar capítulos/páginas ni fusionar las escenas.
+- **Pruebas locales:** NOT_RUN. Validar el SHA final con ambos workflows. La enciclopedia global permanece PARTIAL; trabajo IN_PROGRESS.
+
