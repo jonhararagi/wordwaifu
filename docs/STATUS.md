@@ -3,12 +3,12 @@
 **Actualizado:** 2026-10-16. Este bloque prevalece sobre los estados históricos siguientes.
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`.
-- **Tanda Loki/Soma:** expedientes de Aki, Alicia Forestlight y Leene Arshe añadidos a `lore/danmachi/characters/`; sus IDs se incorporaron a `lore/danmachi/catalog.json` y se enlazaron desde el expediente de Familia Loki.
-- **IDs añadidos en esta ejecución:** `CHAR-LOKI-AKI`, `CHAR-LOKI-ALICIA-FORESTLIGHT`, `CHAR-LEENE-ARSHE`. El catálogo pasó de 97 a 100 registros.
-- **Cautela de procedencia:** los tres expedientes son provisionales; no sustituyen localizadores primarios de novela. Leene se mantiene separada en `CONT-SO`/adaptación; no se mezcla su línea con la cronología principal.
-- **Expedientes ya existentes comprobados:** Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya tienen fichas bajo `lore/danmachi/characters/`; no se duplicaron.
-- **Validación:** no se ejecutaron validadores localmente en esta interfaz. La consulta disponible de runs asociados al commit final no devuelve runs (el conector filtra ejecuciones disparadas por PR); CI exacto de los workflows requeridos queda **UNKNOWN/PENDING**, no PASS_CI.
-- **Cobertura global:** PARTIAL. Aún faltan miembros ordinarios de Loki y trabajo de verificación primaria; la Familia Astrea y las demás Familias/dioses no están cerradas.
+- **Tanda Loki:** perfiles individuales de Aki, Alicia Forestlight, Leene Arshe y Narfi disponibles en `lore/danmachi/characters/`; enlaces añadidos al expediente de Familia Loki.
+- **Mejora basada en fuente primaria localizada:** las fichas de Aki y Alicia se actualizaron con el briefing de expedición de *Sword Oratoria*, volumen 4. Aki queda documentada a cargo de la vigilancia del campamento; Alicia figura entre los miembros de apoyo seleccionados para la expedición. Narfi queda registrado como integrante del grupo de apoyo de esa escena. Capítulo/página exactos y evolución cronológica aún pendientes.
+- **IDs añadidos durante la ejecución:** `CHAR-LOKI-AKI`, `CHAR-LOKI-ALICIA-FORESTLIGHT`, `CHAR-LEENE-ARSHE`, `CHAR-LOKI-NARFI`. El catálogo pasó de 97 a 101 registros. Los estados distinguen los localizadores de novela ya identificados de los detalles aún incompletos.
+- **Expedientes Soma:** Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya existían en la ruta canónica; no se duplicaron. Sus afirmaciones siguen necesitando localizadores primarios más granulares.
+- **Validación:** no se ejecutaron validadores localmente en esta interfaz. CI exacto para los SHA funcional y documental: **UNKNOWN/PENDING**; no marcar PASS_CI sin comprobar ambos workflows en el SHA exacto.
+- **Cobertura global:** PARTIAL. La lista de miembros ordinarios de Loki no está demostrada como exhaustiva; Familia Astrea, otros dioses y Familias conservan brechas.
 - `main` no se modificó; no hubo merge ni operaciones sobre PR.
 
 ---
