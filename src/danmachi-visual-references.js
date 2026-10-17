@@ -142,17 +142,28 @@ function appendCard(container,ref,local){
  container.append(card);
 }
 async function renderInto(container,options){
- if(!container)return;options=options||{};container.replaceChildren();container.append(node("h4","dm-visual-section-title","Referencias visuales"));
+ if(!container)return;options=options||{};
+ // Multiple event/place cards render concurrently. If a local resource is removed
+ // while an older IndexedDB read is in flight, that read must not append stale DOM.
+ const renderVersion=localReferenceVersion;
+ container.replaceChildren();container.append(node("h4","dm-visual-section-title","Referencias visuales"));
  if(!registry||!timeline){container.append(node("p","dm-visual-placeholder","Cargando el registro de referencias visuales…"));return;}
- const external=registry.visualReferences.filter(ref=>matches(ref,options)),local=(await localReferences()).filter(ref=>matches(ref,options));
+ const external=registry.visualReferences.filter(ref=>matches(ref,options));
+ const localRecords=await localReferences();
+ if(renderVersion!==localReferenceVersion)return;
+ const local=localRecords.filter(ref=>matches(ref,options));
  const all=external.map(ref=>({ref,local:false})).concat(local.map(ref=>({ref,local:true}))),visible=all.filter(item=>filteredBySpoiler(item.ref));
  if(!visible.length){container.append(node("p","dm-visual-placeholder",all.length?"Hay referencias ocultas por el límite de spoilers visuales actual.":"Sin referencia visual disponible para esta ficha. No se asigna una imagen de otro momento como si fuera esta escena."));return;}
  visible.forEach(item=>appendCard(container,item.ref,item.local));
 }
 async function renderGeneral(){
- const container=$("#dm-visual-reference-general");if(!container||!registry||!timeline)return;container.replaceChildren();
+ const container=$("#dm-visual-reference-general");if(!container||!registry||!timeline)return;
+ const renderVersion=localReferenceVersion;
+ container.replaceChildren();
  const external=registry.visualReferences.filter(ref=>!(ref.relatedEventIds||[]).length&&!(ref.relatedLocationIds||[]).length);
- const local=(await localReferences()).filter(ref=>!(ref.relatedEventIds||[]).length&&!(ref.relatedLocationIds||[]).length);
+ const localRecords=await localReferences();
+ if(renderVersion!==localReferenceVersion)return;
+ const local=localRecords.filter(ref=>!(ref.relatedEventIds||[]).length&&!(ref.relatedLocationIds||[]).length);
  const all=external.map(ref=>({ref,local:false})).concat(local.map(ref=>({ref,local:true}))),visible=all.filter(item=>filteredBySpoiler(item.ref));
  if(!visible.length){container.append(node("p","dm-visual-placeholder",all.length?"Las referencias generales están ocultas por el límite de spoilers.":"No hay referencias visuales generales asignadas."));return;}
  visible.forEach(item=>appendCard(container,item.ref,item.local));

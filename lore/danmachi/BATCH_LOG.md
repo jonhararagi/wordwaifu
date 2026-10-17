@@ -268,3 +268,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Conclusión probatoria:** se corrigió la trazabilidad defectuosa; **no** se declara cotejado el briefing individual ni completa la cobertura de Loki.
 - **Siguiente paso:** abrir una edición autorizada o muestra pública que contenga el briefing y guardar localizadores reales. Si no está disponible, continuar con otra fuente primaria accesible sin inventar detalles.
 
+## DANMACHI-COVERAGE-005b · Carrera asíncrona al eliminar referencias visuales (2026-10-17)
+
+- El workflow `Validate WordWaifu` en `e27769b168d4ebb12e60aa3245eae04d271b3336` falló en `tests/browser_smoke.cjs:610`: una espera no observó desaparecer una referencia eliminada del DOM dentro de 5 segundos. El workflow DanMachi Lore and Retrieval Integrity pasó en ese mismo SHA.
+- La lectura del test y `src/danmachi-visual-references.js` reveló que varias fichas (acontecimiento/lugar) renderizan en paralelo mientras se consulta almacenamiento local. Una renderización iniciada antes de invalidar la caché podía terminar después y reinsertar una tarjeta obsoleta.
+- Corrección: las funciones `renderInto` y `renderGeneral` capturan `localReferenceVersion` y descartan la respuesta renderizada si la versión cambió durante el `await`. Se conserva la prueba de humo integral que exige que el recurso borrado desaparezca de todas las vistas.
+- Estado: corrección de código publicada en el checkpoint siguiente; CI nuevo pendiente. No se cambiaron los datos de lore ni las continuidades.
+
