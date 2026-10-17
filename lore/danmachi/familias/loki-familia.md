@@ -60,6 +60,15 @@ La página oficial asocia los siguientes personajes a la Familia Loki. La lista 
 | **[Bete Loga](../characters/bete-loga.md)** | Hombre lobo y aventurero de primera clase; la fuente lo describe como combativo y a veces cruel al hablar con los débiles. Destaca su uso de botas metálicas y patadas reforzadas con magia. | Su franqueza puede generar fricción, y su estilo de combate requiere espacio y movilidad. | No convertir la rudeza en prueba automática de odio hacia todos los compañeros. |
 | **Raul Nord** | Aventurero humano de nivel 4 en el perfil, con inseguridad personal y trabajo cotidiano de apoyo; Finn confía en él para dirigir miembros de menor rango en emergencias. | Es útil para mostrar mando delegado, logística y valor práctico sin ser el más dominante del grupo. | El nivel pertenece al snapshot de la adaptación y puede cambiar con la cronología. |
 
+### Miembros secundarios con expediente individual
+
+La cobertura de la Familia no debe limitarse a sus líderes o a los aventureros más destacados. Se incorporan dos expedientes individuales de cobertura, ambos **provisionales** porque falta localizar su aparición primaria concreta:
+
+- **[Aki](../characters/aki.md)** — nombre registrado en el roster secundario. La ficha no asigna especie, nivel, cargo ni relaciones personales sin evidencia localizada.
+- **[Alicia Forestlight](../characters/alicia-forestlight.md)** — nombre asociado a la Familia Loki en referencias de roster. La grafía y los detalles biográficos quedan sujetos a cotejo con material primario/editorial.
+
+Estos expedientes amplían la navegación, pero no constituyen una lista completa de todos los miembros ordinarios ni una cronología exhaustiva de la Familia. No se deben inferir presencia en una expedición, nivel o permanencia a partir de la mera afiliación.
+
 ## Relaciones explícitas que pueden orientar escenas
 
 - **Finn → liderazgo organizativo:** la fuente lo identifica como capitán con capacidad de organizar la Familia. No implica que todas las decisiones estratégicas sean suyas ni que no existan delegaciones.
