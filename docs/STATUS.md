@@ -53,3 +53,10 @@
 | Arranque limpio con origen externo bloqueado y aislamiento Asteria | PASS_CI |
 | Node/Playwright local del agente | NOT_RUN |
 | Inspección manual Windows 11 | NOT_RUN |
+
+
+## Actualización de cobertura — 2026-10-17
+- Rama autorizada confirmada; HEAD antes del cambio: `2e7ce6b761a8b0f59cc886a99c5cd8c2f82a1074`.
+- Añadido al expediente `DANMACHI-RESEARCH-021` el URL oficial `https://danmachi.com/center-test/normal.html` y el alcance probatorio exacto de su pregunta 1. Se conserva el claim existente, sin duplicar la fuente ni inflar la evidencia.
+- Commit de actualización del expediente: `552b581af16b4207dd97d9aee630cd7c324e0de7`.
+- CI del tip documental final: PENDING; validación local NOT_RUN. Mantener `IN_PROGRESS` y enciclopedia PARTIAL hasta comprobar ambos workflows en el SHA final.
