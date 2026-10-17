@@ -1,3 +1,19 @@
+# DANMACHI-COVERAGE-003 — anclajes editoriales de Liliruca/Soma (2026-10-17)
+
+**Estado de trabajo:** contenido publicado; aceptación pendiente de consultar Actions para el SHA exacto de este checkpoint. La enciclopedia global sigue PARTIAL y el trabajo global IN_PROGRESS.
+
+- **Repositorio/rama:** `jonhararagi/wordwaifu` / `work/story-completion-danmachi-audit-2026-10`.
+- **HEAD previo del checkpoint documental:** `ffee9140c049e4dd32bc387e4a6e3a1b79b4cf0a` (contenido funcional de la tanda).
+- **Fuente editorial añadida:** DMR-013-SRC-014, GA Bunko, volumen 2: https://ga.sbcr.jp/product/9784797373073/.
+- **Claims nuevos:** DMR-013-CLM-018 (primer equipo de Lili y Bell en la sinopsis editorial) y DMR-013-CLM-019 (reputación de Soma Familia y misterio del `神酒`). El estado es `source_checked_publisher_synopsis_only`: sin capítulo/página, no equivale a cotejo del texto completo.
+- **Archivos funcionales modificados:** registro maestro de fuentes, paquete DANMACHI-RESEARCH-013, fichas de Liliruca/Soma/Soma Familia, índice de personajes y MASTER_INDEX.
+- **IDs de personajes/familias:** no se crearon nuevos ni se duplicaron. No se cambia `catalog.json` porque no se añadió ninguna ficha/registro de lore; los claims y la fuente se integran en el dossier y el registro de fuentes existentes.
+- **Pruebas locales:** NOT_RUN desde esta interfaz. Consultar las dos Actions para el SHA final de esta actualización antes de comunicar PASS_CI.
+- **Restricciones:** `main` intacta; sin merges ni operaciones de PR.
+- **Próxima prioridad:** localizar escenas primarias de los volúmenes 2/6 para los detalles de Lili, Chandra, Zanis y Soma; después continuar con el roster ordinario de Loki, Astrea, Soma y otras familias sin convertir candidatos de wiki en fichas completas.
+
+---
+
 # CEREBRO / BOT OBRERO — Control operativo de WordWaifu
 
 **Documento de mando persistente.** Leer este archivo junto con `docs/STATUS.md`, `docs/WORK_PROTOCOL.md`, `docs/ROADMAP.md` y `docs/DONE.md` al iniciar o recuperar una sesión.
