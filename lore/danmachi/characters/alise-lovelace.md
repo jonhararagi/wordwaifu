@@ -47,3 +47,9 @@ La sinopsis consultada no establece la edad, el nivel, las habilidades, la histo
 Square Enix identifica a Alise como capitana y señala que, aunque puede parecer despreocupada, sus compañeras confían en ella y la aprecian. Es una tensión más útil para escribirla que limitarla a «capitana alegre». **Ruta de lectura:** volumen 1, capítulo 1 «Astrea Familia»; capítulos 4 y 7 son rutas secundarias para rastrear la influencia de Alise en la búsqueda de justicia de Ryuu. Página primaria aún por registrar.
 
 Fuentes: https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/ · https://danmachi.com/news/news131.php · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, las descripciones de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.

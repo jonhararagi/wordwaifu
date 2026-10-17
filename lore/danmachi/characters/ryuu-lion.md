@@ -72,3 +72,9 @@ La página oficial de Square Enix describe a Ryuu bajo Astrea Familia buscando u
 No adelantar el estado posterior de anime, volumen 13 o *Familia Chronicle* a escenas de la etapa de siete años antes de Bell.
 
 Fuentes: https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/ · https://danmachi.com/news/news131.php · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1 · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, las descripciones de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.

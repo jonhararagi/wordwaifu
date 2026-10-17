@@ -50,3 +50,9 @@ Las fuentes de este lote no establecen la ubicación, actividad, estado, fechas 
 La publicación oficial confirma que *Astrea Record* se editó en tres novelas revisadas por Fujino Omori a partir del evento original de Memoria Freese. La presentación oficial del manga relaciona a Astrea con el ideal de justicia. **Ruta de lectura:** volumen 1, capítulo 1, «Astrea Familia»; el índice público da el título, pero no hemos cotejado la página del texto primario. No convertir el rol divino en una biografía privada inventada.
 
 Fuentes: https://danmachi.com/news/news131.php · https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/ · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, las descripciones de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.

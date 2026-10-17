@@ -35,3 +35,9 @@ La presentación oficial la identifica como vicecapitana, procedente del Lejano 
 No reducirla a un arquetipo de guerrera elegante: la diferencia entre presencia visual y voz es un rasgo documentado en la descripción oficial.
 
 Fuentes: https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/ · https://danmachi.fandom.com/es/wiki/Habilidades · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, las descripciones de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.
