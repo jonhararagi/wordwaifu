@@ -8,7 +8,8 @@ continuity_scope: CONT-MAIN-LN; CONT-ANIME
 source_refs:
   - DMR-005-SRC-001
   - DMR-013-SRC-001
-tags: [Aki, Familia Loki, Loki Familia, supporting member]
+  - DMR-015-SRC-003
+tags: [Aki, Anakitty Autumn, Familia Loki, Loki Familia, supporting member]
 ---
 # Aki
 
@@ -16,6 +17,10 @@ tags: [Aki, Familia Loki, Loki Familia, supporting member]
 - **ID estable:** `CHAR-LOKI-AKI`.
 - **Nombre de referencia:** Aki. No añadir apellido, especie, nivel, edad o alias sin una fuente localizable.
 - **Estado:** perfil individual de cobertura; la identificación como integrante de la Familia Loki procede de referencias secundarias del roster y requiere un localizador primario para elevar su estado.
+
+## Nombre completo y alias de búsqueda
+
+La referencia comunitaria de DMR-015 asocia Aki con **Anakitty Autumn**. El briefing de Sword Oratoria, volumen 4, descrito más abajo respalda la escena de vigilancia, pero no aporta por sí solo el nombre completo. Se incorpora como término de recuperación con estado secundario pendiente, no como nombre completo confirmado por ese pasaje.
 
 ## Descripción y función documentada
 En el briefing de expedición de *Sword Oratoria*, volumen 4, Finn deja a Aki a cargo de los miembros que permanecen en el campamento y deben vigilar la aparición de nuevos monstruos, ordenándoles mantenerlos a distancia mediante magia y espadas mágicas. La narración la identifica como una chica con rasgos felinos y muestra que responde afirmativamente a la orden. Esta escena respalda una función de responsabilidad operativa, no solo su pertenencia al roster.

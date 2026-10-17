@@ -741,3 +741,70 @@ verification_status: stub
 - rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
 - verification_status: secondary_reference_checked_primary_text_pending
+
+
+## DMR-015-SRC-001 · Elfy Colette — referencia comunitaria
+
+- source_id: DMR-015-SRC-001
+- title: Elfy Colette
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria
+- volume_or_edition: Artículo web dinámico; la página enumera DanMachi volumen 10 y Sword Oratoria volumen 6 como apariciones
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Elfy_Colette
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead; Professional Status; Personality; Debuts
+- claims_supported: [DMR-015-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-ANIME (según la referencia)
+- reliability_note: Fuente secundaria; biografía, magia y vínculos requieren cotejo en texto autorizado.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-015-SRC-002 · Rakta Haze — referencia comunitaria
+
+- source_id: DMR-015-SRC-002
+- title: Rakta Haze
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria
+- volume_or_edition: Artículo web dinámico; la página enumera Sword Oratoria volumen 2 como aparición
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Rakta_Haze
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead; Characteristics; Professional Status; Personality; Debuts
+- claims_supported: [DMR-015-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-SO; adaptación indicada por la referencia, sin cotejo separado
+- reliability_note: Fuente secundaria; escena, especie y nivel requieren cotejo en edición autorizada.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-015-SRC-003 · Anakitty Autumn — referencia comunitaria para alias
+
+- source_id: DMR-015-SRC-003
+- title: Anakitty Autumn
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria
+- volume_or_edition: Artículo web dinámico; la página enumera Sword Oratoria volumen 1 como aparición
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Anakitty_Autumn
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead; Japanese name; Alias; Professional Status; Debuts
+- claims_supported: [DMR-015-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-MAIN-LN (según referencia secundaria)
+- reliability_note: Solo para recuperación del alias Aki → Anakitty Autumn; la escena del volumen 4 no confirma por sí sola el nombre completo.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_alias_reference_primary_locator_pending

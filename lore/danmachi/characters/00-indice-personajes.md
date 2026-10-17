@@ -32,6 +32,9 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-TIONE-HIRYUTE | [Tione Hiryute](tione-hiryute.md) | Tione | Loki Familia · combatiente | Perfil oficial de adaptación + referencia secundaria; sentimientos por Finn sin reciprocidad asumida |
 | CHAR-LEFIYA-VIRIDIS | [Lefiya Viridis](lefiya-viridis.md) | Lefiya | Loki Familia · maga | Perfil oficial de adaptación + referencia secundaria; hechizos/estados temporales pendientes |
 | CHAR-RAUL-NOORD | [Raul Nord](raul-nord.md) | Raul; ラウル・ノールド | Loki Familia; coordinación de miembros de menor rango | Expediente existente; perfil oficial de adaptación localizado; cotejo de LN pendiente |
+| CHAR-LOKI-AKI | [Aki](aki.md) | Anakitty Autumn (alias secundario) | Loki Familia; vigilancia del campamento en Sword Oratoria vol. 4 | El nombre completo se conserva como alias de recuperación pendiente de fuente primaria |
+| CHAR-LOKI-ELFY-COLETTE | [Elfy Colette](elfy-colette.md) | Elfy; Lomoire (alias secundario) | Loki Familia; maga / magia de fuego reportadas | Referencia comunitaria; datos primarios pendientes |
+| CHAR-LOKI-RAKTA-HAZE | [Rakta Haze](rakta-haze.md) | Rakta | Loki Familia; integrante reportada | Referencia comunitaria; escena y nivel por periodo pendientes |
 | CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior) | Ficha individual y expediente integrados; fuentes mixtas; cotejo primario pendiente |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Expediente de aplicación existente; cotejo de LN pendiente |

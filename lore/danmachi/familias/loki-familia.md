@@ -119,3 +119,12 @@ La ausencia de esos datos no autoriza a inventarlos. Esta ficha mejora el uso na
 - [Lefiya Viridis](../characters/lefiya-viridis.md): maga que admira a Ais; no inventar nombres, costes o restricciones de hechizos.
 
 Los perfiles oficiales de Sword Oratoria respaldan únicamente lo que aparece en la adaptación publicada. Las relaciones y resúmenes tomados de wikis siguen marcados como secundarios; estas nuevas fichas no certifican el roster completo de Loki Familia ni la cronología de ingreso de cada integrante.
+
+
+## Más miembros ordinarios con ficha individual · cobertura secundaria
+
+- **[Elfy Colette](../characters/elfy-colette.md)** — la referencia comunitaria la identifica como maga de Loki Familia y menciona magia de fuego y una relación doméstica con Lefiya. Atributos y relación permanecen como afirmaciones secundarias hasta localizar los pasajes.
+- **[Rakta Haze](../characters/rakta-haze.md)** — la referencia comunitaria la lista como miembro de Loki Familia y resume una escena de Sword Oratoria, volumen 2, en el piso 37. La ficha distingue esa reacción puntual de una personalidad permanente.
+- **[Aki / Anakitty Autumn](../characters/aki.md)** — se mantiene un solo expediente para la identidad. El nombre completo se incorpora como alias de búsqueda reportado por una fuente secundaria; no se crea un duplicado mientras falta confirmarlo en fuente primaria.
+
+Estos enlaces reducen huecos de navegación, no cierran la cobertura de miembros. Las wikis sirven como pistas; no elevan nombres, niveles, habilidades o relaciones a canon primario. Quedan pendientes localizadores de novela y revisión del roster por periodos.
