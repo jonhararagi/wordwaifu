@@ -1511,3 +1511,46 @@ verification_status: stub
 - rights_note: No reproducir texto de la muestra.
 - verified_by: DANMACHI-COVERAGE-007
 - verification_status: sample_access_failed_no_content_verified
+
+
+## DMR-023-SRC-003 · Registro comercial del folleto de Gamers (fuente secundaria)
+- source_id: DMR-023-SRC-003
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア(12) ゲーマーズ限定 スペシャルショートストーリーリーフレット
+- creator_or_publisher: Suruga-ya product listing; original bonus attributed to Gamers / SB Creative
+- source_type: SECONDARY_RETAIL_METADATA
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Folleto promocional de 4 páginas asociado a Sword Oratoria vol. 12; título reportado 花束の代わりに捧ぐ狼の咆哮
+- language: Japonés
+- official_url: https://www.suruga-ya.jp/product/detail/185173068
+- accessed_at: 2026-10-17
+- locator_type: retailer_product_metadata
+- locator: La ficha identifica el producto como folleto exclusivo de Gamers, de 4 páginas, y da fecha de producto 2019-07-15.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Metadatos de vendedor de segunda mano; útil para identificar el objeto/título, no verifica el texto ni la escena. No es fuente primaria del contenido.
+- conflicting_sources: []
+- rights_note: No copiar el folleto ni su resumen.
+- verified_by: DANMACHI-COVERAGE-008
+- verification_status: secondary_retail_metadata_checked_content_unseen
+
+## DMR-023-SRC-004 · Enlace de muestra oficial de 掌編集２ (acceso fallido)
+- source_id: DMR-023-SRC-004
+- title: ダンジョンに出会いを求めるのは間違っているだろうか 掌編集２ — 試し読み
+- creator_or_publisher: GA文庫 / SB Creative; preview delivery redirects to binb.jp
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi / recopilación de historias cortas
+- volume_or_edition: 掌編集２; ISBN 978-4-8156-1967-1
+- language: Japonés
+- official_url: https://www.sbcr.jp/product/4815619671/
+- accessed_at: 2026-10-17
+- locator_type: official_sample_link_access_attempt
+- locator: La ficha editorial enlaza «試し読み» a https://r.binb.jp/epm/e1_292058_30032023135329; la herramienta web devolvió error 500 / destino no accesible.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-MAIN-LN; CONT-FAMILIA-CHRONICLE
+- reliability_note: La ruta oficial existe, pero no se obtuvieron páginas legibles. El error de acceso no permite inferir qué historias incluye la muestra ni verificar el relato.
+- conflicting_sources: []
+- rights_note: No reproducir texto de muestra.
+- verified_by: DANMACHI-COVERAGE-008
+- verification_status: official_sample_link_found_content_unavailable

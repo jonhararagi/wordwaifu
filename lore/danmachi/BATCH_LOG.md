@@ -1,5 +1,18 @@
 # Registro de tandas de lore
 
+## DANMACHI-COVERAGE-008 — seguimiento de acceso primario al relato de Rakta (2026-10-17)
+
+- **Estado:** IN_PROGRESS; no se leyó el relato en texto primario.
+- **Hallazgo nuevo:** Suruga-ya identifica un folleto de 4 páginas de Gamers para *Sword Oratoria* vol. 12 con el título «花束の代わりに捧ぐ狼の咆哮» (DMR-023-SRC-003). Es metadato secundario, no evidencia del contenido.
+- **Ruta oficial:** la ficha de SB Creative para 掌編集２ enlaza una muestra «試し読み», pero el destino devolvió error 500/no accesible mediante la herramienta web (DMR-023-SRC-004). No se obtuvieron páginas legibles.
+- **Dictamen:** la escena de Rakta, Gareth y Bete sigue como referencia secundaria pendiente; no se confunde con el reporte de piso 37 del vol. 2.
+- **Pendiente:** acceder a la muestra desde navegador autorizado o consultar copia legítima de la recopilación; cotejar por separado el vol. 2.
+- **Pruebas locales:** NOT_RUN; CI del HEAD actual en curso/por comprobar.
+- **main:** sin cambios; sin merges ni operaciones de PR.
+
+---
+
+
 ## DANMACHI-COVERAGE-007 · Auditoría de fuentes candidatas para Elfy Colette (2026-10-17)
 
 - **Estado:** IN_PROGRESS; no se verificó biografía individual en texto primario.

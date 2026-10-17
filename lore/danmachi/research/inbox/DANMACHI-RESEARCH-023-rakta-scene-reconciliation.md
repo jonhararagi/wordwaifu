@@ -25,7 +25,15 @@
 | Se esconde detrás de Gareth ante Bete y luego grita que ganarán | DMR-023-SRC-001 / DMR-023-CLM-001 | Secundaria; texto de historia extra pendiente | Que sea una descripción general de personalidad o relación fija |
 | La recopilación oficial reúne historias cortas de bonificación hasta *Sword Oratoria* vol. 12 | DMR-023-SRC-002 / DMR-023-CLM-002 | Sinopsis editorial cotejada | Que la página confirme por sí sola todas las historias enumeradas por wikis |
 
+## Nuevas pistas de localización (2026-10-17)
+
+### DMR-023-SRC-003 · Folleto promocional en catálogo comercial
+La ficha de https://www.suruga-ya.jp/product/detail/185173068 identifica un folleto de 4 páginas, bonificación exclusiva de Gamers para *Sword Oratoria* vol. 12, con el título «花束の代わりに捧ぐ狼の咆哮» y fecha de producto 2019-07-15. Es metadato de vendedor, no acceso al texto ni verificación de la escena.
+
+### DMR-023-SRC-004 · Enlace oficial de muestra, contenido inaccesible
+La ficha de SB Creative (https://www.sbcr.jp/product/4815619671/) enlaza «試し読み» hacia https://r.binb.jp/epm/e1_292058_30032023135329. La herramienta web devolvió error 500/destino no accesible; no se obtuvieron páginas legibles. El bloqueo no permite inferir el contenido de la muestra.
+
 ## Próximo cotejo primario
-1. Consultar una edición autorizada de *Sword Oratoria* vol. 2 para el reporte del piso 37, registrando capítulo/página real.
-2. Consultar el índice/texto de `ダンジョンに出会いを求めるのは間違っているだろうか 掌編集２` (ISBN 978-4-8156-1967-1) para verificar si incluye exactamente la historia extra y cotejar el relato.
-3. Hasta entonces, conservar las pistas separadas; no marcar detalles como cotejados por fuente primaria ni ampliar relaciones fuera de la escena reportada.
+1. Abrir el enlace oficial desde navegador autorizado o consultar una copia legítima de 掌編集２ (ISBN 978-4-8156-1967-1) y comprobar índice/texto para confirmar la historia extra y cotejar el relato.
+2. Consultar una edición autorizada de *Sword Oratoria* vol. 2 para el reporte del piso 37, registrando capítulo/página real.
+3. Mantener ambas pistas separadas; no marcar detalles como cotejados por fuente primaria ni ampliar relaciones fuera de la escena reportada.
