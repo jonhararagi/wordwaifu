@@ -1,3 +1,13 @@
+## DANMACHI-COVERAGE-003 — corrección del test de corpus (2026-10-17)
+
+- **Hallazgo real de CI:** DanMachi Lore and Retrieval Integrity #794 falló en `tests/test_lore_corpus.cjs`: el índice devolvió 122 claims frente a 120 esperados tras añadirse dos claims explícitos de la sinopsis editorial del volumen 2.
+- **Corrección:** ajustar las expectativas del test de corpus a 122 claims y 125 entradas buscables; no retirar ni ocultar las dos afirmaciones nuevas. La validación general #1535 estaba aún en curso en el checkpoint previo; volver a comprobar ambos workflows para el SHA posterior a esta corrección.
+- **Base inmediata:** `b75b6a54dc0ba7839d069e9f6a6c383cbd6422ce`; el commit de esta corrección actualizará test y punto de reanudación.
+- **Estado:** PASS_CI no declarado hasta verificar el nuevo SHA exacto. Pruebas locales NOT_RUN.
+- **Restricciones:** mantener `main` intacta; sin merges ni operaciones de PR.
+
+---
+
 # DANMACHI-COVERAGE-003 — anclajes editoriales de Liliruca/Soma (2026-10-17)
 
 **Estado de trabajo:** contenido publicado; aceptación pendiente de consultar Actions para el SHA exacto de este checkpoint. La enciclopedia global sigue PARTIAL y el trabajo global IN_PROGRESS.
