@@ -82,3 +82,33 @@ WordWaifu ofrece búsqueda en personajes, lugares, acontecimientos, organizacion
 - El límite de 25 snapshots existe en código, pero la prueba que alcanza la frontera sigue pendiente.
 - Borrar un proyecto elimina sus snapshots. Todavía no existe un camino para resucitar un proyecto que ya fue eliminado; la interfaz y el contrato de la próxima subtarea deben resolver esta decisión explícitamente.
 - El test automatizado es Chromium headless; la inspección manual en Windows 11 sigue en `NOT_RUN`.
+
+
+## 2026-10-17 · Runtime de GitHub Actions y consistencia de IndexedDB
+
+### Riesgo encontrado y corrección aplicada
+
+- Los dos workflows de `main` utilizaban `actions/checkout@v4`, `actions/setup-node@v4` y (en la validación de lore) `actions/upload-artifact@v4`. Los manifiestos de esas versiones declaran runtime `node20`.
+- GitHub anunció que Node 20 dejó de estar disponible en sus runners de Actions el **23 de septiembre de 2026**. Las versiones upstream revisadas para esta actualización usan Node 24.
+- Se actualizaron ambos workflows a `actions/checkout v7.0.1` (`3d3c42e5aac5ba805825da76410c181273ba90b1`), `actions/setup-node v7.1.0` (`949feb2413d6458794dcd2491c4babbbce0c15c1`) y `actions/upload-artifact v7.0.2` (`cf430e030ddbb5b0abf93d22962f4752f3646cd9`), fijando los SHA completos verificados en los repositorios oficiales.
+- Se amplió `validate.yml` para revisar la sintaxis de `src/story-outline.js` y `tests/test_story_outline.cjs`, y ejecutar la prueba unitaria de generación de capítulos. La prueba ya existía, pero ese workflow no la ejecutaba directamente.
+- Las ejecuciones recientes de CI anteriores a este cambio fueron correctas; por eso este hallazgo se registra como riesgo de compatibilidad pendiente de modernización, no como afirmación de que todos los runs previos hayan fallado.
+
+### Corrección de almacenamiento local
+
+- En `src/art-studio.js`, las lecturas de `getAll()` y `get()` resolvían sus promesas con `IDBRequest.onsuccess`, antes de observar la finalización de la transacción. Ahora la lectura se completa en `IDBTransaction.oncomplete` y rechaza los eventos de error/aborto; la apertura también limpia el estado cacheado tras un error o cambio de versión.
+- Se añadió control de secuencia a las cargas del formulario y de la galería. Una lectura asíncrona antigua ya no debe volver a pintar recursos de un personaje anterior ni reinsertar una tarjeta después de una actualización más reciente. El formulario limpia la imagen y el prompt previos cuando se cambia el destino sin un recurso asociado.
+- `tests/browser_smoke.cjs` cubre la regresión: tras asignar una imagen a Bell, seleccionar un personaje sin recurso no debe conservar el prompt ni la imagen de Bell. La CI de `main` queda como la validación final de esta modificación.
+
+### Límites importantes
+
+IndexedDB no convierte por sí solo los datos del navegador en una copia de seguridad permanente. MDN describe el almacenamiento web predeterminado como *best-effort*, susceptible a cuotas, presión de almacenamiento y eliminación explícita. WordWaifu debe seguir recomendando exportar copias del proyecto y no mostrar una concesión de persistencia como garantía absoluta. No se atribuye a Chrome/MDN el bug concreto de WordWaifu: sus páginas sustentan los contratos de API y los riesgos generales usados para corregir nuestro código.
+
+### Fuentes oficiales consultadas
+
+- [GitHub Changelog: Node 20 is no longer available in GitHub Actions (23-09-2026)](https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/)
+- [GitHub Docs: Secure use reference — pin actions to a full-length commit SHA](https://docs.github.com/en/actions/reference/security/secure-use)
+- [actions/checkout v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1) · [actions/setup-node v7.1.0](https://github.com/actions/setup-node/releases/tag/v7.1.0) · [actions/upload-artifact v7.0.2](https://github.com/actions/upload-artifact/releases/tag/v7.0.2)
+- [MDN: IDBTransaction complete event](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete_event) — una transacción informa de su finalización tras completarse correctamente.
+- [MDN: IDBTransaction error event](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/error_event) — el error puede propagarse; también debe contemplarse el aborto.
+- [MDN: Storage quotas and eviction criteria](https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) y [StorageManager.persist()](https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist) — el almacenamiento es *best-effort* por defecto; la persistencia depende del navegador y puede denegarse.

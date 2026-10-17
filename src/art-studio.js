@@ -7,6 +7,9 @@
   const DELETED_KEY = "wordwaifu.art.deleted.v1";
   const MAX_FILE_BYTES = 5 * 1024 * 1024;
   let databasePromise;
+  let assignmentLoadSequence = 0;
+  let galleryRefreshSequence = 0;
+  let imageReadSequence = 0;
   const memoryCache = new Map();
   // Keep a session cache, but persist deletion tombstones so stale fallback copies
   // cannot reappear after a reload when localStorage cleanup fails.
@@ -50,12 +53,28 @@
     databasePromise = new Promise((resolve, reject) => {
       if (!root.indexedDB) return reject(new Error("IndexedDB no está disponible"));
       const request = root.indexedDB.open(DB_NAME, DB_VERSION);
+      let blocked = false;
       request.onupgradeneeded = () => {
         const db = request.result;
         if (!db.objectStoreNames.contains(STORE)) db.createObjectStore(STORE, { keyPath: "key" });
       };
-      request.onsuccess = () => resolve(request.result);
+      request.onblocked = () => {
+        blocked = true;
+        reject(new Error("La apertura de IndexedDB está bloqueada por otra pestaña."));
+      };
       request.onerror = () => reject(request.error || new Error("No se pudo abrir IndexedDB"));
+      request.onsuccess = () => {
+        const db = request.result;
+        if (blocked) { db.close(); return; }
+        db.onversionchange = () => {
+          db.close();
+          databasePromise = null;
+        };
+        resolve(db);
+      };
+    }).catch(error => {
+      databasePromise = null;
+      throw error;
     });
     return databasePromise;
   }
@@ -73,9 +92,14 @@
     try {
       const db = await openDatabase();
       indexedRecords = await new Promise((resolve, reject) => {
-        const request = db.transaction(STORE, "readonly").objectStore(STORE).getAll();
-        request.onsuccess = () => resolve(request.result || []);
+        const transaction = db.transaction(STORE, "readonly");
+        const request = transaction.objectStore(STORE).getAll();
+        let result = [];
+        request.onsuccess = () => { result = Array.isArray(request.result) ? request.result : []; };
         request.onerror = () => reject(request.error || new Error("No se pudieron leer los recursos de IndexedDB."));
+        transaction.oncomplete = () => resolve(result);
+        transaction.onerror = () => reject(transaction.error || request.error || new Error("Error en la lectura de IndexedDB."));
+        transaction.onabort = () => reject(transaction.error || request.error || new Error("La lectura de IndexedDB fue cancelada."));
       });
     } catch (_) {
       // If IndexedDB cannot be opened or read, localStorage is the available store.
@@ -98,9 +122,14 @@
     try {
       const db = await openDatabase();
       const value = await new Promise((resolve, reject) => {
-        const request = db.transaction(STORE, "readonly").objectStore(STORE).get(key);
-        request.onsuccess = () => resolve(request.result || null);
-        request.onerror = () => reject(request.error);
+        const transaction = db.transaction(STORE, "readonly");
+        const request = transaction.objectStore(STORE).get(key);
+        let result = null;
+        request.onsuccess = () => { result = request.result || null; };
+        request.onerror = () => reject(request.error || new Error("No se pudo leer el recurso de IndexedDB."));
+        transaction.oncomplete = () => resolve(result);
+        transaction.onerror = () => reject(transaction.error || request.error || new Error("Error al leer el recurso de IndexedDB."));
+        transaction.onabort = () => reject(transaction.error || request.error || new Error("La lectura del recurso fue cancelada."));
       });
       if (value) { memoryCache.set(key, value); return value; }
     } catch (_) {}
@@ -287,12 +316,26 @@
     $("#art-status").textContent = "Prompt generado. Editalo libremente antes de guardar.";
   }
 
+  function clearCurrentAssignmentFields() {
+    imageReadSequence += 1;
+    $("#art-prompt").value = "";
+    $("#art-image-url").value = "";
+    $("#art-image-file").value = "";
+    $("#art-preview").removeAttribute("src");
+    $("#art-preview-wrap").classList.add("hidden");
+  }
+
   async function loadCurrentAssignment() {
     const id = $("#art-target-id").value.trim(), category = $("#art-target-type").value;
+    const requestSequence = ++assignmentLoadSequence;
+    const requestedKey = id ? makeKey(category, id) : "";
+    clearCurrentAssignmentFields();
     if (!id) return;
     const record = await getAsset(category, id);
+    if (requestSequence !== assignmentLoadSequence) return;
+    if (requestedKey !== makeKey($("#art-target-type").value, $("#art-target-id").value.trim())) return;
     if (!record) return;
-    $("#art-prompt").value = record.prompt || $("#art-prompt").value;
+    $("#art-prompt").value = record.prompt || "";
     $("#art-image-url").value = record.imageUrl || "";
     const src = record.fileDataUrl || record.imageUrl;
     if (src) { $("#art-preview").src = src; $("#art-preview-wrap").classList.remove("hidden"); }
@@ -302,9 +345,10 @@
   async function refreshGallery() {
     const gallery = $("#art-assignments");
     if (!gallery) return;
+    const refreshSequence = ++galleryRefreshSequence;
     const records = await listAssignments();
-    // Read first, then replace and render synchronously so overlapping refreshes
-    // cannot append duplicate cards after both awaits complete.
+    // Ignore older reads that finish after a newer refresh (especially after delete).
+    if (refreshSequence !== galleryRefreshSequence) return;
     gallery.replaceChildren();
     $("#art-assignment-count").textContent = String(records.length);
     if (!records.length) { gallery.appendChild(element("p","art-empty","Todavía no hay recursos asignados. Guardá una URL, una imagen o un prompt para empezar.")); return; }
@@ -322,6 +366,8 @@
         element("small","",record.prompt ? record.prompt.slice(0,150) + (record.prompt.length>150?"…":"") : (record.imageUrl || "Sin imagen vinculada")));
       const actions = element("div","art-assignment-actions"), edit = element("button","outline-button","Editar");
       edit.type="button"; edit.addEventListener("click",()=>{
+        assignmentLoadSequence += 1;
+        clearCurrentAssignmentFields();
         $("#art-target-type").value=record.category;fillCharacterOptions();
         if(record.category==="character")$("#art-target-character").value=record.entityId;
         $("#art-target-id").value=record.entityId;$("#art-target-name").value=record.entityName||record.entityId;
@@ -350,9 +396,10 @@
 
   function bind() {
     if (!$("#art-view")) return;
-    $("#art-target-type").addEventListener("change",()=>{fillCharacterOptions();$("#art-target-character").value="";$("#art-target-id").value="";$("#art-target-name").value="";updatePromptContext();});
+    $("#art-target-type").addEventListener("change",()=>{fillCharacterOptions();$("#art-target-character").value="";$("#art-target-id").value="";$("#art-target-name").value="";updatePromptContext();loadCurrentAssignment();});
     $("#art-target-character").addEventListener("change",syncTargetFromRoster);
-    ["#art-target-id","#art-target-name"].forEach(selector=>$(selector).addEventListener("input",updatePromptContext));
+    $("#art-target-id").addEventListener("input",()=>{assignmentLoadSequence += 1;clearCurrentAssignmentFields();updatePromptContext();});
+    $("#art-target-name").addEventListener("input",updatePromptContext);
     $("#art-generate-prompt").addEventListener("click",()=>{try{generatePrompt();}catch(error){$("#art-status").textContent=error.message;}});
     $("#art-copy-prompt").addEventListener("click",async()=>{
       const prompt=$("#art-prompt").value;if(!prompt.trim())return $("#art-status").textContent="No hay prompt para copiar.";
@@ -361,8 +408,9 @@
     });
     $("#art-image-file").addEventListener("change",async event=>{
       const file=event.target.files&&event.target.files[0];if(!file)return;
-      try{const data=await fileToDataUrl(file);$("#art-preview").src=data;$("#art-preview-wrap").classList.remove("hidden");$("#art-image-url").value="";$("#art-status").textContent=file.name+" listo para guardar.";}
-      catch(error){$("#art-status").textContent=error.message;event.target.value="";}
+      const readSequence = ++imageReadSequence;
+      try{const data=await fileToDataUrl(file);if(readSequence!==imageReadSequence)return;$("#art-preview").src=data;$("#art-preview-wrap").classList.remove("hidden");$("#art-image-url").value="";$("#art-status").textContent=file.name+" listo para guardar.";}
+      catch(error){if(readSequence!==imageReadSequence)return;$("#art-status").textContent=error.message;event.target.value="";}
     });
     $("#art-image-url").addEventListener("change",()=>{
       try{const url=normalizeImageUrl($("#art-image-url").value);$("#art-image-url").value=url;if(url){$("#art-image-file").value="";$("#art-preview").src=url;$("#art-preview-wrap").classList.remove("hidden");}}
@@ -373,8 +421,16 @@
       const category=$("#art-target-type").value,id=$("#art-target-id").value.trim(),name=$("#art-target-name").value.trim();
       if(!id||!name)return $("#art-status").textContent="Completá el nombre y el ID de la entidad.";
       const file=$("#art-image-file").files&&$("#art-image-file").files[0];
+      const targetKey = makeKey(category, id);
+      const targetSequence = assignmentLoadSequence;
+      const fileSequence = imageReadSequence;
       try{
         const url=normalizeImageUrl($("#art-image-url").value),data=file?await fileToDataUrl(file):"";
+        if (targetSequence !== assignmentLoadSequence ||
+            targetKey !== makeKey($("#art-target-type").value, $("#art-target-id").value.trim()) ||
+            fileSequence !== imageReadSequence) {
+          throw new Error("El destino o la imagen cambió mientras se preparaba el guardado. Volvé a guardar el recurso.");
+        }
         if(!data&&!url&&!$("#art-prompt").value.trim())return $("#art-status").textContent="Agregá una imagen, una URL o un prompt antes de guardar.";
         const record={key:makeKey(category,id),category,entityId:id,entityName:name,imageUrl:url,fileDataUrl:data,prompt:$("#art-prompt").value.trim(),updatedAt:new Date().toISOString()};
         const backend=await persist(record);
@@ -383,9 +439,10 @@
       }catch(error){$("#art-status").textContent=error.message||"No se pudo guardar el recurso.";}
     });
     $("#art-clear-form").addEventListener("click",()=>{
+      assignmentLoadSequence += 1;
       $("#art-target-id").value="";$("#art-target-name").value="";$("#art-target-character").value="";
-      $("#art-image-url").value="";$("#art-image-file").value="";$("#art-prompt").value="";
-      $("#art-preview-wrap").classList.add("hidden");updatePromptContext();$("#art-status").textContent="Formulario limpio.";
+      clearCurrentAssignmentFields();
+      updatePromptContext();$("#art-status").textContent="Formulario limpio.";
     });
     fillCharacterOptions();updatePromptContext();refreshGallery();
   }

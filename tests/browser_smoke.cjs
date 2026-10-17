@@ -2842,6 +2842,19 @@ async function run() {
     const customAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("character", "DM-CHAR-BELL"));
     assert.ok(customAsset.src.startsWith("data:image/png"), "Uploaded art must persist in the local asset library.");
     assert.ok(customAsset.prompt.includes("Bell Cranel"), "The saved prompt must remain attached to its character.");
+    const unassignedCharacterId = await page.evaluate(async () => {
+      const options = Array.from(document.querySelectorAll("#art-target-character option"));
+      for (const option of options) {
+        if (!option.value || option.value === "DM-CHAR-BELL") continue;
+        if (!await window.WordWaifuArtStudio.getAsset("character", option.value)) return option.value;
+      }
+      return "";
+    });
+    assert.ok(unassignedCharacterId, "The roster should contain a character without a custom art assignment.");
+    await page.locator("#art-target-character").selectOption(unassignedCharacterId);
+    await page.waitForFunction(() => document.querySelector("#art-preview-wrap")?.classList.contains("hidden"), { timeout: 5000 });
+    assert.equal(await page.locator("#art-image-url").inputValue(), "", "Selecting a character without art must not retain the prior character's image URL.");
+    assert.equal(await page.locator("#art-prompt").inputValue(), "", "Selecting a character without art must not retain the prior character's prompt.");
     // Non-character assets use the same stable-ID assignment path.
     await page.locator("#art-target-type").selectOption("background");
     await page.locator("#art-target-id").fill("bg-orario-night");
