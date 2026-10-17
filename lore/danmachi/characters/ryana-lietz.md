@@ -45,3 +45,9 @@ historia, nivel, habilidades, personalidad y relaciones específicas. La informa
 Las referencias de personajes menores la identifican como humana y aventurera de Astrea Familia, pero no localizamos una historia especial individual a su nombre. Buscar sus intervenciones en los capítulos de la Familia y en los flashbacks históricos. Personalidad, habilidad, contribución táctica y destino deben apuntarse a una escena; falta de foco no equivale a falta de importancia.
 
 Fuentes: https://danmachi.fandom.com/wiki/Minor_Characters · https://danmachi.com/danmachi4/character/ · https://danmachi.com/news/news131.php.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, los perfiles de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.

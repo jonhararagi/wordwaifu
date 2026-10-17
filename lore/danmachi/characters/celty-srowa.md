@@ -45,3 +45,9 @@ historia individual, nivel, capacidades y vínculos con localizadores primarios.
 El índice del volumen 1 lista una historia especial «Celty Srowa». Las referencias secundarias la describen como elfa curiosa e inteligente y como maga de retaguardia. Esos detalles dan una ruta de lectura concreta, pero no constituyen verificación primaria hasta revisar la historia especial. No fijar hechizos o límites mecánicos sin escena.
 
 Fuentes: https://danmachi.fandom.com/wiki/Celty_Srowa · https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1 · https://danmachi.com/danmachi4/character/.
+
+
+## Navegación de la red histórica
+
+- **Familia y red de relaciones:** [expediente de Familia Astrea](../familias/astrea-familia.md).
+- **Control de continuidad:** el expediente familiar separa los datos de Astrea Record, los perfiles de adaptación y los registros de Nueva Astrea Familia / Solingen. La afiliación compartida no demuestra por sí sola una relación personal específica.
