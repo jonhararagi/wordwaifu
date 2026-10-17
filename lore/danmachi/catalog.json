@@ -1395,6 +1395,20 @@
       ],
       "status": "secondary_roster_reference_primary_check_pending",
       "priority": "normal"
+    },
+    {
+      "id": "CHAR-LEENE-ARSHE",
+      "path": "characters/leene-arshe.md",
+      "type": "character",
+      "tags": [
+        "Leene Arshe",
+        "Leene",
+        "Familia Loki",
+        "Sword Oratoria",
+        "spoiler"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
