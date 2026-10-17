@@ -84,6 +84,11 @@ Base estructurada para organizar la historia de DanMachi desde las eras antiguas
 - [Monstruos y amenazas](canon/09-indice-monstruos-y-amenazas.md)
 - [Personajes](characters/00-indice-personajes.md)
 - [Familias y organizaciones](familias/00-indice-familias.md)
+- [Zeus Familia](familias/zeus-familia.md) — expediente histórico inicial; información de roster y estado institucional con procedencia visible.
+- [Hera Familia](familias/hera-familia.md) — expediente histórico inicial; verificación primaria de roster y capitanía pendiente.
+- [Zeus](characters/zeus.md) y [Hera](characters/hera.md) — expedientes de deidades y sus afiliaciones históricas.
+- [Maxim](characters/maxim.md) y [Meteria](characters/dark-era/meteria.md) — fichas individuales provisionales con spoilers y fuentes secundarias etiquetadas.
+- [DANMACHI-RESEARCH-021](research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md) — fuentes y claims de Zeus/Hera.
 - [Lugares](places/00-indice-lugares.md)
 - [Reglas del mundo](rules/00-indice-reglas.md)
 - [Volúmenes y arcos](volumes/00-indice-volumenes-y-arcos.md)

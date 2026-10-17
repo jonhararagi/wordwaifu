@@ -1,17 +1,17 @@
 # ESTADO ACTUAL — DANMACHI-COVERAGE-001 EN PROGRESO
 
-**Actualizado:** 2026-10-17. Este bloque prevalece sobre estados históricos siguientes.
+**Actualizado:** 2026-10-17. Este bloque prevalece sobre los estados históricos siguientes.
 
 - **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
-- **Último SHA funcional de cobertura Zeus/Hera:** `b279d1d70e739ce5aa992088dbf6884cea2a6941`.
+- **SHA funcional del lote Zeus/Hera antes del ajuste del punto de entrada:** `b279d1d70e739ce5aa992088dbf6884cea2a6941`.
 - **Catálogo:** 134 registros / 109 documentos.
-- **Fichas incorporadas:** Zeus, Hera, Maxim, Meteria, Zeus Familia y Hera Familia.
-- **Procedencia:** seis referencias comunitarias DMR-021-SRC-001..006 registradas como secundarias. La fuente oficial auxiliar existente DMR-011-SRC-005 y el claim existente DMR-008-CLM-027 sostienen únicamente que Zeus Familia y Hera Familia derrotaron conjuntamente a Behemoth y Leviathan. No se asigna un monstruo individual a cada Familia.
-- **Cruces de identidad:** los candidatos reservados `CHAR-ALFIA` y `CHAR-ZARD` apuntan a los expedientes existentes `CHAR-DARK-ALFIA` y `CHAR-DARK-ZALD`; no se crearon duplicados.
-- **Navegación:** actualizados los índices de deidades, Familias, personajes y MASTER_INDEX; se enlazaron Alfia, Zald, ambas eras y los eventos candidatos sobre Dragón Negro/pérdida de posición.
-- **CI para el SHA funcional:** [Validate WordWaifu #39000909473](https://github.com/jonhararagi/wordwaifu/actions/runs/39000909473) y [DanMachi Lore and Retrieval Integrity #39000909662](https://github.com/jonhararagi/wordwaifu/actions/runs/39000909662) están **QUEUED** al momento de esta actualización. No marcar PASS hasta comprobar la conclusión y `head_sha` exactos.
-- **Validación local:** NOT_RUN desde esta interfaz. La verificación CI deberá repetirse para el HEAD documental final.
-- **Brechas:** niveles, capitanes, roster histórico y cronología de la caída de Zeus/Hera siguen necesitando localizadores primarios. No se afirma completitud de esa historia ni de la enciclopedia global.
+- **Fichas:** Zeus, Hera, Maxim, Meteria, Zeus Familia y Hera Familia.
+- **Procedencia:** seis referencias comunitarias DMR-021-SRC-001..006 se mantienen como secundarias. La referencia oficial DMR-011-SRC-005 y el claim existente DMR-008-CLM-027 sostienen únicamente la victoria conjunta de ambas Familias contra Behemoth y Leviathan; no asignan uno de los monstruos a cada Familia.
+- **Cruces de identidad:** los IDs reservados CHAR-ALFIA y CHAR-ZARD apuntan a CHAR-DARK-ALFIA y CHAR-DARK-ZALD; no se crearon duplicados.
+- **Navegación:** actualizados catálogo, fuentes, MASTER_INDEX, índices de personajes/deidades/Familias, eras y eventos. El README también enlaza ahora los expedientes nuevos desde el punto de entrada.
+- **CI funcional previo:** [Validate WordWaifu #39000909473](https://github.com/jonhararagi/wordwaifu/actions/runs/39000909473) y [DanMachi Lore and Retrieval Integrity #39000909662](https://github.com/jonhararagi/wordwaifu/actions/runs/39000909662) estaban en ejecución sobre `b279d1d70e739ce5aa992088dbf6884cea2a6941`. El commit combinado de README y documentación debe disparar ambos workflows en el nuevo SHA; comprobar el tip real y no afirmar PASS antes de obtener sus conclusiones.
+- **Validación local:** NOT_RUN desde esta interfaz.
+- **Brechas:** localizadores primarios para roster, liderazgo, niveles y caída de las dos Familias siguen pendientes. La enciclopedia global continúa PARTIAL.
 - `main` intacta; no se hicieron merges ni operaciones sobre PR.
 
 ---

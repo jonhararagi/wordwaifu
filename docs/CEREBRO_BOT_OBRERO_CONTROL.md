@@ -277,3 +277,12 @@ Estado: IN_PROGRESS; localizadores primarios de novela pendientes.
 - CI del SHA funcional estaba QUEUED al cierre; verificar ambas ejecuciones por SHA exacto y no marcar PASS_CI sin resultado final. Validación local: NOT_RUN.
 - Siguiente: revisar CI del SHA funcional/documental, corregir regresiones y luego seguir con fuentes primarias y cobertura histórica. No pasar al generador antes de completar el alcance prioritario.
 - main intacta; sin merges ni operaciones sobre PR.
+
+
+## Checkpoint combinado — Zeus/Hera: punto de entrada y verificación
+
+- El lote Zeus/Hera añadió seis expedientes y elevó el catálogo a 134 registros/109 documentos.
+- La actualización conjunta del punto de entrada `lore/danmachi/README.md` ahora enlaza Zeus, Hera, Maxim, Meteria y ambas Familias, además de DMR-021.
+- El SHA de contenido principal antes del ajuste de README fue `b279d1d70e739ce5aa992088dbf6884cea2a6941`; el checkpoint actual combina README y recuperación operativa para que la verificación de CI incluya el estado final del punto de entrada.
+- Confirmar ambos workflows en el SHA real del checkpoint antes de declarar PASS_CI; el lote anterior todavía aparecía en ejecución cuando se redactó la recuperación.
+- No cambiar `main`, no hacer merges ni operar sobre PR sin autorización.

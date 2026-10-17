@@ -22,6 +22,9 @@ Se resolvió el crosswalk de identidad sin duplicar fichas: el ID reservado CHAR
 - Ambos workflows estaban `queued` en el último chequeo. Se debe registrar su conclusión final y confirmar el `head_sha` exacto; no se declara PASS_CI de antemano.
 - Validación local: NOT_RUN.
 
+## Punto de entrada y recuperación
+También se actualizaron `lore/danmachi/README.md`, `docs/STATUS.md`, `docs/DONE.md` y `docs/CEREBRO_BOT_OBRERO_CONTROL.md` para que el trabajo de Zeus/Hera se encuentre desde el índice general y sea recuperable en la siguiente sesión. El nuevo checkpoint combinado requiere consultar su propio SHA real y las dos conclusiones de CI antes de cerrar el lote.
+
 ## Archivos nuevos
 `characters/zeus.md`, `characters/hera.md`, `characters/maxim.md`, `characters/dark-era/meteria.md`, `familias/zeus-familia.md`, `familias/hera-familia.md`, `research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md`.
 
