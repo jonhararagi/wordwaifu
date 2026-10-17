@@ -55,6 +55,12 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-LOKI-NOIR-SACHSEN | [Noir Sachsen](noir-sachsen.md) | Noir; ノアール・ザクセン; Loki Familia | CONT-MANGA; CONT-GAME; source secondary | Primary/editorial locator pending; not a complete dossier |
 | CHAR-LOKI-DAIN | [Dain](dain.md) | ダイン; Loki Familia; historical veteran | CONT-MANGA; CONT-GAME; source secondary | Primary/editorial locator pending; not a complete dossier |
 | CHAR-LOKI-BARA | [Bara](bara.md) | バラ; Loki Familia; historical veteran | CONT-MANGA; CONT-GAME; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-NICK | [Nick](nick.md) | ニック; Nikku; manga roster | CONT-MANGA; reported Sword Oratoria manga member | Manga-source only; light-novel identity not verified |
+| CHAR-LOKI-NICOLE | [Nicole](nicole.md) | ニコール; Nikōru; manga roster | CONT-MANGA; reported Sword Oratoria manga member | Manga-source only; light-novel identity not verified |
+| CHAR-LOKI-RUUNI | [Ruuni](ruuni.md) | ルーニー; Rūnī; manga roster | CONT-MANGA; reported Sword Oratoria manga member | Manga-source only; light-novel identity not verified |
+| CHAR-LOKI-SHIFON | [Shifon](shifon.md) | シフォン; Shifon; manga roster | CONT-MANGA; reported Sword Oratoria manga member | Manga-source only; light-novel identity not verified |
+| CHAR-LOKI-STARK | [Stark](stark.md) | スターク; Sutāku; manga roster | CONT-MANGA; reported Sword Oratoria manga member | Manga-source only; light-novel identity not verified |
+| CHAR-LOKI-COCO-MANGA | [Coco (Loki Familia manga character)](coco-loki.md) | ココ; Koko; manga roster | CONT-MANGA; reported Sword Oratoria manga member | Manga-source only; light-novel identity not verified |
 | CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior) | Ficha individual y expediente integrados; fuentes mixtas; cotejo primario pendiente |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Expediente de aplicación existente; cotejo de LN pendiente |

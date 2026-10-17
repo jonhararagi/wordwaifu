@@ -160,3 +160,17 @@ Estos datos son instantáneas secundarias sin intervalo confirmado. No se comple
 ### Crosswalk sin cerrar: Line / Leene Arshe
 
 El roster comunitario usa «Line Arshe» y la ficha existente del repo usa «Leene Arshe». Se conservan ambos términos en un solo expediente de recuperación sin declarar la equivalencia por confirmada; la fuente primaria y el nombre japonés deben resolver la duda.
+
+
+## Roster manga-only añadido para búsqueda, sin inferir canon de novela
+
+Los siguientes expedientes se crean para que la app pueda recuperar los nombres que una fuente comunitaria sitúa en el manga de *Sword Oratoria*. Se etiquetan como `CONT-MANGA`; no se asume que cada persona sea la misma entidad en el texto de la novela ligera.
+
+- [Nick](../characters/nick.md) — humano, aventurero, nivel 3 reportado; cuerda como equipo, debut secundario capítulo 60.
+- [Nicole](../characters/nicole.md) — Beast Human, aventurero, hacha reportada, debut secundario capítulo 62.
+- [Ruuni](../characters/ruuni.md) — Beast Human, aventurera, debut secundario capítulo 63.
+- [Shifon](../characters/shifon.md) — elfa, aventurera, espada y magia de hielo reportadas; se vincula a una escena de curación durante el asalto a Knossos en la referencia comunitaria.
+- [Stark](../characters/stark.md) — humano, aventurero, nivel 3 reportado; lanza, debut secundario capítulo 60.
+- [Coco — personaje manga de Loki](../characters/coco-loki.md) — Beast Human, aventurera reportada; debut secundario capítulo 63. Se separa expresamente de [Coco Collins](../characters/coco-collins.md), cuyo expediente existente pertenece a Soma Familia.
+
+**Procedencia común:** `DMR-018-SRC-001`. Los capítulos de manga y los atributos descritos siguen siendo datos secundarios, no una declaración de que las fichas estén verificadas en la novela ligera.

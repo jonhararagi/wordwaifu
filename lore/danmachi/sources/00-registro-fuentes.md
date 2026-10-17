@@ -1090,7 +1090,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article_section
 - locator: Entradas de Carmilia, Lloyd, Claire, Anju, Liza, Kalos, Remilia, Noir Sachsen, Dain y Bara
-- claims_supported: [DMR-018-CLM-006, DMR-018-CLM-007, DMR-018-CLM-008, DMR-018-CLM-009, DMR-018-CLM-010, DMR-018-CLM-011, DMR-018-CLM-012, DMR-018-CLM-013, DMR-018-CLM-014, DMR-018-CLM-015]
+- claims_supported: [DMR-018-CLM-006, DMR-018-CLM-007, DMR-018-CLM-008, DMR-018-CLM-009, DMR-018-CLM-010, DMR-018-CLM-011, DMR-018-CLM-012, DMR-018-CLM-013, DMR-018-CLM-014, DMR-018-CLM-015, DMR-018-CLM-017, DMR-018-CLM-018, DMR-018-CLM-019, DMR-018-CLM-020, DMR-018-CLM-021, DMR-018-CLM-022]
 - events_supported: []
 - continuity_scope: CONT-MANGA; CONT-GAME; la fuente advierte que algunos personajes de su sección manga no se han establecido como las mismas personas en la novela ligera
 - reliability_note: Índice comunitario secundario para descubrir nombres y datos reportados; no establece por sí solo canon de novela.

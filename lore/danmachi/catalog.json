@@ -789,6 +789,21 @@
       "priority": "normal"
     },
     {
+      "id": "CHAR-LOKI-COCO-MANGA",
+      "path": "characters/coco-loki.md",
+      "type": "character",
+      "tags": [
+        "Coco (Loki Familia manga character)",
+        "ココ",
+        "Koko",
+        "Loki Familia",
+        "CONT-MANGA",
+        "manga roster"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
       "id": "CHAR-LOKI-CRUZ",
       "path": "characters/cruz.md",
       "type": "character",
@@ -949,6 +964,36 @@
       "priority": "normal"
     },
     {
+      "id": "CHAR-LOKI-NICK",
+      "path": "characters/nick.md",
+      "type": "character",
+      "tags": [
+        "Nick",
+        "ニック",
+        "Nikku",
+        "Loki Familia",
+        "CONT-MANGA",
+        "manga roster"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-NICOLE",
+      "path": "characters/nicole.md",
+      "type": "character",
+      "tags": [
+        "Nicole",
+        "ニコール",
+        "Nikōru",
+        "Loki Familia",
+        "CONT-MANGA",
+        "manga roster"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
       "id": "CHAR-LOKI-NOIR-SACHSEN",
       "path": "characters/noir-sachsen.md",
       "type": "character",
@@ -1011,6 +1056,21 @@
       "priority": "normal"
     },
     {
+      "id": "CHAR-LOKI-RUUNI",
+      "path": "characters/ruuni.md",
+      "type": "character",
+      "tags": [
+        "Ruuni",
+        "ルーニー",
+        "Rūnī",
+        "Loki Familia",
+        "CONT-MANGA",
+        "manga roster"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
       "id": "CHAR-LOKI-SHARON",
       "path": "characters/sharon.md",
       "type": "character",
@@ -1021,6 +1081,21 @@
         "level 4 reported"
       ],
       "status": "secondary_reference_roster_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-SHIFON",
+      "path": "characters/shifon.md",
+      "type": "character",
+      "tags": [
+        "Shifon",
+        "シフォン",
+        "Shifon",
+        "Loki Familia",
+        "CONT-MANGA",
+        "manga roster"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
       "priority": "normal"
     },
     {
@@ -1035,6 +1110,21 @@
         "level 3-4 reported"
       ],
       "status": "secondary_reference_roster_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-STARK",
+      "path": "characters/stark.md",
+      "type": "character",
+      "tags": [
+        "Stark",
+        "スターク",
+        "Sutāku",
+        "Loki Familia",
+        "CONT-MANGA",
+        "manga roster"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
       "priority": "normal"
     },
     {
@@ -2657,6 +2747,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-018-loki-roster-expansion.md",
       "type": "character_relationship_research",
       "status": "secondary_reference_roster_only_primary_check_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-019",
+      "path": "research/inbox/DANMACHI-RESEARCH-019-loki-manga-roster.md",
+      "type": "character_relationship_research",
+      "status": "secondary_reference_manga_only_primary_check_pending"
     }
   ],
   "lastStructuredSync": "2026-10-16"
