@@ -77,15 +77,16 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 
 | ID propuesto | Nombre principal | Grupo/relaciones de búsqueda | Estado |
 |---|---|---|---|
-| CHAR-ZEUS | Zeus | Zeus Familia, historia antigua | Candidato pendiente |
-| CHAR-HERA | Hera | Hera Familia, historia antigua | Candidato pendiente |
+| CHAR-ZEUS | [Zeus](zeus.md) | Deidad de Zeus Familia; Bell (spoiler) | Referencia secundaria; localizador primario pendiente; spoiler mayor |
+| CHAR-HERA | [Hera](hera.md) | Deidad de Hera Familia | Referencia secundaria; localizador primario pendiente; historia antigua |
+| CHAR-MAXIM | [Maxim](maxim.md) | Capitán reportado de Zeus Familia; nivel reportado 8 | Fuente comunitaria; cargo/nivel por etapa pendientes de cotejo |
 | CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Astrea Familia; guía/capitana de Ryu en sinopsis editorial | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-KAGUYA | Kaguya | Kaguya | Astrea Familia | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-LYRA | Lyra | Lyra | Astrea Familia | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-ALFIA | Alfia | Alfia | Historia Zeus/Hera | Candidato pendiente; spoilers |
-| CHAR-ZARD | Zard | Zard/Zald: romanización a verificar por edición | Historia Zeus/Hera | Candidato pendiente; spoilers |
-| CHAR-METERIA | Meteria | Meteria | Historia de Bell y Zeus/Hera | Candidato pendiente; spoilers |
+| CHAR-DARK-ALFIA | [Alfia](dark-era/alfia.md) | Hera Familia (reportado); Meteria | Ficha existente; fuente secundaria; localizador primario pendiente; spoiler mayor |
+| CHAR-DARK-ZALD | [Zald](dark-era/zald.md) | Zeus Familia (reportado); variante Zard pendiente de edición | Ficha existente; no duplicar identidad; localizador primario pendiente |
+| CHAR-METERIA | [Meteria](dark-era/meteria.md) | Hera Familia, Alfia, Bell (spoiler) | Expediente secundario; maternidad y parentesco pendientes de localizador primario |
 | CHAR-ALBERT-WALDSTEIN | Albert Waldstein | Albert | Aria, historia antigua | Candidato pendiente; spoilers |
 | CHAR-ARIA | Aria | Aria | Ais, historia antigua | Candidato pendiente; spoilers |
 
@@ -111,7 +112,7 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 
 | Grupo | Identidades que deben conservarse/localizarse | Próxima prioridad |
 |---|---|---|
-| Historia antigua | Zeus (`CHAR-ZEUS`), Hera (`CHAR-HERA`), Alfia (`CHAR-ALFIA`), Zard/Zald (`CHAR-ZARD`), Meteria (`CHAR-METERIA`), Albert Waldstein (`CHAR-ALBERT-WALDSTEIN`), Aria (`CHAR-ARIA`) | Fuentes literarias, spoilers y estados históricos diferenciados. |
+| Historia antigua | Zeus (`CHAR-ZEUS`), Hera (`CHAR-HERA`), Maxim (`CHAR-MAXIM`), Alfia (`CHAR-DARK-ALFIA`), Zald (`CHAR-DARK-ZALD`; variante Zard pendiente), Meteria (`CHAR-METERIA`), Albert Waldstein (`CHAR-ALBERT-WALDSTEIN`), Aria (`CHAR-ARIA`) | Fuentes literarias, spoilers y estados históricos diferenciados; evitar duplicados de Alfia/Zald. |
 | Era Oscura / Astrea Familia | Ryu/Ryuu (`CHAR-RYUU-LION`), Astrea (`CHAR-ASTREA`), Alise (`CHAR-ALISE-LOVELACE`), Kaguya (`CHAR-KAGUYA`), Lyra (`CHAR-LYRA`) | Localizadores internos de *Astrea Record* 1–3 y roster respaldado. |
 | Loki Familia | Loki, Finn, Riveria, Gareth, Bete, Tiona, Tione, Lefiya | Crear fichas individuales desde IDs ya reservados y describir por separado estado, relación y conocimiento por época. |
 | Freya Familia | Freya (`CHAR-FREYA`), Ottar (`CHAR-OTTAR`), Allen, Hedin, Hogni, Gulliver Brothers, Van; Anya según su intervalo; Syr con guardia de spoiler | Jerarquía, formación y vínculos por periodos; no fusionar alias por intuición. |
