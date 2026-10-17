@@ -29,3 +29,11 @@
 2. Priorizar localizadores primarios de Zeus/Hera, las Tres Grandes Misiones y el evento del Dragón Negro.
 3. Después continuar con miembros/Familias y deidades aún pendientes, sin duplicar personas ni transferir rasgos de wikis a canon confirmado.
 4. Mantener IN_PROGRESS hasta que la cobertura y la verificación estén demostradas.
+
+
+## Reanudación 2026-10-17 — cotejo oficial Zeus/Hera
+- Rama comprobada: `work/story-completion-danmachi-audit-2026-10`; HEAD observado antes de esta tanda: `2e7ce6b761a8b0f59cc886a99c5cd8c2f82a1074`.
+- Cambio real: `lore/danmachi/research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md` documenta el localizador oficial exacto `https://danmachi.com/center-test/normal.html`, pregunta 1, y reutiliza DMR-011-SRC-005/DMR-008-CLM-027 sin duplicarlos. Commit del archivo: `552b581af16b4207dd97d9aee630cd7c324e0de7`.
+- La fuente oficial respalda únicamente la victoria conjunta de Zeus Familia y Hera Familia contra Behemoth y Leviathan; no distribuye las victorias por separado ni confirma roster, niveles o cronología de caída.
+- Validación local: NOT_RUN. CI para el HEAD final de esta tanda: pendiente de consulta; no declarar PASS_CI sin SHA exacto y conclusión de ambos workflows.
+- Próxima acción: verificar CI en el tip final, corregir fallos y continuar el cotejo primario de las Tres Grandes Misiones y el Dragón Negro. Cobertura global PARTIAL; `main` y PR sin tocar.
