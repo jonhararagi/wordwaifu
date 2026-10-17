@@ -219,3 +219,18 @@ Próxima acción exacta:
 - **Validación local:** NOT_RUN.
 - **Siguiente acción:** verificar CI del HEAD documental, después confirmar alias/identidad de Loki (Narvi/Narfi, Cruz/Cruz Bussell) mediante fuente secundaria/primaria y ampliar Soma.
 - **Permisos:** main intacta, no merge, ninguna operación de PR.
+
+
+## DANMACHI-COVERAGE-001 — Reconciliación de nombres secundarios Loki
+
+**Estado:** IN_PROGRESS; pendiente cotejo primario y CI exacto para la tanda.
+
+- **HEAD funcional:** 5c6dfccb66fe00bac18be0e5dfe249e55e4ff821.
+- **Cambios:** fuente comunitaria registra Narvi Roll (ナルヴィ・ロール) como integrante de Loki Familia con debut reportado en *Sword Oratoria* volumen 4; se agrega como término de búsqueda al ID legado `CHAR-LOKI-NARFI`, pero no se declara que equivalga a «Narfi» hasta comprobar el texto primario. La ficha Cruz añade el nombre completo Cruz Bussell (クルス・バッセル) con procedencia secundaria.
+- **Procedencia:** DMR-017-SRC-001..003 añadidos al registro maestro; documento `DANMACHI-RESEARCH-017-loki-name-reconciliation.md` registra el crosswalk abierto y el proceso de verificación.
+- **Catálogo:** 107 records; 105 documents. No se crearon IDs nuevos para alias.
+- **CI del SHA funcional:** Validate WordWaifu run 38988972422 y DanMachi Lore and Retrieval Integrity run 38988972460 estaban IN_PROGRESS; consultar de nuevo los resultados exactos antes de PASS_CI.
+- **CI del checkpoint anterior:** SHA 08c2d077235700d4d757ab04bacf464f674ba0fb tuvo ambos workflows success (runs 38988792150 y 38988792172).
+- **Siguiente:** cotejo directo del volumen 4; luego continuar con miembros faltantes distinguiendo novela, manga y juego.
+- **Límites:** no inventar capítulos/páginas ni unir identidades solo por similitud de nombre.
+- `main` sin modificar, ningún merge ni operación de PR.

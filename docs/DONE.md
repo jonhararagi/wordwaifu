@@ -6,46 +6,41 @@
 
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- HEAD funcional anterior al checkpoint documental: `dac71211e69472cdbd8b527ee7f2b0b54b41ddbd`.
-- El HEAD posterior será el commit que actualice este documento; comprobar la punta real y sus workflows exactos antes de iniciar otra escritura.
-- Informe actual: [DANMACHI-COVERAGE-001 — reparación de fuentes y red de Astrea](DANMACHI-COVERAGE-001-ASTREA-ROSTER-AND-SOURCE-REPAIR-REPORT.md).
-- Informes previos: [tanda secundaria de Loki](DANMACHI-COVERAGE-001-LOKI-SECONDARY-MEMBERS-REPORT.md), [terciarios de Loki](DANMACHI-COVERAGE-001-LOKI-TERTIARY-ROSTER-REPORT.md).
+- HEAD funcional antes de este checkpoint: `5c6dfccb66fe00bac18be0e5dfe249e55e4ff821`.
+- El commit documental de este punto será el HEAD posterior; comprobar la punta real y sus workflows en el SHA exacto antes de iniciar más escrituras.
+- Informe actual: [DANMACHI-COVERAGE-001 — reconciliación de nombres Loki](DANMACHI-COVERAGE-001-LOKI-NAME-RECONCILIATION-REPORT.md).
+- Informes anteriores: [Astrea — fuentes y red](DANMACHI-COVERAGE-001-ASTREA-ROSTER-AND-SOURCE-REPAIR-REPORT.md), [Loki secundarios](DANMACHI-COVERAGE-001-LOKI-SECONDARY-MEMBERS-REPORT.md), [Loki terciarios](DANMACHI-COVERAGE-001-LOKI-TERTIARY-ROSTER-REPORT.md).
 
-## Última tanda: Astrea — reparación de fuentes y navegación
+## Tanda actual: reconciliación de identidad/alias
 
-- Se registraron las referencias faltantes `DMR-003-SRC-001`, `DMR-003-SRC-002` y `DMR-007-SRC-001..006` en `lore/danmachi/sources/00-registro-fuentes.md`. Sus URLs, tipo de fuente, claims cubiertos, continuidad y límites se guardaron desde los paquetes de investigación existentes; no se inventaron nuevas escenas.
-- Se amplió `lore/danmachi/familias/astrea-familia.md` con una red navegable de Astrea, Alise, Ryu/Ryuu, Kaguya, Lyra, Iska, Mariyu/Maryuu, Noin, Neze, Asta, Ryana y Celty.
-- Se separaron los perfiles etiquetados Nueva Astrea Familia/Solingen (Cecil, Iselina, Shau y Ulanda) para no mezclarlos automáticamente con el roster histórico de `CONT-AR`.
-- Se añadieron enlaces de retorno al expediente organizativo desde las 12 fichas históricas y las 4 fichas posteriores/de Solingen, con advertencias para no inferir relaciones personales a partir de afiliación compartida.
-- Comprobación estática en los archivos actuales: todos los 12 IDs de fuente declarados por el expediente de Astrea están registrados, y sus 16 enlaces relativos resuelven a rutas catalogadas.
-- Catálogo permanece en **107 registros / 104 documentos**; no se duplicaron los personajes que ya tenían ficha.
+- Actualizado `lore/danmachi/characters/narfi.md`, ID heredado `CHAR-LOKI-NARFI`: el nombre que la fuente comunitaria reporta como Narvi Roll (ナルヴィ・ロール; Naruvī Rōru) se añade como término de recuperación. La identidad con el «Narfi» de notas anteriores queda **sin resolver** hasta cotejar el briefing de *Sword Oratoria* volumen 4 en una edición autorizada; se conserva una sola ficha provisional.
+- Actualizado `lore/danmachi/characters/cruz.md`, ID `CHAR-LOKI-CRUZ`: «Cruz Bussell» (クルス・バッセル) añadido como nombre completo reportado por fuente secundaria.
+- Actualizado el catálogo a 107 registros / 105 documentos, la entrada del índice de personajes y los enlaces del expediente de Familia Loki.
+- Registradas fuentes DMR-017-SRC-001..003 y creado `lore/danmachi/research/inbox/DANMACHI-RESEARCH-017-loki-name-reconciliation.md`.
+- No se crearon nuevos IDs de personaje; el expediente Narfi mantiene su ID/slug legado hasta cerrar la correspondencia.
 
-## CI comprobado para commits funcionales
+## CI observado
 
-- SHA `5202ed029fe4d7f768c923f60639841fad0c1567`: [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38988480037), [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38988480040).
-- SHA `b2b449a678f17f1d3f3a751f14af7f62b3db3319`: [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38988565677), [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38988565690).
-- En la última consulta los workflows para `9d9a3dd247624325d23a5883b555b13053e2a34a`, `5e1bd33f38f6ce92cc16524ecc0c08b0940ce596` y `dac71211e69472cdbd8b527ee7f2b0b54b41ddbd` aún estaban en curso. Comprobarlos nuevamente con sus SHA exactos:
-  - [Validate / 9d9a3dd](https://github.com/jonhararagi/wordwaifu/actions/runs/38988609412) · [Lore Integrity / 9d9a3dd](https://github.com/jonhararagi/wordwaifu/actions/runs/38988609502).
-  - [Validate / 5e1bd33](https://github.com/jonhararagi/wordwaifu/actions/runs/38988639057) · [Lore Integrity / 5e1bd33](https://github.com/jonhararagi/wordwaifu/actions/runs/38988639069).
-  - [Validate / dac712](https://github.com/jonhararagi/wordwaifu/actions/runs/38988668936) · [Lore Integrity / dac712](https://github.com/jonhararagi/wordwaifu/actions/runs/38988668942).
+- El checkpoint funcional previo `08c2d077235700d4d757ab04bacf464f674ba0fb` tuvo ambos workflows en success para el SHA exacto: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38988792150), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38988792172).
+- En el momento de esta entrega, CI para el SHA funcional actual `5c6dfccb66fe00bac18be0e5dfe249e55e4ff821` estaba en curso: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38988972422), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38988972460).
 - Validación local: **NOT_RUN**.
-- El SHA documental de este checkpoint necesitará comprobación CI propia tras guardarse. No se toma el estado de commits previos como evidencia para el nuevo SHA.
+- El SHA documental de este checkpoint requiere su propia verificación CI exacta. No trasladar resultados de un commit anterior al actual.
 
-## Últimas tandas Loki
+## Trabajo previo conservado
 
-- `CHAR-LOKI-AKI` tiene alias secundario de búsqueda Anakitty Autumn; no se creó una segunda identidad.
-- Se añadieron `CHAR-LOKI-ELFY-COLETTE` y `CHAR-LOKI-RAKTA-HAZE`.
-- Se añadieron `CHAR-LOKI-ARCS`, `CHAR-LOKI-CYNTHIA`, `CHAR-LOKI-ORBA`.
-- Fuentes secundarias, IDs y límites quedan registrados. El nivel y la función de Orba conservan una discrepancia sin resolver. La lista de Loki no está demostrada exhaustiva.
+- Loki: fichas provisionales para Elfy Colette, Rakta Haze, Arcs, Cynthia y Orba; alias secundario Anakitty Autumn en Aki.
+- Astrea: registro de fuentes reparado para DMR-003/007; roster histórico navegable y enlaces de retorno desde 12 perfiles históricos; enlaces separados para Cecil, Iselina, Shau y Ulanda como grupo relacionado con Nueva Astrea/Solingen.
+- Catálogo actual: 107 registros, 105 documentos.
+- Las wikis se mantienen como fuentes secundarias y las diferencias entre novela, adaptación, manga y AU no se fusionan.
 
 ## Próxima acción exacta
 
-1. Confirmar el HEAD documental tras este checkpoint y ambos workflows en el SHA exacto.
-2. Continuar con aliases/identidades secundarios de Loki (por ejemplo, Narvi/Narfi y Cruz/Cruz Bussell), solo con fuente y evitando IDs duplicados.
-3. Completar fichas individuales y procedencia de la Familia Soma, luego dioses/Familias pendientes, sin dar por cerrada una etapa histórica sin cotejo.
-4. Mantener `IN_PROGRESS` hasta que la cobertura y los tests estén demostrados.
+1. Consultar CI de este SHA funcional y del checkpoint documental exacto.
+2. Resolver la correspondencia Narfi/Narvi Roll y el pasaje de Cruz Bussell en *Sword Oratoria* volumen 4, sin inventar capítulo/página.
+3. Continuar cubriendo miembros de Loki que falten, separando personajes exclusivamente de manga/juego de los respaldados por la novela.
+4. Después, ampliar Soma y las deidades/Familias pendientes, manteniendo esta misión abierta hasta que la cobertura esté demostrada.
 
-## Límites y permisos
+## Permisos
 
-- Separar canon, fuente secundaria, adaptación y AU; no inventar capítulos, páginas o desenlaces.
-- `main` no se modificó; no hubo merges ni operaciones sobre PR.
+- `main` intacta; no se hicieron merges ni operaciones sobre PR.
+- No elevar afirmaciones secundarias a canon verificado.
