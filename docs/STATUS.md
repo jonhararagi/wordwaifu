@@ -1,3 +1,16 @@
+## DANMACHI-COVERAGE-004 — checkpoint de matriz Loki (2026-10-17)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`.
+- **Base verificada:** `6a71c496da7db98398ce2ac014c57b2e6766d9a7`.
+- **Cambio:** mapa de cobertura por clase de evidencia y cola de cotejo en `lore/danmachi/familias/loki-familia.md`; se sincronizaron `lore/danmachi/WORK_QUEUE.md` y `lore/danmachi/BATCH_LOG.md`.
+- **Alcance:** documentación y navegación; no se añadieron fichas ni IDs. Los miembros secundarios siguen provisionales y las entradas manga/juego no se convierten en canon de novela.
+- **CI del checkpoint anterior:** Validate WordWaifu #1538 SUCCESS y DanMachi Lore and Retrieval Integrity #797 SUCCESS para `6a71c496da7db98398ce2ac014c57b2e6766d9a7`.
+- **Pruebas locales de este cambio:** NOT_RUN. Consultar ambos workflows para el SHA documental final antes de aceptar este checkpoint.
+- **Estado global:** DanMachi IN_PROGRESS; enciclopedia PARTIAL.
+- **Restricciones:** `main` intacta; sin merges ni operaciones de PR.
+
+---
+
 ## DANMACHI-COVERAGE-003 — corrección del test de corpus (2026-10-17)
 
 - **Hallazgo real de CI (intento corregido):** DanMachi Lore and Retrieval Integrity #794 falló en `tests/test_lore_corpus.cjs` porque el índice devolvió 122 claims frente a 120 esperados tras añadirse dos claims explícitos de la sinopsis editorial del volumen 2.

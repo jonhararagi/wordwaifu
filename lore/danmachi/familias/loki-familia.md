@@ -174,3 +174,25 @@ Los siguientes expedientes se crean para que la app pueda recuperar los nombres 
 - [Coco — personaje manga de Loki](../characters/coco-loki.md) — Beast Human, aventurera reportada; debut secundario capítulo 63. Se separa expresamente de [Coco Collins](../characters/coco-collins.md), cuyo expediente existente pertenece a Soma Familia.
 
 **Procedencia común:** `DMR-018-SRC-001`. Los capítulos de manga y los atributos descritos siguen siendo datos secundarios, no una declaración de que las fichas estén verificadas en la novela ligera.
+
+
+## Mapa de cobertura del roster · DANMACHI-COVERAGE-004
+
+Esta tabla es una **matriz de investigación**, no una declaración de roster exhaustivo. Distingue el alcance de cada evidencia para que la interfaz no presente una ficha mínima como biografía completa ni una aparición de manga como confirmación automática de novela ligera.
+
+| Grupo de cobertura | Identidades enlazadas | Evidencia disponible | Estado que debe conservar la interfaz |
+|---|---|---|---|
+| Núcleo en perfil oficial de *Sword Oratoria* | Ais, Lefiya, Tiona, Tione, Loki, Finn, Riveria, Gareth, Bete, Raul | Perfiles oficiales de adaptación: https://danmachi.com/sword_oratoria/character/ | `CONT-ANIME`; no implica verificación integral de novela ni roster completo por periodo |
+| Secundarios con leads de novela, pero sin localizador primario cotejado | [Elfy Colette](../characters/elfy-colette.md), [Rakta Haze](../characters/rakta-haze.md), [Aki](../characters/aki.md), [Narfi/Narvi Roll](../characters/narfi.md), [Cruz](../characters/cruz.md), [Asta Knox](../characters/asta-knox.md), [Neze Rankett](../characters/neze-rankett.md), [Ulanda](../characters/ulanda.md), [Ruuni](../characters/ruuni.md), [Shau](../characters/shau.md) | Paquetes DANMACHI-RESEARCH-015, -017 y -018; fuentes secundarias y/o referencias a volúmenes sin pasaje abierto | `secondary_reference_primary_locator_pending`; no completar nivel, personalidad ni vínculos por inferencia |
+| Roster terciario con conflicto o datos mínimos | [Arcs](../characters/arcs.md), [Cynthia](../characters/cynthia.md), [Orba](../characters/orba.md), [Lox](../characters/lox.md), [Kevin](../characters/kevin.md), [Morel](../characters/morel.md), [Sharon](../characters/sharon.md), [Sonia](../characters/sonia.md) | DANMACHI-RESEARCH-016 y -018; snapshot de roster comunitario | Identidad/afiliación provisional; niveles y ocupaciones reportados, no hechos primarios; preservar el conflicto de función de Orba |
+| Manga/juego, sin transferencia automática a novela | [Carmilia](../characters/carmilia.md), [Lloyd](../characters/lloyd.md), [Claire](../characters/claire.md), [Anju](../characters/anju.md), [Liza](../characters/liza.md), [Kalos](../characters/kalos.md), [Remilia](../characters/remilia-loki.md), [Nick](../characters/nick.md), [Nicole](../characters/nicole.md), [Ruuni](../characters/ruuni.md), [Shifon](../characters/shifon.md), [Stark](../characters/stark.md), [Coco de Loki](../characters/coco-loki.md) | DANMACHI-RESEARCH-018/-019; descubrimiento comunitario de manga | `CONT-MANGA` o continuidad de juego declarada; no anunciar membresía confirmada de `CONT-MAIN-LN` sin evidencia propia |
+
+### Cola de cotejo priorizada
+
+1. **Sword Oratoria, volumen 4:** cotejar briefing de expedición y nombres de Aki, Narfi/Narvi, Cruz y los miembros de apoyo. Es el mejor lote para resolver alias y relaciones operativas sin crear IDs.
+2. **Sword Oratoria, volumen 2:** localizar la escena de Rakta en la expedición al piso 37; registrar únicamente reacción y participantes visibles.
+3. **DanMachi, volumen 10 / Sword Oratoria, volumen 6:** verificar a Elfy Colette, el alias Lomoire y la relación descrita con Lefiya.
+4. **Sword Oratoria, volumen 7:** comprobar Arcs, Cynthia y Orba; resolver la clasificación de Orba con el texto y no por votación de wikis.
+5. **Después:** los miembros manga-only, manteniéndolos en su continuidad mientras no exista evidencia editorial/primaria que permita otro alcance.
+
+**Regla de cierre:** cada dato promovido necesita localizador reproducible (volumen y capítulo/página según la edición disponible), continuidad y claim concreto. Si no se consigue abrir el texto, registrar el bloqueo; no marcar el personaje como completo.

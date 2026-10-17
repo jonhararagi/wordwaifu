@@ -248,3 +248,9 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se registró `DMR-012-SRC-001`: ficha editorial oficial de GA文庫 para el volumen principal 1, consultada el 2026-10-14. Su alcance se limita al marco general de Orario, el laberinto subterráneo y la premisa de Bell/Hestia; no prueba detalles de pisos, reglas o escenas no descritas.
 - Se añadió `LOC-DUNGEON` al catálogo estructurado y al índice de lugares, retirándolo de `reservedIds` para evitar una colisión entre ID reservado y registro activo.
 - Estado: PARTIAL. Los pisos, accesos, topología detallada, monstruos y reglas de expedición siguen pendientes de cotejo con fuentes por volumen/capítulo.
+
+
+## DANMACHI-COVERAGE-004 · Matriz de cobertura del roster de Loki
+- Se añadió a `familias/loki-familia.md` una matriz que separa perfiles oficiales de adaptación, secundarios con leads de novela pendientes, roster terciario y personajes manga/juego.
+- La matriz enlaza expedientes existentes y fija una cola de cotejo por volúmenes 4, 2, 10/Sword Oratoria 6 y Sword Oratoria 7. No se crearon IDs nuevos ni se promovieron claims secundarios a canon confirmado.
+- Estado: PARTIAL. Próximo objetivo de contenido: cotejar un pasaje de volumen 4 para Aki/Narfi/Cruz y convertirlo en relaciones atómicas con localizador, si el texto accesible permite verificarlo.

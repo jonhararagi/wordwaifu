@@ -304,3 +304,16 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Cotejar pisos, accesos, monstruos, recursos, reglas de expedición y peligros con fuentes por volumen/capítulo.
 - [ ] Añadir enlaces inversos desde los índices de canon, eventos y personajes solo cuando el destino sea una relación sustentada.
 - Regla: la sinopsis editorial es fuente oficial de alcance general, no sustituto del texto íntegro; no inventar geografía ni localizadores.
+
+
+## DANMACHI-COVERAGE-004 · Matriz del roster de Loki y cola de cotejo
+
+- [x] Separar el roster en perfiles oficiales de adaptación, secundarios con localizador primario pendiente, terciarios de roster comunitario y manga/juego-only.
+- [x] Añadir enlaces de identidad existentes sin crear IDs nuevos ni trasladar continuidades.
+- [ ] Cotejar primero *Sword Oratoria* vol. 4: briefing de Aki, Narfi/Narvi, Cruz y miembros de apoyo.
+- [ ] Cotejar *Sword Oratoria* vol. 2 para la escena de Rakta y piso 37.
+- [ ] Cotejar *DanMachi* vol. 10 / *Sword Oratoria* vol. 6 para Elfy y el alias Lomoire.
+- [ ] Cotejar *Sword Oratoria* vol. 7 para Arcs, Cynthia y Orba; resolver la discrepancia de ocupación de Orba.
+- [ ] Mantener manga/juego separados de novela ligera; no promover una ficha por la mera presencia de un nombre en una wiki.
+
+La matriz mejora navegación y control de cobertura, pero **no** declara completo el roster de Loki. Pruebas locales: NOT_RUN desde esta interfaz; validar el HEAD final con ambos workflows.
