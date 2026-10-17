@@ -261,3 +261,19 @@ Estado: IN_PROGRESS; localizadores primarios de novela pendientes.
 - Catálogo: 128 records, 108 documents; no se añadieron identidades nuevas.
 - Validación local: NOT_RUN. Verificar ambos workflows para SHAs funcional y documental exactos.
 - Siguiente: pasar a dioses y otras Familias tras confirmar CI; main no tocada, sin merges ni operaciones de PR.
+
+## DANMACHI-COVERAGE-001 — Tanda Zeus/Hera y Familias históricas
+
+**Estado:** IN_PROGRESS. Enciclopedia global PARTIAL.
+
+- Rama: work/story-completion-danmachi-audit-2026-10.
+- SHA funcional de esta tanda: b279d1d70e739ce5aa992088dbf6884cea2a6941.
+- Nuevas fichas: CHAR-ZEUS, CHAR-HERA, CHAR-MAXIM, CHAR-METERIA, FAM-ZEUS y FAM-HERA.
+- Nuevos registros del catálogo: +6 (128 → 134); documentos: +1 (108 → 109).
+- Fuentes registradas: DMR-021-SRC-001..006, todas COMMUNITY_WIKI con estado secondary_reference_primary_locator_pending.
+- Evidencia oficial reutilizada: DMR-011-SRC-005 y el claim existente DMR-008-CLM-027 confirman solo que Zeus Familia y Hera Familia derrotaron conjuntamente a Behemoth y Leviathan. No se atribuye una criatura a cada Familia.
+- IDs cruzados: CHAR-ALFIA → CHAR-DARK-ALFIA; CHAR-ZARD → CHAR-DARK-ZALD; no crear duplicados para estas identidades existentes.
+- Archivos adicionales: índices de deidades/Familias/personajes, MASTER_INDEX, fuentes, cronología ERA-04/ERA-05, evento candidato contra el Dragón Negro, evento candidato de pérdida de posición y Great Quests; conexiones añadidas en Alfia/Zald.
+- CI del SHA funcional estaba QUEUED al cierre; verificar ambas ejecuciones por SHA exacto y no marcar PASS_CI sin resultado final. Validación local: NOT_RUN.
+- Siguiente: revisar CI del SHA funcional/documental, corregir regresiones y luego seguir con fuentes primarias y cobertura histórica. No pasar al generador antes de completar el alcance prioritario.
+- main intacta; sin merges ni operaciones sobre PR.
