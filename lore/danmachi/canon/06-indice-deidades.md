@@ -7,8 +7,8 @@ Este índice apunta a las fichas de personaje o propone futuros registros. No cr
 | DM-CHAR-HESTIA | Hestia | Hestia Familia, Bell | Ficha inicial existente |
 | DM-CHAR-LOKI | Loki | Loki Familia | Ficha inicial existente |
 | CHAR-FREYA | Freya | Freya Familia; Syr como alias/identidad por verificar | Candidato pendiente |
-| CHAR-ZEUS | Zeus | Zeus Familia, historia antigua | Candidato pendiente |
-| CHAR-HERA | Hera | Hera Familia, historia antigua | Candidato pendiente |
+| CHAR-ZEUS | [Zeus](../characters/zeus.md) | Zeus Familia, Hera Familia, Bell (spoiler) | Expediente inicial; relaciones biográficas secundarias y localizador primario pendiente |
+| CHAR-HERA | [Hera](../characters/hera.md) | Hera Familia, Zeus Familia, historia antigua | Expediente inicial; roster y estado posterior pendientes de fuente primaria |
 | CHAR-OURANOS | Ouranos | Guild, Dungeon, Fels | Candidato pendiente |
 | CHAR-HERMES | Hermes | Hermes Familia, Bell | Candidato pendiente |
 | CHAR-HEPHAISTOS | Hephaistos | Herrería y equipo | Candidato pendiente |
