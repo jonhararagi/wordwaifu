@@ -1,21 +1,21 @@
 # ESTADO ACTUAL — DANMACHI-COVERAGE-001 EN PROGRESO
 
-**Actualizado:** 2026-10-16. Este bloque prevalece sobre los estados históricos siguientes.
+**Actualizado:** 2026-10-16/17. Este bloque prevalece sobre los estados históricos siguientes.
 
-- **Rama:** `work/story-completion-danmachi-audit-2026-10`.
-- **Último commit funcional:** `91625334628fe21f7d99930876fc049294c5d794`.
-- **Cobertura nueva:** Arcs, Cynthia y Orba incorporados como fichas individuales; Aki tiene el alias de búsqueda secundario Anakitty Autumn; Elfy Colette y Rakta Haze siguen presentes como fichas provisionales.
-- **Catálogo:** 107 registros y 104 documentos catalogados. Tanda 2: +2 registros; tanda 3: +3 registros.
-- **Fichas agregadas en esta tanda:** `CHAR-LOKI-ARCS`, `CHAR-LOKI-CYNTHIA`, `CHAR-LOKI-ORBA`.
-- **Archivos funcionales de esta tanda:** `lore/danmachi/characters/arcs.md`, `cynthia.md`, `orba.md`; catálogo, índice de personajes, índice de Familias, ficha de Familia Loki, registro de fuentes y `DANMACHI-RESEARCH-016-loki-tertiary-roster.md`.
-- **Procedencia:** los datos nuevos proceden de un índice comunitario de personajes menores; los localizadores de novela siguen pendientes. El conflicto aventurero/ayudante de Orba queda explícito. No se infirieron amistades, hechizos ni atributos desconocidos.
-- **CI del SHA funcional `91625334628fe21f7d99930876fc049294c5d794`:**
-  - [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38988164201) — `QUEUED` al registrar esta tanda.
-  - [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38988164371) — `IN_PROGRESS` al registrar esta tanda.
-- **CI de la tanda previa:** ambos workflows concluyeron success para el SHA funcional `3cf972222458b1a2c3a21bb8798ed76621b1fcc3` y el SHA documental `4d0d2ea42078b9066c98b6caceb519c8d83cac91`; esto no demuestra los resultados de esta tanda.
-- **Validación local:** NOT_RUN desde esta interfaz. Verificar ambos workflows en el SHA documental posterior antes de declarar la tanda verificada.
-- **Cobertura global:** PARTIAL. El roster de Loki aún no se declara exhaustivo; las fuentes primarias de miembros secundarios y las etapas históricas siguen pendientes. Astrea, Soma y otras deidades/Familias siguen abiertas.
-- `main` intacta; no se hicieron merges ni operaciones sobre PR.
+- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
+- **HEAD funcional verificado antes de esta actualización documental:** `dac71211e69472cdbd8b527ee7f2b0b54b41ddbd`.
+- **Trabajo funcional de Astrea:** restaurados en el registro maestro 8 IDs de fuente que ya utilizaba el paquete de investigación pero no estaban dados de alta; el expediente de Familia Astrea ahora tiene roster navegable con 12 fichas históricas enlazadas, relaciones sustentadas y sección aparte para Nueva Astrea Familia/Solingen.
+- **Navegación bidireccional:** se añadieron enlaces de retorno desde 12 fichas históricas y 4 fichas etiquetadas Nueva Astrea/Solingen al expediente de Familia Astrea, con advertencias de continuidad.
+- **Catálogo:** 107 registros y 104 documentos catalogados; no se crearon fichas duplicadas de Astrea.
+- **Integridad estática comprobada:** los 12 IDs de fuente que declara el expediente familiar existen en el registro maestro; 16 enlaces relativos del expediente familiar resuelven a rutas catalogadas. No equivale por sí solo a ejecutar toda la suite local.
+- **Últimos commits funcionales relacionados:** `5202ed029fe4d7f768c923f60639841fad0c1567` (fuentes y red familiar), `b2b449a678f17f1d3f3a751f14af7f62b3db3319`, `9d9a3dd247624325d23a5883b555b13053e2a34a`, `5e1bd33f38f6ce92cc16524ecc0c08b0940ce596`, `dac71211e69472cdbd8b527ee7f2b0b54b41ddbd`.
+- **CI en SHA exactos comprobado al redactar:**
+  - SHA `5202ed029fe4d7f768c923f60639841fad0c1567`: [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38988480037), [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38988480040).
+  - SHA `b2b449a678f17f1d3f3a751f14af7f62b3db3319`: [Validate WordWaifu — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38988565677), [DanMachi Lore and Retrieval Integrity — success](https://github.com/jonhararagi/wordwaifu/actions/runs/38988565690).
+  - En la última consulta, los workflows de `9d9a3dd...`, `5e1bd33...` y `dac71211e69472cdbd8b527ee7f2b0b54b41ddbd` seguían `IN_PROGRESS`: [Validate / dac712](https://github.com/jonhararagi/wordwaifu/actions/runs/38988668936), [Lore Integrity / dac712](https://github.com/jonhararagi/wordwaifu/actions/runs/38988668942). Verificar las conclusiones otra vez; no trasladar el PASS de commits previos.
+- **Validación local:** NOT_RUN desde esta interfaz.
+- **Cobertura global:** PARTIAL. La procedencia de miembros históricos de Astrea es más navegable, pero capítulos/páginas de las novelas y la cronología individual aún requieren cotejo. La cobertura Loki no es exhaustiva. Soma y otras deidades/Familias continúan abiertas.
+- `main` no se modificó; no se creó, cerró, actualizó ni fusionó ningún PR.
 
 ---
 

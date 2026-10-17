@@ -202,3 +202,20 @@ Próxima acción exacta:
 - **CI tanda 2:** ambos workflows fueron success en los SHA funcional/documental 3cf9722 y 4d0d2ea.
 - **Siguientes pasos:** cerrar verificación CI exacta; continuar con el roster Loki nombrado; después Astrea, Soma y deidades/Familias.
 - **Permisos respetados:** rama autorizada únicamente; main y PR sin modificar; sin merges.
+
+
+## DANMACHI-COVERAGE-001 — Astrea: reparación del registro de fuentes y red bidireccional
+
+**Estado:** IN_PROGRESS; la enciclopedia sigue PARTIAL.
+
+- **Rama:** work/story-completion-danmachi-audit-2026-10.
+- **HEAD funcional antes del checkpoint documental:** dac71211e69472cdbd8b527ee7f2b0b54b41ddbd.
+- **Cambio principal de procedencia:** las referencias usadas por los paquetes de investigación DMR-003 y DMR-007 estaban citadas por fichas/claims pero no existían en el registro maestro. Se agregaron DMR-003-SRC-001/002 y DMR-007-SRC-001..006 en `lore/danmachi/sources/00-registro-fuentes.md`, reconstruidas a partir de los paquetes persistidos.
+- **Red de Astrea:** el expediente de Familia Astrea ahora enlaza 12 fichas históricas con tipo de evidencia, continuidad y límites; los registros de Cecil, Iselina, Shau y Ulanda se mantienen separados como grupo posterior/Nueva Astrea/Solingen hasta que la cronología exacta se coteje.
+- **Navegación bidireccional:** enlaces de retorno desde las 12 fichas históricas y 4 fichas del grupo posterior. Afiliación común no se usa como prueba de amistad.
+- **Verificación estática:** los 12 source IDs declarados por la ficha familiar están registrados; los 16 enlaces relativos de ese expediente resuelven a rutas catalogadas. Esto no sustituye la ejecución de pruebas.
+- **Catálogo:** 107 records y 104 documents; no se crearon identidades duplicadas.
+- **CI observado:** 5202ed0 (runs 38988480037 y 38988480040) y b2b449a (runs 38988565677 y 38988565690) tuvieron ambos workflows en success para sus respectivos SHA exactos. En la última consulta 9d9a3dd, 5e1bd33 y dac712 tenían workflows IN_PROGRESS. Reconsultar; no inferir éxito por ejecuciones de un padre.
+- **Validación local:** NOT_RUN.
+- **Siguiente acción:** verificar CI del HEAD documental, después confirmar alias/identidad de Loki (Narvi/Narfi, Cruz/Cruz Bussell) mediante fuente secundaria/primaria y ampliar Soma.
+- **Permisos:** main intacta, no merge, ninguna operación de PR.
