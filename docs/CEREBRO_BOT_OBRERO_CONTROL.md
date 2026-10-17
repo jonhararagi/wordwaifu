@@ -250,3 +250,14 @@ Próxima acción exacta:
 - **CI del SHA funcional actual 66c7bf03d65e76e08055afcdfa151cda0b413ef5:** Validate #38989630921 y Lore Integrity #38989630922 estaban IN_PROGRESS al cierre funcional. Volver a consultar; no marcar PASS basado en un SHA anterior.
 - **Próximo:** comprobar CI exacto; seguir completando los nombres restantes del roster, con manga separado de novela, y luego pasar a Soma/deidades/Familias.
 - **main y PRs:** sin modificar; no hubo merges.
+
+
+## DANMACHI-COVERAGE-001 — red relacional de Soma Familia
+
+Estado: IN_PROGRESS; localizadores primarios de novela pendientes.
+- SHA funcional: a5fa611ebe55fc75a66017f7d147c64b0f0b50ae.
+- Cambios: expediente Soma Familia, perfiles Soma/Zanis/Chandra/Lili/Canoe/Kaede/Momiji/Coco, DMR-013-SRC-009..013, claims CLM-011..017 y RESEARCH-DM-020.
+- Procedencia: sucesión Zanis/Chandra e intervenciones con Lili siguen secundarias; Canoe continúa con detalles disputados. Los datos de juego de Kaede/Momiji/Coco se limitan a CONT-GAME y no se transfieren a la novela ligera.
+- Catálogo: 128 records, 108 documents; no se añadieron identidades nuevas.
+- Validación local: NOT_RUN. Verificar ambos workflows para SHAs funcional y documental exactos.
+- Siguiente: pasar a dioses y otras Familias tras confirmar CI; main no tocada, sin merges ni operaciones de PR.
