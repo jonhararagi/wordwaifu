@@ -168,3 +168,14 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 
 - [DANMACHI-RESEARCH-009 · Astrea Record, Sword Oratoria y Familia Chronicle](research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md) — once afirmaciones provisionales ya indexadas en el buscador.
 - Dossiers: [índice de volúmenes y líneas paralelas](volumes/00-indice-volumenes-y-arcos.md).
+
+
+## Zeus/Hera y grandes Familias históricas · DANMACHI-COVERAGE-001
+
+- [Zeus](characters/zeus.md) — deidad asociada a Zeus Familia; relaciones biográficas secundarias.
+- [Hera](characters/hera.md) — deidad asociada a Hera Familia; historia personal y estado posterior pendientes.
+- [Zeus Familia](familias/zeus-familia.md) — expediente histórico inicial; Grandes Misiones con referencia oficial auxiliar, roster y caída pendientes.
+- [Hera Familia](familias/hera-familia.md) — expediente histórico inicial; roster, liderazgo y estado posterior pendientes.
+- [Maxim](characters/maxim.md) — capitán reportado por referencias secundarias; cargo y nivel por etapa pendientes.
+- [Meteria](characters/dark-era/meteria.md) — expediente con spoiler mayor; parentesco y maternidad reportados secundariamente.
+- [DANMACHI-RESEARCH-021 · Zeus, Hera y sus Familias](research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md) — separa evidencia oficial auxiliar y referencias secundarias.
