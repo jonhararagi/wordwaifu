@@ -29,3 +29,9 @@ Esta ficha enlaza hacia Astrea y la red de integrantes de su nueva Familia. Esa 
 ## Pendiente de investigación
 
 confirmación primaria de identidad, especie, nivel, aspecto, personalidad, escenas y relaciones. Hasta obtener un localizador primario, no se asignan voz, especie, nivel, diseño, personalidad, poderes ni acontecimientos inventados.
+
+
+## Navegación organizativa y continuidad
+
+- **Expediente relacionado:** [Familia Astrea y su red de relaciones](../familias/astrea-familia.md), sección «Nueva Astrea Familia / Solingen».
+- **Límite:** el enlace facilita la navegación entre registros relacionados; no prueba que este personaje pertenezca al roster histórico de Astrea Record ni fija el intervalo de pertenencia. Mantener separados los grupos hasta que una fuente y una fecha concretas respalden la relación.

@@ -35,3 +35,9 @@ La ficha se puede abrir desde la red de Astrea Familia. Una afiliación comparti
 ## Pendiente de investigación
 
 confirmación primaria de capitanía, especie, nivel, aspecto, voz, personalidad, escenas y cronología. La información secundaria ayuda a encontrar posibles rutas, pero no se considera canon aprobado hasta localizar el pasaje correspondiente.
+
+
+## Navegación organizativa y continuidad
+
+- **Expediente relacionado:** [Familia Astrea y su red de relaciones](../familias/astrea-familia.md), sección «Nueva Astrea Familia / Solingen».
+- **Límite:** el enlace facilita la navegación entre registros relacionados; no prueba que este personaje pertenezca al roster histórico de Astrea Record ni fija el intervalo de pertenencia. Mantener separados los grupos hasta que una fuente y una fecha concretas respalden la relación.
