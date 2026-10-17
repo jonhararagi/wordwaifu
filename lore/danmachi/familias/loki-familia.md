@@ -128,3 +128,12 @@ Los perfiles oficiales de Sword Oratoria respaldan únicamente lo que aparece en
 - **[Aki / Anakitty Autumn](../characters/aki.md)** — se mantiene un solo expediente para la identidad. El nombre completo se incorpora como alias de búsqueda reportado por una fuente secundaria; no se crea un duplicado mientras falta confirmarlo en fuente primaria.
 
 Estos enlaces reducen huecos de navegación, no cierran la cobertura de miembros. Las wikis sirven como pistas; no elevan nombres, niveles, habilidades o relaciones a canon primario. Quedan pendientes localizadores de novela y revisión del roster por periodos.
+
+
+## Miembros nombrados adicionales · cobertura secundaria
+
+- **[Arcs](../characters/arcs.md)** — aventurero de Loki Familia y nivel 4 según el índice comunitario; debut reportado en *Sword Oratoria*, volumen 7. Historia y función detallada sin cotejar.
+- **[Cynthia](../characters/cynthia.md)** — presentada como maga de Loki Familia; debut reportado en *Sword Oratoria*, volumen 7. Raza, nivel, hechizos y relaciones siguen desconocidos.
+- **[Orba](../characters/orba.md)** — la fuente comunitaria reporta raza Beast Human y nivel 4, pero discrepa sobre si su función es aventurero o ayudante/supporter; la ficha conserva el conflicto sin resolverlo por intuición.
+
+Estos enlaces amplían la recuperación del roster, pero no constituyen cotejo canónico. La fuente identificada para estas tres fichas es secundaria. No asignarles amistades, cargos permanentes o papeles en escuadrones sin escenas verificadas.

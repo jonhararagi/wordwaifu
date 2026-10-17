@@ -5,7 +5,7 @@ Esta es una lista de investigación. El estado de una Familia puede variar por a
 | ID | Nombre | Tipo/función de búsqueda | Estado |
 |---|---|---|---|
 | DM-FAM-HESTIA | Hestia Familia | Grupo central de la historia | Ficha inicial existente |
-| DM-FAM-LOKI | [Loki Familia](loki-familia.md) | Aventureros de alto nivel, expediciones, Sword Oratoria y miembros de apoyo | Fichas individuales ampliadas; Elfy y Rakta siguen con base secundaria y la cronología del roster es parcial |
+| DM-FAM-LOKI | [Loki Familia](loki-familia.md) | Aventureros, expediciones y miembros de apoyo | Fichas individuales ampliadas; los expedientes secundarios y la cronología del roster siguen parciales |
 | FAM-FREYA | Freya Familia | Facción poderosa e historia principal | Candidato pendiente |
 | FAM-ZEUS | Zeus Familia | Historia antigua y grandes expediciones | Candidato pendiente |
 | FAM-HERA | Hera Familia | Historia antigua y grandes expediciones | Candidato pendiente |

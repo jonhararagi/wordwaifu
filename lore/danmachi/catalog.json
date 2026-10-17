@@ -714,6 +714,20 @@
       "priority": "normal"
     },
     {
+      "id": "CHAR-LOKI-ARCS",
+      "path": "characters/arcs.md",
+      "type": "character",
+      "tags": [
+        "Arcs",
+        "Ākusu",
+        "アークス",
+        "Loki Familia",
+        "Sword Oratoria volume 7"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "normal"
+    },
+    {
       "id": "CHAR-LOKI-CRUZ",
       "path": "characters/cruz.md",
       "type": "character",
@@ -725,6 +739,21 @@
         "expedition"
       ],
       "status": "primary_novel_locator_identified_details_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-CYNTHIA",
+      "path": "characters/cynthia.md",
+      "type": "character",
+      "tags": [
+        "Cynthia",
+        "Shinshia",
+        "シンシア",
+        "Loki Familia",
+        "mage",
+        "Sword Oratoria volume 7"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
       "priority": "normal"
     },
     {
@@ -755,6 +784,21 @@
         "expedition"
       ],
       "status": "primary_novel_locator_identified_details_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-ORBA",
+      "path": "characters/orba.md",
+      "type": "character",
+      "tags": [
+        "Orba",
+        "Oruba",
+        "オルバ",
+        "Loki Familia",
+        "Beast Human",
+        "Sword Oratoria volume 7"
+      ],
+      "status": "secondary_reference_conflict_pending_primary_check",
       "priority": "normal"
     },
     {
@@ -2371,6 +2415,12 @@
     {
       "document_id": "RESEARCH-DM-015",
       "path": "research/inbox/DANMACHI-RESEARCH-015-loki-secondary-members.md",
+      "type": "character_relationship_research",
+      "status": "secondary_reference_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-016",
+      "path": "research/inbox/DANMACHI-RESEARCH-016-loki-tertiary-roster.md",
       "type": "character_relationship_research",
       "status": "secondary_reference_primary_locator_pending"
     }

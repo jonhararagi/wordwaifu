@@ -808,3 +808,26 @@ verification_status: stub
 - rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
 - verification_status: secondary_alias_reference_primary_locator_pending
+
+
+## DMR-016-SRC-001 · Minor Characters — índice comunitario de miembros secundarios de Loki
+
+- source_id: DMR-016-SRC-001
+- title: Minor Characters
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria
+- volume_or_edition: Artículo web dinámico; sección Loki Familia
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Minor_Characters
+- accessed_at: 2026-10-16
+- locator_type: community_article_section
+- locator: Sección “Loki Familia”, entradas Arcs, Cynthia y Orba
+- claims_supported: [DMR-016-CLM-001, DMR-016-CLM-002, DMR-016-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-MANGA (según la referencia secundaria)
+- reliability_note: Fuente secundaria para descubrir nombres, etiquetas generales y debuts atribuidos. No sustituye el texto de la novela. La clasificación ocupacional de Orba presenta discrepancia dentro de la misma wiki.
+- conflicting_sources: [Conflicto de ocupación de Orba: aventurero frente a ayudante/supporter en la tabla de miembros.]
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending

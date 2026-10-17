@@ -35,6 +35,9 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-LOKI-AKI | [Aki](aki.md) | Anakitty Autumn (alias secundario) | Loki Familia; vigilancia del campamento en Sword Oratoria vol. 4 | El nombre completo se conserva como alias de recuperación pendiente de fuente primaria |
 | CHAR-LOKI-ELFY-COLETTE | [Elfy Colette](elfy-colette.md) | Elfy; Lomoire (alias secundario) | Loki Familia; maga / magia de fuego reportadas | Referencia comunitaria; datos primarios pendientes |
 | CHAR-LOKI-RAKTA-HAZE | [Rakta Haze](rakta-haze.md) | Rakta | Loki Familia; integrante reportada | Referencia comunitaria; escena y nivel por periodo pendientes |
+| CHAR-LOKI-ARCS | [Arcs](arcs.md) | Ākusu; アークス | Loki Familia; aventurero nivel 4 reportado | Referencia comunitaria; ficha primaria y nivel por etapa pendientes |
+| CHAR-LOKI-CYNTHIA | [Cynthia](cynthia.md) | Shinshia; シンシア | Loki Familia; maga reportada | Referencia comunitaria; nivel, raza y hechizos desconocidos |
+| CHAR-LOKI-ORBA | [Orba](orba.md) | Oruba; オルバ | Loki Familia; clasificación aventurero/ayudante en conflicto | Referencia comunitaria; resolver función con fuente primaria |
 | CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior) | Ficha individual y expediente integrados; fuentes mixtas; cotejo primario pendiente |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Expediente de aplicación existente; cotejo de LN pendiente |
