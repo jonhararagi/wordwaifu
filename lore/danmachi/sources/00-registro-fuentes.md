@@ -831,3 +831,180 @@ verification_status: stub
 - rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
 - verification_status: secondary_reference_checked_primary_text_pending
+
+
+## DMR-003-SRC-001 · Gojouno Kaguya — referencia comunitaria
+
+- source_id: DMR-003-SRC-001
+- title: Gojouno Kaguya
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record
+- volume_or_edition: Artículo web dinámico
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Gojouno_Kaguya
+- accessed_at: 2026-10-11
+- locator_type: community_article
+- locator: Descripción inicial, afiliación y rol atribuido
+- claims_supported: [DMR-003-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Fuente secundaria para identificar nombre, afiliación y posible vicecapitanía. No sustituye localizadores en la novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-RESEARCH-003
+- verification_status: community_reference_primary_locator_pending
+
+## DMR-003-SRC-002 · Lyra — referencia comunitaria
+
+- source_id: DMR-003-SRC-002
+- title: Lyra
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record
+- volume_or_edition: Artículo web dinámico
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Lyra
+- accessed_at: 2026-10-11
+- locator_type: community_article
+- locator: Descripción inicial, afiliación y relaciones reportadas
+- claims_supported: [DMR-003-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Fuente secundaria para identidad y afiliación histórica. Los vínculos personales y detalles individuales requieren cotejo de novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-RESEARCH-003
+- verification_status: community_reference_primary_locator_pending
+
+## DMR-007-SRC-001 · Perfiles oficiales de personajes de DanMachi IV
+
+- source_id: DMR-007-SRC-001
+- title: キャラクター — página oficial de personajes de DanMachi IV
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi IV
+- volume_or_edition: Página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi4/character/
+- accessed_at: 2026-10-12
+- locator_type: character_profile
+- locator: Perfiles de Ryu Lion, Alise Lovell, Gojouno Kaguya, Lyra y perfiles asociados a Astrea Familia; consultar la entrada individual
+- claims_supported: [DMR-007-CLM-001, DMR-007-CLM-002, DMR-007-CLM-003, DMR-007-CLM-004, DMR-007-CLM-015, DMR-007-CLM-016, DMR-007-CLM-017, DMR-007-CLM-018, DMR-007-CLM-019, DMR-007-CLM-020, DMR-007-CLM-021, DMR-007-CLM-022, DMR-007-CLM-023, DMR-007-CLM-024, DMR-007-CLM-025]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Perfil oficial de adaptación; útil para los rasgos y relaciones que describe, no sustituto del texto de Astrea Record.
+- conflicting_sources: []
+- rights_note: Mantener imágenes como enlaces de procedencia; no copiar recursos al repositorio.
+- verified_by: DANMACHI-RESEARCH-007
+- verification_status: source_checked_adaptation_profile
+
+## DMR-007-SRC-002 · Familia Chronicle: Episode Ryuu, volumen 2 — sinopsis editorial
+
+- source_id: DMR-007-SRC-002
+- title: ファミリアクロニクル episodeリュー2 — página oficial de GA文庫
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: Familia Chronicle: Episode Ryuu
+- volume_or_edition: Volumen 2; sinopsis editorial en página web
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784815623692/
+- accessed_at: 2026-10-12
+- locator_type: publisher_synopsis
+- locator: Sinopsis que respalda el viaje de Ryu para ver a Astrea
+- claims_supported: [DMR-007-CLM-009, DMR-007-CLM-013, DMR-007-CLM-014]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; continuidad de Familia Chronicle
+- reliability_note: Sinopsis oficial; no proporciona páginas/capítulos internos ni reconstruye el texto completo del viaje.
+- conflicting_sources: []
+- rights_note: Resumir con palabras propias; no copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-007
+- verification_status: official_publisher_synopsis_checked
+
+## DMR-007-SRC-003 · Perfiles oficiales de personajes de DanMachi V
+
+- source_id: DMR-007-SRC-003
+- title: キャラクター — página oficial de personajes de DanMachi V
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi V
+- volume_or_edition: Página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi5/character/
+- accessed_at: 2026-10-12
+- locator_type: character_profile
+- locator: Perfil de Astrea y seguidores en el periodo adaptado
+- claims_supported: [DMR-007-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Perfil de adaptación posterior; no fusionar su estado con el roster histórico de Astrea Record.
+- conflicting_sources: []
+- rights_note: Enlazar referencias; no copiar retratos oficiales.
+- verified_by: DANMACHI-RESEARCH-007
+- verification_status: source_checked_adaptation_profile
+
+## DMR-007-SRC-004 · Familia Astrea — referencia comunitaria en español
+
+- source_id: DMR-007-SRC-004
+- title: Familia Astrea
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record
+- volume_or_edition: Artículo web dinámico
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Familia_Astrea
+- accessed_at: 2026-10-12
+- locator_type: community_article
+- locator: Lista de integrantes históricos, afiliación, tragedia, memorial y segunda generación
+- claims_supported: [DMR-007-CLM-005, DMR-007-CLM-006, DMR-007-CLM-007, DMR-007-CLM-010, DMR-007-CLM-011]
+- events_supported: [EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001]
+- continuity_scope: CONT-AR
+- reliability_note: Fuente secundaria para descubrir el roster y eventos candidatos. Composición, romanizaciones, causalidad y destinos individuales requieren cotejo primario.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-RESEARCH-007
+- verification_status: secondary_reference_checked_primary_pending
+
+## DMR-007-SRC-005 · Ryu Lion — sección de relaciones
+
+- source_id: DMR-007-SRC-005
+- title: Ryu Lion / Ryuu Lion — Relationships
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Ryuu_Lion/Relationships
+- accessed_at: 2026-10-12
+- locator_type: community_article_section
+- locator: Sección Relationships
+- claims_supported: [DMR-007-CLM-012]
+- events_supported: []
+- continuity_scope: CROSS-CONTINUITY
+- reliability_note: Fuente secundaria para localizar vínculos candidatos, no prueba primaria ni una cronología unificada.
+- conflicting_sources: []
+- rights_note: Resumir afirmaciones; no reproducir prosa comunitaria.
+- verified_by: DANMACHI-RESEARCH-007
+- verification_status: secondary_reference_checked_primary_pending
+
+## DMR-007-SRC-006 · DanMachi IV, episodio 20 — sinopsis oficial
+
+- source_id: DMR-007-SRC-006
+- title: 散華（アストレア・ファミリア） — DanMachi IV, episodio 20
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi IV
+- volume_or_edition: Episodio 20; sinopsis web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi4/story/index.php?slideNum=1
+- accessed_at: 2026-10-12
+- locator_type: episode_synopsis
+- locator: Sinopsis del episodio 20, titulada 散華（アストレア・ファミリア）
+- claims_supported: [DMR-007-CLM-026]
+- events_supported: [EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001]
+- continuity_scope: CONT-ANIME
+- reliability_note: Sinopsis de adaptación que resume el destino trágico del grupo; no establece por sí sola la causa exacta de cada muerte.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias y enlazar la fuente.
+- verified_by: DANMACHI-RESEARCH-007
+- verification_status: official_episode_synopsis_checked

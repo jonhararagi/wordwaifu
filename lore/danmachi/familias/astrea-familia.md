@@ -10,12 +10,48 @@ source_refs:
   - DMR-001-SRC-004
   - DMR-001-SRC-005
   - DMR-002-SRC-002
+  - DMR-007-SRC-006
+  - DMR-007-SRC-005
+  - DMR-007-SRC-004
+  - DMR-007-SRC-003
+  - DMR-007-SRC-002
+  - DMR-007-SRC-001
+  - DMR-003-SRC-002
+  - DMR-003-SRC-001
 claim_refs:
   - DMR-006-CLM-001
   - DMR-006-CLM-002
   - DMR-006-CLM-003
   - DMR-006-CLM-004
   - DMR-006-CLM-005
+  - DMR-007-CLM-026
+  - DMR-007-CLM-025
+  - DMR-007-CLM-024
+  - DMR-007-CLM-023
+  - DMR-007-CLM-022
+  - DMR-007-CLM-021
+  - DMR-007-CLM-020
+  - DMR-007-CLM-019
+  - DMR-007-CLM-018
+  - DMR-007-CLM-017
+  - DMR-007-CLM-016
+  - DMR-007-CLM-015
+  - DMR-007-CLM-014
+  - DMR-007-CLM-013
+  - DMR-007-CLM-012
+  - DMR-007-CLM-011
+  - DMR-007-CLM-010
+  - DMR-007-CLM-009
+  - DMR-007-CLM-008
+  - DMR-007-CLM-007
+  - DMR-007-CLM-006
+  - DMR-007-CLM-005
+  - DMR-007-CLM-004
+  - DMR-007-CLM-003
+  - DMR-007-CLM-002
+  - DMR-007-CLM-001
+  - DMR-003-CLM-002
+  - DMR-003-CLM-001
 tags: [Familia Astrea, Astrea, Ryu Lion, Alise Lovelace, Astrea Record, Era Oscura]
 ---
 
@@ -66,6 +102,48 @@ La sinopsis oficial de *Astrea Record* vincula a Ryu con Astrea Familia y presen
 El material de investigación comunitaria previo identifica otros nombres asociados a Astrea Familia, entre ellos Gojouno Kaguya y Lyra, pero esos datos siguen etiquetados como pistas secundarias pendientes de cotejo. No se promueven aquí a hechos plenamente confirmados por una fuente primaria. El roster histórico completo permanece abierto; la ausencia de un nombre en esta ficha no demuestra que el personaje no perteneciera a la Familia.
 
 **Regla de relación:** pertenecer a la misma Familia demuestra afiliación compartida, no necesariamente amistad íntima, rivalidad, parentesco o confianza. Cada arista del grafo debe registrar tipo de relación, continuidad, periodo, fuente y evidencia concreta.
+
+## Roster navegable y relaciones con procedencia
+
+Esta sección enlaza las fichas individuales existentes; no crea expedientes duplicados. La certeza indicada se refiere al tipo de evidencia disponible, no a que la biografía de cada personaje esté completa.
+
+### Núcleo histórico: CONT-AR
+
+| Integrante | Hecho disponible y enlace | Base de evidencia y límite |
+|---|---|---|
+| **[Astrea](../characters/astrea.md)** | Deidad patrona y guía de la Familia en la sinopsis editorial de *Astrea Record*. | Sinopsis oficial de GA Bunko; no fija su ubicación ni su conocimiento en cada fecha. |
+| **[Alise Lovelace](../characters/alise-lovelace.md)** | Capitana reportada por la sinopsis editorial del volumen 1; guía a Ryu. | Fuente editorial oficial. «Alise Lovell» aparece como romanización alternativa en fuentes de adaptación/secundarias; no crear una segunda identidad. |
+| **[Ryu / Ryuu Lion](../characters/ryuu-lion.md)** | Miembro histórico que busca comprender la justicia bajo la guía de Astrea y Alise. | Sinopsis editorial oficial; el estado posterior pertenece a otras etapas y continuidades. |
+| **[Gojouno Kaguya](../characters/gojouno-kaguya.md)** | Ficha individual existente. Las fuentes oficiales de adaptación describen fricción y respeto de combate con Ryu; la vicecapitanía también aparece en referencia secundaria. | CONT-ANIME para el retrato relacional; funciones y habilidades históricas detalladas pendientes de cotejo primario. |
+| **[Lyra](../characters/lyra.md)** | Ficha individual existente. El perfil oficial de adaptación la presenta como apoyo estratégico de Ryu; las relaciones deben limitarse a lo descrito por cada fuente. | CONT-ANIME; el detalle de su biografía histórica sigue provisional. |
+| **[Iska Bra](../characters/iska-bra.md)** | Perfil oficial de adaptación; la ficha registra especie y voz en esa continuidad. | CONT-ANIME; no trasladar automáticamente sus datos a cada capítulo de CONT-AR. |
+| **[Mariyu Reage / Maryuu Reage](../characters/maryuu-reage.md)** | Mantener todas las romanizaciones dentro de un mismo ID. Existe perfil oficial de adaptación, mientras que su inclusión exacta en el roster histórico también se recoge en referencia secundaria. | No crear identidad duplicada por transliteración; verificar la pertenencia por periodo en la novela. |
+| **[Noin Unic](../characters/noin-unic.md)** | Perfil oficial de adaptación; su ficha recoge identidad y especie declarada por esa fuente. | No inferir nivel, temperamento ni habilidades por especie o retrato. |
+| **[Neze Rankett](../characters/neze-rankett.md)** | Perfil oficial de adaptación; la ficha registra su identificación como mujer lobo en esa continuidad. | Nivel, historia individual y relaciones necesitan localizadores. |
+| **[Asta Knox](../characters/asta-knox.md)** | Perfil oficial de adaptación; la ficha individual registra especie y perfil visual de esa versión. | No inventar capacidades u oficio a partir de la especie. |
+| **[Ryana Lietz](../characters/ryana-lietz.md)** | Perfil oficial de adaptación y expediente individual con aliases de búsqueda. | Mantener el nombre canónico del archivo y los alias bajo un mismo ID. |
+| **[Celty Srowa](../characters/celty-srowa.md)** | Perfil oficial de adaptación y expediente individual con variantes de nombre. | Mantener las variantes como aliases; personalidad y relaciones requieren una escena específica. |
+
+**Relaciones explícitas que se pueden recorrer ahora:**
+
+- **Astrea → Ryu:** guía y deidad patrona en el resumen editorial de *Astrea Record*.
+- **Alise → Ryu:** capitana y guía en la misma sinopsis editorial.
+- **Ryu ↔ Kaguya:** fricción frecuente y respeto por la capacidad de combate en el perfil oficial de adaptación; no implica enemistad constante.
+- **Ryu → Lyra:** apoyo estratégico y perspicacia en el perfil oficial de adaptación; no se extrapola a todas las decisiones privadas.
+- **Resto de integrantes:** afiliación compartida no equivale automáticamente a amistad íntima, rivalidad, parentesco o confianza. Añadir otros vínculos solo con fuente, continuidad y evidencia concreta.
+
+### Registros relacionados con Nueva Astrea Familia / Solingen
+
+Los siguientes registros llevan etiquetas de Nueva Astrea Familia y/o Solingen. Se mantienen en una sección separada y no se incorporan por defecto al roster histórico de la primera generación:
+
+- [Cecil Blackliza](../characters/cecil-blackliza.md)
+- [Iselina](../characters/iselina.md)
+- [Shau](../characters/shau.md)
+- [Ulanda](../characters/ulanda.md)
+
+Las etiquetas actuales son una ruta de recuperación, no una cronología completa de cuándo se formó esa agrupación, quién seguía presente o qué relación temporal exacta mantiene con la Familia de *Astrea Record*. Registrar ese vínculo solo después de confirmar el evento y la continuidad con fuente primaria/editorial.
+
+**Fuentes registradas para consultar:** perfiles oficiales de DanMachi IV (DMR-007-SRC-001), sinopsis oficial de *Astrea Record* (DMR-001-SRC-003) y referencias comunitarias del roster (DMR-003-SRC-001, DMR-003-SRC-002, DMR-007-SRC-004). El episodio 20 pertenece a CONT-ANIME y no sustituye el texto de la novela.
 
 ## Contexto histórico y presión narrativa
 
