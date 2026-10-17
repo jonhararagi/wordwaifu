@@ -261,6 +261,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Fuente añadida:** `DMR-022-SRC-001`, GA Bunko, `https://ga.sbcr.jp/product/9784797383126/`, edición japonesa del volumen 4, ISBN 978-4-7973-8312-6. Alcance: metadatos editoriales y sinopsis que sitúa la expedición y el desafío al área inexplorada del piso 59.
 - **Reparación:** Aki ya no declara que su escena del campamento tenga un localizador primario identificado; su enlace al alias se mantiene como secundario. Alicia ya no cita el perfil de adaptación ni la página de Soma Familia como apoyo de una escena de Sword Oratoria; la escena permanece como pista interna pendiente.
 - **Navegación:** el índice de personajes etiqueta de nuevo el estado de Aki y añade un enlace visible para Alicia Forestlight, con aviso de verificación pendiente.
+- **Catálogo estructurado:** se sincronizaron los estados de `CHAR-LOKI-AKI` y `CHAR-LOKI-ALICIA-FORESTLIGHT` en `catalog.json` con los expedientes degradados; no quedan marcados como localizador primario identificado.
 - **Nombres:** Narfi/Narvi Roll y Cruz/Cruz Bussell siguen con una sola ficha por identidad candidata; sus nombres/afiliaciones proceden de fuentes comunitarias, no de una lectura cotejada del briefing.
 - **IDs de personajes:** 0 nuevos; no se duplican personas. Se añade un documento de investigación `RESEARCH-DM-022` al catálogo.
 - **Pruebas locales:** NOT_RUN. La aceptación depende de ambos workflows sobre el SHA funcional y, después, el SHA del checkpoint documental final.
