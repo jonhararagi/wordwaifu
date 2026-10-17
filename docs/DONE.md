@@ -1,43 +1,51 @@
 # DONE / PUNTO DE RECUPERACIÓN — DANMACHI-COVERAGE-001
 
-**Actualizado:** 2026-10-16. **Estado:** IN_PROGRESS; enciclopedia global PARTIAL.
+**Actualizado:** 2026-10-16. **Estado de misión:** IN_PROGRESS; la enciclopedia global DanMachi permanece PARTIAL.
 
 ## Rama y SHAs
 
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- Commit funcional Loki 1: `7c6ecebcdfc12722a6e769df17012bb8d995bbdd`.
-- Commit funcional Loki 2: `332139154515ebcd37d8f74a2dd0bc8638d55dc0`.
-- Commit de STATUS actualizado: `c4c7cdab9f483446e8de30fd277b2b83097a05be`.
-- Commit de control operativo actualizado: `140495bc72dd0f955408a33fda5773f04b2124fb`.
-- Este archivo se actualizará en el commit documental final de este punto; verificar el tip real de la rama tras este commit.
+- Último commit funcional de esta tanda: `1d12c50c0dbb649ce9041951c9c8106e4b7e82a5`.
+- Commit de STATUS: `1943ecbef51f40b53124e7e28d1a3c88875d51ce`.
+- Commit de control operativo: `0bec4bbff624a36ee95023a1da9575a40514c29b`.
+- El SHA documental final será el commit que actualiza este archivo; verificar el tip real de la rama después de esta operación.
 
-## Entrega funcional registrada
+## Entrega de cobertura
 
-- Creado `lore/danmachi/characters/aki.md` — ID `CHAR-LOKI-AKI`.
-- Creado `lore/danmachi/characters/alicia-forestlight.md` — ID `CHAR-LOKI-ALICIA-FORESTLIGHT`.
-- Creado `lore/danmachi/characters/leene-arshe.md` — ID `CHAR-LEENE-ARSHE`; foco en `CONT-SO`/adaptación y spoilers.
-- Actualizado `lore/danmachi/catalog.json`: 3 registros nuevos, total 100 (desde 97).
-- Actualizado `lore/danmachi/familias/loki-familia.md`: enlaces a los tres perfiles y advertencia de roster/cronología parcial.
-- Actualizados `docs/STATUS.md` y `docs/CEREBRO_BOT_OBRERO_CONTROL.md`.
-- Comprobado que los expedientes de Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya existían en su ruta canónica; no se duplicaron ni se cuentan como nuevas fichas de esta ejecución.
+- Creado `lore/danmachi/characters/aki.md` — `CHAR-LOKI-AKI`.
+- Creado `lore/danmachi/characters/alicia-forestlight.md` — `CHAR-LOKI-ALICIA-FORESTLIGHT`.
+- Creado `lore/danmachi/characters/leene-arshe.md` — `CHAR-LEENE-ARSHE`.
+- Creado `lore/danmachi/characters/narfi.md` — `CHAR-LOKI-NARFI`.
+- Actualizado `lore/danmachi/catalog.json`: 4 registros nuevos, total 101 (desde 97).
+- Actualizado `lore/danmachi/familias/loki-familia.md`: enlaces individuales y advertencia de que el roster/cronología no son exhaustivos.
+- Aki, Alicia y Narfi: las fichas se apoyan en la escena de briefing de expedición de *Sword Oratoria*, volumen 4. Aki recibe la responsabilidad de vigilar el campamento; Alicia y Narfi figuran en el grupo de apoyo. El capítulo/página exactos y los cambios de estado por periodo siguen pendientes.
+- Leene Arshe: ficha separada para `CONT-SO`/adaptación con spoilers y localizador primario pendiente.
+- Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya tenían fichas en la ruta canónica; no se duplicaron.
 
-## Procedencia y limitaciones
+## Archivos modificados
 
-Los perfiles nuevos son provisionales y conservan la necesidad de cotejo con novela/material primario. No se inventaron niveles, habilidades ni biografías completas para llenar vacíos. La cobertura de Aki/Alicia se apoya en leads de roster; Leene se trata por separado en la línea de *Sword Oratoria*.
+- `lore/danmachi/characters/aki.md`
+- `lore/danmachi/characters/alicia-forestlight.md`
+- `lore/danmachi/characters/leene-arshe.md`
+- `lore/danmachi/characters/narfi.md`
+- `lore/danmachi/catalog.json`
+- `lore/danmachi/familias/loki-familia.md`
+- `docs/STATUS.md`
+- `docs/CEREBRO_BOT_OBRERO_CONTROL.md`
+- `docs/DONE.md`
 
-## Verificación
+## Verificación y límites
 
-- **Validación local:** NOT_RUN.
-- **CI de Validate WordWaifu y DanMachi Lore and Retrieval Integrity:** UNKNOWN/PENDING para el SHA funcional y el HEAD documental exacto. La consulta disponible de runs asociados a commit no devolvió ejecuciones porque solo expone las disparadas por PR; esto no demuestra que los workflows hayan fallado ni que hayan pasado.
-- **main:** no modificado.
-- **PR:** ninguno creado, cerrado ni modificado.
-- **Merges:** ninguno.
+- Validación local: **NOT_RUN**.
+- CI de Validate WordWaifu y DanMachi Lore and Retrieval Integrity en el SHA funcional y el HEAD documental exacto: **UNKNOWN/PENDING**. La consulta de runs disponible solo devuelve ejecuciones disparadas por PR y no dio resultados; no se interpreta como PASS ni FAIL.
+- No se modificó `main`; no hubo merges ni cambios de PR.
+- La enciclopedia global sigue PARTIAL. No se afirma que el roster de Loki, la Familia Astrea o las Familias/dioses restantes estén completos.
 
-## Brechas y siguiente acción
+## Próxima acción exacta
 
-1. Verificar HEAD real y ambos workflows en el SHA documental exacto; no marcar PASS_CI hasta contar con evidencia.
-2. Continuar con miembros secundarios/ordinarios confirmados de Familia Loki que aún carezcan de ficha individual sustancial, sin duplicar los perfiles existentes.
-3. Añadir localizadores primarios por afirmación a las fichas de Loki y Soma; revisar catálogo, índices, relaciones y búsqueda con los validadores.
-4. Completar Familia Astrea respetando `CONT-MAIN-LN`, `CONT-AR` y adaptaciones como continuidades separadas.
-5. Ampliar dioses y Familias faltantes. No declarar la enciclopedia completa hasta verificar la cobertura real.
+1. Verificar HEAD real y workflows exactos cuando el conector permita consultar ejecuciones de push/branch.
+2. Continuar con los miembros ordinarios confirmados de Familia Loki que todavía no tengan expediente individual sustancial, evitando duplicados.
+3. Localizar capítulo/página de las escenas usadas y añadir procedencia granular por afirmación.
+4. Completar Familia Astrea manteniendo separadas `CONT-MAIN-LN`, `CONT-AR` y adaptaciones.
+5. Ampliar dioses/Familias faltantes, integrar relaciones navegables y ejecutar validadores. No declarar completitud global antes de la verificación.
