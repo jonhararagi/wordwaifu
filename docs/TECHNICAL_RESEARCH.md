@@ -112,3 +112,23 @@ IndexedDB no convierte por sí solo los datos del navegador en una copia de segu
 - [MDN: IDBTransaction complete event](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete_event) — una transacción informa de su finalización tras completarse correctamente.
 - [MDN: IDBTransaction error event](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/error_event) — el error puede propagarse; también debe contemplarse el aborto.
 - [MDN: Storage quotas and eviction criteria](https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria) y [StorageManager.persist()](https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist) — el almacenamiento es *best-effort* por defecto; la persistencia depende del navegador y puede denegarse.
+
+
+## 2026-10-17 · Doble carga de Art Studio y manejadores duplicados
+
+### Incidencia detectada en el HTML de `main`
+
+- `index.html` incluía `./src/art-studio.js` dos veces: una junto a `project-schema.js` y `character-dossiers.js`, y otra después de `app.js`.
+- El módulo registra listeners de eventos al inicializarse. No tiene un guardia global de inicialización; cada inclusión crea otro conjunto de listeners. Los clics sobre guardar/eliminar y los refrescos podían repetir operaciones de interfaz o ejecutar trabajo innecesario.
+- La corrección es eliminar la segunda etiqueta y conservar la inclusión original, que ya respeta la dependencia de `official-character-roster.js` y `character-dossiers.js`.
+- Se extendió `tests/browser_smoke.cjs`: en Chromium inspecciona todas las etiquetas `script[src]`, falla si una ruta se repite y exige exactamente una carga de `/src/art-studio.js`. Esta comprobación convierte el hallazgo accidental en una regresión detectada por CI.
+
+### Fuentes comparativas
+
+- [MDN — elemento HTML `<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script): los scripts clásicos con `defer` se ejecutan en el orden del documento. Duplicar el elemento no crea un singleton; la segunda etiqueta vuelve a evaluar el archivo.
+- [Sentry Forum — handler de jQuery ejecutado dos veces](https://forum.sentry.io/t/jquery-event-handler-keydown-is-called-two-times/8326): un informe real de desarrolladores explica cómo la reinicialización de manejadores puede generar ejecución duplicada y describe el ajuste que evitó el comportamiento en ese caso. Es una comparación del patrón, no el mismo defecto ni una dependencia de WordWaifu.
+- [Sentry — issue de listeners duplicados](https://github.com/getsentry/sentry/issues/5203): reporte de comportamiento inesperado al aparecer dos listeners para una misma interacción; se usa como caso comparativo de depuración, no como fuente del parche de WordWaifu.
+
+### Resultado esperado
+
+Una sola evaluación del módulo mantiene un único conjunto de listeners; la prueba previene que otras futuras etiquetas duplicadas vuelvan a generar dobles inicializaciones. La verificación final corresponde a los workflows del commit que contiene este arreglo.

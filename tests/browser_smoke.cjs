@@ -62,6 +62,14 @@ async function run() {
     page.on("pageerror", (error) => pageErrors.push(error.stack || error.message));
     page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
     await page.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
+    const scriptSources = await page.evaluate(() =>
+      Array.from(document.querySelectorAll("script[src]"))
+        .map(script => new URL(script.src, document.baseURI).pathname)
+    );
+    const duplicateScriptSources = scriptSources.filter((source, index) => scriptSources.indexOf(source) !== index);
+    assert.deepEqual(duplicateScriptSources, [], "Each classic script must be included only once; duplicate tags initialize modules and event handlers more than once.");
+    assert.equal(scriptSources.filter(source => source === "/src/art-studio.js").length, 1,
+      "Art Studio must initialize exactly once.");
     try {
       await page.waitForFunction(() => {
         const status = document.querySelector("#save-status")?.textContent || "";
