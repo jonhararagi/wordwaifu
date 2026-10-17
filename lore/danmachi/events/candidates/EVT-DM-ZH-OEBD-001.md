@@ -2,10 +2,12 @@
 id: EVT-DM-ZH-OEBD-001
 universe: danmachi
 type: event
-status: pending_verification
+status: secondary_reference_primary_locator_pending
 continuity_scope: main_and_related_sources
 spoiler_level: major
-source_refs: []
+source_refs:
+  - DMR-021-SRC-001
+  - DMR-021-SRC-002
 ---
 # EVT-DM-ZH-OEBD-001 · Expedición de Zeus y Hera contra el Dragón Negro
 
@@ -56,3 +58,10 @@ Regla: cuando el autor los complete, mantenerlos etiquetados como `CONT-AU`; no 
 - DM-FAM-ZEUS (candidato).
 - DM-FAM-HERA (candidato).
 - Dragón Negro / One-Eyed Black Dragon (nombre/alias a normalizar).
+
+
+## Relaciones organizativas enlazadas
+
+- [Zeus Familia](../../familias/zeus-familia.md) y [Hera Familia](../../familias/hera-familia.md): las wikis comunitarias los relacionan con el evento; participación individual y secuencia no cotejadas con novela.
+- [ERA-04](../../timeline/eras/04-auge-zeus-hera-y-dragon-negro.md): marco candidato de investigación.
+- **Límite de evidencia:** las referencias secundarias reportan el enfrentamiento con el Dragón Negro de un solo ojo. No se establece por inferencia fecha, roster, lesiones, bajas o causa exacta de la pérdida posterior.
