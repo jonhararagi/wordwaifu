@@ -99,7 +99,7 @@ La sinopsis oficial de *Astrea Record* vincula a Ryu con Astrea Familia y presen
 
 ### Otras integrantes históricas
 
-El material de investigación comunitaria previo identifica otros nombres asociados a Astrea Familia, entre ellos Gojouno Kaguya y Lyra, pero esos datos siguen etiquetados como pistas secundarias pendientes de cotejo. No se promueven aquí a hechos plenamente confirmados por una fuente primaria. El roster histórico completo permanece abierto; la ausencia de un nombre en esta ficha no demuestra que el personaje no perteneciera a la Familia.
+Los perfiles oficiales de DanMachi IV documentan a Gojouno Kaguya y Lyra como personajes del entorno de Astrea Familia y describen en CONT-ANIME una relación de fricción con respeto de combate entre Kaguya y Ryuu, así como el apoyo estratégico que Lyra ofrece a Ryuu (DMR-007-SRC-001; claims DMR-007-CLM-002/003 y DMR-007-CLM-023/024). Esta evidencia oficial corresponde a la adaptación y no reemplaza los volúmenes de Astrea Record. La pertenencia, los cargos o las escenas en CONT-AR deben conservar la procedencia y el localizador de novela pendiente cuando no estén respaldados por la sinopsis editorial o el texto primario. El roster histórico completo permanece abierto; la ausencia de un nombre en esta ficha no demuestra que el personaje no perteneciera a la Familia.
 
 **Regla de relación:** pertenecer a la misma Familia demuestra afiliación compartida, no necesariamente amistad íntima, rivalidad, parentesco o confianza. Cada arista del grafo debe registrar tipo de relación, continuidad, periodo, fuente y evidencia concreta.
 

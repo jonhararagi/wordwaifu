@@ -38,6 +38,18 @@ La misma referencia reporta una capitanía histórica cuyo nombre no está ident
 - **[Pérdida de posición de las Familias](../events/candidates/EVT-DM-ZH-FALL-001.md):** evento candidato; no asumir una fecha única o el mismo estado institucional para ambos grupos.
 - **ERA-04 y ERA-05:** [auge histórico](../timeline/eras/04-auge-zeus-hera-y-dragon-negro.md) y [consecuencias posteriores](../timeline/eras/05-caida-zeus-hera-y-consecuencias.md).
 
+## Red de identidades y relaciones por evidencia
+
+| Nodo | Vínculo documentado | Destino y procedencia | Límite |
+|---|---|---|---|
+| [Hera](../characters/hera.md) | Deidad patrona reportada | Esta Familia; DMR-021-CLM-002 y DMR-021-SRC-002/004 | La afiliación procede de referencia secundaria; no inventar psicología ni estado posterior. |
+| [Alfia](../characters/dark-era/alfia.md) | Integrante asociada a Hera Familia según fuentes secundarias | DMR-021-CLM-004; identidad estable existente CHAR-DARK-ALFIA | Mantener la ficha de Era Oscura existente; no duplicarla por cambiar de etapa o por AU. Rango, nivel y escenas precisan fuente propia. |
+| [Meteria](../characters/dark-era/meteria.md) | Miembro de roster reportado y hermana gemela de Alfia según referencias secundarias | DMR-021-CLM-004/005; identidad estable CHAR-METERIA | Maternidad, parentesco, afiliación y periodos siguen pendientes de localizador primario. |
+| Capitanía histórica no identificada | Fuente comunitaria reporta un capitán de nivel 9, pero el resumen no establece el nombre | DMR-021-CLM-008 | Identidad deliberadamente sin resolver; no mapearla a “Emperatriz” ni crear un ID personal conjetural. |
+| [Zeus Familia](zeus-familia.md) | Victoria conjunta en Behemoth y Leviathan dentro del registro oficial de franquicia | DMR-008-CLM-027 / DMR-011-SRC-005 | Resultado colectivo; no hay reparto individual de monstruos, participantes o bajas en esa referencia. |
+
+La red distingue entre **afiliación reportada**, **relación familiar reportada**, y **dato oficial de referencia**. No todos los vínculos de la tabla tienen el mismo nivel de evidencia: el resultado conjunto contra Behemoth y Leviathan es el único hecho de esta sección sustentado por la referencia oficial citada; el roster y las relaciones familiares personales continúan secundarios hasta localizar la fuente primaria.
+
 ## Estado posterior no resuelto
 Las wikis comunitarias reportan una pérdida posterior de posición y una posible expulsión/salida. Esto no se eleva a hecho primario ni equipara expulsión, derrota, disolución o dispersión. Falta un pasaje de novela que establezca qué ocurrió institucionalmente, cuándo y por qué.
 

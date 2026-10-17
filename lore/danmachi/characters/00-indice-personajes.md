@@ -82,8 +82,8 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-MAXIM | [Maxim](maxim.md) | Capitán reportado de Zeus Familia; nivel reportado 8 | Fuente comunitaria; cargo/nivel por etapa pendientes de cotejo |
 | CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Astrea Familia; guía/capitana de Ryu en sinopsis editorial | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-KAGUYA | Kaguya | Kaguya | Astrea Familia | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-LYRA | Lyra | Lyra | Astrea Familia | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-KAGUYA | [Gojouno Kaguya](gojouno-kaguya.md) | Kaguya; Yamato Rindō | Astrea Familia; vicecapitana en CONT-ANIME | Perfil oficial de adaptación y vínculo con Ryuu identificados; historia/escenas individuales de CONT-AR pendientes de cotejo primario |
+| CHAR-LYRA | [Lyra](lyra.md) | Lyra; Sly Rat | Astrea Familia; Pallum; estratega en CONT-ANIME | Perfil oficial de adaptación y apoyo estratégico a Ryuu identificados; biografía y escenas individuales de CONT-AR aún parciales |
 | CHAR-DARK-ALFIA | [Alfia](dark-era/alfia.md) | Hera Familia (reportado); Meteria | Ficha existente; fuente secundaria; localizador primario pendiente; spoiler mayor |
 | CHAR-DARK-ZALD | [Zald](dark-era/zald.md) | Zeus Familia (reportado); variante Zard pendiente de edición | Ficha existente; no duplicar identidad; localizador primario pendiente |
 | CHAR-METERIA | [Meteria](dark-era/meteria.md) | Hera Familia, Alfia, Bell (spoiler) | Expediente secundario; maternidad y parentesco pendientes de localizador primario |
@@ -121,7 +121,7 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 
 ### Orden recomendado
 1. Loki, Riveria y Gareth como fichas individuales.
-2. Kaguya y Lyra con fuentes directas de *Astrea Record*.
+2. Completar el cotejo de Kaguya y Lyra con los volúmenes de *Astrea Record*: sus perfiles oficiales de adaptación y dos vínculos relacionales ya están documentados en DMR-007, pero faltan páginas y escenas individuales de la novela.
 3. Zeus/Hera, Alfia y Zard con localizadores y marcas de spoiler.
 4. Bell/Hestia/Eina/Ais en novela principal, por escena.
 5. Personal de la taberna y estados de Freya Familia.

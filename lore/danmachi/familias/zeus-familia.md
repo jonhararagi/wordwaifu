@@ -35,6 +35,18 @@ Los niveles atribuidos a Maxim y Zald proceden de resúmenes secundarios, son de
 - **[Pérdida posterior de posición](../events/candidates/EVT-DM-ZH-FALL-001.md):** evento candidato; estado institucional y causalidad siguen sin resolver en fuente primaria.
 - **Marcos temporales:** [ERA-04](../timeline/eras/04-auge-zeus-hera-y-dragon-negro.md) y [ERA-05](../timeline/eras/05-caida-zeus-hera-y-consecuencias.md).
 
+## Red de identidades y relaciones por evidencia
+
+| Nodo | Vínculo documentado | Destino y procedencia | Límite |
+|---|---|---|---|
+| [Zeus](../characters/zeus.md) | Deidad patrona reportada | Esta Familia; DMR-021-CLM-001 y DMR-021-SRC-001/003 | Identidad y estado histórico tienen fuente secundaria; personalidad y situación posterior no están reconstruidas en novela. |
+| [Maxim](../characters/maxim.md) | Capitanía histórica reportada; nivel 8 en un roster secundario | Esta Familia; DMR-021-CLM-003 | Cargo y nivel dependen del periodo y faltan localizadores primarios. |
+| [Zald](../characters/dark-era/zald.md) | Miembro histórico reportado, conocido también con variante de romanización pendiente de edición | Esta Familia; referencias DMR-021-SRC-001/005 y ficha CHAR-DARK-ZALD | No crear otra ficha para “Zard” ni asumir presencia conjunta con Maxim en cada misión. |
+| [Hera Familia](hera-familia.md) | Relación histórica en las Grandes Misiones y victoria conjunta | DMR-008-CLM-027, reutilizado desde DMR-011-SRC-005 | La fuente oficial no asigna Behemoth a una Familia y Leviathan a la otra, ni enumera el roster de la expedición. |
+| [Bell Cranel](../characters/bell-cranel.md) | Zeus figura como abuelo adoptivo/criador en referencias comunitarias | DMR-021-CLM-007 | Spoiler mayor y afirmación secundaria; no asumir qué personajes saben esta relación en cada época. |
+
+El nombre del padre de Bell permanece sin identificar en esta red. No se crea un personaje “padre de Bell” con identidad inventada ni se extiende la relación reportada de Zeus a otros integrantes sin evidencia independiente.
+
 ## Estado posterior y límites
 Las referencias comunitarias relacionan a la Familia con un intento contra el Dragón Negro de un solo ojo y una pérdida posterior de posición en Orario. Esta ficha no presenta como canon verificado la secuencia causal, la fecha ni la situación institucional posterior. “Derrotada”, “expulsada”, “disuelta” y “dispersada” no son intercambiables.
 
