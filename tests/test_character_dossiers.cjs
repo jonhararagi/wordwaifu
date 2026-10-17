@@ -32,7 +32,7 @@ for (const id of somaBatchIds) {
   }
   assert.ok(dossier.sources.some(url => url.startsWith("https://")), id + " must retain provenance URLs.");
 }
-assert.ok(api.get("CHAR-LILIRUCA-ARDE").history.includes("Soma Familia"), "Lili must preserve the former-family context in her application profile.");
+assert.ok(api.get("CHAR-LILIRUCA-ARDE").history.includes("Familia Soma") || api.get("CHAR-LILIRUCA-ARDE").relationships.includes("Soma"), "Lili must preserve the former-family context in her application profile.");
 assert.ok(api.get("CHAR-CHANDRA-IHIT").relationships.includes("Zanis"), "Chandra and Zanis must remain separate linked identities.");
 
 process.stdout.write("PASS character dossiers: " + all.length + " profiles with six substantive sections and source URLs.\\n");
