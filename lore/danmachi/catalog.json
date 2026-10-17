@@ -650,9 +650,11 @@
         "Leene",
         "Familia Loki",
         "Sword Oratoria",
-        "spoiler"
+        "spoiler",
+        "Line Arshe",
+        "identity crosswalk pending"
       ],
-      "status": "secondary_reference_primary_locator_pending",
+      "status": "secondary_reference_identity_crosswalk_pending",
       "priority": "high"
     },
     {
@@ -714,6 +716,21 @@
       "priority": "normal"
     },
     {
+      "id": "CHAR-LOKI-ANJU",
+      "path": "characters/anju.md",
+      "type": "character",
+      "tags": [
+        "Anju",
+        "アンジュ",
+        "Loki Familia",
+        "Sword Oratoria manga",
+        "CONT-MANGA",
+        "manga-only reported"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
       "id": "CHAR-LOKI-ARCS",
       "path": "characters/arcs.md",
       "type": "character",
@@ -725,6 +742,50 @@
         "Sword Oratoria volume 7"
       ],
       "status": "secondary_reference_primary_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-BARA",
+      "path": "characters/bara.md",
+      "type": "character",
+      "tags": [
+        "Bara",
+        "バラ",
+        "Loki Familia",
+        "historical veteran",
+        "CONT-MANGA",
+        "CONT-GAME"
+      ],
+      "status": "secondary_reference_historical_member_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-CARMILIA",
+      "path": "characters/carmilia.md",
+      "type": "character",
+      "tags": [
+        "Carmilia",
+        "カルミリア",
+        "Loki Familia",
+        "Sword Oratoria manga",
+        "CONT-MANGA"
+      ],
+      "status": "secondary_reference_manga_roster_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-CLAIRE",
+      "path": "characters/claire.md",
+      "type": "character",
+      "tags": [
+        "Claire",
+        "クレア",
+        "Loki Familia",
+        "Sword Oratoria manga",
+        "CONT-MANGA",
+        "manga-only reported"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
       "priority": "normal"
     },
     {
@@ -759,6 +820,21 @@
       "priority": "normal"
     },
     {
+      "id": "CHAR-LOKI-DAIN",
+      "path": "characters/dain.md",
+      "type": "character",
+      "tags": [
+        "Dain",
+        "ダイン",
+        "Loki Familia",
+        "historical veteran",
+        "CONT-MANGA",
+        "CONT-GAME"
+      ],
+      "status": "secondary_reference_historical_member_primary_check_pending",
+      "priority": "normal"
+    },
+    {
       "id": "CHAR-LOKI-ELFY-COLETTE",
       "path": "characters/elfy-colette.md",
       "type": "character",
@@ -772,6 +848,87 @@
         "Lefiya Viridis"
       ],
       "status": "secondary_reference_primary_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-KALOS",
+      "path": "characters/kalos.md",
+      "type": "character",
+      "tags": [
+        "Kalos",
+        "カロス",
+        "Loki Familia",
+        "Sword Oratoria manga",
+        "CONT-MANGA",
+        "manga-only reported"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-KEVIN",
+      "path": "characters/kevin.md",
+      "type": "character",
+      "tags": [
+        "Kevin",
+        "Loki Familia",
+        "adventurer reported"
+      ],
+      "status": "secondary_reference_roster_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-LIZA",
+      "path": "characters/liza.md",
+      "type": "character",
+      "tags": [
+        "Liza",
+        "リザ",
+        "Loki Familia",
+        "Sword Oratoria manga",
+        "CONT-MANGA",
+        "manga-only reported"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-LLOYD",
+      "path": "characters/lloyd.md",
+      "type": "character",
+      "tags": [
+        "Lloyd",
+        "ロイド",
+        "Loki Familia",
+        "Sword Oratoria manga",
+        "CONT-MANGA",
+        "manga-only reported"
+      ],
+      "status": "secondary_reference_manga_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-LOX",
+      "path": "characters/lox.md",
+      "type": "character",
+      "tags": [
+        "Lox",
+        "Loki Familia",
+        "roster candidate"
+      ],
+      "status": "secondary_reference_roster_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-MOREL",
+      "path": "characters/morel.md",
+      "type": "character",
+      "tags": [
+        "Morel",
+        "Loki Familia",
+        "level 2 reported"
+      ],
+      "status": "secondary_reference_roster_only_primary_check_pending",
       "priority": "normal"
     },
     {
@@ -789,6 +946,23 @@
         "ナルヴィ・ロール"
       ],
       "status": "secondary_reference_identity_crosswalk_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-NOIR-SACHSEN",
+      "path": "characters/noir-sachsen.md",
+      "type": "character",
+      "tags": [
+        "Noir Sachsen",
+        "Noir",
+        "ノアール・ザクセン",
+        "Loki Familia",
+        "historical veteran",
+        "CONT-MANGA",
+        "CONT-GAME",
+        "identity disambiguation"
+      ],
+      "status": "secondary_reference_non_main_continuity_primary_check_pending",
       "priority": "normal"
     },
     {
@@ -818,6 +992,49 @@
         "supporting member"
       ],
       "status": "secondary_reference_primary_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-REMILIA-HISTORICAL",
+      "path": "characters/remilia-loki.md",
+      "type": "character",
+      "tags": [
+        "Remilia (Loki)",
+        "Remilia",
+        "レミリア",
+        "Loki Familia",
+        "Sword Oratoria manga",
+        "CONT-MANGA",
+        "identity disambiguation"
+      ],
+      "status": "secondary_reference_manga_only_identity_disambiguation_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-SHARON",
+      "path": "characters/sharon.md",
+      "type": "character",
+      "tags": [
+        "Sharon",
+        "Loki Familia",
+        "human",
+        "level 4 reported"
+      ],
+      "status": "secondary_reference_roster_only_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-SONIA",
+      "path": "characters/sonia.md",
+      "type": "character",
+      "tags": [
+        "Sonia",
+        "Loki Familia",
+        "elf",
+        "Fairy Force",
+        "level 3-4 reported"
+      ],
+      "status": "secondary_reference_roster_only_primary_check_pending",
       "priority": "normal"
     },
     {
@@ -2434,6 +2651,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-017-loki-name-reconciliation.md",
       "type": "character_relationship_research",
       "status": "secondary_reference_identity_crosswalk_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-018",
+      "path": "research/inbox/DANMACHI-RESEARCH-018-loki-roster-expansion.md",
+      "type": "character_relationship_research",
+      "status": "secondary_reference_roster_only_primary_check_pending"
     }
   ],
   "lastStructuredSync": "2026-10-16"

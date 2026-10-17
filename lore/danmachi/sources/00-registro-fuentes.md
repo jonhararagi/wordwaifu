@@ -1023,7 +1023,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article_section
 - locator: Tabla de miembros; filas de Narvi Roll y Cruz Bussell
-- claims_supported: [DMR-017-CLM-001, DMR-017-CLM-002]
+- claims_supported: [DMR-017-CLM-001, DMR-017-CLM-002, DMR-018-CLM-001, DMR-018-CLM-002, DMR-018-CLM-003, DMR-018-CLM-004, DMR-018-CLM-005, DMR-018-CLM-016]
 - events_supported: []
 - continuity_scope: CONT-SO; CONT-MANGA; CONT-ANIME (según la referencia)
 - reliability_note: Fuente secundaria para localizar nombres y atribuciones de afiliación/rol; no sustituye el texto de la novela.
@@ -1073,5 +1073,28 @@ verification_status: stub
 - reliability_note: Fuente secundaria identifica el nombre completo クルス・バッセル y lo atribuye a la Familia Loki; sus valores de especie/nivel y escenas deben verificarse por etapa.
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no copiar prosa ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+
+## DMR-018-SRC-001 · Minor Characters — índice comunitario de personajes secundarios
+
+- source_id: DMR-018-SRC-001
+- title: Minor Characters
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria; Memoria Freese
+- volume_or_edition: Artículo web dinámico; sección Loki Familia y entradas de personajes menores
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Minor_Characters
+- accessed_at: 2026-10-16
+- locator_type: community_article_section
+- locator: Entradas de Carmilia, Lloyd, Claire, Anju, Liza, Kalos, Remilia, Noir Sachsen, Dain y Bara
+- claims_supported: [DMR-018-CLM-006, DMR-018-CLM-007, DMR-018-CLM-008, DMR-018-CLM-009, DMR-018-CLM-010, DMR-018-CLM-011, DMR-018-CLM-012, DMR-018-CLM-013, DMR-018-CLM-014, DMR-018-CLM-015]
+- events_supported: []
+- continuity_scope: CONT-MANGA; CONT-GAME; la fuente advierte que algunos personajes de su sección manga no se han establecido como las mismas personas en la novela ligera
+- reliability_note: Índice comunitario secundario para descubrir nombres y datos reportados; no establece por sí solo canon de novela.
+- conflicting_sources: [Las apariciones manga-only deben permanecer separadas de CONT-MAIN-LN hasta comprobar una fuente primaria.]
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
 - verification_status: secondary_reference_checked_primary_text_pending

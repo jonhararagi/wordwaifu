@@ -40,6 +40,21 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-LOKI-ARCS | [Arcs](arcs.md) | Ākusu; アークス | Loki Familia; aventurero nivel 4 reportado | Referencia comunitaria; ficha primaria y nivel por etapa pendientes |
 | CHAR-LOKI-CYNTHIA | [Cynthia](cynthia.md) | Shinshia; シンシア | Loki Familia; maga reportada | Referencia comunitaria; nivel, raza y hechizos desconocidos |
 | CHAR-LOKI-ORBA | [Orba](orba.md) | Oruba; オルバ | Loki Familia; clasificación aventurero/ayudante en conflicto | Referencia comunitaria; resolver función con fuente primaria |
+| CHAR-LOKI-LOX | [Lox](lox.md) | Loki Familia; roster candidate | CONT-UNVERIFIED; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-KEVIN | [Kevin](kevin.md) | Loki Familia; adventurer reported | CONT-UNVERIFIED; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-MOREL | [Morel](morel.md) | Loki Familia; level 2 reported | CONT-UNVERIFIED; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-SHARON | [Sharon](sharon.md) | Loki Familia; human; level 4 reported | CONT-UNVERIFIED; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-SONIA | [Sonia](sonia.md) | Loki Familia; elf; Fairy Force | CONT-UNVERIFIED; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-CARMILIA | [Carmilia](carmilia.md) | カルミリア; Loki Familia; Sword Oratoria manga | CONT-MANGA; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-LLOYD | [Lloyd](lloyd.md) | ロイド; Loki Familia; Sword Oratoria manga | CONT-MANGA; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-CLAIRE | [Claire](claire.md) | クレア; Loki Familia; Sword Oratoria manga | CONT-MANGA; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-ANJU | [Anju](anju.md) | アンジュ; Loki Familia; Sword Oratoria manga | CONT-MANGA; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-LIZA | [Liza](liza.md) | リザ; Loki Familia; Sword Oratoria manga | CONT-MANGA; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-KALOS | [Kalos](kalos.md) | カロス; Loki Familia; Sword Oratoria manga | CONT-MANGA; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-REMILIA-HISTORICAL | [Remilia (histórica de Loki)](remilia-loki.md) | Remilia; レミリア; Loki Familia | CONT-MANGA; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-NOIR-SACHSEN | [Noir Sachsen](noir-sachsen.md) | Noir; ノアール・ザクセン; Loki Familia | CONT-MANGA; CONT-GAME; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-DAIN | [Dain](dain.md) | ダイン; Loki Familia; historical veteran | CONT-MANGA; CONT-GAME; source secondary | Primary/editorial locator pending; not a complete dossier |
+| CHAR-LOKI-BARA | [Bara](bara.md) | バラ; Loki Familia; historical veteran | CONT-MANGA; CONT-GAME; source secondary | Primary/editorial locator pending; not a complete dossier |
 | CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior) | Ficha individual y expediente integrados; fuentes mixtas; cotejo primario pendiente |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Expediente de aplicación existente; cotejo de LN pendiente |

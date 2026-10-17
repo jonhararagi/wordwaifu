@@ -2,13 +2,14 @@
 id: CHAR-LEENE-ARSHE
 universe: danmachi
 type: character
-status: secondary_reference_primary_locator_pending
+status: secondary_reference_identity_crosswalk_pending
 confidence: named supporting character; scene-level novel citations pending
 continuity_scope: CONT-SO; CONT-ANIME
 source_refs:
   - DMR-005-SRC-001
   - DMR-013-SRC-001
-tags: [Leene Arshe, Leene, Familia Loki, Sword Oratoria, spoiler]
+  - DMR-017-SRC-001
+tags: [Leene Arshe, Leene, Line Arshe, Familia Loki, Loki Familia, Sword Oratoria, spoiler, identity crosswalk pending]
 ---
 # Leene Arshe
 
@@ -16,6 +17,10 @@ tags: [Leene Arshe, Leene, Familia Loki, Sword Oratoria, spoiler]
 - **ID estable:** `CHAR-LEENE-ARSHE`.
 - **Nombre:** Leene Arshe. Mantener esta grafía como clave de búsqueda; no crear IDs para variantes de romanización sin evidencia editorial.
 - **Continuidad de referencia:** su función se asocia especialmente a la línea de *Sword Oratoria* (`CONT-SO`). No trasladar detalles exclusivos de esa narración a una ficha de cronología principal sin marcar la fuente.
+
+## Variante de nombre reportada: Line Arshe
+
+La tabla comunitaria de miembros de Loki Familia usa el nombre **Line Arshe** y le atribuye el papel de ayudante/sanadora, nivel 2 y estado fallecido en una instantánea secundaria. El expediente existente del repositorio utiliza **Leene Arshe**. La similitud del nombre y la afiliación hace plausible una variante de romanización, pero esta tanda no cotejó el nombre japonés ni la escena de la novela. Por eso «Line Arshe» se añade solo como término de búsqueda con correspondencia pendiente; no se crea una ficha duplicada ni se traspasan los datos de la tabla como hechos primarios.
 
 ## Descripción y función narrativa
 Leene es una integrante secundaria de la Familia Loki cuya relevancia para la red de personajes supera la cantidad de información biográfica disponible. Su ficha debe conservar su identidad individual, no esconderla dentro de un roster genérico. En la narración de *Sword Oratoria*, su destino está ligado al conflicto contra las fuerzas que operan en el Dungeon y tiene consecuencias para Ais y el grupo. La descripción exacta de las circunstancias, sus palabras y la secuencia de escenas requiere un localizador de volumen/capítulo; no se reconstruye aquí desde memoria ni se inventan nivel, habilidades o edad.

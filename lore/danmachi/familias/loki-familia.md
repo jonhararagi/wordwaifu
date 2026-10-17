@@ -137,3 +137,26 @@ Estos enlaces reducen huecos de navegación, no cierran la cobertura de miembros
 - **[Orba](../characters/orba.md)** — la fuente comunitaria reporta raza Beast Human y nivel 4, pero discrepa sobre si su función es aventurero o ayudante/supporter; la ficha conserva el conflicto sin resolverlo por intuición.
 
 Estos enlaces amplían la recuperación del roster, pero no constituyen cotejo canónico. La fuente identificada para estas tres fichas es secundaria. No asignarles amistades, cargos permanentes o papeles en escuadrones sin escenas verificadas.
+
+
+## Ampliación de roster secundario: candidatos y apariciones no noveladas
+
+### Registros del roster comunitario sin datos biográficos completos
+
+- [Lox](../characters/lox.md) — activo según la tabla, con especie/ocupación/nivel desconocidos.
+- [Kevin](../characters/kevin.md) — aventurero reportado; nivel y estado desconocidos.
+- [Morel](../characters/morel.md) — nivel 2 y activo reportados.
+- [Sharon](../characters/sharon.md) — humana, aventurera, nivel 4 reportado.
+- [Sonia](../characters/sonia.md) — elfa, nivel 3–4 reportado; afiliación a Fairy Force según el compendio.
+
+Estos datos son instantáneas secundarias sin intervalo confirmado. No se completan campos ausentes por inferencia.
+
+### Personajes reportados en la continuidad de manga/juego
+
+- [Carmilia](../characters/carmilia.md) — entrada secundaria asociada al manga de *Sword Oratoria*.
+- [Lloyd](../characters/lloyd.md), [Claire](../characters/claire.md), [Anju](../characters/anju.md), [Liza](../characters/liza.md), [Kalos](../characters/kalos.md) y [Remilia (histórica de Loki)](../characters/remilia-loki.md) — las referencias consultadas atribuyen sus apariciones al manga. Permanecen en `CONT-MANGA`; no se afirman como miembros confirmados de la novela ligera.
+- [Noir Sachsen](../characters/noir-sachsen.md), [Dain](../characters/dain.md) y [Bara](../characters/bara.md) — veteranos históricos según fuentes comunitarias de manga/juego; mentoría, nivel y destino aún requieren fuente editorial/primaria.
+
+### Crosswalk sin cerrar: Line / Leene Arshe
+
+El roster comunitario usa «Line Arshe» y la ficha existente del repo usa «Leene Arshe». Se conservan ambos términos en un solo expediente de recuperación sin declarar la equivalencia por confirmada; la fuente primaria y el nombre japonés deben resolver la duda.
