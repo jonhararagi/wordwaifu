@@ -2,12 +2,10 @@
 id: CHAR-LOKI-AKI
 universe: danmachi
 type: character
-status: primary_novel_locator_identified_details_partial
-confidence: Sword Oratoria vol. 4 expedition-briefing scene identified; exact page/chapter to verify
-continuity_scope: CONT-MAIN-LN; CONT-ANIME
+status: secondary_reference_primary_locator_pending
+confidence: Alias reported by a community source; prior scene note has no verified edition, chapter, or page in the cited source trail
+continuity_scope: CONT-SO
 source_refs:
-  - DMR-005-SRC-001
-  - DMR-013-SRC-001
   - DMR-015-SRC-003
 tags: [Aki, Anakitty Autumn, Familia Loki, Loki Familia, supporting member]
 ---
@@ -22,22 +20,21 @@ tags: [Aki, Anakitty Autumn, Familia Loki, Loki Familia, supporting member]
 
 La referencia comunitaria de DMR-015 asocia Aki con **Anakitty Autumn**. El briefing de Sword Oratoria, volumen 4, descrito más abajo respalda la escena de vigilancia, pero no aporta por sí solo el nombre completo. Se incorpora como término de recuperación con estado secundario pendiente, no como nombre completo confirmado por ese pasaje.
 
-## Descripción y función documentada
-En el briefing de expedición de *Sword Oratoria*, volumen 4, Finn deja a Aki a cargo de los miembros que permanecen en el campamento y deben vigilar la aparición de nuevos monstruos, ordenándoles mantenerlos a distancia mediante magia y espadas mágicas. La narración la identifica como una chica con rasgos felinos y muestra que responde afirmativamente a la orden. Esta escena respalda una función de responsabilidad operativa, no solo su pertenencia al roster.
+## Escena atribuida al volumen 4 — pendiente de cotejo
+Una nota de investigación heredada del repositorio describe un briefing de expedición en el que Finn dejaría a Aki encargada de la vigilancia del campamento. **En esta tanda no se pudo confirmar ese pasaje en una edición autorizada ni obtener capítulo/página.** Por ello, la descripción queda como pista para localizar el texto, no como hecho narrativo verificado. No se debe citar esta escena como canon confirmado hasta añadir un localizador real y una referencia que sustente precisamente ese pasaje.
 
-No se fija aquí nivel, historial completo, habilidades personales ni relaciones privadas: el pasaje describe una asignación puntual y no una biografía exhaustiva.
+La referencia secundaria para «Anakitty Autumn» solo sirve como pista de alias; el registro editorial oficial del volumen 4 confirma el marco general de la expedición, pero no menciona a Aki ni el briefing. No se fija nivel, habilidades, historial ni relaciones personales.
 
 ## Afiliación por continuidad
-- **`CONT-SO` — *Sword Oratoria*, volumen 4:** miembro de la Familia Loki y responsable de vigilar el campamento durante una expedición; evidencia de una escena concreta, no cronología completa.
-- **`CONT-MAIN-LN`:** no transferir automáticamente el cargo puntual ni la descripción de la escena de la novela derivada a todos los periodos de la serie principal.
-- **Adaptación:** verificar por separado las escenas que se hayan adaptado.
+- **`CONT-SO`:** la pertenencia al roster y el alias están reportados por referencia comunitaria. La función de vigilancia del campamento queda pendiente de cotejo directo.
+- **`CONT-MAIN-LN` y `CONT-ANIME`:** no trasladar la asignación de la escena ni detalles del alias a estas continuidades sin evidencia independiente.
 
 ## Relaciones navegables
 - **Loki / Familia Loki:** afiliación reportada; no se presume una relación personal concreta con la diosa.
 - **Roster de la Familia Loki:** consultar `../familias/loki-familia.md` para el contexto organizativo. Los vínculos personales deben añadirse solo cuando una escena o fuente los respalde.
 
 ## Procedencia y tareas de verificación
-- **Localizador primario identificado:** *Sword Oratoria*, volumen 4, briefing de expedición en el que Finn deja a Aki al mando de la vigilancia del campamento.
-- **Pendiente:** confirmar capítulo/página exactos en edición autorizada y cotejar romanización.
-- **Límite:** no extrapolar la asignación de esa escena a todos los periodos ni inventar nivel o habilidades.
-- **Regla de canon:** no convertir una ausencia de datos en un rasgo de personalidad ni asignar nivel por asociación con el grupo.
+- **Fuente enlazada:** DMR-015-SRC-003, referencia comunitaria de Anakitty Autumn; solo constituye pista secundaria para el alias.
+- **Contexto editorial:** DMR-022-SRC-001 acredita únicamente el marco general de la expedición en el volumen 4; no respalda una escena individual de Aki.
+- **Pendiente prioritario:** localizar el briefing en la edición autorizada, registrar capítulo/página y cotejar el nombre escrito en japonés.
+- **Regla de canon:** la escena del campamento permanece como nota de búsqueda no verificada; no asignar nivel, habilidades ni relaciones por asociación con el grupo.

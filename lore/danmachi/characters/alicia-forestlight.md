@@ -2,12 +2,10 @@
 id: CHAR-LOKI-ALICIA-FORESTLIGHT
 universe: danmachi
 type: character
-status: primary_novel_locator_identified_details_partial
-confidence: Sword Oratoria vol. 4 expedition-briefing scene identified; exact page/chapter to verify
-continuity_scope: CONT-MAIN-LN; CONT-ANIME
-source_refs:
-  - DMR-005-SRC-001
-  - DMR-013-SRC-001
+status: primary_novel_locator_pending
+confidence: Existing scene note has no precise locator and current source trail does not substantiate the individual claim
+continuity_scope: CONT-SO
+source_refs: []
 tags: [Alicia Forestlight, Alicia, Familia Loki, elf, supporting member]
 ---
 # Alicia Forestlight
@@ -17,22 +15,21 @@ tags: [Alicia Forestlight, Alicia, Familia Loki, elf, supporting member]
 - **Nombre de referencia:** Alicia Forestlight. La grafía se conserva como término de búsqueda y debe cotejarse con una fuente primaria/editorial antes de normalizar variantes.
 - **Estado:** perfil individual de cobertura. La asociación con la Familia Loki procede de referencias de roster; no equivale a una biografía primaria completa.
 
-## Descripción y función documentada
-En el briefing de expedición de *Sword Oratoria*, volumen 4, Alicia aparece nombrada entre los miembros de apoyo asignados a acompañar a la partida que se dirige a zonas inexploradas del Dungeon. La escena la sitúa junto a Raul, Narfi, Cruz y Lefiya. En ese contexto, el texto distingue al grupo de apoyo de los miembros de primera línea; no debe usarse esa clasificación para reducir su función a una etiqueta permanente.
+## Escena atribuida al volumen 4 — pendiente de cotejo
+Una nota de investigación heredada del repositorio sitúa a Alicia Forestlight en un grupo de apoyo para una expedición a zonas inexploradas del Dungeon, junto a Raul, Narfi, Cruz y Lefiya. Sin embargo, las referencias que figuraban en la ficha no respaldaban ese pasaje: una era una página de perfiles de la adaptación y otra correspondía a Soma Familia. **No se encontró en esta tanda un localizador primario verificable para la escena ni para la selección de nombres.** El resumen se conserva como pista interna de investigación, no como afirmación narrativa confirmada.
 
-No se fijan aquí magia, cargo estable, personalidad detallada ni historial completo de misiones sin pasajes adicionales.
+El registro editorial oficial de *Sword Oratoria*, volumen 4, confirma el marco general de la expedición pero no enumera a Alicia ni al grupo de apoyo. No se fijan magia, rango, personalidad detallada o historial sin texto localizable.
 
 ## Afiliación por continuidad
-- **`CONT-SO` — *Sword Oratoria*, volumen 4:** aparece como integrante de la Familia Loki seleccionada para una expedición en función de apoyo.
-- **`CONT-MAIN-LN`:** no asumir que el rol descrito en la novela derivada establece por sí solo su función en cada volumen de la serie principal.
-- **Adaptación:** registrar por separado cualquier aparición o diferencia de la versión animada.
+- **`CONT-SO`:** afiliación y participación en el grupo de apoyo siguen pendientes de validación primaria en esta ficha; la asignación descrita permanece como nota de búsqueda.
+- **`CONT-MAIN-LN` y `CONT-ANIME`:** no transferir la escena ni un cargo permanente a estas continuidades sin evidencia separada.
 
 ## Relaciones navegables
 - **Familia Loki:** afiliación reportada; no se infiere cercanía con los líderes ni participación en una expedición concreta.
 - **Expediente organizativo:** `../familias/loki-familia.md`. Añadir relaciones personales cuando se localice evidencia narrativa concreta.
 
 ## Procedencia y tareas de verificación
-- **Localizador primario identificado:** *Sword Oratoria*, volumen 4, briefing de la expedición a zonas inexploradas del Dungeon.
-- **Pendiente:** registrar capítulo/página exactos desde una edición autorizada; cotejar la grafía del nombre.
-- **Límite:** la escena confirma una asignación concreta, no una biografía completa ni una función inmutable.
-- **Límite:** esta ficha documenta una identidad candidata confirmada por roster secundario, no una biografía completa ni un estado de canon cerrado.
+- **Fuente del volumen:** DMR-022-SRC-001, ficha editorial oficial; solo cubre el marco general de la expedición.
+- **Referencia de la escena individual:** aún no localizada. No mantener como respaldo el perfil oficial del anime ni el compendio secundario de Soma Familia.
+- **Pendiente prioritario:** cotejar el nombre japonés, el briefing y el grupo de apoyo en una edición autorizada; registrar capítulo/página solo tras abrir el pasaje.
+- **Límite:** hasta ese cotejo, tanto la escena como la relación de Alicia con ese grupo se mantienen como pistas de búsqueda, no hechos primarios confirmados.

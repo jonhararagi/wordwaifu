@@ -1361,3 +1361,25 @@ verification_status: stub
 - rights_note: Resumir con palabras propias; no reproducir la sinopsis completa.
 - verified_by: DANMACHI-COVERAGE-003
 - verification_status: source_checked_publisher_synopsis_only
+
+## DMR-022-SRC-001 · Registro editorial oficial de Sword Oratoria, volumen 4
+- source_id: DMR-022-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア4
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Novela ligera japonesa, volumen 4; ISBN 978-4-7973-8312-6
+- language: Japonés
+- publication_date: 2015-05-15 (fecha aproximada indicada por la editorial)
+- official_url: https://ga.sbcr.jp/product/9784797383126/
+- accessed_at: 2026-10-17
+- locator_type: publisher_synopsis
+- locator: Sinopsis oficial; descripción de la expedición y el desafío hacia el área inexplorada del piso 59.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: La página confirma metadatos editoriales y el marco general de la expedición. No identifica a Aki, Narvi/Narfi, Cruz o Alicia ni acredita el briefing de campamento descrito en notas internas.
+- conflicting_sources: []
+- rights_note: Parafrasear la sinopsis; no reproducirla extensamente.
+- verified_by: DANMACHI-COVERAGE-005
+- verification_status: source_checked_publisher_synopsis_only

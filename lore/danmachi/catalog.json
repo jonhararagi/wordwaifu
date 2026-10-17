@@ -2840,6 +2840,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md",
       "type": "deity_family_research",
       "status": "secondary_reference_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-022",
+      "path": "research/inbox/DANMACHI-RESEARCH-022-sword-oratoria-vol4-source-audit.md",
+      "type": "source_provenance_audit",
+      "status": "official_publisher_synopsis_only_primary_scene_check_pending"
     }
   ],
   "lastStructuredSync": "2026-10-17"
