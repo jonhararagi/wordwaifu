@@ -1,9 +1,10 @@
 # DANMACHI-RESEARCH-021 · Zeus Familia, Hera Familia y sus deidades
 
 - **Estado:** PARTIAL; se integran nodos de navegación para ambas deidades, ambas organizaciones y dos personajes relacionados. No se declara reconstruida la cronología histórica.
-- **Fecha de consulta de referencias comunitarias:** 2026-10-17.
-- **Fuente oficial auxiliar:** DMR-011-SRC-005, prueba oficial de conocimiento de aventureros.
-- **Regla probatoria:** la fuente oficial respalda la victoria conjunta contra Behemoth y Leviathan. Las wikis sirven para descubrir nombres y relaciones; no sustituyen pasajes de novela.
+- **Fecha de cotejo:** 2026-10-17.
+- **Fuente oficial auxiliar localizada y abierta:** https://danmachi.com/center-test/normal.html — prueba oficial de conocimiento de aventureros, pregunta 1.
+- **Regla probatoria:** la fuente oficial de franquicia respalda la victoria conjunta contra Behemoth y Leviathan. Es una referencia oficial web, pero no sustituye un pasaje de novela para detalles históricos. Las wikis sirven para descubrir nombres y relaciones; no sustituyen pasajes de novela.
+- **Procedencia:** conservar el ID existente DMR-011-SRC-005; no crear un duplicado para la misma URL. El cotejo confirma que la pregunta muestra como respuesta correcta «ゼウス・ファミリア」と「ヘラ・ファミリア» para las Familias que derrotaron a Behemoth y Leviathan.
 
 ## DMR-021-CLM-001 · Zeus como deidad patrona
 - **Afirmación:** la referencia comunitaria de Zeus Familia identifica a Zeus como deidad patrona y cabeza histórica.
