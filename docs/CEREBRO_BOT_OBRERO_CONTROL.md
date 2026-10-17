@@ -286,3 +286,11 @@ Estado: IN_PROGRESS; localizadores primarios de novela pendientes.
 - El SHA de contenido principal antes del ajuste de README fue `b279d1d70e739ce5aa992088dbf6884cea2a6941`; el checkpoint actual combina README y recuperación operativa para que la verificación de CI incluya el estado final del punto de entrada.
 - Confirmar ambos workflows en el SHA real del checkpoint antes de declarar PASS_CI; el lote anterior todavía aparecía en ejecución cuando se redactó la recuperación.
 - No cambiar `main`, no hacer merges ni operar sobre PR sin autorización.
+
+
+## 2026-10-17 — Recuperación y ejecución de cobertura Zeus/Hera
+- Se verificó la rama autorizada y su HEAD real antes de editar: `2e7ce6b761a8b0f59cc886a99c5cd8c2f82a1074`.
+- Se actualizó `lore/danmachi/research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md` con el localizador oficial `https://danmachi.com/center-test/normal.html`, pregunta 1. Commit de contenido: `552b581af16b4207dd97d9aee630cd7c324e0de7`.
+- Evidencia limitada: confirma el resultado conjunto Zeus Familia + Hera Familia contra Behemoth y Leviathan; no prueba detalles individuales ni la historia completa de ambas Familias.
+- Pendiente obligatorio: consultar el estado de los dos workflows en el HEAD final de esta actualización; no inferir PASS de commits padres. Validación local NOT_RUN.
+- Próxima acción: corregir cualquier regresión de CI y seguir con fuentes primarias/localizadores de novela para roster, niveles, capitanías y cronología del Dragón Negro. `main` intacta, sin merge ni operaciones de PR.
