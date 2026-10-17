@@ -1,16 +1,18 @@
 # ESTADO ACTUAL — DANMACHI-COVERAGE-001 EN PROGRESO
 
-**Actualizado:** 2026-10-16/17. Este bloque prevalece sobre estados históricos siguientes.
+**Actualizado:** 2026-10-17. Este bloque prevalece sobre estados históricos siguientes.
 
-- Rama autorizada: work/story-completion-danmachi-audit-2026-10.
-- Último SHA funcional: a5fa611ebe55fc75a66017f7d147c64b0f0b50ae.
-- Catálogo: 128 registros / 108 documentos; no se añadieron nuevas identidades de personaje en la tanda Soma.
-- Tanda Soma: grafo familiar ampliado con afiliaciones por periodo y enlaces entre Soma, Zanis, Chandra, Liliruca, Canoe, Kaede, Momiji y Coco Collins.
-- Fuentes añadidas: DMR-013-SRC-009..013. Claims: DMR-013-CLM-011..017. Nuevo paquete: DANMACHI-RESEARCH-020-soma-relationship-network.md.
-- Continuidad: detalles de Kaede/Momiji/Coco procedentes de Orario Rhapsodia se marcan CONT-GAME. No se transfieren automáticamente a la novela. Coco Collins de Soma sigue separada de Coco de Loki manga. La acusación sobre Canoe no se trata como culpabilidad probada.
-- CI de la tanda Soma debe comprobarse en el SHA funcional y en este SHA documental exactos. Validación local: NOT_RUN.
-- Cobertura global: PARTIAL. Loki tiene muchas fichas secundarias/manga; Astrea tiene red y registro de fuentes mejorados pero falta cotejo; Soma tiene grafo ampliado con escenas primarias pendientes; deidades/Familias restantes siguen pendientes.
-- main no se modificó; no hubo merges ni operaciones sobre PR.
+- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
+- **Último SHA funcional de cobertura Zeus/Hera:** `b279d1d70e739ce5aa992088dbf6884cea2a6941`.
+- **Catálogo:** 134 registros / 109 documentos.
+- **Fichas incorporadas:** Zeus, Hera, Maxim, Meteria, Zeus Familia y Hera Familia.
+- **Procedencia:** seis referencias comunitarias DMR-021-SRC-001..006 registradas como secundarias. La fuente oficial auxiliar existente DMR-011-SRC-005 y el claim existente DMR-008-CLM-027 sostienen únicamente que Zeus Familia y Hera Familia derrotaron conjuntamente a Behemoth y Leviathan. No se asigna un monstruo individual a cada Familia.
+- **Cruces de identidad:** los candidatos reservados `CHAR-ALFIA` y `CHAR-ZARD` apuntan a los expedientes existentes `CHAR-DARK-ALFIA` y `CHAR-DARK-ZALD`; no se crearon duplicados.
+- **Navegación:** actualizados los índices de deidades, Familias, personajes y MASTER_INDEX; se enlazaron Alfia, Zald, ambas eras y los eventos candidatos sobre Dragón Negro/pérdida de posición.
+- **CI para el SHA funcional:** [Validate WordWaifu #39000909473](https://github.com/jonhararagi/wordwaifu/actions/runs/39000909473) y [DanMachi Lore and Retrieval Integrity #39000909662](https://github.com/jonhararagi/wordwaifu/actions/runs/39000909662) están **QUEUED** al momento de esta actualización. No marcar PASS hasta comprobar la conclusión y `head_sha` exactos.
+- **Validación local:** NOT_RUN desde esta interfaz. La verificación CI deberá repetirse para el HEAD documental final.
+- **Brechas:** niveles, capitanes, roster histórico y cronología de la caída de Zeus/Hera siguen necesitando localizadores primarios. No se afirma completitud de esa historia ni de la enciclopedia global.
+- `main` intacta; no se hicieron merges ni operaciones sobre PR.
 
 ---
 
