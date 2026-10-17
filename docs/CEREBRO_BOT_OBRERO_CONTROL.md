@@ -172,3 +172,18 @@ Próxima acción exacta:
 - **Pendiente de verificación:** validar el esquema del catálogo, enlaces, búsqueda y regresiones mediante los validadores del repositorio; comprobar los workflows para el SHA funcional y para el HEAD documental exacto. La consulta de runs disponible no devolvió resultados porque filtra ejecuciones disparadas por PR; el CI requerido permanece UNKNOWN/PENDING. La fuente primaria localizada para Aki/Alicia/Narfi/Cruz es *Sword Oratoria*, vol. 4, briefing de expedición; no se registra capítulo/página exactos sin cotejo de una edición autorizada. No se declara PASS_CI con la evidencia disponible en esta sesión.
 - **Siguiente acción concreta:** continuar con la siguiente tanda de miembros confirmados de Familia Loki y completar fichas individuales existentes antes de ampliar el roster; revisar después Familia Astrea sin mezclar `CONT-MAIN-LN`, `CONT-AR` y adaptaciones.
 - `main` no se modificó. No se hicieron merges ni operaciones sobre PR.
+
+
+## DANMACHI-COVERAGE-001 — Tanda 2: Elfy Colette, Rakta Haze y alias de Aki
+
+**Estado:** IN_PROGRESS; la enciclopedia DanMachi sigue PARTIAL.
+
+- **Rama:** work/story-completion-danmachi-audit-2026-10.
+- **HEAD anterior:** 74d4314835eaab03c96b033cc35449d7147a4707.
+- **Commit funcional:** 3cf972222458b1a2c3a21bb8798ed76621b1fcc3.
+- **Alcance realizado:** dos fichas individuales nuevas para Elfy Colette y Rakta Haze; alias de búsqueda Anakitty Autumn añadido al dossier Aki existente, sin crear un ID duplicado. Catálogo de 102 a 104 registros y documento de investigación DMR-015 registrado.
+- **Archivos funcionales:** lore/danmachi/characters/elfy-colette.md; lore/danmachi/characters/rakta-haze.md; lore/danmachi/characters/aki.md; lore/danmachi/catalog.json; lore/danmachi/familias/loki-familia.md; lore/danmachi/familias/00-indice-familias.md; lore/danmachi/characters/00-indice-personajes.md; lore/danmachi/sources/00-registro-fuentes.md; lore/danmachi/research/inbox/DANMACHI-RESEARCH-015-loki-secondary-members.md.
+- **Procedencia:** DMR-015-SRC-001..003 son referencias comunitarias, registradas expresamente como secundarias. Localizadores primarios, página/capítulo y niveles por periodo siguen pendientes; no promover esas afirmaciones a canon primario.
+- **Criterio CI:** el estado observado al iniciar el cierre documental era in_progress en ambos workflows del SHA funcional. El agente que retome debe consultar la punta real de la rama y comprobar ambos workflows para ese SHA exacto antes de anotar PASS_CI.
+- **Siguientes pasos:** cotejo primario de las fichas; continuar roster secundario de Loki sin duplicaciones; luego Familia Astrea, expedientes Soma y cobertura de dioses/Familias.
+- **Exclusiones respetadas:** main sin modificar, ningún merge ni operación sobre PR.

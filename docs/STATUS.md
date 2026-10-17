@@ -2,14 +2,18 @@
 
 **Actualizado:** 2026-10-16. Este bloque prevalece sobre los estados históricos siguientes.
 
-- **Rama:** `work/story-completion-danmachi-audit-2026-10`.
-- **Tanda Loki:** fichas individuales para Aki, Alicia Forestlight, Leene Arshe, Narfi y Cruz; enlaces navegables desde `lore/danmachi/familias/loki-familia.md`.
-- **Evidencia primaria localizada:** *Sword Oratoria*, volumen 4, briefing de expedición: Aki queda encargada de la vigilancia del campamento; Alicia, Narfi y Cruz aparecen en el grupo de apoyo seleccionado para la expedición. Capítulo/página exactos y evolución por periodo siguen pendientes.
-- **Catálogo:** IDs `CHAR-LOKI-AKI`, `CHAR-LOKI-ALICIA-FORESTLIGHT`, `CHAR-LEENE-ARSHE`, `CHAR-LOKI-NARFI`, `CHAR-LOKI-CRUZ`; total actual 102 registros (desde 97 al iniciar esta ejecución).
-- **Expedientes Soma:** Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya existían en la ruta canónica; no se duplicaron. Sus afirmaciones aún requieren localizadores primarios más granulares.
-- **Validación:** no ejecutada localmente desde esta interfaz. CI exacto para SHA funcional/documental: **UNKNOWN/PENDING**; no marcar PASS_CI sin verificar ambos workflows en el SHA exacto.
-- **Cobertura global:** PARTIAL. La lista de miembros ordinarios de Loki no está demostrada como exhaustiva; Familia Astrea, otros dioses y Familias conservan brechas.
-- `main` no se modificó; no hubo merge ni operaciones sobre PR.
+- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
+- **HEAD funcional de la tanda 2:** `3cf972222458b1a2c3a21bb8798ed76621b1fcc3`.
+- **Entrega:** dos fichas individuales nuevas — Elfy Colette y Rakta Haze — con estado secundario explícito; alias de búsqueda Anakitty Autumn añadido al expediente existente de Aki, sin duplicar identidad.
+- **Catálogo:** 104 registros, frente a 102 antes de esta tanda; documentos catalogados: 103. Nuevo informe de investigación: `lore/danmachi/research/inbox/DANMACHI-RESEARCH-015-loki-secondary-members.md`.
+- **Navegación:** actualizados catálogo, índice de personajes, índice de Familias y expediente de Familia Loki; registradas las fuentes secundarias DMR-015-SRC-001 a DMR-015-SRC-003.
+- **Procedencia:** las wikis comunitarias se registran únicamente como fuentes secundarias. Los datos de Elfy/Rakta y el alias completo de Aki siguen a la espera de cotejo en ediciones autorizadas; no se inventaron páginas o capítulos.
+- **CI en SHA funcional:** al redactar la entrega, ambos workflows estaban `in_progress`; no declararlos PASS hasta observar su conclusión exacta:
+  - [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432428)
+  - [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432435)
+- **Validación local:** NOT_RUN desde esta interfaz. El CI de la rama debe comprobar además el SHA documental final real tras actualizar estos documentos.
+- **Cobertura global:** PARTIAL. La lista de miembros ordinarios de Loki no se considera completa; Astrea, Soma y otras Familias/deidades requieren más cotejo.
+- `main` no se modificó; no se creó, cerró, actualizó ni fusionó ningún PR.
 
 ---
 

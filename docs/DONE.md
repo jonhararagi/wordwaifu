@@ -2,52 +2,37 @@
 
 **Actualizado:** 2026-10-16. **Estado de misión:** IN_PROGRESS; la enciclopedia global DanMachi permanece PARTIAL.
 
-## Rama y SHAs
+## Rama y commits
 
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- Último commit funcional de esta tanda: `8bb71f318572f252c30155a7a1da40ef091401cd`.
-- Commit de STATUS: `979713e5477fe7498ae4fcc5c8d8f371b179f8df`.
-- Commit de control operativo: `91017466ad7fb81862fc4ef3223abc4ac31823a2`.
-- El SHA documental final será el commit que actualiza este archivo; comprobar el tip real de la rama tras esta operación.
+- HEAD anterior a la tanda 2: `74d4314835eaab03c96b033cc35449d7147a4707`.
+- Commit funcional de la tanda 2: `3cf972222458b1a2c3a21bb8798ed76621b1fcc3`.
+- Commit documental: este archivo, la actualización de STATUS y el registro de control quedan guardados en el tip posterior de la rama; verificarlo con GitHub antes de iniciar otra tanda.
+- Informe: [DANMACHI-COVERAGE-001 — miembros secundarios Loki](DANMACHI-COVERAGE-001-LOKI-SECONDARY-MEMBERS-REPORT.md).
 
-## Entrega de cobertura Loki
+## Entrega funcional
 
-- `lore/danmachi/characters/aki.md` — `CHAR-LOKI-AKI`.
-- `lore/danmachi/characters/alicia-forestlight.md` — `CHAR-LOKI-ALICIA-FORESTLIGHT`.
-- `lore/danmachi/characters/leene-arshe.md` — `CHAR-LEENE-ARSHE`.
-- `lore/danmachi/characters/narfi.md` — `CHAR-LOKI-NARFI`.
-- `lore/danmachi/characters/cruz.md` — `CHAR-LOKI-CRUZ`.
-- Actualizado `lore/danmachi/catalog.json`: cinco registros nuevos, total 102 (desde 97).
-- Actualizado `lore/danmachi/familias/loki-familia.md`: enlaces individuales y advertencia de roster/cronología parcial.
-- *Sword Oratoria*, volumen 4, briefing de expedición: Aki queda a cargo de vigilar el campamento; Alicia, Narfi y Cruz aparecen en el grupo de apoyo seleccionado. Capítulo/página exactos y estado por periodo pendientes.
-- Leene Arshe tiene ficha separada para `CONT-SO`/adaptación, con spoilers y localizador primario pendiente.
-- Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya tenían fichas en la ruta canónica; no se duplicaron.
-
-## Archivos modificados
-
-- `lore/danmachi/characters/aki.md`
-- `lore/danmachi/characters/alicia-forestlight.md`
-- `lore/danmachi/characters/leene-arshe.md`
-- `lore/danmachi/characters/narfi.md`
-- `lore/danmachi/characters/cruz.md`
-- `lore/danmachi/catalog.json`
-- `lore/danmachi/familias/loki-familia.md`
-- `docs/STATUS.md`
-- `docs/CEREBRO_BOT_OBRERO_CONTROL.md`
-- `docs/DONE.md`
+- Creado `lore/danmachi/characters/elfy-colette.md`, ID `CHAR-LOKI-ELFY-COLETTE`.
+- Creado `lore/danmachi/characters/rakta-haze.md`, ID `CHAR-LOKI-RAKTA-HAZE`.
+- Actualizado `lore/danmachi/characters/aki.md`: Anakitty Autumn figura como alias de búsqueda reportado por fuente secundaria. No se creó un segundo expediente para la misma identidad.
+- Actualizado `lore/danmachi/catalog.json`: de 102 a 104 registros; 103 documentos catalogados.
+- Actualizados `lore/danmachi/familias/loki-familia.md`, `lore/danmachi/familias/00-indice-familias.md` y `lore/danmachi/characters/00-indice-personajes.md`.
+- Registradas tres referencias comunitarias nuevas, DMR-015-SRC-001..003, en `lore/danmachi/sources/00-registro-fuentes.md`.
+- Creado `lore/danmachi/research/inbox/DANMACHI-RESEARCH-015-loki-secondary-members.md`, con afirmaciones secundarias, límites y acciones de cotejo.
 
 ## Verificación y límites
 
 - Validación local: **NOT_RUN**.
-- CI de Validate WordWaifu y DanMachi Lore and Retrieval Integrity en el SHA funcional y el HEAD documental exacto: **UNKNOWN/PENDING**. La consulta de runs disponible solo devuelve ejecuciones disparadas por PR y no dio resultados; no se interpreta como PASS ni FAIL.
-- No se modificó `main`; no hubo merges ni cambios de PR.
-- La enciclopedia global sigue PARTIAL; no se afirma que el roster de Loki, la Familia Astrea o las Familias/dioses restantes estén completos.
+- En el momento del registro, [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432428) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432435) estaban `in_progress` en el SHA funcional `3cf972222458b1a2c3a21bb8798ed76621b1fcc3`. Consultar sus conclusiones; no interpretar el estado en curso como PASS.
+- La verificación de CI también debe revisarse para el HEAD documental exacto de la rama. No inferir sus resultados a partir de los tests de commits previos.
+- Las fichas de Elfy y Rakta no son biografías verificadas en fuente primaria. Niveles, raza, magia, alias y relaciones se mantienen con cautela y con sus límites descritos.
+- `main` no fue modificada; no hubo merge ni operaciones sobre PR.
 
 ## Próxima acción exacta
 
-1. Verificar HEAD real y ambos workflows en el SHA documental exacto.
-2. Continuar con miembros ordinarios confirmados de Familia Loki que aún no tengan expediente individual sustancial, evitando duplicados.
-3. Localizar capítulo/página exactos de las escenas usadas y añadir procedencia granular por afirmación.
-4. Completar Familia Astrea manteniendo separadas `CONT-MAIN-LN`, `CONT-AR` y adaptaciones.
-5. Ampliar dioses/Familias faltantes, integrar relaciones navegables y ejecutar validadores. No declarar completitud global antes de la verificación.
+1. Recuperar el SHA real de la punta y confirmar ambos workflows para ese SHA.
+2. Continuar con los miembros ordinarios nombrados de Loki que carezcan de ficha, priorizando candidatos con pasajes primarios localizables y sin duplicar alias.
+3. Cotejar directamente Elfy, Rakta y el nombre completo asociado a Aki; completar capítulo/página solo después de abrir una edición autorizada.
+4. Después de la tanda Loki, completar Astrea manteniendo separadas novela principal, Astrea Record y adaptaciones, y seguir con los expedientes Soma y las deidades/Familias pendientes.
+5. Mantener esta misión IN_PROGRESS hasta que la cobertura y la validación estén demostradas; no afirmar completitud global.
