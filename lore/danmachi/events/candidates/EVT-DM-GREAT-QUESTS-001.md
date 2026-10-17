@@ -38,3 +38,10 @@ La prueba oficial de conocimiento de DanMachi identifica conjuntamente a Zeus Fa
 - `DMR-008-CLM-027`: afirmación recuperable que sostiene el resultado conocido.
 
 No fusionar las victorias contra Behemoth/Leviathan con la expedición del Dragón Negro ni asumir que la fuente establece una secuencia entre esos hechos.
+
+
+## Expedientes de Familias y alcance probatorio
+
+- [Zeus Familia](../../familias/zeus-familia.md).
+- [Hera Familia](../../familias/hera-familia.md).
+- La afirmación oficial existente DMR-008-CLM-027 respalda la victoria conjunta contra Behemoth y Leviathan. No asigna un monstruo a una Familia por separado, ni detalla fechas, roster o bajas.
