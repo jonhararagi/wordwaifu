@@ -187,3 +187,18 @@ Próxima acción exacta:
 - **Criterio CI:** el estado observado al iniciar el cierre documental era in_progress en ambos workflows del SHA funcional. El agente que retome debe consultar la punta real de la rama y comprobar ambos workflows para ese SHA exacto antes de anotar PASS_CI.
 - **Siguientes pasos:** cotejo primario de las fichas; continuar roster secundario de Loki sin duplicaciones; luego Familia Astrea, expedientes Soma y cobertura de dioses/Familias.
 - **Exclusiones respetadas:** main sin modificar, ningún merge ni operación sobre PR.
+
+
+## DANMACHI-COVERAGE-001 — Tanda 3: Arcs, Cynthia y Orba
+
+**Estado:** IN_PROGRESS hasta comprobar workflows en el SHA documental final.
+
+- **HEAD anterior:** 4d0d2ea42078b9066c98b6caceb519c8d83cac91.
+- **Commit funcional:** 91625334628fe21f7d99930876fc049294c5d794.
+- **Cambios:** tres dossiers individuales de cobertura para Arcs, Cynthia y Orba; 107 registros en catálogo, 104 documentos catalogados; índices y expediente de Familia Loki actualizados.
+- **Fuente:** DMR-016-SRC-001, referencia comunitaria de personajes menores. Se registró solo como fuente secundaria.
+- **Cautelas:** no hay cotejo primario de sus escenas; nivel y función se mantienen como datos reportados. Orba conserva el conflicto de etiqueta ocupacional. No inferir amistades, hechizos ni lugar en unidades de combate.
+- **CI funcional al cierre de implementación:** Validate WordWaifu estaba queued (run 38988164201) y DanMachi Lore and Retrieval Integrity in_progress (run 38988164371). Consultar conclusión por SHA exacto después del commit documental.
+- **CI tanda 2:** ambos workflows fueron success en los SHA funcional/documental 3cf9722 y 4d0d2ea.
+- **Siguientes pasos:** cerrar verificación CI exacta; continuar con el roster Loki nombrado; después Astrea, Soma y deidades/Familias.
+- **Permisos respetados:** rama autorizada únicamente; main y PR sin modificar; sin merges.

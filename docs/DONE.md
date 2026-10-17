@@ -1,38 +1,56 @@
 # DONE / PUNTO DE RECUPERACIÓN — DANMACHI-COVERAGE-001
 
-**Actualizado:** 2026-10-16. **Estado de misión:** IN_PROGRESS; la enciclopedia global DanMachi permanece PARTIAL.
+**Actualizado:** 2026-10-16. **Estado:** IN_PROGRESS; la enciclopedia DanMachi permanece PARTIAL.
 
-## Rama y commits
+## Rama y recuperación
 
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- HEAD anterior a la tanda 2: `74d4314835eaab03c96b033cc35449d7147a4707`.
-- Commit funcional de la tanda 2: `3cf972222458b1a2c3a21bb8798ed76621b1fcc3`.
-- Commit documental: este archivo, la actualización de STATUS y el registro de control quedan guardados en el tip posterior de la rama; verificarlo con GitHub antes de iniciar otra tanda.
-- Informe: [DANMACHI-COVERAGE-001 — miembros secundarios Loki](DANMACHI-COVERAGE-001-LOKI-SECONDARY-MEMBERS-REPORT.md).
+- HEAD anterior a la tanda 3: `4d0d2ea42078b9066c98b6caceb519c8d83cac91`.
+- Último commit funcional: `91625334628fe21f7d99930876fc049294c5d794`.
+- El commit documental de este punto de recuperación será el HEAD posterior de la rama; volver a verificar la punta real antes de iniciar más escrituras.
+- Informes:
+  - [Tanda 2 — Elfy, Rakta y alias de Aki](DANMACHI-COVERAGE-001-LOKI-SECONDARY-MEMBERS-REPORT.md).
+  - [Tanda 3 — Arcs, Cynthia y Orba](DANMACHI-COVERAGE-001-LOKI-TERTIARY-ROSTER-REPORT.md).
 
-## Entrega funcional
+## Tanda 3 funcional
 
-- Creado `lore/danmachi/characters/elfy-colette.md`, ID `CHAR-LOKI-ELFY-COLETTE`.
-- Creado `lore/danmachi/characters/rakta-haze.md`, ID `CHAR-LOKI-RAKTA-HAZE`.
-- Actualizado `lore/danmachi/characters/aki.md`: Anakitty Autumn figura como alias de búsqueda reportado por fuente secundaria. No se creó un segundo expediente para la misma identidad.
-- Actualizado `lore/danmachi/catalog.json`: de 102 a 104 registros; 103 documentos catalogados.
-- Actualizados `lore/danmachi/familias/loki-familia.md`, `lore/danmachi/familias/00-indice-familias.md` y `lore/danmachi/characters/00-indice-personajes.md`.
-- Registradas tres referencias comunitarias nuevas, DMR-015-SRC-001..003, en `lore/danmachi/sources/00-registro-fuentes.md`.
-- Creado `lore/danmachi/research/inbox/DANMACHI-RESEARCH-015-loki-secondary-members.md`, con afirmaciones secundarias, límites y acciones de cotejo.
+- Creado `lore/danmachi/characters/arcs.md` — `CHAR-LOKI-ARCS`.
+- Creado `lore/danmachi/characters/cynthia.md` — `CHAR-LOKI-CYNTHIA`.
+- Creado `lore/danmachi/characters/orba.md` — `CHAR-LOKI-ORBA`.
+- Actualizado `lore/danmachi/catalog.json`: de 104 a 107 registros; documentos catalogados: 104.
+- Actualizados `lore/danmachi/characters/00-indice-personajes.md`, `lore/danmachi/familias/00-indice-familias.md` y `lore/danmachi/familias/loki-familia.md`.
+- Añadida la referencia comunitaria DMR-016-SRC-001 y creado `lore/danmachi/research/inbox/DANMACHI-RESEARCH-016-loki-tertiary-roster.md`.
+- Arcs, Cynthia y Orba mantienen estado secundario con localizadores primarios pendientes. Orba conserva explícitamente la discrepancia aventurero/ayudante; no se resuelve por inferencia.
 
-## Verificación y límites
+## Tanda anterior y CI
 
-- Validación local: **NOT_RUN**.
-- En el momento del registro, [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432428) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432435) estaban `in_progress` en el SHA funcional `3cf972222458b1a2c3a21bb8798ed76621b1fcc3`. Consultar sus conclusiones; no interpretar el estado en curso como PASS.
-- La verificación de CI también debe revisarse para el HEAD documental exacto de la rama. No inferir sus resultados a partir de los tests de commits previos.
-- Las fichas de Elfy y Rakta no son biografías verificadas en fuente primaria. Niveles, raza, magia, alias y relaciones se mantienen con cautela y con sus límites descritos.
-- `main` no fue modificada; no hubo merge ni operaciones sobre PR.
+- El CI de los SHAs funcional y documental de la tanda 2 concluyó `success` en ambos workflows:
+  - [Validate WordWaifu — 3cf9722](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432428).
+  - [DanMachi Lore and Retrieval Integrity — 3cf9722](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432435).
+  - [Validate WordWaifu — 4d0d2ea](https://github.com/jonhararagi/wordwaifu/actions/runs/38987523734).
+  - [DanMachi Lore and Retrieval Integrity — 4d0d2ea](https://github.com/jonhararagi/wordwaifu/actions/runs/38987523652).
+- En el momento de escribir esta recuperación, el SHA funcional actual `91625334628fe21f7d99930876fc049294c5d794` tenía [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38988164201) en cola y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38988164371) en curso. No marcar PASS hasta revisar sus conclusiones.
+- Validación local: NOT_RUN.
+
+## Todo lo implementado a lo largo de las últimas tandas
+
+- `CHAR-LOKI-AKI`: alias de búsqueda secundario Anakitty Autumn; no se creó otra identidad.
+- `CHAR-LOKI-ELFY-COLETTE`: ficha provisional.
+- `CHAR-LOKI-RAKTA-HAZE`: ficha provisional.
+- `CHAR-LOKI-ARCS`, `CHAR-LOKI-CYNTHIA`, `CHAR-LOKI-ORBA`: fichas mínimas provisionales.
+
+Estas ampliaciones mejoran recuperación e identidad del roster; no completan aún la cronología, las relaciones ni la biografía canónica de los integrantes.
 
 ## Próxima acción exacta
 
-1. Recuperar el SHA real de la punta y confirmar ambos workflows para ese SHA.
-2. Continuar con los miembros ordinarios nombrados de Loki que carezcan de ficha, priorizando candidatos con pasajes primarios localizables y sin duplicar alias.
-3. Cotejar directamente Elfy, Rakta y el nombre completo asociado a Aki; completar capítulo/página solo después de abrir una edición autorizada.
-4. Después de la tanda Loki, completar Astrea manteniendo separadas novela principal, Astrea Record y adaptaciones, y seguir con los expedientes Soma y las deidades/Familias pendientes.
-5. Mantener esta misión IN_PROGRESS hasta que la cobertura y la validación estén demostradas; no afirmar completitud global.
+1. Verificar el HEAD documental final y ambos workflows requeridos para ese SHA exacto.
+2. Continuar con los miembros nombrados de Loki sin ficha individual, priorizando fuentes autorizadas y localizadores concretos; no convertir listas de wiki en un roster canónico exhaustivo.
+3. Cotejar primariamente a Elfy, Rakta, Arcs, Cynthia, Orba, Aki/Anakitty, Narvi/Narfi y Cruz y corregir grafías/funciones con edición y contexto temporal identificados.
+4. Después de la cobertura Loki, completar Astrea separando novela principal, Astrea Record y adaptaciones; luego volver a Soma y deidades/Familias pendientes.
+5. Mantener `IN_PROGRESS` hasta cumplir cobertura y pruebas; no declarar completitud global.
+
+## Límites y permisos
+
+- Canon, fuente secundaria y AU se mantienen separados; no inventar páginas o capítulos.
+- `main` no se modificó; no se crearon, cerraron, actualizaron ni fusionaron PR.

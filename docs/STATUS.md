@@ -2,18 +2,20 @@
 
 **Actualizado:** 2026-10-16. Este bloque prevalece sobre los estados históricos siguientes.
 
-- **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
-- **HEAD funcional de la tanda 2:** `3cf972222458b1a2c3a21bb8798ed76621b1fcc3`.
-- **Entrega:** dos fichas individuales nuevas — Elfy Colette y Rakta Haze — con estado secundario explícito; alias de búsqueda Anakitty Autumn añadido al expediente existente de Aki, sin duplicar identidad.
-- **Catálogo:** 104 registros, frente a 102 antes de esta tanda; documentos catalogados: 103. Nuevo informe de investigación: `lore/danmachi/research/inbox/DANMACHI-RESEARCH-015-loki-secondary-members.md`.
-- **Navegación:** actualizados catálogo, índice de personajes, índice de Familias y expediente de Familia Loki; registradas las fuentes secundarias DMR-015-SRC-001 a DMR-015-SRC-003.
-- **Procedencia:** las wikis comunitarias se registran únicamente como fuentes secundarias. Los datos de Elfy/Rakta y el alias completo de Aki siguen a la espera de cotejo en ediciones autorizadas; no se inventaron páginas o capítulos.
-- **CI en SHA funcional:** al redactar la entrega, ambos workflows estaban `in_progress`; no declararlos PASS hasta observar su conclusión exacta:
-  - [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432428)
-  - [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38987432435)
-- **Validación local:** NOT_RUN desde esta interfaz. El CI de la rama debe comprobar además el SHA documental final real tras actualizar estos documentos.
-- **Cobertura global:** PARTIAL. La lista de miembros ordinarios de Loki no se considera completa; Astrea, Soma y otras Familias/deidades requieren más cotejo.
-- `main` no se modificó; no se creó, cerró, actualizó ni fusionó ningún PR.
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`.
+- **Último commit funcional:** `91625334628fe21f7d99930876fc049294c5d794`.
+- **Cobertura nueva:** Arcs, Cynthia y Orba incorporados como fichas individuales; Aki tiene el alias de búsqueda secundario Anakitty Autumn; Elfy Colette y Rakta Haze siguen presentes como fichas provisionales.
+- **Catálogo:** 107 registros y 104 documentos catalogados. Tanda 2: +2 registros; tanda 3: +3 registros.
+- **Fichas agregadas en esta tanda:** `CHAR-LOKI-ARCS`, `CHAR-LOKI-CYNTHIA`, `CHAR-LOKI-ORBA`.
+- **Archivos funcionales de esta tanda:** `lore/danmachi/characters/arcs.md`, `cynthia.md`, `orba.md`; catálogo, índice de personajes, índice de Familias, ficha de Familia Loki, registro de fuentes y `DANMACHI-RESEARCH-016-loki-tertiary-roster.md`.
+- **Procedencia:** los datos nuevos proceden de un índice comunitario de personajes menores; los localizadores de novela siguen pendientes. El conflicto aventurero/ayudante de Orba queda explícito. No se infirieron amistades, hechizos ni atributos desconocidos.
+- **CI del SHA funcional `91625334628fe21f7d99930876fc049294c5d794`:**
+  - [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38988164201) — `QUEUED` al registrar esta tanda.
+  - [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38988164371) — `IN_PROGRESS` al registrar esta tanda.
+- **CI de la tanda previa:** ambos workflows concluyeron success para el SHA funcional `3cf972222458b1a2c3a21bb8798ed76621b1fcc3` y el SHA documental `4d0d2ea42078b9066c98b6caceb519c8d83cac91`; esto no demuestra los resultados de esta tanda.
+- **Validación local:** NOT_RUN desde esta interfaz. Verificar ambos workflows en el SHA documental posterior antes de declarar la tanda verificada.
+- **Cobertura global:** PARTIAL. El roster de Loki aún no se declara exhaustivo; las fuentes primarias de miembros secundarios y las etapas históricas siguen pendientes. Astrea, Soma y otras deidades/Familias siguen abiertas.
+- `main` intacta; no se hicieron merges ni operaciones sobre PR.
 
 ---
 
