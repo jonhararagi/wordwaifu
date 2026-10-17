@@ -1,48 +1,43 @@
 # DONE / PUNTO DE RECUPERACIÓN — DANMACHI-COVERAGE-001
 
-**Actualizado:** 2026-10-16. **Estado de misión:** IN_PROGRESS; la enciclopedia global permanece PARTIAL.
+**Actualizado:** 2026-10-16. **Estado:** IN_PROGRESS; enciclopedia global PARTIAL.
 
 ## Rama y SHAs
 
 - Repositorio: `jonhararagi/wordwaifu`.
 - Rama autorizada: `work/story-completion-danmachi-audit-2026-10`.
-- HEAD funcional de esta tanda antes de actualizar documentación: `7c6ecebcdfc12722a6e769df17012bb8d995bbdd`.
-- Commit de STATUS: `77ddc5083f365cf71c61ee075465d24f953e1740`.
-- Commit de control operativo: `b68a5a7d612a6ffeafdb963fe11a7b6f00af0035`.
-- El SHA de este punto de recuperación será el commit que actualiza este archivo; comprobar el tip real de la rama y ambos workflows en ese SHA exacto antes de afirmar CI exitoso.
+- Commit funcional Loki 1: `7c6ecebcdfc12722a6e769df17012bb8d995bbdd`.
+- Commit funcional Loki 2: `332139154515ebcd37d8f74a2dd0bc8638d55dc0`.
+- Commit de STATUS actualizado: `c4c7cdab9f483446e8de30fd277b2b83097a05be`.
+- Commit de control operativo actualizado: `140495bc72dd0f955408a33fda5773f04b2124fb`.
+- Este archivo se actualizará en el commit documental final de este punto; verificar el tip real de la rama tras este commit.
 
-## Entrega funcional de esta tanda
+## Entrega funcional registrada
 
-- Añadido `lore/danmachi/characters/aki.md`, ID `CHAR-LOKI-AKI`.
-- Añadido `lore/danmachi/characters/alicia-forestlight.md`, ID `CHAR-LOKI-ALICIA-FORESTLIGHT`.
-- Actualizado `lore/danmachi/catalog.json`: catálogo de 97 a 99 registros, sin reutilizar IDs existentes.
-- Actualizado `lore/danmachi/familias/loki-familia.md` con enlaces a ambas fichas y advertencia de que el roster/cronología no son exhaustivos.
-- Ambas fichas se etiquetan como referencias secundarias con localizador primario pendiente. No se inventaron nivel, historia individual, habilidades ni relaciones personales.
-- Confirmado que ya existían, en su ubicación canónica, los expedientes individuales de Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit; conservan estado provisional y verificación primaria pendiente. No se cuentan como nuevas fichas de esta tanda.
+- Creado `lore/danmachi/characters/aki.md` — ID `CHAR-LOKI-AKI`.
+- Creado `lore/danmachi/characters/alicia-forestlight.md` — ID `CHAR-LOKI-ALICIA-FORESTLIGHT`.
+- Creado `lore/danmachi/characters/leene-arshe.md` — ID `CHAR-LEENE-ARSHE`; foco en `CONT-SO`/adaptación y spoilers.
+- Actualizado `lore/danmachi/catalog.json`: 3 registros nuevos, total 100 (desde 97).
+- Actualizado `lore/danmachi/familias/loki-familia.md`: enlaces a los tres perfiles y advertencia de roster/cronología parcial.
+- Actualizados `docs/STATUS.md` y `docs/CEREBRO_BOT_OBRERO_CONTROL.md`.
+- Comprobado que los expedientes de Liliruca Arde, Soma, Zanis Lustra y Chandra Ihit ya existían en su ruta canónica; no se duplicaron ni se cuentan como nuevas fichas de esta ejecución.
 
-## Archivos modificados
+## Procedencia y limitaciones
 
-1. `lore/danmachi/characters/aki.md` — creado.
-2. `lore/danmachi/characters/alicia-forestlight.md` — creado.
-3. `lore/danmachi/catalog.json` — dos registros añadidos.
-4. `lore/danmachi/familias/loki-familia.md` — enlaces navegables y cautelas.
-5. `docs/STATUS.md` — estado de tarea actualizado.
-6. `docs/CEREBRO_BOT_OBRERO_CONTROL.md` — punto operativo persistente.
-7. `docs/DONE.md` — este punto de recuperación.
+Los perfiles nuevos son provisionales y conservan la necesidad de cotejo con novela/material primario. No se inventaron niveles, habilidades ni biografías completas para llenar vacíos. La cobertura de Aki/Alicia se apoya en leads de roster; Leene se trata por separado en la línea de *Sword Oratoria*.
 
-## Verificación y límites
+## Verificación
 
-- **Validación local:** NOT_RUN en esta interfaz.
-- **Validate WordWaifu / DanMachi Lore and Retrieval Integrity:** pendiente de comprobar para el SHA funcional y para el HEAD documental exacto. No declarar PASS_CI sin resultados asociados a esos SHA.
+- **Validación local:** NOT_RUN.
+- **CI de Validate WordWaifu y DanMachi Lore and Retrieval Integrity:** UNKNOWN/PENDING para el SHA funcional y el HEAD documental exacto. La consulta disponible de runs asociados a commit no devolvió ejecuciones porque solo expone las disparadas por PR; esto no demuestra que los workflows hayan fallado ni que hayan pasado.
 - **main:** no modificado.
-- **PR:** no creados, cerrados ni modificados.
-- **No se hizo merge.**
-- La rama contenía ya los expedientes de Soma y varios miembros de las Familias Loki/Astrea; la presencia en el catálogo no equivale a una biografía completa ni a canon primario verificado.
+- **PR:** ninguno creado, cerrado ni modificado.
+- **Merges:** ninguno.
 
-## Brechas y siguiente acción exacta
+## Brechas y siguiente acción
 
-1. Verificar HEAD real y CI exacto para el cierre documental de esta tanda.
-2. Continuar inmediatamente con los miembros secundarios/ordinarios confirmados de Familia Loki que aún carezcan de ficha individual sustancial; evitar duplicar los perfiles existentes.
-3. Añadir relaciones y fuentes primarias localizables por afirmación; conservar la incertidumbre de los perfiles solo respaldados por roster secundario.
-4. Continuar con Familia Astrea, preservando por separado `CONT-MAIN-LN`, `CONT-AR` y adaptaciones.
-5. Completar después dioses/Familias faltantes y ejecutar validadores, sin declarar completa la enciclopedia hasta que la cobertura esté realmente demostrada.
+1. Verificar HEAD real y ambos workflows en el SHA documental exacto; no marcar PASS_CI hasta contar con evidencia.
+2. Continuar con miembros secundarios/ordinarios confirmados de Familia Loki que aún carezcan de ficha individual sustancial, sin duplicar los perfiles existentes.
+3. Añadir localizadores primarios por afirmación a las fichas de Loki y Soma; revisar catálogo, índices, relaciones y búsqueda con los validadores.
+4. Completar Familia Astrea respetando `CONT-MAIN-LN`, `CONT-AR` y adaptaciones como continuidades separadas.
+5. Ampliar dioses y Familias faltantes. No declarar la enciclopedia completa hasta verificar la cobertura real.
