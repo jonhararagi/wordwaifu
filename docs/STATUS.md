@@ -1,21 +1,23 @@
 # ESTADO ACTUAL — DANMACHI-COVERAGE-001 EN PROGRESO
 
-**Actualizado:** 2026-10-16. Este bloque prevalece sobre los estados históricos siguientes.
+**Actualizado:** 2026-10-16/17. Este bloque prevalece sobre estados históricos posteriores.
 
 - **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`.
-- **HEAD funcional antes de este checkpoint documental:** `5c6dfccb66fe00bac18be0e5dfe249e55e4ff821`.
-- **Tanda de reconciliación de nombres:** el expediente existente `CHAR-LOKI-NARFI` ahora admite buscar «Narvi Roll / Narvi» y mantiene explícito que su correspondencia con el nombre previo «Narfi» está pendiente del cotejo en novela. No se creó un segundo personaje.
-- **Cruz:** el expediente existente `CHAR-LOKI-CRUZ` incorpora «Cruz Bussell» como nombre completo reportado por fuente secundaria; no se creó ficha duplicada.
-- **Fuentes:** añadidas DMR-017-SRC-001..003 en el registro maestro y el paquete `DANMACHI-RESEARCH-017-loki-name-reconciliation.md`.
-- **Catálogo:** 107 registros, 105 documentos catalogados; el ID legado de Narfi se conserva para no romper enlaces hasta resolver la identidad.
-- **Límites:** los nombres completos y los debuts en *Sword Oratoria* volumen 4 proceden por ahora de fuentes comunitarias. El nombre japonés de Narvi y la escena que las notas antiguas atribuían a «Narfi» deben cotejarse en edición autorizada antes de cerrar el crosswalk.
-- **CI del SHA funcional `5c6dfccb66fe00bac18be0e5dfe249e55e4ff821`:** ambos workflows estaban `IN_PROGRESS` al registrar la tanda:
-  - [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38988972422)
-  - [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38988972460)
-- **CI del checkpoint documental anterior** `08c2d077235700d4d757ab04bacf464f674ba0fb`: ambos workflows `success` para el SHA exacto ([Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/38988792150), [Lore Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38988792172)).
-- **Validación local:** NOT_RUN desde esta interfaz. Revalidar los dos workflows para el SHA documental final después de guardar este punto.
-- **Cobertura global:** PARTIAL. Loki tiene más rutas de recuperación pero aún quedan miembros sin ficha/cotejo primario; Astrea tiene mejor procedencia y navegación, no cronología completa; Soma y otras deidades/Familias permanecen abiertas.
-- `main` no se modificó; no se crearon, cerraron, actualizaron ni fusionaron PR.
+- **HEAD funcional antes del checkpoint documental:** `66c7bf03d65e76e08055afcdfa151cda0b413ef5`.
+- **Catálogo actual:** 128 registros y 107 documentos catalogados; 57 IDs reservados. Comprobación estática del catálogo: cero IDs duplicados.
+- **Tanda Loki manga-only:** seis fichas nuevas para Nick, Nicole, Ruuni, Shifon, Stark y Coco (personaje de Loki Familia en manga). Las seis aparecen en catálogo e índice y quedan enlazadas desde `lore/danmachi/familias/loki-familia.md`.
+- **Identidad Coco protegida:** el nuevo `CHAR-LOKI-COCO-MANGA` permanece separado de `CHAR-COCO-COLLINS` (Soma Familia). No se fusionan por compartir nombre.
+- **Continuidad:** estas seis fichas se marcan `CONT-MANGA` y dependen de referencia comunitaria secundaria. No se presentan como personajes verificados de la novela ligera.
+- **Comprobación estática tras la tanda:** 45 enlaces Markdown relativos en el expediente de Loki, cero rutas rotas; los 6 IDs nuevos aparecen una vez cada uno en catálogo; DMR-018-SRC-001 incluye los claims DMR-018-CLM-017..022.
+- **CI de corrección funcional previa `7a36e28d15c663e73b1bdde16d85537ae061119f`:** ambos workflows `success` para el SHA exacto:
+  - [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38989485820)
+  - [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38989485783)
+- **CI de la tanda actual `66c7bf03d65e76e08055afcdfa151cda0b413ef5`:** ambos workflows estaban `IN_PROGRESS` al redactar el checkpoint:
+  - [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/38989630921)
+  - [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/38989630922)
+- **Validación local:** NOT_RUN desde esta interfaz. Revalidar ambos workflows para el SHA documental posterior antes de marcar la tanda como CI aprobada.
+- **Cobertura global:** PARTIAL. Faltan cotejos de novela para varios miembros, la correspondencia Narfi/Narvi Roll y Line/Leene Arshe sigue abierta, y la cobertura de Soma/deidades/Familias continúa pendiente. El roster manga-only no se confunde con canon de novela.
+- `main` no se modificó; no hubo merges ni operaciones sobre PR.
 
 ---
 

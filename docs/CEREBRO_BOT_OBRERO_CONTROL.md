@@ -234,3 +234,19 @@ Próxima acción exacta:
 - **Siguiente:** cotejo directo del volumen 4; luego continuar con miembros faltantes distinguiendo novela, manga y juego.
 - **Límites:** no inventar capítulos/páginas ni unir identidades solo por similitud de nombre.
 - `main` sin modificar, ningún merge ni operación de PR.
+
+
+## DANMACHI-COVERAGE-001 — tanda manga-only de Loki
+
+**Estado:** IN_PROGRESS; pendiente CI en el SHA funcional y en el documental.
+
+- **SHA funcional:** 66c7bf03d65e76e08055afcdfa151cda0b413ef5.
+- **Fichas:** Nick (`CHAR-LOKI-NICK`), Nicole (`CHAR-LOKI-NICOLE`), Ruuni (`CHAR-LOKI-RUUNI`), Shifon (`CHAR-LOKI-SHIFON`), Stark (`CHAR-LOKI-STARK`) y Coco manga (`CHAR-LOKI-COCO-MANGA`).
+- **Continuidad:** todas se fijan a `CONT-MANGA` con claims secundarios explícitos; no declarar estas apariciones como novelas ligeras. El Coco de Loki se separa de `CHAR-COCO-COLLINS` de Soma Familia.
+- **Catálogo:** 128 records, 107 documents, sin IDs duplicados en la revisión estática.
+- **Navegación:** seis IDs añadidos al índice de personajes y enlazados en `lore/danmachi/familias/loki-familia.md`; 45 enlaces relativos comprobados, cero rotos.
+- **Fuente:** DMR-018-SRC-001. Sus claims se extendieron con DMR-018-CLM-017..022 y quedaron documentados en `DANMACHI-RESEARCH-019-loki-manga-roster.md`.
+- **CI del SHA anterior 7a36e28:** ambos workflows success (#38989485820 y #38989485783).
+- **CI del SHA funcional actual 66c7bf03d65e76e08055afcdfa151cda0b413ef5:** Validate #38989630921 y Lore Integrity #38989630922 estaban IN_PROGRESS al cierre funcional. Volver a consultar; no marcar PASS basado en un SHA anterior.
+- **Próximo:** comprobar CI exacto; seguir completando los nombres restantes del roster, con manga separado de novela, y luego pasar a Soma/deidades/Familias.
+- **main y PRs:** sin modificar; no hubo merges.
