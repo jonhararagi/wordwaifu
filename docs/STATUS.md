@@ -1,3 +1,15 @@
+# DANMACHI-COVERAGE-002 — preflight de CI (2026-10-17)
+
+**Estado:** IN_PROGRESS. No se declara cerrada la cobertura ni la validación completa.
+
+- HEAD observado antes de este checkpoint: `414db0e6a9c1a22c8c3f723a7844bffbacf9a583` en `work/story-completion-danmachi-audit-2026-10`.
+- `Validate WordWaifu`: `success`, ejecución 1531, SHA exacto `414db0e6a9c1a22c8c3f723a7844bffbacf9a583` ([run](https://github.com/jonhararagi/wordwaifu/actions/runs/39003430425)).
+- `DanMachi Lore and Retrieval Integrity`: la última ejecución observada antes de este checkpoint fue `success` para `7ec6d98fc3ec491d86de163ec6b6fae7b5b28b2b`, no para el HEAD anterior ([run](https://github.com/jonhararagi/wordwaifu/actions/runs/39003428308)). Por tanto, falta evidencia de ese workflow para el SHA exacto del HEAD anterior.
+- El flujo admite `workflow_dispatch`, pero el intento por interfaz web no pudo despacharlo porque GitHub solicitó iniciar sesión; no se finge una ejecución manual. Este cambio de `docs/STATUS.md` es un push real cubierto por el filtro del workflow de lore y debe generar una ejecución en el nuevo SHA. Verificar las dos conclusiones para el nuevo HEAD antes de considerar satisfecha esta etapa.
+- No se tocó `main`, no se fusionaron ramas ni se abrieron/cerraron PR.
+
+---
+
 # ESTADO ACTUAL — DANMACHI-COVERAGE-001 EN PROGRESO
 
 **Actualizado:** 2026-10-17. Este bloque prevalece sobre los estados históricos siguientes.
