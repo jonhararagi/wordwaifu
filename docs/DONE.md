@@ -1,9 +1,11 @@
 ## DANMACHI-COVERAGE-003 — corrección del test de corpus (2026-10-17)
 
-- **Hallazgo real de CI:** DanMachi Lore and Retrieval Integrity #794 falló en `tests/test_lore_corpus.cjs`: el índice devolvió 122 claims frente a 120 esperados tras añadirse dos claims explícitos de la sinopsis editorial del volumen 2.
-- **Corrección:** ajustar las expectativas del test de corpus a 122 claims y 125 entradas buscables; no retirar ni ocultar las dos afirmaciones nuevas. La validación general #1535 estaba aún en curso en el checkpoint previo; volver a comprobar ambos workflows para el SHA posterior a esta corrección.
+- **Hallazgo real de CI (intento corregido):** DanMachi Lore and Retrieval Integrity #794 falló en `tests/test_lore_corpus.cjs` porque el índice devolvió 122 claims frente a 120 esperados tras añadirse dos claims explícitos de la sinopsis editorial del volumen 2.
+- **Corrección:** ajustar las expectativas del test de corpus a 122 claims y 125 entradas buscables; no retirar ni ocultar las dos afirmaciones nuevas. La corrección pasó el test del corpus y las pruebas de navegador.
 - **Base inmediata:** `b75b6a54dc0ba7839d069e9f6a6c383cbd6422ce`; el commit de esta corrección actualizará test y punto de reanudación.
-- **Estado:** PASS_CI no declarado hasta verificar el nuevo SHA exacto. Pruebas locales NOT_RUN.
+- **Estado del snapshot funcional:** PASS_CI en `f14945bfd09545f47666ac9af00c2fe54bcd5782`. Pruebas locales NOT_RUN.
+- **Evidencia CI del snapshot de contenido y test `f14945bfd09545f47666ac9af00c2fe54bcd5782`:** Validate WordWaifu #1537 **SUCCESS** (https://github.com/jonhararagi/wordwaifu/actions/runs/39005140262) y DanMachi Lore and Retrieval Integrity #796 **SUCCESS** (https://github.com/jonhararagi/wordwaifu/actions/runs/39005140287), ambos vinculados al mismo SHA. El primer intento del código funcional había fallado solo por la expectativa de conteo obsoleta; la corrección a 122 claims y 125 entradas fue aceptada por el corpus test.
+- **Control del commit documental:** este checkpoint mueve el HEAD solo para persistir evidencia y debe verificarse en Actions de la nueva cabeza.
 - **Restricciones:** mantener `main` intacta; sin merges ni operaciones de PR.
 
 ---
