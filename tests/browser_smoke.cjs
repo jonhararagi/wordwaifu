@@ -2872,6 +2872,24 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
     const backgroundAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("background", "bg-orario-night"));
     assert.ok(backgroundAsset.prompt.includes("Panorámica nocturna"), "Background prompts must be saved against their own stable ID.");
+
+    // A successful delete must release its tombstone; otherwise ordinary cleanup makes
+    // the localStorage marker list grow without bound over the lifetime of the app.
+    const cleanupCheckKey = "background:bg-tombstone-cleanup-check";
+    await page.locator("#art-target-id").fill("bg-tombstone-cleanup-check");
+    await page.locator("#art-target-name").fill("Temporal para probar borrado");
+    await page.locator("#art-prompt").fill("Registro efímero para comprobar la limpieza de la marca.");
+    await page.locator("#art-save").click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "3", { timeout: 5000 });
+    await page.locator('#art-assignments [data-art-key="background:bg-tombstone-cleanup-check"]:visible').first().getByRole("button", { name: "Eliminar" }).first().click();
+    await page.waitForFunction(() => document.querySelector("#art-assignment-count")?.textContent === "2", { timeout: 5000 });
+    assert.equal(await page.evaluate(async key => window.WordWaifuArtStudio.getAsset("background", "bg-tombstone-cleanup-check"), cleanupCheckKey), null,
+      "A successfully deleted assignment must stay absent.");
+    assert.equal(await page.evaluate(key => {
+      const keys = JSON.parse(localStorage.getItem("wordwaifu.art.deleted.v1") || "[]");
+      return keys.includes(key);
+    }, cleanupCheckKey), false, "Successful deletion must remove its no-longer-needed tombstone.");
+
     // IndexedDB CRUD and reload: edit an existing assignment, reload the app, then delete it.
     const backgroundCard = page.locator('#art-assignments [data-art-key="background:bg-orario-night"]:visible').first();
     await backgroundCard.getByRole("button", { name: "Editar" }).first().click();

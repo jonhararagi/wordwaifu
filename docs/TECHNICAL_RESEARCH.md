@@ -132,3 +132,17 @@ IndexedDB no convierte por sí solo los datos del navegador en una copia de segu
 ### Resultado esperado
 
 Una sola evaluación del módulo mantiene un único conjunto de listeners; la prueba previene que otras futuras etiquetas duplicadas vuelvan a generar dobles inicializaciones. La verificación final corresponde a los workflows del commit que contiene este arreglo.
+
+
+## 2026-10-17 · Liberación de marcas antirresurrección del Panel de arte
+
+### Incidencia encontrada y corrección
+- Cada borrado correcto dejaba su clave en `wordwaifu.art.deleted.v1`, incluso cuando IndexedDB se había eliminado y no existía una copia residual en localStorage. Con muchos recursos creados y borrados, la lista crecía indefinidamente sin aportar protección adicional.
+- Ahora `removeRecord` retira la marca al terminar correctamente la eliminación de IndexedDB y la limpieza del respaldo local (o cuando no había copia de respaldo). La marca se conserva si la limpieza del respaldo falla; ese es el caso en que realmente evita que un registro antiguo vuelva a aparecer.
+- La prueba de Chromium cubre ambas rutas: borrado correcto limpia la marca, mientras que el escenario de fallo simulado que deja una copia vieja en localStorage conserva la marca tras recargar la página y no resucita el recurso.
+
+### Fuentes técnicas consultadas
+- [MDN — cuotas y criterios de expulsión del almacenamiento web](https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria): localStorage es limitado (hasta 5 MiB por origen en la documentación actual) y puede lanzar `QuotaExceededError`; las estructuras auxiliares persistentes deben tener un ciclo de vida acotado.
+- [MDN — IndexedDB: uso y transacciones](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB): IndexedDB es asíncrono y transaccional; la app sigue esperando la confirmación de la transacción antes de limpiar la marca.
+- [MDN — evento `complete` de IDBTransaction](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete_event): el evento marca que la transacción terminó y confirmó sus operaciones.
+

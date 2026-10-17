@@ -184,6 +184,9 @@
         try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
         catch (_) { throw new Error("El recurso quedó marcado como eliminado, pero no se pudo limpiar el respaldo local."); }
       }
+      // Once both stores are clean, the tombstone has done its job. Keep it only
+      // if stale fallback cleanup failed, otherwise repeated deletes grow storage forever.
+      try { clearDeleted(key); } catch (_) {}
       return;
     }
 
@@ -212,6 +215,9 @@
       try { root.localStorage.setItem(FALLBACK_KEY, JSON.stringify(fallback)); }
       catch (_) { throw new Error("El recurso se eliminó de IndexedDB, pero no se pudo limpiar el respaldo local; la marca anti-resurrección impedirá que reaparezca."); }
     }
+    // A persisted marker is required only while a stale fallback copy may survive.
+    // If cleanup succeeded (or no fallback copy existed), release its localStorage space.
+    try { clearDeleted(key); } catch (_) {}
   }
 
   function makeKey(category, entityId) {
