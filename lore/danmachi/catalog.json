@@ -1368,6 +1368,33 @@
       ],
       "status": "official_adaptation_profile_secondary_lore_primary_locator_pending",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-LOKI-AKI",
+      "path": "characters/aki.md",
+      "type": "character",
+      "tags": [
+        "Aki",
+        "Familia Loki",
+        "Loki Familia",
+        "supporting member"
+      ],
+      "status": "secondary_roster_reference_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LOKI-ALICIA-FORESTLIGHT",
+      "path": "characters/alicia-forestlight.md",
+      "type": "character",
+      "tags": [
+        "Alicia Forestlight",
+        "Alicia",
+        "Familia Loki",
+        "elf",
+        "supporting member"
+      ],
+      "status": "secondary_roster_reference_primary_check_pending",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
