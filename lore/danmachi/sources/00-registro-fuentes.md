@@ -1204,3 +1204,136 @@ verification_status: stub
 - rights_note: Paráfrasis original; no copiar prosa ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
 - verification_status: secondary_reference_checked_primary_locator_pending
+
+
+## DMR-021-SRC-001 · Zeus Familia — referencia comunitaria
+
+- source_id: DMR-021-SRC-001
+- title: Zeus Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Zeus_Familia
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; miembros; historia y relaciones
+- claims_supported: [DMR-021-CLM-001, DMR-021-CLM-003, DMR-021-CLM-006]
+- events_supported: [EVT-DM-ZH-OEBD-001, EVT-DM-ZH-FALL-001]
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria para descubrir roster y sucesos candidatos. Rangos, participantes, fecha, resultado y estado institucional requieren cotejo primario.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+## DMR-021-SRC-002 · Hera Familia — referencia comunitaria
+
+- source_id: DMR-021-SRC-002
+- title: Hera Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Hera_Familia
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; roster; historia y organización
+- claims_supported: [DMR-021-CLM-002, DMR-021-CLM-004, DMR-021-CLM-006, DMR-021-CLM-008]
+- events_supported: [EVT-DM-ZH-OEBD-001, EVT-DM-ZH-FALL-001]
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria; niveles, identidad de la capitanía, participantes y estado histórico requieren confirmación en novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+## DMR-021-SRC-003 · Zeus — referencia comunitaria de personaje
+
+- source_id: DMR-021-SRC-003
+- title: Zeus
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Zeus
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; identidad; relaciones y afiliación
+- claims_supported: [DMR-021-CLM-001, DMR-021-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria; relación con Bell y estado posterior de Zeus requieren localizador literario directo.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+## DMR-021-SRC-004 · Hera — referencia comunitaria de personaje
+
+- source_id: DMR-021-SRC-004
+- title: Hera
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Hera
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; identidad y relaciones
+- claims_supported: [DMR-021-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria; personalidad, relaciones privadas y estado actual no se marcan como hechos primarios.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+## DMR-021-SRC-005 · Maxim — referencia comunitaria de personaje
+
+- source_id: DMR-021-SRC-005
+- title: Maxim
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; historias históricas y retrospectivas
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Maxim
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; nivel y cargo; apariciones
+- claims_supported: [DMR-021-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN (según la referencia secundaria)
+- reliability_note: Fuente secundaria; cargo, nivel, destino y volumen citado requieren corroboración en texto autorizado.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+## DMR-021-SRC-006 · Meteria — referencia comunitaria de personaje
+
+- source_id: DMR-021-SRC-006
+- title: Meteria
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Meteria
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; relaciones familiares; afiliación y estado biográfico
+- claims_supported: [DMR-021-CLM-004, DMR-021-CLM-005]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria con spoilers mayores. Maternidad, parentesco, afiliación y estado requieren localizadores de novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
