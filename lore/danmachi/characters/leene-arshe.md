@@ -9,6 +9,8 @@ source_refs:
   - DMR-005-SRC-001
   - DMR-013-SRC-001
   - DMR-017-SRC-001
+claim_refs:
+  - DMR-018-CLM-016
 tags: [Leene Arshe, Leene, Line Arshe, Familia Loki, Loki Familia, Sword Oratoria, spoiler, identity crosswalk pending]
 ---
 # Leene Arshe
