@@ -1,5 +1,17 @@
 # Registro de tandas de lore
 
+## DANMACHI-COVERAGE-007 · Auditoría de fuentes candidatas para Elfy Colette (2026-10-17)
+
+- **Estado:** IN_PROGRESS; no se verificó biografía individual en texto primario.
+- **Rama / HEAD base:** work/story-completion-danmachi-audit-2026-10 / 0174743fce8e398b987d5779b404a0977ec904f4.
+- **Fuentes:** DMR-024-SRC-001 (ficha editorial oficial de DanMachi vol. 10), DMR-024-SRC-002 (ficha editorial oficial de Sword Oratoria vol. 6) y DMR-024-SRC-003 (listado/muestra BOOK☆WALKER de SO6; extracción fallida).
+- **Resultado:** las dos sinopsis oficiales aportan contexto de sus volúmenes, pero no nombran a Elfy Colette/Lomoire ni respaldan sus rasgos individuales. El visor de muestra devolvió “Could not download. Please check your network connection.” No se leyeron páginas; el error no es evidencia de ausencia en el libro.
+- **Dossier:** CHAR-LOKI-ELFY-COLETTE mantiene el mismo ID y el estado secondary_reference_primary_locator_pending. Se retiró CONT-ANIME porque esta tanda no verificó una fuente de adaptación para esta identidad. Alias, magia de fuego, personalidad y relación con Lefiya siguen explícitamente secundarios.
+- **Catálogo:** 134 records / 112 documentos. La cantidad describe estructura, no completitud.
+- **Pendiente:** cotejo directo de edición autorizada y localizador de capítulo/página; no inventar lectura japonesa/romaji del alias.
+- **main:** sin cambios; sin merges ni operaciones de PR.
+
+
 ## BATCH-DM-000 · Protocolo y semilla inicial
 - Estado: guardada en feature/danmachi-lore-poc.
 - Alcance: plantilla de lore, protocolo de revisión, premisa del OC, primeras fichas generales de Orario/Falna/Dungeon, Hestia/Loki/Eina/Bell/Ais, Familias y alertas iniciales de cronología.

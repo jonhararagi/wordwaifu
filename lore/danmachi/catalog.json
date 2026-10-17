@@ -2852,6 +2852,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-023-rakta-scene-reconciliation.md",
       "type": "character_continuity_reconciliation",
       "status": "secondary_scene_split_official_compilation_located_primary_text_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-024",
+      "path": "research/inbox/DANMACHI-RESEARCH-024-elfy-source-audit.md",
+      "type": "source_provenance_audit",
+      "status": "official_synopses_checked_individual_claims_pending_primary_text"
     }
   ],
   "lastStructuredSync": "2026-10-17"

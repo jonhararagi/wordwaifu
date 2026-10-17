@@ -313,7 +313,8 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Cotejar primero *Sword Oratoria* vol. 4: briefing de Aki, Narfi/Narvi, Cruz y miembros de apoyo.
 - [x] Investigar el reporte de Rakta para *Sword Oratoria* vol. 2 y separar la escena del piso 37 del escondite detrás de Gareth ante Bete, atribuido por fuente secundaria a una historia extra asociada al vol. 12.
 - [ ] Cotejar el pasaje del piso 37 en *Sword Oratoria* vol. 2 con texto autorizado; verificar por separado el relato «花束の代わりに捧ぐ狼の咆哮» en la recopilación oficial `掌編集２` (ISBN 978-4-8156-1967-1).
-- [ ] Cotejar *DanMachi* vol. 10 / *Sword Oratoria* vol. 6 para Elfy y el alias Lomoire.
+- [x] Registrar el cotejo de alcance de las sinopsis oficiales de *DanMachi* vol. 10 y *Sword Oratoria* vol. 6 para Elfy: ninguna nombra a Elfy/Lomoire ni respalda sus claims individuales; la muestra de SO6 falló técnicamente y no fue leída. Ver RESEARCH-DM-024.
+- [ ] Cotejar directamente el texto autorizado de *DanMachi* vol. 10 / *Sword Oratoria* vol. 6 para Elfy, la lectura del alias Lomoire y la relación con Lefiya; no elevar afirmaciones por las sinopsis editoriales.
 - [ ] Cotejar *Sword Oratoria* vol. 7 para Arcs, Cynthia y Orba; resolver la discrepancia de ocupación de Orba.
 - [ ] Mantener manga/juego separados de novela ligera; no promover una ficha por la mera presencia de un nombre en una wiki.
 

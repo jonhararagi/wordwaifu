@@ -1,3 +1,17 @@
+## DANMACHI-COVERAGE-007 — auditoría de localizadores de Elfy Colette (2026-10-17)
+
+- **Estado:** IN_PROGRESS; no se completó el cotejo primario.
+- **Rama autorizada:** work/story-completion-danmachi-audit-2026-10. HEAD base: 0174743fce8e398b987d5779b404a0977ec904f4.
+- **Resultado verificable:** las sinopsis oficiales de DanMachi vol. 10 y Sword Oratoria vol. 6 fueron registradas en DMR-024-SRC-001/002. Aportan contexto editorial, pero no nombran a Elfy/Lomoire ni verifican sus rasgos individuales.
+- **Muestra SO6:** DMR-024-SRC-003 registra que el visor devolvió “Could not download. Please check your network connection.” No se leyeron páginas; el fallo no prueba que el personaje esté ausente del libro.
+- **Ficha:** CHAR-LOKI-ELFY-COLETTE conserva su ID y el estado secondary_reference_primary_locator_pending. Se quitó CONT-ANIME del alcance no verificado. Alias, afiliación, magia de fuego, personalidad y relación con Lefiya siguen como afirmaciones secundarias.
+- **Catálogo:** 134 registros / 112 documentos. Estas cantidades no equivalen a cobertura completa.
+- **Pendiente concreto:** cotejar el texto autorizado de ambos volúmenes y registrar localizador exacto solo después de leer el pasaje.
+- **Pruebas locales:** NOT_RUN; CI del SHA documental nuevo pendiente de consultar.
+- **main:** sin cambios; sin merges ni operaciones de PR.
+
+---
+
 ## DANMACHI-COVERAGE-006 — reconciliación de escenas de Rakta Haze (2026-10-17)
 
 - **Rama autorizada:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios, sin merge ni operaciones de PR.

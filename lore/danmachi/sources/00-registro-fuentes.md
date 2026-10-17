@@ -1447,3 +1447,67 @@ verification_status: stub
 - rights_note: Parafrasear la sinopsis editorial.
 - verified_by: DANMACHI-COVERAGE-006
 - verification_status: source_checked_publisher_synopsis_only
+
+
+## DMR-024-SRC-001 · DanMachi, volumen principal 10 (ficha editorial oficial)
+- source_id: DMR-024-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか10
+- creator_or_publisher: Fujino Omori / GA文庫 (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 10; ISBN 978-4-7973-8677-6
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784797386776/
+- accessed_at: 2026-10-17
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial centrada en los Xenos/Wiene y la migración de monstruos.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Confirma metadatos y marco general editorial; no nombra a Elfy Colette/Lomoire ni verifica su afiliación, magia, personalidad o relación con Lefiya.
+- conflicting_sources: []
+- rights_note: Parafrasear; no reproducir la sinopsis completa.
+- verified_by: DANMACHI-COVERAGE-007
+- verification_status: source_checked_publisher_synopsis_only
+
+## DMR-024-SRC-002 · Sword Oratoria, volumen 6 (ficha editorial oficial)
+- source_id: DMR-024-SRC-002
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア6
+- creator_or_publisher: Fujino Omori / GA文庫 (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Volumen 6; ISBN 978-4-7973-8846-6
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784797388466/
+- accessed_at: 2026-10-17
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial sobre la Familia Loki tras la expedición, el viaje a Meren, una segunda entrada al Dungeon y el conflicto con Kali Familia.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Confirma metadatos y contexto general editorial; no nombra a Elfy/Lomoire ni acredita los claims individuales de su ficha.
+- conflicting_sources: []
+- rights_note: Parafrasear; no reproducir la sinopsis completa.
+- verified_by: DANMACHI-COVERAGE-007
+- verification_status: source_checked_publisher_synopsis_only
+
+## DMR-024-SRC-003 · Listado y muestra pública BOOK☆WALKER de Sword Oratoria, volumen 6
+- source_id: DMR-024-SRC-003
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア６ — 試し読み
+- creator_or_publisher: BOOK☆WALKER / contenido editorial distribuido por SB Creative
+- source_type: PRIMARY_SIDE
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Listado comercial y enlace a muestra pública del volumen 6
+- language: Japonés
+- official_url: https://bookwalker.jp/deb3fced1b-ebe2-4879-8932-1999ade3f0c5/
+- accessed_at: 2026-10-17
+- locator_type: public_sample_access_attempt
+- locator: El enlace de muestra https://bookwalker.jp/deb3fced1b-ebe2-4879-8932-1999ade3f0c5/?sample=1 y el visor https://viewer-trial.bookwalker.jp/03/21/viewer.html?cid=b3fced1b-ebe2-4879-8932-1999ade3f0c5&cty=0 devolvieron “Could not download. Please check your network connection.” No se leyeron páginas ni se registraron capítulos.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: El fallo técnico de acceso no demuestra que Elfy esté ausente del tramo de muestra ni del libro completo; el contenido no pudo inspeccionarse.
+- conflicting_sources: []
+- rights_note: No reproducir texto de la muestra.
+- verified_by: DANMACHI-COVERAGE-007
+- verification_status: sample_access_failed_no_content_verified

@@ -9,7 +9,8 @@
 - **Afirmación resumida:** una ficha comunitaria la identifica como integrante de Loki Familia y aventurera maga, menciona magia de fuego y un vínculo doméstico con Lefiya; también le atribuye el objetivo de volverse más fuerte sin desear el mismo entrenamiento intenso que Lefiya.
 - **Fuente:** DMR-015-SRC-001.
 - **Localizador indicado por la fuente:** DanMachi, volumen 10, y Sword Oratoria, volumen 6; capítulos, páginas y pasajes no cotejados.
-- **Límite:** la ficha registra pistas de identidad, rol y relación en estado secundario; no declara edad, nivel o habilidades como canon primario.
+- **Cotejo de contexto (DMR-024):** las sinopsis editoriales oficiales de DanMachi vol. 10 y Sword Oratoria vol. 6 no nombran a Elfy/Lomoire ni respaldan sus rasgos individuales. La muestra BOOK☆WALKER de SO6 no pudo descargarse por un error técnico, por lo que no se leyeron páginas. Esto no demuestra ausencia en el libro completo.
+- **Límite:** identidad, rol, magia y relación doméstica continúan como pistas secundarias; no se declara edad, nivel o habilidades como canon primario.
 - **Estado:** secondary_reference_primary_locator_pending.
 
 ## DMR-015-CLM-002 · Rakta Haze — reporte secundario del volumen 2
@@ -26,7 +27,7 @@
 - **Estado:** secondary_alias_reference_primary_locator_pending.
 
 ## Próximas acciones
-1. Cotejar cada nombre y los pasajes indicados en ediciones autorizadas, sin inventar páginas/capítulos.
+1. Cotejar cada nombre y los pasajes indicados en ediciones autorizadas, sin inventar páginas/capítulos. Para Elfy, buscar directamente el texto de DanMachi vol. 10 y Sword Oratoria vol. 6; las sinopsis editoriales no bastan.
 2. Para Rakta, cotejar por separado el pasaje de *Sword Oratoria* vol. 2 sobre el piso 37 y la historia extra del vol. 12; no fusionar escenas hasta leer ambas fuentes autorizadas.
 3. Añadir relaciones y niveles por periodo solo con evidencia identificable.
 4. Investigar otros miembros nombrados en rosters y priorizar los que puedan localizarse en texto primario.

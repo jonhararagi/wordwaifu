@@ -3,8 +3,8 @@ id: CHAR-LOKI-ELFY-COLETTE
 universe: danmachi
 type: character
 status: secondary_reference_primary_locator_pending
-confidence: provisional; paraphrases from community compendium, not verified against light-novel text
-continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-ANIME
+confidence: provisional; community-compendium paraphrases only; official publisher synopses checked for context but do not identify Elfy or verify individual claims
+continuity_scope: CONT-MAIN-LN; CONT-SO
 source_refs:
   - DMR-015-SRC-001
 claim_refs:
@@ -25,7 +25,7 @@ tags: [Elfy Colette, Elfy, Lomoire, Loki Familia, mage, fire magic, Lefiya Virid
 
 La referencia comunitaria la describe como aventurera y maga, asociada con magia de fuego. Presenta una personalidad alegre y sociable y le atribuye el deseo de fortalecerse, aunque con menos entusiasmo por un entrenamiento tan intenso como el de Lefiya. Esto sirve como mapa de escenas que buscar, no como diagnóstico definitivo: no prueba que siempre esté alegre, que evite cualquier esfuerzo ni que su magia tenga alcance, potencia o coste concretos.
 
-La misma referencia apunta apariciones en DanMachi, volumen 10, y Sword Oratoria, volumen 6. Son localizadores bibliográficos candidatos recopilados secundariamente; capítulo, página y pasaje siguen pendientes. No se declara que esos volúmenes hayan sido cotejados directamente en esta tanda.
+La referencia comunitaria propone DanMachi, volumen 10, y Sword Oratoria, volumen 6, como localizadores candidatos. Se consultaron las fichas editoriales oficiales de ambos volúmenes: sus sinopsis describen el marco general de cada historia, pero no nombran a Elfy ni a Lomoire ni acreditan los rasgos biográficos de esta ficha. La muestra pública enlazada para Sword Oratoria 6 no pudo descargarse por un error técnico del visor; no se leyeron páginas. Por tanto, los dos volúmenes siguen siendo candidatos secundarios, no pasajes primarios cotejados.
 
 ## Relaciones navegables
 
