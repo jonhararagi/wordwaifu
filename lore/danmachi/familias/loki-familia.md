@@ -61,6 +61,8 @@ La página oficial asocia los siguientes personajes a la Familia Loki. La lista 
 | **Raul Nord** | Aventurero humano de nivel 4 en el perfil, con inseguridad personal y trabajo cotidiano de apoyo; Finn confía en él para dirigir miembros de menor rango en emergencias. | Es útil para mostrar mando delegado, logística y valor práctico sin ser el más dominante del grupo. | El nivel pertenece al snapshot de la adaptación y puede cambiar con la cronología. |
 
 ### Miembros secundarios con expediente individual
+- **[Leene Arshe](../characters/leene-arshe.md)** — personaje secundario asociado a la línea de *Sword Oratoria*. Su ficha separa esta continuidad y deja pendiente el localizador primario de sus escenas; los spoilers sobre su destino deben permanecer etiquetados.
+
 
 La cobertura de la Familia no debe limitarse a sus líderes o a los aventureros más destacados. Se incorporan dos expedientes individuales de cobertura, ambos **provisionales** porque falta localizar su aparición primaria concreta:
 
