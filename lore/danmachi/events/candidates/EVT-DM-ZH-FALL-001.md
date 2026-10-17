@@ -2,10 +2,12 @@
 id: EVT-DM-ZH-FALL-001
 universe: danmachi
 type: event
-status: pending_verification
+status: secondary_reference_primary_locator_pending
 continuity_scope: main_and_related_sources
 spoiler_level: major
-source_refs: []
+source_refs:
+  - DMR-021-SRC-001
+  - DMR-021-SRC-002
 ---
 # EVT-DM-ZH-FALL-001 · Pérdida de poder de Zeus y Hera Familia
 
@@ -52,3 +54,12 @@ Regla: cuando el autor los complete, mantenerlos etiquetados como `CONT-AU`; no 
 - ERA-05.
 - EVT-DM-ZH-OEBD-001.
 - DM-FAM-ZEUS y DM-FAM-HERA (candidatos).
+
+
+## Expedientes de organización enlazados
+
+- [Zeus Familia](../../familias/zeus-familia.md).
+- [Hera Familia](../../familias/hera-familia.md).
+- [ERA-05](../../timeline/eras/05-caida-zeus-hera-y-consecuencias.md).
+
+Las referencias comunitarias reportan pérdida posterior de posición y posible expulsión/salida, pero no hay un localizador primario para fijar el estado exacto ni si los dos grupos dejaron Orario de la misma forma y al mismo tiempo. Distinguir derrota, pérdida de posición, expulsión, disolución y dispersión.
