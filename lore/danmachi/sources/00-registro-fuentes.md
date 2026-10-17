@@ -489,7 +489,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Lead, descripción de organización y roster de miembros.
-- claims_supported: [DMR-013-CLM-003, DMR-013-CLM-004, DMR-013-CLM-009]
+- claims_supported: [DMR-013-CLM-003, DMR-013-CLM-004, DMR-013-CLM-009, DMR-013-CLM-011, DMR-013-CLM-012, DMR-013-CLM-013]
 - continuity_scope: CONT-MAIN-LN; referencia secundaria
 - reliability_note: Sirve para localizar nombres y afirmaciones a contrastar. No reemplaza el texto de la novela y los miembros deben representarse por periodo.
 - conflicting_sources: []
@@ -507,7 +507,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Lead biográfico y sección de la Familia.
-- claims_supported: [DMR-013-CLM-001, DMR-013-CLM-009]
+- claims_supported: [DMR-013-CLM-001, DMR-013-CLM-009, DMR-013-CLM-012]
 - continuity_scope: CONT-MAIN-LN; referencia secundaria
 - reliability_note: La caracterización y reforma requieren cotejo con novela.
 - conflicting_sources: []
@@ -525,7 +525,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Lead biográfico, alias y rol histórico reportado.
-- claims_supported: [DMR-013-CLM-003, DMR-013-CLM-005]
+- claims_supported: [DMR-013-CLM-003, DMR-013-CLM-005, DMR-013-CLM-012]
 - continuity_scope: CONT-MAIN-LN; referencia secundaria
 - reliability_note: Nivel, apariencia, cargo y desenlace aún requieren localizador primario.
 - conflicting_sources: []
@@ -543,7 +543,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Lead biográfico y cargo de capitán reportado.
-- claims_supported: [DMR-013-CLM-004]
+- claims_supported: [DMR-013-CLM-004, DMR-013-CLM-013]
 - continuity_scope: CONT-MAIN-LN; referencia secundaria
 - reliability_note: Fuente breve; no respalda habilidades inventadas ni psicología exhaustiva.
 - conflicting_sources: []
@@ -561,7 +561,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Lead, afiliaciones y descripción del personaje.
-- claims_supported: [DMR-013-CLM-002]
+- claims_supported: [DMR-013-CLM-002, DMR-013-CLM-011, DMR-013-CLM-013]
 - continuity_scope: CONT-MAIN-LN; referencia secundaria
 - reliability_note: Detalles de arco y psicología necesitan verificación en la novela.
 - conflicting_sources: []
@@ -579,7 +579,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: category_member_listing
 - locator: Páginas listadas bajo la categoría Soma Familia.
-- claims_supported: [DMR-013-CLM-005, DMR-013-CLM-006, DMR-013-CLM-007, DMR-013-CLM-008]
+- claims_supported: [DMR-013-CLM-005, DMR-013-CLM-006, DMR-013-CLM-007, DMR-013-CLM-008, DMR-013-CLM-014]
 - continuity_scope: CONT-MAIN-LN; referencia secundaria
 - reliability_note: Fuente de descubrimiento de nombres; no confirma escenas, roster activo por periodo ni biografías.
 - conflicting_sources: []
@@ -599,7 +599,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: publisher_synopsis
 - locator: Ficha y sinopsis editorial del volumen 6; captura de Lili por Soma Familia antes del War Game.
-- claims_supported: [DMR-013-CLM-002]
+- claims_supported: [DMR-013-CLM-002, DMR-013-CLM-011]
 - continuity_scope: CONT-MAIN-LN; descripción editorial, sin capítulo/página
 - reliability_note: No utilizar como prueba de las escenas privadas de Zanis, Chandra o Canoe; no es texto íntegro de la novela.
 - conflicting_sources: []
@@ -617,7 +617,7 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: adaptation_character_profile
 - locator: Perfil oficial de Liliruca Arde.
-- claims_supported: [DMR-013-CLM-010]
+- claims_supported: [DMR-013-CLM-010, DMR-013-CLM-011]
 - continuity_scope: CONT-ANIME
 - reliability_note: Sirve para el estado descrito por la adaptación, no para validar capítulo/página de la novela.
 - conflicting_sources: []
@@ -1098,3 +1098,109 @@ verification_status: stub
 - rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
 - verification_status: secondary_reference_checked_primary_text_pending
+
+
+## DMR-013-SRC-009 · Tsukinokami Kaede — referencia de personaje
+- source_id: DMR-013-SRC-009
+- title: Tsukinokami Kaede
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Orario Rhapsodia
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Tsukinokami_Kaede
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Perfil; History; Equipment; Navigation
+- claims_supported: [DMR-013-CLM-015]
+- events_supported: []
+- continuity_scope: CONT-GAME; main-novel affiliation remains secondary roster only
+- reliability_note: Friendship, journey and katana are attributed to the community profile of Orario Rhapsodia; do not transfer those details to the light novel without a direct locator.
+- conflicting_sources: []
+- rights_note: Original paraphrase; do not copy prose or images.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_game_profile_checked_primary_novel_pending
+
+## DMR-013-SRC-010 · Shinonome Momiji — referencia de personaje
+- source_id: DMR-013-SRC-010
+- title: Shinonome Momiji
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Orario Rhapsodia
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Shinonome_Momiji
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Perfil; History; Navigation
+- claims_supported: [DMR-013-CLM-016]
+- events_supported: []
+- continuity_scope: CONT-GAME; main-novel affiliation remains secondary roster only
+- reliability_note: The community profile links Momiji to Kaede and Orario Rhapsodia; details remain game continuity until a main-novel locator is found.
+- conflicting_sources: []
+- rights_note: Original paraphrase; do not copy prose or images.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_game_profile_checked_primary_novel_pending
+
+## DMR-013-SRC-011 · Coco Collins — referencia de personaje
+- source_id: DMR-013-SRC-011
+- title: Coco Collins
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Orario Rhapsodia
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Coco_Collins
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Perfil; alias japonés; datos del juego; Navigation
+- claims_supported: [DMR-013-CLM-017]
+- events_supported: []
+- continuity_scope: CONT-GAME; main-novel affiliation remains secondary roster only
+- reliability_note: The profile identifies Coco Collins as a character appearing in Orario Rhapsodia. Keep her separate from the Coco listed under Loki Familia in manga references.
+- conflicting_sources: [A separate manga character called Coco is listed with Loki Familia; no source connects the identities.]
+- rights_note: Original paraphrase; do not copy prose or images.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_game_profile_checked_primary_novel_pending
+
+## DMR-013-SRC-012 · Canoe Belway — referencia individual comunitaria
+- source_id: DMR-013-SRC-012
+- title: Canoe Belway
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi, historia principal
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Canoe_Belway
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead; descripción; historia y destino reportado
+- claims_supported: [DMR-013-CLM-014]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN según referencia secundaria
+- reliability_note: Pista para localizar una acusación relacionada con la desaparición de Canoe; no usarla para decidir culpabilidad.
+- conflicting_sources: []
+- rights_note: Original paraphrase; do not copy prose or images.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_locator_pending
+
+## DMR-013-SRC-013 · Liliruca Arde — relaciones, referencia comunitaria
+- source_id: DMR-013-SRC-013
+- title: Liliruca Arde / Relationships
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi, historia principal
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Liliruca_Arde/Relationships
+- accessed_at: 2026-10-16
+- locator_type: community_article_section
+- locator: Relaciones con Soma, miembros de Soma Familia y Bell
+- claims_supported: [DMR-013-CLM-011, DMR-013-CLM-013]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN según referencia secundaria
+- reliability_note: Fuente secundaria para localizar vínculos; no sustituye un pasaje de novela ni demuestra que las emociones descritas persistan en todas las etapas.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar prosa ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_locator_pending

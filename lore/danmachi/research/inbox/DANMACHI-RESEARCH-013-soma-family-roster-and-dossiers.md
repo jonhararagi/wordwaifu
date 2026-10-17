@@ -277,3 +277,22 @@
 2. Confirmar con texto primario el cargo de Zanis/Chandra, el destino de Canoe y los detalles de la reforma; conservar el conflicto entre una acusación y un hecho corroborado.
 3. Completar perfiles individuales de Kaede, Momiji y Coco únicamente cuando una fuente primaria aporte descripción, acciones, niveles o habilidades.
 4. Revisar el índice de personajes y el índice de Familias después de cada modificación de ID para que un ID activo no continúe apareciendo como “reservado”.
+
+
+## DMR-013-CLM-011 · Afiliación de Liliruca por etapa
+Liliruca aparece como miembro de Soma Familia en una etapa anterior y luego se incorpora a Hestia Familia. La sinopsis editorial oficial del volumen 6 confirma el contexto general de captura antes del War Game; el arco de salida y detalles del trato siguen secundarios. Sources: DMR-013-SRC-005, 007, 008 and 013.
+
+## DMR-013-CLM-012 · Sucesión de capitanía Zanis → Chandra
+Fuentes comunitarias presentan a Zanis como capitán anterior y Chandra como posterior. No se fija fecha del relevo ni se fusionan los cargos. Sources: DMR-013-SRC-001..004.
+
+## DMR-013-CLM-013 · Chandra y Liliruca
+Fuentes comunitarias atribuyen a Chandra intervenciones de ayuda a Lili. La pista sirve para localizar la escena; no prueba una relación permanente. Sources: DMR-013-SRC-004, 005, 013.
+
+## DMR-013-CLM-014 · Canoe Belway: acusación frente a responsabilidad
+Los resúmenes comunitarios nombran a Canoe en una acusación relacionada con su destino. Esto no determina culpabilidad ni resuelve causa o secuencia. Sources: DMR-013-SRC-001, 012.
+
+## DMR-013-CLM-015/016 · Kaede y Momiji en Orario Rhapsodia
+Perfiles comunitarios de juego las presentan como amigas desde la infancia y las vinculan por un viaje. Estos detalles pertenecen a CONT-GAME, no a la novela ligera. Sources: DMR-013-SRC-009, 010.
+
+## DMR-013-CLM-017 · Coco Collins y desambiguación
+El perfil comunitario asocia a Coco Collins con Orario Rhapsodia y el grupo de Kaede/Momiji. Existe una figura llamada Coco en referencias manga de Loki Familia; no hay evidencia de identidad compartida. Sources: DMR-013-SRC-011 and DMR-018-SRC-001.

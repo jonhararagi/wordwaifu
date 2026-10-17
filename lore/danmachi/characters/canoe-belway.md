@@ -32,3 +32,11 @@ La ficha de resumen del volumen 6 de la wiki comunitaria recoge que Zanis acusa 
 - **Spoilers:** altos; la ficha no detalla muerte o desaparición más allá de la diferencia entre roster y acusación.
 - **Fuentes:** https://danmachi.fandom.com/wiki/Soma_Familia ; resumen comunitario del volumen 6: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_6/Synopsis .
 - **Pendiente:** determinar si las ediciones consultables establecen desaparición, muerte, momento y causa; no tratar la acusación como hecho.
+
+
+## Navegación de la red Soma · DMR-013
+
+- **[Soma Familia](../familias/soma-familia.md):** afiliación pasada reportada.
+- **[Zanis Lustra](zanis-lustra.md):** contexto organizativo compartido en resúmenes secundarios; responsabilidades específicas no resueltas.
+- **[Liliruca Arde](liliruca-arde.md):** mencionada en una acusación relacionada con el destino de Canoe; no convertir la acusación en veredicto.
+- **[Chandra Ihit](chandra-ihit.md):** capitán posterior reportado.

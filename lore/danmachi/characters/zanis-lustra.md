@@ -36,3 +36,11 @@ La ficha comunitaria lo describe como delgado y con gafas, y lo caracteriza como
 - **Spoilers:** altos para la caída del liderazgo, el castigo posterior y el conflicto de Lili.
 - **Fuentes:** https://danmachi.fandom.com/wiki/Zanis_Lustra ; contexto de trama: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_6/Synopsis .
 - **Pendiente:** cotejar perfil físico, nivel, capitanía, acusación y desenlace con el volumen/capítulo/página correspondiente.
+
+
+## Navegación de la red Soma · DMR-013
+
+- **[Soma Familia](../familias/soma-familia.md):** expediente organizativo y etapas.
+- **[Chandra Ihit](chandra-ihit.md):** capitán posterior reportado; la sucesión no implica amistad ni enemistad.
+- **[Liliruca Arde](liliruca-arde.md):** su etapa bajo Zanis se resume en fuentes secundarias; ampliar solo con escena localizada.
+- **[Canoe Belway](canoe-belway.md):** aparece en resúmenes del conflicto; no inferir causa de muerte ni responsabilidad.

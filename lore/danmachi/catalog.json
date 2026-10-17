@@ -183,9 +183,10 @@
         "Coco Collins",
         "Coco",
         "Familia Soma",
-        "Pallum"
+        "Pallum",
+        "CONT-GAME"
       ],
-      "status": "secondary_roster_reference_individual_profile_pending",
+      "status": "secondary_game_profile_checked_primary_novel_pending",
       "priority": "normal"
     },
     {
@@ -1280,9 +1281,10 @@
         "Shinonome Momiji",
         "Momiji",
         "Familia Soma",
-        "Renard"
+        "Renard",
+        "CONT-GAME"
       ],
-      "status": "secondary_roster_reference_individual_profile_pending",
+      "status": "secondary_game_profile_checked_primary_novel_pending",
       "priority": "normal"
     },
     {
@@ -1340,9 +1342,10 @@
         "Tsukinokami Kaede",
         "Kaede",
         "Familia Soma",
-        "Hume Bunny"
+        "Hume Bunny",
+        "CONT-GAME"
       ],
-      "status": "secondary_roster_reference_individual_profile_pending",
+      "status": "secondary_game_profile_checked_primary_novel_pending",
       "priority": "normal"
     },
     {
@@ -2753,6 +2756,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-019-loki-manga-roster.md",
       "type": "character_relationship_research",
       "status": "secondary_reference_manga_only_primary_check_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-020",
+      "path": "research/inbox/DANMACHI-RESEARCH-020-soma-relationship-network.md",
+      "type": "character_relationship_research",
+      "status": "secondary_mixed_source_primary_locator_pending"
     }
   ],
   "lastStructuredSync": "2026-10-16"

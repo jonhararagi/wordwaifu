@@ -45,3 +45,12 @@ La ficha no atribuye técnicas de combate, Falna, nivel o poderes específicos: 
 - **Fuente secundaria principal:** https://danmachi.fandom.com/wiki/Soma y https://danmachi.fandom.com/wiki/Soma_Familia .
 - **Fuente editorial oficial limitada:** https://ga.sbcr.jp/product/9784797380583/ .
 - **Pendiente:** localizadores de volumen/capítulo/página para su ausencia, el conflicto con Lili y la reforma posterior.
+
+
+## Navegación de la red familiar · DMR-013
+
+- **[Soma Familia](../familias/soma-familia.md):** expediente organizativo y cambios de periodo.
+- **[Zanis Lustra](zanis-lustra.md):** capitán anterior reportado.
+- **[Chandra Ihit](chandra-ihit.md):** capitán posterior reportado; fecha del relevo pendiente.
+- **[Liliruca Arde](liliruca-arde.md):** afiliación histórica a Soma y luego a Hestia.
+- **[Kaede](tsukinokami-kaede.md), [Momiji](shinonome-momiji.md) y [Coco Collins](coco-collins.md):** detalles de Orario Rhapsodia quedan bajo CONT-GAME.

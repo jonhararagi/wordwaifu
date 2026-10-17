@@ -2,14 +2,16 @@
 id: CHAR-COCO-COLLINS
 universe: danmachi
 type: character
-status: secondary_roster_reference_individual_profile_pending
+status: secondary_game_profile_checked_primary_novel_pending
 confidence: name and member listing from community roster only
-continuity_scope: CONT-MAIN-LN
+continuity_scope: CONT-GAME; CONT-MAIN-LN
 source_refs:
   - DMR-013-SRC-001
   - DMR-013-SRC-006
+  - DMR-013-SRC-011
 claim_refs:
   - DMR-013-CLM-008
+  - DMR-013-CLM-017
 tags: [Coco Collins, Coco, Familia Soma, Pallum]
 ---
 # Coco Collins
@@ -30,3 +32,10 @@ No se inventan edad, aspecto, personalidad, habilidades, nivel, cargo o diálogo
 - **Continuidad propuesta:** `CONT-MAIN-LN`, con estado provisional hasta localizar la aparición en la novela.
 - **Fuentes secundarias:** https://danmachi.fandom.com/wiki/Category:Soma_Familia ; https://danmachi.fandom.com/wiki/Soma_Familia .
 - **Pendiente:** validar ortografía, especie, intervalo, apariencia y cualquier contribución narrativa en el texto primario. Hasta entonces debe mostrarse como ficha breve de roster, no como personaje completamente investigado.
+
+
+## Relaciones de Orario Rhapsodia y desambiguación · DMR-013
+
+El perfil comunitario de Orario Rhapsodia presenta a Coco Collins como compañera de [Shinonome Momiji](shinonome-momiji.md) y [Tsukinokami Kaede](tsukinokami-kaede.md). La relación y detalles personales se mantienen en CONT-GAME, no como hechos confirmados de la novela ligera.
+- **[Soma Familia](../familias/soma-familia.md):** aparece en el roster comunitario; periodo de novela principal pendiente.
+- **Coco de Loki:** la ficha [CHAR-LOKI-COCO-MANGA](coco-loki.md) es otra identidad reportada en una fuente de manga; no fusionar por el nombre corto.

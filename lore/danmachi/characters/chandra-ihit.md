@@ -36,3 +36,11 @@ La fuente consultada no acredita una técnica de combate o magia concreta. No se
 - **Spoilers:** moderados por su intervención en el conflicto de Soma Familia.
 - **Fuente:** https://danmachi.fandom.com/wiki/Chandra_Ihit ; roster secundario: https://danmachi.fandom.com/wiki/Soma_Familia .
 - **Pendiente:** confirmar especie, nivel, capitanía, el motivo de su afiliación y la escena relacionada con Lili con un localizador primario estable.
+
+
+## Navegación de la red Soma · DMR-013
+
+- **[Soma Familia](../familias/soma-familia.md):** expediente organizativo.
+- **[Zanis Lustra](zanis-lustra.md):** capitán anterior reportado; mantener las etapas separadas.
+- **[Liliruca Arde](liliruca-arde.md):** ayuda descrita por fuentes comunitarias; el pasaje de novela sigue pendiente.
+- **[Canoe Belway](canoe-belway.md):** la afiliación organizativa no demuestra implicación personal en su destino.

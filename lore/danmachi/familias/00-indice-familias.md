@@ -13,7 +13,7 @@ Esta es una lista de investigación. El estado de una Familia puede variar por a
 | FAM-HEPHAISTOS | Hephaistos Familia | Herrería y equipo | Candidato pendiente |
 | FAM-MIACH | Miach Familia | Medicina y personajes vinculados | Candidato pendiente |
 | FAM-TAKEMIKAZUCHI | Takemikazuchi Familia | Mikoto y miembros relacionados | Candidato pendiente |
-| FAM-SOMA | [Soma Familia](soma-familia.md) | Soma, Liliruca, roster y cambios de capitanía | Ficha añadida; roster secundario parcial; cotejo primario pendiente |
+| FAM-SOMA | [Soma Familia](soma-familia.md) | Afiliaciones por periodo, sucesión de capitanía y red de relaciones | Red relacional ampliada; perfiles de juego separados; cotejo primario de novela pendiente |
 | FAM-DIAN-CECHT | Dian Cecht Familia | Curación y medicina | Candidato pendiente |
 | FAM-GANESHA | Ganesha Familia | Institución, seguridad y eventos de ciudad | Candidato pendiente |
 | FAM-HERMES | Hermes Familia | Investigaciones, viajes y Bell | Candidato pendiente |

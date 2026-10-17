@@ -46,3 +46,13 @@ Su papel de supporter prioriza exploración auxiliar, logística, observación y
 - **Spoilers:** moderados para la salida de Soma y la formación del equipo; el motivo/revelación tardío atribuido a Lili por wikis se omite de la afirmación canónica hasta una verificación primaria explícita.
 - **Fuentes:** GA Bunko, volumen 6 (sinopsis editorial): https://ga.sbcr.jp/product/9784797380583/ ; perfil oficial de DanMachi IV: https://danmachi.com/danmachi4/character/ ; referencia secundaria comunitaria: https://danmachi.fandom.com/es/wiki/Liliruca_Arde .
 - **Pendiente:** capítulos y páginas de la novela principal para afiliación, cambio de capitanía, escenas, habilidades y relaciones; no confundir sinopsis editorial, wiki y adaptación.
+
+
+## Navegación relacional ampliada · DMR-013
+
+- **Familia anterior:** [Soma Familia](../familias/soma-familia.md); leer su afiliación y salida por etapas.
+- **[Soma](soma.md):** deidad patrona en la etapa inicial; la percepción y reforma se describen en fuentes secundarias y no prueban reconciliación instantánea.
+- **[Zanis Lustra](zanis-lustra.md):** antiguo capitán asociado con el periodo de control de la Familia durante la etapa de Lili.
+- **[Chandra Ihit](chandra-ihit.md):** fuentes comunitarias describen intervenciones de ayuda; pasaje de novela pendiente.
+- **[Canoe Belway](canoe-belway.md):** aparece en una acusación sobre su destino; no demuestra responsabilidad de Lili ni resuelve la desaparición.
+- **Afiliación posterior:** [Hestia Familia](../familias/hestia-familia.md); no mostrar a Lili como miembro activa de Soma en la etapa posterior.
