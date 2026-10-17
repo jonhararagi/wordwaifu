@@ -14,7 +14,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
-  "research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md"
+  "research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md",
+  "research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -32,8 +33,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 108, "Soma research must add ten explicitly sourced claims.");
-assert.equal(index.entryCount, 111, "Soma claims must be represented in the searchable entry set.");
+assert.equal(index.sourceClaimCount, 120, "Soma and Loki research must add 22 explicitly sourced claims.");
+assert.equal(index.entryCount, 123, "Soma and Loki claims must be represented in the searchable entry set.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -70,6 +71,24 @@ for (const id of ["CHAR-CANOE-BELWAY","CHAR-TSUKINOKAMI-KAEDE","CHAR-SHINONOME-M
   const roster = corpus.search(index, { query: "Soma Familia", characterId: id, continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
   assert.ok(roster.totalMatches > 0, id + " must be searchable from the roster research.");
 }
+
+
+const lokiFamilyEntity = corpus.searchEntities(catalog, { type: "familia", query: "Familia Loki" });
+assert.ok(lokiFamilyEntity.results.some(entity => entity.id === "DM-FAM-LOKI"), "Loki Familia remains a distinct searchable organization.");
+for (const [id,claimId] of [
+  ["CHAR-RIVERIA-LJOS-ALF","DMR-014-CLM-001"],
+  ["CHAR-GARETH-LANDROCK","DMR-014-CLM-002"],
+  ["CHAR-BETE-LOGA","DMR-014-CLM-003"],
+  ["CHAR-TIONA-HIRYUTE","DMR-014-CLM-004"],
+  ["CHAR-TIONE-HIRYUTE","DMR-014-CLM-005"],
+  ["CHAR-LEFIYA-VIRIDIS","DMR-014-CLM-006"]
+]) {
+  const found = corpus.search(index,{query:"Loki Familia",characterId:id,continuity:"CONT-ANIME",period:"ALL",aspect:"all",spoiler:"all"});
+  assert.ok(found.results.some(claim=>claim.claimId===claimId),id+" must be searchable via its official adaptation claim.");
+}
+const lefiyaSecondary = corpus.search(index,{query:"Lefiya Ais Riveria",characterId:"CHAR-LEFIYA-VIRIDIS",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(lefiyaSecondary.results.some(claim=>claim.claimId==="DMR-014-CLM-012"),"Lefiya's secondary mentorship claim must be kept under CONT-SO.");
+assert.ok(lefiyaSecondary.results.every(claim=>claim.continuityScopes.includes("CONT-SO")),"Secondary Sword Oratoria evidence must not be reclassified as an anime profile.");
 
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);

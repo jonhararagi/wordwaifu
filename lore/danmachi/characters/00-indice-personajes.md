@@ -23,14 +23,14 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | DM-CHAR-LOKI | Loki | Loki | Loki Familia | Ficha inicial existente |
 | DM-CHAR-EINA | Eina Tulle | Eina | Guild, Bell | Expediente de aplicación existente; cotejo de LN pendiente |
 | DM-CHAR-AIS | Ais Wallenstein | Ais | Loki Familia, Bell | Expediente de aplicación existente; cotejo de LN pendiente |
-| DM-CHAR-LOKI-LEADERS | Finn/Riveria/Gareth (grupo provisional) | No tratar como una persona | Loki Familia | Registro grupal existente; crear fichas individuales cuando se investiguen |
+| DM-CHAR-LOKI-LEADERS | [Finn/Riveria/Gareth](finn-riveria-gareth.md) | Registro grupal, no persona única | Loki Familia | El grupo conserva su rol comparativo; los tres personajes tienen fichas individuales enlazadas |
 | CHAR-FINN-DEIMNE | [Finn Deimne](finn-deimne.md) | Finn | Loki Familia; liderazgo | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-RIVERIA-LJOS-ALF | Riveria Ljos Alf | Riveria | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-GARETH-LANDROCK | Gareth Landrock | Gareth | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-BETE-LOGA | Bete Loga | Bete | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-TIONA-HIRYUTE | Tiona Hiryute | Tiona | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-TIONE-HIRYUTE | Tione Hiryute | Tione | Loki Familia | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-LEFIYA-VIRIDIS | Lefiya Viridis | Lefiya | Loki Familia, Sword Oratoria | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-RIVERIA-LJOS-ALF | [Riveria Ljos Alf](riveria-ljos-alf.md) | Riveria | Loki Familia · vicecapitana/maga | Perfil oficial de adaptación + referencia secundaria; novelas pendientes de cotejo |
+| CHAR-GARETH-LANDROCK | [Gareth Landrock](gareth-landrock.md) | Gareth | Loki Familia · veterano/combatiente | Perfil oficial de adaptación + referencia secundaria; novelas pendientes de cotejo |
+| CHAR-BETE-LOGA | [Bete Loga](bete-loga.md) | Bete | Loki Familia · atacante | Perfil oficial de adaptación + referencia secundaria; spoilers personales pendientes |
+| CHAR-TIONA-HIRYUTE | [Tiona Hiryute](tiona-hiryute.md) | Tiona | Loki Familia · combatiente | Perfil oficial de adaptación + referencia secundaria; historia de las gemelas pendiente |
+| CHAR-TIONE-HIRYUTE | [Tione Hiryute](tione-hiryute.md) | Tione | Loki Familia · combatiente | Perfil oficial de adaptación + referencia secundaria; sentimientos por Finn sin reciprocidad asumida |
+| CHAR-LEFIYA-VIRIDIS | [Lefiya Viridis](lefiya-viridis.md) | Lefiya | Loki Familia · maga | Perfil oficial de adaptación + referencia secundaria; hechizos/estados temporales pendientes |
 | CHAR-RAUL-NOORD | [Raul Nord](raul-nord.md) | Raul; ラウル・ノールド | Loki Familia; coordinación de miembros de menor rango | Expediente existente; perfil oficial de adaptación localizado; cotejo de LN pendiente |
 | CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior) | Ficha individual y expediente integrados; fuentes mixtas; cotejo primario pendiente |

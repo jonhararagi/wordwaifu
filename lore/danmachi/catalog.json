@@ -1272,39 +1272,105 @@
       ],
       "status": "secondary_reference_partial_primary_check_pending",
       "priority": "high"
-    }
-  ],
-  "reservedIds": [
+    },
     {
       "id": "CHAR-RIVERIA-LJOS-ALF",
+      "path": "characters/riveria-ljos-alf.md",
       "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Riveria Ljos Alf",
+        "Riveria",
+        "Loki Familia",
+        "vicecaptain",
+        "mage",
+        "CONT-ANIME",
+        "CONT-SO"
+      ],
+      "status": "official_adaptation_profile_secondary_lore_primary_locator_pending",
+      "priority": "high"
     },
     {
       "id": "CHAR-GARETH-LANDROCK",
+      "path": "characters/gareth-landrock.md",
       "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Gareth Landrock",
+        "Gareth",
+        "Loki Familia",
+        "dwarf",
+        "veteran",
+        "CONT-ANIME",
+        "CONT-SO"
+      ],
+      "status": "official_adaptation_profile_secondary_lore_primary_locator_pending",
+      "priority": "high"
     },
     {
       "id": "CHAR-BETE-LOGA",
+      "path": "characters/bete-loga.md",
       "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Bete Loga",
+        "Bete",
+        "Loki Familia",
+        "werewolf",
+        "attacker",
+        "CONT-ANIME",
+        "CONT-SO"
+      ],
+      "status": "official_adaptation_profile_secondary_lore_primary_locator_pending",
+      "priority": "high"
     },
     {
       "id": "CHAR-TIONA-HIRYUTE",
+      "path": "characters/tiona-hiryute.md",
       "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Tiona Hiryute",
+        "Tiona",
+        "Loki Familia",
+        "Amazoness",
+        "twins",
+        "CONT-ANIME",
+        "CONT-SO"
+      ],
+      "status": "official_adaptation_profile_secondary_lore_primary_locator_pending",
+      "priority": "high"
     },
     {
       "id": "CHAR-TIONE-HIRYUTE",
+      "path": "characters/tione-hiryute.md",
       "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Tione Hiryute",
+        "Tione",
+        "Loki Familia",
+        "Amazoness",
+        "twins",
+        "CONT-ANIME",
+        "CONT-SO"
+      ],
+      "status": "official_adaptation_profile_secondary_lore_primary_locator_pending",
+      "priority": "high"
     },
     {
       "id": "CHAR-LEFIYA-VIRIDIS",
+      "path": "characters/lefiya-viridis.md",
       "type": "character",
-      "status": "candidate_not_created"
-    },
+      "tags": [
+        "Lefiya Viridis",
+        "Lefiya",
+        "Loki Familia",
+        "elf",
+        "mage",
+        "CONT-ANIME",
+        "CONT-SO"
+      ],
+      "status": "official_adaptation_profile_secondary_lore_primary_locator_pending",
+      "priority": "high"
+    }
+  ],
+  "reservedIds": [
     {
       "id": "CHAR-WELF-CROZZO",
       "type": "character",
@@ -2195,6 +2261,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md",
       "type": "character_relationship_research",
       "status": "secondary_reference_partial_primary_check_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-014",
+      "path": "research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md",
+      "type": "character_relationship_research",
+      "status": "official_adaptation_profiles_secondary_lore_primary_text_pending"
     }
   ],
   "lastStructuredSync": "2026-10-16"

@@ -820,6 +820,16 @@ async function run() {
     await page.locator("#archive-profile-back").click();
     await page.waitForFunction(() => document.querySelector("#character-archive-query")?.value === "Liliruca Arde");
 
+    // Loki individual coverage: the official profile and its relation network are reachable.
+    await page.locator("#character-archive-query").fill("Riveria Ljos Alf");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-RIVERIA-LJOS-ALF"]').length === 1, { timeout: 10000 });
+    await page.locator('#character-archive-results [data-archive-open="CHAR-RIVERIA-LJOS-ALF"]').click();
+    await page.waitForFunction(() => document.querySelector("#archive-profile-name")?.textContent === "Riveria Ljos Alf", null, { timeout: 10000 });
+    await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
+    await page.locator('#archive-profile-tabs [data-profile-tab="relationships"]').click();
+    await page.waitForFunction(() => !!document.querySelector('#archive-profile-panel [data-character-link="CHAR-GARETH-LANDROCK"]'), null, { timeout: 10000 });
+    await page.locator("#archive-profile-back").click();
+
     // The newly curated anime roster loads an official image from its source host.
     await page.locator("#character-archive-query").fill("Bell Cranel");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });

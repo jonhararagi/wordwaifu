@@ -8,6 +8,7 @@ const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
 const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"];
 paths.push("research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md");
+paths.push("research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md");
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
@@ -139,6 +140,25 @@ assert.ok(somaProfile.relationships.some(link=>link.targetId==="CHAR-ZANIS-LUSTR
 assert.ok(somaProfile.relationships.some(link=>link.targetId==="CHAR-TSUKINOKAMI-KAEDE"),"Roster-only members should be navigable as separate identities.");
 const zanisProfile=archive.getProfile(index,"CHAR-ZANIS-LUSTRA","CONT-MAIN-LN","all");
 assert.ok(zanisProfile.relationships.some(link=>link.targetId==="CHAR-CANOE-BELWAY"),"Zanis-to-Canoe is an allegation edge with explicit evidence limits.");
+
+
+const lokiBatchIds=["CHAR-RIVERIA-LJOS-ALF","CHAR-GARETH-LANDROCK","CHAR-BETE-LOGA","CHAR-TIONA-HIRYUTE","CHAR-TIONE-HIRYUTE","CHAR-LEFIYA-VIRIDIS"];
+for(const id of lokiBatchIds){
+  assert.ok(archive.list(index).some(character=>character.id===id),"Loki batch must be exposed in the archive: "+id);
+  const anime=archive.getProfile(index,id,"CONT-ANIME","all");
+  assert.ok(anime&&anime.claims.some(claim=>/^DMR-014-CLM-00[1-6]$/.test(claim.claimId)),"Official adaptation claim must be searchable for "+id);
+  assert.ok(anime.claims.every(claim=>claim.continuityScopes.includes("CONT-ANIME")),"Adaptation claims must stay in CONT-ANIME for "+id);
+  const secondary=archive.getProfile(index,id,"CONT-SO","all");
+  assert.ok(secondary&&secondary.claims.every(claim=>claim.continuityScopes.includes("CONT-SO")),"Secondary claims must stay in CONT-SO for "+id);
+}
+const riveriaArchive=archive.getProfile(index,"CHAR-RIVERIA-LJOS-ALF","CONT-ANIME","all");
+assert.ok(riveriaArchive.relationships.some(link=>link.targetId==="CHAR-GARETH-LANDROCK"),"Riveria's team relation to Gareth must be navigable.");
+const tionaArchive=archive.getProfile(index,"CHAR-TIONA-HIRYUTE","CONT-ANIME","all");
+assert.ok(tionaArchive.relationships.some(link=>link.targetId==="CHAR-TIONE-HIRYUTE"),"Tiona and Tione must have an explicit reciprocal twin relationship.");
+const tioneArchive=archive.getProfile(index,"CHAR-TIONE-HIRYUTE","CONT-ANIME","all");
+assert.ok(tioneArchive.relationships.some(link=>link.targetId==="CHAR-FINN-DEIMNE"),"Tione's feelings for Finn must be sourced without assuming reciprocation.");
+const lefiyaArchive=archive.getProfile(index,"CHAR-LEFIYA-VIRIDIS","CONT-SO","all");
+assert.ok(lefiyaArchive.relationships.some(link=>link.targetId==="CHAR-RIVERIA-LJOS-ALF"),"Lefiya's secondary mentor relationship must be navigable under CONT-SO.");
 
 const bell=archive.getProfile(index,"DM-CHAR-BELL","CONT-ANIME","all");
 assert.ok(bell.relationships.length>=3,"Bell's source-backed relationship network should include Hestia, Ais and Eina.");

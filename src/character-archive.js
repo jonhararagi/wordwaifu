@@ -1,7 +1,7 @@
 (function(root,factory){"use strict";const api=factory();if(typeof module==="object"&&module.exports)module.exports=api;else root.WordWaifuCharacterArchive=api;})(typeof globalThis!=="undefined"?globalThis:this,function(){
 "use strict";
-const LABELS={"CONT-AR":"Astrea Record · Era Oscura","CONT-ANIME":"Adaptación anime · perfiles oficiales","CONT-MAIN-LN":"Novela principal","CONT-AU":"Historia alternativa (AU)","CROSS-CONTINUITY":"Comparación entre continuidades"};
-const ORDER=["CONT-AR","CONT-ANIME","CONT-MAIN-LN","CONT-AU","CROSS-CONTINUITY"];
+const LABELS={"CONT-AR":"Astrea Record · Era Oscura","CONT-ANIME":"Adaptación anime · perfiles oficiales","CONT-MAIN-LN":"Novela principal","CONT-AU":"Historia alternativa (AU)","CROSS-CONTINUITY":"Comparación entre continuidades","CONT-SO":"Sword Oratoria · referencia secundaria"};
+const ORDER=["CONT-AR","CONT-ANIME","CONT-SO","CONT-MAIN-LN","CONT-AU","CROSS-CONTINUITY"];
 const META={
 "CHAR-RYUU-LION":{
  overview:"Una identidad con estados separados: etapa histórica de Astrea Record y un perfil posterior de la adaptación anime.",
@@ -110,7 +110,13 @@ affiliation:"Astrea Familia · integrante histórica",
 "CHAR-TSUKINOKAMI-KAEDE":{overview:"Ficha de roster para una identidad listada por fuentes comunitarias; descripción y biografía individual no localizadas.",states:{"CONT-MAIN-LN":{summary:"La categoría comunitaria la enumera entre miembros de Soma Familia y una referencia secundaria indica Hume Bunny. No se han verificado nivel, habilidades ni acciones.",period:"Intervalo de afiliación por confirmar.",affiliation:"Soma Familia · roster secundario"}}},
 "CHAR-SHINONOME-MOMIJI":{overview:"Ficha de roster para una identidad asociada a Soma Familia, sin biografía individual primaria localizada.",states:{"CONT-MAIN-LN":{summary:"La lista comunitaria la enumera como miembro; la especie Renard se conserva como dato secundario. No se añaden habilidades, nivel, personalidad ni escena no localizados.",period:"Intervalo de afiliación por confirmar.",affiliation:"Soma Familia · roster secundario"}}},
 "CHAR-COCO-COLLINS":{overview:"Ficha de roster para una identidad asociada a Soma Familia; el registro individual sigue pendiente de evidencia primaria.",states:{"CONT-MAIN-LN":{summary:"La lista comunitaria la enumera como miembro y una referencia secundaria la identifica como Pallum. No se infieren rol de supporter, habilidades ni relaciones íntimas.",period:"Intervalo de afiliación por confirmar.",affiliation:"Soma Familia · roster secundario"}}}
-
+,
+"CHAR-RIVERIA-LJOS-ALF":{overview:"Vicecapitana y maga de Loki Familia en la referencia oficial de Sword Oratoria. La trayectoria detallada de novelas y el nivel por época permanecen pendientes.",states:{"CONT-ANIME":{summary:"El perfil oficial de adaptación la presenta como vicecapitana y maga de Loki Familia.",period:"Perfil oficial de Sword Oratoria; intervalo interno no fijado.",affiliation:"Loki Familia · vicecapitana/maga"},"CONT-SO":{summary:"Las referencias comunitarias la describen como veterana, mentora y figura de autoridad; esos detalles son secundarios hasta localizar los pasajes originales.",period:"Sword Oratoria; periodo exacto pendiente.",affiliation:"Loki Familia · descripción secundaria"}}},
+"CHAR-GARETH-LANDROCK":{overview:"Veterano y combatiente de Loki Familia. La ficha distingue su perfil de adaptación de los detalles secundarios sobre su carrera.",states:{"CONT-ANIME":{summary:"El perfil oficial presenta a Gareth como enano y veterano combatiente de Loki Familia.",period:"Perfil oficial de Sword Oratoria; intervalo interno no fijado.",affiliation:"Loki Familia · veterano/combatiente"},"CONT-SO":{summary:"El compendio comunitario resume fuerza, experiencia y apoyo al mando, sin localizar cada hazaña en los volúmenes.",period:"Sword Oratoria; periodo exacto pendiente.",affiliation:"Loki Familia · veterano"}}},
+"CHAR-BETE-LOGA":{overview:"Atacante de Loki Familia. El perfil oficial respalda la identidad/rol de adaptación; los antecedentes personales permanecen con spoilers y fuente secundaria.",states:{"CONT-ANIME":{summary:"El perfil oficial identifica a Bete como hombre lobo y atacante de Loki Familia.",period:"Perfil oficial de Sword Oratoria; intervalo interno no fijado.",affiliation:"Loki Familia · atacante"},"CONT-SO":{summary:"La fuente comunitaria resume una forma de hablar agresiva y combate de corto alcance, sin resolver todas sus motivaciones.",period:"Sword Oratoria; detalles por volumen pendientes.",affiliation:"Loki Familia · atacante (referencia secundaria)"}}},
+"CHAR-TIONA-HIRYUTE":{overview:"Amazoness y combatiente de Loki Familia; hermana gemela menor de Tione. Las relaciones se mantienen por continuidad.",states:{"CONT-ANIME":{summary:"El perfil oficial presenta a Tiona como combatiente de Loki Familia, de carácter alegre y amiga de Ais.",period:"Perfil oficial de Sword Oratoria; intervalo interno no fijado.",affiliation:"Loki Familia · combatiente"},"CONT-SO":{summary:"La fuente secundaria describe parentesco con Tione y su energía; requiere cotejo de escenas.",period:"Sword Oratoria; periodo exacto pendiente.",affiliation:"Loki Familia · combatiente (referencia secundaria)"}}},
+"CHAR-TIONE-HIRYUTE":{overview:"Amazoness y combatiente de Loki Familia; hermana gemela mayor de Tiona. Los sentimientos que se atribuyen a Tione no establecen reciprocidad de Finn.",states:{"CONT-ANIME":{summary:"El perfil oficial la presenta como combatiente, gemela mayor de Tiona, y describe sentimientos hacia Finn sin indicar reciprocidad.",period:"Perfil oficial de Sword Oratoria; intervalo interno no fijado.",affiliation:"Loki Familia · combatiente"},"CONT-SO":{summary:"La fuente comunitaria resume el contraste entre su carácter en combate y sus sentimientos por Finn.",period:"Sword Oratoria; escenas precisas pendientes.",affiliation:"Loki Familia · combatiente (referencia secundaria)"}}},
+"CHAR-LEFIYA-VIRIDIS":{overview:"Elfa maga de Loki Familia. Su admiración por Ais y la orientación de Riveria se separan por continuidad y grado de evidencia.",states:{"CONT-ANIME":{summary:"El perfil oficial identifica a Lefiya como maga elfa de Loki Familia y menciona su admiración por Ais.",period:"Perfil oficial de Sword Oratoria; intervalo interno no fijado.",affiliation:"Loki Familia · maga"},"CONT-SO":{summary:"La referencia secundaria describe orientación mágica de Riveria y evolución de Lefiya; los hechizos necesitan localizadores primarios.",period:"Sword Oratoria; desarrollo exacto pendiente.",affiliation:"Loki Familia · maga (referencia secundaria)"}}}
 };
 
 const REL={
@@ -244,6 +250,31 @@ Object.assign(REL,{
 "CHAR-TSUKINOKAMI-KAEDE":{"CONT-MAIN-LN":[{targetId:"CHAR-SOMA",label:"Afiliación reportada",type:"Afiliación organizativa",description:"El roster comunitario incluye a Kaede en Soma Familia; relación institucional, no personal.",refs:["DMR-013-CLM-006"]}]},
 "CHAR-SHINONOME-MOMIJI":{"CONT-MAIN-LN":[{targetId:"CHAR-SOMA",label:"Afiliación reportada",type:"Afiliación organizativa",description:"El roster comunitario incluye a Momiji en Soma Familia; relación institucional, no personal.",refs:["DMR-013-CLM-007"]}]},
 "CHAR-COCO-COLLINS":{"CONT-MAIN-LN":[{targetId:"CHAR-SOMA",label:"Afiliación reportada",type:"Afiliación organizativa",description:"El roster comunitario incluye a Coco en Soma Familia; relación institucional, no personal.",refs:["DMR-013-CLM-008"]}]}
+
+});
+
+Object.assign(REL,{
+
+"CHAR-RIVERIA-LJOS-ALF":{"CONT-ANIME":[
+{targetId:"CHAR-FINN-DEIMNE",label:"Núcleo de mando",type:"Relación organizativa",description:"El material oficial presenta a Finn como capitán y a Riveria como vicecapitana. Se registra como estructura de mando, sin afirmar acuerdo en todas las decisiones.",refs:["DMR-014-CLM-001"]},
+{targetId:"CHAR-GARETH-LANDROCK",label:"Veteranos de mando",type:"Compañerismo organizativo",description:"Ambos aparecen en el núcleo veterano de Loki Familia en la síntesis de las fichas; se trata de un vínculo de equipo.",refs:["DMR-014-CLM-001"]}],
+"CONT-SO":[{targetId:"CHAR-LEFIYA-VIRIDIS",label:"Mentoría reportada",type:"Mentoría",description:"La fuente secundaria describe a Riveria orientando la formación mágica de Lefiya; localizador de novela pendiente.",refs:["DMR-014-CLM-012"]}]},
+"CHAR-GARETH-LANDROCK":{"CONT-ANIME":[
+{targetId:"CHAR-FINN-DEIMNE",label:"Núcleo de mando",type:"Relación organizativa",description:"El perfil de adaptación presenta a Gareth como veterano de Loki Familia; la arista indica rol de equipo, no intimidad personal.",refs:["DMR-014-CLM-002"]},
+{targetId:"CHAR-RIVERIA-LJOS-ALF",label:"Veteranos de mando",type:"Compañerismo organizativo",description:"El perfil oficial presenta a Riveria como vicecapitana y a Gareth como veterano dentro de Loki Familia.",refs:["DMR-014-CLM-002"]}],
+"CONT-SO":[{targetId:"CHAR-RIVERIA-LJOS-ALF",label:"Equipo de mando",type:"Compañerismo organizativo",description:"Resumen comunitario de la coordinación del núcleo veterano.",refs:["DMR-014-CLM-008"]}]},
+"CHAR-TIONA-HIRYUTE":{"CONT-ANIME":[
+{targetId:"CHAR-TIONE-HIRYUTE",label:"Hermana gemela mayor",type:"Parentesco",description:"La referencia de Tiona la identifica como la gemela menor de Tione.",refs:["DMR-014-CLM-004"]},
+{targetId:"DM-CHAR-AIS",label:"Amistad con Ais",type:"Amistad (adaptación)",description:"El perfil oficial presenta a Tiona como amiga de Ais; no se generaliza la dinámica a todas las continuidades.",refs:["DMR-014-CLM-004"]}],
+"CONT-SO":[{targetId:"CHAR-TIONE-HIRYUTE",label:"Gemelas",type:"Parentesco",description:"El compendio comunitario indica vínculo de hermanas gemelas con temperamentos distintos.",refs:["DMR-014-CLM-010"]}]},
+"CHAR-TIONE-HIRYUTE":{"CONT-ANIME":[
+{targetId:"CHAR-TIONA-HIRYUTE",label:"Hermana gemela menor",type:"Parentesco",description:"La referencia oficial presenta a Tione como hermana gemela mayor de Tiona.",refs:["DMR-014-CLM-005"]},
+{targetId:"CHAR-FINN-DEIMNE",label:"Sentimientos de Tione",type:"Relación emocional unilateralmente descrita",description:"La referencia oficial describe sentimientos de Tione hacia Finn; no afirma reciprocidad.",refs:["DMR-014-CLM-005"]}],
+"CONT-SO":[{targetId:"CHAR-FINN-DEIMNE",label:"Sentimientos de Tione",type:"Relación emocional",description:"La fuente comunitaria atribuye sentimientos a Tione, sin evidencia separada de reciprocidad de Finn.",refs:["DMR-014-CLM-011"]}]},
+"CHAR-LEFIYA-VIRIDIS":{"CONT-ANIME":[{targetId:"DM-CHAR-AIS",label:"Admiración por Ais",type:"Admiración (adaptación)",description:"El perfil oficial indica admiración de Lefiya por Ais. No implica que sus vínculos tengan la misma intensidad en todas las continuidades.",refs:["DMR-014-CLM-006"]}],
+"CONT-SO":[
+{targetId:"DM-CHAR-AIS",label:"Admiración por Ais",type:"Admiración",description:"La fuente secundaria describe admiración, una motivación que puede generar aprendizaje e inseguridad.",refs:["DMR-014-CLM-012"]},
+{targetId:"CHAR-RIVERIA-LJOS-ALF",label:"Orientación mágica reportada",type:"Mentoría",description:"La fuente secundaria presenta a Riveria como guía de Lefiya; localizadores primarios pendientes.",refs:["DMR-014-CLM-012"]}]}
 
 });
 

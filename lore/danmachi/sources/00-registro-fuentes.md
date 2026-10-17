@@ -624,3 +624,120 @@ verification_status: stub
 - rights_note: Paráfrasis; no descargar o incrustar retratos no autorizados.
 - verified_by: DANMACHI-COVERAGE-001
 - verification_status: source_checked_adaptation_profile
+
+
+---
+
+## DMR-014-SRC-001 · Perfiles oficiales de Sword Oratoria
+- source_id: DMR-014-SRC-001
+- title: Sword Oratoria · perfiles oficiales de personajes
+- creator_or_publisher: Producción oficial de DanMachi
+- source_type: OFFICIAL_ADAPTATION_REFERENCE
+- series: Sword Oratoria / DanMachi
+- official_url: https://danmachi.com/sword_oratoria/character/
+- accessed_at: 2026-10-16
+- locator_type: adaptation_character_profile
+- locator: Perfiles en japonés de Riveria, Gareth, Bete, Tiona, Tione y Lefiya.
+- claims_supported: [DMR-014-CLM-001, DMR-014-CLM-002, DMR-014-CLM-003, DMR-014-CLM-004, DMR-014-CLM-005, DMR-014-CLM-006]
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación; no sustituye las novelas ni fija niveles permanentes.
+- conflicting_sources: []
+- rights_note: Se conservan enlaces de origen sin descargar ni incrustar retratos.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: source_checked_adaptation_profile
+
+## DMR-014-SRC-002 · Riveria Ljos Alf · referencia comunitaria
+- source_id: DMR-014-SRC-002
+- title: Riveria Ljos Alf
+- source_type: COMMUNITY_WIKI
+- official_url: https://danmachi.fandom.com/es/wiki/Riveria_Ljos_Alf
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead y relaciones; localizadores de novela pendientes.
+- claims_supported: [DMR-014-CLM-007]
+- continuity_scope: CONT-SO
+- reliability_note: Fuente secundaria de descubrimiento; no reemplaza el texto de la novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-014-SRC-003 · Gareth Landrock · referencia comunitaria
+- source_id: DMR-014-SRC-003
+- title: Gareth Landrock
+- source_type: COMMUNITY_WIKI
+- official_url: https://danmachi.fandom.com/es/wiki/Gareth_Landrock
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead biográfico y descripción del rol.
+- claims_supported: [DMR-014-CLM-008]
+- continuity_scope: CONT-SO
+- reliability_note: Resumen secundario, no estadística de personaje por época.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-014-SRC-004 · Bete Loga · referencia comunitaria
+- source_id: DMR-014-SRC-004
+- title: Bete Loga
+- source_type: COMMUNITY_WIKI
+- official_url: https://danmachi.fandom.com/es/wiki/Bete_Loga
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead y apartados de personalidad/capacidades.
+- claims_supported: [DMR-014-CLM-009]
+- continuity_scope: CONT-SO
+- reliability_note: Fuente secundaria con datos que pueden contener spoilers.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-014-SRC-005 · Tiona Hiryute · referencia comunitaria
+- source_id: DMR-014-SRC-005
+- title: Tiona Hiryute
+- source_type: COMMUNITY_WIKI
+- official_url: https://danmachi.fandom.com/es/wiki/Tiona_Hiryute
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead y parentesco.
+- claims_supported: [DMR-014-CLM-010]
+- continuity_scope: CONT-SO
+- reliability_note: Fuente secundaria; confirmar escenas de las gemelas con novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-014-SRC-006 · Tione Hiryute · referencia comunitaria
+- source_id: DMR-014-SRC-006
+- title: Tione Hiryute
+- source_type: COMMUNITY_WIKI
+- official_url: https://danmachi.fandom.com/es/wiki/Tione_Hiryute
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead y relaciones.
+- claims_supported: [DMR-014-CLM-011]
+- continuity_scope: CONT-SO
+- reliability_note: Atribuye sentimientos a Tione, no reciprocidad a Finn.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
+
+## DMR-014-SRC-007 · Lefiya Viridis · referencia comunitaria
+- source_id: DMR-014-SRC-007
+- title: Lefiya Viridis
+- source_type: COMMUNITY_WIKI
+- official_url: https://danmachi.fandom.com/es/wiki/Lefiya_Viridis
+- accessed_at: 2026-10-16
+- locator_type: community_article
+- locator: Lead, perfil de magia y relaciones.
+- claims_supported: [DMR-014-CLM-012]
+- continuity_scope: CONT-SO
+- reliability_note: Fuente secundaria; nombres y restricciones de hechizos requieren texto primario.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_checked_primary_text_pending
