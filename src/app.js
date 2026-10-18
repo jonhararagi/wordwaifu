@@ -2589,10 +2589,21 @@
   function renderArchiveRelationship(rel){
     const card=archiveElement("article","archive-relationship-card");card.appendChild(archivePortrait(rel.targetId,rel.targetName,false,rel.continuity));
     const copy=archiveElement("div","archive-relationship-copy");copy.appendChild(archiveElement("h4","",rel.targetName));copy.appendChild(archiveElement("p","archive-relationship-type",rel.type+" · "+rel.continuity));copy.appendChild(archiveElement("p","",rel.description));
-    const badges=archiveElement("div","archive-badge-row");badges.append(archiveBadge(rel.continuity,"continuity"),archiveBadge(rel.period,"muted"));copy.appendChild(badges);
+    const badges=archiveElement("div","archive-badge-row");badges.append(archiveBadge(rel.continuity,"continuity"),archiveBadge(rel.period,"muted"));
+    if(rel.evidenceStatus)badges.appendChild(archiveBadge("evidencia: "+rel.evidenceStatus,"muted"));
+    copy.appendChild(badges);
     const actions=archiveElement("div","archive-card-actions");
-    if(rel.available){const link=archiveElement("button","archive-related-link",rel.label+" · Abrir ficha ↗");link.type="button";link.dataset.characterLink=rel.targetId;link.dataset.linkContinuity=rel.continuity;actions.appendChild(link);}
-    else actions.appendChild(archiveElement("span","archive-unavailable","Ficha pendiente; no se creó un enlace roto."));
+    if(rel.available){
+      const isCharacter=rel.targetType==="character";
+      const actionLabel=isCharacter?"Abrir ficha ↗":"Abrir expediente ↗";
+      const link=archiveElement("button","archive-related-link",rel.label+" · "+actionLabel);
+      link.type="button";
+      if(isCharacter){link.dataset.characterLink=rel.targetId;link.dataset.linkContinuity=rel.continuity;}
+      else if(rel.targetPath){link.dataset.dossierPath=rel.targetPath;link.dataset.dossierRecord=rel.targetId;}
+      else {actions.appendChild(archiveElement("span","archive-unavailable","Destino disponible solo como referencia; no se abrió un enlace roto."));}
+      if(isCharacter||rel.targetPath)actions.appendChild(link);
+    }
+    else actions.appendChild(archiveElement("span","archive-unavailable","Ficha o expediente pendiente; no se creó un enlace roto."));
     copy.appendChild(actions);rel.claims.forEach(c=>copy.appendChild(archiveEvidence(c)));card.appendChild(copy);return card;
   }
   function renderArchiveMoment(moment){
@@ -2844,8 +2855,8 @@
     const section = archiveElement("section", "archive-section");
     const heading = archiveElement("div", "archive-section-heading");
     heading.append(
-      archiveElement("h3", "", "Personas relacionadas"),
-      archiveElement("p", "", "Se distingue la guía o afiliación documentada de una amistad, rivalidad o relación no demostrada.")
+      archiveElement("h3", "", "Relaciones y rutas narrativas"),
+      archiveElement("p", "", "Abrí el enlace para seguir a la persona o expediente relacionado. Se conserva la dirección de la afirmación y el estado de evidencia; una coincidencia por etiquetas no se trata como relación probada.")
     );
     section.appendChild(heading);
     const grid = archiveElement("div", "archive-related-grid");
@@ -2984,7 +2995,20 @@
   $("#archive-more-info-dialog").addEventListener("click",closeDialogFromBackdrop);
   $("#content-rights-dialog").addEventListener("click",closeDialogFromBackdrop);
   $("#archive-profile-tabs").addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;const tabs=$("#archive-profile-tabs [role=tab]"),i=tabs.indexOf(e.target.closest("[role=tab]"));if(i<0)return;e.preventDefault();const n=e.key==="Home"?0:e.key==="End"?tabs.length-1:(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[n].focus();tabs[n].click();});
-  $("#character-archive-profile").addEventListener("click",e=>{const b=e.target.closest("[data-character-link]");if(!b||!loreArchiveIndex.characters.some(c=>c.id===b.dataset.characterLink))return;openArchiveProfile(b.dataset.characterLink,b.dataset.linkContinuity,true);});
+  $("#character-archive-profile").addEventListener("click",e=>{
+    const characterLink=e.target.closest("button[data-character-link]");
+    if(characterLink){
+      if(loreArchiveIndex&&loreArchiveIndex.characters.some(c=>c.id===characterLink.dataset.characterLink)){
+        openArchiveProfile(characterLink.dataset.characterLink,characterLink.dataset.linkContinuity,true);
+      }
+      return;
+    }
+    const dossierLink=e.target.closest("button[data-dossier-path]");
+    if(!dossierLink||!loreArchiveIndex)return;
+    const target=(loreArchiveIndex.entityRecords||[]).find(record=>record.id===dossierLink.dataset.dossierRecord);
+    if(!target||!target.path||target.path!==dossierLink.dataset.dossierPath)return;
+    openDanmachiDossier(target.path,target.id,{remember:true});
+  });
   async function prepareLoreView() {
     const status = $("#lore-search-status");
     status.textContent = "Leyendo las afirmaciones curadas desde el repositorio…";
