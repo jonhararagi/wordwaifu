@@ -2944,11 +2944,11 @@
     $("#character-archive-directory").classList.add("hidden");$("#character-archive-profile").classList.remove("hidden");
     renderArchiveHeader(activeArchiveProfile);renderArchiveTab();
   }
-  function openArchiveProfile(id,continuity,remember){
+  function openArchiveProfile(id,continuity,remember,initialTab){
     if(!loreArchiveIndex||!loreArchiveIndex.characters.some(c=>c.id===id))return;
     if(remember&&activeArchiveCharacterId&&activeArchiveCharacterId!==id)archiveNavigationStack.push({id:activeArchiveCharacterId,continuity:activeArchiveContinuity,tab:activeArchiveTab});
     activeArchiveCharacterId=id;const candidate=window.WordWaifuCharacterArchive.getProfile(loreArchiveIndex,id,continuity,$("#archive-spoiler").value);
-    activeArchiveContinuity=candidate?candidate.continuity:"";activeArchiveTab="summary";renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});
+    activeArchiveContinuity=candidate?candidate.continuity:"";activeArchiveTab=initialTab==="relationships"?"relationships":"summary";renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});
   }
   function returnToArchiveDirectory(){
     activeArchiveCharacterId=null;activeArchiveContinuity=null;activeArchiveProfile=null;archiveNavigationStack.length=0;
@@ -2999,7 +2999,7 @@
     const characterLink=e.target.closest("button[data-character-link]");
     if(characterLink){
       if(loreArchiveIndex&&loreArchiveIndex.characters.some(c=>c.id===characterLink.dataset.characterLink)){
-        openArchiveProfile(characterLink.dataset.characterLink,characterLink.dataset.linkContinuity,true);
+        openArchiveProfile(characterLink.dataset.characterLink,characterLink.dataset.linkContinuity,true,"relationships");
       }
       return;
     }
