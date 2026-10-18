@@ -647,6 +647,19 @@ async function run() {
     assert.ok(ryuAnime.some(item => item.entryId.endsWith("--CONT-ANIME") || item.text.includes("Hostess of Fertility")));
     assert.ok(ryuAnime.every(item => item.continuity === "CONT-ANIME"));
     process.stdout.write("PASS lore UI: Ryu in CONT-ANIME is retrieved separately.\n");
+    await page.locator("#lore-query").fill("Bell superficie");
+    await page.locator("#lore-search-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelectorAll(".lore-result").length > 0, { timeout: 5000 });
+    const liveRyuBell = await page.locator(".lore-result").evaluateAll(nodes => nodes.map(n => ({ claimId:n.dataset.claimId, continuity:n.dataset.continuity, text:n.innerText })));
+    assert.ok(liveRyuBell.some(item => item.claimId === "DMR-013-CLM-001" && item.continuity === "CONT-ANIME"), "The live loader must expose the new Ryu-Bell source claim, not only tests built with a hand-picked document list.");
+    await page.locator("#lore-character").selectOption("DM-CHAR-EINA");
+    await page.locator("#lore-query").fill("asesora Bell Guild");
+    await page.locator("#lore-search-form button[type='submit']").click();
+    await page.waitForFunction(() => document.querySelectorAll(".lore-result").length > 0, { timeout: 5000 });
+    const liveEina = await page.locator(".lore-result").evaluateAll(nodes => nodes.map(n => ({ claimId:n.dataset.claimId, continuity:n.dataset.continuity })));
+    assert.ok(liveEina.some(item => item.claimId === "DMR-016-CLM-001" && item.continuity === "CONT-ANIME"), "The live loader must retrieve Eina's advisor claim in the anime continuity.");
+    process.stdout.write("PASS lore UI: new Ryu and Eina source packs load into the live search.\\n");
+
     await page.locator("#lore-character").selectOption("DM-CHAR-AIS");
     await page.locator("#lore-continuity").selectOption("ALL");
     await page.locator("#lore-aspect").selectOption("likes");
