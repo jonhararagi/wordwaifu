@@ -270,3 +270,10 @@ En [Validate WordWaifu #39108041754](https://github.com/jonhararagi/wordwaifu/ac
 
 - [GitHub Changelog · 14 de octubre de 2026: workflow lockfiles](https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/). GitHub documenta que las etiquetas y ramas de Actions pueden moverse después de una revisión, por lo que otra ejecución podría usar código distinto. Los lockfiles nuevos permiten fijar referencias y revisar cambios de dependencias. WordWaifu ya utiliza SHA inmutables en los pasos de Actions que ejecuta; los lockfiles serían una segunda capa cuando la extensión y política estén disponibles para el repositorio. No se activa una nueva dependencia para lograrlo.
 - [GitHub Changelog · 1 de octubre de 2026: retención de estados de Actions](https://github.blog/changelog/2026-10-01-actions-retention-now-covers-checks-runs-and-statuses/). Los checks, ejecuciones, estados, artefactos y logs se limpian de acuerdo con la política de retención; el máximo anunciado para repositorios públicos es 90 días. Por eso el registro de validación de WordWaifu conserva SHA y enlaces directos a los runs; un recuento agregado o un log expirado no debe tratarse como prueba permanente.
+
+
+## 2026-10-18 · Source-to-claim integrity
+
+A cross-check of `sources/00-registro-fuentes.md` against research-claim blocks found seven mismatches in `claims_supported`: six came from stale `DMR-006` IDs left in Astrea Record source entries after its dossier claims moved to the unique `DMR-012` namespace; one linked the opening state of Bell/Hestia to the character-profile page rather than to the episode-1 synopsis. The registry entries were corrected to reference the actual claims and sources.
+
+The catalogue validator now checks every `claims_supported` reference against indexed research-claim headings and verifies that the claim itself cites the source ID listing it. Missing claim IDs and mismatched source IDs fail validation. This guards the failure mode “a valid-looking citation opens the wrong person's claim” rather than merely warning about it in documentation.

@@ -112,6 +112,34 @@ for (const file of markdownFiles) {
   }
 }
 
+// Source registry cross-check: a source may only list research claims that exist
+// and explicitly cite that source ID. This prevents a stale claim ID from silently
+// redirecting readers to a different person's biography or continuity.
+const sourceRegistryPath = path.join(root, "sources", "00-registro-fuentes.md");
+if (fs.existsSync(sourceRegistryPath)) {
+  const registryText = fs.readFileSync(sourceRegistryPath, "utf8");
+  const sourceHeadings = [...registryText.matchAll(/^## (DMR-\d{3}-SRC-\d{3}) · ([^\r\n]+)$/gm)];
+  for (let i = 0; i < sourceHeadings.length; i++) {
+    const sourceId = sourceHeadings[i][1];
+    const end = i + 1 < sourceHeadings.length ? sourceHeadings[i + 1].index : registryText.length;
+    const sourceBlock = registryText.slice(sourceHeadings[i].index, end);
+    const supportedMatch = sourceBlock.match(/^- claims_supported:\s*\[([^\]]*)\]/m);
+    if (!supportedMatch) continue;
+    const claimIds = [...new Set(supportedMatch[1].match(/DMR-\d{3}-CLM-\d{3}/g) || [])];
+    for (const claimId of claimIds) {
+      const claim = claimLocations.get(claimId);
+      if (!claim) {
+        errors.push("Source registry " + sourceId + " references missing research claim: " + claimId);
+        continue;
+      }
+      const claimSources = new Set(claim.block.match(/\bDMR-\d{3}-SRC-\d{3}\b/g) || []);
+      if (!claimSources.has(sourceId)) {
+        errors.push("Source registry " + sourceId + " lists " + claimId + ", but the claim cites " + [...claimSources].join(", "));
+      }
+    }
+  }
+}
+
 const liveRecordIds = new Set(recordIds);
 const relationshipIds = new Set();
 const validEvidenceStatuses = new Set(["source_checked", "secondary_checked"]);

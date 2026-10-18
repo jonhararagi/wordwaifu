@@ -102,7 +102,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: publisher_synopsis
 - locator: Sinopsis editorial; localizar «約七年前», «リュー・リオン», «団長アリーゼ» y «闇派閥(イヴィルス)».
-- claims_supported: [DMR-001-CLM-002, DMR-001-CLM-005, DMR-001-CLM-006, DMR-001-CLM-010, DMR-006-CLM-001, DMR-006-CLM-002, DMR-006-CLM-003]
+- claims_supported: [DMR-001-CLM-002, DMR-001-CLM-005, DMR-001-CLM-006, DMR-001-CLM-010, DMR-012-CLM-001, DMR-012-CLM-002, DMR-012-CLM-003]
 - events_supported: []
 - continuity_scope: CONT-AR
 - reliability_note: Sinopsis oficial abierta directamente; volumen íntegro y localizadores internos pendientes.
@@ -125,7 +125,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: publisher_synopsis
 - locator: Sinopsis que contiene «後に『死の七日間』と呼ばれる» y describe la ofensiva de Evilus.
-- claims_supported: [DMR-001-CLM-007, DMR-006-CLM-004]
+- claims_supported: [DMR-001-CLM-007, DMR-012-CLM-004]
 - events_supported: []
 - continuity_scope: CONT-AR
 - reliability_note: Resumen oficial; no fija duración exacta ni todos los hitos.
@@ -148,7 +148,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: publisher_synopsis
 - locator: Sinopsis que comienza «迷宮から大最悪を喚び出しオラリオを破壊せんとする闇派閥».
-- claims_supported: [DMR-001-CLM-008, DMR-006-CLM-004]
+- claims_supported: [DMR-001-CLM-008, DMR-012-CLM-004]
 - events_supported: []
 - continuity_scope: CONT-AR
 - reliability_note: Sinopsis oficial; no reconstruye resultados individuales.
@@ -216,7 +216,7 @@ verification_status: stub
 - accessed_at: 2026-10-11
 - locator_type: character_profile
 - locator: Entradas アストレア, アリーゼ・ローヴェル y perfiles de Astrea Familia, incluida リュー・リオン.
-- claims_supported: [DMR-002-CLM-017, DMR-002-CLM-018, DMR-002-CLM-019, DMR-002-CLM-020, DMR-006-CLM-005]
+- claims_supported: [DMR-002-CLM-017, DMR-002-CLM-018, DMR-002-CLM-019, DMR-002-CLM-020, DMR-012-CLM-005]
 - events_supported: []
 - continuity_scope: CONT-ANIME; comparación auxiliar con CONT-AR
 - reliability_note: Perfil oficial de adaptación; no se transfiere automáticamente a la novela ligera.
@@ -262,7 +262,7 @@ verification_status: stub
 - accessed_at: 2026-10-13
 - locator_type: character_profile
 - locator: Sección ヘスティア・ファミリア y perfiles de ベル・クラネル, ヘスティア, リリルカ・アーデ, ヴェルフ・クロッゾ, ヤマト・命 y サンジョウノ・春姫.
-- claims_supported: [DMR-004-CLM-001, DMR-004-CLM-003, DMR-004-CLM-004, DMR-004-CLM-005, DMR-004-CLM-006]
+- claims_supported: [DMR-004-CLM-003, DMR-004-CLM-004, DMR-004-CLM-005, DMR-004-CLM-006]
 - events_supported: []
 - continuity_scope: CONT-ANIME
 - reliability_note: Fuente oficial de adaptación consultada directamente. Los perfiles describen el estado editorial de la adaptación; no prueban por sí solos el momento exacto de cada cambio en la novela ligera.
