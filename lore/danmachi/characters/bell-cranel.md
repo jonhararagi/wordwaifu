@@ -52,3 +52,11 @@ DanMachi, novela ligera, volumen 1 y volúmenes posteriores relevantes: verifica
 - **Motivación:** el perfil oficial sitúa su llegada a Orario en la admiración por los héroes. Es un ideal central respaldado por la fuente, no prueba de que siempre actúe con valentía o sin miedo. [DMR-002-CLM-001]
 - **Relación con Ais:** la adaptación la presenta como figura de admiración y señala que la madurez romántica de Bell va por detrás de su crecimiento. No permite concluir que Ais corresponda en la misma medida ni que la AU conserve esa dinámica. [DMR-002-CLM-002]
 - **Gustos, miedos y voz:** las páginas consultadas no dan datos suficientes para completar estas áreas sin consultar escenas concretas.
+
+
+## Volumen 21 · noticia de la expedición de Loki Familia (CONT-MAIN-LN)
+
+- **Ruta narrativa:** [La expedición fallida del piso 60 y la respuesta de Orario](../events/candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md).
+- La sinopsis editorial dice que Bell regresa del extremo norte y recibe la noticia de la expedición fallida: DMR-008-CLM-024, `provisional_summary`, relación `REL-BELL-V21-LEARNS-EXPEDITION-FAILURE`.
+- El fragmento público del capítulo inicial registra su pregunta urgente por Ais, Finn y los demás: DMR-008-CLM-025, `source_checked_excerpt_only`, relación `REL-BELL-V21-ASKS-ABOUT-EXPEDITION`.
+- **Límite:** esta ficha no convierte los datos de sinopsis en resumen completo del volumen ni resuelve el desenlace de la expedición.
