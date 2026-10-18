@@ -598,3 +598,28 @@ verification_status: stub
 - rights_note: Resumir en palabras propias; no reproducir la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-015
 - verification_status: source_checked
+
+
+---
+
+## DMR-016-SRC-001 · Perfil oficial de Eina en DanMachi III
+
+- source_id: DMR-016-SRC-001
+- title: キャラクター | TVアニメ「ダンまち」シリーズ 第3期公式サイト
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi III
+- volume_or_edition: Perfil oficial de personaje, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi3/character/
+- accessed_at: 2026-10-18
+- locator_type: character_profile
+- locator: Entrada エイナ・チュール; recepcionista y asesora de la Guild, asignada a Bell y fuente de conocimiento práctico del Dungeon y de Orario
+- claims_supported: [DMR-016-CLM-001]
+- events_supported: [EVT-DM-EINA-ADVISOR-ANIME-001]
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación. Confirma la función de Eina como asesora asignada a Bell y su tarea de orientación en esa continuidad, no una secuencia completa de conversaciones de la novela.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias; no copiar descripciones extensas.
+- verified_by: DANMACHI-RESEARCH-016
+- verification_status: source_checked
