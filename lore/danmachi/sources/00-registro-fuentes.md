@@ -548,3 +548,28 @@ verification_status: stub
 - rights_note: Registrar datos breves y paráfrasis propia.
 - verified_by: DANMACHI-RESEARCH-013
 - verification_status: source_checked
+
+
+---
+
+## DMR-014-SRC-001 · Sinopsis oficial del episodio 1
+
+- source_id: DMR-014-SRC-001
+- title: 第1話 - ストーリー
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi, primera temporada
+- volume_or_edition: Episodio 1; página web sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi/story/episode1.html
+- accessed_at: 2026-10-18
+- locator_type: episode_synopsis
+- locator: Sinopsis 第1話; párrafos de Bell como único miembro de Hestia Familia desde hace medio mes y de la crisis del quinto piso
+- claims_supported: [DMR-014-CLM-001, DMR-014-CLM-002]
+- events_supported: [EVT-DM-BELL-OPENING-CRISIS-ANIME-001]
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación. Apoya el estado temporal relativo y el resumen del episodio, pero no sustituye un localizador de novela ni permite inventar la identidad de la espadachina a partir de esta sinopsis sola.
+- conflicting_sources: []
+- rights_note: Paráfrasis original breve; no copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-014
+- verification_status: source_checked
