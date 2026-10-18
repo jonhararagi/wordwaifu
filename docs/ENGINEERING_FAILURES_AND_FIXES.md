@@ -156,3 +156,11 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - **Corrección:** `lore/danmachi/tools/check-catalog.mjs` ahora permite explícitamente `CROSS-CONTINUITY` además de los identificadores `CONT-...`. La opción no reemplaza el filtrado de continuidad: solo debe utilizarse cuando la fuente realmente declara un alcance transversal.
 - **Aplicación:** se activaron las fichas parciales de Zeus Familia y Hera Familia y se conectaron a `EVT-DM-GREAT-QUESTS-001` usando `DMR-008-CLM-027`. La relación conserva que la fuente atribuye ambas victorias conjuntamente; no infiere qué Familia derrotó cada monstruo ni cierra el resultado contra el Dragón Negro.
 - **Regresión añadida:** `tests/test_lore_corpus.cjs` comprueba las dos aristas `CROSS-CONTINUITY` y que el buscador recupera el claim con ese filtro. La validación de CI para el HEAD más reciente debe confirmarse antes de afirmar que toda la tanda terminó en verde.
+
+
+### Regresión final · parser CROSS-CONTINUITY y CI verde · 2026-10-18
+
+- La prueba de la búsqueda transversal reveló un segundo fallo: aunque el validador aceptaba CROSS-CONTINUITY, el parser de src/lore-corpus.js solo extraía etiquetas CONT-.... Por ello, la relación podía existir en el catálogo y aun así no recuperarse al filtrar por su propio alcance.
+- **Corrección aplicada:** la expresión de extracción de continuityScopes ahora acepta CROSS-CONTINUITY; el test filtra por ese valor y exige recuperar DMR-008-CLM-027.
+- **Resultado CI para el SHA funcional exacto 15c968dd846138defd80c6599a6bdab84c7673fd:** [Validate WordWaifu #39156859477 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39156859477) y [DanMachi Lore and Retrieval Integrity #39156859489 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39156859489). Ambos incluyen test de lore, validación de catálogo y navegador.
+- **Revisión estática del grafo en el mismo contenido publicado:** 59 relaciones, extremos existentes, claim/localizador existente, continuidad y estado coincidentes, sin duplicados ni combinación de tipos secondary/community con source_checked. La comprobación estática complementa, no reemplaza, CI.
