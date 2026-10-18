@@ -1680,13 +1680,13 @@
     }
   ],
   "lastStructuredSync": {
-    "branch": "work/story-completion-danmachi-audit-2026-10",
+    "branch": "main",
     "sourceCommit": "622369265b08712e4440087e7361f5151e9402d2",
     "trackedLoreFiles": 165,
-    "records": 48,
-    "reservedIds": 67,
+    "records": 59,
+    "reservedIds": 57,
     "supportingDocuments": 100,
-    "syncNote": "Extensión manual verificada: LOC-DUNGEON se promueve de ID reservado a registro navegable con fuente editorial oficial y límites explícitos. No equivale a un cotejo completo de pisos, reglas o capítulos."
+    "syncNote": "Counts reconciled against the current main catalog on 2026-10-18 after manual extensions. Current catalog contains 59 records, 57 reserved IDs, 100 supporting documents and 49 explicit relationships. This is structural inventory only: it does not certify factual completeness or primary-source verification."
   },
   "relationships": [
     {
