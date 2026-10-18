@@ -20,6 +20,12 @@ Este índice separa eventos preliminares que necesitan verificación de los acon
 
 Las fichas anteriores son candidatos de conocimiento general y no se consideran fuente canónica verificada hasta que se cotejen sus afirmaciones con un localizador primario.
 
+## Historia de la adaptación del anime · trayectoria de Ryu en DanMachi V
+
+- [Ryu vuelve con Bell, visita a Astrea y entra tarde en la guerra de Familias](candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md) · EVT-DM-RYUU-ASTREA-RETURN-ANIME-001 · CONT-ANIME · fuente oficial de perfil y noticia; texto íntegro de novela no cotejado.
+
+Este evento completa el trayecto que une el regreso de Ryu y Bell desde las profundidades, la visita de Ryu a Astrea y su reincorporación tardía al conflicto. Las relaciones correspondientes se etiquetan CONT-ANIME y no sustituyen las aristas de novela/chronicle.
+
 ## Línea alternativa del OC: propuestas de autor
 
 - [Llegada del OC a Orario](au/AU-EVT-OC-ARRIVAL-001.md) · AU-EVT-OC-ARRIVAL-001
