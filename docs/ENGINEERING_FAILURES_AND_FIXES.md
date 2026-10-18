@@ -110,3 +110,11 @@ Fuente: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_Ind
 - Se ajustó para admitir `secondary_checked` o `pending_verification`, y rechazar explícitamente `source_checked` sin evidencia primaria. La misma tanda añadió pruebas para las tres relaciones nuevas y la recuperación de los claims DMR-013 dentro de `CONT-ANIME`.
 - Resultado para el SHA exacto `ad182ab5bba631930eae88339e1b9783d819ad89`: [Validate WordWaifu #39155674818 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39155674818) y [DanMachi Lore and Retrieval Integrity #39155674834 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39155674834).
 - Esta certificación no se extiende automáticamente a un SHA nuevo. Cada commit posterior necesita sus propias ejecuciones; por eso los cambios de documentación que siguen se deben validar de nuevo.
+
+
+### Ampliación de historia · Bell opening en CONT-ANIME · 2026-10-18
+
+- Se añadió `EVT-DM-BELL-OPENING-CRISIS-ANIME-001`, con el claim DMR-014-CLM-001 sobre el estado de Bell como único miembro de Hestia Familia desde hace aproximadamente medio mes en la sinopsis del episodio 1 y DMR-014-CLM-002 sobre la crisis del quinto piso.
+- El dossier se limita a la adaptación. No declara que ese medio mes date el primer encuentro de la novela, no fija la fecha del descenso de Hestia y no identifica a la espadachina usando únicamente la sinopsis.
+- Estado estructural tras añadir ambos recorridos de adaptación: 61 registros, 57 IDs reservados, 102 documentos de apoyo y 54 aristas. El porcentaje de cobertura global sigue sin calcularse porque hay historias y localizadores primarios pendientes.
+- Las pruebas de regresión ahora incluyen ambos expedientes y comprobarán su recuperabilidad por continuidad antes de cerrar la siguiente tanda.
