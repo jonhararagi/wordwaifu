@@ -302,14 +302,14 @@
       entryCount: claims.length, characters, claims, profileDetails,
       relationships: Array.isArray(catalog.relationships) ? catalog.relationships : [],
       entityRecords: (catalog.records || []).filter(record => record && typeof record.id === "string" && typeof record.type === "string").map(record => ({
-        id: record.id, path: record.path || "", type: record.type, status: record.status || "unknown",
+        id: record.id, path: record.path || "", name: record.name || record.title || "", type: record.type, status: record.status || "unknown",
         priority: record.priority || "normal", tags: Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : []
       })),
       profileDocumentCount: Object.keys(profileDetails).length };
   }
   async function load(basePath) {
     const base = basePath || "./lore/danmachi/";
-    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md", "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md", "research/inbox/BATCH-DM-008-main-story-volume-map.md", "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md", "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md", "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md"];
+    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md", "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md", "research/inbox/BATCH-DM-008-main-story-volume-map.md", "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md", "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md", "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md", "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md", "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md", "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md"];
     const responses = await Promise.all(paths.map(path => fetch(base + path, { cache: "no-cache" })));
     for (let i = 0; i < responses.length; i++) if (!responses[i].ok) throw new Error("No se pudo cargar " + paths[i] + " (HTTP " + responses[i].status + ").");
     const catalog = await responses[0].json();
