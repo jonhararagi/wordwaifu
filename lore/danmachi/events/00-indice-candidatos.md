@@ -6,13 +6,17 @@ status: provisional
 ---
 # Índice de eventos candidatos
 
-Este índice separa eventos preliminares que necesitan verificación de los acontecimientos AU propuestos por el autor. Cada archivo mantiene su propio ID, fuentes vacías hasta la comprobación y estado explícito.
+Este índice separa historias parciales respaldadas por sinopsis/perfiles oficiales, candidatos que necesitan verificación y acontecimientos AU propuestos por el autor. Cada archivo conserva ID, continuidad y estado de evidencia explícitos.
 
 ## Historias de novela principal con cobertura parcial
 
 - [Volumen 21: expedición fallida del piso 60 y respuesta de Orario](candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md) · EVT-DM-V21-EXPEDITION-RESCUE-001 · CONT-MAIN-LN.
 
 Las tres afirmaciones de la sinopsis editorial conservan el estado `provisional_summary`; las dos relaciones del capítulo inicial y la del prólogo conservan `source_checked_excerpt_only`. El expediente diferencia la sinopsis editorial del fragmento primario visible y no infiere el rescate completo.
+
+## Historia paralela con cobertura parcial · CONT-AR
+
+- [Astrea Record: justicia, guía y escalada del conflicto](candidates/EVT-DM-ASTREA-RECORD-FOUNDATIONS-001.md) · EVT-DM-ASTREA-RECORD-FOUNDATIONS-001. Reúne la referencia temporal aproximada, la guía de Astrea y Alise sobre Ryu y el impacto general del conflicto con Evilus, según las sinopsis oficiales de los volúmenes I–III. No certifica destinos individuales ni el orden capítulo por capítulo.
 
 ## Historia principal y referencias oficiales: eventos parciales y candidatos
 
@@ -25,12 +29,6 @@ Las tres afirmaciones de la sinopsis editorial conservan el estado `provisional_
 - [Eina asesora a Bell a través de la Guild](candidates/EVT-DM-EINA-ADVISOR-001.md) · EVT-DM-EINA-ADVISOR-001
 
 La excepción parcial es EVT-DM-GREAT-QUESTS-001: una referencia oficial transversal confirma conjuntamente que Zeus Familia y Hera Familia derrotaron a Behemoth y Leviathan, pero no asigna cada monstruo a una Familia ni establece fecha, roster o desenlace contra el Dragón Negro. Los demás eventos de esta sección siguen pendientes de cotejo primario para sus detalles específicos.
-
-## Historia de la adaptación del anime · trayectoria de Ryu en DanMachi V
-
-- [Ryu vuelve con Bell, visita a Astrea y entra tarde en la guerra de Familias](candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md) · EVT-DM-RYUU-ASTREA-RETURN-ANIME-001 · CONT-ANIME · fuente oficial de perfil y noticia; texto íntegro de novela no cotejado.
-
-Este evento completa el trayecto que une el regreso de Ryu y Bell desde las profundidades, la visita de Ryu a Astrea y su reincorporación tardía al conflicto. Las relaciones correspondientes se etiquetan CONT-ANIME y no sustituyen las aristas de novela/chronicle.
 
 ## Historias de la adaptación del anime con fuentes oficiales
 
