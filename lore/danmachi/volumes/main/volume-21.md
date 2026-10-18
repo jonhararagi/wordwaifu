@@ -18,6 +18,12 @@ tags: ["Loki Familia", "Ais", "piso 60", "rescate"]
 
 La expedición de Loki Familia termina en desastre y varios miembros quedan en peligro en una región profunda. Bell regresa y Orario debe considerar una operación de rescate de mayor escala. El volumen mantiene abierto el destino de los implicados; esta ficha no inventa la resolución ni el final de la serie.
 
+## Recorrido navegable y evidencia por nivel
+
+- **Expediente relacionado:** [EVT-DM-V21-EXPEDITION-RESCUE-001 · La expedición fallida del piso 60 y la respuesta de Orario](../../events/candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md).
+- **Relaciones:** REL-LOKI-V21-EXPEDITION-FAILURE, REL-BELL-V21-LEARNS-EXPEDITION-FAILURE, REL-BELL-V21-ASKS-ABOUT-EXPEDITION, REL-FINN-V21-STATUS-INQUIRY y REL-AIS-V21-PROLOGUE-EXCERPT.
+- **Límite de evidencia:** la sinopsis editorial conserva estado `provisional_summary`; las frases de capítulo/prólogo visibles conservan `source_checked_excerpt_only`. No representan el volumen completo ni resuelven la cronología interna del prólogo.
+
 ## Hitos narrativos
 
 Fracasa la expedición de Loki Familia; Ais y sus compañeros quedan en peligro; Bell y Orario empiezan a organizar un rescate.
