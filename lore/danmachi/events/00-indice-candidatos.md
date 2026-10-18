@@ -8,17 +8,17 @@ status: provisional
 
 Este índice separa eventos preliminares que necesitan verificación de los acontecimientos AU propuestos por el autor. Cada archivo mantiene su propio ID, fuentes vacías hasta la comprobación y estado explícito.
 
-## Historia canónica: candidatos pendientes de verificar
+## Historia principal y referencias oficiales: eventos parciales y candidatos
 
 - [Descenso de las deidades](candidates/EVT-DM-DESCENT-001.md) · EVT-DM-DESCENT-001
-- [Zeus/Hera: derrotas de Behemoth y Leviathan](candidates/EVT-DM-GREAT-QUESTS-001.md) · EVT-DM-GREAT-QUESTS-001
+- [Zeus/Hera: derrotas de Behemoth y Leviathan](candidates/EVT-DM-GREAT-QUESTS-001.md) · EVT-DM-GREAT-QUESTS-001 · referencia oficial transversal parcial; enlaza a [Zeus Familia](../familias/zeus-familia.md) y [Hera Familia](../familias/hera-familia.md).
 - [Zeus/Hera y el Dragón Negro](candidates/EVT-DM-ZH-OEBD-001.md) · EVT-DM-ZH-OEBD-001
 - [Pérdida de poder/caída de Zeus y Hera Familia](candidates/EVT-DM-ZH-FALL-001.md) · EVT-DM-ZH-FALL-001
 - [Llegada de Hestia al mundo inferior](candidates/EVT-DM-HESTIA-DESCENT-001.md) · EVT-DM-HESTIA-DESCENT-001
 - [Encuentro inicial de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) · EVT-DM-BELL-MEETS-HESTIA-001
 - [Eina asesora a Bell a través de la Guild](candidates/EVT-DM-EINA-ADVISOR-001.md) · EVT-DM-EINA-ADVISOR-001
 
-Las fichas anteriores son candidatos de conocimiento general y no se consideran fuente canónica verificada hasta que se cotejen sus afirmaciones con un localizador primario.
+La excepción parcial es EVT-DM-GREAT-QUESTS-001: una referencia oficial transversal confirma conjuntamente que Zeus Familia y Hera Familia derrotaron a Behemoth y Leviathan, pero no asigna cada monstruo a una Familia ni establece fecha, roster o desenlace contra el Dragón Negro. Los demás eventos de esta sección siguen pendientes de cotejo primario para sus detalles específicos.
 
 ## Historia de la adaptación del anime · trayectoria de Ryu en DanMachi V
 
