@@ -147,7 +147,7 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - La página oficial de personajes de DanMachi III (https://danmachi.com/danmachi3/character/) describe a Eina Tulle como recepcionista y asesora de la Guild asignada a Bell y afirma que le aporta conocimiento del Dungeon y de la ciudad.
 - Se añadió el expediente `EVT-DM-EINA-ADVISOR-ANIME-001`, el claim `DMR-016-CLM-001` y dos aristas explícitas: `REL-EINA-ADVISOR-BELL-ANIME` (relación de asesoramiento) y `REL-EINA-WORKS-GUILD-ANIME` (relación institucional).
 - Se mantiene intacto el candidato de novela `EVT-DM-EINA-ADVISOR-001`: no se copiaron detalles de la adaptación a la novela ligera ni se inventaron fechas de reuniones o consejos concretos.
-- El catálogo alcanzó 65 registros, 55 IDs reservados, 104 documentos de apoyo y 64 aristas. Los estados de relación siguen siendo conservadores: 57 `source_checked`, una `secondary_checked`, una `pending_verification`, dos `provisional_summary` y tres `source_checked_excerpt_only`. La cifra describe aristas con distintos alcances y no es un porcentaje de cobertura de historias.
+- El catálogo alcanza 65 registros, 55 IDs reservados, 104 documentos de apoyo y 66 aristas. Los estados de relación siguen siendo conservadores: 57 `source_checked`, una `secondary_checked`, una `pending_verification`, dos `provisional_summary` y tres `source_checked_excerpt_only`. La cifra describe aristas con distintos alcances y no es un porcentaje de cobertura de historias.
 
 
 ### Corrección de modelo · alcance CROSS-CONTINUITY · 2026-10-18
@@ -187,3 +187,11 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - Tras enlazar el expediente a las fichas de volumen 21, Loki Familia, Ais, Finn y Bell, los workflows terminaron en verde para el SHA de contenido `b5222780d313a097496d5c368cabab4e8cafd54c`: [Validate WordWaifu #39157471779 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39157471779) y [DanMachi Lore and Retrieval Integrity #39157471757 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39157471757).
 - El recorrido conecta la sinopsis editorial (estado `provisional_summary`) con el fragmento público del capítulo inicial y prólogo (estado `source_checked_excerpt_only`), manteniendo los límites de cada fuente.
 - El HEAD documental posterior se vuelve a validar en sus propias ejecuciones; estos enlaces certifican exactamente el SHA citado, no cualquier commit futuro.
+
+
+### Cierre de refs de roster histórico de Astrea · 2026-10-18
+
+- Las tarjetas estáticas para Kaguya y Lyra citaban identificadores `DMR-003-CLM-001/002` que no existen en el expediente BATCH-DM-003; el paquete contiene claims `DMR-001`. Esa discrepancia pasó inadvertida mientras la ficha usaba un mapa de relaciones aislado.
+- Se reemplazaron esas referencias por `DMR-007-CLM-005`, que sí enumera el roster histórico de la primera Astrea Familia en la fuente comunitaria. Se reescribieron las etiquetas para que describan co-pertenencia al roster y no una amistad o interacción personal.
+- Se incorporaron dos aristas de catálogo `REL-RYU-KAGUYA-AR-ROSTER-SECONDARY` y `REL-RYU-LYRA-AR-ROSTER-SECONDARY`, ambas `CONT-AR` y `secondary_checked`. La interfaz puede mostrar el estado de evidencia en la tarjeta.
+- Inventario resultante: 65 registros, 55 IDs reservados, 104 documentos de apoyo, 66 relaciones. Estados de arista: 57 `source_checked`, 3 `secondary_checked`, 1 `pending_verification`, 2 `provisional_summary`, 3 `source_checked_excerpt_only`. Sigue pendiente el cotejo primario del roster completo y de escenas individuales.
