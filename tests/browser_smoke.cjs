@@ -2160,6 +2160,10 @@ async function run() {
     assert.match(fixtureImportAlert.message(),/Proyecto importado correctamente/i);
     await fixtureImportAlert.accept();
     await fixtureImportSelection;
+    const markerDrawOrder = await page.locator("#dynamic-markers g.map-marker.custom-marker").evaluateAll((markers) =>
+      markers.map((marker) => marker.dataset.location));
+    assert.ok(markerDrawOrder.lastIndexOf(targetLocationId) > markerDrawOrder.indexOf("wf-test-child-location"),
+      "The selected parent marker must be painted over an imported overlapping child marker.");
     await page.locator('g.map-marker[data-location="' + targetLocationId + '"]').first().click();
     await page.locator("#details-panel h2").getByText("Ciudad Renombrada").waitFor();
 
