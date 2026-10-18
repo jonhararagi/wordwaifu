@@ -1,6 +1,8 @@
-PARTIAL
+ARCHIVO HISTÓRICO · PARTIAL (snapshot 2026-10-10)
 
-# WordWaifu · Punto de continuidad
+# WordWaifu · Punto de continuidad histórica
+
+Este documento registra el cierre de una subtarea de papelera en octubre de 2026. **No describe el estado actual de `main`**. Para el estado operativo vigente, consultar [`docs/STATUS.md`](STATUS.md), la [hoja de ruta](ROADMAP.md) y el [cuadro de auditoría de finalización](COMPLETION_AUDIT.md).
 
 **Resultado:** WF-004-C.3 sigue **PARTIAL**. La prueba de aislamiento por nombres duplicados ya está implementada y pasó en CI. Quedan la cuota real y la revisión manual de Windows 11.  
 **Fecha:** 2026-10-10. **Avance global estimado: 19%** de la visión completa; estimación por alcance, no por líneas de código.

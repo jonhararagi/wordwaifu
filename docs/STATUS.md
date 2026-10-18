@@ -1,18 +1,23 @@
 # Estado de WordWaifu
-## Estado operativo de integración — 2026-10-14
+## Estado operativo y verificación — 2026-10-18
 
-- **HEAD actual de `main` antes de esta actualización documental:** `4e6010df3b52ec64d9d04aa3c27ac7510ce831f8`. La integración de código/lore ya está publicada en `main`.
-- **PR de integración:** [#18](https://github.com/jonhararagi/wordwaifu/pull/18), fusionada mediante squash en `97ca5cd757ba804d2d8ea017221e0c5aca02e202`). La rama de reconciliación y la candidata original siguen conservadas.
-- **Validación del HEAD final de la PR antes del merge:** [DanMachi Lore and Retrieval Integrity #534](https://github.com/jonhararagi/wordwaifu/actions/runs/38560004222) y [Validate WordWaifu #1027](https://github.com/jonhararagi/wordwaifu/actions/runs/38560004249): ambos `success`, mismo SHA `09868364d53b1bfc75f383ef27bdb9d27490435b`.
-- **Corrección post-merge del trigger de DanMachi:** se agregó `main` al filtro `push.branches` y se actualizó la auditoría en el commit `4e6010df3b52ec64d9d04aa3c27ac7510ce831f8`. Los workflows están volviendo a correr en ese HEAD; no se marca su resultado hasta que GitHub Actions finalice.
-- **Estrategia de integración:** en lugar de fusionar los 647 commits históricos de la candidata, se reconciliaron 86 rutas (23 nuevas, 63 actualizadas) sobre la base vigente de `main`. Se preservaron los tres archivos exclusivos de `main`: `docs/README-INITIAL-PRODUCT-VISION.md`, `docs/README-WORLD-STORY-FOUNDRY.md` y `lore/danmachi/sources/DMR-007-wiki-comunitaria.md`.
-- **DanMachi — catálogo estructurado:** 48 registros activos, 67 IDs reservados, 100 documentos de apoyo y 165 archivos rastreados. La validación de catálogo confirma estructura y enlaces, no aprobación factual completa.
-- **Estado honesto de las fichas:** 0 completas bajo el criterio estricto, 25 parciales/provisionales y 23 pendientes. No se promueven expedientes a canon confirmado sin evidencia primaria suficiente.
-- **Roster de adaptación:** 59 identidades únicas; se conservan los 33 perfiles de `src/character-dossiers.js` y 24 expedientes de investigación por continuidad. Los niveles de fuente y spoilers continúan explícitos.
-- **Pendientes factuales:** auditoría por ID y fuente del roster; resolución documentada de la diferencia entre recuperación estructurada y generación automática de claims desde el roster; verificación primaria de las fichas pendientes. La escena atribuida a *Episode Freya* / Emperatriz sigue sin localizador primario suficiente.
-- **Pendientes de producto:** prueba real de cuota de almacenamiento y revisión visual manual en Windows 11 siguen siendo gates distintos de CI.
-- **Veredicto:** el bloqueo de integración a `main` quedó resuelto mediante PR #18. La integración no significa que todo el canon o todos los gates manuales estén completados.
+**Esta sección prevalece sobre todos los historiales inferiores.** Los SHA, porcentajes y ramas descritos después del separador son snapshots históricos, no el estado actual.
 
+- **Repositorio / rama:** `jonhararagi/wordwaifu` · `main`.
+- **HEAD de código validado:** `7860b5151999c92d7cd0233af68eaa26b40dba5d`. En ese SHA, tanto [Validate WordWaifu #39105158830](https://github.com/jonhararagi/wordwaifu/actions/runs/39105158830) como [DanMachi Lore and Retrieval Integrity #39105158803](https://github.com/jonhararagi/wordwaifu/actions/runs/39105158803) terminaron en `success`.
+- **Validación completa del HEAD documental anterior:** [Validate WordWaifu #39105188710](https://github.com/jonhararagi/wordwaifu/actions/runs/39105188710) terminó en `success` para `fb8f4e80d40b870c7a0952481c093f72da88f893`. El workflow DanMachi del SHA de código `095bc68a61e67e7813b307e0ec025309fc8d889f` también terminó en [success #39105185544](https://github.com/jonhararagi/wordwaifu/actions/runs/39105185544). Este cambio documental dispara las validaciones relevantes otra vez.
+- **Cambios funcionales recientes en `main`:**
+  - [Microventana narrativa manual](https://github.com/jonhararagi/wordwaifu/commit/3710ef4c511006c771437ede39bd97e215b32f0f): asistencia editorial optativa, consentimiento explícito, edición que revoca consentimiento y transferencia manual; no envía texto por sí misma.
+  - [Story Forge: integración del motor](https://github.com/jonhararagi/wordwaifu/commit/812007f22078e1e1affeec153819c17de8ef5acb): seis tramos narrativos, de 1 a 500 capítulos y auditoría estructural.
+  - [Prueba de navegador corregida](https://github.com/jonhararagi/wordwaifu/commit/7860b5151999c92d7cd0233af68eaa26b40dba5d), [checks del motor en CI](https://github.com/jonhararagi/wordwaifu/commit/095bc68a61e67e7813b307e0ec025309fc8d889f) y [registro técnico con fuentes externas](https://github.com/jonhararagi/wordwaifu/commit/fb8f4e80d40b870c7a0952481c093f72da88f893).
+  - El PR #21 fue cerrado como reemplazado tras portar su motor, documentación y pruebas a `main`; no se fusionó una rama divergida. La rama se conserva.
+- **Núcleo implementado y cubierto por pruebas:** CRUD de entidades principales, grafo de relaciones de personajes, atlas y marcadores, búsqueda multiverso, proyectos aislados por ID, IndexedDB con respaldo local, validación/importación/exportación JSON, snapshots y papelera; además, catálogos mítico/de poderes, archivo de personajes con continuidades separadas, editor de manuscritos y Story Forge.
+- **Story Forge (alcance exacto):** genera un índice editable, no prosa completa de novela. Conserva los IDs, manuscritos y estados ya existentes al regenerar; informa de errores de generación/guardado y detecta cantidad, títulos, resúmenes, campos narrativos esenciales e IDs duplicados. Los tests cubren 1, 10, 30, 100 y 500 capítulos y modos de final.
+- **DanMachi, estructura vigente en `lore/danmachi/catalog.json`:** 48 registros activos, 67 IDs reservados y 100 documentos de apoyo. Estados de los 48 registros: 13 `draft`, 6 `pending_verification`, 21 `provisional`, 4 `proposed_author_event`, 1 `provisional_inference`, 1 `provisional_reference_checked` y 2 `source_checked_partial`. No hay registros con estado de verificación completa; validar IDs y enlaces no significa que el canon esté verificado.
+- **Gates de producto pendientes:** recorrido integrado Ryu → relaciones → Familia → miembros → Astrea → acontecimiento → fuentes → volver atrás/inicio; completar cotejo con fuentes primarias de registros provisionales; presencia histórica plenamente configurable por capítulo/evento; verificar efectos causales entre escenas; prueba en que se provoque cuota real del navegador y revisión manual visual en Windows 11. Una simulación de error no debe rotularse como prueba de cuota real.
+- **Estado del porcentaje:** no se afirma un avance global actual del 90% ni se reutiliza el antiguo 19%. La visión completa reúne objetivos que continúan parciales y el repositorio no tenía un denominador único que justificara una cifra exacta. El [cuadro de auditoría de finalización](COMPLETION_AUDIT.md) explicita evidencia, bloqueos y gates medibles; solo los criterios demostrados pueden marcarse como completos.
+
+## Snapshot histórico de la auditoría previa
 ## Snapshot histórico de la auditoría previa
 Los registros por debajo del separador incluyen historiales y resultados antiguos de otras iteraciones; no deben prevalecer sobre el estado operativo actual de esta sección.
 
@@ -23,7 +28,7 @@ Los registros por debajo del separador incluyen historiales y resultados antiguo
 ## Resumen
 - Producto: WordWaifu · World & Story Foundry.
 - Objetivo: aplicación local/offline-first para organizar universos, canon, atlas temporal, personajes, relaciones, acontecimientos, organizaciones e historias/novelas.
-- **Avance global estimado: 19%** de la visión completa; estimación de alcance, no métrica de líneas de código ni de cobertura.
+- **Estimación histórica (snapshot antiguo): 19%**. No corresponde al HEAD actual ni se usa como medida de progreso vigente; véase la sección operativa superior.
 - Tecnología: HTML/CSS/JavaScript, SVG, IndexedDB y respaldo de compatibilidad en localStorage.
 - WordWaifu gestiona canon y planificación narrativa; BotImagen gestiona recursos visuales. Atlas, lore, expedientes, arte, papelera, Story Foundry, catálogo de poderes y catálogo mitológico quedaron reconciliados en `main` mediante PR #18. La cobertura factual y algunos gates manuales siguen parciales.
 

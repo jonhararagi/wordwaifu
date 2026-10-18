@@ -1,18 +1,18 @@
-# DanMachi Lore PoC
+# DanMachi Lore — corpus de investigación para WordWaifu
 
-## Propósito
+## Estado operativo — 2026-10-18
 
-Base estructurada para organizar la historia de DanMachi desde las eras antiguas hasta el último volumen principal que pueda verificarse, separando canon, fuentes secundarias, interpretaciones y decisiones del autor para una AU.
+El corpus y su interfaz ya están integrados en `main`. Esta carpeta no es una rama aislada ni una afirmación de canon completo: es un corpus de investigación enlazado, con resúmenes, fuentes y continuidades etiquetadas.
 
-## Estado real
-
-- Estructura cronológica, plantillas e índices creados en la rama feature/danmachi-lore-poc.
-- Primera tanda de fichas redactada desde conocimiento general y pendiente de cotejo con las fuentes primarias.
-- Ningún localizador de novela se da por cotejado en esta tanda.
-- Los índices originales del propietario aún no se han importado: la base se está iniciando desde cero.
-- No se modificó el código de WordWaifu.
-- No hay una función de revisión automática integrada.
-- El banco de pruebas está diseñado, pero todavía no se ha ejecutado.
+- Catálogo actual: `catalog.json` esquema v2, **48 registros activos**, **67 IDs reservados** y **100 documentos de apoyo**.
+- Los 48 registros no están todos verificados: 13 `draft`, 6 `pending_verification`, 21 `provisional`, 4 `proposed_author_event`, 1 `provisional_inference`, 1 `provisional_reference_checked` y 2 `source_checked_partial`. La validación no promueve automáticamente un registro a canon confirmado.
+- El validador `tools/check-catalog.mjs` comprueba JSON, unicidad de IDs/rutas, IDs de frontmatter, existencia de los documentos y enlaces Markdown locales. **No comprueba la verdad factual ni sustituye el cotejo de capítulos/páginas de fuentes primarias.**
+- El archivo de personajes está conectado a `src/character-archive.js` y `src/character-dossiers.js`; las búsquedas y recuperación usan `src/lore-corpus.js`. El test de navegador y el workflow **DanMachi Lore and Retrieval Integrity** cubren parte de esa integración.
+- Se separan expresamente `CONT-MAIN-LN`, `CONT-AR`, `CONT-ANIME`, `CONT-AU` y `CROSS-CONTINUITY`. No se usa un hecho de adaptación o AU para rellenar silenciosamente la cronología de la novela principal.
+- Última prueba estructural de CI de esta serie: [DanMachi Lore and Retrieval Integrity #39105185544](https://github.com/jonhararagi/wordwaifu/actions/runs/39105185544), success en SHA `095bc68a61e67e7813b307e0ec025309fc8d889f`. El código de archivo/búsqueda también pasó con [run #39105158803](https://github.com/jonhararagi/wordwaifu/actions/runs/39105158803) en SHA `7860b5151999c92d7cd0233af68eaa26b40dba5d`.
+- Deuda factual: todos los registros necesitan cumplir su estándar de evidencia; aún hay relaciones/biografías apoyadas por pistas secundarias, datos por comprobar en fuentes primarias y fichas individuales incompletas. Una ficha enlazable no equivale a una biografía completa.
+- Deuda de navegación: ampliar y verificar el recorrido completo Ryu → relación → miembro → Familia → Astrea → acontecimiento → fuente, con atrás/inicio y sin perder época/continuidad; no marcar el gate como aprobado antes de una prueba real de navegador.
+- Mantener marcada como pendiente la referencia a la petición de Ryu para que Astrea abandone Orario hasta encontrar un localizador primario suficiente; la fuente comunitaria es un lead de investigación, no prueba final.
 
 ## Punto de entrada
 

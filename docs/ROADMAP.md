@@ -1,5 +1,30 @@
 # Hoja de ruta
 
+## Snapshot operativo — 2026-10-18
+
+La lista detallada posterior conserva los criterios históricos. Este bloque aclara el estado observado en `main`; no implica que las fases pendientes se hayan terminado.
+
+| Fase | Estado real | Evidencia o bloqueo actual |
+|---|---|---|
+| 0 · Dirección y contrato | **COMPLETA** | Visión maestra, contrato offline-first, modelo canónico y criterios documentados. |
+| 1 · MVP visual ejecutable | **IMPLEMENTADA; revisión manual parcial** | Atlas, mapa, marcadores, paneles, búsqueda y demo original se ejercitan por Playwright/Chromium CI. No equivale a revisión visual manual en Windows. |
+| 2 · Canon local y persistencia | **Implementada; límite de cuota real pendiente** | CRUD de entidades y relaciones, repositorio IndexedDB/localStorage, snapshots, papelera, recuperación, importación/exportación y pruebas de regresión pasan en CI. La cuota real del navegador no se ha agotado en una prueba verificada. |
+| 3 · Atlas temporal | **PARCIAL** | Existen marcadores, filtros, selector y datos temporales de demo; falta modelar libremente épocas/presencias y demostrar recorridos históricos completos sin duplicar entidades. |
+| 4 · Generadores sin IA | **PARCIAL** | Existen generadores locales de poderes y propuestas narrativas. Faltan catálogos/plantillas más amplios, semilla reproducible general y cobertura de compatibilidad en todas las familias de entidades. |
+| 5 · Historia y novela | **PARCIAL, mejorada** | Story Forge genera índices de 1–500 capítulos con progresión y finales; el editor mantiene manuscritos e importa/exporta Markdown. No escribe por sí solo el manuscrito completo ni convierte todas las escenas en aristas causales normalizadas. |
+| 6 · Continuity Guard | **PARCIAL** | Hay validación estructural, filtros de continuidad y separación por medio/etapa. Falta un motor general que evalúe contradicciones temporales y causales entre eventos, escenas, personajes y poderes sin inventar datos. |
+| 7 · Extensiones | **FUTURA/OPCIONAL** | La migración completa a TypeScript/React/Vite, escritorio/Tauri y mejoras visuales no son gates ya cerrados del prototipo actual. |
+
+### Evidencia de CI reciente
+
+- [Validate WordWaifu #39105188710 — success, SHA `fb8f4e80...`](https://github.com/jonhararagi/wordwaifu/actions/runs/39105188710).
+- [Validate WordWaifu #39105158830 — success, SHA `7860b515...`](https://github.com/jonhararagi/wordwaifu/actions/runs/39105158830).
+- [DanMachi Lore and Retrieval Integrity #39105158803 — success, SHA `7860b515...`](https://github.com/jonhararagi/wordwaifu/actions/runs/39105158803).
+- [DanMachi Lore and Retrieval Integrity #39105185544 — success, SHA `095bc68a...`](https://github.com/jonhararagi/wordwaifu/actions/runs/39105185544).
+
+Los resultados de CI prueban las rutas de test ejecutadas, no la cobertura factual completa de DanMachi, ni una comprobación visual humana, ni el agotamiento de almacenamiento real.
+
+
 Estimaciones iniciales orientativas para un desarrollador con asistencia de herramientas; deben recalcularse después de inspeccionar cada entrega. No son promesas de fecha.
 
 ## Fase 0 — Dirección y contrato del producto
