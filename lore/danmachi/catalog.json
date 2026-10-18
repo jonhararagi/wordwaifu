@@ -1789,12 +1789,12 @@
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "d194731144ac2864e90924540c80247044793214",
+    "sourceCommit": "51d765714f2b01d24cb0a854117f866162f5c454",
     "trackedLoreFiles": 178,
     "records": 65,
     "reservedIds": 55,
     "supportingDocuments": 104,
-    "syncNote": "Inventario reconciliado en main el 2026-10-18 tras enlazar la historia del volumen 21 con evidencia por capas. Los hitos derivados de sinopsis editorial conservan provisional_summary; los claims cotejados en fragmentos conservan source_checked_excerpt_only. Esto no representa lectura completa del volumen ni cierre de todos los acontecimientos."
+    "syncNote": "Inventario reconciliado el 2026-10-18 tras añadir aristas secundarias explícitas para la co-pertenencia histórica de Ryu, Kaguya y Lyra según el roster comunitario de Astrea Familia. Estas aristas quedan secondary_checked y no afirman vínculos personales; la fuente primaria sigue pendiente."
   },
   "relationships": [
     {
@@ -2692,6 +2692,34 @@
       "claimRef": "DMR-008-CLM-026",
       "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
       "note": "Limitado al texto de muestra del prólogo. No se infiere su ubicación temporal respecto de las demás escenas ni la interpretación completa."
+    },
+    {
+      "id": "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY",
+      "from": "CHAR-RYUU-LION",
+      "to": "CHAR-KAGUYA",
+      "kind": "historical_co_member_roster",
+      "label": "El roster secundario enumera a Ryu y Kaguya entre las integrantes históricas de Astrea Familia; no demuestra una relación personal concreta",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record · Era Oscura de Orario; fecha interna exacta no establecida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_roster",
+      "claimRef": "DMR-007-CLM-005",
+      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+      "note": "Fuente comunitaria usada como pista de pertenencia conjunta. No se infiere amistad, rivalidad, conversación ni intimidad más allá del roster."
+    },
+    {
+      "id": "REL-RYU-LYRA-AR-ROSTER-SECONDARY",
+      "from": "CHAR-RYUU-LION",
+      "to": "CHAR-LYRA",
+      "kind": "historical_co_member_roster",
+      "label": "El roster secundario enumera a Ryu y Lyra entre las integrantes históricas de Astrea Familia; no demuestra una relación personal concreta",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record · Era Oscura de Orario; fecha interna exacta no establecida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_roster",
+      "claimRef": "DMR-007-CLM-005",
+      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+      "note": "Fuente comunitaria usada como pista de pertenencia conjunta. No se infiere amistad, rivalidad, conversación ni intimidad más allá del roster."
     }
   ]
 }
