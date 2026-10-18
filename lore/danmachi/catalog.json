@@ -258,7 +258,7 @@
         "Hestia",
         "Familia"
       ],
-      "status": "pending_verification",
+      "status": "source_checked_partial",
       "priority": "high"
     },
     {
@@ -1721,16 +1721,22 @@
       "path": "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
       "type": "story_event_research",
       "status": "present_source_checked_adaptation"
+    },
+    {
+      "document_id": "RESEARCH-DM-015",
+      "path": "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
+      "type": "story_event_research",
+      "status": "present_source_checked_partial"
     }
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "4c52c0c3569f7b9d87656c84a542c6f29effe21b",
-    "trackedLoreFiles": 169,
+    "sourceCommit": "537ba0b02f65695e9200b5b86606288624564fac",
+    "trackedLoreFiles": 171,
     "records": 61,
     "reservedIds": 57,
-    "supportingDocuments": 102,
-    "syncNote": "Inventario reconciliado en main el 2026-10-18 tras añadir dos eventos documentados de la adaptación: el recorrido de Ryu en DanMachi V y la apertura de Bell en el episodio 1. El catálogo distingue ambos del texto de novela ligera; quedan pendientes los localizadores primarios de novela, el orden detallado de escenas y otras historias. Conteo estructural, no certificación de canon completo."
+    "supportingDocuments": 103,
+    "syncNote": "Inventario reconciliado en main el 2026-10-18 con dos recorridos de adaptación y el núcleo del encuentro Bell-Hestia verificado por la sinopsis editorial del volumen 1. El evento de novela queda source_checked_partial: detalles internos y cronología exacta requieren localizador de capítulo/página. Inventario estructural, no certificación de canon completo."
   },
   "relationships": [
     {
@@ -2488,6 +2494,20 @@
       "claimRef": "DMR-014-CLM-002",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
       "note": "La sinopsis consultada no nombra a la espadachina en el texto citado. No inferir aquí su identidad, la secuencia completa ni correspondencia detallada con la novela."
+    },
+    {
+      "id": "REL-BELL-MEETS-HESTIA-NOVEL-SYNOPSIS",
+      "from": "DM-CHAR-BELL",
+      "to": "DM-CHAR-HESTIA",
+      "kind": "meets_and_accepts_familia_invitation",
+      "label": "La sinopsis editorial del volumen 1 confirma que Bell conoce a Hestia y acepta la invitación a entrar en su Familia",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Comienzo de la historia principal; la sinopsis no fija una fecha ni el orden detallado de escena",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-015-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
+      "note": "El vínculo confirma el núcleo del encuentro según la sinopsis editorial, no cada detalle de la escena, la fecha de Falna o el descenso de Hestia."
     }
   ]
 }
