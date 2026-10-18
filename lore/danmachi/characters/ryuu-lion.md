@@ -7,11 +7,15 @@ continuity_scope: CONT-AR; CONT-ANIME
 source_refs:
   - DMR-001-SRC-003
   - DMR-001-SRC-006
+  - DMR-013-SRC-001
+  - DMR-013-SRC-002
 claim_refs:
   - DMR-001-CLM-005
   - DMR-001-CLM-010
   - DMR-002-CLM-015
   - DMR-002-CLM-016
+  - DMR-013-CLM-001
+  - DMR-013-CLM-002
 verification_status: source_checked_for_official_web_pages
 tags: [Ryu Lion, Ryuu Lion, Astrea Familia, multi-era]
 research_source_refs:
@@ -45,6 +49,17 @@ research_source_refs:
 - **Evidencia:** la página oficial de personajes de *DanMachi IV* relaciona a Ryu con Astrea Familia y Hostess of Fertility, y la presenta en ese contexto posterior como antigua aventurera y trabajadora del establecimiento.
 - **Afirmación y fuente:** DMR-001-CLM-010; DMR-001-SRC-006.
 - **Límites:** esto permite organizar ambos estados bajo una identidad probablemente común, pero la síntesis entre fuentes sigue siendo provisional. No trasladar silenciosamente expresiones biográficas exclusivas del anime a la continuidad de la novela principal.
+
+## Estado temporal C · DanMachi V
+
+- **Continuidad:** CONT-ANIME; actualización de la adaptación, no del texto de novela principal.
+- **Periodo relativo:** después del regreso desde las profundidades junto a Bell y antes de su participación tardía en la guerra de Familias.
+- **Regreso con Bell:** el perfil oficial de DanMachi V registra que ambos regresan a la superficie tras el peligro de las profundidades. Referencia: DMR-013-CLM-001.
+- **Visita a Astrea:** Ryu va a ver a Astrea fuera de Orario porque busca cómo ayudar a Bell. No fusionar esta arista con la visita registrada para la novela/Familia Chronicle. Referencia: DMR-013-CLM-002.
+- **Nivel y magia:** una noticia oficial de la adaptación la muestra en nivel 6, destaca dos ascensos de nivel y nombra la magia Astrea Record. No se documentan aquí sus reglas internas, coste o limitaciones. Referencias: DMR-013-SRC-002 y DMR-013-CLM-002.
+- **Participación posterior:** se incorpora tarde a la guerra de Familias; véase [evento de Ryu en DanMachi V](../events/candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md).
+- **Fuentes:** DMR-013-SRC-001, DMR-013-SRC-002.
+- **Límite:** esta sección describe la continuidad del anime. No promueve afirmaciones de CONT-MAIN-LN a fuente primaria de novela, ni convierte la conciencia emocional de Ryu en reciprocidad romántica.
 
 ## Gestión de continuidades
 
