@@ -159,7 +159,7 @@ for (const relation of catalog.relationships) {
     if (typeof endpoint === "string" && !liveRecordIds.has(endpoint)) errors.push("Relationship " + id + " points to unknown live record: " + endpoint);
   }
   if (relation.from === relation.to) errors.push("Relationship " + id + " has the same source and target");
-  if (typeof relation.continuity === "string" && !/^CONT-[A-Z0-9-]+$/.test(relation.continuity)) errors.push("Relationship " + id + " has an invalid continuity key: " + relation.continuity);
+  if (typeof relation.continuity === "string" && !/^(?:CONT-[A-Z0-9-]+|CROSS-CONTINUITY)$/.test(relation.continuity)) errors.push("Relationship " + id + " has an invalid continuity key: " + relation.continuity);
   if (relation.evidenceStatus && !validEvidenceStatuses.has(relation.evidenceStatus)) errors.push("Relationship " + id + " has an unsupported evidenceStatus: " + relation.evidenceStatus);
   // A secondary/community lead cannot be considered primary-source checked merely because its file exists.
   if (relation.evidenceStatus === "source_checked" && /(?:secondary|community|unverified|lead)/i.test(String(relation.evidenceType || ""))) {
