@@ -1094,7 +1094,7 @@
         existingLocationIds.add(location.id);
       });
     }
-    $(".map-marker").forEach((marker) => {
+    $$(".map-marker").forEach((marker) => {
       const locationId = marker.dataset.location;
       const location = locationsById.get(locationId) || null;
       if (location && !marker.classList.contains("event-marker")) {
