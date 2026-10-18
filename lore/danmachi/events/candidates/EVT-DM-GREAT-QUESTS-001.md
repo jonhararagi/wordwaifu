@@ -33,6 +33,9 @@ La prueba oficial de conocimiento de DanMachi identifica conjuntamente a Zeus Fa
 
 ## Relaciones
 
+- [Zeus Familia](../../familias/zeus-familia.md): referencia oficial que incluye a esta Familia en el resultado conjunto (REL-ZEUS-FAM-GREAT-QUESTS).
+- [Hera Familia](../../familias/hera-familia.md): referencia oficial que incluye a esta Familia en el resultado conjunto (REL-HERA-FAM-GREAT-QUESTS).
+- `CROSS-CONTINUITY`: la fuente es una referencia oficial de conocimiento de franquicia, no un pasaje directo de novela.
 - `EVT-DM-ZH-OEBD-001`: candidato separado para la expedición contra el Dragón Negro.
 - `EVT-DM-ZH-FALL-001`: candidato separado para la pérdida de posición de las Familias.
 - `DMR-008-CLM-027`: afirmación recuperable que sostiene el resultado conocido.
