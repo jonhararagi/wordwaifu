@@ -21,7 +21,17 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
-const index = corpus.buildIndex(catalog, documents);
+const profilePaths = [
+  "characters/soma.md",
+  "characters/zanis-lustra.md",
+  "characters/chandra-ihit.md",
+  "characters/canoe-belway.md"
+];
+const profileDocuments = profilePaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
+const index = corpus.buildIndex(catalog, documents, profileDocuments);
+for (const id of ["CHAR-SOMA", "CHAR-ZANIS-LUSTRA", "CHAR-CHANDRA-IHIT", "CHAR-CANOE-BELWAY"]) {
+  assert.equal(index.profileDetails[id]?.id, id, "Active Soma coverage profile must be available to the detail view: " + id);
+}
 const familyEntities = corpus.searchEntities(catalog, { type: "familia" });
 assert.ok(Array.isArray(index.entityRecords), "Loaded lore index must expose typed catalog entities for the UI.");
 assert.ok(Array.isArray(index.relationships), "Loaded lore index must expose source-backed relationship edges.");
