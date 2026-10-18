@@ -501,3 +501,50 @@ verification_status: stub
 - rights_note: Resumir los hechos en palabras propias; no copiar la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-021
 - verification_status: source_checked_for_publisher_synopsis_only
+
+
+---
+
+## DMR-013-SRC-001 · Perfil oficial de personajes de DanMachi V
+
+- source_id: DMR-013-SRC-001
+- title: ダンまちⅤ キャラクター
+- creator_or_publisher: Portal oficial de la serie de anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi V
+- volume_or_edition: Página oficial de perfiles, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi5/character/
+- accessed_at: 2026-10-18
+- locator_type: character_profile
+- locator: Entrada リュー・リオン; párrafo biográfico bajo 豊穣の女主人
+- claims_supported: [DMR-013-CLM-001, DMR-013-CLM-002]
+- events_supported: [EVT-DM-RYUU-ASTREA-RETURN-ANIME-001]
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación. Describe el regreso de Ryu a la superficie junto a Bell, su visita a Astrea fuera de Orario, su nivel 6 y su incorporación tardía al conflicto. No constituye un localizador de la novela ligera.
+- conflicting_sources: []
+- rights_note: Parafrasear; no copiar el perfil completo.
+- verified_by: DANMACHI-RESEARCH-013
+- verification_status: source_checked
+
+## DMR-013-SRC-002 · Anuncio oficial del nuevo arte de Ryu de nivel 6
+
+- source_id: DMR-013-SRC-002
+- title: Lv.6に昇格（ランクアップ）したリュー・リオンの新キャラクタービジュアル解禁
+- creator_or_publisher: Portal oficial de la serie de anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi V
+- volume_or_edition: Noticia web publicada el 2025-02-10
+- language: Japonés
+- official_url: https://danmachi.com/news/news255.php
+- accessed_at: 2026-10-18
+- locator_type: official_news
+- locator: Párrafo promocional y ficha de Ryu Lion: nivel 6, dos ascensos de nivel, magia Astrea Record y participación en la guerra de Familias
+- claims_supported: [DMR-013-CLM-002]
+- events_supported: [EVT-DM-RYUU-ASTREA-RETURN-ANIME-001]
+- continuity_scope: CONT-ANIME
+- reliability_note: Confirmación oficial de información promocional de la adaptación; no es un localizador narrativo de la novela principal.
+- conflicting_sources: []
+- rights_note: Registrar datos breves y paráfrasis propia.
+- verified_by: DANMACHI-RESEARCH-013
+- verification_status: source_checked
