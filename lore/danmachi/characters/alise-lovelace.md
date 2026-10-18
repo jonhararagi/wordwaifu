@@ -40,3 +40,11 @@ La sinopsis consultada no establece la edad, el nivel, las habilidades, la histo
 - **Temperamento y valores:** la sinopsis de *Astrea Record* la identifica como capitana que guía a Ryu durante su búsqueda de justicia. El perfil de adaptación la describe como franca y de ánimo luminoso. Mantener ambos datos ligados a sus fuentes y continuidades, no como rasgos atemporales. [DMR-002-CLM-019]
 - **Liderazgo y vínculos:** el perfil de adaptación indica que inspira confianza en sus compañeras pese a un estilo poco convencional. Esto ayuda a describir la dinámica del grupo, pero no demuestra que todas sus decisiones sean acertadas. [DMR-002-CLM-020]
 - **Desconocido:** no inferir edad, gustos, miedos ni destino posterior por ausencia de información.
+
+
+## Ruta histórica documentada · CONT-AR
+
+- **Evento:** [Astrea Record: justicia, guía y escalada del conflicto](../events/candidates/EVT-DM-ASTREA-RECORD-FOUNDATIONS-001.md).
+- La sinopsis oficial de GA Bunko identifica a Alise como capitana de Astrea Familia y guía de Ryu en el periodo histórico. Claim DMR-012-CLM-003.
+- La referencia temporal de la serie es aproximadamente siete años antes de la llegada de Bell a Orario; no fija edad, nivel ni fecha absoluta.
+- **Límite:** el rol general está respaldado por sinopsis. Las decisiones de liderazgo y las escenas concretas se completan solo con localizadores internos.
