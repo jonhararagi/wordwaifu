@@ -108,3 +108,12 @@ La ausencia de esos datos no autoriza a inventarlos. Esta ficha mejora el uso na
 Estas relaciones y descripciones se limitan al perfil oficial de la adaptación Sword Oratoria (CONT-SO). No describen toda la cronología ni sustituyen localizadores de novela.
 
 - [Raul Nord](../characters/raul-noord.md) · apoyo operativo y coordinación de aventureros jóvenes.
+
+
+## Expedición y rescate del volumen 21 · CONT-MAIN-LN
+
+El resumen editorial del volumen 21 presenta una expedición de Loki Familia que fracasa y deja a Ais y otros integrantes atrapados en el piso 60. El expediente [EVT-DM-V21-EXPEDITION-RESCUE-001](../events/candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md) enlaza esta afirmación a la sinopsis oficial y por separado a los fragmentos visibles del capítulo inicial y el prólogo.
+
+- **Claim de sinopsis:** DMR-008-CLM-022, estado `provisional_summary`.
+- **Relación explícita:** `REL-LOKI-V21-EXPEDITION-FAILURE`.
+- **Límite:** no se presume la lista completa de atrapados, el rescate final, el estado de cada miembro ni la secuencia de capítulos. Los datos de esta historia pertenecen a CONT-MAIN-LN y no se sustituyen por la adaptación del anime o Sword Oratoria.
