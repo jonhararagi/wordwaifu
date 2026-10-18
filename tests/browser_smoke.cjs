@@ -409,7 +409,7 @@ async function run() {
     await page.locator("#danmachi-entity-query").fill("DM-FAM-LOKI");
     await page.waitForFunction(() => !!document.querySelector('#danmachi-entity-results [data-dossier-open="DM-FAM-LOKI"]'), null, { timeout: 5000 });
     await page.locator('#danmachi-entity-results [data-dossier-open="DM-FAM-LOKI"]').click();
-    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.textContent.includes("Loki Familia"), null, { timeout: 10000 });
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.textContent.includes("Familia Loki"), null, { timeout: 10000 });
     await page.waitForFunction(() => !!document.querySelector('#danmachi-dossier-related .danmachi-dossier-explicit-relationship [data-dossier-open="CHAR-RIVERIA-LJOS-ALF"]'), null, { timeout: 5000 });
     const lokiEdges = await page.locator("#danmachi-dossier-related").innerText();
     assert.match(lokiEdges, /Relaciones documentadas/);
