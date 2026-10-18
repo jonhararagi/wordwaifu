@@ -255,3 +255,12 @@ En [Validate WordWaifu #39108041754](https://github.com/jonhararagi/wordwaifu/ac
 - [GitHub Changelog · 27 de agosto de 2026: retención de ejecuciones y estados de Actions](https://github.blog/changelog/2026-08-27-actions-retention-will-cover-checks-workflow-runs-and-statuses/). Desde el 1 de octubre, las comprobaciones, ejecuciones y estados quedan sujetos a la política de retención de Actions; para repositorios públicos se indica un máximo de 90 días. Aplicación: conservar en los documentos del proyecto el SHA, el enlace del run y la interpretación de las métricas, porque un log remoto puede caducar.
 - [GitHub Changelog · 23 de septiembre de 2026: retirada de Node 20 de Actions](https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/). Aplicación: mantener las acciones fijadas a revisiones compatibles con el runtime vigente y ejecutar validaciones de sintaxis en los workflows, en vez de confiar en etiquetas móviles sin auditoría.
 - Estas publicaciones son evidencia de límites operativos de las herramientas, no fuentes de canon. La política factual del corpus continúa dependiendo de fuentes DanMachi y de sus localizadores.
+
+
+## 2026-10-18 · Cobertura factual de Hestia Familia
+
+- Activados cuatro expedientes que estaban reservados como candidatos pero ya tenían afirmaciones de adaptación verificadas en el lote `BATCH-DM-006`: Liliruca Arde (Lili), Welf Crozzo, Mikoto Yamato y Haruhime Sanjouno.
+- Se movieron sus IDs de `reservedIds` al catálogo activo sin cambiar los identificadores que ya usan los claims. Cada ficha identifica alcance `CONT-ANIME`, las afirmaciones que la respaldan y los datos pendientes de cotejo por volumen/página.
+- Se añadieron 13 aristas explícitas sobre afiliación a Hestia Familia, la deidad principal, Bell–Ais y relaciones documentadas de Lili, Welf, Mikoto y Haruhime. El visor no deduce estas relaciones por etiquetas: abre la afirmación que las respalda. Afirmaciones no cubiertas por la fuente se dejan sin crear.
+- La prueba de corpus confirma que las cuatro fichas pasan a ser entidades activas con ruta y que los bordes tienen IDs estables. La prueba de navegador abre la ficha de Lili y valida su evidencia y sus enlaces relacionados.
+- Base factual consultada para estas fichas: perfil oficial de DanMachi V, https://danmachi.com/danmachi5/character/, resumido en claims `DMR-006-CLM-010`–`DMR-006-CLM-021`. Estado `source_checked` se refiere a la afirmación visible en esa adaptación; la continuidad de novela no se considera cerrada sin localizadores primarios.

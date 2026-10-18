@@ -84,3 +84,7 @@ Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs
 - Se añadió [`docs/WF-004-C3-QUOTA-WINDOWS-TEST-PLAN.md`](WF-004-C3-QUOTA-WINDOWS-TEST-PLAN.md) para definir evidencia `PASS_SIMULATED` frente a `PASS_REAL`, criterios seguros para investigar cuota real y una lista reproducible de revisión manual en Windows 11.
 - Esta adición es documentación, no una ejecución de pruebas: no acredita cuota real ni inspección Windows.
 - **WF-004-C.3 continúa PARTIAL.** Siguientes pasos: implementar/verificar la regresión automatizada de fallo simulado si aún falta; ejecutar CI; realizar cuota real solo en entorno aislado seguro si es viable; mantener Windows 11 como `NOT_RUN` hasta contar con ejecución real.
+
+### Actualización incremental · 2026-10-18
+
+En `main` se activaron cuatro expedientes secundarios de Hestia Familia que estaban reservados como candidatos: Liliruca Arde, Welf Crozzo, Mikoto Yamato y Haruhime Sanjouno. El catálogo ahora enlaza sus relaciones explícitas a claims del perfil oficial de DanMachi V con continuidad `CONT-ANIME`; esto mejora las fichas y la navegación, pero no implica que sus biografías de novela estén completamente cotejadas. Se mantiene la distinción entre perfil oficial de adaptación y canon de novela con localizador primario.

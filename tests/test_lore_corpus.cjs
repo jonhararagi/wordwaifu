@@ -24,6 +24,15 @@ assert.ok(index.relationships.length >= 18, "The Astrea graph must include expli
 assert.equal(new Set(index.relationships.map(edge => edge.id)).size, index.relationships.length, "Relationship IDs must be unique.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-007-CLM-002"), "Ryu–Kaguya friction and respect must be an explicit, continuity-scoped edge.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-ASTREA-DEPARTURE-SECONDARY" && edge.evidenceStatus === "secondary_checked"), "The disputed departure motive must stay explicitly secondary, not be promoted to canon.");
+assert.equal(new Set(index.relationships.map(edge => edge.id)).size, index.relationships.length);
+for (const id of ["CHAR-LILIRUCA-ARDE","CHAR-WELF-CROZZO","CHAR-MIKOTO-YAMATO","CHAR-SANJOUNO-HARUHIME"]) {
+  const entity = index.entityRecords.find(record => record.id === id);
+  assert.ok(entity && entity.path.startsWith("characters/"), "Hestia Familia supporting character must have a navigable dossier: " + id);
+  assert.ok(!catalog.reservedIds.some(candidate => candidate.id === id), "Activated character ID must no longer remain reserved: " + id);
+}
+for (const id of ["REL-LILI-MEMBER-HESTIA","REL-WELF-MEMBER-HESTIA","REL-MIKOTO-MEMBER-HESTIA","REL-HARUHIME-MEMBER-HESTIA","REL-HARUHIME-ADMIRES-BELL"]) {
+  assert.ok(index.relationships.some(edge => edge.id === id && edge.evidenceStatus === "source_checked"), "Officially sourced supporting-character edge must be available: " + id);
+}
 assert.ok(index.entityRecords.some(entity => entity.id === "DM-FAM-HESTIA"));
 assert.ok(familyEntities.totalMatches >= 3, "Typed entity search must expose the Familia catalog records.");
 assert.ok(familyEntities.results.every(entity => entity.type === "familia"), "Familia filter must not leak characters or events.");

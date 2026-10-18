@@ -624,6 +624,62 @@
       ],
       "status": "source_checked_partial",
       "priority": "critical"
+    },
+    {
+      "id": "CHAR-LILIRUCA-ARDE",
+      "path": "characters/liliruca-arde.md",
+      "type": "character",
+      "tags": [
+        "Liliruca Arde",
+        "Lili",
+        "Hestia Familia",
+        "Bell",
+        "tactical support"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-WELF-CROZZO",
+      "path": "characters/welf-crozzo.md",
+      "type": "character",
+      "tags": [
+        "Welf Crozzo",
+        "Hestia Familia",
+        "Bell",
+        "smith",
+        "magic swords"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-MIKOTO-YAMATO",
+      "path": "characters/mikoto-yamato.md",
+      "type": "character",
+      "tags": [
+        "Mikoto Yamato",
+        "Hestia Familia",
+        "Bell",
+        "Far East",
+        "detection magic"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-SANJOUNO-HARUHIME",
+      "path": "characters/haruhime-sanjouno.md",
+      "type": "character",
+      "tags": [
+        "Haruhime Sanjouno",
+        "Hestia Familia",
+        "Bell",
+        "Far East",
+        "support magic"
+      ],
+      "status": "provisional",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -654,26 +710,6 @@
     },
     {
       "id": "CHAR-LEFIYA-VIRIDIS",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-WELF-CROZZO",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-LILIRUCA-ARDE",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-MIKOTO-YAMATO",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-SANJOUNO-HARUHIME",
       "type": "character",
       "status": "candidate_not_created"
     },
@@ -1852,6 +1888,188 @@
       "claimRef": "DMR-007-CLM-014",
       "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
       "note": "La sinopsis no enumera todos los nombres de las nuevas seguidoras; no completar su roster por inferencia."
+    },
+    {
+      "id": "REL-BELL-MEMBER-HESTIA",
+      "from": "DM-CHAR-BELL",
+      "to": "DM-FAM-HESTIA",
+      "kind": "member_of",
+      "label": "miembro de Hestia Familia",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-001",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "La afiliación describe el estado de adaptación cubierto por la ficha; no se extrapola a todas las fechas."
+    },
+    {
+      "id": "REL-HESTIA-DEITY-OF-FAMILY",
+      "from": "DM-CHAR-HESTIA",
+      "to": "DM-FAM-HESTIA",
+      "kind": "deity_of",
+      "label": "diosa principal de Hestia Familia",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-004",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "La ficha identifica a Hestia como deidad principal de esta Familia."
+    },
+    {
+      "id": "REL-HESTIA-PATRON-BELL",
+      "from": "DM-CHAR-HESTIA",
+      "to": "DM-CHAR-BELL",
+      "kind": "patron_deity_of",
+      "label": "diosa de Bell y líder de su Familia",
+      "continuity": "CONT-ANIME",
+      "interval": "Relaciones principales en el perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-003",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Vínculo tal como lo resume la adaptación oficial."
+    },
+    {
+      "id": "REL-BELL-ADMIRES-AIS",
+      "from": "DM-CHAR-BELL",
+      "to": "DM-CHAR-AIS",
+      "kind": "admires",
+      "label": "Bell admira a Ais",
+      "continuity": "CONT-ANIME",
+      "interval": "Relaciones principales en el perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-003",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "No se transforma la admiración en una relación recíproca confirmada."
+    },
+    {
+      "id": "REL-LILI-MEMBER-HESTIA",
+      "from": "CHAR-LILIRUCA-ARDE",
+      "to": "DM-FAM-HESTIA",
+      "kind": "member_of",
+      "label": "integrante de Hestia Familia",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-010",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "La ficha de adaptación confirma la afiliación y su función de apoyo táctico."
+    },
+    {
+      "id": "REL-LILI-AFFECTION-BELL",
+      "from": "CHAR-LILIRUCA-ARDE",
+      "to": "DM-CHAR-BELL",
+      "kind": "affection_for",
+      "label": "Lili siente afecto por Bell tras ser rescatada",
+      "continuity": "CONT-ANIME",
+      "interval": "Relaciones principales en el perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-012",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "El afecto no elimina el pragmatismo de Lili ni implica acuerdo constante."
+    },
+    {
+      "id": "REL-LILI-HESTIA-RIVALRY-COOP",
+      "from": "CHAR-LILIRUCA-ARDE",
+      "to": "DM-CHAR-HESTIA",
+      "kind": "rivalry_and_cooperation",
+      "label": "competencia personal que evoluciona hacia cooperación",
+      "continuity": "CONT-ANIME",
+      "interval": "Relaciones principales en el perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-012",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Se conserva la transición de rivalidad a cooperación que resume la fuente."
+    },
+    {
+      "id": "REL-WELF-MEMBER-HESTIA",
+      "from": "CHAR-WELF-CROZZO",
+      "to": "DM-FAM-HESTIA",
+      "kind": "member_of",
+      "label": "herrero e integrante de Hestia Familia",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-013",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Se registra afiliación y oficio, sin completar la cronología sin una fuente primaria."
+    },
+    {
+      "id": "REL-WELF-BROTHER-FIGURE-BELL",
+      "from": "CHAR-WELF-CROZZO",
+      "to": "DM-CHAR-BELL",
+      "kind": "brother_figure",
+      "label": "figura de hermano mayor para Bell",
+      "continuity": "CONT-ANIME",
+      "interval": "Relaciones principales en el perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-015",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Descripción del vínculo, no parentesco biológico."
+    },
+    {
+      "id": "REL-MIKOTO-MEMBER-HESTIA",
+      "from": "CHAR-MIKOTO-YAMATO",
+      "to": "DM-FAM-HESTIA",
+      "kind": "member_of",
+      "label": "integrante de Hestia Familia",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-016",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "La afiliación es la presentada por el perfil de adaptación."
+    },
+    {
+      "id": "REL-MIKOTO-COLLABORATES-BELL",
+      "from": "CHAR-MIKOTO-YAMATO",
+      "to": "DM-CHAR-BELL",
+      "kind": "works_with",
+      "label": "trabaja con Bell y el resto de Hestia Familia",
+      "continuity": "CONT-ANIME",
+      "interval": "Relaciones principales en el perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-018",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "La relación se registra como colaboración, sin inferir un vínculo exclusivo."
+    },
+    {
+      "id": "REL-HARUHIME-MEMBER-HESTIA",
+      "from": "CHAR-SANJOUNO-HARUHIME",
+      "to": "DM-FAM-HESTIA",
+      "kind": "member_of",
+      "label": "integrante de Hestia Familia",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-019",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "La afiliación corresponde al estado que describe la adaptación."
+    },
+    {
+      "id": "REL-HARUHIME-ADMIRES-BELL",
+      "from": "CHAR-SANJOUNO-HARUHIME",
+      "to": "DM-CHAR-BELL",
+      "kind": "admires",
+      "label": "admira a Bell, quien la rescató",
+      "continuity": "CONT-ANIME",
+      "interval": "Relaciones principales en el perfil oficial de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-006-CLM-021",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Se registra admiración declarada, no reciprocidad romántica."
     }
   ]
 }

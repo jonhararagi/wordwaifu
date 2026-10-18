@@ -392,6 +392,19 @@ async function run() {
     await page.locator("#danmachi-dossier-close").click();
     assert.equal(await page.locator("#danmachi-dossier-dialog").evaluate(dialog => dialog.open), false, "Closing a dossier returns to the same encyclopedia view.");
 
+    // Hestia Familia supporting characters have full, navigable dossiers and factual relation edges.
+    await page.locator("#danmachi-entity-query").fill("CHAR-LILIRUCA-ARDE");
+    await page.waitForFunction(() => !!document.querySelector('#danmachi-entity-results [data-dossier-open="CHAR-LILIRUCA-ARDE"]'), null, { timeout: 5000 });
+    await page.locator('#danmachi-entity-results [data-dossier-open="CHAR-LILIRUCA-ARDE"]').click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.textContent.includes("Liliruca Arde"), null, { timeout: 10000 });
+    const liliDossier = await page.locator("#danmachi-dossier-body").innerText();
+    assert.match(liliDossier, /Nivel 2/i);
+    assert.match(liliDossier, /DMR-006-CLM-010/);
+    const liliEdges = await page.locator("#danmachi-dossier-related").innerText();
+    assert.match(liliEdges, /Bell Cranel/);
+    assert.match(liliEdges, /Hestia Familia/);
+    await page.locator("#danmachi-dossier-close").click();
+
     // Security regression: Markdown content stays inert; unsafe protocols and out-of-corpus paths are not navigable.
     await page.route("**/lore/danmachi/familias/astrea-familia.md", route => route.fulfill({
       status: 200,
