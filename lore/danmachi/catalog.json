@@ -790,6 +790,22 @@
       ],
       "status": "provisional",
       "priority": "normal"
+    },
+    {
+      "id": "EVT-DM-RYUU-ASTREA-RETURN-ANIME-001",
+      "path": "events/candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md",
+      "type": "event",
+      "tags": [
+        "Ryu Lion",
+        "Ryuu Lion",
+        "Bell Cranel",
+        "Astrea",
+        "War Game",
+        "DanMachi V",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -1677,16 +1693,22 @@
       "path": "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
       "type": "organization_dossier_claim_index",
       "status": "present_partial_source_checked"
+    },
+    {
+      "document_id": "RESEARCH-DM-013",
+      "path": "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
+      "type": "character_relationship_research",
+      "status": "present_source_checked_adaptation"
     }
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "622369265b08712e4440087e7361f5151e9402d2",
-    "trackedLoreFiles": 165,
-    "records": 59,
+    "sourceCommit": "b6ee02d737e0af2780840cc5761eb8688ffb5451",
+    "trackedLoreFiles": 167,
+    "records": 60,
     "reservedIds": 57,
-    "supportingDocuments": 100,
-    "syncNote": "Counts reconciled against the current main catalog on 2026-10-18 after manual extensions. Current catalog contains 59 records, 57 reserved IDs, 100 supporting documents and 49 explicit relationships. This is structural inventory only: it does not certify factual completeness or primary-source verification."
+    "supportingDocuments": 101,
+    "syncNote": "Conteos reconciliados en main el 2026-10-18 tras añadir un evento de la adaptación y un expediente de investigación. La ficha del nuevo evento está respaldada por dos fuentes oficiales de anime; la continuidad de novela no se considera cerrada. El inventario es estructural, no certifica que todo el canon esté completo."
   },
   "relationships": [
     {
@@ -2374,6 +2396,48 @@
       "claimRef": "DMR-005-CLM-008",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
       "note": "El perfil oficial acredita el rol general de apoyo y mando delegado en CONT-SO. No fijar ese nivel ni función para todas las épocas ni deducir que Finn le transfiere el mando permanentemente."
+    },
+    {
+      "id": "REL-RYU-BELL-RETURN-ANIME",
+      "from": "CHAR-RYUU-LION",
+      "to": "DM-CHAR-BELL",
+      "kind": "deep_floor_returned_with",
+      "label": "Ryu y Bell regresan juntos a la superficie desde las profundidades, según el perfil oficial de DanMachi V",
+      "continuity": "CONT-ANIME",
+      "interval": "Arco de DanMachi V; antes del viaje de Ryu para ver a Astrea",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_adaptation_profile",
+      "claimRef": "DMR-013-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
+      "note": "El vínculo confirma supervivencia compartida en la adaptación. No implica por sí mismo reciprocidad romántica ni reemplaza el cotejo de la novela."
+    },
+    {
+      "id": "REL-RYU-ASTREA-VISIT-ANIME",
+      "from": "CHAR-RYUU-LION",
+      "to": "CHAR-ASTREA",
+      "kind": "visits",
+      "label": "Ryu visita a Astrea fuera de Orario para buscar cómo ayudar a Bell, según DanMachi V",
+      "continuity": "CONT-ANIME",
+      "interval": "Arco de DanMachi V; antes de la incorporación tardía de Ryu a la guerra de Familias",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_adaptation_profile",
+      "claimRef": "DMR-013-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
+      "note": "Arista distinta de la visita narrada por la sinopsis de Familia Chronicle en CONT-MAIN-LN. Mantener los alcances separados."
+    },
+    {
+      "id": "REL-RYU-WARGAME-ANIME",
+      "from": "CHAR-RYUU-LION",
+      "to": "EVT-DM-RYUU-ASTREA-RETURN-ANIME-001",
+      "kind": "participates_in",
+      "label": "Ryu se incorpora tarde a la guerra de Familias con nivel 6 y la magia Astrea Record, en la adaptación",
+      "continuity": "CONT-ANIME",
+      "interval": "Arco de DanMachi V",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_adaptation_profile_and_news",
+      "claimRef": "DMR-013-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
+      "note": "El portal y la noticia oficiales confirman la participación tardía y el perfil de nivel 6. No se infiere la estrategia ni el desenlace de cada combate."
     }
   ]
 }
