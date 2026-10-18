@@ -5,6 +5,7 @@
 - Continuidad: CONT-ANIME.
 - Fuente principal: DMR-026-SRC-001, glosario oficial de lugares en https://danmachi.com/danmachi/special/index.html.
 - Método: paráfrasis breve de entradas oficiales; no se copian descripciones completas ni se tratan como texto de novela ligera.
+- Validación: los tres claims están encabezados con nivel `###`, formato que utiliza el validador de integridad para comprobar IDs, fuentes y continuidad.
 
 ### DMR-026-CLM-001 · Orario se presenta como ciudad laberíntica relacionada con el Dungeon y la Guild
 
