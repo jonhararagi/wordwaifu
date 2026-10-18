@@ -1935,8 +1935,8 @@
       "label": "según fuente secundaria, Ryu pidió a Astrea salir de Orario",
       "continuity": "CONT-MAIN-LN",
       "interval": "Después de la tragedia de Astrea Familia; intervalo exacto aún no verificado",
-      "evidenceStatus": "secondary_checked",
-      "evidenceType": "community_secondary_summary",
+      "evidenceStatus": "pending_verification",
+      "evidenceType": "community_secondary_lead_unverified_against_primary",
       "claimRef": "DMR-010-CLM-002",
       "claimPath": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
       "note": "No tratar el motivo como canon confirmado: requiere localizador de novela y cotejo primario."
