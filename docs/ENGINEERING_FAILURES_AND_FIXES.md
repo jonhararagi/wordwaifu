@@ -6,21 +6,21 @@
 
 ## 1. Prioridad de cobertura factual DanMachi
 
-El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 55 aristas, centradas en Astrea, Hestia, una parte de Loki Familia y un recorrido reciente de Ryu en DanMachi V. El total no supone cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
+El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 64 aristas, distribuidas entre Astrea, Hestia, parte de Loki Familia, rutas de adaptación de Ryu/Bell/Eina y la historia del volumen 21. El total no equivale a cobertura completa de relaciones. El total no supone cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
 
 ### Corrección aplicada en main · 2026-10-18
 
 - El catálogo ya permite que una relación use `pending_verification` cuando la fuente primaria aún no está disponible; el validador compara el estado de la arista con el estado declarado por el claim.
 - `REL-RYU-ASTREA-DEPARTURE-SECONDARY` quedó marcada como `pending_verification`, con el tipo de evidencia `community_secondary_lead_unverified_against_primary`. La nota conserva la pista secundaria sin elevarla a canon.
-- La comprobación estática inicial encontró 49 aristas con archivos y headings de claims existentes; tras nuevas rutas, el grafo actual tiene 55 aristas y requiere la misma comprobación exhaustiva de nuevo en el HEAD de cierre. La lectura estática no sustituye la ejecución del validador ni la prueba de CI.
-- CI para el SHA de esta corrección: **NOT_CONFIRMED** desde las herramientas disponibles en esta ejecución; no declarar la suite verde hasta comprobar el run del commit exacto.
+- La comprobación estática inicial encontró 49 aristas con archivos y headings de claims existentes. La revisión de la tanda del volumen 21 comprobó 64 aristas: extremos existentes, claim/localizador presente, continuidad y estado coincidentes y ausencia de IDs o rutas duplicados. La lectura estática complementa, pero no sustituye, la ejecución del validador ni la prueba de CI.
+- Estado posterior de CI: la suite completa para el SHA funcional `19bbe40050496df71eec0a7e794ca08748a92fe7` terminó en verde en [Validate WordWaifu #39157291171](https://github.com/jonhararagi/wordwaifu/actions/runs/39157291171) y [DanMachi Lore and Retrieval Integrity #39157291147](https://github.com/jonhararagi/wordwaifu/actions/runs/39157291147). Los cambios documentales posteriores se validan de nuevo en sus propios SHA.
 
 ### Actualización incremental · 2026-10-18 · recorrido Ryu
 
 - Se añadió el evento `EVT-DM-RYUU-ASTREA-RETURN-ANIME-001`, con un expediente de investigación dedicado y dos referencias oficiales: el perfil de personajes de DanMachi V y la noticia oficial de Ryu de nivel 6.
 - Se añadieron tres aristas con claims explícitos: Ryu regresa junto a Bell desde las profundidades; Ryu visita a Astrea fuera de Orario en la adaptación; Ryu participa tarde en la guerra de Familias.
-- El catálogo quedó luego en 61 registros, 57 IDs reservados, 103 documentos de apoyo y 55 relaciones. Las tres aristas nuevas usan `CONT-ANIME`; no se trasladaron a novela los hechos promocionales de la adaptación.
-- La lectura estática encuentra ahora 50 aristas `source_checked`, una `secondary_checked` y una `pending_verification`. Esta cuenta no es evidencia de que el validador o CI hayan corrido en el HEAD más reciente.
+- En ese punto de la iteración el catálogo estaba en 61 registros, 57 IDs reservados, 103 documentos de apoyo y 55 relaciones. La cifra es histórica para la tanda Ryu; no es el inventario actual, que se registra al final de este documento.
+- La lectura estática de esa iteración encontró 50 aristas `source_checked`, una `secondary_checked` y una `pending_verification`. Esa cuenta histórica no representa el estado de las tandas posteriores.
 - El evento mantiene como pendientes el orden detallado por episodio, las consecuencias escena por escena y el cotejo separado de una edición de novela. No afirma reciprocidad romántica ni las reglas internas de Astrea Record.
 
 ### Próximos cierres que sí pueden verificarse
@@ -172,3 +172,11 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - Dos aristas de la sinopsis editorial (`DMR-008-CLM-022` y `DMR-008-CLM-024`) usan `provisional_summary`; tres aristas del texto público de la muestra (`DMR-008-CLM-025` y `DMR-008-CLM-026`) usan `source_checked_excerpt_only`. El validador acepta esos estados para que un enlace no aparente certeza superior a la claim fuente.
 - Estado actualizado: 65 registros, 55 IDs reservados, 104 documentos de apoyo y 64 relaciones. Estados de arista: 57 `source_checked`, una `secondary_checked`, una `pending_verification`, dos `provisional_summary` y tres `source_checked_excerpt_only`.
 - La historia sigue parcial: no se infiere el rescate completo, el estado individual de todos los atrapados ni la cronología del prólogo. La siguiente prueba debe confirmar recuperación, enlaces y estados en el SHA exacto.
+
+
+### Estado operativo tras el cierre de la ruta del volumen 21 · 2026-10-18
+
+- Conteo estructural de main: 65 registros activos, 55 IDs reservados, 104 documentos de apoyo y 64 relaciones explícitas.
+- Estado de las 64 relaciones: 57 `source_checked`, 1 `secondary_checked`, 1 `pending_verification`, 2 `provisional_summary` y 3 `source_checked_excerpt_only`.
+- La historia del volumen 21 enlaza los hitos respaldados por sinopsis editorial y los fragmentos de capítulo/prólogo, manteniendo cada estado de evidencia. No declara finalizada la expedición, el rescate ni la cronología exacta del prólogo.
+- En el SHA de código/pruebas `19bbe40050496df71eec0a7e794ca08748a92fe7`, ambos workflows terminaron PASS. Esta certificación no se extiende automáticamente a los commits documentales posteriores; se verifican sus propios runs antes de cerrar la tanda.
