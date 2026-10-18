@@ -7,8 +7,8 @@ Esta es una lista de investigación. El estado de una Familia puede variar por a
 | DM-FAM-HESTIA | Hestia Familia | Grupo central de la historia | Ficha inicial existente |
 | DM-FAM-LOKI | Loki Familia | Aventureros de alto nivel, expediciones, Sword Oratoria | Ficha inicial existente |
 | FAM-FREYA | Freya Familia | Facción poderosa e historia principal | Candidato pendiente |
-| FAM-ZEUS | Zeus Familia | Historia antigua y grandes expediciones | Candidato pendiente |
-| FAM-HERA | Hera Familia | Historia antigua y grandes expediciones | Candidato pendiente |
+| FAM-ZEUS | Zeus Familia | Historia antigua y grandes expediciones | Ficha parcial; resultado conjunto frente a Behemoth/Leviathan en referencia oficial; roster pendiente |
+| FAM-HERA | Hera Familia | Historia antigua y grandes expediciones | Ficha parcial; resultado conjunto frente a Behemoth/Leviathan en referencia oficial; roster pendiente |
 | FAM-ASTREA | Astrea Familia | Pasado de Ryuu y relatos relacionados | Candidato pendiente |
 | FAM-HEPHAISTOS | Hephaistos Familia | Herrería y equipo | Candidato pendiente |
 | FAM-MIACH | Miach Familia | Medicina y personajes vinculados | Candidato pendiente |
@@ -30,3 +30,7 @@ ID estable, deidad patrona, fecha de fundación si se conoce, estado por periodo
 ## Regla de actualización
 
 No sobrescribir un miembro histórico cuando cambia el roster. Registrar intervalos de pertenencia. No mezclar novela principal, spin-off, anime, manga o juego sin etiquetar la fuente. La organización y su edificio no deben compartir ficha si representan entidades distintas.
+
+## Ancla histórica oficial transversal
+
+- [Zeus Familia](zeus-familia.md) y [Hera Familia](hera-familia.md) están enlazadas al evento [EVT-DM-GREAT-QUESTS-001](../events/candidates/EVT-DM-GREAT-QUESTS-001.md) mediante la prueba oficial de conocimiento de la franquicia (DMR-011-SRC-005 / DMR-008-CLM-027). La evidencia es `CROSS-CONTINUITY`: respalda únicamente que ambas Familias derrotaron conjuntamente a Behemoth y Leviathan, sin asignar una victoria individual a una Familia concreta ni fijar cronología, roster o el resultado frente al Dragón Negro.
