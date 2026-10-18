@@ -523,10 +523,19 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_17.png"));
-    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]:visible').count() > 0);
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-RYUU-LION"]:visible').count() > 0,
+      "Alise's historically sourced guide relationship should navigate back to Ryu in CONT-AR.");
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-RYUU-LION"]:visible').first().click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]:visible').count() > 0,
+      "Ryu's documented Astrea Record relationship should expose Astrea in CONT-AR.");
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]:visible').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
     assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_16.png"));
+    await page.locator("#archive-profile-back").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
+    assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     await page.locator("#archive-profile-back").click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     await page.locator("#archive-profile-back").click();
