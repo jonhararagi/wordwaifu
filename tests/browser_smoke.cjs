@@ -572,6 +572,14 @@ async function run() {
       "Anime-continuity relationships should expose the documented Ryu–Kaguya friction/respect dynamic.");
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-LYRA"]').count() > 0,
       "Anime-continuity relationships should expose Lyra's strategic support.");
+    const ryuWarGameDossier = page.locator('#archive-profile-panel button[data-dossier-record="EVT-DM-RYUU-ASTREA-RETURN-ANIME-001"]');
+    assert.ok(await ryuWarGameDossier.count() > 0, "Ryu's catalog relationship should open its event dossier.");
+    await ryuWarGameDossier.click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Ryu vuelve con Bell"));
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.innerText.includes("Regreso desde las profundidades"));
+    assert.ok((await page.locator("#danmachi-dossier-meta").innerText()).includes("EVT-DM-RYUU-ASTREA-RETURN-ANIME-001"));
+    await page.locator("#danmachi-dossier-close").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion", "Closing the linked event dossier should return to the character profile.");
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').count() > 0,
       "Ryu's network should open a named member of the historic Astrea Familia roster.");
     await page.locator('#archive-profile-panel [data-character-link="CHAR-ISKA-BRA"]').first().click();
