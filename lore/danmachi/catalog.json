@@ -259,7 +259,8 @@
         "Familia"
       ],
       "status": "source_checked_partial",
-      "priority": "high"
+      "priority": "high",
+      "name": "Primer encuentro de Bell y Hestia (sinopsis editorial)"
     },
     {
       "id": "EVT-DM-EINA-ADVISOR-001",
@@ -620,7 +621,8 @@
         "Three Great Quests"
       ],
       "status": "provisional_reference_checked",
-      "priority": "high"
+      "priority": "high",
+      "name": "Zeus/Hera: derrotas conjuntas de Behemoth y Leviathan"
     },
     {
       "id": "LOC-DUNGEON",
@@ -805,7 +807,8 @@
         "CONT-ANIME"
       ],
       "status": "source_checked_partial",
-      "priority": "high"
+      "priority": "high",
+      "name": "Ryu vuelve con Bell, visita a Astrea y participa en la guerra de Familias (anime)"
     },
     {
       "id": "EVT-DM-BELL-OPENING-CRISIS-ANIME-001",
@@ -821,7 +824,8 @@
         "CONT-ANIME"
       ],
       "status": "source_checked_partial",
-      "priority": "critical"
+      "priority": "critical",
+      "name": "Apertura de Bell: crisis del quinto piso (anime)"
     },
     {
       "id": "EVT-DM-EINA-ADVISOR-ANIME-001",
@@ -838,7 +842,8 @@
         "CONT-ANIME"
       ],
       "status": "source_checked_partial",
-      "priority": "high"
+      "priority": "high",
+      "name": "Eina asesora a Bell desde la Guild (anime)"
     },
     {
       "id": "FAM-ZEUS",
@@ -883,7 +888,8 @@
         "CONT-MAIN-LN"
       ],
       "status": "source_checked_partial",
-      "priority": "critical"
+      "priority": "critical",
+      "name": "Volumen 21: expedición fallida y respuesta de Orario"
     }
   ],
   "reservedIds": [
@@ -1789,12 +1795,12 @@
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "51d765714f2b01d24cb0a854117f866162f5c454",
+    "sourceCommit": "aa89e3f55d2f4c337b0914a7bad3470b79daabc5",
     "trackedLoreFiles": 178,
     "records": 65,
     "reservedIds": 55,
     "supportingDocuments": 104,
-    "syncNote": "Inventario reconciliado el 2026-10-18 tras añadir aristas secundarias explícitas para la co-pertenencia histórica de Ryu, Kaguya y Lyra según el roster comunitario de Astrea Familia. Estas aristas quedan secondary_checked y no afirman vínculos personales; la fuente primaria sigue pendiente."
+    "syncNote": "Inventario reconciliado en main el 2026-10-18: 66 relaciones y 65 registros activos. Incluye rutas de adaptación para Ryu, Bell y Eina; el encuentro Bell-Hestia por sinopsis editorial; la historia parcial del volumen 21; la referencia histórica Zeus/Hera y dos vínculos de roster secundario en CONT-AR. Las relaciones de eventos tienen nombres visibles para la enciclopedia. La cobertura de novelas sigue parcial: no inventar localizadores, desenlaces ni relaciones personales a partir de co-pertenencia."
   },
   "relationships": [
     {
