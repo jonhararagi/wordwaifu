@@ -15,7 +15,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
-  "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md"
+  "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
+  "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -26,7 +27,7 @@ assert.ok(index.relationships.length >= 47, "The graph must retain the Astrea/He
 assert.ok(index.relationships.some(edge => edge.id === "REL-RIVERIA-VICECAPTAIN-LOKI-FAM" && edge.claimRef === "DMR-005-CLM-003" && edge.continuity === "CONT-SO"), "Riveria's vicecaptain relationship must be explicitly linked to the Sword Oratoria claim.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-TIONA-TIONE-TWINS" && edge.claimRef === "DMR-005-CLM-006"), "Twin-sister relationship must have its own evidence-backed edge.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LEFIYA-ADMIRES-AIS" && edge.continuity === "CONT-SO"), "Lefiya's admiration for Ais must be explicit and continuity-scoped.");
-assert.ok(index.relationships.length >= 54, "The graph must retain Loki coverage and the two sourced anime story paths.");
+assert.ok(index.relationships.length >= 55, "The graph must retain Loki coverage, both anime story paths and the main-novel Bell-Hestia meeting relation.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RAUL-FINN-DELEGATED-COMMAND" && edge.claimRef === "DMR-005-CLM-008"), "Raul's delegated coordination role must link to the official claim.");
 assert.deepEqual(corpus.searchEntities(catalog, { type: "character", query: "Raul Nord" }).results.map(entity => entity.id), ["CHAR-RAUL-NOORD"], "Raul must be individually discoverable.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-BELL-RETURN-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-013-CLM-001"), "Ryu and Bell shared-return edge must be explicit and adaptation-scoped.");
@@ -34,6 +35,7 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-ASTREA-VISIT-ANI
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-WARGAME-ANIME" && edge.to === "EVT-DM-RYUU-ASTREA-RETURN-ANIME-001"), "Ryu War Game participation must link to a navigable event record.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-ONLY-FOLLOWER-HESTIA-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-014-CLM-001"), "Bell and Hestia opening-family state must be explicit and adaptation-scoped.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-OPENING-CRISIS-ANIME" && edge.to === "EVT-DM-BELL-OPENING-CRISIS-ANIME-001" && edge.claimRef === "DMR-014-CLM-002"), "Bell opening Dungeon crisis must link to its own source-backed event.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-MEETS-HESTIA-NOVEL-SYNOPSIS" && edge.continuity === "CONT-MAIN-LN" && edge.claimRef === "DMR-015-CLM-001"), "The main-novel Bell-Hestia meeting must be explicit and backed by the official publisher synopsis.");
 
 const riveriaSearch = corpus.searchEntities(catalog, { type: "character", query: "Riveria Ljos Alf" });
 assert.deepEqual(riveriaSearch.results.map(entity => entity.id), ["CHAR-RIVERIA-LJOS-ALF"], "Riveria must be an active individual catalog record, not only part of a group dossier.");
@@ -70,8 +72,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 102);
-assert.equal(index.entryCount, 105);
+assert.equal(index.sourceClaimCount, 103);
+assert.equal(index.entryCount, 106);
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -108,6 +110,8 @@ const bellOpeningState = corpus.search(index, { query: "Bell Hestia medio mes ú
 assert.ok(bellOpeningState.results.some(claim => claim.claimId === "DMR-014-CLM-001"), "Bell opening state must be searchable without asserting the novel's exact meeting date.");
 const bellOpeningCrisis = corpus.search(index, { query: "Bell quinto piso monstruo miedo espadachina", characterId: "DM-CHAR-BELL", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(bellOpeningCrisis.results.some(claim => claim.claimId === "DMR-014-CLM-002"), "The opening Dungeon crisis must be retrievable in anime continuity.");
+const bellHestiaMeeting = corpus.search(index, { query: "Bell Hestia invitación Familia aspirante rechazado", characterId: "DM-CHAR-BELL", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(bellHestiaMeeting.results.some(claim => claim.claimId === "DMR-015-CLM-001"), "Bell and Hestia first meeting must be retrievable from the official volume 1 synopsis in main-novel continuity.");
   const departure = corpus.search(index, { query: "Ryu Astrea venganza", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
   assert.ok(departure.results.some(claim => claim.claimId === "DMR-010-CLM-002"), "The Astrea departure reason should be searchable with secondary-source status.");
   const laterAstrea = corpus.search(index, { query: "Ryu Astrea", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -144,7 +148,7 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 102 source claims, 105 entries, volume 21 atomic claims, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 103 source claims, 106 entries, volume 21 atomic claims, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();
