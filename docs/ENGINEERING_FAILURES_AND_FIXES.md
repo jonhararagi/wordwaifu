@@ -6,7 +6,7 @@
 
 ## 1. Prioridad de cobertura factual DanMachi
 
-El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 49 aristas, centradas en Astrea, Hestia y una parte de Loki Familia. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
+El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 52 aristas, centradas en Astrea, Hestia, una parte de Loki Familia y un recorrido reciente de Ryu en DanMachi V. El total no supone cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
 
 ### Corrección aplicada en main · 2026-10-18
 
@@ -14,6 +14,14 @@ El corpus actual reconoce una deuda factual real: el grafo explícito documentad
 - `REL-RYU-ASTREA-DEPARTURE-SECONDARY` quedó marcada como `pending_verification`, con el tipo de evidencia `community_secondary_lead_unverified_against_primary`. La nota conserva la pista secundaria sin elevarla a canon.
 - Se comprobó que las 49 aristas actuales resuelven a archivos y headings de claims existentes y que sus continuidades/estados declarados coinciden. Esta es una comprobación estática por lectura del catálogo y de los expedientes, no una ejecución del validador ni una prueba de CI.
 - CI para el SHA de esta corrección: **NOT_CONFIRMED** desde las herramientas disponibles en esta ejecución; no declarar la suite verde hasta comprobar el run del commit exacto.
+
+### Actualización incremental · 2026-10-18 · recorrido Ryu
+
+- Se añadió el evento `EVT-DM-RYUU-ASTREA-RETURN-ANIME-001`, con un expediente de investigación dedicado y dos referencias oficiales: el perfil de personajes de DanMachi V y la noticia oficial de Ryu de nivel 6.
+- Se añadieron tres aristas con claims explícitos: Ryu regresa junto a Bell desde las profundidades; Ryu visita a Astrea fuera de Orario en la adaptación; Ryu participa tarde en la guerra de Familias.
+- El catálogo queda en 60 registros, 57 IDs reservados, 101 documentos de apoyo y 52 relaciones. Las tres aristas nuevas usan `CONT-ANIME`; no se trasladaron a novela los hechos promocionales de la adaptación.
+- La lectura estática encuentra ahora 50 aristas `source_checked`, una `secondary_checked` y una `pending_verification`. Esta cuenta no es evidencia de que el validador o CI hayan corrido en el HEAD más reciente.
+- El evento mantiene como pendientes el orden detallado por episodio, las consecuencias escena por escena y el cotejo separado de una edición de novela. No afirma reciprocidad romántica ni las reglas internas de Astrea Record.
 
 ### Próximos cierres que sí pueden verificarse
 
