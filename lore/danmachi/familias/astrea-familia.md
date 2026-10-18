@@ -111,3 +111,12 @@ No decidir por inferencia que el OC reemplaza a Ryu, Alise o cualquier integrant
 - Mapa completo de relaciones personales, secretos y conocimiento individual.
 
 Estos datos quedan pendientes. La ficha mejora el contexto para escribir escenas, pero no se declara completa la historia de Astrea Familia.
+
+
+## Ruta histórica de Astrea Record · CONT-AR
+
+- **Evento navegable:** [Astrea Record: justicia, guía y escalada del conflicto](../events/candidates/EVT-DM-ASTREA-RECORD-FOUNDATIONS-001.md).
+- **Base temporal:** la sinopsis oficial del volumen 1 sitúa la historia aproximadamente siete años antes de la llegada de Bell a Orario; es una referencia relativa, no una fecha absoluta. Claim DMR-012-CLM-001.
+- **Guía y liderazgo:** la misma sinopsis presenta a Astrea como guía moral de Ryu y a Alise como capitana y guía de Ryu. Claims DMR-012-CLM-002 y DMR-012-CLM-003.
+- **Conflicto y consecuencias:** las sinopsis oficiales de los volúmenes II–III relacionan las pérdidas de la época con la evolución del sentido de justicia de Ryu y la escalada de Evilus. Claim DMR-012-CLM-004.
+- **Límite:** son hitos generales de sinopsis editorial. El roster completo, destinos individuales, orden de escenas y consecuencias precisas requieren cotejo de los volúmenes íntegros.
