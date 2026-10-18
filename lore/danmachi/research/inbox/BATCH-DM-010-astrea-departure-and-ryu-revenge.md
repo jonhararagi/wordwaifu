@@ -41,7 +41,7 @@
 - `source_locator`: Apartado Historia, periodo posterior a la caída de Astrea Familia
 - `source_url`: https://danmachi.fandom.com/es/wiki/Ryuu_Lion
 - `evidence_type`: community_secondary_summary
-- `verification_status`: secondary_checked
+- `verification_status: pending_verification
 - `spoiler_level`: major
 - `confidence_note`: El motivo proviene de fuente secundaria; localizar el pasaje primario antes de marcarlo como canon verificado.
 
