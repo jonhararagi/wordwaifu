@@ -4,7 +4,7 @@
 
 El corpus y su interfaz ya están integrados en `main`. Esta carpeta no es una rama aislada ni una afirmación de canon completo: es un corpus de investigación enlazado, con resúmenes, fuentes y continuidades etiquetadas.
 
-- Catálogo actual: `catalog.json` esquema v2, **48 registros activos**, **67 IDs reservados** y **100 documentos de apoyo**.
+- Catálogo actual: `catalog.json` esquema v2, **59 registros activos**, **57 IDs reservados** y **100 documentos de apoyo**.
 - Los 48 registros no están todos verificados: 13 `draft`, 6 `pending_verification`, 21 `provisional`, 4 `proposed_author_event`, 1 `provisional_inference`, 1 `provisional_reference_checked` y 2 `source_checked_partial`. La validación no promueve automáticamente un registro a canon confirmado.
 - El validador `tools/check-catalog.mjs` comprueba JSON, unicidad de IDs/rutas, IDs de frontmatter, existencia de los documentos y enlaces Markdown locales. **No comprueba la verdad factual ni sustituye el cotejo de capítulos/páginas de fuentes primarias.**
 - El archivo de personajes está conectado a `src/character-archive.js` y `src/character-dossiers.js`; las búsquedas y recuperación usan `src/lore-corpus.js`. El test de navegador y el workflow **DanMachi Lore and Retrieval Integrity** cubren parte de esa integración.
@@ -117,3 +117,10 @@ La tanda [DANMACHI-RESEARCH-008](research/inbox/BATCH-DM-008-main-story-volume-m
 ## Historias paralelas
 
 La tanda `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md` incorpora Astrea Record, Sword Oratoria y crónicas centradas en Ryu, Freya, Asfi y Haze al buscador. La cobertura sigue marcada como provisional hasta cotejar cada capítulo.
+
+## Cierre parcial de cobertura · 2026-10-18
+
+- Se añadieron fichas individuales para Riveria, Gareth, Lefiya, Tiona, Tione, Bete y Raul con el alcance de los perfiles oficiales de Sword Oratoria (CONT-SO).
+- El grafo de relaciones explícitas alcanza 49 aristas. Se mantienen separadas las sugerencias por etiquetas y las aristas documentadas; cada arista nueva enlaza un claim de apoyo.
+- Se incorporaron mapas parciales de Sword Oratoria 14 (origen de los tres líderes) y del volumen principal 21 (expedición fallida / rescate del piso 60). Son mapas apoyados por sinopsis editorial y muestra pública, no resúmenes completos de la novela.
+- Falta cotejar capítulos/páginas completos, cubrir otras Familias, y completar el orden de escenas y desenlaces sin rellenar huecos de canon por inferencia.

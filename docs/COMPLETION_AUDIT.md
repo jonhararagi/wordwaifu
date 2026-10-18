@@ -1,7 +1,7 @@
 # Auditoría de finalización de WordWaifu
 
 **Fecha:** 2026-10-18  
-**Base revisada:** `main`; capa de grafo explícito y correcciones de referencias en `7784ba89cf5881ace541ec8de219cfb15051f3fd`. La optimización lineal de Story Forge sigue en `d51990d5a54b70f2a161ec41acba15b59684bb1b`.
+**Base revisada:** `main`; grafo explícito expandido en main, con 49 relaciones registradas; la optimización lineal de Story Forge sigue en `d51990d5a54b70f2a161ec41acba15b59684bb1b`.
 
 ## Dictamen
 

@@ -248,3 +248,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se registró `DMR-012-SRC-001`: ficha editorial oficial de GA文庫 para el volumen principal 1, consultada el 2026-10-14. Su alcance se limita al marco general de Orario, el laberinto subterráneo y la premisa de Bell/Hestia; no prueba detalles de pisos, reglas o escenas no descritas.
 - Se añadió `LOC-DUNGEON` al catálogo estructurado y al índice de lugares, retirándolo de `reservedIds` para evitar una colisión entre ID reservado y registro activo.
 - Estado: PARTIAL. Los pisos, accesos, topología detallada, monstruos y reglas de expedición siguen pendientes de cotejo con fuentes por volumen/capítulo.
+
+
+## DANMACHI-RESEARCH-021 · Loki Familia y arcos con evidencia editorial (2026-10-18)
+
+- Activadas fichas individuales para Riveria Ljos Alf, Gareth Landrock, Lefiya Viridis, Tiona Hiryute, Tione Hiryute, Bete Loga y Raul Nord, todas con alcance provisional de adaptación CONT-SO.
+- Se añadieron relaciones explícitas para capitanía/vicecapitanía, pertenencia, vínculo de gemelas, amistad descrita por la fuente, admiración, interés romántico no recíproco por inferencia, y mando delegado de Finn a Raul. Cada arista apunta a una afirmación en DANMACHI-RESEARCH-011-loki-familia-dossier.md.
+- Se registró DMR-005-SRC-002, la sinopsis editorial oficial de Sword Oratoria 14 (https://ga.sbcr.jp/product/9784815614348/). El mapa creado enumera solo lo que afirma la sinopsis y deja la secuencia de los capítulos por verificar.
+- Se creó el mapa ARC-MAIN-21-RESCATE-PISO-60 con la sinopsis oficial y una muestra pública del texto. El volumen 21 no se presenta como cierre de la obra.
+- El validador y las pruebas de corpus comprueban la activación de personajes y la existencia de relaciones ancladas a claims. El smoke de navegador comprueba el camino de Familia Loki a la ficha de Riveria y el retorno al expediente.
+- **Pendiente factual:** el resto del texto íntegro de las novelas, localizadores primarios, orden exacto de las escenas y todos los caminos temporales continúan fuera del alcance de este lote.

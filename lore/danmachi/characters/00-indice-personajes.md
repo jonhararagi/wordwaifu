@@ -19,12 +19,13 @@ Este índice mezcla registros existentes y candidatos para futuras fichas. La co
 | DM-CHAR-AIS | Ais Wallenstein | Ais | Loki Familia, Bell | Ficha inicial existente |
 | DM-CHAR-LOKI-LEADERS | Finn/Riveria/Gareth (grupo provisional) | No tratar como una persona | Loki Familia | Registro grupal existente; crear fichas individuales cuando se investiguen |
 | CHAR-FINN-DEIMNE | [Finn Deimne](finn-deimne.md) | Finn | Loki Familia; liderazgo | Ficha provisional; perfil de adaptación |
-| CHAR-RIVERIA-LJOS-ALF | Riveria Ljos Alf | Riveria | Loki Familia | Candidato, ficha individual pendiente |
-| CHAR-GARETH-LANDROCK | Gareth Landrock | Gareth | Loki Familia | Candidato, ficha individual pendiente |
-| CHAR-BETE-LOGA | Bete Loga | Bete | Loki Familia | Candidato pendiente |
-| CHAR-TIONA-HIRYUTE | Tiona Hiryute | Tiona | Loki Familia | Candidato pendiente |
-| CHAR-TIONE-HIRYUTE | Tione Hiryute | Tione | Loki Familia | Candidato pendiente |
-| CHAR-LEFIYA-VIRIDIS | Lefiya Viridis | Lefiya | Loki Familia, Sword Oratoria | Candidato pendiente |
+| CHAR-RAUL-NOORD | [Raul Nord](raul-noord.md) | Raul, ラウル・ノールド | Loki Familia, apoyo y coordinación | Ficha individual provisional · perfil oficial CONT-SO |
+| CHAR-RIVERIA-LJOS-ALF | [Riveria Ljos Alf](riveria-ljos-alf.md) | Riveria | Loki Familia | Ficha individual provisional · CONT-SO |
+| CHAR-GARETH-LANDROCK | [Gareth Landrock](gareth-landrock.md) | Gareth | Loki Familia | Ficha individual provisional · CONT-SO |
+| CHAR-BETE-LOGA | [Bete Loga](bete-loga.md) | Bete | Loki Familia | Ficha individual provisional · CONT-SO |
+| CHAR-TIONA-HIRYUTE | [Tiona Hiryute](tiona-hiryute.md) | Tiona | Loki Familia | Ficha individual provisional · CONT-SO |
+| CHAR-TIONE-HIRYUTE | [Tione Hiryute](tione-hiryute.md) | Tione | Loki Familia | Ficha individual provisional · CONT-SO |
+| CHAR-LEFIYA-VIRIDIS | [Lefiya Viridis](lefiya-viridis.md) | Lefiya | Loki Familia, Sword Oratoria | Ficha individual provisional · CONT-SO |
 | CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Candidato pendiente |
 | CHAR-LILIRUCA-ARDE | Liliruca Arde | Lili | Hestia Familia | Candidato pendiente |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Candidato pendiente |

@@ -106,3 +106,5 @@ La ausencia de esos datos no autoriza a inventarlos. Esta ficha mejora el uso na
 - [Bete Loga](../characters/bete-loga.md) · aventurero de primera clase.
 
 Estas relaciones y descripciones se limitan al perfil oficial de la adaptación Sword Oratoria (CONT-SO). No describen toda la cronología ni sustituyen localizadores de novela.
+
+- [Raul Nord](../characters/raul-noord.md) · apoyo operativo y coordinación de aventureros jóvenes.

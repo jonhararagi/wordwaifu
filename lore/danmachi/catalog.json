@@ -774,6 +774,22 @@
       ],
       "status": "provisional",
       "priority": "normal"
+    },
+    {
+      "id": "CHAR-RAUL-NOORD",
+      "path": "characters/raul-noord.md",
+      "type": "character",
+      "tags": [
+        "Raul Nord",
+        "Raul",
+        "Loki Familia",
+        "Familia Loki",
+        "CONT-SO",
+        "apoyo",
+        "mando delegado"
+      ],
+      "status": "provisional",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
@@ -2330,6 +2346,34 @@
       "claimRef": "DMR-005-CLM-005",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
       "note": "La ficha describe la admiración de Lefiya por Ais, no una relación recíproca equivalente."
+    },
+    {
+      "id": "REL-RAUL-MEMBER-LOKI-FAM",
+      "from": "CHAR-RAUL-NOORD",
+      "to": "DM-FAM-LOKI",
+      "kind": "member_of",
+      "label": "aventurero asociado a Familia Loki en el perfil oficial",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por el perfil oficial de Sword Oratoria; fecha interna exacta no fijada",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-008",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "El perfil oficial acredita el rol general de apoyo y mando delegado en CONT-SO. No fijar ese nivel ni función para todas las épocas ni deducir que Finn le transfiere el mando permanentemente."
+    },
+    {
+      "id": "REL-RAUL-FINN-DELEGATED-COMMAND",
+      "from": "CHAR-FINN-DEIMNE",
+      "to": "CHAR-RAUL-NOORD",
+      "kind": "delegates_command_to",
+      "label": "Finn confía en Raul para coordinar a miembros de menor rango durante emergencias",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por el perfil oficial de Sword Oratoria; fecha interna exacta no fijada",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-008",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "El perfil oficial acredita el rol general de apoyo y mando delegado en CONT-SO. No fijar ese nivel ni función para todas las épocas ni deducir que Finn le transfiere el mando permanentemente."
     }
   ]
 }

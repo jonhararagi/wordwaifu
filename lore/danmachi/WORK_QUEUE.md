@@ -304,3 +304,16 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Cotejar pisos, accesos, monstruos, recursos, reglas de expedición y peligros con fuentes por volumen/capítulo.
 - [ ] Añadir enlaces inversos desde los índices de canon, eventos y personajes solo cuando el destino sea una relación sustentada.
 - Regla: la sinopsis editorial es fuente oficial de alcance general, no sustituto del texto íntegro; no inventar geografía ni localizadores.
+
+
+## DANMACHI-RESEARCH-021 · Loki Familia y mapas de historias respaldados por fuentes editoriales
+
+- [x] Activar fichas individuales para Riveria, Gareth, Lefiya, Tiona, Tione, Bete y Raul a partir de los perfiles oficiales de la adaptación Sword Oratoria.
+- [x] Añadir aristas con continuidad CONT-SO, claim de respaldo y nota de alcance; no extrapolar niveles/cargos a todos los volúmenes.
+- [x] Corregir el índice de personajes para diferenciar registros activos de candidatos.
+- [x] Registrar la ficha oficial editorial de Sword Oratoria 14 (DMR-005-SRC-002) y crear un mapa parcial sobre el comienzo de Finn, Riveria y Gareth.
+- [x] Crear un mapa parcial del volumen principal 21 con la sinopsis y la muestra pública del capítulo inicial.
+- [ ] Leer el resto de los volúmenes íntegros con acceso legítimo y anotar localizadores de capítulo/página.
+- [ ] Convertir los mapas parciales en cronologías de escenas solo cuando el texto y sus secuencias estén comprobados.
+- [ ] Ampliar la red relacional al resto de la Familia Loki y a las Familias restantes; registrar conflictos, poderes y estados temporales por periodo.
+- **Estado:** estructura y aristas iniciales completas para este lote; cobertura factual global todavía parcial.

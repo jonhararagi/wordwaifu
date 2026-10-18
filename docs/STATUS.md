@@ -1,19 +1,18 @@
 # Estado de WordWaifu
 ## Estado operativo y verificación — 2026-10-18
 
-**Esta sección prevalece sobre el historial que sigue.** Los SHA, porcentajes y ramas debajo del separador son históricos y no deben tomarse como estado actual.
+**Esta sección prevalece sobre el historial que sigue.** No se certifica un porcentaje global a partir de cantidad de archivos o tests.
 
 - **Repositorio/rama:** `jonhararagi/wordwaifu` · `main`.
-- **HEAD funcional verificado:** `7784ba89cf5881ace541ec8de219cfb15051f3fd` (capa explícita de relaciones Astrea + regresiones corregidas).
-- **CI verde en el HEAD:** [Validate WordWaifu #39115277616](https://github.com/jonhararagi/wordwaifu/actions/runs/39115277616) y [DanMachi Lore and Retrieval Integrity #39115277539](https://github.com/jonhararagi/wordwaifu/actions/runs/39115277539), ambos en SHA `7784ba89...`, terminaron en `success`.
-- **Rendimiento del Story Forge:** benchmark Node/Ubuntu con nueve ejecuciones por tamaño, mediana: 100 capítulos `0,81 ms`, 250 `1,61 ms`, 500 `2,20 ms`. Son valores del runner de CI, no una garantía para equipos de los usuarios. El benchmark es informativo y no tiene umbral específico de hardware.
-- **Arreglo de CPU:** [`perf(story-forge): remove quadratic phase lookup`](https://github.com/jonhararagi/wordwaifu/commit/d51990d5a54b70f2a161ec41acba15b59684bb1b). Antes, cada capítulo reconstruía y filtraba la lista completa de índices para conocer su posición en la fase; ahora se asigna fase/beat en una sola pasada. El algoritmo de esa selección pasa de trabajo cuadrático a lineal en el número de capítulos.
-- **Conclusión de arquitectura:** no se agregó GPU ni Web Worker al generador porque la carga medida para 500 capítulos es pequeña en CI. Se priorizó eliminar el trabajo repetido. Esto no descarta un Worker futuro si la generación conjunta de muchos proyectos o un motor causal pesado demuestra tareas largas en equipos reales.
-- **Seguridad de expedientes:** el test Chromium cubre navegación interna y contenido Markdown hostil con etiqueta `script`, enlaces `javascript:`/`data:` y escape de ruta; verifica que el texto no se ejecuta y que esos destinos no se convierten en controles navegables.
-- **Núcleo implementado:** CRUD y grafo de entidades, atlas/markers, búsqueda, aislamiento de proyectos, IndexedDB/respaldo local, JSON validado, snapshots/papelera/recuperación, catálogo mítico/de poderes, archivo de personajes por continuidad, editor de manuscritos y Story Forge estructural.
-- **DanMachi continúa incompleto en lo factual:** el catálogo sigue con 48 registros, 67 IDs reservados y 100 documentos de apoyo; los registros activos no están marcados como verificación completa. `catalog.json` ya incluye 20 aristas explícitas para Astrea Familia con extremos estables, continuidad, intervalo, nivel/estado de evidencia y claim navegable. El visor las muestra separadas de las coincidencias por etiquetas; la red global todavía es parcial.
-- **Gates abiertos:** extender las 20 aristas de Astrea al resto de familias/personajes; cotejar claims y datos biográficos contra localizadores de volumen/capítulo/página; cerrar recorridos temporales completos (miembro → Familia → deidad → evento/cronología); integrar poderes/reliquias/contratos en el grafo; probar cuota real y revisión visual manual en Windows.
-- **Porcentaje global:** no se certifica 90% ni 100% mientras los gates anteriores continúen abiertos. La [auditoría de finalización](COMPLETION_AUDIT.md) separa funcionalidades entregadas, parcialmente cubiertas y no verificadas.
+- **Cobertura del corpus DanMachi:** 59 registros activos, 57 IDs reservados y 100 documentos de apoyo; el validador no promueve hechos a canon confirmado por sí solo.
+- **Grafo de relaciones:** 49 aristas explícitas para Astrea, Hestia y la primera red de Familia Loki. Cada arista expone extremos, tipo de relación, continuidad, intervalo, evidencia y claim de apoyo. Las coincidencias por etiquetas siguen siendo una herramienta secundaria de descubrimiento.
+- **Nuevos perfiles Loki:** Riveria, Gareth, Lefiya, Tiona, Tione, Bete y Raul tienen ficha individual con alcance provisional `CONT-SO`; los datos oficiales de adaptación no se extrapolan automáticamente a la novela principal.
+- **Mapas de historia añadidos:** Sword Oratoria 14 (los orígenes de los tres líderes) y el volumen principal 21 (expedición fallida / rescate del piso 60). Ambos son mapas parciales respaldados por la sinopsis editorial y, en el volumen 21, un fragmento oficial. No equivalen al libro entero ni a un final de la serie.
+- **ID conflictivo corregido:** el paquete de Astrea ya no reutiliza `DMR-006-CLM-001..005`; usa `DMR-012-CLM-001..005`. El validador y las pruebas cubren identificación única y rutas a la fuente.
+- **Rendimiento del Story Forge:** benchmark de Node en CI: medianas de 0,81 ms (100 capítulos), 1,61 ms (250) y 2,20 ms (500), nueve ejecuciones por tamaño. Son datos del runner de GitHub, no garantías de rendimiento en PC/browser.
+- **Arquitectura:** se priorizó quitar trabajo O(n²) de la asignación de beats; no se añadió GPU ni Worker porque los benchmarks actuales no muestran necesidad. La decisión se revisará con mediciones reales de tareas largas en navegador.
+- **Límite factual:** quedan pendientes localizadores de capítulo/página, mayor cobertura de miembros y Familias, caminos históricos completos, y el orden/desenlace de historias donde solo existe sinopsis o fragmento. No es honesto declarar 90% o 100% global mientras eso siga abierto.
+- **Lección de actualizaciones técnicas:** las publicaciones recientes de GitHub sobre lockfiles y retención de Actions están documentadas en [investigación técnica](TECHNICAL_RESEARCH.md). Los checks se verifican por SHA, nombre de workflow y resultado concreto, no por conteos agregados.
 
 ## Snapshot histórico de la auditoría previa
 
