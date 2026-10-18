@@ -521,20 +521,78 @@ const matched=!q||names.some(name=>{
   return name.includes(q);
 });
 return{id:ch.id,name:ch.name,aliases:ch.aliases||[],profilePath:ch.profilePath,overview:displayOverview,summary:continuity==="ALL"?displayOverview:st.summary,preferredContinuity:target,availableContinuities:scopes,states:(continuity==="ALL"?shownScopes:shownScopes.filter(x=>x===continuity)).map(x=>({code:x,label:LABELS[x]||x,affiliation:state(ch.id,x).affiliation})),affiliation:st.affiliation,period:st.period,verifiedClaimCount:shown.length,matched,hasScope:continuity==="ALL"||shownScopes.includes(continuity)};}).filter(x=>x.matched&&x.hasScope).sort((a,b)=>a.name.localeCompare(b.name,"es"));}
+function catalogRecord(index,id){return (index.entityRecords||[]).find(x=>x.id===id)||null;}
+function entityLabel(index,id,edge){
+  const character=record(index,id);
+  if(character)return character.name;
+  const entry=catalogRecord(index,id);
+  if(!entry)return id;
+  if(entry.name||entry.title)return entry.name||entry.title;
+  if(entry.type==="event"&&edge&&edge.label)return edge.label;
+  const tags=Array.isArray(entry.tags)?entry.tags:[];
+  if(entry.type==="familia")return tags.find(tag=>/familia/i.test(tag))||tags[0]||id;
+  return tags[0]||id;
+}
+function readableRelationKind(kind){return String(kind||"relación documentada").replace(/_/g," ").trim();}
 function relationshipLinks(index,id,continuity,filter){
-  const direct=(((REL[id]||{})[continuity])||[]).map(r=>({sourceId:id,targetId:r.targetId,label:r.label,type:r.type,description:r.description,refs:r.refs,direction:"outgoing"}));
-  const directTargets=new Set(direct.map(r=>r.targetId));
-  const incoming=[];
+  const graphEdges=(index.relationships||[]).filter(edge=>edge&&edge.continuity===continuity&&(edge.from===id||edge.to===id));
+  const graphRows=graphEdges.map(edge=>{
+    const outgoing=edge.from===id;
+    const targetId=outgoing?edge.to:edge.from;
+    const targetCharacter=record(index,targetId);
+    const targetMeta=catalogRecord(index,targetId);
+    const targetName=targetCharacter?targetCharacter.name:
+      (targetMeta&&(targetMeta.name||targetMeta.title))||
+      (outgoing&&targetMeta&&targetMeta.type==="event"?edge.label:entityLabel(index,targetId,edge));
+    const label=outgoing?edge.label:entityLabel(index,edge.from,edge)+" · vínculo relacionado";
+    const original="La arista original registra "+edge.from+" → "+edge.to+": "+edge.label+".";
+    const note=String(edge.note||"").trim();
+    return{
+      sourceId:edge.from,targetId,label,type:readableRelationKind(edge.kind),
+      description:outgoing?(note||"Relación documentada con una afirmación enlazada."):("Enlace inverso para navegación. "+original+(note?" "+note:"")),
+      refs:[edge.claimRef].filter(Boolean),direction:outgoing?"outgoing":"incoming",
+      edgeId:edge.id,evidenceStatus:edge.evidenceStatus,evidenceType:edge.evidenceType,
+      targetType:targetCharacter?"character":targetMeta?"dossier":"unavailable",
+      targetPath:targetMeta?targetMeta.path:"",targetName
+    };
+  });
+  const overlaps=(a,b)=>a.sourceId===b.sourceId&&a.targetId===b.targetId&&(a.refs||[]).some(ref=>(b.refs||[]).includes(ref));
+  const staticDirect=(((REL[id]||{})[continuity])||[]).map(edge=>({
+    sourceId:id,targetId:edge.targetId,label:edge.label,type:edge.type,description:edge.description,
+    refs:edge.refs||[],direction:"outgoing",targetName:record(index,edge.targetId)?.name||entityLabel(index,edge.targetId),
+    targetType:record(index,edge.targetId)?"character":catalogRecord(index,edge.targetId)?"dossier":"unavailable",
+    targetPath:catalogRecord(index,edge.targetId)?.path||""
+  })).filter(edge=>!graphRows.some(graph=>graph.direction==="outgoing"&&overlaps(edge,graph)));
+  const direct=[...graphRows.filter(edge=>edge.direction==="outgoing"),...staticDirect];
+  const directTargets=new Set(direct.map(edge=>edge.targetId));
+  const graphIncoming=graphRows.filter(edge=>edge.direction==="incoming"&&!directTargets.has(edge.targetId));
+  const staticIncoming=[];
   for(const [sourceId,scopes] of Object.entries(REL)){
     if(sourceId===id)continue;
     for(const edge of ((scopes||{})[continuity]||[])){
       if(edge.targetId!==id||directTargets.has(sourceId))continue;
-      incoming.push({sourceId,targetId:sourceId,label:(record(index,sourceId)?.name||sourceId)+" · vínculo relacionado",type:edge.type,description:"Enlace inverso para navegación. La ficha de origen registra la relación "+sourceId+" → "+id+": "+edge.description,refs:edge.refs,direction:"incoming"});
+      const row={
+        sourceId,targetId:sourceId,label:(record(index,sourceId)?.name||entityLabel(index,sourceId))+" · vínculo relacionado",
+        type:edge.type,description:"Enlace inverso para navegación. La ficha de origen registra la relación "+sourceId+" → "+id+": "+edge.description,
+        refs:edge.refs||[],direction:"incoming",targetName:record(index,sourceId)?.name||entityLabel(index,sourceId),
+        targetType:record(index,sourceId)?"character":catalogRecord(index,sourceId)?"dossier":"unavailable",
+        targetPath:catalogRecord(index,sourceId)?.path||""
+      };
+      if(!graphRows.some(graph=>graph.direction==="incoming"&&overlaps(row,graph)))staticIncoming.push(row);
     }
   }
-  return [...direct,...incoming].map(r=>{
-    const claims=refsClaims(index,r.refs,continuity,filter),target=record(index,r.targetId);
-    return claims.length?{sourceId:r.sourceId,targetId:r.targetId,targetName:target?target.name:r.targetId,available:!!target,label:r.label,type:r.type,description:r.description,continuity,period:state(id,continuity).period,claims,direction:r.direction}:null;
+  return [...direct,...graphIncoming,...staticIncoming].map(edge=>{
+    const claims=refsClaims(index,edge.refs,continuity,filter);
+    const target=record(index,edge.targetId),meta=catalogRecord(index,edge.targetId);
+    return claims.length?{
+      sourceId:edge.sourceId,targetId:edge.targetId,
+      targetName:edge.targetName||(target?target.name:entityLabel(index,edge.targetId)),
+      available:!!target||!!(meta&&meta.path),targetType:target?"character":meta?"dossier":"unavailable",
+      targetPath:meta?meta.path:(edge.targetPath||""),
+      label:edge.label,type:edge.type,description:edge.description,continuity,
+      period:state(id,continuity).period,claims,direction:edge.direction,
+      evidenceStatus:edge.evidenceStatus||null,evidenceType:edge.evidenceType||null,edgeId:edge.edgeId||null
+    }:null;
   }).filter(Boolean);
 }
 function profile(index,id,continuity,filter){const ch=record(index,id);if(!ch)return null;const all=claimsFor(index,id),scopes=ordered(all.flatMap(c=>c.continuityScopes||[])),chosen=continuity&&scopes.includes(continuity)?continuity:defaultState(scopes),allState=all.filter(c=>(c.continuityScopes||[]).includes(chosen)),shown=allState.filter(c=>visible(c.spoilerLevel,filter)),meta=META[id]||{states:{}};
