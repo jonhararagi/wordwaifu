@@ -61,6 +61,13 @@ research_source_refs:
 - **Fuentes:** DMR-013-SRC-001, DMR-013-SRC-002.
 - **Límite:** esta sección describe la continuidad del anime. No promueve afirmaciones de CONT-MAIN-LN a fuente primaria de novela, ni convierte la conciencia emocional de Ryu en reciprocidad romántica.
 
+## Ruta histórica de Astrea Record · CONT-AR
+
+- **Evento navegable:** [Astrea Record: justicia, guía y escalada del conflicto](../events/candidates/EVT-DM-ASTREA-RECORD-FOUNDATIONS-001.md).
+- La sinopsis editorial del volumen 1 sitúa el periodo unos siete años antes de la llegada de Bell a Orario y presenta a Ryu buscando su comprensión de la justicia bajo la guía de Astrea, con Alise como capitana y guía. Claims DMR-012-CLM-001, DMR-012-CLM-002 y DMR-012-CLM-003.
+- Las sinopsis de los volúmenes II–III describen a alto nivel las pérdidas de la época y el conflicto con Evilus, que sacuden la comprensión de justicia de Ryu. Claim DMR-012-CLM-004.
+- **Límite:** no se completa el destino de cada integrante ni el orden de confrontaciones a partir de resúmenes editoriales. La visita de Ryu a Astrea en CONT-MAIN-LN y su visita en CONT-ANIME siguen siendo eventos separados.
+
 ## Gestión de continuidades
 
 Tratar a Ryu como una identidad estable con estados temporales separados. La afiliación histórica documentada y el contexto posterior del perfil no deben fusionarse en una descripción atemporal. En una historia alternativa (AU), añadir estados propios solo cuando una divergencia aprobada por el autor cambie lo que le ocurre.
