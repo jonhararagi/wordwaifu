@@ -28,6 +28,12 @@ Bell Cranel y Hestia se conocen al comienzo de la historia principal y su relaci
 
 Si otros volúmenes o relatos mencionan el encuentro como recuerdo, no crear un evento nuevo a menos que la fuente confirme que se trata de otro encuentro. Las escenas retrospectivas se enlazan al mismo ID y conservan su propio localizador.
 
+## Distinción con la apertura del anime
+
+El proyecto tiene un expediente separado, [EVT-DM-BELL-OPENING-CRISIS-ANIME-001](EVT-DM-BELL-OPENING-CRISIS-ANIME-001.md), para el estado que la sinopsis oficial del episodio 1 describe en la adaptación: Bell como único miembro de Hestia Familia desde hace aproximadamente medio mes y una crisis en el quinto piso.
+
+Ese expediente **no resuelve este candidato de novela ligera**. No fija el día de la primera reunión, la fecha del descenso de Hestia, el momento exacto de la Falna ni la secuencia impresa. Este archivo conserva `pending_verification` hasta que exista un localizador primario del volumen 1.
+
 ## Verificación necesaria
 - Fuente primaria:
 - Capítulo/sección:
