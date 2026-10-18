@@ -3084,6 +3084,61 @@ async function run() {
     await page.waitForFunction(() => (document.querySelector("#save-status")?.textContent || "").length > 0, null, { timeout: 10000 });
     await page.locator('[data-view="powers"]').click();
     await page.waitForFunction(() => document.querySelector("#power-record-list")?.textContent.includes("Smoke power persistence"), null, { timeout: 10000 });
+
+    // Performance regression: populate a temporary, valid universe with many locations,
+    // then verify atlas drawing queries the existing-marker set only once per render.
+    const markerPerformanceFixture = await page.evaluate(async () => {
+      const original = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      const candidate = structuredClone(original);
+      for (let i = 0; i < 120; i += 1) {
+        candidate.locations.push({
+          id: "perf-location-" + String(i).padStart(3, "0"),
+          name: "Performance location " + i,
+          type: "Lugar de prueba",
+          parentId: null,
+          description: "Ubicación temporal de la prueba de escalado.",
+          tags: [],
+          population: "Sin datos",
+          government: "Sin datos",
+          climate: "Sin datos",
+          marker: [20 + (i % 85) * 10, 20 + (Math.floor(i / 85) % 50) * 10],
+          characters: [],
+          events: []
+        });
+      }
+      const validation = window.WordWaifuProjectSchema.validateAndNormalizeProject(candidate);
+      if (!validation.valid) throw new Error("Performance fixture inválido: " + validation.errors.join(" | "));
+      const repository = new window.WordWaifuProjectRepository.ProjectRepository({ storageKey: "wordwaifu.project.v1" });
+      const saved = await repository.saveActive(validation.project);
+      repository.close();
+      if (saved.backend !== "indexeddb") throw new Error("Performance fixture no se guardó en IndexedDB.");
+      return { expectedLocations: validation.project.locations.length };
+    });
+    await page.reload({ waitUntil: "networkidle" });
+    await page.waitForFunction((expected) => document.querySelector("#stat-locations")?.textContent === String(expected),
+      markerPerformanceFixture.expectedLocations, { timeout: 10000 });
+    await page.evaluate(() => {
+      const originalQuerySelectorAll = Document.prototype.querySelectorAll;
+      window.__wordWaifuOriginalQuerySelectorAll = originalQuerySelectorAll;
+      window.__wordWaifuMarkerSetQueries = 0;
+      Document.prototype.querySelectorAll = function(selector) {
+        if (selector === ".map-marker:not(.event-marker)") window.__wordWaifuMarkerSetQueries += 1;
+        return originalQuerySelectorAll.call(this, selector);
+      };
+    });
+    await page.locator('[data-view="atlas"]').click();
+    const mapQueryCount = await page.evaluate(() => {
+      const count = window.__wordWaifuMarkerSetQueries;
+      Document.prototype.querySelectorAll = window.__wordWaifuOriginalQuerySelectorAll;
+      delete window.__wordWaifuOriginalQuerySelectorAll;
+      delete window.__wordWaifuMarkerSetQueries;
+      return count;
+    });
+    assert.equal(mapQueryCount, 1,
+      "Atlas rendering should query pre-existing non-event markers once, independent of the number of locations.");
+    process.stdout.write("PASS map performance: " + markerPerformanceFixture.expectedLocations +
+      " locations rendered with one existing-marker query per atlas render.\n");
+
     assert.deepEqual(pageErrors, [], "Unexpected browser page errors: " + pageErrors.join("; "));
     process.stdout.write("PASS_REAL: Chromium browser smoke test completed without page errors.\n");
   } finally {

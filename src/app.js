@@ -919,7 +919,7 @@
   function currentTime() { return $("#time-select").value; }
   function timeOrder(value) { return ({ chapter1: 1, chapter5: 5, chapter12: 12, now: 9999 })[value] ?? 9999; }
 
-  function characterLocationAt(character, time) {
+  function characterLocationAt(character, time, locationsById = null) {
     const moment = timeOrder(time);
     // If adjacent history entries overlap on a chapter boundary, the entry
     // with the latest start takes precedence (e.g. the new location at chapter 5).
@@ -929,11 +929,21 @@
       if (moment < from || moment > to) return best;
       return !best || from >= timeOrder(best.from) ? entry : best;
     }, null);
-    return match ? locationById(match.locationId) : null;
+    if (!match) return null;
+    return locationsById ? (locationsById.get(match.locationId) || null) : locationById(match.locationId);
   }
 
   function charactersAt(locationId, time = currentTime()) {
     return state.characters.filter((character) => characterLocationAt(character, time)?.id === locationId);
+  }
+
+  function characterCountsByLocation(time = currentTime(), locationsById = new Map(state.locations.map((location) => [location.id, location]))) {
+    const counts = new Map();
+    state.characters.forEach((character) => {
+      const location = characterLocationAt(character, time, locationsById);
+      if (location) counts.set(location.id, (counts.get(location.id) || 0) + 1);
+    });
+    return counts;
   }
 
   function selectedLocation() { return locationById(selectedLocationId) || state.locations[0]; }
@@ -1050,9 +1060,17 @@
 
   function renderMap() {
     const dynamicLayer = $("#dynamic-markers");
+    const locationsById = new Map(state.locations.map((location) => [location.id, location]));
+    const peopleCountByLocation = mapMode === "people"
+      ? characterCountsByLocation(currentTime(), locationsById)
+      : null;
     if (dynamicLayer) {
       dynamicLayer.replaceChildren();
-      state.locations.filter((location) => !$$(".map-marker:not(.event-marker)").some((marker) => marker.dataset.location === location.id)).forEach((location) => {
+      // Query all pre-existing fixed markers once, rather than scanning the DOM
+      // again for every location (which turns atlas rendering into O(locations²)).
+      const existingLocationIds = new Set($(".map-marker:not(.event-marker)").map((marker) => marker.dataset.location));
+      state.locations.forEach((location) => {
+        if (existingLocationIds.has(location.id)) return;
         const point = Array.isArray(location.marker) ? location.marker : [450, 300];
         if (!Array.isArray(location.marker)) location.marker = point;
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
@@ -1073,11 +1091,12 @@
         group.addEventListener("click", activate);
         group.addEventListener("keydown", (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); activate(); } });
         dynamicLayer.appendChild(group);
+        existingLocationIds.add(location.id);
       });
     }
-    $$(".map-marker").forEach((marker) => {
+    $(".map-marker").forEach((marker) => {
       const locationId = marker.dataset.location;
-      const location = locationById(locationId);
+      const location = locationsById.get(locationId) || null;
       if (location && !marker.classList.contains("event-marker")) {
         if (!Array.isArray(location.marker)) location.marker = [450, 300];
         marker.setAttribute("transform", "translate(" + location.marker[0] + " " + location.marker[1] + ")");
@@ -1091,7 +1110,7 @@
       const layerDisabled = marker.classList.contains("event-marker") ? !enabledLayers.events : !enabledLayers.places;
       marker.classList.toggle("hidden", missingLocation || layerDisabled);
       if (mapMode === "people" && !marker.classList.contains("event-marker")) {
-        const count = charactersAt(locationId).length;
+        const count = peopleCountByLocation.get(locationId) || 0;
         marker.style.opacity = count ? "1" : ".4";
       } else marker.style.opacity = "1";
     });
@@ -1125,6 +1144,12 @@
     const container = $("#directory-view");
     if (container.classList.contains("hidden")) return;
     const query = $("#global-search").value.trim().toLowerCase();
+    const directoryLocationsById = activeView === "places"
+      ? new Map(state.locations.map((location) => [location.id, location]))
+      : null;
+    const directoryCharacterCounts = activeView === "places"
+      ? characterCountsByLocation(currentTime(), directoryLocationsById)
+      : null;
     let items = [];
     let heading = "";
     if (activeView === "characters") {
@@ -1135,7 +1160,7 @@
       });
     } else if (activeView === "places") {
       heading = "Atlas de lugares";
-      items = state.locations.filter((item) => matches(item.name + " " + item.type + " " + item.description, query)).map((location) => '<article class="entity-card" data-location="' + escapeHTML(location.id) + '" tabindex="0" role="button"><span class="avatar">⌖</span><h3>' + escapeHTML(location.name) + '</h3><p>' + escapeHTML(location.description) + '</p><div class="tag-row"><span class="tag">' + escapeHTML(location.type) + '</span><span class="tag">' + charactersAt(location.id).length + ' personajes</span></div></article>');
+      items = state.locations.filter((item) => matches(item.name + " " + item.type + " " + item.description, query)).map((location) => '<article class="entity-card" data-location="' + escapeHTML(location.id) + '" tabindex="0" role="button"><span class="avatar">⌖</span><h3>' + escapeHTML(location.name) + '</h3><p>' + escapeHTML(location.description) + '</p><div class="tag-row"><span class="tag">' + escapeHTML(location.type) + '</span><span class="tag">' + (directoryCharacterCounts.get(location.id) || 0) + ' personajes</span></div></article>');
     } else if (activeView === "timeline") {
       heading = "Acontecimientos del universo";
       items = state.events.filter((item) => {

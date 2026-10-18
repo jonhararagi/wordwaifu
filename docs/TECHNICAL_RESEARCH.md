@@ -160,3 +160,18 @@ Una sola evaluación del módulo mantiene un único conjunto de listeners; la pr
 - [MDN — Blob URLs](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/blob): las URLs deben revocarse cuando ya no se necesitan, pero no antes de que el consumidor haya terminado de utilizarlas.
 - [MDN — URL.revokeObjectURL()](https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL_static): referencia de API para liberar URLs temporales.
 
+
+
+## 2026-10-18 · Coste cuadrático al renderizar mapas grandes
+
+### Incidencia encontrada y corrección
+- `renderMap()` ejecutaba una consulta DOM completa dentro del bucle de cada ubicación para decidir si ya existía su marcador. Con `L` ubicaciones, esa comprobación realizaba aproximadamente `L` recorridos DOM de tamaño `L`, en lugar de una consulta más un recorrido por los datos.
+- La vista de personas también recalculaba el historial de ubicación de todos los personajes para cada marcador; la lista de lugares volvía a contar residentes por separado en cada tarjeta.
+- Se reemplazó el chequeo repetido por un `Set` construido una sola vez y las búsquedas lineales de ubicaciones por un `Map`. Los recuentos de personas por ubicación se calculan una vez por render de mapa/lista y se reutilizan.
+- Se añadió una prueba de navegador con 120 ubicaciones adicionales (más las del proyecto) que instrumenta `querySelectorAll` y exige exactamente una consulta al conjunto de marcadores ya existentes por render del atlas. El fixture se almacena en el contexto desechable de Playwright, no en los datos del usuario.
+
+### Fuentes técnicas consultadas
+- [web.dev (Google Chrome) — Optimize long tasks](https://web.dev/articles/optimize-long-tasks): las tareas largas de JavaScript bloquean las interacciones; el consejo es reducir trabajo innecesario en el hilo principal y dividir procesos pesados cuando corresponda.
+- [MDN — Main thread](https://developer.mozilla.org/en-US/docs/Glossary/Main_thread): el hilo principal atiende los eventos y el pintado; el JavaScript síncrono prolongado puede volver la interfaz poco receptiva.
+- [MDN — Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API): reserva los workers para cálculo costoso que sí necesite ejecutarse en paralelo. La corrección aplicada aquí evita trabajo redundante primero, sin añadir hilos, dependencias ni un motor gráfico pesado.
+
