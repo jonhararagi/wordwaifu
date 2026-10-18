@@ -8,6 +8,13 @@
 
 El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 49 aristas, centradas en Astrea, Hestia y una parte de Loki Familia. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
 
+### Corrección aplicada en main · 2026-10-18
+
+- El catálogo ya permite que una relación use `pending_verification` cuando la fuente primaria aún no está disponible; el validador compara el estado de la arista con el estado declarado por el claim.
+- `REL-RYU-ASTREA-DEPARTURE-SECONDARY` quedó marcada como `pending_verification`, con el tipo de evidencia `community_secondary_lead_unverified_against_primary`. La nota conserva la pista secundaria sin elevarla a canon.
+- Se comprobó que las 49 aristas actuales resuelven a archivos y headings de claims existentes y que sus continuidades/estados declarados coinciden. Esta es una comprobación estática por lectura del catálogo y de los expedientes, no una ejecución del validador ni una prueba de CI.
+- CI para el SHA de esta corrección: **NOT_CONFIRMED** desde las herramientas disponibles en esta ejecución; no declarar la suite verde hasta comprobar el run del commit exacto.
+
 ### Próximos cierres que sí pueden verificarse
 
 1. **Relaciones con evidencia propia.** Para cada arista registrar `sourceId`, `targetId`, `type`, `continuity`, `period`, `eventId` si corresponde, `sourceRefs`, `claimId` y estado de verificación. Rechazar extremos inexistentes, autorrelaciones accidentales, duplicados y claims que no pertenezcan a la continuidad visible.
