@@ -3044,7 +3044,7 @@
   function dossierRecordLabel(record) {
     if (!record) return "";
     const tags = Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : [];
-    let name = tags.find(tag => !/^(roster|high|low|medium|normal|critical|timeline|multi-era|spoiler)$/i.test(tag)) || record.id;
+    let name = String(record.name || record.title || "").trim() || tags.find(tag => !/^(roster|high|low|medium|normal|critical|timeline|multi-era|spoiler)$/i.test(tag)) || record.id;
     if (record.type === "familia") {
       const familyName = tags.find(tag => /familia/i.test(tag)) || name;
       name = familyName.replace(/\s*familia\s*/i, "").trim();
