@@ -1755,11 +1755,11 @@
   "lastStructuredSync": {
     "branch": "main",
     "sourceCommit": "35fdca6fe41fc672ecde7ebcbe074f12d1806bb0",
-    "trackedLoreFiles": 173,
+    "trackedLoreFiles": 175,
     "records": 62,
     "reservedIds": 57,
     "supportingDocuments": 104,
-    "syncNote": "Inventario reconciliado en main el 2026-10-18: rutas parciales verificadas para el encuentro Bell-Hestia mediante sinopsis editorial, la apertura de Bell en el anime, Ryu en DanMachi V y el rol de Eina como asesora en DanMachi III. Los perfiles y sinopsis no equivalen a lectura completa de cada novela; continúan pendientes localizadores de escenas y cronología detallada."
+    "syncNote": "Inventario reconciliado en main el 2026-10-18. Hay rutas parciales respaldadas para el encuentro Bell-Hestia por sinopsis editorial, la apertura de Bell en el anime, Eina como asesora de Bell en DanMachi III y Ryu en DanMachi V. Las sinopsis/perfiles no sustituyen la lectura de las novelas; la cronología exacta y escenas específicas continúan pendientes. Conteo estructural, no certificación de canon completo."
   },
   "relationships": [
     {
