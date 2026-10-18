@@ -6,7 +6,23 @@ const corpus=require("../src/lore-corpus.js");
 const archive=require("../src/character-archive.js");
 const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
-const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"];
+const paths=[
+  "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
+  "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
+  "research/inbox/BATCH-DM-005-astrea-familia-network.md",
+  "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+  "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+  "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+  "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
+  "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
+  "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+  "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+  "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
+  "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
+  "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
+  "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
+  "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"
+];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
@@ -57,7 +73,15 @@ assert.ok(kaguyaAr.relationships.every(r=>r.claims.length>0),"Every visible rela
 assert.ok(!ryu.claims.some(c=>c.entryId.endsWith("--CONT-ANIME")));
 const ryuAnime=archive.getProfile(index,"CHAR-RYUU-LION","CONT-ANIME","all");
 assert.ok(ryuAnime.claims.length&&ryuAnime.claims.every(c=>c.continuityScopes.includes("CONT-ANIME")));
-assert.equal(ryuAnime.relationships.length,0);
+assert.ok(ryuAnime.relationships.some(r=>r.targetId==="DM-CHAR-BELL"&&r.edgeId==="REL-RYU-BELL-RETURN-ANIME"&&r.claims.some(c=>c.claimId==="DMR-013-CLM-001")),
+  "Ryu archive profile must show the catalog-backed shared-return relation in the anime continuity.");
+assert.ok(ryuAnime.relationships.some(r=>r.targetId==="CHAR-ASTREA"&&r.edgeId==="REL-RYU-ASTREA-VISIT-ANIME"&&r.claims.some(c=>c.claimId==="DMR-013-CLM-002")),
+  "Ryu archive profile must show her anime visit to Astrea with a supporting claim.");
+const ryuWarGameRelation=ryuAnime.relationships.find(r=>r.targetId==="EVT-DM-RYUU-ASTREA-RETURN-ANIME-001");
+assert.ok(ryuWarGameRelation&&ryuWarGameRelation.targetType==="dossier"&&ryuWarGameRelation.targetPath==="events/candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md"&&ryuWarGameRelation.available,
+  "Character archive relations must provide a navigable event-dossier target instead of an unavailable dead end.");
+assert.ok(ryuAnime.relationships.every(r=>r.claims.length>0&&r.continuity==="CONT-ANIME"),
+  "Catalog-backed archive relationships must preserve evidence and the selected continuity.");
 assert.ok(!ryuAnime.moments.some(m=>m.id==="ryu-seven-days"));
 const aliseAr=archive.getProfile(index,"CHAR-ALISE-LOVELACE","CONT-AR","all");
 assert.ok(aliseAr.claims.some(c=>c.entryId==="DMR-002-CLM-019--CONT-AR"));
@@ -118,6 +142,19 @@ for(const id of ["DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","C
   const item=archive.getProfile(index,id,"CONT-ANIME","all");
   assert.ok(item&&item.claims.length>0,"Expanded character must expose source-backed claims: "+id);
 }
+const bellMain=archive.getProfile(index,"DM-CHAR-BELL","CONT-MAIN-LN","all");
+assert.ok(bellMain.relationships.some(r=>r.edgeId==="REL-BELL-MEETS-HESTIA-NOVEL-SYNOPSIS"&&r.targetId==="DM-CHAR-HESTIA"&&r.claims.some(c=>c.claimId==="DMR-015-CLM-001")),
+  "The official volume-one synopsis must expose the main-novel Bell-Hestia meeting relation in the archive.");
+assert.ok(bellMain.relationships.some(r=>r.edgeId==="REL-BELL-V21-LEARNS-EXPEDITION-FAILURE"&&r.targetType==="dossier"&&r.evidenceStatus==="provisional_summary"),
+  "Bell's main-novel archive must link to the Volume 21 event while retaining synopsis-only evidence.");
+assert.ok(bellMain.relationships.some(r=>r.edgeId==="REL-BELL-V21-ASKS-ABOUT-EXPEDITION"&&r.evidenceStatus==="source_checked_excerpt_only"),
+  "The visible chapter excerpt relation must remain labeled excerpt-only in the archive.");
+const finnMain=archive.getProfile(index,"CHAR-FINN-DEIMNE","CONT-MAIN-LN","all");
+assert.ok(finnMain.relationships.some(r=>r.edgeId==="REL-FINN-V21-STATUS-INQUIRY"&&r.targetType==="dossier"&&r.claims.some(c=>c.claimId==="DMR-008-CLM-025")),
+  "Finn's archive profile must offer a path to the event where Bell asks about the expedition.");
+const aisMain=archive.getProfile(index,"DM-CHAR-AIS","CONT-MAIN-LN","all");
+assert.ok(aisMain.relationships.some(r=>r.edgeId==="REL-AIS-V21-PROLOGUE-EXCERPT"&&r.targetPath==="events/candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md"),
+  "Ais's archive profile must link to the Volume 21 prologue excerpt dossier.");
 const bell=archive.getProfile(index,"DM-CHAR-BELL","CONT-ANIME","all");
 assert.ok(bell.relationships.length>=3,"Bell's source-backed relationship network should include Hestia, Ais and Eina.");
 assert.ok(archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR").references.some(ref=>ref.url.includes("fandom.com/es/wiki/Ryuu_Lion")));
