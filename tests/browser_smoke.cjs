@@ -184,6 +184,19 @@ async function run() {
     process.stdout.write("PASS mythic editor: weapon, mythic outfit and totality attack are independently editable and saved in the project.\\n");
     // Story Foundry: create, edit, persist, import the repository's complete Markdown novel, and verify chapter text survives.
     await page.locator('.nav-item[data-view="stories"]').click();
+    const storyViewState = await page.evaluate(() => ({
+      title: document.querySelector("#view-title")?.textContent,
+      directoryHidden: document.querySelector("#directory-view")?.classList.contains("hidden"),
+      activeStoriesNav: document.querySelector('.nav-item[data-view="stories"]')?.classList.contains("active"),
+      createButtonPresent: Boolean(document.querySelector("#story-create-button")),
+      pageErrors: window.__wordWaifuBrowserErrors || []
+    }));
+    assert.equal(storyViewState.title, "Historias y novelas",
+      "Story navigation must render the stories view: " + JSON.stringify(storyViewState));
+    assert.equal(storyViewState.directoryHidden, false,
+      "The directory must be visible before creating a story: " + JSON.stringify(storyViewState));
+    assert.equal(storyViewState.createButtonPresent, true,
+      "Stories view must expose its create action after navigation: " + JSON.stringify(storyViewState));
     await page.locator("#story-create-button").click();
     await page.locator("#story-meta-form").waitFor();
     await page.locator("#story-meta-form [name='storyName']").fill("Historia de prueba");
