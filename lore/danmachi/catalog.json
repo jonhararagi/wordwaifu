@@ -806,6 +806,22 @@
       ],
       "status": "source_checked_partial",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-BELL-OPENING-CRISIS-ANIME-001",
+      "path": "events/candidates/EVT-DM-BELL-OPENING-CRISIS-ANIME-001.md",
+      "type": "event",
+      "tags": [
+        "Bell Cranel",
+        "Hestia",
+        "Dungeon",
+        "fifth floor",
+        "opening",
+        "DanMachi anime",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -1699,16 +1715,22 @@
       "path": "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
       "type": "character_relationship_research",
       "status": "present_source_checked_adaptation"
+    },
+    {
+      "document_id": "RESEARCH-DM-014",
+      "path": "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
+      "type": "story_event_research",
+      "status": "present_source_checked_adaptation"
     }
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "b6ee02d737e0af2780840cc5761eb8688ffb5451",
-    "trackedLoreFiles": 167,
-    "records": 60,
+    "sourceCommit": "9a44978d1fa119a1210a4004fc432ed02afafd4f",
+    "trackedLoreFiles": 169,
+    "records": 61,
     "reservedIds": 57,
-    "supportingDocuments": 101,
-    "syncNote": "Conteos reconciliados en main el 2026-10-18 tras añadir un evento de la adaptación y un expediente de investigación. La ficha del nuevo evento está respaldada por dos fuentes oficiales de anime; la continuidad de novela no se considera cerrada. El inventario es estructural, no certifica que todo el canon esté completo."
+    "supportingDocuments": 102,
+    "syncNote": "Conteos reconciliados en main el 2026-10-18 tras incorporar dos eventos distintos de continuidad anime (Ryu en DanMachi V y apertura de Bell en el episodio 1), con un expediente por evento y claims explícitos. Ninguno cierra automáticamente la cobertura de la novela ligera; el inventario es estructural, no certifica canon completo."
   },
   "relationships": [
     {
@@ -2438,6 +2460,34 @@
       "claimRef": "DMR-013-CLM-002",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
       "note": "El portal y la noticia oficiales confirman la participación tardía y el perfil de nivel 6. No se infiere la estrategia ni el desenlace de cada combate."
+    },
+    {
+      "id": "REL-BELL-ONLY-FOLLOWER-HESTIA-ANIME",
+      "from": "DM-CHAR-BELL",
+      "to": "DM-CHAR-HESTIA",
+      "kind": "only_follower_of",
+      "label": "Al inicio del anime, Bell es el único miembro de Hestia Familia desde hace aproximadamente medio mes",
+      "continuity": "CONT-ANIME",
+      "interval": "Apertura del episodio 1; ancla temporal relativa de medio mes",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_episode_synopsis",
+      "claimRef": "DMR-014-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
+      "note": "Esta arista describe el estado inicial de la adaptación. No prueba por sí misma el momento del primer encuentro ni debe sustituir el cotejo del volumen 1."
+    },
+    {
+      "id": "REL-BELL-OPENING-CRISIS-ANIME",
+      "from": "DM-CHAR-BELL",
+      "to": "EVT-DM-BELL-OPENING-CRISIS-ANIME-001",
+      "kind": "encounters_opening_dungeon_crisis",
+      "label": "Bell afronta una crisis mortal en el quinto piso y una espadachina aparece para rescatarlo, según la sinopsis del anime",
+      "continuity": "CONT-ANIME",
+      "interval": "Episodio 1 de la primera temporada",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_episode_synopsis",
+      "claimRef": "DMR-014-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
+      "note": "La sinopsis consultada no nombra a la espadachina en el texto citado. No inferir aquí su identidad, la secuencia completa ni correspondencia detallada con la novela."
     }
   ]
 }
