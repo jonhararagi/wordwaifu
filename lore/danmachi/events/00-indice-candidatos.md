@@ -8,6 +8,12 @@ status: provisional
 
 Este índice separa eventos preliminares que necesitan verificación de los acontecimientos AU propuestos por el autor. Cada archivo mantiene su propio ID, fuentes vacías hasta la comprobación y estado explícito.
 
+## Historias de novela principal con cobertura parcial
+
+- [Volumen 21: expedición fallida del piso 60 y respuesta de Orario](candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md) · EVT-DM-V21-EXPEDITION-RESCUE-001 · CONT-MAIN-LN.
+
+Las tres afirmaciones de la sinopsis editorial conservan el estado `provisional_summary`; las dos relaciones del capítulo inicial y la del prólogo conservan `source_checked_excerpt_only`. El expediente diferencia la sinopsis editorial del fragmento primario visible y no infiere el rescate completo.
+
 ## Historia principal y referencias oficiales: eventos parciales y candidatos
 
 - [Descenso de las deidades](candidates/EVT-DM-DESCENT-001.md) · EVT-DM-DESCENT-001
