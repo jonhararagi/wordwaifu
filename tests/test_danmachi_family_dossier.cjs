@@ -66,7 +66,7 @@ for (const id of ["DMR-001-SRC-003", "DMR-001-SRC-004", "DMR-001-SRC-005", "DMR-
   assert.ok(sourceIds.has(id), "Astrea dossier source is not registered: " + id);
   assert.ok(astrea.includes(id), "Astrea dossier does not cite source: " + id);
 }
-for (const id of ["DMR-006-CLM-001", "DMR-006-CLM-002", "DMR-006-CLM-003", "DMR-006-CLM-004", "DMR-006-CLM-005"]) {
+for (const id of ["DMR-012-CLM-001", "DMR-012-CLM-002", "DMR-012-CLM-003", "DMR-012-CLM-004", "DMR-012-CLM-005"]) {
   assert.ok(astreaResearch.includes("### " + id), "Missing Astrea claim definition: " + id);
   assert.ok(astrea.includes(id), "Astrea dossier does not reference claim: " + id);
 }
