@@ -189,8 +189,11 @@ async function run() {
       directoryHidden: document.querySelector("#directory-view")?.classList.contains("hidden"),
       activeStoriesNav: document.querySelector('.nav-item[data-view="stories"]')?.classList.contains("active"),
       createButtonPresent: Boolean(document.querySelector("#story-create-button")),
-      pageErrors: window.__wordWaifuBrowserErrors || []
+      directoryHeading: document.querySelector("#directory-view .directory-heading")?.innerText || null,
+      directoryHtml: document.querySelector("#directory-view")?.innerHTML.slice(0, 500) || null
     }));
+    storyViewState.pageErrors = pageErrors.slice();
+    storyViewState.consoleErrors = consoleErrors.slice();
     assert.equal(storyViewState.title, "Historias y novelas",
       "Story navigation must render the stories view: " + JSON.stringify(storyViewState));
     assert.equal(storyViewState.directoryHidden, false,
