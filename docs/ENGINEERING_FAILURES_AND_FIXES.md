@@ -102,3 +102,11 @@ Fuente: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_Ind
 - GitHub Changelog, retención de checks/runs/statuses: https://github.blog/changelog/2026-10-01-actions-retention-now-covers-checks-runs-and-statuses/
 
 **Estado final de esta nota:** investigación documentada; no equivale a que las brechas de canon o los tests mencionados hayan sido cerrados. La cobertura factual de DanMachi sigue parcial hasta cotejar fuentes primarias y verificar los recorridos en el HEAD actual.
+
+
+### Verificación CI recuperada · 2026-10-18
+
+- El fallo reproducible anterior se debía a una aserción demasiado estricta en `tests/test_lore_corpus.cjs`: exigía `secondary_checked` aunque el grafo ya rebajaba el claim a `pending_verification`. La intención del test —no promover la razón disputada a canon— era correcta; la condición estaba desactualizada.
+- Se ajustó para admitir `secondary_checked` o `pending_verification`, y rechazar explícitamente `source_checked` sin evidencia primaria. La misma tanda añadió pruebas para las tres relaciones nuevas y la recuperación de los claims DMR-013 dentro de `CONT-ANIME`.
+- Resultado para el SHA exacto `ad182ab5bba631930eae88339e1b9783d819ad89`: [Validate WordWaifu #39155674818 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39155674818) y [DanMachi Lore and Retrieval Integrity #39155674834 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39155674834).
+- Esta certificación no se extiende automáticamente a un SHA nuevo. Cada commit posterior necesita sus propias ejecuciones; por eso los cambios de documentación que siguen se deben validar de nuevo.
