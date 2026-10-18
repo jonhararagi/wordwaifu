@@ -149,11 +149,22 @@
       arcs.length ? excerpt("Arcos que deben avanzar", arcs.join("; "), 220) : ""
     ].filter(Boolean);
     const protagonistGoal = conflict || premise || "el conflicto central que se definirá en la biblia narrativa";
+
+    // Assign each chapter its phase/beat in one pass. Re-scanning all chapters
+    // for every index made generation quadratic even though there are only six phases.
+    const phasePlan = new Array(count);
+    const phasePositions = new Map();
+    for (let index = 0; index < count; index++) {
+      const phase = phaseFor(index, count);
+      const position = phasePositions.get(phase) || 0;
+      phasePlan[index] = { phase, beatIndex: position % phase.beats.length };
+      phasePositions.set(phase, position + 1);
+    }
+
     return Array.from({ length: count }, (_, index) => {
       const number = index + 1;
-      const phase = phaseFor(index, count);
-      const phaseIndexes = Array.from({ length: count }, (_, i) => i).filter(i => phaseFor(i, count) === phase);
-      const beat = phase.beats[phaseIndexes.indexOf(index) % phase.beats.length];
+      const { phase, beatIndex } = phasePlan[index];
+      const beat = phase.beats[beatIndex];
       const previous = old[index] || {};
       const isFinal = number === count;
       const isFirst = number === 1;

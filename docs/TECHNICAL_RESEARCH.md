@@ -216,3 +216,21 @@ Los enlaces del catálogo abrían archivos Markdown fuera de WordWaifu. Esto rom
 ### Evidencia de prueba
 - [Validate WordWaifu #39106222211](https://github.com/jonhararagi/wordwaifu/actions/runs/39106222211) — `success` en `8ef2fb1bd731a677076f8d9271abe04bfbbe5a8c`.
 - [DanMachi Lore and Retrieval Integrity #39106222192](https://github.com/jonhararagi/wordwaifu/actions/runs/39106222192) — `success` en el mismo SHA.
+
+
+## 2026-10-18 · Eliminar coste cuadrático del índice narrativo antes de añadir workers/GPU
+
+### Incidencia y corrección aplicada
+- `src/story-forge.js` calculaba la posición de cada capítulo dentro de su fase reconstruyendo y filtrando la lista completa de índices por cada capítulo. Para `n` capítulos, esa parte hacía `n × n` evaluaciones aproximadas aunque el guion tuviera solo seis fases.
+- Se sustituyó por una preparación lineal `phasePlan`: cada capítulo recibe su fase y el índice de beat con una sola pasada y un contador por fase. La construcción del texto conserva los mismos datos y reglas narrativas, pero elimina ese trabajo repetido. El límite sigue siendo 500 capítulos.
+- Se añadió `tests/benchmark_story_forge.cjs`: calienta el motor y mide la mediana de nueve ejecuciones para 100, 250 y 500 capítulos. Se ejecuta en CI como medición informativa, no con un umbral dependiente del hardware que pudiera producir falsos fallos.
+
+### Cómo encaja con CPU, Web Workers y GPU
+- La optimización del algoritmo es el primer paso. Para el generador de 500 capítulos, la estructura de salida y su texto suelen dominar más que el cálculo de fase; añadir un Web Worker introduce serialización de mensajes, ciclo de vida y diferencias de ejecución local sin prueba de necesidad.
+- [MDN — Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API): un worker desplaza procesamiento fuera del hilo principal y no puede manipular directamente el DOM. Esto mejora respuesta de UI cuando hay trabajo pesado, pero no hace desaparecer el coste de CPU.
+- [web.dev — Optimize long tasks](https://web.dev/articles/optimize-long-tasks): una tarea de más de 50 ms puede retrasar interacciones; conviene medirla, reducir el trabajo innecesario y dividirla/ceder el hilo cuando aplique.
+- [web.dev — Use web workers to run JavaScript off the browser's main thread](https://web.dev/articles/off-main-thread): reservar trabajadores para trabajo computacional suficientemente sustancial como para justificar la comunicación y las limitaciones del worker.
+- [MDN — WebGPU API](https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API): WebGPU sirve para cómputo y gráficos que aprovechan el modelo de GPU; no es un acelerador general para búsquedas de fichas, CRUD o pequeñas validaciones.
+
+### Métrica
+- Los resultados de benchmark se publican como logs de CI para poder comparar regresiones por cambios de código; no se confunden con FPS, consumo eléctrico ni velocidad de CPU de cada usuario. El valor medido en GitHub Actions solo representa ese runner.
