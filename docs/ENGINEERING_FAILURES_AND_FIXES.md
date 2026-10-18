@@ -6,7 +6,7 @@
 
 ## 1. Prioridad de cobertura factual DanMachi
 
-El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 64 aristas, distribuidas entre Astrea, Hestia, parte de Loki Familia, rutas de adaptación de Ryu/Bell/Eina y la historia del volumen 21. El total no equivale a cobertura completa de relaciones. El total no supone cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
+El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 64 aristas, distribuidas entre Astrea, Hestia, parte de Loki Familia, rutas de adaptación de Ryu/Bell/Eina, historia parcial de Zeus/Hera y la expedición del volumen 21. El total no equivale a cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
 
 ### Corrección aplicada en main · 2026-10-18
 
@@ -163,7 +163,7 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - La prueba de la búsqueda transversal reveló un segundo fallo: aunque el validador aceptaba CROSS-CONTINUITY, el parser de src/lore-corpus.js solo extraía etiquetas CONT-.... Por ello, la relación podía existir en el catálogo y aun así no recuperarse al filtrar por su propio alcance.
 - **Corrección aplicada:** la expresión de extracción de continuityScopes ahora acepta CROSS-CONTINUITY; el test filtra por ese valor y exige recuperar DMR-008-CLM-027.
 - **Resultado CI para el SHA funcional exacto 15c968dd846138defd80c6599a6bdab84c7673fd:** [Validate WordWaifu #39156859477 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39156859477) y [DanMachi Lore and Retrieval Integrity #39156859489 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39156859489). Ambos incluyen test de lore, validación de catálogo y navegador.
-- **Revisión estática del grafo en el mismo contenido publicado:** 59 relaciones, extremos existentes, claim/localizador existente, continuidad y estado coincidentes, sin duplicados ni combinación de tipos secondary/community con source_checked. La comprobación estática complementa, no reemplaza, CI.
+- **Revisión estática del grafo en el mismo contenido publicado:** 64 relaciones, extremos existentes, claim/localizador existente, continuidad y estado coincidentes, sin duplicados ni combinación de tipos secondary/community con source_checked. La comprobación estática complementa, no reemplaza, CI.
 
 
 ### Ruta del volumen 21 por nivel de evidencia · 2026-10-18
@@ -180,3 +180,10 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - Estado de las 64 relaciones: 57 `source_checked`, 1 `secondary_checked`, 1 `pending_verification`, 2 `provisional_summary` y 3 `source_checked_excerpt_only`.
 - La historia del volumen 21 enlaza los hitos respaldados por sinopsis editorial y los fragmentos de capítulo/prólogo, manteniendo cada estado de evidencia. No declara finalizada la expedición, el rescate ni la cronología exacta del prólogo.
 - En el SHA de código/pruebas `19bbe40050496df71eec0a7e794ca08748a92fe7`, ambos workflows terminaron PASS. Esta certificación no se extiende automáticamente a los commits documentales posteriores; se verifican sus propios runs antes de cerrar la tanda.
+
+
+### CI final de la ruta de volumen 21 y navegación de fichas · 2026-10-18
+
+- Tras enlazar el expediente a las fichas de volumen 21, Loki Familia, Ais, Finn y Bell, los workflows terminaron en verde para el SHA de contenido `b5222780d313a097496d5c368cabab4e8cafd54c`: [Validate WordWaifu #39157471779 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39157471779) y [DanMachi Lore and Retrieval Integrity #39157471757 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39157471757).
+- El recorrido conecta la sinopsis editorial (estado `provisional_summary`) con el fragmento público del capítulo inicial y prólogo (estado `source_checked_excerpt_only`), manteniendo los límites de cada fuente.
+- El HEAD documental posterior se vuelve a validar en sus propias ejecuciones; estos enlaces certifican exactamente el SHA citado, no cualquier commit futuro.
