@@ -70,7 +70,7 @@
         characterIds: findIds(field(block, "character_id") + " " + field(block, "character_ids"), /\b(?:DM-CHAR|CHAR)-[A-Z0-9-]+\b/g),
         aspect: field(block, "aspect") || "general",
         eraOrInterval: field(block, "era_or_interval"),
-        continuityScopes: findIds(field(block, "continuity_scope"), /\bCONT-[A-Z0-9-]+\b/g),
+        continuityScopes: findIds(field(block, "continuity_scope"), /\b(?:CONT-[A-Z0-9-]+|CROSS-CONTINUITY)\b/g),
         sourceIds: findIds(block, /\bDMR-\d{3}-SRC-\d{3}\b/g),
         sourceTitle: field(block, "source_title"),
         sourceType: field(block, "source_type"),
