@@ -42,3 +42,13 @@ DanMachi, novela ligera, volumen 1: revisar las interacciones iniciales Eina-Bel
 - **Rol observable:** Eina aparece como asesora de la Guild asignada a Bell y como fuente de conocimientos sobre el Dungeon y la ciudad. [DMR-002-CLM-007]
 - **Interpretación limitada:** su función es compatible con un estilo práctico y orientador hacia un novato, pero esto se marca como inferencia basada en el rol profesional, no como personalidad universal ni como prueba de que actuaría igual con el OC. [DMR-002-CLM-008]
 - **Pendiente:** gustos, miedos, voz, edad y puesto en fechas anteriores requieren fuente y localizador específicos.
+
+
+## Relación de asesoramiento · CONT-ANIME
+
+El perfil oficial de DanMachi III identifica a Eina como recepcionista y asesora de la Guild asignada a Bell Cranel, y dice que le proporciona conocimientos del Dungeon y de las circunstancias de Orario.
+
+- **Ruta de historia:** [Eina orienta a Bell desde la Guild](../events/candidates/EVT-DM-EINA-ADVISOR-ANIME-001.md).
+- **Relaciones:** `REL-EINA-ADVISOR-BELL-ANIME` y `REL-EINA-WORKS-GUILD-ANIME`.
+- **Claim:** DMR-016-CLM-001; fuente DMR-016-SRC-001: https://danmachi.com/danmachi3/character/.
+- **Límite:** el vínculo general corresponde a CONT-ANIME. Las conversaciones concretas, la secuencia de su primera asesoría y los localizadores de la novela principal siguen pendientes.
