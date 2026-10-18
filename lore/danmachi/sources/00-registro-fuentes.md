@@ -623,3 +623,142 @@ verification_status: stub
 - rights_note: Resumir en palabras propias; no copiar descripciones extensas.
 - verified_by: DANMACHI-RESEARCH-016
 - verification_status: source_checked
+
+ 
+---
+
+## DMR-025-SRC-001 · Soma Familia · compendio comunitario
+
+- source_id: DMR-025-SRC-001
+- title: Soma Familia
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- source_url: https://danmachi.fandom.com/wiki/Soma_Familia
+- accessed_at: 2026-10-18
+- locator_type: community_roster_and_summary
+- locator: Roster y resumen de la Familia; sin localizador primario de novela.
+- claims_supported: [DMR-025-CLM-003, DMR-025-CLM-004, DMR-025-CLM-005, DMR-025-CLM-006]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Usada como pista de búsqueda. No sustituye cotejo de la novela y no resuelve hechos discutidos.
+- rights_note: Resumen original breve; no reproducir texto extenso.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_checked
+
+## DMR-025-SRC-002 · Soma · compendio comunitario
+
+- source_id: DMR-025-SRC-002
+- title: Soma
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- source_url: https://danmachi.fandom.com/wiki/Soma
+- accessed_at: 2026-10-18
+- locator_type: community_character_summary
+- locator: Identidad, afiliación y asociación con la elaboración de bebidas.
+- claims_supported: [DMR-025-CLM-001]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Pista secundaria; historia y atributos individuales requieren fuente primaria.
+- rights_note: Paráfrasis original breve.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_checked
+
+## DMR-025-SRC-003 · Zanis Lustra · compendio comunitario
+
+- source_id: DMR-025-SRC-003
+- title: Zanis Lustra
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- source_url: https://danmachi.fandom.com/wiki/Zanis_Lustra
+- accessed_at: 2026-10-18
+- locator_type: community_character_summary
+- locator: Cargo histórico reportado y referencias al conflicto de Soma Familia.
+- claims_supported: [DMR-025-CLM-003, DMR-025-CLM-005, DMR-025-CLM-006]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Cargo y secuencia requieren un localizador primario; no inferir culpabilidad.
+- rights_note: Paráfrasis original breve.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_checked
+
+## DMR-025-SRC-004 · Chandra Ihit · compendio comunitario
+
+- source_id: DMR-025-SRC-004
+- title: Chandra Ihit
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- source_url: https://danmachi.fandom.com/wiki/Chandra_Ihit
+- accessed_at: 2026-10-18
+- locator_type: community_character_summary
+- locator: Cargo atribuido e intervención interpersonal reportada.
+- claims_supported: [DMR-025-CLM-004, DMR-025-CLM-005, DMR-025-CLM-009]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: No acredita por sí sola una escena ni una relación permanente.
+- rights_note: Paráfrasis original breve.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_checked
+
+## DMR-025-SRC-005 · GA Bunko · sinopsis editorial de DanMachi, volumen 6
+
+- source_id: DMR-025-SRC-005
+- title: DanMachi, volumen principal 6
+- creator_or_publisher: Fujino Omori / GA Bunko (SB Creative)
+- source_type: OFFICIAL_PUBLISHER_REFERENCE
+- official_url: https://ga.sbcr.jp/product/9784797380583/
+- accessed_at: 2026-10-18
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial y contexto de captura de Liliruca por Soma Familia antes del War Game.
+- claims_supported: [DMR-025-CLM-002]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Fuente editorial primaria para lo que la sinopsis afirma; no reemplaza la novela completa ni aporta localizador interno de capítulo/página.
+- rights_note: Paráfrasis original, sin copiar la sinopsis.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: source_checked_excerpt_only
+
+## DMR-025-SRC-006 · GA Bunko · sinopsis editorial de DanMachi, volumen 2
+
+- source_id: DMR-025-SRC-006
+- title: DanMachi, volumen principal 2
+- creator_or_publisher: Fujino Omori / GA Bunko (SB Creative)
+- source_type: OFFICIAL_PUBLISHER_REFERENCE
+- official_url: https://ga.sbcr.jp/product/9784797373073/
+- accessed_at: 2026-10-18
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial; contexto de reputación de Soma Familia y misterio de la bebida divina.
+- claims_supported: [DMR-025-CLM-007]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Sinopsis oficial resumida; no determina culpabilidad, roster total ni biografías completas.
+- rights_note: Paráfrasis original, sin copiar la sinopsis.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: source_checked_excerpt_only
+
+## DMR-025-SRC-007 · Resumen comunitario de DanMachi, volumen 6
+
+- source_id: DMR-025-SRC-007
+- title: DanMachi Light Novel Volume 6 Synopsis
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- source_url: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_6/Synopsis
+- accessed_at: 2026-10-18
+- locator_type: community_plot_summary
+- locator: Resumen comunitario sobre la acusación relacionada con Canoe y Liliruca.
+- claims_supported: [DMR-025-CLM-006]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Pista comunitaria; no prueba la acusación ni su resolución.
+- rights_note: Paráfrasis original breve.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_checked
+
+## DMR-025-SRC-008 · Liliruca Arde · compendio comunitario en español
+
+- source_id: DMR-025-SRC-008
+- title: Liliruca Arde
+- creator_or_publisher: Comunidad DanMachi Wiki en español
+- source_type: COMMUNITY_WIKI
+- source_url: https://danmachi.fandom.com/es/wiki/Liliruca_Arde
+- accessed_at: 2026-10-18
+- locator_type: community_character_summary
+- locator: Afiliación por período y referencias a interacciones con Chandra.
+- claims_supported: [DMR-025-CLM-008, DMR-025-CLM-009]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: La afiliación previa y la intervención interpersonal requieren cotejo primario.
+- rights_note: Paráfrasis original breve.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_checked

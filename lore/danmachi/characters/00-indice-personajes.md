@@ -89,3 +89,12 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 3. Zeus/Hera, Alfia y Zard con localizadores y marcas de spoiler.
 4. Bell/Hestia/Eina/Ais en novela principal, por escena.
 5. Personal de la taberna y estados de Freya Familia.
+
+
+## Familia Soma · fichas parciales
+
+- [Soma](soma.md) — deidad vinculada a Soma Familia; descripción biográfica secundaria.
+- [Zanis Lustra](zanis-lustra.md) — antiguo capitán reportado; período y detalles por verificar.
+- [Chandra Ihit](chandra-ihit.md) — capitán posterior reportado; intervención con Liliruca pendiente de localizador primario.
+- [Canoe Belway](canoe-belway.md) — referencia de roster y acusación reportada no resuelta.
+- [Expediente relacional DMR-025](../research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md).

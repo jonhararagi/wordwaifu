@@ -167,3 +167,11 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 
 - [DANMACHI-RESEARCH-009 · Astrea Record, Sword Oratoria y Familia Chronicle](research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md) — once afirmaciones provisionales ya indexadas en el buscador.
 - Dossiers: [índice de volúmenes y líneas paralelas](volumes/00-indice-volumenes-y-arcos.md).
+
+
+## Familia Soma · red relacional con evidencia graduada
+
+- [Familia Soma](familias/soma-familia.md) — cargos y roster comunitarios etiquetados como pendientes de cotejo primario.
+- [Soma](characters/soma.md), [Zanis Lustra](characters/zanis-lustra.md), [Chandra Ihit](characters/chandra-ihit.md) y [Canoe Belway](characters/canoe-belway.md) — fichas parciales conectadas por aristas estables del catálogo.
+- [DANMACHI-RESEARCH-025 · red relacional de Soma](research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md) — nueve relaciones trazables; separa la captura citada por sinopsis editorial, los cargos secundarios y el informe no resuelto sobre Canoe.
+- Nota de rigor: la sinopsis editorial de los volúmenes 2 y 6 no equivale al texto completo. Las relaciones secundarias permanecen marcadas hasta localizar pasajes primarios.
