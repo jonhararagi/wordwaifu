@@ -192,3 +192,27 @@ Una sola evaluación del módulo mantiene un único conjunto de listeners; la pr
 ### Alcance no prometido
 - Las fases son guías adaptables, no una fórmula que garantice una buena novela. El autor debe revisar causalidad, voz, agencia del elenco, representación y continuidad antes de dar capítulos por terminados.
 - Este registro describe el código y las pruebas añadidas; la evidencia de CI solo se considera PASS cuando termine para el SHA final.
+
+## 2026-10-18 · Lector interno de expedientes DanMachi y navegación contextual
+
+### Incidencia UX
+Los enlaces del catálogo abrían archivos Markdown fuera de WordWaifu. Esto rompía el contexto del proyecto y hacía perder el hilo al explorar relaciones, Familia, acontecimientos y fuentes.
+
+### Corrección en `main`
+- Se añadió un visor dentro de un `dialog` con título, estado de carga, metadatos del registro y sección de entidades relacionadas.
+- La navegación conserva pilas atrás/adelante y accesos directos a índice maestro y registro de fuentes. Cuando una entidad tiene ficha en el archivo de personajes, el visor puede abrir esa ficha de continuidad y recordar la ruta para volver al expediente.
+- Los botones de entidades relacionadas se proponen por etiquetas compartidas del catálogo. La interfaz advierte que una etiqueta compartida no demuestra amistad, alianza ni canon confirmado.
+- Las lecturas asíncronas llevan un token de solicitud para evitar que una respuesta antigua sustituya el expediente más reciente. Los errores HTTP se muestran en la ventana, sin invalidar la vista principal.
+
+### Protección y límites
+- El renderer crea nodos DOM y asigna texto con `textContent`; no inserta el cuerpo Markdown como HTML ejecutable. Las rutas internas se normalizan y restringen a archivos `.md` bajo `lore/danmachi/`; `javascript:` y `data:` se rechazan. Las URL relativas se resuelven con `URL()` y se verifica origen/ruta. Los links HTTP(S) externos usan `target="_blank"`, `rel="noopener noreferrer"`.
+- El test E2E actual cubre catálogo → Familia Astrea → Ryu → atrás/adelante → ficha por continuidad → retorno → fuentes → índice maestro. Falta un test adversarial con Markdown malicioso y un recorrido completo de relación temporal/deidad/evento.
+- Se soporta un subconjunto útil de Markdown (títulos, párrafos, listas, citas, bloques de código y enlaces). Tablas y todos los dialectos/extensiones no están completos; la vista original del repositorio continúa siendo la referencia de edición.
+
+### Fuentes técnicas consultadas
+- [OWASP — DOM Based XSS Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html): trata el contenido no confiable como texto y usa sinks como `textContent`/constructores DOM; evita pasar entradas directamente a `innerHTML`.
+- [MDN — Resolving relative references to a URL](https://developer.mozilla.org/en-US/docs/Web/API/URL_API/Resolving_relative_references): la resolución de enlaces relativos debe usar una URL base, no concatenación ingenua de cadenas.
+
+### Evidencia de prueba
+- [Validate WordWaifu #39106222211](https://github.com/jonhararagi/wordwaifu/actions/runs/39106222211) — `success` en `8ef2fb1bd731a677076f8d9271abe04bfbbe5a8c`.
+- [DanMachi Lore and Retrieval Integrity #39106222192](https://github.com/jonhararagi/wordwaifu/actions/runs/39106222192) — `success` en el mismo SHA.

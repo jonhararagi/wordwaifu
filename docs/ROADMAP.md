@@ -2,6 +2,27 @@
 
 ## Snapshot operativo — 2026-10-18
 
+| Fase | Estado observado en `main` | Evidencia / bloqueo |
+|---|---|---|
+| 0 · Dirección y contrato | **Completa** | Visión maestra, contrato offline-first, modelo inicial y criterios documentados. |
+| 1 · Aplicación navegable | **Implementada, con validación manual parcial** | Atlas, tarjetas/paneles, catálogo y visor interno de expedientes. El test conserva contexto al pasar de Familia a Ryu, atrás/adelante, ficha de continuidad, retorno, fuentes e índice maestro. |
+| 2 · Datos y persistencia | **Implementada; bordes manuales pendientes** | CRUD, IndexedDB/respaldo local, importación/exportación validada, snapshots, papelera y recuperación, con pruebas. La cuota real del navegador aún no se ha agotado en una prueba verificada. |
+| 3 · Atlas temporal y grafo lore | **Parcial** | El visor usa Markdown y navegación contextual; la lista relacionada por etiquetas avisa que no demuestra relaciones. Falta recorrido relacional Ryu → compañero → Familia → diosa → evento con tiempo, estado y fuente en cada arista. |
+| 4 · Generadores locales | **Parcial** | Catálogos y generadores de poderes/manifestaciones y Story Forge existen. Falta persistir e interconectar cada poder/reliquia/carta con portador, pacto, escena/evento y evolución temporal. |
+| 5 · Historias y elenco coral | **Parcial** | Story Forge produce índices de 1–500 capítulos; la prosa final sigue siendo del autor y faltan objetivos/participación por secundario en el grafo de escenas. |
+| 6 · Continuity Guard | **Parcial** | Hay validación estructural, fuentes/continuidades y comprobaciones de links/IDs; falta detección causal global de anacronismos/contradicciones entre escenas, poderes y conocimiento de personajes. |
+| 7 · Extensiones | **Futura/opcional** | React/TypeScript/Vite, escritorio/Tauri y adaptadores externos no son gates del prototipo actual. |
+
+### CI en el HEAD actual al momento de la auditoría
+
+- [Validate WordWaifu #39106222211 — success, SHA `8ef2fb1...`](https://github.com/jonhararagi/wordwaifu/actions/runs/39106222211).
+- [DanMachi Lore and Retrieval Integrity #39106222192 — success, SHA `8ef2fb1...`](https://github.com/jonhararagi/wordwaifu/actions/runs/39106222192).
+
+CI valida las rutas de pruebas ejecutadas. No sustituye revisión humana visual, agotamiento de almacenamiento real ni verificación factual de todas las fichas.
+
+
+## Snapshot operativo — 2026-10-18
+
 La lista detallada posterior conserva los criterios históricos. Este bloque aclara el estado observado en `main`; no implica que las fases pendientes se hayan terminado.
 
 | Fase | Estado real | Evidencia o bloqueo actual |
@@ -248,164 +269,3 @@ Al cerrar cada tarea, sobrescribir `docs/DONE.md` con el punto de continuidad vi
 - El proyecto anterior se guarda/verifica antes de cambiar; el candidato se valida y persiste antes de reemplazar el estado en memoria.
 - Chromium CI PASS: [#37966133138](https://github.com/jonhararagi/wordwaifu/actions/runs/37966133138). Verifica creación, IDs únicos, cambio en ambos sentidos y que Asteria conserva sus cuatro personajes.
 - El primer test detectó un selector DOM singular usado como colección; se corrigió y la última ejecución terminó en PASS.
-- **WF-004-B.1.2 — DONE:** borrado seguro de proyectos con confirmación por ID exacto y protección del activo tanto en UI como dentro de la transacción IndexedDB.
-- **PASS_REAL:** CI [#37988482281](https://github.com/jonhararagi/wordwaifu/actions/runs/37988482281), incluyendo 18 pruebas de esquema, smoke Chromium completo y validación estructural.
-- Chromium confirmó bloqueo del proyecto activo y de candidatos solo en respaldo local; cancelar no borra; al aceptar, solo se elimina el ID objetivo, mientras el ID vecino y Asteria con sus cuatro personajes sobreviven.
-- El gate automatizado de WF-004-B.1 queda cerrado. Prueba manual de Windows 11 sigue NOT_RUN.
-- **Siguiente:** WF-004-B.2, índice maestro multiverso sin mezclar universos. TIMER: 3–5 horas iniciales.
-
-
-### WF-004-B.2 — DONE · Índice maestro multiverso
-- Implementado `ProjectRepository.searchAcrossProjects(query, options)`: búsqueda de solo lectura sobre los universos en IndexedDB, con respaldo local de alcance limitado si falla la base.
-- Tipos iniciales: personajes, lugares, acontecimientos, organizaciones, relaciones e historias.
-- Resultados con `projectId`, `entityType`, `entityId`, nombre del universo y detalle; permite filtro por tipo y texto seleccionado, con normalización de acentos.
-- El estado activo permanece sin cambios. La búsqueda parcial indica explícitamente errores y no interpreta cero resultados parciales como una ausencia segura.
-- **PASS_REAL:** [CI #37996000708](https://github.com/jonhararagi/wordwaifu/actions/runs/37996000708), con smoke Chromium y validador estructural completados.
-- **No optimizado aún:** la búsqueda reconstruye el índice en memoria al consultar; no persiste un índice invertido.
-- Mantener `main` intacta y PR #1 en borrador. Siguiente: WF-004-B.3, apertura contextual de un resultado usando `projectId + entityType + entityId`. TIMER inicial: 2–4 horas.
-
-
-### WF-004-B.3 — DONE · Apertura contextual del índice maestro
-- La acción de un resultado valida `projectId + entityType + entityId`; las identidades locales repetidas en universos distintos siguen separadas.
-- Guarda/verifica el proyecto anterior; lee el destino de IndexedDB, valida el proyecto y confirma que la ficha exacta exista antes del cambio.
-- Ante proyecto/ficha ausente o fallo de persistencia, rechaza la acción y restaura el proyecto anterior; un respaldo local no verificado no se ofrece como destino confiable.
-- Chromium CI PASS_REAL: [#38000904219](https://github.com/jonhararagi/wordwaifu/actions/runs/38000904219), incluidos rollback y fallos sembrados.
-- Se añadió aserción de accesibilidad: tras abrir el resultado, el foco queda en el encabezado exacto, incluso con IDs de personaje repetidos en otro universo.
-- Siguiente: WF-004-C.1, respaldos versionados y restauración segura. TIMER: 4–7 horas.
-
-
-### WF-004-C.1 — DONE · Almacén de snapshots y restauración segura
-- IndexedDB v1→v2 no destructiva; añade `snapshots` con índices por proyecto/fecha y límite de 25 copias por universo.
-- API para crear/listar/borrar/restaurar; valida el ID propietario, comprueba el contenido y conserva un snapshot `before-restore` antes de aplicar una restauración.
-- El gestor permite crear, restaurar y borrar copias individuales con confirmación; los snapshots se aíslan por `projectId`.
-- Una importación válida crea `before-import`; ante fallo al persistir el candidato, la sesión activa y el respaldo local no se sustituyen.
-- **PASS_REAL:** [Chromium CI #38006355845](https://github.com/jonhararagi/wordwaifu/actions/runs/38006355845).
-
-### WF-004-C.2 — DONE · Protección ante borrados destructivos
-- Antes de borrar personaje, lugar, acontecimiento, organización o relación, la aplicación crea y verifica un snapshot del proyecto. Si falla, la operación se cancela.
-- Se comprueba que cada snapshot previo contiene el registro que después se elimina; así la prueba valida el contenido, no solo la existencia del snapshot.
-- La copia 26 se rechaza cuando ya existen 25 snapshots, sin sobrescribir los anteriores. Una operación de borrado real también se bloquea al alcanzar el límite.
-- El diálogo de borrado de universo explica que todas sus copias de seguridad también se eliminan y que no existe recuperación posterior; la prueba verifica que el ID objetivo y sus snapshots se eliminan, mientras los proyectos vecinos y el proyecto activo sobreviven.
-- **PASS_REAL:** [Chromium CI #38008260869](https://github.com/jonhararagi/wordwaifu/actions/runs/38008260869), Chromium smoke completo sin errores de página.
-- **PASS_STATIC:** 18 pruebas de esquema, sintaxis y estructura del proyecto.
-- **NOT_RUN:** prueba manual visual/usabilidad en Windows 11.
-
-### WF-004-C.3 — PARTIAL · Papelera y recuperación de universos completos
-- IndexedDB v2→v3, store `trash`, envío reversible por ID, restauración con snapshots y borrado permanente separado.
-- El guardado está endurecido contra resurrección accidental: `write(project)` lee el tombstone dentro de la transacción, y `saveActive(project)` valida la papelera antes de modificar el respaldo local.
-- Chromium verifica migración, protección del activo, restauración/conflicto de ID, conservación de snapshots, rollback, UI y supervivencia de un respaldo ajeno al mover/borrar permanentemente otro universo.
-- **PASS_REAL CI:** [#38022402137](https://github.com/jonhararagi/wordwaifu/actions/runs/38022402137), código probado `327360caa66875becbd11e5563fc2988196553a4`; 18 pruebas de esquema, Chromium y validador estructural en verde.
-- Siguen pendientes una prueba dedicada de nombres idénticos, cuota realmente agotada y revisión visual/manual en Windows 11.
-- **TIMER siguiente tarea: 1–2 horas** para los gates restantes.
-- Mantener `main` intacta y PR #1 en borrador hasta autorización expresa.
-
-
----
-
-## Referencia vigente de `main` (c07ef226a61ad6e48b081890f1e3d96eecb585b5)
-
-Se conserva íntegro el documento actual de `docs/ROADMAP.md` en `main` como referencia de visión de producto y gates de calidad, sin sustituir el contrato de papelera ni los detalles de la enciclopedia.
-
-# WordWaifu · Hoja de ruta maestra
-
-> Documento vivo. Las etapas describen el plan, no funcionalidades ya entregadas.
-
-## TIMER de planificación
-
-- Auditoría inicial y definición de alcance: **2–4 horas**.
-- Primer prototipo útil, una vez confirmado el objetivo: **1–3 días**.
-- MVP con persistencia, práctica y pruebas: **1–3 semanas**, según alcance y recursos.
-- Calidad de producto, contenido amplio, accesibilidad y publicación: **varias semanas o más**.
-- Estimaciones preliminares. Se recalculan tras inspeccionar el repositorio y elegir la plataforma.
-
-## Fase 0 · Verdad del repositorio
-
-**Objetivo:** saber qué existe antes de diseñar sobre suposiciones.
-
-- [ ] Registrar HEAD, rama predeterminada, árbol de archivos y workflows.
-- [ ] Detectar código, dependencias, licencias, secretos accidentales y archivos generados.
-- [ ] Ejecutar solo comprobaciones compatibles con el estado real del proyecto.
-- [ ] Confirmar el objetivo principal de WordWaifu, idiomas, plataforma inicial y modo de uso.
-- [ ] Registrar decisiones y bloqueos en documentación.
-
-**Salida:** inventario verificable, alcance mínimo acordado y ninguna afirmación de implementación sin evidencia.
-
-## Fase 1 · Diseño del producto
-
-- [ ] Definir usuario principal y caso de uso.
-- [ ] Diseñar el bucle central: aprender → recuperar de memoria → recibir corrección → repasar → ver progreso.
-- [ ] Definir si los personajes son acompañantes cosméticos, narrativos o parte de la progresión.
-- [ ] Diseñar estados vacíos, carga, error, falta de conexión y accesibilidad.
-- [ ] Elegir métricas de aprendizaje útiles sin manipular al usuario con presión artificial.
-
-**Puerta de calidad:** una especificación breve con criterios de aceptación comprobables.
-
-## Fase 2 · MVP funcional
-
-El alcance final depende de la auditoría y de la plataforma elegida. Si se confirma la hipótesis de aprendizaje de vocabulario, el candidato inicial es:
-
-- [ ] Una sesión de práctica completa, desde elegir contenido hasta recibir resultado.
-- [ ] Preguntas con respuesta y explicación verificables.
-- [ ] Progreso persistente con recuperación tras cerrar y abrir la aplicación.
-- [ ] Revisión de palabras falladas y repetición espaciada sencilla.
-- [ ] Interfaz adaptable a móvil y escritorio.
-- [ ] Contenido de demostración original con procedencia documentada.
-- [ ] Pruebas de la lógica de aprendizaje y de persistencia.
-
-**No incluir todavía:** monetización, sistemas sociales, tienda compleja, IA costosa ni cuentas remotas hasta demostrar que el bucle principal funciona y aporta valor.
-
-## Fase 3 · Calidad de producto
-
-- [ ] Pruebas unitarias de reglas y cálculos.
-- [ ] Pruebas de integración para guardado, recuperación y flujos críticos.
-- [ ] Comprobación manual o automatizada en tamaños de pantalla representativos.
-- [ ] Accesibilidad: teclado, contraste, etiquetas, foco y movimiento reducido.
-- [ ] Rendimiento, manejo de errores, recuperación y exportación/borrado de datos si corresponde.
-- [ ] CI reproducible con resultados visibles.
-- [ ] Instrucciones de instalación y diagnóstico para una persona nueva.
-
-## Fase 4 · Contenido y personalidad visual
-
-- [ ] Definir una guía visual original y consistente.
-- [ ] Mantener manifiesto de recursos: archivo, autor, URL de origen, licencia, atribución y uso autorizado.
-- [ ] Separar prototipos de referencia de los recursos autorizados para distribución.
-- [ ] Crear contenido pedagógico revisado, con respuestas válidas y explicaciones.
-- [ ] Evitar depender de servicios externos sin alternativa o aviso claro al usuario.
-
-## Fase 5 · Preparación de publicación
-
-- [ ] Confirmar plataforma y requisitos de publicación.
-- [ ] Revisar licencias, privacidad, seguridad, accesibilidad y dependencias.
-- [ ] Probar instalación limpia y actualización.
-- [ ] Documentar límites conocidos y procedimiento de recuperación.
-- [ ] No anunciar lanzamiento hasta completar pruebas y revisión de recursos.
-
-## Política de licencias y recursos externos
-
-El carácter no comercial no concede automáticamente permiso para copiar o redistribuir software, ilustraciones, fuentes, voces, datasets, textos o personajes. Cada recurso externo debe clasificarse antes de integrarlo:
-
-- **APTO:** licencia y atribución compatibles con el uso previsto, documentadas.
-- **SOLO REFERENCIA:** se puede estudiar, pero no copiar al producto.
-- **REVISIÓN NECESARIA:** términos ambiguos o permiso no confirmado; no distribuir.
-- **EXCLUIDO:** licencia incompatible o prohibición clara.
-
-Si un recurso de evaluación no puede permanecer en la entrega, debe estar aislado, identificado y retirarse antes de publicar. No se deben introducir materiales dudosos con la intención de resolverlo al final si eso implica distribuirlos.
-
-## Protocolo de ejecución
-
-1. **INSPECT:** leer las instrucciones y el estado actual; verificar HEAD.
-2. **PLAN:** definir una sola tarea activa, archivos objetivo y criterios de aceptación.
-3. **EXECUTE:** cambios acotados y reversibles.
-4. **VERIFY:** ejecutar pruebas reales cuando sea posible; registrar exactamente lo no ejecutado.
-5. **PERSIST:** guardar cambios y documentación en Git.
-6. **REPORT:** HEAD antes/después, commit, archivos, pruebas, evidencias y bloqueos.
-
-Estados de evidencia: `PASS_REAL`, `PASS_STATIC`, `FAIL_REAL`, `NOT_RUN`, `UNKNOWN`, `PARTIAL`, `NOT_READY`.
-
-## Decisiones pendientes del propietario
-
-1. ¿WordWaifu es principalmente una app para **aprender vocabulario**, un juego de palabras, un diccionario con personajes, o algo distinto?
-2. ¿Cuál es la primera plataforma prioritaria: web, Windows o Android?
-3. ¿Qué idioma se aprende primero y cuál es el idioma de la interfaz?
-
-Resolver estas decisiones evita construir una arquitectura bonita para el producto equivocado.
