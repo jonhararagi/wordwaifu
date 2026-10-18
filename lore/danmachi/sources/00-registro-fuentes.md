@@ -762,3 +762,27 @@ verification_status: stub
 - rights_note: Paráfrasis original breve.
 - verified_by: DANMACHI-RESEARCH-025
 - verification_status: secondary_checked
+
+---
+
+## DMR-026-SRC-001 · Glosario oficial de lugares de la web del anime
+
+- source_id: DMR-026-SRC-001
+- title: スペシャル — ダンまち用語集（地名）
+- creator_or_publisher: Portal oficial de la serie de anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi, glosario oficial de la adaptación anime
+- volume_or_edition: Glosario en línea; sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi/special/index.html
+- accessed_at: 2026-10-18
+- locator_type: glossary_entries
+- locator: Entradas 迷宮都市オラリオ, 摩天楼施設バベル y 豊饒の女主人
+- claims_supported: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación para las descripciones generales de Orario, Babel y Hostess of Fertility. No sustituye los pasajes de la novela ligera ni prueba que todos los detalles se mantengan idénticos en cada continuidad.
+- conflicting_sources: []
+- rights_note: Paráfrasis original breve en español; no reproducir las descripciones completas del glosario.
+- verified_by: DANMACHI-RESEARCH-026
+- verification_status: source_checked

@@ -328,3 +328,17 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Verificar en una edición legítima de la novela los cargos de Zanis y Chandra, la afiliación previa de Lili y la intervención atribuida a Chandra.
 - [ ] Localizar el pasaje primario relacionado con Canoe antes de elevar cualquier afirmación sobre destino, causa o responsabilidad.
 - **Estado:** conexiones integradas; cobertura factual global y cotejo de novela siguen parciales.
+
+## DANMACHI-RESEARCH-026 · Orario, Babel y Hostess of Fertility
+
+- Estado: PARTIAL; se activaron tres fichas geográficas a partir del glosario oficial de la web del anime.
+- [x] Registrar Orario como lugar separado del registro de contexto general.
+- [x] Crear Babel con sus relaciones verificadas hacia Orario, la Guild y el Dungeon.
+- [x] Crear Hostess of Fertility y relacionarla con Orario y la clientela habitual documentada (Familia Loki).
+- [x] Registrar la fuente oficial de adaptación y tres claims recuperables en CONT-ANIME.
+- [x] Añadir pruebas de integridad, búsqueda por entidad y recuperación de claims.
+- [ ] No elevar estos datos a continuidad de novela sin cotejo específico.
+- [ ] Localizar una fuente que permita distinguir una sede física de la Guild de la instalación de Babel antes de activar LOC-GUILD.
+- [ ] Añadir Mia Grand y Syr Flova como fichas relacionadas solo en una tanda aparte, con alcance y estado de evidencia propios.
+- **Fuente:** https://danmachi.com/danmachi/special/index.html
+- **Límite:** el glosario oficial de anime acredita descripciones generales; no proporciona mapa detallado, historia completa de locales ni estado de cada integrante en todas las épocas.

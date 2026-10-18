@@ -980,6 +980,48 @@
       ],
       "status": "secondary_reference_disputed_details_primary_check_pending",
       "priority": "normal"
+    },
+    {
+      "id": "LOC-ORARIO",
+      "path": "places/orario.md",
+      "type": "location",
+      "status": "source_checked_partial",
+      "priority": "high",
+      "tags": [
+        "Orario",
+        "迷宮都市オラリオ",
+        "ciudad laberíntica",
+        "Dungeon",
+        "Guild"
+      ]
+    },
+    {
+      "id": "LOC-BABEL",
+      "path": "places/babel.md",
+      "type": "location",
+      "status": "source_checked_partial",
+      "priority": "high",
+      "tags": [
+        "Babel",
+        "摩天楼施設バベル",
+        "Guild",
+        "Dungeon",
+        "Orario"
+      ]
+    },
+    {
+      "id": "LOC-HOSTESS",
+      "path": "places/hostess-of-fertility.md",
+      "type": "location",
+      "status": "source_checked_partial",
+      "priority": "normal",
+      "tags": [
+        "Hostess of Fertility",
+        "豊饒の女主人",
+        "Orario",
+        "taberna",
+        "Loki Familia"
+      ]
     }
   ],
   "reservedIds": [
@@ -1134,22 +1176,7 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "LOC-ORARIO",
-      "type": "location",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "LOC-BABEL",
-      "type": "location",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "LOC-GUILD",
-      "type": "location",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "LOC-HOSTESS",
       "type": "location",
       "status": "candidate_not_created"
     },
@@ -1877,6 +1904,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
       "type": "character_relationship_research",
       "status": "secondary_checked_with_primary_text_gaps"
+    },
+    {
+      "document_id": "RESEARCH-DM-026",
+      "path": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "type": "official_anime_location_research",
+      "status": "source_checked_partial"
     }
   ],
   "lastStructuredSync": "2026-10-18",
@@ -2986,6 +3019,104 @@
       "claimRef": "DMR-025-CLM-009",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
       "note": "La pista no demuestra una amistad permanente ni otras relaciones no documentadas."
+    },
+    {
+      "id": "REL-ORARIO-DUNGEON-GENERAL",
+      "from": "LOC-ORARIO",
+      "to": "LOC-DUNGEON",
+      "kind": "contains_underground_labyrinth",
+      "label": "El glosario oficial presenta a Orario como ciudad que posee el Dungeon subterráneo",
+      "continuity": "CONT-ANIME",
+      "interval": "Descripción del glosario oficial de la web del anime; no fija un periodo narrativo",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_glossary",
+      "claimRef": "DMR-026-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "note": "Marco geográfico general en continuidad de anime; no documenta pisos ni cartografía interna."
+    },
+    {
+      "id": "REL-ORARIO-GUILD-CORE",
+      "from": "LOC-ORARIO",
+      "to": "DM-GUILD-001",
+      "kind": "institutional_center",
+      "label": "La Guild figura como institución central que gestiona el Dungeon en Orario",
+      "continuity": "CONT-ANIME",
+      "interval": "Descripción del glosario oficial de la web del anime; no fija un periodo narrativo",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_glossary",
+      "claimRef": "DMR-026-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "note": "Describe el papel general de la institución, no todas sus normas ni el edificio físico exacto."
+    },
+    {
+      "id": "REL-BABEL-ORARIO-LOCATION",
+      "from": "LOC-BABEL",
+      "to": "LOC-ORARIO",
+      "kind": "located_in",
+      "label": "Babel se ubica en Orario",
+      "continuity": "CONT-ANIME",
+      "interval": "Descripción del glosario oficial de la web del anime; no fija un periodo narrativo",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_glossary",
+      "claimRef": "DMR-026-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "note": "La ubicación está indicada por el glosario oficial del anime."
+    },
+    {
+      "id": "REL-BABEL-GUILD-OWNED",
+      "from": "LOC-BABEL",
+      "to": "DM-GUILD-001",
+      "kind": "owned_by",
+      "label": "Babel se describe como instalación propiedad de la Guild",
+      "continuity": "CONT-ANIME",
+      "interval": "Descripción del glosario oficial de la web del anime; no fija un periodo narrativo",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_glossary",
+      "claimRef": "DMR-026-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "note": "No afirma que exista una sede física adicional separada de Babel."
+    },
+    {
+      "id": "REL-BABEL-DUNGEON-MANAGEMENT",
+      "from": "LOC-BABEL",
+      "to": "LOC-DUNGEON",
+      "kind": "oversees_and_manages",
+      "label": "Babel se usa para supervisar y gestionar el Dungeon",
+      "continuity": "CONT-ANIME",
+      "interval": "Descripción del glosario oficial de la web del anime; no fija un periodo narrativo",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_glossary",
+      "claimRef": "DMR-026-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "note": "No implica que el glosario detalle todos los sistemas de supervisión."
+    },
+    {
+      "id": "REL-HOSTESS-ORARIO-LOCATION",
+      "from": "LOC-HOSTESS",
+      "to": "LOC-ORARIO",
+      "kind": "located_in",
+      "label": "Hostess of Fertility es una taberna de Orario",
+      "continuity": "CONT-ANIME",
+      "interval": "Descripción del glosario oficial de la web del anime; no fija un periodo narrativo",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_glossary",
+      "claimRef": "DMR-026-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "note": "Solo se registra la localización general que indica el glosario."
+    },
+    {
+      "id": "REL-HOSTESS-LOKI-FAMILIA-REGULAR",
+      "from": "LOC-HOSTESS",
+      "to": "DM-FAM-LOKI",
+      "kind": "regularly_visited_by",
+      "label": "La Familia Loki figura como clientela habitual de Hostess of Fertility",
+      "continuity": "CONT-ANIME",
+      "interval": "Descripción del glosario oficial de la web del anime; no fija un periodo narrativo",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_glossary",
+      "claimRef": "DMR-026-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "note": "Relación de visita habitual descrita en la fuente oficial; no implica que todos los integrantes estén presentes en toda época."
     }
   ]
 }
