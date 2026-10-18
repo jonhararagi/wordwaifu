@@ -86,6 +86,20 @@ Fuentes:
 
 Fuente: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
 
+### E. Herramienta de lockfiles: correcciones de uso y validación en releases públicos
+
+El repositorio público de releases de `github/gh-actions-lock` publicó `0.2.0-rc.1` el 12 de octubre de 2026. El registro de cambios destaca tres correcciones concretas:
+
+- `verify-local` reporta referencias `./` en lugar de migrarlas automáticamente en el disco.
+- La lectura de workflows respeta `GH_ACTIONS_LOCK_REPO_ROOT` para localizar la raíz del repositorio.
+- La comprobación detecta entradas sin usar en el lockfile y workflows que no están registrados en él.
+
+Fuente: https://github.com/github/gh-actions-lock/releases
+
+**Qué error/riesgo ilustra:** una herramienta de validación puede hacer cambios no deseados durante una operación que el usuario cree que solo inspecciona; además, una lista de dependencias fijadas puede aparentar cobertura completa mientras omite workflows o conserva entradas obsoletas. La nota de release enumera las correcciones; no publica un informe de incidente completo, por lo que no se atribuyen consecuencias que el autor no declara.
+
+**Aplicación conservadora a WordWaifu:** los validadores deben ser de solo lectura por defecto; las migraciones deben requerir un modo explícito. Si el proyecto adopta el lockfile de Actions, el CI debe fallar ante workflows no registrados o entradas obsoletas. Como las workflows actuales ya fijan varias acciones a SHA completos y la función de lockfiles sigue en vista previa pública, no se instala una nueva herramienta en esta tanda sin demostrar que aporta cobertura adicional al repositorio.
+
 ## 3. Decisiones inmediatas
 
 - No añadir GPU, workers ni complejidad de hardware sin un benchmark que identifique el cuello de botella.
