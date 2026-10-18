@@ -523,8 +523,8 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Alise Lovelace");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-AR");
     assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_17.png"));
-    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]:visible').count() > 0);
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]:visible').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
     assert.ok((await page.locator("#archive-profile-portrait .archive-portrait-art").getAttribute("src")).includes("chara_tachi_16.png"));
     await page.locator("#archive-profile-back").click();
@@ -536,8 +536,8 @@ async function run() {
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Viaje para visitar a Astrea"),
       "The later novel continuity should show Ryu's journey to see Astrea in the timeline.");
     await page.locator("#archive-tab-relationships").click();
-    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').count() > 0);
-    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]').first().click();
+    assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]:visible').count() > 0);
+    await page.locator('#archive-profile-panel [data-character-link="CHAR-ASTREA"]:visible').first().click();
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Astrea");
     assert.equal(await page.locator("#archive-profile-continuity").inputValue(), "CONT-MAIN-LN");
     assert.ok(await page.locator('#archive-profile-panel [data-character-link="CHAR-CECIL-BLACKLIZA"]').count() > 0,
