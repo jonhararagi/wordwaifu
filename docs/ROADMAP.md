@@ -2,6 +2,27 @@
 
 ## Snapshot operativo — 2026-10-18
 
+| Fase | Estado en `main` | Evidencia / bloqueo |
+|---|---|---|
+| 0 · Dirección y contrato | **Completa** | Visión maestra, contrato offline-first y criterios documentados. |
+| 1 · Aplicación navegable | **Implementada, revisión manual parcial** | Atlas, catálogo y visor contextual; Playwright cubre Familia Astrea → Ryu → atrás/adelante → perfil de continuidad → retorno → fuentes → índice maestro. También se prueba contenido Markdown malicioso como texto inerte. |
+| 2 · Datos y persistencia | **Implementada; bordes manuales pendientes** | CRUD, IndexedDB/respaldo local, import/export validado, snapshots, papelera/recuperación. No se ha agotado de forma verificada la cuota real de navegador. |
+| 3 · Atlas temporal y grafo lore | **Parcial** | El visor interno mantiene contexto; falta ruta de canon mediante relaciones explícitas y temporales, con cada enlace sustentado por estado y fuente. |
+| 4 · Generadores locales | **Implementada en parte** | Story Forge optimizado a una pasada para 1–500 capítulos, con benchmark CI. Persistir poder/reliquia/carta con portador, pacto, escena/evento y evolución temporal sigue pendiente. |
+| 5 · Historia y elenco coral | **Parcial** | El índice narrativo funciona; el manuscrito final sigue bajo control del autor. Faltan arcos secundarios y conexiones completas con escenas/eventos. |
+| 6 · Continuity Guard | **Parcial** | Validación estructural y filtros de continuidad; falta comprobador causal global de anacronismos/contradicciones entre escenas, poderes y conocimiento. |
+| 7 · Extensiones | **Futura/opcional** | React/TypeScript/Vite, escritorio y conectores de IA no forman parte de los gates cerrados del prototipo. |
+
+### Evidencia reproducible
+
+- [Validate WordWaifu #39108041754 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/39108041754) — SHA `d51990d5...`.
+- [DanMachi Lore and Retrieval Integrity #39108041733 — success](https://github.com/jonhararagi/wordwaifu/actions/runs/39108041733) — mismo SHA.
+- Medianas del benchmark de Story Forge en ese runner: `100 = 0,81 ms`, `250 = 1,61 ms`, `500 = 2,20 ms`, 9 repeticiones por tamaño.
+- Pruebas de navegador comprueban navegación contextual, seguridad del visor y render del atlas; no prueban revisión humana visual ni agotamiento real de almacenamiento.
+
+
+## Snapshot operativo — 2026-10-18
+
 | Fase | Estado observado en `main` | Evidencia / bloqueo |
 |---|---|---|
 | 0 · Dirección y contrato | **Completa** | Visión maestra, contrato offline-first, modelo inicial y criterios documentados. |

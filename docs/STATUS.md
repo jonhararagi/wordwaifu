@@ -1,23 +1,22 @@
 # Estado de WordWaifu
 ## Estado operativo y verificación — 2026-10-18
 
-**Esta sección prevalece sobre el historial que sigue.** Los SHA, porcentajes y ramas por debajo del separador son snapshots históricos.
+**Esta sección prevalece sobre el historial que sigue.** Los SHA, porcentajes y ramas debajo del separador son históricos y no deben tomarse como estado actual.
 
 - **Repositorio/rama:** `jonhararagi/wordwaifu` · `main`.
-- **Último HEAD comprobado:** `8ef2fb1bd731a677076f8d9271abe04bfbbe5a8c`.
-- **CI verde en ese SHA:** [Validate WordWaifu #39106222211](https://github.com/jonhararagi/wordwaifu/actions/runs/39106222211) y [DanMachi Lore and Retrieval Integrity #39106222192](https://github.com/jonhararagi/wordwaifu/actions/runs/39106222192) concluyeron `success`. Incluyen el test de navegador de navegación interna del corpus.
-- **Entregas funcionales recientes en `main`:**
-  - [Microventana de asistencia narrativa manual](https://github.com/jonhararagi/wordwaifu/commit/3710ef4c511006c771437ede39bd97e215b32f0f): prepara y transfiere prompts solo por acción manual; no envía texto automáticamente.
-  - [Story Forge integrado](https://github.com/jonhararagi/wordwaifu/commit/812007f22078e1e1affeec153819c17de8ef5acb), generador estructural de 1–500 capítulos que conserva IDs/manuscritos/estados existentes y audita índices.
-  - [Lector contextual de expedientes](https://github.com/jonhararagi/wordwaifu/commit/c1bd663d4a9c2a1215cbec9d94806a9c2d0f3892): abre Markdown en un diálogo interno, enlaza expedientes por etiquetas compartidas, habilita atrás/adelante/inicio/fuentes, integra la ficha de personaje con retorno al expediente y restringe las rutas internas al corpus.
-  - [Restauración de la suite E2E e inclusión de la regresión de navegación](https://github.com/jonhararagi/wordwaifu/commit/8ef2fb1bd731a677076f8d9271abe04bfbbe5a8c).
-- **Recorrido probado:** catálogo → Familia Astrea → ficha relacionada de Ryu → atrás/adelante → ficha de continuidad del personaje → volver al expediente → registro de fuentes → índice maestro. El test verifica que el contenido se abre dentro de WordWaifu y no reemplaza la vista principal.
-- **Núcleo implementado:** CRUD de entidades, relaciones de personajes, atlas/markers, búsqueda multiverso, aislamiento de proyectos, IndexedDB con respaldo local, import/export JSON validado, snapshots, papelera/recuperación, catálogo mitológico y de poderes, archivo de personajes por continuidad, editor de manuscritos y Story Forge.
-- **DanMachi no está terminado factual ni relacionalmente:** `lore/danmachi/catalog.json` mantiene 48 registros, 67 IDs reservados y 100 documentos de apoyo. Los 48 registros tienen estado `draft`, `pending_verification`, `provisional`, `proposed_author_event`, `provisional_inference`, `provisional_reference_checked` o `source_checked_partial`; ninguno está marcado como verificación completa. Los enlaces sugeridos por etiquetas no equivalen a relaciones personales verificadas.
-- **Gates abiertos:** navegación completa Ryu → relación explícita → personaje → Familia → miembros → diosa → acontecimiento/cronología → fuentes; cotejo de claims con fuentes primarias; modelado temporal libre; relaciones de poderes/reliquias/pactos/escenas; arcos de secundarios; pruebas de cuota real y revisión visual manual en Windows.
-- **Porcentaje:** no se certifica un global de 90% mientras esos criterios sigan abiertos y no exista un denominador único validado. El [cuadro de auditoría](COMPLETION_AUDIT.md) declara la evidencia y sus límites en lugar de convertir cantidad de archivos en porcentaje.
+- **HEAD funcional verificado:** `d51990d5a54b70f2a161ec41acba15b59684bb1b`.
+- **CI verde en el HEAD:** [Validate WordWaifu #39108041754](https://github.com/jonhararagi/wordwaifu/actions/runs/39108041754) y [DanMachi Lore and Retrieval Integrity #39108041733](https://github.com/jonhararagi/wordwaifu/actions/runs/39108041733) terminaron en `success`.
+- **Rendimiento del Story Forge:** benchmark Node/Ubuntu con nueve ejecuciones por tamaño, mediana: 100 capítulos `0,81 ms`, 250 `1,61 ms`, 500 `2,20 ms`. Son valores del runner de CI, no una garantía para equipos de los usuarios. El benchmark es informativo y no tiene umbral específico de hardware.
+- **Arreglo de CPU:** [`perf(story-forge): remove quadratic phase lookup`](https://github.com/jonhararagi/wordwaifu/commit/d51990d5a54b70f2a161ec41acba15b59684bb1b). Antes, cada capítulo reconstruía y filtraba la lista completa de índices para conocer su posición en la fase; ahora se asigna fase/beat en una sola pasada. El algoritmo de esa selección pasa de trabajo cuadrático a lineal en el número de capítulos.
+- **Conclusión de arquitectura:** no se agregó GPU ni Web Worker al generador porque la carga medida para 500 capítulos es pequeña en CI. Se priorizó eliminar el trabajo repetido. Esto no descarta un Worker futuro si la generación conjunta de muchos proyectos o un motor causal pesado demuestra tareas largas en equipos reales.
+- **Seguridad de expedientes:** el test Chromium cubre navegación interna y contenido Markdown hostil con etiqueta `script`, enlaces `javascript:`/`data:` y escape de ruta; verifica que el texto no se ejecuta y que esos destinos no se convierten en controles navegables.
+- **Núcleo implementado:** CRUD y grafo de entidades, atlas/markers, búsqueda, aislamiento de proyectos, IndexedDB/respaldo local, JSON validado, snapshots/papelera/recuperación, catálogo mítico/de poderes, archivo de personajes por continuidad, editor de manuscritos y Story Forge estructural.
+- **DanMachi continúa incompleto en lo factual:** el catálogo sigue con 48 registros, 67 IDs reservados y 100 documentos de apoyo; los registros activos no están marcados como verificación completa. El visor ofrece enlaces de consulta basados en etiquetas, no prueba por sí solo relaciones personales.
+- **Gates abiertos:** relación explícita Ryu → personaje → Familia → deidad → evento/cronología con fecha/continuidad/fuente; cotejar claims del canon contra fuentes primarias; mayor cobertura de secundarios y de poderes/reliquias/contratos dentro del grafo; recorrido temporal completo; caso de cuota real y revisión visual manual en Windows.
+- **Porcentaje global:** no se certifica 90% ni 100% mientras los gates anteriores continúen abiertos. La [auditoría de finalización](COMPLETION_AUDIT.md) separa funcionalidades entregadas, parcialmente cubiertas y no verificadas.
 
 ## Snapshot histórico de la auditoría previa
+
 
 ## Snapshot histórico de la auditoría previa
 Los registros por debajo del separador incluyen historiales y resultados antiguos de otras iteraciones; no deben prevalecer sobre el estado operativo actual de esta sección.

@@ -206,7 +206,7 @@ Los enlaces del catálogo abrían archivos Markdown fuera de WordWaifu. Esto rom
 
 ### Protección y límites
 - El renderer crea nodos DOM y asigna texto con `textContent`; no inserta el cuerpo Markdown como HTML ejecutable. Las rutas internas se normalizan y restringen a archivos `.md` bajo `lore/danmachi/`; `javascript:` y `data:` se rechazan. Las URL relativas se resuelven con `URL()` y se verifica origen/ruta. Los links HTTP(S) externos usan `target="_blank"`, `rel="noopener noreferrer"`.
-- El test E2E actual cubre catálogo → Familia Astrea → Ryu → atrás/adelante → ficha por continuidad → retorno → fuentes → índice maestro. Falta un test adversarial con Markdown malicioso y un recorrido completo de relación temporal/deidad/evento.
+- El test E2E cubre catálogo → Familia Astrea → Ryu → atrás/adelante → ficha por continuidad → retorno → fuentes → índice maestro. También sirve Markdown hostil con `<script>`, enlaces `javascript:` y `data:`, y enlace relativo que intenta escapar del corpus; comprueba texto inerte y ausencia de controles navegables para esos destinos. Continúa pendiente una revisión adversarial más amplia y el recorrido completo de relación temporal/deidad/evento.
 - Se soporta un subconjunto útil de Markdown (títulos, párrafos, listas, citas, bloques de código y enlaces). Tablas y todos los dialectos/extensiones no están completos; la vista original del repositorio continúa siendo la referencia de edición.
 
 ### Fuentes técnicas consultadas
@@ -234,3 +234,7 @@ Los enlaces del catálogo abrían archivos Markdown fuera de WordWaifu. Esto rom
 
 ### Métrica
 - Los resultados de benchmark se publican como logs de CI para poder comparar regresiones por cambios de código; no se confunden con FPS, consumo eléctrico ni velocidad de CPU de cada usuario. El valor medido en GitHub Actions solo representa ese runner.
+
+## 2026-10-18 · Resultado del benchmark Story Forge tras eliminar la selección cuadrática
+
+En [Validate WordWaifu #39108041754](https://github.com/jonhararagi/wordwaifu/actions/runs/39108041754), runner Ubuntu de GitHub Actions, la mediana de nueve ejecuciones fue de **0,81 ms para 100 capítulos**, **1,61 ms para 250** y **2,20 ms para 500**. Las cifras son orientativas para ese runner; no se deben extrapolar a PC de usuario, navegador o consumo de energía. El resultado refuerza la decisión de no agregar Web Worker o WebGPU a esta ruta sin una medición real de tareas largas en navegador.
