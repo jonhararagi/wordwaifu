@@ -137,3 +137,8 @@ El perfil oficial de DanMachi III presenta a Eina como recepcionista y asesora a
 ### Volumen 21: expedición y rescate · CONT-MAIN-LN · 2026-10-18
 
 El evento `EVT-DM-V21-EXPEDITION-RESCUE-001` organiza en una sola ruta los hitos de la expedición fallida de Loki Familia, la movilización de Orario, el regreso de Bell y los fragmentos públicos del primer capítulo/prólogo. Las aristas del resumen editorial conservan `provisional_summary`; las aristas basadas en el fragmento visible conservan `source_checked_excerpt_only`. La ruta no equivale a un resumen completo del volumen 21 ni fija el orden de toda la novela.
+
+
+### Ryu, Kaguya y Lyra · roster histórico secundario
+
+Se añadieron dos aristas en `CONT-AR` para representar únicamente la co-pertenencia histórica de Ryu con Kaguya y Lyra según el roster comunitario DMR-007-CLM-005. Ambas quedan `secondary_checked`; no afirman amistad, rivalidad ni interacción personal. El validador y la enciclopedia conservan la etiqueta de evidencia secundaria.
