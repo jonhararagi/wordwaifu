@@ -161,6 +161,10 @@ for (const relation of catalog.relationships) {
   if (relation.from === relation.to) errors.push("Relationship " + id + " has the same source and target");
   if (typeof relation.continuity === "string" && !/^CONT-[A-Z0-9-]+$/.test(relation.continuity)) errors.push("Relationship " + id + " has an invalid continuity key: " + relation.continuity);
   if (relation.evidenceStatus && !validEvidenceStatuses.has(relation.evidenceStatus)) errors.push("Relationship " + id + " has an unsupported evidenceStatus: " + relation.evidenceStatus);
+  // A secondary/community lead cannot be considered primary-source checked merely because its file exists.
+  if (relation.evidenceStatus === "source_checked" && /(?:secondary|community|unverified|lead)/i.test(String(relation.evidenceType || ""))) {
+    errors.push("Relationship " + id + " marks secondary or unverified evidence as source_checked: " + relation.evidenceType);
+  }
   const claim = claimLocations.get(relation.claimRef);
   if (!claim) {
     errors.push("Relationship " + id + " references missing research claim heading: " + relation.claimRef);
