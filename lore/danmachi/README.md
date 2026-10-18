@@ -4,8 +4,8 @@
 
 El corpus y su interfaz ya están integrados en `main`. Esta carpeta no es una rama aislada ni una afirmación de canon completo: es un corpus de investigación enlazado, con resúmenes, fuentes y continuidades etiquetadas.
 
-- Catálogo actual: `catalog.json` esquema v2, **64 registros activos**, **55 IDs reservados** y **104 documentos de apoyo**.
-- Los 64 registros no están todos verificados: 12 `draft`, 5 `pending_verification`, 32 `provisional`, 4 `proposed_author_event`, 1 `provisional_inference`, 1 `provisional_reference_checked` y 9 `source_checked_partial`. La validación no promueve automáticamente un registro a canon confirmado. Estos conteos se recalculan desde `catalog.json` y describen estados estructurales, no una tasa de verdad canónica.
+- Catálogo actual: `catalog.json` esquema v2, **65 registros activos**, **55 IDs reservados** y **104 documentos de apoyo**.
+- Los 65 registros no están todos verificados: 12 `draft`, 5 `pending_verification`, 32 `provisional`, 4 `proposed_author_event`, 1 `provisional_inference`, 1 `provisional_reference_checked` y 10 `source_checked_partial`. La validación no promueve automáticamente un registro a canon confirmado. Estos conteos se recalculan desde `catalog.json` y describen estados estructurales, no una tasa de verdad canónica.
 - El validador `tools/check-catalog.mjs` comprueba JSON, unicidad de IDs/rutas, IDs de frontmatter, existencia de los documentos y enlaces Markdown locales. **No comprueba la verdad factual ni sustituye el cotejo de capítulos/páginas de fuentes primarias.**
 - El archivo de personajes está conectado a `src/character-archive.js` y `src/character-dossiers.js`; las búsquedas y recuperación usan `src/lore-corpus.js`. El test de navegador y el workflow **DanMachi Lore and Retrieval Integrity** cubren parte de esa integración.
 - Se separan expresamente `CONT-MAIN-LN`, `CONT-AR`, `CONT-ANIME`, `CONT-AU` y `CROSS-CONTINUITY`. No se usa un hecho de adaptación o AU para rellenar silenciosamente la cronología de la novela principal.
@@ -129,3 +129,8 @@ La tanda `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md` incorp
 ### Ruta de Bell, la Guild y Eina · CONT-ANIME · 2026-10-18
 
 El perfil oficial de DanMachi III presenta a Eina como recepcionista y asesora asignada a Bell, y señala que le aporta conocimientos del Dungeon y de Orario. La ficha nueva `EVT-DM-EINA-ADVISOR-ANIME-001` permite recorrer Bell → Eina → Guild con dos aristas (`REL-EINA-ADVISOR-BELL-ANIME`, `REL-EINA-WORKS-GUILD-ANIME`). La relación se limita a la adaptación; el candidato de novela `EVT-DM-EINA-ADVISOR-001` permanece pendiente de localizadores.
+
+
+### Volumen 21: expedición y rescate · CONT-MAIN-LN · 2026-10-18
+
+El evento `EVT-DM-V21-EXPEDITION-RESCUE-001` organiza en una sola ruta los hitos de la expedición fallida de Loki Familia, la movilización de Orario, el regreso de Bell y los fragmentos públicos del primer capítulo/prólogo. Las aristas del resumen editorial conservan `provisional_summary`; las aristas basadas en el fragmento visible conservan `source_checked_excerpt_only`. La ruta no equivale a un resumen completo del volumen 21 ni fija el orden de toda la novela.
