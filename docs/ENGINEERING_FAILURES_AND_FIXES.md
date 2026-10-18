@@ -6,20 +6,20 @@
 
 ## 1. Prioridad de cobertura factual DanMachi
 
-El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 52 aristas, centradas en Astrea, Hestia, una parte de Loki Familia y un recorrido reciente de Ryu en DanMachi V. El total no supone cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
+El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 55 aristas, centradas en Astrea, Hestia, una parte de Loki Familia y un recorrido reciente de Ryu en DanMachi V. El total no supone cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
 
 ### Corrección aplicada en main · 2026-10-18
 
 - El catálogo ya permite que una relación use `pending_verification` cuando la fuente primaria aún no está disponible; el validador compara el estado de la arista con el estado declarado por el claim.
 - `REL-RYU-ASTREA-DEPARTURE-SECONDARY` quedó marcada como `pending_verification`, con el tipo de evidencia `community_secondary_lead_unverified_against_primary`. La nota conserva la pista secundaria sin elevarla a canon.
-- Se comprobó que las 49 aristas actuales resuelven a archivos y headings de claims existentes y que sus continuidades/estados declarados coinciden. Esta es una comprobación estática por lectura del catálogo y de los expedientes, no una ejecución del validador ni una prueba de CI.
+- La comprobación estática inicial encontró 49 aristas con archivos y headings de claims existentes; tras nuevas rutas, el grafo actual tiene 55 aristas y requiere la misma comprobación exhaustiva de nuevo en el HEAD de cierre. La lectura estática no sustituye la ejecución del validador ni la prueba de CI.
 - CI para el SHA de esta corrección: **NOT_CONFIRMED** desde las herramientas disponibles en esta ejecución; no declarar la suite verde hasta comprobar el run del commit exacto.
 
 ### Actualización incremental · 2026-10-18 · recorrido Ryu
 
 - Se añadió el evento `EVT-DM-RYUU-ASTREA-RETURN-ANIME-001`, con un expediente de investigación dedicado y dos referencias oficiales: el perfil de personajes de DanMachi V y la noticia oficial de Ryu de nivel 6.
 - Se añadieron tres aristas con claims explícitos: Ryu regresa junto a Bell desde las profundidades; Ryu visita a Astrea fuera de Orario en la adaptación; Ryu participa tarde en la guerra de Familias.
-- El catálogo queda en 60 registros, 57 IDs reservados, 101 documentos de apoyo y 52 relaciones. Las tres aristas nuevas usan `CONT-ANIME`; no se trasladaron a novela los hechos promocionales de la adaptación.
+- El catálogo quedó luego en 61 registros, 57 IDs reservados, 103 documentos de apoyo y 55 relaciones. Las tres aristas nuevas usan `CONT-ANIME`; no se trasladaron a novela los hechos promocionales de la adaptación.
 - La lectura estática encuentra ahora 50 aristas `source_checked`, una `secondary_checked` y una `pending_verification`. Esta cuenta no es evidencia de que el validador o CI hayan corrido en el HEAD más reciente.
 - El evento mantiene como pendientes el orden detallado por episodio, las consecuencias escena por escena y el cotejo separado de una edición de novela. No afirma reciprocidad romántica ni las reglas internas de Astrea Record.
 
@@ -132,3 +132,11 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - El dossier se limita a la adaptación. No declara que ese medio mes date el primer encuentro de la novela, no fija la fecha del descenso de Hestia y no identifica a la espadachina usando únicamente la sinopsis.
 - Estado estructural tras añadir ambos recorridos de adaptación: 61 registros, 57 IDs reservados, 102 documentos de apoyo y 54 aristas. El porcentaje de cobertura global sigue sin calcularse porque hay historias y localizadores primarios pendientes.
 - Las pruebas de regresión ahora incluyen ambos expedientes y comprobarán su recuperabilidad por continuidad antes de cerrar la siguiente tanda.
+
+
+### Ampliación de historia · encuentro Bell–Hestia en novela · 2026-10-18
+
+- Se consultó la ficha editorial oficial de GA Bunko para el volumen 1: https://ga.sbcr.jp/product/9784797372809/. La sinopsis afirma que Bell, rechazado por otras Familias, conoce a Hestia, una diosa sin miembros, y acepta su invitación para unirse a su Familia.
+- El evento `EVT-DM-BELL-MEETS-HESTIA-001` cambió de `pending_verification` a `source_checked_partial`; se creó `DANMACHI-RESEARCH-015` con `DMR-015-CLM-001` y se añadió la relación `REL-BELL-MEETS-HESTIA-NOVEL-SYNOPSIS` en `CONT-MAIN-LN`.
+- Alcance limitado: la sinopsis confirma el núcleo del encuentro y la invitación, pero no ofrece localizador interno de capítulo/página. La fecha y el orden de la escena, cuándo recibe Bell la Falna y el intervalo desde el descenso de Hestia siguen abiertos.
+- Catálogo actualizado: 61 registros, 57 IDs reservados, 103 documentos de apoyo y 55 aristas; estados de aristas: 53 `source_checked`, una `secondary_checked` y una `pending_verification`. La tasa global de cobertura factual sigue sin calcularse.
