@@ -13,7 +13,8 @@ const documentPaths = [
   "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
   "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
-  "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md"
+  "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+  "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -24,9 +25,12 @@ assert.ok(index.relationships.length >= 47, "The graph must retain the Astrea/He
 assert.ok(index.relationships.some(edge => edge.id === "REL-RIVERIA-VICECAPTAIN-LOKI-FAM" && edge.claimRef === "DMR-005-CLM-003" && edge.continuity === "CONT-SO"), "Riveria's vicecaptain relationship must be explicitly linked to the Sword Oratoria claim.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-TIONA-TIONE-TWINS" && edge.claimRef === "DMR-005-CLM-006"), "Twin-sister relationship must have its own evidence-backed edge.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LEFIYA-ADMIRES-AIS" && edge.continuity === "CONT-SO"), "Lefiya's admiration for Ais must be explicit and continuity-scoped.");
-assert.ok(index.relationships.length >= 49, "The source-backed Loki graph must include Raul's membership and delegated-command edges.");
+assert.ok(index.relationships.length >= 52, "The graph must retain Loki coverage and the new source-backed DanMachi V relationship paths.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RAUL-FINN-DELEGATED-COMMAND" && edge.claimRef === "DMR-005-CLM-008"), "Raul's delegated coordination role must link to the official claim.");
 assert.deepEqual(corpus.searchEntities(catalog, { type: "character", query: "Raul Nord" }).results.map(entity => entity.id), ["CHAR-RAUL-NOORD"], "Raul must be individually discoverable.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-BELL-RETURN-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-013-CLM-001"), "Ryu and Bell shared-return edge must be explicit and adaptation-scoped.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-ASTREA-VISIT-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-013-CLM-002"), "Ryu visit to Astrea in the anime must remain separate from the novel relation.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-WARGAME-ANIME" && edge.to === "EVT-DM-RYUU-ASTREA-RETURN-ANIME-001"), "Ryu War Game participation must link to a navigable event record.");
 
 const riveriaSearch = corpus.searchEntities(catalog, { type: "character", query: "Riveria Ljos Alf" });
 assert.deepEqual(riveriaSearch.results.map(entity => entity.id), ["CHAR-RIVERIA-LJOS-ALF"], "Riveria must be an active individual catalog record, not only part of a group dossier.");
@@ -36,7 +40,7 @@ for (const id of ["CHAR-RIVERIA-LJOS-ALF","CHAR-GARETH-LANDROCK","CHAR-LEFIYA-VI
 }
 assert.equal(new Set(index.relationships.map(edge => edge.id)).size, index.relationships.length, "Relationship IDs must be unique.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-007-CLM-002"), "Ryu–Kaguya friction and respect must be an explicit, continuity-scoped edge.");
-assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-ASTREA-DEPARTURE-SECONDARY" && edge.evidenceStatus === "secondary_checked"), "The disputed departure motive must stay explicitly secondary, not be promoted to canon.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-ASTREA-DEPARTURE-SECONDARY" && ["secondary_checked", "pending_verification"].includes(edge.evidenceStatus) && edge.evidenceStatus !== "source_checked"), "The disputed departure motive must stay secondary or pending, never promoted to canon without primary evidence.");
 assert.equal(new Set(index.relationships.map(edge => edge.id)).size, index.relationships.length);
 for (const id of ["CHAR-LILIRUCA-ARDE","CHAR-WELF-CROZZO","CHAR-MIKOTO-YAMATO","CHAR-SANJOUNO-HARUHIME"]) {
   const entity = index.entityRecords.find(record => record.id === id);
@@ -58,8 +62,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 98);
-assert.equal(index.entryCount, 101);
+assert.equal(index.sourceClaimCount, 100);
+assert.equal(index.entryCount, 103);
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -88,6 +92,10 @@ assert.ok(historicalRyu.results.every(claim => claim.continuityScopes.includes("
 assert.ok(!historicalRyu.results.some(claim => claim.entryId.endsWith("--CONT-ANIME")));
 assert.ok(historicalRyu.results.some(claim => claim.claimId === "DMR-002-CLM-015"));
 assert.ok(historicalRyu.results.some(claim => claim.claimId === "DMR-009-CLM-001"));
+const ryuVReturn = corpus.search(index, { query: "Ryu Bell profundidad superficie", characterId: "CHAR-RYUU-LION", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ryuVReturn.results.some(claim => claim.claimId === "DMR-013-CLM-001"), "DanMachi V shared-survival claim must be searchable in anime continuity.");
+const ryuVWarGame = corpus.search(index, { query: "Ryu Astrea nivel magia guerra Familias", characterId: "CHAR-RYUU-LION", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ryuVWarGame.results.some(claim => claim.claimId === "DMR-013-CLM-002"), "Astrea visit, level-up and War Game story must be searchable in anime continuity.");
   const departure = corpus.search(index, { query: "Ryu Astrea venganza", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
   assert.ok(departure.results.some(claim => claim.claimId === "DMR-010-CLM-002"), "The Astrea departure reason should be searchable with secondary-source status.");
   const laterAstrea = corpus.search(index, { query: "Ryu Astrea", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -124,12 +132,13 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 95 source claims, 98 entries, volume 21 atomic claims, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 100 source claims, 103 entries, volume 21 atomic claims, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();
   assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/chronology")));
   assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/sword_oratoria/character")));
+  assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/news/news255.php")), "Official level-up announcement must remain available in the source directory.");
   assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/danmachi/story/episode1.html")));
   assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("ga.sbcr.jp/product/9784815610173")));
   assert.ok(sourceDirectory.some(source => source.category === "community" && source.url.includes("danmachi.fandom.com")));
