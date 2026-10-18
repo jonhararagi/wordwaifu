@@ -102,14 +102,6 @@ const volume21Prologue = corpus.search(index, { query: "Ais prólogo oscuridad j
 assert.ok(volume21Prologue.results.some(claim => claim.claimId === "DMR-008-CLM-026"), "Volume 21 prologue excerpt must be retrievable as excerpt-only primary evidence.");
 const ancientFamilias = corpus.search(index, { query: "Zeus Hera Behemoth Leviathan tres grandes misiones", continuity: "ALL", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(ancientFamilias.results.some(claim => claim.claimId === "DMR-008-CLM-027"), "Official franchise reference must expose the Zeus/Hera Behemoth and Leviathan result without overclaiming Black Dragon details.");
-const volume21RescueRoute = corpus.search(index, { query: "expedición Loki Familia piso 60 Ais rescate Orario", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
-assert.ok(volume21RescueRoute.results.some(claim => claim.claimId === "DMR-008-CLM-022"), "The Volume 21 expedition synopsis must be retrievable in main-novel continuity.");
-assert.ok(volume21RescueRoute.results.some(claim => claim.claimId === "DMR-008-CLM-023"), "The Volume 21 Orario rescue mobilization summary must be retrievable.");
-assert.ok(volume21RescueRoute.results.some(claim => claim.claimId === "DMR-008-CLM-024"), "Bell's return and receipt of the expedition news must be retrievable.");
-const v21VisibleChapter = corpus.search(index, { query: "Bell Finn Ais expedición fracaso pregunta urgente", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
-assert.ok(v21VisibleChapter.results.some(claim => claim.claimId === "DMR-008-CLM-025"), "Volume 21 visible chapter excerpt must remain searchable as excerpt-only evidence.");
-const v21Prologue = corpus.search(index, { query: "Ais prólogo oscuridad jaula hielo", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
-assert.ok(v21Prologue.results.some(claim => claim.claimId === "DMR-008-CLM-026"), "Volume 21 prologue claim must be retrievable without assuming its timeline.");
 const crossContinuityGreatQuests = corpus.search(index, { query: "Zeus Hera Behemoth Leviathan", continuity: "CROSS-CONTINUITY", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(crossContinuityGreatQuests.results.some(claim => claim.claimId === "DMR-008-CLM-027"), "The search engine must support cross-continuity claims as a distinct scope.");
 
