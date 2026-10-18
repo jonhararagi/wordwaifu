@@ -1068,7 +1068,7 @@
       dynamicLayer.replaceChildren();
       // Query all pre-existing fixed markers once, rather than scanning the DOM
       // again for every location (which turns atlas rendering into O(locations²)).
-      const existingLocationIds = new Set($(".map-marker:not(.event-marker)").map((marker) => marker.dataset.location));
+      const existingLocationIds = new Set($$(".map-marker:not(.event-marker)").map((marker) => marker.dataset.location));
       state.locations.forEach((location) => {
         if (existingLocationIds.has(location.id)) return;
         const point = Array.isArray(location.marker) ? location.marker : [450, 300];
