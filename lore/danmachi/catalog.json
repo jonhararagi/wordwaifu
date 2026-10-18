@@ -890,6 +890,24 @@
       "status": "source_checked_partial",
       "priority": "critical",
       "name": "Volumen 21: expedición fallida y respuesta de Orario"
+    },
+    {
+      "id": "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001",
+      "path": "events/candidates/EVT-DM-ASTREA-RECORD-FOUNDATIONS-001.md",
+      "type": "event",
+      "name": "Astrea Record: justicia, guía y escalada del conflicto",
+      "tags": [
+        "Astrea Record",
+        "CONT-AR",
+        "Astrea Familia",
+        "Ryu Lion",
+        "Alise Lovelace",
+        "justicia",
+        "Evilus",
+        "siete años antes de Bell"
+      ],
+      "status": "source_checked_partial",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -1795,12 +1813,12 @@
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "aa89e3f55d2f4c337b0914a7bad3470b79daabc5",
+    "sourceCommit": "a332312c0cd39c7f1b61c7b8f6461b28b960f030",
     "trackedLoreFiles": 178,
-    "records": 65,
+    "records": 66,
     "reservedIds": 55,
     "supportingDocuments": 104,
-    "syncNote": "Inventario reconciliado en main el 2026-10-18: 66 relaciones y 65 registros activos. Incluye rutas de adaptación para Ryu, Bell y Eina; el encuentro Bell-Hestia por sinopsis editorial; la historia parcial del volumen 21; la referencia histórica Zeus/Hera y dos vínculos de roster secundario en CONT-AR. Las relaciones de eventos tienen nombres visibles para la enciclopedia. La cobertura de novelas sigue parcial: no inventar localizadores, desenlaces ni relaciones personales a partir de co-pertenencia."
+    "syncNote": "Inventario reconciliado en main el 2026-10-18. Se añade una ruta parcial de Astrea Record respaldada por las sinopsis oficiales de GA Bunko I–III: ventana relativa de unos siete años antes de Bell, guía de Astrea y Alise, y consecuencias generales de las pérdidas/conflicto con Evilus. El relato íntegro, el orden capítulo a capítulo y destinos individuales siguen pendientes de localizadores. No sumar el número de relaciones como porcentaje de canon completo."
   },
   "relationships": [
     {
@@ -2726,6 +2744,62 @@
       "claimRef": "DMR-007-CLM-005",
       "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
       "note": "Fuente comunitaria usada como pista de pertenencia conjunta. No se infiere amistad, rivalidad, conversación ni intimidad más allá del roster."
+    },
+    {
+      "id": "REL-ASTREA-RECORD-FOUNDATIONS",
+      "from": "DM-FAM-ASTREA",
+      "to": "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001",
+      "kind": "historical_period_and_justice_orientation",
+      "label": "La sinopsis oficial presenta Astrea Familia en la etapa histórica de Astrea Record, aproximadamente siete años antes de Bell, alzándose en nombre de la justicia",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record; aproximadamente siete años antes de la llegada de Bell según la sinopsis editorial; fecha absoluta desconocida",
+      "evidenceStatus": "source_checked",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+      "note": "La relación reproduce el alcance general de una sinopsis oficial. No crea una cronología escena por escena ni adjudica destinos individuales no indicados.",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-012-CLM-001"
+    },
+    {
+      "id": "REL-RYU-SEEK-JUSTICE-ASTREA-AR",
+      "from": "CHAR-RYUU-LION",
+      "to": "CHAR-ASTREA",
+      "kind": "seeks_justice_under_guidance_of",
+      "label": "En Astrea Record, la sinopsis presenta a Ryu buscando su comprensión de la justicia bajo la guía de Astrea",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record; aproximadamente siete años antes de la llegada de Bell según la sinopsis editorial; fecha absoluta desconocida",
+      "evidenceStatus": "source_checked",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+      "note": "La guía y búsqueda de justicia pertenecen a CONT-AR. No afirmar que todas las decisiones de Ryu reflejan una regla institucional uniforme.",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-012-CLM-002"
+    },
+    {
+      "id": "REL-ALISE-LEADS-ASTREA-RECORD-AR",
+      "from": "CHAR-ALISE-LOVELACE",
+      "to": "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001",
+      "kind": "captain_and_guide_during_historical_period",
+      "label": "La sinopsis del volumen 1 identifica a Alise como capitana de Astrea Familia y guía de Ryu durante la etapa de Astrea Record",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record; aproximadamente siete años antes de la llegada de Bell según la sinopsis editorial; fecha absoluta desconocida",
+      "evidenceStatus": "source_checked",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+      "note": "El cargo y la función general de guía están respaldados; no implica que cada orden, estrategia o conversación esté localizada.",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-012-CLM-003"
+    },
+    {
+      "id": "REL-RYU-AR-LOSSES-EVILUS",
+      "from": "CHAR-RYUU-LION",
+      "to": "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001",
+      "kind": "justice_shaken_by_historical_losses_and_conflict",
+      "label": "Las sinopsis editoriales de los volúmenes II–III relacionan las pérdidas del periodo de los Siete Días de la Muerte y la escalada de Evilus con un cambio importante en el sentido de justicia de Ryu",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record; aproximadamente siete años antes de la llegada de Bell según la sinopsis editorial; fecha absoluta desconocida",
+      "evidenceStatus": "source_checked",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+      "note": "Solo prueba el resumen editorial del arco; no determina destinos individuales, todas las causas ni el orden preciso de escenas.",
+      "evidenceType": "official_publisher_synopses",
+      "claimRef": "DMR-012-CLM-004"
     }
   ]
 }
