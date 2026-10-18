@@ -908,6 +908,78 @@
       ],
       "status": "source_checked_partial",
       "priority": "critical"
+    },
+    {
+      "id": "CHAR-SOMA",
+      "path": "characters/soma.md",
+      "type": "deity_character",
+      "tags": [
+        "Soma",
+        "Sōma",
+        "ソーマ",
+        "Soma Familia",
+        "deity",
+        "brewing"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "FAM-SOMA",
+      "path": "familias/soma-familia.md",
+      "type": "familia",
+      "tags": [
+        "Soma Familia",
+        "Soma",
+        "Liliruca Arde",
+        "Zanis Lustra",
+        "Chandra Ihit",
+        "Canoe Belway"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ZANIS-LUSTRA",
+      "path": "characters/zanis-lustra.md",
+      "type": "character",
+      "tags": [
+        "Zanis Lustra",
+        "Zanis",
+        "Soma Familia",
+        "former captain",
+        "spoiler"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-CHANDRA-IHIT",
+      "path": "characters/chandra-ihit.md",
+      "type": "character",
+      "tags": [
+        "Chandra Ihit",
+        "Chandra",
+        "Soma Familia",
+        "captain",
+        "spoiler"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-CANOE-BELWAY",
+      "path": "characters/canoe-belway.md",
+      "type": "character",
+      "tags": [
+        "Canoe Belway",
+        "Canoe",
+        "Soma Familia",
+        "disputed report",
+        "spoiler"
+      ],
+      "status": "secondary_reference_disputed_details_primary_check_pending",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
@@ -982,11 +1054,6 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "CHAR-SOMA",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "CHAR-DIAN-CECHT",
       "type": "deity_character",
       "status": "candidate_not_created"
@@ -1033,11 +1100,6 @@
     },
     {
       "id": "FAM-TAKEMIKAZUCHI",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-SOMA",
       "type": "familia",
       "status": "candidate_not_created"
     },
@@ -1809,17 +1871,15 @@
       "path": "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
       "type": "character_relationship_research",
       "status": "present_source_checked_adaptation"
+    },
+    {
+      "document_id": "RESEARCH-DM-025",
+      "path": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "type": "character_relationship_research",
+      "status": "secondary_checked_with_primary_text_gaps"
     }
   ],
-  "lastStructuredSync": {
-    "branch": "main",
-    "sourceCommit": "c3440eff4fa28bdb00f037c1e83c234d7db54291",
-    "trackedLoreFiles": 178,
-    "records": 66,
-    "reservedIds": 55,
-    "supportingDocuments": 104,
-    "syncNote": "Inventario sincronizado en main desde c3440eff4fa28bdb00f037c1e83c234d7db54291: 66 registros activos, 55 IDs reservados, 104 documentos de apoyo y 70 relaciones. La ficha de Familia Hestia se normalizó a source_checked_partial: seis claims trazables cubren el estado inicial del anime y un snapshot de perfiles oficiales, mientras la cronología completa de novela ligera y el roster por época siguen parciales. Incluye Astrea Record I–III, volumen 21, Bell-Hestia, Eina-Guild, rutas de DanMachi V y Zeus/Hera CROSS-CONTINUITY. El número de aristas no es un porcentaje de cobertura factual."
-  },
+  "lastStructuredSync": "2026-10-18",
   "relationships": [
     {
       "id": "REL-ASTREA-DEITY-001",
@@ -2800,6 +2860,132 @@
       "note": "Solo prueba el resumen editorial del arco; no determina destinos individuales, todas las causas ni el orden preciso de escenas.",
       "evidenceType": "official_publisher_synopses",
       "claimRef": "DMR-012-CLM-004"
+    },
+    {
+      "id": "REL-SOMA-PATRON-SOMA-FAM",
+      "from": "CHAR-SOMA",
+      "to": "FAM-SOMA",
+      "kind": "deity_of",
+      "label": "Deidad patrona reportada",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Historia principal; período exacto pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_compendium",
+      "claimRef": "DMR-025-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "Atribución comunitaria; falta localizador primario de novela."
+    },
+    {
+      "id": "REL-LILI-FORMER-SOMA-FAM",
+      "from": "CHAR-LILIRUCA-ARDE",
+      "to": "FAM-SOMA",
+      "kind": "former_member_of",
+      "label": "Antigua integrante reportada",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Etapa anterior a su afiliación posterior con Hestia Familia; fecha exacta pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_compendium",
+      "claimRef": "DMR-025-CLM-008",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "La afiliación anterior es secundaria; mantener separada de la captura descrita por sinopsis editorial."
+    },
+    {
+      "id": "REL-LILI-CAPTURED-SOMA-FAM-V6",
+      "from": "CHAR-LILIRUCA-ARDE",
+      "to": "FAM-SOMA",
+      "kind": "captured_by",
+      "label": "Captura descrita en sinopsis editorial",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Contexto anterior al War Game, según la sinopsis del volumen 6",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "official_publisher_synopsis_excerpt",
+      "claimRef": "DMR-025-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "Solo la sinopsis editorial está cotejada; no equivale a un localizador de capítulo/página."
+    },
+    {
+      "id": "REL-ZANIS-FORMER-CAPTAIN-SOMA",
+      "from": "CHAR-ZANIS-LUSTRA",
+      "to": "FAM-SOMA",
+      "kind": "former_captain_of",
+      "label": "Antiguo capitán reportado",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Período anterior al cargo atribuido a Chandra; fecha pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_compendium",
+      "claimRef": "DMR-025-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "Cargo atribuido por compendios comunitarios; falta cotejo directo de novela."
+    },
+    {
+      "id": "REL-CHANDRA-CAPTAIN-SOMA",
+      "from": "CHAR-CHANDRA-IHIT",
+      "to": "FAM-SOMA",
+      "kind": "captain_of",
+      "label": "Capitán reportado",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Período posterior reportado; fecha absoluta pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_compendium",
+      "claimRef": "DMR-025-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "No extrapolar el cargo a todos los períodos narrativos."
+    },
+    {
+      "id": "REL-ZANIS-CHANDRA-CAPTAINCY-SUCCESSION",
+      "from": "CHAR-ZANIS-LUSTRA",
+      "to": "CHAR-CHANDRA-IHIT",
+      "kind": "reported_captaincy_succession",
+      "label": "Sucesión de capitanía reportada",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Orden relativo de las referencias secundarias; fechas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_roster_and_biographies",
+      "claimRef": "DMR-025-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "La sucesión no implica amistad, rivalidad ni una fecha de relevo confirmada."
+    },
+    {
+      "id": "REL-CANOE-MEMBER-SOMA-FAM",
+      "from": "CHAR-CANOE-BELWAY",
+      "to": "FAM-SOMA",
+      "kind": "reported_member_of",
+      "label": "Integrante en roster comunitario",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Período exacto pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_roster",
+      "claimRef": "DMR-025-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "La fuente también resume una acusación sobre la desaparición; no se infiere culpabilidad ni causa/destino."
+    },
+    {
+      "id": "REL-ZANIS-ACCUSATION-LILI-CANOE",
+      "from": "CHAR-ZANIS-LUSTRA",
+      "to": "CHAR-LILIRUCA-ARDE",
+      "kind": "reported_accusation_about_canoe",
+      "label": "Acusación secundaria reportada",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Conflicto de Soma Familia relacionado con el volumen 6; detalle temporal pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_plot_summary",
+      "claimRef": "DMR-025-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "Solo representa que la acusación aparece en resúmenes secundarios; no es una afirmación de culpabilidad."
+    },
+    {
+      "id": "REL-CHANDRA-HELPS-LILI-SECONDARY",
+      "from": "CHAR-CHANDRA-IHIT",
+      "to": "CHAR-LILIRUCA-ARDE",
+      "kind": "reported_intervention",
+      "label": "Intervención de ayuda reportada",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Arco de Soma Familia; escena primaria pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_scene_lead",
+      "claimRef": "DMR-025-CLM-009",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+      "note": "La pista no demuestra una amistad permanente ni otras relaciones no documentadas."
     }
   ]
 }

@@ -17,7 +17,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
   "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
   "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
-  "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md"
+  "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
+  "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -90,8 +91,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 104);
-assert.equal(index.entryCount, 107);
+assert.equal(index.sourceClaimCount, 113);
+assert.equal(index.entryCount, 116);
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -113,6 +114,20 @@ assert.ok(ancientFamilias.results.some(claim => claim.claimId === "DMR-008-CLM-0
 const crossContinuityGreatQuests = corpus.search(index, { query: "Zeus Hera Behemoth Leviathan", continuity: "CROSS-CONTINUITY", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(crossContinuityGreatQuests.results.some(claim => claim.claimId === "DMR-008-CLM-027"), "The search engine must support cross-continuity claims as a distinct scope.");
 
+
+
+assert.ok(index.relationships.some(edge => edge.id === "REL-SOMA-PATRON-SOMA-FAM" && edge.from === "CHAR-SOMA" && edge.to === "FAM-SOMA" && edge.claimRef === "DMR-025-CLM-001" && edge.evidenceStatus === "secondary_checked"), "Soma's relationship to Soma Familia must be navigable and remain secondary.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-LILI-CAPTURED-SOMA-FAM-V6" && edge.claimRef === "DMR-025-CLM-002" && edge.evidenceStatus === "source_checked_excerpt_only"), "The volume 6 publisher synopsis must not be presented as full-text chapter evidence.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-ZANIS-CHANDRA-CAPTAINCY-SUCCESSION" && edge.claimRef === "DMR-025-CLM-005" && edge.evidenceStatus === "secondary_checked"), "Zanis-to-Chandra succession must be marked as a secondary report, not a personal feud.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-ZANIS-ACCUSATION-LILI-CANOE" && edge.claimRef === "DMR-025-CLM-006" && edge.evidenceStatus === "secondary_checked"), "The reported Canoe accusation must be reachable without becoming a verdict of guilt.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-CHANDRA-HELPS-LILI-SECONDARY" && edge.claimRef === "DMR-025-CLM-009"), "Chandra's reported intervention must be a separate, qualified relationship.");
+assert.ok(catalog.records.some(record => record.id === "FAM-SOMA" && record.path === "familias/soma-familia.md"), "Soma Familia must be an active navigable catalog entity.");
+assert.equal(catalog.reservedIds.some(candidate => (typeof candidate === "string" ? candidate : candidate.id) === "CHAR-SOMA"), false, "Activated Soma ID must no longer remain reserved.");
+assert.equal(catalog.reservedIds.some(candidate => (typeof candidate === "string" ? candidate : candidate.id) === "FAM-SOMA"), false, "Activated Soma Familia ID must no longer remain reserved.");
+const somaSearch = corpus.search(index, { query: "Soma bebida divina Familia", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(somaSearch.results.some(claim => claim.claimId === "DMR-025-CLM-007"), "The official volume 2 synopsis claim must be searchable.");
+const somaCaptureSearch = corpus.search(index, { query: "Liliruca capturada Soma Familia War Game", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(somaCaptureSearch.results.some(claim => claim.claimId === "DMR-025-CLM-002"), "The volume 6 capture context must be searchable as excerpt-only evidence.");
 
 assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);

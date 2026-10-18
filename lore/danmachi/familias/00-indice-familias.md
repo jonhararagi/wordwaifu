@@ -34,3 +34,9 @@ No sobrescribir un miembro histórico cuando cambia el roster. Registrar interva
 ## Ancla histórica oficial transversal
 
 - [Zeus Familia](zeus-familia.md) y [Hera Familia](hera-familia.md) están enlazadas al evento [EVT-DM-GREAT-QUESTS-001](../events/candidates/EVT-DM-GREAT-QUESTS-001.md) mediante la prueba oficial de conocimiento de la franquicia (DMR-011-SRC-005 / DMR-008-CLM-027). La evidencia es `CROSS-CONTINUITY`: respalda únicamente que ambas Familias derrotaron conjuntamente a Behemoth y Leviathan, sin asignar una victoria individual a una Familia concreta ni fijar cronología, roster o el resultado frente al Dragón Negro.
+
+
+## Familia Soma
+
+- [Soma Familia](soma-familia.md) — ficha parcial con nueve relaciones conectadas y fuentes graduadas.
+- [Investigación DMR-025](../research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md) — distingue la captura descrita en la sinopsis editorial de los detalles respaldados solo por compendios.

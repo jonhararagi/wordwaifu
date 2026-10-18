@@ -16,7 +16,8 @@ const paths = [
   "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
   "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
-  "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md"
+  "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+  "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md"
 ];
 const documents = paths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const parsedIds = new Set(documents.flatMap(doc => doc.content.match(/DMR-\d+-CLM-\d+/g) || []));

@@ -317,3 +317,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Convertir los mapas parciales en cronologías de escenas solo cuando el texto y sus secuencias estén comprobados.
 - [ ] Ampliar la red relacional al resto de la Familia Loki y a las Familias restantes; registrar conflictos, poderes y estados temporales por periodo.
 - **Estado:** estructura y aristas iniciales completas para este lote; cobertura factual global todavía parcial.
+
+
+## DANMACHI-RESEARCH-025 · Red relacional de Soma
+
+- [x] Activar fichas navegables para Soma, Soma Familia, Zanis Lustra, Chandra Ihit y Canoe Belway con IDs estables.
+- [x] Incorporar nueve aristas al catálogo estructurado, cada una con claim, ruta de evidencia, continuidad y estado.
+- [x] Cargar el paquete DMR-025 en el buscador local y agregar pruebas de relaciones y recuperación de afirmaciones.
+- [x] Separar el contexto editorial del volumen 6 de los detalles secundarios; mantener la acusación relacionada con Canoe sin resolución.
+- [ ] Verificar en una edición legítima de la novela los cargos de Zanis y Chandra, la afiliación previa de Lili y la intervención atribuida a Chandra.
+- [ ] Localizar el pasaje primario relacionado con Canoe antes de elevar cualquier afirmación sobre destino, causa o responsabilidad.
+- **Estado:** conexiones integradas; cobertura factual global y cotejo de novela siguen parciales.
