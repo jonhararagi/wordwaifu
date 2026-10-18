@@ -1343,38 +1343,71 @@
       story.ensemble = String(form.get("storyEnsemble") || "").trim();
       story.status = String(form.get("storyStatus") || story.status || "draft");
       story.arcs = String(form.get("storyArcs") || "").split("\n").map((line) => line.trim()).filter(Boolean);
-      const outlineGenerator = window.WordWaifuStoryOutline;
-      if (!outlineGenerator || typeof outlineGenerator.buildOutline !== "function") {
-        if (status) status.textContent = "No se cargó el generador narrativo. Recargá la página; no se modificaron los capítulos.";
+      const storyForge = window.WordWaifuStoryForge;
+      if (!storyForge || typeof storyForge.generateOutline !== "function") {
+        if (status) status.textContent = "El motor Story Forge no está cargado. Recargá la aplicación; no se modificaron los capítulos.";
         return;
       }
       const oldChapters = story.chapters.slice();
-      story.chapters = outlineGenerator.buildOutline({ count, ending, story, oldChapters });
+      try {
+        story.chapters = storyForge.generateOutline({
+          storyId: story.id,
+          chapterCount: count,
+          endingType: ending,
+          existingChapters: oldChapters,
+          premise: story.premise,
+          conflict: story.conflict,
+          castPlan: story.castPlan,
+          personalityPlan: story.personalityPlan,
+          antagonistPlan: story.antagonistPlan,
+          romancePlan: story.romancePlan,
+          traumaPlan: story.traumaPlan,
+          worldType: story.worldType,
+          worldRules: story.worldRules,
+          worldDynamics: story.worldDynamics,
+          powerCatalog: story.powerCatalog,
+          revealType: story.revealType,
+          revealSecret: story.revealSecret,
+          revealClues: story.revealClues,
+          revealTiming: story.revealTiming,
+          revealConsequences: story.revealConsequences,
+          pantheon: story.pantheon,
+          ensemble: story.ensemble,
+          arcs: story.arcs
+        });
+      } catch (error) {
+        if (status) status.textContent = "No se pudo generar el índice: " + (error && error.message ? error.message : "error desconocido") + ". Los capítulos anteriores se conservaron.";
+        story.chapters = oldChapters;
+        return;
+      }
       const saved = await saveProject();
       renderDirectory();
       const nextStatus = $("#story-outline-status", container);
-      if (nextStatus) nextStatus.textContent = (saved ? "Índice de " : "Índice generado en pantalla, pero no se confirmó el guardado. Exportá el proyecto JSON. Se crearon ") + count + " capítulos con función narrativa y resumen; los manuscritos existentes se conservaron.";
+      if (nextStatus) nextStatus.textContent = (saved ? "Story Forge guardado: " : "Índice generado en pantalla, pero no se confirmó el guardado. Exportá el proyecto JSON. ") + count + " capítulos con progresión dramática, contexto del mundo y giro/consecuencia. Los IDs, manuscritos y estados existentes se conservaron.";
       if (!saved) return;
     });
     const auditOutlineButton = $("#story-audit-outline-button", container);
     if (auditOutlineButton) auditOutlineButton.addEventListener("click", () => {
       const status = $("#story-outline-status", container);
-      const chapters = story.chapters || [];
-      const issues = [];
-      const expected = Math.max(1, Math.min(500, Number(story.chapterCount) || chapters.length || 1));
-      if (chapters.length !== expected) issues.push("El índice tiene " + chapters.length + " capítulos, pero el plan pide " + expected + ".");
-      if (!chapters.length) issues.push("Todavía no existe un índice de capítulos.");
-      chapters.forEach((chapter, index) => {
-        if (!String(chapter.title || "").trim()) issues.push("Capítulo " + (index + 1) + ": falta título.");
-        if (!String(chapter.summary || "").trim()) issues.push("Capítulo " + (index + 1) + ": falta resumen.");
+      const metaForm = $("#story-meta-form", container);
+      const form = metaForm ? new FormData(metaForm) : null;
+      const storyForge = window.WordWaifuStoryForge;
+      if (!storyForge || typeof storyForge.auditOutline !== "function") {
+        if (status) status.textContent = "El motor de auditoría Story Forge no está cargado.";
+        return;
+      }
+      const read = name => form ? String(form.get(name) || "").trim() : "";
+      const result = storyForge.auditOutline({
+        chapterCount: form ? Number(form.get("storyChapterCount")) : story.chapterCount,
+        chapters: story.chapters || [],
+        premise: read("storyPremise") || story.premise,
+        conflict: read("storyConflict") || story.conflict,
+        castPlan: read("storyCastPlan") || story.castPlan,
+        antagonistPlan: read("storyAntagonistPlan") || story.antagonistPlan
       });
-      if (!String(story.premise || "").trim()) issues.push("Falta una premisa; el índice puede ser genérico.");
-      if (!String(story.conflict || "").trim()) issues.push("Falta el conflicto central.");
-      if (!String(story.castPlan || "").trim()) issues.push("Falta definir protagonistas/coprotagonistas y sus objetivos.");
-      if (!String(story.antagonistPlan || "").trim()) issues.push("Falta una fuerza opositora concreta.");
-      if (issues.length) {
-        if (status) status.textContent = "Auditoría: " + issues.length + " observaciones. " + issues.slice(0, 8).join(" ");
-      } else if (status) status.textContent = "Auditoría básica aprobada: " + chapters.length + " capítulos tienen título y resumen. Esto no sustituye la revisión literaria ni la continuidad.";
+      if (status) status.textContent = result.valid
+        ? "Auditoría estructural aprobada: " + result.chapterCount + " capítulos, títulos/resúmenes presentes, cantidad coherente y sin IDs duplicados. Esto no sustituye la revisión literaria ni la auditoría de continuidad."
+        : "Auditoría: " + result.issues.length + " observaciones. " + result.issues.slice(0, 8).join(" ");
     });
     const generatePowerButton = $("#story-power-generate-button", container);
     if (generatePowerButton) generatePowerButton.addEventListener("click", async () => {
