@@ -5,7 +5,7 @@
 El corpus y su interfaz ya están integrados en `main`. Esta carpeta no es una rama aislada ni una afirmación de canon completo: es un corpus de investigación enlazado, con resúmenes, fuentes y continuidades etiquetadas.
 
 - Catálogo actual: `catalog.json` esquema v2, **66 registros activos**, **55 IDs reservados** y **104 documentos de apoyo**.
-- Los 66 registros no están todos verificados: 12 `draft`, 5 `pending_verification`, 32 `provisional`, 4 `proposed_author_event`, 1 `provisional_inference`, 1 `provisional_reference_checked` y 11 `source_checked_partial`. La validación no promueve automáticamente un registro a canon confirmado. Estos conteos se recalculan desde `catalog.json` y describen estados estructurales, no una tasa de verdad canónica.
+- Los 66 registros no están todos verificados: 11 `draft`, 5 `pending_verification`, 32 `provisional`, 4 `proposed_author_event`, 1 `provisional_inference`, 1 `provisional_reference_checked` y 12 `source_checked_partial`. La validación no promueve automáticamente un registro a canon confirmado. Estos conteos se recalculan desde `catalog.json` y describen estados estructurales, no una tasa de verdad canónica.
 - El validador `tools/check-catalog.mjs` comprueba JSON, unicidad de IDs/rutas, IDs de frontmatter, existencia de los documentos y enlaces Markdown locales. **No comprueba la verdad factual ni sustituye el cotejo de capítulos/páginas de fuentes primarias.**
 - El archivo de personajes está conectado a `src/character-archive.js` y `src/character-dossiers.js`; las búsquedas y recuperación usan `src/lore-corpus.js`. El test de navegador y el workflow **DanMachi Lore and Retrieval Integrity** cubren parte de esa integración.
 - Se separan expresamente `CONT-MAIN-LN`, `CONT-AR`, `CONT-ANIME`, `CONT-AU` y `CROSS-CONTINUITY`. No se usa un hecho de adaptación o AU para rellenar silenciosamente la cronología de la novela principal.
@@ -152,3 +152,8 @@ El expediente EVT-DM-ASTREA-RECORD-FOUNDATIONS-001 enlaza la referencia temporal
 ### CI del último cierre de ruta Astrea Record · 2026-10-18
 
 En el SHA de código y pruebas `8e8947fb3e4f3b48ad734bc4db24daf17c2a7173`, pasaron [Validate WordWaifu #39159428122](https://github.com/jonhararagi/wordwaifu/actions/runs/39159428122) y [DanMachi Lore and Retrieval Integrity #39159428052](https://github.com/jonhararagi/wordwaifu/actions/runs/39159428052). Incluye el recorrido Ryu → Alise → Ryu → Astrea en `CONT-AR`, apertura del dossier de Astrea Record y retorno sin perder contexto. La cobertura factual sigue parcial; estos checks certifican ese SHA, no futuros cambios.
+
+
+### Familia Hestia · estado reconciliado · 2026-10-18
+
+La ficha `familias/hestia-familia.md` y sus seis claims DMR-004-CLM-001..006 ya describen una cobertura parcial respaldada por la sinopsis oficial del episodio 1 y el snapshot de perfiles oficiales de DanMachi IV. El catálogo pasa `DM-FAM-HESTIA` de `draft` a `source_checked_partial`. No cambia el alcance de las claims: la composición por época, la secuencia de incorporación de los miembros y la cronología exacta de la novela ligera siguen pendientes de localizadores internos.

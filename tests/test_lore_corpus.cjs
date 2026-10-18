@@ -78,6 +78,7 @@ for (const id of ["REL-LILI-MEMBER-HESTIA","REL-WELF-MEMBER-HESTIA","REL-MIKOTO-
   assert.ok(index.relationships.some(edge => edge.id === id && edge.evidenceStatus === "source_checked"), "Officially sourced supporting-character edge must be available: " + id);
 }
 assert.ok(index.entityRecords.some(entity => entity.id === "DM-FAM-HESTIA"));
+assert.equal(catalog.records.find(record => record.id === "DM-FAM-HESTIA").status, "source_checked_partial", "The Hestia Familia dossier has six source-linked claims and must not regress to draft.");
 assert.ok(familyEntities.totalMatches >= 3, "Typed entity search must expose the Familia catalog records.");
 assert.ok(familyEntities.results.every(entity => entity.type === "familia"), "Familia filter must not leak characters or events.");
 assert.ok(familyEntities.results.some(entity => entity.id === "DM-FAM-HESTIA"));

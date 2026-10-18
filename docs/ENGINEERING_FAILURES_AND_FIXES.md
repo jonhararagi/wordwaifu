@@ -230,3 +230,17 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - El validador del catálogo pasa; la revisión estática independiente sobre las 70 aristas no encontró extremos rotos, claims ausentes, continuidades/estados discordantes ni duplicados.
 - Inventario sincronizado: 66 registros activos, 55 IDs reservados, 104 documentos de apoyo y 70 aristas. Distribución: 61 `source_checked`, 3 `secondary_checked`, 1 `pending_verification`, 2 `provisional_summary` y 3 `source_checked_excerpt_only`.
 - Falta contenido factual de la novela completa y el cotejo de escenas/localizadores internos. No hay porcentaje global de cobertura honesto mientras sigan esos vacíos.
+
+
+### Reconciliación de estado de catálogo · Familia Hestia · 2026-10-18
+
+- **Incoherencia detectada:** `DM-FAM-HESTIA` estaba en el catálogo como `draft`, aunque el dossier ya enumeraba seis claims rastreables (DMR-004-CLM-001..006), con la sinopsis oficial del episodio 1 y perfiles oficiales de DanMachi IV registrados como fuentes. El estado de la ficha y el del índice se habían quedado desincronizados.
+- **Corrección:** el registro y el frontmatter pasan a `source_checked_partial`. La clasificación reconoce los hechos generales documentados en la adaptación, pero no eleva el roster de DanMachi IV a una cronología completa de la novela ligera.
+- **Regresión:** `tests/test_lore_corpus.cjs` exige que el registro `DM-FAM-HESTIA` no vuelva a aparecer como `draft`; conteos de claims/entradas no cambian.
+
+### Lección del smoke de navegador · relaciones verificadas y actionability · 2026-10-18
+
+- **Síntoma:** el smoke fallaba al intentar navegar de Alise directamente a Astrea en `CONT-AR`. No había una arista directa Alise→Astrea respaldada por el claim; la ruta documentada es Alise→Ryu (Alise guía a Ryu) y Ryu→Astrea (Ryu busca justicia bajo su guía).
+- **Corrección:** el test recorre el grafo que realmente existe, Alise → Ryu → Astrea, filtra por elementos visibles y conserva el historial de navegación. No se añade un vínculo personal sin evidencia ni se fuerza el click para saltar la validación del navegador.
+- **Fuente técnica:** la documentación oficial de Playwright indica que `Locator.click()` espera a que el elemento sea visible, estable, habilitado y reciba eventos; si esas condiciones no se cumplen dentro del plazo, falla con timeout: https://playwright.dev/docs/actionability y https://playwright.dev/docs/api/class-locator. En este caso, el fallo también reveló que la expectativa de relación directa del test no concordaba con las aristas fuente.
+- **Evidencia CI del SHA previo a esta reconciliación:** [Validate WordWaifu #39159428122 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39159428122) y [DanMachi Lore and Retrieval Integrity #39159428052 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39159428052). El nuevo commit debe pasar sus propios workflows.

@@ -2,8 +2,8 @@
 id: DM-FAM-HESTIA
 universe: danmachi
 type: familia
-status: source_checked_for_official_adaptation_profiles; main_light_novel_details_partial
-confidence: high for opening premise and cited anime-profile snapshot; incomplete for full chronology
+status: source_checked_partial
+confidence: source-checked for the cited episode synopsis and adaptation profiles; partial for the main-light-novel chronology, historical roster and member-by-member event order
 continuity_scope: CONT-MAIN-LN; CONT-ANIME
 source_refs:
   - DMR-004-SRC-001
@@ -21,6 +21,8 @@ tags: [Familia Hestia, Hestia, Bell Cranel, Liliruca Arde, Welf Crozzo, Yamato M
 # Familia Hestia — expediente de escritura y continuidad
 
 ## Identidad y alcance
+
+- **Estado del catálogo:** `source_checked_partial`. Seis claims trazables sostienen los hitos de apertura y el snapshot de perfiles oficiales citados. El estado no confirma el roster completo por volumen ni la cronología total de la novela ligera.
 
 - **ID estable:** `DM-FAM-HESTIA`.
 - **Diosa principal:** Hestia.

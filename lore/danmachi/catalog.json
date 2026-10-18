@@ -154,7 +154,7 @@
         "Hestia",
         "Bell"
       ],
-      "status": "draft",
+      "status": "source_checked_partial",
       "priority": "high"
     },
     {
@@ -1813,12 +1813,12 @@
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "8e8947fb3e4f3b48ad734bc4db24daf17c2a7173",
+    "sourceCommit": "c3440eff4fa28bdb00f037c1e83c234d7db54291",
     "trackedLoreFiles": 178,
     "records": 66,
     "reservedIds": 55,
     "supportingDocuments": 104,
-    "syncNote": "Inventario sincronizado en main el 2026-10-18 desde el SHA 8e8947fb3e4f3b48ad734bc4db24daf17c2a7173: 66 registros activos, 55 IDs reservados, 104 documentos de apoyo y 70 relaciones explícitas. Incluye las rutas parciales de DanMachi V para Ryu/Bell, la apertura del anime de Bell, Bell-Hestia por sinopsis editorial, Eina-Guild, Astrea Record I–III, Volumen 21 y la referencia histórica transversal Zeus/Hera. Los claims de sinopsis, fragmentos y pistas secundarias mantienen sus propios niveles de evidencia; faltan localizadores internos y cronología completa."
+    "syncNote": "Inventario sincronizado en main desde c3440eff4fa28bdb00f037c1e83c234d7db54291: 66 registros activos, 55 IDs reservados, 104 documentos de apoyo y 70 relaciones. La ficha de Familia Hestia se normalizó a source_checked_partial: seis claims trazables cubren el estado inicial del anime y un snapshot de perfiles oficiales, mientras la cronología completa de novela ligera y el roster por época siguen parciales. Incluye Astrea Record I–III, volumen 21, Bell-Hestia, Eina-Guild, rutas de DanMachi V y Zeus/Hera CROSS-CONTINUITY. El número de aristas no es un porcentaje de cobertura factual."
   },
   "relationships": [
     {
