@@ -30,6 +30,7 @@ Este evento completa el trayecto que une el regreso de Ryu y Bell desde las prof
 
 - [Ryu vuelve con Bell, visita a Astrea y entra tarde en la guerra de Familias](candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md) · EVT-DM-RYUU-ASTREA-RETURN-ANIME-001 · CONT-ANIME.
 - [Estado inicial de Bell y crisis del quinto piso](candidates/EVT-DM-BELL-OPENING-CRISIS-ANIME-001.md) · EVT-DM-BELL-OPENING-CRISIS-ANIME-001 · CONT-ANIME.
+- [Eina orienta a Bell desde la Guild](candidates/EVT-DM-EINA-ADVISOR-ANIME-001.md) · EVT-DM-EINA-ADVISOR-ANIME-001 · CONT-ANIME.
 
 Estos recorridos están respaldados por fuentes oficiales de la adaptación y usan claims enlazados. No sustituyen las historias de novela ligera ni convierten los resúmenes promocionales en localizadores de capítulos.
 
