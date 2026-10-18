@@ -521,3 +521,31 @@ select{background:#332d26;color:#e9dfd2}
 @media(max-width:600px){.universe-explorer-header,.power-view-header{display:block}}
 @media(max-width:600px){.universe-explorer-header>button,.power-view-actions{margin-top:10px}}
 @media(max-width:900px){.power-workbench-grid{grid-template-columns:1fr}.power-form-grid{grid-template-columns:1fr}.power-view-header{display:block}.power-view-actions{margin-top:10px}}
+/* In-app DanMachi dossier reader: keep family/member/event/source navigation contextual. */
+.danmachi-dossier-dialog{width:min(1060px,calc(100vw - 22px));max-width:1060px;max-height:min(93vh,1000px);padding:0;overflow:hidden;border:1px solid #67543c;border-radius:18px;background:#25211c;color:#f2e7d6;box-shadow:0 28px 100px rgba(0,0,0,.58)}
+.danmachi-dossier-dialog::backdrop{background:rgba(12,10,8,.78);backdrop-filter:blur(5px)}
+.danmachi-dossier-content{display:grid;grid-template-rows:auto auto auto minmax(0,1fr) auto;gap:12px;max-height:min(93vh,1000px);padding:clamp(14px,3vw,26px)}
+.danmachi-dossier-heading-bar{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid #4c4032;background:#25211c}
+.danmachi-dossier-heading-bar h2{margin:0;font-size:clamp(20px,3vw,28px);color:#f4e5d1}
+.danmachi-dossier-header-actions{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.danmachi-dossier-header-actions button{font-size:11px;padding:7px 9px}
+#danmachi-dossier-meta,#danmachi-dossier-status{margin:0;font-size:11px;line-height:1.65;color:#cbbb9f}
+.danmachi-dossier-body{min-height:180px;max-height:62vh;overflow:auto;display:grid;align-content:start;gap:9px;padding:3px 8px 10px 2px;overscroll-behavior:contain}
+.danmachi-dossier-heading{margin:10px 0 2px;color:#edc68d;line-height:1.35}
+.danmachi-dossier-body h2{font-size:19px}.danmachi-dossier-body h3{font-size:16px}.danmachi-dossier-body h4{font-size:14px}
+.danmachi-dossier-paragraph,.danmachi-dossier-body li,.danmachi-dossier-quote{margin:0;color:#e0d4c1;font-size:12px;line-height:1.9;overflow-wrap:anywhere;white-space:pre-line}
+.danmachi-dossier-list{display:grid;gap:7px;margin:0;padding-left:22px}
+.danmachi-dossier-quote{border-left:3px solid #9c7a4f;padding:7px 12px;background:#30291f}
+.danmachi-dossier-code{white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #4f4232;border-radius:8px;background:#1e1b17;padding:10px;color:#e0d4c1;font-size:11px}
+.danmachi-dossier-body a{color:#a8dab5;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.danmachi-dossier-inline-link,.danmachi-dossier-source-ref{display:inline;color:#a8dab5;background:transparent;border:0;padding:0;font:inherit;line-height:inherit;text-decoration:underline;text-underline-offset:3px;text-align:left;cursor:pointer}
+.danmachi-dossier-inline-link:hover,.danmachi-dossier-source-ref:hover{color:#edc68d}
+.danmachi-dossier-related{border-top:1px solid #4c4032;padding-top:10px;max-height:210px;overflow:auto}
+.danmachi-dossier-related h3{margin:0 0 5px;color:#edc68d;font-size:14px}
+.danmachi-dossier-related-note{margin:0 0 8px;color:#cbbb9f;font-size:10px;line-height:1.6}
+.danmachi-dossier-related-grid{display:flex;flex-wrap:wrap;gap:7px}
+.danmachi-dossier-related-card{max-width:100%;padding:7px 10px;border:1px solid #5a4b37;border-radius:9px;background:#30291f;color:#e9dcc8;font-size:11px;text-align:left;overflow-wrap:anywhere;cursor:pointer}
+.danmachi-dossier-related-card:hover{border-color:#bd965d;background:#3a3023}
+.danmachi-dossier-source-match{outline:2px solid #c99f62;outline-offset:3px;background:#3b3021;border-radius:4px}
+.danmachi-dossier-error{margin:0;padding:12px;border:1px solid #8d5a47;border-radius:9px;background:#35231e;color:#f1c8b7;font-size:12px;line-height:1.7}
+@media(max-width:650px){.danmachi-dossier-dialog{width:calc(100vw - 10px);max-height:96vh;border-radius:12px}.danmachi-dossier-content{max-height:96vh;padding:12px}.danmachi-dossier-body{max-height:59vh}.danmachi-dossier-header-actions{width:100%}.danmachi-dossier-header-actions button{flex:1 0 auto}.danmachi-dossier-related{max-height:170px}}

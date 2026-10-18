@@ -184,7 +184,7 @@
           <div id="character-archive-results" class="character-archive-results" role="list" aria-label="Resultados de personajes"></div>
         </section>
         <section id="character-archive-profile" class="character-archive-profile hidden" aria-labelledby="archive-profile-name">
-          <div class="archive-profile-actions"><button id="archive-profile-back" type="button" class="outline-button">← Volver</button><button id="archive-return-search" type="button" class="quiet-button">Volver a resultados</button></div>
+          <div class="archive-profile-actions"><button id="archive-return-dossier" type="button" class="quiet-button hidden">Volver al expediente ↶</button><button id="archive-profile-back" type="button" class="outline-button">← Volver</button><button id="archive-return-search" type="button" class="quiet-button">Volver a resultados</button></div>
           <header class="archive-profile-header">
             <div id="archive-profile-portrait" class="archive-portrait archive-portrait--large" role="img" aria-label="Marcador visual decorativo; no es retrato oficial"><span id="archive-profile-monogram" aria-hidden="true">R</span><span class="archive-portrait-caption">RETRATO PENDIENTE</span></div>
             <div class="archive-profile-identity"><p id="archive-profile-eyebrow" class="eyebrow">FICHA DE PERSONAJE · DANMACHI</p><h2 id="archive-profile-name">Ryu Lion</h2><p id="archive-profile-summary" class="archive-profile-summary"></p><div id="archive-profile-badges" class="archive-badge-row"></div>
@@ -247,6 +247,25 @@
       </header>
       <p class="archive-more-info-disclaimer">Resumen original de WordWaifu. Los hechos se limitan a la continuidad elegida; las referencias comunitarias se identifican como tales.</p>
       <div id="archive-more-info-content" class="archive-more-info-body"></div>
+    </article>
+  </dialog>
+  <dialog id="danmachi-dossier-dialog" class="entity-dialog danmachi-dossier-dialog" aria-labelledby="danmachi-dossier-title">
+    <article class="danmachi-dossier-content">
+      <header class="dialog-heading danmachi-dossier-heading-bar">
+        <div><p class="eyebrow">ENCICLOPEDIA · LECTURA EN CONTEXTO</p><h2 id="danmachi-dossier-title">Expediente</h2></div>
+        <div class="danmachi-dossier-header-actions">
+          <button type="button" id="danmachi-dossier-back" class="outline-button" disabled>← Atrás</button>
+          <button type="button" id="danmachi-dossier-forward" class="outline-button" disabled>Adelante →</button>
+          <button type="button" id="danmachi-dossier-home" class="outline-button">Inicio</button>
+          <button type="button" id="danmachi-dossier-sources" class="outline-button">Fuentes</button>
+          <button type="button" id="danmachi-dossier-open-character" class="quiet-button" hidden>Abrir ficha navegable</button>
+          <button type="button" id="danmachi-dossier-close" class="icon-button" aria-label="Cerrar expediente">✕</button>
+        </div>
+      </header>
+      <p id="danmachi-dossier-meta" class="archive-more-info-disclaimer">Expediente del repositorio. Los estados de revisión siguen visibles y los enlaces relacionados no implican que todas las afirmaciones estén verificadas.</p>
+      <p id="danmachi-dossier-status" class="lore-search-status" role="status" aria-live="polite">Listo para abrir un expediente.</p>
+      <div id="danmachi-dossier-body" class="danmachi-dossier-body"></div>
+      <div id="danmachi-dossier-related" class="danmachi-dossier-related" hidden></div>
     </article>
   </dialog>
   <dialog id="content-rights-dialog" class="entity-dialog content-rights-dialog" aria-labelledby="content-rights-title">

@@ -2584,6 +2584,7 @@
     $("#archive-return-search").classList.remove("hidden");
     $$("#archive-profile-tabs [role=tab]").forEach(tab=>{const yes=tab.dataset.profileTab===activeArchiveTab;tab.setAttribute("aria-selected",yes?"true":"false");tab.tabIndex=yes?0:-1;});
     $("#archive-profile-panel").setAttribute("aria-labelledby","archive-tab-"+activeArchiveTab);
+    if ($("#archive-return-dossier")) $("#archive-return-dossier").classList.toggle("hidden", !archiveDossierReturn);
   }
   function renderArchiveRelationship(rel){
     const card=archiveElement("article","archive-relationship-card");card.appendChild(archivePortrait(rel.targetId,rel.targetName,false,rel.continuity));
@@ -2803,6 +2804,23 @@
         ". Compartir Familia acredita afiliación, no necesariamente amistad; abrí una ficha y usá «Volver» para regresar.")
     );
     section.appendChild(heading);
+    const familyRecord = (loreArchiveIndex.entityRecords || []).find(record =>
+      record.type === "familia" && (record.tags || []).some(tag =>
+        normalizeDossierTerm(tag) === normalizeDossierTerm(familyName) ||
+        normalizeDossierTerm(tag) === normalizeDossierTerm("Familia " + familyName) ||
+        normalizeDossierTerm(tag) === normalizeDossierTerm(familyName.replace(/\s*Familia\s*/i, ""))
+      )
+    );
+    if (familyRecord && familyRecord.path) {
+      const dossierButton = archiveElement("button", "archive-related-link", "Abrir expediente de la Familia ↗");
+      dossierButton.type = "button";
+      dossierButton.dataset.dossierPath = familyRecord.path;
+      dossierButton.dataset.dossierId = familyRecord.id;
+      dossierButton.dataset.dossierOpen = familyRecord.id;
+      section.appendChild(dossierButton);
+      section.appendChild(archiveElement("p", "archive-research-note",
+        "El expediente familiar conserva sus fuentes y límites. Compartir Familia documenta afiliación, no prueba amistad o confianza."));
+    }
     const grid = archiveElement("div", "archive-related-grid");
     members.forEach(member => grid.appendChild(renderArchiveRelationship({
       targetId: member.id,
@@ -2987,6 +3005,291 @@
     if (!archiveUiPrepared) { renderCharacterDirectory(); archiveUiPrepared = true; }
     return index;
   }
+
+  // Read catalog Markdown inside the encyclopedia; keep linked dossiers in context.
+  let danmachiDossierPage = null;
+  let danmachiDossierBack = [];
+  let danmachiDossierForward = [];
+  let danmachiDossierLoadToken = 0;
+  let archiveDossierReturn = null;
+
+  function normalizeDossierTerm(value) {
+    return String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLocaleLowerCase("es");
+  }
+
+  function dossierRecordLabel(record) {
+    if (!record) return "";
+    const tags = Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : [];
+    let name = tags.find(tag => !/^(roster|high|low|medium|normal|critical|timeline|multi-era|spoiler)$/i.test(tag)) || record.id;
+    if (record.type === "familia") {
+      const familyName = tags.find(tag => /familia/i.test(tag)) || name;
+      name = familyName.replace(/\s*familia\s*/i, "").trim();
+      return "Familia " + (name || record.id);
+    }
+    return name + " · " + record.id;
+  }
+
+  function sanitizeDossierRelativePath(value) {
+    let path = String(value || "").replace(/\\/g, "/").trim();
+    path = path.replace(/^\.\/lore\/danmachi\//, "");
+    if (!path || path.startsWith("/") || !/\.md$/i.test(path)) return "";
+    const parts = path.split("/");
+    if (parts.some(part => !part || part === "." || part === "..")) return "";
+    return path;
+  }
+
+  function resolveDossierMarkdownLink(href, currentPath) {
+    const value = String(href || "").trim();
+    if (!value || value.startsWith("javascript:") || value.startsWith("data:")) return null;
+    if (value.startsWith("#")) return { path: currentPath, anchor: value.slice(1), external: false };
+    let currentUrl;
+    try { currentUrl = new URL("./lore/danmachi/" + currentPath.split("/").map(encodeURIComponent).join("/"), window.location.href); }
+    catch { return null; }
+    let target;
+    try { target = new URL(value, currentUrl); } catch { return null; }
+    if (target.origin !== window.location.origin) {
+      return (target.protocol === "https:" || target.protocol === "http:") ? { url: target.href, external: true } : null;
+    }
+    const baseUrl = new URL("./lore/danmachi/", window.location.href);
+    if (!target.pathname.startsWith(baseUrl.pathname)) return null;
+    let path;
+    try { path = decodeURIComponent(target.pathname.slice(baseUrl.pathname.length)); } catch { return null; }
+    path = sanitizeDossierRelativePath(path);
+    if (!path) return null;
+    return { path, anchor: target.hash ? decodeURIComponent(target.hash.slice(1)) : "", external: false };
+  }
+
+  function appendDossierInline(parent, text, path) {
+    const value = String(text || "");
+    const pattern = /\[([^\]]+)\]\(([^)]+)\)|\x60([^\x60]+)\x60/g;
+    let cursor = 0, match;
+    while ((match = pattern.exec(value)) !== null) {
+      if (match.index > cursor) parent.appendChild(document.createTextNode(value.slice(cursor, match.index)));
+      if (match[3] !== undefined) {
+        const codeValue = match[3];
+        if (/^DMR-\d{3}-SRC-\d{3}$/.test(codeValue)) {
+          const button = archiveElement("button", "danmachi-dossier-source-ref", codeValue + " · ver registro ↗");
+          button.type = "button";
+          button.dataset.dossierPath = "sources/00-registro-fuentes.md";
+          button.dataset.dossierFocusTerm = codeValue;
+          parent.appendChild(button);
+        } else {
+          const code = document.createElement("code");
+          code.textContent = codeValue;
+          parent.appendChild(code);
+        }
+      } else {
+        const label = match[1], href = match[2].trim();
+        const target = resolveDossierMarkdownLink(href, path);
+        if (target && target.external) {
+          const link = document.createElement("a");
+          link.href = target.url;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = label;
+          parent.appendChild(link);
+        } else if (target) {
+          const button = archiveElement("button", "danmachi-dossier-inline-link", label + " ↗");
+          button.type = "button";
+          button.dataset.dossierPath = target.path;
+          if (target.anchor) button.dataset.dossierAnchor = target.anchor;
+          parent.appendChild(button);
+        } else {
+          parent.appendChild(document.createTextNode(label));
+        }
+      }
+      cursor = pattern.lastIndex;
+    }
+    if (cursor < value.length) parent.appendChild(document.createTextNode(value.slice(cursor)));
+  }
+
+  function renderDossierMarkdown(container, markdown, path) {
+    container.replaceChildren();
+    const lines = String(markdown || "").replace(/\r/g, "").split("\n");
+    let index = 0;
+    if (lines[0] && lines[0].trim() === "---") {
+      index = 1;
+      while (index < lines.length && lines[index].trim() !== "---") index++;
+      if (index < lines.length) index++;
+    }
+    let paragraph = [], listNode = null, listType = "", codeMode = false, codeNode = null;
+    const flushParagraph = () => {
+      if (!paragraph.length) return;
+      const p = archiveElement("p", "danmachi-dossier-paragraph");
+      appendDossierInline(p, paragraph.join(" "), path);
+      container.appendChild(p);
+      paragraph = [];
+    };
+    const flushList = () => { listNode = null; listType = ""; };
+    const flushAll = () => { flushParagraph(); flushList(); };
+    for (; index < lines.length; index++) {
+      const line = lines[index];
+      if (line.trim().startsWith("```")) {
+        flushAll();
+        codeMode = !codeMode;
+        if (codeMode) { codeNode = document.createElement("pre"); codeNode.className = "danmachi-dossier-code"; container.appendChild(codeNode); }
+        else codeNode = null;
+        continue;
+      }
+      if (codeMode) { codeNode.textContent += (codeNode.textContent ? "\n" : "") + line; continue; }
+      if (!line.trim()) { flushAll(); continue; }
+      const heading = line.match(/^(#{1,4})\s+(.+?)\s*#*$/);
+      if (heading) {
+        flushAll();
+        const level = Math.min(4, heading[1].length + 1);
+        const node = document.createElement("h" + level);
+        node.className = "danmachi-dossier-heading";
+        node.id = normalizeDossierTerm(heading[2]).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        appendDossierInline(node, heading[2], path);
+        container.appendChild(node);
+        continue;
+      }
+      const bullet = line.match(/^\s*(?:[-*]|\d+\.)\s+(.+)$/);
+      if (bullet) {
+        flushParagraph();
+        const kind = /^\s*\d+\./.test(line) ? "ol" : "ul";
+        if (!listNode || listType !== kind) {
+          flushList();
+          listType = kind;
+          listNode = document.createElement(kind);
+          listNode.className = "danmachi-dossier-list";
+          container.appendChild(listNode);
+        }
+        const li = document.createElement("li");
+        appendDossierInline(li, bullet[1], path);
+        listNode.appendChild(li);
+        continue;
+      }
+      if (/^\s*>\s?/.test(line)) {
+        flushAll();
+        const quote = archiveElement("blockquote", "danmachi-dossier-quote");
+        appendDossierInline(quote, line.replace(/^\s*>\s?/, ""), path);
+        container.appendChild(quote);
+        continue;
+      }
+      if (/^\s*---+\s*$/.test(line)) { flushAll(); continue; }
+      flushList();
+      paragraph.push(line.trim());
+    }
+    flushAll();
+    if (!container.childNodes.length) container.appendChild(archiveElement("p", "danmachi-dossier-paragraph", "Este expediente no contiene texto legible."));
+  }
+
+  function renderDossierRelatedRecords(record, path) {
+    const root = $("#danmachi-dossier-related");
+    root.replaceChildren();
+    const records = (loreArchiveIndex && loreArchiveIndex.entityRecords) || [];
+    if (!record) { root.hidden = true; return; }
+    const tags = (record.tags || []).map(normalizeDossierTerm).filter(tag =>
+      tag && !/^(roster|high|low|medium|normal|critical|timeline|spoiler|multi-era)$/.test(tag));
+    const order = {character:0,deity_character:0,character_group:1,familia:1,event:2,author_event:3,location:4,institution_and_location:4,setting:5,world_rule:6,index:7,chronology:7};
+    const ranked = records.filter(candidate => candidate.path && candidate.path !== path && candidate.id !== record.id)
+      .map(candidate => {
+        const candidateTags = (candidate.tags || []).map(normalizeDossierTerm);
+        const overlap = tags.filter(tag => candidateTags.includes(tag));
+        return {candidate,score:overlap.length,overlap};
+      }).filter(item=>item.score>0)
+      .sort((a,b)=>b.score-a.score || (order[a.candidate.type]??8)-(order[b.candidate.type]??8) || a.candidate.id.localeCompare(b.candidate.id,"en"));
+    root.hidden = false;
+    root.append(archiveElement("h3", "", "Explorar entidades relacionadas"),
+      archiveElement("p", "danmachi-dossier-related-note", "Enlaces por etiquetas compartidas del catálogo. Son rutas de consulta; una etiqueta compartida no demuestra una relación personal ni confirma canon."));
+    if (!ranked.length) { root.appendChild(archiveElement("p", "archive-empty", "No hay relaciones por etiquetas suficientes para ofrecer más enlaces.")); return; }
+    const grid = archiveElement("div", "danmachi-dossier-related-grid");
+    ranked.slice(0,10).forEach(item=>{
+      const button=archiveElement("button","danmachi-dossier-related-card",dossierRecordLabel(item.candidate)+" · "+item.candidate.type+" ↗");
+      button.type="button";button.dataset.dossierPath=item.candidate.path;button.dataset.dossierId=item.candidate.id;button.dataset.dossierOpen=item.candidate.id;
+      button.title="Etiquetas compartidas: "+item.overlap.join(", ");grid.appendChild(button);
+    });
+    root.appendChild(grid);
+  }
+
+  async function renderDanmachiDossierPage(page) {
+    const token=++danmachiDossierLoadToken;danmachiDossierPage=page;
+    const title=$("#danmachi-dossier-title"),meta=$("#danmachi-dossier-meta"),body=$("#danmachi-dossier-body"),status=$("#danmachi-dossier-status");
+    const record=((loreArchiveIndex&&loreArchiveIndex.entityRecords)||[]).find(item=>item.id===page.recordId||item.path===page.path)||null;
+    title.textContent=dossierRecordLabel(record)||page.path.split("/").pop().replace(/\.md$/i,"").replace(/[-_]+/g," ");
+    meta.textContent=(record?record.id+" · Tipo: "+record.type+" · Estado de revisión: "+record.status+" · Prioridad: "+record.priority:page.path)+" · Lectura de repositorio; no se editará el archivo desde esta ventana.";
+    status.textContent="Cargando expediente…";
+    body.replaceChildren(archiveElement("p","danmachi-dossier-paragraph","Recuperando Markdown…"));
+    $("#danmachi-dossier-back").disabled=danmachiDossierBack.length===0;
+    $("#danmachi-dossier-forward").disabled=danmachiDossierForward.length===0;
+    $("#danmachi-dossier-open-character").hidden=!(record&&["character","deity_character"].includes(record.type)&&loreArchiveIndex&&(loreArchiveIndex.characters||[]).some(character=>character.id===record.id));
+    const path=sanitizeDossierRelativePath(page.path);
+    if(!path){status.textContent="Ruta rechazada por la política de seguridad.";body.replaceChildren(archiveElement("p","danmachi-dossier-error","Solo se pueden abrir archivos Markdown dentro de lore/danmachi/."));return;}
+    try {
+      const response=await fetch("./lore/danmachi/"+path.split("/").map(encodeURIComponent).join("/"),{cache:"no-cache"});
+      if(!response.ok)throw new Error("HTTP "+response.status);
+      const content=await response.text();
+      if(token!==danmachiDossierLoadToken||!danmachiDossierPage||danmachiDossierPage.path!==page.path)return;
+      renderDossierMarkdown(body,content,path);
+      renderDossierRelatedRecords(record,path);
+      status.textContent="Expediente cargado · navegación contextual activa · "+(loreArchiveIndex.entityRecords||[]).length+" registros indexados.";
+      if(page.focusTerm){
+        const candidates=body.querySelectorAll("p,li,h2,h3,h4,blockquote");
+        const match=Array.from(candidates).find(node=>node.textContent.includes(page.focusTerm));
+        if(match){match.classList.add("danmachi-dossier-source-match");match.scrollIntoView({block:"center",behavior:"auto"});}
+        else body.prepend(archiveElement("p","danmachi-dossier-error","No se encontró "+page.focusTerm+" en este registro de fuentes; revisá el expediente de origen antes de considerar la cita comprobada."));
+      }
+      if(page.anchor){
+        const id=normalizeDossierTerm(page.anchor).replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+        const anchor=Array.from(body.querySelectorAll("[id]")).find(node=>node.id===id);
+        if(anchor)anchor.scrollIntoView({block:"start",behavior:"auto"});
+      }
+    } catch(error) {
+      if(token!==danmachiDossierLoadToken)return;
+      status.textContent="No se pudo cargar el expediente.";
+      body.replaceChildren(archiveElement("p","danmachi-dossier-error","No se pudo leer "+path+" ("+(error&&error.message?error.message:"error desconocido")+"). La búsqueda y el resto de la enciclopedia siguen disponibles."));
+      renderDossierRelatedRecords(record,path);
+    }
+  }
+
+  function openDanmachiDossier(path,recordId,options) {
+    const cleanPath=sanitizeDossierRelativePath(path),settings=options||{},dialog=$("#danmachi-dossier-dialog");
+    if(!cleanPath){$("#danmachi-dossier-status").textContent="No se abrió una ruta de expediente no válida.";return;}
+    if(dialog.open&&settings.remember!==false&&danmachiDossierPage){danmachiDossierBack.push({...danmachiDossierPage});danmachiDossierForward=[];}
+    else if(!dialog.open){danmachiDossierBack=[];danmachiDossierForward=[];dialog.showModal();}
+    void renderDanmachiDossierPage({path:cleanPath,recordId:recordId||"",anchor:settings.anchor||"",focusTerm:settings.focusTerm||""});
+  }
+  function moveDanmachiDossierBack(){if(!danmachiDossierBack.length)return;if(danmachiDossierPage)danmachiDossierForward.push({...danmachiDossierPage});void renderDanmachiDossierPage(danmachiDossierBack.pop());}
+  function moveDanmachiDossierForward(){if(!danmachiDossierForward.length)return;if(danmachiDossierPage)danmachiDossierBack.push({...danmachiDossierPage});void renderDanmachiDossierPage(danmachiDossierForward.pop());}
+  function goToDossierHome(){openDanmachiDossier("MASTER_INDEX.md","",{remember:$("#danmachi-dossier-dialog").open});}
+  function goToDossierSources(){openDanmachiDossier("sources/00-registro-fuentes.md","",{remember:$("#danmachi-dossier-dialog").open});}
+  function openNavigableCharacterProfile(){
+    if(!danmachiDossierPage||!loreArchiveIndex)return;
+    const record=(loreArchiveIndex.entityRecords||[]).find(item=>item.id===danmachiDossierPage.recordId);
+    if(!record||!["character","deity_character"].includes(record.type)||!(loreArchiveIndex.characters||[]).some(character=>character.id===record.id))return;
+    archiveDossierReturn={page:{...danmachiDossierPage},back:danmachiDossierBack.map(item=>({...item})),forward:danmachiDossierForward.map(item=>({...item}))};
+    $("#danmachi-dossier-dialog").close();
+    openArchiveProfile(record.id,activeArchiveContinuity||"CONT-AR",false);
+    $("#archive-return-dossier").classList.remove("hidden");
+  }
+  function returnToDanmachiDossier(){
+    if(!archiveDossierReturn)return;
+    const saved=archiveDossierReturn;archiveDossierReturn=null;danmachiDossierBack=saved.back;danmachiDossierForward=saved.forward;
+    activeArchiveCharacterId=null;activeArchiveContinuity=null;activeArchiveProfile=null;
+    $("#character-archive-profile").classList.add("hidden");$("#character-archive-directory").classList.remove("hidden");
+    if(!$("#danmachi-dossier-dialog").open)$("#danmachi-dossier-dialog").showModal();
+    void renderDanmachiDossierPage(saved.page);
+  }
+  function initializeDanmachiDossierNavigation(){
+    const dialog=$("#danmachi-dossier-dialog");
+    $("#danmachi-dossier-close").addEventListener("click",()=>{dialog.close();danmachiDossierPage=null;danmachiDossierBack=[];danmachiDossierForward=[];});
+    $("#danmachi-dossier-back").addEventListener("click",moveDanmachiDossierBack);
+    $("#danmachi-dossier-forward").addEventListener("click",moveDanmachiDossierForward);
+    $("#danmachi-dossier-home").addEventListener("click",goToDossierHome);
+    $("#danmachi-dossier-sources").addEventListener("click",goToDossierSources);
+    $("#danmachi-dossier-open-character").addEventListener("click",openNavigableCharacterProfile);
+    $("#archive-return-dossier").addEventListener("click",returnToDanmachiDossier);
+    document.addEventListener("click",event=>{
+      const button=event.target.closest("button[data-dossier-path]");
+      if(!button)return;
+      event.preventDefault();
+      openDanmachiDossier(button.dataset.dossierPath,button.dataset.dossierId,{
+        remember:dialog.open,anchor:button.dataset.dossierAnchor||"",focusTerm:button.dataset.dossierFocusTerm||""
+      });
+    });
+  }
+
   function renderDanmachiEntityCatalog() {
     const root = $("#danmachi-entity-results");
     const status = $("#danmachi-entity-status");
@@ -3021,7 +3324,12 @@
       if (entity.tags.length) card.appendChild(archiveElement("p", "danmachi-entity-tags", "Etiquetas: " + entity.tags.join(", ")));
       if (entity.path) {
         const links = archiveElement("div", "lore-result-links");
-        appendLoreLink(links, "Abrir expediente ↗", "./lore/danmachi/" + entity.path, false);
+        const open = archiveElement("button", "archive-related-link", "Abrir expediente dentro de WordWaifu ↗");
+        open.type = "button";
+        open.dataset.dossierPath = entity.path;
+        open.dataset.dossierId = entity.id;
+        open.dataset.dossierOpen = entity.id;
+        links.appendChild(open);
         card.appendChild(links);
       }
       root.appendChild(card);
@@ -3036,6 +3344,8 @@
     if (external) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
     container.appendChild(link);
   }
+
+  initializeDanmachiDossierNavigation();
 
   function renderOnlineSourceDirectory() {
     const root = $("#lore-source-directory");
