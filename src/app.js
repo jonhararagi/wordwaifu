@@ -1068,7 +1068,7 @@
       dynamicLayer.replaceChildren();
       // Query all pre-existing fixed markers once, rather than scanning the DOM
       // again for every location (which turns atlas rendering into O(locations²)).
-      const existingLocationIds = new Set($(".map-marker:not(.event-marker)").map((marker) => marker.dataset.location));
+      const existingLocationIds = new Set(Array.from(document.querySelectorAll(".map-marker:not(.event-marker)"), (marker) => marker.dataset.location));
       // SVG hit-testing follows paint order. Keep the currently selected custom
       // marker last so a nearby imported child/neighbor cannot intercept clicks
       // on the location the details panel already represents.
