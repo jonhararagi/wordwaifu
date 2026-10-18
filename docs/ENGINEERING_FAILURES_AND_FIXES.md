@@ -6,7 +6,7 @@
 
 ## 1. Prioridad de cobertura factual DanMachi
 
-El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 64 aristas, distribuidas entre Astrea, Hestia, parte de Loki Familia, rutas de adaptación de Ryu/Bell/Eina, historia parcial de Zeus/Hera y la expedición del volumen 21. El total no equivale a cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
+El corpus actual reconoce una deuda factual real: el grafo explícito documentado tiene 70 aristas, distribuidas entre Astrea, Hestia, parte de Loki Familia, rutas de adaptación de Ryu/Bell/Eina, historia parcial de Zeus/Hera, la expedición del volumen 21 y una ruta parcial de Astrea Record. El total no equivale a cobertura completa de relaciones. Los perfiles individuales añadidos a Loki Familia se etiquetan como `CONT-SO` cuando proceden de perfiles oficiales de Sword Oratoria. No deben copiarse automáticamente a la continuidad de la novela principal.
 
 ### Corrección aplicada en main · 2026-10-18
 
@@ -88,17 +88,18 @@ Fuente: https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_Ind
 
 ### E. Herramienta de lockfiles: correcciones de uso y validación en releases públicos
 
-El repositorio público de releases de `github/gh-actions-lock` publicó `0.2.0-rc.1` el 12 de octubre de 2026. El registro de cambios destaca tres correcciones concretas:
+El repositorio público de releases de `github/gh-actions-lock` publicó la versión estable `0.2.0` el 12 de octubre de 2026, tras la candidata `0.2.0-rc.1`. Las notas estables incluyen estas correcciones concretas:
 
-- `verify-local` reporta referencias `./` en lugar de migrarlas automáticamente en el disco.
-- La lectura de workflows respeta `GH_ACTIONS_LOCK_REPO_ROOT` para localizar la raíz del repositorio.
-- La comprobación detecta entradas sin usar en el lockfile y workflows que no están registrados en él.
+- `--verify` ahora falla ante entradas del lockfile sin uso y workflows que no tienen entrada; la corrección publicada es ejecutar `gh actions-lock` y confirmar el lockfile actualizado.
+- `--verify-local` nunca escribe ni migra referencias locales `./`; solo informa hallazgos.
+- La lectura de workflows respeta `GH_ACTIONS_LOCK_REPO_ROOT` para localizar la raíz de un checkout parcial sin directorio `.git`.
+- Los locks conservan pins existentes y comprueban paridad con lo que resuelve el runner; se retiró la opción `--rescan`.
 
 Fuente: https://github.com/github/gh-actions-lock/releases
 
-**Qué error/riesgo ilustra:** una herramienta de validación puede hacer cambios no deseados durante una operación que el usuario cree que solo inspecciona; además, una lista de dependencias fijadas puede aparentar cobertura completa mientras omite workflows o conserva entradas obsoletas. La nota de release enumera las correcciones; no publica un informe de incidente completo, por lo que no se atribuyen consecuencias que el autor no declara.
+**Qué error/riesgo ilustra:** un comando presentado como verificación puede ser destructivo si migra referencias automáticamente, y un lockfile puede parecer completo mientras deja workflows fuera o conserva dependencias obsoletas. Las notas de release documentan el cambio de comportamiento, no un informe completo de incidente, así que no se atribuyen consecuencias que el autor no declara.
 
-**Aplicación conservadora a WordWaifu:** los validadores deben ser de solo lectura por defecto; las migraciones deben requerir un modo explícito. Si el proyecto adopta el lockfile de Actions, el CI debe fallar ante workflows no registrados o entradas obsoletas. Como las workflows actuales ya fijan varias acciones a SHA completos y la función de lockfiles sigue en vista previa pública, no se instala una nueva herramienta en esta tanda sin demostrar que aporta cobertura adicional al repositorio.
+**Aplicación conservadora a WordWaifu:** los validadores deben ser de solo lectura por defecto; las migraciones deben requerir un modo explícito. Si el proyecto adopta el lockfile de Actions, el CI debe fallar ante workflows no registrados o entradas obsoletas. Como los workflows actuales ya fijan varias acciones a SHA completos y los lockfiles de GitHub Actions siguen en vista previa pública, no se añade la extensión al toolchain de WordWaifu sin demostrar que aporta cobertura adicional y que sus verificaciones pasan en CI.
 
 ## 3. Decisiones inmediatas
 
@@ -205,3 +206,17 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - **CI final del código y tests, SHA exacto `a332312c0cd39c7f1b61c7b8f6461b28b960f030`:** [Validate WordWaifu #39158788753 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39158788753) y [DanMachi Lore and Retrieval Integrity #39158788649 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39158788649).
 - **Inventario después del cierre de relaciones:** 65 registros activos, 55 IDs reservados, 104 documentos de apoyo y 66 aristas: 57 `source_checked`, 3 `secondary_checked`, 1 `pending_verification`, 2 `provisional_summary`, 3 `source_checked_excerpt_only`. La red incluye ahora los vínculos de roster Ryu–Kaguya/Ryu–Lyra con evidencia secundaria, nunca como amistad confirmada.
 - **Lo que no se declara terminado:** siguen pendientes localizadores de la novela para escenas concretas; fecha/orden del descenso de Hestia; secuencia completa y consecuencias del rescate del volumen 21; el roster primario completo de Astrea Familia; y cronología, roster y desenlace de la misión del Dragón Negro. No convertir esas lagunas en canon por inferencia.
+
+
+### Error de UI localizado · etiqueta de evento frente a nombre de catálogo · 2026-10-18
+
+- **Síntoma:** el smoke de Chromium alcanzaba desde Ryu una relación cuyo destino era un evento, pero la espera del título del dossier expiraba. El registro existía y la arista era válida; la interfaz estaba construyendo el rótulo desde una etiqueta genérica del catálogo en lugar de usar el nombre editorial de la historia.
+- **Solución:** la función de rótulo de dossier ahora prioriza los campos name/title del registro y solo usa tags/ID como fallback. El test real abre el dossier enlazado, comprueba el título y el cuerpo, lo cierra y exige que la navegación vuelva a la ficha de Ryu.
+- **Resultado exacto para el SHA funcional a332312c0cd39c7f1b61c7b8f6461b28b960f030:** [Validate WordWaifu #39158788753 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39158788753) y [DanMachi Lore and Retrieval Integrity #39158788649 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39158788649). Los checks posteriores para la nueva ruta de Astrea Record se verifican en su SHA independiente.
+
+### Ruta narrativa adicional · Astrea Record I–III · 2026-10-18
+
+- Se creó EVT-DM-ASTREA-RECORD-FOUNDATIONS-001 con los claims existentes DMR-012-CLM-001 a DMR-012-CLM-004, respaldados por sinopsis oficiales de GA Bunko I–III. La ruta enlaza el marco temporal relativo, la guía de Astrea y Alise sobre Ryu, y el impacto general de las pérdidas y Evilus.
+- Se añadieron cuatro relaciones explícitas en CONT-AR. No se infieren destinos individuales, orden capítulo por capítulo ni detalles de la misión contra el Dragón Negro.
+- Inventario después del cambio de catálogo: 66 registros activos, 55 IDs reservados, 104 documentos de apoyo y 70 aristas. Estados actuales: 61 source_checked, 3 secondary_checked, 1 pending_verification, 2 provisional_summary y 3 source_checked_excerpt_only.
+- El chequeo estático previo a esta ampliación encontró 66 aristas sin endpoints rotos, duplicados, claims ausentes ni discordancia entre continuidad y estado. Repetir la validación exhaustiva después de la ampliación y certificar el resultado con los workflows del SHA exacto.
