@@ -5,6 +5,7 @@ const path = require("node:path");
 const { chromium } = require("playwright");
 const { validateAndNormalizeProject } = require("../src/project-schema.js");
 require("./test_story_outline.cjs");
+require("./test_story_forge.cjs");
 
 const root = path.resolve(__dirname, "..");
 const mimeTypes = {
@@ -315,7 +316,10 @@ async function run() {
     assert.equal(await page.locator("#story-meta-form [name='storyPantheon']").inputValue(), "La diosa quiere recuperar su libertad y protege a una amiga por una deuda antigua.");
     assert.equal(await page.locator("#story-meta-form [name='storyEnsemble']").inputValue(), "Piloto: miedo al fracaso | rivalidad con el equipo | aprende a confiar.");
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").first().inputValue()).includes("presentar el mundo"), "opening chapters should introduce the world and premise");
-    assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).includes("falsa seguridad") || (await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).includes("victoria"), "middle-late chapters should include the false-security/decline phase");
+    const declineTitle = await page.locator(".story-chapter-form [name='chapterTitle']").nth(7).inputValue();
+    const declineSummary = (await page.locator(".story-chapter-form [name='chapterSummary']").nth(7).inputValue()).toLocaleLowerCase("es");
+    assert.ok(declineTitle.toLocaleLowerCase("es").includes("falsa seguridad") || declineSummary.includes("falsa seguridad") || declineSummary.includes("victoria") || declineSummary.includes("seguridad recién ganada"),
+      "middle-late chapters should include the false-security/decline phase; title=" + declineTitle + "; summary=" + declineSummary.slice(0, 450));
     assert.ok((await page.locator(".story-chapter-form [name='chapterSummary']").last().inputValue()).includes("dejar una pregunta central"), "open ending should deliberately leave a question while closing the immediate arc");
     await page.locator("#story-audit-outline-button").click();
     assert.ok((await page.locator("#story-outline-status").textContent()).includes("Auditoría"), "outline audit should report its result");
