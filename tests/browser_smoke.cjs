@@ -365,7 +365,16 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-dialog")?.open === true && document.querySelector("#danmachi-dossier-body")?.textContent.includes("Deidad principal"), null, { timeout: 10000 });
     assert.ok((await page.locator("#danmachi-dossier-title").innerText()).includes("Familia Astrea"), "Astrea Familia opens as an in-app dossier.");
     assert.ok((await page.locator("#danmachi-dossier-body").innerText()).includes("Astrea"), "The family dossier exposes its named deity.");
-    await page.locator('#danmachi-dossier-related [data-dossier-open="CHAR-RYUU-LION"]').click();
+    await page.waitForFunction(() => !!document.querySelector('#danmachi-dossier-related .danmachi-dossier-explicit-relationship [data-dossier-open="CHAR-RYUU-LION"]'), null, { timeout: 5000 });
+    const relationshipPanel = await page.locator("#danmachi-dossier-related").innerText();
+    assert.match(relationshipPanel, /Relaciones documentadas/);
+    assert.match(relationshipPanel, /CONT-ANIME/);
+    assert.match(relationshipPanel, /DMR-007-CLM-001/);
+    await page.locator('#danmachi-dossier-related [data-relationship-claim="DMR-007-CLM-001"]').click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.textContent.includes("DMR-007-CLM-001"), null, { timeout: 10000 });
+    await page.locator("#danmachi-dossier-back").click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Familia Astrea"), null, { timeout: 10000 });
+    await page.locator('#danmachi-dossier-related .danmachi-dossier-explicit-relationship [data-dossier-open="CHAR-RYUU-LION"]').click();
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Ryu Lion"), null, { timeout: 10000 });
     await page.locator("#danmachi-dossier-back").click();
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Familia Astrea"), null, { timeout: 10000 });

@@ -238,3 +238,20 @@ Los enlaces del catálogo abrían archivos Markdown fuera de WordWaifu. Esto rom
 ## 2026-10-18 · Resultado del benchmark Story Forge tras eliminar la selección cuadrática
 
 En [Validate WordWaifu #39108041754](https://github.com/jonhararagi/wordwaifu/actions/runs/39108041754), runner Ubuntu de GitHub Actions, la mediana de nueve ejecuciones fue de **0,81 ms para 100 capítulos**, **1,61 ms para 250** y **2,20 ms para 500**. Las cifras son orientativas para ese runner; no se deben extrapolar a PC de usuario, navegador o consumo de energía. El resultado refuerza la decisión de no agregar Web Worker o WebGPU a esta ruta sin una medición real de tareas largas en navegador.
+
+
+## 2026-10-18 · Integridad de relaciones y errores de identificación en el corpus
+
+### Error detectado y corrección
+
+- El paquete `DANMACHI-RESEARCH-012-astrea-familia-dossier.md` reutilizaba `DMR-006-CLM-001` a `DMR-006-CLM-005`, ya asignados al lote de roster `BATCH-DM-006`. Un enlace por ID podía llevar a dos afirmaciones distintas, así que se renumeraron las cinco del expediente Astrea a `DMR-012-CLM-001`–`DMR-012-CLM-005` y se actualizaron las referencias de la Familia.
+- `catalog.json` añade aristas explícitas con extremos vivos, tipo de vínculo, continuidad, intervalo, estado/nivel de evidencia y el claim exacto que las respalda. El visor presenta esas aristas por separado de las rutas exploratorias por etiquetas.
+- `check-catalog.mjs` falla ante IDs globales de afirmación duplicados, extremos inexistentes, rutas de claim equivocadas, continuidad que no aparece en el claim o estados de evidencia discordantes. Esto convierte el problema en una regresión comprobable en CI.
+- Las aristas de Astrea Familia aprovechan afirmaciones del portal oficial de adaptación y sinopsis editoriales, sin tratarlas como sustitutos de la novela completa. La razón por la que Ryu habría pedido a Astrea salir de Orario conserva `secondary_checked`; la aplicación no la presenta como canon confirmado.
+
+### Lecciones de publicaciones de mantenimiento
+
+- [GitHub Changelog · 25 de septiembre de 2026: corrección de resultados de consultas de Actions](https://github.blog/changelog/2026-09-25-changes-to-query-results-in-the-github-actions-api-and-ui/). GitHub explica que las consultas que superaban 2.500 ejecuciones podían agotar el tiempo y devolver recuentos inexactos; la solución ahora limita el recuento a «2,500+» y recomienda estrechar filtros. Aplicación en WordWaifu: para aceptar CI, comprobar SHA, workflow y resultado del run, sin inferir cobertura a partir de un recuento agregado.
+- [GitHub Changelog · 27 de agosto de 2026: retención de ejecuciones y estados de Actions](https://github.blog/changelog/2026-08-27-actions-retention-will-cover-checks-workflow-runs-and-statuses/). Desde el 1 de octubre, las comprobaciones, ejecuciones y estados quedan sujetos a la política de retención de Actions; para repositorios públicos se indica un máximo de 90 días. Aplicación: conservar en los documentos del proyecto el SHA, el enlace del run y la interpretación de las métricas, porque un log remoto puede caducar.
+- [GitHub Changelog · 23 de septiembre de 2026: retirada de Node 20 de Actions](https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/). Aplicación: mantener las acciones fijadas a revisiones compatibles con el runtime vigente y ejecutar validaciones de sintaxis en los workflows, en vez de confiar en etiquetas móviles sin auditoría.
+- Estas publicaciones son evidencia de límites operativos de las herramientas, no fuentes de canon. La política factual del corpus continúa dependiendo de fuentes DanMachi y de sus localizadores.

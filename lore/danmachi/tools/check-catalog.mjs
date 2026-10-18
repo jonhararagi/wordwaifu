@@ -44,7 +44,7 @@ try {
   process.exit(2);
 }
 
-for (const key of ["records", "reservedIds", "documents"]) {
+for (const key of ["records", "reservedIds", "documents", "relationships"]) {
   if (!Array.isArray(catalog[key])) {
     console.error(`catalog.json field '${key}' must be an array`);
     process.exit(2);
@@ -84,18 +84,69 @@ for (const entry of [...catalog.records, ...catalog.documents]) {
 
 const markdownFiles = listMarkdown(root);
 const frontmatterIds = new Map();
+const claimLocations = new Map();
 for (const file of markdownFiles) {
   const content = fs.readFileSync(file, "utf8");
+  const relative = path.relative(root, file).split(path.sep).join("/");
+  if (relative.startsWith("research/inbox/")) {
+    const claimMatches = [...content.matchAll(/^### (DMR-\d{3}-CLM-\d{3}) · ([^\r\n]+)$/gm)];
+    claimMatches.forEach((claimMatch, index) => {
+      const next = claimMatches[index + 1];
+      const claimBlock = content.slice(claimMatch.index, next ? next.index : content.length);
+      if (claimLocations.has(claimMatch[1])) {
+        errors.push("Duplicate research claim ID '" + claimMatch[1] + "' in " + claimLocations.get(claimMatch[1]).path + " and " + relative);
+      } else {
+        claimLocations.set(claimMatch[1], { path: relative, block: claimBlock });
+      }
+    });
+  }
   const match = content.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\s|$)/);
   if (!match) continue;
   const idMatch = match[1].match(/^id:\s*["']?([^"'\s#]+)["']?\s*$/m);
   if (!idMatch) continue;
   const id = idMatch[1];
-  const relative = path.relative(root, file).split(path.sep).join("/");
   if (frontmatterIds.has(id)) {
-    errors.push(`Duplicate frontmatter ID '${id}' in ${frontmatterIds.get(id)} and ${relative}`);
+    errors.push("Duplicate frontmatter ID '" + id + "' in " + frontmatterIds.get(id) + " and " + relative);
   } else {
     frontmatterIds.set(id, relative);
+  }
+}
+
+const liveRecordIds = new Set(recordIds);
+const relationshipIds = new Set();
+const validEvidenceStatuses = new Set(["source_checked", "secondary_checked"]);
+for (const relation of catalog.relationships) {
+  if (!relation || typeof relation !== "object") {
+    errors.push("Relationship entry must be an object");
+    continue;
+  }
+  const id = String(relation.id || "");
+  if (!id) errors.push("Relationship entry has no id");
+  else if (relationshipIds.has(id)) errors.push("Duplicate relationship ID: " + id);
+  relationshipIds.add(id);
+  for (const field of ["from", "to", "kind", "label", "continuity", "interval", "evidenceStatus", "evidenceType", "claimRef", "claimPath", "note"]) {
+    if (typeof relation[field] !== "string" || !relation[field].trim()) errors.push("Relationship " + (id || "(unknown)") + " has no " + field);
+  }
+  for (const endpoint of [relation.from, relation.to]) {
+    if (typeof endpoint === "string" && !liveRecordIds.has(endpoint)) errors.push("Relationship " + id + " points to unknown live record: " + endpoint);
+  }
+  if (relation.from === relation.to) errors.push("Relationship " + id + " has the same source and target");
+  if (typeof relation.continuity === "string" && !/^CONT-[A-Z0-9-]+$/.test(relation.continuity)) errors.push("Relationship " + id + " has an invalid continuity key: " + relation.continuity);
+  if (relation.evidenceStatus && !validEvidenceStatuses.has(relation.evidenceStatus)) errors.push("Relationship " + id + " has an unsupported evidenceStatus: " + relation.evidenceStatus);
+  const claim = claimLocations.get(relation.claimRef);
+  if (!claim) {
+    errors.push("Relationship " + id + " references missing research claim heading: " + relation.claimRef);
+  } else {
+    if (claim.path !== relation.claimPath) errors.push("Relationship " + id + " claimPath mismatch: " + relation.claimPath + " != " + claim.path);
+    const scopeMatch = claim.block.match(/continuity_scope[\x60\s]*:\s*([^\r\n]+)/i);
+    if (!scopeMatch || !scopeMatch[1].includes(relation.continuity)) errors.push("Relationship " + id + " continuity is not supported by " + relation.claimRef);
+    const statusMatch = claim.block.match(/verification_status[\x60\s]*:\s*([^\r\n]+)/i);
+    if (!statusMatch || statusMatch[1].trim() !== relation.evidenceStatus) errors.push("Relationship " + id + " evidenceStatus mismatches " + relation.claimRef);
+  }
+  if (typeof relation.claimPath === "string" && relation.claimPath) {
+    const full = path.resolve(root, relation.claimPath);
+    if (!full.startsWith(root + path.sep)) errors.push("Relationship " + id + " claimPath escapes lore root: " + relation.claimPath);
+    else if (!fs.existsSync(full)) errors.push("Relationship " + id + " claimPath does not exist: " + relation.claimPath);
   }
 }
 

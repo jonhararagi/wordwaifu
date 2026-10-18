@@ -8,8 +8,8 @@
 
 ## Afirmaciones trazables
 
-### DMR-006-CLM-001 · Referencia temporal y orientación colectiva
-- `claim_id`: DMR-006-CLM-001
+### DMR-012-CLM-001 · Referencia temporal y orientación colectiva
+- `claim_id`: DMR-012-CLM-001
 - `claim`: La sinopsis editorial del volumen 1 sitúa Astrea Record aproximadamente siete años antes de la llegada de Bell a Orario y presenta a Astrea Familia como una Familia que se alza en nombre de la justicia.
 - `character_ids`: [CHAR-ASTREA, CHAR-ALISE-LOVELACE, CHAR-RYUU-LION]
 - `aspect`: periodo, valores, identidad colectiva
@@ -31,8 +31,8 @@
 - **Estado:** source_checked.
 - **Límite:** referencia relativa, no fecha absoluta ni cronología completa.
 
-### DMR-006-CLM-002 · Astrea como deidad guía en Astrea Record
-- `claim_id`: DMR-006-CLM-002
+### DMR-012-CLM-002 · Astrea como deidad guía en Astrea Record
+- `claim_id`: DMR-012-CLM-002
 - `claim`: La sinopsis editorial presenta a Astrea como la diosa bajo cuya guía Ryu busca su propia comprensión de la justicia durante el periodo histórico de Astrea Record.
 - `character_ids`: [CHAR-ASTREA, CHAR-RYUU-LION]
 - `aspect`: deidad, valores, guía
@@ -54,8 +54,8 @@
 - **Estado:** source_checked.
 - **Límite:** no combinar esta evidencia con la caracterización del anime.
 
-### DMR-006-CLM-003 · Alise como capitana y guía de Ryu
-- `claim_id`: DMR-006-CLM-003
+### DMR-012-CLM-003 · Alise como capitana y guía de Ryu
+- `claim_id`: DMR-012-CLM-003
 - `claim`: La sinopsis editorial del volumen 1 identifica a Alise como capitana de Astrea Familia y la presenta guiando a Ryu.
 - `character_ids`: [CHAR-ALISE-LOVELACE, CHAR-RYUU-LION]
 - `aspect`: liderazgo, relación documentada
@@ -77,8 +77,8 @@
 - **Estado:** source_checked.
 - **Límite:** no establece edad, nivel, historial completo ni destino posterior.
 
-### DMR-006-CLM-004 · El conflicto histórico afecta el sentido de justicia de Ryu
-- `claim_id`: DMR-006-CLM-004
+### DMR-012-CLM-004 · El conflicto histórico afecta el sentido de justicia de Ryu
+- `claim_id`: DMR-012-CLM-004
 - `claim`: La sinopsis editorial del volumen 2 relaciona las pérdidas del periodo llamado posteriormente Los siete días de la muerte con una sacudida al sentido de justicia de Ryu; el volumen 3 resume una escalada del conflicto con Evilus.
 - `character_ids`: [CHAR-RYUU-LION, CHAR-ASTREA, CHAR-ALISE-LOVELACE]
 - `aspect`: conflicto, evolución, justicia
@@ -100,8 +100,8 @@
 - **Estado:** source_checked.
 - **Límite:** las sinopsis no detallan por sí solas cada escena, la consecuencia individual ni el destino de cada miembro.
 
-### DMR-006-CLM-005 · Astrea en el perfil oficial de adaptación
-- `claim_id`: DMR-006-CLM-005
+### DMR-012-CLM-005 · Astrea en el perfil oficial de adaptación
+- `claim_id`: DMR-012-CLM-005
 - `claim`: El perfil oficial de DanMachi IV describe a Astrea como una deidad asociada a justicia y orden, misericordiosa y amable.
 - `character_ids`: [CHAR-ASTREA]
 - `aspect`: valores, personalidad, deidad

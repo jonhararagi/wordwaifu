@@ -3180,6 +3180,55 @@
     root.replaceChildren();
     const records = (loreArchiveIndex && loreArchiveIndex.entityRecords) || [];
     if (!record) { root.hidden = true; return; }
+    root.hidden = false;
+
+    const evidenceDescription = edge => {
+      if (edge.evidenceType === "official_publisher_synopsis")
+        return "Sinopsis editorial oficial; no reemplaza el volumen completo ni sus localizadores internos.";
+      if (edge.evidenceType === "official_adaptation_profile")
+        return "Perfil oficial de adaptación: esta relación pertenece a " + edge.continuity + " y no se traslada automáticamente a la novela.";
+      return "Fuente secundaria; pista provisional pendiente de cotejo contra una fuente primaria.";
+    };
+    const edges = (loreArchiveIndex.relationships || [])
+      .filter(edge => edge && (edge.from === record.id || edge.to === record.id))
+      .filter(edge => records.some(candidate => candidate.id === (edge.from === record.id ? edge.to : edge.from) && candidate.path && candidate.path !== path))
+      .sort((a, b) => a.label.localeCompare(b.label, "es") || a.id.localeCompare(b.id, "en"));
+
+    const explicitSection = archiveElement("section", "danmachi-dossier-explicit-relations");
+    explicitSection.append(
+      archiveElement("h3", "", "Relaciones documentadas"),
+      archiveElement("p", "danmachi-dossier-related-note", "Cada arista conserva tipo de vínculo, continuidad, periodo y afirmación de respaldo. «Fuente consultada» no significa que el volumen completo ya se haya cotejado; las fuentes secundarias permanecen marcadas como provisionales.")
+    );
+    if (!edges.length) {
+      explicitSection.appendChild(archiveElement("p", "archive-empty", "Este expediente todavía no tiene aristas explícitas registradas."));
+    } else {
+      const list = archiveElement("div", "danmachi-dossier-relationships");
+      edges.forEach(edge => {
+        const targetId = edge.from === record.id ? edge.to : edge.from;
+        const target = records.find(candidate => candidate.id === targetId);
+        if (!target) return;
+        const item = archiveElement("article", "danmachi-dossier-explicit-relationship");
+        const open = archiveElement("button", "danmachi-dossier-related-card", dossierRecordLabel(target) + " · " + edge.label + " ↗");
+        open.type = "button";
+        open.dataset.dossierPath = target.path;
+        open.dataset.dossierId = target.id;
+        open.dataset.dossierOpen = target.id;
+        open.title = edge.kind + " · " + edge.continuity + " · " + edge.evidenceStatus;
+        const detail = archiveElement("p", "danmachi-dossier-relationship-meta",
+          edge.kind.replace(/_/g, " ") + " · " + edge.continuity + " · Periodo: " + edge.interval + " · Estado: " + edge.evidenceStatus + ". " + evidenceDescription(edge) + " " + edge.note);
+        const evidence = archiveElement("button", "danmachi-dossier-source-ref danmachi-dossier-relationship-evidence",
+          "Ver afirmación " + edge.claimRef + " ↗");
+        evidence.type = "button";
+        evidence.dataset.dossierPath = edge.claimPath;
+        evidence.dataset.dossierFocusTerm = edge.claimRef;
+        evidence.dataset.relationshipClaim = edge.claimRef;
+        item.append(open, detail, evidence);
+        list.appendChild(item);
+      });
+      explicitSection.appendChild(list);
+    }
+    root.appendChild(explicitSection);
+
     const tags = (record.tags || []).map(normalizeDossierTerm).filter(tag =>
       tag && !/^(roster|high|low|medium|normal|critical|timeline|spoiler|multi-era)$/.test(tag));
     const order = {character:0,deity_character:0,character_group:1,familia:1,event:2,author_event:3,location:4,institution_and_location:4,setting:5,world_rule:6,index:7,chronology:7};
@@ -3190,10 +3239,11 @@
         return {candidate,score:overlap.length,overlap};
       }).filter(item=>item.score>0)
       .sort((a,b)=>b.score-a.score || (order[a.candidate.type]??8)-(order[b.candidate.type]??8) || a.candidate.id.localeCompare(b.candidate.id,"en"));
-    root.hidden = false;
-    root.append(archiveElement("h3", "", "Explorar entidades relacionadas"),
-      archiveElement("p", "danmachi-dossier-related-note", "Enlaces por etiquetas compartidas del catálogo. Son rutas de consulta; una etiqueta compartida no demuestra una relación personal ni confirma canon."));
-    if (!ranked.length) { root.appendChild(archiveElement("p", "archive-empty", "No hay relaciones por etiquetas suficientes para ofrecer más enlaces.")); return; }
+    root.append(
+      archiveElement("h3", "", "Otras coincidencias por etiquetas"),
+      archiveElement("p", "danmachi-dossier-related-note", "Estas rutas ayudan a descubrir expedientes; las etiquetas compartidas no prueban una relación personal y no confirman canon.")
+    );
+    if (!ranked.length) { root.appendChild(archiveElement("p", "archive-empty", "No hay más coincidencias por etiquetas.")); return; }
     const grid = archiveElement("div", "danmachi-dossier-related-grid");
     ranked.slice(0,10).forEach(item=>{
       const button=archiveElement("button","danmachi-dossier-related-card",dossierRecordLabel(item.candidate)+" · "+item.candidate.type+" ↗");

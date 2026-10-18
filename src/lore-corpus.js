@@ -299,6 +299,7 @@
     return { schemaVersion: 1, indexName: "WordWaifu DanMachi Lore Search", mode: "curated-claims",
       sourceClaimCount: documents.reduce((sum, doc) => sum + parseSource(doc.content, doc.path).length, 0),
       entryCount: claims.length, characters, claims, profileDetails,
+      relationships: Array.isArray(catalog.relationships) ? catalog.relationships : [],
       entityRecords: (catalog.records || []).filter(record => record && typeof record.id === "string" && typeof record.type === "string").map(record => ({
         id: record.id, path: record.path || "", type: record.type, status: record.status || "unknown",
         priority: record.priority || "normal", tags: Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : []

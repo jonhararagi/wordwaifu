@@ -11,11 +11,11 @@ source_refs:
   - DMR-001-SRC-005
   - DMR-002-SRC-002
 claim_refs:
-  - DMR-006-CLM-001
-  - DMR-006-CLM-002
-  - DMR-006-CLM-003
-  - DMR-006-CLM-004
-  - DMR-006-CLM-005
+  - DMR-012-CLM-001
+  - DMR-012-CLM-002
+  - DMR-012-CLM-003
+  - DMR-012-CLM-004
+  - DMR-012-CLM-005
 tags: [Familia Astrea, Astrea, Ryu Lion, Alise Lovelace, Astrea Record, Era Oscura]
 ---
 

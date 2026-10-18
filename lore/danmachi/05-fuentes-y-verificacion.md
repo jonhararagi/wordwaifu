@@ -2,7 +2,7 @@
 
 ## Estado de las fuentes
 
-Todavía no se ha incorporado ni comprobado aquí ninguna referencia primaria específica de DanMachi. Por lo tanto, este paquete no declara hechos del canon como confirmados.
+El registro maestro ya incluye páginas oficiales y sinopsis editoriales consultadas (ver `sources/00-registro-fuentes.md`), además de fuentes de adaptación. Eso no equivale a cotejar el texto íntegro de la novela: siguen pendientes localizadores de capítulo/página para varias afirmaciones y no se debe declarar una biografía como totalmente verificada a partir de una sinopsis.
 
 Los más de 200 índices mencionados por el propietario todavía no se encuentran disponibles en esta carpeta. Su contenido no debe resumirse, inventarse ni considerarse importado.
 

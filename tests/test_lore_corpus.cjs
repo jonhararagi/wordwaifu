@@ -19,6 +19,11 @@ const documents = documentPaths.map(file => ({ path: file, content: fs.readFileS
 const index = corpus.buildIndex(catalog, documents);
 const familyEntities = corpus.searchEntities(catalog, { type: "familia" });
 assert.ok(Array.isArray(index.entityRecords), "Loaded lore index must expose typed catalog entities for the UI.");
+assert.ok(Array.isArray(index.relationships), "Loaded lore index must expose source-backed relationship edges.");
+assert.ok(index.relationships.length >= 18, "The Astrea graph must include explicit historical, interpersonal and temporal edges.");
+assert.equal(new Set(index.relationships.map(edge => edge.id)).size, index.relationships.length, "Relationship IDs must be unique.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-007-CLM-002"), "Ryu–Kaguya friction and respect must be an explicit, continuity-scoped edge.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-ASTREA-DEPARTURE-SECONDARY" && edge.evidenceStatus === "secondary_checked"), "The disputed departure motive must stay explicitly secondary, not be promoted to canon.");
 assert.ok(index.entityRecords.some(entity => entity.id === "DM-FAM-HESTIA"));
 assert.ok(familyEntities.totalMatches >= 3, "Typed entity search must expose the Familia catalog records.");
 assert.ok(familyEntities.results.every(entity => entity.type === "familia"), "Familia filter must not leak characters or events.");
