@@ -56,7 +56,7 @@
 ### DMR-005-CLM-003 · Riveria como vicecapitana
 - `claim_id`: DMR-005-CLM-003
 - `claim`: Riveria es presentada como maga de prestigio, de origen real élfico, vicecapitana y figura maternal para los miembros.
-- `character_ids`: []
+- `character_ids`: [CHAR-RIVERIA-LJOS-ALF]
 - `aspect`: liderazgo, rol, origen
 - `era_or_interval`: Estado descrito por el perfil oficial de Sword Oratoria
 - `continuity_scope`: CONT-SO
@@ -79,7 +79,7 @@
 ### DMR-005-CLM-004 · Gareth como veterano
 - `claim_id`: DMR-005-CLM-004
 - `claim`: Gareth es descrito como enano aventurero de primera clase y veterano entre los dirigentes, con gran resistencia física.
-- `character_ids`: []
+- `character_ids`: [CHAR-GARETH-LANDROCK]
 - `aspect`: rol, capacidades, liderazgo
 - `era_or_interval`: Estado descrito por el perfil oficial de Sword Oratoria
 - `continuity_scope`: CONT-SO
@@ -102,7 +102,7 @@
 ### DMR-005-CLM-005 · Ais y Lefiya
 - `claim_id`: DMR-005-CLM-005
 - `claim`: Ais es descrita como espadachina reservada y objeto de admiración de Bell y Lefiya; Lefiya como maga elfa que admira intensamente a Ais.
-- `character_ids`: [DM-CHAR-AIS, DM-CHAR-BELL]
+- `character_ids`: [DM-CHAR-AIS, DM-CHAR-BELL, CHAR-LEFIYA-VIRIDIS]
 - `aspect`: personalidad, admiración, relaciones
 - `era_or_interval`: Estado descrito por el perfil oficial de Sword Oratoria
 - `continuity_scope`: CONT-SO
@@ -125,7 +125,7 @@
 ### DMR-005-CLM-006 · Tiona y Tione
 - `claim_id`: DMR-005-CLM-006
 - `claim`: La fuente identifica a Tiona y Tione como hermanas gemelas, amazonas y aventureras de primera clase; presenta a Tiona como amiga de Ais y a Tione como enamorada de Finn.
-- `character_ids`: []
+- `character_ids`: [CHAR-TIONA-HIRYUTE, CHAR-TIONE-HIRYUTE, DM-CHAR-AIS, CHAR-FINN-DEIMNE]
 - `aspect`: familia, relaciones, personalidad
 - `era_or_interval`: Estado descrito por el perfil oficial de Sword Oratoria
 - `continuity_scope`: CONT-SO
@@ -148,7 +148,7 @@
 ### DMR-005-CLM-007 · Bete Loga como combatiente de primera clase
 - `claim_id`: DMR-005-CLM-007
 - `claim`: Bete es descrito como hombre lobo y aventurero de primera clase, con estilo de combate que usa botas metálicas y patadas reforzadas con magia; la página señala su trato verbal agresivo.
-- `character_ids`: []
+- `character_ids`: [CHAR-BETE-LOGA]
 - `aspect`: combate, equipo, personalidad
 - `era_or_interval`: Estado descrito por el perfil oficial de Sword Oratoria
 - `continuity_scope`: CONT-SO

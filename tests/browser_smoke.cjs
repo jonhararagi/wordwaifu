@@ -405,6 +405,23 @@ async function run() {
     assert.match(liliEdges, /Hestia Familia/);
     await page.locator("#danmachi-dossier-close").click();
 
+    // Loki Familia graph: open an individual supporting character and jump back to its evidence claim.
+    await page.locator("#danmachi-entity-query").fill("DM-FAM-LOKI");
+    await page.waitForFunction(() => !!document.querySelector('#danmachi-entity-results [data-dossier-open="DM-FAM-LOKI"]'), null, { timeout: 5000 });
+    await page.locator('#danmachi-entity-results [data-dossier-open="DM-FAM-LOKI"]').click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.textContent.includes("Loki Familia"), null, { timeout: 10000 });
+    await page.waitForFunction(() => !!document.querySelector('#danmachi-dossier-related .danmachi-dossier-explicit-relationship [data-dossier-open="CHAR-RIVERIA-LJOS-ALF"]'), null, { timeout: 5000 });
+    const lokiEdges = await page.locator("#danmachi-dossier-related").innerText();
+    assert.match(lokiEdges, /Relaciones documentadas/);
+    assert.match(lokiEdges, /CONT-SO/);
+    assert.match(lokiEdges, /DMR-005-CLM-003/);
+    await page.locator('#danmachi-dossier-related [data-dossier-open="CHAR-RIVERIA-LJOS-ALF"]').click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Riveria Ljos Alf"), null, { timeout: 10000 });
+    await page.locator("#danmachi-dossier-back").click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Familia Loki"), null, { timeout: 10000 });
+    await page.locator("#danmachi-dossier-close").click();
+    process.stdout.write("PASS Loki graph: family → Riveria dossier → back preserves context and source-scoped relation.\\n");
+
     // Security regression: Markdown content stays inert; unsafe protocols and out-of-corpus paths are not navigable.
     await page.route("**/lore/danmachi/familias/astrea-familia.md", route => route.fulfill({
       status: 200,

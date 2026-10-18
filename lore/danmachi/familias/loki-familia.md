@@ -93,3 +93,16 @@ El reclutamiento del OC no debe cambiar las fichas canónicas. Regístrense esta
 - Localizadores internos de la novela ligera que confirmen de forma independiente los datos de esta ficha.
 
 La ausencia de esos datos no autoriza a inventarlos. Esta ficha mejora el uso narrativo del material disponible, pero no declara completada la historia de Familia Loki.
+
+
+## Fichas individuales activadas en el catálogo
+
+- [Finn Deimne](../characters/finn-deimne.md) · capitán.
+- [Riveria Ljos Alf](../characters/riveria-ljos-alf.md) · vicecapitana.
+- [Gareth Landrock](../characters/gareth-landrock.md) · veterano de la dirección.
+- [Ais Wallenstein](../characters/ais-wallenstein.md) · espadachina.
+- [Lefiya Viridis](../characters/lefiya-viridis.md) · maga elfa.
+- [Tiona Hiryute](../characters/tiona-hiryute.md) y [Tione Hiryute](../characters/tione-hiryute.md) · hermanas gemelas.
+- [Bete Loga](../characters/bete-loga.md) · aventurero de primera clase.
+
+Estas relaciones y descripciones se limitan al perfil oficial de la adaptación Sword Oratoria (CONT-SO). No describen toda la cronología ni sustituyen localizadores de novela.

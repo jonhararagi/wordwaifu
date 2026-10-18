@@ -475,3 +475,29 @@ verification_status: stub
 - rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-020
 - verification_status: source_checked_for_publisher_synopsis_only
+
+
+---
+
+## DMR-005-SRC-002 · Sword Oratoria, volumen 14 · origen de los tres líderes
+
+- source_id: DMR-005-SRC-002
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア14
+- creator_or_publisher: 大森藤ノ / GA文庫 (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi Sword Oratoria
+- volume_or_edition: Volumen 14; ISBN 978-4-8156-1434-8
+- language: Japonés
+- publication_date: 2023-03-15 aproximadamente, según ficha editorial
+- official_url: https://ga.sbcr.jp/product/9784815614348/
+- accessed_at: 2026-10-18
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial que anuncia el ascenso de Finn, Riveria y Gareth a nivel 7; describe una petición de Loki para recordar el comienzo y enumera tres líneas de origen.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Sinopsis oficial suficiente para el marco promocional y los hechos que enuncia. No revela por sí sola el texto íntegro, el orden interno de capítulos ni el desenlace detallado de cada línea retrospectiva.
+- conflicting_sources: []
+- rights_note: Resumir los hechos en palabras propias; no copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-021
+- verification_status: source_checked_for_publisher_synopsis_only

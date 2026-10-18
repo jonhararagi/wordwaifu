@@ -163,9 +163,19 @@
       "type": "familia",
       "tags": [
         "Loki",
-        "roster"
+        "roster",
+        "Loki Familia",
+        "Finn Deimne",
+        "Riveria Ljos Alf",
+        "Gareth Landrock",
+        "Ais Wallenstein",
+        "Lefiya Viridis",
+        "Tiona Hiryute",
+        "Tione Hiryute",
+        "Bete Loga",
+        "Raul Nord"
       ],
-      "status": "draft",
+      "status": "source_checked_partial",
       "priority": "high"
     },
     {
@@ -680,39 +690,93 @@
       ],
       "status": "provisional",
       "priority": "high"
-    }
-  ],
-  "reservedIds": [
+    },
     {
       "id": "CHAR-RIVERIA-LJOS-ALF",
+      "path": "characters/riveria-ljos-alf.md",
       "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Riveria Ljos Alf",
+        "Riveria",
+        "Familia Loki",
+        "Loki Familia",
+        "CONT-SO"
+      ],
+      "status": "provisional",
+      "priority": "high"
     },
     {
       "id": "CHAR-GARETH-LANDROCK",
+      "path": "characters/gareth-landrock.md",
       "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-BETE-LOGA",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-TIONA-HIRYUTE",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-TIONE-HIRYUTE",
-      "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Gareth Landrock",
+        "Gareth",
+        "Familia Loki",
+        "Loki Familia",
+        "CONT-SO"
+      ],
+      "status": "provisional",
+      "priority": "high"
     },
     {
       "id": "CHAR-LEFIYA-VIRIDIS",
+      "path": "characters/lefiya-viridis.md",
       "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Lefiya Viridis",
+        "Lefiya",
+        "Familia Loki",
+        "Loki Familia",
+        "CONT-SO"
+      ],
+      "status": "provisional",
+      "priority": "high"
     },
+    {
+      "id": "CHAR-TIONA-HIRYUTE",
+      "path": "characters/tiona-hiryute.md",
+      "type": "character",
+      "tags": [
+        "Tiona Hiryute",
+        "Tiona",
+        "Familia Loki",
+        "Loki Familia",
+        "CONT-SO"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-TIONE-HIRYUTE",
+      "path": "characters/tione-hiryute.md",
+      "type": "character",
+      "tags": [
+        "Tione Hiryute",
+        "Tione",
+        "Familia Loki",
+        "Loki Familia",
+        "CONT-SO"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-BETE-LOGA",
+      "path": "characters/bete-loga.md",
+      "type": "character",
+      "tags": [
+        "Bete Loga",
+        "Bete",
+        "Familia Loki",
+        "Loki Familia",
+        "CONT-SO"
+      ],
+      "status": "provisional",
+      "priority": "normal"
+    }
+  ],
+  "reservedIds": [
     {
       "id": "CHAR-HERMES",
       "type": "deity_character",
@@ -2070,6 +2134,202 @@
       "claimRef": "DMR-006-CLM-021",
       "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
       "note": "Se registra admiración declarada, no reciprocidad romántica."
+    },
+    {
+      "id": "REL-LOKI-DEITY-LOKI-FAM",
+      "from": "DM-CHAR-LOKI",
+      "to": "DM-FAM-LOKI",
+      "kind": "deity_of",
+      "label": "deidad principal de Familia Loki",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "Loki figura como deidad principal de la Familia; snapshot de perfil oficial."
+    },
+    {
+      "id": "REL-LOKI-HES-ANTIPATHY",
+      "from": "DM-CHAR-LOKI",
+      "to": "DM-CHAR-HESTIA",
+      "kind": "personal_antipathy",
+      "label": "antipatía personal hacia Hestia",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "La antipatía personal descrita por el perfil oficial no implica un conflicto constante en cada escena."
+    },
+    {
+      "id": "REL-FINN-CAPTAIN-LOKI-FAM",
+      "from": "CHAR-FINN-DEIMNE",
+      "to": "DM-FAM-LOKI",
+      "kind": "captain_of",
+      "label": "capitán de Familia Loki",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "El cargo se toma del perfil oficial de Sword Oratoria; no fija todas las responsabilidades en cada fecha."
+    },
+    {
+      "id": "REL-RIVERIA-VICECAPTAIN-LOKI-FAM",
+      "from": "CHAR-RIVERIA-LJOS-ALF",
+      "to": "DM-FAM-LOKI",
+      "kind": "vicecaptain_of",
+      "label": "vicecapitana de Familia Loki",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "El cargo procede del perfil oficial de Sword Oratoria; no implica obediencia sin conflicto."
+    },
+    {
+      "id": "REL-GARETH-VETERAN-LOKI-FAM",
+      "from": "CHAR-GARETH-LANDROCK",
+      "to": "DM-FAM-LOKI",
+      "kind": "senior_member_of",
+      "label": "veterano de la dirección de Familia Loki",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "El perfil respalda su antigüedad y resistencia; no se asigna fecha absoluta de ingreso."
+    },
+    {
+      "id": "REL-AIS-MEMBER-LOKI-FAM",
+      "from": "DM-CHAR-AIS",
+      "to": "DM-FAM-LOKI",
+      "kind": "member_of",
+      "label": "integrante de Familia Loki en el perfil oficial de Sword Oratoria",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "La ficha pertenece a la sección oficial de miembros de Familia Loki en Sword Oratoria."
+    },
+    {
+      "id": "REL-LEFIYA-MEMBER-LOKI-FAM",
+      "from": "CHAR-LEFIYA-VIRIDIS",
+      "to": "DM-FAM-LOKI",
+      "kind": "member_of",
+      "label": "maga integrante de Familia Loki",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "La ficha pertenece al conjunto oficial de personajes de Familia Loki en Sword Oratoria."
+    },
+    {
+      "id": "REL-TIONA-MEMBER-LOKI-FAM",
+      "from": "CHAR-TIONA-HIRYUTE",
+      "to": "DM-FAM-LOKI",
+      "kind": "member_of",
+      "label": "integrante de Familia Loki",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "La fuente es el perfil oficial de Sword Oratoria; no extrapolar a todas las etapas."
+    },
+    {
+      "id": "REL-TIONE-MEMBER-LOKI-FAM",
+      "from": "CHAR-TIONE-HIRYUTE",
+      "to": "DM-FAM-LOKI",
+      "kind": "member_of",
+      "label": "integrante de Familia Loki",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "La fuente es el perfil oficial de Sword Oratoria; no extrapolar a todas las etapas."
+    },
+    {
+      "id": "REL-BETE-MEMBER-LOKI-FAM",
+      "from": "CHAR-BETE-LOGA",
+      "to": "DM-FAM-LOKI",
+      "kind": "member_of",
+      "label": "integrante de Familia Loki",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "El registro se limita al personaje tal como aparece en el perfil oficial de Sword Oratoria."
+    },
+    {
+      "id": "REL-TIONA-TIONE-TWINS",
+      "from": "CHAR-TIONA-HIRYUTE",
+      "to": "CHAR-TIONE-HIRYUTE",
+      "kind": "twin_sisters",
+      "label": "hermanas gemelas",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "El perfil oficial las identifica como hermanas gemelas."
+    },
+    {
+      "id": "REL-TIONA-AIS-FRIEND",
+      "from": "CHAR-TIONA-HIRYUTE",
+      "to": "DM-CHAR-AIS",
+      "kind": "friend_of",
+      "label": "Tiona es amiga de Ais",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "Vínculo explícito indicado por el perfil oficial."
+    },
+    {
+      "id": "REL-TIONE-FINN-INTEREST",
+      "from": "CHAR-TIONE-HIRYUTE",
+      "to": "CHAR-FINN-DEIMNE",
+      "kind": "romantic_interest",
+      "label": "Tione está enamorada de Finn en el perfil consultado",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "Sentimiento atribuido por la ficha oficial; no se deduce reciprocidad."
+    },
+    {
+      "id": "REL-LEFIYA-ADMIRES-AIS",
+      "from": "CHAR-LEFIYA-VIRIDIS",
+      "to": "DM-CHAR-AIS",
+      "kind": "admires",
+      "label": "Lefiya admira intensamente a Ais",
+      "continuity": "CONT-SO",
+      "interval": "Estado descrito por los perfiles oficiales de Sword Oratoria; periodo interno exacto no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-005-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+      "note": "La ficha describe la admiración de Lefiya por Ais, no una relación recíproca equivalente."
     }
   ]
 }
