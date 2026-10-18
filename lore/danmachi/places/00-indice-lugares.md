@@ -7,10 +7,11 @@
 | ID sugerido | Lugar | Relaciones para investigar | Estado |
 |---|---|---|---|
 | DM-WORLD-001 | [Orario](../canon/01-mundo-orario.md) | Ciudad central, Dungeon, Guild, Familias | Ficha general provisional; falta cotejo interno de novelas |
+| [LOC-ORARIO](orario.md) | Orario — registro geográfico | Dungeon, Guild, Babel, Hostess of Fertility | Ficha parcial respaldada por glosario oficial del anime; no equivale a mapa completo |
 | [LOC-DUNGEON](dungeon.md) | Dungeon | Orario, Guild, aventureros, pisos y expediciones | Ficha de ubicación parcial; fuente editorial oficial para el marco general |
-| LOC-BABEL | Torre de Babel | Relación espacial con Dungeon y funciones institucionales | Candidato; ficha individual pendiente de fuentes |
+| [LOC-BABEL](babel.md) | Babel | Orario, Guild, Dungeon | Ficha parcial respaldada por el glosario oficial del anime |
 | LOC-GUILD | Sede de la Guild | Registro, misiones, asesores, Eina | Candidato; separar edificio físico de institución |
-| LOC-HOSTESS | Hostess of Fertility | Syr, Ryuu y elenco de la taberna | Alta |
+| [LOC-HOSTESS](hostess-of-fertility.md) | Hostess of Fertility | Orario, Familia Loki, personal de la taberna | Ficha parcial respaldada por el glosario oficial del anime |
 | LOC-HESTIA-HOME | Residencia inicial de Hestia Familia | Bell y eventos tempranos | Alta |
 | LOC-LOKI-MANOR | Residencia de Loki Familia | Miembros, reuniones, preparación de expediciones | Alta |
 | LOC-FREYA-MANOR | Residencia de Freya Familia | Freya, Ottar y miembros | Alta |

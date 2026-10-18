@@ -18,7 +18,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
   "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
   "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
-  "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md"
+  "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+  "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const profilePaths = [
@@ -40,6 +41,17 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-RIVERIA-VICECAPTAIN-
 assert.ok(index.relationships.some(edge => edge.id === "REL-TIONA-TIONE-TWINS" && edge.claimRef === "DMR-005-CLM-006"), "Twin-sister relationship must have its own evidence-backed edge.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LEFIYA-ADMIRES-AIS" && edge.continuity === "CONT-SO"), "Lefiya's admiration for Ais must be explicit and continuity-scoped.");
 assert.ok(index.relationships.length >= 70, "The graph must retain the sourced story paths, cross-continuity Zeus/Hera edges, Volume 21 rescue links, and the new Astrea Record route.");
+for (const [id, path] of [["LOC-ORARIO","places/orario.md"],["LOC-BABEL","places/babel.md"],["LOC-HOSTESS","places/hostess-of-fertility.md"]]) {
+  assert.ok(catalog.records.some(record => record.id === id && record.path === path), "Official-glossary location must be an active navigable record: " + id);
+  assert.ok(!catalog.reservedIds.some(candidate => (typeof candidate === "string" ? candidate : candidate.id) === id), "Activated location ID must no longer remain reserved: " + id);
+}
+assert.ok(index.relationships.some(edge => edge.id === "REL-BABEL-DUNGEON-MANAGEMENT" && edge.from === "LOC-BABEL" && edge.to === "LOC-DUNGEON" && edge.continuity === "CONT-ANIME" && edge.evidenceStatus === "source_checked" && edge.claimRef === "DMR-026-CLM-002"), "Babel's Dungeon-management relationship must remain sourced and adaptation-scoped.");
+assert.deepEqual(corpus.searchEntities(catalog, { type: "location", query: "Babel" }).results.map(entity => entity.id), ["LOC-BABEL"], "Babel must be directly searchable as a location.");
+const babelEvidenceSearch = corpus.search(index, { query: "Babel Guild", continuity: "CONT-ANIME" });
+assert.ok(babelEvidenceSearch.results.some(item => item.claimId === "DMR-026-CLM-002"), "The official Babel glossary claim must be retrievable.");
+const hostessEvidenceSearch = corpus.search(index, { query: "Hostess Loki Familia", continuity: "CONT-ANIME" });
+assert.ok(hostessEvidenceSearch.results.some(item => item.claimId === "DMR-026-CLM-003"), "The Hostess/Loki Familia relationship must be retrievable.");
+
 assert.ok(index.relationships.some(edge => edge.id === "REL-RAUL-FINN-DELEGATED-COMMAND" && edge.claimRef === "DMR-005-CLM-008"), "Raul's delegated coordination role must link to the official claim.");
 assert.deepEqual(corpus.searchEntities(catalog, { type: "character", query: "Raul Nord" }).results.map(entity => entity.id), ["CHAR-RAUL-NOORD"], "Raul must be individually discoverable.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-BELL-RETURN-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-013-CLM-001"), "Ryu and Bell shared-return edge must be explicit and adaptation-scoped.");
@@ -101,8 +113,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 113);
-assert.equal(index.entryCount, 116);
+assert.equal(index.sourceClaimCount, 116, "Three source-backed DMR-026 claims must be included in the source count.");
+assert.equal(index.entryCount, 119, "Three DMR-026 claims add three retrievable entries without altering existing continuity splits.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });

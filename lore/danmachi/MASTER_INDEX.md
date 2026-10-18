@@ -84,7 +84,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice maestro de personajes](characters/00-indice-personajes.md)
 - [Índice de deidades](canon/06-indice-deidades.md)
 - [Índice de Familias y organizaciones](familias/00-indice-familias.md)
-- [Índice de lugares](places/00-indice-lugares.md) — incluye el expediente parcial del [Dungeon](places/dungeon.md), con fuente editorial y límites de certeza.
+- [Índice de lugares](places/00-indice-lugares.md) — incluye el [Dungeon](places/dungeon.md) y las nuevas fichas parciales [Orario](places/orario.md), [Babel](places/babel.md) y [Hostess of Fertility](places/hostess-of-fertility.md), con continuidad de anime y límites de certeza explícitos.
 - [Familia Hestia](familias/hestia-familia.md)
 - [Familia Loki](familias/loki-familia.md)
 - [Familia Astrea](familias/astrea-familia.md) — expediente histórico parcial con fuentes y continuidad separadas.
@@ -133,6 +133,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [DANMACHI-RESEARCH-010 · Familia Hestia: roster, funciones y límites de continuidad](research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md) — seis afirmaciones rastreables, fuentes oficiales de adaptación y unknowns preservados.
 - [DANMACHI-RESEARCH-011 · Familia Loki: cargos, perfiles y red de relaciones](research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md) — ocho afirmaciones trazables y snapshot oficial de Sword Oratoria.
 - [DANMACHI-RESEARCH-012 · Familia Astrea: justicia, liderazgo y continuidad histórica](research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md) — sinopsis editoriales oficiales, Alise como capitana y vacíos históricos explícitos.
+- [DANMACHI-RESEARCH-026 · Orario, Babel y Hostess of Fertility](research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md) — tres lugares con fuente oficial del anime, siete relaciones navegables y continuidad CONT-ANIME.
 
 ## 5. Prioridades de verificación
 
