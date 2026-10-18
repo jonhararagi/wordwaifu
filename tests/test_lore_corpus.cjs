@@ -28,7 +28,7 @@ assert.ok(index.relationships.length >= 47, "The graph must retain the Astrea/He
 assert.ok(index.relationships.some(edge => edge.id === "REL-RIVERIA-VICECAPTAIN-LOKI-FAM" && edge.claimRef === "DMR-005-CLM-003" && edge.continuity === "CONT-SO"), "Riveria's vicecaptain relationship must be explicitly linked to the Sword Oratoria claim.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-TIONA-TIONE-TWINS" && edge.claimRef === "DMR-005-CLM-006"), "Twin-sister relationship must have its own evidence-backed edge.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LEFIYA-ADMIRES-AIS" && edge.continuity === "CONT-SO"), "Lefiya's admiration for Ais must be explicit and continuity-scoped.");
-assert.ok(index.relationships.length >= 59, "The graph must retain Loki coverage, the sourced story paths, Eina-Guild advisory links, and cross-continuity Zeus/Hera event edges.");
+assert.ok(index.relationships.length >= 64, "The graph must retain the sourced story paths, cross-continuity Zeus/Hera edges, and Volume 21 rescue relationships.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RAUL-FINN-DELEGATED-COMMAND" && edge.claimRef === "DMR-005-CLM-008"), "Raul's delegated coordination role must link to the official claim.");
 assert.deepEqual(corpus.searchEntities(catalog, { type: "character", query: "Raul Nord" }).results.map(entity => entity.id), ["CHAR-RAUL-NOORD"], "Raul must be individually discoverable.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-BELL-RETURN-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-013-CLM-001"), "Ryu and Bell shared-return edge must be explicit and adaptation-scoped.");
@@ -41,6 +41,11 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-EINA-ADVISOR-BELL-AN
 assert.ok(index.relationships.some(edge => edge.id === "REL-EINA-WORKS-GUILD-ANIME" && edge.to === "DM-GUILD-001" && edge.continuity === "CONT-ANIME"), "Eina's role at the Guild must be navigable as a separate institutional relation.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-ZEUS-FAM-GREAT-QUESTS" && edge.continuity === "CROSS-CONTINUITY" && edge.claimRef === "DMR-008-CLM-027"), "The official joint Zeus/Hera historical result must use an explicit cross-continuity relation scope.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-HERA-FAM-GREAT-QUESTS" && edge.continuity === "CROSS-CONTINUITY" && edge.claimRef === "DMR-008-CLM-027"), "Hera Familia must link to the same joint historical event without inventing an individual monster attribution.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-LOKI-V21-EXPEDITION-FAILURE" && edge.to === "EVT-DM-V21-EXPEDITION-RESCUE-001" && edge.evidenceStatus === "provisional_summary" && edge.claimRef === "DMR-008-CLM-022"), "Volume 21 expedition relation must preserve synopsis-only evidence status.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-V21-LEARNS-EXPEDITION-FAILURE" && edge.evidenceStatus === "provisional_summary" && edge.claimRef === "DMR-008-CLM-024"), "Bell receiving news from the volume 21 synopsis must remain provisional-summary evidence.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-V21-ASKS-ABOUT-EXPEDITION" && edge.evidenceStatus === "source_checked_excerpt_only" && edge.claimRef === "DMR-008-CLM-025"), "Bell's urgent questions must remain limited to the publicly visible chapter excerpt.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-FINN-V21-STATUS-INQUIRY" && edge.evidenceStatus === "source_checked_excerpt_only" && edge.claimRef === "DMR-008-CLM-025"), "Finn's mention must not be promoted beyond the excerpt.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-AIS-V21-PROLOGUE-EXCERPT" && edge.evidenceStatus === "source_checked_excerpt_only" && edge.claimRef === "DMR-008-CLM-026"), "Ais's prologue excerpt must retain excerpt-only evidence scope.");
 
 const riveriaSearch = corpus.searchEntities(catalog, { type: "character", query: "Riveria Ljos Alf" });
 assert.deepEqual(riveriaSearch.results.map(entity => entity.id), ["CHAR-RIVERIA-LJOS-ALF"], "Riveria must be an active individual catalog record, not only part of a group dossier.");
@@ -97,6 +102,14 @@ const volume21Prologue = corpus.search(index, { query: "Ais prólogo oscuridad j
 assert.ok(volume21Prologue.results.some(claim => claim.claimId === "DMR-008-CLM-026"), "Volume 21 prologue excerpt must be retrievable as excerpt-only primary evidence.");
 const ancientFamilias = corpus.search(index, { query: "Zeus Hera Behemoth Leviathan tres grandes misiones", continuity: "ALL", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(ancientFamilias.results.some(claim => claim.claimId === "DMR-008-CLM-027"), "Official franchise reference must expose the Zeus/Hera Behemoth and Leviathan result without overclaiming Black Dragon details.");
+const volume21RescueRoute = corpus.search(index, { query: "expedición Loki Familia piso 60 Ais rescate Orario", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volume21RescueRoute.results.some(claim => claim.claimId === "DMR-008-CLM-022"), "The Volume 21 expedition synopsis must be retrievable in main-novel continuity.");
+assert.ok(volume21RescueRoute.results.some(claim => claim.claimId === "DMR-008-CLM-023"), "The Volume 21 Orario rescue mobilization summary must be retrievable.");
+assert.ok(volume21RescueRoute.results.some(claim => claim.claimId === "DMR-008-CLM-024"), "Bell's return and receipt of the expedition news must be retrievable.");
+const v21VisibleChapter = corpus.search(index, { query: "Bell Finn Ais expedición fracaso pregunta urgente", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(v21VisibleChapter.results.some(claim => claim.claimId === "DMR-008-CLM-025"), "Volume 21 visible chapter excerpt must remain searchable as excerpt-only evidence.");
+const v21Prologue = corpus.search(index, { query: "Ais prólogo oscuridad jaula hielo", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(v21Prologue.results.some(claim => claim.claimId === "DMR-008-CLM-026"), "Volume 21 prologue claim must be retrievable without assuming its timeline.");
 const crossContinuityGreatQuests = corpus.search(index, { query: "Zeus Hera Behemoth Leviathan", continuity: "CROSS-CONTINUITY", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(crossContinuityGreatQuests.results.some(claim => claim.claimId === "DMR-008-CLM-027"), "The search engine must support cross-continuity claims as a distinct scope.");
 
