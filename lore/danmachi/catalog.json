@@ -839,6 +839,34 @@
       ],
       "status": "source_checked_partial",
       "priority": "high"
+    },
+    {
+      "id": "FAM-ZEUS",
+      "path": "familias/zeus-familia.md",
+      "type": "familia",
+      "tags": [
+        "Zeus Familia",
+        "Behemoth",
+        "Leviathan",
+        "Three Great Quests",
+        "CROSS-CONTINUITY"
+      ],
+      "status": "source_checked_partial",
+      "priority": "critical"
+    },
+    {
+      "id": "FAM-HERA",
+      "path": "familias/hera-familia.md",
+      "type": "familia",
+      "tags": [
+        "Hera Familia",
+        "Behemoth",
+        "Leviathan",
+        "Three Great Quests",
+        "CROSS-CONTINUITY"
+      ],
+      "status": "source_checked_partial",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -944,16 +972,6 @@
     },
     {
       "id": "FAM-FREYA",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-ZEUS",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-HERA",
       "type": "familia",
       "status": "candidate_not_created"
     },
@@ -1754,12 +1772,12 @@
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "35fdca6fe41fc672ecde7ebcbe074f12d1806bb0",
-    "trackedLoreFiles": 175,
-    "records": 62,
-    "reservedIds": 57,
+    "sourceCommit": "dc5d3b1d3824c35a7662a65d99daf79f7b6c1a38",
+    "trackedLoreFiles": 177,
+    "records": 64,
+    "reservedIds": 55,
     "supportingDocuments": 104,
-    "syncNote": "Inventario reconciliado en main el 2026-10-18. Hay rutas parciales respaldadas para el encuentro Bell-Hestia por sinopsis editorial, la apertura de Bell en el anime, Eina como asesora de Bell en DanMachi III y Ryu en DanMachi V. Las sinopsis/perfiles no sustituyen la lectura de las novelas; la cronología exacta y escenas específicas continúan pendientes. Conteo estructural, no certificación de canon completo."
+    "syncNote": "Inventario reconciliado en main el 2026-10-18: rutas parciales para Bell-Hestia (sinopsis de volumen 1), Eina-Bell-Guild en DanMachi III, apertura de Bell en anime, Ryu en DanMachi V y Zeus/Hera ante Behemoth/Leviathan. Se permite CROSS-CONTINUITY solo para referencia oficial transversal; la prueba no atribuye un monstruo por Familia ni cierra la misión del Dragón Negro. El inventario no certifica canon completo."
   },
   "relationships": [
     {
@@ -2559,6 +2577,34 @@
       "claimRef": "DMR-016-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
       "note": "Relación institucional en la adaptación; no documenta cada proceso administrativo ni la secuencia de la primera cita de asesoramiento."
+    },
+    {
+      "id": "REL-ZEUS-FAM-GREAT-QUESTS",
+      "from": "FAM-ZEUS",
+      "to": "EVT-DM-GREAT-QUESTS-001",
+      "label": "La referencia oficial atribuye a Zeus y Hera Familia conjuntamente la derrota de Behemoth y Leviathan",
+      "kind": "participant_in",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "Historia previa a la llegada de Bell; fecha absoluta y secuencia precisa no establecidas por la referencia",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_quiz_answer",
+      "claimRef": "DMR-008-CLM-027",
+      "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "note": "La fuente atribuye el resultado a ambas Familias conjuntamente; no asigna un monstruo individual a cada una ni demuestra detalles del Dragón Negro, el roster o la cronología de la caída."
+    },
+    {
+      "id": "REL-HERA-FAM-GREAT-QUESTS",
+      "from": "FAM-HERA",
+      "to": "EVT-DM-GREAT-QUESTS-001",
+      "label": "La referencia oficial atribuye a Hera y Zeus Familia conjuntamente la derrota de Behemoth y Leviathan",
+      "kind": "participant_in",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "Historia previa a la llegada de Bell; fecha absoluta y secuencia precisa no establecidas por la referencia",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_quiz_answer",
+      "claimRef": "DMR-008-CLM-027",
+      "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "note": "La fuente atribuye el resultado a ambas Familias conjuntamente; no asigna un monstruo individual a cada una ni demuestra detalles del Dragón Negro, el roster o la cronología de la caída."
     }
   ]
 }
