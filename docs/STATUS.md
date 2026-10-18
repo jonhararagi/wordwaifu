@@ -13,7 +13,7 @@
 - **Arquitectura:** se priorizó quitar trabajo O(n²) de la asignación de beats; no se añadió GPU ni Worker porque los benchmarks actuales no muestran necesidad. La decisión se revisará con mediciones reales de tareas largas en navegador.
 - **Límite factual:** quedan pendientes localizadores de capítulo/página, mayor cobertura de miembros y Familias, caminos históricos completos, y el orden/desenlace de historias donde solo existe sinopsis o fragmento. No es honesto declarar 90% o 100% global mientras eso siga abierto.
 - **Lección de actualizaciones técnicas:** las publicaciones recientes de GitHub sobre lockfiles y retención de Actions están documentadas en [investigación técnica](TECHNICAL_RESEARCH.md). Los checks se verifican por SHA, nombre de workflow y resultado concreto, no por conteos agregados.
-- **Registro ampliado (2026-10-18):** [fallos y soluciones técnicas, pruebas de cierre y deuda factual](ENGINEERING_FAILURES_AND_FIXES.md). Es una nota de investigación; no convierte las relaciones ni los hechos pendientes en verificados.
+- **Registro ampliado (2026-10-18):** [fallos y soluciones técnicas, pruebas de cierre y deuda factual](ENGINEERING_FAILURES_AND_FIXES.md). Se corrigieron los conteos de estados del catálogo y el validador ahora admite `pending_verification` para aristas sin fuente primaria; la ejecución de CI del SHA nuevo sigue sin confirmarse.
 
 ## Snapshot histórico de la auditoría previa
 
