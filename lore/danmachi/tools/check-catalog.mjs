@@ -142,7 +142,7 @@ if (fs.existsSync(sourceRegistryPath)) {
 
 const liveRecordIds = new Set(recordIds);
 const relationshipIds = new Set();
-const validEvidenceStatuses = new Set(["source_checked", "secondary_checked"]);
+const validEvidenceStatuses = new Set(["source_checked", "secondary_checked", "pending_verification"]);
 for (const relation of catalog.relationships) {
   if (!relation || typeof relation !== "object") {
     errors.push("Relationship entry must be an object");
