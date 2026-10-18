@@ -573,3 +573,28 @@ verification_status: stub
 - rights_note: Paráfrasis original breve; no copiar la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-014
 - verification_status: source_checked
+
+
+---
+
+## DMR-015-SRC-001 · Ficha editorial oficial de DanMachi, volumen 1
+
+- source_id: DMR-015-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか
+- creator_or_publisher: Fujino Omori / GA Bunko (SB Creative)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 1; ISBN 978-4-7973-7280-9
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784797372809/
+- accessed_at: 2026-10-18
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial del volumen 1; pasaje promocional que presenta a Bell, aspirante rechazado por otras Familias, encontrándose con Hestia, una diosa sin miembros, y aceptando su invitación a entrar en la Familia
+- claims_supported: [DMR-015-CLM-001]
+- events_supported: [EVT-DM-BELL-MEETS-HESTIA-001]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Confirma el núcleo general del encuentro y la invitación. No aporta por sí sola un localizador interno de capítulo/página ni el tiempo exacto del descenso de Hestia.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias; no reproducir la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-015
+- verification_status: source_checked
