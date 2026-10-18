@@ -867,6 +867,23 @@
       ],
       "status": "source_checked_partial",
       "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-V21-EXPEDITION-RESCUE-001",
+      "path": "events/candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md",
+      "type": "event",
+      "tags": [
+        "Loki Familia",
+        "Ais Wallenstein",
+        "Finn Deimne",
+        "Bell Cranel",
+        "floor 60",
+        "Volume 21",
+        "rescue",
+        "CONT-MAIN-LN"
+      ],
+      "status": "source_checked_partial",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -1772,12 +1789,12 @@
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "dc5d3b1d3824c35a7662a65d99daf79f7b6c1a38",
-    "trackedLoreFiles": 177,
-    "records": 64,
+    "sourceCommit": "d194731144ac2864e90924540c80247044793214",
+    "trackedLoreFiles": 178,
+    "records": 65,
     "reservedIds": 55,
     "supportingDocuments": 104,
-    "syncNote": "Inventario reconciliado en main el 2026-10-18: rutas parciales para Bell-Hestia (sinopsis de volumen 1), Eina-Bell-Guild en DanMachi III, apertura de Bell en anime, Ryu en DanMachi V y Zeus/Hera ante Behemoth/Leviathan. Se permite CROSS-CONTINUITY solo para referencia oficial transversal; la prueba no atribuye un monstruo por Familia ni cierra la misión del Dragón Negro. El inventario no certifica canon completo."
+    "syncNote": "Inventario reconciliado en main el 2026-10-18 tras enlazar la historia del volumen 21 con evidencia por capas. Los hitos derivados de sinopsis editorial conservan provisional_summary; los claims cotejados en fragmentos conservan source_checked_excerpt_only. Esto no representa lectura completa del volumen ni cierre de todos los acontecimientos."
   },
   "relationships": [
     {
@@ -2605,6 +2622,76 @@
       "claimRef": "DMR-008-CLM-027",
       "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
       "note": "La fuente atribuye el resultado a ambas Familias conjuntamente; no asigna un monstruo individual a cada una ni demuestra detalles del Dragón Negro, el roster o la cronología de la caída."
+    },
+    {
+      "id": "REL-LOKI-V21-EXPEDITION-FAILURE",
+      "from": "DM-FAM-LOKI",
+      "to": "EVT-DM-V21-EXPEDITION-RESCUE-001",
+      "kind": "expedition_failed_and_members_stranded",
+      "label": "La sinopsis editorial del volumen 21 presenta la expedición de Loki Familia como un fracaso y deja a Ais y otros integrantes atrapados en el piso 60",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 21; secuencia y estado de cada miembro pendientes de cotejo",
+      "evidenceStatus": "provisional_summary",
+      "evidenceType": "official_publisher_synopsis_summary",
+      "claimRef": "DMR-008-CLM-022",
+      "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "note": "Estado de sinopsis editorial; no identifica todos los supervivientes, la ubicación de cada uno ni el orden completo de escenas."
+    },
+    {
+      "id": "REL-BELL-V21-LEARNS-EXPEDITION-FAILURE",
+      "from": "DM-CHAR-BELL",
+      "to": "EVT-DM-V21-EXPEDITION-RESCUE-001",
+      "kind": "returns_and_learns_of_failed_expedition",
+      "label": "Según la sinopsis editorial, Bell regresa del extremo norte y recibe la noticia de la expedición fallida",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 21; secuencia interna exacta pendiente",
+      "evidenceStatus": "provisional_summary",
+      "evidenceType": "official_publisher_synopsis_summary",
+      "claimRef": "DMR-008-CLM-024",
+      "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "note": "La sinopsis respalda el hito general; no se afirma el orden exacto de capítulos ni el estado individual completo de los miembros."
+    },
+    {
+      "id": "REL-BELL-V21-ASKS-ABOUT-EXPEDITION",
+      "from": "DM-CHAR-BELL",
+      "to": "EVT-DM-V21-EXPEDITION-RESCUE-001",
+      "kind": "asks_about_stranded_adventurers",
+      "label": "En el fragmento público del capítulo inicial, Bell pregunta con urgencia por Ais, Finn y los demás tras el anuncio del fracaso",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 21, capítulo 一章 アイズSOS; fragmento público visible",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "primary_excerpt_paraphrase",
+      "claimRef": "DMR-008-CLM-025",
+      "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "note": "Limitado al fragmento público. No certifica el capítulo completo, el destino de cada personaje ni los acontecimientos posteriores."
+    },
+    {
+      "id": "REL-FINN-V21-STATUS-INQUIRY",
+      "from": "CHAR-FINN-DEIMNE",
+      "to": "EVT-DM-V21-EXPEDITION-RESCUE-001",
+      "kind": "subject_of_urgent_status_inquiry",
+      "label": "Bell pregunta por Finn y los demás en el fragmento visible del capítulo inicial del volumen 21",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 21, capítulo 一章 アイズSOS; fragmento público visible",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "primary_excerpt_paraphrase",
+      "claimRef": "DMR-008-CLM-025",
+      "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "note": "Solo prueba que Bell pregunta por Finn en el fragmento observado; no demuestra su estado posterior ni el resultado del rescate."
+    },
+    {
+      "id": "REL-AIS-V21-PROLOGUE-EXCERPT",
+      "from": "DM-CHAR-AIS",
+      "to": "EVT-DM-V21-EXPEDITION-RESCUE-001",
+      "kind": "featured_in_prologue_excerpt",
+      "label": "El prólogo visible del volumen 21 presenta a Ais en una escena oscura con imágenes violentas y una presencia amenazante",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 21, prólogo; relación temporal con el capítulo 1 no resuelta",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "primary_excerpt_paraphrase",
+      "claimRef": "DMR-008-CLM-026",
+      "claimPath": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+      "note": "Limitado al texto de muestra del prólogo. No se infiere su ubicación temporal respecto de las demás escenas ni la interpretación completa."
     }
   ]
 }
