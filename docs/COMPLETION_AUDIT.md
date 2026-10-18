@@ -1,7 +1,7 @@
 # Auditoría de finalización de WordWaifu
 
 **Fecha:** 2026-10-18  
-**Base revisada:** `main`; optimización lineal del Story Forge y benchmark incorporados en `d51990d5a54b70f2a161ec41acba15b59684bb1b`.
+**Base revisada:** `main`; capa de grafo explícito y correcciones de referencias en `7784ba89cf5881ace541ec8de219cfb15051f3fd`. La optimización lineal de Story Forge sigue en `d51990d5a54b70f2a161ec41acba15b59684bb1b`.
 
 ## Dictamen
 
@@ -20,15 +20,15 @@ WordWaifu tiene un núcleo funcional y automatizado, pero no está completo resp
 | Story Forge | Implementado para esquema; selección de fase optimizada | Genera 1–500 capítulos en seis tramos, con finales alternativos, uso de campos de historia, protección de manuscritos y auditoría. La selección de fase/beat usa una pasada lineal. El runner CI midió medianas de 0,81/1,61/2,20 ms a 100/250/500 capítulos; son mediciones de Node en CI, no un benchmark de navegador. No genera por sí solo prosa literaria final. |
 | Asistencia editorial | Implementada en modo manual | La microventana prepara prompts y permite copiar/abrir proveedor tras consentimiento. No automatiza la web externa ni envía la escritura automáticamente; el usuario revisa y pega resultados manualmente. |
 | Continuity Guard | Parcial | Hay validaciones estructurales y separación temporal/por medio, pero no un ejecutor global que detecte todos los conflictos causales entre personajes, poderes, eventos y escenas. |
-| Navegación interna de expedientes | Entregada parcialmente y probada | El smoke test cubre catálogo → Familia Astrea → Ryu → atrás/adelante → ficha de continuidad → volver al expediente → fuentes → índice maestro. Faltan las aristas de relación explícita y el camino completo hasta la diosa/acontecimiento histórico. Los enlaces por etiquetas solo son sugerencias. |
-| DanMachi factual | En investigación; no completo | `catalog.json` contiene 48 registros, 67 IDs reservados y 100 documentos. Los 48 registros usan estados `draft`, `pending_verification`, `provisional`, `proposed_author_event`, `provisional_inference`, `provisional_reference_checked` o `source_checked_partial`; ninguno se marca como verificación completa. |
+| Navegación interna de expedientes | Entregada parcialmente y probada | El smoke test cubre catálogo → Familia Astrea → arista explícita con continuidad/evidencia → claim fuente → atrás/adelante → perfil → fuentes → índice. Hay 20 aristas iniciales en `catalog.relationships`; sigue pendiente cubrir otras familias y cerrar el camino completo hasta cronología/evento. Las coincidencias por etiquetas continúan separadas como sugerencias. |
+| DanMachi factual | En investigación; no completo | `catalog.json` contiene 48 registros, 67 IDs reservados, 100 documentos de apoyo y 20 aristas de relaciones para Astrea. Los 48 registros usan estados `draft`, `pending_verification`, `provisional`, `proposed_author_event`, `provisional_inference`, `provisional_reference_checked` o `source_checked_partial`; ninguno se marca como verificación completa. Cinco IDs de claims repetidos entre los lotes DMR-006 y DMR-012 se renumeraron, y el validador ahora detecta colisiones entre claims de `research/inbox/`. |
 | Seguridad Markdown del visor | Prueba adversarial automatizada añadida | El smoke test sirve Markdown con `<script>`, enlaces `javascript:`/`data:` y enlace relativo fuera del corpus; comprueba que no se ejecute ni se convierta en navegación. Aún se recomienda auditoría de seguridad más amplia. |
 | Cuota real / revisión humana | No verificados | Un error simulado de almacenamiento no prueba agotamiento real del navegador. La inspección visual manual en Windows 11 no se puede inferir a partir de Chromium headless. |
 | Arquitectura futura | No es gate cerrado | TypeScript/React/Vite, Tauri/SQLite, mapa de gran escala y adaptadores opcionales son objetivos posteriores; no deben tratarse como si ya se hubieran entregado. |
 
 ## Evidencia de ejecución
 
-- [Validate WordWaifu #39108041754](https://github.com/jonhararagi/wordwaifu/actions/runs/39108041754) — `success`, SHA `d51990d5a54b70f2a161ec41acba15b59684bb1b`; incluye benchmark del Story Forge y prueba de navegador.
+- [Validate WordWaifu #39115277616](https://github.com/jonhararagi/wordwaifu/actions/runs/39115277616) — `success`, SHA `7784ba89cf5881ace541ec8de219cfb15051f3fd`; incluye test de navegador para abrir el claim de una relación explícita.\n- [DanMachi Lore and Retrieval Integrity #39115277539](https://github.com/jonhararagi/wordwaifu/actions/runs/39115277539) — `success`, mismo SHA; valida los 20 extremos y claims de la capa relacional.
 - [Validate WordWaifu #39105158830](https://github.com/jonhararagi/wordwaifu/actions/runs/39105158830) — `success`, SHA con el motor Story Forge conectado `7860b5151999c92d7cd0233af68eaa26b40dba5d`.
 - [DanMachi Lore and Retrieval Integrity #39108041733](https://github.com/jonhararagi/wordwaifu/actions/runs/39108041733) — `success`, mismo SHA; incluye validación de catálogo y navegación contextual.
 - [DanMachi Lore and Retrieval Integrity #39105185544](https://github.com/jonhararagi/wordwaifu/actions/runs/39105185544) — `success`, SHA `095bc68a61e67e7813b307e0ec025309fc8d889f`.
@@ -39,7 +39,7 @@ Estos resultados acreditan las tareas que ejecutó cada workflow en su SHA; no s
 
 ## Próximos gates de producto, por orden
 
-1. **Terminar navegación del canon:** ya hay un visor contextual y prueba Familia Astrea → Ryu → atrás/adelante → ficha de continuidad → expediente → registro de fuentes → índice maestro. Falta que la arista relacional esté guardada como relación explícita con descripción/estado/tiempo/fuente y recorrer miembro → Familia → diosa → evento/cronología sin depender de etiquetas compartidas.
+1. **Extender navegación del canon:** ya hay 20 aristas explícitas para Astrea Familia con tipo, continuidad, periodo, evidencia y claim navegable. Ampliar a otras familias/personajes y cerrar miembro → Familia → deidad → acontecimiento → cronología, manteniendo la continuidad de adaptación separada de novela y pistas secundarias.
 2. **Cobertura factual de DanMachi:** revisar cada registro y claim contra localizadores primarios; separar fuente oficial, wiki como pista, inferencia y AU; no promover estados sin evidencia.
 3. **Canon temporal:** registrar presencias, afiliaciones y relaciones por evento/capítulo/época y probar los cambios sin duplicar identidades.
 4. **Poderes, cartas, reliquias y elenco coral:** pasar de textos descriptivos a entidades relacionadas con portadores, pactos, escenas y consecuencias.
