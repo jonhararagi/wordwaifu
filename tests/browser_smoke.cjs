@@ -93,6 +93,46 @@ async function run() {
 
     assert.match(await page.title(), /WordWaifu/);
     assert.equal(await page.locator("#project-name").innerText(), "Las Crónicas de Asteria");
+    const assistantStorageBefore = await page.evaluate(() => ({
+      localStorage: Object.entries(localStorage).sort(([a], [b]) => a.localeCompare(b)),
+      sessionStorage: Object.entries(sessionStorage).sort(([a], [b]) => a.localeCompare(b))
+    }));
+    const assistantExternalRequests = [];
+    page.on("request", (request) => {
+      if (!request.url().startsWith("http://127.0.0.1:")) assistantExternalRequests.push(request.url());
+    });
+    await page.locator("#narrative-assistant-open").click();
+    assert.equal(await page.locator("#narrative-assistant-dialog").getAttribute("data-open"), "true");
+    assert.equal(await page.evaluate(() => document.activeElement?.id), "na-task", "Opening the dialog should move keyboard focus inside it.");
+    await page.keyboard.press("Shift+Tab");
+    assert.equal(await page.evaluate(() => document.activeElement?.id), "na-close", "Shift+Tab from the first control must wrap to the last control.");
+    await page.keyboard.press("Tab");
+    assert.equal(await page.evaluate(() => document.activeElement?.id), "na-task", "Tab from the last control must wrap to the first control.");
+    assert.equal(await page.locator("#na-copy").isDisabled(), true, "Prompt copying must be disabled before explicit consent.");
+    await page.locator("#na-source").fill("Fragmento de prueba, sin datos privados.");
+    await page.locator("#na-consent").check();
+    assert.equal(await page.locator("#na-copy").isDisabled(), false, "Explicit consent plus a non-empty fragment should enable copying.");
+    await page.locator("#na-context").fill("Contexto modificado después del consentimiento.");
+    assert.equal(await page.locator("#na-consent").isChecked(), false, "Editing context must revoke consent for the previous prompt.");
+    assert.equal(await page.locator("#na-copy").isDisabled(), true, "Editing context must disable sharing until consent is given again.");
+    await page.locator("#na-consent").check();
+    await page.locator("#na-task").selectOption("continuity");
+    assert.equal(await page.locator("#na-consent").isChecked(), false, "Changing the task must revoke consent.");
+    await page.locator("#na-consent").check();
+    await page.locator("#na-source").fill("A different fragment.");
+    assert.equal(await page.locator("#na-consent").isChecked(), false, "Editing the fragment must revoke consent.");
+    assert.equal(await page.locator("#na-chatgpt").isDisabled(), true, "Provider handoff must stay disabled after an edit until re-consent.");
+    await page.locator("#na-consent").check();
+    await page.locator("#na-close").click();
+    assert.equal(await page.locator("#na-consent").isChecked(), false, "Closing the micro-window must revoke the transient consent.");
+    assert.equal(await page.evaluate(() => document.activeElement?.id), "narrative-assistant-open", "Closing the dialog must restore focus to its opener.");
+    const assistantStorageAfter = await page.evaluate(() => ({
+      localStorage: Object.entries(localStorage).sort(([a], [b]) => a.localeCompare(b)),
+      sessionStorage: Object.entries(sessionStorage).sort(([a], [b]) => a.localeCompare(b))
+    }));
+    assert.deepEqual(assistantStorageAfter, assistantStorageBefore, "The assistant must not persist fragment/context/task or consent in web storage.");
+    assert.deepEqual(assistantExternalRequests, [], "Editing and closing the assistant must not make external network requests.");
+    process.stdout.write("PASS narrative assistant: sharing controls require explicit consent and reset on close.\\n");
     process.stdout.write("PASS browser load: application renders in Chromium.\n");
     const appPersistence = await page.evaluate(async () => {
       const repository = new window.WordWaifuProjectRepository.ProjectRepository();
