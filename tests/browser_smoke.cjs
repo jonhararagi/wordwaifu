@@ -415,7 +415,7 @@ async function run() {
     assert.match(lokiEdges, /Relaciones documentadas/);
     assert.match(lokiEdges, /CONT-SO/);
     assert.match(lokiEdges, /DMR-005-CLM-003/);
-    await page.locator('#danmachi-dossier-related [data-dossier-open="CHAR-RIVERIA-LJOS-ALF"]').click();
+    await page.locator('#danmachi-dossier-related .danmachi-dossier-explicit-relationship [data-dossier-open="CHAR-RIVERIA-LJOS-ALF"]').click();
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Riveria Ljos Alf"), null, { timeout: 10000 });
     await page.locator("#danmachi-dossier-back").click();
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Familia Loki"), null, { timeout: 10000 });
