@@ -28,7 +28,7 @@ assert.ok(index.relationships.length >= 47, "The graph must retain the Astrea/He
 assert.ok(index.relationships.some(edge => edge.id === "REL-RIVERIA-VICECAPTAIN-LOKI-FAM" && edge.claimRef === "DMR-005-CLM-003" && edge.continuity === "CONT-SO"), "Riveria's vicecaptain relationship must be explicitly linked to the Sword Oratoria claim.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-TIONA-TIONE-TWINS" && edge.claimRef === "DMR-005-CLM-006"), "Twin-sister relationship must have its own evidence-backed edge.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LEFIYA-ADMIRES-AIS" && edge.continuity === "CONT-SO"), "Lefiya's admiration for Ais must be explicit and continuity-scoped.");
-assert.ok(index.relationships.length >= 66, "The graph must retain the sourced story paths, cross-continuity Zeus/Hera edges, Volume 21 rescue relationships, and source-labeled Astrea roster edges.");
+assert.ok(index.relationships.length >= 70, "The graph must retain the sourced story paths, cross-continuity Zeus/Hera edges, Volume 21 rescue links, and the new Astrea Record route.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RAUL-FINN-DELEGATED-COMMAND" && edge.claimRef === "DMR-005-CLM-008"), "Raul's delegated coordination role must link to the official claim.");
 assert.deepEqual(corpus.searchEntities(catalog, { type: "character", query: "Raul Nord" }).results.map(entity => entity.id), ["CHAR-RAUL-NOORD"], "Raul must be individually discoverable.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-BELL-RETURN-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-013-CLM-001"), "Ryu and Bell shared-return edge must be explicit and adaptation-scoped.");
@@ -43,6 +43,11 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-ZEUS-FAM-GREAT-QUEST
 assert.ok(index.relationships.some(edge => edge.id === "REL-HERA-FAM-GREAT-QUESTS" && edge.continuity === "CROSS-CONTINUITY" && edge.claimRef === "DMR-008-CLM-027"), "Hera Familia must link to the same joint historical event without inventing an individual monster attribution.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY" && edge.continuity === "CONT-AR" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-007-CLM-005"), "The historical Ryu-Kaguya roster edge must stay secondary and explicitly claim-linked.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-LYRA-AR-ROSTER-SECONDARY" && edge.continuity === "CONT-AR" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-007-CLM-005"), "The historical Ryu-Lyra roster edge must stay secondary and explicitly claim-linked.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-ASTREA-RECORD-FOUNDATIONS" && edge.to === "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001" && edge.continuity === "CONT-AR" && edge.claimRef === "DMR-012-CLM-001"), "Astrea Familia must link to an official-synopsis historical event in CONT-AR.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-SEEK-JUSTICE-ASTREA-AR" && edge.to === "CHAR-ASTREA" && edge.continuity === "CONT-AR" && edge.claimRef === "DMR-012-CLM-002"), "Ryu's historical search for justice under Astrea must remain distinct from her later main-novel/anime visits.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-ALISE-LEADS-ASTREA-RECORD-AR" && edge.to === "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001" && edge.continuity === "CONT-AR" && edge.claimRef === "DMR-012-CLM-003"), "Alise's captain/guide role must link to the historical route without inventing scene-level details.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-AR-LOSSES-EVILUS" && edge.to === "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001" && edge.evidenceStatus === "source_checked" && edge.claimRef === "DMR-012-CLM-004"), "The Astrea Record conflict summary must remain sourced but incomplete.");
+
 assert.ok(index.relationships.some(edge => edge.id === "REL-LOKI-V21-EXPEDITION-FAILURE" && edge.to === "EVT-DM-V21-EXPEDITION-RESCUE-001" && edge.evidenceStatus === "provisional_summary" && edge.claimRef === "DMR-008-CLM-022"), "Volume 21 expedition relation must preserve synopsis-only evidence status.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-V21-LEARNS-EXPEDITION-FAILURE" && edge.evidenceStatus === "provisional_summary" && edge.claimRef === "DMR-008-CLM-024"), "Bell receiving news from the volume 21 synopsis must remain provisional-summary evidence.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-V21-ASKS-ABOUT-EXPEDITION" && edge.evidenceStatus === "source_checked_excerpt_only" && edge.claimRef === "DMR-008-CLM-025"), "Bell's urgent questions must remain limited to the publicly visible chapter excerpt.");
@@ -152,6 +157,9 @@ const lokiFamilyClaim = corpus.search(index, { query: "Finn capitán", character
 assert.ok(lokiFamilyClaim.results.some(claim => claim.claimId === "DMR-005-CLM-002"), "Loki Familia's leadership claim must be available through global lore search.");
 const astreaFamilyClaim = corpus.search(index, { query: "Alise capitana", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
 assert.ok(astreaFamilyClaim.results.some(claim => claim.claimId === "DMR-012-CLM-003"), "Astrea Familia's leadership claim must be available through global lore search.");
+const astreaRecordConflict = corpus.search(index, { query: "Evilus", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
+assert.ok(astreaRecordConflict.results.some(claim => claim.claimId === "DMR-012-CLM-004"), "Astrea Record conflict summary must remain searchable in the historical continuity.");
+
 const astreaAnimeClaim = corpus.search(index, { query: "Astrea justicia orden", characterId: "CHAR-ASTREA", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaAnimeClaim.results.some(claim => claim.claimId === "DMR-012-CLM-005"), "Astrea adaptation facts must remain separate from the Astrea Record continuity.");
 
