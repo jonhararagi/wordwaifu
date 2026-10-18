@@ -1725,12 +1725,12 @@
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "9a44978d1fa119a1210a4004fc432ed02afafd4f",
+    "sourceCommit": "4c52c0c3569f7b9d87656c84a542c6f29effe21b",
     "trackedLoreFiles": 169,
     "records": 61,
     "reservedIds": 57,
     "supportingDocuments": 102,
-    "syncNote": "Conteos reconciliados en main el 2026-10-18 tras incorporar dos eventos distintos de continuidad anime (Ryu en DanMachi V y apertura de Bell en el episodio 1), con un expediente por evento y claims explícitos. Ninguno cierra automáticamente la cobertura de la novela ligera; el inventario es estructural, no certifica canon completo."
+    "syncNote": "Inventario reconciliado en main el 2026-10-18 tras añadir dos eventos documentados de la adaptación: el recorrido de Ryu en DanMachi V y la apertura de Bell en el episodio 1. El catálogo distingue ambos del texto de novela ligera; quedan pendientes los localizadores primarios de novela, el orden detallado de escenas y otras historias. Conteo estructural, no certificación de canon completo."
   },
   "relationships": [
     {
