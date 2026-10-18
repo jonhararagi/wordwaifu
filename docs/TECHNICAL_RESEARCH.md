@@ -175,3 +175,20 @@ Una sola evaluación del módulo mantiene un único conjunto de listeners; la pr
 - [MDN — Main thread](https://developer.mozilla.org/en-US/docs/Glossary/Main_thread): el hilo principal atiende los eventos y el pintado; el JavaScript síncrono prolongado puede volver la interfaz poco receptiva.
 - [MDN — Web Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API): reserva los workers para cálculo costoso que sí necesite ejecutarse en paralelo. La corrección aplicada aquí evita trabajo redundante primero, sin añadir hilos, dependencias ni un motor gráfico pesado.
 
+
+## 2026-10-18 · Motor estructural Story Forge y auditoría de índices
+
+### Incidencia funcional y corrección
+- El editor ya podía construir índices, pero su generador estaba acoplado al formulario y la auditoría comprobaba sobre todo campos vacíos y recuento. Esto hacía más difícil probar los casos límite y detectar IDs de capítulo repetidos sin abrir el navegador.
+- Se separó la lógica en `src/story-forge.js`, un módulo determinista sin dependencias del DOM. Produce 1–500 capítulos con seis fases dramáticas proporcionales, incorpora la premisa, el conflicto, el elenco, las reglas del mundo, los poderes, los arcos y el desenlace, y añade un giro/consecuencia por capítulo.
+- Al regenerar, la función conserva por posición los IDs, manuscritos y estados editoriales existentes. La auditoría revisa cantidad, títulos, resúmenes, campos narrativos esenciales e IDs duplicados. Los resultados siguen siendo un esquema editable, no capítulos literarios terminados ni hechos de canon.
+- Se añadieron pruebas unitarias para 1, 10, 30, 100 y 500 capítulos, tipos de final, uso del contexto de la historia, preservación de manuscritos y detección de defectos. La prueba de navegador mantiene su control de extremo a extremo sobre el editor real.
+
+### Patrones técnicos consultados y aplicados con límites
+- [MDN — Using IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB): el ciclo de transacción y sus errores deben manejarse explícitamente; se conserva el estado de los capítulos anteriores si falla la generación y se informa cuando el guardado no se confirma, en vez de anunciar éxito prematuramente.
+- [MDN — IDBTransaction complete event](https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete_event): el evento `complete` representa una transacción confirmada. El repositorio de WordWaifu ya usa este contrato para el guardado; la nueva interfaz no lo suplanta con una etiqueta optimista.
+- [web.dev (Google Chrome) — Optimize long tasks](https://web.dev/articles/optimize-long-tasks): reducir trabajo innecesario antes de agregar concurrencia. El motor no hace consultas DOM dentro del bucle de capítulos; el límite validado de 500 capítulos se prueba directamente. No se añadió un Web Worker sin medición que justifique su complejidad.
+
+### Alcance no prometido
+- Las fases son guías adaptables, no una fórmula que garantice una buena novela. El autor debe revisar causalidad, voz, agencia del elenco, representación y continuidad antes de dar capítulos por terminados.
+- Este registro describe el código y las pruebas añadidas; la evidencia de CI solo se considera PASS cuando termine para el SHA final.
