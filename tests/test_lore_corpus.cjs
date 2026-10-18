@@ -39,6 +39,11 @@ for (const id of ["CHAR-RIVERIA-LJOS-ALF","CHAR-GARETH-LANDROCK","CHAR-LEFIYA-VI
   assert.ok(!catalog.reservedIds.some(candidate => (typeof candidate === "string" ? candidate : candidate.id) === id), "Active character must no longer be reserved: " + id);
 }
 assert.equal(new Set(index.relationships.map(edge => edge.id)).size, index.relationships.length, "Relationship IDs must be unique.");
+for (const edge of index.relationships) {
+  if (/(?:secondary|community|unverified|lead)/i.test(edge.evidenceType || "")) {
+    assert.notEqual(edge.evidenceStatus, "source_checked", "Secondary/community leads must not be promoted to primary-source checked: " + edge.id);
+  }
+}
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-007-CLM-002"), "Ryu–Kaguya friction and respect must be an explicit, continuity-scoped edge.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-ASTREA-DEPARTURE-SECONDARY" && ["secondary_checked", "pending_verification"].includes(edge.evidenceStatus) && edge.evidenceStatus !== "source_checked"), "The disputed departure motive must stay secondary or pending, never promoted to canon without primary evidence.");
 assert.equal(new Set(index.relationships.map(edge => edge.id)).size, index.relationships.length);
