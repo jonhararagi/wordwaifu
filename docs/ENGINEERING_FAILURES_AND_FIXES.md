@@ -147,4 +147,12 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - La página oficial de personajes de DanMachi III (https://danmachi.com/danmachi3/character/) describe a Eina Tulle como recepcionista y asesora de la Guild asignada a Bell y afirma que le aporta conocimiento del Dungeon y de la ciudad.
 - Se añadió el expediente `EVT-DM-EINA-ADVISOR-ANIME-001`, el claim `DMR-016-CLM-001` y dos aristas explícitas: `REL-EINA-ADVISOR-BELL-ANIME` (relación de asesoramiento) y `REL-EINA-WORKS-GUILD-ANIME` (relación institucional).
 - Se mantiene intacto el candidato de novela `EVT-DM-EINA-ADVISOR-001`: no se copiaron detalles de la adaptación a la novela ligera ni se inventaron fechas de reuniones o consejos concretos.
-- El catálogo alcanza 62 registros, 57 IDs reservados, 104 documentos de apoyo y 57 aristas. Los estados de relación siguen siendo conservadores: 55 `source_checked`, una `secondary_checked` y una `pending_verification`. La cifra describe aristas con distintos alcances y no es un porcentaje de cobertura de historias.
+- El catálogo alcanzó 64 registros, 55 IDs reservados, 104 documentos de apoyo y 59 aristas. Los estados de relación siguen siendo conservadores: 57 `source_checked`, una `secondary_checked` y una `pending_verification`. La cifra describe aristas con distintos alcances y no es un porcentaje de cobertura de historias.
+
+
+### Corrección de modelo · alcance CROSS-CONTINUITY · 2026-10-18
+
+- **Error observado:** una claim oficial de la prueba de conocimiento de DanMachi usa `continuity_scope: CROSS-CONTINUITY`, pero el validador de aristas solo aceptaba claves `CONT-...`. La regla impedía modelar una fuente oficial transversal sin forzarla artificialmente a una continuidad de novela o anime.
+- **Corrección:** `lore/danmachi/tools/check-catalog.mjs` ahora permite explícitamente `CROSS-CONTINUITY` además de los identificadores `CONT-...`. La opción no reemplaza el filtrado de continuidad: solo debe utilizarse cuando la fuente realmente declara un alcance transversal.
+- **Aplicación:** se activaron las fichas parciales de Zeus Familia y Hera Familia y se conectaron a `EVT-DM-GREAT-QUESTS-001` usando `DMR-008-CLM-027`. La relación conserva que la fuente atribuye ambas victorias conjuntamente; no infiere qué Familia derrotó cada monstruo ni cierra el resultado contra el Dragón Negro.
+- **Regresión añadida:** `tests/test_lore_corpus.cjs` comprueba las dos aristas `CROSS-CONTINUITY` y que el buscador recupera el claim con ese filtro. La validación de CI para el HEAD más reciente debe confirmarse antes de afirmar que toda la tanda terminó en verde.
