@@ -140,3 +140,11 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - El evento `EVT-DM-BELL-MEETS-HESTIA-001` cambió de `pending_verification` a `source_checked_partial`; se creó `DANMACHI-RESEARCH-015` con `DMR-015-CLM-001` y se añadió la relación `REL-BELL-MEETS-HESTIA-NOVEL-SYNOPSIS` en `CONT-MAIN-LN`.
 - Alcance limitado: la sinopsis confirma el núcleo del encuentro y la invitación, pero no ofrece localizador interno de capítulo/página. La fecha y el orden de la escena, cuándo recibe Bell la Falna y el intervalo desde el descenso de Hestia siguen abiertos.
 - Catálogo actualizado: 61 registros, 57 IDs reservados, 103 documentos de apoyo y 55 aristas; estados de aristas: 53 `source_checked`, una `secondary_checked` y una `pending_verification`. La tasa global de cobertura factual sigue sin calcularse.
+
+
+### Ampliación de historia · ruta Eina–Bell–Guild · 2026-10-18
+
+- La página oficial de personajes de DanMachi III (https://danmachi.com/danmachi3/character/) describe a Eina Tulle como recepcionista y asesora de la Guild asignada a Bell y afirma que le aporta conocimiento del Dungeon y de la ciudad.
+- Se añadió el expediente `EVT-DM-EINA-ADVISOR-ANIME-001`, el claim `DMR-016-CLM-001` y dos aristas explícitas: `REL-EINA-ADVISOR-BELL-ANIME` (relación de asesoramiento) y `REL-EINA-WORKS-GUILD-ANIME` (relación institucional).
+- Se mantiene intacto el candidato de novela `EVT-DM-EINA-ADVISOR-001`: no se copiaron detalles de la adaptación a la novela ligera ni se inventaron fechas de reuniones o consejos concretos.
+- El catálogo alcanza 62 registros, 57 IDs reservados, 104 documentos de apoyo y 57 aristas. Los estados de relación siguen siendo conservadores: 55 `source_checked`, una `secondary_checked` y una `pending_verification`. La cifra describe aristas con distintos alcances y no es un porcentaje de cobertura de historias.
