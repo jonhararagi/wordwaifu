@@ -26,6 +26,13 @@ Las fichas anteriores son candidatos de conocimiento general y no se consideran 
 
 Este evento completa el trayecto que une el regreso de Ryu y Bell desde las profundidades, la visita de Ryu a Astrea y su reincorporación tardía al conflicto. Las relaciones correspondientes se etiquetan CONT-ANIME y no sustituyen las aristas de novela/chronicle.
 
+## Historias de la adaptación del anime con fuentes oficiales
+
+- [Ryu vuelve con Bell, visita a Astrea y entra tarde en la guerra de Familias](candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md) · EVT-DM-RYUU-ASTREA-RETURN-ANIME-001 · CONT-ANIME.
+- [Estado inicial de Bell y crisis del quinto piso](candidates/EVT-DM-BELL-OPENING-CRISIS-ANIME-001.md) · EVT-DM-BELL-OPENING-CRISIS-ANIME-001 · CONT-ANIME.
+
+Estos recorridos están respaldados por fuentes oficiales de la adaptación y usan claims enlazados. No sustituyen las historias de novela ligera ni convierten los resúmenes promocionales en localizadores de capítulos.
+
 ## Línea alternativa del OC: propuestas de autor
 
 - [Llegada del OC a Orario](au/AU-EVT-OC-ARRIVAL-001.md) · AU-EVT-OC-ARRIVAL-001
