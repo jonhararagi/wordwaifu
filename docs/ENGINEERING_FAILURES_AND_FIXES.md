@@ -147,7 +147,7 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - La página oficial de personajes de DanMachi III (https://danmachi.com/danmachi3/character/) describe a Eina Tulle como recepcionista y asesora de la Guild asignada a Bell y afirma que le aporta conocimiento del Dungeon y de la ciudad.
 - Se añadió el expediente `EVT-DM-EINA-ADVISOR-ANIME-001`, el claim `DMR-016-CLM-001` y dos aristas explícitas: `REL-EINA-ADVISOR-BELL-ANIME` (relación de asesoramiento) y `REL-EINA-WORKS-GUILD-ANIME` (relación institucional).
 - Se mantiene intacto el candidato de novela `EVT-DM-EINA-ADVISOR-001`: no se copiaron detalles de la adaptación a la novela ligera ni se inventaron fechas de reuniones o consejos concretos.
-- El catálogo alcanzó 64 registros, 55 IDs reservados, 104 documentos de apoyo y 59 aristas. Los estados de relación siguen siendo conservadores: 57 `source_checked`, una `secondary_checked` y una `pending_verification`. La cifra describe aristas con distintos alcances y no es un porcentaje de cobertura de historias.
+- El catálogo alcanzó 65 registros, 55 IDs reservados, 104 documentos de apoyo y 64 aristas. Los estados de relación siguen siendo conservadores: 57 `source_checked`, una `secondary_checked`, una `pending_verification`, dos `provisional_summary` y tres `source_checked_excerpt_only`. La cifra describe aristas con distintos alcances y no es un porcentaje de cobertura de historias.
 
 
 ### Corrección de modelo · alcance CROSS-CONTINUITY · 2026-10-18
@@ -164,3 +164,11 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - **Corrección aplicada:** la expresión de extracción de continuityScopes ahora acepta CROSS-CONTINUITY; el test filtra por ese valor y exige recuperar DMR-008-CLM-027.
 - **Resultado CI para el SHA funcional exacto 15c968dd846138defd80c6599a6bdab84c7673fd:** [Validate WordWaifu #39156859477 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39156859477) y [DanMachi Lore and Retrieval Integrity #39156859489 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39156859489). Ambos incluyen test de lore, validación de catálogo y navegador.
 - **Revisión estática del grafo en el mismo contenido publicado:** 59 relaciones, extremos existentes, claim/localizador existente, continuidad y estado coincidentes, sin duplicados ni combinación de tipos secondary/community con source_checked. La comprobación estática complementa, no reemplaza, CI.
+
+
+### Ruta del volumen 21 por nivel de evidencia · 2026-10-18
+
+- Se añadió `EVT-DM-V21-EXPEDITION-RESCUE-001` y cinco relaciones de la expedición fallida, la noticia que recibe Bell y los fragmentos de capítulo/prólogo. El evento reutiliza claims ya existentes en `BATCH-DM-008-main-story-volume-map.md`; no añade hechos sin referencia ni duplica la afirmación de las fuentes.
+- Dos aristas de la sinopsis editorial (`DMR-008-CLM-022` y `DMR-008-CLM-024`) usan `provisional_summary`; tres aristas del texto público de la muestra (`DMR-008-CLM-025` y `DMR-008-CLM-026`) usan `source_checked_excerpt_only`. El validador acepta esos estados para que un enlace no aparente certeza superior a la claim fuente.
+- Estado actualizado: 65 registros, 55 IDs reservados, 104 documentos de apoyo y 64 relaciones. Estados de arista: 57 `source_checked`, una `secondary_checked`, una `pending_verification`, dos `provisional_summary` y tres `source_checked_excerpt_only`.
+- La historia sigue parcial: no se infiere el rescate completo, el estado individual de todos los atrapados ni la cronología del prólogo. La siguiente prueba debe confirmar recuperación, enlaces y estados en el SHA exacto.
