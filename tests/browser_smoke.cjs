@@ -383,6 +383,26 @@ async function run() {
     await page.locator("#danmachi-dossier-close").click();
     assert.equal(await page.locator("#danmachi-dossier-dialog").evaluate(dialog => dialog.open), false, "Closing a dossier returns to the same encyclopedia view.");
 
+    // Security regression: Markdown content stays inert; unsafe protocols and out-of-corpus paths are not navigable.
+    await page.route("**/lore/danmachi/familias/astrea-familia.md", route => route.fulfill({
+      status: 200,
+      contentType: "text/markdown; charset=utf-8",
+      body: "# Visor seguro\\n\\n<script>window.__dossierXss = true</script>\\n\\n[protocolo ejecutable](javascript:window.__dossierXss=true)\\n\\n[protocolo de datos](data:text/html,unsafe)\\n\\n[ruta fuera del corpus](../../../README.md)"
+    }));
+    await page.locator("#danmachi-entity-query").fill("DM-FAM-ASTREA");
+    await page.waitForFunction(() => !!document.querySelector('#danmachi-entity-results [data-dossier-open="DM-FAM-ASTREA"]'), null, { timeout: 5000 });
+    await page.locator('#danmachi-entity-results [data-dossier-open="DM-FAM-ASTREA"]').click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.textContent.includes("Visor seguro"), null, { timeout: 10000 });
+    assert.equal(await page.locator("#danmachi-dossier-body script").count(), 0, "Markdown script tags must remain plain text.");
+    assert.notEqual(await page.evaluate(() => window.__dossierXss === true), true, "Markdown must not execute script payloads.");
+    assert.equal(await page.locator('#danmachi-dossier-body a[href^="javascript:"], #danmachi-dossier-body a[href^="data:"]').count(), 0,
+      "Unsafe protocols must not become clickable links.");
+    assert.equal(await page.locator('#danmachi-dossier-body button[data-dossier-path*="README"]').count(), 0,
+      "Relative links escaping the lore corpus must not become navigable buttons.");
+    await page.locator("#danmachi-dossier-close").click();
+    await page.unroute("**/lore/danmachi/familias/astrea-familia.md");
+
+
     await page.waitForFunction(() => document.querySelector("#archive-directory-status")?.textContent.includes("ficha(s) disponibles"), { timeout: 10000 });
     assert.equal(await page.locator("#archive-quick-filters [data-archive-scope]").count(), 3);
     await page.locator('#archive-quick-filters [data-archive-scope="CONT-AR"]').click();
