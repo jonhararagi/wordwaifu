@@ -141,16 +141,16 @@ REL["CHAR-OTTAR"]={"CONT-ANIME":[
 
 
 REL["CHAR-RYUU-LION"]["CONT-AR"].push(
-{targetId:"CHAR-KAGUYA",label:"Gojouno Kaguya · vicecapitana",type:"Afiliación compartida · fuente comunitaria",description:"La referencia comunitaria la enumera como antigua integrante y vicecapitana de Astrea Familia. La ficha no afirma una amistad o escena personal no documentada.",refs:["DMR-003-CLM-001","DMR-001-CLM-005"]},
-{targetId:"CHAR-LYRA",label:"Lyra · compañera de Familia",type:"Afiliación compartida · fuente comunitaria",description:"La referencia comunitaria la enumera como antigua aventurera de Astrea Familia. La relación mostrada es de pertenencia histórica, no una afirmación sobre intimidad personal.",refs:["DMR-003-CLM-002","DMR-001-CLM-005"]}
+{targetId:"CHAR-KAGUYA",label:"Gojouno Kaguya · roster histórico",type:"Co-pertenencia de roster histórico · fuente comunitaria",description:"La referencia comunitaria enumera a Ryu y Kaguya entre integrantes de la primera Astrea Familia; no demuestra una relación personal concreta entre ellas.",refs:["DMR-007-CLM-005"]},
+{targetId:"CHAR-LYRA",label:"Lyra · roster histórico",type:"Co-pertenencia de roster histórico · fuente comunitaria",description:"La referencia comunitaria enumera a Ryu y Lyra como integrantes de la primera Astrea Familia; no demuestra una relación personal concreta entre ellas.",refs:["DMR-007-CLM-005"]}
 );
 REL["CHAR-ALISE-LOVELACE"]["CONT-AR"].push(
-{targetId:"CHAR-KAGUYA",label:"Gojouno Kaguya · vicecapitana",type:"Estructura de Familia · fuente comunitaria",description:"La referencia comunitaria identifica a Kaguya como vicecapitana y antigua integrante. La ficha no inventa escenas de liderazgo entre ambas.",refs:["DMR-003-CLM-001","DMR-001-CLM-005"]},
-{targetId:"CHAR-LYRA",label:"Lyra · compañera de Familia",type:"Afiliación compartida · fuente comunitaria",description:"Lyra figura como antigua aventurera de Astrea Familia en la referencia comunitaria. Un vínculo personal más concreto requiere evidencia adicional.",refs:["DMR-003-CLM-002","DMR-001-CLM-005"]}
+{targetId:"CHAR-KAGUYA",label:"Gojouno Kaguya · roster histórico",type:"Co-pertenencia de roster histórico · fuente comunitaria",description:"El roster secundario incluye a Alise y Kaguya entre las integrantes históricas de Astrea Familia; no prueba una relación personal fuera de la estructura de la Familia.",refs:["DMR-007-CLM-005"]},
+{targetId:"CHAR-LYRA",label:"Lyra · roster histórico",type:"Co-pertenencia de roster histórico · fuente comunitaria",description:"El roster secundario incluye a Alise y Lyra entre integrantes de Astrea Familia; no prueba una relación personal más allá de ese contexto.",refs:["DMR-007-CLM-005"]}
 );
 REL["CHAR-ASTREA"]["CONT-AR"].push(
-{targetId:"CHAR-KAGUYA",label:"Gojouno Kaguya · antigua integrante",type:"Afiliación a Astrea Familia · fuente comunitaria",description:"La referencia comunitaria la enumera como antigua integrante de la Familia asociada a Astrea. No se infieren escenas individuales con la diosa.",refs:["DMR-003-CLM-001","DMR-001-CLM-004"]},
-{targetId:"CHAR-LYRA",label:"Lyra · antigua aventurera",type:"Afiliación a Astrea Familia · fuente comunitaria",description:"La referencia comunitaria la enumera como antigua aventurera de la Familia asociada a Astrea. No se infieren interacciones individuales.",refs:["DMR-003-CLM-002","DMR-001-CLM-004"]}
+{targetId:"CHAR-KAGUYA",label:"Gojouno Kaguya · afiliación histórica",type:"Afiliación indirecta y roster secundario",description:"Astrea está asociada a la Familia; una referencia comunitaria incluye a Kaguya en su roster histórico. Esto no implica interacciones personales con la diosa.",refs:["DMR-001-CLM-004","DMR-007-CLM-005"]},
+{targetId:"CHAR-LYRA",label:"Lyra · afiliación histórica",type:"Afiliación indirecta y roster secundario",description:"Astrea está asociada a la Familia; una referencia comunitaria incluye a Lyra en su roster histórico. Esto no implica interacciones personales con la diosa.",refs:["DMR-001-CLM-004","DMR-007-CLM-005"]}
 );
 
 
