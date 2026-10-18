@@ -60,6 +60,7 @@ La rama de investigación **feature/danmachi-lore-poc** contiene un prototipo do
 ## Estado
 
 - [Auditoría de finalización y criterios de aceptación](docs/COMPLETION_AUDIT.md)
+- [Registro de fallos, soluciones técnicas y brechas de cobertura factual](docs/ENGINEERING_FAILURES_AND_FIXES.md)
 
 El prototipo incluye atlas, CRUD de las entidades principales, relaciones, catálogo multiverso y persistencia IndexedDB con respaldo local. La primera capa de snapshots y restauración está implementada parcialmente y validada en Chromium; aún faltan políticas completas ante todos los borrados, la prueba de retención y la inspección visual en Windows. La siguiente tarea verificable está en [docs/STATUS.md](docs/STATUS.md) y [docs/DONE.md](docs/DONE.md).
 
