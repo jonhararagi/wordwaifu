@@ -1813,12 +1813,12 @@
   ],
   "lastStructuredSync": {
     "branch": "main",
-    "sourceCommit": "a332312c0cd39c7f1b61c7b8f6461b28b960f030",
+    "sourceCommit": "8e8947fb3e4f3b48ad734bc4db24daf17c2a7173",
     "trackedLoreFiles": 178,
     "records": 66,
     "reservedIds": 55,
     "supportingDocuments": 104,
-    "syncNote": "Inventario reconciliado en main el 2026-10-18. Se añade una ruta parcial de Astrea Record respaldada por las sinopsis oficiales de GA Bunko I–III: ventana relativa de unos siete años antes de Bell, guía de Astrea y Alise, y consecuencias generales de las pérdidas/conflicto con Evilus. El relato íntegro, el orden capítulo a capítulo y destinos individuales siguen pendientes de localizadores. No sumar el número de relaciones como porcentaje de canon completo."
+    "syncNote": "Inventario sincronizado en main el 2026-10-18 desde el SHA 8e8947fb3e4f3b48ad734bc4db24daf17c2a7173: 66 registros activos, 55 IDs reservados, 104 documentos de apoyo y 70 relaciones explícitas. Incluye las rutas parciales de DanMachi V para Ryu/Bell, la apertura del anime de Bell, Bell-Hestia por sinopsis editorial, Eina-Guild, Astrea Record I–III, Volumen 21 y la referencia histórica transversal Zeus/Hera. Los claims de sinopsis, fragmentos y pistas secundarias mantienen sus propios niveles de evidencia; faltan localizadores internos y cronología completa."
   },
   "relationships": [
     {

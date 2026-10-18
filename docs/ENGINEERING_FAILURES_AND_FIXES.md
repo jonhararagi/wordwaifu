@@ -219,4 +219,14 @@ Fuente: https://github.com/github/gh-actions-lock/releases
 - Se creó EVT-DM-ASTREA-RECORD-FOUNDATIONS-001 con los claims existentes DMR-012-CLM-001 a DMR-012-CLM-004, respaldados por sinopsis oficiales de GA Bunko I–III. La ruta enlaza el marco temporal relativo, la guía de Astrea y Alise sobre Ryu, y el impacto general de las pérdidas y Evilus.
 - Se añadieron cuatro relaciones explícitas en CONT-AR. No se infieren destinos individuales, orden capítulo por capítulo ni detalles de la misión contra el Dragón Negro.
 - Inventario después del cambio de catálogo: 66 registros activos, 55 IDs reservados, 104 documentos de apoyo y 70 aristas. Estados actuales: 61 source_checked, 3 secondary_checked, 1 pending_verification, 2 provisional_summary y 3 source_checked_excerpt_only.
-- El chequeo estático previo a esta ampliación encontró 66 aristas sin endpoints rotos, duplicados, claims ausentes ni discordancia entre continuidad y estado. Repetir la validación exhaustiva después de la ampliación y certificar el resultado con los workflows del SHA exacto.
+- El chequeo estático posterior a la ampliación se volvió a ejecutar sobre las 70 aristas: endpoints, claims/encabezados, continuidad y estado coinciden; no se detectaron IDs duplicados, rutas duplicadas, autorrelaciones ni referencias secundarias elevadas a `source_checked`.
+
+
+
+### Verificación final de main · Astrea Record · 2026-10-18
+
+- SHA exacto de código y pruebas: `8e8947fb3e4f3b48ad734bc4db24daf17c2a7173`. [Validate WordWaifu #39159428122 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39159428122) y [DanMachi Lore and Retrieval Integrity #39159428052 PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39159428052).
+- El smoke real de navegador recorre Ryu → Alise → Ryu → Astrea, abre `EVT-DM-ASTREA-RECORD-FOUNDATIONS-001` y cierra el dossier sin perder la ficha. La ruta usa la guía histórica de Alise y Ryu bajo Astrea según sinopsis oficiales; no inventa una relación directa Alise–Astrea que el claim no declara.
+- El validador del catálogo pasa; la revisión estática independiente sobre las 70 aristas no encontró extremos rotos, claims ausentes, continuidades/estados discordantes ni duplicados.
+- Inventario sincronizado: 66 registros activos, 55 IDs reservados, 104 documentos de apoyo y 70 aristas. Distribución: 61 `source_checked`, 3 `secondary_checked`, 1 `pending_verification`, 2 `provisional_summary` y 3 `source_checked_excerpt_only`.
+- Falta contenido factual de la novela completa y el cotejo de escenas/localizadores internos. No hay porcentaje global de cobertura honesto mientras sigan esos vacíos.
