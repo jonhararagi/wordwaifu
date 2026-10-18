@@ -9,6 +9,8 @@ source_refs: [DanMachi light novel Vol. 1; localizador pendiente]
 claim_refs:
   - DMR-002-CLM-001
   - DMR-002-CLM-002
+  - DMR-014-CLM-001
+  - DMR-014-CLM-002
 research_source_refs:
   - DMR-002-SRC-001
 ---
@@ -33,6 +35,15 @@ Sus habilidades y evolución revelan elementos importantes de la trama. Antes de
 ## Verificación pendiente
 
 DanMachi, novela ligera, volumen 1 y volúmenes posteriores relevantes: verificar datos biográficos y el desarrollo de sus habilidades con referencias concretas.
+
+## Estado de apertura · adaptación anime
+
+- **Continuidad:** CONT-ANIME; resumen oficial del episodio 1.
+- La sinopsis sitúa a Bell como único miembro de Hestia Familia desde hace aproximadamente medio mes y abre con su crisis en el quinto piso del Dungeon. El expediente separa esa ancla del primer encuentro exacto con Hestia.
+- **Ruta de historia:** [Estado inicial de Bell y crisis del quinto piso](../events/candidates/EVT-DM-BELL-OPENING-CRISIS-ANIME-001.md).
+- **Claims:** DMR-014-CLM-001 y DMR-014-CLM-002.
+- **Fuente:** DMR-014-SRC-001 · https://danmachi.com/danmachi/story/episode1.html.
+- **Límite:** no usar la sinopsis anime como sustituto de un localizador interno del volumen 1 ni fijar con ella el descenso de Hestia.
 
 ## Perfil psicológico inicial · DANMACHI-RESEARCH-002
 
