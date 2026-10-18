@@ -374,7 +374,7 @@ async function run() {
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.textContent.includes("DMR-007-CLM-001"), null, { timeout: 10000 });
     await page.locator("#danmachi-dossier-back").click();
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Familia Astrea"), null, { timeout: 10000 });
-    await page.locator('#danmachi-dossier-related .danmachi-dossier-explicit-relationship [data-dossier-open="CHAR-RYUU-LION"]').click();
+    await page.locator('#danmachi-dossier-related .danmachi-dossier-explicit-relationship [data-dossier-open="CHAR-RYUU-LION"][title*="CONT-ANIME"]').click();
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Ryu Lion"), null, { timeout: 10000 });
     await page.locator("#danmachi-dossier-back").click();
     await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Familia Astrea"), null, { timeout: 10000 });
