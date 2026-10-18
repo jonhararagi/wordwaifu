@@ -34,6 +34,8 @@ jobs:
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check src/story-outline.js
+          node --check src/story-forge.js
+          node --check tests/test_story_forge.cjs
           node --check src/art-studio.js
           node --check src/character-dossiers.js
           node --check tests/test_character_dossiers.cjs
@@ -50,6 +52,8 @@ jobs:
         run: node tests/test_power_catalog.cjs
       - name: Test story outline generation
         run: node tests/test_story_outline.cjs
+      - name: Test Story Forge outline and audit
+        run: node tests/test_story_forge.cjs
       - name: Test project import validation
         run: node tests/test_project_schema.cjs
       - name: Test extended character dossiers
