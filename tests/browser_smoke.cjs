@@ -591,6 +591,15 @@ async function run() {
     assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion");
     assert.ok(!(await page.locator("#archive-profile-panel").innerText()).includes("La sinopsis presenta a Ryu buscando su idea de justicia"));
     await page.locator("#archive-profile-continuity").selectOption("CONT-AR");
+    await page.locator("#archive-tab-relationships").click();
+    const astreaRecordDossier = page.locator('#archive-profile-panel button[data-dossier-record="EVT-DM-ASTREA-RECORD-FOUNDATIONS-001"]');
+    assert.ok(await astreaRecordDossier.count() > 0, "Ryu's historical justice/Alise story should expose the new Astrea Record dossier.");
+    await astreaRecordDossier.click();
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-title")?.textContent.includes("Astrea Record: justicia"));
+    await page.waitForFunction(() => document.querySelector("#danmachi-dossier-body")?.innerText.includes("siete años antes"));
+    assert.ok((await page.locator("#danmachi-dossier-meta").innerText()).includes("EVT-DM-ASTREA-RECORD-FOUNDATIONS-001"));
+    await page.locator("#danmachi-dossier-close").click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Ryu Lion", "Closing Astrea Record route must return to Ryu without losing navigation context.");
     await page.locator("#archive-profile-spoiler").selectOption("safe-only");
     await page.locator("#archive-tab-moments").click();
     assert.equal(await page.locator('#archive-profile-panel [data-moment-id="ryu-seven-days"]').count(), 0);
