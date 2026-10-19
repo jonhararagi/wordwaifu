@@ -109,12 +109,12 @@
 - `aspect`: acontecimiento, sacrificio, supervivencia
 - `era_or_interval`: Aproximadamente cinco años antes de la etapa principal, según cronología secundaria; fecha absoluta no establecida
 - `continuity_scope`: CONT-MAIN-LN
-- `source_id`: DMR-028-SRC-001; DMR-028-SRC-002; DMR-028-SRC-003; DMR-028-SRC-004
-- `source_title`: DanMachi Wiki · Astraea Familia, Gojouno Kaguya, Lyra y Alise Lovell
+- `source_id`: DMR-028-SRC-001; DMR-028-SRC-002; DMR-028-SRC-003; DMR-028-SRC-004; DMR-010-SRC-001
+- `source_title`: DanMachi Wiki · Astraea Familia, Gojouno Kaguya, Lyra y Alise Lovell; portal oficial de DanMachi IV
 - `source_type`: community_wiki
 - `source_locator`: History en las páginas de los miembros y de la Familia
-- `source_url`: https://danmachi.fandom.com/wiki/Astraea_Familia; https://danmachi.fandom.com/wiki/Gojouno_Kaguya; https://danmachi.fandom.com/wiki/Lyra; https://danmachi.fandom.com/wiki/Alise_Lovell
-- `evidence_type`: community_multi_page_plot_summary
+- `source_url`: https://danmachi.fandom.com/wiki/Astraea_Familia; https://danmachi.fandom.com/wiki/Gojouno_Kaguya; https://danmachi.fandom.com/wiki/Lyra; https://danmachi.fandom.com/wiki/Alise_Lovell; https://danmachi.com/danmachi4/story/index.php?slideNum=1
+- `evidence_type`: community_multi_page_plot_summary_with_official_adaptation_crosscheck
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
 - `confidence_note`: El episodio 20 oficial confirma la tragedia general de la adaptación, pero no basta para confirmar cada causa, combate o destino en la novela. Falta cotejo de volumen/capítulo primario; no tratar la ficha comunitaria como prueba definitiva.
