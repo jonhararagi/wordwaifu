@@ -223,6 +223,18 @@ async function run() {
     assert.ok(castAfterGenerator.includes("Antagonista"), "Selected character role must be reflected in the generated cast entry.");
     assert.ok(personalityAfterGenerator.includes("Límite/coste:"), "Character generation must include a capacity limitation or cost.");
     assert.equal(await page.locator("#story-meta-form [name='storyPremise']").inputValue(), generatedPremise, "Adding a character must not overwrite the generated premise.");
+    // The companion action must fill gaps without overwriting user-authored fields.
+    await page.locator("#story-meta-form [name='storyPremise']").fill("Premisa manual que no debe sustituirse.");
+    await page.locator("#story-meta-form [name='storyWorldRules']").fill("");
+    await page.locator("#story-meta-form [name='storyWorldDynamics']").fill("");
+    await page.locator("#story-meta-form [name='storyRevealSecret']").fill("");
+    await page.locator("#story-bible-generate-button").click();
+    await page.waitForFunction(() => (document.querySelector("#story-concept-status")?.textContent || "").includes("Completados") &&
+      (document.querySelector("#story-meta-form [name='storyWorldRules']")?.value || "").length > 30, { timeout: 10000 });
+    assert.equal(await page.locator("#story-meta-form [name='storyPremise']").inputValue(), "Premisa manual que no debe sustituirse.");
+    assert.ok((await page.locator("#story-meta-form [name='storyWorldDynamics']").inputValue()).length > 30, "Bible fill must populate empty world dynamics.");
+    assert.ok((await page.locator("#story-meta-form [name='storyRevealSecret']").inputValue()).length > 20, "Bible fill must populate an empty reveal secret.");
+    process.stdout.write("PASS story bible generator: fills empty fields only and preserves user-authored text.\\n");
     // Clear only temporary test content so the existing persistence/import scenario keeps its established assertions.
     await page.evaluate(() => {
       const form = document.querySelector("#story-meta-form");
