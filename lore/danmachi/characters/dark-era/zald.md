@@ -2,61 +2,63 @@
 id: CHAR-DARK-ZALD
 universe: danmachi
 type: character
-status: pending_primary_text_check
+status: secondary_reference_primary_locator_pending
 continuity_scope: CONT-AR
 source_refs:
   - DMR-029-SRC-003
   - DMR-029-SRC-004
   - DMR-029-SRC-005
+  - DMR-021-SRC-001
 claim_refs:
   - DMR-029-CLM-002
-verification_status: secondary_summary_reviewed_primary_page_pending
+  - DMR-029-CLM-007
+verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Zald"
+tags: [Zeus Familia, Astrea Record, abilities, Behemoth, spoiler]
 ---
-# Zald
+# Zald — expediente individual
 
 ## Identidad y afiliación
-
 - **ID estable:** CHAR-DARK-ZALD.
-- **Afiliación de trabajo:** Zeus Familia.
-- **Continuidad:** CONT-AR. CONT-AR provisional, alrededor de siete años antes de Bell. Mantener fuera los escenarios AU/What If; la verificación primaria por página está pendiente.
-- **Estado:** expediente individual redactado; verificación primaria por página pendiente.
+- **Afiliación histórica reportada:** ejecutivo de Zeus Familia.
+- **Alias reportado:** Glotonería (暴喰, Bōshoku).
+- **Continuidad:** CONT-AR. Los detalles de la retrospectiva deben mantenerse aparte de los hechos contemporáneos de la novela principal, salvo que se localice el pasaje que los conecta.
+- **Estado de la ficha:** varias pistas concretas recuperadas de la wiki española; cotejo del texto primario pendiente.
 
-## Contexto e historia
+## Datos de roster de la wiki
+La wiki española informa que fue humano, antiguo aventurero, de nivel 7 en una instantánea histórica y que llegó al piso 71. También registra un conjunto de estadísticas y habilidades de desarrollo. Esos números representan el snapshot del artículo, no el nivel actual ni una medida permanente para todas las épocas. La ficha lo describe como fallecido tras el combate final reportado contra Ottar.
+- **Apariencia publicada por la wiki:** cabello castaño oscuro, ojos grises y armadura oscura con capa; tratarlo como dato secundario.
+- **Cargo:** ejecutivo, no capitán; la wiki atribuye la capitanía histórica de Zeus Familia a Maxim.
 
-Las fuentes comunitarias conectan a Zald con la derrota del Behemoth. El poder obtenido al consumir carne de la criatura se vincula con el veneno que lo va consumiendo. En Astrea Record desafía a la generación siguiente; el choque con Ottar representa una prueba entre el veterano y quien debe recoger el futuro de Orario.
+## Historia: Behemoth como poder y coste
+Las fuentes comunitarias relatan que Zald consumió carne de Behemoth durante el enfrentamiento con el monstruo y logró derrotarlo, pero quedó envenenado por su toxina y fue perdiendo capacidad con el tiempo. La misma narrativa conecta ese coste con su retiro y con un regreso posterior como antagonista de Astrea Record. El veneno es el precio que define el arco en los resúmenes, no un detalle decorativo que pueda omitirse.
+- La secuencia exacta, el método de victoria, la intensidad del veneno y las fechas deben cotejarse con el material narrativo.
+- El resumen secundario lo sitúa viviendo con Alfia durante una etapa posterior y cumpliendo una función de guardián vinculada al Distrito Escolar; se conserva como pista, no como relación personal completa.
+- La wiki describe su enfrentamiento final con Ottar. No fijar duración, diálogo ni mecánica del combate sin localizador.
 
-## Apariencia, voz y personalidad
+## Habilidades y magia reportadas por la wiki
+- **Habilidades listadas:** Deus Ambrosia, Al Questa y Niggle Gourmet.
+- **Magia listada:** Rea Ambrosia.
+- **Deus Ambrosia:** la wiki explica que comer criaturas/monstruos y otros materiales podía aumentar sus capacidades; también afirma que un incremento equivalente a todo un nivel era excepcionalmente difícil y que la habilidad tenía límites.
+- **Límite de combate reportado:** el veneno del Behemoth seguía deteriorándolo, por lo que no debe representarse su poder como ilimitado ni como una evolución gratuita sin consecuencia.
 
-Humano y antiguo ejecutivo de Zeus Familia; las referencias secundarias lo describen como aventurero de nivel 7. Su arco no es solo la fuerza excepcional: la degeneración tras el combate con Behemoth constituye el límite que define su actuación.
+Los detalles mecánicos anteriores son una paráfrasis de fuente secundaria. Nombres, alcance de mejora, límites, traducción de habilidades y relación con cada escena permanecen pendientes de fuente primaria.
 
-Los resúmenes lo describen como orgulloso, combativo y moralmente ambiguo: asume el papel de monstruo porque cree que los héroes deben demostrar su valor. Es una síntesis secundaria, no una cita textual; evita escribirlo como villano plano que disfruta del mal sin propósito.
-
-## Habilidades y límites
-
-Las referencias le atribuyen Deus Ambrosia y mejoras al consumir presas poderosas; el veneno del Behemoth funciona como coste. Nivel y habilidades son datos de wiki pendientes de cotejo con la novela revisada.
-
-## Relaciones
-
-- **[Zeus Familia](../../familias/zeus-familia.md) / Zeus:** afiliación histórica reportada por las fuentes secundarias.
-- **[Maxim](../maxim.md):** capitán reportado de esa Familia en el periodo histórico; no se supone amistad ni presencia conjunta en un combate específico.
-Zeus Familia es su contexto de formación según referencias secundarias; Ottar es su contraparte en el combate final descrito por las fuentes secundarias. No convertir similitudes de roles en amistad.
-
-## Conflicto narrativo
-
-Orgullo y poder frente a deterioro inevitable; héroe contra monstruo; aceptar ser recordado como enemigo para poner a prueba a la generación que viene.
+## Relaciones navegables
+- **[Zeus Familia](../../familias/zeus-familia.md) / [Zeus](../zeus.md):** afiliación reportada y contexto histórico.
+- **[Maxim](../maxim.md):** la wiki le atribuye la capitanía de Zeus Familia durante la instantánea histórica; no se infiere amistad o parentesco.
+- **[Alfia](alfia.md):** las referencias comunitarias los sitúan compartiendo una etapa posterior y participando en el conflicto de Astrea Record. No se infiere romance.
 
 ## Localizadores de lectura
-
-Astrea Record vol. 3, cap. 8 «The Price of Talent / El precio del talento», para el deterioro de Zald; vol. 3, cap. 9 «Hero's Twilight Sparkle» como ruta hacia el enfrentamiento; el índice también enumera la historia extra «Zald». Son localizadores de índices secundarios: falta registrar la página de la edición legal consultada.
+La wiki española señala Astrea Record volumen 3, con títulos de capítulos y una historia extra de Zald, como rutas de búsqueda. Esas referencias no demuestran que se hayan cotejado las páginas de la novela. No inventar número de página.
 
 ## Fuentes
-
-- https://danmachi.fandom.com/es/wiki/Zald
-- https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3
-- https://danmachi.com/news/news131.php
+- [Zald · DanMachi Wiki, español](https://danmachi.fandom.com/es/wiki/Zald) — roster, historia, habilidades y magia como referencia secundaria.
+- [Astrea Record, volumen 3 · resumen comunitario](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3) — pistas de navegación.
+- [Zeus Familia · DanMachi Wiki, inglés](https://danmachi.fandom.com/wiki/Zeus_Familia) — contexto histórico secundario.
+- [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — confirma el contexto editorial.
+- Investigación asociada: DMR-029-CLM-002 y DMR-029-CLM-007.
 
 ## Regla editorial
-
-No elevar a canon confirmado un dato que solo procede de una wiki o de una descripción de adaptación. Registrar volumen, capítulo, página y escena de la edición consultada. No inventar números de página ni importar detalles de Memoria Freese/AU a la novela revisada.
+No declarar como primaria la información detallada de niveles, estadísticas, habilidades o combates. Verificar primero cada dato en el volumen o relato legal y conservar la continuidad correspondiente.
