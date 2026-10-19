@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "universeId": "danmachi",
+  "title": "Registro de referencias visuales y procedencia",
+  "policyVersion": 1,
+  "disclaimer": "Un enlace externo, una atribución, una marca de agua o el uso personal/educativo no conceden permiso de reproducción. Los recursos remotos se enlazan, no se descargan ni se incrustan mientras no se verifique la autorización correspondiente.",
+  "remotePreviewPolicy": "link_only_until_embedding_rights_verified",
+  "storageContract": "Los archivos aportados se guardan con WordWaifuArtStudio en IndexedDB y, si falla, el respaldo local existente del navegador. No se envían a endpoints ni se incluyen en el corpus/repo.",
+  "visualReferences": [
+    {
+      "id": "DM-VIS-REF-BELL-ANIME-PROFILE-001",
+      "title": "Bell Cranel · perfil oficial de la adaptación DanMachi V",
+      "mediaType": "image",
+      "caption": "Retrato de perfil de adaptación. No representa ni demuestra una escena concreta de la novela principal.",
+      "assetUrl": "https://danmachi.com/danmachi5/character/images/chara_tachi_01.png",
+      "sourcePageUrl": "https://danmachi.com/danmachi5/character/",
+      "creatorOrRightsholder": "unknown",
+      "sourceKind": "official",
+      "usageStatus": "external_reference",
+      "licenseName": null,
+      "licenseUrl": null,
+      "permissionEvidence": null,
+      "continuityScope": "CONT-ANIME",
+      "spoilerLevel": "minor",
+      "relatedEventIds": [],
+      "relatedLocationIds": [],
+      "creditLine": "Titular y permiso de incrustación/exportación no verificados; WordWaifu no aloja el recurso.",
+      "storageMode": "remote",
+      "watermarkPolicy": "none",
+      "previewPolicy": "link_only_pending_embedding_review",
+      "notes": "Referencia oficial remota auditada. Se muestra como enlace, no como imagen incrustada ni como prueba de un acontecimiento."
+    },
+    {
+      "id": "DM-VIS-REF-CHRONOLOGY-MAIN-001",
+      "title": "Cronología oficial DanMachi · página de referencia",
+      "mediaType": "source_page",
+      "caption": "Ruta de consulta oficial para hitos de la historia; no es una imagen de una escena.",
+      "assetUrl": null,
+      "sourcePageUrl": "https://danmachi.com/chronology/",
+      "creatorOrRightsholder": "unknown",
+      "sourceKind": "official",
+      "usageStatus": "external_reference",
+      "licenseName": null,
+      "licenseUrl": null,
+      "permissionEvidence": null,
+      "continuityScope": "CONT-MAIN-LN",
+      "spoilerLevel": "major",
+      "relatedEventIds": [
+        "EVT-DM-BELL-ARRIVAL-001",
+        "EVT-DM-BELL-AIS-MINOTAUR-001"
+      ],
+      "relatedLocationIds": [],
+      "creditLine": "Fuente oficial enlazada; no se copia ni se realoja contenido.",
+      "storageMode": "remote",
+      "watermarkPolicy": "none",
+      "previewPolicy": "link_only",
+      "notes": "Fuente para contexto/orden general, no prueba que exista una ilustración de escena embebible."
+    },
+    {
+      "id": "DM-VIS-REF-GA-VOL1-001",
+      "title": "DanMachi, volumen 1 · página editorial GA Bunko",
+      "mediaType": "source_page",
+      "caption": "Referencia editorial de la novela inicial; cualquier arte de la página no se trata como recurso autorizado para incrustar.",
+      "assetUrl": null,
+      "sourcePageUrl": "https://ga.sbcr.jp/product/9784797372809/",
+      "creatorOrRightsholder": "unknown",
+      "sourceKind": "publisher",
+      "usageStatus": "external_reference",
+      "licenseName": null,
+      "licenseUrl": null,
+      "permissionEvidence": null,
+      "continuityScope": "CONT-MAIN-LN",
+      "spoilerLevel": "minor",
+      "relatedEventIds": [
+        "EVT-DM-BELL-ARRIVAL-001",
+        "EVT-DM-BELL-MEETS-HESTIA-001",
+        "EVT-DM-BELL-AIS-MINOTAUR-001",
+        "EVT-DM-EINA-ADVISOR-001"
+      ],
+      "relatedLocationIds": [
+        "LOC-ORARIO"
+      ],
+      "creditLine": "Enlace editorial contextual; no implica licencia de reproducción de imágenes.",
+      "storageMode": "remote",
+      "watermarkPolicy": "none",
+      "previewPolicy": "link_only",
+      "notes": "Referencia de publicación y contexto general. No se asocia a una ilustración de escena específica."
+    },
+    {
+      "id": "DM-VIS-REF-ASTREA-RECORD-PUBLISHER-001",
+      "title": "Astrea Record, volumen 1 · página editorial",
+      "mediaType": "source_page",
+      "caption": "Referencia de publicación de Astrea Record; no confirma una ilustración concreta de la campaña.",
+      "assetUrl": null,
+      "sourcePageUrl": "https://yenpress.com/titles/9781975379889-astrea-record-vol-1-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes",
+      "creatorOrRightsholder": "unknown",
+      "sourceKind": "publisher",
+      "usageStatus": "external_reference",
+      "licenseName": null,
+      "licenseUrl": null,
+      "permissionEvidence": null,
+      "continuityScope": "CONT-AR",
+      "spoilerLevel": "major",
+      "relatedEventIds": [
+        "EVT-DM-AR-ERA-001"
+      ],
+      "relatedLocationIds": [
+        "LOC-ORARIO"
+      ],
+      "creditLine": "Página editorial externa enlazada; derechos visuales no asumidos.",
+      "storageMode": "remote",
+      "watermarkPolicy": "none",
+      "previewPolicy": "link_only",
+      "notes": "Continuidad Astrea Record separada. No se usa como prueba de la tragedia T−5 ni de una escena individual."
+    },
+    {
+      "id": "DM-VIS-REF-YEN-VOL13-001",
+      "title": "DanMachi, volumen 13 · página editorial",
+      "mediaType": "source_page",
+      "caption": "Referencia de publicación para la etapa de persecución y crisis; no identifica un fotograma o ilustración concreta.",
+      "assetUrl": null,
+      "sourcePageUrl": "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+      "creatorOrRightsholder": "unknown",
+      "sourceKind": "publisher",
+      "usageStatus": "external_reference",
+      "licenseName": null,
+      "licenseUrl": null,
+      "permissionEvidence": null,
+      "continuityScope": "CONT-MAIN-LN",
+      "spoilerLevel": "major",
+      "relatedEventIds": [
+        "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+        "EVT-DM-RYUU-REVENGE-001",
+        "EVT-DM-RYUU-JURA-PURSUIT-001",
+        "EVT-DM-JUGGERNAUT-RETURN-001"
+      ],
+      "relatedLocationIds": [
+        "LOC-DUNGEON"
+      ],
+      "creditLine": "Enlace editorial externo; no implica permiso para extraer, incrustar o exportar ilustraciones.",
+      "storageMode": "remote",
+      "watermarkPolicy": "none",
+      "previewPolicy": "link_only",
+      "notes": "Contexto de volumen, no correlación de una imagen a la localización exacta del suceso."
+    },
+    {
+      "id": "DM-VIS-REF-YEN-VOL14-001",
+      "title": "DanMachi, volumen 14 · página editorial",
+      "mediaType": "source_page",
+      "caption": "Referencia editorial para el arco del volumen 14; no se incrusta el arte de cubierta.",
+      "assetUrl": null,
+      "sourcePageUrl": "https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel",
+      "creatorOrRightsholder": "unknown",
+      "sourceKind": "publisher",
+      "usageStatus": "external_reference",
+      "licenseName": null,
+      "licenseUrl": null,
+      "permissionEvidence": null,
+      "continuityScope": "CONT-MAIN-LN",
+      "spoilerLevel": "major",
+      "relatedEventIds": [
+        "EVT-DM-JUGGERNAUT-DEFEAT-001"
+      ],
+      "relatedLocationIds": [
+        "LOC-DUNGEON"
+      ],
+      "creditLine": "Enlace editorial externo; sin copia local ni vista previa de la cubierta.",
+      "storageMode": "remote",
+      "watermarkPolicy": "none",
+      "previewPolicy": "link_only",
+      "notes": "La ficha editorial apoya el contexto general del volumen; no fija planta o coordenadas del Dungeon."
+    }
+  ],
+  "eventCoverage": [
+    {
+      "eventId": "EVT-DM-DESCENT-001",
+      "status": "no_scene_specific_asset",
+      "referenceIds": [],
+      "reason": "La página cronológica sirve como contexto, pero no se identificó una imagen autorizada ni una escena visual específica."
+    },
+    {
+      "eventId": "EVT-DM-GREAT-QUESTS-001",
+      "status": "no_scene_specific_asset",
+      "referenceIds": [],
+      "reason": "Expediciones descritas de forma general; no se atribuye una imagen de combate o localización sin evidencia."
+    },
+    {
+      "eventId": "EVT-DM-ZH-OEBD-001",
+      "status": "no_scene_specific_asset",
+      "referenceIds": [],
+      "reason": "No se identificó una imagen oficial con permiso de incrustación ni una referencia visual primaria vinculada al suceso."
+    },
+    {
+      "eventId": "EVT-DM-ZH-FALL-001",
+      "status": "no_scene_specific_asset",
+      "referenceIds": [],
+      "reason": "No se atribuye un retrato ni una portada a la caída de las Familias Zeus/Hera."
+    },
+    {
+      "eventId": "EVT-DM-AR-ERA-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-ASTREA-RECORD-PUBLISHER-001"
+      ],
+      "reason": "La página editorial aporta contexto de publicación, no prueba de una escena ni del evento T−5."
+    },
+    {
+      "eventId": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-YEN-VOL13-001"
+      ],
+      "reason": "El volumen 13 orienta al pasaje; el detalle espacial de la tragedia sigue provisional y no se añade una escena visual."
+    },
+    {
+      "eventId": "EVT-DM-RYUU-REVENGE-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-YEN-VOL13-001"
+      ],
+      "reason": "Referencia editorial de arco; sin imagen de escena verificada."
+    },
+    {
+      "eventId": "EVT-DM-HESTIA-DESCENT-001",
+      "status": "no_scene_specific_asset",
+      "referenceIds": [],
+      "reason": "No se deduce el lugar de llegada ni se asigna una imagen de la adaptación a una escena de la novela."
+    },
+    {
+      "eventId": "EVT-DM-BELL-ARRIVAL-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-CHRONOLOGY-MAIN-001",
+        "DM-VIS-REF-GA-VOL1-001"
+      ],
+      "reason": "La cronología y la página del volumen 1 son enlaces contextuales, no una imagen demostrada de la llegada."
+    },
+    {
+      "eventId": "EVT-DM-BELL-MEETS-HESTIA-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-GA-VOL1-001"
+      ],
+      "reason": "La página del volumen 1 sirve de referencia editorial; no se enlaza una ilustración a la escena sin evidencia."
+    },
+    {
+      "eventId": "EVT-DM-BELL-AIS-MINOTAUR-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-CHRONOLOGY-MAIN-001",
+        "DM-VIS-REF-GA-VOL1-001"
+      ],
+      "reason": "No se confunde el retrato de Bell ni la página editorial con la escena del Minotauro."
+    },
+    {
+      "eventId": "EVT-DM-EINA-ADVISOR-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-GA-VOL1-001"
+      ],
+      "reason": "Contexto general del volumen 1, no evidencia visual concreta de la conversación."
+    },
+    {
+      "eventId": "EVT-DM-RYUU-JURA-PURSUIT-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-YEN-VOL13-001"
+      ],
+      "reason": "Referencia del volumen 13; no determina el punto exacto de persecución."
+    },
+    {
+      "eventId": "EVT-DM-JUGGERNAUT-RETURN-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-YEN-VOL13-001"
+      ],
+      "reason": "Referencia del volumen 13; no atribuye una ilustración específica a la reaparición."
+    },
+    {
+      "eventId": "EVT-DM-JUGGERNAUT-DEFEAT-001",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-YEN-VOL14-001"
+      ],
+      "reason": "Contexto del volumen 14; no inventa piso, plano ni vista geográfica."
+    }
+  ],
+  "locationCoverage": [
+    {
+      "locationId": "LOC-ORARIO",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-GA-VOL1-001"
+      ],
+      "reason": "La página editorial ayuda a ubicar el marco urbano; no proporciona un panorama reutilizable con derechos verificados."
+    },
+    {
+      "locationId": "LOC-DUNGEON",
+      "status": "context_source_page_only",
+      "referenceIds": [
+        "DM-VIS-REF-YEN-VOL13-001",
+        "DM-VIS-REF-YEN-VOL14-001"
+      ],
+      "reason": "Las páginas editoriales aportan contexto del arco, no topología, planos de pisos ni imágenes autorizadas para incrustar."
+    }
+  ]
+}
