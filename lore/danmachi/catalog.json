@@ -3221,6 +3221,34 @@
       "claimRef": "DMR-028-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
       "note": "Representa una función histórica descrita por fuentes comunitarias, no una institución policial formal demostrada por fuente primaria."
+    },
+    {
+      "id": "REL-CELTY-RYANA-WIKI-SECONDARY",
+      "from": "CHAR-CELTY-SROWA",
+      "to": "CHAR-RYANA-LIETZ",
+      "kind": "friendship_reported",
+      "label": "La wiki describe a Celty y Ryana como compañeras que mantenían una buena relación y señala que Celty conocía parte del pasado de Ryana",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Familia histórica antes de la tragedia; escena exacta pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-028-CLM-013",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Relación informada por wiki comunitaria; no implica parentesco, romance ni amistad exclusiva. Requiere cotejo de pasaje primario."
+    },
+    {
+      "id": "REL-CELTY-RYUU-WIKI-SECONDARY",
+      "from": "CHAR-CELTY-SROWA",
+      "to": "CHAR-RYUU-LION",
+      "kind": "respect_and_closeness_reported",
+      "label": "La wiki describe a Celty como cercana a Ryuu y respetuosa de su perseverancia y franqueza",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Familia histórica; fecha exacta pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-028-CLM-014",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Pista secundaria de cercanía y respeto; no se infiere romance, parentesco ni una escena específica."
     }
   ]
 }
