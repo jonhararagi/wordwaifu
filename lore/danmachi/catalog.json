@@ -1037,6 +1037,244 @@
       "status": "provisional_secondary_evidence",
       "priority": "high",
       "name": "La salida de Astrea y la separación de Ryu"
+    },
+    {
+      "id": "CHAR-DARK-ALFIA",
+      "path": "characters/dark-era/alfia.md",
+      "type": "character",
+      "tags": [
+        "Alfia",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
+      ],
+      "status": "pending_primary_text_check",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-EREBUS",
+      "path": "characters/dark-era/erebus.md",
+      "type": "character",
+      "tags": [
+        "Erebus",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
+      ],
+      "status": "pending_primary_text_check",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-JURA-HALMER",
+      "path": "characters/dark-era/jura-halmer.md",
+      "type": "character",
+      "tags": [
+        "Jura Halmer",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check",
+        "CONT-MAIN-LN",
+        "individual dossier",
+        "primary page pending"
+      ],
+      "status": "pending_primary_text_check",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-RUDRA",
+      "path": "characters/dark-era/rudra.md",
+      "type": "character",
+      "tags": [
+        "Rudra",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
+      ],
+      "status": "pending_primary_text_check",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-THANATOS",
+      "path": "characters/dark-era/thanatos.md",
+      "type": "character",
+      "tags": [
+        "Thanatos",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
+      ],
+      "status": "pending_primary_text_check",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-VALLETTA-GREDE",
+      "path": "characters/dark-era/valletta-grede.md",
+      "type": "character",
+      "tags": [
+        "Valletta Grede",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
+      ],
+      "status": "pending_primary_text_check",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-ZALD",
+      "path": "characters/dark-era/zald.md",
+      "type": "character",
+      "tags": [
+        "Zald",
+        "Era Oscura",
+        "Astrea Record",
+        "needs source check",
+        "CONT-AR",
+        "individual dossier",
+        "primary page pending"
+      ],
+      "status": "pending_primary_text_check",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-AR-ERA-001",
+      "path": "events/timeline/EVT-DM-AR-ERA-001.md",
+      "type": "event",
+      "tags": [
+        "Astrea Record",
+        "Era Oscura",
+        "T-7",
+        "Astrea Familia",
+        "Evilus",
+        "CONT-AR"
+      ],
+      "status": "official_publisher_timeframe_primary_scene_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "path": "events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md",
+      "type": "event",
+      "tags": [
+        "Astrea Familia",
+        "Juggernaut",
+        "T-5",
+        "Ryu Lion",
+        "Jura Halmer",
+        "CONT-MAIN-LN"
+      ],
+      "status": "secondary_timeline_primary_page_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-BELL-AIS-MINOTAUR-001",
+      "path": "events/timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md",
+      "type": "event",
+      "tags": [
+        "Bell Cranel",
+        "Ais Wallenstein",
+        "Minotauro",
+        "volumen 1"
+      ],
+      "status": "publisher_scope_primary_scene_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-BELL-ARRIVAL-001",
+      "path": "events/timeline/EVT-DM-BELL-ARRIVAL-001.md",
+      "type": "event",
+      "tags": [
+        "Bell Cranel",
+        "llegada a Orario",
+        "T0",
+        "anchor"
+      ],
+      "status": "official_chronology_anchor_scene_check_pending",
+      "priority": "critical"
+    },
+    {
+      "id": "EVT-DM-JUGGERNAUT-DEFEAT-001",
+      "path": "events/timeline/EVT-DM-JUGGERNAUT-DEFEAT-001.md",
+      "type": "event",
+      "tags": [
+        "Bell Cranel",
+        "Ryu Lion",
+        "Juggernaut",
+        "piso 37",
+        "volumen 14"
+      ],
+      "status": "publisher_volume_scope_primary_outcome_check_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-JUGGERNAUT-RETURN-001",
+      "path": "events/timeline/EVT-DM-JUGGERNAUT-RETURN-001.md",
+      "type": "event",
+      "tags": [
+        "Jura Halmer",
+        "Juggernaut",
+        "Bell Cranel",
+        "Ryu Lion",
+        "volumen 13"
+      ],
+      "status": "publisher_scope_primary_scene_pending",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-RYUU-JURA-PURSUIT-001",
+      "path": "events/timeline/EVT-DM-RYUU-JURA-PURSUIT-001.md",
+      "type": "event",
+      "tags": [
+        "Ryu Lion",
+        "Jura Halmer",
+        "Bell Cranel",
+        "volumen 13"
+      ],
+      "status": "publisher_volume_scope_secondary_day_count",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-RYUU-REVENGE-001",
+      "path": "events/timeline/EVT-DM-RYUU-REVENGE-001.md",
+      "type": "event",
+      "tags": [
+        "Ryu Lion",
+        "venganza",
+        "Evilus",
+        "T-5 to T0",
+        "CONT-MAIN-LN"
+      ],
+      "status": "retrospective_primary_page_pending",
+      "priority": "high"
+    },
+    {
+      "id": "MON-DM-JUGGERNAUT-001",
+      "path": "monsters/juggernaut.md",
+      "type": "monster",
+      "tags": [
+        "Juggernaut",
+        "Dungeon",
+        "threat",
+        "Astrea Familia",
+        "Ryu Lion",
+        "Jura Halmer"
+      ],
+      "status": "provisional_primary_scene_check_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
