@@ -5,13 +5,23 @@ type: event
 status: pending_verification
 continuity_scope: main_and_related_sources
 spoiler_level: major
-source_refs: []
+source_refs:
+  - DMR-021-SRC-001
+  - DMR-021-SRC-002
 ---
 # EVT-DM-ZH-FALL-001 · Pérdida de poder de Zeus y Hera Familia
 
 ## Afirmación candidata
 
 Las Familias Zeus y Hera dejaron de ocupar la posición que tenían en la historia anterior de Orario, después de acontecimientos graves asociados con grandes amenazas. La relación exacta entre su expedición contra el Dragón Negro, su derrota, una posible salida de Orario y su estado institucional debe comprobarse por separado.
+
+## Pistas secundarias recuperadas de las wikis (estado aún provisional)
+
+La wiki de Zeus Familia reporta que Zeus fue expulsado de Orario por Freya y Loki después de la derrota contra el Dragón Negro; las páginas comunitarias describen un debilitamiento severo de ambas Familias y la pérdida de la posición que habían mantenido. La redacción secundaria no basta para declarar disueltas las dos organizaciones ni para atribuir a ambas deidades el mismo destino. El estado institucional de Hera Familia queda pendiente de fuente narrativa localizada.
+
+- **Fuentes comunitarias:** DMR-021-SRC-001 y DMR-021-SRC-002.
+- **Claims asociados:** DMR-021-CLM-006 y DMR-029-CLM-008.
+- **Estado:** pending_verification; «derrota», «expulsión», «disolución», «dispersión» e «inactividad» no son sinónimos.
 
 ## Distinciones necesarias
 
