@@ -2841,15 +2841,22 @@
       "id": "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY",
       "from": "CHAR-RYUU-LION",
       "to": "CHAR-KAGUYA",
-      "kind": "historical_co_member_roster",
-      "label": "El roster secundario enumera a Ryu y Kaguya entre las integrantes históricas de Astrea Familia; no demuestra una relación personal concreta",
+      "kind": "historical_co_member_roster_and_reported_moral_disagreement",
+      "label": "El roster secundario enumera a Ryu y Kaguya entre las integrantes históricas; la misma biografía informa desacuerdos sobre cómo aplicar la justicia.",
       "continuity": "CONT-AR",
       "interval": "Astrea Record · Era Oscura de Orario; fecha interna exacta no establecida",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_roster",
       "claimRef": "DMR-007-CLM-005",
       "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Fuente comunitaria usada como pista de pertenencia conjunta. No se infiere amistad, rivalidad, conversación ni intimidad más allá del roster."
+      "note": "La afiliación compartida proviene del roster comunitario; los desacuerdos morales son otra pista secundaria. Ninguna demuestra enemistad permanente ni reemplaza la cita de novela.",
+      "claimRefs": [
+        "DMR-028-CLM-003"
+      ],
+      "claimPaths": [
+        "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+        "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"
+      ]
     },
     {
       "id": "REL-RYU-LYRA-AR-ROSTER-SECONDARY",
@@ -3186,20 +3193,6 @@
       "claimRef": "DMR-010-CLM-005",
       "claimPath": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
       "note": "Alcance limitado a la sinopsis editorial; no constituye verificación capítulo a capítulo."
-    },
-    {
-      "id": "REL-KAGUYA-DISPUTES-RYU-WIKI",
-      "from": "CHAR-KAGUYA",
-      "to": "CHAR-RYUU-LION",
-      "kind": "reported_moral_disagreement",
-      "label": "La biografía comunitaria informa desacuerdos de Kaguya y Ryu sobre cómo aplicar la justicia; vínculo secundario pendiente de localizador de novela.",
-      "continuity": "CONT-AR",
-      "interval": "Astrea Familia histórica; escenas por verificar",
-      "evidenceStatus": "secondary_checked",
-      "evidenceType": "community_secondary_character_dynamic",
-      "claimRef": "DMR-028-CLM-003",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
-      "note": "No implica enemistad permanente ni autoriza a inventar diálogos; consultar la wiki como pista hasta hallar el pasaje primario."
     },
     {
       "id": "REL-LYRA-MEMBER-ASTREA-WIKI",
