@@ -167,6 +167,8 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 ## Historias paralelas y crónicas
 
 - [DANMACHI-RESEARCH-009 · Astrea Record, Sword Oratoria y Familia Chronicle](research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md) — once afirmaciones provisionales ya indexadas en el buscador.
+- [BATCH-DM-010 · Salida de Astrea y venganza de Ryu](research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md) — seis afirmaciones con continuidad por claim; el motivo de la partida sigue pendiente de localizador primario.
+- [EVT-DM-ASTREA-DEPARTURE-001](events/candidates/EVT-DM-ASTREA-DEPARTURE-001.md) — evento navegable con estatus mixto; no eleva afirmaciones secundarias a canon confirmado.
 - Dossiers: [índice de volúmenes y líneas paralelas](volumes/00-indice-volumenes-y-arcos.md).
 
 

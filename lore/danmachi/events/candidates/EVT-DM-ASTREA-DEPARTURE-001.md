@@ -3,9 +3,10 @@ id: EVT-DM-ASTREA-DEPARTURE-001
 universe: danmachi
 type: event
 status: provisional_secondary_evidence
-continuity_scope: main
+continuity_scope: CROSS-CONTINUITY
 spoiler_level: major
-source_refs: [DMR-010-CLM-001, DMR-010-CLM-002, DMR-010-CLM-003, DMR-010-CLM-004, DMR-010-CLM-005, DMR-010-CLM-006]
+claim_refs: [DMR-010-CLM-001, DMR-010-CLM-002, DMR-010-CLM-003, DMR-010-CLM-004, DMR-010-CLM-005, DMR-010-CLM-006]
+source_refs: [DMR-010-SRC-001, DMR-010-SRC-002, DMR-010-SRC-003]
 ---
 # EVT-DM-ASTREA-DEPARTURE-001 · La salida de Astrea y la separación de Ryu
 

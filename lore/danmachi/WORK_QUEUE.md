@@ -342,3 +342,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Añadir Mia Grand y Syr Flova como fichas relacionadas solo en una tanda aparte, con alcance y estado de evidencia propios.
 - **Fuente:** https://danmachi.com/danmachi/special/index.html
 - **Límite:** el glosario oficial de anime acredita descripciones generales; no proporciona mapa detallado, historia completa de locales ni estado de cada integrante en todas las épocas.
+## BATCH-DM-010 · Salida de Astrea y venganza de Ryu
+
+- [x] Registrar EVT-DM-ASTREA-DEPARTURE-001 en el catálogo de eventos y el índice maestro.
+- [x] Registrar las tres fuentes citadas y asociar los seis claims existentes al documento RESEARCH-DM-027.
+- [x] Separar la evidencia de la sinopsis del anime y de la sinopsis editorial de la afirmación sobre la salida reportada solo por una fuente secundaria.
+- [x] Añadir pruebas de registro, navegabilidad, búsqueda y estado pendiente.
+- [ ] Localizar el pasaje primario de la novela donde Ryu pide a Astrea salir de Orario.
+- [ ] Cotejar con la novela el orden entre tragedia, salida de Astrea, campaña de venganza y ayuda de Syr/Mia.
+- [ ] No completar la cronología exacta ni la pertenencia de las nuevas seguidoras solo a partir de sinopsis.
+- Fuentes: https://danmachi.com/danmachi4/story/index.php?slideNum=1 ; https://ga.sbcr.jp/product/9784815623692/
+- Límite: el registro es de evidencia mixta; los datos secundarios siguen etiquetados como secundarios o pendientes.

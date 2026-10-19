@@ -22,6 +22,7 @@ Las tres afirmaciones de la sinopsis editorial conservan el estado `provisional_
 
 - [Descenso de las deidades](candidates/EVT-DM-DESCENT-001.md) · EVT-DM-DESCENT-001
 - [Zeus/Hera: derrotas de Behemoth y Leviathan](candidates/EVT-DM-GREAT-QUESTS-001.md) · EVT-DM-GREAT-QUESTS-001 · referencia oficial transversal parcial; enlaza a [Zeus Familia](../familias/zeus-familia.md) y [Hera Familia](../familias/hera-familia.md).
+- [La salida de Astrea y la separación de Ryu](candidates/EVT-DM-ASTREA-DEPARTURE-001.md) · EVT-DM-ASTREA-DEPARTURE-001 · expediente de evidencia mixta; la tragedia está respaldada por la adaptación, pero el motivo de la salida permanece secundario y pendiente de cotejo primario.
 - [Zeus/Hera y el Dragón Negro](candidates/EVT-DM-ZH-OEBD-001.md) · EVT-DM-ZH-OEBD-001
 - [Pérdida de poder/caída de Zeus y Hera Familia](candidates/EVT-DM-ZH-FALL-001.md) · EVT-DM-ZH-FALL-001
 - [Llegada de Hestia al mundo inferior](candidates/EVT-DM-HESTIA-DESCENT-001.md) · EVT-DM-HESTIA-DESCENT-001
