@@ -5,10 +5,10 @@ type: character
 status: pending_primary_text_check
 continuity_scope: CONT-AR
 source_refs:
-  - DMR-014-SRC-001
-  - DMR-014-SRC-002
+  - DMR-029-SRC-003
+  - DMR-029-SRC-006
 claim_refs:
-  - DMR-014-CLM-003
+  - DMR-029-CLM-003
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases:
   - "Erebus"
