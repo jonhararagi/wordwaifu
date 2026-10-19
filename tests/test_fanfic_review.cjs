@@ -12,6 +12,8 @@ const drift = result.issues.find(issue => issue.rule === "possible-characterizat
 const exception = exceptionFor(drift);
 result = analyze('Eina Tulle le dijo «Vete de una vez a la Dungeon, no hace falta que te quedes a registrarte».', { roster, exceptions:[exception] });
 assert.ok(!result.issues.some(issue => issue.key === drift.key), "intentional divergences must be suppressible");
+const anotherContinuity = analyze('Eina Tulle le dijo «Vete de una vez a la Dungeon, no hace falta que te quedes a registrarte».', { roster, continuity:"CONT-ANIME", exceptions:[exception] });
+assert.ok(anotherContinuity.issues.some(issue => issue.rule === "possible-characterization-drift"), "intentional-divergence exceptions must not leak into another continuity");
 result = analyze("Eina Tulle abandonó su puesto y dejó solo al aventurero.", { roster });
 assert.ok(result.issues.some(issue => issue.rule === "possible-characterization-drift"), "potentially atypical actions should also be reviewable");
 result = analyze("Bell Cranel concentró Argonaut sin cargar y sin coste, y derrotó al monstruo.", { roster });
