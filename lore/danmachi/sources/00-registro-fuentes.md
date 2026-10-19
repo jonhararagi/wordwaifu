@@ -627,6 +627,76 @@ verification_status: stub
  
 ---
 
+## DMR-010-SRC-001 · Portal oficial de DanMachi IV, episodio 20
+
+- source_id: DMR-010-SRC-001
+- title: ストーリー · 第20話 散華（アストレア・ファミリア）
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi IV
+- volume_or_edition: Episodio 20, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi4/story/index.php?slideNum=1
+- accessed_at: 2026-10-19
+- locator_type: episode_synopsis
+- locator: Episodio 20, 散華（アストレア・ファミリア）
+- claims_supported: [DMR-010-CLM-001]
+- events_supported: [EVT-DM-ASTREA-DEPARTURE-001]
+- continuity_scope: CONT-ANIME
+- reliability_note: La sinopsis oficial describe la desaparición histórica de Astrea Familia y a Ryu como única superviviente conocida en la adaptación. No respalda por sí sola el motivo de la salida posterior de Astrea.
+- conflicting_sources: []
+- rights_note: Paráfrasis breve; no reproducir el texto de la sinopsis.
+- verified_by: BATCH-DM-010
+- verification_status: source_checked
+
+---
+
+## DMR-010-SRC-002 · Ryuu Lion · referencia comunitaria secundaria
+
+- source_id: DMR-010-SRC-002
+- title: Ryuu Lion
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi, referencias secundarias sobre la novela principal
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Ryuu_Lion
+- accessed_at: 2026-10-19
+- locator_type: secondary_character_history
+- locator: Apartado Historia, secuencia posterior a la caída de Astrea Familia
+- claims_supported: [DMR-010-CLM-002, DMR-010-CLM-003, DMR-010-CLM-004]
+- events_supported: [EVT-DM-ASTREA-DEPARTURE-001]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Pista comunitaria para orientar la búsqueda. El motivo de la salida de Astrea y la escena en que Ryu se lo pide siguen pendientes de cotejo primario; no deben presentarse como hechos confirmados solo por esta fuente. Los demás puntos conservan estado secundario.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias; no copiar el artículo.
+- verified_by: BATCH-DM-010
+- verification_status: secondary_checked
+
+---
+
+## DMR-010-SRC-003 · GA文庫 · Familia Chronicle: Episode Ryuu 2
+
+- source_id: DMR-010-SRC-003
+- title: ダンジョンに出会いを求めるのは間違っているだろうか ファミリアクロニクル episodeリュー２
+- creator_or_publisher: Fujino Omori / GA Bunko (SB Creative)
+- source_type: OFFICIAL_PUBLISHER
+- series: DanMachi, Familia Chronicle
+- volume_or_edition: Familia Chronicle: Episode Ryuu 2; ISBN 978-4-8156-2369-2
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784815623692/
+- accessed_at: 2026-10-19
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial sobre el viaje de Ryu a la Ciudad Forjadora de Espadas para visitar a Astrea y la respuesta de la diosa.
+- claims_supported: [DMR-010-CLM-005, DMR-010-CLM-006]
+- events_supported: [EVT-DM-ASTREA-DEPARTURE-001]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: La ficha editorial confirma el viaje posterior y el estado de Astrea descrito en la sinopsis, pero no explica por sí sola la razón original por la que Astrea salió de Orario ni sustituye los pasajes completos de la novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis breve; no copiar la sinopsis editorial.
+- verified_by: BATCH-DM-010
+- verification_status: source_checked
+
+---
 ## DMR-025-SRC-001 · Soma Familia · compendio comunitario
 
 - source_id: DMR-025-SRC-001

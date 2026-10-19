@@ -1022,6 +1022,21 @@
         "taberna",
         "Loki Familia"
       ]
+    },
+    {
+      "id": "EVT-DM-ASTREA-DEPARTURE-001",
+      "path": "events/candidates/EVT-DM-ASTREA-DEPARTURE-001.md",
+      "type": "event",
+      "tags": [
+        "Astrea Familia",
+        "Ryu Lion",
+        "Astrea",
+        "departure",
+        "vengeance"
+      ],
+      "status": "provisional_secondary_evidence",
+      "priority": "high",
+      "name": "La salida de Astrea y la separación de Ryu"
     }
   ],
   "reservedIds": [
@@ -1910,6 +1925,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
       "type": "official_anime_location_research",
       "status": "source_checked_partial"
+    },
+    {
+      "document_id": "RESEARCH-DM-027",
+      "path": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
+      "type": "character_relationship_research",
+      "status": "provisional_secondary_evidence"
     }
   ],
   "lastStructuredSync": "2026-10-18",
@@ -3117,6 +3138,48 @@
       "claimRef": "DMR-026-CLM-003",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
       "note": "Relación de visita habitual descrita en la fuente oficial; no implica que todos los integrantes estén presentes en toda época."
+    },
+    {
+      "id": "REL-ASTREA-EVENT-TRAGEDY-ANIME",
+      "from": "DM-FAM-ASTREA",
+      "to": "EVT-DM-ASTREA-DEPARTURE-001",
+      "kind": "historical_event",
+      "label": "La sinopsis oficial de DanMachi IV describe la caída de la primera Astrea Familia y a Ryu como única superviviente conocida en esa adaptación.",
+      "continuity": "CONT-ANIME",
+      "interval": "DanMachi IV, episodio 20; no fija toda la cronología de la novela",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_adaptation_synopsis",
+      "claimRef": "DMR-010-CLM-001",
+      "claimPath": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
+      "note": "La fuente solo respalda la tragedia descrita en la adaptación; no confirma por sí sola el motivo por el que Astrea sale de Orario."
+    },
+    {
+      "id": "REL-RYU-EVENT-DEPARTURE-SECONDARY",
+      "from": "CHAR-RYUU-LION",
+      "to": "EVT-DM-ASTREA-DEPARTURE-001",
+      "kind": "reported_departure_request",
+      "label": "Una fuente secundaria afirma que Ryu pidió a Astrea abandonar Orario antes de su campaña de venganza; la escena primaria aún no está localizada.",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Después de la tragedia de Astrea Familia; orden exacto y localizador primario pendientes",
+      "evidenceStatus": "pending_verification",
+      "evidenceType": "community_secondary_summary",
+      "claimRef": "DMR-010-CLM-002",
+      "claimPath": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
+      "note": "No presentar como canon confirmado. Mantener pendiente hasta localizar y cotejar el pasaje de la novela ligera."
+    },
+    {
+      "id": "REL-RYU-EVENT-RETURN-PUBLISHER",
+      "from": "CHAR-RYUU-LION",
+      "to": "EVT-DM-ASTREA-DEPARTURE-001",
+      "kind": "later_visit_to_astrea",
+      "label": "La sinopsis editorial de Familia Chronicle: Episode Ryuu 2 confirma un viaje posterior de Ryu para ver a Astrea, pero no explica la razón original de su partida.",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Estado posterior, durante preparativos del War Game Hestia-Freya; secuencia exacta pendiente",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_publisher_synopsis",
+      "claimRef": "DMR-010-CLM-005",
+      "claimPath": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
+      "note": "Alcance limitado a la sinopsis editorial; no constituye verificación capítulo a capítulo."
     }
   ]
 }
