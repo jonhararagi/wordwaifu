@@ -379,3 +379,9 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Incorporar la validación del modelo y pruebas de montaje en el workflow de lore.
 - [ ] Validar la PR completa con los workflows generales, test temporal, validación de catálogo y navegador.
 - [ ] Revisar en un navegador que los enlaces a personajes y eventos conservan contexto, especialmente los personajes sin ficha de dossier en main.
+## INTEGRATION-BATCH-001B — procedencia de personajes históricos
+- [x] Reemplazar los claim_refs de Alfia, Zald, Erebus, Jura y Rudra por claims que realmente corresponden a esos personajes.
+- [x] Registrar las fuentes secundarias de los perfiles históricos y separar el contexto editorial oficial.
+- [x] Importar la investigación Zeus/Hera y exponerla desde el índice de lore.
+- [x] Mantener Thanatos y Valletta como pistas sin claim narrativo nuevo ni promoción a canon.
+- [ ] Ejecutar nuevamente validador de catálogo, corpus, cronología y navegador en la PR.
