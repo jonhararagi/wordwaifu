@@ -40,3 +40,11 @@ No sobrescribir un miembro histórico cuando cambia el roster. Registrar interva
 
 - [Soma Familia](soma-familia.md) — ficha parcial con nueve relaciones conectadas y fuentes graduadas.
 - [Investigación DMR-025](../research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md) — distingue la captura descrita en la sinopsis editorial de los detalles respaldados solo por compendios.
+
+## Nodos históricos de Zeus/Hera
+- [Zeus Familia](zeus-familia.md) — logro conjunto frente a Behemoth/Leviathan según referencia oficial; exploración histórica y roster ampliados solo como pistas secundarias.
+- [Hera Familia](hera-familia.md) — logro conjunto oficial y roster histórico secundario; la identidad de la capitana mortal de nivel 9 continúa sin resolver.
+- [Zeus](../characters/zeus.md) y [Hera](../characters/hera.md) — deidades patronas reportadas; no confundir con los capitanes mortales.
+- [Meteria](../characters/dark-era/meteria.md) — afiliación y parentescos reportados en wikis; spoiler mayor.
+- [Alfia](../characters/dark-era/alfia.md) y [Zald](../characters/dark-era/zald.md) — habilidades, costes y límites reportados por wikis con pasajes primarios pendientes.
+- [Investigación DMR-029](../research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md) — nueve ampliaciones de lore con fuentes secundarias etiquetadas y continuidad separada.
