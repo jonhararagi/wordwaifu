@@ -385,3 +385,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Importar la investigación Zeus/Hera y exponerla desde el índice de lore.
 - [x] Mantener Thanatos y Valletta como pistas sin claim narrativo nuevo ni promoción a canon.
 - [ ] Ejecutar nuevamente validador de catálogo, corpus, cronología y navegador en la PR.
+
+## INTEGRATION-BATCH-002 — completar información útil de wikis sin elevarla a canon primario
+- [x] Ampliar Alfia y Zald con habilidades, historia, costes y límites encontrados en wikis inglesa y española.
+- [x] Activar las fichas reservadas CHAR-ZEUS, CHAR-HERA y CHAR-METERIA; eliminar solo esas tres reservas al crear sus nodos únicos.
+- [x] Enriquecer Zeus Familia y Hera Familia con pistas secundarias de roster, exploración, Gremio y la capitana mortal de Hera de identidad no resuelta.
+- [x] Registrar la nota de Fujino Omori como contexto alternativo del autor (CONT-AU), sin importar sus sucesos a CONT-MAIN-LN.
+- [x] Añadir relaciones navegables con estado secondary_checked, claimRef y procedencia.
+- [x] Enlazar los eventos candidatos de Dragón Negro y caída de Zeus/Hera a las wikis, conservando pending_verification.
+- [ ] Ejecutar los validadores de catálogo, corpus de búsqueda, cronología y navegador en la PR.
+- [ ] Localizar pasajes primarios para la expedición del Dragón Negro y el estado institucional de ambas Familias.

@@ -2,7 +2,7 @@
 id: CHAR-DARK-ALFIA
 universe: danmachi
 type: character
-status: pending_primary_text_check
+status: secondary_reference_primary_locator_pending
 continuity_scope: CONT-AR
 source_refs:
   - DMR-029-SRC-001
@@ -13,55 +13,55 @@ source_refs:
   - DMR-021-SRC-006
 claim_refs:
   - DMR-029-CLM-001
-  - DMR-021-CLM-004
-verification_status: secondary_summary_reviewed_primary_page_pending
+  - DMR-029-CLM-006
+  - DMR-029-CLM-011
+verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Alfia"
+tags: [Hera Familia, Astrea Record, abilities, illness, spoiler]
 ---
-# Alfia
+# Alfia — expediente individual
 
 ## Identidad y afiliación
-
 - **ID estable:** CHAR-DARK-ALFIA.
-- **Afiliación de trabajo:** Hera Familia.
-- **Continuidad:** CONT-AR. CONT-AR. Mantener AU/What If separado: sucesos o supervivencias alternativas no pasan al canon.
-- **Estado:** expediente individual redactado; verificación primaria por página pendiente.
+- **Afiliación histórica reportada:** Hera Familia; las fuentes comunitarias la sitúan entre sus ejecutivos.
+- **Continuidad principal de esta ficha:** CONT-AR. Las referencias comunitarias también la relacionan con una retrospectiva de la novela principal; no mezclar detalles de adaptación/juego o AU sin etiquetarlos.
+- **Estado de la ficha:** información útil recuperada de wikis en inglés y español; el cotejo de la edición primaria sigue pendiente.
 
-## Contexto e historia
+## Datos de la wiki: qué está disponible y qué significa
+La ficha inglesa ofrece nombre japonés, romanización, alias y una instantánea de su estado. Registra nivel 7 y piso 71 como datos históricos reportados, y da el alias **Silence**; sus sobrenombres resaltan el talento excepcional. La wiki no sirve para afirmar que ese nivel o las cifras de estadísticas sean universales o permanentes.
+- **Apariencia reportada:** cabello plateado y ojos de distinto color; edad y altura publicadas por la wiki no se presentan como verificación primaria.
+- **Situación reportada:** humana, antigua aventurera de Hera Familia, fallecida en el marco histórico descrito por Astrea Record.
+- **Vínculo familiar reportado:** Meteria es presentada como hermana gemela; Bell aparece como sobrino. El parentesco permanece con etiqueta secundaria hasta cotejar los pasajes.
 
-Las referencias comunitarias vinculan a Alfia con Meteria y con el conflicto moral de Astrea Record. La enfermedad se manifiesta como una habilidad negativa: talento y deterioro deben narrarse juntos. Su enfrentamiento con Astrea Familia obliga a la siguiente generación a demostrar que puede heredar el futuro de Orario.
+## Historia y conflicto
+Las wikis describen una enfermedad incurable que limita la resistencia de Alfia, pese a su talento desproporcionado. Relatan su participación contra el Leviathan en el pasado y su posterior enfrentamiento con Astrea Familia. La idea narrativa que puede conservarse sin convertirla en canon nuevo es el conflicto entre talento excepcional, deterioro físico y su papel deliberado de antagonista para poner a prueba a la siguiente generación.
+- La secuencia exacta de la victoria sobre Leviathan, la caída ante el Dragón Negro y la relación causal entre sucesos exige un localizador primario.
+- No completar motivaciones privadas, escenas o fechas solo a partir del resumen de la wiki.
 
-## Apariencia, voz y personalidad
+## Habilidades y límites reportados por fuentes secundarias
+La ficha de personaje y la página española de habilidades enumeran:
+- **Habilidades:** Gif Blessing, Alme y Vel Ardore.
+- **Magias:** Satanas Verion, Silentium Eden y Genos Angelus.
+- **Límite físico central reportado:** Gif Blessing aparece descrita como manifestación pasiva de su enfermedad y como fuente de deterioro progresivo de parámetros y resistencia durante un combate largo.
 
-Humana y antigua ejecutiva de Hera Familia, descrita en fuentes secundarias como aventurera de nivel 7. Su talento está ligado a una enfermedad incurable que debilita progresivamente su cuerpo.
+Esto es un índice práctico de qué revisar en la novela, no un conjunto de reglas ya verificado línea por línea. Los cantos, restricciones, coste exacto, valores numéricos y condiciones de activación siguen pendientes de página/escena primaria. No presentar sus poderes como gratuitos ni borrar el coste de su enfermedad.
 
-Se la describe con apariencia calmada y mente perspicaz, junto con autoritarismo, intolerancia al ruido y dureza extrema. Mantiene deliberadamente el papel de enemiga hasta el final. No reducirla a villana simple ni convertir una interpretación secundaria en una cita.
-
-## Habilidades y límites
-
-Las fuentes secundarias enumeran magia poderosa y de anulación, además de una condición que reduce sus capacidades conforme combate. Registrar técnicas, cantos y límites solamente al cotejar la edición.
-
-## Relaciones
-
-- **[Hera Familia](../../familias/hera-familia.md) / Hera:** afiliación histórica que las referencias comunitarias asocian con Alfia; rango, nivel y periodo concretos siguen pendientes de localizador primario.
-- **Meteria (ficha independiente pendiente; su ID sigue reservado para evitar duplicados):** las referencias secundarias la presentan como hermana gemela de Alfia. El parentesco requiere cotejo directo con la novela.
-Meteria es descrita por las referencias secundarias como su hermana gemela. Las referencias posteriores también relacionan a Alfia con Bell, pero no hace falta adelantar ese vínculo en toda escena histórica. El perfil canon debe permanecer separado de cualquier AU.
-
-## Conflicto narrativo
-
-Talento excepcional frente a enfermedad; culpa familiar; aceptar una identidad monstruosa para probar el heroísmo de otras personas.
+## Relaciones navegables
+- **[Hera Familia](../../familias/hera-familia.md):** afiliación histórica reportada; no se infieren relaciones privadas con su deidad.
+- **[Meteria](meteria.md):** hermana gemela según referencias secundarias; la ficha separa la relación familiar de los datos aún no cotejados.
+- **[Zald](zald.md):** las wikis describen convivencia posterior y cooperación en la crisis histórica. Se conserva como contexto secundario; no implica romance ni determina cada acción conjunta.
+- **[Zeus Familia](../../familias/zeus-familia.md):** contexto histórico compartido por la generación anterior, no afiliación de Alfia.
 
 ## Localizadores de lectura
-
-Astrea Record vol. 3, cap. 8 «The Price of Talent» para la enfermedad; cap. 9 para el enfrentamiento; el índice enumera la historia extra «Alfia». Página exacta pendiente de revisar en la edición publicada.
+La wiki española de Astrea Record volumen 3 sirve como mapa de búsqueda y menciona títulos de capítulos e historia extra. Esos encabezados todavía deben cotejarse en una edición publicada; no inventar páginas ni marcar el pasaje como leído.
 
 ## Fuentes
-
-- https://danmachi.fandom.com/wiki/Alfia
-- https://danmachi.fandom.com/es/wiki/Alfia/Habilidades
-- https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3
-- https://danmachi.com/news/news131.php
+- [Alfia · DanMachi Wiki, inglés](https://danmachi.fandom.com/wiki/Alfia) — resumen comunitario.
+- [Alfia/Habilidades · DanMachi Wiki, español](https://danmachi.fandom.com/es/wiki/Alfia/Habilidades) — catálogo secundario de habilidades y magias.
+- [Astrea Record, volumen 3 · referencia comunitaria](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3) — pista de localización, no cotejo de páginas.
+- [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — respalda el contexto editorial, no cada dato biográfico.
+- Investigación asociada: DMR-029-CLM-001, DMR-029-CLM-006 y DMR-029-CLM-011.
 
 ## Regla editorial
-
-No elevar a canon confirmado un dato que solo procede de una wiki o de una descripción de adaptación. Registrar volumen, capítulo, página y escena de la edición consultada. No inventar números de página ni importar detalles de Memoria Freese/AU a la novela revisada.
+No elevar a canon confirmado un dato que solo procede de una wiki. Registrar volumen, capítulo, página y escena de la edición consultada. Mantener separado cualquier escenario alternativo del autor y no completar incógnitas sobre el padre de Bell.
