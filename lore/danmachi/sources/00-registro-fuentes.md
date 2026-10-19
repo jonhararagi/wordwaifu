@@ -1082,3 +1082,374 @@ verification_status: stub
 - rights_note: Paráfrasis propia; no copiar la página.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
+
+## DMR-021-SRC-001 · Zeus Familia — referencia comunitaria
+
+- source_id: DMR-021-SRC-001
+- title: Zeus Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Zeus_Familia
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; miembros; historia y relaciones
+- claims_supported: [DMR-021-CLM-001, DMR-021-CLM-003, DMR-021-CLM-006]
+- events_supported: [EVT-DM-ZH-OEBD-001, EVT-DM-ZH-FALL-001]
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria para descubrir roster y sucesos candidatos. Rangos, participantes, fecha, resultado y estado institucional requieren cotejo primario.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+
+
+## DMR-021-SRC-002 · Hera Familia — referencia comunitaria
+
+- source_id: DMR-021-SRC-002
+- title: Hera Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Hera_Familia
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; roster; historia y organización
+- claims_supported: [DMR-021-CLM-002, DMR-021-CLM-004, DMR-021-CLM-006, DMR-021-CLM-008]
+- events_supported: [EVT-DM-ZH-OEBD-001, EVT-DM-ZH-FALL-001]
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria; niveles, identidad de la capitanía, participantes y estado histórico requieren confirmación en novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+
+
+## DMR-021-SRC-003 · Zeus — referencia comunitaria de personaje
+
+- source_id: DMR-021-SRC-003
+- title: Zeus
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Zeus
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; identidad; relaciones y afiliación
+- claims_supported: [DMR-021-CLM-001, DMR-021-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria; relación con Bell y estado posterior de Zeus requieren localizador literario directo.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+
+
+## DMR-021-SRC-004 · Hera — referencia comunitaria de personaje
+
+- source_id: DMR-021-SRC-004
+- title: Hera
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Hera
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; identidad y relaciones
+- claims_supported: [DMR-021-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria; personalidad, relaciones privadas y estado actual no se marcan como hechos primarios.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+
+
+## DMR-021-SRC-005 · Maxim — referencia comunitaria de personaje
+
+- source_id: DMR-021-SRC-005
+- title: Maxim
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; historias históricas y retrospectivas
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Maxim
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; nivel y cargo; apariciones
+- claims_supported: [DMR-021-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN (según la referencia secundaria)
+- reliability_note: Fuente secundaria; cargo, nivel, destino y volumen citado requieren corroboración en texto autorizado.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+
+
+## DMR-021-SRC-006 · Meteria — referencia comunitaria de personaje
+
+- source_id: DMR-021-SRC-006
+- title: Meteria
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Meteria
+- accessed_at: 2026-10-17
+- locator_type: community_article
+- locator: Lead; relaciones familiares; afiliación y estado biográfico
+- claims_supported: [DMR-021-CLM-004, DMR-021-CLM-005]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
+- reliability_note: Fuente secundaria con spoilers mayores. Maternidad, parentesco, afiliación y estado requieren localizadores de novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no copiar texto ni imágenes.
+- verified_by: DANMACHI-COVERAGE-001
+- verification_status: secondary_reference_primary_locator_pending
+
+
+---
+
+
+
+## DMR-029-SRC-001 · Alfia
+- source_id: DMR-029-SRC-001
+- title: Alfia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Alfia
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-001]
+- continuity_scope: CONT-AR
+- reliability_note: Underlying novel scenes remain unchecked.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-002 · Alfia / Habilidades
+- source_id: DMR-029-SRC-002
+- title: Alfia / Habilidades
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/es/wiki/Alfia/Habilidades
+- accessed_at: 2026-10-19
+- locator_type: community_ability_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-001]
+- continuity_scope: CONT-AR
+- reliability_note: Skills, costs and restrictions require primary locators.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-003 · Astrea Record: publication announcement
+- source_id: DMR-029-SRC-003
+- title: Astrea Record: publication announcement
+- creator_or_publisher: Official site / publisher
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi
+- official_url: https://danmachi.com/news/news131.php
+- accessed_at: 2026-10-19
+- locator_type: official_publication_announcement
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-002, DMR-029-CLM-003]
+- continuity_scope: CONT-AR
+- reliability_note: Confirms publication context, not every character-level claim.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: source_checked
+
+## DMR-029-SRC-004 · Astrea Record volume 3 community summary
+- source_id: DMR-029-SRC-004
+- title: Astrea Record volume 3 community summary
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3
+- accessed_at: 2026-10-19
+- locator_type: community_volume_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-002]
+- continuity_scope: CONT-AR
+- reliability_note: Navigation clue; not page-by-page verification.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-005 · Zald
+- source_id: DMR-029-SRC-005
+- title: Zald
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/es/wiki/Zald
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-002]
+- continuity_scope: CONT-AR
+- reliability_note: Fight details and historical level need primary locators.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-006 · Erebus
+- source_id: DMR-029-SRC-006
+- title: Erebus
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Erebus
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-003]
+- continuity_scope: CONT-AR
+- reliability_note: Do not infer aliases without a primary passage.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-007 · Jura Halmer
+- source_id: DMR-029-SRC-007
+- title: Jura Halmer
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Jura_Halmer
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-004]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Secondary plot summary; seek primary chapter locators.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-008 · Jura Halmer (Spanish)
+- source_id: DMR-029-SRC-008
+- title: Jura Halmer (Spanish)
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/es/wiki/Jura_Halmer
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-004]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Translation of community material, not independent primary evidence.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-009 · Rudra Familia
+- source_id: DMR-029-SRC-009
+- title: Rudra Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Rudra_Familia
+- accessed_at: 2026-10-19
+- locator_type: community_familia_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-004, DMR-029-CLM-005]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Roster and individual actions require primary checks.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-010 · DanMachi volume 13 (Yen Press)
+- source_id: DMR-029-SRC-010
+- title: DanMachi volume 13 (Yen Press)
+- creator_or_publisher: Official site / publisher
+- source_type: OFFICIAL_PUBLISHER_REFERENCE
+- series: DanMachi
+- official_url: https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel
+- accessed_at: 2026-10-19
+- locator_type: publisher_volume_synopsis
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-004]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Supports the publisher's broad arc summary only.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: source_checked
+
+## DMR-029-SRC-011 · DanMachi volume 14 (Yen Press)
+- source_id: DMR-029-SRC-011
+- title: DanMachi volume 14 (Yen Press)
+- creator_or_publisher: Official site / publisher
+- source_type: OFFICIAL_PUBLISHER_REFERENCE
+- series: DanMachi
+- official_url: https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel
+- accessed_at: 2026-10-19
+- locator_type: publisher_volume_synopsis
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-004]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Does not validate every wiki-level causal detail.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: source_checked
+
+## DMR-029-SRC-012 · Rudra (Spanish)
+- source_id: DMR-029-SRC-012
+- title: Rudra (Spanish)
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/es/wiki/Rudra
+- accessed_at: 2026-10-19
+- locator_type: community_deity_summary
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: [DMR-029-CLM-005]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Do not add real-world mythological assumptions.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-013 · Thanatos
+- source_id: DMR-029-SRC-013
+- title: Thanatos
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Thanatos
+- accessed_at: 2026-10-19
+- locator_type: community_character_index
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN
+- reliability_note: Wiki article is a discovery lead, not proof of light-novel appearance.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-014 · Valletta Grede
+- source_id: DMR-029-SRC-014
+- title: Valletta Grede
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Valletta_Grede
+- accessed_at: 2026-10-19
+- locator_type: community_character_index
+- locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
+- claims_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Wiki article does not confirm every plot action or continuity.
+- rights_note: Link and paraphrase only; do not copy article prose.
+- verification_status: secondary_checked
