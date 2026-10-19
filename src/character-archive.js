@@ -487,6 +487,11 @@ const sections=(doc.sections||[]).filter(section=>{
   const normalizedHeading=heading.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
   const historicalHeading=/temporal state a|estado temporal a|estado historico|astrea record/.test(normalizedHeading);
   const animeHeading=/temporal state b|estado temporal b|official anime|perfil oficial del anime|perfil oficial de adaptacion|adaptacion anime/.test(normalizedHeading);
+  // Explicit scope tags are authoritative even when the prose heading is localized
+  // or does not contain the words "Astrea Record", "histórico" or "anime".
+  const knownScopes=["CONT-AR","CONT-ANIME","CONT-MAIN-LN","CONT-SO","CONT-AU","CONT-GAME","CONT-UNVERIFIED","CROSS-CONTINUITY"];
+  const explicitScopes=knownScopes.filter(scope=>new RegExp("(^|[^A-Z0-9])"+scope+"([^A-Z0-9]|$)","i").test(heading));
+  if(explicitScopes.length&&continuity!=="ALL"&&!explicitScopes.includes(continuity))return false;
   if(historicalHeading&&animeHeading)return false;
   if(historicalHeading&&continuity!=="CONT-AR")return false;
   if(animeHeading&&continuity!=="CONT-ANIME")return false;
