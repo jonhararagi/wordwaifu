@@ -5,9 +5,8 @@ type: character
 status: pending_primary_text_check
 continuity_scope: CONT-AR
 source_refs:
-  - DMR-014-SRC-003
-claim_refs:
-  - DMR-013-CLM-013
+  - DMR-029-SRC-013
+claim_refs: []
 verification_status: discovery_lead_only
 aliases:
   - "Thanatos"
