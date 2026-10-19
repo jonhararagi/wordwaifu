@@ -991,3 +991,94 @@ verification_status: stub
 - rights_note: Paráfrasis propia breve.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
+
+
+---
+
+## DMR-028-SRC-007 · DanMachi Wiki — Celty Srowa
+
+- source_id: DMR-028-SRC-007
+- title: Celty Srowa
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record y novela principal
+- volume_or_edition: Artículo web; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Celty_Srowa
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: History, Personality y Abilities; origen, relación con Ryana y Ryuu, magia y percepción
+- claims_supported: [DMR-028-CLM-011, DMR-028-CLM-012, DMR-028-CLM-013, DMR-028-CLM-014]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
+- reliability_note: La wiki resume datos atribuidos a flashbacks y Astrea Record. No se han cotejado aquí los pasajes internos de la novela; las estadísticas y capacidades no se elevan a canon confirmado.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia; no copiar el artículo.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
+
+## DMR-028-SRC-008 · DanMachi Wiki en español — Iska Bra
+
+- source_id: DMR-028-SRC-008
+- title: Iska Bra
+- creator_or_publisher: Comunidad DanMachi Wiki en español
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record y novela principal
+- volume_or_edition: Artículo web; revisión variable
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Iska_Bra
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Historia y Personalidad; orfanato de la Calle Daidalos, motivación, moda y maquillaje
+- claims_supported: [DMR-028-CLM-015, DMR-028-CLM-016]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
+- reliability_note: La página enlaza resúmenes comunitarios y referencias externas; no equivale a cotejar el capítulo o relato original.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia; no copiar el artículo.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
+
+## DMR-028-SRC-009 · DanMachi Wiki — Minor Characters
+
+- source_id: DMR-028-SRC-009
+- title: Minor Characters
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; sección de antiguas integrantes de Astrea Familia
+- volume_or_edition: Artículo web; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Minor_Characters
+- accessed_at: 2026-10-19
+- locator_type: community_character_roster_and_summaries
+- locator: Entradas Asta Knox y Maryuu Reage; datos de afiliación, equipo, personalidad y magia
+- claims_supported: [DMR-028-CLM-017, DMR-028-CLM-018, DMR-028-CLM-019]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
+- reliability_note: Artículo agregador de contenido comunitario. Las filas históricas pueden omitir o mezclar estados; los niveles desconocidos o rangos no se deben consolidar por inferencia.
+- conflicting_sources: []
+- rights_note: Resumen original breve.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
+
+## DMR-028-SRC-010 · DanMachi Wiki — Ryuu Lion
+
+- source_id: DMR-028-SRC-010
+- title: Ryuu Lion
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; novela principal y Astrea Record
+- volume_or_edition: Artículo web; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Ryuu_Lion
+- accessed_at: 2026-10-19
+- locator_type: community_character_and_magic_summary
+- locator: Magic; lista de magias atribuidas a antiguas compañeras de Ryuu
+- claims_supported: [DMR-028-CLM-012, DMR-028-CLM-018, DMR-028-CLM-019, DMR-028-CLM-020, DMR-028-CLM-021, DMR-028-CLM-022]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
+- reliability_note: Resumen comunitario de nombres y efectos; no establece por sí solo el pasaje original, reglas, costes, duración ni todos los límites de las habilidades.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia; no copiar la página.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked

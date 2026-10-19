@@ -15,6 +15,11 @@ source_refs:
   - DMR-028-SRC-003
   - DMR-028-SRC-004
   - DMR-028-SRC-005
+  - DMR-028-SRC-006
+  - DMR-028-SRC-007
+  - DMR-028-SRC-008
+  - DMR-028-SRC-009
+  - DMR-028-SRC-010
 claim_refs:
   - DMR-012-CLM-001
   - DMR-012-CLM-002
@@ -27,6 +32,18 @@ claim_refs:
   - DMR-028-CLM-008
   - DMR-028-CLM-009
   - DMR-028-CLM-010
+  - DMR-028-CLM-011
+  - DMR-028-CLM-012
+  - DMR-028-CLM-013
+  - DMR-028-CLM-014
+  - DMR-028-CLM-015
+  - DMR-028-CLM-016
+  - DMR-028-CLM-017
+  - DMR-028-CLM-018
+  - DMR-028-CLM-019
+  - DMR-028-CLM-020
+  - DMR-028-CLM-021
+  - DMR-028-CLM-022
 tags: [Familia Astrea, Astrea, Ryu Lion, Alise Lovelace, Astrea Record, Era Oscura]
 ---
 
@@ -144,3 +161,12 @@ Las wikis comunitarias ofrecen más detalles que las sinopsis oficiales, por lo 
 - **Nueva generación:** la wiki atribuye a Cecil Blackliza la capitanía de una nueva Familia en Solingen. La sinopsis editorial confirma una Ciudad Forjadora de Espadas al este y nuevas seguidoras de Astrea, pero no confirma por sí sola el nombre del lugar ni el cargo de Cecil.
 
 **Pendientes concretos de verificación primaria:** pasaje de la emboscada y aparición del Juggernaut; debates de Kaguya y Ryu; historia y kit de Lyra; edad/nivel de Alise; cronología relativa exacta y roster/capitanía de la nueva generación. Todo lo anterior permanece en estado secundario o provisional.
+
+
+### Ampliación de pistas sobre integrantes históricas
+
+La ampliación DMR-028 añade afirmaciones secundarias separadas para Celty, Iska, Maryuu, Asta, Neze, Noin y Ryana. Recupera datos de trasfondo, motivación, magia y equipo que las fichas oficiales breves no detallan. En particular, la wiki describe la relación de Celty con Ryana y su respeto por Ryuu; atribuye a Iska la motivación de sostener el orfanato y una identidad ligada a la moda; registra Rea Vindemia y una maza para Maryuu; y resume capacidades mágicas de Asta, Neze, Noin y Ryana.
+
+Estas adiciones permiten búsquedas y relaciones trazables, pero no cambian el estado general parcial de la Familia. Cada dato mantiene su URL, localizador comunitario, continuidad declarada y estado secondary_checked; no se interpretan los rangos de nivel ambiguos como estadísticas confirmadas.
+
+**Pendiente:** localizar en los textos originales los pasajes que sustentan cada biografía o capacidad y comprobar qué detalles pertenecen a la novela principal, Astrea Record o al anime.

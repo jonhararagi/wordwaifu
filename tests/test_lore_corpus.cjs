@@ -67,6 +67,19 @@ const kaguyaJusticeSearch = corpus.search(index, { query: "Kaguya Ryu justicia s
 assert.ok(kaguyaJusticeSearch.results.some(item => item.claimId === "DMR-028-CLM-003" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Gojouno_Kaguya"))), "Lore search must return the wiki-derived Kaguya/Ryu dynamic with secondary status and source URL.");
 const lyraAbilitiesSearch = corpus.search(index, { query: "Lyra magia mina bombas", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(lyraAbilitiesSearch.results.some(item => item.claimId === "DMR-028-CLM-005" && item.verificationStatus === "secondary_checked"), "Lore search must retrieve wiki-lead details for Lyra while preserving source status.");
+const celtyMagicSearch = corpus.search(index, { query: "Celty magia defensiva fuego inteligencia", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(celtyMagicSearch.results.some(item => item.claimId === "DMR-028-CLM-012" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Celty_Srowa"))), "Celty's wiki-derived magic must be searchable with provenance and secondary status.");
+const iskaOriginSearch = corpus.search(index, { query: "Iska orfanato Daidalos", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(iskaOriginSearch.results.some(item => item.claimId === "DMR-028-CLM-015" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Iska_Bra"))), "Iska's wiki-derived background must be searchable without promotion to canon.");
+const maryuuMagicSearch = corpus.search(index, { query: "Maryuu curación Rea Vindemia maza", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(maryuuMagicSearch.results.some(item => item.claimId === "DMR-028-CLM-018" && item.verificationStatus === "secondary_checked"), "Maryuu's healing magic and equipment leads must be retrievable as secondary.");
+const astaDefenseSearch = corpus.search(index, { query: "Asta escudo defensa magia", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(astaDefenseSearch.results.some(item => item.claimId === "DMR-028-CLM-019" && item.verificationStatus === "secondary_checked"), "Asta's community-reported defense and equipment must remain source-labelled.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-CELTY-RYANA-WIKI-SECONDARY" && edge.from === "CHAR-CELTY-SROWA" && edge.to === "CHAR-RYANA-LIETZ" && edge.continuity === "CONT-AR" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-013"), "Celty-Ryana's wiki-reported relationship must be navigable with the claim explaining it.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-CELTY-RYUU-WIKI-SECONDARY" && edge.from === "CHAR-CELTY-SROWA" && edge.to === "CHAR-RYUU-LION" && edge.continuity === "CONT-AR" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-014"), "Celty's reported respect for Ryuu must be a distinct, evidence-labelled relationship.");
+const expandedSourceDirectory = corpus.getOnlineSourceDirectory();
+assert.ok(expandedSourceDirectory.some(source => source.id === "community-celty-srowa" && source.url === "https://danmachi.fandom.com/wiki/Celty_Srowa" && source.limits.includes("secundarias")), "Celty's community source must be available in the online source directory.");
+assert.ok(expandedSourceDirectory.some(source => source.id === "community-iska-bra-es" && source.url === "https://danmachi.fandom.com/es/wiki/Iska_Bra"), "Iska's Spanish wiki source must be accessible from the source directory.");
 const sourceDirectory = corpus.getOnlineSourceDirectory();
 assert.ok(sourceDirectory.some(source => source.id === "community-kaguya" && source.url === "https://danmachi.fandom.com/wiki/Gojouno_Kaguya" && source.limits.includes("secundarios")), "The source browser must expose Kaguya's wiki page with secondary-source limits.");
 
@@ -131,8 +144,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 126, "Three DMR-026 claims and ten DMR-028 wiki claims must be included in the source count.");
-assert.equal(index.entryCount, 129, "Three DMR-026 claims and ten DMR-028 wiki claims add thirteen retrievable entries without altering existing continuity splits.");
+assert.equal(index.sourceClaimCount, 138, "Three DMR-026 claims, ten original DMR-028 claims, and twelve new DMR-028 claims must be included in the source count.");
+assert.equal(index.entryCount, 141, "The twelve new DMR-028 claims add twelve retrievable entries without altering existing continuity splits.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
