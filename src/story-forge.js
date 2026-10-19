@@ -734,7 +734,31 @@
     };
   }
 
-  const api = { generateOutline, auditOutline, generateConcept, generateCharacter, phases: phases.map(phase => ({ key: phase.key, start: phase.start, end: phase.end })) };
+
+  function summarizePhases(chapters) {
+    if (!Array.isArray(chapters) || !chapters.length) return [];
+    const known = new Set(phases.map(phase => phase.key).concat(shortStoryPhase.key));
+    const groups = [];
+    chapters.forEach((chapter, index) => {
+      const title = clean(chapter && chapter.title);
+      const prefix = title.split(" — ", 1)[0].trim();
+      const key = known.has(prefix) ? prefix : "Capítulos personalizados";
+      let group = groups[groups.length - 1];
+      if (!group || group.key !== key) {
+        group = { key, start: index + 1, end: index + 1 };
+        groups.push(group);
+      } else {
+        group.end = index + 1;
+      }
+    });
+    return groups.map(group => ({
+      ...group,
+      count: group.end - group.start + 1,
+      range: group.start === group.end ? "Capítulo " + group.start : "Capítulos " + group.start + "–" + group.end
+    }));
+  }
+
+  const api = { generateOutline, auditOutline, generateConcept, generateCharacter, summarizePhases, phases: phases.map(phase => ({ key: phase.key, start: phase.start, end: phase.end })) };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   root.WordWaifuStoryForge = api;
 })(typeof window !== "undefined" ? window : globalThis);
