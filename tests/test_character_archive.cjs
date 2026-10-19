@@ -68,6 +68,7 @@ assert.ok(ryu.relationships.some(r=>r.targetId==="CHAR-ALISE-LOVELACE")&&ryu.rel
 const kaguyaAr=archive.getProfile(index,"CHAR-KAGUYA","CONT-AR","all");
 assert.ok(kaguyaAr,"Kaguya should resolve to an indexed character profile.");
 assert.ok(kaguyaAr.relationships.some(r=>r.targetId==="CHAR-RYUU-LION"&&r.direction==="incoming"),"Ryu → Kaguya must be navigable backwards from Kaguya to Ryu.");
+assert.ok(kaguyaAr.relationships.some(r=>r.targetId==="CHAR-RYUU-LION"&&r.direction==="incoming"&&r.claims.some(c=>c.claimId==="DMR-028-CLM-003")),"Kaguya archive must expose the wiki-derived moral-disagreement claim on the existing incoming Ryu relationship.");
 assert.equal(new Set(kaguyaAr.relationships.map(r=>r.targetId)).size,kaguyaAr.relationships.length,"Bidirectional traversal must not duplicate a destination already linked directly.");
 assert.ok(kaguyaAr.relationships.every(r=>r.claims.length>0),"Every visible relationship must retain evidence in the selected continuity.");
 assert.ok(!ryu.claims.some(c=>c.entryId.endsWith("--CONT-ANIME")));
