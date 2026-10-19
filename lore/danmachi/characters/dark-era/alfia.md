@@ -38,8 +38,8 @@ Las fuentes secundarias enumeran magia poderosa y de anulación, además de una 
 
 ## Relaciones
 
-- **[Hera Familia](../../familias/hera-familia.md) / [Hera](../hera.md):** afiliación histórica que las referencias comunitarias asocian con Alfia; rango, nivel y periodo concretos siguen pendientes de localizador primario.
-- **[Meteria](meteria.md):** las referencias secundarias la presentan como hermana gemela de Alfia. El parentesco requiere cotejo directo con la novela.
+- **[Hera Familia](../../familias/hera-familia.md) / Hera:** afiliación histórica que las referencias comunitarias asocian con Alfia; rango, nivel y periodo concretos siguen pendientes de localizador primario.
+- **Meteria (ficha independiente pendiente; su ID sigue reservado para evitar duplicados):** las referencias secundarias la presentan como hermana gemela de Alfia. El parentesco requiere cotejo directo con la novela.
 Meteria es descrita por las referencias secundarias como su hermana gemela. Las referencias posteriores también relacionan a Alfia con Bell, pero no hace falta adelantar ese vínculo en toda escena histórica. El perfil canon debe permanecer separado de cualquier AU.
 
 ## Conflicto narrativo
