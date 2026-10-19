@@ -98,13 +98,59 @@ function testInvalidChapterCountsAreRejected() {
   }
 }
 
+
+function testConceptGenerationIsRepeatableForASeedAndVariesAcrossSeeds() {
+  const first = forge.generateConcept({ worldType: "fantasy-adventure", seed: 42 });
+  const repeated = forge.generateConcept({ worldType: "fantasy-adventure", seed: 42 });
+  const next = forge.generateConcept({ worldType: "fantasy-adventure", seed: 43 });
+  assert.deepEqual(repeated, first);
+  assert.notEqual(next.premise, first.premise, "A different seed should offer a different premise.");
+  for (const key of ["premise", "conflict", "worldRules", "worldDynamics", "protagonistProfile", "personalityDesign", "companionProfiles", "antagonistProfile", "traumaArc", "romanceArc", "powerRules", "revealSecret", "revealClues", "revealConsequences"]) {
+    assert.ok(typeof first[key] === "string" && first[key].trim(), "Generated concept field must be non-empty: " + key);
+  }
+  assert.ok(Array.isArray(first.arcs) && first.arcs.length >= 2);
+}
+
+function testConceptGenerationRespectsTheSelectedWorldFamily() {
+  const technology = forge.generateConcept({ worldType: "cyberpunk-dystopia", seed: 7 });
+  const supernatural = forge.generateConcept({ worldType: "urban-supernatural", seed: 7 });
+  const comedy = forge.generateConcept({ worldType: "isolated-island-comedy", seed: 7 });
+  assert.equal(technology.worldType, "cyberpunk-dystopia");
+  assert.match(technology.label, /Distopía|tecnología/i);
+  assert.equal(supernatural.worldType, "urban-supernatural");
+  assert.match(supernatural.label, /sobrenatural/i);
+  assert.equal(comedy.worldType, "isolated-island-comedy");
+  assert.match(comedy.label, /Comedia/i);
+  assert.notEqual(technology.premise, supernatural.premise);
+  assert.notEqual(supernatural.premise, comedy.premise);
+}
+
+function testCharacterGenerationCoversRolePersonalityPowerCostAndSeed() {
+  const character = forge.generateCharacter({ role: "antagonist", worldType: "urban-supernatural", seed: 19 });
+  const repeat = forge.generateCharacter({ role: "antagonist", worldType: "urban-supernatural", seed: 19 });
+  const other = forge.generateCharacter({ role: "antagonist", worldType: "urban-supernatural", seed: 20 });
+  assert.deepEqual(repeat, character);
+  assert.equal(character.role, "antagonist");
+  assert.equal(character.label, "Antagonista");
+  assert.ok(character.name && character.age && character.species);
+  assert.ok(character.desire && character.fear && character.virtue && character.flaw);
+  assert.ok(character.appearance && character.voice && character.secret && character.signatureItem);
+  assert.ok(character.ability && character.limitation && character.arc && character.narrativeFunction);
+  assert.ok(character.summary.includes("Límite/coste:"));
+  assert.notEqual(other.personality, character.personality);
+  assert.equal(forge.generateCharacter({ role: "companion", worldType: "fantasy-adventure", seed: 1, name: "Nombre fijado" }).name, "Nombre fijado");
+}
+
 const tests = [
   testGeneratesRequestedChapterCountAndStableUniqueIds,
   testSummariesUseStorySpecificDetailsAndDramaticCausality,
   testEndingModesChangeTheFinalChapterGuidance,
   testRegenerationPreservesExistingManuscriptIdentityAndStatus,
   testAuditFindsMissingFieldsCountAndDuplicateIds,
-  testInvalidChapterCountsAreRejected
+  testInvalidChapterCountsAreRejected,
+  testConceptGenerationIsRepeatableForASeedAndVariesAcrossSeeds,
+  testConceptGenerationRespectsTheSelectedWorldFamily,
+  testCharacterGenerationCoversRolePersonalityPowerCostAndSeed
 ];
 for (const test of tests) {
   test();

@@ -202,6 +202,40 @@ async function run() {
       "Stories view must expose its create action after navigation: " + JSON.stringify(storyViewState));
     await page.locator("#story-create-button").click();
     await page.locator("#story-meta-form").waitFor();
+    // Story concept and character generators must be wired to the current editor and persist non-destructive suggestions.
+    await page.locator("#story-meta-form [name='storyWorldType']").selectOption("cyberpunk-dystopia");
+    await page.locator("#story-generate-concept-button").click();
+    await page.waitForFunction(() =>
+      (document.querySelector("#story-concept-status")?.textContent || "").includes("Concepto generado y guardado") &&
+      (document.querySelector("#story-meta-form [name='storyPremise']")?.value || "").length > 40,
+      { timeout: 10000 });
+    const generatedPremise = await page.locator("#story-meta-form [name='storyPremise']").inputValue();
+    assert.ok(generatedPremise.length > 40, "Concept generator must fill a substantive premise.");
+    assert.ok((await page.locator("#story-meta-form [name='storyWorldRules']").inputValue()).length > 30, "Concept generator must populate world rules.");
+    assert.ok((await page.locator("#story-meta-form [name='storyRevealSecret']").inputValue()).length > 20, "Concept generator must populate a mystery/reveal seed.");
+    await page.locator("#story-character-role").selectOption("antagonist");
+    const castBeforeGenerator = await page.locator("#story-meta-form [name='storyCastPlan']").inputValue();
+    await page.locator("#story-generate-character-button").click();
+    await page.waitForFunction(() => (document.querySelector("#story-character-generator-status")?.textContent || "").includes("Personaje añadido y guardado"), { timeout: 10000 });
+    const castAfterGenerator = await page.locator("#story-meta-form [name='storyCastPlan']").inputValue();
+    const personalityAfterGenerator = await page.locator("#story-meta-form [name='storyPersonalityPlan']").inputValue();
+    assert.ok(castAfterGenerator.length > castBeforeGenerator.length, "Character generator must append to the existing cast text.");
+    assert.ok(castAfterGenerator.includes("Antagonista"), "Selected character role must be reflected in the generated cast entry.");
+    assert.ok(personalityAfterGenerator.includes("Límite/coste:"), "Character generation must include a capacity limitation or cost.");
+    assert.equal(await page.locator("#story-meta-form [name='storyPremise']").inputValue(), generatedPremise, "Adding a character must not overwrite the generated premise.");
+    // Clear only temporary test content so the existing persistence/import scenario keeps its established assertions.
+    await page.evaluate(() => {
+      const form = document.querySelector("#story-meta-form");
+      ["storyDescription","storyPremise","storyConflict","storyCastPlan","storyPersonalityPlan","storyAntagonistPlan","storyRomancePlan","storyTraumaPlan","storyWorldRules","storyWorldDynamics","storyRevealSecret","storyRevealClues","storyRevealTiming","storyRevealConsequences","storyPowerCatalog","storyPantheon","storyEnsemble","storyArcs"].forEach(name => {
+        const field = form?.elements.namedItem(name);
+        if (field) field.value = "";
+      });
+      const reveal = form?.elements.namedItem("storyRevealType");
+      if (reveal) reveal.value = "none";
+      const world = form?.elements.namedItem("storyWorldType");
+      if (world) world.value = "unspecified";
+    });
+    process.stdout.write("PASS story generators: UI creates and saves a concept, appends a role-specific character, and preserves the concept when adding the character.\n");
     await page.locator("#story-meta-form [name='storyName']").fill("Historia de prueba");
     await page.locator("#story-meta-form [name='storyDescription']").fill("Sinopsis de prueba para comprobar el guardado.");
     await page.locator("#story-meta-form [name='storyPremise']").fill("Una premisa editable.");
