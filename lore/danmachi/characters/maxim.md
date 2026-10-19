@@ -9,7 +9,6 @@ source_refs:
   - DMR-021-SRC-005
 claim_refs:
   - DMR-021-CLM-003
-  - DMR-021-CLM-006
 spoiler_level: major
 aliases:
   - "マキシム"
