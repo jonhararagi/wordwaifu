@@ -353,3 +353,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] No completar la cronología exacta ni la pertenencia de las nuevas seguidoras solo a partir de sinopsis.
 - Fuentes: https://danmachi.com/danmachi4/story/index.php?slideNum=1 ; https://ga.sbcr.jp/product/9784815623692/
 - Límite: el registro es de evidencia mixta; los datos secundarios siguen etiquetados como secundarios o pendientes.
+
+
+## DANMACHI-RESEARCH-028 · Seguimiento a pistas recuperadas de wiki (2026-10-19)
+
+- [x] Integrar en el corpus las páginas comunitarias de Astrea Familia, Kaguya, Lyra, Alise, Ryuu y Timeline con tipo y URL de fuente.
+- [x] Añadir diez afirmaciones secundarias consultables y conservar los estados `secondary_checked` / `provisional` por separado de la evidencia oficial.
+- [x] Añadir las relaciones secundarias de Kaguya–Ryu, Lyra–Astrea Familia y la función pública histórica.
+- [ ] Abrir las referencias enlazadas desde las páginas de wiki y localizar volumen/capítulo/página para cada afirmación sobre Kaguya, Lyra, Alise, la aparición del Juggernaut y la nueva generación.
+- [ ] Resolver de forma explícita cualquier discrepancia entre páginas comunitarias antes de cambiar el estatus de una claim.
+- [ ] Después de localizar pasajes primarios, actualizar solo las claims afectadas y sus aristas; no ascender automáticamente toda la ficha o la cronología.
