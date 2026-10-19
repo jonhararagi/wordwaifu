@@ -276,3 +276,11 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se enriquecieron siete fichas existentes y se añadieron dos aristas explícitas de Celty con Ryana y Ryuu, ambas con continuidad CONT-AR, claim de apoyo y estado secondary_checked.
 - Se incorporaron las fuentes al directorio del buscador y regresiones para retrieval, URLs, estado de evidencia y navegación relacional.
 - **Límite:** las wikis sí dan más detalles que las fichas promocionales breves, pero siguen siendo fuentes secundarias. No se aprobaron niveles, costes, escenas ni capacidades como canon primario; siguen pendientes sus localizadores en el texto original.
+
+## INTEGRATION-BATCH-001 · Cronología tipada y panel histórico en la enciclopedia (2026-10-19)
+- Se recuperó el módulo de timeline, su dataset versionado, validador y pruebas desde la rama de investigación; se mantiene el modelo explícito de tiempos relativos y se prohíben fechas absolutas inventadas.
+- Se incorporaron 8 fichas de evento, 7 fichas individuales y la ficha única de Juggernaut, más 16 registros en el catálogo existente. No se modificaron ni eliminaron los registros de main para hacerles sitio.
+- Se montó el panel dentro de la enciclopedia DanMachi con árbol de eras, lista de sucesos, filtro de continuidad, búsqueda y esquema relacional sin coordenadas geográficas falsas.
+- Se añadieron pruebas para comprobar el montaje HTML, la carga del módulo y la presencia de los estilos, además de sumar validación temporal al workflow de integridad.
+- Estado de evidencia preservado: T−7/T−5 se mantienen aproximados, T0 es ancla relativa, y los claims con cotejo primario pendiente conservan su estado provisional.
+- El lote se debe fusionar únicamente tras Validate WordWaifu, DanMachi Lore and Retrieval Integrity, test_danmachi_timeline.cjs y check-timeline.mjs en verde.
