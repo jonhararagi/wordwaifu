@@ -37,3 +37,12 @@ El changelog de GitHub del 2 de octubre de 2026 informó un cambio en el formato
 ## Estado de esta revisión
 
 Se documentan las lecciones y se aplican a la integración de cobertura factual. No se afirma que Cloudflare o GitHub documenten un defecto específico de WordWaifu; son fuentes externas usadas para orientar prácticas de robustez.
+
+## 5. Orden de carga del motor de historias en el navegador
+
+- Síntoma/observación: el editor de historias consume `window.WordWaifuStoryForge`; el contrato de carga depende de que el motor se evalúe antes que `app.js`. Durante esta revisión, los controles de concepto y personaje no existían en el editor principal, aunque el proyecto sí tenía un motor de outline.
+- Verificación local: `index.html` carga `src/story-forge.js` antes de `src/app.js`; ambos son scripts clásicos con `defer`. Los handlers nuevos verifican que los métodos del motor existan y muestran un estado visible si falta el motor.
+- Fuente externa: [MDN — The script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script) explica que los scripts clásicos con `defer` se ejecutan en orden documental y que `async` elimina esa garantía de orden.
+- Aplicación: conservar el orden de dependencias; no añadir `async` ni mover `app.js` antes de `story-forge.js`. La prueba de navegador pulsa los botones nuevos y comprueba generación y guardado; los tests unitarios comprueban determinismo por semilla y campos del generador.
+- Límite: MDN documenta la semántica de carga del navegador, no un incidente específico de WordWaifu. La ausencia de los botones era una carencia de integración propia del proyecto, no un fallo atribuido a MDN.
+
