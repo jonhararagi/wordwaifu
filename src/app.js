@@ -1378,7 +1378,8 @@
       });
       const saved = await saveProject();
       renderDirectory();
-      if (status) status.textContent = (saved ? "Concepto generado y guardado · " : "Concepto generado en pantalla, pero no se confirmó el guardado · ") + concept.label + ". Revisá la propuesta y editá todo lo que no encaje con tu historia.";
+      const nextStatus = $("#story-concept-status", container);
+      if (nextStatus) nextStatus.textContent = (saved ? "Concepto generado y guardado · " : "Concepto generado en pantalla, pero no se confirmó el guardado · ") + concept.label + ". Revisá la propuesta y editá todo lo que no encaje con tu historia.";
     });
     const generateCharacterButton = $("#story-generate-character-button", container);
     if (generateCharacterButton && metaForm) generateCharacterButton.addEventListener("click", async () => {
@@ -1407,7 +1408,8 @@
       story.personalityPlan = personalityField ? personalityField.value : String(story.personalityPlan || "");
       const saved = await saveProject();
       renderDirectory();
-      if (status) status.textContent = (saved ? "Personaje añadido y guardado · " : "Personaje añadido en pantalla, pero no se confirmó el guardado · ") + character.name + ". El texto previo del elenco se conservó.";
+      const nextStatus = $("#story-character-generator-status", container);
+      if (nextStatus) nextStatus.textContent = (saved ? "Personaje añadido y guardado · " : "Personaje añadido en pantalla, pero no se confirmó el guardado · ") + character.name + ". El texto previo del elenco se conservó.";
     });
     const generateOutlineButton = $("#story-generate-outline-button", container);
     if (generateOutlineButton && metaForm) generateOutlineButton.addEventListener("click", async () => {
