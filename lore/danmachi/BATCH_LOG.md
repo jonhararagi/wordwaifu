@@ -269,3 +269,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se añadió el documento al catálogo y al cargador del buscador, y se añadieron tres aristas secundarias: desacuerdo moral Kaguya–Ryu, pertenencia reportada de Lyra y función histórica de Astrea Familia en Orario.
 - Se añadieron regresiones para recuperación de datos de Kaguya y Lyra, estado secundario, URL de fuente y navegación de relaciones. La ejecución de CI queda pendiente de comprobar después de abrir la Pull Request.
 - **Resultado factual deliberado:** ninguna de estas diez afirmaciones se eleva a canon confirmado. Prioridad de verificación: pasaje primario de la caída/Juggernaut, escena del desacuerdo Kaguya–Ryu, historia y capacidades de Lyra, estadísticas de Alise y datos de la nueva generación.
+
+## DANMACHI-RESEARCH-028 · Ampliación de fichas de Astrea Familia desde wikis (2026-10-19)
+- Se añadieron los claims DMR-028-CLM-011 a DMR-028-CLM-022 sobre Celty, Iska, Maryuu, Asta, Neze, Noin y Ryana.
+- Se registraron cuatro fuentes comunitarias con URL y localizadores concretos: fichas de Celty e Iska, la página agregadora Minor Characters y el resumen de Ryuu para nombres/efectos de magias.
+- Se enriquecieron siete fichas existentes y se añadieron dos aristas explícitas de Celty con Ryana y Ryuu, ambas con continuidad CONT-AR, claim de apoyo y estado secondary_checked.
+- Se incorporaron las fuentes al directorio del buscador y regresiones para retrieval, URLs, estado de evidencia y navegación relacional.
+- **Límite:** las wikis sí dan más detalles que las fichas promocionales breves, pero siguen siendo fuentes secundarias. No se aprobaron niveles, costes, escenas ni capacidades como canon primario; siguen pendientes sus localizadores en el texto original.
