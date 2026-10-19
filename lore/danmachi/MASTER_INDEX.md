@@ -193,3 +193,9 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [DANMACHI-RESEARCH-025 · red relacional de Soma](research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md) — nueve relaciones trazables; separa la captura citada por sinopsis editorial, los cargos secundarios y el informe no resuelto sobre Canoe.
 - Nota de rigor: la sinopsis editorial de los volúmenes 2 y 6 no equivale al texto completo. Las relaciones secundarias permanecen marcadas hasta localizar pasajes primarios.
 - [DANMACHI-RESEARCH-029 · Procedencia de personajes históricos](research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md) — corrige los claim_refs ajenos de Alfia, Zald, Erebus, Jura y Rudra; Thanatos y Valletta siguen como pistas secundarias sin claim narrativo aceptado.
+
+## Nodos Zeus/Hera enriquecidos desde wikis
+- [Zeus](characters/zeus.md) y [Hera](characters/hera.md) — fichas de deidades separadas de las capitanías mortales reportadas por las wikis.
+- [Meteria](characters/dark-era/meteria.md) — filiación y afiliación reportadas por wikis; la caracterización de la nota del autor permanece separada como CONT-AU.
+- [Alfia](characters/dark-era/alfia.md) y [Zald](characters/dark-era/zald.md) — habilidades, magias, costes y límites recuperados de fuentes comunitarias; localizadores primarios pendientes.
+- [DANMACHI-RESEARCH-021](research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md) y [DANMACHI-RESEARCH-029](research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md) — claims con fuentes secundarias etiquetadas y continuidad separada.
