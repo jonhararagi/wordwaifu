@@ -19,7 +19,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
   "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
   "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-  "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md"
+  "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+  "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const profilePaths = [
@@ -58,6 +59,16 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-EVENT-DEPARTURE-
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-EVENT-RETURN-PUBLISHER" && edge.to === "EVT-DM-ASTREA-DEPARTURE-001" && edge.continuity === "CONT-MAIN-LN" && edge.evidenceStatus === "source_checked" && edge.claimRef === "DMR-010-CLM-005"), "The later Ryu visit must be linked only to the publisher synopsis claim.");
 const astreaDepartureSearch = corpus.search(index, { query: "Ryu Astrea Orario venganza", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaDepartureSearch.results.some(item => item.claimId === "DMR-010-CLM-002" && item.verificationStatus === "pending_verification"), "Search must return the disputed departure claim without losing its pending status.");
+
+assert.ok(catalog.documents.some(document => document.document_id === "RESEARCH-DM-028" && document.path === "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md" && document.status === "secondary_checked_with_primary_gaps"), "The new Astrea wiki research dossier must be registered with its evidence limits.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-KAGUYA-DISPUTES-RYU-WIKI" && edge.from === "CHAR-KAGUYA" && edge.to === "CHAR-RYUU-LION" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-003"), "Kaguya's reported justice disagreement with Ryu must be navigable and marked secondary.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-LYRA-MEMBER-ASTREA-WIKI" && edge.from === "CHAR-LYRA" && edge.to === "DM-FAM-ASTREA" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-004"), "Lyra's reported membership must have a secondary-evidence relationship.");
+const kaguyaJusticeSearch = corpus.search(index, { query: "Kaguya Ryu justicia salvar mayoría", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(kaguyaJusticeSearch.results.some(item => item.claimId === "DMR-028-CLM-003" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Gojouno_Kaguya"))), "Lore search must return the wiki-derived Kaguya/Ryu dynamic with secondary status and source URL.");
+const lyraAbilitiesSearch = corpus.search(index, { query: "Lyra magia mina bombas", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(lyraAbilitiesSearch.results.some(item => item.claimId === "DMR-028-CLM-005" && item.verificationStatus === "secondary_checked"), "Lore search must retrieve wiki-lead details for Lyra while preserving source status.");
+const sourceDirectory = corpus.getOnlineSourceDirectory();
+assert.ok(sourceDirectory.some(source => source.id === "community-kaguya" && source.url === "https://danmachi.fandom.com/wiki/Gojouno_Kaguya" && source.limits.includes("secundarios")), "The source browser must expose Kaguya's wiki page with secondary-source limits.");
 
 assert.ok(index.relationships.some(edge => edge.id === "REL-RAUL-FINN-DELEGATED-COMMAND" && edge.claimRef === "DMR-005-CLM-008"), "Raul's delegated coordination role must link to the official claim.");
 assert.deepEqual(corpus.searchEntities(catalog, { type: "character", query: "Raul Nord" }).results.map(entity => entity.id), ["CHAR-RAUL-NOORD"], "Raul must be individually discoverable.");
