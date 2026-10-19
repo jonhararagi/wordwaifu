@@ -257,7 +257,71 @@
     return (await readAll()).sort((a, b) => String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")));
   }
 
-  root.WordWaifuArtStudio = Object.freeze({ getAsset, listAssignments, makeKey });
+  function validReferenceUrl(value, optional) {
+    const input = String(value || "").trim();
+    if (!input) return optional ? "" : null;
+    try { const url = new URL(input); if (url.protocol !== "https:" || url.username || url.password) return null; return url.href; }
+    catch (_) { return null; }
+  }
+  async function saveVisualReference(reference) {
+    if (!reference || typeof reference !== "object") throw new Error("Faltan metadatos de referencia visual.");
+    const id = String(reference.id || "").trim(), title = String(reference.title || "").trim(), usageStatus = String(reference.usageStatus || "");
+    const allowedStatuses = new Set(["user_owned","licensed","permission_recorded","pending_review","blocked"]);
+    if (!/^USER-VIS-[A-Z0-9-]{6,96}$/.test(id)) throw new Error("El ID de referencia local no es válido.");
+    if (!title || title.length > 180) throw new Error("El título es obligatorio y no puede superar 180 caracteres.");
+    if (!allowedStatuses.has(usageStatus)) throw new Error("El estado de derechos no es válido.");
+    if (!String(reference.creatorOrRightsholder || "").trim()) throw new Error("Declarà autor/titular o escribí ‘unknown’ si no lo conocés.");
+    const sourcePageUrl = validReferenceUrl(reference.sourcePageUrl, true), licenseUrl = validReferenceUrl(reference.licenseUrl, true);
+    if (sourcePageUrl === null) throw new Error("La fuente debe ser HTTPS y no puede incluir credenciales.");
+    if (licenseUrl === null) throw new Error("El enlace de licencia debe ser HTTPS y no puede incluir credenciales.");
+    if (usageStatus === "licensed" && !String(reference.licenseName || "").trim()) throw new Error("Indicá el nombre de la licencia antes de marcar el recurso como licenciado.");
+    if (usageStatus === "permission_recorded" && !String(reference.permissionEvidence || "").trim()) throw new Error("Indicá la evidencia del permiso registrado.");
+    const fileDataUrl = String(reference.fileDataUrl || "");
+    if (!/^data:image\/(png|jpeg|webp|gif|avif);base64,/i.test(fileDataUrl)) throw new Error("Solo se admiten imágenes raster locales; no se guardó el recurso.");
+    if (fileDataUrl.length > 7200000) throw new Error("La imagen supera el límite admitido para persistencia local.");
+    const mayModify = ["user_owned","licensed","permission_recorded"].includes(usageStatus);
+    const allowModifyExport = mayModify && reference.allowModifyExport === true;
+    const metadata = {
+      id, title, caption:String(reference.caption || "").slice(0,500), mediaType:"image", sourcePageUrl,
+      creatorOrRightsholder:String(reference.creatorOrRightsholder).trim().slice(0,180),
+      sourceKind:String(reference.sourceKind || "user_provided"), usageStatus,
+      licenseName:String(reference.licenseName || "").trim().slice(0,180) || null, licenseUrl:licenseUrl || null,
+      permissionEvidence:String(reference.permissionEvidence || "").trim().slice(0,1000) || null,
+      continuityScope:String(reference.continuityScope || "CONT-MAIN-LN"), spoilerLevel:String(reference.spoilerLevel || "minor"),
+      relatedEventIds:Array.isArray(reference.relatedEventIds) ? reference.relatedEventIds.filter(x => typeof x === "string").slice(0,10) : [],
+      relatedLocationIds:Array.isArray(reference.relatedLocationIds) ? reference.relatedLocationIds.filter(x => typeof x === "string").slice(0,5) : [],
+      creditLine:String(reference.creditLine || reference.creatorOrRightsholder || "Crédito declarado por quien incorpora el recurso.").slice(0,300),
+      storageMode:"browser_local", allowModifyExport,
+      watermarkPolicy:allowModifyExport ? "apply_to_authorized_copy" : "none",
+      notes:String(reference.notes || "").slice(0,500), addedAt:String(reference.addedAt || new Date().toISOString())
+    };
+    const key = makeKey("visual-reference", id);
+    const backend = await persist({key,category:"visual-reference",entityId:id,entityName:title,imageUrl:"",fileDataUrl,prompt:"",visualReference:metadata,updatedAt:new Date().toISOString()});
+    return {id,key,backend,storageMode:"browser_local"};
+  }
+  async function getVisualReference(id) {
+    const record = await readOne(makeKey("visual-reference", id));
+    if (!record || record.category !== "visual-reference" || !record.visualReference) return null;
+    return {...record.visualReference,fileDataUrl:record.fileDataUrl || "",updatedAt:record.updatedAt,key:record.key};
+  }
+  async function listVisualReferences() {
+    // Merge the committed stores with the existing session cache. A just-committed
+    // IndexedDB record can briefly be absent from a concurrent read transaction;
+    // this keeps the library view consistent with the successful persist() result.
+    const records = new Map((await readAll()).map(record => [record.key, record]));
+    for (const record of memoryCache.values()) {
+      if (record && record.key && record.category === "visual-reference" && record.visualReference &&
+          !isDeleted(record.key) && !records.has(record.key)) records.set(record.key, record);
+    }
+    return Array.from(records.values()).filter(record => record && record.category === "visual-reference" && record.visualReference)
+      .map(record => ({...record.visualReference,storageMode:"browser_local",fileDataUrl:record.fileDataUrl || "",updatedAt:record.updatedAt,key:record.key}))
+      .sort((a,b) => String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")));
+  }
+  async function removeVisualReference(id) {
+    await removeRecord(makeKey("visual-reference",id));
+    return true;
+  }
+  root.WordWaifuArtStudio = Object.freeze({ getAsset, listAssignments, makeKey, fileToDataUrl, saveVisualReference, getVisualReference, listVisualReferences, removeVisualReference });
 
   function $(selector) { return document.querySelector(selector); }
   function element(tag, className, text) {
