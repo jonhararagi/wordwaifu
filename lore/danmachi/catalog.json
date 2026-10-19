@@ -1289,6 +1289,47 @@
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-ZEUS",
+      "path": "characters/zeus.md",
+      "type": "deity_character",
+      "tags": [
+        "Zeus",
+        "deidad",
+        "Zeus Familia",
+        "historical context"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-HERA",
+      "path": "characters/hera.md",
+      "type": "deity_character",
+      "tags": [
+        "Hera",
+        "deidad",
+        "Hera Familia",
+        "historical roster"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-METERIA",
+      "path": "characters/dark-era/meteria.md",
+      "type": "character",
+      "tags": [
+        "Meteria",
+        "Hera Familia",
+        "Alfia",
+        "Bell Cranel",
+        "family ties",
+        "spoiler"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -1313,27 +1354,12 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "CHAR-ZEUS",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-HERA",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "CHAR-ALFIA",
       "type": "character",
       "status": "candidate_not_created"
     },
     {
       "id": "CHAR-ZARD",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-METERIA",
       "type": "character",
       "status": "candidate_not_created"
     },
@@ -2189,6 +2215,18 @@
       "path": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
       "type": "secondary_research_dossier",
       "status": "secondary_checked_with_primary_gaps"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-021",
+      "path": "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md",
+      "type": "research",
+      "status": "partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-029",
+      "path": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "type": "research",
+      "status": "partial"
     }
   ],
   "lastStructuredSync": "2026-10-18",
@@ -3501,6 +3539,132 @@
       "claimRef": "DMR-028-CLM-014",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
       "note": "Pista secundaria de cercanía y respeto; no se infiere romance, parentesco ni una escena específica."
+    },
+    {
+      "id": "REL-WIKI-ZEUS-DEITY-AR",
+      "from": "CHAR-ZEUS",
+      "to": "FAM-ZEUS",
+      "kind": "deity_of",
+      "label": "deidad patrona reportada de Zeus Familia",
+      "continuity": "CONT-AR",
+      "interval": "Historia de Zeus Familia; fechas exactas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-009",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "Vínculo para navegación basado en wiki; no verifica personalidad ni cronología de la deidad."
+    },
+    {
+      "id": "REL-WIKI-HERA-DEITY-AR",
+      "from": "CHAR-HERA",
+      "to": "FAM-HERA",
+      "kind": "deity_of",
+      "label": "deidad patrona reportada de Hera Familia",
+      "continuity": "CONT-AR",
+      "interval": "Historia de Hera Familia; fechas exactas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-010",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "No confundir a la diosa Hera con la capitana mortal nivel 9 reportada por la wiki."
+    },
+    {
+      "id": "REL-WIKI-ALFIA-HERA-MEMBER",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "FAM-HERA",
+      "kind": "member_of",
+      "label": "ejecutiva histórica reportada de Hera Familia",
+      "continuity": "CONT-AR",
+      "interval": "Periodo histórico de Astrea Record; fecha primaria pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "La wiki sitúa a Alfia en Hera Familia; rango y escena exacta aún requieren cotejo primario."
+    },
+    {
+      "id": "REL-WIKI-ZALD-ZEUS-MEMBER",
+      "from": "CHAR-DARK-ZALD",
+      "to": "FAM-ZEUS",
+      "kind": "member_of",
+      "label": "ejecutivo histórico reportado de Zeus Familia",
+      "continuity": "CONT-AR",
+      "interval": "Periodo histórico de Astrea Record; fecha primaria pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "El cargo y el nivel son instantáneas secundarias; no describen un valor permanente."
+    },
+    {
+      "id": "REL-WIKI-MAXIM-ZEUS-CAPTAIN",
+      "from": "CHAR-MAXIM",
+      "to": "FAM-ZEUS",
+      "kind": "captain_of",
+      "label": "capitán histórico reportado de Zeus Familia",
+      "continuity": "CONT-AR",
+      "interval": "Instantánea histórica asociada al roster de Zeus Familia; fecha exacta pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-013",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "El nivel 8 es una instantánea reportada por la wiki, no un nivel permanente confirmado."
+    },
+    {
+      "id": "REL-WIKI-METERIA-HERA-MEMBER",
+      "from": "CHAR-METERIA",
+      "to": "FAM-HERA",
+      "kind": "reported_member_of",
+      "label": "afiliación previa a Hera Familia reportada por fuentes comunitarias",
+      "continuity": "CONT-AR",
+      "interval": "Historia familiar previa al inicio de la serie; fecha exacta pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-011",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "Afiliación reportada en la wiki; el pasaje de novela aún necesita cotejo."
+    },
+    {
+      "id": "REL-WIKI-METERIA-ALFIA-SIBLING",
+      "from": "CHAR-METERIA",
+      "to": "CHAR-DARK-ALFIA",
+      "kind": "twin_sister_of",
+      "label": "hermana gemela reportada",
+      "continuity": "CONT-AR",
+      "interval": "Parentesco histórico; no fija escenas ni quién conoce el vínculo",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-011",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "Relación de spoiler mayor basada en fuentes secundarias; no implica que todo personaje conozca el parentesco."
+    },
+    {
+      "id": "REL-WIKI-METERIA-BELL-MOTHER",
+      "from": "CHAR-METERIA",
+      "to": "DM-CHAR-BELL",
+      "kind": "mother_of",
+      "label": "madre de Bell Cranel según la referencia comunitaria",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Nacimiento de Bell; cronología detallada pendiente de localizador",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-011",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "Spoiler mayor. No se identifica ni se infiere el padre de Bell."
+    },
+    {
+      "id": "REL-WIKI-ZEUS-RAISED-BELL",
+      "from": "CHAR-ZEUS",
+      "to": "DM-CHAR-BELL",
+      "kind": "raised_by",
+      "label": "cuidador / abuelo adoptivo reportado por la wiki",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Después del nacimiento de Bell; detalles y fechas exactas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_relationship",
+      "claimRef": "DMR-029-CLM-014",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "La arista conserva la relación como dato secundario y con spoiler mayor; el texto primario no se ha cotejado en esta tanda."
     }
   ]
 }
