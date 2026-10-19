@@ -289,3 +289,11 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se importó la investigación de Zeus/Hera y se registraron sus seis fuentes comunitarias como bloque separado.
 - Se creó DMR-029 con cinco claims secundarios y 14 fuentes; los datos de Thanatos y Valletta continúan como leads sin afirmar su aparición en la novela revisada.
 - Se respetó el ID reservado CHAR-METERIA: no se creó una segunda ficha y la relación Alfia–Meteria permanece enlazada a la investigación secundaria.
+
+## INTEGRATION-BATCH-002 · Cobertura factual de wikis para Zeus/Hera y Era Oscura (2026-10-19)
+- Se amplió Alfia con habilidades y coste físico reportados por wikis inglesa/española, y Zald con Deus Ambrosia, veneno del Behemoth y combate final reportado; ambos expedientes conservan estado secundario pendiente de cotejo primario.
+- Se crearon fichas únicas para Zeus, Hera y Meteria a partir de IDs reservados y se retiraron solo esas tres reservas.
+- Se enriquecieron Zeus Familia y Hera Familia con pistas sobre la capitanía mortal de Hera, exploración, el piso 59 público frente al piso 71 reportado, y colaboración con el Gremio, sin promoverlos a canon primario.
+- Se añadieron DMR-029-CLM-006..014 y fuentes específicas para la wiki española de Meteria y la nota alternativa del autor.
+- Se añadieron nueve relaciones navegables con claimRef y estado secondary_checked; no se inventó nombre para la capitana de Hera ni para el padre de Bell.
+- Los eventos de Dragón Negro y caída de Zeus/Hera quedan enlazados a fuentes secundarias pero siguen pending_verification.
