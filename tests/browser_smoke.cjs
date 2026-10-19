@@ -215,7 +215,7 @@ async function run() {
         status: document.querySelector("#story-concept-status")?.textContent || null,
         premiseLength: (document.querySelector("#story-meta-form [name='storyPremise']")?.value || "").length,
         forgeAvailable: typeof window.WordWaifuStoryForge?.generateConcept === "function",
-        reviewPanelExists: Boolean(document.querySelector("#story-review-panel")),
+        reviewPanelExists: Boolean(document.querySelector(".story-review-panel")),
         metaFormExists: Boolean(document.querySelector("#story-meta-form")),
         consoleState: document.querySelector("#story-editor-status")?.textContent || null
       }));
