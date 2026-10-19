@@ -391,6 +391,24 @@ async function run() {
     await page.locator("#story-audit-outline-button").click();
     assert.ok((await page.locator("#story-outline-status").textContent()).includes("Auditoría"), "outline audit should report its result");
     process.stdout.write("PASS story outline planner: chapter count, six-phase structure, cast, antagonist, romance, trauma, ending type and audit.\\n");
+    // Local fanfiction review flags a possible characterization drift, preserves manuscript text, and remembers an intentional divergence.
+    const reviewScene = "Eina Tulle le dijo «Vete de una vez a la Dungeon, no hace falta que te quedes a registrarte».";
+    await page.locator(".story-chapter-form [name='chapterContent']").first().fill(reviewScene);
+    await page.locator(".story-chapter-form button[type='submit']").first().click();
+    await page.waitForFunction(() => document.querySelector("#story-editor-status")?.textContent.includes("Capítulo guardado en el proyecto local."), { timeout: 10000 });
+    await page.locator("#story-review-continuity").selectOption("CONT-MAIN-LN");
+    await page.locator("#story-review-button").click();
+    await page.waitForFunction(() => (document.querySelector("#story-review-results")?.textContent || "").includes("Posible desviación de caracterización"), { timeout: 10000 });
+    assert.ok((await page.locator("#story-review-results").innerText()).includes("Eina Tulle"), "the reviewer should attach its warning to the referenced character");
+    assert.equal(await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue(), reviewScene, "reviewing must not mutate manuscript text");
+    const intentionalButton = page.locator("#story-review-results [data-fanfic-review-exception]").first();
+    assert.equal(await intentionalButton.count(), 1, "a review-level warning should offer an intentional-divergence override");
+    await intentionalButton.click();
+    await page.waitForFunction(() => (document.querySelector("#story-review-status")?.textContent || "").includes("Divergencia intencional guardada."), { timeout: 10000 });
+    assert.ok(!(await page.locator("#story-review-results").innerText()).includes("Posible desviación de caracterización"), "a saved intentional divergence should be excluded on the next review");
+    assert.equal(await page.locator(".story-chapter-form [name='chapterContent']").first().inputValue(), reviewScene, "marking a warning intentional must still preserve the manuscript");
+    process.stdout.write("PASS fanfiction reviewer: reports a cautious character-drift hypothesis, preserves text, and saves an intentional-divergence exception.\\n");
+
     process.stdout.write("PASS story editor: metadata, chapters, persistence and full Markdown import.\\n");
     // Normal global search discovers an archive character outside the demo project and displays its local portrait.
     await page.locator('.nav-item[data-view="atlas"]').click();
