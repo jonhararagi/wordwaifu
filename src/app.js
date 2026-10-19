@@ -1835,7 +1835,7 @@
       await runFanficReview();
       if (fanficReviewStatus) fanficReviewStatus.textContent = (saved ? "Divergencia intencional guardada. " : "Divergencia marcada en la sesión, pero no se confirmó el guardado. Exportá el proyecto JSON. ") + fanficReviewStatus.textContent;
     });
-    $(".story-chapter-form", container).forEach((formNode) => formNode.addEventListener("submit", async (event) => {
+    $$(".story-chapter-form", container).forEach((formNode) => formNode.addEventListener("submit", async (event) => {
       event.preventDefault();
       const chapter = story.chapters.find((item) => item.id === formNode.dataset.chapterId);
       if (!chapter) return;
