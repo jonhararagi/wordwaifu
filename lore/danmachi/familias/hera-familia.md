@@ -6,34 +6,47 @@ status: source_checked_partial
 continuity_scope: CROSS-CONTINUITY
 source_refs:
   - DMR-011-SRC-005
+  - DMR-021-SRC-002
+  - DMR-021-SRC-004
 claim_refs:
   - DMR-008-CLM-027
-verification_status: source_checked
-tags: [Hera Familia, Behemoth, Leviathan, Tres Grandes Misiones, historia antigua]
+  - DMR-021-CLM-002
+  - DMR-021-CLM-006
+  - DMR-021-CLM-008
+  - DMR-029-CLM-008
+  - DMR-029-CLM-010
+verification_status: source_checked_partial
+tags: [Hera Familia, Behemoth, Leviathan, One Eyed Black Dragon, Three Great Quests, historical roster]
 ---
-
 # Hera Familia
 
 ## Hecho histórico respaldado por referencia oficial
-
-La prueba oficial de conocimiento de DanMachi identifica conjuntamente a Hera Familia y Zeus Familia como las Familias que derrotaron a Behemoth, el Rey de la Tierra, y Leviathan, el Rey del Mar, dentro de las Tres Grandes Misiones.
-
-- **Fuente:** DMR-011-SRC-005 · https://danmachi.com/center-test/normal.html.
+La prueba oficial de conocimiento de DanMachi identifica conjuntamente a Hera Familia y Zeus Familia como las Familias que derrotaron a Behemoth, Rey de la Tierra, y Leviathan, Rey del Mar, dentro de las Tres Grandes Misiones.
+- **Fuente oficial:** DMR-011-SRC-005 · https://danmachi.com/center-test/normal.html.
 - **Claim:** DMR-008-CLM-027.
-- **Evento navegable:** [Zeus/Hera y las derrotas de Behemoth y Leviathan](../events/candidates/EVT-DM-GREAT-QUESTS-001.md).
-- **Estado de evidencia:** source_checked para el resultado conjunto expresado por la referencia; ficha parcial.
+- **Alcance:** respalda el resultado conjunto, no quién derrotó por separado a cada criatura ni la lista de participantes.
 
-## Lo que esta fuente no confirma
+## Qué añaden las wikis — evidencia secundaria
+La página comunitaria describe a Hera Familia como una de las organizaciones de exploración más poderosas de su periodo y la vincula estrechamente con Zeus Familia. Reporta una capitana aventurera de nivel 9, pero su identidad civil permanece sin resolver: el alias «Emperatriz» no debe confundirse con la diosa Hera.
+- Las wikis sitúan la llegada histórica de ambas Familias al piso 71, aunque señalan que el récord público reconocido era el piso 59. Esta es una pista secundaria, no motivo para cambiar un récord oficial.
+- También atribuyen a las Familias cooperación con el Gremio mediante mapas, registros de capacidades de miembros y conocimiento sobre habilidades de desarrollo y crecimiento. La división exacta de esas contribuciones entre una Familia y otra no está fijada.
+- Los resúmenes comunitarios conectan el debilitamiento posterior de las Familias con el enfrentamiento contra el Dragón Negro de un solo ojo. La secuencia causal y el estado institucional de Hera Familia siguen pendientes de una fuente narrativa localizada.
 
-- Qué Familia derrotó a cada monstruo por separado.
-- Los integrantes, líderes, niveles, estrategias, bajas o fechas de las expediciones.
-- La secuencia entre estas victorias y la caída de Zeus/Hera Familia.
-- El resultado de la misión contra el Dragón Negro.
-- Una cronología completa o un roster de la Familia.
+## Personajes y relaciones navegables
+- **[Hera](../characters/hera.md):** deidad patrona reportada por la wiki; no es la capitana mortal de nivel 9.
+- **[Alfia](../characters/dark-era/alfia.md):** ejecutiva histórica reportada por las wikis; habilidades, nivel y escenas continúan pendientes de cotejo primario.
+- **[Meteria](../characters/dark-era/meteria.md):** afiliación previa y parentesco con Alfia reportados por fuentes comunitarias; spoiler mayor.
+- **[Zeus Familia](zeus-familia.md):** compañera en la victoria conjunta contra Behemoth y Leviathan respaldada por referencia oficial.
+- **[Expedición contra el Dragón Negro](../events/candidates/EVT-DM-ZH-OEBD-001.md)** y **[pérdida de poder](../events/candidates/EVT-DM-ZH-FALL-001.md):** candidatos relacionados, todavía sin reconstrucción primaria completa.
 
-No rellenar esos campos con datos de wikis sin localizadores, ni derivar la expedición del Dragón Negro a partir de las victorias contra Behemoth y Leviathan.
+## Huecos que no se deben rellenar por inferencia
+- Identidad de la capitana de nivel 9 y relación exacta del alias «Emperatriz» con el personaje.
+- Roster completo, niveles, técnicas, estrategias, bajas y fechas.
+- Estado exacto de Hera Familia tras la caída: derrota, dispersión, disolución, expulsión e inactividad no son sinónimos.
+- Participación en la batalla contra el Dragón Negro y destino de cada miembro.
 
-## Relación con otras fichas
-
-- [Zeus Familia](zeus-familia.md): la referencia atribuye las dos victorias a ambas Familias conjuntamente.
-- [Índice de Familias y organizaciones](00-indice-familias.md): entrada histórica parcial.
+## Fuentes
+- Referencia oficial conjunta: DMR-011-SRC-005.
+- Wiki inglesa de Hera Familia: DMR-021-SRC-002.
+- Ficha comunitaria de Hera: DMR-021-SRC-004.
+- Investigación secundaria: DMR-021-CLM-008; DMR-029-CLM-008 y DMR-029-CLM-010.
