@@ -141,6 +141,38 @@ function testCharacterGenerationCoversRolePersonalityPowerCostAndSeed() {
   assert.equal(forge.generateCharacter({ role: "companion", worldType: "fantasy-adventure", seed: 1, name: "Nombre fijado" }).name, "Nombre fijado");
 }
 
+
+function testSummarizePhasesGroupsAdjacentChapterRanges() {
+  const phases = forge.summarizePhases([
+    { title: "Presentación — Una rutina con una grieta" },
+    { title: "Presentación — El primer precio" },
+    { title: "Progreso y complicaciones — Una herramienta con límites" },
+    { title: "Falsa seguridad y caída — La victoria que engaña" },
+    { title: "Falsa seguridad y caída — El equipo se rompe" },
+    { title: "Desenlace — Las consecuencias de la victoria" }
+  ]);
+  assert.deepEqual(phases.map(phase => phase.key), [
+    "Presentación", "Progreso y complicaciones", "Falsa seguridad y caída", "Desenlace"
+  ]);
+  assert.equal(phases[0].range, "Capítulos 1–2");
+  assert.equal(phases[0].count, 2);
+  assert.equal(phases[2].range, "Capítulos 4–5");
+  assert.equal(phases[3].range, "Capítulo 6");
+  assert.deepEqual(forge.summarizePhases([]), []);
+  assert.deepEqual(forge.summarizePhases(null), []);
+}
+
+function testSummarizePhasesKeepsCustomChapterSequencesTogether() {
+  const phases = forge.summarizePhases([
+    { title: "Capítulo 1 — Un lugar en el mapa" },
+    { title: "Capítulo 2 — Una campana suena" },
+    { title: "Desenlace — La puerta que queda abierta" }
+  ]);
+  assert.equal(phases[0].key, "Capítulos personalizados");
+  assert.equal(phases[0].range, "Capítulos 1–2");
+  assert.equal(phases[1].key, "Desenlace");
+}
+
 const tests = [
   testGeneratesRequestedChapterCountAndStableUniqueIds,
   testSummariesUseStorySpecificDetailsAndDramaticCausality,
@@ -150,7 +182,9 @@ const tests = [
   testInvalidChapterCountsAreRejected,
   testConceptGenerationIsRepeatableForASeedAndVariesAcrossSeeds,
   testConceptGenerationRespectsTheSelectedWorldFamily,
-  testCharacterGenerationCoversRolePersonalityPowerCostAndSeed
+  testCharacterGenerationCoversRolePersonalityPowerCostAndSeed,
+  testSummarizePhasesGroupsAdjacentChapterRanges,
+  testSummarizePhasesKeepsCustomChapterSequencesTogether
 ];
 for (const test of tests) {
   test();

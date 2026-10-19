@@ -359,6 +359,11 @@ async function run() {
     page.once("dialog", dialog => dialog.accept());
     await page.locator("#story-generate-outline-button").click();
     await page.waitForFunction(() => document.querySelectorAll(".story-chapter-form").length === 12, { timeout: 10000 });
+    const phaseSummary = await page.locator("#story-outline-preview .story-outline-phase").allInnerTexts();
+    assert.ok(phaseSummary.length >= 5, "The phase preview should compact the novel into its major phases: " + JSON.stringify(phaseSummary));
+    assert.ok(phaseSummary[0].includes("Presentación"), "Phase preview must begin with story presentation.");
+    assert.ok(phaseSummary.some(item => item.includes("Falsa seguridad y caída")), "Phase preview must expose the false-security/decline section.");
+    assert.ok(phaseSummary[phaseSummary.length - 1].includes("Desenlace"), "Phase preview must finish with the resolution phase.");
     assert.equal(await page.locator("#story-meta-form [name='storyChapterCount']").inputValue(), "12");
     assert.equal(await page.locator("#story-meta-form [name='storyEndingType']").inputValue(), "open");
     assert.equal(await page.locator("#story-meta-form [name='storyCastPlan']").inputValue(), "Mara quiere salvar el barrio; Ivo, coprotagonista, busca exponer a la corporación.");
