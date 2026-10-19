@@ -205,10 +205,22 @@ async function run() {
     // Story concept and character generators must be wired to the current editor and persist non-destructive suggestions.
     await page.locator("#story-meta-form [name='storyWorldType']").selectOption("cyberpunk-dystopia");
     await page.locator("#story-generate-concept-button").click();
-    await page.waitForFunction(() =>
-      (document.querySelector("#story-concept-status")?.textContent || "").includes("Concepto generado y guardado") &&
-      (document.querySelector("#story-meta-form [name='storyPremise']")?.value || "").length > 40,
-      { timeout: 10000 });
+    try {
+      await page.waitForFunction(() =>
+        (document.querySelector("#story-concept-status")?.textContent || "").includes("Concepto generado y guardado") &&
+        (document.querySelector("#story-meta-form [name='storyPremise']")?.value || "").length > 40,
+        { timeout: 10000 });
+    } catch (error) {
+      const conceptDiagnostic = await page.evaluate(() => ({
+        status: document.querySelector("#story-concept-status")?.textContent || null,
+        premiseLength: (document.querySelector("#story-meta-form [name='storyPremise']")?.value || "").length,
+        forgeAvailable: typeof window.WordWaifuStoryForge?.generateConcept === "function",
+        reviewPanelExists: Boolean(document.querySelector("#story-review-panel")),
+        metaFormExists: Boolean(document.querySelector("#story-meta-form")),
+        consoleState: document.querySelector("#story-editor-status")?.textContent || null
+      }));
+      throw new Error("Story concept diagnostic: " + JSON.stringify({ conceptDiagnostic, pageErrors, consoleErrors }) + "; " + error.message);
+    }
     const generatedPremise = await page.locator("#story-meta-form [name='storyPremise']").inputValue();
     assert.ok(generatedPremise.length > 40, "Concept generator must fill a substantive premise.");
     assert.ok((await page.locator("#story-meta-form [name='storyWorldRules']").inputValue()).length > 30, "Concept generator must populate world rules.");
