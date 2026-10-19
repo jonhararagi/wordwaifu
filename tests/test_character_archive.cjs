@@ -105,7 +105,12 @@ assert.ok(extendedRyu.repositoryProfile&&extendedRyu.repositoryProfile.sectionCo
 assert.ok(extendedRyu.sections.some(section=>section.title.includes("Estado temporal A")));
 const syntheticIndex={...index,profileDetails:{...index.profileDetails,"CHAR-RYUU-LION":{
   ...index.profileDetails["CHAR-RYUU-LION"],
-  sections:[...index.profileDetails["CHAR-RYUU-LION"].sections,{heading:"Perfil oficial del anime",text:"SYNTHETIC-ANIME-ONLY-CONTENT"}]
+  sections:[
+    ...index.profileDetails["CHAR-RYUU-LION"].sections,
+    {heading:"Perfil oficial del anime",text:"SYNTHETIC-ANIME-ONLY-CONTENT"},
+    {heading:"Pistas secundarias de historia, magia y relaciones · CONT-AR",text:"SYNTHETIC-CONT-AR-ONLY-CONTENT"},
+    {heading:"Nota comparativa · CONT-AR / CONT-MAIN-LN",text:"SYNTHETIC-AR-MAIN-CONTENT"}
+  ]
 }}};
 const syntheticHistorical=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR",syntheticIndex);
 assert.ok(!syntheticHistorical.sections.some(section=>section.title==="Perfil oficial del anime"),
@@ -113,6 +118,18 @@ assert.ok(!syntheticHistorical.sections.some(section=>section.title==="Perfil of
 const syntheticAnime=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-ANIME",syntheticIndex);
 assert.ok(syntheticAnime.sections.some(section=>section.title==="Perfil oficial del anime"),
   "The anime dossier must retain its own standalone localized heading.");
+const taggedHistorical=archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR",syntheticIndex);
+assert.ok(taggedHistorical.sections.some(section=>section.title==="Pistas secundarias de historia, magia y relaciones · CONT-AR"),
+  "A Spanish historical section labelled CONT-AR must be visible in the historical profile.");
+assert.ok(!taggedHistorical.sections.some(section=>section.title==="Perfil oficial del anime"),
+  "A section tagged as anime must not leak into the historical profile.");
+assert.ok(taggedHistorical.sections.some(section=>section.title==="Nota comparativa · CONT-AR / CONT-MAIN-LN"),
+  "A section explicitly shared by historical and main-novel continuity should remain available to either scope.");
+assert.ok(!syntheticAnime.sections.some(section=>section.title==="Pistas secundarias de historia, magia y relaciones · CONT-AR"),
+  "A Spanish historical section tagged CONT-AR must not leak into the anime profile.");
+assert.ok(!syntheticAnime.sections.some(section=>section.title==="Nota comparativa · CONT-AR / CONT-MAIN-LN"),
+  "A section tagged only for CONT-AR and CONT-MAIN-LN must not leak into the anime profile.");
+
 
 assert.ok(!extendedRyu.sections.some(section=>section.title.includes("Estado temporal B")),
   "Anime-only temporal-state details must not leak into the historical Ryu summary.");
