@@ -167,6 +167,44 @@
           <div id="dm-timeline-eras-view" class="dm-timeline-eras" role="region" aria-label="Árbol jerárquico de épocas"></div>
           <div id="dm-timeline-events-view" class="dm-timeline-events-view hidden" role="region" aria-label="Línea temporal de acontecimientos históricos"></div>
           <div id="dm-timeline-map-view" class="dm-timeline-map-view hidden" role="region" aria-label="Esquema relacional DanMachi, no geográfico y sin escala"></div>
+        <section id="dm-visual-references-panel" class="dm-visual-references-panel" aria-labelledby="dm-visual-panel-title">
+            <header class="dm-visual-panel-heading"><div><p class="eyebrow">REFERENCIAS · PROCEDENCIA · DERECHOS</p><h3 id="dm-visual-panel-title">Referencias visuales</h3><p>Enlaces contextuales, vistas previas locales y datos de atribución. Las imágenes oficiales externas no se incrustan mientras no se verifiquen sus condiciones de uso.</p></div></header>
+            <div class="dm-visual-controls">
+              <label for="dm-visual-spoiler-cap">Mostrar referencias hasta el nivel de spoiler<select id="dm-visual-spoiler-cap"><option value="none">Sin spoilers</option><option value="minor" selected>Menores</option><option value="major">Importantes</option><option value="critical">Críticos</option></select></label>
+              <label for="dm-visual-watermark-text">Texto para la copia marcada<input id="dm-visual-watermark-text" maxlength="100" value="WordWaifu · copia marcada"></label>
+              <label for="dm-visual-watermark-position">Posición de la marca<select id="dm-visual-watermark-position"><option value="bottom-right">Abajo a la derecha</option><option value="bottom-left">Abajo a la izquierda</option><option value="top-right">Arriba a la derecha</option><option value="top-left">Arriba a la izquierda</option></select></label>
+              <p id="dm-visual-watermark-placement-note" class="dm-visual-rights-note dm-visual-watermark-placement-note">Elegí una esquina libre: WordWaifu no detecta caras, subtítulos, créditos originales ni información clave, y no puede garantizar que la marca quede fuera de ellos.</p>
+            </div>
+            <div id="dm-visual-reference-general" class="dm-visual-reference-grid" aria-label="Referencias visuales sin vínculo a evento o lugar"></div>
+            <details id="dm-visual-import-details" class="dm-visual-import-details">
+              <summary>Aportar una imagen propia o con licencia/permiso compatible</summary>
+              <p class="dm-visual-rights-note">El archivo se guarda solo en el almacenamiento del navegador existente (IndexedDB, con respaldo local). No se sube a GitHub ni se envía a un servicio remoto. El uso personal/educativo, la atribución y la marca de agua no sustituyen el permiso.</p>
+              <form id="dm-visual-local-form" class="dm-visual-local-form">
+                <label>Título <input id="dm-visual-title" name="title" required maxlength="180"></label>
+                <label>Imagen local (PNG/JPEG/WebP/GIF/AVIF, hasta 5 MB) <input id="dm-visual-file" name="file" type="file" accept="image/png,image/jpeg,image/webp,image/gif,image/avif" required></label>
+                <label>Fuente original (HTTPS; opcional para obra propia) <input id="dm-visual-source-url" name="sourcePageUrl" type="url" placeholder="https://…"></label>
+                <label>Autor/titular o “unknown” <input id="dm-visual-holder" name="creatorOrRightsholder" required maxlength="180" placeholder="Autor, titular o unknown"></label>
+                <label>Estado de derechos<select id="dm-visual-usage-status" name="usageStatus"><option value="user_owned">Obra propia declarada</option><option value="licensed">Licencia compatible declarada</option><option value="permission_recorded">Permiso registrado</option><option value="pending_review">Pendiente de revisión</option><option value="blocked">Bloqueada</option></select></label>
+                <div class="dm-visual-rights-grid">
+                  <label>Nombre de licencia (si aplica) <input id="dm-visual-license-name" name="licenseName" maxlength="180"></label>
+                  <label>URL de licencia (HTTPS) <input id="dm-visual-license-url" name="licenseUrl" type="url" placeholder="https://…"></label>
+                  <label class="dm-visual-full-row">Evidencia del permiso (si aplica) <input id="dm-visual-permission-evidence" name="permissionEvidence" maxlength="1000"></label>
+                </div>
+                <label>Continuidad<select id="dm-visual-continuity" name="continuityScope"><option value="CONT-MAIN-LN">Novela principal</option><option value="CONT-AR">Astrea Record</option><option value="CONT-ANIME">Adaptación anime</option><option value="CONT-AU">Historia alternativa (AU)</option><option value="CONT-GAME">Juego / evento original</option><option value="CONT-UNVERIFIED">Pistas sin continuidad verificada</option><option value="CROSS-CONTINUITY">Comparación de continuidades</option></select></label>
+                <label>Nivel de spoiler<select id="dm-visual-spoiler" name="spoilerLevel"><option value="none">Sin spoiler</option><option value="minor" selected>Menor</option><option value="major">Importante</option><option value="critical">Crítico</option></select></label>
+                <div class="dm-visual-rights-grid">
+                  <label>Vincular a acontecimiento (opcional) <select id="dm-visual-event" name="eventId"><option value="">No vincular a un acontecimiento</option></select></label>
+                  <label>Vincular a lugar (opcional) <select id="dm-visual-location" name="locationId"><option value="">No vincular a un lugar</option></select></label>
+                </div>
+                <label>Línea de crédito/atribución <input id="dm-visual-credit" name="creditLine" maxlength="300" placeholder="Autor · licencia · fuente"></label>
+                <label class="dm-visual-caption-label">Nota contextual (opcional) <textarea id="dm-visual-caption" name="caption" rows="2" maxlength="500"></textarea></label>
+                <label class="dm-visual-checkbox"><input id="dm-visual-allow-modify" type="checkbox"> Declaro que los derechos de este recurso permiten crear y exportar una copia modificada con marca de agua.</label>
+                <p class="dm-visual-rights-note">Los estados “pendiente” y “bloqueado” nunca habilitan la exportación. No elijas “licencia” o “permiso” sin una base real.</p>
+                <div class="dm-visual-form-actions"><button type="submit" class="primary-button">Guardar localmente</button><button type="reset" class="outline-button">Limpiar campos</button></div>
+              </form>
+            </details>
+            <p id="dm-visual-status" class="dm-visual-status" role="status" aria-live="polite">Preparando referencias visuales locales…</p>
+          </section>
         </section>
         <section id="danmachi-entity-browser" class="danmachi-entity-browser" aria-labelledby="danmachi-entity-browser-title">
           <div class="danmachi-entity-heading">
@@ -378,6 +416,7 @@
   <script src="./src/fanfic-review.js" defer></script>
   <script src="./src/narrative-assistant.js" defer></script>
   <script src="./src/danmachi-timeline.js" defer></script>
+  <script src="./src/danmachi-visual-references.js" defer></script>
   <script src="./src/app.js" defer></script>
 </body>
 </html>
