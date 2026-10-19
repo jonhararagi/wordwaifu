@@ -5,10 +5,15 @@ type: character
 status: pending_primary_text_check
 continuity_scope: CONT-AR
 source_refs:
-  - DMR-014-SRC-001
-  - DMR-014-SRC-002
+  - DMR-029-SRC-001
+  - DMR-029-SRC-002
+  - DMR-029-SRC-003
+  - DMR-029-SRC-004
+  - DMR-021-SRC-002
+  - DMR-021-SRC-006
 claim_refs:
-  - DMR-014-CLM-002
+  - DMR-029-CLM-001
+  - DMR-021-CLM-004
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases:
   - "Alfia"
