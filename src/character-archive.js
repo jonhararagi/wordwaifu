@@ -550,7 +550,7 @@ function relationshipLinks(index,id,continuity,filter){
     return{
       sourceId:edge.from,targetId,label,type:readableRelationKind(edge.kind),
       description:outgoing?(note||"Relación documentada con una afirmación enlazada."):("Enlace inverso para navegación. "+original+(note?" "+note:"")),
-      refs:[edge.claimRef].filter(Boolean),direction:outgoing?"outgoing":"incoming",
+      refs:[edge.claimRef,...(Array.isArray(edge.claimRefs)?edge.claimRefs:[])].filter(Boolean),direction:outgoing?"outgoing":"incoming",
       edgeId:edge.id,evidenceStatus:edge.evidenceStatus,evidenceType:edge.evidenceType,
       targetType:targetCharacter?"character":targetMeta?"dossier":"unavailable",
       targetPath:targetMeta?targetMeta.path:"",targetName

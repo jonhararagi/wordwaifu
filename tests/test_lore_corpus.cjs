@@ -19,7 +19,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
   "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
   "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-  "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md"
+  "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+  "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const profilePaths = [
@@ -58,6 +59,16 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-EVENT-DEPARTURE-
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-EVENT-RETURN-PUBLISHER" && edge.to === "EVT-DM-ASTREA-DEPARTURE-001" && edge.continuity === "CONT-MAIN-LN" && edge.evidenceStatus === "source_checked" && edge.claimRef === "DMR-010-CLM-005"), "The later Ryu visit must be linked only to the publisher synopsis claim.");
 const astreaDepartureSearch = corpus.search(index, { query: "Ryu Astrea Orario venganza", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaDepartureSearch.results.some(item => item.claimId === "DMR-010-CLM-002" && item.verificationStatus === "pending_verification"), "Search must return the disputed departure claim without losing its pending status.");
+
+assert.ok(catalog.documents.some(document => document.document_id === "RESEARCH-DM-028" && document.path === "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md" && document.status === "secondary_checked_with_primary_gaps"), "The new Astrea wiki research dossier must be registered with its evidence limits.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY" && edge.from === "CHAR-RYUU-LION" && edge.to === "CHAR-KAGUYA" && edge.evidenceStatus === "secondary_checked" && edge.claimRefs?.includes("DMR-028-CLM-003")), "The existing Ryu/Kaguya historical edge must also expose the wiki-derived moral disagreement without creating a duplicate reverse destination.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-LYRA-MEMBER-ASTREA-WIKI" && edge.from === "CHAR-LYRA" && edge.to === "DM-FAM-ASTREA" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-004"), "Lyra's reported membership must have a secondary-evidence relationship.");
+const kaguyaJusticeSearch = corpus.search(index, { query: "Kaguya Ryu justicia salvar mayoría", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(kaguyaJusticeSearch.results.some(item => item.claimId === "DMR-028-CLM-003" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Gojouno_Kaguya"))), "Lore search must return the wiki-derived Kaguya/Ryu dynamic with secondary status and source URL.");
+const lyraAbilitiesSearch = corpus.search(index, { query: "Lyra magia mina bombas", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(lyraAbilitiesSearch.results.some(item => item.claimId === "DMR-028-CLM-005" && item.verificationStatus === "secondary_checked"), "Lore search must retrieve wiki-lead details for Lyra while preserving source status.");
+const sourceDirectory = corpus.getOnlineSourceDirectory();
+assert.ok(sourceDirectory.some(source => source.id === "community-kaguya" && source.url === "https://danmachi.fandom.com/wiki/Gojouno_Kaguya" && source.limits.includes("secundarios")), "The source browser must expose Kaguya's wiki page with secondary-source limits.");
 
 assert.ok(index.relationships.some(edge => edge.id === "REL-RAUL-FINN-DELEGATED-COMMAND" && edge.claimRef === "DMR-005-CLM-008"), "Raul's delegated coordination role must link to the official claim.");
 assert.deepEqual(corpus.searchEntities(catalog, { type: "character", query: "Raul Nord" }).results.map(entity => entity.id), ["CHAR-RAUL-NOORD"], "Raul must be individually discoverable.");
@@ -120,8 +131,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 116, "Three source-backed DMR-026 claims must be included in the source count.");
-assert.equal(index.entryCount, 119, "Three DMR-026 claims add three retrievable entries without altering existing continuity splits.");
+assert.equal(index.sourceClaimCount, 126, "Three DMR-026 claims and ten DMR-028 wiki claims must be included in the source count.");
+assert.equal(index.entryCount, 129, "Three DMR-026 claims and ten DMR-028 wiki claims add thirteen retrievable entries without altering existing continuity splits.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -217,7 +228,7 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 104 source claims, 107 entries, volume 21 atomic claims, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: source claims and entries, Astrea wiki research, volume 21 claims, Familia dossiers, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();

@@ -10,12 +10,23 @@ source_refs:
   - DMR-001-SRC-004
   - DMR-001-SRC-005
   - DMR-002-SRC-002
+  - DMR-028-SRC-001
+  - DMR-028-SRC-002
+  - DMR-028-SRC-003
+  - DMR-028-SRC-004
+  - DMR-028-SRC-005
 claim_refs:
   - DMR-012-CLM-001
   - DMR-012-CLM-002
   - DMR-012-CLM-003
   - DMR-012-CLM-004
   - DMR-012-CLM-005
+  - DMR-028-CLM-001
+  - DMR-028-CLM-006
+  - DMR-028-CLM-007
+  - DMR-028-CLM-008
+  - DMR-028-CLM-009
+  - DMR-028-CLM-010
 tags: [Familia Astrea, Astrea, Ryu Lion, Alise Lovelace, Astrea Record, Era Oscura]
 ---
 
@@ -120,3 +131,16 @@ Estos datos quedan pendientes. La ficha mejora el contexto para escribir escenas
 - **Guía y liderazgo:** la misma sinopsis presenta a Astrea como guía moral de Ryu y a Alise como capitana y guía de Ryu. Claims DMR-012-CLM-002 y DMR-012-CLM-003.
 - **Conflicto y consecuencias:** las sinopsis oficiales de los volúmenes II–III relacionan las pérdidas de la época con la evolución del sentido de justicia de Ryu y la escalada de Evilus. Claim DMR-012-CLM-004.
 - **Límite:** son hitos generales de sinopsis editorial. El roster completo, destinos individuales, orden de escenas y consecuencias precisas requieren cotejo de los volúmenes íntegros.
+
+
+## Pistas recuperadas de las wikis · CONT-AR y etapa posterior
+
+Las wikis comunitarias ofrecen más detalles que las sinopsis oficiales, por lo que se incorporó el expediente [DANMACHI-RESEARCH-028](../research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md) como capa de investigación consultable. **No sustituye la novela ni convierte sus resúmenes en canon confirmado.**
+
+- **Función histórica:** la Wiki presenta a la antigua Familia como grupo de exploración y fuerza que intervenía contra criminales durante la Era Oscura. Es una pista de su rol público, no prueba suficiente para describirla como una policía formal con competencias exactas.
+- **Red de miembros:** las páginas de Kaguya, Lyra y Alise recuperan trasfondos, capacidades y matices personales. La ficha de [Gojouno Kaguya](../characters/gojouno-kaguya.md) ahora recoge su procedencia del Lejano Oriente y el desacuerdo moral reportado con Ryu; la de [Lyra](../characters/lyra.md) registra pistas sobre su infancia, magia y equipo.
+- **Caída de la Familia:** las páginas comunitarias relacionan la emboscada de Rudra Familia con la aparición del Juggernaut y describen los sacrificios de Alise, Kaguya y Lyra para que Ryu sobreviviera. La sinopsis oficial del anime respalda la tragedia general de la adaptación, pero no basta para validar cada detalle de combate en la novela.
+- **Cronología:** la wiki propone intervalos relativos aproximados de diez, siete y cinco años antes de Bell para la llegada de Ryu, el Gran Conflicto y la caída de la Familia. Se guardan como pistas separadas; no se convierten en fechas absolutas.
+- **Nueva generación:** la wiki atribuye a Cecil Blackliza la capitanía de una nueva Familia en Solingen. La sinopsis editorial confirma una Ciudad Forjadora de Espadas al este y nuevas seguidoras de Astrea, pero no confirma por sí sola el nombre del lugar ni el cargo de Cecil.
+
+**Pendientes concretos de verificación primaria:** pasaje de la emboscada y aparición del Juggernaut; debates de Kaguya y Ryu; historia y kit de Lyra; edad/nivel de Alise; cronología relativa exacta y roster/capitanía de la nueva generación. Todo lo anterior permanece en estado secundario o provisional.

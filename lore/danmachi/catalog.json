@@ -1931,6 +1931,12 @@
       "path": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
       "type": "character_relationship_research",
       "status": "provisional_secondary_evidence"
+    },
+    {
+      "document_id": "RESEARCH-DM-028",
+      "path": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "type": "secondary_research_dossier",
+      "status": "secondary_checked_with_primary_gaps"
     }
   ],
   "lastStructuredSync": "2026-10-18",
@@ -2835,15 +2841,22 @@
       "id": "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY",
       "from": "CHAR-RYUU-LION",
       "to": "CHAR-KAGUYA",
-      "kind": "historical_co_member_roster",
-      "label": "El roster secundario enumera a Ryu y Kaguya entre las integrantes históricas de Astrea Familia; no demuestra una relación personal concreta",
+      "kind": "historical_co_member_roster_and_reported_moral_disagreement",
+      "label": "El roster secundario enumera a Ryu y Kaguya entre las integrantes históricas; la misma biografía informa desacuerdos sobre cómo aplicar la justicia.",
       "continuity": "CONT-AR",
       "interval": "Astrea Record · Era Oscura de Orario; fecha interna exacta no establecida",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_roster",
       "claimRef": "DMR-007-CLM-005",
       "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Fuente comunitaria usada como pista de pertenencia conjunta. No se infiere amistad, rivalidad, conversación ni intimidad más allá del roster."
+      "note": "La afiliación compartida proviene del roster comunitario; los desacuerdos morales son otra pista secundaria. Ninguna demuestra enemistad permanente ni reemplaza la cita de novela.",
+      "claimRefs": [
+        "DMR-028-CLM-003"
+      ],
+      "claimPaths": [
+        "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+        "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"
+      ]
     },
     {
       "id": "REL-RYU-LYRA-AR-ROSTER-SECONDARY",
@@ -3180,6 +3193,34 @@
       "claimRef": "DMR-010-CLM-005",
       "claimPath": "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
       "note": "Alcance limitado a la sinopsis editorial; no constituye verificación capítulo a capítulo."
+    },
+    {
+      "id": "REL-LYRA-MEMBER-ASTREA-WIKI",
+      "from": "CHAR-LYRA",
+      "to": "DM-FAM-ASTREA",
+      "kind": "reported_member_of",
+      "label": "La ficha comunitaria sitúa a Lyra entre los primeros miembros de Astrea Familia; su biografía detallada continúa como evidencia secundaria.",
+      "continuity": "CONT-AR",
+      "interval": "Antes de la caída de la antigua Familia; orden exacto pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_roster_and_biography",
+      "claimRef": "DMR-028-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "La arista identifica afiliación reportada, no parentesco ni una amistad concreta."
+    },
+    {
+      "id": "REL-ASTREA-FAMILIA-ORDER-ROLE-WIKI",
+      "from": "DM-FAM-ASTREA",
+      "to": "LOC-ORARIO",
+      "kind": "reported_public_order_role",
+      "label": "La wiki describe a la antigua Astrea Familia como fuerza de orden contra criminales durante la Era Oscura; dato secundario por cotejar.",
+      "continuity": "CONT-AR",
+      "interval": "Era Oscura de Orario; fechas exactas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_summary",
+      "claimRef": "DMR-028-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Representa una función histórica descrita por fuentes comunitarias, no una institución policial formal demostrada por fuente primaria."
     }
   ]
 }

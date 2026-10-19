@@ -856,3 +856,138 @@ verification_status: stub
 - rights_note: Paráfrasis original breve en español; no reproducir las descripciones completas del glosario.
 - verified_by: DANMACHI-RESEARCH-026
 - verification_status: source_checked
+
+
+---
+
+## DMR-028-SRC-001 · DanMachi Wiki — Astraea Familia
+
+- source_id: DMR-028-SRC-001
+- title: Astraea Familia
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record y novela principal
+- volume_or_edition: Artículo web; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Astraea_Familia
+- accessed_at: 2026-10-19
+- locator_type: community_organization_summary
+- locator: Introducción, información general y roster actual/histórico.
+- claims_supported: [DMR-028-CLM-001, DMR-028-CLM-006, DMR-028-CLM-008]
+- events_supported: []
+- continuity_scope: Referencia secundaria transversal; separar CONT-AR y CONT-MAIN-LN por afirmación
+- reliability_note: Sirve como índice de miembros, cargos y posibles escenas; no sustituye las novelas. El roster actual y el histórico requieren verificación por periodo.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia breve; no copiar el artículo.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
+
+## DMR-028-SRC-002 · DanMachi Wiki — Gojouno Kaguya
+
+- source_id: DMR-028-SRC-002
+- title: Gojouno Kaguya
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record
+- volume_or_edition: Artículo web; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Characteristics, Personality, History y Abilities.
+- claims_supported: [DMR-028-CLM-002, DMR-028-CLM-003, DMR-028-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-AR; referencia secundaria
+- reliability_note: La página presenta una biografía extensa y detalles de valores/combate. No hay localizador primario cotejado en este expediente.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia breve.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
+
+## DMR-028-SRC-003 · DanMachi Wiki — Lyra
+
+- source_id: DMR-028-SRC-003
+- title: Lyra
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record
+- volume_or_edition: Artículo web; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Lyra
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: History, Magic, Skills, Abilities y Equipment.
+- claims_supported: [DMR-028-CLM-004, DMR-028-CLM-005, DMR-028-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-AR; referencia secundaria
+- reliability_note: Útil para recuperar nombres de magia y equipo; verificar el texto original para reglas, costes, límites y escenas.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia breve.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
+
+## DMR-028-SRC-004 · DanMachi Wiki — Alise Lovell
+
+- source_id: DMR-028-SRC-004
+- title: Alise Lovell
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Astrea Record
+- volume_or_edition: Artículo web; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Alise_Lovell
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Personality, History y Abilities.
+- claims_supported: [DMR-028-CLM-006, DMR-028-CLM-009, DMR-028-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-AR; referencia secundaria
+- reliability_note: Los matices de personalidad, nivel y edad se conservan como pistas secundarias, no como estadísticas canónicas confirmadas.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia breve.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
+
+## DMR-028-SRC-005 · DanMachi Wiki — Timeline
+
+- source_id: DMR-028-SRC-005
+- title: Timeline
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: DanMachi, Sword Oratoria, Familia Chronicle y Astrea Record
+- volume_or_edition: Tabla cronológica en línea; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Timeline
+- accessed_at: 2026-10-19
+- locator_type: relative_timeline_table
+- locator: Entradas de años anteriores a la llegada de Bell a Orario.
+- claims_supported: [DMR-028-CLM-007]
+- events_supported: []
+- continuity_scope: CROSS-CONTINUITY; cronología comunitaria
+- reliability_note: Fechas aproximadas compiladas a partir de obras distintas; comprobar cada intervalo con su propia fuente.
+- conflicting_sources: []
+- rights_note: Resumen propio de distancias relativas; no copiar tablas completas.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
+
+## DMR-028-SRC-006 · DanMachi Wiki en español — Ryuu Lion
+
+- source_id: DMR-028-SRC-006
+- title: Ryuu Lion
+- creator_or_publisher: Comunidad DanMachi Wiki en español
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Historia principal y Astrea Record
+- volume_or_edition: Artículo web; revisión variable
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Ryuu_Lion
+- accessed_at: 2026-10-19
+- locator_type: community_character_and_timeline_summary
+- locator: Historia; salida del bosque, llegada a Orario, Familia Astrea y represalia posterior.
+- claims_supported: [DMR-028-CLM-007]
+- events_supported: []
+- continuity_scope: CROSS-CONTINUITY; referencia secundaria
+- reliability_note: Resume acontecimientos de varias etapas; verificar cronología y pasajes de la novela uno por uno.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia breve.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_checked
