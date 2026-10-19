@@ -5,10 +5,13 @@ type: character
 status: pending_primary_text_check
 continuity_scope: CONT-MAIN-LN
 source_refs:
-  - DMR-014-SRC-001
-  - DMR-014-SRC-002
+  - DMR-029-SRC-007
+  - DMR-029-SRC-008
+  - DMR-029-SRC-009
+  - DMR-029-SRC-010
+  - DMR-029-SRC-011
 claim_refs:
-  - DMR-014-CLM-005
+  - DMR-029-CLM-004
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases:
   - "Jura Halmer"
