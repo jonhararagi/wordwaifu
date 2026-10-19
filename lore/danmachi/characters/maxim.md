@@ -31,7 +31,7 @@ La misma fuente lo vincula a la historia de las grandes expediciones. Hasta loca
 
 ## Relaciones navegables
 - **[Zeus Familia](../familias/zeus-familia.md):** afiliación y cargo reportados por fuente secundaria.
-- **[Zeus](zeus.md):** deidad patrona reportada; no se afirma intimidad personal.
+- **Zeus:** deidad patrona reportada; no se afirma intimidad personal.
 - **[Zald](dark-era/zald.md):** otro miembro histórico asociado a Zeus Familia; relación mutua y presencia conjunta en cada expedición requieren evidencia.
 - **[Hera Familia](../familias/hera-familia.md):** comparte el contexto de las Grandes Misiones; no se infiere una relación personal con sus integrantes.
 
