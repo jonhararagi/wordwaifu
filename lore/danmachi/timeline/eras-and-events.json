@@ -1,0 +1,1319 @@
+{
+  "schemaVersion": 1,
+  "universeId": "danmachi",
+  "title": "Mapa de épocas y acontecimientos históricos",
+  "anchor": {
+    "id": "T0-BELL-ARRIVAL",
+    "label": "T0 · llegada de Bell a Orario",
+    "definition": "Ancla relativa de trabajo. T−7 significa aproximadamente siete años antes; T−5 aproximadamente cinco años antes. T+ mide tiempo posterior a T0. Ninguna etiqueta T sustituye una fecha absoluta.",
+    "sources": [
+      "https://danmachi.com/chronology/"
+    ],
+    "eventId": "EVT-DM-BELL-ARRIVAL-001"
+  },
+  "policies": [
+    "Fechas relativas no se convierten en años de calendario sin fuente.",
+    "CONT-AR, CONT-MAIN-LN, CONT-GAME, CONT-ANIME y CONT-AU son capas distintas; un evento del juego no se presume idéntico a cada escena de la novela revisada.",
+    "Una sinopsis editorial acredita el resumen general que publica, no una escena/página de la novela.",
+    "La identidad de un personaje se mantiene única; cada evento conserva su aparición, relaciones y estado temporal.",
+    "Cada acontecimiento incluye temporal (modelo versionado y validable); dateLabel se conserva para compatibilidad y presentación, no como única fuente de ordenación."
+  ],
+  "continuities": [
+    {
+      "id": "ALL",
+      "label": "Todas las continuidades, separadas"
+    },
+    {
+      "id": "CONT-AR",
+      "label": "Astrea Record · novela revisada"
+    },
+    {
+      "id": "CONT-MAIN-LN",
+      "label": "Novela principal"
+    },
+    {
+      "id": "CONT-GAME",
+      "label": "Juego / evento original"
+    },
+    {
+      "id": "CONT-ANIME",
+      "label": "Adaptación anime"
+    },
+    {
+      "id": "CONT-AU",
+      "label": "AU del autor"
+    },
+    {
+      "id": "CONT-UNVERIFIED",
+      "label": "Pistas sin continuidad verificada"
+    }
+  ],
+  "eras": [
+    {
+      "id": "ERA-00-ANCIENT",
+      "parentId": null,
+      "order": 10,
+      "title": "Antigüedad remota",
+      "rangeLabel": "Sin fecha absoluta ni distancia exacta de T0",
+      "summary": "Contenedor de relatos de héroes y amenazas antiguas. No debe confundirse con la formación de Orario ni con la época de las Familias Zeus y Hera.",
+      "certainty": "chronology_open",
+      "notes": "Relatos como Argonaut o Knights of Fianna necesitan conservar la continuidad/editorial específica de cada versión."
+    },
+    {
+      "id": "ERA-01-DESCENT",
+      "parentId": null,
+      "order": 20,
+      "title": "Descenso de las deidades",
+      "rangeLabel": "Fecha absoluta pendiente",
+      "summary": "Periodo histórico propio. No equivale automáticamente a la antigüedad remota ni fija el orden de todas las llegadas divinas.",
+      "certainty": "candidate_pending_source_locator",
+      "notes": "Los sucesos concretos siguen provisionales hasta localizar la escena publicada."
+    },
+    {
+      "id": "ERA-02-ORARIO",
+      "parentId": null,
+      "order": 30,
+      "title": "Formación histórica de Orario y las grandes Familias",
+      "rangeLabel": "Varios intervalos sin fechas absolutas",
+      "summary": "Marco de historia urbana, institucional y de expediciones. Cada evento individual mantiene su propia evidencia temporal.",
+      "certainty": "partial",
+      "notes": "Compartir este contenedor no afirma que todos los eventos ocurran en una secuencia exacta."
+    },
+    {
+      "id": "ERA-03-ZEUS-HERA",
+      "parentId": "ERA-02-ORARIO",
+      "order": 35,
+      "title": "Auge y caída de Zeus/Hera Familia",
+      "rangeLabel": "Antes de T0; distancia exacta pendiente",
+      "summary": "Agrupa expediciones legendarias, el enfrentamiento con el Dragón Negro y la posterior pérdida de posición de ambas Familias, pero no fusiona esos sucesos.",
+      "certainty": "partial",
+      "notes": "Fecha y orden exacto de cada misión requieren localizador primario."
+    },
+    {
+      "id": "ERA-04-PRE-BELL",
+      "parentId": null,
+      "order": 40,
+      "title": "Periodo anterior a la llegada de Bell",
+      "rangeLabel": "Antes de T0 · varios hitos",
+      "summary": "Macroperiodo con acontecimientos históricos diferenciados. Contiene Astrea Record y otras tragedias retrospectivas sin comprimirlos en el mismo año.",
+      "certainty": "partial",
+      "notes": "T−7 y T−5 son anclas diferentes."
+    },
+    {
+      "id": "ERA-04A-ASTREA-RECORD",
+      "parentId": "ERA-04-PRE-BELL",
+      "order": 41,
+      "title": "Era Oscura de Orario · Astrea Record",
+      "rangeLabel": "T−7 · aproximadamente siete años antes de Bell",
+      "summary": "Marco editorial oficial de Astrea Record y del conflicto de Astrea Familia con la amenaza de Evilus.",
+      "certainty": "official_publisher_timeframe",
+      "notes": "La novela revisada, el evento original de Memoria Freese y la adaptación manga conservan rutas de evidencia separadas."
+    },
+    {
+      "id": "ERA-04B-ASTREA-AFTERMATH",
+      "parentId": "ERA-04-PRE-BELL",
+      "order": 42,
+      "title": "Tragedia de Astrea Familia y secuelas",
+      "rangeLabel": "T−5 · aproximadamente cinco años antes de Bell",
+      "summary": "Retrospectiva vinculada al Juggernaut y a la pérdida de miembros de Astrea Familia. Referencias secundarias orientan la búsqueda, pero los detalles por página permanecen pendientes.",
+      "certainty": "secondary_timeline_primary_page_pending",
+      "notes": "No trasladar este acontecimiento al arco Astrea Record T−7."
+    },
+    {
+      "id": "ERA-05-MAIN-START",
+      "parentId": null,
+      "order": 50,
+      "title": "Inicio de la historia principal",
+      "rangeLabel": "T0 · llegada de Bell a Orario",
+      "summary": "Ancla relativa de la historia principal. Llegada, primer encuentro con Hestia y rescate por Ais son sucesos separados.",
+      "certainty": "official_chronology_anchor",
+      "notes": "El orden por volúmenes no es una medida exacta de días."
+    },
+    {
+      "id": "ERA-06-MAIN-V13-14",
+      "parentId": "ERA-05-MAIN-START",
+      "order": 60,
+      "title": "Expedición y crisis de los volúmenes 13–14",
+      "rangeLabel": "Meses después de T0; días internos no fijados",
+      "summary": "La persecución de Ryu, la intervención de Jura y la nueva aparición del Juggernaut son eventos de la historia presente, no la tragedia T−5.",
+      "certainty": "publisher_scope_secondary_day_count",
+      "notes": "Las cronologías de fans son pistas para localizar pasajes, no fuente primaria de los conteos diarios."
+    },
+    {
+      "id": "ERA-AU-DIVERGENCE",
+      "parentId": null,
+      "order": 99,
+      "title": "Rama alternativa · AU del autor",
+      "rangeLabel": "Solo tras una divergencia autoral aprobada",
+      "summary": "Cambios creativos separados de la continuidad publicada. No rellena automáticamente huecos del canon.",
+      "certainty": "author_owned",
+      "notes": "Conservar el canon de referencia y describir qué eventos y relaciones modifica cada divergencia."
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-DM-DESCENT-001",
+      "recordId": "EVT-DM-DESCENT-001",
+      "eraId": "ERA-01-DESCENT",
+      "sortIndex": 100,
+      "title": "Descenso de las deidades al mundo inferior",
+      "dateLabel": "Fecha absoluta no fijada",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "candidate_primary_locator_pending",
+      "summary": "Hito histórico registrado como candidato. No se infiere una fecha exacta ni una secuencia de llegadas divinas sin localizador primario.",
+      "participants": [],
+      "relatedEntities": [],
+      "detailPath": "events/candidates/EVT-DM-DESCENT-001.md",
+      "sources": [
+        {
+          "label": "Cronología oficial de DanMachi",
+          "url": "https://danmachi.com/chronology/",
+          "kind": "official",
+          "note": "Referencia de cronología promocional; cada afirmación depende del contenido mostrado."
+        }
+      ],
+      "temporal": {
+        "kind": "unknown",
+        "precision": "unknown",
+        "reason": "La ruta oficial consultada no fija una fecha de calendario para este hito; falta localizador primario de la escena y no se infiere el orden entre llegadas divinas.",
+        "sourceUrls": [
+          "https://danmachi.com/chronology/"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La fuente citada no especifica una ciudad, región o lugar de llegada; «mundo inferior» no basta para asignar Orario."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-GREAT-QUESTS-001",
+      "recordId": "EVT-DM-GREAT-QUESTS-001",
+      "eraId": "ERA-03-ZEUS-HERA",
+      "sortIndex": 200,
+      "title": "Grandes expediciones de Zeus/Hera Familia",
+      "dateLabel": "Antes de T0 · fecha y orden exacto pendientes",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "catalog_candidate",
+      "summary": "Registro provisional de expediciones históricas. Se conserva separado del enfrentamiento con el Dragón Negro y de la posterior caída de las Familias.",
+      "participants": [],
+      "relatedEntities": [
+        {
+          "name": "Familias Zeus y Hera",
+          "kind": "faction",
+          "registered": false
+        }
+      ],
+      "detailPath": "events/candidates/EVT-DM-GREAT-QUESTS-001.md",
+      "sources": [
+        {
+          "label": "Expediente candidato de WordWaifu",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-GREAT-QUESTS-001.md",
+          "kind": "internal",
+          "note": "Secuencia y fechas todavía abiertas."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "before",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Antes de T0; fecha y orden respecto de las demás expediciones no documentados.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-GREAT-QUESTS-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "El expediente conserva la secuencia y ubicación de estas expediciones como pendientes; no se infiere que todas ocurrieran en el Dungeon."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-ZH-OEBD-001",
+      "recordId": "EVT-DM-ZH-OEBD-001",
+      "eraId": "ERA-03-ZEUS-HERA",
+      "sortIndex": 210,
+      "title": "Zeus/Hera Familia contra el Dragón Negro",
+      "dateLabel": "Antes de T0 · fecha pendiente",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "catalog_candidate",
+      "summary": "Enfrentamiento histórico aislado como un evento propio. No se fija antigüedad ni se atribuye la presencia de cada superviviente sin evidencia individual.",
+      "participants": [],
+      "relatedEntities": [
+        {
+          "name": "Dragón Negro de Un Ojo",
+          "kind": "threat",
+          "registered": false
+        },
+        {
+          "name": "Zeus/Hera Familia",
+          "kind": "faction",
+          "registered": false
+        }
+      ],
+      "detailPath": "events/candidates/EVT-DM-ZH-OEBD-001.md",
+      "sources": [
+        {
+          "label": "Expediente candidato de WordWaifu",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-ZH-OEBD-001.md",
+          "kind": "internal",
+          "note": "Fecha y secuencia requieren cotejo primario."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "before",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Antes de T0; distancia a T0 y posición respecto de otras expediciones desconocidas.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-ZH-OEBD-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La fuente enlazada es un candidato interno y no localiza el enfrentamiento con suficiente precisión para vincular una ficha geográfica."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-ZH-FALL-001",
+      "recordId": "EVT-DM-ZH-FALL-001",
+      "eraId": "ERA-03-ZEUS-HERA",
+      "sortIndex": 220,
+      "title": "Caída de Zeus y Hera Familia",
+      "dateLabel": "Antes de T0 · fecha y causa exactas pendientes",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "catalog_candidate",
+      "summary": "Pérdida de posición histórica separada del enfrentamiento con el Dragón Negro. No se cierra la secuencia causal por inferencia.",
+      "participants": [],
+      "relatedEntities": [
+        {
+          "name": "Zeus",
+          "kind": "deity",
+          "registered": false
+        },
+        {
+          "name": "Hera",
+          "kind": "deity",
+          "registered": false
+        }
+      ],
+      "detailPath": "events/candidates/EVT-DM-ZH-FALL-001.md",
+      "sources": [
+        {
+          "label": "Expediente candidato de WordWaifu",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-ZH-FALL-001.md",
+          "kind": "internal",
+          "note": "Falta el localizador primario por escena."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "before",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Antes de T0; la fecha y secuencia causal exactas siguen pendientes.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-ZH-FALL-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La caída de las Familias no tiene un lugar confirmado por la evidencia actual."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-AR-ERA-001",
+      "recordId": "EVT-DM-AR-ERA-001",
+      "eraId": "ERA-04A-ASTREA-RECORD",
+      "sortIndex": 300,
+      "title": "Astrea Record · campaña de justicia contra Evilus",
+      "dateLabel": "T−7 · aproximadamente siete años antes de Bell",
+      "continuityScopes": [
+        "CONT-AR"
+      ],
+      "evidenceStatus": "official_publisher_timeframe_primary_scene_check_pending",
+      "summary": "La sinopsis editorial oficial sitúa la historia en la Era Oscura, unos siete años antes de la llegada de Bell. Ryu busca su propia comprensión de la justicia y Alise aparece descrita como capitana de Astrea Familia. Es un arco de acontecimientos, no una sola pelea; cada participación por escena necesita su propio cotejo.",
+      "participants": [
+        {
+          "id": "CHAR-ASTREA",
+          "name": "Astrea",
+          "kind": "character",
+          "role": "Diosa vinculada a la Familia"
+        },
+        {
+          "id": "CHAR-RYUU-LION",
+          "name": "Ryu Lion / Ryuu Lion",
+          "kind": "character",
+          "role": "Busca su idea de justicia"
+        },
+        {
+          "id": "CHAR-ALISE-LOVELACE",
+          "name": "Alise Lovelace",
+          "kind": "character",
+          "role": "Capitana de Astrea Familia"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "CHAR-DARK-EREBUS",
+          "name": "Erebus",
+          "kind": "character",
+          "registered": true,
+          "note": "Ficha de investigación; presencia por escena pendiente."
+        },
+        {
+          "id": "CHAR-DARK-RUDRA",
+          "name": "Rudra",
+          "kind": "character",
+          "registered": true,
+          "note": "Ficha de investigación; encuentro exacto pendiente."
+        },
+        {
+          "id": "CHAR-DARK-VALLETTA-GREDE",
+          "name": "Valletta Grede",
+          "kind": "character",
+          "registered": true,
+          "note": "Antagonista candidato; cotejo primario pendiente."
+        },
+        {
+          "id": "CHAR-DARK-THANATOS",
+          "name": "Thanatos",
+          "kind": "character",
+          "registered": true,
+          "note": "Ficha de investigación; escenas pendientes."
+        },
+        {
+          "id": "CHAR-DARK-ZALD",
+          "name": "Zald",
+          "kind": "character",
+          "registered": true,
+          "note": "Ficha individual; ruta primaria pendiente."
+        },
+        {
+          "id": "CHAR-DARK-ALFIA",
+          "name": "Alfia",
+          "kind": "character",
+          "registered": true,
+          "note": "Ficha individual; no mezclar canon y AU."
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-AR-ERA-001.md",
+      "sources": [
+        {
+          "label": "Cronología oficial · Astrea Record",
+          "url": "https://danmachi.com/chronology/",
+          "kind": "official",
+          "note": "Sitúa la Era Oscura siete años antes de Bell."
+        },
+        {
+          "label": "GA Bunko · Astrea Record, volumen 1",
+          "url": "https://ga.sbcr.jp/product/9784815610173/",
+          "kind": "publisher",
+          "note": "Sinopsis editorial del volumen 1; no reemplaza el capítulo."
+        },
+        {
+          "label": "Yen Press · Astrea Record, volumen 1",
+          "url": "https://yenpress.com/titles/9781975379889-astrea-record-vol-1-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes",
+          "kind": "publisher",
+          "note": "Resumen editorial del periodo y los personajes principales."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "precision": "approximate",
+        "anchorId": "T0-BELL-ARRIVAL",
+        "direction": "before",
+        "amount": 7,
+        "unit": "year",
+        "qualifier": "Aproximadamente siete años antes de T0; la fuente editorial fija el marco temporal, no cada escena individual.",
+        "sourceUrls": [
+          "https://danmachi.com/chronology/",
+          "https://ga.sbcr.jp/product/9784815610173/",
+          "https://yenpress.com/titles/9781975379889-astrea-record-vol-1-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La cronología oficial sitúa Astrea Record en la Era Oscura de Orario; es un marco urbano general, no la ubicación de cada escena."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "broad_setting",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Marco general de la Era Oscura de Orario; no identifica edificio, barrio ni lugar de cada escena.",
+          "sourceUrls": [
+            "https://danmachi.com/chronology/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "recordId": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "eraId": "ERA-04B-ASTREA-AFTERMATH",
+      "sortIndex": 400,
+      "title": "Tragedia de Astrea Familia vinculada al Juggernaut",
+      "dateLabel": "T−5 · aproximadamente cinco años antes de Bell",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "secondary_timeline_primary_page_pending",
+      "summary": "Retrospectiva de la novela principal asociada al Juggernaut y a la pérdida de miembros de Astrea Familia. El marco temporal aproximado procede de rutas secundarias que deben cotejarse con el texto de la novela; no se mezcla con Astrea Record T−7.",
+      "participants": [
+        {
+          "id": "CHAR-ASTREA",
+          "name": "Astrea",
+          "kind": "character",
+          "role": "Diosa de la Familia"
+        },
+        {
+          "id": "CHAR-RYUU-LION",
+          "name": "Ryu Lion / Ryuu Lion",
+          "kind": "character",
+          "role": "Superviviente ligada a las consecuencias"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "MON-DM-JUGGERNAUT-001",
+          "name": "Juggernaut",
+          "kind": "monster",
+          "registered": true,
+          "note": "La misma amenaza tiene otra aparición registrada en la historia presente."
+        },
+        {
+          "id": "CHAR-DARK-JURA-HALMER",
+          "name": "Jura Halmer",
+          "kind": "character",
+          "registered": true,
+          "note": "Relación con la trama del Juggernaut; responsabilidad por escena pendiente de cotejo."
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md",
+      "sources": [
+        {
+          "label": "Yen Press · novela principal, volumen 13",
+          "url": "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "kind": "publisher",
+          "note": "Confirma el arco de persecución y la venganza de Ryu, no por sí sola todos los datos de la retrospectiva."
+        },
+        {
+          "label": "Cronología secundaria de DanMachi",
+          "url": "https://danmachi.fandom.com/wiki/Timeline",
+          "kind": "secondary",
+          "note": "Pista para ubicar el recuerdo T−5; cotejo primario pendiente."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "precision": "approximate",
+        "anchorId": "T0-BELL-ARRIVAL",
+        "direction": "before",
+        "amount": 5,
+        "unit": "year",
+        "qualifier": "Aproximadamente cinco años antes de T0; pista secundaria con cotejo de página primaria pendiente.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "https://danmachi.fandom.com/wiki/Timeline"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "dungeon_general",
+        "reason": "El expediente relaciona el hecho con el Juggernaut y una cronología secundaria pendiente de cotejo primario; el Dungeon es contexto relacionado, no lugar confirmado de la tragedia."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "related_context",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "dungeon_general",
+          "context": "Contexto relacionado por la amenaza; la evidencia no localiza directamente la tragedia T−5 dentro del Dungeon.",
+          "sourceUrls": [
+            "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+            "https://danmachi.fandom.com/wiki/Timeline"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-RYUU-REVENGE-001",
+      "recordId": "EVT-DM-RYUU-REVENGE-001",
+      "eraId": "ERA-04B-ASTREA-AFTERMATH",
+      "sortIndex": 410,
+      "title": "Ryu persigue su venganza contra los remanentes de Evilus",
+      "dateLabel": "Después de T−5 y antes de T0 · duración sin fijar",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "retrospective_primary_page_pending",
+      "summary": "Se registra como una etapa de acciones y consecuencias, no como un combate con fecha única. No se inventa una lista de víctimas, lugares ni adversarios individuales cuando falta una escena publicada localizada.",
+      "participants": [
+        {
+          "id": "CHAR-RYUU-LION",
+          "name": "Ryu Lion / Ryuu Lion",
+          "kind": "character",
+          "role": "Busca venganza tras las pérdidas del pasado"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "name": "Evilus",
+          "kind": "faction",
+          "registered": false,
+          "note": "La participación de individuos concretos requiere su escena y referencia propia."
+        },
+        {
+          "id": "CHAR-DARK-JURA-HALMER",
+          "name": "Jura Halmer",
+          "kind": "character",
+          "registered": true,
+          "note": "Antagonista registrado; no implica que cada acto previo de venganza fuera contra él."
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-RYUU-REVENGE-001.md",
+      "sources": [
+        {
+          "label": "Yen Press · novela principal, volumen 13",
+          "url": "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "kind": "publisher",
+          "note": "La sinopsis editorial vincula la persecución de Bell con la sed de venganza de Ryu."
+        },
+        {
+          "label": "Cronología secundaria de DanMachi",
+          "url": "https://danmachi.fandom.com/wiki/Timeline",
+          "kind": "secondary",
+          "note": "Ruta para ubicar hechos retrospectivos, no sustituto del texto principal."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "between",
+        "referenceIds": [
+          "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Entre la tragedia T−5 y T0; duración e hitos intermedios no calculables.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "https://danmachi.fandom.com/wiki/Timeline"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La evidencia vincula la venganza de Ryu con la retrospectiva, pero no determina dónde ocurrieron los actos de persecución."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-HESTIA-DESCENT-001",
+      "recordId": "EVT-DM-HESTIA-DESCENT-001",
+      "eraId": "ERA-04-PRE-BELL",
+      "sortIndex": 500,
+      "title": "Llegada de Hestia al mundo inferior",
+      "dateLabel": "Antes de T0 · posición exacta respecto de T−7/T−5 abierta",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "candidate_primary_locator_pending",
+      "summary": "Hito previo a la historia de Bell. No se le asigna T−1 ni se fuerza dentro de Astrea Record; su posición exacta en relación con los sucesos de Ryu requiere fuente.",
+      "participants": [
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "Deidad de la Familia Hestia"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/candidates/EVT-DM-HESTIA-DESCENT-001.md",
+      "sources": [
+        {
+          "label": "Expediente candidato de WordWaifu",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-HESTIA-DESCENT-001.md",
+          "kind": "internal",
+          "note": "Posición temporal exacta pendiente."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "before",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Antes de T0; su posición respecto de T−7 y T−5 no está establecida.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-HESTIA-DESCENT-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La llegada al mundo inferior no demuestra que el punto de llegada fuera Orario ni permite asignar un lugar concreto."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-BELL-ARRIVAL-001",
+      "recordId": "EVT-DM-BELL-ARRIVAL-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 600,
+      "title": "Bell llega a Orario",
+      "dateLabel": "T0 · ancla de la historia principal",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "official_chronology_anchor_scene_check_pending",
+      "summary": "El portal oficial reconoce la llegada de Bell a Orario como hito cronológico. WordWaifu la usa como origen relativo de trabajo, no como día o año calendárico.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "Su llegada define T0"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-BELL-ARRIVAL-001.md",
+      "sources": [
+        {
+          "label": "Cronología oficial de DanMachi",
+          "url": "https://danmachi.com/chronology/",
+          "kind": "official",
+          "note": "Hito oficial; no publica una fecha de calendario."
+        }
+      ],
+      "temporal": {
+        "kind": "anchor",
+        "precision": "anchor",
+        "anchorId": "T0-BELL-ARRIVAL",
+        "qualifier": "Ancla relativa; no equivale a una fecha de calendario.",
+        "sourceUrls": [
+          "https://danmachi.com/chronology/"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La cronología oficial nombra la llegada de Bell a Orario; la relación se limita al nivel de ciudad, sin coordenadas ni punto urbano."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Llegada a la ciudad de Orario; la fuente no fija puerta, calle ni coordenadas.",
+          "sourceUrls": [
+            "https://danmachi.com/chronology/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-BELL-MEETS-HESTIA-001",
+      "recordId": "EVT-DM-BELL-MEETS-HESTIA-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 610,
+      "title": "Primer encuentro de Bell y Hestia",
+      "dateLabel": "Poco después de T0 · fecha exacta abierta",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "candidate_primary_locator_pending",
+      "summary": "Es un acontecimiento independiente de la llegada de Bell. Conduce a la formación de la Familia Hestia, pero no se le asigna una cantidad de días sin cotejar el capítulo.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "Aventurero recién llegado"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "Fundadora de la Familia"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md",
+      "sources": [
+        {
+          "label": "Expediente candidato de WordWaifu",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md",
+          "kind": "internal",
+          "note": "Localizador de capítulo pendiente."
+        },
+        {
+          "label": "GA文庫 · volumen 1, Orario y Dungeon",
+          "kind": "publisher",
+          "note": "Sinopsis editorial oficial: Orario es una ciudad que posee el Dungeon; no determina ubicación exacta de escenas.",
+          "url": "https://ga.sbcr.jp/product/9784797372809/"
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Poco después de T0; el capítulo/localizador y la cantidad de días son desconocidos.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La sinopsis editorial del volumen 1 presenta el encuentro de Bell con Hestia en el marco de Orario; no identifica un edificio o punto urbano."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Ciudad identificada a nivel general; no se infiere una residencia o edificio concreto.",
+          "sourceUrls": [
+            "https://ga.sbcr.jp/product/9784797372809/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-BELL-AIS-MINOTAUR-001",
+      "recordId": "EVT-DM-BELL-AIS-MINOTAUR-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 620,
+      "title": "Ais rescata a Bell del Minotauro",
+      "dateLabel": "Inicio de la historia · poco después de T0",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "publisher_scope_primary_scene_pending",
+      "summary": "La intervención de Ais ante un Minotauro es un hito que transforma la meta de Bell. Se conserva separado de la llegada a Orario y de su primer encuentro con Hestia.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "Aventurero rescatado"
+        },
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "Interviene en el rescate"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "name": "Minotauro",
+          "kind": "monster",
+          "registered": false,
+          "note": "Este evento todavía no crea una ficha singular para el monstruo estándar."
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md",
+      "sources": [
+        {
+          "label": "Cronología oficial de DanMachi",
+          "url": "https://danmachi.com/chronology/",
+          "kind": "official",
+          "note": "Punto de entrada cronológico; capítulo/página pendiente."
+        },
+        {
+          "label": "Yen Press · novela principal, volumen 1",
+          "kind": "publisher",
+          "note": "Sinopsis editorial del volumen 1; respalda el marco general de Orario/Dungeon, no un localizador interno de escena.",
+          "url": "https://yenpress.com/titles/9780316340137-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-1-light-novel"
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "La etiqueta lo sitúa poco después de T0; no especifica intervalo numérico ni localizador de escena.",
+        "sourceUrls": [
+          "https://danmachi.com/chronology/"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "dungeon_general",
+        "reason": "La relación con el Dungeon es un candidato coherente con el evento y su marco publicado, pero el localizador primario de la escena sigue pendiente; no se asigna piso."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "dungeon_general",
+          "context": "Candidato a nivel Dungeon. Sin piso ni coordenada; cotejo primario de escena pendiente.",
+          "sourceUrls": [
+            "https://danmachi.com/chronology/",
+            "https://yenpress.com/titles/9780316340137-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-1-light-novel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-EINA-ADVISOR-001",
+      "recordId": "EVT-DM-EINA-ADVISOR-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 630,
+      "title": "Eina empieza a asesorar a Bell",
+      "dateLabel": "Primeros volúmenes · secuencia exacta pendiente",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "candidate_primary_locator_pending",
+      "summary": "Acontecimiento de relación entre Bell y la Guild que deberá tener su localizador primario. Aparece para que no se pierda entre episodios de la historia principal.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "Aventurero asesorado"
+        },
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "Asesora de la Guild"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/candidates/EVT-DM-EINA-ADVISOR-001.md",
+      "sources": [
+        {
+          "label": "Expediente candidato de WordWaifu",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-EINA-ADVISOR-001.md",
+          "kind": "internal",
+          "note": "Capítulo exacto pendiente."
+        },
+        {
+          "label": "GA文庫 · volumen 1, Orario y Dungeon",
+          "kind": "publisher",
+          "note": "Sinopsis editorial oficial: Orario es una ciudad que posee el Dungeon; no determina ubicación exacta de escenas.",
+          "url": "https://ga.sbcr.jp/product/9784797372809/"
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Dentro de los primeros volúmenes según la etiqueta existente; orden y capítulo exactos pendientes.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-EINA-ADVISOR-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "city_level",
+        "reason": "Orario es solo contexto urbano de la actividad de la Guild; el lugar físico exacto de la asesoría no está documentado."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "related_context",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "city_level",
+          "context": "Contexto urbano general de la Guild; no confirma el sitio de la conversación con Eina.",
+          "sourceUrls": [
+            "https://ga.sbcr.jp/product/9784797372809/",
+            "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-EINA-ADVISOR-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-RYUU-JURA-PURSUIT-001",
+      "recordId": "EVT-DM-RYUU-JURA-PURSUIT-001",
+      "eraId": "ERA-06-MAIN-V13-14",
+      "sortIndex": 700,
+      "title": "Bell persigue a Ryu; la pista conduce a Jura",
+      "dateLabel": "Meses después de T0 · arco del volumen 13; día exacto abierto",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "publisher_volume_scope_secondary_day_count",
+      "summary": "Tras ser acusada de un asesinato, Ryu se convierte en fugitiva y Bell la sigue para aclarar lo ocurrido. La vinculación concreta con Jura aparece en el arco de la expedición; la cronología diaria secundaria debe cotejarse con los capítulos.",
+      "participants": [
+        {
+          "id": "CHAR-RYUU-LION",
+          "name": "Ryu Lion / Ryuu Lion",
+          "kind": "character",
+          "role": "Fugitiva y figura central del caso"
+        },
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "Persigue a Ryu para aclarar el caso"
+        },
+        {
+          "id": "CHAR-DARK-JURA-HALMER",
+          "name": "Jura Halmer",
+          "kind": "character",
+          "role": "Antagonista relacionado con la trama del Juggernaut"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-RYUU-JURA-PURSUIT-001.md",
+      "sources": [
+        {
+          "label": "Yen Press · volumen 13",
+          "url": "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "kind": "publisher",
+          "note": "Confirma el marco editorial: Ryu es fugitiva y Bell la persigue; no fija los días exactos."
+        },
+        {
+          "label": "Cronología secundaria de DanMachi",
+          "url": "https://danmachi.fandom.com/wiki/Timeline",
+          "kind": "secondary",
+          "note": "Pista para localizar fechas internas, pendiente de cotejo primario."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Marco editorial del volumen 13 y meses después de T0 según la etiqueta actual; día exacto no fijado.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "https://danmachi.fandom.com/wiki/Timeline"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "dungeon_general",
+        "reason": "La sinopsis del volumen 13 y la referencia secundaria sitúan el arco en el marco de Rivira/Jura, pero falta cotejo primario del lugar preciso de persecución."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "related_context",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "dungeon_general",
+          "context": "Contexto relacionado del arco de Rivira/Jura; no implica que toda la persecución ocurra en un único punto del Dungeon.",
+          "sourceUrls": [
+            "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+            "https://danmachi.fandom.com/wiki/Timeline"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-JUGGERNAUT-RETURN-001",
+      "recordId": "EVT-DM-JUGGERNAUT-RETURN-001",
+      "eraId": "ERA-06-MAIN-V13-14",
+      "sortIndex": 710,
+      "title": "Jura provoca una nueva aparición del Juggernaut",
+      "dateLabel": "Volúmenes 13–14 · meses después de T0",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "publisher_scope_primary_scene_pending",
+      "summary": "La amenaza reaparece durante una crisis de la expedición actual. Es un suceso distinto de la tragedia T−5 aunque la criatura implicada tenga la misma ficha de entidad.",
+      "participants": [
+        {
+          "id": "CHAR-DARK-JURA-HALMER",
+          "name": "Jura Halmer",
+          "kind": "character",
+          "role": "Antagonista relacionado con la nueva crisis"
+        },
+        {
+          "id": "CHAR-RYUU-LION",
+          "name": "Ryu Lion / Ryuu Lion",
+          "kind": "character",
+          "role": "Reconoce la amenaza por su pasado"
+        },
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "Afronta la crisis del Dungeon"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "MON-DM-JUGGERNAUT-001",
+          "name": "Juggernaut",
+          "kind": "monster",
+          "registered": true,
+          "note": "Entidad con ficha propia; esta es su aparición en la historia presente."
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-JUGGERNAUT-RETURN-001.md",
+      "sources": [
+        {
+          "label": "Yen Press · volumen 13",
+          "url": "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "kind": "publisher",
+          "note": "Sinopsis editorial del arco; el orden de cada escena requiere la novela."
+        },
+        {
+          "label": "Sinopsis comunitaria del volumen 13",
+          "url": "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_13/Synopsis",
+          "kind": "secondary",
+          "note": "Referencia de apoyo, no canon primario."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Marco de los volúmenes 13–14 descrito como meses después de T0; no se fuerza una distancia numérica.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+          "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_13/Synopsis"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "dungeon_general",
+        "reason": "La nueva aparición se relaciona con el arco del volumen 13 y el Dungeon, pero el localizador de la escena sigue pendiente; no se asigna zona ni piso."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "related_context",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "dungeon_general",
+          "context": "Contexto del arco del Juggernaut; no se afirma una posición concreta ni se trazan rutas.",
+          "sourceUrls": [
+            "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
+            "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_13/Synopsis"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-JUGGERNAUT-DEFEAT-001",
+      "recordId": "EVT-DM-JUGGERNAUT-DEFEAT-001",
+      "eraId": "ERA-06-MAIN-V13-14",
+      "sortIndex": 720,
+      "title": "Bell y Ryu quedan aislados en la crisis del piso 37",
+      "dateLabel": "Continuación en el volumen 14 · fecha interna abierta",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "publisher_volume_scope_primary_outcome_check_pending",
+      "summary": "El volumen 14 continúa la calamidad que deja a Bell y Ryu heridos y aislados en las profundidades. Esta ficha queda separada de la aparición inicial y de la retrospectiva T−5.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "Busca sobrevivir y regresar"
+        },
+        {
+          "id": "CHAR-RYUU-LION",
+          "name": "Ryu Lion / Ryuu Lion",
+          "kind": "character",
+          "role": "Su experiencia y pasado condicionan la supervivencia"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "MON-DM-JUGGERNAUT-001",
+          "name": "Juggernaut",
+          "kind": "monster",
+          "registered": true,
+          "note": "Vínculo con la misma amenaza; evento distinto."
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-JUGGERNAUT-DEFEAT-001.md",
+      "sources": [
+        {
+          "label": "Yen Press · volumen 14",
+          "url": "https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel",
+          "kind": "publisher",
+          "note": "Confirma el marco de Bell/Ryu varados en los pisos 27 y 37, no cada detalle de escena."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "precision": "order_only",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "qualifier": "Continuación en el volumen 14; fecha interna y distancia exacta respecto de T0 permanecen abiertas.",
+        "sourceUrls": [
+          "https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "dungeon_general",
+        "reason": "La sinopsis editorial del volumen 14 coloca a Bell y Ryu profundamente dentro del Dungeon. El vínculo se limita al Dungeon general; no crea una ficha de piso ni coordenadas."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "dungeon_general",
+          "context": "Dentro del Dungeon durante la crisis descrita como piso 37; sin ficha de piso ni coordenada.",
+          "sourceUrls": [
+            "https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel"
+          ]
+        }
+      ]
+    }
+  ],
+  "temporalModelVersion": 1,
+  "locations": [
+    {
+      "id": "LOC-ORARIO",
+      "type": "location",
+      "recordPath": "places/orario.md",
+      "name": "Orario",
+      "verificationStatus": "verified",
+      "spatialPrecision": "city_level",
+      "description": "Ciudad laberíntica asociada a la historia principal de Bell y al Dungeon.",
+      "sourceUrls": [
+        "https://ga.sbcr.jp/product/9784797372809/"
+      ],
+      "relationships": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "associated_with",
+          "sourceUrls": [
+            "https://ga.sbcr.jp/product/9784797372809/"
+          ],
+          "label": "Orario posee el Dungeon subterráneo; solo se representa la relación general."
+        }
+      ]
+    },
+    {
+      "id": "LOC-DUNGEON",
+      "type": "location",
+      "recordPath": "places/dungeon.md",
+      "name": "Dungeon",
+      "verificationStatus": "verified",
+      "spatialPrecision": "dungeon_general",
+      "description": "Laberinto subterráneo asociado a Orario. No se registra topología de pisos ni coordenadas.",
+      "sourceUrls": [
+        "https://ga.sbcr.jp/product/9784797372809/"
+      ],
+      "relationships": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "associated_with",
+          "sourceUrls": [
+            "https://ga.sbcr.jp/product/9784797372809/"
+          ],
+          "label": "El Dungeon está asociado geográfica y narrativamente a Orario."
+        }
+      ]
+    }
+  ],
+  "mapPresentation": {
+    "type": "non_geographic_relationship_schematic",
+    "label": "Esquema de relaciones · no geográfico · sin escala",
+    "hasGeographicCoordinates": false,
+    "scale": null,
+    "note": "Los nodos representan fichas y vínculos documentados del corpus. El orden visual no es orientación, distancia, coordenadas, barrios, rutas ni topología canónica."
+  }
+}

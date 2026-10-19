@@ -36,6 +36,8 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 
 ### Mapa maestro
 - [Mapa de eras y terminología](timeline/00-mapa-de-eras.md)
+- [Mapa temporal interactivo (datos validados)](timeline/eras-and-events.json) — árbol de épocas, 15 acontecimientos con etiquetas temporales explícitas, filtros por continuidad y esquema de lugares sin coordenadas inventadas; la interfaz vive en la enciclopedia de la aplicación.
+- [Modelo temporal DanMachi](../../docs/DANMACHI-TEMPORAL-MODEL.md) y [contrato de validación TLM-002](../../docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md) — variantes de tiempo, reglas de anclas y límites probatorios.
 - [Índice maestro de eventos](timeline/03-indice-eventos.md)
 - [Índice de eventos candidatos documentados](events/00-indice-candidatos.md)
 - [Hitos cronológicos pendientes](timeline/04-hitos-pendientes.md)
@@ -100,6 +102,17 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 
 ### Eventos concretos ya preparados
 - [Índice de eventos candidatos](events/00-indice-candidatos.md)
+
+### Acontecimientos históricos con cronología tipada
+
+- [Astrea Record · Era Oscura, T−7 aproximado](events/timeline/EVT-DM-AR-ERA-001.md)
+- [Tragedia de Astrea Familia/Juggernaut · T−5 aproximado](events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md)
+- [Llegada de Bell a Orario · ancla T0](events/timeline/EVT-DM-BELL-ARRIVAL-001.md)
+- [Primer encuentro Bell–Ais con el Minotauro](events/timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md)
+- [Persecución de Ryu y Jura](events/timeline/EVT-DM-RYUU-JURA-PURSUIT-001.md)
+- [Regreso del Juggernaut en los volúmenes 13–14](events/timeline/EVT-DM-JUGGERNAUT-RETURN-001.md)
+- [Derrota del Juggernaut](events/timeline/EVT-DM-JUGGERNAUT-DEFEAT-001.md)
+- [Venganza de Ryu · intervalo relativo pendiente de precisión](events/timeline/EVT-DM-RYUU-REVENGE-001.md)
 - [Descenso de las deidades](events/candidates/EVT-DM-DESCENT-001.md)
 - [Zeus/Hera contra el Dragón Negro](events/candidates/EVT-DM-ZH-OEBD-001.md)
 - [Caída/pérdida de posición de Zeus y Hera](events/candidates/EVT-DM-ZH-FALL-001.md)
@@ -179,3 +192,4 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Soma](characters/soma.md), [Zanis Lustra](characters/zanis-lustra.md), [Chandra Ihit](characters/chandra-ihit.md) y [Canoe Belway](characters/canoe-belway.md) — fichas parciales conectadas por aristas estables del catálogo.
 - [DANMACHI-RESEARCH-025 · red relacional de Soma](research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md) — nueve relaciones trazables; separa la captura citada por sinopsis editorial, los cargos secundarios y el informe no resuelto sobre Canoe.
 - Nota de rigor: la sinopsis editorial de los volúmenes 2 y 6 no equivale al texto completo. Las relaciones secundarias permanecen marcadas hasta localizar pasajes primarios.
+- [DANMACHI-RESEARCH-029 · Procedencia de personajes históricos](research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md) — corrige los claim_refs ajenos de Alfia, Zald, Erebus, Jura y Rudra; Thanatos y Valletta siguen como pistas secundarias sin claim narrativo aceptado.

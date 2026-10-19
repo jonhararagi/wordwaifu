@@ -556,3 +556,54 @@ select{background:#332d26;color:#e9dfd2}
 .danmachi-dossier-source-match{outline:2px solid #c99f62;outline-offset:3px;background:#3b3021;border-radius:4px}
 .danmachi-dossier-error{margin:0;padding:12px;border:1px solid #8d5a47;border-radius:9px;background:#35231e;color:#f1c8b7;font-size:12px;line-height:1.7}
 @media(max-width:650px){.danmachi-dossier-dialog{width:calc(100vw - 10px);max-height:96vh;border-radius:12px}.danmachi-dossier-content{max-height:96vh;padding:12px}.danmachi-dossier-body{max-height:59vh}.danmachi-dossier-header-actions{width:100%}.danmachi-dossier-header-actions button{flex:1 0 auto}.danmachi-dossier-related{max-height:170px}}
+
+/* DanMachi: interactive era tree and historical event lane, independent from the user's original-world map. */
+.danmachi-timeline-panel{display:grid;gap:14px;margin:4px 0 20px;padding:18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(140deg,#111c25,#151a23)}
+.dm-timeline-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}.dm-timeline-heading h3{margin:4px 0 7px;font-size:21px}.dm-timeline-heading p:not(.eyebrow){max-width:760px;margin:0;color:var(--muted);font-size:12px;line-height:1.65}.dm-timeline-anchor{flex:0 0 auto;padding:9px 12px;border:1px solid #4c7966;border-radius:10px;background:#112820;color:#c5f6d3;font-size:11px;font-weight:750}
+.dm-timeline-tabs{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px}.dm-timeline-tab{border:1px solid var(--line);background:#101720;color:var(--muted);border-radius:9px;padding:10px 13px;font-size:12px;cursor:pointer}.dm-timeline-tab.is-active{border-color:#6bc38d;background:#193329;color:#d8ffe4}
+.dm-timeline-controls{display:grid;grid-template-columns:minmax(180px,1fr) minmax(190px,.7fr) minmax(220px,.9fr);gap:10px}.dm-timeline-controls label{display:grid;gap:6px;color:var(--muted);font-size:10px}.dm-timeline-controls input,.dm-timeline-controls select{width:100%;min-width:0;border:1px solid var(--line);border-radius:8px;background:#0f151d;color:var(--text);padding:10px 11px;font-size:12px}
+.dm-timeline-status{margin:0;padding:10px 12px;border-left:3px solid #70c58c;background:#121c25;color:var(--muted);font-size:11px;line-height:1.6}
+.dm-timeline-eras{display:grid;gap:12px}.dm-era-node{display:grid;gap:9px;position:relative}.dm-era-node--child{margin-left:clamp(14px,calc(var(--era-depth)*24px),72px);padding-left:14px;border-left:2px solid #37594b}.dm-era-card{padding:14px;border:1px solid var(--line);border-radius:12px;background:#111922;min-width:0}.dm-era-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.dm-era-index{font-size:9px;letter-spacing:.08em;color:#80c99d;font-weight:800}.dm-era-certainty{font-size:9px;color:#d8c89e;background:#2c281b;border:1px solid #4b432b;border-radius:99px;padding:4px 7px}.dm-era-card h4{margin:8px 0 4px;font-size:15px}.dm-era-date{margin:0 0 7px;color:#92ccb1;font-size:11px;font-weight:700}.dm-era-summary,.dm-era-notes{margin:0;color:var(--muted);font-size:11px;line-height:1.65}.dm-era-notes{margin-top:7px;color:#c0b58e}.dm-era-children{display:grid;gap:9px}.dm-era-event-links{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px;padding-top:10px;border-top:1px solid var(--line)}.dm-era-event-link{max-width:100%;text-align:left;border:1px solid #385848;background:#14261e;color:#c8f5d6;border-radius:8px;padding:7px 9px;font-size:10px;line-height:1.4;cursor:pointer}.dm-era-event-link:hover{border-color:#7dd59d}
+.dm-timeline-events-view{display:grid;gap:16px}.dm-event-era-group{display:grid;gap:8px}.dm-event-era-heading{font-size:14px;font-weight:800;color:var(--text)}.dm-event-era-range{margin:-4px 0 0;color:var(--muted);font-size:10px}.dm-event-track{display:grid;gap:12px;margin-left:7px;padding-left:23px;border-left:2px solid #385a49}.dm-historical-event{position:relative;scroll-margin-top:16px}.dm-event-dot{position:absolute;left:-30px;top:20px;width:12px;height:12px;border:3px solid #15251c;border-radius:50%;background:#80d49b;box-shadow:0 0 0 1px #3a7752}.dm-event-card{padding:15px;border:1px solid var(--line);border-radius:12px;background:#111922;transition:border-color .15s,box-shadow .15s}.dm-historical-event.is-selected .dm-event-card{border-color:#81d9a0;box-shadow:0 0 0 2px #244b34}.dm-event-card-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.dm-event-date{font-size:10px;font-weight:800;color:#9de2b2}.dm-event-evidence{font-size:9px;color:#d8c89e;border:1px solid #4b432b;border-radius:99px;padding:4px 7px;background:#2c281b}.dm-event-card h4{margin:10px 0 7px;font-size:15px;line-height:1.4}.dm-event-summary{margin:0;color:#d0d7dc;font-size:12px;line-height:1.7}.dm-event-participants,.dm-event-related{display:grid;gap:7px;margin-top:12px}.dm-event-participants>strong,.dm-event-related>strong,.dm-event-sources>strong{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}.dm-event-person-list{display:flex;flex-wrap:wrap;gap:6px}.dm-timeline-person{border:1px solid #426b53;border-radius:99px;background:#142b20;color:#d5f5df;padding:6px 9px;font-size:10px;cursor:pointer}.dm-timeline-person--plain{display:inline-flex;align-items:center;cursor:default;border-color:var(--line);background:#18212b;color:#c7d0d8}.dm-event-sources{display:flex;align-items:center;gap:8px 13px;flex-wrap:wrap;margin-top:13px;padding-top:10px;border-top:1px solid var(--line)}.dm-event-source-link,.dm-event-record-link{font-size:10px;line-height:1.5;color:#8ee0ae;text-decoration:none}.dm-event-source-link:hover,.dm-event-record-link:hover{text-decoration:underline}.dm-timeline-empty{padding:20px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:12px}.danmachi-timeline-panel .hidden{display:none!important}
+@media(max-width:800px){.dm-timeline-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.dm-timeline-heading{flex-direction:column}.dm-timeline-anchor{align-self:flex-start}.dm-era-node--child{margin-left:14px}}
+@media(max-width:520px){.danmachi-timeline-panel{padding:12px}.dm-timeline-controls{grid-template-columns:1fr}.dm-timeline-heading h3{font-size:18px}.dm-timeline-tab{flex:1 1 100%;text-align:left}.dm-era-node--child{margin-left:8px;padding-left:8px}.dm-event-card{padding:12px}.dm-event-track{padding-left:17px}.dm-event-dot{left:-24px}}
+
+
+/* TLM-002: make the epistemic class of a date visible independently from its text and source status. */
+.dm-event-temporal{display:inline-flex;align-items:center;max-width:100%;padding:4px 7px;border:1px solid #51466c;border-radius:99px;background:#241f35;color:#e2d8ff;font-size:9px;line-height:1.4;white-space:normal}
+.dm-event-temporal--relative_offset{border-color:#486d8d;background:#142638;color:#c3e5ff}
+.dm-event-temporal--relative_order{border-color:#6a5a39;background:#292315;color:#f5dfaa}
+.dm-event-temporal--unknown,.dm-event-temporal--legacy{border-style:dashed;border-color:#5d6670;background:#20252c;color:#d2d8df}
+.dm-event-temporal--anchor{border-color:#3c7960;background:#122a20;color:#c8f6d8}
+.dm-event-temporal--approximate_interval{border-color:#74629f;background:#261f38;color:#e2d7ff}
+
+
+/* TLM-003: source-linked DanMachi relationship schematic. No coordinates or scale. */
+.dm-timeline-map-view{display:grid;gap:14px}
+.dm-map-summary,.dm-map-place-card,.dm-map-place-detail,.dm-map-unlocated{padding:14px;border:1px solid var(--line);border-radius:12px;background:#111922;min-width:0}
+.dm-map-nongeographic-warning{margin:0 0 12px;padding:10px 12px;border-left:3px solid #c69b52;background:#282315;color:#f5dfaa;font-size:11px;line-height:1.6;font-weight:750}
+.dm-map-counts{display:flex;gap:7px;flex-wrap:wrap}
+.dm-map-count,.dm-map-place-status,.dm-map-ref-status,.dm-map-place-id{display:inline-flex;align-items:center;max-width:100%;padding:4px 8px;border:1px solid #3b6651;border-radius:999px;background:#16271f;color:#c8f5d6;font-size:10px;line-height:1.5}
+.dm-map-count--provisional,.dm-map-ref-status{border-color:#8b744a;background:#2b2418;color:#f3dfaf}
+.dm-map-count--unknown{border-color:#5d6670;background:#20252c;color:#d2d8df}
+.dm-map-place-registry,.dm-map-place-grid{display:grid;gap:12px}
+.dm-map-place-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dm-map-place-card{display:grid;gap:9px;border-top:2px solid #587c96}
+.dm-map-place-heading,.dm-map-place-detail-heading{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.dm-map-place-card h4,.dm-map-place-detail h3{margin:0;font-size:16px}
+.dm-map-place-description,.dm-map-place-note,.dm-event-location-reason{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
+.dm-map-place-note{font-style:italic}
+.dm-map-place-relations,.dm-map-place-events,.dm-map-place-links{display:grid;gap:8px;margin-top:5px}
+.dm-map-place-relations>strong,.dm-map-place-events>strong,.dm-map-place-events h4{margin:0;font-size:11px;color:var(--muted)}
+.dm-map-place-relation,.dm-map-event-link,.dm-map-unlocated-event{display:grid;gap:6px;padding:9px;border:1px solid var(--line);border-radius:9px;background:#151f29;font-size:11px;line-height:1.5}
+.dm-map-event-link{grid-template-columns:1fr auto;align-items:center}
+.dm-map-event-link .dm-map-ref-status{grid-column:1/-1;width:max-content}
+.dm-map-unlocated h3,.dm-map-place-registry h3{margin:0 0 9px;font-size:14px}
+.dm-event-locations{display:grid;gap:7px;margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.dm-event-locations>strong{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.dm-event-location-list{display:flex;flex-wrap:wrap;gap:7px}
+.dm-timeline-location-link,.dm-timeline-event-link,.dm-timeline-return-link{max-width:100%;border:1px solid #4b6e86;border-radius:8px;background:#152635;color:#c8e7fa;padding:7px 10px;font-size:10px;line-height:1.5;cursor:pointer;text-align:left}
+.dm-timeline-location-link:hover,.dm-timeline-event-link:hover,.dm-timeline-return-link:hover{border-color:#91cbec}
+.dm-timeline-unlocated-badge{width:max-content;max-width:100%;border:1px dashed #66727e;border-radius:99px;background:#20252c;color:#d2d8df;padding:5px 8px;font-size:10px}
+.dm-timeline-return-link{border-color:#6e5a3b;background:#292315;color:#f5dfaa}
+@media(max-width:650px){.dm-map-place-grid{grid-template-columns:1fr}.dm-map-event-link{grid-template-columns:1fr}.dm-map-event-link .dm-map-ref-status{grid-column:auto}}
