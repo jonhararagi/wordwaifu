@@ -21,7 +21,8 @@ const paths=[
   "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
   "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
   "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
-  "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"
+  "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
+  "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"
 ];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
