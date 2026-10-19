@@ -1288,7 +1288,7 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_volume_summary
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-002]
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-002, DMR-029-CLM-007]
 - continuity_scope: CONT-AR
 - reliability_note: Navigation clue; not page-by-page verification.
 - rights_note: Link and paraphrase only; do not copy article prose.
