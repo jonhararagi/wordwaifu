@@ -1275,6 +1275,20 @@
       ],
       "status": "provisional_primary_scene_check_pending",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-MAXIM",
+      "path": "characters/maxim.md",
+      "type": "character",
+      "tags": [
+        "Maxim",
+        "マキシム",
+        "Zeus Familia",
+        "captain",
+        "historical roster"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
