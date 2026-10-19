@@ -284,3 +284,8 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se añadieron pruebas para comprobar el montaje HTML, la carga del módulo y la presencia de los estilos, además de sumar validación temporal al workflow de integridad.
 - Estado de evidencia preservado: T−7/T−5 se mantienen aproximados, T0 es ancla relativa, y los claims con cotejo primario pendiente conservan su estado provisional.
 - El lote se debe fusionar únicamente tras Validate WordWaifu, DanMachi Lore and Retrieval Integrity, test_danmachi_timeline.cjs y check-timeline.mjs en verde.
+## INTEGRATION-BATCH-001B · Reparación de procedencia histórica (2026-10-19)
+- Se detectó que algunas fichas de la Era Oscura reutilizaban claims DMR-014 de personajes de Loki Familia; se corrigieron las referencias para que correspondan a las entidades descritas.
+- Se importó la investigación de Zeus/Hera y se registraron sus seis fuentes comunitarias como bloque separado.
+- Se creó DMR-029 con cinco claims secundarios y 14 fuentes; los datos de Thanatos y Valletta continúan como leads sin afirmar su aparición en la novela revisada.
+- Se respetó el ID reservado CHAR-METERIA: no se creó una segunda ficha y la relación Alfia–Meteria permanece enlazada a la investigación secundaria.
