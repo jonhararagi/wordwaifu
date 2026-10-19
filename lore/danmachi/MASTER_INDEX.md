@@ -37,6 +37,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 ### Mapa maestro
 - [Mapa de eras y terminología](timeline/00-mapa-de-eras.md)
 - [Mapa temporal interactivo (datos validados)](timeline/eras-and-events.json) — árbol de épocas, 15 acontecimientos con etiquetas temporales explícitas, filtros por continuidad y esquema de lugares sin coordenadas inventadas; la interfaz vive en la enciclopedia de la aplicación.
+- [Modelo temporal DanMachi](../../docs/DANMACHI-TEMPORAL-MODEL.md) y [contrato de validación TLM-002](../../docs/TLM-002-TEMPORAL-MODEL-CONTRACT.md) — variantes de tiempo, reglas de anclas y límites probatorios.
 - [Índice maestro de eventos](timeline/03-indice-eventos.md)
 - [Índice de eventos candidatos documentados](events/00-indice-candidatos.md)
 - [Hitos cronológicos pendientes](timeline/04-hitos-pendientes.md)
