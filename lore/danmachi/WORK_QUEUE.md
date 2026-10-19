@@ -363,3 +363,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Abrir las referencias enlazadas desde las páginas de wiki y localizar volumen/capítulo/página para cada afirmación sobre Kaguya, Lyra, Alise, la aparición del Juggernaut y la nueva generación.
 - [ ] Resolver de forma explícita cualquier discrepancia entre páginas comunitarias antes de cambiar el estatus de una claim.
 - [ ] Después de localizar pasajes primarios, actualizar solo las claims afectadas y sus aristas; no ascender automáticamente toda la ficha o la cronología.
+
+## DANMACHI-RESEARCH-028 — ampliación de pistas de wikis (2026-10-19)
+- [x] Recuperar detalles secundarios de historia/motivación para Celty e Iska y capacidades atribuidas a Maryuu, Asta, Neze, Noin y Ryana.
+- [x] Enlazar relación reportada Celty–Ryana y Celty–Ryuu con claims y procedencia navegables.
+- [x] Exponer las cuatro nuevas fuentes comunitarias en el directorio local y probar la búsqueda de sus afirmaciones.
+- [ ] Cotejar cada claim con capítulos/escenas de las novelas o relatos oficiales antes de elevar el estado por encima de secondary_checked.
+- [ ] Mantener por separado las estadísticas ambiguas, la continuidad histórica de Astrea Record y la presentación del anime.
