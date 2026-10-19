@@ -1096,7 +1096,7 @@ verification_status: stub
 - accessed_at: 2026-10-17
 - locator_type: community_article
 - locator: Lead; miembros; historia y relaciones
-- claims_supported: [DMR-021-CLM-001, DMR-021-CLM-003, DMR-021-CLM-006]
+- claims_supported: [DMR-021-CLM-001, DMR-021-CLM-003, DMR-021-CLM-006, DMR-029-CLM-008, DMR-029-CLM-009, DMR-029-CLM-013]
 - events_supported: [EVT-DM-ZH-OEBD-001, EVT-DM-ZH-FALL-001]
 - continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
 - reliability_note: Fuente secundaria para descubrir roster y sucesos candidatos. Rangos, participantes, fecha, resultado y estado institucional requieren cotejo primario.
@@ -1120,7 +1120,7 @@ verification_status: stub
 - accessed_at: 2026-10-17
 - locator_type: community_article
 - locator: Lead; roster; historia y organización
-- claims_supported: [DMR-021-CLM-002, DMR-021-CLM-004, DMR-021-CLM-006, DMR-021-CLM-008]
+- claims_supported: [DMR-021-CLM-002, DMR-021-CLM-004, DMR-021-CLM-006, DMR-021-CLM-008, DMR-029-CLM-008, DMR-029-CLM-010]
 - events_supported: [EVT-DM-ZH-OEBD-001, EVT-DM-ZH-FALL-001]
 - continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
 - reliability_note: Fuente secundaria; niveles, identidad de la capitanía, participantes y estado histórico requieren confirmación en novela.
@@ -1144,7 +1144,7 @@ verification_status: stub
 - accessed_at: 2026-10-17
 - locator_type: community_article
 - locator: Lead; identidad; relaciones y afiliación
-- claims_supported: [DMR-021-CLM-001, DMR-021-CLM-007]
+- claims_supported: [DMR-021-CLM-001, DMR-021-CLM-007, DMR-029-CLM-009, DMR-029-CLM-014]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
 - reliability_note: Fuente secundaria; relación con Bell y estado posterior de Zeus requieren localizador literario directo.
@@ -1168,7 +1168,7 @@ verification_status: stub
 - accessed_at: 2026-10-17
 - locator_type: community_article
 - locator: Lead; identidad y relaciones
-- claims_supported: [DMR-021-CLM-002]
+- claims_supported: [DMR-021-CLM-002, DMR-029-CLM-010]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
 - reliability_note: Fuente secundaria; personalidad, relaciones privadas y estado actual no se marcan como hechos primarios.
@@ -1192,7 +1192,7 @@ verification_status: stub
 - accessed_at: 2026-10-17
 - locator_type: community_article
 - locator: Lead; nivel y cargo; apariciones
-- claims_supported: [DMR-021-CLM-003]
+- claims_supported: [DMR-021-CLM-003, DMR-029-CLM-013]
 - events_supported: []
 - continuity_scope: CONT-AR; CONT-MAIN-LN (según la referencia secundaria)
 - reliability_note: Fuente secundaria; cargo, nivel, destino y volumen citado requieren corroboración en texto autorizado.
@@ -1216,7 +1216,7 @@ verification_status: stub
 - accessed_at: 2026-10-17
 - locator_type: community_article
 - locator: Lead; relaciones familiares; afiliación y estado biográfico
-- claims_supported: [DMR-021-CLM-004, DMR-021-CLM-005]
+- claims_supported: [DMR-021-CLM-004, DMR-021-CLM-005, DMR-029-CLM-011, DMR-029-CLM-014]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN; CONT-AR (según la referencia secundaria)
 - reliability_note: Fuente secundaria con spoilers mayores. Maternidad, parentesco, afiliación y estado requieren localizadores de novela.
@@ -1240,7 +1240,7 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_character_summary
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-001]
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-006]
 - continuity_scope: CONT-AR
 - reliability_note: Underlying novel scenes remain unchecked.
 - rights_note: Link and paraphrase only; do not copy article prose.
@@ -1256,7 +1256,7 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_ability_summary
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-001]
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-006]
 - continuity_scope: CONT-AR
 - reliability_note: Skills, costs and restrictions require primary locators.
 - rights_note: Link and paraphrase only; do not copy article prose.
@@ -1304,7 +1304,7 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_character_summary
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-002]
+- claims_supported: [DMR-029-CLM-002, DMR-029-CLM-007]
 - continuity_scope: CONT-AR
 - reliability_note: Fight details and historical level need primary locators.
 - rights_note: Link and paraphrase only; do not copy article prose.
@@ -1453,3 +1453,46 @@ verification_status: stub
 - reliability_note: Wiki article does not confirm every plot action or continuity.
 - rights_note: Link and paraphrase only; do not copy article prose.
 - verification_status: secondary_checked
+
+## DMR-029-SRC-015 · Meteria — referencia comunitaria en español
+- source_id: DMR-029-SRC-015
+- title: Meteria
+- creator_or_publisher: DanMachi Wiki contributors (Spanish)
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web dinámico
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Meteria
+- accessed_at: 2026-10-19
+- locator_type: community_character_summary
+- locator: Identidad, afiliación y relaciones familiares
+- claims_supported: [DMR-029-CLM-011]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR según la referencia secundaria
+- reliability_note: Fuente secundaria; no reemplaza los pasajes narrativos y contiene spoiler mayor.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis original breve; no copiar el artículo.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_checked
+
+## DMR-029-SRC-016 · «それは遥か彼方の静穏の夢» — nota del autor en escenario alternativo
+- source_id: DMR-029-SRC-016
+- title: それは遥か彼方の静穏の夢
+- creator_or_publisher: Fujino Omori
+- source_type: AUTHOR_NOTE
+- series: DanMachi; escenario hipotético/alternativo de autor
+- volume_or_edition: Publicación web; sin paginación editorial
+- language: Japonés
+- publication_date: 2020-08-28
+- official_url: https://note.com/fujinoomori/n/n629829ac3fe4
+- accessed_at: 2026-10-19
+- locator_type: author_web_publication
+- locator: Pasajes que describen a Meteria por medio de Alfia; el marco propone una situación alternativa en la que Alfia y Zald crían a Bell
+- claims_supported: [DMR-029-CLM-012]
+- events_supported: []
+- continuity_scope: CONT-AU
+- reliability_note: Material publicado por el autor, pero el escenario es alternativo; no acredita los mismos sucesos o decisiones para CONT-MAIN-LN.
+- conflicting_sources: []
+- rights_note: Registrar solo paráfrasis original breve; no copiar la publicación.
+- verified_by: DANMACHI-RESEARCH-019
+- verification_status: source_checked_excerpt_only
