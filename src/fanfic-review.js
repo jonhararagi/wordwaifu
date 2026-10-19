@@ -112,11 +112,12 @@
     const quotes = quoteRanges(text);
     const exceptions = Array.isArray(options.exceptions) ? options.exceptions : [];
     const issues = [];
+    const continuity = clean(options.continuity || "CONT-MAIN-LN");
     const add = issue => {
-      const key = issue.rule + "|" + issue.profileId + "|" + issue.excerpt.toLocaleLowerCase();
+      const key = continuity + "|" + issue.rule + "|" + issue.profileId + "|" + issue.excerpt.toLocaleLowerCase();
       if (exceptions.some(item => item && item.key === key)) return;
       if (issues.some(item => item.key === key)) return;
-      issues.push({ ...issue, key });
+      issues.push({ ...issue, continuity, key });
     };
     const profileFor = mention => mention && mention.profile;
     const mentionedProfiles = unique(mentions.map(m => m.profile.id)).map(id => profiles.find(p => p.id === id)).filter(Boolean);
