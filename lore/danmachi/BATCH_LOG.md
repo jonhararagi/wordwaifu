@@ -258,3 +258,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se creó el mapa ARC-MAIN-21-RESCATE-PISO-60 con la sinopsis oficial y una muestra pública del texto. El volumen 21 no se presenta como cierre de la obra.
 - El validador y las pruebas de corpus comprueban la activación de personajes y la existencia de relaciones ancladas a claims. El smoke de navegador comprueba el camino de Familia Loki a la ficha de Riveria y el retorno al expediente.
 - **Pendiente factual:** el resto del texto íntegro de las novelas, localizadores primarios, orden exacto de las escenas y todos los caminos temporales continúan fuera del alcance de este lote.
+
+
+## DANMACHI-RESEARCH-028 · Integración de pistas comunitarias de Astrea (2026-10-19)
+
+- Se consultaron páginas de DanMachi Wiki sobre Astraea Familia, Gojouno Kaguya, Lyra, Alise Lovell, Timeline y la ficha española de Ryuu Lion.
+- Se creó `research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md` con diez afirmaciones atómicas y URL/localizador de cada página. Se añadieron seis registros de fuente secundaria al registro maestro.
+- Se ampliaron las fichas de Kaguya y Lyra con biografía, valores, magia/equipo reportados por la comunidad, evitando copiar textos de la wiki y conservando una advertencia visible sobre la falta de localizador primario.
+- Se amplió la ficha de Astrea Familia con pistas sobre su función pública, la emboscada/Juggernaut, intervalos cronológicos relativos y la nueva generación. Se distinguen los datos que solo atribuye la wiki de los que la sinopsis oficial de GA Bunko corrobora parcialmente.
+- Se añadió el documento al catálogo y al cargador del buscador, y se añadieron tres aristas secundarias: desacuerdo moral Kaguya–Ryu, pertenencia reportada de Lyra y función histórica de Astrea Familia en Orario.
+- Se añadieron regresiones para recuperación de datos de Kaguya y Lyra, estado secundario, URL de fuente y navegación de relaciones. La ejecución de CI queda pendiente de comprobar después de abrir la Pull Request.
+- **Resultado factual deliberado:** ninguna de estas diez afirmaciones se eleva a canon confirmado. Prioridad de verificación: pasaje primario de la caída/Juggernaut, escena del desacuerdo Kaguya–Ryu, historia y capacidades de Lyra, estadísticas de Alise y datos de la nueva generación.
