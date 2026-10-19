@@ -370,3 +370,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Exponer las cuatro nuevas fuentes comunitarias en el directorio local y probar la búsqueda de sus afirmaciones.
 - [ ] Cotejar cada claim con capítulos/escenas de las novelas o relatos oficiales antes de elevar el estado por encima de secondary_checked.
 - [ ] Mantener por separado las estadísticas ambiguas, la continuidad histórica de Astrea Record y la presentación del anime.
+
+## INTEGRATION-BATCH-001 — cronología histórica DanMachi
+- [x] Recuperar el módulo temporal, dataset, validador y test desde la rama histórica.
+- [x] Integrar 16 registros para los eventos temporales y entidades enlazadas sin sobrescribir el catálogo actual.
+- [x] Montar el panel en la enciclopedia y cargar el script antes de la inicialización de la app.
+- [x] Añadir reglas CSS adaptables y un control para las vistas temporal/relacional.
+- [x] Incorporar la validación del modelo y pruebas de montaje en el workflow de lore.
+- [ ] Validar la PR completa con los workflows generales, test temporal, validación de catálogo y navegador.
+- [ ] Revisar en un navegador que los enlaces a personajes y eventos conservan contexto, especialmente los personajes sin ficha de dossier en main.
