@@ -35,6 +35,8 @@ jobs:
           node --check src/project-repository.js
           node --check src/story-outline.js
           node --check src/story-forge.js
+          node --check src/fanfic-review.js
+          node --check tests/test_fanfic_review.cjs
           node --check tests/benchmark_story_forge.cjs
           node --check tests/test_story_forge.cjs
           node --check src/art-studio.js
@@ -55,6 +57,8 @@ jobs:
         run: node tests/test_story_outline.cjs
       - name: Test Story Forge outline and audit
         run: node tests/test_story_forge.cjs
+      - name: Test local fanfiction consistency review
+        run: node tests/test_fanfic_review.cjs
       - name: Measure Story Forge generation cost (informational)
         run: node tests/benchmark_story_forge.cjs
       - name: Test project import validation
