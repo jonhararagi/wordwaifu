@@ -1,104 +1,158 @@
 # Índice maestro de personajes
 
-## Personajes históricos referidos por fuentes comunitarias
+## Identidad, continuidad y completitud
 
-- [Helga](helga.md) — antigua segunda al mando de los Caballeros de Fianna según la wiki de Lyra; relación de reencarnación aún secundaria y pendiente de cotejo primario.
+El índice se sincroniza con el catálogo activo. Tener ficha no equivale a biografía completa o verificada en el texto íntegro de la novela. Los perfiles de anime se limitan a `CONT-ANIME`; novela principal, Sword Oratoria, Astrea Record y material secundario mantienen alcances separados.
 
-## Convenciones
+Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean duplicados; las etapas y los vínculos se modelan por intervalo y continuidad.
 
-**No usar una ficha plana para todas las épocas.** Cada persona conserva una identidad estable; apariciones, afiliaciones, relaciones y conocimiento se registran por época y línea de continuidad. Una variante AU nunca reemplaza el registro canónico. Ver [modelo de identidad y variantes temporales](01-identidad-y-variantes-temporales.md).
+## Personajes, deidades y grupos con ficha individual
 
-“Era Oscura” es una etiqueta temporal, no una continuidad por sí sola. No crear duplicados porque cambie la época o porque la AU altere la historia.
-
-Este índice mezcla registros existentes y candidatos para futuras fichas. La columna de ID indica si el registro ya existe o si es solo una propuesta. No crear una ficha nueva si el ID canónico ya está asignado.
-
-## Personajes centrales
-
-| ID | Nombre principal | Alias a comprobar | Grupo/relaciones de búsqueda | Estado |
+| Nombre | ID | Tipo | Estado | Ficha |
 |---|---|---|---|---|
-| DM-CHAR-BELL | Bell Cranel | Bell | Hestia Familia, Loki, Ais, Eina, Freya | Ficha inicial existente |
-| DM-CHAR-HESTIA | Hestia | Hestia | Hestia Familia, Bell | Ficha inicial existente |
-| DM-CHAR-LOKI | Loki | Loki | Loki Familia | Ficha inicial existente |
-| DM-CHAR-EINA | Eina Tulle | Eina | Guild, Bell | Ficha inicial existente |
-| DM-CHAR-AIS | Ais Wallenstein | Ais | Loki Familia, Bell | Ficha inicial existente |
-| DM-CHAR-LOKI-LEADERS | Finn/Riveria/Gareth (grupo provisional) | No tratar como una persona | Loki Familia | Registro grupal existente; crear fichas individuales cuando se investiguen |
-| CHAR-FINN-DEIMNE | [Finn Deimne](finn-deimne.md) | Finn | Loki Familia; liderazgo | Ficha provisional; perfil de adaptación |
-| CHAR-RAUL-NOORD | [Raul Nord](raul-noord.md) | Raul, ラウル・ノールド | Loki Familia, apoyo y coordinación | Ficha individual provisional · perfil oficial CONT-SO |
-| CHAR-RIVERIA-LJOS-ALF | [Riveria Ljos Alf](riveria-ljos-alf.md) | Riveria | Loki Familia | Ficha individual provisional · CONT-SO |
-| CHAR-GARETH-LANDROCK | [Gareth Landrock](gareth-landrock.md) | Gareth | Loki Familia | Ficha individual provisional · CONT-SO |
-| CHAR-BETE-LOGA | [Bete Loga](bete-loga.md) | Bete | Loki Familia | Ficha individual provisional · CONT-SO |
-| CHAR-TIONA-HIRYUTE | [Tiona Hiryute](tiona-hiryute.md) | Tiona | Loki Familia | Ficha individual provisional · CONT-SO |
-| CHAR-TIONE-HIRYUTE | [Tione Hiryute](tione-hiryute.md) | Tione | Loki Familia | Ficha individual provisional · CONT-SO |
-| CHAR-LEFIYA-VIRIDIS | [Lefiya Viridis](lefiya-viridis.md) | Lefiya | Loki Familia, Sword Oratoria | Ficha individual provisional · CONT-SO |
-| CHAR-WELF-CROZZO | Welf Crozzo | Welf | Hestia Familia, herrería | Candidato pendiente |
-| CHAR-LILIRUCA-ARDE | Liliruca Arde | Lili | Hestia Familia | Candidato pendiente |
-| CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Candidato pendiente |
-| CHAR-SANJOUNO-HARUHIME | Sanjouno Haruhime | Haruhime | Hestia Familia, Ishtar historia | Candidato pendiente |
-| CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia (estado histórico); Hostess of Fertility (perfil de adaptación) | Ficha provisional con estados separados por continuidad |
-| CHAR-FREYA | [Freya](freya.md) | Syr como alias/identidad por verificar con cuidado | Freya Familia, Bell; relaciones con spoiler | Ficha provisional; perfil de adaptación; spoiler mayor |
-| CHAR-OTTAR | [Ottar](ottar.md) | Ottar | Freya Familia, entrenamiento, lealtad | Ficha provisional; perfil de adaptación |
-| CHAR-HERMES | Hermes | Hermes | Hermes Familia, Bell | Candidato pendiente |
-| CHAR-OURANOS | Ouranos | Ouranos | Guild, Fels | Candidato pendiente |
-| CHAR-FELS | Fels | Fels | Ouranos, Guild | Candidato pendiente |
-| CHAR-GANESHA | Ganesha | Ganesha | Ganesha Familia, ciudad | Candidato pendiente |
+| Ais Wallenstein | `DM-CHAR-AIS` | Personaje | `draft` | [Abrir](ais-wallenstein.md) |
+| Aisha Belka | `CHAR-AISHA-BELKA` | Personaje | `source_checked_partial` | [Abrir](aishabelka.md) |
+| Alfia | `CHAR-DARK-ALFIA` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/alfia.md) |
+| Alfrigg Gulliver | `CHAR-ALFRIGG-GULLIVER` | Personaje | `source_checked_partial` | [Abrir](alfrigggulliver.md) |
+| Alise Lovelace | `CHAR-ALISE-LOVELACE` | Personaje | `provisional` | [Abrir](alise-lovelace.md) |
+| Allen Fromel | `CHAR-ALLEN-FROMEL` | Personaje | `source_checked_partial` | [Abrir](allenfromel.md) |
+| Anya Fromel | `CHAR-ANYA-FROMEL` | Personaje | `source_checked_partial` | [Abrir](anyafromel.md) |
+| Apollo | `CHAR-APOLLO` | Deidad | `source_checked_partial` | [Abrir](apollo.md) |
+| Asfi Al Andromeda | `CHAR-ASFI-AL-ANDROMEDA` | Personaje | `source_checked_partial` | [Abrir](asfialandromeda.md) |
+| Asta Knox | `CHAR-ASTA-KNOX` | Personaje | `provisional` | [Abrir](asta-knox.md) |
+| Astrea | `CHAR-ASTREA` | Deidad | `provisional` | [Abrir](astrea.md) |
+| Bell Cranel | `DM-CHAR-BELL` | Personaje | `draft` | [Abrir](bell-cranel.md) |
+| Berling Gulliver | `CHAR-BERLING-GULLIVER` | Personaje | `source_checked_partial` | [Abrir](berlinggulliver.md) |
+| Bete Loga | `CHAR-BETE-LOGA` | Personaje | `provisional` | [Abrir](bete-loga.md) |
+| Canoe Belway | `CHAR-CANOE-BELWAY` | Personaje | `secondary_reference_disputed_details_primary_check_pending` | [Abrir](canoe-belway.md) |
+| Cassandra Ilion | `CHAR-CASSANDRA-ILION` | Personaje | `source_checked_partial` | [Abrir](cassandrailion.md) |
+| Cecil Blackliza | `CHAR-CECIL-BLACKLIZA` | Personaje | `provisional` | [Abrir](cecil-blackliza.md) |
+| Celty Srowa | `CHAR-CELTY-SROWA` | Personaje | `provisional` | [Abrir](celty-srowa.md) |
+| Chandra Ihit | `CHAR-CHANDRA-IHIT` | Personaje | `secondary_reference_partial_primary_check_pending` | [Abrir](chandra-ihit.md) |
+| Chloe Rollo | `CHAR-CHLOE-ROLO` | Personaje | `source_checked_partial` | [Abrir](chloe-rollo.md) |
+| Daphne Lauros | `CHAR-DAPHNE-LAUROS` | Personaje | `source_checked_partial` | [Abrir](daphnelauros.md) |
+| Dionysus | `CHAR-DIONYSUS` | Deidad | `source_checked_partial` | [Abrir](dionysus.md) |
+| Dormul Bolster | `CHAR-DORMUL-BOLSTER` | Personaje | `source_checked_partial` | [Abrir](dormulbolster.md) |
+| Dvalinn Gulliver | `CHAR-DVALINN-GULLIVER` | Personaje | `source_checked_partial` | [Abrir](dvalinngulliver.md) |
+| Eina Tulle | `DM-CHAR-EINA` | Personaje | `draft` | [Abrir](eina-tulle.md) |
+| Erebus | `CHAR-DARK-EREBUS` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/erebus.md) |
+| Fels | `CHAR-FELS` | Personaje | `source_checked_partial` | [Abrir](fels.md) |
+| Filvis Chalia | `CHAR-FILVIS-CHALIA` | Personaje | `source_checked_partial` | [Abrir](filvischalia.md) |
+| Finn | `DM-CHAR-LOKI-LEADERS` | Grupo | `draft` | [Abrir](finn-riveria-gareth.md) |
+| Finn Deimne | `CHAR-FINN-DEIMNE` | Personaje | `provisional` | [Abrir](finn-deimne.md) |
+| Freya | `CHAR-FREYA` | Deidad | `provisional` | [Abrir](freya.md) |
+| Ganesha | `CHAR-GANESHA` | Deidad | `source_checked_partial` | [Abrir](ganesha.md) |
+| Gareth Landrock | `CHAR-GARETH-LANDROCK` | Personaje | `provisional` | [Abrir](gareth-landrock.md) |
+| Gojouno Kaguya | `CHAR-KAGUYA` | Personaje | `provisional` | [Abrir](gojouno-kaguya.md) |
+| Grer Gulliver | `CHAR-GRER-GULLIVER` | Personaje | `source_checked_partial` | [Abrir](grergulliver.md) |
+| Gulliver Brothers | `CHAR-GULLIVER-BROTHERS` | Grupo | `source_checked_partial` | [Abrir](gulliverbrothers.md) |
+| Haruhime Sanjouno | `CHAR-SANJOUNO-HARUHIME` | Personaje | `provisional` | [Abrir](haruhime-sanjouno.md) |
+| Hedin Selland | `CHAR-HEDIN-SELLAND` | Personaje | `source_checked_partial` | [Abrir](hedinselland.md) |
+| Heith Velvet | `CHAR-HEITH-VELVET` | Personaje | `source_checked_partial` | [Abrir](heithvelvet.md) |
+| Helga | `CHAR-HELGA` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](helga.md) |
+| Hera | `CHAR-HERA` | Deidad | `secondary_reference_primary_locator_pending` | [Abrir](hera.md) |
+| Hermes | `CHAR-HERMES` | Deidad | `source_checked_partial` | [Abrir](hermes.md) |
+| Hestia | `DM-CHAR-HESTIA` | Personaje | `draft` | [Abrir](hestia.md) |
+| Hitachi Chigusa | `CHAR-HITACHI-CHIGUSA` | Personaje | `source_checked_partial` | [Abrir](hitachichigusa.md) |
+| Hogni Ragnar | `CHAR-HOGNI-RAGNAR` | Personaje | `source_checked_partial` | [Abrir](hogniragnar.md) |
+| Horn | `CHAR-HORN` | Personaje | `source_checked_partial` | [Abrir](horn.md) |
+| Iselina | `CHAR-ISELINA` | Personaje | `provisional` | [Abrir](iselina.md) |
+| Ishtar | `CHAR-ISHTAR` | Deidad | `source_checked_partial` | [Abrir](ishtar.md) |
+| Iska Bra | `CHAR-ISKA-BRA` | Personaje | `provisional` | [Abrir](iska-bra.md) |
+| Jura Halmer | `CHAR-DARK-JURA-HALMER` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/jura-halmer.md) |
+| Kashima Ouka | `CHAR-KASHIMA-OUKA` | Personaje | `source_checked_partial` | [Abrir](kashimaouka.md) |
+| Lefiya Viridis | `CHAR-LEFIYA-VIRIDIS` | Personaje | `provisional` | [Abrir](lefiya-viridis.md) |
+| Liliruca Arde | `CHAR-LILIRUCA-ARDE` | Personaje | `provisional` | [Abrir](liliruca-arde.md) |
+| Loki | `DM-CHAR-LOKI` | Personaje | `draft` | [Abrir](loki.md) |
+| Lulune Louie | `CHAR-LULUNE-LOUIE` | Personaje | `source_checked_partial` | [Abrir](lulunelouie.md) |
+| Lunoire Faust | `CHAR-LUNOIRE-FAUST` | Personaje | `source_checked_partial` | [Abrir](lunoirefaust.md) |
+| Luvis Lilix | `CHAR-LUVIS-LILIX` | Personaje | `source_checked_partial` | [Abrir](luvislilix.md) |
+| Lyra | `CHAR-LYRA` | Personaje | `provisional` | [Abrir](lyra.md) |
+| Mari (Xenos) | `CHAR-MARI-XENOS` | Personaje | `source_checked_partial` | [Abrir](mari.md) |
+| Mariyu Leage | `CHAR-MARIYU-LEAGE` | Personaje | `provisional` | [Abrir](maryuu-reage.md) |
+| Maxim | `CHAR-MAXIM` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](maxim.md) |
+| Meteria | `CHAR-METERIA` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](dark-era/meteria.md) |
+| Mia Grand | `CHAR-MIA-GRAND` | Personaje | `source_checked_partial` | [Abrir](miagrand.md) |
+| Mikoto Yamato | `CHAR-MIKOTO-YAMATO` | Personaje | `provisional` | [Abrir](mikoto-yamato.md) |
+| Neze Rankett | `CHAR-NEZE-RANKETT` | Personaje | `provisional` | [Abrir](neze-rankett.md) |
+| Noin Unic | `CHAR-NOIN-UNIC` | Personaje | `provisional` | [Abrir](noin-unic.md) |
+| Ottar | `CHAR-OTTAR` | Personaje | `provisional` | [Abrir](ottar.md) |
+| Ouranos | `CHAR-OURANOS` | Deidad | `source_checked_partial` | [Abrir](ouranos.md) |
+| Raul Nord | `CHAR-RAUL-NOORD` | Personaje | `provisional` | [Abrir](raul-noord.md) |
+| Revis | `CHAR-REVIS` | Personaje | `source_checked_partial` | [Abrir](revis.md) |
+| Riveria Ljos Alf | `CHAR-RIVERIA-LJOS-ALF` | Personaje | `provisional` | [Abrir](riveria-ljos-alf.md) |
+| roster secundario provisional | `FAM-NEW-ASTREA` | Grupo | `provisional` | [Abrir](../familias/nueva-astrea-familia.md) |
+| Rudra | `CHAR-DARK-RUDRA` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/rudra.md) |
+| Ryana Lietz | `CHAR-RYANA-LIETZ` | Personaje | `provisional` | [Abrir](ryana-lietz.md) |
+| Ryu Lion | `CHAR-RYUU-LION` | Personaje | `provisional` | [Abrir](ryuu-lion.md) |
+| Shakti Varma | `CHAR-SHAKTI-VARMA` | Personaje | `source_checked_partial` | [Abrir](shakti-varma.md) |
+| Shau | `CHAR-SHAU` | Personaje | `provisional` | [Abrir](shau.md) |
+| Soma | `CHAR-SOMA` | Deidad | `secondary_reference_partial_primary_check_pending` | [Abrir](soma.md) |
+| Syr Flova | `CHAR-SYR-FLOVA` | Personaje | `source_checked_partial` | [Abrir](syrflova.md) |
+| Thanatos | `CHAR-DARK-THANATOS` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/thanatos.md) |
+| Tiona Hiryute | `CHAR-TIONA-HIRYUTE` | Personaje | `provisional` | [Abrir](tiona-hiryute.md) |
+| Tione Hiryute | `CHAR-TIONE-HIRYUTE` | Personaje | `provisional` | [Abrir](tione-hiryute.md) |
+| Tsubaki Collbrande | `CHAR-TSUBAKI-COLBRANDE` | Personaje | `source_checked_partial` | [Abrir](tsubakicollbrande.md) |
+| Ulanda | `CHAR-ULANDA` | Personaje | `provisional` | [Abrir](ulanda.md) |
+| Valletta Grede | `CHAR-DARK-VALLETTA-GREDE` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/valletta-grede.md) |
+| Van | `CHAR-VAN-FREYA` | Personaje | `source_checked_partial` | [Abrir](van.md) |
+| Welf Crozzo | `CHAR-WELF-CROZZO` | Personaje | `provisional` | [Abrir](welf-crozzo.md) |
+| Xenos | `GRP-XENOS` | Grupo | `provisional` | [Abrir](xenos-group.md) |
+| Zald | `CHAR-DARK-ZALD` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/zald.md) |
+| Zanis Lustra | `CHAR-ZANIS-LUSTRA` | Personaje | `secondary_reference_partial_primary_check_pending` | [Abrir](zanis-lustra.md) |
+| Zeus | `CHAR-ZEUS` | Deidad | `secondary_reference_primary_locator_pending` | [Abrir](zeus.md) |
 
-## Historia previa, héroes y relatos paralelos
+## Hermanos Gulliver · identidades separadas
 
-| ID propuesto | Nombre principal | Grupo/relaciones de búsqueda | Estado |
-|---|---|---|---|
-| CHAR-ZEUS | Zeus | Zeus Familia, historia antigua | Candidato pendiente |
-| CHAR-HERA | Hera | Hera Familia, historia antigua | Candidato pendiente |
-| CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Candidato pendiente |
-| CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Astrea Familia; guía/capitana de Ryu en sinopsis editorial | Ficha provisional; estado histórico con fuente web oficial |
-| CHAR-KAGUYA | Kaguya | Kaguya | Astrea Familia | Candidato pendiente |
-| CHAR-LYRA | Lyra | Lyra | Astrea Familia | Candidato pendiente |
-| CHAR-ALFIA | Alfia | Alfia | Historia Zeus/Hera | Candidato pendiente; spoilers |
-| CHAR-ZARD | Zard | Zard/Zald: romanización a verificar por edición | Historia Zeus/Hera | Candidato pendiente; spoilers |
-| CHAR-METERIA | Meteria | Meteria | Historia de Bell y Zeus/Hera | Candidato pendiente; spoilers |
-| CHAR-ALBERT-WALDSTEIN | Albert Waldstein | Albert | Aria, historia antigua | Candidato pendiente; spoilers |
-| CHAR-ARIA | Aria | Aria | Ais, historia antigua | Candidato pendiente; spoilers |
+La ficha [Gulliver Brothers](gulliverbrothers.md) mantiene el perfil grupal; cada hermano tiene un ID independiente y rutas propias.
+- [Alfrigg Gulliver](alfrigggulliver.md) — perfil separado con alcance `CONT-ANIME`.
+- [Dvalinn Gulliver](dvalinngulliver.md) — perfil separado con alcance `CONT-ANIME`.
+- [Berling Gulliver](berlinggulliver.md) — perfil separado con alcance `CONT-ANIME`.
+- [Grer Gulliver](grergulliver.md) — perfil separado con alcance `CONT-ANIME`.
 
-## Catálogos adicionales por construir
+## Registros históricos aún secundarios
 
-- Deidades y espíritus.
-- Aventureros por Familia y periodo.
-- Miembros de Familias caídas o disueltas.
-- Personal de la Guild y residentes de Orario.
-- Personal de Hostess of Fertility.
-- Héroes históricos, antagonistas, monstruos inteligentes y entidades antiguas.
-- Personajes exclusivos de spin-offs, juegos y adaptaciones, siempre con etiqueta de continuidad.
+El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis del Juggernaut son referencias de investigación, no una confirmación automática del texto primario. Erebus, Thanatos y Valletta Grede se dejan aislados mientras no exista un claim relacional suficientemente localizado.
 
-## Regla de identidad y duplicación
+## IDs reservados
 
-Antes de crear una ficha nueva, buscar el ID principal, nombres, romanizaciones, traducciones, alias y relaciones en este índice y en catalog.json. Si es la misma persona, ampliar la ficha existente. Si existe duda, registrar IDENTITY_UNRESOLVED sin fusionar.
+| ID | Estado |
+|---|---|
+| `CHAR-ALBERT-WALDSTEIN` | candidate_not_created |
+| `CHAR-ALFIA` | candidate_not_created |
+| `CHAR-ARIA` | candidate_not_created |
+| `CHAR-ARTEMIS` | candidate_not_created |
+| `CHAR-DEMETER` | candidate_not_created |
+| `CHAR-DIAN-CECHT` | candidate_not_created |
+| `CHAR-HEPHAISTOS` | candidate_not_created |
+| `CHAR-MIACH` | candidate_not_created |
+| `CHAR-TAKEMIKAZUCHI` | candidate_not_created |
+| `CHAR-ZARD` | candidate_not_created |
+| `FAM-ASTREA` | candidate_not_created |
+| `FAM-DEMETER` | candidate_not_created |
+| `FAM-DIAN-CECHT` | candidate_not_created |
+| `LOC-FREYA-MANOR` | candidate_not_created |
+| `LOC-GUILD` | candidate_not_created |
+| `LOC-HEPHAISTOS-SHOP` | candidate_not_created |
+| `LOC-LOKI-MANOR` | candidate_not_created |
+| `RULE-DROP-ITEMS` | candidate_not_created |
+| `RULE-DUNGEON-ENTRY` | candidate_not_created |
+| `RULE-DUNGEON-FLOORS` | candidate_not_created |
+| `RULE-DUNGEON-MYSTERIES` | candidate_not_created |
+| `RULE-EXCELIA` | candidate_not_created |
+| `RULE-FALNA` | candidate_not_created |
+| `RULE-FAMILIA-MEMBERSHIP` | candidate_not_created |
+| `RULE-GODS-LIMITS` | candidate_not_created |
+| `RULE-LEVEL` | candidate_not_created |
+| `RULE-LEVEL-DIFFERENCE` | candidate_not_created |
+| `RULE-MAGIC` | candidate_not_created |
+| `RULE-MAGIC-STONES` | candidate_not_created |
+| `RULE-MONSTERS` | candidate_not_created |
+| `RULE-SKILLS` | candidate_not_created |
 
-Las candidaturas usan IDs sugeridos. Al crearse una ficha real, ese ID se convierte en canónico para el repositorio; no generar un segundo ID por transliteración alternativa.
+## Reglas de ampliación
 
-## Cobertura transversal y prioridades · DANMACHI-RESEARCH-002
-
-Los nombres indicados son rutas de investigación, no una afirmación de que todas sus afiliaciones y estados estén verificados para todas las épocas.
-
-| Grupo | Identidades que deben conservarse/localizarse | Próxima prioridad |
-|---|---|---|
-| Historia antigua | Zeus (`CHAR-ZEUS`), Hera (`CHAR-HERA`), Alfia (`CHAR-ALFIA`), Zard/Zald (`CHAR-ZARD`), Meteria (`CHAR-METERIA`), Albert Waldstein (`CHAR-ALBERT-WALDSTEIN`), Aria (`CHAR-ARIA`) | Fuentes literarias, spoilers y estados históricos diferenciados. |
-| Era Oscura / Astrea Familia | Ryu/Ryuu (`CHAR-RYUU-LION`), Astrea (`CHAR-ASTREA`), Alise (`CHAR-ALISE-LOVELACE`), Kaguya (`CHAR-KAGUYA`), Lyra (`CHAR-LYRA`) | Localizadores internos de *Astrea Record* 1–3 y roster respaldado. |
-| Loki Familia | Loki, Finn, Riveria, Gareth, Bete, Tiona, Tione, Lefiya | Crear fichas individuales desde IDs ya reservados y describir por separado estado, relación y conocimiento por época. |
-| Freya Familia | Freya (`CHAR-FREYA`), Ottar (`CHAR-OTTAR`), Allen, Hedin, Hogni, Gulliver Brothers, Van; Anya según su intervalo; Syr con guardia de spoiler | Jerarquía, formación y vínculos por periodos; no fusionar alias por intuición. |
-| Historia principal / Hestia Familia | Bell, Hestia, Ais, Eina, Welf, Liliruca, Mikoto, Haruhime y Ryu | Preferir novelas principales y eventos/escenas precisas. |
-| Instituciones, deidades y secundarios | Hermes, Ouranos, Fels, Ganesha, personal de Guild, Mia y personal de Hostess of Fertility | Roles, hábitos observables y relaciones en estados temporales correctos. |
-
-### Orden recomendado
-1. Loki, Riveria y Gareth como fichas individuales.
-2. Kaguya y Lyra con fuentes directas de *Astrea Record*.
-3. Zeus/Hera, Alfia y Zard con localizadores y marcas de spoiler.
-4. Bell/Hestia/Eina/Ais en novela principal, por escena.
-5. Personal de la taberna y estados de Freya Familia.
-
-
-## Familia Soma · fichas parciales
-
-- [Soma](soma.md) — deidad vinculada a Soma Familia; descripción biográfica secundaria.
-- [Zanis Lustra](zanis-lustra.md) — antiguo capitán reportado; período y detalles por verificar.
-- [Chandra Ihit](chandra-ihit.md) — capitán posterior reportado; intervención con Liliruca pendiente de localizador primario.
-- [Canoe Belway](canoe-belway.md) — referencia de roster y acusación reportada no resuelta.
-- [Expediente relacional DMR-025](../research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md).
+- Buscar IDs, alias, romanizaciones, traducciones y relaciones existentes antes de crear fichas.
+- Las wikis son pistas secundarias hasta cotejar el pasaje primario.
+- La copertenencia institucional no demuestra amistad, rivalidad o conocimiento compartido.
+- No declarar un porcentaje global de lore sin definir obras, personajes, acontecimientos y escenas que formen el denominador.

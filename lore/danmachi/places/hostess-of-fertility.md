@@ -3,30 +3,36 @@ id: LOC-HOSTESS
 universe: danmachi
 type: location
 status: source_checked_partial
-confidence: El glosario oficial del anime confirma la función de taberna, su localización general y algunos vínculos de trabajo y clientela; el historial completo del establecimiento sigue pendiente.
 continuity_scope: CONT-ANIME
-source_refs: [DMR-026-SRC-001]
-claim_refs: [DMR-026-CLM-003]
-tags: [Hostess of Fertility, 豊饒の女主人, Orario, taberna, Loki Familia]
+source_refs: ["DMR-006-SRC-001"]
+claim_refs: ["DMR-006-CLM-009","DMR-006-CLM-051","DMR-006-CLM-057","DMR-006-CLM-060","DMR-006-CLM-063"]
+verification_status: source_checked_partial
+tags: ["Hostess of Fertility","豊饒の女主人","豊穣の女主人","Orario","taberna","Mia Grand","Syr Flova","Anya Fromel","Chloe Rollo","Lunoire Faust","Ryu Lion"]
 ---
+# Hostess of Fertility · taberna
 
-# Hostess of Fertility — taberna de Orario
+## Identidad y uso en la navegación
 
-## Identidad y función
+La taberna es una ubicación física para conectar las fichas de sus trabajadoras y de Mia Grand. No es una Familia divina: el empleo en el establecimiento y las afiliaciones aventureras se mantienen separados.
 
-Hostess of Fertility es una taberna situada en Orario. El glosario oficial del anime identifica a Mia Grand como su dueña, indica que el personal es femenino, señala que Syr Flova trabaja allí y menciona a Loki Familia como clientela habitual.
+## Personal con ficha individual
 
-La ficha registra solamente estos datos de alcance general; no intenta reconstruir toda la plantilla, la historia del local ni los periodos en que cada persona estuvo presente.
+- [Mia Grand](../characters/miagrand.md) — ver alcance y relaciones en su ficha.
+- [Syr Flova](../characters/syrflova.md) — ver alcance y relaciones en su ficha.
+- [Anya Fromel](../characters/anyafromel.md) — ver alcance y relaciones en su ficha.
+- [Chloe Rollo](../characters/chloe-rollo.md) — ver alcance y relaciones en su ficha.
+- [Lunoire Faust](../characters/lunoirefaust.md) — ver alcance y relaciones en su ficha.
+- [Ryu Lion](../characters/ryuu-lion.md) — ver alcance y relaciones en su ficha.
 
-## Relaciones navegables
+## Límites
 
-- **Orario:** ubicación general del establecimiento; véase [Orario](orario.md).
-- **Familia Loki:** la fuente la describe como clientela habitual; véase [Familia Loki](../familias/loki-familia.md).
+Los perfiles de adaptación respaldan el papel de Mia y varias camareras, pero no ofrecen un plano del edificio ni reconstruyen la cronología de cada relación. No se inventan medidas, distribución interior o conversaciones.
 
-## Límites de evidencia
+## Fuente
+- https://danmachi.com/danmachi5/character/
 
-- El glosario no fija horarios, propietarios sucesivos, cronología completa ni presencia simultánea de personajes en cada episodio.
-- Mia Grand y Syr Flova se mencionan como personas relacionadas con el establecimiento, pero esta tanda no las activa como fichas individuales sin un expediente de entidad separado.
-- Las afirmaciones se mantienen en CONT-ANIME y no se extrapolan automáticamente a las novelas.
-
-**Fuente:** portal oficial del anime, glosario de lugares, entrada 豊饒の女主人. Véase [registro de fuentes](../sources/00-registro-fuentes.md#dmr-026-src-001).
+- DMR-006-CLM-009
+- DMR-006-CLM-051
+- DMR-006-CLM-057
+- DMR-006-CLM-060
+- DMR-006-CLM-063

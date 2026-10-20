@@ -43,6 +43,7 @@ jobs:
           node --check src/character-dossiers.js
           node --check tests/test_character_dossiers.cjs
           node --check tests/test_official_character_roster.cjs
+          node --check tests/test_danmachi_character_coverage.cjs
           node --check tests/test_danmachi_family_dossier.cjs
           node --check tests/test_project_schema.cjs
           node --check tests/test_mythic_catalog.cjs
@@ -65,6 +66,8 @@ jobs:
         run: node tests/test_project_schema.cjs
       - name: Test extended character dossiers
         run: node tests/test_character_dossiers.cjs
+      - name: Test DanMachi roster coverage and navigation integrity
+        run: node tests/test_danmachi_character_coverage.cjs
       - name: Validate official adaptation roster
         run: node tests/test_official_character_roster.cjs
       - name: Validate DanMachi lore catalog links and IDs

@@ -2,9 +2,9 @@ name: DanMachi Lore and Retrieval Integrity
 on:
   push:
     branches: [main, feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10, work/story-completion-danmachi-audit-2026-10, work/mainline-reconciliation-2026-10-14]
-    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/project-repository.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/story-forge.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/project-repository.js","src/character-archive.js","src/character-dossiers.js","src/official-character-roster.js","src/art-studio.js","src/app.js","src/story-forge.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   pull_request:
-    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/art-studio.js","src/app.js","src/story-forge.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/official-character-roster.js","src/art-studio.js","src/app.js","src/story-forge.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -35,11 +35,13 @@ jobs:
           node --check lore/danmachi/tools/check-timeline.mjs
           node --check src/character-archive.js
           node --check src/character-dossiers.js
+          node --check src/official-character-roster.js
           node --check src/art-studio.js
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check tests/test_lore_corpus.cjs
           node --check tests/test_roster_claim_dedup.cjs
+          node --check tests/test_danmachi_character_coverage.cjs
           node --check tests/browser_smoke.cjs
       - name: Test lore retrieval filters and abstention
         run: node tests/test_lore_corpus.cjs
@@ -53,6 +55,8 @@ jobs:
         run: node tests/test_character_archive.cjs
       - name: Test extended character dossiers
         run: node tests/test_character_dossiers.cjs
+      - name: Test DanMachi roster coverage and navigation integrity
+        run: node tests/test_danmachi_character_coverage.cjs
       - name: Test private preview file allowlist
         run: python tests/test_web_preview_server.py
       - name: Test Story Forge outline and audit
