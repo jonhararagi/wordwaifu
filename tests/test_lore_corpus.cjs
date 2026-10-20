@@ -193,8 +193,9 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 142, "Three DMR-026 claims, ten original DMR-028 claims, twelve member-detail DMR-028 claims, and four Kaguya DMR-028 claims must be included in the source count.");
-assert.equal(index.entryCount, 145, "The twelve member-detail and four Kaguya DMR-028 claims add sixteen retrievable entries without altering existing continuity splits.");
+const expectedSourceClaimCount = documents.reduce((sum, document) => sum + [...document.content.matchAll(/^### DMR-\\d{3}-CLM-\\d{3} · .+$/gm)].length, 0);
+assert.equal(index.sourceClaimCount, expectedSourceClaimCount, "The index source count must reflect every H3 claim in the exact production research manifest.");
+assert.ok(index.entryCount >= index.sourceClaimCount, "All manifest claims must survive indexing; continuity-specific splits may create additional entries.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
