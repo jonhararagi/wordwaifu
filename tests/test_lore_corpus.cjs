@@ -74,7 +74,8 @@ const kaguyaPastSearch = corpus.search(index, { query: "Kaguya Gojou Rokujou Cha
 assert.ok(kaguyaPastSearch.results.some(item => item.claimId === "DMR-028-CLM-026" && item.verificationStatus === "secondary_checked"), "Kaguya's detailed past must be queryable and marked secondary.");
 const kaguyaFutabaSearch = corpus.search(index, { query: "Kaguya Kodachi Futaba Ryuu", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(kaguyaFutabaSearch.results.some(item => item.claimId === "DMR-028-CLM-025" && item.verificationStatus === "secondary_checked"), "Kaguya's reported weapon transfer must be searchable as secondary evidence.");
-for (const edgeId of ["REL-KAGUYA-MEMBER-ASTREA-AR-WIKI","REL-WIKI-ALISE-ASTREA-JUGGERNAUT","REL-WIKI-KAGUYA-ASTREA-JUGGERNAUT","REL-WIKI-LYRA-ASTREA-JUGGERNAUT","REL-WIKI-RYUU-SURVIVES-ASTREA-JUGGERNAUT","REL-WIKI-ASTREA-ERA-TO-JUGGERNAUT-ORDER","REL-WIKI-KAGUYA-GIVES-KODACHI-FUTABA-RYUU"]) {
+assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY" && edge.claimRefs?.includes("DMR-028-CLM-025") && edge.claimPaths?.includes("research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md")), "Kaguya's reported Kodachi Futaba transfer must enrich the existing historical Ryu relationship instead of creating a duplicate destination.");
+for (const edgeId of ["REL-KAGUYA-MEMBER-ASTREA-AR-WIKI","REL-WIKI-ALISE-ASTREA-JUGGERNAUT","REL-WIKI-KAGUYA-ASTREA-JUGGERNAUT","REL-WIKI-LYRA-ASTREA-JUGGERNAUT","REL-WIKI-RYUU-SURVIVES-ASTREA-JUGGERNAUT","REL-WIKI-ASTREA-ERA-TO-JUGGERNAUT-ORDER"]) {
   assert.ok(index.relationships.some(edge => edge.id === edgeId && edge.evidenceStatus === "secondary_checked"), "New wiki-derived historical relationship must be navigable and remain secondary: " + edgeId);
 }
 const lyraAbilitiesSearch = corpus.search(index, { query: "Lyra magia mina bombas", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
