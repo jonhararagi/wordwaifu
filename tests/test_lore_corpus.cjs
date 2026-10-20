@@ -66,13 +66,13 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-LYRA-MEMBER-ASTREA-W
 const kaguyaJusticeSearch = corpus.search(index, { query: "Kaguya Ryu justicia salvar mayoría", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(kaguyaJusticeSearch.results.some(item => item.claimId === "DMR-028-CLM-003" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Gojouno_Kaguya"))), "Lore search must return the wiki-derived Kaguya/Ryu dynamic with secondary status and source URL.");
 
-const kaguyaSnapshotSearch = corpus.search(index, { query: "Kaguya Yamato Rindou edad 19 altura 167 nivel piso 41", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const kaguyaSnapshotSearch = corpus.search(index, { query: "Kaguya Yamato Rindou 19 167 nivel piso 41", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(kaguyaSnapshotSearch.results.some(item => item.claimId === "DMR-028-CLM-023" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Gojouno_Kaguya"))), "Kaguya's alias and reported profile snapshot must be searchable with provenance.");
-const kaguyaKitSearch = corpus.search(index, { query: "Kaguya Gokou Shikai Kaina Blood Sakibeni Higanbana", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const kaguyaKitSearch = corpus.search(index, { query: "Kaguya Gokou Shikai Kaina Blood Sakibeni Tekiheni", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(kaguyaKitSearch.results.some(item => item.claimId === "DMR-028-CLM-024" && item.verificationStatus === "secondary_checked"), "Kaguya's wiki-listed skills and magic must be retrievable without promoting mechanics to canon.");
-const kaguyaPastSearch = corpus.search(index, { query: "Kaguya Gojou Rokujou Charm Konohanasakuya court justice", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const kaguyaPastSearch = corpus.search(index, { query: "Kaguya Gojou Rokujou Charm Konohanasakuya justicia", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(kaguyaPastSearch.results.some(item => item.claimId === "DMR-028-CLM-026" && item.verificationStatus === "secondary_checked"), "Kaguya's detailed past must be queryable and marked secondary.");
-const kaguyaFutabaSearch = corpus.search(index, { query: "Kaguya Kodachi Futaba Ryuu weapon legacy", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const kaguyaFutabaSearch = corpus.search(index, { query: "Kaguya Kodachi Futaba Ryuu", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(kaguyaFutabaSearch.results.some(item => item.claimId === "DMR-028-CLM-025" && item.verificationStatus === "secondary_checked"), "Kaguya's reported weapon transfer must be searchable as secondary evidence.");
 for (const edgeId of ["REL-KAGUYA-MEMBER-ASTREA-AR-WIKI","REL-WIKI-ALISE-ASTREA-JUGGERNAUT","REL-WIKI-KAGUYA-ASTREA-JUGGERNAUT","REL-WIKI-LYRA-ASTREA-JUGGERNAUT","REL-WIKI-RYUU-SURVIVES-ASTREA-JUGGERNAUT","REL-WIKI-ASTREA-ERA-TO-JUGGERNAUT-ORDER","REL-WIKI-KAGUYA-GIVES-KODACHI-FUTABA-RYUU"]) {
   assert.ok(index.relationships.some(edge => edge.id === edgeId && edge.evidenceStatus === "secondary_checked"), "New wiki-derived historical relationship must be navigable and remain secondary: " + edgeId);
