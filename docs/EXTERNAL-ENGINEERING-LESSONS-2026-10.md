@@ -46,3 +46,11 @@ Se documentan las lecciones y se aplican a la integración de cobertura factual.
 - Aplicación: conservar el orden de dependencias; no añadir `async` ni mover `app.js` antes de `story-forge.js`. La prueba de navegador pulsa los botones nuevos y comprueba generación y guardado; los tests unitarios comprueban determinismo por semilla y campos del generador.
 - Límite: MDN documenta la semántica de carga del navegador, no un incidente específico de WordWaifu. La ausencia de los botones era una carencia de integración propia del proyecto, no un fallo atribuido a MDN.
 
+
+
+## 4. Migración compatible del grafo de relaciones importado — 2026-10-20
+
+- **Problema local detectado:** src/project-schema.js trataba la mera presencia de relationships: [] como señal de que la migración ya estaba hecha. Si un exportador intermedio escribía esa colección vacía mientras las fichas todavía conservaban characters[].relationships, la normalización podía vaciar esas fichas sin trasladar sus vínculos.
+- **Solución:** completar el grafo de forma aditiva. Se indexan primero las parejas ya representadas y se migra cada pareja heredada válida que falte; los enlaces explícitos se conservan y los duplicados recíprocos se consolidan. Después se reconstruye la proyección por personaje desde el grafo central.
+- **Pruebas de regresión añadidas:** una entrada con relationships: [] y otra con una colección central parcial. Ambas comprueban preservación de vínculos, consolidación de pares recíprocos y retención de relaciones ya normalizadas. La ejecución de CI debe confirmarse desde el PR antes de considerar verificado el cambio.
+- **Referencia técnica:** Danilo Sato, Martin Fowler — [Parallel Change (13 de mayo de 2014)](https://martinfowler.com/bliki/ParallelChange.html), describe la migración segura por etapas para mantener compatibilidad entre las formas antigua y nueva mientras se trasladan los consumidores. Aquí se aplica ese principio a datos JSON importados; no se atribuye a esa fuente el bug específico de WordWaifu.
