@@ -69,26 +69,37 @@
       settings: isRecord(input.settings) ? { ...input.settings } : { time: "now" }
     };
 
-    // Legacy relationship arrays are migrated into a single stable record per pair.
-    if (!hasExplicitRelationships) {
-      const knownCharacterIds = new Set(project.characters.filter(isRecord).map((character) => character.id).filter(isNonEmptyString));
-      const migrated = new Map();
-      for (const character of project.characters) {
-        if (!isRecord(character) || !isNonEmptyString(character.id) || !Array.isArray(character.relationships)) continue;
-        for (const relatedId of character.relationships) {
-          if (!isNonEmptyString(relatedId) || relatedId === character.id || !knownCharacterIds.has(relatedId)) continue;
-          const [sourceCharacterId, targetCharacterId] = [character.id, relatedId].sort();
-          const key = sourceCharacterId + "\\u0000" + targetCharacterId;
-          if (!migrated.has(key)) migrated.set(key, {
-            id: "rel-legacy-" + encodeURIComponent(sourceCharacterId) + "-" + encodeURIComponent(targetCharacterId),
-            name: "Relación heredada", sourceCharacterId, targetCharacterId,
-            relationshipType: "other",
-            description: "Relación migrada desde la ficha del proyecto anterior.",
-            status: "unknown"
-          });
-        }
+    // Migrate legacy per-character links additively, even if an older export already
+    // contains relationships: []. Some intermediate exports wrote the new collection
+    // without backfilling it, so an empty array is not proof that old links are obsolete.
+    const knownCharacterIds = new Set(project.characters.filter(isRecord).map((character) => character.id).filter(isNonEmptyString));
+    const relationshipPairKey = (left, right) => [left, right].sort().join("\u0000");
+    const representedPairs = new Set();
+    for (const relationship of project.relationships) {
+      if (!isRecord(relationship)) continue;
+      const sourceId = relationship.sourceCharacterId;
+      const targetId = relationship.targetCharacterId;
+      if (!isNonEmptyString(sourceId) || !isNonEmptyString(targetId) ||
+          sourceId === targetId || !knownCharacterIds.has(sourceId) || !knownCharacterIds.has(targetId)) continue;
+      representedPairs.add(relationshipPairKey(sourceId, targetId));
+    }
+
+    for (const character of project.characters) {
+      if (!isRecord(character) || !isNonEmptyString(character.id) || !Array.isArray(character.relationships)) continue;
+      for (const relatedId of character.relationships) {
+        if (!isNonEmptyString(relatedId) || relatedId === character.id || !knownCharacterIds.has(relatedId)) continue;
+        const [sourceCharacterId, targetCharacterId] = [character.id, relatedId].sort();
+        const key = relationshipPairKey(sourceCharacterId, targetCharacterId);
+        if (representedPairs.has(key)) continue;
+        project.relationships.push({
+          id: "rel-legacy-" + encodeURIComponent(sourceCharacterId) + "-" + encodeURIComponent(targetCharacterId),
+          name: "Relación heredada", sourceCharacterId, targetCharacterId,
+          relationshipType: "other",
+          description: "Relación migrada desde la ficha del proyecto anterior.",
+          status: "unknown"
+        });
+        representedPairs.add(key);
       }
-      project.relationships = Array.from(migrated.values());
     }
 
     const groups = [

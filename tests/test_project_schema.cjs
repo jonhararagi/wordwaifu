@@ -206,6 +206,61 @@ function testMigratesLegacyCharacterRelationshipsToStableRecords() {
   assert.deepEqual(result.project.characters.find((character) => character.id === "char-b").relationships, ["char-a"]);
 }
 
+function testMigratesLegacyLinksWhenExplicitRelationshipStoreIsEmpty() {
+  const input = validProject();
+  const second = structuredClone(input.characters[0]);
+  second.id = "char-b";
+  second.name = "Juno";
+  second.relationships = ["char-a"];
+  input.characters[0].relationships = ["char-b"];
+  input.characters.push(second);
+  input.relationships = [];
+
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\n"));
+  assert.equal(result.project.relationships.length, 1,
+    "An explicit but empty relationship collection must not discard legacy character links.");
+  const relation = result.project.relationships[0];
+  assert.ok(relation.id.startsWith("rel-legacy-"));
+  assert.deepEqual([relation.sourceCharacterId, relation.targetCharacterId].sort(), ["char-a", "char-b"]);
+  assert.deepEqual(result.project.characters.find((character) => character.id === "char-a").relationships, ["char-b"]);
+  assert.deepEqual(result.project.characters.find((character) => character.id === "char-b").relationships, ["char-a"]);
+}
+
+function testMergesLegacyLinksIntoPartiallyMigratedRelationshipStore() {
+  const input = validProject();
+  const second = structuredClone(input.characters[0]);
+  second.id = "char-b";
+  second.name = "Juno";
+  second.relationships = ["char-a"];
+  const third = structuredClone(input.characters[0]);
+  third.id = "char-c";
+  third.name = "Ren";
+  third.relationships = ["char-a"];
+  input.characters[0].relationships = ["char-b", "char-c"];
+  input.characters.push(second, third);
+  input.relationships = [{
+    id: "rel-existing", name: "Confianza explícita",
+    sourceCharacterId: "char-a", targetCharacterId: "char-c",
+    relationshipType: "friendship", description: "Registro ya normalizado.", status: "canon"
+  }];
+
+  const result = validateAndNormalizeProject(input);
+  assert.equal(result.valid, true, result.errors.join("\n"));
+  assert.equal(result.project.relationships.length, 2,
+    "The missing legacy pair must be added without duplicating an already-normalized pair.");
+  assert.ok(result.project.relationships.some((relation) => relation.id === "rel-existing"));
+  assert.equal(result.project.relationships.filter((relation) =>
+    [relation.sourceCharacterId, relation.targetCharacterId].sort().join("|") === "char-a|char-c").length, 1);
+  assert.ok(result.project.relationships.some((relation) =>
+    relation.id.startsWith("rel-legacy-") &&
+    [relation.sourceCharacterId, relation.targetCharacterId].sort().join("|") === "char-a|char-b"));
+  for (const [characterId, expectedRelatedId] of [["char-a", "char-b"], ["char-a", "char-c"], ["char-b", "char-a"], ["char-c", "char-a"]]) {
+    assert.ok(result.project.characters.find((character) => character.id === characterId).relationships.includes(expectedRelatedId),
+      characterId + " must retain the compatibility projection to " + expectedRelatedId + ".");
+  }
+}
+
 function testValidatesExplicitRelationshipsAndBuildsCompatibilityProjection() {
   const input = validProject();
   const second = structuredClone(input.characters[0]);
@@ -334,6 +389,8 @@ const tests = [
   testRejectsDanglingOrganizationReferences,
   testOrganizationIdsAreGloballyUnique,
   testMigratesLegacyCharacterRelationshipsToStableRecords,
+  testMigratesLegacyLinksWhenExplicitRelationshipStoreIsEmpty,
+  testMergesLegacyLinksIntoPartiallyMigratedRelationshipStore,
   testValidatesExplicitRelationshipsAndBuildsCompatibilityProjection,
   testRejectsInvalidRelationshipEndpointsAndSelfLinks,
   testRejectsDuplicateRelationshipPairsAndTypes,

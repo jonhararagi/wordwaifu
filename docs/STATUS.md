@@ -1,11 +1,12 @@
 # Estado de WordWaifu
-## Estado operativo y verificación — 2026-10-18
+## Estado operativo y verificación — 2026-10-20
 
 **Esta sección prevalece sobre el historial que sigue.** No se certifica un porcentaje global a partir de cantidad de archivos o tests.
 
 - **Repositorio/rama:** `jonhararagi/wordwaifu` · `main`.
-- **Cobertura del corpus DanMachi:** 66 registros activos, 55 IDs reservados y 104 documentos de apoyo; el validador no promueve hechos a canon confirmado por sí solo.
-- **Grafo de relaciones:** 70 aristas explícitas que cubren Astrea, Hestia, parte de Loki Familia, rutas de Ryu/Bell/Eina, la referencia histórica Zeus/Hera, el evento del volumen 21, el arco parcial de Astrea Record y dos vínculos de roster histórico secundario para Kaguya/Lyra. Cada arista expone extremos, tipo de relación, continuidad, intervalo, estado de evidencia y claim de apoyo. Las coincidencias por etiquetas siguen siendo una herramienta secundaria de descubrimiento.
+- **Cobertura del corpus DanMachi:** 102 registros activos, 45 IDs reservados y 116 documentos de apoyo; el validador no promueve hechos a canon confirmado por sí solo.
+- **Grafo de relaciones:** 124 aristas explícitas en el catálogo actual. Incluyen vínculos de Astrea y Hestia, parte de Loki Familia, rutas de Ryu/Bell/Eina, la red histórica de Zeus/Hera, acontecimientos de la historia principal y ubicaciones de Orario. Cada arista declara extremos, tipo, continuidad, intervalo, estado de evidencia y claim de apoyo. El conteo indica aristas registradas, no que todas las rutas narrativas estén completas; las coincidencias por etiquetas siguen siendo una herramienta secundaria.
+- **Base de cálculo:** conteos recalculados directamente desde lore/danmachi/catalog.json (HEAD inspeccionado de main: 9a566bff3ce68b0e83c9c513cc8aac32fc98853e). Los enlaces de Actions históricos que siguen no certifican por sí solos el HEAD actual; la CI del commit integrado debe verificarse después.
 - **Nuevos perfiles Loki:** Riveria, Gareth, Lefiya, Tiona, Tione, Bete y Raul tienen ficha individual con alcance provisional `CONT-SO`; los datos oficiales de adaptación no se extrapolan automáticamente a la novela principal.
 - **Familia Hestia:** el registro `DM-FAM-HESTIA` pasa a `source_checked_partial` porque seis claims trazables respaldan el estado inicial de la adaptación y un snapshot de los perfiles oficiales. Esto no cierra el roster por época ni la cronología de la novela ligera.
 - **Mapas de historia añadidos:** Sword Oratoria 14 (los orígenes de los tres líderes) y el volumen principal 21 (expedición fallida / rescate del piso 60). Ambos son mapas parciales respaldados por la sinopsis editorial y, en el volumen 21, un fragmento oficial. No equivalen al libro entero ni a un final de la serie.
