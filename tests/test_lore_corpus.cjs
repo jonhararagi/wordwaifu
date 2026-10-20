@@ -88,6 +88,13 @@ const zaldKitSearch = corpus.search(index, { query: "Zald Deus Ambrosia Behemoth
 assert.ok(zaldKitSearch.results.some(item => item.claimId === "DMR-029-CLM-007" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("/Zald"))),
   "Zald's wiki-sourced ability and historical leads must be searchable with secondary provenance.");
 const heraDeityClaim = index.claims.find(item => item.claimId === "DMR-021-CLM-002");
+
+const zeusDeityClaim = index.claims.find(item => item.claimId === "DMR-021-CLM-001");
+assert.ok(zeusDeityClaim?.claim.includes("identifica a Zeus como deidad patrona"),
+  "Legacy Spanish bold-labelled Afirmación fields must populate the structured claim text.");
+assert.ok(heraDeityClaim?.claim.includes("identifica a Hera como su deidad patrona"),
+  "Hera's legacy bold-labelled Afirmación field must populate the structured claim text.");
+
 assert.ok(heraDeityClaim, "Hera's deity claim must be parsed from the registered research file.");
 assert.deepEqual(heraDeityClaim.sourceIds.slice().sort(), ["DMR-021-SRC-002", "DMR-021-SRC-004"],
   "A following H2 claim for DMR-008 must not contaminate the preceding Hera claim's source list.");
