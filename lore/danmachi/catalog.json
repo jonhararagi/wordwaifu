@@ -1442,29 +1442,560 @@
       ],
       "status": "source_checked_partial",
       "priority": "high"
-    }
-  ],
-  "reservedIds": [
+    },
     {
-      "id": "CHAR-HERMES",
+      "id": "CHAR-SYR-FLOVA",
+      "path": "characters/syrflova.md",
+      "type": "character",
+      "tags": [
+        "Syr Flova",
+        "Syr",
+        "シル・フローヴァ",
+        "Hostess of Fertility",
+        "Camarera de la taberna",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-ALLEN-FROMEL",
+      "path": "characters/allenfromel.md",
+      "type": "character",
+      "tags": [
+        "Allen Fromel",
+        "Allen",
+        "アレン・フローメル",
+        "Freya Familia",
+        "Vicecapitán; atacante rápido",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-HEDIN-SELLAND",
+      "path": "characters/hedinselland.md",
+      "type": "character",
+      "tags": [
+        "Hedin Selland",
+        "Hedin",
+        "ヘディン・セルランド",
+        "Freya Familia",
+        "Estratega; mago espadachín",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-HOGNI-RAGNAR",
+      "path": "characters/hogniragnar.md",
+      "type": "character",
+      "tags": [
+        "Hogni Ragnar",
+        "Hogni",
+        "ヘグニ・ラグナール",
+        "Freya Familia",
+        "Mago espadachín",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-GULLIVER-BROTHERS",
+      "path": "characters/gulliverbrothers.md",
+      "type": "character",
+      "tags": [
+        "Gulliver Brothers",
+        "Gulliver",
+        "ガリバー兄弟",
+        "Alfrik",
+        "Dvalinn",
+        "Berling",
+        "Grer",
+        "Freya Familia",
+        "Unidad de combate; aventureros de primera clase",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-HORN",
+      "path": "characters/horn.md",
+      "type": "character",
+      "tags": [
+        "Horn",
+        "Hörn",
+        "ヘルン",
+        "Freya Familia",
+        "Asistente personal de Freya",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-HEITH-VELVET",
+      "path": "characters/heithvelvet.md",
+      "type": "character",
+      "tags": [
+        "Heith Velvet",
+        "Heith",
+        "ヘイズ・ベルベット",
+        "Freya Familia",
+        "Jefa de unidad médica y herbolaria",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-VAN-FREYA",
+      "path": "characters/van.md",
+      "type": "character",
+      "tags": [
+        "Van",
+        "ヴァン",
+        "Freya Familia",
+        "Aventurero",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-MIA-GRAND",
+      "path": "characters/miagrand.md",
+      "type": "character",
+      "tags": [
+        "Mia Grand",
+        "Mia",
+        "ミア・グランド",
+        "Hostess of Fertility",
+        "Propietaria y gerente de la taberna",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ANYA-FROMEL",
+      "path": "characters/anyafromel.md",
+      "type": "character",
+      "tags": [
+        "Anya Fromel",
+        "Anya",
+        "アーニャ・フローメル",
+        "Hostess of Fertility; antigua Freya Familia",
+        "Camarera; antigua aventurera",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-CHLOE-ROLO",
+      "path": "characters/chloe-rollo.md",
+      "type": "character",
+      "tags": [
+        "Chloe Rollo",
+        "Chloe",
+        "クロエ・ロロ",
+        "Hostess of Fertility",
+        "Camarera; antigua asesina",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LUNOIRE-FAUST",
+      "path": "characters/lunoirefaust.md",
+      "type": "character",
+      "tags": [
+        "Lunoire Faust",
+        "Lunoire",
+        "ルノア・ファウスト",
+        "Hostess of Fertility",
+        "Camarera; antigua asesina",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DIONYSUS",
+      "path": "characters/dionysus.md",
       "type": "deity_character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Dionysus",
+        "Dionisio",
+        "ディオニュソス",
+        "Dionysus Familia",
+        "Dios; responsable de Familia",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-FILVIS-CHALIA",
+      "path": "characters/filvischalia.md",
+      "type": "character",
+      "tags": [
+        "Filvis Chalia",
+        "Filvis",
+        "フィルヴィス・シャリア",
+        "Dionysus Familia",
+        "Aventurera; espadachina mágica",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-ASFI-AL-ANDROMEDA",
+      "path": "characters/asfialandromeda.md",
+      "type": "character",
+      "tags": [
+        "Asfi Al Andromeda",
+        "Asfi",
+        "アスフィ・アル・アンドロメダ",
+        "Hermes Familia",
+        "Capitana; creadora de objetos mágicos",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     },
     {
       "id": "CHAR-OURANOS",
+      "path": "characters/ouranos.md",
       "type": "deity_character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Ouranos",
+        "Uranus",
+        "ウラノス",
+        "Guild / sin Familia aventurera",
+        "Dios; máxima autoridad del Guild",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     },
     {
       "id": "CHAR-FELS",
+      "path": "characters/fels.md",
       "type": "character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Fels",
+        "フェルズ",
+        "Vinculado a Ouranos y al Guild",
+        "Mago; colaborador de Ouranos",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-REVIS",
+      "path": "characters/revis.md",
+      "type": "character",
+      "tags": [
+        "Revis",
+        "レヴィス",
+        "No confirmada",
+        "Antagonista; combatiente enigmática",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DAPHNE-LAUROS",
+      "path": "characters/daphnelauros.md",
+      "type": "character",
+      "tags": [
+        "Daphne Lauros",
+        "Daphne",
+        "ダフネ・ラウロス",
+        "Miach Familia; ex Apollo Familia",
+        "Aventurera; estratega de equipo",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-CASSANDRA-ILION",
+      "path": "characters/cassandrailion.md",
+      "type": "character",
+      "tags": [
+        "Cassandra Ilion",
+        "Cassandra",
+        "カサンドラ・イリオン",
+        "Miach Familia",
+        "Aventurera; sanadora",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-KASHIMA-OUKA",
+      "path": "characters/kashimaouka.md",
+      "type": "character",
+      "tags": [
+        "Kashima Ouka",
+        "Ouka",
+        "カシマ・桜花",
+        "Takemikazuchi Familia",
+        "Guerrero de primera línea",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-HITACHI-CHIGUSA",
+      "path": "characters/hitachichigusa.md",
+      "type": "character",
+      "tags": [
+        "Hitachi Chigusa",
+        "Chigusa",
+        "ヒタチ・千草",
+        "Takemikazuchi Familia",
+        "Arquera; supporter",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-AISHA-BELKA",
+      "path": "characters/aishabelka.md",
+      "type": "character",
+      "tags": [
+        "Aisha Belka",
+        "Aisha",
+        "アイシャ・ベルカ",
+        "Hermes Familia; ex Ishtar Familia",
+        "Guerrera; antigua integrante de Ishtar Familia",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LUVIS-LILIX",
+      "path": "characters/luvislilix.md",
+      "type": "character",
+      "tags": [
+        "Luvis Lilix",
+        "ルヴィス・リーリックス",
+        "Luvix Lilix",
+        "Modi Familia",
+        "Aventurero; antiguo asesorado del Guild",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DORMUL-BOLSTER",
+      "path": "characters/dormulbolster.md",
+      "type": "character",
+      "tags": [
+        "Dormul Bolster",
+        "ドルムル・ボルスタ",
+        "Dormul Bolsta",
+        "Magni Familia",
+        "Aventurero; combatiente con martillos",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-MARI-XENOS",
+      "path": "characters/mari.md",
+      "type": "character",
+      "tags": [
+        "Mari (Xenos)",
+        "Mari",
+        "マリ",
+        "Mermaid Xenos",
+        "Xenos; no pertenece a una Familia divina",
+        "Xenos; personaje de apoyo de la historia del Dungeon",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LULUNE-LOUIE",
+      "path": "characters/lulunelouie.md",
+      "type": "character",
+      "tags": [
+        "Lulune Louie",
+        "Rurune Rui",
+        "ルルネ・ルーイ",
+        "Hermes Familia",
+        "Aventurera; ladrona y cartógrafa",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-TSUBAKI-COLBRANDE",
+      "path": "characters/tsubakicollbrande.md",
+      "type": "character",
+      "tags": [
+        "Tsubaki Collbrande",
+        "Tsubaki",
+        "椿・コルブランド",
+        "Hephaistos Familia",
+        "Capitana; maestra herrera",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ALFRIGG-GULLIVER",
+      "path": "characters/alfrigggulliver.md",
+      "type": "character",
+      "tags": [
+        "Alfrigg Gulliver",
+        "Alfrigg",
+        "Gulliver",
+        "Gulliver Brothers",
+        "Freya Familia",
+        "lanza",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-DVALINN-GULLIVER",
+      "path": "characters/dvalinngulliver.md",
+      "type": "character",
+      "tags": [
+        "Dvalinn Gulliver",
+        "Dvalinn",
+        "Gulliver",
+        "Gulliver Brothers",
+        "Freya Familia",
+        "martillo de guerra",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-BERLING-GULLIVER",
+      "path": "characters/berlinggulliver.md",
+      "type": "character",
+      "tags": [
+        "Berling Gulliver",
+        "Berling",
+        "Gulliver",
+        "Gulliver Brothers",
+        "Freya Familia",
+        "hacha",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-GRER-GULLIVER",
+      "path": "characters/grergulliver.md",
+      "type": "character",
+      "tags": [
+        "Grer Gulliver",
+        "Grer",
+        "Gulliver",
+        "Gulliver Brothers",
+        "Freya Familia",
+        "espadón",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-HERMES",
+      "path": "characters/hermes.md",
+      "type": "deity_character",
+      "tags": [
+        "Hermes",
+        "Hermes Familia",
+        "Dios; dirigente de Hermes Familia",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     },
     {
       "id": "CHAR-GANESHA",
+      "path": "characters/ganesha.md",
       "type": "deity_character",
-      "status": "candidate_not_created"
+      "tags": [
+        "Ganesha",
+        "Ganesha Familia",
+        "Dios; dirigente de Ganesha Familia",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     },
+    {
+      "id": "CHAR-SHAKTI-VARMA",
+      "path": "characters/shakti-varma.md",
+      "type": "character",
+      "tags": [
+        "Shakti Varma",
+        "Ganesha Familia",
+        "Capitana de Ganesha Familia; aventurera de primera clase",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-APOLLO",
+      "path": "characters/apollo.md",
+      "type": "deity_character",
+      "tags": [
+        "Apollo",
+        "Apollo Familia",
+        "Dios; dirigente de Apollo Familia",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ISHTAR",
+      "path": "characters/ishtar.md",
+      "type": "deity_character",
+      "tags": [
+        "Ishtar",
+        "Ishtar Familia",
+        "Diosa; dirigente de Ishtar Familia",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    }
+  ],
+  "reservedIds": [
     {
       "id": "CHAR-ALFIA",
       "type": "character",
@@ -1507,16 +2038,6 @@
     },
     {
       "id": "CHAR-DEMETER",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-ISHTAR",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-APOLLO",
       "type": "deity_character",
       "status": "candidate_not_created"
     },
@@ -2364,6 +2885,12 @@
       "document_id": "DOC-DANMACHI-RESEARCH-035",
       "path": "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md",
       "type": "published_novel_publisher_paratext",
+      "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-036",
+      "path": "research/inbox/DANMACHI-RESEARCH-036-character-coverage-expansion.md",
+      "type": "character_coverage_research",
       "status": "source_checked_partial"
     }
   ],

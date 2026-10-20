@@ -299,6 +299,391 @@
       conflict: "El deseo de ser aceptada puede entrar en conflicto con la identidad que intenta ocultar. Su historia plantea cuánto de una persona puede juzgarse por sus actos cuando otros han intervenido en las condiciones que la formaron.",
       sources: ["https://danmachi.fandom.com/wiki/Filvis_Chalia", "https://danmachi.com/sword_oratoria/character/"]
     }
+    "CHAR-ALLEN-FROMEL": {
+      "appearance": "El retrato del perfil oficial identifica a Allen Fromel en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Aventurero de primera clase asociado por el perfil a la velocidad excepcional dentro de Orario y a la fuerza de choque de Freya Familia. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Agresivo, intimidante y ferozmente devoto a Freya.",
+      "abilities": "Nivel 6; el perfil lo presenta como el más rápido de la ciudad.",
+      "relationships": "Es el hermano mayor de Anya Fromel; ambos aparecen vinculados a la Freya Familia y a Hostess of Fertility.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-GULLIVER-BROTHERS": {
+      "appearance": "El retrato del perfil oficial identifica a Gulliver Brothers en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Cuatro hermanos Pallum que alcanzan el nivel 5 y coordinan sus fortalezas como una única unidad de combate. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Su rasgo principal como grupo es la complementariedad: las armas y los colores de ojos y armaduras distinguen a cada hermano.",
+      "abilities": "La formación conjunta los vuelve especialmente peligrosos. Cada hermano usa un arma diferente: lanza, martillo, hacha o espada a dos manos.",
+      "relationships": "Son hermanos cuatrillizos y miembros de Freya Familia.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-HORN": {
+      "appearance": "El retrato del perfil oficial identifica a Horn en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Persona misteriosa encargada de asistir de cerca a Freya; la página oficial la describe como aventurera de alto nivel para su posición pero sin un título formal. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Reservada y enigmática en la presentación oficial.",
+      "abilities": "Nivel 2 en la ficha, sin epíteto oficial.",
+      "relationships": "Su labor gira en torno a Freya y su entorno inmediato.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-HEITH-VELVET": {
+      "appearance": "El retrato del perfil oficial identifica a Heith Velvet en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Encabeza una unidad de curanderos y herbolarios dedicada a atender lesiones dentro de Freya Familia. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Suele parecer agotada por el volumen de lesiones, pero su actitud se vuelve feroz cuando Freya está amenazada.",
+      "abilities": "Nivel 4 en el perfil oficial; su especialidad es la atención médica y el tratamiento.",
+      "relationships": "Sirve a Freya y trata de forma habitual a los miembros lesionados durante entrenamientos.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-VAN-FREYA": {
+      "appearance": "El retrato del perfil oficial identifica a Van en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Aventurero de sangre mitad Pallum que encuentra un lugar en la Freya Familia y se compromete con ella. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "La lealtad nace de haber encontrado pertenencia y aceptación dentro de la Familia.",
+      "abilities": "Nivel 4 en el perfil de DanMachi V.",
+      "relationships": "Declara lealtad a Freya y a la Familia que lo acogió.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-LUNOIRE-FAUST": {
+      "appearance": "El retrato del perfil oficial identifica a Lunoire Faust en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Trabajadora de Hostess of Fertility que aparece como una de las personas más sensatas del grupo y suele responder a las ocurrencias de Anya y Chloe. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Práctica y centrada, dentro de una taberna con personajes mucho más expresivos.",
+      "abilities": "Nivel 4; la fuente aclara que “Black Fist” no es un epíteto oficial.",
+      "relationships": "Trabaja junto a Anya y Chloe y comparte con Chloe las consecuencias del encargo fallido contra Ryu.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "DM-CHAR-LOKI": {
+      "appearance": "El retrato del perfil oficial identifica a Loki en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Diosa responsable de una de las Familias más influyentes de Orario. La adaptación la muestra informal en la vida cotidiana, pero capaz de reunir a aventureros de gran talento. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Despreocupada y bromista, con debilidad por las personas bonitas y el alcohol; su actitud no debe confundirse con falta de criterio estratégico.",
+      "abilities": "Su ficha se centra en la dirección de Familia, no en nivel de aventurera.",
+      "relationships": "Lidera a Finn, Riveria, Gareth, Ais y el resto de Loki Familia.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/"
+      ]
+    },
+    "CHAR-RAUL-NOORD": {
+      "appearance": "El retrato del perfil oficial identifica a Raul Nord en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Aventurero que actúa como punto de apoyo para los miembros de menor rango durante situaciones difíciles. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Cauto y nervioso en su forma de actuar, pero capaz de responder a las responsabilidades que Finn deposita en él.",
+      "abilities": "Nivel 4 en el perfil de la adaptación de Sword Oratoria.",
+      "relationships": "Confía en el mando de Finn y contribuye a coordinar a integrantes más jóvenes.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/"
+      ]
+    },
+    "CHAR-DIONYSUS": {
+      "appearance": "El retrato del perfil oficial identifica a Dionysus en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Dios que investiga incidentes extraños que afectan a miembros de su Familia y busca cooperación con Loki Familia. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Cultivado y cordial en la superficie; sus intenciones deben evaluarse en el marco de la trama y los spoilers de Sword Oratoria.",
+      "abilities": "No se le asigna nivel de aventurero.",
+      "relationships": "Tiene un vínculo importante con Filvis Chalia y contacta con Loki Familia durante la investigación.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/"
+      ]
+    },
+    "CHAR-ASFI-AL-ANDROMEDA": {
+      "appearance": "El retrato del perfil oficial identifica a Asfi Al Andromeda en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Capitana de Hermes Familia y aventurera capaz, reconocida por fabricar objetos mágicos útiles para la exploración. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Práctica y competente, con atención al equipo y las herramientas que aumentan las opciones del grupo.",
+      "abilities": "Creación de objetos mágicos y experiencia de exploración.",
+      "relationships": "Sirve a Hermes y su conocimiento técnico la conecta con otros aventureros de Orario.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/"
+      ]
+    },
+    "CHAR-OURANOS": {
+      "appearance": "El retrato del perfil oficial identifica a Ouranos en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Figura divina que dirige el Guild desde una posición reservada y emplea la oración como parte de su labor. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Reservado, paciente y opaco para la mayor parte de Orario.",
+      "abilities": "Su papel es institucional y religioso, no un rango de aventurero.",
+      "relationships": "Está vinculado a la administración del Guild y a Fels.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/"
+      ]
+    },
+    "CHAR-REVIS": {
+      "appearance": "El retrato del perfil oficial identifica a Revis en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Mujer misteriosa encontrada en los niveles del Dungeon y asociada a acontecimientos del spin-off Sword Oratoria. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Difícil de leer; su tratamiento narrativo depende de revelaciones del spin-off.",
+      "abilities": "La página oficial destaca una capacidad de combate excepcional y un vínculo con monstruos.",
+      "relationships": "La relación con Ais y el nombre Aria pertenecen a una zona de spoilers importantes.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/"
+      ]
+    },
+    "CHAR-KASHIMA-OUKA": {
+      "appearance": "El retrato del perfil oficial identifica a Kashima Ouka en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Guerrero del Lejano Oriente que sirve como uno de los combatientes principales de Takemikazuchi Familia. La ficha oficial lo presenta como un luchador responsable y comprometido con su grupo. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Responsable y dedicado, aunque poco perceptivo ante los sentimientos que otras personas tienen por él.",
+      "abilities": "Nivel 2; destaca por la disciplina marcial y el combate cuerpo a cuerpo.",
+      "relationships": "Es objeto del afecto de Chigusa Hitachi, algo que él no parece advertir.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-HITACHI-CHIGUSA": {
+      "appearance": "El retrato del perfil oficial identifica a Hitachi Chigusa en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Aventurera del Lejano Oriente que apoya a su grupo con arco y funciones de supporter. Su carácter reservado condiciona cómo expresa sus sentimientos. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Tímida y discreta; mantiene vínculos antiguos con Mikoto y Haruhime.",
+      "abilities": "Nivel 1; utiliza arco y funciones de apoyo en expediciones.",
+      "relationships": "Es amiga de la infancia de Mikoto y Haruhime y está enamorada de Ouka.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-LUVIS-LILIX": {
+      "appearance": "El retrato del perfil oficial identifica a Luvis Lilix en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Elfo aventurero que había recibido orientación de Eina Tulle. La ficha oficial lo sitúa en una misión de búsqueda en los niveles inferiores y señala su conflicto recurrente con Dormul. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Presumido al hablar frente a Eina y competitivo en sus interacciones con Dormul.",
+      "abilities": "Nivel 3; aventurero que desciende a niveles inferiores junto a su grupo.",
+      "relationships": "Tiene sentimientos por Eina y suele enfrentarse verbalmente con Dormul Bolster.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-DORMUL-BOLSTER": {
+      "appearance": "El retrato del perfil oficial identifica a Dormul Bolster en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Enano aventurero de Magni Familia y antiguo asesorado de Eina. Participa en una expedición al Dungeon y usa armas contundentes. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "De trato amable y algo torpe; mantiene una rivalidad con Luvis, aunque ambos pueden colaborar cuando la situación lo exige.",
+      "abilities": "Nivel 3; combate con martillos y posee gran resistencia física para su rango.",
+      "relationships": "Rivaliza con Luvis, en parte por sus sentimientos hacia Eina Tulle.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-MARI-XENOS": {
+      "appearance": "El retrato del perfil oficial identifica a Mari (Xenos) en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Sirena Xenos que conoce a Bell en los niveles inferiores. Puede moverse con rapidez bajo el agua, pero no puede vivir o desplazarse por la superficie de la misma manera que otros Xenos. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Se apega rápidamente a Bell después de conocerlo.",
+      "abilities": "Adaptada al desplazamiento acuático; la ficha no le asigna nivel de aventurera.",
+      "relationships": "Desarrolla un vínculo afectuoso con Bell tras su primer encuentro.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-ISKA-BRA": {
+      "appearance": "El retrato del perfil oficial identifica a Iska Bra en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "La ficha oficial la registra en Astrea Familia e identifica su especie como Amazoness, sin describir una trayectoria individual extensa. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "No establecida por la ficha oficial consultada.",
+      "abilities": "No detalladas por la ficha oficial consultada.",
+      "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-MARIYU-LEAGE": {
+      "appearance": "El retrato del perfil oficial identifica a Mariyu Leage en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "La página oficial la incluye entre los miembros de Astrea Familia e indica que es humana, pero el perfil no desarrolla otros aspectos biográficos. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "No establecida por la ficha oficial consultada.",
+      "abilities": "No detalladas por la ficha oficial consultada.",
+      "relationships": "La pertenencia documentada es a Astrea Familia; otros vínculos personales requieren una fuente adicional.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-LULUNE-LOUIE": {
+      "appearance": "El retrato del perfil oficial identifica a Lulune Louie en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Aventurera de Hermes Familia con experiencia como ladrona; sus habilidades de mapeo son una de sus contribuciones reconocidas. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Impulsiva, propensa a equivocaciones y a decir cosas inoportunas, lo que suele provocar reprimendas de Asfi.",
+      "abilities": "Experiencia como ladrona y habilidad de cartografía; el perfil de Sword Oratoria no le asigna un nivel.",
+      "relationships": "Trabaja bajo la dirección de Asfi Al Andromeda.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/"
+      ]
+    },
+    "CHAR-TSUBAKI-COLBRANDE": {
+      "appearance": "El retrato del perfil oficial identifica a Tsubaki Collbrande en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "Herrera de alto nivel que dirige Hephaistos Familia y es reconocida por su extraordinaria habilidad en la forja. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "Extrovertida y cercana, suele mostrarse insistente al invitar a otros a celebrar y beber.",
+      "abilities": "Maestra herrera; el perfil consultado no especifica un nivel.",
+      "relationships": "Dirige Hephaistos Familia y mantiene vínculos profesionales con los aventureros que dependen de su trabajo como herrera.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/sword_oratoria/character/"
+      ]
+    },
+    "CHAR-NOIN-UNIC": {
+      "appearance": "El retrato del perfil oficial identifica a Noin Unic en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "La ficha oficial identifica a Noin como humana y la incluye entre las integrantes de Astrea Familia; no ofrece una biografía individual extensa. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "No establecida por la ficha oficial consultada.",
+      "abilities": "No detalladas por la ficha oficial consultada.",
+      "relationships": "Afiliación a Astrea Familia documentada; otros vínculos personales requieren escenas o fuentes específicas.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-NEZE-RANKETT": {
+      "appearance": "El retrato del perfil oficial identifica a Neze Rankett en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "El perfil oficial identifica a Neze como mujer lobo y la incluye entre los miembros de Astrea Familia, sin describir una trayectoria individual extensa. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "No establecida por la ficha oficial consultada.",
+      "abilities": "No detalladas por la ficha oficial consultada.",
+      "relationships": "Afiliación documentada a Astrea Familia; no se inventan relaciones personales.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-ASTA-KNOX": {
+      "appearance": "El retrato del perfil oficial identifica a Asta Knox en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "El portal oficial identifica a Asta como enana y la presenta en el roster de Astrea Familia; no desarrolla en ese perfil su psicología o una biografía extensa. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "No establecida por la ficha oficial consultada.",
+      "abilities": "No detalladas por la ficha oficial consultada.",
+      "relationships": "Afiliación documentada a Astrea Familia; otros vínculos requieren evidencia individual.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-RYANA-LIETZ": {
+      "appearance": "El retrato del perfil oficial identifica a Ryana Lietz en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "El perfil oficial identifica a Ryana como humana y la incluye en Astrea Familia, pero no establece una biografía individual extensa. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "No establecida por la ficha oficial consultada.",
+      "abilities": "No detalladas por la ficha oficial consultada.",
+      "relationships": "Afiliación documentada a Astrea Familia; otros vínculos requieren evidencia individual.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-CELTY-SROWA": {
+      "appearance": "El retrato del perfil oficial identifica a Celty Srowa en la adaptación; no se trata como diseño invariable entre temporadas.",
+      "history": "El perfil oficial identifica a Celty como elfa y la incluye en Astrea Familia, sin detallar allí nivel o habilidades. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "personality": "No establecida por la ficha oficial consultada.",
+      "abilities": "No detalladas por la ficha oficial consultada.",
+      "relationships": "Afiliación documentada a Astrea Familia; no se deduce una amistad individual por pertenencia al grupo.",
+      "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
+      "sources": [
+        "https://danmachi.com/danmachi4/character/"
+      ]
+    },
+    "CHAR-ALFRIGG-GULLIVER": {
+      "appearance": "La ficha oficial diferencia a Alfrigg Gulliver por ojos azul, armadura azul y lanza.",
+      "history": "El perfil oficial de DanMachi V distingue a Alfrigg Gulliver como hermano mayor, con ojos azul y lanza. El nivel 5 y la coordinación táctica se atribuyen al conjunto de los cuatro hermanos. La fuente describe la unidad y no reconstruye toda la biografía individual.",
+      "personality": "La página oficial individualiza arma y rasgos visuales, pero no una psicología completa. No se inventan miedos, gustos o hábitos privados.",
+      "abilities": "Se distingue por usar lanza. El nivel 5 y la coordinación se atribuyen al grupo; no se inventan estadísticas individuales.",
+      "relationships": "Es uno de los cuatro hermanos Gulliver y pertenece a Freya Familia en el estado descrito por DanMachi V.",
+      "conflict": "La trayectoria individual necesita localizadores narrativos; no se infieren gustos, miedos ni estadísticas propias desde el perfil grupal.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-DVALINN-GULLIVER": {
+      "appearance": "La ficha oficial diferencia a Dvalinn Gulliver por ojos amarillo, armadura amarilla y martillo de guerra.",
+      "history": "El perfil oficial de DanMachi V distingue a Dvalinn Gulliver como segundo hermano, con ojos amarillo y martillo de guerra. El nivel 5 y la coordinación táctica se atribuyen al conjunto de los cuatro hermanos. La fuente describe la unidad y no reconstruye toda la biografía individual.",
+      "personality": "La página oficial individualiza arma y rasgos visuales, pero no una psicología completa. No se inventan miedos, gustos o hábitos privados.",
+      "abilities": "Se distingue por usar martillo de guerra. El nivel 5 y la coordinación se atribuyen al grupo; no se inventan estadísticas individuales.",
+      "relationships": "Es uno de los cuatro hermanos Gulliver y pertenece a Freya Familia en el estado descrito por DanMachi V.",
+      "conflict": "La trayectoria individual necesita localizadores narrativos; no se infieren gustos, miedos ni estadísticas propias desde el perfil grupal.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-BERLING-GULLIVER": {
+      "appearance": "La ficha oficial diferencia a Berling Gulliver por ojos verde, armadura verde y hacha.",
+      "history": "El perfil oficial de DanMachi V distingue a Berling Gulliver como tercer hermano, con ojos verde y hacha. El nivel 5 y la coordinación táctica se atribuyen al conjunto de los cuatro hermanos. La fuente describe la unidad y no reconstruye toda la biografía individual.",
+      "personality": "La página oficial individualiza arma y rasgos visuales, pero no una psicología completa. No se inventan miedos, gustos o hábitos privados.",
+      "abilities": "Se distingue por usar hacha. El nivel 5 y la coordinación se atribuyen al grupo; no se inventan estadísticas individuales.",
+      "relationships": "Es uno de los cuatro hermanos Gulliver y pertenece a Freya Familia en el estado descrito por DanMachi V.",
+      "conflict": "La trayectoria individual necesita localizadores narrativos; no se infieren gustos, miedos ni estadísticas propias desde el perfil grupal.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-GRER-GULLIVER": {
+      "appearance": "La ficha oficial diferencia a Grer Gulliver por ojos rojo, armadura roja y espadón.",
+      "history": "El perfil oficial de DanMachi V distingue a Grer Gulliver como cuarto hermano, con ojos rojo y espadón. El nivel 5 y la coordinación táctica se atribuyen al conjunto de los cuatro hermanos. La fuente describe la unidad y no reconstruye toda la biografía individual.",
+      "personality": "La página oficial individualiza arma y rasgos visuales, pero no una psicología completa. No se inventan miedos, gustos o hábitos privados.",
+      "abilities": "Se distingue por usar espadón. El nivel 5 y la coordinación se atribuyen al grupo; no se inventan estadísticas individuales.",
+      "relationships": "Es uno de los cuatro hermanos Gulliver y pertenece a Freya Familia en el estado descrito por DanMachi V.",
+      "conflict": "La trayectoria individual necesita localizadores narrativos; no se infieren gustos, miedos ni estadísticas propias desde el perfil grupal.",
+      "sources": [
+        "https://danmachi.com/danmachi5/character/"
+      ]
+    },
+    "CHAR-HERMES": {
+      "appearance": "El perfil oficial de Hermes brinda referencia visual y funcional de adaptación; no es invariable para toda época.",
+      "history": "Dios que dirige Hermes Familia y se desplaza con libertad. El portal oficial de DanMachi III lo muestra cooperando a veces con Bell, sin resolver todos sus objetivos. La cronología personal completa requiere escenas y localizadores narrativos.",
+      "personality": "Desenvuelto e independiente en el retrato de adaptación; no resume todas sus motivaciones.",
+      "abilities": "Su papel es divino e institucional; no se le asigna nivel de aventurero.",
+      "relationships": "Dirige Hermes Familia y mantiene una conexión narrativa con Bell, que debe desplegarse mediante eventos específicos.",
+      "conflict": "Faltan localizadores de escenas narrativas para cerrar cronología, decisiones, límites y evolución.",
+      "sources": [
+        null
+      ]
+    },
+    "CHAR-GANESHA": {
+      "appearance": "El perfil oficial de Ganesha brinda referencia visual y funcional de adaptación; no es invariable para toda época.",
+      "history": "Dios que dirige Ganesha Familia, vinculada a la seguridad pública de Orario en el perfil oficial. La adaptación combina gestos cómicos con su condición divina. La cronología personal completa requiere escenas y localizadores narrativos.",
+      "personality": "La fuente muestra una fachada excéntrica pero remarca su dignidad divina; no se extrapolan los chistes a toda situación.",
+      "abilities": "Su relevancia es institucional y religiosa; no se le asigna nivel de aventurero.",
+      "relationships": "Es la deidad principal de Ganesha Familia y se relaciona institucionalmente con Shakti Varma.",
+      "conflict": "Faltan localizadores de escenas narrativas para cerrar cronología, decisiones, límites y evolución.",
+      "sources": [
+        null
+      ]
+    },
+    "CHAR-SHAKTI-VARMA": {
+      "appearance": "El perfil oficial de Shakti Varma brinda referencia visual y funcional de adaptación; no es invariable para toda época.",
+      "history": "Aventurera de nivel 5 que encabeza a los miembros de Ganesha Familia; el perfil oficial conecta sus responsabilidades con la seguridad de Orario. La cronología personal completa requiere escenas y localizadores narrativos.",
+      "personality": "La fuente permite atribuir responsabilidad de mando y servicio urbano, pero no desarrolla gustos, temores ni hábitos privados.",
+      "abilities": "Nivel 5 en el perfil oficial de adaptación; su función se vincula a la seguridad urbana.",
+      "relationships": "Capitana de Ganesha Familia y subordinada institucional de su deidad principal.",
+      "conflict": "Faltan localizadores de escenas narrativas para cerrar cronología, decisiones, límites y evolución.",
+      "sources": [
+        null
+      ]
+    },
+    "CHAR-APOLLO": {
+      "appearance": "El perfil oficial de Apollo brinda referencia visual y funcional de adaptación; no es invariable para toda época.",
+      "history": "Dios que dirige Apollo Familia y aparece como dios solar de temperamento apasionado en el perfil oficial de DanMachi II. La cronología personal completa requiere escenas y localizadores narrativos.",
+      "personality": "La adaptación enfatiza su intensidad y deseo; es un retrato acotado.",
+      "abilities": "No se le asigna nivel de aventurero; su influencia deriva de su posición y Familia.",
+      "relationships": "Dirige Apollo Familia; su conflicto con Hestia Familia debe recorrerse mediante eventos de la Guerra de Juegos.",
+      "conflict": "Faltan localizadores de escenas narrativas para cerrar cronología, decisiones, límites y evolución.",
+      "sources": [
+        null
+      ]
+    },
+    "CHAR-ISHTAR": {
+      "appearance": "El perfil oficial de Ishtar brinda referencia visual y funcional de adaptación; no es invariable para toda época.",
+      "history": "Diosa que dirige Ishtar Familia y cuya ambición aparece destacada por el portal oficial de DanMachi II. La cronología personal completa requiere escenas y localizadores narrativos.",
+      "personality": "Orgullo, deseo y ambición son rasgos destacados por esa adaptación; no se extrapolan a estados no descritos.",
+      "abilities": "No se le asigna nivel de aventurera; su influencia procede de su estatus divino y su Familia.",
+      "relationships": "Dirige Ishtar Familia; Aisha y Haruhime están vinculadas históricamente a esta facción en el periodo de adaptación.",
+      "conflict": "Faltan localizadores de escenas narrativas para cerrar cronología, decisiones, límites y evolución.",
+      "sources": [
+        null
+      ]
+    }
   };
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({

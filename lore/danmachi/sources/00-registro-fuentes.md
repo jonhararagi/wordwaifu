@@ -1864,3 +1864,60 @@ verification_status: stub
 - conflicting_sources: []
 - rights_note: Resumen original de la afirmación; no reproducir la sinopsis completa.
 - verification_status: source_checked
+
+---
+
+## DMR-036-SRC-001 · DanMachi V — hermanos Gulliver
+- source_id: DMR-036-SRC-001
+- title: Portal oficial de personajes DanMachi V
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi V
+- language: Japonés
+- official_url: https://danmachi.com/danmachi5/character/
+- accessed_at: 2026-10-20
+- locator_type: character_profile
+- locator: Entrada ガリバー兄弟; armas y rasgos distintivos
+- claims_supported: [DMR-036-CLM-001, DMR-036-CLM-002, DMR-036-CLM-003, DMR-036-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Perfil de adaptación; no es una biografía completa de novela.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: source_checked
+
+## DMR-036-SRC-002 · DanMachi III — Hermes, Ganesha y Shakti
+- source_id: DMR-036-SRC-002
+- title: Portal oficial de personajes DanMachi III
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi III
+- language: Japonés
+- official_url: https://danmachi.com/danmachi3/character/index.html
+- accessed_at: 2026-10-20
+- locator_type: character_profile
+- locator: Entradas ヘルメス, ガネーシャ, シャクティ・ヴァルマ
+- claims_supported: [DMR-036-CLM-005, DMR-036-CLM-006, DMR-036-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: source_checked
+
+## DMR-036-SRC-003 · DanMachi II — Apollo e Ishtar
+- source_id: DMR-036-SRC-003
+- title: Portal oficial de personajes DanMachi II
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi II
+- language: Japonés
+- official_url: https://danmachi.com/danmachi2/character/index.html
+- accessed_at: 2026-10-20
+- locator_type: character_profile
+- locator: Entradas アポロン, イシュタル
+- claims_supported: [DMR-036-CLM-008, DMR-036-CLM-009]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación; alcance limitado a los perfiles de la temporada.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: source_checked
+
