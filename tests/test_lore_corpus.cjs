@@ -91,10 +91,10 @@ const heraDeityClaim = index.claims.find(item => item.claimId === "DMR-021-CLM-0
 assert.ok(heraDeityClaim, "Hera's deity claim must be parsed from the registered research file.");
 assert.deepEqual(heraDeityClaim.sourceIds.slice().sort(), ["DMR-021-SRC-002", "DMR-021-SRC-004"],
   "A following H2 claim for DMR-008 must not contaminate the preceding Hera claim's source list.");
-const expandedSourceDirectory = corpus.getOnlineSourceDirectory();
-assert.ok(expandedSourceDirectory.some(item => item.id === "community-alfia-abilities-es" && item.url === "https://danmachi.fandom.com/es/wiki/Alfia/Habilidades"),
+const historicalWikiSourceDirectory = corpus.getOnlineSourceDirectory();
+assert.ok(historicalWikiSourceDirectory.some(item => item.id === "community-alfia-abilities-es" && item.url === "https://danmachi.fandom.com/es/wiki/Alfia/Habilidades"),
   "Alfia's secondary wiki reference must be available from the source browser.");
-assert.ok(expandedSourceDirectory.some(item => item.id === "community-zald-es" && item.url === "https://danmachi.fandom.com/es/wiki/Zald"),
+assert.ok(historicalWikiSourceDirectory.some(item => item.id === "community-zald-es" && item.url === "https://danmachi.fandom.com/es/wiki/Zald"),
   "Zald's secondary wiki reference must be available from the source browser.");
 
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY" && edge.from === "CHAR-RYUU-LION" && edge.to === "CHAR-KAGUYA" && edge.evidenceStatus === "secondary_checked" && edge.claimRefs?.includes("DMR-028-CLM-003")), "The existing Ryu/Kaguya historical edge must also expose the wiki-derived moral disagreement without creating a duplicate reverse destination.");
