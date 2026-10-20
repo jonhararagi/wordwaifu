@@ -1414,7 +1414,6 @@
       "path": "places/main-streets.md",
       "type": "location",
       "tags": [
-        "Orario",
         "avenidas principales",
         "main streets",
         "norte",
@@ -1439,8 +1438,6 @@
         "Central Plaza",
         "中央広場",
         "セントラルパーク",
-        "Babel",
-        "Orario",
         "CONT-PROTOTYPE"
       ],
       "status": "source_checked_partial",

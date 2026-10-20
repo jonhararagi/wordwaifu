@@ -473,7 +473,7 @@ assert.ok(catalog.records.some(record => record.id === "LOC-CENTRAL-PARK" && rec
 assert.ok(!catalog.reservedIds.some(record => ["LOC-ORARIO-MAIN-STREETS","LOC-CENTRAL-PARK"].includes(record.id)), "Activated Prototype locations must not remain reserved.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-ORARIO-MAIN-STREETS-OF-ORARIO" && edge.from === "LOC-ORARIO-MAIN-STREETS" && edge.to === "LOC-ORARIO" && edge.continuity === "CONT-PROTOTYPE" && edge.claimRef === "DMR-034-CLM-002"), "The avenue-network relation must carry Prototype provenance.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-CENTRAL-PARK-AROUND-BABEL-PROTOTYPE" && edge.from === "LOC-CENTRAL-PARK" && edge.to === "LOC-BABEL" && edge.continuity === "CONT-PROTOTYPE" && edge.claimRef === "DMR-034-CLM-003"), "Central Park must be linked to Babel only under the Prototype continuity.");
-assert.ok(corpus.searchEntities(catalog, { type: "location", query: "avenidas Orario" }).results.some(entity => entity.id === "LOC-ORARIO-MAIN-STREETS"), "Orario's street network must be findable as an entity.");
+assert.ok(corpus.searchEntities(catalog, { type: "location", query: "avenidas principales" }).results.some(entity => entity.id === "LOC-ORARIO-MAIN-STREETS"), "Orario's street network must be findable as an entity.");
 assert.ok(corpus.searchEntities(catalog, { type: "location", query: "Central Park" }).results.some(entity => entity.id === "LOC-CENTRAL-PARK"), "Central Park must be findable as an entity.");
 const prototypeSources = corpus.getOnlineSourceDirectory();
 for (const [id,url] of [
