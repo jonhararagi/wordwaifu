@@ -1,10 +1,10 @@
 # Índice maestro de personajes
 
-## Propósito y criterio de identidad
+## Identidad, continuidad y completitud
 
-Este índice se regenera desde el catálogo activo. Tener ficha no significa que una biografía esté completa o cotejada con el texto íntegro de la novela. Los perfiles oficiales de adaptación se etiquetan `CONT-ANIME`; novela principal, Sword Oratoria, Astrea Record y fuentes secundarias mantienen alcances separados.
+El índice se sincroniza con el catálogo activo. Tener ficha no equivale a biografía completa o verificada en el texto íntegro de la novela. Los perfiles de anime se limitan a `CONT-ANIME`; novela principal, Sword Oratoria, Astrea Record y material secundario mantienen alcances separados.
 
-Cada identidad conserva su ID estable. Los estados temporales y las afiliaciones se enlazan a eventos; no se duplican personas por traducción, edad, etapa o continuidad.
+Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean duplicados; las etapas y los vínculos se modelan por intervalo y continuidad.
 
 ## Personajes, deidades y grupos con ficha individual
 
@@ -81,6 +81,7 @@ Cada identidad conserva su ID estable. Los estados temporales y las afiliaciones
 | Raul Nord | `CHAR-RAUL-NOORD` | Personaje | `provisional` | [Abrir](raul-noord.md) |
 | Revis | `CHAR-REVIS` | Personaje | `source_checked_partial` | [Abrir](revis.md) |
 | Riveria Ljos Alf | `CHAR-RIVERIA-LJOS-ALF` | Personaje | `provisional` | [Abrir](riveria-ljos-alf.md) |
+| roster secundario provisional | `FAM-NEW-ASTREA` | Grupo | `provisional` | [Abrir](../familias/nueva-astrea-familia.md) |
 | Rudra | `CHAR-DARK-RUDRA` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/rudra.md) |
 | Ryana Lietz | `CHAR-RYANA-LIETZ` | Personaje | `provisional` | [Abrir](ryana-lietz.md) |
 | Ryu Lion | `CHAR-RYUU-LION` | Personaje | `provisional` | [Abrir](ryuu-lion.md) |
@@ -101,17 +102,17 @@ Cada identidad conserva su ID estable. Los estados temporales y las afiliaciones
 | Zanis Lustra | `CHAR-ZANIS-LUSTRA` | Personaje | `secondary_reference_partial_primary_check_pending` | [Abrir](zanis-lustra.md) |
 | Zeus | `CHAR-ZEUS` | Deidad | `secondary_reference_primary_locator_pending` | [Abrir](zeus.md) |
 
-## Hermanos Gulliver · fichas separadas
+## Hermanos Gulliver · identidades separadas
 
-La ficha [Gulliver Brothers](gulliverbrothers.md) mantiene el perfil del grupo; cada hermano tiene una identidad independiente y relaciones a grupo y Freya Familia.
-- [Alfrigg Gulliver](alfrigggulliver.md) — registro individual; datos de arma y aspecto con alcance `CONT-ANIME`.
-- [Dvalinn Gulliver](dvalinngulliver.md) — registro individual; datos de arma y aspecto con alcance `CONT-ANIME`.
-- [Berling Gulliver](berlinggulliver.md) — registro individual; datos de arma y aspecto con alcance `CONT-ANIME`.
-- [Grer Gulliver](grergulliver.md) — registro individual; datos de arma y aspecto con alcance `CONT-ANIME`.
+La ficha [Gulliver Brothers](gulliverbrothers.md) mantiene el perfil grupal; cada hermano tiene un ID independiente y rutas propias.
+- [Alfrigg Gulliver](alfrigggulliver.md) — perfil separado con alcance `CONT-ANIME`.
+- [Dvalinn Gulliver](dvalinngulliver.md) — perfil separado con alcance `CONT-ANIME`.
+- [Berling Gulliver](berlinggulliver.md) — perfil separado con alcance `CONT-ANIME`.
+- [Grer Gulliver](grergulliver.md) — perfil separado con alcance `CONT-ANIME`.
 
-## Nodos históricos aislados por insuficiencia probatoria
+## Registros históricos aún secundarios
 
-Erebus, Thanatos y Valletta Grede siguen como expedientes de investigación sin aristas canónicas porque sus fuentes disponibles no aportan una relación suficientemente localizada. No se inventan vínculos a partir de una lista comunitaria.
+El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis del Juggernaut son referencias de investigación, no una confirmación automática del texto primario. Erebus, Thanatos y Valletta Grede se dejan aislados mientras no exista un claim relacional suficientemente localizado.
 
 ## IDs reservados
 
@@ -127,17 +128,9 @@ Erebus, Thanatos y Valletta Grede siguen como expedientes de investigación sin 
 | `CHAR-MIACH` | candidate_not_created |
 | `CHAR-TAKEMIKAZUCHI` | candidate_not_created |
 | `CHAR-ZARD` | candidate_not_created |
-| `FAM-APOLLO` | candidate_not_created |
 | `FAM-ASTREA` | candidate_not_created |
 | `FAM-DEMETER` | candidate_not_created |
 | `FAM-DIAN-CECHT` | candidate_not_created |
-| `FAM-FREYA` | candidate_not_created |
-| `FAM-GANESHA` | candidate_not_created |
-| `FAM-HEPHAISTOS` | candidate_not_created |
-| `FAM-HERMES` | candidate_not_created |
-| `FAM-ISHTAR` | candidate_not_created |
-| `FAM-MIACH` | candidate_not_created |
-| `FAM-TAKEMIKAZUCHI` | candidate_not_created |
 | `LOC-FREYA-MANOR` | candidate_not_created |
 | `LOC-GUILD` | candidate_not_created |
 | `LOC-HEPHAISTOS-SHOP` | candidate_not_created |
@@ -159,7 +152,7 @@ Erebus, Thanatos y Valletta Grede siguen como expedientes de investigación sin 
 
 ## Reglas de ampliación
 
-- Buscar ID, alias, romanización, traducción y relaciones antes de crear una ficha.
-- Las wikis son pistas hasta cotejar el pasaje primario; las afiliaciones por periodo deben mantener su continuidad.
-- La copertenencia no demuestra amistad, rivalidad ni conocimiento personal.
-- No declarar un porcentaje global sin definir el reparto y las escenas que forman el denominador.
+- Buscar IDs, alias, romanizaciones, traducciones y relaciones existentes antes de crear fichas.
+- Las wikis son pistas secundarias hasta cotejar el pasaje primario.
+- La copertenencia institucional no demuestra amistad, rivalidad o conocimiento compartido.
+- No declarar un porcentaje global de lore sin definir obras, personajes, acontecimientos y escenas que formen el denominador.

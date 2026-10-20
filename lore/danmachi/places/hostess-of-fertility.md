@@ -1,5 +1,5 @@
 ---
-id: LOC-HOSTESS-FERTILITY
+id: LOC-HOSTESS
 universe: danmachi
 type: location
 status: source_checked_partial
@@ -7,7 +7,7 @@ continuity_scope: CONT-ANIME
 source_refs: ["DMR-006-SRC-001"]
 claim_refs: ["DMR-006-CLM-009","DMR-006-CLM-051","DMR-006-CLM-057","DMR-006-CLM-060","DMR-006-CLM-063"]
 verification_status: source_checked_partial
-tags: ["Hostess of Fertility","豊穣の女主人","taberna","Mia Grand","Syr Flova","Anya Fromel","Chloe Rollo","Lunoire Faust"]
+tags: ["Hostess of Fertility","豊饒の女主人","豊穣の女主人","Orario","taberna","Mia Grand","Syr Flova","Anya Fromel","Chloe Rollo","Lunoire Faust","Ryu Lion"]
 ---
 # Hostess of Fertility · taberna
 

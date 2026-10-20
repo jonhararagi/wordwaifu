@@ -1,13 +1,13 @@
 ---
 id: FAM-NEW-ASTREA
 universe: danmachi
-type: familia
+type: character_group
 status: provisional
 continuity_scope: CONT-MAIN-LN
 source_refs: []
 claim_refs: ["DMR-007-CLM-011"]
 verification_status: secondary_checked
-tags: ["Nueva Astrea Familia","Astrea","Cecil Blackliza","Iselina","Shau","Ulanda","Solingen"]
+tags: ["roster secundario provisional","Cecil Blackliza","Iselina","Shau","Ulanda","Solingen","reported generation"]
 ---
 # Nueva Astrea Familia · roster provisional
 

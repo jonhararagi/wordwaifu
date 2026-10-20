@@ -30,7 +30,7 @@ for (const id of ["CHAR-ALFRIGG-GULLIVER","CHAR-DVALINN-GULLIVER","CHAR-BERLING-
   assert.ok(catalog.relationships.some(e => e.from === id && e.to === "CHAR-GULLIVER-BROTHERS"), "Missing group edge: " + id);
   assert.ok(catalog.relationships.some(e => e.from === id && e.to === "FAM-FREYA"), "Missing Freya Familia edge: " + id);
 }
-for (const id of ["FAM-FREYA","FAM-DIONYSUS","FAM-HERMES","FAM-MIACH","FAM-TAKEMIKAZUCHI","FAM-MODI","FAM-MAGNI","FAM-HEPHAISTOS","FAM-APOLLO","FAM-GANESHA","FAM-ISHTAR","FAM-NEW-ASTREA","FAM-RUDRA","LOC-HOSTESS-FERTILITY","GRP-XENOS"]) assert.ok(byId.has(id), "Missing navigation hub: " + id);
+for (const id of ["FAM-FREYA","FAM-DIONYSUS","FAM-HERMES","FAM-MIACH","FAM-TAKEMIKAZUCHI","FAM-MODI","FAM-MAGNI","FAM-HEPHAISTOS","FAM-APOLLO","FAM-GANESHA","FAM-ISHTAR","FAM-NEW-ASTREA","FAM-RUDRA","LOC-HOSTESS","GRP-XENOS"]) assert.ok(byId.has(id), "Missing navigation hub: " + id);
 assert.equal(new Set(catalog.records.map(r => r.id)).size, catalog.records.length, "Catalog IDs must be unique");
 assert.equal(new Set(catalog.relationships.map(r => r.id)).size, catalog.relationships.length, "Relationship IDs must be unique");
 for (const edge of catalog.relationships) { assert.ok(byId.has(edge.from), "Dangling origin: " + edge.id); assert.ok(byId.has(edge.to), "Dangling target: " + edge.id); }

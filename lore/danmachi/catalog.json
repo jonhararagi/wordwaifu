@@ -1022,13 +1022,19 @@
       "path": "places/hostess-of-fertility.md",
       "type": "location",
       "status": "source_checked_partial",
-      "priority": "normal",
+      "priority": "high",
       "tags": [
         "Hostess of Fertility",
         "豊饒の女主人",
+        "豊穣の女主人",
         "Orario",
         "taberna",
-        "Loki Familia"
+        "Mia Grand",
+        "Syr Flova",
+        "Anya Fromel",
+        "Chloe Rollo",
+        "Lunoire Faust",
+        "Ryu Lion"
       ]
     },
     {
@@ -2139,15 +2145,15 @@
     {
       "id": "FAM-NEW-ASTREA",
       "path": "familias/nueva-astrea-familia.md",
-      "type": "familia",
+      "type": "character_group",
       "tags": [
-        "Nueva Astrea Familia",
-        "Astrea",
+        "roster secundario provisional",
         "Cecil Blackliza",
         "Iselina",
         "Shau",
         "Ulanda",
-        "Solingen"
+        "Solingen",
+        "reported generation"
       ],
       "status": "provisional",
       "priority": "normal"
@@ -2164,23 +2170,6 @@
       ],
       "status": "provisional",
       "priority": "normal"
-    },
-    {
-      "id": "LOC-HOSTESS-FERTILITY",
-      "path": "places/hostess-of-fertility.md",
-      "type": "location",
-      "tags": [
-        "Hostess of Fertility",
-        "豊穣の女主人",
-        "taberna",
-        "Mia Grand",
-        "Syr Flova",
-        "Anya Fromel",
-        "Chloe Rollo",
-        "Lunoire Faust"
-      ],
-      "status": "source_checked_partial",
-      "priority": "high"
     },
     {
       "id": "GRP-XENOS",
@@ -2250,27 +2239,7 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "FAM-FREYA",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "FAM-ASTREA",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-HEPHAISTOS",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-MIACH",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-TAKEMIKAZUCHI",
       "type": "familia",
       "status": "candidate_not_created"
     },
@@ -2280,27 +2249,7 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "FAM-GANESHA",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-HERMES",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "FAM-DEMETER",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-ISHTAR",
-      "type": "familia",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-APOLLO",
       "type": "familia",
       "status": "candidate_not_created"
     },
@@ -3142,20 +3091,6 @@
       "note": "La relación está descrita por sinopsis oficial; los detalles escena por escena siguen pendientes."
     },
     {
-      "id": "REL-ALISE-GUIDES-RYU-ANIME",
-      "from": "CHAR-ALISE-LOVELACE",
-      "to": "CHAR-RYUU-LION",
-      "kind": "guides",
-      "label": "capitana que incorpora y orienta a Ryu",
-      "continuity": "CONT-ANIME",
-      "interval": "Periodo histórico tal como lo presenta el perfil oficial de la adaptación",
-      "evidenceStatus": "source_checked",
-      "evidenceType": "official_adaptation_profile",
-      "claimRef": "DMR-007-CLM-001",
-      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Vínculo de adaptación; mantenerlo separado de CONT-AR y CONT-MAIN-LN."
-    },
-    {
       "id": "REL-RYU-MEMBER-ANIME",
       "from": "CHAR-RYUU-LION",
       "to": "DM-FAM-ASTREA",
@@ -3168,20 +3103,6 @@
       "claimRef": "DMR-007-CLM-001",
       "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
       "note": "Este borde corresponde a CONT-ANIME, no certifica una biografía completa en la novela."
-    },
-    {
-      "id": "REL-RYU-MEMBER-AR-SECONDARY",
-      "from": "CHAR-RYUU-LION",
-      "to": "DM-FAM-ASTREA",
-      "kind": "member_of",
-      "label": "integrante de la primera generación (pista secundaria)",
-      "continuity": "CONT-AR",
-      "interval": "Periodo histórico de Astrea Record; roster completo aún en verificación",
-      "evidenceStatus": "secondary_checked",
-      "evidenceType": "community_secondary_summary",
-      "claimRef": "DMR-007-CLM-005",
-      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Fuente comunitaria secundaria. Mantener provisional hasta cotejar el roster en fuente primaria."
     },
     {
       "id": "REL-KAGUYA-MEMBER",
@@ -3800,20 +3721,6 @@
       "note": "El vínculo confirma supervivencia compartida en la adaptación. No implica por sí mismo reciprocidad romántica ni reemplaza el cotejo de la novela."
     },
     {
-      "id": "REL-RYU-ASTREA-VISIT-ANIME",
-      "from": "CHAR-RYUU-LION",
-      "to": "CHAR-ASTREA",
-      "kind": "visits",
-      "label": "Ryu visita a Astrea fuera de Orario para buscar cómo ayudar a Bell, según DanMachi V",
-      "continuity": "CONT-ANIME",
-      "interval": "Arco de DanMachi V; antes de la incorporación tardía de Ryu a la guerra de Familias",
-      "evidenceStatus": "source_checked",
-      "evidenceType": "explicit_official_adaptation_profile",
-      "claimRef": "DMR-013-CLM-002",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
-      "note": "Arista distinta de la visita narrada por la sinopsis de Familia Chronicle en CONT-MAIN-LN. Mantener los alcances separados."
-    },
-    {
       "id": "REL-RYU-WARGAME-ANIME",
       "from": "CHAR-RYUU-LION",
       "to": "EVT-DM-RYUU-ASTREA-RETURN-ANIME-001",
@@ -3868,20 +3775,6 @@
       "claimRef": "DMR-015-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
       "note": "El vínculo confirma el núcleo del encuentro según la sinopsis editorial, no cada detalle de la escena, la fecha de Falna o el descenso de Hestia."
-    },
-    {
-      "id": "REL-BELL-MEMBER-HESTIA-MAIN-LN",
-      "from": "DM-CHAR-BELL",
-      "to": "DM-FAM-HESTIA",
-      "kind": "member_of",
-      "label": "Bell entra en Hestia Familia según la sinopsis editorial del volumen 1",
-      "continuity": "CONT-MAIN-LN",
-      "interval": "Comienzo de la historia principal; orden temporal descrito solo al nivel de la sinopsis editorial",
-      "evidenceStatus": "source_checked",
-      "evidenceType": "official_publisher_synopsis",
-      "claimRef": "DMR-015-CLM-001",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
-      "note": "Relación separada del perfil de adaptación. La sinopsis respalda la invitación y entrada en la Familia, pero no cada detalle de la escena ni una fecha absoluta."
     },
     {
       "id": "REL-EINA-ADVISOR-BELL-ANIME",
@@ -4816,34 +4709,6 @@
       "note": "La función está descrita directamente en Prototype; la ficha ya conserva una afirmación independiente en CONT-ANIME."
     },
     {
-      "id": "REL-BABEL-OWNED-BY-GUILD-PROTOTYPE",
-      "from": "LOC-BABEL",
-      "to": "DM-GUILD-001",
-      "kind": "owned_by",
-      "label": "Prototype identifica a la Guild como propietaria de Babel y responsable de alquilar los locales",
-      "continuity": "CONT-PROTOTYPE",
-      "interval": "Relato oficial Prototype, episodio 16",
-      "evidenceStatus": "source_checked",
-      "evidenceType": "official_site_prototype_narrative",
-      "claimRef": "DMR-034-CLM-006",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
-      "note": "Relación de propiedad en esta versión; no amplía automáticamente detalles de oficinas o instalaciones en la novela publicada."
-    },
-    {
-      "id": "REL-ORARIO-DUNGEON-PUBLISHED-LN-SYNOPSIS",
-      "from": "LOC-ORARIO",
-      "to": "LOC-DUNGEON",
-      "kind": "contains_underground_labyrinth",
-      "label": "La sinopsis editorial del volumen 1 presenta Orario como una gran ciudad que alberga el Dungeon",
-      "continuity": "CONT-MAIN-LN",
-      "interval": "Premisa editorial de presentación de la novela ligera principal, volumen 1",
-      "evidenceStatus": "source_checked",
-      "evidenceType": "official_publisher_synopsis_paratext",
-      "claimRef": "DMR-035-CLM-001",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md",
-      "note": "La fuente es una sinopsis editorial oficial, no el texto narrativo del volumen. Solo respalda la relación geográfica general ciudad–Dungeon; no respalda avenidas ni otras posiciones urbanas."
-    },
-    {
       "id": "REL-BELL-FIRST-MEETING-EVENT",
       "from": "DM-CHAR-BELL",
       "to": "EVT-DM-BELL-MEETS-HESTIA-001",
@@ -4942,9 +4807,9 @@
       "note": "Afiliación limitada al estado descrito por el perfil de adaptación; no implica relaciones personales ni continuidad universal."
     },
     {
-      "id": "REL-COVER-CHAR-SYR-FLOVA-LOC-HOSTESS-FERTILITY-works_at",
+      "id": "REL-COVER-CHAR-SYR-FLOVA-LOC-HOSTESS-works_at",
       "from": "CHAR-SYR-FLOVA",
-      "to": "LOC-HOSTESS-FERTILITY",
+      "to": "LOC-HOSTESS",
       "kind": "works_at",
       "label": "trabaja o aparece vinculada a Hostess of Fertility",
       "continuity": "CONT-ANIME",
@@ -5082,9 +4947,9 @@
       "note": "Afiliación limitada al estado descrito por el perfil de adaptación; no implica relaciones personales ni continuidad universal."
     },
     {
-      "id": "REL-COVER-CHAR-MIA-GRAND-LOC-HOSTESS-FERTILITY-works_at",
+      "id": "REL-COVER-CHAR-MIA-GRAND-LOC-HOSTESS-works_at",
       "from": "CHAR-MIA-GRAND",
-      "to": "LOC-HOSTESS-FERTILITY",
+      "to": "LOC-HOSTESS",
       "kind": "works_at",
       "label": "trabaja o aparece vinculada a Hostess of Fertility",
       "continuity": "CONT-ANIME",
@@ -5096,9 +4961,9 @@
       "note": "Vínculo laboral/ubicacional, separado de cualquier Familia divina."
     },
     {
-      "id": "REL-COVER-CHAR-RYUU-LION-LOC-HOSTESS-FERTILITY-works_at",
+      "id": "REL-COVER-CHAR-RYUU-LION-LOC-HOSTESS-works_at",
       "from": "CHAR-RYUU-LION",
-      "to": "LOC-HOSTESS-FERTILITY",
+      "to": "LOC-HOSTESS",
       "kind": "works_at",
       "label": "trabaja o aparece vinculada a Hostess of Fertility",
       "continuity": "CONT-ANIME",
@@ -5110,9 +4975,9 @@
       "note": "Vínculo laboral/ubicacional, separado de cualquier Familia divina."
     },
     {
-      "id": "REL-COVER-CHAR-ANYA-FROMEL-LOC-HOSTESS-FERTILITY-works_at",
+      "id": "REL-COVER-CHAR-ANYA-FROMEL-LOC-HOSTESS-works_at",
       "from": "CHAR-ANYA-FROMEL",
-      "to": "LOC-HOSTESS-FERTILITY",
+      "to": "LOC-HOSTESS",
       "kind": "works_at",
       "label": "trabaja o aparece vinculada a Hostess of Fertility",
       "continuity": "CONT-ANIME",
@@ -5138,9 +5003,9 @@
       "note": "Afiliación histórica en el perfil de adaptación; no representa pertenencia actual."
     },
     {
-      "id": "REL-COVER-CHAR-CHLOE-ROLO-LOC-HOSTESS-FERTILITY-works_at",
+      "id": "REL-COVER-CHAR-CHLOE-ROLO-LOC-HOSTESS-works_at",
       "from": "CHAR-CHLOE-ROLO",
-      "to": "LOC-HOSTESS-FERTILITY",
+      "to": "LOC-HOSTESS",
       "kind": "works_at",
       "label": "trabaja o aparece vinculada a Hostess of Fertility",
       "continuity": "CONT-ANIME",
@@ -5152,9 +5017,9 @@
       "note": "Vínculo laboral/ubicacional, separado de cualquier Familia divina."
     },
     {
-      "id": "REL-COVER-CHAR-LUNOIRE-FAUST-LOC-HOSTESS-FERTILITY-works_at",
+      "id": "REL-COVER-CHAR-LUNOIRE-FAUST-LOC-HOSTESS-works_at",
       "from": "CHAR-LUNOIRE-FAUST",
-      "to": "LOC-HOSTESS-FERTILITY",
+      "to": "LOC-HOSTESS",
       "kind": "works_at",
       "label": "trabaja o aparece vinculada a Hostess of Fertility",
       "continuity": "CONT-ANIME",
@@ -5628,9 +5493,9 @@
       "note": "Arista acotada a la fuente oficial de adaptación y a su alcance; no extrapolar a novela sin localizador."
     },
     {
-      "id": "REL-COVER-CHAR-MIA-GRAND-LOC-HOSTESS-FERTILITY-manages",
+      "id": "REL-COVER-CHAR-MIA-GRAND-LOC-HOSTESS-manages",
       "from": "CHAR-MIA-GRAND",
-      "to": "LOC-HOSTESS-FERTILITY",
+      "to": "LOC-HOSTESS",
       "kind": "manages",
       "label": "propietaria y gerente de Hostess of Fertility",
       "continuity": "CONT-ANIME",
