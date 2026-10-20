@@ -437,3 +437,21 @@ assert.ok(daedalusEntitySearch.results.some(entity => entity.id === "LOC-DAEDALU
 const addedSources = corpus.getOnlineSourceDirectory();
 assert.ok(addedSources.some(source => source.id === "official-danmachi3-story" && source.url === "https://danmachi.com/danmachi3/story/index.html"), "Official DanMachi III episode synopsis must be discoverable in the source directory.");
 assert.ok(addedSources.some(source => source.id === "community-daedalus-street" && source.url === "https://danmachi.fandom.com/wiki/Daedalus_Street" && source.authority === "Fuente secundaria"), "Daedalus Street's wiki must be discoverable and secondary-labelled.");
+
+
+// Distinguish Hestia Familia's former church from its post-War-Game mansion.
+// The official synopsis proves the transition in CONT-ANIME; the claimed cause
+// of church destruction stays a separately searchable wiki lead.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md"), "The Hestia-residence evidence package must be included in production search.");
+const hestiaResidenceOfficialSearch = corpus.search(index, { query: "Hestia Apollo iglesia mansión War Game", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(hestiaResidenceOfficialSearch.results.some(item => item.claimId === "DMR-033-CLM-001" && item.verificationStatus === "source_checked"), "The official synopsis must support the church-to-mansion transition in the anime.");
+const abandonedChurchWikiSearch = corpus.search(index, { query: "iglesia Apollo Hestia Familia", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(abandonedChurchWikiSearch.results.some(item => item.claimId === "DMR-031-CLM-010" && item.verificationStatus === "secondary_checked"), "Apollo Familia's alleged responsibility for the church destruction must remain secondary.");
+assert.ok(catalog.records.some(record => record.id === "LOC-HESTIA-HOME" && record.path === "places/hestia-familia-church.md" && record.type === "location"), "The former Hestia church must have a live location record.");
+assert.ok(catalog.records.some(record => record.id === "LOC-APOLLO-MANOR" && record.path === "places/apollo-familia-mansion.md" && record.type === "location"), "The Apollo mansion must have its own stable physical-location record.");
+assert.ok(!catalog.reservedIds.some(record => record.id === "LOC-HESTIA-HOME"), "The activated former-home ID must no longer remain reserved.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-HESTIA-CHURCH-FORMER-HOME-ANIME" && edge.from === "LOC-HESTIA-HOME" && edge.to === "DM-FAM-HESTIA" && edge.claimRef === "DMR-033-CLM-001" && edge.evidenceStatus === "source_checked"), "The former church must be linked to Hestia Familia with official adaptation provenance.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-APOLLO-MANOR-REPLACES-CHURCH" && edge.from === "LOC-APOLLO-MANOR" && edge.to === "LOC-HESTIA-HOME" && edge.claimRef === "DMR-033-CLM-001" && edge.evidenceStatus === "source_checked"), "The residential transition must connect two distinct places with a claim explaining it.");
+assert.ok(corpus.searchEntities(catalog, { type: "location", query: "iglesia abandonada" }).results.some(entity => entity.id === "LOC-HESTIA-HOME"), "The former church must be discoverable by its secondary alias.");
+assert.ok(corpus.searchEntities(catalog, { type: "location", query: "Apollo mansion" }).results.some(entity => entity.id === "LOC-APOLLO-MANOR"), "The mansion must be discoverable as a separate location.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "official-danmachi2-story" && source.url === "https://danmachi.com/danmachi2/story/index.html?slideNum=2"), "The official Season II synopsis must be available in the source directory.");

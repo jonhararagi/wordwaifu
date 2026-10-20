@@ -874,7 +874,7 @@ verification_status: stub
 - accessed_at: 2026-10-20
 - locator_type: article_sections
 - locator: Secciones Map y Geography; tabla de ubicaciones y columnas de debut
-- claims_supported: [DMR-031-CLM-001]
+- claims_supported: [DMR-031-CLM-001, DMR-031-CLM-010]
 - events_supported: []
 - continuity_scope: CONT-UNVERIFIED
 - reliability_note: Útil para descubrir nombres y posibles localizadores por volumen. El mapa es comunitario y no debe tratarse como cartografía oficial; verificar cada ubicación con fuentes primarias.
@@ -1049,6 +1049,30 @@ verification_status: stub
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no reproducir la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-032
+- verification_status: source_checked
+
+---
+
+## DMR-033-SRC-001 · Sinopsis oficial de DanMachi II, episodio 5
+
+- source_id: DMR-033-SRC-001
+- title: ストーリー — TVアニメ「ダンまち」第2期
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi II
+- volume_or_edition: Página web, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi2/story/index.html?slideNum=2
+- accessed_at: 2026-10-20
+- locator_type: episode_synopsis
+- locator: Episodio 5; párrafo sobre la victoria del War Game, destrucción de la iglesia anterior y traslado a la mansión de Apollo Familia
+- claims_supported: [DMR-033-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Confirma la transición residencial en la adaptación; no fija una dirección ni atribuye expresamente en ese párrafo la destrucción de la iglesia a Apollo Familia.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no reproducir la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-033
 - verification_status: source_checked
 
 ---

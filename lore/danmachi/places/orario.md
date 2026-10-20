@@ -45,6 +45,8 @@ El mapa de una wiki **no se usa como cartografía oficial**, ni la coincidencia 
 - **[Hostess of Fertility](hostess-of-fertility.md):** taberna situada en Orario, con ficha propia para su personal y relaciones.
 - **[Daedalus Street](daedalus-street.md):** la sinopsis oficial de DanMachi III, episodio 12, menciona la calle en el contexto del caos en Orario; su topología residencial sigue siendo secundaria.
 - **[Pantheon](pantheon.md):** edificio que la wiki inglesa atribuye a la sede principal de la Guild; la ficha está separada provisionalmente y no resuelve si se distingue físicamente de Babel.
+- **[Antigua iglesia de Hestia Familia](hestia-familia-church.md):** la sinopsis oficial de DanMachi II, episodio 5, confirma que la iglesia usada como base anterior fue destruida antes del traslado; la causa exacta queda separada de la descripción secundaria.
+- **[Mansión de Apollo Familia](apollo-familia-mansion.md):** la misma sinopsis confirma que se convirtió en la nueva residencia de Hestia Familia después del War Game; su ubicación y nombre propio quedan pendientes.
 - **[Índice de lugares](00-indice-lugares.md):** inventario de otras ubicaciones conocidas y candidatas.
 
 ## Mapa de cobertura de Orario
