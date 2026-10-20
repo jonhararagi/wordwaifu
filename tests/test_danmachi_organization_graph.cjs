@@ -7,7 +7,7 @@ const lore = path.join(root, "lore", "danmachi");
 const catalog = JSON.parse(fs.readFileSync(path.join(lore, "catalog.json"), "utf8"));
 const records = new Map(catalog.records.map(r => [r.id, r]));
 const research = fs.readFileSync(path.join(lore, "research", "inbox", "BATCH-DM-006-oficial-roster-y-retratos.md"), "utf8");
-const claimIds = new Set([...research.matchAll(/^### (DMR-006-CLM-\\d{3}) · /gm)].map(m => m[1]));
+const claimIds = new Set([...research.matchAll(/^### (DMR-006-CLM-\d{3}) · /gm)].map(m => m[1]));
 const edgeIds = new Set();
 for (const edge of catalog.relationships) {
   assert.ok(!edgeIds.has(edge.id), "Duplicate relation ID: " + edge.id);
@@ -37,4 +37,4 @@ for (const [from,to] of [
   assert.ok(claimIds.has(edge.claimRef));
   assert.ok(edge.claimPath.endsWith("BATCH-DM-006-oficial-roster-y-retratos.md"));
 }
-process.stdout.write("PASS DanMachi org graph: Guild/Hostess are distinct from locations and have sourced relationships.\\n");
+process.stdout.write("PASS DanMachi org graph: Guild/Hostess are distinct from locations and have sourced relationships.\n");
