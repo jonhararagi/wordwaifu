@@ -1496,3 +1496,68 @@ verification_status: stub
 - rights_note: Registrar solo paráfrasis original breve; no copiar la publicación.
 - verified_by: DANMACHI-RESEARCH-019
 - verification_status: source_checked_excerpt_only
+
+## DMR-029-SRC-017 · Terminology — Afterglow
+- source_id: DMR-029-SRC-017
+- title: Terminology — Afterglow (残光)
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Terminology
+- accessed_at: 2026-10-20
+- locator_type: community_technique_entry
+- locator: Entrada Afterglow / Zankō; complementar con los artículos de Zeus Familia y Hera Familia
+- claims_supported: [DMR-029-CLM-015]
+- continuity_scope: CONT-AR; CONT-MAIN-LN
+- reliability_note: Fuente secundaria que resume una técnica de combate; no equivale a un pasaje primario.
+- rights_note: Enlace y paráfrasis original; no copiar el artículo.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-018 · Lyra
+- source_id: DMR-029-SRC-018
+- title: Lyra
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Lyra
+- accessed_at: 2026-10-20
+- locator_type: community_character_summary
+- locator: History, skills, magic, equipment and trivia
+- claims_supported: [DMR-029-CLM-016, DMR-029-CLM-017]
+- continuity_scope: CONT-AR; CONT-MAIN-LN
+- reliability_note: Reúne pistas útiles de equipamiento y trasfondo, pero requiere cotejo con Astrea Record / volumen 14.
+- rights_note: Enlace y paráfrasis original; no copiar el artículo.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-019 · Gojouno Kaguya
+- source_id: DMR-029-SRC-019
+- title: Gojouno Kaguya
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- official_url: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
+- accessed_at: 2026-10-20
+- locator_type: community_character_summary
+- locator: Stats, skills, magic, weapons, past affiliations and history
+- claims_supported: [DMR-029-CLM-018]
+- continuity_scope: CONT-AR; CONT-MAIN-LN
+- reliability_note: Estadísticas, clasificación de poderes y relación personal pendientes de localizador primario.
+- rights_note: Enlace y paráfrasis original; no copiar el artículo.
+- verification_status: secondary_checked
+
+## DMR-029-SRC-020 · Alfia/Habilidades (Spanish)
+- source_id: DMR-029-SRC-020
+- title: Alfia/Habilidades
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Alfia/Habilidades
+- accessed_at: 2026-10-20
+- locator_type: community_ability_mechanics_summary
+- locator: Satanas Verion, Silentium Eden, Genos Angelus and Gif Blessing
+- claims_supported: [DMR-029-CLM-019]
+- continuity_scope: CONT-AR
+- reliability_note: La página resume mecánicas y efectos, incluidas estimaciones numéricas; no se han cotejado con los pasajes primarios.
+- rights_note: Enlace y paráfrasis original; no copiar el artículo.
+- verification_status: secondary_checked

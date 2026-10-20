@@ -1,5 +1,9 @@
 # Índice maestro de personajes
 
+## Personajes históricos referidos por fuentes comunitarias
+
+- [Helga](helga.md) — antigua segunda al mando de los Caballeros de Fianna según la wiki de Lyra; relación de reencarnación aún secundaria y pendiente de cotejo primario.
+
 ## Convenciones
 
 **No usar una ficha plana para todas las épocas.** Cada persona conserva una identidad estable; apariciones, afiliaciones, relaciones y conocimiento se registran por época y línea de continuidad. Una variante AU nunca reemplaza el registro canónico. Ver [modelo de identidad y variantes temporales](01-identidad-y-variantes-temporales.md).

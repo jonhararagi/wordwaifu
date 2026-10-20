@@ -8,10 +8,12 @@ source_refs:
   - DMR-029-SRC-003
   - DMR-029-SRC-004
   - DMR-029-SRC-005
+  - DMR-029-SRC-017
   - DMR-021-SRC-001
 claim_refs:
   - DMR-029-CLM-002
   - DMR-029-CLM-007
+  - DMR-029-CLM-015
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Zald"
@@ -44,6 +46,14 @@ Las fuentes comunitarias relatan que Zald consumió carne de Behemoth durante el
 - **Límite de combate reportado:** el veneno del Behemoth seguía deteriorándolo, por lo que no debe representarse su poder como ilimitado ni como una evolución gratuita sin consecuencia.
 
 Los detalles mecánicos anteriores son una paráfrasis de fuente secundaria. Nombres, alcance de mejora, límites, traducción de habilidades y relación con cada escena permanecen pendientes de fuente primaria.
+
+### Técnica de corte a distancia: Afterglow (pista comunitaria)
+
+La wiki describe **Afterglow** como una técnica compartida históricamente por Zeus Familia y Hera Familia: al reforzar un arma de filo con magia o una habilidad, el usuario genera un corte de onda de choque que alcanza a un objetivo lejano. El artículo comunitario de Zald relaciona la técnica con Rea Ambrosia, la magia que cubre su arma con llamas, y describe el ataque como una aplicación física de esa combinación.
+
+- **Fuente:** [DanMachi Wiki · Zald](https://danmachi.fandom.com/wiki/Zald), [Zeus Familia](https://danmachi.fandom.com/wiki/Zeus_Familia), [Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia) y [Terminology](https://danmachi.fandom.com/wiki/Terminology).
+- **Claim de búsqueda:** DMR-029-CLM-015.
+- **Estado:** secondary_checked. El repertorio y los detalles técnicos no deben presentarse como cotejo primario; la potencia depende del usuario y no convierte el ataque en un recurso ilimitado.
 
 ## Relaciones navegables
 - **[Zeus Familia](../../familias/zeus-familia.md) / [Zeus](../zeus.md):** afiliación reportada y contexto histórico.
