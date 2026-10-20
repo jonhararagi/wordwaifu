@@ -4,9 +4,9 @@ universe: danmachi
 type: location
 status: source_checked_partial
 confidence: El glosario oficial del anime respalda la identidad general de la ciudad, la función central de la Guild, la convivencia de distintas razas y los vínculos generales con Dungeon y algunos lugares. La geografía urbana completa y las afirmaciones específicas de novela principal siguen pendientes de cotejo.
-continuity_scope: CONT-ANIME
-source_refs: [DMR-026-SRC-001]
-claim_refs: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003]
+continuity_scope: CROSS-CONTINUITY
+source_refs: [DMR-026-SRC-001, DMR-035-SRC-001]
+claim_refs: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003, DMR-035-CLM-001]
 tags: [Orario, 迷宮都市オラリオ, ciudad laberíntica, Dungeon, Guild, urbanismo, geografía]
 ---
 
@@ -25,6 +25,15 @@ El glosario oficial de la adaptación describe Orario como una gran ciudad const
 Esta es una base general, no una prueba de todos los distritos, dimensiones, leyes, jerarquías o detalles de la vida diaria.
 
 **Fuente y alcance:** [DMR-026-SRC-001 — glosario oficial de lugares](../sources/00-registro-fuentes.md#dmr-026-src-001), entradas de Orario, Babel y Hostess of Fertility. Fuente oficial de la adaptación anime; no sustituye los pasajes de la novela ligera.
+
+## Evidencia editorial de la novela principal (paratexto, no fragmento narrativo)
+
+La ficha editorial oficial de GA Bunko para el volumen 1 de la novela principal presenta Orario como una gran ciudad que alberga el extenso laberinto subterráneo conocido como Dungeon. Esto respalda el marco general ciudad–Dungeon para la obra publicada, pero la fuente consultada es una **sinopsis editorial**, no un pasaje del libro.
+
+- [DMR-035-CLM-001 — Orario y Dungeon en la sinopsis del volumen 1](../research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md#dmr-035-clm-001).
+- [Ficha bibliográfica oficial del volumen 1](https://ga.sbcr.jp/product/9784797372809/).
+
+La sinopsis no verifica avenidas, barrios, Central Park, distancias ni la distribución interna de Babel. Para esos puntos siguen separadas las fuentes de anime, Prototype y wikis, y continúa pendiente localizar pasajes narrativos de la novela ligera.
 
 ## Pistas geográficas recuperadas de wikis (aún no canónicas)
 

@@ -1842,3 +1842,25 @@ verification_status: stub
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no reproducir el relato.
 - verification_status: source_checked
+
+
+## DMR-035-SRC-001 · GA Bunko — DanMachi, volumen 1, sinopsis editorial
+
+- source_id: DMR-035-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか
+- creator_or_publisher: GA Bunko / SB Creative
+- source_type: OFFICIAL_PUBLISHER_SYNOPSIS
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 1, ficha editorial oficial
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784797372809/
+- accessed_at: 2026-10-20
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial de la ficha bibliográfica del volumen 1
+- claims_supported: [DMR-035-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Paratexto oficial de la novela principal. Aporta el marco general de Orario y Dungeon, pero no equivale al texto narrativo ni respalda detalles de geografía urbana.
+- conflicting_sources: []
+- rights_note: Resumen original de la afirmación; no reproducir la sinopsis completa.
+- verification_status: source_checked

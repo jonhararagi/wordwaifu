@@ -10,7 +10,8 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 - [x] Establecer una ficha central con el alcance de la evidencia actual y límites explícitos.
 - [x] Definir el protocolo común de análisis para que lugares, sucesos y biografías reutilicen los mismos datos sin duplicarlos.
-- [ ] Confirmar por separado, con localizadores apropiados, los datos sobre Orario en CONT-MAIN-LN; no reutilizar automáticamente la evidencia de CONT-ANIME.
+- [x] Registrar el marco general Orario–Dungeon de la sinopsis editorial del volumen 1 en [DANMACHI-RESEARCH-035](research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md), con tipo de fuente paratextual explícito.
+- [ ] Localizar un pasaje narrativo de la novela publicada con capítulo/página; la sinopsis editorial no verifica la geografía interna de Orario ni completa esta tarea.
 - [ ] Construir un inventario de lugares de la ciudad con IDs estables y relaciones respaldadas; distinguir organización Guild de edificio físico.
 - [ ] Verificar distritos, calles, accesos, orientación y mapas. Mantener las ubicaciones sin respaldo como esquema/pregunta; las wikis solo aportan pistas.
 - [ ] Analizar instituciones, Familias, población, vida cotidiana, comercio, abastecimiento y seguridad, afirmación por afirmación.
