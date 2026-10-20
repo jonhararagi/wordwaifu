@@ -726,12 +726,22 @@ async function run() {
     await page.locator("#archive-return-search").click();
     assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
-    // The newly curated anime roster loads an official image from its source host.
+    // Verify the canonical source URL while serving a deterministic 1x1 image response.
+    // The external publisher site is not a reliable CI dependency; a remote outage must not
+    // make unrelated lore/browser regression tests fail.
+    const bellOfficialImageUrl = "https://danmachi.com/danmachi5/character/images/chara_tachi_01.png";
+    await page.route(bellOfficialImageUrl, route => route.fulfill({
+      status: 200,
+      contentType: "image/png",
+      body: Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/pL8AAAAASUVORK5CYII=", "base64")
+    }));
     await page.locator("#character-archive-query").fill("Bell Cranel");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
     const bellCardSelector = "#character-archive-results .archive-character-card:has([data-archive-open='DM-CHAR-BELL'])";
     const bellPortrait = page.locator(bellCardSelector + " .archive-portrait-art");
     assert.equal(await bellPortrait.count(), 1);
+    assert.equal(await bellPortrait.getAttribute("src"), bellOfficialImageUrl,
+      "Bell's roster card must retain the exact official image URL even though CI intercepts the network response.");
     await page.waitForFunction(() => {
       const button = document.querySelector("#character-archive-results [data-archive-open='DM-CHAR-BELL']");
       const img = button?.closest(".archive-character-card")?.querySelector(".archive-portrait-art");
