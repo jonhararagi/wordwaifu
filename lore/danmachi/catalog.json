@@ -2180,6 +2180,41 @@
       ],
       "status": "provisional",
       "priority": "high"
+    },
+    {
+      "id": "ORG-GUILD",
+      "path": "familias/guild-organization.md",
+      "type": "institution_and_location",
+      "tags": [
+        "Guild",
+        "Gremio",
+        "Orario",
+        "Ouranos",
+        "Eina Tulle",
+        "Fels",
+        "registro de aventureros",
+        "organización"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "ORG-HOSTESS",
+      "path": "familias/hostess-of-fertility.md",
+      "type": "institution_and_location",
+      "tags": [
+        "Hostess of Fertility",
+        "豊饒の女主人",
+        "Mia Grand",
+        "Syr Flova",
+        "Ryu Lion",
+        "Anya Fromel",
+        "Chloe Rollo",
+        "Lunoire Faust",
+        "personal de taberna"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -5668,6 +5703,146 @@
       "claimRef": "DMR-006-CLM-085",
       "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
       "note": "Relación de navegación entre un nodo editorial de grupo y fichas individuales; no implica que el canon defina a los tres como unidad indivisible."
+    },
+    {
+      "id": "REL-ORG-CHAR-OURANOS-ORG-GUILD",
+      "from": "CHAR-OURANOS",
+      "to": "ORG-GUILD",
+      "kind": "leads",
+      "label": "figura divina principal de la Guild según el perfil oficial",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-105",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-DM-CHAR-EINA-ORG-GUILD",
+      "from": "DM-CHAR-EINA",
+      "to": "ORG-GUILD",
+      "kind": "works_for",
+      "label": "asesora del Gremio en la referencia oficial",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-161",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-CHAR-FELS-ORG-GUILD",
+      "from": "CHAR-FELS",
+      "to": "ORG-GUILD",
+      "kind": "works_with",
+      "label": "colaborador de Ouranos en asuntos de la Guild",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-108",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-CHAR-MIA-GRAND-ORG-HOSTESS",
+      "from": "CHAR-MIA-GRAND",
+      "to": "ORG-HOSTESS",
+      "kind": "manages",
+      "label": "gerente de Hostess of Fertility",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-051",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-CHAR-SYR-FLOVA-ORG-HOSTESS",
+      "from": "CHAR-SYR-FLOVA",
+      "to": "ORG-HOSTESS",
+      "kind": "works_at",
+      "label": "camarera de Hostess of Fertility en la etapa descrita",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-009",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-CHAR-RYUU-LION-ORG-HOSTESS",
+      "from": "CHAR-RYUU-LION",
+      "to": "ORG-HOSTESS",
+      "kind": "works_at",
+      "label": "camarera de Hostess of Fertility en la etapa descrita",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-054",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-CHAR-ANYA-FROMEL-ORG-HOSTESS",
+      "from": "CHAR-ANYA-FROMEL",
+      "to": "ORG-HOSTESS",
+      "kind": "works_at",
+      "label": "personal de Hostess of Fertility en la etapa descrita",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-057",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-CHAR-CHLOE-ROLO-ORG-HOSTESS",
+      "from": "CHAR-CHLOE-ROLO",
+      "to": "ORG-HOSTESS",
+      "kind": "works_at",
+      "label": "personal de Hostess of Fertility en la etapa descrita",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-060",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-CHAR-LUNOIRE-FAUST-ORG-HOSTESS",
+      "from": "CHAR-LUNOIRE-FAUST",
+      "to": "ORG-HOSTESS",
+      "kind": "works_at",
+      "label": "personal de Hostess of Fertility en la etapa descrita",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-063",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Relación institucional respaldada por perfil oficial; no se extrapola fuera de `CONT-ANIME`."
+    },
+    {
+      "id": "REL-ORG-ORG-HOSTESS-LOC-HOSTESS",
+      "from": "ORG-HOSTESS",
+      "to": "LOC-HOSTESS",
+      "kind": "located_at",
+      "label": "organización/personal asociado al local físico Hostess of Fertility",
+      "continuity": "CONT-ANIME",
+      "interval": "Perfil oficial de adaptación; intervalo narrativo no fijado",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_character_profile",
+      "claimRef": "DMR-006-CLM-049",
+      "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+      "note": "Mantiene separados el nodo organizativo y `LOC-HOSTESS`, el lugar físico."
     }
   ]
 }

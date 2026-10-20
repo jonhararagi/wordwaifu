@@ -323,3 +323,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **ID documental:** `DOC-DANMACHI-ANALYSIS-METHOD-001`. Se reutiliza LOC-ORARIO y los claims/fuentes ya existentes; no se crea una segunda ficha de ciudad ni se inventan IDs de lugares.
 - **Pendiente:** ejecutar CI en la PR, revisar integridad del catálogo y corregir cualquier fallo real antes de integrar en main.
 - **Estado factual:** método listo para usar; análisis completo de Orario aún pendiente. La ficha central es una guía de cobertura, no una declaración de que la ciudad esté completa.
+
+
+## DANMACHI-RESEARCH-037 · Separación de nodos organizativos
+
+- Fecha: 2026-10-20; rama `work/danmachi-organization-graph-2026-10-20`.
+- `ORG-GUILD` representa la institución; `DM-GUILD-001` sigue como ficha introductoria conjunta Dungeon/Guild.
+- `ORG-HOSTESS` representa organización/personal y `LOC-HOSTESS` conserva el lugar físico.
+- Las diez nuevas relaciones reutilizan claims oficiales del corpus DMR-006 y conservan `CONT-ANIME`.
+- Índice de Familias sincronizado con IDs activos; recuentos operativos derivados del catálogo.

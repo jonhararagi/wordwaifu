@@ -57,6 +57,8 @@ jobs:
         run: node tests/test_character_dossiers.cjs
       - name: Test DanMachi roster coverage and navigation integrity
         run: node tests/test_danmachi_character_coverage.cjs
+      - name: Test Guild and Hostess organization graph
+        run: node tests/test_danmachi_organization_graph.cjs
       - name: Test private preview file allowlist
         run: python tests/test_web_preview_server.py
       - name: Test Story Forge outline and audit

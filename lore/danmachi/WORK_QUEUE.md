@@ -444,3 +444,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Enlazar los eventos candidatos de Dragón Negro y caída de Zeus/Hera a las wikis, conservando pending_verification.
 - [ ] Ejecutar los validadores de catálogo, corpus de búsqueda, cronología y navegador en la PR.
 - [ ] Localizar pasajes primarios para la expedición del Dragón Negro y el estado institucional de ambas Familias.
+
+
+## DANMACHI-RESEARCH-037 · Separación de Guild/Hostess
+
+- Estado: cambios en rama; CI pendiente.
+- [x] Crear `ORG-GUILD` sin reemplazar `DM-GUILD-001`, la ficha introductoria conjunta Dungeon/Guild.
+- [x] Crear `ORG-HOSTESS` separado del lugar `LOC-HOSTESS`.
+- [x] Conectar Ouranos, Eina, Fels y el personal de la taberna mediante claims oficiales existentes.
+- [x] Actualizar el índice de Familias y alinear los recuentos del estado.
+- [ ] Validar catálogo, enlaces Markdown y navegación en CI.
