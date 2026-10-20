@@ -4154,6 +4154,48 @@
       "claimRef": "DMR-015-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
       "note": "El evento queda navegable hacia Hestia Familia con evidencia de la sinopsis editorial; no establece momento preciso de la bendición/Falna."
+    },
+    {
+      "id": "REL-EINA-ADVISOR-EVENT-ANIME",
+      "from": "DM-CHAR-EINA",
+      "to": "EVT-DM-EINA-ADVISOR-ANIME-001",
+      "kind": "has_advisory_role_in",
+      "label": "El perfil oficial de DanMachi III identifica a Eina como asesora asignada a Bell y documenta su función de orientación",
+      "continuity": "CONT-ANIME",
+      "interval": "Estado descrito por el perfil oficial de DanMachi III; fecha interna exacta no indicada",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_adaptation_profile",
+      "claimRef": "DMR-016-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
+      "note": "Relación de función general; no fija el primer encuentro ni atribuye conversaciones concretas a una fecha o episodio."
+    },
+    {
+      "id": "REL-BELL-ADVISOR-EVENT-ANIME",
+      "from": "DM-CHAR-BELL",
+      "to": "EVT-DM-EINA-ADVISOR-ANIME-001",
+      "kind": "receives_general_guidance_from_assigned_advisor",
+      "label": "El perfil oficial indica que Eina es la asesora asignada a Bell y le aporta conocimientos sobre el Dungeon y Orario",
+      "continuity": "CONT-ANIME",
+      "interval": "Estado descrito por el perfil oficial de DanMachi III; fecha interna exacta no indicada",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_adaptation_profile",
+      "claimRef": "DMR-016-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
+      "note": "Respalda la relación general de asesoría; no afirma cuántas sesiones ocurrieron ni qué consejo causó una decisión concreta."
+    },
+    {
+      "id": "REL-EINA-ADVISOR-GUILD-EVENT-ANIME",
+      "from": "EVT-DM-EINA-ADVISOR-ANIME-001",
+      "to": "DM-GUILD-001",
+      "kind": "documents_advisory_role_at_institution",
+      "label": "El perfil oficial de DanMachi III sitúa la función de recepcionista y asesora de Eina dentro de la Guild",
+      "continuity": "CONT-ANIME",
+      "interval": "Estado descrito por el perfil oficial de DanMachi III; fecha interna exacta no indicada",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_adaptation_profile",
+      "claimRef": "DMR-016-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
+      "note": "Vínculo institucional, no localización de una escena física concreta. Se conserva CONT-ANIME y no se infiere una secuencia temporal frente a otros eventos."
     }
   ]
 }
