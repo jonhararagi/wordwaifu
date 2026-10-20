@@ -443,7 +443,7 @@ assert.ok(addedSources.some(source => source.id === "community-daedalus-street" 
 // The official synopsis proves the transition in CONT-ANIME; the claimed cause
 // of church destruction stays a separately searchable wiki lead.
 assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md"), "The Hestia-residence evidence package must be included in production search.");
-const hestiaResidenceOfficialSearch = corpus.search(index, { query: "Hestia Apollo church mansion", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
+const hestiaResidenceOfficialSearch = corpus.search(index, { query: "Hestia Apollo iglesia mansión War Game", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(hestiaResidenceOfficialSearch.results.some(item => item.claimId === "DMR-033-CLM-001" && item.verificationStatus === "source_checked"), "The official synopsis must support the church-to-mansion transition in the anime.");
 const abandonedChurchWikiSearch = corpus.search(index, { query: "iglesia Apollo Hestia Familia", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(abandonedChurchWikiSearch.results.some(item => item.claimId === "DMR-031-CLM-010" && item.verificationStatus === "secondary_checked"), "Apollo Familia's alleged responsibility for the church destruction must remain secondary.");
