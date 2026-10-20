@@ -57,3 +57,10 @@ La página comunitaria presenta a Zeus Familia como una de las organizaciones de
 - Ficha comunitaria de Zeus: DMR-021-SRC-003.
 - Maxim: DMR-021-SRC-005 y DMR-029-CLM-013.
 - Investigación secundaria: DMR-021-CLM-006; DMR-029-CLM-008 y DMR-029-CLM-009.
+
+
+## Técnica compartida reportada: Afterglow
+La wiki de Hera Familia atribuye a Zeus y Hera Familia una técnica llamada **Afterglow** (残光, *Zankō*), descrita como un corte de onda de choque a distancia mediante refuerzo de un arma con filo. El artículo de Zald relaciona su uso con Rea Ambrosia. Se registra como pista comunitaria, no como una mecánica verificada línea por línea.
+
+- **Claim:** DMR-029-CLM-015.
+- **Fuentes:** [Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia) y [Zald](https://danmachi.fandom.com/wiki/Zald).

@@ -3665,6 +3665,20 @@
       "claimRef": "DMR-029-CLM-014",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
       "note": "La arista conserva la relación como dato secundario y con spoiler mayor; el texto primario no se ha cotejado en esta tanda."
+    },
+    {
+      "id": "REL-ZEUS-HERA-AFTERGLOW-WIKI",
+      "from": "FAM-ZEUS",
+      "to": "FAM-HERA",
+      "kind": "shared_technique_reported",
+      "label": "La wiki atribuye a ambas Familias la técnica de corte a distancia Afterglow",
+      "continuity": "CONT-AR",
+      "interval": "Periodo histórico de Zeus y Hera Familia; escena y fecha exactas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_wiki_ability_summary",
+      "claimRef": "DMR-029-CLM-015",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "La wiki describe Afterglow como una técnica que combina magia o habilidad de refuerzo de arma con un corte de onda de choque a distancia. Se registra como pista secundaria; no implica que toda la mecánica, su autoría individual o sus límites estén confirmados por novela."
     }
   ]
 }

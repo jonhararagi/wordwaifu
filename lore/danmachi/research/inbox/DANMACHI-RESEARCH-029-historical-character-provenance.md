@@ -239,3 +239,21 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
 - `confidence_note`: La etiqueta «abuelo adoptivo» es el resumen secundario de la wiki; verificar el pasaje principal antes de usar detalles de la tutela como canon primario. El padre sigue sin ID ni nombre.
+
+
+### DMR-029-CLM-015 · Afterglow: técnica de corte a distancia atribuida a Zeus y Hera Familia
+- `claim_id`: DMR-029-CLM-015
+- `claim`: La wiki comunitaria de Hera Familia describe Afterglow (残光, Zankō) como una técnica compartida por Zeus Familia y Hera Familia: una magia o habilidad de refuerzo aplicada a un arma con filo produce un corte de onda de choque que alcanza objetivos a distancia. La página de Zald atribuye su uso a una combinación de Rea Ambrosia y espada.
+- `character_ids`: [CHAR-DARK-ZALD]
+- `aspect`: técnica de combate, magia de refuerzo, legado de Familias
+- `era_or_interval`: Periodo histórico de Zeus/Hera Familia; escena, origen y fecha exactos por cotejar
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-021-SRC-002; DMR-029-SRC-005
+- `source_title`: Hera Familia; Zald
+- `source_type`: COMMUNITY_WIKI
+- `source_locator`: Sección de información general de Hera Familia (técnica Afterglow) y sección de magia de Zald (Rea Ambrosia)
+- `source_url`: https://danmachi.fandom.com/wiki/Hera_Familia; https://danmachi.fandom.com/wiki/Zald
+- `evidence_type`: community_secondary_technique_summary
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: El nombre, la descripción general y la atribución colectiva son pistas para localizar la escena. No inferir alcance, potencia, costes, número de usuarios, autor original ni que la técnica carezca de preparación sin un localizador primario.

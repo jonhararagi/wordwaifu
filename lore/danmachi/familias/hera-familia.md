@@ -50,3 +50,11 @@ La página comunitaria describe a Hera Familia como una de las organizaciones de
 - Wiki inglesa de Hera Familia: DMR-021-SRC-002.
 - Ficha comunitaria de Hera: DMR-021-SRC-004.
 - Investigación secundaria: DMR-021-CLM-008; DMR-029-CLM-008 y DMR-029-CLM-010.
+
+
+## Técnica compartida reportada: Afterglow
+La wiki atribuye a Hera Familia y Zeus Familia una técnica llamada **Afterglow** (残光, *Zankō*): un corte de onda de choque a distancia producido al reforzar un arma con filo. El expediente de Zald relaciona la técnica con Rea Ambrosia, pero no se ha localizado aquí el pasaje primario que confirme su ejecución y límites.
+
+- **Claim:** DMR-029-CLM-015.
+- **Fuentes:** [Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia) y [Zald](https://danmachi.fandom.com/wiki/Zald).
+- **Estado:** secondary_checked; no inferir potencia, alcance, coste o autoría individual.

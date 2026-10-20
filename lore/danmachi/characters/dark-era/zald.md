@@ -62,3 +62,11 @@ La wiki española señala Astrea Record volumen 3, con títulos de capítulos y 
 
 ## Regla editorial
 No declarar como primaria la información detallada de niveles, estadísticas, habilidades o combates. Verificar primero cada dato en el volumen o relato legal y conservar la continuidad correspondiente.
+
+
+## Técnica compartida atribuida por la wiki: Afterglow
+La wiki de Hera Familia describe **Afterglow** (残光, *Zankō*) como una técnica de Zeus Familia y Hera Familia que transforma el refuerzo de un arma con filo en un corte de onda de choque capaz de alcanzar un objetivo a distancia. La ficha de Zald relaciona su uso con **Rea Ambrosia** y su espada.
+
+- **Claim de investigación:** DMR-029-CLM-015.
+- **Fuentes comunitarias:** [Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia) y [Zald](https://danmachi.fandom.com/wiki/Zald).
+- **Estado:** secondary_checked; falta localizar el pasaje primario. No se inventan alcance, coste, potencia, número de usuarios ni condiciones completas.

@@ -297,3 +297,9 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se añadieron DMR-029-CLM-006..014 y fuentes específicas para la wiki española de Meteria y la nota alternativa del autor.
 - Se añadieron nueve relaciones navegables con claimRef y estado secondary_checked; no se inventó nombre para la capitana de Hera ni para el padre de Bell.
 - Los eventos de Dragón Negro y caída de Zeus/Hera quedan enlazados a fuentes secundarias pero siguen pending_verification.
+
+
+## Lote 2026-10-19 · Afterglow y técnica compartida de Zeus/Hera
+- **Cambio:** se incorporó DMR-029-CLM-015 para la técnica Afterglow descrita por las wikis de Hera Familia y Zald; se añadió una relación tipada entre FAM-ZEUS y FAM-HERA y se enlazó desde ambos expedientes familiares y la ficha de Zald.
+- **Límite probatorio:** evidencia `secondary_checked`; no se eleva a canon primario sin localizador de novela.
+- **Validación esperada:** ID de relación único, referencias de claim/ruta válidas y checks del catálogo de lore.
