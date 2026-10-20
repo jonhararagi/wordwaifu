@@ -32,6 +32,14 @@ const plainFieldFixture = [
   "- confidence_note: fixture only"
 ].join("\n");
 const plainFieldIndex = corpus.buildIndex(catalog, [{ path: "tests/fixture.md", content: plainFieldFixture }], []);
+const bellCharacter = index.characters.find(character => character.id === "DM-CHAR-BELL");
+const meteriaCharacter = index.characters.find(character => character.id === "CHAR-METERIA");
+assert.equal(bellCharacter?.name, "Bell Cranel", "Bell's identity must remain searchable by his canonical display name.");
+assert.ok(meteriaCharacter, "Meteria must be loaded when the historical source bundle is active.");
+assert.ok(![...(meteriaCharacter.aliases || []), ...(meteriaCharacter.keywords || [])]
+  .some(value => corpus.normalize(value) === "bell cranel"),
+  "Another character's relation tag must not make that character a false exact-name match for Bell Cranel.");
+
 const plainFieldClaim = plainFieldIndex.claims.find(item => item.claimId === "DMR-998-CLM-001");
 assert.ok(plainFieldClaim, "The parser must retain claims that use plain metadata keys.");
 assert.equal(plainFieldClaim.claim, "Esta afirmación de prueba describe una habilidad verificable");
