@@ -3344,8 +3344,8 @@ async function run() {
     // Return to the novel continuity to verify the fuller wiki-referenced dossier separately.
     await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
     await page.locator("#archive-tab-summary").click();
-    await page.waitForFunction(() => (document.querySelector("#archive-profile-panel")?.innerText || "").includes("Expediente ampliado"), null, { timeout: 10000 });
-    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Expediente ampliado"),
+    await page.waitForFunction(() => (document.querySelector("#archive-profile-panel")?.innerText || "").includes("Expediente de continuidad"), null, { timeout: 10000 });
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Expediente de continuidad"),
       "The profile must show the substantial dossier rather than only the short official synopsis.");
     const dossierLength = await page.locator("#archive-profile-panel .archive-dossier-detail p").evaluateAll(nodes => nodes.reduce((sum,node)=>sum+node.innerText.length,0));
     assert.ok(dossierLength > 1200, "The expanded dossier must contain substantial content.");
