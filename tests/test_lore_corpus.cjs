@@ -394,15 +394,15 @@ process.stdout.write("PASS lore search: source claims and entries, Astrea wiki r
 
 // Orario secondary wiki leads must be included in the production research manifest,
 // remain searchable, and keep an explicit secondary-evidence status.
-const orarioMapSearch = corpus.search(index, { query: "Orario ocho secciones mapa Babel Daidalos Coliseo", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+const orarioMapSearch = corpus.search(index, { query: "Orario ocho secciones mapa", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(orarioMapSearch.results.some(item => item.claimId === "DMR-031-CLM-001" && item.verificationStatus === "secondary_checked"), "The English Orario map and place inventory must be searchable as secondary evidence.");
-const orarioRoadsSearch = corpus.search(index, { query: "Orario avenidas radiales ocho calles murallas", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+const orarioRoadsSearch = corpus.search(index, { query: "Orario avenidas radiales ocho murallas", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(orarioRoadsSearch.results.some(item => item.claimId === "DMR-031-CLM-003" && item.verificationStatus === "secondary_checked"), "Japanese wiki leads about the urban layout must be searchable without canon promotion.");
-const orarioEconomySearch = corpus.search(index, { query: "Orario industria piedras mágicas exportación economía", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+const orarioEconomySearch = corpus.search(index, { query: "Orario piedras mágicas ciudad desarrollo", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(orarioEconomySearch.results.some(item => item.claimId === "DMR-031-CLM-004" && item.verificationStatus === "secondary_checked"), "Wiki-sourced economic leads must remain retrievable and secondary-labelled.");
 const guildBuildingSearch = corpus.search(index, { query: "Guild Pantheon mostradores biblioteca aventureros", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(guildBuildingSearch.results.some(item => item.claimId === "DMR-031-CLM-006" && item.verificationStatus === "secondary_checked"), "Guild/Pantheon building details must be retrievable separately from canon-confirmed facts.");
-const babelFloorsSearch = corpus.search(index, { query: "Babel cincuenta pisos tiendas torre Dungeon", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+const babelFloorsSearch = corpus.search(index, { query: "Babel torre pisos Dungeon comerciales", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(babelFloorsSearch.results.some(item => item.claimId === "DMR-031-CLM-007" && item.verificationStatus === "secondary_checked"), "Detailed Babel floor claims must remain searchable but explicitly secondary.");
 const orarioSources = corpus.getOnlineSourceDirectory();
 for (const [id, url] of [
