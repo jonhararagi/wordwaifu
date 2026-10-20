@@ -421,7 +421,15 @@
         "Kaguya",
         "Familia Astrea",
         "Astrea Record",
-        "Astrea Familia"
+        "Astrea Familia",
+        "Yamato Rindou",
+        "Gokou",
+        "Shikai",
+        "Kaina Blood",
+        "Tekiheni",
+        "Sakibeni",
+        "Higanbana",
+        "Kodachi Futaba"
       ],
       "status": "provisional",
       "priority": "high"
@@ -3132,16 +3140,17 @@
       "from": "CHAR-RYUU-LION",
       "to": "CHAR-KAGUYA",
       "kind": "historical_co_member_roster_and_reported_moral_disagreement",
-      "label": "El roster secundario enumera a Ryu y Kaguya entre las integrantes históricas; la misma biografía informa desacuerdos sobre cómo aplicar la justicia.",
+      "label": "El roster secundario enumera a Ryu y Kaguya entre las integrantes históricas; informa desacuerdos sobre justicia y que Kaguya legó las Kodachi Futaba a Ryuu antes de sacrificarse",
       "continuity": "CONT-AR",
       "interval": "Astrea Record · Era Oscura de Orario; fecha interna exacta no establecida",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_roster",
       "claimRef": "DMR-007-CLM-005",
       "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "La afiliación compartida proviene del roster comunitario; los desacuerdos morales son otra pista secundaria. Ninguna demuestra enemistad permanente ni reemplaza la cita de novela.",
+      "note": "La afiliación y los desacuerdos morales son pistas secundarias; la misma página comunitaria informa el legado de Kodachi Futaba. No demuestra enemistad permanente ni reemplaza la cita de novela.",
       "claimRefs": [
-        "DMR-028-CLM-003"
+        "DMR-028-CLM-003",
+        "DMR-028-CLM-025"
       ],
       "claimPaths": [
         "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
@@ -3665,6 +3674,90 @@
       "claimRef": "DMR-029-CLM-014",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
       "note": "La arista conserva la relación como dato secundario y con spoiler mayor; el texto primario no se ha cotejado en esta tanda."
+    },
+    {
+      "id": "REL-KAGUYA-MEMBER-ASTREA-AR-WIKI",
+      "from": "CHAR-KAGUYA",
+      "to": "DM-FAM-ASTREA",
+      "kind": "reported_member_of",
+      "label": "La wiki sitúa a Kaguya como integrante y vicecapitana histórica de Astrea Familia",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record / Era Oscura; fechas exactas por verificar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_roster_and_biography",
+      "claimRef": "DMR-028-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Afiliación histórica reportada por una wiki comunitaria; no sustituye un localizador de novela."
+    },
+    {
+      "id": "REL-WIKI-ALISE-ASTREA-JUGGERNAUT",
+      "from": "CHAR-ALISE-LOVELACE",
+      "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "kind": "reported_sacrifice_during",
+      "label": "La wiki afirma que Alise se sacrificó durante el ataque del Juggernaut para permitir que Ryuu sobreviviera",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Aproximadamente cinco años antes de la historia principal según cronología secundaria",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_plot_summary",
+      "claimRef": "DMR-028-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Arista histórica secundaria; falta localizar el capítulo/pasaje primario que confirme la causa, secuencia y destino individual."
+    },
+    {
+      "id": "REL-WIKI-KAGUYA-ASTREA-JUGGERNAUT",
+      "from": "CHAR-KAGUYA",
+      "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "kind": "reported_sacrifice_during",
+      "label": "La wiki afirma que Kaguya se sacrificó durante el ataque del Juggernaut para permitir que Ryuu sobreviviera",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Aproximadamente cinco años antes de la historia principal según cronología secundaria",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_plot_summary",
+      "claimRef": "DMR-028-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Arista histórica secundaria; no confirma por sí sola cada acción o la secuencia de escenas de la novela."
+    },
+    {
+      "id": "REL-WIKI-LYRA-ASTREA-JUGGERNAUT",
+      "from": "CHAR-LYRA",
+      "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "kind": "reported_sacrifice_during",
+      "label": "La wiki afirma que Lyra se sacrificó durante el ataque del Juggernaut para permitir que Ryuu sobreviviera",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Aproximadamente cinco años antes de la historia principal según cronología secundaria",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_plot_summary",
+      "claimRef": "DMR-028-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Arista histórica secundaria; falta cotejo primario antes de presentar la causa y secuencia como plenamente confirmadas."
+    },
+    {
+      "id": "REL-WIKI-RYUU-SURVIVES-ASTREA-JUGGERNAUT",
+      "from": "CHAR-RYUU-LION",
+      "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "kind": "reported_survivor_of",
+      "label": "Las biografías comunitarias presentan a Ryuu como la superviviente del incidente del Juggernaut",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Aproximadamente cinco años antes de la historia principal según cronología secundaria",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_plot_summary",
+      "claimRef": "DMR-028-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Resumen secundario de varias páginas; no inferir que la misma fuente confirma cada detalle del combate."
+    },
+    {
+      "id": "REL-WIKI-ASTREA-ERA-TO-JUGGERNAUT-ORDER",
+      "from": "EVT-DM-AR-ERA-001",
+      "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "kind": "reported_relative_order",
+      "label": "La cronología comunitaria sitúa la etapa de Astrea Record alrededor de T−7 y la tragedia/Juggernaut alrededor de T−5; ambos intervalos son aproximados",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "Orden temporal reportado por wiki; fechas absolutas no establecidas",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_relative_timeline",
+      "claimRef": "DMR-028-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+      "note": "Arista de orientación cronológica, no ancla canónica definitiva. Confirmar cada intervalo en su fuente narrativa."
     }
   ]
 }

@@ -895,7 +895,7 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_character_summary
 - locator: Characteristics, Personality, History y Abilities.
-- claims_supported: [DMR-028-CLM-002, DMR-028-CLM-003, DMR-028-CLM-006]
+- claims_supported: [DMR-028-CLM-002, DMR-028-CLM-003, DMR-028-CLM-006, DMR-028-CLM-023, DMR-028-CLM-024, DMR-028-CLM-025, DMR-028-CLM-026]
 - events_supported: []
 - continuity_scope: CONT-AR; referencia secundaria
 - reliability_note: La página presenta una biografía extensa y detalles de valores/combate. No hay localizador primario cotejado en este expediente.

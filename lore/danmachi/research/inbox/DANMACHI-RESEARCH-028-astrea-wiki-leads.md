@@ -398,3 +398,72 @@
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
 - `confidence_note`: Nombre y efectos siguen siendo información secundaria hasta cotejar un pasaje primario; no inferir duración, acumulación, alcance o excepciones.
+
+
+### DMR-028-CLM-023 · Instantánea biográfica comunitaria de Gojouno Kaguya
+- `claim_id`: DMR-028-CLM-023
+- `claim`: La ficha comunitaria identifica a Gojouno Kaguya con el alias Yamato Rindou, la describe como humana de 19 años y 167 cm, la registra en nivel 4 con el piso 41 como piso alcanzado y marca su estado como fallecida. Estos valores pertenecen a la instantánea de la wiki; no son una actualización temporal cotejada por WordWaifu.
+- `character_ids`: [CHAR-KAGUYA]
+- `aspect`: identidad, aliases, apariencia, nivel, estado
+- `era_or_interval`: Ficha biográfica comunitaria; etapa exacta de cada estadística sin cotejo primario
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-028-SRC-002
+- `source_title`: DanMachi Wiki · Gojouno Kaguya
+- `source_type`: community_wiki
+- `source_locator`: Characteristics, Professional Status y Personal Status
+- `source_url`: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
+- `evidence_type`: community_secondary_character_snapshot
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: La wiki también menciona una hermana menor, Gojouno Sakuya. No se crea una ficha ni una relación de catálogo para ella en este lote porque aún no existe un registro independiente cotejado. El nivel y el piso alcanzado quedan como cifras reportadas, no como valores permanentes.
+
+### DMR-028-CLM-024 · Magias, habilidades y capacidades de combate atribuidas a Kaguya
+- `claim_id`: DMR-028-CLM-024
+- `claim`: La wiki lista para Kaguya las magias Gokou y Shikai; las habilidades Kaina Blood, Tekiheni y Sakibeni; y las habilidades de desarrollo Night Fight y Abnormal Resistance. Describe Gokou como cinco hojas de poder mágico que pueden atacar desde varias direcciones, y presenta a Kaguya como una combatiente cuerpo a cuerpo excepcional dentro de Astrea Familia.
+- `character_ids`: [CHAR-KAGUYA]
+- `aspect`: magia, habilidades, combate, resistencia
+- `era_or_interval`: Etapa histórica de Astrea Familia; reglas y contextos exactos pendientes
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-028-SRC-002
+- `source_title`: DanMachi Wiki · Gojouno Kaguya
+- `source_type`: community_wiki
+- `source_locator`: Skill, Magic, Development Abilities y Abilities
+- `source_url`: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
+- `evidence_type`: community_secondary_ability_summary
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: Se conservan los nombres y la descripción resumida para búsqueda. No se inventan canto, coste, alcance, duración, condiciones de activación ni estadísticas de cada habilidad; verificar el texto narrativo antes de aprobar sus mecánicas.
+
+### DMR-028-CLM-025 · Armas de Kaguya y legado de las kodachi Futaba a Ryuu
+- `claim_id`: DMR-028-CLM-025
+- `claim`: La wiki describe Higanbana como la katana principal de Kaguya y registra las Kodachi Futaba como armas que ella entregó a Ryuu antes de sacrificarse. El traspaso aparece aquí como dato secundario, sin un pasaje de novela localizado en WordWaifu.
+- `character_ids`: [CHAR-KAGUYA, CHAR-RYUU-LION]
+- `aspect`: equipo, armas, legado, relación
+- `era_or_interval`: Antes del incidente del Juggernaut; escena y orden exacto pendientes de cotejo primario
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-028-SRC-002
+- `source_title`: DanMachi Wiki · Gojouno Kaguya
+- `source_type`: community_wiki
+- `source_locator`: Equipment; Higanbana y Kodachi Futaba
+- `source_url`: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
+- `evidence_type`: community_secondary_weapon_transfer
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: El equipo y el legado se registran como pista navegable. No inferir propiedades de arma no descritas, ni convertir la transferencia en prueba de una relación fuera de su contexto histórico.
+
+### DMR-028-CLM-026 · Pasado de Kaguya en el Lejano Oriente y quiebre de su idea de justicia
+- `claim_id`: DMR-028-CLM-026
+- `claim`: La biografía comunitaria sitúa a Kaguya en la nobleza de la casa Gojou, al servicio de la corte imperial y encargada de proteger la ley. Según esa fuente, a veces recibió órdenes de matar a personas que no consideraba criminales; a los doce años se negó a matar a un joven vinculado a la casa Rokujou durante una rebelión. La wiki relata que Konohanasakuya-hime empleó Charm para forzarla a matarlo, tras lo cual Kaguya fue liberada de su status y abandonó el Lejano Oriente antes de llegar a Orario y unirse a Astrea.
+- `character_ids`: [CHAR-KAGUYA, CHAR-ASTREA]
+- `aspect`: biografía, trauma, justicia, afiliación, motivación
+- `era_or_interval`: Antes de la llegada de Kaguya a Orario; secuencia atribuida a la wiki, fechas exactas pendientes
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-028-SRC-002
+- `source_title`: DanMachi Wiki · Gojouno Kaguya
+- `source_type`: community_wiki
+- `source_locator`: History y Personality; servicio a la corte, casa Rokujou y Konohanasakuya-hime
+- `source_url`: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
+- `evidence_type`: community_secondary_biographical_narrative
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: Es una paráfrasis de fuente comunitaria, no una cita de la novela ni una validación de los detalles de Charm. La relación previa con Konohanasakuya-hime Familia no implica que esa entidad siga activa en el momento de Astrea Record.
