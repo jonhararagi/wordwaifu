@@ -4,7 +4,7 @@
 **Esta sección prevalece sobre el historial que sigue.** No se certifica un porcentaje global a partir de cantidad de archivos o tests.
 
 - **Repositorio/rama de trabajo:** `jonhararagi/wordwaifu` · `work/danmachi-character-completion-2026-10-20` (validación final de CI y PR todavía pendientes).
-- **Cobertura estructural DanMachi:** 102 registros activos, 45 IDs reservados, 116 documentos de apoyo y 130 aristas explícitas. Los conteos describen estructura, no un porcentaje de canon completo.
+- **Cobertura estructural DanMachi:** 153 registros activos, 31 IDs reservados, 117 documentos de apoyo y 187 aristas explícitas. Los conteos describen estructura, no un porcentaje de canon completo.
 - **Roster de adaptación:** 63 identidades. Cada una dispone de registro activo, ficha Markdown y expediente de interfaz. Los cuatro hermanos Gulliver tienen IDs y rutas independientes y enlazan con grupo y Freya Familia.
 - **Hubs de navegación:** 13 nodos de Familia, más Hostess of Fertility y Xenos. Las listas reflejan la evidencia disponible y no son censos completos por periodo.
 - **Grafo:** 195 relaciones registradas. Cada arista declara extremos, continuidad, intervalo, estado de evidencia y claim. Las referencias de wiki permanecen `secondary_checked`; no se elevan a canon primario.
