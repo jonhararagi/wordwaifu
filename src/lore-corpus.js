@@ -323,13 +323,27 @@
       .map(claim => ({ ...claim, aspects: getAspects(claim), periodKey: getPeriod(claim) }));
     const claims = [...parsedClaims, ...generatedClaims];
     const usedIds = new Set(claims.flatMap(claim => claim.characterIds));
-    const catalogCharacters = (catalog.records || [])
-      .filter(record => ["character", "deity_character"].includes(record.type) && usedIds.has(record.id))
+    const allCharacterRecords = (catalog.records || [])
+      .filter(record => ["character", "deity_character"].includes(record.type));
+    const primaryCharacterNames = new Set(allCharacterRecords.map(record => {
+      const tags = Array.isArray(record.tags) ? record.tags : [];
+      const name = tags.find(tag => typeof tag === "string" && !/^spoiler/i.test(tag)) || record.name || record.title || record.id;
+      return normalize(name);
+    }).filter(Boolean));
+    const catalogCharacters = allCharacterRecords
+      .filter(record => usedIds.has(record.id))
       .map(record => {
-        const tags = record.tags || [];
-        const name = tags.find(tag => typeof tag === "string" && !/^spoiler/i.test(tag)) || record.id;
-        const aliases = unique([name, ...tags.filter(tag => !/familia|multi-era|motivation|leadership|training|loyalty|spoiler|deity|historical state|timeline|provisional/i.test(tag))]);
-        return { id: record.id, name, aliases, keywords: unique(tags), profilePath: record.path };
+        const tags = Array.isArray(record.tags) ? record.tags.filter(tag => typeof tag === "string") : [];
+        const name = tags.find(tag => !/^spoiler/i.test(tag)) || record.name || record.title || record.id;
+        const normalizedName = normalize(name);
+        // Tags that name a different catalogued character describe a relationship,
+        // not an alias for this character. Keep relation navigation in the graph.
+        const searchableTags = tags.filter(tag => {
+          const normalizedTag = normalize(tag);
+          return normalizedTag === normalizedName || !primaryCharacterNames.has(normalizedTag);
+        });
+        const aliases = unique([name, ...searchableTags.filter(tag => !/familia|multi-era|motivation|leadership|training|loyalty|spoiler|deity|historical state|timeline|provisional/i.test(tag))]);
+        return { id: record.id, name, aliases, keywords: unique(searchableTags), profilePath: record.path };
       });
     // Official adaptation references extend discoverability without pretending to be
     // fully researched canonical dossier files. Each entry must have source-backed claims.
