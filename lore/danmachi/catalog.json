@@ -1330,6 +1330,19 @@
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-HELGA",
+      "path": "characters/helga.md",
+      "type": "character",
+      "tags": [
+        "Helga",
+        "Fianna Knights",
+        "Lyra",
+        "reincarnation"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
@@ -3665,6 +3678,34 @@
       "claimRef": "DMR-029-CLM-014",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
       "note": "La arista conserva la relación como dato secundario y con spoiler mayor; el texto primario no se ha cotejado en esta tanda."
+    },
+    {
+      "id": "REL-WIKI-ZEUS-HERA-AFTERGLOW",
+      "from": "FAM-ZEUS",
+      "to": "FAM-HERA",
+      "kind": "shared_combat_technique",
+      "label": "Ambas Familias aparecen asociadas por la wiki a la técnica histórica Afterglow",
+      "continuity": "CONT-AR",
+      "interval": "Periodo histórico de ambas Familias; origen y fecha exacta pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_combat_technique",
+      "claimRef": "DMR-029-CLM-015",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "Vínculo técnico compartido reportado por wikis comunitarias. No prueba que toda la Familia usara la técnica ni identifica un inventor primario."
+    },
+    {
+      "id": "REL-WIKI-LYRA-HELGA-REINCARNATION",
+      "from": "CHAR-LYRA",
+      "to": "CHAR-HELGA",
+      "kind": "reported_reincarnation_of",
+      "label": "La wiki identifica a Lyra como reencarnación de Helga, antigua segunda al mando de los Caballeros de Fianna",
+      "continuity": "CONT-AR",
+      "interval": "Vida histórica atribuida a Helga y vida posterior de Lyra; época precisa pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_identity_claim",
+      "claimRef": "DMR-029-CLM-017",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "Relación secundaria de spoiler mayor; no implica recuerdos compartidos ni continuidad de conciencia. Pendiente de localizador primario."
     }
   ]
 }
