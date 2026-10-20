@@ -312,3 +312,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Cambio:** se incorporó DMR-029-CLM-015 para la técnica Afterglow descrita por las wikis de Hera Familia y Zald; se añadió una relación tipada entre FAM-ZEUS y FAM-HERA y se enlazó desde ambos expedientes familiares y la ficha de Zald.
 - **Límite probatorio:** evidencia `secondary_checked`; no se eleva a canon primario sin localizador de novela.
 - **Validación esperada:** ID de relación único, referencias de claim/ruta válidas y checks del catálogo de lore.
+
+
+## DANMACHI-RESEARCH-030 · Método progresivo y primera etapa Orario (2026-10-20)
+
+- **Objetivo:** seguir el orden solicitado: Orario → sucesos ocurridos en Orario → personajes principales → secundarios → historias individuales → revisión integrada.
+- **Documento nuevo:** `research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md`, con módulos de cobertura, plantilla analítica de eventos, datos de personaje/historia, escala de evidencia E0–E4, reglas de continuidad y control de duplicados.
+- **Orario:** se amplió `places/orario.md) como ficha central de ciudad, con matriz de temas pendientes y rutas hacia Dungeon, Babel, Guild e Hostess of Fertility. El contenido factual existente sigue limitado a CONT-ANIME y al glosario oficial DMR-026-SRC-001; no se ha elevado evidencia de anime a canon de novela ligera ni se ha presentado un mapa de fans como mapa oficial.
+- **Catálogo e índices:** método inscrito en `catalog.json`; enlace añadido a `MASTER_INDEX.md`; etapa Orario priorizada en `WORK_QUEUE.md`.
+- **ID documental:** `DOC-DANMACHI-ANALYSIS-METHOD-001`. Se reutiliza LOC-ORARIO y los claims/fuentes ya existentes; no se crea una segunda ficha de ciudad ni se inventan IDs de lugares.
+- **Pendiente:** ejecutar CI en la PR, revisar integridad del catálogo y corregir cualquier fallo real antes de integrar en main.
+- **Estado factual:** método listo para usar; análisis completo de Orario aún pendiente. La ficha central es una guía de cobertura, no una declaración de que la ciudad esté completa.
