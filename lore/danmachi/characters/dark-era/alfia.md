@@ -9,11 +9,13 @@ source_refs:
   - DMR-029-SRC-002
   - DMR-029-SRC-003
   - DMR-029-SRC-004
+  - DMR-029-SRC-020
   - DMR-021-SRC-002
   - DMR-021-SRC-006
 claim_refs:
   - DMR-029-CLM-001
   - DMR-029-CLM-006
+  - DMR-029-CLM-019
   - DMR-029-CLM-011
 verification_status: secondary_checked_primary_text_pending
 aliases:
@@ -39,14 +41,22 @@ Las wikis describen una enfermedad incurable que limita la resistencia de Alfia,
 - La secuencia exacta de la victoria sobre Leviathan, la caída ante el Dragón Negro y la relación causal entre sucesos exige un localizador primario.
 - No completar motivaciones privadas, escenas o fechas solo a partir del resumen de la wiki.
 
-## Habilidades y límites reportados por fuentes secundarias
-La ficha de personaje y la página española de habilidades enumeran:
-- **Habilidades:** Gif Blessing, Alme y Vel Ardore.
-- **Magias:** Satanas Verion, Silentium Eden y Genos Angelus.
-- **Límite físico central reportado:** Gif Blessing aparece descrita como manifestación pasiva de su enfermedad y como fuente de deterioro progresivo de parámetros y resistencia durante un combate largo.
+## Habilidades, magia y costes reportados por fuentes secundarias
 
-Esto es un índice práctico de qué revisar en la novela, no un conjunto de reglas ya verificado línea por línea. Los cantos, restricciones, coste exacto, valores numéricos y condiciones de activación siguen pendientes de página/escena primaria. No presentar sus poderes como gratuitos ni borrar el coste de su enfermedad.
+La wiki y su artículo en español de habilidades proporcionan un inventario más útil para consultar en lugar de limitar la ficha a nombres. Todo lo que sigue sigue siendo **secundario**: es un mapa de búsqueda para localizar la escena o el libreto, no una validación línea por línea de la novela.
 
+- **Satanas Verion:** la página española describe ondas de choque producidas por la magia, con daño que alcanza el entorno incluso cuando Alfia no apunta directamente a su objetivo principal.
+- **Silentium Eden:** encantamiento de canto muy corto que cubre el cuerpo con una protección invisible capaz de anular ataques mágicos desde diferentes direcciones. La wiki señala un coste alto de mente mientras permanece activo y una función paradójica: también sella o reduce el poder de la propia magia de Alfia. No debe describirse como defensa sin coste.
+- **Genos Angelus:** magia de canto muy largo que manifiesta una enorme campana gris plateada y cuyo alcance se cifra en más de 100 metros en el resumen comunitario. La fuente la presenta como suficientemente destructiva para amenazar una gran zona y relata que su uso contra Leviathan agravó de forma grave la salud de Alfia. El alcance y el efecto exactos necesitan un localizador primario.
+- **Gif Blessing:** la wiki la describe como manifestación de su enfermedad que mantiene su Falna en estado Limit Off, mientras le impone anormalidades y deteriora de forma continua sus estadísticas, resistencia y mente durante el combate. La estimación de una reducción del 5% por turno pertenece a ese resumen comunitario; no extrapolarla a un modelo general del sistema.
+- **Otras habilidades listadas:** Alme y Vel Ardore. No se les atribuye aquí un efecto mecánico no comprobado.
+
+La consecuencia práctica para el expediente es importante: su nivel y talento reportados no significan que pueda sostener potencia máxima indefinidamente. Los nombres de hechizos, los costes y el deterioro temporal deben viajar juntos al consultar su ficha.
+
+- **Claim:** DMR-029-CLM-019.
+- **Fuente comunitaria específica:** [Alfia/Habilidades · DanMachi Wiki en español](https://danmachi.fandom.com/es/wiki/Alfia/Habilidades).
+- **Límite:** faltan capítulo/página, traducción primaria de los términos mecánicos y cotejo de los porcentajes y condiciones.
+  
 ## Relaciones navegables
 - **[Hera Familia](../../familias/hera-familia.md):** afiliación histórica reportada; no se infieren relaciones privadas con su deidad.
 - **[Meteria](meteria.md):** hermana gemela según referencias secundarias; la ficha separa la relación familiar de los datos aún no cotejados.
