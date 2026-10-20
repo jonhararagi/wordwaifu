@@ -65,6 +65,18 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER
 assert.ok(index.relationships.some(edge => edge.id === "REL-LYRA-MEMBER-ASTREA-WIKI" && edge.from === "CHAR-LYRA" && edge.to === "DM-FAM-ASTREA" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-004"), "Lyra's reported membership must have a secondary-evidence relationship.");
 const kaguyaJusticeSearch = corpus.search(index, { query: "Kaguya Ryu justicia salvar mayoría", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(kaguyaJusticeSearch.results.some(item => item.claimId === "DMR-028-CLM-003" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Gojouno_Kaguya"))), "Lore search must return the wiki-derived Kaguya/Ryu dynamic with secondary status and source URL.");
+
+const kaguyaSnapshotSearch = corpus.search(index, { query: "Kaguya Yamato Rindou edad 19 altura 167 nivel piso 41", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(kaguyaSnapshotSearch.results.some(item => item.claimId === "DMR-028-CLM-023" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Gojouno_Kaguya"))), "Kaguya's alias and reported profile snapshot must be searchable with provenance.");
+const kaguyaKitSearch = corpus.search(index, { query: "Kaguya Gokou Shikai Kaina Blood Sakibeni Higanbana", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(kaguyaKitSearch.results.some(item => item.claimId === "DMR-028-CLM-024" && item.verificationStatus === "secondary_checked"), "Kaguya's wiki-listed skills and magic must be retrievable without promoting mechanics to canon.");
+const kaguyaPastSearch = corpus.search(index, { query: "Kaguya Gojou Rokujou Charm Konohanasakuya court justice", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(kaguyaPastSearch.results.some(item => item.claimId === "DMR-028-CLM-026" && item.verificationStatus === "secondary_checked"), "Kaguya's detailed past must be queryable and marked secondary.");
+const kaguyaFutabaSearch = corpus.search(index, { query: "Kaguya Kodachi Futaba Ryuu weapon legacy", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(kaguyaFutabaSearch.results.some(item => item.claimId === "DMR-028-CLM-025" && item.verificationStatus === "secondary_checked"), "Kaguya's reported weapon transfer must be searchable as secondary evidence.");
+for (const edgeId of ["REL-KAGUYA-MEMBER-ASTREA-AR-WIKI","REL-WIKI-ALISE-ASTREA-JUGGERNAUT","REL-WIKI-KAGUYA-ASTREA-JUGGERNAUT","REL-WIKI-LYRA-ASTREA-JUGGERNAUT","REL-WIKI-RYUU-SURVIVES-ASTREA-JUGGERNAUT","REL-WIKI-ASTREA-ERA-TO-JUGGERNAUT-ORDER","REL-WIKI-KAGUYA-GIVES-KODACHI-FUTABA-RYUU"]) {
+  assert.ok(index.relationships.some(edge => edge.id === edgeId && edge.evidenceStatus === "secondary_checked"), "New wiki-derived historical relationship must be navigable and remain secondary: " + edgeId);
+}
 const lyraAbilitiesSearch = corpus.search(index, { query: "Lyra magia mina bombas", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(lyraAbilitiesSearch.results.some(item => item.claimId === "DMR-028-CLM-005" && item.verificationStatus === "secondary_checked"), "Lore search must retrieve wiki-lead details for Lyra while preserving source status.");
 const celtyMagicSearch = corpus.search(index, { query: "Celty magia defensiva fuego inteligencia", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
@@ -144,8 +156,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 138, "Three DMR-026 claims, ten original DMR-028 claims, and twelve new DMR-028 claims must be included in the source count.");
-assert.equal(index.entryCount, 141, "The twelve new DMR-028 claims add twelve retrievable entries without altering existing continuity splits.");
+assert.equal(index.sourceClaimCount, 142, "Three DMR-026 claims, ten original DMR-028 claims, twelve member-detail DMR-028 claims, and four Kaguya DMR-028 claims must be included in the source count.");
+assert.equal(index.entryCount, 145, "The twelve member-detail and four Kaguya DMR-028 claims add sixteen retrievable entries without altering existing continuity splits.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });

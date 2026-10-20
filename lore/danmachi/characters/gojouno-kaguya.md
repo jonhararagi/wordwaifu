@@ -30,6 +30,39 @@ La wiki la describe como aventurera de nivel 4 a los 19 años e incluye habilida
 - **Fuente comunitaria:** [DanMachi Wiki · Gojouno Kaguya](https://danmachi.fandom.com/wiki/Gojouno_Kaguya).
 - **Referencia oficial de adaptación:** [perfiles de DanMachi IV](https://danmachi.com/danmachi4/character/).
 
+## Instantánea biográfica y aliases de la wiki · CONT-AR
+
+La página comunitaria añade el alias **Yamato Rindou**, y registra a Kaguya como humana de 19 años, 167 cm, nivel 4 y con el piso 41 como máximo alcanzado. También etiqueta su estado como fallecida. Son valores de la ficha secundaria y no una cronología estadística validada por WordWaifu; el nivel no debe presentarse como un valor atemporal ni trasladarse automáticamente a cada continuidad. La wiki menciona además a Gojouno Sakuya como hermana menor, dato que queda en la ficha como pista sin una entidad separada ni una arista propia en el catálogo actual.
+
+- **Claim:** DMR-028-CLM-023.
+- **Fuente comunitaria:** [DanMachi Wiki · Gojouno Kaguya](https://danmachi.fandom.com/wiki/Gojouno_Kaguya).
+
+## Magias, habilidades y combate reportados · CONT-AR
+
+La wiki lista las magias **Gokou** y **Shikai**; las habilidades **Kaina Blood**, **Tekiheni** y **Sakibeni**; y las habilidades de desarrollo **Night Fight** y **Abnormal Resistance**. La misma página describe Gokou como cinco hojas de poder mágico que atacan desde ángulos distintos, y la caracteriza como una de las combatientes cuerpo a cuerpo más fuertes de su antigua Familia.
+
+La ficha conserva los nombres en su romanización publicada para facilitar la búsqueda. No añade cantos, límites, costes, duración ni excepciones mecánicas que no estén documentadas aquí. Los detalles siguen siendo de procedencia comunitaria y requieren el cotejo de los pasajes narrativos antes de declararse canon confirmado.
+
+- **Claim:** DMR-028-CLM-024.
+- **Fuente comunitaria:** [DanMachi Wiki · Gojouno Kaguya](https://danmachi.fandom.com/wiki/Gojouno_Kaguya).
+
+## Equipo y legado · CONT-AR
+
+La misma ficha identifica **Higanbana** como su katana principal y afirma que entregó las **Kodachi Futaba** a Ryuu antes de sacrificarse. WordWaifu registra el traspaso como una pista secundaria de legado personal: no permite inferir atributos del arma, una promesa adicional ni una dinámica fuera del contexto descrito por la fuente.
+
+- **Claim:** DMR-028-CLM-025.
+- **Relación navegable:** [Ryuu Lion / Ryuu Lion](ryuu-lion.md) — transferencia reportada de las Kodachi Futaba, aún sin localizador primario.
+- **Fuente comunitaria:** [DanMachi Wiki · Gojouno Kaguya](https://danmachi.fandom.com/wiki/Gojouno_Kaguya).
+
+## Pasado en el Lejano Oriente y quiebre moral · CONT-AR
+
+La biografía comunitaria amplía un aspecto que el resumen anterior solo mencionaba: Kaguya habría servido en la corte imperial como integrante de la casa Gojou, con órdenes que a veces consideraba injustas. A los doce años, durante una rebelión de la casa Rokujou, se negó a matar a un joven por quien sentía afecto. La wiki relata que Konohanasakuya-hime utilizó Charm para forzarla a hacerlo, que después la liberó de su status y que Kaguya abandonó el Lejano Oriente antes de unirse a Astrea.
+
+Este episodio explica la tensión biográfica que la wiki atribuye a su visión de la justicia, pero no se trata como cita o escena confirmada en este expediente. No deben confundirse las interpretaciones del resumen comunitario con diálogo textual de la novela.
+
+- **Claim:** DMR-028-CLM-026.
+- **Fuente comunitaria:** [DanMachi Wiki · Gojouno Kaguya](https://danmachi.fandom.com/wiki/Gojouno_Kaguya).
+
 ## Personas relacionadas
 
 - **Ryuu Lion:** misma Familia histórica según las referencias comunitarias de roster. Esto documenta afiliación compartida, no necesariamente amistad íntima.

@@ -297,3 +297,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se añadieron DMR-029-CLM-006..014 y fuentes específicas para la wiki española de Meteria y la nota alternativa del autor.
 - Se añadieron nueve relaciones navegables con claimRef y estado secondary_checked; no se inventó nombre para la capitana de Hera ni para el padre de Bell.
 - Los eventos de Dragón Negro y caída de Zeus/Hera quedan enlazados a fuentes secundarias pero siguen pending_verification.
+
+
+## DANMACHI-RESEARCH-028C · Desglose ampliado de Kaguya y red histórica (2026-10-20)
+
+- Se amplió `characters/gojouno-kaguya.md` con el alias Yamato Rindou, la instantánea biográfica comunitaria, las magias/habilidades y el equipo reportado, además del pasado de la casa Gojou y la corte imperial. Cada bloque incluye claim y URL de origen.
+- Se añadieron los claims DMR-028-CLM-023..026 para el snapshot de identidad, el kit de combate, el legado de Kodachi Futaba y el trasfondo. Todos permanecen `secondary_checked`; el proyecto no declara cotejo de capítulo/página primaria.
+- Se añadieron siete relaciones al catálogo: pertenencia histórica de Kaguya, tres sacrificios individuales y supervivencia reportados alrededor del Juggernaut, orden temporal aproximado entre Astrea Record y la tragedia, y transferencia reportada de Kodachi Futaba a Ryuu.
+- Los bordes nuevos apuntan a claims concretos con sus rutas de investigación y mantienen continuidad/estado de evidencia compatibles con el validador. No se crea una ficha de Gojouno Sakuya ni de las Familias previas de Kaguya sin un registro independiente.
+- Se ampliaron las etiquetas del registro para recuperar a Kaguya mediante su alias y su equipo, y se agregaron pruebas de búsqueda/procedencia y navegación en `tests/test_lore_corpus.cjs`.
+- **Pendiente hasta CI:** confirmar el validador de catálogo, la cuenta exacta de claims/entradas y las pruebas completas de retrieval después de la integración.
