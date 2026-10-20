@@ -89,6 +89,9 @@ assert.ok(expandedSourceDirectory.some(source => source.id === "community-celty-
 assert.ok(expandedSourceDirectory.some(source => source.id === "community-iska-bra-es" && source.url === "https://danmachi.fandom.com/es/wiki/Iska_Bra"), "Iska's Spanish wiki source must be accessible from the source directory.");
 const sourceDirectory = corpus.getOnlineSourceDirectory();
 assert.ok(sourceDirectory.some(source => source.id === "community-kaguya" && source.url === "https://danmachi.fandom.com/wiki/Gojouno_Kaguya" && source.limits.includes("secundarios")), "The source browser must expose Kaguya's wiki page with secondary-source limits.");
+assert.ok(sourceDirectory.some(source => source.id === "community-alfia-abilities-es" && source.url === "https://danmachi.fandom.com/es/wiki/Alfia/Habilidades" && source.limits.includes("primarios")), "Alfia's detailed wiki source must be available with its verification limits.");
+assert.ok(sourceDirectory.some(source => source.id === "community-zald-es" && source.url === "https://danmachi.fandom.com/es/wiki/Zald" && source.limits.includes("comunitarios")), "Zald's Spanish wiki page must be listed as a secondary source.");
+assert.ok(sourceDirectory.some(source => source.id === "community-afterglow" && source.url === "https://danmachi.fandom.com/wiki/Terminology"), "Afterglow's technique source must be discoverable from the source directory.");
 
 assert.ok(index.relationships.some(edge => edge.id === "REL-RAUL-FINN-DELEGATED-COMMAND" && edge.claimRef === "DMR-005-CLM-008"), "Raul's delegated coordination role must link to the official claim.");
 assert.deepEqual(corpus.searchEntities(catalog, { type: "character", query: "Raul Nord" }).results.map(entity => entity.id), ["CHAR-RAUL-NOORD"], "Raul must be individually discoverable.");
