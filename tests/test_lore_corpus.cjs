@@ -193,7 +193,7 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-const expectedSourceClaimCount = documents.reduce((sum, document) => sum + [...document.content.matchAll(/^### DMR-\\d{3}-CLM-\\d{3} · .+$/gm)].length, 0);
+const expectedSourceClaimCount = documents.reduce((sum, document) => sum + [...document.content.matchAll(/^### DMR-\d{3}-CLM-\d{3} · .+$/gm)].length, 0);
 assert.equal(index.sourceClaimCount, expectedSourceClaimCount, "The index source count must reflect every H3 claim in the exact production research manifest.");
 assert.ok(index.entryCount >= index.sourceClaimCount, "All manifest claims must survive indexing; continuity-specific splits may create additional entries.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
