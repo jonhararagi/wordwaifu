@@ -2808,7 +2808,6 @@
       "sourcePage": "https://danmachi.com/danmachi5/character/",
       "imageCredit": "© titulares de DanMachi / producción de la adaptación. Imagen externa; no almacenada en WordWaifu."
     }
-  ]
   ];
   const byId = Object.fromEntries(records.map(record => [record.id, record]));
   root.WordWaifuOfficialCharacterRoster = Object.freeze({
