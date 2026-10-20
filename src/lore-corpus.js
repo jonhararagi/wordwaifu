@@ -105,8 +105,13 @@
   function findIds(value, regex) { return unique(String(value ?? "").match(regex) || []); }
   function parseSource(markdown, sourceDocument) {
     const headings = [...markdown.matchAll(/^### (DMR-\d{3}-CLM-\d{3}) · (.+)$/gm)];
-    return headings.map((match, index) => {
-      const block = markdown.slice(match.index, index + 1 < headings.length ? headings[index + 1].index : markdown.length);
+    const claimBoundaries = [...markdown.matchAll(/^#{2,6} DMR-\d{3}-CLM-\d{3} · .+$/gm)];
+    return headings.map(match => {
+      // Bound each claim at the next claim heading of any Markdown depth.
+      // Some research notes reuse an existing official claim under an H2, so
+      // parsing only H3 headings is intentional; the H2 still ends the prior claim.
+      const nextBoundary = claimBoundaries.find(boundary => boundary.index > match.index);
+      const block = markdown.slice(match.index, nextBoundary ? nextBoundary.index : markdown.length);
       const urlField = field(block, "source_url");
       return {
         claimId: field(block, "claim_id") || match[1],
