@@ -1380,6 +1380,34 @@
       ],
       "status": "secondary_checked",
       "priority": "normal"
+    },
+    {
+      "id": "LOC-HESTIA-HOME",
+      "path": "places/hestia-familia-church.md",
+      "type": "location",
+      "tags": [
+        "Iglesia abandonada",
+        "antigua iglesia de Hestia Familia",
+        "Orario",
+        "antigua residencia",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "LOC-APOLLO-MANOR",
+      "path": "places/apollo-familia-mansion.md",
+      "type": "location",
+      "tags": [
+        "Mansión de Apollo Familia",
+        "Apollo Familia mansion",
+        "Hestia Familia",
+        "residencia",
+        "Orario"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -1520,11 +1548,6 @@
     },
     {
       "id": "LOC-GUILD",
-      "type": "location",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "LOC-HESTIA-HOME",
       "type": "location",
       "status": "candidate_not_created"
     },
@@ -2288,6 +2311,12 @@
     {
       "document_id": "DOC-DANMACHI-RESEARCH-032",
       "path": "research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md",
+      "type": "location_research",
+      "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-033",
+      "path": "research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md",
       "type": "location_research",
       "status": "source_checked_partial"
     }
@@ -3897,6 +3926,48 @@
       "claimRef": "DMR-031-CLM-006",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md",
       "note": "La relación diferencia el edificio físico de la institución. Sigue siendo secundaria y no resuelve si Pantheon se distingue físicamente de Babel en la continuidad de la novela."
+    },
+    {
+      "id": "REL-HESTIA-CHURCH-FORMER-HOME-ANIME",
+      "from": "LOC-HESTIA-HOME",
+      "to": "DM-FAM-HESTIA",
+      "kind": "former_residence_of",
+      "label": "La iglesia fue la base anterior de Hestia Familia según la sinopsis oficial de DanMachi II",
+      "continuity": "CONT-ANIME",
+      "interval": "Antes de la mudanza posterior al War Game; fecha interna exacta no fijada",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_episode_synopsis",
+      "claimRef": "DMR-033-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md",
+      "note": "La fuente confirma que era una iglesia usada como base anterior y que fue destruida; no atribuye expresamente la causa de la destrucción a Apollo Familia."
+    },
+    {
+      "id": "REL-APOLLO-MANOR-HESTIA-HOME-ANIME",
+      "from": "LOC-APOLLO-MANOR",
+      "to": "DM-FAM-HESTIA",
+      "kind": "residence_of_after_wargame",
+      "label": "Hestia Familia se traslada a la gran mansión de Apollo Familia después del War Game, según la sinopsis oficial",
+      "continuity": "CONT-ANIME",
+      "interval": "Tras el War Game, según DanMachi II, episodio 5",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_episode_synopsis",
+      "claimRef": "DMR-033-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md",
+      "note": "La relación se limita al periodo descrito por la adaptación; no fija localización urbana ni ocupación por otros periodos."
+    },
+    {
+      "id": "REL-APOLLO-MANOR-REPLACES-CHURCH",
+      "from": "LOC-APOLLO-MANOR",
+      "to": "LOC-HESTIA-HOME",
+      "kind": "replaces_as_family_residence",
+      "label": "La mansión pasa a ser la nueva residencia de Hestia Familia en lugar de la iglesia destruida",
+      "continuity": "CONT-ANIME",
+      "interval": "Tras el War Game, según DanMachi II, episodio 5",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_episode_synopsis",
+      "claimRef": "DMR-033-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md",
+      "note": "Transición de uso residencial; no implica proximidad física entre los dos edificios."
     }
   ]
 }

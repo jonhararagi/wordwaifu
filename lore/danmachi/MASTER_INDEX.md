@@ -39,6 +39,8 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [DANMACHI-RESEARCH-031 — Geografía, mapa y pistas comunitarias](research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md).
 - [Daedalus Street](places/daedalus-street.md) — mención respaldada en la adaptación anime; geometría y funciones urbanas secundarias.
 - [Pantheon](places/pantheon.md) — ficha provisional secundaria; pendiente cotejo de la sede física de la Guild.
+- [Antigua iglesia de Hestia Familia](places/hestia-familia-church.md) y [mansión de Apollo Familia](places/apollo-familia-mansion.md) — residencias físicas distintas enlazadas por la transición oficial de DanMachi II, episodio 5.
+- [DANMACHI-RESEARCH-033 — residencias de Hestia Familia](research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md).
 - [DANMACHI-RESEARCH-032 — Referencia oficial de Daedalus Street](research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md).
 
 ## 2. Cronología desde las eras antiguas hasta el cierre publicado

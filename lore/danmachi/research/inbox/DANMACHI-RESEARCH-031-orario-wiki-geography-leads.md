@@ -172,6 +172,23 @@
 - spoiler_level: moderate
 - confidence_note: El nombre de la calle también aparece en la sinopsis oficial del anime, pero esa sinopsis no confirma el diseño residencial, la distribución entre avenidas, el apodo ni la ubicación del orfanato. Cada detalle espacial requiere cotejo primario.
 
+### DMR-031-CLM-010 · La iglesia abandonada como antigua residencia de Hestia Familia (pista secundaria)
+
+- claim_id: DMR-031-CLM-010
+- claim: La wiki comunitaria inglesa de Orario identifica la iglesia abandonada como hogar anterior de Hestia Familia y atribuye su destrucción a Apollo Familia. Es una descripción secundaria; la sinopsis oficial del anime confirma por separado que el hogar anterior era una iglesia destruida y que la Familia se mudó a una gran mansión obtenida tras el War Game, pero esa sinopsis no atribuye expresamente la destrucción a Apollo Familia.
+- aspect: residencia, estado histórico del edificio y procedencia
+- era_or_interval: Antes y después del War Game de Hestia Familia; fechas exactas no fijadas por esta página
+- continuity_scope: CONT-UNVERIFIED
+- source_id: DMR-031-SRC-001
+- source_title: DanMachi Wiki — Orario (inglés)
+- source_type: COMMUNITY_WIKI
+- source_locator: Tabla Geography, entrada Abandoned Church
+- source_url: https://danmachi.fandom.com/wiki/Orario
+- evidence_type: secondary_wiki_summary
+- verification_status: secondary_checked
+- spoiler_level: mild
+- confidence_note: La atribución de la destrucción a Apollo Familia queda secundaria; no convertirla en un hecho oficial sólo por coincidir con el contexto del War Game.
+
 ## Inventario de lugares que merece rastreo
 
 **Ya tienen ficha en WordWaifu:** Orario, Dungeon, Babel y Hostess of Fertility.
