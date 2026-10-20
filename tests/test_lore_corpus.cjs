@@ -483,3 +483,13 @@ for (const [id,url] of [
 ]) {
   assert.ok(prototypeSources.some(source => source.id === id && source.url === url && source.authority.includes("continuidad separada")), "Prototype source must be searchable and explicitly separate: " + id);
 }
+
+
+// An official publisher synopsis is searchable as published-novel paratext,
+// without treating it as a novel excerpt or using it for street-level geography.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md"), "The volume 1 publisher synopsis must be included in the research manifest.");
+const volumeOnePublisherSearch = corpus.search(index, { query: "Orario gran ciudad laberinto subterráneo Dungeon", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(volumeOnePublisherSearch.results.some(item => item.claimId === "DMR-035-CLM-001" && item.verificationStatus === "source_checked"), "The publisher synopsis claim about the Orario-Dungeon premise must be searchable in the main-novel scope.");
+assert.ok(!volumeOnePublisherSearch.results.some(item => /^DMR-034-CLM-/.test(item.claimId || "")), "Prototype-only geographic claims must remain excluded from published-novel search.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-ORARIO-DUNGEON-PUBLISHED-LN-SYNOPSIS" && edge.from === "LOC-ORARIO" && edge.to === "LOC-DUNGEON" && edge.continuity === "CONT-MAIN-LN" && edge.claimRef === "DMR-035-CLM-001" && edge.evidenceStatus === "source_checked"), "Orario's published-novel-synopsis relation to Dungeon must carry explicit paratext provenance.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-volume-01-synopsis" && source.url === "https://ga.sbcr.jp/product/9784797372809/" && source.authority.includes("paratexto")), "The official volume 1 publisher synopsis must be searchable and accurately classified.");

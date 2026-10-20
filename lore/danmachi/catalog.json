@@ -2359,6 +2359,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
       "type": "continuity_scoped_location_research",
       "status": "source_checked_prototype"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-035",
+      "path": "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md",
+      "type": "published_novel_publisher_paratext",
+      "status": "source_checked_partial"
     }
   ],
   "lastStructuredSync": "2026-10-20",
@@ -4092,6 +4098,20 @@
       "claimRef": "DMR-034-CLM-006",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
       "note": "Relación de propiedad en esta versión; no amplía automáticamente detalles de oficinas o instalaciones en la novela publicada."
+    },
+    {
+      "id": "REL-ORARIO-DUNGEON-PUBLISHED-LN-SYNOPSIS",
+      "from": "LOC-ORARIO",
+      "to": "LOC-DUNGEON",
+      "kind": "contains_underground_labyrinth",
+      "label": "La sinopsis editorial del volumen 1 presenta Orario como una gran ciudad que alberga el Dungeon",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Premisa editorial de presentación de la novela ligera principal, volumen 1",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_publisher_synopsis_paratext",
+      "claimRef": "DMR-035-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md",
+      "note": "La fuente es una sinopsis editorial oficial, no el texto narrativo del volumen. Solo respalda la relación geográfica general ciudad–Dungeon; no respalda avenidas ni otras posiciones urbanas."
     }
   ]
 }

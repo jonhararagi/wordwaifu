@@ -41,6 +41,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Pantheon](places/pantheon.md) — ficha provisional secundaria; pendiente cotejo de la sede física de la Guild.
 - [Red de avenidas principales](places/main-streets.md) y [Central Park](places/central-park.md) — basadas en el texto oficial Prototype, con continuidad aislada.
 - [DANMACHI-RESEARCH-034 — avenidas, comercio y Babel en Prototype](research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md) — nueve claims con localizadores de los episodios oficiales 3, 16 y 26.
+- [DANMACHI-RESEARCH-035 — Orario y Dungeon en la sinopsis editorial del volumen 1](research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md) — confirma solo el marco general de la novela principal; no es un pasaje narrativo.
 - [Antigua iglesia de Hestia Familia](places/hestia-familia-church.md) y [mansión de Apollo Familia](places/apollo-familia-mansion.md) — residencias físicas distintas enlazadas por la transición oficial de DanMachi II, episodio 5.
 - [DANMACHI-RESEARCH-033 — residencias de Hestia Familia](research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md).
 - [DANMACHI-RESEARCH-032 — Referencia oficial de Daedalus Street](research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md).
