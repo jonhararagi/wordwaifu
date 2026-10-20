@@ -2215,6 +2215,48 @@
       ],
       "status": "source_checked_partial",
       "priority": "high"
+    },
+    {
+      "id": "LOC-ORARIO-CENTRAL-PARK-PROTOTYPE",
+      "path": "places/central-park-prototype.md",
+      "type": "location",
+      "tags": [
+        "Central Park (Prototype)",
+        "Central Park",
+        "Orario",
+        "CONT-PROTOTYPE",
+        "prototype-only"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "LOC-ORARIO-AVENUES-PROTOTYPE",
+      "path": "places/orario-avenues-prototype.md",
+      "type": "location",
+      "tags": [
+        "Avenidas principales (Prototype)",
+        "avenidas principales",
+        "Orario",
+        "CONT-PROTOTYPE",
+        "prototype-only"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE",
+      "path": "places/commercial-streets-prototype.md",
+      "type": "location",
+      "tags": [
+        "Comercio de calle (Prototype)",
+        "comercio de calle",
+        "Orario",
+        "CONT-PROTOTYPE",
+        "prototype-only"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
@@ -5843,6 +5885,48 @@
       "claimRef": "DMR-006-CLM-049",
       "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
       "note": "Mantiene separados el nodo organizativo y `LOC-HOSTESS`, el lugar físico."
+    },
+    {
+      "id": "REL-ORARIO-PROTOTYPE-LOC-ORARIO-CENTRAL-PARK-PROTOTYPE",
+      "from": "LOC-ORARIO-CENTRAL-PARK-PROTOTYPE",
+      "to": "LOC-ORARIO",
+      "kind": "part_of",
+      "label": "parte del marco urbano de Orario dentro del Prototype",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Prototype oficial; no extrapolar a la novela ligera principal",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "Conexión de navegación limitada al Prototype. No demuestra que este dato aparezca en la novela ligera principal."
+    },
+    {
+      "id": "REL-ORARIO-PROTOTYPE-LOC-ORARIO-AVENUES-PROTOTYPE",
+      "from": "LOC-ORARIO-AVENUES-PROTOTYPE",
+      "to": "LOC-ORARIO",
+      "kind": "part_of",
+      "label": "parte del marco urbano de Orario dentro del Prototype",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Prototype oficial; no extrapolar a la novela ligera principal",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "Conexión de navegación limitada al Prototype. No demuestra que este dato aparezca en la novela ligera principal."
+    },
+    {
+      "id": "REL-ORARIO-PROTOTYPE-LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE",
+      "from": "LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE",
+      "to": "LOC-ORARIO",
+      "kind": "part_of",
+      "label": "parte del marco urbano de Orario dentro del Prototype",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Prototype oficial; no extrapolar a la novela ligera principal",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "Conexión de navegación limitada al Prototype. No demuestra que este dato aparezca en la novela ligera principal."
     }
   ]
 }

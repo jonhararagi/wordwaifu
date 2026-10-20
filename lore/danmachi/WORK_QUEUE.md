@@ -454,3 +454,11 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Conectar Ouranos, Eina, Fels y el personal de la taberna mediante claims oficiales existentes.
 - [x] Actualizar el índice de Familias y alinear los recuentos del estado.
 - [ ] Validar catálogo, enlaces Markdown y navegación en CI.
+
+
+## DANMACHI-RESEARCH-038 · Inventario separado de lugares del Prototype
+
+- Estado: registros parciales creados a partir de claims ya existentes del paquete DMR-034.
+- [x] Separar en el índice urbano los lugares/conceptos de Prototype disponibles en el corpus.
+- [x] Preservar `CONT-PROTOTYPE` y el estado real del claim; no promoverlos a canon de novela.
+- [ ] Buscar menciones equivalentes en la novela principal con localizadores internos y actualizar solo con evidencia directa.

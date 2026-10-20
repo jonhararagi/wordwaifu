@@ -47,3 +47,9 @@ Crear un registro por país, ciudad, región, isla, ruina o lugar relevante cuan
 ## Cuidado con nombres repetidos
 
 Una ubicación llamada “Guild” puede referirse a una organización o al edificio físico. Mantener entidad organizativa y lugar físico separados y relacionarlos en lugar de duplicar o mezclar datos.
+
+## Registro explícito de lugares del Prototype
+
+- [Central Park (Prototype)](central-park-prototype.md) — `LOC-ORARIO-CENTRAL-PARK-PROTOTYPE`; `CONT-PROTOTYPE`, no extrapolar a la novela ligera.
+- [Avenidas principales (Prototype)](orario-avenues-prototype.md) — `LOC-ORARIO-AVENUES-PROTOTYPE`; `CONT-PROTOTYPE`, no extrapolar a la novela ligera.
+- [Comercio de calle (Prototype)](commercial-streets-prototype.md) — `LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE`; `CONT-PROTOTYPE`, no extrapolar a la novela ligera.

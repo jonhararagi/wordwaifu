@@ -332,3 +332,11 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - `ORG-HOSTESS` representa organización/personal y `LOC-HOSTESS` conserva el lugar físico.
 - Las diez nuevas relaciones reutilizan claims oficiales del corpus DMR-006 y conservan `CONT-ANIME`.
 - Índice de Familias sincronizado con IDs activos; recuentos operativos derivados del catálogo.
+
+
+## DANMACHI-RESEARCH-038 · Inventario separado de lugares del Prototype
+
+- Fecha: 2026-10-20.
+- Se añadieron fichas de lugares/conceptos urbanos usando solo claims existentes del paquete `DANMACHI-RESEARCH-034`.
+- Las fichas conservan `CONT-PROTOTYPE`; no se afirma que los datos aparezcan en la novela ligera principal.
+- Siguiente verificación: localizar la geografía equivalente en novela principal y registrar capítulo/página de una edición identificada.

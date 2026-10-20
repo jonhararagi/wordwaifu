@@ -4,13 +4,14 @@
 **Esta sección prevalece sobre el historial que sigue.** No se certifica un porcentaje global a partir de cantidad de archivos o tests.
 
 - **Repositorio/rama de trabajo:** `jonhararagi/wordwaifu` · `main` (propuesta `work/danmachi-organization-graph-2026-10-20`; CI pendiente).
-- **Cobertura estructural DanMachi:** 155 registros activos, 31 IDs reservados, 117 documentos de apoyo y 197 aristas en catálogo; los recuentos no equivalen a un porcentaje de canon verificado.
+- **Cobertura estructural DanMachi:** 158 registros activos, 31 IDs reservados, 117 documentos de apoyo y 200 relaciones; los recuentos no representan completitud del canon.
 - **Roster de adaptación:** 63 identidades. Cada una dispone de registro activo, ficha Markdown y expediente de interfaz. Los cuatro hermanos Gulliver tienen IDs y rutas independientes y enlazan con grupo y Freya Familia.
 - **Hubs de navegación:** 18 registros de Familia, organizaciones Guild/Hostess, ubicación `LOC-HOSTESS` y nodo Xenos; las listas históricas siguen parciales.
-- **Grafo:** 197 aristas explícitas leídas del `catalog.json`; cada una lleva extremos, continuidad, estado de evidencia y claim.
+- **Grafo:** 200 aristas explícitas recalculadas desde `catalog.json`; las nuevas ubicaciones son referencias de `CONT-PROTOTYPE` y no incrementan la cobertura del canon principal.
 - **Pruebas nuevas:** el test de cobertura comprueba todos los personajes del roster, los seis campos de cada expediente, los cuatro Gulliver individuales y la integridad de extremos e IDs del grafo. La aprobación definitiva depende de CI sobre el candidato.
 - **Límite factual:** los perfiles del anime no se transfieren automáticamente a `CONT-MAIN-LN`, `CONT-SO` o `CONT-AR`. Las biografías escena por escena y el censo fuera del roster siguen abiertos.
 - **DANMACHI-RESEARCH-037 — organizaciones separadas:** `ORG-GUILD` y `ORG-HOSTESS` se separan de ubicaciones y enlazan con Ouranos, Eina, Fels y el personal de Hostess con claims oficiales bajo `CONT-ANIME`.
+- **DANMACHI-RESEARCH-038 — lugares Prototype:** 3 fichas provisionales con claim existente y continuidad `CONT-PROTOTYPE`, separadas de la novela principal.
 - **Siguiente etapa:** Orario continúa parcialmente documentado; sucesos por tiempo, lugar, causas y consecuencias, y la reconstrucción de historias individuales, requieren sus propias fuentes primarias.
 - **Nuevos perfiles Loki:** Riveria, Gareth, Lefiya, Tiona, Tione, Bete y Raul tienen ficha individual con alcance provisional `CONT-SO`; los datos oficiales de adaptación no se extrapolan automáticamente a la novela principal.
 - **Familia Hestia:** el registro `DM-FAM-HESTIA` pasa a `source_checked_partial` porque seis claims trazables respaldan el estado inicial de la adaptación y un snapshot de los perfiles oficiales. Esto no cierra el roster por época ni la cronología de la novela ligera.
