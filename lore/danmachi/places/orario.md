@@ -3,32 +3,68 @@ id: LOC-ORARIO
 universe: danmachi
 type: location
 status: source_checked_partial
-confidence: El glosario oficial del anime respalda la descripción general de la ciudad, el Dungeon y el papel central de la Guild; la topología detallada sigue pendiente.
+confidence: El glosario oficial del anime respalda la identidad general de la ciudad, la función central de la Guild, la convivencia de distintas razas y los vínculos generales con Dungeon y algunos lugares. La geografía urbana completa y las afirmaciones específicas de novela principal siguen pendientes de cotejo.
 continuity_scope: CONT-ANIME
 source_refs: [DMR-026-SRC-001]
-claim_refs: [DMR-026-CLM-001]
-tags: [Orario, 迷宮都市オラリオ, ciudad laberíntica, Dungeon, Guild]
+claim_refs: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003]
+tags: [Orario, 迷宮都市オラリオ, ciudad laberíntica, Dungeon, Guild, urbanismo, geografía]
 ---
 
-# Orario — ciudad laberíntica
+# Orario — ficha central de la ciudad laberíntica
 
-## Identidad y función
+## Propósito de esta ficha
 
-Orario es la ciudad laberíntica asociada al gran Dungeon subterráneo. El glosario oficial de la web del anime también presenta a la Guild como una institución central para la gestión del Dungeon y para la actividad de la ciudad.
+Esta página es el punto de entrada para estudiar Orario como ciudad. Resume los datos urbanos generales respaldados, enlaza lugares con ficha propia y mantiene visible la lista de temas que todavía deben investigarse. No equivale a un atlas completo.
 
-Esta ficha separa el lugar geográfico del registro más amplio de contexto urbano de [Orario y el mundo](../canon/01-mundo-orario.md). El estado de la información corresponde a la continuidad de la adaptación anime.
+La continuidad comprobada de las afirmaciones incluidas actualmente es **CONT-ANIME**, porque la fuente inicial es el glosario oficial de la adaptación. No se deben trasladar automáticamente estas afirmaciones a **CONT-MAIN-LN** sin localizar el pasaje correspondiente de la novela ligera.
 
-## Relaciones navegables
+## Identidad y función documentadas
 
-- **Dungeon:** el glosario describe Orario como una ciudad que posee el gran laberinto subterráneo. Véase [Dungeon](dungeon.md).
-- **Guild:** institución central relacionada con la gestión del Dungeon. Véase [Dungeon y Guild](../canon/03-dungeon-y-guild.md).
-- **Babel:** instalación de la Guild ubicada en Orario y vinculada a la supervisión del Dungeon. Véase [Babel](babel.md).
-- **Hostess of Fertility:** taberna localizada en Orario. Véase [Hostess of Fertility](hostess-of-fertility.md).
+El glosario oficial de la adaptación describe Orario como una gran ciudad construida sobre el laberinto subterráneo conocido como Dungeon. También presenta a la Guild como una institución central para su gestión y para la prosperidad de la ciudad. La descripción menciona que en ella viven diversas razas, incluidos humanos y otros pueblos humanoides.
 
-## Límites de evidencia
+Esta es una base general, no una prueba de todos los distritos, dimensiones, leyes, jerarquías o detalles de la vida diaria.
 
-- No se afirma que la descripción resuelva la geografía completa, los distritos ni las distancias de la ciudad.
-- La descripción se mantiene en CONT-ANIME; no se usa para completar por inferencia la continuidad de novela ligera.
-- Las relaciones se limitan a lo expresado por el glosario oficial de la adaptación.
+**Fuente y alcance:** [DMR-026-SRC-001 — glosario oficial de lugares](../sources/00-registro-fuentes.md#dmr-026-src-001), entradas de Orario, Babel y Hostess of Fertility. Fuente oficial de la adaptación anime; no sustituye los pasajes de la novela ligera.
 
-**Fuente:** portal oficial del anime, glosario de lugares, entrada 迷宮都市オラリオ. Véase [registro de fuentes](../sources/00-registro-fuentes.md#dmr-026-src-001).
+## Red de lugares e instituciones
+
+- **[Dungeon](dungeon.md):** gran laberinto subterráneo asociado espacialmente a la ciudad. La ficha propia debe contener los detalles del laberinto; esta página solo conserva el vínculo urbano general.
+- **[Babel](babel.md):** instalación vinculada a la supervisión y gestión del Dungeon. El glosario la identifica como el edificio más alto de Orario y una instalación de la Guild; la ficha individual concentra esos detalles.
+- **[Guild y Dungeon](../canon/03-dungeon-y-guild.md):** referencia a la institución y su función. En análisis futuros se deberá distinguir la organización Guild del edificio físico donde se atiende a los aventureros.
+- **[Hostess of Fertility](hostess-of-fertility.md):** taberna situada en Orario, con ficha propia para su personal y relaciones.
+- **[Índice de lugares](00-indice-lugares.md):** inventario de otras ubicaciones conocidas y candidatas.
+
+## Mapa de cobertura de Orario
+
+Los siguientes puntos son **líneas de investigación**, no hechos ya confirmados.
+
+| Área | Qué debe analizarse | Estado de trabajo |
+|---|---|---|
+| Geografía urbana | Forma de la ciudad, límites, murallas, orientación, accesos y relación espacial con el Dungeon | Pendiente de ampliar con fuentes identificables |
+| Barrios y calles | Nombres, localización relativa, función y cambios por periodo | Pendiente; no fijar un mapa de fans como oficial |
+| Lugares e infraestructura | Babel, instalaciones de la Guild, residencias de Familias, comercios, posadas, plazas, talleres y otros hitos | Parcial; seguir creando o completando fichas individuales |
+| Instituciones | Funciones, competencia y límites documentados de Guild, Familias y otras organizaciones | Parcial; no inferir jurisdicciones ni leyes no citadas |
+| Población | Razas y comunidades presentes, convivencia y ocupaciones | La diversidad general se menciona en la fuente de adaptación; faltan detalles por fuente y periodo |
+| Economía y abastecimiento | Comercio, empleos, equipo, transporte, servicios y movimiento de recursos del Dungeon | Pendiente de análisis específico |
+| Seguridad y vida cotidiana | Riesgos urbanos, reglas explícitas, servicios, vida civil y diferencia entre superficie y Dungeon | Pendiente de análisis específico |
+| Historia de la ciudad | Formación, cambios urbanos y estado de Orario en cada era | Pendiente; relacionar con la cronología sin inventar fechas |
+| Mapa de evidencias | Qué se sostiene en novela principal, material paralelo, anime y fuentes secundarias | Parcial; etiquetar cada afirmación por separado |
+
+## Cómo se ampliará
+
+1. Identificar cada afirmación como dato establecido, resumen de alcance limitado, pista secundaria, inferencia o incógnita.
+2. Crear una afirmación atómica por dato importante y añadir la fuente/localizador correspondiente, en lugar de dar por verificada toda la página.
+3. Registrar cada lugar importante con su propio ID; mantener en esta ficha el resumen y los enlaces, no copiar sus expedientes.
+4. Añadir relaciones solo cuando haya evidencia del vínculo. La cercanía en el mapa o una etiqueta coincidente no prueba relación institucional o personal.
+5. Cuando un dato cambie por época, registrar el estado temporal correspondiente en vez de crear otra entidad duplicada.
+6. No tratar mapas esquemáticos de wikis como cartografía canónica. Pueden servir para localizar posibles nombres, que luego deben verificarse.
+7. No declarar Orario completo hasta haber revisado sus áreas relevantes, indicado los vacíos y resuelto qué continuidad respalda cada afirmación.
+
+## Límites actuales
+
+- La fuente inicial respalda una **descripción general dentro de CONT-ANIME**, no una cartografía canónica exhaustiva.
+- No se fijan aquí el tamaño exacto de la ciudad, distancias entre sitios, división oficial por barrios, población numérica, leyes, autoridades, impuestos o servicios no respaldados por un localizador.
+- No se establece que todos los detalles del anime sean idénticos en la novela ligera.
+- Las preguntas históricas se trabajarán después con fichas de eventos enlazadas, para evitar convertir esta página en una cronología narrativa duplicada.
+
+**Método de trabajo:** [Análisis progresivo del lore de DanMachi](../research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md).
