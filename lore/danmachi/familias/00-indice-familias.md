@@ -6,22 +6,27 @@ Esta es una lista de investigación. El estado de una Familia puede variar por a
 |---|---|---|---|
 | DM-FAM-HESTIA | Hestia Familia | Grupo central de la historia | Ficha inicial existente |
 | DM-FAM-LOKI | Loki Familia | Aventureros de alto nivel, expediciones, Sword Oratoria | Ficha inicial existente |
-| FAM-FREYA | Freya Familia | Facción poderosa e historia principal | Candidato pendiente |
+| FAM-FREYA | [Freya Familia](freya-familia.md) | Facción de la adaptación V | Ficha parcial activa; roster histórico pendiente |
 | FAM-ZEUS | Zeus Familia | Historia antigua y grandes expediciones | Ficha parcial; resultado conjunto frente a Behemoth/Leviathan en referencia oficial; roster pendiente |
 | FAM-HERA | Hera Familia | Historia antigua y grandes expediciones | Ficha parcial; resultado conjunto frente a Behemoth/Leviathan en referencia oficial; roster pendiente |
-| FAM-ASTREA | Astrea Familia | Pasado de Ryuu y relatos relacionados | Candidato pendiente |
-| FAM-HEPHAISTOS | Hephaistos Familia | Herrería y equipo | Candidato pendiente |
-| FAM-MIACH | Miach Familia | Medicina y personajes vinculados | Candidato pendiente |
-| FAM-TAKEMIKAZUCHI | Takemikazuchi Familia | Mikoto y miembros relacionados | Candidato pendiente |
+| DM-FAM-ASTREA | [Astrea Familia](astrea-familia.md) | Pasado de Ryu y relatos relacionados | Ficha parcial activa |
+| FAM-HEPHAISTOS | [Hephaistos Familia](hephaistos-familia.md) | Herrería y equipo | Ficha parcial activa |
+| FAM-MIACH | [Miach Familia](miach-familia.md) | Medicina y personajes vinculados | Ficha parcial activa |
+| FAM-TAKEMIKAZUCHI | [Takemikazuchi Familia](takemikazuchi-familia.md) | Mikoto y miembros relacionados | Ficha parcial activa |
 | FAM-SOMA | Soma Familia | Liliruca y conflictos iniciales | Candidato pendiente |
 | FAM-DIAN-CECHT | Dian Cecht Familia | Curación y medicina | Candidato pendiente |
 | FAM-GANESHA | Ganesha Familia | Institución, seguridad y eventos de ciudad | Candidato pendiente |
-| FAM-HERMES | Hermes Familia | Investigaciones, viajes y Bell | Candidato pendiente |
+| FAM-HERMES | [Hermes Familia](hermes-familia.md) | Investigaciones y personajes vinculados | Ficha parcial activa |
 | FAM-DEMETER | Demeter Familia | Cultivo y personajes relacionados | Candidato pendiente |
-| FAM-ISHTAR | Ishtar Familia | Arco de Ishtar y afiliaciones | Candidato pendiente |
-| FAM-APOLLO | Apollo Familia | Conflicto de Apollo y Bell | Candidato pendiente |
-| ORG-GUILD | Guild | Registro, misiones, asesoría y reglas institucionales | Organización; ficha aparte pendiente |
-| ORG-HOSTESS | Hostess of Fertility | Taberna y red de personajes | Lugar/organización; separar conceptos |
+| FAM-ISHTAR | [Ishtar Familia](ishtar-familia.md) | Arco de Ishtar y afiliaciones históricas | Ficha parcial activa |
+| FAM-APOLLO | [Apollo Familia](apollo-familia.md) | Conflicto y afiliaciones históricas | Ficha parcial activa |
+| ORG-GUILD | [Guild (organización)](guild-organization.md) | Ouranos, Eina y Fels; separada del edificio | Ficha parcial activa |
+| ORG-HOSTESS | [Hostess of Fertility](hostess-of-fertility.md) | Personal y relaciones; separado de LOC-HOSTESS | Ficha parcial activa |
+
+| FAM-DIONYSUS | [Dionysus Familia](dionysus-familia.md) | Dionysus y Filvis Chalia | Ficha existente; alcance provisional |
+| FAM-MODI | [Modi Familia](modi-familia.md) | Luvis Lilix | Ficha existente; alcance provisional |
+| FAM-MAGNI | [Magni Familia](magni-familia.md) | Dormul Bolster | Ficha existente; alcance provisional |
+| FAM-RUDRA | [Rudra Familia](rudra-familia.md) | Rudra y Jura Halmer | Ficha existente; alcance provisional |
 
 ## Campos requeridos por Familia
 
@@ -48,3 +53,11 @@ No sobrescribir un miembro histórico cuando cambia el roster. Registrar interva
 - [Meteria](../characters/dark-era/meteria.md) — afiliación y parentescos reportados en wikis; spoiler mayor.
 - [Alfia](../characters/dark-era/alfia.md) y [Zald](../characters/dark-era/zald.md) — habilidades, costes y límites reportados por wikis con pasajes primarios pendientes.
 - [Investigación DMR-029](../research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md) — nueve ampliaciones de lore con fuentes secundarias etiquetadas y continuidad separada.
+
+
+## Organización y lugar físico
+
+- [Guild (organización)](guild-organization.md) — `ORG-GUILD`, separado de la ficha general Dungeon/Guild.
+- [Hostess of Fertility (organización/personal)](hostess-of-fertility.md) — `ORG-HOSTESS`, conectada con [LOC-HOSTESS](../places/hostess-of-fertility.md), el lugar físico.
+
+Estas fichas usan claims de perfiles oficiales de adaptación (`CONT-ANIME`). Los rosters por periodo y las biografías de novela siguen pendientes.
