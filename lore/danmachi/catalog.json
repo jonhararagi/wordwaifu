@@ -3091,6 +3091,20 @@
       "note": "La relación está descrita por sinopsis oficial; los detalles escena por escena siguen pendientes."
     },
     {
+      "id": "REL-ALISE-GUIDES-RYU-ANIME",
+      "from": "CHAR-ALISE-LOVELACE",
+      "to": "CHAR-RYUU-LION",
+      "kind": "guides",
+      "label": "capitana que incorpora y orienta a Ryu",
+      "continuity": "CONT-ANIME",
+      "interval": "Periodo histórico tal como lo presenta el perfil oficial de la adaptación",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_adaptation_profile",
+      "claimRef": "DMR-007-CLM-001",
+      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+      "note": "Vínculo de adaptación; mantenerlo separado de CONT-AR y CONT-MAIN-LN."
+    },
+    {
       "id": "REL-RYU-MEMBER-ANIME",
       "from": "CHAR-RYUU-LION",
       "to": "DM-FAM-ASTREA",
@@ -3103,6 +3117,20 @@
       "claimRef": "DMR-007-CLM-001",
       "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
       "note": "Este borde corresponde a CONT-ANIME, no certifica una biografía completa en la novela."
+    },
+    {
+      "id": "REL-RYU-MEMBER-AR-SECONDARY",
+      "from": "CHAR-RYUU-LION",
+      "to": "DM-FAM-ASTREA",
+      "kind": "member_of",
+      "label": "integrante de la primera generación (pista secundaria)",
+      "continuity": "CONT-AR",
+      "interval": "Periodo histórico de Astrea Record; roster completo aún en verificación",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_summary",
+      "claimRef": "DMR-007-CLM-005",
+      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+      "note": "Fuente comunitaria secundaria. Mantener provisional hasta cotejar el roster en fuente primaria."
     },
     {
       "id": "REL-KAGUYA-MEMBER",
@@ -3721,6 +3749,20 @@
       "note": "El vínculo confirma supervivencia compartida en la adaptación. No implica por sí mismo reciprocidad romántica ni reemplaza el cotejo de la novela."
     },
     {
+      "id": "REL-RYU-ASTREA-VISIT-ANIME",
+      "from": "CHAR-RYUU-LION",
+      "to": "CHAR-ASTREA",
+      "kind": "visits",
+      "label": "Ryu visita a Astrea fuera de Orario para buscar cómo ayudar a Bell, según DanMachi V",
+      "continuity": "CONT-ANIME",
+      "interval": "Arco de DanMachi V; antes de la incorporación tardía de Ryu a la guerra de Familias",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "explicit_official_adaptation_profile",
+      "claimRef": "DMR-013-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
+      "note": "Arista distinta de la visita narrada por la sinopsis de Familia Chronicle en CONT-MAIN-LN. Mantener los alcances separados."
+    },
+    {
       "id": "REL-RYU-WARGAME-ANIME",
       "from": "CHAR-RYUU-LION",
       "to": "EVT-DM-RYUU-ASTREA-RETURN-ANIME-001",
@@ -3775,6 +3817,20 @@
       "claimRef": "DMR-015-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
       "note": "El vínculo confirma el núcleo del encuentro según la sinopsis editorial, no cada detalle de la escena, la fecha de Falna o el descenso de Hestia."
+    },
+    {
+      "id": "REL-BELL-MEMBER-HESTIA-MAIN-LN",
+      "from": "DM-CHAR-BELL",
+      "to": "DM-FAM-HESTIA",
+      "kind": "member_of",
+      "label": "Bell entra en Hestia Familia según la sinopsis editorial del volumen 1",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Comienzo de la historia principal; orden temporal descrito solo al nivel de la sinopsis editorial",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-015-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
+      "note": "Relación separada del perfil de adaptación. La sinopsis respalda la invitación y entrada en la Familia, pero no cada detalle de la escena ni una fecha absoluta."
     },
     {
       "id": "REL-EINA-ADVISOR-BELL-ANIME",
@@ -4707,6 +4763,34 @@
       "claimRef": "DMR-034-CLM-006",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
       "note": "La función está descrita directamente en Prototype; la ficha ya conserva una afirmación independiente en CONT-ANIME."
+    },
+    {
+      "id": "REL-BABEL-OWNED-BY-GUILD-PROTOTYPE",
+      "from": "LOC-BABEL",
+      "to": "DM-GUILD-001",
+      "kind": "owned_by",
+      "label": "Prototype identifica a la Guild como propietaria de Babel y responsable de alquilar los locales",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Relato oficial Prototype, episodio 16",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "Relación de propiedad en esta versión; no amplía automáticamente detalles de oficinas o instalaciones en la novela publicada."
+    },
+    {
+      "id": "REL-ORARIO-DUNGEON-PUBLISHED-LN-SYNOPSIS",
+      "from": "LOC-ORARIO",
+      "to": "LOC-DUNGEON",
+      "kind": "contains_underground_labyrinth",
+      "label": "La sinopsis editorial del volumen 1 presenta Orario como una gran ciudad que alberga el Dungeon",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Premisa editorial de presentación de la novela ligera principal, volumen 1",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_publisher_synopsis_paratext",
+      "claimRef": "DMR-035-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md",
+      "note": "La fuente es una sinopsis editorial oficial, no el texto narrativo del volumen. Solo respalda la relación geográfica general ciudad–Dungeon; no respalda avenidas ni otras posiciones urbanas."
     },
     {
       "id": "REL-BELL-FIRST-MEETING-EVENT",
