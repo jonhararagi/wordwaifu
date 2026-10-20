@@ -97,7 +97,7 @@
       .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\s+/g, " ");
   }
   function field(block, key) {
-    const m = new RegExp("^- (?:" + TICK + key + TICK + "|\\*\\*" + key + ":\\*\\*|\\*\\*" + key + "\\*\\*|" + key + "):?\\s*(.*)$", "m").exec(block);
+    const m = new RegExp("^- (?:" + TICK + key + TICK + ":|\\*\\*" + key + ":\\*\\*|\\*\\*" + key + "\\*\\*:|" + key + ":)\\s*(.*)$", "m").exec(block);
     return m ? clean(m[1]) : "";
   }
   function unique(values) { return [...new Set(values.filter(Boolean))]; }
