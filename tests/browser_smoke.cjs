@@ -726,12 +726,22 @@ async function run() {
     await page.locator("#archive-return-search").click();
     assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
-    // The newly curated anime roster loads an official image from its source host.
+    // Request anime continuity explicitly: main-novel context correctly uses original, non-official placeholder art.
+    await page.locator("#archive-continuity").selectOption("CONT-ANIME");
+    // Preserve the canonical image URL while avoiding a live publisher-site dependency in CI.
+    const bellOfficialImageUrl = "https://danmachi.com/danmachi5/character/images/chara_tachi_01.png";
+    await page.route(bellOfficialImageUrl, route => route.fulfill({
+      status: 200,
+      contentType: "image/svg+xml",
+      body: '<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"><rect width="1" height="1" fill="#fff"/></svg>'
+    }));
     await page.locator("#character-archive-query").fill("Bell Cranel");
-    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
+    await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, null, { timeout: 5000 });
     const bellCardSelector = "#character-archive-results .archive-character-card:has([data-archive-open='DM-CHAR-BELL'])";
     const bellPortrait = page.locator(bellCardSelector + " .archive-portrait-art");
     assert.equal(await bellPortrait.count(), 1);
+    assert.equal(await bellPortrait.getAttribute("src"), bellOfficialImageUrl,
+      "Bell's card must retain the canonical official portrait URL even when CI intercepts its response.");
     await page.waitForFunction(() => {
       const button = document.querySelector("#character-archive-results [data-archive-open='DM-CHAR-BELL']");
       const img = button?.closest(".archive-character-card")?.querySelector(".archive-portrait-art");
@@ -3326,12 +3336,16 @@ async function run() {
       const image = document.querySelector("#archive-profile-portrait .archive-portrait-art");
       return !!image && image.src.startsWith("data:image/png");
     }, null, { timeout: 5000 });
+    // The family network must use the novel continuity, where the extended member dossiers provide evidence.
+    await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
     await page.locator('#archive-profile-tabs [data-profile-tab="relationships"]').click();
     await page.waitForFunction(() => (document.querySelector("#archive-profile-panel")?.innerText || "").includes("Explorar Hestia Familia"), null, { timeout: 10000 });
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Afiliación de Familia"), "The relationship tab should distinguish family membership from personal relationships.");
+    // Return to the novel continuity to verify the fuller wiki-referenced dossier separately.
+    await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
     await page.locator("#archive-tab-summary").click();
-    await page.waitForFunction(() => (document.querySelector("#archive-profile-panel")?.innerText || "").includes("Expediente ampliado"), null, { timeout: 10000 });
-    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Expediente ampliado"),
+    await page.waitForFunction(() => (document.querySelector("#archive-profile-panel")?.innerText || "").includes("Expediente de continuidad"), null, { timeout: 10000 });
+    assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Expediente de continuidad"),
       "The profile must show the substantial dossier rather than only the short official synopsis.");
     const dossierLength = await page.locator("#archive-profile-panel .archive-dossier-detail p").evaluateAll(nodes => nodes.reduce((sum,node)=>sum+node.innerText.length,0));
     assert.ok(dossierLength > 1200, "The expanded dossier must contain substantial content.");

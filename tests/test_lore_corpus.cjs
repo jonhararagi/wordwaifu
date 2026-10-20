@@ -4,33 +4,48 @@ const path = require("node:path");
 const corpus = require("../src/lore-corpus.js");
 const root = path.join(__dirname, "..", "lore", "danmachi");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
-const documentPaths = [
-  "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
-  "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
-  "research/inbox/BATCH-DM-005-astrea-familia-network.md",
-  "research/inbox/BATCH-DM-008-main-story-volume-map.md",
-  "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
-  "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
-  "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
-  "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
-  "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
-  "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
-  "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
-  "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
-  "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
-  "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-  "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
-  "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"
-];
+const documentPaths = corpus.getDefaultResearchPaths();
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
-const profilePaths = [
-  "characters/soma.md",
-  "characters/zanis-lustra.md",
-  "characters/chandra-ihit.md",
-  "characters/canoe-belway.md"
-];
+const detailIds = new Set(corpus.getDefaultDetailIds());
+const profilePaths = catalog.records
+  .filter(record => detailIds.has(record.id) && typeof record.path === "string" &&
+    record.path.startsWith("characters/") && record.path.endsWith(".md"))
+  .map(record => record.path);
 const profileDocuments = profilePaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents, profileDocuments);
+const plainFieldFixture = [
+  "### DMR-998-CLM-001 · Metadata sin backticks",
+  "- claim_id: DMR-998-CLM-001",
+  "- claim: Esta afirmación de prueba describe una habilidad verificable",
+  "- character_ids: CHAR-RYUU-LION",
+  "- aspect: ability",
+  "- era_or_interval: test fixture",
+  "- continuity_scope: CONT-AR",
+  "- source_id: DMR-998-SRC-001",
+  "- source_title: Test secondary source",
+  "- source_type: COMMUNITY_WIKI",
+  "- source_locator: test-only fixture",
+  "- source_url: https://example.test/lore",
+  "- evidence_type: test_fixture",
+  "- verification_status: secondary_checked",
+  "- spoiler_level: mild",
+  "- confidence_note: fixture only"
+].join("\n");
+const plainFieldIndex = corpus.buildIndex(catalog, [{ path: "tests/fixture.md", content: plainFieldFixture }], []);
+const bellCharacter = index.characters.find(character => character.id === "DM-CHAR-BELL");
+const meteriaCharacter = index.characters.find(character => character.id === "CHAR-METERIA");
+assert.equal(bellCharacter?.name, "Bell Cranel", "Bell's identity must remain searchable by his canonical display name.");
+assert.ok(meteriaCharacter, "Meteria must be loaded when the historical source bundle is active.");
+assert.ok(![...(meteriaCharacter.aliases || []), ...(meteriaCharacter.keywords || [])]
+  .some(value => corpus.normalize(value) === "bell cranel"),
+  "Another character's relation tag must not make that character a false exact-name match for Bell Cranel.");
+
+const plainFieldClaim = plainFieldIndex.claims.find(item => item.claimId === "DMR-998-CLM-001");
+assert.ok(plainFieldClaim, "The parser must retain claims that use plain metadata keys.");
+assert.equal(plainFieldClaim.claim, "Esta afirmación de prueba describe una habilidad verificable");
+assert.equal(plainFieldClaim.verificationStatus, "secondary_checked");
+assert.deepEqual(plainFieldClaim.sourceUrls, ["https://example.test/lore"]);
+
 for (const id of ["CHAR-SOMA", "CHAR-ZANIS-LUSTRA", "CHAR-CHANDRA-IHIT", "CHAR-CANOE-BELWAY"]) {
   assert.equal(index.profileDetails[id]?.id, id, "Active Soma coverage profile must be available to the detail view: " + id);
 }
@@ -61,6 +76,42 @@ const astreaDepartureSearch = corpus.search(index, { query: "Ryu Astrea Orario v
 assert.ok(astreaDepartureSearch.results.some(item => item.claimId === "DMR-010-CLM-002" && item.verificationStatus === "pending_verification"), "Search must return the disputed departure claim without losing its pending status.");
 
 assert.ok(catalog.documents.some(document => document.document_id === "RESEARCH-DM-028" && document.path === "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md" && document.status === "secondary_checked_with_primary_gaps"), "The new Astrea wiki research dossier must be registered with its evidence limits.");
+
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md"),
+  "The existing Zeus/Hera research must be part of the production search manifest.");
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"),
+  "The historical-wiki research must be part of the production search manifest.");
+assert.ok(catalog.documents.some(document => document.document_id === "DOC-DANMACHI-RESEARCH-021" && document.path === "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md"),
+  "The Zeus/Hera research file must remain registered in the catalog.");
+assert.ok(catalog.documents.some(document => document.document_id === "DOC-DANMACHI-RESEARCH-029" && document.path === "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"),
+  "The historical-wiki research file must remain registered in the catalog.");
+for (const id of ["CHAR-DARK-ALFIA", "CHAR-DARK-ZALD"]) {
+  assert.ok(corpus.getDefaultDetailIds().includes(id), "Wiki-enriched historical profiles must be fetched into detail view: " + id);
+  assert.equal(index.profileDetails[id]?.id, id, "Wiki-enriched profile must be available to the detail view: " + id);
+}
+const alfiaKitSearch = corpus.search(index, { query: "Alfia Satanas Verion Gif Blessing", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(alfiaKitSearch.results.some(item => item.claimId === "DMR-029-CLM-006" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("Alfia/Habilidades"))),
+  "Alfia's wiki-sourced magic and ability leads must be searchable with secondary provenance.");
+const zaldKitSearch = corpus.search(index, { query: "Zald Deus Ambrosia Behemoth", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(zaldKitSearch.results.some(item => item.claimId === "DMR-029-CLM-007" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("/Zald"))),
+  "Zald's wiki-sourced ability and historical leads must be searchable with secondary provenance.");
+const heraDeityClaim = index.claims.find(item => item.claimId === "DMR-021-CLM-002");
+
+const zeusDeityClaim = index.claims.find(item => item.claimId === "DMR-021-CLM-001");
+assert.ok(zeusDeityClaim?.claim.includes("identifica a Zeus como deidad patrona"),
+  "Legacy Spanish bold-labelled Afirmación fields must populate the structured claim text.");
+assert.ok(heraDeityClaim?.claim.includes("la identifica como su deidad patrona"),
+  "Hera's legacy bold-labelled Afirmación field must populate the structured claim text.");
+
+assert.ok(heraDeityClaim, "Hera's deity claim must be parsed from the registered research file.");
+assert.deepEqual(heraDeityClaim.sourceIds.slice().sort(), ["DMR-021-SRC-002", "DMR-021-SRC-004"],
+  "A following H2 claim for DMR-008 must not contaminate the preceding Hera claim's source list.");
+const historicalWikiSourceDirectory = corpus.getOnlineSourceDirectory();
+assert.ok(historicalWikiSourceDirectory.some(item => item.id === "community-alfia-abilities-es" && item.url === "https://danmachi.fandom.com/es/wiki/Alfia/Habilidades"),
+  "Alfia's secondary wiki reference must be available from the source browser.");
+assert.ok(historicalWikiSourceDirectory.some(item => item.id === "community-zald-es" && item.url === "https://danmachi.fandom.com/es/wiki/Zald"),
+  "Zald's secondary wiki reference must be available from the source browser.");
+
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY" && edge.from === "CHAR-RYUU-LION" && edge.to === "CHAR-KAGUYA" && edge.evidenceStatus === "secondary_checked" && edge.claimRefs?.includes("DMR-028-CLM-003")), "The existing Ryu/Kaguya historical edge must also expose the wiki-derived moral disagreement without creating a duplicate reverse destination.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LYRA-MEMBER-ASTREA-WIKI" && edge.from === "CHAR-LYRA" && edge.to === "DM-FAM-ASTREA" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-004"), "Lyra's reported membership must have a secondary-evidence relationship.");
 const kaguyaJusticeSearch = corpus.search(index, { query: "Kaguya Ryu justicia salvar mayoría", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
@@ -104,6 +155,7 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-WARGAME-ANIME" &
 assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-ONLY-FOLLOWER-HESTIA-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-014-CLM-001"), "Bell and Hestia opening-family state must be explicit and adaptation-scoped.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-OPENING-CRISIS-ANIME" && edge.to === "EVT-DM-BELL-OPENING-CRISIS-ANIME-001" && edge.claimRef === "DMR-014-CLM-002"), "Bell opening Dungeon crisis must link to its own source-backed event.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-MEETS-HESTIA-NOVEL-SYNOPSIS" && edge.continuity === "CONT-MAIN-LN" && edge.claimRef === "DMR-015-CLM-001"), "The main-novel Bell-Hestia meeting must be explicit and backed by the official publisher synopsis.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-BELL-MEMBER-HESTIA-MAIN-LN" && edge.from === "DM-CHAR-BELL" && edge.to === "DM-FAM-HESTIA" && edge.continuity === "CONT-MAIN-LN" && edge.evidenceStatus === "source_checked" && edge.claimRef === "DMR-015-CLM-001"), "Bell's membership in Hestia Familia must be navigable in the main novel continuity with publisher-synopsis provenance.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-EINA-ADVISOR-BELL-ANIME" && edge.continuity === "CONT-ANIME" && edge.claimRef === "DMR-016-CLM-001"), "Eina must link to Bell as assigned advisor in the official adaptation.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-EINA-WORKS-GUILD-ANIME" && edge.to === "DM-GUILD-001" && edge.continuity === "CONT-ANIME"), "Eina's role at the Guild must be navigable as a separate institutional relation.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-ZEUS-FAM-GREAT-QUESTS" && edge.continuity === "CROSS-CONTINUITY" && edge.claimRef === "DMR-008-CLM-027"), "The official joint Zeus/Hera historical result must use an explicit cross-continuity relation scope.");
@@ -157,8 +209,9 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 142, "Three DMR-026 claims, ten original DMR-028 claims, twelve member-detail DMR-028 claims, and four Kaguya DMR-028 claims must be included in the source count.");
-assert.equal(index.entryCount, 145, "The twelve member-detail and four Kaguya DMR-028 claims add sixteen retrievable entries without altering existing continuity splits.");
+const expectedSourceClaimCount = documents.reduce((sum, document) => sum + [...document.content.matchAll(/^### DMR-\d{3}-CLM-\d{3} · .+$/gm)].length, 0);
+assert.equal(index.sourceClaimCount, expectedSourceClaimCount, "The index source count must reflect every H3 claim in the exact production research manifest.");
+assert.ok(index.entryCount >= index.sourceClaimCount, "All manifest claims must survive indexing; continuity-specific splits may create additional entries.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
