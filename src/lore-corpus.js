@@ -97,7 +97,7 @@
       .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1").replace(/\s+/g, " ");
   }
   function field(block, key) {
-    const m = new RegExp("^- (?:" + TICK + key + TICK + "|" + key + "):\\s*(.*)$", "m").exec(block);
+    const m = new RegExp("^- (?:" + TICK + key + TICK + "|\\*\\*" + key + "\\*\\*|" + key + "):\\s*(.*)$", "m").exec(block);
     return m ? clean(m[1]) : "";
   }
   function unique(values) { return [...new Set(values.filter(Boolean))]; }
@@ -113,7 +113,7 @@
         claimId: field(block, "claim_id") || match[1],
         entryId: field(block, "claim_id") || match[1],
         heading: clean(match[2]),
-        claim: field(block, "claim"),
+        claim: field(block, "claim") || field(block, "Afirmación") || field(block, "Afirmacion"),
         characterIds: findIds(field(block, "character_id") + " " + field(block, "character_ids"), /\b(?:DM-CHAR|CHAR)-[A-Z0-9-]+\b/g),
         aspect: field(block, "aspect") || "general",
         eraOrInterval: field(block, "era_or_interval"),
