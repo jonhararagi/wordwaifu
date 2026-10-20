@@ -3336,8 +3336,8 @@ async function run() {
       const image = document.querySelector("#archive-profile-portrait .archive-portrait-art");
       return !!image && image.src.startsWith("data:image/png");
     }, null, { timeout: 5000 });
-    // The curated family network lists roster members only in the continuity covered by their evidence.
-    await page.locator("#archive-profile-continuity").selectOption("CONT-ANIME");
+    // The family network must use the novel continuity, where the extended member dossiers provide evidence.
+    await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
     await page.locator('#archive-profile-tabs [data-profile-tab="relationships"]').click();
     await page.waitForFunction(() => (document.querySelector("#archive-profile-panel")?.innerText || "").includes("Explorar Hestia Familia"), null, { timeout: 10000 });
     assert.ok((await page.locator("#archive-profile-panel").innerText()).includes("Afiliación de Familia"), "The relationship tab should distinguish family membership from personal relationships.");
