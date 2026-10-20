@@ -155,6 +155,40 @@
 - spoiler_level: mild
 - confidence_note: Tratar la posada y los edificios como nombres candidatos; todavía no crear entidades nuevas ni asignar una ubicación exacta sin otras fuentes.
 
+### DMR-031-CLM-009 · Daedalus Street como distrito residencial laberíntico (pista secundaria)
+
+- claim_id: DMR-031-CLM-009
+- claim: La wiki comunitaria inglesa describe Daedalus Street (ダイダロス通り) como una zona residencial extensa y empobrecida entre las avenidas principales este y sureste; le atribuye un trazado complejo asociado a sucesivas intervenciones de diseño, el apodo «otro Dungeon» y la presencia del orfanato de Maria.
+- aspect: geografía urbana, residencia y topología
+- era_or_interval: Descripción general de wiki; no establece un periodo interno
+- continuity_scope: CONT-UNVERIFIED
+- source_id: DMR-031-SRC-007
+- source_title: DanMachi Wiki — Daedalus Street
+- source_type: COMMUNITY_WIKI
+- source_locator: Introducción e Information
+- source_url: https://danmachi.fandom.com/wiki/Daedalus_Street
+- evidence_type: secondary_wiki_summary
+- verification_status: secondary_checked
+- spoiler_level: moderate
+- confidence_note: El nombre de la calle también aparece en la sinopsis oficial del anime, pero esa sinopsis no confirma el diseño residencial, la distribución entre avenidas, el apodo ni la ubicación del orfanato. Cada detalle espacial requiere cotejo primario.
+
+### DMR-031-CLM-009 · Daedalus Street como distrito residencial laberíntico (pista secundaria)
+
+- claim_id: DMR-031-CLM-009
+- claim: La wiki comunitaria inglesa describe Daedalus Street (ダイダロス通り) como una zona residencial extensa y empobrecida entre las avenidas principales este y sureste; le atribuye un trazado complejo asociado a sucesivas intervenciones de diseño, el apodo «otro Dungeon» y la presencia del orfanato de Maria.
+- aspect: geografía urbana, residencia y topología
+- era_or_interval: Descripción general de wiki; no establece un periodo interno
+- continuity_scope: CONT-UNVERIFIED
+- source_id: DMR-031-SRC-007
+- source_title: DanMachi Wiki — Daedalus Street
+- source_type: COMMUNITY_WIKI
+- source_locator: Introducción e Information
+- source_url: https://danmachi.fandom.com/wiki/Daedalus_Street
+- evidence_type: secondary_wiki_summary
+- verification_status: secondary_checked
+- spoiler_level: moderate
+- confidence_note: El nombre de la calle también aparece en la sinopsis oficial del anime, pero esa sinopsis no confirma el diseño residencial, la distribución entre avenidas, el apodo ni la ubicación del orfanato. Cada detalle espacial requiere cotejo primario.
+
 ## Inventario de lugares que merece rastreo
 
 **Ya tienen ficha en WordWaifu:** Orario, Dungeon, Babel y Hostess of Fertility.

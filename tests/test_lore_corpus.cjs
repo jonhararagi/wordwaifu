@@ -414,3 +414,26 @@ for (const [id, url] of [
 ]) {
   assert.ok(orarioSources.some(source => source.id === id && source.url === url && source.authority === "Fuente secundaria"), "Orario wiki sources must be available from the searchable source directory: " + id);
 }
+
+
+// Daedalus Street is source-checked for its mention in the anime and separately
+// secondary-labelled for its detailed urban layout. Pantheon stays secondary-only.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md"), "Daedalus Street's official adaptation claim must be part of the production research manifest.");
+const daedalusOfficialSearch = corpus.search(index, { query: "Daedalus Orario episodio", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(daedalusOfficialSearch.results.some(item => item.claimId === "DMR-032-CLM-001" && item.verificationStatus === "source_checked"), "The official anime mention of Daedalus Street must be searchable in CONT-ANIME.");
+const daedalusWikiSearch = corpus.search(index, { query: "Daedalus residencial laberíntico Maria", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(daedalusWikiSearch.results.some(item => item.claimId === "DMR-031-CLM-009" && item.verificationStatus === "secondary_checked"), "Detailed Daedalus Street geography must remain searchable as secondary evidence.");
+const pantheonSecondarySearch = corpus.search(index, { query: "Pantheon Guild edificio biblioteca", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(pantheonSecondarySearch.results.some(item => item.claimId === "DMR-031-CLM-006" && item.verificationStatus === "secondary_checked"), "Pantheon must remain searchable as a secondary-only physical-location lead.");
+assert.ok(catalog.records.some(record => record.id === "LOC-DAEDALUS-STREET" && record.path === "places/daedalus-street.md" && record.type === "location"), "Daedalus Street must have an active location record.");
+assert.ok(catalog.records.some(record => record.id === "LOC-PANTHEON" && record.path === "places/pantheon.md" && record.status === "secondary_checked"), "Pantheon must have its own secondary-checked location record.");
+assert.ok(!catalog.reservedIds.some(record => record.id === "LOC-DAEDALUS-STREET"), "An activated Daedalus Street ID must no longer remain reserved.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-DAEDALUS-ORARIO-OFFICIAL" && edge.claimRef === "DMR-032-CLM-001" && edge.evidenceStatus === "source_checked"), "Daedalus Street must have an officially sourced, adaptation-scoped relation to Orario.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-PANTHEON-GUILD-HEADQUARTERS-SECONDARY" && edge.claimRef === "DMR-031-CLM-006" && edge.evidenceStatus === "secondary_checked"), "Pantheon and the Guild must be linked without promoting the wiki claim.");
+const pantheonEntitySearch = corpus.searchEntities(catalog, { type: "location", query: "Pantheon" });
+assert.ok(pantheonEntitySearch.results.some(entity => entity.id === "LOC-PANTHEON"), "Pantheon must be discoverable as a location entity.");
+const daedalusEntitySearch = corpus.searchEntities(catalog, { type: "location", query: "Daidalos" });
+assert.ok(daedalusEntitySearch.results.some(entity => entity.id === "LOC-DAEDALUS-STREET"), "Daidalos must find the same location through its translation alias.");
+const addedSources = corpus.getOnlineSourceDirectory();
+assert.ok(addedSources.some(source => source.id === "official-danmachi3-story" && source.url === "https://danmachi.com/danmachi3/story/index.html"), "Official DanMachi III episode synopsis must be discoverable in the source directory.");
+assert.ok(addedSources.some(source => source.id === "community-daedalus-street" && source.url === "https://danmachi.fandom.com/wiki/Daedalus_Street" && source.authority === "Fuente secundaria"), "Daedalus Street's wiki must be discoverable and secondary-labelled.");

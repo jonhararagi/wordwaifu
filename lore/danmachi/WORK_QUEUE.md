@@ -17,7 +17,10 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [ ] Describir el estado de Orario por periodos históricos y enlazar los eventos existentes sin narrarlos aquí de nuevo.
 - [ ] Revisar huecos, contradicciones, aliases, enlaces y pruebas automáticas antes de declarar la etapa cerrada.
 - [x] Recuperar pistas secundarias de geografía urbana, mapa, Guild/Pantheon y economía de wikis ES/EN/JA en [DANMACHI-RESEARCH-031](research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md), registrando fuente, localizador y límites.
-- [ ] Rastrear las referencias de esas wikis hasta fuentes primarias y activar lugares/relaciones sólo después del cotejo; la triangulación secundaria no cierra la etapa.
+- [x] Crear ficha parcial de Daedalus Street con la mención oficial de DanMachi III, episodio 12, separando la geografía de wiki como secundaria.
+- [x] Crear una ficha secundaria de Pantheon como edificio atribuido a la Guild, separada de la organización en la navegación y sin elevarla a canon de novela.
+- [ ] Rastrear las referencias de las wikis hasta fuentes primarias y activar lugares/relaciones sólo después del cotejo; la triangulación secundaria no cierra la etapa.
+- [ ] Confirmar en la novela principal si Pantheon es un edificio distinto de Babel y localizar la primera mención de Daedalus Street.
 
 **Criterio de cierre:** cada área relevante tiene contenido respaldado o una incógnita declarada; los lugares importantes son navegables; los hechos están delimitados por fuente y continuidad; no quedan mapas o datos secundarios presentados como canon sin verificación. No se exige fingir un porcentaje global de completitud.
 

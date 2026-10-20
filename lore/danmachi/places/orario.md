@@ -43,6 +43,8 @@ El mapa de una wiki **no se usa como cartografía oficial**, ni la coincidencia 
 - **[Babel](babel.md):** instalación vinculada a la supervisión y gestión del Dungeon. El glosario la identifica como el edificio más alto de Orario y una instalación de la Guild; la ficha individual concentra esos detalles.
 - **[Guild y Dungeon](../canon/03-dungeon-y-guild.md):** referencia a la institución y su función. En análisis futuros se deberá distinguir la organización Guild del edificio físico donde se atiende a los aventureros.
 - **[Hostess of Fertility](hostess-of-fertility.md):** taberna situada en Orario, con ficha propia para su personal y relaciones.
+- **[Daedalus Street](daedalus-street.md):** la sinopsis oficial de DanMachi III, episodio 12, menciona la calle en el contexto del caos en Orario; su topología residencial sigue siendo secundaria.
+- **[Pantheon](pantheon.md):** edificio que la wiki inglesa atribuye a la sede principal de la Guild; la ficha está separada provisionalmente y no resuelve si se distingue físicamente de Babel.
 - **[Índice de lugares](00-indice-lugares.md):** inventario de otras ubicaciones conocidas y candidatas.
 
 ## Mapa de cobertura de Orario

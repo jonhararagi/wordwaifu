@@ -33,6 +33,14 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice de plantillas individuales de los volúmenes](volumes/main/README.md)
 - [Validador automático de catálogo](tools/check-catalog.mjs)
 
+## Etapa 1 — Orario como escenario
+
+- [Ficha central de Orario](places/orario.md) y [índice maestro de lugares](places/00-indice-lugares.md).
+- [DANMACHI-RESEARCH-031 — Geografía, mapa y pistas comunitarias](research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md).
+- [Daedalus Street](places/daedalus-street.md) — mención respaldada en la adaptación anime; geometría y funciones urbanas secundarias.
+- [Pantheon](places/pantheon.md) — ficha provisional secundaria; pendiente cotejo de la sede física de la Guild.
+- [DANMACHI-RESEARCH-032 — Referencia oficial de Daedalus Street](research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md).
+
 ## 2. Cronología desde las eras antiguas hasta el cierre publicado
 
 ### Mapa maestro

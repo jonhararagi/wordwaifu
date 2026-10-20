@@ -10,17 +10,17 @@
 | [LOC-ORARIO](orario.md) | Orario — registro geográfico | Dungeon, Guild, Babel, Hostess of Fertility | Ficha parcial respaldada por glosario oficial del anime; no equivale a mapa completo |
 | [LOC-DUNGEON](dungeon.md) | Dungeon | Orario, Guild, aventureros, pisos y expediciones | Ficha de ubicación parcial; fuente editorial oficial para el marco general |
 | [LOC-BABEL](babel.md) | Babel | Orario, Guild, Dungeon | Ficha parcial respaldada por el glosario oficial del anime |
-| LOC-GUILD | Sede de la Guild | Registro, misiones, asesores, Eina | Candidato; separar edificio físico de institución |
+| [LOC-PANTHEON](pantheon.md) | Pantheon — edificio atribuido a la Guild | Guild, Orario, Babel | Ficha secundaria; falta localizar la mención primaria |
 | [LOC-HOSTESS](hostess-of-fertility.md) | Hostess of Fertility | Orario, Familia Loki, personal de la taberna | Ficha parcial respaldada por el glosario oficial del anime |
 | LOC-HESTIA-HOME | Residencia inicial de Hestia Familia | Bell y eventos tempranos | Alta |
 | LOC-LOKI-MANOR | Residencia de Loki Familia | Miembros, reuniones, preparación de expediciones | Alta |
 | LOC-FREYA-MANOR | Residencia de Freya Familia | Freya, Ottar y miembros | Alta |
 | LOC-HEPHAISTOS-SHOP | Herrería de Hephaistos | Welf, equipo y fabricación | Media |
-| LOC-DAEDALUS-STREET | Zona de Daedalus Street | Arcos y geografía urbana; localizador pendiente | Media |
+| [LOC-DAEDALUS-STREET](daedalus-street.md) | Daedalus Street / Calle Daidalos | Orario, zona residencial, trama urbana | Parcial: mención oficial en anime; topología secundaria pendiente |
 
 ## Candidatos de Orario encontrados en wikis (IDs aún no activados)
 
-El inventario secundario incluye Pantheon/sede física de la Guild, iglesia abandonada, tienda de Hephaistos, anfiteatro/Coliseo, calle Daidalos, área comercial, mercado libre, Plaza del Amor, cementerio de aventureros, distrito del entretenimiento, Hibachitei, Hearth Mansion, apartamento de Eina y una posada asociada a Hermes Familia.
+El inventario secundario que queda por investigar incluye la iglesia abandonada, tienda de Hephaistos, anfiteatro/Coliseo, área comercial, mercado libre, Plaza del Amor, cementerio de aventureros, distrito del entretenimiento, Hibachitei, Hearth Mansion, apartamento de Eina y una posada asociada a Hermes Familia. Pantheon y Daedalus Street ya tienen fichas parciales, con estados de evidencia distintos.
 
 Estos nombres son **candidatos de investigación**, no nuevas entidades aprobadas. Antes de asignar IDs hay que comprobar su primera aparición, forma japonesa/nombre de edición, tipo real (lugar, institución, negocio o residencia), continuidad y estado temporal. Véase [DANMACHI-RESEARCH-031 — Orario: geografía y mapa](../research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md).
 

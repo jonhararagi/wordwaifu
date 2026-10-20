@@ -1005,6 +1005,54 @@ verification_status: stub
 
 ---
 
+## DMR-031-SRC-007 · DanMachi Wiki — Daedalus Street
+
+- source_id: DMR-031-SRC-007
+- title: Daedalus Street
+- creator_or_publisher: Comunidad DanMachi Wiki / Fandom
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Daedalus_Street
+- accessed_at: 2026-10-20
+- locator_type: article_sections
+- locator: Introducción e Information
+- claims_supported: [DMR-031-CLM-009]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: Resume la descripción de la calle, su trazado y lugares asociados; los detalles deben localizarse en la novela o un relato oficial antes de aprobarlos.
+- conflicting_sources: []
+- rights_note: Paráfrasis original en español; no copiar la página.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: secondary_checked
+
+---
+
+## DMR-032-SRC-001 · Sinopsis oficial de DanMachi III, episodio 12
+
+- source_id: DMR-032-SRC-001
+- title: ストーリー — TVアニメ「ダンまち」第3期
+- creator_or_publisher: Portal oficial del anime DanMachi
+- source_type: ADAPTATION
+- series: DanMachi III
+- volume_or_edition: Página web, sin paginación
+- language: Japonés
+- official_url: https://danmachi.com/danmachi3/story/index.html
+- accessed_at: 2026-10-20
+- locator_type: episode_synopsis
+- locator: Episodio 12, párrafo final que menciona ダイダロス通り
+- claims_supported: [DMR-032-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación que confirma la mención de Daedalus Street en la sinopsis de la escena; no fija el trazado, las distancias ni la geografía residencial de la novela ligera.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no reproducir la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: source_checked
+
+---
+
 ## DMR-028-SRC-001 · DanMachi Wiki — Astraea Familia
 
 - source_id: DMR-028-SRC-001
