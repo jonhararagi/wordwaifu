@@ -42,7 +42,8 @@ jobs:
           node --check src/art-studio.js
           node --check src/character-dossiers.js
           node --check tests/test_character_dossiers.cjs
-          node --check tests/test_official_character-roster.cjs
+          node --check tests/test_official_character_roster.cjs
+          node --check tests/test_danmachi_character_coverage.cjs
           node --check tests/test_danmachi_family_dossier.cjs
           node --check tests/test_project_schema.cjs
           node --check tests/test_mythic_catalog.cjs
