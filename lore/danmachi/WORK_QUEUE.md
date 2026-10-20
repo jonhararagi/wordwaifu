@@ -21,7 +21,9 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [x] Crear una ficha secundaria de Pantheon como edificio atribuido a la Guild, separada de la organización en la navegación y sin elevarla a canon de novela.
 - [ ] Rastrear las referencias de las wikis hasta fuentes primarias y activar lugares/relaciones sólo después del cotejo; la triangulación secundaria no cierra la etapa.
 - [x] Registrar por separado la antigua iglesia y la mansión adquirida de Apollo Familia como residencias en CONT-ANIME, con la transición sustentada en la sinopsis oficial de DanMachi II, episodio 5.
+- [x] Recuperar del portal oficial Prototype los detalles de avenidas, Central Park, comercio de calle y usos de Babel en [DANMACHI-RESEARCH-034](research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md), manteniéndolos bajo CONT-PROTOTYPE.
 - [ ] Confirmar en la novela principal si Pantheon es un edificio distinto de Babel y localizar la primera mención de Daedalus Street.
+- [ ] Cotejar en CONT-MAIN-LN las ocho avenidas, Central Park, la zona comercial junto al Dungeon, los servicios de Babel y el límite comercial del piso veinte; no cerrar esos puntos usando sólo Prototype.
 - [ ] Localizar en fuente primaria la primera descripción de la iglesia y de la mansión, verificar quién destruyó la iglesia y establecer su ubicación urbana.
 
 **Criterio de cierre:** cada área relevante tiene contenido respaldado o una incógnita declarada; los lugares importantes son navegables; los hechos están delimitados por fuente y continuidad; no quedan mapas o datos secundarios presentados como canon sin verificación. No se exige fingir un porcentaje global de completitud.

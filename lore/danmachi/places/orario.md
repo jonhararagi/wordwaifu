@@ -37,6 +37,17 @@ Las wikis aportan un mapa de lugares candidatos y posibles detalles urbanístico
 
 El mapa de una wiki **no se usa como cartografía oficial**, ni la coincidencia entre wikis prueba una afirmación. Cada ubicación necesita su propio localizador antes de convertirse en registro activo o relación canónica.
 
+## Capa adicional de evidencia: relato oficial Prototype
+
+El portal oficial de DanMachi publicó la obra **理想郷譚（プロトタイプ）** (*Prototype*). Sus episodios 3, 16 y 26 ofrecen más detalle sobre la ciudad: ocho avenidas desde el centro, la plaza Central Park junto a Babel, el comercio callejero, la concentración de tiendas para aventureros cerca del Dungeon y los servicios/negocios de Babel.
+
+Esta información se registra bajo la continuidad separada **CONT-PROTOTYPE**. El hecho de que el texto se publique en el portal oficial no convierte una versión titulada *Prototype* en confirmación automática de la novela ligera publicada ni de la adaptación anime.
+
+- [Red de avenidas principales](main-streets.md) — ocho orientaciones enumeradas por el texto Prototype; no hay coordenadas ni plano a escala.
+- [Central Park](central-park.md) — plaza central alrededor de Babel en esa versión.
+- [DANMACHI-RESEARCH-034](../research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md) — nueve afirmaciones con localizadores de los episodios 3, 16 y 26.
+- [Babel](babel.md) — la función base permanece documentada en CONT-ANIME; los detalles sobre tiendas, servicios y pisos de Prototype están separados dentro de su sección específica.
+
 ## Red de lugares e instituciones
 
 - **[Dungeon](dungeon.md):** gran laberinto subterráneo asociado espacialmente a la ciudad. La ficha propia debe contener los detalles del laberinto; esta página solo conserva el vínculo urbano general.

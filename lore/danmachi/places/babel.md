@@ -16,6 +16,12 @@ tags: [Babel, 摩天楼施設バベル, Guild, Dungeon, Orario]
 
 El glosario oficial de la web del anime identifica a Babel como el edificio más alto de Orario y lo describe como una instalación perteneciente a la Guild para supervisar y gestionar el Dungeon. La misma entrada menciona dependencias públicas, instalaciones comerciales y presencia de dioses en los pisos superiores.
 
+## Detalles adicionales del relato Prototype (continuidad separada)
+
+El episodio 16 del relato oficial *理想郷譚（プロトタイプ）* describe Babel como cubierta del Dungeon y menciona comedor sencillo, alojamiento, duchas y punto de cambio de drops para aventureros. La Guild arrienda espacios de Babel a negocios especializados en clientes aventureros; el texto habla de tiendas asociadas a Familias comerciales y de competencia por reputación y calidad.
+
+El episodio 26 añade que, en Prototype, los locales comerciales llegan hasta el piso veinte y que los pisos superiores alojan habitaciones privadas y costosas para algunos dioses. Estos detalles están registrados en [DANMACHI-RESEARCH-034](../research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md) como `CONT-PROTOTYPE`, no como extensión automática de la ficha de `CONT-ANIME`.
+
 ## Relaciones navegables
 
 - **Orario:** Babel se encuentra en la ciudad; véase [Orario](orario.md).

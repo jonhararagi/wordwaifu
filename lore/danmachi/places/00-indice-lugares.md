@@ -9,7 +9,9 @@
 | DM-WORLD-001 | [Orario](../canon/01-mundo-orario.md) | Ciudad central, Dungeon, Guild, Familias | Ficha general provisional; falta cotejo interno de novelas |
 | [LOC-ORARIO](orario.md) | Orario — registro geográfico | Dungeon, Guild, Babel, Hostess of Fertility | Ficha parcial respaldada por glosario oficial del anime; no equivale a mapa completo |
 | [LOC-DUNGEON](dungeon.md) | Dungeon | Orario, Guild, aventureros, pisos y expediciones | Ficha de ubicación parcial; fuente editorial oficial para el marco general |
-| [LOC-BABEL](babel.md) | Babel | Orario, Guild, Dungeon | Ficha parcial respaldada por el glosario oficial del anime |
+| [LOC-BABEL](babel.md) | Babel | Orario, Guild, Dungeon, Central Park | Ficha parcial respaldada por el glosario oficial del anime; detalles de Prototype separados |
+| [LOC-CENTRAL-PARK](central-park.md) | Central Park / plaza central | Avenidas principales, Babel, Dungeon | Parcial: aparece en el texto oficial Prototype; no trasladar automáticamente al canon publicado |
+| [LOC-ORARIO-MAIN-STREETS](main-streets.md) | Red de avenidas principales de Orario | Ciudad, Central Park, comercio de calle | Ocho direcciones documentadas sólo para la continuidad Prototype |
 | [LOC-PANTHEON](pantheon.md) | Pantheon — edificio atribuido a la Guild | Guild, Orario, Babel | Ficha secundaria; falta localizar la mención primaria |
 | [LOC-APOLLO-MANOR](apollo-familia-mansion.md) | Mansión de Apollo Familia | Nueva residencia de Hestia Familia después del War Game | Parcial: transición respaldada en la adaptación; ubicación exacta pendiente |
 | [LOC-HOSTESS](hostess-of-fertility.md) | Hostess of Fertility | Orario, Familia Loki, personal de la taberna | Ficha parcial respaldada por el glosario oficial del anime |

@@ -9,6 +9,7 @@ Evitar que los hechos de la novela principal, los spin-offs, las adaptaciones y 
 | Clave | Línea | Uso | Regla de integración |
 |---|---|---|---|
 | CONT-MAIN-LN | Novela ligera principal | Canon base de la historia principal para esta biblioteca | Prioridad primaria cuando se revisa contra la novela principal; registrar volumen y localizador |
+| CONT-PROTOTYPE | Relato oficial Prototype (理想郷譚) publicado en el portal de la serie | Versión temprana/prototipo de la historia; útil como fuente directa de esa versión, no como prueba automática del canon publicado | Mantener cada afirmación aislada; no copiar detalles a CONT-MAIN-LN o CONT-ANIME sin cotejo independiente |
 | CONT-SO-LN | Sword Oratoria | Perspectiva y acontecimientos laterales vinculados a Loki Familia | Enlazar eventos coincidentes con CONT-MAIN-LN, no duplicarlos |
 | CONT-FC | Familia Chronicle y relatos ligados a Familias | Historias enfocadas en personajes/facciones | Identificar edición/serie exacta; comprobar qué amplia o revela |
 | CONT-AR | Astrea Record | Historia relacionada con Astrea Familia y acontecimientos previos | Conservar el punto de vista y las revelaciones propias de esa línea |

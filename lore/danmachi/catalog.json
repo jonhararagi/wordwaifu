@@ -1408,6 +1408,40 @@
       ],
       "status": "source_checked_partial",
       "priority": "high"
+    },
+    {
+      "id": "LOC-ORARIO-MAIN-STREETS",
+      "path": "places/main-streets.md",
+      "type": "location",
+      "tags": [
+        "avenidas principales",
+        "main streets",
+        "norte",
+        "nordeste",
+        "este",
+        "sudeste",
+        "sur",
+        "sudoeste",
+        "oeste",
+        "noroeste",
+        "CONT-PROTOTYPE"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "LOC-CENTRAL-PARK",
+      "path": "places/central-park.md",
+      "type": "location",
+      "tags": [
+        "Central Park",
+        "Central Plaza",
+        "中央広場",
+        "セントラルパーク",
+        "CONT-PROTOTYPE"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -2319,6 +2353,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md",
       "type": "location_research",
       "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-034",
+      "path": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "type": "continuity_scoped_location_research",
+      "status": "source_checked_prototype"
     }
   ],
   "lastStructuredSync": "2026-10-20",
@@ -3968,6 +4008,90 @@
       "claimRef": "DMR-033-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md",
       "note": "Transición de uso residencial; no implica proximidad física entre los dos edificios."
+    },
+    {
+      "id": "REL-ORARIO-MAIN-STREETS-OF-ORARIO",
+      "from": "LOC-ORARIO-MAIN-STREETS",
+      "to": "LOC-ORARIO",
+      "kind": "urban_road_network_of",
+      "label": "Prototype describe ocho avenidas principales que parten del centro de Orario",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Relato oficial Prototype, episodio 16; no trasladar automáticamente a la cronología publicada",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "La dirección de cada avenida aparece en el texto; no hay escala, coordenadas ni nombres propios de calles."
+    },
+    {
+      "id": "REL-ORARIO-MAIN-STREETS-CONVERGE-CENTRAL-PARK",
+      "from": "LOC-ORARIO-MAIN-STREETS",
+      "to": "LOC-CENTRAL-PARK",
+      "kind": "converge_at",
+      "label": "En Prototype, las avenidas principales confluyen en el centro donde se nombra Central Park",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Relato oficial Prototype, episodio 16",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "Relación espacial de la versión Prototype; no define límites métricos de la plaza."
+    },
+    {
+      "id": "REL-CENTRAL-PARK-IN-ORARIO-PROTOTYPE",
+      "from": "LOC-CENTRAL-PARK",
+      "to": "LOC-ORARIO",
+      "kind": "central_public_square_of",
+      "label": "Prototype nombra Central Park como plaza central de Orario",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Relato oficial Prototype, episodios 16 y 26",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "No afirma que la plaza y su nombre tengan exactamente el mismo alcance en la novela publicada."
+    },
+    {
+      "id": "REL-CENTRAL-PARK-AROUND-BABEL-PROTOTYPE",
+      "from": "LOC-CENTRAL-PARK",
+      "to": "LOC-BABEL",
+      "kind": "surrounds",
+      "label": "En Prototype, Central Park se describe rodeando la torre Babel",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Relato oficial Prototype, episodios 16 y 26",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "No implica distancias exactas ni plano a escala."
+    },
+    {
+      "id": "REL-BABEL-CAPS-DUNGEON-PROTOTYPE",
+      "from": "LOC-BABEL",
+      "to": "LOC-DUNGEON",
+      "kind": "caps_and_oversees",
+      "label": "Prototype describe Babel como cubierta del Dungeon y torre usada para vigilarlo y gestionarlo",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Relato oficial Prototype, episodio 16",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "La función está descrita directamente en Prototype; la ficha ya conserva una afirmación independiente en CONT-ANIME."
+    },
+    {
+      "id": "REL-BABEL-OWNED-BY-GUILD-PROTOTYPE",
+      "from": "LOC-BABEL",
+      "to": "DM-GUILD-001",
+      "kind": "owned_by",
+      "label": "Prototype identifica a la Guild como propietaria de Babel y responsable de alquilar los locales",
+      "continuity": "CONT-PROTOTYPE",
+      "interval": "Relato oficial Prototype, episodio 16",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_site_prototype_narrative",
+      "claimRef": "DMR-034-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
+      "note": "Relación de propiedad en esta versión; no amplía automáticamente detalles de oficinas o instalaciones en la novela publicada."
     }
   ]
 }
