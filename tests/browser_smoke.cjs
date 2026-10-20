@@ -732,8 +732,8 @@ async function run() {
     const bellOfficialImageUrl = "https://danmachi.com/danmachi5/character/images/chara_tachi_01.png";
     await page.route(bellOfficialImageUrl, route => route.fulfill({
       status: 200,
-      contentType: "image/png",
-      body: Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/pL8AAAAASUVORK5CYII=", "base64")
+      contentType: "image/svg+xml",
+      body: '<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1"><rect width="1" height="1" fill="#fff"/></svg>'
     }));
     await page.locator("#character-archive-query").fill("Bell Cranel");
     await page.waitForFunction(() => document.querySelectorAll("#character-archive-results [data-archive-open]").length === 1, { timeout: 5000 });
