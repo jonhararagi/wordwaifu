@@ -323,3 +323,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **ID documental:** `DOC-DANMACHI-ANALYSIS-METHOD-001`. Se reutiliza LOC-ORARIO y los claims/fuentes ya existentes; no se crea una segunda ficha de ciudad ni se inventan IDs de lugares.
 - **Pendiente:** ejecutar CI en la PR, revisar integridad del catálogo y corregir cualquier fallo real antes de integrar en main.
 - **Estado factual:** método listo para usar; análisis completo de Orario aún pendiente. La ficha central es una guía de cobertura, no una declaración de que la ciudad esté completa.
+
+
+## DANMACHI-RESEARCH-036 · Integración de roster y Familias
+
+- Fecha: 2026-10-20. Rama: `work/danmachi-character-coverage-2026-10-20`.
+- Reutiliza claims oficiales existentes en `BATCH-DM-006-oficial-roster-y-retratos.md`.
+- Sincroniza roster, catálogo, Markdown, UI, Familias/organizaciones y grafo bajo `CONT-ANIME`.
+- Los Gulliver Brothers se individualizan como fichas navegables, pero la fuente los describe colectivamente.
+- 63 identidades navegables no significan censo global ni biografías completas.

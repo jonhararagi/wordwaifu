@@ -3,6 +3,19 @@
 Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el último volumen principal publicado que se pueda verificar. Las tareas se dividen para no mezclar épocas, fuentes o continuidades. Ningún número de volumen ni final se inventará para llenar huecos.
 
 
+## Cobertura integrada del roster · DANMACHI-RESEARCH-036
+
+- [x] Crear fichas Markdown individuales para las 63 identidades del roster de adaptación, incluidos los cuatro hermanos Gulliver.
+- [x] Integrar cada ID del roster en catálogo, Markdown y expediente de interfaz con seis secciones sustanciales.
+- [x] Añadir hubs navegables para Familias principales/secundarias, Hostess of Fertility y Xenos.
+- [x] Conectar afiliaciones explícitas con fuente y continuidad; separar afiliaciones históricas y roster secundario provisional.
+- [x] Sincronizar el índice y añadir pruebas de cobertura para que no reaparezcan personajes del roster sin ficha.
+- [ ] Cotejar capítulo/página de novela para completar biografías por escenas, evolución y relaciones personales.
+- [ ] Ampliar el censo más allá de las 63 identidades de adaptación, incluyendo novelas paralelas, Familias antiguas y personajes de juegos.
+- [ ] Mantener aislados los candidatos históricos cuyas fuentes no permiten afirmar una relación canónica.
+
+Este lote cierra la integración estructural del roster ampliado, no el trabajo factual completo de Orario, la cronología o las biografías de novela.
+
 ## PRIORIDAD ACTUAL — Etapa 1: Orario como escenario
 
 **Estado:** IN_PROGRESS. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
@@ -29,13 +42,15 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 **Criterio de cierre:** cada área relevante tiene contenido respaldado o una incógnita declarada; los lugares importantes son navegables; los hechos están delimitados por fuente y continuidad; no quedan mapas o datos secundarios presentados como canon sin verificación. No se exige fingir un porcentaje global de completitud.
 
-## Etapas posteriores — bloqueadas por el orden de trabajo
+## Etapas posteriores — personajes en progreso en paralelo
 
-1. [ ] Sucesos ocurridos en Orario: fichas atómicas con tiempo, lugar, causas, participantes, consecuencias y fuentes.
-2. [ ] Personajes principales: perfil y estados por periodo.
-3. [ ] Personajes secundarios: mismas reglas de procedencia y continuidad, con profundidad proporcional.
-4. [ ] Historias individuales: secuencias personales construidas a partir de eventos existentes.
-5. [ ] Auditoría integrada de cobertura, relaciones, contradicciones y duplicados.
+1. [ ] **Sucesos ocurridos en Orario:** escenario sigue abierto; eventos atómicos con tiempo, lugar, causas, participantes, consecuencias y fuentes.
+2. [~] **Personajes principales:** en progreso. Las 63 identidades del roster de adaptación tienen nodo, ficha Markdown y expediente UI.
+3. [~] **Personajes secundarios:** en progreso. Se integran perfiles antes presentes solo en roster/UI y nodos parciales de Familias/organizaciones.
+4. [ ] **Historias individuales:** reconstruir secuencias por eventos y localizar pasajes de novelas/spin-offs.
+5. [ ] **Auditoría integrada:** revisar relaciones, alias, contradicciones, duplicados e históricos no cubiertos.
+
+La prioridad solicitada permite avanzar personajes en paralelo; no se declara cerrada Orario ni se convierte la adaptación en evidencia de novela.
 
 
 ## BATCH-DM-001 — Esqueleto cronológico y catálogo
