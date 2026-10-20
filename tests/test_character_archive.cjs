@@ -34,7 +34,7 @@ const profilePaths=[
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
 assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
-assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,59,"The official-source registry should include Eina Tulle alongside the expanded character catalog.");
+assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,63,"The official-source registry should include Eina Tulle and four separately navigable Gulliver siblings.");
 assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-ASFI-AL-ANDROMEDA").voice,"Ai Kayano");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-DIONYSUS").voice,"Masaya Matsukaze");
