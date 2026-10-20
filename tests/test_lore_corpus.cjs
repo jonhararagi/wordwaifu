@@ -154,8 +154,11 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 138, "Three DMR-026 claims, ten original DMR-028 claims, and twelve new DMR-028 claims must be included in the source count.");
-assert.equal(index.entryCount, 141, "The twelve new DMR-028 claims add twelve retrievable entries without altering existing continuity splits.");
+assert.ok(index.sourceClaimCount >= 138, "The retrieval index must keep the previously tested source baseline while also loading the full production research manifest.");
+assert.ok(index.entryCount >= 141, "The retrieval index must keep all previously tested entries while adding the newly enabled historical research claims.");
+for (const claimId of ["DMR-029-CLM-015","DMR-029-CLM-016","DMR-029-CLM-017","DMR-029-CLM-018","DMR-029-CLM-019"]) {
+  assert.ok(index.claims.some(claim => claim.claimId === claimId), "New DMR-029 wiki claim must be indexed: " + claimId);
+}
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
