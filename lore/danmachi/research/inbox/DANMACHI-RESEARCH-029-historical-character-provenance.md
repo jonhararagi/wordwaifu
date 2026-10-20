@@ -239,3 +239,89 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
 - `confidence_note`: La etiqueta «abuelo adoptivo» es el resumen secundario de la wiki; verificar el pasaje principal antes de usar detalles de la tutela como canon primario. El padre sigue sin ID ni nombre.
+
+
+### DMR-029-CLM-015 · Afterglow: técnica compartida reportada de Zeus Familia y Hera Familia
+- `claim_id`: DMR-029-CLM-015
+- `claim`: Las páginas comunitarias de Zeus Familia, Hera Familia y terminología describen Afterglow (残光, Zankō) como una técnica histórica compartida: el usuario refuerza un arma de filo con magia o una habilidad y produce un corte de onda de choque que alcanza objetivos a distancia. Las páginas atribuyen a Leon la denominación de la técnica y su aprendizaje tras múltiples enfrentamientos con miembros de ambas Familias. La wiki también indica que el ataque puede repetirse sin un canto o carga aparte, pero su potencia depende de las capacidades del usuario y, si corresponde, de la magia empleada.
+- `character_ids`: [CHAR-DARK-ZALD]
+- `aspect`: técnica de combate, transmisión de conocimiento, cooperación entre Familias
+- `era_or_interval`: Uso histórico atribuido a Zeus/Hera y empleo posterior en la historia principal; fechas de origen exactas pendientes
+- `continuity_scope`: CONT-AR; CONT-MAIN-LN
+- `source_id`: DMR-021-SRC-001; DMR-021-SRC-002; DMR-029-SRC-017
+- `source_title`: Zeus Familia; Hera Familia; Terminology · Afterglow
+- `source_type`: COMMUNITY_WIKI
+- `source_locator`: Apartados de técnicas/historia de ambas Familias y artículo de terminología
+- `source_url`: https://danmachi.fandom.com/wiki/Zeus_Familia; https://danmachi.fandom.com/wiki/Hera_Familia; https://danmachi.fandom.com/wiki/Terminology
+- `evidence_type`: community_secondary_combat_technique
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: Pista secundaria para búsquedas. No se da por verificado el origen exacto, cada usuario histórico ni el procedimiento completo en una escena primaria.
+
+### DMR-029-CLM-016 · Lyra: repertorio de combate, equipo y uso de Aegis
+- `claim_id`: DMR-029-CLM-016
+- `claim`: La wiki de Lyra enumera las habilidades Ratts Phil y Agile Salt, las magias Mūs Mine y Wingus Smite, el arma Carnivore (un par de armas cortantes arrojadizas descritas como similares a bumeranes) y bombas que ella preparaba. También enumera el escudo mágico Aegis, atribuido a la creación de Asfi y Tsubaki; la wiki relata que se destruyó durante el combate contra Alfia y que podía copiar la magia con la que entraba en contacto. La misma página menciona que Lyra enseñó a Ryuu a jugar al póquer.
+- `character_ids`: [CHAR-LYRA, CHAR-RYUU-LION, CHAR-DARK-ALFIA]
+- `aspect`: habilidades, magia, equipo, relación cotidiana y evento de combate
+- `era_or_interval`: Astrea Familia histórica y retrospectivas posteriores; orden de escenas por cotejar
+- `continuity_scope`: CONT-AR; CONT-MAIN-LN
+- `source_id`: DMR-029-SRC-018
+- `source_title`: DanMachi Wiki · Lyra
+- `source_type`: COMMUNITY_WIKI
+- `source_locator`: Skill, Magic, Equipment, Trivia e History
+- `source_url`: https://danmachi.fandom.com/wiki/Lyra
+- `evidence_type`: community_secondary_character_kit_and_relationship
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: Inventario y destrucción de Aegis se conservan como afirmaciones comunitarias, no como cotejo de la novela. Wingus Smite figura como nombre, pero no se inventa su efecto exacto.
+
+### DMR-029-CLM-017 · Helga y Lyra: identidad de reencarnación reportada
+- `claim_id`: DMR-029-CLM-017
+- `claim`: La página comunitaria de Lyra la identifica como reencarnación de Helga, antigua segunda al mando de los Caballeros de Fianna. Se crea una ficha mínima para Helga únicamente para que la entidad mencionada sea consultable y la relación trazable; no se infiere que Lyra recuerde una vida anterior ni se añaden biografía, poderes o fechas que la fuente no respalde.
+- `character_ids`: [CHAR-LYRA, CHAR-HELGA]
+- `aspect`: identidad, reencarnación y contexto histórico
+- `era_or_interval`: Historia antigua atribuida a Helga y vida posterior de Lyra; cronología precisa pendiente
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-029-SRC-018
+- `source_title`: DanMachi Wiki · Lyra
+- `source_type`: COMMUNITY_WIKI
+- `source_locator`: Introducción y datos de trasfondo
+- `source_url`: https://danmachi.fandom.com/wiki/Lyra
+- `evidence_type`: community_secondary_identity_claim
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: Identidad de reencarnación reportada por wiki. No elevar a canon verificado ni inferir recuerdos, destino o continuidad de conciencia sin localizador primario.
+
+### DMR-029-CLM-018 · Gojouno Kaguya: magia, habilidades y armas listadas por la wiki
+- `claim_id`: DMR-029-CLM-018
+- `claim`: La página comunitaria enumera para Kaguya las magias Gokou y Shikai, las habilidades Kaina Blood y Tekiheni, y las armas Higanbana y Kodachi Futaba; el artículo incluye otras entradas de habilidad con una clasificación que requiere cotejo primario. Describe Gokou como cinco hojas de poder mágico que atacan desde distintas direcciones para encerrar al objetivo en un área de cortes. La wiki informa nivel 4, piso alcanzado 41 y edad de 19 años en su instantánea histórica; esos datos no deben tratarse como atributos atemporales. También señala que entregó Kodachi Futaba a Ryuu antes de sacrificarse por ella.
+- `character_ids`: [CHAR-KAGUYA, CHAR-RYUU-LION]
+- `aspect`: magia, habilidades, equipo, estadísticas históricas y vínculo personal
+- `era_or_interval`: Astrea Familia histórica; instantánea de la etapa final, fecha exacta pendiente
+- `continuity_scope`: CONT-AR; CONT-MAIN-LN
+- `source_id`: DMR-029-SRC-019
+- `source_title`: DanMachi Wiki · Gojouno Kaguya
+- `source_type`: COMMUNITY_WIKI
+- `source_locator`: Characteristics, Skill, Magic, Equipment y History
+- `source_url`: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
+- `evidence_type`: community_secondary_character_ability_and_relationship
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: Las categorías de algunas habilidades varían entre listados comunitarios; mantener el inventario como pista hasta cotejar el texto. No inferir que todo el repertorio se utilizó en la misma escena.
+
+### DMR-029-CLM-019 · Alfia: efectos y costes reportados de Satanas Verion, Silentium Eden, Genos Angelus y Gif Blessing
+- `claim_id`: DMR-029-CLM-019
+- `claim`: La página comunitaria en español describe Satanas Verion como magia con ondas de choque capaces de causar daño a distancia; Silentium Eden como un encantamiento de canto muy corto que cubre a Alfia con una protección invisible capaz de anular ataques mágicos, pero que consume mucha mente y reduce la potencia de su propia magia; y Genos Angelus como una magia de canto muy largo que manifiesta una enorme campana gris plateada con alcance reportado superior a 100 metros y efectos secundarios devastadores. La misma fuente atribuye a Gif Blessing el mantener Limit Off a cambio de anormalidades y una disminución continuada de estadísticas, resistencia y mente; cita como estimación comunitaria una caída del 5% por turno y un deterioro marcado tras un combate prolongado.
+- `character_ids`: [CHAR-DARK-ALFIA]
+- `aspect`: magia, límite, coste progresivo, enfermedad y táctica
+- `era_or_interval`: Astrea Record; reglas exactas por cotejar con novela/libreto
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-029-SRC-020
+- `source_title`: DanMachi Wiki en español · Alfia/Habilidades
+- `source_type`: COMMUNITY_WIKI
+- `source_locator`: Apartados Satanas Verion, Silentium Eden, Genos Angelus y Gif Blessing
+- `source_url`: https://danmachi.fandom.com/es/wiki/Alfia/Habilidades
+- `evidence_type`: community_secondary_ability_mechanics_and_cost
+- `verification_status`: secondary_checked
+- `spoiler_level`: major
+- `confidence_note`: Costes numéricos, condiciones y consecuencias están recogidos como resumen secundario. No presentarlos como reglas confirmadas ni como proporciones universales.
