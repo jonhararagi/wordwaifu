@@ -9,6 +9,7 @@ source_refs:
   - DMR-021-SRC-001
   - DMR-021-SRC-003
   - DMR-021-SRC-005
+  - DMR-029-SRC-017
 claim_refs:
   - DMR-008-CLM-027
   - DMR-021-CLM-001
@@ -17,6 +18,7 @@ claim_refs:
   - DMR-029-CLM-008
   - DMR-029-CLM-009
   - DMR-029-CLM-013
+  - DMR-029-CLM-015
 verification_status: source_checked_partial
 tags: [Zeus Familia, Behemoth, Leviathan, One Eyed Black Dragon, Three Great Quests, historical roster]
 ---
@@ -33,6 +35,14 @@ La página comunitaria presenta a Zeus Familia como una de las organizaciones de
 - El resumen comunitario distingue un récord público del piso 59 de una supuesta llegada histórica al piso 71. Ambos números se conservan como afirmaciones de naturaleza distinta reportadas por la wiki; el piso 71 no se promociona a dato oficial.
 - La wiki describe colaboración con el Gremio y la entrega de mapas, datos de miembros, habilidades y conocimiento de crecimiento. No se atribuye una contribución concreta a un individuo sin evidencia.
 - Tras el enfrentamiento contra el Dragón Negro de un solo ojo, el resumen vincula la pérdida de la fuerza principal con la caída de las Familias. La secuencia y el estado institucional concreto requieren cotejo primario.
+
+## Afterglow: técnica de combate compartida reportada
+
+Las páginas comunitarias de ambas Familias describen **Afterglow (残光, Zankō)** como una técnica histórica: reforzar un arma de filo con magia o una habilidad para producir un corte de onda de choque que puede golpear a distancia. La wiki atribuye a Leon haberla nombrado y copiado después de múltiples enfrentamientos con miembros de Zeus y Hera Familia. La página de Zald describe una aplicación con Rea Ambrosia.
+
+- **Claim:** DMR-029-CLM-015.
+- **Fuente comunitaria:** [Zeus Familia](https://danmachi.fandom.com/wiki/Zeus_Familia), [Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia) y [Terminology](https://danmachi.fandom.com/wiki/Terminology).
+- **Estado:** secondary_checked; es una arista histórica útil para navegar entre las Familias, no una confirmación primaria de origen, inventor o lista de usuarios.
 
 ## Roster histórico: fichas enlazadas, no roster completo
 - **[Zeus](../characters/zeus.md):** deidad patrona reportada; la caída de la Familia no implica la muerte de la deidad.

@@ -307,3 +307,8 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Los bordes nuevos apuntan a claims concretos con sus rutas de investigación y mantienen continuidad/estado de evidencia compatibles con el validador. No se crea una ficha de Gojouno Sakuya ni de las Familias previas de Kaguya sin un registro independiente.
 - Se ampliaron las etiquetas del registro para recuperar a Kaguya mediante su alias y su equipo, y se agregaron pruebas de búsqueda/procedencia y navegación en `tests/test_lore_corpus.cjs`.
 - **Pendiente hasta CI:** confirmar el validador de catálogo, la cuenta exacta de claims/entradas y las pruebas completas de retrieval después de la integración.
+
+## Lote 2026-10-19 · Afterglow y técnica compartida de Zeus/Hera
+- **Cambio:** se incorporó DMR-029-CLM-015 para la técnica Afterglow descrita por las wikis de Hera Familia y Zald; se añadió una relación tipada entre FAM-ZEUS y FAM-HERA y se enlazó desde ambos expedientes familiares y la ficha de Zald.
+- **Límite probatorio:** evidencia `secondary_checked`; no se eleva a canon primario sin localizador de novela.
+- **Validación esperada:** ID de relación único, referencias de claim/ruta válidas y checks del catálogo de lore.
