@@ -61,6 +61,14 @@ assert.ok(alfiaCostSearch.results.some(item => item.claimId === "DMR-029-CLM-019
 const afterglowSearch = corpus.search(index, { query: "Afterglow Zeus Hera técnica", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(afterglowSearch.results.some(item => item.claimId === "DMR-029-CLM-015" && item.verificationStatus === "secondary_checked"),
   "Afterglow's shared Zeus/Hera history must be discoverable without promoting a wiki claim to primary.");
+const zeusDeitySearch = corpus.search(index, { query: "Zeus deidad patrona", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(zeusDeitySearch.results.some(item => item.claimId === "DMR-021-CLM-001" && item.verificationStatus === "secondary_checked"),
+  "Existing Zeus/Hera wiki research claims must be parsed as searchable, secondary evidence.");
+const parsedZeusDeity = index.claims.find(item => item.claimId === "DMR-021-CLM-001");
+assert.deepEqual(parsedZeusDeity.sourceIds.slice().sort(), ["DMR-021-SRC-001","DMR-021-SRC-003"],
+  "A reused H2 claim later in the research file must not contaminate the previous claim's source list.");
+assert.ok(parsedZeusDeity.continuityScopes.includes("CONT-AR") && parsedZeusDeity.characterIds.includes("CHAR-ZEUS"),
+  "The Zeus deity claim must retain its character and historical continuity filters.");
 const lyraHelgaSearch = corpus.search(index, { query: "Lyra Helga reencarnación", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(lyraHelgaSearch.results.some(item => item.claimId === "DMR-029-CLM-017" && item.verificationStatus === "secondary_checked"),
   "Lyra/Helga's reported reincarnation claim must be searchable and source-labelled.");
