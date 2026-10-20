@@ -78,26 +78,47 @@
 
   function ensureRelationshipStore(project) {
     if (!project || !Array.isArray(project.characters)) return project;
-    const charactersById = new Map(project.characters.filter((character) => character && typeof character.id === "string").map((character) => [character.id, character]));
-    if (!Array.isArray(project.relationships)) {
-      const migrated = new Map();
-      for (const character of project.characters) {
-        if (!character || !Array.isArray(character.relationships)) continue;
-        for (const relatedId of character.relationships) {
-          if (typeof relatedId !== "string" || relatedId === character.id || !charactersById.has(relatedId)) continue;
-          const [sourceCharacterId, targetCharacterId] = [character.id, relatedId].sort();
-          const key = sourceCharacterId + "\\u0000" + targetCharacterId;
-          if (!migrated.has(key)) migrated.set(key, {
-            id: "rel-legacy-" + encodeURIComponent(sourceCharacterId) + "-" + encodeURIComponent(targetCharacterId),
-            name: "Relación heredada", sourceCharacterId, targetCharacterId,
-            relationshipType: "other",
-            description: "Relación migrada desde la ficha del proyecto anterior.",
-            status: "unknown"
-          });
-        }
-      }
-      project.relationships = Array.from(migrated.values());
+    const charactersById = new Map(project.characters
+      .filter((character) => character && typeof character.id === "string" && character.id.trim())
+      .map((character) => [character.id, character]));
+    if (!Array.isArray(project.relationships)) project.relationships = [];
+
+    // The app also runs this migration when recovering localStorage and snapshots.
+    // An empty relationships array may come from a partially migrated legacy backup,
+    // so merge character-local links into the central graph instead of trusting array presence.
+    const relationshipPairKey = (left, right) => [left, right].sort().join("\u0000");
+    const representedPairs = new Set();
+    for (const relationship of project.relationships) {
+      if (!relationship || typeof relationship !== "object") continue;
+      const sourceCharacterId = relationship.sourceCharacterId;
+      const targetCharacterId = relationship.targetCharacterId;
+      if (typeof sourceCharacterId !== "string" || !sourceCharacterId.trim() ||
+          typeof targetCharacterId !== "string" || !targetCharacterId.trim() ||
+          sourceCharacterId === targetCharacterId ||
+          !charactersById.has(sourceCharacterId) || !charactersById.has(targetCharacterId)) continue;
+      representedPairs.add(relationshipPairKey(sourceCharacterId, targetCharacterId));
     }
+
+    for (const character of project.characters) {
+      if (!character || typeof character.id !== "string" || !Array.isArray(character.relationships)) continue;
+      for (const relatedId of character.relationships) {
+        if (typeof relatedId !== "string" || !relatedId.trim() ||
+            relatedId === character.id || !charactersById.has(character.id) ||
+            !charactersById.has(relatedId)) continue;
+        const [sourceCharacterId, targetCharacterId] = [character.id, relatedId].sort();
+        const key = relationshipPairKey(sourceCharacterId, targetCharacterId);
+        if (representedPairs.has(key)) continue;
+        project.relationships.push({
+          id: "rel-legacy-" + encodeURIComponent(sourceCharacterId) + "-" + encodeURIComponent(targetCharacterId),
+          name: "Relación heredada", sourceCharacterId, targetCharacterId,
+          relationshipType: "other",
+          description: "Relación migrada desde la ficha del proyecto anterior.",
+          status: "unknown"
+        });
+        representedPairs.add(key);
+      }
+    }
+
     project.characters.forEach((character) => { if (character && typeof character === "object") character.relationships = []; });
     project.relationships.forEach((relationship) => {
       if (!relationship || typeof relationship.sourceCharacterId !== "string" || typeof relationship.targetCharacterId !== "string") return;

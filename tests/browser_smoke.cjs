@@ -58,6 +58,74 @@ async function run() {
     });
     const address = server.address();
     browser = await chromium.launch({ headless: true });
+    // Exercise the real app recovery path with a partially migrated local backup.
+    // IndexedDB is deliberately disabled so initializeApplication must recover the
+    // compatibility copy and run ensureRelationshipStore before persisting it.
+    const legacyRecoveryContext = await browser.newContext();
+    const legacyRecoveryFixture = {
+      schemaVersion: 1,
+      project: { id: "legacy-relationship-recovery", name: "Respaldo con relaciones heredadas", description: "Recovery regression fixture." },
+      locations: [{
+        id: "legacy-recovery-location", name: "Plaza de Prueba", type: "Ciudad", parentId: null,
+        description: "Lugar de prueba para la recuperación.", tags: ["test"], population: "", government: "",
+        climate: "", marker: [100, 100], characters: ["legacy-char-a", "legacy-char-b"], events: []
+      }],
+      characters: [
+        {
+          id: "legacy-char-a", name: "Alba Heredada", age: 20, species: "Humana", role: "Exploradora",
+          personality: ["Prudente"], description: "Personaje A del respaldo antiguo.", motivation: "Recuperar sus vínculos.",
+          flaw: "Confía en formatos antiguos.", locationHistory: [{ locationId: "legacy-recovery-location", from: "chapter1", to: "now" }],
+          relationships: ["legacy-char-b"], status: "canon"
+        },
+        {
+          id: "legacy-char-b", name: "Beto Heredado", age: 22, species: "Humano", role: "Cartógrafo",
+          personality: ["Metódico"], description: "Personaje B del respaldo antiguo.", motivation: "Conservar los registros.",
+          flaw: "Evita cambiar procedimientos.", locationHistory: [{ locationId: "legacy-recovery-location", from: "chapter1", to: "now" }],
+          relationships: ["legacy-char-a"], status: "canon"
+        }
+      ],
+      events: [], organizations: [], relationships: [], stories: [], settings: { time: "now" }
+    };
+    await legacyRecoveryContext.addInitScript((fixture) => {
+      if (location.protocol !== "http:" || location.hostname !== "127.0.0.1") return;
+      try {
+        Object.defineProperty(window, "indexedDB", { configurable: true, writable: true, value: null });
+      } catch {
+        try { window.indexedDB.open = () => { throw new Error("IndexedDB deliberately disabled for legacy-recovery regression."); }; } catch { /* The test asserts the fallback outcome below. */ }
+      }
+      localStorage.setItem("wordwaifu.project.v1", JSON.stringify(fixture));
+    }, legacyRecoveryFixture);
+    const legacyRecoveryPage = await legacyRecoveryContext.newPage();
+    await legacyRecoveryPage.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
+    await legacyRecoveryPage.waitForFunction(() => {
+      const name = document.querySelector("#project-name")?.textContent || "";
+      const status = document.querySelector("#save-status")?.textContent || "";
+      return name === "Respaldo con relaciones heredadas" &&
+        (status.includes("Proyecto recuperado") || status.includes("Modo de recuperación"));
+    }, null, { timeout: 10000 });
+    const legacyRecoveryReport = await legacyRecoveryPage.evaluate(() => {
+      const project = JSON.parse(localStorage.getItem("wordwaifu.project.v1"));
+      return {
+        name: project.project.name,
+        relationships: project.relationships,
+        characterLinks: project.characters.map((character) => ({ id: character.id, relationships: character.relationships })),
+        status: document.querySelector("#save-status")?.textContent || ""
+      };
+    });
+    assert.equal(legacyRecoveryReport.name, "Respaldo con relaciones heredadas");
+    assert.equal(legacyRecoveryReport.relationships.length, 1,
+      "An empty central relationship array must not erase reciprocal links during local-backup recovery.");
+    assert.equal(legacyRecoveryReport.relationships[0].id, "rel-legacy-legacy-char-a-legacy-char-b");
+    assert.deepEqual(
+      [legacyRecoveryReport.relationships[0].sourceCharacterId, legacyRecoveryReport.relationships[0].targetCharacterId],
+      ["legacy-char-a", "legacy-char-b"]
+    );
+    assert.deepEqual(legacyRecoveryReport.characterLinks.find((character) => character.id === "legacy-char-a").relationships, ["legacy-char-b"]);
+    assert.deepEqual(legacyRecoveryReport.characterLinks.find((character) => character.id === "legacy-char-b").relationships, ["legacy-char-a"]);
+    assert.match(legacyRecoveryReport.status, /respaldo local|Modo de recuperación|Proyecto recuperado/i);
+    process.stdout.write("PASS app recovery migration: empty central store preserves legacy character links in the local backup.\\n");
+    await legacyRecoveryContext.close();
+
     const context = await browser.newContext();
     const page = await context.newPage();
     page.on("pageerror", (error) => pageErrors.push(error.stack || error.message));
