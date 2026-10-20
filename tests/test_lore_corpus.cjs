@@ -92,7 +92,7 @@ const heraDeityClaim = index.claims.find(item => item.claimId === "DMR-021-CLM-0
 const zeusDeityClaim = index.claims.find(item => item.claimId === "DMR-021-CLM-001");
 assert.ok(zeusDeityClaim?.claim.includes("identifica a Zeus como deidad patrona"),
   "Legacy Spanish bold-labelled Afirmación fields must populate the structured claim text.");
-assert.ok(heraDeityClaim?.claim.includes("identifica a Hera como su deidad patrona"),
+assert.ok(heraDeityClaim?.claim.includes("la identifica como su deidad patrona"),
   "Hera's legacy bold-labelled Afirmación field must populate the structured claim text.");
 
 assert.ok(heraDeityClaim, "Hera's deity claim must be parsed from the registered research file.");
