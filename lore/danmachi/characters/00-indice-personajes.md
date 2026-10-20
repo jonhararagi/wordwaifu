@@ -45,7 +45,7 @@ Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean du
 | Gareth Landrock | `CHAR-GARETH-LANDROCK` | Personaje | `provisional` | [Abrir](gareth-landrock.md) |
 | Gojouno Kaguya | `CHAR-KAGUYA` | Personaje | `provisional` | [Abrir](gojouno-kaguya.md) |
 | Grer Gulliver | `CHAR-GRER-GULLIVER` | Personaje | `source_checked_partial` | [Abrir](grergulliver.md) |
-| Gulliver Brothers | `CHAR-GULLIVER-BROTHERS` | Personaje | `source_checked_partial` | [Abrir](gulliverbrothers.md) |
+| Gulliver Brothers | `CHAR-GULLIVER-BROTHERS` | Grupo | `source_checked_partial` | [Abrir](gulliverbrothers.md) |
 | Haruhime Sanjouno | `CHAR-SANJOUNO-HARUHIME` | Personaje | `provisional` | [Abrir](haruhime-sanjouno.md) |
 | Hedin Selland | `CHAR-HEDIN-SELLAND` | Personaje | `source_checked_partial` | [Abrir](hedinselland.md) |
 | Heith Velvet | `CHAR-HEITH-VELVET` | Personaje | `source_checked_partial` | [Abrir](heithvelvet.md) |

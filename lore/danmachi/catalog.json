@@ -1512,17 +1512,12 @@
     {
       "id": "CHAR-GULLIVER-BROTHERS",
       "path": "characters/gulliverbrothers.md",
-      "type": "character",
+      "type": "character_group",
       "tags": [
         "Gulliver Brothers",
-        "Gulliver",
-        "ガリバー兄弟",
-        "Alfrik",
-        "Dvalinn",
-        "Berling",
-        "Grer",
         "Freya Familia",
-        "Unidad de combate; aventureros de primera clase",
+        "cuatro hermanos",
+        "unidad táctica",
         "CONT-ANIME"
       ],
       "status": "source_checked_partial",

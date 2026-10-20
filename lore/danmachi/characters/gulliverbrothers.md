@@ -1,7 +1,7 @@
 ---
 id: CHAR-GULLIVER-BROTHERS
 universe: danmachi
-type: character
+type: character_group
 status: source_checked_partial
 continuity_scope: CONT-ANIME
 source_refs: ["DMR-006-SRC-001"]

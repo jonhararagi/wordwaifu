@@ -25,6 +25,7 @@ for (const character of roster) {
   for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) assert.ok(typeof dossier[field] === "string" && dossier[field].length >= 100, character.id + " needs substantive " + field);
   assert.ok(Array.isArray(dossier.sources) && dossier.sources.length > 0, character.id + " must retain source URLs");
 }
+assert.equal(byId.get("CHAR-GULLIVER-BROTHERS").type, "character_group", "The siblings unit is a group node, not an individual character.");
 for (const id of ["CHAR-ALFRIGG-GULLIVER","CHAR-DVALINN-GULLIVER","CHAR-BERLING-GULLIVER","CHAR-GRER-GULLIVER"]) {
   assert.ok(byId.has(id), "Missing independent Gulliver record: " + id);
   assert.ok(catalog.relationships.some(e => e.from === id && e.to === "CHAR-GULLIVER-BROTHERS"), "Missing group edge: " + id);
