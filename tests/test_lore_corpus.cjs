@@ -195,7 +195,9 @@ assert.ok(somaSearch.results.some(claim => claim.claimId === "DMR-025-CLM-007"),
 const somaCaptureSearch = corpus.search(index, { query: "Liliruca capturada Soma Familia War Game", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(somaCaptureSearch.results.some(claim => claim.claimId === "DMR-025-CLM-002"), "The volume 6 capture context must be searchable as excerpt-only evidence.");
 
-assert.ok(index.claims.every(claim => claim.claimId && claim.entryId && claim.claim && claim.sourceIds.length));
+const incompleteClaims = index.claims.filter(claim => !claim.claimId || !claim.entryId || !claim.claim || !Array.isArray(claim.sourceIds) || !claim.sourceIds.length);
+assert.deepEqual(incompleteClaims.map(claim => ({ claimId: claim.claimId, entryId: claim.entryId, sourceIds: claim.sourceIds, sourceDocument: claim.sourceDocument })), [],
+  "Every indexed claim must have stable IDs, content and at least one source reference.");
 assert.equal(new Set(index.claims.map(claim => claim.entryId)).size, index.claims.length);
 const historicalRyu = corpus.search(index, { query: "Ryu", characterId: "CHAR-RYUU-LION", continuity: "CONT-AR", period: "ASTREA_RECORD", aspect: "all", spoiler: "all" });
 assert.ok(historicalRyu.totalMatches > 0);
