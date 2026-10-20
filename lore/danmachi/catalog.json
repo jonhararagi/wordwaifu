@@ -2248,9 +2248,15 @@
       "path": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
       "type": "research",
       "status": "partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-ANALYSIS-METHOD-001",
+      "path": "research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md",
+      "type": "analysis_protocol",
+      "status": "active_method"
     }
   ],
-  "lastStructuredSync": "2026-10-18",
+  "lastStructuredSync": "2026-10-20",
   "relationships": [
     {
       "id": "REL-ASTREA-DEITY-001",
