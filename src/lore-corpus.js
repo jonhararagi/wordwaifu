@@ -37,6 +37,38 @@
     { id:"community-ryuu-es", category:"community", title:"DanMachi Wiki en español · Ryuu Lion", publisher:"Wiki comunitaria en español", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/es/wiki/Ryuu_Lion", coverage:"Historia y cronología de Ryu antes y después de la caída de Astrea Familia.", limits:"La narración combina periodos y referencias secundarias; comprobar cada acontecimiento por separado." },
     { id:"reference-wikipedia", category:"community", title:"Wikipedia · Is It Wrong to Try to Pick Up Girls in a Dungeon?", publisher:"Enciclopedia colaborativa", authority:"Referencia secundaria general", url:"https://en.wikipedia.org/wiki/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a_Dungeon%3F", coverage:"Contexto general de la serie, publicaciones y adaptaciones.", limits:"No es la fuente adecuada para confirmar detalles finos de psicología, relaciones o cronología." }
   ];
+  const DEFAULT_RESEARCH_PATHS = [
+    "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
+    "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
+    "research/inbox/BATCH-DM-005-astrea-family-network.md",
+    "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
+    "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
+    "research/inbox/BATCH-DM-008-main-story-volume-map.md",
+    "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md",
+    "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
+    "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md",
+    "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
+    "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
+    "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md",
+    "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md",
+    "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
+    "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
+    "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md",
+    "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
+    "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+    "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+    "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"
+  ];
+  const DEFAULT_DETAIL_IDS = [
+    "CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA",
+    "CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR","CHAR-KAGUYA","CHAR-LYRA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE",
+    "CHAR-NOIN-UNIC","CHAR-NEZE-RANKETT","CHAR-ASTA-KNOX","CHAR-RYANA-LIETZ","CHAR-CELTY-SROWA","CHAR-CECIL-BLACKLIZA",
+    "CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA","CHAR-RIVERIA-LJOS-ALF","CHAR-GARETH-LANDROCK","CHAR-LEFIYA-VIRIDIS",
+    "CHAR-TIONA-HIRYUTE","CHAR-TIONE-HIRYUTE","CHAR-BETE-LOGA","CHAR-RAUL-NOORD","CHAR-SOMA","CHAR-ZANIS-LUSTRA",
+    "CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY","CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-HELGA"
+  ];
+  function getDefaultResearchPaths() { return DEFAULT_RESEARCH_PATHS.slice(); }
+  function getDefaultDetailIds() { return DEFAULT_DETAIL_IDS.slice(); }
   function normalize(value) {
     return String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "")
       .toLocaleLowerCase("es").replace(/[^a-z0-9\u3040-\u30ff\u4e00-\u9faf-]+/g, " ")
@@ -318,14 +350,14 @@
   }
   async function load(basePath) {
     const base = basePath || "./lore/danmachi/";
-    const paths = ["catalog.json", "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md", "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md", "research/inbox/BATCH-DM-005-astrea-familia-network.md", "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md", "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md", "research/inbox/BATCH-DM-008-main-story-volume-map.md", "research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md", "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md", "research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md", "research/inbox/DANMACHI-RESEARCH-013-ryuu-v-and-war-game.md", "research/inbox/DANMACHI-RESEARCH-014-bell-opening-episode.md", "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md", "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md", "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md", "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md", "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"];
+    const paths = ["catalog.json", ...getDefaultResearchPaths()];
     const responses = await Promise.all(paths.map(path => fetch(base + path, { cache: "no-cache" })));
     for (let i = 0; i < responses.length; i++) if (!responses[i].ok) throw new Error("No se pudo cargar " + paths[i] + " (HTTP " + responses[i].status + ").");
     const catalog = await responses[0].json();
     const docs = await Promise.all(responses.slice(1).map(async (response, i) => ({
       path: paths[i + 1], content: await response.text()
     })));
-    const detailIds = new Set(["CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA","CHAR-FINN-DEIMNE","CHAR-FREYA","CHAR-OTTAR","CHAR-KAGUYA","CHAR-LYRA","CHAR-ISKA-BRA","CHAR-MARIYU-LEAGE","CHAR-NOIN-UNIC","CHAR-NEZE-RANKETT","CHAR-ASTA-KNOX","CHAR-RYANA-LIETZ","CHAR-CELTY-SROWA","CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA","CHAR-RIVERIA-LJOS-ALF","CHAR-GARETH-LANDROCK","CHAR-LEFIYA-VIRIDIS","CHAR-TIONA-HIRYUTE","CHAR-TIONE-HIRYUTE","CHAR-BETE-LOGA","CHAR-RAUL-NOORD","CHAR-SOMA","CHAR-ZANIS-LUSTRA","CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY"]);
+    const detailIds = new Set(getDefaultDetailIds());
     const profileRecords = (catalog.records || []).filter(record =>
       detailIds.has(record.id) && typeof record.path === "string" &&
       record.path.startsWith("characters/") && record.path.endsWith(".md"));
@@ -545,5 +577,5 @@
     };
   }
 
-  return { load, buildIndex, search, searchEntities, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText, extractExternalLead, allowedExternalImageUrl };
+  return { load, buildIndex, search, searchEntities, normalize, tokens, parseCharacterProfile, getOnlineSourceDirectory, searchExternalSources, cleanExternalText, extractExternalLead, allowedExternalImageUrl, getDefaultResearchPaths, getDefaultDetailIds };
 });
