@@ -8,8 +8,12 @@ assert.ok(roster, "Official adaptation roster module must load");
 const entries = roster.list();
 const ids = entries.map(entry => entry.id);
 assert.equal(new Set(ids).size, ids.length, "Roster IDs must be unique");
-assert.equal(entries.length, 59, "Roster count should include the restored Eina Tulle record.");
+assert.equal(entries.length, 63, "Roster keeps the existing adaptation identities and adds four independently navigable Gulliver brothers.");
 
+for (const id of ["CHAR-ALFRIGG-GULLIVER","CHAR-DVALINN-GULLIVER","CHAR-BERLING-GULLIVER","CHAR-GRER-GULLIVER"]) {
+  assert.ok(roster.get(id), "Each Gulliver brother must have an independent roster identity: " + id);
+  assert.equal(roster.get(id).continuity, "CONT-ANIME");
+}
 const eina = roster.get("DM-CHAR-EINA");
 assert.ok(eina, "Eina Tulle must be present in the official adaptation roster");
 assert.equal(eina.name, "Eina Tulle");
