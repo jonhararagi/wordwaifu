@@ -18,6 +18,12 @@
 | LOC-HEPHAISTOS-SHOP | Herrería de Hephaistos | Welf, equipo y fabricación | Media |
 | LOC-DAEDALUS-STREET | Zona de Daedalus Street | Arcos y geografía urbana; localizador pendiente | Media |
 
+## Candidatos de Orario encontrados en wikis (IDs aún no activados)
+
+El inventario secundario incluye Pantheon/sede física de la Guild, iglesia abandonada, tienda de Hephaistos, anfiteatro/Coliseo, calle Daidalos, área comercial, mercado libre, Plaza del Amor, cementerio de aventureros, distrito del entretenimiento, Hibachitei, Hearth Mansion, apartamento de Eina y una posada asociada a Hermes Familia.
+
+Estos nombres son **candidatos de investigación**, no nuevas entidades aprobadas. Antes de asignar IDs hay que comprobar su primera aparición, forma japonesa/nombre de edición, tipo real (lugar, institución, negocio o residencia), continuidad y estado temporal. Véase [DANMACHI-RESEARCH-031 — Orario: geografía y mapa](../research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md).
+
 ## Regiones y lugares fuera de Orario
 
 Crear un registro por país, ciudad, región, isla, ruina o lugar relevante cuando se confirme su nombre y papel. El atlas no debe asumir que un mapa esquemático equivale a una cartografía canónica exacta.

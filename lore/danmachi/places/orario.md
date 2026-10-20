@@ -26,6 +26,17 @@ Esta es una base general, no una prueba de todos los distritos, dimensiones, ley
 
 **Fuente y alcance:** [DMR-026-SRC-001 — glosario oficial de lugares](../sources/00-registro-fuentes.md#dmr-026-src-001), entradas de Orario, Babel y Hostess of Fertility. Fuente oficial de la adaptación anime; no sustituye los pasajes de la novela ligera.
 
+## Pistas geográficas recuperadas de wikis (aún no canónicas)
+
+Las wikis aportan un mapa de lugares candidatos y posibles detalles urbanísticos que no aparecen desarrollados en la fuente oficial de adaptación consultada. Se conservan como **evidencia secundaria**, separada de la descripción oficial anterior, y no alteran el estado de las afirmaciones verificadas de esta ficha.
+
+- La wiki inglesa enumera una serie de lugares y presenta Orario dividida visualmente en ocho secciones: [DANMACHI-RESEARCH-031, CLM-001](../research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md#dmr-031-clm-001).
+- La wiki española añade etiquetas candidatas como calle Daidalos, Coliseo, área comercial, Plaza del Amor, mercado libre, cementerio de aventureros, distrito del entretenimiento y apartamento de Eina: [CLM-002](../research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md#dmr-031-clm-002).
+- Una wiki japonesa describe ocho avenidas radiales, murallas y una economía ligada a piedras mágicas: [CLM-003 y CLM-004](../research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md#dmr-031-clm-003).
+- Las descripciones comunitarias de las funciones de la Guild, Pantheon y los pisos de Babel están registradas como pistas individuales, no como detalles ya confirmados: [CLM-005–007](../research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md#dmr-031-clm-005).
+
+El mapa de una wiki **no se usa como cartografía oficial**, ni la coincidencia entre wikis prueba una afirmación. Cada ubicación necesita su propio localizador antes de convertirse en registro activo o relación canónica.
+
 ## Red de lugares e instituciones
 
 - **[Dungeon](dungeon.md):** gran laberinto subterráneo asociado espacialmente a la ciudad. La ficha propia debe contener los detalles del laberinto; esta página solo conserva el vínculo urbano general.
