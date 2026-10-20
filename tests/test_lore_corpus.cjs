@@ -396,7 +396,7 @@ process.stdout.write("PASS lore search: source claims and entries, Astrea wiki r
 // remain searchable, and keep an explicit secondary-evidence status.
 const orarioMapSearch = corpus.search(index, { query: "Orario ocho secciones mapa", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(orarioMapSearch.results.some(item => item.claimId === "DMR-031-CLM-001" && item.verificationStatus === "secondary_checked"), "The English Orario map and place inventory must be searchable as secondary evidence.");
-const orarioRoadsSearch = corpus.search(index, { query: "Orario avenidas radiales ocho murallas", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+const orarioRoadsSearch = corpus.search(index, { query: "Orario avenidas radialmente ocho murallas", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(orarioRoadsSearch.results.some(item => item.claimId === "DMR-031-CLM-003" && item.verificationStatus === "secondary_checked"), "Japanese wiki leads about the urban layout must be searchable without canon promotion.");
 const orarioEconomySearch = corpus.search(index, { query: "Orario piedras mágicas ciudad desarrollo", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(orarioEconomySearch.results.some(item => item.claimId === "DMR-031-CLM-004" && item.verificationStatus === "secondary_checked"), "Wiki-sourced economic leads must remain retrievable and secondary-labelled.");
