@@ -1351,6 +1351,35 @@
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "normal"
+    },
+    {
+      "id": "LOC-DAEDALUS-STREET",
+      "path": "places/daedalus-street.md",
+      "type": "location",
+      "tags": [
+        "Daedalus Street",
+        "Daidalos Street",
+        "ダイダロス通り",
+        "Calle Daidalos",
+        "Orario",
+        "zona residencial"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "LOC-PANTHEON",
+      "path": "places/pantheon.md",
+      "type": "location",
+      "tags": [
+        "Pantheon",
+        "パンテオン",
+        "Guild",
+        "Orario",
+        "edificio institucional"
+      ],
+      "status": "secondary_checked",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
@@ -1511,11 +1540,6 @@
     },
     {
       "id": "LOC-HEPHAISTOS-SHOP",
-      "type": "location",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "LOC-DAEDALUS-STREET",
       "type": "location",
       "status": "candidate_not_created"
     },
@@ -2254,6 +2278,18 @@
       "path": "research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md",
       "type": "analysis_protocol",
       "status": "active_method"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-031",
+      "path": "research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md",
+      "type": "research_package",
+      "status": "secondary_checked"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-032",
+      "path": "research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md",
+      "type": "location_research",
+      "status": "source_checked_partial"
     }
   ],
   "lastStructuredSync": "2026-10-20",
@@ -3819,6 +3855,48 @@
       "claimRef": "DMR-029-CLM-017",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
       "note": "Relación secundaria de spoiler mayor; no implica recuerdos compartidos ni continuidad de conciencia. Pendiente de localizador primario."
+    },
+    {
+      "id": "REL-DAEDALUS-ORARIO-OFFICIAL",
+      "from": "LOC-DAEDALUS-STREET",
+      "to": "LOC-ORARIO",
+      "kind": "located_in",
+      "label": "La sinopsis oficial de DanMachi III, episodio 12, menciona Daedalus Street dentro del contexto del caos en Orario",
+      "continuity": "CONT-ANIME",
+      "interval": "DanMachi III, episodio 12; fecha interna exacta no establecida",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_episode_synopsis",
+      "claimRef": "DMR-032-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md",
+      "note": "La fuente confirma la mención del lugar en el contexto narrativo de Orario, pero no fija orientación, límites ni distancia respecto de otros hitos."
+    },
+    {
+      "id": "REL-PANTHEON-ORARIO-WIKI-SECONDARY",
+      "from": "LOC-PANTHEON",
+      "to": "LOC-ORARIO",
+      "kind": "located_in",
+      "label": "La wiki comunitaria incluye Pantheon en su esquema urbano de Orario",
+      "continuity": "CONT-UNVERIFIED",
+      "interval": "Mapa comunitario de Orario; periodo narrativo no fijado",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_map",
+      "claimRef": "DMR-031-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md",
+      "note": "Relación espacial secundaria; no usar el esquema comunitario como mapa oficial ni inferir distancias."
+    },
+    {
+      "id": "REL-PANTHEON-GUILD-HEADQUARTERS-SECONDARY",
+      "from": "LOC-PANTHEON",
+      "to": "DM-GUILD-001",
+      "kind": "headquarters_of",
+      "label": "La wiki comunitaria identifica Pantheon como edificio principal de la Guild",
+      "continuity": "CONT-UNVERIFIED",
+      "interval": "Descripción comunitaria general; periodo exacto no establecido",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_summary",
+      "claimRef": "DMR-031-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md",
+      "note": "La relación diferencia el edificio físico de la institución. Sigue siendo secundaria y no resuelve si Pantheon se distingue físicamente de Babel en la continuidad de la novela."
     }
   ]
 }
