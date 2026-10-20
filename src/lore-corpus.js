@@ -45,7 +45,7 @@
   const DEFAULT_RESEARCH_PATHS = [
     "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
     "research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md",
-    "research/inbox/BATCH-DM-005-astrea-family-network.md",
+    "research/inbox/BATCH-DM-005-astrea-familia-network.md",
     "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
     "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
     "research/inbox/BATCH-DM-008-main-story-volume-map.md",
