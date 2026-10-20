@@ -1778,3 +1778,67 @@ verification_status: stub
 - reliability_note: La página resume mecánicas y efectos, incluidas estimaciones numéricas; no se han cotejado con los pasajes primarios.
 - rights_note: Enlace y paráfrasis original; no copiar el artículo.
 - verification_status: secondary_checked
+
+
+## DMR-034-SRC-001 · Portal oficial de DanMachi — Prototype, episodio 3
+
+- source_id: DMR-034-SRC-001
+- title: 理想郷譚（プロトタイプ） 第３話 — 世界と現実と憧憬②
+- creator_or_publisher: Portal oficial de la serie DanMachi
+- source_type: OFFICIAL_PROTOTYPE_TEXT
+- series: DanMachi Prototype
+- volume_or_edition: Relato web, episodio 3
+- language: Japonés
+- official_url: https://danmachi.com/10_projects/prototype_03.php
+- accessed_at: 2026-10-20
+- locator_type: web_story_passage
+- locator: Descripción de Orario y la escena urbana multiétnica al inicio del episodio
+- claims_supported: [DMR-034-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-PROTOTYPE
+- reliability_note: Fuente oficial para la versión identificada como Prototype. No tomar sus datos como prueba automática de la novela principal o del anime.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no reproducir el relato.
+- verification_status: source_checked
+
+## DMR-034-SRC-002 · Portal oficial de DanMachi — Prototype, episodio 16
+
+- source_id: DMR-034-SRC-002
+- title: 理想郷譚（プロトタイプ） 第１６話 — デートのちサポーター②
+- creator_or_publisher: Portal oficial de la serie DanMachi
+- source_type: OFFICIAL_PROTOTYPE_TEXT
+- series: DanMachi Prototype
+- volume_or_edition: Relato web, episodio 16
+- language: Japonés
+- official_url: https://danmachi.com/10_projects/prototype_16.php
+- accessed_at: 2026-10-20
+- locator_type: web_story_passage
+- locator: Pasajes sobre avenida noroeste, ocho avenidas, el centro urbano, Central Park y tiendas/servicios de Babel
+- claims_supported: [DMR-034-CLM-002, DMR-034-CLM-003, DMR-034-CLM-004, DMR-034-CLM-005, DMR-034-CLM-006, DMR-034-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-PROTOTYPE
+- reliability_note: Fuente oficial para la versión identificada como Prototype. Confirma lo que afirma ese texto, no la continuidad de la novela publicada.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no reproducir el relato.
+- verification_status: source_checked
+
+## DMR-034-SRC-003 · Portal oficial de DanMachi — Prototype, episodio 26
+
+- source_id: DMR-034-SRC-003
+- title: 理想郷譚（プロトタイプ） 第２６話 — 魔法は膝枕を喚ぶ魔法②
+- creator_or_publisher: Portal oficial de la serie DanMachi
+- source_type: OFFICIAL_PROTOTYPE_TEXT
+- series: DanMachi Prototype
+- volume_or_edition: Relato web, episodio 26
+- language: Japonés
+- official_url: https://danmachi.com/10_projects/prototype_26.php
+- accessed_at: 2026-10-20
+- locator_type: web_story_passage
+- locator: Pasajes sobre Central Park alrededor de Babel, faroles nocturnos, locales comerciales hasta el piso veinte y habitaciones de dioses en los pisos superiores
+- claims_supported: [DMR-034-CLM-008, DMR-034-CLM-009]
+- events_supported: []
+- continuity_scope: CONT-PROTOTYPE
+- reliability_note: Fuente oficial para la versión identificada como Prototype. No transportar el corte de pisos ni la distribución residencial a otra continuidad sin comprobarla.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no reproducir el relato.
+- verification_status: source_checked

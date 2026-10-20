@@ -455,3 +455,31 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-APOLLO-MANOR-REPLACE
 assert.ok(corpus.searchEntities(catalog, { type: "location", query: "iglesia abandonada" }).results.some(entity => entity.id === "LOC-HESTIA-HOME"), "The former church must be discoverable by its secondary alias.");
 assert.ok(corpus.searchEntities(catalog, { type: "location", query: "Apollo mansion" }).results.some(entity => entity.id === "LOC-APOLLO-MANOR"), "The mansion must be discoverable as a separate location.");
 assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "official-danmachi2-story" && source.url === "https://danmachi.com/danmachi2/story/index.html?slideNum=2"), "The official Season II synopsis must be available in the source directory.");
+
+
+// Official Prototype source material enriches Orario while remaining separated
+// from the published novel and anime. These tests defend the continuity boundary.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md"), "The Orario Prototype dossier must be included in the production research manifest.");
+const prototypeRoadsSearch = corpus.search(index, { query: "Orario avenidas ocho nordeste noroeste", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(prototypeRoadsSearch.results.some(item => item.claimId === "DMR-034-CLM-002" && item.verificationStatus === "source_checked"), "The eight radial avenues must be searchable under the Prototype continuity.");
+const prototypeBabelCommerceSearch = corpus.search(index, { query: "Babel tiendas aventureros Familias comerciales calidad", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(prototypeBabelCommerceSearch.results.some(item => item.claimId === "DMR-034-CLM-007" && item.verificationStatus === "source_checked"), "Prototype's Babel market detail must be searchable with its source status.");
+const prototypeCentralParkSearch = corpus.search(index, { query: "Central Park Babel faroles piedras mágicas tabernas noche", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(prototypeCentralParkSearch.results.some(item => item.claimId === "DMR-034-CLM-009" && item.verificationStatus === "source_checked"), "Prototype's Central Park night scene must be searchable.");
+const prototypeNotCanonSearch = corpus.search(index, { query: "Orario avenidas ocho nordeste noroeste", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(!prototypeNotCanonSearch.results.some(item => /^DMR-034-CLM-/.test(item.claimId || "")), "Prototype-only claims must not leak into published-novel search.");
+assert.ok(catalog.records.some(record => record.id === "LOC-ORARIO-MAIN-STREETS" && record.path === "places/main-streets.md" && record.status === "source_checked_partial"), "The Orario avenue network must be navigable as its own location entry.");
+assert.ok(catalog.records.some(record => record.id === "LOC-CENTRAL-PARK" && record.path === "places/central-park.md" && record.status === "source_checked_partial"), "Central Park must be navigable as its own location entry.");
+assert.ok(!catalog.reservedIds.some(record => ["LOC-ORARIO-MAIN-STREETS","LOC-CENTRAL-PARK"].includes(record.id)), "Activated Prototype locations must not remain reserved.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-ORARIO-MAIN-STREETS-OF-ORARIO" && edge.from === "LOC-ORARIO-MAIN-STREETS" && edge.to === "LOC-ORARIO" && edge.continuity === "CONT-PROTOTYPE" && edge.claimRef === "DMR-034-CLM-002"), "The avenue-network relation must carry Prototype provenance.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-CENTRAL-PARK-AROUND-BABEL-PROTOTYPE" && edge.from === "LOC-CENTRAL-PARK" && edge.to === "LOC-BABEL" && edge.continuity === "CONT-PROTOTYPE" && edge.claimRef === "DMR-034-CLM-003"), "Central Park must be linked to Babel only under the Prototype continuity.");
+assert.ok(corpus.searchEntities(catalog, { type: "location", query: "avenidas Orario" }).results.some(entity => entity.id === "LOC-ORARIO-MAIN-STREETS"), "Orario's street network must be findable as an entity.");
+assert.ok(corpus.searchEntities(catalog, { type: "location", query: "Central Park" }).results.some(entity => entity.id === "LOC-CENTRAL-PARK"), "Central Park must be findable as an entity.");
+const prototypeSources = corpus.getOnlineSourceDirectory();
+for (const [id,url] of [
+  ["official-prototype-03","https://danmachi.com/10_projects/prototype_03.php"],
+  ["official-prototype-16","https://danmachi.com/10_projects/prototype_16.php"],
+  ["official-prototype-26","https://danmachi.com/10_projects/prototype_26.php"]
+]) {
+  assert.ok(prototypeSources.some(source => source.id === id && source.url === url && source.authority.includes("continuidad separada")), "Prototype source must be searchable and explicitly separate: " + id);
+}
