@@ -12,6 +12,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - Navegación de relaciones en el archivo: ver [control de calidad y deduplicación](QUALITY_AND_DEDUP.md#navegacion-bidireccional-de-relaciones-archivo-de-personajes).
 - [Control de calidad y duplicados](QUALITY_AND_DEDUP.md)
 - [Cola ordenada de trabajo](WORK_QUEUE.md)
+- [Método de análisis progresivo](research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md) — orden de cobertura: Orario → sucesos → personajes principales → secundarios → historias individuales.
 - [Registro de tandas](BATCH_LOG.md)
 - [Plantilla de personaje](templates/registro-personaje.md)
 - [Plantilla de evento](templates/registro-evento.md)
