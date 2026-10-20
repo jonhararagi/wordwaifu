@@ -390,3 +390,27 @@ process.stdout.write("PASS lore search: source claims and entries, Astrea wiki r
 
   process.stdout.write("PASS web research: Fandom/Wikipedia search, secondary-source labels, safe snippets and graceful partial failure verified.\n");
 })().catch(error=>{ console.error(error); process.exitCode=1; });
+
+
+// Orario secondary wiki leads must be included in the production research manifest,
+// remain searchable, and keep an explicit secondary-evidence status.
+const orarioMapSearch = corpus.search(index, { query: "Orario ocho secciones mapa Babel Daidalos Coliseo", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(orarioMapSearch.results.some(item => item.claimId === "DMR-031-CLM-001" && item.verificationStatus === "secondary_checked"), "The English Orario map and place inventory must be searchable as secondary evidence.");
+const orarioRoadsSearch = corpus.search(index, { query: "Orario avenidas radiales ocho calles murallas", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(orarioRoadsSearch.results.some(item => item.claimId === "DMR-031-CLM-003" && item.verificationStatus === "secondary_checked"), "Japanese wiki leads about the urban layout must be searchable without canon promotion.");
+const orarioEconomySearch = corpus.search(index, { query: "Orario industria piedras mágicas exportación economía", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(orarioEconomySearch.results.some(item => item.claimId === "DMR-031-CLM-004" && item.verificationStatus === "secondary_checked"), "Wiki-sourced economic leads must remain retrievable and secondary-labelled.");
+const guildBuildingSearch = corpus.search(index, { query: "Guild Pantheon mostradores biblioteca aventureros", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(guildBuildingSearch.results.some(item => item.claimId === "DMR-031-CLM-006" && item.verificationStatus === "secondary_checked"), "Guild/Pantheon building details must be retrievable separately from canon-confirmed facts.");
+const babelFloorsSearch = corpus.search(index, { query: "Babel cincuenta pisos tiendas torre Dungeon", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(babelFloorsSearch.results.some(item => item.claimId === "DMR-031-CLM-007" && item.verificationStatus === "secondary_checked"), "Detailed Babel floor claims must remain searchable but explicitly secondary.");
+const orarioSources = corpus.getOnlineSourceDirectory();
+for (const [id, url] of [
+  ["community-orario-en", "https://danmachi.fandom.com/wiki/Orario"],
+  ["community-orario-es", "https://danmachi.fandom.com/es/wiki/Orario"],
+  ["community-guild", "https://danmachi.fandom.com/wiki/Guild"],
+  ["community-babel", "https://danmachi.fandom.com/wiki/Babel"],
+  ["community-orario-atwiki-ja", "https://w.atwiki.jp/danmachi/pages/53.html"]
+]) {
+  assert.ok(orarioSources.some(source => source.id === id && source.url === url && source.authority === "Fuente secundaria"), "Orario wiki sources must be available from the searchable source directory: " + id);
+}
