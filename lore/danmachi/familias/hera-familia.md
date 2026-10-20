@@ -8,6 +8,7 @@ source_refs:
   - DMR-011-SRC-005
   - DMR-021-SRC-002
   - DMR-021-SRC-004
+  - DMR-029-SRC-017
 claim_refs:
   - DMR-008-CLM-027
   - DMR-021-CLM-002
@@ -31,6 +32,14 @@ La página comunitaria describe a Hera Familia como una de las organizaciones de
 - Las wikis sitúan la llegada histórica de ambas Familias al piso 71, aunque señalan que el récord público reconocido era el piso 59. Esta es una pista secundaria, no motivo para cambiar un récord oficial.
 - También atribuyen a las Familias cooperación con el Gremio mediante mapas, registros de capacidades de miembros y conocimiento sobre habilidades de desarrollo y crecimiento. La división exacta de esas contribuciones entre una Familia y otra no está fijada.
 - Los resúmenes comunitarios conectan el debilitamiento posterior de las Familias con el enfrentamiento contra el Dragón Negro de un solo ojo. La secuencia causal y el estado institucional de Hera Familia siguen pendientes de una fuente narrativa localizada.
+
+## Afterglow: técnica de combate compartida reportada
+
+La wiki comunitaria atribuye a Zeus Familia y Hera Familia una técnica que refuerza un arma de filo con magia o habilidad para generar una onda de choque a distancia. La nombra **Afterglow (残光, Zankō)** y dice que Leon la copió después de enfrentarse varias veces a miembros de ambas Familias. No debe confundirse con una magia exclusiva de Hera Familia ni con una prueba primaria de quién la inventó.
+
+- **Claim:** DMR-029-CLM-015.
+- **Fuente comunitaria:** [Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia), [Zeus Familia](https://danmachi.fandom.com/wiki/Zeus_Familia) y [Terminology](https://danmachi.fandom.com/wiki/Terminology).
+- **Estado:** secondary_checked; origen y escenas exactas pendientes de cotejo primario.
 
 ## Personajes y relaciones navegables
 - **[Hera](../characters/hera.md):** deidad patrona reportada por la wiki; no es la capitana mortal de nivel 9.
