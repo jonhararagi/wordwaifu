@@ -298,7 +298,7 @@
       relationships: "Dionysus ejerce una influencia decisiva sobre su trayectoria. Lefiya y los miembros de Loki Familia quedan vinculados a su historia a través de investigaciones y enfrentamientos que cambian su lectura de los hechos. Las relaciones que construye están atravesadas por secretos y por la dificultad de confiar.",
       conflict: "El deseo de ser aceptada puede entrar en conflicto con la identidad que intenta ocultar. Su historia plantea cuánto de una persona puede juzgarse por sus actos cuando otros han intervenido en las condiciones que la formaron.",
       sources: ["https://danmachi.fandom.com/wiki/Filvis_Chalia", "https://danmachi.com/sword_oratoria/character/"]
-    }
+    },
     "CHAR-ALLEN-FROMEL": {
       "appearance": "El retrato del perfil oficial identifica a Allen Fromel en la adaptación; no se trata como diseño invariable entre temporadas.",
       "history": "Aventurero de primera clase asociado por el perfil a la velocidad excepcional dentro de Orario y a la fuerza de choque de Freya Familia. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
