@@ -8,6 +8,7 @@ continuity:
 sources:
   - DMR-003-SRC-001
   - DMR-028-SRC-002
+  - DMR-029-SRC-019
 ---
 
 # Gojouno Kaguya
@@ -18,18 +19,24 @@ sources:
 
 La referencia comunitaria la presenta como aventurera, vicecapitana y antigua integrante de la Familia Astrea. El corpus todavía no contiene un localizador verificable de novela para esta función, así que la ficha evita afirmar detalles de personalidad, habilidades, historia individual o diálogos.
 
-## Trasfondo ampliado desde fuentes comunitarias · CONT-AR
+## Trasfondo, magia y equipo ampliados desde fuentes comunitarias · CONT-AR
 
-La wiki en inglés sitúa a Kaguya en la casa Gojou del Lejano Oriente y la describe como alguien que participó en el servicio de la corte imperial antes de abandonar su país. La misma biografía indica una afiliación previa a Konohanasakuya-hime Familia y que, después de llegar a Orario, escogió a Astrea por admiración hacia la diosa. Estos son datos secundarios: el expediente todavía no localiza las escenas ni la referencia interna de novela que respalde cada paso.
+La wiki inglesa sitúa a Kaguya en la casa noble Gojou del Lejano Oriente, le atribuye servicio previo como soldado de la corte imperial y una afiliación anterior a Konohanasakuya-hime Familia. También lista el alias **Yamato Rindou**, edad de 19 años, altura de 167 cm, nivel 4 y llegada al piso 41 en una instantánea histórica. Son datos secundarios que requieren localizador primario; no describen valores permanentes ni una cronología completa.
 
-La página también le atribuye una postura moral concreta: priorizar el rescate de muchos frente a los pocos cuando no existe una forma de salvar a todos. Presenta ese principio como fuente de desacuerdos repetidos con Ryu, sin convertirlas en enemigas; sus diferencias pueden leerse como una tensión sobre cómo se aplica la justicia, pero los diálogos exactos quedan pendientes. El portal oficial del anime corrobora de forma más limitada que Kaguya procede del Lejano Oriente y fue vicecapitana de Astrea Familia; no valida automáticamente toda la biografía comunitaria.
+### Combate y repertorio
 
-La wiki la describe como aventurera de nivel 4 a los 19 años e incluye habilidades de combate cuerpo a cuerpo. Se conservan esos valores como datos reportados, no como estadísticas aprobadas: deben comprobarse en la novela antes de presentarlos sin advertencia.
+- **Combate cuerpo a cuerpo:** la wiki la presenta como una de las mejores luchadoras cuerpo a cuerpo de Astrea Familia y destaca sus técnicas de pierna y esgrima. También dice que aprendió técnicas de Ryuu y que ambas compartían recursos al competir.
+- **Gokou:** descrita como una magia que crea cinco hojas de poder mágico alrededor del enemigo y las hace atacar desde distintas direcciones para encerrarlo en un área de cortes. La página afirma que Kaguya llegó a derrotar a un aventurero de nivel 4 cuando ella estaba en nivel 3; la escena y el contexto requieren cotejo.
+- **Shikai:** aparece en el repertorio de la wiki como otro nombre de magia, pero la página consultada no permite fijar aquí su efecto con seguridad.
+- **Habilidades:** Kaina Blood y Tekiheni aparecen en los listados del personaje. Otras tablas comunitarias clasifican nombres adicionales de manera distinta, por lo que no se normalizan categorías ni efectos hasta localizar una ficha primaria.
+- **Armas:** **Higanbana**, una katana descrita como arma de segunda clase, y **Kodachi Futaba**, un par de kodachi que la wiki dice que entregó a Ryuu antes de sacrificarse para protegerla.
 
-- **Claims de búsqueda:** DMR-028-CLM-002 y DMR-028-CLM-003.
-- **Fuente comunitaria:** [DanMachi Wiki · Gojouno Kaguya](https://danmachi.fandom.com/wiki/Gojouno_Kaguya).
-- **Referencia oficial de adaptación:** [perfiles de DanMachi IV](https://danmachi.com/danmachi4/character/).
+La wiki también atribuye a Kaguya una postura moral exigente: elegir salvar al mayor número cuando no todos pueden ser salvados y discrepar por ello con Ryuu. Es una pista narrativa de tensión entre ambas, no prueba de enemistad constante.
 
+- **Claim:** DMR-029-CLM-018.
+- **Fuente:** [DanMachi Wiki · Gojouno Kaguya](https://danmachi.fandom.com/wiki/Gojouno_Kaguya).
+- **Estado:** secondary_checked. La propia página contiene discrepancias de clasificación en algunas listas; verificar nombres, categorías, estadísticas y escenas antes de convertirlos en canon confirmado.
+  
 ## Personas relacionadas
 
 - **Ryuu Lion:** misma Familia histórica según las referencias comunitarias de roster. Esto documenta afiliación compartida, no necesariamente amistad íntima.
