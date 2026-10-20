@@ -726,6 +726,8 @@ async function run() {
     await page.locator("#archive-return-search").click();
     assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
+    // Request anime continuity explicitly: main-novel context correctly uses original, non-official placeholder art.
+    await page.locator("#archive-continuity").selectOption("CONT-ANIME");
     // Preserve the canonical image URL while avoiding a live publisher-site dependency in CI.
     const bellOfficialImageUrl = "https://danmachi.com/danmachi5/character/images/chara_tachi_01.png";
     await page.route(bellOfficialImageUrl, route => route.fulfill({
