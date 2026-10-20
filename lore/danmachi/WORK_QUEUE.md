@@ -2,6 +2,32 @@
 
 Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el último volumen principal publicado que se pueda verificar. Las tareas se dividen para no mezclar épocas, fuentes o continuidades. Ningún número de volumen ni final se inventará para llenar huecos.
 
+
+## PRIORIDAD ACTUAL — Etapa 1: Orario como escenario
+
+**Estado:** IN_PROGRESS. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
+**Guía:** [Método de análisis progresivo](research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md) · [Ficha central de Orario](places/orario.md).
+
+- [x] Establecer una ficha central con el alcance de la evidencia actual y límites explícitos.
+- [x] Definir el protocolo común de análisis para que lugares, sucesos y biografías reutilicen los mismos datos sin duplicarlos.
+- [ ] Confirmar por separado, con localizadores apropiados, los datos sobre Orario en CONT-MAIN-LN; no reutilizar automáticamente la evidencia de CONT-ANIME.
+- [ ] Construir un inventario de lugares de la ciudad con IDs estables y relaciones respaldadas; distinguir organización Guild de edificio físico.
+- [ ] Verificar distritos, calles, accesos, orientación y mapas. Mantener las ubicaciones sin respaldo como esquema/pregunta; las wikis solo aportan pistas.
+- [ ] Analizar instituciones, Familias, población, vida cotidiana, comercio, abastecimiento y seguridad, afirmación por afirmación.
+- [ ] Describir el estado de Orario por periodos históricos y enlazar los eventos existentes sin narrarlos aquí de nuevo.
+- [ ] Revisar huecos, contradicciones, aliases, enlaces y pruebas automáticas antes de declarar la etapa cerrada.
+
+**Criterio de cierre:** cada área relevante tiene contenido respaldado o una incógnita declarada; los lugares importantes son navegables; los hechos están delimitados por fuente y continuidad; no quedan mapas o datos secundarios presentados como canon sin verificación. No se exige fingir un porcentaje global de completitud.
+
+## Etapas posteriores — bloqueadas por el orden de trabajo
+
+1. [ ] Sucesos ocurridos en Orario: fichas atómicas con tiempo, lugar, causas, participantes, consecuencias y fuentes.
+2. [ ] Personajes principales: perfil y estados por periodo.
+3. [ ] Personajes secundarios: mismas reglas de procedencia y continuidad, con profundidad proporcional.
+4. [ ] Historias individuales: secuencias personales construidas a partir de eventos existentes.
+5. [ ] Auditoría integrada de cobertura, relaciones, contradicciones y duplicados.
+
+
 ## BATCH-DM-001 — Esqueleto cronológico y catálogo
 - Estado: DONE como estructura documental.
 - Resultado: ERA-00 a ERA-10 y ERA-AU; índices por categoría; 20 plantillas iniciales de volúmenes; matriz de continuidad, índice de arcos, plantillas narrativas reutilizables; 6 eventos de canon candidatos y 4 eventos AU propuestos; catálogo JSON; validador de integridad. Los stubs no afirman que el volumen 20 sea el último.
