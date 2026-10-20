@@ -41,6 +41,7 @@ jobs:
           node --check src/project-repository.js
           node --check tests/test_lore_corpus.cjs
           node --check tests/test_roster_claim_dedup.cjs
+          node --check tests/test_danmachi_character_coverage.cjs
           node --check tests/browser_smoke.cjs
       - name: Test lore retrieval filters and abstention
         run: node tests/test_lore_corpus.cjs
@@ -54,6 +55,8 @@ jobs:
         run: node tests/test_character_archive.cjs
       - name: Test extended character dossiers
         run: node tests/test_character_dossiers.cjs
+      - name: Test DanMachi roster coverage and navigation integrity
+        run: node tests/test_danmachi_character_coverage.cjs
       - name: Test private preview file allowlist
         run: python tests/test_web_preview_server.py
       - name: Test Story Forge outline and audit
