@@ -860,6 +860,151 @@ verification_status: stub
 
 ---
 
+
+## DMR-031-SRC-001 · DanMachi Wiki — Orario (inglés)
+
+- source_id: DMR-031-SRC-001
+- title: Orario
+- creator_or_publisher: Comunidad DanMachi Wiki / Fandom
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Orario
+- accessed_at: 2026-10-20
+- locator_type: article_sections
+- locator: Secciones Map y Geography; tabla de ubicaciones y columnas de debut
+- claims_supported: [DMR-031-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: Útil para descubrir nombres y posibles localizadores por volumen. El mapa es comunitario y no debe tratarse como cartografía oficial; verificar cada ubicación con fuentes primarias.
+- conflicting_sources: []
+- rights_note: Resumen original en español; no copiar el texto de la wiki.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: secondary_checked
+
+---
+
+## DMR-031-SRC-002 · DanMachi Wiki — Orario (español)
+
+- source_id: DMR-031-SRC-002
+- title: Orario
+- creator_or_publisher: Comunidad DanMachi Wiki en español / Fandom
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; revisión variable
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Orario
+- accessed_at: 2026-10-20
+- locator_type: article_map
+- locator: Diagrama circular y etiquetas numeradas del mapa de Orario
+- claims_supported: [DMR-031-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: El diagrama ayuda a descubrir candidatos de lugar, pero no prueba posiciones, distancias ni orientación oficial.
+- conflicting_sources: []
+- rights_note: Lista abreviada de nombres y resumen originales.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: secondary_checked
+
+---
+
+## DMR-031-SRC-003 · DanMachi Wiki — Guild
+
+- source_id: DMR-031-SRC-003
+- title: Guild
+- creator_or_publisher: Comunidad DanMachi Wiki / Fandom
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Guild
+- accessed_at: 2026-10-20
+- locator_type: article_sections
+- locator: Secciones History, Appearance e Information
+- claims_supported: [DMR-031-CLM-005, DMR-031-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: Las funciones institucionales y los detalles del edificio Pantheon requieren cotejo por afirmación con las novelas o referencias oficiales.
+- conflicting_sources: []
+- rights_note: Paráfrasis original en español.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: secondary_checked
+
+---
+
+## DMR-031-SRC-004 · DanMachi Wiki — Babel
+
+- source_id: DMR-031-SRC-004
+- title: Babel
+- creator_or_publisher: Comunidad DanMachi Wiki / Fandom
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; revisión variable
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Babel
+- accessed_at: 2026-10-20
+- locator_type: article_sections
+- locator: Secciones History e Information
+- claims_supported: [DMR-031-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: La altura, el número de pisos y la distribución funcional se conservan como pistas secundarias, aunque varias páginas comunitarias repitan los datos.
+- conflicting_sources: []
+- rights_note: Paráfrasis original en español.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: secondary_checked
+
+---
+
+## DMR-031-SRC-005 · ダンまち @ ウィキ — オラリオ
+
+- source_id: DMR-031-SRC-005
+- title: オラリオ
+- creator_or_publisher: Comunidad de w.atwiki.jp/danmachi
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; actualización visible 2020-11-29
+- language: Japonés
+- official_url: https://w.atwiki.jp/danmachi/pages/53.html
+- accessed_at: 2026-10-20
+- locator_type: article_sections
+- locator: Sección 概要; murallas, ocho avenidas principales e industria de piedras mágicas
+- claims_supported: [DMR-031-CLM-003, DMR-031-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: Fuente secundaria útil para vocabulario japonés y preguntas de investigación. La fecha de actualización y la naturaleza comunitaria impiden usarla como verificación canónica.
+- conflicting_sources: []
+- rights_note: Resumen original en español, sin reproducir la descripción completa.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: secondary_checked
+
+---
+
+## DMR-031-SRC-006 · ダンまちデータベース @ ウィキ — オラリオ
+
+- source_id: DMR-031-SRC-006
+- title: オラリオ
+- creator_or_publisher: Comunidad danmachi-world de w.atwiki.jp
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; actualización visible 2026-04-16
+- language: Japonés
+- official_url: https://w.atwiki.jp/danmachi-world/pages/13.html
+- accessed_at: 2026-10-20
+- locator_type: article_sections
+- locator: Encabezados 主要建物 y ファミリア本拠地
+- claims_supported: [DMR-031-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: Índice breve de candidatos. No valida por sí mismo afiliación, ubicación exacta o periodo de uso.
+- conflicting_sources: []
+- rights_note: Resumen original en español.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: secondary_checked
+
+---
+
 ## DMR-028-SRC-001 · DanMachi Wiki — Astraea Familia
 
 - source_id: DMR-028-SRC-001
