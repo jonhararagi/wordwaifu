@@ -1476,9 +1476,11 @@
       "tags": [
         "Ais Wallenstein",
         "Ais",
-        "Familia Loki"
+        "Familia Loki",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "draft",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "normal"
     },
     {
@@ -1488,9 +1490,11 @@
       "tags": [
         "Bell Cranel",
         "Bell",
-        "identity"
+        "identity",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "draft",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "high"
     },
     {
@@ -1500,9 +1504,11 @@
       "tags": [
         "Eina Tulle",
         "Eina",
-        "Guild"
+        "Guild",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "draft",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "critical"
     },
     {
@@ -1511,9 +1517,11 @@
       "type": "character",
       "tags": [
         "Hestia",
-        "timeline"
+        "timeline",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "draft",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "critical"
     },
     {
@@ -1522,9 +1530,11 @@
       "type": "character",
       "tags": [
         "Loki",
-        "Familia Loki"
+        "Familia Loki",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "draft",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "high"
     },
     {
