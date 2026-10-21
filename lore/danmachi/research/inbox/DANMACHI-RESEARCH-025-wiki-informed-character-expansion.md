@@ -18,6 +18,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-001
 - `claim`: El extracto comunitario de Olivas Act lo identifica como una criatura masculina conocida por los nombres Vendetta y Fanatic; reporta nivel 3 y lo sitúa en Sword Oratoria, volumen 3, manga Sword Oratoria capítulo 19 y episodio 8 de la adaptación Sword Oratoria. Vendetta/Fanatic son etiquetas de la wiki y su condición exacta de epíteto o alias necesita confirmación en la edición pertinente.
 - `character_id`: CHAR-DARK-OLIVAS-ACT
+- `source_id`: DMR-025-SRC-001
 - `aspect`: identidad, aliases y apariciones reportadas
 - `era_or_interval`: Sword Oratoria, volumen 3; las fechas absolutas no se fijan en este expediente
 - `continuity_scope`: CONT-SO; CONT-ANIME; CONT-UNVERIFIED
@@ -35,6 +36,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-002
 - `claim`: La fuente secundaria describe a Olivas con cabello blanco largo, ojos amarillo verdosos y vestimenta de combate blanca; menciona una máscara con forma de cráneo y una coloración amarillo verdosa desde la cintura hacia abajo. Lo caracteriza como cruel/sádico y demasiado confiado, y afirma que conocía a aventureros de Orario por sus alias. Son descripciones y valoraciones de una wiki, pendientes de cotejo en Sword Oratoria.
 - `character_id`: CHAR-DARK-OLIVAS-ACT
+- `source_id`: DMR-025-SRC-001
 - `aspect`: apariencia y caracterización
 - `era_or_interval`: Sword Oratoria, volumen 3; continuidad de relato principal del spin-off
 - `continuity_scope`: CONT-SO
@@ -52,6 +54,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-003
 - `claim`: La ficha comunitaria atribuye a Olivas una naturaleza de criatura que puede fortalecerse al consumir piedras mágicas, con una tasa de consumo corporal muy alta; también afirma que llegó a superar la fuerza correspondiente a su nivel anterior. El mecanismo, el coste y las limitaciones deben verificarse en Sword Oratoria, volumen 3.
 - `character_id`: CHAR-DARK-OLIVAS-ACT
+- `source_id`: DMR-025-SRC-001
 - `aspect`: capacidad, coste y limitaciones
 - `era_or_interval`: Sword Oratoria, volumen 3
 - `continuity_scope`: CONT-SO
@@ -69,6 +72,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-004
 - `claim`: La wiki en español describe a Rudra como una deidad masculina vinculada a Rudra Familia y Evilus; informa que su aparición en novela ligera sería en DanMachi, volumen 14, en un flashback, y en el episodio 20 de DanMachi IV como aparición retrospectiva. La ficha secundaria también indica que fue devuelto al Cielo. Estas pistas no documentan por sí solas su papel personal durante Astrea Record central.
 - `character_id`: CHAR-DARK-RUDRA
+- `source_id`: DMR-025-SRC-002
 - `aspect`: identidad, afiliación y apariciones reportadas
 - `era_or_interval`: Referencias retrospectivas de la novela principal; el momento individual exacto queda pendiente
 - `continuity_scope`: CONT-MAIN-LN; CONT-ANIME; CONT-UNVERIFIED
@@ -86,6 +90,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-005
 - `claim`: El extracto en español describe a Rudra con piel oscura, cabello corto, toga de colores apagados, pantalones claros, calzado negro, una pulsera blanca, aros, collar de cuentas rojas y sombra azul en los párpados. La wiki le atribuye el deseo de provocar caos y sufrimiento y enumera percepción divina, aura de deidad, Arcanum sellado y un espejo divino para observar el mundo inferior. Cada detalle es secundario y no se dispone aquí de una escena o ilustración primaria localizada para comprobarlo.
 - `character_id`: CHAR-DARK-RUDRA
+- `source_id`: DMR-025-SRC-002
 - `aspect`: apariencia, conducta y capacidades divinas
 - `era_or_interval`: Retratos y retrospectivas atribuidos a Rudra; fecha de escena pendiente
 - `continuity_scope`: CONT-MAIN-LN; CONT-ANIME; CONT-UNVERIFIED
@@ -103,6 +108,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-006
 - `claim`: El artículo comunitario de Rudra Familia sitúa aproximadamente cinco años antes de Bell una trampa contra Astrea Familia que termina provocando al Juggernaut tras el daño excesivo al Dungeon. El resumen refiere numerosas bajas, a Ryuu y Jura como supervivientes de ese conflicto, y la destrucción posterior de Rudra Familia por Ryuu; también informa que Rudra fue enviado al Cielo más tarde. Esta secuencia describe acciones atribuidas a la Familia y resultados narrativos resumidos: no prueba que Rudra ideara, ordenara o conociera personalmente cada parte del plan.
 - `character_id`: CHAR-DARK-RUDRA
+- `source_id`: DMR-025-SRC-003
 - `aspect`: contexto de facción, cronología y responsabilidad individual
 - `era_or_interval`: Incidente de Jura/Juggernaut, aproximadamente cinco años antes de la llegada de Bell según la fuente secundaria; distinto del núcleo de Astrea Record, aproximadamente siete años antes
 - `continuity_scope`: CONT-MAIN-LN; CONT-UNVERIFIED
@@ -120,6 +126,8 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-007
 - `claim`: Las fichas comunitarias describen a Meteria como humana, de cabello blanco y ojos azules; la presentan como hermana gemela mayor de Alfia, antigua integrante de Hera Familia y madre de Bell Cranel, y la marcan como fallecida. Las mismas referencias dejan sin identificar con seguridad al padre de Bell: este expediente no lo completa por inferencia. Parentescos, afiliación y estado biográfico siguen pendientes de localizador primario.
 - `character_id`: CHAR-METERIA
+- `source_id`: DMR-025-SRC-004
+- `source_corroborating_source_id_1`: DMR-025-SRC-005
 - `aspect`: apariencia, identidad y parentescos
 - `era_or_interval`: Historia familiar anterior a la trama principal; fechas y escenas pendientes
 - `continuity_scope`: CONT-MAIN-LN; CONT-UNVERIFIED
@@ -137,6 +145,9 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-008
 - `claim`: La wiki atribuye a Alfia descripciones de Meteria como amable, pura y siempre sonriente, y relata anécdotas sobre la comida, su cercanía con Hera y conversaciones hipotéticas de “qué pasaría si”. Parte del contexto de esas posibilidades remite a una publicación del autor en note.com con un escenario alternativo donde Alfia/Zald crían a Bell. No trasladar ese escenario ni sus sucesos a la continuidad principal; el detalle de cada anécdota requiere volver a abrir la fuente original y la referencia narrativa.
 - `character_id`: CHAR-METERIA
+- `source_id`: DMR-025-SRC-004
+- `source_corroborating_source_id_1`: DMR-025-SRC-005
+- `source_corroborating_source_id_2`: DMR-025-SRC-008
 - `aspect`: personalidad reportada y frontera entre canon/What If
 - `era_or_interval`: Historia familiar reportada y material hipotético separado
 - `continuity_scope`: CONT-UNVERIFIED; CONT-AU
@@ -154,6 +165,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-009
 - `claim`: La tabla comunitaria de magia vincula a Ryana Lietz con el hechizo de fuego Irivute (イリヴュート). El artículo también la cita entre las usuarias de encantamiento simultáneo y como ejemplo de maga capaz de ocultar o suprimir el círculo mágico que genera. La ruta visible conduce a su resumen comunitario; no hay en este lote texto primario que confirme el nombre, la técnica, el efecto, las condiciones o sus límites.
 - `character_id`: CHAR-RYANA-LIETZ
+- `source_id`: DMR-025-SRC-006
 - `aspect`: magia, técnica de encantamiento y control del círculo
 - `era_or_interval`: Apariciones individuales de Ryana por localizar; no asignar automáticamente a todos los periodos
 - `continuity_scope`: CONT-AR; CONT-UNVERIFIED
@@ -171,6 +183,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-010
 - `claim`: El extracto comunitario de personajes menores registra a Mariyu Reage, también transliterada Maryū Reāju, y le atribuye el nombre “Demi Virgo” (星灯りの聖母(デミ・ウィルゴ)). La sitúa como humana y antigua aventurera de Astrea Familia, con aparición retrospectiva reportada en DanMachi volumen 14 y DanMachi IV episodio 15. La wiki lista niveles 3–4 de manera ambigua; no se fija un nivel para el expediente canónico sin aclarar edición, momento y localizador primario.
 - `character_id`: CHAR-MARIYU-LEAGE
+- `source_id`: DMR-025-SRC-007
 - `aspect`: identidad, epíteto y cronología reportada
 - `era_or_interval`: Historia de Astrea Familia; retrospectiva reportada en volumen 14 y episodio de adaptación
 - `continuity_scope`: CONT-MAIN-LN; CONT-ANIME; CONT-AR; CONT-UNVERIFIED
@@ -188,6 +201,8 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `claim_id`: DMR-025-CLM-011
 - `claim`: El resumen comunitario describe a Mariyu con una actitud fraternal hacia sus compañeras, un fuerte odio a Evilus por el sufrimiento causado y deseos de contraatacar. Le atribuye Rea Vindemia (レア・ヴィンデミア), magia curativa de área amplia que cura heridas y recupera resistencia; también afirma que usaba una maza y podía pelear en primera línea si era necesario. Estos datos son pistas secundarias: falta verificar en Astrea Record revisado el nombre, el efecto, la secuencia y las limitaciones.
 - `character_id`: CHAR-MARIYU-LEAGE
+- `source_id`: DMR-025-SRC-007
+- `source_corroborating_source_id_1`: DMR-025-SRC-006
 - `aspect`: personalidad, magia, equipo y límites de evidencia
 - `era_or_interval`: Astrea Record; escena y periodo individual exactos por localizar
 - `continuity_scope`: CONT-AR; CONT-UNVERIFIED
