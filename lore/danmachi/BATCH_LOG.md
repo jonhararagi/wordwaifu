@@ -1,5 +1,13 @@
 # Registro de tandas de lore
 
+## DANMACHI-CHARACTER-ERA-LOCALIZATION-001 · Normalización lingüística de los cinco expedientes (2026-10-21)
+
+- **Alcance:** se pasaron al español los valores descriptivos y las nuevas secciones temporales de Ryuu, Alise, Astrea, Kaguya y Lyra, conservando en inglés únicamente claves técnicas, enums del esquema, IDs y nombres propios de fuentes/epítetos cuando corresponde.
+- **Control de contenido:** los estados de T−7/Astrea Record, las pérdidas del volumen 2, el resumen de la tragedia de la adaptación y el viaje posterior de Ryuu permanecen separados por periodo y continuidad.
+- **Estado de evidencia:** las sinopsis oficiales y los perfiles de adaptación están vinculados a sus claims DMR; los localizadores internos de capítulo/página de las novelas siguen pendientes. No se declaran gustos, miedos, edades o destinos individuales sin evidencia.
+- **Validación:** la revisión estructural posterior comprobará claves de plantilla, IDs, enlaces internos y colisiones del catálogo. Los workflows de GitHub aún requieren confirmación independiente.
+
+
 ## DANMACHI-CHARACTER-ERA-BATCH-001 · Cinco expedientes temporales de Astrea Familia (2026-10-21)
 
 - **Rama:** \`work/story-completion-danmachi-audit-2026-10\`; sin cambios a \`main\`.
