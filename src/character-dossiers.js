@@ -714,7 +714,7 @@
     "CHAR-SELDAS": {
       appearance: "No se ha cotejado una descripción visual de Seldas en la fuente primaria; no se inventan edad ni rasgos físicos.",
       history: "Una ficha comunitaria de Tione lo relaciona con un vínculo emocional importante en la infancia dentro del contexto de Telskyura. Este resumen sirve como pista de lectura y no reemplaza la escena del volumen.",
-      personality: "No se asignan rasgos psicológicos a partir de la relación reportada con Tione.",
+      personality: "No se asignan rasgos psicológicos a partir de la relación reportada con Tione. El expediente no tiene todavía escenas primarias suficientes para describir sus deseos, decisiones o conducta bajo presión, así que esos aspectos quedan abiertos en lugar de convertir una referencia breve en una personalidad definitiva.",
       abilities: "No constan capacidades, nivel, armas o habilidades verificadas en esta tanda. La falta de datos no implica que el personaje carezca de capacidades; significa que el material primario no se ha localizado en esta revisión. Cualquier afirmación sobre su combate debe esperar una escena identificable de Sword Oratoria u otra fuente oficial pertinente.",
       relationships: "Tione Hiryute es el vínculo de infancia reportado por una fuente comunitaria; la asociación con Kali Familia también permanece en estado secundario.",
       conflict: "Su papel en la historia se limita por ahora al lugar que las referencias comunitarias le atribuyen en el pasado de Tione; el orden y el desenlace requieren cotejo del texto publicado.",
