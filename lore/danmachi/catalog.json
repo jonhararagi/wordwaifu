@@ -456,14 +456,17 @@
       "type": "character",
       "tags": [
         "Olivas Act",
-        "Era Oscura",
-        "Astrea Record",
         "needs source check",
-        "CONT-MAIN-LN",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "Sword Oratoria",
+        "CONT-SO",
+        "CONT-UNVERIFIED",
+        "Evilus/Enyo (secondary)",
+        "secondary_summary",
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_primary_page_pending",
       "priority": "high"
     },
     {
@@ -472,14 +475,16 @@
       "type": "character",
       "tags": [
         "Rudra",
-        "Era Oscura",
-        "Astrea Record",
         "needs source check",
-        "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "CONT-MAIN-LN",
+        "CONT-UNVERIFIED",
+        "Juggernaut incident (later)",
+        "secondary_summary",
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_temporal_split_primary_page_pending",
       "priority": "high"
     },
     {
@@ -1203,9 +1208,14 @@
         "Maryuu Reage",
         "Astrea Familia",
         "Familia Astrea",
-        "Astrea Record"
+        "Astrea Record",
+        "structured_dossier",
+        "CONT-ANIME",
+        "CONT-AR (secondary)",
+        "primary_text_pending",
+        "Rea Vindemia (secondary lead)"
       ],
-      "status": "provisional",
+      "status": "official_profile_and_secondary_leads_checked_primary_scene_pending",
       "priority": "normal"
     },
     {
@@ -1233,7 +1243,13 @@
         "Alfia",
         "Bell Cranel",
         "history",
-        "major spoiler"
+        "major spoiler",
+        "structured_dossier",
+        "CONT-MAIN-LN",
+        "CONT-UNVERIFIED",
+        "Hera Familia (secondary)",
+        "Bell relationship (major spoiler)",
+        "primary_locator_pending"
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
@@ -1325,9 +1341,14 @@
         "Astrea Familia",
         "Astrea Record",
         "Familia Astrea",
-        "Liana Leets"
+        "Liana Leets",
+        "structured_dossier",
+        "CONT-ANIME",
+        "CONT-AR (secondary)",
+        "primary_text_pending",
+        "individual_story_pending"
       ],
-      "status": "provisional",
+      "status": "official_profile_and_secondary_roster_checked_primary_scene_pending",
       "priority": "normal"
     },
     {
