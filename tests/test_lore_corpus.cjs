@@ -17,8 +17,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md",
   "research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md",
   "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md",
-  "research/inbox/DANMACHI-RESEARCH-025-wiki-informed-character-expansion.md"
-  ,"research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md"
+  "research/inbox/DANMACHI-RESEARCH-025-wiki-informed-character-expansion.md",
+  "research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
