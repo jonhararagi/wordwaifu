@@ -176,7 +176,7 @@ Las fuentes secundarias la relacionan con Hera Familia y con el conflicto de Ast
 
 ## Relaciones y límites
 
-### CHAR-METERIA
+### [Meteria](meteria.md)
 
 Las fuentes comunitarias reportan que Meteria es su hermana gemela; el parentesco no se eleva a hecho primario hasta localizar la escena o referencia directa.
 
