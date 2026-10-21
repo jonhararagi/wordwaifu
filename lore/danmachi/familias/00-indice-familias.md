@@ -6,7 +6,7 @@ Esta es una lista de investigación. El estado de una Familia puede variar por a
 |---|---|---|---|
 | DM-FAM-HESTIA | Hestia Familia | Grupo central de la historia | Ficha inicial existente |
 | DM-FAM-LOKI | [Loki Familia](loki-familia.md) | Aventureros, expediciones y miembros de apoyo | Fichas individuales ampliadas; los expedientes secundarios y la cronología del roster siguen parciales |
-| FAM-FREYA | Freya Familia | Facción poderosa e historia principal | Candidato pendiente |
+| FAM-FREYA | [Freya Familia](freya-familia.md) | Deidad, miembros de élite, personal vinculado y conflicto de arco | Perfil oficial DanMachi V; cronología y cotejo de novela pendientes |
 | FAM-ZEUS | [Zeus Familia](zeus-familia.md) | Historia antigua, Grandes Misiones y Dragón Negro | Expediente inicial; victoria conjunta con referencia oficial, roster y cronología primaria pendientes |
 | FAM-HERA | [Hera Familia](hera-familia.md) | Historia antigua, Grandes Misiones y roster histórico | Expediente inicial; victoria conjunta oficial, composición y caída pendientes |
 | DM-FAM-ASTREA | [Astrea Familia](astrea-familia.md) | Pasado de Ryu/Ryuu y Astrea Record | Ficha existente; roster histórico parcial; separar CONT-AR y CONT-ANIME |

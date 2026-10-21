@@ -91,6 +91,28 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-ALBERT-WALDSTEIN | Albert Waldstein | Albert | Aria, historia antigua | Candidato pendiente; spoilers |
 | CHAR-ARIA | Aria | Aria | Ais, historia antigua | Candidato pendiente; spoilers |
 
+## Freya Familia y Hostess of Fertility · roster DanMachi V
+
+| ID | Identidad | Alias / alcance | Vínculo censado | Estado |
+|---|---|---|---|---|
+| CHAR-ALLEN-FROMEL | [Allen Fromel](allen-fromel.md) | Allen; Allen Fromel | Vicecapitán y combatiente conocido por su velocidad | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-HEDIN-SELLAND | [Hedin Selland](hedin-selland.md) | Hedin; Hedin Selland | Estratega y mago espadachín | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-HOGNI-RAGNAR | [Hogni Ragnar](hogni-ragnar.md) | Hogni; Hogni Ragnar | Mago espadachín de primera línea | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-HORN | [Horn (Herun)](horn.md) | Horn; Herun | Encargada principal de servir a Freya; identidad protegida por spoiler | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-HEITH-VELVET | [Heith Velvet (Haze Velvet)](heith-velvet.md) | Heith Velvet; Haze Velvet | Sanadora y herbolaria; figura destacada del equipo de asistencia | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-VAN | [Van](van.md) | Van; ヴァン | Aventurero de Freya Familia | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-ANYA-FROMEL | [Anya Fromel](anya-fromel.md) | Anya; Anya Fromel | Trabajadora de taberna; antigua miembro de Freya Familia | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-MIA-GRAND | [Mia Grand](mia-grand.md) | Mia; Mia Grand | Propietaria de Hostess of Fertility; antigua aventurera | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-CHLOE-ROLO | [Chloe Rollo (Chloe Rolo)](chloe-rolo.md) | Chloe Rollo; Chloe Rolo | Trabajadora de taberna; antiguo oficio de asesina según adaptación | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-LUNOA-FAUST | [Lunoa Faust](lunoa-faust.md) | Lunoa Faust; Lunoa | Trabajadora de Hostess of Fertility | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-GULLIVER-ALFRIGG | [Alfrigg](gulliver-alfrigg.md) | Alfrigg; アルフリッグ | Hermano mayor; especialista en lanza | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-GULLIVER-DVALINN | [Dvalinn](gulliver-dvalinn.md) | Dvalinn; Dvalin | Hermano; especialista en gran martillo | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-GULLIVER-BERLING | [Berling](gulliver-berling.md) | Berling; ベーリング | Hermano; especialista en gran hacha | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-GULLIVER-GRER | [Grer](gulliver-grer.md) | Grer; グレール | Hermano; especialista en espada de gran tamaño | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-GULLIVER-BROTHERS | [Gulliver Brothers](gulliver-brothers.md) | ガリバー兄弟 | Unidad de cuatro hermanos; el nivel 5 se atribuye al grupo | Registro grupal además de cuatro fichas individuales |
+
+**No duplicar:** Syr Flova mantiene el cruce de identidad bajo control de spoiler; no crear otra persona ni resolver una revelación sin verificación.
+
 ## Catálogos adicionales por construir
 
 - Deidades y espíritus.

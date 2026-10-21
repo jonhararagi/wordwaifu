@@ -1920,6 +1920,249 @@
       ],
       "status": "provisional_primary_scene_check_pending",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-ALLEN-FROMEL",
+      "path": "characters/allen-fromel.md",
+      "type": "character",
+      "tags": [
+        "Allen Fromel",
+        "Freya Familia",
+        "Anya Fromel",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-HEDIN-SELLAND",
+      "path": "characters/hedin-selland.md",
+      "type": "character",
+      "tags": [
+        "Hedin Selland",
+        "Freya Familia",
+        "Hogni Ragnar",
+        "strategist",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-HOGNI-RAGNAR",
+      "path": "characters/hogni-ragnar.md",
+      "type": "character",
+      "tags": [
+        "Hogni Ragnar",
+        "Freya Familia",
+        "Hedin Selland",
+        "dark elf",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-HORN",
+      "path": "characters/horn.md",
+      "type": "character",
+      "tags": [
+        "Horn",
+        "Herun",
+        "ヘルン",
+        "Freya Familia",
+        "spoiler guard",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-HEITH-VELVET",
+      "path": "characters/heith-velvet.md",
+      "type": "character",
+      "tags": [
+        "Heith Velvet",
+        "Haze Velvet",
+        "Freya Familia",
+        "healer",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-VAN",
+      "path": "characters/van.md",
+      "type": "character",
+      "tags": [
+        "Van",
+        "Flint",
+        "Freya Familia",
+        "half-Pallum",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-ANYA-FROMEL",
+      "path": "characters/anya-fromel.md",
+      "type": "character",
+      "tags": [
+        "Anya Fromel",
+        "Allen Fromel",
+        "Hostess of Fertility",
+        "Freya Familia",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-MIA-GRAND",
+      "path": "characters/mia-grand.md",
+      "type": "character",
+      "tags": [
+        "Mia Grand",
+        "Hostess of Fertility",
+        "former adventurer",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-CHLOE-ROLO",
+      "path": "characters/chloe-rolo.md",
+      "type": "character",
+      "tags": [
+        "Chloe Rollo",
+        "Chloe Rolo",
+        "Hostess of Fertility",
+        "Ryu Lion",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-LUNOA-FAUST",
+      "path": "characters/lunoa-faust.md",
+      "type": "character",
+      "tags": [
+        "Lunoa Faust",
+        "Hostess of Fertility",
+        "Ryu Lion",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-GULLIVER-ALFRIGG",
+      "path": "characters/gulliver-alfrigg.md",
+      "type": "character",
+      "tags": [
+        "Alfrigg",
+        "Gulliver Brothers",
+        "Freya Familia",
+        "spear",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-GULLIVER-DVALINN",
+      "path": "characters/gulliver-dvalinn.md",
+      "type": "character",
+      "tags": [
+        "Dvalinn",
+        "Dvalin",
+        "Gulliver Brothers",
+        "Freya Familia",
+        "hammer",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-GULLIVER-BERLING",
+      "path": "characters/gulliver-berling.md",
+      "type": "character",
+      "tags": [
+        "Berling",
+        "Gulliver Brothers",
+        "Freya Familia",
+        "axe",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-GULLIVER-GRER",
+      "path": "characters/gulliver-grer.md",
+      "type": "character",
+      "tags": [
+        "Grer",
+        "Gulliver Brothers",
+        "Freya Familia",
+        "great sword",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "CHAR-GULLIVER-BROTHERS",
+      "path": "characters/gulliver-brothers.md",
+      "type": "character_group",
+      "tags": [
+        "Gulliver Brothers",
+        "Freya Familia",
+        "Alfrigg",
+        "Dvalinn",
+        "Berling",
+        "Grer",
+        "CONT-ANIME"
+      ],
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "FAM-FREYA",
+      "path": "familias/freya-familia.md",
+      "type": "familia",
+      "tags": [
+        "Freya Familia",
+        "Freya",
+        "Ottar",
+        "Allen Fromel",
+        "Hedin Selland",
+        "Hogni Ragnar",
+        "Gulliver Brothers",
+        "Hostess of Fertility"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "DM-CHAR-CENSUS-001",
+      "path": "characters/00-censo-maestro.md",
+      "type": "index",
+      "tags": [
+        "censo maestro",
+        "personajes",
+        "identidades",
+        "alineamiento",
+        "relaciones",
+        "continuidad"
+      ],
+      "status": "partial_source_checked",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -2020,11 +2263,6 @@
     {
       "id": "CHAR-ARTEMIS",
       "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "FAM-FREYA",
-      "type": "familia",
       "status": "candidate_not_created"
     },
     {
@@ -2860,5 +3098,5 @@
       "status": "official_synopses_checked_individual_claims_pending_primary_text"
     }
   ],
-  "lastStructuredSync": "2026-10-17"
+  "lastStructuredSync": "2026-10-21"
 }

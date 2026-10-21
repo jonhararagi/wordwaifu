@@ -1,5 +1,20 @@
 # Registro de tandas de lore
 
+## DANMACHI-CENSUS-001 · Censo maestro y roster de Freya Familia (2026-10-21)
+
+- **Rama:** work/story-completion-danmachi-audit-2026-10; sin cambios a main.
+- **Base:** HEAD 9509e388059ac86db4b4fdb2c01efa73bcc24861; catálogo anterior de 134 registros, 52 IDs reservados y 112 documentos en inventario.
+- **Alcance:** 14 fichas individuales, una grupal de Gulliver Brothers, un expediente de Freya Familia y un censo maestro.
+- **Registros añadidos:** 17 (14 personas + 1 grupo + 1 Familia + 1 índice). El catálogo queda en 151; las filas de personaje/deidad/grupo pasan de 98 a 113. No son 113 identidades únicas verificadas.
+- **Fuente:** DMR-002-SRC-001, perfiles oficiales de DanMachi V. Las fichas nuevas son CONT-ANIME hasta cotejar novela y localizadores.
+- **Identidad/continuidad:** cada hermano Gulliver posee ficha individual más la ficha de grupo; su nivel 5 queda atribuido al grupo. Variantes de romanización como alias. Syr no se duplica ni se resuelve sin control de spoiler.
+- **Alineamiento:** capa editorial provisional. Freya queda en Caos neutral según criterio del autor, con estado condicional si Bell está implicado; no se hereda a todos los miembros.
+- **Archivos creados:** 17 Markdown. **Archivos actualizados:** catalog.json, índice de personajes, índice de Familias, MASTER_INDEX.md y BATCH_LOG.md.
+- **Controles previos al commit:** JSON parseable; IDs y rutas nuevos únicos; FAM-FREYA promovido de ID reservado a registro activo; conteos esperados.
+- **Validación ejecutable pendiente:** tools/check-catalog.mjs. No declarar PASS_REAL hasta ejecutar el validador o confirmar CI del SHA.
+- **Resultado:** PARTIAL; censo ampliado, no exhaustivo.
+- **Siguiente tanda:** reconciliar alias y ampliar antagonistas personales/rosters temporales con fuentes y eventos.
+
 ## DANMACHI-COVERAGE-008 — seguimiento de acceso primario al relato de Rakta (2026-10-17)
 
 - **Estado:** IN_PROGRESS; no se leyó el relato en texto primario.
