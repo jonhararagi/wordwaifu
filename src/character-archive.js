@@ -592,16 +592,36 @@ return{summary:"Ficha provisional basada únicamente en las afirmaciones de esta
 }
 function refsClaims(index,refs,continuity,filter){return(index.claims||[]).filter(c=>((refs||[]).includes(c.claimId)||(refs||[]).includes(c.entryId))&&(!continuity||(c.continuityScopes||[]).includes(continuity))&&visible(c.spoilerLevel,filter));}
 function worst(claims){const rank={none:0,mild:1,unknown:2,major:3,endgame:4};return claims.reduce((v,c)=>rank[String(c.spoilerLevel||"unknown").toLowerCase()]>rank[v]?String(c.spoilerLevel||"unknown").toLowerCase():v,"none");}
-function list(index,options){const o=options||{},q=String(o.query||"").trim().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(),continuity=String(o.continuity||"ALL"),filter=String(o.spoiler||"all");
-return(index.characters||[]).map(ch=>{const all=claimsFor(index,ch.id), shown=all.filter(c=>visible(c.spoilerLevel,filter)), scopes=ordered(all.flatMap(c=>c.continuityScopes||[])), shownScopes=ordered(shown.flatMap(c=>c.continuityScopes||[]));const target=continuity!=="ALL"&&shownScopes.includes(continuity)?continuity:defaultState(scopes),st=state(ch.id,target),meta=META[ch.id];const official=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(ch.id):null;const displayOverview=meta?meta.overview:(official?official.summary:"Ficha provisional basada en afirmaciones documentadas.");const names=[ch.name,...(ch.aliases||[]),...(ch.keywords||[])].map(value=>String(value).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase());
-const matched=!q||names.some(name=>{
+function normalizeSearchTerm(value){return String(value||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase();}
+function termMatches(value,q){
+  const name=normalizeSearchTerm(value);
+  if(!q)return true;
   if(name===q||name.startsWith(q+" "))return true;
   // Short queries such as "Ryu" should match token prefixes, not incidental
   // substrings inside unrelated names such as "Hiryute".
-  if(q.length<=3)return name.split(/[\s_-]+/).some(token=>token.startsWith(q));
+  if(q.length<=3)return name.split(/[\\s_-]+/).some(token=>token.startsWith(q));
   return name.includes(q);
-});
-return{id:ch.id,name:ch.name,aliases:ch.aliases||[],profilePath:ch.profilePath,overview:displayOverview,summary:continuity==="ALL"?displayOverview:st.summary,preferredContinuity:target,availableContinuities:scopes,states:(continuity==="ALL"?shownScopes:shownScopes.filter(x=>x===continuity)).map(x=>({code:x,label:LABELS[x]||x,affiliation:state(ch.id,x).affiliation})),affiliation:st.affiliation,period:st.period,verifiedClaimCount:shown.length,matched,hasScope:continuity==="ALL"||shownScopes.includes(continuity)};}).filter(x=>x.matched&&x.hasScope).sort((a,b)=>a.name.localeCompare(b.name,"es"));}
+}
+function list(index,options){
+  const o=options||{},q=normalizeSearchTerm(String(o.query||"").trim()),continuity=String(o.continuity||"ALL"),filter=String(o.spoiler||"all");
+  const eligible=(index.characters||[]).map(ch=>{
+    const all=claimsFor(index,ch.id),shown=all.filter(c=>visible(c.spoilerLevel,filter)),scopes=ordered(all.flatMap(c=>c.continuityScopes||[])),shownScopes=ordered(shown.flatMap(c=>c.continuityScopes||[]));
+    const target=continuity!=="ALL"&&shownScopes.includes(continuity)?continuity:defaultState(scopes),st=state(ch.id,target),meta=META[ch.id];
+    const official=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(ch.id):null;
+    const displayOverview=meta?meta.overview:(official?official.summary:"Ficha provisional basada en afirmaciones documentadas.");
+    const nameTerms=[ch.name,...(ch.aliases||[])],keywordTerms=ch.keywords||[];
+    const directMatched=!q||nameTerms.some(value=>termMatches(value,q));
+    const keywordMatched=!q||keywordTerms.some(value=>termMatches(value,q));
+    return{id:ch.id,name:ch.name,aliases:ch.aliases||[],profilePath:ch.profilePath,overview:displayOverview,summary:continuity==="ALL"?displayOverview:st.summary,preferredContinuity:target,availableContinuities:scopes,states:(continuity==="ALL"?shownScopes:shownScopes.filter(x=>x===continuity)).map(x=>({code:x,label:LABELS[x]||x,affiliation:state(ch.id,x).affiliation})),affiliation:st.affiliation,period:st.period,verifiedClaimCount:shown.length,directMatched,keywordMatched,hasScope:continuity==="ALL"||shownScopes.includes(continuity)};
+  }).filter(x=>x.hasScope);
+  // When a query resolves to a character name or alias, show those identity
+  // matches first and do not pollute the result with other dossiers that merely
+  // mention that character in a relationship tag. Use tag/keyword matches only
+  // when no identity name matched.
+  const direct= q ? eligible.filter(x=>x.directMatched) : eligible;
+  const selected=direct.length?direct:eligible.filter(x=>x.keywordMatched);
+  return selected.map(({directMatched,keywordMatched,...item})=>item).sort((a,b)=>a.name.localeCompare(b.name,"es"));
+}
 function relationshipLinks(index,id,continuity,filter){
   const direct=(((REL[id]||{})[continuity])||[]).map(r=>({sourceId:id,targetId:r.targetId,label:r.label,type:r.type,description:r.description,refs:r.refs,direction:"outgoing"}));
   const directTargets=new Set(direct.map(r=>r.targetId));
