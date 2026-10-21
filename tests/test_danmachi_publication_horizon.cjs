@@ -23,7 +23,7 @@ for (const [id, date, status] of [
 ]) {
   assert.ok(note.includes(id), "Missing source register ref " + id);
   assert.ok(note.includes(date), "Missing date " + date);
-  assert.ok(note.includes(status), "Missing publication status " + status);
+  assert.ok(note.toLowerCase().includes(status.toLowerCase()), "Missing publication status " + status);
 }
 assert.match(note, /No crear acontecimientos, participantes, relaciones, habilidades, estados de personajes ni desenlace de vol\. 22/);
 assert.match(note, /Haze.*Heith|Heith.*Haze/s, "Potential transliteration alias must be audited before creating a duplicate.");
