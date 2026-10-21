@@ -220,9 +220,13 @@
         "needs source check",
         "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "structured_dossier",
+        "candidate_only",
+        "primary_text_pending",
+        "CONT-UNVERIFIED"
       ],
-      "status": "pending_primary_text_check",
+      "status": "discovery_lead_only",
       "priority": "high"
     },
     {
@@ -254,9 +258,13 @@
         "needs source check",
         "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "structured_dossier",
+        "candidate_only",
+        "primary_text_pending",
+        "CONT-UNVERIFIED"
       ],
-      "status": "pending_primary_text_check",
+      "status": "discovery_lead_only",
       "priority": "high"
     },
     {
@@ -353,9 +361,12 @@
         "needs source check",
         "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "structured_dossier",
+        "secondary_summary",
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_primary_page_pending",
       "priority": "high"
     },
     {
@@ -396,14 +407,15 @@
       "type": "character",
       "tags": [
         "Jura Halmer",
-        "Era Oscura",
-        "Astrea Record",
         "needs source check",
         "CONT-MAIN-LN",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "Juggernaut incident",
+        "secondary_summary",
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_primary_page_pending",
       "priority": "high"
     },
     {
@@ -524,17 +536,20 @@
       "type": "character",
       "tags": [
         "Valletta Grede",
-        "Era Oscura",
-        "Astrea Record",
         "needs source check",
-        "CONT-AR",
         "individual dossier",
         "primary page pending",
         "structured_dossier",
         "primary_text_pending",
-        "secondary_lead_only"
+        "secondary_lead_only",
+        "Sword Oratoria",
+        "Thanatos Familia (secondary)",
+        "Evilus (secondary)",
+        "CONT-SO",
+        "CONT-UNVERIFIED",
+        "secondary_summary"
       ],
-      "status": "discovery_lead_only",
+      "status": "secondary_summary_reviewed_primary_page_pending",
       "priority": "high"
     },
     {
