@@ -683,7 +683,7 @@
       "sources": [
         null
       ]
-    }
+    },
     "CHAR-KALI": {
       appearance: "La sinopsis editorial conecta Kali Familia con el pasado de las hermanas Hiryute; la apariencia detallada de Kali no se trata como verificada en esta tanda.",
       history: "Su relación con Kali Familia y con el pasado de Tiona y Tione aparece en la ruta editorial de Sword Oratoria volumen 6. Las explicaciones sobre Telskyura y la infancia de las gemelas proceden de fuentes comunitarias y requieren cotejo del volumen.",
