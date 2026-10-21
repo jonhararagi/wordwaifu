@@ -1,5 +1,15 @@
 # Registro de tandas de lore
 
+## DANMACHI-TEMPORAL-CENSUS-001 · Censo de personajes por eras (2026-10-21)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; sin cambios a main.
+- **Base de trabajo:** censo de identidades ya existente; no se crean IDs de personajes.
+- **Contenido:** nuevo `characters/02-censo-temporal-por-eras.md` con cortes ERA-06A/T−7, estado posterior asociado a T−5, pre-T0, T0, ERA-07/08 y barreras de continuidad.
+- **Cobertura:** el apéndice lista las 113 filas existentes de personaje, deidad-personaje y grupo del catálogo. Las filas grupales no equivalen a personas nuevas y no representan 113 identidades únicas verificadas.
+- **Regla de evidencia:** Ryuu, Astrea y Alise conservan únicamente lo respaldado por las sinopsis oficiales ya registradas; el resto de las etiquetas Astrea Record/Era Oscura son candidatos hasta localizar los pasajes pertinentes. Los estados de Ryuu en T−7, T−5 y perfil de anime posterior se mantienen separados.
+- **Catalogación:** el índice temporal queda registrado en `lore/danmachi/catalog.json`; catálogo pasa de 151 a 152 registros, sin cambio en las 113 filas de personajes/deidades/grupos.
+- **Validación:** pendiente de los workflows disparados por estos commits. No se afirma que el censo esté cerrado ni que los localizadores de novela ya estén completados.
+
 ## DANMACHI-CENSUS-001 · Censo maestro y roster de Freya Familia (2026-10-21)
 
 - **Rama:** work/story-completion-danmachi-audit-2026-10; sin cambios a main.
