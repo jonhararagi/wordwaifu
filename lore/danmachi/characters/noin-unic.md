@@ -12,6 +12,7 @@ source_refs:
   - "DMR-001-SRC-005"
 claim_refs:
   - "DMR-007-CLM-015"
+  - "DMR-007-CLM-026"
   - "DMR-007-CLM-031"
 verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
 tags: ["Noin Unic", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
