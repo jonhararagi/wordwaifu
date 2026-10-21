@@ -152,7 +152,7 @@ Las referencias secundarias sitúan a Vito en una secuencia relacionada con Zald
 
 ## Relaciones y límites
 
-### CHAR-DARK-ZALD
+### [Zald](zald.md)
 
 La síntesis secundaria describe una conversación entre Zald y Vito sobre la pérdida de sentidos de Vito; la existencia, contexto y wording precisos requieren cotejo de la novela revisada.
 
