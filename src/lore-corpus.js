@@ -57,7 +57,7 @@
     { id:"official-ga-main-v22-upcoming", category:"official", title:"GA Bunko · DanMachi novela principal, volumen 22 (anunciado)", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial de publicación futura", url:"https://ga.sbcr.jp/product/9784815642907/", coverage:"Fecha prevista 2026-12-15 y texto promocional sobre el Dragón Negro.", limits:"A fecha de corte 2026-10-21 no se ha publicado; registrar solo metadatos editoriales, no contenido narrativo del tomo." },
     { id:"official-ga-sword-oratoria-v17-upcoming", category:"official", title:"GA Bunko · Sword Oratoria, volumen 17 (anunciado)", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial de publicación futura", url:"https://ga.sbcr.jp/product/9784815642914/", coverage:"Fecha prevista 2027-01-15.", limits:"No publicado a fecha de corte; no inferir escenas, participantes o estados futuros." },
     { id:"official-ga-family-chronicle-amid-upcoming", category:"official", title:"GA Bunko · Familia Chronicle, episode Amid (anunciado)", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial de publicación futura", url:"https://ga.sbcr.jp/product/9784815642938/", coverage:"Fecha prevista 2027-02-15 y presentación editorial de la obra.", limits:"No publicado a fecha de corte; no construir una ficha biográfica completa solo con el anuncio." },
-    { id:"official-ga-family-chronicle-haze", category:"official", title:"GA Bunko · Familia Chronicle, episode Haze", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial de volumen publicado", url:"https://ga.sbcr.jp/product/9784815640675/", coverage:"Publicado el 2026-05-15; sinopsis con Haze, aventureros de Freya Familia y una cacería de recompensa.", limits:"La sinopsis no reemplaza lectura ni localizadores; comprobar si Haze es alias editorial de Heith antes de crear otra identidad." },
+    { id:"official-ga-family-chronicle-haze", category:"official", title:"GA Bunko · Familia Chronicle, episode Haze", publisher:"GA Bunko / SB Creative", authority:"Ficha editorial oficial de volumen publicado", url:"https://ga.sbcr.jp/product/9784815640675/", coverage:"Publicado el 2026-05-15; sinopsis menciona a Haze y la recompensa por un troll ensangrentado, alrededor de la cual se moviliza Ottar y otros guerreros.", limits:"La sinopsis no reemplaza lectura ni localizadores. El título japonés episodeヘイズ y el perfil oficial ヘイズ・ベルベット se enlazan con CHAR-HEITH-VELVET; no crear una identidad duplicada." },
     { id:"official-ga-danmachi-release-horizon", category:"official", title:"GA Bunko · anuncio de calendario DanMachi 2026–2027", publisher:"GA Bunko / SB Creative", authority:"Anuncio editorial oficial", url:"https://ga.sbcr.jp/bunko_blog/orio/20260522/", coverage:"Anuncio de publicación de DanMachi 22, Sword Oratoria 17 y Familia Chronicle episode Amid.", limits:"Fechas anunciadas pueden cambiar; consultar de nuevo al llegar a la fecha programada y no tratar el anuncio como texto narrativo." },
     { id:"reference-wikipedia", category:"community", title:"Wikipedia · Is It Wrong to Try to Pick Up Girls in a Dungeon?", publisher:"Enciclopedia colaborativa", authority:"Referencia secundaria general", url:"https://en.wikipedia.org/wiki/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a_Dungeon%3F", coverage:"Contexto general de la serie, publicaciones y adaptaciones.", limits:"No es la fuente adecuada para confirmar detalles finos de psicología, relaciones o cronología." }
   ];
@@ -89,7 +89,8 @@
     "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md",
     "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
     "research/inbox/DANMACHI-RESEARCH-039-orario-prototype-location-inventory.md",
-    "research/inbox/DANMACHI-RESEARCH-040-publication-horizon-2026-10.md"
+    "research/inbox/DANMACHI-RESEARCH-040-publication-horizon-2026-10.md",
+    "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md"
   ];
   const DEFAULT_DETAIL_IDS = [
     "CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA",
@@ -100,6 +101,7 @@
     "CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY","CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-DARK-EREBUS",
     "CHAR-DARK-JURA-HALMER","CHAR-DARK-RUDRA","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE",
     "LOC-ORARIO-CENTRAL-PARK-PROTOTYPE","LOC-ORARIO-AVENUES-PROTOTYPE","LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE",
+    "EVT-DM-FC-HAZE-001","CHAR-HEITH-VELVET","CHAR-OTTAR",
     "CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-HELGA"
   ];
   function getDefaultResearchPaths() { return DEFAULT_RESEARCH_PATHS.slice(); }
