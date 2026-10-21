@@ -1724,3 +1724,146 @@ verification_status: stub
 - rights_note: No copiar el post; registrar solo su alcance y referencia.
 - verified_by: DANMACHI-RESEARCH-025
 - verification_status: original_post_recheck_pending
+
+## DMR-026-SRC-001 · Alfia — ficha de wiki comunitaria en inglés
+- source_id: DMR-026-SRC-001
+- title: Alfia
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi; Astrea Record / referencias retrospectivas
+- volume_or_edition: Artículo web comunitario legado
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extractos indexados de Characteristics, History, Personality y Abilities; lectura integral y localizadores de novela pendientes.
+- claims_supported: [DMR-026-CLM-001, DMR-026-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Útil para ampliar atributos reportados y localizar escenas. Edad, medidas, habilidad, enfermedad y trayectoria no se elevan a verificados sin el texto publicado.
+- conflicting_sources: []
+- rights_note: Parafrasear datos; no copiar texto extenso ni imágenes.
+- verified_by: DANMACHI-RESEARCH-026
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-026-SRC-002 · Zald — ficha de wiki comunitaria en inglés
+- source_id: DMR-026-SRC-002
+- title: Zald
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi; Astrea Record
+- volume_or_edition: Artículo web comunitario legado
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extractos indexados de Characteristics, History y Abilities; escena de Behemoth y enfrentamiento con Ottar pendientes de lectura primaria.
+- claims_supported: [DMR-026-CLM-003, DMR-026-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Edad, altura, alias, habilidades y secuencia histórica proceden de una wiki comunitaria y continúan pendientes de cotejo directo.
+- conflicting_sources: []
+- rights_note: Parafrasear; evitar replicar ilustraciones.
+- verified_by: DANMACHI-RESEARCH-026
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-026-SRC-003 · Valletta Grede — ficha de wiki comunitaria en inglés
+- source_id: DMR-026-SRC-003
+- title: Valletta Grede
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: Sword Oratoria
+- volume_or_edition: Artículo web comunitario legado
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extractos indexados de personalidad y habilidades; primera escena y mecánica de Shaldo pendientes de cotejo.
+- claims_supported: [DMR-026-CLM-005, DMR-026-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: La fuente secundaria informa nivel, afiliación, magia, apariencia y psicología. No usarla para afirmar actividad en el núcleo de Astrea Record.
+- conflicting_sources: []
+- rights_note: Resumir con palabras propias y no copiar arte.
+- verified_by: DANMACHI-RESEARCH-026
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-026-SRC-004 · Jura Halmer — ficha de wiki comunitaria en inglés
+- source_id: DMR-026-SRC-004
+- title: Jura Halmer
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario legado
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Características, equipo y aparición en “Encounter and Vow” / volumen 13; página de novela pendiente.
+- claims_supported: [DMR-026-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Usar para orientar lectura del arco posterior de Jura/Juggernaut; no trasladarlo a la cronología central de Astrea Record.
+- conflicting_sources: []
+- rights_note: Parafrasear los datos y conservar el alcance de la fuente.
+- verified_by: DANMACHI-RESEARCH-026
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-026-SRC-005 · Jura Halmer — ficha de wiki comunitaria en español
+- source_id: DMR-026-SRC-005
+- title: Jura Halmer
+- creator_or_publisher: Colaboradores de la wiki DanMachi en español
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario legado
+- language: Español
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extractos indexados de apariencia y personalidad; capítulo/página de novela pendiente.
+- claims_supported: [DMR-026-CLM-007, DMR-026-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Aporta un resumen útil de manipulación, hostilidad y miedo a Ryuu, pero no sustituye el pasaje del volumen 13.
+- conflicting_sources: []
+- rights_note: Parafrasear; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-026
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-026-SRC-006 · Erebus — ficha de wiki comunitaria en inglés
+- source_id: DMR-026-SRC-006
+- title: Erebus
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi Memoria Freese / Astrea Record
+- volume_or_edition: Artículo web comunitario legado
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extractos indexados del perfil, personalidad y papel narrativo; capítulo “EREN” y diálogo primario pendientes.
+- claims_supported: [DMR-026-CLM-009]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: La ideología y la secuencia del plan se conservan como paráfrasis comunitarias. Verificar por separado juego y trilogía novelada.
+- conflicting_sources: []
+- rights_note: No reproducir diálogo extenso; registrar una paráfrasis propia.
+- verified_by: DANMACHI-RESEARCH-026
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-026-SRC-007 · Sword Oratoria, volumen 7 — sinopsis editorial
+- source_id: DMR-026-SRC-007
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア7
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: Sword Oratoria
+- volume_or_edition: Volumen 7; ISBN 978-4-7973-8934-0
+- language: Japonés
+- publication_date: 2016-12-15 aproximadamente, según ficha editorial
+- official_url: https://ga.sbcr.jp/product/9784797389340/
+- accessed_at: 2026-10-21
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial oficial: investigación de Loki Familia contra los remanentes de Evilus y regreso de una criatura de pelo rojo.
+- claims_supported: [DMR-026-CLM-005]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Fuente primaria editorial para el contexto de publicación y arco general; no menciona ni verifica los atributos personales de Valletta Grede.
+- conflicting_sources: []
+- rights_note: Resumir la sinopsis; no reproducirla completa.
+- verified_by: DANMACHI-RESEARCH-026
+- verification_status: source_checked_context_only
+
