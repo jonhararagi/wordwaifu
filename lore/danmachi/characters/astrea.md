@@ -274,19 +274,19 @@ Fuentes: https://danmachi.com/news/news131.php · https://magazine.jp.square-eni
 
 
 
-## Structured temporal state: historical deity and later encounter
+## Estados temporales estructurados: diosa histórica y encuentro posterior
 
-### State A · Astrea Record / approximately T−7 · CONT-AR
-The official volume 1 synopsis presents Astrea as the deity under whose guidance Ryuu searches for her own justice. The historical source associates the Familia's public mission with justice, but does not detail Astrea's private knowledge or exact location in every scene.
+### Estado A · Astrea Record / aproximadamente T−7 · CONT-AR
+La sinopsis oficial del volumen 1 presenta a Astrea como la diosa bajo cuya guía Ryuu busca una justicia en la que pueda creer. El marco histórico asocia la misión pública de la Familia con la justicia, pero no describe el conocimiento privado de Astrea ni su ubicación exacta en cada escena.
 
-### State B · after the first Familia tragedy
-The official DanMachi IV episode synopsis says the first Astrea Familia disappeared in the Dungeon's darkness and that Ryuu was the only survivor. That group-level synopsis does not establish Astrea's precise location, knowledge or decisions at every stage. Her later departure from Orario must not be backfilled with guesses.
+### Estado B · Después de la tragedia de la primera Familia
+La sinopsis oficial de DanMachi IV dice que la primera Astrea Familia desapareció en la oscuridad del Dungeon y que Ryuu fue la única superviviente. Ese resumen colectivo no establece la ubicación exacta de Astrea, cuánto sabía ni qué decisiones tomó en cada etapa. No se debe completar por conjetura el motivo de su posterior salida de Orario.
 
-### State C · later meeting · CONT-MAIN-LN / Familia Chronicle
-The official publisher synopsis for Familia Chronicle: Episode Ryuu 2 places Astrea in the Sword Forging City during preparation for the Hestia–Freya War Game. Ryuu comes to visit; Astrea does not permit immediate return and orders her to stay while asking for her answer.
+### Estado C · Encuentro posterior · CONT-MAIN-LN / Familia Chronicle
+La sinopsis oficial de Familia Chronicle: Episode Ryuu 2 sitúa a Astrea en la Ciudad Forjadora de Espadas durante los preparativos del War Game entre Hestia y Freya. Ryuu llega a visitarla; Astrea no le permite regresar de inmediato y le ordena quedarse mientras le pide una respuesta.
 
-### State D · later adaptation · CONT-ANIME
-The DanMachi V character profile places Astrea outside Orario with new followers. This is a separate adaptation state, not proof of the full roster or timeline of the later novel continuity.
+### Estado D · Adaptación posterior · CONT-ANIME
+El perfil de DanMachi V presenta a Astrea fuera de Orario con nuevos seguidores. Es un estado de la adaptación y no demuestra el roster o la cronología completos de la continuidad principal de novela.
 
-Sources and claims: DMR-007-SRC-002 / claims 013–014, DMR-007-SRC-003 / claim 008, and DMR-007-SRC-006 / claim 026. Chapter/page locators in the novel remain pending.
+Fuentes y claims: DMR-007-SRC-002 / claims 013–014, DMR-007-SRC-003 / claim 008 y DMR-007-SRC-006 / claim 026. Los localizadores de capítulo/página de la novela siguen pendientes.
 
