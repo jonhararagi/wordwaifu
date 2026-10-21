@@ -2,8 +2,8 @@
 ## Estado operativo y verificación — 2026-10-21
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 164 registros activos; 31 IDs reservados; 118 documentos de apoyo.
-- **Grafo de conocimiento:** 219 relaciones explícitas; 219/219 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Corpus DanMachi:** 167 registros activos; 31 IDs reservados; 119 documentos de apoyo.
+- **Grafo de conocimiento:** 222 relaciones explícitas; 222/222 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 79 perfiles; 79/79 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 79 personajes; 5 grupos; 12 deidades con registro de personaje.
@@ -16,6 +16,7 @@
 - **Procedencia y continuidad:** `CONT-ANIME`, `CONT-MAIN-LN`, `CONT-SO`, `CONT-AR` y `CONT-AU` siguen separados. Sinopsis editoriales, perfiles de adaptación y wikis no equivalen a cotejar una escena del texto completo.
 - **Estado factual:** la integración estructural del roster está validada; siguen pendientes pasajes primarios de la novela, cronologías escena por escena y el censo de personajes fuera del roster de adaptación.
 - **Prioridad del lore:** Orario continúa en investigación; después siguen acontecimientos por fecha/lugar/causa/consecuencia y reconstrucción de historias individuales.
+- **DANMACHI-RESEARCH-039 — lugares Prototype:** esta propuesta integra tres rutas parciales para avenidas, Central Park y comercio de calle; reutiliza claims DMR-034 en `CONT-PROTOTYPE` sin promoverlos a canon de novela.
 
 ## Snapshot operativo previo — 2026-10-20 (histórico, sustituido)
 
