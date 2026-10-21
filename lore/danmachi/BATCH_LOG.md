@@ -1,5 +1,17 @@
 # Registro de tandas de lore
 
+## DANMACHI-CHARACTER-ERA-BATCH-001 · Cinco expedientes temporales de Astrea Familia (2026-10-21)
+
+- **Rama:** \`work/story-completion-danmachi-audit-2026-10\`; sin cambios a \`main\`.
+- **Alcance:** actualización estructural de \`characters/ryuu-lion.md\`, \`alise-lovelace.md\`, \`astrea.md\`, \`gojouno-kaguya.md\` y \`lyra.md\`. Se conservaron los cinco IDs existentes; no se crearon personas duplicadas.
+- **Método:** se completaron los campos de plantilla aplicables: identidad y alias, continuidades, intervalos temporales, psicología con evidencia, estado por periodo, relaciones con sentido y fuente, conocimientos, preguntas abiertas, fuentes y claims.
+- **Cortes principales:** Ryuu diferencia T−7/Astrea Record, la crisis ligada a pérdidas en volumen 2, el estado de superviviente de la adaptación y el viaje posterior para ver a Astrea; Alise distingue su cargo histórico del perfil de adaptación; Astrea separa su guía histórica, el encuentro posterior con Ryuu y su estado posterior de anime; Kaguya y Lyra distinguen retratos de adaptación de la cronología de novela aún no localizada.
+- **Fuentes:** sinopsis oficiales de GA Bunko y perfiles/sinopsis oficiales de DanMachi IV/V ya registrados en \`sources/00-registro-fuentes.md\`, con claims DMR-001, DMR-006 y DMR-007 vinculados. La wiki comunitaria se conserva como pista secundaria cuando corresponde, nunca como sustituto de texto primario.
+- **Guardas de evidencia:** edades, fechas de nacimiento, gustos, miedos, hábitos, armas/magia específicas y escenas individuales sin respaldo quedan vacíos o pendientes. Los niveles/epítetos de adaptación no se proyectan a todos los periodos. La sinopsis de la tragedia se usa como resultado de grupo; no se inventan finales individuales.
+- **Validación:** comprobación estructural y de referencias pendientes tras el último commit. No se afirma aún que CI esté aprobado ni que los capítulos/páginas de las novelas se hayan cotejado directamente.
+- **Resultado:** perfiles ampliados, estado PARTIAL por falta de localizadores primarios individuales.
+
+
 ## DANMACHI-TEMPORAL-CENSUS-001 · Censo de personajes por eras (2026-10-21)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; sin cambios a main.
