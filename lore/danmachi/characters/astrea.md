@@ -3,10 +3,14 @@ id: CHAR-ASTREA
 universe: danmachi
 type: deity_character
 status: partial_source_checked_primary_text_pending
-continuity_scope: CONT-AR
+continuity_scope: "CONT-AR; CONT-MAIN-LN; CONT-ANIME"
 source_refs:
   - DMR-001-SRC-001
   - DMR-001-SRC-003
+  - DMR-007-SRC-001
+  - DMR-007-SRC-002
+  - DMR-007-SRC-003
+  - DMR-007-SRC-006
 claim_refs:
   - DMR-001-CLM-004
   - DMR-001-CLM-005
@@ -219,6 +223,9 @@ related_record_ids: [CHAR-RYUU-LION, CHAR-ALISE-LOVELACE, CHAR-KAGUYA, CHAR-LYRA
 duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
+abilities: []
+skills: []
+magic: []
 ---
 # Astrea
 
