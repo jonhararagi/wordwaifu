@@ -485,3 +485,17 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Conectar Ouranos, Eina, Fels y el personal de la taberna mediante claims oficiales existentes.
 - [x] Actualizar el índice de Familias y alinear los recuentos del estado.
 - [ ] Validar catálogo, enlaces Markdown y navegación en CI.
+
+
+## DANMACHI-RESEARCH-040 · Calendario editorial y horizonte de cobertura
+
+**Alcance:** control de publicaciones; no desplaza la prioridad de analizar Orario y sus sucesos.
+
+- [x] Registrar el corte editorial: novela principal vol. 21 publicada y vol. 22 anunciado para 2026-12-15.
+- [x] Registrar Sword Oratoria 17 para 2027-01-15 y Familia Chronicle episode Amid para 2027-02-15, ambos aún no publicados a la fecha de corte.
+- [x] Registrar episode Haze, publicado el 2026-05-15, como obra pendiente de censo profundo.
+- [x] Agregar las fuentes de la editorial al directorio de fuentes del buscador sin tratarlas como texto completo.
+- [ ] Auditar episode Haze en una copia legal: identidad/alias de Haze-Heith, roster Freya, sucesos, lugares y relaciones, con localizadores.
+- [ ] Tras cada fecha prevista, comprobar publicación real y reconstruir las fichas desde material publicado; nunca importar anticipadamente contenido especulativo.
+
+Fuentes: https://ga.sbcr.jp/product/9784815632946/ · https://ga.sbcr.jp/product/9784815642907/ · https://ga.sbcr.jp/product/9784815642914/ · https://ga.sbcr.jp/product/9784815642938/ · https://ga.sbcr.jp/product/9784815640675/

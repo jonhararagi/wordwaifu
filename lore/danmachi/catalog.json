@@ -3255,6 +3255,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-039-orario-prototype-location-inventory.md",
       "type": "continuity_scoped_location_inventory",
       "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-040",
+      "path": "research/inbox/DANMACHI-RESEARCH-040-publication-horizon-2026-10.md",
+      "type": "publication_horizon_tracking",
+      "status": "source_checked_partial"
     }
   ],
   "lastStructuredSync": "2026-10-20",

@@ -341,3 +341,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Las fichas reutilizan DMR-034-CLM-002/003/004; DMR-039 funciona como índice de inventario y no inventa evidencia nueva.
 - Todas las relaciones conservan `CONT-PROTOTYPE`; la prueba de regresión bloquea filtraciones hacia `CONT-MAIN-LN`.
 - Pendiente: localizar pasajes equivalentes de la novela principal con localizador reproducible.
+
+
+## DANMACHI-RESEARCH-040 · Calendario editorial y horizonte de cobertura
+
+- Fecha de corte: 2026-10-21.
+- Se registran vol. 21 como último tomo principal publicado consultado y los lanzamientos futuros anunciados de DanMachi 22, Sword Oratoria 17 y Familia Chronicle episode Amid.
+- Episode Haze, publicado en mayo de 2026, queda abierto para censo de personajes, lugares, sucesos y relaciones a partir del texto disponible.
+- El anuncio editorial no se convierte en acontecimiento de la historia: vol. 22 y las obras aún no publicadas permanecen como metadatos de calendario.
+- Se añade control de recuperación por defecto y una prueba de regresión para fechas, fuentes oficiales y separación entre publicación prevista y contenido narrativo.
