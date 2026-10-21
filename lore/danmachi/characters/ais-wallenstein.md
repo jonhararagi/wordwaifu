@@ -47,7 +47,7 @@ continuity_variants:
 canon_status: partial_source_checked
 spoiler_level: major
 species: "human"
-deity_or_race: "humana"
+deity_or_race: "human"
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
@@ -236,7 +236,7 @@ Perfil de espadachina reservada; Lefiya la admira. Este retrato permanece etique
 
 ## Relaciones documentadas
 
-### DM-CHAR-BELL
+### [Bell Cranel](bell-cranel.md)
 
 El perfil DanMachi III dice que Ais se interesa por el crecimiento inusualmente rápido de Bell; esto no demuestra por sí solo reciprocidad romántica.
 
@@ -244,7 +244,7 @@ El perfil DanMachi III dice que Ais se interesa por el crecimiento inusualmente 
 
 **Límite:** Interés por el desarrollo documentado; conclusión romántica no establecida por esta fuente.
 
-### DM-CHAR-LOKI
+### [Loki](loki.md)
 
 Ais aparece asociada a Loki Familia en los perfiles oficiales de adaptación.
 
@@ -252,7 +252,7 @@ Ais aparece asociada a Loki Familia en los perfiles oficiales de adaptación.
 
 **Límite:** La afiliación no fija cuándo ingresó ni su estado en todas las épocas.
 
-### CHAR-LEFIYA-VIRIDIS
+### [Lefiya Viridis](lefiya-viridis.md)
 
 El perfil oficial de Sword Oratoria presenta a Lefiya como admiradora de Ais; no se inventan conversaciones ni una relación recíproca más específica.
 
