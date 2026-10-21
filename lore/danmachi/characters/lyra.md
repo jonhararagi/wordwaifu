@@ -16,168 +16,167 @@ entity_type: character
 canonical_name: Lyra
 romanizations:
   - "Lyra"
-name_confidence: "Japanese identity is explicit; Sly Rat is an epithet, not a second identity."
+name_confidence: "El nombre japonés es explícito; Sly Rat es un epíteto, no un alias que represente otra identidad."
 identity_record_id: CHAR-LYRA
 version_record_id: null
 temporal_scope:
-  - "Historical Astrea Familia represented in DanMachi IV; exact scene date not given by the profile."
-  - "Astrea Record / Era Oscura roster association; chapter/page verification pending."
-  - "After first Familia tragedy: official adaptation's group synopsis identifies Ryuu as the only survivor."
-  - "No independently verified active state at T0 or later."
+  - "Astrea Familia histórica representada en DanMachi IV; el perfil no especifica fecha o escena exacta."
+  - "Vínculo con el roster de Astrea Record / Era Oscura; verificación por capítulo/página pendiente."
+  - "Después de la tragedia: la sinopsis colectiva oficial identifica a Ryuu como única superviviente."
+  - "No hay estado activo en T0 o posterior verificado de forma independiente."
 appearance_records: []
 continuity_variants:
-  - "CONT-ANIME: Pallum, Level 3, Sly Rat, situational insight, quick judgment, coordination and trust relation with Ryuu."
-  - "CONT-AR: historical affiliation is a research route; individual actions and abilities need primary-text locators."
-  - "CONT-AU: no approved divergence recorded."
+  - "CONT-ANIME: Pallum, nivel 3, epíteto Sly Rat, perspicacia, rapidez de juicio, coordinación y vínculo de confianza con Ryuu."
+  - "CONT-AR: la afiliación histórica es una ruta de investigación; acciones individuales y habilidades necesitan localizadores primarios."
+  - "CONT-AU: no se ha registrado una divergencia aprobada."
 canon_status: partial_source_checked
 species: Pallum
 deity_or_race: Pallum
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
-first_appearance: "The checked DanMachi IV profile presents her under historical Astrea Familia; first in-universe novel scene not verified."
+first_appearance: "El perfil oficial de DanMachi IV la presenta bajo el apartado histórico de Astrea Familia; su primera escena dentro de la novela no está verificada."
 first_source_id: DMR-007-SRC-001
-first_source_locator: "Official DanMachi IV profile, entry ライラ."
+first_source_locator: "Perfil oficial de DanMachi IV, entrada ライラ."
 familia_membership:
-  - "Astrea Familia — affiliation shown in the official DanMachi IV adaptation profile."
+  - "Astrea Familia: afiliación que aparece en el perfil oficial de adaptación de DanMachi IV."
 roles:
-  - "Historical Astrea Familia adventurer."
-  - "Strategic and observational support who can help coordinate the group according to the adaptation."
-  - "Trusted source of judgment for Ryuu after Alise in the adaptation's characterization."
+  - "Aventurera de la Astrea Familia histórica."
+  - "Apoyo estratégico y observacional que puede ayudar a coordinar al grupo según la adaptación."
+  - "Fuente de criterio y confianza para Ryuu después de Alise, según el retrato de la adaptación."
 epithets:
   - "狡鼠 / Sly Rat — official adaptation epithet."
-appearance_summary: "Pallum. Exact measurements, clothing preferences and appearance changes are not established by the text used here."
-personality_summary: "The official adaptation describes Lyra as perceptive, quick to judge situations and cunning. Her remarks can get to the heart of a problem and help coordinate the Familia. Ryuu trusts her after Alise, making Lyra more than a name in a shared roster. This does not imply omniscience or that she is always correct."
+appearance_summary: "Pallum. El texto consultado no establece medidas exactas, preferencias de vestuario ni cambios de apariencia."
+personality_summary: "La adaptación describe a Lyra como perspicaz, rápida para juzgar situaciones y astuta. Sus comentarios pueden ir al núcleo de un problema y ayudar a coordinar a la Familia. Ryuu confía en ella después de Alise, por lo que no es solo un nombre dentro del roster. Esto no implica omnisciencia ni que siempre tenga razón."
 motivations:
-  - "A personal long-term goal is not documented in the checked profile."
-  - "Her documented function is reading situations, offering incisive observations and helping coordinate the group when needed."
+  - "El perfil consultado no establece una meta personal a largo plazo."
+  - "Su función documentada es leer situaciones, ofrecer observaciones incisivas y contribuir a coordinar al grupo cuando hace falta."
 psychology_profile:
   dominant_traits:
-    - "Perceptive, quick to judge situations and cunning according to the official adaptation."
-    - "Can make incisive observations and help coordinate the group."
+    - "Perspicaz, rápida para juzgar situaciones y astuta según el perfil oficial de la adaptación."
+    - "Capaz de hacer observaciones incisivas y ayudar a coordinar al grupo."
   values: []
   likes: []
   dislikes: []
   fears: []
   habits: []
   speech_style:
-    - "The profile describes remarks that can get to the heart of a problem; exact phraseology and catchphrases are unknown."
+    - "El perfil indica que sus comentarios pueden ir al centro del problema; no se han documentado frases características ni muletillas."
   stress_response: []
   behavioral_patterns:
-    - "Reads situations and helps coordinate companions; show insight through observations instead of omniscience."
-    - "Ryuu can rely on her judgment after Alise according to the official profile."
+    - "Lee situaciones y ayuda a coordinar a sus compañeras; su perspicacia debe expresarse mediante observaciones, no omnisciencia."
+    - "Ryuu puede apoyarse en su criterio después de Alise, según el perfil oficial."
   internal_conflicts: []
   development_by_period:
-    - "Historical Astrea Familia / CONT-ANIME: Pallum, Level 3, Sly Rat, observant and quick to judge (DMR-007-CLM-024)."
-    - "Historical relationship / CONT-ANIME: Ryuu trusts her almost as much as Alise (DMR-007-CLM-024)."
-    - "After the tragedy / CONT-ANIME: official episode synopsis says the first Familia disappeared and Ryuu was the only survivor; Lyra's individual final scene is not described (DMR-007-CLM-026)."
+    - "Astrea Familia histórica / CONT-ANIME: Pallum, nivel 3, Sly Rat, observadora y rápida para juzgar (DMR-007-CLM-024)."
+    - "Relación histórica / CONT-ANIME: Ryuu confía en ella casi tanto como en Alise (DMR-007-CLM-024)."
+    - "Después de la tragedia / CONT-ANIME: la sinopsis oficial dice que la primera Familia desapareció y Ryuu fue la única superviviente; no describe la escena final individual de Lyra (DMR-007-CLM-026)."
   evidence_claims:
     - claim_id: DMR-007-CLM-024
-      aspect: "identity, ability and relationship"
-      claim: "Official profile describes Lyra as a perceptive Pallum of Level 3 with epithet Sly Rat; her remarks help coordinate the group and Ryuu trusts her after Alise."
-      era_or_interval: "Historical Astrea Familia represented in DanMachi IV."
+      aspect: "identidad, capacidad y relación"
+      claim: "El perfil oficial describe a Lyra como Pallum perspicaz de nivel 3, con el epíteto Sly Rat; sus observaciones ayudan a coordinar al grupo y Ryuu confía en ella después de Alise."
+      era_or_interval: "Astrea Familia histórica representada en DanMachi IV."
       continuity_scope: CONT-ANIME
       evidence_type: official_adaptation_profile
       source_id: DMR-007-SRC-001
-      source_locator: "Lyra official character profile."
+      source_locator: "Perfil oficial del personaje Lyra."
       verification_status: source_checked
-      confidence_note: "Do not back-port level and traits to every novel scene."
+      confidence_note: "No se proyectan nivel y rasgos de perfil a cada escena de la novela."
     - claim_id: DMR-007-CLM-003
-      aspect: trust and strategic support
-      claim: "Official profile places Lyra among people Ryuu relies on for insight and situational judgment."
-      era_or_interval: "Historical Astrea Familia represented in DanMachi IV."
+      aspect: "confianza y apoyo estratégico"
+      claim: "El perfil oficial incluye a Lyra entre las personas en que Ryuu puede confiar por su perspicacia y criterio para entender situaciones."
+      era_or_interval: "Astrea Familia histórica representada en DanMachi IV."
       continuity_scope: CONT-ANIME
       evidence_type: official_adaptation_profile
       source_id: DMR-007-SRC-001
-      source_locator: "Ryuu and Lyra entries."
+      source_locator: "Entradas de Ryuu y Lyra."
       verification_status: source_checked
-      confidence_note: "More specific than shared membership, but not universal agreement."
+      confidence_note: "Vínculo más concreto que la mera afiliación, pero no prueba acuerdo constante."
     - claim_id: DMR-003-CLM-002
-      aspect: historical affiliation lead
-      claim: "A community reference lists Lyra as an Astrea Familia adventurer."
-      era_or_interval: "Historical Astrea Familia; exact interval pending."
+      aspect: "pista de afiliación histórica"
+      claim: "Una referencia comunitaria enumera a Lyra como aventurera de Astrea Familia."
+      era_or_interval: "Astrea Familia histórica; periodo exacto pendiente."
       continuity_scope: CONT-AR
       evidence_type: secondary_reference
       source_id: DMR-003-SRC-002
-      source_locator: "Community page; primary locator pending."
+      source_locator: "Página comunitaria; localizador primario pendiente."
       verification_status: secondary_checked
-      confidence_note: "Discovery lead only."
+      confidence_note: "Pista de investigación únicamente."
     - claim_id: DMR-007-CLM-026
-      aspect: historical group outcome
-      claim: "The official episode synopsis says the first Astrea Familia disappeared in the Dungeon's darkness and Ryuu was the only survivor."
-      era_or_interval: "Historical tragedy summarized in DanMachi IV."
+      aspect: "resultado histórico colectivo"
+      claim: "La sinopsis oficial del episodio dice que la primera Astrea Familia desapareció en la oscuridad del Dungeon y que Ryuu fue la única superviviente."
+      era_or_interval: "Tragedia histórica resumida en DanMachi IV."
       continuity_scope: CONT-ANIME
       evidence_type: official_adaptation_synopsis
       source_id: DMR-007-SRC-006
-      source_locator: "DanMachi IV episode 20 synopsis."
+      source_locator: "Sinopsis oficial del episodio 20."
       verification_status: source_checked
-      confidence_note: "Group-level result only; no individual final scene for Lyra."
+      confidence_note: "Resultado colectivo; no narra una escena final individual de Lyra."
 abilities: []
 skills:
-  - "Situational reading, quick judgment and strategic observation in the official profile; detailed techniques not verified."
+  - "Lectura de situaciones, rapidez de juicio y observación estratégica según el perfil oficial; técnicas detalladas no verificadas."
 magic:
-  - "Specific magic/skill names appearing in secondary sources remain unverified and have not been promoted as facts."
+  - "Los nombres de magia o habilidad encontrados en fuentes secundarias siguen sin verificar y no se han promovido a hechos."
 status_by_period:
-  - era: "Historical Astrea Familia state"
+  - era: "Astrea Familia histórica"
     continuity_scope: CONT-ANIME
-    status: "Pallum adventurer, Level 3, Sly Rat; insight and quick judgment highlighted in the official profile."
+    status: "Aventurera Pallum de nivel 3, Sly Rat; el perfil oficial destaca su perspicacia y juicio rápido."
     evidence_claims: [DMR-007-CLM-024]
-    verification_status: "official profile checked; novel timeline locator pending"
+    verification_status: "Perfil oficial consultado; localizador cronológico de novela pendiente"
   - era: "Astrea Record / Era Oscura"
     continuity_scope: CONT-AR
-    status: "Historical affiliation is a research lead; individual missions and detailed actions remain unverified."
+    status: "La afiliación histórica es una pista; presencia por misión y acciones detalladas siguen sin verificar."
     evidence_claims: [DMR-003-CLM-002]
-    verification_status: "secondary lead; primary text pending"
-  - era: "After historical tragedy"
+    verification_status: "Pista secundaria; texto primario pendiente"
+  - era: "Después de la tragedia histórica"
     continuity_scope: CONT-ANIME
-    status: "Not identified as a survivor by the official group synopsis, which names Ryuu as only survivor; Lyra's individual final scene is not described."
+    status: "La sinopsis colectiva no la identifica como superviviente; nombra a Ryuu como única superviviente, pero no describe la última escena individual de Lyra."
     evidence_claims: [DMR-007-CLM-026]
-    verification_status: "official group-level adaptation synopsis checked; individual locator pending"
+    verification_status: "Sinopsis colectiva oficial consultada; localizador individual pendiente"
 relationships:
   - target_id: CHAR-RYUU-LION
     relationship_type: trusted_strategic_support
-    description: "Ryuu relies on Lyra's insight and quick judgment; the profile places Alise first and Lyra next among trusted companions."
-    temporal_scope: "Historical Astrea Familia profile."
+    description: "Ryuu confía en la perspicacia y el criterio rápido de Lyra; el perfil sitúa a Alise primero y a Lyra después entre las compañeras de confianza."
+    temporal_scope: "Perfil histórico de Astrea Familia."
     continuity_scope: CONT-ANIME
     evidence_claims: [DMR-007-CLM-003, DMR-007-CLM-024]
-    confidence_note: "Does not imply perpetual agreement."
+    confidence_note: "No significa que estén siempre de acuerdo."
   - target_id: CHAR-ALISE-LOVELACE
     relationship_type: shared_familia_and_order_of_trust
-    description: "Alise is Ryuu's first reference in the order of trust; an independent intimate Lyra–Alise relationship is not established."
-    temporal_scope: "Historical profile."
+    description: "Alise es la primera referencia de confianza de Ryuu y Lyra aparece después; el perfil no establece una relación íntima independiente entre Lyra y Alise."
+    temporal_scope: "Perfil histórico."
     continuity_scope: CONT-ANIME
     evidence_claims: [DMR-007-CLM-022, DMR-007-CLM-024]
-    confidence_note: "Avoid converting indirect information into a private friendship claim."
+    confidence_note: "No convertir información indirecta en una amistad privada confirmada."
   - target_id: CHAR-ASTREA
     relationship_type: member_and_patron_deity
-    description: "Astrea is the principal deity associated with the historical Familia."
-    temporal_scope: "Historical profile."
+    description: "Astrea es la deidad principal asociada a la Familia histórica."
+    temporal_scope: "Perfil histórico."
     continuity_scope: CONT-ANIME
     evidence_claims: [DMR-007-CLM-025, DMR-007-CLM-024]
-    confidence_note: "No private conversations inferred."
+    confidence_note: "No se inventan conversaciones privadas."
   - target_id: CHAR-KAGUYA
     relationship_type: shared_historical_familia
-    description: "Both appear in the historical Familia adaptation context; no direct personal dynamic is established by the cited claims."
-    temporal_scope: "Historical profile."
+    description: "Ambas aparecen en el contexto histórico de Astrea Familia en la adaptación; los claims citados no establecen una dinámica personal directa."
+    temporal_scope: "Perfil histórico."
     continuity_scope: CONT-ANIME
     evidence_claims: [DMR-007-CLM-004]
-    confidence_note: "Shared affiliation is not proof of friendship or rivalry."
+    confidence_note: "Compartir afiliación no prueba amistad ni rivalidad."
 locations_by_period:
-  - "Historical Astrea Familia: location by individual scene is not mapped."
+  - "Astrea Familia histórica: ubicación por escena individual no mapeada."
 events: []
 knowledge_state:
   knows:
-    - "The profile portrays Lyra as able to read situations quickly and offer incisive observations; facts she knew about individual events are not enumerated."
+    - "El perfil la muestra leyendo situaciones con rapidez y ofreciendo observaciones incisivas; no hay inventario de hechos concretos que conoce en cada evento."
   suspects: []
   does_not_know: []
   status: partial
-  source_refs: [DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-003-SRC-002]
-  confidence: "High for profile traits; novel-specific history and abilities remain unverified."
+  confidence: "Alta para los rasgos del perfil; historia y capacidades específicas de novela siguen sin verificar."
 open_questions:
-  - "Locate Lyra's individual scenes and any special story associated with her in Astrea Record."
-  - "Verify precise participation and individual outcome in the tragedy from the published novel."
-  - "Add magic/skill names only with primary-text locators."
-  - "Leave age, tastes, fears, habits and personal goals unknown until evidence exists."
+  - "Localizar escenas individuales de Lyra y cualquier historia especial asociada a ella en Astrea Record."
+  - "Verificar su participación precisa y su destino individual en la tragedia con la novela publicada."
+  - "Añadir nombres de magia/habilidad solo con localizadores primarios."
+  - "Dejar edad, gustos, miedos, hábitos y metas personales como desconocidos mientras no haya evidencia."
 related_record_ids: [CHAR-RYUU-LION, CHAR-ALISE-LOVELACE, CHAR-ASTREA, CHAR-KAGUYA, DM-FAM-ASTREA]
 duplicate_candidates: []
 author_approved_overrides: []
