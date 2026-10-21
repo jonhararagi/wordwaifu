@@ -66,7 +66,7 @@ continuity: CONT-AR
 - `character_id`: CHAR-DARK-RUDRA
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Era Oscura de Orario / Astrea Record; la aparición exacta y su intervalo deben verificarse
-- `continuity_scope`: CONT-AR
+- `continuity_scope`: CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
@@ -117,7 +117,7 @@ continuity: CONT-AR
 - `character_id`: CHAR-DARK-OLIVAS-ACT
 - `aspect`: cobertura e identidad histórica
 - `era_or_interval`: Arco Vendetta/Enyo; fecha relativa al relato histórico aún sin confirmar
-- `continuity_scope`: CONT-MAIN-LN
+- `continuity_scope`: CONT-SO; CONT-UNVERIFIED
 - `source_id`: DMR-013-SRC-001
 - `source_title`: Índice secundario de personajes / pista bibliográfica
 - `source_type`: secondary_research_lead
