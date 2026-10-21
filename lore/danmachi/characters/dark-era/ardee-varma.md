@@ -166,7 +166,7 @@ Aparición individual, escena, estado y biografía todavía pendientes de cotejo
 
 ## Relaciones y límites
 
-### CHAR-RYUU-LION
+### [Ryuu Lion](../ryuu-lion.md)
 
 La presentación oficial del manga describe a Ardee como cercana a Ryuu; la escena y su forma en la novela ligera siguen pendientes de localizar.
 
