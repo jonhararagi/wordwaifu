@@ -18,166 +18,165 @@ canonical_name: Gojouno Kaguya
 romanizations:
   - "Gojouno Kaguya"
   - "Gojōno Kaguya"
-name_confidence: "Japanese name and stable identity are aligned; Yamato Rindō is an epithet, not a second identity."
+name_confidence: "El nombre japonés y la identidad estable están alineados; Yamato Rindō es un epíteto, no una segunda identidad."
 identity_record_id: CHAR-KAGUYA
 version_record_id: null
 temporal_scope:
-  - "Historical Astrea Familia represented in DanMachi IV; exact in-world date not given."
-  - "Astrea Record roster association; chapter/page verification pending."
-  - "After the first Familia tragedy: official adaptation synopsis says Ryuu was the only survivor; Kaguya's individual final scene not documented."
+  - "Astrea Familia histórica representada en DanMachi IV; el perfil no da una fecha interna exacta."
+  - "Vínculo de roster con Astrea Record; pendiente verificación por capítulo/página."
+  - "Después de la tragedia: la sinopsis de la adaptación dice que Ryuu fue la única superviviente; la escena final individual de Kaguya no está documentada."
 appearance_records: []
 continuity_variants:
-  - "CONT-ANIME: vicecaptain, human, Far Eastern origin, Level 4, Yamato Rindō, close-combat ability, speech/personality description and dynamic with Ryuu."
-  - "CONT-AR: historical roster association; timing and individual actions require primary text locators."
-  - "CONT-AU: no approved divergence recorded."
+  - "CONT-ANIME: vicecapitana, humana, origen en el Lejano Oriente, nivel 4, epíteto Yamato Rindō, capacidad de combate cercano, forma de hablar y dinámica con Ryuu."
+  - "CONT-AR: vínculo con el roster histórico; el momento exacto y sus acciones requieren localizadores primarios."
+  - "CONT-AU: no se ha registrado una divergencia aprobada."
 canon_status: partial_source_checked
 species: human
 deity_or_race: human
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
-first_appearance: "The official adaptation profile documents her historical role; her first in-universe scene in Astrea Record is not verified."
+first_appearance: "El perfil oficial de la adaptación documenta su papel histórico; su primera escena dentro de Astrea Record no está verificada."
 first_source_id: DMR-007-SRC-001
-first_source_locator: "Official DanMachi IV character profile, entry ゴジョウノ・輝夜."
+first_source_locator: "Perfil oficial de personajes de DanMachi IV, entrada ゴジョウノ・輝夜."
 familia_membership:
-  - "Astrea Familia — vicecaptain in the historical state described by the adaptation profile."
+  - "Astrea Familia: vicecapitana en el estado histórico descrito por el perfil de la adaptación."
 roles:
-  - "Vicecaptain of Astrea Familia in CONT-ANIME."
-  - "Adventurer from the Far East."
-  - "One of Astrea Familia's strongest close-combat fighters according to the adaptation profile."
+  - "Vicecapitana de Astrea Familia en CONT-ANIME."
+  - "Aventurera originaria del Lejano Oriente."
+  - "Una de las luchadoras más fuertes de la Familia en combate cercano, según el perfil de la adaptación."
 epithets:
   - "大和竜胆（やまとりんどう） / Yamato Rindō — official adaptation profile."
-appearance_summary: "The adaptation profile says her appearance gives an impression of refinement. Exact measurements, clothing preferences and appearance changes are not established."
-personality_summary: "The official adaptation contrasts Kaguya's refined appearance with rough or vulgar speech. It identifies her as vicecaptain and an especially capable close-combat fighter. Her dynamic with Ryuu includes repeated clashes and mutual recognition of combat ability; preserve both rather than converting their relationship into permanent hostility."
+appearance_summary: "El perfil de la adaptación dice que su apariencia transmite refinamiento. No se infieren medidas, preferencias de vestuario ni cambios físicos por etapa."
+personality_summary: "La adaptación contrasta la apariencia refinada de Kaguya con una forma de hablar áspera o vulgar. La identifica como vicecapitana y luchadora muy capaz en combate cercano. Su vínculo con Ryuu combina choques frecuentes con el reconocimiento mutuo de la capacidad de combate; ambos aspectos deben conservarse, en vez de reducir su relación a hostilidad permanente."
 motivations:
-  - "Private goals and personal ideology are not established by the checked profile; do not invent a hidden objective."
+  - "Sus objetivos privados e ideología personal no aparecen en el perfil consultado; no se inventa una meta oculta."
 psychology_profile:
   dominant_traits:
-    - "Refined outward presentation alongside rough/vulgar speech according to the official adaptation profile (DMR-007-CLM-023)."
-    - "Highly capable in close combat within the historical state represented by the adaptation (DMR-007-CLM-023)."
+    - "Apariencia exterior refinada junto a un habla áspera o vulgar, según la adaptación (DMR-007-CLM-023)."
+    - "Gran capacidad de combate cercano dentro del estado histórico representado por la adaptación (DMR-007-CLM-023)."
   values: []
   likes: []
   dislikes: []
   fears: []
   habits: []
   speech_style:
-    - "Rough or vulgar according to the profile; exact catchphrases and dialect are not catalogued."
+    - "El perfil la describe con un habla áspera o vulgar; no se han catalogado muletillas ni dialecto exactos."
   stress_response: []
   behavioral_patterns:
-    - "The adaptation describes frequent clashes with Ryuu while mutual respect for combat ability remains (DMR-007-CLM-002; DMR-007-CLM-023)."
-    - "Specific tactics, weapons and combat behavior in individual novel scenes remain unknown."
+    - "La adaptación describe choques frecuentes con Ryuu, junto con respeto mutuo por la capacidad de combate (DMR-007-CLM-002; DMR-007-CLM-023)."
+    - "Las tácticas, armas y conductas concretas en escenas individuales de la novela permanecen desconocidas."
   internal_conflicts: []
   development_by_period:
-    - "Historical Astrea Familia / CONT-ANIME: vicecaptain, Far Eastern origin, human, Level 4 and Yamato Rindō (DMR-007-CLM-023)."
-    - "Relationship state / CONT-ANIME: repeated friction and mutual recognition of ability with Ryuu (DMR-007-CLM-002)."
-    - "After the tragedy / CONT-ANIME: official episode synopsis says only Ryuu survived the first Familia; Kaguya's individual final scene is not described (DMR-007-CLM-026)."
+    - "Astrea Familia histórica / CONT-ANIME: vicecapitana, humana, originaria del Lejano Oriente, nivel 4 y Yamato Rindō (DMR-007-CLM-023)."
+    - "Relación histórica / CONT-ANIME: fricción repetida y reconocimiento mutuo de su capacidad con Ryuu (DMR-007-CLM-002)."
+    - "Después de la tragedia / CONT-ANIME: la sinopsis oficial dice que solo Ryuu sobrevivió a la primera Familia; no describe la escena final individual de Kaguya (DMR-007-CLM-026)."
   evidence_claims:
     - claim_id: DMR-007-CLM-023
-      aspect: "identity, role, personality and ability"
-      claim: "Official adaptation identifies Kaguya as a human from the Far East and vicecaptain of Astrea Familia, describes close-combat ability and coarse speech despite refined appearance, and lists Level 4 and Yamato Rindō."
-      era_or_interval: "Historical Astrea Familia represented in DanMachi IV."
+      aspect: "identidad, función, personalidad y capacidad"
+      claim: "La adaptación identifica a Kaguya como humana del Lejano Oriente y vicecapitana de Astrea Familia, describe su capacidad de combate cercano y su habla áspera pese a su apariencia refinada, y enumera nivel 4 y Yamato Rindō."
+      era_or_interval: "Astrea Familia histórica representada en DanMachi IV."
       continuity_scope: CONT-ANIME
       evidence_type: official_adaptation_profile
       source_id: DMR-007-SRC-001
-      source_locator: "Gojouno Kaguya official profile."
+      source_locator: "Perfil oficial de Gojouno Kaguya."
       verification_status: source_checked
-      confidence_note: "Do not assign Level 4 or epithet to every novel scene."
+      confidence_note: "No se atribuye el nivel o el epíteto a todas las escenas de la novela."
     - claim_id: DMR-007-CLM-002
-      aspect: relationship
-      claim: "Official profile describes frequent clashes between Kaguya and Ryuu alongside recognition of each other's combat ability."
-      era_or_interval: "Historical Astrea Familia represented in DanMachi IV."
+      aspect: "relación"
+      claim: "El perfil oficial describe choques frecuentes entre Kaguya y Ryuu junto con el reconocimiento de la capacidad de combate de la otra."
+      era_or_interval: "Astrea Familia histórica representada en DanMachi IV."
       continuity_scope: CONT-ANIME
       evidence_type: official_adaptation_profile
       source_id: DMR-007-SRC-001
-      source_locator: "Kaguya and Ryuu entries."
+      source_locator: "Perfiles de Kaguya y Ryuu."
       verification_status: source_checked
-      confidence_note: "Specific novel chapters for the clashes are not located."
+      confidence_note: "No se han localizado capítulos concretos para esos choques."
     - claim_id: DMR-003-CLM-001
-      aspect: historical affiliation lead
-      claim: "A community reference identifies Kaguya as an adventurer and vicecaptain of historical Astrea Familia."
-      era_or_interval: "Astrea Record / Era Oscura; exact interval pending."
+      aspect: "pista de afiliación histórica"
+      claim: "Una referencia comunitaria presenta a Kaguya como aventurera y vicecapitana de la Astrea Familia histórica."
+      era_or_interval: "Astrea Record / Era Oscura; intervalo exacto pendiente."
       continuity_scope: CONT-AR
       evidence_type: secondary_reference
       source_id: DMR-003-SRC-001
-      source_locator: "Community profile and roster; primary locator pending."
+      source_locator: "Página y roster comunitarios; localizador primario pendiente."
       verification_status: secondary_checked
-      confidence_note: "Secondary discovery lead, not proof of individual scenes."
+      confidence_note: "Pista secundaria de descubrimiento, no prueba de escenas individuales."
     - claim_id: DMR-007-CLM-026
-      aspect: historical group outcome
-      claim: "The official episode synopsis says the first Astrea Familia disappeared in the Dungeon's darkness and Ryuu was the only survivor."
-      era_or_interval: "Historical tragedy summarized in DanMachi IV."
+      aspect: "resultado histórico colectivo"
+      claim: "La sinopsis oficial del episodio dice que la primera Astrea Familia desapareció en la oscuridad del Dungeon y que Ryuu fue la única superviviente."
+      era_or_interval: "Tragedia histórica resumida en DanMachi IV."
       continuity_scope: CONT-ANIME
       evidence_type: official_adaptation_synopsis
       source_id: DMR-007-SRC-006
-      source_locator: "DanMachi IV episode 20 synopsis."
+      source_locator: "Sinopsis oficial del episodio 20."
       verification_status: source_checked
-      confidence_note: "Group-level synopsis does not describe Kaguya's individual final scene."
+      confidence_note: "El resumen colectivo no describe la escena final individual de Kaguya."
 abilities:
   - "Close-combat ability is described as especially strong in the official adaptation profile."
 skills:
   - "Close-combat specialization, adaptation-profile level only."
 magic: []
 status_by_period:
-  - era: "Historical Astrea Familia state"
+  - era: "Astrea Familia histórica"
     continuity_scope: CONT-ANIME
-    status: "Vicecaptain, human, Far Eastern origin, Level 4, Yamato Rindō and especially capable in close combat according to the official profile."
+    status: "Vicecapitana, humana, origen en el Lejano Oriente, nivel 4, Yamato Rindō y gran capacidad de combate cercano según el perfil oficial."
     evidence_claims: [DMR-007-CLM-023]
-    verification_status: "official adaptation profile checked; novel period locator pending"
+    verification_status: "Perfil oficial de adaptación verificado; localizador de novela pendiente"
   - era: "Astrea Record / Era Oscura"
     continuity_scope: CONT-AR
-    status: "Historical affiliation is a research lead; individual missions and precise timeline need a novel locator."
+    status: "La afiliación histórica es una pista de investigación; sus misiones y su cronología precisa requieren un localizador de novela."
     evidence_claims: [DMR-003-CLM-001]
-    verification_status: "secondary lead; primary verification pending"
-  - era: "After historical tragedy"
+    verification_status: "Pista secundaria; verificación primaria pendiente"
+  - era: "Después de la tragedia histórica"
     continuity_scope: CONT-ANIME
-    status: "Not identified as a survivor; official synopsis says Ryuu alone survived but does not narrate Kaguya's individual final scene."
+    status: "No figura como superviviente; la sinopsis oficial dice que Ryuu fue la única superviviente, pero no narra la escena final individual de Kaguya."
     evidence_claims: [DMR-007-CLM-026]
-    verification_status: "official group-level adaptation synopsis checked; individual novel locator pending"
+    verification_status: "Resumen colectivo de la adaptación verificado; localizador individual de novela pendiente"
 relationships:
   - target_id: CHAR-RYUU-LION
     relationship_type: friction_and_mutual_combat_respect
-    description: "Frequent clashes paired with recognition of the other's fighting ability."
-    temporal_scope: "Historical Astrea Familia profile."
+    description: "Choques frecuentes acompañados del reconocimiento de la capacidad de combate de la otra."
+    temporal_scope: "Perfil histórico de Astrea Familia."
     continuity_scope: CONT-ANIME
     evidence_claims: [DMR-007-CLM-002, DMR-007-CLM-023]
-    confidence_note: "Not permanent enmity."
+    confidence_note: "No equivale a enemistad permanente."
   - target_id: CHAR-ALISE-LOVELACE
     relationship_type: captain_and_vicecaptain
-    description: "Formal organizational relation within historical Astrea Familia represented in the adaptation."
-    temporal_scope: "Historical profile."
+    description: "Relación organizativa formal dentro de Astrea Familia histórica, según la representación de la adaptación."
+    temporal_scope: "Perfil histórico."
     continuity_scope: CONT-ANIME
     evidence_claims: [DMR-007-CLM-022, DMR-007-CLM-023]
-    confidence_note: "No private dynamic inferred."
+    confidence_note: "No se infiere una dinámica privada."
   - target_id: CHAR-ASTREA
     relationship_type: member_and_patron_deity
-    description: "Astrea is the deity associated with the historical Familia."
-    temporal_scope: "Historical profile."
+    description: "Astrea es la deidad asociada a la Familia histórica."
+    temporal_scope: "Perfil histórico."
     continuity_scope: CONT-ANIME
     evidence_claims: [DMR-007-CLM-025, DMR-007-CLM-023]
-    confidence_note: "Patronage does not establish private counsel."
+    confidence_note: "La patrona no implica que estén documentadas conversaciones privadas."
   - target_id: CHAR-LYRA
     relationship_type: shared_historical_familia
-    description: "Both appear in the same historical Familia context; no personal dynamic is documented by these claims."
-    temporal_scope: "Historical profile."
+    description: "Ambas aparecen en el contexto de la Familia histórica; los claims citados no establecen una relación personal."
+    temporal_scope: "Perfil histórico."
     continuity_scope: CONT-ANIME
     evidence_claims: [DMR-007-CLM-004]
-    confidence_note: "Shared affiliation is not proof of friendship or rivalry."
+    confidence_note: "La afiliación compartida no prueba amistad ni rivalidad."
 locations_by_period:
-  - "Historical Astrea Familia: exact location by individual scene not mapped."
+  - "Astrea Familia histórica: ubicación exacta de cada escena individual no mapeada."
 events: []
 knowledge_state:
   knows:
-    - "Official profile says Kaguya and Ryuu recognize each other's combat ability; scene-specific thoughts are not recorded."
+    - "El perfil oficial dice que Kaguya y Ryuu reconocen mutuamente su capacidad de combate; no se registran aquí pensamientos específicos de una escena."
   suspects: []
   does_not_know: []
   status: partial
-  source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006]
-  confidence: "High for profile facts; novel-specific chronology pending."
+  confidence: "Alta para los datos del perfil; cronología específica de novela pendiente."
 open_questions:
-  - "Find the exact Astrea Record chapter/page for Kaguya's role and missions."
-  - "Verify individual status and event order in the tragedy from the published novel."
-  - "Keep level, epithet and combat details attached to the adaptation until a period-specific primary source is located."
-  - "Do not fill age, fears, preferences, weapon, magic or private motivations without evidence."
+  - "Localizar el capítulo/página de Astrea Record para el cargo de Kaguya y sus misiones."
+  - "Verificar su estado individual y el orden de eventos de la tragedia en la novela publicada."
+  - "Mantener nivel, epíteto y capacidad de combate vinculados a la adaptación hasta encontrar una fuente primaria específica de la época."
+  - "No completar edad, miedos, preferencias, arma, magia ni motivaciones privadas sin evidencia."
 related_record_ids: [CHAR-RYUU-LION, CHAR-ALISE-LOVELACE, CHAR-ASTREA, CHAR-LYRA, DM-FAM-ASTREA]
 duplicate_candidates: []
 author_approved_overrides: []
