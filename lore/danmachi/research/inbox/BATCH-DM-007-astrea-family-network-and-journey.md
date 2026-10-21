@@ -484,3 +484,70 @@
 - [ ] No decidir automáticamente qué Familia recibe al OC ni alterar la cronología AU sin decisión expresa del autor.
 
 **Resultado:** avance de cobertura navegable, no enciclopedia completa ni veredicto de canon aprobado.
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-002 · Cinco expedientes de miembros históricos, sin duplicar identidades
+
+- **Estado:** parcial con expansión estructural. Se actualizaron las fichas existentes de Asta Knox, Celty Srowa, Iska Bra, Neze Rankett y Noin Unic; no se crearon identidades ni se modificaron los IDs estables.
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`.
+- **Regla probatoria:** el portal oficial de DanMachi IV respalda identidad, especie y presencia de roster de adaptación. La sinopsis oficial del episodio 20 respalda solo el resultado colectivo del grupo y el dato de Ryuu como única superviviente; no sustituye las escenas finales individuales.
+- **Pendiente crítico:** no se obtuvo aquí una copia autorizada del texto japonés de cada historia corta ni un localizador interno verificable. Las traducciones comunitarias se usan como pistas secundarias resumidas, no como sustituto del original.
+
+### Fuentes adicionales rastreadas
+
+- **DMR-007-SRC-007** — Publicación comunitaria presentada como traducción de la historia corta «Celty Srowa» (Astrea Record, vol. 1): https://danmachi.fandom.com/wiki/User_blog:Kisaki_Tosane/Astraea_Record_Volume_1_SS_%22Celty_Srowa%22
+  - Tipo: traducción comunitaria/secundaria. Sirve para descubrir temas y escenas; no valida por sí sola el texto japonés ni las elecciones de traducción.
+- **DMR-007-SRC-008** — Publicación comunitaria presentada como traducción de «Iska Bra» (Astrea Record, vol. 1): https://danmachi.fandom.com/wiki/User_blog:Kisaki_Tosane/Astraea_Record_Volume_1_SS_%22Iska_Bra%22
+  - Tipo: traducción comunitaria/secundaria. Las afirmaciones sobre el orfanato, moda, maquillaje y rechazo a la lástima quedan como leads hasta consultar la edición original.
+- **DMR-007-SRC-009** — Publicación comunitaria presentada como traducción de «Neze Rankett» (Astrea Record, vol. 1): https://danmachi.fandom.com/wiki/User_blog:Kisaki_Tosane/Astraea_Record_Volume_1_SS_%22Neze_Rankett%22
+  - Tipo: traducción comunitaria/secundaria. Los detalles de la operación, liderazgo, luna llena, intercambios con Kaguya y epíteto no se elevan a verificación primaria.
+- **DMR-007-SRC-010** — Índice comunitario de historias cortas: https://danmachi.fandom.com/wiki/Short_Stories
+  - Tipo: índice secundario. Sirve para localizar títulos como «Asta Knox» y «Noin Unic» en el volumen 3; no da el contenido de esas historias ni páginas japonesas.
+  
+### Afirmaciones individuales añadidas
+
+#### DMR-007-CLM-027 · Asta Knox · ruta de historia corta
+- `character_id`: CHAR-ASTA-KNOX
+- `claim`: El perfil oficial de DanMachi IV identifica a Asta Knox como enana e integrante del roster de Astrea Familia. El índice comunitario lista además una historia corta titulada «Asta Knox» en Astrea Record, volumen 3; su contenido no se ha cotejado.
+- `continuity_scope`: CONT-ANIME para especie/roster; CONT-AR como ruta de lectura pendiente.
+- `source_ids`: DMR-007-SRC-001; DMR-007-SRC-010.
+- `verification_status`: official_profile_checked; short_story_index_secondary.
+
+#### DMR-007-CLM-028 · Celty Srowa · curiosidad y temor a una búsqueda destructiva del conocimiento
+- `character_id`: CHAR-CELTY-SROWA
+- `claim`: La ficha oficial identifica a Celty como elfa. Una traducción comunitaria de su historia corta la retrata como intelectualmente curiosa, nacida en el bosque de Yenite, preocupada por imitar el afán de conocimiento de su pueblo y capaz de apoyar a la Familia desde la retaguardia; también describe una conversación de respeto mutuo con Ryuu.
+- `continuity_scope`: CONT-ANIME para identidad; CONT-AR como pista de escena secundaria.
+- `source_ids`: DMR-007-SRC-001; DMR-007-SRC-007.
+- `verification_status`: official_species_checked; secondary_translation_lead; Japanese_text_locator_pending.
+- `confidence_note`: No fijar edad, magia concreta ni diálogo literal sin consultar el texto japonés.
+
+#### DMR-007-CLM-029 · Iska Bra · orfanato e interés por moda
+- `character_id`: CHAR-ISKA-BRA
+- `claim`: La ficha oficial identifica a Iska como amazoness. La traducción comunitaria de su historia corta la presenta como huérfana de la Calle Daidalos que se hizo aventurera para sostener un orfanato, interesada en moda y maquillaje y molesta cuando recibe lástima.
+- `continuity_scope`: CONT-ANIME para identidad; CONT-AR como pista de escena secundaria.
+- `source_ids`: DMR-007-SRC-001; DMR-007-SRC-008.
+- `verification_status`: official_species_checked; secondary_translation_lead; Japanese_text_locator_pending.
+- `confidence_note`: Las fuentes comunitarias discrepan sobre la edad; permanece desconocida. No atribuir una personalidad superficial ni importar estereotipos de las amazoness.
+
+#### DMR-007-CLM-030 · Neze Rankett · cooperación y liderazgo situacional
+- `character_id`: CHAR-NEZE-RANKETT
+- `claim`: La ficha oficial identifica a Neze como mujer lobo. Una traducción comunitaria la muestra participando en una operación coordinada contra soldados de Evilus, cubriendo la primera línea bajo la luna llena, asumiendo liderazgo cuando faltan Alise o Lyra e intercambiando desafíos con Kaguya.
+- `continuity_scope`: CONT-ANIME para identidad; CONT-AR como pista de escena secundaria.
+- `source_ids`: DMR-007-SRC-001; DMR-007-SRC-009.
+- `verification_status`: official_species_checked; secondary_translation_lead; Japanese_text_locator_pending.
+- `confidence_note`: No fijar edad, altura, nivel, habilidad exacta ni epíteto a partir de una traducción comunitaria.
+
+#### DMR-007-CLM-031 · Noin Unic · historia propia y mención en una escena grupal
+- `character_id`: CHAR-NOIN-UNIC
+- `claim`: La ficha oficial identifica a Noin como humana e integrante del roster de Astrea Familia. El índice comunitario lista una historia corta «Noin Unic» en el volumen 3. Una traducción comunitaria del relato de Neze la menciona celebrando el éxito de una operación junto a Iska; no establece su función táctica ni una personalidad estable.
+- `continuity_scope`: CONT-ANIME para identidad; CONT-AR como ruta de lectura secundaria.
+- `source_ids`: DMR-007-SRC-001; DMR-007-SRC-009; DMR-007-SRC-010.
+- `verification_status`: official_species_checked; story_index_secondary; scene_mention_secondary; individual_story_locator_pending.
+
+### Decisiones de calidad
+
+- Las fichas conservan los IDs `CHAR-ASTA-KNOX`, `CHAR-CELTY-SROWA`, `CHAR-ISKA-BRA`, `CHAR-NEZE-RANKETT` y `CHAR-NOIN-UNIC`. No se crearon personajes para nombres alternativos o estados temporales.
+- Los campos de edad, cumpleaños, nivel, epíteto, equipo, magia y destino individual permanecen desconocidos cuando la fuente oficial consultada no los establece.
+- Las relaciones personales se registran solo cuando la traducción comunitaria incluye una escena reconocible; se mantienen como leads secundarios.
+- No se reproduce texto de las traducciones comunitarias en bloque; solo se guardan resúmenes propios de los rasgos que sirven como rutas de lectura.
+- **Resultado:** cinco fichas con plantilla multiera más completa y trazabilidad añadida; no equivale a verificación directa de las cinco historias japonesas ni a canon aprobado.
