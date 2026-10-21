@@ -307,8 +307,7 @@
       "relationships": "Es el hermano mayor de Anya Fromel; ambos aparecen vinculados a la Freya Familia y a Hostess of Fertility.",
       "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
       "sources": [
-        "https://danmachi.com/danmachi5/character/",
-        "https://ga.sbcr.jp/product/9784815640675/"
+        "https://danmachi.com/danmachi5/character/"
       ]
     },
     "CHAR-GULLIVER-BROTHERS": {
@@ -341,7 +340,8 @@
       "relationships": "Sirve a Freya y trata de forma habitual a los miembros lesionados durante entrenamientos. La fuente oficial consultada no describe más detalles de este aspecto. Para ampliarlo sin inventar hechos hay que cotejar escenas o pasajes de la obra correspondiente; por eso esta laguna se mantiene explícita y la ficha distingue un retrato promocional de una biografía narrativa.",
       "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
       "sources": [
-        "https://danmachi.com/danmachi5/character/"
+        "https://danmachi.com/danmachi5/character/",
+        "https://ga.sbcr.jp/product/9784815640675/"
       ]
     },
     "CHAR-VAN-FREYA": {
