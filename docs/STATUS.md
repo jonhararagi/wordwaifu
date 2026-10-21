@@ -5,7 +5,7 @@
 - **Corpus DanMachi:** 164 registros activos; 31 IDs reservados; 118 documentos de apoyo.
 - **Grafo de conocimiento:** 219 relaciones explícitas; 219/219 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
-- **Expedientes de interfaz:** 79 perfiles estructurados en `src/character-dossiers.js`.
+- **Expedientes de interfaz:** 79 perfiles; 79/79 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 79 personajes; 5 grupos; 12 deidades con registro de personaje.
 - **Marcadas `complete`:** 0/79 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
