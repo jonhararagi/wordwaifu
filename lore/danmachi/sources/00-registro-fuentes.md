@@ -2034,7 +2034,7 @@ verification_status: stub
 - claims_supported: [DMR-040-CLM-005]
 - events_supported: []
 - continuity_scope: Familia Chronicle; metadatos y sinopsis
-- reliability_note: Ya publicado a la fecha de corte; la sinopsis no sustituye lectura del relato. Verificar romanización/alias de Haze y Heith antes de crear o fusionar identidades.
+- reliability_note: Ya publicado a la fecha de corte; la sinopsis no sustituye la lectura del relato. La forma japonesa `episodeヘイズ` coincide con el nombre `ヘイズ・ベルベット` del perfil oficial, por lo que ambas rutas se enlazan a `CHAR-HEITH-VELVET`; la adaptación del nombre no crea una segunda identidad.
 - conflicting_sources: []
 - rights_note: Resumir en palabras propias.
 - verified_by: DANMACHI-RESEARCH-040
