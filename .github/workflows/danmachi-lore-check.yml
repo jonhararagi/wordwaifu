@@ -64,6 +64,8 @@ jobs:
         run: node tests/test_danmachi_organization_graph.cjs
       - name: Test Orario Prototype location separation
         run: node tests/test_danmachi_orario_prototype_locations.cjs
+      - name: Test DanMachi publication horizon
+        run: node tests/test_danmachi_publication_horizon.cjs
       - name: Test private preview file allowlist
         run: python tests/test_web_preview_server.py
       - name: Test Story Forge outline and audit
