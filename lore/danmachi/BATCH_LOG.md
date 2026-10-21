@@ -370,3 +370,24 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Catálogo:** se sincronizaron los cinco estados como `partial_source_checked_primary_text_pending` y se añadieron las etiquetas `individual_story_lead` y `primary_text_pending`. No cambia la cantidad de personajes ni se alteran sus IDs.
 - **Control local de esta tanda:** actualización estructural realizada mediante la API de contenidos de GitHub. No se ejecutó aquí `tools/check-catalog.mjs` ni se confirmó CI para el SHA final.
 - **Siguiente prioridad:** conseguir una edición autorizada de *Astrea Record* I y III o una vista previa legítima que exponga las historias cortas; añadir capítulo/página exactos cuando pueda comprobarse el texto japonés.
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-003 · Núcleo de cinco personajes con fichas incompletas
+
+- **Fichas ampliadas:** `characters/bell-cranel.md`, `characters/hestia.md`, `characters/eina-tulle.md`, `characters/ais-wallenstein.md`, `characters/loki.md`.
+- **IDs conservados:** `DM-CHAR-BELL`, `DM-CHAR-HESTIA`, `DM-CHAR-EINA`, `DM-CHAR-AIS`, `DM-CHAR-LOKI`. No se crearon versiones duplicadas por edad, arco o continuidad.
+- **Mejoras:** campos estructurados de identidad, fuentes/claims, estados por periodo, relaciones trazables, psicología con límites probatorios, conocimiento, preguntas abiertas y advertencias de continuidad para la AU.
+- **Fuentes oficiales utilizadas:** perfiles de DanMachi III, IV, V y Sword Oratoria; sinopsis editoriales oficiales de DanMachi, volúmenes 1 y 3; sinopsis oficial del episodio 1. Los perfiles de adaptación y las sinopsis editoriales permanecen etiquetados por alcance y no se presentan como localizadores de capítulo/página.
+- **Claims reutilizados:** DMR-002-CLM-001 a DMR-002-CLM-008; DMR-004-CLM-001/003; DMR-005-CLM-001/005; DMR-008-CLM-001/003 y DMR-014-CLM-012. Los datos de nivel/epíteto se tratan como snapshots de adaptación.
+- **Límites importantes:** no se confirmó una fecha exacta para el descenso de Hestia, edades/cumpleaños, hábitos o miedos específicos, ni todas las primeras escenas. El “medio mes” del episodio 1 se refiere al periodo de Bell desde que recibió la protección/Falna, no al tiempo que Hestia llevaba en el mundo inferior. La relación de Ais con Bell no se simplifica como reciprocidad romántica confirmada.
+- **Advertencia AU conservada:** Bell Cranel no se fusiona automáticamente con el OC; cualquier reclutamiento por Loki o uso del nombre Bell requiere decisión autoral explícita.
+- **Catálogo:** los cinco registros existentes pasan de `draft` a `partial_source_checked_primary_text_pending`, con etiquetas `structured_dossier` y `primary_text_pending`. El total se conserva en 152 registros y no se mueven IDs reservados.
+- **Siguiente paso:** validar YAML, plantilla, referencias y workflows sobre el SHA final; después continuar con otros expedientes existentes aún vacíos, sin repetir los ya desarrollados.
+
+
+## DANMACHI-RETRIEVAL-REGRESSION-001 · Búsqueda por identidad y etiquetas de relaciones
+
+- **Problema detectado por CI:** la búsqueda “Ryu” devolvía también fichas de personas que solo lo mencionan en tags de relación; una expresión regular con escapes incorrectos degradaba la normalización de nombres.
+- **Corrección:** `src/lore-corpus.js` solo considera alias las etiquetas no compartidas por varias identidades y conserva el resto como palabras clave; `src/character-archive.js` da prioridad a coincidencias de nombre/alias frente a coincidencias de etiquetas y normaliza los prefijos correctamente.
+- **Prueba añadida:** `tests/test_character_archive.cjs` ahora exige que la búsqueda por “Ryu” devuelva solo `CHAR-RYUU-LION`, no fichas relacionadas de forma incidental.
+- **Prueba anterior:** los dos workflows PASS en el SHA exacto `2ba04d6bbc7edec73c24d3b01ebb004f3b1a1aff` después de corregir las expresiones regulares. La posterior expansión de fichas requiere su propia validación en el último SHA.
