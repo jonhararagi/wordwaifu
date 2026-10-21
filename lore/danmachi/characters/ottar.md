@@ -155,7 +155,7 @@ Boaz, nivel 7, capitán de Freya Familia y aventurero descrito como el más fuer
 
 ## Relaciones documentadas
 
-### CHAR-FREYA
+### [Freya](freya.md)
 
 El perfil DanMachi V presenta a Ottar como absolutamente leal a Freya y dispuesto a responder con dureza ante quienes la insultan.
 
