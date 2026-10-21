@@ -1,5 +1,18 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-025 · Ampliación de cinco expedientes desde pistas wiki (2026-10-21)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`. `main` permanece sin cambios intencionales.
+- **Expedientes ampliados:** Olivas Act, Rudra, Meteria, Ryana Lietz y Mariyu Reage. Se mantuvieron los IDs canónicos existentes y todas las variantes de nombre de Mariyu/Maryuu continúan en `CHAR-MARIYU-LEAGE`.
+- **Cambios documentales:** nueva investigación `research/inbox/DANMACHI-RESEARCH-025-wiki-informed-character-expansion.md` con once claims atómicos, URL de origen, ámbito temporal, continuidad, spoiler y estado de verificación; registro de fuentes actualizado con DMR-025-SRC-001 a DMR-025-SRC-008.
+- **Datos recuperados como pistas secundarias:** Olivas (alias Vendetta/Fanatic, aspecto reportado, conducta, criatura y consumo de piedras mágicas); Rudra (aspecto y poderes que la wiki le atribuye, referencias retrospectivas y separación entre la acción de Rudra Familia y la agencia individual del dios); Meteria (apariencia, rasgos atribuidos por Alfia, filiación reportada y barrera What If); Ryana (Irivute y técnicas de encantamiento reportadas); Mariyu (Demi Virgo, Rea Vindemia, maza y rango 3–4 ambiguo en el extracto).
+- **Corrección de procedencia:** Olivas y Rudra antes referenciaban IDs de claims/fuentes que en el registro corresponden a otros personajes. Se reemplazaron por refs DMR-025 dedicadas. La revisión automática de enlaces internos comprobará que no queden referencias cruzadas erróneas.
+- **Acceso a las wikis:** se usaron extractos indexados del Fandom legado como pistas de descubrimiento. En esta sesión, la wiki migrada de Miraheze respondió con errores de acceso y Fandom bloqueó la lectura integral. Por tanto, no se afirma haber leído completas las páginas actuales ni haber cotejado una sola de estas afirmaciones contra la novela íntegra.
+- **Continuidad:** Sword Oratoria de Olivas no se fusiona con el núcleo T−7 de Astrea Record; el incidente de Jura/Juggernaut se mantiene como arco posterior aproximado T−5; las historias hipotéticas asociadas a Meteria siguen fuera de CONT-MAIN-LN; los perfiles de anime permanecen como adaptación.
+- **Recuperación:** se añadió la investigación al cargador de `src/lore-corpus.js` y al set de documentos de prueba; se agregaron pruebas de búsqueda, fuente, continuidad y nivel de spoiler. El catálogo registra RESEARCH-DM-025.
+- **Validación:** el estado de pruebas y Actions del SHA final está pendiente de comprobación. No se declara PASS hasta revisar la ejecución real. El localizador de capítulo/página primaria de los cinco expedientes permanece pendiente.
+
+
 ## DANMACHI-CHARACTER-ERA-LOCALIZATION-001 · Normalización lingüística de los cinco expedientes (2026-10-21)
 
 - **Alcance:** se pasaron al español los valores descriptivos y las nuevas secciones temporales de Ryuu, Alise, Astrea, Kaguya y Lyra, conservando en inglés únicamente claves técnicas, enums del esquema, IDs y nombres propios de fuentes/epítetos cuando corresponde.
