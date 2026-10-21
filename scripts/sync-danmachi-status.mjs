@@ -17,7 +17,6 @@ const statusPath = path.join(root, "docs", "STATUS.md");
 const require = createRequire(import.meta.url);
 const args = new Set(process.argv.slice(2));
 const writeMode = args.has("--write");
-const checkMode = args.has("--check") || !writeMode;
 const errors = [];
 const fail = message => errors.push(message);
 const isObject = value => value !== null && typeof value === "object" && !Array.isArray(value);
@@ -81,7 +80,6 @@ for (const id of recordIds) if (reservedSet.has(id)) fail("ID activo y reservado
 for (const id of duplicate(reservedIds)) fail("ID reservado duplicado: " + id);
 for (const id of duplicate(documentIds)) fail("ID de documento duplicado: " + id);
 
-const relationshipIds = new Set(catalog.relationships.map(edge => edge && edge.id).filter(Boolean));
 let validEndpoints = 0;
 for (const edge of catalog.relationships) {
   if (!isObject(edge)) {
