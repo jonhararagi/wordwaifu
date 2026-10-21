@@ -6,6 +6,8 @@ status: partial_source_checked_primary_text_pending
 continuity_scope: "CONT-AR; CONT-ANIME"
 source_refs:
   - DMR-001-SRC-003
+  - DMR-007-SRC-001
+  - DMR-007-SRC-006
 claim_refs:
   - DMR-001-CLM-005
   - DMR-006-CLM-003
