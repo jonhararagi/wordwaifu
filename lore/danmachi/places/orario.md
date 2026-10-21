@@ -103,3 +103,14 @@ Los siguientes puntos son **líneas de investigación**, no hechos ya confirmado
 - Las preguntas históricas se trabajarán después con fichas de eventos enlazadas, para evitar convertir esta página en una cronología narrativa duplicada.
 
 **Método de trabajo:** [Análisis progresivo del lore de DanMachi](../research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md).
+
+
+## Referencias de Prototype separadas del canon principal
+
+El corpus conserva tres fichas urbanas procedentes del material oficial Prototype. Se exponen desde Orario para permitir la navegación, pero su presencia aquí no confirma que los datos existan en la novela ligera:
+
+- [Avenidas principales (Prototype)](orario-avenues-prototype.md) — `LOC-ORARIO-AVENUES-PROTOTYPE`.
+- [Central Park (Prototype)](central-park-prototype.md) — `LOC-ORARIO-CENTRAL-PARK-PROTOTYPE`.
+- [Comercio de calle (Prototype)](commercial-streets-prototype.md) — `LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE`.
+
+Las tres fichas conservan `CONT-PROTOTYPE`. No copiar sus relaciones espaciales al periodo principal sin cotejo independiente.

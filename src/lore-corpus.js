@@ -81,7 +81,8 @@
     "research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md",
     "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
     "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md",
-    "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"
+    "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+    "research/inbox/DANMACHI-RESEARCH-039-orario-prototype-location-inventory.md"
   ];
   const DEFAULT_DETAIL_IDS = [
     "CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA",
@@ -91,6 +92,7 @@
     "CHAR-TIONA-HIRYUTE","CHAR-TIONE-HIRYUTE","CHAR-BETE-LOGA","CHAR-RAUL-NOORD","CHAR-SOMA","CHAR-ZANIS-LUSTRA",
     "CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY","CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-DARK-EREBUS",
     "CHAR-DARK-JURA-HALMER","CHAR-DARK-RUDRA","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE",
+    "LOC-ORARIO-CENTRAL-PARK-PROTOTYPE","LOC-ORARIO-AVENUES-PROTOTYPE","LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE",
     "CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-HELGA"
   ];
   function getDefaultResearchPaths() { return DEFAULT_RESEARCH_PATHS.slice(); }

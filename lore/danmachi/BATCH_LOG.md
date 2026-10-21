@@ -332,3 +332,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - `ORG-HOSTESS` representa organización/personal y `LOC-HOSTESS` conserva el lugar físico.
 - Las diez nuevas relaciones reutilizan claims oficiales del corpus DMR-006 y conservan `CONT-ANIME`.
 - Índice de Familias sincronizado con IDs activos; recuentos operativos derivados del catálogo.
+
+
+## DANMACHI-RESEARCH-039 · Inventario separado de lugares del Prototype
+
+- Fecha: 2026-10-21.
+- Se integran tres fichas de una rama anterior de Orario sobre el catálogo más reciente, sin sobrescribir los cambios del roster ni de la Era Oscura.
+- Las fichas reutilizan DMR-034-CLM-002/003/004; DMR-039 funciona como índice de inventario y no inventa evidencia nueva.
+- Todas las relaciones conservan `CONT-PROTOTYPE`; la prueba de regresión bloquea filtraciones hacia `CONT-MAIN-LN`.
+- Pendiente: localizar pasajes equivalentes de la novela principal con localizador reproducible.
