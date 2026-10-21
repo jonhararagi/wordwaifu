@@ -52,9 +52,9 @@
 - source_type: official_publisher_synopsis
 - source_locator: sinopsis editorial
 - source_url: https://ga.sbcr.jp/product/9784797388466/
-- verification_status: source_checked_partial
+- verification_status: source_checked
 - spoiler_level: major
-- confidence_note: Confirma el marco, no cada combate o recuerdo.
+- confidence_note: El claim está verificado únicamente como afirmación de la sinopsis editorial oficial; no convierte en verificado el contenido de cada recuerdo, combate o escena de la novela.
 
 ### DMR-038-CLM-003 · Diferencias de las gemelas en perfil oficial
 - claim_id: DMR-038-CLM-003
