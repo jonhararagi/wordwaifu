@@ -127,7 +127,7 @@
 - aspect: antagonismo y navegación
 - era_or_interval: Astrea Record; orden exacto pendiente
 - continuity_scope: CONT-AR
-- source_id: DMR-029-CLM-001; DMR-029-CLM-002; DMR-029-CLM-003
+- source_id: DMR-038-SRC-002; DMR-038-SRC-003; DMR-038-SRC-004; DMR-029-SRC-003; DMR-029-SRC-006
 - source_title: procedencia histórica DMR-029
 - source_type: community_secondary_character_summary
 - source_locator: secciones de historia en compendios
