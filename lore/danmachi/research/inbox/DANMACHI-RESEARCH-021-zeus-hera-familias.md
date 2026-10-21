@@ -59,3 +59,40 @@
 - **Fuente:** DMR-021-SRC-002.
 - **Estado:** secondary_reference_primary_locator_pending; identity unresolved.
 - **Límite:** no completar la identidad mediante el alias “Emperatriz” ni inferirla por semejanza. Requiere una fuente autorizada que nombre explícitamente a la persona.
+
+
+## Claims estructurados para recuperación de lore
+
+### DMR-021-CLM-004 · Meteria y Alfia — relación reportada para recuperación
+- `claim_id`: DMR-021-CLM-004
+- `claim`: Referencias comunitarias incluyen a Meteria en el roster de Hera Familia y la describen como hermana gemela de Alfia. La afiliación y el parentesco siguen pendientes de localizador primario.
+- `character_ids`: [CHAR-METERIA, CHAR-DARK-ALFIA]
+- `aspect`: afiliación familiar y parentesco reportados
+- `era_or_interval`: historia familiar anterior al relato principal; fechas individuales sin confirmar
+- `continuity_scope`: CONT-UNVERIFIED
+- `source_id`: DMR-021-SRC-002
+- `source_title`: Fuentes comunitarias sobre Hera Familia y Meteria
+- `source_type`: secondary_reference
+- `source_locator`: Resumen comunitario del roster Hera/Meteria/Alfia; página y escena primaria pendientes
+- `source_url`: https://danmachi.fandom.com/wiki/Hera_Familia
+- `evidence_type`: secondary_research_lead
+- `verification_status`: secondary_reference_primary_locator_pending
+- `spoiler_level`: major
+- `confidence_note`: Mantener afiliación y parentesco como reportes secundarios hasta cotejar un pasaje de la novela.
+
+### DMR-021-CLM-005 · Meteria como madre de Bell — spoiler mayor
+- `claim_id`: DMR-021-CLM-005
+- `claim`: Una referencia comunitaria identifica a Meteria como madre de Bell Cranel. La relación es un dato de spoiler mayor y continúa pendiente de localizador primario; no implica que todos los personajes la conozcan.
+- `character_ids`: [CHAR-METERIA, DM-CHAR-BELL]
+- `aspect`: parentesco y conocimiento narrativo
+- `era_or_interval`: historia familiar anterior al inicio de la historia principal; detalle temporal y escena pendientes
+- `continuity_scope`: CONT-MAIN-LN
+- `source_id`: DMR-021-SRC-006
+- `source_title`: Referencia comunitaria sobre Meteria y Bell
+- `source_type`: secondary_reference
+- `source_locator`: Entrada comunitaria de Meteria; no se ha registrado capítulo/página primaria
+- `source_url`: https://danmachi.fandom.com/wiki/Meteria
+- `evidence_type`: secondary_research_lead
+- `verification_status`: secondary_reference_primary_locator_pending
+- `spoiler_level`: major
+- `confidence_note`: No inventar el estado biográfico de Meteria, su pareja, su muerte ni quién conoce el parentesco en cada época.
