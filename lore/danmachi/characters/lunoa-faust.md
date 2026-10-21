@@ -202,7 +202,7 @@ Humana y trabajadora de Hostess of Fertility; el perfil destaca su sentido prác
 
 ## Relaciones documentadas
 
-### CHAR-MIA-GRAND
+### [Mia Grand](mia-grand.md)
 
 El perfil vincula su empleo en la taberna con una deuda con Mia posterior al incidente.
 
@@ -210,7 +210,7 @@ El perfil vincula su empleo en la taberna con una deuda con Mia posterior al inc
 
 **Límite:** El perfil no enumera los términos contractuales ni todas las escenas.
 
-### CHAR-CHLOE-ROLO
+### [Chloe Rolo](chloe-rolo.md)
 
 Lunoa y Chloe comparten trabajo en Hostess of Fertility y consecuencias del incidente que causó daños a la taberna, según la adaptación.
 
@@ -218,7 +218,7 @@ Lunoa y Chloe comparten trabajo en Hostess of Fertility y consecuencias del inci
 
 **Límite:** La asociación no implica amistad íntima en toda etapa.
 
-### CHAR-ANYA-FROMEL
+### [Anya Fromel](anya-fromel.md)
 
 El perfil la muestra reprendiendo ocurrencias de Anya; no se interpreta como enemistad.
 
@@ -226,7 +226,7 @@ El perfil la muestra reprendiendo ocurrencias de Anya; no se interpreta como ene
 
 **Límite:** Conducta de la presentación oficial, no descripción de todas sus interacciones.
 
-### CHAR-RYUU-LION
+### [Ryuu Lion](ryuu-lion.md)
 
 El perfil vincula la deuda y el daño de la taberna a un encargo contra Ryuu; no se infiere relación personal fuera del incidente.
 
