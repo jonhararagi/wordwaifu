@@ -1109,7 +1109,7 @@
         "Era Oscura",
         "Astrea Record",
         "needs source check",
-        "CONT-AR",
+        "CONT-MAIN-LN",
         "individual dossier",
         "primary page pending"
       ],
@@ -6257,6 +6257,34 @@
       "claimRef": "DMR-038-CLM-006",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
       "note": "No fija desenlace ni reproduce escena."
+    },
+    {
+      "id": "REL-RUDRA-JUGGERNAUT-EVENT-001",
+      "from": "CHAR-DARK-RUDRA",
+      "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "kind": "reported_faction_deity_route",
+      "label": "deidad de Rudra Familia vinculada por fuentes secundarias a la fase posterior del Juggernaut",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "T-5 aproximado, referencia secundaria",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-029-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "La ruta pertenece a la fase posterior, no al núcleo T-7 de Astrea Record; la responsabilidad personal de Rudra en la trampa necesita cotejo primario."
+    },
+    {
+      "id": "REL-JURA-JUGGERNAUT-EVENT-001",
+      "from": "CHAR-DARK-JURA-HALMER",
+      "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "kind": "reported_antagonist_route",
+      "label": "Jura está vinculado por fuentes secundarias a la trampa que desencadena el Juggernaut",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "T-5 aproximado, referencia secundaria",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-029-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "El vínculo es una ruta secundaria para leer el arco; orden, mecanismos y acciones individuales deben verificarse en la novela principal."
     }
   ]
 }
