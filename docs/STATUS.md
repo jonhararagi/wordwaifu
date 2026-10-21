@@ -6,7 +6,7 @@
 **Esta sección prevalece sobre el historial que sigue.** No se certifica un porcentaje global a partir de cantidad de archivos o tests.
 
 - **Rama de propuesta:** `jonhararagi/wordwaifu` · `work/danmachi-character-completion-dark-era-2026-10`; CI de esta propuesta aún por verificar.
-- **Cobertura estructural DanMachi propuesta:** 164 registros activos, 31 IDs reservados, 118 documentos de apoyo y 217 aristas; los recuentos no equivalen a un porcentaje de canon verificado.
+- **Cobertura estructural DanMachi propuesta:** 164 registros activos, 31 IDs reservados, 118 documentos de apoyo y 219 aristas; los recuentos no equivalen a un porcentaje de canon verificado.
 - **Roster de adaptación:** 63 identidades. Cada una dispone de registro activo, ficha Markdown y expediente de interfaz. Los cuatro hermanos Gulliver tienen IDs y rutas independientes y enlazan con grupo y Freya Familia.
 - **Hubs de navegación:** 18 registros de Familia, organizaciones Guild/Hostess, ubicación `LOC-HOSTESS` y nodo Xenos; las listas históricas siguen parciales.
 - **Grafo:** 217 aristas explícitas en el catálogo propuesto. La Era Oscura añade rutas secundarias para Alfia/Zald/Erebus y pistas de Valletta/Thanatos marcadas `pending_verification`, no como canon confirmado.
