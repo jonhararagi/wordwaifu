@@ -592,14 +592,14 @@ return{summary:"Ficha provisional basada únicamente en las afirmaciones de esta
 }
 function refsClaims(index,refs,continuity,filter){return(index.claims||[]).filter(c=>((refs||[]).includes(c.claimId)||(refs||[]).includes(c.entryId))&&(!continuity||(c.continuityScopes||[]).includes(continuity))&&visible(c.spoilerLevel,filter));}
 function worst(claims){const rank={none:0,mild:1,unknown:2,major:3,endgame:4};return claims.reduce((v,c)=>rank[String(c.spoilerLevel||"unknown").toLowerCase()]>rank[v]?String(c.spoilerLevel||"unknown").toLowerCase():v,"none");}
-function normalizeSearchTerm(value){return String(value||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase();}
+function normalizeSearchTerm(value){return String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();}
 function termMatches(value,q){
   const name=normalizeSearchTerm(value);
   if(!q)return true;
   if(name===q||name.startsWith(q+" "))return true;
   // Short queries such as "Ryu" should match token prefixes, not incidental
   // substrings inside unrelated names such as "Hiryute".
-  if(q.length<=3)return name.split(/[\\s_-]+/).some(token=>token.startsWith(q));
+  if(q.length<=3)return name.split(/[\s_-]+/).some(token=>token.startsWith(q));
   return name.includes(q);
 }
 function list(index,options){
