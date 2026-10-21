@@ -16,7 +16,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md",
   "research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md",
-  "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md"
+  "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md",
+  "research/inbox/DANMACHI-RESEARCH-025-wiki-informed-character-expansion.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -34,12 +35,34 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 124, "Indexed source claims must include the structured Meteria family-research claims.");
-assert.equal(index.entryCount, 127, "All currently sourced lore claims must be represented in searchable entries, including Meteria.");
+assert.equal(index.sourceClaimCount, 135, "Indexed source claims must include Meteria and the wiki-informed character research pack.");
+assert.equal(index.entryCount, 138, "All currently sourced lore claims must be represented in searchable entries, including Meteria and wiki-informed character claims.");
 const meteriaAlfiaClaim = corpus.search(index, { query: "Meteria Alfia hermana gemela", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(meteriaAlfiaClaim.results.some(claim => claim.claimId === "DMR-021-CLM-004"), "Meteria-Alfia relationship lead must be retrievable and stay explicitly unverified.");
 const meteriaBellClaim = corpus.search(index, { query: "Meteria madre Bell Cranel", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(meteriaBellClaim.results.some(claim => claim.claimId === "DMR-021-CLM-005"), "Meteria's major-spoiler relationship to Bell must be retrievable from the research package.");
+const olivasWiki = corpus.search(index, { query: "Olivas Vendetta Fanatic", characterId: "CHAR-DARK-OLIVAS-ACT", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(olivasWiki.results.some(claim => claim.claimId === "DMR-025-CLM-001" || claim.claimId === "DMR-025-CLM-002"), "Olivas alias/personality claims must be searchable under the Sword Oratoria continuity.");
+assert.ok(olivasWiki.results.every(claim => claim.continuityScopes.includes("CONT-SO")), "Olivas claims must retain the Sword Oratoria continuity filter.");
+assert.ok(olivasWiki.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Wiki-only Olivas claims must remain visibly unverified as primary evidence.");
+assert.ok(olivasWiki.results.some(claim => claim.sourceUrls.includes("https://danmachi.fandom.com/wiki/Olivas_Act")), "Olivas results must retain the originating wiki URL.");
+
+const rudraJuggernaut = corpus.search(index, { query: "Rudra Familia Juggernaut", characterId: "CHAR-DARK-RUDRA", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(rudraJuggernaut.results.some(claim => claim.claimId === "DMR-025-CLM-006"), "Rudra Familia's reported Juggernaut incident must be discoverable without attributing every action to Rudra personally.");
+assert.ok(rudraJuggernaut.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")), "Rudra timeline leads must respect main-novel continuity.");
+
+const meteriaWikilookup = corpus.search(index, { query: "Meteria cabello Alfia madre Bell", characterId: "CHAR-METERIA", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(meteriaWikilookup.results.some(claim => claim.claimId === "DMR-025-CLM-007"), "Meteria's extended family profile must be searchable while remaining secondary.");
+assert.ok(meteriaWikilookup.results.filter(claim => claim.claimId === "DMR-025-CLM-007").every(claim => claim.spoilerLevel === "major"), "Meteria's family revelations must remain major spoilers.");
+
+const ryanaMagic = corpus.search(index, { query: "Ryana Irivute fuego", characterId: "CHAR-RYANA-LIETZ", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ryanaMagic.results.some(claim => claim.claimId === "DMR-025-CLM-009"), "Ryana's community-reported magic lead must be retrievable.");
+assert.ok(ryanaMagic.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Ryana's magic must not be promoted to verified primary fact.");
+
+const maryuuMagic = corpus.search(index, { query: "Maryuu Rea Vindemia maza", characterId: "CHAR-MARIYU-LEAGE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(maryuuMagic.results.some(claim => claim.claimId === "DMR-025-CLM-011"), "Mariyu/Maryuu alias and healing-magic lead must be retrievable through one stable character ID.");
+assert.ok(maryuuMagic.results.every(claim => claim.characterIds.includes("CHAR-MARIYU-LEAGE")), "Romanization variants must not create duplicate character identities.");
+
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
