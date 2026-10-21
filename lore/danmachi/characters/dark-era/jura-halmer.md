@@ -15,7 +15,7 @@ claim_refs:
   - "DMR-026-CLM-007"
   - "DMR-026-CLM-008"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
-tags: ["Jura Halmer", Era Oscura, historical dossier, CONT-AR, primary_text_pending]
+tags: ["Jura Halmer", "DanMachi volumen 13", "Rudra Familia", "Juggernaut", "CONT-MAIN-LN", "primary_text_pending"]
 research_source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
