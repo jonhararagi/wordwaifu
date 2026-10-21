@@ -564,10 +564,16 @@ const doc=index&&index.profileDetails?index.profileDetails[id]:null;
 if(!base&&doc){
   const scopes=doc.continuityScopes||[];
   const inScope=!scopes.length||scopes.includes(continuity);
+  const inContinuity=(doc.sections||[]).filter(section=>{
+    const explicit=[...String(section.heading||"").matchAll(/\\bCONT-[A-Z0-9-]+\\b/g)].map(m=>m[0]);
+    return !explicit.length||explicit.includes(continuity);
+  });
   const sectionList=inScope
-    ?(doc.sections||[]).map(section=>({title:section.heading,text:section.text,source:"existing-repository-profile"}))
+    ?inContinuity.map(section=>({title:section.heading,text:section.text,source:"existing-repository-profile"}))
     :[{title:"Alcance de continuidad",text:"Este expediente está etiquetado para "+scopes.join(", ")+". No se muestra su contenido como si perteneciera a "+(LABELS[continuity]||continuity)+".",source:"continuity-guard"}];
-  const relevantClaims=(index.claims||[]).filter(claim=>(doc.claimRefs||[]).includes(claim.claimId)||(doc.claimRefs||[]).includes(claim.entryId));
+  const relevantClaims=(index.claims||[]).filter(claim=>
+    ((doc.claimRefs||[]).includes(claim.claimId)||(doc.claimRefs||[]).includes(claim.entryId)) &&
+    (!(claim.continuityScopes||[]).length||(claim.continuityScopes||[]).includes(continuity)));
   const refs=[];
   for(const claim of relevantClaims){
     for(const url of claim.sourceUrls||[]){
