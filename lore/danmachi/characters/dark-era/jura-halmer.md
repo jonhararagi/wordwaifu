@@ -7,14 +7,20 @@ continuity_scope: "CONT-MAIN-LN"
 source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-004"
+  - "DMR-026-SRC-005"
 claim_refs:
   - "DMR-014-CLM-005"
   - "DMR-013-CLM-005"
+  - "DMR-026-CLM-007"
+  - "DMR-026-CLM-008"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Jura Halmer", Era Oscura, historical dossier, CONT-AR, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-004"
+  - "DMR-026-SRC-005"
 entity_type: character
 canonical_name: "Jura Halmer"
 aliases:
@@ -173,3 +179,15 @@ Los resúmenes secundarios sitúan a Ryuu y Jura en el mismo desastre del Jugger
 
 - Perfil/índice comunitario: referencia secundaria usada para orientar la búsqueda; no sustituye el texto japonés publicado.
 - La ficha comunitaria enlazada orienta a DanMachi, volumen 13, pero no sustituye la novela publicada. La página/escena exacta sobre Jura, el collar y el Juggernaut sigue pendiente de cotejo.
+
+
+## Ampliación de investigación DMR-026 · arco de Jura/Juggernaut, posterior a T−7
+
+- **Identidad y aparición reportadas:** la wiki lo describe como hombre-gato y exmiembro de Rudra Familia; ubica su aparición en “Encounter and Vow”, DanMachi, volumen 13, y reporta el apodo “Slaver Cat”. No se considera comprobada la primera escena hasta localizar el texto.
+- **Apariencia/equipo reportados:** cabello castaño claro y ojos verdes; espada corta y látigo carmesí. La wiki española añade que Ryuu le cortó una oreja y parte del brazo derecho años antes, y describe un adorno para oreja hecho con hueso de monstruo.
+- **Conducta reportada:** el resumen español lo presenta como manipulador, dispuesto a simular indefensión para empujar a ciudadanos de Rivira a atacar a Ryuu. También registra un miedo genuino a Ryuu tras el ataque de ella a su hogar, y que tembló al enfrentarse a ella y Bell. No convertir estas síntesis en diagnóstico ni inferir que no pueda mostrar otros rasgos.
+- **Vínculo con el Dungeon:** las wikis conectan a Jura con látigos/collares para manipular monstruos y con la trampa que daña el Dungeon y provoca al Juggernaut. La mecánica y la secuencia deben reconstruirse desde el volumen 13; no asumir control absoluto de los monstruos.
+- **Barrera temporal:** este arco se coloca aproximadamente cinco años antes de Bell en las referencias secundarias. No pertenece automáticamente al núcleo histórico de *Astrea Record*, que se ubica alrededor de siete años antes, y la afiliación a Rudra Familia no demuestra una orden personal de Rudra.
+
+**Evidencia secundaria:** DMR-026-CLM-007/008 · [DanMachi Wiki (inglés) — Jura Halmer](https://danmachi.fandom.com/wiki/Jura_Halmer) · [Wiki española — Jura Halmer](https://danmachi.fandom.com/es/wiki/Jura_Halmer).  
+**Pendiente:** cotejar capítulos y páginas del volumen 13 y separar cada hecho del retorno posterior del Juggernaut.
