@@ -80,7 +80,7 @@ psychology_profile:
   development_by_period:
     - "ERA-06A / CONT-AR: perfil histórico vinculado a Astrea Record; la escena individual se basa por ahora en un índice o traducción comunitaria y requiere cotejo japonés."
     - "CONT-ANIME / recuerdo posterior: perfil oficial establece especie y roster; la sinopsis del episodio 20 ofrece solo un resultado grupal y no describe la última escena de esta persona."
-  evidence_claims:
+evidence_claims:
   - claim_id: DMR-007-CLM-017
     aspect: "identidad, especie y afiliación"
     claim: "El perfil oficial de DanMachi IV identifica a Asta Knox como enana y la enumera bajo Astrea Familia; la entrada no basta para verificar una biografía, nivel o habilidades completos."
