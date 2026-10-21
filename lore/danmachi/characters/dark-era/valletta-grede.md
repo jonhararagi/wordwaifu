@@ -175,7 +175,7 @@ No hay prueba primaria de su presencia concreta en Astrea Record central ni en l
 
 ## Relaciones y navegación
 
-### [CHAR-FINN-DEIMNE](../finn-deimne.md)
+### [Finn Deimne](../finn-deimne.md)
 
 La fuente comunitaria reporta que Valletta guardaba rencor a Finn por sus ataques contra bases de Evilus y quería matarlo personalmente. La motivación requiere cotejo del diálogo.
 
@@ -189,4 +189,5 @@ La fuente comunitaria reporta que Valletta guardaba rencor a Finn por sus ataque
 - Separar su continuidad Sword Oratoria de la búsqueda temporal de Astrea Record.
 
 - Perfil/índice comunitario: referencia secundaria usada para orientar la búsqueda; no sustituye el texto japonés publicado.
-- [Anuncio oficial sobre la publicación revisada de Astrea Record](https://danmachi.com/news/news131.php): confirma que la versión novelada recibió una revisión del autor respecto del evento original de Memoria Freese; no verifica los detalles biográficos de este expediente.
+- [GA Bunko · Sword Oratoria, volumen 7](https://ga.sbcr.jp/product/9784797389340/): la sinopsis editorial sitúa a Loki Familia investigando Daidalos Street y a remanentes de Evilus; no confirma por sí sola los datos personales de Valletta.
+- [Ficha comunitaria de Valletta Grede](https://danmachi.fandom.com/wiki/Valletta_Grede): ruta secundaria para buscar alias, afiliación y escenas; no sustituye el texto de la novela.
