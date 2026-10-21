@@ -7,15 +7,19 @@ continuity_scope: "CONT-AR"
 source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-002"
 claim_refs:
   - "DMR-014-CLM-001"
   - "DMR-013-CLM-001"
   - "DMR-014-CLM-023"
+  - "DMR-026-CLM-003"
+  - "DMR-026-CLM-004"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Zald", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-002"
 entity_type: character
 canonical_name: "Zald"
 aliases:
@@ -188,3 +192,15 @@ Resúmenes secundarios describen un enfrentamiento entre Zald y Ottar; se conser
 - [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — confirma el marco editorial de la versión revisada, no los detalles de cada escena.
 
 **Regla editorial:** no se inventan números de página. Los campos sin respaldo primario permanecen desconocidos o explícitamente atribuidos a fuentes secundarias.
+
+
+## Ampliación de investigación DMR-026 · perfil comunitario, no cotejado
+
+- **Alias y perfil reportados:** “Gluttony” (暴喰, lectura indicada como *Bōshoku*). La ficha inglesa lo describe como humano, antiguo aventurero de Zeus Familia, nivel 7 y fallecido; lista 45 años y 212 cm. Esos números no se elevan a confirmación primaria.
+- **Apariencia reportada:** cabello castaño oscuro, ojos grises, cicatrices faciales, armadura negra de cuerpo completo y capa roja oscura; utiliza casco en combate.
+- **Historia reportada:** la wiki dice que derrotó a Behemoth tras comer su carne y que el veneno del monstruo lo debilitó de forma duradera, hasta retirarlo de la aventura. Después habría cuidado a Alfia y ayudado como guardián de una barrera del Distrito Escolar. Más adelante acepta el papel antagonista en el plan de Erebus y termina derrotado por Ottar durante el conflicto.
+- **Capacidad reportada:** la wiki atribuye a Zald las habilidades Deus Ambrosia, Al Questa y Niggle Gourmet, y la magia Rea Ambrosia. Describe Deus Ambrosia como una ventaja excepcional relacionada con consumir presas, pero limitada por la calidad y cantidad requerida. No se codifican cifras, inmunidades ni aumentos exactos sin el pasaje.
+- **Relación/continuidad:** que la fuente diga que cuidó de Alfia no demuestra parentesco. Su participación en la ofensiva no convierte a Zeus en autor o conocedor de sus acciones.
+
+**Evidencia secundaria:** DMR-026-CLM-003 y DMR-026-CLM-004 · [DanMachi Wiki — Zald](https://danmachi.fandom.com/wiki/Zald).  
+**Pendiente:** escena de Behemoth, descripción del veneno, límites de Deus Ambrosia y enfrentamiento con Ottar en texto primario.
