@@ -10,6 +10,8 @@
 Este es el punto de entrada para continuar el trabajo sin repetir registros. El contenido canónico sigue siendo provisional hasta que las fichas tengan fuentes y localizadores cotejados.
 
 - [DANMACHI-RESEARCH-040 — Calendario editorial y horizonte de cobertura](research/inbox/DANMACHI-RESEARCH-040-publication-horizon-2026-10.md) — separa tomos publicados de lanzamientos futuros y evita tratar anuncios como escenas ya publicadas.
+- [DANMACHI-RESEARCH-041 — Familia Chronicle episode Haze/Heith](research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md) — resuelve la identidad Haze/Heizu con Heith Velvet y enlaza solo el marco de sinopsis a un evento parcial.
+- [EVT-DM-FC-HAZE-001 — Familia Chronicle episode Haze/Heith](events/timeline/EVT-DM-FC-HAZE-001.md) — ruta parcial a Heith y Ottar; la secuencia íntegra del volumen sigue pendiente.
 
 ## 1. Guías de trabajo
 
