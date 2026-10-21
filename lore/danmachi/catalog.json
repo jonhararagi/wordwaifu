@@ -81,9 +81,11 @@
         "Astrea Familia",
         "Astrea Record",
         "Familia Astrea",
-        "Asta Nox"
+        "Asta Nox",
+        "individual_story_lead",
+        "primary_text_pending"
       ],
-      "status": "provisional",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "normal"
     },
     {
@@ -155,9 +157,11 @@
         "Astrea Familia",
         "Astrea Record",
         "Familia Astrea",
-        "Selty Throa"
+        "Selty Throa",
+        "individual_story_lead",
+        "primary_text_pending"
       ],
-      "status": "provisional",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "normal"
     },
     {
@@ -638,9 +642,11 @@
         "Iska",
         "Astrea Familia",
         "Astrea Record",
-        "Familia Astrea"
+        "Familia Astrea",
+        "individual_story_lead",
+        "primary_text_pending"
       ],
-      "status": "provisional",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "high"
     },
     {
@@ -1210,9 +1216,11 @@
         "Astrea Familia",
         "Astrea Record",
         "Familia Astrea",
-        "Neese Ranquette"
+        "Neese Ranquette",
+        "individual_story_lead",
+        "primary_text_pending"
       ],
-      "status": "provisional",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "normal"
     },
     {
@@ -1224,9 +1232,11 @@
         "Astrea Familia",
         "Astrea Record",
         "Familia Astrea",
-        "Neoin Unick"
+        "Neoin Unick",
+        "individual_story_lead",
+        "primary_text_pending"
       ],
-      "status": "provisional",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "normal"
     },
     {
