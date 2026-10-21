@@ -259,7 +259,7 @@ Eina aparece como asesora asignada a Bell y le transmite conocimiento sobre el D
 
 **Límite:** No proyectar automáticamente la relación al periodo anterior propuesto para el OC.
 
-## Uso para continuidad y escritura
+## Anclas de continuidad
 
 - Consultar la edición de la novela principal, volumen 1, para registrar capítulos/páginas de llegada, recepción de Falna y primera interacción con Hestia/Ais.
 - Separar el nivel y epíteto del perfil DanMachi V de las estadísticas de otros periodos.
