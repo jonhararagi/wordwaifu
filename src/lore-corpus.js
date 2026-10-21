@@ -301,7 +301,7 @@
     const usedIds = new Set(claims.flatMap(claim => claim.characterIds));
     const catalogSourceRecords = (catalog.records || [])
       .filter(record => ["character", "deity_character"].includes(record.type) && usedIds.has(record.id));
-    const normalizeCharacterTag = value => String(value || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").trim().toLowerCase();
+    const normalizeCharacterTag = value => String(value || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
     const tagOwners = new Map();
     for (const record of catalogSourceRecords) {
       for (const tag of record.tags || []) {
