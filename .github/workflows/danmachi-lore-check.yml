@@ -2,9 +2,9 @@ name: DanMachi Lore and Retrieval Integrity
 on:
   push:
     branches: [main, feature/danmachi-lore-poc, work/integration-wordwaifu-lore-trash-2026-10, work/story-completion-danmachi-audit-2026-10, work/mainline-reconciliation-2026-10-14]
-    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/project-repository.js","src/character-archive.js","src/character-dossiers.js","src/official-character-roster.js","src/art-studio.js","src/app.js","src/story-forge.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/sync-danmachi-status.mjs","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/project-repository.js","src/character-archive.js","src/character-dossiers.js","src/official-character-roster.js","src/art-studio.js","src/app.js","src/story-forge.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   pull_request:
-    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/official-character-roster.js","src/art-studio.js","src/app.js","src/story-forge.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
+    paths: [".devcontainer/**","docs/WEB_PREVIEW.md","docs/STATUS.md","docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md","scripts/sync-danmachi-status.mjs","scripts/preview_server.py","tests/**","lore/danmachi/**","src/lore-corpus.js","src/character-archive.js","src/character-dossiers.js","src/official-character-roster.js","src/art-studio.js","src/app.js","src/story-forge.js","src/styles.css","index.html",".github/workflows/danmachi-lore-check.yml"]
   workflow_dispatch:
 permissions:
   contents: read
@@ -33,6 +33,7 @@ jobs:
           node --check src/danmachi-timeline.js
           node --check tests/test_danmachi_timeline.cjs
           node --check lore/danmachi/tools/check-timeline.mjs
+          node --check scripts/sync-danmachi-status.mjs
           node --check src/character-archive.js
           node --check src/character-dossiers.js
           node --check src/official-character-roster.js
@@ -57,6 +58,8 @@ jobs:
         run: node tests/test_character_dossiers.cjs
       - name: Test DanMachi roster coverage and navigation integrity
         run: node tests/test_danmachi_character_coverage.cjs
+      - name: Verify generated status metrics and roster contract
+        run: node scripts/sync-danmachi-status.mjs --check
       - name: Test Guild and Hostess organization graph
         run: node tests/test_danmachi_organization_graph.cjs
       - name: Test private preview file allowlist

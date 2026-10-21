@@ -1,5 +1,25 @@
 # Estado de WordWaifu
-## Estado operativo y verificación — 2026-10-20
+## Estado operativo y verificación — 2026-10-21
+
+<!-- DANMACHI-METRICS:BEGIN -->
+- **Corpus DanMachi:** 164 registros activos; 31 IDs reservados; 118 documentos de apoyo.
+- **Grafo de conocimiento:** 219 relaciones explícitas; 219/219 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
+- **Expedientes de interfaz:** 79 perfiles estructurados en `src/character-dossiers.js`.
+- **Tipos en el catálogo:** 79 personajes; 5 grupos; 12 deidades con registro de personaje.
+- **Marcadas `complete`:** 0/79 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
+<!-- DANMACHI-METRICS:END -->
+
+**Esta sección prevalece sobre el historial inferior.** Los conteos describen estructura e integridad; no certifican un porcentaje global de cobertura del canon.
+
+- **Rama de verificación integrada:** `main`; el lote de personajes y Era Oscura está fusionado en el PR [#58](https://github.com/jonhararagi/wordwaifu/pull/58).
+- **Procedencia y continuidad:** `CONT-ANIME`, `CONT-MAIN-LN`, `CONT-SO`, `CONT-AR` y `CONT-AU` siguen separados. Sinopsis editoriales, perfiles de adaptación y wikis no equivalen a cotejar una escena del texto completo.
+- **Estado factual:** la integración estructural del roster está validada; siguen pendientes pasajes primarios de la novela, cronologías escena por escena y el censo de personajes fuera del roster de adaptación.
+- **Prioridad del lore:** Orario continúa en investigación; después siguen acontecimientos por fecha/lugar/causa/consecuencia y reconstrucción de historias individuales.
+
+## Snapshot operativo previo — 2026-10-20 (histórico, sustituido)
+
+Las notas siguientes se conservan para trazabilidad. Sus cifras y referencias de rama/PR pertenecen al corte anterior y no prevalecen sobre el bloque generado que aparece al principio.
 
 - **Expedientes de personajes:** 79 perfiles estructurados en `src/character-dossiers.js`, incluidas rutas ampliadas para Alfia, Zald, Erebus, Rudra, Jura, Valletta y Thanatos; estos perfiles no certifican por sí solos la evidencia primaria.
 - **Lote histórico:** rutas distintas para Astrea Record, Rudra/Jura/Juggernaut y el pasado de Tiona/Tione en Sword Oratoria vol. 6. Las fichas con evidencia secundaria o sin localizador primario mantienen ese estado.

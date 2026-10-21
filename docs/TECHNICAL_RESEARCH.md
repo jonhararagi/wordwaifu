@@ -2,6 +2,8 @@
 
 Registro permanente de aprendizajes obtenidos al estudiar aplicaciones y repositorios similares. Las referencias sirven para comprender patrones y riesgos, no para copiar código, contenido ni diseños.
 
+- Auditoría de arquitectura, patrones de proyectos comparables y mejoras aplicadas (2026-10-21): [ENGINEERING_RESEARCH_2026-10-21.md](ENGINEERING_RESEARCH_2026-10-21.md).
+
 ## 2026-10-09 · Entidades de organización en herramientas de worldbuilding
 
 ### Fuentes consultadas
