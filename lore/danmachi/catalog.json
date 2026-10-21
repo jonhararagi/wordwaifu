@@ -569,9 +569,11 @@
         "Finn Deimne",
         "Loki Familia",
         "leadership",
-        "command"
+        "command",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "provisional",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "high"
     },
     {
@@ -583,9 +585,11 @@
         "Freya Familia",
         "Bell",
         "motivation",
-        "spoiler"
+        "spoiler",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "provisional",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "high"
     },
     {
@@ -1247,9 +1251,11 @@
         "Ottar",
         "Freya Familia",
         "training",
-        "loyalty"
+        "loyalty",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "provisional",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "high"
     },
     {
@@ -2061,9 +2067,11 @@
         "Chloe Rolo",
         "Hostess of Fertility",
         "Ryu Lion",
-        "CONT-ANIME"
+        "CONT-ANIME",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "normal"
     },
     {
@@ -2074,9 +2082,12 @@
         "Lunoa Faust",
         "Hostess of Fertility",
         "Ryu Lion",
-        "CONT-ANIME"
+        "CONT-ANIME",
+        "structured_dossier",
+        "primary_text_pending",
+        "Lunoire Faust"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "partial_source_checked_primary_text_pending",
       "priority": "normal"
     },
     {
