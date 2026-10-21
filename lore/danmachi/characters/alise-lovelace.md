@@ -29,19 +29,19 @@ aliases:
 romanizations:
   - "Alise Lovelace"
   - "Alise Lovell"
-name_confidence: "Existing record preserves the Lovelace/Lovell spelling difference as source-dependent romanization, not duplicate identity."
+name_confidence: "El registro existente conserva Lovelace/Lovell como variantes de romanización según la fuente; no son identidades diferentes."
 identity_record_id: CHAR-ALISE-LOVELACE
 version_record_id: null
 temporal_scope:
-  - "ERA-06A / Astrea Record, approximately T−7 relative to Bell's arrival; relative anchor only."
-  - "Historical Astrea Familia state in DanMachi IV adaptation profile."
-  - "After first Familia tragedy: official adaptation synopsis gives only group-level outcome; individual final scene not located."
-  - "No independently verified active state at T0 or later in this dossier."
+  - "ERA-06A / Astrea Record, aproximadamente T−7 respecto de la llegada de Bell; ancla relativa."
+  - "Estado histórico de Astrea Familia descrito por el perfil de DanMachi IV."
+  - "Después de la tragedia: la sinopsis de la adaptación informa el resultado colectivo, pero no se localizó la escena final individual."
+  - "No hay un estado activo en T0 o posterior verificado independientemente en esta ficha."
 appearance_records: []
 continuity_variants:
-  - "CONT-AR: captain of Astrea Familia and guide to Ryuu at publisher-synopsis level."
-  - "CONT-ANIME: personality, human species, Level 4 and Scarlet Hanel epithet come from official adaptation profile."
-  - "CONT-AU: no approved divergence recorded."
+  - "CONT-AR: capitana de Astrea Familia y guía de Ryuu según la sinopsis editorial."
+  - "CONT-ANIME: personalidad, especie humana, nivel 4 y epíteto Scarlet Hanel proceden del perfil oficial de adaptación."
+  - "CONT-AU: no se ha registrado una divergencia aprobada."
 canon_status: partial_source_checked
 spoiler_level: major
 species: human
@@ -49,138 +49,126 @@ deity_or_race: human
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
-first_appearance: "The checked publisher synopsis names Alise as captain in Astrea Record volume 1; her first in-universe scene is not verified."
+first_appearance: "La sinopsis editorial consultada nombra a Alise como capitana en Astrea Record, volumen 1; su primera escena dentro del mundo no está verificada."
 first_source_id: DMR-001-SRC-003
-first_source_locator: "GA Bunko Astrea Record volume 1 publisher synopsis; not a chapter/page locator."
+first_source_locator: "Sinopsis editorial de GA Bunko para Astrea Record, volumen 1; no es un localizador de capítulo o página."
 familia_membership:
-  - "Astrea Familia — captain during the historical state described by the volume 1 synopsis."
+  - "Astrea Familia: capitana durante el estado histórico descrito por la sinopsis del volumen 1."
 roles:
-  - "Captain of Astrea Familia in the historical Astrea Record period."
-  - "Guide to Ryuu while Ryuu develops her own understanding of justice."
-  - "Direct, sincere and bright leader who can appear careless or unconventional in the adaptation profile while remaining loved and trusted by companions."
+  - "Capitana de Astrea Familia en el periodo histórico."
+  - "Guía de Ryuu mientras esta desarrolla su propia comprensión de la justicia."
+  - "Líder directa, sincera y alegre que puede parecer descuidada o poco convencional en la adaptación y, aun así, ser querida y respetada por sus compañeras."
 epithets:
   - "紅の正花（スカーレット・ハーネル） / Scarlet Hanel — official DanMachi IV adaptation profile only."
-appearance_summary: "Human. Physical details beyond the official adaptation profile are not inferred from illustrations; period-specific clothing and measurements are not documented here."
-personality_summary: "The official adaptation describes Alise as sincere and direct, bright, sometimes careless or irresponsible in ways that seem unlike a captain, yet loved and trusted by her companions. It gives her the principle that justice should be kept within rather than brandished. The publisher synopsis separately establishes her historical role as captain and guide to Ryuu; neither source makes her infallible."
+appearance_summary: "Humana. No se infieren detalles físicos, medidas, ropa por época ni cambios de diseño más allá del perfil de adaptación oficial."
+personality_summary: "El perfil oficial de la adaptación describe a Alise como sincera, directa y alegre; a veces puede parecer despreocupada o irresponsable para una capitana, pero sus compañeras la quieren y confían en ella. Su principio es que la justicia debe guardarse en el corazón y no blandirse como arma. La sinopsis editorial establece por separado su papel histórico de capitana y guía de Ryuu; ninguna fuente la presenta como infalible."
 motivations:
-  - "Lead Astrea Familia through the historical conflict and guide Ryuu as she searches for a justice she can believe in (CONT-AR; DMR-001-CLM-005)."
-  - "In the adaptation profile, keep justice as an inwardly held principle and revere Astrea as a moral reference (CONT-ANIME; DMR-007-CLM-022)."
+  - "Liderar Astrea Familia durante el conflicto histórico y guiar a Ryuu mientras busca una justicia en la que pueda creer (CONT-AR; DMR-001-CLM-005)."
+  - "En el perfil de la adaptación, conservar la justicia como un principio interior y venerar a Astrea como referencia moral (CONT-ANIME; DMR-007-CLM-022)."
 psychology_profile:
   dominant_traits:
-    - "Sincere, direct and bright according to the official DanMachi IV profile (CONT-ANIME; DMR-007-CLM-022)."
-    - "Can seem carefree, careless or irresponsible for a captain while still earning affection and trust from her companions (CONT-ANIME; DMR-007-CLM-022)."
+    - "Sincera, directa y alegre según el perfil oficial de DanMachi IV (CONT-ANIME; DMR-007-CLM-022)."
+    - "Puede parecer despreocupada o descuidada para una capitana, aunque sus compañeras la quieren y confían en ella (CONT-ANIME; DMR-007-CLM-022)."
   values:
-    - "Justice should be held internally rather than brandished, according to the official adaptation profile (DMR-007-CLM-022)."
-    - "Astrea is her moral reference in the same profile (DMR-007-CLM-022)."
+    - "La justicia debe guardarse en el corazón y no blandirse, según el perfil oficial de la adaptación (DMR-007-CLM-022)."
+    - "Astrea es su referencia moral en ese mismo perfil (DMR-007-CLM-022)."
   likes: []
   dislikes: []
   fears: []
   habits: []
   speech_style:
-    - "Direct and frank in the official adaptation description; exact verbal tics, catchphrases and dialogue style by novel scene are not catalogued."
+    - "Directa y franca según el perfil de la adaptación; no se ha catalogado un repertorio de muletillas o frases características."
   stress_response: []
   behavioral_patterns:
-    - "Guides Ryuu's developing search for justice at the level established by the publisher synopsis (CONT-AR; DMR-001-CLM-005)."
-    - "Her leadership should retain both directness and informality; the profile does not make her careless in every situation or morally infallible."
+    - "Guía a Ryuu durante su búsqueda de justicia, en el nivel que confirma la sinopsis editorial (CONT-AR; DMR-001-CLM-005)."
+    - "Su liderazgo combina franqueza e informalidad; la fuente no la presenta como descuidada en toda situación ni como juez moral infalible."
   internal_conflicts:
-    - "The contrast between a serious moral principle and an occasionally carefree/unconventional manner is a useful reading of the adaptation profile, not a confirmed private conflict or diagnosis."
+    - "El contraste entre un principio moral serio y un modo de actuar a veces despreocupado es una lectura útil del perfil de adaptación, no un conflicto privado confirmado ni un diagnóstico."
   development_by_period:
-    - "T−7 / CONT-AR: captain and guide to Ryuu while Ryuu's convictions are forming (DMR-001-CLM-005; DMR-006-CLM-003)."
-    - "Historical profile / CONT-ANIME: direct, bright, sometimes careless, but trusted and loved; human, Level 4 and Scarlet Hanel are profile-specific facts (DMR-007-CLM-022)."
-    - "After the historical tragedy / CONT-ANIME: the official episode synopsis says Ryuu was the only survivor of the first Astrea Familia. Alise is not identified as a survivor there, but her individual final scene and fate details are not described in that synopsis (DMR-007-CLM-026)."
+    - "T−7 / CONT-AR: capitana y guía de Ryuu mientras las convicciones de esta se están formando (DMR-001-CLM-005; DMR-006-CLM-003)."
+    - "Perfil histórico / CONT-ANIME: directa, alegre y a veces descuidada, pero querida y respetada; humana, nivel 4 y Scarlet Hanel son datos de ese perfil (DMR-007-CLM-022)."
+    - "Después de la tragedia / CONT-ANIME: la sinopsis oficial afirma que Ryuu fue la única superviviente de la primera Familia; no identifica a Alise como superviviente, pero tampoco narra su escena final individual (DMR-007-CLM-026)."
   evidence_claims:
     - claim_id: DMR-001-CLM-005
-      aspect: historical role and formative relationship
-      claim: "The publisher synopsis names Alise as captain and presents her guiding Ryuu in her search for justice."
-      era_or_interval: "Astrea Record volume 1; approximately T−7."
+      aspect: "papel histórico y relación formativa"
+      claim: "La sinopsis editorial nombra a Alise como capitana y la presenta guiando a Ryuu en su búsqueda de justicia."
+      era_or_interval: "Astrea Record, volumen 1; aproximadamente T−7."
       continuity_scope: CONT-AR
       evidence_type: official_publisher_synopsis
       source_id: DMR-001-SRC-003
-      source_locator: "GA Bunko volume 1 publisher synopsis; no chapter/page locator."
+      source_locator: "Sinopsis editorial de GA Bunko; sin localizador de capítulo/página."
       verification_status: source_checked
-      confidence_note: "Strong for the historical premise, not a complete biography."
+      confidence_note: "Sustenta su papel histórico, no una biografía completa."
     - claim_id: DMR-007-CLM-022
-      aspect: personality, leadership and values
-      claim: "The official adaptation describes Alise as sincere and direct, bright, sometimes careless, loved and trusted, and committed to keeping justice within rather than brandishing it."
-      era_or_interval: "Historical Astrea Familia as represented by DanMachi IV."
+      aspect: "personalidad, liderazgo y valores"
+      claim: "El perfil oficial describe a Alise como sincera, directa y alegre, a veces descuidada, querida y respetada por sus compañeras y defensora de guardar la justicia en el corazón."
+      era_or_interval: "Astrea Familia histórica representada en DanMachi IV."
       continuity_scope: CONT-ANIME
       evidence_type: official_adaptation_profile
       source_id: DMR-007-SRC-001
-      source_locator: "Official DanMachi IV character profile, アリーゼ・ローヴェル."
+      source_locator: "Perfil oficial de Alise Lovell, アリーゼ・ローヴェル."
       verification_status: source_checked
-      confidence_note: "Personality, Level 4 and epithet are adaptation-derived."
+      confidence_note: "La psicología, el nivel 4 y el epíteto proceden de la adaptación."
     - claim_id: DMR-007-CLM-026
-      aspect: historical group outcome
-      claim: "The official episode synopsis says the first Astrea Familia disappeared in the Dungeon's darkness and Ryuu was the only survivor."
-      era_or_interval: "Historical tragedy summarized in DanMachi IV."
+      aspect: "resultado histórico colectivo"
+      claim: "La sinopsis oficial del episodio dice que la primera Astrea Familia desapareció en la oscuridad del Dungeon y que Ryuu fue la única superviviente."
+      era_or_interval: "Tragedia histórica resumida en DanMachi IV."
       continuity_scope: CONT-ANIME
       evidence_type: official_adaptation_synopsis
       source_id: DMR-007-SRC-006
-      source_locator: "DanMachi IV episode 20 synopsis; not an individualized final-scene locator."
+      source_locator: "Sinopsis del episodio 20; no localiza la escena final de Alise."
       verification_status: source_checked
-      confidence_note: "Does not detail Alise's individual final scene, death mechanism or exact timeline."
+      confidence_note: "No detalla escena final, mecanismo de muerte ni cronología individual."
 abilities: []
 skills:
   - "Combat and leadership details beyond the captain role need direct novel locators; no weapon or technique is inferred here."
 magic: []
 status_by_period:
-  - era: "ERA-06A / approximately T−7"
+  - era: "ERA-06A / aproximadamente T−7"
     continuity_scope: CONT-AR
-    status: "Captain of Astrea Familia and guide to Ryuu."
-    evidence_claims:
-      - DMR-001-CLM-005
-      - DMR-006-CLM-003
-    verification_status: "official publisher synopsis checked; novel scene locators pending"
-  - era: "Historical Astrea Familia profile"
+    status: "Capitana de Astrea Familia y guía de Ryuu."
+    evidence_claims: [DMR-001-CLM-005, DMR-006-CLM-003]
+    verification_status: "Sinopsis editorial oficial verificada; localizadores de novela pendientes"
+  - era: "Estado histórico del perfil"
     continuity_scope: CONT-ANIME
-    status: "Former captain; human, Level 4 and Scarlet Hanel in the official adaptation profile."
-    evidence_claims:
-      - DMR-007-CLM-022
-    verification_status: "official adaptation profile checked"
-  - era: "After the historical tragedy"
+    status: "Excapitana; humana, nivel 4 y con el epíteto Scarlet Hanel en el perfil oficial."
+    evidence_claims: [DMR-007-CLM-022]
+    verification_status: "Perfil oficial de adaptación verificado"
+  - era: "Después de la tragedia histórica"
     continuity_scope: CONT-ANIME
-    status: "Not identified as a survivor in the group synopsis, which names Ryuu as the only survivor; Alise's individual final scene is not described."
-    evidence_claims:
-      - DMR-007-CLM-026
-    verification_status: "official adaptation synopsis checked; individual novel outcome locator pending"
+    status: "No figura como superviviente en la sinopsis grupal, que nombra a Ryuu como única superviviente; la escena final de Alise no aparece descrita."
+    evidence_claims: [DMR-007-CLM-026]
+    verification_status: "Sinopsis oficial de adaptación verificada; localizador individual de novela pendiente"
 relationships:
   - target_id: CHAR-RYUU-LION
     relationship_type: captain_and_formative_guide
-    description: "Alise is captain and guide to Ryuu's formative search for justice."
-    temporal_scope: "Astrea Record historical state."
+    description: "Alise es la capitana y guía de la búsqueda formativa de justicia de Ryuu."
+    temporal_scope: "Etapa histórica de Astrea Record."
     continuity_scope: CONT-AR
-    evidence_claims:
-      - DMR-001-CLM-005
-      - DMR-006-CLM-003
-    confidence_note: "Official publisher synopsis; exact scenes not located."
+    evidence_claims: [DMR-001-CLM-005, DMR-006-CLM-003]
+    confidence_note: "Sinopsis editorial oficial; escenas exactas no localizadas."
   - target_id: CHAR-ASTREA
     relationship_type: captain_and_patron_deity
-    description: "Astrea is the deity associated with the Familia; the adaptation says Alise reveres her as a moral reference."
-    temporal_scope: "Historical Astrea Familia state."
+    description: "Astrea es la deidad asociada con la Familia; el perfil de la adaptación dice que Alise la venera como referencia moral."
+    temporal_scope: "Estado histórico de Astrea Familia."
     continuity_scope: "CONT-AR; CONT-ANIME"
-    evidence_claims:
-      - DMR-001-CLM-004
-      - DMR-007-CLM-022
-    confidence_note: "No private exchange is inferred."
+    evidence_claims: [DMR-001-CLM-004, DMR-007-CLM-022]
+    confidence_note: "No se inventan conversaciones privadas."
 locations_by_period:
   - "Astrea Record historical period: exact location at each scene is not mapped."
 events: []
 knowledge_state:
   knows:
-    - "The adaptation profile attributes to her the principle that justice should be kept within rather than brandished; this is a profile-level characterization, not a mapped statement in a particular scene."
+    - "El perfil de la adaptación le atribuye el principio de guardar la justicia en el corazón; es una caracterización de perfil, no una frase localizada en una escena concreta."
   suspects: []
   does_not_know: []
   status: partial
-  source_refs:
-    - DMR-001-SRC-003
-    - DMR-007-SRC-001
-    - DMR-007-SRC-006
-  confidence: "High for published profile and synopsis claims; individual chronology and final scene remain incomplete."
+  confidence: "Alta para los datos publicados en perfil y sinopsis; cronología individual incompleta."
 open_questions:
-  - "Locate passages in Astrea Record volumes 1–3 showing Alise's leadership in action and her guidance to Ryuu."
-  - "Verify her individual final scene in the published novel, separately from the group-level adaptation synopsis."
-  - "Choose the edition-preferred spelling of Lovelace/Lovell without creating a duplicate identity."
-  - "Keep age, preferences, fears and habits unknown until supported."
+  - "Localizar pasajes de Astrea Record, volúmenes 1–3, que muestren su liderazgo y la guía que da a Ryuu."
+  - "Verificar la escena final individual en la novela publicada, separada de la sinopsis grupal de la adaptación."
+  - "Elegir la romanización preferida por la edición usada sin crear una segunda identidad."
+  - "Mantener desconocidas la edad y preferencias sin evidencia."
 related_record_ids:
   - CHAR-RYUU-LION
   - CHAR-ASTREA
@@ -231,13 +219,13 @@ Fuentes: https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_ast
 
 
 
-## Structured temporal state: historical role versus adaptation portrait
+## Estados temporales estructurados: papel histórico y retrato de la adaptación
 
-### State A · Astrea Record / approximately T−7 · CONT-AR
-The official publisher synopsis establishes Alise as captain of Astrea Familia and as a guide to Ryuu while Ryuu searches for a justice she can believe in. This is the confirmed historical core at synopsis level. It does not supply Alise's age, exact level in each event, complete roster, or detailed private dynamics.
+### Estado A · Astrea Record / aproximadamente T−7 · CONT-AR
+La sinopsis editorial oficial establece que Alise es capitana de Astrea Familia y guía a Ryuu mientras esta busca una justicia en la que pueda creer. Este es el núcleo histórico verificado a nivel de sinopsis. La fuente no proporciona edad, nivel exacto en cada evento, roster completo, ni todas sus relaciones privadas.
 
-### State B · historical profile and tragedy · CONT-ANIME
-The official DanMachi IV character profile adds her temperament, moral principle, human species, Level 4 and Scarlet Hanel epithet. The official episode 20 synopsis says Ryuu was the only survivor of the first Astrea Familia. It does not narrate Alise's individual last scene or the exact cause/timing of her fate.
+### Estado B · Perfil histórico y tragedia · CONT-ANIME
+El perfil oficial de DanMachi IV añade su temperamento, principio moral, especie humana, nivel 4 y epíteto Scarlet Hanel. La sinopsis oficial del episodio 20 dice que Ryuu fue la única superviviente de la primera Astrea Familia. No narra la última escena individual de Alise ni fija la causa o el momento exacto de su destino.
 
-Sources: DMR-001-SRC-003, DMR-007-SRC-001 and DMR-007-SRC-006. The novel's internal chapter/page locators remain pending.
+Fuentes: DMR-001-SRC-003, DMR-007-SRC-001 y DMR-007-SRC-006. Los localizadores internos de la novela siguen pendientes.
 
