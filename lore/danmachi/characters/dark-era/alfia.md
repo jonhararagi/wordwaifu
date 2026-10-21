@@ -10,6 +10,8 @@ source_refs:
 claim_refs:
   - "DMR-014-CLM-002"
   - "DMR-013-CLM-002"
+  - "DMR-014-CLM-021"
+  - "DMR-014-CLM-022"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Alfia", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
 research_source_refs:
@@ -94,6 +96,26 @@ evidence_claims:
     source_locator: "Índice secundario de personajes; usar para buscar el pasaje primario"
     verification_status: discovery_lead_only
     confidence_note: "El claim registra una ruta de investigación, no confirma por sí solo la biografía."
+  - claim_id: DMR-014-CLM-021
+    aspect: "parentesco reportado con Meteria"
+    claim: "Una referencia comunitaria presenta a Meteria como hermana gemela de Alfia; la relación requiere cotejo con la novela publicada."
+    era_or_interval: "Biografía familiar reportada; escena exacta no localizada"
+    continuity_scope: CONT-AR
+    evidence_type: secondary_research_lead
+    source_id: DMR-014-SRC-003
+    source_locator: "Referencia comunitaria sobre Alfia/Meteria; no hay página primaria."
+    verification_status: secondary_locator_only
+    confidence_note: "No se trata como parentesco verificado sin la escena o referencia directa."
+  - claim_id: DMR-014-CLM-022
+    aspect: "afiliación histórica reportada"
+    claim: "Una referencia comunitaria asocia a Alfia con Hera Familia; falta el localizador de la novela publicada."
+    era_or_interval: "Periodo histórico anterior a Bell; fechas exactas pendientes"
+    continuity_scope: CONT-AR
+    evidence_type: secondary_research_lead
+    source_id: DMR-014-SRC-003
+    source_locator: "Referencia comunitaria sobre Alfia; no hay página primaria."
+    verification_status: secondary_locator_only
+    confidence_note: "La afiliación permanece como reporte secundario hasta cotejarla."
 abilities: []
 skills: []
 magic: []
@@ -109,8 +131,8 @@ relationships:
     description: "Las fuentes comunitarias reportan que Meteria es su hermana gemela; el parentesco no se eleva a hecho primario hasta localizar la escena o referencia directa."
     temporal_scope: "Historia previa y biografía reportada; intervalo exacto pendiente"
     continuity_scope: "CONT-AR; secondary lead"
-    evidence_claims: [DMR-013-CLM-002]
-    confidence_note: "La fuente indexada identifica Alfia como candidata, pero el claim de índice no valida por sí solo el parentesco."
+    evidence_claims: [DMR-014-CLM-021]
+    confidence_note: "Una referencia secundaria reporta el parentesco; el texto primario sigue pendiente."
 locations_by_period:
   - "No hay una localización de escena primaria verificada para esta ficha."
 events: []
