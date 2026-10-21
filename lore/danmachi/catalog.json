@@ -3197,6 +3197,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-025-wiki-informed-character-expansion.md",
       "type": "character_profile_research",
       "status": "secondary_extracts_structured_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-026",
+      "path": "research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md",
+      "type": "character_profile_research",
+      "status": "secondary_extracts_structured_primary_locator_pending"
     }
   ],
   "lastStructuredSync": "2026-10-21"
