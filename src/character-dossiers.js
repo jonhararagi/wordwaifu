@@ -727,7 +727,7 @@
       abilities: "Los nombres Gif Blessing, Alme, Vel Ardore, Satanas Verion, Silentium Eden y Genos Angelus aparecen en resúmenes secundarios. El proyecto los conserva como pistas de verificación, incluidos límites y costes. No se fija su mecánica completa ni una estadística permanente sin cotejo de la novela revisada.",
       relationships: "Las fuentes secundarias la vinculan con Hera Familia y con Meteria; su relación con Zald forma parte del eje antagonista descrito en resúmenes de Astrea Record. Los vínculos específicos y las escenas que los establecen deben quedar etiquetados por claim y continuidad.",
       conflict: "Su función narrativa provisional se lee como un antagonismo que pone a prueba a los héroes de Orario, no como una villana plana. La lectura moral de sus motivos debe distinguir el texto de la interpretación comunitaria y no importar datos de la versión de juego sin comparación.",
-      sources: ["https://danmachi.fandom.com/wiki/Alfia","https://danmachi.fandom.com/es/wiki/Alfia/Habilidades","https://danmachi.com/news/news131.php","lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+      sources: ["https://danmachi.fandom.com/wiki/Alfia","https://danmachi.fandom.com/es/wiki/Alfia/Habilidades","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
     },
     "CHAR-DARK-ZALD": {
       appearance: "Las fuentes comunitarias describen a Zald como veterano de constitución imponente, pero esta ficha no incorpora detalles físicos como definitivos sin cotejar la edición revisada de Astrea Record.",
@@ -736,7 +736,7 @@
       abilities: "Deus Ambrosia, Al Questa, Niggle Gourmet y Rea Ambrosia constan como nombres encontrados en fichas comunitarias. El proyecto los conserva como índice de verificación; las reglas, costes, efectos, duración y estadísticas deben contrastarse con el texto antes de considerarlos canónicos.",
       relationships: "Su trayectoria se vincula secundariamente con Zeus Familia, con Alfia dentro del conflicto de Astrea Record y con Ottar en un enfrentamiento reportado. Esas relaciones son rutas históricas y no implican que exista una fecha o escena verificada para cada detalle.",
       conflict: "El conflicto de Zald se estudia como antagonismo de alto impacto dentro de una tragedia mayor, con un posible sentido de prueba para los héroes del futuro según fuentes comunitarias. La enciclopedia no debe reducirlo a una ficha de poder ni inventar motivaciones más allá de lo que la novela confirme.",
-      sources: ["https://danmachi.fandom.com/es/wiki/Zald","https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3","https://danmachi.com/news/news131.php","lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+      sources: ["https://danmachi.fandom.com/es/wiki/Zald","https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
     },
     "CHAR-DARK-RUDRA": {
       appearance: "No se afirma una descripción física canónica de Rudra a partir de las fuentes secundarias incluidas en esta tanda. La ficha evita tratar ilustraciones sueltas como descripción de todos sus estados.",
@@ -745,7 +745,7 @@
       abilities: "No se atribuyen habilidades, nivel de combatiente ni poderes individuales en esta ficha. Como deidad, no se le asigna nivel de aventurero. El material necesario para ampliar la sección es una fuente primaria que describa sus decisiones o capacidades.",
       relationships: "Los compendios comunitarios lo vinculan con Rudra Familia y relacionan esa facción con Jura Halmer. El catálogo enlaza ambas identidades con la ruta posterior del Juggernaut en CONT-MAIN-LN, con evidencia secundaria explícita.",
       conflict: "La relación con la tragedia de Ryu y el Juggernaut se mantiene en la continuidad de la novela principal, separada del núcleo de Astrea Record alrededor de T-7. No se imputa a Rudra cada acción de Jura ni se fusiona esta fase posterior con la historia de Alfia y Zald.",
-      sources: ["https://danmachi.fandom.com/es/wiki/Rudra","https://danmachi.fandom.com/wiki/Rudra_Familia","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel","lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+      sources: ["https://danmachi.fandom.com/es/wiki/Rudra","https://danmachi.fandom.com/wiki/Rudra_Familia","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
     },
     "CHAR-DARK-JURA-HALMER": {
       appearance: "Los compendios comunitarios contienen descripciones de Jura, pero no se incorpora aquí una apariencia definitiva basada solo en resumen secundario. Debe comprobarse qué rasgos describe la novela y en qué momento.",
@@ -754,7 +754,7 @@
       abilities: "No se crea un listado definitivo de niveles, habilidades, magia, armas o mecanismos de explosión. Las capacidades de wikis sirven como términos de búsqueda hasta verificar qué describe el texto primario y cómo se comportan las reglas del Dungeon.",
       relationships: "Jura aparece vinculado secundariamente a Rudra Familia, a Rudra y a la tragedia de Ryu que desemboca en la aparición del Juggernaut. Estas rutas tienen continuidad CONT-MAIN-LN y deben permanecer separadas de Astrea Record T-7.",
       conflict: "Su papel se estudia por separado: la crisis posterior de la Familia Astrea no es el mismo acontecimiento que el levantamiento general de Astrea Record. El enlace al evento del Juggernaut sirve para reconstruir causas y consecuencias sin atribuir cada hecho a Jura hasta localizarlo.",
-      sources: ["https://danmachi.fandom.com/wiki/Jura_Halmer","https://danmachi.fandom.com/es/wiki/Jura_Halmer","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel","https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel","lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+      sources: ["https://danmachi.fandom.com/wiki/Jura_Halmer","https://danmachi.fandom.com/es/wiki/Jura_Halmer","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel","https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
     },
     "CHAR-DARK-VALLETTA-GREDE": {
       appearance: "No se incorpora una descripción visual estable de Valletta Grede porque la fuente disponible en esta tanda es una pista comunitaria no cotejada con un pasaje primario.",
@@ -763,7 +763,7 @@
       abilities: "No se asignan nivel, técnicas, magia ni equipo. Hace falta localizar una aparición de Valletta en una fuente primaria y extraer solo lo que esa escena o perfil oficial afirma, manteniendo cualquier discrepancia como cuestión abierta.",
       relationships: "La ruta a Evilus y al índice de Era Oscura está marcada como investigación pendiente, no como afiliación confirmada ni prueba de participación en Astrea Record. No se le atribuyen relaciones personales concretas hasta encontrar una fuente adecuada.",
       conflict: "Su expediente sirve para que una posible antagonista no desaparezca del censo de investigación, pero no la convierte automáticamente en antagonista principal o secundaria canónica. La etiqueta narrativa deberá depender de su papel real en la edición publicada.",
-      sources: ["https://danmachi.fandom.com/wiki/Valletta_Grede","lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","lore/danmachi/research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"]
+      sources: ["https://danmachi.fandom.com/wiki/Valletta_Grede","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"]
     },
     "CHAR-DARK-THANATOS": {
       appearance: "No se incorpora una descripción física de Thanatos a partir de una referencia comunitaria no cotejada. Su expediente continúa siendo una ficha de descubrimiento, no una biografía narrativa cerrada.",
@@ -772,7 +772,7 @@
       abilities: "Nivel, poderes, técnicas, equipo y límites no se asignan por ausencia de fuente primaria. Si aparece en la novela revisada, cada capacidad deberá registrarse con volumen y página o localizador electrónico legítimo.",
       relationships: "Los enlaces a Evilus y al índice de Era Oscura son pistas pending_verification: no prueban que Thanatos pertenezca a una Familia ni que participara en un acto específico. Cualquier relación aceptada requiere un claim localizado.",
       conflict: "La función actual del registro es preservar una pregunta abierta para la investigación de antagonistas. No debe aparecer como villano confirmado en resúmenes canónicos hasta verificar su identidad y papel en el material primario.",
-      sources: ["https://danmachi.fandom.com/wiki/Thanatos","lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","lore/danmachi/research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"]
+      sources: ["https://danmachi.fandom.com/wiki/Thanatos","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"]
     },
     "CHAR-DARK-EREBUS": {
       appearance: "El material comunitario presenta a Erebus como una deidad de apariencia humana, pero esta ficha no toma la apariencia ni el alias alternativo Eren como verificados por la edición revisada.",
@@ -781,7 +781,7 @@
       abilities: "No se registra un nivel de aventurero ni un inventario fiable de poderes en las fuentes primarias revisadas en esta tanda. Cualquier habilidad o efecto sobrenatural debe añadirse cuando exista una escena concreta o una fuente oficial que lo respalde.",
       relationships: "Su asociación con el conflicto de Evilus y Astrea Record se conserva como evidencia secundaria. Evilus se modela como una red de facciones y no se le atribuyen automáticamente todas las acciones del conflicto.",
       conflict: "Erebus sirve para explorar la oposición ideológica a la justicia de Ryu y Astrea Familia. La ficha distingue antagonismo reportado de una reconstrucción completa de su plan.",
-      sources: ["https://danmachi.fandom.com/wiki/Erebus","https://danmachi.com/news/news131.php","https://danmachi.com/chronology/","lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+      sources: ["https://danmachi.fandom.com/wiki/Erebus","https://danmachi.com/news/news131.php","https://danmachi.com/chronology/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
     },
   };
   const clone = value => JSON.parse(JSON.stringify(value));
