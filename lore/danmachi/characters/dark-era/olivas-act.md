@@ -148,13 +148,13 @@ Olivas Act debe consultarse primero en el contexto de Sword Oratoria, volumen 3.
 
 ## Estado por periodo
 
-### Sword Oratoria, volumen 3 · arco Vendetta/Olivas
+## Estado · CONT-SO · Sword Oratoria, volumen 3 · arco Vendetta/Olivas
 
 Las fuentes secundarias sitúan su debut novelístico reportado en esta novela derivada y lo relacionan con Evilus/Enyo. Capítulo, página y acciones específicas quedan pendientes.
 
 **Claims:** DMR-014-CLM-007, DMR-013-CLM-007.
 
-### Astrea Record central · participación no confirmada
+## Estado · CONT-UNVERIFIED · Astrea Record central · participación no confirmada
 
 No se usa su pertenencia reportada a Evilus como prueba de actividad en el periodo de siete años antes de Bell. No hay escena de Astrea Record verificada en este expediente.
 
