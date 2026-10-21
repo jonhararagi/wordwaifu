@@ -17,12 +17,14 @@
 
 ## Fuentes editoriales
 
-- **Vol. 21, novela principal:** https://ga.sbcr.jp/product/9784815632946/
-- **Vol. 22, novela principal (fecha futura):** https://ga.sbcr.jp/product/9784815642907/
-- **Sword Oratoria vol. 17 (fecha futura):** https://ga.sbcr.jp/product/9784815642914/
-- **Familia Chronicle, episode Amid (fecha futura):** https://ga.sbcr.jp/product/9784815642938/
-- **Familia Chronicle, episode Haze (publicado):** https://ga.sbcr.jp/product/9784815640675/
-- **Anuncio oficial de la secuencia de publicaciones:** https://ga.sbcr.jp/bunko_blog/orio/20260522/
+Las fichas con localizador, fecha de acceso y límites están registradas en [el registro maestro de fuentes](../../sources/00-registro-fuentes.md).
+
+- **DMR-040-SRC-001 · Vol. 21, novela principal (publicado):** https://ga.sbcr.jp/product/9784815632946/
+- **DMR-040-SRC-002 · Vol. 22, novela principal (fecha futura):** https://ga.sbcr.jp/product/9784815642907/
+- **DMR-040-SRC-003 · Sword Oratoria vol. 17 (fecha futura):** https://ga.sbcr.jp/product/9784815642914/
+- **DMR-040-SRC-004 · Familia Chronicle, episode Amid (fecha futura):** https://ga.sbcr.jp/product/9784815642938/
+- **DMR-040-SRC-005 · Familia Chronicle, episode Haze (publicado):** https://ga.sbcr.jp/product/9784815640675/
+- **DMR-040-SRC-006 · Anuncio oficial de la secuencia de publicaciones:** https://ga.sbcr.jp/bunko_blog/orio/20260522/
 
 ## Consecuencias para el trabajo de lore
 
