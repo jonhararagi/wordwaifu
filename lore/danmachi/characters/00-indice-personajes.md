@@ -170,3 +170,9 @@ El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis d
 - Las wikis son pistas secundarias hasta cotejar el pasaje primario.
 - La copertenencia institucional no demuestra amistad, rivalidad o conocimiento compartido.
 - No declarar un porcentaje global de lore sin definir obras, personajes, acontecimientos y escenas que formen el denominador.
+
+
+## Alias editorial de Familia Chronicle
+
+- **Haze / Heizu / ヘイズ** en el título de *Familia Chronicle episode Haze* se resuelve al registro estable [Heith Velvet](heithvelvet.md), `CHAR-HEITH-VELVET`, porque el título japonés `episodeヘイズ` y el perfil oficial `ヘイズ・ベルベット` comparten la forma japonesa. No crear un segundo personaje `CHAR-HAZE`.
+- La sinopsis parcial del episodio y la conexión a Ottar están documentadas en [DANMACHI-RESEARCH-041](../research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md) y [el evento parcial](../events/timeline/EVT-DM-FC-HAZE-001.md). Solo el marco editorial está cubierto; el volumen íntegro aún necesita localizadores.
