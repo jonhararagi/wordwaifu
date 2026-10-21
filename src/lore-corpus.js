@@ -299,12 +299,31 @@
       .map(claim => ({ ...claim, aspects: getAspects(claim), periodKey: getPeriod(claim) }));
     const claims = [...parsedClaims, ...generatedClaims];
     const usedIds = new Set(claims.flatMap(claim => claim.characterIds));
-    const catalogCharacters = (catalog.records || [])
-      .filter(record => ["character", "deity_character"].includes(record.type) && usedIds.has(record.id))
+    const catalogSourceRecords = (catalog.records || [])
+      .filter(record => ["character", "deity_character"].includes(record.type) && usedIds.has(record.id));
+    const normalizeCharacterTag = value => String(value || "").normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").trim().toLowerCase();
+    const tagOwners = new Map();
+    for (const record of catalogSourceRecords) {
+      for (const tag of record.tags || []) {
+        if (typeof tag !== "string") continue;
+        const key = normalizeCharacterTag(tag);
+        if (!key) continue;
+        if (!tagOwners.has(key)) tagOwners.set(key, new Set());
+        tagOwners.get(key).add(record.id);
+      }
+    }
+    const catalogCharacters = catalogSourceRecords
       .map(record => {
         const tags = record.tags || [];
         const name = tags.find(tag => typeof tag === "string" && !/^spoiler/i.test(tag)) || record.id;
-        const aliases = unique([name, ...tags.filter(tag => !/familia|multi-era|motivation|leadership|training|loyalty|spoiler|deity|historical state|timeline|provisional/i.test(tag))]);
+        const aliases = unique([name, ...tags.filter(tag => {
+          if (typeof tag !== "string" || /familia|multi-era|motivation|leadership|training|loyalty|spoiler|deity|historical state|timeline|provisional/i.test(tag)) return false;
+          // Catalog tags also hold names of related characters. Keep a tag as an
+          // alias only when it is not shared by other character records; the
+          // canonical name remains discoverable through the dedicated name field.
+          const owners = tagOwners.get(normalizeCharacterTag(tag));
+          return !owners || owners.size === 1;
+        })]);
         return { id: record.id, name, aliases, keywords: unique(tags), profilePath: record.path };
       });
     // Official adaptation references extend discoverability without pretending to be
