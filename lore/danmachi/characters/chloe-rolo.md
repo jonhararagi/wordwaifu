@@ -197,7 +197,7 @@ Trabajadora de Hostess of Fertility, cat-person de nivel 4 en la instantánea; B
 
 ## Relaciones documentadas
 
-### CHAR-MIA-GRAND
+### [Mia Grand](mia-grand.md)
 
 La deuda con Mia y el empleo posterior en Hostess of Fertility se vinculan al incidente descrito por el perfil oficial.
 
@@ -205,7 +205,7 @@ La deuda con Mia y el empleo posterior en Hostess of Fertility se vinculan al in
 
 **Límite:** Relación laboral/financiera según la adaptación; términos completos de la deuda no se reconstruyen aquí.
 
-### CHAR-RYUU-LION
+### [Ryuu Lion](ryuu-lion.md)
 
 El perfil relaciona su pasado como asesina con un encargo contra Ryuu; no se asume amistad, enemistad posterior ni conocimiento mutuo fuera de ese incidente.
 
@@ -213,7 +213,7 @@ El perfil relaciona su pasado como asesina con un encargo contra Ryuu; no se asu
 
 **Límite:** Dato de adaptación; texto de novela pendiente.
 
-### CHAR-LUNOA-FAUST
+### [Lunoa Faust](lunoa-faust.md)
 
 La adaptación vincula a Chloe y Lunoa Faust con las consecuencias del encargo que dañó la taberna y con la deuda posterior.
 
