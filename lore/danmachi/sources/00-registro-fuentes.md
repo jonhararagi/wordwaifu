@@ -2062,3 +2062,29 @@ verification_status: stub
 - rights_note: Resumir en palabras propias.
 - verified_by: DANMACHI-RESEARCH-040
 - verification_status: source_checked
+
+
+---
+
+## DMR-041-SRC-001 · Familia Chronicle episode Haze
+
+- source_id: DMR-041-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか ファミリアクロニクル episodeヘイズ
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi Familia Chronicle
+- volume_or_edition: Episode Haze; ISBN 978-4-8156-4067-5
+- language: Japonés
+- publication_date: 2026-05-15
+- official_url: https://ga.sbcr.jp/product/9784815640675/
+- accessed_at: 2026-10-21
+- locator_type: publisher_synopsis
+- locator: Título japonés del volumen, fecha editorial y sinopsis promocional.
+- claims_supported: [DMR-041-CLM-001, DMR-041-CLM-002, DMR-041-CLM-003]
+- events_supported: [EVT-DM-FC-HAZE-001]
+- continuity_scope: CROSS-CONTINUITY
+- reliability_note: Fuente oficial para título, fecha y marco de sinopsis; no sustituye el texto íntegro.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-041
+- verification_status: source_checked_partial
