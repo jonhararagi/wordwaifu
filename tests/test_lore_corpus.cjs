@@ -15,7 +15,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md",
   "research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md",
-  "research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md"
+  "research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md",
+  "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -33,8 +34,12 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 122, "Indexed source claims must match the current Soma, Loki and editorial evidence set.");
-assert.equal(index.entryCount, 125, "All currently sourced lore claims must be represented in searchable entries.");
+assert.equal(index.sourceClaimCount, 124, "Indexed source claims must include the structured Meteria family-research claims.");
+assert.equal(index.entryCount, 127, "All currently sourced lore claims must be represented in searchable entries, including Meteria.");
+const meteriaAlfiaClaim = corpus.search(index, { query: "Meteria Alfia hermana gemela", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(meteriaAlfiaClaim.results.some(claim => claim.claimId === "DMR-021-CLM-004"), "Meteria-Alfia relationship lead must be retrievable and stay explicitly unverified.");
+const meteriaBellClaim = corpus.search(index, { query: "Meteria madre Bell Cranel", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(meteriaBellClaim.results.some(claim => claim.claimId === "DMR-021-CLM-005"), "Meteria's major-spoiler relationship to Bell must be retrievable from the research package.");
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaTimelineClaim.results.some(claim => claim.claimId === "DMR-011-CLM-001"), "Official relative chronology must be searchable.");
 const volume21Boundary = corpus.search(index, { query: "volumen 21 publicado", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
