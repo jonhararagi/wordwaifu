@@ -80,7 +80,8 @@
     "research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md",
     "research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md",
     "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
-    "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md"
+    "research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md",
+    "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"
   ];
   const DEFAULT_DETAIL_IDS = [
     "CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA",
@@ -88,7 +89,9 @@
     "CHAR-NOIN-UNIC","CHAR-NEZE-RANKETT","CHAR-ASTA-KNOX","CHAR-RYANA-LIETZ","CHAR-CELTY-SROWA","CHAR-CECIL-BLACKLIZA",
     "CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA","CHAR-RIVERIA-LJOS-ALF","CHAR-GARETH-LANDROCK","CHAR-LEFIYA-VIRIDIS",
     "CHAR-TIONA-HIRYUTE","CHAR-TIONE-HIRYUTE","CHAR-BETE-LOGA","CHAR-RAUL-NOORD","CHAR-SOMA","CHAR-ZANIS-LUSTRA",
-    "CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY","CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-HELGA"
+    "CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY","CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-DARK-EREBUS",
+    "CHAR-DARK-JURA-HALMER","CHAR-DARK-RUDRA","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE",
+    "CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-HELGA"
   ];
   function getDefaultResearchPaths() { return DEFAULT_RESEARCH_PATHS.slice(); }
   function getDefaultDetailIds() { return DEFAULT_DETAIL_IDS.slice(); }

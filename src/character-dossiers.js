@@ -683,7 +683,106 @@
       "sources": [
         null
       ]
-    }
+    },
+    "CHAR-KALI": {
+      appearance: "La sinopsis editorial conecta Kali Familia con el pasado de las hermanas Hiryute; la apariencia detallada de Kali no se trata como verificada en esta tanda.",
+      history: "Su relación con Kali Familia y con el pasado de Tiona y Tione aparece en la ruta editorial de Sword Oratoria volumen 6. Las explicaciones sobre Telskyura y la infancia de las gemelas proceden de fuentes comunitarias y requieren cotejo del volumen.",
+      personality: "No se fija una psicología estable a partir de su afiliación. Los rasgos de los miembros de una Familia no se transfieren automáticamente a su deidad sin escenas propias.",
+      abilities: "No se inventa un repertorio de habilidades que la fuente editorial revisada no detalle. Como deidad, no se le asigna nivel de aventurera ni estadísticas de combatiente. La verificación de sus poderes exige escenas directas de Sword Oratoria o una referencia primaria equivalente; hasta entonces, esta sección registra el límite de evidencia en vez de convertir material de wiki en canon.",
+      relationships: "Kali está vinculada a Kali Familia. El pasado de Tiona y Tione se conecta con esa facción; Argana y Bache figuran como integrantes de combate en fuentes secundarias.",
+      conflict: "La tensión de la ruta surge del pasado que las gemelas confrontan en Melen. Las motivaciones particulares de Kali requieren reconstrucción por escenas y localizadores.",
+      sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
+    },
+    "CHAR-ARGANA-KALIF": {
+      appearance: "No se incorpora una descripción visual primaria cotejada en esta tanda; no se inventan edad, estatura o rasgos físicos.",
+      history: "Los compendios comunitarios la identifican como capitana o combatiente de alto rango de Kali Familia y la conectan con el trasfondo de las hermanas Hiryute. La sinopsis editorial de Sword Oratoria volumen 6 confirma el pasado conflictivo general, pero no todas las acciones individuales de Argana.",
+      personality: "No se cierra una psicología basándose solo en su cargo. La afiliación a una facción de combate no prueba que comparta cada práctica o motivación del grupo.",
+      abilities: "Nivel, estilo, armas, técnicas y resultados de combate quedan pendientes de capítulo y página primaria. No se convierten estadísticas de wiki en datos de novela, ni se deduce un repertorio por su cargo reportado en Kali Familia. Para cerrar esta sección hay que cotejar una escena concreta de Sword Oratoria y registrar su localizador.",
+      relationships: "Kali Familia es su afiliación reportada secundariamente. Tiona y Tione están relacionadas con el pasado de la facción, pero la escena individual de Argana requiere cotejo.",
+      conflict: "La ficha ofrece una ruta consultable para seguir la investigación sin presentar la sinopsis general como prueba de cada duelo o resultado.",
+      sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
+    },
+    "CHAR-BACHE-KALIF": {
+      appearance: "La sinopsis editorial de Sword Oratoria volumen 6 no detalla su apariencia; se evita añadir una descripción no verificada.",
+      history: "Las referencias comunitarias la presentan como capitana o figura de combate de Kali Familia y la relacionan con el pasado de las hermanas Hiryute. El texto del volumen debe verificarse para confirmar cada acción y resultado.",
+      personality: "No se asume que Bache comparta la psicología de Kali ni la de cada integrante de la Familia. Su caracterización individual requiere escenas concretas.",
+      abilities: "No se fijan nivel, técnicas, armamento o resultados de combate sin localizador primario. El contexto de Kali Familia no permite deducir capacidades individuales de Bache, y las tablas comunitarias no se elevan a canon por repetición. Se requiere una escena o perfil oficial localizado para confirmar cada habilidad.",
+      relationships: "La afiliación a Kali Familia y el papel de Bache frente a las gemelas provienen de fuentes comunitarias y siguen pendientes de cotejo primario.",
+      conflict: "La ficha permite encontrar la ruta del pasado de las gemelas sin convertir etiquetas comunitarias en hechos confirmados.",
+      sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
+    },
+    "CHAR-SELDAS": {
+      appearance: "No se ha cotejado una descripción visual de Seldas en la fuente primaria; no se inventan edad ni rasgos físicos.",
+      history: "Una ficha comunitaria de Tione lo relaciona con un vínculo emocional importante en la infancia dentro del contexto de Telskyura. Este resumen sirve como pista de lectura y no reemplaza la escena del volumen.",
+      personality: "No se asignan rasgos psicológicos a partir de la relación reportada con Tione. El expediente no tiene todavía escenas primarias suficientes para describir sus deseos, decisiones o conducta bajo presión, así que esos aspectos quedan abiertos en lugar de convertir una referencia breve en una personalidad definitiva.",
+      abilities: "No constan capacidades, nivel, armas o habilidades verificadas en esta tanda. La falta de datos no implica que el personaje carezca de capacidades; significa que el material primario no se ha localizado en esta revisión. Cualquier afirmación sobre su combate debe esperar una escena identificable de Sword Oratoria u otra fuente oficial pertinente.",
+      relationships: "Tione Hiryute es el vínculo de infancia reportado por una fuente comunitaria; la asociación con Kali Familia también permanece en estado secundario.",
+      conflict: "Su papel en la historia se limita por ahora al lugar que las referencias comunitarias le atribuyen en el pasado de Tione; el orden y el desenlace requieren cotejo del texto publicado.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Tione_Hiryute"]
+    },
+    "CHAR-DARK-ALFIA": {
+      appearance: "Las fuentes comunitarias describen a Alfia como una maga de apariencia severa, pero la descripción visual estable requiere cotejo con la edición revisada de Astrea Record. Esta ficha prioriza su función y evidencia, no los rasgos inferidos.",
+      history: "Alfia es reportada por fuentes secundarias como antigua integrante ejecutiva de Hera Familia y figura antagonista de gran impacto en Astrea Record. Su historia se relaciona con una enfermedad que afecta sus capacidades; detalles, decisiones y grado de sacrificio requieren capítulos y páginas del texto publicado.",
+      personality: "Los compendios comunitarios la presentan como severa, exigente y consciente de su talento excepcional. No debe convertirse ese resumen en una psicología cerrada: sus motivaciones frente a la nueva generación necesitan reconstruirse a partir de escenas y diálogo localizados.",
+      abilities: "Los nombres Gif Blessing, Alme, Vel Ardore, Satanas Verion, Silentium Eden y Genos Angelus aparecen en resúmenes secundarios. El proyecto los conserva como pistas de verificación, incluidos límites y costes. No se fija su mecánica completa ni una estadística permanente sin cotejo de la novela revisada.",
+      relationships: "Las fuentes secundarias la vinculan con Hera Familia y con Meteria; su relación con Zald forma parte del eje antagonista descrito en resúmenes de Astrea Record. Los vínculos específicos y las escenas que los establecen deben quedar etiquetados por claim y continuidad.",
+      conflict: "Su función narrativa provisional se lee como un antagonismo que pone a prueba a los héroes de Orario, no como una villana plana. La lectura moral de sus motivos debe distinguir el texto de la interpretación comunitaria y no importar datos de la versión de juego sin comparación.",
+      sources: ["https://danmachi.fandom.com/wiki/Alfia","https://danmachi.fandom.com/es/wiki/Alfia/Habilidades","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+    },
+    "CHAR-DARK-ZALD": {
+      appearance: "Las fuentes comunitarias describen a Zald como veterano de constitución imponente, pero esta ficha no incorpora detalles físicos como definitivos sin cotejar la edición revisada de Astrea Record.",
+      history: "Zald es presentado por compendios comunitarios como figura histórica de Zeus Familia y antagonista en Astrea Record. La investigación registra una conexión con el tramo final del conflicto y un enfrentamiento con Ottar reportado secundariamente; no asigna fecha absoluta, páginas ni resultados como hechos verificados.",
+      personality: "Los resúmenes secundarios lo presentan como combatiente veterano y figura que acepta un papel de prueba para la nueva generación. Ese propósito y su dimensión moral son interpretaciones secundarias hasta localizar las escenas y separar diálogo explícito del análisis de lectores.",
+      abilities: "Deus Ambrosia, Al Questa, Niggle Gourmet y Rea Ambrosia constan como nombres encontrados en fichas comunitarias. El proyecto los conserva como índice de verificación; las reglas, costes, efectos, duración y estadísticas deben contrastarse con el texto antes de considerarlos canónicos.",
+      relationships: "Su trayectoria se vincula secundariamente con Zeus Familia, con Alfia dentro del conflicto de Astrea Record y con Ottar en un enfrentamiento reportado. Esas relaciones son rutas históricas y no implican que exista una fecha o escena verificada para cada detalle.",
+      conflict: "El conflicto de Zald se estudia como antagonismo de alto impacto dentro de una tragedia mayor, con un posible sentido de prueba para los héroes del futuro según fuentes comunitarias. La enciclopedia no debe reducirlo a una ficha de poder ni inventar motivaciones más allá de lo que la novela confirme.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Zald","https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+    },
+    "CHAR-DARK-RUDRA": {
+      appearance: "No se afirma una descripción física canónica de Rudra a partir de las fuentes secundarias incluidas en esta tanda. La ficha evita tratar ilustraciones sueltas como descripción de todos sus estados.",
+      history: "Rudra es reportado por compendios comunitarios como deidad patrona de Rudra Familia. Su ruta narrativa se concentra en la fase posterior del incidente del Juggernaut descrita en la historia principal, alrededor de cinco años antes de Bell según la cronología secundaria; esa ancla temporal necesita cotejo primario.",
+      personality: "No se asigna a Rudra una psicología definitiva ni se deduce responsabilidad personal a partir de la afiliación de sus seguidores. La investigación distingue lo que hizo la Familia, lo que hizo Jura y lo que supo o autorizó la deidad.",
+      abilities: "No se atribuyen habilidades, nivel de combatiente ni poderes individuales en esta ficha. Como deidad, no se le asigna nivel de aventurero. El material necesario para ampliar la sección es una fuente primaria que describa sus decisiones o capacidades.",
+      relationships: "Los compendios comunitarios lo vinculan con Rudra Familia y relacionan esa facción con Jura Halmer. El catálogo enlaza ambas identidades con la ruta posterior del Juggernaut en CONT-MAIN-LN, con evidencia secundaria explícita.",
+      conflict: "La relación con la tragedia de Ryu y el Juggernaut se mantiene en la continuidad de la novela principal, separada del núcleo de Astrea Record alrededor de T-7. No se imputa a Rudra cada acción de Jura ni se fusiona esta fase posterior con la historia de Alfia y Zald.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Rudra","https://danmachi.fandom.com/wiki/Rudra_Familia","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+    },
+    "CHAR-DARK-JURA-HALMER": {
+      appearance: "Los compendios comunitarios contienen descripciones de Jura, pero no se incorpora aquí una apariencia definitiva basada solo en resumen secundario. Debe comprobarse qué rasgos describe la novela y en qué momento.",
+      history: "Jura Halmer está vinculado por fuentes comunitarias con Rudra Familia y la crisis del Juggernaut en la novela principal, en torno a los volúmenes 13–14. El resumen registrado permanece secundario: no certifica duración, número de días, páginas ni todos los mecanismos atribuidos al incidente.",
+      personality: "Los resúmenes lo presentan como antagonista que recurre a planes y trampas, pero su carácter debe reconstruirse a partir de decisiones y diálogo de la novela. La ficha evita convertir el resultado de sus acciones en una explicación psicológica total.",
+      abilities: "No se crea un listado definitivo de niveles, habilidades, magia, armas o mecanismos de explosión. Las capacidades de wikis sirven como términos de búsqueda hasta verificar qué describe el texto primario y cómo se comportan las reglas del Dungeon.",
+      relationships: "Jura aparece vinculado secundariamente a Rudra Familia, a Rudra y a la tragedia de Ryu que desemboca en la aparición del Juggernaut. Estas rutas tienen continuidad CONT-MAIN-LN y deben permanecer separadas de Astrea Record T-7.",
+      conflict: "Su papel se estudia por separado: la crisis posterior de la Familia Astrea no es el mismo acontecimiento que el levantamiento general de Astrea Record. El enlace al evento del Juggernaut sirve para reconstruir causas y consecuencias sin atribuir cada hecho a Jura hasta localizarlo.",
+      sources: ["https://danmachi.fandom.com/wiki/Jura_Halmer","https://danmachi.fandom.com/es/wiki/Jura_Halmer","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel","https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+    },
+    "CHAR-DARK-VALLETTA-GREDE": {
+      appearance: "No se incorpora una descripción visual estable de Valletta Grede porque la fuente disponible en esta tanda es una pista comunitaria no cotejada con un pasaje primario.",
+      history: "Valletta Grede permanece en el corpus como candidata para investigar el lado antagonista de la Era Oscura. DMR-029 conserva la URL de descubrimiento, pero no acepta un claim narrativo concreto sin localizador de la novela revisada; su afiliación, función y destino no se presentan como confirmados.",
+      personality: "No hay material primario localizado en este lote que permita describir sus motivaciones, valores, miedos o contradicciones. La enciclopedia no infiere una personalidad por su nombre o por estar incluida en una lista comunitaria.",
+      abilities: "No se asignan nivel, técnicas, magia ni equipo. Hace falta localizar una aparición de Valletta en una fuente primaria y extraer solo lo que esa escena o perfil oficial afirma, manteniendo cualquier discrepancia como cuestión abierta.",
+      relationships: "La ruta a Evilus y al índice de Era Oscura está marcada como investigación pendiente, no como afiliación confirmada ni prueba de participación en Astrea Record. No se le atribuyen relaciones personales concretas hasta encontrar una fuente adecuada.",
+      conflict: "Su expediente sirve para que una posible antagonista no desaparezca del censo de investigación, pero no la convierte automáticamente en antagonista principal o secundaria canónica. La etiqueta narrativa deberá depender de su papel real en la edición publicada.",
+      sources: ["https://danmachi.fandom.com/wiki/Valletta_Grede","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"]
+    },
+    "CHAR-DARK-THANATOS": {
+      appearance: "No se incorpora una descripción física de Thanatos a partir de una referencia comunitaria no cotejada. Su expediente continúa siendo una ficha de descubrimiento, no una biografía narrativa cerrada.",
+      history: "Thanatos está registrado en DMR-029 como lead de búsqueda, pero este lote no contiene un pasaje primario revisado que confirme su función, acciones, afiliación a una facción específica o destino. Un enlace comunitario no basta para convertirlo en antagonista principal ni secundario.",
+      personality: "No hay escenas primarias localizadas aquí que permitan describir su motivación o rasgos. La ficha mantiene ese campo abierto y evita atribuirle la ideología de Evilus o de otras figuras sin evidencia.",
+      abilities: "Nivel, poderes, técnicas, equipo y límites no se asignan por ausencia de fuente primaria. Si aparece en la novela revisada, cada capacidad deberá registrarse con volumen y página o localizador electrónico legítimo.",
+      relationships: "Los enlaces a Evilus y al índice de Era Oscura son pistas pending_verification: no prueban que Thanatos pertenezca a una Familia ni que participara en un acto específico. Cualquier relación aceptada requiere un claim localizado.",
+      conflict: "La función actual del registro es preservar una pregunta abierta para la investigación de antagonistas. No debe aparecer como villano confirmado en resúmenes canónicos hasta verificar su identidad y papel en el material primario.",
+      sources: ["https://danmachi.fandom.com/wiki/Thanatos","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"]
+    },
+    "CHAR-DARK-EREBUS": {
+      appearance: "El material comunitario presenta a Erebus como una deidad de apariencia humana, pero esta ficha no toma la apariencia ni el alias alternativo Eren como verificados por la edición revisada.",
+      history: "Erebus aparece en referencias comunitarias como figura antagonista asociada a Astrea Record. La investigación conserva su papel narrativo como ruta secundaria para localizar escenas, sin afirmar que el anuncio oficial confirme por sí solo alias, mando, motivaciones o acciones concretas.",
+      personality: "La lectura secundaria lo sitúa en un eje ideológico que confronta la justicia defendida por Astrea Familia. Esta descripción es interpretación útil para guiar la lectura, no una psicología cerrada; los deseos y contradicciones requieren diálogos y decisiones localizados.",
+      abilities: "No se registra un nivel de aventurero ni un inventario fiable de poderes en las fuentes primarias revisadas en esta tanda. Cualquier habilidad o efecto sobrenatural debe añadirse cuando exista una escena concreta o una fuente oficial que lo respalde.",
+      relationships: "Su asociación con el conflicto de Evilus y Astrea Record se conserva como evidencia secundaria. Evilus se modela como una red de facciones y no se le atribuyen automáticamente todas las acciones del conflicto.",
+      conflict: "Erebus sirve para explorar la oposición ideológica a la justicia de Ryu y Astrea Familia. La ficha distingue antagonismo reportado de una reconstrucción completa de su plan.",
+      sources: ["https://danmachi.fandom.com/wiki/Erebus","https://danmachi.com/news/news131.php","https://danmachi.com/chronology/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
+    },
   };
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({

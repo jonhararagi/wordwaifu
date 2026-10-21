@@ -1,14 +1,17 @@
 # Estado de WordWaifu
 ## Estado operativo y verificación — 2026-10-20
 
+- **Expedientes de personajes:** 79 perfiles estructurados en `src/character-dossiers.js`, incluidas rutas ampliadas para Alfia, Zald, Erebus, Rudra, Jura, Valletta y Thanatos; estos perfiles no certifican por sí solos la evidencia primaria.
+- **Lote histórico:** rutas distintas para Astrea Record, Rudra/Jura/Juggernaut y el pasado de Tiona/Tione en Sword Oratoria vol. 6. Las fichas con evidencia secundaria o sin localizador primario mantienen ese estado.
+
 **Esta sección prevalece sobre el historial que sigue.** No se certifica un porcentaje global a partir de cantidad de archivos o tests.
 
-- **Repositorio/rama de trabajo:** `jonhararagi/wordwaifu` · `main` (propuesta `work/danmachi-organization-graph-2026-10-20`; CI pendiente).
-- **Cobertura estructural DanMachi:** 155 registros activos, 31 IDs reservados, 117 documentos de apoyo y 197 aristas en catálogo; los recuentos no equivalen a un porcentaje de canon verificado.
+- **Rama de propuesta:** `jonhararagi/wordwaifu` · `work/danmachi-character-completion-dark-era-2026-10`; CI de esta propuesta aún por verificar.
+- **Cobertura estructural DanMachi propuesta:** 164 registros activos, 31 IDs reservados, 118 documentos de apoyo y 219 aristas; los recuentos no equivalen a un porcentaje de canon verificado.
 - **Roster de adaptación:** 63 identidades. Cada una dispone de registro activo, ficha Markdown y expediente de interfaz. Los cuatro hermanos Gulliver tienen IDs y rutas independientes y enlazan con grupo y Freya Familia.
 - **Hubs de navegación:** 18 registros de Familia, organizaciones Guild/Hostess, ubicación `LOC-HOSTESS` y nodo Xenos; las listas históricas siguen parciales.
-- **Grafo:** 197 aristas explícitas leídas del `catalog.json`; cada una lleva extremos, continuidad, estado de evidencia y claim.
-- **Pruebas nuevas:** el test de cobertura comprueba todos los personajes del roster, los seis campos de cada expediente, los cuatro Gulliver individuales y la integridad de extremos e IDs del grafo. La aprobación definitiva depende de CI sobre el candidato.
+- **Grafo:** 217 aristas explícitas en el catálogo propuesto. La Era Oscura añade rutas secundarias para Alfia/Zald/Erebus y pistas de Valletta/Thanatos marcadas `pending_verification`, no como canon confirmado.
+- **Pruebas de cobertura:** además de las 63 identidades del roster, la propuesta comprueba el índice de Era Oscura, Kali Familia, el evento de las gemelas, los expedientes nuevos y la integridad del grafo. La aprobación definitiva depende de CI sobre el candidato.
 - **Límite factual:** los perfiles del anime no se transfieren automáticamente a `CONT-MAIN-LN`, `CONT-SO` o `CONT-AR`. Las biografías escena por escena y el censo fuera del roster siguen abiertos.
 - **DANMACHI-RESEARCH-037 — organizaciones separadas:** `ORG-GUILD` y `ORG-HOSTESS` se separan de ubicaciones y enlazan con Ouranos, Eina, Fels y el personal de Hostess con claims oficiales bajo `CONT-ANIME`.
 - **Siguiente etapa:** Orario continúa parcialmente documentado; sucesos por tiempo, lugar, causas y consecuencias, y la reconstrucción de historias individuales, requieren sus propias fuentes primarias.

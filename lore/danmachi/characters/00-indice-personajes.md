@@ -6,6 +6,15 @@ El índice se sincroniza con el catálogo activo. Tener ficha no equivale a biog
 
 Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean duplicados; las etapas y los vínculos se modelan por intervalo y continuidad.
 
+## Mapa por conflicto y periodo
+
+Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.md) para separar tres rutas: Astrea Record alrededor de T-7; el arco posterior de Rudra/Jura y Juggernaut, aproximadamente T-5 según fuentes secundarias; y el pasado de Tiona/Tione vinculado con Kali Familia en Sword Oratoria vol. 6. Son periodos y continuidades distintos.
+
+- Núcleo de Astrea Record: Ryu, Astrea, Alise y Astrea Familia; sinopsis oficiales para el marco, con acciones individuales pendientes de capítulo/página.
+- Antagonistas de alto impacto según fuentes secundarias: Alfia, Zald y Erebus. Motivaciones y actos individuales requieren localizador primario.
+- Candidatos pendientes: Valletta Grede y Thanatos. Sus aristas están marcadas pending_verification y no prueban afiliación ni participación.
+- Pasado de las hermanas Hiryute: Tiona y Tione conservan historias distintas. La sinopsis oficial confirma el marco del volumen 6; algunos detalles de infancia siguen siendo secundarios.
+
 ## Personajes, deidades y grupos con ficha individual
 
 | Nombre | ID | Tipo | Estado | Ficha |
@@ -18,9 +27,11 @@ Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean du
 | Allen Fromel | `CHAR-ALLEN-FROMEL` | Personaje | `source_checked_partial` | [Abrir](allenfromel.md) |
 | Anya Fromel | `CHAR-ANYA-FROMEL` | Personaje | `source_checked_partial` | [Abrir](anyafromel.md) |
 | Apollo | `CHAR-APOLLO` | Deidad | `source_checked_partial` | [Abrir](apollo.md) |
+| Argana Kalif | `CHAR-ARGANA-KALIF` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](argana-kalif.md) |
 | Asfi Al Andromeda | `CHAR-ASFI-AL-ANDROMEDA` | Personaje | `source_checked_partial` | [Abrir](asfialandromeda.md) |
 | Asta Knox | `CHAR-ASTA-KNOX` | Personaje | `provisional` | [Abrir](asta-knox.md) |
 | Astrea | `CHAR-ASTREA` | Deidad | `provisional` | [Abrir](astrea.md) |
+| Bache Kalif | `CHAR-BACHE-KALIF` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](bache-kalif.md) |
 | Bell Cranel | `DM-CHAR-BELL` | Personaje | `draft` | [Abrir](bell-cranel.md) |
 | Berling Gulliver | `CHAR-BERLING-GULLIVER` | Personaje | `source_checked_partial` | [Abrir](berlinggulliver.md) |
 | Bete Loga | `CHAR-BETE-LOGA` | Personaje | `provisional` | [Abrir](bete-loga.md) |
@@ -36,6 +47,7 @@ Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean du
 | Dvalinn Gulliver | `CHAR-DVALINN-GULLIVER` | Personaje | `source_checked_partial` | [Abrir](dvalinngulliver.md) |
 | Eina Tulle | `DM-CHAR-EINA` | Personaje | `draft` | [Abrir](eina-tulle.md) |
 | Erebus | `CHAR-DARK-EREBUS` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/erebus.md) |
+| Evilus (red de facciones) | `GRP-EVILUS` | Grupo | `source_checked_partial` | [Abrir](dark-era/evilus-network.md) |
 | Fels | `CHAR-FELS` | Personaje | `source_checked_partial` | [Abrir](fels.md) |
 | Filvis Chalia | `CHAR-FILVIS-CHALIA` | Personaje | `source_checked_partial` | [Abrir](filvischalia.md) |
 | Finn | `DM-CHAR-LOKI-LEADERS` | Grupo | `draft` | [Abrir](finn-riveria-gareth.md) |
@@ -60,6 +72,7 @@ Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean du
 | Ishtar | `CHAR-ISHTAR` | Deidad | `source_checked_partial` | [Abrir](ishtar.md) |
 | Iska Bra | `CHAR-ISKA-BRA` | Personaje | `provisional` | [Abrir](iska-bra.md) |
 | Jura Halmer | `CHAR-DARK-JURA-HALMER` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/jura-halmer.md) |
+| Kali | `CHAR-KALI` | Deidad | `source_checked_partial` | [Abrir](kali.md) |
 | Kashima Ouka | `CHAR-KASHIMA-OUKA` | Personaje | `source_checked_partial` | [Abrir](kashimaouka.md) |
 | Lefiya Viridis | `CHAR-LEFIYA-VIRIDIS` | Personaje | `provisional` | [Abrir](lefiya-viridis.md) |
 | Liliruca Arde | `CHAR-LILIRUCA-ARDE` | Personaje | `provisional` | [Abrir](liliruca-arde.md) |
@@ -85,6 +98,7 @@ Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean du
 | Rudra | `CHAR-DARK-RUDRA` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/rudra.md) |
 | Ryana Lietz | `CHAR-RYANA-LIETZ` | Personaje | `provisional` | [Abrir](ryana-lietz.md) |
 | Ryu Lion | `CHAR-RYUU-LION` | Personaje | `provisional` | [Abrir](ryuu-lion.md) |
+| Seldas | `CHAR-SELDAS` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](seldas.md) |
 | Shakti Varma | `CHAR-SHAKTI-VARMA` | Personaje | `source_checked_partial` | [Abrir](shakti-varma.md) |
 | Shau | `CHAR-SHAU` | Personaje | `provisional` | [Abrir](shau.md) |
 | Soma | `CHAR-SOMA` | Deidad | `secondary_reference_partial_primary_check_pending` | [Abrir](soma.md) |
@@ -112,7 +126,7 @@ La ficha [Gulliver Brothers](gulliverbrothers.md) mantiene el perfil grupal; cad
 
 ## Registros históricos aún secundarios
 
-El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis del Juggernaut son referencias de investigación, no una confirmación automática del texto primario. Erebus, Thanatos y Valletta Grede se dejan aislados mientras no exista un claim relacional suficientemente localizado.
+El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis del Juggernaut son referencias de investigación, no una confirmación automática del texto primario. Erebus tiene una ruta secundaria hacia Astrea Record; Thanatos y Valletta Grede tienen aristas de investigación marcadas pending_verification que no prueban afiliación ni participación. Consulta el índice narrativo de la Era Oscura.
 
 ## IDs reservados
 
