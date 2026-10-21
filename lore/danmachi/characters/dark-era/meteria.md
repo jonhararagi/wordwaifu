@@ -159,13 +159,13 @@ Meteria es una identidad importante para la red histórica de Bell, pero el expe
 
 ## Estado por periodo
 
-### Historia familiar reportada · fechas no verificadas
+## Estado · CONT-UNVERIFIED · Historia familiar reportada · fechas no verificadas
 
 Referencias comunitarias la incluyen en Hera Familia y la describen como hermana gemela de Alfia. No se ha localizado el pasaje primario que establece estos datos.
 
 **Claims:** DMR-021-CLM-004.
 
-### Relación con Bell · novela principal
+## Estado · CONT-MAIN-LN · Relación con Bell · novela principal
 
 Una referencia comunitaria identifica a Meteria como madre de Bell. Es un spoiler mayor pendiente de localizador primario; no permite asumir qué personajes conocen el parentesco en cada época.
 
@@ -173,13 +173,13 @@ Una referencia comunitaria identifica a Meteria como madre de Bell. Es un spoile
 
 ## Relaciones
 
-### CHAR-DARK-ALFIA
+## Relación · CONT-UNVERIFIED · Alfia
 
 Fuentes comunitarias identifican a Meteria y Alfia como hermanas gemelas. Mantener el parentesco como reporte secundario hasta localizar la escena o referencia directa en la novela.
 
 **Límite:** Referencia comunitaria; vínculo no cotejado por página primaria.
 
-### DM-CHAR-BELL
+## Relación · CONT-MAIN-LN · Bell Cranel
 
 Una referencia comunitaria identifica a Meteria como madre de Bell Cranel. Es spoiler mayor; la escena/capítulo primario sigue pendiente y no todos los personajes deben asumir que lo saben.
 
