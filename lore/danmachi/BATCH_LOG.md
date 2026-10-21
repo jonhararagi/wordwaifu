@@ -1,5 +1,18 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-026 · Ampliación de Alfia, Zald, Valletta, Jura y Erebus (2026-10-21)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no fue modificado.
+- **Fichas ampliadas:** `characters/dark-era/alfia.md`, `zald.md`, `valletta-grede.md`, `jura-halmer.md`, `erebus.md`. IDs estables conservados.
+- **Contenido recuperado de extractos comunitarios:** alias y rasgos visuales reportados de Alfia/Zald; enfermedad y capacidades atribuidas a Alfia; combate de Zald contra Behemoth y deterioro por veneno; afiliación, magia Shaldo, arma y estrategia atribuidas a Valletta; equipo, manipulación y temor a Ryuu atribuidos a Jura; alias/ideología reportados de Erebus.
+- **Fuentes:** DMR-026-SRC-001 a DMR-026-SRC-006 (wiki inglesa/española) y DMR-026-SRC-007 (sinopsis editorial oficial de *Sword Oratoria* 7). La sinopsis editorial sostiene el contexto general de remanentes de Evilus, no la biografía individual de Valletta.
+- **Claims nuevos:** DMR-026-CLM-001 a DMR-026-CLM-009; todos son `secondary_extract_only_primary_locator_pending`. No se elevaron datos comunitarios a verificación por novela.
+- **Continuidad:** Alfia/Zald/Erebus se mantienen en la ruta histórica de `CONT-AR`; Valletta queda bajo `CONT-SO`; Jura bajo `CONT-MAIN-LN` en el arco posterior del volumen 13. Jura/Juggernaut no se mezcla con el núcleo de Astrea Record; pertenecer a Rudra Familia no prueba órdenes personales de Rudra.
+- **Recuperación y pruebas:** el paquete nuevo `research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md` se añadió a `catalog.json` y al cargador `src/lore-corpus.js`; se agregaron cinco pruebas de recuperación y se actualizó el recuento estructural esperado de 135/138 a 144/147.
+- **Validación:** los commits de documentación, corpus y pruebas están subidos. La aprobación final queda condicionada a comprobar los workflows disparados por el último commit; todavía no se declara `PASS`.
+- **Pendiente primario:** localizar capítulos/páginas de las novelas; verificar cifras, alias, magia/habilidades y diálogos; separar detalles exclusivos de DanMemo de la novelización de *Astrea Record*.
+
+
 ## DANMACHI-RESEARCH-025 · Ampliación de cinco expedientes desde pistas wiki (2026-10-21)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`. `main` permanece sin cambios intencionales.
