@@ -47,3 +47,11 @@ Crear un registro por país, ciudad, región, isla, ruina o lugar relevante cuan
 ## Cuidado con nombres repetidos
 
 Una ubicación llamada “Guild” puede referirse a una organización o al edificio físico. Mantener entidad organizativa y lugar físico separados y relacionarlos en lugar de duplicar o mezclar datos.
+
+## Referencias urbanas del Prototype — no transferir a la novela principal
+
+- [Avenidas principales (Prototype)](orario-avenues-prototype.md) — `LOC-ORARIO-AVENUES-PROTOTYPE`, claim `DMR-034-CLM-002`.
+- [Central Park (Prototype)](central-park-prototype.md) — `LOC-ORARIO-CENTRAL-PARK-PROTOTYPE`, claim `DMR-034-CLM-003`.
+- [Comercio de calle (Prototype)](commercial-streets-prototype.md) — `LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE`, claim `DMR-034-CLM-004`.
+
+Las aristas de estas tres entradas son rutas de navegación documental bajo `CONT-PROTOTYPE`, no pruebas de posición espacial dentro de `CONT-MAIN-LN`. Véase [DANMACHI-RESEARCH-039](../research/inbox/DANMACHI-RESEARCH-039-orario-prototype-location-inventory.md).
