@@ -199,7 +199,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 ## DMR-025-CLM-011 · Mariyu Reage: carácter, Rea Vindemia y equipo reportados
 
 - `claim_id`: DMR-025-CLM-011
-- `claim`: El resumen comunitario describe a Mariyu con una actitud fraternal hacia sus compañeras, un fuerte odio a Evilus por el sufrimiento causado y deseos de contraatacar. Le atribuye Rea Vindemia (レア・ヴィンデミア), magia curativa de área amplia que cura heridas y recupera resistencia; también afirma que usaba una maza y podía pelear en primera línea si era necesario. Estos datos son pistas secundarias: falta verificar en Astrea Record revisado el nombre, el efecto, la secuencia y las limitaciones.
+- `claim`: El resumen comunitario de Mariyu Reage (también llamada Maryuu Reage) describe una actitud fraternal hacia sus compañeras, fuerte odio a Evilus por el sufrimiento causado y deseos de contraatacar. Le atribuye Rea Vindemia (レア・ヴィンデミア), magia curativa de área amplia que cura heridas y recupera resistencia; también afirma que usaba una maza y podía pelear en primera línea si era necesario. Estos datos son pistas secundarias: falta verificar en Astrea Record revisado el nombre, el efecto, la secuencia y las limitaciones.
 - `character_id`: CHAR-MARIYU-LEAGE
 - `source_id`: DMR-025-SRC-007
 - `source_corroborating_source_id_1`: DMR-025-SRC-006
