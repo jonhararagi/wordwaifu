@@ -2,23 +2,26 @@
 id: CHAR-RYANA-LIETZ
 universe: danmachi
 type: character
-status: official_profile_and_secondary_roster_checked_primary_scene_pending
+status: "official_profile_secondary_magic_lead_primary_locator_pending"
 continuity_scope: "CONT-ANIME; CONT-AR"
 source_refs:
   - "DMR-006-SRC-003"
   - "DMR-007-SRC-001"
   - "DMR-007-SRC-004"
+  - "DMR-025-SRC-006"
 claim_refs:
   - "DMR-006-CLM-151"
   - "DMR-007-CLM-004"
   - "DMR-007-CLM-018"
   - "DMR-007-CLM-005"
-verification_status: "official_adaptation_profile_checked; historical_roster_secondary_only; novel_scene_pending"
+  - "DMR-025-CLM-009"
+verification_status: "official_adaptation_profile_and_secondary_magic_lead_primary_locator_pending"
 tags: ["Ryana Lietz", structured_dossier, character_research, primary_text_pending]
 research_source_refs:
   - "DMR-006-SRC-003"
   - "DMR-007-SRC-001"
   - "DMR-007-SRC-004"
+  - "DMR-025-SRC-006"
 entity_type: character
 canonical_name: "Ryana Lietz"
 aliases:
@@ -122,11 +125,13 @@ evidence_claims:
     verification_status: "secondary_checked"
     confidence_note: "No valida su destino, rol, nivel o relaciones individuales."
 abilities:
-  []
+  - "Irivute (イリヴュート): la tabla de magia comunitaria la vincula con Ryana como magia de fuego; nombre, efecto y limitaciones requieren cotejo primario."
+  - "La misma referencia comunitaria la incluye entre quienes pueden usar encantamiento simultáneo y entre las magas que pueden ocultar o suprimir el círculo mágico generado; la mecánica exacta está pendiente."
 skills:
   []
 magic:
-  []
+  - "Irivute (イリヴュート) — magia de fuego reportada por la wiki comunitaria; validar lectura japonesa, ejecución, efecto y limitaciones con la novela."
+  - "Encantamiento simultáneo/ocultación del círculo mágico — pista de una tabla comunitaria, pendiente de localizar en una escena."
 status_by_period:
   - era: "Perfil oficial de DanMachi IV"
     continuity_scope: "CONT-ANIME"
@@ -190,6 +195,13 @@ Una referencia comunitaria incluye a Ryana en la primera generación histórica.
 ## Relaciones
 
 No se añaden relaciones personales no sustentadas por una afirmación individual.
+
+## Pista comunitaria ampliada · magia de Ryana (secundaria, no cotejada)
+
+- **Irivute (イリヴュート):** la tabla española de magia lo asocia con Ryana Lietz y lo clasifica como magia de fuego.
+- **Técnica reportada:** el artículo también la menciona entre las usuarias de encantamiento simultáneo y las capaces de ocultar/suprimir el círculo mágico creado. La tabla remite a un resumen comunitario, no a una cita de la novela.
+- **Datos que no se completan:** efecto exacto de Irivute, potencia, coste, duración, condiciones del encantamiento y limitaciones; tampoco se asigna automáticamente esta técnica a cada etapa temporal de Ryana.
+- **Fuente/claim:** DMR-025-SRC-006; DMR-025-CLM-009. La página integral de la wiki migrada no pudo consultarse en esta sesión.
 
 ## Ruta de verificación
 
