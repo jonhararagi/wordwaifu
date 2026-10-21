@@ -32,6 +32,7 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 
 - source_refs: [DMR-040-SRC-001]
 - claim_type: publication_metadata
+- claim: La ficha editorial de GA Bunko registra el lanzamiento del volumen principal 21 para 2025-10-15.
 - observed_fact: la ficha editorial de GA Bunko registra el lanzamiento del volumen principal 21 para 2025-10-15.
 - continuity_scope: metadatos editoriales de `CONT-MAIN-LN`
 - confidence: alta para la fecha publicada por la editorial; no describe por sí misma el contenido del volumen.
@@ -41,6 +42,7 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 
 - source_refs: [DMR-040-SRC-002, DMR-040-SRC-006]
 - claim_type: announced_publication_metadata
+- claim: La ficha y el anuncio editorial indican el lanzamiento previsto de DanMachi 22 para 2026-12-15.
 - observed_fact: la ficha y el anuncio editorial indican el lanzamiento previsto de DanMachi 22 para 2026-12-15.
 - snapshot_status: futuro / no publicado al 2026-10-21.
 - limits: no atribuir hechos, relaciones, poderes o resultados de la historia a partir de la fecha o de una sinopsis promocional.
@@ -49,6 +51,7 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 
 - source_refs: [DMR-040-SRC-003, DMR-040-SRC-006]
 - claim_type: announced_publication_metadata
+- claim: La editorial anuncia Sword Oratoria 17 para 2027-01-15.
 - observed_fact: la editorial anuncia Sword Oratoria 17 para 2027-01-15.
 - snapshot_status: futuro / no publicado al 2026-10-21.
 - limits: la fecha anunciada no confirma escenas ni estados futuros de Ais o Loki Familia.
@@ -57,6 +60,7 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 
 - source_refs: [DMR-040-SRC-004, DMR-040-SRC-006]
 - claim_type: announced_publication_metadata
+- claim: La editorial anuncia Familia Chronicle episode Amid para 2027-02-15.
 - observed_fact: la editorial anuncia Familia Chronicle episode Amid para 2027-02-15.
 - snapshot_status: futuro / no publicado al 2026-10-21.
 - limits: no construir una biografía completa o nuevas relaciones a partir del título o del eslogan promocional.
@@ -65,6 +69,7 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 
 - source_refs: [DMR-040-SRC-005]
 - claim_type: publication_metadata
+- claim: La ficha editorial registra Familia Chronicle episode Haze para 2026-05-15.
 - observed_fact: la ficha editorial registra episode Haze para 2026-05-15.
 - snapshot_status: publicado al 2026-10-21.
 - limits: el lanzamiento permite investigar el material; no equivale a lectura integral ni resuelve por sí solo la equivalencia de romanizaciones `Haze` / `Heith`.
