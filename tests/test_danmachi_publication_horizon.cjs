@@ -13,7 +13,7 @@ assert.ok(fs.existsSync(path.join(loreRoot, researchPath)), "Publication horizon
 assert.ok(catalog.documents.some(item => item.document_id === "DOC-DANMACHI-RESEARCH-039"), "DMR-039 Orario inventory must remain registered.");
 assert.ok(catalog.documents.some(item => item.document_id === "DOC-DANMACHI-RESEARCH-038" && /dark-era-and-hiryute-sisters/.test(item.path)), "DMR-038 must remain the Dark Era/Hiryute package.");
 const note = fs.readFileSync(path.join(loreRoot, researchPath), "utf8");
-assert.match(note, /Fecha de corte:\s*2026-10-21/);
+assert.match(note, /Fecha de corte:\*{2}\s*2026-10-21/);
 for (const [id, date, status] of [
   ["DMR-040-SRC-001", "2025-10-15", "publicado"],
   ["DMR-040-SRC-002", "2026-12-15", "Futuro / no publicado"],
