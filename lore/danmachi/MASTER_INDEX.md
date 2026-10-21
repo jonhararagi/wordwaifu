@@ -85,6 +85,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 ### Personajes y organizaciones
 - [Índice maestro de personajes](characters/00-indice-personajes.md)
 - [Censo maestro de personajes](characters/00-censo-maestro.md) — identidades, funciones, Freya Familia, alineamiento editorial y pendientes.
+- [Censo temporal de personajes por eras](characters/02-censo-temporal-por-eras.md) — cruza Era Oscura/T−7, estado posterior/T−5, T0 y arcos siguientes sin duplicar identidades.
 - [Índice de deidades](canon/06-indice-deidades.md)
 - [Índice de Familias y organizaciones](familias/00-indice-familias.md)
 - [Índice de lugares](places/00-indice-lugares.md) — incluye el expediente parcial del [Dungeon](places/dungeon.md), con fuente editorial y límites de certeza.
