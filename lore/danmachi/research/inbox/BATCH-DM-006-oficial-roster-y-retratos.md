@@ -2,6 +2,14 @@
 
 Este paquete amplía el directorio de WordWaifu con resúmenes propios de perfiles oficiales de las adaptaciones. No representa una enciclopedia completa ni convierte información del anime o Sword Oratoria en un dictamen universal sobre cada novela. Los retratos se sirven de las páginas originales: el repositorio no almacena copias de esas imágenes.
 
+
+## Normalización de nombre · Lunoa Faust
+
+- **ID estable:** `CHAR-LUNOA-FAUST`, que ya existe en el catálogo y en `characters/lunoa-faust.md`.
+- **Grafía japonesa oficial de adaptación:** `ルノア・ファウスト`.
+- **Variantes latinas de búsqueda:** `Lunoa Faust` y `Lunoire Faust`. “Lunoire” queda como alias de búsqueda, no como identidad ni ID aparte.
+- Los claims `DMR-006-CLM-061` a `DMR-006-CLM-063` se remiten al ID estable existente para que la búsqueda de relaciones no cree dos personajes para el mismo perfil.
+
 ## Fuentes de referencia
 
 - **DMR-006-SRC-001** — Portal oficial de personajes de DanMachi V: https://danmachi.com/danmachi5/character/
@@ -142,7 +150,7 @@ Las afirmaciones siguientes son paráfrasis breves en español de los perfiles d
 
 ### DMR-006-CLM-009 · Syr Flova · relationships
 - `aspect`: relationships
-- `claim`: Relaciones destacadas de Syr Flova: Muestra interés por Bell; trabaja bajo la autoridad de Mia Grand y comparte la taberna con Anya, Chloe y Lunoire.
+- `claim`: Relaciones destacadas de Syr Flova: Muestra interés por Bell; trabaja bajo la autoridad de Mia Grand y comparte la taberna con Anya, Chloe y Lunoa.
 - `character_id`: CHAR-SYR-FLOVA
 - `era_or_interval`: DanMachi V · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
@@ -958,7 +966,7 @@ Las afirmaciones siguientes son paráfrasis breves en español de los perfiles d
 
 ### DMR-006-CLM-060 · Chloe Rollo · relationships
 - `aspect`: relationships
-- `claim`: Relaciones destacadas de Chloe Rollo: Trabaja para Mia junto a otras camareras; el pasado del contrato fallido la conecta con Ryu y Lunoire.
+- `claim`: Relaciones destacadas de Chloe Rollo: Trabaja para Mia junto a otras camareras; el pasado del contrato fallido la conecta con Ryu y Lunoa.
 - `character_id`: CHAR-CHLOE-ROLO
 - `era_or_interval`: DanMachi V · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
@@ -972,10 +980,10 @@ Las afirmaciones siguientes son paráfrasis breves en español de los perfiles d
 - `spoiler_level`: mild
 - `confidence_note`: Resumen original de una ficha oficial de adaptación. No debe trasladarse automáticamente a toda la novela ligera ni a otras continuidades.
 
-### DMR-006-CLM-061 · Lunoire Faust · identity
+### DMR-006-CLM-061 · Lunoa Faust · identity
 - `aspect`: identity
-- `claim`: Lunoire Faust: Trabajadora de Hostess of Fertility que aparece como una de las personas más sensatas del grupo y suele responder a las ocurrencias de Anya y Chloe. Afiliación descrita por la fuente: Hostess of Fertility.
-- `character_id`: CHAR-LUNOIRE-FAUST
+- `claim`: Lunoa Faust: Trabajadora de Hostess of Fertility que aparece como una de las personas más sensatas del grupo y suele responder a las ocurrencias de Anya y Chloe. Afiliación descrita por la fuente: Hostess of Fertility.
+- `character_id`: CHAR-LUNOA-FAUST
 - `era_or_interval`: DanMachi V · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-001
@@ -988,10 +996,10 @@ Las afirmaciones siguientes son paráfrasis breves en español de los perfiles d
 - `spoiler_level`: mild
 - `confidence_note`: Resumen original de una ficha oficial de adaptación. No debe trasladarse automáticamente a toda la novela ligera ni a otras continuidades.
 
-### DMR-006-CLM-062 · Lunoire Faust · personality
+### DMR-006-CLM-062 · Lunoa Faust · personality
 - `aspect`: personality
-- `claim`: Perfil de Lunoire Faust: Práctica y centrada, dentro de una taberna con personajes mucho más expresivos. Capacidades y función documentadas: Nivel 4; la fuente aclara que “Black Fist” no es un epíteto oficial.
-- `character_id`: CHAR-LUNOIRE-FAUST
+- `claim`: Perfil de Lunoa Faust: Práctica y centrada, dentro de una taberna con personajes mucho más expresivos. Capacidades y función documentadas: Nivel 4; la fuente aclara que “Black Fist” no es un epíteto oficial.
+- `character_id`: CHAR-LUNOA-FAUST
 - `era_or_interval`: DanMachi V · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-001
@@ -1004,10 +1012,10 @@ Las afirmaciones siguientes son paráfrasis breves en español de los perfiles d
 - `spoiler_level`: mild
 - `confidence_note`: Resumen original de una ficha oficial de adaptación. No debe trasladarse automáticamente a toda la novela ligera ni a otras continuidades.
 
-### DMR-006-CLM-063 · Lunoire Faust · relationships
+### DMR-006-CLM-063 · Lunoa Faust · relationships
 - `aspect`: relationships
-- `claim`: Relaciones destacadas de Lunoire Faust: Trabaja junto a Anya y Chloe y comparte con Chloe las consecuencias del encargo fallido contra Ryu.
-- `character_id`: CHAR-LUNOIRE-FAUST
+- `claim`: Relaciones destacadas de Lunoa Faust: Trabaja junto a Anya y Chloe y comparte con Chloe las consecuencias del encargo fallido contra Ryu.
+- `character_id`: CHAR-LUNOA-FAUST
 - `era_or_interval`: DanMachi V · perfiles oficiales de personajes; estado descrito por esa adaptación, fecha interna no fijada
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-006-SRC-001
