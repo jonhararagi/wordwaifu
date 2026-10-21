@@ -9,6 +9,7 @@ source_refs:
 claim_refs:
   - "DMR-002-CLM-011"
   - "DMR-002-CLM-012"
+  - "DMR-002-CLM-014"
 verification_status: "Official adaptation profile claims checked; primary novel scene/page locators pending"
 tags: ["Freya", structured_dossier, source_checked_adaptation, primary_text_pending]
 research_source_refs:
@@ -93,6 +94,16 @@ evidence_claims:
     source_locator: "Entrada フレイヤ: Charm y comportamiento con personas que le interesan"
     verification_status: source_checked
     confidence_note: "El efecto general se resume en el perfil; no se derivan aquí límites mecánicos ni resultados escena por escena."
+  - claim_id: DMR-002-CLM-014
+    aspect: "relación con su capitán"
+    claim: "El perfil oficial de Ottar lo describe como absolutamente leal a Freya y dispuesto a responder con dureza ante quienes la insultan."
+    era_or_interval: "Perfil oficial DanMachi V; fecha interna no fijada"
+    continuity_scope: CONT-ANIME
+    evidence_type: official_adaptation_profile
+    source_id: DMR-002-SRC-001
+    source_locator: "Entrada オッタル, lealtad a Freya y respuesta ante detractores"
+    verification_status: source_checked
+    confidence_note: "Evidencia de la orientación de Ottar hacia Freya, no un mapa completo de sus relaciones privadas."
 abilities: []
 skills: []
 magic: []
@@ -161,7 +172,7 @@ Diosa de la belleza y deidad principal de Freya Familia; atraída por el alma de
 
 ## Relaciones documentadas
 
-### DM-CHAR-BELL
+### [Bell Cranel](bell-cranel.md)
 
 Freya se siente atraída por el alma de Bell y desea que crezca hasta convertirse en compañero digno de ella, según el perfil DanMachi V.
 
@@ -169,7 +180,7 @@ Freya se siente atraída por el alma de Bell y desea que crezca hasta convertirs
 
 **Límite:** Motivación general explícita; no se infiere cada acción posterior ni se mezcla con AU.
 
-### CHAR-OTTAR
+### [Ottar](ottar.md)
 
 Ottar es descrito como absolutamente leal a Freya y dispuesto a responder con dureza a quien la insulte.
 
