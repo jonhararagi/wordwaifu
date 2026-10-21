@@ -3,7 +3,7 @@ id: CHAR-DARK-RUDRA
 universe: danmachi
 type: character
 status: pending_primary_text_check
-continuity_scope: CONT-AR
+continuity_scope: CONT-MAIN-LN
 source_refs:
   - DMR-029-SRC-009
   - DMR-029-SRC-012
@@ -19,7 +19,7 @@ aliases:
 
 - **ID estable:** CHAR-DARK-RUDRA.
 - **Afiliación de trabajo:** Rudra Familia; vínculo con Evilus secundario.
-- **Continuidad:** CONT-AR. Ficha dividida temporalmente. La trampa de cinco años antes de Bell no pertenece automáticamente al periodo de siete años de Astrea Record.
+- **Continuidad principal de esta ficha:** CONT-MAIN-LN. El incidente de T−5 pertenece a la retrospectiva de la novela principal y no al núcleo T−7 de Astrea Record.
 - **Estado:** expediente individual redactado; verificación primaria por página pendiente.
 
 ## Contexto e historia
@@ -46,13 +46,15 @@ Una facción intenta destruir a un enemigo y provoca una amenaza que ya no contr
 
 ## Localizadores de lectura
 
-Localizador de Astrea Record pendiente. Para la trampa del Juggernaut, consultar DanMachi vol. 13, arco «Encounter and Vow / Encuentro y voto», y comprobar quién ejecuta cada acción.
+Localizador primario de la retrospectiva pendiente. Para el arco del Juggernaut, consultar DanMachi vol. 13, «Encounter and Vow / Encuentro y voto», y comprobar quién ejecuta cada acción. Ruta de navegación: [tragedia de Astrea Familia vinculada al Juggernaut](../../events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md).
 
 ## Fuentes
 
 - https://danmachi.fandom.com/wiki/Rudra_Familia
 - https://danmachi.fandom.com/es/wiki/Rudra
-- https://danmachi.com/news/news131.php
+- [Rudra Familia](../../familias/rudra-familia.md)
+- [Evento de la tragedia de Astrea Familia/Juggernaut](../../events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md)
+- https://danmachi.com/chronology/
 
 ## Regla editorial
 
