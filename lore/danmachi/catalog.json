@@ -236,9 +236,11 @@
         "needs source check",
         "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_primary_page_pending",
       "priority": "high"
     },
     {
@@ -268,9 +270,12 @@
         "needs source check",
         "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "structured_dossier",
+        "primary_text_pending",
+        "official_manga_profile"
       ],
-      "status": "pending_primary_text_check",
+      "status": "official_adaptation_profile_primary_novel_locator_pending",
       "priority": "high"
     },
     {
@@ -524,9 +529,12 @@
         "needs source check",
         "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "structured_dossier",
+        "primary_text_pending",
+        "secondary_lead_only"
       ],
-      "status": "pending_primary_text_check",
+      "status": "discovery_lead_only",
       "priority": "high"
     },
     {
@@ -540,9 +548,11 @@
         "needs source check",
         "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_primary_page_pending",
       "priority": "high"
     },
     {
@@ -556,9 +566,11 @@
         "needs source check",
         "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "structured_dossier",
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_primary_page_pending",
       "priority": "high"
     },
     {
