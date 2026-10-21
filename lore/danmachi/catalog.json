@@ -5986,11 +5986,11 @@
       "label": "deidad asociada a Kali Familia en la sinopsis editorial",
       "continuity": "CONT-SO",
       "interval": "Sword Oratoria vol. 6; periodo exacto no fijado",
-      "evidenceStatus": "source_checked_partial",
-      "evidenceType": "official_publisher_synopsis",
-      "claimRef": "DMR-038-CLM-002",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-038-CLM-004",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "Vínculo general editorial; no es un censo completo de la Familia."
+      "note": "El papel de Kali como deidad asociada a la facción no se deduce de la sinopsis del volumen 6; aquí queda rastreado mediante compendio secundario hasta localizar el texto primario."
     },
     {
       "id": "REL-ARGANA-MEMBER-KALI-001",
@@ -6070,11 +6070,11 @@
       "label": "confronta el pasado vinculado a Kali Familia",
       "continuity": "CONT-SO",
       "interval": "Sword Oratoria vol. 6",
-      "evidenceStatus": "source_checked_partial",
+      "evidenceStatus": "source_checked",
       "evidenceType": "official_publisher_synopsis",
       "claimRef": "DMR-038-CLM-002",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "El resumen oficial confirma el marco general, no cada recuerdo o combate."
+      "note": "La sinopsis editorial confirma el marco general del arco; no cada recuerdo o combate."
     },
     {
       "id": "REL-TIONE-SO6-PAST-001",
@@ -6084,11 +6084,11 @@
       "label": "confronta el pasado vinculado a Kali Familia",
       "continuity": "CONT-SO",
       "interval": "Sword Oratoria vol. 6",
-      "evidenceStatus": "source_checked_partial",
+      "evidenceStatus": "source_checked",
       "evidenceType": "official_publisher_synopsis",
       "claimRef": "DMR-038-CLM-002",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "El resumen oficial confirma el marco general, no cada recuerdo o combate."
+      "note": "La sinopsis editorial confirma el marco general del arco; no cada recuerdo o combate."
     },
     {
       "id": "REL-KALI-FAM-SO6-PAST-001",
@@ -6098,11 +6098,11 @@
       "label": "facción ligada al pasado al que se enfrentan las hermanas",
       "continuity": "CONT-SO",
       "interval": "Sword Oratoria vol. 6",
-      "evidenceStatus": "source_checked_partial",
+      "evidenceStatus": "source_checked",
       "evidenceType": "official_publisher_synopsis",
       "claimRef": "DMR-038-CLM-002",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "Relación colectiva de la sinopsis; acciones particulares por cotejar."
+      "note": "La sinopsis verifica el vínculo colectivo entre el pasado de las hermanas y Kali Familia; las acciones particulares siguen por cotejar."
     },
     {
       "id": "REL-SO6-MELEN-LOCATION-001",
@@ -6112,11 +6112,11 @@
       "label": "la sinopsis sitúa el arco en la ciudad portuaria Melen",
       "continuity": "CONT-SO",
       "interval": "Sword Oratoria vol. 6",
-      "evidenceStatus": "source_checked_partial",
+      "evidenceStatus": "source_checked",
       "evidenceType": "official_publisher_synopsis",
       "claimRef": "DMR-038-CLM-002",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "No se añade geografía no indicada por la sinopsis."
+      "note": "La sinopsis editorial describe Melen como ciudad portuaria y sitúa allí el marco del arco."
     },
     {
       "id": "REL-ALFIA-ASTREA-RECORD-EVENT",
@@ -6168,11 +6168,11 @@
       "label": "Evilus forma parte de la escalada general del conflicto descrito editorialmente",
       "continuity": "CONT-AR",
       "interval": "Era Oscura; T-7 aproximado",
-      "evidenceStatus": "source_checked_partial",
+      "evidenceStatus": "source_checked",
       "evidenceType": "official_chronology_and_publisher_synopsis",
       "claimRef": "DMR-038-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "Evilus se modela como red de facciones, no una única Familia."
+      "note": "La cronología oficial y las sinopsis editoriales respaldan el marco colectivo de caos/Evilus; la relación no adjudica cada acción a una persona ni a una sola Familia."
     },
     {
       "id": "REL-EREBUS-EVILUS-RESEARCH",
