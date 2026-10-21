@@ -407,12 +407,11 @@
       "type": "character",
       "tags": [
         "Jura Halmer",
-        "needs source check",
+        "Jura",
+        "DanMachi volumen 13",
+        "Rudra Familia",
+        "Juggernaut",
         "CONT-MAIN-LN",
-        "individual dossier",
-        "primary page pending",
-        "Juggernaut incident",
-        "secondary_summary",
         "primary_text_pending"
       ],
       "status": "secondary_summary_reviewed_primary_page_pending",
@@ -541,18 +540,12 @@
       "type": "character",
       "tags": [
         "Valletta Grede",
-        "needs source check",
-        "individual dossier",
-        "primary page pending",
-        "structured_dossier",
-        "primary_text_pending",
-        "secondary_lead_only",
+        "Valletta",
         "Sword Oratoria",
-        "Thanatos Familia (secondary)",
-        "Evilus (secondary)",
+        "Thanatos Familia",
+        "Evilus",
         "CONT-SO",
-        "CONT-UNVERIFIED",
-        "secondary_summary"
+        "primary_text_pending"
       ],
       "status": "secondary_summary_reviewed_primary_page_pending",
       "priority": "high"
