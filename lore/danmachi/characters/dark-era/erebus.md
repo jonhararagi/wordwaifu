@@ -193,13 +193,13 @@ El contacto/reclutamiento de Alfia y Zald aparece en resúmenes comunitarios; la
 
 ## Relaciones y navegación
 
-### [CHAR-DARK-ALFIA](../dark-alfia.md)
+### [Alfia](alfia.md)
 
 La ficha comunitaria de Erebus reporta que se acercó a Alfia para involucrarla en el conflicto. El detalle queda como pista secundaria, no como escena cotejada.
 
 **Límite:** Resumen comunitario; verificar capítulo, página, diálogo y motivo.
 
-### [CHAR-DARK-ZALD](../dark-zald.md)
+### [Zald](zald.md)
 
 La ficha comunitaria de Erebus reporta un contacto con Zald para involucrarlo en el conflicto. El detalle queda como pista secundaria, no como escena cotejada.
 
