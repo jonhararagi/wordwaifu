@@ -391,3 +391,24 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Corrección:** `src/lore-corpus.js` solo considera alias las etiquetas no compartidas por varias identidades y conserva el resto como palabras clave; `src/character-archive.js` da prioridad a coincidencias de nombre/alias frente a coincidencias de etiquetas y normaliza los prefijos correctamente.
 - **Prueba añadida:** `tests/test_character_archive.cjs` ahora exige que la búsqueda por “Ryu” devuelva solo `CHAR-RYUU-LION`, no fichas relacionadas de forma incidental.
 - **Prueba anterior:** los dos workflows PASS en el SHA exacto `2ba04d6bbc7edec73c24d3b01ebb004f3b1a1aff` después de corregir las expresiones regulares. La posterior expansión de fichas requiere su propia validación en el último SHA.
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-004 · Cinco expedientes secundarios y de liderazgo
+
+- **Fichas ampliadas:** `characters/freya.md`, `characters/finn-deimne.md`, `characters/ottar.md`, `characters/chloe-rolo.md` y `characters/lunoa-faust.md`.
+- **IDs estables conservados:** `CHAR-FREYA`, `CHAR-FINN-DEIMNE`, `CHAR-OTTAR`, `CHAR-CHLOE-ROLO`, `CHAR-LUNOA-FAUST`. No se creó una identidad aparte para una traducción alternativa del mismo nombre.
+- **Cobertura:** perfiles estructurados con continuidad por fuente, estados por periodo, relaciones con evidencia, apartados psicológicos delimitados por fuente, campos desconocidos explícitos y preguntas abiertas para el cotejo primario.
+- **Fuentes/claims oficiales utilizados:** DMR-002-CLM-009 a 014 (perfiles DanMachi III/V), DMR-005-CLM-002 y DMR-005-CLM-008 (Sword Oratoria), DMR-006-CLM-058 a 063 (Chloe y Lunoa en DanMachi V). Los perfiles de adaptación son snapshots; no equivalen a localizadores de novela.
+- **Decisiones de precisión:** el nivel 6/epíteto de Finn y el nivel 7/epíteto de Ottar permanecen asociados a los perfiles oficiales concretos. Black Cat (黒猫) y Black Fist (黒拳) se conservan como apodos que el perfil oficial niega que sean epítetos formales.
+- **Normalización Lunoa/Lunoire:** se conserva `CHAR-LUNOA-FAUST` como ID único existente. Las menciones de la fuente secundaria a “Lunoire Faust” se normalizaron a ese ID; “Lunoire Faust” permanece como alias de búsqueda. Se actualizaron `DMR-006-CLM-061` a `DMR-006-CLM-063` para apuntar al ID estable.
+- **Relación Finn–Raul:** el claim `DMR-005-CLM-008` ahora incluye ambos IDs en `character_ids`, ya que el resumen describe explícitamente la confianza de Finn en Raul para mando delegado.
+- **Catálogo:** se actualizaron los cinco registros existentes a `partial_source_checked_primary_text_pending` y se añadieron las etiquetas `structured_dossier` y `primary_text_pending`. El catálogo conserva 152 registros y 51 IDs reservados; no se añade otro registro para una variante de nombre.
+- **Pendiente:** capítulo/página de novela para escenas individuales, cronología exacta de los encargos de Chloe/Lunoa, y verificación primaria de las relaciones más allá de los perfiles de adaptación.
+
+
+## DANMACHI-NAME-RECONCILE-001 · Lunoa Faust / Lunoire Faust
+
+- El perfil japonés oficial escribe `ルノア・ファウスト`; el catálogo preexistente ya tenía el ID `CHAR-LUNOA-FAUST` y la ficha `characters/lunoa-faust.md`.
+- Se normalizaron los claims `DMR-006-CLM-061`–`DMR-006-CLM-063` para utilizar `CHAR-LUNOA-FAUST`, de forma que un nombre alternativo no se interprete como un personaje nuevo.
+- La variante “Lunoire Faust” queda como alias de búsqueda; se conserva el mismo ID y se añade al registro de catálogo.
+- **Sin creación ni eliminación de IDs.** La fuente oficial de adaptación sigue siendo CONT-ANIME; escenas de novela aún requieren localizadores primarios.
