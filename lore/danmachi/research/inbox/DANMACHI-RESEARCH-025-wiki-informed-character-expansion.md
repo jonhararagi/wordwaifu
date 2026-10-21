@@ -13,7 +13,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - **Límite primario:** no se abrió ni cotejó el texto íntegro de las novelas en esta tanda. Los volúmenes, capítulos, episodios y afirmaciones de historia se guardan como pistas secundarias, no como localizadores primarios aprobados.
 - **Continuidad:** separar DanMachi principal, Sword Oratoria, Astrea Record, adaptación anime y material hipotético/What If. No inferir que una acción de Familia fue ordenada o conocida personalmente por su deidad.
 
-## DMR-025-CLM-001 · Olivas Act: identidad, alias y referencias de aparición reportadas
+### DMR-025-CLM-001 · Olivas Act: identidad, alias y referencias de aparición reportadas
 
 - `claim_id`: DMR-025-CLM-001
 - `claim`: El extracto comunitario de Olivas Act lo identifica como una criatura masculina conocida por los nombres Vendetta y Fanatic; reporta nivel 3 y lo sitúa en Sword Oratoria, volumen 3, manga Sword Oratoria capítulo 19 y episodio 8 de la adaptación Sword Oratoria. Vendetta/Fanatic son etiquetas de la wiki y su condición exacta de epíteto o alias necesita confirmación en la edición pertinente.
@@ -31,7 +31,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: Usar como mapa de investigación. El artículo migrado actual no pudo abrirse y la ficha no demuestra participación de Olivas en el núcleo de Astrea Record.
 
-## DMR-025-CLM-002 · Olivas Act: aspecto y conducta atribuidos por la wiki
+### DMR-025-CLM-002 · Olivas Act: aspecto y conducta atribuidos por la wiki
 
 - `claim_id`: DMR-025-CLM-002
 - `claim`: La fuente secundaria describe a Olivas con cabello blanco largo, ojos amarillo verdosos y vestimenta de combate blanca; menciona una máscara con forma de cráneo y una coloración amarillo verdosa desde la cintura hacia abajo. Lo caracteriza como cruel/sádico y demasiado confiado, y afirma que conocía a aventureros de Orario por sus alias. Son descripciones y valoraciones de una wiki, pendientes de cotejo en Sword Oratoria.
@@ -49,7 +49,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: No convertir el resumen de wiki en una descripción textual de la novela ni generalizar estos rasgos a otras etapas.
 
-## DMR-025-CLM-003 · Olivas Act: naturaleza de criatura y capacidad reportada
+### DMR-025-CLM-003 · Olivas Act: naturaleza de criatura y capacidad reportada
 
 - `claim_id`: DMR-025-CLM-003
 - `claim`: La ficha comunitaria atribuye a Olivas una naturaleza de criatura que puede fortalecerse al consumir piedras mágicas, con una tasa de consumo corporal muy alta; también afirma que llegó a superar la fuerza correspondiente a su nivel anterior. El mecanismo, el coste y las limitaciones deben verificarse en Sword Oratoria, volumen 3.
@@ -67,7 +67,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: El expediente no debe inventar cifras, velocidad de consumo ni inmunidades si no se encuentran en el texto de la obra.
 
-## DMR-025-CLM-004 · Rudra: identidad y primera aparición reportada
+### DMR-025-CLM-004 · Rudra: identidad y primera aparición reportada
 
 - `claim_id`: DMR-025-CLM-004
 - `claim`: La wiki en español describe a Rudra como una deidad masculina vinculada a Rudra Familia y Evilus; informa que su aparición en novela ligera sería en DanMachi, volumen 14, en un flashback, y en el episodio 20 de DanMachi IV como aparición retrospectiva. La ficha secundaria también indica que fue devuelto al Cielo. Estas pistas no documentan por sí solas su papel personal durante Astrea Record central.
@@ -85,7 +85,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: Separar los datos de deidad, las escenas retrospectivas de la novela y los perfiles/episodios de adaptación.
 
-## DMR-025-CLM-005 · Rudra: apariencia, carácter y poderes divinos reportados
+### DMR-025-CLM-005 · Rudra: apariencia, carácter y poderes divinos reportados
 
 - `claim_id`: DMR-025-CLM-005
 - `claim`: El extracto en español describe a Rudra con piel oscura, cabello corto, toga de colores apagados, pantalones claros, calzado negro, una pulsera blanca, aros, collar de cuentas rojas y sombra azul en los párpados. La wiki le atribuye el deseo de provocar caos y sufrimiento y enumera percepción divina, aura de deidad, Arcanum sellado y un espejo divino para observar el mundo inferior. Cada detalle es secundario y no se dispone aquí de una escena o ilustración primaria localizada para comprobarlo.
@@ -103,7 +103,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: La lista no debe interpretarse como poder de aventurero ni como evidencia de que Rudra dirigiera cada operación de Evilus.
 
-## DMR-025-CLM-006 · Rudra Familia, Jura y el incidente del Juggernaut
+### DMR-025-CLM-006 · Rudra Familia, Jura y el incidente del Juggernaut
 
 - `claim_id`: DMR-025-CLM-006
 - `claim`: El artículo comunitario de Rudra Familia sitúa aproximadamente cinco años antes de Bell una trampa contra Astrea Familia que termina provocando al Juggernaut tras el daño excesivo al Dungeon. El resumen refiere numerosas bajas, a Ryuu y Jura como supervivientes de ese conflicto, y la destrucción posterior de Rudra Familia por Ryuu; también informa que Rudra fue enviado al Cielo más tarde. Esta secuencia describe acciones atribuidas a la Familia y resultados narrativos resumidos: no prueba que Rudra ideara, ordenara o conociera personalmente cada parte del plan.
@@ -121,7 +121,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: Mantener separado el liderazgo formal de la agencia individual. Confirmar el incidente en la novela principal antes de aprobar una cronología exacta.
 
-## DMR-025-CLM-007 · Meteria: aspecto, estado y parentescos reportados
+### DMR-025-CLM-007 · Meteria: aspecto, estado y parentescos reportados
 
 - `claim_id`: DMR-025-CLM-007
 - `claim`: Las fichas comunitarias describen a Meteria como humana, de cabello blanco y ojos azules; la presentan como hermana gemela mayor de Alfia, antigua integrante de Hera Familia y madre de Bell Cranel, y la marcan como fallecida. Las mismas referencias dejan sin identificar con seguridad al padre de Bell: este expediente no lo completa por inferencia. Parentescos, afiliación y estado biográfico siguen pendientes de localizador primario.
@@ -140,7 +140,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: Es un spoiler mayor. No inferir qué personas conocen el parentesco ni cuándo lo descubren a partir de la relación biológica reportada.
 
-## DMR-025-CLM-008 · Meteria: rasgos personales y anécdotas de continuidad incierta
+### DMR-025-CLM-008 · Meteria: rasgos personales y anécdotas de continuidad incierta
 
 - `claim_id`: DMR-025-CLM-008
 - `claim`: La wiki atribuye a Alfia descripciones de Meteria como amable, pura y siempre sonriente, y relata anécdotas sobre la comida, su cercanía con Hera y conversaciones hipotéticas de “qué pasaría si”. Parte del contexto de esas posibilidades remite a una publicación del autor en note.com con un escenario alternativo donde Alfia/Zald crían a Bell. No trasladar ese escenario ni sus sucesos a la continuidad principal; el detalle de cada anécdota requiere volver a abrir la fuente original y la referencia narrativa.
@@ -160,7 +160,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: La nota del autor se mantiene separada de la continuidad principal; la atribución de una frase a Alfia no equivale a un rasgo confirmado por escena.
 
-## DMR-025-CLM-009 · Ryana Lietz: magia reportada por referencias comunitarias
+### DMR-025-CLM-009 · Ryana Lietz: magia reportada por referencias comunitarias
 
 - `claim_id`: DMR-025-CLM-009
 - `claim`: La tabla comunitaria de magia vincula a Ryana Lietz con el hechizo de fuego Irivute (イリヴュート). El artículo también la cita entre las usuarias de encantamiento simultáneo y como ejemplo de maga capaz de ocultar o suprimir el círculo mágico que genera. La ruta visible conduce a su resumen comunitario; no hay en este lote texto primario que confirme el nombre, la técnica, el efecto, las condiciones o sus límites.
@@ -178,7 +178,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: Tratar Irivute y las notas técnicas como pistas de búsqueda. No inventar daño, coste mágico, duración o condiciones de la magia.
 
-## DMR-025-CLM-010 · Mariyu Reage: epíteto y cronología reportados
+### DMR-025-CLM-010 · Mariyu Reage: epíteto y cronología reportados
 
 - `claim_id`: DMR-025-CLM-010
 - `claim`: El extracto comunitario de personajes menores registra a Mariyu Reage, también transliterada Maryū Reāju, y le atribuye el nombre “Demi Virgo” (星灯りの聖母(デミ・ウィルゴ)). La sitúa como humana y antigua aventurera de Astrea Familia, con aparición retrospectiva reportada en DanMachi volumen 14 y DanMachi IV episodio 15. La wiki lista niveles 3–4 de manera ambigua; no se fija un nivel para el expediente canónico sin aclarar edición, momento y localizador primario.
@@ -196,7 +196,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-AR; CONT-ANIME; CONT-AU; CONT-UNVERIFIED
 - `spoiler_level`: major
 - `confidence_note`: Mantener Mariyu Reage, Mariyu Leage y Maryuu Reage en el mismo ID. La variación 3–4 no debe convertirse en estadística fija.
 
-## DMR-025-CLM-011 · Mariyu Reage: carácter, Rea Vindemia y equipo reportados
+### DMR-025-CLM-011 · Mariyu Reage: carácter, Rea Vindemia y equipo reportados
 
 - `claim_id`: DMR-025-CLM-011
 - `claim`: El resumen comunitario de Mariyu Reage (también llamada Maryuu Reage) describe una actitud fraternal hacia sus compañeras, fuerte odio a Evilus por el sufrimiento causado y deseos de contraatacar. Le atribuye Rea Vindemia (レア・ヴィンデミア), magia curativa de área amplia que cura heridas y recupera resistencia; también afirma que usaba una maza y podía pelear en primera línea si era necesario. Estos datos son pistas secundarias: falta verificar en Astrea Record revisado el nombre, el efecto, la secuencia y las limitaciones.
