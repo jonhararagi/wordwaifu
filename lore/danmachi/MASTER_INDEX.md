@@ -1,5 +1,12 @@
 # DanMachi Lore · Índice maestro y tablero de cobertura
 
+## Índices de personajes e historias por continuidad
+
+- [Índice maestro de personajes](characters/00-indice-personajes.md) — identidades, alias, estado de ficha y rutas de investigación.
+- [Índice narrativo de la Era Oscura](characters/dark-era/00-indice-era-oscura.md) — protagonistas, antagonistas, Evilus y rutas temporales separadas.
+- [Pasado de Tiona y Tione en Sword Oratoria](events/timeline/EVT-DM-SO6-HIRYUTE-PAST-001.md) — Melen, Kali Familia y las preguntas pendientes del volumen 6.
+- [Matriz DMR-038](research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md) — afirmaciones, fuentes y niveles de certeza.
+
 Este es el punto de entrada para continuar el trabajo sin repetir registros. El contenido canónico sigue siendo provisional hasta que las fichas tengan fuentes y localizadores cotejados.
 
 ## 1. Guías de trabajo
