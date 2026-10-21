@@ -37,7 +37,7 @@ for(const [id,scope,claimId] of batch004){
 }
 const meteriaDetails=archive.getExtendedInfo("CHAR-METERIA","CONT-MAIN-LN",index);
 assert.ok(meteriaDetails&&meteriaDetails.repositoryProfile&&meteriaDetails.repositoryProfile.sectionCount>0,"Structured Meteria dossier must open in the More Info view without a hand-written EXTENDED constant.");
-assert.ok(meteriaDetails.sections.some(section=>section.title==="Relaciones"),"Meteria's documented relationships should be accessible in the detail view.");
+assert.ok(meteriaDetails.sections.some(section=>section.title==="Relación · CONT-MAIN-LN · Bell Cranel"),"Meteria's main-continuity relationship should be accessible without mixing the unverified Alfia relationship.");
 assert.ok(meteriaDetails.references.some(reference=>reference.kind==="community"),"Secondary provenance should remain visible from the detail view.");
 const rudraOutOfScope=archive.getExtendedInfo("CHAR-DARK-RUDRA","CONT-AR",index);
 assert.ok(rudraOutOfScope.sections.some(section=>section.title==="Alcance de continuidad"),"A dossier from another continuity should expose a scope warning instead of leaking its narrative.");
