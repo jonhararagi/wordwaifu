@@ -1554,3 +1554,11 @@ verification_status: stub
 - rights_note: No reproducir texto de muestra.
 - verified_by: DANMACHI-COVERAGE-008
 - verification_status: official_sample_link_found_content_unavailable
+
+
+### DMR-007-SRC-011 · DanMachi Wiki — minor characters / Astrea Record leads
+- **Tipo:** referencia comunitaria secundaria.
+- **URL:** https://danmachi.fandom.com/wiki/Minor_Characters
+- **URL complementaria:** https://danmachi.fandom.com/wiki/DanMachi_~Memoria_Freese~/Astraea_Record
+- **Uso:** encontrar pistas sobre personajes menores, hechizos, equipo y escenas relacionadas con la red de Astrea Familia.
+- **Límite:** no reemplaza el texto de Astrea Record revisado. Las diferencias entre el evento original de Memoria Freese, la wiki y la novela deben cotejarse; no elevar nombres de magia, límites o escenas a confirmados sin localizador primario.
