@@ -181,18 +181,18 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 
 ### DMR-002-CLM-009 · CHAR-FINN-DEIMNE · liderazgo
 - `character_id`: CHAR-FINN-DEIMNE
-- `aspect`: liderazgo
-- `claim`: El perfil oficial describe a Finn como aventurero de gran capacidad y líder con extraordinaria aptitud de mando.
+- `aspect`: identidad, liderazgo y estado de adaptación
+- `claim`: El perfil oficial de DanMachi III identifica a Finn como pallum de nivel 6 con el epíteto 勇者; lo presenta como líder de la Familia más grande de Orario con una capacidad de mando extraordinaria.
 - `era_or_interval`: Estado representado en DanMachi III; fecha interna no establecida.
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-002-SRC-003
 - `source_title`: DanMachi III · perfil oficial de personajes
 - `source_type`: ADAPTATION
-- `source_locator`: Entrada フィン・ディムナ, descripción de fortaleza y capacidad de mando.
+- `source_locator`: Entrada フィン・ディムナ: especie, nivel, epíteto y capacidad de mando.
 - `source_url`: https://danmachi.com/danmachi3/character
 - `evidence_type`: explicit_character_profile
 - `verification_status`: source_checked
-- `confidence_note`: La competencia de mando no equivale a conocer todos sus motivos privados.
+- `confidence_note`: Nivel 6 y 勇者 son una instantánea de DanMachi III, no estadísticas permanentes para todos los volúmenes. La competencia de mando no revela por sí sola sus motivos privados.
 
 ### DMR-002-CLM-010 · CHAR-FINN-DEIMNE · conducta bajo presión
 - `character_id`: CHAR-FINN-DEIMNE
@@ -211,18 +211,18 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 
 ### DMR-002-CLM-011 · CHAR-FREYA · motivación
 - `character_id`: CHAR-FREYA
-- `aspect`: motivación
-- `claim`: El perfil presenta a Freya atraída por el alma de Bell y deseando que crezca para convertirse en un compañero digno de ella.
+- `aspect`: identidad divina y motivación
+- `claim`: El perfil oficial de DanMachi V presenta a Freya como diosa de la belleza y líder de la Familia más fuerte de Orario; se siente atraída por el alma de Bell y desea que crezca hasta ser un compañero digno de ella.
 - `era_or_interval`: Estado representado en DanMachi V; fecha interna no fijada.
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-002-SRC-001
 - `source_title`: DanMachi V · perfil oficial de personajes
 - `source_type`: ADAPTATION
-- `source_locator`: Entrada フレイヤ, descripción de su interés por el alma de Bell.
+- `source_locator`: Entrada フレイヤ: papel como diosa, liderazgo de Familia, atracción por el alma de Bell y deseo de convertirlo en compañero digno.
 - `source_url`: https://danmachi.com/danmachi5/character
 - `evidence_type`: explicit_character_profile
 - `verification_status`: source_checked
-- `confidence_note`: Motivo resumido oficialmente, no explicación total de cada acción.
+- `confidence_note`: Instantánea oficial de DanMachi V; no explica toda su historia ni justifica cada decisión fuera de esa etapa.
 
 ### DMR-002-CLM-012 · CHAR-FREYA · conducta y relaciones
 - `character_id`: CHAR-FREYA
@@ -241,18 +241,18 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 
 ### DMR-002-CLM-013 · CHAR-OTTAR · motivación y hábito
 - `character_id`: CHAR-OTTAR
-- `aspect`: motivación y hábito
-- `claim`: Ottar busca ser más fuerte y entrena arduamente de forma habitual según su perfil oficial.
+- `aspect`: identidad, estado de adaptación, motivación y hábito
+- `claim`: El perfil oficial de DanMachi V presenta a Ottar como boaz de nivel 7, aventurero más fuerte de Orario en esa instantánea, con el epíteto 猛者（おうじゃ）; también dice que busca ser más fuerte y entrena duramente siempre que tiene tiempo.
 - `era_or_interval`: Estado representado en DanMachi V; rango/cargo no se proyecta a toda su historia.
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-002-SRC-001
 - `source_title`: DanMachi V · perfil oficial de personajes
 - `source_type`: ADAPTATION
-- `source_locator`: Entrada オッタル, deseo de fuerza y hábito de entrenar.
+- `source_locator`: Entrada オッタル: especie, nivel, epíteto, posición en Orario, deseo de fuerza y entrenamiento.
 - `source_url`: https://danmachi.com/danmachi5/character
 - `evidence_type`: explicit_character_profile
 - `verification_status`: source_checked
-- `confidence_note`: El entrenamiento es un hábito explicitado, no prueba de otros gustos ni ausencia de miedo.
+- `confidence_note`: Nivel, epíteto y posición pertenecen al perfil DanMachi V; el entrenamiento está descrito, pero no prueba gustos adicionales ni ausencia de miedo.
 
 ### DMR-002-CLM-014 · CHAR-OTTAR · lealtad y conflicto
 - `character_id`: CHAR-OTTAR
