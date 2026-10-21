@@ -6,7 +6,7 @@ const corpus=require("../src/lore-corpus.js");
 const archive=require("../src/character-archive.js");
 const root=path.join(__dirname,"..","lore","danmachi");
 const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"));
-const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md"];
+const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md","research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md","research/inbox/BATCH-DM-013-dark-era-missing-characters.md","research/inbox/BATCH-DM-014-dark-era-temporal-boundaries.md","research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md"];
 paths.push("research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md");
 paths.push("research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md");
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
@@ -14,12 +14,35 @@ const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
   "characters/bell-cranel.md","characters/hestia.md","characters/ais-wallenstein.md",
   "characters/eina-tulle.md","characters/finn-deimne.md","characters/freya.md",
-  "characters/ottar.md","characters/gojouno-kaguya.md","characters/lyra.md"
+  "characters/ottar.md","characters/gojouno-kaguya.md","characters/lyra.md",
+  "characters/maryuu-reage.md","characters/ryana-lietz.md","characters/dark-era/meteria.md",
+  "characters/dark-era/rudra.md","characters/dark-era/olivas-act.md"
 ];
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
-assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
+assert.equal(index.profileDocumentCount,17,"The archive should expose all 17 currently loaded structured dossiers, including the new batch.");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,59,"The official-source registry should include Eina Tulle alongside the expanded character catalog.");
+
+const batch004=[
+  ["CHAR-MARIYU-LEAGE","CONT-ANIME","DMR-006-CLM-154"],
+  ["CHAR-RYANA-LIETZ","CONT-ANIME","DMR-006-CLM-151"],
+  ["CHAR-METERIA","CONT-MAIN-LN","DMR-021-CLM-005"],
+  ["CHAR-DARK-RUDRA","CONT-MAIN-LN","DMR-014-CLM-004"],
+  ["CHAR-DARK-OLIVAS-ACT","CONT-SO","DMR-014-CLM-007"]
+];
+for(const [id,scope,claimId] of batch004){
+  assert.ok(archive.list(index).some(character=>character.id===id),"New batch identity must appear in the archive directory: "+id);
+  const item=archive.getProfile(index,id,scope,"all");
+  assert.ok(item&&item.claims.some(claim=>claim.claimId===claimId),"New dossier must expose its continuity-scoped evidence: "+id+" / "+claimId);
+}
+const meteriaDetails=archive.getExtendedInfo("CHAR-METERIA","CONT-MAIN-LN",index);
+assert.ok(meteriaDetails&&meteriaDetails.repositoryProfile&&meteriaDetails.repositoryProfile.sectionCount>0,"Structured Meteria dossier must open in the More Info view without a hand-written EXTENDED constant.");
+assert.ok(meteriaDetails.sections.some(section=>section.title==="Relaciones"),"Meteria's documented relationships should be accessible in the detail view.");
+assert.ok(meteriaDetails.references.some(reference=>reference.kind==="community"),"Secondary provenance should remain visible from the detail view.");
+const rudraOutOfScope=archive.getExtendedInfo("CHAR-DARK-RUDRA","CONT-AR",index);
+assert.ok(rudraOutOfScope.sections.some(section=>section.title==="Alcance de continuidad"),"A dossier from another continuity should expose a scope warning instead of leaking its narrative.");
+assert.ok(rudraOutOfScope.sections[0].text.includes("CONT-MAIN-LN"),"The scope warning should state the actual documented continuity.");
+
 assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-ASFI-AL-ANDROMEDA").voice,"Ai Kayano");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-DIONYSUS").voice,"Masaya Matsukaze");
