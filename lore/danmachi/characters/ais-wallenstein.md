@@ -7,14 +7,12 @@ continuity_scope: "CONT-MAIN-LN; CONT-ANIME; CONT-SO"
 source_refs:
   - "DMR-002-SRC-003"
   - "DMR-005-SRC-001"
-  - "DMR-014-SRC-001"
   - "DMR-008-SRC-001"
   - "DMR-008-SRC-003"
 claim_refs:
   - "DMR-002-CLM-005"
   - "DMR-002-CLM-006"
   - "DMR-005-CLM-005"
-  - "DMR-014-CLM-012"
   - "DMR-008-CLM-001"
   - "DMR-008-CLM-003"
 verification_status: "Official profile/synopsis claims checked; individual light-novel chapter/page locators pending"
@@ -22,7 +20,6 @@ tags: ["Ais Wallenstein",  structured_dossier, source_checked_adaptation, primar
 research_source_refs:
   - "DMR-002-SRC-003"
   - "DMR-005-SRC-001"
-  - "DMR-014-SRC-001"
   - "DMR-008-SRC-001"
   - "DMR-008-SRC-003"
 entity_type: character
@@ -121,16 +118,6 @@ evidence_claims:
     source_locator: "Perfiles de Ais Wallenstein y Lefiya Viridis"
     verification_status: source_checked
     confidence_note: "La admiración de Lefiya no implica que Ais corresponda de una forma concreta."
-  - claim_id: DMR-014-CLM-012
-    aspect: "admiración y guía"
-    claim: "El perfil de Sword Oratoria y el resumen de investigación describen a Lefiya como alguien que admira a Ais y recibe orientación relacionada con su crecimiento mágico."
-    era_or_interval: "Adaptación Sword Oratoria; fecha interna no fijada"
-    continuity_scope: CONT-ANIME
-    evidence_type: official_adaptation_profile_plus_research_summary
-    source_id: DMR-014-SRC-001
-    source_locator: "Perfil Lefiya Viridis y afirmación sobre su relación con Ais"
-    verification_status: source_checked_adaptation_profile
-    confidence_note: "No se usa como prueba de escenas o conversaciones específicas de la novela."
   - claim_id: DMR-008-CLM-001
     aspect: "encuentro inicial"
     claim: "La sinopsis editorial del volumen 1 resume la llegada de Bell a Orario y el encuentro con Ais; no proporciona aquí capítulo/página del primer encuentro."
@@ -169,7 +156,7 @@ status_by_period:
   - era: "Perfil Sword Oratoria"
     continuity_scope: CONT-SO
     status: "Perfil de espadachina reservada; Lefiya la admira. Este retrato permanece etiquetado como adaptación."
-    evidence_claims: [DMR-005-CLM-005, DMR-014-CLM-012]
+    evidence_claims: [DMR-005-CLM-005]
     verification_status: "Perfiles oficiales de adaptación y resumen de investigación trazado."
 relationships:
   - target_id: DM-CHAR-BELL
@@ -191,7 +178,7 @@ relationships:
     description: "El perfil oficial de Sword Oratoria presenta a Lefiya como admiradora de Ais; no se inventan conversaciones ni una relación recíproca más específica."
     temporal_scope: "Perfil oficial Sword Oratoria"
     continuity_scope: "CONT-SO"
-    evidence_claims: [DMR-005-CLM-005, DMR-014-CLM-012]
+    evidence_claims: [DMR-005-CLM-005]
     confidence_note: "La admiración de Lefiya es el dato documentado."
 locations_by_period:
   - "Orario en la historia principal; lugar exacto del primer encuentro con Bell debe fijarse a partir del texto del volumen 1."
