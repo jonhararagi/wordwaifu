@@ -558,10 +558,19 @@ META["CHAR-RYUU-LION"].states["CONT-MAIN-LN"].summary += " La separación de Ast
 function extendedInfo(id,continuity,index){
 const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;
 if(!base)return null;
+// Keep the historical and later adaptation states visible as separate UI sections.
+// These labels are generated from the state selected by the user; the source dossier is not rewritten.
+const temporalState=id==="CHAR-RYUU-LION"&&META[id]&&META[id].states?META[id].states[continuity]:null;
+const temporalSection=temporalState?{
+  title:continuity==="CONT-AR"?"Estado temporal A · Era Oscura":"Estado temporal B · adaptación anime",
+  text:[temporalState.period,temporalState.affiliation,temporalState.summary].filter(Boolean).join(" "),
+  source:"continuity-state"
+}:null;
+const withTemporal=sections=>[...(base.sections||[]),...(temporalSection?[temporalSection]:[]),...sections];
 const doc=index&&index.profileDetails?index.profileDetails[id]:null;
-if(!doc)return base;
+if(!doc)return {...base,sections:withTemporal([])};
 const scopes=doc.continuityScopes||[];
-if(scopes.length&&!scopes.includes(continuity))return base;
+if(scopes.length&&!scopes.includes(continuity))return {...base,sections:withTemporal([])};
 const sections=(doc.sections||[]).filter(section=>{
   const heading=String(section.heading||"");
   if(/perfil psicol[oó]gico inicial/i.test(heading))return false;
@@ -574,9 +583,8 @@ const sections=(doc.sections||[]).filter(section=>{
   if(/perfil oficial de adaptaci[oó]n/i.test(heading)&&continuity!=="CONT-ANIME")return false;
   return true;
 }).map(section=>({title:section.heading,text:section.text,source:"existing-repository-profile"}));
-return {...base,sections:[...(base.sections||[]),...sections],repositoryProfile:{path:doc.sourceDocument,status:doc.status,sectionCount:sections.length,sourceRefs:doc.sourceRefs||[],claimRefs:doc.claimRefs||[]}};
+return {...base,sections:withTemporal(sections),repositoryProfile:{path:doc.sourceDocument,status:doc.status,sectionCount:sections.length,sourceRefs:doc.sourceRefs||[],claimRefs:doc.claimRefs||[]}};
 }
-
 function unique(a){return Array.from(new Set(a.filter(Boolean)));}
 function record(index,id){return (index.characters||[]).find(x=>x.id===id)||null;}
 function claimsFor(index,id){return (index.claims||[]).filter(c=>(c.characterIds||[]).includes(id));}
