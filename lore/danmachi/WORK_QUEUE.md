@@ -34,6 +34,19 @@ Estado: estructura incorporada en la rama de propuesta; verificación automátic
 
 Criterio factual: claims de wiki permanecen secundarios; leads sin pasaje localizado permanecen pending_verification. Una ficha estructural no equivale a biografía verificada.
 
+## DANMACHI-RESEARCH-039 · Inventario separado de lugares del Prototype
+
+**Estado:** inventario estructural integrado en esta propuesta; investigación factual de Orario sigue abierta.
+
+- [x] Registrar avenidas, Central Park y comercio de calle como conceptos separados con IDs estables.
+- [x] Vincular cada ficha a los claims DMR-034 existentes, sin duplicar ni elevar su evidencia.
+- [x] Mantener `CONT-PROTOTYPE` y conectar las fichas con el nodo de Orario.
+- [x] Añadir recuperación predeterminada, índices y prueba contra mezcla de continuidades.
+- [ ] Localizar menciones equivalentes en una edición identificada de la novela principal con volumen y capítulo/página o localizador electrónico.
+- [ ] Si no existe evidencia en novela, conservar el registro como Prototype y no transformarlo en un hecho de `CONT-MAIN-LN`.
+
+Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de Orario.
+
 ## PRIORIDAD ACTUAL — Etapa 1: Orario como escenario
 
 **Estado:** IN_PROGRESS. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
