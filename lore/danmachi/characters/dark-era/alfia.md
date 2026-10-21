@@ -7,16 +7,20 @@ continuity_scope: "CONT-AR"
 source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-001"
 claim_refs:
   - "DMR-014-CLM-002"
   - "DMR-013-CLM-002"
   - "DMR-014-CLM-021"
   - "DMR-014-CLM-022"
+  - "DMR-026-CLM-001"
+  - "DMR-026-CLM-002"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Alfia", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-001"
 entity_type: character
 canonical_name: "Alfia"
 aliases:
@@ -199,3 +203,17 @@ Las fuentes comunitarias reportan que Meteria es su hermana gemela; el parentesc
 - [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — confirma el marco editorial de la versión revisada, no los detalles de cada escena.
 
 **Regla editorial:** no se inventan números de página. Los campos sin respaldo primario permanecen desconocidos o explícitamente atribuidos a fuentes secundarias.
+
+
+## Ampliación de investigación DMR-026 · perfil comunitario, no cotejado
+
+La ficha inglesa de DanMachi Wiki aporta más campos de perfil que los registrados en esta ficha:
+
+- **Alias reportados:** “Silence” (静寂, lectura indicada como *Seijaku*), “Incarnation of Talent” y “Monster of Calamitous Talent”. El alias español y la lectura deben cotejarse con la edición usada.
+- **Apariencia reportada:** cabello plateado, ojo izquierdo gris y derecho verde, altura indicada de 169 cm. La wiki lista 24 años, nivel 7, antigua afiliación a Hera Familia y estado fallecido; edad, altura y estadísticas siguen siendo secundarios.
+- **Habilidades y magia que la wiki enumera:** Gif Blessing, Alme, Vel Ardore; Satanas Verion, Silentium Eden y Genos Angelus. No se copian sus mecánicas como hechos confirmados: la wiki vincula Gif Blessing a un deterioro progresivo de salud/Mind/atributos y describe una limitación grave de combate prolongado por su enfermedad.
+- **Trayectoria histórica reportada:** la fuente dice que dio el golpe final a Leviathan con Genos Angelus, que su condición empeoró, y que luego vivió junto con Zald, ayudando como guardiana de una barrera del Distrito Escolar. El resumen la sitúa posteriormente junto a Zald en el plan de Erebus y en la ofensiva de Astrea Record; afirma que, al ser derrotada, se arrojó a un pozo profundo. Cada etapa necesita localizador y lectura directa.
+- **Límite:** este resumen no convierte *Astrea Record*, la mención retrospectiva en la novela principal ni el escenario What If en una continuidad única. La biografía individual y la relación exacta entre sus versiones se mantendrán separadas.
+
+**Evidencia secundaria:** DMR-026-CLM-001 y DMR-026-CLM-002 · [DanMachi Wiki — Alfia](https://danmachi.fandom.com/wiki/Alfia).  
+**Pendiente:** capítulos/páginas primarios, diálogo exacto, mecánica de la enfermedad y distinción entre historia publicada y material de juego.
