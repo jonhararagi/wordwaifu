@@ -12,6 +12,7 @@ source_refs:
   - "DMR-001-SRC-003"
 claim_refs:
   - "DMR-007-CLM-019"
+  - "DMR-007-CLM-026"
   - "DMR-007-CLM-028"
 verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
 tags: ["Celty Srowa", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
