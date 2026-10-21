@@ -5,6 +5,7 @@
 **No usar una ficha plana para todas las épocas.** Cada persona conserva una identidad estable; apariciones, afiliaciones, relaciones y conocimiento se registran por época y línea de continuidad. Una variante AU nunca reemplaza el registro canónico. Ver [modelo de identidad y variantes temporales](01-identidad-y-variantes-temporales.md).
 
 “Era Oscura” es una etiqueta temporal, no una continuidad por sí sola. No crear duplicados porque cambie la época o porque la AU altere la historia.
+**Censo temporal:** usa el [censo de personajes por eras](02-censo-temporal-por-eras.md) para separar T−7/Astrea Record, la tragedia histórica asociada a T−5, T0 y los arcos posteriores. Sus marcas de candidatura no sustituyen las fuentes primarias.
 
 Este índice distingue entre registros del roster, expedientes de la aplicación y evidencia cotejada con la novela. Tener un expediente en src/character-dossiers.js NO significa que la psicología, la cronología y las relaciones estén verificadas exhaustivamente en la novela ligera. En datos con fuentes de adaptación o wiki, la interfaz debe conservar esa procedencia y la revisión primaria pendiente. No crear una ficha nueva si el ID canónico ya está asignado.
 
