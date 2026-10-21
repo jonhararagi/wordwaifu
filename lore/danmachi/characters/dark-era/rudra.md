@@ -154,13 +154,13 @@ Esta ficha separa a Rudra de los actos atribuidos a los miembros de Rudra Famili
 
 ## Estado por periodo
 
-### Historia principal · incidente del Juggernaut, aprox. cinco años antes de Bell según fuentes secundarias
+## Estado · CONT-MAIN-LN · Incidente del Juggernaut, aprox. cinco años antes de Bell según fuentes secundarias
 
 Los resúmenes relacionan a Rudra Familia con una trampa posterior que provoca al Juggernaut. Esta evidencia no prueba que Rudra ejecutara o conociera cada parte de la operación.
 
 **Claims:** DMR-014-CLM-004.
 
-### Astrea Record · presencia individual no confirmada
+## Estado · CONT-UNVERIFIED · Astrea Record · presencia individual no confirmada
 
 Los índices secundarios lo incluyen como candidato, pero no se ha localizado la primera escena ni una presencia personal en el núcleo histórico de Astrea Record.
 
@@ -168,7 +168,7 @@ Los índices secundarios lo incluyen como candidato, pero no se ha localizado la
 
 ## Relaciones
 
-### CHAR-DARK-JURA-HALMER
+## Relación · CONT-MAIN-LN · Jura Halmer
 
 Las fuentes comunitarias asocian a Jura Halmer con Rudra Familia, y a Rudra con la Familia que lleva su nombre. Esto indica una afiliación organizativa reportada, no una orden personal confirmada para provocar al Juggernaut.
 
