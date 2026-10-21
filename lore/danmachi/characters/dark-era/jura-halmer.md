@@ -22,7 +22,7 @@ aliases:
 
 - **ID estable:** CHAR-DARK-JURA-HALMER.
 - **Afiliación de trabajo:** Rudra Familia.
-- **Continuidad:** CONT-MAIN-LN. CONT-MAIN-LN; no CONT-AR por defecto. El filtro de Astrea Record debe excluirlo salvo que una afirmación histórica separada lo justifique.
+- **Continuidad:** CONT-MAIN-LN; no CONT-AR por defecto. El filtro de Astrea Record debe excluirlo salvo que una afirmación histórica separada lo justifique.
 - **Estado:** expediente individual redactado; verificación primaria por página pendiente.
 
 ## Contexto e historia
@@ -49,9 +49,12 @@ Manipulación del Dungeon y consecuencias involuntarias de una apuesta extrema.
 
 ## Localizadores de lectura
 
-DanMachi vol. 13, «Encounter and Vow / Encuentro y voto», como localizador secundario para introducción e incidente. Una comparación secundaria menciona una escena adicional del collar en Astrea Record vol. 3, cap. 5; verificar antes de atribuirla a la novela. La catástrofe se sitúa alrededor de cinco años antes de Bell.
+DanMachi vol. 13, «Encounter and Vow / Encuentro y voto», es una ruta de lectura secundaria para introducción e incidente. Una comparación secundaria menciona una escena adicional del collar en Astrea Record vol. 3, cap. 5; verificar la versión antes de atribuirla a la novela revisada. La catástrofe se sitúa alrededor de cinco años antes de Bell. Navegación: [tragedia de Astrea Familia vinculada al Juggernaut](../../events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md).
 
 ## Fuentes
+
+- [Rudra Familia](../../familias/rudra-familia.md)
+- [Evento de la tragedia de Astrea Familia/Juggernaut](../../events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md)
 
 - https://danmachi.fandom.com/wiki/Jura_Halmer
 - https://danmachi.fandom.com/es/wiki/Jura_Halmer
