@@ -7,6 +7,8 @@ El catálogo tenía 134 registros, de ellos 98 filas de tipo personaje, deidad-p
 
 La meta de 200–300 identidades relevantes es una meta de planificación de WordWaifu, no una cantidad oficial de la franquicia. Una persona conserva un ID a través de épocas; un grupo se registra aparte cuando existe información colectiva. El alias no crea automáticamente una persona nueva.
 
+El censo temporal complementario se incorporó después como índice; el catálogo actual pasa a 152 registros. Las filas de personaje, deidad-personaje y grupo siguen siendo 113: crear el índice no añade identidades.
+
 ## 2. Continuidad y evidencia
 - **CONT-MAIN-LN:** novela principal; requiere localizador del texto.
 - **CONT-AR / CONT-SO / CONT-FC:** Astrea Record, Sword Oratoria y Familia Chronicle quedan separados.
@@ -92,6 +94,13 @@ Es una interpretación editorial de WordWaifu, no una clasificación oficial de 
 4. Convertir relaciones narradas en aristas estructuradas con tipo, origen, destino, continuidad, periodo, evento, fuente y confianza.
 5. Mantener novela, anime, spin-offs, manga, juego y AU separados.
 6. Recontar identidades únicas al resolver los cruces. 151 es el número de registros después de esta tanda, no el total definitivo de personajes.
+
+
+
+## Censo temporal complementario
+
+- [Censo de personajes por eras](02-censo-temporal-por-eras.md): primera matriz de estados históricos, T−7/Astrea Record, post-tragedia/T−5, periodo previo a Bell, T0 y arcos posteriores.
+- El documento clasifica las pistas de época como evidencia parcial, candidato o pendiente. No convierte etiquetas de catálogo en presencia confirmada ni supone que todos los miembros de un roster compartan destino.
 
 ## 8. Criterio de cierre
 Una tanda no se completa por cantidad: necesita IDs únicos, rutas internas correctas, procedencia, incertidumbres, catálogo e índices sincronizados y ejecución de tools/check-catalog.mjs. Las nuevas fichas siguen parciales hasta cotejar las novelas.
