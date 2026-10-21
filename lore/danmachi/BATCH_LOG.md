@@ -358,3 +358,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Siguiente verificación primaria:** revisar el texto/índice de `掌編集２` y revisar aparte *Sword Oratoria* vol. 2 para el piso 37. No inventar capítulos/páginas ni fusionar las escenas.
 - **Pruebas locales:** NOT_RUN. Validar el SHA final con ambos workflows. La enciclopedia global permanece PARTIAL; trabajo IN_PROGRESS.
 
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-002 · Cinco miembros históricos sin duplicados
+
+- **Fichas ampliadas:** `characters/asta-knox.md`, `characters/celty-srowa.md`, `characters/iska-bra.md`, `characters/neze-rankett.md` y `characters/noin-unic.md`.
+- **IDs conservados:** `CHAR-ASTA-KNOX`, `CHAR-CELTY-SROWA`, `CHAR-ISKA-BRA`, `CHAR-NEZE-RANKETT`, `CHAR-NOIN-UNIC`. No se crearon identidades ni variantes temporales.
+- **Campos completados:** identidad/alias, alcance temporal y de continuidad, evidencia por afirmación, estados por periodo, relaciones con nivel de confianza, estado de conocimiento y preguntas abiertas. Los datos sin respaldo siguen como desconocidos.
+- **Fuentes:** perfil oficial de DanMachi IV y sinopsis oficial del episodio 20; añadidas pistas comunitarias sobre las historias cortas de Celty, Iska y Neze y un índice para las historias de Asta y Noin.
+- **Límite de verificación:** las publicaciones comunitarias son traducciones/índices secundarios. Se registran como pistas de lectura y no como cotejo primario del texto japonés. La conclusión del episodio 20 solo se utiliza como dato colectivo; no se inventan escenas finales individuales.
+- **Catálogo:** se sincronizaron los cinco estados como `partial_source_checked_primary_text_pending` y se añadieron las etiquetas `individual_story_lead` y `primary_text_pending`. No cambia la cantidad de personajes ni se alteran sus IDs.
+- **Control local de esta tanda:** actualización estructural realizada mediante la API de contenidos de GitHub. No se ejecutó aquí `tools/check-catalog.mjs` ni se confirmó CI para el SHA final.
+- **Siguiente prioridad:** conseguir una edición autorizada de *Astrea Record* I y III o una vista previa legítima que exponga las historias cortas; añadir capítulo/página exactos cuando pueda comprobarse el texto japonés.
