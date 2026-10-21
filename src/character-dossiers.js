@@ -684,7 +684,6 @@
         null
       ]
     }
-  };
     "CHAR-KALI": {
       appearance: "La sinopsis editorial conecta Kali Familia con el pasado de las hermanas Hiryute; la apariencia detallada de Kali no se trata como verificada en esta tanda.",
       history: "Su relación con Kali Familia y con el pasado de Tiona y Tione aparece en la ruta editorial de Sword Oratoria volumen 6. Las explicaciones sobre Telskyura y la infancia de las gemelas proceden de fuentes comunitarias y requieren cotejo del volumen.",
@@ -721,6 +720,7 @@
       conflict: "Su papel en la historia se limita por ahora al lugar que las referencias comunitarias le atribuyen en el pasado de Tione; el orden y el desenlace requieren cotejo del texto publicado.",
       sources: ["https://danmachi.fandom.com/es/wiki/Tione_Hiryute"]
     },
+  };
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({
     get: id => dossiers[id] ? clone(dossiers[id]) : null,
