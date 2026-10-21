@@ -806,7 +806,12 @@
       "name": "Heith Velvet",
       "aliases": [
         "Heith",
-        "ヘイズ・ベルベット"
+        "Haze",
+        "Heizu",
+        "ヘイズ",
+        "ヘイズ・ベルベット",
+        "episode Haze",
+        "episode Heith"
       ],
       "family": "Freya Familia",
       "species": "Humana",
