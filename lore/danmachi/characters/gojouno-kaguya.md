@@ -228,16 +228,16 @@ Una escena puede explotar la tensión entre una autoridad de rango y una compañ
 
 
 
-## Structured temporal state: historical role and limits
+## Estados temporales estructurados: papel histórico y límites
 
-### State A · historical Astrea Familia as represented in DanMachi IV · CONT-ANIME
-The official adaptation identifies Kaguya as a human adventurer from the Far East and vicecaptain. It describes her as especially capable in close combat, lists Level 4 and Yamato Rindō, and contrasts a refined appearance with rough or vulgar speech.
+### Estado A · Astrea Familia histórica según DanMachi IV · CONT-ANIME
+La adaptación oficial identifica a Kaguya como aventurera humana originaria del Lejano Oriente y vicecapitana. La describe como especialmente capaz en combate cercano, registra nivel 4 y el epíteto Yamato Rindō, y contrasta una apariencia refinada con un modo de hablar tosco o vulgar.
 
-### State B · relation with Ryuu
-The official profile says that Kaguya and Ryuu clash frequently while recognizing each other's combat ability. This is a deliberately mixed relationship: friction does not erase respect. No particular argument has been mapped to a published novel page.
+### Estado B · Relación con Ryuu
+El perfil oficial dice que Kaguya y Ryuu chocan con frecuencia, pero reconocen la capacidad de combate de la otra. Deben conservarse ambos lados de la relación: el roce no borra el respeto. Ninguna discusión concreta se ha localizado en una página de la novela publicada.
 
-### State C · after the tragedy
-The official episode synopsis says Ryuu alone survived the first Familia. It does not provide Kaguya's individual final scene, method or exact sequence. Use this as a group-level adaptation outcome only; a detailed novel scene needs its own locator.
+### Estado C · Después de la tragedia
+La sinopsis oficial del episodio dice que Ryuu fue la única superviviente de la primera Familia. No da la escena final individual de Kaguya, el mecanismo ni la secuencia exacta. El dato debe quedarse como resultado colectivo de la adaptación; una escena detallada de novela requiere su localizador.
 
-Sources and claims: DMR-007-SRC-001 / claims 002 and 023; DMR-007-SRC-006 / claim 026. The community roster is discovery-only (DMR-003-CLM-001).
+Fuentes y claims: DMR-007-SRC-001 / claims 002 y 023; DMR-007-SRC-006 / claim 026. El roster comunitario es únicamente una pista secundaria (DMR-003-CLM-001).
 
