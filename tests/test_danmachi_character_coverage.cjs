@@ -56,8 +56,7 @@ for (const id of ["REL-VALLETTA-EVILUS-INVESTIGATION","REL-THANATOS-EVILUS-INVES
 assert.ok(catalog.relationships.some(e => e.id === "REL-ALFIA-ASTREA-RECORD-EVENT" && e.evidenceStatus === "secondary_checked"), "Alfia route must keep secondary evidence state.");
 assert.ok(catalog.relationships.some(e => e.id === "REL-ZALD-ASTREA-RECORD-EVENT" && e.evidenceStatus === "secondary_checked"), "Zald route must keep secondary evidence state.");
 assert.ok(!catalog.relationships.some(e => e.from === "EVT-DM-AR-ERA-001" && e.to === "EVT-DM-SO6-HIRYUTE-PAST-001" && e.kind === "same_period"), "Astrea Record and the Hiryute past must not be merged into one interval.");
-require("../src/lore-corpus.js");
-const corpusApi = globalThis.WordWaifuLoreCorpus;
+const corpusApi = require("../src/lore-corpus.js");
 assert.ok(corpusApi, "Lore retrieval module must load.");
 assert.ok(corpusApi.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"), "DMR-038 must be in the default retrieval package.");
 for (const id of ["CHAR-DARK-EREBUS","CHAR-DARK-JURA-HALMER","CHAR-DARK-RUDRA","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE","CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS"]) {
