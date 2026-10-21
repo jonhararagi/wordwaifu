@@ -25,4 +25,4 @@ La cronología oficial describe el caos de Orario y una Familia que se levanta e
 ## Continuidad
 La ruta de Rudra/Jura/Juggernaut es posterior en la novela principal. No se usa para atribuir acciones dentro del intervalo T-7 de Astrea Record.
 
-Fuentes: https://danmachi.com/chronology/ ; https://ga.sbcr.jp/product/9784815610180/ ; https://ga.sbcr.jp/product/9784815610197/ ; ../../research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md
+Fuentes: https://danmachi.com/chronology/ ; https://ga.sbcr.jp/product/9784815610180/ ; https://ga.sbcr.jp/product/9784815610197/ ; ../../../research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md
