@@ -572,7 +572,7 @@ if(!base&&doc){
   for(const claim of relevantClaims){
     for(const url of claim.sourceUrls||[]){
       if(!url||refs.some(ref=>ref.url===url))continue;
-      refs.push({label:claim.sourceTitle||claim.heading||claim.claimId,url,kind:/fandom\\.com|wikipedia\\.org/i.test(url)?"community":"official"});
+      refs.push({label:claim.sourceTitle||claim.heading||claim.claimId,url,kind:/fandom\.com|wikipedia\.org/i.test(url)?"community":"official"});
     }
   }
   const title=doc.title||record(index,id)?.name||id;
