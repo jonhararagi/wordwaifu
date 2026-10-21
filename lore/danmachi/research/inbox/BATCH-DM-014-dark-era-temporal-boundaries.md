@@ -388,6 +388,59 @@ Este lote corrige una mezcla temporal del lote anterior. La publicación oficial
 - `spoiler_level`: mild
 - `confidence_note`: Cotejar datos biográficos y capacidades en la historia especial antes de elevarlos a canónicos.
 
+
+
+### DMR-014-CLM-021 · Alfia y Meteria — parentesco reportado
+- `claim_id`: DMR-014-CLM-021
+- `claim`: Una referencia comunitaria presenta a Meteria como hermana gemela de Alfia. El parentesco se conserva como pista secundaria hasta cotejar un pasaje de la novela publicada.
+- `character_ids`: [CHAR-DARK-ALFIA, CHAR-METERIA]
+- `aspect`: parentesco
+- `era_or_interval`: Biografía previa / historia familiar; escena exacta sin localizar
+- `continuity_scope`: CONT-AR; CONT-MAIN-LN (primary locator pending)
+- `source_id`: DMR-014-SRC-003
+- `source_title`: Referencia comunitaria sobre Alfia/Meteria
+- `source_type`: secondary_research_lead
+- `source_locator`: Página secundaria de Alfia y enlaces biográficos relacionados; capítulo/página de novela por verificar
+- `source_url`: https://danmachi.fandom.com/wiki/Alfia
+- `evidence_type`: secondary_summary_only
+- `verification_status`: secondary_locator_only
+- `spoiler_level`: major
+- `confidence_note`: Esta afirmación registra lo que reporta la fuente secundaria; no confirma el parentesco por sí sola.
+
+### DMR-014-CLM-022 · Alfia — afiliación reportada a Hera Familia
+- `claim_id`: DMR-014-CLM-022
+- `claim`: Una referencia comunitaria asocia a Alfia con Hera Familia. La afiliación se registra como dato reportado y requiere localizador de la novela publicada para considerarse verificada.
+- `character_ids`: [CHAR-DARK-ALFIA, CHAR-HERA]
+- `aspect`: afiliación histórica
+- `era_or_interval`: Periodo histórico anterior a Bell; fechas exactas pendientes
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-014-SRC-003
+- `source_title`: Referencia comunitaria sobre Alfia
+- `source_type`: secondary_research_lead
+- `source_locator`: Página secundaria de Alfia; capítulo/página de novela por verificar
+- `source_url`: https://danmachi.fandom.com/wiki/Alfia
+- `evidence_type`: secondary_summary_only
+- `verification_status`: secondary_locator_only
+- `spoiler_level`: major
+- `confidence_note`: El archivo conserva la afiliación como reportada, no como comprobada por un pasaje primario.
+
+### DMR-014-CLM-023 · Zald y Ottar — enfrentamiento reportado
+- `claim_id`: DMR-014-CLM-023
+- `claim`: Resúmenes comunitarios describen un enfrentamiento entre Zald y Ottar en el clímax de Astrea Record, volumen 3. Deben comprobarse el contexto, la secuencia y sus detalles en el texto japonés.
+- `character_ids`: [CHAR-DARK-ZALD, CHAR-OTTAR]
+- `aspect`: enfrentamiento y relación narrativa
+- `era_or_interval`: Astrea Record, volumen 3; escena exacta y página pendientes
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-014-SRC-003
+- `source_title`: Referencia comunitaria sobre Zald y Astrea Record
+- `source_type`: secondary_research_lead
+- `source_locator`: Ruta de lectura de vol. 3, cap. 9 e historia extra «Zald»; página de la edición publicada pendiente
+- `source_url`: https://danmachi.fandom.com/es/wiki/Zald
+- `evidence_type`: secondary_locator_only
+- `verification_status`: secondary_locator_only
+- `spoiler_level`: major
+- `confidence_note`: El claim registra el enfrentamiento descrito por fuentes secundarias; no valida acciones, diálogos ni desenlace por página.
+
 ## Fuentes base
 - Anuncio oficial de publicación: https://danmachi.com/news/news131.php
 - Presentación oficial de la adaptación manga: https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/
