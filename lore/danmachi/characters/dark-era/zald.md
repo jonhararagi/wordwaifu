@@ -10,6 +10,7 @@ source_refs:
 claim_refs:
   - "DMR-014-CLM-001"
   - "DMR-013-CLM-001"
+  - "DMR-014-CLM-023"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Zald", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
 research_source_refs:
@@ -94,6 +95,16 @@ evidence_claims:
     source_locator: "Índice secundario de personajes; localizar el pasaje primario"
     verification_status: discovery_lead_only
     confidence_note: "El registro sirve como ruta de búsqueda, no como confirmación biográfica."
+  - claim_id: DMR-014-CLM-023
+    aspect: "enfrentamiento reportado con Ottar"
+    claim: "Resúmenes comunitarios describen un enfrentamiento entre Zald y Ottar en el clímax de Astrea Record, volumen 3; la secuencia y sus detalles deben comprobarse en el texto japonés."
+    era_or_interval: "Astrea Record, volumen 3; escena exacta y página pendientes"
+    continuity_scope: CONT-AR
+    evidence_type: secondary_research_lead
+    source_id: DMR-014-SRC-003
+    source_locator: "Ruta secundaria de vol. 3, cap. 9 e historia extra «Zald»; página primaria no verificada."
+    verification_status: secondary_locator_only
+    confidence_note: "No valida acciones, diálogos ni resultado por página."
 abilities: []
 skills: []
 magic: []
@@ -109,8 +120,8 @@ relationships:
     description: "Resúmenes secundarios describen un enfrentamiento entre Zald y Ottar; se conserva como pista de lectura, no como cronología ni descripción de combate verificada."
     temporal_scope: "Astrea Record, volumen 3; escena exacta pendiente"
     continuity_scope: "CONT-AR; secondary lead"
-    evidence_claims: [DMR-014-CLM-001]
-    confidence_note: "El claim se centra en el deterioro y ruta de lectura; la escena concreta con Ottar requiere cotejo separado."
+    evidence_claims: [DMR-014-CLM-023]
+    confidence_note: "El enfrentamiento aparece en resúmenes secundarios; contexto, secuencia y desenlace requieren cotejo primario."
 locations_by_period:
   - "No hay una localización de escena primaria verificada para esta ficha."
 events: []
