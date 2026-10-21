@@ -2,25 +2,31 @@
 id: CHAR-MARIYU-LEAGE
 universe: danmachi
 type: character
-status: official_profile_and_secondary_leads_checked_primary_scene_pending
+status: "official_profile_secondary_character_magic_leads_primary_locator_pending"
 continuity_scope: "CONT-ANIME; CONT-AR"
 source_refs:
   - "DMR-006-SRC-003"
   - "DMR-007-SRC-001"
   - "DMR-007-SRC-004"
   - "DMR-007-SRC-011"
+  - "DMR-025-SRC-006"
+  - "DMR-025-SRC-007"
 claim_refs:
   - "DMR-006-CLM-154"
   - "DMR-007-CLM-021"
   - "DMR-007-CLM-005"
   - "DMR-007-CLM-032"
-verification_status: "official_adaptation_profile_checked; historical_roster_and_magic_leads_secondary_only"
+  - "DMR-025-CLM-010"
+  - "DMR-025-CLM-011"
+verification_status: "official_adaptation_profile_and_secondary_wiki_extract_primary_locator_pending"
 tags: ["Mariyu Reage", structured_dossier, character_research, primary_text_pending]
 research_source_refs:
   - "DMR-006-SRC-003"
   - "DMR-007-SRC-001"
   - "DMR-007-SRC-004"
   - "DMR-007-SRC-011"
+  - "DMR-025-SRC-006"
+  - "DMR-025-SRC-007"
 entity_type: character
 canonical_name: "Mariyu Reage"
 aliases:
@@ -28,6 +34,7 @@ aliases:
   - "Mariyu Leage"
   - "Maryuu Reage"
   - "マリュー・レアージュ"
+  - "Demi Virgo (星灯りの聖母(デミ・ウィルゴ); alias/epíteto reportado por wiki)"
 romanizations:
   - "Mariyu Reage"
   - "Mariyu Leage"
@@ -51,19 +58,20 @@ deity_or_race: "Humana según el perfil oficial de DanMachi IV; no ampliar a otr
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
-first_appearance: "No se ha verificado la primera escena de Mariyu en la novela ligera. El perfil oficial de DanMachi IV es una ficha de adaptación, no un localizador de debut narrativo."
-first_source_id: DMR-007-SRC-001
-first_source_locator: "Entrada oficial マリュー・レアージュ; no es capítulo/página de Astrea Record."
+first_appearance: "La wiki comunitaria reporta una aparición retrospectiva en DanMachi, volumen 14, y en DanMachi IV, episodio 15. Esos datos describen una ruta de búsqueda por medio/continuidad; la escena y la página de la novela no se han cotejado aquí."
+first_source_id: "DMR-025-SRC-007"
+first_source_locator: "Extracto indexado del apartado Maryuu Reage en Minor Characters; no equivale a una primera escena primaria verificada."
 familia_membership:
   - "Astrea Familia: el perfil oficial de DanMachi IV la incluye en su roster (CONT-ANIME)."
   - "Primera generación histórica de Astrea Familia según roster comunitario secundario (CONT-AR; provisional)."
 roles:
-  - "Identidad y especie confirmadas dentro del alcance del perfil oficial de adaptación."
-  - "Una referencia comunitaria le atribuye Rea Vindemia, una maza y apoyo/curación en una secuencia contra Alfia; hechizo, escena, uso exacto y límites no están verificados en la novela revisada."
+  - "Humana y miembro de Astrea Familia en el perfil oficial de adaptación; el roster de primera generación en Astrea Record se sostiene además en referencias comunitarias."
+  - "La wiki la describe como antigua aventurera y reporta una aparición retrospectiva en DanMachi volumen 14 / DanMachi IV episodio 15."
+  - "Una fuente secundaria lista nivel 3–4 de modo ambiguo; el nivel individual se mantiene desconocido hasta aclarar momento y fuente primaria."
 epithets:
-  []
-appearance_summary: "No se construye una descripción física textual a partir del retrato promocional. La imagen oficial puede servir como referencia visual de adaptación, no como descripción literaria."
-personality_summary: "No hay evidencia primaria suficiente en esta ficha para cerrar un perfil psicológico individual. La lectura de que actúa como compañera protectora procede de un resumen secundario y no debe convertirse en un rasgo universal sin escena."
+  - "Demi Virgo (星灯りの聖母(デミ・ウィルゴ)): alias/epíteto reportado en el extracto comunitario; traducción y alcance por verificar."
+appearance_summary: "La fuente oficial de adaptación la identifica como humana y miembro de Astrea Familia. El extracto comunitario consultado aporta género/identidad, pero no suficiente descripción física detallada para fijar facciones, cabello, ojos o complexión; esos rasgos permanecen sin verificar."
+personality_summary: "La wiki comunitaria la describe con una actitud fraternal hacia sus compañeras y un odio intenso hacia Evilus por el sufrimiento causado, con deseos de contraatacar. Es una caracterización secundaria pendiente de contrastar con decisiones y diálogos de Astrea Record; no se convierte en un rasgo inmutable ni en una relación individual con cada integrante."
 motivations:
   - "No verificadas. No deducir una motivación individual de su pertenencia a Astrea Familia o de la función de apoyo que le atribuye una wiki."
 psychology_profile:
@@ -128,11 +136,12 @@ evidence_claims:
     verification_status: "secondary_only_primary_scene_pending"
     confidence_note: "No elevar técnica, capacidad o equipo a confirmados sin localizar el pasaje primario."
 abilities:
-  []
+  - "Rea Vindemia (レア・ヴィンデミア): magia curativa de área amplia; el extracto afirma que cura heridas y recupera resistencia, pero efecto exacto, alcance y límites requieren cotejo primario."
+  - "La wiki también le atribuye el uso de una maza y la posibilidad de luchar en primera línea pese a su función curativa; no se infiere de ello un estilo completo de combate."
 skills:
   []
 magic:
-  - "Rea Vindemia — atribución secundaria pendiente de cotejo del nombre, contexto, efecto y limitaciones."
+  - "Rea Vindemia (レア・ヴィンデミア) — curación de área amplia y recuperación de resistencia según la wiki; nombre, fórmula, coste y limitaciones pendientes de verificar en Astrea Record revisado."
 status_by_period:
   - era: "Perfil oficial de DanMachi IV"
     continuity_scope: "CONT-ANIME"
@@ -207,6 +216,15 @@ Una fuente secundaria le atribuye Rea Vindemia, una maza y apoyo en la secuencia
 ## Relaciones
 
 No se añaden relaciones personales no sustentadas por una afirmación individual.
+
+## Extracto comunitario ampliado · perfil reportado (secundario)
+
+- **Nombre y epíteto:** Mariyu Reage también aparece transliterada como Maryū Reāju; el extracto atribuye “Demi Virgo” (星灯りの聖母(デミ・ウィルゴ)). Se conservan todas las variantes en el ID CHAR-MARIYU-LEAGE; no se crea un segundo personaje.
+- **Historia/estado reportados:** antigua aventurera de Astrea Familia; la wiki la sitúa en flashbacks de DanMachi volumen 14 y del episodio 15 de DanMachi IV. No se ha localizado aquí la escena de novela.
+- **Nivel:** el extracto muestra un rango ambiguo de nivel 3–4. No fijar una estadística permanente sin establecer la edición, el instante temporal y el pasaje que la respalda.
+- **Personalidad reportada:** actitud fraternal con compañeras; fuerte rechazo de Evilus y deseo de represalia según el resumen comunitario.
+- **Magia y equipo reportados:** Rea Vindemia (レア・ヴィンデミア), curación de área amplia y recuperación de resistencia; además, uso de una maza y disposición a combatir en primera línea según la wiki. Los detalles técnicos permanecen pendientes.
+- **Fuentes/claims:** DMR-025-SRC-006/007; DMR-025-CLM-010/011. El artículo integral no fue accesible; estos datos siguen etiquetados como fuente secundaria.
 
 ## Ruta de verificación
 
