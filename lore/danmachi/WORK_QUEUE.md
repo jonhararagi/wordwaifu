@@ -18,7 +18,7 @@ Este lote cierra la integración estructural del roster ampliado, no el trabajo 
 
 ## DANMACHI-RESEARCH-038 · Era Oscura y pasado de las hermanas Hiryute
 
-Estado: estructura incorporada en la rama de propuesta; verificación automática final pendiente.
+Estado: estructura integrada en `main`; las validaciones estructurales de roster y lore pasaron en la integración. La verificación primaria escena por escena sigue abierta.
 
 - [x] Crear un índice narrativo con rutas separadas para Astrea Record (T-7), Rudra/Jura y Juggernaut (fase posterior) y el pasado Hiryute en Sword Oratoria.
 - [x] Crear un nodo de Evilus como red de facciones, no como una sola Familia.
@@ -36,7 +36,7 @@ Criterio factual: claims de wiki permanecen secundarios; leads sin pasaje locali
 
 ## DANMACHI-RESEARCH-039 · Inventario separado de lugares del Prototype
 
-**Estado:** inventario estructural integrado en esta propuesta; investigación factual de Orario sigue abierta.
+**Estado:** inventario estructural integrado en `main` y validado por tests; investigación factual de Orario sigue abierta.
 
 - [x] Registrar avenidas, Central Park y comercio de calle como conceptos separados con IDs estables.
 - [x] Vincular cada ficha a los claims DMR-034 existentes, sin duplicar ni elevar su evidencia.
@@ -487,6 +487,19 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [ ] Validar catálogo, enlaces Markdown y navegación en CI.
 
 
+## DANMACHI-RESEARCH-041 · Familia Chronicle episode Haze / Heith
+
+**Estado:** sinopsis editorial y alias oficial conectados; la historia íntegra continúa pendiente.
+
+- [x] Resolver `episodeヘイズ` / Haze / Heizu con la forma de personaje oficial `ヘイズ・ベルベット` y el ID existente `CHAR-HEITH-VELVET`.
+- [x] Ampliar tags/alias del registro existente; no crear `CHAR-HAZE` ni una segunda ficha.
+- [x] Crear la ficha de evento parcial `EVT-DM-FC-HAZE-001` y conectar Heith y Ottar con claims oficiales de sinopsis, bajo `CROSS-CONTINUITY`.
+- [x] Añadir la investigación DMR-041 al catálogo, fuentes, recuperación por defecto, índice maestro e interfaz de lore.
+- [ ] Leer el volumen íntegro con acceso legítimo y localizar escenas para los integrantes del grupo, la recompensa del troll y sus consecuencias.
+- [ ] Desglosar la secuencia en eventos y relaciones atómicas solo cuando estén respaldados por el texto; mantener separados anime, novela principal y Familia Chronicle.
+
+La sinopsis confirma el marco promocional, no una cronología completa ni los resultados de las escenas.
+
 ## DANMACHI-RESEARCH-040 · Calendario editorial y horizonte de cobertura
 
 **Alcance:** control de publicaciones; no desplaza la prioridad de analizar Orario y sus sucesos.
@@ -495,7 +508,9 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - [x] Registrar Sword Oratoria 17 para 2027-01-15 y Familia Chronicle episode Amid para 2027-02-15, ambos aún no publicados a la fecha de corte.
 - [x] Registrar episode Haze, publicado el 2026-05-15, como obra pendiente de censo profundo.
 - [x] Agregar las fuentes de la editorial al directorio de fuentes del buscador sin tratarlas como texto completo.
-- [ ] Auditar episode Haze en una copia legal: identidad/alias de Haze-Heith, roster Freya, sucesos, lugares y relaciones, con localizadores.
+- [x] Resolver Haze/Heizu del título japonés con el perfil oficial de Heith Velvet y apuntarlo al ID estable `CHAR-HEITH-VELVET`, sin identidad duplicada.
+- [x] Registrar sinopsis editorial de episode Haze, conectar el evento parcial a Heith y Ottar y añadir pruebas de búsqueda/procedencia.
+- [ ] Auditar el texto íntegro de episode Haze en una copia legítima: censo de personajes, sucesos, lugares y relaciones con localizadores reproducibles.
 - [ ] Tras cada fecha prevista, comprobar publicación real y reconstruir las fichas desde material publicado; nunca importar anticipadamente contenido especulativo.
 
 Fuentes: https://ga.sbcr.jp/product/9784815632946/ · https://ga.sbcr.jp/product/9784815642907/ · https://ga.sbcr.jp/product/9784815642914/ · https://ga.sbcr.jp/product/9784815642938/ · https://ga.sbcr.jp/product/9784815640675/

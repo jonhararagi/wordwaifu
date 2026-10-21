@@ -350,3 +350,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Episode Haze, publicado en mayo de 2026, queda abierto para censo de personajes, lugares, sucesos y relaciones a partir del texto disponible.
 - El anuncio editorial no se convierte en acontecimiento de la historia: vol. 22 y las obras aún no publicadas permanecen como metadatos de calendario.
 - Se añade control de recuperación por defecto y una prueba de regresión para fechas, fuentes oficiales y separación entre publicación prevista y contenido narrativo.
+
+
+## DANMACHI-RESEARCH-041 · Familia Chronicle episode Haze / Heith
+
+- Fecha de corte: 2026-10-21.
+- Fuente editorial consultada: GA Bunko, episode ヘイズ, publicado el 2026-05-15; sinopsis limitada y no equivalente al texto completo.
+- Resolución de identidad: el título japonés `episodeヘイズ` comparte la forma `ヘイズ` con el perfil oficial `ヘイズ・ベルベット`; se mantiene el ID estable `CHAR-HEITH-VELVET` y se añaden Haze/Heizu como alias de búsqueda.
+- Se crea `EVT-DM-FC-HAZE-001` y se conecta a Heith y Ottar con claims editoriales parciales; no se infieren desenlaces, técnicas ni el roster completo de la aventura.
+- El índice, buscador, roster, ficha Markdown, UI y catálogo comparten el mismo ID de personaje. Test de regresión agregado para bloquear la duplicación `CHAR-HAZE`.
+- Pendiente: cotejo de texto íntegro y localizadores reproducibles.

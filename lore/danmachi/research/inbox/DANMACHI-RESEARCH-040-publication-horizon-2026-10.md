@@ -129,7 +129,7 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 1. El mapa de cobertura de la historia principal usa vol. 21 como último tomo publicado en esta fecha de corte; vol. 22 es una publicación futura anunciada y no se presenta como leído.
 2. El contenido de la sinopsis de vol. 22 puede describirse solo como metadato editorial. La frase de que Bell es la última clave contra el Dragón Negro no permite inferir cómo, cuándo o con quién ocurrirá.
 3. Sword Oratoria vol. 17 y episode Amid quedan como hitos del calendario, no como canon narrativo disponible a la fecha de corte.
-4. Episode Haze sí está publicado y debe entrar en la siguiente auditoría de cobertura de obras paralelas. Comparar el nombre editorial `Haze` / japonés `ヘイズ` con el alias local `Heith Velvet` / `ヘイズ・ベルベット` antes de crear otra identidad. No duplicar ni fusionar identidades solo por transliteración.
+4. Episode Haze está publicado. El título japonés `episodeヘイズ` y el perfil oficial `ヘイズ・ベルベット` se resuelven al ID estable existente `CHAR-HEITH-VELVET`; se documentan Haze/Heizu como alias de búsqueda, no como un personaje nuevo. La ficha parcial del episodio se enlaza en DMR-041. No duplicar una identidad por romanización.
 5. Tras cada publicación, revisar el texto oficial disponible y separar afirmaciones directas, sinopsis editorial, adaptación, referencia comunitaria e inferencia; guardar los localizadores reproducibles.
 6. Este seguimiento no cambia estados de canon ni declara completos los perfiles existentes.
 

@@ -1544,10 +1544,15 @@
       "tags": [
         "Heith Velvet",
         "Heith",
+        "Haze",
+        "Heizu",
         "ヘイズ・ベルベット",
         "Freya Familia",
         "Jefa de unidad médica y herbolaria",
-        "CONT-ANIME"
+        "CONT-ANIME",
+        "Familia Chronicle",
+        "episode Haze",
+        "episode Heith"
       ],
       "status": "source_checked_partial",
       "priority": "normal"
@@ -2381,6 +2386,23 @@
         "Orario",
         "CONT-PROTOTYPE",
         "prototype-only"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "EVT-DM-FC-HAZE-001",
+      "path": "events/timeline/EVT-DM-FC-HAZE-001.md",
+      "type": "event",
+      "tags": [
+        "Familia Chronicle",
+        "episode Haze",
+        "episode Heith",
+        "Heith Velvet",
+        "Ottar",
+        "recompensa",
+        "troll",
+        "CROSS-CONTINUITY"
       ],
       "status": "source_checked_partial",
       "priority": "normal"
@@ -3260,6 +3282,12 @@
       "document_id": "DOC-DANMACHI-RESEARCH-040",
       "path": "research/inbox/DANMACHI-RESEARCH-040-publication-horizon-2026-10.md",
       "type": "publication_horizon_tracking",
+      "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-041",
+      "path": "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md",
+      "type": "published_side_story_character_event_research",
       "status": "source_checked_partial"
     }
   ],
@@ -6380,6 +6408,34 @@
       "claimRef": "DMR-034-CLM-004",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md",
       "note": "Conexión de navegación limitada al Prototype. No demuestra que este dato aparezca en la novela ligera principal."
+    },
+    {
+      "id": "REL-HEITH-EPISODE-HAZE-001",
+      "from": "CHAR-HEITH-VELVET",
+      "to": "EVT-DM-FC-HAZE-001",
+      "kind": "central_participant",
+      "label": "Personaje central de Familia Chronicle episode Haze; el título romanizado Haze corresponde al japonés ヘイズ",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "Metadatos y sinopsis editorial de Familia Chronicle episode Haze, publicado 2026-05-15",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_publisher_synopsis_and_official_adaptation_profile",
+      "claimRef": "DMR-041-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md",
+      "note": "Se reutiliza CHAR-HEITH-VELVET; no crear identidad separada CHAR-HAZE. La ficha completa del volumen no ha sido cotejada."
+    },
+    {
+      "id": "REL-OTTAR-EPISODE-HAZE-BOUNTY-001",
+      "from": "CHAR-OTTAR",
+      "to": "EVT-DM-FC-HAZE-001",
+      "kind": "moves_in_response_to_bounty",
+      "label": "Ottar y otros guerreros poderosos se movilizan alrededor de la recompensa del troll ensangrentado",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "Sinopsis editorial de Familia Chronicle episode Haze, publicado 2026-05-15",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-041-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md",
+      "note": "La sinopsis confirma el marco general, no la secuencia completa ni todas las identidades participantes."
     }
   ]
 }

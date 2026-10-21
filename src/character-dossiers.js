@@ -334,13 +334,14 @@
     },
     "CHAR-HEITH-VELVET": {
       "appearance": "El retrato del perfil oficial identifica a Heith Velvet en la adaptación; no se trata como diseño invariable entre temporadas.",
-      "history": "Encabeza una unidad de curanderos y herbolarios dedicada a atender lesiones dentro de Freya Familia. Esta síntesis no es una biografía cronológica completa; las fechas y eventos necesitan escenas narrativas.",
+      "history": "Encabeza una unidad de curanderos y herbolarios dedicada a atender lesiones dentro de Freya Familia. El título japonés Familia Chronicle episode ヘイズ corresponde al nombre ヘイズ・ベルベット del perfil oficial; Haze/Heizu es variante de romanización y no una identidad aparte. La sinopsis editorial sitúa a Heith en el centro del relato y menciona una recompensa por un troll ensangrentado alrededor de la cual se moviliza Ottar; no es una biografía cronológica completa y los detalles de escenas requieren el texto íntegro.",
       "personality": "Suele parecer agotada por el volumen de lesiones, pero su actitud se vuelve feroz cuando Freya está amenazada.",
       "abilities": "Nivel 4 en el perfil oficial; su especialidad es la atención médica y el tratamiento. La fuente oficial consultada no describe más detalles de este aspecto. Para ampliarlo sin inventar hechos hay que cotejar escenas o pasajes de la obra correspondiente; por eso esta laguna se mantiene explícita y la ficha distingue un retrato promocional de una biografía narrativa.",
       "relationships": "Sirve a Freya y trata de forma habitual a los miembros lesionados durante entrenamientos. La fuente oficial consultada no describe más detalles de este aspecto. Para ampliarlo sin inventar hechos hay que cotejar escenas o pasajes de la obra correspondiente; por eso esta laguna se mantiene explícita y la ficha distingue un retrato promocional de una biografía narrativa.",
       "conflict": "Un perfil de adaptación no sustituye una biografía por escenas. Acontecimientos, decisiones, evolución y cambios de estado requieren cotejo narrativo.",
       "sources": [
-        "https://danmachi.com/danmachi5/character/"
+        "https://danmachi.com/danmachi5/character/",
+        "https://ga.sbcr.jp/product/9784815640675/"
       ]
     },
     "CHAR-VAN-FREYA": {
