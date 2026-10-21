@@ -557,20 +557,35 @@ META["CHAR-RYUU-LION"].states["CONT-MAIN-LN"].summary += " La separación de Ast
 
 function extendedInfo(id,continuity,index){
 const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;
-if(!base)return null;
-// Keep the historical and later adaptation states visible as separate UI sections.
-// These labels are generated from the state selected by the user; the source dossier is not rewritten.
-const temporalState=id==="CHAR-RYUU-LION"&&META[id]&&META[id].states?META[id].states[continuity]:null;
-const temporalSection=temporalState?{
-  title:continuity==="CONT-AR"?"Estado temporal A · Era Oscura":"Estado temporal B · adaptación anime",
-  text:[temporalState.period,temporalState.affiliation,temporalState.summary].filter(Boolean).join(" "),
-  source:"continuity-state"
-}:null;
-const withTemporal=sections=>[...(base.sections||[]),...(temporalSection?[temporalSection]:[]),...sections];
 const doc=index&&index.profileDetails?index.profileDetails[id]:null;
-if(!doc)return {...base,sections:withTemporal([])};
+// A repository dossier should open even when it has not yet received a hand-authored
+// EXTENDED summary. This avoids making the "more information" action work only for
+// a small hard-coded list of favored characters.
+if(!base&&doc){
+  const scopes=doc.continuityScopes||[];
+  const inScope=!scopes.length||scopes.includes(continuity);
+  const sectionList=inScope
+    ?(doc.sections||[]).map(section=>({title:section.heading,text:section.text,source:"existing-repository-profile"}))
+    :[{title:"Alcance de continuidad",text:"Este expediente está etiquetado para "+scopes.join(", ")+". No se muestra su contenido como si perteneciera a "+(LABELS[continuity]||continuity)+".",source:"continuity-guard"}];
+  const relevantClaims=(index.claims||[]).filter(claim=>(doc.claimRefs||[]).includes(claim.claimId)||(doc.claimRefs||[]).includes(claim.entryId));
+  const refs=[];
+  for(const claim of relevantClaims){
+    for(const url of claim.sourceUrls||[]){
+      if(!url||refs.some(ref=>ref.url===url))continue;
+      refs.push({label:claim.sourceTitle||claim.heading||claim.claimId,url,kind:/fandom\\.com|wikipedia\\.org/i.test(url)?"community":"official"});
+    }
+  }
+  const title=doc.title||record(index,id)?.name||id;
+  const first=doc.sections&&doc.sections.find(section=>/identidad y alcance|identidad|alcance/i.test(section.heading));
+  const summary=inScope
+    ?(first?first.text:"Expediente del repositorio con fuente y continuidad registradas.")
+    :"Hay un expediente de este personaje, pero su alcance documentado no coincide con la continuidad seleccionada.";
+  return {title,summary,sections:sectionList,references:refs,repositoryProfile:{path:doc.sourceDocument,status:doc.status,sectionCount:inScope?sectionList.length:0,sourceRefs:doc.sourceRefs||[],claimRefs:doc.claimRefs||[]},continuityScope:scopes};
+}
+if(!base)return null;
+if(!doc)return base;
 const scopes=doc.continuityScopes||[];
-if(scopes.length&&!scopes.includes(continuity))return {...base,sections:withTemporal([])};
+if(scopes.length&&!scopes.includes(continuity))return base;
 const sections=(doc.sections||[]).filter(section=>{
   const heading=String(section.heading||"");
   if(/perfil psicol[oó]gico inicial/i.test(heading))return false;
@@ -583,7 +598,7 @@ const sections=(doc.sections||[]).filter(section=>{
   if(/perfil oficial de adaptaci[oó]n/i.test(heading)&&continuity!=="CONT-ANIME")return false;
   return true;
 }).map(section=>({title:section.heading,text:section.text,source:"existing-repository-profile"}));
-return {...base,sections:withTemporal(sections),repositoryProfile:{path:doc.sourceDocument,status:doc.status,sectionCount:sections.length,sourceRefs:doc.sourceRefs||[],claimRefs:doc.claimRefs||[]}};
+return {...base,sections:[...(base.sections||[]),...sections],repositoryProfile:{path:doc.sourceDocument,status:doc.status,sectionCount:sections.length,sourceRefs:doc.sourceRefs||[],claimRefs:doc.claimRefs||[]}};
 }
 function unique(a){return Array.from(new Set(a.filter(Boolean)));}
 function record(index,id){return (index.characters||[]).find(x=>x.id===id)||null;}
