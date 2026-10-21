@@ -2215,6 +2215,134 @@
       ],
       "status": "source_checked_partial",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-KALI",
+      "path": "characters/kali.md",
+      "type": "deity_character",
+      "tags": [
+        "Kali",
+        "カーリー",
+        "Kali Familia",
+        "Telskyura",
+        "CONT-SO"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ARGANA-KALIF",
+      "path": "characters/argana-kalif.md",
+      "type": "character",
+      "tags": [
+        "Argana Kalif",
+        "Argana",
+        "Kali Familia",
+        "Telskyura",
+        "CONT-SO"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-BACHE-KALIF",
+      "path": "characters/bache-kalif.md",
+      "type": "character",
+      "tags": [
+        "Bache Kalif",
+        "Bache",
+        "Kali Familia",
+        "Telskyura",
+        "CONT-SO"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-SELDAS",
+      "path": "characters/seldas.md",
+      "type": "character",
+      "tags": [
+        "Seldas",
+        "Kali Familia",
+        "Telskyura",
+        "pasado de Tione",
+        "CONT-SO"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "normal"
+    },
+    {
+      "id": "FAM-KALI",
+      "path": "familias/kali-familia.md",
+      "type": "familia",
+      "tags": [
+        "Kali Familia",
+        "Kali",
+        "Telskyura",
+        "Tiona Hiryute",
+        "Tione Hiryute"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-SO6-HIRYUTE-PAST-001",
+      "path": "events/timeline/EVT-DM-SO6-HIRYUTE-PAST-001.md",
+      "type": "event",
+      "tags": [
+        "Sword Oratoria 6",
+        "Tiona Hiryute",
+        "Tione Hiryute",
+        "Kali Familia",
+        "Melen",
+        "CONT-SO"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high",
+      "name": "Tiona y Tione confrontan su pasado vinculado a Kali Familia"
+    },
+    {
+      "id": "LOC-MELEN",
+      "path": "places/melen.md",
+      "type": "location",
+      "tags": [
+        "Melen",
+        "puerto",
+        "Sword Oratoria 6",
+        "Kali Familia",
+        "CONT-SO"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "GRP-EVILUS",
+      "path": "characters/dark-era/evilus-network.md",
+      "type": "character_group",
+      "tags": [
+        "Evilus",
+        "Era Oscura de Orario",
+        "facciones antagonistas",
+        "Astrea Record",
+        "CONT-AR"
+      ],
+      "status": "source_checked_partial",
+      "priority": "critical"
+    },
+    {
+      "id": "IDX-DM-ERA-DARK-001",
+      "path": "characters/dark-era/00-indice-era-oscura.md",
+      "type": "index",
+      "tags": [
+        "Era Oscura de Orario",
+        "Astrea Record",
+        "antagonistas",
+        "protagonistas",
+        "continuity map"
+      ],
+      "status": "source_checked_partial",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
@@ -3073,6 +3201,12 @@
       "document_id": "DOC-DANMACHI-RESEARCH-036",
       "path": "research/inbox/DANMACHI-RESEARCH-036-character-coverage-expansion.md",
       "type": "character_coverage_research",
+      "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-038",
+      "path": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "type": "character_and_continuity_research",
       "status": "source_checked_partial"
     }
   ],
@@ -5843,6 +5977,286 @@
       "claimRef": "DMR-006-CLM-049",
       "claimPath": "research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md",
       "note": "Mantiene separados el nodo organizativo y `LOC-HOSTESS`, el lugar físico."
+    },
+    {
+      "id": "REL-KALI-DEITY-001",
+      "from": "CHAR-KALI",
+      "to": "FAM-KALI",
+      "kind": "deity_of",
+      "label": "deidad asociada a Kali Familia en la sinopsis editorial",
+      "continuity": "CONT-SO",
+      "interval": "Sword Oratoria vol. 6; periodo exacto no fijado",
+      "evidenceStatus": "source_checked_partial",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-038-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Vínculo general editorial; no es un censo completo de la Familia."
+    },
+    {
+      "id": "REL-ARGANA-MEMBER-KALI-001",
+      "from": "CHAR-ARGANA-KALIF",
+      "to": "FAM-KALI",
+      "kind": "member_of",
+      "label": "capitana reportada de Kali Familia",
+      "continuity": "CONT-SO",
+      "interval": "Historia previa a Melen; cronología por cotejar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-038-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Cargo y afiliación secundarios; capítulo/página primaria pendientes."
+    },
+    {
+      "id": "REL-BACHE-MEMBER-KALI-001",
+      "from": "CHAR-BACHE-KALIF",
+      "to": "FAM-KALI",
+      "kind": "member_of",
+      "label": "capitana reportada de Kali Familia",
+      "continuity": "CONT-SO",
+      "interval": "Historia previa a Melen; cronología por cotejar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-038-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Cargo y afiliación secundarios; capítulo/página primaria pendientes."
+    },
+    {
+      "id": "REL-SELDAS-MEMBER-KALI-001",
+      "from": "CHAR-SELDAS",
+      "to": "FAM-KALI",
+      "kind": "associated_with",
+      "label": "pertenencia a la facción reportada en referencias comunitarias",
+      "continuity": "CONT-SO",
+      "interval": "Infancia de las gemelas; periodo exacto pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-038-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Pista biográfica, no roster primario cerrado."
+    },
+    {
+      "id": "REL-TIONA-KALI-PAST-001",
+      "from": "CHAR-TIONA-HIRYUTE",
+      "to": "FAM-KALI",
+      "kind": "former_member_of",
+      "label": "afiliación infantil reportada por fuentes secundarias",
+      "continuity": "CONT-SO",
+      "interval": "Infancia previa a Orario; fecha absoluta sin verificar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-038-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "La sinopsis confirma el pasado ligado a Kali Familia, no todos los detalles de membresía infantil."
+    },
+    {
+      "id": "REL-TIONE-KALI-PAST-001",
+      "from": "CHAR-TIONE-HIRYUTE",
+      "to": "FAM-KALI",
+      "kind": "former_member_of",
+      "label": "afiliación infantil reportada por fuentes secundarias",
+      "continuity": "CONT-SO",
+      "interval": "Infancia previa a Orario; fecha absoluta sin verificar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-038-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "La sinopsis confirma el pasado ligado a Kali Familia, no todos los detalles de membresía infantil."
+    },
+    {
+      "id": "REL-TIONA-SO6-PAST-001",
+      "from": "CHAR-TIONA-HIRYUTE",
+      "to": "EVT-DM-SO6-HIRYUTE-PAST-001",
+      "kind": "central_participant",
+      "label": "confronta el pasado vinculado a Kali Familia",
+      "continuity": "CONT-SO",
+      "interval": "Sword Oratoria vol. 6",
+      "evidenceStatus": "source_checked_partial",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-038-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "El resumen oficial confirma el marco general, no cada recuerdo o combate."
+    },
+    {
+      "id": "REL-TIONE-SO6-PAST-001",
+      "from": "CHAR-TIONE-HIRYUTE",
+      "to": "EVT-DM-SO6-HIRYUTE-PAST-001",
+      "kind": "central_participant",
+      "label": "confronta el pasado vinculado a Kali Familia",
+      "continuity": "CONT-SO",
+      "interval": "Sword Oratoria vol. 6",
+      "evidenceStatus": "source_checked_partial",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-038-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "El resumen oficial confirma el marco general, no cada recuerdo o combate."
+    },
+    {
+      "id": "REL-KALI-FAM-SO6-PAST-001",
+      "from": "FAM-KALI",
+      "to": "EVT-DM-SO6-HIRYUTE-PAST-001",
+      "kind": "faction_at_center_of_past",
+      "label": "facción ligada al pasado al que se enfrentan las hermanas",
+      "continuity": "CONT-SO",
+      "interval": "Sword Oratoria vol. 6",
+      "evidenceStatus": "source_checked_partial",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-038-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Relación colectiva de la sinopsis; acciones particulares por cotejar."
+    },
+    {
+      "id": "REL-SO6-MELEN-LOCATION-001",
+      "from": "EVT-DM-SO6-HIRYUTE-PAST-001",
+      "to": "LOC-MELEN",
+      "kind": "takes_place_at",
+      "label": "la sinopsis sitúa el arco en la ciudad portuaria Melen",
+      "continuity": "CONT-SO",
+      "interval": "Sword Oratoria vol. 6",
+      "evidenceStatus": "source_checked_partial",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-038-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "No se añade geografía no indicada por la sinopsis."
+    },
+    {
+      "id": "REL-ALFIA-ASTREA-RECORD-EVENT",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "EVT-DM-AR-ERA-001",
+      "kind": "reported_antagonist_route",
+      "label": "antagonista de alto impacto en resúmenes secundarios de Astrea Record",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record; escenas por cotejar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_character_summary",
+      "claimRef": "DMR-038-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Ruta secundaria; no verifica capítulo/página ni toda su motivación."
+    },
+    {
+      "id": "REL-ZALD-ASTREA-RECORD-EVENT",
+      "from": "CHAR-DARK-ZALD",
+      "to": "EVT-DM-AR-ERA-001",
+      "kind": "reported_antagonist_route",
+      "label": "antagonista de alto impacto en resúmenes secundarios de Astrea Record",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record; escenas por cotejar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_character_summary",
+      "claimRef": "DMR-038-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Ruta secundaria; no verifica capítulo/página ni toda su motivación."
+    },
+    {
+      "id": "REL-EREBUS-ASTREA-RECORD-EVENT",
+      "from": "CHAR-DARK-EREBUS",
+      "to": "EVT-DM-AR-ERA-001",
+      "kind": "reported_antagonist_route",
+      "label": "figura antagonista asociada a Astrea Record en fuentes secundarias",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record; escenas por cotejar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_character_summary",
+      "claimRef": "DMR-038-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "No se le atribuyen todos los actos de las facciones de Evilus."
+    },
+    {
+      "id": "REL-EVILUS-ASTREA-RECORD-EVENT",
+      "from": "GRP-EVILUS",
+      "to": "EVT-DM-AR-ERA-001",
+      "kind": "central_conflict",
+      "label": "Evilus forma parte de la escalada general del conflicto descrito editorialmente",
+      "continuity": "CONT-AR",
+      "interval": "Era Oscura; T-7 aproximado",
+      "evidenceStatus": "source_checked_partial",
+      "evidenceType": "official_chronology_and_publisher_synopsis",
+      "claimRef": "DMR-038-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Evilus se modela como red de facciones, no una única Familia."
+    },
+    {
+      "id": "REL-EREBUS-EVILUS-RESEARCH",
+      "from": "CHAR-DARK-EREBUS",
+      "to": "GRP-EVILUS",
+      "kind": "reported_association",
+      "label": "asociación con el conflicto de Evilus reportada por fuentes secundarias",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record; función exacta pendiente",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_character_summary",
+      "claimRef": "DMR-038-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "No implica jerarquía única ni control de toda la red."
+    },
+    {
+      "id": "REL-VALLETTA-EVILUS-INVESTIGATION",
+      "from": "CHAR-DARK-VALLETTA-GREDE",
+      "to": "GRP-EVILUS",
+      "kind": "investigation_candidate",
+      "label": "pista potencial sobre Evilus; afiliación NO confirmada",
+      "continuity": "CONT-AR",
+      "interval": "Periodo potencial de Era Oscura; no confirmado",
+      "evidenceStatus": "pending_verification",
+      "evidenceType": "discovery_lead_only",
+      "claimRef": "DMR-038-CLM-008",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Ruta de investigación, no afirmación canónica."
+    },
+    {
+      "id": "REL-THANATOS-EVILUS-INVESTIGATION",
+      "from": "CHAR-DARK-THANATOS",
+      "to": "GRP-EVILUS",
+      "kind": "investigation_candidate",
+      "label": "pista potencial sobre Evilus; afiliación NO confirmada",
+      "continuity": "CONT-AR",
+      "interval": "Periodo potencial de Era Oscura; no confirmado",
+      "evidenceStatus": "pending_verification",
+      "evidenceType": "discovery_lead_only",
+      "claimRef": "DMR-038-CLM-008",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "Ruta de investigación, no afirmación canónica."
+    },
+    {
+      "id": "REL-VALLETTA-ASTREA-RECORD-INVESTIGATION",
+      "from": "CHAR-DARK-VALLETTA-GREDE",
+      "to": "EVT-DM-AR-ERA-001",
+      "kind": "investigation_candidate",
+      "label": "pista potencialmente relacionada con Era Oscura; vínculo exacto pendiente",
+      "continuity": "CONT-AR",
+      "interval": "No confirmado",
+      "evidenceStatus": "pending_verification",
+      "evidenceType": "discovery_lead_only",
+      "claimRef": "DMR-038-CLM-008",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "No confirma participación en un acontecimiento."
+    },
+    {
+      "id": "REL-THANATOS-ASTREA-RECORD-INVESTIGATION",
+      "from": "CHAR-DARK-THANATOS",
+      "to": "EVT-DM-AR-ERA-001",
+      "kind": "investigation_candidate",
+      "label": "pista potencialmente relacionada con Era Oscura; vínculo exacto pendiente",
+      "continuity": "CONT-AR",
+      "interval": "No confirmado",
+      "evidenceStatus": "pending_verification",
+      "evidenceType": "discovery_lead_only",
+      "claimRef": "DMR-038-CLM-008",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "No confirma participación en un acontecimiento."
+    },
+    {
+      "id": "REL-TIONE-SELDAS-PAST-LEAD",
+      "from": "CHAR-TIONE-HIRYUTE",
+      "to": "CHAR-SELDAS",
+      "kind": "reported_past_bond",
+      "label": "vínculo de infancia reportado por fuente comunitaria",
+      "continuity": "CONT-SO",
+      "interval": "Infancia de Tione; escena por cotejar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_compendium",
+      "claimRef": "DMR-038-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "No fija desenlace ni reproduce escena."
     }
   ]
 }
