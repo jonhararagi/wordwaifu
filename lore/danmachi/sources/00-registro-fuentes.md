@@ -1562,3 +1562,165 @@ verification_status: stub
 - **URL complementaria:** https://danmachi.fandom.com/wiki/DanMachi_~Memoria_Freese~/Astraea_Record
 - **Uso:** encontrar pistas sobre personajes menores, hechizos, equipo y escenas relacionadas con la red de Astrea Familia.
 - **Límite:** no reemplaza el texto de Astrea Record revisado. Las diferencias entre el evento original de Memoria Freese, la wiki y la novela deben cotejarse; no elevar nombres de magia, límites o escenas a confirmados sin localizador primario.
+
+
+## DMR-025-SRC-001 · Olivas Act — wiki inglesa, extracto indexado
+- source_id: DMR-025-SRC-001
+- title: Olivas Act
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web legado; ficha migrada no abierta
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extractos indexados de identidad, alias, apariencia, personalidad, capacidades y secciones Appearance/Personality; lectura integral bloqueada.
+- claims_supported: [DMR-025-CLM-001, DMR-025-CLM-002, DMR-025-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-ANIME
+- reliability_note: Pista secundaria. El dominio Fandom bloqueó la recuperación integral y la wiki ha migrado; los rasgos y apariciones aún requieren cotejo en la novela/adaptación pertinente.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis original; no reproducir texto extenso ni imágenes.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-025-SRC-002 · Rudra — wiki española, extracto indexado
+- source_id: DMR-025-SRC-002
+- title: Rudra
+- creator_or_publisher: Colaboradores de DanMachi Wiki en español
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web legado; ficha migrada no abierta
+- language: Español
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extractos de identidad, afiliación, aspecto, personalidad, poderes y debut retrospectivo atribuido; lectura integral no disponible.
+- claims_supported: [DMR-025-CLM-004, DMR-025-CLM-005]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-ANIME; CONT-UNVERIFIED
+- reliability_note: Pista secundaria. No constituye página/capítulo primario ni demuestra que Rudra tomara personalmente todas las decisiones atribuidas a su Familia.
+- conflicting_sources: []
+- rights_note: Paráfrasis original, sin copiar arte.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-025-SRC-003 · Rudra Familia — wiki inglesa, extracto indexado
+- source_id: DMR-025-SRC-003
+- title: Rudra Familia
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web legado; ficha migrada no abierta
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extracto de historia sobre Evilus, Jura Halmer, Astrea Familia y el incidente del Juggernaut; localizar en novela principal, volumen 13.
+- claims_supported: [DMR-025-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: Fuente secundaria para encontrar escenas. La atribución colectiva a la Familia no prueba orden, conocimiento ni responsabilidad personal de Rudra.
+- conflicting_sources: []
+- rights_note: Resumen en palabras propias.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-025-SRC-004 · Meteria — wiki inglesa, extracto indexado
+- source_id: DMR-025-SRC-004
+- title: Meteria
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web legado; ficha migrada no abierta
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extractos de identidad, apariencia, relación familiar, afiliación reportada y rasgos atribuidos por Alfia.
+- claims_supported: [DMR-025-CLM-007, DMR-025-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED; CONT-AU
+- reliability_note: Fuente secundaria con spoilers mayores. No completar la identidad del padre de Bell ni mezclar una hipótesis What If con la continuidad principal.
+- conflicting_sources: []
+- rights_note: Paráfrasis original.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-025-SRC-005 · Meteria — wiki española, extracto indexado
+- source_id: DMR-025-SRC-005
+- title: Meteria
+- creator_or_publisher: Colaboradores de DanMachi Wiki en español
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web legado; ficha migrada no abierta
+- language: Español
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Extracto de identidad y parentescos, usado para contrastar nombres con la ficha inglesa.
+- claims_supported: [DMR-025-CLM-007, DMR-025-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED; CONT-AU
+- reliability_note: Fuente secundaria. La coincidencia de wikis no sustituye un pasaje de la novela y algunas anécdotas dependen de un escenario alternativo.
+- conflicting_sources: []
+- rights_note: Paráfrasis original.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-025-SRC-006 · Magia — wiki española, extracto indexado
+- source_id: DMR-025-SRC-006
+- title: Magia
+- creator_or_publisher: Colaboradores de DanMachi Wiki en español
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web legado, tabla de magia
+- language: Español
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Tabla que asocia Irivute con Ryana Lietz y Rea Vindemia con Maryuu Reage; otros detalles de técnica requieren revisar las referencias de la página.
+- claims_supported: [DMR-025-CLM-009, DMR-025-CLM-011]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-UNVERIFIED
+- reliability_note: Tabla comunitaria secundaria; no equivale a nombre, efecto, coste o límite confirmado por texto primario.
+- conflicting_sources: []
+- rights_note: Registrar términos breves y referencias, no copiar tablas extensas.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-025-SRC-007 · Minor Characters — wiki inglesa, extracto indexado
+- source_id: DMR-025-SRC-007
+- title: Minor Characters
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web legado, sección Maryuu Reage
+- language: Inglés
+- accessed_at: 2026-10-21
+- locator_type: search_index_extract
+- locator: Sección indexada sobre Mariyu/Maryuu Reage: epíteto, flashbacks, personalidad, Rea Vindemia, equipo y rango reportado.
+- claims_supported: [DMR-025-CLM-010, DMR-025-CLM-011]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN; CONT-ANIME; CONT-UNVERIFIED
+- reliability_note: Fuente secundaria; los niveles 3–4 figuran de manera ambigua en el extracto y quedan sin resolver.
+- conflicting_sources: []
+- rights_note: Paráfrasis original, no copiar imágenes.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-025-SRC-008 · Publicación del autor citada por la wiki — escenario hipotético
+- source_id: DMR-025-SRC-008
+- title: Nota del autor sobre un escenario hipotético de Alfia/Zald y Bell
+- creator_or_publisher: Fujino Omori
+- source_type: AUTHOR_NOTE
+- series: DanMachi; material hipotético referido por una wiki
+- volume_or_edition: Publicación web
+- language: Japonés
+- official_url: https://note.com/fujinoomori/n/n629829ac3fe4
+- accessed_at: 2026-10-21
+- locator_type: author_post_reference
+- locator: Referencia citada por la ficha comunitaria de Meteria; la continuidad y el alcance de cada anécdota deben revisarse en el post original.
+- claims_supported: [DMR-025-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-AU; CONT-UNVERIFIED
+- reliability_note: La publicación del autor no convierte automáticamente un What If en continuidad principal. Este registro sirve para separar la pista hipotética y no para importar sus sucesos al canon central.
+- conflicting_sources: []
+- rights_note: No copiar el post; registrar solo su alcance y referencia.
+- verified_by: DANMACHI-RESEARCH-025
+- verification_status: original_post_recheck_pending
