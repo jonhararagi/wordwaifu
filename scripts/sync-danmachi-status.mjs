@@ -92,6 +92,40 @@ for (const edge of catalog.relationships) {
   if (edge.from !== edge.to && recordById.has(edge.from) && recordById.has(edge.to)) validEndpoints += 1;
 }
 
+let dossierRoutesComplete = 0;
+for (const dossier of dossiers) {
+  if (!dossier || typeof dossier.id !== "string" || !dossier.id.trim()) {
+    fail("El registro de expedientes contiene una entrada sin ID estable.");
+    continue;
+  }
+  const record = recordById.get(dossier.id);
+  if (!record) {
+    fail("Expediente de interfaz ausente del catálogo: " + dossier.id);
+    continue;
+  }
+  if (!["character", "deity_character", "character_group"].includes(record.type)) {
+    fail("Tipo de catálogo no compatible con expediente: " + dossier.id + " (" + record.type + ")");
+    continue;
+  }
+  if (typeof record.path !== "string" || !record.path.startsWith("characters/")) {
+    fail("Ruta Markdown inválida para expediente de interfaz: " + dossier.id);
+    continue;
+  }
+  const file = path.resolve(loreRoot, record.path);
+  if (!file.startsWith(loreRoot + path.sep) || !fs.existsSync(file)) {
+    fail("La ficha Markdown del expediente no existe o escapa del corpus: " + dossier.id + " -> " + record.path);
+    continue;
+  }
+  const content = fs.readFileSync(file, "utf8");
+  const frontmatter = content.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\s|$)/);
+  const idMatch = frontmatter && frontmatter[1].match(/^id:\s*["']?([^"'\s#]+)["']?\s*$/m);
+  if (!idMatch || idMatch[1] !== dossier.id) {
+    fail("ID del expediente y frontmatter Markdown desincronizados: " + dossier.id + " -> " + record.path);
+    continue;
+  }
+  dossierRoutesComplete += 1;
+}
+
 let rosterComplete = 0;
 for (const person of roster) {
   if (!person || typeof person.id !== "string" || !person.id.trim()) {
@@ -150,7 +184,7 @@ const metricsBlock = [
   "- **Corpus DanMachi:** " + catalog.records.length + " registros activos; " + catalog.reservedIds.length + " IDs reservados; " + catalog.documents.length + " documentos de apoyo.",
   "- **Grafo de conocimiento:** " + catalog.relationships.length + " relaciones explícitas; " + validEndpoints + "/" + catalog.relationships.length + " con ambos extremos activos y distintos; IDs de relación únicos.",
   "- **Roster de adaptación:** " + roster.length + " identidades; " + rosterComplete + "/" + roster.length + " tienen registro, ruta Markdown e expediente UI con el mismo ID.",
-  "- **Expedientes de interfaz:** " + dossiers.length + " perfiles estructurados en `src/character-dossiers.js`.",
+  "- **Expedientes de interfaz:** " + dossiers.length + " perfiles; " + dossierRoutesComplete + "/" + dossiers.length + " enlazados a catálogo y Markdown por ID.",
   "- **Tipos en el catálogo:** " + (typeCounts.character || 0) + " personajes; " + (typeCounts.character_group || 0) + " grupos; " + (typeCounts.deity_character || 0) + " deidades con registro de personaje.",
   "- **Marcadas `complete`:** " + completeCharacterRecords + "/" + characterRecords.length + " registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.",
   "<!-- DANMACHI-METRICS:END -->"
@@ -158,6 +192,7 @@ const metricsBlock = [
 
 if (validEndpoints !== catalog.relationships.length) fail("Hay relaciones con extremos inválidos.");
 if (rosterComplete !== roster.length) fail("La cobertura estructural del roster no es completa: " + rosterComplete + "/" + roster.length + ".");
+if (dossierRoutesComplete !== dossiers.length) fail("La cobertura de rutas de los expedientes no es completa: " + dossierRoutesComplete + "/" + dossiers.length + ".");
 const statusContent = fs.existsSync(statusPath) ? fs.readFileSync(statusPath, "utf8") : "";
 const markerPattern = /<!-- DANMACHI-METRICS:BEGIN -->[\s\S]*?<!-- DANMACHI-METRICS:END -->/g;
 const markedBlocks = [...statusContent.matchAll(markerPattern)];

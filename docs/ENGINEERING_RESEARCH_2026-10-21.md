@@ -51,7 +51,7 @@ La mayor deuda transversal es la **consistencia entre representaciones derivadas
 
 ## Cambios aplicados en esta revisión
 
-1. Se incorpora `scripts/sync-danmachi-status.mjs`: deriva las métricas del catálogo/roster/expedientes, comprueba IDs y endpoints, verifica para cada entrada del roster el registro activo, la ruta Markdown, el ID del frontmatter y el expediente UI.
+1. Se incorpora `scripts/sync-danmachi-status.mjs`: deriva las métricas del catálogo/roster/expedientes, comprueba IDs y endpoints, verifica los 79 expedientes contra catálogo/ruta Markdown y el ID del frontmatter; exige además el contrato completo a cada entrada del roster.
 2. El modo `--write` solo sustituye el bloque marcado de métricas de `docs/STATUS.md`; el modo `--check` no escribe nada y falla si el bloque deriva.
 3. Los workflows ejecutan el chequeo, por lo que un cambio de datos sin actualizar el bloque operativo no puede pasar silenciosamente.
 4. El estado operativo se limpia y se separa del historial antiguo; las métricas se mantienen automáticas y el porcentaje global de canon permanece sin certificar.
