@@ -1939,7 +1939,7 @@ verification_status: stub
 - accessed_at: 2026-10-21
 - locator_type: publisher_metadata
 - locator: Metadatos de publicación y sinopsis de la ficha editorial.
-- claims_supported: []
+- claims_supported: [DMR-040-CLM-001]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN; metadatos editoriales
 - reliability_note: Confirma título y fecha de publicación del tomo y ofrece sinopsis; no sustituye pasajes internos para acontecimientos detallados.
@@ -1962,7 +1962,7 @@ verification_status: stub
 - accessed_at: 2026-10-21
 - locator_type: publisher_metadata
 - locator: Fecha programada, título y descripción promocional.
-- claims_supported: []
+- claims_supported: [DMR-040-CLM-002]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN; metadatos de publicación futura
 - reliability_note: En la fecha de corte aún no estaba publicado; no usar su sinopsis como evidencia de escenas o resultados del tomo.
@@ -1985,7 +1985,7 @@ verification_status: stub
 - accessed_at: 2026-10-21
 - locator_type: publisher_metadata
 - locator: Título y fecha programada en la ficha editorial.
-- claims_supported: []
+- claims_supported: [DMR-040-CLM-003]
 - events_supported: []
 - continuity_scope: CONT-SO; metadatos de publicación futura
 - reliability_note: En la fecha de corte aún no estaba publicado; no se infieren escenas ni estados futuros de los personajes.
@@ -2008,7 +2008,7 @@ verification_status: stub
 - accessed_at: 2026-10-21
 - locator_type: publisher_metadata
 - locator: Título y fecha programada en la ficha editorial.
-- claims_supported: []
+- claims_supported: [DMR-040-CLM-004]
 - events_supported: []
 - continuity_scope: Familia Chronicle; metadatos de publicación futura
 - reliability_note: En la fecha de corte aún no estaba publicado; la descripción promocional no constituye una biografía completa.
@@ -2031,7 +2031,7 @@ verification_status: stub
 - accessed_at: 2026-10-21
 - locator_type: publisher_synopsis
 - locator: Fecha de publicación y sinopsis editorial.
-- claims_supported: []
+- claims_supported: [DMR-040-CLM-005]
 - events_supported: []
 - continuity_scope: Familia Chronicle; metadatos y sinopsis
 - reliability_note: Ya publicado a la fecha de corte; la sinopsis no sustituye lectura del relato. Verificar romanización/alias de Haze y Heith antes de crear o fusionar identidades.
@@ -2054,7 +2054,7 @@ verification_status: stub
 - accessed_at: 2026-10-21
 - locator_type: publisher_announcement
 - locator: Secciones de DanMachi vol. 22, Sword Oratoria vol. 17 y Familia Chronicle episode Amid.
-- claims_supported: []
+- claims_supported: [DMR-040-CLM-002, DMR-040-CLM-003, DMR-040-CLM-004]
 - events_supported: []
 - continuity_scope: Metadatos editoriales; no continuidad narrativa
 - reliability_note: Fija el anuncio editorial de tres publicaciones; las fechas previstas deben volver a comprobarse cerca del lanzamiento.
