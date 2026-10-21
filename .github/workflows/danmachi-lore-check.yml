@@ -66,6 +66,8 @@ jobs:
         run: node tests/test_danmachi_orario_prototype_locations.cjs
       - name: Test DanMachi publication horizon
         run: node tests/test_danmachi_publication_horizon.cjs
+      - name: Test DanMachi Haze/Heith identity
+        run: node tests/test_danmachi_haze_heith_identity.cjs
       - name: Test private preview file allowlist
         run: python tests/test_web_preview_server.py
       - name: Test Story Forge outline and audit
