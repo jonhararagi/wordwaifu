@@ -63,8 +63,8 @@ El título de la editorial japonesa escribe el nombre como `ヘイズ` (episode 
 - source_locator: Sinopsis editorial; pasaje sobre la recompensa “血濡れのトロール” y Ottar
 - source_url: https://ga.sbcr.jp/product/9784815640675/
 - evidence_type: official_publisher_synopsis
-- verification_status: source_checked_partial
-- confidence_note: La sinopsis sustenta el marco general de la recompensa y la movilización; las acciones individuales necesitan cotejo del volumen.
+- verification_status: source_checked
+- confidence_note: Está verificado que la sinopsis editorial afirma este marco; eso no equivale a cotejar las escenas subyacentes ni el desenlace del volumen.
 
 ### DMR-041-CLM-004 · La ficha oficial de adaptación identifica a Heith como sanadora de Freya Familia
 
