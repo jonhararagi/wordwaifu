@@ -16,7 +16,7 @@ claim_refs:
   - "DMR-026-CLM-005"
   - "DMR-026-CLM-006"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
-tags: ["Valletta Grede", Era Oscura, historical dossier, CONT-AR, primary_text_pending]
+tags: ["Valletta Grede", "Sword Oratoria", "Thanatos Familia", "Evilus", "CONT-SO", "primary_text_pending"]
 research_source_refs:
   - "DMR-014-SRC-004"
   - "DMR-014-SRC-005"
