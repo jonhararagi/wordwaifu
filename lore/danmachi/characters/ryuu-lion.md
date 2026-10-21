@@ -261,7 +261,7 @@ last_cross_checked: "2026-10-21"
 
 **No se debe usar una sola ficha psicológica para todas las versiones de Ryuu.** Antes de escribir una escena, selecciona época, continuidad y punto narrativo. La búsqueda histórica de justicia, la crisis causada por las pérdidas, el estado posterior como superviviente y el viaje para reencontrarse con Astrea son etapas distintas de una misma identidad.
 
-## Estado A · Astrea Record, aproximadamente T−7 · CONT-AR
+## Estado temporal A · Astrea Record, aproximadamente T−7 · CONT-AR
 
 La sinopsis editorial oficial de GA Bunko presenta a Ryuu buscando una justicia en la que pueda creer bajo la guía de Astrea, mientras Alise y sus compañeras la orientan. Esta es una **convicción en formación**, no prueba de que Ryuu ya posea una doctrina moral completa. La pertenencia histórica a Astrea Familia y el vínculo de capitana/guía con Alise están respaldados a nivel de sinopsis.
 
@@ -269,7 +269,7 @@ La sinopsis editorial oficial de GA Bunko presenta a Ryuu buscando una justicia 
 
 Evidencia: DMR-001-CLM-002 y DMR-001-CLM-005; fuentes DMR-001-SRC-001 y DMR-001-SRC-003. Son descripciones de una página oficial y de la sinopsis editorial, no citas de un capítulo o página de la novela.
 
-## Estado B · Pérdidas en Astrea Record, volumen 2 · CONT-AR
+## Transición histórica · Pérdidas en Astrea Record, volumen 2 · CONT-AR
 
 La sinopsis oficial del volumen 2 dice que las pérdidas durante el periodo posteriormente llamado **los Siete Días de la Muerte** sacuden el sentido de justicia de Ryuu. Esto confirma un cambio general en su conflicto interno. No establece por sí solo sus palabras exactas, qué sabe en cada instante, la ubicación de cada escena ni el orden completo de sus decisiones.
 
@@ -277,7 +277,7 @@ Debe registrarse como una crisis temporal dentro de su desarrollo, no como su pe
 
 Evidencia: DMR-001-CLM-007 y DMR-006-CLM-004; fuente DMR-001-SRC-004.
 
-## Estado C · Después de la tragedia de la primera Familia · CONT-ANIME
+## Estado temporal B · Después de la tragedia de la primera Familia · CONT-ANIME
 
 El perfil oficial de DanMachi IV presenta a Ryuu como elfa, exaventurera y trabajadora de Hostess of Fertility; en esa adaptación registra nivel 4, el epíteto Gale y una capacidad de combate excepcional. La sinopsis oficial del episodio 20 dice que la primera Astrea Familia desapareció en la oscuridad del Dungeon y que Ryuu fue la única superviviente.
 
