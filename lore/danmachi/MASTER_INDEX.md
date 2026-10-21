@@ -9,6 +9,8 @@
 
 Este es el punto de entrada para continuar el trabajo sin repetir registros. El contenido canónico sigue siendo provisional hasta que las fichas tengan fuentes y localizadores cotejados.
 
+- [DANMACHI-RESEARCH-040 — Calendario editorial y horizonte de cobertura](research/inbox/DANMACHI-RESEARCH-040-publication-horizon-2026-10.md) — separa tomos publicados de lanzamientos futuros y evita tratar anuncios como escenas ya publicadas.
+
 ## 1. Guías de trabajo
 
 - [Matriz de integración DanMachi — auditoría 2026-10](../../docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md) — estado de ramas, riesgos de sobrescritura y gates de validación; no implica que la integración esté cerrada.
