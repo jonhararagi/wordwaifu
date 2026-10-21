@@ -35,8 +35,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 135, "Indexed source claims must include Meteria and the wiki-informed character research pack.");
-assert.equal(index.entryCount, 138, "All currently sourced lore claims must be represented in searchable entries, including Meteria and wiki-informed character claims.");
+assert.equal(index.sourceClaimCount, 144, "Indexed source claims must include the five expanded dossiers in research batch 026.");
+assert.equal(index.entryCount, 147, "All currently sourced lore claims must be represented in searchable entries, including research batch 026.");
 const meteriaAlfiaClaim = corpus.search(index, { query: "Meteria Alfia hermana gemela", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(meteriaAlfiaClaim.results.some(claim => claim.claimId === "DMR-021-CLM-004"), "Meteria-Alfia relationship lead must be retrievable and stay explicitly unverified.");
 const meteriaBellClaim = corpus.search(index, { query: "Meteria madre Bell Cranel", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -61,6 +61,29 @@ assert.ok(ryanaMagic.results.every(claim => claim.verificationStatus.includes("s
 
 const maryuuMagic = corpus.search(index, { query: "Maryuu Rea Vindemia maza", characterId: "CHAR-MARIYU-LEAGE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(maryuuMagic.results.some(claim => claim.claimId === "DMR-025-CLM-011"), "Mariyu/Maryuu alias and healing-magic lead must be retrievable through one stable character ID.");
+
+const alfiaResearch026 = corpus.search(index, { query: "Alfia enfermedad Leviathan", characterId: "CHAR-DARK-ALFIA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(alfiaResearch026.results.some(claim => claim.claimId === "DMR-026-CLM-002"), "Alfia's history and illness must be searchable as a secondary lead.");
+assert.ok(alfiaResearch026.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+assert.ok(alfiaResearch026.results.some(claim => claim.sourceUrls.includes("https://danmachi.fandom.com/wiki/Alfia")));
+
+const zaldResearch026 = corpus.search(index, { query: "Zald Behemoth veneno Ottar", characterId: "CHAR-DARK-ZALD", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(zaldResearch026.results.some(claim => claim.claimId === "DMR-026-CLM-004"), "Zald's Behemoth/poison account must be retrievable without being marked primary-verified.");
+assert.ok(zaldResearch026.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const vallettaResearch026 = corpus.search(index, { query: "Valletta Shaldo Finn barrera", characterId: "CHAR-DARK-VALLETTA-GREDE", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(vallettaResearch026.results.some(claim => claim.claimId === "DMR-026-CLM-006"), "Valletta's reported magic and strategy must be searchable in Sword Oratoria continuity.");
+assert.ok(vallettaResearch026.results.every(claim => claim.continuityScopes.includes("CONT-SO")));
+assert.ok(vallettaResearch026.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const juraResearch026 = corpus.search(index, { query: "Jura Ryuu Juggernaut", characterId: "CHAR-DARK-JURA-HALMER", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(juraResearch026.results.some(claim => claim.claimId === "DMR-026-CLM-008"), "Jura's relationship to Ryuu and the later Juggernaut incident must be discoverable under the main LN scope.");
+assert.ok(juraResearch026.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")));
+assert.ok(juraResearch026.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const erebusResearch026 = corpus.search(index, { query: "Erebus justicia Alfia Zald", characterId: "CHAR-DARK-EREBUS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(erebusResearch026.results.some(claim => claim.claimId === "DMR-026-CLM-009"), "Erebus's ideology and reported cooperation must be retrievable as an unverified secondary summary.");
+assert.ok(erebusResearch026.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
 assert.ok(maryuuMagic.results.every(claim => claim.characterIds.includes("CHAR-MARIYU-LEAGE")), "Romanization variants must not create duplicate character identities.");
 
 const astreaTimelineClaim = corpus.search(index, { query: "Astrea Record siete años", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
@@ -163,7 +186,7 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 95 source claims, 98 entries, volume 21 atomic claims, Familia dossiers, main and side-story retrieval, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 144 source claims, 147 entries, batches 025/026, Familia dossiers, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();
