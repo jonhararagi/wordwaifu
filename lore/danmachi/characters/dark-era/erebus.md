@@ -8,16 +8,19 @@ source_refs:
   - "DMR-014-SRC-001"
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-006"
 claim_refs:
   - "DMR-014-CLM-003"
   - "DMR-013-CLM-003"
   - "DMR-014-CLM-025"
+  - "DMR-026-CLM-009"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Erebus", Era Oscura, historical dossier, CONT-AR, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-001"
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-006"
 entity_type: character
 canonical_name: "Erebus"
 aliases:
@@ -214,3 +217,15 @@ La ficha comunitaria de Erebus reporta un contacto con Zald para involucrarlo en
 
 - Perfil/índice comunitario: referencia secundaria usada para orientar la búsqueda; no sustituye el texto japonés publicado.
 - [Anuncio oficial sobre la publicación revisada de Astrea Record](https://danmachi.com/news/news131.php): confirma que la versión novelada recibió una revisión del autor respecto del evento original de Memoria Freese; no verifica los detalles biográficos de este expediente.
+
+
+## Ampliación de investigación DMR-026 · ideología reportada, pendiente de diálogo primario
+
+- **Nombre y perfil reportados:** la ficha comunitaria vincula Erebus (エレボス) con el nombre Eren (エレン) y el sobrenombre “Absolute Evil” (絶対悪). Lo describe como dios de cabello negro con dos mechones grises, ojos grises y ropa blanca/negra. La condición exacta del nombre alternativo y el uso como epíteto deben localizarse en el material de origen.
+- **Ideología reportada:** según la wiki, Erebus piensa que el verdadero mal debe ser odiado por todos y que la justicia absoluta es un ideal que se alcanza y conquista, no una condición fácil. La ficha atribuye a Astrea una objeción: el mal sería inevitable, antes que absoluto, y podría empujar al mundo a mejorar. Esto se registra como paráfrasis, no como cita del personaje.
+- **Acciones reportadas:** después de la derrota de Zeus/Hera Familias y ante la llegada de un momento decisivo, Erebus habría buscado un nuevo héroe y coordinado con Alfia y Zald una prueba de gran escala para Orario. La secuencia y la intención deben cotejarse; no se atribuye esta decisión a los dioses vinculados con esas personas.
+- **Rasgo adicional reportado:** la wiki atribuye a Hermes la observación de que Erebus es una persona desesperada que prefiere aislarse. No se transforma ese juicio ajeno en un hecho objetivo de personalidad.
+- **Continuidad:** la página lo presenta como personaje del evento *Astrea Record* de DanMemo. No se mezclan automáticamente sus escenas o diálogos con otras continuidades sin revisar la novelización publicada.
+
+**Evidencia secundaria:** DMR-026-CLM-009 · [DanMachi Wiki — Erebus](https://danmachi.fandom.com/wiki/Erebus).  
+**Pendiente:** localizar el capítulo “EREN”, diálogo sobre justicia/mal, y escenas de contacto con Alfia/Zald; separar material de juego y novela.
