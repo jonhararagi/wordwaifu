@@ -16,6 +16,24 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 Este lote cierra la integración estructural del roster ampliado, no el trabajo factual completo de Orario, la cronología o las biografías de novela.
 
+## DANMACHI-RESEARCH-038 · Era Oscura y pasado de las hermanas Hiryute
+
+Estado: estructura incorporada en la rama de propuesta; verificación automática final pendiente.
+
+- [x] Crear un índice narrativo con rutas separadas para Astrea Record (T-7), Rudra/Jura y Juggernaut (fase posterior) y el pasado Hiryute en Sword Oratoria.
+- [x] Crear un nodo de Evilus como red de facciones, no como una sola Familia.
+- [x] Añadir fichas y hub navegable de Kali Familia, con Kali, Argana Kalif, Bache Kalif y Seldas.
+- [x] Añadir el evento parcial del pasado Hiryute en Melen con la sinopsis editorial oficial.
+- [x] Conectar personajes a sucesos y facciones con estados de evidencia explícitos; dejar las pistas de Valletta/Thanatos pendientes.
+- [x] Incorporar DMR-038 al buscador y añadir expedientes de interfaz para Kali, Argana, Bache y Seldas.
+- [ ] Cotejar Astrea Record I-III en texto completo y obtener capítulo/página para acciones individuales de Alfia, Zald, Erebus y otros antagonistas.
+- [ ] Cotejar Sword Oratoria vol. 6 en texto completo para la infancia de Tiona/Tione y los detalles de Argana, Bache y Seldas.
+- [ ] Confirmar individualmente la aparición y función de Thanatos antes de aceptar una relación canónica.
+- [ ] Mantener el arco T-7 separado del incidente posterior de Rudra/Jura/Juggernaut.
+- [ ] Reanudar la auditoría general de secundarios e historias individuales después de esta tanda; no declarar cobertura global completa.
+
+Criterio factual: claims de wiki permanecen secundarios; leads sin pasaje localizado permanecen pending_verification. Una ficha estructural no equivale a biografía verificada.
+
 ## PRIORIDAD ACTUAL — Etapa 1: Orario como escenario
 
 **Estado:** IN_PROGRESS. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  

@@ -685,6 +685,42 @@
       ]
     }
   };
+    "CHAR-KALI": {
+      appearance: "La sinopsis editorial conecta Kali Familia con el pasado de las hermanas Hiryute; la apariencia detallada de Kali no se trata como verificada en esta tanda.",
+      history: "Su relación con Kali Familia y con el pasado de Tiona y Tione aparece en la ruta editorial de Sword Oratoria volumen 6. Las explicaciones sobre Telskyura y la infancia de las gemelas proceden de fuentes comunitarias y requieren cotejo del volumen.",
+      personality: "No se fija una psicología estable a partir de su afiliación. Los rasgos de los miembros de una Familia no se transfieren automáticamente a su deidad sin escenas propias.",
+      abilities: "No se inventa un repertorio de habilidades que la fuente editorial revisada no detalle. Como deidad, no se le asigna nivel de aventurera.",
+      relationships: "Kali está vinculada a Kali Familia. El pasado de Tiona y Tione se conecta con esa facción; Argana y Bache figuran como integrantes de combate en fuentes secundarias.",
+      conflict: "La tensión de la ruta surge del pasado que las gemelas confrontan en Melen. Las motivaciones particulares de Kali requieren reconstrucción por escenas y localizadores.",
+      sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
+    },
+    "CHAR-ARGANA-KALIF": {
+      appearance: "No se incorpora una descripción visual primaria cotejada en esta tanda; no se inventan edad, estatura o rasgos físicos.",
+      history: "Los compendios comunitarios la identifican como capitana o combatiente de alto rango de Kali Familia y la conectan con el trasfondo de las hermanas Hiryute. La sinopsis editorial de Sword Oratoria volumen 6 confirma el pasado conflictivo general, pero no todas las acciones individuales de Argana.",
+      personality: "No se cierra una psicología basándose solo en su cargo. La afiliación a una facción de combate no prueba que comparta cada práctica o motivación del grupo.",
+      abilities: "Nivel, estilo, armas, técnicas y resultados de combate quedan pendientes de capítulo y página primaria; no se convierten estadísticas de wiki en datos de novela.",
+      relationships: "Kali Familia es su afiliación reportada secundariamente. Tiona y Tione están relacionadas con el pasado de la facción, pero la escena individual de Argana requiere cotejo.",
+      conflict: "La ficha ofrece una ruta consultable para seguir la investigación sin presentar la sinopsis general como prueba de cada duelo o resultado.",
+      sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
+    },
+    "CHAR-BACHE-KALIF": {
+      appearance: "La sinopsis editorial de Sword Oratoria volumen 6 no detalla su apariencia; se evita añadir una descripción no verificada.",
+      history: "Las referencias comunitarias la presentan como capitana o figura de combate de Kali Familia y la relacionan con el pasado de las hermanas Hiryute. El texto del volumen debe verificarse para confirmar cada acción y resultado.",
+      personality: "No se asume que Bache comparta la psicología de Kali ni la de cada integrante de la Familia. Su caracterización individual requiere escenas concretas.",
+      abilities: "No se fijan nivel, técnicas, armamento o resultados de combate sin localizador primario.",
+      relationships: "La afiliación a Kali Familia y el papel de Bache frente a las gemelas provienen de fuentes comunitarias y siguen pendientes de cotejo primario.",
+      conflict: "La ficha permite encontrar la ruta del pasado de las gemelas sin convertir etiquetas comunitarias en hechos confirmados.",
+      sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
+    },
+    "CHAR-SELDAS": {
+      appearance: "No se ha cotejado una descripción visual de Seldas en la fuente primaria; no se inventan edad ni rasgos físicos.",
+      history: "Una ficha comunitaria de Tione lo relaciona con un vínculo emocional importante en la infancia dentro del contexto de Telskyura. Este resumen sirve como pista de lectura y no reemplaza la escena del volumen.",
+      personality: "No se asignan rasgos psicológicos a partir de la relación reportada con Tione.",
+      abilities: "No constan capacidades, nivel, armas o habilidades verificadas en esta tanda.",
+      relationships: "Tione Hiryute es el vínculo de infancia reportado por una fuente comunitaria; la asociación con Kali Familia también permanece en estado secundario.",
+      conflict: "Su papel en la historia se limita por ahora al lugar que las referencias comunitarias le atribuyen en el pasado de Tione; el orden y el desenlace requieren cotejo del texto publicado.",
+      sources: ["https://danmachi.fandom.com/es/wiki/Tione_Hiryute"]
+    },
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({
     get: id => dossiers[id] ? clone(dossiers[id]) : null,
