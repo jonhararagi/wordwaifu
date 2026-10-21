@@ -43,7 +43,7 @@ continuity_variants:
 canon_status: partial_source_checked
 spoiler_level: major
 species: "deity"
-deity_or_race: "diosa"
+deity_or_race: "goddess"
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
@@ -215,7 +215,7 @@ Diosa del fuego/horno, deidad principal de Hestia Familia, amable con Bell y tra
 
 ## Relaciones documentadas
 
-### DM-CHAR-BELL
+### [Bell Cranel](bell-cranel.md)
 
 Hestia concede la protección a Bell y es su diosa; el perfil de DanMachi V dice que lo ama y que se muestra cautelosa ante la posibilidad de que Freya interfiera.
 
@@ -223,7 +223,7 @@ Hestia concede la protección a Bell y es su diosa; el perfil de DanMachi V dice
 
 **Límite:** Cuidado y vínculo declarados en la adaptación; no se infieren escenas privadas ni una emoción idéntica en toda época.
 
-### CHAR-FREYA
+### [Freya](freya.md)
 
 El perfil DanMachi V dice que Hestia vigila a Freya por la posibilidad de que interfiera con su vínculo con Bell.
 
