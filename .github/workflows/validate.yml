@@ -44,6 +44,7 @@ jobs:
           node --check tests/test_character_dossiers.cjs
           node --check tests/test_official_character_roster.cjs
           node --check tests/test_danmachi_character_coverage.cjs
+          node --check scripts/sync-danmachi-status.mjs
           node --check tests/test_danmachi_family_dossier.cjs
           node --check tests/test_project_schema.cjs
           node --check tests/test_mythic_catalog.cjs
@@ -70,6 +71,8 @@ jobs:
         run: node tests/test_danmachi_character_coverage.cjs
       - name: Validate official adaptation roster
         run: node tests/test_official_character_roster.cjs
+      - name: Verify generated DanMachi metrics and roster contract
+        run: node scripts/sync-danmachi-status.mjs --check
       - name: Validate DanMachi lore catalog links and IDs
         run: node lore/danmachi/tools/check-catalog.mjs
       - name: Test DanMachi Hestia Familia dossier evidence
