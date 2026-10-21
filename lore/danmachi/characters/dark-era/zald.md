@@ -165,7 +165,7 @@ Los índices secundarios lo vinculan con Zeus Familia, Behemoth y una etapa de d
 
 ## Relaciones y límites
 
-### CHAR-OTTAR
+### [Ottar](../ottar.md)
 
 Resúmenes secundarios describen un enfrentamiento entre Zald y Ottar; se conserva como pista de lectura, no como cronología ni descripción de combate verificada.
 
