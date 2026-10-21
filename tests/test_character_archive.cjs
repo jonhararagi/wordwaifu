@@ -82,7 +82,12 @@ assert.ok(kaguyaAr.relationships.every(r=>r.claims.length>0),"Every visible rela
 assert.ok(!ryu.claims.some(c=>c.entryId.endsWith("--CONT-ANIME")));
 const ryuAnime=archive.getProfile(index,"CHAR-RYUU-LION","CONT-ANIME","all");
 assert.ok(ryuAnime.claims.length&&ryuAnime.claims.every(c=>c.continuityScopes.includes("CONT-ANIME")));
-assert.equal(ryuAnime.relationships.length,0);
+assert.ok(ryuAnime.relationships.some(r=>r.targetId==="CHAR-ALISE-LOVELACE"),"Official adaptation relationship: Alise guides Ryu.");
+assert.ok(ryuAnime.relationships.some(r=>r.targetId==="CHAR-KAGUYA"),"Official adaptation relationship: Ryu and Kaguya clash but respect each other.");
+assert.ok(ryuAnime.relationships.some(r=>r.targetId==="CHAR-LYRA"),"Official adaptation relationship: Ryu trusts Lyra's judgment.");
+assert.ok(ryuAnime.relationships.some(r=>r.targetId==="CHAR-RYANA-LIETZ"),"Official adaptation roster entries must be navigable without inventing an individual bond.");
+assert.ok(ryuAnime.relationships.every(r=>r.claims.length>0&&r.claims.every(c=>c.continuityScopes.includes("CONT-ANIME"))),"Every relationship shown for Ryu's anime profile must be backed by claims in that selected continuity.");
+assert.ok(!ryuAnime.relationships.some(r=>r.type.includes("fuente comunitaria")),"Historical-only community relationship labels must not leak into the anime profile.");
 assert.ok(!ryuAnime.moments.some(m=>m.id==="ryu-seven-days"));
 const aliseAr=archive.getProfile(index,"CHAR-ALISE-LOVELACE","CONT-AR","all");
 assert.ok(aliseAr.claims.some(c=>c.entryId==="DMR-002-CLM-019--CONT-AR"));
