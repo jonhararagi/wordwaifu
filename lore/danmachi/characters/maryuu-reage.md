@@ -186,19 +186,19 @@ Mariyu Reage (マリュー・レアージュ) tiene identidad, especie y afiliac
 
 ## Estado por periodo
 
-### Perfil oficial de DanMachi IV
+## Estado · CONT-ANIME · Perfil oficial de DanMachi IV
 
 El perfil oficial escribe マリュー・レアージュ, la identifica como humana y la incluye en el roster de Astrea Familia. No ofrece por sí solo una biografía completa.
 
 **Claims:** DMR-006-CLM-154, DMR-007-CLM-021.
 
-### Astrea Record · roster histórico comunitario
+## Estado · CONT-AR · Astrea Record · roster histórico comunitario
 
 Una referencia comunitaria la enumera como integrante de la primera generación de Astrea Familia; no se considera una escena individual cotejada.
 
 **Claims:** DMR-007-CLM-005.
 
-### Astrea Record · pista secundaria de apoyo/curación
+## Estado · CONT-AR · Astrea Record · pista secundaria de apoyo/curación
 
 Una fuente secundaria le atribuye Rea Vindemia, una maza y apoyo en la secuencia contra Alfia; la página/escena de la novela revisada permanece pendiente.
 
