@@ -2,7 +2,7 @@
 id: BATCH-DM-014-DARK-ERA-TEMPORAL-BOUNDARIES
 title: Expedientes de la Era Oscura, rutas de lectura y control temporal
 status: research_map_primary_page_verification_pending
-continuity: CONT-AR; CONT-MAIN-LN; CONT-UNVERIFIED
+continuity: CONT-AR; CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
 ---
 
 # Expedientes y rutas de lectura de la Era Oscura
@@ -449,3 +449,47 @@ Este lote corrige una mezcla temporal del lote anterior. La publicación oficial
 - Índice secundario de volumen 3: https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3
 
 **Cierre:** estos claims y los expedientes mejoran la recuperación y el orden de lectura, pero no equivalen a verificación por página. Para cerrar canon primario, registrar cada pasaje y edición legal consultada.
+
+
+## Valletta Grede — alcance de continuidad y nueva pista secundaria (2026-10-21)
+
+### DMR-014-SRC-004 · DanMachi Wiki — Valletta Grede
+- `source_id`: DMR-014-SRC-004
+- `source_title`: DanMachi Wiki · Valletta Grede
+- `source_type`: secondary_reference
+- `source_url`: https://danmachi.fandom.com/wiki/Valletta_Grede
+- `source_locator`: Ficha comunitaria: Japanese name, alias Arachnia, raza, afiliación, nivel, estado, magia y debut reportado en Sword Oratoria volumen 7.
+- `limits`: Fuente comunitaria/secundaria. No reemplaza el texto de Sword Oratoria 7. Edad, altura, apariencia, rango, habilidad mágica, rivalidades y desenlace se conservan como reportes secundarios hasta localizar escenas concretas.
+
+### DMR-014-SRC-005 · GA Bunko — Sword Oratoria, volumen 7
+- `source_id`: DMR-014-SRC-005
+- `source_title`: GA文庫 · ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア7
+- `source_type`: official_publisher_page
+- `source_url`: https://ga.sbcr.jp/product/9784797389340/
+- `source_locator`: Sinopsis editorial: Loki Familia investiga Daidalos Street y persigue remanentes de Evilus; no identifica a Valletta por nombre en la sinopsis consultada.
+- `limits`: Marco de contexto para la continuidad Sword Oratoria, no prueba de los datos biográficos individuales de Valletta.
+
+### DMR-014-CLM-024 · Valletta Grede — perfil secundario y separación de continuidad
+- `claim_id`: DMR-014-CLM-024
+- `character_id`: CHAR-DARK-VALLETTA-GREDE
+- `claim`: La wiki comunitaria presenta a Valletta Grede como humana, antigua ejecutiva principal de Evilus vinculada a Thanatos Familia, con el alias Arachnia y nivel 5; sitúa su debut en Sword Oratoria volumen 7 y reporta un conflicto personal con Finn. Son datos secundarios que deben comprobarse en la novela, no una prueba de que actuara durante el intervalo central de Astrea Record.
+- `aspect`: identidad secundaria, afiliación, alias y continuidad
+- `era_or_interval`: Sword Oratoria volumen 7 según fuente comunitaria; cualquier actividad anterior dentro de la Era Oscura permanece sin verificar
+- `continuity_scope`: CONT-SO; CONT-UNVERIFIED
+- `source_id`: DMR-014-SRC-004
+- `source_title`: DanMachi Wiki · Valletta Grede
+- `source_type`: secondary_reference
+- `source_locator`: Ficha comunitaria; la wiki refiere Sword Oratoria, volumen 7 como debut en novela ligera, sin localizador de página primaria registrado aquí
+- `source_url`: https://danmachi.fandom.com/wiki/Valletta_Grede
+- `evidence_type`: secondary_summary_reviewed_primary_page_pending
+- `verification_status`: secondary_only_primary_scene_pending
+- `spoiler_level`: major
+- `confidence_note`: Las afirmaciones de personaje proceden de una fuente secundaria. La sinopsis editorial del volumen 7 solo confirma el marco de investigación contra remanentes de Evilus, no la biografía detallada de Valletta.
+
+## Control de identidad y límites de la tercera tanda
+
+- Erebus conserva `CHAR-DARK-EREBUS`; su relación Erebus/Eren y el capítulo 2 «EREN» del volumen 1 siguen como ruta secundaria de búsqueda.
+- Jura Halmer conserva `CHAR-DARK-JURA-HALMER` y `CONT-MAIN-LN`: la fuente secundaria coloca la trampa y el Juggernaut aproximadamente cinco años antes de Bell, separado del intervalo central de Astrea Record.
+- Alecto y Apate conservan sus IDs existentes como candidatos de investigación. No se deducen especie, divinidad, afiliación o poder del nombre.
+- Valletta conserva `CHAR-DARK-VALLETTA-GREDE`; se cambia el foco temporal de búsqueda a `CONT-SO` / `CONT-UNVERIFIED` en vez de atribuirle presencia confirmada en `CONT-AR`.
+- La documentación no afirma haber cotejado las escenas primarias. La siguiente verificación útil es acceder legalmente a los volúmenes y registrar las páginas reales.
