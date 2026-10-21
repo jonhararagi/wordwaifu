@@ -117,8 +117,8 @@ for (const dossier of dossiers) {
     continue;
   }
   const content = fs.readFileSync(file, "utf8");
-  const frontmatter = content.match(/^---\\s*\\r?\\n([\\s\\S]*?)\\r?\\n---(?:\\s|$)/);
-  const idMatch = frontmatter && frontmatter[1].match(/^id:\\s*["']?([^"'\\s#]+)["']?\\s*$/m);
+  const frontmatter = content.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\s|$)/);
+  const idMatch = frontmatter && frontmatter[1].match(/^id:\s*["']?([^"'\s#]+)["']?\s*$/m);
   if (!idMatch || idMatch[1] !== dossier.id) {
     fail("ID del expediente y frontmatter Markdown desincronizados: " + dossier.id + " -> " + record.path);
     continue;
