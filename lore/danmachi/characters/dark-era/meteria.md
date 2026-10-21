@@ -2,19 +2,27 @@
 id: CHAR-METERIA
 universe: danmachi
 type: character
-status: secondary_reference_primary_locator_pending
+status: "secondary_wiki_profile_expanded_primary_locator_pending"
 continuity_scope: "CONT-MAIN-LN; CONT-UNVERIFIED"
 source_refs:
   - "DMR-021-SRC-002"
   - "DMR-021-SRC-006"
+  - "DMR-025-SRC-004"
+  - "DMR-025-SRC-005"
+  - "DMR-025-SRC-008"
 claim_refs:
   - "DMR-021-CLM-004"
   - "DMR-021-CLM-005"
-verification_status: "secondary_reference_primary_locator_pending"
+  - "DMR-025-CLM-007"
+  - "DMR-025-CLM-008"
+verification_status: "secondary_wiki_extract_structured_primary_locator_pending"
 tags: ["Meteria", structured_dossier, character_research, primary_text_pending]
 research_source_refs:
   - "DMR-021-SRC-002"
   - "DMR-021-SRC-006"
+  - "DMR-025-SRC-004"
+  - "DMR-025-SRC-005"
+  - "DMR-025-SRC-008"
 entity_type: character
 canonical_name: "Meteria"
 aliases:
@@ -26,16 +34,16 @@ name_confidence: "Nombre y variantes bajo un único ID; equivalencias de romaniz
 identity_record_id: CHAR-METERIA
 version_record_id: null
 temporal_scope:
-  - "Historia familiar reportada · fechas no verificadas: Referencias comunitarias la incluyen en Hera Familia y la describen como hermana gemela de Alfia. No se ha localizado el pasaje primario que establece estos datos."
-  - "Relación con Bell · novela principal: Una referencia comunitaria identifica a Meteria como madre de Bell. Es un spoiler mayor pendiente de localizador primario; no permite asumir qué personajes conocen el parentesco en cada época."
+  - "Historia familiar reportada · fechas no verificadas: Las referencias comunitarias la incluyen en Hera Familia y la describen como hermana gemela mayor de Alfia. No se ha localizado el pasaje primario que establece estos datos."
+  - "Relación con Bell · novela principal: Las wikis comunitarias identifican a Meteria como madre de Bell. Es un spoiler mayor pendiente de localizador primario; no permite asumir qué personajes conocen el parentesco en cada época."
 appearance_records: []
 continuity_variants:
   - "CONT-UNVERIFIED: Referencias comunitarias la incluyen en Hera Familia y la describen como hermana gemela de Alfia. No se ha localizado el pasaje primario que establece estos datos."
   - "CONT-MAIN-LN: Una referencia comunitaria identifica a Meteria como madre de Bell. Es un spoiler mayor pendiente de localizador primario; no permite asumir qué personajes conocen el parentesco en cada época."
 canon_status: "La información personal registrada en este expediente procede de referencias comunitarias. El parentesco con Alfia, la afiliación a Hera Familia y la maternidad de Bell no se tratan como hechos cotejados página por página en esta ficha."
 spoiler_level: major
-species: "human (secondary source; primary confirmation pending)"
-deity_or_race: "Humana según referencias comunitarias; sin descripción primaria incorporada."
+species: "human (community-wiki report; primary confirmation pending)"
+deity_or_race: "Humana según wikis comunitarias; afiliación y parentescos pendientes de localizador primario."
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
@@ -45,14 +53,16 @@ first_source_locator: "Ficha comunitaria sobre Meteria; capítulo/página primar
 familia_membership:
   - "Hera Familia: afiliación reportada por fuentes comunitarias; periodo y función exactos pendientes."
 roles:
-  - "Figura en referencias comunitarias del contexto de Hera Familia y del pasado familiar de Bell."
-  - "No se asigna oficio, rango, condición de aventurera ni papel dentro de una escena sin localizador primario."
+  - "Figura del pasado familiar de Bell y hermana gemela mayor de Alfia según las fichas comunitarias; parentesco pendiente de localizador primario."
+  - "Las wikis la identifican como antigua integrante de Hera Familia y la marcan como fallecida; periodo, función y circunstancia exacta aún no están verificados."
+  - "La maternidad de Bell se registra como spoiler mayor reportado por fuentes comunitarias. La identidad del padre no se completa por inferencia."
 epithets:
   []
-appearance_summary: "Desconocida a partir de las fuentes primarias registradas en este lote; no inferir rasgos de retratos o parentescos."
-personality_summary: "No hay suficiente evidencia primaria para reconstruir personalidad, hábitos, deseos o conflictos internos. El hecho de que otros personajes la recuerden o se relacionen con ella no sustituye una caracterización directa."
+appearance_summary: "Los extractos comunitarios la describen con cabello blanco y ojos azules; una comparación atribuida a Alfia dice que se parece a Bell salvo por los ojos. La wiki también la presenta como físicamente muy débil por una enfermedad incurable. Estos detalles no se han cotejado con ilustración o pasaje primario en este lote."
+personality_summary: "La wiki atribuye a Alfia la descripción de Meteria como amable, pura y siempre sonriente, alguien cuya presencia tranquilizaba a los demás. También indica que Hera la quería y que Meteria valoraba mucho la vida por su estado de salud. Estas son descripciones secundarias reportadas, no un perfil psicológico exhaustivo ni evidencia de lo que cada personaje sabía."
 motivations:
-  - "Desconocidas por falta de pasajes individuales localizados."
+  - "La wiki la presenta como alguien que valoraba la vida y agradecía el tiempo que tenía por su enfermedad reportada; verificar cómo se expresa en escena."
+  - "No atribuirle objetivos, decisiones ni conocimientos de acontecimientos posteriores sin cronología y pasaje primario."
 psychology_profile:
   dominant_traits:
     - "No verificados."
@@ -139,7 +149,7 @@ knowledge_state:
 open_questions:
   - "Localizar el pasaje primario que establece la afiliación reportada con Hera Familia."
   - "Cotejar el parentesco con Alfia y la maternidad de Bell en edición legal; registrar volumen/capítulo/página."
-  - "No atribuir pareja, padre de Bell, nivel, oficio, habilidades, muerte o fecha de nacimiento desde fuentes comunitarias."
+  - "No identificar al padre de Bell por inferencia; confirmar filiación, estado de fallecida, salud y cronología en edición autorizada. Mantener nivel, oficio y habilidades sin asignar."
   - "Separar el hecho conocido por el lector del conocimiento que tenían los personajes en cada momento."
 related_record_ids: ["CHAR-DARK-ALFIA", "DM-CHAR-BELL"]
 duplicate_candidates: []
@@ -184,6 +194,15 @@ Fuentes comunitarias identifican a Meteria y Alfia como hermanas gemelas. Manten
 Una referencia comunitaria identifica a Meteria como madre de Bell Cranel. Es spoiler mayor; la escena/capítulo primario sigue pendiente y no todos los personajes deben asumir que lo saben.
 
 **Límite:** Afirmación secundaria, pendiente de cotejo en texto publicado.
+
+## Extracto comunitario ampliado · perfil reportado (secundario)
+
+- **Apariencia reportada:** cabello blanco y ojos azules; una descripción atribuida a Alfia compara a Meteria con Bell, salvo por los ojos. Las wikis también la describen como muy débil físicamente por una enfermedad incurable.
+- **Identidad y parentescos reportados:** humana, antigua afiliación a Hera Familia, hermana gemela mayor de Alfia, madre de Bell y fallecida según las fichas comunitarias. Ninguno de estos datos se eleva en esta tanda a verificación por página de la novela.
+- **Personalidad atribuida:** amable, pura y sonriente; fuentes comunitarias resumen que tranquilizaba a otros, valoraba la vida y era querida por Hera. La atribución se conserva como pista narrativa secundaria.
+- **Anecdotario de continuidad incierta:** se mencionan posesividad con la comida, cercanía con Hera y charlas hipotéticas de «qué pasaría si». Parte del contexto lleva a una nota del autor asociada a una línea alternativa sobre Alfia/Zald criando a Bell. No trasladar ese escenario ni los sucesos de esa hipótesis a CONT-MAIN-LN.
+- **Límites:** el padre de Bell no se identifica; no añadir pareja, oficio, rango, habilidades, fecha de nacimiento o conocimiento por escena sin evidencia.
+- **Fuentes/claims:** DMR-021-SRC-002/006; DMR-025-SRC-004/005/008; DMR-021-CLM-004/005 y DMR-025-CLM-007/008. La consulta integral de las páginas quedó inaccesible en esta sesión.
 
 ## Ruta de verificación
 
