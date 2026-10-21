@@ -228,16 +228,16 @@ Al escribir a Lyra, representar la perspicacia como decisiones observables —qu
 
 
 
-## Structured temporal state: strategic support and historical uncertainty
+## Estados temporales estructurados: apoyo estratégico e incertidumbre histórica
 
-### State A · historical Astrea Familia as represented in DanMachi IV · CONT-ANIME
-The official profile describes Lyra as a Pallum adventurer, Level 3, with the epithet Sly Rat. It highlights insight, quick judgment and incisive comments that can help coordinate the group. Ryuu trusts her after Alise. These are specific source-backed details, not proof that Lyra is omniscient or always correct.
+### Estado A · Astrea Familia histórica según DanMachi IV · CONT-ANIME
+El perfil oficial describe a Lyra como aventurera Pallum de nivel 3 con el epíteto Sly Rat. Destaca su perspicacia, rapidez para juzgar situaciones y astucia, así como comentarios que ayudan a coordinar al grupo. Ryuu confía en ella después de Alise. Son rasgos concretos que sí aparecen en el perfil, pero no la convierten en omnisciente ni infalible.
 
-### State B · Astrea Record historical state · CONT-AR
-The catalogue currently links Lyra to the historical Familia through research, but her individual scene-by-scene placement still needs a novel locator. A skill or magic name found in a secondary source stays unverified until checked against the published text.
+### Estado B · Astrea Record histórico · CONT-AR
+El catálogo enlaza a Lyra con el roster histórico de la Familia a través de la investigación, pero su presencia por escena necesita localizador de novela. Los nombres de habilidades o magia hallados en fuentes secundarias siguen sin verificarse hasta consultar el texto publicado.
 
-### State C · after the tragedy
-The official DanMachi IV episode synopsis identifies Ryuu as the only survivor of the first Astrea Familia. It does not narrate Lyra's individual final scene. Keep the group-level adaptation outcome separate from the precise chronology in the novels.
+### Estado C · Después de la tragedia
+La sinopsis oficial del episodio 20 identifica a Ryuu como única superviviente de la primera Astrea Familia. No narra la escena final individual de Lyra. El resultado colectivo de la adaptación debe mantenerse separado de una cronología individual de novela.
 
-Sources and claims: DMR-007-SRC-001 / claims 003 and 024, DMR-007-SRC-006 / claim 026; the secondary affiliation lead is DMR-003-CLM-002.
+Fuentes y claims: DMR-007-SRC-001 / claims 003 y 024, DMR-007-SRC-006 / claim 026; la pista secundaria de afiliación es DMR-003-CLM-002.
 
