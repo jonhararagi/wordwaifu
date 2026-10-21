@@ -6,10 +6,9 @@ status: partial_source_checked_primary_text_pending
 continuity_scope: "CONT-AR; CONT-ANIME"
 source_refs:
   - "DMR-007-SRC-001"
-  - "DMR-007-SRC-004"
   - "DMR-007-SRC-006"
-  - "DMR-001-SRC-005"
   - "DMR-007-SRC-010"
+  - "DMR-001-SRC-005"
 claim_refs:
   - "DMR-007-CLM-017"
   - "DMR-007-CLM-027"
@@ -17,10 +16,9 @@ verification_status: "Official adaptation profile checked; individual Astrea Rec
 tags: ["Asta Knox", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
   - "DMR-007-SRC-001"
-  - "DMR-007-SRC-004"
   - "DMR-007-SRC-006"
-  - "DMR-001-SRC-005"
   - "DMR-007-SRC-010"
+  - "DMR-001-SRC-005"
 entity_type: character
 canonical_name: "Asta Knox"
 aliases:
