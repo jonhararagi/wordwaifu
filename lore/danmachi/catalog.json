@@ -2163,6 +2163,22 @@
       ],
       "status": "partial_source_checked",
       "priority": "critical"
+    },
+    {
+      "id": "DM-CHAR-TEMPORAL-CENSUS-001",
+      "path": "characters/02-censo-temporal-por-eras.md",
+      "type": "index",
+      "tags": [
+        "censo temporal",
+        "personajes multiera",
+        "Era Oscura de Orario",
+        "T-7",
+        "T-5",
+        "T0",
+        "estados temporales"
+      ],
+      "status": "partial_timeline_crosswalk",
+      "priority": "critical"
     }
   ],
   "reservedIds": [
