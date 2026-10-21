@@ -5,16 +5,17 @@ type: character
 status: source_checked_partial
 continuity_scope: CONT-ANIME
 source_refs: ["DMR-006-SRC-001"]
-claim_refs: ["DMR-006-CLM-043","DMR-006-CLM-044","DMR-006-CLM-045"]
+claim_refs: ["DMR-006-CLM-043","DMR-006-CLM-044","DMR-006-CLM-045","DMR-041-CLM-001","DMR-041-CLM-004"]
 verification_status: source_checked_partial
-tags: ["Heith Velvet","Heith","ヘイズ・ベルベット","Freya Familia","Jefa de unidad médica y herbolaria","CONT-ANIME"]
+tags: ["Heith Velvet","Heith","Haze","Heizu","ヘイズ","ヘイズ・ベルベット","Familia Chronicle","episode Haze","Freya Familia","Jefa de unidad médica y herbolaria","CONT-ANIME"]
 ---
 # Heith Velvet
 
 ## Identidad y alcance
 
 - **ID estable:** `CHAR-HEITH-VELVET`.
-- **Nombres y alias:** Heith Velvet, Heith, ヘイズ・ベルベット.
+- **Nombres y alias:** Heith Velvet; Heith; Haze/Heizu (romanizaciones del título japonés `episode ヘイズ`); ヘイズ; ヘイズ・ベルベット.
+- **Identidad cruzada:** el título editorial de *Familia Chronicle episode Haze* y el perfil oficial de adaptación usan la misma forma japonesa básica. Se mantiene un único ID, `CHAR-HEITH-VELVET`; no existe una ficha independiente `CHAR-HAZE`. [DMR-041-CLM-001]
 - **Afiliación publicada:** Freya Familia.
 - **Especie:** Humana.
 - **Nivel:** 4 en el estado de adaptación citado.
@@ -28,6 +29,8 @@ El retrato oficial permite reconocer al personaje, pero no constituye una descri
 ## Historia y función narrativa
 
 Encabeza una unidad de curanderos y herbolarios dedicada a atender lesiones dentro de Freya Familia. Esta síntesis no es una biografía cronológica completa. Los antecedentes, fechas, cambios de afiliación y desenlace requieren localizar escenas narrativas.
+
+La sinopsis editorial de *Familia Chronicle episode Haze* la sitúa en el centro del relato, describe su agotamiento por el trabajo de curación y presenta una recompensa por un troll ensangrentado que moviliza a Ottar y otros guerreros. Este es un resumen promocional y no una cronología del volumen. [DMR-041-CLM-002; DMR-041-CLM-003] Véase el [expediente parcial del episodio](../events/timeline/EVT-DM-FC-HAZE-001.md).
 
 ## Personalidad y conducta
 
