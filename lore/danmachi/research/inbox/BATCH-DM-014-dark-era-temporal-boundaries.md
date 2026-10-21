@@ -101,11 +101,11 @@ Este lote corrige una mezcla temporal del lote anterior. La publicación oficial
 
 ### DMR-014-CLM-004 · Rudra — dos periodos distintos
 - `claim_id`: DMR-014-CLM-004
-- `claim`: Las fuentes secundarias vinculan a Rudra con Rudra Familia y Evilus, pero la trampa del Juggernaut atribuida a esa Familia pertenece a una fase posterior a la historia central de Astrea Record.
+- `claim`: Las fuentes secundarias vinculan a Rudra con Rudra Familia/Evilus y atribuyen a esa Familia una trampa posterior que provoca al Juggernaut. Ese incidente pertenece a la continuidad de la novela principal, aproximadamente cinco años antes de Bell; la presencia personal de Rudra en el intervalo central de Astrea Record no está confirmada.
 - `character_id`: CHAR-DARK-RUDRA
 - `aspect`: cronología y afiliación
 - `era_or_interval`: Aparición en novela pendiente; trampa posterior alrededor de cinco años antes de Bell
-- `continuity_scope`: CONT-AR
+- `continuity_scope`: CONT-MAIN-LN; CONT-UNVERIFIED
 - `source_id`: DMR-014-SRC-003
 - `source_title`: DanMachi Wiki · Rudra Familia
 - `source_type`: secondary_research_lead
@@ -152,11 +152,11 @@ Este lote corrige una mezcla temporal del lote anterior. La publicación oficial
 
 ### DMR-014-CLM-007 · Olivas Act — continuidad separada
 - `claim_id`: DMR-014-CLM-007
-- `claim`: Fuentes secundarias sitúan el debut de Olivas Act en Sword Oratoria volumen 3 y lo relacionan con Evilus/Enyo; eso no demuestra participación en el intervalo central de Astrea Record.
+- `claim`: Fuentes secundarias sitúan el debut reportado de Olivas Act en Sword Oratoria volumen 3 y lo relacionan con Evilus/Enyo; no se confirma su presencia en el intervalo central de Astrea Record.
 - `character_id`: CHAR-DARK-OLIVAS-ACT
 - `aspect`: cronología y facción
 - `era_or_interval`: Arco de Vendetta/Enyo; fecha relativa a Astrea Record no confirmada
-- `continuity_scope`: CONT-MAIN-LN
+- `continuity_scope`: CONT-SO; CONT-UNVERIFIED
 - `source_id`: DMR-014-SRC-003
 - `source_title`: DanMachi Wiki · Olivas Act
 - `source_type`: secondary_research_lead
