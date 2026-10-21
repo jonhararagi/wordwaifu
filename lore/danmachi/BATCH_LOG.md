@@ -412,3 +412,17 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se normalizaron los claims `DMR-006-CLM-061`–`DMR-006-CLM-063` para utilizar `CHAR-LUNOA-FAUST`, de forma que un nombre alternativo no se interprete como un personaje nuevo.
 - La variante “Lunoire Faust” queda como alias de búsqueda; se conserva el mismo ID y se añade al registro de catálogo.
 - **Sin creación ni eliminación de IDs.** La fuente oficial de adaptación sigue siendo CONT-ANIME; escenas de novela aún requieren localizadores primarios.
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-005 · Cinco expedientes pendientes de la Era Oscura
+
+- **Fichas estructuradas:** `characters/dark-era/alfia.md`, `zald.md`, `ardee-varma.md`, `valletta-grede.md` y `vito.md`.
+- **IDs estables conservados:** `CHAR-DARK-ALFIA`, `CHAR-DARK-ZALD`, `CHAR-DARK-ARDEE-VARMA`, `CHAR-DARK-VALLETTA-GREDE`, `CHAR-DARK-VITO`. No se crearon identidades ni versiones temporales nuevas.
+- **Estructura:** identidad y aliases, periodo/continuidad, afiliación, psicología delimitada por fuente, evidencia por claim, estados por periodo, relaciones trazables donde existen y preguntas abiertas.
+- **Fuentes/claims existentes usados:** `DMR-014-CLM-001` (Zald), `DMR-014-CLM-002` (Alfia), `DMR-014-CLM-006` (Vito), `DMR-014-CLM-008` (Ardee en adaptación manga), y pistas de cobertura `DMR-013-CLM-001`, `-002`, `-006`, `-008`, `-009`.
+- **Claims atómicos añadidos al paquete DMR-014:** `DMR-014-CLM-021` (parentesco Alfia–Meteria reportado), `DMR-014-CLM-022` (afiliación de Alfia a Hera Familia reportada) y `DMR-014-CLM-023` (enfrentamiento Zald–Ottar reportado). Los tres se etiquetan como pistas secundarias; no constituyen verificación por página.
+- **Regla de evidencia:** las rutas secundarias a capítulos 8–9 y a historias extra de Astrea Record se conservan como objetivos de lectura, no como localizadores primarios de escena. No se fijan páginas ni se promueven a confirmados nivel, magia, enfermedad, destinos o motivos sin una fuente primaria.
+- **Ardee Varma:** el perfil oficial de la adaptación manga de Square Enix respalda únicamente los detalles que expresa: Ganesha Familia, epíteto reportado Vyasa, sentido de justicia y cercanía con Ryuu. No se la añade a Astrea Familia ni se presenta el perfil manga como transcripción de la novela ligera.
+- **Valletta Grede:** el expediente permanece como `discovery_lead_only`; la presencia/biografía en la novela publicada no está confirmada por este lote.
+- **Catálogo:** los cinco registros existentes se sincronizaron con su nivel real de evidencia; se conservan 152 registros y 51 IDs reservados. Sin nuevos IDs ni colisiones intencionadas.
+- **Pendiente crítico:** lectura directa de la edición publicada de Astrea Record, con capítulo y página exactos, para todas las trayectorias individuales.
