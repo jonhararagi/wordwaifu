@@ -175,13 +175,13 @@ Ryana Lietz (リャーナ・リーツ; también buscable como Liana Leets) cuent
 
 ## Estado por periodo
 
-### Perfil oficial de DanMachi IV
+## Estado · CONT-ANIME · Perfil oficial de DanMachi IV
 
 La ficha oficial la identifica como humana y miembro de Astrea Familia, pero no proporciona una biografía individual desarrollada.
 
 **Claims:** DMR-006-CLM-151, DMR-007-CLM-018.
 
-### Astrea Record · roster histórico comunitario
+## Estado · CONT-AR · Astrea Record · roster histórico comunitario
 
 Una referencia comunitaria incluye a Ryana en la primera generación histórica. No se ha localizado una escena individual publicada, historia corta propia ni contribución táctica verificable en este lote.
 
