@@ -203,7 +203,7 @@ Capitán de Loki Familia; el perfil destaca inteligencia y aptitud organizativa 
 
 ## Relaciones documentadas
 
-### DM-CHAR-LOKI
+### [Loki](loki.md)
 
 Finn es capitán de Loki Familia en el perfil Sword Oratoria; se le presenta en una relación institucional de liderazgo con la Familia de Loki.
 
@@ -211,7 +211,7 @@ Finn es capitán de Loki Familia en el perfil Sword Oratoria; se le presenta en 
 
 **Límite:** Cargo de adaptación; no fija todas sus interacciones privadas con Loki.
 
-### CHAR-RAUL-NOORD
+### [Raul Nord](raul-nord.md)
 
 El perfil oficial dice que Finn confía en Raul para dirigir miembros de menor rango durante emergencias.
 
