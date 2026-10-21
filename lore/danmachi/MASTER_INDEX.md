@@ -182,3 +182,4 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Maxim](characters/maxim.md) — capitán reportado por referencias secundarias; cargo y nivel por etapa pendientes.
 - [Meteria](characters/dark-era/meteria.md) — expediente con spoiler mayor; parentesco y maternidad reportados secundariamente.
 - [DANMACHI-RESEARCH-021 · Zeus, Hera y sus Familias](research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md) — separa evidencia oficial auxiliar y referencias secundarias.
+- [DANMACHI-RESEARCH-026 · Alfia, Zald, Valletta, Jura y Erebus](research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md) — amplia cinco fichas desde extractos comunitarios, con la continuidad y la verificación primaria pendientes.
