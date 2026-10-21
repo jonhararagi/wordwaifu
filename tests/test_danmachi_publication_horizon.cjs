@@ -43,4 +43,24 @@ for (let i=1;i<=6;i++) {
   const id = "DMR-040-SRC-" + String(i).padStart(3,"0");
   assert.ok(sourceRegistry.includes("source_id: " + id), "Missing master source registry entry " + id);
 }
+for (let i=1;i<=5;i++) {
+  const claimId = "DMR-040-CLM-" + String(i).padStart(3,"0");
+  assert.ok(note.includes("### " + claimId + " ·"), "Missing explicit publication metadata claim " + claimId);
+  assert.ok(sourceRegistry.includes(claimId), "Source registry must connect evidence to claim " + claimId);
+}
+const claimMappings = [
+  ["DMR-040-SRC-001", "DMR-040-CLM-001"],
+  ["DMR-040-SRC-002", "DMR-040-CLM-002"],
+  ["DMR-040-SRC-003", "DMR-040-CLM-003"],
+  ["DMR-040-SRC-004", "DMR-040-CLM-004"],
+  ["DMR-040-SRC-005", "DMR-040-CLM-005"],
+  ["DMR-040-SRC-006", "DMR-040-CLM-002"]
+];
+for (const [sourceId, claimId] of claimMappings) {
+  const start = sourceRegistry.indexOf("## " + sourceId);
+  assert.ok(start >= 0, "Missing source " + sourceId);
+  const next = sourceRegistry.indexOf("\n## ", start + 1);
+  const entry = sourceRegistry.slice(start, next < 0 ? undefined : next);
+  assert.ok(entry.includes("claims_supported:") && entry.includes(claimId), sourceId + " must support " + claimId);
+}
 process.stdout.write("PASS DanMachi publication horizon: release metadata is indexed, date-bounded, and not promoted to future canon.\n");
