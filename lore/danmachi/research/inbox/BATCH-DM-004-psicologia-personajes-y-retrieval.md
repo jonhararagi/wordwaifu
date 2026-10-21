@@ -61,8 +61,8 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 
 ### DMR-002-CLM-001 · DM-CHAR-BELL · motivación
 - `character_id`: DM-CHAR-BELL
-- `aspect`: motivación
-- `claim`: El perfil oficial de la adaptación dice que Bell fue a Orario por admiración hacia los héroes.
+- `aspect`: motivación, habilidad y estado de adaptación
+- `claim`: El perfil oficial de DanMachi V presenta a Bell como humano de nivel 5 con el epíteto Rabbit Foot; dice que llegó a Orario por admiración hacia los héroes y vincula su crecimiento acelerado con la habilidad Liaris Freese (リアリス・フレーゼ) y su admiración por Ais.
 - `era_or_interval`: Historia principal; estado descrito en el perfil de DanMachi V, sin fecha interna exacta.
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-002-SRC-001
@@ -72,7 +72,7 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 - `source_url`: https://danmachi.com/danmachi5/character
 - `evidence_type`: explicit_character_profile
 - `verification_status`: source_checked
-- `confidence_note`: La fuente respalda el motivo general en la adaptación; no implica que Bell actúe siempre sin miedo.
+- `confidence_note`: Nivel, epíteto y habilidad son una instantánea del perfil DanMachi V; no deben proyectarse sin verificación al volumen 1 ni a todos los estados de la novela.
 
 ### DMR-002-CLM-002 · DM-CHAR-BELL · relación
 - `character_id`: DM-CHAR-BELL
@@ -91,8 +91,8 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 
 ### DMR-002-CLM-003 · DM-CHAR-HESTIA · valores y motivación
 - `character_id`: DM-CHAR-HESTIA
-- `aspect`: valores y motivación
-- `claim`: Hestia es descrita como bondadosa y continúa trabajando para ayudar a pagar la daga que le dio a Bell.
+- `aspect`: identidad divina, valores y motivación
+- `claim`: El perfil oficial de DanMachi V presenta a Hestia como diosa del fuego y del horno y deidad principal de Hestia Familia; la describe como bondadosa y trabajando por turnos para contribuir al pago de la Hestia Knife que entregó a Bell.
 - `era_or_interval`: Historia principal; perfil de DanMachi V.
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-002-SRC-001
@@ -102,7 +102,7 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 - `source_url`: https://danmachi.com/danmachi5/character
 - `evidence_type`: explicit_character_profile
 - `verification_status`: source_checked
-- `confidence_note`: Los trabajos demuestran cuidado práctico, no que vender alimentos sea su afición o comida favorita.
+- `confidence_note`: El trabajo es una acción práctica descrita por la adaptación, no evidencia de un gusto alimentario. La deuda no se asigna como estado perpetuo en todos los periodos.
 
 ### DMR-002-CLM-004 · DM-CHAR-HESTIA · relación y conducta
 - `character_id`: DM-CHAR-HESTIA
@@ -121,8 +121,8 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 
 ### DMR-002-CLM-005 · DM-CHAR-AIS · conducta y relación
 - `character_id`: DM-CHAR-AIS
-- `aspect`: conducta y relación
-- `claim`: El perfil resalta la habilidad extraordinaria de Ais con la espada y dice que le interesa el crecimiento inusualmente rápido de Bell.
+- `aspect`: identidad, rango de perfil y relación
+- `claim`: El perfil oficial de DanMachi III identifica a Ais como humana de nivel 6, con el epíteto Sword Princess (剣姫); resalta su capacidad con la espada y dice que le interesa el crecimiento inusualmente rápido de Bell.
 - `era_or_interval`: Estado de la historia principal representado en DanMachi III; fecha interna no fijada.
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-002-SRC-003
@@ -132,7 +132,7 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 - `source_url`: https://danmachi.com/danmachi3/character
 - `evidence_type`: explicit_character_profile
 - `verification_status`: source_checked
-- `confidence_note`: El interés por su crecimiento es explícito; no prueba por sí solo reciprocidad romántica.
+- `confidence_note`: Es un estado del perfil de DanMachi III, no un rango perpetuo. El interés por el crecimiento de Bell no prueba por sí solo reciprocidad romántica.
 
 ### DMR-002-CLM-006 · DM-CHAR-AIS · límite de evidencia
 - `character_id`: DM-CHAR-AIS
@@ -151,8 +151,8 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 
 ### DMR-002-CLM-007 · DM-CHAR-EINA · rol y relaciones
 - `character_id`: DM-CHAR-EINA
-- `aspect`: rol y relaciones
-- `claim`: Eina aparece como asesora de la Guild asignada a Bell y fuente de conocimientos sobre el Dungeon y la ciudad.
+- `aspect`: especie, rol profesional y relación
+- `claim`: El perfil oficial de DanMachi III identifica a Eina Tulle como medio elfa y como una de las recepcionistas más populares de la Guild; es la asesora asignada a Bell y le proporciona información sobre el Dungeon y la ciudad.
 - `era_or_interval`: Historia principal; perfil de DanMachi III, fecha interna sin determinar.
 - `continuity_scope`: CONT-ANIME
 - `source_id`: DMR-002-SRC-003
@@ -162,7 +162,7 @@ Cada registro mantiene `character_id`, aspecto, claim, intervalo/época, continu
 - `source_url`: https://danmachi.com/danmachi3/character
 - `evidence_type`: explicit_character_profile
 - `verification_status`: source_checked
-- `confidence_note`: No fija su puesto ni su relación con el OC en una época anterior.
+- `confidence_note`: Es el retrato de la adaptación; no fija su edad, el puesto exacto que ocupaba cinco años antes ni una relación con un OC previo a la trama.
 
 ### DMR-002-CLM-008 · DM-CHAR-EINA · conducta
 - `character_id`: DM-CHAR-EINA
