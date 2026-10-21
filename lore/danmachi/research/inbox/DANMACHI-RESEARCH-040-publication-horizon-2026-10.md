@@ -33,6 +33,16 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 - source_refs: [DMR-040-SRC-001]
 - claim_type: publication_metadata
 - claim: La ficha editorial de GA Bunko registra el lanzamiento del volumen principal 21 para 2025-10-15.
+- aspect: publication date
+- era_or_interval: corte editorial al 2026-10-21
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-040-SRC-001
+- source_title: GA Bunko · DanMachi novela principal, volumen 21
+- source_type: official_publisher_metadata
+- source_locator: Ficha editorial: fecha de lanzamiento
+- source_url: https://ga.sbcr.jp/product/9784815632946/
+- verification_status: source_checked
+- confidence_note: Fecha editorial publicada; no valida detalles narrativos.
 - observed_fact: la ficha editorial de GA Bunko registra el lanzamiento del volumen principal 21 para 2025-10-15.
 - continuity_scope: metadatos editoriales de `CONT-MAIN-LN`
 - confidence: alta para la fecha publicada por la editorial; no describe por sí misma el contenido del volumen.
@@ -43,6 +53,16 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 - source_refs: [DMR-040-SRC-002, DMR-040-SRC-006]
 - claim_type: announced_publication_metadata
 - claim: La ficha y el anuncio editorial indican el lanzamiento previsto de DanMachi 22 para 2026-12-15.
+- aspect: announced publication date
+- era_or_interval: corte editorial al 2026-10-21
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-040-SRC-002
+- source_title: GA Bunko · DanMachi novela principal, volumen 22 anunciado
+- source_type: official_publisher_metadata
+- source_locator: Ficha editorial: fecha programada
+- source_url: https://ga.sbcr.jp/product/9784815642907/
+- verification_status: source_checked_partial
+- confidence_note: Anuncio consultado antes de la fecha prevista; revalidar el lanzamiento.
 - observed_fact: la ficha y el anuncio editorial indican el lanzamiento previsto de DanMachi 22 para 2026-12-15.
 - snapshot_status: futuro / no publicado al 2026-10-21.
 - limits: no atribuir hechos, relaciones, poderes o resultados de la historia a partir de la fecha o de una sinopsis promocional.
@@ -52,6 +72,16 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 - source_refs: [DMR-040-SRC-003, DMR-040-SRC-006]
 - claim_type: announced_publication_metadata
 - claim: La editorial anuncia Sword Oratoria 17 para 2027-01-15.
+- aspect: announced publication date
+- era_or_interval: corte editorial al 2026-10-21
+- continuity_scope: CONT-SO
+- source_id: DMR-040-SRC-003
+- source_title: GA Bunko · Sword Oratoria, volumen 17 anunciado
+- source_type: official_publisher_metadata
+- source_locator: Ficha editorial: fecha programada
+- source_url: https://ga.sbcr.jp/product/9784815642914/
+- verification_status: source_checked_partial
+- confidence_note: Anuncio consultado antes de la fecha prevista; no usar como evidencia de escenas.
 - observed_fact: la editorial anuncia Sword Oratoria 17 para 2027-01-15.
 - snapshot_status: futuro / no publicado al 2026-10-21.
 - limits: la fecha anunciada no confirma escenas ni estados futuros de Ais o Loki Familia.
@@ -61,6 +91,16 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 - source_refs: [DMR-040-SRC-004, DMR-040-SRC-006]
 - claim_type: announced_publication_metadata
 - claim: La editorial anuncia Familia Chronicle episode Amid para 2027-02-15.
+- aspect: announced publication date
+- era_or_interval: corte editorial al 2026-10-21
+- continuity_scope: CROSS-CONTINUITY
+- source_id: DMR-040-SRC-004
+- source_title: GA Bunko · Familia Chronicle, episode Amid anunciado
+- source_type: official_publisher_metadata
+- source_locator: Ficha editorial: fecha programada
+- source_url: https://ga.sbcr.jp/product/9784815642938/
+- verification_status: source_checked_partial
+- confidence_note: Anuncio editorial; no crear contenido narrativo antes de publicación y cotejo.
 - observed_fact: la editorial anuncia Familia Chronicle episode Amid para 2027-02-15.
 - snapshot_status: futuro / no publicado al 2026-10-21.
 - limits: no construir una biografía completa o nuevas relaciones a partir del título o del eslogan promocional.
@@ -70,6 +110,16 @@ Las fichas con localizador, fecha de acceso y límites están registradas en [el
 - source_refs: [DMR-040-SRC-005]
 - claim_type: publication_metadata
 - claim: La ficha editorial registra Familia Chronicle episode Haze para 2026-05-15.
+- aspect: publication date
+- era_or_interval: corte editorial al 2026-10-21
+- continuity_scope: CROSS-CONTINUITY
+- source_id: DMR-040-SRC-005
+- source_title: GA Bunko · Familia Chronicle, episode Haze
+- source_type: official_publisher_metadata
+- source_locator: Ficha editorial: fecha de lanzamiento
+- source_url: https://ga.sbcr.jp/product/9784815640675/
+- verification_status: source_checked
+- confidence_note: Fecha publicada; sinopsis aparte no sustituye lectura de la obra.
 - observed_fact: la ficha editorial registra episode Haze para 2026-05-15.
 - snapshot_status: publicado al 2026-10-21.
 - limits: el lanzamiento permite investigar el material; no equivale a lectura integral ni resuelve por sí solo la equivalencia de romanizaciones `Haze` / `Heith`.
