@@ -493,3 +493,21 @@ Este lote corrige una mezcla temporal del lote anterior. La publicación oficial
 - Alecto y Apate conservan sus IDs existentes como candidatos de investigación. No se deducen especie, divinidad, afiliación o poder del nombre.
 - Valletta conserva `CHAR-DARK-VALLETTA-GREDE`; se cambia el foco temporal de búsqueda a `CONT-SO` / `CONT-UNVERIFIED` en vez de atribuirle presencia confirmada en `CONT-AR`.
 - La documentación no afirma haber cotejado las escenas primarias. La siguiente verificación útil es acceder legalmente a los volúmenes y registrar las páginas reales.
+
+
+### DMR-014-CLM-025 · Erebus y el reclutamiento reportado de Alfia/Zald
+- `claim_id`: DMR-014-CLM-025
+- `character_ids`: [CHAR-DARK-EREBUS, CHAR-DARK-ALFIA, CHAR-DARK-ZALD]
+- `claim`: La ficha comunitaria de Erebus reporta que se acerca a Alfia y Zald para que participen en el conflicto de Astrea Record como antagonistas de la generación siguiente. Se conserva como resumen secundario; no se da por confirmado el diálogo exacto, los motivos individuales ni el momento concreto del contacto.
+- `aspect`: reclutamiento reportado y relación histórica
+- `era_or_interval`: Astrea Record, volumen 3 según la ruta secundaria; página y escena sin cotejar
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-014-SRC-003
+- `source_title`: DanMachi Wiki · Erebus/Alfia/Zald (referencias comunitarias)
+- `source_type`: secondary_research_lead
+- `source_locator`: Resúmenes comunitarios de Erebus, Alfia y Zald; no es localizador de la edición japonesa
+- `source_url`: https://danmachi.fandom.com/wiki/Erebus
+- `evidence_type`: secondary_summary_reviewed_primary_page_pending
+- `verification_status`: secondary_only_primary_scene_pending
+- `spoiler_level`: major
+- `confidence_note`: Útil para construir una ruta de búsqueda; no atribuir subordinación total, amistad ni una motivación privada sin escena directa.
