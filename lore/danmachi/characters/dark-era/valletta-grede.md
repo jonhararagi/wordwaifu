@@ -8,15 +8,21 @@ source_refs:
   - "DMR-014-SRC-004"
   - "DMR-014-SRC-005"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-003"
+  - "DMR-026-SRC-007"
 claim_refs:
   - "DMR-014-CLM-024"
   - "DMR-013-CLM-009"
+  - "DMR-026-CLM-005"
+  - "DMR-026-CLM-006"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Valletta Grede", Era Oscura, historical dossier, CONT-AR, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-004"
   - "DMR-014-SRC-005"
   - "DMR-013-SRC-001"
+  - "DMR-026-SRC-003"
+  - "DMR-026-SRC-007"
 entity_type: character
 canonical_name: "Valletta Grede"
 aliases:
@@ -191,3 +197,16 @@ La fuente comunitaria reporta que Valletta guardaba rencor a Finn por sus ataque
 - Perfil/índice comunitario: referencia secundaria usada para orientar la búsqueda; no sustituye el texto japonés publicado.
 - [GA Bunko · Sword Oratoria, volumen 7](https://ga.sbcr.jp/product/9784797389340/): la sinopsis editorial sitúa a Loki Familia investigando Daidalos Street y a remanentes de Evilus; no confirma por sí sola los datos personales de Valletta.
 - [Ficha comunitaria de Valletta Grede](https://danmachi.fandom.com/wiki/Valletta_Grede): ruta secundaria para buscar alias, afiliación y escenas; no sustituye el texto de la novela.
+
+
+## Ampliación de investigación DMR-026 · perfil comunitario y contexto editorial separados
+
+- **Identidad reportada:** humana, antigua ejecutiva principal de Evilus y miembro de Thanatos Familia; la wiki reporta nivel 5, cabello rosado, ojos amarillos y alias “Arachnia” (殺帝; lectura romanizada por la wiki como *Arakunia*). También la presenta como reencarnación de Grainne; este punto no se considera verificado.
+- **Personalidad reportada:** la ficha comunitaria la describe como estricta y directa con Thanatos, resentida con Finn por los ataques contra bases de Evilus y deseosa de enfrentarlo personalmente. El mismo resumen dice que puede suplicar cuando queda en desventaja. Es una lectura secundaria, no una caracterización de todas sus escenas.
+- **Magia reportada:** Shaldo, barrera que reduce atributos de quienes entran en una zona y reitera el efecto al moverse dentro de ella, con excepciones que Valletta prepara. La wiki describe un radio de 60 metros en una escena, un cántico muy largo, alto consumo de Mind y cancelación si Valletta abandona el área. No debe tratarse como magia infalible, ni sus cifras como verificadas.
+- **Equipo reportado:** espada maldita capaz de infligir heridas descritas por la wiki como incurables.
+- **Marco de continuidad:** la sinopsis editorial de *Sword Oratoria*, volumen 7, describe la investigación de Loki Familia contra remanentes de Evilus. Esa fuente oficial confirma el contexto del arco, pero **no** verifica el nombre, afiliación, nivel, magia o destino individual de Valletta.
+- **Límite temporal:** no se le asigna participación en el núcleo de *Astrea Record* solo por los vínculos secundarios con Evilus.
+
+**Evidencia:** DMR-026-CLM-005/006 (wiki secundaria) y DMR-026-SRC-007 (sinopsis editorial de contexto).  
+**Fuentes:** [DanMachi Wiki — Valletta Grede](https://danmachi.fandom.com/wiki/Valletta_Grede) · [GA Bunko — Sword Oratoria 7](https://ga.sbcr.jp/product/9784797389340/).
