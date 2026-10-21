@@ -20,7 +20,7 @@ assert.ok(fs.existsSync(characterPath) && fs.existsSync(eventPath) && fs.existsS
 const characterText = fs.readFileSync(characterPath, "utf8");
 const eventText = fs.readFileSync(eventPath, "utf8");
 const researchText = fs.readFileSync(researchPath, "utf8");
-assert.match(characterText, /ID estable:\s*`CHAR-HEITH-VELVET`/);
+assert.ok(characterText.includes("**ID estable:** `CHAR-HEITH-VELVET`"), "Character card must expose the stable identity.");
 assert.match(characterText, /Haze\/Heizu/);
 assert.match(characterText, /EVT-DM-FC-HAZE-001/);
 assert.match(eventText, /continuity_scope: CROSS-CONTINUITY/);
@@ -37,7 +37,7 @@ for (const [edgeId, from, claim] of [
   assert.equal(edge.from, from);
   assert.equal(edge.to, "EVT-DM-FC-HAZE-001");
   assert.equal(edge.continuity, "CROSS-CONTINUITY");
-  assert.equal(edge.evidenceStatus, "source_checked_partial");
+  assert.equal(edge.evidenceStatus, "source_checked");
   assert.equal(edge.claimRef, claim);
   assert.equal(edge.claimPath, "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md");
 }
