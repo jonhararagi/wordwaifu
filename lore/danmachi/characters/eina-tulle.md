@@ -34,7 +34,7 @@ continuity_variants:
 canon_status: partial_source_checked
 spoiler_level: major
 species: "half-elf"
-deity_or_race: "medio elfa"
+deity_or_race: "half-elf"
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
@@ -168,7 +168,7 @@ El rol es compatible con una orientación práctica hacia un aventurero novato, 
 
 ## Relaciones documentadas
 
-### DM-CHAR-BELL
+### [Bell Cranel](bell-cranel.md)
 
 Eina es la asesora asignada a Bell y le proporciona información sobre el Dungeon y la ciudad, según el perfil oficial.
 
