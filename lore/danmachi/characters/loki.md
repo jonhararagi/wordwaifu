@@ -35,7 +35,7 @@ continuity_variants:
 canon_status: partial_source_checked
 spoiler_level: major
 species: "deity"
-deity_or_race: "diosa"
+deity_or_race: "goddess"
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
@@ -167,7 +167,7 @@ La página oficial identifica a Loki como diosa principal y registra antipatía 
 
 ## Relaciones documentadas
 
-### DM-CHAR-HESTIA
+### [Hestia](hestia.md)
 
 El perfil oficial de Sword Oratoria menciona una antipatía personal de Loki hacia Hestia. La fuente no prueba por sí sola una guerra entre Familias ni explica todos los motivos.
 
@@ -175,7 +175,7 @@ El perfil oficial de Sword Oratoria menciona una antipatía personal de Loki hac
 
 **Límite:** Relación interpersonal documentada por el perfil, alcance temporal incompleto.
 
-### DM-FAM-LOKI
+### [Familia Loki](../familias/loki-familia.md)
 
 Loki es la deidad principal y líder de la Familia Loki según los perfiles oficiales consultados.
 
