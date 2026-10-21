@@ -551,3 +551,25 @@
 - Las relaciones personales se registran solo cuando la traducción comunitaria incluye una escena reconocible; se mantienen como leads secundarios.
 - No se reproduce texto de las traducciones comunitarias en bloque; solo se guardan resúmenes propios de los rasgos que sirven como rutas de lectura.
 - **Resultado:** cinco fichas con plantilla multiera más completa y trazabilidad añadida; no equivale a verificación directa de las cinco historias japonesas ni a canon aprobado.
+
+
+- **DMR-007-SRC-011** — DanMachi Wiki · minor characters and Astrea Record (community secondary): https://danmachi.fandom.com/wiki/Minor_Characters · https://danmachi.fandom.com/wiki/DanMachi_~Memoria_Freese~/Astraea_Record
+  - **Uso:** ruta de búsqueda secundaria para los reportes sobre Maryuu/Mariyu Reage, Rea Vindemia y una maza.
+  - **Límite:** las wikis y el contenido asociado al evento Memoria Freese no sustituyen Astrea Record revisado. La escena, el nombre exacto del hechizo y los límites de la curación quedan pendientes de cotejo.
+
+### DMR-007-CLM-032 · Mariyu Reage · indicios secundarios de apoyo y curación
+- `claim_id`: DMR-007-CLM-032
+- `claim`: Referencias comunitarias atribuyen a Mariyu Reage una función de apoyo durante el conflicto contra Alfia, Rea Vindemia y una maza. Son pistas de lectura: la presencia, el nombre exacto de la magia, su alcance y sus límites no están verificados aquí por página de la novela japonesa revisada.
+- `character_ids`: [CHAR-MARIYU-LEAGE]
+- `aspect`: habilidades atribuidas y función en escenas
+- `era_or_interval`: Astrea Record, periodo histórico; secuencia y página sin cotejar
+- `continuity_scope`: CONT-AR
+- `source_id`: DMR-007-SRC-011
+- `source_type`: COMMUNITY_SECONDARY
+- `source_title`: DanMachi Wiki · minor characters / Astraea Record (Memoria Freese)
+- `source_locator`: Resúmenes comunitarios relacionados con Maryuu/Mariyu Reage; capítulo y página de la novela revisada pendientes
+- `source_url`: https://danmachi.fandom.com/wiki/Minor_Characters
+- `evidence_type`: secondary_research_lead
+- `verification_status`: secondary_only_primary_scene_pending
+- `spoiler_level`: major
+- `confidence_note`: No inferir un rol sanador exclusivo, un nivel, una técnica confirmada o un límite de magia sin localizar la escena en la edición publicada.
