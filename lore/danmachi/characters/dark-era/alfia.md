@@ -2,61 +2,178 @@
 id: CHAR-DARK-ALFIA
 universe: danmachi
 type: character
-status: pending_primary_text_check
-continuity_scope: CONT-AR
+status: secondary_summary_reviewed_primary_page_pending
+continuity_scope: "CONT-AR"
 source_refs:
-  - DMR-014-SRC-001
-  - DMR-014-SRC-002
+  - "DMR-014-SRC-003"
+  - "DMR-013-SRC-001"
 claim_refs:
-  - DMR-014-CLM-002
-verification_status: secondary_summary_reviewed_primary_page_pending
+  - "DMR-014-CLM-002"
+  - "DMR-013-CLM-002"
+verification_status: "secondary_summary_reviewed_primary_page_pending"
+tags: ["Alfia", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
+research_source_refs:
+  - "DMR-014-SRC-003"
+  - "DMR-013-SRC-001"
+entity_type: character
+canonical_name: "Alfia"
 aliases:
   - "Alfia"
+  - "アルフィア"
+romanizations:
+  - "Alfia"
+name_confidence: "El nombre existe como identidad candidata del catálogo; los datos biográficos no se elevan a canónicos sin localizador primario."
+identity_record_id: CHAR-DARK-ALFIA
+version_record_id: null
+temporal_scope:
+  - "Astrea Record, volumen 3: la ruta de lectura secundaria señala los capítulos 8–9 y la historia extra «Alfia». La página exacta no se ha verificado en la edición publicada."
+  - "El vínculo con Hera Familia, el parentesco con Meteria, el nivel y los efectos de la enfermedad aparecen en resúmenes comunitarios y permanecen pendientes de cotejo primario."
+appearance_records: []
+continuity_variants:
+  - "CONT-AR: las fuentes secundarias o el perfil de adaptación no sustituyen el cotejo de la novela publicada."
+  - "CONT-AU: conservar escenarios alternativos por separado; ninguna divergencia se aprueba por esta ficha."
+canon_status: "secondary research only; primary page pending"
+spoiler_level: major
+species: "human (secondary source; primary text pending)"
+deity_or_race: "human"
+age_value: unknown
+age_precision: unknown
+date_of_birth: unknown
+first_appearance: "La ruta de lectura se localiza por índices secundarios en Astrea Record, volumen 3; la primera aparición real en el texto japonés no está verificada por página."
+first_source_id: DMR-014-SRC-003
+first_source_locator: "Índice/resumen secundario que orienta a vol. 3, capítulos 8–9 e historia extra «Alfia»; no es página primaria."
+familia_membership:
+  - "Hera Familia: afiliación reportada por fuentes secundarias; confirmar rango, periodo de servicio y continuidad en texto publicado."
+roles:
+  - "Candidata histórica relacionada con Hera Familia según fuentes comunitarias."
+  - "El resumen secundario la vincula al conflicto de Astrea Record y al papel de antagonista en el enfrentamiento; escena y motivos completos pendientes."
+epithets:
+  []
+appearance_summary: "Las referencias secundarias la describen como humana. No se fijan rasgos físicos adicionales, edad ni cambios de apariencia sin pasaje primario."
+personality_summary: "Los resúmenes secundarios la describen como calmada, perspicaz, autoritaria, intolerante al ruido y extremadamente dura. Estos rasgos son pistas de lectura, no una transcripción del texto ni una caracterización validada capítulo por capítulo. La enfermedad y el deterioro corporal se deben leer junto al talento que las mismas fuentes le atribuyen, sin reducirla a una villana simple."
+motivations:
+  - "Las fuentes secundarias interpretan que Alfia asume un papel antagonista para poner a prueba a la siguiente generación; esta interpretación necesita escenas directas."
+  - "Motivos privados, decisiones concretas y el grado exacto de conocimiento que posee en cada momento están pendientes."
+psychology_profile:
+  dominant_traits:
+    - "Calma y perspicacia son rasgos reportados por fuentes secundarias, no verificados por pasaje primario."
+    - "La dureza y la intolerancia al ruido aparecen en resúmenes comunitarios; no generalizarlas a cada escena."
+  values:
+    - "No se establece una jerarquía de valores verificada. Las lecturas sobre culpa familiar y sacrificio siguen siendo interpretaciones secundarias."
+  likes: []
+  dislikes: []
+  fears: []
+  habits: []
+  speech_style: []
+  stress_response: []
+  behavioral_patterns:
+    - "Las referencias secundarias presentan una enfermedad incurable o capacidad negativa que condicionaría su desempeño; la mecánica y la progresión requieren cotejo."
+    - "No enumerar magia, cantos ni anulaciones específicas como confirmadas sin capítulo y página."
+  internal_conflicts:
+    - "Las fuentes secundarias plantean una tensión entre talento excepcional y deterioro progresivo. La interpretación de culpa familiar o identidad de monstruo es una lectura secundaria y no debe convertirse en monólogo o motivo canónico sin localizar la escena."
+  development_by_period:
+    - "Astrea Record, volumen 3 (ruta secundaria): Las fuentes secundarias la relacionan con Hera Familia y con el conflicto de Astrea Record; enfermedad, habilidades y decisiones individuales requieren cotejo del texto japonés. [CONT-AR]"
+evidence_claims:
+  - claim_id: DMR-014-CLM-002
+    aspect: "historia, psicología y poderes"
+    claim: "Las fuentes secundarias vinculan a Alfia con una enfermedad incurable que actúa como habilidad negativa y con un papel antagonista durante Astrea Record; los capítulos 8–9 del volumen 3 y la historia extra «Alfia» son rutas de lectura, no páginas primarias confirmadas."
+    era_or_interval: "Astrea Record, volumen 3; alrededor de siete años antes de Bell según el marco editorial general"
+    continuity_scope: CONT-AR
+    evidence_type: secondary_research_lead
+    source_id: DMR-014-SRC-003
+    source_locator: "Índice secundario: vol. 3, capítulos 8–9 e historia extra «Alfia»; página de la edición japonesa pendiente"
+    verification_status: secondary_locator_only
+    confidence_note: "No se valida aquí el diagnóstico, las técnicas, el nivel ni los motivos mediante texto primario."
+  - claim_id: DMR-013-CLM-002
+    aspect: "identidad y cobertura de investigación"
+    claim: "Alfia figura como candidata en índices secundarios de personajes de la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada antes de tratarlos como hechos confirmados."
+    era_or_interval: "Era Oscura / Astrea Record; aparición exacta pendiente"
+    continuity_scope: CONT-AR
+    evidence_type: secondary_research_lead
+    source_id: DMR-013-SRC-001
+    source_locator: "Índice secundario de personajes; usar para buscar el pasaje primario"
+    verification_status: discovery_lead_only
+    confidence_note: "El claim registra una ruta de investigación, no confirma por sí solo la biografía."
+abilities: []
+skills: []
+magic: []
+status_by_period:
+  - era: "Astrea Record, volumen 3 (ruta secundaria)"
+    continuity_scope: "CONT-AR"
+    status: "Las fuentes secundarias la relacionan con Hera Familia y con el conflicto de Astrea Record; enfermedad, habilidades y decisiones individuales requieren cotejo del texto japonés."
+    evidence_claims: [DMR-014-CLM-002, DMR-013-CLM-002]
+    verification_status: "Pista secundaria; localizador primario pendiente."
+relationships:
+  - target_id: CHAR-METERIA
+    relationship_type: reported_family_relation
+    description: "Las fuentes comunitarias reportan que Meteria es su hermana gemela; el parentesco no se eleva a hecho primario hasta localizar la escena o referencia directa."
+    temporal_scope: "Historia previa y biografía reportada; intervalo exacto pendiente"
+    continuity_scope: "CONT-AR; secondary lead"
+    evidence_claims: [DMR-013-CLM-002]
+    confidence_note: "La fuente indexada identifica Alfia como candidata, pero el claim de índice no valida por sí solo el parentesco."
+locations_by_period:
+  - "No hay una localización de escena primaria verificada para esta ficha."
+events: []
+knowledge_state:
+  knows:
+    - "El archivo de investigación señala una ruta de lectura para el volumen 3, capítulos 8–9, y la historia extra «Alfia»."
+    - "No se ha reconstruido qué sabe sobre Meteria, Bell, Hera o Astrea Familia por escena."
+  suspects: []
+  does_not_know:
+    - "No se ha reconstruido el conocimiento por escena con el texto primario; evitar inferirlo desde una sinopsis o índice secundario."
+  status: partial
+  confidence: "Limitada: los resúmenes e índices secundarios sirven para orientar la lectura, no como prueba primaria de los detalles narrativos."
+open_questions:
+  - "Cotejar el volumen 3, capítulos 8–9 y la historia extra «Alfia» en la edición publicada; registrar página/escena."
+  - "Verificar parentesco con Meteria y la afiliación/función histórica en Hera Familia en un pasaje directo."
+  - "No promover el nivel 7, la lista de magia o la enfermedad específica a datos cerrados hasta cotejarlos."
+  - "Mantener separados Astrea Record revisado, escenario original de Memoria Freese y What If/AU."
+related_record_ids: [CHAR-METERIA]
+duplicate_candidates: []
+author_approved_overrides: []
+last_cross_checked: "2026-10-21"
 ---
+
 # Alfia
 
-## Identidad y afiliación
+## Identidad y alcance
 
-- **ID estable:** CHAR-DARK-ALFIA.
-- **Afiliación de trabajo:** Hera Familia.
-- **Continuidad:** CONT-AR. CONT-AR. Mantener AU/What If separado: sucesos o supervivencias alternativas no pasan al canon.
-- **Estado:** expediente individual redactado; verificación primaria por página pendiente.
+Los resúmenes secundarios la describen como calmada, perspicaz, autoritaria, intolerante al ruido y extremadamente dura. Estos rasgos son pistas de lectura, no una transcripción del texto ni una caracterización validada capítulo por capítulo. La enfermedad y el deterioro corporal se deben leer junto al talento que las mismas fuentes le atribuyen, sin reducirla a una villana simple.
 
-## Contexto e historia
+- **ID estable:** `CHAR-DARK-ALFIA`; no crear versiones separadas para hipótesis, edad o continuidad.
+- **Estado probatorio:** los rasgos específicos detallados se mantienen como resúmenes secundarios hasta cotejar un pasaje de la novela revisada.
+- **Separación de continuidad:** la editorial indica que Astrea Record publicado es una versión revisada del evento original de Memoria Freese; no se presume identidad textual entre ambos.
 
-Las referencias comunitarias vinculan a Alfia con Meteria y con el conflicto moral de Astrea Record. La enfermedad se manifiesta como una habilidad negativa: talento y deterioro deben narrarse juntos. Su enfrentamiento con Astrea Familia obliga a la siguiente generación a demostrar que puede heredar el futuro de Orario.
+## Estado temporal
 
-## Apariencia, voz y personalidad
+### Astrea Record, volumen 3 (ruta secundaria)
 
-Humana y antigua ejecutiva de Hera Familia, descrita en fuentes secundarias como aventurera de nivel 7. Su talento está ligado a una enfermedad incurable que debilita progresivamente su cuerpo.
+Las fuentes secundarias la relacionan con Hera Familia y con el conflicto de Astrea Record; enfermedad, habilidades y decisiones individuales requieren cotejo del texto japonés.
 
-Se la describe con apariencia calmada y mente perspicaz, junto con autoritarismo, intolerancia al ruido y dureza extrema. Mantiene deliberadamente el papel de enemiga hasta el final. No reducirla a villana simple ni convertir una interpretación secundaria en una cita.
+**Verificación:** Pista secundaria; localizador primario pendiente.
 
-## Habilidades y límites
+## Relaciones y límites
 
-Las fuentes secundarias enumeran magia poderosa y de anulación, además de una condición que reduce sus capacidades conforme combate. Registrar técnicas, cantos y límites solamente al cotejar la edición.
+### CHAR-METERIA
 
-## Relaciones
+Las fuentes comunitarias reportan que Meteria es su hermana gemela; el parentesco no se eleva a hecho primario hasta localizar la escena o referencia directa.
 
-- **[Hera Familia](../../familias/hera-familia.md) / [Hera](../hera.md):** afiliación histórica que las referencias comunitarias asocian con Alfia; rango, nivel y periodo concretos siguen pendientes de localizador primario.
-- **[Meteria](meteria.md):** las referencias secundarias la presentan como hermana gemela de Alfia. El parentesco requiere cotejo directo con la novela.
-Meteria es descrita por las referencias secundarias como su hermana gemela. Las referencias posteriores también relacionan a Alfia con Bell, pero no hace falta adelantar ese vínculo en toda escena histórica. El perfil canon debe permanecer separado de cualquier AU.
+**Periodo/alcance:** Historia previa y biografía reportada; intervalo exacto pendiente · CONT-AR; secondary lead.
 
-## Conflicto narrativo
+**Límite:** La fuente indexada identifica Alfia como candidata, pero el claim de índice no valida por sí solo el parentesco.
 
-Talento excepcional frente a enfermedad; culpa familiar; aceptar una identidad monstruosa para probar el heroísmo de otras personas.
+## Ruta de lectura primaria
 
-## Localizadores de lectura
+- Cotejar el volumen 3, capítulos 8–9 y la historia extra «Alfia» en la edición publicada; registrar página/escena.
+- Verificar parentesco con Meteria y la afiliación/función histórica en Hera Familia en un pasaje directo.
+- No promover el nivel 7, la lista de magia o la enfermedad específica a datos cerrados hasta cotejarlos.
+- Mantener separados Astrea Record revisado, escenario original de Memoria Freese y What If/AU.
 
-Astrea Record vol. 3, cap. 8 «The Price of Talent» para la enfermedad; cap. 9 para el enfrentamiento; el índice enumera la historia extra «Alfia». Página exacta pendiente de revisar en la edición publicada.
+## Fuentes y límites
 
-## Fuentes
 
-- https://danmachi.fandom.com/wiki/Alfia
-- https://danmachi.fandom.com/es/wiki/Alfia/Habilidades
-- https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3
-- https://danmachi.com/news/news131.php
+- Referencia secundaria/índice comunitario de Astrea Record — ruta de búsqueda; no sustituto del texto publicado.
+- Índice secundario de candidatos de la Era Oscura — registra un nombre para investigar, no confirma por sí solo sus acciones o afiliación.
+- [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — confirma el marco editorial de la versión revisada, no los detalles de cada escena.
 
-## Regla editorial
-
-No elevar a canon confirmado un dato que solo procede de una wiki o de una descripción de adaptación. Registrar volumen, capítulo, página y escena de la edición consultada. No inventar números de página ni importar detalles de Memoria Freese/AU a la novela revisada.
+**Regla editorial:** no se inventan números de página. Los campos sin respaldo primario permanecen desconocidos o explícitamente atribuidos a fuentes secundarias.
