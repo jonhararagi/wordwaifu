@@ -35,7 +35,7 @@ La cronología oficial sitúa Astrea Record unos siete años antes de la llegada
 - [Zeus Familia](../../familias/zeus-familia.md) y [Hera Familia](../../familias/hera-familia.md) pertenecen a una ruta histórica conectada pero distinta.
 
 ## Ruta B · Rudra/Jura/Juggernaut posterior (aprox. T-5, pendiente)
-- [Rudra](rudra.md) y [Jura Halmer](jura-halmer.md) pertenecen a la ruta posterior del incidente del Juggernaut.
+- [Rudra](rudra.md) y [Jura Halmer](jura-halmer.md) pertenecen a la ruta posterior del incidente del Juggernaut. El registro de Rudra usa CONT-MAIN-LN para este arco; no debe clasificarse por defecto como participante de Astrea Record.
 - T-5 es aproximado y secundario. No fusionar este arco con el núcleo T-7 de Astrea Record.
 
 ## Ruta C · Pasado de Tiona y Tione (Sword Oratoria, intervalo independiente)
