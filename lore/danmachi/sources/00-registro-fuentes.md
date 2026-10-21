@@ -1921,3 +1921,144 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-036
 - verification_status: source_checked
 
+
+
+---
+
+## DMR-040-SRC-001 · DanMachi, novela principal, volumen 21
+
+- source_id: DMR-040-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか21 — GA文庫
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 21; ISBN 978-4-8156-3294-6
+- language: Japonés
+- publication_date: 2025-10-15
+- official_url: https://ga.sbcr.jp/product/9784815632946/
+- accessed_at: 2026-10-21
+- locator_type: publisher_metadata
+- locator: Metadatos de publicación y sinopsis de la ficha editorial.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; metadatos editoriales
+- reliability_note: Confirma título y fecha de publicación del tomo y ofrece sinopsis; no sustituye pasajes internos para acontecimientos detallados.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-040
+- verification_status: source_checked
+
+## DMR-040-SRC-002 · DanMachi, novela principal, volumen 22 anunciado
+
+- source_id: DMR-040-SRC-002
+- title: ダンジョンに出会いを求めるのは間違っているだろうか22 — GA文庫
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela principal
+- volume_or_edition: Volumen 22; ISBN 978-4-8156-4290-7
+- language: Japonés
+- publication_date: 2026-12-15 (fecha prevista al 2026-10-21)
+- official_url: https://ga.sbcr.jp/product/9784815642907/
+- accessed_at: 2026-10-21
+- locator_type: publisher_metadata
+- locator: Fecha programada, título y descripción promocional.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; metadatos de publicación futura
+- reliability_note: En la fecha de corte aún no estaba publicado; no usar su sinopsis como evidencia de escenas o resultados del tomo.
+- conflicting_sources: []
+- rights_note: Registrar solo metadatos editoriales.
+- verified_by: DANMACHI-RESEARCH-040
+- verification_status: source_checked_partial
+
+## DMR-040-SRC-003 · Sword Oratoria, volumen 17 anunciado
+
+- source_id: DMR-040-SRC-003
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア17 — GA文庫
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: Sword Oratoria
+- volume_or_edition: Volumen 17; ISBN 978-4-8156-4291-4 (edición especial de referencia)
+- language: Japonés
+- publication_date: 2027-01-15 (fecha prevista al 2026-10-21)
+- official_url: https://ga.sbcr.jp/product/9784815642914/
+- accessed_at: 2026-10-21
+- locator_type: publisher_metadata
+- locator: Título y fecha programada en la ficha editorial.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO; metadatos de publicación futura
+- reliability_note: En la fecha de corte aún no estaba publicado; no se infieren escenas ni estados futuros de los personajes.
+- conflicting_sources: []
+- rights_note: Registrar solo metadatos editoriales.
+- verified_by: DANMACHI-RESEARCH-040
+- verification_status: source_checked_partial
+
+## DMR-040-SRC-004 · Familia Chronicle, episode Amid anunciado
+
+- source_id: DMR-040-SRC-004
+- title: ダンジョンに出会いを求めるのは間違っているだろうか ファミリアクロニクル episodeアミッド — GA文庫
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: Familia Chronicle
+- volume_or_edition: Episode Amid; ISBN 978-4-8156-4293-8
+- language: Japonés
+- publication_date: 2027-02-15 (fecha prevista al 2026-10-21)
+- official_url: https://ga.sbcr.jp/product/9784815642938/
+- accessed_at: 2026-10-21
+- locator_type: publisher_metadata
+- locator: Título y fecha programada en la ficha editorial.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: Familia Chronicle; metadatos de publicación futura
+- reliability_note: En la fecha de corte aún no estaba publicado; la descripción promocional no constituye una biografía completa.
+- conflicting_sources: []
+- rights_note: Registrar solo metadatos editoriales.
+- verified_by: DANMACHI-RESEARCH-040
+- verification_status: source_checked_partial
+
+## DMR-040-SRC-005 · Familia Chronicle, episode Haze
+
+- source_id: DMR-040-SRC-005
+- title: ダンジョンに出会いを求めるのは間違っているだろうか ファミリアクロニクル episodeヘイズ — GA文庫
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: Familia Chronicle
+- volume_or_edition: Episode Haze; ISBN 978-4-8156-4067-5
+- language: Japonés
+- publication_date: 2026-05-15
+- official_url: https://ga.sbcr.jp/product/9784815640675/
+- accessed_at: 2026-10-21
+- locator_type: publisher_synopsis
+- locator: Fecha de publicación y sinopsis editorial.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: Familia Chronicle; metadatos y sinopsis
+- reliability_note: Ya publicado a la fecha de corte; la sinopsis no sustituye lectura del relato. Verificar romanización/alias de Haze y Heith antes de crear o fusionar identidades.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-040
+- verification_status: source_checked
+
+## DMR-040-SRC-006 · Anuncio oficial de publicaciones 2026–2027
+
+- source_id: DMR-040-SRC-006
+- title: 『ダンジョンに出会いを求めるのは間違っているだろうか』原作および関連小説３ヶ月連続刊行決定！！＆受注開始！
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi; calendario editorial
+- volume_or_edition: Aviso publicado el 2026-05-22
+- language: Japonés
+- publication_date: 2026-05-22
+- official_url: https://ga.sbcr.jp/bunko_blog/orio/20260522/
+- accessed_at: 2026-10-21
+- locator_type: publisher_announcement
+- locator: Secciones de DanMachi vol. 22, Sword Oratoria vol. 17 y Familia Chronicle episode Amid.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: Metadatos editoriales; no continuidad narrativa
+- reliability_note: Fija el anuncio editorial de tres publicaciones; las fechas previstas deben volver a comprobarse cerca del lanzamiento.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-040
+- verification_status: source_checked
