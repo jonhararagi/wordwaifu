@@ -171,7 +171,7 @@
 ### DMR-005-CLM-008 · Raul y el mando delegado
 - `claim_id`: DMR-005-CLM-008
 - `claim`: Raul es descrito como aventurero humano de nivel 4 en el perfil consultado; pese a su inseguridad, realiza tareas de apoyo y Finn confía en él para dirigir miembros de menor rango durante emergencias.
-- `character_ids`: [CHAR-FINN-DEIMNE]
+- `character_ids`: [CHAR-FINN-DEIMNE, CHAR-RAUL-NOORD]
 - `aspect`: apoyo, mando delegado
 - `era_or_interval`: Estado descrito por el perfil oficial de Sword Oratoria
 - `continuity_scope`: CONT-SO
