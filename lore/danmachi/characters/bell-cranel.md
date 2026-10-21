@@ -46,7 +46,7 @@ continuity_variants:
 canon_status: partial_source_checked
 spoiler_level: major
 species: "human"
-deity_or_race: "humano"
+deity_or_race: "human"
 age_value: unknown
 age_precision: unknown
 date_of_birth: unknown
@@ -235,7 +235,7 @@ La instantánea oficial lo presenta en nivel 5, con Rabbit Foot y Liaris Freese;
 
 ## Relaciones documentadas
 
-### DM-CHAR-HESTIA
+### [Hestia](hestia.md)
 
 Hestia es su diosa y Bell aparece como su primer y único seguidor en el punto temporal que describe la sinopsis oficial del episodio 1.
 
@@ -243,7 +243,7 @@ Hestia es su diosa y Bell aparece como su primer y único seguidor en el punto t
 
 **Límite:** La afiliación se conserva por estado; no fija por sí sola cada detalle de su relación posterior.
 
-### DM-CHAR-AIS
+### [Ais Wallenstein](ais-wallenstein.md)
 
 Bell admira a Ais; el perfil oficial de DanMachi V vincula esta admiración con Liaris Freese. La evidencia no demuestra reciprocidad romántica.
 
@@ -251,7 +251,7 @@ Bell admira a Ais; el perfil oficial de DanMachi V vincula esta admiración con 
 
 **Límite:** Interés de Bell documentado; sentimientos de Ais requieren evidencia propia.
 
-### DM-CHAR-EINA
+### [Eina Tulle](eina-tulle.md)
 
 Eina aparece como asesora asignada a Bell y le transmite conocimiento sobre el Dungeon y la ciudad en el perfil oficial de DanMachi III.
 
