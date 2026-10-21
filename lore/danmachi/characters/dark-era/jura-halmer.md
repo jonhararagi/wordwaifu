@@ -158,7 +158,7 @@ Resúmenes secundarios lo ubican en Rudra Familia y lo vinculan a una trampa que
 
 ## Relaciones y navegación
 
-### [CHAR-RYUU-LION](../ryuu-lion.md)
+### [Ryuu Lion](../ryuu-lion.md)
 
 Los resúmenes secundarios sitúan a Ryuu y Jura en el mismo desastre del Juggernaut y conectan el arco con la posterior venganza de Ryuu. No se infiere alianza ni consentimiento.
 
@@ -172,4 +172,4 @@ Los resúmenes secundarios sitúan a Ryuu y Jura en el mismo desastre del Jugger
 - Confirmar por texto qué personajes sobreviven y en qué sentido, sin depender solo de resúmenes.
 
 - Perfil/índice comunitario: referencia secundaria usada para orientar la búsqueda; no sustituye el texto japonés publicado.
-- [Anuncio oficial sobre la publicación revisada de Astrea Record](https://danmachi.com/news/news131.php): confirma que la versión novelada recibió una revisión del autor respecto del evento original de Memoria Freese; no verifica los detalles biográficos de este expediente.
+- La ficha comunitaria enlazada orienta a DanMachi, volumen 13, pero no sustituye la novela publicada. La página/escena exacta sobre Jura, el collar y el Juggernaut sigue pendiente de cotejo.
