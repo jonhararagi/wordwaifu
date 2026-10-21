@@ -11,6 +11,7 @@ source_refs:
   - "DMR-001-SRC-005"
 claim_refs:
   - "DMR-007-CLM-017"
+  - "DMR-007-CLM-026"
   - "DMR-007-CLM-027"
 verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
 tags: ["Asta Knox", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
