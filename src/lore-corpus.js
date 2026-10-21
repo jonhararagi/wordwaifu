@@ -332,7 +332,19 @@
     const externalCharacters = officialRoster
       .filter(record => usedIds.has(record.id) && !knownCharacterIds.has(record.id))
       .map(record => ({ id: record.id, name: record.name, aliases: unique([record.name, ...(record.aliases || [])]), keywords: unique([record.family, record.role, record.sourceTitle, ...(record.aliases || [])]) }));
-    const characters = [...catalogCharacters, ...externalCharacters]
+    // A character can be discovered through both the curated catalog and external roster
+    // enrichment. Keep one directory identity per stable ID while preserving searchable aliases.
+    const characterById = new Map();
+    for (const character of [...catalogCharacters, ...externalCharacters]) {
+      const previous = characterById.get(character.id);
+      characterById.set(character.id, previous ? {
+        ...previous,
+        aliases: unique([...(previous.aliases || []), ...(character.aliases || [])]),
+        keywords: unique([...(previous.keywords || []), ...(character.keywords || [])]),
+        profilePath: previous.profilePath || character.profilePath
+      } : character);
+    }
+    const characters = [...characterById.values()]
       .sort((a, b) => a.name.localeCompare(b.name, "es"));
     const profileDetails = Object.create(null);
     (profileDocuments || []).forEach(document => {
