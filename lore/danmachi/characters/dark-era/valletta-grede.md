@@ -2,54 +2,147 @@
 id: CHAR-DARK-VALLETTA-GREDE
 universe: danmachi
 type: character
-status: pending_primary_text_check
-continuity_scope: CONT-AR
+status: discovery_lead_only
+continuity_scope: "CONT-AR (candidate lead only)"
 source_refs:
-  - DMR-014-SRC-003
+  - "DMR-013-SRC-001"
+  - "DMR-014-SRC-003"
 claim_refs:
-  - DMR-013-CLM-009
-verification_status: discovery_lead_only
+  - "DMR-013-CLM-009"
+verification_status: "secondary_index_only_primary_appearance_unverified"
+tags: ["Valletta Grede", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
+research_source_refs:
+  - "DMR-013-SRC-001"
+  - "DMR-014-SRC-003"
+entity_type: character
+canonical_name: "Valletta Grede"
 aliases:
   - "Valletta Grede"
+  - "ヴァレッタ・グレーデ (romanización por comprobar)"
+romanizations:
+  - "Valletta Grede"
+name_confidence: "Nombre de un índice secundario; romanización y presencia en la novela publicada deben comprobarse."
+identity_record_id: CHAR-DARK-VALLETTA-GREDE
+version_record_id: null
+temporal_scope:
+  - "Candidato en índices secundarios sobre la Era Oscura. Aparición en la novela publicada, fecha relativa y destino no están confirmados por capítulo/página."
+appearance_records: []
+continuity_variants:
+  - "CONT-AR: las fuentes secundarias o el perfil de adaptación no sustituyen el cotejo de la novela publicada."
+  - "CONT-AU: conservar escenarios alternativos por separado; ninguna divergencia se aprueba por esta ficha."
+canon_status: "identity lead only; novel appearance not yet confirmed"
+spoiler_level: major
+species: "unknown"
+deity_or_race: "unknown"
+age_value: unknown
+age_precision: unknown
+date_of_birth: unknown
+first_appearance: "Nombre registrado en índices secundarios de investigación; no se ha comprobado la primera aparición dentro de la novela publicada."
+first_source_id: DMR-013-SRC-001
+first_source_locator: "Índice secundario de personajes; aún no hay localizador primario."
+familia_membership:
+  - "Afiliación desconocida a partir de las evidencias registradas en este lote."
+roles:
+  - "Candidata de investigación asociada a la red de nombres de la Era Oscura; ni su rol ni su presencia en una escena concreta están confirmados por fuente primaria."
+epithets:
+  []
+appearance_summary: "Desconocida. No inferir especie o apariencia desde el nombre o el índice."
+personality_summary: "No se redacta una psicología provisional sin decisiones, acciones o diálogos localizados. Una ficha vacía de hechos no equivale a falta de importancia en el relato."
+motivations:
+  - "Desconocidas; no hay en este lote una afirmación primaria individual sobre motivaciones."
+psychology_profile:
+  dominant_traits:
+    - "No verificados."
+  values:
+    - "No verificados."
+  likes: []
+  dislikes: []
+  fears: []
+  habits: []
+  speech_style: []
+  stress_response: []
+  behavioral_patterns:
+    - "No se registra conducta individual hasta localizar una escena."
+  internal_conflicts:
+    - "Desconocido. No asignar conflicto, afiliación, bando o función solo por su aparición en un índice secundario."
+  development_by_period:
+    - "Candidato de investigación: Nombre registrado; existencia en la novela publicada, afiliación, acciones, personalidad y destino siguen sin verificar por página. [CONT-AR]"
+evidence_claims:
+  - claim_id: DMR-013-CLM-009
+    aspect: "cobertura e identidad histórica"
+    claim: "Valletta Grede figura como candidata en índices secundarios de investigación de la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada antes de tratarlos como canon."
+    era_or_interval: "Astrea Record / Era Oscura; aparición exacta e intervalo sin verificar"
+    continuity_scope: CONT-AR
+    evidence_type: secondary_research_lead
+    source_id: DMR-013-SRC-001
+    source_locator: "Página de índice o artículo comunitario enlazado; localizar volumen, capítulo y escena"
+    verification_status: discovery_lead_only
+    confidence_note: "El registro solo confirma que existe una ruta de investigación, no los hechos biográficos."
+abilities: []
+skills: []
+magic: []
+status_by_period:
+  - era: "Candidato de investigación"
+    continuity_scope: "CONT-AR"
+    status: "Nombre registrado; existencia en la novela publicada, afiliación, acciones, personalidad y destino siguen sin verificar por página."
+    evidence_claims: [DMR-013-CLM-009]
+    verification_status: "Lead secundario; no canon confirmado."
+relationships:
+
+locations_by_period:
+  - "Desconocidas hasta verificar una escena publicada."
+events: []
+knowledge_state:
+  knows:
+    - "Sin mapa individual de conocimiento, porque no hay escenas primarias verificadas."
+  suspects: []
+  does_not_know:
+    - "No se ha reconstruido el conocimiento por escena con el texto primario; evitar inferirlo desde una sinopsis o índice secundario."
+  status: partial
+  confidence: "Muy baja: por ahora solo existe un lead de índice secundario, sin escena individual verificada."
+open_questions:
+  - "Confirmar si Valletta aparece en la novela publicada y registrar edición, volumen, capítulo y página."
+  - "Solo después de localizar una escena: establecer afiliación, relaciones, personalidad, habilidades y estado por periodo."
+  - "No reutilizar una descripción de juego, wiki o AU como si fuera evidencia de la novela revisada."
+related_record_ids: []
+duplicate_candidates: []
+author_approved_overrides: []
+last_cross_checked: "2026-10-21"
 ---
+
 # Valletta Grede
 
-## Identidad
+## Identidad y alcance
 
-- **ID estable:** CHAR-DARK-VALLETTA-GREDE.
-- **Estado:** ficha individual de investigación, no biografía canónica cerrada.
-- **Continuidad de trabajo:** CONT-AR.
-- **Límite:** Candidato histórico pendiente de cotejo directo. La fuente secundaria sirve para localizar pistas, no confirma por sí sola acciones ni afiliación.
+No se redacta una psicología provisional sin decisiones, acciones o diálogos localizados. Una ficha vacía de hechos no equivale a falta de importancia en el relato.
 
-## Historia y cronología
+- **ID estable:** `CHAR-DARK-VALLETTA-GREDE`; no crear versiones separadas para hipótesis, edad o continuidad.
+- **Estado probatorio:** la presencia en la novela publicada sigue sin confirmarse; esta ficha es una ruta de búsqueda, no una biografía canónica.
+- **Separación de continuidad:** la editorial indica que Astrea Record publicado es una versión revisada del evento original de Memoria Freese; no se presume identidad textual entre ambos.
 
-El nombre está registrado en un lote de candidatos derivado de referencias secundarias sobre la Era Oscura. Se creó esta ficha individual para que el buscador no confunda la cabecera del lote colectivo con la identidad del personaje. La aparición en la novela revisada, la fecha, sus acciones y su destino no están confirmados por página.
+## Estado temporal
 
-## Personalidad y comportamiento
+### Candidato de investigación
 
-Los rasgos de personalidad quedan pendientes hasta localizar decisiones y diálogos concretos. No inferir temperamento por especie, por ser deidad o por pertenecer a una Familia o facción. Los resúmenes comunitarios funcionan como ruta de investigación, no como hechos verificados.
+Nombre registrado; existencia en la novela publicada, afiliación, acciones, personalidad y destino siguen sin verificar por página.
 
-## Habilidades y límites
+**Verificación:** Lead secundario; no canon confirmado.
 
-Nivel, magia, técnicas, equipo y límites deben contrastarse con la edición publicada. No transferir automáticamente datos del evento Memoria Freese, adaptación de anime/manga, juegos secundarios o escenarios alternativos a la novela revisada.
+## Relaciones y límites
 
-## Relaciones
+Todavía no hay relaciones individuales suficientemente respaldadas para registrar. No se deducen vínculos personales de una lista de nombres candidatos.
 
-La posible afiliación o relación mencionada en el índice secundario requiere verificación individual. Compartir una organización no demuestra amistad, subordinación directa ni acuerdo con todas sus acciones; cada vínculo necesita un claim con localizador propio.
+## Ruta de lectura primaria
 
-## Uso narrativo y conflicto pendiente
+- Confirmar si Valletta aparece en la novela publicada y registrar edición, volumen, capítulo y página.
+- Solo después de localizar una escena: establecer afiliación, relaciones, personalidad, habilidades y estado por periodo.
+- No reutilizar una descripción de juego, wiki o AU como si fuera evidencia de la novela revisada.
 
-Mientras no exista una escena primaria registrada, esta ficha sirve para hacer preguntas, localizar referencias y diseñar una posible versión creativa claramente etiquetada como AU. No debe citarse como autoridad para reconstruir un suceso canónico.
+## Fuentes y límites
 
-## Fuente de descubrimiento
 
-- https://danmachi.fandom.com/wiki/Valletta_Grede
-- **Tipo:** referencia secundaria; pista bibliográfica.
-- **Pendiente:** localizar volumen, capítulo, página y escena en la novela revisada.
+- Referencia secundaria/índice comunitario de Astrea Record — ruta de búsqueda; no sustituto del texto publicado.
+- Índice secundario de candidatos de la Era Oscura — registra un nombre para investigar, no confirma por sí solo sus acciones o afiliación.
+- [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — confirma el marco editorial de la versión revisada, no los detalles de cada escena.
 
-## Lista de verificación
-
-- [ ] Confirmar aparición en la edición publicada.
-- [ ] Registrar volumen/capítulo/página; no inventar páginas.
-- [ ] Separar novela, evento original, adaptación y AU.
-- [ ] Documentar personalidad, habilidades y relaciones solo con evidencia localizada.
+**Regla editorial:** no se inventan números de página. Los campos sin respaldo primario permanecen desconocidos o explícitamente atribuidos a fuentes secundarias.
