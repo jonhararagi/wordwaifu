@@ -79,3 +79,23 @@ assert.ok(api.get("CHAR-LILIRUCA-ARDE").history.includes("Familia Soma") || api.
 assert.ok(api.get("CHAR-CHANDRA-IHIT").relationships.includes("Zanis"), "Chandra and Zanis must remain separate linked identities.");
 
 process.stdout.write("PASS character dossiers: " + all.length + " profiles with six substantive sections and source URLs.\\n");
+
+const astreaMirahezeProfiles = [
+  { id:"CHAR-ASTA-KNOX", tokens:["defensa impenetrable","escudo","Juggernaut"], source:"https://danmachien.miraheze.org/wiki/Asta_Knox" },
+  { id:"CHAR-CELTY-SROWA", tokens:["bosque Yenite","magia de rayo","Mago/Mage"], source:"https://danmachien.miraheze.org/wiki/Celty_Srowa" },
+  { id:"CHAR-ISKA-BRA", tokens:["orfanato","maquillaje","dos puños"], source:"https://danmachien.miraheze.org/wiki/Iska_Bra" },
+  { id:"CHAR-NEZE-RANKETT", tokens:["Bloody Justice Fang","garras de viento","luz de la luna"], source:"https://danmachien.miraheze.org/wiki/Neze_Rankett" },
+  { id:"CHAR-NOIN-UNIC", tokens:["aumentaría la velocidad","Juggernaut","nivel 4"], source:"https://danmachien.miraheze.org/wiki/Noin_Unic" }
+];
+for (const expected of astreaMirahezeProfiles) {
+  const profile=api.get(expected.id);
+  assert.ok(profile, expected.id+" must remain a unique dossier.");
+  const searchable=[profile.appearance,profile.history,profile.personality,profile.abilities,profile.relationships,profile.conflict].join(" ");
+  for (const token of expected.tokens) assert.ok(searchable.includes(token), expected.id+" must expose current Miraheze details: "+token);
+  assert.ok(profile.sources.includes(expected.source), expected.id+" must retain the current English Miraheze URL.");
+}
+for (const id of ["CHAR-HEDIN-SELLAND","CHAR-HOGNI-RAGNAR"]) {
+  const profile=api.get(id);
+  assert.ok(profile.history.includes("tres noches"), id+" must include the narrowly verified duel duration.");
+  assert.ok(profile.sources.includes("https://r.binb.jp/epm/e1_358215_18062024160902/"), id+" must link the authorized primary preview.");
+}

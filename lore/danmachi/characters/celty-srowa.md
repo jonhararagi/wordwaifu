@@ -2,7 +2,7 @@
 id: CHAR-CELTY-SROWA
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_profile_expanded_primary_locator_pending
 continuity_scope: "CONT-AR; CONT-ANIME"
 source_refs:
   - "DMR-007-SRC-001"
@@ -16,13 +16,15 @@ source_refs:
   - "DMR-027-SRC-005"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-008"
+  - "DMR-040-SRC-002"
 claim_refs:
   - "DMR-007-CLM-019"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-028"
   - "DMR-027-CLM-009"
   - "DMR-027-CLM-010"
-verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
+  - "DMR-040-CLM-002"
+verification_status: secondary Miraheze profile expanded; primary Astrea Record scene pending
 tags: ["Celty Srowa", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
   - "DMR-007-SRC-001"
@@ -36,6 +38,7 @@ research_source_refs:
   - "DMR-027-SRC-005"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-008"
+  - "DMR-040-SRC-002"
 entity_type: character
 canonical_name: "Celty Srowa"
 aliases:
@@ -212,3 +215,10 @@ Una traducción comunitaria de la historia corta describe una conversación de a
 
 **Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-003 y DMR-027-SRC-005/007/008.  
 **Pendiente:** cotejar el relato japonés y resolver edad, nivel, historia del bosque y condiciones reales de su magia.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-040 (2026-10-22)
+
+La revisión de las páginas migradas concreta su origen en el bosque Yenite, la salida por miedo a una búsqueda extrema del conocimiento, la magia de rayo, la función de maga de apoyo defensivo y la habilidad de desarrollo Mago/Mage. Las páginas citan DanMachi vol. 15 cap. 6, Familia Chronicle: Episode Ryuu 2 y Sword Oratoria vols. 1/10; son pistas que aquí no se han verificado directamente. La edad 13 corresponde a Astrea Record y 15 al estado posterior mostrado por la wiki, no deben colapsarse en una cifra atemporal.
+
+**Fuentes revisadas:** [wiki inglesa](https://danmachien.miraheze.org/wiki/Celty_Srowa), [wiki española](https://danmachi.miraheze.org/wiki/Celty_Srowa), [portal oficial de DanMachi IV](https://danmachi.com/danmachi4/character/), [página editorial de Familia Chronicle: Episode Ryuu 2](https://ga.sbcr.jp/product/9784815623692/). La página editorial prueba la publicación y ofrece una ruta de lectura; por sí sola no verifica el contenido de la escena citada.

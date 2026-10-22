@@ -30,6 +30,7 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md",
+  "research/inbox/DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md",
   "research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
@@ -50,8 +51,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 258, "Indexed claims include research batches 033 through 039.");
-assert.equal(index.entryCount, 261, "All claims including batches 033 through 039 are searchable.");
+assert.equal(index.sourceClaimCount, 265, "Indexed claims include research batches 033 through 040.");
+assert.equal(index.entryCount, 268, "All claims including batches 033 through 040 are searchable.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
@@ -580,3 +581,21 @@ assert.ok(chloe039.results.every(c => c.verificationStatus.includes("secondary_e
 const lunoa039 = corpus.search(index, { query: "Demeter Gulliver Ryuu Fist Fighter", characterId: "CHAR-LUNOA-FAUST", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(lunoa039.results.some(c => c.claimId === "DMR-039-CLM-006"), "Lunoa/Lunoire's previous Familia and assignments must be searchable under one ID.");
 assert.ok(lunoa039.results.every(c => c.verificationStatus.includes("secondary_extract_only")), "Lunoa/Lunoire claims must remain secondary.");
+
+/* DMR-040: Miraheze claims remain secondary, but the public publisher preview verifies the duel scene only. */
+const asta040=corpus.search(index,{query:"impenetrable defense shield Juggernaut Alfia",characterId:"CHAR-ASTA-KNOX",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(asta040.results.some(c=>c.claimId==="DMR-040-CLM-001"),"Asta's current wiki details must be searchable.");
+assert.ok(asta040.results.filter(c=>c.claimId==="DMR-040-CLM-001").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Asta must remain secondary.");
+const celty040=corpus.search(index,{query:"Yenite lightning magic Mage Ryuu",characterId:"CHAR-CELTY-SROWA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(celty040.results.some(c=>c.claimId==="DMR-040-CLM-002"),"Celty's origin and magical role must be searchable.");
+assert.ok(celty040.results.filter(c=>c.claimId==="DMR-040-CLM-002").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Celty's expanded claims must remain secondary.");
+const iska040=corpus.search(index,{query:"Daidalos orphanage fashion makeup",characterId:"CHAR-ISKA-BRA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(iska040.results.some(c=>c.claimId==="DMR-040-CLM-003"),"Iska's background and motivations must be searchable.");
+const neze040=corpus.search(index,{query:"Bloody Justice Fang wind claws moonlight",characterId:"CHAR-NEZE-RANKETT",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(neze040.results.some(c=>c.claimId==="DMR-040-CLM-004"),"Neze's leadership and beastification details must be searchable.");
+const noin040=corpus.search(index,{query:"speed magic level 4 Juggernaut",characterId:"CHAR-NOIN-UNIC",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(noin040.results.some(c=>c.claimId==="DMR-040-CLM-005"),"Noin's magic and timeline must be searchable.");
+const hedin040=corpus.search(index,{query:"three nights Freya king white elf black elf",characterId:"CHAR-HEDIN-SELLAND",continuity:"CONT-FC",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(hedin040.results.some(c=>c.claimId==="DMR-040-CLM-006" && c.verificationStatus==="primary_preview_excerpt_verified"),"The public primary preview must verify only the duel subclaim for Hedin.");
+const hogni040=corpus.search(index,{query:"three nights Freya king white elf black elf",characterId:"CHAR-HOGNI-RAGNAR",continuity:"CONT-FC",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(hogni040.results.some(c=>c.claimId==="DMR-040-CLM-007" && c.verificationStatus==="primary_preview_excerpt_verified"),"The public primary preview must verify only the duel subclaim for Hogni.");

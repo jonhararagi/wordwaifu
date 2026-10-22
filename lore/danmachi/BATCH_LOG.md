@@ -1,5 +1,16 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-040 · Relectura bilingüe de cinco perfiles de Astrea y verificación primaria parcial de Hedin/Hogni (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.
+- **Perfiles revisados y ampliados:** Asta Knox, Celty Srowa, Iska Bra, Neze Rankett y Noin Unic. Se leyó el texto disponible de sus fichas inglesa y española migradas de Miraheze y se añadieron historia, capacidades, relaciones y conflictos concretos según cada página; no se crearon IDs nuevos.
+- **Detalles incorporados:** Asta — magia de defensa impenetrable y escudo; Celty — magia de rayo, Mago/Mage, visión y apoyo defensivo, edad 13 en Astrea Record y 15 en estado posterior; Iska — orfanato de la Calle Daidalos, autocuidado y moda, boxeo y magia de dos puños; Neze — liderazgo, alias Bloody Justice Fang, garras de viento y bestificación lunar; Noin — magia de aumento de velocidad y cronología de nivel 4 reportada.
+- **Revisión de perfiles previos:** la muestra autorizada de `Familia Chronicle: episode Freya` permitió cotejar parcialmente el duelo Hedin/Hogni en `それぞれの昔日`. La página visible marcada 3 presenta a los reyes rivales; la continuación muestra tres noches de combate sin resultado decisivo hasta la intervención de Freya. El término “Hjaðningavíg” no aparece impreso. Claims `DMR-040-CLM-006/007` verifican solo la escena visible; el resto de sus biografías y habilidades sigue secundario.
+- **Fuentes:** wikis inglesa/española de Miraheze; [muestra pública BinB de episode Freya](https://r.binb.jp/epm/e1_358215_18062024160902/); [portal oficial](https://danmachi.com/); [página editorial de Episode Ryuu 2](https://ga.sbcr.jp/product/9784815623692/).
+- **Validación:** tests de regresión incorporados; Actions de este commit pendientes de ejecución.
+- **Estado de evidencia:** cinco claims secundarios y dos claims con verificación primaria limitada. No se dan por verificadas las historias personales, niveles, magias de Asta/Iska, poderes de Neze ni el incidente del Juggernaut.
+
+
 ## DANMACHI-RESEARCH-039 · Segunda lectura bilingüe de las fichas migradas (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.

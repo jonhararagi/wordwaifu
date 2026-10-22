@@ -2,7 +2,7 @@
 id: CHAR-NEZE-RANKETT
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_profile_expanded_primary_locator_pending
 continuity_scope: "CONT-AR; CONT-ANIME"
 source_refs:
   - "DMR-007-SRC-001"
@@ -16,13 +16,15 @@ source_refs:
   - "DMR-027-SRC-004"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-008"
+  - "DMR-040-SRC-004"
 claim_refs:
   - "DMR-007-CLM-016"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-030"
   - "DMR-027-CLM-005"
   - "DMR-027-CLM-006"
-verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
+  - "DMR-040-CLM-004"
+verification_status: secondary Miraheze profile expanded; primary Astrea Record scene pending
 tags: ["Neze Rankett", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
   - "DMR-007-SRC-001"
@@ -36,6 +38,7 @@ research_source_refs:
   - "DMR-027-SRC-004"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-008"
+  - "DMR-040-SRC-004"
 entity_type: character
 canonical_name: "Neze Rankett"
 aliases:
@@ -220,3 +223,10 @@ La traducción comunitaria muestra cooperación con Ryuu, Iska y Noin en una ope
 
 **Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-004 y DMR-027-SRC-007/008.  
 **Pendiente:** revisar el texto japonés de volumen 1 para confirmar la edad, el alcance de su transformación, la secuencia de combate y el nombre traducido.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-040 (2026-10-22)
+
+Las páginas actuales la describen como mujer lobo alta y atlética, figura central del grupo con capacidad de liderazgo temporal, orgullosa del alias Bloody Justice Fang que Astrea cambió, y poseedora de una magia de garras de viento. La skill de bestificación se activaría bajo la luz de la luna, incrementando la capacidad física y permitiéndole cubrir la vanguardia. La wiki sitúa su nivel 4 a los 18 años después de la victoria grupal contra Alfia y su muerte por el Juggernaut dos años después. Todo permanece como síntesis secundaria, sin elevar la afirmación de que pudiera vencer a Kaguya a hecho demostrado.
+
+**Fuentes revisadas:** [wiki inglesa](https://danmachien.miraheze.org/wiki/Neze_Rankett), [wiki española](https://danmachi.miraheze.org/wiki/Neze_Rankett), [portal oficial de DanMachi IV](https://danmachi.com/danmachi4/character/), [página editorial de Familia Chronicle: Episode Ryuu 2](https://ga.sbcr.jp/product/9784815623692/). La página editorial prueba la publicación y ofrece una ruta de lectura; por sí sola no verifica el contenido de la escena citada.

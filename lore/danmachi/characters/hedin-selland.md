@@ -2,15 +2,15 @@
 id: CHAR-HEDIN-SELLAND
 universe: danmachi
 type: character
-status: secondary_profile_expanded_primary_locator_pending
+status: partial_primary_excerpt_verified_other_claims_pending
 confidence: high for the stated DanMachi V adaptation profile; novel-specific claims require primary locators
 continuity_scope: CONT-ANIME
-source_refs: [DMR-002-SRC-001]
+source_refs: [DMR-002-SRC-001, DMR-040-SRC-006]
 aliases: ["Hedin","Hedin Selland","ヘディン・セルランド"]
 tags: ["Hedin Selland","Freya Familia","Hogni Ragnar","strategist","CONT-ANIME"]
 spoiler_level: moderate
-research_source_refs: [DMR-036-SRC-001, DMR-036-SRC-002]
-research_claim_refs: [DMR-036-CLM-001, DMR-036-CLM-002, DMR-036-CLM-003]
+research_source_refs: [DMR-036-SRC-001, DMR-036-SRC-002, DMR-040-SRC-006]
+research_claim_refs: [DMR-036-CLM-001, DMR-036-CLM-002, DMR-036-CLM-003, DMR-040-CLM-006]
 research_continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
 ---
 # Hedin Selland
@@ -67,3 +67,10 @@ La ficha de relaciones amplía la evolución de Hedin: reconoce la aptitud de Ho
 La subpágina de habilidades describe Laurus Hildr como magia que no puede aplicarse a Hedin, requiere que reconozca al objetivo y consume el Mind restante. Dizaria se describe como rhomphaia de primera clase, partida por el ataque de Ottar bestificado; la wiki deja sin confirmar si el arma larga posterior en el piso 37 es una nueva Dizaria. La discrepancia Hildrsleif/Hildr Slēv continúa abierta.
 
 **Fuentes actuales:** [ficha EN](https://danmachien.miraheze.org/wiki/Hedin_Selland), [ficha ES](https://danmachi.miraheze.org/wiki/Hedin_Selland), [habilidades EN](https://danmachien.miraheze.org/wiki/Hedin_Selland/Abilities), [habilidades ES](https://danmachi.miraheze.org/wiki/Hedin_Selland/Habilidades), [relaciones EN](https://danmachien.miraheze.org/wiki/Hedin_Selland/Relationships), [relaciones ES](https://danmachi.miraheze.org/wiki/Hedin_Selland/Relaciones). Las citas a capítulos de estas páginas son rutas de lectura, no cotejo primario.
+
+
+## Verificación primaria parcial · DANMACHI-RESEARCH-040
+
+**Verificación primaria parcial — muestra editorial pública de Familia Chronicle: episode Freya.** En 「それぞれの昔日」, página visible marcada 3, el texto introduce la rivalidad entre Hedin (ヘディン), rey de los elfos blancos, y Hogni (ヘグニ), rey de los elfos oscuros. La continuación visible los deja como los dos elfos que siguen en pie y cuenta que luchan durante tres noches sin resultado decisivo, hasta la intervención de Freya. El término latino «Hjaðningavíg» no aparece en el fragmento y no debe registrarse como cita literal. Esto verifica la escena del duelo, no todos los detalles secundarios de la biografía.
+
+**Fuente primaria:** [muestra pública autorizada de Familia Chronicle: episode Freya](https://r.binb.jp/epm/e1_358215_18062024160902/). [Portal oficial](https://danmachi.com/). Se verificó la sección visible, no el volumen completo.

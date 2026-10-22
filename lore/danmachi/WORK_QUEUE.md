@@ -397,3 +397,15 @@ Aplicar en las próximas tandas de perfiles. Este protocolo corrige el patrón d
 - [ ] Cotejar la secuencia de encargos de Chloe y Lunoa contra DanMachi vol. 21 cap. 2 y las referencias de Sword Oratoria; mantener separada la cronología comunitaria del resumen oficial de la deuda con Mia.
 - [ ] Resolver Hildrsleif/Hildr Slēv, los snapshots de piso 58/60 y 37/60 y Reverse/Rebirth Gandr únicamente tras cotejo directo.
 - **Estado:** pasada bilingüe de wiki completada; corroboración primaria pendiente. Los claims DMR-039 permanecen como evidencia secundaria.
+
+
+## Estado tras DANMACHI-RESEARCH-040 — Astrea cinco + revisión parcial Hedin/Hogni
+
+- [x] Leer las fichas actuales inglesa/española de Asta, Celty, Iska, Neze y Noin en Miraheze y enriquecer sus perfiles de aplicación.
+- [x] Mantener los cinco perfiles como evidencia secundaria, con URLs actuales; conservar como desconocidos los rasgos que las páginas no documentan.
+- [x] Abrir la muestra editorial pública de `Familia Chronicle: episode Freya` y verificar el pasaje visible del duelo Hedin/Hogni en `それぞれの昔日`: página marcada 3 para presentar la rivalidad y continuación con tres noches de combate hasta la intervención de Freya.
+- [x] Añadir claims primarios restringidos a la escena del duelo; no atribuir a la muestra la palabra `Hjaðningavíg`, que no aparece impresa.
+- [ ] Cotejar detalles individuales de Asta, Celty, Iska, Neze y Noin contra los textos autorizados citados por las wikis; añadir localizador solo después de leer la escena correspondiente.
+- [ ] Cotejar por separado niveles por etapa, edad de Celty, bestificación de Neze, magia defensiva de Asta, magia de velocidad de Noin y magia/rol de Iska.
+- [ ] En los perfiles de Hedin/Hogni, separar la escena ya vista en la muestra de los detalles de wiki sobre la caída de reinos, rank-ups, habilidades, equipo y decisiones posteriores.
+- **Estado:** tanda de cinco perfiles ampliada; verificación primaria parcial de una escena completada. No equivale a cerrar las biografías de las siete identidades revisadas.

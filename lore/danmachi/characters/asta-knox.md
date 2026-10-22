@@ -2,7 +2,7 @@
 id: CHAR-ASTA-KNOX
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_profile_expanded_primary_locator_pending
 continuity_scope: "CONT-AR; CONT-ANIME"
 source_refs:
   - "DMR-007-SRC-001"
@@ -14,13 +14,15 @@ source_refs:
   - "DMR-027-SRC-003"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-009"
+  - "DMR-040-SRC-001"
 claim_refs:
   - "DMR-007-CLM-017"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-027"
   - "DMR-027-CLM-003"
   - "DMR-027-CLM-004"
-verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
+  - "DMR-040-CLM-001"
+verification_status: secondary Miraheze profile expanded; primary Astrea Record scene pending
 tags: ["Asta Knox", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
   - "DMR-007-SRC-001"
@@ -32,6 +34,7 @@ research_source_refs:
   - "DMR-027-SRC-003"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-009"
+  - "DMR-040-SRC-001"
 entity_type: character
 canonical_name: "Asta Knox"
 aliases:
@@ -204,3 +207,10 @@ Afiliación histórica a Astrea Familia. La evidencia consultada no basta para a
 
 **Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-003, DMR-027-SRC-007 y DMR-027-SRC-009.  
 **Pendiente:** consultar «Asta Knox» en el volumen 3 y resolver el nivel únicamente con una referencia temporal verificable.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-040 (2026-10-22)
+
+Las fichas migradas de Miraheze amplían el registro anterior: Asta se habría unido a Astrea Familia unos diez años antes de la referencia, habría subido por última vez después del combate grupal contra Alfia (siete años antes) y habría muerto dos años más tarde durante el incidente del Juggernaut. Se le atribuye magia desconocida de defensa impenetrable y un escudo; la página española añade sentidos mejorados y capacidades físicas altas. Se conserva como evidencia secundaria: la fecha relativa y la muerte no se han cotejado escena por escena, y no se infiere una personalidad defensiva.
+
+**Fuentes revisadas:** [wiki inglesa](https://danmachien.miraheze.org/wiki/Asta_Knox), [wiki española](https://danmachi.miraheze.org/wiki/Asta_Knox), [portal oficial de DanMachi IV](https://danmachi.com/danmachi4/character/), [página editorial de Familia Chronicle: Episode Ryuu 2](https://ga.sbcr.jp/product/9784815623692/). La página editorial prueba la publicación y ofrece una ruta de lectura; por sí sola no verifica el contenido de la escena citada.

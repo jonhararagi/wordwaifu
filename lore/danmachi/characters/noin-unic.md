@@ -2,7 +2,7 @@
 id: CHAR-NOIN-UNIC
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_profile_expanded_primary_locator_pending
 continuity_scope: "CONT-AR; CONT-ANIME"
 source_refs:
   - "DMR-007-SRC-001"
@@ -16,13 +16,15 @@ source_refs:
   - "DMR-027-SRC-004"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-009"
+  - "DMR-040-SRC-005"
 claim_refs:
   - "DMR-007-CLM-015"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-031"
   - "DMR-027-CLM-001"
   - "DMR-027-CLM-002"
-verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
+  - "DMR-040-CLM-005"
+verification_status: secondary Miraheze profile expanded; primary Astrea Record scene pending
 tags: ["Noin Unic", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
   - "DMR-007-SRC-001"
@@ -36,6 +38,7 @@ research_source_refs:
   - "DMR-027-SRC-004"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-009"
+  - "DMR-040-SRC-005"
 entity_type: character
 canonical_name: "Noin Unic"
 aliases:
@@ -209,3 +212,10 @@ El vínculo que puede registrarse por ahora es la afiliación histórica con Ast
 
 **Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-004, DMR-027-SRC-007 y DMR-027-SRC-009.  
 **Pendiente:** cotejar la historia «Noin Unic» del volumen 3 japonés y registrar sus escenas antes de ampliar psicología o relaciones.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-040 (2026-10-22)
+
+La ficha inglesa de Miraheze proporciona una cronología más concreta que la ficha oficial de adaptación: ingreso en Astrea Familia alrededor de diez años antes de la referencia; subida a nivel 4 siete años antes tras el combate grupal contra Alfia; muerte por el Juggernaut dos años después. La magia desconocida de Noin aumentaría la velocidad, mientras que la página española añade capacidad física alta y sentidos mejorados. No se le asignan personalidad, estilo de mando ni especialidad táctica sin escenas que los sustenten.
+
+**Fuentes revisadas:** [wiki inglesa](https://danmachien.miraheze.org/wiki/Noin_Unic), [wiki española](https://danmachi.miraheze.org/wiki/Noin_Unic), [portal oficial de DanMachi IV](https://danmachi.com/danmachi4/character/), [página editorial de Familia Chronicle: Episode Ryuu 2](https://ga.sbcr.jp/product/9784815623692/). La página editorial prueba la publicación y ofrece una ruta de lectura; por sí sola no verifica el contenido de la escena citada.

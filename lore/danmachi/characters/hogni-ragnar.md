@@ -2,15 +2,15 @@
 id: CHAR-HOGNI-RAGNAR
 universe: danmachi
 type: character
-status: secondary_profile_expanded_primary_locator_pending
+status: partial_primary_excerpt_verified_other_claims_pending
 confidence: high for the stated DanMachi V adaptation profile; novel-specific claims require primary locators
 continuity_scope: CONT-ANIME
-source_refs: [DMR-002-SRC-001]
+source_refs: [DMR-002-SRC-001, DMR-040-SRC-006]
 aliases: ["Hogni","Hogni Ragnar","ヘグニ・ラグナール"]
 tags: ["Hogni Ragnar","Freya Familia","Hedin Selland","dark elf","CONT-ANIME"]
 spoiler_level: moderate
-research_source_refs: [DMR-036-SRC-003, DMR-036-SRC-004]
-research_claim_refs: [DMR-036-CLM-004, DMR-036-CLM-005, DMR-036-CLM-006]
+research_source_refs: [DMR-036-SRC-003, DMR-036-SRC-004, DMR-040-SRC-006]
+research_claim_refs: [DMR-036-CLM-004, DMR-036-CLM-005, DMR-036-CLM-006, DMR-040-CLM-007]
 research_continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
 ---
 # Hogni Ragnar
@@ -66,3 +66,10 @@ La subpágina de habilidades precisa que Dainsleif no aumenta directamente las e
 La página también resume el Juego de Guerra con Ryuu, pero atribuye la derrota de Hogni al desgaste de combates previos y señala que Ryuu todavía no controlaba bien Agaris Alvesynth. No utilizar esto como comparación limpia de niveles. Las referencias de DanMachi vols. 16 y 18, Astrea Record vol. 3 y Familia Chronicle: Episode Freya son pistas citadas por la wiki, no pasajes comprobados en esta tanda.
 
 **Fuentes actuales:** [ficha EN](https://danmachien.miraheze.org/wiki/Hogni_Ragnar), [ficha ES](https://danmachi.miraheze.org/wiki/Hogni_Ragnar), [habilidades EN](https://danmachien.miraheze.org/wiki/Hogni_Ragnar/Abilities), [habilidades ES](https://danmachi.miraheze.org/wiki/Hogni_Ragnar/Habilidades).
+
+
+## Verificación primaria parcial · DANMACHI-RESEARCH-040
+
+**Verificación primaria parcial — muestra editorial pública de Familia Chronicle: episode Freya.** En 「それぞれの昔日」, página visible marcada 3, se introduce a Hogni (ヘグニ) como rey de los elfos oscuros enfrentado a Hedin (ヘディン), rey de los elfos blancos. La continuación visible los muestra combatiendo durante tres noches sin resultado decisivo, hasta la intervención de Freya. «Hjaðningavíg» no aparece impreso en el fragmento. Solo se confirma esta escena; Dainsleif, Victim Abyss y la biografía restante siguen requiriendo verificación separada.
+
+**Fuente primaria:** [muestra pública autorizada de Familia Chronicle: episode Freya](https://r.binb.jp/epm/e1_358215_18062024160902/). [Portal oficial](https://danmachi.com/). Se verificó la sección visible, no el volumen completo.

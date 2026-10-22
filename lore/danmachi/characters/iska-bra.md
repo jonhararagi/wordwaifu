@@ -2,7 +2,7 @@
 id: CHAR-ISKA-BRA
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_profile_expanded_primary_locator_pending
 continuity_scope: "CONT-AR; CONT-ANIME"
 source_refs:
   - "DMR-007-SRC-001"
@@ -16,13 +16,15 @@ source_refs:
   - "DMR-027-SRC-006"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-008"
+  - "DMR-040-SRC-003"
 claim_refs:
   - "DMR-007-CLM-020"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-029"
   - "DMR-027-CLM-007"
   - "DMR-027-CLM-008"
-verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
+  - "DMR-040-CLM-003"
+verification_status: secondary Miraheze profile expanded; primary Astrea Record scene pending
 tags: ["Iska Bra", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
   - "DMR-007-SRC-001"
@@ -36,6 +38,7 @@ research_source_refs:
   - "DMR-027-SRC-006"
   - "DMR-027-SRC-007"
   - "DMR-027-SRC-008"
+  - "DMR-040-SRC-003"
 entity_type: character
 canonical_name: "Iska Bra"
 aliases:
@@ -213,3 +216,10 @@ La traducción comunitaria describe conversaciones con Ryuu sobre sus orígenes 
 
 **Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-003 y DMR-027-SRC-006 a DMR-027-SRC-008.  
 **Pendiente:** cotejar la historia en japonés y resolver edad, nivel, magia y la traducción de sus expresiones sobre belleza/justicia.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-040 (2026-10-22)
+
+La relectura de Miraheze concreta su historia de huérfana en la Calle Daidalos, el esfuerzo para sostener el orfanato y el posterior cambio hacia autocuidado, maquillaje y moda. Las páginas describen su estilo pugilístico, su rol de vanguardia/centro y magia desconocida que ataca con dos puños. En Astrea Record tendría 16 años; el resumen dice que murió por el Juggernaut dos años después. Se mantiene atribuido a wiki mientras no se cotejen directamente las escenas.
+
+**Fuentes revisadas:** [wiki inglesa](https://danmachien.miraheze.org/wiki/Iska_Bra), [wiki española](https://danmachi.miraheze.org/wiki/Iska_Bra), [portal oficial de DanMachi IV](https://danmachi.com/danmachi4/character/), [página editorial de Familia Chronicle: Episode Ryuu 2](https://ga.sbcr.jp/product/9784815623692/). La página editorial prueba la publicación y ofrece una ruta de lectura; por sí sola no verifica el contenido de la escena citada.
