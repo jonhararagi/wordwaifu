@@ -5,6 +5,28 @@ assert.ok(api, "Character dossier registry should load in Node.");
 const all = api.list();
 assert.ok(all.length >= 37, "The archive must retain existing dossiers and seven new Soma Familia members.");
 
+
+const historicalDossiers = [
+  { id: "CHAR-ZEUS", tokens: ["Bell Cranel", "Behemoth y Leviathan", "fingió estar muerto"], source: "https://danmachi.fandom.com/wiki/Zeus" },
+  { id: "CHAR-HERA", tokens: ["Hera Familia", "Behemoth y Leviathan", "Ouranos"], source: "https://danmachi.fandom.com/wiki/Hera_Familia" },
+  { id: "CHAR-MAXIM", tokens: ["capitán de Zeus Familia", "Dragón Negro", "siguiente generación"], source: "https://danmachi.fandom.com/wiki/Maxim" },
+  { id: "CHAR-DARK-ALFIA", tokens: ["Silentium Eden", "Meteria", "What If"], source: "https://danmachi.fandom.com/wiki/Alfia" },
+  { id: "CHAR-DARK-ZALD", tokens: ["Deus Ambrosia", "veneno de Behemoth", "Alfia"], source: "https://danmachi.fandom.com/wiki/Zald" }
+];
+for (const expected of historicalDossiers) {
+  const profile = api.get(expected.id);
+  assert.ok(profile, expected.id + " must be available as an application dossier.");
+  const searchable = [profile.appearance, profile.history, profile.personality, profile.abilities, profile.relationships, profile.conflict].join(" ");
+  for (const token of expected.tokens) {
+    assert.ok(searchable.includes(token), expected.id + " must expose wiki-informed details with evidence limits: " + token);
+  }
+  assert.ok(profile.sources.includes(expected.source), expected.id + " must retain the exact source URL.");
+}
+assert.equal(api.get("CHAR-ZEUS").abilities.includes("level Falna"), true, "Deities must not be assigned adventurer levels.");
+assert.ok(api.get("CHAR-HERA").personality.includes("No hay evidencia suficiente"), "Hera's unknown personal psychology must remain explicit rather than inferred from mythology.");
+assert.ok(api.get("CHAR-DARK-ALFIA").relationships.includes("What If"), "Alfia's alternative continuity must remain separated.");
+assert.ok(api.get("CHAR-DARK-ZALD").abilities.includes("veneno de Behemoth"), "Zald's key limitation must remain visible in the profile.");
+
 const freyaSecondaryProfiles = [
   { id: "CHAR-HEDIN-SELLAND", tokens: ["Hjaðningavíg", "Laurus Hildr", "Hildrsleif"], source: "https://danmachi.fandom.com/wiki/Hedin_Selland" },
   { id: "CHAR-HOGNI-RAGNAR", tokens: ["Hjaðningavíg", "Dainsleif", "Victim Abyss"], source: "https://danmachi.fandom.com/wiki/Hogni_Ragnar" },
