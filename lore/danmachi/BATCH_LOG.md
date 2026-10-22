@@ -1,5 +1,15 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-041 · Relectura bilingüe ampliada de Alise, Kaguya, Lyra, Astrea y Ryuu (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modifica.
+- **Perfiles existentes revisados:** Alise Lovell/Lovelace, Gojouno Kaguya, Lyra, Astrea y Ryuu Lion. Se leyeron las fichas principal inglesa y española migradas de Miraheze; para Ryuu también habilidades/relaciones EN/ES y la página de Astrea Familia EN/ES.
+- **Datos añadidos a la aplicación:** Alise — personalidad con dudas internas, búsqueda de justicia, Agaris Alvesynth, Rubrud Beckia/Batleate Asyrath, Crimson Order y Heat Dress; Kaguya — origen Gojou, Far East, Gokou, Higanbana y Kodachi Futaba por etapas; Lyra — origen en prisión, Mus Mine, Wingus Smite sin inventar reglas, Carnivore, bombas/Aegis y claim separado de Helga; Astrea — benevolencia y capacidades divinas reportadas, distinguiendo Arcanum sellado; Ryuu — cronología de Ryumilua a la etapa de nivel 6, magia/equipo por nivel, relaciones e incertidumbre sobre Jura.
+- **Conflictos conservados:** Alise, piso 41/33 en wikis EN/ES; Kaguya, Sakibeni/Tekiheni; Lyra, reencarnación de Helga como claim no verificado y continuidad no resuelta; Astrea, censo de la nueva Familia variable entre páginas; Ryuu, Jura aparece como superviviente en la wiki inglesa frente al perfil/sinopsis de adaptación que presenta a Ryuu como única superviviente de la primera Familia.
+- **Procedencia:** siete fuentes DMR-041 para páginas principales/subpáginas de Miraheze. Ocho claims indexables, todos secundarios y con URL/localizador explícitos. No se leyó texto primario de Astrea Record ni de los volúmenes principales en esta tanda.
+- **Corrección de funcionamiento:** `src/lore-corpus.js` ahora carga también los paquetes DMR-039, DMR-040 y DMR-041 en su loader runtime; antes, aunque 039/040 estaban en pruebas, el loader visible terminaba en 038 y no los traía en la consulta normal.
+- **Validación:** pruebas añadidas; Actions del commit de DMR-041 aún por ejecutar.
+
 ## DANMACHI-RESEARCH-040 · Relectura bilingüe de cinco perfiles de Astrea y verificación primaria parcial de Hedin/Hogni (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.

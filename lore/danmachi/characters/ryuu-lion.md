@@ -15,6 +15,9 @@ source_refs:
   - DMR-030-SRC-008
   - DMR-030-SRC-009
   - DMR-030-SRC-010
+  - DMR-041-SRC-005
+  - DMR-041-SRC-006
+  - DMR-041-SRC-007
 claim_refs:
   - DMR-001-CLM-002
   - DMR-001-CLM-005
@@ -32,6 +35,8 @@ claim_refs:
   - DMR-030-CLM-008
   - DMR-030-CLM-009
   - DMR-030-CLM-010
+  - DMR-041-CLM-007
+  - DMR-041-CLM-008
 verification_status: "Secondary relationship chronology and late-stage profile added; primary novel locators remain pending."
 tags: [Ryu Lion, Ryuu Lion, Astrea Familia, justice, multi-era, CONT-AR, CONT-MAIN-LN, CONT-ANIME]
 research_source_refs:
@@ -41,6 +46,9 @@ research_source_refs:
   - DMR-030-SRC-008
   - DMR-030-SRC-009
   - DMR-030-SRC-010
+  - DMR-041-SRC-005
+  - DMR-041-SRC-006
+  - DMR-041-SRC-007
 entity_type: character
 canonical_name: "Ryu Lion"
 aliases:
@@ -354,3 +362,10 @@ La wiki comunitaria japonesa consultada —en su página marcada como modificada
 La ficha comunitaria inglesa explica Astraea Record como una magia que permite heredar las magias de las diez compañeras fallecidas a través del vínculo y la ichor de Astrea, y describe cristales luminosos y una barrera temporal durante el encantamiento. Reglas, alcance y fortaleza no se convierten en límites mecánicos definitivos hasta comprobar el texto de novela.
 
 **Fuentes y alcance:** DMR-030-CLM-008 a DMR-030-CLM-010; https://danmachi.fandom.com/wiki/Ryuu_Lion/Relationships, https://wikiwiki.jp/danmachi/%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%BB%E3%83%AA%E3%82%AA%E3%83%B3 y https://danmachi.fandom.com/wiki/Ryuu_Lion. Información secundaria; conservar continuidad y etapa en toda recuperación.
+
+
+## Revisión bilingüe de Miraheze · DANMACHI-RESEARCH-041 (2026-10-22)
+
+La revisión temporal separa la juventud en Ryumilua, Astrea Record, la tragedia del Juggernaut, la venganza y retiro, el reencuentro con Astrea y los arcos posteriores con Bell y nivel 6. La wiki inglesa afirma que Ryuu y Jura sobrevivieron; la sinopsis de DanMachi IV identifica a Ryuu como única superviviente. La divergencia se mantiene visible, no se resuelve por intuición.
+
+**Fuentes revisadas:** EN/ES: https://danmachien.miraheze.org/wiki/Ryuu_Lion; https://danmachi.miraheze.org/wiki/Ryuu_Lion; https://danmachien.miraheze.org/wiki/Ryuu_Lion/Abilities; https://danmachien.miraheze.org/wiki/Ryuu_Lion/Relationships; https://danmachi.miraheze.org/wiki/Ryuu_Lion/Habilidades; https://danmachi.miraheze.org/wiki/Ryuu_Lion/Relaciones; https://danmachien.miraheze.org/wiki/Astrea_Familia. Toda ampliación basada en wiki sigue como evidencia secundaria; no se asigna un localizador primario que no se haya leído.

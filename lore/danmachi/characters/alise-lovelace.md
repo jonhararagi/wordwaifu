@@ -10,6 +10,7 @@ source_refs:
   - DMR-007-SRC-006
   - DMR-030-SRC-001
   - DMR-030-SRC-002
+  - DMR-041-SRC-001
 claim_refs:
   - DMR-001-CLM-005
   - DMR-006-CLM-003
@@ -18,6 +19,8 @@ claim_refs:
   - DMR-007-CLM-026
   - DMR-030-CLM-001
   - DMR-030-CLM-002
+  - DMR-041-CLM-001
+  - DMR-041-CLM-002
 verification_status: "Supplemental English/Spanish wiki profile added; primary novel locators and floor discrepancy remain pending."
 tags: [Alise Lovelace, Alise Lovell, Astrea Familia, captain, justice, CONT-AR, CONT-ANIME]
 research_source_refs:
@@ -26,6 +29,7 @@ research_source_refs:
   - DMR-007-SRC-006
   - DMR-030-SRC-001
   - DMR-030-SRC-002
+  - DMR-041-SRC-001
 entity_type: character
 canonical_name: "Alise Lovelace"
 aliases:
@@ -244,3 +248,10 @@ Las dos wikis detallan mucho más que el perfil oficial de adaptación. La ficha
 La misma fuente enumera Lubrude Bequia y Batleate Asyrath, la magia Agaris Alvesynth, la espada Crimson Order y Crimson Flower Heat Dress. Su descripción comunitaria de Lubrude Bequia le atribuye potenciaciones condicionadas por el combate, la adversidad y la fuerza del rival; Batleate Asyrath potenciaría skills en el combate cercano y magia al lanzarla. Agaris Alvesynth se describe como fuego de encantamiento que cubre partes del cuerpo y espada. Crimson Order aparece descrita como espada de una mano que potencia magia de fuego; el vestido de batalla añade defensa, movilidad y protección contra estados anormales/magia según la wiki española. Los nombres se conservan como términos de búsqueda; no se declaran nivel, funcionamiento exacto ni límites verificados en novela.
 
 **Fuentes y alcance:** DMR-030-CLM-001 y DMR-030-CLM-002; inglés: https://danmachi.fandom.com/wiki/Alise_Lovell; español: https://danmachi.fandom.com/es/wiki/Alise_Lovell. Evidencia secundaria, localizadores primarios pendientes.
+
+
+## Revisión bilingüe de Miraheze · DANMACHI-RESEARCH-041 (2026-10-22)
+
+Alise se enriqueció con historia, temperamento, magia, skills y equipo de las dos fichas migradas. La última subida a nivel 4 a los 16 y la escena del Juggernaut siguen siendo resúmenes comunitarios; la discrepancia de piso 41/33 continúa abierta.
+
+**Fuentes revisadas:** EN/ES: https://danmachien.miraheze.org/wiki/Alise_Lovell; https://danmachi.miraheze.org/wiki/Alise_Lovell; https://danmachien.miraheze.org/wiki/Astrea_Familia; https://danmachi.com/danmachi4/character/. Toda ampliación basada en wiki sigue como evidencia secundaria; no se asigna un localizador primario que no se haya leído.

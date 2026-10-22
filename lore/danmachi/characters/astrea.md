@@ -13,6 +13,8 @@ source_refs:
   - DMR-007-SRC-006
   - DMR-030-SRC-006
   - DMR-030-SRC-007
+  - DMR-041-SRC-004
+  - DMR-041-SRC-007
 claim_refs:
   - DMR-001-CLM-004
   - DMR-001-CLM-005
@@ -23,6 +25,7 @@ claim_refs:
   - DMR-007-CLM-025
   - DMR-007-CLM-026
   - DMR-030-CLM-007
+  - DMR-041-CLM-006
 verification_status: "Secondary appearance and appearances index added; primary novel locators remain pending."
 tags: [Astrea, deity, justice, order, Astrea Familia, multi-era, CONT-AR, CONT-MAIN-LN, CONT-ANIME]
 research_source_refs:
@@ -34,6 +37,8 @@ research_source_refs:
   - DMR-007-SRC-006
   - DMR-030-SRC-006
   - DMR-030-SRC-007
+  - DMR-041-SRC-004
+  - DMR-041-SRC-007
 entity_type: deity_character
 canonical_name: Astrea
 aliases:
@@ -302,3 +307,10 @@ Fuentes y claims: DMR-007-SRC-002 / claims 013–014, DMR-007-SRC-003 / claim 00
 La ficha comunitaria describe a Astrea con cabello marrón nogal recogido hacia atrás y ojos índigo; su índice de apariciones enumera Astrea Record, volumen 1, DanMachi IV episodio 20 y otros relatos o menciones, entre ellos Encounter and Vow. El perfil oficial de adaptación ya respalda su papel como diosa de la justicia y el orden; esta ampliación añade una ruta secundaria para investigar el diseño y los nombres de obras donde aparece, pero no determina cuál sería su primera escena de la novela principal. La designación de “viva” corresponde al estado actual mostrado por la ficha comunitaria, no se debe usar para deducir dónde estuvo ni qué sabía en cada periodo histórico.
 
 **Fuentes y alcance:** DMR-030-CLM-007; https://danmachi.fandom.com/wiki/Astraea y https://danmachi.fandom.com/wiki/Astraea_Familia. Apariencia y relación de apariciones quedan etiquetadas como secundarias; cotejo de novela pendiente.
+
+
+## Revisión bilingüe de Miraheze · DANMACHI-RESEARCH-041 (2026-10-22)
+
+La revisión añade la postura compasiva de Astrea, ayuda a civiles durante la Era Oscura y capacidades divinas que describe la wiki (Percepción Divina, Divinidad, Arcanum sellado y Espejo Divino). Se distingue primera Familia y reconstrucción en Solingen, sin fijar un número de integrantes discrepante entre páginas.
+
+**Fuentes revisadas:** EN/ES: https://danmachien.miraheze.org/wiki/Astrea; https://danmachi.miraheze.org/wiki/Astrea; https://danmachien.miraheze.org/wiki/Astrea_Familia; https://danmachi.miraheze.org/wiki/Familia_Astrea; https://danmachi.com/danmachi4/character/. Toda ampliación basada en wiki sigue como evidencia secundaria; no se asigna un localizador primario que no se haya leído.

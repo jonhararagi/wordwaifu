@@ -5,8 +5,8 @@ type: character
 status: secondary_biography_and_ability_summary_primary_locator_pending
 confidence: official DanMachi IV profile for CONT-ANIME; detailed CONT-AR biography still requires novel locators
 continuity_scope: CONT-ANIME; CONT-AR
-source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-003, DMR-030-SRC-004]
-claim_refs: [DMR-003-CLM-001, DMR-007-CLM-002, DMR-007-CLM-023, DMR-007-CLM-026, DMR-030-CLM-003, DMR-030-CLM-004]
+source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-003, DMR-030-SRC-004, DMR-041-SRC-002]
+claim_refs: [DMR-003-CLM-001, DMR-007-CLM-002, DMR-007-CLM-023, DMR-007-CLM-026, DMR-030-CLM-003, DMR-030-CLM-004, DMR-041-CLM-003, DMR-041-CLM-004]
 aliases:
   - "Kaguya"
   - "ゴジョウノ・輝夜"
@@ -182,7 +182,7 @@ duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
 verification_status: "Secondary short-story summary and ability/equipment references added; primary novel locators remain pending."
-research_source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-003, DMR-030-SRC-004]
+research_source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-003, DMR-030-SRC-004, DMR-041-SRC-002]
 ---
 # Gojouno Kaguya
 
@@ -254,3 +254,10 @@ El resumen comunitario de la historia corta vinculada a Astrea Record, volumen 2
 La ficha comunitaria enumera la magia Gokou, descrita como cinco hojas mágicas que rodean al objetivo, y armas llamadas Higanbana y Kodachi Futaba. También atribuye a Kaguya una especialidad destacada en combate cercano y técnicas rápidas de desenvainado. Una habilidad aparece con grafías incompatibles entre extractos, Tekiheni/Sakibeni: permanece sin normalizar. La wiki indica que Kodachi Futaba pasó a Ryuu en una etapa posterior; el estado histórico de la portadora y el estado posterior de Ryuu deben mantenerse en entradas temporales separadas.
 
 **Fuentes y alcance:** DMR-030-CLM-003 y DMR-030-CLM-004; https://danmachi.fandom.com/wiki/Gojouno_Kaguya y https://danmachi.fandom.com/wiki/Gojouno_Kaguya_(Short_Story). Toda la ampliación queda como secundaria hasta cotejar la historia corta y los pasajes de novela.
+
+
+## Revisión bilingüe de Miraheze · DANMACHI-RESEARCH-041 (2026-10-22)
+
+La relectura separa la historia de la Casa Gojou y el Lejano Oriente de la etapa de Astrea Familia. Gokou, Higanbana, Kodachi Futaba y el conflicto Sakibeni/Tekiheni quedan como datos secundarios, con transferencia del armamento a Ryuu por etapa.
+
+**Fuentes revisadas:** EN/ES: https://danmachien.miraheze.org/wiki/Gojouno_Kaguya; https://danmachi.miraheze.org/wiki/Gojouno_Kaguya; https://danmachien.miraheze.org/wiki/Astrea_Familia; https://danmachi.com/danmachi4/character/. Toda ampliación basada en wiki sigue como evidencia secundaria; no se asigna un localizador primario que no se haya leído.

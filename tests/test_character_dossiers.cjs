@@ -99,3 +99,18 @@ for (const id of ["CHAR-HEDIN-SELLAND","CHAR-HOGNI-RAGNAR"]) {
   assert.ok(profile.history.includes("tres noches"), id+" must include the narrowly verified duel duration.");
   assert.ok(profile.sources.includes("https://r.binb.jp/epm/e1_358215_18062024160902/"), id+" must link the authorized primary preview.");
 }
+
+const astreaCore041 = [
+ {id:"CHAR-ALISE-LOVELACE",tokens:["Agaris Alvesynth","Rubrud Beckia","41","33"],source:"https://danmachien.miraheze.org/wiki/Alise_Lovell"},
+ {id:"CHAR-KAGUYA",tokens:["Gokou","Kodachi Futaba","Tekiheni/Sakibeni"],source:"https://danmachien.miraheze.org/wiki/Gojouno_Kaguya"},
+ {id:"CHAR-LYRA",tokens:["Mus Mine","Carnivore","Helga"],source:"https://danmachien.miraheze.org/wiki/Lyra"},
+ {id:"CHAR-ASTREA",tokens:["Percepción Divina","Arcanum","Espejo Divino"],source:"https://danmachien.miraheze.org/wiki/Astrea"},
+ {id:"CHAR-RYUU-LION",tokens:["Ryumilua","Jura","Astraea Record","Alf's Justitia"],source:"https://danmachien.miraheze.org/wiki/Ryuu_Lion"}
+];
+for(const expected of astreaCore041){
+ const profile=api.get(expected.id);assert.ok(profile,expected.id+" must remain a unique dossier.");
+ const searchable=[profile.appearance,profile.history,profile.personality,profile.abilities,profile.relationships,profile.conflict].join(" ");
+ for(const token of expected.tokens)assert.ok(searchable.includes(token),expected.id+" must preserve detailed bilingual lore: "+token);
+ assert.ok(profile.sources.includes(expected.source),expected.id+" must prioritize current English Miraheze source.");
+}
+assert.ok(api.get("CHAR-RYUU-LION").history.includes("Jura") && api.get("CHAR-RYUU-LION").history.includes("discrepancia"),"Ryuu's survivor conflict must stay visible rather than being silently resolved.");

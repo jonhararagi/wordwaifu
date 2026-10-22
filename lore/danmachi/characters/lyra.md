@@ -5,8 +5,8 @@ type: character
 status: secondary_profile_augmented_primary_locator_pending
 confidence: official DanMachi IV profile for CONT-ANIME; individual historical chronology and detailed abilities remain partial
 continuity_scope: CONT-ANIME; CONT-AR
-source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-005]
-claim_refs: [DMR-003-CLM-002, DMR-007-CLM-003, DMR-007-CLM-024, DMR-007-CLM-026, DMR-030-CLM-005, DMR-030-CLM-006]
+source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-005, DMR-041-SRC-003]
+claim_refs: [DMR-003-CLM-002, DMR-007-CLM-003, DMR-007-CLM-024, DMR-007-CLM-026, DMR-030-CLM-005, DMR-030-CLM-006, DMR-041-CLM-005]
 aliases:
   - "ライラ"
   - "Sly Rat"
@@ -182,7 +182,7 @@ duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
 verification_status: "Wiki profile, ability/equipment reports and major-spoiler lead added; primary novel locators remain pending."
-research_source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-005]
+research_source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-005, DMR-041-SRC-003]
 ---
 # Lyra
 
@@ -250,3 +250,10 @@ La ficha comunitaria añade datos físicos —Pallum, mujer, cabello rosa de lon
 El artículo enumera Ratts Phil y Agile Salt como skills, Mūs Mine y Wingus Smite como magias y Carnivore como dos armas curvas tipo búmeran. Mūs Mine se describe como campo de minas; también menciona bombas fabricadas por Lyra y un objeto defensivo llamado Aegis, atribuido a Asfi y Tsubaki, capaz de copiar la magia con la que entraba en contacto y destruido durante una batalla contra Alfia. El extracto no describe el efecto de Wingus Smite, así que no se completa ese campo. La wiki también presenta a Lyra como reencarnación de Helga, antigua segunda al mando de los Fianna Knights, y le atribuye haber enseñado póquer a Ryuu; la reencarnación es un spoiler mayor y requiere verificación independiente antes de disparar advertencias automáticas de continuidad.
 
 **Fuentes y alcance:** DMR-030-CLM-005 y DMR-030-CLM-006; https://danmachi.fandom.com/wiki/Lyra. Extracto secundario, con localizadores primarios pendientes.
+
+
+## Revisión bilingüe de Miraheze · DANMACHI-RESEARCH-041 (2026-10-22)
+
+La relectura añade origen sin nombre en prisión, autodenominación, tácticas de engaño, Mus Mine, Wingus Smite, Carnivore, bombas y Aegis. La mención de reencarnación de Helga se conserva como claim de wiki con continuidad no resuelta; no crea segunda identidad.
+
+**Fuentes revisadas:** EN/ES: https://danmachien.miraheze.org/wiki/Lyra; https://danmachi.miraheze.org/wiki/Lyra; https://danmachien.miraheze.org/wiki/Astrea_Familia; https://danmachi.com/danmachi4/character/. Toda ampliación basada en wiki sigue como evidencia secundaria; no se asigna un localizador primario que no se haya leído.

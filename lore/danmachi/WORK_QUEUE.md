@@ -409,3 +409,17 @@ Aplicar en las próximas tandas de perfiles. Este protocolo corrige el patrón d
 - [ ] Cotejar por separado niveles por etapa, edad de Celty, bestificación de Neze, magia defensiva de Asta, magia de velocidad de Noin y magia/rol de Iska.
 - [ ] En los perfiles de Hedin/Hogni, separar la escena ya vista en la muestra de los detalles de wiki sobre la caída de reinos, rank-ups, habilidades, equipo y decisiones posteriores.
 - **Estado:** tanda de cinco perfiles ampliada; verificación primaria parcial de una escena completada. No equivale a cerrar las biografías de las siete identidades revisadas.
+
+
+## Estado tras DANMACHI-RESEARCH-041 — revisión de cinco fichas centrales de Astrea Familia
+
+- [x] Releer las fichas inglesa/española migradas de Alise, Kaguya, Lyra, Astrea y Ryuu.
+- [x] Revisar subpáginas de habilidades/relaciones de Ryuu y página de organización de Astrea Familia en ambos idiomas.
+- [x] Sustituir resúmenes genéricos de la aplicación por historias, motivaciones, magias, skills, equipo y vínculos concretos con URLs actuales.
+- [x] Registrar ocho claims recuperables y mantenerlos como secundarios.
+- [x] Hacer que el loader runtime de `src/lore-corpus.js` cargue DMR-039/040/041, no solo la lista de documentos usada por los tests.
+- [ ] Leer las escenas originales de Astrea Record y las referencias de estado/capítulo citadas por las wikis para Alise, Kaguya y Lyra antes de convertir claims en primarios.
+- [ ] Verificar el conflicto de supervivencia de Jura entre el roster/wiki y el perfil de adaptación, sin asumir que la redacción de una adaptación es automáticamente la de la novela.
+- [ ] Localizar texto autorizado que confirme la divergencia de piso de Alise y la grafía de la habilidad de Kaguya; revisar qué edición/estado mide cada tabla.
+- [ ] Cotejar las capacidades de Astrea, el funcionamiento de Astraea Record de Ryuu y los estados de nivel 4/6 con el texto publicado; no convertir comparativas wiki en números canónicos sin contexto.
+- **Estado:** relectura bilingüe completada; corroboración primaria pendiente. Las wikis actuales no se presentan como fuente primaria.

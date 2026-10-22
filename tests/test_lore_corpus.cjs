@@ -31,6 +31,7 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md",
   "research/inbox/DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md",
+  "research/inbox/DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md",
   "research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
@@ -51,8 +52,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 265, "Indexed claims include research batches 033 through 040.");
-assert.equal(index.entryCount, 268, "All claims including batches 033 through 040 are searchable.");
+assert.equal(index.sourceClaimCount, 273, "Indexed claims include research batches 033 through 041.");
+assert.equal(index.entryCount, 276, "All claims including batches 033 through 041 are searchable.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
@@ -599,3 +600,20 @@ const hedin040=corpus.search(index,{query:"tres noches Freya Hedin Hogni",charac
 assert.ok(hedin040.results.some(c=>c.claimId==="DMR-040-CLM-006" && c.verificationStatus==="primary_preview_excerpt_verified"),"The public primary preview must verify only the duel subclaim for Hedin.");
 const hogni040=corpus.search(index,{query:"tres noches Freya Hedin Hogni",characterId:"CHAR-HOGNI-RAGNAR",continuity:"CONT-FC",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(hogni040.results.some(c=>c.claimId==="DMR-040-CLM-007" && c.verificationStatus==="primary_preview_excerpt_verified"),"The public primary preview must verify only the duel subclaim for Hogni.");
+
+/* DMR-041: detailed main Astrea-family profiles remain secondary, with conflicts visible. */
+const alise041=corpus.search(index,{query:"Rubrud Beckia Crimson Order fuego",characterId:"CHAR-ALISE-LOVELACE",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(alise041.results.some(c=>c.claimId==="DMR-041-CLM-002"),"Alise's magic, skill and equipment profile must be searchable.");
+assert.ok(alise041.results.filter(c=>c.claimId==="DMR-041-CLM-002").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Alise mechanics must remain secondary.");
+const kaguya041=corpus.search(index,{query:"Gojou Rokujou justicia imperial",characterId:"CHAR-KAGUYA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(kaguya041.results.some(c=>c.claimId==="DMR-041-CLM-003"),"Kaguya's Far East origin and justice conflict must be searchable.");
+const lyra041=corpus.search(index,{query:"prisioneros Mus Mine Carnivore Aegis Helga",characterId:"CHAR-LYRA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(lyra041.results.some(c=>c.claimId==="DMR-041-CLM-005"),"Lyra's origin, tactics and equipment must be searchable.");
+assert.ok(lyra041.results.filter(c=>c.claimId==="DMR-041-CLM-005").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Lyra's reincarnation claim must remain secondary.");
+const astrea041=corpus.search(index,{query:"Percepción Divina Arcanum Espejo Divino mentiras",characterId:"CHAR-ASTREA",continuity:"CONT-ANIME",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(astrea041.results.some(c=>c.claimId==="DMR-041-CLM-006"),"Astrea's divine abilities must be searchable.");
+const ryuuTimeline041=corpus.search(index,{query:"Ryumilua Juggernaut Jura Gale",characterId:"CHAR-RYUU-LION",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(ryuuTimeline041.results.some(c=>c.claimId==="DMR-041-CLM-007"),"Ryuu's multi-stage timeline and Jura discrepancy must be searchable.");
+const ryuuAbilities041=corpus.search(index,{query:"Mind Load Agaris Alvesynth Astraea Record Alf's Justitia",characterId:"CHAR-RYUU-LION",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(ryuuAbilities041.results.some(c=>c.claimId==="DMR-041-CLM-008"),"Ryuu's stage-specific abilities must be searchable.");
+assert.ok(ryuuAbilities041.results.filter(c=>c.claimId==="DMR-041-CLM-008").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Ryuu's stage-specific mechanics must remain secondary.");
