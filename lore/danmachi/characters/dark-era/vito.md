@@ -2,24 +2,34 @@
 id: CHAR-DARK-VITO
 universe: danmachi
 type: character
-status: secondary_summary_reviewed_primary_page_pending
-continuity_scope: "CONT-AR"
+status: secondary_summary_reviewed_continuity_split_pending
+continuity_scope: "CONT-AR; CONT-UNVERIFIED"
 source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-028-SRC-008"
+  - "DMR-028-SRC-009"
+  - "DMR-028-SRC-012"
 claim_refs:
   - "DMR-014-CLM-006"
   - "DMR-013-CLM-006"
+  - "DMR-028-CLM-007"
+  - "DMR-028-CLM-008"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
-tags: ["Vito", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
+tags: ["Vito", "Faceless", "Evilus", "Erebus", "Thanatos Familia", "Astrea Record", "CONT-AR", "CONT-UNVERIFIED", structured_dossier, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
+  - "DMR-028-SRC-008"
+  - "DMR-028-SRC-009"
+  - "DMR-028-SRC-012"
 entity_type: character
 canonical_name: "Vito"
 aliases:
   - "Vito"
-  - "ヴィト (lectura japonesa por verificar)"
+  - "Faceless (Sin Rostro; alias reportado)"
+  - "ヴィト― (lectura/longitud vocálica por verificar)"
+  - "ヴィトー (variante de la wiki española)"
 romanizations:
   - "Vito"
 name_confidence: "El nombre existe como identidad candidata del catálogo; los datos biográficos no se elevan a canónicos sin localizador primario."
@@ -175,3 +185,16 @@ La síntesis secundaria describe una conversación entre Zald y Vito sobre la p�
 - [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — confirma el marco editorial de la versión revisada, no los detalles de cada escena.
 
 **Regla editorial:** no se inventan números de página. Los campos sin respaldo primario permanecen desconocidos o explícitamente atribuidos a fuentes secundarias.
+
+
+## Ampliación de investigación DMR-028 · perfil y límites de continuidad
+
+- **Alias y perfil reportados:** las wikis inglesa y española lo llaman «Faceless» / «Sin Rostro» (顔無し), lo describen como humano varón de cabello y ojos rojos y le atribuyen nivel 4. La página inglesa informa que fue ejecutivo de Evilus y el único miembro de Erebus Familia antes del regreso de su dios al cielo; también lista una afiliación anterior a Thanatos Familia. Estos datos permanecen atribuidos a un resumen comunitario.
+- **Condición sensorial reportada:** la wiki española resume una condición congénita que le hace percibir el mundo en gris salvo la sangre roja de personas que sufren dolor. El perfil inglés resume que el tacto es el único sentido que funciona con normalidad. La página española atribuye a Airmid una explicación según la cual no se trataría de una dolencia física común sino de una parte faltante del «alma». Se mantiene como explicación narrada por la wiki, no como hecho médico objetivo ni como una causa completa de sus actos.
+- **Combate reportado:** las fichas describen a Vito como combatiente táctico de nivel 4, capaz de matar aventureros de nivel 2 y de usar el entorno para restringir la visión de sus oponentes. También atribuyen a una escena la manipulación emocional de Ryuu y una resistencia extraordinaria tras sufrir heridas graves. Las peleas y sus límites necesitan página/capítulo.
+- **Continuidad:** el perfil mezcla el evento original *Astrea Record* de Memoria Freese con apariciones posteriores. La continuación en eventos como *Orgia's Saga* y el viaje de redención de Vito con Noel pertenecen a rutas del juego que no deben unirse automáticamente al canon de la trilogía novelada. Por esa razón, las afirmaciones sobre la condición sensorial quedan marcadas como `CONT-UNVERIFIED` hasta que se localice qué parte aparece literalmente en la novela revisada.
+- **Límite narrativo:** el sufrimiento reportado no justifica ni explica por sí solo toda la conducta violenta. No atribuirle una relación, ideología o motivo único a partir del resumen de otro personaje.
+
+**Fuentes:** DMR-028-SRC-008/009 (fichas inglesa y española) y DMR-028-SRC-012 (referencia editorial de la novelización, útil para contexto, no para confirmar datos individuales).  
+**Claims:** DMR-028-CLM-007/008.  
+**Pendiente:** cotejar el diálogo con Zald, la explicación de su condición y la secuencia de combate en la edición japonesa de *Astrea Record*, volumen 1; separar lo que aparezca solo en eventos posteriores de DanMemo.
