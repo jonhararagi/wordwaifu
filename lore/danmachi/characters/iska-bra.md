@@ -10,10 +10,18 @@ source_refs:
   - "DMR-007-SRC-008"
   - "DMR-007-SRC-010"
   - "DMR-001-SRC-003"
+  - "DMR-027-SRC-001"
+  - "DMR-027-SRC-002"
+  - "DMR-027-SRC-003"
+  - "DMR-027-SRC-006"
+  - "DMR-027-SRC-007"
+  - "DMR-027-SRC-008"
 claim_refs:
   - "DMR-007-CLM-020"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-029"
+  - "DMR-027-CLM-007"
+  - "DMR-027-CLM-008"
 verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
 tags: ["Iska Bra", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
@@ -22,6 +30,12 @@ research_source_refs:
   - "DMR-007-SRC-008"
   - "DMR-007-SRC-010"
   - "DMR-001-SRC-003"
+  - "DMR-027-SRC-001"
+  - "DMR-027-SRC-002"
+  - "DMR-027-SRC-003"
+  - "DMR-027-SRC-006"
+  - "DMR-027-SRC-007"
+  - "DMR-027-SRC-008"
 entity_type: character
 canonical_name: "Iska Bra"
 aliases:
@@ -186,3 +200,16 @@ La traducción comunitaria describe conversaciones con Ryuu sobre sus orígenes 
 - [Perfil oficial de personajes de DanMachi IV](https://danmachi.com/danmachi4/character/) — identidad, especie y referencia visual; continuidad de adaptación.
 - [Sinopsis oficial del episodio 20 de DanMachi IV](https://danmachi.com/danmachi4/story/index.php?slideNum=1) — conclusión colectiva sobre la primera Familia; no una escena individual.
 - [Publicación comunitaria sobre la historia corta «Iska Bra»](https://danmachi.fandom.com/wiki/User_blog:Kisaki_Tosane/Astraea_Record_Volume_1_SS_%22Iska_Bra%22) — pista secundaria, no sustituto del volumen japonés.
+
+
+## Ampliación de personalidad y capacidades desde la historia corta · DMR-027
+
+- **Apariencia reportada:** la traducción comunitaria la describe con piel morena oscura, cabello negro recogido hacia atrás y trenzado en la nuca, y prendas menos reveladoras que las que suelen asociarse a otras amazonas. Usa maquillaje en mejillas, labios y uñas y dedica mucho tiempo a aplicárselo.
+- **Historia y motivación:** Iska explica que creció en un orfanato de la Calle Daidalos y que se hizo aventurera para ayudar a sostenerlo. Trabajaba y luchaba tanto que dejó de cuidar su cuerpo y su mente; las observaciones preocupadas de los niños del orfanato la llevaron a revisar el descanso, la alimentación y el autocuidado. Astrea y Maryuu también la animaron a descansar. La narración enlaza ese cambio con su interés por el maquillaje y la moda.
+- **Personalidad y relaciones:** es expresiva, entusiasta al hablar de vestimenta y persistente al recomendar a Ryuu ropa de combate. Rechaza que la compadezcan por su pasado. Su idea de que la belleza puede mejorar tanto a la persona como a su entorno es una postura personal, no un principio declarado por toda Astrea Familia.
+- **Combate reportado:** la historia la presenta como la principal amazona de la Familia y luchadora de estilo pugilista que actúa en vanguardia o posición central. La wiki comunitaria también le atribuye capacidad física alta, sentidos mejorados con Falna, habilidad con maquillaje y una magia de nombre desconocido descrita como un ataque con ambos puños. No se inventan nombre, coste ni límites de la magia.
+- **Edad y nivel en conflicto:** una traducción comunitaria dice 16 años y dos años mayor que Ryuu; la ficha española de Iska registra 18. La tabla inglesa indica nivel 3–4, pero la tabla española de Familia Astrea lo deja desconocido. Por lo tanto, esta ficha no declara edad ni nivel exactos como resueltos.
+- **Rutas de aparición:** la wiki sitúa una aparición en el recuerdo de DanMachi volumen 14 / DanMachi IV episodio 14, mientras el índice incluye la historia corta individual en *Astrea Record*, volumen 1. No deben mezclarse la fecha de un recuerdo y el contenido del relato histórico.
+
+**Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-003 y DMR-027-SRC-006 a DMR-027-SRC-008.  
+**Pendiente:** cotejar la historia en japonés y resolver edad, nivel, magia y la traducción de sus expresiones sobre belleza/justicia.
