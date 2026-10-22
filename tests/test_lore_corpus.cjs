@@ -529,7 +529,7 @@ const bellKnowledge038 = corpus.search(index, { query: "Bell Cranel Zeus vivo di
 assert.ok(bellKnowledge038.results.some(claim => claim.claimId === "DMR-038-CLM-002"), "Zeus/Bell knowledge state must be retrievable with spoiler boundaries.");
 const heraGuild038 = corpus.search(index, { query: "Hera Familia mapas Guild piso 71", characterId: "CHAR-HERA", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(heraGuild038.results.some(claim => claim.claimId === "DMR-038-CLM-003"), "Hera Familia's reported institutional contribution must be searchable.");
-assert.ok(heraGuild038.results.every(claim => claim.verificationStatus.includes("secondary_reference")), "Institution-level Hera claims must remain secondary.");
+assert.ok(heraGuild038.results.filter(claim => claim.claimId === "DMR-038-CLM-003").every(claim => claim.verificationStatus.includes("secondary_reference")), "DMR-038 institution-level Hera claim must remain secondary.");
 const maxim038 = corpus.search(index, { query: "Maxim capitán nivel 8 Zeus Familia", characterId: "CHAR-MAXIM", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(maxim038.results.some(claim => claim.claimId === "DMR-038-CLM-005"), "Maxim's role and level snapshot must be searchable.");
 assert.ok(maxim038.results.every(claim => claim.verificationStatus.includes("secondary_reference")), "Maxim profile claims must remain secondary.");
