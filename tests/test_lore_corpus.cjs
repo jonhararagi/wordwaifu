@@ -27,10 +27,11 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-032-orario-support-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-033-dark-era-evilus-deities-and-dis-sisters.md",
   "research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md",
-  "research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md"
+  "research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md",
+  "research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
-const dossierPaths = ["characters/mia-grand.md", "characters/anya-fromel.md", "characters/allen-fromel.md", "characters/alicia-forestlight.md", "characters/leene-arshe.md"];
+const dossierPaths = ["characters/mia-grand.md", "characters/anya-fromel.md", "characters/allen-fromel.md", "characters/alicia-forestlight.md", "characters/leene-arshe.md", "characters/hedin-selland.md", "characters/hogni-ragnar.md", "characters/heith-velvet.md", "characters/chloe-rolo.md", "characters/lunoa-faust.md"];
 const dossierDocuments = dossierPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents, dossierDocuments);
 const familyEntities = corpus.searchEntities(catalog, { type: "familia" });
@@ -47,8 +48,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 231, "Indexed claims include research batches 033, 034 and 035.");
-assert.equal(index.entryCount, 234, "All claims including batches 033, 034 and 035 are searchable.");
+assert.equal(index.sourceClaimCount, 246, "Indexed claims include research batches 033 through 036.");
+assert.equal(index.entryCount, 249, "All claims including batches 033 through 036 are searchable.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
@@ -506,3 +507,24 @@ assert.ok(raul035.results.some(claim => claim.claimId === "DMR-035-CLM-010"), "R
 const raulGear035 = corpus.search(index, { query: "Hunter Escape Protagonista Noble Bow Finn", characterId: "CHAR-RAUL-NOORD", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(raulGear035.results.some(claim => claim.claimId === "DMR-035-CLM-011"), "Raul's skills and weapons must be searchable.");
 assert.ok(raulGear035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Raul's wiki claims must remain secondary.");
+
+
+// DANMACHI-RESEARCH-036 regressions: Freya/Hostess dossiers searchable, still secondary.
+for (const id of ["CHAR-HEDIN-SELLAND","CHAR-HOGNI-RAGNAR","CHAR-HEITH-VELVET","CHAR-CHLOE-ROLO","CHAR-LUNOA-FAUST"]) {
+ assert.ok(index.profileDetails[id], id + " expanded dossier must be available to archive UI.");
+}
+const hedin036=corpus.search(index,{query:"Laurus Hildr Dizaria",characterId:"CHAR-HEDIN-SELLAND",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(hedin036.results.some(c=>c.claimId==="DMR-036-CLM-003"),"Hedin magic/weapon must be searchable.");
+assert.ok(hedin036.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"Hedin wiki data must remain secondary.");
+const hogni036=corpus.search(index,{query:"Dainsleif Victim Abyss",characterId:"CHAR-HOGNI-RAGNAR",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(hogni036.results.some(c=>c.claimId==="DMR-036-CLM-006"),"Hogni skills and weapon must be searchable.");
+assert.ok(hogni036.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"Hogni wiki data must remain secondary.");
+const heith036=corpus.search(index,{query:"Earth Gullveig Healing Power",characterId:"CHAR-HEITH-VELVET",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(heith036.results.some(c=>c.claimId==="DMR-036-CLM-009"),"Heith healing abilities must be searchable.");
+assert.ok(heith036.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"Heith wiki data must remain secondary.");
+const chloe036=corpus.search(index,{query:"Feles Cruz Violetta",characterId:"CHAR-CHLOE-ROLO",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(chloe036.results.some(c=>c.claimId==="DMR-036-CLM-012"),"Chloe magic/weapon must be searchable under stable ID.");
+assert.ok(chloe036.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"Chloe wiki additions must remain secondary.");
+const lunoa036=corpus.search(index,{query:"Fist Strike Fist Fighter",characterId:"CHAR-LUNOA-FAUST",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(lunoa036.results.some(c=>c.claimId==="DMR-036-CLM-015"),"Lunoa/Lunoire combat must be searchable under stable ID.");
+assert.ok(lunoa036.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"Lunoa/Lunoire wiki additions must remain secondary.");
