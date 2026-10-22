@@ -342,6 +342,9 @@ process.stdout.write("PASS lore search: 174 source claims, 177 entries, batches 
   assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("danmachi.com/danmachi/story/episode1.html")));
   assert.ok(sourceDirectory.some(source => source.category === "official" && source.url.includes("ga.sbcr.jp/product/9784815610173")));
   assert.ok(sourceDirectory.some(source => source.category === "community" && source.url.includes("danmachi.fandom.com")));
+  assert.ok(sourceDirectory.some(source => source.id === "community-danmachi-en" && source.url === "https://danmachien.miraheze.org/wiki/DanMachi_Wiki"), "Current English Miraheze wiki must be listed ahead of legacy Fandom.");
+  assert.ok(sourceDirectory.some(source => source.id === "community-danmachi-es" && source.url.includes("danmachi.miraheze.org/wiki/")), "Current Spanish Miraheze wiki must be discoverable.");
+  assert.ok(sourceDirectory.some(source => source.id === "community-fandom" && source.title.includes("archivo anterior")), "Fandom must be clearly labeled as a legacy archive.");
   assert.ok(sourceDirectory.every(source => source.title && source.url && source.limits));
   const requestedUrls = [];
   const mockFetch = async input => {
