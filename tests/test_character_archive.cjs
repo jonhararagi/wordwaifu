@@ -206,7 +206,7 @@ const historicalArchiveProfiles = [
 ];
 for (const [id, continuity, requiredText] of historicalArchiveProfiles) {
   assert.ok(archive.list(index).some(character => character.id === id), "Historical dossier must appear in the archive directory: " + id);
-  const extended = archive.getExtendedInfo(id, continuity);
+  const extended = archive.getExtendedInfo(id, continuity, index);
   assert.ok(extended && Array.isArray(extended.sections) && extended.sections.length >= 2,
     "Historical dossier must open with multiple source-bounded sections: " + id);
   assert.ok(extended.sections.map(section => section.text).join(" ").includes(requiredText),
