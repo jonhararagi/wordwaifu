@@ -78,7 +78,6 @@ continuity: CONT-AR; CONT-MAIN-LN; CONT-ANIME; CONT-UNVERIFIED
 - `claim`: La ficha comunitaria describe a Kaguya como combatiente especialmente fuerte en combate cercano, con magia Gokou y armas llamadas Higanbana y Kodachi Futaba. Gokou se resume como una magia que crea cinco hojas mágicas alrededor del objetivo. También se mencionan técnicas rápidas de desenvainado y un nombre de habilidad con variantes incompatibles en los extractos (Tekiheni/Sakibeni), por lo que no se normaliza. La página informa que Kodachi Futaba fue transferida más tarde a Ryuu. Magia, habilidades, armas y legado siguen pendientes de cotejo directo.
 - `character_id`: CHAR-KAGUYA
 - `source_id`: DMR-030-SRC-003
-- source_corroborating_source_id_1: DMR-030-SRC-004
 - `aspect`: magia, habilidades, armas, combate y legado del equipo
 - `era_or_interval`: Astrea Familia histórica y etapa posterior de Ryuu; estados separados
 - `continuity_scope`: CONT-AR; CONT-MAIN-LN; CONT-UNVERIFIED
@@ -152,7 +151,6 @@ continuity: CONT-AR; CONT-MAIN-LN; CONT-ANIME; CONT-UNVERIFIED
 - `claim`: La página comunitaria de relaciones de Ryuu informa que, tras la muerte de Alise y las demás integrantes de la primera Astrea Familia, Ryuu pidió a Astrea que abandonara Orario para que la diosa no presenciara ni interfiriera en su venganza contra Rudra Familia. Según esa página, ambas siguieron en contacto por cartas y se reunieron después de cinco años antes del Gran Conflicto entre facciones; el reencuentro emocionó a Ryuu. La misma fuente relata que Ryuu todavía pensaba en Alise y a veces imaginaba qué consejo le daría al reflexionar sobre Bell. Es un resumen secundario de relaciones posteriores, no un diálogo literal ni una escena de T−7.
 - `character_id`: CHAR-RYUU-LION
 - `source_id`: DMR-030-SRC-008
-- source_corroborating_source_id_1: DMR-030-SRC-007
 - `aspect`: relaciones, duelo, conocimiento y continuidad posterior
 - `era_or_interval`: Después de la tragedia; cinco años posteriores según fuente secundaria
 - `continuity_scope`: CONT-MAIN-LN; CONT-UNVERIFIED
@@ -189,7 +187,6 @@ continuity: CONT-AR; CONT-MAIN-LN; CONT-ANIME; CONT-UNVERIFIED
 - `claim`: La ficha comunitaria inglesa de Ryuu describe Astraea Record como una magia de herencia de justicia que permite usar las magias de las diez compañeras fallecidas de Astrea Familia que lucharon con ella, a través del vínculo compartido y de la ichor de Astrea que permanece en su falna después de cambiar de Familia. También describe cristales luminosos y una barrera temporal durante el encantamiento; los detalles exactos de alcance y fuerza son un resumen secundario. La magia es un vínculo narrativo importante entre Ryuu, sus compañeras y Astrea, pero sus reglas y limitaciones deben verificarse antes de alimentar alertas deterministas de coherencia.
 - `character_id`: CHAR-RYUU-LION
 - `source_id`: DMR-030-SRC-010
-- source_corroborating_source_id_1: DMR-030-SRC-008
 - `aspect`: magia, memoria, vínculos y limitaciones de sistema
 - `era_or_interval`: Estado posterior de Ryuu; no como capacidad del estado histórico T−7
 - `continuity_scope`: CONT-MAIN-LN; CONT-UNVERIFIED
