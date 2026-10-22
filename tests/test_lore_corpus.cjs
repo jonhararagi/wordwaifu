@@ -50,7 +50,7 @@ assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
 assert.equal(index.sourceClaimCount, 252, "Indexed claims include research batches 033 through 038.");
-assert.equal(index.entryCount, 255, "All claims including batches 033 through 038 are searchable.");
+assert.equal(index.entryCount, 259, "All claims including batches 033 through 038 are searchable, including continuity-split entries.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
@@ -514,7 +514,7 @@ assert.ok(raulGear035.results.every(claim => claim.verificationStatus.includes("
 const zeus038 = corpus.search(index, { query: "Zeus Bell relatos héroes adoptivo", characterId: "CHAR-ZEUS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(zeus038.results.some(claim => claim.claimId === "DMR-038-CLM-001"), "Zeus's adoptive relation and upbringing must be retrievable.");
 assert.ok(zeus038.results.every(claim => claim.verificationStatus.includes("secondary_reference")), "Zeus's wiki biography must remain secondary.");
-const bellKnowledge038 = corpus.search(index, { query: "Bell Cranel Zeus está vivo deidad", characterId: "CHAR-ZEUS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+const bellKnowledge038 = corpus.search(index, { query: "Bell Cranel Zeus vivo dios", characterId: "CHAR-ZEUS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(bellKnowledge038.results.some(claim => claim.claimId === "DMR-038-CLM-002"), "Zeus/Bell knowledge state must be retrievable with spoiler boundaries.");
 const heraGuild038 = corpus.search(index, { query: "Hera Familia mapas Guild piso 71", characterId: "CHAR-HERA", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(heraGuild038.results.some(claim => claim.claimId === "DMR-038-CLM-003"), "Hera Familia's reported institutional contribution must be searchable.");
