@@ -418,7 +418,7 @@ assert.ok(daphneResearch032.results.every(claim => claim.verificationStatus.incl
 const cassandraResearch032 = corpus.search(index, { query: "Cassandra Soullight sueños Daphne curación", characterId: "CHAR-CASSANDRA-ILION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(cassandraResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-005"), "Cassandra's healing/prophecy profile must be searchable.");
 assert.ok(cassandraResearch032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Cassandra's prophecy and spell details must remain secondary.");
-const olivasAbilities032 = corpus.search(index, { query: "Olivas regeneración Mind sentidos Tamer Violas Viscums", characterId: "CHAR-DARK-OLIVAS-ACT", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+const olivasAbilities032 = corpus.search(index, { query: "Olivas Accelerated Healing Mind Enhanced Senses Tamer Violas Viscums", characterId: "CHAR-DARK-OLIVAS-ACT", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(olivasAbilities032.results.some(claim => claim.claimId === "DMR-032-CLM-006"), "Olivas's detailed regeneration/senses/monster-control claim must be indexed.");
 assert.ok(olivasAbilities032.results.every(claim => claim.continuityScopes.includes("CONT-SO")), "Olivas ability claim must stay in Sword Oratoria continuity.");
 assert.ok(olivasAbilities032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Olivas ability details must remain secondary pending novel review.");
