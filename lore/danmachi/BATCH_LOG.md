@@ -1,5 +1,19 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-028 · Barca, Basram, Vito, Adi/Ardee y Airmid (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modificó.
+- **Expedientes trabajados:** Adi Varma/Ardee Varma, Barca Perdix, Basram, Vito y Airmid Teasanare. Se conserva un ID para Adi/Ardee y se mantiene el ID histórico de Airmid para no romper referencias.
+- **Fuentes registradas:** DMR-028-SRC-001 a DMR-028-SRC-013: wikis inglesas/españolas, ficha oficial japonesa del manga de Astrea Record y fichas editoriales oficiales de Astrea Record 1 y Sword Oratoria 7.
+- **Contenido recuperado:** Adi/Ardee: amistad con Ryuu, justicia compasiva, habilidades y equipo reportados; Barca: maldición, Knossos, parentesco con Dix y armas malditas; Basram: cargo en Apate Familia, doctrina, shakujō y Spirit Soldiers; Vito: alias, afiliaciones, condición sensorial y separación de eventos del juego; Airmid: perfil de sanadora, Dia Fratel, Tuired Well, Misterio y antídotos reportados.
+- **Corrección de calidad:** Airmid deja la ruta `characters/dark-era/`; se mueve a `characters/airmid-teasanare.md`, se actualizan las etiquetas y el catálogo ya no afirma que sea parte de Astrea Record. El antiguo claim `DMR-013-CLM-016` sigue visible como candidato de investigación histórica, con una nota de revisión que deja la presencia sin confirmar.
+- **Continuidad:** Adi/Ardee no se convierte en integrante de Astrea Familia; Barca se trata principalmente dentro de Sword Oratoria; Vito conserva las afirmaciones del evento original como secundarias y deja las apariciones posteriores del juego fuera de la novela revisada; Airmid queda en la continuidad general de DanMachi/Sword Oratoria.
+- **Claims:** DMR-028-CLM-001 a DMR-028-CLM-010; todos permanecen como evidencia secundaria o de adaptación, con localizadores primarios pendientes.
+- **Integración:** paquete `DANMACHI-RESEARCH-028` añadido al catálogo y cargador del corpus; los tests incorporan diez claims esperados y cinco búsquedas nuevas más la comprobación de clasificación de Airmid. Catálogo: 152 registros, 51 IDs reservados y 116 documentos de apoyo.
+- **Validación:** pendiente hasta que ambas ejecuciones de GitHub Actions sobre el commit final terminen con éxito. No se declara PASS antes de revisarlas.
+- **Próximo paso:** localizar escenas publicadas específicas: Adi/Ardee en Astrea Record 1; Basram en Astrea Record 1; Barca en Sword Oratoria 7; Vito en la novelización revisada frente al juego; Airmid en Sword Oratoria 1 y escenas curativas. Las cifras, alias y mecánicas de las wikis continúan sin elevarse a verificación primaria.
+
+
 ## DANMACHI-RESEARCH-027 · Cinco perfiles de la primera Astrea Familia (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no fue modificado.
