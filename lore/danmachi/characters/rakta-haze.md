@@ -2,7 +2,7 @@
 id: CHAR-LOKI-RAKTA-HAZE
 universe: danmachi
 type: character
-status: secondary_reference_primary_locator_pending
+status: secondary_profile_augmented_primary_locator_pending
 confidence: two distinct scene reports found in community sources; both full-text primary locators remain unchecked
 continuity_scope: CONT-SO
 source_refs:
@@ -13,7 +13,12 @@ claim_refs:
   - DMR-015-CLM-002
   - DMR-023-CLM-001
   - DMR-023-CLM-002
-tags: [Rakta Haze, Rakta, Loki Familia, Hume Bunny, supporting member, Sword Oratoria, short story]
+  - DMR-031-CLM-007
+research_source_refs:
+  - DMR-015-SRC-002
+  - DMR-023-SRC-001
+  - DMR-023-SRC-002
+tags: [Rakta Haze, Rakta, Loki Familia, Hume Bunny, supporting member, Sword Oratoria, short story, ラクタ・ハーゼ, level 3 snapshot, mapper, Knossos mapping, floor 37 scene, shyness situational, Sword Oratoria volume 2, primary locator pending]
 ---
 # Rakta Haze — expediente individual provisional
 
@@ -47,3 +52,18 @@ La referencia secundaria de «A Wolf's Roar Offered Instead of a Bouquet» (花�
 - **Fuentes:** [Rakta Haze — DanMachi Wiki](https://danmachi.fandom.com/wiki/Rakta_Haze); [A Wolf's Roar Offered Instead of a Bouquet — referencia secundaria](https://danmachi.fandom.com/wiki/A_Wolf%27s_Roar_Offered_Instead_of_a_Bouquet); [recopilación oficial 掌編集２ — GA文庫](https://www.sbcr.jp/product/4815619671/).
 
 **Uso permitido:** conservar las dos escenas como pistas distintas. No tratar la wiki como biografía exhaustiva ni fijar nivel, psicología global o relaciones estables a partir de resúmenes.
+
+
+## Ampliación secundaria cruzada · DANMACHI-RESEARCH-031
+
+### Perfil ampliado y función de cartografía
+
+La ficha inglesa presenta a Rakta Haze (ラクタ・ハーゼ) como mujer Hume Bunny, nivel 3, aventurera de Loki Familia y viva en el estado de su perfil; su debut de novela se atribuye a Sword Oratoria volumen 2. En la expedición al piso 37 aparece nerviosa y escondida detrás de Gareth ante Bete. La propia wiki plantea que podía estar reaccionando a su falta de experiencia después de subir a nivel 3, por lo que la escena no justifica describirla como cobarde de forma permanente.
+
+La misma ficha reporta una conducta distinta en Knossos: Rakta muestra resolución al asegurar a Bete que ganarán la batalla final. También le atribuye talento de cartografía y la presenta como miembro que acompaña al grupo de Riveria para mapear el Dungeon artificial. El resumen dice que pudo realizar la tarea pese a la ansiedad. Esta información permite representar a Rakta no solo mediante una reacción nerviosa, sino también mediante una función útil para una expedición y una respuesta decidida ante una misión peligrosa.
+
+### Separación de escenas conservada
+
+El reporte del piso 37 en Sword Oratoria volumen 2 y la historia extra del cementerio vinculada al volumen 12 siguen siendo eventos separados. El detalle de que Rakta se esconda detrás de Gareth frente a Bete en el cementerio procede de la historia corta, no de la escena del piso 37. La ampliación no mezcla sus localizaciones ni convierte ninguna de las dos en escena primaria verificada.
+
+**Fuente nueva:** DMR-031-CLM-007, https://danmachi.fandom.com/wiki/Rakta_Haze. Para la escena del cementerio siguen aplicándose los límites ya registrados en DANMACHI-RESEARCH-023; los localizadores publicados internos continúan pendientes.
