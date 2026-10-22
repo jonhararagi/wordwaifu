@@ -57,3 +57,12 @@ El perfil lo caracteriza por una lealtad intensa a Freya, una forma de hablar gr
 
 Los nombres, mecanismos, historia de los reinos y escenas con Hedin/Bell siguen secundarios y pendientes de cotejo en las novelas.
 
+
+
+## Relectura bilingüe de Miraheze · 2026-10-22 (secundaria)
+
+La subpágina de habilidades precisa que Dainsleif no aumenta directamente las estadísticas: altera la personalidad para liberar inhibidores mentales, consume Mind y puede cancelarse si Hogni recibe demasiado daño. Su juicio táctico aún puede mezclarse con el conocimiento de su personalidad habitual. Victim Abyss oculta la extensión de la hoja, ralentiza la curación y consume estamina al activar Sword Murder y al herir; el coste no desaparece inmediatamente con magia o pociones.
+
+La página también resume el Juego de Guerra con Ryuu, pero atribuye la derrota de Hogni al desgaste de combates previos y señala que Ryuu todavía no controlaba bien Agaris Alvesynth. No utilizar esto como comparación limpia de niveles. Las referencias de DanMachi vols. 16 y 18, Astrea Record vol. 3 y Familia Chronicle: Episode Freya son pistas citadas por la wiki, no pasajes comprobados en esta tanda.
+
+**Fuentes actuales:** [ficha EN](https://danmachien.miraheze.org/wiki/Hogni_Ragnar), [ficha ES](https://danmachi.miraheze.org/wiki/Hogni_Ragnar), [habilidades EN](https://danmachien.miraheze.org/wiki/Hogni_Ragnar/Abilities), [habilidades ES](https://danmachi.miraheze.org/wiki/Hogni_Ragnar/Habilidades).
