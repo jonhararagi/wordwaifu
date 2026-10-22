@@ -586,3 +586,16 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Catálogo:** 152 registros, 51 IDs reservados, 119 documentos de apoyo; no se modifican identidades principales.
 - **Estado de evidencia:** no se declaran escenas primarias cotejadas. Rutas candidatas: Sword Oratoria vol. 4 para briefing/Narvi/Cruz, vol. 10 y Sword Oratoria vol. 6 para Elfy, vol. 2 y relato extra asociado al vol. 12 para Rakta, y la hoja de estado de Sword Oratoria 15 para Aki. Capítulo/página permanecen pendientes hasta leer el texto autorizado.
 - **CI:** verificar ambas ejecuciones en el SHA final antes de declarar PASS; los resultados de un SHA anterior no se heredan automáticamente.
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-035 · Cinco expedientes de Loki Familia ampliados (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modifica.
+- **Perfiles:** Bete Loga, Tiona Hiryute, Tione Hiryute, Lefiya Viridis y Raul Nord. Se conservaron los IDs y los archivos existentes.
+- **Contenido:** se amplió la biografía de Bete sobre Vidar Familia y Knossos; la infancia de Tiona/Tione en Telskyura y la influencia de Argonaut; la decisión de Tiona ante Wiene; la historia de Tione, su relación no recíproca reportada con Finn, skills, magia y armas; la formación de Lefiya en el School District, snapshots por nivel y magia/equipo; y la inseguridad funcional de Raul, su relación con Aki/Finn, la batalla del Puente de los Héroes y las armas que le atribuyen las wikis.
+- **Discrepancias:** la wiki española/inglesa discrepa en los ojos de Tiona (café frente a verde oscuro) y su piso máximo reportado (59 frente a 60). No se escoge un valor sin verificación primaria.
+- **Fuentes:** nueve registros DMR-035-SRC-001..009 y once claims DMR-035-CLM-001..011. La apertura directa de Fandom devolvió 402 y el mirror actual de Miraheze 403; se usaron extractos indexados y se documenta ese límite. No se afirma lectura completa de páginas migradas o volúmenes de novela.
+- **Integración:** paquete DMR-035 conectado al catálogo y al loader de `src/lore-corpus.js`; pruebas de recuperación nuevas; `MASTER_INDEX.md` y el índice de personajes actualizados. La ficha de cada personaje enlaza los claims nuevos.
+- **Catálogo:** los totales se registrarán desde el JSON validado del SHA final; no se reutilizan los totales de tandas anteriores si el catálogo ya cambió.
+- **Pendiente:** cotejar los once claims contra la edición publicada y registrar capítulo/página solo después de leer el pasaje. Las reencarnaciones que la wiki atribuye a Tiona/Tione quedan sin confirmar.
+- **CI:** reportar el estado de ejecuciones asociadas al SHA final cuando los workflows hayan terminado; no heredar un PASS anterior.
