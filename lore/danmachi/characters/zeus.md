@@ -8,16 +8,20 @@ source_refs:
   - DMR-021-SRC-001
   - DMR-021-SRC-003
   - DMR-011-SRC-005
+  - "DMR-042-SRC-001"
+  - "DMR-042-SRC-002"
 claim_refs:
   - DMR-021-CLM-001
   - DMR-021-CLM-007
   - DMR-021-CLM-006
   - DMR-008-CLM-027
+  - "DMR-042-CLM-001"
+  - "DMR-042-CLM-002"
 spoiler_level: major
 aliases:
   - "ゼウス"
 tags: [Zeus, Zeus Familia, Bell Cranel, history, Great Quests]
-research_source_refs: [DMR-038-SRC-001, DMR-038-SRC-002]
+research_source_refs: [DMR-038-SRC-001, DMR-038-SRC-002, DMR-042-SRC-001, DMR-042-SRC-002]
 research_claim_refs: [DMR-038-CLM-001, DMR-038-CLM-002]
 research_continuity_scope: CONT-MAIN-LN; CONT-AR; CONT-UNVERIFIED
 ---
@@ -69,3 +73,10 @@ Según el artículo comunitario, Bell cree que Zeus murió y desconoce que sigue
 - La derrota contra el Dragón Negro, la salida de Zeus de Orario y la razón por la que fingió su muerte siguen pendientes de localizadores primarios.
 - No importar habilidades o rasgos de Zeus de la mitología griega a este expediente.
 - Claims de apoyo para búsqueda: `DMR-038-CLM-001` y `DMR-038-CLM-002`; ambos siguen como evidencia secundaria.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-042 (2026-10-22)
+
+La relectura EN/ES añade al expediente la vida reportada de Zeus con Bell, la muerte fingida de motivo desconocido y sus capacidades divinas comunitarias, sin asignarle nivel Falna. La cronología institucional sigue secundaria y separada; la prueba oficial auxiliar solo respalda la victoria conjunta contra Behemoth y Leviathan.
+
+**Fuentes revisadas:** https://danmachien.miraheze.org/wiki/Zeus; https://danmachi.miraheze.org/wiki/Zeus; https://danmachien.miraheze.org/wiki/Zeus_Familia; https://danmachi.miraheze.org/wiki/Familia_Zeus; https://danmachi.com/center-test/normal.html. Los datos de wiki siguen secundarios; sus referencias de volumen/capítulo permanecen como pistas, no pasajes leídos directamente.

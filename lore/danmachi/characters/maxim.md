@@ -7,14 +7,16 @@ continuity_scope: CONT-AR; CONT-MAIN-LN
 source_refs:
   - DMR-021-SRC-001
   - DMR-021-SRC-005
+  - "DMR-042-SRC-005"
 claim_refs:
   - DMR-021-CLM-003
   - DMR-021-CLM-006
+  - "DMR-042-CLM-004"
 spoiler_level: major
 aliases:
   - "マキシム"
 tags: [Maxim, Zeus Familia, captain, historical roster]
-research_source_refs: [DMR-038-SRC-004]
+research_source_refs: [DMR-038-SRC-004, DMR-042-SRC-005]
 research_claim_refs: [DMR-038-CLM-005, DMR-038-CLM-006]
 research_continuity_scope: CONT-AR; CONT-MAIN-LN; CONT-UNVERIFIED
 ---
@@ -64,3 +66,10 @@ La página presenta como objetivo de Maxim preparar a la siguiente generación p
 - Apariencia, magia, skills, arma, fecha exacta de muerte y escena final no están fijadas por un pasaje primario en este expediente.
 - El nivel 8 pertenece al snapshot de la wiki, no a cada etapa o recuerdo.
 - Claims consultables: `DMR-038-CLM-005` y `DMR-038-CLM-006`; permanecen como referencias secundarias.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-042 (2026-10-22)
+
+La relectura añade el relato comunitario de Maxim como capitán nivel 8, su último desafío a la generación joven y la tensión entre humillación y mentoría. Nivel, carácter y muerte permanecen secundarios hasta leer las escenas citadas.
+
+**Fuentes revisadas:** https://danmachien.miraheze.org/wiki/Maxim; https://danmachi.miraheze.org/wiki/Maxim; https://danmachien.miraheze.org/wiki/Zeus_Familia; https://danmachien.miraheze.org/wiki/Hera_Familia. Los datos de wiki siguen secundarios; sus referencias de volumen/capítulo permanecen como pistas, no pasajes leídos directamente.

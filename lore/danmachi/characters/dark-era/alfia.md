@@ -2,12 +2,14 @@
 id: CHAR-DARK-ALFIA
 universe: danmachi
 type: character
-status: secondary_summary_reviewed_primary_page_pending
+status: secondary_summary_reviewed_primary_page_pending; primary text pending
 continuity_scope: "CONT-AR"
 source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
   - "DMR-026-SRC-001"
+  - "DMR-042-SRC-006"
+  - "DMR-042-SRC-007"
 claim_refs:
   - "DMR-014-CLM-002"
   - "DMR-013-CLM-002"
@@ -15,12 +17,16 @@ claim_refs:
   - "DMR-014-CLM-022"
   - "DMR-026-CLM-001"
   - "DMR-026-CLM-002"
+  - "DMR-042-CLM-005"
+  - "DMR-042-CLM-006"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Alfia", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
   - "DMR-026-SRC-001"
+  - "DMR-042-SRC-006"
+  - "DMR-042-SRC-007"
 entity_type: character
 canonical_name: "Alfia"
 aliases:
@@ -217,3 +223,10 @@ La ficha inglesa de DanMachi Wiki aporta más campos de perfil que los registrad
 
 **Evidencia secundaria:** DMR-026-CLM-001 y DMR-026-CLM-002 · [DanMachi Wiki — Alfia](https://danmachi.fandom.com/wiki/Alfia).  
 **Pendiente:** capítulos/páginas primarios, diálogo exacto, mecánica de la enfermedad y distinción entre historia publicada y material de juego.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-042 (2026-10-22)
+
+Se amplía con Satanas Verion, Silentium Eden, Genos Angelus, Gif Blessing y las habilidades listadas por Miraheze. Los valores cuantitativos de deterioro de Mind/estadísticas siguen secundarios. La relación con Meteria y Bell no fija qué sabe cada personaje por etapa; What If/AU continúa separado.
+
+**Fuentes revisadas:** https://danmachien.miraheze.org/wiki/Alfia; https://danmachi.miraheze.org/wiki/Alfia; https://danmachien.miraheze.org/wiki/Alfia/Abilities; https://danmachi.miraheze.org/wiki/Alfia/Habilidades; https://ga.sbcr.jp/product/9784815623692/. Los datos de wiki siguen secundarios; sus referencias de volumen/capítulo permanecen como pistas, no pasajes leídos directamente.

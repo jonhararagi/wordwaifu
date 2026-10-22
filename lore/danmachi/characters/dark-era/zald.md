@@ -2,24 +2,30 @@
 id: CHAR-DARK-ZALD
 universe: danmachi
 type: character
-status: secondary_summary_reviewed_primary_page_pending
+status: secondary_summary_reviewed_primary_page_pending; primary text pending
 continuity_scope: "CONT-AR"
 source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
   - "DMR-026-SRC-002"
+  - "DMR-042-SRC-008"
+  - "DMR-042-SRC-009"
 claim_refs:
   - "DMR-014-CLM-001"
   - "DMR-013-CLM-001"
   - "DMR-014-CLM-023"
   - "DMR-026-CLM-003"
   - "DMR-026-CLM-004"
+  - "DMR-042-CLM-007"
+  - "DMR-042-CLM-008"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Zald", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-003"
   - "DMR-013-SRC-001"
   - "DMR-026-SRC-002"
+  - "DMR-042-SRC-008"
+  - "DMR-042-SRC-009"
 entity_type: character
 canonical_name: "Zald"
 aliases:
@@ -204,3 +210,10 @@ Resúmenes secundarios describen un enfrentamiento entre Zald y Ottar; se conser
 
 **Evidencia secundaria:** DMR-026-CLM-003 y DMR-026-CLM-004 · [DanMachi Wiki — Zald](https://danmachi.fandom.com/wiki/Zald).  
 **Pendiente:** escena de Behemoth, descripción del veneno, límites de Deus Ambrosia y enfrentamiento con Ottar en texto primario.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-042 (2026-10-22)
+
+Se actualiza la procedencia y se hace consultable el veneno de Behemoth como debilidad reportada, junto con Deus Ambrosia, Rea Ambrosia, Afterglow y el equipo listado. Los mecanismos exactos y la relación con Alfia quedan secundarios y requieren cotejo de Astrea Record.
+
+**Fuentes revisadas:** https://danmachien.miraheze.org/wiki/Zald; https://danmachi.miraheze.org/wiki/Zald; https://danmachien.miraheze.org/wiki/Zald/Abilities; https://danmachi.miraheze.org/wiki/Zald/Habilidades; https://danmachien.miraheze.org/wiki/Zeus_Familia; https://danmachi.com/center-test/normal.html. Los datos de wiki siguen secundarios; sus referencias de volumen/capítulo permanecen como pistas, no pasajes leídos directamente.

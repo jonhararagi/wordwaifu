@@ -1,5 +1,14 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-042 · Relectura bilingüe de cinco perfiles históricos (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.
+- **Perfiles revisados:** Zeus, Hera, Maxim, Alfia y Zald. Se leyeron las páginas inglesa/española migradas; además los rosters de Zeus/Hera Familia y subpáginas de habilidades de Alfia/Zald.
+- **Datos ampliados:** Zeus — relación de crianza con Bell, muerte fingida sin motivo resuelto y poderes divinos reportados; Hera — límites de información individual y discrepancia en roster; Maxim — nivel 8 y último desafío a la generación joven; Alfia — magias y enfermedad/Gif Blessing, con parentescos cautelosos; Zald — veneno de Behemoth, Deus Ambrosia, Rea Ambrosia y Afterglow.
+- **Conflictos:** roster de Hera (Emperatriz listada en español, ausente en inglés); cronología relativa; motivo de la muerte fingida de Zeus; reglas exactas de Gif Blessing/Deus Ambrosia/veneno de Behemoth.
+- **Claims:** ocho DMR-042, todos secundarios, con URL y localizadores de wiki. La fuente oficial auxiliar solo apoya la victoria conjunta contra Behemoth y Leviathan.
+- **Validación:** pruebas añadidas; Actions de la nueva revisión pendientes de ejecución.
+
 ## DANMACHI-RESEARCH-041 · Relectura bilingüe ampliada de Alise, Kaguya, Lyra, Astrea y Ryuu (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modifica.

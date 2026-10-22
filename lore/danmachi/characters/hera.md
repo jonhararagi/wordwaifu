@@ -8,15 +8,19 @@ source_refs:
   - DMR-021-SRC-002
   - DMR-021-SRC-004
   - DMR-011-SRC-005
+  - "DMR-042-SRC-003"
+  - "DMR-042-SRC-004"
 claim_refs:
   - DMR-021-CLM-002
   - DMR-021-CLM-006
   - DMR-008-CLM-027
+  - "DMR-042-CLM-002"
+  - "DMR-042-CLM-003"
 spoiler_level: major
 aliases:
   - "ヘラ"
 tags: [Hera, Hera Familia, Zeus Familia, history, Great Quests]
-research_source_refs: [DMR-038-SRC-003]
+research_source_refs: [DMR-038-SRC-003, DMR-042-SRC-003, DMR-042-SRC-004]
 research_claim_refs: [DMR-038-CLM-003, DMR-038-CLM-004]
 research_continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED
 ---
@@ -62,3 +66,10 @@ La página también resume que la fuerza principal de Zeus Familia y Hera Famili
 - No importar rasgos de la Hera mitológica ni inferir una relación romántica, familiar o de rivalidad privada con Zeus.
 - Fuentes: [DanMachi Wiki — Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia) y [prueba oficial de conocimiento](https://danmachi.com/center-test/normal.html). Los detalles individuales e institucionales de la wiki siguen secundarios.
 - Claims recuperables: `DMR-038-CLM-003` y `DMR-038-CLM-004`.
+
+
+## Relectura bilingüe de Miraheze · DANMACHI-RESEARCH-042 (2026-10-22)
+
+La segunda lectura confirma que la entrada individual no basta para inventar psicología de Hera. La composición del roster difiere: la página española lista una Emperatriz/capitana de nivel 9 fallecida que falta en el roster inglés. El dato queda como conflicto de fuentes.
+
+**Fuentes revisadas:** https://danmachien.miraheze.org/wiki/Hera; https://danmachi.miraheze.org/wiki/Hera; https://danmachien.miraheze.org/wiki/Hera_Familia; https://danmachi.miraheze.org/wiki/Familia_Hera; https://danmachi.com/center-test/normal.html. Los datos de wiki siguen secundarios; sus referencias de volumen/capítulo permanecen como pistas, no pasajes leídos directamente.

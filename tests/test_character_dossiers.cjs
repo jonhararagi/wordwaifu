@@ -7,11 +7,11 @@ assert.ok(all.length >= 37, "The archive must retain existing dossiers and seven
 
 
 const historicalDossiers = [
-  { id: "CHAR-ZEUS", tokens: ["Bell Cranel", "Behemoth y Leviathan", "fingió estar muerto"], source: "https://danmachi.fandom.com/wiki/Zeus" },
-  { id: "CHAR-HERA", tokens: ["Hera Familia", "Behemoth y Leviathan", "Ouranos"], source: "https://danmachi.fandom.com/wiki/Hera_Familia" },
-  { id: "CHAR-MAXIM", tokens: ["capitán de Zeus Familia", "Dragón Negro", "siguiente generación"], source: "https://danmachi.fandom.com/wiki/Maxim" },
-  { id: "CHAR-DARK-ALFIA", tokens: ["Silentium Eden", "Meteria", "What If"], source: "https://danmachi.fandom.com/wiki/Alfia" },
-  { id: "CHAR-DARK-ZALD", tokens: ["Deus Ambrosia", "veneno de Behemoth", "Alfia"], source: "https://danmachi.fandom.com/wiki/Zald" }
+  { id: "CHAR-ZEUS", tokens: ["Bell Cranel", "Behemoth y Leviathan", "fingió estar muerto"], source: "https://danmachien.miraheze.org/wiki/Zeus" },
+  { id: "CHAR-HERA", tokens: ["Hera Familia", "Behemoth y Leviathan", "Ouranos"], source: "https://danmachien.miraheze.org/wiki/Hera_Familia" },
+  { id: "CHAR-MAXIM", tokens: ["capitán de Zeus Familia", "Dragón Negro", "siguiente generación"], source: "https://danmachien.miraheze.org/wiki/Maxim" },
+  { id: "CHAR-DARK-ALFIA", tokens: ["Silentium Eden", "Meteria", "What If"], source: "https://danmachien.miraheze.org/wiki/Alfia" },
+  { id: "CHAR-DARK-ZALD", tokens: ["Deus Ambrosia", "veneno de Behemoth", "Alfia"], source: "https://danmachien.miraheze.org/wiki/Zald" }
 ];
 for (const expected of historicalDossiers) {
   const profile = api.get(expected.id);
@@ -114,3 +114,17 @@ for(const expected of astreaCore041){
  assert.ok(profile.sources.includes(expected.source),expected.id+" must prioritize current English Miraheze source.");
 }
 assert.ok(api.get("CHAR-RYUU-LION").history.includes("Jura") && api.get("CHAR-RYUU-LION").history.includes("discrepancia"),"Ryuu's survivor conflict must stay visible rather than being silently resolved.");
+
+const historicalMiraheze042 = [
+  {id:"CHAR-ZEUS",tokens:["Percepción Divina","nivel Falna","fingió estar muerto"],source:"https://danmachien.miraheze.org/wiki/Zeus"},
+  {id:"CHAR-HERA",tokens:["Emperatriz","No hay evidencia suficiente","Ouranos"],source:"https://danmachien.miraheze.org/wiki/Hera_Familia"},
+  {id:"CHAR-MAXIM",tokens:["nivel 8","siguiente generación","humillando"],source:"https://danmachien.miraheze.org/wiki/Maxim"},
+  {id:"CHAR-DARK-ALFIA",tokens:["Satanas Verion","Gif Blessing","What If"],source:"https://danmachien.miraheze.org/wiki/Alfia"},
+  {id:"CHAR-DARK-ZALD",tokens:["Deus Ambrosia","veneno de Behemoth","Alfia"],source:"https://danmachien.miraheze.org/wiki/Zald"}
+];
+for(const expected of historicalMiraheze042){
+ const profile=api.get(expected.id);assert.ok(profile,expected.id+" must resolve to a stable dossier.");
+ const searchable=[profile.appearance,profile.history,profile.personality,profile.abilities,profile.relationships,profile.conflict].join(" ");
+ for(const token of expected.tokens)assert.ok(searchable.includes(token),expected.id+" must include current Miraheze profile detail: "+token);
+ assert.ok(profile.sources.includes(expected.source),expected.id+" must prioritize current English Miraheze source.");
+}

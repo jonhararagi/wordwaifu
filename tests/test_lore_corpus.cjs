@@ -33,6 +33,7 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md",
   "research/inbox/DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md",
   "research/inbox/DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md",
+  "research/inbox/DANMACHI-RESEARCH-042-historical-five-miraheze-review.md",
   "research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
@@ -53,8 +54,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 273, "Indexed claims include research batches 033 through 041.");
-assert.equal(index.entryCount, 276, "All claims including batches 033 through 041 are searchable.");
+assert.equal(index.sourceClaimCount, 281, "Indexed claims include research batches 033 through 042.");
+assert.equal(index.entryCount, 284, "All claims including batches 033 through 042 are searchable.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md"), "Runtime query loader must include DMR-039.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md"), "Runtime query loader must include DMR-040.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md"), "Runtime query loader must include DMR-041.");
@@ -640,3 +641,22 @@ const ryuJuraStrict = corpus.search(index, {
 });
 assert.equal(ryuJuraStrict.results.some(c=>c.claimId==="DMR-041-CLM-007"),false,"The cross-continuity Jura claim must not be presented as anime-only evidence.");
 assert.ok(ryuJuraStrict.results.every(c=>c.continuityScopes.length===1 && c.continuityScopes[0]==="CONT-ANIME"),"Every strict anime result must have one exact continuity scope.");
+
+const zeus042=corpus.search(index,{query:"Bell montañosa fingió estar muerto nieto",characterId:"CHAR-ZEUS",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(zeus042.results.some(c=>c.claimId==="DMR-042-CLM-001"),"Zeus's Bell relationship and feigned-death report must be searchable.");
+assert.ok(zeus042.results.filter(c=>c.claimId==="DMR-042-CLM-001").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Zeus's personal biography must remain secondary.");
+const families042=corpus.search(index,{query:"Behemoth Leviathan piso 71 Dragón Negro",characterId:"CHAR-ZEUS",continuity:"CONT-UNVERIFIED",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(families042.results.some(c=>c.claimId==="DMR-042-CLM-002"),"Joint Zeus/Hera institutional history must be searchable.");
+const heraRoster042=corpus.search(index,{query:"Emperatriz capitana nivel 9 Hera Familia",characterId:"CHAR-HERA",continuity:"CONT-UNVERIFIED",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(heraRoster042.results.some(c=>c.claimId==="DMR-042-CLM-003"),"Hera's EN/ES roster discrepancy must remain retrievable.");
+const maxim042=corpus.search(index,{query:"Maxim nivel 8 humillar siguiente generación",characterId:"CHAR-MAXIM",continuity:"CONT-UNVERIFIED",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(maxim042.results.some(c=>c.claimId==="DMR-042-CLM-004"),"Maxim's level and last challenge must be searchable.");
+const alfiaBio042=corpus.search(index,{query:"Meteria hermana gemela What If Hera Familia",characterId:"CHAR-DARK-ALFIA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(alfiaBio042.results.some(c=>c.claimId==="DMR-042-CLM-005"),"Alfia's family and continuity caveat must be searchable.");
+const alfiaAbilities042=corpus.search(index,{query:"Satanas Verion Gif Blessing enfermedad Mind",characterId:"CHAR-DARK-ALFIA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(alfiaAbilities042.results.some(c=>c.claimId==="DMR-042-CLM-006"),"Alfia's magic and illness effects must be searchable.");
+const zaldBio042=corpus.search(index,{query:"veneno Behemoth Alfia Zeus Familia",characterId:"CHAR-DARK-ZALD",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(zaldBio042.results.some(c=>c.claimId==="DMR-042-CLM-007"),"Zald's Behemoth poison and Alfia relationship must be searchable.");
+const zaldAbilities042=corpus.search(index,{query:"Deus Ambrosia Rea Ambrosia Afterglow Grattor",characterId:"CHAR-DARK-ZALD",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(zaldAbilities042.results.some(c=>c.claimId==="DMR-042-CLM-008"),"Zald's skill, magic and equipment must be searchable.");
+for(const result of [maxim042,alfiaBio042,alfiaAbilities042,zaldBio042,zaldAbilities042])assert.ok(result.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"All DMR-042 profile claims must remain secondary.");

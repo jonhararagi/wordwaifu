@@ -423,3 +423,14 @@ Aplicar en las próximas tandas de perfiles. Este protocolo corrige el patrón d
 - [ ] Localizar texto autorizado que confirme la divergencia de piso de Alise y la grafía de la habilidad de Kaguya; revisar qué edición/estado mide cada tabla.
 - [ ] Cotejar las capacidades de Astrea, el funcionamiento de Astraea Record de Ryuu y los estados de nivel 4/6 con el texto publicado; no convertir comparativas wiki en números canónicos sin contexto.
 - **Estado:** relectura bilingüe completada; corroboración primaria pendiente. Las wikis actuales no se presentan como fuente primaria.
+
+
+## Estado tras DANMACHI-RESEARCH-042 — cinco expedientes históricos
+
+- [x] Releer páginas EN/ES de Zeus, Hera, Maxim, Alfia y Zald, familias y subpáginas de habilidades.
+- [x] Ampliar los perfiles de aplicación y las fichas estructuradas con datos concretos y URL actuales.
+- [x] Registrar ocho claims recuperables, todos secundarios.
+- [ ] Leer DanMachi vol. 20 cap. 4 y Familia Chronicle: Episode Freya para Maxim; Astrea Record vols. 1/3 y escenas citadas para Alfia/Zald antes de promover claims.
+- [ ] Resolver la discrepancia del roster de Hera y las distancias temporales mediante texto primario.
+- [ ] Verificar motivo de la muerte fingida de Zeus, Gif Blessing, veneno de Behemoth y límites de Deus Ambrosia contra pasajes publicados.
+- **Estado:** perfiles ampliados; lectura primaria de los ocho claims pendiente. La fuente oficial existente solo respalda victoria conjunta de Zeus y Hera Familia contra Behemoth y Leviathan.
