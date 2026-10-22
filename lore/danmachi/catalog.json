@@ -3404,6 +3404,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_expanded_primary_locators_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-035",
+      "path": "research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_locator_pending"
     }
   ],
   "lastStructuredSync": "2026-10-22"
