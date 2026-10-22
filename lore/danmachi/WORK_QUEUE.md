@@ -384,3 +384,16 @@ Aplicar en las próximas tandas de perfiles. Este protocolo corrige el patrón d
 
 **Orden obligatorio:** wikis inglesa + española de Miraheze → enlaces internos/subpáginas relevantes → extracción estructurada en WordWaifu → cotejo con fuente primaria → pruebas e informe. Mantener tandas acotadas de cinco identidades cuando sea razonable y escoger las que tengan mejores rutas de comprobación.
 
+
+
+## Estado tras DANMACHI-RESEARCH-039 — segunda lectura bilingüe
+
+- [x] Leer fichas actuales en inglés y español de Hedin, Hogni, Heith, Chloe y Lunoire/Lunoa en Miraheze.
+- [x] Revisar las subpáginas enlazadas de habilidades de Hedin/Hogni/Heith y de relaciones de Hedin/Heith antes de ampliar la búsqueda externa.
+- [x] Ampliar los cinco expedientes visibles y las fichas estructuradas con la información adicional; actualizar la procedencia de DMR-036 y añadir DMR-039 al corpus con pruebas de búsqueda.
+- [x] Añadir las dos wikis migradas al directorio de fuentes y etiquetar Fandom como archivo anterior a la migración.
+- [ ] Cotejar las escenas de Hedin/Hogni con los textos autorizados citados por las wikis (Familia Chronicle: Episode Freya, DanMachi vols. 16/18 y Astrea Record vol. 3); no tratar las referencias de las wikis como si el texto hubiera sido leído.
+- [ ] Cotejar las limitaciones de Heith contra Episode Heith y DanMachi vol. 21 cap. 5; verificar el contenido sensible de su subpágina de relaciones antes de promoverlo.
+- [ ] Cotejar la secuencia de encargos de Chloe y Lunoa contra DanMachi vol. 21 cap. 2 y las referencias de Sword Oratoria; mantener separada la cronología comunitaria del resumen oficial de la deuda con Mia.
+- [ ] Resolver Hildrsleif/Hildr Slēv, los snapshots de piso 58/60 y 37/60 y Reverse/Rebirth Gandr únicamente tras cotejo directo.
+- **Estado:** pasada bilingüe de wiki completada; corroboración primaria pendiente. Los claims DMR-039 permanecen como evidencia secundaria.
