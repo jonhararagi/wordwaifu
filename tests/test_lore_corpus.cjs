@@ -145,7 +145,9 @@ assert.ok(airmidResearch028.results.every(claim => claim.verificationStatus.incl
 const airmidRecord028 = catalog.records.find(record => record.id === "CHAR-DARK-AIRMID");
 assert.equal(airmidRecord028.path, "characters/airmid-teasanare.md", "Airmid should not remain filed under dark-era candidates.");
 assert.ok(!airmidRecord028.tags.includes("Era Oscura") && !airmidRecord028.tags.includes("Astrea Record"), "Airmid's historical participation remains unconfirmed and must not be asserted by catalog tags.");
-assert.ok(index.profileDetails["CHAR-DARK-AIRMID"], "The moved Airmid file must continue to load through the character archive.");
+const airmidPath028 = path.join(root, airmidRecord.path);
+assert.ok(fs.existsSync(airmidPath028), "The moved Airmid dossier must exist at the catalog path.");
+assert.ok(fs.readFileSync(airmidPath028, "utf8").includes("id: CHAR-DARK-AIRMID"), "Moving Airmid must preserve the stable character ID.");
 
 
 assert.ok(maryuuMagic.results.every(claim => claim.characterIds.includes("CHAR-MARIYU-LEAGE")), "Romanization variants must not create duplicate character identities.");
