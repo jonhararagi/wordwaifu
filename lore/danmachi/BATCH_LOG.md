@@ -536,3 +536,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Catálogo tras el registro:** 152 records, 51 IDs reservados, 118 documentos de apoyo. Sin IDs duplicados ni identidades nuevas.
 - **Validación de CI:** consultar las ejecuciones enlazadas al SHA que se esté evaluando; el estado aprobado no se copia como permanente en este registro estático. La entrega solo informa PASS después de comprobar ambas ejecuciones del último SHA.
 - **Siguiente prioridad:** localizar los pasajes publicados concretos de Astrea Record volúmenes 1–3, la historia corta vinculada al volumen 2 y la continuidad posterior de Ryuu antes de convertir los datos secundarios en evidencia canónica.
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-031 · Cinco expedientes secundarios de Loki Familia (2026-10-22)
+
+- **Rama:** work/story-completion-danmachi-audit-2026-10; main permanece sin modificar.
+- **Identidades ampliadas:** Aki/Anakitty Autumn (CHAR-LOKI-AKI), Narvi Roll bajo el ID legado CHAR-LOKI-NARFI, Cruz Bussell (CHAR-LOKI-CRUZ), Elfy Colette (CHAR-LOKI-ELFY-COLETTE) y Rakta Haze (CHAR-LOKI-RAKTA-HAZE). No se crearon IDs de personaje ni duplicados.
+- **Contenido:** Aki: snapshot de nivel 5/piso 60 asociado a Sword Oratoria 15, Cat Walk/Cat Returns/Paw Bash, Gatto Nero/Black Buckler, progresión con Raul y discrepancia de reencarnación Felis frente a Alkittine Diondra. Narvi: nombre japonés, apariencia, nivel 4/piso 59 y ruta de Sword Oratoria 4; el crosswalk Narfi/Narvi se mantiene pendiente. Cruz: identidad, apariencia, lanza/espada, nivel 4/piso 59 y debut reportado en Sword Oratoria 4. Elfy: edad/altura/nivel reportados, historia del Distrito Escolar, personalidad, relación con Lefiya, magia de fuego, Mage y alias Lomoire mantenido con origen de juego reportado. Rakta: perfil más allá de su nerviosismo, aptitud de mapeo en Knossos y separación del piso 37 frente a la historia corta del cementerio.
+- **Fuentes:** siete claims nuevos DMR-031-CLM-001..007; se amplían cinco referencias fuente ya registradas y se añaden tres fuentes nuevas para extractos en español y trazabilidad del alias Lomoire. Las fichas españolas antiguas de Narvi, Elfy y Rakta redirigen a una migración y no dieron contenido actualizado suficiente; el límite queda documentado.
+- **Integración:** paquete añadido a catalog.json (RESEARCH-DM-031) y src/lore-corpus.js; cinco fichas ampliadas, índice y MASTER_INDEX actualizados; tests incluyen recuperación por nombre/skill/equipo/Knossos y exigen mantener los claims como secundarios.
+- **Catálogo:** 152 registros, 51 IDs reservados, 119 documentos de apoyo; no se modifican identidades principales.
+- **Estado de evidencia:** no se declaran escenas primarias cotejadas. Rutas candidatas: Sword Oratoria vol. 4 para briefing/Narvi/Cruz, vol. 10 y Sword Oratoria vol. 6 para Elfy, vol. 2 y relato extra asociado al vol. 12 para Rakta, y la hoja de estado de Sword Oratoria 15 para Aki. Capítulo/página permanecen pendientes hasta leer el texto autorizado.
+- **CI:** verificar ambas ejecuciones en el SHA final antes de declarar PASS; los resultados de un SHA anterior no se heredan automáticamente.
