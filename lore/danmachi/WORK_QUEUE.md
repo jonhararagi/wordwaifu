@@ -359,3 +359,14 @@ La matriz mejora navegación y control de cobertura, pero **no** declara complet
 - [ ] Verificar snapshots de nivel y reglas de magia/equipo de Lefiya sin mezclar estados de nivel 3 y 4.
 - [ ] Verificar los intervalos relativos de Raul y Aki, Puente de los Héroes, entrega de Protagonista y procedencia de Noble Bow.
 - [ ] Mantener en estado secundario cualquier dato extraído solo de wiki; no inventar capítulo/página y no usar reencarnación como canon sin identificar la continuidad que la afirma.
+
+## FUTURO — WW-FUTURE-CHARACTER-HISTORY-001 · Generador histórico de personajes originales
+
+- **Estado:** PLAN REGISTRADO / BLOQUEADO HASTA CERRAR DANMACHI. No es una función implementada.
+- **Condición de inicio:** cerrar la cobertura DanMachi acordada o dejar cada pendiente residual resuelto/bloqueado/fuera de alcance con evidencia; validar el último estado de la rama y registrar la continuidad antes de pasar a esta tarea.
+- **Objetivo:** crear personas originales aleatorias con biografía causal, personalidad, motivación, relaciones, cronología, conflicto actual y una mini historia consistente; no se trata de crear retratos ni assets visuales.
+- **Restricciones:** sin IA obligatoria, sin API, sin Internet para generar/guardar, bajo consumo de CPU/RAM, generación reproducible mediante semilla y edición manual completa.
+- **Implementación prevista:** reutilizar el esquema/persistencia de proyectos, crear un módulo de reglas determinista, añadir pruebas de coherencia y después integrar una interfaz de generación/regeneración por campos.
+- **Especificación completa:** [FUTURE-PLAN-CHARACTER-HISTORY-FORGE.md](../../docs/FUTURE-PLAN-CHARACTER-HISTORY-FORGE.md).
+- **Regla de prioridad:** mientras esta entrada permanezca bloqueada, seguir con las tareas pendientes de DanMachi. No declarar Character History Forge terminado ni empezar su desarrollo anticipadamente.
+
