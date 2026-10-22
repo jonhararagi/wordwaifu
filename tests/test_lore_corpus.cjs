@@ -681,14 +681,14 @@ const barcaSkills044=corpus.search(index,{query:"Mystery Misterio armas malditas
 assert.ok(barcaSkills044.results.some(c=>c.claimId==="DMR-044-CLM-002"),"Barca's Mystery/cursed weapons claim must be searchable.");
 const dina044=corpus.search(index,{query:"Dina White Elf Dialf Stige Dialf Luminis Hogni",characterId:"CHAR-DARK-DINA-DIS",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(dina044.results.some(c=>c.claimId==="DMR-044-CLM-003"),"Dina's individual profile and curses must be searchable.");
-const vena044=corpus.search(index,{query:"Vena Dark Elf Dialf Dis Dialf Otua Hedin",characterId:"CHAR-DARK-VENA-DIS",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+const vena044=corpus.search(index,{query:"Vena Elfa Oscura Dialf Dis Dialf Otua Hedin",characterId:"CHAR-DARK-VENA-DIS",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(vena044.results.some(c=>c.claimId==="DMR-044-CLM-004"),"Vena's individual magic claim must be searchable.");
 const lineSO044=corpus.search(index,{query:"Line Arshe Leene Arshe Luna Sanatio Valletta",characterId:"CHAR-LEENE-ARSHE",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(lineSO044.results.some(c=>c.claimId==="DMR-044-CLM-005"),"Line/Leene identity and SO fate must be searchable.");
-const lineGame044=corpus.search(index,{query:"Line survives DanMemo Airmid Bete ten days",characterId:"CHAR-LEENE-ARSHE",continuity:"CONT-GAME",strictContinuity:true,period:"ALL",aspect:"all",spoiler:"all"});
+const lineGame044=corpus.search(index,{query:"Line DanMemo Airmid Bete maldición",characterId:"CHAR-LEENE-ARSHE",continuity:"CONT-GAME",strictContinuity:true,period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(lineGame044.results.some(c=>c.claimId==="DMR-044-CLM-006"),"Line's alternate game survival must be retrievable in its own continuity.");
 assert.ok(lineGame044.results.every(c=>c.continuityScopes.length===1 && c.continuityScopes[0]==="CONT-GAME"),"Strict CONT-GAME search must not mix Sword Oratoria death.");
-const aliciaBio044=corpus.search(index,{query:"Fanache Valle Dragón Riveria Fairy Force Ray Xenos",characterId:"CHAR-LOKI-ALICIA-FORESTLIGHT",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+const aliciaBio044=corpus.search(index,{query:"Fanache Riveria Fairy Force Ray Xenos",characterId:"CHAR-LOKI-ALICIA-FORESTLIGHT",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(aliciaBio044.results.some(c=>c.claimId==="DMR-044-CLM-007"),"Alicia's motivation and Xenos relationship must be searchable.");
 const aliciaMagic044=corpus.search(index,{query:"Hail Dust Grace Sagittarius Mage Nivel 5",characterId:"CHAR-LOKI-ALICIA-FORESTLIGHT",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(aliciaMagic044.results.some(c=>c.claimId==="DMR-044-CLM-008"),"Alicia's spells and Mage development ability must be searchable.");
