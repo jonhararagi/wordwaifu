@@ -2,7 +2,7 @@
 id: CHAR-LUNOA-FAUST
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_profile_expanded_primary_locator_pending
 continuity_scope: "CONT-ANIME"
 source_refs:
   - "DMR-006-SRC-001"
@@ -174,6 +174,9 @@ related_record_ids: [CHAR-MIA-GRAND, CHAR-CHLOE-ROLO, CHAR-ANYA-FROMEL, CHAR-RYU
 duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
+research_source_refs: [DMR-036-SRC-009, DMR-036-SRC-010]
+research_claim_refs: [DMR-036-CLM-013, DMR-036-CLM-014, DMR-036-CLM-015]
+research_continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
 ---
 
 # Lunoa Faust
@@ -246,3 +249,19 @@ El perfil vincula la deuda y el daño de la taberna a un encargo contra Ryuu; no
 - [Perfiles oficiales de DanMachi V](https://danmachi.com/danmachi5/character/) — entrada correspondiente en el registro DMR-006.
 
 **Pendiente común:** cotejar escenas de la novela con edición, capítulo y página antes de fijar fecha exacta, motivaciones privadas, hábitos o cambios de rango que no aparecen en el perfil citado.
+
+## Perfil ampliado desde DanMachi Wiki (secundario; separado de DanMachi V)
+
+La wiki inglesa usa Lunoire Faust y la adaptación oficial del proyecto usa Lunoa Faust; se conserva el ID CHAR-LUNOA-FAUST. La describen como humana de unos 22 años y 161 cm, pelo y ojos marrones, nivel 4 y viva; el piso máximo difiere entre inglés (60) y el extracto español (37). “Black Fist” se describe como apodo, no epíteto formal. Las fuentes la vinculan con Demeter Familia durante su etapa como cazadora de recompensas y Hostess of Fertility en la posterior.
+
+La biografía comunitaria relata que sus padres murieron durante una guerra en territorio imperial, que pasó por la calle y después recibió una Falna. Habría viajado sola cuando su diosa regresó al cielo y llegado a Orario unos nueve años antes de la referencia. Según la wiki, rechazó trabajos contra aventureros de primera clase, falló un encargo contra los hermanos Gulliver y no consiguió matar a Ryuu, para luego trabajar en Hostess. La muestran como luchadora directa y reacia a las emboscadas, protectora de sus compañeras y dispuesta a ayudar a Ryuu/Syr; también le atribuyen cansancio del oficio, autodesprecio por su historial y deseo de una vida tranquila. Son motivaciones narradas por fuentes secundarias, no una psicología completa confirmada.
+
+### Combate y habilidades reportadas
+
+- **Combate cuerpo a cuerpo:** golpes directos y preferencia por enfrentamientos frontales.
+- **Skills:** Fist Strike y Crush.
+- **Development ability:** Fist Fighter.
+- El extracto consultado no identifica una magia nombrada ni un arma personal concreta, así que esos campos se dejan sin completar. “Músculo sin cerebro” es una burla atribuida a Chloe, no una valoración objetiva.
+
+Piso 37/60, nombre Lunoa/Lunoire, afiliación temporal y encargos contra los Gulliver/Ryuu quedan pendientes de comprobar en los volúmenes publicados.
+
