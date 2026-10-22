@@ -52,3 +52,20 @@ La ficha describe a Lefiya como maga que no solo lanza hechizos: estudia la evol
 
 Los paneles de la wiki muestran snapshots distintos. En nivel 3 registra Magia S960, Fuerza I86, Resistencia H184, Destreza G210 y Agilidad G271; en nivel 4 aparecen Magia E448, Fuerza H126, Resistencia G224, Destreza G207 y Agilidad G224. Mage, Resistencia Anormal y Resistencia Mágica también aparecen en la tabla. No combinar estos valores como si fueran contemporáneos o ya cotejados con un texto primario.
 
+
+
+### Magia, habilidades y objetos reportados
+
+La wiki enumera **Fairy Canon**, que aumenta el efecto de la magia y potencia especialmente la ofensiva; **Double Canon**, que conserva el círculo de una magia ya cantada como un anillo sobre el brazo izquierdo para activarla después; y la habilidad de desarrollo **Mage**, descrita como aumento de potencia, alcance y eficiencia del uso de Mind. La ficha indica que Double Canon solo puede mantener una magia preparada y que mantenerla o usarla consume Mind. Estos detalles son resúmenes comunitarios: los nombres, límites, cantos y costes exactos necesitan cotejo con el texto publicado.
+
+Los hechizos enumerados son **Arcs Ray**, **Fusillade Fallarica** y **Elf Ring**. La lista de equipo incluye **Tear Pain**, espada corta asociada por la wiki a Filvis Chalia; **Twin-Stick Fairy Dust**, **Magius Bangle** y **Concertato of Light and Flame**. La lista no demuestra que todos los objetos estén equipados a la vez o correspondan al mismo período.
+
+### Relaciones y límites
+
+- **Ais Wallenstein:** admiración reportada; no implica que ambas siempre coincidan ni una relación simétrica.
+- **Riveria Ljos Alf:** figura de instrucción mágica en los resúmenes consultados.
+- **Elfy Colette:** el perfil de Elfy la identifica como compañera de habitación.
+- **Filvis Chalia:** vinculada al origen de Tear Pain según la wiki; falta cotejar la escena.
+
+La ficha wiki coloca una mención de Lefiya en DanMachi volumen 5 y su debut reportado en Sword Oratoria volumen 1. Son rutas de investigación, no capítulos/páginas verificados. La posible reencarnación y cualquier material de juego se mantienen aparte mientras no se establezca su continuidad.
+
