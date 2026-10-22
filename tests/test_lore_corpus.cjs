@@ -501,7 +501,7 @@ assert.ok(tione035.results.every(claim => claim.verificationStatus.includes("sec
 const lefiya035 = corpus.search(index, { query: "Fairy Canon Double Canon Elf Ring Fusillade Fallarica", characterId: "CHAR-LEFIYA-VIRIDIS", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(lefiya035.results.some(claim => claim.claimId === "DMR-035-CLM-009"), "Lefiya's magic profile must be searchable.");
 assert.ok(lefiya035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Lefiya's magic must remain secondary.");
-const raul035 = corpus.search(index, { query: "Bridge of Heroes Great Conflict Aki", characterId: "CHAR-RAUL-NOORD", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+const raul035 = corpus.search(index, { query: "Puente Heroes Gran Conflicto Aki", characterId: "CHAR-RAUL-NOORD", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(raul035.results.some(claim => claim.claimId === "DMR-035-CLM-010"), "Raul's progression with Aki must be searchable.");
 const raulGear035 = corpus.search(index, { query: "Hunter Escape Protagonista Noble Bow Finn", characterId: "CHAR-RAUL-NOORD", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(raulGear035.results.some(claim => claim.claimId === "DMR-035-CLM-011"), "Raul's skills and weapons must be searchable.");
