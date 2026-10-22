@@ -583,19 +583,19 @@ assert.ok(lunoa039.results.some(c => c.claimId === "DMR-039-CLM-006"), "Lunoa/Lu
 assert.ok(lunoa039.results.every(c => c.verificationStatus.includes("secondary_extract_only")), "Lunoa/Lunoire claims must remain secondary.");
 
 /* DMR-040: Miraheze claims remain secondary, but the public publisher preview verifies the duel scene only. */
-const asta040=corpus.search(index,{query:"impenetrable defense shield Juggernaut Alfia",characterId:"CHAR-ASTA-KNOX",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+const asta040=corpus.search(index,{query:"defensa impenetrable escudo Juggernaut Alfia",characterId:"CHAR-ASTA-KNOX",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(asta040.results.some(c=>c.claimId==="DMR-040-CLM-001"),"Asta's current wiki details must be searchable.");
 assert.ok(asta040.results.filter(c=>c.claimId==="DMR-040-CLM-001").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Asta must remain secondary.");
-const celty040=corpus.search(index,{query:"Yenite lightning magic Mage Ryuu",characterId:"CHAR-CELTY-SROWA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+const celty040=corpus.search(index,{query:"Yenite rayo Mago Ryuu",characterId:"CHAR-CELTY-SROWA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(celty040.results.some(c=>c.claimId==="DMR-040-CLM-002"),"Celty's origin and magical role must be searchable.");
 assert.ok(celty040.results.filter(c=>c.claimId==="DMR-040-CLM-002").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Celty's expanded claims must remain secondary.");
-const iska040=corpus.search(index,{query:"Daidalos orphanage fashion makeup",characterId:"CHAR-ISKA-BRA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+const iska040=corpus.search(index,{query:"Daidalos orfanato moda maquillaje",characterId:"CHAR-ISKA-BRA",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(iska040.results.some(c=>c.claimId==="DMR-040-CLM-003"),"Iska's background and motivations must be searchable.");
-const neze040=corpus.search(index,{query:"Bloody Justice Fang wind claws moonlight",characterId:"CHAR-NEZE-RANKETT",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+const neze040=corpus.search(index,{query:"Bloody Justice Fang garras viento lunar",characterId:"CHAR-NEZE-RANKETT",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(neze040.results.some(c=>c.claimId==="DMR-040-CLM-004"),"Neze's leadership and beastification details must be searchable.");
-const noin040=corpus.search(index,{query:"speed magic level 4 Juggernaut",characterId:"CHAR-NOIN-UNIC",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+const noin040=corpus.search(index,{query:"velocidad magia nivel 4 Juggernaut",characterId:"CHAR-NOIN-UNIC",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(noin040.results.some(c=>c.claimId==="DMR-040-CLM-005"),"Noin's magic and timeline must be searchable.");
-const hedin040=corpus.search(index,{query:"three nights Freya king white elf black elf",characterId:"CHAR-HEDIN-SELLAND",continuity:"CONT-FC",period:"ALL",aspect:"all",spoiler:"all"});
+const hedin040=corpus.search(index,{query:"tres noches Freya Hedin Hogni",characterId:"CHAR-HEDIN-SELLAND",continuity:"CONT-FC",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(hedin040.results.some(c=>c.claimId==="DMR-040-CLM-006" && c.verificationStatus==="primary_preview_excerpt_verified"),"The public primary preview must verify only the duel subclaim for Hedin.");
-const hogni040=corpus.search(index,{query:"three nights Freya king white elf black elf",characterId:"CHAR-HOGNI-RAGNAR",continuity:"CONT-FC",period:"ALL",aspect:"all",spoiler:"all"});
+const hogni040=corpus.search(index,{query:"tres noches Freya Hedin Hogni",characterId:"CHAR-HOGNI-RAGNAR",continuity:"CONT-FC",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(hogni040.results.some(c=>c.claimId==="DMR-040-CLM-007" && c.verificationStatus==="primary_preview_excerpt_verified"),"The public primary preview must verify only the duel subclaim for Hogni.");

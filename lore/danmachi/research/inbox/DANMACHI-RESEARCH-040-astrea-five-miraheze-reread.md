@@ -72,6 +72,10 @@ continuity: CONT-AR; CONT-FC; CONT-ANIME; CONT-MAIN-LN
 - `claim`: La wiki dice que Asta se unió a Astrea Familia aproximadamente diez años antes de la referencia, alcanzó su última subida de nivel tras la victoria grupal contra Alfia siete años antes y murió dos años después durante el incidente del Juggernaut invocado accidentalmente por Rudra Familia. Le atribuye magia desconocida de defensa impenetrable y escudo; la página española añade capacidades físicas y sentidos mejorados. Estos detalles son secundarios.
 - `character_id`: CHAR-ASTA-KNOX
 - `source_id`: DMR-040-SRC-001
+- `source_title`: DanMachi Wiki — Asta Knox EN/ES
+- `source_type`: SECONDARY_WIKI
+- `source_url`: https://danmachien.miraheze.org/wiki/Asta_Knox; https://danmachi.miraheze.org/wiki/Asta_Knox
+- `source_locator`: History; Abilities; Magic; Equipment; References
 - `aspect`: Historia, magia defensiva, equipo y estado temporal
 - `continuity_scope`: CONT-AR; CONT-ANIME; CONT-UNVERIFIED
 - `source_locator`: History; Magic; Equipment; References
@@ -84,6 +88,10 @@ continuity: CONT-AR; CONT-FC; CONT-ANIME; CONT-MAIN-LN
 - `claim`: Celty habría nacido en el bosque Yenite y salido por miedo a una búsqueda del conocimiento sin límites. Conservó el interés por aprender, mantuvo respeto mutuo con Ryuu y conocía parte del pasado de Ryana. Su magia sería de rayo; la ficha española la describe como maga defensiva de retaguardia con visión aguda y desarrollo Mago/Mage. La wiki sitúa la edad en 13 durante Astrea Record y 15 en una etapa posterior. Todo sigue secundario.
 - `character_id`: CHAR-CELTY-SROWA
 - `source_id`: DMR-040-SRC-002
+- `source_title`: DanMachi Wiki — Celty Srowa EN/ES
+- `source_type`: SECONDARY_WIKI
+- `source_url`: https://danmachien.miraheze.org/wiki/Celty_Srowa; https://danmachi.miraheze.org/wiki/Celty_Srowa
+- `source_locator`: Appearance; Personality; History; Abilities; Magic; Development Abilities
 - `aspect`: Origen, personalidad, relaciones, magia y habilidades
 - `continuity_scope`: CONT-AR; CONT-FC; CONT-SO; CONT-UNVERIFIED
 - `source_locator`: Appearance; Personality; History; Abilities; Magic; Development Abilities
@@ -96,6 +104,10 @@ continuity: CONT-AR; CONT-FC; CONT-ANIME; CONT-MAIN-LN
 - `claim`: Iska habría sido huérfana en la Calle Daidalos y se hizo aventurera para mantener su orfanato. Después de sobreexigirse, cambió hábitos y desarrolló interés por el autocuidado, maquillaje y moda. La wiki describe combate pugilístico de vanguardia/centro y magia sin nombre que lanza un ataque de dos puños. En Astrea Record tendría 16 años y habría muerto dos años después en el incidente del Juggernaut. No se inventan técnicas con nombre.
 - `character_id`: CHAR-ISKA-BRA
 - `source_id`: DMR-040-SRC-003
+- `source_title`: DanMachi Wiki — Iska Bra EN/ES
+- `source_type`: SECONDARY_WIKI
+- `source_url`: https://danmachien.miraheze.org/wiki/Iska_Bra; https://danmachi.miraheze.org/wiki/Iska_Bra
+- `source_locator`: Appearance; Personality; History; Abilities; Magic
 - `aspect`: Historia, motivación, psicología y combate
 - `continuity_scope`: CONT-AR; CONT-ANIME; CONT-UNVERIFIED
 - `source_locator`: Appearance; Personality; History; Abilities; Magic
@@ -108,6 +120,10 @@ continuity: CONT-AR; CONT-FC; CONT-ANIME; CONT-MAIN-LN
 - `claim`: Neze aparece como figura central de la facción, capaz de sustituir temporalmente a Alise o Lyra como líder. Se enorgullecía de Bloody Justice Fang y se decepcionó cuando Astrea lo cambió. Su magia liberaría garras de viento. La bestificación se activaría bajo luz lunar y aumentaría sus capacidades físicas, permitiéndole cubrir vanguardia. La wiki sitúa nivel 4 a los 18 años tras la victoria grupal contra Alfia y muerte por el Juggernaut dos años después; no está cotejado directamente.
 - `character_id`: CHAR-NEZE-RANKETT
 - `source_id`: DMR-040-SRC-004
+- `source_title`: DanMachi Wiki — Neze Rankett EN/ES
+- `source_type`: SECONDARY_WIKI
+- `source_url`: https://danmachien.miraheze.org/wiki/Neze_Rankett; https://danmachi.miraheze.org/wiki/Neze_Rankett
+- `source_locator`: Appearance; Personality; History; Abilities; Magic; Skills
 - `aspect`: Historia, liderazgo, alias, magia y habilidad
 - `continuity_scope`: CONT-AR; CONT-ANIME; CONT-UNVERIFIED
 - `source_locator`: Appearance; Personality; History; Abilities; Magic; Skills
@@ -120,6 +136,10 @@ continuity: CONT-AR; CONT-FC; CONT-ANIME; CONT-MAIN-LN
 - `claim`: Noin se habría unido a Astrea Familia diez años antes, alcanzado nivel 4 siete años antes tras derrotar a Alfia con el resto de la Familia y muerto dos años después por el Juggernaut invocado por Rudra Familia. Su magia desconocida aumentaría la velocidad; la ficha española añade capacidad física y sentidos mejorados. No se inventan psicología ni especialidad táctica.
 - `character_id`: CHAR-NOIN-UNIC
 - `source_id`: DMR-040-SRC-005
+- `source_title`: DanMachi Wiki — Noin Unic EN/ES
+- `source_type`: SECONDARY_WIKI
+- `source_url`: https://danmachien.miraheze.org/wiki/Noin_Unic; https://danmachi.miraheze.org/wiki/Noin_Unic
+- `source_locator`: History; Abilities; Magic; References
 - `aspect`: Historia, magia, nivel y cronología
 - `continuity_scope`: CONT-AR; CONT-ANIME; CONT-UNVERIFIED
 - `source_locator`: History; Abilities; Magic; References
