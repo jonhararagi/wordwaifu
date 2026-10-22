@@ -439,18 +439,18 @@ assert.ok(alectoResearch033.results.every(claim => claim.verificationStatus.incl
 const apateResearch033 = corpus.search(index, { query: "Apate Familia Spirit Soldiers Osiris maldiciones Evilus", characterId: "CHAR-DARK-APATE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(apateResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-003"), "Apate/Spirit Soldiers must be retrievable.");
 assert.ok(apateResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Apate remains secondary.");
-const dinaResearch033 = corpus.search(index, { query: "Dina Dis blonde green eyes captain Hogni", characterId: "CHAR-DARK-DINA-DIS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const dinaResearch033 = corpus.search(index, { query: "Dina Dis rubio dorado ojos verdes capitana Hogni", characterId: "CHAR-DARK-DINA-DIS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(dinaResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-005"), "Dina dossier is searchable.");
 assert.ok(dinaResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Dina remains secondary.");
-const venaResearch033 = corpus.search(index, { query: "Vena Dis Diaval Dis Otua Hedin magic staff", characterId: "CHAR-DARK-VENA-DIS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const venaResearch033 = corpus.search(index, { query: "Vena Dis Diaval Otua Hedin magia bastón", characterId: "CHAR-DARK-VENA-DIS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(venaResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-006"), "Vena dossier is searchable.");
 assert.ok(venaResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Vena remains secondary.");
-const disSistersMechanics033 = corpus.search(index, { query: "Diaval Stige status exchange Diaval Luminis level six", characterId: "CHAR-DARK-DIS-SISTERS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const disSistersMechanics033 = corpus.search(index, { query: "Diaval Stige estadísticas intercambia Diaval Luminis nivel 6", characterId: "CHAR-DARK-DIS-SISTERS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(disSistersMechanics033.results.some(claim => claim.claimId === "DMR-033-CLM-007"), "Dis Sisters mechanics are searchable.");
 assert.ok(disSistersMechanics033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Dis Sisters mechanics remain secondary.");
-const astreaVersionScope033 = corpus.search(index, { query: "Astrea Record light novel game differences version Dina Vena", characterId: "CHAR-DARK-DIS-SISTERS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const astreaVersionScope033 = corpus.search(index, { query: "Astrea Record novelización juego Dina Vena", characterId: "CHAR-DARK-DIS-SISTERS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaVersionScope033.results.some(claim => claim.claimId === "DMR-033-CLM-008"), "Light-novel/game provenance note is searchable.");
-const samiraCrosswalk033 = corpus.search(index, { query: "Samira Hathor Ishtar identity crosswalk Dark Age", characterId: "CHAR-DARK-SAMIRA", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+const samiraCrosswalk033 = corpus.search(index, { query: "Samira Hathor Ishtar identidad Era Oscura", characterId: "CHAR-DARK-SAMIRA", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(samiraCrosswalk033.results.some(claim => claim.claimId === "DMR-033-CLM-009"), "Samira unresolved identity crosswalk is searchable.");
 assert.ok(samiraCrosswalk033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Samira crosswalk remains secondary pending review.");
 
@@ -474,7 +474,7 @@ assert.ok(miaResearch034.results.every(claim => claim.verificationStatus.include
 const aliciaResearch034 = corpus.search(index, { query: "Hail Dust Grace Sagittarius Mage", characterId: "CHAR-LOKI-ALICIA-FORESTLIGHT", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliciaResearch034.results.some(claim => claim.claimId === "DMR-034-CLM-010"), "Alicia's magic profile must be searchable under Sword Oratoria.");
 assert.ok(aliciaResearch034.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Alicia's wiki claim must remain secondary.");
-const leeneResearch034 = corpus.search(index, { query: "Line Arshe Bete sentimientos relato corto", characterId: "CHAR-LEENE-ARSHE", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+const leeneResearch034 = corpus.search(index, { query: "Line Arshe Bete sentimientos relato", characterId: "CHAR-LEENE-ARSHE", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(leeneResearch034.results.some(claim => claim.claimId === "DMR-034-CLM-012"), "Leene/Line's short-story relation claim must be searchable.");
 assert.ok(leeneResearch034.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Leene/Line's narrative claim must remain secondary.");
 const leeneGameAlias034 = corpus.search(index, { query: "Locolyte", characterId: "CHAR-LEENE-ARSHE", continuity: "CONT-GAME", period: "ALL", aspect: "all", spoiler: "all" });
