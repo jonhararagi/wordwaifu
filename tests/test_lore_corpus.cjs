@@ -643,7 +643,7 @@ const ryuJuraStrict = corpus.search(index, {
 assert.equal(ryuJuraStrict.results.some(c=>c.claimId==="DMR-041-CLM-007"),false,"The cross-continuity Jura claim must not be presented as anime-only evidence.");
 assert.ok(ryuJuraStrict.results.every(c=>c.continuityScopes.length===1 && c.continuityScopes[0]==="CONT-ANIME"),"Every strict anime result must have one exact continuity scope.");
 
-const zeus042=corpus.search(index,{query:"Bell montañosa fingió estar muerto nieto",characterId:"CHAR-ZEUS",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+const zeus042=corpus.search(index,{query:"Bell montañosa fingió estar muerto",characterId:"CHAR-ZEUS",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(zeus042.results.some(c=>c.claimId==="DMR-042-CLM-001"),"Zeus's Bell relationship and feigned-death report must be searchable.");
 assert.ok(zeus042.results.filter(c=>c.claimId==="DMR-042-CLM-001").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Zeus's personal biography must remain secondary.");
 const families042=corpus.search(index,{query:"Behemoth Leviathan piso 71 Dragón Negro",characterId:"CHAR-ZEUS",continuity:"CONT-UNVERIFIED",period:"ALL",aspect:"all",spoiler:"all"});
