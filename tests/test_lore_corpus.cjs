@@ -31,7 +31,7 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
-const dossierPaths = ["characters/mia-grand.md", "characters/anya-fromel.md", "characters/allen-fromel.md", "characters/alicia-forestlight.md", "characters/leene-arshe.md", "characters/hedin-selland.md", "characters/hogni-ragnar.md", "characters/heith-velvet.md", "characters/chloe-rolo.md", "characters/lunoa-faust.md"];
+const dossierPaths = ["characters/mia-grand.md", "characters/anya-fromel.md", "characters/allen-fromel.md", "characters/alicia-forestlight.md", "characters/leene-arshe.md", "characters/hedin-selland.md", "characters/hogni-ragnar.md", "characters/heith-velvet.md", "characters/chloe-rolo.md", "characters/lunoa-faust.md", "characters/zeus.md", "characters/hera.md", "characters/maxim.md", "characters/dark-era/alfia.md", "characters/dark-era/zald.md"];
 const dossierDocuments = dossierPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents, dossierDocuments);
 const familyEntities = corpus.searchEntities(catalog, { type: "familia" });
@@ -508,6 +508,20 @@ const raulGear035 = corpus.search(index, { query: "Hunter Escape Protagonista No
 assert.ok(raulGear035.results.some(claim => claim.claimId === "DMR-035-CLM-011"), "Raul's skills and weapons must be searchable.");
 assert.ok(raulGear035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Raul's wiki claims must remain secondary.");
 
+
+// Historical dossiers from the Era Oscura must load in the real archive profile registry.
+for (const id of ["CHAR-ZEUS","CHAR-HERA","CHAR-MAXIM","CHAR-DARK-ALFIA","CHAR-DARK-ZALD"]) {
+  assert.ok(index.profileDetails[id], id + " historical dossier must be available to the archive UI.");
+  assert.ok(index.profileDetails[id].sections.length >= 2, id + " must expose multiple structured sections.");
+}
+const zeusProfileText = index.profileDetails["CHAR-ZEUS"].sections.map(section => section.text).join(" ");
+assert.ok(zeusProfileText.includes("Behemoth") && zeusProfileText.includes("Leviathan"), "Zeus dossier must retain the shared official-reference boundary for the two Great Quests.");
+const maximProfileText = index.profileDetails["CHAR-MAXIM"].sections.map(section => section.text).join(" ");
+assert.ok(maximProfileText.includes("siguiente generación") && maximProfileText.includes("Dragón Negro"), "Maxim profile must expose the reported preparation of the next generation.");
+const alfiaProfileText = index.profileDetails["CHAR-DARK-ALFIA"].sections.map(section => section.text).join(" ");
+assert.ok(alfiaProfileText.includes("Meteria") && alfiaProfileText.includes("primaria"), "Alfia profile must keep its reported family relation and primary-source caveat.");
+const zaldProfileText = index.profileDetails["CHAR-DARK-ZALD"].sections.map(section => section.text).join(" ");
+assert.ok(zaldProfileText.includes("veneno") && zaldProfileText.includes("Alfia"), "Zald profile must keep his reported limitation and relationship lead.");
 
 // DANMACHI-RESEARCH-036 regressions: Freya/Hostess dossiers searchable, still secondary.
 for (const id of ["CHAR-HEDIN-SELLAND","CHAR-HOGNI-RAGNAR","CHAR-HEITH-VELVET","CHAR-CHLOE-ROLO","CHAR-LUNOA-FAUST"]) {
