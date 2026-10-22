@@ -9,10 +9,13 @@ source_refs:
   - "DMR-028-SRC-004"
   - "DMR-028-SRC-005"
   - "DMR-028-SRC-013"
+  - "DMR-044-SRC-001"
 claim_refs:
   - "DMR-013-CLM-010"
   - "DMR-028-CLM-003"
   - "DMR-028-CLM-004"
+  - "DMR-044-CLM-001"
+  - "DMR-044-CLM-002"
 verification_status: "secondary_extract_only_chapter_locator_pending"
 tags: ["Barca Perdix", "Dix Perdix", "Thanatos Familia", "Knossos", "Daidalos", "Sword Oratoria", "CONT-SO", "primary_text_pending"]
 research_source_refs:
@@ -20,6 +23,7 @@ research_source_refs:
   - "DMR-028-SRC-004"
   - "DMR-028-SRC-005"
   - "DMR-028-SRC-013"
+  - "DMR-044-SRC-001"
 entity_type: character
 canonical_name: "Barca Perdix"
 aliases:
@@ -97,3 +101,10 @@ La ruta narrativa más sólida es *Sword Oratoria*, volumen 7. La sinopsis edito
 - [ ] Cotejar el relato de su maldición, su relación con Dix y su decisión respecto a Knossos.
 - [ ] Cotejar qué cura las heridas de sus armas y qué parte de su canto se llega a describir.
 - [ ] No elevar nivel, estado, «algo de sangre élfica» o capacidades a verificados sin pasaje primario.
+
+
+## Relectura bilingüe actual de Miraheze · DANMACHI-RESEARCH-044 (2026-10-22)
+
+La relectura actual EN/ES confirma los apartados de apariencia, personalidad, capacidades y Mystery de Barca. Añade el detalle de que niega el vínculo con Dix y rechaza destruir Knossos, y que su canto fue interrumpido antes de saber si era magia o maldición. Todo continúa secundario; cotejo primario pendiente en Sword Oratoria vol. 7.
+
+**URLs consultadas:** https://danmachien.miraheze.org/wiki/Barca_Perdix; https://danmachi.miraheze.org/wiki/Barca_Perdix.

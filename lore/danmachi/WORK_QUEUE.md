@@ -444,3 +444,15 @@ Aplicar en las próximas tandas de perfiles. Este protocolo corrige el patrón d
 - [ ] Extraer las secciones completas de historia, personalidad, habilidades y referencias de cada página migrada para rellenar el detalle que la extracción actual no confirma.
 - [ ] Cotejar las escenas de Astrea Record para Alecto/Apate/Basram y Sword Oratoria para Thanatos/Valletta, con localizadores solo después de leer texto primario.
 - **Estado:** cinco registros de catálogo que no tenían perfil visible ya son consultables; evidencia primaria pendiente.
+
+
+## Estado tras DANMACHI-RESEARCH-044 — Barca, Dis, Line/Leene y Alicia
+
+- [x] Integrar en la aplicación cinco identidades de prioridad alta que faltaban del registro visible.
+- [x] Releer fichas migradas EN/ES de Barca, Dis Sisters, Line Arshe y Alicia Forestlight y trasladar historia, personalidad, capacidades, magia y relaciones.
+- [x] Separar Dina y Vena por ID, con la ficha de grupo como contexto compartido.
+- [x] Mantener CHAR-LEENE-ARSHE y registrar Line Arshe como nombre actual de la wiki; no crear un duplicado.
+- [x] Separar muerte novelada de Line (Sword Oratoria) y supervivencia de la ruta DanMemo, con pruebas de continuidad estricta.
+- [ ] Cotejar Astrea Record vols. 1/3 para Dina/Vena, Sword Oratoria vol. 7 para Barca, vol. 8 y “Instead of Goodbye - Thanks” para Line, y los capítulos citados para Alicia.
+- [ ] Revisar los perfiles recientemente integrados de Alecto, Apate, Thanatos, Basram y Valletta; sustituir los resúmenes genéricos por el detalle real de las páginas migradas.
+- **Estado:** ocho claims recuperables añadidos; evidencia primaria pendiente, sin elevar claims a canon verificado.

@@ -5,8 +5,8 @@ type: character
 status: secondary_profile_expanded_primary_locator_pending
 confidence: detailed community profile consulted; personal scenes, skills, and spell mechanics await primary-text review
 continuity_scope: CONT-SO; CONT-GAME
-source_refs: [DMR-022-SRC-001, DMR-034-SRC-007, DMR-034-SRC-008, DMR-034-SRC-011]
-claim_refs: [DMR-034-CLM-009, DMR-034-CLM-010, DMR-034-CLM-014]
+source_refs: [DMR-022-SRC-001, DMR-034-SRC-007, DMR-034-SRC-008, DMR-034-SRC-011, "DMR-044-SRC-004"]
+claim_refs: [DMR-034-CLM-009, DMR-034-CLM-010, DMR-034-CLM-014, "DMR-044-CLM-007", "DMR-044-CLM-008"]
 aliases: ["Alicia Forestlight", "Alicia", "アリシア・フォレストライト", "Elleaf"]
 tags: ["Alicia Forestlight", "Loki Familia", "Fairy Force", "elf", "Mage", "level 4 reported"]
 spoiler_level: major
@@ -60,3 +60,10 @@ La ficha informa una hostilidad inicial hacia los Xenos y un cambio posterior de
 ## Rutas de verificación
 
 Priorizar Sword Oratoria, volumen 4, para el perfil y la expedición; recuperar después los pasajes que sustentan Hail Dust, Grace Sagittarius, Mage y el cambio de opinión sobre Ray/Xenos. La página comunitaria indica una ruta de debut, pero no se han cotejado páginas o capítulos de novela.
+
+
+## Relectura bilingüe actual de Miraheze · DANMACHI-RESEARCH-044 (2026-10-22)
+
+La relectura EN/ES añade el objetivo de luchar contra dragones del Valle del Dragón, la evolución de su opinión sobre los Xenos por Ray, su función de segunda de Riveria en Fairy Force y las magias Hail Dust/Grace Sagittarius. EN dice ojos avellana, ES dice verdes; no se normaliza sin primaria.
+
+**URLs consultadas:** https://danmachien.miraheze.org/wiki/Alicia_Forestlight; https://danmachi.miraheze.org/wiki/Alicia_Forestlight.

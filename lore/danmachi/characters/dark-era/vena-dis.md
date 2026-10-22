@@ -5,8 +5,8 @@ type: character
 status: secondary_profile_expanded_primary_locator_pending
 confidence: community profile and plot summaries; authorized Astrea Record scenes not checked in this entry
 continuity_scope: CONT-AR; CONT-GAME
-source_refs: [DMR-033-SRC-005, DMR-033-SRC-006, DMR-033-SRC-007, DMR-033-SRC-008]
-claim_refs: [DMR-033-CLM-006, DMR-033-CLM-007, DMR-033-CLM-008]
+source_refs: [DMR-033-SRC-005, DMR-033-SRC-006, DMR-033-SRC-007, DMR-033-SRC-008, "DMR-044-SRC-002"]
+claim_refs: [DMR-033-CLM-006, DMR-033-CLM-007, DMR-033-CLM-008, "DMR-044-CLM-004"]
 spoiler_level: major
 aliases: ["Vena Dis", "ヴェナ・ディース", "Vena"]
 romanizations: ["Vena Dis"]
@@ -76,3 +76,10 @@ La ficha comunitaria le atribuye Diaval Dis, magia de fuego que crea círculos s
 ## Coordinación y revisión
 
 Vena y Dina comparten la maldición Diaval Stige en el resumen comunitario; las estadísticas que intercambian cambian sus funciones tácticas, pero no deben confundirse con un ascenso de nivel permanente. La ruta de cotejo principal es Astrea Record, volúmenes 1 y 3; no se han inventado números de capítulo o páginas.
+
+
+## Relectura bilingüe actual de Miraheze · DANMACHI-RESEARCH-044 (2026-10-22)
+
+Se atribuyen a Vena sus magias nombradas y su rol de espadachina mágica/retaguardia. La tercera magia queda sin nombre formal y sus límites continúan secundarios.
+
+**URLs consultadas:** https://danmachien.miraheze.org/wiki/Dis_Sisters; https://danmachi.miraheze.org/wiki/Hermanas_Dis.

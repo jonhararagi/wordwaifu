@@ -142,3 +142,19 @@ for(const expected of missingDarkEra043){
  assert.ok(text.includes(expected.token),expected.id+" must expose role/context detail.");
  assert.ok(dossier.sources.includes(expected.url),expected.id+" must link current EN Miraheze page.");
 }
+
+const priorityProfiles044=[
+ {id:"CHAR-DARK-BARCA-PERDIX",tokens:["Daidalos","Dix","Mystery","Knossos"],source:"https://danmachien.miraheze.org/wiki/Barca_Perdix"},
+ {id:"CHAR-DARK-DINA-DIS",tokens:["Dialf Stige","Dialf Luminis","Hogni","nivel 5"],source:"https://danmachien.miraheze.org/wiki/Dis_Sisters"},
+ {id:"CHAR-DARK-VENA-DIS",tokens:["Dialf Dis","Dialf Otua","Hedin","Elfa Oscura"],source:"https://danmachien.miraheze.org/wiki/Dis_Sisters"},
+ {id:"CHAR-LEENE-ARSHE",tokens:["Line Arshe","Leene Arshe","Luna Sanatio","Valletta"],source:"https://danmachien.miraheze.org/wiki/Line_Arshe"},
+ {id:"CHAR-LOKI-ALICIA-FORESTLIGHT",tokens:["Hail Dust","Grace Sagittarius","Fairy Force","Xenos"],source:"https://danmachien.miraheze.org/wiki/Alicia_Forestlight"}
+];
+for(const expected of priorityProfiles044){
+ const profile=api.get(expected.id);assert.ok(profile,expected.id+" must resolve to an application dossier.");
+ const searchable=[profile.appearance,profile.history,profile.personality,profile.abilities,profile.relationships,profile.conflict].join(" ");
+ for(const token of expected.tokens)assert.ok(searchable.includes(token),expected.id+" must expose bilingual details: "+token);
+ assert.ok(profile.sources.includes(expected.source),expected.id+" must prioritize the current migrated English Miraheze page.");
+}
+assert.ok(api.get("CHAR-LEENE-ARSHE").history.includes("Line Arshe") && api.get("CHAR-LEENE-ARSHE").history.includes("Leene Arshe"),"Line/Leene must use a single stable application ID.");
+assert.ok(api.get("CHAR-LEENE-ARSHE").conflict.includes("ruta de juego") && api.get("CHAR-LEENE-ARSHE").conflict.includes("Sword Oratoria"),"Line's game survival route must remain distinct from the SO death.");

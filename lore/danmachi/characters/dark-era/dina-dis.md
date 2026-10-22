@@ -5,8 +5,8 @@ type: character
 status: secondary_profile_expanded_primary_locator_pending
 confidence: community profile and plot summaries; authorized Astrea Record scenes not checked in this entry
 continuity_scope: CONT-AR; CONT-GAME
-source_refs: [DMR-033-SRC-005, DMR-033-SRC-006, DMR-033-SRC-007, DMR-033-SRC-008]
-claim_refs: [DMR-033-CLM-005, DMR-033-CLM-007, DMR-033-CLM-008]
+source_refs: [DMR-033-SRC-005, DMR-033-SRC-006, DMR-033-SRC-007, DMR-033-SRC-008, "DMR-044-SRC-002"]
+claim_refs: [DMR-033-CLM-005, DMR-033-CLM-007, DMR-033-CLM-008, "DMR-044-CLM-003"]
 spoiler_level: major
 aliases: ["Dina Dis", "ディナ・ディース", "Dina"]
 romanizations: ["Dina Dis"]
@@ -77,3 +77,10 @@ Dina es presentada como combatiente cercana que maneja dos espadas cortas. La ma
 ## Continuidad y revisión
 
 La principal ruta es Astrea Record, volumen 1, con datos adicionales atribuidos por la wiki al volumen 3. Deben separarse novela ligera, juego original y comparaciones secundarias. No se inventan capítulo o página y no se usa la habilidad reportada para decretar un nivel base distinto del nivel 5 comunitario.
+
+
+## Relectura bilingüe actual de Miraheze · DANMACHI-RESEARCH-044 (2026-10-22)
+
+La identidad Dina queda separada de Vena; Dialf Stige y Dialf Luminis son afirmaciones secundarias y no equivalen a ascenso permanente. La ruta de juego con Bell no reemplaza su destino en Astrea Record novelado.
+
+**URLs consultadas:** https://danmachien.miraheze.org/wiki/Dis_Sisters; https://danmachi.miraheze.org/wiki/Hermanas_Dis.

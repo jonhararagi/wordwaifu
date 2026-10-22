@@ -1,5 +1,14 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-044 · Relectura bilingüe de cinco identidades prioritarias (2026-10-22)
+
+- Rama: `work/story-completion-danmachi-audit-2026-10`; `main` intacta.
+- Identidades registradas en el dossier runtime: Barca Perdix, Dina Dis, Vena Dis, Line Arshe (ID histórico CHAR-LEENE-ARSHE) y Alicia Forestlight.
+- Contenido: Barca — maldición heredada, Knossos, rechazo de Dix, Mystery y armas malditas; Dina — combate cercano, Dialf Stige/Luminis y obsesión por Hogni; Vena — Dialf Dis/Otua, magia no nombrada y obsesión por Hedin; Line — Luna Sanatio, rol de supporter, muerte en Sword Oratoria y ruta DanMemo que sobrevive; Alicia — Fanache, Fairy Force, segunda de Riveria, Hail Dust/Grace Sagittarius/Mage y evolución ante Xenos.
+- Divergencias: Line/Leene se conserva como un único ID; supervivencia en DanMemo y muerte en Sword Oratoria no se mezclan; Alicia tiene discrepancia de color de ojos entre EN/ES; la página española de Line menciona erróneamente a «Lili» dentro de sus habilidades.
+- Procedencia: cuatro pares de páginas actuales EN/ES de Miraheze, ocho claims y pruebas de aplicación y búsqueda. Los ocho claims son secundarios porque las escenas primarias citadas aún no se leyeron directamente.
+- Validación: Actions pendientes de ejecución tras integrar la tanda.
+
 ## DANMACHI-RESEARCH-043 · Cinco expedientes ausentes de la aplicación integrados (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.

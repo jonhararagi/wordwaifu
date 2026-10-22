@@ -35,6 +35,7 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md",
   "research/inbox/DANMACHI-RESEARCH-042-historical-five-miraheze-review.md",
   "research/inbox/DANMACHI-RESEARCH-043-evilus-missing-app-dossiers.md",
+  "research/inbox/DANMACHI-RESEARCH-044-barca-dis-line-alicia.md",
   "research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
@@ -55,8 +56,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 286, "Indexed claims include research batches 033 through 043.");
-assert.equal(index.entryCount, 289, "All claims including batches 033 through 043 are searchable.");
+assert.equal(index.sourceClaimCount, 294, "Indexed claims include research batches 033 through 044.");
+assert.equal(index.entryCount, 297, "All claims including batches 033 through 044 are searchable.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md"), "Runtime query loader must include DMR-039.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md"), "Runtime query loader must include DMR-040.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md"), "Runtime query loader must include DMR-041.");
@@ -673,3 +674,22 @@ assert.ok(basram043.results.some(c=>c.claimId==="DMR-043-CLM-004"),"Basram claim
 const valletta043=corpus.search(index,{query:"Valletta Grede Thanatos Knossos Sword Oratoria",characterId:"CHAR-DARK-VALLETTA-GREDE",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(valletta043.results.some(c=>c.claimId==="DMR-043-CLM-005"),"Valletta claim must be searchable.");
 for(const result of [alecto043,apate043,thanatos043,basram043,valletta043])assert.ok(result.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"DMR-043 evidence must remain secondary.");
+
+const barca044=corpus.search(index,{query:"Daidalos Knossos Dix maldición",characterId:"CHAR-DARK-BARCA-PERDIX",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(barca044.results.some(c=>c.claimId==="DMR-044-CLM-001"),"Barca's Knossos/Dix conflict must be searchable.");
+const barcaSkills044=corpus.search(index,{query:"Mystery Misterio armas malditas canto",characterId:"CHAR-DARK-BARCA-PERDIX",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(barcaSkills044.results.some(c=>c.claimId==="DMR-044-CLM-002"),"Barca's Mystery/cursed weapons claim must be searchable.");
+const dina044=corpus.search(index,{query:"Dina White Elf Dialf Stige Dialf Luminis Hogni",characterId:"CHAR-DARK-DINA-DIS",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(dina044.results.some(c=>c.claimId==="DMR-044-CLM-003"),"Dina's individual profile and curses must be searchable.");
+const vena044=corpus.search(index,{query:"Vena Dark Elf Dialf Dis Dialf Otua Hedin",characterId:"CHAR-DARK-VENA-DIS",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(vena044.results.some(c=>c.claimId==="DMR-044-CLM-004"),"Vena's individual magic claim must be searchable.");
+const lineSO044=corpus.search(index,{query:"Line Arshe Leene Arshe Luna Sanatio Valletta",characterId:"CHAR-LEENE-ARSHE",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(lineSO044.results.some(c=>c.claimId==="DMR-044-CLM-005"),"Line/Leene identity and SO fate must be searchable.");
+const lineGame044=corpus.search(index,{query:"Line survives DanMemo Airmid Bete ten days",characterId:"CHAR-LEENE-ARSHE",continuity:"CONT-GAME",strictContinuity:true,period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(lineGame044.results.some(c=>c.claimId==="DMR-044-CLM-006"),"Line's alternate game survival must be retrievable in its own continuity.");
+assert.ok(lineGame044.results.every(c=>c.continuityScopes.length===1 && c.continuityScopes[0]==="CONT-GAME"),"Strict CONT-GAME search must not mix Sword Oratoria death.");
+const aliciaBio044=corpus.search(index,{query:"Fanache Valle Dragón Riveria Fairy Force Ray Xenos",characterId:"CHAR-LOKI-ALICIA-FORESTLIGHT",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(aliciaBio044.results.some(c=>c.claimId==="DMR-044-CLM-007"),"Alicia's motivation and Xenos relationship must be searchable.");
+const aliciaMagic044=corpus.search(index,{query:"Hail Dust Grace Sagittarius Mage Nivel 5",characterId:"CHAR-LOKI-ALICIA-FORESTLIGHT",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(aliciaMagic044.results.some(c=>c.claimId==="DMR-044-CLM-008"),"Alicia's spells and Mage development ability must be searchable.");
+for(const r of [barca044,barcaSkills044,dina044,vena044,lineSO044,lineGame044,aliciaBio044,aliciaMagic044])assert.ok(r.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"All DMR-044 claims must remain secondary.");

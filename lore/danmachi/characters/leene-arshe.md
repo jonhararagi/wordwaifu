@@ -5,8 +5,8 @@ type: character
 status: secondary_profile_expanded_identity_crosswalk_supported_primary_check_pending
 confidence: strong secondary match between Leene and Line Arshe; exact English-name normalization and scenes still await primary-text review
 continuity_scope: CONT-SO; CONT-ANIME; CONT-GAME
-source_refs: [DMR-005-SRC-001, DMR-013-SRC-001, DMR-017-SRC-001, DMR-034-SRC-009, DMR-034-SRC-010, DMR-034-SRC-011]
-claim_refs: [DMR-018-CLM-016, DMR-034-CLM-011, DMR-034-CLM-012, DMR-034-CLM-013]
+source_refs: [DMR-005-SRC-001, DMR-013-SRC-001, DMR-017-SRC-001, DMR-034-SRC-009, DMR-034-SRC-010, DMR-034-SRC-011, "DMR-044-SRC-003"]
+claim_refs: [DMR-018-CLM-016, DMR-034-CLM-011, DMR-034-CLM-012, DMR-034-CLM-013, "DMR-044-CLM-005", "DMR-044-CLM-006"]
 aliases: ["Leene Arshe", "Line Arshe", "リーネ・アルシェ", "Locolyte"]
 tags: ["Leene Arshe", "Line Arshe", "Loki Familia", "supporter", "healer", "Sword Oratoria", "identity crosswalk supported secondary"]
 spoiler_level: major
@@ -54,3 +54,10 @@ La página-resumen del relato corto comunitariamente titulado “Instead of Good
 La wiki reporta su debut en Sword Oratoria, volumen 1; el relato corto “Instead of Goodbye - Thanks” se usa como pista para la escena final. La ficha no asigna un capítulo o página de novela porque no se abrió una edición autorizada durante esta tanda.
 
 **Advertencia de calidad:** el nombre secundario ya no queda sin resolver a nivel de identidad probable; lo que sigue pendiente es la normalización editorial y el cotejo de los hechos con el texto primario. Se conserva un único ID y se mantienen separados el perfil de novela, la adaptación y la variante de juego.
+
+
+## Relectura bilingüe actual de Miraheze · DANMACHI-RESEARCH-044 (2026-10-22)
+
+El título migrado actual en inglés y español es Line Arshe (リーネ・アルシェ), mientras el repositorio conserva ID y alias histórico Leene Arshe. La coincidencia secundaria es fuerte; no se crea duplicado. Muerte en Sword Oratoria vol. 8 y supervivencia en DanMemo son rutas separadas. La página española tiene una errata que menciona Lili dentro de las habilidades de Line.
+
+**URLs consultadas:** https://danmachien.miraheze.org/wiki/Line_Arshe; https://danmachi.miraheze.org/wiki/Line_Arshe.
