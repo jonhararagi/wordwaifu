@@ -507,3 +507,20 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Código y tests:** `src/lore-corpus.js` incorpora el paquete de investigación de Meteria y añade `CHAR-METERIA` a la lista de dossiers extensos. `src/character-archive.js` ya puede abrir expedientes estructurados aunque no exista una constante manual `EXTENDED`, expone procedencia y no muestra un cuerpo de otra continuidad como si perteneciera a la seleccionada. Se añadieron comprobaciones para las cinco fichas, claims familiares de Meteria y avisos de alcance.
 - **Catálogo:** siguen siendo 152 registros y 51 IDs reservados; solo cambiaron los estados y tags existentes, sin rutas/IDs nuevos.
 - **Pendiente de evidencia:** ninguna tanda sustituye la lectura de las ediciones publicadas. Hace falta cotejar capítulos/páginas reales para las historias individuales, el parentesco de Meteria, el papel de Rudra y el arco de Olivas. La CI del SHA final debe confirmar los tests y la validación tras este cambio.
+
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-029 · Cinco perfiles generales y corrección de clasificación (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` permanece intacta.
+- **Perfiles trabajados:** Miach (`CHAR-DARK-MIACH`), Naaza Erisuis (`CHAR-DARK-NAAZA`), Dian Cecht (`CHAR-DARK-DIAN-CECHT`), Goibniu (`CHAR-DARK-GOIBNIU`) y Hephaistos (`CHAR-DARK-HEPHAISTOS`). Se preservaron los cinco IDs heredados y no se crearon identidades duplicadas.
+- **Cambio de clasificación:** los expedientes se movieron desde `characters/dark-era/` a `characters/`. La ubicación antigua reflejaba una lista de candidatos, no una escena que confirmara participación personal en el núcleo temporal de Astrea Record. El catálogo mantiene las etiquetas de continuidad de la línea principal/Sword Oratoria y añade `historical_presence_unconfirmed`; se eliminaron las etiquetas que daban por confirmada la Era Oscura/Astrea Record.
+- **Miach:** el perfil diferencia la generosidad reportada, la relación con Bell/Hestia Familia y la deuda por la prótesis de Naaza. El parentesco que aparece en la mitología irlandesa no se importa como genealogía canónica del personaje.
+- **Naaza:** se amplió historia, trauma, motivaciones, magia, arco, habilidad de Mezcla y relaciones. Los valores de nivel 2 y nivel 3 se mantienen ligados a distintas etapas; no se fusionan en una sola estadística.
+- **Dian Cecht:** se separó la actividad histórica que la wiki atribuye a su Familia médica de la presencia y acciones individuales del dios. No se deducen poderes de curación personales por su función institucional.
+- **Goibniu:** se conectaron la herrería y construcción de su Familia con Ais, Tiona, Hestia, armas y ubicaciones, dejando los encargos como extractos secundarios pendientes de capítulos.
+- **Hephaistos:** se amplió apariencia, personalidad y oficio; el detalle sobre llamas de herrería atribuido por la wiki a un capítulo de Memoria Freese no se presenta como canon de novela.
+- **Investigación de fuentes:** se registraron diez/once referencias de las dos wikis, con sus subpáginas de Familias y ubicaciones. Las páginas españolas antiguas de Fandom avisan de migración a Miraheze; las rutas actualizadas devolvieron 403 al abrirse directamente en esta sesión. Por honestidad, el paquete documenta el uso de extractos indexados y no una lectura integral del mirror.
+- **Código y pruebas:** `src/lore-corpus.js` carga `DANMACHI-RESEARCH-029`; las pruebas cubren recuperación de los cinco expedientes, 10 claims nuevos, IDs/rutas estables, ausencia de etiquetas históricas afirmativas y eliminación de las rutas viejas.
+- **Catálogo:** 152 registros, 51 IDs reservados; los documentos de apoyo pasan de 116 a 117. No se asignó un nuevo ID principal.
+- **Evidencia pendiente:** esta tanda no sustituye lectura directa de los volúmenes. Siguen pendientes los localizadores primarios de las escenas sobre la prótesis de Naaza, el conflicto económico Miach/Dian Cecht, la espada prestada y trabajos de Goibniu, y el Hestia Knife/Welf. Los resultados de CI deben verificarse en el SHA final de la rama.
