@@ -70,10 +70,10 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia histórica; etapas posteriores, relación con Astrea y Astraea Record | Perfil ampliado con relaciones y magia tardía reportadas; etapas separadas, cotejo primario pendiente |
 | CHAR-FREYA | [Freya](freya.md) | Syr como alias/identidad por verificar con cuidado | Freya Familia, Bell; relaciones con spoiler | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-OTTAR | [Ottar](ottar.md) | Ottar | Freya Familia, entrenamiento, lealtad | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-HERMES | Hermes | Hermes | Hermes Familia, Bell | Candidato pendiente |
-| CHAR-OURANOS | Ouranos | Ouranos | Guild, Fels | Candidato pendiente |
+| CHAR-HERMES | [Hermes](hermes.md) | Hermes | Hermes Familia, Bell, Asfi, Ouranos, Zeus | Perfil comunitario ampliado; ruta editorial de vol. 5, cotejo de novela pendiente |
+| CHAR-OURANOS | [Ouranos](ouranos.md) | Ouranos | Guild, Dungeon, Fels, Xenos | Perfil comunitario ampliado; oración/poderes y escenas de novela pendientes de cotejo |
 | CHAR-FELS | Fels | Fels | Ouranos, Guild | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-GANESHA | Ganesha | Ganesha | Ganesha Familia, ciudad | Candidato pendiente |
+| CHAR-GANESHA | [Ganesha](ganesha.md) | Ganesha | Ganesha Familia, Monsterphilia, Ouranos, Xenos | Perfil comunitario ampliado; conflicto de color de cabello abierto, cotejo de novela pendiente |
 
 ## Historia previa, héroes y relatos paralelos
 
@@ -160,8 +160,8 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 | CHAR-HOGNI-RAGNAR | Hogni Ragnar | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-ANYA-FROMEL | Anya Fromel | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-SYR-FLOVA | Syr Flova | Expediente de aplicación existente; revisar alias/identidad con control de spoiler |
-| CHAR-DAPHNE-LAUROS | Daphne Lauros | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-CASSANDRA-ILION | Cassandra Ilion | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-DAPHNE-LAUROS | [Daphne Lauros](daphne-lauros.md) | Daphne; Laurus Fuga | Miach Familia (posterior); Apollo Familia (anterior); Cassandra | Perfil secundario ampliado; niveles por etapa, skills/magia y escenas pendientes de cotejo |
+| CHAR-CASSANDRA-ILION | [Cassandra Ilion](cassandra-ilion.md) | Cassandra; Mirabilis | Miach Familia (posterior); Apollo Familia (anterior); Daphne; Bell | Perfil secundario ampliado; curación/visiones y niveles por etapa pendientes de cotejo |
 | CHAR-AISHA-BELKA | Aisha Belka | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-FELS | Fels | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-FILVIS-CHALIA | Filvis Chalia | Expediente de aplicación existente; cotejo de LN y spoilers de Sword Oratoria pendientes |

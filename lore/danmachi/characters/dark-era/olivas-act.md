@@ -10,6 +10,7 @@ claim_refs:
   - "DMR-025-CLM-001"
   - "DMR-025-CLM-002"
   - "DMR-025-CLM-003"
+  - "DMR-032-CLM-006"
 verification_status: "secondary_wiki_extract_structured_primary_locator_pending"
 tags: ["Olivas Act", structured_dossier, character_research, primary_text_pending]
 research_source_refs:
@@ -98,8 +99,11 @@ evidence_claims:
     verification_status: "discovery_lead_only"
     confidence_note: "La entrada de índice no demuestra presencia histórica en la etapa de Astrea Record."
 abilities:
-  - "Naturaleza de criatura: la wiki afirma que puede fortalecerse al consumir piedras mágicas, pero con un consumo corporal muy alto."
-  - "La misma fuente sostiene que llegó a superar su fuerza anterior; mecanismo, coste exacto, límites y nivel en cada etapa siguen pendientes de cotejo en Sword Oratoria, volumen 3."
+  - "Naturaleza de Creature: la wiki afirma que aumenta su fuerza al consumir piedras mágicas; la ingestión exige un consumo corporal muy alto. La cantidad y progresión por etapa necesitan cotejo."
+  - "La fuente afirma que llegó a superar su fuerza anterior al consumir piedras mágicas; no convertir esto en un nivel fijo o permanente."
+  - "Curación acelerada: la ficha comunitaria dice que puede regenerar heridas mortales gastando resistencia física y Mind. Las lesiones graves se recuperan relativamente despacio y el coste acumulado reduce el rendimiento de combate."
+  - "Sentidos mejorados: la wiki le atribuye detectar la presencia de Asfi cuando estaba invisible; no equivale a una detección infalible de cualquier enemigo oculto."
+  - "Tamer/control de monstruos: se le atribuye controlar ciertas plantas monstruosas creadas por el Espíritu Corrupto, incluidas Violas/Viscums, y anular sus instintos. No extenderlo a todas las especies ni describirlo como control ilimitado."
 skills:
   []
 magic:
@@ -177,6 +181,12 @@ No se añaden relaciones personales no sustentadas por una afirmación individua
 - **Hito comunitario:** la wiki asocia a Olivas con la «Pesadilla del piso 27». El alcance exacto de su responsabilidad personal debe reconstruirse desde la novela.
 - **Frontera temporal:** estos reportes apuntan a Sword Oratoria, volumen 3. No confirman presencia en el núcleo de Astrea Record ni autorizan trasladar sus actos al periodo T−7.
 - **Fuente/claims:** DMR-025-SRC-001; DMR-025-CLM-001 a DMR-025-CLM-003. Acceso a la ficha integral bloqueado en esta sesión.
+
+## Detalle adicional de capacidades recuperado de la ficha inglesa · secundario
+
+DMR-032-CLM-006 distingue cuatro grupos de capacidades que no estaban desarrollados antes: fuerza por ingestión de piedras mágicas; regeneración que consume Mind/resistencia, es lenta tras heridas severas y empeora su rendimiento; sentidos mejorados; y control limitado de Violas/Viscums. La wiki describe el gasto acumulado como una desventaja táctica y la conversación para ganar tiempo como una respuesta ante la recuperación. Todo ello orienta la lectura, pero no ha sido cotejado de forma directa en la novela.
+
+La recapitulación del episodio 8 de Sword Oratoria se conserva exclusivamente como CONT-ANIME y no prueba que cada detalle sea idéntico en la novela ligera.
 
 ## Ruta de verificación
 

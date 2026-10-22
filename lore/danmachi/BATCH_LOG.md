@@ -1,5 +1,18 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-032 · Cinco perfiles de Orario y corrección de Olivas Act (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modificó.
+- **Expedientes nuevos:** Hermes, Ouranos y Ganesha pasan de candidaturas del índice a fichas estructuradas. Daphne Lauros y Cassandra Ilion se amplían bajo sus IDs existentes, sin duplicados.
+- **Corrección de completitud:** Olivas Act conserva `CHAR-DARK-OLIVAS-ACT`; se desglosan ingestión de piedras mágicas, regeneración que consume Mind/resistencia y reduce el rendimiento, sentidos mejorados y control limitado de plantas monstruosas.
+- **Fuentes:** DMR-032-SRC-001 a DMR-032-SRC-011; perfiles comunitarios ingleses, apoyo en español donde está anotado, una sinopsis oficial de volumen 5 y una recapitulación del anime marcada exclusivamente como adaptación.
+- **Claims:** DMR-032-CLM-001 a DMR-032-CLM-006; todos permanecen en estado secundario y con localizadores de novela pendientes.
+- **Límites/conflictos:** color de cabello de Ganesha discrepante entre versiones; separación visual anime/novela; niveles 2/3 de Daphne y Cassandra ligados a estados; participación de Olivas en el núcleo de Astrea Record no confirmada.
+- **Integración:** catálogo, corpus de búsqueda, pruebas de recuperación/continuidad/procedencia e índices actualizados. El paquete añade seis claims y cinco perfiles nuevos.
+- **Validación:** revisar ambas ejecuciones de Actions del commit de integración antes de declarar PASS.
+- **Próximo paso:** localizar y leer escenas publicadas para Hermes (DanMachi vol. 5), Daphne/Cassandra (vol. 6 y pasajes posteriores) y Olivas (Sword Oratoria vol. 3); confirmar los datos institucionales de Ouranos y Ganesha en novelas.
+
+
 ## DANMACHI-RESEARCH-028 · Barca, Basram, Vito, Adi/Ardee y Airmid (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modificó.

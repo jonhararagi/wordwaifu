@@ -1575,7 +1575,7 @@ verification_status: stub
 - accessed_at: 2026-10-21
 - locator_type: search_index_extract
 - locator: Extractos indexados de identidad, alias, apariencia, personalidad, capacidades y secciones Appearance/Personality; lectura integral bloqueada.
-- claims_supported: [DMR-025-CLM-001, DMR-025-CLM-002, DMR-025-CLM-003]
+- claims_supported: [DMR-025-CLM-001, DMR-025-CLM-002, DMR-025-CLM-003, DMR-032-CLM-006]
 - events_supported: []
 - continuity_scope: CONT-SO; CONT-ANIME
 - reliability_note: Pista secundaria. El dominio Fandom bloqueó la recuperación integral y la wiki ha migrado; los rasgos y apariciones aún requieren cotejo en la novela/adaptación pertinente.
@@ -2769,3 +2769,213 @@ verification_status: stub
 - rights_note: Paráfrasis y enlace; no copiar tablas extensas.
 - verified_by: DANMACHI-RESEARCH-031
 - verification_status: secondary_cross_continuity_locator_pending
+
+## DMR-032-SRC-001 · DanMachi Wiki — Hermes
+- source_id: DMR-032-SRC-001
+- title: Hermes
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Community profile article
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Hermes
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Identity, Appearance, Personality, History and Debuts
+- claims_supported: [DMR-032-CLM-001]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-ANIME
+- reliability_note: Characterization is a community summary; verify by scenes.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-032-SRC-002 · Wiki DanMachi — Hermes
+- source_id: DMR-032-SRC-002
+- title: Hermes
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Community profile article
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Hermes
+- accessed_at: 2026-10-22
+- locator_type: indexed_profile_extract
+- locator: Name, appearance, personality and history details visible in Spanish index
+- claims_supported: [DMR-032-CLM-001]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-ANIME
+- reliability_note: Limited Spanish corroboration; not a claim of full bilingual reading.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: indexed_secondary_extract_primary_locator_pending
+
+## DMR-032-SRC-003 · DanMachi Wiki — Ouranos
+- source_id: DMR-032-SRC-003
+- title: Ouranos
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community profile article
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Ouranos
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: History, Personality, Abilities and Debuts
+- claims_supported: [DMR-032-CLM-002]
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Prayer mechanics and powers are secondary summaries; primary locators pending.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-032-SRC-004 · DanMachi Wiki — Ganesha
+- source_id: DMR-032-SRC-004
+- title: Ganesha
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community profile article
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Ganesha
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Identity, Appearance, Personality and Debuts
+- claims_supported: [DMR-032-CLM-003]
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Hair-colour description conflicts with the Spanish profile.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-032-SRC-005 · Wiki DanMachi — Ganesha and Familia Ganesha
+- source_id: DMR-032-SRC-005
+- title: Ganesha; Familia Ganesha
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Community profile and Familia article
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Ganesha; https://danmachi.fandom.com/es/wiki/Familia_Ganesha
+- accessed_at: 2026-10-22
+- locator_type: profile_and_organization_sections
+- locator: Appearance, Monsterphilia, monster tamers and reported Xenos cooperation
+- claims_supported: [DMR-032-CLM-003]
+- continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: Xenos cooperation is community-sourced, not primary-verified.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-032-SRC-006 · DanMachi Wiki — Daphne Lauros
+- source_id: DMR-032-SRC-006
+- title: Daphne Lauros
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Community profile article
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Daphne_Lauros
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics, Personality, History, Skills, Magic, Equipment and Debuts
+- claims_supported: [DMR-032-CLM-004]
+- continuity_scope: CONT-MAIN-LN; CONT-ANIME
+- reliability_note: Stats and capabilities are wiki-reported; primary scenes not opened here.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-032-SRC-007 · Wiki DanMachi — Daphne Lauros
+- source_id: DMR-032-SRC-007
+- title: Daphne Lauros
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Community profile article
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Daphne_Lauros
+- accessed_at: 2026-10-22
+- locator_type: indexed_profile_extract
+- locator: Profile cross-reference; detailed skill mechanics use English profile
+- claims_supported: [DMR-032-CLM-004]
+- continuity_scope: CONT-MAIN-LN; CONT-ANIME
+- reliability_note: Spanish corroboration is limited; do not overstate scope.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: indexed_secondary_extract_primary_locator_pending
+
+## DMR-032-SRC-008 · DanMachi Wiki — Cassandra Ilion
+- source_id: DMR-032-SRC-008
+- title: Cassandra Ilion
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Community profile article
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Cassandra_Ilion
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics, Personality, Abilities, Skills, Magic, Equipment, History and Debuts
+- claims_supported: [DMR-032-CLM-005]
+- continuity_scope: CONT-MAIN-LN; CONT-ANIME
+- reliability_note: Main source for prophecy/healing summary; primary scene/page pending.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-032-SRC-009 · Wiki DanMachi — Magia
+- source_id: DMR-032-SRC-009
+- title: Magia
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Community magic glossary
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Magia
+- accessed_at: 2026-10-22
+- locator_type: glossary_entries
+- locator: Entries for Raumure and Soullight with volume-level leads
+- claims_supported: [DMR-032-CLM-004, DMR-032-CLM-005]
+- continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: Discovery aid only; spell effect and limits need a novel passage.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-032-SRC-010 · GA Bunko — DanMachi volume 5
+- source_id: DMR-032-SRC-010
+- title: ダンジョンに出会いを求めるのは間違っているだろうか 5
+- creator_or_publisher: GA Bunko / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi
+- volume_or_edition: Volume 5 publisher product page
+- language: Japanese
+- publication_date: unknown
+- official_url: https://ga.sbcr.jp/product/9784797377149/
+- accessed_at: 2026-10-22
+- locator_type: publisher_synopsis
+- locator: General context of Hestia, Ryu and Hermes entering the Dungeon to rescue Bell
+- claims_supported: [DMR-032-CLM-001]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Official synopsis supports broad context only, not an internal chapter/page or full character profile.
+- rights_note: Brief paraphrase only.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: official_synopsis_checked_primary_chapter_locator_pending
+
+## DMR-032-SRC-011 · Sword Oratoria episode 8 recap
+- source_id: DMR-032-SRC-011
+- title: Sword Oratoria Episode 8
+- creator_or_publisher: Community-maintained DanMachi Wiki
+- source_type: ADAPTATION_RECAP
+- series: Sword Oratoria anime
+- volume_or_edition: Episode 8
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Sword_Oratoria_Episode_8
+- accessed_at: 2026-10-22
+- locator_type: episode_summary
+- locator: Olivas revelation in anime adaptation
+- claims_supported: [DMR-032-CLM-006]
+- continuity_scope: CONT-ANIME
+- reliability_note: Anime-only corroboration; cannot prove the same details in the light novel.
+- rights_note: Paraphrase and link.
+- verified_by: DANMACHI-RESEARCH-032
+- verification_status: adaptation_only_primary_novel_pending

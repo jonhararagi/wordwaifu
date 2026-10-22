@@ -2287,6 +2287,87 @@
       ],
       "status": "partial_timeline_crosswalk",
       "priority": "critical"
+    },
+    {
+      "id": "CHAR-HERMES",
+      "path": "characters/hermes.md",
+      "type": "deity_character",
+      "tags": [
+        "Hermes",
+        "Hermes Familia",
+        "Bell Cranel",
+        "Asfi Al Andromeda",
+        "Ouranos",
+        "secondary_profile",
+        "primary_locator_pending"
+      ],
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-OURANOS",
+      "path": "characters/ouranos.md",
+      "type": "deity_character",
+      "tags": [
+        "Ouranos",
+        "Guild",
+        "Dungeon",
+        "Xenos",
+        "Fels",
+        "secondary_profile",
+        "primary_locator_pending"
+      ],
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-GANESHA",
+      "path": "characters/ganesha.md",
+      "type": "deity_character",
+      "tags": [
+        "Ganesha",
+        "Ganesha Familia",
+        "Monsterphilia",
+        "Xenos",
+        "hair_colour_conflict",
+        "secondary_profile",
+        "primary_locator_pending"
+      ],
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DAPHNE-LAUROS",
+      "path": "characters/daphne-lauros.md",
+      "type": "character",
+      "tags": [
+        "Daphne Lauros",
+        "Miach Familia",
+        "Apollo Familia",
+        "Cassandra Ilion",
+        "Raumure",
+        "secondary_profile",
+        "primary_locator_pending"
+      ],
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-CASSANDRA-ILION",
+      "path": "characters/cassandra-ilion.md",
+      "type": "character",
+      "tags": [
+        "Cassandra Ilion",
+        "Miach Familia",
+        "Apollo Familia",
+        "Daphne Lauros",
+        "prophecy",
+        "healer",
+        "secondary_profile",
+        "primary_locator_pending"
+      ],
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -3260,6 +3341,12 @@
     {
       "document_id": "RESEARCH-DM-031",
       "path": "research/inbox/DANMACHI-RESEARCH-031-loki-secondary-profiles.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_locators_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-032",
+      "path": "research/inbox/DANMACHI-RESEARCH-032-orario-support-profiles.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_expanded_primary_locators_pending"
     }

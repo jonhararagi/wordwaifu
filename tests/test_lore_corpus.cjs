@@ -23,7 +23,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-028-barca-basram-vito-adi-airmid.md",
   "research/inbox/DANMACHI-RESEARCH-029-miach-naaza-dian-goibniu-hephaistos.md",
   "research/inbox/DANMACHI-RESEARCH-030-astrea-core-profiles.md",
-  "research/inbox/DANMACHI-RESEARCH-031-loki-secondary-profiles.md"
+  "research/inbox/DANMACHI-RESEARCH-031-loki-secondary-profiles.md",
+  "research/inbox/DANMACHI-RESEARCH-032-orario-support-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -41,8 +42,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 191, "Indexed source claims must include the 7 claims from research batch 031.");
-assert.equal(index.entryCount, 194, "All sourced lore claims must be searchable, including research batch 031.");
+assert.equal(index.sourceClaimCount, 197, "Indexed source claims must include the 7 claims from research batch 031.");
+assert.equal(index.entryCount, 200, "All sourced lore claims must be searchable, including research batch 031.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
@@ -399,3 +400,26 @@ assert.deepEqual(somaFamilyEntity.results.map(entity => entity.id), ["FAM-SOMA"]
 assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "Bell Cranel" }).abstain, true);
   process.stdout.write("PASS web research: Fandom/Wikipedia search, secondary-source labels, safe snippets and graceful partial failure verified.\n");
 })().catch(error=>{ console.error(error); process.exitCode=1; });
+
+
+// DANMACHI-RESEARCH-032: five richer profiles plus corrective Olivas ability coverage.
+const hermesResearch032 = corpus.search(index, { query: "Hermes Bell Asfi Ouranos", characterId: "CHAR-HERMES", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(hermesResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-001"), "Hermes profile and volume-5 route must be searchable.");
+assert.ok(hermesResearch032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Hermes profile claims must remain secondary.");
+const ouranosResearch032 = corpus.search(index, { query: "Ouranos Room Prayer Xenos Fels", characterId: "CHAR-OURANOS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ouranosResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-002"), "Ouranos prayer/Xenos profile must be retrievable.");
+assert.ok(ouranosResearch032.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")), "Ouranos result must retain declared main-line scope.");
+const ganeshaResearch032 = corpus.search(index, { query: "Ganesha Monsterphilia Xenos Ouranos", characterId: "CHAR-GANESHA", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ganeshaResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-003"), "Ganesha/Monsterphilia profile must be searchable.");
+assert.ok(ganeshaResearch032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Ganesha profile must remain secondary.");
+const daphneResearch032 = corpus.search(index, { query: "Daphne Raumure Laurus Wreath", characterId: "CHAR-DAPHNE-LAUROS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(daphneResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-004"), "Daphne period/skills/magic profile must be searchable.");
+assert.ok(daphneResearch032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Daphne's levels and mechanics must remain secondary.");
+const cassandraResearch032 = corpus.search(index, { query: "Cassandra Soullight prophetic dreams Daphne", characterId: "CHAR-CASSANDRA-ILION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(cassandraResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-005"), "Cassandra's healing/prophecy profile must be searchable.");
+assert.ok(cassandraResearch032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Cassandra's prophecy and spell details must remain secondary.");
+const olivasAbilities032 = corpus.search(index, { query: "Olivas Accelerated Healing Tamer Violas Viscums", characterId: "CHAR-DARK-OLIVAS-ACT", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(olivasAbilities032.results.some(claim => claim.claimId === "DMR-032-CLM-006"), "Olivas's detailed regeneration/senses/monster-control claim must be indexed.");
+assert.ok(olivasAbilities032.results.every(claim => claim.continuityScopes.includes("CONT-SO")), "Olivas ability claim must stay in Sword Oratoria continuity.");
+assert.ok(olivasAbilities032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Olivas ability details must remain secondary pending novel review.");
+assert.ok(olivasAbilities032.results.some(claim => claim.sourceUrls.includes("https://danmachi.fandom.com/wiki/Olivas_Act")), "Olivas claim must retain originating wiki URL.");

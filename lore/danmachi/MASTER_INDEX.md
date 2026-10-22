@@ -217,3 +217,15 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Rakta Haze](characters/rakta-haze.md) — personalidad situacional, cartografía de Knossos y separación de escenas del piso 37 y el cementerio.
 - [Paquete de 7 claims](research/inbox/DANMACHI-RESEARCH-031-loki-secondary-profiles.md); fuentes nuevas y antiguas actualizadas en [registro maestro de fuentes](sources/00-registro-fuentes.md).
 - **Límite:** datos de las wikis siguen secundarios. Los volúmenes candidatos están identificados, pero no se inventaron localizadores de capítulo/página.
+
+## DANMACHI-RESEARCH-032 · Cinco perfiles de Orario y corrección de Olivas Act
+
+- [Hermes](characters/hermes.md) — personalidad y vínculos reportados; sinopsis editorial del volumen 5 como ruta limitada.
+- [Ouranos](characters/ouranos.md) — Guild, Sala de Oración, Dungeon, Xenos, Fels y poderes reportados.
+- [Ganesha](characters/ganesha.md) — Ganesha Familia y Monsterphilia; color de cabello discrepante entre wikis.
+- [Daphne Lauros](characters/daphne-lauros.md) — niveles por etapa, Elios Passion, Laurus Wreath, Raumure y vínculo con Cassandra.
+- [Cassandra Ilion](characters/cassandra-ilion.md) — curación, sueños proféticos, magia y relaciones; perfil secundario.
+- [Olivas Act](characters/dark-era/olivas-act.md) — capacidades detalladas con costes/límites reportados, sin cambiar ID.
+- [Paquete DANMACHI-RESEARCH-032 y seis claims](research/inbox/DANMACHI-RESEARCH-032-orario-support-profiles.md).
+- **Criterio de cierre:** no se agregan localizadores primarios inventados; los datos comunitarios conservan su nivel secundario.
+
