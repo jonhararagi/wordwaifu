@@ -2059,9 +2059,14 @@
         "Freya Familia",
         "Hogni Ragnar",
         "strategist",
-        "CONT-ANIME"
+        "CONT-ANIME",
+        "secondary_profile_expanded",
+        "Hjaðningavíg",
+        "Caelus Hildr",
+        "Laurus Hildr",
+        "primary_locator_pending"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -2073,9 +2078,14 @@
         "Freya Familia",
         "Hedin Selland",
         "dark elf",
-        "CONT-ANIME"
+        "CONT-ANIME",
+        "secondary_profile_expanded",
+        "Hjaðningavíg",
+        "Dainsleif",
+        "Victim Abyss",
+        "primary_locator_pending"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -2102,9 +2112,14 @@
         "Haze Velvet",
         "Freya Familia",
         "healer",
-        "CONT-ANIME"
+        "CONT-ANIME",
+        "secondary_profile_expanded",
+        "Zeo Gullveig",
+        "Earth Gullveig",
+        "floor_snapshot_conflict",
+        "primary_locator_pending"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -2170,10 +2185,16 @@
         "Ryu Lion",
         "CONT-ANIME",
         "structured_dossier",
-        "primary_text_pending"
+        "primary_text_pending",
+        "secondary_profile_expanded",
+        "Feles Cruz",
+        "Violetta",
+        "assassin_history",
+        "floor_snapshot_conflict",
+        "primary_locator_pending"
       ],
-      "status": "partial_source_checked_primary_text_pending",
-      "priority": "normal"
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
     },
     {
       "id": "CHAR-LUNOA-FAUST",
@@ -2186,10 +2207,15 @@
         "CONT-ANIME",
         "structured_dossier",
         "primary_text_pending",
-        "Lunoire Faust"
+        "Lunoire Faust",
+        "secondary_profile_expanded",
+        "Fist Strike",
+        "Fist Fighter",
+        "floor_snapshot_conflict",
+        "primary_locator_pending"
       ],
-      "status": "partial_source_checked_primary_text_pending",
-      "priority": "normal"
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
     },
     {
       "id": "CHAR-GULLIVER-ALFRIGG",
@@ -3408,6 +3434,12 @@
     {
       "document_id": "RESEARCH-DM-035",
       "path": "research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-036",
+      "path": "research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_expanded_primary_locator_pending"
     }
