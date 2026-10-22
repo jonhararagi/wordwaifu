@@ -3196,7 +3196,13 @@
       "path": "research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md",
       "type": "character_profile_research",
       "status": "secondary_extracts_structured_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-027",
+      "path": "research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_text_pending"
     }
   ],
-  "lastStructuredSync": "2026-10-21"
+  "lastStructuredSync": "2026-10-22"
 }
