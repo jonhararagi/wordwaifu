@@ -1,5 +1,24 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-036 · Perfiles secundarios de Freya Familia y Hostess (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modifica.
+- **Fichas ampliadas bajo IDs existentes:** Hedin Selland, Hogni Ragnar, Heith Velvet, Chloe Rollo/Rolo y Lunoa/Lunoire Faust; no se crean identidades nuevas.
+- **Contenido:** 15 claims consultables sobre identidad/estado, historia, psicología, relaciones, magia, skills, equipo y límites. Catálogo, índice de personajes, cargador `src/lore-corpus.js` y pruebas se sincronizaron.
+- **Fuentes:** 10 referencias comunitarias inglesas/españolas; algunas se recuperaron como extractos indexados. La lectura integral de los mirrors actuales y el cotejo directo de las novelas no se lograron en esta tanda.
+- **Conflictos abiertos:** Hedin, Hildrsleif/Hildr Slēv; Heith, piso 58/60 y Reverse/Rebirth Gandr; Chloe, piso 37/60; Lunoa/Lunoire, grafía editorial y piso 37/60. No se elige una forma como canónica por intuición.
+- **Continuidad:** los añadidos DMR-036 quedan como referencias secundarias. Los perfiles oficiales de adaptación de Chloe y Lunoa (DMR-006) se conservan separados.
+- **Validación:** comprobar los dos workflows en el SHA exacto del commit de integración antes de declarar PASS.
+- **Siguiente paso:** cotejar ediciones autorizadas y registrar localizadores reales para la historia de Hjaðningavíg/Dis Sisters, magia de Hedin/Hogni/Heith, encargos de Chloe/Lunoa y discrepancias de niveles/pisos.
+
+## DANMACHI-RESEARCH-035 · Cinco perfiles de Loki Familia ampliados (2026-10-22)
+
+- **Rama/estado:** `work/story-completion-danmachi-audit-2026-10`; el commit previo `57bedb641ee8987443b3c1e08ab0791246adca04` validó ambas Actions.
+- **Fichas:** Bete Loga, Tiona Hiryute, Tione Hiryute, Lefiya Viridis y Raul Nord; 11 claims secundarios, sin nuevos IDs de persona.
+- **Integración:** paquete en catálogo y cargador, con pruebas de recuperación/continuidad. Se corrige la omisión de auditoría: el paquete 035 estaba integrado, pero todavía no tenía entrada propia en este registro.
+- **Fuentes/límites:** wikis comunitarias y extractos bilingües según disponibilidad; faltan localizadores primarios para biografía, mecánicas y estadísticas.
+- **Validación:** [Validate WordWaifu PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39821753563) y [DanMachi Lore and Retrieval Integrity PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39821753699).
+
 ## DANMACHI-RESEARCH-034 · Ampliación wiki de cinco expedientes (2026-10-22)
 
 - Rama: `work/story-completion-danmachi-audit-2026-10`; `main` no se modifica.
