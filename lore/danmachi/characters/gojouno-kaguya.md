@@ -5,8 +5,8 @@ type: character
 status: partial_official_adaptation_checked_primary_locator_pending
 confidence: official DanMachi IV profile for CONT-ANIME; detailed CONT-AR biography still requires novel locators
 continuity_scope: CONT-ANIME; CONT-AR
-source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006]
-claim_refs: [DMR-003-CLM-001, DMR-007-CLM-002, DMR-007-CLM-023, DMR-007-CLM-026]
+source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-003, DMR-030-SRC-004]
+claim_refs: [DMR-003-CLM-001, DMR-007-CLM-002, DMR-007-CLM-023, DMR-007-CLM-026, DMR-030-CLM-003, DMR-030-CLM-004]
 aliases:
   - "Kaguya"
   - "ゴジョウノ・輝夜"
@@ -182,7 +182,7 @@ duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
 verification_status: "Official adaptation profile checked; community roster is only a historical lead; primary novel locators pending"
-research_source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006]
+research_source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-003, DMR-030-SRC-004]
 ---
 # Gojouno Kaguya
 
@@ -241,3 +241,16 @@ La sinopsis oficial del episodio dice que Ryuu fue la única superviviente de la
 
 Fuentes y claims: DMR-007-SRC-001 / claims 002 y 023; DMR-007-SRC-006 / claim 026. El roster comunitario es únicamente una pista secundaria (DMR-003-CLM-001).
 
+
+
+## Ampliación biográfica y de combate desde wikis · DANMACHI-RESEARCH-030
+
+### Historia personal reportada: Lejano Oriente
+
+El resumen comunitario de la historia corta vinculada a Astrea Record, volumen 2, añade un tramo biográfico que la ficha oficial del anime no explica. Sitúa a Kaguya en una casa noble del Lejano Oriente encargada de hacer cumplir órdenes del poder imperial. Su formación la habría llevado a matar personas cuya culpabilidad no conocía. La historia corta resumida describe el caso de un joven de otra familia a quien Kaguya no quiso matar porque no consideraba justa la orden; según el resumen, una intervención mágica de su deidad la forzó a cumplirla y, al recuperar el control, encontró al joven muerto y la espada ensangrentada. Luego dejó el Lejano Oriente y se incorporó a Astrea Familia. Este episodio ayuda a entender por qué discute con Ryuu sobre la justicia y por qué la obediencia sin juicio es central para su historia. Es un resumen secundario, no pasaje primario cotejado; no se inventan el nombre del joven ni detalles no reportados.
+
+### Magia, técnicas y armas reportadas
+
+La ficha comunitaria enumera la magia Gokou, descrita como cinco hojas mágicas que rodean al objetivo, y armas llamadas Higanbana y Kodachi Futaba. También atribuye a Kaguya una especialidad destacada en combate cercano y técnicas rápidas de desenvainado. Una habilidad aparece con grafías incompatibles entre extractos, Tekiheni/Sakibeni: permanece sin normalizar. La wiki indica que Kodachi Futaba pasó a Ryuu en una etapa posterior; el estado histórico de la portadora y el estado posterior de Ryuu deben mantenerse en entradas temporales separadas.
+
+**Fuentes y alcance:** DMR-030-CLM-003 y DMR-030-CLM-004; https://danmachi.fandom.com/wiki/Gojouno_Kaguya y https://danmachi.fandom.com/wiki/Gojouno_Kaguya_(Short_Story). Toda la ampliación queda como secundaria hasta cotejar la historia corta y los pasajes de novela.
