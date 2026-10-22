@@ -239,3 +239,14 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Samira](characters/dark-era/samira.md) — atribución histórica no demostrada; se conserva su ID estable.
 - [Paquete de nueve claims](research/inbox/DANMACHI-RESEARCH-033-dark-era-evilus-deities-and-dis-sisters.md) y [registro de fuentes](sources/00-registro-fuentes.md).
 - **Límite:** información secundaria; no se inventaron páginas o capítulos de la novela.
+
+
+## DANMACHI-RESEARCH-034 · Cinco fichas ampliadas desde wikis
+
+- [Allen Fromel](characters/allen-fromel.md) — trasfondo, motivación contra el Dragón Negro, velocidad, magia y relación con Anya; todo lo añadido queda como evidencia secundaria.
+- [Anya Fromel](characters/anya-fromel.md) — etapas Freya Familia/Hostess, carácter contextual y magia Remiste Felis con sus límites reportados.
+- [Mia Grand](characters/mia-grand.md) — pasado con Freya, antigua capitanía, apertura de Hostess y vínculos con Ottar y Anya.
+- [Alicia Forestlight](characters/alicia-forestlight.md) — Fairy Force, motivación, Hail Dust, Grace Sagittarius y Mage; Elleaf permanece dentro de CONT-GAME.
+- [Leene Arshe / Line Arshe](characters/leene-arshe.md) — se conserva un solo ID; cruce japonés apoyado por referencias secundarias, con variante Locolyte y supervivencia del juego separadas de Sword Oratoria.
+- [Paquete de 14 claims y fuentes](research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md) y [registro maestro de fuentes](sources/00-registro-fuentes.md).
+- **Límite:** se recuperaron extractos indexados en inglés y español, pero no se cotejaron directamente los textos íntegros de las novelas. No hay localizadores primarios verificados en este lote.

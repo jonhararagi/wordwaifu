@@ -1,5 +1,18 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-034 · Ampliación wiki de cinco expedientes (2026-10-22)
+
+- Rama: `work/story-completion-danmachi-audit-2026-10`; `main` no se modifica.
+- Fichas ampliadas bajo IDs existentes: Allen Fromel, Anya Fromel, Mia Grand, Alicia Forestlight y Leene/Line Arshe. No se crean nuevas identidades.
+- Fuentes exactas: https://danmachi.fandom.com/wiki/Allen_Fromel; https://danmachi.fandom.com/es/wiki/Familia_Freya; https://danmachi.fandom.com/wiki/Anya_Fromel; https://danmachi.fandom.com/es/wiki/Anya_Fromel; https://danmachi.fandom.com/wiki/Mia_Grand; https://danmachi.fandom.com/es/wiki/Mia_Grand; https://danmachi.fandom.com/wiki/Alicia_Forestlight; https://danmachi.fandom.com/es/wiki/Familia_Loki; https://danmachi.fandom.com/es/wiki/Magia; https://danmachi.fandom.com/wiki/Line_Arshe; https://danmachi.fandom.com/wiki/Instead_of_Goodbye_-_Thanks; https://danmachi.fandom.com/wiki/Aliases.
+- Método: perfiles ingleses y contenido indexado español se usaron como referencias secundarias. Algunas páginas antiguas de Fandom no entregaron la ficha íntegra al abrirlas. No se afirma una lectura bilingüe completa ni se inventan páginas/capítulos primarios.
+- Contenido: 14 claims atómicos consultables. Allen: alias/estado, trasfondo, motivación y Gralineze Fromel; Anya: etapas y afiliación, relación con Allen, Remiste Felis y limitaciones; Mia: pasado con Freya, antigua capitanía y Hostess; Alicia: rol en Fairy Force y magia; Leene/Line: cruce de nombre, vínculo con Bete y rutas por continuidad.
+- Continuidad y conflictos: colores de ojos de Allen separados por novela/anime; Mia y Anya separadas por etapa; Elleaf y Locolyte tratados como alias de CONT-GAME; la vida de Line en el juego no sustituye el destino reportado de Sword Oratoria. Leene/Line conserva un ID, con identidad muy probable por japonés común y función, pero normalización editorial pendiente.
+- Integración de aplicación: el archivo de lore carga el paquete 034 y los cinco expedientes estructurados. También se corrigió un hueco detectado en la lista de documentos de la prueba, que afirmaba probar claims del paquete 033 sin cargarlo en `documentPaths`.
+- Validación: pendiente de GitHub Actions para el commit integrado. Los 14 claims siguen como `secondary_extract_only_primary_locator_pending`; ningún detalle se eleva a canon primario verificado.
+- Siguiente frente: cotejar Allen/Anya en DanMachi vol. 3 y Sword Oratoria vols. 2/4; Mia en DanMachi vol. 1/Sword Oratoria vol. 1/Episode Ryuu; Alicia y Leene/Line en Sword Oratoria vol. 1/4 y el relato corto citado. Registrar localizadores solo tras abrir edición autorizada.
+
+
 ## DANMACHI-RESEARCH-033 · Deidades de Evilus y hermanas Dis (2026-10-22)
 
 - Rama: work/story-completion-danmachi-audit-2026-10. main no se modifica.

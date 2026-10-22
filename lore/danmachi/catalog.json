@@ -705,14 +705,18 @@
       "type": "character",
       "tags": [
         "Leene Arshe",
-        "Leene",
-        "Familia Loki",
-        "Sword Oratoria",
-        "spoiler",
         "Line Arshe",
-        "identity crosswalk pending"
+        "Loki Familia",
+        "Sword Oratoria",
+        "supporter",
+        "healer",
+        "Luna Sanatio",
+        "Locolyte (CONT-GAME)",
+        "identity crosswalk supported secondary",
+        "primary_locator_pending",
+        "spoiler"
       ],
-      "status": "secondary_reference_identity_crosswalk_pending",
+      "status": "secondary_profile_expanded_identity_crosswalk_supported_primary_check_pending",
       "priority": "high"
     },
     {
@@ -770,12 +774,19 @@
       "tags": [
         "Alicia Forestlight",
         "Alicia",
-        "Familia Loki",
+        "Loki Familia",
         "elf",
-        "supporting member"
+        "Fairy Force",
+        "Riveria",
+        "Hail Dust",
+        "Grace Sagittarius",
+        "Mage",
+        "Elleaf (CONT-GAME)",
+        "secondary_profile_expanded",
+        "primary_locator_pending"
       ],
-      "status": "primary_novel_locator_pending",
-      "priority": "normal"
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
     },
     {
       "id": "CHAR-LOKI-ANJU",
@@ -2029,9 +2040,14 @@
         "Allen Fromel",
         "Freya Familia",
         "Anya Fromel",
-        "CONT-ANIME"
+        "CONT-ANIME",
+        "The City's Fastest",
+        "Vana Freya",
+        "Gralineze Fromel",
+        "secondary_profile_expanded",
+        "primary_locator_pending"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -2114,9 +2130,14 @@
         "Allen Fromel",
         "Hostess of Fertility",
         "Freya Familia",
-        "CONT-ANIME"
+        "CONT-ANIME",
+        "Vana Alfi",
+        "Remiste Felis",
+        "Resistencia Anormal",
+        "secondary_profile_expanded",
+        "primary_locator_pending"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -2126,10 +2147,16 @@
       "tags": [
         "Mia Grand",
         "Hostess of Fertility",
+        "Freya Familia",
         "former adventurer",
-        "CONT-ANIME"
+        "former captain",
+        "Demi Ymir",
+        "Mama Mia",
+        "CONT-ANIME",
+        "secondary_profile_expanded",
+        "primary_locator_pending"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -3369,6 +3396,12 @@
     {
       "document_id": "RESEARCH-DM-033",
       "path": "research/inbox/DANMACHI-RESEARCH-033-dark-era-evilus-deities-and-dis-sisters.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_locators_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-034",
+      "path": "research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_expanded_primary_locators_pending"
     }

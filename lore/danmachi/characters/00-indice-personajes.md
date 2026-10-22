@@ -34,7 +34,8 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-LEFIYA-VIRIDIS | [Lefiya Viridis](lefiya-viridis.md) | Lefiya | Loki Familia · maga | Perfil oficial de adaptación + referencia secundaria; hechizos/estados temporales pendientes |
 | CHAR-RAUL-NOORD | [Raul Nord](raul-nord.md) | Raul; ラウル・ノールド | Loki Familia; coordinación de miembros de menor rango | Expediente existente; perfil oficial de adaptación localizado; cotejo de LN pendiente |
 | CHAR-LOKI-AKI | [Aki](aki.md) | Anakitty Autumn; Alchat; conflicto Felis/Alkittine Diondra | Progresión histórica, Raul, Cat Walk/Cat Returns/Paw Bash y equipo | Perfil inglés/español ampliado; conflicto de reencarnación y escena del briefing pendientes de cotejo |
-| CHAR-LOKI-ALICIA-FORESTLIGHT | [Alicia Forestlight](alicia-forestlight.md) | Alicia | Afiliación y grupo de apoyo reportados en nota interna de Sword Oratoria vol. 4 | Escena y datos individuales sin fuente directa localizada; cotejo primario pendiente |
+| CHAR-LOKI-ALICIA-FORESTLIGHT | [Alicia Forestlight](alicia-forestlight.md) | Alicia; Fairy Force; Hail Dust; Grace Sagittarius; Elleaf (juego) | Elfa de Loki Familia; maga de hielo y segunda de Fairy Force reportadas; alias Elleaf restringido a CONT-GAME | Perfil comunitario ampliado; habilidades y motivación requieren cotejo primario |
+| CHAR-LEENE-ARSHE | [Leene Arshe](leene-arshe.md) | Leene/Line Arshe; Locolyte (juego); Luna Sanatio | Ayudante/sanadora de Loki Familia reportada; una identidad conserva el ID legado; destino de novela y estado del juego separados | Cruce secundario fuerte; normalización y escenas primarias pendientes |
 | CHAR-LOKI-ELFY-COLETTE | [Elfy Colette](elfy-colette.md) | Elfy Colette; Lomoire (origen reportado de juego) | Loki Familia; historia de Distrito Escolar, Lefiya, magia de fuego y Mage reportados | Perfil inglés ampliado; alias de juego no se traslada automáticamente a novela; cotejo vol. 10/SO6 pendiente |
 | CHAR-LOKI-RAKTA-HAZE | [Rakta Haze](rakta-haze.md) | Rakta Haze; mapper reportada | Loki Familia; piso 37, cartografía de Knossos y episodio del cementerio, en escenas separadas | Perfil inglés ampliado; personalidad situacional y función de mapa secundarias; cotejo primario pendiente |
 | CHAR-LOKI-NARFI | [Narvi Roll](narfi.md) | Narvi Roll; Narvi/Narfi (cruce pendiente); ナルヴィ・ロール | Loki Familia; nivel 4/piso 59 reportados; debut en Sword Oratoria vol. 4 | Perfil inglés ampliado con apariencia; nombre antiguo y briefing requieren cotejo primario; ID legado conservado |
@@ -96,14 +97,14 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 
 | ID | Identidad | Alias / alcance | Vínculo censado | Estado |
 |---|---|---|---|---|
-| CHAR-ALLEN-FROMEL | [Allen Fromel](allen-fromel.md) | Allen; Allen Fromel | Vicecapitán y combatiente conocido por su velocidad | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-ALLEN-FROMEL | [Allen Fromel](allen-fromel.md) | Allen; Vana Freya; The City's Fastest; Gralineze Fromel | Vicecapitán de Freya Familia; trasfondo, motivación contra el Dragón Negro y magia de velocidad reportados | Perfil wiki ampliado; estadísticas y escenas por etapa pendientes de cotejo primario |
 | CHAR-HEDIN-SELLAND | [Hedin Selland](hedin-selland.md) | Hedin; Hedin Selland | Estratega y mago espadachín | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
 | CHAR-HOGNI-RAGNAR | [Hogni Ragnar](hogni-ragnar.md) | Hogni; Hogni Ragnar | Mago espadachín de primera línea | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
 | CHAR-HORN | [Horn (Herun)](horn.md) | Horn; Herun | Encargada principal de servir a Freya; identidad protegida por spoiler | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
 | CHAR-HEITH-VELVET | [Heith Velvet (Haze Velvet)](heith-velvet.md) | Heith Velvet; Haze Velvet | Sanadora y herbolaria; figura destacada del equipo de asistencia | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
 | CHAR-VAN | [Van](van.md) | Van; ヴァン | Aventurero de Freya Familia | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
-| CHAR-ANYA-FROMEL | [Anya Fromel](anya-fromel.md) | Anya; Anya Fromel | Trabajadora de taberna; antigua miembro de Freya Familia | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
-| CHAR-MIA-GRAND | [Mia Grand](mia-grand.md) | Mia; Mia Grand | Propietaria de Hostess of Fertility; antigua aventurera | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
+| CHAR-ANYA-FROMEL | [Anya Fromel](anya-fromel.md) | Anya; Vana Alfi; Remiste Felis | Antigua aventurera de Freya Familia y camarera de Hostess; magia sonora con límites reportados | Perfil wiki inglés/español ampliado; cronología y mecánicas pendientes de cotejo primario |
+| CHAR-MIA-GRAND | [Mia Grand](mia-grand.md) | Mia; Demi Ymir; Mama Mia | Propietaria de Hostess; antigua aventurera y capitana de Freya Familia reportada | Perfil wiki inglés/español ampliado; historia relativa y relaciones pendientes de cotejo primario |
 | CHAR-CHLOE-ROLO | [Chloe Rollo (Chloe Rolo)](chloe-rolo.md) | Chloe Rollo; Chloe Rolo | Trabajadora de taberna; antiguo oficio de asesina según adaptación | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
 | CHAR-LUNOA-FAUST | [Lunoa Faust](lunoa-faust.md) | Lunoa Faust; Lunoa | Trabajadora de Hostess of Fertility | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
 | CHAR-GULLIVER-ALFRIGG | [Alfrigg](gulliver-alfrigg.md) | Alfrigg; アルフリッグ | Hermano mayor; especialista en lanza | Perfil oficial CONT-ANIME; cotejo de novela pendiente |
@@ -155,10 +156,10 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 | ID | Nombre | Estado |
 |---|---|---|
 | CHAR-CHLOE-ROLO | Chloe Rollo | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-MIA-GRAND | Mia Grand | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-MIA-GRAND | Mia Grand | Perfil wiki ampliado; cotejo primario pendiente |
 | CHAR-HEDIN-SELLAND | Hedin Selland | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-HOGNI-RAGNAR | Hogni Ragnar | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-ANYA-FROMEL | Anya Fromel | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-ANYA-FROMEL | Anya Fromel | Perfil wiki ampliado; cotejo primario pendiente |
 | CHAR-SYR-FLOVA | Syr Flova | Expediente de aplicación existente; revisar alias/identidad con control de spoiler |
 | CHAR-DAPHNE-LAUROS | [Daphne Lauros](daphne-lauros.md) | Daphne; Laurus Fuga | Miach Familia (posterior); Apollo Familia (anterior); Cassandra | Perfil secundario ampliado; niveles por etapa, skills/magia y escenas pendientes de cotejo |
 | CHAR-CASSANDRA-ILION | [Cassandra Ilion](cassandra-ilion.md) | Cassandra; Mirabilis | Miach Familia (posterior); Apollo Familia (anterior); Daphne; Bell | Perfil secundario ampliado; curación/visiones y niveles por etapa pendientes de cotejo |

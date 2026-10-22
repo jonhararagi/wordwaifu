@@ -3189,3 +3189,213 @@ verification_status: stub
 - rights_note: Paraphrase and link only.
 - verified_by: DANMACHI-RESEARCH-033
 - verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-034-SRC-001 · Allen Fromel — ficha comunitaria inglesa
+- source_id: DMR-034-SRC-001
+- title: Allen Fromel
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Episode Ryuu
+- volume_or_edition: Profile article and reported debut list
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Allen_Fromel
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Identity, Characteristics, Personality, History, Abilities, Magic, Equipment, Debuts
+- claims_supported: [DMR-034-CLM-001, DMR-034-CLM-002, DMR-034-CLM-003]
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Indexed community article used as secondary discovery evidence; no complete primary text was opened.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-002 · Familia Freya — roster comunitario en español
+- source_id: DMR-034-SRC-002
+- title: Familia Freya
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Community roster snapshot
+- language: Spanish
+- official_url: https://danmachii.fandom.com/es/wiki/Familia_Freya
+- accessed_at: 2026-10-22
+- locator_type: member_table
+- locator: Member roster, affiliation names and roles
+- claims_supported: [DMR-034-CLM-001, DMR-034-CLM-004, DMR-034-CLM-007]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Roster corroborates affiliation at a high level only; it does not validate full biography, abilities or chronology.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-003 · Anya Fromel — ficha comunitaria inglesa
+- source_id: DMR-034-SRC-003
+- title: Anya Fromel
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Profile article and reported debut list
+- language: English
+- official_url: https://danmachii.fandom.com/wiki/Anya_Fromel
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Identity, Characteristics, Status, Familia, Debuts
+- claims_supported: [DMR-034-CLM-004]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Community article supports discovery of aliases and attributes; primary text was not opened.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-004 · Anya Fromel — ficha comunitaria en español
+- source_id: DMR-034-SRC-004
+- title: Anya Fromel
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Profile article
+- language: Spanish
+- official_url: https://danmachii.fandom.com/es/wiki/Anya_Fromel
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: History, Personality, Skills, Magic, Equipment, Relationships
+- claims_supported: [DMR-034-CLM-005, DMR-034-CLM-006]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Indexed Spanish content used for supplementary detail; article was not fully retrieved in a direct open.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-005 · Mia Grand — ficha comunitaria inglesa
+- source_id: DMR-034-SRC-005
+- title: Mia Grand
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Episode Ryuu
+- volume_or_edition: Profile article and reported debut list
+- language: English
+- official_url: https://danmachii.fandom.com/wiki/Mia_Grand
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Identity, Characteristics, Status, Debuts
+- claims_supported: [DMR-034-CLM-007]
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Indexed English article used as secondary evidence; no direct primary passage was read.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-006 · Mia Grand — ficha comunitaria en español
+- source_id: DMR-034-SRC-006
+- title: Mia Grand
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Episode Ryuu
+- volume_or_edition: Profile article
+- language: Spanish
+- official_url: https://danmachii.fandom.com/es/wiki/Mia_Grand
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: History, Personality, Relationships
+- claims_supported: [DMR-034-CLM-008]
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Indexed extract supplements the English profile; timeline is relative and remains secondary.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-007 · Alicia Forestlight — ficha comunitaria inglesa
+- source_id: DMR-034-SRC-007
+- title: Alicia Forestlight
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Profile article and reported debut list
+- language: English
+- official_url: https://danmachii.fandom.com/wiki/Alicia_Forestlight
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Identity, Characteristics, Personality, History, Abilities, Magic, Equipment, Debuts
+- claims_supported: [DMR-034-CLM-009, DMR-034-CLM-010]
+- continuity_scope: CONT-SO; CONT-GAME
+- reliability_note: Main source for expanded details. Official volume synopsis only covers broad expedition premise, not individual spell mechanics.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-008 · Familia Loki / Magia — referencias comunitarias españolas
+- source_id: DMR-034-SRC-008
+- title: Familia Loki; Magia
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Roster and magic reference pages
+- language: Spanish
+- official_url: https://danmachii.fandom.com/es/wiki/Familia_Loki; https://danmachii.fandom.com/es/wiki/Magia
+- accessed_at: 2026-10-22
+- locator_type: member_table_and_magic_index
+- locator: Loki Familia roster and indexed magical-ability entries
+- claims_supported: [DMR-034-CLM-009, DMR-034-CLM-010]
+- continuity_scope: CONT-SO
+- reliability_note: Supporting lookup only; not a second full Alicia biography.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-009 · Line Arshe — ficha comunitaria inglesa
+- source_id: DMR-034-SRC-009
+- title: Line Arshe
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: Sword Oratoria / DanMachi
+- volume_or_edition: Character profile and reported debuts
+- language: English
+- official_url: https://danmachii.fandom.com/wiki/Line_Arshe
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Identity, Characteristics, Status, Magic, Debuts, Trivia
+- claims_supported: [DMR-034-CLM-011]
+- continuity_scope: CONT-SO; CONT-GAME
+- reliability_note: Same Japanese name and supporting role provide strong secondary identity evidence; primary spelling still pending.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-010 · Instead of Goodbye - Thanks — resumen de relato corto
+- source_id: DMR-034-SRC-010
+- title: Instead of Goodbye - Thanks
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY_STORY_SUMMARY
+- series: Sword Oratoria
+- volume_or_edition: Community story summary; publication locator not verified here
+- language: English
+- official_url: https://danmachii.fandom.com/wiki/Instead_of_Goodbye_-_Thanks
+- accessed_at: 2026-10-22
+- locator_type: plot_summary
+- locator: Ending summary involving Line Arshe and Bete Loga
+- claims_supported: [DMR-034-CLM-012]
+- continuity_scope: CONT-SO
+- reliability_note: Summary is not a transcription of the official short story.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-034-SRC-011 · Aliases — origen de nombres ligados a Memoria Freese
+- source_id: DMR-034-SRC-011
+- title: Aliases
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Memoria Freese
+- volume_or_edition: Alias table
+- language: English
+- official_url: https://danmachii.fandom.com/wiki/Aliases; https://danmachii.fandom.com/wiki/Line_Arshe
+- accessed_at: 2026-10-22
+- locator_type: alias_table_and_article_trivia
+- locator: Alias table entries Locolyte/Line Arshe and Elleaf/Alicia Forestlight
+- claims_supported: [DMR-034-CLM-013, DMR-034-CLM-014]
+- continuity_scope: CONT-GAME
+- reliability_note: Game-only aliases and survival claims must not be transferred to novel continuity.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-034
+- verification_status: secondary_extract_only_primary_locator_pending
