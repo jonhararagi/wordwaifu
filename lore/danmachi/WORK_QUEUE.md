@@ -349,3 +349,13 @@ La matriz mejora navegación y control de cobertura, pero **no** declara complet
 - [ ] Leer Astrea Record vols. 1 y 3 para cotejar hermanas Dis, maldiciones, magias y desenlaces.
 - [ ] Cotejar Alecto/Apate y Sword Oratoria vols. 7 y 11 para Thanatos; registrar localizador solo al abrir el texto.
 - **Estado:** perfiles secundarios ampliados; no se declara ninguna escena primaria cotejada en esta tanda.
+
+
+## Continuación tras DANMACHI-RESEARCH-035
+- [x] Ampliar cinco perfiles de Loki Familia con datos de las fichas wiki: Bete, Tiona, Tione, Lefiya y Raul.
+- [ ] Antes de abrir otro lote de perfiles, cotejar los once claims DMR-035 con las ediciones publicadas de DanMachi/Sword Oratoria y registrar localizadores exactos tras leer cada pasaje.
+- [ ] Resolver las discrepancias documentadas para Tiona: color de ojos y piso máximo reportado por los mirrors inglés/español.
+- [ ] Verificar la cronología de Vidar Familia, Reene y Knossos para Bete; Telskyura/Seldas/Argana para Tione; y el relato de Argonaut y la escena de Wiene para Tiona.
+- [ ] Verificar snapshots de nivel y reglas de magia/equipo de Lefiya sin mezclar estados de nivel 3 y 4.
+- [ ] Verificar los intervalos relativos de Raul y Aki, Puente de los Héroes, entrega de Protagonista y procedencia de Noble Bow.
+- [ ] Mantener en estado secundario cualquier dato extraído solo de wiki; no inventar capítulo/página y no usar reencarnación como canon sin identificar la continuidad que la afirma.
