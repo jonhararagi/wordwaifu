@@ -67,9 +67,12 @@
         "Astrea Record",
         "Familia Astrea",
         "Alise",
-        "Alise Lovell"
+        "Alise Lovell",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "source_conflict_floor_reached"
       ],
-      "status": "provisional",
+      "status": "secondary_profile_augmented_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -97,9 +100,12 @@
         "Astrea Familia",
         "Astrea Record",
         "Familia Astrea",
-        "Solingen"
+        "Solingen",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "appearance_source_secondary"
       ],
-      "status": "provisional",
+      "status": "secondary_appearance_profile_added_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -688,9 +694,12 @@
         "Kaguya",
         "Familia Astrea",
         "Astrea Record",
-        "Astrea Familia"
+        "Astrea Familia",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "far_east_short_story"
       ],
-      "status": "provisional",
+      "status": "secondary_biography_and_ability_summary_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -1187,9 +1196,12 @@
         "Lyra",
         "Familia Astrea",
         "Astrea Record",
-        "Astrea Familia"
+        "Astrea Familia",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "magic_equipment_spoiler_lead"
       ],
-      "status": "provisional",
+      "status": "secondary_profile_augmented_primary_locator_pending",
       "priority": "normal"
     },
     {
@@ -1357,9 +1369,12 @@
         "Astrea Familia",
         "Familia Astrea",
         "Ryu",
-        "Ryuu"
+        "Ryuu",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "late_state_separate_from_astrea_record"
       ],
-      "status": "provisional",
+      "status": "secondary_relationship_and_late_state_added_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -3215,6 +3230,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-029-miach-naaza-dian-goibniu-hephaistos.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_expanded_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-030",
+      "path": "research/inbox/DANMACHI-RESEARCH-030-astrea-core-profiles.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_augmented_primary_locator_pending"
     }
   ],
   "lastStructuredSync": "2026-10-22"
