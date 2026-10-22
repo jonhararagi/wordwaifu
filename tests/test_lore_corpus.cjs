@@ -679,7 +679,7 @@ const barca044=corpus.search(index,{query:"Daidalos Knossos Dix maldición",char
 assert.ok(barca044.results.some(c=>c.claimId==="DMR-044-CLM-001"),"Barca's Knossos/Dix conflict must be searchable.");
 const barcaSkills044=corpus.search(index,{query:"Mystery Misterio armas malditas canto",characterId:"CHAR-DARK-BARCA-PERDIX",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(barcaSkills044.results.some(c=>c.claimId==="DMR-044-CLM-002"),"Barca's Mystery/cursed weapons claim must be searchable.");
-const dina044=corpus.search(index,{query:"Dina White Elf Dialf Stige Dialf Luminis Hogni",characterId:"CHAR-DARK-DINA-DIS",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+const dina044=corpus.search(index,{query:"Dina Elfa Blanca Dialf Stige Dialf Luminis Hogni",characterId:"CHAR-DARK-DINA-DIS",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(dina044.results.some(c=>c.claimId==="DMR-044-CLM-003"),"Dina's individual profile and curses must be searchable.");
 const vena044=corpus.search(index,{query:"Vena Elfa Oscura Dialf Dis Dialf Otua Hedin",characterId:"CHAR-DARK-VENA-DIS",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(vena044.results.some(c=>c.claimId==="DMR-044-CLM-004"),"Vena's individual magic claim must be searchable.");
