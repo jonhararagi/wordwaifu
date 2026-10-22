@@ -11,6 +11,8 @@ source_refs:
   - DMR-007-SRC-002
   - DMR-007-SRC-003
   - DMR-007-SRC-006
+  - DMR-030-SRC-006
+  - DMR-030-SRC-007
 claim_refs:
   - DMR-001-CLM-004
   - DMR-001-CLM-005
@@ -20,6 +22,7 @@ claim_refs:
   - DMR-007-CLM-014
   - DMR-007-CLM-025
   - DMR-007-CLM-026
+  - DMR-030-CLM-007
 verification_status: "Official publisher synopses and DanMachi IV/V profiles checked; primary novel locators pending"
 tags: [Astrea, deity, justice, order, Astrea Familia, multi-era, CONT-AR, CONT-MAIN-LN, CONT-ANIME]
 research_source_refs:
@@ -29,6 +32,8 @@ research_source_refs:
   - DMR-007-SRC-002
   - DMR-007-SRC-003
   - DMR-007-SRC-006
+  - DMR-030-SRC-006
+  - DMR-030-SRC-007
 entity_type: deity_character
 canonical_name: Astrea
 aliases:
@@ -290,3 +295,10 @@ El perfil de DanMachi V presenta a Astrea fuera de Orario con nuevos seguidores.
 
 Fuentes y claims: DMR-007-SRC-002 / claims 013–014, DMR-007-SRC-003 / claim 008 y DMR-007-SRC-006 / claim 026. Los localizadores de capítulo/página de la novela siguen pendientes.
 
+
+
+## Complemento de apariencia y apariciones reportadas · DANMACHI-RESEARCH-030
+
+La ficha comunitaria describe a Astrea con cabello marrón nogal recogido hacia atrás y ojos índigo; su índice de apariciones enumera Astrea Record, volumen 1, DanMachi IV episodio 20 y otros relatos o menciones, entre ellos Encounter and Vow. El perfil oficial de adaptación ya respalda su papel como diosa de la justicia y el orden; esta ampliación añade una ruta secundaria para investigar el diseño y los nombres de obras donde aparece, pero no determina cuál sería su primera escena de la novela principal. La designación de “viva” corresponde al estado actual mostrado por la ficha comunitaria, no se debe usar para deducir dónde estuvo ni qué sabía en cada periodo histórico.
+
+**Fuentes y alcance:** DMR-030-CLM-007; https://danmachi.fandom.com/wiki/Astraea y https://danmachi.fandom.com/wiki/Astraea_Familia. Apariencia y relación de apariciones quedan etiquetadas como secundarias; cotejo de novela pendiente.
