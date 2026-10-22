@@ -8,6 +8,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 # DANMACHI-RESEARCH-036 — Cinco perfiles de Freya Familia y Hostess of Fertility
 
 - **Fecha:** 2026-10-22.
+- **Revisión de seguimiento (2026-10-22):** después de la extracción original de DMR-036 se leyeron las fichas inglesa/española migradas y subpáginas actuales durante DMR-039; los claims siguen siendo secundarios y no se convierten en canon primario por actualizar sus URL.
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modifica.
 - **Fichas ampliadas:** Hedin Selland, Hogni Ragnar, Heith Velvet, Chloe Rollo/Rolo y Lunoa/Lunoire Faust.
 - **IDs:** se conservan los IDs estables y las rutas existentes; no se crean identidades por variantes de romanización.
@@ -30,7 +31,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Hedin Selland
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Characteristics, Professional Status, Aliases
-- `source_url`: https://danmachi.fandom.com/wiki/Hedin_Selland
+- `source_url`: https://danmachien.miraheze.org/wiki/Hedin_Selland
 - `evidence_type`: secondary_profile_extract_with_alias_discrepancy
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: moderate
@@ -48,7 +49,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Hedin Selland
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Personality, History, Familia role
-- `source_url`: https://danmachi.fandom.com/wiki/Hedin_Selland
+- `source_url`: https://danmachien.miraheze.org/wiki/Hedin_Selland
 - `evidence_type`: secondary_biography_and_relationship_summary
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -67,7 +68,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Habilidades de Hedin Selland
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Habilidades, Magia, Development Abilities, Equipment
-- `source_url`: https://danmachi.fandom.com/es/wiki/Hedin_Selland/Habilidades
+- `source_url`: https://danmachi.miraheze.org/wiki/Hedin_Selland/Habilidades
 - `evidence_type`: secondary_magic_skill_and_equipment_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -85,7 +86,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Hogni Ragnar
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Characteristics, Professional Status, Aliases
-- `source_url`: https://danmachi.fandom.com/wiki/Hogni_Ragnar
+- `source_url`: https://danmachien.miraheze.org/wiki/Hogni_Ragnar
 - `evidence_type`: secondary_profile_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: moderate
@@ -103,7 +104,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Hogni Ragnar
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Personality, History, Relationships
-- `source_url`: https://danmachi.fandom.com/wiki/Hogni_Ragnar
+- `source_url`: https://danmachien.miraheze.org/wiki/Hogni_Ragnar
 - `evidence_type`: secondary_biography_and_relationship_summary
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -122,7 +123,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: Wiki DanMachi — índices comunitarios de habilidades y magia
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Entradas Dainsleif/Burn Dain/Rasu Dain y lista de habilidades
-- `source_url`: https://danmachi.fandom.com/wiki/Hogni_Ragnar; https://danmachi.fandom.com/es/wiki/Magia; https://danmachi.fandom.com/es/wiki/Habilidades
+- `source_url`: https://danmachien.miraheze.org/wiki/Hogni_Ragnar; https://danmachi.miraheze.org/wiki/Magia; https://danmachi.miraheze.org/wiki/Habilidades
 - `evidence_type`: secondary_magic_skill_equipment_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -141,7 +142,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Heith Velvet
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Characteristics, Professional Status, Aliases, History
-- `source_url`: https://danmachi.fandom.com/wiki/Heith_Velvet; https://danmachi.fandom.com/es/wiki/Heith_Velvet
+- `source_url`: https://danmachien.miraheze.org/wiki/Heith_Velvet; https://danmachi.miraheze.org/wiki/Heith_Velvet
 - `evidence_type`: secondary_profile_extract_with_discrepant_floor_reached
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: moderate
@@ -159,7 +160,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Heith Velvet
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Personality, History, Relationships
-- `source_url`: https://danmachi.fandom.com/wiki/Heith_Velvet
+- `source_url`: https://danmachien.miraheze.org/wiki/Heith_Velvet
 - `evidence_type`: secondary_biography_and_relationship_summary
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -178,7 +179,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: Wiki DanMachi — Heith Velvet
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Habilidades, Magia, Development Abilities, Equipment
-- `source_url`: https://danmachi.fandom.com/es/wiki/Heith_Velvet; https://danmachi.fandom.com/wiki/Heith_Velvet
+- `source_url`: https://danmachi.miraheze.org/wiki/Heith_Velvet; https://danmachien.miraheze.org/wiki/Heith_Velvet
 - `evidence_type`: secondary_healing_magic_and_equipment_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -197,7 +198,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Chloe Rollo/Rolo
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Characteristics, Professional Status, Aliases, Debuts
-- `source_url`: https://danmachi.fandom.com/wiki/Chloe_Rollo; https://danmachi.fandom.com/es/wiki/Chloe_Rollo
+- `source_url`: https://danmachien.miraheze.org/wiki/Chloe_Rollo; https://danmachi.miraheze.org/wiki/Chloe_Rollo
 - `evidence_type`: secondary_profile_extract_with_discrepant_floor_reached
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -215,7 +216,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Chloe Rollo
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: History, Personality, Familia, Relationships
-- `source_url`: https://danmachi.fandom.com/wiki/Chloe_Rollo
+- `source_url`: https://danmachien.miraheze.org/wiki/Chloe_Rollo
 - `evidence_type`: secondary_biography_and_personality_summary
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -234,7 +235,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: Wiki DanMachi — Chloe Rollo/Rolo
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Habilidades, Magia, Equipment
-- `source_url`: https://danmachi.fandom.com/es/wiki/Chloe_Rollo; https://danmachi.fandom.com/wiki/Chloe_Rollo
+- `source_url`: https://danmachi.miraheze.org/wiki/Chloe_Rollo; https://danmachien.miraheze.org/wiki/Chloe_Rollo
 - `evidence_type`: secondary_magic_and_equipment_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -253,7 +254,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Lunoire Faust / Wiki DanMachi — Lunoa Faust
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Characteristics, Professional Status, Aliases
-- `source_url`: https://danmachi.fandom.com/wiki/Lunoire_Faust; https://danmachi.fandom.com/es/wiki/Lunoire_Faust
+- `source_url`: https://danmachien.miraheze.org/wiki/Lunoire_Faust; https://danmachi.miraheze.org/wiki/Lunoire_Faust
 - `evidence_type`: secondary_profile_with_name_and_floor_discrepancies
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -271,7 +272,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: DanMachi Wiki — Lunoire Faust
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: History, Personality, Relationships
-- `source_url`: https://danmachi.fandom.com/wiki/Lunoire_Faust
+- `source_url`: https://danmachien.miraheze.org/wiki/Lunoire_Faust
 - `evidence_type`: secondary_biography_and_relationship_summary
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -290,7 +291,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 - `source_title`: Wiki DanMachi — Lunoa/Lunoire Faust
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Abilities, Skills, Development Abilities
-- `source_url`: https://danmachi.fandom.com/es/wiki/Lunoire_Faust; https://danmachi.fandom.com/wiki/Lunoire_Faust
+- `source_url`: https://danmachi.miraheze.org/wiki/Lunoire_Faust; https://danmachien.miraheze.org/wiki/Lunoire_Faust
 - `evidence_type`: secondary_skill_and_combat_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: moderate
