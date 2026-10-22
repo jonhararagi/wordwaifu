@@ -9,6 +9,7 @@ const catalog=JSON.parse(fs.readFileSync(path.join(root,"catalog.json"),"utf8"))
 const paths=["research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md","research/inbox/BATCH-DM-004-psicologia-personajes-y-retrieval.md","research/inbox/BATCH-DM-005-astrea-familia-network.md","research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md","research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md","research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md","research/inbox/BATCH-DM-013-dark-era-missing-characters.md","research/inbox/BATCH-DM-014-dark-era-temporal-boundaries.md","research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md"];
 paths.push("research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md");
 paths.push("research/inbox/DANMACHI-RESEARCH-014-loki-familia-individual-dossiers.md");
+paths.push("research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md");
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
@@ -16,11 +17,13 @@ const profilePaths=[
   "characters/eina-tulle.md","characters/finn-deimne.md","characters/freya.md",
   "characters/ottar.md","characters/gojouno-kaguya.md","characters/lyra.md",
   "characters/maryuu-reage.md","characters/ryana-lietz.md","characters/dark-era/meteria.md",
-  "characters/dark-era/rudra.md","characters/dark-era/olivas-act.md"
+  "characters/dark-era/rudra.md","characters/dark-era/olivas-act.md",
+  "characters/zeus.md","characters/hera.md","characters/maxim.md",
+  "characters/dark-era/alfia.md","characters/dark-era/zald.md"
 ];
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
-assert.equal(index.profileDocumentCount,17,"The archive should expose all 17 currently loaded structured dossiers, including the new batch.");
+assert.equal(index.profileDocumentCount,22,"The archive should expose all 22 loaded structured dossiers, including the historical batch.");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,59,"The official-source registry should include Eina Tulle alongside the expanded character catalog.");
 
 const batch004=[
@@ -194,4 +197,20 @@ assert.ok(bell.relationships.length>=3,"Bell's source-backed relationship networ
 assert.ok(archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR").references.some(ref=>ref.url.includes("fandom.com/es/wiki/Ryuu_Lion")));
 assert.ok(archive.getExtendedInfo("DM-CHAR-BELL","CONT-ANIME").sections.length>=2);
 assert.equal(archive.getExtendedInfo("DM-CHAR-BELL","CONT-AR"),null,"Do not copy anime profile details into the historical continuity.");
+const historicalArchiveProfiles = [
+  ["CHAR-ZEUS", "CONT-MAIN-LN", "Behemoth"],
+  ["CHAR-HERA", "CONT-UNVERIFIED", "Guild"],
+  ["CHAR-MAXIM", "CONT-MAIN-LN", "siguiente generación"],
+  ["CHAR-DARK-ALFIA", "CONT-AR", "Meteria"],
+  ["CHAR-DARK-ZALD", "CONT-AR", "veneno"]
+];
+for (const [id, continuity, requiredText] of historicalArchiveProfiles) {
+  assert.ok(archive.list(index).some(character => character.id === id), "Historical dossier must appear in the archive directory: " + id);
+  const extended = archive.getExtendedInfo(id, continuity);
+  assert.ok(extended && Array.isArray(extended.sections) && extended.sections.length >= 2,
+    "Historical dossier must open with multiple source-bounded sections: " + id);
+  assert.ok(extended.sections.map(section => section.text).join(" ").includes(requiredText),
+    "Historical dossier must show its expected detail in the selected continuity: " + id);
+}
+
 process.stdout.write("PASS character archive model: continuity, relations, moments, spoiler filtering and unavailable-evidence handling.\\n");
