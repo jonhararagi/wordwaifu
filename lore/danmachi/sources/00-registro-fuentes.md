@@ -2517,3 +2517,194 @@ verification_status: stub
 - rights_note: Parafrasear; no copiar contenido extenso.
 - verified_by: DANMACHI-RESEARCH-029
 - verification_status: indexed_secondary_extract_mirror_access_pending
+
+
+## DMR-030-SRC-001 · DanMachi Wiki — Alise Lovell
+- source_id: DMR-030-SRC-001
+- title: Alise Lovell
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Alise_Lovell
+- accessed_at: 2026-10-22
+- locator_type: article_sections_and_indexed_extract
+- locator: Characteristics, Professional Status, Personal Status, Skill, Magic, Weapon y Equipment.
+- claims_supported: [DMR-030-CLM-001, DMR-030-CLM-002]
+- continuity_scope: CONT-AR; CONT-UNVERIFIED
+- reliability_note: La página informa piso máximo 41; mantenerlo en conflicto con la versión española que indica 33. Perfiles y capacidades secundarias, no cotejadas directamente con la novela.
+- rights_note: Parafrasear y enlazar; no copiar arte sin verificar derechos.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-030-SRC-002 · Wiki DanMachi — Alise Lovell
+- source_id: DMR-030-SRC-002
+- title: Alise Lovell
+- creator_or_publisher: Colaboradores de Wiki DanMachi
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web comunitario en español
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Alise_Lovell
+- accessed_at: 2026-10-22
+- locator_type: article_sections_and_indexed_extract
+- locator: Characteristics, Professional Status, Status, Habilidad, Magia y Equipo.
+- claims_supported: [DMR-030-CLM-001, DMR-030-CLM-002]
+- continuity_scope: CONT-AR; CONT-UNVERIFIED
+- reliability_note: Informa piso 33, en discrepancia con el artículo inglés. El aviso de migración y los límites de acceso impiden declarar que toda la página española actualizada se haya leído íntegramente.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: indexed_secondary_extract_mirror_access_limited
+
+## DMR-030-SRC-003 · DanMachi Wiki — Gojouno Kaguya
+- source_id: DMR-030-SRC-003
+- title: Gojouno Kaguya
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
+- accessed_at: 2026-10-22
+- locator_type: article_sections_and_indexed_extract
+- locator: Characteristics, History, Abilities, Skills, Magic, Weapon, Debuts.
+- claims_supported: [DMR-030-CLM-003, DMR-030-CLM-004]
+- continuity_scope: CONT-AR; CONT-UNVERIFIED
+- reliability_note: Perfil secundario útil para nombres, historia y equipo; cada afirmación individual continúa pendiente de localizador primario.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-030-SRC-004 · DanMachi Wiki — Gojouno Kaguya (Short Story)
+- source_id: DMR-030-SRC-004
+- title: Gojouno Kaguya (Short Story)
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record, volumen 2
+- volume_or_edition: Página-resumen de una historia corta vinculada a la edición BookWalker
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Gojouno_Kaguya_(Short_Story)
+- accessed_at: 2026-10-22
+- locator_type: community_story_summary
+- locator: Resumen secundario de la historia corta y subsección Biography; no se leyó directamente el original japonés.
+- claims_supported: [DMR-030-CLM-003, DMR-030-CLM-004]
+- continuity_scope: CONT-AR; CONT-UNVERIFIED
+- reliability_note: Relato secundario de historia extra; no confundir con escena cotejada en el texto publicado ni con canon exclusivo de novela principal.
+- rights_note: Parafrasear sin reproducir el relato.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_summary_only_primary_locator_pending
+
+## DMR-030-SRC-005 · DanMachi Wiki — Lyra
+- source_id: DMR-030-SRC-005
+- title: Lyra
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Lyra
+- accessed_at: 2026-10-22
+- locator_type: article_sections_and_indexed_extract
+- locator: Characteristics, Personality, Abilities, Skills, Magic, Equipment y Trivia.
+- claims_supported: [DMR-030-CLM-005, DMR-030-CLM-006]
+- continuity_scope: CONT-AR; CONT-UNVERIFIED
+- reliability_note: Incluye términos técnicos y una afirmación histórica de reencarnación; ambos requieren verificación en material publicado.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-030-SRC-006 · DanMachi Wiki — Astraea
+- source_id: DMR-030-SRC-006
+- title: Astraea
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Astraea
+- accessed_at: 2026-10-22
+- locator_type: article_sections_and_indexed_extract
+- locator: Characteristics, Appearance, Professional Status, Personal Status y Debuts.
+- claims_supported: [DMR-030-CLM-007]
+- continuity_scope: CONT-AR; CONT-MAIN-LN; CONT-ANIME; CONT-UNVERIFIED
+- reliability_note: Complementa una ficha ya contrastada con perfiles oficiales de adaptación; la cronología de apariciones de la wiki no sustituye el localizador por obra.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-030-SRC-007 · DanMachi Wiki — Astraea Familia
+- source_id: DMR-030-SRC-007
+- title: Astraea Familia
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Astraea_Familia
+- accessed_at: 2026-10-22
+- locator_type: familia_overview_and_links
+- locator: Descripción general de la Familia, miembros y vínculos relacionados.
+- claims_supported: [DMR-030-CLM-007, DMR-030-CLM-008]
+- continuity_scope: CONT-AR; CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: El censo grupal ayuda a navegar, pero no demuestra por sí mismo presencia individual en una escena ni orden completo de eventos.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-030-SRC-008 · DanMachi Wiki — Ryuu Lion/Relationships
+- source_id: DMR-030-SRC-008
+- title: Ryuu Lion/Relationships
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Ryuu_Lion/Relationships
+- accessed_at: 2026-10-22
+- locator_type: relationship_subpage
+- locator: Subsecciones Alise Lovell, Astraea y Astraea Familia.
+- claims_supported: [DMR-030-CLM-008, DMR-030-CLM-010]
+- continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: Resumen de relaciones narrativas, incluye spoilers posteriores; no tratar imágenes mentales o paráfrasis como diálogos literales.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-030-SRC-009 · ダンまちまとめ Wiki* — リュー・リオン
+- source_id: DMR-030-SRC-009
+- title: リュー・リオン
+- creator_or_publisher: Comunidad de DanMachiまとめ Wiki*
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario, modificado el 2026-08-06 según la página
+- language: Japonés
+- official_url: https://wikiwiki.jp/danmachi/%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%BB%E3%83%AA%E3%82%AA%E3%83%B3
+- accessed_at: 2026-10-22
+- locator_type: profile_table_and_magic_skills_sections
+- locator: Tabla de edad/raza/afiliación/nivel, magia, skills y habilidades de desarrollo.
+- claims_supported: [DMR-030-CLM-009]
+- continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: Fuente secundaria japonesa útil para conservar nombres originales; la etapa y términos han de contrastarse con la edición publicada.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-030-SRC-010 · DanMachi Wiki — Ryuu Lion
+- source_id: DMR-030-SRC-010
+- title: Ryuu Lion
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Ryuu_Lion
+- accessed_at: 2026-10-22
+- locator_type: article_magic_section
+- locator: Sección Magic, entrada Astraea Record y descripción de la barrera.
+- claims_supported: [DMR-030-CLM-010]
+- continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: Resumen secundario de una regla de magia con spoilers; el mecanismo y sus límites necesitan cotejo primario.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-030
+- verification_status: secondary_extract_only_primary_locator_pending
