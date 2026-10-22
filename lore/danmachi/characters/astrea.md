@@ -2,7 +2,7 @@
 id: CHAR-ASTREA
 universe: danmachi
 type: deity_character
-status: partial_source_checked_primary_text_pending
+status: secondary_appearance_profile_added_primary_locator_pending
 continuity_scope: "CONT-AR; CONT-MAIN-LN; CONT-ANIME"
 source_refs:
   - DMR-001-SRC-001
@@ -23,7 +23,7 @@ claim_refs:
   - DMR-007-CLM-025
   - DMR-007-CLM-026
   - DMR-030-CLM-007
-verification_status: "Official publisher synopses and DanMachi IV/V profiles checked; primary novel locators pending"
+verification_status: "Secondary appearance and appearances index added; primary novel locators remain pending."
 tags: [Astrea, deity, justice, order, Astrea Familia, multi-era, CONT-AR, CONT-MAIN-LN, CONT-ANIME]
 research_source_refs:
   - DMR-001-SRC-001
