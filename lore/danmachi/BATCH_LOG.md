@@ -1,5 +1,18 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-037 · Mejora de expedientes visibles en la aplicación (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` permanece sin cambios.
+- **Alcance:** se mejoró el registro consumido por `src/character-dossiers.js` para Hedin Selland, Hogni Ragnar, Heith Velvet, Chloe Rollo/Rolo y Lunoa/Lunoire Faust. No se crearon identidades nuevas.
+- **Corrección de contenido:** el perfil de aplicación ahora muestra historia reportada, apariencia/estado, psicología con límites explícitos, magia, habilidades, equipo, relaciones y URLs de las wikis utilizadas. Los detalles siguen marcados en el texto como secundarios cuando no hay localizador de novela; no se inventaron páginas/capítulos.
+- **Conflictos preservados:** Hedin, “Hildrsleif”/“Hildr Slēv”; Heith, piso 58/60 y “Reverse/Rebirth Gandr”; Chloe y Lunoa/Lunoire, piso 37/60; Lunoa/Lunoire conserva una sola identidad en el ID de catálogo `CHAR-LUNOA-FAUST`.
+- **Integridad de IDs:** el registro de la aplicación usa `CHAR-LUNOA-FAUST` como clave canónica y admite `CHAR-LUNOIRE-FAUST` solo como alias retrocompatible de búsqueda. La lista visible no duplica el personaje.
+- **Procedencia:** se retiraron dos URLs de subpáginas no verificadas; se conservan las páginas generales de Hedin, Hogni, Heith, Chloe y Lunoire, además de las fuentes oficiales de adaptación y las páginas generales de habilidades/magia registradas.
+- **Pruebas añadidas:** `tests/test_character_dossiers.cjs` exige detalles específicos y URL de procedencia en las cinco fichas, verifica que Lunoa no esté duplicada y comprueba la compatibilidad con el ID anterior. `tests/test_lore_corpus.cjs` conserva las pruebas de recuperación de los 15 claims DMR-036 y sus estados secundarios.
+- **Validación:** ambas Actions del commit de código/pruebas `cf7a88673ee24502fe02005ab1cfaeafaeb9c72c` estaban ejecutándose al registrar esta tanda; los pasos de sintaxis JS, recuperación del lore y expedientes extendidos ya habían pasado. No se declara el resultado global hasta terminar los pasos de navegador y validación de catálogo.
+- **Pendiente real:** cotejar con texto de novela autorizado los localizadores para Hjaðningavíg, las técnicas de Hedin/Hogni/Heith y la secuencia de encargos de Chloe/Lunoa. Las páginas wiki siguen siendo pistas secundarias, no evidencia primaria equivalente.
+- **Cambios principales:** `src/character-dossiers.js`, `tests/test_character_dossiers.cjs`; las fichas Chloe/Lunoa conservan referencias DMR-036 en su metadato para búsqueda.
+
 ## DANMACHI-RESEARCH-036 · Perfiles secundarios de Freya Familia y Hostess (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modifica.
