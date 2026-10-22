@@ -131,7 +131,7 @@ for(const expected of historicalMiraheze042){
 
 const missingDarkEra043=[
  {id:"CHAR-DARK-ALECTO",token:"Alecto Familia",url:"https://danmachien.miraheze.org/wiki/Alecto"},
- {id:"CHAR-DARK-APATE",token:"Spirit Soldiers",url:"https://danmachien.miraheze.org/wiki/Apate"},
+ {id:"CHAR-DARK-APATE",token:"Spirit Soldiers",url:"https://danmachien.miraheze.org/wiki/Apate_Familia"},
  {id:"CHAR-DARK-THANATOS",token:"Knossos",url:"https://danmachien.miraheze.org/wiki/Thanatos"},
  {id:"CHAR-DARK-BASRAM",token:"Apate Familia",url:"https://danmachien.miraheze.org/wiki/Basram"},
  {id:"CHAR-DARK-VALLETTA-GREDE",token:"Sword Oratoria",url:"https://danmachien.miraheze.org/wiki/Valletta_Grede"}
