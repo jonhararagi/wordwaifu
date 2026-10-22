@@ -3202,6 +3202,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_expanded_primary_text_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-028",
+      "path": "research/inbox/DANMACHI-RESEARCH-028-barca-basram-vito-adi-airmid.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_locator_pending"
     }
   ],
   "lastStructuredSync": "2026-10-22"
