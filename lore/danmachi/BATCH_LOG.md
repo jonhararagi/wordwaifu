@@ -1,5 +1,15 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-039 · Segunda lectura bilingüe de las fichas migradas (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.
+- **Alcance:** se relee la versión inglesa y española migrada de Hedin Selland, Hogni Ragnar, Heith Velvet, Chloe Rollo y Lunoire/Lunoa Faust; también subpáginas de habilidades de Hedin/Hogni/Heith y páginas de relaciones de Hedin/Heith. No se crean identidades nuevas.
+- **Mejoras:** la ficha visible de aplicación amplía relaciones de Hedin y límites de Laurus Hildr/Dizaria; costes de Dainsleif y Victim Abyss; Golden/Earth Gullveig y límites por Mind/daño acumulado; uso de humo con Feles Cruz; venenos de Violetta sin inventar su composición; y cronología provisional de encargos/afiliaciones de Chloe/Lunoa.
+- **Procedencia:** DMR-036 se mantiene como registro de la extracción inicial desde extractos indexados, pero sus URL actuales apuntan a las páginas migradas de Miraheze leídas en esta revisión. Se añadió un paquete DMR-039 con seis claims recuperables y rutas bibliográficas sugeridas. El directorio de fuentes de WordWaifu prioriza ambas wikis migradas; Fandom queda como archivo anterior.
+- **Sensibilidad y continuidad:** se mantiene atribuido a la wiki el contenido sensible de Heith/Chloe. Las fichas de DanMachi V siguen separadas como `CONT-ANIME`; las afirmaciones comunitarias no se elevan a canon primario.
+- **Conflictos abiertos:** `Hildrsleif/Hildr Slēv`; snapshots de piso máximo Heith `58/60`, Chloe/Lunoa `37/60`; `Reverse/Rebirth Gandr`; `Lunoa/Lunoire`. El piso 50 citado para la operación Pseudo Shaft no resuelve los snapshots anteriores de piso máximo.
+- **Validación:** el registro se agregó antes de concluir las Actions del commit integrado. No se marca ninguna escena como cotejada en novela: DanMachi vols. 16/18/21, Sword Oratoria vols. 1/2/10/16, Astrea Record vol. 3 y Familia Chronicle son pistas que citan las wikis y requieren lectura del texto autorizado.
+
 ## DANMACHI-RESEARCH-037 · Mejora de expedientes visibles en la aplicación (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` permanece sin cambios.
