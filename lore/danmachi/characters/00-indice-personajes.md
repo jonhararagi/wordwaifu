@@ -195,3 +195,16 @@ La ficha de [Soma Familia](../familias/soma-familia.md) reúne afiliaciones por 
 | CHAR-DARK-VENA-DIS | [Vena Dis](dark-era/vena-dis.md) | Vicecapitana reportada, magias ígneas y equipo | Secundario; Astrea Record vols. 1 y 3 pendientes |
 
 **Control de identidad:** [Samira](dark-era/samira.md) conserva su ID legado, pero su vínculo con la Era Oscura queda sin demostrar. No fusionar niveles reportados en periodos diferentes ni inferir historia a partir de la ruta del archivo.
+
+
+## Perfiles de Loki ampliados · DANMACHI-RESEARCH-035
+
+| ID estable | Ficha | Datos incorporados | Límite |
+|---|---|---|---|
+| CHAR-BETE-LOGA | [Bete Loga](bete-loga.md) | Apariencia, pasado de Vidar Familia, relaciones, conducta en Knossos y skills reportadas | Resumen wiki; escena/capítulo pendiente |
+| CHAR-TIONA-HIRYUTE | [Tiona Hiryute](tiona-hiryute.md) | Telskyura, Argonaut, salida de Kali, decisión sobre Wiene, habilidades y armas | Discrepancia inglesa/española: color de ojos y piso máximo |
+| CHAR-TIONE-HIRYUTE | [Tione Hiryute](tione-hiryute.md) | Historia, temperamento, vínculo unilateral reportado con Finn, List Iorum, skills y armas | Cronología y mecánicas de wiki, cotejo pendiente |
+| CHAR-LEFIYA-VIRIDIS | [Lefiya Viridis](lefiya-viridis.md) | Formación del School District, progresión, magia, skills y equipo | Los snapshots y reglas mágicas son secundarios |
+| CHAR-RAUL-NOORD | [Raul Nord](raul-nord.md) | Progresión reportada junto a Aki, mando de secundarios, inseguridad, skills y armas | Fechas relativas, estadísticas y escenas de wiki pendientes |
+
+Los cinco expedientes son ampliaciones, no nuevas identidades. No se da por confirmada ninguna reencarnación citada solo por la wiki. Véase el [paquete DMR-035](../research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md) y sus once claims secundarios.
