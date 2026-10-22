@@ -155,7 +155,7 @@ const miachResearch029 = corpus.search(index, { query: "Miach pociones deuda Naa
 assert.ok(miachResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-001" || claim.claimId === "DMR-029-CLM-002"), "Miach profile claims must be retrievable.");
 assert.ok(miachResearch029.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
 
-const naazaResearch029 = corpus.search(index, { query: "Naaza prosthesis Darbh Daol trauma", characterId: "CHAR-DARK-NAAZA", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+const naazaResearch029 = corpus.search(index, { query: "Naaza prótesis Darbh Daol Miach", characterId: "CHAR-DARK-NAAZA", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(naazaResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-003" || claim.claimId === "DMR-029-CLM-004"), "Naaza's history and abilities must be retrievable.");
 assert.ok(naazaResearch029.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
 
@@ -163,7 +163,7 @@ const dianCechtResearch029 = corpus.search(index, { query: "Dian Cecht prótesis
 assert.ok(dianCechtResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-006"), "Family-level historical activity must be searchable without asserting an individual scene.");
 assert.ok(dianCechtResearch029.results.every(claim => claim.continuityScopes.includes("CONT-UNVERIFIED")));
 
-const goibniuResearch029 = corpus.search(index, { query: "Goibniu weapons construction Hearth Mansion", characterId: "CHAR-DARK-GOIBNIU", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+const goibniuResearch029 = corpus.search(index, { query: "Goibniu armas construcción Hearth Mansion", characterId: "CHAR-DARK-GOIBNIU", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(goibniuResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-007" || claim.claimId === "DMR-029-CLM-008"), "Goibniu's profile and smith-family links must be retrievable.");
 
 const hephaistosResearch029 = corpus.search(index, { query: "Hephaistos Hestia Knife Memoria Freese", characterId: "CHAR-DARK-HEPHAISTOS", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
@@ -295,7 +295,7 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 164 source claims, 167 entries, batches 025–028, Familia dossiers, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 174 source claims, 177 entries, batches 025–029, Familia dossiers, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();
