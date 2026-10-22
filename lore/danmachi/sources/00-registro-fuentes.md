@@ -2307,3 +2307,213 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: official_bibliography_checked_context_only
 
+
+
+## DMR-029-SRC-001 · DanMachi Wiki — Miach
+- source_id: DMR-029-SRC-001
+- title: Miach
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Characteristics, Professional Status, Appearance, Personality y Debuts.
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Perfil comunitario detallado. No se cotejó página de la novela durante esta tanda.
+- rights_note: Parafrasear y enlazar; no copiar texto extenso ni reutilizar imágenes sin comprobar derechos.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-029-SRC-002 · Wiki DanMachi — Familia Miach
+- source_id: DMR-029-SRC-002
+- title: Familia Miach
+- creator_or_publisher: Colaboradores de Wiki DanMachi en español
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; host antiguo avisa de migración a Miraheze
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: family_roster_and_history
+- locator: Información, emblema, miembros, lesión de Naaza y deuda de la Familia.
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-002, DMR-029-CLM-003, DMR-029-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Extracto indexado útil para relaciones familiares y deuda; el mirror actualizado devolvió 403 en esta sesión, por lo que no se afirma una lectura integral.
+- rights_note: Parafrasear y mantener atribución.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: indexed_secondary_extract_mirror_access_pending
+
+## DMR-029-SRC-003 · DanMachi Wiki — Naaza Erisuis
+- source_id: DMR-029-SRC-003
+- title: Naaza Erisuis
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Characteristics, Professional Status, Debuts, Appearance, Personality, History, Abilities, Magic y Equipment.
+- claims_supported: [DMR-029-CLM-003, DMR-029-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Contiene resumen extenso, incluyendo distintas etapas de nivel y sucesos posteriores. Cada estadística debe quedar ligada a su etapa y suceso.
+- rights_note: Parafrasear; no copiar texto extenso ni reutilizar imágenes sin comprobar derechos.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-029-SRC-004 · DanMachi Wiki — Dian Cecht
+- source_id: DMR-029-SRC-004
+- title: Dian Cecht
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Characteristics, affiliation, debuts, appearance y personality.
+- claims_supported: [DMR-029-CLM-005, DMR-029-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Perfil individual breve; no aporta capacidades mágicas o de combate verificadas.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-029-SRC-005 · Wiki DanMachi — Familia Dian Cecht
+- source_id: DMR-029-SRC-005
+- title: Familia Dian Cecht
+- creator_or_publisher: Colaboradores de Wiki DanMachi en español
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario; migración a Miraheze anunciada
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: family_description_and_roster
+- locator: Información sobre farmacia, salas de tratamiento, miembros y funciones de la organización.
+- claims_supported: [DMR-029-CLM-005, DMR-029-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Resumen institucional, no evidencia para habilidades personales de Dian Cecht.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: indexed_secondary_extract_mirror_access_pending
+
+## DMR-029-SRC-006 · DanMachi Wiki — Dian Cecht Familia
+- source_id: DMR-029-SRC-006
+- title: Dian Cecht Familia
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: family_history_extract
+- locator: Información general sobre la organización y mención de prótesis para varias personas durante la Era Oscura.
+- claims_supported: [DMR-029-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: Aporta actividad atribuida a la Familia, no una escena personal de su dios.
+- rights_note: Parafrasear y no copiar imágenes sin licencia.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-029-SRC-007 · DanMachi Wiki — Goibniu
+- source_id: DMR-029-SRC-007
+- title: Goibniu
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Characteristics, Professional Status, Appearance, Personality, History, Abilities y Debuts.
+- claims_supported: [DMR-029-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: La comparación de calidad con Hephaestus es una evaluación secundaria, no un ranking oficial.
+- rights_note: Parafrasear y enlazar; revisar derechos antes de reutilizar arte.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-029-SRC-008 · DanMachi Wiki — Goibniu Familia
+- source_id: DMR-029-SRC-008
+- title: Goibniu Familia
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: family_history_and_roster
+- locator: Tipo de Familia, servicios de herrería y construcción, armas asociadas a Ais y Tiona, remodelación de Hearth Mansion.
+- claims_supported: [DMR-029-CLM-007, DMR-029-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Los encargos se atribuyen principalmente a la Familia; comprobar escenas y grafías en cada volumen.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-029-SRC-009 · DanMachi Wiki — Hephaestus
+- source_id: DMR-029-SRC-009
+- title: Hephaestus
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Characteristics, Professional Status, Appearance, Personality, Abilities y Debuts.
+- claims_supported: [DMR-029-CLM-009, DMR-029-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Las afirmaciones referidas a eventos de juego mantienen su propia continuidad.
+- rights_note: Parafrasear y enlazar; no copiar arte sin comprobar derechos.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-029-SRC-010 · Wiki DanMachi — Hephaistos y su Familia
+- source_id: DMR-029-SRC-010
+- title: Hephaistos; Familia Hephaistos
+- creator_or_publisher: Colaboradores de Wiki DanMachi en español
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículos web comunitarios; host antiguo avisa de migración a Miraheze
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: profile_and_family_extract
+- locator: Nombre, alias, rasgos físicos, personalidad, herrería y liderazgo de la Familia.
+- claims_supported: [DMR-029-CLM-009, DMR-029-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: La referencia española a llamas divinas cita Memoria Freese; no es prueba de canon de novela.
+- rights_note: Parafrasear y conservar la distinción de continuidades.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: indexed_secondary_extract_mirror_access_pending
+
+## DMR-029-SRC-011 · Wiki DanMachi — Orario
+- source_id: DMR-029-SRC-011
+- title: Orario
+- creator_or_publisher: Colaboradores de Wiki DanMachi en español
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Artículo web comunitario; aviso de migración a Miraheze
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: locations_index
+- locator: Localizaciones de taller de Goibniu Familia y farmacia de Dian Cecht Familia.
+- claims_supported: [DMR-029-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Índice topográfico útil para navegación, no sustituto de escenas de los volúmenes.
+- rights_note: Parafrasear; no copiar contenido extenso.
+- verified_by: DANMACHI-RESEARCH-029
+- verification_status: indexed_secondary_extract_mirror_access_pending
