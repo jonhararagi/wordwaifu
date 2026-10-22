@@ -663,7 +663,7 @@ const zaldAbilities042=corpus.search(index,{query:"Deus Ambrosia Rea Ambrosia Af
 assert.ok(zaldAbilities042.results.some(c=>c.claimId==="DMR-042-CLM-008"),"Zald's skill, magic and equipment must be searchable.");
 for(const result of [maxim042,alfiaBio042,alfiaAbilities042,zaldBio042,zaldAbilities042])assert.ok(result.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"All DMR-042 profile claims must remain secondary.");
 
-const alecto043=corpus.search(index,{query:"Alecto Familia Dina Vena Evilus",characterId:"CHAR-DARK-ALECTO",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+const alecto043=corpus.search(index,{query:"Alecto Familia Revinas Orario Evilus",characterId:"CHAR-DARK-ALECTO",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(alecto043.results.some(c=>c.claimId==="DMR-043-CLM-001"),"Alecto's dossier claim must be searchable.");
 const apate043=corpus.search(index,{query:"Apate Familia Spirit Soldiers Basram",characterId:"CHAR-DARK-APATE",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(apate043.results.some(c=>c.claimId==="DMR-043-CLM-002"),"Apate's claim must be searchable.");
