@@ -5,8 +5,8 @@ type: deity_character
 status: secondary_profile_expanded_primary_locator_pending
 confidence: community profile; official volume 5 synopsis is a limited route only
 continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
-source_refs: [DMR-032-SRC-001, DMR-032-SRC-002, DMR-032-SRC-010]
-claim_refs: [DMR-032-CLM-001]
+source_refs: [DMR-032-SRC-001, DMR-032-SRC-002, DMR-032-SRC-010, "DMR-046-SRC-001", "DMR-046-SRC-002"]
+claim_refs: [DMR-032-CLM-001, "DMR-046-CLM-001"]
 spoiler_level: major
 aliases: ["ヘルメス"]
 romanizations: [Hermes, Herumesu]
@@ -75,3 +75,10 @@ La fuente inglesa lo describe con ojos anaranjados, figura esbelta y sombrero co
 
 ## Verificación
 Rutas comunitarias: DanMachi vol. 5 y Sword Oratoria vol. 3. La sinopsis editorial del volumen 5 solo da un contexto parcial. No se ha comprobado aquí ninguna página o capítulo de la novela.
+
+
+## Relectura bilingüe y dossier de aplicación · DANMACHI-RESEARCH-046 (2026-10-22)
+
+Relectura EN/ES: red de información/chantaje, objetivo de crear un héroe ante el Dragón Negro, prueba a Bell y habilidades de disfraz/divinidad reportadas. Escenas originales citadas por la wiki quedan pendientes de cotejo.
+
+Fuentes EN/ES consultadas: DMR-046-SRC-001, DMR-046-SRC-002. Las afirmaciones de wiki permanecen secundarias hasta cotejo con texto primario autorizado.

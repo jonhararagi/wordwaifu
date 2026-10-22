@@ -469,3 +469,15 @@ Aplicar en las próximas tandas de perfiles. Este protocolo corrige el patrón d
 - [ ] Leer Sword Oratoria y el roster actual de Familia Thanatos para resolver Vito frente a Tris/Acoz en EN/ES; no normalizar sin prueba.
 - [ ] Comprobar la mecánica de Shaldo, la espada maldita de Valletta y la escena de Revinas antes de marcar los claims canónicos.
 - **Estado:** fichas ampliadas; la totalidad de estas afirmaciones sigue secundaria hasta cotejo primario.
+
+
+## Estado tras DANMACHI-RESEARCH-046 — Hermes, Ganesha, Airmid, Dian Cecht y Hermanas Dis
+
+- [x] Añadir cinco perfiles faltantes al runtime bajo IDs existentes.
+- [x] Leer páginas EN/ES, Familias Hermes/Ganesha/Dian Cecht y Synopsis de Dis Sisters.
+- [x] Separar acciones de dioses y funciones/cifras de sus Familias.
+- [x] Añadir seis claims y separar CONT-AR del final alternativo CONT-GAME para las Hermanas Dis.
+- [x] Mantener sin confirmar la presencia individual de Airmid/Dian Cecht en la Era Oscura.
+- [ ] Cotejar Dia Fratel/Tuired Well, escenas de Hermes con Bell y operaciones de Ganesha/Ouranos/Xenos con texto primario.
+- [ ] Verificar en Astrea Record el combate final de Dina/Vena y contrastar el alcance de la tercera magia de Vena entre EN/ES.
+- **Estado:** fichas integradas; seis claims siguen secundarios hasta lectura de escenas autorizadas.

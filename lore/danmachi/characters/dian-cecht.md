@@ -4,11 +4,11 @@ universe: danmachi
 type: character
 status: secondary_profile_expanded_historical_presence_unconfirmed
 continuity_scope: "CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED"
-source_refs: ["DMR-029-SRC-005", "DMR-029-SRC-006"]
-claim_refs: ["DMR-029-CLM-005", "DMR-029-CLM-006"]
+source_refs: ["DMR-029-SRC-005", "DMR-029-SRC-006", "DMR-046-SRC-006", "DMR-046-SRC-007"]
+claim_refs: ["DMR-029-CLM-005", "DMR-029-CLM-006", "DMR-046-CLM-004"]
 verification_status: "secondary_extract_only_primary_locator_pending; individual Era Oscura role unconfirmed"
 tags: ["Dian Cecht", "Dian Cecht Familia", "medicinal Familia", "CONT-MAIN-LN", "CONT-SO", "historical_presence_unconfirmed"]
-research_source_refs: ["DMR-029-SRC-005", "DMR-029-SRC-006"]
+research_source_refs: ["DMR-029-SRC-005", "DMR-029-SRC-006", "DMR-046-SRC-006", "DMR-046-SRC-007"]
 entity_type: character
 canonical_name: "Dian Cecht"
 aliases: ["Dian Cecht", "ディアンケヒト", "Diankehito"]
@@ -75,3 +75,10 @@ La participación de miembros de la Familia Dian Cecht en la Era Oscura está re
 - [Wiki DanMachi — Familia Dian Cecht](https://danmachi.fandom.com/es/wiki/Familia_Dian_Cecht)
 
 **Claims:** `DMR-029-CLM-005`, `DMR-029-CLM-006`.
+
+
+## Relectura bilingüe y dossier de aplicación · DANMACHI-RESEARCH-046 (2026-10-22)
+
+La ficha individual inglesa es breve y la española detalla carácter/poderes divinos reportados. La historia familiar describe farmacia, prótesis y roster de Knossos, pero no demuestra una escena personal de Dian Cecht en Astrea Record.
+
+Fuentes EN/ES consultadas: DMR-046-SRC-006, DMR-046-SRC-007. Las afirmaciones de wiki permanecen secundarias hasta cotejo con texto primario autorizado.

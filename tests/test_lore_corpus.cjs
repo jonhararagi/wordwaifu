@@ -36,6 +36,7 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-042-historical-five-miraheze-review.md",
   "research/inbox/DANMACHI-RESEARCH-043-evilus-missing-app-dossiers.md",
   "research/inbox/DANMACHI-RESEARCH-044-barca-dis-line-alicia.md",
+  "research/inbox/DANMACHI-RESEARCH-046-five-missing-core-dossiers.md",
   "research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
@@ -56,8 +57,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 294, "Indexed claims include research batches 033 through 044.");
-assert.equal(index.entryCount, 297, "All claims including batches 033 through 044 are searchable.");
+assert.equal(index.sourceClaimCount, 300, "Indexed claims include research batches 033 through 046.");
+assert.equal(index.entryCount, 303, "All claims including batches 033 through 046 are searchable.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md"), "Runtime query loader must include DMR-039.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md"), "Runtime query loader must include DMR-040.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md"), "Runtime query loader must include DMR-041.");
@@ -671,7 +672,7 @@ const thanatos043=corpus.search(index,{query:"Thanatos Familia Knossos Evilus",c
 assert.ok(thanatos043.results.some(c=>c.claimId==="DMR-043-CLM-003"),"Thanatos claim must be searchable.");
 const basram043=corpus.search(index,{query:"Basram Spirit Soldiers Apate Familia",characterId:"CHAR-DARK-BASRAM",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(basram043.results.some(c=>c.claimId==="DMR-043-CLM-004"),"Basram claim must be searchable.");
-const valletta043=corpus.search(index,{query:"Valletta Grede Thanatos Knossos Sword Oratoria",characterId:"CHAR-DARK-VALLETTA-GREDE",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+const valletta043=corpus.search(index,{query:"Valletta Shaldo Finn espada maldita nivel",characterId:"CHAR-DARK-VALLETTA-GREDE",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(valletta043.results.some(c=>c.claimId==="DMR-043-CLM-005"),"Valletta claim must be searchable.");
 for(const result of [alecto043,apate043,thanatos043,basram043,valletta043])assert.ok(result.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"DMR-043 evidence must remain secondary.");
 
@@ -693,3 +694,20 @@ assert.ok(aliciaBio044.results.some(c=>c.claimId==="DMR-044-CLM-007"),"Alicia's 
 const aliciaMagic044=corpus.search(index,{query:"Hail Dust Grace Sagittarius Mage Nivel 5",characterId:"CHAR-LOKI-ALICIA-FORESTLIGHT",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(aliciaMagic044.results.some(c=>c.claimId==="DMR-044-CLM-008"),"Alicia's spells and Mage development ability must be searchable.");
 for(const r of [barca044,barcaSkills044,dina044,vena044,lineSO044,lineGame044,aliciaBio044,aliciaMagic044])assert.ok(r.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"All DMR-044 claims must remain secondary.");
+
+const hermes046=corpus.search(index,{query:"Bell héroe Dragón Negro manipulación",characterId:"CHAR-HERMES",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(hermes046.results.some(c=>c.claimId==="DMR-046-CLM-001"),"Hermes's hero plan and manipulation must be searchable.");
+const ganesha046=corpus.search(index,{query:"Monsterphilia Ouranos Xenos domadores",characterId:"CHAR-GANESHA",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(ganesha046.results.some(c=>c.claimId==="DMR-046-CLM-002"),"Ganesha's Familia role and Xenos context must be searchable.");
+const airmid046=corpus.search(index,{query:"Dia Fratel Tuired Well maldiciones stamina",characterId:"CHAR-DARK-AIRMID",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(airmid046.results.some(c=>c.claimId==="DMR-046-CLM-003"),"Airmid's healing spells and limits must be searchable.");
+const dian046=corpus.search(index,{query:"Miach Naaza plata Familia",characterId:"CHAR-DARK-DIAN-CECHT",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(dian046.results.some(c=>c.claimId==="DMR-046-CLM-004"),"Dian Cecht's family and Miach conflict must be searchable.");
+const disAR046=corpus.search(index,{query:"Hedin Hogni Dialf Dis nivel 5",characterId:"CHAR-DARK-DIS-SISTERS",continuity:"CONT-AR",strictContinuity:true,period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(disAR046.results.some(c=>c.claimId==="DMR-046-CLM-005"),"Dis Sisters' Astrea Record profile must be searchable.");
+assert.ok(disAR046.results.every(c=>c.continuityScopes.length===1&&c.continuityScopes[0]==="CONT-AR"),"Strict CONT-AR results must not mix the game route.");
+const disGame046=corpus.search(index,{query:"DanChro Bell Dialf Luminis redención",characterId:"CHAR-DARK-DIS-SISTERS",continuity:"CONT-GAME",strictContinuity:true,period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(disGame046.results.some(c=>c.claimId==="DMR-046-CLM-006"),"Dis Sisters' alternate route must be searchable in game continuity.");
+assert.ok(disGame046.results.every(c=>c.continuityScopes.length===1&&c.continuityScopes[0]==="CONT-GAME"),"Strict game results must not mix the novel ending.");
+for(const result of [hermes046,ganesha046,airmid046,dian046,disAR046,disGame046])assert.ok(result.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"All DMR046 claims remain secondary until primary text is read.");
+assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-046-five-missing-core-dossiers.md"),"Runtime loader must include DMR046.");

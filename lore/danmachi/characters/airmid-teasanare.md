@@ -8,16 +8,21 @@ source_refs:
   - "DMR-014-SRC-003"
   - "DMR-028-SRC-010"
   - "DMR-028-SRC-011"
+  - "DMR-046-SRC-005"
+  - "DMR-046-SRC-007"
 claim_refs:
   - "DMR-013-CLM-016"
   - "DMR-028-CLM-009"
   - "DMR-028-CLM-010"
+  - "DMR-046-CLM-003"
 verification_status: "secondary_extract_only_primary_locator_pending; Astrea Record participation unconfirmed"
 tags: ["Airmid Teasanare", "Dian Cecht Familia", "Dea Saint", "Silver Saint", "Dia Fratel", "Tuired Well", "CONT-MAIN-LN", "CONT-SO", "historical_presence_unconfirmed"]
 research_source_refs:
   - "DMR-014-SRC-003"
   - "DMR-028-SRC-010"
   - "DMR-028-SRC-011"
+  - "DMR-046-SRC-005"
+  - "DMR-046-SRC-007"
 entity_type: character
 canonical_name: "Airmid Teasanare"
 aliases:
@@ -94,3 +99,10 @@ Por eso esta ficha se ubica ahora fuera de la carpeta `dark-era/` y deja de llev
 - [ ] Cotejar las escenas de Dia Fratel y Tuired Well, incluidos radio, duración y costes.
 - [ ] Verificar la fabricación de antídotos y el tratamiento de heridas malditas con pasajes de *Sword Oratoria*.
 - [ ] No añadir a Airmid al roster de Astrea Record sin una escena verificable.
+
+
+## Relectura bilingüe y dossier de aplicación · DANMACHI-RESEARCH-046 (2026-10-22)
+
+Relectura EN/ES: Dia Fratel y Tuired Well, sus efectos, límites y efectos adversos; Mystery, prótesis y antídotos contra armas de Barca. No se infiere participación de Airmid en Astrea Record.
+
+Fuentes EN/ES consultadas: DMR-046-SRC-005, DMR-046-SRC-007. Las afirmaciones de wiki permanecen secundarias hasta cotejo con texto primario autorizado.

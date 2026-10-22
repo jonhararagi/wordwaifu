@@ -5,8 +5,8 @@ type: character_group
 status: secondary_profile_expanded_primary_locator_pending
 confidence: community profile and synopsis; no authorized light-novel scene directly checked in this entry
 continuity_scope: CONT-AR; CONT-GAME
-source_refs: [DMR-033-SRC-005, DMR-033-SRC-006, DMR-033-SRC-007, DMR-033-SRC-008, "DMR-044-SRC-002"]
-claim_refs: [DMR-013-CLM-012, DMR-033-CLM-005, DMR-033-CLM-006, DMR-033-CLM-007, DMR-033-CLM-008, "DMR-044-CLM-003", "DMR-044-CLM-004"]
+source_refs: [DMR-033-SRC-005, DMR-033-SRC-006, DMR-033-SRC-007, DMR-033-SRC-008, "DMR-044-SRC-002", "DMR-046-SRC-008"]
+claim_refs: [DMR-013-CLM-012, DMR-033-CLM-005, DMR-033-CLM-006, DMR-033-CLM-007, DMR-033-CLM-008, "DMR-044-CLM-003", "DMR-044-CLM-004", "DMR-046-CLM-005", "DMR-046-CLM-006"]
 aliases: ["Dis Sisters", "ディース姉妹", "Dīsu Shimai"]
 tags: [Dis Sisters, Dina Dis, Vena Dis, Alecto Familia, Evilus, CONT-AR, CONT-GAME, secondary_profile, primary_locator_pending]
 entity_type: character_group
@@ -70,3 +70,10 @@ La wiki las caracteriza como violentas y sádicas, con una relación de dependen
 La página bilingüe compartida separa la especialidad de Dina en combate cercano y curse Dialf Stige/Luminis de la magia de Vena (Dialf Dis, Dialf Otua y la magia no nombrada). El final novelado de Astrea Record y la ruta DanChro/Irregular Record se mantienen separados.
 
 **URLs consultadas:** https://danmachien.miraheze.org/wiki/Dis_Sisters; https://danmachi.miraheze.org/wiki/Hermanas_Dis.
+
+
+## Relectura bilingüe y dossier de aplicación · DANMACHI-RESEARCH-046 (2026-10-22)
+
+Perfil colectivo con IDs individuales preservados. Se separa el final de Astrea Record novelado de la ruta DanChro/Irregular Record. La distancia de la tercera magia de Vena difiere entre EN/ES y queda sin resolver.
+
+Fuentes EN/ES consultadas: DMR-046-SRC-008. Las afirmaciones de wiki permanecen secundarias hasta cotejo con texto primario autorizado.

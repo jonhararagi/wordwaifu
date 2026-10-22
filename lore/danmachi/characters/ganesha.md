@@ -5,8 +5,8 @@ type: deity_character
 status: secondary_profile_expanded_primary_locator_pending
 confidence: English and Spanish community summaries; hair-colour disagreement unresolved
 continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
-source_refs: [DMR-032-SRC-004, DMR-032-SRC-005]
-claim_refs: [DMR-032-CLM-003]
+source_refs: [DMR-032-SRC-004, DMR-032-SRC-005, "DMR-046-SRC-003", "DMR-046-SRC-004"]
+claim_refs: [DMR-032-CLM-003, "DMR-046-CLM-002"]
 spoiler_level: major
 aliases: ["ガネーシャ", "衆生の主 (epithet reported; reading unverified)"]
 romanizations: [Ganesha, Ganēsha]
@@ -64,3 +64,10 @@ Las fuentes comunitarias lo describen como ruidoso, gesticulador y teatral, cono
 La página de Ganesha Familia en español atribuye a la organización labores con domadores de monstruos y el evento Monsterphilia. También informa cooperación entre Ganesha y Ouranos para introducir gradualmente a la sociedad la existencia de los Xenos. Esa parte es una pista comunitaria de interés, no un hecho que ya haya sido cotejado por página de novela.
 
 **Ruta reportada:** DanMachi vol. 1 y Sword Oratoria vol. 1. Páginas internas y escenas individuales pendientes.
+
+
+## Relectura bilingüe y dossier de aplicación · DANMACHI-RESEARCH-046 (2026-10-22)
+
+Relectura EN/ES: máscara de elefante, teatralidad y protección civil, Monsterphilia, sede I am Ganesha y cooperación reportada con Ouranos en torno a Xenos. Números de roster son snapshots secundarios.
+
+Fuentes EN/ES consultadas: DMR-046-SRC-003, DMR-046-SRC-004. Las afirmaciones de wiki permanecen secundarias hasta cotejo con texto primario autorizado.

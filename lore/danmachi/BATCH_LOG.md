@@ -1,5 +1,14 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-046 · Cinco expedientes ausentes integrados con relectura bilingüe (2026-10-22)
+
+- Rama: work/story-completion-danmachi-audit-2026-10; main sin cambios.
+- Perfiles runtime añadidos bajo IDs existentes: Hermes, Ganesha, Airmid Teasanare, Dian Cecht y grupo Dis Sisters. Dina y Vena conservan IDs separados.
+- Contenido: Hermes — proyecto del héroe, manipulación de Bell, red de información y disfraces; Ganesha — máscara, protección civil, Monsterphilia y Xenos; Airmid — Dia Fratel, Tuired Well, antídotos y límites; Dian Cecht — farmacia, prótesis y relación con Miach; Dis Sisters — combate conjunto, final novelado y ruta de juego.
+- Fuentes: ocho conjuntos de páginas EN/ES de Miraheze, incluidas Familia Hermes, Familia Ganesha, Familia Dian Cecht y Synopsis de Dis Sisters. Seis claims recuperables con pruebas de búsqueda y continuidad estricta.
+- Estado de evidencia: todo derivado de wiki sigue secundario; la historia institucional no prueba participación personal y no se inventan localizadores primarios.
+- Validación: Actions del commit final pendientes.
+
 ## DANMACHI-RESEARCH-045 · Revisión detallada de cinco perfiles de Evilus (2026-10-22)
 
 - Rama: `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.
