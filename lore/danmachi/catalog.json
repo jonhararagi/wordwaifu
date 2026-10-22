@@ -274,18 +274,17 @@
       "path": "characters/dark-era/ardee-varma.md",
       "type": "character",
       "tags": [
+        "Adi Varma",
         "Ardee Varma",
-        "Era Oscura",
+        "Vyasa",
+        "Ganesha Familia",
         "Astrea Record",
-        "needs source check",
         "CONT-AR",
-        "individual dossier",
-        "primary page pending",
         "structured_dossier",
         "primary_text_pending",
         "official_manga_profile"
       ],
-      "status": "official_adaptation_profile_primary_novel_locator_pending",
+      "status": "secondary_summary_reviewed_adaptation_profile_primary_scene_pending",
       "priority": "high"
     },
     {
@@ -294,14 +293,16 @@
       "type": "character",
       "tags": [
         "Barca Perdix",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
-        "CONT-AR",
-        "individual dossier",
-        "primary page pending"
+        "Dix Perdix",
+        "Thanatos Familia",
+        "Knossos",
+        "Daidalos",
+        "Sword Oratoria",
+        "CONT-SO",
+        "historical_context_unverified",
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -310,14 +311,14 @@
       "type": "character",
       "tags": [
         "Basram",
-        "Era Oscura",
+        "Apate Familia",
+        "Evilus",
+        "Spirit Soldiers",
         "Astrea Record",
-        "needs source check",
         "CONT-AR",
-        "individual dossier",
-        "primary page pending"
+        "primary_text_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_summary_reviewed_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -558,16 +559,17 @@
       "type": "character",
       "tags": [
         "Vito",
-        "Era Oscura",
+        "Faceless",
+        "Evilus",
+        "Erebus",
+        "Thanatos Familia",
         "Astrea Record",
-        "needs source check",
+        "Era Oscura",
         "CONT-AR",
-        "individual dossier",
-        "primary page pending",
-        "structured_dossier",
+        "CONT-UNVERIFIED",
         "primary_text_pending"
       ],
-      "status": "secondary_summary_reviewed_primary_page_pending",
+      "status": "secondary_summary_reviewed_continuity_split_pending",
       "priority": "high"
     },
     {
