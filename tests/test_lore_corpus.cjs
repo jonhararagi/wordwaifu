@@ -133,12 +133,12 @@ assert.ok(basramResearch028.results.some(claim => claim.claimId === "DMR-028-CLM
 assert.ok(basramResearch028.results.every(claim => claim.continuityScopes.includes("CONT-AR")));
 assert.ok(basramResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
 
-const vitoResearch028 = corpus.search(index, { query: "Vito Faceless sentidos sangre Erebus", characterId: "CHAR-DARK-VITO", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+const vitoResearch028 = corpus.search(index, { query: "Vito sentidos sangre dolor", characterId: "CHAR-DARK-VITO", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(vitoResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-008"), "Vito's sensory condition must be searchable while remaining continuity-unverified.");
 assert.ok(vitoResearch028.results.every(claim => claim.continuityScopes.includes("CONT-UNVERIFIED")));
 assert.ok(vitoResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
 
-const airmidResearch028 = corpus.search(index, { query: "Airmid Dian Cecht Dia Fratel Tuired Well Barca", characterId: "CHAR-DARK-AIRMID", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+const airmidResearch028 = corpus.search(index, { query: "Airmid Dia Fratel Tuired Well", characterId: "CHAR-DARK-AIRMID", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(airmidResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-010"), "Airmid's healing dossier must be searchable in the Sword Oratoria scope.");
 assert.ok(airmidResearch028.results.every(claim => claim.continuityScopes.includes("CONT-SO")));
 assert.ok(airmidResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
