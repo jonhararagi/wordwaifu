@@ -20,7 +20,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-025-wiki-informed-character-expansion.md",
   "research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md",
   "research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md",
-  "research/inbox/DANMACHI-RESEARCH-028-barca-basram-vito-adi-airmid.md"
+  "research/inbox/DANMACHI-RESEARCH-028-barca-basram-vito-adi-airmid.md",
+  "research/inbox/DANMACHI-RESEARCH-029-miach-naaza-dian-goibniu-hephaistos.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -38,8 +39,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 164, "Indexed source claims must include the 10 new claims in research batch 028.");
-assert.equal(index.entryCount, 167, "All sourced lore claims must be searchable, including research batch 028.");
+assert.equal(index.sourceClaimCount, 174, "Indexed source claims must include the 10 claims from research batch 029.");
+assert.equal(index.entryCount, 177, "All sourced lore claims must be searchable, including research batch 029.");
 const meteriaAlfiaClaim = corpus.search(index, { query: "Meteria Alfia hermana gemela", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(meteriaAlfiaClaim.results.some(claim => claim.claimId === "DMR-021-CLM-004"), "Meteria-Alfia relationship lead must be retrievable and stay explicitly unverified.");
 const meteriaBellClaim = corpus.search(index, { query: "Meteria madre Bell Cranel", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -149,6 +150,48 @@ const airmidPath028 = path.join(root, airmidRecord028.path);
 assert.ok(fs.existsSync(airmidPath028), "The moved Airmid dossier must exist at the catalog path.");
 assert.ok(fs.readFileSync(airmidPath028, "utf8").includes("id: CHAR-DARK-AIRMID"), "Moving Airmid must preserve the stable character ID.");
 
+
+const miachResearch029 = corpus.search(index, { query: "Miach pociones deuda Naaza", characterId: "CHAR-DARK-MIACH", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(miachResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-001" || claim.claimId === "DMR-029-CLM-002"), "Miach profile claims must be retrievable.");
+assert.ok(miachResearch029.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const naazaResearch029 = corpus.search(index, { query: "Naaza prosthesis Darbh Daol trauma", characterId: "CHAR-DARK-NAAZA", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(naazaResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-003" || claim.claimId === "DMR-029-CLM-004"), "Naaza's history and abilities must be retrievable.");
+assert.ok(naazaResearch029.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const dianCechtResearch029 = corpus.search(index, { query: "Dian Cecht prótesis Familia Era Oscura", characterId: "CHAR-DARK-DIAN-CECHT", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(dianCechtResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-006"), "Family-level historical activity must be searchable without asserting an individual scene.");
+assert.ok(dianCechtResearch029.results.every(claim => claim.continuityScopes.includes("CONT-UNVERIFIED")));
+
+const goibniuResearch029 = corpus.search(index, { query: "Goibniu weapons construction Hearth Mansion", characterId: "CHAR-DARK-GOIBNIU", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(goibniuResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-007" || claim.claimId === "DMR-029-CLM-008"), "Goibniu's profile and smith-family links must be retrievable.");
+
+const hephaistosResearch029 = corpus.search(index, { query: "Hephaistos Hestia Knife Memoria Freese", characterId: "CHAR-DARK-HEPHAISTOS", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(hephaistosResearch029.results.some(claim => claim.claimId === "DMR-029-CLM-010"), "Hephaistos event-only ability detail must remain visible with an unresolved continuity label.");
+
+for (const [id, expectedPath] of [
+  ["CHAR-DARK-MIACH", "characters/miach.md"],
+  ["CHAR-DARK-NAAZA", "characters/naaza-erisuis.md"],
+  ["CHAR-DARK-DIAN-CECHT", "characters/dian-cecht.md"],
+  ["CHAR-DARK-GOIBNIU", "characters/goibniu.md"],
+  ["CHAR-DARK-HEPHAISTOS", "characters/hephaistos.md"]
+]) {
+  const record = catalog.records.find(item => item.id === id);
+  assert.ok(record, "Legacy identity must remain in the catalog: " + id);
+  assert.equal(record.path, expectedPath, "General character profile must not remain filed as a confirmed Era Oscura dossier.");
+  assert.ok(!record.tags.includes("Era Oscura") && !record.tags.includes("Astrea Record"), "Historical participation must not be asserted by tags: " + id);
+  const profilePath = path.join(root, expectedPath);
+  assert.ok(fs.existsSync(profilePath), "Moved profile must exist: " + expectedPath);
+  assert.ok(fs.readFileSync(profilePath, "utf8").includes("id: " + id), "Move must preserve the stable ID: " + id);
+}
+for (const oldPath of [
+  "characters/dark-era/miach.md",
+  "characters/dark-era/naaza-erisuis.md",
+  "characters/dark-era/dian-cecht.md",
+  "characters/dark-era/goibniu.md",
+  "characters/dark-era/hephaistos.md"
+]) assert.ok(!fs.existsSync(path.join(root, oldPath)), "Obsolete historical path must not remain: " + oldPath);
+assert.ok(catalog.documents.some(document => document.document_id === "RESEARCH-DM-029"), "Research batch 029 must be registered in the catalog.");
 
 assert.ok(maryuuMagic.results.every(claim => claim.characterIds.includes("CHAR-MARIYU-LEAGE")), "Romanization variants must not create duplicate character identities.");
 
