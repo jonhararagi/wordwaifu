@@ -14,6 +14,9 @@ spoiler_level: major
 aliases:
   - "マキシム"
 tags: [Maxim, Zeus Familia, captain, historical roster]
+research_source_refs: [DMR-038-SRC-004]
+research_claim_refs: [DMR-038-CLM-005, DMR-038-CLM-006]
+research_continuity_scope: CONT-AR; CONT-MAIN-LN; CONT-UNVERIFIED
 ---
 # Maxim — expediente individual provisional
 
@@ -42,3 +45,22 @@ La misma fuente lo vincula a la historia de las grandes expediciones. Hasta loca
 - Diferencias entre novela principal y relatos paralelos.
 
 **Procedencia:** DMR-021-SRC-001 y DMR-021-SRC-005 son referencias comunitarias. Esta ficha ayuda a buscar la identidad; no es una biografía confirmada.
+
+## Perfil comunitario ampliado · secundario, localizador primario pendiente
+
+La ficha inglesa de DanMachi Wiki identifica a Maxim como capitán de Zeus Familia, antiguo aventurero de nivel 8 y fallecido en su snapshot comunitario. La misma página lista recuerdos en *DanMachi*, volumen 20, y *Familia Chronicle: Episode Freya*. Son rutas de búsqueda citadas por la wiki; no se ha cotejado aquí la página o escena del volumen.
+
+La página relata que Maxim fue derrotado junto con los demás miembros principales de Zeus Familia y Hera Familia por el Dragón Negro de un Ojo unos quince años antes de la referencia temporal de la historia principal. Después habría quedado gravemente herido y usado el tiempo y las fuerzas que le quedaban para desafiar a aventureros de una generación posterior, intentando que se volvieran más fuertes antes de enfrentar al dragón. Según el resumen, murió durante ese último desafío. Esta secuencia sigue en estado secundario, no como biografía primaria cerrada.
+
+### Conducta y objetivo reportados
+
+La wiki caracteriza a Maxim como severo en su manera de impulsar a los jóvenes: a veces humillaba a aventureros de Familias más débiles cuando lo desafiaban, con la intención reportada de hacerlos crecer. También afirma que reconoció la persistencia de Ottar después de derrotarlo junto con el capitán de Hera Familia. No se identifica aquí el nombre de ese capitán: queda expresamente sin resolver.
+
+La página presenta como objetivo de Maxim preparar a la siguiente generación para derrotar al Dragón Negro. También lo llama el más fuerte pese a que la capitanía de Hera Familia tenía nivel 9; esa comparación es un juicio del resumen comunitario y no debe transformarse en una mecánica de status demostrada.
+
+### Procedencia y límites
+
+- Fuente principal secundaria: [DanMachi Wiki — Maxim](https://danmachi.fandom.com/wiki/Maxim); contexto organizativo: [Zeus Familia](https://danmachi.fandom.com/wiki/Zeus_Familia) y [Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia).
+- Apariencia, magia, skills, arma, fecha exacta de muerte y escena final no están fijadas por un pasaje primario en este expediente.
+- El nivel 8 pertenece al snapshot de la wiki, no a cada etapa o recuerdo.
+- Claims consultables: `DMR-038-CLM-005` y `DMR-038-CLM-006`; permanecen como referencias secundarias.
