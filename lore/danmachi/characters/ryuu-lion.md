@@ -2,7 +2,7 @@
 id: CHAR-RYUU-LION
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_relationship_and_late_state_added_primary_locator_pending
 continuity_scope: CONT-AR; CONT-ANIME
 source_refs:
   - DMR-001-SRC-001
@@ -32,7 +32,7 @@ claim_refs:
   - DMR-030-CLM-008
   - DMR-030-CLM-009
   - DMR-030-CLM-010
-verification_status: source_checked_for_official_web_pages
+verification_status: "Secondary relationship chronology and late-stage profile added; primary novel locators remain pending."
 tags: [Ryu Lion, Ryuu Lion, Astrea Familia, justice, multi-era, CONT-AR, CONT-MAIN-LN, CONT-ANIME]
 research_source_refs:
   - DMR-002-SRC-002
