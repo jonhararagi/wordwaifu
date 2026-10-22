@@ -206,3 +206,14 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Ryuu/Ryu Lion](characters/ryuu-lion.md) — relación posterior con Astrea, repertorio del estado tardío y magia Astraea Record, sin trasladarlo a T−7.
 - [Paquete de investigación y 10 claims](research/inbox/DANMACHI-RESEARCH-030-astrea-core-profiles.md) y [registro maestro de fuentes](sources/00-registro-fuentes.md).
 - **Pendiente:** todos los datos recién añadidos siguen como secundarios hasta localizar y leer las escenas correspondientes en las ediciones publicadas.
+
+
+## Tanda DANMACHI-RESEARCH-031 · Cinco expedientes secundarios de Loki Familia
+
+- [Aki / Anakitty Autumn](characters/aki.md) — estado de nivel 5, skills, magia y equipo reportados; progresión temporal y conflicto Felis/Alkittine Diondra explícitos.
+- [Narvi Roll / ID heredado CHAR-LOKI-NARFI](characters/narfi.md) — apariencia, nivel/piso y debut reportados; el cruce Narfi/Narvi no se declara resuelto sin el texto japonés.
+- [Cruz Bussell](characters/cruz.md) — perfil visual, armamento, nivel/piso y debut reportados por las wikis inglesa y española.
+- [Elfy Colette](characters/elfy-colette.md) — personalidad, historia del Distrito Escolar, vínculo con Lefiya, fuego/Mage y advertencia de continuidad para Lomoire.
+- [Rakta Haze](characters/rakta-haze.md) — personalidad situacional, cartografía de Knossos y separación de escenas del piso 37 y el cementerio.
+- [Paquete de 7 claims](research/inbox/DANMACHI-RESEARCH-031-loki-secondary-profiles.md); fuentes nuevas y antiguas actualizadas en [registro maestro de fuentes](sources/00-registro-fuentes.md).
+- **Límite:** datos de las wikis siguen secundarios. Los volúmenes candidatos están identificados, pero no se inventaron localizadores de capítulo/página.
