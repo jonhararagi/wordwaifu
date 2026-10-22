@@ -66,3 +66,10 @@ Leer Astrea Record en una edición publicada para establecer si Alecto aparece d
 La ficha de aplicación ahora tiene un resumen navegable de Alecto como deidad de Alecto Familia en el contexto de Evilus/Astrea Record, manteniendo por separado a sus dependientes y los hechos no cotejados.
 
 **Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.
+
+
+## Relectura bilingüe detallada de Miraheze · DANMACHI-RESEARCH-045 (2026-10-22)
+
+La lectura bilingüe actual de Miraheze añade rasgos individuales: Alecto quería destruir Orario y, al tratar a Revinas Darda, habría mentido sobre su maldición para que muriera de la forma más entretenida para ella. También aparecen Percepción Divina, Divinidad, Arcanum sellado y Espejo Divino restringido. La ficha la sitúa en Orario 900+ años y dice que Alecto Familia fue derrotada siete años antes, pero el roster la mantiene activa. Se cita Sword Oratoria vol. 15 cap. 4 como ruta de verificación, no como escena leída directamente.
+
+**Estado de verificación:** secundaria. Los capítulos/escenas citados por la wiki son pistas para la próxima lectura, no localizadores que esta tanda haya comprobado directamente.

@@ -23,13 +23,14 @@ continuity: CONT-AR; CONT-SO; CONT-UNVERIFIED
 - `source_locator`: Main character page; History; Relationships; References
 - `access_status`: current migrated pages identified; secondary source only
 
-### DMR-043-SRC-002 — Apate EN/ES
+### DMR-043-SRC-002 — Apate Familia EN/ES (individual page 404)
 - `source_id`: DMR-043-SRC-002
-- `source_title`: DanMachi Wiki — Apate EN/ES
+- `source_title`: DanMachi Wiki — Apate Familia/Familia Apate
 - `source_type`: SECONDARY_WIKI
-- `source_url`: https://danmachien.miraheze.org/wiki/Apate; https://danmachi.miraheze.org/wiki/Apate
-- `source_locator`: Main character page; History; Relationships; References
-- `access_status`: current migrated pages identified; secondary source only
+- `source_url`: https://danmachien.miraheze.org/wiki/Apate_Familia; https://danmachi.miraheze.org/wiki/Familia_Apate
+- `source_locator`: Information/Información; Members/Miembros; cited Astrea Record chapters
+- `access_status`: current family pages read both languages; individual /Apate pages returned 404; secondary source only
+- `limits`: No individual page was available. The source supports organizational facts and the roster, not a complete personal biography of Apate.
 
 ### DMR-043-SRC-003 — Thanatos EN/ES
 - `source_id`: DMR-043-SRC-003
@@ -59,13 +60,13 @@ continuity: CONT-AR; CONT-SO; CONT-UNVERIFIED
 
 ### DMR-043-CLM-001 · Alecto: deidad y afiliación histórica
 - `claim_id`: DMR-043-CLM-001
-- `claim`: Los registros de WordWaifu y las páginas comunitarias sitúan a Alecto como deidad de Alecto Familia dentro del contexto de Evilus y Astrea Record. Las acciones de la Familia y de Dina/Vena Dis no deben atribuirse automáticamente a la diosa como acciones personales; la cronología precisa y las motivaciones requieren escenas primarias.
+- `claim`: Las páginas actuales de Alecto la describen como deidad de Evilus que buscaba destruir Orario y que permaneció en la ciudad durante más de 900 años. Alecto Familia fue derrotada siete años antes de la referencia comunitaria durante el Gran Conflicto; el roster de la Familia la sigue marcando activa tras la caída de los dependientes. Su personalidad combina comentarios sobre «seguir avanzando» y una supuesta posibilidad de llegar a amar a sus seguidores con el uso cruel de estos para entretenerse. Cuando Revinas Darda manifestó una maldición, Alecto habría mentido sobre la habilidad para asegurarse de que muriera llena de arrepentimiento y le dijo que no la ayudaría ni amaría. Las páginas le atribuyen Percepción Divina, Divinidad, Arcanum sellado y Espejo Divino restringido. Todo es una síntesis de la wiki, citada a Sword Oratoria vol. 15 cap. 4 y no cotejada directamente.
 - `character_id`: CHAR-DARK-ALECTO
 - `source_id`: DMR-043-SRC-001
 - `source_title`: DanMachi Wiki — Alecto EN/ES
 - `source_type`: SECONDARY_WIKI
-- `source_url`: https://danmachien.miraheze.org/wiki/Alecto; https://danmachi.miraheze.org/wiki/Alecto
-- `source_locator`: Main profile; Familia affiliation; history/references
+- `source_url`: https://danmachien.miraheze.org/wiki/Alecto; https://danmachi.miraheze.org/wiki/Alecto; https://danmachien.miraheze.org/wiki/Alecto_Familia; https://danmachi.miraheze.org/wiki/Familia_Alecto
+- `source_locator`: Personality; History; Abilities; Alecto Familia information/members
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `continuity_scope`: CONT-AR; CONT-UNVERIFIED
 - `spoiler_level`: major
@@ -73,13 +74,13 @@ continuity: CONT-AR; CONT-SO; CONT-UNVERIFIED
 
 ### DMR-043-CLM-002 · Apate: deidad y vínculo con Spirit Soldiers
 - `claim_id`: DMR-043-CLM-002
-- `claim`: Apate se vincula a Apate Familia y al bloque de Evilus/Astrea Record; los registros de investigación asocian Spirit Soldiers con ese entorno. Sin una afirmación precisa de la fuente sobre autoría personal, las acciones de la Familia, Basram y los Spirit Soldiers deben mantenerse separadas de las decisiones de Apate. No se asignan niveles Falna ni magia individual por inferencia.
+- `claim`: No hay una página individual accesible de Apate en los mirrors migrados; ambas URL /wiki/Apate devolvieron 404. La evidencia actual procede de Apate Familia: Apate figura como la deidad activa en el roster histórico. Su Familia fue una de las principales fuerzas de combate de Evilus; empleó drogas y maldiciones para fortalecer miembros prescindibles y experimentó con aventureros de segunda clase de Osiris Familia tras su derrota frente a Zeus/Hera. La Familia infundió poder de espíritus y creó doce Spirit Soldiers de nivel 5 con capacidades reportadas como magia sin canto y regeneración acelerada. La doctrina de la Familia se describe como fanática y contraria a la dignidad de personas y espíritus. Esto no demuestra que Apate ejecutara personalmente cada experimento ni permite inventar sus poderes o psicología individual. Las wikis enlazan Astrea Record vol. 1 caps. 9/11 y vol. 2 cap. 11 como pistas.
 - `character_id`: CHAR-DARK-APATE
 - `source_id`: DMR-043-SRC-002
 - `source_title`: DanMachi Wiki — Apate EN/ES
 - `source_type`: SECONDARY_WIKI
-- `source_url`: https://danmachien.miraheze.org/wiki/Apate; https://danmachi.miraheze.org/wiki/Apate
-- `source_locator`: Main profile; Familia links; history/references
+- `source_url`: https://danmachien.miraheze.org/wiki/Apate_Familia; https://danmachi.miraheze.org/wiki/Familia_Apate
+- `source_locator`: Apate Familia: Information; Members; referenced Astrea Record chapters
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `continuity_scope`: CONT-AR; CONT-UNVERIFIED
 - `spoiler_level`: major
@@ -87,13 +88,13 @@ continuity: CONT-AR; CONT-SO; CONT-UNVERIFIED
 
 ### DMR-043-CLM-003 · Thanatos: deidad en la trama de Knossos
 - `claim_id`: DMR-043-CLM-003
-- `claim`: Thanatos aparece como deidad patrona de Thanatos Familia, relacionada en las páginas comunitarias con Evilus y la trama de Knossos de Sword Oratoria. Ese contexto no convierte todos los atentados o las decisiones de los miembros en actos personales de Thanatos ni autoriza a transferir los eventos a Astrea Record o a la novela principal. Su personalidad y habilidades individuales quedan sujetas a los datos concretos de la página y al cotejo de los capítulos citados.
+- `claim`: Thanatos aparece como un dios alto de cabello y ojos púrpura oscuro, con túnica negra desgarrada decorada en gris y púrpura. Las wikis lo describen como relajado, frívolo y sombrío en privado, aunque interpretaba una presencia digna y fascinante como dios de Evilus; la pose le resultaba cansadora y preguntó a Valletta si podía hacer el trabajo por él. Mantenía la calma, hablaba con Lefiya sin hostilidad, respondía preguntas con franqueza y podía comportarse de manera juguetona o inmadura, llamando a otros con el sufijo «-chan». Su motivación reportada para unirse a Evilus fue aumentar el número de muertes: amaba su trabajo celestial de purificar almas para su reencarnación y la caída de muertes durante la Era de los Dioses lo impulsó a buscar más trabajo. La wiki española le atribuye Intelecto Divino, Percepción Divina, Divinidad, Arcanum sellado y Espejo Divino restringido. Esta biografía pertenece al marco de Sword Oratoria/Knossos y sigue siendo secundaria.
 - `character_id`: CHAR-DARK-THANATOS
 - `source_id`: DMR-043-SRC-003
 - `source_title`: DanMachi Wiki — Thanatos EN/ES
 - `source_type`: SECONDARY_WIKI
-- `source_url`: https://danmachien.miraheze.org/wiki/Thanatos; https://danmachi.miraheze.org/wiki/Thanatos
-- `source_locator`: Main profile; Familia affiliation; Sword Oratoria/Knossos references
+- `source_url`: https://danmachien.miraheze.org/wiki/Thanatos; https://danmachi.miraheze.org/wiki/Thanatos; https://danmachien.miraheze.org/wiki/Thanatos_Familia; https://danmachi.miraheze.org/wiki/Familia_Thanatos
+- `source_locator`: Appearance; Personality; Abilities; Thanatos Familia roster/Knossos
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `continuity_scope`: CONT-SO; CONT-UNVERIFIED
 - `spoiler_level`: major
@@ -101,13 +102,13 @@ continuity: CONT-AR; CONT-SO; CONT-UNVERIFIED
 
 ### DMR-043-CLM-004 · Basram: identidad separada en el entorno de Apate Familia
 - `claim_id`: DMR-043-CLM-004
-- `claim`: Basram ya tiene un ID individual en el catálogo y está vinculado en los expedientes de investigación con Apate Familia, Evilus y Spirit Soldiers. El dossier de aplicación mantiene esa asociación como contexto, pero no inventa cargo, magia, nivel, autoría de técnicas colectivas ni relaciones personales que necesiten una escena concreta.
+- `claim`: Basram es descrito como hombre de mediana edad, corpulento y barbado, con túnica sacerdotal negra y púrpura, ojos delgados inquietantes y un shakujō manchado de sangre. Era fanático de Apate y consideraba a sí mismo y a sus dependientes apóstoles de una «herejía sagrada» destinada a cambiar el mundo mediante la injusticia; se enfurecía cuando sentía que iba contra la doctrina y llegó a usar a un miembro de la Familia como escudo humano. Las páginas le atribuyen fuerza sobrehumana por Falna, resistencia para responder después de quedar atravesado por una lanza y una espada y perder dos dedos, y sentidos mejorados. Su shakujō le permitía controlar a los Spirit Soldiers; una Daga del Espíritu (精霊の短剣) podía transformarlo en uno, aunque transformado fue derrotado rápidamente por los hermanos Gulliver heridos. El roster de Apate Familia deja su nivel numérico desconocido y enumera el estado como fallecido en la disolución. Species/raza se traduce como Raccoon/Mapache, con terminología por normalizar. Referencias de wiki: Astrea Record vol. 1 caps. 9/11, vol. 2 cap. 11 y vol. 3 caps. 2/6; no se leyeron los capítulos directamente.
 - `character_id`: CHAR-DARK-BASRAM
 - `source_id`: DMR-043-SRC-004
 - `source_title`: DanMachi Wiki — Basram EN/ES
 - `source_type`: SECONDARY_WIKI
-- `source_url`: https://danmachien.miraheze.org/wiki/Basram; https://danmachi.miraheze.org/wiki/Basram
-- `source_locator`: Main profile; Apate Familia; Spirit Soldiers; references
+- `source_url`: https://danmachien.miraheze.org/wiki/Basram; https://danmachi.miraheze.org/wiki/Basram; https://danmachien.miraheze.org/wiki/Apate_Familia; https://danmachi.miraheze.org/wiki/Familia_Apate
+- `source_locator`: Appearance; Personality; Abilities; Equipment; Apate Familia roster
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `continuity_scope`: CONT-AR; CONT-UNVERIFIED
 - `spoiler_level`: major
@@ -115,13 +116,13 @@ continuity: CONT-AR; CONT-SO; CONT-UNVERIFIED
 
 ### DMR-043-CLM-005 · Valletta Grede: antagonismo de Thanatos Familia/Sword Oratoria
 - `claim_id`: DMR-043-CLM-005
-- `claim`: Valletta Grede tiene un expediente individual en el catálogo y se asocia a Thanatos Familia, Evilus y Sword Oratoria. Su perfil de aplicación conserva el marco de Knossos como contexto de la trama, sin transferir esos eventos a Astrea Record ni inventar el cargo, las capacidades o la secuencia exacta de su desenlace si no aparece un pasaje concreto. Debe distinguirse la conducta personal de Valletta del conjunto de Evilus.
+- `claim`: Valletta Grede se describe con cabello rosado de longitud media, ojos amarillos y ropa negra con líneas rojas, cinturón en el muslo y abrigo oscuro con ribete de piel. La wiki la sitúa en nivel 5 y afirma que, aunque tenía treinta y tantos años, la Falna la hacía parecer de finales de los veinte. Es una estratega metódica y sádica que disfrutaba matar y hacer sufrir, pero no era impulsiva: sus planes causaron problemas a Finn durante años y, según la wiki, sin ella Evilus habría caído tres años antes. Guardaba rencor personal a Finn por evitar la trampa del Nightmare del piso 27. Era una de las pocas personas que conocían la personalidad real de Thanatos y se permitía hablarle con rudeza; aun así, cuando Bete la acorraló habría suplicado por su vida. Shaldo es una barrera rara que reduce el status de quienes entran, vuelve a aplicar el efecto al moverse dentro de ella y alcanza un área de radio reportado de 60 metros; tiene canto largo, consume mucho Mind y deja de funcionar si Valletta abandona el área. Su espada maldita causaba heridas que no sanaban, y en la Era Oscura estaba en el primer puesto de la lista negra del Guild. Datos citados por las wikis, no escenas primarias cotejadas.
 - `character_id`: CHAR-DARK-VALLETTA-GREDE
 - `source_id`: DMR-043-SRC-005
 - `source_title`: DanMachi Wiki — Valletta Grede EN/ES
 - `source_type`: SECONDARY_WIKI
-- `source_url`: https://danmachien.miraheze.org/wiki/Valletta_Grede; https://danmachi.miraheze.org/wiki/Valletta_Grede
-- `source_locator`: Main profile; Thanatos Familia; Knossos; Sword Oratoria references
+- `source_url`: https://danmachien.miraheze.org/wiki/Valletta_Grede; https://danmachi.miraheze.org/wiki/Valletta_Grede; https://danmachien.miraheze.org/wiki/Thanatos_Familia; https://danmachi.miraheze.org/wiki/Familia_Thanatos
+- `source_locator`: Appearance; Personality; Abilities; Magic; Equipment; Thanatos Familia roster
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `continuity_scope`: CONT-SO; CONT-UNVERIFIED
 - `spoiler_level`: major

@@ -11,6 +11,7 @@ source_refs:
   - "DMR-026-SRC-003"
   - "DMR-026-SRC-007"
   - "DMR-043-SRC-005"
+  - "DMR-043-SRC-005"
 claim_refs:
   - "DMR-014-CLM-024"
   - "DMR-013-CLM-009"
@@ -25,6 +26,7 @@ research_source_refs:
   - "DMR-013-SRC-001"
   - "DMR-026-SRC-003"
   - "DMR-026-SRC-007"
+  - "DMR-043-SRC-005"
   - "DMR-043-SRC-005"
 entity_type: character
 canonical_name: "Valletta Grede"
@@ -220,3 +222,10 @@ La fuente comunitaria reporta que Valletta guardaba rencor a Finn por sus ataque
 Valletta Grede se conecta a Thanatos Familia/Evilus y al contexto Knossos/Sword Oratoria. Cargo exacto, capacidades y secuencia de desenlace quedan pendientes de lectura de las escenas citadas.
 
 **Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.
+
+
+## Relectura bilingüe detallada de Miraheze · DANMACHI-RESEARCH-045 (2026-10-22)
+
+La lectura EN/ES añade a Valletta como estratega sádica pero metódica, con resentimiento personal hacia Finn y relación operacional con Thanatos. Su magia Shaldo es una barrera de gran área (60 m de radio reportado) que reduce status, reaplica el efecto al moverse dentro, cuesta mucho Mind y termina si Valletta sale del área. La espada maldita le permitía infligir heridas que no sanaban; la wiki la sitúa en nivel 5 y en el primer puesto de la lista negra del Guild. Todos los detalles siguen secundarios hasta leer las escenas.
+
+**Estado de verificación:** secundaria. Los capítulos/escenas citados por la wiki son pistas para la próxima lectura, no localizadores que esta tanda haya comprobado directamente.

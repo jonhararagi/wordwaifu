@@ -10,6 +10,7 @@ source_refs:
   - "DMR-028-SRC-007"
   - "DMR-028-SRC-012"
   - "DMR-043-SRC-004"
+  - "DMR-043-SRC-004"
 claim_refs:
   - "DMR-013-CLM-011"
   - "DMR-028-CLM-005"
@@ -22,6 +23,7 @@ research_source_refs:
   - "DMR-028-SRC-006"
   - "DMR-028-SRC-007"
   - "DMR-028-SRC-012"
+  - "DMR-043-SRC-004"
   - "DMR-043-SRC-004"
 entity_type: character
 canonical_name: "Basram"
@@ -106,3 +108,10 @@ El perfil lo sitúa en *Astrea Record* volumen 1. La sinopsis editorial del volu
 Basram mantiene identidad individual y contexto reportado de Apate Familia/Spirit Soldiers; no se le asignan rango, magia o autoría de una técnica colectiva sin referencia concreta.
 
 **Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.
+
+
+## Relectura bilingüe detallada de Miraheze · DANMACHI-RESEARCH-045 (2026-10-22)
+
+La lectura EN/ES concreta la apariencia sacerdotal de Basram, su doctrina fanática de la «herejía sagrada», el uso de un compañero como escudo humano y su oposición a quienes superan la injusticia siguiendo el bien. Se le atribuyen resistencia tras lesiones graves, sentidos mejorados, control de Spirit Soldiers con un shakujō y una Daga del Espíritu capaz de transformarlo en soldado. El roster mantiene su nivel desconocido; la raza se traduce como Raccoon/Mapache/Human Beast y requiere normalización editorial.
+
+**Estado de verificación:** secundaria. Los capítulos/escenas citados por la wiki son pistas para la próxima lectura, no localizadores que esta tanda haya comprobado directamente.

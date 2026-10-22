@@ -89,3 +89,10 @@ Rutas siguientes: Sword Oratoria, volumen 7, para la presentación, y volumen 11
 La ficha de aplicación conecta a Thanatos con Thanatos Familia, Evilus y la trama de Knossos en Sword Oratoria. La pertenencia divina no se usa como prueba de autoría de cada acto ni se mezcla con Astrea Record.
 
 **Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.
+
+
+## Relectura bilingüe detallada de Miraheze · DANMACHI-RESEARCH-045 (2026-10-22)
+
+La relectura EN/ES incorpora el aspecto descrito de Thanatos (cabello/ojos púrpura, túnica negra raída), su personalidad privada relajada y su máscara solemne de dios de Evilus. Su motivación reportada para querer más muertes es recuperar el trabajo celestial de purificar almas para su reencarnación. Se añaden Intelecto Divino, Percepción Divina, Divinidad, Arcanum sellado y Espejo Divino restringido, siempre como evidencia secundaria. El roster EN/ES de Thanatos Familia discrepa en miembros (Vito frente a Tris/Acoz).
+
+**Estado de verificación:** secundaria. Los capítulos/escenas citados por la wiki son pistas para la próxima lectura, no localizadores que esta tanda haya comprobado directamente.

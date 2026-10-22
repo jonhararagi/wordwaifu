@@ -456,3 +456,16 @@ Aplicar en las próximas tandas de perfiles. Este protocolo corrige el patrón d
 - [ ] Cotejar Astrea Record vols. 1/3 para Dina/Vena, Sword Oratoria vol. 7 para Barca, vol. 8 y “Instead of Goodbye - Thanks” para Line, y los capítulos citados para Alicia.
 - [ ] Revisar los perfiles recientemente integrados de Alecto, Apate, Thanatos, Basram y Valletta; sustituir los resúmenes genéricos por el detalle real de las páginas migradas.
 - **Estado:** ocho claims recuperables añadidos; evidencia primaria pendiente, sin elevar claims a canon verificado.
+
+
+## Estado tras DANMACHI-RESEARCH-045 — revisión profunda de Alecto, Apate, Thanatos, Basram y Valletta
+
+- [x] Releer páginas actuales EN/ES de Alecto, Thanatos, Basram y Valletta.
+- [x] Seguir las páginas de Familia Alecto, Apate y Thanatos para validar información organizativa y rosters.
+- [x] Corregir Apate: la ficha individual no existe en los mirrors consultados (404); usar Apate Familia/Familia Apate y no inventar apariencia o psicología individual.
+- [x] Sustituir perfiles genéricos de la aplicación por historia, personalidad, capacidades, relaciones, límites y divergencias concretas.
+- [x] Mantener los cinco perfiles secundarios y documentar las rutas de lectura primaria citadas.
+- [ ] Cotejar Alecto y Thanatos con Sword Oratoria vol. 15 (capítulos señalados por las wikis), y Basram con Astrea Record vols. 1–3, registrando capítulo/página solo tras leer la escena.
+- [ ] Leer Sword Oratoria y el roster actual de Familia Thanatos para resolver Vito frente a Tris/Acoz en EN/ES; no normalizar sin prueba.
+- [ ] Comprobar la mecánica de Shaldo, la espada maldita de Valletta y la escena de Revinas antes de marcar los claims canónicos.
+- **Estado:** fichas ampliadas; la totalidad de estas afirmaciones sigue secundaria hasta cotejo primario.

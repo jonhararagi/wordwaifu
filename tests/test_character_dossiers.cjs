@@ -158,3 +158,18 @@ for(const expected of priorityProfiles044){
 }
 assert.ok(api.get("CHAR-LEENE-ARSHE").history.includes("Line Arshe") && api.get("CHAR-LEENE-ARSHE").history.includes("Leene Arshe"),"Line/Leene must use a single stable application ID.");
 assert.ok(api.get("CHAR-LEENE-ARSHE").conflict.includes("ruta de juego") && api.get("CHAR-LEENE-ARSHE").conflict.includes("Sword Oratoria"),"Line's game survival route must remain distinct from the SO death.");
+
+
+const detailedEvilus043=[
+ {id:"CHAR-DARK-ALECTO",tokens:["900 años","Revinas Darda","Percepción Divina","Espejo Divino"],url:"https://danmachien.miraheze.org/wiki/Alecto"},
+ {id:"CHAR-DARK-APATE",tokens:["devolvió 404","doce Spirit Soldiers","Osiris Familia","Apate Familia"],url:"https://danmachien.miraheze.org/wiki/Apate_Familia"},
+ {id:"CHAR-DARK-THANATOS",tokens:["purificar almas","Lefiya","Intelecto Divino","Arcanum"],url:"https://danmachien.miraheze.org/wiki/Thanatos"},
+ {id:"CHAR-DARK-BASRAM",tokens:["shakujō","Daga del Espíritu","dos dedos","apóstoles"],url:"https://danmachien.miraheze.org/wiki/Basram"},
+ {id:"CHAR-DARK-VALLETTA-GREDE",tokens:["Shaldo","60 metros","heridas que no sanan","Finn"],url:"https://danmachien.miraheze.org/wiki/Valletta_Grede"}
+];
+for(const expected of detailedEvilus043){
+ const profile=api.get(expected.id);assert.ok(profile,expected.id+" must remain available.");
+ const text=[profile.appearance,profile.history,profile.personality,profile.abilities,profile.relationships,profile.conflict].join(" ");
+ for(const token of expected.tokens)assert.ok(text.includes(token),expected.id+" must expose re-read details: "+token);
+ assert.ok(profile.sources.includes(expected.url),expected.id+" must link the source actually read.");
+}

@@ -66,3 +66,10 @@ Localizar las escenas de Apate en una edición publicada de Astrea Record y dife
 La ficha de aplicación relaciona a Apate con Apate Familia y el contexto de Spirit Soldiers, sin atribuir automáticamente el mismo poder o todas las acciones al personaje y a sus subordinados.
 
 **Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.
+
+
+## Relectura bilingüe detallada de Miraheze · DANMACHI-RESEARCH-045 (2026-10-22)
+
+La página individual /Apate no existe en las ediciones migradas consultadas; ambas devolvieron 404. Se reemplaza esa referencia por Apate Familia/Familia Apate, que describe la doctrina, los experimentos que produjeron doce Spirit Soldiers de nivel 5 y el roster histórico con Apate activa y Basram fallecido/nivel desconocido. Estos datos no se atribuyen como acciones personales directas de Apate, y no se inventa su apariencia o psicología.
+
+**Estado de verificación:** secundaria. Los capítulos/escenas citados por la wiki son pistas para la próxima lectura, no localizadores que esta tanda haya comprobado directamente.

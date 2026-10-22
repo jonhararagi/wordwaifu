@@ -1,5 +1,14 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-045 · Revisión detallada de cinco perfiles de Evilus (2026-10-22)
+
+- Rama: `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.
+- Perfiles existentes enriquecidos: Alecto, Apate, Thanatos, Basram y Valletta Grede. No se crearon identidades duplicadas.
+- Cambios: Alecto — historia de 900+ años, crueldad hacia Revinas y capacidades divinas; Apate — ausencia comprobada de página individual y uso correcto de Apate Familia como fuente, Spirit Soldiers y roster; Thanatos — motivo ligado a purificación de almas, personalidad privada/pública, capacidades divinas y discrepancia en el roster EN/ES; Basram — doctrina fanática, supervivencia tras heridas, shakujō y Daga del Espíritu; Valletta — estrategia, conflicto personal con Finn, Shaldo y espada maldita.
+- Fuentes: perfiles actuales EN/ES de Miraheze y páginas de organización Alecto/Apate/Thanatos Familia. Se comprobó que /wiki/Apate devuelve 404 en ambos idiomas; no se afirma que exista una ficha individual accesible.
+- Estado de evidencia: claims de wiki siguen secundarios. Las rutas de Astrea Record y Sword Oratoria citadas deben leerse directamente antes de elevar cualquier dato.
+- Pruebas: ampliadas para comprobar campos concretos y procedencia visible.
+
 ## DANMACHI-RESEARCH-044 · Relectura bilingüe de cinco identidades prioritarias (2026-10-22)
 
 - Rama: `work/story-completion-danmachi-audit-2026-10`; `main` intacta.
