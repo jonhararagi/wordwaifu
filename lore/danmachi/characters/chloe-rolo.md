@@ -252,3 +252,12 @@ La wiki relata que se crio en una Familia criminal y fue entrenada desde pequeñ
 
 El pasado criminal, la muerte de su madre, Shakti, el encargo contra Ryuu y los mecanismos siguen como referencias secundarias, con localizadores primarios pendientes. Se conserva el ID CHAR-CHLOE-ROLO.
 
+
+
+## Relectura bilingüe de Miraheze · 2026-10-22 (secundaria)
+
+Las fichas describen Feles Cruz como dos espejismos controlados que no pueden atacar ni defenderse; Chloe puede combinar la magia con humo. Violetta se presenta en inglés como su cuchillo especial, recubierto con venenos de monstruos de pisos inferiores y profundos. La biografía añade una prueba de asesinato de un caballero imperial de nivel 3 con un cuchillo, el fracaso contra Shakti Varma, el rechazo de encargos contra aventureros de primera clase y el fracaso posterior al intentar matar a Ryuu. En la operación Pseudo Shaft, la wiki la sitúa en el piso 50. DanMachi vol. 21 cap. 2 y Sword Oratoria vol. 2 cap. 3 p. 93 JP aparecen citados por la wiki como pistas, no como escenas comprobadas.
+
+Los comentarios sexualizados sobre Bell y jóvenes en las páginas de personalidad se mantienen como rasgos atribuidos a una fuente secundaria, con advertencia; no se amplían a escenas no leídas ni se mezclan con el perfil oficial de adaptación.
+
+**Fuentes actuales:** [ficha EN](https://danmachien.miraheze.org/wiki/Chloe_Rollo), [ficha ES](https://danmachi.miraheze.org/wiki/Chloe_Rollo).
