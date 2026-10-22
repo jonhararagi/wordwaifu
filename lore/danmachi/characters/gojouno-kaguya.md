@@ -2,7 +2,7 @@
 id: CHAR-KAGUYA
 universe: danmachi
 type: character
-status: partial_official_adaptation_checked_primary_locator_pending
+status: secondary_biography_and_ability_summary_primary_locator_pending
 confidence: official DanMachi IV profile for CONT-ANIME; detailed CONT-AR biography still requires novel locators
 continuity_scope: CONT-ANIME; CONT-AR
 source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-003, DMR-030-SRC-004]
@@ -181,7 +181,7 @@ related_record_ids: [CHAR-RYUU-LION, CHAR-ALISE-LOVELACE, CHAR-ASTREA, CHAR-LYRA
 duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
-verification_status: "Official adaptation profile checked; community roster is only a historical lead; primary novel locators pending"
+verification_status: "Secondary short-story summary and ability/equipment references added; primary novel locators remain pending."
 research_source_refs: [DMR-003-SRC-001, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-003, DMR-030-SRC-004]
 ---
 # Gojouno Kaguya
