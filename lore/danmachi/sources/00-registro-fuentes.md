@@ -3218,7 +3218,7 @@ verification_status: stub
 - series: DanMachi
 - volume_or_edition: Community roster snapshot
 - language: Spanish
-- official_url: https://danmachii.fandom.com/es/wiki/Familia_Freya
+- official_url: https://danmachi.fandom.com/es/wiki/Familia_Freya
 - accessed_at: 2026-10-22
 - locator_type: member_table
 - locator: Member roster, affiliation names and roles
@@ -3237,7 +3237,7 @@ verification_status: stub
 - series: DanMachi / Sword Oratoria
 - volume_or_edition: Profile article and reported debut list
 - language: English
-- official_url: https://danmachii.fandom.com/wiki/Anya_Fromel
+- official_url: https://danmachi.fandom.com/wiki/Anya_Fromel
 - accessed_at: 2026-10-22
 - locator_type: article_sections
 - locator: Identity, Characteristics, Status, Familia, Debuts
@@ -3256,7 +3256,7 @@ verification_status: stub
 - series: DanMachi
 - volume_or_edition: Profile article
 - language: Spanish
-- official_url: https://danmachii.fandom.com/es/wiki/Anya_Fromel
+- official_url: https://danmachi.fandom.com/es/wiki/Anya_Fromel
 - accessed_at: 2026-10-22
 - locator_type: article_sections
 - locator: History, Personality, Skills, Magic, Equipment, Relationships
@@ -3275,7 +3275,7 @@ verification_status: stub
 - series: DanMachi / Sword Oratoria / Episode Ryuu
 - volume_or_edition: Profile article and reported debut list
 - language: English
-- official_url: https://danmachii.fandom.com/wiki/Mia_Grand
+- official_url: https://danmachi.fandom.com/wiki/Mia_Grand
 - accessed_at: 2026-10-22
 - locator_type: article_sections
 - locator: Identity, Characteristics, Status, Debuts
@@ -3294,7 +3294,7 @@ verification_status: stub
 - series: DanMachi / Sword Oratoria / Episode Ryuu
 - volume_or_edition: Profile article
 - language: Spanish
-- official_url: https://danmachii.fandom.com/es/wiki/Mia_Grand
+- official_url: https://danmachi.fandom.com/es/wiki/Mia_Grand
 - accessed_at: 2026-10-22
 - locator_type: article_sections
 - locator: History, Personality, Relationships
@@ -3313,7 +3313,7 @@ verification_status: stub
 - series: DanMachi / Sword Oratoria
 - volume_or_edition: Profile article and reported debut list
 - language: English
-- official_url: https://danmachii.fandom.com/wiki/Alicia_Forestlight
+- official_url: https://danmachi.fandom.com/wiki/Alicia_Forestlight
 - accessed_at: 2026-10-22
 - locator_type: article_sections
 - locator: Identity, Characteristics, Personality, History, Abilities, Magic, Equipment, Debuts
@@ -3332,7 +3332,7 @@ verification_status: stub
 - series: DanMachi / Sword Oratoria
 - volume_or_edition: Roster and magic reference pages
 - language: Spanish
-- official_url: https://danmachii.fandom.com/es/wiki/Familia_Loki; https://danmachii.fandom.com/es/wiki/Magia
+- official_url: https://danmachi.fandom.com/es/wiki/Familia_Loki; https://danmachi.fandom.com/es/wiki/Magia
 - accessed_at: 2026-10-22
 - locator_type: member_table_and_magic_index
 - locator: Loki Familia roster and indexed magical-ability entries
@@ -3351,7 +3351,7 @@ verification_status: stub
 - series: Sword Oratoria / DanMachi
 - volume_or_edition: Character profile and reported debuts
 - language: English
-- official_url: https://danmachii.fandom.com/wiki/Line_Arshe
+- official_url: https://danmachi.fandom.com/wiki/Line_Arshe
 - accessed_at: 2026-10-22
 - locator_type: article_sections
 - locator: Identity, Characteristics, Status, Magic, Debuts, Trivia
@@ -3370,7 +3370,7 @@ verification_status: stub
 - series: Sword Oratoria
 - volume_or_edition: Community story summary; publication locator not verified here
 - language: English
-- official_url: https://danmachii.fandom.com/wiki/Instead_of_Goodbye_-_Thanks
+- official_url: https://danmachi.fandom.com/wiki/Instead_of_Goodbye_-_Thanks
 - accessed_at: 2026-10-22
 - locator_type: plot_summary
 - locator: Ending summary involving Line Arshe and Bete Loga
@@ -3389,7 +3389,7 @@ verification_status: stub
 - series: DanMachi / Memoria Freese
 - volume_or_edition: Alias table
 - language: English
-- official_url: https://danmachii.fandom.com/wiki/Aliases; https://danmachii.fandom.com/wiki/Line_Arshe
+- official_url: https://danmachi.fandom.com/wiki/Aliases; https://danmachi.fandom.com/wiki/Line_Arshe
 - accessed_at: 2026-10-22
 - locator_type: alias_table_and_article_trivia
 - locator: Alias table entries Locolyte/Line Arshe and Elleaf/Alicia Forestlight

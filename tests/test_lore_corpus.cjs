@@ -436,7 +436,7 @@ assert.ok(thanatosResearch033.results.every(claim => claim.verificationStatus.in
 const alectoResearch033 = corpus.search(index, { query: "Alecto Familia Dina Vena Evilus", characterId: "CHAR-DARK-ALECTO", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(alectoResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-004"), "Alecto Familia context must be searchable.");
 assert.ok(alectoResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Alecto remains secondary.");
-const apateResearch033 = corpus.search(index, { query: "Apate Familia Spirit Soldiers Osiris curses Evilus", characterId: "CHAR-DARK-APATE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const apateResearch033 = corpus.search(index, { query: "Apate Familia Spirit Soldiers Osiris maldiciones Evilus", characterId: "CHAR-DARK-APATE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(apateResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-003"), "Apate/Spirit Soldiers must be retrievable.");
 assert.ok(apateResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Apate remains secondary.");
 const dinaResearch033 = corpus.search(index, { query: "Dina Dis blonde green eyes captain Hogni", characterId: "CHAR-DARK-DINA-DIS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
@@ -462,10 +462,10 @@ assert.ok(index.profileDetails["CHAR-MIA-GRAND"], "Mia's expanded structured pro
 assert.ok(index.profileDetails["CHAR-LOKI-ALICIA-FORESTLIGHT"], "Alicia's expanded structured profile must be available to the archive.");
 assert.ok(index.profileDetails["CHAR-LEENE-ARSHE"], "Leene/Line's one stable identity must be available to the archive.");
 
-const allenResearch034 = corpus.search(index, { query: "Gralineze Fromel speed", characterId: "CHAR-ALLEN-FROMEL", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+const allenResearch034 = corpus.search(index, { query: "Gralineze Fromel velocidad", characterId: "CHAR-ALLEN-FROMEL", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(allenResearch034.results.some(claim => claim.claimId === "DMR-034-CLM-003"), "Allen's magic/speed profile must be searchable.");
 assert.ok(allenResearch034.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Allen's wiki claim must remain secondary.");
-const anyaResearch034 = corpus.search(index, { query: "Remiste Felis sound", characterId: "CHAR-ANYA-FROMEL", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+const anyaResearch034 = corpus.search(index, { query: "Remiste Felis sonora", characterId: "CHAR-ANYA-FROMEL", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(anyaResearch034.results.some(claim => claim.claimId === "DMR-034-CLM-006"), "Anya's magic and limitations must be searchable.");
 assert.ok(anyaResearch034.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Anya's wiki claim must remain secondary.");
 const miaResearch034 = corpus.search(index, { query: "Ottar Hostess Freya", characterId: "CHAR-MIA-GRAND", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -474,7 +474,7 @@ assert.ok(miaResearch034.results.every(claim => claim.verificationStatus.include
 const aliciaResearch034 = corpus.search(index, { query: "Hail Dust Grace Sagittarius Mage", characterId: "CHAR-LOKI-ALICIA-FORESTLIGHT", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliciaResearch034.results.some(claim => claim.claimId === "DMR-034-CLM-010"), "Alicia's magic profile must be searchable under Sword Oratoria.");
 assert.ok(aliciaResearch034.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Alicia's wiki claim must remain secondary.");
-const leeneResearch034 = corpus.search(index, { query: "Line Arshe Luna Sanatio Bete", characterId: "CHAR-LEENE-ARSHE", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+const leeneResearch034 = corpus.search(index, { query: "Line Arshe Bete sentimientos relato corto", characterId: "CHAR-LEENE-ARSHE", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(leeneResearch034.results.some(claim => claim.claimId === "DMR-034-CLM-012"), "Leene/Line's short-story relation claim must be searchable.");
 assert.ok(leeneResearch034.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Leene/Line's narrative claim must remain secondary.");
 const leeneGameAlias034 = corpus.search(index, { query: "Locolyte", characterId: "CHAR-LEENE-ARSHE", continuity: "CONT-GAME", period: "ALL", aspect: "all", spoiler: "all" });

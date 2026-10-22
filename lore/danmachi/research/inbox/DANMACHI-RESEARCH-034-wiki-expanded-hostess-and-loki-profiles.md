@@ -79,7 +79,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-GAME; CONT-ANIME
 - `source_title`: DanMachi Wiki — Anya Fromel
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Characteristics, Status, Familia, Debuts
-- `source_url`: https://danmachiwiki.fandom.com/wiki/Anya_Fromel
+- `source_url`: https://danmachi.fandom.com/wiki/Anya_Fromel
 - `evidence_type`: secondary_profile_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -96,7 +96,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-GAME; CONT-ANIME
 - `source_title`: Wiki DanMachi — Anya Fromel
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: History, Personality, Relationships
-- `source_url`: https://danmachii.fandom.com/es/wiki/Anya_Fromel
+- `source_url`: https://danmachi.fandom.com/es/wiki/Anya_Fromel
 - `evidence_type`: secondary_profile_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
@@ -113,7 +113,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-GAME; CONT-ANIME
 - `source_title`: Wiki DanMachi — Anya Fromel
 - `source_type`: SECONDARY_WIKI
 - `source_locator`: Skills, Magic, Equipment; mención comunitaria de Sword Oratoria vol. 2, cap. 3, p. 93 para Resistencia Anormal
-- `source_url`: https://danmachii.fandom.com/es/wiki/Anya_Fromel
+- `source_url`: https://danmachi.fandom.com/es/wiki/Anya_Fromel
 - `evidence_type`: secondary_profile_extract
 - `verification_status`: secondary_extract_only_primary_locator_pending
 - `spoiler_level`: major
