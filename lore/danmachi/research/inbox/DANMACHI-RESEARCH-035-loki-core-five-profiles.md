@@ -25,7 +25,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 | Lefiya Viridis | Mención en DanMachi vol. 5 y debut reportado en Sword Oratoria vol. 1 | School District, ascensos, Fairy Canon, Double Canon, hechizos y equipo |
 | Raul Nord | DanMachi vol. 8, Sword Oratoria vol. 1 y Astrea Record vol. 1 según la wiki | Puente de los Héroes, ascensos con Aki, mando delegado y armas |
 
-### DMR-035-CLM-001 — Bete: apariencia e historia de Vidar Familia
+### DMR-035-CLM-001 · Bete: apariencia e historia de Vidar Familia
 
 - `claim_id`: DMR-035-CLM-001
 - `claim`: La wiki inglesa describe a Bete con cabello/orejas/cola grises, ojos anaranjados, tatuaje azul en el lado izquierdo de la cara y constitución musculosa. Su historia comunitaria afirma que nació en un clan de hombres lobo, que tenía una hermana llamada Luna y una amiga de infancia llamada Reene, posteriormente pareja. Un monstruo destruyó el clan cuando Bete tenía alrededor de doce años. Más tarde fue capitán de Vidar Familia; con dieciséis años y nivel 3 salió de Orario a perseguir al monstruo. Al volver descubrió una expedición fallida con varias muertes, incluida una vicecapitana identificada como su pareja; Vidar Familia abandonó Orario y Bete se quedó, para unirse posteriormente a Loki tras un incidente de taberna con Finn y Gareth. Toda esta secuencia es resumen secundario.
@@ -43,7 +43,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: major
 - `confidence_note`: Confirmar nombres, edad y orden de eventos con Sword Oratoria; no inventar localizadores primarios.
 
-### DMR-035-CLM-002 — Bete: conducta, Knossos y skills
+### DMR-035-CLM-002 · Bete: conducta, Knossos y skills
 
 - `claim_id`: DMR-035-CLM-002
 - `claim`: El artículo comunitario presenta a Bete como áspero, provocador y reservado, sin demostrar que carezca de lealtad. En el primer asalto a Knossos habría dejado inconscientes a compañeros bajo la maldición de Dix para impedir que el enemigo los usara contra él o que se atacaran entre sí. El índice de habilidades enumera Fenris Wolf (aumento de velocidad al correr) y Solmani (aumento reportado de Fuerza y Agilidad al acelerar). Mecanismos y escena necesitan cotejo primario.
@@ -61,7 +61,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: major
 - `confidence_note`: No convertir el resumen en diálogo literal o regla de comportamiento universal.
 
-### DMR-035-CLM-003 — Tiona: identidad y discrepancias del snapshot
+### DMR-035-CLM-003 · Tiona: identidad y discrepancias del snapshot
 
 - `claim_id`: DMR-035-CLM-003
 - `claim`: Las wikis describen a Tiona como amazona, hermana gemela menor de Tione, integrante anterior de Kali Familia y miembro posterior de Loki Familia. El snapshot comunitario indica 17 años, 165 cm, nivel 6 y estado vivo. La fuente inglesa reporta ojos verde oscuro y piso máximo 60; el extracto español indica ojos café y piso máximo 59. El conflicto se conserva abierto; ninguna cifra se declara definitiva.
@@ -79,7 +79,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: moderate
 - `confidence_note`: Contrastar el color de ojos y el piso alcanzado por etapa en fuente primaria/editorial.
 
-### DMR-035-CLM-004 — Tiona: historia, Argonaut y decisión sobre Wiene
+### DMR-035-CLM-004 · Tiona: historia, Argonaut y decisión sobre Wiene
 
 - `claim_id`: DMR-035-CLM-004
 - `claim`: Los resúmenes dicen que Tiona y Tione crecieron en Telskyura bajo Kali Familia sin conocer a sus padres. Tiona habría ascendido a nivel 2 alrededor de los cinco años tras una lucha mortal, entrenado con Bache y pedido permiso para irse poco antes de cumplir siete. Las hermanas viajaron, estuvieron temporalmente en otra Familia y llegaron a Orario alrededor de los doce años, tras alcanzar nivel 3. La historia de Argonaut habría inspirado su decisión de sonreír para ayudar a otros. En el arco de Xenos, la wiki relata que dejó ir a Wiene tras verla salvar a un niño. Orden y edades son secundarios.
@@ -97,7 +97,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: major
 - `confidence_note`: Leer los pasajes publicados antes de fijar edades o detalles de la escena de Wiene.
 
-### DMR-035-CLM-005 — Tiona: habilidades y equipo
+### DMR-035-CLM-005 · Tiona: habilidades y equipo
 
 - `claim_id`: DMR-035-CLM-005
 - `claim`: La wiki enumera Berserk (poder ofensivo asociado al daño recibido), Intense Heat (incremento reportado en situaciones extremas), Fist Strike, Diving, Abnormal Resistance y Crush como parte de su registro. Entre sus armas lista Urga, gran espada de doble hoja atribuida a Goibniu Familia, Blade Rolan con Durandal atribuida a Tsubaki y Corbel Edge, una daga ligera. El historial de roturas/reemplazos de Urga es secundario, no prueba equipo permanente ni permite inferir precios canónicos.
@@ -115,7 +115,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: major
 - `confidence_note`: Cotejar las reglas y armas en la edición publicada por etapa.
 
-### DMR-035-CLM-006 — Tione: identidad, etapa y estadísticas
+### DMR-035-CLM-006 · Tione: identidad, etapa y estadísticas
 
 - `claim_id`: DMR-035-CLM-006
 - `claim`: La wiki inglesa identifica a Tione como amazona, hermana gemela mayor de Tiona, antigua integrante de Kali Familia y miembro de Loki Familia. El snapshot indica edad 17, altura 165 cm, nivel 6, viva y piso 60 reportado. Su panel anterior de nivel 5 muestra Fuerza A824, Resistencia B769, Destreza B781, Agilidad B785 y Magia G207. Valores y estados quedan ligados a ese panel y requieren revisión primaria.
@@ -133,7 +133,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: major
 - `confidence_note`: No mezclar el panel nivel 5 con el snapshot nivel 6.
 
-### DMR-035-CLM-007 — Tione: carácter, Finn, magia y equipo
+### DMR-035-CLM-007 · Tione: carácter, Finn, magia y equipo
 
 - `claim_id`: DMR-035-CLM-007
 - `claim`: El resumen comunitario dice que Tione intenta mostrarse serena y capaz, pero puede volverse agresiva bajo provocación. La describe enamorada de Finn; no afirma que él corresponda sus sentimientos. Asocia su historia a violencia en Telskyura, culpa tras matar a Seldas y un enfrentamiento contra Argana para proteger a su Familia. El perfil lista Berserk, Backdraft y List Iorum, además de Zolas (kukri), Filuka (cuchillo arrojadizo), Halberd Rolan y Corbel Edge. Las mecánicas, armas y escenas siguen secundarias.
@@ -151,7 +151,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: major
 - `confidence_note`: No convertir su afecto por Finn en reciprocidad ni las comparaciones en probabilidades universales.
 
-### DMR-035-CLM-008 — Lefiya: educación y snapshots
+### DMR-035-CLM-008 · Lefiya: educación y snapshots
 
 - `claim_id`: DMR-035-CLM-008
 - `claim`: La ficha inglesa identifica a Lefiya como elfa de quince años y 156 cm, cabello dorado y ojos azul oscuro; anteriormente estudió en el School District (clase Baldr, séptimo escuadrón) y luego entró en Loki Familia. El snapshot consultado la muestra viva, nivel 4, piso máximo 60. La wiki relata ascenso tras tres años de estudio con unos once años, un año adicional de escuela, ingreso a Loki en nivel 2 y otro ascenso alrededor de un año después. El calendario requiere cotejo.
@@ -169,7 +169,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: moderate
 - `confidence_note`: La ficha usa volúmenes como rutas de investigación, no como pasajes primarios ya leídos.
 
-### DMR-035-CLM-009 — Lefiya: magia y objetos
+### DMR-035-CLM-009 · Lefiya: magia y objetos
 
 - `claim_id`: DMR-035-CLM-009
 - `claim`: La wiki enumera Fairy Canon (potenciación de magia), Double Canon (conservación temporal del círculo de una magia ya cantada como anillo, con un límite reportado de una magia preparada y coste de Mind) y Mage (potencia, alcance y eficiencia de Mind). Los hechizos listados son Arcs Ray, Fusillade Fallarica y Elf Ring; objetos enumerados incluyen Tear Pain, Twin-Stick Fairy Dust, Magius Bangle y Concertato of Light and Flame. Las condiciones exactas, cantos y equipo por etapa necesitan fuente primaria.
@@ -187,7 +187,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: major
 - `confidence_note`: No convertir descripciones del compendio en condiciones confirmadas sin lectura del volumen.
 
-### DMR-035-CLM-010 — Raul: identidad e historia con Aki
+### DMR-035-CLM-010 · Raul: identidad e historia con Aki
 
 - `claim_id`: DMR-035-CLM-010
 - `claim`: La wiki española identifica a Raul Nord como humano de 21 años y 173 cm y reporta el alias High Novice. El snapshot lo muestra vivo, nivel 5, piso 60 y 16.888.000 valis. El perfil sitúa su ingreso a Loki alrededor de ocho años antes del marco de la wiki, aproximadamente cuando entró Aki; ambos habrían ascendido a nivel 2 tras enfrentarse a miembros de Evilus en la batalla del Puente de los Héroes durante el Gran Conflicto y llegado a nivel 4 aproximadamente cuatro años antes del snapshot tardío. La fuente enumera DanMachi vol. 8, Sword Oratoria vol. 1 y Astrea Record vol. 1 como rutas de debut.
@@ -205,7 +205,7 @@ Los volúmenes que las wikis enumeran son rutas preliminares de verificación, n
 - `spoiler_level`: moderate
 - `confidence_note`: Mantener relativas las referencias temporales y verificar en novela la batalla y ascensos.
 
-### DMR-035-CLM-011 — Raul: personalidad, habilidades y equipo
+### DMR-035-CLM-011 · Raul: personalidad, habilidades y equipo
 
 - `claim_id`: DMR-035-CLM-011
 - `claim`: Los perfiles describen a Raul como tímido, preocupado e inseguro ante la responsabilidad, pero serio y deseoso de ser útil. Finn le confía dirigir miembros de menor rango, y su esfuerzo por animarlos puede inspirarlos. La wiki lista Hunter, Abnormal Resistance, Escape y sentidos mejorados; lo presenta como competente con distintas armas sin una especialidad perfecta. Enumera Protagonista, espada que Aki le habría dado después de descubrirlo desesperado por dinero, y Noble Bow, arco fabricado inicialmente para Riveria y luego entregado por Finn. También relata un engaño de Lili durante el movimiento relacionado con Xenos. Todos los detalles concretos requieren cotejo.
