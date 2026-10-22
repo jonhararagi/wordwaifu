@@ -1,5 +1,18 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-027 · Cinco perfiles de la primera Astrea Familia (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no fue modificado.
+- **Expedientes ampliados:** Noin Unic, Asta Knox, Neze Rankett, Iska Bra y Celty Srowa. Se conservaron sus IDs estables y las rutas existentes.
+- **Nuevas fuentes:** DMR-027-SRC-001 a DMR-027-SRC-009; portal oficial de la adaptación, wikis comunitarias inglesa/española, índice de relatos y traducciones comunitarias de las historias cortas «Neze Rankett», «Iska Bra» y «Celty Srowa». Las fichas editoriales de GA Bunko se registran solo como bibliografía, no como evidencia de escenas.
+- **Datos recuperados:** Noin aparece en una mención grupal, sin función individual probada; Asta tiene un escudo reportado en la wiki pero su historia corta sigue sin traducción recuperada; Neze tiene una operación contra Evilus, capacidad de combate bajo luna llena y un cambio de nombre traducido; Iska explica su pasado en un orfanato, el interés en belleza/moda y su estilo pugilista; Celty narra su huida del Bosque de Yenite, su conflicto con el conocimiento y su función de maga defensiva.
+- **Conflictos dejados abiertos:** edad de Iska (16 en la traducción de la historia corta frente a 18 en ficha comunitaria), edad de Celty (13 en traducción frente a 15 en ficha), y discrepancias en los niveles de Noin, Asta, Neze, Iska y Celty. Ninguno se resuelve por intuición.
+- **Límite canónico:** todo dato de las wikis o de traducciones comunitarias permanece como `secondary_extract_only_primary_locator_pending`; se distinguen CONT-AR y CONT-ANIME, y no se inventan psicología ni escenas individuales para Noin/Asta.
+- **Integración:** nuevo paquete `research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md`, catálogo actualizado a 115 documentos de apoyo, cargador `src/lore-corpus.js) actualizado y siete pruebas específicas de recuperación/continuidad añadidas.
+- **Validación:** pendiente de que GitHub Actions ejecute las pruebas y valide el catálogo del commit más reciente. No declarar `PASS` antes de leer ambos workflows.
+- **Próximo paso:** cotejar los textos japoneses de las historias cortas en los volúmenes 1 y 3 de *Astrea Record*, priorizando edad, magia, alias, acciones y localizadores de escenas.
+
+
 ## DANMACHI-RESEARCH-026 · Ampliación de Alfia, Zald, Valletta, Jura y Erebus (2026-10-21)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no fue modificado.
