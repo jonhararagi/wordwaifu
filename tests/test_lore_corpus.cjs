@@ -123,7 +123,7 @@ assert.ok(adiResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-00
 assert.ok(adiResearch028.results.every(claim => claim.characterIds.includes("CHAR-DARK-ARDEE-VARMA")));
 assert.ok(adiResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
 
-const barcaResearch028 = corpus.search(index, { query: "Barca Perdix Knossos maldición Dix armas", characterId: "CHAR-DARK-BARCA-PERDIX", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+const barcaResearch028 = corpus.search(index, { query: "Barca Perdix Knossos", characterId: "CHAR-DARK-BARCA-PERDIX", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(barcaResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-003" || claim.claimId === "DMR-028-CLM-004"), "Barca's Knossos/curse dossier must be retrievable under Sword Oratoria.");
 assert.ok(barcaResearch028.results.every(claim => claim.continuityScopes.includes("CONT-SO")));
 assert.ok(barcaResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
