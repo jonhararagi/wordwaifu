@@ -532,7 +532,7 @@ assert.ok(zeusProfileText.includes("Behemoth") && zeusProfileText.includes("Levi
 const maximProfileText = index.profileDetails["CHAR-MAXIM"].sections.map(section => section.text).join(" ");
 assert.ok(maximProfileText.includes("siguiente generación") && maximProfileText.includes("Dragón Negro"), "Maxim profile must expose the reported preparation of the next generation.");
 const alfiaProfileText = index.profileDetails["CHAR-DARK-ALFIA"].sections.map(section => section.text).join(" ");
-assert.ok(alfiaProfileText.includes("Meteria") && alfiaProfileText.includes("primaria"), "Alfia profile must keep its reported family relation and primary-source caveat.");
+assert.ok(alfiaProfileText.includes("Meteria") && (alfiaProfileText.includes("pendiente") || alfiaProfileText.includes("secundaria")), "Alfia profile must keep its reported family relation and verification caveat.");
 const zaldProfileText = index.profileDetails["CHAR-DARK-ZALD"].sections.map(section => section.text).join(" ");
 assert.ok(zaldProfileText.includes("veneno") && zaldProfileText.includes("Alfia"), "Zald profile must keep his reported limitation and relationship lead.");
 
