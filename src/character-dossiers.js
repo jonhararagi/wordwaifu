@@ -716,7 +716,8 @@
       relationships: "El vínculo disponible es la afiliación de roster a Soma Familia y, por tanto, la relación organizativa con Soma. La pertenencia común no basta para afirmar una relación personal con Kaede, Momiji, Zanis o Chandra.",
       conflict: "No se atribuye un conflicto individual. El pendiente es encontrar evidencia primaria que confirme que la identidad aparece en la continuidad objetivo, su período de pertenencia y cualquier dato de caracterización antes de promoverla desde ficha de roster a biografía desarrollada.",
       sources: ["https://danmachi.fandom.com/wiki/Category:Soma_Familia", "https://danmachi.fandom.com/wiki/Soma_Familia"]
-    }    "CHAR-DARK-ALECTO": {
+    },
+    "CHAR-DARK-ALECTO": {
       appearance: "Deidad femenina vinculada a Alecto Familia. Las páginas comunitarias son la referencia para su retrato; no se inventan edad, estatura ni rasgos físicos que no estén descritos de forma textual.",
       history: "La ficha de Miraheze la vincula con Alecto Familia y el conflicto de las deidades de Evilus durante la Era Oscura/Astrea Record. Deben separarse las decisiones de Alecto de las acciones de su Familia y de las de Dina y Vena Dis. El material consultado no autoriza a tratar cada operación de Evilus como una orden personal suya ni a trasladar eventos del juego a la novela sin etiquetarlos.",
       personality: "Su perfil y papel narrativo deben describirse a partir de acciones concretas citadas por la fuente, no de su nombre mitológico. Los rasgos personales que no estén respaldados por la página o una escena quedan desconocidos; ser una deidad asociada a Evilus no basta para definir toda su psicología.",
