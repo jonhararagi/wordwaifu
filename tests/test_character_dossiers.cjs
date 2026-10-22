@@ -156,7 +156,7 @@ for(const expected of priorityProfiles044){
  for(const token of expected.tokens)assert.ok(searchable.includes(token),expected.id+" must expose bilingual details: "+token);
  assert.ok(profile.sources.includes(expected.source),expected.id+" must prioritize the current migrated English Miraheze page.");
 }
-assert.ok(api.get("CHAR-LEENE-ARSHE").history.includes("Line Arshe") && api.get("CHAR-LEENE-ARSHE").history.includes("Leene Arshe"),"Line/Leene must use a single stable application ID.");
+assert.ok(api.get("CHAR-LEENE-ARSHE").appearance.includes("Line Arshe") && api.get("CHAR-LEENE-ARSHE").appearance.includes("Leene Arshe"),"Line/Leene must use a single stable application ID.");
 assert.ok(api.get("CHAR-LEENE-ARSHE").conflict.includes("ruta de juego") && api.get("CHAR-LEENE-ARSHE").conflict.includes("Sword Oratoria"),"Line's game survival route must remain distinct from the SO death.");
 
 
