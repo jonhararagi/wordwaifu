@@ -101,9 +101,9 @@ evidence_claims:
 abilities:
   - "Naturaleza de Creature: la wiki afirma que aumenta su fuerza al consumir piedras mágicas; la ingestión exige un consumo corporal muy alto. La cantidad y progresión por etapa necesitan cotejo."
   - "La fuente afirma que llegó a superar su fuerza anterior al consumir piedras mágicas; no convertir esto en un nivel fijo o permanente."
-  - "Curación acelerada: la ficha comunitaria dice que puede regenerar heridas mortales gastando resistencia física y Mind. Las lesiones graves se recuperan relativamente despacio y el coste acumulado reduce el rendimiento de combate."
-  - "Sentidos mejorados: la wiki le atribuye detectar la presencia de Asfi cuando estaba invisible; no equivale a una detección infalible de cualquier enemigo oculto."
-  - "Tamer/control de monstruos: se le atribuye controlar ciertas plantas monstruosas creadas por el Espíritu Corrupto, incluidas Violas/Viscums, y anular sus instintos. No extenderlo a todas las especies ni describirlo como control ilimitado."
+  - "Curación acelerada (Accelerated Healing): la ficha comunitaria dice que puede regenerar heridas mortales gastando resistencia física y Mind. Las lesiones graves se recuperan relativamente despacio y el coste acumulado reduce el rendimiento de combate."
+  - "Sentidos mejorados (Enhanced Senses): la wiki le atribuye detectar la presencia de Asfi cuando estaba invisible; no equivale a una detección infalible de cualquier enemigo oculto."
+  - "Tamer/control de monstruos (Tamer): se le atribuye controlar ciertas plantas monstruosas creadas por el Espíritu Corrupto, incluidas Violas/Viscums, y anular sus instintos. No extenderlo a todas las especies ni describirlo como control ilimitado."
 skills:
   []
 magic:

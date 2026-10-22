@@ -406,7 +406,7 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "Bell Cran
 const hermesResearch032 = corpus.search(index, { query: "Hermes Bell Asfi Ouranos", characterId: "CHAR-HERMES", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(hermesResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-001"), "Hermes profile and volume-5 route must be searchable.");
 assert.ok(hermesResearch032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Hermes profile claims must remain secondary.");
-const ouranosResearch032 = corpus.search(index, { query: "Ouranos Room Prayer Xenos Fels", characterId: "CHAR-OURANOS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+const ouranosResearch032 = corpus.search(index, { query: "Ouranos oración Dungeon Xenos Fels", characterId: "CHAR-OURANOS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(ouranosResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-002"), "Ouranos prayer/Xenos profile must be retrievable.");
 assert.ok(ouranosResearch032.results.every(claim => claim.continuityScopes.includes("CONT-MAIN-LN")), "Ouranos result must retain declared main-line scope.");
 const ganeshaResearch032 = corpus.search(index, { query: "Ganesha Monsterphilia Xenos Ouranos", characterId: "CHAR-GANESHA", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -415,10 +415,10 @@ assert.ok(ganeshaResearch032.results.every(claim => claim.verificationStatus.inc
 const daphneResearch032 = corpus.search(index, { query: "Daphne Raumure Laurus Wreath", characterId: "CHAR-DAPHNE-LAUROS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(daphneResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-004"), "Daphne period/skills/magic profile must be searchable.");
 assert.ok(daphneResearch032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Daphne's levels and mechanics must remain secondary.");
-const cassandraResearch032 = corpus.search(index, { query: "Cassandra Soullight prophetic dreams Daphne", characterId: "CHAR-CASSANDRA-ILION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+const cassandraResearch032 = corpus.search(index, { query: "Cassandra Soullight sueños Daphne curación", characterId: "CHAR-CASSANDRA-ILION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(cassandraResearch032.results.some(claim => claim.claimId === "DMR-032-CLM-005"), "Cassandra's healing/prophecy profile must be searchable.");
 assert.ok(cassandraResearch032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Cassandra's prophecy and spell details must remain secondary.");
-const olivasAbilities032 = corpus.search(index, { query: "Olivas Accelerated Healing Tamer Violas Viscums", characterId: "CHAR-DARK-OLIVAS-ACT", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+const olivasAbilities032 = corpus.search(index, { query: "Olivas regeneración Mind sentidos Tamer Violas Viscums", characterId: "CHAR-DARK-OLIVAS-ACT", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(olivasAbilities032.results.some(claim => claim.claimId === "DMR-032-CLM-006"), "Olivas's detailed regeneration/senses/monster-control claim must be indexed.");
 assert.ok(olivasAbilities032.results.every(claim => claim.continuityScopes.includes("CONT-SO")), "Olivas ability claim must stay in Sword Oratoria continuity.");
 assert.ok(olivasAbilities032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Olivas ability details must remain secondary pending novel review.");

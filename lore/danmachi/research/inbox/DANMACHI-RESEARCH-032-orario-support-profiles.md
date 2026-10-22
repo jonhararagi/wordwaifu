@@ -109,7 +109,7 @@ continuity: CONT-MAIN-LN; CONT-SO; CONT-ANIME; CONT-UNVERIFIED
 ### DMR-032-CLM-006 · Olivas Act: regeneración, sentidos y control de monstruos
 
 - `claim_id`: DMR-032-CLM-006
-- `claim`: La ficha inglesa de Olivas Act atribuye a su naturaleza de Creature un aumento de fuerza por consumir piedras mágicas, con una demanda de consumo muy alta. Describe también curación acelerada de heridas mortales a costa de resistencia y Mind; las lesiones graves tardan en regenerar y el coste reduce su rendimiento de combate. La misma fuente le atribuye sentidos suficientes para detectar a Asfi invisible y control de ciertas plantas monstruosas creadas por el Espíritu Corrupto, incluidas Violas/Viscums, anulando sus instintos. El arco se asocia a Sword Oratoria vol. 3; el episodio 8 del anime es solo una referencia de adaptación, no prueba de la novela.
+- `claim`: La ficha inglesa de Olivas Act atribuye a su naturaleza de Creature un aumento de fuerza por consumir piedras mágicas, con una demanda de consumo muy alta. Describe también curación acelerada (Accelerated Healing) de heridas mortales a costa de resistencia y Mind; las lesiones graves tardan en regenerar y el coste reduce su rendimiento de combate. La misma fuente le atribuye sentidos mejorados (Enhanced Senses) suficientes para detectar a Asfi invisible y una capacidad Tamer de control de ciertas plantas monstruosas creadas por el Espíritu Corrupto, incluidas Violas/Viscums, anulando sus instintos. El arco se asocia a Sword Oratoria vol. 3; el episodio 8 del anime es solo una referencia de adaptación, no prueba de la novela.
 - `character_id`: CHAR-DARK-OLIVAS-ACT
 - `source_id`: DMR-025-SRC-001
 - `source_corroborating_source_id_1`: DMR-032-SRC-011
