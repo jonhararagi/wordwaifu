@@ -250,3 +250,13 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Leene Arshe / Line Arshe](characters/leene-arshe.md) — se conserva un solo ID; cruce japonés apoyado por referencias secundarias, con variante Locolyte y supervivencia del juego separadas de Sword Oratoria.
 - [Paquete de 14 claims y fuentes](research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md) y [registro maestro de fuentes](sources/00-registro-fuentes.md).
 - **Límite:** se recuperaron extractos indexados en inglés y español, pero no se cotejaron directamente los textos íntegros de las novelas. No hay localizadores primarios verificados en este lote.
+
+
+## DANMACHI-RESEARCH-035 · Cinco perfiles ampliados de Loki Familia
+
+- [Paquete de investigación](research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md): Bete Loga, Tiona Hiryute, Tione Hiryute, Lefiya Viridis y Raul Nord.
+- Se agregaron once claims estructurados al corpus. Las cinco identidades y sus rutas de ficha existentes se conservaron: no se crearon duplicados.
+- Las ampliaciones incluyen historia, rasgos psicológicos contextualizados, relaciones, progresión, skills, magia y equipo donde los perfiles comunitarios proporcionan datos.
+- **Evidencia:** los datos nuevos están etiquetados como secundarios; Fandom/mirror no pudo leerse integralmente por acceso 402/403. Volúmenes nombrados por la wiki son rutas para cotejar, no páginas primarias ya verificadas.
+- Se conservaron discrepancias internas, especialmente Tiona (ojos café frente a verde oscuro; piso 59 frente a 60). Las reencarnaciones atribuidas por la wiki a Tiona/Tione no se confirman como canon.
+- Próximo paso: cotejar los once claims contra las ediciones publicadas y guardar capítulo/página solo después de leer el pasaje.
