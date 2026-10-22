@@ -204,7 +204,7 @@ El vínculo que puede registrarse por ahora es la afiliación histórica con Ast
 - **Perfil comunitario:** la wiki inglesa la incluye como humana, mujer y antigua aventurera de Astrea Familia; reporta nivel entre 3 y 4 y estado fallecido. La tabla española marca nivel 4. Se conserva el desacuerdo y no se traslada el nivel a todos los periodos.
 - **Aparición listada:** la ficha comunitaria la sitúa en el recuerdo de DanMachi volumen 14 y el episodio 14 de DanMachi IV. El portal oficial confirma su especie humana y la incluye bajo Astrea Familia en la adaptación, pero no ofrece una biografía extensa.
 - **Historia corta:** el índice de historias comunitario lista una pieza «Noin Unic» en *Astrea Record*, volumen 3. El texto individual japonés continúa pendiente.
-- **Única mención de escena adicional localizada:** en la traducción comunitaria de la historia de Neze, Noin aparece entre las compañeras que celebran el resultado de una operación. Esa mención no identifica su función táctica ni su personalidad.
+- **Única mención de escena adicional localizada:** en la traducción comunitaria de la historia de Neze, Noin e Iska aparecen entre las compañeras que celebran el resultado de una operación. Esa mención no identifica su función táctica ni su personalidad.
 - **Límite biográfico:** no se atribuyen magia, arma, gustos, miedos, rivalidades, cargo de mando ni causa individual de muerte. El resumen colectivo de la adaptación no sustituye una escena final individual.
 
 **Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-004, DMR-027-SRC-007 y DMR-027-SRC-009.  
