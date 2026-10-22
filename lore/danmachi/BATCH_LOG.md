@@ -8,7 +8,7 @@
 - **Fuentes:** 10 referencias comunitarias inglesas/españolas; algunas se recuperaron como extractos indexados. La lectura integral de los mirrors actuales y el cotejo directo de las novelas no se lograron en esta tanda.
 - **Conflictos abiertos:** Hedin, Hildrsleif/Hildr Slēv; Heith, piso 58/60 y Reverse/Rebirth Gandr; Chloe, piso 37/60; Lunoa/Lunoire, grafía editorial y piso 37/60. No se elige una forma como canónica por intuición.
 - **Continuidad:** los añadidos DMR-036 quedan como referencias secundarias. Los perfiles oficiales de adaptación de Chloe y Lunoa (DMR-006) se conservan separados.
-- **Validación:** comprobar los dos workflows en el SHA exacto del commit de integración antes de declarar PASS.
+- **Validación del commit de integración `11c87a5d86dc37d366c4b170dcc37cc43ed13fde`:** [Validate WordWaifu PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39827129351) y [DanMachi Lore and Retrieval Integrity PASS](https://github.com/jonhararagi/wordwaifu/actions/runs/39827129372). Recuperación de claims, archivo de personajes, expedientes extendidos, smoke test del navegador y validación de catálogo/enlaces aprobados.
 - **Siguiente paso:** cotejar ediciones autorizadas y registrar localizadores reales para la historia de Hjaðningavíg/Dis Sisters, magia de Hedin/Hogni/Heith, encargos de Chloe/Lunoa y discrepancias de niveles/pisos.
 
 ## DANMACHI-RESEARCH-035 · Cinco perfiles de Loki Familia ampliados (2026-10-22)
