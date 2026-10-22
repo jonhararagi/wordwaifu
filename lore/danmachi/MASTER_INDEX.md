@@ -67,6 +67,12 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [DANMACHI-RESEARCH-006 · Cronología Hestia/Bell y puerta de divergencia AU](research/inbox/DANMACHI-RESEARCH-006-hestia-bell-au-timeline.md) — separa evidencia oficial de la fecha secundaria pendiente de verificar y define los criterios para probar la divergencia del OC.
 - [DANMACHI-RESEARCH-013 · Soma Familia, Liliruca y roster de miembros](research/inbox/DANMACHI-RESEARCH-013-soma-family-roster-and-dossiers.md) — distingue sinopsis oficiales de los volúmenes 2/6, perfil de adaptación y detalles secundarios pendientes.
 
+## Últimas ampliaciones de perfiles
+
+- [DANMACHI-RESEARCH-036 · Hedin, Hogni, Heith, Chloe y Lunoa/Lunoire](research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md) — 15 claims secundarios; biografía, técnicas y equipo expandidos, con discrepancias visibles y cotejo primario pendiente.
+- [DANMACHI-RESEARCH-035 · Bete, Tiona, Tione, Lefiya y Raul](research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md) — expansión de cinco perfiles de Loki Familia y rutas por volumen.
+- [DANMACHI-RESEARCH-034 · Allen, Anya, Mia, Alicia y Leene/Line](research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md) — ampliación secundaria y control de aliases/continuidades.
+
 ## 3. Índices por categoría
 
 ### Mundo, sistemas y misterios
