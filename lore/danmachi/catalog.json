@@ -2387,23 +2387,8 @@
       "status": "candidate_not_created"
     },
     {
-      "id": "CHAR-HERMES",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-OURANOS",
-      "type": "deity_character",
-      "status": "candidate_not_created"
-    },
-    {
       "id": "CHAR-FELS",
       "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-GANESHA",
-      "type": "deity_character",
       "status": "candidate_not_created"
     },
     {
