@@ -5,8 +5,8 @@ type: character
 status: partial_official_adaptation_checked_primary_locator_pending
 confidence: official DanMachi IV profile for CONT-ANIME; individual historical chronology and detailed abilities remain partial
 continuity_scope: CONT-ANIME; CONT-AR
-source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006]
-claim_refs: [DMR-003-CLM-002, DMR-007-CLM-003, DMR-007-CLM-024, DMR-007-CLM-026]
+source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-005]
+claim_refs: [DMR-003-CLM-002, DMR-007-CLM-003, DMR-007-CLM-024, DMR-007-CLM-026, DMR-030-CLM-005, DMR-030-CLM-006]
 aliases:
   - "ライラ"
   - "Sly Rat"
@@ -182,7 +182,7 @@ duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
 verification_status: "Official DanMachi IV profile checked; secondary roster retained only as a lead; novel locators pending"
-research_source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006]
+research_source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-005]
 ---
 # Lyra
 
@@ -241,3 +241,12 @@ La sinopsis oficial del episodio 20 identifica a Ryuu como única superviviente 
 
 Fuentes y claims: DMR-007-SRC-001 / claims 003 y 024, DMR-007-SRC-006 / claim 026; la pista secundaria de afiliación es DMR-003-CLM-002.
 
+
+
+## Ampliación secundaria de perfil, magia y equipo · DANMACHI-RESEARCH-030
+
+La ficha comunitaria añade datos físicos —Pallum, mujer, cabello rosa de longitud media, 117 cm— y reporta 18 años y nivel 3 para el estado histórico. La describe como perspicaz, mordaz, de carácter contrario y habla brusca; Ryuu, sin embargo, valoraba su juicio y acudía a ella para hablar de sus problemas después de Alise. La misma fuente atribuye a su falna una mejora de los sentidos, en especial de la vista. Edad, altura, nivel y habilidades se conservan como afirmaciones secundarias, no como datos del perfil histórico primario ya verificado.
+
+El artículo enumera Ratts Phil y Agile Salt como skills, Mūs Mine y Wingus Smite como magias y Carnivore como dos armas curvas tipo búmeran. Mūs Mine se describe como campo de minas; también menciona bombas fabricadas por Lyra y un objeto defensivo llamado Aegis, atribuido a Asfi y Tsubaki, capaz de copiar la magia con la que entraba en contacto y destruido durante una batalla contra Alfia. El extracto no describe el efecto de Wingus Smite, así que no se completa ese campo. La wiki también presenta a Lyra como reencarnación de Helga, antigua segunda al mando de los Fianna Knights, y le atribuye haber enseñado póquer a Ryuu; la reencarnación es un spoiler mayor y requiere verificación independiente antes de disparar advertencias automáticas de continuidad.
+
+**Fuentes y alcance:** DMR-030-CLM-005 y DMR-030-CLM-006; https://danmachi.fandom.com/wiki/Lyra. Extracto secundario, con localizadores primarios pendientes.
