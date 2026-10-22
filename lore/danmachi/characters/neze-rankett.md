@@ -10,10 +10,18 @@ source_refs:
   - "DMR-007-SRC-009"
   - "DMR-007-SRC-010"
   - "DMR-001-SRC-003"
+  - "DMR-027-SRC-001"
+  - "DMR-027-SRC-002"
+  - "DMR-027-SRC-003"
+  - "DMR-027-SRC-004"
+  - "DMR-027-SRC-007"
+  - "DMR-027-SRC-008"
 claim_refs:
   - "DMR-007-CLM-016"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-030"
+  - "DMR-027-CLM-005"
+  - "DMR-027-CLM-006"
 verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
 tags: ["Neze Rankett", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
@@ -22,6 +30,12 @@ research_source_refs:
   - "DMR-007-SRC-009"
   - "DMR-007-SRC-010"
   - "DMR-001-SRC-003"
+  - "DMR-027-SRC-001"
+  - "DMR-027-SRC-002"
+  - "DMR-027-SRC-003"
+  - "DMR-027-SRC-004"
+  - "DMR-027-SRC-007"
+  - "DMR-027-SRC-008"
 entity_type: character
 canonical_name: "Neze Rankett"
 aliases:
@@ -194,3 +208,15 @@ La traducción comunitaria muestra cooperación con Ryuu, Iska y Noin en una ope
 - [Perfil oficial de personajes de DanMachi IV](https://danmachi.com/danmachi4/character/) — identidad, especie y referencia visual; continuidad de adaptación.
 - [Sinopsis oficial del episodio 20 de DanMachi IV](https://danmachi.com/danmachi4/story/index.php?slideNum=1) — conclusión colectiva sobre la primera Familia; no una escena individual.
 - [Publicación comunitaria sobre la historia corta «Neze Rankett»](https://danmachi.fandom.com/wiki/User_blog:Kisaki_Tosane/Astraea_Record_Volume_1_SS_%22Neze_Rankett%22) — pista secundaria, no sustituto del volumen japonés.
+
+
+## Ampliación narrativa desde la historia corta y las wikis · DMR-027
+
+- **Perfil y apariencia reportados:** la referencia oficial de DanMachi IV la identifica como mujer lobo y la ubica en Astrea Familia. La wiki comunitaria describe piel morena, cabello claro/beige, ojos marrones y ropa ligera. La traducción de la historia corta informa 18 años, más de 170 cm y una constitución atlética; son detalles de una traducción comunitaria, no cifras cotejadas en japonés.
+- **Combate:** la historia corta la presenta como una combatiente cuya capacidad de bestialización aumenta bajo la luna llena. En una operación contra soldados de Evilus, Neze cae desde una zona elevada y golpea a varios enemigos con gran rapidez; el grupo había preparado la operación y celebra su resultado. La escena sugiere capacidad de vanguardia, no invulnerabilidad ni una regla universal de que siempre supere a Kaguya o Ryuu.
+- **Relaciones visibles:** Iska, Noin, Celty y Kaguya aparecen reaccionando a la operación. El intercambio con Kaguya es competitivo y burlón en ese momento; no demuestra enemistad permanente. Ryuu le entrega una poción después de la acción.
+- **Nombre de aventurera:** al cierre del relato, Astrea insiste en que se cambie el nombre de aventurera; el blog traduce el nuevo nombre como «Miner Rauba» o «Just Fang». La lectura japonesa y el matiz de traducción deben comprobarse antes de fijarlo como epíteto canónico.
+- **Nivel y cronología:** las referencias comunitarias dan entre nivel 3–4 y nivel 4, sin establecer en la tabla una fecha uniforme. La wiki la sitúa en el recuerdo de DanMachi volumen 14 / DanMachi IV episodio 14; esa aparición posterior y la historia corta de *Astrea Record* son rutas diferentes. La participación individual final no se reconstruye solo desde el resultado grupal de la adaptación.
+
+**Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-004 y DMR-027-SRC-007/008.  
+**Pendiente:** revisar el texto japonés de volumen 1 para confirmar la edad, el alcance de su transformación, la secuencia de combate y el nombre traducido.
