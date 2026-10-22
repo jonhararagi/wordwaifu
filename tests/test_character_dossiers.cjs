@@ -10,7 +10,7 @@ const freyaSecondaryProfiles = [
   { id: "CHAR-HOGNI-RAGNAR", tokens: ["Hjaðningavíg", "Dainsleif", "Victim Abyss"], source: "https://danmachi.fandom.com/wiki/Hogni_Ragnar" },
   { id: "CHAR-HEITH-VELVET", tokens: ["Reverse Gandr/Rebirth Gandr", "Crimson Gold Heal Rod", "Andhrímnir"], source: "https://danmachi.fandom.com/wiki/Heith_Velvet" },
   { id: "CHAR-CHLOE-ROLO", tokens: ["Shakti Varma", "Feles Cruz", "Violetta"], source: "https://danmachi.fandom.com/wiki/Chloe_Rollo" },
-  { id: "CHAR-LUNOA-FAUST", tokens: ["Gulliver", "Fist Fighter", "piso 37/60"], source: "https://danmachi.fandom.com/wiki/Lunoire_Faust" }
+  { id: "CHAR-LUNOA-FAUST", tokens: ["Gulliver", "Fist Fighter", "piso máximo difiere entre inglés (60) y el extracto español (37)"], source: "https://danmachi.fandom.com/wiki/Lunoire_Faust" }
 ];
 for (const expected of freyaSecondaryProfiles) {
   const profile = api.get(expected.id);
