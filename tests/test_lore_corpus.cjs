@@ -3,6 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const corpus = require("../src/lore-corpus.js");
 const root = path.join(__dirname, "..", "lore", "danmachi");
+const sourceLoader = fs.readFileSync(path.join(root, "../../src/lore-corpus.js"), "utf8");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
 const documentPaths = [
   "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",
@@ -54,6 +55,9 @@ assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, 
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
 assert.equal(index.sourceClaimCount, 273, "Indexed claims include research batches 033 through 041.");
 assert.equal(index.entryCount, 276, "All claims including batches 033 through 041 are searchable.");
+assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md"), "Runtime query loader must include DMR-039.");
+assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md"), "Runtime query loader must include DMR-040.");
+assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md"), "Runtime query loader must include DMR-041.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
