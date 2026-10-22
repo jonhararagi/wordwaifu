@@ -67,7 +67,7 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-LILIRUCA-ARDE | [Liliruca Arde](liliruca-arde.md) | Lili | Soma Familia (histórica); Hestia Familia (posterior); Bell | Sinopsis oficial vol. 2: primer equipo con Bell; vol. 6: captura por Soma Familia; biografía y escenas detalladas pendientes de cotejo primario |
 | CHAR-MIKOTO-YAMATO | Mikoto Yamato | Mikoto | Hestia Familia, Takemikazuchi Familia | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-SANJOUNO-HARUHIME | Sanjouno Haruhime | Haruhime | Hestia Familia, Ishtar historia | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia (estado histórico); Hostess of Fertility (perfil de adaptación) | Expediente de aplicación existente; cotejo de LN pendiente |
+| CHAR-RYUU-LION | [Ryu Lion / Ryuu Lion](ryuu-lion.md) | Ryu, Ryuu; リュー・リオン | Astrea Familia histórica; etapas posteriores, relación con Astrea y Astraea Record | Perfil ampliado con relaciones y magia tardía reportadas; etapas separadas, cotejo primario pendiente |
 | CHAR-FREYA | [Freya](freya.md) | Syr como alias/identidad por verificar con cuidado | Freya Familia, Bell; relaciones con spoiler | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-OTTAR | [Ottar](ottar.md) | Ottar | Freya Familia, entrenamiento, lealtad | Expediente de aplicación existente; cotejo de LN pendiente |
 | CHAR-HERMES | Hermes | Hermes | Hermes Familia, Bell | Candidato pendiente |
@@ -83,9 +83,9 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-HERA | [Hera](hera.md) | Deidad de Hera Familia | Referencia secundaria; localizador primario pendiente; historia antigua |
 | CHAR-MAXIM | [Maxim](maxim.md) | Capitán reportado de Zeus Familia; nivel reportado 8 | Fuente comunitaria; cargo/nivel por etapa pendientes de cotejo |
 | CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Astrea Familia; guía/capitana de Ryu en sinopsis editorial | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-KAGUYA | [Gojouno Kaguya](gojouno-kaguya.md) | Kaguya; Yamato Rindō | Astrea Familia; vicecapitana en CONT-ANIME | Perfil oficial de adaptación y vínculo con Ryuu identificados; historia/escenas individuales de CONT-AR pendientes de cotejo primario |
-| CHAR-LYRA | [Lyra](lyra.md) | Lyra; Sly Rat | Astrea Familia; Pallum; estratega en CONT-ANIME | Perfil oficial de adaptación y apoyo estratégico a Ryuu identificados; biografía y escenas individuales de CONT-AR aún parciales |
+| CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Capitanaa; guía de Ryuu; magia/equipo reportados en DMR-030 | Perfil secundario inglés/español ampliado; piso 33 vs 41 en conflicto; cotejo LN pendiente |
+| CHAR-KAGUYA | [Gojouno Kaguya](gojouno-kaguya.md) | Kaguya; Yamato Rindō | Astrea Familia; vicecapitana CONT-ANIME; historia del Lejano Oriente y técnicas reportadas en DMR-030 | Perfil secundario ampliado; historia corta y magia/armas pendientes de cotejo primario |
+| CHAR-LYRA | [Lyra](lyra.md) | Lyra; Sly Rat | Astrea Familia; Pallum; apoyo estratégico, Mūs Mine/Carnivore y spoiler Helga reportados | Perfil secundario ampliado; habilidades, equipo y reencarnación pendientes de cotejo primario |
 | CHAR-DARK-ALFIA | [Alfia](dark-era/alfia.md) | Hera Familia (reportado); Meteria | Ficha existente; fuente secundaria; localizador primario pendiente; spoiler mayor |
 | CHAR-DARK-ZALD | [Zald](dark-era/zald.md) | Zeus Familia (reportado); variante Zard pendiente de edición | Ficha existente; no duplicar identidad; localizador primario pendiente |
 | CHAR-METERIA | [Meteria](dark-era/meteria.md) | Hera Familia, Alfia, Bell (spoiler) | Expediente secundario; maternidad y parentesco pendientes de localizador primario |
