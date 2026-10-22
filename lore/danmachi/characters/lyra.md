@@ -2,7 +2,7 @@
 id: CHAR-LYRA
 universe: danmachi
 type: character
-status: partial_official_adaptation_checked_primary_locator_pending
+status: secondary_profile_augmented_primary_locator_pending
 confidence: official DanMachi IV profile for CONT-ANIME; individual historical chronology and detailed abilities remain partial
 continuity_scope: CONT-ANIME; CONT-AR
 source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-005]
@@ -181,7 +181,7 @@ related_record_ids: [CHAR-RYUU-LION, CHAR-ALISE-LOVELACE, CHAR-ASTREA, CHAR-KAGU
 duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
-verification_status: "Official DanMachi IV profile checked; secondary roster retained only as a lead; novel locators pending"
+verification_status: "Wiki profile, ability/equipment reports and major-spoiler lead added; primary novel locators remain pending."
 research_source_refs: [DMR-003-SRC-002, DMR-007-SRC-001, DMR-007-SRC-004, DMR-007-SRC-006, DMR-030-SRC-005]
 ---
 # Lyra
