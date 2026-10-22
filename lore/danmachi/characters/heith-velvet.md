@@ -60,3 +60,12 @@ La wiki dice que antes fue combatiente y cambió a la sanación al sentir limita
 
 No se han verificado en novela los límites de las magias ni la traducción “Reverse/Rebirth Gandr”.
 
+
+
+## Relectura bilingüe de Miraheze · 2026-10-22 (secundaria)
+
+Las páginas de relaciones cuentan que Freya salvó el pueblo natal de Heith; ella quiso servir a la diosa como guerrera y terminó en la sanación después de sentirse rechazada para ese papel. Su aspiración posterior es poder curar a Freya. La wiki le atribuye celos hacia Horn y rivalidad con Airmid; en la página inglesa aparece una alegación sensible de intención de violencia sexual contra Bell. Debe mantenerse como atribución comunitaria con spoiler mayor, no presentarse como escena verificada ni ampliarse por inferencia.
+
+La subpágina de habilidades describe Earth Gullveig como curación automática que concede Golden, pero puede ser superada por daño acumulado o agotamiento de Mind; Golden recupera pequeñas cantidades de estamina y Mind durante poco tiempo. Mage refuerza potencia, alcance y eficiencia mágica. La página niega que la curación impida una muerte instantánea. La forma actual del nombre es Rebirth Gandr; Reverse Gandr queda registrado como variante de extractos anteriores. DanMachi vol. 21 cap. 5, Episode Heith y Sword Oratoria vols. 1/10 aparecen en referencias wiki, pero no fueron cotejados en texto primario aquí.
+
+**Fuentes actuales:** [ficha EN](https://danmachien.miraheze.org/wiki/Heith_Velvet), [ficha ES](https://danmachi.miraheze.org/wiki/Heith_Velvet), [habilidades EN](https://danmachien.miraheze.org/wiki/Heith_Velvet/Abilities), [habilidades ES](https://danmachi.miraheze.org/wiki/Heith_Velvet/Habilidades), [relaciones EN](https://danmachien.miraheze.org/wiki/Heith_Velvet/Relationships), [relaciones ES](https://danmachi.miraheze.org/wiki/Heith_Velvet/Relaciones).
