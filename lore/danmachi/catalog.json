@@ -323,18 +323,17 @@
     },
     {
       "id": "CHAR-DARK-DIAN-CECHT",
-      "path": "characters/dark-era/dian-cecht.md",
+      "path": "characters/dian-cecht.md",
       "type": "character",
       "tags": [
         "Dian Cecht",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
-        "CONT-UNVERIFIED",
-        "individual dossier",
-        "primary page pending"
+        "Dian Cecht Familia",
+        "medicinal Familia",
+        "CONT-MAIN-LN",
+        "CONT-SO",
+        "historical_presence_unconfirmed"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_profile_expanded_historical_presence_unconfirmed",
       "priority": "normal"
     },
     {
@@ -374,34 +373,34 @@
     },
     {
       "id": "CHAR-DARK-GOIBNIU",
-      "path": "characters/dark-era/goibniu.md",
+      "path": "characters/goibniu.md",
       "type": "character",
       "tags": [
         "Goibniu",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
-        "CONT-UNVERIFIED",
-        "individual dossier",
-        "primary page pending"
+        "Goibniu Familia",
+        "master smith",
+        "construction",
+        "CONT-MAIN-LN",
+        "CONT-SO",
+        "historical_presence_unconfirmed"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_profile_expanded_historical_presence_unconfirmed",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-HEPHAISTOS",
-      "path": "characters/dark-era/hephaistos.md",
+      "path": "characters/hephaistos.md",
       "type": "character",
       "tags": [
         "Hephaistos",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
-        "CONT-UNVERIFIED",
-        "individual dossier",
-        "primary page pending"
+        "Hephaistos Familia",
+        "Divine Smith",
+        "smithing",
+        "CONT-MAIN-LN",
+        "CONT-SO",
+        "historical_presence_unconfirmed"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_profile_expanded_historical_presence_unconfirmed",
       "priority": "normal"
     },
     {
@@ -422,34 +421,32 @@
     },
     {
       "id": "CHAR-DARK-MIACH",
-      "path": "characters/dark-era/miach.md",
+      "path": "characters/miach.md",
       "type": "character",
       "tags": [
         "Miach",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
-        "CONT-UNVERIFIED",
-        "individual dossier",
-        "primary page pending"
+        "Miach Familia",
+        "potion seller",
+        "CONT-MAIN-LN",
+        "historical_presence_unconfirmed"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_profile_expanded_historical_presence_unconfirmed",
       "priority": "normal"
     },
     {
       "id": "CHAR-DARK-NAAZA",
-      "path": "characters/dark-era/naaza-erisuis.md",
+      "path": "characters/naaza-erisuis.md",
       "type": "character",
       "tags": [
         "Naaza Erisuis",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
-        "CONT-UNVERIFIED",
-        "individual dossier",
-        "primary page pending"
+        "Miach Familia",
+        "pharmacist",
+        "archer",
+        "Darbh Daol",
+        "CONT-MAIN-LN",
+        "historical_presence_unconfirmed"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_profile_expanded_historical_presence_unconfirmed",
       "priority": "normal"
     },
     {
@@ -3210,6 +3207,12 @@
     {
       "document_id": "RESEARCH-DM-028",
       "path": "research/inbox/DANMACHI-RESEARCH-028-barca-basram-vito-adi-airmid.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-029",
+      "path": "research/inbox/DANMACHI-RESEARCH-029-miach-naaza-dian-goibniu-hephaistos.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_expanded_primary_locator_pending"
     }
