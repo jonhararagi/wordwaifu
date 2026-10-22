@@ -2,7 +2,7 @@
 id: CHAR-CHLOE-ROLO
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_profile_expanded_primary_locator_pending
 continuity_scope: "CONT-ANIME"
 source_refs:
   - "DMR-006-SRC-001"
@@ -169,6 +169,9 @@ related_record_ids: [CHAR-MIA-GRAND, CHAR-RYUU-LION, CHAR-LUNOA-FAUST]
 duplicate_candidates: []
 author_approved_overrides: []
 last_cross_checked: "2026-10-21"
+research_source_refs: [DMR-036-SRC-007, DMR-036-SRC-008]
+research_claim_refs: [DMR-036-CLM-010, DMR-036-CLM-011, DMR-036-CLM-012]
+research_continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
 ---
 
 # Chloe Rollo
@@ -233,3 +236,19 @@ La adaptación vincula a Chloe y Lunoa Faust con las consecuencias del encargo q
 - [Perfiles oficiales de DanMachi V](https://danmachi.com/danmachi5/character/) — entrada correspondiente en el registro DMR-006.
 
 **Pendiente común:** cotejar escenas de la novela con edición, capítulo y página antes de fijar fecha exacta, motivaciones privadas, hábitos o cambios de rango que no aparecen en el perfil citado.
+
+## Perfil ampliado desde DanMachi Wiki (secundario; separado de DanMachi V)
+
+Las wikis usan Chloe Rollo/Rolo y enlazan “Rollo” con su etapa como asesina. La describen como cat-person de unos 21 años, 158 cm, pelo negro y ojos verdes, nivel 4 y viva. El snapshot inglés da piso máximo 60 y el español 37; se conserva el conflicto. La historia la asocia con Njord Familia durante su pasado de asesina y con Hostess of Fertility en su etapa de camarera; no se trata como afiliación simultánea. “Black Cat” aparece como apodo.
+
+La wiki relata que se crio en una Familia criminal y fue entrenada desde pequeña para asesinar. La persona que consideraba su hermana mayor habría sido su madre biológica y murió protegiéndola. Su deidad le habría permitido salir a cambio de cumplir encargos. Tras llegar a Orario, habría rechazado trabajos contra aventureros de primera clase, fallado un encargo contra Shakti Varma y no conseguido matar a Ryuu antes de acabar trabajando en Hostess. Se la describe como astuta e improvisadora, aficionada a apostar y leal a sus compañeras. El resumen oficial de DanMachi V sobre los daños a la taberna y la deuda con Mia se mantiene como un claim independiente de adaptación.
+
+### Magia, habilidades y equipo reportados
+
+- **Feles Cruz:** crearía dos ilusiones incapaces de atacar o defenderse, usadas para distraer y combinadas según la wiki con humo o maniobras de engaño.
+- **Skills:** Abnormal Resistance, Mixing y Escape.
+- **Violetta:** cuchillo que la wiki describe como cubierto de veneno.
+- **Estilo reportado:** combate cercano e improvisación táctica; no se fijan técnicas de asesinato, duración de ilusión ni composición/dosis del veneno.
+
+El pasado criminal, la muerte de su madre, Shakti, el encargo contra Ryuu y los mecanismos siguen como referencias secundarias, con localizadores primarios pendientes. Se conserva el ID CHAR-CHLOE-ROLO.
+
