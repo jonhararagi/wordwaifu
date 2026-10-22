@@ -2047,3 +2047,263 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-027
 - verification_status: source_checked_bibliography_only
 
+## DMR-028-SRC-001 · Adi Varma — ficha comunitaria inglesa
+- source_id: DMR-028-SRC-001
+- title: Adi Varma
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Extractos indexados de Characteristics, Appearance, Personality, History, Abilities y Equipment.
+- claims_supported: [DMR-028-CLM-001, DMR-028-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Contiene detalles útiles de apariencia, edad, nivel, magia, equipo y biografía; la página no fue accesible íntegramente. No sustituye los pasajes de Astrea Record.
+- conflicting_sources: [DMR-028-CLM-001: romanización Adi/Ardee; DMR-028-CLM-002: wording de justicia y muerte pendiente]
+- rights_note: Usar paráfrasis y enlaces; no copiar imágenes ni texto extenso.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-028-SRC-002 · Ryuu Lion/Relaciones — ficha comunitaria española
+- source_id: DMR-028-SRC-002
+- title: Ryuu Lion/Relaciones
+- creator_or_publisher: Colaboradores de la Wiki DanMachi en español
+- source_type: SECONDARY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: relationship_section
+- locator: Sección «Ardee Varma» sobre amistad con Ryuu, gestos de afecto y palabras sobre justicia.
+- claims_supported: [DMR-028-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN
+- reliability_note: Resume el recuerdo de Ryuu y el vínculo con Adi/Ardee; se conserva como resumen comunitario hasta localizar la escena publicada.
+- conflicting_sources: []
+- rights_note: Parafrasear, no reproducir texto completo.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-028-SRC-003 · Square Enix — presentación oficial del manga Astrea Record
+- source_id: DMR-028-SRC-003
+- title: アストレア・レコード ダンジョンに出会いを求めるのは間違っているだろうか 英雄譚
+- creator_or_publisher: Square Enix / Big Gangan
+- source_type: ADAPTATION
+- series: Astrea Record manga
+- volume_or_edition: Página oficial de presentación de manga
+- language: Japonés
+- accessed_at: 2026-10-22
+- locator_type: official_character_blurb
+- locator: Entrada アーディ・ヴァルマ: miembro de Ganesha Familia, alias 象神の詩(ヴィヤーサ), sentido de justicia fuerte, carácter amable/alegre y cercanía con Ryuu.
+- claims_supported: [DMR-028-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-AR (adaptación manga; no cotejada con novela)
+- reliability_note: Fuente oficial del manga, no localizador de la novela ligera. Confirma qué comunica la adaptación; no todas las estadísticas de la wiki.
+- conflicting_sources: [DMR-028-CLM-001: romanización inglesa del nombre]
+- rights_note: Enlazar la página; no copiar imágenes ni capítulos.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: official_adaptation_profile_checked
+
+## DMR-028-SRC-004 · Barca Perdix — ficha comunitaria inglesa
+- source_id: DMR-028-SRC-004
+- title: Barca Perdix
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: Sword Oratoria / DanMachi
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Characteristics, Appearance, Personality, Abilities y Development Abilities.
+- claims_supported: [DMR-028-CLM-003, DMR-028-CLM-004, DMR-028-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Fuente principal secundaria para el perfil de Barca y sus armas malditas. La sinopsis editorial de Sword Oratoria 7 aporta solo contexto del arco, no sus detalles personales.
+- conflicting_sources: [DMR-028-CLM-004: cura por magia de Fels frente a antídotos de Airmid]
+- rights_note: Parafrasear y enlazar; no copiar imágenes.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_chapter_locator_pending
+
+## DMR-028-SRC-005 · Barca Perdix — ficha comunitaria española
+- source_id: DMR-028-SRC-005
+- title: Barca Perdix
+- creator_or_publisher: Colaboradores de la Wiki DanMachi en español
+- source_type: SECONDARY
+- series: Sword Oratoria / DanMachi
+- volume_or_edition: Artículo web comunitario
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: profile_and_abilities_section
+- locator: Apariencia, personalidad, Misterio, armas malditas y relación con Dix.
+- claims_supported: [DMR-028-CLM-003, DMR-028-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: La versión española resume el vínculo con Dix, la maldición y la función de las armas; mantiene detalles secundarios.
+- conflicting_sources: [DMR-028-CLM-004]
+- rights_note: Paráfrasis propia, no copiar ilustraciones.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_chapter_locator_pending
+
+## DMR-028-SRC-006 · Basram — ficha comunitaria inglesa
+- source_id: DMR-028-SRC-006
+- title: Basram
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Información de personaje, aparición en Astrea Record volumen 1, afiliación, raza reportada, personalidad, habilidades y equipo.
+- claims_supported: [DMR-028-CLM-005, DMR-028-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Es la base secundaria del perfil; las mecánicas de los Spirit Soldiers y las escenas de combate requieren cotejo de novela.
+- conflicting_sources: [DMR-028-CLM-005: traducción de la especie Raccoon]
+- rights_note: Paráfrasis original y enlace; evitar replicar material gráfico.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_primary_scene_pending
+
+## DMR-028-SRC-007 · Apate Familia — artículo comunitario inglés
+- source_id: DMR-028-SRC-007
+- title: Apate Familia
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: Astrea Record / Evilus
+- volume_or_edition: Artículo de grupo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: member_table_and_history
+- locator: Tabla de miembros (Basram como sacerdote y oficial de estado mayor) y resumen de los Spirit Soldiers y prácticas de Apate Familia.
+- claims_supported: [DMR-028-CLM-005, DMR-028-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Útil para relacionar cargo y organización; no atribuye todas las decisiones de Basram a otros miembros de Evilus.
+- conflicting_sources: []
+- rights_note: Parafrasear y no copiar secciones extensas.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_group_summary_primary_locator_pending
+
+## DMR-028-SRC-008 · Vito — ficha comunitaria inglesa
+- source_id: DMR-028-SRC-008
+- title: Vito
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: Memoria Freese / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Alias Faceless, características, afiliaciones previas, nivel, estado y descripción del evento original Astrea Record.
+- claims_supported: [DMR-028-CLM-007, DMR-028-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-UNVERIFIED
+- reliability_note: La ficha mezcla datos del evento original y otras apariciones de Memoria Freese; deben separarse por continuidad.
+- conflicting_sources: [DMR-028-CLM-008: alcance de las alteraciones sensoriales y el «alma»]
+- rights_note: Parafrasear; no copiar diálogo ni ilustraciones.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_continuity_split_pending
+
+## DMR-028-SRC-009 · Vito — ficha comunitaria española
+- source_id: DMR-028-SRC-009
+- title: Vito
+- creator_or_publisher: Colaboradores de la Wiki DanMachi en español
+- source_type: SECONDARY
+- series: Memoria Freese / Astrea Record
+- volume_or_edition: Artículo web comunitario
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: profile_personality_and_abilities
+- locator: Apartados afiliaciones, Afección, Habilidades y Curiosidades, con referencias a etapas distintas del juego.
+- claims_supported: [DMR-028-CLM-007, DMR-028-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: Aporta detalles de alteraciones sensoriales, la explicación atribuida a Airmid y eventos de redención que la propia página presenta como continuidad del juego; no pasarlos a la novela principal.
+- conflicting_sources: [DMR-028-CLM-008]
+- rights_note: Resumen propio; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_continuity_split_pending
+
+## DMR-028-SRC-010 · Airmid Teasanare — ficha comunitaria inglesa
+- source_id: DMR-028-SRC-010
+- title: Airmid Teasanare
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Characteristics, Professional Status, Personality, Abilities, Magic y Debuts.
+- claims_supported: [DMR-028-CLM-009, DMR-028-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Perfil secundario detallado para la sanadora actual y sus magias. No demuestra una participación individual en Astrea Record.
+- conflicting_sources: [DMR-028-CLM-010: mecanismo exacto para curar maldiciones]
+- rights_note: Parafrasear y enlazar; no reutilizar imágenes sin licencia.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-028-SRC-011 · Airmid Teasanare — ficha comunitaria española
+- source_id: DMR-028-SRC-011
+- title: Airmid Teasanare
+- creator_or_publisher: Colaboradores de la Wiki DanMachi en español
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: abilities_section
+- locator: Curandera, Dia Fratel, Misterio y referencia a antídotos para armas malditas de Barca.
+- claims_supported: [DMR-028-CLM-009, DMR-028-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO
+- reliability_note: Complementa la ficha inglesa y permite señalar diferencias en el resumen sobre curas de maldiciones. No demuestra que la sanadora participara en la Era Oscura.
+- conflicting_sources: [DMR-028-CLM-010]
+- rights_note: Parafrasear; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-028-SRC-012 · GA文庫 — Astrea Record, volumen 1
+- source_id: DMR-028-SRC-012
+- title: アストレア・レコード１ 邪悪胎動
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi Heroic Tale: Astrea Record
+- volume_or_edition: Volumen 1, ISBN 978-4-8156-1017-3
+- language: Japonés
+- accessed_at: 2026-10-22
+- locator_type: publisher_product_page
+- locator: Ficha oficial del volumen revisado; indica que el texto original fue reescrito para publicación y que la historia ocurre unos siete años antes de la llegada de Bell.
+- claims_supported: [DMR-028-CLM-005, DMR-028-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Fuente primaria editorial para la edición, su condición de novelización revisada y el marco temporal; no prueba por sí sola detalles individuales de Basram o Vito.
+- conflicting_sources: []
+- rights_note: Referencia bibliográfica y sinopsis resumida; no reproducir páginas.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: official_bibliography_checked_context_only
+
+## DMR-028-SRC-013 · GA文庫 — Sword Oratoria, volumen 7
+- source_id: DMR-028-SRC-013
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア7
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: Sword Oratoria
+- volume_or_edition: Volumen 7, ISBN 978-4-7973-8934-0
+- language: Japonés
+- accessed_at: 2026-10-22
+- locator_type: publisher_product_page
+- locator: Ficha editorial de 2016-12-15; sinopsis oficial de la investigación de Knossos por Loki Familia y el enfrentamiento con remanentes de Evilus.
+- claims_supported: [DMR-028-CLM-003, DMR-028-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Confirma bibliografía y contexto del arco, pero no la biografía, maldición ni nivel de Barca de forma aislada.
+- conflicting_sources: []
+- rights_note: Resumir la sinopsis editorial y no reproducirla completa.
+- verified_by: DANMACHI-RESEARCH-028
+- verification_status: official_bibliography_checked_context_only
+
