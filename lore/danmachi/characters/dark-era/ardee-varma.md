@@ -7,20 +7,31 @@ continuity_scope: "CONT-AR (perfil oficial de adaptación manga)"
 source_refs:
   - "DMR-014-SRC-002"
   - "DMR-013-SRC-001"
+  - "DMR-028-SRC-001"
+  - "DMR-028-SRC-002"
+  - "DMR-028-SRC-003"
 claim_refs:
   - "DMR-014-CLM-008"
   - "DMR-013-CLM-008"
-verification_status: "official_manga_profile_checked_primary_novel_locator_pending"
-tags: ["Ardee Varma", Era Oscura, Astrea Record, structured_dossier, primary_text_pending]
+  - "DMR-028-CLM-001"
+  - "DMR-028-CLM-002"
+verification_status: "official_adaptation_and_secondary_wiki_checked_primary_novel_locator_pending"
+tags: ["Adi Varma", "Ardee Varma", "Vyasa", "Ganesha Familia", Astrea Record, CONT-AR, structured_dossier, primary_text_pending]
 research_source_refs:
   - "DMR-014-SRC-002"
   - "DMR-013-SRC-001"
+  - "DMR-028-SRC-001"
+  - "DMR-028-SRC-002"
+  - "DMR-028-SRC-003"
 entity_type: character
-canonical_name: "Ardee Varma"
+canonical_name: "Adi Varma"
 aliases:
-  - "Ardee Varma"
+  - "Adi Varma"
+  - "Ardee Varma (variante de romanización usada en algunas fuentes/adaptaciones)"
   - "アーディ・ヴァルマ"
 romanizations:
+  - "Adi Varma"
+  - "Ādi Varuma"
   - "Ardee Varma"
 name_confidence: "El nombre existe como identidad candidata del catálogo; los datos biográficos no se elevan a canónicos sin localizador primario."
 identity_record_id: CHAR-DARK-ARDEE-VARMA
@@ -140,7 +151,7 @@ author_approved_overrides: []
 last_cross_checked: "2026-10-21"
 ---
 
-# Ardee Varma
+# Adi Varma (también romanizada Ardee Varma)
 
 ## Identidad y alcance
 
@@ -188,3 +199,18 @@ La presentación oficial del manga describe a Ardee como cercana a Ryuu; la esce
 - [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — confirma el marco editorial de la versión revisada, no los detalles de cada escena.
 
 **Regla editorial:** no se inventan números de página. Los campos sin respaldo primario permanecen desconocidos o explícitamente atribuidos a fuentes secundarias.
+
+
+## Ampliación de investigación DMR-028 · identidad normalizada y perfil narrativo
+
+**Identidad única:** se conserva `CHAR-DARK-ARDEE-VARMA`. La página oficial japonesa del manga escribe アーディ・ヴァルマ; la wiki inglesa usa «Adi Varma», mientras el expediente anterior utilizaba «Ardee Varma». Se registran ambas romanizaciones en la misma ficha, sin duplicar la persona.
+
+- **Afiliación y alias reportados:** Ganesha Familia; el alias Vyasa (象神の詩 / lectura reportada *Viyāsa*). No es miembro de Astrea Familia. El perfil oficial de Square Enix lo presenta con un fuerte sentido de justicia, carácter amable y alegre, y cercanía con Ryuu. Ese es un perfil del manga adaptado, no un pasaje de novela.
+- **Apariencia/estadísticas de la wiki:** la ficha inglesa reporta 15 años, cabello azul pizarra, ojos azul cerúleo, 162 cm, nivel 3 y estado fallecido. Se conservan como campos atribuidos a una fuente secundaria, no como valores cotejados por capítulo.
+- **Personalidad y visión de justicia reportadas:** la wiki la caracteriza como compasiva y muy interesada en que la gente sonría. Le atribuye una postura más misericordiosa que la de Ryuu, con preferencia por incapacitar a criminales en lugar de matarlos y la idea de que perdonar también puede ser justicia. Se registra como paráfrasis de la wiki, no cita textual.
+- **Relación con Ryuu:** la página comunitaria española sobre relaciones de Ryuu la presenta como una amiga cercana, una de las pocas personas a las que Ryuu permitía tocarla y alguien que intentaba animarla cuando estaba deprimida. El recuerdo posterior atribuye gran influencia a las palabras de Adi sobre justicia. La cercanía está sostenida por resúmenes secundarios; no se infiere cada escena ni el grado de conocimiento de ambas en todas las épocas.
+- **Habilidades/equipo reportados:** Ganapati Blood, Dharmas Argo, Ghana Avimutta, Dia Kaumundi y la espada Sacred Oath. La wiki describe esta última como un arma que permite controlar el daño, acorde con su preferencia por la fuerza no letal. También enumera un talismán con máscara de elefante. Sus efectos y estadísticas siguen pendientes de cotejo primario.
+- **Destino reportado:** la wiki dice que murió al inicio de la Gran Disputa al intentar consolar a un niño relacionado con Evilus. Es un spoiler mayor y una ruta concreta para localizar el volumen 1; no se marca como confirmado por novela hasta hallar la escena.
+
+**Procedencia:** DMR-028-CLM-001/002; DMR-028-SRC-001/002/003.  
+**Pendiente:** revisar el texto japonés de *Astrea Record* volumen 1, registrar edición/página y confirmar nombre, equipo no letal, diálogo sobre justicia y secuencia de su muerte.
