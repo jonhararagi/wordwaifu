@@ -39,7 +39,7 @@ continuity: CONT-AR; CONT-ANIME; CONT-MAIN-LN
 ### DMR-027-CLM-002 · Noin Unic: ruta de historia corta y vínculo escénico limitado
 
 - `claim_id`: DMR-027-CLM-002
-- `claim`: El índice comunitario de historias cortas enumera una historia titulada «Noin Unic» en *Astrea Record*, volumen 3. Una traducción comunitaria de la historia corta de Neze muestra a Noin entre las integrantes que celebran el resultado de una operación, pero no basta para asignarle una función táctica, especialidad, motivación o relación íntima. La escena exacta de su historia individual todavía debe consultarse en el volumen japonés.
+- `claim`: El índice comunitario de historias cortas enumera una historia titulada «Noin Unic» en *Astrea Record*, volumen 3. La traducción comunitaria de la historia corta de Neze muestra a Noin e Iska entre las compañeras que celebran el éxito de una operación contra Evilus; eso documenta una participación grupal en esa escena, pero no basta para asignar a Noin una función táctica, especialidad, motivación o relación íntima. La escena exacta de su historia individual todavía debe consultarse en el volumen japonés.
 - `character_id`: CHAR-NOIN-UNIC
 - `source_id`: DMR-027-SRC-007
 - `source_corroborating_source_id_1`: DMR-027-SRC-004
