@@ -17,6 +17,9 @@ spoiler_level: major
 aliases:
   - "ゼウス"
 tags: [Zeus, Zeus Familia, Bell Cranel, history, Great Quests]
+research_source_refs: [DMR-038-SRC-001, DMR-038-SRC-002]
+research_claim_refs: [DMR-038-CLM-001, DMR-038-CLM-002]
+research_continuity_scope: CONT-MAIN-LN; CONT-AR; CONT-UNVERIFIED
 ---
 # Zeus — expediente de deidad
 
@@ -48,3 +51,21 @@ Las referencias comunitarias relacionan Zeus Familia con la expedición contra e
 - Diferencias entre novela principal, relatos paralelos, adaptación y AU.
 
 **Regla editorial:** la victoria contra Behemoth y Leviathan tiene una referencia oficial auxiliar. Los demás detalles mantienen el nivel de evidencia indicado; no se completan mediante mitología externa ni especulación.
+
+## Perfil comunitario ampliado · datos reportados, no cotejados en la novela
+
+La ficha inglesa de DanMachi Wiki identifica a Zeus como la antigua cabeza de Zeus Familia y abuelo adoptivo de Bell. Reporta que, después de la pérdida contra el Dragón Negro de un Ojo, Zeus acabó viviendo como granjero en una aldea montañosa y crió a Bell contándole historias de héroes y escribiéndole cuentos. La misma página afirma que luego fingió estar muerto, pero no atribuye un motivo conocido a esa decisión. Estos datos siguen como resumen secundario.
+
+La wiki señala como apariciones mencionadas *DanMachi*, volumen 1, y los sueños de Bell en *Sword Oratoria*, volumen 4. Son referencias bibliográficas proporcionadas por la comunidad; en esta ficha no se ha leído ni cotejado la escena o la página de la edición publicada.
+
+### Estado de conocimiento de Bell · secundario
+
+Según el artículo comunitario, Bell cree que Zeus murió y desconoce que sigue vivo y que es una deidad en el momento resumido por la página. Esta nota debe tratarse como un estado temporal de conocimiento, no como una propiedad constante de Bell en todas las escenas o continuidades.
+
+### Procedencia, límites y relación con las Grandes Misiones
+
+- Fuentes secundarias de trabajo: [DanMachi Wiki — Zeus](https://danmachi.fandom.com/wiki/Zeus) y [Zeus Familia](https://danmachi.fandom.com/wiki/Zeus_Familia).
+- La victoria conjunta de Zeus Familia y Hera Familia contra Behemoth y Leviathan se documenta aparte mediante la prueba oficial auxiliar registrada en `DMR-011-SRC-005` / `DMR-008-CLM-027`. Esa pregunta no determina qué Familia venció a cada monstruo ni quiénes participaron.
+- La derrota contra el Dragón Negro, la salida de Zeus de Orario y la razón por la que fingió su muerte siguen pendientes de localizadores primarios.
+- No importar habilidades o rasgos de Zeus de la mitología griega a este expediente.
+- Claims de apoyo para búsqueda: `DMR-038-CLM-001` y `DMR-038-CLM-002`; ambos siguen como evidencia secundaria.
