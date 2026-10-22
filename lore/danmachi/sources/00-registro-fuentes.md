@@ -1867,3 +1867,183 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-026
 - verification_status: source_checked_context_only
 
+## DMR-027-SRC-001 · Portal oficial de personajes de DanMachi IV
+- source_id: DMR-027-SRC-001
+- title: キャラクター | アニメ「ダンまち」シリーズ公式サイト
+- creator_or_publisher: Portal oficial de la adaptación DanMachi
+- source_type: ADAPTATION
+- series: DanMachi IV / Astrea Familia
+- volume_or_edition: Página de personajes web
+- language: Japonés
+- accessed_at: 2026-10-22
+- locator_type: webpage_section
+- locator: Entradas ノイン・ユニック, ネーゼ・ランケット, アスタ・ノックス, セルティ・スロア e イスカ・ブラ, líneas bajo Astrea Familia.
+- claims_supported: [DMR-027-CLM-001, DMR-027-CLM-003, DMR-027-CLM-005]
+- events_supported: []
+- continuity_scope: CONT-ANIME
+- reliability_note: Fuente oficial de adaptación para nombres, especies, afiliación visual y reparto. No establece las biografías completas, edades, nivel por periodo ni destino individual en la novela.
+- conflicting_sources: []
+- rights_note: Enlazar la página oficial y no copiar ilustraciones al repositorio sin licencia.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: source_checked_adaptation_profile
+
+## DMR-027-SRC-002 · DanMachi Wiki — Minor Characters
+- source_id: DMR-027-SRC-002
+- title: Minor Characters
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: DanMachi / Astrea Familia / Astrea Record
+- volume_or_edition: Artículo web comunitario legado
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: search_index_extract
+- locator: Secciones Astraea Familia: Asta Knox, Iska Bra, Neze Rankett y Noin Unic; ficha separada de Celty Srowa.
+- claims_supported: [DMR-027-CLM-001, DMR-027-CLM-003, DMR-027-CLM-005, DMR-027-CLM-008, DMR-027-CLM-009, DMR-027-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-ANIME; CONT-AR; CONT-MAIN-LN
+- reliability_note: Útil como ficha agregada de raza, afiliación, nivel reportado, estado y apariciones, además de algunos detalles de equipo/habilidades. Datos personales y de continuidad permanecen secundarios.
+- conflicting_sources: [DMR-027-CLM-008: edad/nivel de Iska; DMR-027-CLM-009: edad de Celty; DMR-027-CLM-003: nivel de Asta]
+- rights_note: Paráfrasis propia. El artículo indica contenido comunitario sujeto a sus condiciones y no autoriza reutilizar sus imágenes sin revisar cada licencia.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-027-SRC-003 · Wiki DanMachi en español — Familia Astrea
+- source_id: DMR-027-SRC-003
+- title: Familia Astrea
+- creator_or_publisher: Colaboradores de la Wiki DanMachi en español
+- source_type: SECONDARY
+- series: DanMachi / Astrea Familia
+- volume_or_edition: Tabla comunitaria de miembros
+- language: Español
+- accessed_at: 2026-10-22
+- locator_type: page_table
+- locator: Tabla de miembros que lista raza, ocupación, rango, nivel y estado para Neze, Iska, Maryuu, Noin, Asta, Ryana y Celty.
+- claims_supported: [DMR-027-CLM-001, DMR-027-CLM-003, DMR-027-CLM-005, DMR-027-CLM-008, DMR-027-CLM-009]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-ANIME; CONT-MAIN-LN
+- reliability_note: La tabla discrepa del roster inglés en algunos niveles y no fija una etapa temporal común para cada dato. Se registra el desacuerdo en lugar de escoger una cifra por intuición.
+- conflicting_sources: [DMR-027-CLM-003, DMR-027-CLM-005, DMR-027-CLM-008, DMR-027-CLM-009]
+- rights_note: Parafrasear y conservar los campos como información comunitaria.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: secondary_roster_checked_conflicts_pending
+
+## DMR-027-SRC-004 · Traducción comunitaria — historia corta de Neze Rankett
+- source_id: DMR-027-SRC-004
+- title: Astraea Record Volume 1 SS "Neze Rankett"
+- creator_or_publisher: Kisaki Tosane / colaborador comunitario
+- source_type: SECONDARY
+- series: DanMachi Memoria Freese / Astrea Record
+- volume_or_edition: Historia corta listada con *Astrea Record*, volumen 1; traducción comunitaria
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: community_fan_translation
+- locator: Escena de operación contra Evilus, apoyo de vanguardia bajo luna llena, diálogo con Kaguya y cambio de nombre de aventurera.
+- claims_supported: [DMR-027-CLM-005, DMR-027-CLM-006, DMR-027-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Es una traducción comunitaria, no una transcripción primaria verificada. Las romanizaciones y traducciones de epítetos deben cotejarse con el japonés publicado.
+- conflicting_sources: []
+- rights_note: No reproducir la traducción; guardar solo resúmenes originales y el enlace.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-027-SRC-005 · Traducción comunitaria — historia corta de Celty Srowa
+- source_id: DMR-027-SRC-005
+- title: Astraea Record Volume 1 SS "Celty Srowa"
+- creator_or_publisher: Kisaki Tosane / colaborador comunitario
+- source_type: SECONDARY
+- series: DanMachi Memoria Freese / Astrea Record
+- volume_or_edition: Historia corta listada con *Astrea Record*, volumen 1; traducción comunitaria
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: community_fan_translation
+- locator: Conversación con Ryuu, Bosque de Yenite, relación con el conocimiento, respeto entre ambas y función de maga de apoyo.
+- claims_supported: [DMR-027-CLM-009, DMR-027-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: El traductor comunitario indica una edad distinta de la que muestra la ficha wiki; edad y matices psicológicos necesitan cotejo con el original japonés.
+- conflicting_sources: [DMR-027-CLM-009]
+- rights_note: No reproducir la traducción; guardar paráfrasis y localizador.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-027-SRC-006 · Traducción comunitaria — historia corta de Iska Bra
+- source_id: DMR-027-SRC-006
+- title: Astraea Record Volume 1 SS "Iska Bra"
+- creator_or_publisher: Kisaki Tosane / colaborador comunitario
+- source_type: SECONDARY
+- series: DanMachi Memoria Freese / Astrea Record
+- volume_or_edition: Historia corta listada con *Astrea Record*, volumen 1; traducción comunitaria
+- language: Inglés
+- accessed_at: 2026-10-22
+- locator_type: community_fan_translation
+- locator: Pasado en el orfanato, motivación para aventurarse, estilo de combate, rutinas de autocuidado, maquillaje y conversación sobre la justicia.
+- claims_supported: [DMR-027-CLM-007, DMR-027-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: La traducción dice que Iska tiene 16 años; algunas tablas comunitarias indican 18. Mantener el dato como conflicto abierto.
+- conflicting_sources: [DMR-027-CLM-008]
+- rights_note: No almacenar extractos largos ni la traducción completa; usar paráfrasis originales.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-027-SRC-007 · Índices comunitarios de historias cortas
+- source_id: DMR-027-SRC-007
+- title: Short Stories / Historias Cortas
+- creator_or_publisher: Colaboradores de DanMachi Wiki
+- source_type: SECONDARY
+- series: Astrea Record y material derivado de DanMachi
+- volume_or_edition: Índice web de historias cortas
+- language: Inglés y español
+- accessed_at: 2026-10-22
+- locator_type: story_index
+- locator: Índice que enumera Neze, Iska y Celty en *Astrea Record* volumen 1, y Asta y Noin en volumen 3.
+- claims_supported: [DMR-027-CLM-002, DMR-027-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: El índice confirma una ruta bibliográfica secundaria, no el contenido de las historias ni sus páginas en la novela.
+- conflicting_sources: []
+- rights_note: No almacenar relatos completos; conservar metadatos y enlaces.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: secondary_story_locator_only
+
+## DMR-027-SRC-008 · GA文庫 — Astrea Record, volumen 1
+- source_id: DMR-027-SRC-008
+- title: アストレア・レコード１ 邪悪胎動
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi Heroic Tale: Astrea Record
+- volume_or_edition: Volumen 1, ISBN 978-4-8156-1017-3
+- language: Japonés
+- accessed_at: 2026-10-22
+- locator_type: publisher_product_page
+- locator: Ficha editorial del volumen 1; ruta bibliográfica para localizar las historias cortas de Neze, Iska y Celty en la edición pertinente.
+- claims_supported: [DMR-027-CLM-005, DMR-027-CLM-006, DMR-027-CLM-007, DMR-027-CLM-008, DMR-027-CLM-009, DMR-027-CLM-010]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Referencia oficial bibliográfica. No se leyó el texto íntegro ni se puede citar esta página como prueba de detalles presentes solo en la historia corta.
+- conflicting_sources: []
+- rights_note: Usar como referencia bibliográfica y no reproducir el texto promocional completo.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: source_checked_bibliography_only
+
+## DMR-027-SRC-009 · GA文庫 — Astrea Record, volumen 3
+- source_id: DMR-027-SRC-009
+- title: アストレア・レコード３ 正邪決戦
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi Heroic Tale: Astrea Record
+- volume_or_edition: Volumen 3, ISBN 978-4-8156-1755-4
+- language: Japonés
+- accessed_at: 2026-10-22
+- locator_type: publisher_product_page
+- locator: Ficha editorial del volumen 3; ruta bibliográfica para localizar las historias cortas de Asta y Noin.
+- claims_supported: [DMR-027-CLM-002, DMR-027-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Referencia oficial bibliográfica. No demuestra por sí sola el contenido ni la psicología de los personajes en historias cortas.
+- conflicting_sources: []
+- rights_note: Referencia bibliográfica; no copiar la sinopsis editorial extensa.
+- verified_by: DANMACHI-RESEARCH-027
+- verification_status: source_checked_bibliography_only
+
