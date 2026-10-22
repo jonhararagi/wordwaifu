@@ -757,9 +757,13 @@
         "Familia Loki",
         "Loki Familia",
         "supporting member",
-        "Anakitty Autumn"
+        "Anakitty Autumn",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "reincarnation_claim_conflict",
+        "late_state_separated"
       ],
-      "status": "secondary_reference_primary_locator_pending",
+      "status": "secondary_profile_augmented_conflicting_reincarnation_claims_primary_locator_pending",
       "priority": "normal"
     },
     {
@@ -875,9 +879,13 @@
         "Sword Oratoria",
         "expedition",
         "Cruz Bussell",
-        "クルス・バッセル"
+        "クルス・バッセル",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "visual_profile",
+        "Sword Oratoria volume 4"
       ],
-      "status": "secondary_reference_primary_locator_pending",
+      "status": "secondary_profile_augmented_primary_volume_locator_pending",
       "priority": "normal"
     },
     {
@@ -921,9 +929,13 @@
         "Loki Familia",
         "mage",
         "fire magic",
-        "Lefiya Viridis"
+        "Lefiya Viridis",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "Lomoire game provenance pending",
+        "Mage"
       ],
-      "status": "secondary_reference_primary_locator_pending",
+      "status": "secondary_profile_augmented_alias_origin_game_scope_pending",
       "priority": "normal"
     },
     {
@@ -1019,9 +1031,12 @@
         "expedition",
         "Narvi",
         "Narvi Roll",
-        "ナルヴィ・ロール"
+        "ナルヴィ・ロール",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "legacy Narfi crosswalk pending"
       ],
-      "status": "secondary_reference_identity_crosswalk_pending",
+      "status": "secondary_profile_extended_identity_crosswalk_primary_text_pending",
       "priority": "normal"
     },
     {
@@ -1095,9 +1110,14 @@
         "Rakta",
         "Loki Familia",
         "Hume Bunny",
-        "supporting member"
+        "supporting member",
+        "secondary_profile_augmented",
+        "primary_locator_pending",
+        "mapper",
+        "Knossos mapping",
+        "floor37 distinct from short story"
       ],
-      "status": "secondary_reference_primary_locator_pending",
+      "status": "secondary_profile_augmented_primary_locator_pending",
       "priority": "normal"
     },
     {
@@ -3236,6 +3256,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-030-astrea-core-profiles.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_augmented_primary_locator_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-031",
+      "path": "research/inbox/DANMACHI-RESEARCH-031-loki-secondary-profiles.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_locators_pending"
     }
   ],
   "lastStructuredSync": "2026-10-22"
