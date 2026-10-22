@@ -28,7 +28,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-033-dark-era-evilus-deities-and-dis-sisters.md",
   "research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md",
-  "research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md"
+  "research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md",
+  "research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const dossierPaths = ["characters/mia-grand.md", "characters/anya-fromel.md", "characters/allen-fromel.md", "characters/alicia-forestlight.md", "characters/leene-arshe.md", "characters/hedin-selland.md", "characters/hogni-ragnar.md", "characters/heith-velvet.md", "characters/chloe-rolo.md", "characters/lunoa-faust.md", "characters/zeus.md", "characters/hera.md", "characters/maxim.md", "characters/dark-era/alfia.md", "characters/dark-era/zald.md"];
@@ -48,8 +49,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 246, "Indexed claims include research batches 033 through 036.");
-assert.equal(index.entryCount, 249, "All claims including batches 033 through 036 are searchable.");
+assert.equal(index.sourceClaimCount, 252, "Indexed claims include research batches 033 through 038.");
+assert.equal(index.entryCount, 255, "All claims including batches 033 through 038 are searchable.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
@@ -509,6 +510,18 @@ assert.ok(raulGear035.results.some(claim => claim.claimId === "DMR-035-CLM-011")
 assert.ok(raulGear035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Raul's wiki claims must remain secondary.");
 
 
+// DANMACHI-RESEARCH-038: historical profiles remain searchable and source-bounded.
+const zeus038 = corpus.search(index, { query: "Zeus Bell relatos héroes adoptivo", characterId: "CHAR-ZEUS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(zeus038.results.some(claim => claim.claimId === "DMR-038-CLM-001"), "Zeus's adoptive relation and upbringing must be retrievable.");
+assert.ok(zeus038.results.every(claim => claim.verificationStatus.includes("secondary_reference")), "Zeus's wiki biography must remain secondary.");
+const bellKnowledge038 = corpus.search(index, { query: "Bell Cranel Zeus está vivo deidad", characterId: "CHAR-ZEUS", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(bellKnowledge038.results.some(claim => claim.claimId === "DMR-038-CLM-002"), "Zeus/Bell knowledge state must be retrievable with spoiler boundaries.");
+const heraGuild038 = corpus.search(index, { query: "Hera Familia mapas Guild piso 71", characterId: "CHAR-HERA", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(heraGuild038.results.some(claim => claim.claimId === "DMR-038-CLM-003"), "Hera Familia's reported institutional contribution must be searchable.");
+assert.ok(heraGuild038.results.every(claim => claim.verificationStatus.includes("secondary_reference")), "Institution-level Hera claims must remain secondary.");
+const maxim038 = corpus.search(index, { query: "Maxim capitán nivel 8 Zeus Familia", characterId: "CHAR-MAXIM", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(maxim038.results.some(claim => claim.claimId === "DMR-038-CLM-005"), "Maxim's role and level snapshot must be searchable.");
+assert.ok(maxim038.results.every(claim => claim.verificationStatus.includes("secondary_reference")), "Maxim profile claims must remain secondary.");
 // Historical dossiers from the Era Oscura must load in the real archive profile registry.
 for (const id of ["CHAR-ZEUS","CHAR-HERA","CHAR-MAXIM","CHAR-DARK-ALFIA","CHAR-DARK-ZALD"]) {
   assert.ok(index.profileDetails[id], id + " historical dossier must be available to the archive UI.");
