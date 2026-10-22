@@ -58,3 +58,12 @@ El perfil comunitario lo describe como antiguo rey de los elfos blancos de Hjað
 
 Se preserva la diferencia de grafía del epíteto: el extracto wiki indica “Hildrsleif”, mientras que el perfil oficial de adaptación del repositorio dice “Hildr Slēv”. Edad, altura, piso, técnicas y reglas no tienen localizador primario verificado en esta tanda.
 
+
+
+## Relectura bilingüe de Miraheze · 2026-10-22 (secundaria)
+
+La ficha de relaciones amplía la evolución de Hedin: reconoce la aptitud de Hogni pero juzga sus capacidades como rey de manera opuesta; el duelo de tres días continuó aun cuando el ejército y ambos reinos ya se habían perdido. Más tarde, el resumen comunitario lo describe apoyando a Bell en la Gran Guerra de Facciones al concluir que podía salvar a Freya de la carga de ser una diosa. También muestra empatía por Arry y furia contra Warusa por el trato que recibió ella. Estos detalles siguen sin localizador primario leído.
+
+La subpágina de habilidades describe Laurus Hildr como magia que no puede aplicarse a Hedin, requiere que reconozca al objetivo y consume el Mind restante. Dizaria se describe como rhomphaia de primera clase, partida por el ataque de Ottar bestificado; la wiki deja sin confirmar si el arma larga posterior en el piso 37 es una nueva Dizaria. La discrepancia Hildrsleif/Hildr Slēv continúa abierta.
+
+**Fuentes actuales:** [ficha EN](https://danmachien.miraheze.org/wiki/Hedin_Selland), [ficha ES](https://danmachi.miraheze.org/wiki/Hedin_Selland), [habilidades EN](https://danmachien.miraheze.org/wiki/Hedin_Selland/Abilities), [habilidades ES](https://danmachi.miraheze.org/wiki/Hedin_Selland/Habilidades), [relaciones EN](https://danmachien.miraheze.org/wiki/Hedin_Selland/Relationships), [relaciones ES](https://danmachi.miraheze.org/wiki/Hedin_Selland/Relaciones). Las citas a capítulos de estas páginas son rutas de lectura, no cotejo primario.
