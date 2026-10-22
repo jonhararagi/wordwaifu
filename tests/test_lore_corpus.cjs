@@ -26,7 +26,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-031-loki-secondary-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-032-orario-support-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-033-dark-era-evilus-deities-and-dis-sisters.md",
-  "research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md"
+  "research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md",
+  "research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const dossierPaths = ["characters/mia-grand.md", "characters/anya-fromel.md", "characters/allen-fromel.md", "characters/alicia-forestlight.md", "characters/leene-arshe.md"];
@@ -46,8 +47,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 220, "Indexed claims include research batches 033 and 034.");
-assert.equal(index.entryCount, 223, "All claims including batches 033 and 034 are searchable.");
+assert.equal(index.sourceClaimCount, 231, "Indexed claims include research batches 033, 034 and 035.");
+assert.equal(index.entryCount, 234, "All claims including batches 033, 034 and 035 are searchable.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
@@ -483,3 +484,25 @@ assert.ok(leeneGameAlias034.results.every(claim => claim.continuityScopes.includ
 const aliciaGameAlias034 = corpus.search(index, { query: "Elleaf Alicia", characterId: "CHAR-LOKI-ALICIA-FORESTLIGHT", continuity: "CONT-GAME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliciaGameAlias034.results.some(claim => claim.claimId === "DMR-034-CLM-014"), "Elleaf must be searchable as a game-only alias.");
 assert.ok(aliciaGameAlias034.results.every(claim => claim.continuityScopes.includes("CONT-GAME")), "Game-only Alicia alias must not leak into novel continuity.");
+
+
+// DANMACHI-RESEARCH-035: detailed Loki profiles searchable, with secondary status preserved.
+const bete035 = corpus.search(index, { query: "Vidar Familia Reene Luna", characterId: "CHAR-BETE-LOGA", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(bete035.results.some(claim => claim.claimId === "DMR-035-CLM-001"), "Bete's Vidar history must be searchable.");
+assert.ok(bete035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Bete's wiki history must remain secondary.");
+const tiona035 = corpus.search(index, { query: "Telskyura Argonaut Wiene Kali", characterId: "CHAR-TIONA-HIRYUTE", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(tiona035.results.some(claim => claim.claimId === "DMR-035-CLM-004"), "Tiona's history and Wiene decision must be searchable.");
+assert.ok(tiona035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Tiona's history must remain secondary.");
+const tionaGear035 = corpus.search(index, { query: "Urga Blade Rolan Berserk Intense Heat", characterId: "CHAR-TIONA-HIRYUTE", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(tionaGear035.results.some(claim => claim.claimId === "DMR-035-CLM-005"), "Tiona's skills and weapons must be searchable.");
+const tione035 = corpus.search(index, { query: "List Iorum Backdraft Zolas Filuka", characterId: "CHAR-TIONE-HIRYUTE", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(tione035.results.some(claim => claim.claimId === "DMR-035-CLM-007"), "Tione's magic, abilities and weapons must be searchable.");
+assert.ok(tione035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Tione's magic must remain secondary.");
+const lefiya035 = corpus.search(index, { query: "Fairy Canon Double Canon Elf Ring Fusillade Fallarica", characterId: "CHAR-LEFIYA-VIRIDIS", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(lefiya035.results.some(claim => claim.claimId === "DMR-035-CLM-009"), "Lefiya's magic profile must be searchable.");
+assert.ok(lefiya035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Lefiya's magic must remain secondary.");
+const raul035 = corpus.search(index, { query: "Bridge of Heroes Great Conflict Aki", characterId: "CHAR-RAUL-NOORD", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(raul035.results.some(claim => claim.claimId === "DMR-035-CLM-010"), "Raul's progression with Aki must be searchable.");
+const raulGear035 = corpus.search(index, { query: "Hunter Escape Protagonista Noble Bow Finn", characterId: "CHAR-RAUL-NOORD", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(raulGear035.results.some(claim => claim.claimId === "DMR-035-CLM-011"), "Raul's skills and weapons must be searchable.");
+assert.ok(raulGear035.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Raul's wiki claims must remain secondary.");
