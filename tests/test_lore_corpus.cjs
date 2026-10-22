@@ -34,6 +34,7 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md",
   "research/inbox/DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md",
   "research/inbox/DANMACHI-RESEARCH-042-historical-five-miraheze-review.md",
+  "research/inbox/DANMACHI-RESEARCH-043-evilus-missing-app-dossiers.md",
   "research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
@@ -54,8 +55,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 281, "Indexed claims include research batches 033 through 042.");
-assert.equal(index.entryCount, 284, "All claims including batches 033 through 042 are searchable.");
+assert.equal(index.sourceClaimCount, 286, "Indexed claims include research batches 033 through 043.");
+assert.equal(index.entryCount, 289, "All claims including batches 033 through 043 are searchable.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md"), "Runtime query loader must include DMR-039.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-040-astrea-five-miraheze-reread.md"), "Runtime query loader must include DMR-040.");
 assert.ok(sourceLoader.includes("DANMACHI-RESEARCH-041-astrea-core-bilingual-review.md"), "Runtime query loader must include DMR-041.");
@@ -660,3 +661,15 @@ assert.ok(zaldBio042.results.some(c=>c.claimId==="DMR-042-CLM-007"),"Zald's Behe
 const zaldAbilities042=corpus.search(index,{query:"Deus Ambrosia Rea Ambrosia Afterglow Grattor",characterId:"CHAR-DARK-ZALD",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(zaldAbilities042.results.some(c=>c.claimId==="DMR-042-CLM-008"),"Zald's skill, magic and equipment must be searchable.");
 for(const result of [maxim042,alfiaBio042,alfiaAbilities042,zaldBio042,zaldAbilities042])assert.ok(result.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"All DMR-042 profile claims must remain secondary.");
+
+const alecto043=corpus.search(index,{query:"Alecto Familia Dina Vena Evilus",characterId:"CHAR-DARK-ALECTO",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(alecto043.results.some(c=>c.claimId==="DMR-043-CLM-001"),"Alecto's dossier claim must be searchable.");
+const apate043=corpus.search(index,{query:"Apate Familia Spirit Soldiers Basram",characterId:"CHAR-DARK-APATE",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(apate043.results.some(c=>c.claimId==="DMR-043-CLM-002"),"Apate's claim must be searchable.");
+const thanatos043=corpus.search(index,{query:"Thanatos Familia Knossos Evilus",characterId:"CHAR-DARK-THANATOS",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(thanatos043.results.some(c=>c.claimId==="DMR-043-CLM-003"),"Thanatos claim must be searchable.");
+const basram043=corpus.search(index,{query:"Basram Spirit Soldiers Apate Familia",characterId:"CHAR-DARK-BASRAM",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(basram043.results.some(c=>c.claimId==="DMR-043-CLM-004"),"Basram claim must be searchable.");
+const valletta043=corpus.search(index,{query:"Valletta Grede Thanatos Knossos Sword Oratoria",characterId:"CHAR-DARK-VALLETTA-GREDE",continuity:"CONT-SO",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(valletta043.results.some(c=>c.claimId==="DMR-043-CLM-005"),"Valletta claim must be searchable.");
+for(const result of [alecto043,apate043,thanatos043,basram043,valletta043])assert.ok(result.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"DMR-043 evidence must remain secondary.");

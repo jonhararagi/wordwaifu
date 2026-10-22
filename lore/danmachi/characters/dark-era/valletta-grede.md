@@ -10,11 +10,13 @@ source_refs:
   - "DMR-013-SRC-001"
   - "DMR-026-SRC-003"
   - "DMR-026-SRC-007"
+  - "DMR-043-SRC-005"
 claim_refs:
   - "DMR-014-CLM-024"
   - "DMR-013-CLM-009"
   - "DMR-026-CLM-005"
   - "DMR-026-CLM-006"
+  - "DMR-043-CLM-005"
 verification_status: "secondary_summary_reviewed_primary_page_pending"
 tags: ["Valletta Grede", "Sword Oratoria", "Thanatos Familia", "Evilus", "CONT-SO", "primary_text_pending"]
 research_source_refs:
@@ -23,6 +25,7 @@ research_source_refs:
   - "DMR-013-SRC-001"
   - "DMR-026-SRC-003"
   - "DMR-026-SRC-007"
+  - "DMR-043-SRC-005"
 entity_type: character
 canonical_name: "Valletta Grede"
 aliases:
@@ -210,3 +213,10 @@ La fuente comunitaria reporta que Valletta guardaba rencor a Finn por sus ataque
 
 **Evidencia:** DMR-026-CLM-005/006 (wiki secundaria) y DMR-026-SRC-007 (sinopsis editorial de contexto).  
 **Fuentes:** [DanMachi Wiki — Valletta Grede](https://danmachi.fandom.com/wiki/Valletta_Grede) · [GA Bunko — Sword Oratoria 7](https://ga.sbcr.jp/product/9784797389340/).
+
+
+## Integración en la aplicación · DANMACHI-RESEARCH-043 (2026-10-22)
+
+Valletta Grede se conecta a Thanatos Familia/Evilus y al contexto Knossos/Sword Oratoria. Cargo exacto, capacidades y secuencia de desenlace quedan pendientes de lectura de las escenas citadas.
+
+**Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.

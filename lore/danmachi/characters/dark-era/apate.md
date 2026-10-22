@@ -5,8 +5,8 @@ type: deity_character
 status: secondary_profile_expanded_primary_locator_pending
 confidence: secondary Familia profile; individual published scenes not checked
 continuity_scope: CONT-AR; CONT-GAME; CONT-UNVERIFIED
-source_refs: [DMR-013-SRC-001, DMR-014-SRC-003, DMR-033-SRC-004, DMR-033-SRC-009]
-claim_refs: [DMR-013-CLM-014, DMR-033-CLM-003]
+source_refs: [DMR-013-SRC-001, DMR-014-SRC-003, DMR-033-SRC-004, DMR-033-SRC-009, DMR-043-SRC-002]
+claim_refs: [DMR-013-CLM-014, DMR-033-CLM-003, DMR-043-CLM-002]
 aliases: ["Apate", "アパテー"]
 canonical_name: Apate
 entity_type: deity
@@ -59,3 +59,10 @@ Estas afirmaciones son secundarias y describen acciones atribuidas a la organiza
 ## Próximo cotejo
 
 Localizar las escenas de Apate en una edición publicada de Astrea Record y diferenciar mención, presencia y acciones directas. No se atribuyen a Apate apariencia, nivel, técnica o personalidad detallada sin evidencia individual. Cualquier dato del juego y de la novelización debe conservar su procedencia.
+
+
+## Integración en la aplicación · DANMACHI-RESEARCH-043 (2026-10-22)
+
+La ficha de aplicación relaciona a Apate con Apate Familia y el contexto de Spirit Soldiers, sin atribuir automáticamente el mismo poder o todas las acciones al personaje y a sus subordinados.
+
+**Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.

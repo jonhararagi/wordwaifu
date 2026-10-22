@@ -1,5 +1,14 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-043 · Cinco expedientes ausentes de la aplicación integrados (2026-10-22)
+
+- **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.
+- **IDs existentes añadidos a la aplicación:** `CHAR-DARK-ALECTO`, `CHAR-DARK-APATE`, `CHAR-DARK-THANATOS`, `CHAR-DARK-BASRAM`, `CHAR-DARK-VALLETTA-GREDE`. Se preservaron los IDs del catálogo: no son alias ni nuevas identidades.
+- **Contenido:** Alecto/Apate como deidades y sus Familias; Thanatos/Valletta en el contexto de Evilus, Knossos y Sword Oratoria; Basram como identidad distinta asociada a Apate Familia/Spirit Soldiers en la investigación existente. Se evita inventar habilidades, niveles o motivaciones específicas donde la fuente no es suficiente.
+- **Procedencia:** cinco fuentes de perfiles EN/ES migrados de Miraheze, cinco claims DMR-043 y pruebas tanto del archivo de la aplicación como de la búsqueda. Todos los claims siguen siendo secundarios.
+- **Pendiente:** una pasada más detallada de cada apartado y el cotejo de los capítulos originales; los perfiles ya son visibles, pero no se declaran biografías canónicas completas.
+- **Validación:** tests incorporados; Actions del commit pendientes de ejecución.
+
 ## DANMACHI-RESEARCH-042 · Relectura bilingüe de cinco perfiles históricos (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` sin cambios.

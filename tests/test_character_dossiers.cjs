@@ -128,3 +128,17 @@ for(const expected of historicalMiraheze042){
  for(const token of expected.tokens)assert.ok(searchable.includes(token),expected.id+" must include current Miraheze profile detail: "+token);
  assert.ok(profile.sources.includes(expected.source),expected.id+" must prioritize current English Miraheze source.");
 }
+
+const missingDarkEra043=[
+ {id:"CHAR-DARK-ALECTO",token:"Alecto Familia",url:"https://danmachien.miraheze.org/wiki/Alecto"},
+ {id:"CHAR-DARK-APATE",token:"Spirit Soldiers",url:"https://danmachien.miraheze.org/wiki/Apate"},
+ {id:"CHAR-DARK-THANATOS",token:"Knossos",url:"https://danmachien.miraheze.org/wiki/Thanatos"},
+ {id:"CHAR-DARK-BASRAM",token:"Apate Familia",url:"https://danmachien.miraheze.org/wiki/Basram"},
+ {id:"CHAR-DARK-VALLETTA-GREDE",token:"Sword Oratoria",url:"https://danmachien.miraheze.org/wiki/Valletta_Grede"}
+];
+for(const expected of missingDarkEra043){
+ const dossier=api.get(expected.id);assert.ok(dossier,expected.id+" must now be available in the app.");
+ const text=[dossier.appearance,dossier.history,dossier.personality,dossier.abilities,dossier.relationships,dossier.conflict].join(" ");
+ assert.ok(text.includes(expected.token),expected.id+" must expose role/context detail.");
+ assert.ok(dossier.sources.includes(expected.url),expected.id+" must link current EN Miraheze page.");
+}

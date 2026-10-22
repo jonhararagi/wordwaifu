@@ -434,3 +434,13 @@ Aplicar en las próximas tandas de perfiles. Este protocolo corrige el patrón d
 - [ ] Resolver la discrepancia del roster de Hera y las distancias temporales mediante texto primario.
 - [ ] Verificar motivo de la muerte fingida de Zeus, Gif Blessing, veneno de Behemoth y límites de Deus Ambrosia contra pasajes publicados.
 - **Estado:** perfiles ampliados; lectura primaria de los ocho claims pendiente. La fuente oficial existente solo respalda victoria conjunta de Zeus y Hera Familia contra Behemoth y Leviathan.
+
+
+## Estado tras DANMACHI-RESEARCH-043 — completar expedientes faltantes de Evilus
+
+- [x] Añadir perfiles de aplicación para cinco IDs ya registrados: Alecto, Apate, Thanatos, Basram y Valletta Grede.
+- [x] Conservar afiliaciones y continuidad; distinguir acciones de deidades, Familias y miembros. No rellenar niveles, magias o motivaciones sin evidencia.
+- [x] Añadir cinco claims secundarios al corpus con páginas migradas EN/ES y tests de recuperación.
+- [ ] Extraer las secciones completas de historia, personalidad, habilidades y referencias de cada página migrada para rellenar el detalle que la extracción actual no confirma.
+- [ ] Cotejar las escenas de Astrea Record para Alecto/Apate/Basram y Sword Oratoria para Thanatos/Valletta, con localizadores solo después de leer texto primario.
+- **Estado:** cinco registros de catálogo que no tenían perfil visible ya son consultables; evidencia primaria pendiente.

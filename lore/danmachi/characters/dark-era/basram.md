@@ -9,10 +9,12 @@ source_refs:
   - "DMR-028-SRC-006"
   - "DMR-028-SRC-007"
   - "DMR-028-SRC-012"
+  - "DMR-043-SRC-004"
 claim_refs:
   - "DMR-013-CLM-011"
   - "DMR-028-CLM-005"
   - "DMR-028-CLM-006"
+  - "DMR-043-CLM-004"
 verification_status: "secondary_extract_only_primary_scene_pending"
 tags: ["Basram", "Apate Familia", "Evilus", "Spirit Soldiers", "Astrea Record", "CONT-AR", "primary_text_pending"]
 research_source_refs:
@@ -20,6 +22,7 @@ research_source_refs:
   - "DMR-028-SRC-006"
   - "DMR-028-SRC-007"
   - "DMR-028-SRC-012"
+  - "DMR-043-SRC-004"
 entity_type: character
 canonical_name: "Basram"
 aliases:
@@ -96,3 +99,10 @@ El perfil lo sitúa en *Astrea Record* volumen 1. La sinopsis editorial del volu
 - [ ] Verificar el shakujō, la daga espiritual y cómo interactúan con los Spirit Soldiers.
 - [ ] Cotejar el relato sobre sus heridas, el compañero usado como escudo y el enfrentamiento con los hermanos Gulliver.
 - [ ] No inventar nivel, edad exacta, hechizos ni límites mecánicos.
+
+
+## Integración en la aplicación · DANMACHI-RESEARCH-043 (2026-10-22)
+
+Basram mantiene identidad individual y contexto reportado de Apate Familia/Spirit Soldiers; no se le asignan rango, magia o autoría de una técnica colectiva sin referencia concreta.
+
+**Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.

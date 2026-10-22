@@ -5,8 +5,8 @@ type: deity_character
 status: secondary_profile_expanded_primary_locator_pending
 confidence: community profile summarized; no authorized light-novel scene directly checked in this entry
 continuity_scope: CONT-SO; CONT-UNVERIFIED
-source_refs: [DMR-033-SRC-001, DMR-033-SRC-002]
-claim_refs: [DMR-033-CLM-001, DMR-033-CLM-002]
+source_refs: [DMR-033-SRC-001, DMR-033-SRC-002, DMR-043-SRC-003]
+claim_refs: [DMR-033-CLM-001, DMR-033-CLM-002, DMR-043-CLM-003]
 spoiler_level: major
 aliases: ["Thanatos", "タナトス", "Tanatosu"]
 romanizations: ["Thanatos", "Tanatosu"]
@@ -82,3 +82,10 @@ La wiki afirma que trata de atraer a personas que percibe marcadas por dolor o u
 El expediente se enfoca en Sword Oratoria. Su carpeta histórica en el repositorio es una ruta de organización interna, no prueba de que Thanatos participara en el núcleo de Astrea Record. No se asignan fecha de nacimiento, nivel, hechizos, habilidades, amistades ni detalles de su relación con otras deidades sin un pasaje fuente.
 
 Rutas siguientes: Sword Oratoria, volumen 7, para la presentación, y volumen 11, para su desenlace. No se registra número de capítulo o página porque no se ha abierto una edición autorizada que permita comprobarlos.
+
+
+## Integración en la aplicación · DANMACHI-RESEARCH-043 (2026-10-22)
+
+La ficha de aplicación conecta a Thanatos con Thanatos Familia, Evilus y la trama de Knossos en Sword Oratoria. La pertenencia divina no se usa como prueba de autoría de cada acto ni se mezcla con Astrea Record.
+
+**Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.

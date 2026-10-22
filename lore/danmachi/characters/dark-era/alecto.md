@@ -5,8 +5,8 @@ type: deity_character
 status: secondary_profile_expanded_primary_locator_pending
 confidence: secondary Familia roster and organization profile; no direct published scene checked
 continuity_scope: CONT-AR; CONT-GAME; CONT-UNVERIFIED
-source_refs: [DMR-013-SRC-001, DMR-014-SRC-003, DMR-033-SRC-003, DMR-033-SRC-009]
-claim_refs: [DMR-013-CLM-015, DMR-033-CLM-004]
+source_refs: [DMR-013-SRC-001, DMR-014-SRC-003, DMR-033-SRC-003, DMR-033-SRC-009, DMR-043-SRC-001]
+claim_refs: [DMR-013-CLM-015, DMR-033-CLM-004, DMR-043-CLM-001]
 aliases: ["Alecto", "アレクト"]
 canonical_name: Alecto
 entity_type: deity
@@ -59,3 +59,10 @@ No se fija apariencia, personalidad completa, magia, técnicas, edad, nivel ni d
 ## Próximo cotejo
 
 Leer Astrea Record en una edición publicada para establecer si Alecto aparece directamente, qué dice o hace y en qué secuencia. La ficha de producto de GA Bunko solo respalda la publicación y el marco general; no sustituye escenas individuales. Ningún capítulo o página se inventa.
+
+
+## Integración en la aplicación · DANMACHI-RESEARCH-043 (2026-10-22)
+
+La ficha de aplicación ahora tiene un resumen navegable de Alecto como deidad de Alecto Familia en el contexto de Evilus/Astrea Record, manteniendo por separado a sus dependientes y los hechos no cotejados.
+
+**Fuente secundaria EN/ES:** consultar las URL EN/ES registradas en el paquete DMR-043. La página no reemplaza las escenas primarias, y las incógnitas continúan explícitas.
