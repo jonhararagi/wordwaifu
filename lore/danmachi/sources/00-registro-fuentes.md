@@ -2965,7 +2965,7 @@ verification_status: stub
 - source_id: DMR-032-SRC-011
 - title: Sword Oratoria Episode 8
 - creator_or_publisher: Community-maintained DanMachi Wiki
-- source_type: ADAPTATION_RECAP
+- source_type: ADAPTATION
 - series: Sword Oratoria anime
 - volume_or_edition: Episode 8
 - language: English
