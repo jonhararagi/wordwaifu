@@ -2,7 +2,7 @@
 id: CHAR-ALISE-LOVELACE
 universe: danmachi
 type: character
-status: partial_source_checked_primary_text_pending
+status: secondary_profile_augmented_primary_locator_pending
 continuity_scope: "CONT-AR; CONT-ANIME"
 source_refs:
   - DMR-001-SRC-003
@@ -18,7 +18,7 @@ claim_refs:
   - DMR-007-CLM-026
   - DMR-030-CLM-001
   - DMR-030-CLM-002
-verification_status: "Official publisher synopsis and adaptation profile/episode synopsis checked; primary novel page locators pending"
+verification_status: "Supplemental English/Spanish wiki profile added; primary novel locators and floor discrepancy remain pending."
 tags: [Alise Lovelace, Alise Lovell, Astrea Familia, captain, justice, CONT-AR, CONT-ANIME]
 research_source_refs:
   - DMR-001-SRC-003
