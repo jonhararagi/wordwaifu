@@ -3399,3 +3399,175 @@ verification_status: stub
 - rights_note: Paraphrase and link only.
 - verified_by: DANMACHI-RESEARCH-034
 - verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-035-SRC-001 · Bete Loga — ficha comunitaria inglesa
+- source_id: DMR-035-SRC-001
+- title: Bete Loga
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Perfil; historia y skills reportadas
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Bete_Loga
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Appearance; Personality; History; Abilities; Skills
+- claims_supported: [DMR-035-CLM-001, DMR-035-CLM-002]
+- continuity_scope: CONT-SO; CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: Extractos indexados usados como fuente secundaria; la apertura directa devolvió 402 y el mirror Miraheze 403.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-035-SRC-002 · Tiona Hiryute — ficha comunitaria inglesa
+- source_id: DMR-035-SRC-002
+- title: Tiona Hiryute
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Perfil; paneles de estado, habilidades y equipo
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Tiona_Hiryute
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; Professional Status; History; Abilities; Skills; Equipment
+- claims_supported: [DMR-035-CLM-003, DMR-035-CLM-005]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado; las tablas son snapshots y requieren cotejo de etapa.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-035-SRC-003 · Tione Hiryute — ficha comunitaria inglesa
+- source_id: DMR-035-SRC-003
+- title: Tione Hiryute
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Perfil; estado, skills, magia y equipo
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Tione_Hiryute
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; History; Personality; Skills; Magic; Equipment
+- claims_supported: [DMR-035-CLM-006, DMR-035-CLM-007]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado; la cronología y las mecánicas no son evidencia primaria.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-035-SRC-004 · Lefiya Viridis — ficha comunitaria inglesa
+- source_id: DMR-035-SRC-004
+- title: Lefiya Viridis
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Perfil; snapshots y lista de magia/skills
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Lefiya_Viridis
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; History; Abilities; Skills; Magic; Development Abilities; Equipment
+- claims_supported: [DMR-035-CLM-008, DMR-035-CLM-009]
+- continuity_scope: CONT-SO; CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: Extracto indexado; el crecimiento por nivel y cada hechizo requieren cotejo primario.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-035-SRC-005 · Raul Nord — ficha comunitaria inglesa
+- source_id: DMR-035-SRC-005
+- title: Raul Nord
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Perfil; historia, habilidades y equipo
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Raul_Nord
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; Personality; History; Abilities; Development Abilities; Equipment; Debuts
+- claims_supported: [DMR-035-CLM-011]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado; los tiempos son relativos y no cotejados en las novelas.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-035-SRC-006 · Tiona Hiryute — ficha comunitaria española
+- source_id: DMR-035-SRC-006
+- title: Tiona Hiryute
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Perfil e historia
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Tiona_Hiryute
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Características; situación profesional; personalidad; historia; habilidades; equipo
+- claims_supported: [DMR-035-CLM-003, DMR-035-CLM-004]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado útil para comparar color de ojos y piso alcanzado; no se afirma lectura integral del mirror.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-035-SRC-007 · Raul Nord — ficha comunitaria española
+- source_id: DMR-035-SRC-007
+- title: Raul Nord
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Perfil, estado e historia
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Raul_Nord
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Características; situación profesional; personalidad; historia; habilidades; debuts
+- claims_supported: [DMR-035-CLM-010]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado usado para contrastar identidad y panel de estado; cifras secundarias.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-035-SRC-008 · Familia Loki — roster comunitario español
+- source_id: DMR-035-SRC-008
+- title: Familia Loki
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Roster y resumen de organización
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Familia_Loki
+- accessed_at: 2026-10-22
+- locator_type: member_table
+- locator: Tabla de miembros, apoyo y Fairy Force
+- claims_supported: [DMR-035-CLM-003, DMR-035-CLM-005, DMR-035-CLM-006, DMR-035-CLM-008, DMR-035-CLM-010]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Cruce de nombres/roles; no prueba amistades ni estados en todas las épocas.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-035-SRC-009 · Loki Familia — roster comunitario inglés
+- source_id: DMR-035-SRC-009
+- title: Loki Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Roster y resumen de organización
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Loki_Familia
+- accessed_at: 2026-10-22
+- locator_type: member_table
+- locator: Roster, second string y Fairy Force
+- claims_supported: [DMR-035-CLM-001, DMR-035-CLM-003, DMR-035-CLM-006, DMR-035-CLM-008, DMR-035-CLM-010]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Fuente de roster para cruce de personas; no prueba relaciones íntimas ni pertenencia en todos los períodos.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-035
+- verification_status: secondary_extract_only_primary_locator_pending
