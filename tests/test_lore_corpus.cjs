@@ -29,6 +29,7 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-034-wiki-expanded-hostess-and-loki-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-035-loki-core-five-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-036-freya-hostess-profiles.md",
+  "research/inbox/DANMACHI-RESEARCH-039-miraheze-bilingual-revalidation.md",
   "research/inbox/DANMACHI-RESEARCH-038-zeus-hera-maxim-historical-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
@@ -558,3 +559,24 @@ assert.ok(chloe036.results.every(c=>c.verificationStatus.includes("secondary_ext
 const lunoa036=corpus.search(index,{query:"Fist Strike Fist Fighter",characterId:"CHAR-LUNOA-FAUST",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(lunoa036.results.some(c=>c.claimId==="DMR-036-CLM-015"),"Lunoa/Lunoire combat must be searchable under stable ID.");
 assert.ok(lunoa036.results.every(c=>c.verificationStatus.includes("secondary_extract_only")),"Lunoa/Lunoire wiki additions must remain secondary.");
+
+
+/* DANMACHI-RESEARCH-039: current bilingual Miraheze pass remains explicitly secondary. */
+const hed039 = corpus.search(index, { query: "Laurus Hildr Dizaria Arry", characterId: "CHAR-HEDIN-SELLAND", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(hed039.results.some(c => c.claimId === "DMR-039-CLM-001"), "Hedin's relationship and weapon detail must be searchable.");
+assert.ok(hed039.results.every(c => c.verificationStatus.includes("secondary_extract_only")), "Hedin Miraheze claims must remain secondary.");
+const hog039 = corpus.search(index, { query: "Dainsleif Victim Abyss Mind", characterId: "CHAR-HOGNI-RAGNAR", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(hog039.results.some(c => c.claimId === "DMR-039-CLM-002"), "Hogni magic and cursed-weapon limits must be searchable.");
+assert.ok(hog039.results.every(c => c.verificationStatus.includes("secondary_extract_only")), "Hogni Miraheze claims must remain secondary.");
+const hei039 = corpus.search(index, { query: "Earth Gullveig Golden Mind", characterId: "CHAR-HEITH-VELVET", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(hei039.results.some(c => c.claimId === "DMR-039-CLM-003"), "Heith's healing limits must be searchable.");
+assert.ok(hei039.results.every(c => c.verificationStatus.includes("secondary_extract_only")), "Heith healing claims must remain secondary.");
+const heiRel039 = corpus.search(index, { query: "Heith Freya Horn Bell", characterId: "CHAR-HEITH-VELVET", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(heiRel039.results.some(c => c.claimId === "DMR-039-CLM-004"), "Heith's sensitive relationship claim must preserve attribution.");
+assert.ok(heiRel039.results.every(c => c.verificationStatus.includes("secondary_extract_only")), "Heith relationship claim must remain secondary.");
+const chloe039 = corpus.search(index, { query: "Feles Cruz Violetta Shakti", characterId: "CHAR-CHLOE-ROLO", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(chloe039.results.some(c => c.claimId === "DMR-039-CLM-005"), "Chloe's mission and combat detail must be searchable.");
+assert.ok(chloe039.results.every(c => c.verificationStatus.includes("secondary_extract_only")), "Chloe's Miraheze claims must remain secondary.");
+const lunoa039 = corpus.search(index, { query: "Demeter Gulliver Ryuu Fist Fighter", characterId: "CHAR-LUNOA-FAUST", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(lunoa039.results.some(c => c.claimId === "DMR-039-CLM-006"), "Lunoa/Lunoire's previous Familia and assignments must be searchable under one ID.");
+assert.ok(lunoa039.results.every(c => c.verificationStatus.includes("secondary_extract_only")), "Lunoa/Lunoire claims must remain secondary.");
