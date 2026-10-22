@@ -185,3 +185,13 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [DANMACHI-RESEARCH-026 · Alfia, Zald, Valletta, Jura y Erebus](research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md) — amplia cinco fichas desde extractos comunitarios, con la continuidad y la verificación primaria pendientes.
 - [DANMACHI-RESEARCH-027 · Noin, Asta, Neze, Iska y Celty](research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md) — amplía cinco perfiles con datos de historias cortas comunitariamente traducidas y deja edades/niveles contradictorios sin resolver.
 - [DANMACHI-RESEARCH-028 · Barca, Basram, Vito, Adi/Ardee y Airmid](research/inbox/DANMACHI-RESEARCH-028-barca-basram-vito-adi-airmid.md) — perfiles ampliados desde las wikis; separa la adaptación manga, la novela revisada y las continuidades de DanMemo, y corrige la clasificación histórica de Airmid.
+
+
+## Perfiles generales ampliados · DANMACHI-RESEARCH-029
+
+- [Miach](characters/miach.md) — perfil de la línea principal; se conserva el ID legado sin afirmar participación individual en Astrea Record.
+- [Naaza Erisuis](characters/naaza-erisuis.md) — lesión, prótesis, motivaciones y progresión por etapas; niveles 2 y 3 no se fusionan.
+- [Dian Cecht](characters/dian-cecht.md) — jefe de la Familia medicinal; actividad histórica de la organización separada de la presencia personal del dios.
+- [Goibniu](characters/goibniu.md) — herrero y servicios de Goibniu Familia; conexiones navegables con armas y lugares.
+- [Hephaistos](characters/hephaistos.md) — diosa herrera; detalles de Memoria Freese quedan separados de la novela.
+- [DANMACHI-RESEARCH-029](research/inbox/DANMACHI-RESEARCH-029-miach-naaza-dian-goibniu-hephaistos.md) — diez claims secundarios y once referencias registradas; cinco perfiles reclasificados fuera de la carpeta histórica porque no hay escena primaria individual localizada.
