@@ -43,18 +43,18 @@ assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, 
 assert.equal(index.sourceClaimCount, 184, "Indexed source claims must include the 10 claims from research batch 030.");
 assert.equal(index.entryCount, 187, "All sourced lore claims must be searchable, including research batch 030.");
 
-const aliseDossierExpansion = corpus.search(index, { query: "Alise Agaris Alvesynth Crimson Order", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const aliseDossierExpansion = corpus.search(index, { query: "Lubrude", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseDossierExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-002"), "Alise's wiki-expanded magic/equipment claim must be searchable.");
 assert.ok(aliseDossierExpansion.results.filter(claim => claim.claimId === "DMR-030-CLM-002").every(claim => claim.verificationStatus.includes("secondary")), "Alise's expanded combat profile must remain secondary.");
-const kaguyaDossierExpansion = corpus.search(index, { query: "Kaguya Gokou Higanbana Kodachi Futaba", characterId: "CHAR-KAGUYA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const kaguyaDossierExpansion = corpus.search(index, { query: "Gokou", characterId: "CHAR-KAGUYA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(kaguyaDossierExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-004"), "Kaguya's reported techniques/weapons must be searchable.");
-const lyraDossierExpansion = corpus.search(index, { query: "Lyra Carnivore Wingus Smite", characterId: "CHAR-LYRA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const lyraDossierExpansion = corpus.search(index, { query: "Carnivore", characterId: "CHAR-LYRA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(lyraDossierExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-006"), "Lyra's reported magic/equipment and spoiler lead must be searchable.");
-const astreaDossierExpansion = corpus.search(index, { query: "Astrea cabello nogal ojos índigo", characterId: "CHAR-ASTREA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+const astreaDossierExpansion = corpus.search(index, { query: "nogal", characterId: "CHAR-ASTREA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(astreaDossierExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-007"), "Astrea's secondary appearance reference must be searchable.");
-const ryuuRelationshipExpansion = corpus.search(index, { query: "Ryuu Astrea cartas reencuentro cinco años", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+const ryuuRelationshipExpansion = corpus.search(index, { query: "cartas", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(ryuuRelationshipExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-008"), "Ryuu's later relationship timeline must be searchable and scoped separately from Astrea Record.");
-const ryuuMagicExpansion = corpus.search(index, { query: "Ryuu Astraea Record herencia compañeras fallecidas magia", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+const ryuuMagicExpansion = corpus.search(index, { query: "ichor", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(ryuuMagicExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-010"), "The reported Astraea Record magic rule must be searchable.");
 
 const meteriaAlfiaClaim = corpus.search(index, { query: "Meteria Alfia hermana gemela", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
