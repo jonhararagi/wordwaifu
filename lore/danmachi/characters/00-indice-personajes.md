@@ -82,8 +82,8 @@ Este índice distingue entre registros del roster, expedientes de la aplicación
 | CHAR-ZEUS | [Zeus](zeus.md) | Deidad de Zeus Familia; Bell (spoiler) | Referencia secundaria; localizador primario pendiente; spoiler mayor |
 | CHAR-HERA | [Hera](hera.md) | Deidad de Hera Familia | Referencia secundaria; localizador primario pendiente; historia antigua |
 | CHAR-MAXIM | [Maxim](maxim.md) | Capitán reportado de Zeus Familia; nivel reportado 8 | Fuente comunitaria; cargo/nivel por etapa pendientes de cotejo |
-| CHAR-ASTREA | Astrea | Astrea Familia, Ryuu | Expediente de aplicación existente; cotejo de LN pendiente |
-| CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Capitanaa; guía de Ryuu; magia/equipo reportados en DMR-030 | Perfil secundario inglés/español ampliado; piso 33 vs 41 en conflicto; cotejo LN pendiente |
+| CHAR-ASTREA | [Astrea](astrea.md) | Astrea Familia, Ryuu | Perfiles oficiales + suplemento secundario de apariencia/apariciones; localizadores LN pendientes |
+| CHAR-ALISE-LOVELACE | [Alise Lovelace](alise-lovelace.md) | Alise | Capitana; guía de Ryuu; magia/equipo reportados en DMR-030 | Perfil secundario inglés/español ampliado; piso 33 vs 41 en conflicto; cotejo LN pendiente |
 | CHAR-KAGUYA | [Gojouno Kaguya](gojouno-kaguya.md) | Kaguya; Yamato Rindō | Astrea Familia; vicecapitana CONT-ANIME; historia del Lejano Oriente y técnicas reportadas en DMR-030 | Perfil secundario ampliado; historia corta y magia/armas pendientes de cotejo primario |
 | CHAR-LYRA | [Lyra](lyra.md) | Lyra; Sly Rat | Astrea Familia; Pallum; apoyo estratégico, Mūs Mine/Carnivore y spoiler Helga reportados | Perfil secundario ampliado; habilidades, equipo y reencarnación pendientes de cotejo primario |
 | CHAR-DARK-ALFIA | [Alfia](dark-era/alfia.md) | Hera Familia (reportado); Meteria | Ficha existente; fuente secundaria; localizador primario pendiente; spoiler mayor |
