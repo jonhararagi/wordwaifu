@@ -8,18 +8,24 @@ source_refs:
   - DMR-001-SRC-003
   - DMR-007-SRC-001
   - DMR-007-SRC-006
+  - DMR-030-SRC-001
+  - DMR-030-SRC-002
 claim_refs:
   - DMR-001-CLM-005
   - DMR-006-CLM-003
   - DMR-007-CLM-001
   - DMR-007-CLM-022
   - DMR-007-CLM-026
+  - DMR-030-CLM-001
+  - DMR-030-CLM-002
 verification_status: "Official publisher synopsis and adaptation profile/episode synopsis checked; primary novel page locators pending"
 tags: [Alise Lovelace, Alise Lovell, Astrea Familia, captain, justice, CONT-AR, CONT-ANIME]
 research_source_refs:
   - DMR-001-SRC-003
   - DMR-007-SRC-001
   - DMR-007-SRC-006
+  - DMR-030-SRC-001
+  - DMR-030-SRC-002
 entity_type: character
 canonical_name: "Alise Lovelace"
 aliases:
@@ -229,3 +235,12 @@ El perfil oficial de DanMachi IV añade su temperamento, principio moral, especi
 
 Fuentes: DMR-001-SRC-003, DMR-007-SRC-001 y DMR-007-SRC-006. Los localizadores internos de la novela siguen pendientes.
 
+
+
+## Ampliación secundaria cruzada · DANMACHI-RESEARCH-030
+
+Las dos wikis detallan mucho más que el perfil oficial de adaptación. La ficha comunitaria inglesa presenta a Alise como humana, de 18 años, cabello rojo, ojos verdes, 166 cm, nivel 4 y anterior integrante de Astrea Familia; registra estado fallecido y una tabla distinta para su etapa de nivel 3. **No se fijan esos valores como hechos primarios por esta ampliación.** La wiki inglesa le atribuye haber alcanzado el piso 41, mientras la española registra el 33; el censo deja la discrepancia abierta hasta que un pasaje o dato oficial verificable la resuelva.
+
+La misma fuente enumera Lubrude Bequia y Batleate Asyrath, la magia Agaris Alvesynth, la espada Crimson Order y Crimson Flower Heat Dress. Su descripción comunitaria de Lubrude Bequia le atribuye potenciaciones condicionadas por el combate, la adversidad y la fuerza del rival; Batleate Asyrath potenciaría skills en el combate cercano y magia al lanzarla. Agaris Alvesynth se describe como fuego de encantamiento que cubre partes del cuerpo y espada. Crimson Order aparece descrita como espada de una mano que potencia magia de fuego; el vestido de batalla añade defensa, movilidad y protección contra estados anormales/magia según la wiki española. Los nombres se conservan como términos de búsqueda; no se declaran nivel, funcionamiento exacto ni límites verificados en novela.
+
+**Fuentes y alcance:** DMR-030-CLM-001 y DMR-030-CLM-002; inglés: https://danmachi.fandom.com/wiki/Alise_Lovell; español: https://danmachi.fandom.com/es/wiki/Alise_Lovell. Evidencia secundaria, localizadores primarios pendientes.
