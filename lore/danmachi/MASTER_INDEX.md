@@ -195,3 +195,14 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Goibniu](characters/goibniu.md) — herrero y servicios de Goibniu Familia; conexiones navegables con armas y lugares.
 - [Hephaistos](characters/hephaistos.md) — diosa herrera; detalles de Memoria Freese quedan separados de la novela.
 - [DANMACHI-RESEARCH-029](research/inbox/DANMACHI-RESEARCH-029-miach-naaza-dian-goibniu-hephaistos.md) — diez claims secundarios y once referencias registradas; cinco perfiles reclasificados fuera de la carpeta histórica porque no hay escena primaria individual localizada.
+
+
+## Tanda DANMACHI-RESEARCH-030 · Expedientes centrales de Astrea Familia
+
+- [Alise Lovelace/Lovell](characters/alise-lovelace.md) — skills, magia, arma y equipo recogidos como evidencia secundaria; conflicto de piso máximo 33/41 abierto.
+- [Gojouno Kaguya](characters/gojouno-kaguya.md) — resumen secundario de su historia corta del Lejano Oriente y armamento/técnicas reportadas.
+- [Lyra](characters/lyra.md) — rasgos, sentidos, magia, skills, armas y afirmación de reencarnación como spoiler secundario.
+- [Astrea](characters/astrea.md) — complemento de apariencia y apariciones reportadas.
+- [Ryuu/Ryu Lion](characters/ryuu-lion.md) — relación posterior con Astrea, repertorio del estado tardío y magia Astraea Record, sin trasladarlo a T−7.
+- [Paquete de investigación y 10 claims](research/inbox/DANMACHI-RESEARCH-030-astrea-core-profiles.md) y [registro maestro de fuentes](sources/00-registro-fuentes.md).
+- **Pendiente:** todos los datos recién añadidos siguen como secundarios hasta localizar y leer las escenas correspondientes en las ediciones publicadas.
