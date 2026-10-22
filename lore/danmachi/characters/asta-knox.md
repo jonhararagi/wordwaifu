@@ -9,10 +9,17 @@ source_refs:
   - "DMR-007-SRC-006"
   - "DMR-007-SRC-010"
   - "DMR-001-SRC-005"
+  - "DMR-027-SRC-001"
+  - "DMR-027-SRC-002"
+  - "DMR-027-SRC-003"
+  - "DMR-027-SRC-007"
+  - "DMR-027-SRC-009"
 claim_refs:
   - "DMR-007-CLM-017"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-027"
+  - "DMR-027-CLM-003"
+  - "DMR-027-CLM-004"
 verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
 tags: ["Asta Knox", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
@@ -20,6 +27,11 @@ research_source_refs:
   - "DMR-007-SRC-006"
   - "DMR-007-SRC-010"
   - "DMR-001-SRC-005"
+  - "DMR-027-SRC-001"
+  - "DMR-027-SRC-002"
+  - "DMR-027-SRC-003"
+  - "DMR-027-SRC-007"
+  - "DMR-027-SRC-009"
 entity_type: character
 canonical_name: "Asta Knox"
 aliases:
@@ -180,3 +192,15 @@ Afiliación histórica a Astrea Familia. La evidencia consultada no basta para a
 - [Perfil oficial de personajes de DanMachi IV](https://danmachi.com/danmachi4/character/) — identidad, especie y referencia visual; continuidad de adaptación.
 - [Sinopsis oficial del episodio 20 de DanMachi IV](https://danmachi.com/danmachi4/story/index.php?slideNum=1) — conclusión colectiva sobre la primera Familia; no una escena individual.
 - [Índice comunitario de historias cortas](https://danmachi.fandom.com/wiki/Short_Stories) — pista secundaria, no sustituto del volumen japonés.
+
+
+## Ampliación desde wikis y rutas de historia corta · DMR-027
+
+- **Perfil comunitario:** la wiki inglesa describe a Asta como mujer enana, antigua aventurera de Astrea Familia, y le atribuye un escudo. El portal oficial confirma en la adaptación la especie enana y la afiliación grupal; su entrada no detalla estilo de lucha ni personalidad.
+- **Nivel y estado:** la ficha inglesa da un rango secundario de niveles 3–4 y la tabla española marca el nivel como desconocido. No fijar una cifra ni utilizar el escudo como prueba de que fuera exclusivamente defensora.
+- **Aparición listada:** la wiki inglesa sitúa una aparición en recuerdo en DanMachi volumen 14 y DanMachi IV episodio 15. Estos datos son rutas secundarias hasta localizar la edición y el pasaje correspondiente.
+- **Historia corta:** los índices comunitarios listan «Asta Knox» en *Astrea Record*, volumen 3. La fuente editorial oficial del volumen sirve para identificar la edición, pero no demuestra el contenido de su relato individual; no localicé una traducción comunitaria legible que permita completarlo.
+- **Límite biográfico:** personalidad, motivaciones, relaciones, magia, arma adicional y papel exacto en operaciones continúan desconocidos. No se rellenan por analogía con Neze, Iska o Celty.
+
+**Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-003, DMR-027-SRC-007 y DMR-027-SRC-009.  
+**Pendiente:** consultar «Asta Knox» en el volumen 3 y resolver el nivel únicamente con una referencia temporal verificable.
