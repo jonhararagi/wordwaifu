@@ -195,18 +195,20 @@
     },
     {
       "id": "CHAR-DARK-AIRMID",
-      "path": "characters/dark-era/airmid-teasanare.md",
+      "path": "characters/airmid-teasanare.md",
       "type": "character",
       "tags": [
         "Airmid Teasanare",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
-        "CONT-UNVERIFIED",
-        "individual dossier",
-        "primary page pending"
+        "Dian Cecht Familia",
+        "Dea Saint",
+        "Silver Saint",
+        "Dia Fratel",
+        "Tuired Well",
+        "CONT-MAIN-LN",
+        "CONT-SO",
+        "historical_presence_unconfirmed"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_profile_expanded_historical_presence_unconfirmed",
       "priority": "normal"
     },
     {
