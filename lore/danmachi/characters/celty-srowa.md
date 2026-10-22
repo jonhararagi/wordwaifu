@@ -10,10 +10,18 @@ source_refs:
   - "DMR-007-SRC-007"
   - "DMR-007-SRC-010"
   - "DMR-001-SRC-003"
+  - "DMR-027-SRC-001"
+  - "DMR-027-SRC-002"
+  - "DMR-027-SRC-003"
+  - "DMR-027-SRC-005"
+  - "DMR-027-SRC-007"
+  - "DMR-027-SRC-008"
 claim_refs:
   - "DMR-007-CLM-019"
   - "DMR-007-CLM-026"
   - "DMR-007-CLM-028"
+  - "DMR-027-CLM-009"
+  - "DMR-027-CLM-010"
 verification_status: "Official adaptation profile checked; individual Astrea Record text locator pending"
 tags: ["Celty Srowa", Astrea Familia, Astrea Record, historical roster, CONT-AR, CONT-ANIME]
 research_source_refs:
@@ -22,6 +30,12 @@ research_source_refs:
   - "DMR-007-SRC-007"
   - "DMR-007-SRC-010"
   - "DMR-001-SRC-003"
+  - "DMR-027-SRC-001"
+  - "DMR-027-SRC-002"
+  - "DMR-027-SRC-003"
+  - "DMR-027-SRC-005"
+  - "DMR-027-SRC-007"
+  - "DMR-027-SRC-008"
 entity_type: character
 canonical_name: "Celty Srowa"
 aliases:
@@ -185,3 +199,16 @@ Una traducción comunitaria de la historia corta describe una conversación de a
 - [Perfil oficial de personajes de DanMachi IV](https://danmachi.com/danmachi4/character/) — identidad, especie y referencia visual; continuidad de adaptación.
 - [Sinopsis oficial del episodio 20 de DanMachi IV](https://danmachi.com/danmachi4/story/index.php?slideNum=1) — conclusión colectiva sobre la primera Familia; no una escena individual.
 - [Publicación comunitaria sobre la historia corta «Celty Srowa»](https://danmachi.fandom.com/wiki/User_blog:Kisaki_Tosane/Astraea_Record_Volume_1_SS_%22Celty_Srowa%22) — pista secundaria, no sustituto del volumen japonés.
+
+
+## Ampliación de historia, psicología y apoyo mágico · DMR-027
+
+- **Apariencia y edad:** el perfil comunitario describe a Celty como una elfa de cabello verde claro, ojos verdes oscuros y gafas redondas; por su aspecto joven puede confundirse con un chico. El blog que traduce su historia corta dice que tiene 13 años, mientras la ficha comunitaria inglesa lista 15. La edad permanece desconocida hasta revisar el original japonés.
+- **Pasado de Yenite:** Celty nació en el Bosque de Yenite. Según la traducción, su aldea tenía una sed de conocimiento mucho más fuerte que la de otros elfos y una biblioteca en torno al Gran Árbol Sagrado. Celty empezó a temer que su curiosidad la llevara a imitar a los habitantes que ella juzgaba monstruosos por intentar resolver incluso los secretos vinculados con la muerte, por lo que abandonó el bosque.
+- **Rasgos y conflicto interno:** conserva una gran curiosidad y entusiasmo por lo que aprende, pero también temor a que esa inclinación exceda sus límites. No se retrata el conocimiento como algo malo en sí mismo: la propia conversación con Ryuu contrapone la búsqueda responsable de conocimiento con los extremos que Celty teme.
+- **Relación con Ryuu y Ryana:** Ryana es quien pone a Ryuu en contexto sobre el origen de Celty. Celty y Ryuu comparten experiencias de abandonar sus lugares de origen y se expresan respeto mutuo: Celty valora la terquedad y honestidad franca de Ryuu; Ryuu admira su inteligencia. Es una relación respaldada por la traducción comunitaria de una escena, no una medida de cercanía permanente en todas las épocas.
+- **Papel de combate y magia:** la historia traducida la presenta como maga de apoyo defensivo de la retaguardia, con un campo de visión amplio, que ayuda cuando Ryuu o Kaguya rompen la defensa frontal. La ficha comunitaria le atribuye vista élfica sobresaliente y una magia de fuego capaz de ser letal para una aventurera de segunda clase. No hay nombre de hechizo, radio, coste ni condición de uso verificados.
+- **Nivel y aparición:** la wiki inglesa da nivel 3–4 y la tabla española lo deja desconocido. La ficha comunitaria sitúa una aparición en el recuerdo de DanMachi volumen 14 / episodio 14; el relato individual está listado en *Astrea Record*, volumen 1.
+
+**Fuentes:** DMR-027-SRC-001 a DMR-027-SRC-003 y DMR-027-SRC-005/007/008.  
+**Pendiente:** cotejar el relato japonés y resolver edad, nivel, historia del bosque y condiciones reales de su magia.
