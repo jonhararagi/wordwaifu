@@ -19,7 +19,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md",
   "research/inbox/DANMACHI-RESEARCH-025-wiki-informed-character-expansion.md",
   "research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md",
-  "research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md"
+  "research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md",
+  "research/inbox/DANMACHI-RESEARCH-028-barca-basram-vito-adi-airmid.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -37,8 +38,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 154, "Indexed source claims must include the 10 new claims in research batch 027.");
-assert.equal(index.entryCount, 157, "All sourced lore claims must be searchable, including research batch 027.");
+assert.equal(index.sourceClaimCount, 164, "Indexed source claims must include the 10 new claims in research batch 028.");
+assert.equal(index.entryCount, 167, "All sourced lore claims must be searchable, including research batch 028.");
 const meteriaAlfiaClaim = corpus.search(index, { query: "Meteria Alfia hermana gemela", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(meteriaAlfiaClaim.results.some(claim => claim.claimId === "DMR-021-CLM-004"), "Meteria-Alfia relationship lead must be retrievable and stay explicitly unverified.");
 const meteriaBellClaim = corpus.search(index, { query: "Meteria madre Bell Cranel", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
@@ -116,6 +117,36 @@ assert.ok(celtyHistory027.results.every(claim => claim.verificationStatus.includ
 const celtyMagic027 = corpus.search(index, { query: "Celty magia defensiva visión Kaguya", characterId: "CHAR-CELTY-SROWA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(celtyMagic027.results.some(claim => claim.claimId === "DMR-027-CLM-010"), "Celty's reported support-magic role must be retrievable without inventing a spell name.");
 assert.ok(celtyMagic027.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const adiResearch028 = corpus.search(index, { query: "Adi Ardee Varma justicia Ryuu Vyasa", characterId: "CHAR-DARK-ARDEE-VARMA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(adiResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-001" || claim.claimId === "DMR-028-CLM-002"), "Adi/Ardee romanization variants must resolve to one stable profile.");
+assert.ok(adiResearch028.results.every(claim => claim.characterIds.includes("CHAR-DARK-ARDEE-VARMA")));
+assert.ok(adiResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const barcaResearch028 = corpus.search(index, { query: "Barca Perdix Knossos maldición Dix armas", characterId: "CHAR-DARK-BARCA-PERDIX", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(barcaResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-003" || claim.claimId === "DMR-028-CLM-004"), "Barca's Knossos/curse dossier must be retrievable under Sword Oratoria.");
+assert.ok(barcaResearch028.results.every(claim => claim.continuityScopes.includes("CONT-SO")));
+assert.ok(barcaResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const basramResearch028 = corpus.search(index, { query: "Basram Apate Familia Spirit Soldiers shakujō", characterId: "CHAR-DARK-BASRAM", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(basramResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-005" || claim.claimId === "DMR-028-CLM-006"), "Basram's Apate/Spirit Soldier information must be retrievable.");
+assert.ok(basramResearch028.results.every(claim => claim.continuityScopes.includes("CONT-AR")));
+assert.ok(basramResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const vitoResearch028 = corpus.search(index, { query: "Vito Faceless sentidos sangre Erebus", characterId: "CHAR-DARK-VITO", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(vitoResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-008"), "Vito's sensory condition must be searchable while remaining continuity-unverified.");
+assert.ok(vitoResearch028.results.every(claim => claim.continuityScopes.includes("CONT-UNVERIFIED")));
+assert.ok(vitoResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+
+const airmidResearch028 = corpus.search(index, { query: "Airmid Dian Cecht Dia Fratel Tuired Well Barca", characterId: "CHAR-DARK-AIRMID", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(airmidResearch028.results.some(claim => claim.claimId === "DMR-028-CLM-010"), "Airmid's healing dossier must be searchable in the Sword Oratoria scope.");
+assert.ok(airmidResearch028.results.every(claim => claim.continuityScopes.includes("CONT-SO")));
+assert.ok(airmidResearch028.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")));
+const airmidRecord028 = catalog.records.find(record => record.id === "CHAR-DARK-AIRMID");
+assert.equal(airmidRecord028.path, "characters/airmid-teasanare.md", "Airmid should not remain filed under dark-era candidates.");
+assert.ok(!airmidRecord028.tags.includes("Era Oscura") && !airmidRecord028.tags.includes("Astrea Record"), "Airmid's historical participation remains unconfirmed and must not be asserted by catalog tags.");
+assert.ok(index.profileDetails["CHAR-DARK-AIRMID"], "The moved Airmid file must continue to load through the character archive.");
+
 
 assert.ok(maryuuMagic.results.every(claim => claim.characterIds.includes("CHAR-MARIYU-LEAGE")), "Romanization variants must not create duplicate character identities.");
 
@@ -219,7 +250,7 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
-process.stdout.write("PASS lore search: 154 source claims, 157 entries, batches 025–027, Familia dossiers, continuity split and abstention verified.\n");
+process.stdout.write("PASS lore search: 164 source claims, 167 entries, batches 025–028, Familia dossiers, continuity split and abstention verified.\n");
 
 (async () => {
   const sourceDirectory = corpus.getOnlineSourceDirectory();
