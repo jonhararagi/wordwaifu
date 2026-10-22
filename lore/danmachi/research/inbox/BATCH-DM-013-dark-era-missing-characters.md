@@ -399,3 +399,8 @@ continuity: CONT-AR
 - `verification_status`: needs_temporal_source_check
 - `spoiler_level`: major
 - `confidence_note`: Candidato para investigación, no confirmación de presencia en el periodo. No incluir en escenas históricas hasta verificar fecha, escena y función en una fuente primaria.
+
+## Revisión posterior · Airmid Teasanare (DANMACHI-RESEARCH-028)
+
+El claim `DMR-013-CLM-016` registró a Airmid **como candidata de búsqueda**, no como participante confirmada de la Era Oscura. La revisión de las fichas comunitarias de Airmid aporta un perfil de la capitana/médica de Dian Cecht Familia y de sus magias, pero no localiza una escena de Astrea Record que confirme su presencia histórica. En consecuencia, el catálogo ya no la clasifica bajo la Era Oscura y su ficha está en [characters/airmid-teasanare.md](../../characters/airmid-teasanare.md). El ID legado `CHAR-DARK-AIRMID` se conserva para no romper las relaciones; el prefijo del ID no implica confirmación temporal.
+
