@@ -3239,7 +3239,7 @@
       const index = await prepareLoreView();
       const report = window.WordWaifuLoreCorpus.search(index, {
         query: $("#lore-query").value, characterId: $("#lore-character").value,
-        continuity: $("#lore-continuity").value, period: $("#lore-period").value,
+        continuity: $("#lore-continuity").value, strictContinuity: true, period: $("#lore-period").value,
         aspect: $("#lore-aspect").value, spoiler: $("#lore-spoiler").value, limit: 30
       });
       if (!report.results.length) {

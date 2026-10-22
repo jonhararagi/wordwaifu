@@ -621,3 +621,22 @@ assert.ok(ryuuTimeline041.results.some(c=>c.claimId==="DMR-041-CLM-007"),"Ryuu's
 const ryuuAbilities041=corpus.search(index,{query:"Mind Load Agaris Alvesynth Astraea Record Alf's Justitia",characterId:"CHAR-RYUU-LION",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(ryuuAbilities041.results.some(c=>c.claimId==="DMR-041-CLM-008"),"Ryuu's stage-specific abilities must be searchable.");
 assert.ok(ryuuAbilities041.results.filter(c=>c.claimId==="DMR-041-CLM-008").every(c=>c.verificationStatus.includes("secondary_extract_only")),"Ryuu's stage-specific mechanics must remain secondary.");
+
+/* Strict continuity is the UI mode: broad multi-continuity summaries must not leak into a specific adaptation view. */
+const ryuAnimeStrictContinuity = corpus.search(index, {
+  query:"Hostess of Fertility", characterId:"CHAR-RYUU-LION", continuity:"CONT-ANIME",
+  strictContinuity:true, period:"ALL", aspect:"all", spoiler:"all"
+});
+assert.ok(ryuAnimeStrictContinuity.results.some(c=>c.entryId==="DMR-001-CLM-010--CONT-ANIME"),"The explicitly split anime-specific Ryu claim must remain discoverable.");
+assert.ok(ryuAnimeStrictContinuity.results.every(c=>c.continuityScopes.length===1 && c.continuityScopes[0]==="CONT-ANIME"),"Strict anime search must return only anime-scoped evidence.");
+const ryuJuraMixed = corpus.search(index, {
+  query:"Jura", characterId:"CHAR-RYUU-LION", continuity:"CONT-ANIME",
+  period:"ALL", aspect:"all", spoiler:"all"
+});
+assert.ok(ryuJuraMixed.results.some(c=>c.claimId==="DMR-041-CLM-007"),"Non-strict research mode must retain cross-continuity claims for analysis.");
+const ryuJuraStrict = corpus.search(index, {
+  query:"Jura", characterId:"CHAR-RYUU-LION", continuity:"CONT-ANIME",
+  strictContinuity:true, period:"ALL", aspect:"all", spoiler:"all"
+});
+assert.equal(ryuJuraStrict.results.some(c=>c.claimId==="DMR-041-CLM-007"),false,"The cross-continuity Jura claim must not be presented as anime-only evidence.");
+assert.ok(ryuJuraStrict.results.every(c=>c.continuityScopes.length===1 && c.continuityScopes[0]==="CONT-ANIME"),"Every strict anime result must have one exact continuity scope.");

@@ -387,6 +387,7 @@
     const queryTokens = tokens(settings.query || "");
     const characterId = String(settings.characterId || "");
     const continuity = String(settings.continuity || "ALL");
+    const strictContinuity = settings.strictContinuity === true;
     const period = String(settings.period || "ALL");
     const aspect = String(settings.aspect || "all");
     const spoiler = String(settings.spoiler || "all");
@@ -395,7 +396,13 @@
     const results = [];
     for (const claim of index.claims || []) {
       if (characterId && !claim.characterIds.includes(characterId)) continue;
-      if (continuity !== "ALL" && !claim.continuityScopes.includes(continuity)) continue;
+      if (continuity !== "ALL") {
+        if (!claim.continuityScopes.includes(continuity)) continue;
+        // A claim with several continuity scopes is a cross-version summary, not
+        // evidence specific to the selected continuity. Keep it available to broad
+        // research queries, but never leak it into a strict single-continuity view.
+        if (strictContinuity && (claim.continuityScopes.length !== 1 || claim.continuityScopes[0] !== continuity)) continue;
+      }
       if (period !== "ALL" && claim.periodKey !== period) continue;
       if (aspect !== "all" && !(claim.aspects || []).includes(aspect)) continue;
       if (spoiler === "hide-major" && ["major", "endgame"].includes(claim.spoilerLevel)) continue;
