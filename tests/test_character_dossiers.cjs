@@ -22,7 +22,7 @@ for (const expected of historicalDossiers) {
   }
   assert.ok(profile.sources.includes(expected.source), expected.id + " must retain the exact source URL.");
 }
-assert.equal(api.get("CHAR-ZEUS").abilities.includes("level Falna"), true, "Deities must not be assigned adventurer levels.");
+assert.equal(api.get("CHAR-ZEUS").abilities.includes("nivel Falna"), true, "Deities must not be assigned adventurer levels.");
 assert.ok(api.get("CHAR-HERA").personality.includes("No hay evidencia suficiente"), "Hera's unknown personal psychology must remain explicit rather than inferred from mythology.");
 assert.ok(api.get("CHAR-DARK-ALFIA").relationships.includes("What If"), "Alfia's alternative continuity must remain separated.");
 assert.ok(api.get("CHAR-DARK-ZALD").abilities.includes("veneno de Behemoth"), "Zald's key limitation must remain visible in the profile.");
