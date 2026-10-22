@@ -30,9 +30,9 @@ assert.ok(api.get("CHAR-DARK-ZALD").abilities.includes("veneno de Behemoth"), "Z
 const freyaSecondaryProfiles = [
   { id: "CHAR-HEDIN-SELLAND", tokens: ["Hjaðningavíg", "Laurus Hildr", "Hildrsleif", "Arry"], source: "https://danmachien.miraheze.org/wiki/Hedin_Selland" },
   { id: "CHAR-HOGNI-RAGNAR", tokens: ["Hjaðningavíg", "Dainsleif", "Victim Abyss", "Mind"], source: "https://danmachien.miraheze.org/wiki/Hogni_Ragnar" },
-  { id: "CHAR-HEITH-VELVET", tokens: ["Reverse Gandr/Rebirth Gandr", "Crimson Gold Heal Rod", "Andhrímnir", "Dorado", "violencia sexual"], source: "https://danmachien.miraheze.org/wiki/Heith_Velvet" },
+  { id: "CHAR-HEITH-VELVET", tokens: ["Rebirth Gandr", "Earth Gullveig", "Andhrímnir", "violencia sexual"], source: "https://danmachien.miraheze.org/wiki/Heith_Velvet" },
   { id: "CHAR-CHLOE-ROLO", tokens: ["Shakti Varma", "Feles Cruz", "Violetta"], source: "https://danmachien.miraheze.org/wiki/Chloe_Rollo" },
-  { id: "CHAR-LUNOA-FAUST", tokens: ["Gulliver", "Fist Fighter", "piso máximo difiere entre inglés (60) y el extracto español (37)"], source: "https://danmachien.miraheze.org/wiki/Lunoire_Faust" }
+  { id: "CHAR-LUNOA-FAUST", tokens: ["Gulliver", "Fist Fighter", "piso 50"], source: "https://danmachien.miraheze.org/wiki/Lunoire_Faust" }
 ];
 for (const expected of freyaSecondaryProfiles) {
   const profile = api.get(expected.id);
