@@ -180,3 +180,17 @@ Los nombres indicados son rutas de investigación, no una afirmación de que tod
 | CHAR-COCO-COLLINS | [Coco Collins](coco-collins.md) | Integrante listada por roster comunitario | Solo roster; perfil primario pendiente |
 
 La ficha de [Soma Familia](../familias/soma-familia.md) reúne afiliaciones por periodo. No asumas que todos los nombres de esta tabla fueron miembros activos al mismo tiempo. Las wikis se utilizan aquí como fuentes de descubrimiento etiquetadas, no como prueba de capítulos/páginas de la novela.
+
+
+## Era Oscura / Evilus · expedientes secundarios ampliados
+
+| ID | Ficha | Datos incorporados | Estado de evidencia |
+|---|---|---|---|
+| CHAR-DARK-THANATOS | [Thanatos](dark-era/thanatos.md) | Deidad de Thanatos Familia, afiliación reportada a Evilus y arco de Sword Oratoria | Secundario; no trasladar a Astrea Record sin evidencia |
+| CHAR-DARK-ALECTO | [Alecto](dark-era/alecto.md) | Deidad patrona reportada de Alecto Familia y vínculo con las hermanas Dis | Contexto institucional secundario; ficha personal pendiente |
+| CHAR-DARK-APATE | [Apate](dark-era/apate.md) | Deidad patrona reportada de Apate Familia y contexto de Spirit Soldiers | Las acciones de la Familia no se atribuyen automáticamente a la diosa |
+| CHAR-DARK-DIS-SISTERS | [Dis Sisters](dark-era/dis-sisters.md) | Ficha grupal y coordinación, enlazada a los expedientes individuales | CONT-AR separado de CONT-GAME |
+| CHAR-DARK-DINA-DIS | [Dina Dis](dark-era/dina-dis.md) | Capitana reportada, combate cercano y maldiciones | Secundario; Astrea Record vols. 1 y 3 pendientes |
+| CHAR-DARK-VENA-DIS | [Vena Dis](dark-era/vena-dis.md) | Vicecapitana reportada, magias ígneas y equipo | Secundario; Astrea Record vols. 1 y 3 pendientes |
+
+**Control de identidad:** [Samira](dark-era/samira.md) conserva su ID legado, pero su vínculo con la Era Oscura queda sin demostrar. No fusionar niveles reportados en periodos diferentes ni inferir historia a partir de la ruta del archivo.

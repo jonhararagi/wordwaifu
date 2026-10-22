@@ -1,13 +1,13 @@
 # Censo maestro de personajes de DanMachi
 
-**Corte:** 2026-10-21 · **Rama:** work/story-completion-danmachi-audit-2026-10 · **Estado:** ampliado, todavía parcial.
+**Corte:** 2026-10-22 · **Rama:** work/story-completion-danmachi-audit-2026-10 · **Estado:** ampliado, todavía parcial.
 
 ## 1. Qué cuenta y qué no
-El catálogo tenía 134 registros, de ellos 98 filas de tipo personaje, deidad-personaje o grupo. Tras esta tanda queda en 151 registros y 113 filas de esas clases: 111 fichas individuales de personaje/deidad y dos filas grupales. Son filas de catálogo, no un recuento definitivo de personas únicas: siguen pendientes variantes, romanizaciones y cruces de identidad.
+Antes de DANMACHI-RESEARCH-033 el catálogo tenía 157 registros y 118 filas de tipo personaje, deidad-personaje o grupo. Tras esta tanda queda en 159 registros y 120 filas de esas clases: 118 expedientes individuales y dos filas grupales. Son filas de catálogo, no un recuento definitivo de personas únicas: todavía hay romanizaciones y cruces de identidad pendientes.
 
 La meta de 200–300 identidades relevantes es una meta de planificación de WordWaifu, no una cantidad oficial de la franquicia. Una persona conserva un ID a través de épocas; un grupo se registra aparte cuando existe información colectiva. El alias no crea automáticamente una persona nueva.
 
-El censo temporal complementario se incorporó después como índice; el catálogo actual pasa a 152 registros. Las filas de personaje, deidad-personaje y grupo siguen siendo 113: crear el índice no añade identidades.
+El censo temporal complementario se incorporó como índice; antes de la tanda 033 el catálogo marcaba 157 registros y 118 filas de personaje, deidad-personaje o grupo. Con Dina Dis y Vena Dis se incorporan dos expedientes individuales y el catálogo sube a 159 registros. Estos conteos describen registros, no identidades únicas resueltas.
 
 ## 2. Continuidad y evidencia
 - **CONT-MAIN-LN:** novela principal; requiere localizador del texto.

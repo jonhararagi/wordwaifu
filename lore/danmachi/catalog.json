@@ -220,21 +220,18 @@
     {
       "id": "CHAR-DARK-ALECTO",
       "path": "characters/dark-era/alecto.md",
-      "type": "character",
+      "type": "deity_character",
       "tags": [
         "Alecto",
-        "Era Oscura",
+        "Alecto Familia",
+        "Evilus",
+        "deity",
         "Astrea Record",
-        "needs source check",
         "CONT-AR",
-        "individual dossier",
-        "primary page pending",
-        "structured_dossier",
-        "candidate_only",
-        "primary_text_pending",
-        "CONT-UNVERIFIED"
+        "secondary_profile_augmented",
+        "primary_locator_pending"
       ],
-      "status": "discovery_lead_only",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -258,21 +255,19 @@
     {
       "id": "CHAR-DARK-APATE",
       "path": "characters/dark-era/apate.md",
-      "type": "character",
+      "type": "deity_character",
       "tags": [
         "Apate",
-        "Era Oscura",
+        "Apate Familia",
+        "Evilus",
+        "deity",
+        "Spirit Soldiers",
         "Astrea Record",
-        "needs source check",
         "CONT-AR",
-        "individual dossier",
-        "primary page pending",
-        "structured_dossier",
-        "candidate_only",
-        "primary_text_pending",
-        "CONT-UNVERIFIED"
+        "secondary_profile_augmented",
+        "primary_locator_pending"
       ],
-      "status": "discovery_lead_only",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -348,14 +343,17 @@
       "type": "character",
       "tags": [
         "Dis Sisters",
-        "Era Oscura",
+        "Dina Dis",
+        "Vena Dis",
+        "Alecto Familia",
+        "Evilus",
         "Astrea Record",
-        "needs source check",
         "CONT-AR",
-        "individual dossier",
-        "primary page pending"
+        "CONT-GAME",
+        "secondary_profile_augmented",
+        "primary_locator_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -498,14 +496,13 @@
       "type": "character",
       "tags": [
         "Samira",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
+        "Hathor Familia reported",
+        "former Ishtar Familia",
+        "identity_crosswalk_conflict_pending",
         "CONT-UNVERIFIED",
-        "individual dossier",
-        "primary page pending"
+        "primary_locator_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "identity_crosswalk_conflict_pending",
       "priority": "normal"
     },
     {
@@ -527,17 +524,17 @@
     {
       "id": "CHAR-DARK-THANATOS",
       "path": "characters/dark-era/thanatos.md",
-      "type": "character",
+      "type": "deity_character",
       "tags": [
         "Thanatos",
-        "Era Oscura",
-        "Astrea Record",
-        "needs source check",
-        "CONT-AR",
-        "individual dossier",
-        "primary page pending"
+        "Thanatos Familia",
+        "Evilus",
+        "Sword Oratoria",
+        "CONT-SO",
+        "secondary_profile_augmented",
+        "primary_locator_pending"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -2368,6 +2365,40 @@
       ],
       "status": "secondary_profile_expanded_primary_locator_pending",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-DINA-DIS",
+      "path": "characters/dark-era/dina-dis.md",
+      "type": "character",
+      "tags": [
+        "Dina Dis",
+        "Dis Sisters",
+        "Alecto Familia",
+        "Evilus",
+        "captain",
+        "Astrea Record",
+        "CONT-AR",
+        "primary_locator_pending"
+      ],
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-DARK-VENA-DIS",
+      "path": "characters/dark-era/vena-dis.md",
+      "type": "character",
+      "tags": [
+        "Vena Dis",
+        "Dis Sisters",
+        "Alecto Familia",
+        "Evilus",
+        "vice-captain",
+        "Astrea Record",
+        "CONT-AR",
+        "primary_locator_pending"
+      ],
+      "status": "secondary_profile_expanded_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -3332,6 +3363,12 @@
     {
       "document_id": "RESEARCH-DM-032",
       "path": "research/inbox/DANMACHI-RESEARCH-032-orario-support-profiles.md",
+      "type": "character_profile_research",
+      "status": "secondary_profiles_expanded_primary_locators_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-033",
+      "path": "research/inbox/DANMACHI-RESEARCH-033-dark-era-evilus-deities-and-dis-sisters.md",
       "type": "character_profile_research",
       "status": "secondary_profiles_expanded_primary_locators_pending"
     }

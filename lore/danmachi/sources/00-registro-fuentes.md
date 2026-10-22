@@ -2979,3 +2979,213 @@ verification_status: stub
 - rights_note: Paraphrase and link.
 - verified_by: DANMACHI-RESEARCH-032
 - verification_status: adaptation_only_primary_novel_pending
+
+
+## DMR-033-SRC-001 · Thanatos
+- source_id: DMR-033-SRC-001
+- title: Thanatos
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Thanatos
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Identity, appearance, personality and debuts; vol. 7 reported
+- claims_supported: [DMR-033-CLM-001]
+- continuity_scope: CONT-SO
+- reliability_note: Secondary profile; volume is only a route to investigate.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-002 · Thanatos
+- source_id: DMR-033-SRC-002
+- title: Thanatos
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: Spanish/indexed extract
+- official_url: https://danmachi.fandom.com/es/wiki/Thanatos; https://danmachi.fandom.com/wiki/Thanatos/Synopsis
+- accessed_at: 2026-10-22
+- locator_type: indexed_profile_extract
+- locator: Personality/history/synopsis extracts; access partial
+- claims_supported: [DMR-033-CLM-002]
+- continuity_scope: CONT-SO
+- reliability_note: Partial indexed extract, not full bilingual review.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-003 · Alecto Familia
+- source_id: DMR-033-SRC-003
+- title: Alecto Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Alecto_Familia
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Information and members roster
+- claims_supported: [DMR-033-CLM-004]
+- continuity_scope: CONT-AR; CONT-GAME
+- reliability_note: Roster does not prove that every action was personally ordered by Alecto.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-004 · Apate Familia
+- source_id: DMR-033-SRC-004
+- title: Apate Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Apate_Familia
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Information, members, reported Spirit Soldiers
+- claims_supported: [DMR-033-CLM-003]
+- continuity_scope: CONT-AR; CONT-GAME
+- reliability_note: Faction details remain secondary pending the published text.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-005 · Dis Sisters
+- source_id: DMR-033-SRC-005
+- title: Dis Sisters
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Dis_Sisters
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Appearance, personality, abilities, magic, curses, equipment
+- claims_supported: [DMR-033-CLM-005, DMR-033-CLM-006, DMR-033-CLM-007]
+- continuity_scope: CONT-AR; CONT-GAME
+- reliability_note: Stats/mechanics need review of the novelization.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-006 · Dis Sisters Synopsis
+- source_id: DMR-033-SRC-006
+- title: Dis Sisters Synopsis
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Dis_Sisters/Synopsis
+- accessed_at: 2026-10-22
+- locator_type: plot_summary
+- locator: Volume plot summary
+- claims_supported: [DMR-033-CLM-005, DMR-033-CLM-006, DMR-033-CLM-007]
+- continuity_scope: CONT-AR; CONT-GAME
+- reliability_note: Community synopsis, not transcription.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-007 · Astrea Record volume 1 differences
+- source_id: DMR-033-SRC-007
+- title: Astrea Record volume 1 differences
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1/Diferencias
+- accessed_at: 2026-10-22
+- locator_type: comparison_sections
+- locator: Comparison between game event and novelization
+- claims_supported: [DMR-033-CLM-008]
+- continuity_scope: CONT-AR; CONT-GAME
+- reliability_note: Old Fandom page may present migration information.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-008 · Astrea Record volume 3 differences
+- source_id: DMR-033-SRC-008
+- title: Astrea Record volume 3 differences
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Astrea_Record_Light_Novel_Vol_3_Differences
+- accessed_at: 2026-10-22
+- locator_type: comparison_sections
+- locator: Differences and reported Dis Sisters mechanics
+- claims_supported: [DMR-033-CLM-007, DMR-033-CLM-008]
+- continuity_scope: CONT-AR; CONT-GAME
+- reliability_note: Indexed secondary comparison.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-009 · Astrea Record 1 official product page
+- source_id: DMR-033-SRC-009
+- title: Astrea Record 1 official product page
+- creator_or_publisher: GA Bunko / SB Creative
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: Japanese
+- official_url: https://ga.sbcr.jp/product/9784815610173/
+- accessed_at: 2026-10-22
+- locator_type: publisher_product_page
+- locator: Publication and broad historical premise
+- claims_supported: [DMR-033-CLM-008]
+- continuity_scope: CONT-AR
+- reliability_note: Official metadata supports publication/premise, not individual scene details.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: official_metadata_checked_individual_scene_locator_pending
+
+## DMR-033-SRC-010 · Samira
+- source_id: DMR-033-SRC-010
+- title: Samira
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Samira
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics, status and debuts; Hathor and former Ishtar reported
+- claims_supported: [DMR-033-CLM-009]
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Accessible profile does not place her in Astrea Record.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-033-SRC-011 · Familia Ishtar
+- source_id: DMR-033-SRC-011
+- title: Familia Ishtar
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria / Astrea Record
+- volume_or_edition: Community profile/comparison or product page
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Familia_Ishtar
+- accessed_at: 2026-10-22
+- locator_type: member_table
+- locator: Roster snapshot at Ishtar disbanding; Samira level 3
+- claims_supported: [DMR-033-CLM-009]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Time-bound roster may differ from later snapshot.
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-033
+- verification_status: secondary_extract_only_primary_locator_pending

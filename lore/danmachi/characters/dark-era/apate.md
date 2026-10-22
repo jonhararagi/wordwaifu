@@ -1,146 +1,61 @@
 ---
 id: CHAR-DARK-APATE
 universe: danmachi
-type: character
-status: discovery_lead_only
-continuity_scope: "CONT-AR; CONT-UNVERIFIED"
-source_refs:
-  - "DMR-013-SRC-001"
-  - "DMR-014-SRC-003"
-claim_refs:
-  - "DMR-013-CLM-014"
-verification_status: "discovery_lead_only; primary appearance unverified"
-tags: ["Apate", Era Oscura, historical dossier, CONT-AR, primary_text_pending]
-research_source_refs:
-  - "DMR-013-SRC-001"
-  - "DMR-014-SRC-003"
-entity_type: character
-canonical_name: "Apate"
-aliases:
-  - "Apate"
-romanizations:
-  - "Apate"
-name_confidence: "Nombre y aliases mantenidos en un único ID estable; cualquier nombre alternativo reportado por una wiki sigue pendiente de confirmación en el texto primario."
+type: deity_character
+status: secondary_profile_expanded_primary_locator_pending
+confidence: secondary Familia profile; individual published scenes not checked
+continuity_scope: CONT-AR; CONT-GAME; CONT-UNVERIFIED
+source_refs: [DMR-013-SRC-001, DMR-014-SRC-003, DMR-033-SRC-004, DMR-033-SRC-009]
+claim_refs: [DMR-013-CLM-014, DMR-033-CLM-003]
+aliases: ["Apate", "アパテー"]
+canonical_name: Apate
+entity_type: deity
 identity_record_id: CHAR-DARK-APATE
-version_record_id: null
-temporal_scope:
-  - "Candidata de investigación para Era Oscura: La entrada de índice recomienda investigar el nombre Apate, pero no confirma su participación, especie, afiliación o destino."
-appearance_records: []
-continuity_variants:
-  - "CONT-AR: aparece solo como candidata en el índice secundario de investigación de la Era Oscura; su participación en la novela publicada no está confirmada."
-  - "CONT-MAIN-LN / CONT-SO: no se asigna participación en otras obras o periodos a partir del nombre del índice."
-  - "CONT-AU: no se registra una divergencia aprobada."
-canon_status: "Pista de investigación, no biografía canónica verificada."
-spoiler_level: major
-species: "unknown"
-deity_or_race: "unknown"
+familia_membership: ["Apate Familia — deity/head listed by a community roster"]
+roles: ["Head deity of Apate Familia, as reported by the community profile"]
 age_value: unknown
-age_precision: unknown
-date_of_birth: unknown
-first_appearance: "Nombre registrado en un índice secundario; no se ha identificado una primera escena de la novela publicada."
-first_source_id: DMR-013-SRC-001
-first_source_locator: "Artículo/índice secundario enlazado; volumen, capítulo y página de la novela aún pendientes."
-familia_membership:
-  []
-roles:
-  - "Candidata de investigación asociada a nombres del periodo de Era Oscura; ni su papel ni su presencia en una escena concreta están confirmados."
-epithets:
-  []
-appearance_summary: "Desconocida. No inferir especie ni rasgos físicos por el nombre o por su posible origen mitológico."
-personality_summary: "No se redacta una psicología provisional sin acciones, decisiones o diálogos localizados. La ficha sirve para reservar una ruta de lectura, no para atribuir hechos a la novela."
-motivations:
-  - "Desconocida; no hay una afirmación individual primaria localizada."
-psychology_profile:
-  dominant_traits:
-    - "No verificados."
-  values:
-    - "No verificados."
-  likes: []
-  dislikes: []
-  fears: []
-  habits: []
-  speech_style: []
-  stress_response: []
-  behavioral_patterns:
-    - "No se registra conducta hasta encontrar una escena publicada."
-  internal_conflicts:
-    - "Desconocido. No asignar afiliación, bando o conflicto interno desde una lista de candidatos."
-  development_by_period:
-    - "Candidata de investigación para Era Oscura: La entrada de índice recomienda investigar el nombre Apate, pero no confirma su participación, especie, afiliación o destino."
-evidence_claims:
-  - claim_id: DMR-013-CLM-014
-    aspect: "cobertura e identidad candidata"
-    claim: "Apate figura como candidata en índices secundarios de investigación relacionados con la Era Oscura; su aparición, afiliación y papel deben cotejarse en la novela publicada antes de tratarlos como canon."
-    era_or_interval: "Astrea Record/Era Oscura; fecha y escena exactas pendientes"
-    continuity_scope: "CONT-AR"
-    evidence_type: secondary_research_lead
-    source_id: DMR-013-SRC-001
-    source_locator: "Índice/artículo comunitario para descubrir una ruta de lectura; no página de novela"
-    verification_status: discovery_lead_only
-    confidence_note: "Registra una ruta de investigación, no una confirmación biográfica."
-abilities:
-  []
-skills:
-  []
-magic:
-  []
+species: deity
+first_appearance: "No individual debut scene checked; the secondary roster identifies her as the deity of Apate Familia."
+appearance_summary: "Unknown in the accessible sources used here; do not infer features or clothing from deity status."
+personality_summary: "The community profile describes a fanatical doctrine among Apate Familia's followers; it does not establish Apate's complete individual psychology or personal involvement in every action."
+abilities: []
+skills: []
+magic: []
 status_by_period:
-  - era: "Candidata de investigación para Era Oscura"
-    continuity_scope: "CONT-UNVERIFIED"
-    status: "La entrada de índice recomienda investigar el nombre Apate, pero no confirma su participación, especie, afiliación o destino."
-    evidence_claims: [DMR-013-CLM-014]
-    verification_status: "Índice secundario; evidencia primaria ausente"
+  - era: Astrea Record historical context
+    continuity_scope: CONT-AR
+    status: "The community Familia roster lists Apate as the patron deity. Direct dialogue, orders and final state are not reconstructed here."
+    evidence_claims: [DMR-033-CLM-003]
+    verification_status: secondary_extract_only_primary_locator_pending
 relationships:
-  []
-locations_by_period:
-  - "Desconocidas hasta cotejar una escena."
-events: []
+  - target: Apate Familia
+    relation: "Deity/head of the faction according to a community roster."
+    claim_refs: [DMR-033-CLM-003]
+  - target: Spirit Soldiers
+    relation: "The community profile connects their creation with experiments attributed to Apate Familia; that does not prove Apate personally conducted each experiment."
+    claim_refs: [DMR-033-CLM-003]
 knowledge_state:
-  knows:
-    - "Sin mapa individual de conocimiento: no hay escenas primarias verificadas."
-  suspects:
-    []
-  does_not_know:
-    - "No se ha reconstruido el conocimiento por escena; no inferirlo de fuentes generales."
+  knows: ["No scene-by-scene knowledge graph has been validated."]
+  suspects: []
+  does_not_know: ["Do not treat all Familia policies or experiments as personal actions by Apate without a published scene."]
   status: partial
-  confidence: "Limitada: los hechos biográficos específicos proceden de pistas secundarias o siguen sin datos; no hay capítulo/página primaria cotejada en esta ficha."
+  confidence: secondary_only
 open_questions:
-  - "Confirmar si Apate aparece en la novela publicada y registrar edición, volumen, capítulo y página."
-  - "No inferir que se trata de una diosa ni asignar familia, rango, poderes o alineamiento sin un pasaje."
-  - "Separar el material de Memoria Freese, adaptaciones y AU de la novela revisada."
-related_record_ids: []
-duplicate_candidates: []
-author_approved_overrides: []
-last_cross_checked: "2026-10-21"
+  - "Read the published Astrea Record volumes and locate the first direct scene of Apate, if present."
+  - "Keep Apate separate from Basram, Apate Familia and the Spirit Soldiers."
+  - "Compare the novelization and original game before assigning a version-specific feat."
+verification_status: secondary_profile_expanded_primary_locator_pending
 ---
-
 # Apate
 
-## Identidad y alcance
+## Identidad y afiliación reportadas
 
-Apate sigue siendo una entrada de investigación. El nombre permite rastrear fuentes y localizar posibles pasajes, pero el expediente no confirma su aparición en la novela publicada ni su papel.
+La ficha comunitaria de Apate Familia presenta a Apate como su deidad y a la organización como facción de Evilus. Describe a Apate Familia como una organización especialmente orientada al combate y atribuye a la Familia el uso de drogas y maldiciones para producir soldados más fuertes y difíciles de controlar. También relata un experimento con miembros procedentes de Osiris Familia, a los que se les habría infundido poder de espíritus para formar los llamados Spirit Soldiers.
 
-- **ID estable:** `CHAR-DARK-APATE`; no crear una identidad separada para una romanización, etapa vital o adaptación.
-- **Estado probatorio:** Pista de investigación, no biografía canónica verificada.
-- **Continuidad:** CONT-AR; CONT-UNVERIFIED. Las atribuciones de una fuente comunitaria se mantienen separadas de lo que confirme una edición primaria.
+## Separar a la deidad de las acciones de la Familia
 
-## Estado por periodo
+Estas afirmaciones son secundarias y describen acciones atribuidas a la organización. No demuestran que Apate ejecutara personalmente cada procedimiento ni que todas las características atribuidas a los Spirit Soldiers aparezcan idénticas en cada versión de Astrea Record. El artículo describe una doctrina fanática que despreciaba la dignidad de las personas y los espíritus, pero eso no sustituye el análisis de diálogos y decisiones directas de la deidad.
 
-### Candidata de investigación para Era Oscura
+## Próximo cotejo
 
-La entrada de índice recomienda investigar el nombre Apate, pero no confirma su participación, especie, afiliación o destino.
-
-**Claims:** DMR-013-CLM-014.
-
-## Relaciones y navegación
-
-No se asignan relaciones personales porque la evidencia disponible no sostiene un vínculo individual.
-
-## Fuentes y preguntas abiertas
-
-- Confirmar si Apate aparece en la novela publicada y registrar edición, volumen, capítulo y página.
-- No inferir que se trata de una diosa ni asignar familia, rango, poderes o alineamiento sin un pasaje.
-- Separar el material de Memoria Freese, adaptaciones y AU de la novela revisada.
-
-- Perfil/índice comunitario: referencia secundaria usada para orientar la búsqueda; no sustituye el texto japonés publicado.
-- [Anuncio oficial sobre la publicación revisada de Astrea Record](https://danmachi.com/news/news131.php): confirma que la versión novelada recibió una revisión del autor respecto del evento original de Memoria Freese; no verifica los detalles biográficos de este expediente.
+Localizar las escenas de Apate en una edición publicada de Astrea Record y diferenciar mención, presencia y acciones directas. No se atribuyen a Apate apariencia, nivel, técnica o personalidad detallada sin evidencia individual. Cualquier dato del juego y de la novelización debe conservar su procedencia.

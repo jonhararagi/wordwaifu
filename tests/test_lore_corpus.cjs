@@ -42,8 +42,8 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 197, "Indexed source claims must include the 7 claims from research batch 031.");
-assert.equal(index.entryCount, 200, "All sourced lore claims must be searchable, including research batch 031.");
+assert.equal(index.sourceClaimCount, 206, "Indexed claims include research batch 033.");
+assert.equal(index.entryCount, 209, "All claims including batch 033 are searchable.");
 
 const akiLateState = corpus.search(index, { query: "Cat Returns", characterId: "CHAR-LOKI-AKI", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(akiLateState.results.some(claim => claim.claimId === "DMR-031-CLM-001"), "Aki's later status, skills and equipment must be searchable.");
@@ -423,3 +423,29 @@ assert.ok(olivasAbilities032.results.some(claim => claim.claimId === "DMR-032-CL
 assert.ok(olivasAbilities032.results.every(claim => claim.continuityScopes.includes("CONT-SO")), "Olivas ability claim must stay in Sword Oratoria continuity.");
 assert.ok(olivasAbilities032.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Olivas ability details must remain secondary pending novel review.");
 assert.ok(olivasAbilities032.results.some(claim => claim.sourceUrls.includes("https://danmachi.fandom.com/wiki/Olivas_Act")), "Olivas claim must retain originating wiki URL.");
+
+
+// DANMACHI-RESEARCH-033 regression tests: deity profiles, Dis Sisters, continuity, identity crosswalk.
+const thanatosResearch033 = corpus.search(index, { query: "Thanatos Evilus Ais Enyo Sword Oratoria", characterId: "CHAR-DARK-THANATOS", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(thanatosResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-001" || claim.claimId === "DMR-033-CLM-002"), "Thanatos profile must be retrievable.");
+assert.ok(thanatosResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Thanatos remains secondary pending novel check.");
+const alectoResearch033 = corpus.search(index, { query: "Alecto Familia Dina Vena Evilus", characterId: "CHAR-DARK-ALECTO", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(alectoResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-004"), "Alecto Familia context must be searchable.");
+assert.ok(alectoResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Alecto remains secondary.");
+const apateResearch033 = corpus.search(index, { query: "Apate Familia Spirit Soldiers Osiris curses Evilus", characterId: "CHAR-DARK-APATE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(apateResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-003"), "Apate/Spirit Soldiers must be retrievable.");
+assert.ok(apateResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Apate remains secondary.");
+const dinaResearch033 = corpus.search(index, { query: "Dina Dis blonde green eyes captain Hogni", characterId: "CHAR-DARK-DINA-DIS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(dinaResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-005"), "Dina dossier is searchable.");
+assert.ok(dinaResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Dina remains secondary.");
+const venaResearch033 = corpus.search(index, { query: "Vena Dis Diaval Dis Otua Hedin magic staff", characterId: "CHAR-DARK-VENA-DIS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(venaResearch033.results.some(claim => claim.claimId === "DMR-033-CLM-006"), "Vena dossier is searchable.");
+assert.ok(venaResearch033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Vena remains secondary.");
+const disSistersMechanics033 = corpus.search(index, { query: "Diaval Stige status exchange Diaval Luminis level six", characterId: "CHAR-DARK-DIS-SISTERS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(disSistersMechanics033.results.some(claim => claim.claimId === "DMR-033-CLM-007"), "Dis Sisters mechanics are searchable.");
+assert.ok(disSistersMechanics033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Dis Sisters mechanics remain secondary.");
+const astreaVersionScope033 = corpus.search(index, { query: "Astrea Record light novel game differences version Dina Vena", characterId: "CHAR-DARK-DIS-SISTERS", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(astreaVersionScope033.results.some(claim => claim.claimId === "DMR-033-CLM-008"), "Light-novel/game provenance note is searchable.");
+const samiraCrosswalk033 = corpus.search(index, { query: "Samira Hathor Ishtar identity crosswalk Dark Age", characterId: "CHAR-DARK-SAMIRA", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(samiraCrosswalk033.results.some(claim => claim.claimId === "DMR-033-CLM-009"), "Samira unresolved identity crosswalk is searchable.");
+assert.ok(samiraCrosswalk033.results.every(claim => claim.verificationStatus.includes("secondary_extract_only")), "Samira crosswalk remains secondary pending review.");

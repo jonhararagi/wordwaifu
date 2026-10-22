@@ -229,3 +229,13 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Paquete DANMACHI-RESEARCH-032 y seis claims](research/inbox/DANMACHI-RESEARCH-032-orario-support-profiles.md).
 - **Criterio de cierre:** no se agregan localizadores primarios inventados; los datos comunitarios conservan su nivel secundario.
 
+
+
+## DANMACHI-RESEARCH-033 · Deidades de Evilus y hermanas Dis
+
+- [Thanatos](characters/dark-era/thanatos.md) — perfil secundario de Sword Oratoria, separado de la continuidad central de Astrea Record.
+- [Alecto](characters/dark-era/alecto.md) y [Apate](characters/dark-era/apate.md) — deidades patronas reportadas; se separan los datos de la Familia de las acciones personales de cada deidad.
+- [Dis Sisters](characters/dark-era/dis-sisters.md), [Dina Dis](characters/dark-era/dina-dis.md) y [Vena Dis](characters/dark-era/vena-dis.md) — perfiles individuales enlazados a la ficha grupal.
+- [Samira](characters/dark-era/samira.md) — atribución histórica no demostrada; se conserva su ID estable.
+- [Paquete de nueve claims](research/inbox/DANMACHI-RESEARCH-033-dark-era-evilus-deities-and-dis-sisters.md) y [registro de fuentes](sources/00-registro-fuentes.md).
+- **Límite:** información secundaria; no se inventaron páginas o capítulos de la novela.

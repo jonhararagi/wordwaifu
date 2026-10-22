@@ -1,5 +1,17 @@
 # Registro de tandas de lore
 
+## DANMACHI-RESEARCH-033 · Deidades de Evilus y hermanas Dis (2026-10-22)
+
+- Rama: work/story-completion-danmachi-audit-2026-10. main no se modifica.
+- Identidades: Thanatos, Alecto y Apate ampliados; Dina Dis y Vena Dis creadas con IDs nuevos, enlazadas con la ficha grupal Dis Sisters.
+- Corrección: Samira conserva CHAR-DARK-SAMIRA, pero su vínculo con Astrea Record/Era Oscura queda como conflicto no resuelto; las fichas accesibles la vinculan a Hathor y antigua Ishtar Familia.
+- Fuentes DMR-033-SRC-001..011: perfiles comunitarios ingleses, comparaciones/extractos españoles y referencia oficial GA Bunko. La fuente oficial solo apoya la publicación/marco general, no biografías ni técnicas.
+- Nueve claims DMR-033-CLM-001..009, todos secundarios y pendientes de localizadores primarios.
+- Continuidad: Thanatos se centra en Sword Oratoria; Dina/Vena y Alecto/Apate conservan separados CONT-AR y CONT-GAME. No se afirma que Thanatos aparezca en Astrea Record.
+- Integración: catálogo, censo, corpus, pruebas, índices y cola sincronizados; IDs previos conservados.
+- Validación pendiente: verificar los workflows tras el commit final. No se ejecutaron tests locales desde esta interfaz.
+- Próximo paso: cotejar Astrea Record vols. 1 y 3 y Sword Oratoria vols. 7 y 11 sin inventar páginas/capítulos.
+
 ## DANMACHI-RESEARCH-032 · Cinco perfiles de Orario y corrección de Olivas Act (2026-10-22)
 
 - **Rama:** `work/story-completion-danmachi-audit-2026-10`; `main` no se modificó.

@@ -338,3 +338,14 @@ La matriz mejora navegación y control de cobertura, pero **no** declara complet
 - **Estado:** PARTIAL; corrección de continuidad/procedencia hecha, ninguna escena promovida a canon primario cotejado.
 - **Documento:** `RESEARCH-DM-023`.
 
+
+
+## DANMACHI-COVERAGE-007 — Deidades de Evilus y hermanas Dis
+
+- [x] Ampliar perfiles de Thanatos, Alecto y Apate separando acciones de la Familia y de la deidad.
+- [x] Crear fichas individuales de Dina Dis y Vena Dis enlazadas desde Dis Sisters.
+- [x] Separar Astrea Record novelizado del juego original.
+- [x] Marcar la atribución histórica de Samira como conflicto sin borrar ni duplicar su ID.
+- [ ] Leer Astrea Record vols. 1 y 3 para cotejar hermanas Dis, maldiciones, magias y desenlaces.
+- [ ] Cotejar Alecto/Apate y Sword Oratoria vols. 7 y 11 para Thanatos; registrar localizador solo al abrir el texto.
+- **Estado:** perfiles secundarios ampliados; no se declara ninguna escena primaria cotejada en esta tanda.
