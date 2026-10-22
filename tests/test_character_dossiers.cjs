@@ -85,7 +85,7 @@ const astreaMirahezeProfiles = [
   { id:"CHAR-CELTY-SROWA", tokens:["Bosque Yenite","magia de rayo","Mage/Mago"], source:"https://danmachien.miraheze.org/wiki/Celty_Srowa" },
   { id:"CHAR-ISKA-BRA", tokens:["orfanato","maquillaje","dos puños"], source:"https://danmachien.miraheze.org/wiki/Iska_Bra" },
   { id:"CHAR-NEZE-RANKETT", tokens:["Bloody Justice Fang","garras de viento","luz de la luna"], source:"https://danmachien.miraheze.org/wiki/Neze_Rankett" },
-  { id:"CHAR-NOIN-UNIC", tokens:["aumentaría la velocidad","Juggernaut","nivel 4"], source:"https://danmachien.miraheze.org/wiki/Noin_Unic" }
+  { id:"CHAR-NOIN-UNIC", tokens:["aumenta la velocidad","Juggernaut","nivel 4"], source:"https://danmachien.miraheze.org/wiki/Noin_Unic" }
 ];
 for (const expected of astreaMirahezeProfiles) {
   const profile=api.get(expected.id);
