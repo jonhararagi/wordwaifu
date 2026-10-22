@@ -82,7 +82,7 @@ process.stdout.write("PASS character dossiers: " + all.length + " profiles with 
 
 const astreaMirahezeProfiles = [
   { id:"CHAR-ASTA-KNOX", tokens:["defensa impenetrable","escudo","Juggernaut"], source:"https://danmachien.miraheze.org/wiki/Asta_Knox" },
-  { id:"CHAR-CELTY-SROWA", tokens:["bosque Yenite","magia de rayo","Mago/Mage"], source:"https://danmachien.miraheze.org/wiki/Celty_Srowa" },
+  { id:"CHAR-CELTY-SROWA", tokens:["Bosque Yenite","magia de rayo","Mago/Mage"], source:"https://danmachien.miraheze.org/wiki/Celty_Srowa" },
   { id:"CHAR-ISKA-BRA", tokens:["orfanato","maquillaje","dos puños"], source:"https://danmachien.miraheze.org/wiki/Iska_Bra" },
   { id:"CHAR-NEZE-RANKETT", tokens:["Bloody Justice Fang","garras de viento","luz de la luna"], source:"https://danmachien.miraheze.org/wiki/Neze_Rankett" },
   { id:"CHAR-NOIN-UNIC", tokens:["aumentaría la velocidad","Juggernaut","nivel 4"], source:"https://danmachien.miraheze.org/wiki/Noin_Unic" }
