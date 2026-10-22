@@ -756,10 +756,10 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Lead; Professional Status; Personality; Debuts
-- claims_supported: [DMR-015-CLM-001]
+- claims_supported: [DMR-015-CLM-001, DMR-031-CLM-005, DMR-031-CLM-006]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-ANIME (según la referencia)
-- reliability_note: Fuente secundaria; biografía, magia y vínculos requieren cotejo en texto autorizado.
+- reliability_note: Fuente secundaria útil para historia, personalidad, magia y equipo reportados; la biografía y los niveles necesitan cotejo primario, y el alias Lomoire se sigue por separado por su atribución a Memoria Freese.
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
@@ -778,10 +778,10 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Lead; Characteristics; Professional Status; Personality; Debuts
-- claims_supported: [DMR-015-CLM-002]
+- claims_supported: [DMR-015-CLM-002, DMR-031-CLM-007]
 - events_supported: []
 - continuity_scope: CONT-SO; adaptación indicada por la referencia, sin cotejo separado
-- reliability_note: Fuente secundaria; escena, especie y nivel requieren cotejo en edición autorizada.
+- reliability_note: Fuente secundaria con rutas de aparición, personalidad contextual y aptitud cartográfica; separar el piso 37 de la historia corta del cementerio.
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
@@ -800,10 +800,10 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Lead; Japanese name; Alias; Professional Status; Debuts
-- claims_supported: [DMR-015-CLM-003]
+- claims_supported: [DMR-015-CLM-003, DMR-031-CLM-001, DMR-031-CLM-002]
 - events_supported: []
 - continuity_scope: CONT-SO; CONT-MAIN-LN (según referencia secundaria)
-- reliability_note: Solo para recuperación del alias Aki → Anakitty Autumn; la escena del volumen 4 no confirma por sí sola el nombre completo.
+- reliability_note: Fuente secundaria para el alias y el perfil reportado; la hoja de estado citada se debe cotejar directamente. La atribución de reencarnación no coincide entre extractos inglés/español.
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no copiar texto ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
@@ -1045,10 +1045,10 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Japanese name, Romaji, Affiliation, Debuts
-- claims_supported: [DMR-017-CLM-001]
+- claims_supported: [DMR-017-CLM-001, DMR-031-CLM-003]
 - events_supported: []
 - continuity_scope: CONT-SO
-- reliability_note: Fuente secundaria reporta ナルヴィ・ロール, romanización Naruvī Rōru y debut en el volumen 4. No confirma por sí sola si la forma Narfi que figura en las notas del repo es la misma identidad.
+- reliability_note: Fuente secundaria reporta nombre japonés, apariencia, nivel 4, piso 59 y debut en Sword Oratoria volumen 4; la equivalencia con el nombre heredado Narfi requiere cotejo primario.
 - conflicting_sources: [Repositorio: Narfi; wiki: Narvi Roll.]
 - rights_note: Paráfrasis original; no copiar prosa ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
@@ -1067,10 +1067,10 @@ verification_status: stub
 - accessed_at: 2026-10-16
 - locator_type: community_article
 - locator: Japanese name, Romaji, Affiliation, Debuts
-- claims_supported: [DMR-017-CLM-002]
+- claims_supported: [DMR-017-CLM-002, DMR-031-CLM-004]
 - events_supported: []
 - continuity_scope: CONT-SO; CONT-MANGA; CONT-ANIME (según la referencia)
-- reliability_note: Fuente secundaria identifica el nombre completo クルス・バッセル y lo atribuye a la Familia Loki; sus valores de especie/nivel y escenas deben verificarse por etapa.
+- reliability_note: Fuente secundaria reporta identidad, apariencia, equipo, nivel 4, piso 59 y debut en Sword Oratoria volumen 4; no demuestra escena individual del briefing.
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no copiar prosa ni imágenes.
 - verified_by: DANMACHI-COVERAGE-001
@@ -2708,3 +2708,64 @@ verification_status: stub
 - rights_note: Parafrasear y enlazar.
 - verified_by: DANMACHI-RESEARCH-030
 - verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-031-SRC-001 · Wiki DanMachi — Anakitty Autumn (referencia en español)
+- source_id: DMR-031-SRC-001
+- title: Anakitty Autumn
+- creator_or_publisher: Colaboradores de Wiki DanMachi
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario; contiene extracto sustantivo indexado
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Anakitty_Autumn
+- accessed_at: 2026-10-22
+- locator_type: indexed_article_extract
+- locator: Características, personalidad, historia, habilidades, reencarnación y referencias al volumen 15
+- claims_supported: [DMR-031-CLM-001, DMR-031-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-MAIN-LN; CONT-UNVERIFIED
+- reliability_note: El extracto reporta a Alkittine Diondra como reencarnación de Aki, mientras la ficha inglesa dice Felis. El conflicto queda abierto y no debe resolverse sin seguir la referencia original.
+- rights_note: Parafrasear y enlazar; no copiar arte ni texto extenso.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: indexed_secondary_extract_mirror_access_limited
+
+## DMR-031-SRC-002 · Wiki DanMachi — Cruz Bussell (referencia en español)
+- source_id: DMR-031-SRC-002
+- title: Cruz Bussell
+- creator_or_publisher: Colaboradores de Wiki DanMachi
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Artículo web comunitario; extracto sustantivo indexado
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Cruz_Bussell
+- accessed_at: 2026-10-22
+- locator_type: indexed_article_extract
+- locator: Nombre japonés/romaji, raza, afiliación, nivel, piso, debut y apariencia
+- claims_supported: [DMR-031-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-SO; CONT-MANGA; CONT-ANIME; CONT-UNVERIFIED
+- reliability_note: El extracto concuerda con la ficha inglesa para los datos generales registrados en esta tanda. El briefing del volumen 4 sigue sin localizador primario.
+- rights_note: Parafrasear y enlazar.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: indexed_secondary_extract_mirror_access_limited
+
+## DMR-031-SRC-003 · DanMachi Wiki — índice de alias
+- source_id: DMR-031-SRC-003
+- title: Aliases
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Tabla web comunitaria de alias
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Aliases
+- accessed_at: 2026-10-22
+- locator_type: alias_table_entry
+- locator: Fila Lomoire / 道化の魔書 y atribución a Elfy Colette; la fuente citada en la tabla es Memoria Freese
+- claims_supported: [DMR-031-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-GAME; CONT-UNVERIFIED
+- reliability_note: Sirve para rastrear el origen reportado del alias, no para importarlo a la novela ligera sin fuente directa.
+- rights_note: Paráfrasis y enlace; no copiar tablas extensas.
+- verified_by: DANMACHI-RESEARCH-031
+- verification_status: secondary_cross_continuity_locator_pending
