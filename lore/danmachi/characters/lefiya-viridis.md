@@ -2,11 +2,11 @@
 id: CHAR-LEFIYA-VIRIDIS
 universe: danmachi
 type: character
-status: official_adaptation_profile_secondary_lore_primary_volume_locator_pending
-confidence: official Sword Oratoria adaptation profile; secondary lore summary; primary spell locators pending
+status: secondary_profile_expanded_primary_locator_pending
+confidence: detailed English wiki extract; timeline, status panels, magic and equipment remain secondary pending primary-volume review
 continuity_scope: CONT-ANIME; CONT-SO
-source_refs: [DMR-014-SRC-001, DMR-014-SRC-007]
-claim_refs: [DMR-014-CLM-006, DMR-014-CLM-012]
+source_refs: [DMR-014-SRC-001, DMR-014-SRC-007, DMR-035-SRC-004, DMR-035-SRC-008, DMR-035-SRC-009]
+claim_refs: [DMR-014-CLM-006, DMR-014-CLM-012, DMR-035-CLM-008, DMR-035-CLM-009]
 tags: [Lefiya Viridis, Lefiya, レフィーヤ・ウィリディス, Loki Familia, elf, mage, Thousand Elf]
 ---
 # Lefiya Viridis
@@ -38,3 +38,17 @@ Su especialización mágica y función de soporte están respaldadas en término
 - **`CONT-SO`:** https://danmachi.fandom.com/es/wiki/Lefiya_Viridis y https://danmachi.fandom.com/es/wiki/Familia_Loki. Estas fuentes orientan la búsqueda; no suplen los volúmenes de la novela.
 - **Spoilers:** leves para rol y admiración; el desarrollo posterior de sus habilidades puede requerir clasificación mayor.
 - **Pendiente:** validar nombres y restricciones de hechizos, nivel por época, hitos de desarrollo y escenas de mentoría con referencias primarias.
+
+
+## Biografía ampliada a partir de ficha comunitaria
+
+La página inglesa identifica a Lefiya como una elfa de quince años y 156 cm en la instantánea consultada, con cabello rubio dorado y ojos azul oscuro. La describe como antigua estudiante del School District (clase Baldr, séptimo escuadrón) antes de convertirse en aventurera de Loki Familia. El estado de nivel 4, viva y piso máximo reportado de 60 corresponde al snapshot wiki y no se traslada automáticamente a todos los volúmenes.
+
+Según el mismo resumen, Lefiya destacó en sus estudios y ascendió de nivel tras alrededor de tres años de formación, con unos once años de edad. Permaneció aproximadamente un año adicional en el School District, luego ingresó en Loki Familia con nivel 2 y volvió a ascender alrededor de un año después. Las fechas y el orden preciso requieren cotejo directo con Sword Oratoria.
+
+La ficha describe a Lefiya como maga que no solo lanza hechizos: estudia la evolución de una batalla, calcula posibilidades y prepara una respuesta mágica apropiada. La admiración por [Ais Wallenstein](ais-wallenstein.md) es una motivación importante, pero no agota su personalidad ni su desarrollo.
+
+### Estadísticas por etapa reportadas
+
+Los paneles de la wiki muestran snapshots distintos. En nivel 3 registra Magia S960, Fuerza I86, Resistencia H184, Destreza G210 y Agilidad G271; en nivel 4 aparecen Magia E448, Fuerza H126, Resistencia G224, Destreza G207 y Agilidad G224. Mage, Resistencia Anormal y Resistencia Mágica también aparecen en la tabla. No combinar estos valores como si fueran contemporáneos o ya cotejados con un texto primario.
+
