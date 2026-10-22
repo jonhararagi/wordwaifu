@@ -12,6 +12,9 @@ source_refs:
   - DMR-007-SRC-001
   - DMR-007-SRC-002
   - DMR-007-SRC-006
+  - DMR-030-SRC-008
+  - DMR-030-SRC-009
+  - DMR-030-SRC-010
 claim_refs:
   - DMR-001-CLM-002
   - DMR-001-CLM-005
@@ -26,12 +29,18 @@ claim_refs:
   - DMR-007-CLM-013
   - DMR-007-CLM-014
   - DMR-007-CLM-026
+  - DMR-030-CLM-008
+  - DMR-030-CLM-009
+  - DMR-030-CLM-010
 verification_status: source_checked_for_official_web_pages
 tags: [Ryu Lion, Ryuu Lion, Astrea Familia, justice, multi-era, CONT-AR, CONT-MAIN-LN, CONT-ANIME]
 research_source_refs:
   - DMR-002-SRC-002
   - DMR-001-SRC-003
   - DMR-001-SRC-004
+  - DMR-030-SRC-008
+  - DMR-030-SRC-009
+  - DMR-030-SRC-010
 entity_type: character
 canonical_name: "Ryu Lion"
 aliases:
@@ -330,3 +339,18 @@ Solo el perfil posterior de la adaptación se usa aquí para la afirmación gene
 - [ ] Verificar el estado de Ryuu en la continuidad de novela principal cerca de T0 aparte del perfil del anime.
 - [ ] Añadir habilidades y magia solo con fuente y etapa temporal identificables.
 - [ ] Elegir una romanización visible según la edición que use WordWaifu, sin dividir CHAR-RYUU-LION.
+
+
+## Ampliación secundaria de relaciones y estado posterior · DANMACHI-RESEARCH-030
+
+### Ryuu y Astrea después de la tragedia
+
+La página comunitaria de relaciones afirma que Ryuu pidió a Astrea que saliera de Orario para que la diosa no presenciara ni interfiriera en la venganza contra Rudra Familia. Añade que ambas siguieron en contacto por cartas y que se reunieron después de cinco años, antes del Gran Conflicto entre facciones. La ficha describe a Astrea recibiendo a Ryuu con afecto y a Ryuu llorando de alegría. La misma página presenta a Alise como una figura de consejo que Ryuu recuerda mentalmente al pensar en Bell: es una imagen interna, no una presencia literal ni comunicación sobrenatural. Estos hechos se registran como resumen secundario del estado posterior; no se traslada esa relación sin cambios al intervalo T−7.
+
+### Repertorio de etapa posterior
+
+La wiki comunitaria japonesa consultada —en su página marcada como modificada el 6 de agosto de 2026— lista para Ryuu de 21 años, nivel 6, magias Luminous Wind, Noa Heal y Astraea Record; registra además los nombres japoneses de tres skills y las habilidades de desarrollo Hunter, Abnormal Resistance, Magic Resistance y Mage. Es el estado tardío descrito por la fuente, no el perfil de Ryuu como miembro original de Astrea Familia. Se conservan los nombres japoneses para cruzar las variantes de traducción, sin escoger una traducción como definitiva.
+
+La ficha comunitaria inglesa explica Astraea Record como una magia que permite heredar las magias de las diez compañeras fallecidas a través del vínculo y la ichor de Astrea, y describe cristales luminosos y una barrera temporal durante el encantamiento. Reglas, alcance y fortaleza no se convierten en límites mecánicos definitivos hasta comprobar el texto de novela.
+
+**Fuentes y alcance:** DMR-030-CLM-008 a DMR-030-CLM-010; https://danmachi.fandom.com/wiki/Ryuu_Lion/Relationships, https://wikiwiki.jp/danmachi/%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%BB%E3%83%AA%E3%82%AA%E3%83%B3 y https://danmachi.fandom.com/wiki/Ryuu_Lion. Información secundaria; conservar continuidad y etapa en toda recuperación.
