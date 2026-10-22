@@ -265,3 +265,12 @@ La biografía comunitaria relata que sus padres murieron durante una guerra en t
 
 Piso 37/60, nombre Lunoa/Lunoire, afiliación temporal y encargos contra los Gulliver/Ryuu quedan pendientes de comprobar en los volúmenes publicados.
 
+
+
+## Relectura bilingüe de Miraheze · 2026-10-22 (secundaria)
+
+La ficha inglesa usa Lunoire Faust. Cuenta que sus padres murieron durante una guerra en territorio imperial; pasó por una etapa de calle, recibió Falna y viajó sola cuando su diosa volvió al cielo. En Orario, su primer encargo habría sido contra los hermanos Gulliver y fracasó; luego rechazó contratos contra aventureros de primera clase, no logró matar a Ryuu y terminó trabajando en Hostess of Abundance. La página la sitúa en el piso 50 durante la operación Pseudo Shaft. Demeter Familia corresponde a la etapa de cazadora de recompensas, no al empleo posterior en Hostess.
+
+El perfil describe combate frontal, Fist Strike, Crush y la habilidad de desarrollo Fist Fighter; no enumera magia ni arma personal concreta. DanMachi vol. 21 cap. 2 aparece en la página española como pista bibliográfica, pero no se leyó directamente en esta tanda. Las discrepancias de nombre y snapshots 37/60 quedan abiertas.
+
+**Fuentes actuales:** [ficha EN](https://danmachien.miraheze.org/wiki/Lunoire_Faust), [ficha ES](https://danmachi.miraheze.org/wiki/Lunoire_Faust).
