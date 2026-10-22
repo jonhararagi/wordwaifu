@@ -3571,3 +3571,222 @@ verification_status: stub
 - rights_note: Paraphrase and link only.
 - verified_by: DANMACHI-RESEARCH-035
 - verification_status: secondary_extract_only_primary_locator_pending
+
+## DMR-036-SRC-001 · Hedin Selland
+- source_id: DMR-036-SRC-001
+- title: Hedin Selland
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Hedin_Selland
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; Professional Status; Aliases; Personality; History; Abilities; Magic; Skills; Equipment
+- claims_supported: [DMR-036-CLM-001, DMR-036-CLM-002, DMR-036-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado del perfil inglés; no se afirma lectura integral de la wiki ni de la novela. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-002 · Hedin Selland — Habilidades
+- source_id: DMR-036-SRC-002
+- title: Hedin Selland — Habilidades
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Hedin_Selland/Habilidades
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Habilidades; Magia; Development Abilities; Equipment
+- claims_supported: [DMR-036-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Tabla comunitaria recuperada por indexación; nombres, rangos y costes no cotejados con edición primaria. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-003 · Hogni Ragnar
+- source_id: DMR-036-SRC-003
+- title: Hogni Ragnar
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Hogni_Ragnar
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; Professional Status; Aliases; Personality; History; Abilities; Skills; Magic; Equipment
+- claims_supported: [DMR-036-CLM-004, DMR-036-CLM-005, DMR-036-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado del perfil inglés; no sustituye lectura de los volúmenes. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-004 · Índices de magia y habilidades de DanMachi
+- source_id: DMR-036-SRC-004
+- title: Índices de magia y habilidades de DanMachi
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Magia
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Entradas de Dainsleif, Burn Dain y Rasu Dain; tabla comunitaria de habilidades
+- claims_supported: [DMR-036-CLM-006]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Fuente auxiliar para contrastar nombres; no es biografía íntegra de Hogni. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-005 · Heith Velvet
+- source_id: DMR-036-SRC-005
+- title: Heith Velvet
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Heith_Velvet
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; Professional Status; Personality; History; Relationships; Abilities; Magic; Skills; Equipment
+- claims_supported: [DMR-036-CLM-007, DMR-036-CLM-008, DMR-036-CLM-009]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado; mecánicas y referencias a escenas requieren cotejo primario. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-006 · Heith Velvet
+- source_id: DMR-036-SRC-006
+- title: Heith Velvet
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Heith_Velvet
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Características; situación profesional; habilidades; magia; equipo
+- claims_supported: [DMR-036-CLM-007, DMR-036-CLM-009]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto para contraste; conserva piso 58 y Rebirth Gandr como variantes secundarias. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-007 · Chloe Rollo
+- source_id: DMR-036-SRC-007
+- title: Chloe Rollo
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Chloe_Rollo
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; Professional Status; Personality; History; Abilities; Skills; Magic; Equipment; Debuts
+- claims_supported: [DMR-036-CLM-010, DMR-036-CLM-011, DMR-036-CLM-012]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado; no se trata como lectura primaria del volumen. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-008 · Chloe Rollo / Chloe Rolo
+- source_id: DMR-036-SRC-008
+- title: Chloe Rollo / Chloe Rolo
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Chloe_Rollo
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Características; situación profesional; personalidad; historia; habilidades; magia; equipo
+- claims_supported: [DMR-036-CLM-010, DMR-036-CLM-012]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado español; piso reportado difiere de la wiki inglesa. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-009 · Lunoire Faust
+- source_id: DMR-036-SRC-009
+- title: Lunoire Faust
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: English
+- official_url: https://danmachi.fandom.com/wiki/Lunoire_Faust
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Characteristics; Professional Status; Personality; History; Relationships; Abilities; Skills
+- claims_supported: [DMR-036-CLM-013, DMR-036-CLM-014, DMR-036-CLM-015]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado; no reemplaza las novelas; grafía editorial por comprobar. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
+
+
+## DMR-036-SRC-010 · Lunoa / Lunoire Faust
+- source_id: DMR-036-SRC-010
+- title: Lunoa / Lunoire Faust
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Community character profile or ability index
+- language: Spanish
+- official_url: https://danmachi.fandom.com/es/wiki/Lunoire_Faust
+- accessed_at: 2026-10-22
+- locator_type: article_sections
+- locator: Características; situación profesional; personalidad; historia; habilidades
+- claims_supported: [DMR-036-CLM-013, DMR-036-CLM-015]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-SO; CONT-UNVERIFIED
+- reliability_note: Extracto indexado español usado para registrar variantes y discrepancia de piso. Fandom legacy pages returned HTTP 402 when directly opened and the current Miraheze mirrors were not fully accessible. No primary novel page was verified.
+- conflicting_sources: []
+- rights_note: Paraphrase and link only.
+- verified_by: DANMACHI-RESEARCH-036
+- verification_status: secondary_extract_only_primary_locator_pending
