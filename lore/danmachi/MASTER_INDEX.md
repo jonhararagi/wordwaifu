@@ -183,3 +183,4 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Meteria](characters/dark-era/meteria.md) — expediente con spoiler mayor; parentesco y maternidad reportados secundariamente.
 - [DANMACHI-RESEARCH-021 · Zeus, Hera y sus Familias](research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md) — separa evidencia oficial auxiliar y referencias secundarias.
 - [DANMACHI-RESEARCH-026 · Alfia, Zald, Valletta, Jura y Erebus](research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md) — amplia cinco fichas desde extractos comunitarios, con la continuidad y la verificación primaria pendientes.
+- [DANMACHI-RESEARCH-027 · Noin, Asta, Neze, Iska y Celty](research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md) — amplía cinco perfiles con datos de historias cortas comunitariamente traducidas y deja edades/niveles contradictorios sin resolver.
