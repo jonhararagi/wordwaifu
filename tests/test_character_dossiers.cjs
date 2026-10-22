@@ -4,6 +4,26 @@ const api = globalThis.WordWaifuCharacterDossiers;
 assert.ok(api, "Character dossier registry should load in Node.");
 const all = api.list();
 assert.ok(all.length >= 37, "The archive must retain existing dossiers and seven new Soma Familia members.");
+
+const freyaSecondaryProfiles = [
+  { id: "CHAR-HEDIN-SELLAND", tokens: ["Hjaðningavíg", "Laurus Hildr", "Hildrsleif"], source: "https://danmachi.fandom.com/wiki/Hedin_Selland" },
+  { id: "CHAR-HOGNI-RAGNAR", tokens: ["Hjaðningavíg", "Dainsleif", "Victim Abyss"], source: "https://danmachi.fandom.com/wiki/Hogni_Ragnar" },
+  { id: "CHAR-HEITH-VELVET", tokens: ["Reverse Gandr/Rebirth Gandr", "Crimson Gold Heal Rod", "Andhrímnir"], source: "https://danmachi.fandom.com/wiki/Heith_Velvet" },
+  { id: "CHAR-CHLOE-ROLO", tokens: ["Shakti Varma", "Feles Cruz", "Violetta"], source: "https://danmachi.fandom.com/wiki/Chloe_Rollo" },
+  { id: "CHAR-LUNOA-FAUST", tokens: ["Gulliver", "Fist Fighter", "piso 37/60"], source: "https://danmachi.fandom.com/wiki/Lunoire_Faust" }
+];
+for (const expected of freyaSecondaryProfiles) {
+  const profile = api.get(expected.id);
+  assert.ok(profile, expected.id + " must resolve as a unique application dossier.");
+  const searchable = [profile.appearance, profile.history, profile.personality, profile.abilities, profile.relationships, profile.conflict].join(" ");
+  for (const token of expected.tokens) {
+    assert.ok(searchable.includes(token), expected.id + " must expose sourced detail: " + token);
+  }
+  assert.ok(profile.sources.includes(expected.source), expected.id + " must retain the exact wiki source URL.");
+}
+assert.ok(api.list().some(item => item.id === "CHAR-LUNOA-FAUST"), "The canonical Lunoa/Lunoire identity must use the catalog ID.");
+assert.equal(api.list().some(item => item.id === "CHAR-LUNOIRE-FAUST"), false, "The legacy spelling must not create a duplicate identity.");
+assert.deepEqual(api.get("CHAR-LUNOIRE-FAUST"), api.get("CHAR-LUNOA-FAUST"), "The prior ID spelling must remain a compatible lookup alias.");
 for (const dossier of all) {
   for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) {
     assert.ok(typeof dossier[field] === "string" && dossier[field].length >= 100,
