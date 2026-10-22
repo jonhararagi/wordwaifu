@@ -524,3 +524,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Código y pruebas:** `src/lore-corpus.js` carga `DANMACHI-RESEARCH-029`; las pruebas cubren recuperación de los cinco expedientes, 10 claims nuevos, IDs/rutas estables, ausencia de etiquetas históricas afirmativas y eliminación de las rutas viejas.
 - **Catálogo:** 152 registros, 51 IDs reservados; los documentos de apoyo pasan de 116 a 117. No se asignó un nuevo ID principal.
 - **Evidencia pendiente:** esta tanda no sustituye lectura directa de los volúmenes. Siguen pendientes los localizadores primarios de las escenas sobre la prótesis de Naaza, el conflicto económico Miach/Dian Cecht, la espada prestada y trabajos de Goibniu, y el Hestia Knife/Welf. Los resultados de CI deben verificarse en el SHA final de la rama.
+
+
+## DANMACHI-CHARACTER-ERA-BATCH-030 · Ampliación secundaria de cinco perfiles centrales de Astrea Familia (2026-10-22)
+
+- **Rama:** work/story-completion-danmachi-audit-2026-10; main no se modifica.
+- **Identidades ampliadas:** Alise Lovelace/Lovell (CHAR-ALISE-LOVELACE), Gojouno Kaguya (CHAR-KAGUYA), Lyra (CHAR-LYRA), Astrea (CHAR-ASTREA) y Ryuu/Ryu Lion (CHAR-RYUU-LION). No se crean IDs de personajes ni rutas nuevas.
+- **Contenido incorporado:** Alise: dos tablas por nivel reportadas, skills, magia, espada/equipo y discrepancia de piso máximo entre wikis inglesa (41) y española (33). Kaguya: historia corta resumida por comunidad, conflicto moral, Gokou y nombres de armas/técnicas reportados; la variante Tekiheni/Sakibeni permanece abierta. Lyra: rasgos, sentidos, skills, magias, Carnivore, Aegis y afirmación de reencarnación de Helga conservada como spoiler secundario. Astrea: descripción física y rutas de apariciones reportadas. Ryuu: cartas/reencuentro posterior con Astrea, Alise como recuerdo interior, perfil comunitario japonés actualizado el 2026-08-06 y reglas reportadas de Astraea Record.
+- **Procedencia:** se añadieron 10 fuentes y 10 claims DMR-030-SRC-001..010 / DMR-030-CLM-001..010; cada afirmación está marcada secundaria. No se afirma que las wikis se hayan leído como novela primaria ni se completan localizadores de capítulo/página no consultados.
+- **Integración real:** suplemento de investigación conectado a la carga de src/lore-corpus.js; cinco fichas individuales enlazan fuentes y claims; catálogo añade RESEARCH-DM-030 sin alterar identidades; test de recuperación para los cinco personajes y para magia/equipo/continuidad; índice de personajes y MASTER_INDEX actualizados.
+- **Catálogo tras el registro:** 152 records, 51 IDs reservados, 118 documentos de apoyo. Sin IDs duplicados ni identidades nuevas.
+- **Validación de CI:** pendiente de comprobar sobre el último SHA de esta tanda; no declarar PASS hasta que terminen ambos flujos.
+- **Siguiente prioridad:** localizar los pasajes publicados concretos de Astrea Record volúmenes 1–3, la historia corta vinculada al volumen 2 y la continuidad posterior de Ryuu antes de convertir los datos secundarios en evidencia canónica.
