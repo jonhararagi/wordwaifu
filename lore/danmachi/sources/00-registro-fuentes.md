@@ -2588,7 +2588,7 @@ verification_status: stub
 - accessed_at: 2026-10-22
 - locator_type: community_story_summary
 - locator: Resumen secundario de la historia corta y subsección Biography; no se leyó directamente el original japonés.
-- claims_supported: [DMR-030-CLM-003, DMR-030-CLM-004]
+- claims_supported: [DMR-030-CLM-003]
 - continuity_scope: CONT-AR; CONT-UNVERIFIED
 - reliability_note: Relato secundario de historia extra; no confundir con escena cotejada en el texto publicado ni con canon exclusivo de novela principal.
 - rights_note: Parafrasear sin reproducir el relato.
@@ -2645,7 +2645,7 @@ verification_status: stub
 - accessed_at: 2026-10-22
 - locator_type: familia_overview_and_links
 - locator: Descripción general de la Familia, miembros y vínculos relacionados.
-- claims_supported: [DMR-030-CLM-007, DMR-030-CLM-008]
+- claims_supported: [DMR-030-CLM-007]
 - continuity_scope: CONT-AR; CONT-MAIN-LN; CONT-UNVERIFIED
 - reliability_note: El censo grupal ayuda a navegar, pero no demuestra por sí mismo presencia individual en una escena ni orden completo de eventos.
 - rights_note: Parafrasear y enlazar.
@@ -2664,7 +2664,7 @@ verification_status: stub
 - accessed_at: 2026-10-22
 - locator_type: relationship_subpage
 - locator: Subsecciones Alise Lovell, Astraea y Astraea Familia.
-- claims_supported: [DMR-030-CLM-008, DMR-030-CLM-010]
+- claims_supported: [DMR-030-CLM-008]
 - continuity_scope: CONT-MAIN-LN; CONT-UNVERIFIED
 - reliability_note: Resumen de relaciones narrativas, incluye spoilers posteriores; no tratar imágenes mentales o paráfrasis como diálogos literales.
 - rights_note: Parafrasear y enlazar.
