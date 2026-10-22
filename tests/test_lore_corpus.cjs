@@ -21,7 +21,8 @@ const documentPaths = [
   "research/inbox/DANMACHI-RESEARCH-026-dark-era-antagonist-dossiers.md",
   "research/inbox/DANMACHI-RESEARCH-027-astrea-minor-character-profiles.md",
   "research/inbox/DANMACHI-RESEARCH-028-barca-basram-vito-adi-airmid.md",
-  "research/inbox/DANMACHI-RESEARCH-029-miach-naaza-dian-goibniu-hephaistos.md"
+  "research/inbox/DANMACHI-RESEARCH-029-miach-naaza-dian-goibniu-hephaistos.md",
+  "research/inbox/DANMACHI-RESEARCH-030-astrea-core-profiles.md"
 ];
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents);
@@ -39,8 +40,23 @@ assert.equal(corpus.searchEntities(catalog, { type: "familia", query: "no existe
 assert.equal(corpus.searchEntities(catalog, { type: "unknown" }).abstain, true);
 assert.equal(corpus.searchEntities(catalog, { type: "character_group" }).error, undefined, "Underscored catalog type aliases must normalize consistently.");
 assert.equal(corpus.searchEntities(catalog, { type: "deity_character" }).error, undefined);
-assert.equal(index.sourceClaimCount, 174, "Indexed source claims must include the 10 claims from research batch 029.");
-assert.equal(index.entryCount, 177, "All sourced lore claims must be searchable, including research batch 029.");
+assert.equal(index.sourceClaimCount, 184, "Indexed source claims must include the 10 claims from research batch 030.");
+assert.equal(index.entryCount, 187, "All sourced lore claims must be searchable, including research batch 030.");
+
+const aliseDossierExpansion = corpus.search(index, { query: "Alise Agaris Alvesynth Crimson Order", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(aliseDossierExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-002"), "Alise's wiki-expanded magic/equipment claim must be searchable.");
+assert.ok(aliseDossierExpansion.results.filter(claim => claim.claimId === "DMR-030-CLM-002").every(claim => claim.verificationStatus.includes("secondary")), "Alise's expanded combat profile must remain secondary.");
+const kaguyaDossierExpansion = corpus.search(index, { query: "Kaguya Gokou Higanbana Kodachi Futaba", characterId: "CHAR-KAGUYA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(kaguyaDossierExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-004"), "Kaguya's reported techniques/weapons must be searchable.");
+const lyraDossierExpansion = corpus.search(index, { query: "Lyra Carnivore Wingus Smite", characterId: "CHAR-LYRA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(lyraDossierExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-006"), "Lyra's reported magic/equipment and spoiler lead must be searchable.");
+const astreaDossierExpansion = corpus.search(index, { query: "Astrea cabello nogal ojos índigo", characterId: "CHAR-ASTREA", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(astreaDossierExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-007"), "Astrea's secondary appearance reference must be searchable.");
+const ryuuRelationshipExpansion = corpus.search(index, { query: "Ryuu Astrea cartas reencuentro cinco años", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ryuuRelationshipExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-008"), "Ryuu's later relationship timeline must be searchable and scoped separately from Astrea Record.");
+const ryuuMagicExpansion = corpus.search(index, { query: "Ryuu Astraea Record herencia compañeras fallecidas magia", characterId: "CHAR-RYUU-LION", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(ryuuMagicExpansion.results.some(claim => claim.claimId === "DMR-030-CLM-010"), "The reported Astraea Record magic rule must be searchable.");
+
 const meteriaAlfiaClaim = corpus.search(index, { query: "Meteria Alfia hermana gemela", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(meteriaAlfiaClaim.results.some(claim => claim.claimId === "DMR-021-CLM-004"), "Meteria-Alfia relationship lead must be retrievable and stay explicitly unverified.");
 const meteriaBellClaim = corpus.search(index, { query: "Meteria madre Bell Cranel", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
