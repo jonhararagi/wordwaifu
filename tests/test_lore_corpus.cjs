@@ -558,6 +558,15 @@ assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-
 const pantheonPrototypeSearch = corpus.search(index, { query: "Pantheon avenida tiendas Guild", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(!pantheonPrototypeSearch.results.some(item => item.claimId === "DMR-048-CLM-001"), "The main-novel Pantheon claim must not leak into Prototype continuity.");
 
+// DMR-049: Sword Oratoria vol. 7 synopsis is searchable only in CONT-SO, without promoting it to main LN.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md"), "DMR-049 must be in the default research manifest.");
+const daedalusSwordOratoriaSearch = corpus.search(index, { query: "Daedalus Street Melen Loki Familia", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(daedalusSwordOratoriaSearch.results.some(item => item.claimId === "DMR-049-CLM-001" && item.verificationStatus === "source_checked" && item.sourceUrls.includes("https://ga.sbcr.jp/product/9784797389340/")), "Daedalus Street must be searchable from the official Sword Oratoria vol. 7 synopsis with its source and continuity.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-DAEDALUS-STREET-LOKI-SO-VOL7" && edge.from === "LOC-DAEDALUS-STREET" && edge.to === "DM-FAM-LOKI" && edge.continuity === "CONT-SO" && edge.claimRef === "DMR-049-CLM-001" && edge.evidenceStatus === "source_checked"), "The Loki Familia investigation relation must carry the Sword Oratoria claim provenance.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "official-sword-oratoria-vol-7" && source.url === "https://ga.sbcr.jp/product/9784797389340/" && source.limits.includes("CONT-SO")), "Sword Oratoria vol. 7 must be discoverable in the source browser with explicit continuity limits.");
+const daedalusMainLnSearch = corpus.search(index, { query: "Daedalus Street Melen Loki Familia", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(!daedalusMainLnSearch.results.some(item => item.claimId === "DMR-049-CLM-001"), "Sword Oratoria evidence must not leak into main light-novel continuity.");
+
 // DMR-044 historical dossiers: default retrieval and game-continuity isolation.
 assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"),"DMR-044 must be in the research manifest.");
 for(const id of ["CHAR-MAXIM","CHAR-HELGA","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS"]) {

@@ -19,7 +19,7 @@
 | LOC-LOKI-MANOR | Residencia de Loki Familia | Miembros, reuniones, preparación de expediciones | Alta |
 | LOC-FREYA-MANOR | Residencia de Freya Familia | Freya, Ottar y miembros | Alta |
 | LOC-HEPHAISTOS-SHOP | Herrería de Hephaistos | Welf, equipo y fabricación | Media |
-| [LOC-DAEDALUS-STREET](daedalus-street.md) | Daedalus Street / Calle Daidalos | Orario, zona residencial, trama urbana | Parcial: mención oficial en anime; topología secundaria pendiente |
+| [LOC-DAEDALUS-STREET](daedalus-street.md) | Daedalus Street / Calle Daidalos | Orario, investigación de Loki Familia en Sword Oratoria | Parcial: mención anime y sinopsis oficial de Sword Oratoria vol. 7; geometría y primera mención en novela principal pendientes |
 | [LOC-ORARIO-NORTH-PLAZA](north-plaza.md) | Plaza semicircular al norte de Orario (etiqueta descriptiva; nombre propio no confirmado) | Orario, avenida principal y escena de compra de equipo | Extracto editorial de novela principal; página pendiente |
 
 ## Candidatos de Orario encontrados en wikis (IDs aún no activados)
