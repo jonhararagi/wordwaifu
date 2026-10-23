@@ -74,6 +74,23 @@
 - La crianza hipotética de Bell por Alfia y Zald no se transfiere a `CONT-MAIN-LN`. Las afirmaciones sobre Meteria como madre de Bell y hermana gemela de Alfia que se usan para la continuidad principal permanecen en `DMR-029-CLM-011` con fuente comunitaria y estado `secondary_checked`, hasta localizar un pasaje publicado reproducible.
 - Se revisaron las fichas editoriales oficiales de [Astrea Record 1](https://ga.sbcr.jp/product/9784815610173/), [Astrea Record 2](https://ga.sbcr.jp/product/9784815610180/), [Astrea Record 3](https://ga.sbcr.jp/product/9784815610197/) y [DanMachi 20](https://ga.sbcr.jp/product/9784815628697/). Sus sinopsis sirven para procedencia editorial y contexto general; no nombran ni verifican las capacidades, biografías o relaciones individuales de los cinco expedientes, por lo que no se usan para promover esos claims.
 
+### DMR-045-CLM-004 · Astrea Record 3 special edition identifies the author story as alternate
+
+- claim_id: DMR-045-CLM-004
+- claim: La página editorial oficial de GA Bunko para la edición especial de Astrea Record 3 dice que el cuadernillo incluye una versión ampliada y revisada de «それは遥か彼方の静穏の夢», calificada explícitamente como algo que «podría haber sido». La publicación original del autor presenta la situación hipotética en la que Alfia y Zald cuidan de Bell y Alfia recuerda a Meteria. La evidencia combinada sostiene que esta historia debe consultarse como CONT-AU, no como prueba de que esos sucesos ocurrieran en la novela ligera principal.
+- character_ids: [CHAR-DARK-ALFIA, CHAR-DARK-ZALD, CHAR-METERIA, DM-CHAR-BELL]
+- aspect: clasificación editorial, escenario alternativo y relación de cuidado hipotética
+- era_or_interval: Relato alternativo publicado en web en 2020 y recogido revisado en el cuadernillo de la edición especial de Astrea Record 3 de 2022
+- continuity_scope: CONT-AU
+- source_id: DMR-045-SRC-002; DMR-029-SRC-016
+- source_title: GA Bunko · Astrea Record 3 edición especial; Fujino Omori · それは遥か彼方の静穏の夢
+- source_type: OFFICIAL_REFERENCE; AUTHOR_NOTE
+- source_locator: Página editorial oficial, frase del cuadernillo en la descripción del producto; publicación original del autor, escenario descrito como un sueño en otro lugar
+- source_url: https://ga.sbcr.jp/product/9784815617554/; https://note.com/fujinoomori/n/n629829ac3fe4
+- evidence_type: official_publisher_alt_story_label_with_author_excerpt
+- verification_status: source_checked_excerpt_only
+- spoiler_level: major
+- confidence_note: La ficha del editor confirma el encuadre de “lo que podría haber sido”; los detalles del escenario proceden de la nota del autor. Ninguna de las dos fuentes convierte esa crianza hipotética en un hecho de CONT-MAIN-LN ni confirma por sí sola los datos biográficos principales de los cinco personajes.
 ## Fuentes y alcance
 
 - [Cronología oficial](https://danmachi.com/chronology/): sitúa Astrea Record aproximadamente siete años antes de Bell y resume el marco de la Era Oscura. No verifica las acciones individuales de estos cinco personajes. Se reutiliza DMR-038-CLM-001 / DMR-038-SRC-001.
