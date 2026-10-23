@@ -80,6 +80,7 @@
     { id:"yenpress-danmachi-13", category:"official", title:"DanMachi vol. 13 · sinopsis editorial", publisher:"Yen Press", authority:"Paratexto editorial; no texto de la novela", url:"https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel", coverage:"Contexto del arco de Rivira y de la persecución de Ryuu/Lyu.", limits:"No nombra a Jura ni demuestra sus capacidades." },
     { id:"yenpress-sword-oratoria-01", category:"official", title:"Sword Oratoria vol. 1 · sinopsis editorial", publisher:"Yen Press", authority:"Paratexto editorial; no texto de la novela", url:"https://yenpress.com/titles/9780316318143-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-on-the-side-sword-oratoria-vol-1-light-novel", coverage:"Contexto editorial de Sword Oratoria y Ais.", limits:"No nombra a Albert ni Aria y no demuestra parentescos." },
     { id:"yenpress-sword-oratoria-03", category:"official", title:"Sword Oratoria, volumen 3 · sinopsis editorial", publisher:"Yen Press", authority:"Paratexto editorial; no texto de la novela", url:"https://yenpress.com/titles/9780316318181-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-on-the-side-sword-oratoria-vol-3-light-novel", coverage:"Marco editorial de la investigación de Ais, los monstruos que atacan Rivira y un domador que conoce su nombre.", limits:"La sinopsis no nombra a Olivas directamente ni establece sus capacidades; sirve para orientar la lectura del volumen." },
+    { id:"official-astrea-record-revision", category:"official", title:"Astrea Record · anuncio de novelización revisada", publisher:"Portal oficial de DanMachi", authority:"Referencia oficial de publicación; no demuestra escenas individuales", url:"https://danmachi.com/news/news131.php", coverage:"Confirma que Astrea Record nació como historia larga del tercer aniversario de Memoria Freese y pasó a tres volúmenes revisados por Fujino Omori.", limits:"No prueba que todos los datos de la versión del juego sean idénticos en la novela revisada ni valida técnicas personales." },
     { id:"reference-wikipedia", category:"community", title:"Wikipedia · Is It Wrong to Try to Pick Up Girls in a Dungeon?", publisher:"Enciclopedia colaborativa", authority:"Referencia secundaria general", url:"https://en.wikipedia.org/wiki/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a_Dungeon%3F", coverage:"Contexto general de la serie, publicaciones y adaptaciones.", limits:"No es la fuente adecuada para confirmar detalles finos de psicología, relaciones o cronología." }
   ];
   const DEFAULT_RESEARCH_PATHS = [
@@ -114,7 +115,8 @@
     "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md",
     "research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md",
     "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
-    "research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"
+    "research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md",
+    "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"
   ];
   const DEFAULT_DETAIL_IDS = [
     "CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA",
@@ -126,7 +128,7 @@
     "CHAR-DARK-JURA-HALMER","CHAR-DARK-RUDRA","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE",
     "LOC-ORARIO-CENTRAL-PARK-PROTOTYPE","LOC-ORARIO-AVENUES-PROTOTYPE","LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE",
     "EVT-DM-FC-HAZE-001","CHAR-HEITH-VELVET",
-    "CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-HELGA","CHAR-MAXIM","CHAR-OLIVAS-ACT",
+    "CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-HELGA","CHAR-MAXIM","CHAR-OLIVAS-ACT","CHAR-METERIA",
     "CHAR-ALBERT-WALDSTEIN","CHAR-ARIA"
   ];
   function getDefaultResearchPaths() { return DEFAULT_RESEARCH_PATHS.slice(); }
