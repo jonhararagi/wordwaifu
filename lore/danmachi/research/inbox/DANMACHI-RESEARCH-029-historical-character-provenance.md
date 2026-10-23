@@ -192,7 +192,7 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 ### DMR-029-CLM-012 · Meteria: descripción de carácter en una nota del autor dentro de un escenario alternativo
 - `claim_id`: DMR-029-CLM-012
 - `claim`: Una nota publicada por Fujino Omori describe a Meteria a través de Alfia como amable, de salud frágil y querida por quienes la rodeaban. La misma pieza presenta un escenario alternativo en el que Alfia y Zald crían a Bell; por ello, esta descripción se archiva expresamente como contexto de autor/continuidad alternativa, no como confirmación de acontecimientos de la novela principal.
-- `character_ids`: [CHAR-METERIA, CHAR-DARK-ALFIA, CHAR-DARK-ZALD]
+- `character_ids`: [CHAR-METERIA, CHAR-DARK-ALFIA, CHAR-DARK-ZALD, DM-CHAR-BELL]
 - `aspect`: caracterización y continuidad alternativa
 - `era_or_interval`: Escenario alternativo de autor; no aplicar a la cronología principal por defecto
 - `continuity_scope`: CONT-AU
@@ -205,6 +205,16 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `verification_status`: source_checked_excerpt_only
 - `spoiler_level`: major
 - `confidence_note`: El texto es atribuible al autor, pero la continuidad descrita es alternativa. No importar las decisiones de Alfia/Zald ni la crianza de Bell a CONT-MAIN-LN.
+
+### Aristas de grafo derivadas de DMR-029-CLM-012 (CONT-AU)
+
+El catálogo y la navegación representan ahora tres relaciones explícitas, todas con `claimRef: DMR-029-CLM-012`, `continuity: CONT-AU` y `evidenceStatus: source_checked_excerpt_only`:
+
+- `REL-AU-ALFIA-BELL-CAREGIVER`: Alfia → Bell, cuidado en el escenario alternativo.
+- `REL-AU-ZALD-BELL-CAREGIVER`: Zald → Bell, cuidado en el escenario alternativo.
+- `REL-AU-METERIA-BELL-MOTHER`: Meteria → Bell, maternidad mencionada dentro del escenario alternativo; no es prueba independiente para `CONT-MAIN-LN`.
+
+Estas aristas no sustituyen ni promueven las relaciones históricas de fuente secundaria. La misma nota no verifica capacidades, niveles o biografías de Alfia y Zald en `CONT-AR`.
 
 ### DMR-029-CLM-013 · Maxim: capitán reportado de Zeus Familia y nivel 8 en una instantánea histórica
 - `claim_id`: DMR-029-CLM-013
