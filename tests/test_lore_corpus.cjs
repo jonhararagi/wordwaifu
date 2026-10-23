@@ -131,6 +131,29 @@ assert.ok(!index.relationships.some(item => item.id.startsWith("REL-AU-") && ite
 
 const meteriaAuthorNoteMain = corpus.search(index, { query: "Meteria Alfia Zald crían Bell escenario alternativo", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(!meteriaAuthorNoteMain.results.some(item => item.claimId === "DMR-029-CLM-012"), "The alternate author scenario must never leak into main light-novel search.");
+
+// DMR-029 / DMR-045: keep the author's alternate scenario navigable but outside the main timeline.
+const authorAuScenarioId = "EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001";
+const authorAuScenarioPath = "events/candidates/" + authorAuScenarioId + ".md";
+const authorAuScenarioRecord = catalog.records.find(record => record.id === authorAuScenarioId);
+assert.ok(authorAuScenarioRecord && authorAuScenarioRecord.type === "event" && authorAuScenarioRecord.path === authorAuScenarioPath && authorAuScenarioRecord.status === "source_checked_excerpt_only", "The author alternate scenario must be a separately navigable catalog event with excerpt-limited evidence.");
+const authorAuScenarioText = fs.readFileSync(path.join(root, authorAuScenarioPath), "utf8");
+assert.ok(authorAuScenarioText.includes("continuity_scope: CONT-AU") && authorAuScenarioText.includes("DMR-029-CLM-012") && authorAuScenarioText.includes("No es un acontecimiento de la cronología principal"), "The scenario detail must state its provenance, AU continuity and exclusion from the main timeline.");
+for (const [id, from, kind] of [
+  ["REL-AU-ALFIA-RAISE-BELL-SCENARIO","CHAR-DARK-ALFIA","participant_in"],
+  ["REL-AU-ZALD-RAISE-BELL-SCENARIO","CHAR-DARK-ZALD","participant_in"],
+  ["REL-AU-BELL-RAISE-BELL-SCENARIO","DM-CHAR-BELL","central_participant"],
+  ["REL-AU-METERIA-RAISE-BELL-SCENARIO","CHAR-METERIA","narrative_connection"]
+]) {
+  const edge = index.relationships.find(item => item.id === id);
+  assert.ok(edge && edge.from === from && edge.to === authorAuScenarioId && edge.kind === kind, "AU scenario navigation must use active endpoints: " + id);
+  assert.equal(edge.continuity, "CONT-AU", "AU scenario edges must stay outside the main light novel: " + id);
+  assert.equal(edge.evidenceStatus, "source_checked_excerpt_only", "AU scenario edges must keep the excerpt-level evidence limit: " + id);
+  assert.equal(edge.claimRef, "DMR-029-CLM-012", "AU scenario edges must retain the author-note claim: " + id);
+}
+const authorAuTimeline = JSON.parse(fs.readFileSync(path.join(root, "timeline", "eras-and-events.json"), "utf8"));
+assert.ok(!authorAuTimeline.events.some(event => event.id === authorAuScenarioId), "An alternate author scenario must not be inserted into the main reference timeline.");
+assert.ok(!index.relationships.some(edge => edge.to === authorAuScenarioId && edge.continuity !== "CONT-AU"), "No scenario edge may expose the alternate event under another continuity.");
 const astreaPublicationLineage = index.claims.find(item => item.claimId === "DMR-045-CLM-001");
 assert.ok(astreaPublicationLineage && astreaPublicationLineage.characterIds.length === 0 && astreaPublicationLineage.sourceUrls.includes("https://danmachi.com/news/news131.php"), "The official Astrea Record publication notice must remain bibliographic and cannot substantiate individual character dossiers.");
 
