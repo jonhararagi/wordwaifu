@@ -2,7 +2,7 @@
 id: LOC-ORARIO-NORTH-PLAZA
 universe: danmachi
 type: location
-status: source_checked_excerpt_only
+status: source_checked_partial
 confidence: Muestra oficial de lectura de GA Bunko: una escena describe una plaza semicircular en el norte de Orario frente a una avenida principal. La descarga directa del PDF no permitió verificar página ni contexto completo.
 continuity_scope: CONT-MAIN-LN
 source_refs: [DMR-047-SRC-001]
