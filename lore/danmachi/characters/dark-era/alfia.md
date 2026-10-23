@@ -86,4 +86,5 @@ La cronología oficial sitúa Astrea Record aproximadamente siete años antes de
 La nota oficial de Fujino Omori [«それは遥か彼方の静穏の夢»](https://note.com/fujinoomori/n/n629829ac3fe4) describe una posibilidad distinta en la que Bell pasa tres años con Alfia y Zald, y Alfia le habla de su madre, Meteria. En esta versión, ambos aparecen como cuidadores de Bell. Es un escenario alternativo publicado por el autor, no una escena que deba insertarse en la biografía de la novela ligera principal ni una confirmación de los hechos narrados en `CONT-AR`.
 
 - Evidencia: `DMR-029-CLM-012`, clasificada `source_checked_excerpt_only` dentro de `CONT-AU`.
+- Clasificación editorial adicional: [GA Bunko — Astrea Record 3, edición especial](https://ga.sbcr.jp/product/9784815617554/) presenta este relato como una historia de algo que «podría haber sido»; véase `DMR-045-CLM-004`. Esta página acredita el encuadre alternativo, no la biografía principal.
 - Límite: no inferir que Alfia y Zald criaron a Bell en `CONT-MAIN-LN`; el parentesco y las acciones de la continuidad principal conservan su propia procedencia y sus localizadores pendientes.
