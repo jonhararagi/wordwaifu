@@ -21,7 +21,7 @@
 - character_ids: []
 - aspect: procedencia editorial y continuidad entre medios
 - era_or_interval: publicación de Astrea Record en juego y novela
-- continuity_scope: CROSS-CONTINUITY
+- continuity_scope: CONT-AR
 - source_id: DMR-045-SRC-001
 - source_title: Portal oficial de DanMachi · anuncio de novelización de Astrea Record
 - source_type: OFFICIAL_REFERENCE
