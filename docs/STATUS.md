@@ -2,8 +2,8 @@
 ## Estado operativo y verificación — 2026-10-23
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 171 registros activos; 29 IDs reservados; 126 documentos de apoyo.
-- **Grafo de conocimiento:** 229 relaciones explícitas; 229/229 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Corpus DanMachi:** 172 registros activos; 29 IDs reservados; 127 documentos de apoyo.
+- **Grafo de conocimiento:** 230 relaciones explícitas; 230/230 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 92 perfiles; 92/92 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
@@ -19,6 +19,7 @@
 - **Procedencia y continuidad:** `CONT-ANIME`, `CONT-MAIN-LN`, `CONT-SO`, `CONT-AR` y `CONT-AU` siguen separados. Sinopsis editoriales, perfiles de adaptación y wikis no equivalen a cotejar una escena del texto completo.
 - **Estado factual:** la integración estructural del roster está validada; siguen pendientes pasajes primarios de la novela, cronologías escena por escena y el censo de personajes fuera del roster de adaptación.
 - **Prioridad del lore:** Orario continúa en investigación; después siguen acontecimientos por fecha/lugar/causa/consecuencia y reconstrucción de historias individuales.
+- **DANMACHI-RESEARCH-047 — plaza semicircular al norte de Orario:** ubicación navegable añadida desde una muestra editorial; claim en `source_checked_excerpt_only` por falta de página/contexto completo. No trasladar datos de `CONT-PROTOTYPE` ni declarar Orario completa.
 - **DANMACHI-RESEARCH-039 — lugares Prototype:** esta propuesta integra tres rutas parciales para avenidas, Central Park y comercio de calle; reutiliza claims DMR-034 en `CONT-PROTOTYPE` sin promoverlos a canon de novela.
 - **DANMACHI-RESEARCH-040 — horizonte editorial:** al 2026-10-21, vol. 21 es el último tomo principal publicado consultado; vol. 22 (2026-12-15), Sword Oratoria 17 (2027-01-15) y episode Amid (2027-02-15) figuran como próximos, no como contenido ya publicado.
 - **DANMACHI-RESEARCH-041 — episode Haze/Heith:** la variante de romanización se conecta al ID estable `CHAR-HEITH-VELVET`; se incorporó un evento parcial basado en la sinopsis editorial, con relaciones a Heith y Ottar. El texto completo y las escenas detalladas siguen pendientes.
