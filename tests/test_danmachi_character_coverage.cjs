@@ -101,7 +101,7 @@ for (const [id, expectedPath] of [
   const record=byId.get(id);
   assert.ok(record && record.type==="character" && record.path===expectedPath,"Missing or incorrect character route: "+id);
   const markdown=fs.readFileSync(path.join(loreRoot,expectedPath),"utf8");
-  assert.match(markdown,new RegExp("^id:\\\\s*"+id+"\\\\s*$","m"),"Profile ID mismatch: "+id);
+  assert.ok(markdown.split("\n").some(line => line.trim() === "id: " + id), "Profile ID mismatch: " + id);
   const dossier=dossierApi.get(id);
   assert.ok(dossier,"Missing UI dossier: "+id);
   for(const field of ["appearance","history","personality","abilities","relationships","conflict"]) assert.ok(typeof dossier[field]==="string"&&dossier[field].length>=100,id+" needs substantive "+field);

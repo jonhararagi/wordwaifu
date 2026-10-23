@@ -277,11 +277,11 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 
 ### DMR-029-CLM-017 · Helga y Lyra: identidad de reencarnación reportada
 - `claim_id`: DMR-029-CLM-017
-- `claim`: La página comunitaria de Lyra la identifica como reencarnación de Helga, antigua segunda al mando de los Caballeros de Fianna. Se crea una ficha mínima para Helga únicamente para que la entidad mencionada sea consultable y la relación trazable; no se infiere que Lyra recuerde una vida anterior ni se añaden biografía, poderes o fechas que la fuente no respalde.
+- `claim`: La página comunitaria de Lyra la identifica como reencarnación de Helga, antigua segunda al mando de los Caballeros de Fianna. Este claim se acota a CONT-GAME por su relación reportada con material de DanMemo; no se infiere que Lyra recuerde una vida anterior ni se añaden biografía, poderes o fechas que la fuente no respalde.
 - `character_ids`: [CHAR-LYRA, CHAR-HELGA]
 - `aspect`: identidad, reencarnación y contexto histórico
 - `era_or_interval`: Historia antigua atribuida a Helga y vida posterior de Lyra; cronología precisa pendiente
-- `continuity_scope`: CONT-AR
+- `continuity_scope`: CONT-GAME
 - `source_id`: DMR-029-SRC-018
 - `source_title`: DanMachi Wiki · Lyra
 - `source_type`: COMMUNITY_WIKI
