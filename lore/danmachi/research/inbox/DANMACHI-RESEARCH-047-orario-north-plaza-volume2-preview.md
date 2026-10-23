@@ -7,7 +7,7 @@
 - Método: la muestra editorial oficial está alojada en [GA Bunko, archivo de lectura trial02.pdf](https://ga.sbcr.jp/sp/danmachi/trial02.pdf). La indexación pública del archivo conserva un pasaje donde el narrador espera en una plaza semicircular al norte de Orario, frente a una avenida principal. El texto cercano menciona una propuesta previa de Eina para ir a comprar equipo.
 - Limitación de acceso: la apertura directa del PDF devolvió HTTP 503 en esta sesión y no se pudo comprobar una página impresa, capítulo ni la portada interna de la muestra. Por ello no se inventa un localizador de página ni se declara cotejado el contexto completo.
 
-## DMR-047-CLM-001 · Una muestra de la novela principal sitúa una plaza semicircular al norte de Orario
+### DMR-047-CLM-001 · Una muestra de la novela principal sitúa una plaza semicircular al norte de Orario
 
 - `claim_id`: DMR-047-CLM-001
 - `claim`: El extracto de lectura de GA Bunko describe al narrador solo en una plaza semicircular situada en el norte de Orario y orientada hacia una avenida principal. El contexto inmediato menciona que Eina le había propuesto el día anterior ir a comprar equipo. El extracto no proporciona un nombre propio para la plaza ni permite fijar coordenadas, límites de barrio, distancias, el nombre de la avenida o la geometría general de la ciudad.
