@@ -728,6 +728,11 @@ const astreaVol1Preview = historicalWikiSourceDirectory.find(item => item.id ===
 assert.ok(astreaVol1Preview && astreaVol1Preview.url === "https://r.binb.jp/epm/e1_260370_02092022101233/" && astreaVol1Preview.authority.includes("metadatos solamente") && String(astreaVol1Preview.limits).toLocaleLowerCase("es").includes("no respalda ninguna capacidad"), "The official Astrea Record preview must be discoverable with its metadata-only limitation visible.");
 assert.ok(!astreaPublicationLineage.sourceUrls.includes("https://r.binb.jp/epm/e1_260370_02092022101233/"), "A trial-reader URL with no accessible narrative text must not be added as evidence for individual dossiers or as the official publication-notice claim.");
 
+const danmachiVol20PreviewUrl = "https://viewer-trial.bookwalker.jp/03/21/viewer.html?cid=2996c502-7cb0-42b4-821a-b63df271d442";
+const danmachiVol20Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-danmachi-vol20-page17");
+assert.ok(danmachiVol20Preview && danmachiVol20Preview.url === danmachiVol20PreviewUrl && String(danmachiVol20Preview.coverage).includes("17/33") && String(danmachiVol20Preview.limits).includes("No demuestra ausencia"), "The DanMachi volume 20 sample locator must retain its exact page scope and avoid absence claims.");
+assert.ok(!index.claims.some(item => item.sourceUrls.includes(danmachiVol20PreviewUrl)), "A single inspected sample page must not become generic evidence for the five historical dossiers.");
+
 const astreaVol3PreviewUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1";
 const astreaVol3Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-astrea-record-vol3-preview-metadata-only");
 assert.ok(astreaVol3Preview && astreaVol3Preview.url === astreaVol3PreviewUrl && astreaVol3Preview.authority.includes("metadatos solamente") && String(astreaVol3Preview.coverage).includes("1/63") && String(astreaVol3Preview.limits).includes("No respalda ninguna capacidad"), "Astrea Record 3 public sample must remain discoverable as metadata-only when only its cover was accessible.");

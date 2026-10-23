@@ -2623,6 +2623,29 @@ verification_status: stub
 - verification_status: metadata_checked_only
 
 
+## DMR-045-SRC-007 · BOOK☆WALKER — DanMachi vol. 20, página de muestra 17/33
+
+- source_id: DMR-045-SRC-007
+- title: ダンジョンに出会いを求めるのは間違っているだろうか20 — visor público de muestra
+- creator_or_publisher: Fujino Omori / GA文庫; visor de muestra BOOK☆WALKER
+- source_type: OFFICIAL_SAMPLE_READER
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 20, muestra electrónica pública
+- language: Japonés
+- official_url: https://viewer-trial.bookwalker.jp/03/21/viewer.html?cid=2996c502-7cb0-42b4-821a-b63df271d442
+- accessed_at: 2026-10-23
+- locator_type: inspected_preview_page
+- locator: Contador del visor 17/33. En la página son visibles レオン (Leon) y バルドル (Baldur/Baldr).
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Fragmento de muestra autorizado inspeccionado directamente. La página examinada no mostraba アルフィア, ザルド, メーテリア ni ブレイズ・オブ・ラウンド; esto se limita a la página 17/33 y no demuestra su ausencia en el resto del tomo. No equiparar バルドル con ザルド sin evidencia adicional.
+- conflicting_sources: []
+- rights_note: Registrar localizador y paráfrasis mínima; no reproducir el texto narrativo del libro.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked_excerpt_only
+
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea
