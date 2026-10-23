@@ -72,6 +72,7 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [ ] Determinar con el pasaje completo si Pantheon, la sede de la Guild y Babel son ubicaciones distintas; el extracto indexado no resuelve su identidad física.
 - [x] Registrar la sinopsis editorial oficial de Sword Oratoria vol. 7 como evidencia separada de la investigación de Loki Familia sobre Daedalus Street (DMR-049, `CONT-SO-LN`).
 - [ ] Localizar la primera mención de Daedalus Street en la novela principal; DMR-049 no satisface esta tarea porque pertenece a Sword Oratoria.
+- [x] Registrar como claim independiente el relato corto oficial `迷宮街の恋愛話・裏` en `CONT-SHORT` (DMR-050); el PDF aún no se verificó visualmente.
 - [ ] Cotejar en CONT-MAIN-LN las ocho avenidas, Central Park, la zona comercial junto al Dungeon, los servicios de Babel y el límite comercial del piso veinte; no cerrar esos puntos usando sólo Prototype.
 - [ ] Localizar en fuente primaria la primera descripción de la iglesia y de la mansión, verificar quién destruyó la iglesia y establecer su ubicación urbana.
 
@@ -627,3 +628,15 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] No elevar las descripciones comunitarias del trazado, las avenidas vecinas ni el orfanato de Maria sin evidencia independiente.
 
 **Estado factual:** evidencia editorial oficial del argumento de Sword Oratoria; la geometría del lugar y la primera mención en la novela principal siguen abiertas.
+
+## DANMACHI-RESEARCH-050 · Daedalus Street en relato corto oficial
+
+- [x] Registrar el relato corto complementario «迷宮街の恋愛話・裏» desde el PDF oficial alojado por GA Bunko.
+- [x] Acotar el claim al estado `source_checked_excerpt_only` y a la continuidad `CONT-SHORT`; el acceso directo al PDF devolvió HTTP 503.
+- [x] Enlazar la afirmación a la ficha existente de Daedalus Street, el registro de fuentes, el catálogo y una arista separada de `CONT-SO-LN`.
+- [x] Añadir recuperación de búsqueda y pruebas que impiden que el claim se filtre a `CONT-MAIN-LN` o `CONT-SO-LN`.
+- [ ] Inspeccionar visualmente el PDF y obtener edición/contexto/página cuando el archivo esté accesible.
+- [ ] No convertir la mención de un callejón intrincado en geometría oficial de la calle ni transferir el episodio a la novela principal.
+- [ ] Mantener abierta la búsqueda de la primera mención de Daedalus Street en `CONT-MAIN-LN`.
+
+**Estado factual:** escena del lugar recuperada de un extra oficial en `CONT-SHORT`; sin inspección visual del PDF, mapa ni inferencias sobre la primera mención de la novela principal.
