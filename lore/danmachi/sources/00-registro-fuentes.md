@@ -2610,3 +2610,26 @@ verification_status: stub
 - rights_note: Resumen original; no conservar ni reproducir el pasaje completo.
 - verified_by: DANMACHI-RESEARCH-048
 - verification_status: source_checked_excerpt_only
+
+## DMR-049-SRC-001 · GA Bunko — Sword Oratoria, volumen 7
+
+- source_id: DMR-049-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア7
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_PUBLISHER_SYNOPSIS
+- series: Sword Oratoria (DanMachi spin-off)
+- volume_or_edition: Volumen 7; ISBN 978-4-7973-8934-0
+- language: Japonés
+- publication_date: 2016-12-15 aproximadamente, según la página editorial
+- official_url: https://ga.sbcr.jp/product/9784797389340/
+- accessed_at: 2026-10-23
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial; frase sobre la pista obtenida en Melen y el inicio de la investigación de ダイダロス通り por Loki Familia.
+- claims_supported: [DMR-049-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Fuente oficial para el marco general del argumento de Sword Oratoria, volumen 7. No sustituye el pasaje narrativo ni confirma la geometría de Daedalus Street o la primera mención en la novela principal.
+- conflicting_sources: []
+- rights_note: Resumen y paráfrasis propios; no reproducir texto extenso.
+- verified_by: DANMACHI-RESEARCH-049
+- verification_status: source_checked
