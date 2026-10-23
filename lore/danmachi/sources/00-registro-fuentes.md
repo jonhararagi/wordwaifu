@@ -2466,6 +2466,27 @@ verification_status: stub
 - verification_status: source_checked
 
 
+## DMR-045-SRC-002 · Edición especial de Astrea Record 3: relato “lo que podría haber sido”
+
+- source_id: DMR-045-SRC-002
+- title: アストレア・レコード3 正邪決戦 — 小冊子付き特装版
+- creator_or_publisher: GA文庫 / SBクリエイティブ
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi / Astrea Record
+- volume_or_edition: Edición especial del volumen 3 con cuadernillo adicional; publicada alrededor del 2022-12-15; ISBN 978-4-8156-1755-4
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784815617554/
+- accessed_at: 2026-10-23
+- locator_type: official_publisher_product_page
+- locator: Descripción del producto, frase final que presenta «それは遥か彼方の静穏の夢» como “あったかもしれない” y anuncia que se publica en versión ampliada/revisada
+- claims_supported: [DMR-045-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-AU
+- reliability_note: Fuente editorial primaria para la inclusión y el encuadre alternativo del relato; no confirma hechos de la novela principal ni detalles individuales ausentes de la descripción editorial.
+- rights_note: Enlace y paráfrasis original breve; no reproducir el relato.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea
