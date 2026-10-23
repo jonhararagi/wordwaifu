@@ -2627,7 +2627,7 @@ verification_status: stub
 - locator: Sinopsis editorial; frase sobre la pista obtenida en Melen y el inicio de la investigación de ダイダロス通り por Loki Familia.
 - claims_supported: [DMR-049-CLM-001]
 - events_supported: []
-- continuity_scope: CONT-SO
+- continuity_scope: CONT-SO-LN
 - reliability_note: Fuente oficial para el marco general del argumento de Sword Oratoria, volumen 7. No sustituye el pasaje narrativo ni confirma la geometría de Daedalus Street o la primera mención en la novela principal.
 - conflicting_sources: []
 - rights_note: Resumen y paráfrasis propios; no reproducir texto extenso.
