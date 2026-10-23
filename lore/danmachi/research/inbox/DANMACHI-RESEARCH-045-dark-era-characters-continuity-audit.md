@@ -68,6 +68,12 @@
 - spoiler_level: major
 - confidence_note: La wiki no acredita jerarquía exacta dentro de Evilus ni un nivel de aventurero.
 
+### Precisión de procedencia autoral — revisión de continuidad (2026-10-23)
+
+- `DMR-029-CLM-012` y `DMR-029-SRC-016` corresponden a la nota publicada por Fujino Omori «それは遥か彼方の静穏の夢». La nota se consulta directamente y se clasifica como `source_checked_excerpt_only` únicamente dentro de `CONT-AU`: es evidencia primaria de lo que plantea ese escenario alternativo, no una escena de la novela principal.
+- La crianza hipotética de Bell por Alfia y Zald no se transfiere a `CONT-MAIN-LN`. Las afirmaciones sobre Meteria como madre de Bell y hermana gemela de Alfia que se usan para la continuidad principal permanecen en `DMR-029-CLM-011` con fuente comunitaria y estado `secondary_checked`, hasta localizar un pasaje publicado reproducible.
+- Se revisaron las fichas editoriales oficiales de [Astrea Record 1](https://ga.sbcr.jp/product/9784815610173/), [Astrea Record 2](https://ga.sbcr.jp/product/9784815610180/), [Astrea Record 3](https://ga.sbcr.jp/product/9784815610197/) y [DanMachi 20](https://ga.sbcr.jp/product/9784815628697/). Sus sinopsis sirven para procedencia editorial y contexto general; no nombran ni verifican las capacidades, biografías o relaciones individuales de los cinco expedientes, por lo que no se usan para promover esos claims.
+
 ## Fuentes y alcance
 
 - [Cronología oficial](https://danmachi.com/chronology/): sitúa Astrea Record aproximadamente siete años antes de Bell y resume el marco de la Era Oscura. No verifica las acciones individuales de estos cinco personajes. Se reutiliza DMR-038-CLM-001 / DMR-038-SRC-001.
