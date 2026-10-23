@@ -1410,9 +1410,11 @@
         "パンテオン",
         "Guild",
         "Orario",
-        "edificio institucional"
+        "edificio institucional",
+        "CONT-MAIN-LN",
+        "GA Bunko preview"
       ],
-      "status": "secondary_checked",
+      "status": "source_checked_partial",
       "priority": "normal"
     },
     {
