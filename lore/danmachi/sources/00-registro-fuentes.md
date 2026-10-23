@@ -2443,3 +2443,106 @@ verification_status: stub
 - rights_note: Enlace y paráfrasis solamente; no copiar texto promocional.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: source_checked
+
+
+## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
+- source_id: DMR-046-SRC-001
+- title: Familia Astrea
+- creator_or_publisher: Comunidad DanMachi Wiki en español
+- source_type: COMMUNITY_WIKI
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Familia_Astrea
+- accessed_at: 2026-10-23
+- locator_type: community_roster_and_summary
+- locator: Summary, información y tabla de miembros; base de Solingen y roster de la nueva generación.
+- claims_supported: [DMR-046-CLM-001, DMR-046-CLM-002]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Fuente comunitaria utilizada como lead; los cargos, niveles y especies necesitan cotejo primario individual.
+- rights_note: Enlace y paráfrasis original breve.
+- verified_by: DANMACHI-RESEARCH-046
+- verification_status: secondary_checked
+
+## DMR-046-SRC-002 · Cecil Blackliza — perfil comunitario
+- source_id: DMR-046-SRC-002
+- title: Cecil Blackliza
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Cecil_Blackliza
+- accessed_at: 2026-10-23
+- locator_type: community_character_profile
+- locator: Characteristics, Professional Status, Appearance y Personality.
+- claims_supported: [DMR-046-CLM-003]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Perfil comunitario; no contiene localizador primario que verifique su historia familiar y motivaciones.
+- rights_note: Paráfrasis original; no reproducir el artículo.
+- verified_by: DANMACHI-RESEARCH-046
+- verification_status: secondary_checked
+
+## DMR-046-SRC-003 · Zanis Lustra — perfil comunitario
+- source_id: DMR-046-SRC-003
+- title: Zanis Lustra
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Zanis_Lustra
+- accessed_at: 2026-10-23
+- locator_type: community_character_profile
+- locator: Characteristics, Professional Status, Personality y Debuts.
+- claims_supported: [DMR-046-CLM-004]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Cargo, nivel y rasgos de carácter reportados; la cronología individual debe verificarse en el texto.
+- rights_note: Paráfrasis original.
+- verified_by: DANMACHI-RESEARCH-046
+- verification_status: secondary_checked
+
+## DMR-046-SRC-004 · Resumen comunitario del volumen 6
+- source_id: DMR-046-SRC-004
+- title: DanMachi Light Novel Volume 6/Synopsis
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_6/Synopsis
+- accessed_at: 2026-10-23
+- locator_type: community_plot_summary
+- locator: Prologue, Evil in the Moonlit Night; visita de Lili a Soma y acusación de Zanis.
+- claims_supported: [DMR-046-CLM-005]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Registra una acusación de personaje según resumen comunitario; no demuestra culpabilidad ni sustituye la escena publicada.
+- rights_note: Paráfrasis original.
+- verified_by: DANMACHI-RESEARCH-046
+- verification_status: secondary_checked
+
+## DMR-046-SRC-005 · Chandra Ihit — perfil comunitario
+- source_id: DMR-046-SRC-005
+- title: Chandra Ihit
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Chandra_Ihit
+- accessed_at: 2026-10-23
+- locator_type: community_character_profile
+- locator: Professional Status y Personality; datos del perfil y resumen del volumen 6.
+- claims_supported: [DMR-046-CLM-006]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: El resumen describe una intervención individual que aún carece de localizador primario reproducible.
+- rights_note: Paráfrasis original.
+- verified_by: DANMACHI-RESEARCH-046
+- verification_status: secondary_checked
+
+## DMR-046-SRC-006 · Canoe Belway — perfil comunitario
+- source_id: DMR-046-SRC-006
+- title: Canoe Belway
+- creator_or_publisher: Comunidad DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Canoe_Belway
+- accessed_at: 2026-10-23
+- locator_type: community_character_profile
+- locator: Characteristics, Professional Status, Personal Status y Personality.
+- claims_supported: [DMR-046-CLM-007]
+- continuity_scope: CONT-MAIN-LN; referencia secundaria
+- reliability_note: Destino y causa resumidos por la comunidad; la secuencia debe cotejarse con la novela.
+- rights_note: Paráfrasis original.
+- verified_by: DANMACHI-RESEARCH-046
+- verification_status: secondary_checked
