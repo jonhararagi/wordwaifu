@@ -9,53 +9,38 @@ source_refs:
   - DMR-029-SRC-012
 claim_refs:
   - DMR-029-CLM-005
+  - DMR-045-CLM-002
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases:
   - "Rudra"
+tags: [Rudra Familia, Evilus, Juggernaut, novela principal, T-5, spoiler]
 ---
-# Rudra
+# Rudra — deidad de la Familia Rudra; atribución histórica pendiente
 
-## Identidad y afiliación
+## Identidad y apariencia reportadas
+La ficha comunitaria española presenta a Rudra (ルドラ) como deidad masculina, con piel oscura, pelo corto, toga de tono apagado, pantalón claro y zapatos negros puntiagudos hacia arriba. Su afiliación reportada es Rudra Familia y Evilus; el artículo indica que, después de la disolución de la Familia, fue enviado al Cielo. Lo visual y biográfico procede de una fuente comunitaria, no de una descripción narrativa cotejada.
 
-- **ID estable:** CHAR-DARK-RUDRA.
-- **Afiliación de trabajo:** Rudra Familia; vínculo con Evilus secundario.
-- **Continuidad principal de esta ficha:** CONT-MAIN-LN. El incidente de T−5 pertenece a la retrospectiva de la novela principal y no al núcleo T−7 de Astrea Record.
-- **Estado:** expediente individual redactado; verificación primaria por página pendiente.
+## Continuidad y cronología
+Esta ficha pertenece a **CONT-MAIN-LN**, en la ruta posterior alrededor de T-5 respecto de Bell. No se integra al intervalo T-7 de Astrea Record. Las referencias comunitarias sitúan a Rudra como deidad patrona de Rudra Familia y presentan a esta Familia como parte de Evilus. No se asigna nivel de aventurero a un dios ni se inventan magia o habilidades individuales.
 
-## Contexto e historia
+## La trampa y el Juggernaut: quién hace qué
+El resumen de Rudra Familia atribuye a la **Familia en conjunto** una trampa contra Astrea Familia que ocasionó daño excesivo al Dungeon; la aparición del Juggernaut se presenta como resultado accidental. Esa formulación no demuestra que Rudra diseñara o ejecutara personalmente el plan. El papel de Jura, los miembros concretos participantes, lo que Rudra sabía y cualquier autorización personal requieren evidencia individual. La secuencia completa de supervivientes y la destrucción posterior de Rudra Familia a manos de Ryuu también necesita localizadores primarios.
 
-Los resúmenes secundarios atribuyen a Rudra Familia enfrentamientos con Astrea Familia y una trampa posterior que daña el Dungeon y desencadena un Juggernaut. Esa catástrofe se sitúa alrededor de cinco años antes de Bell, posterior al núcleo de Astrea Record (aprox. siete años antes). No mezclar esos dos momentos.
+## Discrepancia editorial pendiente
+La ficha española etiqueta su debut como recuerdo de DanMachi volumen 14, mientras el incidente se rastrea en el arco de volúmenes 13–14 y la sinopsis del volumen 13 solo da contexto de la persecución de Ryuu/Lyu. No se resuelve esa diferencia con una cita editorial que no nombre a Rudra, ni se elige un volumen como localizador definitivo sin comprobar la escena.
 
-## Apariencia, voz y personalidad
-
-Deidad asociada en referencias comunitarias con Rudra Familia y Evilus. La aparición exacta en las novelas revisadas y su relación con cada operación necesitan localizadores directos.
-
-No hay evidencia primaria suficiente incorporada para fijar su psicología personal. Las acciones de su Familia no prueban automáticamente sus motivos.
-
-## Habilidades y límites
-
-No asignar nivel de aventurero a una deidad ni inventar magia o capacidades no localizadas.
-
-## Relaciones
-
-Jura Halmer y la Rudra Familia son la ruta para reconstruir la fase posterior. Verificar por separado la pertenencia a Evilus y el papel personal de Rudra.
-
-## Conflicto narrativo
-
-Una facción intenta destruir a un enemigo y provoca una amenaza que ya no controla; distinguir las decisiones de Rudra de las de Jura.
-
-## Localizadores de lectura
-
-Localizador primario de la retrospectiva pendiente. Para el arco del Juggernaut, consultar DanMachi vol. 13, «Encounter and Vow / Encuentro y voto», y comprobar quién ejecuta cada acción. Ruta de navegación: [tragedia de Astrea Familia vinculada al Juggernaut](../../events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md).
+## Relaciones navegables
+- **[Rudra Familia](../../familias/rudra-familia.md):** deidad patrona reportada.
+- **[Jura Halmer](jura-halmer.md):** asociado secundariamente a la misma fase; no se transfiere a Rudra la motivación ni las acciones individuales de Jura.
+- **[Evento del Juggernaut](../../events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md):** ruta de contexto secundario en la novela principal, no participación personal comprobada.
+- Astrea Record: ruta temporal distinta, sin relación de mismo periodo afirmada.
 
 ## Fuentes
+- [Rudra — DanMachi Wiki en español](https://danmachi.fandom.com/es/wiki/Rudra) — apariencia y debut reportados.
+- [Rudra Familia — DanMachi Wiki](https://danmachi.fandom.com/wiki/Rudra_Familia) — afiliación, historia y relato secundario de la trampa.
+- [Yen Press, volumen 13](https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel) — contexto editorial, no biografía individual.
+- [Cronología oficial](https://danmachi.com/chronology/) — útil para mantener T-7 separado, no fuente directa de Rudra.
+- DMR-029-CLM-004/005 y DMR-045-CLM-002.
+- [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md).
 
-- https://danmachi.fandom.com/wiki/Rudra_Familia
-- https://danmachi.fandom.com/es/wiki/Rudra
-- [Rudra Familia](../../familias/rudra-familia.md)
-- [Evento de la tragedia de Astrea Familia/Juggernaut](../../events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md)
-- https://danmachi.com/chronology/
-
-## Regla editorial
-
-No elevar a canon confirmado un dato que solo procede de una wiki o de una descripción de adaptación. Registrar volumen, capítulo, página y escena de la edición consultada. No inventar números de página ni importar detalles de Memoria Freese/AU a la novela revisada.
+**Pendiente de verificación primaria:** localizar la retrospectiva exacta; confirmar el volumen/capítulo de debut y separar el papel de Rudra del plan de Jura y la Familia.
