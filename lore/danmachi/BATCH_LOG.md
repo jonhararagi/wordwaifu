@@ -420,3 +420,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - La sinopsis oficial de GA Bunko del volumen 6 se usa solo para el contexto general de captura de Liliruca por Soma Familia. Cargos, especie, nivel, motivaciones e intervención individual siguen apoyados por fuentes comunitarias.
 - Fuente de registro y detalle: DMR-046. Pendientes primarios: escenas de Solingen; capítulos/páginas de los volúmenes 2 y 6; secuencia de Canoe y conocimiento de Zanis.
 - Estado: secondary_checked_with_primary_gaps; no se declara verificación completa de canon.
+
+
+## DANMACHI-RESEARCH-045 · Parentesco Alfia–Bell desde entrevista autoral (2026-10-23)
+
+- Fuente nueva: entrevista publicada por Dengeki Online el 2023-06-30, con una declaración directa atribuida a Fujino Omori sobre la novelización de Astrea Record.
+- Se incorpora `DMR-045-SRC-008` y `DMR-045-CLM-007`: la novelización representa explícitamente a Alfia como tía de Bell, según la entrevista. El alcance se marca `CONT-AR` y como fuente autoral complementaria, no como localizador de capítulo/página de la novela.
+- Se añade la arista navegable `REL-ALFIA-BELL-AUNT-INTERVIEW` entre los expedientes existentes de Alfia y Bell, con claim, fuente, intervalo y límite explícitos. No se ha inferido quién es la madre de Bell ni se han promocionado los datos secundarios sobre Meteria, Zald, Erebus o Rudra.
+- El buscador/directorio de fuentes, las vistas Markdown, los expedientes manuales de interfaz y las pruebas regresivas incorporan la fuente con límites visibles. La relación no debe aparecer en `CONT-MAIN-LN` como si ya existiera localizador directo de la escena.
+- Resultado: 243 relaciones en catálogo, tras añadir una arista con extremos existentes; las cinco fichas permanecen `secondary_checked_with_primary_gaps` en lo relativo a sus biografías completas y localizadores internos.
