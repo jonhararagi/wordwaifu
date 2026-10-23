@@ -2599,6 +2599,30 @@ verification_status: stub
 - verification_status: source_checked_excerpt_only
 
 
+## DMR-045-SRC-006 · BOOK☆WALKER — muestra pública de Astrea Record 3 (solo metadatos)
+
+- source_id: DMR-045-SRC-006
+- title: アストレア・レコード３ 正邪決戦 — 試し読み / visor público
+- creator_or_publisher: Fujino Omori / GA文庫; visor de muestra BOOK☆WALKER
+- source_type: OFFICIAL_SAMPLE_READER
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 3, muestra pública de lectura; edición completa anunciada por GA Bunko
+- language: Japonés
+- publication_date: 2022-12-14, fecha de disponibilidad electrónica publicada por la tienda
+- official_url: https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1
+- accessed_at: 2026-10-23
+- locator_type: sample_reader_metadata_only
+- locator: Contador visible 1/63 en portada; los intentos de navegación no mostraron páginas narrativas interiores.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: La muestra se abrió sin autenticación ni compra, pero el visor basado en canvas no avanzó más allá de la portada en la sesión inspeccionada. No se asigna localizador narrativo ni se infiere ausencia de personajes del volumen.
+- conflicting_sources: []
+- rights_note: Enlace y nota de accesibilidad; no extraer ni reproducir el texto del libro.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea
