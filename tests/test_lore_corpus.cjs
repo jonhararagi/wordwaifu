@@ -115,6 +115,20 @@ const meteriaAuthorNoteSource = historicalWikiSourceDirectory.find(item => item.
 assert.ok(meteriaAuthorNoteSource && meteriaAuthorNoteSource.url === "https://note.com/fujinoomori/n/n629829ac3fe4" && meteriaAuthorNoteSource.authority.includes("continuidad alternativa") && meteriaAuthorNoteSource.limits.includes("CONT-MAIN-LN"), "The author note must be browsable with its AU-only scope and main-LN limitation visible.");
 const meteriaAuthorNoteAU = corpus.search(index, { query: "Meteria Alfia Zald crían Bell escenario alternativo", continuity: "CONT-AU", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(meteriaAuthorNoteAU.results.some(item => item.claimId === "DMR-029-CLM-012" && item.verificationStatus === "source_checked_excerpt_only" && item.sourceUrls.includes("https://note.com/fujinoomori/n/n629829ac3fe4") && item.profilePaths.includes("characters/dark-era/alfia.md") && item.profilePaths.includes("characters/dark-era/zald.md")), "The author note must be retrievable as AU evidence and offer navigation to Alfia and Zald profiles.");
+assert.ok(meteriaAuthorNoteAU.results.some(item => item.claimId === "DMR-029-CLM-012" && item.profilePaths.includes("characters/dark-era/meteria.md") && item.profilePaths.includes("characters/bell-cranel.md")), "The AU claim must index all four involved dossiers, including Meteria and Bell.");
+for (const [id,from,to,kind] of [
+  ["REL-AU-ALFIA-BELL-CAREGIVER","CHAR-DARK-ALFIA","DM-CHAR-BELL","caregiver_of"],
+  ["REL-AU-ZALD-BELL-CAREGIVER","CHAR-DARK-ZALD","DM-CHAR-BELL","caregiver_of"],
+  ["REL-AU-METERIA-BELL-MOTHER","CHAR-METERIA","DM-CHAR-BELL","mother_of"]
+]) {
+  const edge = index.relationships.find(item => item.id === id);
+  assert.ok(edge && edge.from === from && edge.to === to && edge.kind === kind, "AU relationship must be navigable with stable endpoints: " + id);
+  assert.equal(edge.continuity, "CONT-AU", "Author-note relationship must remain in alternate continuity: " + id);
+  assert.equal(edge.evidenceStatus, "source_checked_excerpt_only", "AU relationship must expose the source-limited evidence state: " + id);
+  assert.equal(edge.claimRef, "DMR-029-CLM-012", "AU relationship must carry its exact claim provenance: " + id);
+}
+assert.ok(!index.relationships.some(item => item.id.startsWith("REL-AU-") && item.continuity === "CONT-MAIN-LN"), "AU-specific graph edges must never masquerade as main-light-novel relationships.");
+
 const meteriaAuthorNoteMain = corpus.search(index, { query: "Meteria Alfia Zald crían Bell escenario alternativo", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(!meteriaAuthorNoteMain.results.some(item => item.claimId === "DMR-029-CLM-012"), "The alternate author scenario must never leak into main light-novel search.");
 const astreaPublicationLineage = index.claims.find(item => item.claimId === "DMR-045-CLM-001");
