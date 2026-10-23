@@ -2469,6 +2469,28 @@ verification_status: stub
 - verification_status: metadata_checked_only
 
 
+## DMR-044-SRC-013 · Ficha editorial oficial de DanMachi, volumen 20
+
+- source_id: DMR-044-SRC-013
+- title: ダンジョンに出会いを求めるのは間違っているだろうか20
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_PUBLISHER_PRODUCT_PAGE
+- series: DanMachi / novela ligera principal
+- volume_or_edition: Volumen 20; ISBN 978-4-8156-2869-7
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784815628697/
+- accessed_at: 2026-10-23
+- locator_type: official_product_page_and_publisher_synopsis
+- locator: Metadatos de publicación y sinopsis editorial general sobre el conflicto Orario–Distrito Escolar; la descripción no nombra a Maxim ni documenta su nivel, cargo, historia o acciones
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Fuente primaria para metadatos editoriales y alcance de la sinopsis, no para datos históricos individuales que la sinopsis no menciona.
+- rights_note: Enlace y paráfrasis breve; no sustituye el texto narrativo del volumen
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: metadata_checked_only
+
+
 ## DMR-045-SRC-001 · Anuncio oficial de la novelización de Astrea Record
 - source_id: DMR-045-SRC-001
 - title: ダンメモ3周年記念シナリオ「偉大冒険譚 アストレア・レコード」の書籍化が決定！

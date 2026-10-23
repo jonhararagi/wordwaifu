@@ -383,3 +383,18 @@
 - verified_by: DANMACHI-RESEARCH-044
 - verification_status: metadata_checked_only
 
+### DMR-044-SRC-013 · Ficha editorial oficial de DanMachi, volumen 20
+- source_id: DMR-044-SRC-013
+- title: ダンジョンに出会いを求めるのは間違っているだろうか20
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_PUBLISHER_PRODUCT_PAGE
+- official_url: https://ga.sbcr.jp/product/9784815628697/
+- volume_or_edition: Volumen 20; ISBN 978-4-8156-2869-7
+- locator_type: official_product_page_and_publisher_synopsis
+- locator: La sinopsis editorial anuncia el conflicto Orario–Distrito Escolar. No menciona a Maxim ni confirma el nivel, su cargo histórico, su derrota o su posterior muerte.
+- claims_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Fuente primaria para los datos editoriales de la publicación y para determinar el alcance de su propia sinopsis. No se asigna a DMR-044-CLM-001/002 ni reemplaza la escena narrativa.
+- verification_status: metadata_checked_only
+
+**Límite aplicado a Maxim:** el artículo comunitario cita el volumen 20 como ruta de búsqueda, pero la ficha editorial oficial no es evidencia de las afirmaciones concretas del personaje. DMR-044-CLM-001 y DMR-044-CLM-002 conservan secondary_checked hasta localizar el pasaje narrativo legítimo y reproducible.
