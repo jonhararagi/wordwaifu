@@ -3371,6 +3371,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md",
       "type": "character_profile_review",
       "status": "secondary_checked_with_primary_gaps"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-045",
+      "path": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "type": "historical_character_continuity_audit",
+      "status": "secondary_checked_with_primary_gaps"
     }
   ],
   "lastStructuredSync": "2026-10-23",
@@ -6342,14 +6348,14 @@
       "from": "CHAR-DARK-EREBUS",
       "to": "GRP-EVILUS",
       "kind": "reported_association",
-      "label": "asociación con el conflicto de Evilus reportada por fuentes secundarias",
+      "label": "asociación con Evilus reportada por la wiki; detalles de identidad secundarios",
       "continuity": "CONT-AR",
       "interval": "Astrea Record; función exacta pendiente",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_character_summary",
-      "claimRef": "DMR-038-CLM-007",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "No implica jerarquía única ni control de toda la red."
+      "claimRef": "DMR-045-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "La ficha comunitaria le atribuye afiliación previa a Evilus y menciona «Eren» como otro nombre; no se afirma jerarquía total ni se fusiona el alias sin localizar la escena."
     },
     {
       "id": "REL-VALLETTA-EVILUS-INVESTIGATION",
@@ -6426,14 +6432,14 @@
       "from": "CHAR-DARK-RUDRA",
       "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
       "kind": "reported_faction_deity_route",
-      "label": "deidad de Rudra Familia vinculada por fuentes secundarias a la fase posterior del Juggernaut",
+      "label": "ruta contextual de Rudra Familia hacia la fase posterior del Juggernaut, atribuida secundariamente al grupo",
       "continuity": "CONT-MAIN-LN",
       "interval": "T-5 aproximado, referencia secundaria",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_compendium",
-      "claimRef": "DMR-029-CLM-005",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
-      "note": "La ruta pertenece a la fase posterior, no al núcleo T-7 de Astrea Record; la responsabilidad personal de Rudra en la trampa necesita cotejo primario."
+      "claimRef": "DMR-045-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "La fuente atribuye la trampa a Rudra Familia en conjunto. No se imputa a Rudra la autoría personal sin pasaje de la novela. Ruta T-5 aproximada, separada de Astrea Record T-7."
     },
     {
       "id": "REL-JURA-JUGGERNAUT-EVENT-001",
