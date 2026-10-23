@@ -3377,6 +3377,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
       "type": "historical_character_continuity_audit",
       "status": "secondary_checked_with_primary_gaps"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-046",
+      "path": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "type": "character_profiles_and_relationship_evidence_review",
+      "status": "secondary_checked_with_primary_gaps"
     }
   ],
   "lastStructuredSync": "2026-10-23",
@@ -4435,9 +4441,9 @@
       "interval": "Período anterior al cargo atribuido a Chandra; fecha pendiente",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_compendium",
-      "claimRef": "DMR-025-CLM-003",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-      "note": "Cargo atribuido por compendios comunitarios; falta cotejo directo de novela."
+      "claimRef": "DMR-046-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "Cargo atribuido por compendios comunitarios; falta cotejo directo de novela. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-CHANDRA-CAPTAIN-SOMA",
@@ -4449,9 +4455,9 @@
       "interval": "Período posterior reportado; fecha absoluta pendiente",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_compendium",
-      "claimRef": "DMR-025-CLM-004",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-      "note": "No extrapolar el cargo a todos los períodos narrativos."
+      "claimRef": "DMR-046-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "No extrapolar el cargo a todos los períodos narrativos. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-ZANIS-CHANDRA-CAPTAINCY-SUCCESSION",
@@ -4463,9 +4469,9 @@
       "interval": "Orden relativo de las referencias secundarias; fechas pendientes",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_roster_and_biographies",
-      "claimRef": "DMR-025-CLM-005",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-      "note": "La sucesión no implica amistad, rivalidad ni una fecha de relevo confirmada."
+      "claimRef": "DMR-046-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "La sucesión no implica amistad, rivalidad ni una fecha de relevo confirmada. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-CANOE-MEMBER-SOMA-FAM",
@@ -4477,9 +4483,9 @@
       "interval": "Período exacto pendiente",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_roster",
-      "claimRef": "DMR-025-CLM-006",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-      "note": "La fuente también resume una acusación sobre la desaparición; no se infiere culpabilidad ni causa/destino."
+      "claimRef": "DMR-046-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "La fuente también resume una acusación sobre la desaparición; no se infiere culpabilidad ni causa/destino. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-ZANIS-ACCUSATION-LILI-CANOE",
@@ -4491,9 +4497,9 @@
       "interval": "Conflicto de Soma Familia relacionado con el volumen 6; detalle temporal pendiente",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_plot_summary",
-      "claimRef": "DMR-025-CLM-006",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-      "note": "Solo representa que la acusación aparece en resúmenes secundarios; no es una afirmación de culpabilidad."
+      "claimRef": "DMR-046-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "Solo representa que la acusación aparece en resúmenes secundarios; no es una afirmación de culpabilidad. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-CHANDRA-HELPS-LILI-SECONDARY",
@@ -4505,9 +4511,9 @@
       "interval": "Arco de Soma Familia; escena primaria pendiente",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_scene_lead",
-      "claimRef": "DMR-025-CLM-009",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md",
-      "note": "La pista no demuestra una amistad permanente ni otras relaciones no documentadas."
+      "claimRef": "DMR-046-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "La pista no demuestra una amistad permanente ni otras relaciones no documentadas. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-ORARIO-DUNGEON-GENERAL",
@@ -5877,9 +5883,9 @@
       "interval": "Estado descrito por la fuente del claim; fecha interna exacta no indicada",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_roster",
-      "claimRef": "DMR-007-CLM-011",
-      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario."
+      "claimRef": "DMR-046-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-COVER-CHAR-CECIL-BLACKLIZA-FAM-NEW-ASTREA-reported_member_of",
@@ -5891,9 +5897,9 @@
       "interval": "Estado descrito por la fuente del claim; fecha interna exacta no indicada",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_roster",
-      "claimRef": "DMR-007-CLM-011",
-      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario."
+      "claimRef": "DMR-046-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-COVER-CHAR-ISELINA-FAM-NEW-ASTREA-reported_member_of",
@@ -5905,9 +5911,9 @@
       "interval": "Estado descrito por la fuente del claim; fecha interna exacta no indicada",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_roster",
-      "claimRef": "DMR-007-CLM-011",
-      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario."
+      "claimRef": "DMR-046-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-COVER-CHAR-SHAU-FAM-NEW-ASTREA-reported_member_of",
@@ -5919,9 +5925,9 @@
       "interval": "Estado descrito por la fuente del claim; fecha interna exacta no indicada",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_roster",
-      "claimRef": "DMR-007-CLM-011",
-      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario."
+      "claimRef": "DMR-046-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-COVER-CHAR-ULANDA-FAM-NEW-ASTREA-reported_member_of",
@@ -5933,9 +5939,9 @@
       "interval": "Estado descrito por la fuente del claim; fecha interna exacta no indicada",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_roster",
-      "claimRef": "DMR-007-CLM-011",
-      "claimPath": "research/inbox/BATCH-DM-007-astrea-family-network-and-journey.md",
-      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario."
+      "claimRef": "DMR-046-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
+      "note": "Referencia comunitaria secundaria; roster y rango necesitan cotejo primario. Procedencia específica registrada en DMR-046; la fuente comunitaria no sustituye localizador primario."
     },
     {
       "id": "REL-COVER-CHAR-DARK-JURA-HALMER-FAM-RUDRA-reported_member_of",
