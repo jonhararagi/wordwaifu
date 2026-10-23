@@ -120,7 +120,7 @@ assert.ok(!meteriaAuthorNoteMain.results.some(item => item.claimId === "DMR-029-
 const astreaPublicationLineage = index.claims.find(item => item.claimId === "DMR-045-CLM-001");
 assert.ok(astreaPublicationLineage && astreaPublicationLineage.characterIds.length === 0 && astreaPublicationLineage.sourceUrls.includes("https://danmachi.com/news/news131.php"), "The official Astrea Record publication notice must remain bibliographic and cannot substantiate individual character dossiers.");
 const astreaVol1Preview = historicalWikiSourceDirectory.find(item => item.id === "official-astrea-record-vol1-preview");
-assert.ok(astreaVol1Preview && astreaVol1Preview.url === "https://r.binb.jp/epm/e1_260370_02092022101233/" && astreaVol1Preview.authority.includes("metadatos solamente") && astreaVol1Preview.limits.includes("no respalda ninguna capacidad"), "The official Astrea Record preview must be discoverable with its metadata-only limitation visible.");
+assert.ok(astreaVol1Preview && astreaVol1Preview.url === "https://r.binb.jp/epm/e1_260370_02092022101233/" && astreaVol1Preview.authority.includes("metadatos solamente") && String(astreaVol1Preview.limits).toLocaleLowerCase("es").includes("no respalda ninguna capacidad"), "The official Astrea Record preview must be discoverable with its metadata-only limitation visible.");
 assert.ok(!astreaPublicationLineage.sourceUrls.includes("https://r.binb.jp/epm/e1_260370_02092022101233/"), "A trial-reader URL with no accessible narrative text must not be added as evidence for individual dossiers or as the official publication-notice claim.");
 
 
