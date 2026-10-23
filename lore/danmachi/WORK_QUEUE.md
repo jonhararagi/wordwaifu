@@ -56,6 +56,7 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [x] Definir el protocolo común de análisis para que lugares, sucesos y biografías reutilicen los mismos datos sin duplicarlos.
 - [x] Registrar el marco general Orario–Dungeon de la sinopsis editorial del volumen 1 en [DANMACHI-RESEARCH-035](research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md), con tipo de fuente paratextual explícito.
 - [ ] Localizar un pasaje narrativo de la novela publicada con capítulo/página; la sinopsis editorial no verifica la geografía interna de Orario ni completa esta tarea.
+- [x] Registrar como avance parcial el extracto de lectura de GA Bunko que describe una plaza semicircular al norte de Orario; el archivo directo no respondió y la paginación sigue pendiente, por lo que la tarea de localizador reproducible no se cierra.
 - [ ] Construir un inventario de lugares de la ciudad con IDs estables y relaciones respaldadas; distinguir organización Guild de edificio físico.
 - [ ] Verificar distritos, calles, accesos, orientación y mapas. Mantener las ubicaciones sin respaldo como esquema/pregunta; las wikis solo aportan pistas.
 - [ ] Analizar instituciones, Familias, población, vida cotidiana, comercio, abastecimiento y seguridad, afirmación por afirmación.
@@ -585,3 +586,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Localizar las escenas del volumen 6 para Chandra y Zanis con capítulo/página, sin elevar el resumen comunitario a fuente primaria.
 
 **Estado factual:** las fichas y rutas son más completas, pero DMR-046 conserva el estado secondary_checked_with_primary_gaps. Ninguna afirmación individual de wiki se ha promocionado a canon primario.
+
+
+## DANMACHI-RESEARCH-047 · Plaza semicircular al norte de Orario en muestra editorial
+
+- [x] Registrar el pasaje indexado de la muestra oficial de lectura de GA Bunko como una afirmación atómica bajo `CONT-MAIN-LN`.
+- [x] Crear la ficha `LOC-ORARIO-NORTH-PLAZA` como lugar navegable, sin inventar un nombre propio para la plaza.
+- [x] Conectar ficha, claim, fuente, catálogo, índice de lugares, buscador y nodo de Orario.
+- [x] Añadir regresiones para recuperación de la afirmación, ruta de lugar, relación con procedencia y separación de `CONT-PROTOTYPE`.
+- [ ] Reabrir el archivo editorial [trial02.pdf](https://ga.sbcr.jp/sp/danmachi/trial02.pdf) y verificar portada, volumen/edición interna, página y contexto completo; la descarga devolvió HTTP 503 durante esta consulta.
+- [ ] Buscar en el texto completo de la novela principal otros pasajes que nombren la plaza o sitúen sus calles respecto de otros lugares.
+- [ ] Cotejar independientemente avenidas, Central Park, Babel, distritos y servicios urbanos; no trasladar a `CONT-MAIN-LN` los nueve claims de `CONT-PROTOTYPE`.
+
+**Estado factual:** avance de geografía de novela principal con evidencia de extracto parcial; la página, el nombre propio de la plaza y la topología general siguen abiertos.
