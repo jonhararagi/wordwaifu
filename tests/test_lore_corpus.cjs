@@ -567,6 +567,17 @@ assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "offici
 const daedalusMainLnSearch = corpus.search(index, { query: "Daedalus Street Melen Loki Familia", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(!daedalusMainLnSearch.results.some(item => item.claimId === "DMR-049-CLM-001"), "Sword Oratoria evidence must not leak into main light-novel continuity.");
 
+// DMR-050: the official short story is CONT-SHORT, distinct from main LN and Sword Oratoria.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-050-daedalus-street-official-short-story.md"), "DMR-050 must be in the default research manifest.");
+const daedalusShortStorySearch = corpus.search(index, { query: "Daedalus Street Tiona Lefiya Filvis", continuity: "CONT-SHORT", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(daedalusShortStorySearch.results.some(item => item.claimId === "DMR-050-CLM-001" && item.verificationStatus === "source_checked_excerpt_only" && item.sourceUrls.includes("https://ga.sbcr.jp/sp/AIS/fifthanniv_ais.pdf")), "Daedalus Street must be searchable from the official supplemental short story with excerpt-only provenance.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-DAEDALUS-STREET-LOKI-CONT-SHORT" && edge.from === "LOC-DAEDALUS-STREET" && edge.to === "DM-FAM-LOKI" && edge.continuity === "CONT-SHORT" && edge.claimRef === "DMR-050-CLM-001" && edge.evidenceStatus === "source_checked_excerpt_only"), "The short-story location relationship must have CONT-SHORT provenance.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "official-daedalus-short-story" && source.url === "https://ga.sbcr.jp/sp/AIS/fifthanniv_ais.pdf" && source.authority.includes("CONT-SHORT")), "The official short story must be discoverable with its continuity label.");
+const daedalusShortStoryMainSearch = corpus.search(index, { query: "Daedalus Street Tiona Lefiya Filvis", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(!daedalusShortStoryMainSearch.results.some(item => item.claimId === "DMR-050-CLM-001"), "Official short-story evidence must not leak into main light-novel continuity.");
+const daedalusShortStorySOSearch = corpus.search(index, { query: "Daedalus Street Tiona Lefiya Filvis", continuity: "CONT-SO-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(!daedalusShortStorySOSearch.results.some(item => item.claimId === "DMR-050-CLM-001"), "Official short-story evidence must not leak into Sword Oratoria continuity.");
+
 // DMR-044 historical dossiers: default retrieval and game-continuity isolation.
 assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"),"DMR-044 must be in the research manifest.");
 for(const id of ["CHAR-MAXIM","CHAR-HELGA","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS"]) {
