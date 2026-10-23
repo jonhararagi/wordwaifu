@@ -162,7 +162,7 @@ assert.ok(api.get("CHAR-LEENE-ARSHE").conflict.includes("DanMemo") && api.get("C
 
 const detailedEvilus043=[
  {id:"CHAR-DARK-ALECTO",tokens:["900 años","Revinas Darda","Percepción Divina","Espejo Divino"],url:"https://danmachien.miraheze.org/wiki/Alecto"},
- {id:"CHAR-DARK-APATE",tokens:["devolvió 404","doce Spirit Soldiers","Osiris Familia","Apate Familia"],url:"https://danmachien.miraheze.org/wiki/Apate_Familia"},
+ {id:"CHAR-DARK-APATE",tokens:["doce Spirit Soldiers","doce Spirit Soldiers","Osiris Familia","Apate Familia"],url:"https://danmachien.miraheze.org/wiki/Apate_Familia"},
  {id:"CHAR-DARK-THANATOS",tokens:["purificar almas","Lefiya","Intelecto Divino","Arcanum"],url:"https://danmachien.miraheze.org/wiki/Thanatos"},
  {id:"CHAR-DARK-BASRAM",tokens:["shakujō","Daga del Espíritu","dos dedos","apóstoles"],url:"https://danmachien.miraheze.org/wiki/Basram"},
  {id:"CHAR-DARK-VALLETTA-GREDE",tokens:["Shaldo","60 metros","heridas que no sanan","Finn"],url:"https://danmachien.miraheze.org/wiki/Valletta_Grede"}
