@@ -2546,3 +2546,23 @@ verification_status: stub
 - rights_note: Paráfrasis original.
 - verified_by: DANMACHI-RESEARCH-046
 - verification_status: secondary_checked
+## DMR-047-SRC-001 · GA Bunko — muestra de lectura de DanMachi, trial02.pdf
+
+- source_id: DMR-047-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか — muestra oficial de lectura (trial02.pdf)
+- creator_or_publisher: GA Bunko / SB Creative
+- source_type: OFFICIAL_PUBLISHER_PREVIEW_EXCERPT
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Archivo de muestra de lectura en el portal editorial; la edición/rotulación interna del PDF no pudo verificarse directamente en esta sesión
+- language: Japonés
+- official_url: https://ga.sbcr.jp/sp/danmachi/trial02.pdf
+- accessed_at: 2026-10-23
+- locator_type: publisher_preview_excerpt
+- locator: Pasaje indexado sobre una plaza semicircular al norte de Orario frente a una avenida principal; no se asigna página o capítulo
+- claims_supported: [DMR-047-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Muestra de lectura alojada en el sitio de GA Bunko. El extracto indexado sostiene solo la escena localizada; la descarga directa devolvió HTTP 503 durante la consulta, de modo que la paginación y el contexto integral siguen pendientes. Estado source_checked_excerpt_only.
+- conflicting_sources: []
+- rights_note: Paráfrasis original; no reproducir el relato ni inventar un localizador.
+- verification_status: source_checked_excerpt_only
