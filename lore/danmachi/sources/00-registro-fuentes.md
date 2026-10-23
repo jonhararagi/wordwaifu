@@ -2447,6 +2447,28 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-044
 - verification_status: source_checked
 
+## DMR-044-SRC-012 · Lector oficial de muestra de Sword Oratoria, volumen 6
+
+- source_id: DMR-044-SRC-012
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア６【立ち読み版】
+- creator_or_publisher: GA文庫 / SB Creative; lector BinB de Voyager Japan
+- source_type: OFFICIAL_SAMPLE_READER
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Volumen 6, versión de lectura de muestra
+- language: Japonés
+- official_url: https://r.binb.jp/epm/e1_27313_02062016113152/
+- accessed_at: 2026-10-23
+- locator_type: publisher_sample_reader_metadata
+- locator: La página expone título, autor y sinopsis editorial; la extracción automatizada recupera controles del lector, pero no texto narrativo ni páginas inspeccionables
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO-LN
+- reliability_note: Lector enlazado desde la ficha oficial de SB Creative. Ruta legítima para consulta humana, pero no verifica acciones, niveles, magia o parentescos individuales.
+- rights_note: Enlace y metadatos; no reproducir texto protegido ni inferir localizadores ausentes
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: metadata_checked_only
+
+
 ## DMR-045-SRC-001 · Anuncio oficial de la novelización de Astrea Record
 - source_id: DMR-045-SRC-001
 - title: ダンメモ3周年記念シナリオ「偉大冒険譚 アストレア・レコード」の書籍化が決定！

@@ -626,6 +626,10 @@ for(const [id,url] of [
  ["official-ga-sword-oratoria-06","https://ga.sbcr.jp/product/9784797388466/"],
  ["community-lyra","https://danmachi.fandom.com/wiki/Lyra"]
 ]) assert.ok(corpus.getOnlineSourceDirectory().some(source=>source.id===id&&source.url===url),"Missing source directory entry: "+id);
+const swordOratoriaVol6Preview = historicalWikiSourceDirectory.find(item => item.id === "official-sword-oratoria-vol6-preview");
+assert.ok(swordOratoriaVol6Preview && swordOratoriaVol6Preview.url === "https://r.binb.jp/epm/e1_27313_02062016113152/" && swordOratoriaVol6Preview.authority.includes("metadatos solamente") && swordOratoriaVol6Preview.limits.includes("no expone texto narrativo"), "The official Sword Oratoria 6 sample reader must appear in the source browser with its metadata-only evidence limit.");
+const swordOratoriaSynopsisClaim = index.claims.find(item => item.claimId === "DMR-044-CLM-010");
+assert.ok(swordOratoriaSynopsisClaim?.sourceUrls.includes("https://ga.sbcr.jp/product/9784797388466/") && !swordOratoriaSynopsisClaim.sourceUrls.includes("https://r.binb.jp/epm/e1_27313_02062016113152/"), "The Sword Oratoria vol. 6 synopsis claim must not misrepresent inaccessible sample pages as read evidence.");
 
 
 // DMR-045: historical-character continuity audit, editorial lineage and attribution limits.
