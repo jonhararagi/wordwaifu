@@ -1410,9 +1410,11 @@
         "パンテオン",
         "Guild",
         "Orario",
-        "edificio institucional"
+        "edificio institucional",
+        "CONT-MAIN-LN",
+        "GA Bunko preview"
       ],
-      "status": "secondary_checked",
+      "status": "source_checked_partial",
       "priority": "normal"
     },
     {
@@ -3402,6 +3404,12 @@
     {
       "document_id": "DOC-DANMACHI-RESEARCH-047",
       "path": "research/inbox/DANMACHI-RESEARCH-047-orario-north-plaza-volume2-preview.md",
+      "type": "published_novel_excerpt_research",
+      "status": "source_checked_excerpt_only"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-048",
+      "path": "research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md",
       "type": "published_novel_excerpt_research",
       "status": "source_checked_excerpt_only"
     }
@@ -6635,6 +6643,20 @@
       "claimRef": "DMR-047-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-047-orario-north-plaza-volume2-preview.md",
       "note": "La plaza queda con etiqueta descriptiva, no como nombre propio. El extracto indexado es parcial y la descarga directa del PDF no permitió verificar paginación ni contexto íntegro."
+    },
+    {
+      "id": "REL-PANTHEON-ORARIO-MAIN-LN-PREVIEW",
+      "from": "LOC-PANTHEON",
+      "to": "LOC-ORARIO",
+      "kind": "located_in",
+      "label": "La muestra oficial de la novela principal menciona Pantheon durante un recorrido por una avenida de Orario",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Capítulo I 「剣姫異来」 en trial03.pdf; marcadores de folio 36–37 de índice, pendientes de verificación visual",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "official_publisher_light_novel_preview_excerpt",
+      "claimRef": "DMR-048-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md",
+      "note": "La fuente acredita el término Pantheon en el contexto urbano del extracto, no la relación física exacta con la sede de la Guild ni con Babel."
     }
   ]
 }

@@ -468,7 +468,7 @@ assert.ok(daedalusWikiSearch.results.some(item => item.claimId === "DMR-031-CLM-
 const pantheonSecondarySearch = corpus.search(index, { query: "Pantheon Guild edificio biblioteca", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(pantheonSecondarySearch.results.some(item => item.claimId === "DMR-031-CLM-006" && item.verificationStatus === "secondary_checked"), "Pantheon must remain searchable as a secondary-only physical-location lead.");
 assert.ok(catalog.records.some(record => record.id === "LOC-DAEDALUS-STREET" && record.path === "places/daedalus-street.md" && record.type === "location"), "Daedalus Street must have an active location record.");
-assert.ok(catalog.records.some(record => record.id === "LOC-PANTHEON" && record.path === "places/pantheon.md" && record.status === "secondary_checked"), "Pantheon must have its own secondary-checked location record.");
+assert.ok(catalog.records.some(record => record.id === "LOC-PANTHEON" && record.path === "places/pantheon.md" && record.status === "source_checked_partial"), "Pantheon must reflect the newly sourced name while retaining explicitly secondary-only interior claims.");
 assert.ok(!catalog.reservedIds.some(record => record.id === "LOC-DAEDALUS-STREET"), "An activated Daedalus Street ID must no longer remain reserved.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-DAEDALUS-ORARIO-OFFICIAL" && edge.claimRef === "DMR-032-CLM-001" && edge.evidenceStatus === "source_checked"), "Daedalus Street must have an officially sourced, adaptation-scoped relation to Orario.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-PANTHEON-GUILD-HEADQUARTERS-SECONDARY" && edge.claimRef === "DMR-031-CLM-006" && edge.evidenceStatus === "secondary_checked"), "Pantheon and the Guild must be linked without promoting the wiki claim.");
@@ -548,6 +548,15 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-ORARIO-NORTH-PLAZA-O
 assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-volume-02-trial" && source.url === "https://ga.sbcr.jp/sp/danmachi/trial02.pdf" && source.authority.includes("Extracto editorial")), "The official publisher preview must appear in the live source directory.");
 const northPlazaPrototypeSearch = corpus.search(index, { query: "Orario norte plaza semicircular avenida principal", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(!northPlazaPrototypeSearch.results.some(item => item.claimId === "DMR-047-CLM-001"), "The main-novel excerpt must not leak into Prototype continuity.");
+
+// DMR-048: primary publisher excerpt for Pantheon, with physical-layout uncertainty preserved.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md"), "DMR-048 must be in the default research manifest.");
+const pantheonMainNovelSearch = corpus.search(index, { query: "Pantheon avenida comercios Guild mármol blanco", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(pantheonMainNovelSearch.results.some(item => item.claimId === "DMR-048-CLM-001" && item.verificationStatus === "source_checked_excerpt_only"), "The official Pantheon excerpt must be searchable under main-novel continuity with excerpt-only evidence status.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-PANTHEON-ORARIO-MAIN-LN-PREVIEW" && edge.from === "LOC-PANTHEON" && edge.to === "LOC-ORARIO" && edge.continuity === "CONT-MAIN-LN" && edge.claimRef === "DMR-048-CLM-001" && edge.evidenceStatus === "source_checked_excerpt_only"), "Pantheon must link to Orario with the exact source-backed claim and evidence status.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-volume-03-trial" && source.url === "https://ga.sbcr.jp/sp/danmachi/trial03.pdf" && source.limits.includes("Babel")), "The official volume 3 preview must be available in the source browser with the building-identity limitation.");
+const pantheonPrototypeSearch = corpus.search(index, { query: "Pantheon avenida tiendas Guild", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(!pantheonPrototypeSearch.results.some(item => item.claimId === "DMR-048-CLM-001"), "The main-novel Pantheon claim must not leak into Prototype continuity.");
 
 // DMR-044 historical dossiers: default retrieval and game-continuity isolation.
 assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"),"DMR-044 must be in the research manifest.");
