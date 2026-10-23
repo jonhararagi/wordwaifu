@@ -558,6 +558,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Ampliar Seldas con el vínculo infantil con Tione y la tragedia reportada, marcando el spoiler y el cotejo pendiente.
 - [x] Ampliar Helga a partir de la ficha comunitaria de DanMemo y aislarla en CONT-GAME.
 - [x] Registrar fuentes y claims, asociar las relaciones existentes con su procedencia y añadir pruebas del corpus.
+- [x] Registrar DMR-044-SRC-013, ficha editorial oficial de DanMachi vol. 20, como metadato sin claims y añadir una regresión que impide tratar la sinopsis general como prueba de Maxim.
 - [ ] Localizar escenas primarias de Sword Oratoria vol. 6, DanMachi vol. 20 y el evento/versionado de DanMemo antes de elevar la evidencia.
 - [x] Registrar el lector oficial gratuito de Sword Oratoria vol. 6 como `DMR-044-SRC-012` y mostrarlo en el navegador de fuentes con estado `metadata_checked_only`; la extracción automatizada solo expone interfaz y metadatos, no páginas narrativas.
 
