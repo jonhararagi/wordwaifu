@@ -184,3 +184,15 @@ El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis d
 ## DMR-045 · personajes históricos de la Era Oscura
 
 La revisión de [Alfia](dark-era/alfia.md), [Zald](dark-era/zald.md), [Meteria](dark-era/meteria.md), [Erebus](dark-era/erebus.md) y [Rudra](dark-era/rudra.md) está recogida en [DANMACHI-RESEARCH-045](../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md). Las fuentes comunitarias siguen siendo secundarias; la nota de autor de Meteria permanece en CONT-AU, y la fase posterior de Rudra/Juggernaut se mantiene separada del intervalo T-7 de Astrea Record.
+
+
+## DMR-046 · Perfiles ampliados de Solingen y Soma Familia
+
+- [Cecil Blackliza](cecil-blackliza.md) — capitanía y herrería reportadas; datos personales siguen secundarios.
+- [Iselina](iselina.md) — especie y nivel reportados; ocupación y biografía sin verificar.
+- [Shau](shau.md) — especie y nivel reportados; ocupación y biografía sin verificar.
+- [Ulanda](ulanda.md) — especie y nivel reportados; ocupación y biografía sin verificar.
+- [Zanis Lustra](zanis-lustra.md) — antiguo capitán reportado; acusación sobre Canoe no equivale a culpabilidad demostrada.
+- [Chandra Ihit](chandra-ihit.md) — capitán reportado y fuga de Liliruca descrita por fuente secundaria.
+- [Canoe Belway](canoe-belway.md) — destino reportado; secuencia causal sigue pendiente de cotejo.
+- Expediente de investigación: [DANMACHI-RESEARCH-046](../research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md).
