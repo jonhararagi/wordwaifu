@@ -560,3 +560,17 @@ for(const [id,url] of [
  ["official-ga-sword-oratoria-06","https://ga.sbcr.jp/product/9784797388466/"],
  ["community-lyra","https://danmachi.fandom.com/wiki/Lyra"]
 ]) assert.ok(corpus.getOnlineSourceDirectory().some(source=>source.id===id&&source.url===url),"Missing source directory entry: "+id);
+
+
+// DMR-045: historical-character continuity audit, editorial lineage and attribution limits.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"),"DMR-045 must be in the default research manifest.");
+assert.ok(detailIds.has("CHAR-METERIA")&&index.profileDetails["CHAR-METERIA"]?.id==="CHAR-METERIA","Meteria must be available through the default detail manifest.");
+for(const [query,continuity,claimId,status] of [
+ ["Astrea Record Memoria Freese historia revisada Fujino Omori","CROSS-CONTINUITY","DMR-045-CLM-001","source_checked"],
+ ["Rudra Familia trampa Dungeon Juggernaut responsabilidad personal","CONT-MAIN-LN","DMR-045-CLM-002","secondary_checked"],
+ ["Erebus Eren dios Evilus cabello negro ojos grises","CONT-AR","DMR-045-CLM-003","secondary_checked"]
+]) {
+ const found=corpus.search(index,{query,continuity,period:"ALL",aspect:"all",spoiler:"all"});
+ assert.ok(found.results.some(item=>item.claimId===claimId&&item.verificationStatus===status),"DMR-045 claim must be searchable with its evidence status: "+claimId);
+}
+assert.ok(corpus.getOnlineSourceDirectory().some(source=>source.id==="official-astrea-record-revision"&&source.url==="https://danmachi.com/news/news131.php"),"Official Astrea Record publication lineage must be in online source search.");
