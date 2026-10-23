@@ -14,7 +14,7 @@
 | Erebus | Astrea Record, CONT-AR | Identidad divina, relación con Evilus, sobrenombre y un alias alternativo reportados por wiki | No aceptar «Eren» como identidad o alias canónico ni inventar poderes o jerarquía |
 | Rudra | Novela principal, etapa posterior T-5 aproximada, CONT-MAIN-LN | Deidad de Rudra Familia; la wiki atribuye la trampa al grupo en conjunto | No se demuestra que Rudra planeara u ordenara la trampa; no fusionar T-5 con el núcleo T-7 de Astrea Record |
 
-## DMR-045-CLM-001 · Procedencia editorial de Astrea Record
+### DMR-045-CLM-001 · Procedencia editorial de Astrea Record
 
 - claim_id: DMR-045-CLM-001
 - claim: El portal oficial explica que Astrea Record nació como historia larga del evento del tercer aniversario de Memoria Freese y que la versión de GA Bunko se publicaría en tres volúmenes revisados por Fujino Omori. Confirma la relación editorial entre el relato del juego y los libros, no la identidad escena por escena de ambas versiones.
@@ -32,7 +32,7 @@
 - spoiler_level: mild
 - confidence_note: Procedencia oficial de publicación; no prueba las capacidades individuales ni los detalles biográficos.
 
-## DMR-045-CLM-002 · Trampa de Rudra Familia y aparición del Juggernaut
+### DMR-045-CLM-002 · Trampa de Rudra Familia y aparición del Juggernaut
 
 - claim_id: DMR-045-CLM-002
 - claim: El resumen comunitario de Rudra Familia atribuye a la Familia en conjunto una trampa contra Astrea Familia aproximadamente cinco años antes de Bell; el daño excesivo al Dungeon habría provocado la aparición accidental del Juggernaut. El resumen no demuestra que Rudra, como deidad, diseñara, autorizara o ejecutara personalmente el plan. El incidente pertenece a la ruta posterior de la novela principal, no al intervalo aproximado T-7 de Astrea Record.
@@ -50,7 +50,7 @@
 - spoiler_level: major
 - confidence_note: Separar las acciones de Jura, las de la Familia y el conocimiento o autorización de la deidad.
 
-## DMR-045-CLM-003 · Erebus, su apariencia y «Eren»: datos secundarios
+### DMR-045-CLM-003 · Erebus, su apariencia y «Eren»: datos secundarios
 
 - claim_id: DMR-045-CLM-003
 - claim: La página comunitaria describe a Erebus como deidad masculina de cabello negro con mechones grises, ojos grises y altura reportada de 178 cm; también le atribuye el sobrenombre «Absolute Evil» y menciona «Eren» como otro nombre. La wiki lo relaciona con Evilus y sitúa su estado posterior en el Cielo. Los detalles son secundarios y «Eren» no se convierte en alias canónico ni identidad separada sin apoyo narrativo.
