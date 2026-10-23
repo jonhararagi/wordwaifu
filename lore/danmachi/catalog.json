@@ -6851,6 +6851,20 @@
       "claimRef": "DMR-029-CLM-012",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
       "note": "No reemplaza la relación secundaria de CONT-MAIN-LN."
+    },
+    {
+      "id": "REL-ALFIA-BELL-AUNT-INTERVIEW",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "DM-CHAR-BELL",
+      "kind": "aunt_of",
+      "label": "Alfia es la tía de Bell según la entrevista de Fujino Omori sobre la novelización de Astrea Record",
+      "continuity": "CONT-AR",
+      "interval": "Astrea Record (novelización); fecha familiar absoluta desconocida",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "author_interview_statement",
+      "claimRef": "DMR-045-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "La entrevista atribuye a Omori la afirmación de que la novelización dejó explícito que Alfia es tía de Bell. Es evidencia autoral complementaria, no localizador de capítulo/página de la novela; no demuestra por sí sola que Meteria sea la madre o hermana gemela ni valida otras estadísticas o datos biográficos."
     }
   ]
 }
