@@ -75,3 +75,8 @@ La wiki española de Astrea Record volumen 3 sirve como mapa de búsqueda y menc
 
 ## Regla editorial
 No elevar a canon confirmado un dato que solo procede de una wiki. Registrar volumen, capítulo, página y escena de la edición consultada. Mantener separado cualquier escenario alternativo del autor y no completar incógnitas sobre el padre de Bell.
+
+
+## Revisión cruzada DMR-045 · procedencia y límites
+
+La cronología oficial sitúa Astrea Record aproximadamente siete años antes de Bell, pero no verifica por sí sola escenas o capacidades individuales de Alfia. El anuncio oficial confirma que los libros proceden de una historia de Memoria Freese revisada por Fujino Omori; la edición novelada es la ruta prioritaria para cotejar escenas. Las habilidades y porcentajes de la wiki siguen siendo secundarios. Véase [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md).
