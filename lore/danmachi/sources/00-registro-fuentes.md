@@ -2575,6 +2575,30 @@ verification_status: stub
 - verification_status: secondary_checked
 
 
+## DMR-045-SRC-005 · Astrea Record 3 — fragmento indexado de sinopsis editorial
+
+- source_id: DMR-045-SRC-005
+- title: アストレア・レコード3 正邪決戦 — ficha editorial oficial de SB Creative (fragmento indexado)
+- creator_or_publisher: SB Creative / GA文庫
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi Heroic Tale: Astrea Record
+- volume_or_edition: Astrea Record, volumen 3; edición especial, ISBN 978-4-8156-1755-4
+- language: Japonés
+- publication_date: 2022-12-15 aproximadamente, según editorial
+- official_url: https://www.sbcr.jp/product/4815617554/
+- accessed_at: 2026-10-23
+- locator_type: indexed_official_publisher_synopsis_excerpt
+- locator: Fragmento indexado sobre el inicio de los enfrentamientos Zald–Ottar en la superficie y Alfia–Astrea Familia dentro del Dungeon durante el último día de los Siete Días de la Muerte.
+- claims_supported: [DMR-045-CLM-006]
+- events_supported: [EVT-DM-ASTREA-RECORD-FOUNDATIONS-001]
+- continuity_scope: CONT-AR
+- reliability_note: El fragmento procede del resultado indexado de la página de editorial; el acceso directo a esa página respondió HTTP 503 durante la comprobación. Solo permite registrar lo expresado en el extracto, no detalles del texto completo ni resultados individuales.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no reproducir sinopsis extensas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked_excerpt_only
+
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea

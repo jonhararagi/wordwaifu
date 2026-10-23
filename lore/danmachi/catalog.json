@@ -912,7 +912,12 @@
         "Alise Lovelace",
         "justicia",
         "Evilus",
-        "siete años antes de Bell"
+        "siete años antes de Bell",
+        "Alfia",
+        "Zald",
+        "Ottar",
+        "Siete Días de la Muerte",
+        "enfrentamientos de Astrea Record"
       ],
       "status": "source_checked_partial",
       "priority": "critical"
@@ -4452,6 +4457,34 @@
       "note": "Solo prueba el resumen editorial del arco; no determina destinos individuales, todas las causas ni el orden preciso de escenas.",
       "evidenceType": "official_publisher_synopses",
       "claimRef": "DMR-012-CLM-004"
+    },
+    {
+      "id": "REL-ALFIA-ASTREA-RECORD-FINAL-DAY-EXCERPT",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001",
+      "kind": "combatant_in_event",
+      "label": "Un fragmento indexado de la sinopsis oficial de Astrea Record 3 menciona que el enfrentamiento de Alfia contra Astrea Familia comienza dentro del Dungeon en el último día de los Siete Días de la Muerte",
+      "continuity": "CONT-AR",
+      "interval": "Último día de los Siete Días de la Muerte, según fragmento de sinopsis; fecha absoluta y desarrollo desconocidos",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "El extracto solo respalda el emparejamiento y el ámbito general. La página editorial directa devolvió HTTP 503 durante la comprobación; no se infieren técnicas, nivel, participantes individuales dentro de Astrea Familia ni resultado.",
+      "evidenceType": "official_indexed_publisher_synopsis_excerpt",
+      "claimRef": "DMR-045-CLM-006"
+    },
+    {
+      "id": "REL-ZALD-ASTREA-RECORD-FINAL-DAY-EXCERPT",
+      "from": "CHAR-DARK-ZALD",
+      "to": "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001",
+      "kind": "combatant_in_event",
+      "label": "Un fragmento indexado de la sinopsis oficial de Astrea Record 3 menciona que el enfrentamiento de Zald contra Ottar comienza en la superficie durante el último día de los Siete Días de la Muerte",
+      "continuity": "CONT-AR",
+      "interval": "Último día de los Siete Días de la Muerte, según fragmento de sinopsis; fecha absoluta y desarrollo desconocidos",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "El extracto solo respalda el emparejamiento y el ámbito general. La página editorial directa devolvió HTTP 503 durante la comprobación; no se infieren técnicas, niveles, ganador ni consecuencias.",
+      "evidenceType": "official_indexed_publisher_synopsis_excerpt",
+      "claimRef": "DMR-045-CLM-006"
     },
     {
       "id": "REL-SOMA-PATRON-SOMA-FAM",

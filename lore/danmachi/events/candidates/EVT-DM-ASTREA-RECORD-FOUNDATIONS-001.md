@@ -9,15 +9,20 @@ source_refs:
   - DMR-001-SRC-003
   - DMR-001-SRC-004
   - DMR-001-SRC-005
+  - DMR-045-SRC-005
 claim_refs:
   - DMR-012-CLM-001
   - DMR-012-CLM-002
   - DMR-012-CLM-003
   - DMR-012-CLM-004
+  - DMR-045-CLM-006
 related_character_ids:
   - CHAR-ASTREA
   - CHAR-ALISE-LOVELACE
   - CHAR-RYUU-LION
+  - CHAR-DARK-ALFIA
+  - CHAR-DARK-ZALD
+  - CHAR-OTTAR
 related_family_ids:
   - DM-FAM-ASTREA
 ---
@@ -58,6 +63,15 @@ La sinopsis del volumen 2 vincula las pérdidas del periodo conocido posteriorme
 - **Fuentes:** DMR-001-SRC-004 · [GA Bunko, *Astrea Record* II](https://ga.sbcr.jp/product/9784815610180/) y DMR-001-SRC-005 · [GA Bunko, *Astrea Record* III](https://ga.sbcr.jp/product/9784815610197/).
 - **Evidencia:** `source_checked` para lo expresado en las sinopsis; la ficha de este evento es parcial.
 - **Límite:** las sinopsis no bastan para asignar a cada integrante una acción, pérdida, supervivencia o decisión específica. Tampoco autorizan a insertar aquí hechos de la novela principal o del anime sin etiquetar su continuidad.
+
+## Hito 4 · Enfrentamientos nombrados en un fragmento editorial de Astrea Record 3
+
+Un fragmento indexado de la ficha editorial oficial de *Astrea Record 3* sitúa en el último día de los Siete Días de la Muerte el inicio del enfrentamiento entre [Zald](../../characters/dark-era/zald.md) y [Ottar](../../characters/ottar.md) en la superficie, y entre [Alfia](../../characters/dark-era/alfia.md) y [Astrea Familia](../../familias/astrea-familia.md) dentro del Dungeon.
+
+- **Claim:** DMR-045-CLM-006.
+- **Fuente:** DMR-045-SRC-005 · [SB Creative, *Astrea Record 3* — ficha editorial](https://www.sbcr.jp/product/4815617554/).
+- **Evidencia:** `source_checked_excerpt_only`; la ficha editorial directa devolvió HTTP 503 durante la comprobación del 23 de octubre de 2026, por lo que el dato procede del fragmento indexado, no del texto narrativo leído.
+- **Límite:** el extracto respalda los emparejamientos y las ubicaciones generales. No informa técnicas, niveles, acciones individuales, ganador, desenlace, daños ni cronología completa. Este hito permanece en `CONT-AR` y no confirma automáticamente capacidades o biografías de la novela principal.
 
 ## Camino de historia que se puede recorrer
 

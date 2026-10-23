@@ -163,7 +163,17 @@ assert.ok(trialSwordLead.results.some(item => item.claimId === "DMR-045-CLM-005"
 assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "community-leon-vardenburg-vol20-trial-sword-leads" && source.url === "https://manga-tantei.com/danmachileon-18686" && source.authority.includes("Fuente secundaria")), "The article must be visibly labeled secondary in the source browser.");
 assert.ok(!index.relationships.some(edge => edge.claimRef === "DMR-045-CLM-005" || (edge.claimRefs || []).includes("DMR-045-CLM-005")), "A secondary interpretation of weapon names must not create canon character relationships.");
 
-
+const astreaFinalDay = corpus.search(index, { query: "Alfia Zald Ottar Astrea Familia Siete Días de la Muerte", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(astreaFinalDay.results.some(item => item.claimId === "DMR-045-CLM-006" && item.verificationStatus === "source_checked_excerpt_only" && item.sourceUrls.includes("https://www.sbcr.jp/product/4815617554/")), "The Astrea Record final-day matchup excerpt must be searchable with excerpt-only provenance.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "official-sbcr-astrea-record-3-matchups-excerpt" && source.authority.includes("Fragmento de sinopsis editorial oficial indexado") && source.limits.includes("HTTP 503")), "The publisher excerpt must be visible with its direct-access limitation.");
+for (const [id,from] of [
+ ["REL-ALFIA-ASTREA-RECORD-FINAL-DAY-EXCERPT","CHAR-DARK-ALFIA"],
+ ["REL-ZALD-ASTREA-RECORD-FINAL-DAY-EXCERPT","CHAR-DARK-ZALD"]
+]) {
+ const edge = index.relationships.find(item => item.id === id);
+ assert.ok(edge && edge.from === from && edge.to === "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001" && edge.continuity === "CONT-AR" && edge.evidenceStatus === "source_checked_excerpt_only" && edge.claimRef === "DMR-045-CLM-006", "Astrea Record matchup must be navigable only as an excerpt-limited CONT-AR event: " + id);
+}
+assert.ok(!index.relationships.some(edge => edge.claimRef === "DMR-045-CLM-006" && edge.continuity === "CONT-MAIN-LN"), "Astrea Record excerpt must not leak into main-light-novel continuity.");
 
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY" && edge.from === "CHAR-RYUU-LION" && edge.to === "CHAR-KAGUYA" && edge.evidenceStatus === "secondary_checked" && edge.claimRefs?.includes("DMR-028-CLM-003")), "The existing Ryu/Kaguya historical edge must also expose the wiki-derived moral disagreement without creating a duplicate reverse destination.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LYRA-MEMBER-ASTREA-WIKI" && edge.from === "CHAR-LYRA" && edge.to === "DM-FAM-ASTREA" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-004"), "Lyra's reported membership must have a secondary-evidence relationship.");
