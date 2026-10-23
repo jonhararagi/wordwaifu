@@ -514,3 +514,18 @@ La sinopsis confirma el marco promocional, no una cronología completa ni los re
 - [ ] Tras cada fecha prevista, comprobar publicación real y reconstruir las fichas desde material publicado; nunca importar anticipadamente contenido especulativo.
 
 Fuentes: https://ga.sbcr.jp/product/9784815632946/ · https://ga.sbcr.jp/product/9784815642907/ · https://ga.sbcr.jp/product/9784815642914/ · https://ga.sbcr.jp/product/9784815642938/ · https://ga.sbcr.jp/product/9784815640675/
+
+
+## DANMACHI-RESEARCH-042 · Olivas Act y auditoría de expedientes previos
+
+- [x] Incorporar una ficha individual para Olivas Act, con aliases agrupados bajo CHAR-OLIVAS-ACT.
+- [x] Separar lo que afirma la wiki inglesa de lo que realmente dice la sinopsis editorial de Sword Oratoria, volumen 3.
+- [x] Registrar como secundarios el origen de Evilus, el incidente del piso 27, la forma Creature, ingestión de piedras mágicas, regeneración, coste de recursos, control de monstruos y asociación de escena con Revis.
+- [x] Añadir el expediente a catálogo, interfaz, índice de personajes y recuperación por defecto.
+- [x] Revisar Maryuu/Mariyu, Ryana, Meteria y Rudra sin elevar su evidencia previa ni crear alias como personas nuevas.
+- [x] Añadir pruebas para ID único, fuentes, rutas, relaciones secundarias y búsqueda con procedencia.
+- [ ] Localizar las escenas concretas de Sword Oratoria, volumen 3, antes de elevar cualquier dato biográfico o de habilidades.
+- [ ] Diferenciar la continuidad exacta del evento del piso 27 y comprobar si la wiki mezcla versiones, sin asumir que pertenece al mismo intervalo que todas las escenas de Sword Oratoria.
+- [ ] Resolver las diferencias entre las wikis inglesa y española y cotejar la denominación o relación con Enyo.
+
+**Estado factual:** ficha útil y recuperable; biografía todavía secundaria y pendiente de cotejo primario.

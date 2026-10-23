@@ -784,6 +784,19 @@
       conflict: "Erebus sirve para explorar la oposición ideológica a la justicia de Ryu y Astrea Familia. La ficha distingue antagonismo reportado de una reconstrucción completa de su plan.",
       sources: ["https://danmachi.fandom.com/wiki/Erebus","https://danmachi.com/news/news131.php","https://danmachi.com/chronology/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md"]
     },
+    "CHAR-OLIVAS-ACT": {
+      "appearance": "La wiki inglesa describe cabello blanco, ojos amarillo verdosos, equipo de combate blanco y una máscara con forma de cráneo; también atribuye un cambio de color de piel desde la cintura. Es información visual secundaria que debe cotejarse con las ilustraciones o escenas pertinentes.",
+      "history": "La fuente comunitaria lo sitúa en Sword Oratoria, volumen 3, y relaciona su pasado con Evilus, el incidente del piso 27 y una transformación posterior en Creature. También lo marca como fallecido. La sinopsis editorial solo aporta el marco del volumen; ninguna de estas afirmaciones biográficas se presenta como verificación primaria.",
+      "personality": "La descripción comunitaria lo caracteriza como cruel, sádico, fanático y propenso a subestimar a sus rivales. También indica que conocía nombres o alias de aventureros de Orario. Estos rasgos son pistas de lectura derivadas de una fuente secundaria, no una psicología atemporal ni una explicación definitiva de sus motivos.",
+      "abilities": "La wiki atribuye a su forma Creature fuerza, rapidez, reflejos, resistencia, sentidos agudizados y regeneración. Describe que ingerir piedras mágicas le permite fortalecerse, pero con consumo ineficiente; regenerarse gastaría resistencia y Mind y reduciría su rendimiento posterior. También le atribuye la función Tamer para dirigir determinados monstruos. No se inventan costes, radios o estadísticas numéricas.",
+      "relationships": "La fuente secundaria lo presenta como antiguo miembro de Evilus y enumera una afiliación previa con Enyo, que aquí no se fusiona con otra identidad. El vínculo con Evilus queda marcado como reportado. La asociación con Revis se limita a una aparición compartida descrita por la wiki; no se infieren amistad, subordinación ni confianza estable.",
+      "conflict": "Su expediente sirve para reconstruir con precisión una amenaza física que puede regenerarse, pero cuyo consumo de recursos limita el combate. La escritura debe distinguir el estado anterior a su transformación del estado Creature, registrar la escena y el coste de cada recuperación y evitar tratar su resistencia como invulnerabilidad.",
+      "sources": [
+        "https://danmachi.fandom.com/wiki/Olivas_Act",
+        "https://yenpress.com/titles/9780316318181-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-on-the-side-sword-oratoria-vol-3-light-novel",
+        "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md"
+      ]
+    },
   };
   const clone = value => JSON.parse(JSON.stringify(value));
   root.WordWaifuCharacterDossiers = Object.freeze({

@@ -396,7 +396,17 @@ process.stdout.write("PASS lore search: source claims and entries, Astrea wiki r
   assert.ok(corpus.getDefaultDetailIds().includes("CHAR-HELGA"), "Helga's individual dossier must be loaded by the production detail manifest.");
   assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "community-afterglow" && source.url === "https://danmachi.fandom.com/wiki/Terminology"), "Afterglow's community reference must be discoverable from the source directory.");
 
-  process.stdout.write("PASS web research: Fandom/Wikipedia search, secondary-source labels, safe snippets and graceful partial failure verified.\n");
+  assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md"), "Olivas research must load through the default retrieval manifest.");
+assert.ok(corpus.getDefaultDetailIds().includes("CHAR-OLIVAS-ACT"), "Olivas must load through the default detail profile manifest.");
+assert.equal(index.profileDetails["CHAR-OLIVAS-ACT"]?.id, "CHAR-OLIVAS-ACT", "Olivas must be available as an individual detail profile.");
+const olivasAbilitySearch = corpus.search(index, { query: "Olivas piedras mágicas fuerza", continuity: "CROSS-CONTINUITY", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(olivasAbilitySearch.results.some(item => item.claimId === "DMR-042-CLM-004" && item.verificationStatus === "secondary_checked" && item.sourceUrls.some(url => url.includes("danmachi.fandom.com/wiki/Olivas_Act"))), "Olivas's ability lead must be searchable with the original wiki URL and secondary status.");
+const olivasPublisherSearch = corpus.search(index, { query: "Ais monstruos Rivira domador", continuity: "CONT-SO", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(olivasPublisherSearch.results.some(item => item.claimId === "DMR-042-CLM-008" && item.verificationStatus === "source_checked" && item.sourceUrls.some(url => url.includes("yenpress.com/titles/9780316318181"))), "Publisher search must return only the limited editorial context, separate from wiki ability claims.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "community-olivas-act" && source.url === "https://danmachi.fandom.com/wiki/Olivas_Act"), "The community source must be available in the browse directory.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "yenpress-sword-oratoria-03" && source.url.includes("9780316318181")), "The publisher synopsis must be available in the source directory.");
+
+process.stdout.write("PASS web research: Fandom/Wikipedia search, secondary-source labels, safe snippets and graceful partial failure verified.\n");
 })().catch(error=>{ console.error(error); process.exitCode=1; });
 
 

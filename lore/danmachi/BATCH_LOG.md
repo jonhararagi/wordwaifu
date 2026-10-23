@@ -360,3 +360,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se crea `EVT-DM-FC-HAZE-001` y se conecta a Heith y Ottar con claims editoriales parciales; no se infieren desenlaces, técnicas ni el roster completo de la aventura.
 - El índice, buscador, roster, ficha Markdown, UI y catálogo comparten el mismo ID de personaje. Test de regresión agregado para bloquear la duplicación `CHAR-HAZE`.
 - Pendiente: cotejo de texto íntegro y localizadores reproducibles.
+
+
+## DANMACHI-RESEARCH-042 · Olivas Act y revisión de alias/personajes previos
+
+- Fecha de corte: 2026-10-22.
+- Fuente comunitaria: ficha inglesa de Olivas Act; recupera alias, apariencia, afiliaciones reportadas, combate, regeneración, sentidos y Tamer como pistas secundarias.
+- Fuente editorial: página de Yen Press de *Sword Oratoria*, volumen 3; se usa solo para localizar el volumen y el marco de la trama, ya que la sinopsis no nombra a Olivas.
+- Se añadió CHAR-OLIVAS-ACT con una ficha Markdown, expediente de interfaz y dos relaciones navegables con procedencia; los vínculos se etiquetan secondary_checked y no implican relaciones personales estables.
+- Se añadieron nueve claims DMR-042 con dos fuentes registradas; los datos wiki no se elevan a verificación primaria.
+- Auditoría anterior: Maryuu/Mariyu mantiene un ID único y la separación entre perfil de adaptación y habilidades comunitarias; Ryana/Liana conserva un único ID; Meteria mantiene los parentescos reportados y el escenario CONT-AU separado; Rudra permanece en la ruta posterior CONT-MAIN-LN/T-5 y no se fusiona con el núcleo T-7 de Astrea Record.
+- Pendiente: cotejar escenas de la novela y cualquier diferencia entre wikis, además de revisar las pruebas CI tras el commit de esta tanda.

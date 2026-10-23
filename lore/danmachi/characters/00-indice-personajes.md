@@ -89,6 +89,7 @@ Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.m
 | Mikoto Yamato | `CHAR-MIKOTO-YAMATO` | Personaje | `provisional` | [Abrir](mikoto-yamato.md) |
 | Neze Rankett | `CHAR-NEZE-RANKETT` | Personaje | `provisional` | [Abrir](neze-rankett.md) |
 | Noin Unic | `CHAR-NOIN-UNIC` | Personaje | `provisional` | [Abrir](noin-unic.md) |
+| Olivas Act | `CHAR-OLIVAS-ACT` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](olivas-act.md) |
 | Ottar | `CHAR-OTTAR` | Personaje | `provisional` | [Abrir](ottar.md) |
 | Ouranos | `CHAR-OURANOS` | Deidad | `source_checked_partial` | [Abrir](ouranos.md) |
 | Raul Nord | `CHAR-RAUL-NOORD` | Personaje | `provisional` | [Abrir](raul-noord.md) |

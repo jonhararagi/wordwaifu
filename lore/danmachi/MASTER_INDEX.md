@@ -225,3 +225,9 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Meteria](characters/dark-era/meteria.md) — filiación y afiliación reportadas por wikis; la caracterización de la nota del autor permanece separada como CONT-AU.
 - [Alfia](characters/dark-era/alfia.md) y [Zald](characters/dark-era/zald.md) — habilidades, magias, costes y límites recuperados de fuentes comunitarias; localizadores primarios pendientes.
 - [DANMACHI-RESEARCH-021](research/inbox/DANMACHI-RESEARCH-021-zeus-hera-familias.md) y [DANMACHI-RESEARCH-029](research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md) — claims con fuentes secundarias etiquetadas y continuidad separada.
+
+
+## Olivas Act · ficha nueva y límites de evidencia
+- [Olivas Act](characters/olivas-act.md) — identidad y habilidades ampliadas desde una fuente comunitaria, con límites y costes conservados como información secundaria.
+- [DANMACHI-RESEARCH-042](research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md) — nueve claims, fuentes comunitaria/editorial y preguntas para localizar escenas.
+- La sinopsis editorial de *Sword Oratoria*, volumen 3, no nombra a Olivas. No usarla como respaldo de sus alias, su afiliación, la forma Creature ni sus poderes.

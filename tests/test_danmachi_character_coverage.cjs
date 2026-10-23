@@ -62,15 +62,31 @@ assert.ok(!byId.get("CHAR-DARK-RUDRA").tags.includes("Astrea Record"), "Rudra la
 const corpusApi = require("../src/lore-corpus.js");
 assert.ok(corpusApi, "Lore retrieval module must load.");
 assert.ok(corpusApi.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"), "DMR-038 must be in the default retrieval package.");
-for (const id of ["CHAR-DARK-EREBUS","CHAR-DARK-JURA-HALMER","CHAR-DARK-RUDRA","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE","CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS"]) {
+for (const id of ["CHAR-DARK-EREBUS","CHAR-DARK-JURA-HALMER","CHAR-DARK-RUDRA","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE","CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-OLIVAS-ACT"]) {
   assert.ok(corpusApi.getDefaultDetailIds().includes(id), "Missing default detail route: " + id);
 }
-for (const id of ["CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-DARK-EREBUS","CHAR-DARK-RUDRA","CHAR-DARK-JURA-HALMER","CHAR-DARK-VALLETTA-GREDE","CHAR-DARK-THANATOS"]) {
+for (const id of ["CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-DARK-EREBUS","CHAR-DARK-RUDRA","CHAR-DARK-JURA-HALMER","CHAR-DARK-VALLETTA-GREDE","CHAR-DARK-THANATOS","CHAR-OLIVAS-ACT"]) {
   const dossier = dossierApi.get(id);
   assert.ok(dossier, "Missing UI dossier: " + id);
   for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) assert.ok(typeof dossier[field] === "string" && dossier[field].length >= 100, id + " needs substantive " + field);
   assert.ok(Array.isArray(dossier.sources) && dossier.sources.length > 0, id + " needs sources");
 }
+const olivasRecord = byId.get("CHAR-OLIVAS-ACT");
+assert.ok(olivasRecord && olivasRecord.path === "characters/olivas-act.md", "Olivas must have exactly one active Markdown route.");
+assert.ok(!catalog.reservedIds.some(item => (typeof item === "string" ? item : item.id) === "CHAR-OLIVAS-ACT"), "Olivas must not remain reserved after activation.");
+assert.ok(catalog.documents.some(d => d.document_id === "DOC-DANMACHI-RESEARCH-042" && d.path === "research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md"), "Olivas research packet must be indexed.");
+assert.ok(catalog.relationships.some(e => e.id === "REL-OLIVAS-EVILUS-SECONDARY" && e.from === "CHAR-OLIVAS-ACT" && e.to === "GRP-EVILUS" && e.evidenceStatus === "secondary_checked" && e.claimRef === "DMR-042-CLM-002"), "Olivas–Evilus route must retain secondary provenance.");
+assert.ok(catalog.relationships.some(e => e.id === "REL-OLIVAS-REVIS-SO3-SECONDARY" && e.from === "CHAR-OLIVAS-ACT" && e.to === "CHAR-REVIS" && e.evidenceStatus === "secondary_checked" && e.claimRef === "DMR-042-CLM-009"), "Olivas–Revis route must be a secondary scene association, not a personal relationship claim.");
+const olivasMarkdown = fs.readFileSync(path.join(loreRoot, "characters/olivas-act.md"), "utf8");
+assert.match(olivasMarkdown, /Vendetta/i, "Olivas aliases must be searchable from the Markdown record.");
+assert.match(olivasMarkdown, /no se presenta como biografía de canon verificado/i, "Olivas must explicitly disclose its evidence limits.");
+for (const [id, status] of [
+  ["CHAR-MARIYU-LEAGE", "provisional"],
+  ["CHAR-RYANA-LIETZ", "provisional"],
+  ["CHAR-METERIA", "secondary_reference_primary_locator_pending"],
+  ["CHAR-DARK-RUDRA", "pending_primary_text_check"]
+]) assert.equal(byId.get(id)?.status, status, "Prior dossier evidence must not be silently promoted: " + id);
+assert.ok(olivasMarkdown.includes("DMR-042-CLM-004") && olivasMarkdown.includes("DMR-042-CLM-008"), "Olivas must link its wiki details and the bounded publisher claim separately.");
 assert.equal(new Set(catalog.records.map(r => r.id)).size, catalog.records.length, "Catalog IDs must be unique");
 assert.equal(new Set(catalog.relationships.map(r => r.id)).size, catalog.relationships.length, "Relationship IDs must be unique");
 for (const edge of catalog.relationships) { assert.ok(byId.has(edge.from), "Dangling origin: " + edge.id); assert.ok(byId.has(edge.to), "Dangling target: " + edge.id); }

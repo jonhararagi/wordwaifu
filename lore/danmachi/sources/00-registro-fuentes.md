@@ -2088,3 +2088,51 @@ verification_status: stub
 - rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-041
 - verification_status: source_checked_partial
+
+
+---
+
+## DMR-042-SRC-001 · Olivas Act — DanMachi Wiki en inglés
+
+- source_id: DMR-042-SRC-001
+- title: Olivas Act
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi; Sword Oratoria
+- volume_or_edition: Artículo web dinámico
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Olivas_Act
+- accessed_at: 2026-10-22
+- locator_type: community_character_article
+- locator: Entradas de identidad, alias, sinopsis, apariencia, personalidad, afiliación y habilidades.
+- claims_supported: [DMR-042-CLM-001, DMR-042-CLM-002, DMR-042-CLM-003, DMR-042-CLM-004, DMR-042-CLM-005, DMR-042-CLM-006, DMR-042-CLM-007, DMR-042-CLM-009]
+- events_supported: []
+- continuity_scope: CONT-SO; CROSS-CONTINUITY según afirmación
+- reliability_note: Referencia secundaria útil para localizar nombres y escenas; no equivale al texto de la novela.
+- conflicting_sources: []
+- rights_note: Registrar paráfrasis breves propias; no copiar prosa ni imágenes.
+- verified_by: DANMACHI-RESEARCH-042
+- verification_status: secondary_checked
+
+## DMR-042-SRC-002 · Sword Oratoria, volumen 3 — Yen Press
+
+- source_id: DMR-042-SRC-002
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon? On the Side: Sword Oratoria, Vol. 3 (light novel)
+- creator_or_publisher: Yen Press
+- source_type: OFFICIAL_PUBLISHER_REFERENCE
+- series: Sword Oratoria
+- volume_or_edition: Volumen 3; ISBN 9780316318181
+- language: Inglés
+- publication_date: 2017-06-20
+- official_url: https://yenpress.com/titles/9780316318181-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-on-the-side-sword-oratoria-vol-3-light-novel
+- accessed_at: 2026-10-22
+- locator_type: publisher_synopsis
+- locator: Sinopsis editorial sobre la investigación de Ais, monstruos que atacan Rivira y un domador que conoce su nombre.
+- claims_supported: [DMR-042-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: Confirma el marco editorial del volumen, no identifica por nombre a Olivas ni enumera sus capacidades.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
+- verified_by: DANMACHI-RESEARCH-042
+- verification_status: source_checked

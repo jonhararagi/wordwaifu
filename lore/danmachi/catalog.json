@@ -2406,6 +2406,24 @@
       ],
       "status": "source_checked_partial",
       "priority": "normal"
+    },
+    {
+      "id": "CHAR-OLIVAS-ACT",
+      "path": "characters/olivas-act.md",
+      "type": "character",
+      "tags": [
+        "Olivas Act",
+        "Orivasu Akuto",
+        "Vendetta",
+        "Fanatic",
+        "Sword Oratoria",
+        "Evilus",
+        "Creature",
+        "CONT-SO",
+        "secondary evidence"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -3289,6 +3307,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md",
       "type": "published_side_story_character_event_research",
       "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-042",
+      "path": "research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md",
+      "type": "character_profile_and_ability_research",
+      "status": "secondary_checked_with_primary_gaps"
     }
   ],
   "lastStructuredSync": "2026-10-20",
@@ -6436,6 +6460,34 @@
       "claimRef": "DMR-041-CLM-003",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md",
       "note": "La sinopsis confirma el marco general, no la secuencia completa ni todas las identidades participantes."
+    },
+    {
+      "id": "REL-OLIVAS-EVILUS-SECONDARY",
+      "from": "CHAR-OLIVAS-ACT",
+      "to": "GRP-EVILUS",
+      "kind": "reported_former_affiliation",
+      "label": "antigua afiliación a Evilus reportada por una fuente secundaria",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "Pasado atribuido por la wiki; fecha y escenas por cotejar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_secondary_character_history",
+      "claimRef": "DMR-042-CLM-002",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md",
+      "note": "No equivale a confirmación primaria ni a una afiliación personal con cada miembro de Evilus."
+    },
+    {
+      "id": "REL-OLIVAS-REVIS-SO3-SECONDARY",
+      "from": "CHAR-OLIVAS-ACT",
+      "to": "CHAR-REVIS",
+      "kind": "reported_shared_scene",
+      "label": "aparición junto a Revis reportada por la wiki; vínculo personal no confirmado",
+      "continuity": "CONT-SO",
+      "interval": "Sword Oratoria, volumen 3; escena por localizar",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_scene_association",
+      "claimRef": "DMR-042-CLM-009",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md",
+      "note": "El borde facilita navegar entre fichas y no declara amistad, subordinación ni alianza permanente."
     }
   ]
 }
