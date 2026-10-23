@@ -202,7 +202,7 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `source_locator`: Publicación original del autor; lectura de escenario hipotético, no novela principal
 - `source_url`: https://note.com/fujinoomori/n/n629829ac3fe4
 - `evidence_type`: author_note_alternate_scenario
-- `verification_status`: secondary_checked
+- `verification_status`: source_checked_excerpt_only
 - `spoiler_level`: major
 - `confidence_note`: El texto es atribuible al autor, pero la continuidad descrita es alternativa. No importar las decisiones de Alfia/Zald ni la crianza de Bell a CONT-MAIN-LN.
 
