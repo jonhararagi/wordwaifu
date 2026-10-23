@@ -206,6 +206,10 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `spoiler_level`: major
 - `confidence_note`: El texto es atribuible al autor, pero la continuidad descrita es alternativa. No importar las decisiones de Alfia/Zald ni la crianza de Bell a CONT-MAIN-LN.
 
+### Ficha independiente de escenario alternativo
+
+La nota de crianza hipotética dispone ahora de una ficha navegable: [EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001](../../events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md). El catálogo la enlaza con Alfia, Zald, Bell y Meteria usando solo `CONT-AU`, `DMR-029-CLM-012` y evidencia `source_checked_excerpt_only`. No se añade al timeline principal ni se usa para resolver los claims secundarios sobre parentesco de Meteria en `CONT-MAIN-LN`.
+
 ### Aristas de grafo derivadas de DMR-029-CLM-012 (CONT-AU)
 
 El catálogo y la navegación representan ahora tres relaciones explícitas, todas con `claimRef: DMR-029-CLM-012`, `continuity: CONT-AU` y `evidenceStatus: source_checked_excerpt_only`:

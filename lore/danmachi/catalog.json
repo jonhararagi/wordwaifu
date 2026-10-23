@@ -2502,6 +2502,24 @@
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001",
+      "path": "events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md",
+      "type": "event",
+      "name": "Escenario alternativo: Alfia y Zald crían a Bell",
+      "tags": [
+        "Alfia",
+        "Zald",
+        "Meteria",
+        "Bell Cranel",
+        "crianza",
+        "nota del autor",
+        "escenario alternativo",
+        "CONT-AU"
+      ],
+      "status": "source_checked_excerpt_only",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -6744,6 +6762,62 @@
       "claimRef": "DMR-029-CLM-012",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
       "note": "La relación se registra aquí únicamente como parte de la escena CONT-AU. No reemplaza la arista secundaria de continuidad principal ni eleva por sí sola el parentesco a canon de la novela ligera."
+    },
+    {
+      "id": "REL-AU-ALFIA-RAISE-BELL-SCENARIO",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001",
+      "kind": "participant_in",
+      "label": "Alfia aparece como cuidadora de Bell dentro del escenario alternativo",
+      "continuity": "CONT-AU",
+      "interval": "Crianza hipotética; fecha de calendario desconocida",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "author_note_alternate_scenario",
+      "claimRef": "DMR-029-CLM-012",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "No se traslada a CONT-MAIN-LN ni a CONT-AR."
+    },
+    {
+      "id": "REL-AU-ZALD-RAISE-BELL-SCENARIO",
+      "from": "CHAR-DARK-ZALD",
+      "to": "EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001",
+      "kind": "participant_in",
+      "label": "Zald aparece cuidando de Bell junto a Alfia en el escenario alternativo",
+      "continuity": "CONT-AU",
+      "interval": "Crianza hipotética; fecha de calendario desconocida",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "author_note_alternate_scenario",
+      "claimRef": "DMR-029-CLM-012",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "No describe la biografía publicada de Zald en la continuidad principal."
+    },
+    {
+      "id": "REL-AU-BELL-RAISE-BELL-SCENARIO",
+      "from": "DM-CHAR-BELL",
+      "to": "EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001",
+      "kind": "central_participant",
+      "label": "Bell es el niño al que se refiere la posibilidad alternativa",
+      "continuity": "CONT-AU",
+      "interval": "Crianza hipotética; fecha de calendario desconocida",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "author_note_alternate_scenario",
+      "claimRef": "DMR-029-CLM-012",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "La relación solo describe CONT-AU."
+    },
+    {
+      "id": "REL-AU-METERIA-RAISE-BELL-SCENARIO",
+      "from": "CHAR-METERIA",
+      "to": "EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001",
+      "kind": "narrative_connection",
+      "label": "Meteria es mencionada como madre de Bell dentro de la nota alternativa",
+      "continuity": "CONT-AU",
+      "interval": "Referencia dentro del escenario hipotético; fecha desconocida",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "author_note_alternate_scenario",
+      "claimRef": "DMR-029-CLM-012",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "No reemplaza la relación secundaria de CONT-MAIN-LN."
     }
   ]
 }

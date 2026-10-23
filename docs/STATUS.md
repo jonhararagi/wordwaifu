@@ -2,8 +2,8 @@
 ## Estado operativo y verificación — 2026-10-23
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 172 registros activos; 29 IDs reservados; 130 documentos de apoyo.
-- **Grafo de conocimiento:** 236 relaciones explícitas; 236/236 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Corpus DanMachi:** 173 registros activos; 29 IDs reservados; 130 documentos de apoyo.
+- **Grafo de conocimiento:** 240 relaciones explícitas; 240/240 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 92 perfiles; 92/92 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
@@ -142,7 +142,7 @@ Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs
 En `main` se activaron cuatro expedientes secundarios de Hestia Familia que estaban reservados como candidatos: Liliruca Arde, Welf Crozzo, Mikoto Yamato y Haruhime Sanjouno. El catálogo ahora enlaza sus relaciones explícitas a claims del perfil oficial de DanMachi V con continuidad `CONT-ANIME`; esto mejora las fichas y la navegación, pero no implica que sus biografías de novela estén completamente cotejadas. Se mantiene la distinción entre perfil oficial de adaptación y canon de novela con localizador primario.
 
 
-- **DANMACHI-RESEARCH-045:** los cinco expedientes históricos tienen fichas ampliadas y Meteria cuenta con perfil manual en la interfaz. La nota oficial de Fujino Omori está disponible en el directorio de fuentes y enlazada desde las fichas de Alfia y Zald como sección separada `CONT-AU`. `DMR-029-CLM-012` se clasifica como `source_checked_excerpt_only` solo en `CONT-AU`; las pruebas impiden su filtración a `CONT-MAIN-LN` y ofrecen rutas desde ese resultado a ambas fichas. Las sinopsis oficiales de Astrea Record 1–3 y DanMachi 20 fueron revisadas, pero no verifican biografías, relaciones ni capacidades individuales. El lector oficial de muestra de Astrea Record 1 quedó indexado como `metadata_checked_only` y sin claims porque la extracción no expone el texto narrativo. Los localizadores narrativos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes; la atribución personal a Rudra no se promueve.
+- **DANMACHI-RESEARCH-045:** los cinco expedientes históricos tienen fichas ampliadas y Meteria cuenta con perfil manual en la interfaz. La nota oficial de Fujino Omori está disponible en el directorio de fuentes y enlazada desde las fichas de Alfia y Zald como sección separada `CONT-AU`. `DMR-029-CLM-012` se clasifica como `source_checked_excerpt_only` solo en `CONT-AU`; las pruebas impiden su filtración a `CONT-MAIN-LN` y ofrecen rutas desde ese resultado a ambas fichas. Las sinopsis oficiales de Astrea Record 1–3 y DanMachi 20 fueron revisadas, pero no verifican biografías, relaciones ni capacidades individuales. El lector oficial de muestra de Astrea Record 1 quedó indexado como `metadata_checked_only` y sin claims porque la extracción no expone el texto narrativo. Los localizadores narrativos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes; la atribución personal a Rudra no se promueve. La posibilidad de crianza de Bell por Alfia/Zald ya tiene una ficha de navegación independiente `EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001`, fuera del timeline principal; sus cuatro aristas conservan `CONT-AU` y `DMR-029-CLM-012`.
 
 
 - **DANMACHI-RESEARCH-046 — Solingen y Soma Familia:** siete expedientes tienen ya ficha Markdown ampliada, ficha de UI manual, fuentes y tests de navegación/búsqueda. Los datos de wiki permanecen secundarios; la acusación de Zanis contra Liliruca no se presenta como culpabilidad probada.

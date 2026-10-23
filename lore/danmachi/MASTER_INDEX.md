@@ -244,3 +244,5 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 
 Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-AU-METERIA-BELL-MOTHER` representan solo el escenario `CONT-AU` publicado por Omori. No reemplazan las relaciones de continuidad principal ni prueban los roles históricos de Alfia/Zald en `CONT-AR`.
 
+- [Escenario alternativo: Alfia y Zald crían a Bell](events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md) — ficha independiente con cuatro relaciones de navegación y procedencia en DMR-029-CLM-012; no forma parte de la cronología de la novela principal.
+
