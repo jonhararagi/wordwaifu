@@ -2466,6 +2466,28 @@ verification_status: stub
 - verification_status: source_checked
 
 
+## DMR-045-SRC-002 · Lector oficial de muestra de Astrea Record, volumen 1
+
+- source_id: DMR-045-SRC-002
+- title: アストレア・レコード１ 邪悪胎動 — 立ち読み版
+- creator_or_publisher: GA文庫 / SB Creative; lector BinB de Voyager Japan
+- source_type: OFFICIAL_SAMPLE_READER
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 1, versión de lectura de muestra; la página advierte que la edición electrónica puede diferir parcialmente de la edición impresa
+- language: Japonés
+- official_url: https://r.binb.jp/epm/e1_260370_02092022101233/
+- accessed_at: 2026-10-23
+- locator_type: publisher_sample_reader_metadata
+- locator: Metadatos del lector: título del volumen, autor Fujino Omori y descripción editorial; la extracción consultada no expuso el texto narrativo ni páginas legibles
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta oficial útil para consulta humana futura, pero solo quedó confirmado el metadato del lector. No se asignan capítulos, páginas, escenas ni claims sobre Alfia, Zald o Erebus.
+- conflicting_sources: []
+- rights_note: Enlace y metadatos; no copiar el texto de la novela ni el contenido de la muestra
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea
