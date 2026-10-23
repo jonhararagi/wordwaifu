@@ -640,6 +640,12 @@ for(const [query,continuity,claimId,status] of [
  assert.ok(found.results.some(item=>item.claimId===claimId&&item.verificationStatus===status),"DMR-045 claim must be searchable with its evidence status: "+claimId);
 }
 assert.ok(corpus.getOnlineSourceDirectory().some(source=>source.id==="official-astrea-record-revision"&&source.url==="https://danmachi.com/news/news131.php"),"Official Astrea Record publication lineage must be in online source search.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source=>source.id==="official-ga-astrea-record-3-limited-edition"&&source.url==="https://ga.sbcr.jp/product/9784815617554/"),"The official Astrea Record 3 limited edition page must be reachable from the online source directory.");
+const astreaLimitedEditionAU = corpus.search(index,{query:"Astrea Record 3 edición limitada cuadernillo",continuity:"CONT-AU",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(astreaLimitedEditionAU.results.some(item=>item.claimId==="DMR-045-CLM-004"&&item.verificationStatus==="source_checked"&&item.sourceUrls.includes("https://ga.sbcr.jp/product/9784815617554/")),"The limited edition product-page claim must be retrievable as official AU publication metadata.");
+const astreaLimitedEditionMain = corpus.search(index,{query:"Astrea Record 3 edición limitada cuadernillo",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(!astreaLimitedEditionMain.results.some(item=>item.claimId==="DMR-045-CLM-004"),"The alternative story's publication metadata must not leak into main light-novel continuity.");
+
 
 
 // DMR-046: the seven files and claims are indexed for detail navigation and retrieval.

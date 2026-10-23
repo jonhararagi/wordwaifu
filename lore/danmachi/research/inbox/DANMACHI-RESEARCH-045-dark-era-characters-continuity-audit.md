@@ -68,6 +68,24 @@
 - spoiler_level: major
 - confidence_note: La wiki no acredita jerarquía exacta dentro de Evilus ni un nivel de aventurero.
 
+### DMR-045-CLM-004 · La edición limitada de Astrea Record 3 incluye un relato alternativo revisado
+
+- claim_id: DMR-045-CLM-004
+- claim: La ficha editorial oficial de la edición limitada de Astrea Record 3 declara que el cuadernillo adicional incluye una versión ampliada y revisada de «それは遥か彼方の静穏の夢», presentándola como una posibilidad que “podría haber sucedido”. Esto confirma el dato editorial de que el relato alternativo se publicó en ese cuadernillo; la ficha de producto no confirma por sí sola las capacidades, estadísticas ni biografías de Alfia, Zald, Meteria o Erebus, y no convierte la situación hipotética en un suceso de la novela principal.
+- character_ids: []
+- aspect: procedencia editorial de material alternativo
+- era_or_interval: Edición limitada de Astrea Record 3; libro publicado en diciembre de 2022
+- continuity_scope: CONT-AU
+- source_id: DMR-045-SRC-002
+- source_title: Astrea Record 3 — edición limitada con cuadernillo adicional
+- source_type: OFFICIAL_PUBLISHER_PRODUCT_PAGE
+- source_locator: Ficha editorial GA Bunko, ISBN 978-4-8156-1755-4; descripción del contenido del cuadernillo especial
+- source_url: https://ga.sbcr.jp/product/9784815617554/
+- evidence_type: official_edition_content_metadata
+- verification_status: source_checked
+- spoiler_level: mild
+- confidence_note: Confirma la inclusión y revisión editorial del relato, no cada hecho narrativo que contiene. Las afirmaciones específicas del relato que se usan en otras fichas continúan delimitadas a CONT-AU; no trasladarlas a CONT-MAIN-LN ni a CONT-AR.
+
 ### Precisión de procedencia autoral — revisión de continuidad (2026-10-23)
 
 - `DMR-029-CLM-012` y `DMR-029-SRC-016` corresponden a la nota publicada por Fujino Omori «それは遥か彼方の静穏の夢». La nota se consulta directamente y se clasifica como `source_checked_excerpt_only` únicamente dentro de `CONT-AU`: es evidencia primaria de lo que plantea ese escenario alternativo, no una escena de la novela principal.

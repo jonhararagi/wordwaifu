@@ -2466,6 +2466,27 @@ verification_status: stub
 - verification_status: source_checked
 
 
+## DMR-045-SRC-002 · Astrea Record 3 — edición limitada con cuadernillo adicional
+
+- source_id: DMR-045-SRC-002
+- title: アストレア・レコード3 正邪決戦 — 小冊子付き特装版
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_PUBLISHER_PRODUCT_PAGE
+- series: DanMachi / Astrea Record
+- volume_or_edition: Edición limitada de Astrea Record 3 con cuadernillo adicional; ISBN 978-4-8156-1755-4
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784815617554/
+- accessed_at: 2026-10-23
+- locator_type: official_product_page
+- locator: Descripción de la edición especial: el cuadernillo contiene una versión ampliada/revisada de «それは遥か彼方の静穏の夢», presentada como algo que podría haber sucedido
+- claims_supported: [DMR-045-CLM-004]
+- events_supported: []
+- continuity_scope: CONT-AU
+- reliability_note: Fuente editorial primaria para existencia, edición y contenido anunciado del cuadernillo. No verifica por sí sola cada afirmación del relato ni convierte su escenario hipotético en continuidad de la novela principal.
+- rights_note: Metadatos y paráfrasis editorial breve; no reproducir el cuadernillo.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea
