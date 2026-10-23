@@ -25,7 +25,7 @@ La lectura secundaria presenta a Erebus como antagonista ideológico frente a la
 No se registra nivel de aventurero, magia, habilidades, arma ni mecanismo concreto de acción respaldado por fuente primaria. Es preferible dejar esos campos sin afirmar antes que rellenarlos con atributos de otros dioses. Cualquier futura ampliación debe citar la escena y conservar la diferencia entre versión original de Memoria Freese y libros revisados.
 
 ## Relaciones navegables
-- **[Red Evilus](../../groups/evilus-network.md):** asociación reportada por la wiki; no demuestra una cadena de mando única.
+- **[Red Evilus](evilus-network.md):** asociación reportada por la wiki; no demuestra una cadena de mando única.
 - **Evento de Astrea Record:** [ruta cronológica parcial](../../events/timeline/EVT-DM-AR-ERA-001.md); función exacta de Erebus en cada escena pendiente.
 - **Astrea, Ryu y Alise:** marco narrativo de justicia frente a Evilus; no se infiere combate o diálogo individual.
 
