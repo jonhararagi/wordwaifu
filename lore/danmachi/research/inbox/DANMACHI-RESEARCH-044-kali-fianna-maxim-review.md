@@ -345,3 +345,41 @@
 - reliability_note: Fuente de contexto, no cronología primaria.
 - verified_by: DANMACHI-RESEARCH-044
 - verification_status: secondary_checked
+
+### DMR-044-SRC-011 · Knights of Fianna — anuncio oficial de WFS
+- source_id: DMR-044-SRC-011
+- title: 「ナイツ・オブ・フィアナ」配信開始 — Memoria Freese, quinto aniversario
+- creator_or_publisher: Wright Flyer Studios (WFS)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi / Memoria Freese
+- language: Japonés
+- official_url: https://www.wfs.games/news/20220623_01.html
+- accessed_at: 2026-10-23
+- locator_type: official_game_event_announcement
+- locator: Anuncio de lanzamiento del evento original y lista de personajes, incluida Helga
+- claims_supported: [DMR-044-CLM-011]
+- continuity_scope: CONT-GAME
+- reliability_note: Fuente oficial del lanzamiento y la presencia de Helga en el evento; no valida por sí sola cada dato comunitario de su ficha ni el vínculo reportado con Lyra.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: source_checked
+
+### DMR-044-SRC-012 · Lector oficial de muestra de Sword Oratoria, volumen 6
+- source_id: DMR-044-SRC-012
+- title: ダンジョンに出会いを求めるのは間違っているだろうか外伝 ソード・オラトリア６【立ち読み版】
+- creator_or_publisher: GA文庫 / SB Creative; lector BinB de Voyager Japan
+- source_type: OFFICIAL_SAMPLE_READER
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Volumen 6, versión de lectura de muestra
+- language: Japonés
+- official_url: https://r.binb.jp/epm/e1_27313_02062016113152/
+- accessed_at: 2026-10-23
+- locator_type: publisher_sample_reader_metadata
+- locator: La página expone título, autor y sinopsis editorial; la extracción automatizada recupera controles del lector, pero no texto narrativo ni páginas inspeccionables
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SO-LN
+- reliability_note: El lector está enlazado desde la ficha oficial de SB Creative. Es una ruta legítima para consulta humana, pero los metadatos no verifican acciones, niveles, magia ni parentescos de Argana, Bache o Seldas.
+- rights_note: Enlace y metadatos; no reproducir texto protegido ni inferir localizadores ausentes
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: metadata_checked_only
+
