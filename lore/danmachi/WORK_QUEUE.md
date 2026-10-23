@@ -572,6 +572,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir pruebas para dossier manual de Meteria, recuperación de los tres claims, continuidad y procedencia.
 - [x] Incorporar al directorio de fuentes la nota oficial de Fujino Omori con advertencia explícita `CONT-AU`; clasificar `DMR-029-CLM-012` como `source_checked_excerpt_only` y probar que no se filtre a `CONT-MAIN-LN`.
 - [x] Comprobar que las sinopsis editoriales oficiales de Astrea Record 1–3 y DanMachi 20 no se utilizan como evidencia de relaciones o capacidades individuales.
+- [x] Registrar el lector oficial de muestra de Astrea Record 1 como `DMR-045-SRC-002` y hacerlo visible en el navegador de fuentes, marcado `metadata_checked_only` y sin claims, porque la extracción no expone el texto narrativo.
 - [x] Enlazar desde las fichas de Alfia y Zald el escenario autoral `CONT-AU` como sección independiente; probar que la búsqueda de ese claim ofrece las dos rutas de ficha sin filtrarlo a `CONT-MAIN-LN`.
 - [ ] Cotejar Astrea Record vols. 1–3 para Alfia, Zald y Erebus, con edición/volumen/capítulo reproducible.
 - [ ] Localizar en DanMachi vol. 20 el recuerdo de Alfia/Zald y el parentesco de Meteria con Bell.
