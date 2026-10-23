@@ -5,8 +5,8 @@ type: location
 status: source_checked_partial
 confidence: El glosario oficial del anime respalda la identidad general de la ciudad, la función central de la Guild, la convivencia de distintas razas y los vínculos generales con Dungeon y algunos lugares. La geografía urbana completa y las afirmaciones específicas de novela principal siguen pendientes de cotejo.
 continuity_scope: CROSS-CONTINUITY
-source_refs: [DMR-026-SRC-001, DMR-035-SRC-001]
-claim_refs: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003, DMR-035-CLM-001]
+source_refs: [DMR-026-SRC-001, DMR-035-SRC-001, DMR-047-SRC-001]
+claim_refs: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003, DMR-035-CLM-001, DMR-047-CLM-001]
 tags: [Orario, 迷宮都市オラリオ, ciudad laberíntica, Dungeon, Guild, urbanismo, geografía]
 ---
 
@@ -33,7 +33,9 @@ La ficha editorial oficial de GA Bunko para el volumen 1 de la novela principal 
 - [DMR-035-CLM-001 — Orario y Dungeon en la sinopsis del volumen 1](../research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md#dmr-035-clm-001).
 - [Ficha bibliográfica oficial del volumen 1](https://ga.sbcr.jp/product/9784797372809/).
 
-La sinopsis no verifica avenidas, barrios, Central Park, distancias ni la distribución interna de Babel. Para esos puntos siguen separadas las fuentes de anime, Prototype y wikis, y continúa pendiente localizar pasajes narrativos de la novela ligera.
+La sinopsis no verifica avenidas, barrios, Central Park, distancias ni la distribución interna de Babel. Para esos puntos siguen separadas las fuentes de anime, Prototype y wikis.
+
+Una muestra oficial de lectura añade un dato puntual de la novela principal: el extracto indexado describe una plaza semicircular en el norte de Orario, frente a una avenida principal. Está registrada como [LOC-ORARIO-NORTH-PLAZA](north-plaza.md) y en [DANMACHI-RESEARCH-047](../research/inbox/DANMACHI-RESEARCH-047-orario-north-plaza-volume2-preview.md). Su estado es `source_checked_excerpt_only`: el PDF directo devolvió HTTP 503, por lo que no hay página ni capítulo verificados. Este hallazgo no identifica el nombre propio de la plaza ni cierra la cartografía urbana.
 
 ## Pistas geográficas recuperadas de wikis (aún no canónicas)
 
@@ -64,6 +66,7 @@ Esta información se registra bajo la continuidad separada **CONT-PROTOTYPE**. E
 - **[Guild y Dungeon](../canon/03-dungeon-y-guild.md):** referencia a la institución y su función. En análisis futuros se deberá distinguir la organización Guild del edificio físico donde se atiende a los aventureros.
 - **[Hostess of Fertility](hostess-of-fertility.md):** taberna situada en Orario, con ficha propia para su personal y relaciones.
 - **[Daedalus Street](daedalus-street.md):** la sinopsis oficial de DanMachi III, episodio 12, menciona la calle en el contexto del caos en Orario; su topología residencial sigue siendo secundaria.
+- **[Plaza semicircular al norte de Orario](north-plaza.md):** ubicación descrita en una muestra editorial de novela principal; el nombre propio y la paginación no están confirmados.
 - **[Pantheon](pantheon.md):** edificio que la wiki inglesa atribuye a la sede principal de la Guild; la ficha está separada provisionalmente y no resuelve si se distingue físicamente de Babel.
 - **[Antigua iglesia de Hestia Familia](hestia-familia-church.md):** la sinopsis oficial de DanMachi II, episodio 5, confirma que la iglesia usada como base anterior fue destruida antes del traslado; la causa exacta queda separada de la descripción secundaria.
 - **[Mansión de Apollo Familia](apollo-familia-mansion.md):** la misma sinopsis confirma que se convirtió en la nueva residencia de Hestia Familia después del War Game; su ubicación y nombre propio quedan pendientes.
