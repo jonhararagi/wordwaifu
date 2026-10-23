@@ -70,7 +70,8 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [x] Recuperar del portal oficial Prototype los detalles de avenidas, Central Park, comercio de calle y usos de Babel en [DANMACHI-RESEARCH-034](research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md), manteniéndolos bajo CONT-PROTOTYPE.
 - [x] Localizar una mención de Pantheon en el extracto oficial de volumen 3 (capítulo I y folios 36–37 conservados por el índice) e integrarla como `source_checked_excerpt_only`.
 - [ ] Determinar con el pasaje completo si Pantheon, la sede de la Guild y Babel son ubicaciones distintas; el extracto indexado no resuelve su identidad física.
-- [ ] Localizar la primera mención de Daedalus Street en la novela principal; su mención actualmente verificada corresponde a la continuidad anime.
+- [x] Registrar la sinopsis editorial oficial de Sword Oratoria vol. 7 como evidencia separada de la investigación de Loki Familia sobre Daedalus Street (DMR-049, `CONT-SO`).
+- [ ] Localizar la primera mención de Daedalus Street en la novela principal; DMR-049 no satisface esta tarea porque pertenece a Sword Oratoria.
 - [ ] Cotejar en CONT-MAIN-LN las ocho avenidas, Central Park, la zona comercial junto al Dungeon, los servicios de Babel y el límite comercial del piso veinte; no cerrar esos puntos usando sólo Prototype.
 - [ ] Localizar en fuente primaria la primera descripción de la iglesia y de la mansión, verificar quién destruyó la iglesia y establecer su ubicación urbana.
 
@@ -613,3 +614,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Localizar por separado una referencia a Daedalus Street en la novela principal.
 
 **Estado factual:** la mención al nombre Pantheon y su contexto urbano están recuperados de una muestra editorial oficial, pero los folios no se verificaron visualmente y la identidad física de los edificios no se declara resuelta.
+
+## DANMACHI-RESEARCH-049 · Daedalus Street en Sword Oratoria, volumen 7
+
+- [x] Consultar la sinopsis editorial oficial de GA Bunko para el volumen 7 (ISBN 978-4-7973-8934-0).
+- [x] Registrar el claim de que Loki Familia investiga Daedalus Street tras obtener una pista en Melen, bajo `CONT-SO`.
+- [x] Añadir la procedencia al registro de fuentes, la ficha existente del lugar, el catálogo y el índice maestro.
+- [x] Añadir una arista de investigación Daedalus Street → Loki Familia con el claim y la continuidad de Sword Oratoria.
+- [x] Incorporar búsqueda predeterminada y regresiones para que el claim sea recuperable en `CONT-SO` pero no en `CONT-MAIN-LN`.
+- [ ] Localizar el pasaje del volumen 7 con capítulo/página antes de confirmar más detalle del incidente que el resumen editorial.
+- [ ] Investigar de forma separada la primera mención de Daedalus Street en la novela principal.
+- [ ] No elevar las descripciones comunitarias del trazado, las avenidas vecinas ni el orfanato de Maria sin evidencia independiente.
+
+**Estado factual:** evidencia editorial oficial del argumento de Sword Oratoria; la geometría del lugar y la primera mención en la novela principal siguen abiertas.
