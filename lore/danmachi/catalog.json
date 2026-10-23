@@ -6702,6 +6702,48 @@
       "claimRef": "DMR-050-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-050-daedalus-street-official-short-story.md",
       "note": "El relato se registra como CONT-SHORT. No se transfiere su escena a la novela principal ni a Sword Oratoria; el PDF directo no pudo verificarse visualmente."
+    },
+    {
+      "id": "REL-AU-ALFIA-BELL-CAREGIVER",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "DM-CHAR-BELL",
+      "kind": "caregiver_of",
+      "label": "Nota autoral alternativa: Alfia cuida de Bell durante el periodo hipotético de tres años",
+      "continuity": "CONT-AU",
+      "interval": "Tres años de convivencia en el escenario alternativo; no constituye cronología de la novela principal",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "author_note_alternate_scenario",
+      "claimRef": "DMR-029-CLM-012",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "La nota de Fujino Omori se presenta como un sueño de otra posibilidad. Esta arista solo describe ese escenario CONT-AU; no se transfiere a CONT-MAIN-LN ni a CONT-AR."
+    },
+    {
+      "id": "REL-AU-ZALD-BELL-CAREGIVER",
+      "from": "CHAR-DARK-ZALD",
+      "to": "DM-CHAR-BELL",
+      "kind": "caregiver_of",
+      "label": "Nota autoral alternativa: Zald aparece cuidando de Bell junto a Alfia",
+      "continuity": "CONT-AU",
+      "interval": "Tres años de convivencia en el escenario alternativo; no constituye cronología de la novela principal",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "author_note_alternate_scenario",
+      "claimRef": "DMR-029-CLM-012",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "La nota menciona a Zald en el hogar alternativo y lo muestra preparando comida y participando en la crianza. No afirma que sucediera en la novela principal ni en la continuidad de Astrea Record."
+    },
+    {
+      "id": "REL-AU-METERIA-BELL-MOTHER",
+      "from": "CHAR-METERIA",
+      "to": "DM-CHAR-BELL",
+      "kind": "mother_of",
+      "label": "La nota autoral se refiere a Meteria como madre de Bell dentro del escenario alternativo",
+      "continuity": "CONT-AU",
+      "interval": "Recuerdo de la madre de Bell dentro del escenario alternativo publicado por el autor",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "author_note_alternate_scenario",
+      "claimRef": "DMR-029-CLM-012",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
+      "note": "La relación se registra aquí únicamente como parte de la escena CONT-AU. No reemplaza la arista secundaria de continuidad principal ni eleva por sí sola el parentesco a canon de la novela ligera."
     }
   ]
 }
