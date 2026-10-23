@@ -2466,9 +2466,9 @@ verification_status: stub
 - verification_status: source_checked
 
 
-## DMR-045-SRC-002 · Lector oficial de muestra de Astrea Record, volumen 1
+## DMR-045-SRC-003 · Lector oficial de muestra de Astrea Record, volumen 1
 
-- source_id: DMR-045-SRC-002
+- source_id: DMR-045-SRC-003
 - title: アストレア・レコード１ 邪悪胎動 — 立ち読み版
 - creator_or_publisher: GA文庫 / SB Creative; lector BinB de Voyager Japan
 - source_type: OFFICIAL_SAMPLE_READER

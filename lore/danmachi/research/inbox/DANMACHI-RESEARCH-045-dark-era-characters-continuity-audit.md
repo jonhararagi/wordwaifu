@@ -74,7 +74,7 @@
 - La crianza hipotética de Bell por Alfia y Zald no se transfiere a `CONT-MAIN-LN`. Las afirmaciones sobre Meteria como madre de Bell y hermana gemela de Alfia que se usan para la continuidad principal permanecen en `DMR-029-CLM-011` con fuente comunitaria y estado `secondary_checked`, hasta localizar un pasaje publicado reproducible.
 - Se revisaron las fichas editoriales oficiales de [Astrea Record 1](https://ga.sbcr.jp/product/9784815610173/), [Astrea Record 2](https://ga.sbcr.jp/product/9784815610180/), [Astrea Record 3](https://ga.sbcr.jp/product/9784815610197/) y [DanMachi 20](https://ga.sbcr.jp/product/9784815628697/). Sus sinopsis sirven para procedencia editorial y contexto general; no nombran ni verifican las capacidades, biografías o relaciones individuales de los cinco expedientes, por lo que no se usan para promover esos claims.
 
-- [Lector oficial de muestra de Astrea Record 1](https://r.binb.jp/epm/e1_260370_02092022101233/): se comprobaron el título, el autor y la descripción editorial del lector; la extracción solo expone la interfaz, no el texto de la novela. Se registra como `DMR-045-SRC-002` con `claims_supported: []` y `metadata_checked_only`. No se usa para verificar datos individuales de Alfia, Zald, Meteria, Erebus o Rudra.
+- [Lector oficial de muestra de Astrea Record 1](https://r.binb.jp/epm/e1_260370_02092022101233/): se comprobaron el título, el autor y la descripción editorial del lector; la extracción solo expone la interfaz, no el texto de la novela. Se registra como `DMR-045-SRC-003` con `claims_supported: []` y `metadata_checked_only`. No se usa para verificar datos individuales de Alfia, Zald, Meteria, Erebus o Rudra.
 
 ## Fuentes y alcance
 
