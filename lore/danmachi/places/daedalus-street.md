@@ -5,9 +5,9 @@ type: location
 status: source_checked_partial
 confidence: La sinopsis oficial de DanMachi III menciona la calle en un contexto de Orario; el trazado y la descripción residencial disponibles aquí son secundarios y no verifican la geografía de la novela.
 continuity_scope: CROSS-CONTINUITY
-source_refs: [DMR-032-SRC-001, DMR-031-SRC-007, DMR-049-SRC-001]
-claim_refs: [DMR-032-CLM-001, DMR-031-CLM-009, DMR-049-CLM-001]
-tags: [Daedalus Street, Daidalos Street, ダイダロス通り, Calle Daidalos, Orario, zona residencial, CONT-ANIME, CONT-SO-LN]
+source_refs: [DMR-032-SRC-001, DMR-031-SRC-007, DMR-049-SRC-001, DMR-050-SRC-001]
+claim_refs: [DMR-032-CLM-001, DMR-031-CLM-009, DMR-049-CLM-001, DMR-050-CLM-001]
+tags: [Daedalus Street, Daidalos Street, ダイダロス通り, Calle Daidalos, Orario, zona residencial, CONT-ANIME, CONT-SO-LN, CONT-SHORT]
 ---
 
 # Daedalus Street — Calle Daidalos
@@ -26,6 +26,17 @@ La sinopsis oficial de GA Bunko para [Sword Oratoria, volumen 7](https://ga.sbcr
 - **Continuidad:** `CONT-SO-LN`, separada de la mención del anime registrada arriba.
 - **Alcance:** la sinopsis confirma la función narrativa de Daedalus Street como objetivo de investigación en este volumen; no aporta una descripción topológica detallada ni demuestra que la primera mención del lugar ocurra en la novela principal.
 - **Limitación:** la fuente es una sinopsis de volumen, no el pasaje narrativo completo. El trazado, las distancias y el nombre/localización de lugares cercanos siguen pendientes.
+
+## Evidencia complementaria: relato corto oficial
+
+El PDF suplementario de GA Bunko titulado **「迷宮街の恋愛話・裏」** sitúa una escena nocturna en Daedalus Street. El extracto indexado describe a un grupo de chicas que buscaba una segunda entrada/salida del Dungeon y conversaba sobre el amor; el contexto menciona a Ais, Tiona, Lefiya y otras integrantes de Loki Familia, y que Filvis se une al grupo.
+
+- **Claim:** [DMR-050-CLM-001](../research/inbox/DANMACHI-RESEARCH-050-daedalus-street-official-short-story.md#dmr-050-clm-001).
+- **Fuente:** [GA Bunko — fifthanniv_ais.pdf](https://ga.sbcr.jp/sp/AIS/fifthanniv_ais.pdf).
+- **Continuidad:** `CONT-SHORT`, categoría de la matriz para relatos cortos y extras oficiales.
+- **Estado:** `source_checked_excerpt_only`; el PDF directo devolvió HTTP 503, así que el pasaje procede del índice textual y no tiene página verificada visualmente.
+
+Esta fuente ofrece un contexto adicional independiente del resumen de *Sword Oratoria*, volumen 7. No confirma la primera aparición de la calle en la novela principal y no permite convertir la descripción del callejón en un mapa.
 
 ## Descripción secundaria pendiente de cotejo
 
@@ -48,3 +59,4 @@ Estos detalles se registran como **pistas secundarias**, no como geografía ofic
 - Descripción residencial y topología: secondary_checked.
 - Relación con el orfanato de Maria: pista secundaria; no se activa aún una relación institucional ni se inventa una posición cartográfica.
 - No se interpreta el dibujo comunitario como plano a escala.
+- El relato corto oficial DMR-050 aporta una escena complementaria bajo `CONT-SHORT`; no se mezcla con `CONT-MAIN-LN` ni `CONT-SO-LN`.
