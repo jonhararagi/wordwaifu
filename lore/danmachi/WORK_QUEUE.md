@@ -552,3 +552,19 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Ampliar Helga a partir de la ficha comunitaria de DanMemo y aislarla en CONT-GAME.
 - [x] Registrar fuentes y claims, asociar las relaciones existentes con su procedencia y añadir pruebas del corpus.
 - [ ] Localizar escenas primarias de Sword Oratoria vol. 6, DanMachi vol. 20 y el evento/versionado de DanMemo antes de elevar la evidencia.
+
+
+## DANMACHI-RESEARCH-045 · Alfia, Zald, Meteria, Erebus y Rudra
+
+- [x] Revisar las cinco fichas existentes y expandir el contenido individual sin elevar las wikis a evidencia primaria.
+- [x] Añadir a Meteria una ficha manual sustancial de interfaz, manteniendo parentesco y salud como evidencia secundaria y el padre de Bell sin identificar.
+- [x] Registrar la procedencia editorial oficial de Astrea Record como claim bibliográfico, no como prueba de las capacidades individuales.
+- [x] Corregir la atribución de la crisis del Juggernaut: la fuente comunitaria habla de Rudra Familia en conjunto y no demuestra responsabilidad personal de Rudra.
+- [x] Ampliar el perfil secundario de Erebus sin incorporar «Eren» al campo de aliases canónicos.
+- [x] Sincronizar DMR-045 en catálogo, manifest de recuperación, índice y registro de fuentes; actualizar las aristas de Erebus/Evilus y Rudra/Juggernaut para que apunten a claims específicos.
+- [x] Añadir pruebas para dossier manual de Meteria, recuperación de los tres claims, continuidad y procedencia.
+- [ ] Cotejar Astrea Record vols. 1–3 para Alfia, Zald y Erebus, con edición/volumen/capítulo reproducible.
+- [ ] Localizar en DanMachi vol. 20 el recuerdo de Alfia/Zald y el parentesco de Meteria con Bell.
+- [ ] Resolver en DanMachi vols. 13–14 la escena de Rudra y separar la responsabilidad de Rudra, Jura y su Familia.
+
+**Estado factual:** fichas más completas y buscables; el lote sigue en secondary_checked_with_primary_gaps. No se declara verificación primaria de las biografías.
