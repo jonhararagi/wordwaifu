@@ -4,8 +4,8 @@ universe: danmachi
 type: character
 status: secondary_reference_primary_locator_pending
 continuity_scope: CONT-GAME
-source_refs: [DMR-044-SRC-006, DMR-044-SRC-009]
-claim_refs: [DMR-044-CLM-008, DMR-044-CLM-009]
+source_refs: [DMR-044-SRC-006, DMR-044-SRC-009, DMR-044-SRC-011]
+claim_refs: [DMR-044-CLM-008, DMR-044-CLM-009, DMR-044-CLM-011]
 verification_status: secondary_checked_primary_text_pending
 spoiler_level: major
 aliases: ["Helga", "ヘルガ", "Heruga"]
@@ -14,6 +14,13 @@ tags: [Fianna Knights, Lyra, Memoria Freese, DanMemo, game-specific story, secon
 # Helga — personaje histórico de Memoria Freese
 
 **Límite de continuidad:** esta ficha resume a Helga tal como la presentan fuentes comunitarias sobre DanMachi ~Memoria Freese~ (DanMemo). No es una biografía confirmada de la novela ligera. La conexión de reencarnación con Lyra se conserva bajo la continuidad de juego porque el paquete de evidencia consultado la relaciona con ese material; no se presume que recuerdos o identidad consciente pasen de una vida a otra.
+
+## Contexto oficial del evento de juego
+
+El aviso del desarrollador/publicador WFS del 23 de junio de 2022 anuncia *Knights of Fianna* como una historia original de quinto aniversario escrita por Fujino Omori, con voces, y enumera a Helga entre los personajes anunciados. Esto respalda que Helga forma parte de ese relato de Memoria Freese. El anuncio no verifica su edad, medidas, historia personal, capacidades detalladas ni la relación de reencarnación con Lyra; esos datos conservan la procedencia y los límites indicados abajo.
+
+- **Claim oficial de contexto:** DMR-044-CLM-011.
+- **Fuente oficial:** [WFS — anuncio de Knights of Fianna](https://www.wfs.games/news/20220623_01.html).
 
 ## Identidad y cargo reportados
 La ficha de DanMemo la identifica como Pallum y antigua vicecapitana y oficial de Estado Mayor de los Caballeros de Fianna. Le atribuye 22 años, 120 cm, cabello castaño claro, ojos rojo pálido, dos lanzas y estado fallecido. Son datos de una entrada comunitaria de juego, pendientes de cotejo con el evento original.
