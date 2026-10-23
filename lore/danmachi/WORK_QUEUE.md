@@ -68,7 +68,9 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [ ] Rastrear las referencias de las wikis hasta fuentes primarias y activar lugares/relaciones sólo después del cotejo; la triangulación secundaria no cierra la etapa.
 - [x] Registrar por separado la antigua iglesia y la mansión adquirida de Apollo Familia como residencias en CONT-ANIME, con la transición sustentada en la sinopsis oficial de DanMachi II, episodio 5.
 - [x] Recuperar del portal oficial Prototype los detalles de avenidas, Central Park, comercio de calle y usos de Babel en [DANMACHI-RESEARCH-034](research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md), manteniéndolos bajo CONT-PROTOTYPE.
-- [ ] Confirmar en la novela principal si Pantheon es un edificio distinto de Babel y localizar la primera mención de Daedalus Street.
+- [x] Localizar una mención de Pantheon en el extracto oficial de volumen 3 (capítulo I y folios 36–37 conservados por el índice) e integrarla como `source_checked_excerpt_only`.
+- [ ] Determinar con el pasaje completo si Pantheon, la sede de la Guild y Babel son ubicaciones distintas; el extracto indexado no resuelve su identidad física.
+- [ ] Localizar la primera mención de Daedalus Street en la novela principal; su mención actualmente verificada corresponde a la continuidad anime.
 - [ ] Cotejar en CONT-MAIN-LN las ocho avenidas, Central Park, la zona comercial junto al Dungeon, los servicios de Babel y el límite comercial del piso veinte; no cerrar esos puntos usando sólo Prototype.
 - [ ] Localizar en fuente primaria la primera descripción de la iglesia y de la mansión, verificar quién destruyó la iglesia y establecer su ubicación urbana.
 
@@ -597,4 +599,17 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Buscar en el texto completo de la novela principal otros pasajes que nombren la plaza o sitúen sus calles respecto de otros lugares.
 - [ ] Cotejar independientemente avenidas, Central Park, Babel, distritos y servicios urbanos; no trasladar a `CONT-MAIN-LN` los nueve claims de `CONT-PROTOTYPE`.
 
-**Estado factual:** avance de geografía de novela principal con evidencia de extracto parcial; la página, el nombre propio de la plaza y la topología general siguen abiertos.
+**Estado factual:** avance de geografía de novela principal con evidencia de extracto parcial. El índice conserva capítulo IV y folios 20–21, pero sigue sin inspección visual; el nombre propio de la plaza y la topología general siguen abiertos.
+
+## DANMACHI-RESEARCH-048 · Pantheon y avenida comercial en muestra de novela principal
+
+- [x] Recuperar del índice oficial de GA Bunko el pasaje de trial03.pdf que menciona Pantheon en el recorrido por una avenida con comercios.
+- [x] Registrar el claim bajo `CONT-MAIN-LN` con estado `source_checked_excerpt_only`; capítulo I 「剣姫異来」 y marcadores de folio 36–37 proceden del índice textual, no de inspección visual.
+- [x] Conectar Pantheon con Orario mediante una arista de procedencia primaria que no sustituye la arista secundaria existente.
+- [x] Mantener por separado la mención de Pantheon, la entrada en la sede de la Guild y los datos comunitarios sobre las instalaciones interiores.
+- [x] Añadir el claim al manifiesto del buscador, registro de fuentes, ficha Pantheon, índice de lugares, hub de Orario y pruebas de continuidad.
+- [ ] Reabrir el PDF y verificar visualmente el capítulo y los folios; el servidor devolvió HTTP 503 durante esta sesión.
+- [ ] Resolver con el contexto completo si Pantheon designa la sede de la Guild o un hito distinto, y cómo se relaciona físicamente con Babel.
+- [ ] Localizar por separado una referencia a Daedalus Street en la novela principal.
+
+**Estado factual:** la mención al nombre Pantheon y su contexto urbano están recuperados de una muestra editorial oficial, pero los folios no se verificaron visualmente y la identidad física de los edificios no se declara resuelta.
