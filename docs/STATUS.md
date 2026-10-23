@@ -5,10 +5,13 @@
 - **Corpus DanMachi:** 171 registros activos; 29 IDs reservados; 124 documentos de apoyo.
 - **Grafo de conocimiento:** 229 relaciones explícitas; 229/229 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
-- **Expedientes de interfaz:** 84 bloques manuales; 74/82 registros de personaje coinciden por ID con un bloque manual; 8 carecen de bloque dedicado y 10 bloques heredados no corresponden a un registro character. La UI conserva respaldo de ficha desde Markdown.
+- **Expedientes de interfaz:** 84 perfiles; 84/84 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
+
+**Revisión adicional de expedientes manuales de personajes:** 74/82 registros `character` tienen un bloque manual en `src/character-dossiers.js`; 8 todavía dependen del respaldo estructurado a Markdown. Además, 10 bloques de interfaz corresponden a entradas heredadas de tipo deidad/grupo u otros IDs que no son registros `character`. Esta auditoría de cobertura manual no reemplaza la métrica automatizada de rutas.
+
 
 **Esta sección prevalece sobre el historial inferior.** Los conteos describen estructura e integridad; no certifican un porcentaje global de cobertura del canon.
 
