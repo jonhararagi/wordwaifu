@@ -72,3 +72,8 @@ La wiki española señala Astrea Record volumen 3, con títulos de capítulos y 
 
 ## Regla editorial
 No declarar como primaria la información detallada de niveles, estadísticas, habilidades o combates. Verificar primero cada dato en el volumen o relato legal y conservar la continuidad correspondiente.
+
+
+## Revisión cruzada DMR-045 · procedencia y límites
+
+El nivel, las estadísticas, Deus Ambrosia, Rea Ambrosia, el veneno de Behemoth y Afterglow siguen siendo datos secundarios hasta cotejar el texto. La nota del autor donde Alfia y Zald crían a Bell permanece en CONT-AU y no completa su biografía principal. El anuncio oficial de la novelización no valida individualmente cada dato de las wikis. Véase [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md).
