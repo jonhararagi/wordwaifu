@@ -568,3 +568,18 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Resolver en DanMachi vols. 13–14 la escena de Rudra y separar la responsabilidad de Rudra, Jura y su Familia.
 
 **Estado factual:** fichas más completas y buscables; el lote sigue en secondary_checked_with_primary_gaps. No se declara verificación primaria de las biografías.
+
+
+## DANMACHI-RESEARCH-046 · Solingen y red de Soma Familia
+
+- [x] Expandir las fichas de Cecil Blackliza, Iselina, Shau y Ulanda con datos de roster, límites explícitos y rutas de navegación.
+- [x] Expandir Zanis Lustra, Chandra Ihit y Canoe Belway con sus cargos/datos reportados y relaciones con procedencia visible.
+- [x] Separar la acusación de Zanis contra Liliruca del estado/destino que las fuentes comunitarias atribuyen a Canoe.
+- [x] Añadir DMR-046 al catálogo, registro de fuentes, búsqueda en vivo y manifest de detalle.
+- [x] Añadir bloques de UI manuales sustanciales para los siete expedientes.
+- [x] Añadir pruebas de cobertura de los siete perfiles, búsqueda de claims y procedencia de relaciones.
+- [ ] Localizar las escenas de Solingen y cotejar individualmente cargo, nivel y biografía de la nueva Astrea Familia.
+- [ ] Cotejar los volúmenes 2 y 6 para resolver la secuencia de Canoe y el alcance de la acusación de Zanis.
+- [ ] Localizar las escenas del volumen 6 para Chandra y Zanis con capítulo/página, sin elevar el resumen comunitario a fuente primaria.
+
+**Estado factual:** las fichas y rutas son más completas, pero DMR-046 conserva el estado secondary_checked_with_primary_gaps. Ninguna afirmación individual de wiki se ha promocionado a canon primario.
