@@ -405,3 +405,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Fuentes oficiales: cronología y anuncio de novelización de Astrea Record. Fuentes comunitarias: perfiles de Alfia, Zald, Meteria, Erebus y Rudra/Rudra Familia. La nota del autor sobre Meteria continúa bajo CONT-AU.
 - Pendiente: localizadores primarios de Astrea Record vols. 1–3, DanMachi vol. 20 y el arco de vols. 13–14.
 - Veredicto: secondary_checked_with_primary_gaps; no se promueve ninguna biografía a canon primario.
+
+
+## DANMACHI-RESEARCH-046 · perfiles de Solingen y Soma Familia
+
+- Fecha: 2026-10-23; commits realizados directamente en main.
+- Se amplían siete perfiles existentes: Cecil Blackliza, Iselina, Shau, Ulanda, Zanis Lustra, Chandra Ihit y Canoe Belway.
+- Los cuatro miembros de Solingen quedan separados por ID; la ocupación de Iselina, Shau y Ulanda permanece desconocida porque el roster no la establece.
+- Zanis, Chandra y Canoe cuentan con perfiles de UI manuales ampliados y enlazados a sus fuentes. La acusación de Zanis sobre la desaparición de Canoe se conserva como acusación reportada, no como prueba de culpabilidad de Liliruca.
+- El catálogo registra DOC-DANMACHI-RESEARCH-046 y conserva 229 relaciones; once rutas de relación existentes reciben claims más específicos sin inventar aristas nuevas.
+- La sinopsis oficial de GA Bunko del volumen 6 se usa solo para el contexto general de captura de Liliruca por Soma Familia. Cargos, especie, nivel, motivaciones e intervención individual siguen apoyados por fuentes comunitarias.
+- Fuente de registro y detalle: DMR-046. Pendientes primarios: escenas de Solingen; capítulos/páginas de los volúmenes 2 y 6; secuencia de Canoe y conocimiento de Zanis.
+- Estado: secondary_checked_with_primary_gaps; no se declara verificación completa de canon.
