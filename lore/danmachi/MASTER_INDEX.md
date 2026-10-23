@@ -64,6 +64,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [DANMACHI-RESEARCH-033 — residencias de Hestia Familia](research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md).
 - [DANMACHI-RESEARCH-032 — Referencia oficial de Daedalus Street](research/inbox/DANMACHI-RESEARCH-032-daedalus-street-official-anime-reference.md).
 - [DANMACHI-RESEARCH-049 — Daedalus Street en la sinopsis editorial de Sword Oratoria, volumen 7](research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md) — investigación de Loki Familia registrada sólo en `CONT-SO-LN` ; no confirma la primera mención de la novela principal ni la geometría.
+- [DANMACHI-RESEARCH-050 — Daedalus Street en el relato corto oficial 「迷宮街の恋愛話・裏」](research/inbox/DANMACHI-RESEARCH-050-daedalus-street-official-short-story.md) — escena adicional bajo `CONT-SHORT`; el PDF no se verificó visualmente y no se fusiona con novela principal ni Sword Oratoria.
 
 ## 2. Cronología desde las eras antiguas hasta el cierre publicado
 
