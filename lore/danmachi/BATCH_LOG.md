@@ -408,6 +408,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 
 - Actualización 2026-10-23: se incorporó `DMR-045-CLM-006` con un fragmento indexado de la ficha editorial de *Astrea Record 3*; enlaza a Alfia y Zald con el evento en `CONT-AR` mediante dos aristas `source_checked_excerpt_only`. El acceso directo a la página editorial devolvió HTTP 503; las escenas narrativas y las biografías de los cinco expedientes siguen pendientes de localizador primario.
 - Actualización 2026-10-23: se comprobó la muestra pública de *Astrea Record 3* en BOOK☆WALKER. Solo fue visible la portada (contador 1/63); los intentos de navegación no expusieron páginas interiores. Queda registrada como `DMR-045-SRC-006`, `metadata_checked_only`, sin claims ni nuevas relaciones. El cotejo primario de escenas individuales sigue abierto.
+- Actualización 2026-10-23: se registró la página 17/33 de la muestra BookWalker de DanMachi vol. 20 como `DMR-045-SRC-007`. El pasaje inspeccionado muestra `レオン` y `バルドル`; el registro no tiene claims y limita expresamente los términos no encontrados a esa página. No se equipara `バルドル` con Zald ni se infiere ausencia en el tomo completo.
 
 ## DANMACHI-RESEARCH-046 · perfiles de Solingen y Soma Familia
 
