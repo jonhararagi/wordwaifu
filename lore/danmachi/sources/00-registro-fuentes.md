@@ -2646,6 +2646,31 @@ verification_status: stub
 - verification_status: source_checked_excerpt_only
 
 
+
+## DMR-045-SRC-008 · Entrevista de Dengeki Online sobre Alfia y Bell
+
+- source_id: DMR-045-SRC-008
+- title: 〖ダンメモ6周年インタビュー〗関係者騒然、タケミカヅチ事件とは？ ゲームでゼウス・ファミリアやヘラ・ファミリアが登場した理由など開発秘話を聞きました！
+- creator_or_publisher: Dengeki Online; entrevista a Fujino Omori y al equipo de Memoria Freese
+- source_type: AUTHOR_INTERVIEW
+- series: DanMachi / Astrea Record; entrevista sobre Memoria Freese
+- volume_or_edition: Artículo web, sin paginación
+- language: Japonés
+- publication_date: 2023-06-30
+- official_url: https://dengekionline.com/articles/189750/
+- accessed_at: 2026-10-23
+- locator_type: author_interview_statement
+- locator: Respuesta de Omori sobre la ampliación de Astrea Record para la novelización; frase «それにベルの叔母であることも描ききってしまって».
+- claims_supported: [DMR-045-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Entrevista publicada por Dengeki Online con declaración atribuida directamente al autor. Respalda el parentesco de Alfia con Bell como declaración autoral complementaria sobre la versión novelada; no es un localizador de capítulo/página de la novela ni prueba por sí sola la relación de Meteria.
+- conflicting_sources: []
+- rights_note: Paráfrasis y fragmento breve de localización; no reproducir la entrevista completa.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked
+
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea
