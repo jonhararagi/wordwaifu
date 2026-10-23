@@ -158,6 +158,12 @@ assert.ok(!index.relationships.some(edge => edge.to === authorAuScenarioId && ed
 const astreaPublicationLineage = index.claims.find(item => item.claimId === "DMR-045-CLM-001");
 assert.ok(astreaPublicationLineage && astreaPublicationLineage.characterIds.length === 0 && astreaPublicationLineage.sourceUrls.includes("https://danmachi.com/news/news131.php"), "The official Astrea Record publication notice must remain bibliographic and cannot substantiate individual character dossiers.");
 
+const trialSwordLead = corpus.search(index, { query: "Leon Zaldo Alfier Maximam", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(trialSwordLead.results.some(item => item.claimId === "DMR-045-CLM-005" && item.verificationStatus === "secondary_checked" && item.sourceUrls.includes("https://manga-tantei.com/danmachileon-18686")), "The volume 20 trial-sword article must be searchable only as a secondary research lead.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "community-leon-vardenburg-vol20-trial-sword-leads" && source.url === "https://manga-tantei.com/danmachileon-18686" && source.authority.includes("Fuente secundaria")), "The article must be visibly labeled secondary in the source browser.");
+assert.ok(!index.relationships.some(edge => edge.claimRef === "DMR-045-CLM-005" || (edge.claimRefs || []).includes("DMR-045-CLM-005")), "A secondary interpretation of weapon names must not create canon character relationships.");
+
+
 
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY" && edge.from === "CHAR-RYUU-LION" && edge.to === "CHAR-KAGUYA" && edge.evidenceStatus === "secondary_checked" && edge.claimRefs?.includes("DMR-028-CLM-003")), "The existing Ryu/Kaguya historical edge must also expose the wiki-derived moral disagreement without creating a duplicate reverse destination.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LYRA-MEMBER-ASTREA-WIKI" && edge.from === "CHAR-LYRA" && edge.to === "DM-FAM-ASTREA" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-004"), "Lyra's reported membership must have a secondary-evidence relationship.");

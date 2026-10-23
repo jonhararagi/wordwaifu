@@ -2553,6 +2553,28 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
 
+## DMR-045-SRC-004 · Manga Tanteisha — nombres atribuidos a las doce armas de Leon
+
+- source_id: DMR-045-SRC-004
+- title: 「ダンまち」レオン・ヴァーデンベルク — análisis de ブレイズ・オブ・ラウンド
+- creator_or_publisher: Manga Tanteisha
+- source_type: COMMUNITY_ARTICLE
+- series: DanMachi / novela ligera principal
+- volume_or_edition: Artículo de análisis sobre el volumen 20; no es una fuente editorial primaria
+- language: Japonés
+- official_url: https://manga-tantei.com/danmachileon-18686
+- accessed_at: 2026-10-23
+- locator_type: secondary_article_section
+- locator: Apartado sobre las doce armas del hechizo de Leon, en particular los nombres atribuidos a las armas octava, novena y undécima
+- claims_supported: [DMR-045-CLM-005]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Fuente secundaria que interpreta tres nombres como alusiones a personajes históricos. Sirve para encontrar el pasaje primario, no para verificar una escena, parentesco o capacidad individual.
+- rights_note: Enlace y paráfrasis breve; no reproducir el artículo
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea

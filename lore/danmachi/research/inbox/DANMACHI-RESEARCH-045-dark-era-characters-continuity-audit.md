@@ -86,6 +86,24 @@
 - spoiler_level: mild
 - confidence_note: Confirma la inclusión y revisión editorial del relato, no cada hecho narrativo que contiene. Las afirmaciones específicas del relato que se usan en otras fichas continúan delimitadas a CONT-AU; no trasladarlas a CONT-MAIN-LN ni a CONT-AR.
 
+### DMR-045-CLM-005 · Nombres atribuidos a armas de Leon: pista secundaria para cotejar el volumen 20
+
+- claim_id: DMR-045-CLM-005
+- claim: Un artículo japonés de análisis secundario informa que el hechizo de Leon, ブレイズ・オブ・ラウンド, genera doce armas y atribuye a la octava, novena y undécima las formas japonesas ザルドー, アルフィアー y マキシマム. El artículo interpreta esos nombres como alusiones a Zald, Alfia y Maxim. Este registro documenta esa interpretación secundaria como una pista de lectura; no afirma que los personajes aparezcan físicamente en una escena, que exista un flashback biográfico ni que esos nombres prueben parentesco, habilidades o relaciones personales.
+- character_ids: []
+- aspect: pista de localización de pasaje en DanMachi volumen 20
+- era_or_interval: DanMachi volumen 20; localizador narrativo primario pendiente
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-004
+- source_title: Leon Vardenburg — análisis secundario de las doce armas
+- source_type: COMMUNITY_ARTICLE
+- source_locator: Sección sobre ブレイズ・オブ・ラウンド y las armas octava, novena y undécima
+- source_url: https://manga-tantei.com/danmachileon-18686
+- evidence_type: secondary_interpretation_of_novel
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: Interpretación de una fuente secundaria; las formas ザルドー, アルフィアー y マキシマム no se elevan a evidencia primaria ni se convierten en aristas del grafo. La sinopsis editorial oficial de volumen 20 no confirma estos detalles.
+
 ### Precisión de procedencia autoral — revisión de continuidad (2026-10-23)
 
 - `DMR-029-CLM-012` y `DMR-029-SRC-016` corresponden a la nota publicada por Fujino Omori «それは遥か彼方の静穏の夢». La nota se consulta directamente y se clasifica como `source_checked_excerpt_only` únicamente dentro de `CONT-AU`: es evidencia primaria de lo que plantea ese escenario alternativo, no una escena de la novela principal.
