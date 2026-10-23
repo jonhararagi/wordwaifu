@@ -406,6 +406,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Pendiente: localizadores primarios de Astrea Record vols. 1–3, DanMachi vol. 20 y el arco de vols. 13–14.
 - Veredicto: secondary_checked_with_primary_gaps; no se promueve ninguna biografía a canon primario.
 
+- Actualización 2026-10-23: se incorporó `DMR-045-CLM-006` con un fragmento indexado de la ficha editorial de *Astrea Record 3*; enlaza a Alfia y Zald con el evento en `CONT-AR` mediante dos aristas `source_checked_excerpt_only`. El acceso directo a la página editorial devolvió HTTP 503; las escenas narrativas y las biografías de los cinco expedientes siguen pendientes de localizador primario.
 
 ## DANMACHI-RESEARCH-046 · perfiles de Solingen y Soma Familia
 
