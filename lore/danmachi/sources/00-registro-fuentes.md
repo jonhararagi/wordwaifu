@@ -2588,3 +2588,25 @@ verification_status: stub
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no reproducir el relato ni inventar un localizador.
 - verification_status: source_checked_excerpt_only
+
+## DMR-048-SRC-001 · GA Bunko — muestra oficial de lectura, trial03.pdf
+
+- source_id: DMR-048-SRC-001
+- title: ダンジョンに出会いを求めるのは間違っているだろうか 3 — muestra de lectura trial03.pdf
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_PUBLISHER_PREVIEW_EXCERPT
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Muestra oficial del volumen 3; el portal editorial registra la publicación de una muestra de tercer volumen y el índice del PDF muestra el capítulo I 「剣姫異来」
+- language: Japonés
+- official_url: https://ga.sbcr.jp/sp/danmachi/trial03.pdf
+- accessed_at: 2026-10-23
+- locator_type: publisher_preview_excerpt
+- locator: Capítulo I 「剣姫異来」; marcadores de folio 36–37 en la indexación textual junto a la avenida comercial, Pantheon y la sede de la Guild. No verificado visualmente.
+- claims_supported: [DMR-048-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Extracto alojado por el sello editorial. El índice textual permite recuperar el pasaje, pero la descarga directa respondió HTTP 503 y la herramienta de captura no pudo abrir el PDF; mantener source_checked_excerpt_only hasta verificar la página y contexto completos.
+- conflicting_sources: []
+- rights_note: Resumen original; no conservar ni reproducir el pasaje completo.
+- verified_by: DANMACHI-RESEARCH-048
+- verification_status: source_checked_excerpt_only
