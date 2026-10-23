@@ -6690,6 +6690,20 @@
       "note": "La relación representa sólo el resumen editorial de Sword Oratoria. No acredita la geometría urbana ni la primera mención de Daedalus Street en la novela principal."
     },
     {
+      "id": "REL-ALFIA-ZALD-CARE-AU",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "CHAR-DARK-ZALD",
+      "kind": "co_guardians_in_author_alternate_scenario",
+      "label": "Alfia y Zald cuidan juntos de Bell en el escenario alternativo del autor",
+      "continuity": "CONT-AU",
+      "interval": "Escenario alternativo de autor; no pertenece a la cronología principal",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "official_publisher_alternate_story_and_author_note",
+      "claimRef": "DMR-045-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "La edición especial de Astrea Record 3 califica la historia como algo que podría haber sido. La relación describe solo esa versión alternativa; no transfiere la crianza de Bell a CONT-MAIN-LN."
+    },
+    {
       "id": "REL-DAEDALUS-STREET-LOKI-CONT-SHORT",
       "from": "LOC-DAEDALUS-STREET",
       "to": "DM-FAM-LOKI",
