@@ -12,11 +12,13 @@ source_refs:
   - DMR-029-SRC-020
   - DMR-021-SRC-002
   - DMR-021-SRC-006
+  - DMR-045-SRC-008
 claim_refs:
   - DMR-029-CLM-001
   - DMR-029-CLM-006
   - DMR-029-CLM-019
   - DMR-029-CLM-011
+  - DMR-045-CLM-007
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Alfia"
@@ -62,6 +64,7 @@ La consecuencia práctica para el expediente es importante: su nivel y talento r
 - **[Meteria](meteria.md):** hermana gemela según referencias secundarias; la ficha separa la relación familiar de los datos aún no cotejados.
 - **[Zald](zald.md):** las wikis describen convivencia posterior y cooperación en la crisis histórica. Se conserva como contexto secundario; no implica romance ni determina cada acción conjunta.
 - **[Zeus Familia](../../familias/zeus-familia.md):** contexto histórico compartido por la generación anterior, no afiliación de Alfia.
+- **[Bell Cranel](../bell-cranel.md):** una entrevista a Fujino Omori indica que la novelización de *Astrea Record* dejó explícito que Alfia es tía de Bell (DMR-045-CLM-007). Es evidencia autoral complementaria, no un localizador de capítulo/página; no prueba por sí sola que Meteria sea la madre de Bell o hermana gemela de Alfia.
 
 ## Localizadores de lectura
 La wiki española de Astrea Record volumen 3 sirve como mapa de búsqueda y menciona títulos de capítulos e historia extra. Esos encabezados todavía deben cotejarse en una edición publicada; no inventar páginas ni marcar el pasaje como leído.
