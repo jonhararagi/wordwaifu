@@ -1004,6 +1004,21 @@
       ]
     },
     {
+      "id": "LOC-ORARIO-NORTH-PLAZA",
+      "path": "places/north-plaza.md",
+      "type": "location",
+      "tags": [
+        "Orario",
+        "plaza semicircular del norte",
+        "plaza sin nombre confirmado",
+        "avenida principal",
+        "CONT-MAIN-LN",
+        "GA Bunko preview"
+      ],
+      "status": "source_checked_excerpt_only",
+      "priority": "normal"
+    },
+    {
       "id": "LOC-BABEL",
       "path": "places/babel.md",
       "type": "location",
@@ -3383,6 +3398,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
       "type": "character_profiles_and_relationship_evidence_review",
       "status": "secondary_checked_with_primary_gaps"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-047",
+      "path": "research/inbox/DANMACHI-RESEARCH-047-orario-north-plaza-volume2-preview.md",
+      "type": "published_novel_excerpt_research",
+      "status": "source_checked_excerpt_only"
     }
   ],
   "lastStructuredSync": "2026-10-23",
@@ -6600,6 +6621,20 @@
       "claimRef": "DMR-043-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
       "note": "No se asigna cronología absoluta ni se infiere la mecánica temporal."
+    },
+    {
+      "id": "REL-ORARIO-NORTH-PLAZA-OF-ORARIO",
+      "from": "LOC-ORARIO-NORTH-PLAZA",
+      "to": "LOC-ORARIO",
+      "kind": "located_in",
+      "label": "Una muestra editorial de novela principal sitúa una plaza semicircular al norte de Orario frente a una avenida principal",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Escena de la muestra editorial GA Bunko trial02.pdf; capítulo/página no verificados",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "official_publisher_light_novel_preview_excerpt",
+      "claimRef": "DMR-047-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-047-orario-north-plaza-volume2-preview.md",
+      "note": "La plaza queda con etiqueta descriptiva, no como nombre propio. El extracto indexado es parcial y la descarga directa del PDF no permitió verificar paginación ni contexto íntegro."
     }
   ]
 }
