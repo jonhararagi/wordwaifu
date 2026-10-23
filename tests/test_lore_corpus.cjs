@@ -568,7 +568,7 @@ assert.ok(detailIds.has("CHAR-METERIA")&&index.profileDetails["CHAR-METERIA"]?.i
 for(const [query,continuity,claimId,status] of [
  ["Astrea Record Memoria Freese tres volúmenes","CONT-AR","DMR-045-CLM-001","source_checked"],
  ["Rudra Familia trampa Dungeon Juggernaut responsabilidad personal","CONT-MAIN-LN","DMR-045-CLM-002","secondary_checked"],
- ["Erebus Eren dios Evilus cabello negro ojos grises","CONT-AR","DMR-045-CLM-003","secondary_checked"]
+ ["Erebus Absolute Evil","CONT-AR","DMR-045-CLM-003","secondary_checked"]
 ]) {
  const found=corpus.search(index,{query,continuity,period:"ALL",aspect:"all",spoiler:"all"});
  assert.ok(found.results.some(item=>item.claimId===claimId&&item.verificationStatus===status),"DMR-045 claim must be searchable with its evidence status: "+claimId);
