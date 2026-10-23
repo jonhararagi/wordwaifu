@@ -149,3 +149,33 @@ for(const field of ["appearance","history","personality","abilities","relationsh
 assert.ok(Array.isArray(meteriaDossier.sources)&&meteriaDossier.sources.length>=2,"Meteria dossier must retain source URLs.");
 assert.ok(catalog.relationships.some(e=>e.id==="REL-EREBUS-EVILUS-RESEARCH"&&e.claimRef==="DMR-045-CLM-003"&&e.claimPath==="research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"&&e.evidenceStatus==="secondary_checked"),"Erebus/Evilus route must retain specific secondary identity provenance.");
 assert.ok(catalog.relationships.some(e=>e.id==="REL-RUDRA-JUGGERNAUT-EVENT-001"&&e.claimRef==="DMR-045-CLM-002"&&e.claimPath==="research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"&&e.continuity==="CONT-MAIN-LN"&&e.evidenceStatus==="secondary_checked"),"Rudra event route must bound attribution to the Familia rather than the deity.");
+
+
+// DMR-046: seven character dossiers have stable routes, substantive manual UI blocks and source-bounded relationships.
+const dmr046Ids = ["CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA","CHAR-ZANIS-LUSTRA","CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY"];
+for (const id of dmr046Ids) {
+  const record = byId.get(id);
+  assert.ok(record && record.type === "character", "DMR-046 character record missing: " + id);
+  const markdownPath = path.join(loreRoot, record.path);
+  assert.ok(fs.existsSync(markdownPath), "DMR-046 Markdown route missing: " + id);
+  assert.match(fs.readFileSync(markdownPath, "utf8"), new RegExp("^id:\\s*" + id + "\\s*$", "m"), "DMR-046 Markdown ID mismatch: " + id);
+  const dossier = dossierApi.get(id);
+  assert.ok(dossier, "DMR-046 manual UI dossier missing: " + id);
+  for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) {
+    assert.ok(typeof dossier[field] === "string" && dossier[field].length >= 100, id + " needs substantive " + field);
+  }
+  assert.ok(Array.isArray(dossier.sources) && dossier.sources.length >= 2, id + " must retain source URLs");
+}
+assert.ok(catalog.documents.some(d => d.document_id === "DOC-DANMACHI-RESEARCH-046" && d.path === "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md" && d.status === "secondary_checked_with_primary_gaps"), "DMR-046 research package must be registered with primary gaps visible.");
+for (const [id, claim] of [
+  ["REL-COVER-CHAR-CECIL-BLACKLIZA-FAM-NEW-ASTREA-reported_member_of","DMR-046-CLM-001"],
+  ["REL-COVER-CHAR-ISELINA-FAM-NEW-ASTREA-reported_member_of","DMR-046-CLM-002"],
+  ["REL-COVER-CHAR-SHAU-FAM-NEW-ASTREA-reported_member_of","DMR-046-CLM-002"],
+  ["REL-COVER-CHAR-ULANDA-FAM-NEW-ASTREA-reported_member_of","DMR-046-CLM-002"],
+  ["REL-ZANIS-FORMER-CAPTAIN-SOMA","DMR-046-CLM-004"],
+  ["REL-ZANIS-ACCUSATION-LILI-CANOE","DMR-046-CLM-005"],
+  ["REL-CHANDRA-CAPTAIN-SOMA","DMR-046-CLM-006"],
+  ["REL-CHANDRA-HELPS-LILI-SECONDARY","DMR-046-CLM-006"],
+  ["REL-CANOE-MEMBER-SOMA-FAM","DMR-046-CLM-007"]
+]) assert.ok(catalog.relationships.some(e => e.id === id && e.claimRef === claim && e.claimPath === "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md" && e.evidenceStatus === "secondary_checked"), "DMR-046 relationship must preserve secondary provenance: " + id);
+assert.ok(catalog.relationships.some(e => e.id === "REL-ZANIS-ACCUSATION-LILI-CANOE" && e.kind === "reported_accusation_about_canoe"), "A report of Zanis's accusation must not be converted into a culpability relation.");
