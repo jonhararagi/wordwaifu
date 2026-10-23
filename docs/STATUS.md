@@ -2,20 +2,20 @@
 ## Estado operativo y verificación — 2026-10-23
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 171 registros activos; 29 IDs reservados; 124 documentos de apoyo.
+- **Corpus DanMachi:** 171 registros activos; 29 IDs reservados; 125 documentos de apoyo.
 - **Grafo de conocimiento:** 229 relaciones explícitas; 229/229 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
-- **Expedientes de interfaz:** 84 perfiles; 84/84 enlazados a catálogo y Markdown por ID.
+- **Expedientes de interfaz:** 85 perfiles; 85/85 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
-**Revisión adicional de expedientes manuales de personajes:** 74/82 registros `character` tienen un bloque manual en `src/character-dossiers.js`; 8 todavía dependen del respaldo estructurado a Markdown. Además, 10 bloques de interfaz corresponden a entradas heredadas de tipo deidad/grupo u otros IDs que no son registros `character`. Esta auditoría de cobertura manual no reemplaza la métrica automatizada de rutas.
+**Revisión adicional de expedientes manuales de personajes:** 75/82 registros `character` tienen un bloque manual en `src/character-dossiers.js`; 7 todavía dependen del respaldo estructurado a Markdown. Además, 10 bloques de interfaz corresponden a entradas heredadas de tipo deidad/grupo u otros IDs que no son registros `character`. Esta auditoría de cobertura manual no reemplaza la métrica automatizada de rutas.
 
 
 **Esta sección prevalece sobre el historial inferior.** Los conteos describen estructura e integridad; no certifican un porcentaje global de cobertura del canon.
 
-- **Rama de verificación integrada:** `main`; el lote de personajes y Era Oscura está fusionado en el PR [#58](https://github.com/jonhararagi/wordwaifu/pull/58).
+- **Rama de verificación integrada:** `main`; DMR-044 y su corrección de procedencia están integrados. DMR-045 se publica directamente en `main`; sus pruebas se verifican contra el SHA específico de esta tanda.
 - **Procedencia y continuidad:** `CONT-ANIME`, `CONT-MAIN-LN`, `CONT-SO`, `CONT-AR` y `CONT-AU` siguen separados. Sinopsis editoriales, perfiles de adaptación y wikis no equivalen a cotejar una escena del texto completo.
 - **Estado factual:** la integración estructural del roster está validada; siguen pendientes pasajes primarios de la novela, cronologías escena por escena y el censo de personajes fuera del roster de adaptación.
 - **Prioridad del lore:** Orario continúa en investigación; después siguen acontecimientos por fecha/lugar/causa/consecuencia y reconstrucción de historias individuales.
@@ -135,3 +135,6 @@ Leer `docs/DONE.md`, `docs/STATUS.md`, `docs/WF-004-C3-TRASH-CONTRACT.md`, `docs
 ### Actualización incremental · 2026-10-18
 
 En `main` se activaron cuatro expedientes secundarios de Hestia Familia que estaban reservados como candidatos: Liliruca Arde, Welf Crozzo, Mikoto Yamato y Haruhime Sanjouno. El catálogo ahora enlaza sus relaciones explícitas a claims del perfil oficial de DanMachi V con continuidad `CONT-ANIME`; esto mejora las fichas y la navegación, pero no implica que sus biografías de novela estén completamente cotejadas. Se mantiene la distinción entre perfil oficial de adaptación y canon de novela con localizador primario.
+
+
+- **DANMACHI-RESEARCH-045:** cinco expedientes históricos revisados; Meteria cuenta ahora con perfil manual en la interfaz. El anuncio oficial documenta la revisión editorial de Astrea Record, pero los datos individuales de las wikis y la atribución de la crisis de Rudra Familia permanecen secundarios hasta localizar las escenas.
