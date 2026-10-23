@@ -570,6 +570,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Ampliar el perfil secundario de Erebus sin incorporar «Eren» al campo de aliases canónicos.
 - [x] Sincronizar DMR-045 en catálogo, manifest de recuperación, índice y registro de fuentes; actualizar las aristas de Erebus/Evilus y Rudra/Juggernaut para que apunten a claims específicos.
 - [x] Añadir pruebas para dossier manual de Meteria, recuperación de los tres claims, continuidad y procedencia.
+- [x] Incorporar al directorio de fuentes la nota oficial de Fujino Omori con advertencia explícita `CONT-AU`; clasificar `DMR-029-CLM-012` como `source_checked_excerpt_only` y probar que no se filtre a `CONT-MAIN-LN`.
+- [x] Comprobar que las sinopsis editoriales oficiales de Astrea Record 1–3 y DanMachi 20 no se utilizan como evidencia de relaciones o capacidades individuales.
 - [ ] Cotejar Astrea Record vols. 1–3 para Alfia, Zald y Erebus, con edición/volumen/capítulo reproducible.
 - [ ] Localizar en DanMachi vol. 20 el recuerdo de Alfia/Zald y el parentesco de Meteria con Bell.
 - [ ] Resolver en DanMachi vols. 13–14 la escena de Rudra y separar la responsabilidad de Rudra, Jura y su Familia.
