@@ -15,7 +15,7 @@
 
 **Esta sección prevalece sobre el historial inferior.** Los conteos describen estructura e integridad; no certifican un porcentaje global de cobertura del canon.
 
-- **Rama de verificación integrada:** `main`; DMR-045 y DMR-046 se publican directamente en `main`, sin ramas pendientes de integrar. El lote DMR-046 debe considerarse pendiente de aprobación hasta confirmar los dos workflows del SHA final.
+- **Rama de verificación integrada:** `main`; DMR-045 y DMR-046 están publicados. Los logs de [Validate WordWaifu #39979366390](https://github.com/jonhararagi/wordwaifu/actions/runs/39979366390) y [DanMachi Lore and Retrieval Integrity #39979366342](https://github.com/jonhararagi/wordwaifu/actions/runs/39979366342) muestran ambos workflows completados con éxito y un `fetch/checkout` explícito de `main` en el SHA `c6b636b1074b6d2e7ebaac66988e04692303cd79`. La ejecución se disparó desde el commit `f3dc54e1fb89da6852db922499a0233137369e1d`, pero los tests recuperaron y comprobaron el código de `main` `c6b636b1074b6d2e7ebaac66988e04692303cd79`; se conserva la distinción entre SHA que disparó el workflow y SHA realmente probado.
 - **Procedencia y continuidad:** `CONT-ANIME`, `CONT-MAIN-LN`, `CONT-SO`, `CONT-AR` y `CONT-AU` siguen separados. Sinopsis editoriales, perfiles de adaptación y wikis no equivalen a cotejar una escena del texto completo.
 - **Estado factual:** la integración estructural del roster está validada; siguen pendientes pasajes primarios de la novela, cronologías escena por escena y el censo de personajes fuera del roster de adaptación.
 - **Prioridad del lore:** Orario continúa en investigación; después siguen acontecimientos por fecha/lugar/causa/consecuencia y reconstrucción de historias individuales.
