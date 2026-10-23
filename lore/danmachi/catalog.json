@@ -1399,7 +1399,9 @@
         "zona residencial",
         "CONT-SO-LN",
         "Sword Oratoria vol. 7",
-        "Melen clue"
+        "Melen clue",
+        "CONT-SHORT",
+        "official short story"
       ],
       "status": "source_checked_partial",
       "priority": "high"
@@ -3421,6 +3423,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md",
       "type": "location_research_official_publisher_synopsis",
       "status": "source_checked"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-050",
+      "path": "research/inbox/DANMACHI-RESEARCH-050-daedalus-street-official-short-story.md",
+      "type": "official_supplemental_short_story_research",
+      "status": "source_checked_excerpt_only"
     }
   ],
   "lastStructuredSync": "2026-10-23",
@@ -6680,6 +6688,20 @@
       "claimRef": "DMR-049-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md",
       "note": "La relación representa sólo el resumen editorial de Sword Oratoria. No acredita la geometría urbana ni la primera mención de Daedalus Street en la novela principal."
+    },
+    {
+      "id": "REL-DAEDALUS-STREET-LOKI-CONT-SHORT",
+      "from": "LOC-DAEDALUS-STREET",
+      "to": "DM-FAM-LOKI",
+      "kind": "explored_by",
+      "label": "Relato corto oficial 迷宮街の恋愛話・裏: integrantes de Loki Familia exploran Daedalus Street de noche",
+      "continuity": "CONT-SHORT",
+      "interval": "Relato corto suplementario; fecha interna no fijada",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "official_supplemental_short_story_excerpt",
+      "claimRef": "DMR-050-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-050-daedalus-street-official-short-story.md",
+      "note": "El relato se registra como CONT-SHORT. No se transfiere su escena a la novela principal ni a Sword Oratoria; el PDF directo no pudo verificarse visualmente."
     }
   ]
 }
