@@ -77,3 +77,10 @@ No declarar como primaria la información detallada de niveles, estadísticas, h
 ## Revisión cruzada DMR-045 · procedencia y límites
 
 El nivel, las estadísticas, Deus Ambrosia, Rea Ambrosia, el veneno de Behemoth y Afterglow siguen siendo datos secundarios hasta cotejar el texto. La nota del autor donde Alfia y Zald crían a Bell permanece en CONT-AU y no completa su biografía principal. El anuncio oficial de la novelización no valida individualmente cada dato de las wikis. Véase [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md).
+
+## Material alternativo del autor — `CONT-AU` (ruta separada)
+
+La nota oficial de Fujino Omori [«それは遥か彼方の静穏の夢»](https://note.com/fujinoomori/n/n629829ac3fe4) describe una posibilidad distinta en la que Bell pasa tres años con Alfia y Zald, y Alfia le habla de su madre, Meteria. En esta versión, ambos aparecen como cuidadores de Bell. Es un escenario alternativo publicado por el autor, no una escena que deba insertarse en la biografía de la novela ligera principal ni una confirmación de los hechos narrados en `CONT-AR`.
+
+- Evidencia: `DMR-029-CLM-012`, clasificada `source_checked_excerpt_only` dentro de `CONT-AU`.
+- Límite: no inferir que Alfia y Zald criaron a Bell en `CONT-MAIN-LN`; el parentesco y las acciones de la continuidad principal conservan su propia procedencia y sus localizadores pendientes.
