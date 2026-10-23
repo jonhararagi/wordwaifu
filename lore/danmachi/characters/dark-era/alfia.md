@@ -80,3 +80,10 @@ No elevar a canon confirmado un dato que solo procede de una wiki. Registrar vol
 ## Revisión cruzada DMR-045 · procedencia y límites
 
 La cronología oficial sitúa Astrea Record aproximadamente siete años antes de Bell, pero no verifica por sí sola escenas o capacidades individuales de Alfia. El anuncio oficial confirma que los libros proceden de una historia de Memoria Freese revisada por Fujino Omori; la edición novelada es la ruta prioritaria para cotejar escenas. Las habilidades y porcentajes de la wiki siguen siendo secundarios. Véase [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md).
+
+## Material alternativo del autor — `CONT-AU` (ruta separada)
+
+La nota oficial de Fujino Omori [«それは遥か彼方の静穏の夢»](https://note.com/fujinoomori/n/n629829ac3fe4) describe una posibilidad distinta en la que Bell pasa tres años con Alfia y Zald, y Alfia le habla de su madre, Meteria. En esta versión, ambos aparecen como cuidadores de Bell. Es un escenario alternativo publicado por el autor, no una escena que deba insertarse en la biografía de la novela ligera principal ni una confirmación de los hechos narrados en `CONT-AR`.
+
+- Evidencia: `DMR-029-CLM-012`, clasificada `source_checked_excerpt_only` dentro de `CONT-AU`.
+- Límite: no inferir que Alfia y Zald criaron a Bell en `CONT-MAIN-LN`; el parentesco y las acciones de la continuidad principal conservan su propia procedencia y sus localizadores pendientes.
