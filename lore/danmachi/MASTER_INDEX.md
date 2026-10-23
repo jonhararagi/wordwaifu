@@ -9,6 +9,7 @@
 - [DANMACHI-RESEARCH-043](research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md) — Albert, Aria, Jura, Valletta, Thanatos y revisión de alias/continuidad.
 - [DANMACHI-RESEARCH-044](research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md) — Maxim, Helga (DanMemo), Argana, Bache y Seldas; fuentes y alcance de continuidad documentados.
 - [DANMACHI-RESEARCH-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) — auditoría de Alfia, Zald, Meteria, Erebus y Rudra; procedencia editorial de Astrea Record y límites de atribución del Juggernaut.
+- [DANMACHI-RESEARCH-046](research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md) — siete perfiles ampliados de la nueva Astrea Familia y Soma Familia; procedencia de roster y separación entre acusación y destino reportado.
 
 Este es el punto de entrada para continuar el trabajo sin repetir registros. El contenido canónico sigue siendo provisional hasta que las fichas tengan fuentes y localizadores cotejados.
 
