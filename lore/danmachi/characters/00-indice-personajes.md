@@ -179,3 +179,8 @@ El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis d
 
 - **Haze / Heizu / ヘイズ** en el título de *Familia Chronicle episode Haze* se resuelve al registro estable [Heith Velvet](heithvelvet.md), `CHAR-HEITH-VELVET`, porque el título japonés `episodeヘイズ` y el perfil oficial `ヘイズ・ベルベット` comparten la forma japonesa. No crear un segundo personaje `CHAR-HAZE`.
 - La sinopsis parcial del episodio y la conexión a Ottar están documentadas en [DANMACHI-RESEARCH-041](../research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md) y [el evento parcial](../events/timeline/EVT-DM-FC-HAZE-001.md). Solo el marco editorial está cubierto; el volumen íntegro aún necesita localizadores.
+
+
+## DMR-045 · personajes históricos de la Era Oscura
+
+La revisión de [Alfia](dark-era/alfia.md), [Zald](dark-era/zald.md), [Meteria](dark-era/meteria.md), [Erebus](dark-era/erebus.md) y [Rudra](dark-era/rudra.md) está recogida en [DANMACHI-RESEARCH-045](../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md). Las fuentes comunitarias siguen siendo secundarias; la nota de autor de Meteria permanece en CONT-AU, y la fase posterior de Rudra/Juggernaut se mantiene separada del intervalo T-7 de Astrea Record.
