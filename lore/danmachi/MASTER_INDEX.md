@@ -239,3 +239,8 @@ Esta estructura busca cubrir la historia publicada desde las eras más antiguas 
 - [Olivas Act](characters/olivas-act.md) — identidad y habilidades ampliadas desde una fuente comunitaria, con límites y costes conservados como información secundaria.
 - [DANMACHI-RESEARCH-042](research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md) — nueve claims, fuentes comunitaria/editorial y preguntas para localizar escenas.
 - La sinopsis editorial de *Sword Oratoria*, volumen 3, no nombra a Olivas. No usarla como respaldo de sus alias, su afiliación, la forma Creature ni sus poderes.
+
+## Relaciones del escenario autoral alternativo
+
+Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-AU-METERIA-BELL-MOTHER` representan solo el escenario `CONT-AU` publicado por Omori. No reemplazan las relaciones de continuidad principal ni prueban los roles históricos de Alfia/Zald en `CONT-AR`.
+
