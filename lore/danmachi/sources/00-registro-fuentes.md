@@ -2633,3 +2633,25 @@ verification_status: stub
 - rights_note: Resumen y paráfrasis propios; no reproducir texto extenso.
 - verified_by: DANMACHI-RESEARCH-049
 - verification_status: source_checked
+
+## DMR-050-SRC-001 · GA Bunko — relato corto extra 「迷宮街の恋愛話・裏」
+
+- source_id: DMR-050-SRC-001
+- title: 迷宮街の恋愛話・裏
+- creator_or_publisher: GA文庫 / SB Creative
+- source_type: OFFICIAL_SUPPLEMENTAL_SHORT_STORY
+- series: DanMachi, relato corto/extra oficial
+- volume_or_edition: PDF suplementario alojado en el portal de GA Bunko; la edición o contexto editorial completo no pudo verificarse visualmente durante esta consulta
+- language: Japonés
+- official_url: https://ga.sbcr.jp/sp/AIS/fifthanniv_ais.pdf
+- accessed_at: 2026-10-23
+- locator_type: indexed_supplemental_story_excerpt
+- locator: Título del relato y pasajes indexados que sitúan la escena nocturna en ダイダロス通り; no se asigna folio ni página
+- claims_supported: [DMR-050-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-SHORT
+- reliability_note: PDF alojado en el sitio editorial oficial. El índice textual recupera título y escena de Daedalus Street, pero la apertura directa devolvió HTTP 503; no se inspeccionó visualmente el PDF y el alcance se mantiene bajo CONT-SHORT.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia; no reproducir el relato completo.
+- verified_by: DANMACHI-RESEARCH-050
+- verification_status: source_checked_excerpt_only
