@@ -574,3 +574,30 @@ for(const [query,continuity,claimId,status] of [
  assert.ok(found.results.some(item=>item.claimId===claimId&&item.verificationStatus===status),"DMR-045 claim must be searchable with its evidence status: "+claimId);
 }
 assert.ok(corpus.getOnlineSourceDirectory().some(source=>source.id==="official-astrea-record-revision"&&source.url==="https://danmachi.com/news/news131.php"),"Official Astrea Record publication lineage must be in online source search.");
+
+
+// DMR-046: the seven files and claims are indexed for detail navigation and retrieval.
+const dmr046Path = "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md";
+assert.ok(corpus.getDefaultResearchPaths().includes(dmr046Path), "DMR-046 must be in the default research manifest.");
+for (const id of ["CHAR-CECIL-BLACKLIZA","CHAR-ISELINA","CHAR-SHAU","CHAR-ULANDA","CHAR-ZANIS-LUSTRA","CHAR-CHANDRA-IHIT","CHAR-CANOE-BELWAY"]) {
+  assert.ok(detailIds.has(id) && index.profileDetails[id]?.id === id, "DMR-046 detail route must be available: " + id);
+}
+for (const [query,claimId] of [
+  ["Cecil Blackliza herrera Blacksmith","DMR-046-CLM-003"],
+  ["Iselina Shau Ulanda hombre lobo pallum","DMR-046-CLM-002"],
+  ["Zanis acusa Liliruca desaparición Canoe","DMR-046-CLM-005"],
+  ["Chandra Ihit capitán ayuda Liliruca","DMR-046-CLM-006"],
+  ["Canoe Belway mapache nivel 1 fallecido","DMR-046-CLM-007"]
+]) {
+  const found = corpus.search(index,{query,continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+  assert.ok(found.results.some(item => item.claimId === claimId && item.verificationStatus === "secondary_checked"), "DMR-046 claim must be searchable with a visible secondary status: " + claimId);
+}
+for (const [id,url] of [
+ ["community-astrea-family-es-current","https://danmachi.fandom.com/es/wiki/Familia_Astrea"],
+ ["community-cecil-blackliza","https://danmachi.fandom.com/wiki/Cecil_Blackliza"],
+ ["community-zanis-lustra","https://danmachi.fandom.com/wiki/Zanis_Lustra"],
+ ["community-volume-6-synopsis","https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_6/Synopsis"],
+ ["community-chandra-ihit","https://danmachi.fandom.com/wiki/Chandra_Ihit"],
+ ["community-canoe-belway","https://danmachi.fandom.com/wiki/Canoe_Belway"],
+ ["official-ga-danmachi-06","https://ga.sbcr.jp/product/9784797380583/"]
+]) assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === id && source.url === url), "Missing DMR-046 online source directory entry: " + id);
