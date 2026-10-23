@@ -4,28 +4,29 @@ universe: danmachi
 type: character
 status: provisional
 continuity_scope: CONT-MAIN-LN
-source_refs:
-  - DMR-007-SRC-004
-claim_refs:
-  - DMR-007-CLM-011
-verification_status: secondary_source_pending_primary_corroboration
-aliases:
-  - "Ulanda"
-  - "Nueva Astrea Familia"
-  - "Solingen"
+source_refs: [DMR-046-SRC-001]
+claim_refs: [DMR-046-CLM-001, DMR-046-CLM-002]
+verification_status: secondary_checked_primary_locator_pending
+aliases: [Ulanda]
+tags: [Ulanda, nueva Astrea Familia, Solingen, humana, spoiler leve]
 ---
 # Ulanda
 
-**Estado de la ficha:** provisional. La referencia comunitaria incorporada sitúa a este personaje en la nueva generación de Astrea Familia, asociada a Astrea fuera de Orario. La pertenencia, ubicación y cronología necesitan cotejo directo con el volumen o capítulo.
+## Identidad disponible
+La tabla comunitaria de Astrea Familia sitúa a Ulanda entre los integrantes activos de la nueva generación de Solingen. La fila de Ulanda la identifica como **humana, nivel 1**, con ocupación sin establecer. El roster es una pista útil de búsqueda, pero no equivale a un expediente biográfico confirmado por el texto original.
 
-## Información disponible
+## Límites de evidencia
+La fuente no permite fijar de forma fiable apariencia, edad, voz, personalidad, historia familiar, capacidades, arma o cargo. No se rellena el vacío suponiendo que una aventurera humana de nivel 1 deba tener un estilo concreto o que la pertenencia al mismo grupo la convierta en amiga de Iselina, Shau o Cecil.
 
-La lista comunitaria la incluye en la generación posterior asociada a Astrea. La entrada abre un nodo para continuar explorando, no representa una biografía completa ni un perfil oficial.
+## Relaciones navegables
+- **[Nueva Astrea Familia](../familias/nueva-astrea-familia.md):** pertenencia reportada por fuente secundaria.
+- **[Astrea](astrea.md):** afiliación indirecta por la Familia, sin afirmar una relación personal más específica.
 
-## Relaciones y navegación
+## Pendientes
+1. Localizar la aparición narrativa de Ulanda y registrar el capítulo o página.
+2. Cotejar especie y nivel y especificar a qué momento se refieren.
+3. Completar personalidad, apariencia, ocupación, historia y relaciones solo si hay evidencia individual.
 
-Esta ficha enlaza hacia Astrea y la red de integrantes de su nueva Familia. Esa arista representa únicamente la afiliación provisional descrita por la fuente, no prueba amistad, rivalidad o escenas personales.
-
-## Pendiente de investigación
-
-confirmación primaria de identidad, especie, nivel, aspecto, personalidad, escenas y relaciones. Hasta obtener un localizador primario, no se asignan voz, especie, nivel, diseño, personalidad, poderes ni acontecimientos inventados.
+## Fuentes
+- [Familia Astrea — wiki española](https://danmachi.fandom.com/es/wiki/Familia_Astrea): roster de la nueva generación.
+- [DANMACHI-RESEARCH-046](../research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md): claim DMR-046-CLM-002.
