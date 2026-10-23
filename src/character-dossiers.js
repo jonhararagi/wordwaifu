@@ -695,32 +695,35 @@
       sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
     },
     "CHAR-ARGANA-KALIF": {
-      appearance: "No se incorpora una descripción visual primaria cotejada en esta tanda; no se inventan edad, estatura o rasgos físicos.",
-      history: "Los compendios comunitarios la identifican como capitana o combatiente de alto rango de Kali Familia y la conectan con el trasfondo de las hermanas Hiryute. La sinopsis editorial de Sword Oratoria volumen 6 confirma el pasado conflictivo general, pero no todas las acciones individuales de Argana.",
-      personality: "No se cierra una psicología basándose solo en su cargo. La afiliación a una facción de combate no prueba que comparta cada práctica o motivación del grupo.",
-      abilities: "Nivel, estilo, armas, técnicas y resultados de combate quedan pendientes de capítulo y página primaria. No se convierten estadísticas de wiki en datos de novela, ni se deduce un repertorio por su cargo reportado en Kali Familia. Para cerrar esta sección hay que cotejar una escena concreta de Sword Oratoria y registrar su localizador.",
-      relationships: "Kali Familia es su afiliación reportada secundariamente. Tiona y Tione están relacionadas con el pasado de la facción, pero la escena individual de Argana requiere cotejo.",
-      conflict: "La ficha ofrece una ruta consultable para seguir la investigación sin presentar la sinopsis general como prueba de cada duelo o resultado.",
-      sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
+      appearance: "La wiki describe a Argana como amazoness de piel morena y cabello color arena, unos 170 cm y 27 años; la ficha la enumera nivel 6 y viva. Son datos comunitarios que necesitan cotejo en Sword Oratoria vol. 6.",
+      history: "La fuente la identifica como una de las dos capitanas de Kali Familia, hermana mayor de Bache, y registra Kalima/Kārimā como alias. La sinopsis editorial del volumen 6 contextualiza el pasado de las gemelas y Kali, pero no confirma cargo, edad o combate individual.",
+      personality: "El resumen comunitario la presenta como agresiva, violenta y atraída por luchar, y relata que interpreta la fuerza como superioridad. Su reencuentro con Tione y su interés por Finn se vinculan a escenas concretas; no se extrapolan a cualquier situación.",
+      abilities: "La wiki le atribuye combate cuerpo a cuerpo experto, fuerza y capacidad de anticipar movimientos. Reporta Kalima/Blood Drain, que aumentaría parámetros al beber sangre de alguien con Falna, con una reducción marcada de resistencia como coste. El crecimiento sin límite no se declara verificado.",
+      relationships: "Kali Familia y Bache son sus vínculos principales reportados. Las wikis la conectan con Tione como alumna/contrincante y con el contexto de Telskyura; cada vínculo individual necesita cotejo de volumen 6.",
+      conflict: "El aumento de poder lleva un coste defensivo relevante. No escribir la habilidad como infinita, gratuita o sin contramedidas usando solo una wiki.",
+      sources: ["https://danmachi.fandom.com/wiki/Argana_Kalif","https://danmachi.fandom.com/wiki/Kali_Familia","https://ga.sbcr.jp/product/9784797388466/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"]
     },
+
     "CHAR-BACHE-KALIF": {
-      appearance: "La sinopsis editorial de Sword Oratoria volumen 6 no detalla su apariencia; se evita añadir una descripción no verificada.",
-      history: "Las referencias comunitarias la presentan como capitana o figura de combate de Kali Familia y la relacionan con el pasado de las hermanas Hiryute. El texto del volumen debe verificarse para confirmar cada acción y resultado.",
-      personality: "No se asume que Bache comparta la psicología de Kali ni la de cada integrante de la Familia. Su caracterización individual requiere escenas concretas.",
-      abilities: "No se fijan nivel, técnicas, armamento o resultados de combate sin localizador primario. El contexto de Kali Familia no permite deducir capacidades individuales de Bache, y las tablas comunitarias no se elevan a canon por repetición. Se requiere una escena o perfil oficial localizado para confirmar cada habilidad.",
-      relationships: "La afiliación a Kali Familia y el papel de Bache frente a las gemelas provienen de fuentes comunitarias y siguen pendientes de cotejo primario.",
-      conflict: "La ficha permite encontrar la ruta del pasado de las gemelas sin convertir etiquetas comunitarias en hechos confirmados.",
-      sources: ["https://ga.sbcr.jp/product/9784797388466/","https://danmachi.fandom.com/wiki/Kali_Familia"]
+      appearance: "La wiki describe a Bache como amazoness de piel morena y cabello color arena, unos 170 cm y 27 años; la ficha la enumera como nivel 6 y viva. Son datos comunitarios pendientes de cotejo en Sword Oratoria vol. 6.",
+      history: "La fuente la presenta como una de las capitanas de Kali Familia y hermana menor de Argana. El epíteto en inglés es King of Poison; «Reina del Veneno» se conserva como glosa descriptiva, no traducción oficial.",
+      personality: "Según el resumen comunitario, es más reservada que Argana, aunque habladora cuando algo le interesa. La wiki cuenta que teme la violencia de su hermana y les atribuye motivaciones diferentes; no se les asigna una psicología compartida.",
+      abilities: "La wiki le atribuye Velgus, magia de encantamiento que impregna el cuerpo u objetos con veneno peligroso. El resumen afirma que su alcance pasó de la mano derecha al cuerpo entero al llegar al nivel 6. Las fuentes secundarias resumen de modo distinto la resistencia a estados anómalos; no se fija una contramedida universal.",
+      relationships: "Kali Familia y Argana son sus vínculos principales reportados. Las wikis la conectan también con Tiona y Tione en el pasado de Telskyura; aterrizar cada relación en escenas del volumen 6.",
+      conflict: "Velgus es una amenaza grave pero no debe tratarse como victoria automática. Mantener los límites y dudas documentadas en lugar de inventar inmunidades absolutas.",
+      sources: ["https://danmachi.fandom.com/wiki/Bache_Kalif","https://danmachi.fandom.com/wiki/Kali_Familia","https://ga.sbcr.jp/product/9784797388466/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"]
     },
+
     "CHAR-SELDAS": {
-      appearance: "No se ha cotejado una descripción visual de Seldas en la fuente primaria; no se inventan edad ni rasgos físicos.",
-      history: "Una ficha comunitaria de Tione lo relaciona con un vínculo emocional importante en la infancia dentro del contexto de Telskyura. Este resumen sirve como pista de lectura y no reemplaza la escena del volumen.",
-      personality: "No se asignan rasgos psicológicos a partir de la relación reportada con Tione. El expediente no tiene todavía escenas primarias suficientes para describir sus deseos, decisiones o conducta bajo presión, así que esos aspectos quedan abiertos en lugar de convertir una referencia breve en una personalidad definitiva.",
-      abilities: "No constan capacidades, nivel, armas o habilidades verificadas en esta tanda. La falta de datos no implica que el personaje carezca de capacidades; significa que el material primario no se ha localizado en esta revisión. Cualquier afirmación sobre su combate debe esperar una escena identificable de Sword Oratoria u otra fuente oficial pertinente.",
-      relationships: "Tione Hiryute es el vínculo de infancia reportado por una fuente comunitaria; la asociación con Kali Familia también permanece en estado secundario.",
-      conflict: "Su papel en la historia se limita por ahora al lugar que las referencias comunitarias le atribuyen en el pasado de Tione; el orden y el desenlace requieren cotejo del texto publicado.",
-      sources: ["https://danmachi.fandom.com/es/wiki/Tione_Hiryute"]
+      appearance: "Las fuentes comunitarias consultadas no permiten fijar una descripción física primaria fiable. No se inventan altura, cabello, ojos, vestimenta o armas.",
+      history: "La wiki de Tione sitúa a Seldas como figura importante en su infancia; la tabla de Kali Familia la enumera nivel 1 y fallecida, de unos 7–8 años. Datos secundarios pendientes de cotejo en Sword Oratoria vol. 6.",
+      personality: "La fuente comunitaria la describe como generosa y afectuosa con las niñas de su habitación, a quienes saludaba con una sonrisa y atendía cuando estaban heridas. El papel de madre/hermana mayor se recoge como la percepción de Tione reportada por wiki.",
+      abilities: "La wiki la describe como combatiente entrenada en lucha cuerpo a cuerpo. No se localizó una Skill, magia o arma individual; que esos datos falten en esta ficha no significa que careciera de destrezas.",
+      relationships: "El vínculo de infancia con Tione y la asociación con Kali Familia/Telskyura proceden de fuentes comunitarias. El relato dice que Tione la mató sin comprender plenamente lo sucedido durante un combate a muerte en torno a su quinto cumpleaños y ascenso al nivel 2; secuencia y contexto requieren cotejo.",
+      conflict: "Su muerte se relaciona con el trauma y el rechazo posterior de Tione a Telskyura. No inventar últimas palabras, intención o coreografía de la pelea: localizar primero la escena primaria.",
+      sources: ["https://danmachi.fandom.com/wiki/Tione_Hiryute","https://danmachi.fandom.com/wiki/Kali_Familia","https://danmachi.fandom.com/wiki/Telskyura","https://ga.sbcr.jp/product/9784797388466/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"]
     },
+
     "CHAR-ALBERT-WALDSTEIN": {
       appearance: "Las wikis inglesa y española lo describen con cabello negro, bufanda granate, armadura ligera y una espada larga plateada. Es una descripción secundaria, no un diseño cotejado en un pasaje de la novela.",
       history: "Las fuentes comunitarias lo presentan como héroe del pasado remoto, padre de Ais y esposo de Aria. Le atribuyen herir el ojo del Dragón Negro y morir en ese enfrentamiento. La cronología absoluta y el vínculo con la llegada de Ais al presente siguen sin resolverse.",
@@ -738,6 +741,24 @@
       relationships: "La maternidad respecto de Ais y la relación con Albert se registran como reportes secundarios. El grafo explica qué fuente originó los vínculos y deja pendiente el cotejo primario.",
       conflict: "Aria es relevante para la identidad y el misterio temporal de Ais. Evitar tratar hipótesis sobre linaje, tiempo transcurrido o el combate del Dragón Negro como respuestas confirmadas.",
       sources: ["https://danmachi.fandom.com/wiki/Ais_Wallenstein","https://danmachi.fandom.com/wiki/Albert_Waldstein","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md"]
+    },
+    "CHAR-MAXIM": {
+      appearance: "No se localizó una descripción física primaria verificable en esta revisión. No se inventan cabello, ojos, altura, ropa o arma.",
+      history: "La wiki lo presenta como capitán de Zeus Familia, nivel 8 y fallecido. Resume que quedó gravemente herido tras la derrota ante el Dragón Negro y desafió a la generación siguiente durante el tiempo que le quedaba. La ruta principal a cotejar es DanMachi vol. 20; Episode Freya queda separado.",
+      personality: "La fuente comunitaria lo retrata como duro al desafiar a aventureros jóvenes, pero interesado en que mejoraran y pudieran enfrentar al Dragón Negro. Es una lectura de interacciones según wiki, no una personalidad uniforme.",
+      abilities: "Se le atribuyen fuerza física excepcional, sentidos mejorados y nivel 8 histórico. La fuente lo compara con Zald; no se asignan Skills, magia, armas ni estadísticas adicionales sin localizador de novela.",
+      relationships: "Capitán de Zeus Familia; Zeus es la deidad patrona y Zald otra figura del mismo grupo. La afiliación no confirma amistad ni expediciones compartidas.",
+      conflict: "Su legado combina la derrota histórica con una última etapa dedicada a poner a prueba a la siguiente generación. No inferir motivaciones más concretas sin una escena localizada.",
+      sources: ["https://danmachi.fandom.com/wiki/Maxim","https://danmachi.fandom.com/wiki/Zeus_Familia","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"]
+    },
+    "CHAR-HELGA": {
+      appearance: "La ficha comunitaria de DanMemo la describe como Pallum de 120 cm, cabello castaño claro, ojos rojo pálido y dos lanzas. Son datos del retrato de juego, no una descripción primaria cotejada de la novela.",
+      history: "La wiki de Helga (DanMemo) la identifica como vicecapitana y oficial de Estado Mayor de los Caballeros de Fianna, fallecida. El perfil pertenece a Memoria Freese, no se integra automáticamente en la cronología de las novelas.",
+      personality: "La fuente de juego la retrata franca, táctica, ingeniosa y dispuesta a usar trucos. También describe humor provocador hacia compañeros a quienes aprecia. Son rasgos de ese relato y no una plantilla canónica para otros medios.",
+      abilities: "La wiki le atribuye inventiva para fabricar explosivos con materiales de su época y comparaciones comunitarias cercanas a nivel 2 en combate, nivel 4 en destreza y nivel 3 al cabalgar. No son niveles Falna literales verificados.",
+      relationships: "La wiki de Lyra la presenta como reencarnación de Helga en contexto relacionado con DanMemo. El vínculo queda secondary_checked, sin afirmar recuerdos compartidos ni que pertenezca a la novela ligera.",
+      conflict: "Su estrategia prioriza ingenio y recursos improvisados. Separar datos del juego y vínculo interencarnacional de la continuidad de novela; la versión/evento exactos siguen pendientes.",
+      sources: ["https://danmachi.fandom.com/wiki/Helga_%28DanMemo%29","https://danmachi.fandom.com/wiki/Lyra","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"]
     },
     "CHAR-DARK-ALFIA": {
       appearance: "Las fuentes comunitarias describen a Alfia como una maga de apariencia severa, pero la descripción visual estable requiere cotejo con la edición revisada de Astrea Record. Esta ficha prioriza su función y evidencia, no los rasgos inferidos.",

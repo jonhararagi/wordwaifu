@@ -1,11 +1,11 @@
 # Estado de WordWaifu
-## Estado operativo y verificación — 2026-10-21
+## Estado operativo y verificación — 2026-10-23
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 171 registros activos; 29 IDs reservados; 123 documentos de apoyo.
+- **Corpus DanMachi:** 171 registros activos; 29 IDs reservados; 124 documentos de apoyo.
 - **Grafo de conocimiento:** 229 relaciones explícitas; 229/229 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
-- **Expedientes de interfaz:** 82 perfiles; 82/82 enlazados a catálogo y Markdown por ID.
+- **Expedientes de interfaz:** 84 bloques manuales; 74/82 registros de personaje coinciden por ID con un bloque manual; 8 carecen de bloque dedicado y 10 bloques heredados no corresponden a un registro character. La UI conserva respaldo de ficha desde Markdown.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->

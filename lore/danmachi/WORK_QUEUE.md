@@ -543,3 +543,12 @@ Fuentes: https://ga.sbcr.jp/product/9784815632946/ · https://ga.sbcr.jp/product
 - [ ] Cotejar escenas de Sword Oratoria vols. 1 y 7 y DanMachi vol. 13 con localizadores primarios legítimos antes de elevar los estados de evidencia.
 
 Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no se etiqueta como biografía primaria verificada.
+
+
+## DANMACHI-RESEARCH-044 · cinco expedientes históricos
+- [x] Ampliar Maxim con los datos atribuidos de cargo, nivel, derrota histórica y objetivo de fortalecer la generación siguiente.
+- [x] Ampliar Argana y Bache con estilo de combate, maldición/magia y sus costes o límites reportados.
+- [x] Ampliar Seldas con el vínculo infantil con Tione y la tragedia reportada, marcando el spoiler y el cotejo pendiente.
+- [x] Ampliar Helga a partir de la ficha comunitaria de DanMemo y aislarla en CONT-GAME.
+- [x] Registrar fuentes y claims, asociar las relaciones existentes con su procedencia y añadir pruebas del corpus.
+- [ ] Localizar escenas primarias de Sword Oratoria vol. 6, DanMachi vol. 20 y el evento/versionado de DanMemo antes de elevar la evidencia.

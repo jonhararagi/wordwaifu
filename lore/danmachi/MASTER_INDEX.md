@@ -7,6 +7,7 @@
 - [Pasado de Tiona y Tione en Sword Oratoria](events/timeline/EVT-DM-SO6-HIRYUTE-PAST-001.md) — Melen, Kali Familia y las preguntas pendientes del volumen 6.
 - [Matriz DMR-038](research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md) — afirmaciones, fuentes y niveles de certeza.
 - [DANMACHI-RESEARCH-043](research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md) — Albert, Aria, Jura, Valletta, Thanatos y revisión de alias/continuidad.
+- [DANMACHI-RESEARCH-044](research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md) — Maxim, Helga (DanMemo), Argana, Bache y Seldas; fuentes y alcance de continuidad documentados.
 
 Este es el punto de entrada para continuar el trabajo sin repetir registros. El contenido canónico sigue siendo provisional hasta que las fichas tengan fuentes y localizadores cotejados.
 

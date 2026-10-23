@@ -2273,3 +2273,154 @@ verification_status: stub
 - reliability_note: No prueba las relaciones familiares descritas por las wikis.
 - verified_by: DANMACHI-RESEARCH-043
 - verification_status: source_checked
+
+
+## DMR-044-SRC-001 · Maxim — DanMachi Wiki
+- source_id: DMR-044-SRC-001
+- title: Maxim — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Maxim
+- accessed_at: 2026-10-23
+- locator_type: community_character_article
+- locator: Professional Status, Personal Status, Debuts, History y Personality
+- claims_supported: [DMR-044-CLM-001, DMR-044-CLM-002]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Fuente secundaria para localizar el flashback del volumen 20.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked
+
+## DMR-044-SRC-002 · Zeus Familia — DanMachi Wiki
+- source_id: DMR-044-SRC-002
+- title: Zeus Familia — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Zeus_Familia
+- accessed_at: 2026-10-23
+- locator_type: community_faction_article
+- locator: Roster histórico y estado/nivel atribuidos a Maxim
+- claims_supported: [DMR-044-CLM-001]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Roster secundario, no escena individual.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked
+
+## DMR-044-SRC-003 · Argana Kalif — DanMachi Wiki
+- source_id: DMR-044-SRC-003
+- title: Argana Kalif — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Argana_Kalif
+- accessed_at: 2026-10-23
+- locator_type: community_character_article
+- locator: Alias, cargo, apariencia, parentesco, maldición y combate
+- claims_supported: [DMR-044-CLM-003, DMR-044-CLM-004]
+- continuity_scope: CONT-SO-LN
+- reliability_note: Detalles individuales secundarios; cotejar volumen 6.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked
+
+## DMR-044-SRC-004 · Bache Kalif — DanMachi Wiki
+- source_id: DMR-044-SRC-004
+- title: Bache Kalif — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Bache_Kalif
+- accessed_at: 2026-10-23
+- locator_type: community_character_article
+- locator: Alias, rango, apariencia, parentesco, magia y alcance de Velgus
+- claims_supported: [DMR-044-CLM-005, DMR-044-CLM-006]
+- continuity_scope: CONT-SO-LN
+- reliability_note: Fuente secundaria; revisar la magia en el texto primario.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked
+
+## DMR-044-SRC-005 · Tione Hiryute — DanMachi Wiki
+- source_id: DMR-044-SRC-005
+- title: Tione Hiryute — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Tione_Hiryute
+- accessed_at: 2026-10-23
+- locator_type: community_character_history
+- locator: Pasado de Tione y relación reportada con Seldas
+- claims_supported: [DMR-044-CLM-007]
+- continuity_scope: CONT-SO-LN
+- reliability_note: El resumen no sustituye la escena del volumen 6.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked
+
+## DMR-044-SRC-006 · Helga (DanMemo) — DanMachi Wiki
+- source_id: DMR-044-SRC-006
+- title: Helga (DanMemo) — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Helga_%28DanMemo%29
+- accessed_at: 2026-10-23
+- locator_type: community_game_character_article
+- locator: Cargo, apariencia, equipo y capacidades atribuidos a la versión del juego
+- claims_supported: [DMR-044-CLM-008]
+- continuity_scope: CONT-GAME
+- reliability_note: Perfil comunitario de juego, no biografía primaria de novela.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked
+
+## DMR-044-SRC-007 · Sword Oratoria volumen 6 — GA Bunko
+- source_id: DMR-044-SRC-007
+- title: Sword Oratoria Vol. 6
+- source_type: OFFICIAL_PUBLISHER_REFERENCE
+- language: Japonés
+- official_url: https://ga.sbcr.jp/product/9784797388466/
+- accessed_at: 2026-10-23
+- locator_type: publisher_synopsis
+- locator: Melen, Kali Familia y pasado de las hermanas Hiryute
+- claims_supported: [DMR-044-CLM-010]
+- continuity_scope: CONT-SO-LN
+- reliability_note: Contexto del volumen, no prueba de habilidades individuales.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: source_checked
+
+## DMR-044-SRC-008 · Kali Familia — DanMachi Wiki
+- source_id: DMR-044-SRC-008
+- title: Kali Familia — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Kali_Familia
+- accessed_at: 2026-10-23
+- locator_type: community_faction_article
+- locator: Roster y datos generales de Argana y Bache
+- claims_supported: [DMR-044-CLM-003, DMR-044-CLM-005]
+- continuity_scope: CONT-SO-LN
+- reliability_note: Roster secundario, no corroboración independiente de todos los detalles.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked
+
+## DMR-044-SRC-009 · Lyra — DanMachi Wiki
+- source_id: DMR-044-SRC-009
+- title: Lyra — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Lyra
+- accessed_at: 2026-10-23
+- locator_type: community_character_article
+- locator: Historia y relación reportada con Helga
+- claims_supported: [DMR-044-CLM-009]
+- continuity_scope: CONT-GAME
+- reliability_note: La reencarnación es un reporte secundario; evento/versión original por localizar.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked
+
+## DMR-044-SRC-010 · Telskyura — DanMachi Wiki
+- source_id: DMR-044-SRC-010
+- title: Telskyura — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Telskyura
+- accessed_at: 2026-10-23
+- locator_type: community_place_and_faction_article
+- locator: Sociedad de Kali Familia y contexto de infancia de las Hiryute
+- claims_supported: [DMR-044-CLM-007]
+- continuity_scope: CONT-SO-LN
+- reliability_note: Fuente de contexto, no cronología primaria.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: secondary_checked

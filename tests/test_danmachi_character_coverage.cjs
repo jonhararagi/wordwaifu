@@ -91,6 +91,32 @@ for (const id of ["CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDA
   for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) assert.ok(typeof dossier[field] === "string" && dossier[field].length >= 100, id + " needs substantive " + field);
   assert.ok(Array.isArray(dossier.sources) && dossier.sources.length > 0, id + " needs sources");
 }
+for (const [id, expectedPath] of [
+  ["CHAR-MAXIM","characters/maxim.md"],
+  ["CHAR-HELGA","characters/helga.md"],
+  ["CHAR-ARGANA-KALIF","characters/argana-kalif.md"],
+  ["CHAR-BACHE-KALIF","characters/bache-kalif.md"],
+  ["CHAR-SELDAS","characters/seldas.md"]
+]) {
+  const record=byId.get(id);
+  assert.ok(record && record.type==="character" && record.path===expectedPath,"Missing or incorrect character route: "+id);
+  const markdown=fs.readFileSync(path.join(loreRoot,expectedPath),"utf8");
+  assert.match(markdown,new RegExp("^id:\\\\s*"+id+"\\\\s*$","m"),"Profile ID mismatch: "+id);
+  const dossier=dossierApi.get(id);
+  assert.ok(dossier,"Missing UI dossier: "+id);
+  for(const field of ["appearance","history","personality","abilities","relationships","conflict"]) assert.ok(typeof dossier[field]==="string"&&dossier[field].length>=100,id+" needs substantive "+field);
+  assert.ok(Array.isArray(dossier.sources)&&dossier.sources.length>=2,id+" needs source provenance");
+}
+assert.ok(catalog.documents.some(d=>d.document_id==="DOC-DANMACHI-RESEARCH-044"&&d.path==="research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"),"DMR-044 packet must be indexed.");
+for(const [id,claim] of [
+ ["REL-WIKI-MAXIM-ZEUS-CAPTAIN","DMR-044-CLM-001"],
+ ["REL-WIKI-LYRA-HELGA-REINCARNATION","DMR-044-CLM-009"],
+ ["REL-ARGANA-MEMBER-KALI-001","DMR-044-CLM-003"],
+ ["REL-BACHE-MEMBER-KALI-001","DMR-044-CLM-005"],
+ ["REL-SELDAS-MEMBER-KALI-001","DMR-044-CLM-007"],
+ ["REL-TIONE-SELDAS-PAST-LEAD","DMR-044-CLM-007"]
+]) assert.ok(catalog.relationships.some(e=>e.id===id&&e.claimRef===claim&&e.claimPath==="research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"&&e.evidenceStatus==="secondary_checked"),"Relationship must retain claim provenance: "+id);
+assert.match(fs.readFileSync(path.join(loreRoot,"characters/helga.md"),"utf8"),/continuity_scope: CONT-GAME/,"Helga must remain in game continuity.");
 const olivasRecord = byId.get("CHAR-OLIVAS-ACT");
 assert.ok(olivasRecord && olivasRecord.path === "characters/olivas-act.md", "Olivas must have exactly one active Markdown route.");
 assert.ok(!catalog.reservedIds.some(item => (typeof item === "string" ? item : item.id) === "CHAR-OLIVAS-ACT"), "Olivas must not remain reserved after activation.");

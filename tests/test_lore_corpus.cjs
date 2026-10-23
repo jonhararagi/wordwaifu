@@ -532,3 +532,31 @@ assert.ok(volumeOnePublisherSearch.results.some(item => item.claimId === "DMR-03
 assert.ok(!volumeOnePublisherSearch.results.some(item => /^DMR-034-CLM-/.test(item.claimId || "")), "Prototype-only geographic claims must remain excluded from published-novel search.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-ORARIO-DUNGEON-PUBLISHED-LN-SYNOPSIS" && edge.from === "LOC-ORARIO" && edge.to === "LOC-DUNGEON" && edge.continuity === "CONT-MAIN-LN" && edge.claimRef === "DMR-035-CLM-001" && edge.evidenceStatus === "source_checked"), "Orario's published-novel-synopsis relation to Dungeon must carry explicit paratext provenance.");
 assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-volume-01-synopsis" && source.url === "https://ga.sbcr.jp/product/9784797372809/" && source.authority.includes("paratexto")), "The official volume 1 publisher synopsis must be searchable and accurately classified.");
+
+
+
+// DMR-044 historical dossiers: default retrieval and game-continuity isolation.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"),"DMR-044 must be in the research manifest.");
+for(const id of ["CHAR-MAXIM","CHAR-HELGA","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS"]) {
+  assert.ok(detailIds.has(id),"Missing default detail ID: "+id);
+  assert.ok(index.profileDetails[id]?.id===id,"Profile detail must resolve by ID: "+id);
+}
+for(const [query,continuity,claimId] of [
+ ["Maxim Zeus Familia nivel 8","CONT-MAIN-LN","DMR-044-CLM-001"],
+ ["Argana Kalima resistencia","CONT-SO-LN","DMR-044-CLM-004"],
+ ["Bache Velgus veneno","CONT-SO-LN","DMR-044-CLM-006"],
+ ["Seldas Tione infancia","CONT-SO-LN","DMR-044-CLM-007"],
+ ["Helga Lyra reencarnacion","CONT-GAME","DMR-044-CLM-009"]
+]) {
+ const found=corpus.search(index,{query,continuity,period:"ALL",aspect:"all",spoiler:"all"});
+ assert.ok(found.results.some(item=>item.claimId===claimId&&item.verificationStatus==="secondary_checked"),"Claim should remain searchable with its evidence status: "+claimId);
+}
+for(const [id,url] of [
+ ["community-maxim","https://danmachi.fandom.com/wiki/Maxim"],
+ ["community-argana-kalif","https://danmachi.fandom.com/wiki/Argana_Kalif"],
+ ["community-bache-kalif","https://danmachi.fandom.com/wiki/Bache_Kalif"],
+ ["community-tione-hiryute","https://danmachi.fandom.com/wiki/Tione_Hiryute"],
+ ["community-helga-danmemo","https://danmachi.fandom.com/wiki/Helga_%28DanMemo%29"],
+ ["official-ga-sword-oratoria-06","https://ga.sbcr.jp/product/9784797388466/"],
+ ["community-lyra","https://danmachi.fandom.com/wiki/Lyra"]
+]) assert.ok(corpus.getOnlineSourceDirectory().some(source=>source.id===id&&source.url===url),"Missing source directory entry: "+id);

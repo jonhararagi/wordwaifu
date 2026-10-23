@@ -63,6 +63,16 @@
     { id:"community-albert-waldstein-en", category:"community", title:"DanMachi Wiki · Albert Waldstein (inglés)", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Albert_Waldstein", coverage:"Alias, parentesco reportado, apariencia y combate histórico.", limits:"No verifica el texto primario ni resuelve la cronología de Ais." },
     { id:"community-albert-waldstein-es", category:"community", title:"DanMachi Wiki · Albert Waldstein (español)", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/es/wiki/Albert_Waldstein", coverage:"Contraste de alias, parentesco y relato histórico.", limits:"Segunda wiki comunitaria, no evidencia primaria independiente." },
     { id:"community-ais-aria", category:"community", title:"DanMachi Wiki · Ais Wallenstein", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Ais_Wallenstein", coverage:"Parentesco reportado de Ais con Albert y Aria y preguntas abiertas sobre su origen.", limits:"No resuelve circunstancias de nacimiento, desaparición ni traslado temporal." },
+    { id:"community-maxim", category:"community", title:"DanMachi Wiki · Maxim", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Maxim", coverage:"Cargo histórico, nivel y relato del encuentro con el Dragón Negro.", limits:"Cotejar el flashback de DanMachi vol. 20; no mezclar Episode Freya." },
+    { id:"community-zeus-familia", category:"community", title:"DanMachi Wiki · Zeus Familia", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Zeus_Familia", coverage:"Roster histórico y estado atribuido a los miembros.", limits:"No sustituye escenas individuales de novela." },
+    { id:"community-argana-kalif", category:"community", title:"DanMachi Wiki · Argana Kalif", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Argana_Kalif", coverage:"Apariencia, afiliación, parentesco y Kalima/Blood Drain reportados.", limits:"Nivel y capacidades requieren cotejo en Sword Oratoria vol. 6." },
+    { id:"community-bache-kalif", category:"community", title:"DanMachi Wiki · Bache Kalif", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Bache_Kalif", coverage:"Perfil de Bache y magia Velgus.", limits:"Confirmar alcance y efectos en el texto primario." },
+    { id:"community-tione-hiryute", category:"community", title:"DanMachi Wiki · Tione Hiryute", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Tione_Hiryute", coverage:"Infancia de Tione y vínculo reportado con Seldas.", limits:"Usar como ruta de búsqueda, no como sustituto del volumen 6." },
+    { id:"community-kali-familia", category:"community", title:"DanMachi Wiki · Kali Familia", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Kali_Familia", coverage:"Roster de Kali Familia y contexto de Telskyura.", limits:"No prueba por sí sola habilidades o relaciones individuales." },
+    { id:"community-helga-danmemo", category:"community", title:"DanMachi Wiki · Helga (DanMemo)", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria de juego", url:"https://danmachi.fandom.com/wiki/Helga_%28DanMemo%29", coverage:"Cargo, aspecto y capacidades atribuidos a la versión de DanMemo.", limits:"Mantener la ficha en CONT-GAME, no como biografía de novela." },
+    { id:"official-ga-sword-oratoria-06", category:"official", title:"GA Bunko · Sword Oratoria vol. 6", publisher:"GA Bunko", authority:"Sinopsis editorial oficial", url:"https://ga.sbcr.jp/product/9784797388466/", coverage:"Marco de Melen, Kali Familia y pasado de las gemelas Hiryute.", limits:"No confirma niveles o capacidades individuales." },
+    { id:"community-lyra", category:"community", title:"DanMachi Wiki · Lyra", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Lyra", coverage:"Relación reportada con Helga y referencias a DanMemo.", limits:"Reencarnación secundaria; evento/versionado original pendiente." },
+    { id:"community-telskyura", category:"community", title:"DanMachi Wiki · Telskyura", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Telskyura", coverage:"Contexto comunitario del entorno de Kali Familia.", limits:"Fuente de contexto, no cronología primaria." },
     { id:"community-valletta-grede", category:"community", title:"DanMachi Wiki · Valletta Grede", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Valletta_Grede", coverage:"Afiliación, estrategia y magia Shaldo reportadas para Sword Oratoria vol. 7.", limits:"No demuestra participación individual en el núcleo de Astrea Record." },
     { id:"community-thanatos", category:"community", title:"DanMachi Wiki · Thanatos", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/Thanatos", coverage:"Perfil del dios, Thanatos Familia y vínculo reportado con Evilus.", limits:"No atribuirle automáticamente todas las acciones de Evilus ni escenas de Astrea Record." },
     { id:"community-jura-halmer-es", category:"community", title:"DanMachi Wiki · Jura Halmer (español)", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/es/wiki/Jura_Halmer", coverage:"Historia, equipo, domador y relación reportada con el Juggernaut.", limits:"El rótulo de debut discrepa del artículo inglés; verificar la novela principal." },
@@ -103,7 +113,8 @@
     "research/inbox/DANMACHI-RESEARCH-040-publication-horizon-2026-10.md",
     "research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md",
     "research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md",
-    "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md"
+    "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
+    "research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"
   ];
   const DEFAULT_DETAIL_IDS = [
     "CHAR-RYUU-LION","CHAR-ALISE-LOVELACE","CHAR-ASTREA","DM-CHAR-BELL","DM-CHAR-HESTIA","DM-CHAR-AIS","DM-CHAR-EINA",
@@ -115,7 +126,7 @@
     "CHAR-DARK-JURA-HALMER","CHAR-DARK-RUDRA","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE",
     "LOC-ORARIO-CENTRAL-PARK-PROTOTYPE","LOC-ORARIO-AVENUES-PROTOTYPE","LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE",
     "EVT-DM-FC-HAZE-001","CHAR-HEITH-VELVET",
-    "CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-HELGA","CHAR-OLIVAS-ACT",
+    "CHAR-KALI","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS","CHAR-HELGA","CHAR-MAXIM","CHAR-OLIVAS-ACT",
     "CHAR-ALBERT-WALDSTEIN","CHAR-ARIA"
   ];
   function getDefaultResearchPaths() { return DEFAULT_RESEARCH_PATHS.slice(); }

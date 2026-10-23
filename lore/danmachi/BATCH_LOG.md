@@ -383,3 +383,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - La revisión de Mariyu/Maryuu alinea el nombre visible a «Mariyu Reage», conservando el ID heredado y «Leage» como variante. Ryana, Meteria, Rudra y Olivas no se elevan a evidencia primaria ni reciben relaciones personales no respaldadas.
 - Se añaden nueve claims con fuentes registradas, tres relaciones familiares secundarias y pruebas de recuperación y continuidad.
 - Pendiente: cotejar las novelas/ediciones con localizadores concretos. La sinopsis de Yen Press del volumen 13 solo establece el marco del volumen, no la biografía de Jura; la sinopsis de Sword Oratoria 1 solo brinda contexto editorial, no prueba directa de Albert o Aria.
+
+
+## DANMACHI-RESEARCH-044 · Maxim, Helga, Argana, Bache y Seldas
+- Se amplían los cinco expedientes con identidad, afiliación, resumen histórico, personalidad o estilo de combate, límites y tareas de cotejo.
+- Maxim queda ligado a la ruta del flashback de DanMachi vol. 20; Episode Freya se mantiene separado.
+- Argana y Bache incluyen sus capacidades y costes/alcances reportados sin elevar los detalles de wiki a canon primario.
+- Seldas registra el vínculo trágico reportado con Tione como spoiler mayor, con el pasaje de Sword Oratoria vol. 6 todavía por localizar.
+- Helga y el vínculo con Lyra quedan restringidos a CONT-GAME: el informe no los traslada automáticamente a novela ligera o Astrea Record.
+- Se añade el paquete de investigación con 10 claims, registro de fuentes, enlaces al buscador y pruebas de regresión.
+- Pendiente de cierre primario: localizadores de vol. 6 y 20 y versión/evento de DanMemo.
