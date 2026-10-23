@@ -2299,7 +2299,7 @@ verification_status: stub
 - accessed_at: 2026-10-23
 - locator_type: community_faction_article
 - locator: Roster histórico y estado/nivel atribuidos a Maxim
-- claims_supported: [DMR-044-CLM-001]
+- claims_supported: []
 - continuity_scope: CONT-MAIN-LN
 - reliability_note: Roster secundario, no escena individual.
 - verified_by: DANMACHI-RESEARCH-044
@@ -2389,7 +2389,7 @@ verification_status: stub
 - accessed_at: 2026-10-23
 - locator_type: community_faction_article
 - locator: Roster y datos generales de Argana y Bache
-- claims_supported: [DMR-044-CLM-003, DMR-044-CLM-005]
+- claims_supported: []
 - continuity_scope: CONT-SO-LN
 - reliability_note: Roster secundario, no corroboración independiente de todos los detalles.
 - verified_by: DANMACHI-RESEARCH-044
@@ -2419,7 +2419,7 @@ verification_status: stub
 - accessed_at: 2026-10-23
 - locator_type: community_place_and_faction_article
 - locator: Sociedad de Kali Familia y contexto de infancia de las Hiryute
-- claims_supported: [DMR-044-CLM-007]
+- claims_supported: []
 - continuity_scope: CONT-SO-LN
 - reliability_note: Fuente de contexto, no cronología primaria.
 - verified_by: DANMACHI-RESEARCH-044
