@@ -131,6 +131,7 @@
 ## Fuentes y alcance
 
 - [Lector oficial de muestra de Astrea Record 1](https://r.binb.jp/epm/e1_260370_02092022101233/): se comprobaron el título, el autor y la descripción editorial del lector; la extracción solo expone la interfaz, no el texto de la novela. Se registra como `DMR-045-SRC-003` con `claims_supported: []` y `metadata_checked_only`. No se usa para verificar datos individuales de Alfia, Zald, Meteria, Erebus o Rudra.
+- [Muestra pública de Astrea Record 3 en BOOK☆WALKER](https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1): el visor mostró la portada y el contador `1/63`, pero no permitió avanzar a páginas narrativas interiores en la sesión del 2026-10-23. Se registra como `DMR-045-SRC-006`, `claims_supported: []` y `metadata_checked_only`; no es una referencia narrativa para ninguno de los cinco expedientes.
 
 - [Cronología oficial](https://danmachi.com/chronology/): sitúa Astrea Record aproximadamente siete años antes de Bell y resume el marco de la Era Oscura. No verifica las acciones individuales de estos cinco personajes. Se reutiliza DMR-038-CLM-001 / DMR-038-SRC-001.
 - [Anuncio oficial de Astrea Record](https://danmachi.com/news/news131.php): acredita la procedencia editorial del relato del juego y la trilogía revisada por Omori (DMR-045-CLM-001).

@@ -580,6 +580,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir al grafo de conocimiento las relaciones de cuidado Alfia/Zald → Bell y la mención Meteria → Bell dentro de `CONT-AU`, con procedencia `DMR-029-CLM-012`, extremos activos y pruebas de que no se filtran al canon principal.
 - [x] Crear la ficha `events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md` como ruta independiente para el escenario CONT-AU, con Alfia, Zald, Meteria y Bell enlazados por cuatro aristas trazables; mantenerla fuera de `timeline/eras-and-events.json`.
 - [x] Añadir DMR-045-CLM-006 a la ruta interactiva de Astrea Record: fragmento indexado oficial que menciona el inicio de Zald–Ottar y Alfia–Astrea Familia el último día; dos relaciones hacia el evento marcadas `source_checked_excerpt_only`, con prueba de continuidad.
+- [x] Registrar la muestra pública de Astrea Record 3 como `metadata_checked_only`: el visor solo mostró portada y contador `1/63`, sin páginas narrativas inspeccionables ni claims asociados.
 - [ ] Cotejar Astrea Record vols. 1–3 para Alfia, Zald y Erebus, con edición/volumen/capítulo reproducible.
 - [ ] Cotejar el texto accesible de DanMachi vol. 20 para determinar qué menciones exactas contiene sobre Alfia/Zald/Meteria/Bell; separar los nombres de armas de Leon reportados por fuentes secundarias de una escena biográfica y no dar por confirmado el parentesco sin localizador primario.
 - [ ] Resolver en DanMachi vols. 13–14 la escena de Rudra y separar la responsabilidad de Rudra, Jura y su Familia.

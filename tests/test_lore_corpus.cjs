@@ -727,3 +727,8 @@ for (const [id,url] of [
 const astreaVol1Preview = historicalWikiSourceDirectory.find(item => item.id === "official-astrea-record-vol1-preview");
 assert.ok(astreaVol1Preview && astreaVol1Preview.url === "https://r.binb.jp/epm/e1_260370_02092022101233/" && astreaVol1Preview.authority.includes("metadatos solamente") && String(astreaVol1Preview.limits).toLocaleLowerCase("es").includes("no respalda ninguna capacidad"), "The official Astrea Record preview must be discoverable with its metadata-only limitation visible.");
 assert.ok(!astreaPublicationLineage.sourceUrls.includes("https://r.binb.jp/epm/e1_260370_02092022101233/"), "A trial-reader URL with no accessible narrative text must not be added as evidence for individual dossiers or as the official publication-notice claim.");
+
+const astreaVol3PreviewUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1";
+const astreaVol3Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-astrea-record-vol3-preview-metadata-only");
+assert.ok(astreaVol3Preview && astreaVol3Preview.url === astreaVol3PreviewUrl && astreaVol3Preview.authority.includes("metadatos solamente") && String(astreaVol3Preview.coverage).includes("1/63") && String(astreaVol3Preview.limits).includes("No respalda ninguna capacidad"), "Astrea Record 3 public sample must remain discoverable as metadata-only when only its cover was accessible.");
+assert.ok(!index.claims.some(item => item.sourceUrls.includes(astreaVol3PreviewUrl)), "A sample reader with no inspected narrative pages must not support an individual character, relationship, or event claim.");
