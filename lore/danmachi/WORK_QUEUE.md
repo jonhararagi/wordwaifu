@@ -529,6 +529,8 @@ Fuentes: https://ga.sbcr.jp/product/9784815632946/ · https://ga.sbcr.jp/product
 - [ ] Resolver las diferencias entre las wikis inglesa y española y cotejar la denominación o relación con Enyo.
 
 **Estado factual:** ficha útil y recuperable; biografía todavía secundaria y pendiente de cotejo primario.
+- [x] Confirmar la cobertura estructural de los cinco expedientes y su recuperación en el código de `main` probado en SHA `c6b636b1074b6d2e7ebaac66988e04692303cd79`: los workflows [Validate WordWaifu #39979366390](https://github.com/jonhararagi/wordwaifu/actions/runs/39979366390) y [DanMachi Lore and Retrieval Integrity #39979366342](https://github.com/jonhararagi/wordwaifu/actions/runs/39979366342) finalizaron en `success`; las aserciones del corpus exigen los cinco IDs y la arista Lyra → Helga con `CONT-GAME` y `secondary_checked`.
+- [ ] Mantener abierto el cotejo de las escenas primarias: los resultados estructurales y la presencia de una sinopsis editorial no elevan las afirmaciones comunitarias a canon verificado.
 
 
 ## DANMACHI-RESEARCH-043 · personajes históricos faltantes y revisión de continuidad
