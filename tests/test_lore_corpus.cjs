@@ -139,6 +139,7 @@ const authorAuScenarioRecord = catalog.records.find(record => record.id === auth
 assert.ok(authorAuScenarioRecord && authorAuScenarioRecord.type === "event" && authorAuScenarioRecord.path === authorAuScenarioPath && authorAuScenarioRecord.status === "source_checked_excerpt_only", "The author alternate scenario must be a separately navigable catalog event with excerpt-limited evidence.");
 const authorAuScenarioText = fs.readFileSync(path.join(root, authorAuScenarioPath), "utf8");
 assert.ok(authorAuScenarioText.includes("continuity_scope: CONT-AU") && authorAuScenarioText.includes("DMR-029-CLM-012") && authorAuScenarioText.includes("No es un acontecimiento de la cronología principal"), "The scenario detail must state its provenance, AU continuity and exclusion from the main timeline.");
+assert.ok(authorAuScenarioText.includes("no establece una duración exacta") && !authorAuScenarioText.includes("periodo de tres años"), "The AU scenario must not invent a duration that is absent from its registered evidence claim.");
 for (const [id, from, kind] of [
   ["REL-AU-ALFIA-RAISE-BELL-SCENARIO","CHAR-DARK-ALFIA","participant_in"],
   ["REL-AU-ZALD-RAISE-BELL-SCENARIO","CHAR-DARK-ZALD","participant_in"],

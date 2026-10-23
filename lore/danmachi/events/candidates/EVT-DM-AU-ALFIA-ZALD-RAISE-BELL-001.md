@@ -19,12 +19,12 @@ Esta ficha organiza una posibilidad alternativa descrita en la nota de Fujino Om
 - Continuidad: `CONT-AU`.
 - Fuente narrativa: `DMR-029-SRC-016`, nota del autor.
 - Evidencia: `source_checked_excerpt_only`.
-- Intervalo: convivencia hipotética durante los primeros años de Bell; sin fecha de calendario.
+- Intervalo: escenario hipotético de crianza; la duración exacta y la fecha de calendario no quedan establecidas en el claim indexado.
 - Referencia editorial adicional: `DMR-045-SRC-002`.
 
 ## Resumen delimitado
 
-La nota describe una posibilidad en la que Alfia y Zald cuidan de Bell durante un periodo de tres años. También se refiere a Meteria como su madre en ese escenario. Estos datos se conservan solo dentro de la alternativa autoral; no se trasladan a `CONT-MAIN-LN` ni a `CONT-AR`.
+La nota presenta una posibilidad alternativa en la que Alfia y Zald crían a Bell; el claim de investigación utilizado para esta ficha no establece una duración exacta. También se refiere a Meteria como madre en ese escenario. Estos datos se conservan solo dentro de la alternativa autoral; no se trasladan a `CONT-MAIN-LN` ni a `CONT-AR`.
 
 No se infieren niveles, habilidades, batallas, fechas, parentescos nuevos ni consecuencias posteriores.
 
