@@ -137,3 +137,15 @@ assert.equal(new Set(catalog.records.map(r => r.id)).size, catalog.records.lengt
 assert.equal(new Set(catalog.relationships.map(r => r.id)).size, catalog.relationships.length, "Relationship IDs must be unique");
 for (const edge of catalog.relationships) { assert.ok(byId.has(edge.from), "Dangling origin: " + edge.id); assert.ok(byId.has(edge.to), "Dangling target: " + edge.id); }
 process.stdout.write("PASS DanMachi coverage: " + roster.length + " characters have catalog, Markdown and dossier routes; Gulliver and graph integrity verified.\\n");
+
+
+// DMR-045: historical dossiers must remain individually available and source-bounded.
+assert.ok(catalog.documents.some(d=>d.document_id==="DOC-DANMACHI-RESEARCH-045"&&d.path==="research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"&&d.status==="secondary_checked_with_primary_gaps"),"DMR-045 packet must be indexed with its evidence gaps visible.");
+const meteriaRecord=byId.get("CHAR-METERIA");
+assert.ok(meteriaRecord&&meteriaRecord.path==="characters/dark-era/meteria.md","Meteria must have one navigable Markdown route.");
+const meteriaDossier=dossierApi.get("CHAR-METERIA");
+assert.ok(meteriaDossier,"Meteria needs a manual UI dossier, not only Markdown fallback.");
+for(const field of ["appearance","history","personality","abilities","relationships","conflict"]) assert.ok(typeof meteriaDossier[field]==="string"&&meteriaDossier[field].length>=100,"Meteria needs substantive "+field);
+assert.ok(Array.isArray(meteriaDossier.sources)&&meteriaDossier.sources.length>=2,"Meteria dossier must retain source URLs.");
+assert.ok(catalog.relationships.some(e=>e.id==="REL-EREBUS-EVILUS-RESEARCH"&&e.claimRef==="DMR-045-CLM-003"&&e.claimPath==="research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"&&e.evidenceStatus==="secondary_checked"),"Erebus/Evilus route must retain specific secondary identity provenance.");
+assert.ok(catalog.relationships.some(e=>e.id==="REL-RUDRA-JUGGERNAUT-EVENT-001"&&e.claimRef==="DMR-045-CLM-002"&&e.claimPath==="research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"&&e.continuity==="CONT-MAIN-LN"&&e.evidenceStatus==="secondary_checked"),"Rudra event route must bound attribution to the Familia rather than the deity.");
