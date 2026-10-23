@@ -1397,7 +1397,7 @@
         "Calle Daidalos",
         "Orario",
         "zona residencial",
-        "CONT-SO",
+        "CONT-SO-LN",
         "Sword Oratoria vol. 7",
         "Melen clue"
       ],
@@ -6673,7 +6673,7 @@
       "to": "DM-FAM-LOKI",
       "kind": "investigated_by",
       "label": "Sword Oratoria vol. 7: Loki Familia inicia una investigación sobre Daedalus Street tras obtener una pista en Melen",
-      "continuity": "CONT-SO",
+      "continuity": "CONT-SO-LN",
       "interval": "Sword Oratoria, volumen 7; periodo narrativo exacto no fijado por la sinopsis",
       "evidenceStatus": "source_checked",
       "evidenceType": "official_publisher_synopsis",
