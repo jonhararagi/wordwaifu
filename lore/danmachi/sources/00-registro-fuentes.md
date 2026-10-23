@@ -2426,6 +2426,27 @@ verification_status: stub
 - verification_status: secondary_checked
 
 
+
+## DMR-044-SRC-011 · Knights of Fianna — anuncio oficial de WFS
+- source_id: DMR-044-SRC-011
+- title: 「ナイツ・オブ・フィアナ」配信開始 — Memoria Freese, quinto aniversario
+- creator_or_publisher: Wright Flyer Studios (WFS)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi / Memoria Freese
+- volume_or_edition: Evento de quinto aniversario; anuncio del 2022-06-23
+- language: Japonés
+- official_url: https://www.wfs.games/news/20220623_01.html
+- accessed_at: 2026-10-23
+- locator_type: official_game_event_announcement
+- locator: Descripción del relato original escrito por Fujino Omori y lista de personajes, incluida Helga.
+- claims_supported: [DMR-044-CLM-011]
+- events_supported: []
+- continuity_scope: CONT-GAME
+- reliability_note: Fuente oficial de lanzamiento y elenco del evento; no valida por sí sola los datos comunitarios ni la reencarnación de Lyra.
+- rights_note: Enlace y paráfrasis propias; no reproducir el guion del juego.
+- verified_by: DANMACHI-RESEARCH-044
+- verification_status: source_checked
+
 ## DMR-045-SRC-001 · Anuncio oficial de la novelización de Astrea Record
 - source_id: DMR-045-SRC-001
 - title: ダンメモ3周年記念シナリオ「偉大冒険譚 アストレア・レコード」の書籍化が決定！
