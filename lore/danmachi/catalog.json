@@ -1396,7 +1396,10 @@
         "ダイダロス通り",
         "Calle Daidalos",
         "Orario",
-        "zona residencial"
+        "zona residencial",
+        "CONT-SO",
+        "Sword Oratoria vol. 7",
+        "Melen clue"
       ],
       "status": "source_checked_partial",
       "priority": "high"
@@ -3412,6 +3415,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md",
       "type": "published_novel_excerpt_research",
       "status": "source_checked_excerpt_only"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-049",
+      "path": "research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md",
+      "type": "location_research_official_publisher_synopsis",
+      "status": "source_checked"
     }
   ],
   "lastStructuredSync": "2026-10-23",
@@ -6657,6 +6666,20 @@
       "claimRef": "DMR-048-CLM-001",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md",
       "note": "La fuente acredita el término Pantheon en el contexto urbano del extracto, no la relación física exacta con la sede de la Guild ni con Babel."
+    },
+    {
+      "id": "REL-DAEDALUS-STREET-LOKI-SO-VOL7",
+      "from": "LOC-DAEDALUS-STREET",
+      "to": "DM-FAM-LOKI",
+      "kind": "investigated_by",
+      "label": "Sword Oratoria vol. 7: Loki Familia inicia una investigación sobre Daedalus Street tras obtener una pista en Melen",
+      "continuity": "CONT-SO",
+      "interval": "Sword Oratoria, volumen 7; periodo narrativo exacto no fijado por la sinopsis",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_publisher_synopsis",
+      "claimRef": "DMR-049-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md",
+      "note": "La relación representa sólo el resumen editorial de Sword Oratoria. No acredita la geometría urbana ni la primera mención de Daedalus Street en la novela principal."
     }
   ]
 }
