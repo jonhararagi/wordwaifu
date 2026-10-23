@@ -393,3 +393,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Helga y el vínculo con Lyra quedan restringidos a CONT-GAME: el informe no los traslada automáticamente a novela ligera o Astrea Record.
 - Se añade el paquete de investigación con 10 claims, registro de fuentes, enlaces al buscador y pruebas de regresión.
 - Pendiente de cierre primario: localizadores de vol. 6 y 20 y versión/evento de DanMemo.
+
+
+## DANMACHI-RESEARCH-045 · auditoría histórica y de continuidad
+
+- Fecha: 2026-10-23; publicación directa en main.
+- Se ampliaron las rutas de Alfia, Zald, Meteria, Erebus y Rudra; Meteria recibió un expediente manual de interfaz que faltaba.
+- Se añadió DMR-045 con tres claims: procedencia editorial oficial de Astrea Record; trampa del Juggernaut atribuida secundariamente a Rudra Familia como grupo, no personalmente al dios; e identidad/apariencia de Erebus según wiki, con «Eren» mantenido como nombre no verificado.
+- Se modificaron las aristas existentes Rudra–evento y Erebus–Evilus para apuntar a claims específicos sin aumentar el número de relaciones ni crear vínculos no investigados.
+- El buscador carga el nuevo expediente y ofrece Meteria en los detalles por defecto; se agregaron pruebas de búsqueda, continuidad, procedencia y cobertura UI.
+- Fuentes oficiales: cronología y anuncio de novelización de Astrea Record. Fuentes comunitarias: perfiles de Alfia, Zald, Meteria, Erebus y Rudra/Rudra Familia. La nota del autor sobre Meteria continúa bajo CONT-AU.
+- Pendiente: localizadores primarios de Astrea Record vols. 1–3, DanMachi vol. 20 y el arco de vols. 13–14.
+- Veredicto: secondary_checked_with_primary_gaps; no se promueve ninguna biografía a canon primario.
