@@ -673,3 +673,8 @@ for (const [id,url] of [
  ["community-canoe-belway","https://danmachi.fandom.com/wiki/Canoe_Belway"],
  ["official-ga-danmachi-06","https://ga.sbcr.jp/product/9784797380583/"]
 ]) assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === id && source.url === url), "Missing DMR-046 online source directory entry: " + id);
+
+// DMR-045: metadata-only Astrea Record 1 sample reader; never use it to confirm character claims.
+const astreaVol1Preview = historicalWikiSourceDirectory.find(item => item.id === "official-astrea-record-vol1-preview");
+assert.ok(astreaVol1Preview && astreaVol1Preview.url === "https://r.binb.jp/epm/e1_260370_02092022101233/" && astreaVol1Preview.authority.includes("metadatos solamente") && String(astreaVol1Preview.limits).toLocaleLowerCase("es").includes("no respalda ninguna capacidad"), "The official Astrea Record preview must be discoverable with its metadata-only limitation visible.");
+assert.ok(!astreaPublicationLineage.sourceUrls.includes("https://r.binb.jp/epm/e1_260370_02092022101233/"), "A trial-reader URL with no accessible narrative text must not be added as evidence for individual dossiers or as the official publication-notice claim.");
