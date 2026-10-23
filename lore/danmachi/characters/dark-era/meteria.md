@@ -16,41 +16,42 @@ claim_refs:
 verification_status: secondary_checked_primary_locator_pending
 aliases:
   - "メーテリア"
-tags: [Meteria, Hera Familia, Alfia, Bell Cranel, family, spoiler]
+tags: [Meteria, Hera Familia, Alfia, Bell Cranel, parentesco, enfermedad, spoiler mayor, CONT-AU separado]
 ---
-# Meteria — expediente individual
+# Meteria — madre de Bell; hermana gemela de Alfia (evidencia secundaria)
 
-## Identidad y afiliación reportadas por las wikis
-- **ID estable:** CHAR-METERIA.
-- **Afiliación previa reportada:** Hera Familia.
-- **Relaciones familiares reportadas:** hermana gemela de **[Alfia](alfia.md)** y madre de **[Bell Cranel](../bell-cranel.md)**.
-- **Estado:** la wiki la describe como fallecida, pero los detalles biográficos siguen etiquetados como secundarios hasta cotejar el texto narrativo.
-- **Apariencia reportada:** cabello blanco y ojos azules; son datos de una ficha comunitaria, no una inspección primaria.
+## Identidad y alcance
+- **ID estable:** CHAR-METERIA; no existe una segunda identidad para la misma persona.
+- **Afiliación reportada:** antigua integrante de Hera Familia.
+- **Relaciones reportadas:** hermana gemela de Alfia y madre de Bell Cranel.
+- **Estado reportado:** fallecida.
+- **Evidencia:** las wikis inglesa y española coinciden en el núcleo del parentesco. Esa convergencia ayuda a interpretar los resúmenes, pero no equivale a un pasaje de la novela cotejado.
+- **Spoilers:** mayor; revela la ascendencia familiar de Bell.
 
-Esta es información de spoiler mayor. La ficha se ha creado a partir de un ID reservado que ya estaba anunciado en el catálogo, y la reserva se ha convertido en un nodo activo único; no hay una segunda ficha para la misma persona.
+## Apariencia y salud reportadas
+La ficha comunitaria describe cabello blanco y ojos azules, una constitución débil y una enfermedad incurable que habría restringido severamente su vida diaria. Alfia es descrita en esas mismas referencias como muy parecida a ella, con diferencias en los ojos. No se asigna nombre médico a la enfermedad, causa clínica exacta, fecha absoluta de fallecimiento ni estadística de personaje: la fuente disponible no basta para ninguno de esos datos.
 
 ## Biografía secundaria útil
-La ficha comunitaria describe a Meteria como alguien físicamente frágil por una enfermedad incurable y vincula su historia con la familia de Bell. Estos datos ayudan a organizar el parentesco, pero el nombre de la enfermedad, la cronología, el estado exacto y la identidad del padre de Bell no se completan por inferencia.
+Los resúmenes comunitarios sitúan el nacimiento de Bell después de la derrota histórica de Zeus y Hera Familias frente al Dragón Negro de un Ojo. Afirman que Meteria quedó embarazada de un integrante de Zeus Familia y confió al niño a Zeus tras el nacimiento, muriendo ella tiempo después. En este expediente la secuencia sigue como relato secundario: los detalles cronológicos, las escenas y la forma concreta de la entrega deben localizarse en el texto publicado. **El padre biológico de Bell no está identificado** y no se infiere su identidad a partir del roster.
 
-La página comunitaria en inglés y la española coinciden en el núcleo de sus relaciones familiares. Esa coincidencia mejora la confianza de que se ha interpretado correctamente el resumen de wiki, pero no convierte el resultado en confirmación primaria: se necesita el pasaje narrativo concreto.
-
-## Carácter en un escenario alternativo de autor — CONT-AU, no canon por defecto
-Una publicación de Fujino Omori describe a Meteria a través de Alfia como amable, de salud frágil y querida por quienes la rodeaban. Sin embargo, la pieza se sitúa en un escenario hipotético donde Alfia y Zald crían a Bell. Se conserva como caracterización explícitamente alternativa; no se usa para escribir decisiones, crianza ni acontecimientos como si hubieran ocurrido en la novela principal.
+## Carácter: separar la nota alternativa de la biografía principal
+En la publicación de Fujino Omori [それは遥か彼方の静穏の夢](https://note.com/fujinoomori/n/n629829ac3fe4), Meteria es descrita a través del recuerdo de Alfia como amable, sonriente, frágil y apreciada por quienes la rodeaban. Sin embargo, la pieza plantea un escenario hipotético donde Alfia y Zald crían a Bell. Por ello, esa descripción se mantiene expresamente en **CONT-AU** y no se presenta como una escena de crianza o convivencia que haya sucedido en la novela principal.
 
 ## Relaciones navegables
-- **[Hera Familia](../../familias/hera-familia.md):** afiliación previa reportada por la wiki.
-- **[Alfia](alfia.md):** hermana gemela reportada.
-- **[Bell Cranel](../bell-cranel.md):** maternidad reportada por fuentes comunitarias, con spoiler mayor.
-- **[Hera](../hera.md):** la wiki de Meteria la relaciona con Hera Familia; una nota alternativa del autor menciona a Hera, pero no se atribuye una relación privada canónica más allá de lo que las fuentes sostengan.
+- **[Alfia](alfia.md):** hermana gemela reportada. No se presupone que todos los personajes conozcan ese vínculo.
+- **[Bell Cranel](../bell-cranel.md):** maternidad reportada por fuentes comunitarias; spoiler mayor.
+- **[Hera Familia](../../familias/hera-familia.md):** afiliación previa reportada; no se infiere una relación privada con Hera fuera de lo documentado.
+- **[Zeus](../zeus.md):** las wikis atribuyen a Zeus el cuidado de Bell después del nacimiento. Es un resumen secundario, no una escena primaria cotejada.
 
-## Lo que permanece pendiente
-- Pasaje de novela que confirme maternidad, parentesco y afiliación.
-- Estado biográfico y cronología exactos.
-- Identidad del padre de Bell: **no identificada en esta ficha**.
-- Separación completa entre novela principal, Astrea Record, material adaptado y escenarios alternativos.
+## Qué falta para aprobar el expediente
+1. Localizar en novela principal el pasaje de maternidad, parentesco y entrega de Bell.
+2. Distinguir lo narrado directamente de lo resumido por las wikis.
+3. Confirmar la cronología sin calcular un año absoluto por inferencia.
+4. Mantener la nota de autor, la novela principal, Astrea Record y la versión original de juego en alcances separados.
 
 ## Fuentes
-- [Meteria · DanMachi Wiki, inglés](https://danmachi.fandom.com/wiki/Meteria) — referencia comunitaria de identidad y parentesco.
-- [Meteria · DanMachi Wiki, español](https://danmachi.fandom.com/es/wiki/Meteria) — corroboración secundaria en español.
-- [Nota de Fujino Omori, escenario alternativo](https://note.com/fujinoomori/n/n629829ac3fe4) — usar únicamente para el apartado CONT-AU.
-- Investigación: DMR-021-CLM-004, DMR-021-CLM-005, DMR-029-CLM-011 y DMR-029-CLM-012.
+- [Meteria — DanMachi Wiki, inglés](https://danmachi.fandom.com/wiki/Meteria) — apariencia, salud y parentesco reportados.
+- [Meteria — DanMachi Wiki, español](https://danmachi.fandom.com/es/wiki/Meteria) — corroboración secundaria en español.
+- [Nota de Fujino Omori](https://note.com/fujinoomori/n/n629829ac3fe4) — únicamente contexto alternativo CONT-AU.
+- [DANMACHI-RESEARCH-029](../../research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md) — claims de parentesco y nota alternativa.
+- [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) — auditoría de continuidad y tareas de verificación primaria.
