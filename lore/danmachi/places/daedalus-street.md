@@ -7,7 +7,7 @@ confidence: La sinopsis oficial de DanMachi III menciona la calle en un contexto
 continuity_scope: CROSS-CONTINUITY
 source_refs: [DMR-032-SRC-001, DMR-031-SRC-007, DMR-049-SRC-001]
 claim_refs: [DMR-032-CLM-001, DMR-031-CLM-009, DMR-049-CLM-001]
-tags: [Daedalus Street, Daidalos Street, ダイダロス通り, Calle Daidalos, Orario, zona residencial, CONT-ANIME, CONT-SO]
+tags: [Daedalus Street, Daidalos Street, ダイダロス通り, Calle Daidalos, Orario, zona residencial, CONT-ANIME, CONT-SO-LN]
 ---
 
 # Daedalus Street — Calle Daidalos
@@ -23,7 +23,7 @@ La sinopsis oficial del episodio 12 de la tercera temporada nombra **ダイダ�
 La sinopsis oficial de GA Bunko para [Sword Oratoria, volumen 7](https://ga.sbcr.jp/product/9784797389340/) indica que Loki Familia obtiene una pista en Melen y comienza a investigar Daedalus Street; después resume que Ais y los demás acorralan a remanentes de Evilus.
 
 - **Claim:** [DMR-049-CLM-001](../research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md#dmr-049-clm-001).
-- **Continuidad:** `CONT-SO`, separada de la mención del anime registrada arriba.
+- **Continuidad:** `CONT-SO-LN`, separada de la mención del anime registrada arriba.
 - **Alcance:** la sinopsis confirma la función narrativa de Daedalus Street como objetivo de investigación en este volumen; no aporta una descripción topológica detallada ni demuestra que la primera mención del lugar ocurra en la novela principal.
 - **Limitación:** la fuente es una sinopsis de volumen, no el pasaje narrativo completo. El trazado, las distancias y el nombre/localización de lugares cercanos siguen pendientes.
 
@@ -43,7 +43,7 @@ Estos detalles se registran como **pistas secundarias**, no como geografía ofic
 
 ## Estado y próximos cotejos
 
-- Estado de la existencia del lugar: parcial; la mención oficial de anime está en `CONT-ANIME` y el objetivo de investigación del volumen 7 de Sword Oratoria en `CONT-SO`.
+- Estado de la existencia del lugar: parcial; la mención oficial de anime está en `CONT-ANIME` y el objetivo de investigación del volumen 7 de Sword Oratoria en `CONT-SO-LN`.
 - Posición exacta y límites: pendiente; la sinopsis de Sword Oratoria no da un plano ni distancias.
 - Descripción residencial y topología: secondary_checked.
 - Relación con el orfanato de Maria: pista secundaria; no se activa aún una relación institucional ni se inventa una posición cartográfica.
