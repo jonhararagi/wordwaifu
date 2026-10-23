@@ -1537,7 +1537,7 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_character_summary
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-003]
+- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003]
 - continuity_scope: CONT-AR
 - reliability_note: Do not infer aliases without a primary passage.
 - rights_note: Link and paraphrase only; do not copy article prose.
@@ -1585,7 +1585,7 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_familia_summary
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-004, DMR-029-CLM-005]
+- claims_supported: [DMR-029-CLM-004, DMR-029-CLM-005, DMR-045-CLM-002]
 - continuity_scope: CONT-MAIN-LN
 - reliability_note: Roster and individual actions require primary checks.
 - rights_note: Link and paraphrase only; do not copy article prose.
@@ -2424,3 +2424,22 @@ verification_status: stub
 - reliability_note: Fuente de contexto, no cronología primaria.
 - verified_by: DANMACHI-RESEARCH-044
 - verification_status: secondary_checked
+
+
+## DMR-045-SRC-001 · Anuncio oficial de la novelización de Astrea Record
+- source_id: DMR-045-SRC-001
+- title: ダンメモ3周年記念シナリオ「偉大冒険譚 アストレア・レコード」の書籍化が決定！
+- creator_or_publisher: Portal oficial de DanMachi / comité de publicación
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi / Memoria Freese / Astrea Record
+- language: Japonés
+- official_url: https://danmachi.com/news/news131.php
+- accessed_at: 2026-10-23
+- locator_type: official_publication_notice
+- locator: Noticia del 2022-06-14; identifica Astrea Record como historia larga del tercer aniversario del juego y anuncia tres volúmenes de GA Bunko revisados por Fujino Omori.
+- claims_supported: [DMR-045-CLM-001]
+- continuity_scope: CROSS-CONTINUITY
+- reliability_note: Fuente oficial de procedencia editorial; no confirma hechos individuales o habilidades.
+- rights_note: Enlace y paráfrasis solamente; no copiar texto promocional.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked
