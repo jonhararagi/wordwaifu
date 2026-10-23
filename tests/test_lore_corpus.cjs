@@ -631,7 +631,7 @@ assert.ok(swordOratoriaVol6Preview && swordOratoriaVol6Preview.url === "https://
 const swordOratoriaSynopsisClaim = index.claims.find(item => item.claimId === "DMR-044-CLM-010");
 assert.ok(swordOratoriaSynopsisClaim?.sourceUrls.includes("https://ga.sbcr.jp/product/9784797388466/") && !swordOratoriaSynopsisClaim.sourceUrls.includes("https://r.binb.jp/epm/e1_27313_02062016113152/"), "The Sword Oratoria vol. 6 synopsis claim must not misrepresent inaccessible sample pages as read evidence.");
 const volume20OfficialSource = historicalWikiSourceDirectory.find(item => item.id === "official-ga-main-v20");
-assert.ok(volume20OfficialSource && volume20OfficialSource.url === "https://ga.sbcr.jp/product/9784815628697/" && volume20OfficialSource.limits.includes("no verifica nivel"), "The official volume 20 publisher page must be searchable with its character-claim limitation visible.");
+assert.ok(volume20OfficialSource && volume20OfficialSource.url === "https://ga.sbcr.jp/product/9784815628697/" && volume20OfficialSource.limits.includes("no menciona a Maxim"), "The official volume 20 publisher page must be searchable with its character-claim limitation visible.");
 const maximHistoricalClaim = index.claims.find(item => item.claimId === "DMR-044-CLM-001");
 assert.ok(maximHistoricalClaim?.sourceUrls.includes("https://danmachi.fandom.com/wiki/Maxim") && !maximHistoricalClaim.sourceUrls.includes("https://ga.sbcr.jp/product/9784815628697/"), "The volume 20 editorial synopsis must not be treated as evidence for Maxim's level, office or history.");
 
