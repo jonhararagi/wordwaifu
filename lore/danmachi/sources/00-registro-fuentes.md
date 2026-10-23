@@ -2569,7 +2569,7 @@ verification_status: stub
 - claims_supported: [DMR-045-CLM-005]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN
-- reliability_note: Fuente secundaria que interpreta tres nombres como alusiones a personajes históricos. Sirve para encontrar el pasaje primario, no para verificar una escena, parentesco o capacidad individual.
+- reliability_note: Fuente secundaria que lista los nombres japoneses de tres armas de Leon y menciona por separado a Alfia/Zald como héroes de su pasado. No establece explícitamente una correspondencia uno-a-uno; sirve como pista para cotejar el texto primario, no para verificar escenas, parentescos o capacidades.
 - rights_note: Enlace y paráfrasis breve; no reproducir el artículo
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: secondary_checked
