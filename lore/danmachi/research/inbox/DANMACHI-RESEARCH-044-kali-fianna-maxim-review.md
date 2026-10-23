@@ -177,6 +177,24 @@
 - spoiler_level: moderate
 - confidence_note: Paratexto oficial, no sustituto del volumen.
 
+### DMR-044-CLM-011 · Helga dentro del anuncio oficial de Knights of Fianna
+
+- claim_id: DMR-044-CLM-011
+- claim: El anuncio de WFS fechado el 23 de junio de 2022 presenta el evento de quinto aniversario de Memoria Freese, ナイツ・オブ・フィアナ (Knights of Fianna), como una historia original escrita por Fujino Omori y narrada con voces. El comunicado describe el recorrido histórico de los Caballeros de Fianna y enumera a Helga (CV: Ayaka Suwa) entre sus personajes. Esto confirma la inclusión y el contexto oficial de Helga en el relato del juego; no valida por sí solo todos los datos biográficos de la wiki ni la relación de reencarnación con Lyra.
+- character_ids: CHAR-HELGA
+- aspect: procedencia del relato, inclusión oficial en el juego y alcance probatorio
+- era_or_interval: evento de quinto aniversario publicado el 2022-06-23
+- continuity_scope: CONT-GAME
+- source_id: DMR-044-SRC-011
+- source_title: Knights of Fianna — anuncio oficial de WFS
+- source_type: OFFICIAL_REFERENCE
+- source_locator: Anuncio de lanzamiento y sección de personajes anunciados; Helga / Suwa Ayaka
+- source_url: https://www.wfs.games/news/20220623_01.html
+- evidence_type: official_game_event_announcement
+- verification_status: source_checked
+- spoiler_level: mild
+- confidence_note: Fuente oficial del evento y del elenco anunciado. No confirma los detalles atribuidos por la wiki ni la reencarnación Helga–Lyra.
+
 ## Fuentes registradas
 ### DMR-044-SRC-001 · Maxim — DanMachi Wiki
 - source_id: DMR-044-SRC-001
