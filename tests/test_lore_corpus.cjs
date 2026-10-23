@@ -535,6 +535,17 @@ assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-
 
 
 
+// DMR-047: one partial publisher-preview location remains isolated from adaptation/Prototype geography.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-047-orario-north-plaza-volume2-preview.md"), "DMR-047 must be in the default research manifest.");
+const northPlazaSearch = corpus.search(index, { query: "Orario norte plaza semicircular avenida principal Eina equipo", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(northPlazaSearch.results.some(item => item.claimId === "DMR-047-CLM-001" && item.verificationStatus === "source_checked_excerpt_only"), "The publisher-preview plaza detail must be searchable with its partial-excerpt status.");
+assert.ok(catalog.records.some(record => record.id === "LOC-ORARIO-NORTH-PLAZA" && record.path === "places/north-plaza.md" && record.status === "source_checked_excerpt_only"), "The north plaza must be a separately navigable location with explicit evidence limits.");
+assert.ok(corpus.searchEntities(catalog, { type: "location", query: "plaza semicircular norte Orario" }).results.some(entity => entity.id === "LOC-ORARIO-NORTH-PLAZA"), "The unnamed northern plaza must be discoverable through location search.");
+assert.ok(index.relationships.some(edge => edge.id === "REL-ORARIO-NORTH-PLAZA-OF-ORARIO" && edge.from === "LOC-ORARIO-NORTH-PLAZA" && edge.to === "LOC-ORARIO" && edge.continuity === "CONT-MAIN-LN" && edge.claimRef === "DMR-047-CLM-001" && edge.evidenceStatus === "source_checked_excerpt_only"), "The location relation must carry the exact claim, continuity and evidence status.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-volume-02-trial" && source.url === "https://ga.sbcr.jp/sp/danmachi/trial02.pdf" && source.authority.includes("Extracto editorial")), "The official publisher preview must appear in the live source directory.");
+const northPlazaPrototypeSearch = corpus.search(index, { query: "Orario norte plaza semicircular avenida principal", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(!northPlazaPrototypeSearch.results.some(item => item.claimId === "DMR-047-CLM-001"), "The main-novel excerpt must not leak into Prototype continuity.");
+
 // DMR-044 historical dossiers: default retrieval and game-continuity isolation.
 assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md"),"DMR-044 must be in the research manifest.");
 for(const id of ["CHAR-MAXIM","CHAR-HELGA","CHAR-ARGANA-KALIF","CHAR-BACHE-KALIF","CHAR-SELDAS"]) {
