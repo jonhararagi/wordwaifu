@@ -86,6 +86,24 @@
 - spoiler_level: mild
 - confidence_note: Confirma la inclusión y revisión editorial del relato, no cada hecho narrativo que contiene. Las afirmaciones específicas del relato que se usan en otras fichas continúan delimitadas a CONT-AU; no trasladarlas a CONT-MAIN-LN ni a CONT-AR.
 
+### DMR-045-CLM-005 · Nombres atribuidos a armas de Leon: pista secundaria para cotejar el volumen 20
+
+- claim_id: DMR-045-CLM-005
+- claim: Un artículo japonés de análisis secundario enumera las doce armas asociadas al hechizo de Leon, ブレイズ・オブ・ラウンド, y transcribe para la octava, novena y undécima las formas ザルドー, アルフィアー y マキシマム. En una sección distinta, el mismo artículo menciona a Alfia y Zald entre los héroes históricos que derrotaron a Leon e influyeron en él. El artículo no demuestra de forma explícita una correspondencia uno-a-uno entre cada nombre de arma y un personaje, ni confirma a Maxim como identidad histórica por sí solo. Se registra solo como pista secundaria para localizar y cotejar el texto de la novela; no prueba aparición física, flashback biográfico, parentesco, habilidades ni relaciones personales.
+- character_ids: []
+- aspect: pista de localización de pasaje en DanMachi volumen 20
+- era_or_interval: DanMachi volumen 20; localizador narrativo primario pendiente
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-004
+- source_title: Leon Vardenburg — análisis secundario de las doce armas
+- source_type: COMMUNITY_ARTICLE
+- source_locator: Sección sobre ブレイズ・オブ・ラウンド y las armas octava, novena y undécima
+- source_url: https://manga-tantei.com/danmachileon-18686
+- evidence_type: secondary_interpretation_of_novel
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: El artículo informa esos nombres de armas y menciona por separado a Alfia/Zald en la biografía de Leon; la correspondencia exacta entre nombres y héroes es una hipótesis por cotejar, no una afirmación explícita verificada. No crear aristas del grafo. La sinopsis editorial oficial de volumen 20 no confirma estos detalles.
+
 ### Precisión de procedencia autoral — revisión de continuidad (2026-10-23)
 
 - `DMR-029-CLM-012` y `DMR-029-SRC-016` corresponden a la nota publicada por Fujino Omori «それは遥か彼方の静穏の夢». La nota se consulta directamente y se clasifica como `source_checked_excerpt_only` únicamente dentro de `CONT-AU`: es evidencia primaria de lo que plantea ese escenario alternativo, no una escena de la novela principal.

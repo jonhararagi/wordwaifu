@@ -574,12 +574,13 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir pruebas para dossier manual de Meteria, recuperación de los tres claims, continuidad y procedencia.
 - [x] Incorporar al directorio de fuentes la nota oficial de Fujino Omori con advertencia explícita `CONT-AU`; clasificar `DMR-029-CLM-012` como `source_checked_excerpt_only` y probar que no se filtre a `CONT-MAIN-LN`.
 - [x] Comprobar que las sinopsis editoriales oficiales de Astrea Record 1–3 y DanMachi 20 no se utilizan como evidencia de relaciones o capacidades individuales.
+- [x] Registrar DMR-045-CLM-005 como pista secundaria sobre los nombres atribuidos a tres armas de Leon; conservar `secondary_checked` y no crear relaciones canónicas con Alfia/Zald/Maxim.
 - [x] Registrar el lector oficial de muestra de Astrea Record 1 como `DMR-045-SRC-003` y hacerlo visible en el navegador de fuentes, marcado `metadata_checked_only` y sin claims, porque la extracción no expone el texto narrativo.
 - [x] Enlazar desde las fichas de Alfia y Zald el escenario autoral `CONT-AU` como sección independiente; probar que la búsqueda de ese claim ofrece las dos rutas de ficha sin filtrarlo a `CONT-MAIN-LN`.
 - [x] Añadir al grafo de conocimiento las relaciones de cuidado Alfia/Zald → Bell y la mención Meteria → Bell dentro de `CONT-AU`, con procedencia `DMR-029-CLM-012`, extremos activos y pruebas de que no se filtran al canon principal.
 - [x] Crear la ficha `events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md` como ruta independiente para el escenario CONT-AU, con Alfia, Zald, Meteria y Bell enlazados por cuatro aristas trazables; mantenerla fuera de `timeline/eras-and-events.json`.
 - [ ] Cotejar Astrea Record vols. 1–3 para Alfia, Zald y Erebus, con edición/volumen/capítulo reproducible.
-- [ ] Localizar en DanMachi vol. 20 el recuerdo de Alfia/Zald y el parentesco de Meteria con Bell.
+- [ ] Cotejar el texto accesible de DanMachi vol. 20 para determinar qué menciones exactas contiene sobre Alfia/Zald/Meteria/Bell; separar los nombres de armas de Leon reportados por fuentes secundarias de una escena biográfica y no dar por confirmado el parentesco sin localizador primario.
 - [ ] Resolver en DanMachi vols. 13–14 la escena de Rudra y separar la responsabilidad de Rudra, Jura y su Familia.
 
 **Estado factual:** fichas más completas y buscables; el lote sigue en secondary_checked_with_primary_gaps. No se declara verificación primaria de las biografías.
