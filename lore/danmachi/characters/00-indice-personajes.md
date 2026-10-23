@@ -12,7 +12,7 @@ Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.m
 
 - Núcleo de Astrea Record: Ryu, Astrea, Alise y Astrea Familia; sinopsis oficiales para el marco, con acciones individuales pendientes de capítulo/página.
 - Antagonistas de alto impacto según fuentes secundarias: Alfia, Zald y Erebus. Motivaciones y actos individuales requieren localizador primario.
-- Candidatos pendientes: Valletta Grede y Thanatos. Sus aristas están marcadas pending_verification y no prueban afiliación ni participación.
+- Valletta Grede y Thanatos: las wikis inglesas informan afiliación a Evilus y debut en Sword Oratoria vol. 7; sus expedientes ahora conservan detalles como evidencia secundaria. Su participación individual en el núcleo de Astrea Record sigue sin confirmar.
 - Pasado de las hermanas Hiryute: Tiona y Tione conservan historias distintas. La sinopsis oficial confirma el marco del volumen 6; algunos detalles de infancia siguen siendo secundarios.
 
 ## Personajes, deidades y grupos con ficha individual
@@ -21,6 +21,8 @@ Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.m
 |---|---|---|---|---|
 | Ais Wallenstein | `DM-CHAR-AIS` | Personaje | `draft` | [Abrir](ais-wallenstein.md) |
 | Aisha Belka | `CHAR-AISHA-BELKA` | Personaje | `source_checked_partial` | [Abrir](aishabelka.md) |
+| Albert Waldstein | `CHAR-ALBERT-WALDSTEIN` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](albert-waldstein.md) |
+| Aria | `CHAR-ARIA` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](aria.md) |
 | Alfia | `CHAR-DARK-ALFIA` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/alfia.md) |
 | Alfrigg Gulliver | `CHAR-ALFRIGG-GULLIVER` | Personaje | `source_checked_partial` | [Abrir](alfrigggulliver.md) |
 | Alise Lovelace | `CHAR-ALISE-LOVELACE` | Personaje | `provisional` | [Abrir](alise-lovelace.md) |

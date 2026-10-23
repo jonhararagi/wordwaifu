@@ -21,7 +21,7 @@ aliases:
   - "Maryuu Reage"
   - "マリュー・レアージュ"
 ---
-# Mariyu Leage
+# Mariyu Reage (variante heredada: Leage)
 
 **Alcance:** perfil de la adaptación oficial; mantenerlo separado del detalle de Astrea Record y de cualquier inferencia novelística.
 
@@ -33,7 +33,7 @@ aliases:
 - **Retrato oficial de referencia:** https://danmachi.com/danmachi4/character/images/chara_tachi_26.png
 - **Procedencia de la imagen:** enlazada desde el sitio oficial; no se copia ni se presenta como ilustración de una escena concreta.
 
-El perfil oficial escribe マリュー・レアージュ, la identifica como humana y la incluye en Astrea Familia. WordWaifu mantiene un ID canónico y hace que las romanizaciones Mariyu Leage, Mariyu Reage y Maryuu Reage lleven a la misma ficha.
+El perfil oficial escribe マリュー・レアージュ, la identifica como humana y la incluye en Astrea Familia. WordWaifu conserva el ID heredado CHAR-MARIYU-LEAGE para no romper enlaces; «Mariyu Reage» es el nombre visible elegido y «Mariyu Leage» queda como variante de romanización y búsqueda junto a «Maryuu Reage».
 
 ## Relaciones y navegación
 

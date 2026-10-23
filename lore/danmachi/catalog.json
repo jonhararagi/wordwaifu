@@ -466,8 +466,8 @@
       "path": "characters/maryuu-reage.md",
       "type": "character",
       "tags": [
-        "Mariyu Leage",
         "Mariyu Reage",
+        "Mariyu Leage",
         "Maryuu Reage",
         "Astrea Familia",
         "Familia Astrea",
@@ -1091,13 +1091,16 @@
       "tags": [
         "Jura Halmer",
         "Era Oscura",
-        "Astrea Record",
         "needs source check",
         "CONT-MAIN-LN",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "Juggernaut",
+        "Crimson Whip",
+        "DanMachi vol. 13",
+        "secondary evidence"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -1122,13 +1125,15 @@
       "tags": [
         "Thanatos",
         "Era Oscura",
-        "Astrea Record",
         "needs source check",
-        "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "Evilus",
+        "Sword Oratoria vol. 7",
+        "CONT-SO",
+        "secondary evidence"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -1138,13 +1143,15 @@
       "tags": [
         "Valletta Grede",
         "Era Oscura",
-        "Astrea Record",
         "needs source check",
-        "CONT-AR",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "Evilus",
+        "Sword Oratoria vol. 7",
+        "CONT-SO",
+        "secondary evidence"
       ],
-      "status": "pending_primary_text_check",
+      "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
     },
     {
@@ -2424,6 +2431,39 @@
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-ALBERT-WALDSTEIN",
+      "path": "characters/albert-waldstein.md",
+      "type": "character",
+      "tags": [
+        "Albert Waldstein",
+        "Albert",
+        "Ais Wallenstein",
+        "Aria",
+        "Black Dragon",
+        "Sword Oratoria",
+        "secondary evidence",
+        "CROSS-CONTINUITY"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
+    },
+    {
+      "id": "CHAR-ARIA",
+      "path": "characters/aria.md",
+      "type": "character",
+      "tags": [
+        "Aria",
+        "Ais Wallenstein",
+        "Albert Waldstein",
+        "spirit reported",
+        "ancient history",
+        "secondary evidence",
+        "CROSS-CONTINUITY"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -2434,16 +2474,6 @@
     },
     {
       "id": "CHAR-ZARD",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-ALBERT-WALDSTEIN",
-      "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-ARIA",
       "type": "character",
       "status": "candidate_not_created"
     },
@@ -3313,9 +3343,15 @@
       "path": "research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md",
       "type": "character_profile_and_ability_research",
       "status": "secondary_checked_with_primary_gaps"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-043",
+      "path": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
+      "type": "character_profile_and_continuity_review",
+      "status": "secondary_checked_with_primary_gaps"
     }
   ],
-  "lastStructuredSync": "2026-10-20",
+  "lastStructuredSync": "2026-10-22",
   "relationships": [
     {
       "id": "REL-ASTREA-DEITY-001",
@@ -6297,29 +6333,29 @@
       "id": "REL-VALLETTA-EVILUS-INVESTIGATION",
       "from": "CHAR-DARK-VALLETTA-GREDE",
       "to": "GRP-EVILUS",
-      "kind": "investigation_candidate",
-      "label": "pista potencial sobre Evilus; afiliación NO confirmada",
-      "continuity": "CONT-AR",
+      "kind": "reported_association",
+      "label": "Afiliación histórica a Evilus reportada por wiki; localizador primario pendiente",
+      "continuity": "CONT-SO",
       "interval": "Periodo potencial de Era Oscura; no confirmado",
-      "evidenceStatus": "pending_verification",
-      "evidenceType": "discovery_lead_only",
-      "claimRef": "DMR-038-CLM-008",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "Ruta de investigación, no afirmación canónica."
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_character_profile",
+      "claimRef": "DMR-043-CLM-005",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
+      "note": "Perfil reportado en Sword Oratoria vol. 7; no demuestra participación en el núcleo de Astrea Record."
     },
     {
       "id": "REL-THANATOS-EVILUS-INVESTIGATION",
       "from": "CHAR-DARK-THANATOS",
       "to": "GRP-EVILUS",
-      "kind": "investigation_candidate",
-      "label": "pista potencial sobre Evilus; afiliación NO confirmada",
-      "continuity": "CONT-AR",
+      "kind": "reported_association",
+      "label": "Afiliación a Evilus reportada por wiki; no prueba autoridad sobre todas las facciones",
+      "continuity": "CONT-SO",
       "interval": "Periodo potencial de Era Oscura; no confirmado",
-      "evidenceStatus": "pending_verification",
-      "evidenceType": "discovery_lead_only",
-      "claimRef": "DMR-038-CLM-008",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
-      "note": "Ruta de investigación, no afirmación canónica."
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_character_profile",
+      "claimRef": "DMR-043-CLM-006",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
+      "note": "Perfil reportado en Sword Oratoria vol. 7; no demuestra participación en el núcleo de Astrea Record."
     },
     {
       "id": "REL-VALLETTA-ASTREA-RECORD-INVESTIGATION",
@@ -6387,9 +6423,9 @@
       "interval": "T-5 aproximado, referencia secundaria",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_compendium",
-      "claimRef": "DMR-029-CLM-004",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md",
-      "note": "El vínculo es una ruta secundaria para leer el arco; orden, mecanismos y acciones individuales deben verificarse en la novela principal."
+      "claimRef": "DMR-043-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
+      "note": "Vínculo con el Juggernaut según resumen comunitario; CONT-MAIN-LN, localizador primario pendiente."
     },
     {
       "id": "REL-ORARIO-PROTOTYPE-LOC-ORARIO-CENTRAL-PARK-PROTOTYPE",
@@ -6488,6 +6524,48 @@
       "claimRef": "DMR-042-CLM-009",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-042-olivas-act-dossier.md",
       "note": "El borde facilita navegar entre fichas y no declara amistad, subordinación ni alianza permanente."
+    },
+    {
+      "id": "REL-ALBERT-FATHER-AIS-SECONDARY",
+      "from": "CHAR-ALBERT-WALDSTEIN",
+      "to": "DM-CHAR-AIS",
+      "kind": "father_of",
+      "label": "Padre de Ais según ficha comunitaria; cotejo primario pendiente",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "pasado remoto reportado; fechas y circunstancias exactas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_character_relationship",
+      "claimRef": "DMR-043-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
+      "note": "No resuelve el origen temporal de Ais."
+    },
+    {
+      "id": "REL-ARIA-MOTHER-AIS-SECONDARY",
+      "from": "CHAR-ARIA",
+      "to": "DM-CHAR-AIS",
+      "kind": "mother_of",
+      "label": "Madre de Ais según ficha comunitaria; cotejo primario pendiente",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "pasado remoto reportado; fechas y circunstancias exactas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_character_relationship",
+      "claimRef": "DMR-043-CLM-003",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
+      "note": "El parentesco no confirma cómo Ais llegó al presente."
+    },
+    {
+      "id": "REL-ALBERT-ARIA-PARTNER-SECONDARY",
+      "from": "CHAR-ALBERT-WALDSTEIN",
+      "to": "CHAR-ARIA",
+      "kind": "spouse_of",
+      "label": "Relación conyugal Albert–Aria reportada por wiki",
+      "continuity": "CROSS-CONTINUITY",
+      "interval": "pasado remoto reportado; fechas y circunstancias exactas pendientes",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_character_relationship",
+      "claimRef": "DMR-043-CLM-001",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
+      "note": "No se asigna cronología absoluta ni se infiere la mecánica temporal."
     }
   ]
 }

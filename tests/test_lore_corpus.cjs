@@ -315,6 +315,27 @@ assert.ok(!aliseHistorical.results.some(claim => claim.claim.includes("directa y
 const aliseAdaptation = corpus.search(index, { query: "Alise", characterId: "CHAR-ALISE-LOVELACE", continuity: "CONT-ANIME", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(aliseAdaptation.results.some(claim => claim.entryId === "DMR-002-CLM-019--CONT-ANIME"));
 
+
+// DMR-043: new historical profiles and secondary claims stay searchable with provenance.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md"), "DMR-043 must load into default lore retrieval.");
+for (const id of ["CHAR-ALBERT-WALDSTEIN","CHAR-ARIA"]) {
+  assert.ok(corpus.getDefaultDetailIds().includes(id), "New historical character must be in the detail manifest: " + id);
+  assert.equal(index.profileDetails[id]?.id,id,"Historical character detail must resolve by stable ID: " + id);
+}
+const albertSearch=corpus.search(index,{query:"Albert Waldstein",continuity:"ALL",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(albertSearch.results.some(item=>item.claimId==="DMR-043-CLM-001"&&item.verificationStatus==="secondary_checked"&&item.sourceUrls.some(url=>url.includes("danmachi.fandom.com/wiki/Albert_Waldstein"))),"Albert must be searchable with wiki provenance.");
+const ariaSearch=corpus.search(index,{query:"Aria Ais madre",continuity:"ALL",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(ariaSearch.results.some(item=>item.claimId==="DMR-043-CLM-003"&&item.verificationStatus==="secondary_checked"),"Aria's reported family relation must stay secondary.");
+const juraSearch=corpus.search(index,{query:"Jura collar Lambton",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(juraSearch.results.some(item=>item.claimId==="DMR-043-CLM-008"&&item.verificationStatus==="secondary_checked"),"Jura equipment details must be retrievable in main-novel continuity.");
+for(const [id,url] of [
+ ["community-albert-waldstein-en","https://danmachi.fandom.com/wiki/Albert_Waldstein"],
+ ["community-valletta-grede","https://danmachi.fandom.com/wiki/Valletta_Grede"],
+ ["community-thanatos","https://danmachi.fandom.com/wiki/Thanatos"],
+ ["community-jura-halmer-es","https://danmachi.fandom.com/es/wiki/Jura_Halmer"],
+ ["yenpress-danmachi-13","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel"]
+]) assert.ok(corpus.getOnlineSourceDirectory().some(source=>source.id===id&&source.url===url),"Missing research source directory entry: "+id);
+
 process.stdout.write("PASS lore search: source claims and entries, Astrea wiki research, volume 21 claims, Familia dossiers, continuity split and abstention verified.\n");
 
 (async () => {

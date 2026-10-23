@@ -50,8 +50,28 @@ for (const id of ["CHAR-TIONA-HIRYUTE","CHAR-TIONE-HIRYUTE"]) {
 }
 assert.ok(catalog.relationships.some(e => e.id === "REL-TIONA-KALI-PAST-001" && e.evidenceStatus === "secondary_checked"), "Tiona/Kali edge must remain visibly secondary.");
 assert.ok(catalog.relationships.some(e => e.id === "REL-TIONE-KALI-PAST-001" && e.evidenceStatus === "secondary_checked"), "Tione/Kali edge must remain visibly secondary.");
-for (const id of ["REL-VALLETTA-EVILUS-INVESTIGATION","REL-THANATOS-EVILUS-INVESTIGATION"]) {
-  assert.ok(catalog.relationships.some(e => e.id === id && e.evidenceStatus === "pending_verification" && /NO confirmada/i.test(e.label)), id + " must remain a research lead.");
+for (const [id,claim] of [["REL-VALLETTA-EVILUS-INVESTIGATION","DMR-043-CLM-005"],["REL-THANATOS-EVILUS-INVESTIGATION","DMR-043-CLM-006"]]) {
+  assert.ok(catalog.relationships.some(e => e.id === id && e.evidenceStatus === "secondary_checked" && e.claimRef === claim && /wiki|reportad|secundari/i.test(e.label + " " + e.note)), id + " must show the researched secondary affiliation without promoting it to primary canon.");
+}
+for (const id of ["CHAR-ALBERT-WALDSTEIN","CHAR-ARIA"]) {
+  const record = byId.get(id);
+  assert.ok(record && record.type === "character", "Missing newly activated historical character: " + id);
+  assert.ok(record.path && fs.existsSync(path.join(loreRoot,record.path)), "Missing historical character route: " + id);
+  assert.match(fs.readFileSync(path.join(loreRoot,record.path),"utf8"), new RegExp("^id:\\s*" + id + "\\s*$","m"), "Markdown ID mismatch: " + id);
+  assert.ok(!catalog.reservedIds.some(item => (typeof item === "string" ? item : item.id) === id), id + " must no longer remain reserved.");
+  const dossier = dossierApi.get(id);
+  assert.ok(dossier, "Missing UI dossier: " + id);
+  for (const field of ["appearance","history","personality","abilities","relationships","conflict"]) assert.ok(typeof dossier[field] === "string" && dossier[field].length >= 100, id + " needs substantive " + field);
+  assert.ok(Array.isArray(dossier.sources) && dossier.sources.length > 0, id + " must retain sources");
+}
+assert.ok(catalog.documents.some(d => d.document_id === "DOC-DANMACHI-RESEARCH-043" && d.path === "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md"), "Missing DMR-043 package registration.");
+for (const id of ["REL-ALBERT-FATHER-AIS-SECONDARY","REL-ARIA-MOTHER-AIS-SECONDARY","REL-ALBERT-ARIA-PARTNER-SECONDARY"]) {
+  assert.ok(catalog.relationships.some(e => e.id === id && e.evidenceStatus === "secondary_checked" && e.claimPath === "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md"), "Missing source-bounded family relation: " + id);
+}
+for (const id of ["CHAR-DARK-JURA-HALMER","CHAR-DARK-THANATOS","CHAR-DARK-VALLETTA-GREDE"]) {
+  const file = fs.readFileSync(path.join(loreRoot,byId.get(id).path),"utf8");
+  assert.match(file,/continuity_scope: CONT-(MAIN-LN|SO)/,id + " must use a defined story continuity.");
+  assert.doesNotMatch(file,/continuity_scope: CONT-AR/,id + " must not be automatically merged into Astrea Record.");
 }
 assert.ok(catalog.relationships.some(e => e.id === "REL-ALFIA-ASTREA-RECORD-EVENT" && e.evidenceStatus === "secondary_checked"), "Alfia route must keep secondary evidence state.");
 assert.ok(catalog.relationships.some(e => e.id === "REL-ZALD-ASTREA-RECORD-EVENT" && e.evidenceStatus === "secondary_checked"), "Zald route must keep secondary evidence state.");

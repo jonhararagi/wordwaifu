@@ -6,6 +6,7 @@
 - [Índice narrativo de la Era Oscura](characters/dark-era/00-indice-era-oscura.md) — protagonistas, antagonistas, Evilus y rutas temporales separadas.
 - [Pasado de Tiona y Tione en Sword Oratoria](events/timeline/EVT-DM-SO6-HIRYUTE-PAST-001.md) — Melen, Kali Familia y las preguntas pendientes del volumen 6.
 - [Matriz DMR-038](research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md) — afirmaciones, fuentes y niveles de certeza.
+- [DANMACHI-RESEARCH-043](research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md) — Albert, Aria, Jura, Valletta, Thanatos y revisión de alias/continuidad.
 
 Este es el punto de entrada para continuar el trabajo sin repetir registros. El contenido canónico sigue siendo provisional hasta que las fichas tengan fuentes y localizadores cotejados.
 

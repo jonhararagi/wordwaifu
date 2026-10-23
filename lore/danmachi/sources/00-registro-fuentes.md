@@ -2136,3 +2136,140 @@ verification_status: stub
 - rights_note: Resumir en palabras propias; no copiar la sinopsis completa.
 - verified_by: DANMACHI-RESEARCH-042
 - verification_status: source_checked
+
+
+## DMR-043-SRC-001 · Albert Waldstein — DanMachi Wiki en inglés
+- source_id: DMR-043-SRC-001
+- title: Albert Waldstein — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Albert_Waldstein
+- locator_type: community_character_article
+- locator: Alias, familiares, apariencia, historia y habilidades atribuidas.
+- claims_supported: [DMR-043-CLM-001]
+- continuity_scope: CROSS-CONTINUITY
+- reliability_note: Fuente secundaria; no equivale al texto de la novela.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: secondary_checked
+
+## DMR-043-SRC-002 · Albert Waldstein — DanMachi Wiki en español
+- source_id: DMR-043-SRC-002
+- title: Albert Waldstein — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Albert_Waldstein
+- locator_type: community_character_article
+- locator: Alias, familiares, apariencia, historia y habilidad con la espada.
+- claims_supported: [DMR-043-CLM-002]
+- continuity_scope: CROSS-CONTINUITY
+- reliability_note: Contraste entre idiomas, no evidencia primaria independiente.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: secondary_checked
+
+## DMR-043-SRC-003 · Ais Wallenstein — DanMachi Wiki en inglés
+- source_id: DMR-043-SRC-003
+- title: Ais Wallenstein — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Ais_Wallenstein
+- locator_type: community_relationship_and_history_article
+- locator: Relatives, Appearance e History; registra a Albert y Aria como familiares de Ais.
+- claims_supported: [DMR-043-CLM-003, DMR-043-CLM-004]
+- continuity_scope: CROSS-CONTINUITY
+- reliability_note: Referencia secundaria para orientar la lectura, no biografía primaria completa.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: secondary_checked
+
+## DMR-043-SRC-004 · Valletta Grede — DanMachi Wiki en inglés
+- source_id: DMR-043-SRC-004
+- title: Valletta Grede — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: Sword Oratoria
+- volume_or_edition: Volumen 7 según el artículo
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Valletta_Grede
+- locator_type: community_character_article
+- locator: Alias Arachnia, afiliación, posición en Evilus, magia Shaldo, límites y destino reportados.
+- claims_supported: [DMR-043-CLM-005]
+- continuity_scope: CONT-SO
+- reliability_note: No verifica participación individual en Astrea Record.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: secondary_checked
+
+## DMR-043-SRC-005 · Thanatos — DanMachi Wiki en inglés
+- source_id: DMR-043-SRC-005
+- title: Thanatos — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- series: Sword Oratoria
+- volume_or_edition: Volumen 7 según el artículo
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Thanatos
+- locator_type: community_character_article
+- locator: Identidad divina, afiliación, aspecto, carácter y debut reportados.
+- claims_supported: [DMR-043-CLM-006]
+- continuity_scope: CONT-SO
+- reliability_note: Asociación con Evilus secundaria; no prueba participación individual en Astrea Record.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: secondary_checked
+
+## DMR-043-SRC-006 · Jura Halmer — DanMachi Wiki en español
+- source_id: DMR-043-SRC-006
+- title: Jura Halmer — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Jura_Halmer
+- locator_type: community_character_article
+- locator: Historia, personalidad, afiliación, equipo y capacidades reportadas.
+- claims_supported: [DMR-043-CLM-007]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Su rótulo de debut discrepa del artículo inglés; no es localizador primario.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: secondary_checked
+
+## DMR-043-SRC-007 · Jura Halmer — DanMachi Wiki en inglés
+- source_id: DMR-043-SRC-007
+- title: Jura Halmer — DanMachi Wiki
+- source_type: COMMUNITY_WIKI
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Jura_Halmer
+- locator_type: community_character_article
+- locator: Perfil de combate, equipo, habilidades y debut atribuidos.
+- claims_supported: [DMR-043-CLM-008]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Resumen secundario; verificar volumen y escena contra la novela.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: secondary_checked
+
+## DMR-043-SRC-008 · DanMachi volumen 13 — Yen Press
+- source_id: DMR-043-SRC-008
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 13 (light novel)
+- source_type: OFFICIAL_PUBLISHER_REFERENCE
+- series: DanMachi
+- volume_or_edition: Volumen 13; ISBN 9781975328191
+- language: Inglés
+- publication_date: 2019-03-19
+- official_url: https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel
+- locator_type: publisher_synopsis
+- locator: Sinopsis del caso de Rivira y la persecución de Ryuu/Lyu; no nombra a Jura.
+- claims_supported: [DMR-043-CLM-009]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Ancla bibliográfica, no prueba de biografía individual.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: source_checked
+
+## DMR-043-SRC-009 · Sword Oratoria volumen 1 — Yen Press
+- source_id: DMR-043-SRC-009
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon? On the Side: Sword Oratoria, Vol. 1 (light novel)
+- source_type: OFFICIAL_PUBLISHER_REFERENCE
+- series: Sword Oratoria
+- volume_or_edition: Volumen 1; ISBN 9780316318143
+- language: Inglés
+- publication_date: 2016-03-22
+- official_url: https://yenpress.com/titles/9780316318143-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-on-the-side-sword-oratoria-vol-1-light-novel
+- locator_type: publisher_synopsis
+- locator: Contexto editorial de Sword Oratoria y Ais; no nombra a Albert ni a Aria.
+- claims_supported: []
+- continuity_scope: CONT-SO
+- reliability_note: No prueba las relaciones familiares descritas por las wikis.
+- verified_by: DANMACHI-RESEARCH-043
+- verification_status: source_checked

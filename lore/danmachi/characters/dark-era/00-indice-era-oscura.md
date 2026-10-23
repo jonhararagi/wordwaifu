@@ -25,8 +25,8 @@ La cronología oficial sitúa Astrea Record unos siete años antes de la llegada
 - [Alfia](alfia.md): antagonista de impacto en resúmenes secundarios; motivaciones y acciones individuales pendientes.
 - [Zald](zald.md): figura antagonista vinculada a la historia de Zeus Familia en resúmenes secundarios.
 - [Erebus](erebus.md): figura antagonista asociada al conflicto; no fusionar alias sin prueba.
-- [Valletta Grede](valletta-grede.md): pista de investigación; el vínculo a la red permanece pendiente.
-- [Thanatos](thanatos.md): pista de investigación; función y afiliación concretas no aceptadas como hechos.
+- [Valletta Grede](valletta-grede.md): la wiki inglesa reporta afiliación histórica a Thanatos Familia, jefatura ejecutiva de Evilus y magia Shaldo; expediente CONT-SO y evidencia secundaria.
+- [Thanatos](thanatos.md): la wiki inglesa lo presenta como deidad principal de Thanatos Familia y miembro de Evilus; expediente CONT-SO y evidencia secundaria. Ninguno queda confirmado como participante del núcleo de Astrea Record.
 
 ### Facciones y sucesos
 - [Evilus: red de facciones](evilus-network.md) no equivale a una única Familia.
@@ -35,7 +35,7 @@ La cronología oficial sitúa Astrea Record unos siete años antes de la llegada
 - [Zeus Familia](../../familias/zeus-familia.md) y [Hera Familia](../../familias/hera-familia.md) pertenecen a una ruta histórica conectada pero distinta.
 
 ## Ruta B · Rudra/Jura/Juggernaut posterior (aprox. T-5, pendiente)
-- [Rudra](rudra.md) y [Jura Halmer](jura-halmer.md) pertenecen a la ruta posterior del incidente del Juggernaut. El registro de Rudra usa CONT-MAIN-LN para este arco; no debe clasificarse por defecto como participante de Astrea Record.
+- [Rudra](rudra.md) y [Jura Halmer](jura-halmer.md) pertenecen a la ruta posterior del incidente del Juggernaut. El registro de Rudra y el de Jura usan CONT-MAIN-LN para este arco; no deben clasificarse por defecto como participantes de Astrea Record. Las wikis sitúan a Jura en DanMachi vol. 13, aunque el rótulo de debut de la página española discrepa y requiere cotejo.
 - T-5 es aproximado y secundario. No fusionar este arco con el núcleo T-7 de Astrea Record.
 
 ## Ruta C · Pasado de Tiona y Tione (Sword Oratoria, intervalo independiente)

@@ -529,3 +529,17 @@ Fuentes: https://ga.sbcr.jp/product/9784815632946/ · https://ga.sbcr.jp/product
 - [ ] Resolver las diferencias entre las wikis inglesa y española y cotejar la denominación o relación con Enyo.
 
 **Estado factual:** ficha útil y recuperable; biografía todavía secundaria y pendiente de cotejo primario.
+
+
+## DANMACHI-RESEARCH-043 · personajes históricos faltantes y revisión de continuidad
+
+- [x] Activar Albert Waldstein y Aria bajo los IDs que estaban reservados; evitar fichas duplicadas y conservar las rutas como secundarias.
+- [x] Registrar el parentesco reportado de Albert y Aria con Ais sin resolver por inferencia el origen temporal de Ais.
+- [x] Ampliar Valletta Grede y Thanatos con información de las fichas inglesas y volver buscables sus perfiles de Sword Oratoria vol. 7.
+- [x] Corregir el alcance de continuidad de Valletta y Thanatos a CONT-SO; mantener pendiente su participación individual en Astrea Record.
+- [x] Expandir Jura con datos de wiki, quitar la etiqueta de Astrea Record y dejar explícita la discrepancia del rótulo de debut entre artículos.
+- [x] Revisar Mariyu/Maryuu, Ryana/Liana, Meteria, Rudra y Olivas; preservar IDs, separar adaptaciones/AU y no promover claims secundarios.
+- [x] Añadir fuentes, relaciones, recuperación por defecto y pruebas de integridad.
+- [ ] Cotejar escenas de Sword Oratoria vols. 1 y 7 y DanMachi vol. 13 con localizadores primarios legítimos antes de elevar los estados de evidencia.
+
+Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no se etiqueta como biografía primaria verificada.

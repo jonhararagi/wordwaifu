@@ -371,3 +371,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se añadieron nueve claims DMR-042 con dos fuentes registradas; los datos wiki no se elevan a verificación primaria.
 - Auditoría anterior: Maryuu/Mariyu mantiene un ID único y la separación entre perfil de adaptación y habilidades comunitarias; Ryana/Liana conserva un único ID; Meteria mantiene los parentescos reportados y el escenario CONT-AU separado; Rudra permanece en la ruta posterior CONT-MAIN-LN/T-5 y no se fusiona con el núcleo T-7 de Astrea Record.
 - Pendiente: cotejar escenas de la novela y cualquier diferencia entre wikis, además de revisar las pruebas CI tras el commit de esta tanda.
+
+
+## DANMACHI-RESEARCH-043 · Albert, Aria y corrección de la Era Oscura
+
+- Fecha de corte: 2026-10-22.
+- Se activan las identidades reservadas CHAR-ALBERT-WALDSTEIN y CHAR-ARIA con rutas Markdown, fichas de interfaz y relaciones parentales reportadas por wiki.
+- Las fichas de Albert y Aria dejan explícitas las incógnitas sobre la cronología de Ais; no se inventan Falna, niveles, habilidades o explicación temporal.
+- Valletta Grede y Thanatos pasan de fichas escuetas a expedientes secundarios utilizables con afiliación, descripción, función y limitaciones atribuidas. Su alcance se corrige a CONT-SO por la ruta reportada en Sword Oratoria vol. 7; no se declara que participen en el núcleo de Astrea Record.
+- Jura Halmer se amplía con apariencia, historia, equipo, capacidades y límites reportados por wikis. Se elimina la etiqueta de Astrea Record de sus tags, se conserva CONT-MAIN-LN y se documenta la discrepancia entre las páginas española e inglesa en el rótulo de debut.
+- La revisión de Mariyu/Maryuu alinea el nombre visible a «Mariyu Reage», conservando el ID heredado y «Leage» como variante. Ryana, Meteria, Rudra y Olivas no se elevan a evidencia primaria ni reciben relaciones personales no respaldadas.
+- Se añaden nueve claims con fuentes registradas, tres relaciones familiares secundarias y pruebas de recuperación y continuidad.
+- Pendiente: cotejar las novelas/ediciones con localizadores concretos. La sinopsis de Yen Press del volumen 13 solo establece el marco del volumen, no la biografía de Jura; la sinopsis de Sword Oratoria 1 solo brinda contexto editorial, no prueba directa de Albert o Aria.
