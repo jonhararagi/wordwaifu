@@ -104,6 +104,24 @@
 - spoiler_level: major
 - confidence_note: El artículo informa esos nombres de armas y menciona por separado a Alfia/Zald en la biografía de Leon; la correspondencia exacta entre nombres y héroes es una hipótesis por cotejar, no una afirmación explícita verificada. No crear aristas del grafo. La sinopsis editorial oficial de volumen 20 no confirma estos detalles.
 
+### DMR-045-CLM-006 · Enfrentamientos citados en un fragmento indexado de Astrea Record 3
+
+- claim_id: DMR-045-CLM-006
+- claim: Un fragmento indexado de la sinopsis editorial oficial de Astrea Record 3 afirma que, en el último día de los Siete Días de la Muerte, comienzan dos enfrentamientos: Zald contra Ottar en la superficie y Alfia contra Astrea Familia dentro del Dungeon. La ficha editorial directa devolvió HTTP 503 durante la comprobación del 2026-10-23; por ello, el claim se limita al texto visible del fragmento oficial indexado y no constituye un localizador del texto narrativo del volumen.
+- character_ids: [CHAR-DARK-ALFIA, CHAR-DARK-ZALD, CHAR-OTTAR]
+- aspect: Emparejamientos de combate y ámbitos indicados por una sinopsis editorial
+- era_or_interval: Último día de los Siete Días de la Muerte en CONT-AR; fecha absoluta, duración exacta y desarrollo desconocidos
+- continuity_scope: CONT-AR
+- source_id: DMR-045-SRC-005
+- source_title: Astrea Record 3 — fragmento indexado de la sinopsis editorial de SB Creative
+- source_type: OFFICIAL_REFERENCE
+- source_locator: Fragmento indexado de la ficha editorial que sitúa el inicio de Zald–Ottar en la superficie y Alfia–Astrea Familia dentro del Dungeon.
+- source_url: https://www.sbcr.jp/product/4815617554/
+- evidence_type: official_indexed_publisher_synopsis_excerpt
+- verification_status: source_checked_excerpt_only
+- spoiler_level: major
+- confidence_note: El fragmento solo establece los dos emparejamientos y los ámbitos generales. No confirma técnicas, niveles, acciones individuales, resultados, supervivencia, daños, duración ni orden general de otros eventos. No se transfiere a CONT-MAIN-LN.
+
 ### Precisión de procedencia autoral — revisión de continuidad (2026-10-23)
 
 - `DMR-029-CLM-012` y `DMR-029-SRC-016` corresponden a la nota publicada por Fujino Omori «それは遥か彼方の静穏の夢». La nota se consulta directamente y se clasifica como `source_checked_excerpt_only` únicamente dentro de `CONT-AU`: es evidencia primaria de lo que plantea ese escenario alternativo, no una escena de la novela principal.
