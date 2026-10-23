@@ -111,6 +111,15 @@ assert.ok(historicalWikiSourceDirectory.some(item => item.id === "community-alfi
   "Alfia's secondary wiki reference must be available from the source browser.");
 assert.ok(historicalWikiSourceDirectory.some(item => item.id === "community-zald-es" && item.url === "https://danmachi.fandom.com/es/wiki/Zald"),
   "Zald's secondary wiki reference must be available from the source browser.");
+const meteriaAuthorNoteSource = historicalWikiSourceDirectory.find(item => item.id === "official-author-note-meteria-alfia-zald-au");
+assert.ok(meteriaAuthorNoteSource && meteriaAuthorNoteSource.url === "https://note.com/fujinoomori/n/n629829ac3fe4" && meteriaAuthorNoteSource.authority.includes("continuidad alternativa") && meteriaAuthorNoteSource.limits.includes("CONT-MAIN-LN"), "The author note must be browsable with its AU-only scope and main-LN limitation visible.");
+const meteriaAuthorNoteAU = corpus.search(index, { query: "Meteria Alfia Zald crían Bell escenario alternativo", continuity: "CONT-AU", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(meteriaAuthorNoteAU.results.some(item => item.claimId === "DMR-029-CLM-012" && item.verificationStatus === "source_checked_excerpt_only" && item.sourceUrls.includes("https://note.com/fujinoomori/n/n629829ac3fe4")), "The author note must be retrievable as directly checked AU evidence with its exact source URL.");
+const meteriaAuthorNoteMain = corpus.search(index, { query: "Meteria Alfia Zald crían Bell escenario alternativo", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(!meteriaAuthorNoteMain.results.some(item => item.claimId === "DMR-029-CLM-012"), "The alternate author scenario must never leak into main light-novel search.");
+const astreaPublicationLineage = index.claims.find(item => item.claimId === "DMR-045-CLM-001");
+assert.ok(astreaPublicationLineage && astreaPublicationLineage.characterIds.length === 0 && astreaPublicationLineage.sourceUrls.includes("https://danmachi.com/news/news131.php"), "The official Astrea Record publication notice must remain bibliographic and cannot substantiate individual character dossiers.");
+
 
 assert.ok(index.relationships.some(edge => edge.id === "REL-RYU-KAGUYA-AR-ROSTER-SECONDARY" && edge.from === "CHAR-RYUU-LION" && edge.to === "CHAR-KAGUYA" && edge.evidenceStatus === "secondary_checked" && edge.claimRefs?.includes("DMR-028-CLM-003")), "The existing Ryu/Kaguya historical edge must also expose the wiki-derived moral disagreement without creating a duplicate reverse destination.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-LYRA-MEMBER-ASTREA-WIKI" && edge.from === "CHAR-LYRA" && edge.to === "DM-FAM-ASTREA" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-028-CLM-004"), "Lyra's reported membership must have a secondary-evidence relationship.");
