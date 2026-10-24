@@ -1457,9 +1457,9 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_character_summary
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-006]
-- continuity_scope: CONT-AR
-- reliability_note: Underlying novel scenes remain unchecked.
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-006, DMR-045-CLM-015]
+- continuity_scope: CONT-AR; CONT-MAIN-LN (only as a secondary index of a reported volume-20 flashback)
+- reliability_note: The page lists DanMachi volume 20 (flashback) among Alfia's light-novel appearances, but it does not identify the gray-haired witch in a specific scene or supply a chapter/page locator. Underlying novel scenes remain unchecked.
 - rights_note: Link and paraphrase only; do not copy article prose.
 - verification_status: secondary_checked
 
@@ -1489,9 +1489,9 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: official_publication_announcement
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-002, DMR-029-CLM-003]
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-002]
 - continuity_scope: CONT-AR
-- reliability_note: Confirms publication context, not every character-level claim.
+- reliability_note: Confirms publication context, not every character-level claim or Erebus's individual role.
 - rights_note: Link and paraphrase only; do not copy article prose.
 - verification_status: source_checked
 
@@ -1537,9 +1537,9 @@ verification_status: stub
 - accessed_at: 2026-10-19
 - locator_type: community_character_summary
 - locator: Summary / source scope recorded in DANMACHI-RESEARCH-029
-- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003]
-- continuity_scope: CONT-AR
-- reliability_note: Do not infer aliases without a primary passage.
+- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003, DMR-045-CLM-018]
+- continuity_scope: CONT-GAME (community profile centered on the original Memoria Freese appearance)
+- reliability_note: Keep the ideology, appearance, alias and other details tied to this wiki profile under the game scope unless the novelized version is checked separately. Do not infer aliases without a primary passage.
 - rights_note: Link and paraphrase only; do not copy article prose.
 - verification_status: secondary_checked
 
