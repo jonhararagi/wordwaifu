@@ -47,6 +47,12 @@ assert.ok(plainFieldClaim, "The parser must retain claims that use plain metadat
 assert.equal(plainFieldClaim.claim, "Esta afirmación de prueba describe una habilidad verificable");
 assert.equal(plainFieldClaim.verificationStatus, "secondary_checked");
 assert.deepEqual(plainFieldClaim.sourceUrls, ["https://example.test/lore"]);
+const secondaryOnly = corpus.search(plainFieldIndex, { query: "habilidad verificable", verificationStatus: "secondary_checked" });
+assert.equal(secondaryOnly.totalMatches, 1, "Evidence status filter must retain matching claims in the selected verification tier.");
+const sourceCheckedOnly = corpus.search(plainFieldIndex, { query: "habilidad verificable", verificationStatus: "source_checked" });
+assert.equal(sourceCheckedOnly.totalMatches, 0, "Evidence status filter must exclude claims from other verification tiers.");
+const allEvidenceStatuses = corpus.search(plainFieldIndex, { query: "habilidad verificable", verificationStatus: "ALL" });
+assert.equal(allEvidenceStatuses.totalMatches, 1, "ALL evidence status must preserve the unfiltered search behavior.");
 
 for (const id of ["CHAR-SOMA", "CHAR-ZANIS-LUSTRA", "CHAR-CHANDRA-IHIT", "CHAR-CANOE-BELWAY"]) {
   assert.equal(index.profileDetails[id]?.id, id, "Active Soma coverage profile must be available to the detail view: " + id);
