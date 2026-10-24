@@ -95,3 +95,10 @@
 **Estado:** Aprobada.  
 **Decisión:** Cuando el acceso a las novelas ligeras no esté disponible, investigar también las wikis comunitarias reconocidas en inglés y español para ampliar fichas y localizar datos. Priorizar fuentes oficiales accesibles cuando existan; etiquetar las wikis como fuentes secundarias, guardar la procedencia y no afirmar que son oficialmente autorizadas por la editorial ni convertir automáticamente sus afirmaciones en canon verificado.  
 **Motivo:** Maximizar la cobertura útil de la saga sin ocultar limitaciones de acceso ni confundir los niveles de evidencia.
+
+
+## DEC-020 — Prompt maestro operativo y prioridades de ejecución
+**Estado:** Aprobada.  
+**Decisión:** Operar como Cerebro/Obrero/Verificador y seguir el ciclo INSPECTAR → PRIORIZAR → INVESTIGAR → IMPLEMENTAR → PROBAR → REGISTRAR → INTEGRAR → VERIFICAR → INFORMAR. El destino para los cambios aprobados es `main`; las fusiones deben apoyarse en pruebas y verificaciones reales del SHA resultante. La prioridad DanMachi inmediata es cerrar la investigación pública disponible de DMR-045 antes de reanudar el trabajo general de Orario; luego siguen eventos, personajes y revisión de continuidad.  
+**Límites:** las wikis siguen siendo fuentes secundarias, los registros de conversación no equivalen a implementación y una estructura completa no certifica cobertura del canon. No crear localizadores ni hechos desconocidos.  
+**Motivo:** evitar repetición, conservar decisiones entre sesiones y terminar primero el trabajo pendiente de la prioridad activa.
