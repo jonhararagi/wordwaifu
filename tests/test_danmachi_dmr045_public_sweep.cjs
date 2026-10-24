@@ -49,7 +49,7 @@ assert.match(meteria, /dulce/);
 
 assert.match(sources, /DMR-045-CLM-015/);
 assert.match(sources, /DMR-045-CLM-018/);
-assert.match(queue, /Estado del subtrabajo:** DONE/i);
+assert.match(queue, /Estado del subtrabajo.*DONE/i);
 assert.match(queue, /PRIORIDAD ACTUAL — Etapa 1: Orario como escenario/);
 assert.match(queue, /Cotejar los localizadores primarios pendientes/i);
 
