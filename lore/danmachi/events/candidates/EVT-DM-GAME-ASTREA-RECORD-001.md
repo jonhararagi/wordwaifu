@@ -22,8 +22,11 @@ La entrevista de LN News Online publicada el 15 de octubre de 2020 enmarca a Ere
 - **[Zald](../../characters/dark-era/zald.md):** el pie editorial lo presenta como guerrero de nivel 7 de Zeus Familia, con el título 暴喰, y lo sitúa junto a Erebus en la incursión en Orario. No confirma resultado, consecuencias ni permanencia de ese nivel.
 - **[Hera Familia](../../familias/hera-familia.md)** y **[Zeus Familia](../../familias/zeus-familia.md):** afiliaciones que los pies atribuyen respectivamente a Alfia y Zald dentro de este contexto; las aristas de este nodo llevan la continuidad CONT-GAME.
 
-## El origen de Bell: límite importante
-En la misma entrevista, Omori confirma en el marco de la historia de Memoria Freese que la madre de Bell es la hermana menor de Alfia. La respuesta no pronuncia el nombre **Meteria**. Por eso este evento no crea una relación Meteria → Bell basada en esa entrevista, ni convierte la maternidad o el parentesco de la novela principal en evidencia primaria.
+## El origen de Bell: parentesco y figura paterna — CONT-GAME
+
+En la entrevista de LN News Online, Omori confirma que el nacimiento de Bell se reveló primero en DanMemo. Dentro de esa misma conversación, el entrevistador resume que la madre de Bell es la hermana menor de Alfia y que su padre era un **サポーター (supporter) de Zeus Familia**; Omori responde afirmativamente al resumen (DMR-045-CLM-008 y DMR-045-CLM-012).
+
+La fuente no da el nombre del padre ni demuestra que perteneciera formalmente a Zeus Familia: se conserva el término japonés de la entrevista, sin convertirlo en una afiliación. Tampoco pronuncia el nombre **Meteria** para la madre. Por eso este evento no crea una identidad ni una arista a un padre desconocido, no crea una relación Meteria → Bell a partir de esta entrevista y no convierte esos datos de CONT-GAME en evidencia de la novela principal o de la novelización.
 
 ## Separación de continuidades
 - **Este nodo:** CONT-GAME, historia original de Memoria Freese.
