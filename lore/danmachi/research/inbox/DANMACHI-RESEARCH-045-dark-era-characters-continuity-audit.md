@@ -53,20 +53,20 @@
 ### DMR-045-CLM-003 · Erebus, su apariencia y «Eren»: datos secundarios
 
 - claim_id: DMR-045-CLM-003
-- claim: La página comunitaria describe a Erebus como deidad masculina de cabello negro con mechones grises, ojos grises y altura reportada de 178 cm; también le atribuye el sobrenombre «Absolute Evil» y menciona «Eren» como otro nombre. La wiki lo relaciona con Evilus y sitúa su estado posterior en el Cielo. Los detalles son secundarios y «Eren» no se convierte en alias canónico ni identidad separada sin apoyo narrativo.
+- claim: La ficha comunitaria de Erebus lo presenta como deidad masculina de cabello negro con mechones grises, ojos grises y altura reportada de 178 cm; registra el sobrenombre «Absolute Evil» y menciona «Eren» como otro nombre. La misma entrada lo describe en el contexto del evento original de Memoria Freese (Astrea Record) y lo relaciona con Evilus. Estos detalles se conservan como información secundaria de la página asociada al juego: no se transfieren automáticamente a la novelización de Astrea Record. «Eren» no se acepta como alias canónico de la novela sin pasaje primario.
 - character_ids: [CHAR-DARK-EREBUS]
-- aspect: identidad divina, apariencia, afiliación y alias
-- era_or_interval: Astrea Record; escena y denominación exacta pendientes
-- continuity_scope: CONT-AR
+- aspect: identidad divina, apariencia, afiliación y alias reportados en una ficha asociada al juego
+- era_or_interval: Astrea Record original de Memoria Freese; localizador narrativo específico pendiente
+- continuity_scope: CONT-GAME
 - source_id: DMR-029-SRC-006
-- source_title: Erebus — DanMachi Wiki
+- source_title: Erebus — DanMachi Wiki en inglés
 - source_type: COMMUNITY_WIKI
-- source_locator: Summary, Characteristics, Professional Status y Personal Status
+- source_locator: Summary, Characteristics, Professional Status, Personal Status y Debuts
 - source_url: https://danmachi.fandom.com/wiki/Erebus
 - evidence_type: community_secondary_identity_profile
 - verification_status: secondary_checked
 - spoiler_level: major
-- confidence_note: La wiki no acredita jerarquía exacta dentro de Evilus ni un nivel de aventurero.
+- confidence_note: La página no demuestra una jerarquía completa dentro de Evilus ni valida por sí sola la versión de la novela. El alias «Eren» permanece sin verificar en el texto primario.
 
 ### DMR-045-CLM-004 · La edición limitada de Astrea Record 3 incluye un relato alternativo revisado
 
@@ -289,20 +289,20 @@
 ### DMR-045-CLM-015 · Pista comunitaria sobre una maga de cabello gris en el prólogo del volumen 20
 
 - claim_id: DMR-045-CLM-015
-- claim: En un hilo de discusión comunitaria presentado como comentario sobre páginas de muestra de DanMachi volumen 20, un participante resume el prólogo como el recuerdo de un testigo no identificado que observa a una maga de cabello gris usar Genos Angelus contra una criatura marina. El participante interpreta que la maga probablemente sea Alfia y propone que la criatura sea posiblemente Leviathan, pero la propia descripción expresa incertidumbre y no aporta nombre de página o capítulo interno. Se registra únicamente como pista secundaria para dirigir la búsqueda hacia el prólogo; no confirma la identidad de la maga, la criatura ni el testigo.
+- claim: Un hilo de discusión comunitaria sobre páginas de muestra de DanMachi volumen 20 resume el prólogo como el recuerdo de un testigo no identificado que observa a una maga de cabello gris usar Genos Angelus contra una criatura marina. El participante interpreta que la maga podría ser Alfia y que la criatura podría ser Leviathan, pero no proporciona un localizador interno reproducible. Como pista adicional, la página inglesa de Alfia en DanMachi Wiki también indexa DanMachi volumen 20 (flashback) entre sus apariciones en novela ligera. Esa entrada de roster da otra ruta de búsqueda, no una identificación independiente de la maga del prólogo ni una verificación del texto.
 - character_ids: [CHAR-DARK-ALFIA]
-- aspect: pista de escena histórica, uso de magia reportado y localizador primario pendiente
-- era_or_interval: DanMachi volumen 20, prólogo; fecha interna desconocida
+- aspect: pista de aparición y localizador secundario para una escena histórica
+- era_or_interval: DanMachi volumen 20, prólogo/flashback; fecha interna desconocida
 - continuity_scope: CONT-MAIN-LN
-- source_id: DMR-045-SRC-011
-- source_title: Discusión comunitaria sobre páginas de muestra de DanMachi vol. 20
-- source_type: COMMUNITY_DISCUSSION
-- source_locator: Hilo “Vol 20 preview pages”, resumen comunitario del prólogo publicado el 2024-12-06; la identidad de la maga/monstruo se plantea como interpretación, no como transcripción del libro.
-- source_url: https://www.reddit.com/r/DanMachi/comments/1h7wabo/
-- evidence_type: community_summary_of_preview
+- source_id: DMR-045-SRC-011; DMR-029-SRC-001
+- source_title: Discusión comunitaria sobre páginas de muestra de DanMachi vol. 20; Alfia — DanMachi Wiki en inglés
+- source_type: COMMUNITY_DISCUSSION; COMMUNITY_WIKI
+- source_locator: Hilo “Vol 20 preview pages”, publicado el 2024-12-06; DanMachi Wiki, apartado Debuts / Light Novel, que indexa el volumen 20 como flashback
+- source_url: https://www.reddit.com/r/DanMachi/comments/1h7wabo/; https://danmachi.fandom.com/wiki/Alfia
+- evidence_type: community_preview_summary_and_secondary_appearance_locator
 - verification_status: secondary_checked
 - spoiler_level: major
-- confidence_note: La evidencia confirma que una discusión comunitaria formula esta pista, no que las identificaciones propuestas sean correctas. El lector oficial de SB Creative no devolvió narración legible; la sinopsis oficial de Yen Press no describe la escena. No usar este claim como prueba de una derrota individual de Leviathan, para identificar a Leon como testigo, ni para elevar capacidades o relaciones de Alfia a texto primario.
+- confidence_note: Ninguna de las dos fuentes aporta aquí una página impresa comprobada. No se confirma que la maga de cabello gris sea Alfia, que la criatura sea Leviathan ni que Leon sea el testigo. La muestra oficial de SB Creative no expuso texto legible y la sinopsis editorial de Yen Press no describe la escena; el texto licenciado sigue siendo necesario.
 
 ### DMR-045-CLM-016 · Pista comunitaria sobre Afterglow en las retrospectivas de los capítulos 2 y 3 del volumen 20
 
@@ -344,11 +344,42 @@
 
 La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confirma un dato temporal que el registro anterior dejaba demasiado abierto: en esa posibilidad alternativa, Bell lleva tres años conviviendo con Alfia y Zald y está próximo a cumplir siete. La misma escena recuerda a Meteria y deja sin identificar al padre de Bell; también menciona a un abuelo en el hogar sin que este memo le asigne identidad. El dato se actualizó en `DMR-029-CLM-012` y en la ficha navegable `EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001`, con prueba regresiva. **Todo permanece en `CONT-AU`**: no resuelve los localizadores pendientes de las biografías principales de Alfia, Zald, Meteria, Erebus o Rudra y no cambia su estado en `CONT-MAIN-LN`/`CONT-AR`.
 
+### DMR-045-CLM-018 · Erebus: filosofía del mal y la justicia según la ficha comunitaria del juego
+
+- claim_id: DMR-045-CLM-018
+- claim: La ficha comunitaria inglesa dedicada a Erebus presenta, dentro del contexto de su aparición en el evento original de Memoria Freese, una filosofía según la cual el mal verdadero debe ser odiado por todos y la justicia absoluta es un ideal que debe alcanzarse y conquistarse. También lo describe como alguien proclive al aislamiento. Este resumen orienta la caracterización de Erebus en la versión del juego; no sustituye sus diálogos ni autoriza a trasladar exactamente la misma motivación a la novelización de Astrea Record.
+- character_ids: [CHAR-DARK-EREBUS]
+- aspect: filosofía, motivación y conducta social reportadas
+- era_or_interval: Astrea Record original de Memoria Freese; escenas exactas pendientes
+- continuity_scope: CONT-GAME
+- source_id: DMR-029-SRC-006
+- source_title: Erebus — DanMachi Wiki en inglés
+- source_type: COMMUNITY_WIKI
+- source_locator: Secciones Personality y Summary; página comunitaria sin paginación narrativa
+- source_url: https://danmachi.fandom.com/wiki/Erebus
+- evidence_type: community_secondary_characterization
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: Es una paráfrasis de una wiki, no una cita del juego ni una declaración directa del autor. No convertir la ideología en una jerarquía sobre Evilus ni atribuirle cada acción de la red; comprobar los diálogos de la versión que se quiera representar.
+
 ## Recuperación de las fuentes comunitarias desde la aplicación
 
 El directorio consultable de `src/lore-corpus.js` incluye entradas identificadas para las versiones inglesa y española de las fichas comunitarias relevantes para Alfia, Meteria, Zald, Erebus y Rudra/Rudra Familia. Las entradas describen el alcance de cada artículo y sus límites de atribución/continuidad; la prueba `tests/test_danmachi_lore_source_directory.cjs` evita que desaparezcan de la interfaz o se pierdan sus URLs.
 
 Esta mejora es de **descubribilidad y procedencia**, no de certeza canónica: las wikis siguen siendo evidencia secundaria. No cierra los localizadores primarios enumerados a continuación.
+
+## Cierre del barrido secundario público — 2026-10-24
+
+**Estado del subtrabajo:** DONE para las fuentes públicas consultadas; **DMR-045 sigue abierto** respecto de la verificación primaria.
+
+- La página inglesa de Alfia en DanMachi Wiki añade una ruta de búsqueda explícita: indexa una aparición retrospectiva en el volumen 20. Se enlaza a la pista del prólogo, pero no confirma que la maga de cabello gris sea Alfia.
+- La misma página atribuye a una rama de árbol sagrado procedente de un bosque élfico una mejora de la enfermedad de Alfia. Se incorpora como detalle secundario limitado, sin afirmar cura ni tratamiento validado en la novela.
+- La página inglesa de Erebus describe su ideología y tendencia al aislamiento en el contexto del juego. Se registra bajo `CONT-GAME`, sin trasladar automáticamente la psicología a la novelización.
+- La nota pública de Omori respalda un recuerdo de Meteria sobre la comida solo dentro de su escenario alternativo; queda etiquetado `CONT-AU`.
+- El plan posterior de Jura para reproducir y controlar el Juggernaut ya está descrito en la ficha de Jura y en DMR-043-CLM-007/008/009; se reutiliza ese trabajo y no se crea una copia de la misma afirmación.
+- La revisión de las fuentes de Rudra no halló una fuente pública que atribuya de forma verificable al dios una orden o conocimiento personal del plan. La responsabilidad colectiva de Rudra Familia no se convierte en responsabilidad individual de Rudra.
+
+**Resultado operativo:** la búsqueda secundaria disponible ya no bloquea el orden de trabajo. La siguiente prioridad activa es Orario; los pasajes primarios de DMR-045 permanecen como pendientes de evidencia, no como hechos completados.
 
 ## Localizadores primarios pendientes
 
