@@ -10,10 +10,12 @@ source_refs:
   - DMR-029-SRC-005
   - DMR-029-SRC-017
   - DMR-021-SRC-001
+  - DMR-045-SRC-005
 claim_refs:
   - DMR-029-CLM-002
   - DMR-029-CLM-007
   - DMR-029-CLM-015
+  - DMR-045-CLM-006
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Zald"
@@ -27,6 +29,10 @@ tags: [Zeus Familia, Astrea Record, abilities, Behemoth, spoiler]
 - **Alias reportado:** Glotonería (暴喰, Bōshoku).
 - **Continuidad:** CONT-AR. Los detalles de la retrospectiva deben mantenerse aparte de los hechos contemporáneos de la novela principal, salvo que se localice el pasaje que los conecta.
 - **Estado de la ficha:** varias pistas concretas recuperadas de la wiki española; cotejo del texto primario pendiente.
+
+## Evidencia editorial acotada — Astrea Record 3
+
+La ficha editorial de *Astrea Record 3*, recuperada mediante un fragmento indexado, sitúa el inicio del enfrentamiento de Zald contra Ottar en la superficie durante el último día de los Siete Días de la Muerte (`DMR-045-CLM-006`, `DMR-045-SRC-005`, `CONT-AR`). La página editorial directa no pudo verificarse en la comprobación registrada; por eso esta es evidencia de extracto, no un localizador del texto narrativo. No confirma técnicas, niveles, ganador, consecuencias ni secuencia completa. Los detalles biográficos y de capacidades de las wikis siguen siendo secundarios.
 
 ## Datos de roster de la wiki
 La wiki española informa que fue humano, antiguo aventurero, de nivel 7 en una instantánea histórica y que llegó al piso 71. También registra un conjunto de estadísticas y habilidades de desarrollo. Esos números representan el snapshot del artículo, no el nivel actual ni una medida permanente para todas las épocas. La ficha lo describe como fallecido tras el combate final reportado contra Ottar.
