@@ -3,6 +3,8 @@ const fs = require("node:fs");
 const path = require("node:path");
 const corpus = require("../src/lore-corpus.js");
 const root = path.join(__dirname, "..", "lore", "danmachi");
+const appSource = fs.readFileSync(path.join(__dirname, "..", "src", "app.js"), "utf8");
+assert.ok(appSource.includes('{ key:"interview", title:"Material complementario · entrevistas con autores"') && appSource.includes('badge:"ENTREVISTA AUTORAL"'), "The source browser must render author interviews in their own evidence tier, separate from official publisher pages and community leads.");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
 const documentPaths = corpus.getDefaultResearchPaths();
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
@@ -736,6 +738,7 @@ assert.ok(!index.claims.some(item => item.sourceUrls.includes(danmachiVol20Previ
 // DMR-045: author's supplementary interview supports only the Alfia -> Bell aunt relation.
 const alfiaAuntInterviewUrl = "https://dengekionline.com/articles/189750/";
 const alfiaAuntInterview = corpus.getOnlineSourceDirectory().find(source => source.id === "author-interview-alfia-aunt-bell");
+assert.equal(alfiaAuntInterview?.category, "interview", "An author interview published by a media outlet must not be presented as an official publisher page.");
 assert.ok(alfiaAuntInterview && alfiaAuntInterview.url === alfiaAuntInterviewUrl && alfiaAuntInterview.authority.includes("no texto de novela") && String(alfiaAuntInterview.limits).includes("No aporta capítulo/página"), "The author interview must be discoverable with its supplementary-evidence boundary visible.");
 const alfiaAuntInAR = corpus.search(index, {query:"Alfia tía Bell",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(alfiaAuntInAR.results.some(item => item.claimId === "DMR-045-CLM-007" && item.verificationStatus === "source_checked" && item.sourceUrls.includes(alfiaAuntInterviewUrl)), "The author's Alfia-to-Bell kinship statement must be searchable as a scoped, source-backed claim.");
@@ -747,6 +750,7 @@ assert.ok(alfiaAuntEdge && alfiaAuntEdge.from === "CHAR-DARK-ALFIA" && alfiaAunt
 // DMR-045: a separate 2020 author interview supports the aunt relation only within CONT-GAME.
 const alfiaAuntGameInterviewUrl = "https://ln-news.com/articles/109766";
 const alfiaAuntGameInterview = corpus.getOnlineSourceDirectory().find(source => source.id === "author-interview-alfia-aunt-game");
+assert.equal(alfiaAuntGameInterview?.category, "interview", "The Memoria Freese interview must be classified as author interview, not official publisher material.");
 assert.ok(alfiaAuntGameInterview && alfiaAuntGameInterview.url === alfiaAuntGameInterviewUrl && alfiaAuntGameInterview.authority.includes("no texto de novela") && String(alfiaAuntGameInterview.limits).includes("no nombra a la hermana como Meteria"), "The game-origin interview must expose its continuity and naming limitations.");
 const alfiaAuntInGame = corpus.search(index, {query:"Alfia hermana Bell madre",continuity:"CONT-GAME",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(alfiaAuntInGame.results.some(item => item.claimId === "DMR-045-CLM-008" && item.verificationStatus === "source_checked" && item.sourceUrls.includes(alfiaAuntGameInterviewUrl)), "The game-scoped aunt relationship must be searchable with the author-interview source.");
