@@ -140,6 +140,24 @@
 - spoiler_level: major
 - confidence_note: La declaración se comprueba en la entrevista publicada y se atribuye directamente al autor. Es fuente autoral complementaria, pero no equivale a un pasaje leído de la novela con capítulo/página; no se usa para promover los demás claims secundarios sobre Alfia, Meteria, Zald, Erebus o Rudra.
 
+### DMR-045-CLM-008 · La madre de Bell es la hermana menor de Alfia según entrevista sobre Memoria Freese
+
+- claim_id: DMR-045-CLM-008
+- claim: En una entrevista publicada por LN News Online el 15 de octubre de 2020, el entrevistador resume que, en la historia de Memoria Freese donde participan Erebus, Alfia y Zald, la madre de Bell es la hermana menor de Alfia; Fujino Omori responde afirmativamente y explica que la historia del nacimiento de Bell se reveló primero en DanMemo. La evidencia corrobora el parentesco de Alfia con la madre de Bell dentro del marco narrativo presentado como revelación del juego. La respuesta no pronuncia el nombre Meteria en ese pasaje, por lo que no basta para identificar a la hermana con el registro CHAR-METERIA ni para afirmar la maternidad en CONT-MAIN-LN.
+- character_ids: [CHAR-DARK-ALFIA, DM-CHAR-BELL]
+- aspect: parentesco familiar y procedencia de la revelación
+- era_or_interval: Memoria Freese / Astrea Record original; revelación de 2020; fecha familiar absoluta desconocida
+- continuity_scope: CONT-GAME
+- source_id: DMR-045-SRC-009
+- source_title: Entrevista exclusiva a Fujino Omori de LN News Online
+- source_type: AUTHOR_INTERVIEW
+- source_locator: Intercambio sobre el primer anuncio del nacimiento de Bell en DanMemo; pregunta y respuesta en los párrafos junto a «ベルの出生については、ダンメモが初公開になりましたね» (sección publicada el 2020-10-15).
+- source_url: https://ln-news.com/articles/109766
+- evidence_type: author_interview_confirmation_of_game_backstory
+- verification_status: source_checked
+- spoiler_level: major
+- confidence_note: La respuesta del autor confirma el parentesco formulado por el entrevistador en relación con la historia del juego. No nombra a la hermana, no aporta localizador de la novela y no permite promover la identidad de Meteria ni el vínculo materno de CONT-MAIN-LN sin una fuente independiente.
+
 ### Precisión de procedencia autoral — revisión de continuidad (2026-10-23)
 
 - `DMR-029-CLM-012` y `DMR-029-SRC-016` corresponden a la nota publicada por Fujino Omori «それは遥か彼方の静穏の夢». La nota se consulta directamente y se clasifica como `source_checked_excerpt_only` únicamente dentro de `CONT-AU`: es evidencia primaria de lo que plantea ese escenario alternativo, no una escena de la novela principal.
