@@ -162,8 +162,8 @@ assert.ok(authorAuScenarioRecord && authorAuScenarioRecord.type === "event" && a
 const authorAuScenarioText = fs.readFileSync(path.join(root, authorAuScenarioPath), "utf8");
 assert.ok(authorAuScenarioText.includes("continuity_scope: CONT-AU") && authorAuScenarioText.includes("DMR-029-CLM-012") && authorAuScenarioText.includes("No es un acontecimiento de la cronología principal"), "The scenario detail must state its provenance, AU continuity and exclusion from the main timeline.");
 assert.ok(authorAuScenarioText.includes("tres años desde el encuentro") && authorAuScenarioText.includes("próximo a cumplir siete"), "The AU event must preserve the three-year duration and Bell's near-seven age marker verified in the original author note.");
-assert.ok(authorAuScenarioText.includes("No se establece una fecha absoluta") && authorAuScenarioText.includes("no identifica") && authorAuScenarioText.includes("padre"), "The AU event must preserve the unknown calendar date and unidentified father boundary.");
-assert.ok(authorAuScenarioText.includes("no establece una duración exacta") && !authorAuScenarioText.includes("periodo de tres años"), "The AU scenario must not invent a duration that is absent from its registered evidence claim.");
+assert.ok(authorAuScenarioText.includes("No se establece una fecha absoluta") && authorAuScenarioText.includes("identidad no se revela") && authorAuScenarioText.includes("padre"), "The AU event must preserve the unknown calendar date and unidentified father boundary.");
+assert.ok(!authorAuScenarioText.includes("no quedan establecidas en el claim indexado") && !authorAuScenarioText.includes("no establece una duración exacta"), "The AU event must not retain the superseded claim that its duration is unknown.");
 for (const [id, from, kind] of [
   ["REL-AU-ALFIA-RAISE-BELL-SCENARIO","CHAR-DARK-ALFIA","participant_in"],
   ["REL-AU-ZALD-RAISE-BELL-SCENARIO","CHAR-DARK-ZALD","participant_in"],
