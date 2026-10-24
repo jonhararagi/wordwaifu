@@ -438,3 +438,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se añade una arista aparte `REL-ALFIA-BELL-AUNT-GAME-INTERVIEW` entre los registros de Alfia y Bell. No se mezcla con la relación de la novelización bajo `CONT-AR`; la respuesta no nombra a la hermana, por lo que no permite identificarla como Meteria ni crear una arista Meteria–Bell.
 - Las dos fichas Markdown de Alfia y Bell, el expediente de interfaz y la ficha de Meteria muestran la nueva evidencia con sus límites. Las pruebas cubren recuperación del claim, la nueva arista y la prohibición de filtrarlo a `CONT-MAIN-LN` o identificar automáticamente a Meteria.
 - Resultado: 244 relaciones estructuradas con extremos existentes. La identidad de la madre como Meteria, el parentesco gemelar, las capacidades y las biografías de los cinco personajes mantienen sus grados de evidencia previos salvo la corroboración de parentesco aquí delimitada.
+
+
+## AUDIT-BRANCHES-2026-10-24 · revisión completa del censo de ramas
+
+- **Base verificada:** `main` en `21f0482f3ba23142866e5534d2368ba43233668f`; ambos workflows posteriores al merge pasaron: Validate WordWaifu #2921 y DanMachi Lore and Retrieval Integrity #1609.
+- **Censo:** se recuperaron 102 referencias contando `main`; la comparación cubrió las 101 ramas no principales. Resultado: 87 divergidas y 14 solo detrás; cero ramas ahead-only o al día para fusión directa.
+- **PR:** 85 registros consultados; 60 fusionadas, 25 cerradas sin fusionar y ninguna abierta. Las PR históricas sustituidas se contrastaron con su sucesora cuando existía; nunca fusionar una rama divergida a ciegas.
+- **Código funcional reciente ya integrado:** PR #85 (relación Alfia–Bell en CONT-AR), #86 (entrevista separada como CONT-GAME) y #87 (nivel de fuente “entrevista autoral” en el navegador). Las PR y los checks se enlazan en `docs/BRANCH_AUDIT_2026-10-24.md`.
+- **Política de rescate:** mantener archivadas las ramas viejas sin borrarlas; cualquier requerimiento futuro de una rama histórica se recuperará por diff selectivo sobre el main vigente, con pruebas y continuidad actualizadas.
+- **Próxima tarea efectiva:** DMR-045 mantiene pendientes los pasajes primarios de Alfia/Zald/Erebus, Meteria/Bell y Rudra/Jura. El censo de ramas no cierra la investigación factual.
+
