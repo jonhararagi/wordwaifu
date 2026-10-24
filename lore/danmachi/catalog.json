@@ -43,11 +43,12 @@
     {
       "id": "DM-GUILD-001",
       "path": "canon/03-dungeon-y-guild.md",
-      "type": "institution_and_location",
+      "type": "setting",
       "tags": [
         "Dungeon",
         "Guild",
-        "registration"
+        "registro",
+        "guia-conceptual"
       ],
       "status": "draft",
       "priority": "critical"
@@ -2263,7 +2264,7 @@
     {
       "id": "ORG-GUILD",
       "path": "familias/guild-organization.md",
-      "type": "institution_and_location",
+      "type": "organization",
       "tags": [
         "Guild",
         "Gremio",
@@ -2280,7 +2281,7 @@
     {
       "id": "ORG-HOSTESS",
       "path": "familias/hostess-of-fertility.md",
-      "type": "institution_and_location",
+      "type": "organization",
       "tags": [
         "Hostess of Fertility",
         "豊饒の女主人",
@@ -4325,7 +4326,7 @@
     {
       "id": "REL-EINA-WORKS-GUILD-ANIME",
       "from": "DM-CHAR-EINA",
-      "to": "DM-GUILD-001",
+      "to": "ORG-GUILD",
       "kind": "receptionist_at",
       "label": "Eina trabaja como recepcionista/asesora de la Guild según el perfil oficial de DanMachi III",
       "continuity": "CONT-ANIME",
@@ -4697,7 +4698,7 @@
     {
       "id": "REL-ORARIO-GUILD-CORE",
       "from": "LOC-ORARIO",
-      "to": "DM-GUILD-001",
+      "to": "ORG-GUILD",
       "kind": "institutional_center",
       "label": "La Guild figura como institución central que gestiona el Dungeon en Orario",
       "continuity": "CONT-ANIME",
@@ -4725,7 +4726,7 @@
     {
       "id": "REL-BABEL-GUILD-OWNED",
       "from": "LOC-BABEL",
-      "to": "DM-GUILD-001",
+      "to": "ORG-GUILD",
       "kind": "owned_by",
       "label": "Babel se describe como instalación propiedad de la Guild",
       "continuity": "CONT-ANIME",
@@ -5145,7 +5146,7 @@
     {
       "id": "REL-PANTHEON-GUILD-HEADQUARTERS-SECONDARY",
       "from": "LOC-PANTHEON",
-      "to": "DM-GUILD-001",
+      "to": "ORG-GUILD",
       "kind": "headquarters_of",
       "label": "La wiki comunitaria identifica Pantheon como edificio principal de la Guild",
       "continuity": "CONT-UNVERIFIED",
@@ -5271,7 +5272,7 @@
     {
       "id": "REL-BABEL-OWNED-BY-GUILD-PROTOTYPE",
       "from": "LOC-BABEL",
-      "to": "DM-GUILD-001",
+      "to": "ORG-GUILD",
       "kind": "owned_by",
       "label": "Prototype identifica a la Guild como propietaria de Babel y responsable de alquilar los locales",
       "continuity": "CONT-PROTOTYPE",
@@ -5369,7 +5370,7 @@
     {
       "id": "REL-EINA-ADVISOR-GUILD-EVENT-ANIME",
       "from": "EVT-DM-EINA-ADVISOR-ANIME-001",
-      "to": "DM-GUILD-001",
+      "to": "ORG-GUILD",
       "kind": "documents_advisory_role_at_institution",
       "label": "El perfil oficial de DanMachi III sitúa la función de recepcionista y asesora de Eina dentro de la Guild",
       "continuity": "CONT-ANIME",
@@ -5999,7 +6000,7 @@
     {
       "id": "REL-COVER-CHAR-OURANOS-DM-GUILD-001-heads",
       "from": "CHAR-OURANOS",
-      "to": "DM-GUILD-001",
+      "to": "ORG-GUILD",
       "kind": "heads",
       "label": "dirige el Guild",
       "continuity": "CONT-ANIME",
