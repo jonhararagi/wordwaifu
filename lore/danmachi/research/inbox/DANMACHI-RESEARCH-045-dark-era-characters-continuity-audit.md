@@ -302,10 +302,28 @@
 - spoiler_level: major
 - confidence_note: La evidencia confirma que una discusión comunitaria formula esta pista, no que las identificaciones propuestas sean correctas. El lector oficial de SB Creative no devolvió narración legible; la sinopsis oficial de Yen Press no describe la escena. No usar este claim como prueba de una derrota individual de Leviathan, para identificar a Leon como testigo, ni para elevar capacidades o relaciones de Alfia a texto primario.
 
+### DMR-045-CLM-016 · Pista comunitaria sobre Afterglow en las retrospectivas de los capítulos 2 y 3 del volumen 20
+
+- claim_id: DMR-045-CLM-016
+- claim: Un comentario comunitario en una discusión sobre el relato extra de Leon y Ottar sostiene que la técnica Afterglow se muestra en retrospectivas al comienzo de los capítulos 2 y 3 de DanMachi volumen 20 y la relaciona con combatientes históricos de Zeus Familia y Hera Familia, citando a Zald y Alfia. El comentarista señala que el caso de Zald resulta más explícito. Esta entrada registra esa ruta de búsqueda secundaria; no certifica que cada personaje use la técnica, sus condiciones, el contexto completo de la escena ni la página del libro.
+- character_ids: [CHAR-DARK-ALFIA, CHAR-DARK-ZALD]
+- aspect: técnica de combate reportada, flashbacks y localizador narrativo pendiente
+- era_or_interval: DanMachi volumen 20, capítulos 2–3; fecha interna desconocida
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-013
+- source_title: Discusión comunitaria sobre el relato extra “A Scene Between a Certain Warrior and a Knight”
+- source_type: COMMUNITY_DISCUSSION
+- source_locator: Comentario que explica Afterglow en los flashbacks de los capítulos 2 y 3 del volumen 20; el hilo principal trata el relato extra, no es una fuente editorial ni una transcripción completa de esos capítulos.
+- source_url: https://www.reddit.com/r/DanMachi/comments/1ifg4g6/volume_20_side_story_a_scene_between_a_certain/
+- evidence_type: community_summary_of_novel_scene
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: La fuente sirve para dirigir la búsqueda a los capítulos 2–3. No demuestra por sí sola las capacidades individuales de Alfia o Zald, una correspondencia entre nombres de armas y personajes, la mecánica completa de Afterglow ni una página. La sinopsis de Yen Press para vol. 20 solo se registra como metadatos (DMR-045-SRC-012) y no respalda el detalle.
+
 ## Localizadores primarios pendientes
 
 1. DanMachi vol. 20: el hilo comunitario de páginas de muestra ofrece una pista secundaria sobre el prólogo marítimo (DMR-045-CLM-015), pero el lector oficial no expuso el texto y las identidades propuestas no quedan verificadas. Sigue pendiente el pasaje de Meteria y el cotejo directo de Alfia/Zald con capítulo/página o localizador digital reproducible.
-2. Astrea Record vols. 1–3: cotejar las escenas de Alfia, Zald y Erebus; anotar edición y volumen/capítulo para cada dato confirmado.
+2. Astrea Record vols. 1–3: cotejar las escenas de Alfia, Zald y Erebus; anotar edición y volumen/capítulo para cada dato confirmado. Como ruta independiente, DMR-045-CLM-016 señala retrospectivas de los capítulos 2–3 del vol. 20 para comprobar los usos de Afterglow atribuidos secundariamente a Alfia y Zald.
 3. Meteria: localizar el pasaje narrativo que establece maternidad y parentesco. No identificar al padre de Bell hasta que una fuente lo nombre explícitamente.
 4. DanMachi vol. 14: ya se localizó parcialmente la retrospección del capítulo 13 sobre la trampa de Rudra Familia (DMR-045-CLM-013) y el epílogo sobre el relato público (DMR-045-CLM-014). Falta cotejar la página exacta en una edición accesible y completar el seguimiento del plan posterior de Jura en vols. 13–14; la atribución personal a Rudra sigue pendiente.
 5. No declarar biografía primaria confirmada por la convergencia entre wikis.
