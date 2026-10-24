@@ -12,11 +12,11 @@
 
 ## Orario — separación de Guild como organización (2026-10-24)
 
-- Corrección estructural propuesta en rama: `ORG-GUILD` y `ORG-HOSTESS` usan el tipo `organization`; `DM-GUILD-001` permanece con ID estable, pero pasa a `setting` como guía conceptual, no como organización ni ubicación.
+- Corrección estructural: `ORG-GUILD` y `ORG-HOSTESS` usan el tipo `organization`; `DM-GUILD-001` permanece con ID estable, pero pasa a `setting` como guía conceptual, no como organización ni ubicación.
 - Las relaciones catalogadas que apuntaban al nodo mixto `DM-GUILD-001` se redirigen a `ORG-GUILD`, conservando sus claims, continuidad, tipos de evidencia e IDs de relación. Las listas de entidades de los claims del glosario también se actualizan.
 - La sede física de la Guild no se da por resuelta. Babel solo retiene la evidencia de anime/Prototype en sus etiquetas respectivas; Pantheon permanece con el extracto parcial de novela y con vínculo secundario, sin afirmar ni negar que sea el mismo edificio que Babel.
 - **No se modifican las métricas generadas** de corpus, relaciones, roster ni fichas; esta tanda cambia tipos y destinos de relaciones, no cantidades de registro.
-- Estado de verificación: pendiente de CI sobre PR y comprobación del SHA resultante en `main`.
+- Regla de verificación: sólo se declara integrada/validada tras CI del PR y comprobación de CI del SHA resultante en `main`; el registro final debe seguir la evidencia real.
 
 ## Registro de acuerdos de conversación — 2026-10-24
 
