@@ -9,6 +9,7 @@ source_verification: community_preview_summary_only
 spoiler_level: major
 source_refs:
   - DMR-045-SRC-011
+  - DMR-045-SRC-012
 claim_refs:
   - DMR-045-CLM-015
 ---
@@ -30,7 +31,7 @@ Una discusión comunitaria que se presenta como comentario sobre páginas de mue
 
 ## Fuentes
 
-- [Yen Press · DanMachi, volumen 20](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel) — identifica la edición publicada; la sinopsis no respalda las identificaciones específicas de esta pista.
+- [Yen Press · DanMachi, volumen 20](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel) — ficha de edición (DMR-045-SRC-012); la sinopsis no respalda las identificaciones específicas de esta pista.
 - [Discusión comunitaria sobre páginas de muestra del volumen 20](https://www.reddit.com/r/DanMachi/comments/1h7wabo/) — pista secundaria sobre el prólogo. No sustituye el texto publicado.
 - DMR-045-SRC-011 / DMR-045-CLM-015.
 
