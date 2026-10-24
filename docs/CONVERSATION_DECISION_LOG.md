@@ -42,6 +42,17 @@
 - **Estado:** RECORDED.
 - **Resultado solicitado:** al resumir las obras de DanMachi en WordWaifu, listar cada serie/continuidad por separado, qué datos tiene y cuáles son los vacíos, manteniendo diferenciados novela principal, Sword Oratoria, Astrea Record, Familia Chronicle, anime, juegos, Prototype, relatos cortos, manga y material AU cuando corresponda.
 
+### CONV-DM-2026-10-24-005 — Prompt maestro operativo y orden de prioridades
+- **Fecha:** 2026-10-24.
+- **Estado:** ACCEPTED.
+- **Tipo:** instrucción operativa y prioridad de investigación.
+- **Decisión:** aplicar el ciclo INSPECTAR → PRIORIZAR → INVESTIGAR → IMPLEMENTAR → PROBAR → REGISTRAR → INTEGRAR → VERIFICAR → INFORMAR, usando el estado real del repositorio como fuente de verdad. Ejecutar trabajo concreto cuando haya herramientas; registrar decisiones y fuentes, evitar auditorías repetidas y no confundir lo documentado con lo implementado.
+- **Autorización y destino:** trabajar sobre ramas nacidas del `main` actual y dirigir los cambios aprobados a `main`; integrar únicamente cuando las comprobaciones pertinentes, conflictos y CI permitan verificar una fusión segura. Confirmar el SHA real de `main` y los resultados de CI de ese SHA.
+- **Orden actual de DanMachi:** cerrar primero las tareas públicas pendientes de DANMACHI-RESEARCH-045 (Alfia, Zald, Meteria, Erebus y Rudra, con fuentes y continuidad separadas); después retomar Orario, luego acontecimientos, personajes principales/secundarios, historias individuales y auditoría de continuidad. No duplicar fichas existentes ni inventar los localizadores primarios que siguen sin estar disponibles.
+- **Criterio de fuentes y métricas:** usar wikis EN/ES como fuentes secundarias cuando falten novelas accesibles; fuentes oficiales y texto primario conservan su alcance específico. Separar conteos por tipo y estados de evidencia; los recuentos estructurales no deben presentarse como porcentaje global de canon cubierto.
+- **Documentos afectados:** `docs/STATUS.md`, `docs/DECISIONS.md`, `lore/danmachi/06-registro-decisiones.md`, `lore/danmachi/WORK_QUEUE.md`, registros DMR-045 y validaciones de la aplicación.
+- **Siguiente acción:** completar el cierre de búsqueda pública de DMR-045 y después continuar con la etapa Orario; mantener como pendientes los pasajes no cotejados.
+
 ## Plantilla para entradas futuras
 
 - **ID:**
