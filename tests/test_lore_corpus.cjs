@@ -875,7 +875,7 @@ const returnEventText = fs.readFileSync(path.join(root, "events/timeline/EVT-DM-
 assert.ok(returnEventText.includes("DMR-045-CLM-014") && returnEventText.includes("no una prueba de que Ryuu hubiese muerto"), "The current event must distinguish the surface story from Ryuu's actual fate.");
 const rudraDossier = fs.readFileSync(path.join(root, "characters/dark-era/rudra.md"), "utf8");
 const juraDossier = fs.readFileSync(path.join(root, "characters/dark-era/jura-halmer.md"), "utf8");
-assert.ok(rudraDossier.includes("DMR-045-CLM-013") && rudraDossier.includes("no demuestra que la deidad Rudra"), "Rudra's dossier must use the group-level locator without claiming personal responsibility.");
+assert.ok(rudraDossier.includes("DMR-045-CLM-013") && rudraDossier.includes("diseñara, ordenara, autorizara") && rudraDossier.includes("atribución personal a la deidad Rudra sigue pendiente"), "Rudra's dossier must use the group-level locator and leave his personal responsibility unresolved.");
 assert.ok(juraDossier.includes("DMR-045-CLM-014") && juraDossier.includes("You'll Be Back II"), "Jura's dossier must contain the epilogue locator.");
 const rudraUi = fs.readFileSync(path.join(__dirname, "..", "src", "character-dossiers.js"), "utf8");
 assert.ok(rudraUi.includes("DMR-045-CLM-013") && rudraUi.includes("DMR-045-CLM-014"), "The interactive character dossiers must expose the new narrative locators.");
