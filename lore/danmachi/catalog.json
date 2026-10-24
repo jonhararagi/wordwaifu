@@ -6967,6 +6967,20 @@
       "claimRef": "DMR-045-CLM-011",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
       "note": "Arista independiente de la afiliación reportada en CONT-AR; nivel y título no se consideran permanentes."
+    },
+    {
+      "id": "REL-BELL-BIRTH-ORIGIN-ASTREA-GAME",
+      "from": "DM-CHAR-BELL",
+      "to": "EVT-DM-GAME-ASTREA-RECORD-001",
+      "kind": "birth_origin_reported_in",
+      "label": "La entrevista de Omori confirma, en la historia de Memoria Freese, que el padre de Bell era descrito como サポーター (supporter) de Zeus Familia; no revela su nombre ni prueba afiliación formal.",
+      "continuity": "CONT-GAME",
+      "interval": "Historia original de Memoria Freese; fecha interna desconocida",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "author_interview_statement",
+      "claimRef": "DMR-045-CLM-012",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Arista de Bell al acontecimiento donde se documenta la afirmación; no conecta al padre desconocido con Zeus Familia ni crea identidad para él. La misma entrevista no nombra a la madre como Meteria; no transferir a CONT-AR ni CONT-MAIN-LN."
     }
   ]
 }
