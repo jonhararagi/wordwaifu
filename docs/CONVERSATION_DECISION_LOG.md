@@ -67,7 +67,7 @@
 
 - **Fecha:** 2026-10-24.
 - **Tipo:** corrección de modelado, implementación y control de calidad.
-- **Estado:** implementado en rama de trabajo; integración pendiente de pruebas y PR.
+- **Estado al registrar:** implementado en rama de trabajo; la integración y la validación sólo se consignan tras comprobar las pruebas del PR y el SHA de `main`.
 - **Requisito aplicado:** separar la organización Guild de la guía histórica compuesta y de cualquier edificio físico; la misma regla se aplica a la organización/personal de Hostess of Fertility y su lugar físico.
 - **Cambios:** `ORG-GUILD` y `ORG-HOSTESS` se tipan como `organization`; `DM-GUILD-001` conserva su ID estable como guía conceptual de tipo `setting`; las relaciones institucionales catalogadas se conectan a `ORG-GUILD`; las menciones del glosario de anime apuntan al mismo nodo organizativo.
 - **Límites preservados:** Babel conserva sus alcances `CONT-ANIME` y `CONT-PROTOTYPE`; Pantheon sigue siendo una referencia de la muestra parcial de la novela principal y la relación de sede es secundaria. No se crea una ubicación física independiente para la Guild ni se decide la identidad física Pantheon–Babel sin pasaje suficiente.
