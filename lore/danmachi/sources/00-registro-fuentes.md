@@ -2671,6 +2671,32 @@ verification_status: stub
 - verification_status: source_checked
 
 
+## DMR-045-SRC-009 · Entrevista de LN News Online sobre el nacimiento de Bell
+
+- source_id: DMR-045-SRC-009
+- title: 独占インタビュー「ラノベの素」 大森藤ノ先生『ダンジョンに出会いを求めるのは間違っているだろうか』
+- creator_or_publisher: LN News Online; entrevista a Fujino Omori
+- source_type: AUTHOR_INTERVIEW
+- series: DanMachi; entrevista sobre Memoria Freese y la historia de Astrea Record
+- volume_or_edition: Artículo web sin paginación
+- language: Japonés
+- publication_date: 2020-10-15
+- official_url: https://ln-news.com/articles/109766
+- accessed_at: 2026-10-23
+- locator_type: author_interview_statement
+- locator: Intercambio sobre el origen de Bell; la pregunta afirma que su madre es la hermana menor de Alfia y Omori responde afirmativamente en la sección junto a «ベルの出生については、ダンメモが初公開になりましたね».
+- claims_supported: [DMR-045-CLM-008]
+- events_supported: []
+- continuity_scope: CONT-GAME
+- reliability_note: La respuesta autoral valida el parentesco tal como lo formula el entrevistador para la historia del juego y señala que DanMemo reveló primero el origen de Bell. No nombra en esa respuesta a la hermana como Meteria ni localiza una escena de novela.
+- conflicting_sources: []
+- rights_note: Paráfrasis propia y localizador breve; no reproducir la entrevista completa.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked
+
+
+
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea
