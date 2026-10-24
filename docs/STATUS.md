@@ -2,8 +2,8 @@
 ## Estado operativo y verificación — 2026-10-23
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 173 registros activos; 29 IDs reservados; 130 documentos de apoyo.
-- **Grafo de conocimiento:** 244 relaciones explícitas; 244/244 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Corpus DanMachi:** 174 registros activos; 29 IDs reservados; 130 documentos de apoyo.
+- **Grafo de conocimiento:** 249 relaciones explícitas; 249/249 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 92 perfiles; 92/92 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
