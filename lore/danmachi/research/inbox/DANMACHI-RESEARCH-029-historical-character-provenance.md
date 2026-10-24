@@ -36,21 +36,21 @@
 - `spoiler_level`: major
 - `confidence_note`: No se fija un nivel permanente ni se infieren amistad o detalles técnicos del combate sin localizador primario.
 
-### DMR-029-CLM-003 · Erebus: papel antagonista atribuido por la wiki
-- `claim`: La página comunitaria de Erebus lo presenta como figura antagonista asociada a Astrea Record. Se conserva como pista para localizar la escena; no confirma por sí misma alias, subordinación directa, motivación completa ni acciones específicas.
+### DMR-029-CLM-003 · Erebus: papel antagonista reportado en la versión original del juego
+- `claim`: La página comunitaria inglesa describe a Erebus como un antagonista ideológico vinculado al evento original de Astrea Record en Memoria Freese. Se conserva como orientación para localizar sus diálogos y acciones en esa versión; no prueba subordinación directa sobre toda Evilus, no identifica sus motivaciones completas para la novelización y no confirma alias en el texto primario.
 - `character_ids`: [CHAR-DARK-EREBUS]
-- `aspect`: identidad, rol narrativo, contexto histórico
-- `era_or_interval`: Astrea Record; escena exacta pendiente
-- `continuity_scope`: CONT-AR
-- `source_id`: DMR-029-SRC-003; DMR-029-SRC-006
-- `source_title`: anuncio oficial de Astrea Record; Erebus
-- `source_type`: OFFICIAL_REFERENCE; COMMUNITY_WIKI
-- `source_locator`: Anuncio editorial y artículo comunitario
-- `source_url`: https://danmachi.com/news/news131.php; https://danmachi.fandom.com/wiki/Erebus
+- `aspect`: rol narrativo e ideología reportados
+- `era_or_interval`: Astrea Record original de Memoria Freese; escena exacta pendiente
+- `continuity_scope`: CONT-GAME
+- `source_id`: DMR-029-SRC-006
+- `source_title`: Erebus — DanMachi Wiki en inglés
+- `source_type`: COMMUNITY_WIKI
+- `source_locator`: Summary y Personality; artículo comunitario sin paginación de escena
+- `source_url`: https://danmachi.fandom.com/wiki/Erebus
 - `evidence_type`: community_secondary_character_summary
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
-- `confidence_note`: El alias «Eren» permanece como cuestión sin resolver, no como identidad fusionada.
+- `confidence_note`: El alcance se limita a la representación reportada del juego. No transferir automáticamente su ideología o su alias «Eren» a CONT-AR; comprobar la novelización por separado.
 
 ### DMR-029-CLM-004 · Jura Halmer y la crisis del Juggernaut
 - `claim`: Las referencias comunitarias asocian a Jura Halmer con Rudra Familia y con la crisis del Juggernaut alrededor de los volúmenes 13–14. Las fichas editoriales ofrecen el marco del arco, pero no validan automáticamente todos los detalles que las wikis atribuyen a Jura.
