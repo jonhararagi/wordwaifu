@@ -2685,7 +2685,7 @@ verification_status: stub
 - accessed_at: 2026-10-23
 - locator_type: author_interview_statement_and_editorial_profile_captions
 - locator: Pregunta/respuesta sobre el origen de Bell junto a «ベルの出生については、ダンメモが初公開になりましたね»; además, pies editoriales bajo las imágenes de Erebus, Alfia y Zald en la misma sección.
-- claims_supported: [DMR-045-CLM-008, DMR-045-CLM-009, DMR-045-CLM-010, DMR-045-CLM-011]
+- claims_supported: [DMR-045-CLM-008, DMR-045-CLM-009, DMR-045-CLM-010, DMR-045-CLM-011, DMR-045-CLM-012]
 - events_supported: [EVT-DM-GAME-ASTREA-RECORD-001]
 - continuity_scope: CONT-GAME
 - reliability_note: DMR-045-CLM-008 cita la respuesta autoral al entrevistador. DMR-045-CLM-009–011 usan pies editoriales de la misma página como evidencia secundaria, no como palabras de Omori. La respuesta no nombra a la hermana como Meteria ni localiza una escena de novela.

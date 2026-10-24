@@ -782,6 +782,25 @@ const alfiaAuntGameEdge = index.relationships.find(edge => edge.id === "REL-ALFI
 assert.ok(alfiaAuntGameEdge && alfiaAuntGameEdge.from === "CHAR-DARK-ALFIA" && alfiaAuntGameEdge.to === "DM-CHAR-BELL" && alfiaAuntGameEdge.kind === "aunt_of" && alfiaAuntGameEdge.continuity === "CONT-GAME" && alfiaAuntGameEdge.claimRef === "DMR-045-CLM-008" && alfiaAuntGameEdge.evidenceStatus === "source_checked", "The game continuity must have a distinct explicit Alfia-to-Bell edge from the 2020 interview.");
 assert.ok(!index.relationships.some(edge => edge.id === "REL-METERIA-BELL-MOTHER-GAME-INTERVIEW" || edge.claimRef === "DMR-045-CLM-008" && [edge.from,edge.to].includes("CHAR-METERIA")), "The interview does not name the sister; do not infer or graph-link Meteria from this claim.");
 
+const bellPaternalGameClaim = index.claims.find(item => item.claimId === "DMR-045-CLM-012");
+assert.ok(bellPaternalGameClaim, "The father's reported supporter role must be indexed as a distinct narrative claim.");
+assert.deepEqual(bellPaternalGameClaim.characterIds, ["DM-CHAR-BELL"], "Do not create an identity for the unnamed father.");
+assert.deepEqual(bellPaternalGameClaim.continuityScopes, ["CONT-GAME"], "Bell's reported paternal role must remain in original game continuity.");
+assert.equal(bellPaternalGameClaim.verificationStatus, "source_checked", "The claim is tied to the affirmative author-interview exchange, not to a character caption.");
+assert.ok(bellPaternalGameClaim.sourceIds.includes("DMR-045-SRC-009") && bellPaternalGameClaim.sourceUrls.includes("https://ln-news.com/articles/109766"), "The father's role must expose the interview source.");
+const bellPaternalGameSearch = corpus.search(index, {query:"padre Bell supporter Zeus Familia",continuity:"CONT-GAME",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(bellPaternalGameSearch.results.some(item => item.claimId === "DMR-045-CLM-012"), "The game-context paternal role must be retrievable from narrative search.");
+for (const continuity of ["CONT-MAIN-LN", "CONT-AR"]) {
+  const noLeak = corpus.search(index, {query:"padre Bell supporter Zeus Familia",continuity,period:"ALL",aspect:"all",spoiler:"all"});
+  assert.ok(!noLeak.results.some(item => item.claimId === "DMR-045-CLM-012"), "The game-context paternal role must not leak into " + continuity + ".");
+}
+const bellGameOriginEdge = index.relationships.find(edge => edge.id === "REL-BELL-BIRTH-ORIGIN-ASTREA-GAME");
+assert.ok(bellGameOriginEdge && bellGameOriginEdge.from === "DM-CHAR-BELL" && bellGameOriginEdge.to === "EVT-DM-GAME-ASTREA-RECORD-001" && bellGameOriginEdge.continuity === "CONT-GAME" && bellGameOriginEdge.claimRef === "DMR-045-CLM-012" && bellGameOriginEdge.evidenceStatus === "source_checked", "Bell's source-backed game-origin claim must navigate to the original-game event.");
+const bellManualDossierSource = fs.readFileSync(path.join(__dirname, "..", "src", "character-dossiers.js"), "utf8");
+assert.ok(bellManualDossierSource.includes("DMR-045-CLM-012") && bellManualDossierSource.includes("EVT-DM-GAME-ASTREA-RECORD-001"), "The character UI must expose the game-origin claim and its event route.");
+const bellMarkdownDossier = fs.readFileSync(path.join(root, "characters/bell-cranel.md"), "utf8");
+assert.ok(bellMarkdownDossier.includes("DMR-045-CLM-012") && bellMarkdownDossier.includes("サポーター") && bellMarkdownDossier.includes("EVT-DM-GAME-ASTREA-RECORD-001"), "Bell's readable dossier must expose the Japanese role, claim provenance, and game event route.");
+
 const astreaVol3PreviewUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1";
 const astreaVol3Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-astrea-record-vol3-preview-metadata-only");
 assert.ok(astreaVol3Preview && astreaVol3Preview.url === astreaVol3PreviewUrl && astreaVol3Preview.authority.includes("metadatos solamente") && String(astreaVol3Preview.coverage).includes("1/63") && String(astreaVol3Preview.limits).includes("No respalda ninguna capacidad"), "Astrea Record 3 public sample must remain discoverable as metadata-only when only its cover was accessible.");
@@ -789,6 +808,7 @@ assert.ok(!index.claims.some(item => item.sourceUrls.includes(astreaVol3PreviewU
 
 const gameAstreaEventPath = path.join(root, "events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md");
 const gameAstreaEventText = fs.readFileSync(gameAstreaEventPath, "utf8");
+assert.ok(gameAstreaEventText.includes("DMR-045-CLM-012") && gameAstreaEventText.includes("no da el nombre del padre") && gameAstreaEventText.includes("Meteria"), "The event page must preserve unnamed-parent and non-identification limits.");
 const gameAstreaCatalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
 assert.ok(gameAstreaCatalog.records.some(record => record.id === "EVT-DM-GAME-ASTREA-RECORD-001" && record.path === "events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md"), "The original Memoria Freese story needs its own navigable event record.");
 assert.ok(gameAstreaEventText.includes("continuity_scope: CONT-GAME") && gameAstreaEventText.includes("CONT-AR") && gameAstreaEventText.includes("CONT-MAIN-LN"), "The original game event must explicitly distinguish the novelization and main light-novel continuity.");
