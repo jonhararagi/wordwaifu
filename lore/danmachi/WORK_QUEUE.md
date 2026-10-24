@@ -565,7 +565,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 ## DANMACHI-RESEARCH-045 · Alfia, Zald, Meteria, Erebus y Rudra
 
-**Integración registrada (2026-10-24):** PR [#91](https://github.com/jonhararagi/wordwaifu/pull/91) fusionada en commit c1641b3f8a14d05af83dd3f0215d101af5c7e531. Los dos workflows de la cabeza exacta de la PR terminaron en success. La consulta disponible no devolvió ejecuciones para el commit posterior a la fusión; la CI posintegración queda sin confirmar.
+**Integración registrada (2026-10-24):** PR [#91](https://github.com/jonhararagi/wordwaifu/pull/91) quedó en `main` en `c1641b3f8a14d05af83dd3f0215d101af5c7e531`; sus dos workflows de cabeza fueron `success`, aunque no se pudo verificar entonces una ejecución posterior de ese SHA. PR [#92](https://github.com/jonhararagi/wordwaifu/pull/92) quedó fusionada en `f13bb96f882e19870965dd9570a17f488266e784`; los checks de la cabeza exacta `861387fc1580a88c60df8a461ae8dcd359c7c726` y los dos workflows posteriores sobre el commit de `main` `f13bb96f882e19870965dd9570a17f488266e784` terminaron en `success` ([Validate WordWaifu #40108970941](https://github.com/jonhararagi/wordwaifu/actions/runs/40108970941), [DanMachi Lore and Retrieval Integrity #40108970837](https://github.com/jonhararagi/wordwaifu/actions/runs/40108970837)).
 
 - [x] Revisar las cinco fichas existentes y expandir el contenido individual sin elevar las wikis a evidencia primaria.
 - [x] Añadir a Meteria una ficha manual sustancial de interfaz, manteniendo parentesco y salud como evidencia secundaria y el padre de Bell sin identificar.
