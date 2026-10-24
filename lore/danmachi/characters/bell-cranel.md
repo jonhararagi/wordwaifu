@@ -11,8 +11,10 @@ claim_refs:
   - DMR-002-CLM-002
   - DMR-014-CLM-001
   - DMR-014-CLM-002
+  - DMR-045-CLM-007
 research_source_refs:
   - DMR-002-SRC-001
+  - DMR-045-SRC-008
 ---
 # Bell Cranel
 
@@ -60,3 +62,12 @@ DanMachi, novela ligera, volumen 1 y volúmenes posteriores relevantes: verifica
 - La sinopsis editorial dice que Bell regresa del extremo norte y recibe la noticia de la expedición fallida: DMR-008-CLM-024, `provisional_summary`, relación `REL-BELL-V21-LEARNS-EXPEDITION-FAILURE`.
 - El fragmento público del capítulo inicial registra su pregunta urgente por Ais, Finn y los demás: DMR-008-CLM-025, `source_checked_excerpt_only`, relación `REL-BELL-V21-ASKS-ABOUT-EXPEDITION`.
 - **Límite:** esta ficha no convierte los datos de sinopsis en resumen completo del volumen ni resuelve el desenlace de la expedición.
+
+
+## Parentesco histórico — declaración autoral complementaria
+
+En una entrevista de Dengeki Online, Fujino Omori explica que la novelización de *Astrea Record* llegó a dejar explícito que **Alfia es tía de Bell**. WordWaifu representa esta relación en el grafo como `REL-ALFIA-BELL-AUNT-INTERVIEW`, respaldada por `DMR-045-CLM-007` y limitada a `CONT-AR`.
+
+**Límite de evidencia:** la entrevista no da un capítulo ni una página de la novela; por eso complementa, pero no reemplaza, el localizador de texto primario que sigue pendiente. Esta declaración tampoco confirma por sí sola los datos secundarios sobre Meteria, su supuesto parentesco gemelar con Alfia o la identidad del padre de Bell. El escenario alternativo `CONT-AU` donde Alfia y Zald crían a Bell permanece separado.
+
+- Fuente: [Dengeki Online · entrevista del sexto aniversario de DanMemo](https://dengekionline.com/articles/189750/) (DMR-045-SRC-008).

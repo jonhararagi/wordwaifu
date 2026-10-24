@@ -733,6 +733,17 @@ const danmachiVol20Preview = historicalWikiSourceDirectory.find(item => item.id 
 assert.ok(danmachiVol20Preview && danmachiVol20Preview.url === danmachiVol20PreviewUrl && String(danmachiVol20Preview.coverage).includes("17/33") && String(danmachiVol20Preview.limits).includes("No demuestra ausencia"), "The DanMachi volume 20 sample locator must retain its exact page scope and avoid absence claims.");
 assert.ok(!index.claims.some(item => item.sourceUrls.includes(danmachiVol20PreviewUrl)), "A single inspected sample page must not become generic evidence for the five historical dossiers.");
 
+// DMR-045: author's supplementary interview supports only the Alfia -> Bell aunt relation.
+const alfiaAuntInterviewUrl = "https://dengekionline.com/articles/189750/";
+const alfiaAuntInterview = corpus.getOnlineSourceDirectory().find(source => source.id === "author-interview-alfia-aunt-bell");
+assert.ok(alfiaAuntInterview && alfiaAuntInterview.url === alfiaAuntInterviewUrl && alfiaAuntInterview.authority.includes("no texto de novela") && String(alfiaAuntInterview.limits).includes("No aporta capítulo/página"), "The author interview must be discoverable with its supplementary-evidence boundary visible.");
+const alfiaAuntInAR = corpus.search(index, {query:"Alfia tía Bell",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(alfiaAuntInAR.results.some(item => item.claimId === "DMR-045-CLM-007" && item.verificationStatus === "source_checked" && item.sourceUrls.includes(alfiaAuntInterviewUrl)), "The author's Alfia-to-Bell kinship statement must be searchable as a scoped, source-backed claim.");
+const alfiaAuntInMainLN = corpus.search(index, {query:"Alfia tía Bell",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(!alfiaAuntInMainLN.results.some(item => item.claimId === "DMR-045-CLM-007"), "The interview claim scoped to Astrea Record must not leak into main-LN continuity.");
+const alfiaAuntEdge = index.relationships.find(edge => edge.id === "REL-ALFIA-BELL-AUNT-INTERVIEW");
+assert.ok(alfiaAuntEdge && alfiaAuntEdge.from === "CHAR-DARK-ALFIA" && alfiaAuntEdge.to === "DM-CHAR-BELL" && alfiaAuntEdge.kind === "aunt_of" && alfiaAuntEdge.continuity === "CONT-AR" && alfiaAuntEdge.claimRef === "DMR-045-CLM-007" && alfiaAuntEdge.evidenceStatus === "source_checked", "Alfia's aunt relationship to Bell must be explicitly graph-linked to the interview claim and continuity.");
+
 const astreaVol3PreviewUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1";
 const astreaVol3Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-astrea-record-vol3-preview-metadata-only");
 assert.ok(astreaVol3Preview && astreaVol3Preview.url === astreaVol3PreviewUrl && astreaVol3Preview.authority.includes("metadatos solamente") && String(astreaVol3Preview.coverage).includes("1/63") && String(astreaVol3Preview.limits).includes("No respalda ninguna capacidad"), "Astrea Record 3 public sample must remain discoverable as metadata-only when only its cover was accessible.");

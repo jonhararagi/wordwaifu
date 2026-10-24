@@ -122,6 +122,24 @@
 - spoiler_level: major
 - confidence_note: El fragmento solo establece los dos emparejamientos y los ámbitos generales. No confirma técnicas, niveles, acciones individuales, resultados, supervivencia, daños, duración ni orden general de otros eventos. No se transfiere a CONT-MAIN-LN.
 
+### DMR-045-CLM-007 · Alfia es tía de Bell según entrevista del autor sobre la novelización
+
+- claim_id: DMR-045-CLM-007
+- claim: En una entrevista publicada por Dengeki Online por el sexto aniversario de Memoria Freese, Fujino Omori explica que, con la novelización de Astrea Record, llegó a representar explícitamente que Alfia es tía de Bell. Esto respalda el parentesco Alfia–Bell como declaración autoral suplementaria referida a la versión novelada de Astrea Record, que el autor distingue del contenido del juego. La entrevista no proporciona por sí sola un localizador interno de capítulo/página, no identifica en esta afirmación a la madre que establece el parentesco y no demuestra que Meteria sea la madre de Bell o hermana gemela de Alfia.
+- character_ids: [CHAR-DARK-ALFIA, DM-CHAR-BELL]
+- aspect: parentesco familiar y declaración autoral sobre la novelización
+- era_or_interval: Astrea Record (novelización); cronología familiar y fecha absoluta desconocidas
+- continuity_scope: CONT-AR
+- source_id: DMR-045-SRC-008
+- source_title: Entrevista de Dengeki Online a Fujino Omori y al equipo de Memoria Freese
+- source_type: AUTHOR_INTERVIEW
+- source_locator: Respuesta de Omori sobre cómo la novelización de Astrea Record amplió el relato del juego; frase «それにベルの叔母であることも描ききってしまって».
+- source_url: https://dengekionline.com/articles/189750/
+- evidence_type: author_interview_statement
+- verification_status: source_checked
+- spoiler_level: major
+- confidence_note: La declaración se comprueba en la entrevista publicada y se atribuye directamente al autor. Es fuente autoral complementaria, pero no equivale a un pasaje leído de la novela con capítulo/página; no se usa para promover los demás claims secundarios sobre Alfia, Meteria, Zald, Erebus o Rudra.
+
 ### Precisión de procedencia autoral — revisión de continuidad (2026-10-23)
 
 - `DMR-029-CLM-012` y `DMR-029-SRC-016` corresponden a la nota publicada por Fujino Omori «それは遥か彼方の静穏の夢». La nota se consulta directamente y se clasifica como `source_checked_excerpt_only` únicamente dentro de `CONT-AU`: es evidencia primaria de lo que plantea ese escenario alternativo, no una escena de la novela principal.

@@ -3,7 +3,7 @@
 
 <!-- DANMACHI-METRICS:BEGIN -->
 - **Corpus DanMachi:** 173 registros activos; 29 IDs reservados; 130 documentos de apoyo.
-- **Grafo de conocimiento:** 242 relaciones explícitas; 242/242 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Grafo de conocimiento:** 243 relaciones explícitas; 243/243 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 92 perfiles; 92/92 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
@@ -17,6 +17,7 @@
 
 - **Rama de verificación integrada:** `main`; DMR-045 y DMR-046 están publicados. Los logs de [Validate WordWaifu #39979366390](https://github.com/jonhararagi/wordwaifu/actions/runs/39979366390) y [DanMachi Lore and Retrieval Integrity #39979366342](https://github.com/jonhararagi/wordwaifu/actions/runs/39979366342) muestran ambos workflows completados con éxito y un `fetch/checkout` explícito de `main` en el SHA `c6b636b1074b6d2e7ebaac66988e04692303cd79`. La ejecución se disparó desde el commit `f3dc54e1fb89da6852db922499a0233137369e1d`, pero los tests recuperaron y comprobaron el código de `main` `c6b636b1074b6d2e7ebaac66988e04692303cd79`; se conserva la distinción entre SHA que disparó el workflow y SHA realmente probado.
 - **Procedencia y continuidad:** `CONT-ANIME`, `CONT-MAIN-LN`, `CONT-SO`, `CONT-AR` y `CONT-AU` siguen separados. Sinopsis editoriales, perfiles de adaptación y wikis no equivalen a cotejar una escena del texto completo.
+- **DMR-045 — avance verificable:** la entrevista de Dengeki Online a Fujino Omori afirma que la novelización de *Astrea Record* dejó explícito que Alfia es tía de Bell. `DMR-045-CLM-007` y `REL-ALFIA-BELL-AUNT-INTERVIEW` lo exponen como declaración autoral complementaria bajo `CONT-AR`; no sustituye el localizador de capítulo/página. Los otros huecos primarios de Alfia, Zald, Meteria, Erebus y Rudra continúan abiertos.
 - **Estado factual:** la integración estructural del roster está validada; siguen pendientes pasajes primarios de la novela, cronologías escena por escena y el censo de personajes fuera del roster de adaptación.
 - **Prioridad del lore:** Orario continúa en investigación; después siguen acontecimientos por fecha/lugar/causa/consecuencia y reconstrucción de historias individuales.
 - **DANMACHI-RESEARCH-044 — cinco expedientes históricos:** Maxim, Argana, Bache, Seldas y Helga tienen fichas estructuradas y búsquedas por claim. Se indexó el lector oficial de muestra de *Sword Oratoria* 6 como `DMR-044-SRC-012` (`metadata_checked_only`): la extracción no mostró texto narrativo, por lo que el cotejo de escenas y capacidades individuales continúa pendiente. También se indexó la ficha editorial de *DanMachi* 20 como DMR-044-SRC-013 sin claims: su sinopsis no respalda los detalles comunitarios de Maxim.
