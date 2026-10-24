@@ -584,6 +584,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Cotejar Astrea Record vols. 1–3 para Alfia, Zald y Erebus, con edición/volumen/capítulo reproducible.
 - [x] Conservar `DMR-045-SRC-007`: muestra autorizada de DanMachi vol. 20, página 17/33, con `レオン` y `バルドル`; `claims_supported: []`, delimitación a una página y prueba contra extrapolación al volumen completo.
 - [x] Incorporar la entrevista de Dengeki Online donde Omori confirma que la novelización de Astrea Record dejó explícito que Alfia es tía de Bell; exponer claim, fuente y arista en `CONT-AR`, con aviso de que no es un localizador de capítulo/página.
+- [x] Registrar por separado la entrevista de LN News Online de 2020: Omori confirma, en el contexto de la historia de Memoria Freese, que la madre de Bell es la hermana menor de Alfia; crear claim/arista `CONT-GAME` sin identificar a la hermana como Meteria ni trasladar el dato a `CONT-MAIN-LN`.
 - [ ] Cotejar otras páginas accesibles de DanMachi vol. 20 para localizar menciones exactas sobre Alfia/Zald/Meteria/Bell; separar nombres de armas reportados secundariamente de escenas biográficas y no dar por confirmado el parentesco sin localizador primario.
 - [ ] Resolver en DanMachi vols. 13–14 la escena de Rudra y separar la responsabilidad de Rudra, Jura y su Familia.
 
