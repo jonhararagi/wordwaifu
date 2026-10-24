@@ -13,6 +13,19 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 Esta regla preserva el contexto, pero no sustituye validación factual, pruebas técnicas ni confirmación de integración.
 
+## PRIORIDAD INMEDIATA — Cierre de investigación pública DANMACHI-RESEARCH-045
+
+**Estado:** IN_PROGRESS; no declarar DMR-045 completada. Las fichas de Alfia, Zald, Meteria, Erebus y Rudra ya existen y contienen información útil de wikis y fuentes editoriales, por lo que esta etapa debe cerrar vacíos concretos sin recrear expedientes.
+
+- [ ] Revisar las fuentes públicas ya registradas y comprobar si hay datos secundarios únicos que aún falten; consolidar hallazgos con claim, fuente, idioma, continuidad y límites.
+- [x] Añadir al directorio consultable de la aplicación las rutas comunitarias EN/ES de Alfia, Meteria, Zald, Erebus y Rudra, con sus límites y continuidad visibles.
+- [x] Añadir una prueba automatizada para mantener accesibles y trazables esas referencias sin elevarlas a evidencia primaria.
+- [ ] Mantener abiertos los localizadores primarios pendientes de Alfia/Zald/Erebus en Astrea Record, Meteria en la novela principal y la atribución personal de Rudra; no inventar páginas ni convertir entrevistas/wiki en escenas del libro.
+- [ ] Cuando una nueva consulta pública no aporte evidencia o un dato único verificable, registrar el límite y pasar a la siguiente incógnita de la misma prioridad en vez de repetir la auditoría general.
+- [ ] Tras cerrar el barrido secundario útil de DMR-045, reanudar la prioridad de Orario y después seguir la secuencia de acontecimientos, personajes y revisión de continuidad.
+
+**Límite de cierre:** terminar la búsqueda pública no significa declarar las cinco biografías verificadas en el texto primario. Los localizadores que no puedan obtenerse legalmente deben permanecer explícitamente pendientes.
+
 ## Cobertura integrada del roster · DANMACHI-RESEARCH-036
 
 - [x] Crear fichas Markdown individuales para las 63 identidades del roster de adaptación, incluidos los cuatro hermanos Gulliver.
@@ -57,9 +70,9 @@ Criterio factual: claims de wiki permanecen secundarios; leads sin pasaje locali
 
 Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de Orario.
 
-## PRIORIDAD ACTUAL — Etapa 1: Orario como escenario
+## SIGUIENTE PRIORIDAD — Etapa 1: Orario como escenario (después de DMR-045)
 
-**Estado:** IN_PROGRESS. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
+**Estado:** IN_PROGRESS, queda como siguiente etapa después del cierre de búsqueda pública de DMR-045. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
 **Guía:** [Método de análisis progresivo](research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md) · [Ficha central de Orario](places/orario.md).
 
 - [x] Establecer una ficha central con el alcance de la evidencia actual y límites explícitos.
