@@ -10,6 +10,14 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## Orario — separación de Guild como organización (2026-10-24)
+
+- Corrección estructural: `ORG-GUILD` y `ORG-HOSTESS` usan el tipo `organization`; `DM-GUILD-001` permanece con ID estable, pero pasa a `setting` como guía conceptual, no como organización ni ubicación.
+- Las relaciones catalogadas que apuntaban al nodo mixto `DM-GUILD-001` se redirigen a `ORG-GUILD`, conservando sus claims, continuidad, tipos de evidencia e IDs de relación. Las listas de entidades de los claims del glosario también se actualizan.
+- La sede física de la Guild no se da por resuelta. Babel solo retiene la evidencia de anime/Prototype en sus etiquetas respectivas; Pantheon permanece con el extracto parcial de novela y con vínculo secundario, sin afirmar ni negar que sea el mismo edificio que Babel.
+- **No se modifican las métricas generadas** de corpus, relaciones, roster ni fichas; esta tanda cambia tipos y destinos de relaciones, no cantidades de registro.
+- Regla de verificación: sólo se declara integrada/validada tras CI del PR y comprobación de CI del SHA resultante en `main`; el registro final debe seguir la evidencia real.
+
 ## Registro de acuerdos de conversación — 2026-10-24
 
 - La política permanente quedó aprobada y documentada en [DEC-018/DEC-019](DECISIONS.md#dec-018--registro-persistente-de-acuerdos-de-conversación) y en [el registro de acuerdos](CONVERSATION_DECISION_LOG.md): anotar las instrucciones relevantes y consultar el historial antes de pedir al usuario que reenvíe mensajes o repita decisiones.

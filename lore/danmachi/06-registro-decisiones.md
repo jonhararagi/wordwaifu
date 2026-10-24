@@ -38,6 +38,13 @@ Este documento conserva decisiones que deben aplicarse en revisiones posteriores
 - source_or_context:
 - status: open, accepted, rejected o revised.
 
+### DEC-DM-007 — Guild como organización separada de una sede física
+- **Fecha:** 2026-10-24.
+- **Estado:** ACCEPTED (regla de modelado del corpus; no decisión de canon narrativo).
+- **Decisión:** `ORG-GUILD` es el nodo de organización y `DM-GUILD-001` queda como guía conceptual histórica (`setting`), manteniendo su ID para no romper enlaces antiguos. Las relaciones institucionales nuevas o ya catalogadas deben usar `ORG-GUILD`.
+- **Límites:** Babel, Pantheon y la sede física mencionada en el extracto no se fusionan ni se declaran distintos por inferencia. La ficha de Pantheon conserva evidencia parcial y secundaria; no crear `LOC-GUILD` hasta obtener respaldo suficiente.
+- **Documentos afectados:** catálogo, ficha de guía conceptual, fichas de organización, claims DMR-026, regresiones de grafo/búsqueda, cola y documentación de estado.
+
 ## Historial
 
 No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia del OC está guardada como premisa del autor, pendiente de aclaración y evaluación.

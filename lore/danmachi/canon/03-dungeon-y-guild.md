@@ -1,13 +1,15 @@
 ---
 id: DM-GUILD-001
 universe: danmachi
-type: institution_and_location
+type: setting
 status: provisional
 confidence: medium-high
-tags: [Dungeon, Guild, registro, misiones, aventureros]
+tags: [Dungeon, Guild, registro, referencia conceptual]
 source_refs: [DanMachi light novel series; localizador pendiente]
 ---
-# Dungeon, Guild y registro de aventureros
+# Dungeon, Guild y registro de aventureros — guía conceptual
+
+> **Alcance del registro:** `DM-GUILD-001` se conserva como ficha de orientación histórica para no romper referencias antiguas. No representa una ubicación física ni sustituye la entidad organizativa `ORG-GUILD`. Consulta [Guild (organización)](../familias/guild-organization.md). Los lugares físicos mantienen sus propios IDs; la relación exacta entre Pantheon, Babel y una posible sede adicional sigue pendiente y no se crea un edificio por inferencia.
 
 ## Dungeon
 

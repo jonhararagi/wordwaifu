@@ -83,7 +83,8 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [x] Registrar el marco general Orario–Dungeon de la sinopsis editorial del volumen 1 en [DANMACHI-RESEARCH-035](research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md), con tipo de fuente paratextual explícito.
 - [ ] Localizar un pasaje narrativo de la novela publicada con capítulo/página; la sinopsis editorial no verifica la geografía interna de Orario ni completa esta tarea.
 - [x] Registrar como avance parcial el extracto de lectura de GA Bunko que describe una plaza semicircular al norte de Orario; el archivo directo no respondió y la paginación sigue pendiente, por lo que la tarea de localizador reproducible no se cierra.
-- [ ] Construir un inventario de lugares de la ciudad con IDs estables y relaciones respaldadas; distinguir organización Guild de edificio físico.
+- [x] Separar el nodo organizativo `ORG-GUILD` de la guía conceptual histórica `DM-GUILD-001`; mover las aristas institucionales al nodo organizativo sin cambiar su continuidad ni su procedencia.
+- [ ] Completar el inventario de lugares de la ciudad con IDs estables y relaciones respaldadas; la resolución de la sede física de la Guild y del vínculo Pantheon–Babel permanece pendiente.
 - [ ] Verificar distritos, calles, accesos, orientación y mapas. Mantener las ubicaciones sin respaldo como esquema/pregunta; las wikis solo aportan pistas.
 - [ ] Analizar instituciones, Familias, población, vida cotidiana, comercio, abastecimiento y seguridad, afirmación por afirmación.
 - [ ] Describir el estado de Orario por periodos históricos y enlazar los eventos existentes sin narrarlos aquí de nuevo.

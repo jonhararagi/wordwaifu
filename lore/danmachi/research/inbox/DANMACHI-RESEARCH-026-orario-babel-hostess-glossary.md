@@ -11,7 +11,7 @@
 
 - `claim_id`: DMR-026-CLM-001
 - `claim`: El glosario oficial de la web del anime describe Orario como una gran ciudad que posee el Dungeon subterráneo y presenta a la Guild como institución central que gestiona ese laberinto.
-- `character_ids`: [LOC-ORARIO, LOC-DUNGEON, DM-GUILD-001]
+- `character_ids`: [LOC-ORARIO, LOC-DUNGEON, ORG-GUILD]
 - `aspect`: identidad geográfica e institución
 - `era_or_interval`: Descripción general del glosario; sin fecha narrativa fijada
 - `continuity_scope`: CONT-ANIME
@@ -27,7 +27,7 @@
 
 - `claim_id`: DMR-026-CLM-002
 - `claim`: El glosario oficial presenta a Babel como el edificio más alto de Orario, propiedad de la Guild y destinado a la supervisión y gestión del Dungeon; también menciona instalaciones públicas/comerciales y la presencia de dioses en pisos superiores.
-- `character_ids`: [LOC-BABEL, LOC-ORARIO, DM-GUILD-001, LOC-DUNGEON]
+- `character_ids`: [LOC-BABEL, LOC-ORARIO, ORG-GUILD, LOC-DUNGEON]
 - `aspect`: lugar e infraestructura
 - `era_or_interval`: Descripción general del glosario; sin fecha narrativa fijada
 - `continuity_scope`: CONT-ANIME
