@@ -10,6 +10,14 @@ require("../src/character-dossiers.js");
 const rosterApi = globalThis.WordWaifuOfficialCharacterRoster;
 const dossierApi = globalThis.WordWaifuCharacterDossiers;
 assert.ok(rosterApi && dossierApi, "Roster and dossier modules must load.");
+const auScenarioId = "EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001";
+const auScenarioUrl = "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md";
+const auAuthorNoteUrl = "https://note.com/fujinoomori/n/n629829ac3fe4";
+for (const id of ["CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-METERIA"]) {
+  const dossier = dossierApi.get(id);
+  assert.ok(dossier && dossier.relationships.includes(auScenarioId) && dossier.relationships.includes("CONT-AU"), id + " must expose a separate navigable CONT-AU scenario, not merge it into the historical biography.");
+  assert.ok(dossier.sources.includes(auScenarioUrl) && dossier.sources.includes(auAuthorNoteUrl), id + " must link directly to the author note and the AU event detail.");
+}
 const roster = rosterApi.list();
 const byId = new Map(catalog.records.map(r => [r.id, r]));
 for (const character of roster) {
