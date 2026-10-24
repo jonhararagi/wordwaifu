@@ -30,6 +30,9 @@
 - **DANMACHI-RESEARCH-040 — horizonte editorial:** al 2026-10-21, vol. 21 es el último tomo principal publicado consultado; vol. 22 (2026-12-15), Sword Oratoria 17 (2027-01-15) y episode Amid (2027-02-15) figuran como próximos, no como contenido ya publicado.
 - **DANMACHI-RESEARCH-041 — episode Haze/Heith:** la variante de romanización se conecta al ID estable `CHAR-HEITH-VELVET`; se incorporó un evento parcial basado en la sinopsis editorial, con relaciones a Heith y Ottar. El texto completo y las escenas detalladas siguen pendientes.
 
+- **Auditoría de ramas (corte GitHub 2026-10-24 UTC):** [informe y censo de las 101 ramas](BRANCH_AUDIT_2026-10-24.md). 87 están divergidas y 14 solo detrás de main; ninguna es candidata a fusionarse en bloque. El índice consultado contiene 85 PR: 60 fusionadas, 25 cerradas sin fusionar y 0 abiertas.
+- **CI posterior a la última integración:** `main` en `21f0482f3ba23142866e5534d2368ba43233668f`: [Validate WordWaifu #2921 correcto](https://github.com/jonhararagi/wordwaifu/actions/workflows/validate.yml) y [DanMachi Lore and Retrieval Integrity #1609 correcto](https://github.com/jonhararagi/wordwaifu/actions/workflows/danmachi-lore-check.yml). El código funcional reciente de PR #85–#87 ya está integrado; no reimportar sus ramas históricas.
+
 ## Snapshot operativo previo — 2026-10-20 (histórico, sustituido)
 
 Las notas siguientes se conservan para trazabilidad. Sus cifras y referencias de rama/PR pertenecen al corte anterior y no prevalecen sobre el bloque generado que aparece al principio.
