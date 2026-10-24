@@ -37,7 +37,7 @@ for (const [from,to] of [
   ["CHAR-MIA-GRAND","ORG-HOSTESS"], ["CHAR-SYR-FLOVA","ORG-HOSTESS"], ["CHAR-RYUU-LION","ORG-HOSTESS"],
   ["CHAR-ANYA-FROMEL","ORG-HOSTESS"], ["CHAR-CHLOE-ROLO","ORG-HOSTESS"], ["CHAR-LUNOIRE-FAUST","ORG-HOSTESS"]
 ]) {
-  const edge = catalog.relationships.find(edge => edge.from === from && edge.to === to);
+  const edge = catalog.relationships.find(edge => edge.from === from && edge.to === to && edge.claimPath.endsWith("BATCH-DM-006-oficial-roster-y-retratos.md"));
   assert.ok(edge, "Missing relationship " + from + " -> " + to);
   assert.equal(edge.continuity, "CONT-ANIME");
   assert.equal(edge.evidenceStatus, "source_checked");
