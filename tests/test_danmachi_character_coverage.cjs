@@ -18,6 +18,12 @@ for (const id of ["CHAR-DARK-ALFIA","CHAR-DARK-ZALD","CHAR-METERIA"]) {
   assert.ok(dossier && dossier.relationships.includes(auScenarioId) && dossier.relationships.includes("CONT-AU"), id + " must expose a separate navigable CONT-AU scenario, not merge it into the historical biography.");
   assert.ok(dossier.sources.includes(auScenarioUrl) && dossier.sources.includes(auAuthorNoteUrl), id + " must link directly to the author note and the AU event detail.");
 }
+const authorProvenanceUrl = "https://dengekionline.com/articles/189750/";
+for (const id of ["CHAR-DARK-ALFIA","CHAR-DARK-ZALD"]) {
+  const dossier = dossierApi.get(id);
+  assert.ok(dossier.history.includes("DMR-045-CLM-017"), id + " must expose the bounded authorial provenance claim in the UI history.");
+  assert.ok(dossier.sources.includes(authorProvenanceUrl), id + " must link to the Dengeki author interview backing DMR-045-CLM-017.");
+}
 const roster = rosterApi.list();
 const byId = new Map(catalog.records.map(r => [r.id, r]));
 for (const character of roster) {
