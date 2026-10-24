@@ -49,6 +49,8 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Validador automático de catálogo](tools/check-catalog.mjs)
 
 ## Etapa 1 — PRIORIDAD ACTUAL: Orario como escenario
+- [Guild (organización)](familias/guild-organization.md) — nodo institucional `ORG-GUILD`; separado de la guía conceptual `DM-GUILD-001` y de los lugares físicos. La ubicación exacta de la sede y la relación Pantheon–Babel siguen pendientes.
+
 
 - [Ficha central de Orario](places/orario.md) y [índice maestro de lugares](places/00-indice-lugares.md).
 - [DANMACHI-RESEARCH-031 — Geografía, mapa y pistas comunitarias](research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md).
