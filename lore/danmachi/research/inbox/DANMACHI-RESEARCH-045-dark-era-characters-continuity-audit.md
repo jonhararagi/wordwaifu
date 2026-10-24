@@ -230,6 +230,24 @@
 - [Rudra Familia — DanMachi Wiki](https://danmachi.fandom.com/wiki/Rudra_Familia): pista secundaria sobre T-5; reutiliza DMR-029-SRC-009 y no demuestra autoría personal de Rudra.
 - [Erebus — DanMachi Wiki](https://danmachi.fandom.com/wiki/Erebus): perfil secundario; reutiliza DMR-029-SRC-006 y mantiene «Eren» como denominación sin verificar.
 
+### DMR-045-CLM-012 · El padre de Bell es descrito como supporter de Zeus Familia en la historia original del juego
+
+- claim_id: DMR-045-CLM-012
+- claim: En la entrevista de LN News Online del 15 de octubre de 2020, el entrevistador resume que el padre de Bell era un サポーター (supporter) de Zeus Familia dentro de la historia de Memoria Freese; Fujino Omori responde afirmativamente a esa descripción. Esto registra el papel que la entrevista atribuye al padre en CONT-GAME, pero no aporta su nombre, no demuestra que fuera miembro formal de Zeus Familia y no permite crear una identidad de personaje. En el mismo intercambio, la madre se describe como hermana menor de Alfia (DMR-045-CLM-008), sin nombrarla como Meteria.
+- character_ids: [DM-CHAR-BELL]
+- aspect: origen familiar, figura paterna y rol reportado
+- era_or_interval: Historia original de Memoria Freese / Astrea Record; fecha de nacimiento absoluta desconocida
+- continuity_scope: CONT-GAME
+- source_id: DMR-045-SRC-009
+- source_title: LN News Online · entrevista a Fujino Omori
+- source_type: AUTHOR_INTERVIEW
+- source_locator: Pregunta y respuesta sobre el origen de Bell, junto a «ベルの出生については、ダンメモが初公開になりましたね»; el entrevistador describe al padre como サポーター de Zeus Familia y Omori responde «そうですね». Página web sin paginación.
+- source_url: https://ln-news.com/articles/109766
+- evidence_type: author_interview_confirmation_of_game_backstory
+- verification_status: source_checked
+- spoiler_level: major
+- confidence_note: Confirmación autoral de la descripción propuesta por el entrevistador dentro del marco de la historia del juego. No identifica al padre, no demuestra membresía formal de Zeus Familia y no traslada el dato a CONT-AR o CONT-MAIN-LN. Tampoco nombra a la madre como Meteria.
+
 ## Localizadores primarios pendientes
 
 1. DanMachi vol. 20: localizar el recuerdo de Alfia/Zald y el parentesco de Meteria con Bell con capítulo/página o localizador digital reproducible.
