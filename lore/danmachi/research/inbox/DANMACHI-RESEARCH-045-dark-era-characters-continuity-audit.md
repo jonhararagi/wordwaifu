@@ -320,6 +320,24 @@
 - spoiler_level: major
 - confidence_note: La fuente sirve para dirigir la búsqueda a los capítulos 2–3. No demuestra por sí sola las capacidades individuales de Alfia o Zald, una correspondencia entre nombres de armas y personajes, la mecánica completa de Afterglow ni una página. La sinopsis de Yen Press para vol. 20 solo se registra como metadatos (DMR-045-SRC-012) y no respalda el detalle.
 
+### DMR-045-CLM-017 · Declaración autoral sobre el origen narrativo de Alfia y la cautela al usar a Alfia/Zald
+
+- claim_id: DMR-045-CLM-017
+- claim: En la entrevista de Dengeki Online por el sexto aniversario de Memoria Freese, Omori explica que Alfia había aparecido brevemente en Familia Chronicle, pero que todavía no había decidido en qué historia involucrarla; describe su desarrollo en Astrea Record como la ocasión que terminó dándole un papel narrativo más amplio. También dice que evitaba usar a Alfia y Zald con frecuencia porque le parecían demasiado fuertes. En la misma entrevista diferencia el juego original de la novelización y afirma que la novela añadió bastante material y desarrolló más a los personajes. Es evidencia directa sobre proceso creativo y adaptación, no una escena narrativa ni una escala cuantitativa de poder: no confirma niveles, habilidades, resultados de combate o cada detalle de las dos continuidades.
+- character_ids: [CHAR-DARK-ALFIA, CHAR-DARK-ZALD]
+- aspect: procedencia autoral, intención narrativa y diferencias de adaptación
+- era_or_interval: Proceso creativo de Astrea Record; entrevista publicada en 2023
+- continuity_scope: CONT-AR
+- source_id: DMR-045-SRC-014
+- source_title: Entrevista de Dengeki Online a Fujino Omori y al equipo de Memoria Freese — parte 2
+- source_type: AUTHOR_INTERVIEW
+- source_locator: Sección 「事件その2：大森先生散歩事件」, párrafos sobre Alfia/Zald y la novelización, antes de la sección sobre el nacimiento de Bell; página web sin paginación.
+- source_url: https://dengekionline.com/articles/189750/
+- evidence_type: author_interview_statement_about_narrative_design
+- verification_status: source_checked
+- spoiler_level: major
+- confidence_note: Las afirmaciones se atribuyen directamente a Omori y describen decisiones de escritura. «Demasiado fuertes» es una explicación cualitativa de su cautela creativa, no una estadística verificable ni autorización para inferir que vencen automáticamente a otros personajes. El testimonio no sustituye capítulos/páginas de Astrea Record ni vuelve intercambiables sus versiones de juego y novela.
+
 ### Corrección de alcance independiente — nota autoral `CONT-AU`
 
 La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confirma un dato temporal que el registro anterior dejaba demasiado abierto: en esa posibilidad alternativa, Bell lleva tres años conviviendo con Alfia y Zald y está próximo a cumplir siete. La misma escena recuerda a Meteria y deja sin identificar al padre de Bell; también menciona a un abuelo en el hogar sin que este memo le asigne identidad. El dato se actualizó en `DMR-029-CLM-012` y en la ficha navegable `EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001`, con prueba regresiva. **Todo permanece en `CONT-AU`**: no resuelve los localizadores pendientes de las biografías principales de Alfia, Zald, Meteria, Erebus o Rudra y no cambia su estado en `CONT-MAIN-LN`/`CONT-AR`.
@@ -327,7 +345,7 @@ La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confi
 ## Localizadores primarios pendientes
 
 1. DanMachi vol. 20: el hilo comunitario de páginas de muestra ofrece una pista secundaria sobre el prólogo marítimo (DMR-045-CLM-015), pero el lector oficial no expuso el texto y las identidades propuestas no quedan verificadas. Sigue pendiente el pasaje de Meteria y el cotejo directo de Alfia/Zald con capítulo/página o localizador digital reproducible.
-2. Astrea Record vols. 1–3: cotejar las escenas de Alfia, Zald y Erebus; anotar edición y volumen/capítulo para cada dato confirmado. Como ruta independiente, DMR-045-CLM-016 señala retrospectivas de los capítulos 2–3 del vol. 20 para comprobar los usos de Afterglow atribuidos secundariamente a Alfia y Zald.
+2. Astrea Record vols. 1–3: cotejar las escenas de Alfia, Zald y Erebus; anotar edición y volumen/capítulo para cada dato confirmado. DMR-045-CLM-017 aporta contexto autoral sobre por qué Alfia/Zald entraron en Astrea Record, pero no reemplaza dichos localizadores. Como ruta independiente, DMR-045-CLM-016 señala retrospectivas de los capítulos 2–3 del vol. 20 para comprobar los usos de Afterglow atribuidos secundariamente a Alfia y Zald.
 3. Meteria: localizar el pasaje narrativo que establece maternidad y parentesco. No identificar al padre de Bell hasta que una fuente lo nombre explícitamente.
 4. DanMachi vol. 14: ya se localizó parcialmente la retrospección del capítulo 13 sobre la trampa de Rudra Familia (DMR-045-CLM-013) y el epílogo sobre el relato público (DMR-045-CLM-014). Falta cotejar la página exacta en una edición accesible y completar el seguimiento del plan posterior de Jura en vols. 13–14; la atribución personal a Rudra sigue pendiente.
 5. No declarar biografía primaria confirmada por la convergencia entre wikis.
