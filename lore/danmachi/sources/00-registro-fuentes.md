@@ -2766,6 +2766,29 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
 
+## DMR-045-SRC-013 · Discusión comunitaria sobre Afterglow en DanMachi vol. 20
+
+- source_id: DMR-045-SRC-013
+- title: Volume 20 Side Story — “A Scene Between a Certain Warrior and a Knight”
+- creator_or_publisher: Comunidad r/DanMachi; comentarios de lectores
+- source_type: COMMUNITY_DISCUSSION
+- series: DanMachi, novela ligera principal y relato extra de la edición de vol. 20
+- volume_or_edition: Discusión publicada el 2025-02-02; comentario posterior sobre los capítulos 2 y 3 de la novela
+- language: Inglés, con fragmentos/traducciones comunitarias del japonés
+- publication_date: 2025-02-02
+- official_url: https://www.reddit.com/r/DanMachi/comments/1ifg4g6/volume_20_side_story_a_scene_between_a_certain/
+- accessed_at: 2026-10-24
+- locator_type: community_comment_chapter_lead
+- locator: Comentario sobre la técnica Afterglow y su presencia propuesta en retrospectivas al comienzo de los capítulos 2 y 3; cita a Zald y Alfia como referencias históricas.
+- claims_supported: [DMR-045-CLM-016]
+- events_supported: [EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001]
+- continuity_scope: CONT-MAIN-LN; evidencia secundaria únicamente
+- reliability_note: El post trata principalmente un relato extra de Leon y Ottar. Un comentario en el hilo ofrece una pista para localizar escenas de la novela principal; no es un transcriptor/editorial de los capítulos 2–3 y no verifica página, mecánica de Afterglow ni usos individuales.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis corta propia; no reproducir la traducción comunitaria ni texto del libro.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea

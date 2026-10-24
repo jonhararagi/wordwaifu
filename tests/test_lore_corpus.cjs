@@ -905,3 +905,34 @@ const alfiaMarkdownWithLead = fs.readFileSync(path.join(root, "characters/dark-e
 assert.ok(alfiaMarkdownWithLead.includes("DMR-045-CLM-015") && alfiaMarkdownWithLead.includes("EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001"), "Alfia's dossier must navigate to the pending prologue lead.");
 const alfiaUiWithLead = fs.readFileSync(path.join(__dirname, "..", "src", "character-dossiers.js"), "utf8");
 assert.ok(alfiaUiWithLead.includes("DMR-045-CLM-015") && alfiaUiWithLead.includes("EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001"), "Alfia's interactive dossier must distinguish the new lead from verified biography.");
+
+const afterglowChapterLead = index.claims.find(item => item.claimId === "DMR-045-CLM-016");
+assert.ok(afterglowChapterLead, "The volume 20 Afterglow chapter lead must be indexed.");
+assert.deepEqual(afterglowChapterLead.continuityScopes, ["CONT-MAIN-LN"], "The lead belongs only to the main light-novel continuity.");
+assert.equal(afterglowChapterLead.verificationStatus, "secondary_checked", "A reader comment must remain secondary evidence.");
+assert.deepEqual(afterglowChapterLead.characterIds.sort(), ["CHAR-DARK-ALFIA", "CHAR-DARK-ZALD"], "The lead must be searchable from Alfia and Zald without creating additional identities.");
+assert.ok(afterglowChapterLead.sourceIds.includes("DMR-045-SRC-013") && afterglowChapterLead.sourceUrls.includes("https://www.reddit.com/r/DanMachi/comments/1ifg4g6/volume_20_side_story_a_scene_between_a_certain/"), "The Afterglow clue must preserve its discussion source and provenance.");
+const afterglowLeadSearch = corpus.search(index, {query:"Afterglow Alfia Zald capítulos",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all",verificationStatus:"secondary_checked"});
+assert.ok(afterglowLeadSearch.results.some(item => item.claimId === "DMR-045-CLM-016"), "The chapter 2–3 lead must be searchable from the named characters and technique.");
+const afterglowLeadNotPrimary = corpus.search(index, {query:"Afterglow Alfia Zald capítulos",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all",verificationStatus:"source_checked"});
+assert.ok(!afterglowLeadNotPrimary.results.some(item => item.claimId === "DMR-045-CLM-016"), "The community chapter lead must not appear in the primary/source-checked-only filter.");
+for (const continuity of ["CONT-AR", "CONT-GAME", "CONT-AU"]) {
+  const noLeak = corpus.search(index, {query:"Afterglow Alfia Zald capítulos",continuity,period:"ALL",aspect:"all",spoiler:"all"});
+  assert.ok(!noLeak.results.some(item => item.claimId === "DMR-045-CLM-016"), "The volume 20 main-novel lead must not leak into " + continuity + ".");
+}
+const afterglowEventRecord = catalog.records.find(record => record.id === "EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001");
+assert.ok(afterglowEventRecord && afterglowEventRecord.type === "event" && afterglowEventRecord.status === "secondary_reference_primary_locator_pending", "The Afterglow clue must be a candidate event, not a confirmed narrative scene.");
+for (const [edgeId,characterId] of [["REL-ALFIA-V20-AFTERGLOW-LEAD","CHAR-DARK-ALFIA"],["REL-ZALD-V20-AFTERGLOW-LEAD","CHAR-DARK-ZALD"]]) {
+  const edge = index.relationships.find(item => item.id === edgeId);
+  assert.ok(edge && edge.from === characterId && edge.to === "EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001" && edge.continuity === "CONT-MAIN-LN" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-045-CLM-016", edgeId + " must be a secondary, source-backed route to the candidate.");
+}
+const afterglowSource = corpus.getOnlineSourceDirectory().find(source => source.id === "community-reddit-vol20-afterglow-chapter2-3");
+assert.ok(afterglowSource && afterglowSource.url === "https://www.reddit.com/r/DanMachi/comments/1ifg4g6/volume_20_side_story_a_scene_between_a_certain/" && String(afterglowSource.limits).includes("No verifica usos individuales"), "The online source browser must display the community source and its limits.");
+const afterglowLeadText = fs.readFileSync(path.join(root, "events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md"), "utf8");
+assert.ok(afterglowLeadText.includes("pista de localización secundaria") && afterglowLeadText.includes("no como una lectura comprobada"), "The candidate event must not present the community chapter lead as verified scene evidence.");
+for (const characterFile of ["characters/dark-era/alfia.md","characters/dark-era/zald.md"]) {
+  const dossier = fs.readFileSync(path.join(root, characterFile), "utf8");
+  assert.ok(dossier.includes("DMR-045-CLM-016") && dossier.includes("EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001"), characterFile + " must link the dossier to the secondary chapter lead.");
+}
+const afterglowUi = fs.readFileSync(path.join(__dirname, "..", "src", "character-dossiers.js"), "utf8");
+assert.ok(afterglowUi.includes("DMR-045-CLM-016") && afterglowUi.includes("EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001"), "The interactive character dossier must expose the secondary Afterglow lead.");
