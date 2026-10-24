@@ -591,7 +591,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir los tres pies editoriales de Erebus, Alfia y Zald como claims secundarios CONT-GAME, con nivel/afiliación/participación limitados a lo dicho en los pies; añadir un nodo de evento independiente para la versión original del juego y aristas a sus personajes.
 - [ ] Obtener localizadores narrativos primarios para Alfia, Zald y Erebus; los captions no equivalen a capítulo/página ni elevan perfiles a canon de la novelización.
 - [ ] Cotejar otras páginas accesibles de DanMachi vol. 20 para localizar menciones exactas sobre Alfia/Zald/Meteria/Bell; separar nombres de armas reportados secundariamente de escenas biográficas y no dar por confirmado el parentesco sin localizador primario.
-- [ ] Resolver en DanMachi vols. 13–14 la escena de Rudra y separar la responsabilidad de Rudra, Jura y su Familia.
+- [x] Localizar parcialmente en DanMachi vol. 14, cap. 13, la trampa de Rudra Familia y la aparición del Juggernaut (`DMR-045-CLM-013`); conectar la acción colectiva de la Familia con el evento histórico sin atribuir una orden a la deidad.
+- [x] Localizar parcialmente en el epílogo del vol. 14 (`You'll Be Back II`) el relato público sobre Jura, otros supervivientes de Rudra Familia y la supuesta muerte de Gale Wind (`DMR-045-CLM-014`); conservarlo como versión pública, no como prueba de que Ryuu murió.
+- [ ] Completar el cotejo de los volúmenes 13–14 con una edición accesible para establecer páginas reproducibles y detallar el plan posterior de Jura; la autoría/autoridad personal de Rudra continúa pendiente.
 
 **Estado factual:** fichas más completas y buscables; el lote sigue en secondary_checked_with_primary_gaps. No se declara verificación primaria de las biografías.
 

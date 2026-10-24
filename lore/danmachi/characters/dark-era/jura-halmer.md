@@ -4,8 +4,8 @@ universe: danmachi
 type: character
 status: secondary_reference_primary_locator_pending
 continuity_scope: CONT-MAIN-LN
-source_refs: [DMR-029-SRC-007, DMR-029-SRC-008, DMR-029-SRC-009, DMR-029-SRC-010, DMR-029-SRC-011, DMR-043-SRC-006, DMR-043-SRC-007, DMR-043-SRC-008]
-claim_refs: [DMR-029-CLM-004, DMR-043-CLM-007, DMR-043-CLM-008, DMR-043-CLM-009]
+source_refs: [DMR-029-SRC-007, DMR-029-SRC-008, DMR-029-SRC-009, DMR-029-SRC-010, DMR-029-SRC-011, DMR-043-SRC-006, DMR-043-SRC-007, DMR-043-SRC-008, DMR-045-SRC-010]
+claim_refs: [DMR-029-CLM-004, DMR-043-CLM-007, DMR-043-CLM-008, DMR-043-CLM-009, DMR-045-CLM-013, DMR-045-CLM-014]
 verification_status: secondary_checked_primary_locator_pending
 aliases: ["Jura Halmer", "ジュラ・ハルマー", "Slaver Cat"]
 tags: [Jura Halmer, Rudra Familia, Juggernaut, Crimson Whip, DanMachi vol. 13, CONT-MAIN-LN, secondary evidence, spoiler]
@@ -25,6 +25,15 @@ Los resúmenes comunitarios narran que Jura participó en una emboscada contra i
 - **Domador:** las wikis le atribuyen la capacidad de someter monstruos, pero no control ilimitado sobre todo monstruo.
 - **Látigo Carmesí:** descrito como objeto de Evilus que mejora el control cuando se usa con un collar compatible; el resumen menciona a un Lambton.
 - **Preparación del Juggernaut:** la aparición se vincula a experimentos y daño acumulado al Dungeon, con riesgo grave para Jura. No se le atribuye control de la mazmorra ni una forma segura de invocar la criatura.
+
+## Localizadores narrativos parciales — DanMachi vol. 14
+
+**Capítulo 13, “Beyond a Thousand Darknesses” — incidente histórico T−5.** La retrospectiva muestra a Jura con Rudra Familia durante el enfrentamiento con Astrea Familia. El texto atribuye a la Familia el despliegue de más de cien explosivos; tras el lamento del Dungeon aparece el Juggernaut. Eso permite registrar una participación contextual de Jura en la operación de su facción, pero no prueba que él solo diseñara todos los detalles ni convierte al dios Rudra en autor del plan. Claim: `DMR-045-CLM-013`.
+
+**Epílogo, “You'll Be Back II” — versión pública posterior.** Aisha explica a Ryuu que la versión difundida en la superficie decía que Jura y otros supervivientes de Rudra Familia murieron y que Gale Wind murió junto a ellos. Ese es el relato público, no una afirmación de que Ryuu muriese realmente. Claim: `DMR-045-CLM-014`.
+
+- **Evidencia:** `source_checked_excerpt_only`; se localizaron capítulo y epílogo, pero no una página de la edición impresa/digital verificada.
+- **Edición publicada:** [Yen Press · DanMachi vol. 14](https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel).
 
 ## Discrepancia en el rótulo de debut
 La página inglesa sitúa el debut en DanMachi, volumen 13. La página española consultada muestra un rótulo que menciona «Astrea Record Volumen 3», aunque su propio resumen trata el arco de Jura, Ryuu y el Juggernaut. No se resuelve esa incompatibilidad por suposición: se conserva CONT-MAIN-LN por la ruta narrativa descrita en el volumen 13 y se deja pendiente comprobar el pasaje y edición primarios.

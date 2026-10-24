@@ -2697,6 +2697,29 @@ verification_status: stub
 
 
 
+## DMR-045-SRC-010 · DanMachi, volumen 14 — edición inglesa de Yen Press
+
+- source_id: DMR-045-SRC-010
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 14 (light novel)
+- creator_or_publisher: Fujino Omori; Yen Press / Yen On
+- source_type: PRIMARY_MAIN_LIGHT_NOVEL
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 14, edición inglesa; ISBN digital 978-1-9753-8502-6; ISBN impreso 978-1-9753-8501-9
+- language: Inglés, traducción de Winifred Bird
+- publication_date: 2019-12-31
+- official_url: https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel
+- accessed_at: 2026-10-24
+- locator_type: chapter_and_epilogue_locator
+- locator: Capítulo 13, “Beyond a Thousand Darknesses” (retrospectiva de la trampa de Rudra Familia y aparición del Juggernaut); epílogo “You'll Be Back II” (relato público que Aisha explica a Ryuu). Páginas no verificadas.
+- claims_supported: [DMR-045-CLM-013, DMR-045-CLM-014]
+- events_supported: [EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001, EVT-DM-JUGGERNAUT-RETURN-001]
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: La novela publicada es la fuente primaria. El localizador de capítulo y las escenas se encontraron en un extracto textual indexado; la página de Yen Press identifica la edición, pero su lector gratuito no expuso la escena en texto legible durante esta comprobación. Por ello los claims son excerpt-only y no incluyen página.
+- conflicting_sources: [DMR-029-SRC-009, DMR-029-SRC-010]
+- rights_note: Paráfrasis original; enlazar la edición publicada y evitar reproducir el texto.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked_excerpt_only
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea

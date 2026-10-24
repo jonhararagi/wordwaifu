@@ -248,12 +248,48 @@
 - spoiler_level: major
 - confidence_note: Confirmación autoral de la descripción propuesta por el entrevistador dentro del marco de la historia del juego. No identifica al padre, no demuestra membresía formal de Zeus Familia y no traslada el dato a CONT-AR o CONT-MAIN-LN. Tampoco nombra a la madre como Meteria.
 
+### DMR-045-CLM-013 · La trampa del antiguo incidente corresponde a Rudra Familia en conjunto; el Juggernaut aparece después
+
+- claim_id: DMR-045-CLM-013
+- claim: En la retrospectiva de Ryuu del volumen 14, la narración describe que Rudra Familia había distribuido más de cien explosivos (Inferno Stones en la traducción inglesa) por el Dungeon. Jura aparece entre los miembros de la facción frente a Astrea Familia. Cuando Astrea Familia está a punto de atacar al grupo acorralado, el Dungeon emite un lamento anómalo y aparece el Juggernaut. El pasaje permite atribuir la trampa a Rudra Familia como grupo y vincular su desenlace con la aparición del monstruo; no demuestra que la deidad Rudra diseñara, ordenara o autorizara personalmente la operación, ni que los miembros controlaran al Juggernaut.
+- character_ids: [CHAR-DARK-RUDRA, CHAR-DARK-JURA-HALMER, MON-DM-JUGGERNAUT-001]
+- aspect: secuencia del acontecimiento, atribución de responsabilidad y causalidad
+- era_or_interval: Retrospectiva sobre la tragedia de Astrea Familia, aproximadamente T-5; fecha absoluta pendiente
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-010
+- source_title: DanMachi, volumen 14 — edición inglesa publicada por Yen Press
+- source_type: PRIMARY_MAIN_LIGHT_NOVEL
+- source_locator: Capítulo 13, “Beyond a Thousand Darknesses”; retrospectiva de la trampa de Rudra Familia y aparición del Juggernaut. Página exacta no verificada.
+- source_url: https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel
+- evidence_type: primary_light_novel_excerpt
+- verification_status: source_checked_excerpt_only
+- spoiler_level: major
+- confidence_note: El localizador de capítulo y la secuencia se recuperaron de un extracto textual indexado del volumen publicado. La ficha editorial oficial valida la edición pero no transcribe esta escena; el lector gratuito oficial no expuso el interior legible durante la comprobación. No se asigna número de página. El dato es parcial y no completa la biografía personal de Rudra ni el detalle íntegro de Jura.
+
+### DMR-045-CLM-014 · El epílogo distingue el relato público sobre Jura y la supuesta muerte de Gale Wind
+
+- claim_id: DMR-045-CLM-014
+- claim: En el epílogo del volumen 14, Aisha explica a Ryuu la versión difundida en la superficie después del incidente: Jura y otros supervivientes de Rudra Familia habrían muerto, y el relato público incluía que Gale Wind murió junto a ellos. La escena presenta eso como la historia aceptada en la superficie, no como prueba de que Ryuu realmente muriera. El pasaje añade que el Guild aceptó la explicación conveniente con pocas preguntas. Esta capa informativa debe distinguirse de los hechos narrativos que el lector conoce y no se utiliza para atribuir decisiones a la deidad Rudra.
+- character_ids: [CHAR-DARK-RUDRA, CHAR-DARK-JURA-HALMER, CHAR-RYUU-LION]
+- aspect: secuelas del acontecimiento, relato público y discrepancia entre rumor y realidad
+- era_or_interval: Epílogo tras la crisis de los volúmenes 13–14; fecha exacta desconocida
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-010
+- source_title: DanMachi, volumen 14 — edición inglesa publicada por Yen Press
+- source_type: PRIMARY_MAIN_LIGHT_NOVEL
+- source_locator: Epílogo, “You'll Be Back II”; conversación de Aisha con Ryuu sobre el relato público. Página exacta no verificada.
+- source_url: https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel
+- evidence_type: primary_light_novel_excerpt
+- verification_status: source_checked_excerpt_only
+- spoiler_level: major
+- confidence_note: Se localizó un extracto indexado de la sección final. La afirmación registra qué versión se comunicó en la superficie, no que todos sus elementos fueran verdaderos. Sin número de página; corroborar la edición antes de citar página impresa.
+
 ## Localizadores primarios pendientes
 
 1. DanMachi vol. 20: localizar el recuerdo de Alfia/Zald y el parentesco de Meteria con Bell con capítulo/página o localizador digital reproducible.
 2. Astrea Record vols. 1–3: cotejar las escenas de Alfia, Zald y Erebus; anotar edición y volumen/capítulo para cada dato confirmado.
 3. Meteria: localizar el pasaje narrativo que establece maternidad y parentesco. No identificar al padre de Bell hasta que una fuente lo nombre explícitamente.
-4. DanMachi vols. 13–14: localizar la escena de Rudra y distinguir las decisiones de Rudra, Jura y la Familia.
+4. DanMachi vol. 14: ya se localizó parcialmente la retrospección del capítulo 13 sobre la trampa de Rudra Familia (DMR-045-CLM-013) y el epílogo sobre el relato público (DMR-045-CLM-014). Falta cotejar la página exacta en una edición accesible y completar el seguimiento del plan posterior de Jura en vols. 13–14; la atribución personal a Rudra sigue pendiente.
 5. No declarar biografía primaria confirmada por la convergencia entre wikis.
 
 **Resultado:** los cinco expedientes son más útiles y recuperables, pero continúan con brechas de evidencia primaria. Este lote no declara completa la Era Oscura ni las historias individuales.

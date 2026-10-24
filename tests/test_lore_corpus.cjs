@@ -844,3 +844,38 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-ALFIA-BELL-AUNT-GAME
 const gameCaptionSource = corpus.getOnlineSourceDirectory().find(source => source.id === "author-interview-alfia-aunt-game");
 assert.ok(gameCaptionSource && gameCaptionSource.authority.includes("pies editoriales") && String(gameCaptionSource.limits).includes("no son palabras de Omori"), "The source directory must distinguish the article's editorial captions from the author's answer.");
 
+const rudraTrapClaim = index.claims.find(item => item.claimId === "DMR-045-CLM-013");
+assert.ok(rudraTrapClaim, "Volume 14 chapter 13's partial primary locator must be indexed.");
+assert.deepEqual(rudraTrapClaim.continuityScopes, ["CONT-MAIN-LN"], "The historical Rudra Familia trap must stay in the main light-novel continuity.");
+assert.equal(rudraTrapClaim.verificationStatus, "source_checked_excerpt_only", "A chapter locator without a verified page must remain excerpt-only.");
+assert.ok(rudraTrapClaim.sourceIds.includes("DMR-045-SRC-010") && rudraTrapClaim.sourceUrls.includes("https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel"), "The historical trap claim must cite the licensed volume 14 edition.");
+assert.ok(rudraTrapClaim.claim.includes("Rudra Familia") && rudraTrapClaim.claim.includes("cien") && rudraTrapClaim.claim.includes("Juggernaut"), "The claim must capture the faction-level trap and the following Juggernaut appearance.");
+const rudraTrapSearch = corpus.search(index, {query:"Rudra Familia explosivos Dungeon Juggernaut",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(rudraTrapSearch.results.some(item => item.claimId === "DMR-045-CLM-013"), "The historical Rudra Familia trap must be discoverable from narrative search.");
+for (const continuity of ["CONT-AR", "CONT-GAME", "CONT-AU"]) {
+  const noLeak = corpus.search(index, {query:"Rudra Familia explosivos Dungeon Juggernaut",continuity,period:"ALL",aspect:"all",spoiler:"all"});
+  assert.ok(!noLeak.results.some(item => item.claimId === "DMR-045-CLM-013"), "The main-light-novel trap claim must not leak into " + continuity + ".");
+}
+const rudraPublicAccountClaim = index.claims.find(item => item.claimId === "DMR-045-CLM-014");
+assert.ok(rudraPublicAccountClaim && rudraPublicAccountClaim.verificationStatus === "source_checked_excerpt_only", "The epilogue's public account must remain an excerpt-checked claim.");
+assert.ok(rudraPublicAccountClaim.characterIds.includes("CHAR-DARK-JURA-HALMER") && rudraPublicAccountClaim.characterIds.includes("CHAR-RYUU-LION"), "The public account claim must be searchable from Jura and Ryuu without treating the report as Ryuu's actual death.");
+const rudraSource = corpus.getOnlineSourceDirectory().find(source => source.id === "official-yenpress-danmachi-vol14-primary-excerpt");
+assert.ok(rudraSource && rudraSource.url === "https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel" && String(rudraSource.limits).includes("páginas no están verificadas"), "The source browser must disclose that the official page identifies the edition while page locators remain unverified.");
+const familyTrapEdge = index.relationships.find(edge => edge.id === "REL-FAM-RUDRA-TRAP-ASTREA-JUGGERNAUT-V14");
+assert.ok(familyTrapEdge && familyTrapEdge.from === "FAM-RUDRA" && familyTrapEdge.to === "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001" && familyTrapEdge.claimRef === "DMR-045-CLM-013" && familyTrapEdge.evidenceStatus === "source_checked_excerpt_only", "The graph must represent the faction's collective action separately from the god.");
+const juraTrapEdge = index.relationships.find(edge => edge.id === "REL-JURA-JUGGERNAUT-EVENT-001");
+assert.ok(juraTrapEdge && juraTrapEdge.kind === "member_of_faction_that_set_trap" && juraTrapEdge.claimRef === "DMR-045-CLM-013" && juraTrapEdge.evidenceStatus === "source_checked_excerpt_only", "Jura's event edge must express contextual participation without asserting sole authorship.");
+assert.ok(!index.relationships.some(edge => edge.from === "CHAR-DARK-RUDRA" && edge.to === "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001" && edge.claimRef === "DMR-045-CLM-013"), "The excerpt must not create an edge that attributes the faction's trap personally to the god Rudra.");
+const juraPublicEdge = index.relationships.find(edge => edge.id === "REL-JURA-SURFACE-REPORT-V14");
+const ryuuCoverEdge = index.relationships.find(edge => edge.id === "REL-RYUU-PUBLIC-DEATH-COVER-V14");
+assert.ok(juraPublicEdge && ryuuCoverEdge && juraPublicEdge.to === ryuuCoverEdge.to && juraPublicEdge.claimRef === "DMR-045-CLM-014" && ryuuCoverEdge.claimRef === "DMR-045-CLM-014", "The epilogue's public report must connect both Jura and Ryuu to the aftermath event.");
+const rudraEventText = fs.readFileSync(path.join(root, "events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md"), "utf8");
+assert.ok(rudraEventText.includes("DMR-045-CLM-013") && rudraEventText.includes("no prueba que el dios Rudra"), "The historical event page must state the new chapter locator and preserve the deity attribution limit.");
+const returnEventText = fs.readFileSync(path.join(root, "events/timeline/EVT-DM-JUGGERNAUT-RETURN-001.md"), "utf8");
+assert.ok(returnEventText.includes("DMR-045-CLM-014") && returnEventText.includes("no una prueba de que Ryuu hubiese muerto"), "The current event must distinguish the surface story from Ryuu's actual fate.");
+const rudraDossier = fs.readFileSync(path.join(root, "characters/dark-era/rudra.md"), "utf8");
+const juraDossier = fs.readFileSync(path.join(root, "characters/dark-era/jura-halmer.md"), "utf8");
+assert.ok(rudraDossier.includes("DMR-045-CLM-013") && rudraDossier.includes("diseñara, ordenara, autorizara") && rudraDossier.includes("Esas atribuciones personales permanecen pendientes"), "Rudra's dossier must use the group-level locator and leave his personal responsibility unresolved.");
+assert.ok(juraDossier.includes("DMR-045-CLM-014") && juraDossier.includes("You'll Be Back II"), "Jura's dossier must contain the epilogue locator.");
+const rudraUi = fs.readFileSync(path.join(__dirname, "..", "src", "character-dossiers.js"), "utf8");
+assert.ok(rudraUi.includes("DMR-045-CLM-013") && rudraUi.includes("DMR-045-CLM-014"), "The interactive character dossiers must expose the new narrative locators.");
