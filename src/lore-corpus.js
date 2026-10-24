@@ -484,6 +484,7 @@
     const period = String(settings.period || "ALL");
     const aspect = String(settings.aspect || "all");
     const spoiler = String(settings.spoiler || "all");
+    const verificationStatus = String(settings.verificationStatus || "ALL").toLowerCase();
     const limit = Number.isInteger(settings.limit) ? Math.max(1, Math.min(settings.limit, 100)) : 20;
     const characterMap = new Map((index.characters || []).map(character => [character.id, character]));
     const results = [];
@@ -494,6 +495,7 @@
       if (aspect !== "all" && !(claim.aspects || []).includes(aspect)) continue;
       if (spoiler === "hide-major" && ["major", "endgame"].includes(claim.spoilerLevel)) continue;
       if (spoiler === "safe-only" && !["none", "mild"].includes(claim.spoilerLevel)) continue;
+      if (verificationStatus !== "all" && verificationStatus !== "ALL".toLowerCase() && String(claim.verificationStatus || "unverified").toLowerCase() !== verificationStatus) continue;
       const characterRecords = (claim.characterIds || []).map(id => characterMap.get(id)).filter(Boolean);
       const aliases = characterRecords.flatMap(character => character.aliases || []);
       const haystack = normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
