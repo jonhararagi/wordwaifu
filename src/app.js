@@ -3828,7 +3828,8 @@
       const report = window.WordWaifuLoreCorpus.search(index, {
         query: $("#lore-query").value, characterId: $("#lore-character").value,
         continuity: $("#lore-continuity").value, period: $("#lore-period").value,
-        aspect: $("#lore-aspect").value, spoiler: $("#lore-spoiler").value, limit: 30
+        aspect: $("#lore-aspect").value, spoiler: $("#lore-spoiler").value,
+        verificationStatus: $("#lore-verification").value, limit: 30
       });
       if (!report.results.length) {
         status.textContent = "No se encontró evidencia en el corpus consultado para esos filtros. Esto no demuestra que el dato no exista en el canon: no inventes una respuesta; busca una fuente o escena que lo documente.";
@@ -3871,7 +3872,7 @@
   $("#lore-web-search-button").addEventListener("click", () => { void runOnlineLoreSearch(); });
   $("#lore-clear-button").addEventListener("click", () => {
     $("#lore-query").value = ""; $("#lore-character").value = ""; $("#lore-continuity").value = "ALL";
-    $("#lore-period").value = "ALL"; $("#lore-aspect").value = "all"; $("#lore-spoiler").value = "all";
+    $("#lore-period").value = "ALL"; $("#lore-aspect").value = "all"; $("#lore-spoiler").value = "all"; $("#lore-verification").value = "ALL";
     $("#lore-results").replaceChildren(); void prepareLoreView().catch(() => {});
   });
 
