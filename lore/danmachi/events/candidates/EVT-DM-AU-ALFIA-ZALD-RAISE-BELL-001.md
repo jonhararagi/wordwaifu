@@ -19,7 +19,7 @@ Esta ficha organiza una posibilidad alternativa descrita en la nota de Fujino Om
 - Continuidad: `CONT-AU`.
 - Fuente narrativa: `DMR-029-SRC-016`, nota del autor.
 - Evidencia: `source_checked_excerpt_only`.
-- Intervalo: escenario hipotético de crianza; la duración exacta y la fecha de calendario no quedan establecidas en el claim indexado.
+- Intervalo narrativo: duración de tres años desde el encuentro de Alfia y Zald con Bell; Bell está próximo a cumplir siete en la escena. No se establece una fecha absoluta de calendario.
 - Referencia editorial adicional: `DMR-045-SRC-002`.
 
 ## Resumen delimitado
