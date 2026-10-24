@@ -938,3 +938,18 @@ for (const characterFile of ["characters/dark-era/alfia.md","characters/dark-era
 }
 const afterglowUi = fs.readFileSync(path.join(__dirname, "..", "src", "character-dossiers.js"), "utf8");
 assert.ok(afterglowUi.includes("DMR-045-CLM-016") && afterglowUi.includes("EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001"), "The interactive character dossier must expose the secondary Afterglow lead.");
+
+const authorialDesignClaim = index.claims.find(item => item.claimId === "DMR-045-CLM-017");
+assert.ok(authorialDesignClaim, "Omori's Alfia/Zald narrative-design statement must be indexed as an individual claim.");
+assert.deepEqual(authorialDesignClaim.continuityScopes, ["CONT-AR"], "The author's account is scoped to Astrea Record novelization context, not merged into main-LN or game canon.");
+assert.equal(authorialDesignClaim.verificationStatus, "source_checked", "A directly read author interview must preserve its source-checked state.");
+assert.deepEqual(authorialDesignClaim.characterIds.sort(), ["CHAR-DARK-ALFIA","CHAR-DARK-ZALD"], "The authorial provenance claim must resolve to exactly Alfia and Zald.");
+assert.ok(authorialDesignClaim.sourceIds.includes("DMR-045-SRC-014") && authorialDesignClaim.sourceUrls.includes("https://dengekionline.com/articles/189750/"), "The claim must retain its exact interview source ID and URL.");
+const authorialDesignSearch = corpus.search(index, {query:"Alfia Zald Familia Chronicle Omori",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all",verificationStatus:"source_checked"});
+assert.ok(authorialDesignSearch.results.some(item => item.claimId === "DMR-045-CLM-017"), "The authorial provenance claim must be discoverable through the interactive lore search.");
+for (const continuity of ["CONT-MAIN-LN","CONT-GAME","CONT-AU","CONT-ANIME"]) {
+  const noLeak = corpus.search(index, {query:"Alfia Zald Familia Chronicle Omori",continuity,period:"ALL",aspect:"all",spoiler:"all"});
+  assert.ok(!noLeak.results.some(item => item.claimId === "DMR-045-CLM-017"), "The authorial design claim must not leak into " + continuity + ".");
+}
+const dengekiSourceDirectory = corpus.getOnlineSourceDirectory().find(source => source.id === "author-interview-alfia-aunt-bell");
+assert.ok(dengekiSourceDirectory && dengekiSourceDirectory.coverage.includes("DMR-045-CLM-017") && dengekiSourceDirectory.url === "https://dengekionline.com/articles/189750/", "The browseable source directory must expose the new claim and its source boundaries.");
