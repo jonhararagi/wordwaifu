@@ -2683,12 +2683,12 @@ verification_status: stub
 - publication_date: 2020-10-15
 - official_url: https://ln-news.com/articles/109766
 - accessed_at: 2026-10-23
-- locator_type: author_interview_statement
-- locator: Intercambio sobre el origen de Bell; la pregunta afirma que su madre es la hermana menor de Alfia y Omori responde afirmativamente en la sección junto a «ベルの出生については、ダンメモが初公開になりましたね».
-- claims_supported: [DMR-045-CLM-008]
-- events_supported: []
+- locator_type: author_interview_statement_and_editorial_profile_captions
+- locator: Pregunta/respuesta sobre el origen de Bell junto a «ベルの出生については、ダンメモが初公開になりましたね»; además, pies editoriales bajo las imágenes de Erebus, Alfia y Zald en la misma sección.
+- claims_supported: [DMR-045-CLM-008, DMR-045-CLM-009, DMR-045-CLM-010, DMR-045-CLM-011]
+- events_supported: [EVT-DM-GAME-ASTREA-RECORD-001]
 - continuity_scope: CONT-GAME
-- reliability_note: La respuesta autoral valida el parentesco tal como lo formula el entrevistador para la historia del juego y señala que DanMemo reveló primero el origen de Bell. No nombra en esa respuesta a la hermana como Meteria ni localiza una escena de novela.
+- reliability_note: DMR-045-CLM-008 cita la respuesta autoral al entrevistador. DMR-045-CLM-009–011 usan pies editoriales de la misma página como evidencia secundaria, no como palabras de Omori. La respuesta no nombra a la hermana como Meteria ni localiza una escena de novela.
 - conflicting_sources: []
 - rights_note: Paráfrasis propia y localizador breve; no reproducir la entrevista completa.
 - verified_by: DANMACHI-RESEARCH-045

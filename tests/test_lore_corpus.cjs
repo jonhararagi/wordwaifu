@@ -786,3 +786,41 @@ const astreaVol3PreviewUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-66
 const astreaVol3Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-astrea-record-vol3-preview-metadata-only");
 assert.ok(astreaVol3Preview && astreaVol3Preview.url === astreaVol3PreviewUrl && astreaVol3Preview.authority.includes("metadatos solamente") && String(astreaVol3Preview.coverage).includes("1/63") && String(astreaVol3Preview.limits).includes("No respalda ninguna capacidad"), "Astrea Record 3 public sample must remain discoverable as metadata-only when only its cover was accessible.");
 assert.ok(!index.claims.some(item => item.sourceUrls.includes(astreaVol3PreviewUrl)), "A sample reader with no inspected narrative pages must not support an individual character, relationship, or event claim.");
+
+const gameAstreaEventPath = path.join(root, "events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md");
+const gameAstreaEventText = fs.readFileSync(gameAstreaEventPath, "utf8");
+const gameAstreaCatalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
+assert.ok(gameAstreaCatalog.records.some(record => record.id === "EVT-DM-GAME-ASTREA-RECORD-001" && record.path === "events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md"), "The original Memoria Freese story needs its own navigable event record.");
+assert.ok(gameAstreaEventText.includes("continuity_scope: CONT-GAME") && gameAstreaEventText.includes("CONT-AR") && gameAstreaEventText.includes("CONT-MAIN-LN"), "The original game event must explicitly distinguish the novelization and main light-novel continuity.");
+assert.ok(!gameAstreaEventText.includes("time_anchor: T-7") && gameAstreaEventText.includes("in_world_date_unknown"), "Do not transplant the novelization's date anchor into the original game event.");
+
+const gameCaptionIds = ["DMR-045-CLM-009", "DMR-045-CLM-010", "DMR-045-CLM-011"];
+for (const claimId of gameCaptionIds) {
+  const claim = index.claims.find(item => item.claimId === claimId);
+  assert.ok(claim, claimId + " must be parsed and searchable from the source bundle.");
+  assert.deepEqual(claim.continuityScopes, ["CONT-GAME"], claimId + " must stay in original game continuity.");
+  assert.equal(claim.verificationStatus, "secondary_checked", claimId + " must remain a secondary editorial caption, not primary narrative verification.");
+  assert.ok(claim.sourceIds.includes("DMR-045-SRC-009") && claim.sourceUrls.includes("https://ln-news.com/articles/109766"), claimId + " must expose the actual article source.");
+}
+const alfiaGameCaption = corpus.search(index, {query:"Alfia nivel 7 Hera Familia",continuity:"CONT-GAME",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(alfiaGameCaption.results.some(item => item.claimId === "DMR-045-CLM-010"), "Alfia's game-context profile caption must be discoverable in CONT-GAME.");
+const alfiaCaptionNotAR = corpus.search(index, {query:"Alfia nivel 7 Hera Familia",continuity:"CONT-AR",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(!alfiaCaptionNotAR.results.some(item => item.claimId === "DMR-045-CLM-010"), "Alfia's game caption must not leak into the Astrea Record novelization filter.");
+const alfiaCaptionNotMain = corpus.search(index, {query:"Alfia nivel 7 Hera Familia",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(!alfiaCaptionNotMain.results.some(item => item.claimId === "DMR-045-CLM-010"), "Alfia's game caption must not leak into the main light-novel filter.");
+
+const gameCaptionEdges = [
+  ["REL-EREBUS-ORIGINAL-ASTREA-RECORD-GAME","CHAR-DARK-EREBUS","DMR-045-CLM-009"],
+  ["REL-ALFIA-ORIGINAL-ASTREA-RECORD-GAME","CHAR-DARK-ALFIA","DMR-045-CLM-010"],
+  ["REL-ZALD-ORIGINAL-ASTREA-RECORD-GAME","CHAR-DARK-ZALD","DMR-045-CLM-011"],
+  ["REL-EDITORIAL-ALFIA-HERA-MEMBER-GAME","CHAR-DARK-ALFIA","DMR-045-CLM-010"],
+  ["REL-EDITORIAL-ZALD-ZEUS-MEMBER-GAME","CHAR-DARK-ZALD","DMR-045-CLM-011"]
+];
+for (const [edgeId, from, claimRef] of gameCaptionEdges) {
+  const edge = index.relationships.find(item => item.id === edgeId);
+  assert.ok(edge && edge.from === from && edge.continuity === "CONT-GAME" && edge.claimRef === claimRef && edge.evidenceStatus === "secondary_checked", edgeId + " must be a continuity-specific, source-backed relationship.");
+}
+assert.ok(index.relationships.some(edge => edge.id === "REL-ALFIA-BELL-AUNT-GAME-INTERVIEW" && edge.continuity === "CONT-GAME"), "The existing author-interview edge must remain distinct from the caption-based character relationships.");
+const gameCaptionSource = corpus.getOnlineSourceDirectory().find(source => source.id === "author-interview-alfia-aunt-game");
+assert.ok(gameCaptionSource && gameCaptionSource.authority.includes("pies editoriales") && String(gameCaptionSource.limits).includes("no son palabras de Omori"), "The source directory must distinguish the article's editorial captions from the author's answer.");
+

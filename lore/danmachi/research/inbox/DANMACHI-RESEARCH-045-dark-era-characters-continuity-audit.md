@@ -158,6 +158,60 @@
 - spoiler_level: major
 - confidence_note: La respuesta del autor confirma el parentesco formulado por el entrevistador en relación con la historia del juego. No nombra a la hermana, no aporta localizador de la novela y no permite promover la identidad de Meteria ni el vínculo materno de CONT-MAIN-LN sin una fuente independiente.
 
+### DMR-045-CLM-009 · Pie editorial de Erebus en la cobertura de la versión de juego
+
+- claim_id: DMR-045-CLM-009
+- claim: El pie editorial situado bajo el retrato de Erebus en el artículo de LN News Online lo describe como una deidad del inframundo primordial y usa «絶対悪» («Absolute Evil»). El artículo lo incluye en la presentación de los tres personajes de la historia de Memoria Freese relacionada con el origen de Bell. Esto respalda únicamente cómo la página presenta al personaje en ese contexto; no demuestra una jerarquía global sobre Evilus, un repertorio de poderes ni que «Eren» sea otro nombre canónico.
+- character_ids: [CHAR-DARK-EREBUS]
+- aspect: identidad divina y sobrenombre editorial
+- era_or_interval: Cobertura de la historia original de Memoria Freese; fecha narrativa exacta desconocida
+- continuity_scope: CONT-GAME
+- source_id: DMR-045-SRC-009
+- source_title: LN News Online · entrevista y pies editoriales de perfiles de Erebus, Alfia y Zald
+- source_type: SECONDARY_EDITORIAL_CAPTION
+- source_locator: Pie editorial debajo de la imagen de Erebus, en la sección sobre los personajes de la historia del origen de Bell; artículo web del 2020-10-15, sin paginación
+- source_url: https://ln-news.com/articles/109766
+- evidence_type: secondary_editorial_character_caption
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: Es texto editorial de la página, no una afirmación pronunciada por Omori. No sustituye el pasaje de la novela ni verifica «Eren», poderes o cadena de mando de Evilus.
+
+### DMR-045-CLM-010 · Perfil editorial de Alfia en el contexto del juego
+
+- claim_id: DMR-045-CLM-010
+- claim: El pie editorial de Alfia en LN News Online la presenta como maga de nivel 7, amante del silencio y miembro de Hera Familia, y afirma que avanzó hacia Orario junto a Erebus. Es una descripción secundaria asociada a la historia original de Memoria Freese. No confirma por sí sola un localizador de la novelización, una escena concreta en los libros ni una estadística que deba trasladarse a CONT-AR o CONT-MAIN-LN.
+- character_ids: [CHAR-DARK-ALFIA, CHAR-DARK-EREBUS]
+- aspect: afiliación, perfil histórico y participación contextual
+- era_or_interval: Cobertura de la historia original de Memoria Freese; fecha narrativa exacta desconocida
+- continuity_scope: CONT-GAME
+- source_id: DMR-045-SRC-009
+- source_title: LN News Online · entrevista y pies editoriales de perfiles de Erebus, Alfia y Zald
+- source_type: SECONDARY_EDITORIAL_CAPTION
+- source_locator: Pie editorial debajo de la imagen de Alfia, en la sección sobre los personajes de la historia del origen de Bell; artículo web del 2020-10-15, sin paginación
+- source_url: https://ln-news.com/articles/109766
+- evidence_type: secondary_editorial_character_caption
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: El nivel y la afiliación se registran solo en el contexto que describe el pie editorial de la versión del juego; no se promueven a la novela ligera ni se consideran datos permanentes.
+
+### DMR-045-CLM-011 · Perfil editorial de Zald en el contexto del juego
+
+- claim_id: DMR-045-CLM-011
+- claim: El pie editorial de Zald en LN News Online lo presenta como guerrero de nivel 7 de Zeus Familia, usa el título 暴喰 (Bōshoku, glotonería) y lo sitúa avanzando hacia Orario junto a Erebus. Esta evidencia secundaria solo registra el perfil publicado en la página sobre la historia original de Memoria Freese; no confirma ganador, desenlace, consecuencias, técnicas específicas ni una estadística permanente de la novelización.
+- character_ids: [CHAR-DARK-ZALD, CHAR-DARK-EREBUS]
+- aspect: afiliación, título y participación contextual
+- era_or_interval: Cobertura de la historia original de Memoria Freese; fecha narrativa exacta desconocida
+- continuity_scope: CONT-GAME
+- source_id: DMR-045-SRC-009
+- source_title: LN News Online · entrevista y pies editoriales de perfiles de Erebus, Alfia y Zald
+- source_type: SECONDARY_EDITORIAL_CAPTION
+- source_locator: Pie editorial debajo de la imagen de Zald, en la sección sobre los personajes de la historia del origen de Bell; artículo web del 2020-10-15, sin paginación
+- source_url: https://ln-news.com/articles/109766
+- evidence_type: secondary_editorial_character_caption
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: El caption es una fuente secundaria de presentación; no sustituye la escena publicada ni demuestra el resultado del enfrentamiento con Ottar.
+
 ### Precisión de procedencia autoral — revisión de continuidad (2026-10-23)
 
 - `DMR-029-CLM-012` y `DMR-029-SRC-016` corresponden a la nota publicada por Fujino Omori «それは遥か彼方の静穏の夢». La nota se consulta directamente y se clasifica como `source_checked_excerpt_only` únicamente dentro de `CONT-AU`: es evidencia primaria de lo que plantea ese escenario alternativo, no una escena de la novela principal.

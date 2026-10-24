@@ -923,6 +923,24 @@
       "priority": "critical"
     },
     {
+      "id": "EVT-DM-GAME-ASTREA-RECORD-001",
+      "path": "events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md",
+      "type": "event",
+      "name": "Astrea Record original de Memoria Freese: Erebus, Alfia y Zald",
+      "tags": [
+        "Astrea Record",
+        "Memoria Freese",
+        "CONT-GAME",
+        "Erebus",
+        "Alfia",
+        "Zald",
+        "Bell Cranel",
+        "origen de Bell"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
       "id": "CHAR-SOMA",
       "path": "characters/soma.md",
       "type": "deity_character",
@@ -6879,6 +6897,76 @@
       "claimRef": "DMR-045-CLM-008",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
       "note": "El entrevistador presenta el parentesco y Omori responde afirmativamente. La respuesta no nombra a la hermana como Meteria ni aporta capítulo/página de novela. Mantener la relación en CONT-GAME; no crear a partir de esta fuente una arista Meteria–Bell ni transferirla a CONT-MAIN-LN."
+    },
+    {
+      "id": "REL-EREBUS-ORIGINAL-ASTREA-RECORD-GAME",
+      "from": "CHAR-DARK-EREBUS",
+      "to": "EVT-DM-GAME-ASTREA-RECORD-001",
+      "kind": "participant_in",
+      "label": "El pie editorial de la cobertura de Memoria Freese lo presenta como uno de los personajes de la historia original; lo describe como deidad del inframundo primordial y «Absolute Evil»",
+      "continuity": "CONT-GAME",
+      "interval": "Historia original de Memoria Freese; fecha narrativa exacta desconocida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "secondary_editorial_character_caption",
+      "claimRef": "DMR-045-CLM-009",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Relación limitada al artículo y al contexto de juego; no verifica el alias «Eren», poderes ni una jerarquía total sobre Evilus."
+    },
+    {
+      "id": "REL-ALFIA-ORIGINAL-ASTREA-RECORD-GAME",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "EVT-DM-GAME-ASTREA-RECORD-001",
+      "kind": "participant_in",
+      "label": "El pie editorial la describe como maga de nivel 7 de Hera Familia y dice que avanzó hacia Orario junto a Erebus",
+      "continuity": "CONT-GAME",
+      "interval": "Historia original de Memoria Freese; fecha narrativa exacta desconocida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "secondary_editorial_character_caption",
+      "claimRef": "DMR-045-CLM-010",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "No transferir nivel, afiliación o escena específica a CONT-AR ni a CONT-MAIN-LN sin evidencia independiente."
+    },
+    {
+      "id": "REL-ZALD-ORIGINAL-ASTREA-RECORD-GAME",
+      "from": "CHAR-DARK-ZALD",
+      "to": "EVT-DM-GAME-ASTREA-RECORD-001",
+      "kind": "participant_in",
+      "label": "El pie editorial lo describe como guerrero de nivel 7 de Zeus Familia con el título 暴喰 y lo sitúa junto a Erebus rumbo a Orario",
+      "continuity": "CONT-GAME",
+      "interval": "Historia original de Memoria Freese; fecha narrativa exacta desconocida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "secondary_editorial_character_caption",
+      "claimRef": "DMR-045-CLM-011",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "No confirma técnicas, resultado, consecuencias ni nivel permanente."
+    },
+    {
+      "id": "REL-EDITORIAL-ALFIA-HERA-MEMBER-GAME",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "FAM-HERA",
+      "kind": "member_of",
+      "label": "Afiliación que el pie editorial atribuye a Alfia en el contexto de la historia original de Memoria Freese",
+      "continuity": "CONT-GAME",
+      "interval": "Contexto narrativo de Astrea Record original; fecha exacta desconocida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "secondary_editorial_character_caption",
+      "claimRef": "DMR-045-CLM-010",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Arista independiente de la pertenencia reportada en CONT-AR; el caption no reemplaza el texto de la novela."
+    },
+    {
+      "id": "REL-EDITORIAL-ZALD-ZEUS-MEMBER-GAME",
+      "from": "CHAR-DARK-ZALD",
+      "to": "FAM-ZEUS",
+      "kind": "member_of",
+      "label": "Afiliación que el pie editorial atribuye a Zald en el contexto de la historia original de Memoria Freese",
+      "continuity": "CONT-GAME",
+      "interval": "Contexto narrativo de Astrea Record original; fecha exacta desconocida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "secondary_editorial_character_caption",
+      "claimRef": "DMR-045-CLM-011",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Arista independiente de la afiliación reportada en CONT-AR; nivel y título no se consideran permanentes."
     }
   ]
 }

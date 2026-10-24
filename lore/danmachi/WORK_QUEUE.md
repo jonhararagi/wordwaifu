@@ -565,6 +565,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 ## DANMACHI-RESEARCH-045 · Alfia, Zald, Meteria, Erebus y Rudra
 
+**Integración registrada (2026-10-24):** PR [#91](https://github.com/jonhararagi/wordwaifu/pull/91) fusionada en commit c1641b3f8a14d05af83dd3f0215d101af5c7e531. Los dos workflows de la cabeza exacta de la PR terminaron en success. La consulta disponible no devolvió ejecuciones para el commit posterior a la fusión; la CI posintegración queda sin confirmar.
+
 - [x] Revisar las cinco fichas existentes y expandir el contenido individual sin elevar las wikis a evidencia primaria.
 - [x] Añadir a Meteria una ficha manual sustancial de interfaz, manteniendo parentesco y salud como evidencia secundaria y el padre de Bell sin identificar.
 - [x] Registrar la procedencia editorial oficial de Astrea Record como claim bibliográfico, no como prueba de las capacidades individuales.
@@ -585,6 +587,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Conservar `DMR-045-SRC-007`: muestra autorizada de DanMachi vol. 20, página 17/33, con `レオン` y `バルドル`; `claims_supported: []`, delimitación a una página y prueba contra extrapolación al volumen completo.
 - [x] Incorporar la entrevista de Dengeki Online donde Omori confirma que la novelización de Astrea Record dejó explícito que Alfia es tía de Bell; exponer claim, fuente y arista en `CONT-AR`, con aviso de que no es un localizador de capítulo/página.
 - [x] Registrar por separado la entrevista de LN News Online de 2020: Omori confirma, en el contexto de la historia de Memoria Freese, que la madre de Bell es la hermana menor de Alfia; crear claim/arista `CONT-GAME` sin identificar a la hermana como Meteria ni trasladar el dato a `CONT-MAIN-LN`.
+- [x] Añadir los tres pies editoriales de Erebus, Alfia y Zald como claims secundarios CONT-GAME, con nivel/afiliación/participación limitados a lo dicho en los pies; añadir un nodo de evento independiente para la versión original del juego y aristas a sus personajes.
+- [ ] Obtener localizadores narrativos primarios para Alfia, Zald y Erebus; los captions no equivalen a capítulo/página ni elevan perfiles a canon de la novelización.
 - [ ] Cotejar otras páginas accesibles de DanMachi vol. 20 para localizar menciones exactas sobre Alfia/Zald/Meteria/Bell; separar nombres de armas reportados secundariamente de escenas biográficas y no dar por confirmado el parentesco sin localizador primario.
 - [ ] Resolver en DanMachi vols. 13–14 la escena de Rudra y separar la responsabilidad de Rudra, Jura y su Familia.
 
