@@ -36,21 +36,21 @@
 - `spoiler_level`: major
 - `confidence_note`: No se fija un nivel permanente ni se infieren amistad o detalles técnicos del combate sin localizador primario.
 
-### DMR-029-CLM-003 · Erebus: papel antagonista atribuido por la wiki
-- `claim`: La página comunitaria de Erebus lo presenta como figura antagonista asociada a Astrea Record. Se conserva como pista para localizar la escena; no confirma por sí misma alias, subordinación directa, motivación completa ni acciones específicas.
+### DMR-029-CLM-003 · Erebus: papel antagonista reportado en la versión original del juego
+- `claim`: La página comunitaria inglesa describe a Erebus como un antagonista ideológico vinculado al evento original de Astrea Record en Memoria Freese. Se conserva como orientación para localizar sus diálogos y acciones en esa versión; no prueba subordinación directa sobre toda Evilus, no identifica sus motivaciones completas para la novelización y no confirma alias en el texto primario.
 - `character_ids`: [CHAR-DARK-EREBUS]
-- `aspect`: identidad, rol narrativo, contexto histórico
-- `era_or_interval`: Astrea Record; escena exacta pendiente
-- `continuity_scope`: CONT-AR
-- `source_id`: DMR-029-SRC-003; DMR-029-SRC-006
-- `source_title`: anuncio oficial de Astrea Record; Erebus
-- `source_type`: OFFICIAL_REFERENCE; COMMUNITY_WIKI
-- `source_locator`: Anuncio editorial y artículo comunitario
-- `source_url`: https://danmachi.com/news/news131.php; https://danmachi.fandom.com/wiki/Erebus
+- `aspect`: rol narrativo e ideología reportados
+- `era_or_interval`: Astrea Record original de Memoria Freese; escena exacta pendiente
+- `continuity_scope`: CONT-GAME
+- `source_id`: DMR-029-SRC-006
+- `source_title`: Erebus — DanMachi Wiki en inglés
+- `source_type`: COMMUNITY_WIKI
+- `source_locator`: Summary y Personality; artículo comunitario sin paginación de escena
+- `source_url`: https://danmachi.fandom.com/wiki/Erebus
 - `evidence_type`: community_secondary_character_summary
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
-- `confidence_note`: El alias «Eren» permanece como cuestión sin resolver, no como identidad fusionada.
+- `confidence_note`: El alcance se limita a la representación reportada del juego. No transferir automáticamente su ideología o su alias «Eren» a CONT-AR; comprobar la novelización por separado.
 
 ### DMR-029-CLM-004 · Jura Halmer y la crisis del Juggernaut
 - `claim`: Las referencias comunitarias asocian a Jura Halmer con Rudra Familia y con la crisis del Juggernaut alrededor de los volúmenes 13–14. Las fichas editoriales ofrecen el marco del arco, pero no validan automáticamente todos los detalles que las wikis atribuyen a Jura.
@@ -89,7 +89,7 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 
 ### DMR-029-CLM-006 · Alfia: habilidades listadas y coste progresivo de su enfermedad
 - `claim_id`: DMR-029-CLM-006
-- `claim`: Las fichas comunitarias de Alfia enumeran las habilidades Gif Blessing, Alme y Vel Ardore, y las magias Satanas Verion, Silentium Eden y Genos Angelus. También describen Gif Blessing como una manifestación pasiva de su enfermedad que deteriora progresivamente sus capacidades durante un combate prolongado. Estos nombres y límites se conservan como índice secundario para cotejo, no como transcripción ni verificación de la novela.
+- `claim`: Las fichas comunitarias de Alfia enumeran las habilidades Gif Blessing, Alme y Vel Ardore, y las magias Satanas Verion, Silentium Eden y Genos Angelus. También describen Gif Blessing como una manifestación de su enfermedad que deteriora progresivamente sus capacidades durante un combate prolongado. La página inglesa añade que consumir una rama de un árbol sagrado de un bosque élfico habría mejorado su condición, sin curar la enfermedad. Este detalle de tratamiento solo se conserva como pista secundaria: la referencia subyacente de la wiki no se verificó por separado y no se establece aquí una cura, duración del efecto ni regla médica general.
 - `character_ids`: [CHAR-DARK-ALFIA]
 - `aspect`: habilidades, magia, límite físico y coste
 - `era_or_interval`: Astrea Record; instantánea histórica de personaje
@@ -191,7 +191,7 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 
 ### DMR-029-CLM-012 · Meteria: descripción de carácter en una nota del autor dentro de un escenario alternativo
 - `claim_id`: DMR-029-CLM-012
-- `claim`: La nota original publicada por Fujino Omori describe a Meteria, a través del recuerdo de Alfia, como amable, sonriente, de salud frágil y querida por quienes la rodeaban. En el escenario alternativo, Alfia y Zald crían a Bell durante tres años; la escena lo sitúa próximo a cumplir siete. Alfia relata que inicialmente acudió a observar al hijo de Meteria a distancia, pero termina cuidándolo; relaciona el cabello blanco, el rostro y la sonrisa de Bell con Meteria y sus ojos rojos con un padre no identificado. La nota también menciona a un abuelo en el hogar, cuya identidad no se establece en este claim. Todo ello se archiva expresamente como contexto autoral de `CONT-AU`, no como confirmación de acontecimientos de la novela principal.
+- `claim`: La nota original publicada por Fujino Omori describe a Meteria, a través del recuerdo de Alfia, como amable, sonriente, de salud frágil y querida por quienes la rodeaban. En esa misma conversación alternativa, Alfia recuerda una reacción intensa de Meteria ante la comida: después de que Alfia comiera a escondidas un dulce que Meteria esperaba, Alfia dice haber temido por su vida; también recuerda que Hera tuvo que sentarse en seiza sobre un suelo de piedra por una disputa similar. En el escenario hipotético, Alfia y Zald crían a Bell durante tres años; la escena lo sitúa próximo a cumplir siete. Alfia relata que inicialmente acudió a observar al hijo de Meteria a distancia, pero termina cuidándolo; relaciona el cabello blanco, el rostro y la sonrisa de Bell con Meteria y sus ojos rojos con un padre no identificado. La nota también menciona a un abuelo en el hogar, cuya identidad no se establece en este claim. Todo ello se archiva expresamente como contexto autoral de `CONT-AU`, no como confirmación de acontecimientos, rasgos permanentes o convivencia de la novela principal.
 - `character_ids`: [CHAR-METERIA, CHAR-DARK-ALFIA, CHAR-DARK-ZALD, DM-CHAR-BELL]
 - `aspect`: caracterización y continuidad alternativa
 - `era_or_interval`: Escenario alternativo de autor; no aplicar a la cronología principal por defecto
@@ -204,7 +204,7 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `evidence_type`: author_note_alternate_scenario
 - `verification_status`: source_checked_excerpt_only
 - `spoiler_level`: major
-- `confidence_note`: La nota directa respalda esos datos solo dentro del escenario alternativo; no fija año calendario, no identifica al padre de Bell ni autoriza asignar identidad al abuelo del hogar. No importar las decisiones de Alfia/Zald ni la crianza de Bell a CONT-MAIN-LN o CONT-AR.
+- `confidence_note`: La nota directa respalda esos datos y anécdotas solo dentro del escenario alternativo; no fija año calendario, no identifica al padre de Bell ni autoriza asignar identidad al abuelo del hogar. No tratar la anécdota de la comida como personalidad completa ni importar la crianza de Bell a CONT-MAIN-LN o CONT-AR.
 
 ### Ficha independiente de escenario alternativo
 

@@ -161,7 +161,7 @@ const meteriaDossier=dossierApi.get("CHAR-METERIA");
 assert.ok(meteriaDossier,"Meteria needs a manual UI dossier, not only Markdown fallback.");
 for(const field of ["appearance","history","personality","abilities","relationships","conflict"]) assert.ok(typeof meteriaDossier[field]==="string"&&meteriaDossier[field].length>=100,"Meteria needs substantive "+field);
 assert.ok(Array.isArray(meteriaDossier.sources)&&meteriaDossier.sources.length>=2,"Meteria dossier must retain source URLs.");
-assert.ok(catalog.relationships.some(e=>e.id==="REL-EREBUS-EVILUS-RESEARCH"&&e.claimRef==="DMR-045-CLM-003"&&e.claimPath==="research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"&&e.evidenceStatus==="secondary_checked"),"Erebus/Evilus route must retain specific secondary identity provenance.");
+assert.ok(catalog.relationships.some(e=>e.id==="REL-EREBUS-EVILUS-RESEARCH"&&e.claimRef==="DMR-038-CLM-007"&&e.claimPath==="research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md"&&e.continuity==="CONT-AR"&&e.evidenceStatus==="secondary_checked"),"Erebus/Evilus route must retain a claim whose continuity matches the reported association; game-only identity details stay in DMR-045.");
 assert.ok(catalog.relationships.some(e=>e.id==="REL-RUDRA-JUGGERNAUT-EVENT-001"&&e.claimRef==="DMR-045-CLM-002"&&e.claimPath==="research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"&&e.continuity==="CONT-MAIN-LN"&&e.evidenceStatus==="secondary_checked"),"Rudra event route must bound attribution to the Familia rather than the deity.");
 
 

@@ -13,18 +13,21 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 Esta regla preserva el contexto, pero no sustituye validación factual, pruebas técnicas ni confirmación de integración.
 
-## PRIORIDAD INMEDIATA — Cierre de investigación pública DANMACHI-RESEARCH-045
+## DANMACHI-RESEARCH-045 — Resultado del barrido secundario público (2026-10-24)
 
-**Estado:** IN_PROGRESS; no declarar DMR-045 completada. Las fichas de Alfia, Zald, Meteria, Erebus y Rudra ya existen y contienen información útil de wikis y fuentes editoriales, por lo que esta etapa debe cerrar vacíos concretos sin recrear expedientes.
+**Estado del subtrabajo:** DONE para las fuentes públicas consultadas. **DMR-045 sigue abierto** respecto de la verificación primaria.
 
-- [ ] Revisar las fuentes públicas ya registradas y comprobar si hay datos secundarios únicos que aún falten; consolidar hallazgos con claim, fuente, idioma, continuidad y límites.
-- [x] Añadir al directorio consultable de la aplicación las rutas comunitarias EN/ES de Alfia, Meteria, Zald, Erebus y Rudra, con sus límites y continuidad visibles.
-- [x] Añadir una prueba automatizada para mantener accesibles y trazables esas referencias sin elevarlas a evidencia primaria.
-- [ ] Mantener abiertos los localizadores primarios pendientes de Alfia/Zald/Erebus en Astrea Record, Meteria en la novela principal y la atribución personal de Rudra; no inventar páginas ni convertir entrevistas/wiki en escenas del libro.
-- [ ] Cuando una nueva consulta pública no aporte evidencia o un dato único verificable, registrar el límite y pasar a la siguiente incógnita de la misma prioridad en vez de repetir la auditoría general.
-- [ ] Tras cerrar el barrido secundario útil de DMR-045, reanudar la prioridad de Orario y después seguir la secuencia de acontecimientos, personajes y revisión de continuidad.
+- [x] Revisar las fuentes públicas registradas en inglés y español, consolidar los datos secundarios útiles y documentar los límites por claim, fuente y continuidad.
+- [x] Añadir al directorio consultable de la aplicación las rutas comunitarias EN/ES de Alfia, Meteria, Zald, Erebus y Rudra, con límites y continuidad visibles.
+- [x] Añadir una prueba automatizada de esas referencias.
+- [x] Enriquecer la ficha de Alfia con el detalle secundario sobre la rama de árbol sagrado, y usar el índice comunitario del volumen 20 únicamente como pista de búsqueda.
+- [x] Registrar la filosofía atribuida a Erebus bajo `CONT-GAME` y ampliar el recuerdo de Meteria exclusivamente dentro de `CONT-AU`.
+- [x] Reutilizar la información ya registrada en DMR-043 y la ficha de Jura para su plan posterior de Juggernaut, sin duplicar claims.
+- [x] Documentar que las fuentes públicas revisadas no prueban una orden ni conocimiento personal de Rudra sobre el plan de su Familia.
+- [ ] Cotejar los localizadores primarios pendientes de Alfia/Zald/Erebus, Meteria y Rudra cuando el texto licenciado sea accesible; no inventar páginas ni convertir wikis/entrevistas en escenas del libro.
+- [x] Tras terminar este barrido secundario, activar la etapa de Orario como siguiente prioridad sin borrar los pendientes primarios de DMR-045.
 
-**Límite de cierre:** terminar la búsqueda pública no significa declarar las cinco biografías verificadas en el texto primario. Los localizadores que no puedan obtenerse legalmente deben permanecer explícitamente pendientes.
+**Límite:** el barrido secundario completado no equivale a cinco biografías verificadas en el texto primario. Los localizadores no disponibles permanecen abiertos.
 
 ## Cobertura integrada del roster · DANMACHI-RESEARCH-036
 
@@ -70,9 +73,9 @@ Criterio factual: claims de wiki permanecen secundarios; leads sin pasaje locali
 
 Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de Orario.
 
-## SIGUIENTE PRIORIDAD — Etapa 1: Orario como escenario (después de DMR-045)
+## PRIORIDAD ACTUAL — Etapa 1: Orario como escenario
 
-**Estado:** IN_PROGRESS, queda como siguiente etapa después del cierre de búsqueda pública de DMR-045. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
+**Estado:** IN_PROGRESS. El barrido secundario disponible de DMR-045 ya está documentado; sus pasajes primarios individuales continúan pendientes y no impiden avanzar a esta etapa. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
 **Guía:** [Método de análisis progresivo](research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md) · [Ficha central de Orario](places/orario.md).
 
 - [x] Establecer una ficha central con el alcance de la evidencia actual y límites explícitos.

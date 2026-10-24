@@ -6519,14 +6519,14 @@
       "from": "CHAR-DARK-EREBUS",
       "to": "GRP-EVILUS",
       "kind": "reported_association",
-      "label": "asociación con Evilus reportada por la wiki; detalles de identidad secundarios",
+      "label": "asociación con Evilus reportada por fuentes secundarias; detalles de identidad separados por continuidad",
       "continuity": "CONT-AR",
       "interval": "Astrea Record; función exacta pendiente",
       "evidenceStatus": "secondary_checked",
       "evidenceType": "community_secondary_character_summary",
-      "claimRef": "DMR-045-CLM-003",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
-      "note": "La ficha comunitaria le atribuye afiliación previa a Evilus y menciona «Eren» como otro nombre; no se afirma jerarquía total ni se fusiona el alias sin localizar la escena."
+      "claimRef": "DMR-038-CLM-007",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md",
+      "note": "La asociación se apoya en el resumen comunitario general del papel antagonista en Astrea Record. Los detalles específicos de la ficha del juego, incluido el alias «Eren», permanecen en CONT-GAME y no se usan para describir la versión novelada."
     },
     {
       "id": "REL-VALLETTA-EVILUS-INVESTIGATION",
