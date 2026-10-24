@@ -12,9 +12,11 @@ claim_refs:
   - DMR-014-CLM-001
   - DMR-014-CLM-002
   - DMR-045-CLM-007
+  - DMR-045-CLM-008
 research_source_refs:
   - DMR-002-SRC-001
   - DMR-045-SRC-008
+  - DMR-045-SRC-009
 ---
 # Bell Cranel
 
@@ -71,3 +73,12 @@ En una entrevista de Dengeki Online, Fujino Omori explica que la novelización d
 **Límite de evidencia:** la entrevista no da un capítulo ni una página de la novela; por eso complementa, pero no reemplaza, el localizador de texto primario que sigue pendiente. Esta declaración tampoco confirma por sí sola los datos secundarios sobre Meteria, su supuesto parentesco gemelar con Alfia o la identidad del padre de Bell. El escenario alternativo `CONT-AU` donde Alfia y Zald crían a Bell permanece separado.
 
 - Fuente: [Dengeki Online · entrevista del sexto aniversario de DanMemo](https://dengekionline.com/articles/189750/) (DMR-045-SRC-008).
+
+
+## Parentesco adicional reportado en entrevista sobre el juego — CONT-GAME
+
+Una entrevista de LN News Online de 2020 recoge que, en la historia de Memoria Freese, la madre de Bell es la hermana menor de Alfia; Fujino Omori responde afirmativamente a esa descripción. Se ha registrado como `DMR-045-CLM-008` y la arista `REL-ALFIA-BELL-AUNT-GAME-INTERVIEW`, exclusivamente en `CONT-GAME`.
+
+**Límite:** la respuesta no da el nombre de la hermana y no demuestra por sí sola que sea Meteria. Esta evidencia del juego no se traslada a `CONT-MAIN-LN`. La entrevista posterior sobre la novelización de `Astrea Record` queda como relación separada `CONT-AR` mediante `DMR-045-CLM-007`.
+
+- Fuente: [LN News Online · entrevista a Fujino Omori](https://ln-news.com/articles/109766) (DMR-045-SRC-009).

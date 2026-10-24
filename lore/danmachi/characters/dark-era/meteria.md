@@ -8,6 +8,7 @@ source_refs:
   - DMR-021-SRC-006
   - DMR-029-SRC-015
   - DMR-029-SRC-016
+  - DMR-045-SRC-009
 claim_refs:
   - DMR-021-CLM-004
   - DMR-021-CLM-005
@@ -27,6 +28,10 @@ tags: [Meteria, Hera Familia, Alfia, Bell Cranel, parentesco, enfermedad, spoile
 - **Estado reportado:** fallecida.
 - **Evidencia:** las wikis inglesa y española coinciden en el núcleo del parentesco. Esa convergencia ayuda a interpretar los resúmenes, pero no equivale a un pasaje de la novela cotejado.
 - **Spoilers:** mayor; revela la ascendencia familiar de Bell.
+
+## Contexto autoral adicional — continuidad del juego
+
+En la entrevista de LN News Online de 2020, el entrevistador resume que la madre de Bell es la hermana menor de Alfia; Fujino Omori responde afirmativamente (DMR-045-SRC-009 / DMR-045-CLM-008, `CONT-GAME`). Esto confirma el parentesco de la madre con Alfia en el marco del juego, pero **la respuesta no pronuncia el nombre Meteria**. Por ello, no se usa para promover la identificación de esta ficha ni las aristas `CHAR-METERIA → DM-CHAR-BELL` y `CHAR-METERIA → CHAR-DARK-ALFIA` más allá de su estado secundario. El localizador primario de la novela ligera continúa pendiente.
 
 ## Apariencia y salud reportadas
 La ficha comunitaria describe cabello blanco y ojos azules, una constitución débil y una enfermedad incurable que habría restringido severamente su vida diaria. Alfia es descrita en esas mismas referencias como muy parecida a ella, con diferencias en los ojos. No se asigna nombre médico a la enfermedad, causa clínica exacta, fecha absoluta de fallecimiento ni estadística de personaje: la fuente disponible no basta para ninguno de esos datos.

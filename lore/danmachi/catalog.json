@@ -6865,6 +6865,20 @@
       "claimRef": "DMR-045-CLM-007",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
       "note": "La entrevista atribuye a Omori la afirmación de que la novelización dejó explícito que Alfia es tía de Bell. Es evidencia autoral complementaria, no localizador de capítulo/página de la novela; no demuestra por sí sola que Meteria sea la madre o hermana gemela ni valida otras estadísticas o datos biográficos."
+    },
+    {
+      "id": "REL-ALFIA-BELL-AUNT-GAME-INTERVIEW",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "DM-CHAR-BELL",
+      "kind": "aunt_of",
+      "label": "La entrevista de 2020 confirma, sobre la historia revelada en Memoria Freese, que la madre de Bell es la hermana menor de Alfia",
+      "continuity": "CONT-GAME",
+      "interval": "Evento Astrea Record de Memoria Freese (2020); fecha familiar absoluta desconocida",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "author_interview_statement",
+      "claimRef": "DMR-045-CLM-008",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "El entrevistador presenta el parentesco y Omori responde afirmativamente. La respuesta no nombra a la hermana como Meteria ni aporta capítulo/página de novela. Mantener la relación en CONT-GAME; no crear a partir de esta fuente una arista Meteria–Bell ni transferirla a CONT-MAIN-LN."
     }
   ]
 }

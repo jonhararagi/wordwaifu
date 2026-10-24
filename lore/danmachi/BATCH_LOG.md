@@ -429,3 +429,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se añade la arista navegable `REL-ALFIA-BELL-AUNT-INTERVIEW` entre los expedientes existentes de Alfia y Bell, con claim, fuente, intervalo y límite explícitos. No se ha inferido quién es la madre de Bell ni se han promocionado los datos secundarios sobre Meteria, Zald, Erebus o Rudra.
 - El buscador/directorio de fuentes, las vistas Markdown, los expedientes manuales de interfaz y las pruebas regresivas incorporan la fuente con límites visibles. La relación no debe aparecer en `CONT-MAIN-LN` como si ya existiera localizador directo de la escena.
 - Resultado: 243 relaciones en catálogo, tras añadir una arista con extremos existentes; las cinco fichas permanecen `secondary_checked_with_primary_gaps` en lo relativo a sus biografías completas y localizadores internos.
+
+
+## DANMACHI-RESEARCH-045 · Declaración autoral adicional en entrevista de 2020 (2026-10-23)
+
+- Fuente: LN News Online, entrevista exclusiva a Fujino Omori publicada el 2020-10-15, sección sobre la revelación del nacimiento de Bell en Memoria Freese.
+- El entrevistador formula que la madre de Bell es la hermana menor de Alfia y Omori responde afirmativamente; también indica que el origen de Bell se reveló primero en DanMemo. Se registra `DMR-045-SRC-009` / `DMR-045-CLM-008` bajo `CONT-GAME`.
+- Se añade una arista aparte `REL-ALFIA-BELL-AUNT-GAME-INTERVIEW` entre los registros de Alfia y Bell. No se mezcla con la relación de la novelización bajo `CONT-AR`; la respuesta no nombra a la hermana, por lo que no permite identificarla como Meteria ni crear una arista Meteria–Bell.
+- Las dos fichas Markdown de Alfia y Bell, el expediente de interfaz y la ficha de Meteria muestran la nueva evidencia con sus límites. Las pruebas cubren recuperación del claim, la nueva arista y la prohibición de filtrarlo a `CONT-MAIN-LN` o identificar automáticamente a Meteria.
+- Resultado: 244 relaciones estructuradas con extremos existentes. La identidad de la madre como Meteria, el parentesco gemelar, las capacidades y las biografías de los cinco personajes mantienen sus grados de evidencia previos salvo la corroboración de parentesco aquí delimitada.
