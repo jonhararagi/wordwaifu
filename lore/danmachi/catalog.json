@@ -2576,6 +2576,23 @@
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001",
+      "path": "events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md",
+      "type": "event",
+      "name": "DanMachi vol. 20 — pista secundaria de Afterglow en caps. 2–3",
+      "tags": [
+        "DanMachi vol. 20",
+        "CONT-MAIN-LN",
+        "Afterglow",
+        "capítulo 2",
+        "capítulo 3",
+        "Alfia (pista comunitaria)",
+        "Zald (pista comunitaria)"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -7070,6 +7087,34 @@
       "claimRef": "DMR-045-CLM-015",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
       "note": "Arista de navegación para una pista secundaria, no confirmación de que Alfia aparezca en la escena. No crear aquí relación con Leviathan ni identificar al testigo como Leon."
+    },
+    {
+      "id": "REL-ALFIA-V20-AFTERGLOW-LEAD",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001",
+      "label": "Un comentario comunitario propone que la retrospectiva del capítulo 3 del volumen 20 muestre a Alfia usando Afterglow; el texto licenciado aún debe cotejarse.",
+      "kind": "candidate_scene_association",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "DanMachi vol. 20, capítulos 2–3; fecha interna desconocida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_chapter_locator_lead",
+      "claimRef": "DMR-045-CLM-016",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Arista de investigación, no confirmación de que la habilidad se use en el pasaje. No infiere mecánica, nivel, resultado ni página."
+    },
+    {
+      "id": "REL-ZALD-V20-AFTERGLOW-LEAD",
+      "from": "CHAR-DARK-ZALD",
+      "to": "EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001",
+      "label": "Un comentario comunitario señala las retrospectivas de los capítulos 2–3 del volumen 20 para investigar Afterglow y considera más explícita la pista de Zald; falta cotejo del texto licenciado.",
+      "kind": "candidate_scene_association",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "DanMachi vol. 20, capítulos 2–3; fecha interna desconocida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_chapter_locator_lead",
+      "claimRef": "DMR-045-CLM-016",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Arista de investigación, no confirmación de que la habilidad se use en el pasaje. No infiere mecánica, nivel, resultado ni página."
     }
   ]
 }
