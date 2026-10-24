@@ -12,12 +12,14 @@ source_refs:
   - DMR-021-SRC-001
   - DMR-045-SRC-005
   - DMR-045-SRC-009
+  - DMR-045-SRC-013
 claim_refs:
   - DMR-029-CLM-002
   - DMR-029-CLM-007
   - DMR-029-CLM-015
   - DMR-045-CLM-006
   - DMR-045-CLM-011
+  - DMR-045-CLM-016
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Zald"
@@ -65,6 +67,7 @@ La wiki describe **Afterglow** como una técnica compartida históricamente por 
 
 - **Fuente:** [DanMachi Wiki · Zald](https://danmachi.fandom.com/wiki/Zald), [Zeus Familia](https://danmachi.fandom.com/wiki/Zeus_Familia), [Hera Familia](https://danmachi.fandom.com/wiki/Hera_Familia) y [Terminology](https://danmachi.fandom.com/wiki/Terminology).
 - **Claim de búsqueda:** DMR-029-CLM-015.
+- **Pista adicional del volumen 20:** un comentario comunitario dirige al lector a las retrospectivas de los capítulos 2–3 para comprobar Afterglow y dice que el caso de Zald resulta más explícito (DMR-045-CLM-016). Esto aún no equivale a cotejar el pasaje: no se asigna página ni se elevan la mecánica o la acción individual a dato primario. Ruta de búsqueda: [Pista de Afterglow en los capítulos 2–3](../../events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md).
 - **Estado:** secondary_checked. El repertorio y los detalles técnicos no deben presentarse como cotejo primario; la potencia depende del usuario y no convierte el ataque en un recurso ilimitado.
 
 ## Relaciones navegables
