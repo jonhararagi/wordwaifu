@@ -41,3 +41,11 @@ Este documento conserva decisiones que deben aplicarse en revisiones posteriores
 ## Historial
 
 No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia del OC está guardada como premisa del autor, pendiente de aclaración y evaluación.
+
+### DEC-DM-005 — Wikis reconocidas como apoyo cuando no se dispone de las novelas
+- Fecha: 2026-10-24.
+- Estado: ACCEPTED.
+- Decisión: consultar también DanMachi Wiki/Fandom en inglés y español cuando los textos de las novelas no estén disponibles, para investigar personajes, Familias, lugares, sucesos y otros datos. Usar las fuentes oficiales accesibles como autoridad primaria cuando sea posible y conservar la wiki como evidencia secundaria con URL, idioma, continuidad y límites explícitos.
+- Motivo: evitar dejar huecos innecesarios por falta de acceso a los libros, sin presentar como cotejadas escenas que no podemos consultar.
+- Documentación relacionada: [registro permanente de acuerdos](../../docs/CONVERSATION_DECISION_LOG.md), [matriz de continuidad](continuity/00-matriz-de-continuidad.md).
+- Estado factual: la aceptación de esta metodología no confirma por sí sola cada dato recuperado de la wiki.
