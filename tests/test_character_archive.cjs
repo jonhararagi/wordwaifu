@@ -82,6 +82,16 @@ assert.ok(ryuAnime.relationships.some(r=>r.targetId==="CHAR-ASTREA"&&r.edgeId===
 const ryuWarGameRelation=ryuAnime.relationships.find(r=>r.targetId==="EVT-DM-RYUU-ASTREA-RETURN-ANIME-001");
 assert.ok(ryuWarGameRelation&&ryuWarGameRelation.targetType==="dossier"&&ryuWarGameRelation.targetPath==="events/candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md"&&ryuWarGameRelation.available,
   "Character archive relations must provide a navigable event-dossier target instead of an unavailable dead end.");
+const alfiaAfterglow=archive.getProfile(index,"CHAR-DARK-ALFIA","CONT-MAIN-LN","all");
+const alfiaAfterglowRelation=alfiaAfterglow.relationships.find(r=>r.edgeId==="REL-ALFIA-V20-AFTERGLOW-LEAD");
+assert.ok(alfiaAfterglowRelation&&alfiaAfterglowRelation.targetId==="EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001"&&alfiaAfterglowRelation.targetType==="dossier"&&alfiaAfterglowRelation.targetPath==="events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md"&&alfiaAfterglowRelation.available,
+  "Alfia's archive profile must offer a working event-dossier route for the secondary Afterglow lead.");
+assert.ok(alfiaAfterglowRelation.evidenceStatus==="secondary_checked"&&alfiaAfterglowRelation.claims.some(c=>c.claimId==="DMR-045-CLM-016"&&c.verificationStatus==="secondary_checked"),
+  "The Afterglow event route must preserve the secondary-evidence badge and supporting claim.");
+const zaldAfterglow=archive.getProfile(index,"CHAR-DARK-ZALD","CONT-MAIN-LN","all");
+const zaldAfterglowRelation=zaldAfterglow.relationships.find(r=>r.edgeId==="REL-ZALD-V20-AFTERGLOW-LEAD");
+assert.ok(zaldAfterglowRelation&&zaldAfterglowRelation.targetId==="EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001"&&zaldAfterglowRelation.targetPath==="events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md"&&zaldAfterglowRelation.claims.some(c=>c.claimId==="DMR-045-CLM-016"),
+  "Zald's archive profile must reach the same event dossier while keeping the source claim attached.");
 assert.ok(ryuAnime.relationships.every(r=>r.claims.length>0&&r.continuity==="CONT-ANIME"),
   "Catalog-backed archive relationships must preserve evidence and the selected continuity.");
 assert.ok(!ryuAnime.moments.some(m=>m.id==="ryu-seven-days"));
