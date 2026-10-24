@@ -55,6 +55,7 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - Fecha: 2026-10-24.
 - Estado: ACCEPTED.
 - Decisión: continuar desde el estado verificable de `main`, preservar los acuerdos en los registros permanentes y aplicar el ciclo de investigación, implementación, pruebas, integración y verificación. El destino final para cambios aprobados es `main`, tras revisar seguridad, conflictos y CI sobre los commits correspondientes.
-- Prioridad: cerrar primero la investigación pública aún útil de `DANMACHI-RESEARCH-045` para Alfia, Zald, Meteria, Erebus y Rudra; después continuar con Orario. Los detalles sin localizador narrativo reproducible permanecen pendientes.
+- Prioridad inicial: cerrar primero la investigación pública útil de `DANMACHI-RESEARCH-045`; los detalles sin localizador narrativo reproducible permanecen pendientes.
+- Resultado de ejecución registrado el 2026-10-24: el barrido secundario disponible se documentó en DMR-045/DMR-029; se conserva abierta la verificación primaria y la siguiente etapa activa es Orario.
 - Reglas: las wikis inglesa y española se etiquetan como fuentes secundarias; no confundir una acción de Rudra Familia con responsabilidad personal de Rudra, no equiparar Meteria con la hermana sin nombre citada en la entrevista de Memoria Freese, y no transferir contenido de `CONT-AU` a `CONT-MAIN-LN`/ `CONT-AR`.
-- Documentos afectados: registro de conversación, estado, cola, DMR-045 y directorio de fuentes recuperables desde la aplicación.
+- Documentos afectados: registro de conversación, estado, cola, DMR-045/DMR-029, fichas y directorio de fuentes recuperables desde la aplicación.
