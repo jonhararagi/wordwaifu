@@ -22,18 +22,20 @@ const paths=[
   "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
   "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
   "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
-  "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"
+  "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+  "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"
 ];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
   "characters/bell-cranel.md","characters/hestia.md","characters/ais-wallenstein.md",
   "characters/eina-tulle.md","characters/finn-deimne.md","characters/freya.md",
-  "characters/ottar.md","characters/gojouno-kaguya.md","characters/lyra.md"
+  "characters/ottar.md","characters/gojouno-kaguya.md","characters/lyra.md",
+  "characters/dark-era/alfia.md","characters/dark-era/zald.md"
 ];
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
-assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
+assert.equal(index.profileDocumentCount,14,"The archive should retain the existing deeper dossiers and load the Alfia/Zald profiles used by Afterglow navigation tests.");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,63,"The official-source registry should include Eina Tulle and four separately navigable Gulliver siblings.");
 assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-ASFI-AL-ANDROMEDA").voice,"Ai Kayano");
@@ -82,6 +84,16 @@ assert.ok(ryuAnime.relationships.some(r=>r.targetId==="CHAR-ASTREA"&&r.edgeId===
 const ryuWarGameRelation=ryuAnime.relationships.find(r=>r.targetId==="EVT-DM-RYUU-ASTREA-RETURN-ANIME-001");
 assert.ok(ryuWarGameRelation&&ryuWarGameRelation.targetType==="dossier"&&ryuWarGameRelation.targetPath==="events/candidates/EVT-DM-RYUU-ASTREA-RETURN-ANIME-001.md"&&ryuWarGameRelation.available,
   "Character archive relations must provide a navigable event-dossier target instead of an unavailable dead end.");
+const alfiaAfterglow=archive.getProfile(index,"CHAR-DARK-ALFIA","CONT-MAIN-LN","all");
+const alfiaAfterglowRelation=alfiaAfterglow.relationships.find(r=>r.edgeId==="REL-ALFIA-V20-AFTERGLOW-LEAD");
+assert.ok(alfiaAfterglowRelation&&alfiaAfterglowRelation.targetId==="EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001"&&alfiaAfterglowRelation.targetType==="dossier"&&alfiaAfterglowRelation.targetPath==="events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md"&&alfiaAfterglowRelation.available,
+  "Alfia's archive profile must offer a working event-dossier route for the secondary Afterglow lead.");
+assert.ok(alfiaAfterglowRelation.evidenceStatus==="secondary_checked"&&alfiaAfterglowRelation.claims.some(c=>c.claimId==="DMR-045-CLM-016"&&c.verificationStatus==="secondary_checked"),
+  "The Afterglow event route must preserve the secondary-evidence badge and supporting claim.");
+const zaldAfterglow=archive.getProfile(index,"CHAR-DARK-ZALD","CONT-MAIN-LN","all");
+const zaldAfterglowRelation=zaldAfterglow.relationships.find(r=>r.edgeId==="REL-ZALD-V20-AFTERGLOW-LEAD");
+assert.ok(zaldAfterglowRelation&&zaldAfterglowRelation.targetId==="EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001"&&zaldAfterglowRelation.targetPath==="events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md"&&zaldAfterglowRelation.claims.some(c=>c.claimId==="DMR-045-CLM-016"),
+  "Zald's archive profile must reach the same event dossier while keeping the source claim attached.");
 assert.ok(ryuAnime.relationships.every(r=>r.claims.length>0&&r.continuity==="CONT-ANIME"),
   "Catalog-backed archive relationships must preserve evidence and the selected continuity.");
 assert.ok(!ryuAnime.moments.some(m=>m.id==="ryu-seven-days"));
