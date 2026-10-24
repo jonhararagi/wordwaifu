@@ -38,6 +38,16 @@ const bellCharacter = index.characters.find(character => character.id === "DM-CH
 const meteriaCharacter = index.characters.find(character => character.id === "CHAR-METERIA");
 assert.equal(bellCharacter?.name, "Bell Cranel", "Bell's identity must remain searchable by his canonical display name.");
 assert.ok(meteriaCharacter, "Meteria must be loaded when the historical source bundle is active.");
+for (const [file, label] of [
+  ["characters/dark-era/alfia.md", "Alfia"],
+  ["characters/dark-era/zald.md", "Zald"]
+]) {
+  const dossier = fs.readFileSync(path.join(root, file), "utf8");
+  assert.ok(dossier.includes("DMR-045-SRC-005") && dossier.includes("DMR-045-CLM-006"),
+    label + " dossier must expose the same bounded Astrea Record 3 excerpt evidence used by its event relationship.");
+  assert.ok(dossier.includes("source editorial") || dossier.includes("ficha editorial"),
+    label + " dossier must explain the evidence limit rather than presenting the indexed synopsis as a narrative locator.");
+}
 assert.ok(![...(meteriaCharacter.aliases || []), ...(meteriaCharacter.keywords || [])]
   .some(value => corpus.normalize(value) === "bell cranel"),
   "Another character's relation tag must not make that character a false exact-name match for Bell Cranel.");
