@@ -49,3 +49,12 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - Motivo: evitar dejar huecos innecesarios por falta de acceso a los libros, sin presentar como cotejadas escenas que no podemos consultar.
 - Documentación relacionada: [registro permanente de acuerdos](../../docs/CONVERSATION_DECISION_LOG.md), [matriz de continuidad](continuity/00-matriz-de-continuidad.md).
 - Estado factual: la aceptación de esta metodología no confirma por sí sola cada dato recuperado de la wiki.
+
+
+### DEC-DM-006 — Prompt maestro operativo y prioridad de DMR-045
+- Fecha: 2026-10-24.
+- Estado: ACCEPTED.
+- Decisión: continuar desde el estado verificable de `main`, preservar los acuerdos en los registros permanentes y aplicar el ciclo de investigación, implementación, pruebas, integración y verificación. El destino final para cambios aprobados es `main`, tras revisar seguridad, conflictos y CI sobre los commits correspondientes.
+- Prioridad: cerrar primero la investigación pública aún útil de `DANMACHI-RESEARCH-045` para Alfia, Zald, Meteria, Erebus y Rudra; después continuar con Orario. Los detalles sin localizador narrativo reproducible permanecen pendientes.
+- Reglas: las wikis inglesa y española se etiquetan como fuentes secundarias; no confundir una acción de Rudra Familia con responsabilidad personal de Rudra, no equiparar Meteria con la hermana sin nombre citada en la entrevista de Memoria Freese, y no transferir contenido de `CONT-AU` a `CONT-MAIN-LN`/ `CONT-AR`.
+- Documentos afectados: registro de conversación, estado, cola, DMR-045 y directorio de fuentes recuperables desde la aplicación.
