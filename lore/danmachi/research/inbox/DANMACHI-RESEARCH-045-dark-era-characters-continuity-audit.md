@@ -289,7 +289,7 @@
 ### DMR-045-CLM-015 · Pista comunitaria sobre una maga de cabello gris en el prólogo del volumen 20
 
 - claim_id: DMR-045-CLM-015
-- claim: Un hilo de discusión comunitaria sobre páginas de muestra de DanMachi volumen 20 resume el prólogo como el recuerdo de un testigo no identificado que observa a una maga de cabello gris usar Genos Angelus contra una criatura marina. El participante interpreta que la maga podría ser Alfia y que la criatura podría ser Leviathan, pero no proporciona un localizador interno reproducible. Como pista adicional, la página inglesa de Alfia en DanMachi Wiki también indexa DanMachi volumen 20 (flashback) entre sus apariciones en novela ligera. Esa entrada de roster da otra ruta de búsqueda, no una identificación independiente de la maga del prólogo ni una verificación del texto.
+- claim: Un hilo de discusión comunitaria sobre páginas de muestra de DanMachi volumen 20 resume el prólogo como el recuerdo de un testigo no identificado que observa a una maga de cabello gris usar Genos Angelus contra una criatura marina. El participante interpreta que la maga podría ser Alfia y que la criatura podría ser Leviathan, pero no proporciona un localizador interno reproducible. Como pista adicional, la página inglesa de Alfia en DanMachi Wiki también indexa DanMachi volumen 20 (flashback) entre sus apariciones en novela ligera. Esa entrada de roster da otra ruta de búsqueda, pero no confirma la identidad de la maga del prólogo ni que sea Alfia, y tampoco verifica el texto.
 - character_ids: [CHAR-DARK-ALFIA]
 - aspect: pista de aparición y localizador secundario para una escena histórica
 - era_or_interval: DanMachi volumen 20, prólogo/flashback; fecha interna desconocida
@@ -302,7 +302,7 @@
 - evidence_type: community_preview_summary_and_secondary_appearance_locator
 - verification_status: secondary_checked
 - spoiler_level: major
-- confidence_note: Ninguna de las dos fuentes aporta aquí una página impresa comprobada. No se confirma que la maga de cabello gris sea Alfia, que la criatura sea Leviathan ni que Leon sea el testigo. La muestra oficial de SB Creative no expuso texto legible y la sinopsis editorial de Yen Press no describe la escena; el texto licenciado sigue siendo necesario.
+- confidence_note: Ninguna de las dos fuentes aporta aquí una página impresa comprobada. Las identificaciones propuestas no se confirman: no se demuestra que la maga de cabello gris sea Alfia, que la criatura sea Leviathan ni que Leon sea el testigo. La muestra oficial de SB Creative no expuso texto legible y la sinopsis editorial de Yen Press no describe la escena; el texto licenciado sigue siendo necesario.
 
 ### DMR-045-CLM-016 · Pista comunitaria sobre Afterglow en las retrospectivas de los capítulos 2 y 3 del volumen 20
 
