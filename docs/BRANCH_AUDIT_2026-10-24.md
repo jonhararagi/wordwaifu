@@ -162,3 +162,13 @@ No se borraron las ramas remotas como efecto colateral de esta auditoría. La co
 ## Siguiente paso de lore
 
 El lote DMR-045 continúa con brechas factuales y no se declara completo: localizar pasajes primarios reproducibles para Alfia/Zald/Erebus en *Astrea Record* I–III, para Meteria/Bell en el volumen principal 20 y para distinguir las decisiones personales de Rudra frente a Jura/Familia en los volúmenes 13–14. Las entrevistas nuevas mejoran el grafo y la procedencia, pero no sustituyen esas escenas.
+
+
+## Addendum · reescaneo después de publicar el informe (2026-10-24 UTC)
+
+La reenumeración paginada de las referencias actuales devuelve **103 ramas en total, incluida `main`**, es decir, **102 ramas no principales**. La tabla anterior conserva los valores individuales de la comparación de su corte original contra `main` en `21f0482f3ba23142866e5534d2368ba43233668f`; este addendum registra el desfase detectado en el reescaneo, sin reescribir retrospectivamente esos datos.
+
+- La única referencia que faltaba en la tabla original es `docs/branch-audit-census-2026-10-24`, la rama fuente de la propia PR #88. Comparada con el `main` actual al reescaneo, GitHub devuelve 5 commits ahead y 1 behind. Sus cambios son solamente `docs/BRANCH_AUDIT_2026-10-24.md`, `docs/STATUS.md`, `lore/danmachi/BATCH_LOG.md` y `lore/danmachi/WORK_QUEUE.md`; el contenido de auditoría de esos archivos ya está en `main` por la PR #88. El ahead cuenta divergencia de historial, no funcionalidad pendiente.
+- Clasificación del inventario actualizado: **88 ramas divergidas**, **14 solo detrás** y **0 ahead-only**. No se ha identificado ninguna rama adicional apta para fusionar íntegramente ni código funcional nuevo pendiente en esa rama documental.
+- El índice de PR permanece en 85 registros consultados: 60 fusionadas, 25 cerradas sin fusionar y 0 abiertas. Las PR #85–#87 ya incorporaron el código funcional del parentesco Alfia–Bell, la evidencia separada `CONT-GAME` y el tipo de fuente para entrevistas.
+- **Decisión final:** la auditoría de ramas queda cerrada. No se fusionan ramas divergidas completas; las ramas históricas se conservan para rescate selectivo. Las únicas tareas abiertas de DMR-045 son factuales (localizadores primarios), no bloqueos de integración de código.
