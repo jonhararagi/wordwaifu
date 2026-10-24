@@ -13,6 +13,7 @@ claim_refs:
   - DMR-014-CLM-002
   - DMR-045-CLM-007
   - DMR-045-CLM-008
+  - DMR-045-CLM-012
 research_source_refs:
   - DMR-002-SRC-001
   - DMR-045-SRC-008
@@ -74,6 +75,15 @@ En una entrevista de Dengeki Online, Fujino Omori explica que la novelización d
 
 - Fuente: [Dengeki Online · entrevista del sexto aniversario de DanMemo](https://dengekionline.com/articles/189750/) (DMR-045-SRC-008).
 
+
+
+### Figura paterna en la versión original del juego
+
+La misma entrevista presenta al padre de Bell como un **サポーター (supporter) de Zeus Familia** en el marco de Memoria Freese; Omori confirma el resumen del entrevistador. El nombre del padre no aparece y la formulación no demuestra que fuera miembro formal de Zeus Familia. La madre se describe como hermana menor de Alfia, pero no se la nombra como Meteria en ese intercambio.
+
+- Claim: `DMR-045-CLM-012` · continuidad `CONT-GAME`.
+- Ruta relacionada: [Astrea Record original de Memoria Freese](../events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md).
+- Fuente: [LN News Online · entrevista a Fujino Omori](https://ln-news.com/articles/109766).
 
 ## Parentesco adicional reportado en entrevista sobre el juego — CONT-GAME
 
