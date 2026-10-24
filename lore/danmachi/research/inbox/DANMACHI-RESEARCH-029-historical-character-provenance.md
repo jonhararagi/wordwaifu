@@ -191,7 +191,7 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 
 ### DMR-029-CLM-012 · Meteria: descripción de carácter en una nota del autor dentro de un escenario alternativo
 - `claim_id`: DMR-029-CLM-012
-- `claim`: Una nota publicada por Fujino Omori describe a Meteria a través de Alfia como amable, de salud frágil y querida por quienes la rodeaban. La misma pieza presenta un escenario alternativo en el que Alfia y Zald crían a Bell; por ello, esta descripción se archiva expresamente como contexto de autor/continuidad alternativa, no como confirmación de acontecimientos de la novela principal.
+- `claim`: La nota original publicada por Fujino Omori describe a Meteria, a través del recuerdo de Alfia, como amable, sonriente, de salud frágil y querida por quienes la rodeaban. En el escenario alternativo, Alfia y Zald crían a Bell durante tres años; la escena lo sitúa próximo a cumplir siete. Alfia relata que inicialmente acudió a observar al hijo de Meteria a distancia, pero termina cuidándolo; relaciona el cabello blanco, el rostro y la sonrisa de Bell con Meteria y sus ojos rojos con un padre no identificado. La nota también menciona a un abuelo en el hogar, cuya identidad no se establece en este claim. Todo ello se archiva expresamente como contexto autoral de `CONT-AU`, no como confirmación de acontecimientos de la novela principal.
 - `character_ids`: [CHAR-METERIA, CHAR-DARK-ALFIA, CHAR-DARK-ZALD, DM-CHAR-BELL]
 - `aspect`: caracterización y continuidad alternativa
 - `era_or_interval`: Escenario alternativo de autor; no aplicar a la cronología principal por defecto
@@ -199,12 +199,12 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `source_id`: DMR-029-SRC-016
 - `source_title`: それは遥か彼方の静穏の夢
 - `source_type`: AUTHOR_NOTE
-- `source_locator`: Publicación original del autor; lectura de escenario hipotético, no novela principal
+- `source_locator`: Publicación original del autor, texto narrativo consultado directamente; escena hipotética, no novela principal. Se localizan en la propia narración la convivencia de tres años, la edad próxima a siete y el recuerdo de Meteria; no hay paginación impresa.
 - `source_url`: https://note.com/fujinoomori/n/n629829ac3fe4
 - `evidence_type`: author_note_alternate_scenario
 - `verification_status`: source_checked_excerpt_only
 - `spoiler_level`: major
-- `confidence_note`: El texto es atribuible al autor, pero la continuidad descrita es alternativa. No importar las decisiones de Alfia/Zald ni la crianza de Bell a CONT-MAIN-LN.
+- `confidence_note`: La nota directa respalda esos datos solo dentro del escenario alternativo; no fija año calendario, no identifica al padre de Bell ni autoriza asignar identidad al abuelo del hogar. No importar las decisiones de Alfia/Zald ni la crianza de Bell a CONT-MAIN-LN o CONT-AR.
 
 ### Ficha independiente de escenario alternativo
 

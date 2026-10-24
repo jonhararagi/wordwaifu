@@ -320,6 +320,10 @@
 - spoiler_level: major
 - confidence_note: La fuente sirve para dirigir la búsqueda a los capítulos 2–3. No demuestra por sí sola las capacidades individuales de Alfia o Zald, una correspondencia entre nombres de armas y personajes, la mecánica completa de Afterglow ni una página. La sinopsis de Yen Press para vol. 20 solo se registra como metadatos (DMR-045-SRC-012) y no respalda el detalle.
 
+### Corrección de alcance independiente — nota autoral `CONT-AU`
+
+La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confirma un dato temporal que el registro anterior dejaba demasiado abierto: en esa posibilidad alternativa, Bell lleva tres años conviviendo con Alfia y Zald y está próximo a cumplir siete. La misma escena recuerda a Meteria y deja sin identificar al padre de Bell; también menciona a un abuelo en el hogar sin que este memo le asigne identidad. El dato se actualizó en `DMR-029-CLM-012` y en la ficha navegable `EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001`, con prueba regresiva. **Todo permanece en `CONT-AU`**: no resuelve los localizadores pendientes de las biografías principales de Alfia, Zald, Meteria, Erebus o Rudra y no cambia su estado en `CONT-MAIN-LN`/`CONT-AR`.
+
 ## Localizadores primarios pendientes
 
 1. DanMachi vol. 20: el hilo comunitario de páginas de muestra ofrece una pista secundaria sobre el prólogo marítimo (DMR-045-CLM-015), pero el lector oficial no expuso el texto y las identidades propuestas no quedan verificadas. Sigue pendiente el pasaje de Meteria y el cotejo directo de Alfia/Zald con capítulo/página o localizador digital reproducible.
