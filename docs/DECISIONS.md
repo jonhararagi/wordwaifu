@@ -85,3 +85,13 @@
 **Decisión:** El asistente puede realizar tanto planificación/auditoría (Cerebro) como implementación (Obrero), pero en fases explícitas y separadas por el ciclo INSPECT → PLAN → EXECUTE → VERIFY → PERSIST → REPORT. Solo una tarea activa por vez; no asumir que un PR está integrado ni alterar main sin autorización. Esta decisión es específica de WordWaifu y no sustituye protocolos que el usuario haya definido para otros repositorios.  
 **Motivo:** Permitir continuidad completa entre el diseño de tareas y su ejecución, manteniendo trazabilidad y alcance controlado.
 
+
+## DEC-018 — Registro persistente de acuerdos de conversación
+**Estado:** Aprobada.  
+**Decisión:** Las instrucciones, preferencias, correcciones, decisiones y alcances de investigación relevantes para WordWaifu que se acuerden en conversación se registran de forma persistente en [docs/CONVERSATION_DECISION_LOG.md](CONVERSATION_DECISION_LOG.md) y en la documentación de dominio correspondiente. El registro se consulta antes de pedir aclaraciones repetidas o solicitar que el usuario reenvíe un mensaje ya registrado.  
+**Motivo:** Evitar pérdida de contexto, repetición de instrucciones y trabajo duplicado. La aceptación como requisito de trabajo se distingue del estado de implementación y del nivel de evidencia factual.
+
+## DEC-019 — Wikis reconocidas como fuente secundaria de investigación DanMachi
+**Estado:** Aprobada.  
+**Decisión:** Cuando el acceso a las novelas ligeras no esté disponible, investigar también las wikis comunitarias reconocidas en inglés y español para ampliar fichas y localizar datos. Priorizar fuentes oficiales accesibles cuando existan; etiquetar las wikis como fuentes secundarias, guardar la procedencia y no afirmar que son oficialmente autorizadas por la editorial ni convertir automáticamente sus afirmaciones en canon verificado.  
+**Motivo:** Maximizar la cobertura útil de la saga sin ocultar limitaciones de acceso ni confundir los niveles de evidencia.

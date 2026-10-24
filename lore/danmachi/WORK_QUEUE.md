@@ -3,6 +3,16 @@
 Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el último volumen principal publicado que se pueda verificar. Las tareas se dividen para no mezclar épocas, fuentes o continuidades. Ningún número de volumen ni final se inventará para llenar huecos.
 
 
+
+## REGLA PERMANENTE · Registro de acuerdos de conversación
+
+- [x] Registrar en el repositorio los acuerdos, requisitos, preferencias, correcciones y criterios de investigación relevantes tratados con el usuario, para no pedir que se reenvíen mensajes ya conocidos.
+- [x] Consultar [el registro permanente de acuerdos](../../docs/CONVERSATION_DECISION_LOG.md) antes de iniciar nuevas tareas o repetir preguntas/auditorías.
+- [x] Aplicar la directriz aceptada de utilizar wikis reconocidas en inglés/español cuando no haya acceso a las novelas, manteniéndolas clasificadas como fuentes secundarias y registrando procedencia.
+- [ ] En cada nueva tanda, actualizar este registro y el documento específico afectado; verificar que estado, fuente y continuidad estén documentados antes de informar finalización.
+
+Esta regla preserva el contexto, pero no sustituye validación factual, pruebas técnicas ni confirmación de integración.
+
 ## Cobertura integrada del roster · DANMACHI-RESEARCH-036
 
 - [x] Crear fichas Markdown individuales para las 63 identidades del roster de adaptación, incluidos los cuatro hermanos Gulliver.

@@ -10,6 +10,13 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## Registro de acuerdos de conversación — 2026-10-24
+
+- La política permanente quedó aprobada y documentada en [DEC-018/DEC-019](DECISIONS.md#dec-018--registro-persistente-de-acuerdos-de-conversación) y en [el registro de acuerdos](CONVERSATION_DECISION_LOG.md): anotar las instrucciones relevantes y consultar el historial antes de pedir al usuario que reenvíe mensajes o repita decisiones.
+- Para DanMachi, las wikis reconocidas en inglés y español se utilizan como fuentes secundarias cuando no hay acceso a las novelas; las fuentes oficiales accesibles conservan prioridad y los datos de wiki no se presentan como escenas primarias cotejadas.
+- Regla de comprobación: no declarar una modificación integrada ni validada hasta verificarla en `main` y revisar las pruebas del SHA exacto.
+
+
 **Revisión adicional de expedientes manuales de personajes:** 82/82 registros `character` tienen un bloque manual en `src/character-dossiers.js`; los siete expedientes pendientes de bloque manual ahora están incorporados. Además, 10 bloques de interfaz corresponden a entradas heredadas de tipo deidad/grupo u otros IDs que no son registros `character`. Esta auditoría de cobertura manual no reemplaza la métrica automatizada de rutas.
 
 

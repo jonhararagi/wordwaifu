@@ -26,6 +26,8 @@ El corpus y su interfaz ya están integrados en `main`. Esta carpeta no es una r
 
 ## Plantillas y protocolo
 
+
+- [Registro permanente de acuerdos de conversación](../../docs/CONVERSATION_DECISION_LOG.md) — instrucciones, preferencias, decisiones aceptadas y fuentes que deben persistir para no pedir al usuario que vuelva a enviar mensajes ya registrados.
 - [Premisa inicial del OC](01-premisa-autor.md)
 - [Plantilla de registro de lore](02-plantilla-registro.md)
 - [Protocolo de revisión narrativa](03-protocolo-revision.md)
