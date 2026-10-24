@@ -662,6 +662,6 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Clasificar 87 ramas divergidas y 14 ramas solo retrasadas; ninguna está al día con main ni debe fusionarse íntegramente.
 - [x] Cruzar el estado de las 85 PR consultadas: 60 fusionadas, 25 cerradas sin fusionar, 0 abiertas.
 - [x] Verificar la integración del código funcional de entrevistas/fuentes en PR #85, #86 y #87 y los dos workflows exitosos en el main resultante.
-- [x] Documentar sustituciones conocidas y conservar sin borrar las ramas remotas archivadas para consulta: `../..`/ [informe de auditoría](../../docs/BRANCH_AUDIT_2026-10-24.md).
+- [x] Documentar las sustituciones conocidas y conservar las ramas remotas archivadas para consulta; [informe de auditoría](../../docs/BRANCH_AUDIT_2026-10-24.md).
 - [ ] Continuar DMR-045 con los localizadores primarios faltantes; no avanzar a una nueva tanda de lore por el solo hecho de que el censo de ramas esté cerrado.
 
