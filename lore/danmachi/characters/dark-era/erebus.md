@@ -4,11 +4,11 @@ universe: danmachi
 type: character
 status: secondary_reference_primary_locator_pending
 continuity_scope: CONT-AR
-source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001]
-claim_refs: [DMR-029-CLM-003, DMR-038-CLM-007, DMR-045-CLM-003]
+source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001, DMR-045-SRC-009]
+claim_refs: [DMR-029-CLM-003, DMR-038-CLM-007, DMR-045-CLM-003, DMR-045-CLM-009]
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases: [Erebus]
-tags: [Erebus, Evilus, Era Oscura, Astrea Record, antagonista ideológico, spoiler]
+tags: [Erebus, Evilus, Era Oscura, Astrea Record, CONT-GAME, antagonista ideológico, spoiler]
 ---
 # Erebus — deidad antagonista reportada en Astrea Record
 
@@ -17,6 +17,10 @@ La ficha comunitaria identifica a Erebus (エレボス) como deidad masculina de
 
 ## Afiliación y estado
 La wiki le atribuye una afiliación previa con Evilus y lo sitúa en el Cielo después de los hechos descritos. Se registra como identidad divina relacionada con el conflicto, no como aventurero con nivel de Falna. La cronología oficial respalda el marco amplio de Astrea Record —la Era Oscura de Orario, aproximadamente siete años antes de Bell— pero no confirma estos datos individuales.
+
+## Pie editorial de la versión original del juego — CONT-GAME
+
+El pie editorial bajo su retrato en la entrevista de LN News Online describe a Erebus como deidad del inframundo primordial y usa «絶対悪» («Absolute Evil» / «Absoluto Mal») (DMR-045-SRC-009 / DMR-045-CLM-009). El caption es evidencia secundaria de cómo la página presenta al personaje en la historia original de Memoria Freese, no una cita de Omori ni un localizador de la novelización. No demuestra que «Eren» sea un alias canónico, poderes específicos ni una jerarquía completa sobre Evilus.
 
 ## Función narrativa sin completar por inferencia
 La lectura secundaria presenta a Erebus como antagonista ideológico frente a la justicia asociada con Astrea Familia. Es una guía para localizar escenas, no una cita textual ni una explicación definitiva de su psicología. Evilus se maneja como una red de facciones; su afiliación no implica que Erebus dirigiera cada grupo ni que ordenara todos los actos atribuidos a esa red.
