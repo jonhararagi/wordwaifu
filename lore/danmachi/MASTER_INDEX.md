@@ -8,7 +8,7 @@
 - [Matriz DMR-038](research/inbox/DANMACHI-RESEARCH-038-dark-era-and-hiryute-sisters.md) — afirmaciones, fuentes y niveles de certeza.
 - [DANMACHI-RESEARCH-043](research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md) — Albert, Aria, Jura, Valletta, Thanatos y revisión de alias/continuidad.
 - [DANMACHI-RESEARCH-044](research/inbox/DANMACHI-RESEARCH-044-kali-fianna-maxim-review.md) — Maxim, Helga (DanMemo), Argana, Bache y Seldas; fuentes y alcance de continuidad documentados.
-- [DANMACHI-RESEARCH-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) — auditoría de Alfia, Zald, Meteria, Erebus y Rudra; procedencia editorial de Astrea Record y límites de atribución del Juggernaut.
+- [DANMACHI-RESEARCH-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) — barrido secundario público revisado el 2026-10-24; quedan pendientes los localizadores primarios de Alfia, Zald, Meteria, Erebus y la atribución personal de Rudra.
 - [DANMACHI-RESEARCH-046](research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md) — siete perfiles ampliados de la nueva Astrea Familia y Soma Familia; procedencia de roster y separación entre acusación y destino reportado.
 
 Este es el punto de entrada para continuar el trabajo sin repetir registros. El contenido canónico sigue siendo provisional hasta que las fichas tengan fuentes y localizadores cotejados.
@@ -48,7 +48,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice de plantillas individuales de los volúmenes](volumes/main/README.md)
 - [Validador automático de catálogo](tools/check-catalog.mjs)
 
-## Etapa 1 — Orario como escenario
+## Etapa 1 — PRIORIDAD ACTUAL: Orario como escenario
 
 - [Ficha central de Orario](places/orario.md) y [índice maestro de lugares](places/00-indice-lugares.md).
 - [DANMACHI-RESEARCH-031 — Geografía, mapa y pistas comunitarias](research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md).
