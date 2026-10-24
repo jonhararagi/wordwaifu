@@ -302,7 +302,7 @@
 - evidence_type: community_preview_summary_and_secondary_appearance_locator
 - verification_status: secondary_checked
 - spoiler_level: major
-- confidence_note: Ninguna de las dos fuentes aporta aquí una página impresa comprobada. Las identificaciones propuestas no se confirman: no se demuestra que la maga de cabello gris sea Alfia, que la criatura sea Leviathan ni que Leon sea el testigo. La muestra oficial de SB Creative no expuso texto legible y la sinopsis editorial de Yen Press no describe la escena; el texto licenciado sigue siendo necesario.
+- confidence_note: Ninguna de las dos fuentes aporta aquí una página impresa comprobada. Las identificaciones propuestas no se confirman: esta evidencia no confirma que la maga de cabello gris sea Alfia, que la criatura sea Leviathan ni que Leon sea el testigo. La muestra oficial de SB Creative no expuso texto legible y la sinopsis editorial de Yen Press no describe la escena; el texto licenciado sigue siendo necesario.
 
 ### DMR-045-CLM-016 · Pista comunitaria sobre Afterglow en las retrospectivas de los capítulos 2 y 3 del volumen 20
 
