@@ -94,6 +94,12 @@ const zaldAfterglow=archive.getProfile(index,"CHAR-DARK-ZALD","CONT-MAIN-LN","al
 const zaldAfterglowRelation=zaldAfterglow.relationships.find(r=>r.edgeId==="REL-ZALD-V20-AFTERGLOW-LEAD");
 assert.ok(zaldAfterglowRelation&&zaldAfterglowRelation.targetId==="EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001"&&zaldAfterglowRelation.targetPath==="events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md"&&zaldAfterglowRelation.claims.some(c=>c.claimId==="DMR-045-CLM-016"),
   "Zald's archive profile must reach the same event dossier while keeping the source claim attached.");
+const alfiaAuthorContext = archive.getProfile(index,"CHAR-DARK-ALFIA","CONT-AR","all");
+const zaldAuthorContext = archive.getProfile(index,"CHAR-DARK-ZALD","CONT-AR","all");
+for (const [name,profile] of [["Alfia",alfiaAuthorContext],["Zald",zaldAuthorContext]]) {
+  const claim = profile.claims.find(c=>c.claimId==="DMR-045-CLM-017");
+  assert.ok(claim && claim.continuityScopes.includes("CONT-AR") && claim.sourceUrls.includes("https://dengekionline.com/articles/189750/"), name + "'s archive profile must surface the authorial provenance claim with its source and continuity.");
+}
 assert.ok(ryuAnime.relationships.every(r=>r.claims.length>0&&r.continuity==="CONT-ANIME"),
   "Catalog-backed archive relationships must preserve evidence and the selected continuity.");
 assert.ok(!ryuAnime.moments.some(m=>m.id==="ryu-seven-days"));
