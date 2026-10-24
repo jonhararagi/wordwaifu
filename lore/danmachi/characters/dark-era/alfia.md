@@ -15,6 +15,8 @@ source_refs:
   - DMR-045-SRC-008
   - DMR-045-SRC-005
   - DMR-045-SRC-009
+  - DMR-045-SRC-011
+  - DMR-045-SRC-012
 claim_refs:
   - DMR-029-CLM-001
   - DMR-029-CLM-006
@@ -24,6 +26,7 @@ claim_refs:
   - DMR-045-CLM-008
   - DMR-045-CLM-010
   - DMR-045-CLM-006
+  - DMR-045-CLM-015
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Alfia"
@@ -44,6 +47,17 @@ La ficha editorial de *Astrea Record 3*, recuperada mediante un fragmento indexa
 ## Pie editorial de la versión original del juego — CONT-GAME
 
 El pie editorial bajo el retrato de Alfia en la entrevista de LN News Online la describe como maga de nivel 7, vinculada a Hera Familia, amante del silencio y participante en la incursión en Orario junto a Erebus (DMR-045-SRC-009 / DMR-045-CLM-010). Esta es evidencia secundaria de un perfil publicado sobre la historia original de Memoria Freese, no una declaración del autor ni un localizador de Astrea Record novelado. No se traslada el nivel ni la descripción a CONT-AR o CONT-MAIN-LN sin cotejo independiente.
+
+## Pista secundaria del prólogo de DanMachi vol. 20 — CONT-MAIN-LN
+
+Una discusión comunitaria sobre páginas de muestra del volumen 20 interpreta el prólogo como el recuerdo de un testigo no identificado que ve a una maga de cabello gris lanzar Genos Angelus contra una criatura marina. El comentarista propone que la maga podría ser Alfia, y que la criatura podría ser Leviathan; ambos nombres son interpretaciones tentativas del comentario, no identificaciones confirmadas por el texto publicado (DMR-045-CLM-015).
+
+Esta pista se separa del expediente histórico de CONT-AR: no demuestra que Alfia derrotara personalmente a Leviathan, no identifica al testigo como Leon y no determina una página. La ficha editorial oficial identifica el volumen, pero su sinopsis no describe la escena; el lector gratuito oficial inspeccionado no mostró texto narrativo legible. El hecho de que el volumen contenga una mención o recuerdo debe comprobarse en una edición licenciada antes de elevarlo a evidencia primaria.
+
+- **Estado:** secondary_checked, pista para buscar el prólogo “The Hero's Afterglow”.
+- **Evento navegable:** [Pista secundaria del prólogo marítimo del volumen 20](../../events/candidates/EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001.md).
+- **Fuente comunitaria:** DMR-045-SRC-011.
+- **Edición para cotejo:** [Yen Press · DanMachi vol. 20](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel) (DMR-045-SRC-012).
 
 ## Datos de la wiki: qué está disponible y qué significa
 La ficha inglesa ofrece nombre japonés, romanización, alias y una instantánea de su estado. Registra nivel 7 y piso 71 como datos históricos reportados, y da el alias **Silence**; sus sobrenombres resaltan el talento excepcional. La wiki no sirve para afirmar que ese nivel o las cifras de estadísticas sean universales o permanentes.

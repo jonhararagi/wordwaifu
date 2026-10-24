@@ -2559,6 +2559,23 @@
       ],
       "status": "source_checked_excerpt_only",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001",
+      "path": "events/candidates/EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001.md",
+      "type": "event",
+      "name": "DanMachi vol. 20 — pista secundaria del prólogo marítimo",
+      "tags": [
+        "DanMachi vol. 20",
+        "CONT-MAIN-LN",
+        "prólogo",
+        "pista secundaria",
+        "Genos Angelus",
+        "criatura marina no identificada",
+        "Alfia (identificación pendiente)"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -7039,6 +7056,20 @@
       "claimRef": "DMR-045-CLM-014",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
       "note": "No interpretar el relato público como muerte real de Ryuu. Página exacta del epílogo no verificada."
+    },
+    {
+      "id": "REL-ALFIA-V20-PROLOGUE-LEAD",
+      "from": "CHAR-DARK-ALFIA",
+      "to": "EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001",
+      "kind": "candidate_scene_association",
+      "label": "Un comentarista comunitario interpreta tentativamente como Alfia a la maga de cabello gris del prólogo; la identificación requiere cotejo del texto autorizado.",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Prólogo del volumen 20; fecha interna desconocida",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "community_preview_summary",
+      "claimRef": "DMR-045-CLM-015",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Arista de navegación para una pista secundaria, no confirmación de que Alfia aparezca en la escena. No crear aquí relación con Leviathan ni identificar al testigo como Leon."
     }
   ]
 }

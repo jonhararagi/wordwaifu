@@ -284,9 +284,27 @@
 - spoiler_level: major
 - confidence_note: Se localizó un extracto indexado de la sección final. La afirmación registra qué versión se comunicó en la superficie, no que todos sus elementos fueran verdaderos. Sin número de página; corroborar la edición antes de citar página impresa.
 
+### DMR-045-CLM-015 · Pista comunitaria sobre una maga de cabello gris en el prólogo del volumen 20
+
+- claim_id: DMR-045-CLM-015
+- claim: En un hilo de discusión comunitaria presentado como comentario sobre páginas de muestra de DanMachi volumen 20, un participante resume el prólogo como el recuerdo de un testigo no identificado que observa a una maga de cabello gris usar Genos Angelus contra una criatura marina. El participante interpreta que la maga probablemente sea Alfia y propone que la criatura sea posiblemente Leviathan, pero la propia descripción expresa incertidumbre y no aporta nombre de página o capítulo interno. Se registra únicamente como pista secundaria para dirigir la búsqueda hacia el prólogo; no confirma la identidad de la maga, la criatura ni el testigo.
+- character_ids: [CHAR-DARK-ALFIA]
+- aspect: pista de escena histórica, uso de magia reportado y localizador primario pendiente
+- era_or_interval: DanMachi volumen 20, prólogo; fecha interna desconocida
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-011
+- source_title: Discusión comunitaria sobre páginas de muestra de DanMachi vol. 20
+- source_type: COMMUNITY_DISCUSSION
+- source_locator: Hilo “Vol 20 preview pages”, resumen comunitario del prólogo publicado el 2024-12-06; la identidad de la maga/monstruo se plantea como interpretación, no como transcripción del libro.
+- source_url: https://www.reddit.com/r/DanMachi/comments/1h7wabo/
+- evidence_type: community_summary_of_preview
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: La evidencia confirma que una discusión comunitaria formula esta pista, no que las identificaciones propuestas sean correctas. El lector oficial de SB Creative no devolvió narración legible; la sinopsis oficial de Yen Press no describe la escena. No usar este claim como prueba de una derrota individual de Leviathan, para identificar a Leon como testigo, ni para elevar capacidades o relaciones de Alfia a texto primario.
+
 ## Localizadores primarios pendientes
 
-1. DanMachi vol. 20: localizar el recuerdo de Alfia/Zald y el parentesco de Meteria con Bell con capítulo/página o localizador digital reproducible.
+1. DanMachi vol. 20: el hilo comunitario de páginas de muestra ofrece una pista secundaria sobre el prólogo marítimo (DMR-045-CLM-015), pero el lector oficial no expuso el texto y las identidades propuestas no quedan verificadas. Sigue pendiente el pasaje de Meteria y el cotejo directo de Alfia/Zald con capítulo/página o localizador digital reproducible.
 2. Astrea Record vols. 1–3: cotejar las escenas de Alfia, Zald y Erebus; anotar edición y volumen/capítulo para cada dato confirmado.
 3. Meteria: localizar el pasaje narrativo que establece maternidad y parentesco. No identificar al padre de Bell hasta que una fuente lo nombre explícitamente.
 4. DanMachi vol. 14: ya se localizó parcialmente la retrospección del capítulo 13 sobre la trampa de Rudra Familia (DMR-045-CLM-013) y el epílogo sobre el relato público (DMR-045-CLM-014). Falta cotejar la página exacta en una edición accesible y completar el seguimiento del plan posterior de Jura en vols. 13–14; la atribución personal a Rudra sigue pendiente.
