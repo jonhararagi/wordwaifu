@@ -13,6 +13,7 @@ source_refs:
   - DMR-021-SRC-002
   - DMR-021-SRC-006
   - DMR-045-SRC-008
+  - DMR-045-SRC-005
   - DMR-045-SRC-009
 claim_refs:
   - DMR-029-CLM-001
@@ -21,6 +22,7 @@ claim_refs:
   - DMR-029-CLM-011
   - DMR-045-CLM-007
   - DMR-045-CLM-008
+  - DMR-045-CLM-006
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Alfia"
@@ -33,6 +35,10 @@ tags: [Hera Familia, Astrea Record, abilities, illness, spoiler]
 - **Afiliación histórica reportada:** Hera Familia; las fuentes comunitarias la sitúan entre sus ejecutivos.
 - **Continuidad principal de esta ficha:** CONT-AR. Las referencias comunitarias también la relacionan con una retrospectiva de la novela principal; no mezclar detalles de adaptación/juego o AU sin etiquetarlos.
 - **Estado de la ficha:** información útil recuperada de wikis en inglés y español; el cotejo de la edición primaria sigue pendiente.
+
+## Evidencia editorial acotada — Astrea Record 3
+
+La ficha editorial de *Astrea Record 3*, recuperada mediante un fragmento indexado, sitúa el inicio del enfrentamiento de Alfia contra Astrea Familia dentro del Dungeon durante el último día de los Siete Días de la Muerte (`DMR-045-CLM-006`, `DMR-045-SRC-005`, `CONT-AR`). La página editorial directa no pudo verificarse en la comprobación registrada; por eso esta es evidencia de extracto, no un localizador del texto narrativo. No confirma técnicas, nivel, integrantes concretos del grupo, resultado ni secuencia completa. El resto de la biografía de esta ficha conserva sus estados de evidencia propios.
 
 ## Datos de la wiki: qué está disponible y qué significa
 La ficha inglesa ofrece nombre japonés, romanización, alias y una instantánea de su estado. Registra nivel 7 y piso 71 como datos históricos reportados, y da el alias **Silence**; sus sobrenombres resaltan el talento excepcional. La wiki no sirve para afirmar que ese nivel o las cifras de estadísticas sean universales o permanentes.
