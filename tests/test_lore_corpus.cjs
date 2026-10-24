@@ -870,7 +870,7 @@ const juraPublicEdge = index.relationships.find(edge => edge.id === "REL-JURA-SU
 const ryuuCoverEdge = index.relationships.find(edge => edge.id === "REL-RYUU-PUBLIC-DEATH-COVER-V14");
 assert.ok(juraPublicEdge && ryuuCoverEdge && juraPublicEdge.to === ryuuCoverEdge.to && juraPublicEdge.claimRef === "DMR-045-CLM-014" && ryuuCoverEdge.claimRef === "DMR-045-CLM-014", "The epilogue's public report must connect both Jura and Ryuu to the aftermath event.");
 const rudraEventText = fs.readFileSync(path.join(root, "events/timeline/EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001.md"), "utf8");
-assert.ok(rudraEventText.includes("DMR-045-CLM-013") && rudraEventText.includes("no demuestra que el dios Rudra"), "The historical event page must state the new chapter locator and preserve the deity attribution limit.");
+assert.ok(rudraEventText.includes("DMR-045-CLM-013") && rudraEventText.includes("no prueba que el dios Rudra"), "The historical event page must state the new chapter locator and preserve the deity attribution limit.");
 const returnEventText = fs.readFileSync(path.join(root, "events/timeline/EVT-DM-JUGGERNAUT-RETURN-001.md"), "utf8");
 assert.ok(returnEventText.includes("DMR-045-CLM-014") && returnEventText.includes("no una prueba de que Ryuu hubiese muerto"), "The current event must distinguish the surface story from Ryuu's actual fate.");
 const rudraDossier = fs.readFileSync(path.join(root, "characters/dark-era/rudra.md"), "utf8");
