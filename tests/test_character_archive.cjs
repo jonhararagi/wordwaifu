@@ -22,18 +22,20 @@ const paths=[
   "research/inbox/DANMACHI-RESEARCH-015-bell-hestia-first-meeting-publisher-synopsis.md",
   "research/inbox/DANMACHI-RESEARCH-016-eina-advisor-anime.md",
   "research/inbox/BATCH-DM-010-astrea-departure-and-ryu-revenge.md",
-  "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md"
+  "research/inbox/DANMACHI-RESEARCH-028-astrea-wiki-leads.md",
+  "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md"
 ];
 const docs=paths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const profilePaths=[
   "characters/ryuu-lion.md","characters/alise-lovelace.md","characters/astrea.md",
   "characters/bell-cranel.md","characters/hestia.md","characters/ais-wallenstein.md",
   "characters/eina-tulle.md","characters/finn-deimne.md","characters/freya.md",
-  "characters/ottar.md","characters/gojouno-kaguya.md","characters/lyra.md"
+  "characters/ottar.md","characters/gojouno-kaguya.md","characters/lyra.md",
+  "characters/dark-era/alfia.md","characters/dark-era/zald.md"
 ];
 const profileDocuments=profilePaths.map(file=>({path:file,content:fs.readFileSync(path.join(root,file),"utf8")}));
 const index=corpus.buildIndex(catalog,docs,profileDocuments);
-assert.equal(index.profileDocumentCount,12,"The archive should retain the 12 existing deeper dossiers.");
+assert.equal(index.profileDocumentCount,14,"The archive should retain the existing deeper dossiers and load the Alfia/Zald profiles used by Afterglow navigation tests.");
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.list().length,63,"The official-source registry should include Eina Tulle and four separately navigable Gulliver siblings.");
 assert.ok(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-LULUNE-LOUIE").imageUrl.endsWith("/rurune_zenshin.png"));
 assert.equal(globalThis.WordWaifuOfficialCharacterRoster.get("CHAR-ASFI-AL-ANDROMEDA").voice,"Ai Kayano");
