@@ -26,8 +26,9 @@ El pie editorial bajo su retrato en la entrevista de LN News Online describe a E
 
 La wiki inglesa atribuye a Erebus la idea de que el mal verdadero debe ser odiado por todos y que la justicia absoluta es un ideal al que se debe llegar y conquistar. También lo caracteriza como alguien proclive al aislamiento (DMR-045-CLM-018). Estos son resúmenes secundarios de la versión original de Memoria Freese, no citas verificadas del juego ni confirmación automática de la psicología de la novelización. Para representar el Erebus de CONT-AR, cotejar sus propios diálogos antes de reutilizar la motivación.
 
-## Función narrativa sin completar por inferencia
-La lectura secundaria presenta a Erebus como antagonista ideológico frente a la justicia asociada con Astrea Familia. Es una guía para localizar escenas, no una explicación definitiva de su psicología. Evilus se maneja como una red de facciones; su afiliación no implica que Erebus dirigiera cada grupo ni que ordenara todos los actos atribuidos a esa red.
+## Papel narrativo y límite de continuidad
+
+La lectura secundaria presenta a Erebus como antagonista ideológico en la versión original del juego (CONT-GAME), frente a la justicia asociada con Astrea Familia. Es una guía para localizar escenas, no una explicación definitiva de su psicología. La ficha de la novela ligera mantiene pendientes los localizadores individuales; Evilus se maneja como red de facciones, y la afiliación no implica que Erebus dirigiera cada grupo ni ordenara todos los actos atribuidos a esa red.
 
 ## Capacidades y límites
 No se registra nivel de aventurero, magia, habilidades, arma ni mecanismo concreto de acción respaldado por fuente primaria. Es preferible dejar esos campos sin afirmar antes que rellenarlos con atributos de otros dioses. Cualquier futura ampliación debe citar la escena y conservar la diferencia entre versión original de Memoria Freese y libros revisados.
