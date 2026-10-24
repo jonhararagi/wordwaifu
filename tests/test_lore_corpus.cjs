@@ -807,6 +807,10 @@ const astreaVol3PreviewUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-66
 const astreaVol3Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-astrea-record-vol3-preview-metadata-only");
 assert.ok(astreaVol3Preview && astreaVol3Preview.url === astreaVol3PreviewUrl && astreaVol3Preview.authority.includes("metadatos solamente") && String(astreaVol3Preview.coverage).includes("1/63") && String(astreaVol3Preview.limits).includes("No respalda ninguna capacidad"), "Astrea Record 3 public sample must remain discoverable as metadata-only when only its cover was accessible.");
 assert.ok(!index.claims.some(item => item.sourceUrls.includes(astreaVol3PreviewUrl)), "A sample reader with no inspected narrative pages must not support an individual character, relationship, or event claim.");
+const danmachiVol14ReaderUrl = "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=79739620JAAA14MBJE3X&lginbtn=false";
+const danmachiVol14Reader = historicalWikiSourceDirectory.find(item => item.id === "official-sbcr-binb-danmachi-vol14-reader-metadata-only");
+assert.ok(danmachiVol14Reader && danmachiVol14Reader.url === danmachiVol14ReaderUrl && danmachiVol14Reader.authority.includes("metadatos solamente") && danmachiVol14Reader.limits.includes("no expuso páginas narrativas"), "The official DanMachi vol. 14 free reader must be discoverable with its actual access limitation.");
+assert.ok(!index.claims.some(item => item.sourceUrls.includes(danmachiVol14ReaderUrl)), "The official volume 14 reader must not support the Rudra/Jura claims when no narrative page was exposed.");
 
 const gameAstreaEventPath = path.join(root, "events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md");
 const gameAstreaEventText = fs.readFileSync(gameAstreaEventPath, "utf8");
