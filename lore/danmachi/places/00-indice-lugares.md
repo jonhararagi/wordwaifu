@@ -47,6 +47,9 @@ Crear un registro por país, ciudad, región, isla, ruina o lugar relevante cuan
 
 ## Cuidado con nombres repetidos
 
+La organización está registrada en [Guild (organización)](../familias/guild-organization.md) con ID `ORG-GUILD`. `DM-GUILD-001` es una guía conceptual, no una ubicación ni el nodo de organización. `LOC-BABEL` y `LOC-PANTHEON` mantienen sus propios datos de evidencia; el catálogo no asigna un edificio separado `LOC-GUILD` ni decide la identidad física de Pantheon frente a Babel mientras falte el pasaje completo.
+
+
 Una ubicación llamada “Guild” puede referirse a una organización o al edificio físico. Mantener entidad organizativa y lugar físico separados y relacionarlos en lugar de duplicar o mezclar datos.
 
 ## Referencias urbanas del Prototype — no transferir a la novela principal
