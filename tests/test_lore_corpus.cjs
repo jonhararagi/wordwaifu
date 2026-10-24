@@ -900,7 +900,7 @@ assert.ok(vol20CommunitySource && vol20CommunitySource.url === "https://www.redd
 const vol20EditionSource = corpus.getOnlineSourceDirectory().find(source => source.id === "official-yenpress-danmachi-vol20-metadata");
 assert.ok(vol20EditionSource && vol20EditionSource.url === "https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel" && String(vol20EditionSource.limits).includes("La sinopsis no describe la escena"), "The official edition metadata must not be treated as evidence for the scene.");
 const vol20LeadText = fs.readFileSync(path.join(root, "events/candidates/EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001.md"), "utf8");
-assert.ok(vol20LeadText.includes("no se registra como hechos confirmados") && vol20LeadText.includes("no afirmar que Alfia derrotó a Leviathan"), "The lead event page must retain explicit uncertainty and a primary-text requirement.");
+assert.ok(vol20LeadText.includes("no registra como hechos confirmados") && vol20LeadText.includes("no afirmar que Alfia derrotó a Leviathan"), "The lead event page must retain explicit uncertainty and a primary-text requirement.");
 const alfiaMarkdownWithLead = fs.readFileSync(path.join(root, "characters/dark-era/alfia.md"), "utf8");
 assert.ok(alfiaMarkdownWithLead.includes("DMR-045-CLM-015") && alfiaMarkdownWithLead.includes("EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001"), "Alfia's dossier must navigate to the pending prologue lead.");
 const alfiaUiWithLead = fs.readFileSync(path.join(__dirname, "..", "src", "character-dossiers.js"), "utf8");
