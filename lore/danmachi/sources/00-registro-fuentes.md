@@ -2720,6 +2720,52 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: source_checked_excerpt_only
 
+## DMR-045-SRC-011 · Discusión comunitaria sobre páginas de muestra de DanMachi vol. 20
+
+- source_id: DMR-045-SRC-011
+- title: Vol 20 preview pages — discusión comunitaria
+- creator_or_publisher: Usuario de Reddit en r/DanMachi
+- source_type: COMMUNITY_DISCUSSION
+- series: DanMachi, novela ligera principal, volumen 20
+- volume_or_edition: Hilo publicado el 2024-12-06; el comentarista dice resumir páginas de muestra
+- language: Inglés
+- publication_date: 2024-12-06
+- official_url: https://www.reddit.com/r/DanMachi/comments/1h7wabo/
+- accessed_at: 2026-10-24
+- locator_type: community_preview_summary
+- locator: Comentario con resumen bajo el hilo “Vol 20 preview pages”, donde el lector interpreta tentativamente el prólogo como una escena con una maga de cabello gris y una criatura marina.
+- claims_supported: [DMR-045-CLM-015]
+- events_supported: [EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001]
+- continuity_scope: CONT-MAIN-LN; evidencia secundaria solamente
+- reliability_note: El hilo sirve como pista para localizar una posible escena. El comentarista no aporta una página editorial reproducible y expresa la identificación con Alfia/Leviathan como interpretación. No sustituye la novela ni demuestra el narrador, el monstruo o una derrota individual.
+- conflicting_sources: []
+- rights_note: Registrar solo una paráfrasis propia y la URL; no copiar la traducción comunitaria.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-012 · Yen Press — ficha editorial de DanMachi vol. 20
+
+- source_id: DMR-045-SRC-012
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 20 (light novel)
+- creator_or_publisher: Fujino Omori / Yen Press (Yen On)
+- source_type: OFFICIAL_REFERENCE
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Edición inglesa; ISBN digital 9798855437867; ISBN impreso 9798855437850
+- language: Inglés
+- publication_date: 2026-08-11
+- official_url: https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel
+- accessed_at: 2026-10-24
+- locator_type: publisher_bibliographic_metadata
+- locator: Ficha editorial y sinopsis comercial del volumen; no describe la escena del prólogo analizada por la pista secundaria.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Confirma edición, autor, traductor y publicación. La sinopsis no verifica el personaje, la criatura marina ni el testigo de la pista; el visor oficial consultado no expuso texto interior legible.
+- conflicting_sources: []
+- rights_note: Enlace bibliográfico y paráfrasis breve.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
 ## DMR-046-SRC-001 · Familia Astrea — roster de la nueva generación
 - source_id: DMR-046-SRC-001
 - title: Familia Astrea
