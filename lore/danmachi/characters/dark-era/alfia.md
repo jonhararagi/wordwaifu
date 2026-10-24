@@ -52,13 +52,13 @@ El pie editorial bajo el retrato de Alfia en la entrevista de LN News Online la 
 
 ## Pista secundaria del prólogo de DanMachi vol. 20 — CONT-MAIN-LN
 
-Una discusión comunitaria sobre páginas de muestra del volumen 20 interpreta el prólogo como el recuerdo de un testigo no identificado que ve a una maga de cabello gris lanzar Genos Angelus contra una criatura marina. El comentarista propone que la maga podría ser Alfia, y que la criatura podría ser Leviathan; ambos nombres son interpretaciones tentativas del comentario, no identificaciones confirmadas por el texto publicado (DMR-045-CLM-015).
+Una discusión comunitaria sobre páginas de muestra del volumen 20 interpreta el prólogo como el recuerdo de un testigo no identificado que ve a una maga de cabello gris lanzar Genos Angelus contra una criatura marina. El comentarista propone que la maga podría ser Alfia, y que la criatura podría ser Leviathan; ambos nombres son interpretaciones tentativas del comentario, no identificaciones confirmadas por el texto publicado (DMR-045-CLM-015). La página inglesa de Alfia en DanMachi Wiki también indexa el volumen 20 como una aparición retrospectiva; ese índice es una ruta secundaria de búsqueda, pero no demuestra que la maga del prólogo sea Alfia ni proporciona capítulo/página.
 
 Esta pista se separa del expediente histórico de CONT-AR: no demuestra que Alfia derrotara personalmente a Leviathan, no identifica al testigo como Leon y no determina una página. La ficha editorial oficial identifica el volumen, pero su sinopsis no describe la escena; el lector gratuito oficial inspeccionado no mostró texto narrativo legible. El hecho de que el volumen contenga una mención o recuerdo debe comprobarse en una edición licenciada antes de elevarlo a evidencia primaria.
 
 - **Estado:** secondary_checked, pista para buscar el prólogo “The Hero's Afterglow”.
 - **Evento navegable:** [Pista secundaria del prólogo marítimo del volumen 20](../../events/candidates/EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001.md).
-- **Fuente comunitaria:** DMR-045-SRC-011.
+- **Fuentes comunitarias:** DMR-045-SRC-011 y DMR-029-SRC-001.
 - **Edición para cotejo:** [Yen Press · DanMachi vol. 20](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel) (DMR-045-SRC-012).
 
 ## Pista secundaria de Afterglow — capítulos 2–3 del volumen 20
@@ -88,6 +88,8 @@ La wiki y su artículo en español de habilidades proporcionan un inventario má
 - **Silentium Eden:** encantamiento de canto muy corto que cubre el cuerpo con una protección invisible capaz de anular ataques mágicos desde diferentes direcciones. La wiki señala un coste alto de mente mientras permanece activo y una función paradójica: también sella o reduce el poder de la propia magia de Alfia. No debe describirse como defensa sin coste.
 - **Genos Angelus:** magia de canto muy largo que manifiesta una enorme campana gris plateada y cuyo alcance se cifra en más de 100 metros en el resumen comunitario. La fuente la presenta como suficientemente destructiva para amenazar una gran zona y relata que su uso contra Leviathan agravó de forma grave la salud de Alfia. El alcance y el efecto exactos necesitan un localizador primario.
 - **Gif Blessing:** la wiki la describe como manifestación de su enfermedad que mantiene su Falna en estado Limit Off, mientras le impone anormalidades y deteriora de forma continua sus estadísticas, resistencia y mente durante el combate. La estimación de una reducción del 5% por turno pertenece a ese resumen comunitario; no extrapolarla a un modelo general del sistema.
+
+- **Mejora de salud atribuida a un árbol sagrado:** la página inglesa de Alfia afirma que consumir una rama de un árbol sagrado de un bosque élfico mejoró su condición, aunque no curó la enfermedad. Es una pista secundaria vinculada a DMR-029-CLM-006; no hay aquí un pasaje de novela cotejado ni una referencia subyacente verificada por separado. No convertirlo en cura, efecto permanente o regla médica general.
 - **Otras habilidades listadas:** Alme y Vel Ardore. No se les atribuye aquí un efecto mecánico no comprobado.
 
 La consecuencia práctica para el expediente es importante: su nivel y talento reportados no significan que pueda sostener potencia máxima indefinidamente. Los nombres de hechizos, los costes y el deterioro temporal deben viajar juntos al consultar su ficha.
