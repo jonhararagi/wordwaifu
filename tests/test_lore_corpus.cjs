@@ -53,6 +53,10 @@ const sourceCheckedOnly = corpus.search(plainFieldIndex, { query: "habilidad ver
 assert.equal(sourceCheckedOnly.totalMatches, 0, "Evidence status filter must exclude claims from other verification tiers.");
 const allEvidenceStatuses = corpus.search(plainFieldIndex, { query: "habilidad verificable", verificationStatus: "ALL" });
 assert.equal(allEvidenceStatuses.totalMatches, 1, "ALL evidence status must preserve the unfiltered search behavior.");
+const excerptOnlyFixture = plainFieldFixture.replace("verification_status: secondary_checked", "verification_status: source_checked_excerpt_only");
+const excerptOnlyIndex = corpus.buildIndex(catalog, [{ path: "tests/fixture-excerpt.md", content: excerptOnlyFixture }], []);
+const sourceTierIncludesExcerpt = corpus.search(excerptOnlyIndex, { query: "habilidad verificable", verificationStatus: "source_checked" });
+assert.equal(sourceTierIncludesExcerpt.totalMatches, 1, "The source-checked filter must include qualified primary-source evidence subtypes such as excerpt-only verification.");
 
 for (const id of ["CHAR-SOMA", "CHAR-ZANIS-LUSTRA", "CHAR-CHANDRA-IHIT", "CHAR-CANOE-BELWAY"]) {
   assert.equal(index.profileDetails[id]?.id, id, "Active Soma coverage profile must be available to the detail view: " + id);

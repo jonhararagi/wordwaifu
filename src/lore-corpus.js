@@ -495,7 +495,12 @@
       if (aspect !== "all" && !(claim.aspects || []).includes(aspect)) continue;
       if (spoiler === "hide-major" && ["major", "endgame"].includes(claim.spoilerLevel)) continue;
       if (spoiler === "safe-only" && !["none", "mild"].includes(claim.spoilerLevel)) continue;
-      if (verificationStatus !== "all" && verificationStatus !== "ALL".toLowerCase() && String(claim.verificationStatus || "unverified").toLowerCase() !== verificationStatus) continue;
+      const claimVerificationStatus = String(claim.verificationStatus || "unverified").toLowerCase();
+      const matchesVerificationStatus = verificationStatus === "all"
+        || claimVerificationStatus === verificationStatus
+        || (verificationStatus === "source_checked" && claimVerificationStatus.startsWith("source_checked_"))
+        || (verificationStatus === "secondary_checked" && claimVerificationStatus.startsWith("secondary_checked_"));
+      if (!matchesVerificationStatus) continue;
       const characterRecords = (claim.characterIds || []).map(id => characterMap.get(id)).filter(Boolean);
       const aliases = characterRecords.flatMap(character => character.aliases || []);
       const haystack = normalize([claim.heading, claim.claim, claim.aspect, claim.eraOrInterval, claim.periodKey,
