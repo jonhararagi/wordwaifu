@@ -658,8 +658,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 ## AUDITORÍA DE RAMAS · corte 2026-10-24 UTC
 
-- [x] Enumerar las 101 referencias no principales y compararlas con main en `21f0482f3ba23142866e5534d2368ba43233668f`.
-- [x] Clasificar 87 ramas divergidas y 14 ramas solo retrasadas; ninguna está al día con main ni debe fusionarse íntegramente.
+- [x] Enumerar las 101 referencias no principales del snapshot y compararlas con main en `21f0482f3ba23142866e5534d2368ba43233668f`.
+- [x] Recontar todas las referencias actuales en búsqueda paginada: 103 ramas en total, incluida `main`; 102 no principales. La única rama que faltaba en la tabla inicial era la rama documental de publicación de la auditoría (#88), ya integrada en `main`.
+- [x] Clasificar el inventario actualizado: 88 ramas divergidas, 14 solo retrasadas y cero ahead-only; no fusionar ninguna rama completa.
 - [x] Cruzar el estado de las 85 PR consultadas: 60 fusionadas, 25 cerradas sin fusionar, 0 abiertas.
 - [x] Verificar la integración del código funcional de entrevistas/fuentes en PR #85, #86 y #87 y los dos workflows exitosos en el main resultante.
 - [x] Documentar las sustituciones conocidas y conservar las ramas remotas archivadas para consulta; [informe de auditoría](../../docs/BRANCH_AUDIT_2026-10-24.md).
