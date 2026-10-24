@@ -17,6 +17,7 @@ source_refs:
   - DMR-045-SRC-009
   - DMR-045-SRC-011
   - DMR-045-SRC-012
+  - DMR-045-SRC-013
 claim_refs:
   - DMR-029-CLM-001
   - DMR-029-CLM-006
@@ -27,6 +28,7 @@ claim_refs:
   - DMR-045-CLM-010
   - DMR-045-CLM-006
   - DMR-045-CLM-015
+  - DMR-045-CLM-016
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Alfia"
@@ -58,6 +60,14 @@ Esta pista se separa del expediente histórico de CONT-AR: no demuestra que Alfi
 - **Evento navegable:** [Pista secundaria del prólogo marítimo del volumen 20](../../events/candidates/EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001.md).
 - **Fuente comunitaria:** DMR-045-SRC-011.
 - **Edición para cotejo:** [Yen Press · DanMachi vol. 20](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel) (DMR-045-SRC-012).
+
+## Pista secundaria de Afterglow — capítulos 2–3 del volumen 20
+
+Un comentario comunitario sitúa la búsqueda de la técnica Afterglow en las retrospectivas de los capítulos 2 y 3 de DanMachi vol. 20 y menciona a Alfia y Zald como héroes históricos vinculados a ella (DMR-045-CLM-016). La fuente no es una transcripción de esos capítulos; por tanto, no se incorpora Afterglow aquí como capacidad de Alfia confirmada por la novela. La aparición, el uso exacto y cualquier efecto mecánico requieren cotejo del texto licenciado.
+
+- **Estado:** secondary_checked; pista de localización, sin página verificada.
+- **Evento candidato:** [Pista de Afterglow en los capítulos 2–3](../../events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md).
+- **Fuente:** DMR-045-SRC-013, discusión comunitaria; la ficha de Yen Press DMR-045-SRC-012 solo acredita la edición del volumen.
 
 ## Datos de la wiki: qué está disponible y qué significa
 La ficha inglesa ofrece nombre japonés, romanización, alias y una instantánea de su estado. Registra nivel 7 y piso 71 como datos históricos reportados, y da el alias **Silence**; sus sobrenombres resaltan el talento excepcional. La wiki no sirve para afirmar que ese nivel o las cifras de estadísticas sean universales o permanentes.
