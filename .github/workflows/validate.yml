@@ -46,6 +46,7 @@ jobs:
           node --check tests/test_danmachi_character_coverage.cjs
           node --check scripts/sync-danmachi-status.mjs
           node --check tests/test_danmachi_family_dossier.cjs
+          node --check tests/test_danmachi_lore_source_directory.cjs
           node --check tests/test_project_schema.cjs
           node --check tests/test_mythic_catalog.cjs
           node --check tests/test_power_catalog.cjs
@@ -77,6 +78,8 @@ jobs:
         run: node lore/danmachi/tools/check-catalog.mjs
       - name: Test DanMachi Hestia Familia dossier evidence
         run: node tests/test_danmachi_family_dossier.cjs
+      - name: Test discoverable DanMachi lore source directory
+        run: node tests/test_danmachi_lore_source_directory.cjs
       - name: Install pinned Playwright
         run: npm install --no-save --no-package-lock playwright@1.55.0
       - name: Install Chromium
