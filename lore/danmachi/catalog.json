@@ -338,7 +338,9 @@
         "Astrea Familia",
         "Familia Astrea",
         "Ryu",
-        "Ryuu"
+        "Ryuu",
+        "DMR-045-CLM-014",
+        "relato público sobre Gale Wind"
       ],
       "status": "provisional",
       "priority": "high"
@@ -1136,7 +1138,11 @@
         "Juggernaut",
         "Crimson Whip",
         "DanMachi vol. 13",
-        "secondary evidence"
+        "secondary evidence",
+        "DMR-045-CLM-013",
+        "DMR-045-CLM-014",
+        "volumen 14 capítulo 13",
+        "epílogo volumen 14"
       ],
       "status": "secondary_reference_primary_locator_pending",
       "priority": "high"
@@ -1151,7 +1157,10 @@
         "needs source check",
         "CONT-MAIN-LN",
         "individual dossier",
-        "primary page pending"
+        "primary page pending",
+        "DMR-045-CLM-013",
+        "DMR-045-CLM-014",
+        "responsabilidad personal pendiente"
       ],
       "status": "pending_primary_text_check",
       "priority": "high"
@@ -1233,9 +1242,13 @@
         "T-5",
         "Ryu Lion",
         "Jura Halmer",
-        "CONT-MAIN-LN"
+        "CONT-MAIN-LN",
+        "DMR-045-CLM-013",
+        "Rudra Familia",
+        "trampa histórica",
+        "volumen 14 capítulo 13"
       ],
-      "status": "secondary_timeline_primary_page_pending",
+      "status": "source_checked_excerpt_only_page_unverified",
       "priority": "high"
     },
     {
@@ -1287,7 +1300,10 @@
         "Juggernaut",
         "Bell Cranel",
         "Ryu Lion",
-        "volumen 13"
+        "volumen 13",
+        "DMR-045-CLM-014",
+        "relato público",
+        "epílogo volumen 14"
       ],
       "status": "publisher_scope_primary_scene_pending",
       "priority": "high"
@@ -6566,15 +6582,15 @@
       "id": "REL-JURA-JUGGERNAUT-EVENT-001",
       "from": "CHAR-DARK-JURA-HALMER",
       "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
-      "kind": "reported_antagonist_route",
-      "label": "Jura está vinculado por fuentes secundarias a la trampa que desencadena el Juggernaut",
+      "kind": "member_of_faction_that_set_trap",
+      "label": "Jura aparece con Rudra Familia durante la trampa histórica descrita en el capítulo 13 del volumen 14; el extracto respalda la implicación de la facción, no la autoría exclusiva de Jura.",
       "continuity": "CONT-MAIN-LN",
       "interval": "T-5 aproximado, referencia secundaria",
-      "evidenceStatus": "secondary_checked",
-      "evidenceType": "community_secondary_compendium",
-      "claimRef": "DMR-043-CLM-007",
-      "claimPath": "research/inbox/DANMACHI-RESEARCH-043-albert-aria-and-dark-era-review.md",
-      "note": "Vínculo con el Juggernaut según resumen comunitario; CONT-MAIN-LN, localizador primario pendiente."
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "primary_light_novel_excerpt",
+      "claimRef": "DMR-045-CLM-013",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Vol.14, capítulo 13: la trampa se atribuye a Rudra Familia en conjunto y precede a la aparición del Juggernaut. No se deduce que la deidad Rudra ordenara o autorizara el plan; página exacta pendiente."
     },
     {
       "id": "REL-ORARIO-PROTOTYPE-LOC-ORARIO-CENTRAL-PARK-PROTOTYPE",
@@ -6981,6 +6997,48 @@
       "claimRef": "DMR-045-CLM-012",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
       "note": "Arista de Bell al acontecimiento donde se documenta la afirmación; no conecta al padre desconocido con Zeus Familia ni crea identidad para él. La misma entrevista no nombra a la madre como Meteria; no transferir a CONT-AR ni CONT-MAIN-LN."
+    },
+    {
+      "id": "REL-FAM-RUDRA-TRAP-ASTREA-JUGGERNAUT-V14",
+      "from": "FAM-RUDRA",
+      "to": "EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001",
+      "kind": "faction_trap_preceded_juggernaut",
+      "label": "El capítulo 13 del volumen 14 atribuye a Rudra Familia como grupo la trampa con más de cien explosivos anterior a la aparición del Juggernaut",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Retrospectiva T-5 aproximada; fecha absoluta desconocida",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "primary_light_novel_excerpt",
+      "claimRef": "DMR-045-CLM-013",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Evidencia parcial de acción colectiva. No atribuye autoría/orden al dios Rudra ni implica control sobre el Juggernaut."
+    },
+    {
+      "id": "REL-JURA-SURFACE-REPORT-V14",
+      "from": "CHAR-DARK-JURA-HALMER",
+      "to": "EVT-DM-JUGGERNAUT-RETURN-001",
+      "kind": "reported_public_death_after_incident",
+      "label": "El epílogo de vol. 14 incluye a Jura y otros supervivientes de Rudra Familia en el relato comunicado en la superficie tras la crisis",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Secuelas de los volúmenes 13–14; fecha exacta desconocida",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "primary_light_novel_excerpt",
+      "claimRef": "DMR-045-CLM-014",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "Arista de la secuela narrada en el epílogo. El reporte sobre Gale Wind es la versión pública, no prueba de que Ryuu muriera."
+    },
+    {
+      "id": "REL-RYUU-PUBLIC-DEATH-COVER-V14",
+      "from": "CHAR-RYUU-LION",
+      "to": "EVT-DM-JUGGERNAUT-RETURN-001",
+      "kind": "subject_of_public_cover_story",
+      "label": "La versión relatada en el epílogo presenta a Gale Wind como muerta junto a Jura y supervivientes de Rudra Familia; el pasaje trata esto como relato público, no como el destino real de Ryuu",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Epílogo del volumen 14; fecha exacta desconocida",
+      "evidenceStatus": "source_checked_excerpt_only",
+      "evidenceType": "primary_light_novel_excerpt",
+      "claimRef": "DMR-045-CLM-014",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
+      "note": "No interpretar el relato público como muerte real de Ryuu. Página exacta del epílogo no verificada."
     }
   ]
 }
