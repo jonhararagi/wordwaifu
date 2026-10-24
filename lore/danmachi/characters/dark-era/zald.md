@@ -11,11 +11,13 @@ source_refs:
   - DMR-029-SRC-017
   - DMR-021-SRC-001
   - DMR-045-SRC-005
+  - DMR-045-SRC-009
 claim_refs:
   - DMR-029-CLM-002
   - DMR-029-CLM-007
   - DMR-029-CLM-015
   - DMR-045-CLM-006
+  - DMR-045-CLM-011
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Zald"
@@ -33,6 +35,10 @@ tags: [Zeus Familia, Astrea Record, abilities, Behemoth, spoiler]
 ## Evidencia editorial acotada — Astrea Record 3
 
 La ficha editorial de *Astrea Record 3*, recuperada mediante un fragmento indexado, sitúa el inicio del enfrentamiento de Zald contra Ottar en la superficie durante el último día de los Siete Días de la Muerte (`DMR-045-CLM-006`, `DMR-045-SRC-005`, `CONT-AR`). La página editorial directa no pudo verificarse en la comprobación registrada; por eso esta es evidencia de extracto, no un localizador del texto narrativo. No confirma técnicas, niveles, ganador, consecuencias ni secuencia completa. Los detalles biográficos y de capacidades de las wikis siguen siendo secundarios.
+
+## Pie editorial de la versión original del juego — CONT-GAME
+
+El pie editorial bajo el retrato de Zald en la entrevista de LN News Online lo presenta como guerrero de nivel 7 de Zeus Familia, usa el título 暴喰 (Bōshoku, glotonería) y lo sitúa avanzando hacia Orario junto a Erebus (DMR-045-SRC-009 / DMR-045-CLM-011). Es evidencia secundaria de la presentación de la historia original de Memoria Freese. No prueba el ganador, el desenlace del enfrentamiento, técnicas concretas ni que el nivel descrito se mantenga en la novelización.
 
 ## Datos de roster de la wiki
 La wiki española informa que fue humano, antiguo aventurero, de nivel 7 en una instantánea histórica y que llegó al piso 71. También registra un conjunto de estadísticas y habilidades de desarrollo. Esos números representan el snapshot del artículo, no el nivel actual ni una medida permanente para todas las épocas. La ficha lo describe como fallecido tras el combate final reportado contra Ottar.
