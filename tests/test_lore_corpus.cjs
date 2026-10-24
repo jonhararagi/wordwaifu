@@ -744,6 +744,18 @@ assert.ok(!alfiaAuntInMainLN.results.some(item => item.claimId === "DMR-045-CLM-
 const alfiaAuntEdge = index.relationships.find(edge => edge.id === "REL-ALFIA-BELL-AUNT-INTERVIEW");
 assert.ok(alfiaAuntEdge && alfiaAuntEdge.from === "CHAR-DARK-ALFIA" && alfiaAuntEdge.to === "DM-CHAR-BELL" && alfiaAuntEdge.kind === "aunt_of" && alfiaAuntEdge.continuity === "CONT-AR" && alfiaAuntEdge.claimRef === "DMR-045-CLM-007" && alfiaAuntEdge.evidenceStatus === "source_checked", "Alfia's aunt relationship to Bell must be explicitly graph-linked to the interview claim and continuity.");
 
+// DMR-045: a separate 2020 author interview supports the aunt relation only within CONT-GAME.
+const alfiaAuntGameInterviewUrl = "https://ln-news.com/articles/109766";
+const alfiaAuntGameInterview = corpus.getOnlineSourceDirectory().find(source => source.id === "author-interview-alfia-aunt-game");
+assert.ok(alfiaAuntGameInterview && alfiaAuntGameInterview.url === alfiaAuntGameInterviewUrl && alfiaAuntGameInterview.authority.includes("no texto de novela") && String(alfiaAuntGameInterview.limits).includes("no nombra a la hermana como Meteria"), "The game-origin interview must expose its continuity and naming limitations.");
+const alfiaAuntInGame = corpus.search(index, {query:"Alfia hermana Bell madre",continuity:"CONT-GAME",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(alfiaAuntInGame.results.some(item => item.claimId === "DMR-045-CLM-008" && item.verificationStatus === "source_checked" && item.sourceUrls.includes(alfiaAuntGameInterviewUrl)), "The game-scoped aunt relationship must be searchable with the author-interview source.");
+const alfiaAuntInterviewNotMain = corpus.search(index, {query:"Alfia hermana Bell madre",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(!alfiaAuntInterviewNotMain.results.some(item => item.claimId === "DMR-045-CLM-008"), "The original game reveal must not leak into main light-novel continuity.");
+const alfiaAuntGameEdge = index.relationships.find(edge => edge.id === "REL-ALFIA-BELL-AUNT-GAME-INTERVIEW");
+assert.ok(alfiaAuntGameEdge && alfiaAuntGameEdge.from === "CHAR-DARK-ALFIA" && alfiaAuntGameEdge.to === "DM-CHAR-BELL" && alfiaAuntGameEdge.kind === "aunt_of" && alfiaAuntGameEdge.continuity === "CONT-GAME" && alfiaAuntGameEdge.claimRef === "DMR-045-CLM-008" && alfiaAuntGameEdge.evidenceStatus === "source_checked", "The game continuity must have a distinct explicit Alfia-to-Bell edge from the 2020 interview.");
+assert.ok(!index.relationships.some(edge => edge.id === "REL-METERIA-BELL-MOTHER-GAME-INTERVIEW" || edge.claimRef === "DMR-045-CLM-008" && [edge.from,edge.to].includes("CHAR-METERIA")), "The interview does not name the sister; do not infer or graph-link Meteria from this claim.");
+
 const astreaVol3PreviewUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1";
 const astreaVol3Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-astrea-record-vol3-preview-metadata-only");
 assert.ok(astreaVol3Preview && astreaVol3Preview.url === astreaVol3PreviewUrl && astreaVol3Preview.authority.includes("metadatos solamente") && String(astreaVol3Preview.coverage).includes("1/63") && String(astreaVol3Preview.limits).includes("No respalda ninguna capacidad"), "Astrea Record 3 public sample must remain discoverable as metadata-only when only its cover was accessible.");
