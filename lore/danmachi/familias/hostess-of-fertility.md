@@ -1,7 +1,7 @@
 ---
 id: ORG-HOSTESS
 universe: danmachi
-type: institution_and_location
+type: organization
 status: source_checked_partial
 continuity_scope: CONT-ANIME
 source_refs:
