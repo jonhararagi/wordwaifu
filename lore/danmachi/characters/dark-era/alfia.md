@@ -22,6 +22,7 @@ claim_refs:
   - DMR-029-CLM-011
   - DMR-045-CLM-007
   - DMR-045-CLM-008
+  - DMR-045-CLM-010
   - DMR-045-CLM-006
 verification_status: secondary_checked_primary_text_pending
 aliases:
@@ -39,6 +40,10 @@ tags: [Hera Familia, Astrea Record, abilities, illness, spoiler]
 ## Evidencia editorial acotada — Astrea Record 3
 
 La ficha editorial de *Astrea Record 3*, recuperada mediante un fragmento indexado, sitúa el inicio del enfrentamiento de Alfia contra Astrea Familia dentro del Dungeon durante el último día de los Siete Días de la Muerte (`DMR-045-CLM-006`, `DMR-045-SRC-005`, `CONT-AR`). La página editorial directa no pudo verificarse en la comprobación registrada; por eso esta es evidencia de extracto, no un localizador del texto narrativo. No confirma técnicas, nivel, integrantes concretos del grupo, resultado ni secuencia completa. El resto de la biografía de esta ficha conserva sus estados de evidencia propios.
+
+## Pie editorial de la versión original del juego — CONT-GAME
+
+El pie editorial bajo el retrato de Alfia en la entrevista de LN News Online la describe como maga de nivel 7, vinculada a Hera Familia, amante del silencio y participante en la incursión en Orario junto a Erebus (DMR-045-SRC-009 / DMR-045-CLM-010). Esta es evidencia secundaria de un perfil publicado sobre la historia original de Memoria Freese, no una declaración del autor ni un localizador de Astrea Record novelado. No se traslada el nivel ni la descripción a CONT-AR o CONT-MAIN-LN sin cotejo independiente.
 
 ## Datos de la wiki: qué está disponible y qué significa
 La ficha inglesa ofrece nombre japonés, romanización, alias y una instantánea de su estado. Registra nivel 7 y piso 71 como datos históricos reportados, y da el alias **Silence**; sus sobrenombres resaltan el talento excepcional. La wiki no sirve para afirmar que ese nivel o las cifras de estadísticas sean universales o permanentes.
