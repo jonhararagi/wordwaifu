@@ -800,7 +800,6 @@ const bellManualDossierSource = fs.readFileSync(path.join(__dirname, "..", "src"
 assert.ok(bellManualDossierSource.includes("DMR-045-CLM-012") && bellManualDossierSource.includes("EVT-DM-GAME-ASTREA-RECORD-001"), "The character UI must expose the game-origin claim and its event route.");
 const bellMarkdownDossier = fs.readFileSync(path.join(root, "characters/bell-cranel.md"), "utf8");
 assert.ok(bellMarkdownDossier.includes("DMR-045-CLM-012") && bellMarkdownDossier.includes("サポーター") && bellMarkdownDossier.includes("EVT-DM-GAME-ASTREA-RECORD-001"), "Bell's readable dossier must expose the Japanese role, claim provenance, and game event route.");
-assert.ok(gameAstreaEventText.includes("DMR-045-CLM-012") && gameAstreaEventText.includes("no da el nombre del padre") && gameAstreaEventText.includes("Meteria"), "The event page must preserve unnamed-parent and non-identification limits.");
 
 const astreaVol3PreviewUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1";
 const astreaVol3Preview = historicalWikiSourceDirectory.find(item => item.id === "official-bookwalker-astrea-record-vol3-preview-metadata-only");
@@ -809,6 +808,7 @@ assert.ok(!index.claims.some(item => item.sourceUrls.includes(astreaVol3PreviewU
 
 const gameAstreaEventPath = path.join(root, "events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md");
 const gameAstreaEventText = fs.readFileSync(gameAstreaEventPath, "utf8");
+assert.ok(gameAstreaEventText.includes("DMR-045-CLM-012") && gameAstreaEventText.includes("no da el nombre del padre") && gameAstreaEventText.includes("Meteria"), "The event page must preserve unnamed-parent and non-identification limits.");
 const gameAstreaCatalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
 assert.ok(gameAstreaCatalog.records.some(record => record.id === "EVT-DM-GAME-ASTREA-RECORD-001" && record.path === "events/candidates/EVT-DM-GAME-ASTREA-RECORD-001.md"), "The original Memoria Freese story needs its own navigable event record.");
 assert.ok(gameAstreaEventText.includes("continuity_scope: CONT-GAME") && gameAstreaEventText.includes("CONT-AR") && gameAstreaEventText.includes("CONT-MAIN-LN"), "The original game event must explicitly distinguish the novelization and main light-novel continuity.");
