@@ -257,6 +257,7 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 ## DMR-045 — acceso a la muestra licenciada japonesa (2026-10-25)
 
 - Se agregaron la ficha japonesa de *Astrea Record 3* y su enlace a muestra gratuita de BOOK☆WALKER al directorio de fuentes y a las fichas interactivas de Alfia, Zald y Erebus.
+- Se creó una agrupación visible independiente para distribuidores licenciados en el navegador de fuentes; la prueba de corpus verifica que la categoría no quede oculta por los grupos anteriores.
 - La prueba automatizada siguió el enlace de muestra, pero el visor mostró «Could not download. Please check your network connection.»; no se recuperó texto narrativo ni páginas verificables.
 - **Alcance:** la ruta se etiqueta como distribuidor licenciado, no como editorial ni evidencia narrativa cotejada. No se crearon claims ni aristas; los localizadores primarios siguen pendientes.
 - Referencia: [ficha BOOK☆WALKER](https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/) · [muestra gratuita](https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1).
