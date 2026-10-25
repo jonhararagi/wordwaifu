@@ -288,8 +288,16 @@
 
 ### CONV-DM-2026-10-25-011 — Sincronizar la prioridad activa con el bloque correcto de WORK_QUEUE
 - **Fecha:** 2026-10-25.
-- **Estado:** IMPLEMENTED ON BRANCH; pendiente de CI e integración.
+- **Estado:** IMPLEMENTED, INTEGRATED y VALIDATED tras la fusión de PR #140.
 - **Corrección encontrada:** WORK_QUEUE tenía un encabezado que decía DMR-045 como prioridad actual, pero debajo contenía el listado extenso de trabajo geográfico de Orario. Además, el resultado histórico del barrido secundario aún decía que Orario debía activarse inmediatamente, pese a la decisión posterior de volver a priorizar la verificación primaria.
 - **Cambio:** se creó un bloque de prioridad DMR-045 con las cinco tareas primarias, los límites comunes de SRC-018–028 y enlaces al registro de fuentes; el listado urbano fue renombrado como etapa posterior y el orden de Orario de 2026-10-24 quedó conservado como histórico/sustituido, no borrado.
 - **Prueba:** se ampliaron las regresiones para exigir ambos encabezados, comprobar los SRC-026/027/028 en la cola y rechazar la instrucción antigua que promovía Orario a prioridad siguiente.
 - **Sin cambios de canon:** no se añadieron IDs, relaciones ni claims de personajes. DMR-045 sigue abierto; las rutas de muestras permanecen metadata_checked_only cuando no se leyó narrativa.
+
+
+#### Verificación posterior a la integración de CONV-DM-2026-10-25-011
+- **PR:** [#140](https://github.com/jonhararagi/wordwaifu/pull/140), integración por merge SHA `e236c07cc475feae31c0fa2ab0697b26851c41d0`.
+- **CI de la PR (head `ae52715b0657f68bf65ecb7a3e158fad8bc1e6fd)):** [Validate WordWaifu #3380](https://github.com/jonhararagi/wordwaifu/actions/runs/40232710265) y [DanMachi Lore and Retrieval Integrity #1775](https://github.com/jonhararagi/wordwaifu/actions/runs/40232710323), ambos `success`.
+- **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #3384](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839057) y [DanMachi Lore and Retrieval Integrity #1776](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839130), ambos `success`.
+- **Ramas/PR obsoletas cerradas sin fusionar:** #132 (solapada con #131/#133), #134 y #137 (intentos documentales con base desfasada), sustituidas por #140.
+- **Resultado:** el encabezado activo, las tareas de los cinco expedientes, los límites de las fuentes y la etapa posterior de Orario ya están sincronizados en `main`. DMR-045 no queda cerrado en cuanto al canon: las páginas narrativas primarias siguen pendientes.
