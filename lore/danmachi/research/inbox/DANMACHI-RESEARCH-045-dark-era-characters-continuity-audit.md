@@ -452,3 +452,23 @@ La clasificación moral/conductual es metadato interpretativo de WordWaifu, no c
 La ficha oficial de Yen Press para la edición inglesa de *Astrea Record, Vol. 3* quedó agregada al directorio de fuentes de la aplicación y a las fichas interactivas de Alfia, Zald y Erebus como **ruta para localizar la edición licenciada**, no como sustento de sus datos biográficos. Las pruebas verifican la URL y el límite `metadata_checked_only`. El barrido no encontró capítulos/páginas narrativas reproducibles para esos personajes; el estado primario de DMR-045 sigue abierto.
 
 **Verificación de integración (2026-10-25):** [PR #116](https://github.com/jonhararagi/wordwaifu/pull/116) integrada mediante `6efb50779b17924e7064876af75afa3cbd1d3b67`. CI de la PR: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40196827871), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40196827863). CI post-merge en el SHA exacto de `main`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003502), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003501); las cuatro ejecuciones terminaron con éxito.
+
+
+## DMR-045-SRC-017 · BOOK☆WALKER — muestra gratuita licenciada de Astrea Record 3 (japonés)
+
+- source_id: DMR-045-SRC-017
+- source_title: アストレア・レコード３ 正邪決戦 — ficha y muestra de BOOK☆WALKER
+- source_type: LICENSED_RETAILER_SAMPLE
+- source_locator: enlace 試し読み de la ficha del volumen japonés 3; ficha: https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/; muestra: https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1
+- publisher: SB Creative / GA Bunko; retailer: BOOK☆WALKER
+- continuity_scope: CONT-AR
+- verification_status: metadata_checked_only
+- evidence_type: licensed_retail_listing_and_free_sample_route
+- claim_ids: []
+- character_ids: []
+- access_test: El lector de muestra al que conduce el enlace respondió “Could not download. Please check your network connection.” en la consulta automatizada del 25-10-2026; no se obtuvo texto narrativo legible. El fallo puede corresponder a la sesión, red o visor y no demuestra indisponibilidad general del libro.
+- confidence_note: La página comercial acredita una ficha de una edición japonesa licenciada y ofrece el acceso de muestra; no constituye un localizador narrativo por personaje. No confirma escenas, técnicas o relaciones de Alfia, Zald o Erebus. No se añadieron claims ni aristas.
+
+### Ruta añadida a fichas interactivas (2026-10-25)
+
+Las fichas interactivas de Alfia, Zald y Erebus enlazan ahora la ficha comercial y el acceso directo a la muestra de BOOK☆WALKER. Ambas rutas están en el directorio de fuentes con la categoría de distribuidor licenciado, no de editorial ni de texto primario cotejado. La prueba verifica el enlace y conserva el error de acceso observado sin marcar el personaje o el libro como no disponible.
