@@ -56,7 +56,7 @@ Las fuentes comunitarias relatan que Zald consumió carne de Behemoth durante el
 ## Habilidades y magia reportadas por la wiki
 - **Habilidades listadas:** Deus Ambrosia, Al Questa y Niggle Gourmet.
 - **Magia listada:** Rea Ambrosia.
-- **Deus Ambrosia:** la wiki explica que comer criaturas/monstruos y otros materiales podía aumentar sus capacidades; también afirma que un incremento equivalente a todo un nivel era excepcionalmente difícil y que la habilidad tenía límites.
+- **Deus Ambrosia:** la wiki explica que comer criaturas/monstruos y otros materiales podía aumentar sus capacidades; también afirma que un incremento equivalente a todo un nivel era excepcionalmente difícil y que la habilidad tenía límites. Como ejemplo, la fuente comunitaria sostiene que un Zald reportado en nivel 7 no podía alcanzar sin más un poder equivalente al nivel 10. Este ejemplo describe el límite atribuido por la wiki; no constituye una fórmula universal verificada del sistema.
 - **Límite de combate reportado:** el veneno del Behemoth seguía deteriorándolo, por lo que no debe representarse su poder como ilimitado ni como una evolución gratuita sin consecuencia.
 
 Los detalles mecánicos anteriores son una paráfrasis de fuente secundaria. Nombres, alcance de mejora, límites, traducción de habilidades y relación con cada escena permanecen pendientes de fuente primaria.

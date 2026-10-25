@@ -475,3 +475,13 @@ Las fichas interactivas de Alfia, Zald y Erebus enlazan ahora la ficha comercial
 
 **Integración y validación (2026-10-25):** [PR #117](https://github.com/jonhararagi/wordwaifu/pull/117) integrada mediante el SHA exacto de `main` [`1302145b9b222130069c9aa7393a115cbfd7284f`](https://github.com/jonhararagi/wordwaifu/commit/1302145b9b222130069c9aa7393a115cbfd7284f). CI de la PR en head `a9ac60cbc29f7e41574ee541ba0eb5d5a432e133`: [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40205349060) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40205349066). CI post-merge sobre `1302145b9b222130069c9aa7393a115cbfd7284f`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40205481864) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40205481796); las cuatro ejecuciones terminaron con éxito.
 
+
+
+## Revisión de precisión UI/Markdown de habilidades (2026-10-25)
+
+Se alinearon los expedientes interactivos de Alfia y Zald con la información mecánica secundaria que ya estaba registrada en sus fichas individuales:
+
+- **Alfia / Genos Angelus:** la wiki española de habilidades reporta una campana gris plateada, un alcance superior a 100 metros y un empeoramiento de la salud de Alfia al usar la magia contra Leviathan. La ficha de UI ahora hace visibles esos detalles, pero los marca expresamente como secundarios y pendientes de cotejo del texto narrativo. Fuente comunitaria: https://danmachi.fandom.com/es/wiki/Alfia/Habilidades.
+- **Zald / Deus Ambrosia:** la ficha comunitaria de Zald ofrece como ejemplo de límite que un aventurero reportado en nivel 7 no puede alcanzar sin más un poder equivalente al nivel 10. Las fichas de UI y Markdown ahora expresan el ejemplo con ese alcance limitado; no se interpreta como fórmula universal del sistema ni reemplaza el coste reportado del veneno de Behemoth. Fuente comunitaria: https://danmachi.fandom.com/es/wiki/Zald.
+
+La corrección no incorpora claims, aristas, alias ni IDs nuevos y no cambia el estado de evidencia. Es un ajuste de presentación/precisión sobre contenido secundario ya presente en el corpus. Los localizadores primarios de DMR-045 siguen pendientes. La PR y el resultado de CI se registrarán cuando estén disponibles.
