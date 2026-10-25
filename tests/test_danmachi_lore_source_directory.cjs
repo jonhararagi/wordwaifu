@@ -35,6 +35,18 @@ assert.match(licensedAstrea[0].coverage, /ISBN 9781975379926/);
 assert.match(licensedAstrea[0].limits, /no texto narrativo/i);
 assert.match(licensedAstrea[0].limits, /no usarla para verificar biografías/i, "publisher metadata must not be treated as a character-specific primary locator");
 
+const bookwalkerProduct = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol3");
+assert.equal(bookwalkerProduct.length, 1, "the licensed Japanese edition listing must be discoverable exactly once");
+assert.equal(bookwalkerProduct[0].url, "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/");
+assert.equal(bookwalkerProduct[0].authority, "Distribuidor licenciado");
+assert.match(bookwalkerProduct[0].coverage, /試し読み/);
+const bookwalkerSample = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol3-sample");
+assert.equal(bookwalkerSample.length, 1, "the free preview route must be discoverable exactly once");
+assert.equal(bookwalkerSample[0].url, "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1");
+assert.equal(bookwalkerSample[0].authority, "Muestra gratuita de distribuidor licenciado");
+assert.match(bookwalkerSample[0].limits, /Could not download/);
+assert.match(bookwalkerSample[0].limits, /No se obtuvo texto narrativo legible/);
+assert.match(bookwalkerSample[0].limits, /no demuestra que la edición esté indisponible/i);
 const meteriaEn = sources.find(source => source.id === "community-meteria-en");
 assert.match(meteriaEn.limits, /no nombra a Meteria/i,
   "the source directory must preserve the limit of the Memoria Freese interview");
@@ -45,4 +57,4 @@ const rudraFamilia = sources.find(source => source.id === "community-rudra-famil
 assert.match(rudraFamilia.limits, /no prueba que el dios Rudra/i,
   "the source directory must distinguish a Familia action from personal responsibility by Rudra");
 
-console.log("DanMachi source directory: 7 secondary entries and the licensed Astrea Record edition route validated.");
+console.log("DanMachi source directory: secondary references, licensed Yen Press metadata, and BOOK☆WALKER free-preview limits validated.");
