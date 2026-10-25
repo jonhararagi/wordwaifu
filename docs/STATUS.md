@@ -10,6 +10,13 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## Orario — localizador provisional de la plaza norte armonizado (2026-10-24)
+
+- Se reconciliaron DMR-047 y `DMR-047-SRC-001`: la muestra oficial `trial02.pdf` corresponde al volumen 2; el índice textual conserva capítulo IV 「だからボクは力になりたい」 y marcadores de folio 20–21 junto a la escena de la plaza semicircular al norte de Orario.
+- La descarga del PDF sigue devolviendo HTTP 503 y la captura no pudo inspeccionar visualmente la página. El localizador sirve como pista reproducible del índice, no como paginación cotejada; la certeza sigue en `source_checked_excerpt_only`.
+- La muestra ya figura en el directorio de fuentes consultable con esos límites, y se añadieron regresiones para que ficha, registro central y directorio no contradigan el localizador ni eleven su estado.
+- No cambian entidades, relaciones ni métricas del corpus. La tarea de localizar y verificar un pasaje primario visualmente inspeccionable permanece abierta.
+
 ## Orario — contraste parcial Pantheon / sede de la Guild / Babel (2026-10-24)
 
 - La muestra editorial oficial del volumen 3, recuperada mediante indexación textual, presenta Pantheon como referencia en una avenida y después narra la entrada en la sede blanca de la Guild. La secuencia favorece interpretarlos como referencias físicas distintas; el PDF responde HTTP 503 al abrirse directamente y no se pudo verificar visualmente.
