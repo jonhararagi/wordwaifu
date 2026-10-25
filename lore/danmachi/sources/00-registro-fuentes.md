@@ -3147,3 +3147,69 @@ verification_status: stub
 - rights_note: Enlace y metadatos solamente; no se copió texto narrativo ni se intentó eludir restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-017 · BOOK☆WALKER — Astrea Record 3: reintento público de muestra
+- source_id: DMR-045-SRC-017
+- title: アストレア・レコード３ 正邪決戦 — ruta de muestra gratuita (nuevo intento)
+- creator_or_publisher: BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_SAMPLE
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 3, edición japonesa
+- language: Japonés
+- official_url: https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_access_recheck
+- locator: El intento previo devolvió “Could not download. Please check your network connection.”; el reintento normal del 25-10-2026 terminó en timeout. No se obtuvieron páginas narrativas.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Esta entrada registra la observación del reintento de acceso; la misma ruta ya está catalogada como DMR-045-SRC-006. No aporta una escena, no demuestra ausencia de personajes y no se interpreta como indisponibilidad global.
+- conflicting_sources: []
+- rights_note: URL y estado de carga únicamente; no se eludieron restricciones ni se extrajo texto.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-026 · BOOK☆WALKER — Astrea Record 1 sample route
+- source_id: DMR-045-SRC-026
+- title: アストレア・レコード１ 邪悪胎動 — 試し読み
+- creator_or_publisher: BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_SAMPLE
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 1, edición japonesa
+- language: Japonés
+- official_url: https://bookwalker.jp/dee09029f8-9a55-40d2-bce2-384e8387f016/?sample=1
+- product_page: https://bookwalker.jp/dee09029f8-9a55-40d2-bce2-384e8387f016/
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_route_and_network_error
+- locator: El enlace gratuito redirige al visor de prueba; el lector devolvió “Could not download. Please check your network connection.” No hay localizador narrativo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: La ficha pública lista una muestra gratuita. El error puntual de red no demuestra indisponibilidad general ni aporta evidencia narrativa.
+- conflicting_sources: []
+- rights_note: Enlace y metadatos solamente; no se ha extraído texto.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-027 · BOOK☆WALKER — Astrea Record 2 sample route
+- source_id: DMR-045-SRC-027
+- title: アストレア・レコード２ 正義失墜 — 試し読み
+- creator_or_publisher: BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_SAMPLE
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 2, edición japonesa
+- language: Japonés
+- official_url: https://bookwalker.jp/deb27a4c03-eff6-43f8-a76b-105368b329aa/?sample=1
+- product_page: https://bookwalker.jp/deb27a4c03-eff6-43f8-a76b-105368b329aa/
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_timeout
+- locator: La ficha pública identifica el título y la serie ofrece 試し読み, pero el lector normal agotó el tiempo de extracción; no se expuso página narrativa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Timeout de la herramienta en esta consulta; no demuestra indisponibilidad general ni ausencia de personajes.
+- conflicting_sources: []
+- rights_note: Enlace y metadatos únicamente; no se ha extraído texto.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only

@@ -45,8 +45,8 @@ assert.equal(bookwalkerSample.length, 1, "the free preview route must be discove
 assert.equal(bookwalkerSample[0].url, "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1");
 assert.equal(bookwalkerSample[0].authority, "Muestra gratuita de distribuidor licenciado");
 assert.match(bookwalkerSample[0].limits, /Could not download/);
-assert.match(bookwalkerSample[0].limits, /No se obtuvo texto narrativo legible/);
-assert.match(bookwalkerSample[0].limits, /no demuestra que la edición esté indisponible/i);
+assert.match(bookwalkerSample[0].limits, /No se obtuvo texto narrativo legible|ningún intento devolvió páginas narrativas legibles/i);
+assert.match(bookwalkerSample[0].limits, /no demuestra(?:n)? que la edición esté indisponible/i);
 const meteriaEn = sources.find(source => source.id === "community-meteria-en");
 assert.match(meteriaEn.limits, /no nombra a Meteria/i,
   "the source directory must preserve the limit of the Memoria Freese interview");
@@ -105,5 +105,23 @@ for (const [label, rows, url] of [
 assert.match(gplayAstrea1[0].authority, /Free sample/);
 assert.match(gplayAstrea2[0].authority, /Free sample/);
 assert.match(gplayAstrea3[0].limits, /disponible o ausente globalmente/i);
+
+const bookwalkerAstrea1 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol1-sample");
+const bookwalkerAstrea2 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol2-sample");
+for (const [label, rows, url] of [
+  ["BOOK☆WALKER Astrea Record 1 sample", bookwalkerAstrea1, "https://bookwalker.jp/dee09029f8-9a55-40d2-bce2-384e8387f016/?sample=1"],
+  ["BOOK☆WALKER Astrea Record 2 sample", bookwalkerAstrea2, "https://bookwalker.jp/deb27a4c03-eff6-43f8-a76b-105368b329aa/?sample=1"]
+]) {
+  assert.equal(rows.length, 1, label + " must be discoverable exactly once");
+  assert.equal(rows[0].category, "licensed_retailer");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].limits, /no se obtuvo (página|texto) narrativ/i);
+  assert.match(rows[0].limits, /metadata_checked_only/);
+}
+assert.match(bookwalkerAstrea1[0].limits, /Could not download/);
+assert.match(bookwalkerAstrea2[0].limits, /timeout/);
+const bookwalkerAstrea3 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol3-sample");
+assert.equal(bookwalkerAstrea3.length, 1, "the existing vol. 3 sample must not be duplicated as a new ID");
+assert.match(bookwalkerAstrea3[0].limits, /reintento.*timeout/i);
 
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
