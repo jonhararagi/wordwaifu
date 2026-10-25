@@ -60,10 +60,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-006 — Prompt maestro operativo y prioridad de DMR-045
 - Fecha: 2026-10-24.
-- Estado: ACCEPTED.
+- Estado: ACCEPTED para el método; prioridad operativa revisada el 2026-10-25 por DEC-DM-008.
 - Decisión: continuar desde el estado verificable de `main`, preservar los acuerdos en los registros permanentes y aplicar el ciclo de investigación, implementación, pruebas, integración y verificación. El destino final para cambios aprobados es `main`, tras revisar seguridad, conflictos y CI sobre los commits correspondientes.
 - Prioridad inicial: cerrar primero la investigación pública útil de `DANMACHI-RESEARCH-045`; los detalles sin localizador narrativo reproducible permanecen pendientes.
-- Resultado de ejecución registrado el 2026-10-24: el barrido secundario disponible se documentó en DMR-045/DMR-029; se conserva abierta la verificación primaria y la siguiente etapa activa es Orario.
+- Resultado de ejecución registrado el 2026-10-24: el barrido secundario disponible se documentó en DMR-045/DMR-029; se conserva abierta la verificación primaria. Orario se había anotado entonces como siguiente etapa, pero esa orden quedó revisada el 2026-10-25.
+- Orden vigente (2026-10-25): la verificación primaria de DMR-045 para los cinco expedientes tiene prioridad de ejecución antes de la expansión de Orario. Esta corrección modifica el orden de trabajo, no elimina ni contradice el resultado histórico del barrido secundario.
 - Reglas: las wikis inglesa y española se etiquetan como fuentes secundarias; no confundir una acción de Rudra Familia con responsabilidad personal de Rudra, no equiparar Meteria con la hermana sin nombre citada en la entrevista de Memoria Freese, y no transferir contenido de `CONT-AU` a `CONT-MAIN-LN`/ `CONT-AR`.
 - Documentos afectados: registro de conversación, estado, cola, DMR-045/DMR-029, fichas y directorio de fuentes recuperables desde la aplicación.
 
