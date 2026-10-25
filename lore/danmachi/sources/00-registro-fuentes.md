@@ -925,8 +925,8 @@ verification_status: stub
 - claims_supported: [DMR-031-CLM-005, DMR-031-CLM-006]
 - events_supported: []
 - continuity_scope: CONT-UNVERIFIED
-- reliability_note: Las funciones institucionales y los detalles del edificio Pantheon requieren cotejo por afirmación con las novelas o referencias oficiales.
-- conflicting_sources: []
+- reliability_note: Las funciones institucionales y los detalles del edificio Pantheon requieren cotejo por afirmación con las novelas o referencias oficiales. La afirmación de que Pantheon es la sede principal entra en tensión con el orden narrativo indexado de DMR-048; véase DMR-051. La muestra de novela sigue sin verificación visual.
+- conflicting_sources: [DMR-048-SRC-001]
 - rights_note: Paráfrasis original en español.
 - verified_by: DANMACHI-RESEARCH-031
 - verification_status: secondary_checked
@@ -2928,8 +2928,8 @@ verification_status: stub
 - claims_supported: [DMR-048-CLM-001]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN
-- reliability_note: Extracto alojado por el sello editorial. El índice textual permite recuperar el pasaje, pero la descarga directa respondió HTTP 503 y la herramienta de captura no pudo abrir el PDF; mantener source_checked_excerpt_only hasta verificar la página y contexto completos.
-- conflicting_sources: []
+- reliability_note: El índice textual recupera la secuencia Pantheon → entrada a la sede blanca de la Guild, pero la descarga directa respondió HTTP 503 y no se pudo comprobar visualmente. Véase DMR-051; la lectura favorece puntos físicos distintos sin resolver la relación con Babel.
+- conflicting_sources: [DMR-031-SRC-003]
 - rights_note: Resumen original; no conservar ni reproducir el pasaje completo.
 - verified_by: DANMACHI-RESEARCH-048
 - verification_status: source_checked_excerpt_only
