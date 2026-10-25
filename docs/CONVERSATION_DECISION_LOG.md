@@ -96,6 +96,17 @@
 - **Verificación posterior al merge:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40148575531) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40148575536), ambos finalizaron con éxito sobre el SHA exacto `2342ccf464a6f6d88e0b31aa4c7f77af04695348`.
 - **Siguiente acción:** localizar el pasaje primario de la Plaza del Amor en la novela ligera con capítulo/página o localizador digital reproducible, antes de promover detalles a `CONT-MAIN-LN`.
 
+### CONV-DM-2026-10-24-009 — Contrastar Pantheon, sede de la Guild y Babel sin inferencias
+
+- **Fecha:** 2026-10-24.
+- **Estado:** RECORDED; investigación parcial documentada y límites preservados.
+- **Tipo:** instrucción de investigación y resultado factual limitado.
+- **Criterio aceptado:** completar el inventario de Orario a partir de fuentes verificables y no inferir la relación física entre Pantheon, la sede de la Guild y Babel.
+- **Hallazgo:** el texto indexado de la muestra editorial del volumen 3 favorece leer Pantheon como referencia que se pasa antes de entrar en la sede blanca de la Guild. La afirmación comunitaria de que Pantheon es la sede principal queda registrada como discrepancia. El glosario oficial del anime define Babel como instalación propiedad de la Guild para supervisar/gestionar el Dungeon, pero no demuestra si la sede administrativa está dentro de Babel ni su posición relativa.
+- **Límite:** la descarga de `trial03.pdf` respondió HTTP 503 y no pudo comprobarse la página visualmente; la lectura queda `source_checked_excerpt_only`. No se crea una relación física nueva ni se inventan coordenadas.
+- **Documentos afectados:** DMR-048, DMR-051, fichas de Pantheon/Babel/Orario, índice de lugares, catálogo, registro de fuentes, MASTER_INDEX, WORK_QUEUE y STATUS.
+- **Siguiente acción:** recuperar un localizador primario verificable, continuar el inventario de lugares de Orario y resolver la relación con Babel solo si una fuente primaria lo demuestra.
+
 ## Plantilla para entradas futuras
 
 - **ID:**
