@@ -845,7 +845,7 @@ verification_status: stub
 - volume_or_edition: Glosario en línea; sin paginación
 - language: Japonés
 - official_url: https://danmachi.com/danmachi/special/index.html
-- accessed_at: 2026-10-18
+- accessed_at: 2026-10-24
 - locator_type: glossary_entries
 - locator: Entradas 迷宮都市オラリオ, 摩天楼施設バベル, 豊饒の女主人 y リヴィラの街
 - claims_supported: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003, DMR-026-CLM-004]
