@@ -603,3 +603,15 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Siguiente acción:** reintentar mediante el lector normal autorizado si carga; registrar capítulo/página solo después de ver el pasaje.
 
 **Nota de reintento para SRC-017 / SRC-006 (Astrea Record 3):** la ruta de muestra es la misma ya registrada en DMR-045-SRC-006 y DMR-045-SRC-017; por eso no se crea otro ID. En la nueva consulta pública del 25-10-2026, una llamada al lector terminó en timeout después de que un intento anterior devolviera un error de red. Se conservan ambas observaciones como intentos de acceso, no como evidencia narrativa.
+
+
+## DMR-045-SRC-028 · Google Play Books — DanMachi, volumen 14 (muestra anunciada)
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Google Play Books — Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 14](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ).
+- **Tipo:** página de distribuidor de ebook licenciado; vendedor indicado: Yen Press LLC.
+- **Resultado observado:** el resultado público del distribuidor anuncia “Free sample”. La extracción normal de la página el 25-10-2026 solo devolvió sinopsis editorial y metadatos; no expuso páginas narrativas de la muestra.
+- **Relevancia investigativa:** es una ruta potencialmente útil para intentar cotejar el volumen 14, capítulo 13, que las wikis citan como localizador para la retrospectiva de Rudra Familia y el Juggernaut. La sinopsis del producto solo describe el problema del piso 27 y los recuerdos de Lyu; no contiene el pasaje ni identifica el plan de Rudra Familia.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-MAIN-LN.
+- **Interpretación permitida:** registrar que existe una muestra anunciada y proporcionar un enlace de acceso normal. No afirmar que se leyó el capítulo, no inventar una página, no atribuir la trampa a Rudra personalmente y no convertir la sinopsis en prueba del evento.
+- **Siguiente acción:** si el visor normal ofrece páginas legibles, inspeccionar el contenido del capítulo 13 o la retrospectiva antes de crear/corregir claims.
+
