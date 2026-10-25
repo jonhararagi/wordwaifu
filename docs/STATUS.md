@@ -35,6 +35,10 @@
 - El producto identifica la edición japonesa de SB Creative / GA Bunko, pero el lector de muestra redirige a viewer-trial y devuelve “Could not download. Please check your network connection.” No se recuperó una página narrativa ni un localizador nuevo.
 - La ruta queda registrada como DMR-045-SRC-028, metadata_checked_only, con claims_supported vacío, únicamente en CONT-MAIN-LN. No respalda el capítulo 13 ni el epílogo del volumen 14, no establece responsabilidad individual de Rudra y no prueba indisponibilidad global.
 - **Estado:** investigación de la ruta realizada; DMR-045 sigue abierto. Siguiente tarea: cotejar el texto de una edición accesible sin convertir metadatos, fallos de visor o resúmenes comunitarios en evidencia primaria.
+- **Integrado en main:** [PR #133](https://github.com/jonhararagi/wordwaifu/pull/133), merge SHA `1c53f9f7ca57a6aeebaedbf57234fb8b6e581f6f` (head de PR: `440e1e7a0891ee3ac9c979967cddec06f1bb64a2`).
+- **CI de la PR, head SHA:** [Validate WordWaifu #3366](https://github.com/jonhararagi/wordwaifu/actions/runs/40231380471) y [DanMachi Lore and Retrieval Integrity #1759](https://github.com/jonhararagi/wordwaifu/actions/runs/40231380497), ambos `success`; incluyen las pruebas de directorio y de navegador.
+- **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #3367](https://github.com/jonhararagi/wordwaifu/actions/runs/40231489642) y [DanMachi Lore and Retrieval Integrity #1760](https://github.com/jonhararagi/wordwaifu/actions/runs/40231489669), ambos `success`.
+
 
 ## Canoe Belway / Zanis Lustra / Liliruca — corrección de la atribución en fichas UI (integrado y validado, 2026-10-24)
 
