@@ -124,4 +124,14 @@ const bookwalkerAstrea3 = sources.filter(source => source.id === "licensed-retai
 assert.equal(bookwalkerAstrea3.length, 1, "the existing vol. 3 sample must not be duplicated as a new ID");
 assert.match(bookwalkerAstrea3[0].limits, /reintento.*timeout/i);
 
+
+const bookwalkerDanmachi14 = sources.filter(source => source.id === "licensed-retailer-bookwalker-danmachi-vol14-sample");
+assert.equal(bookwalkerDanmachi14.length, 1, "DanMachi vol. 14 sample route must be discoverable exactly once");
+assert.equal(bookwalkerDanmachi14[0].category, "licensed_retailer");
+assert.equal(bookwalkerDanmachi14[0].url, "https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1");
+assert.match(bookwalkerDanmachi14[0].limits, /Could not download/);
+assert.match(bookwalkerDanmachi14[0].limits, /No se obtuvo página narrativa/i);
+assert.match(bookwalkerDanmachi14[0].limits, /no respalda la trampa de Rudra Familia/i);
+assert.match(bookwalkerDanmachi14[0].limits, /metadata_checked_only/);
+
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
