@@ -3310,7 +3310,10 @@ async function run() {
     const tinyPng = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+a5ioAAAAASUVORK5CYII=", "base64");
     await page.locator("#art-image-file").setInputFiles({ name: "bell-test.png", mimeType: "image/png", buffer: tinyPng });
     await page.locator("#art-save").click();
-    await page.waitForFunction(() => (document.querySelector("#art-status")?.textContent || "").includes("Se asignó a Bell Cranel"), { timeout: 5000 });
+    await page.waitForFunction(() =>
+      (document.querySelector("#art-status")?.textContent || "").includes("Se asignó a Bell Cranel") &&
+      (document.querySelector("#art-assignment-count")?.textContent || "").trim() === "1",
+      { timeout: 10000 });
     assert.equal(await page.locator("#art-assignment-count").innerText(), "1");
     const customAsset = await page.evaluate(async () => window.WordWaifuArtStudio.getAsset("character", "DM-CHAR-BELL"));
     assert.ok(customAsset.src.startsWith("data:image/png"), "Uploaded art must persist in the local asset library.");
