@@ -207,3 +207,13 @@
 - **Límite:** no se agregan claims, relaciones, aliases ni IDs nuevos; DMR-045 y sus localizadores narrativos primarios siguen abiertos.
 - **CI de PR, head SHA `e870d5ef364639238000b7f991a4b855deafe136`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210105940) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210106029), ambas exitosas.
 - **CI post-merge sobre el SHA exacto de `main` `d81766fc7003294c15d0a2b776ce2d59170da86c`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257785) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257780), ambas exitosas.
+
+
+### CONV-DM-2026-10-25-005 — Abrir los resúmenes de habilidad de Alfia y Zald desde la enciclopedia
+- **Fecha:** 2026-10-25.
+- **Estado inicial:** implementación preparada en rama; PR y CI pendientes.
+- **Problema observado:** las fichas detalladas de `src/character-dossiers.js` almacenaban el detalle corregido, pero el diálogo “Más información” de la enciclopedia dependía del registro `EXTENDED` de `src/character-archive.js`. Sin entrada específica por continuidad, la UI podía mostrar únicamente las afirmaciones curadas y no el detalle de habilidades esperado.
+- **Cambio:** añadir entradas explícitas `CONT-AR` de Alfia y Zald al diálogo ampliado, con fuente comunitaria visible y límites de evidencia/continuidad. Añadir pruebas Node y Playwright que abran ambas fichas reales desde la búsqueda de la enciclopedia y comprueben que los detalles se ven en el diálogo.
+- **Regla de continuidad:** las notas de habilidades se ofrecen únicamente bajo `CONT-AR`; las pistas del volumen 20 se mantienen señaladas como `CONT-MAIN-LN`, y los contenidos de juego/`CONT-AU` no se fusionan.
+- **Integridad:** no se crean identidades, claims, relaciones ni alias; no se convierten datos de wiki en canon confirmado. DMR-045 conserva pendiente el cotejo primario.
+- **Validación:** pendiente de CI de PR y posintegración.

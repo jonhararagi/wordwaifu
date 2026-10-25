@@ -2,6 +2,9 @@ const assert = require("node:assert/strict");
 require("../src/character-dossiers.js");
 const api = globalThis.WordWaifuCharacterDossiers;
 assert.ok(api, "Character dossier registry should load in Node.");
+const archiveApi = require("../src/character-archive.js");
+assert.ok(archiveApi && typeof archiveApi.getExtendedInfo === "function",
+  "The interactive character archive must expose its expanded-info lookup for regression testing.");
 const all = api.list();
 assert.ok(all.length >= 30, "The archive should include at least 15 researched extended dossiers.");
 for (const dossier of all) {
@@ -27,6 +30,24 @@ for (const id of ["CHAR-DARK-ALFIA", "CHAR-DARK-ZALD", "CHAR-DARK-EREBUS"]) {
   assert.ok(dossier.sources.includes(bookwalkerProductUrl), id + " must expose the licensed Japanese retailer listing.");
   assert.ok(dossier.sources.includes(bookwalkerSampleUrl), id + " must expose the free sample route without treating it as verified narrative text.");
 }
+
+const alfiaArchiveInfo = archiveApi.getExtendedInfo("CHAR-DARK-ALFIA", "CONT-AR", null);
+assert.ok(alfiaArchiveInfo && alfiaArchiveInfo.title.includes("Alfia"), "Alfia's expanded research notes must be reachable from her interactive archive profile in CONT-AR.");
+assert.ok(alfiaArchiveInfo.sections.some(section => section.text.includes("campana gris plateada") && section.text.includes("superior a 100 metros") && section.text.includes("pendientes de cotejo")),
+  "The Alfia archive modal must expose the Genos Angelus report while retaining its secondary-evidence boundary.");
+assert.ok(alfiaArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Alfia/Habilidades"),
+  "Alfia's interactive research note must link the Spanish community source with its type preserved.");
+assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-ALFIA", "CONT-MAIN-LN", null), null,
+  "Astrea Record ability notes must not be presented as a main-light-novel profile.");
+
+const zaldArchiveInfo = archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-AR", null);
+assert.ok(zaldArchiveInfo && zaldArchiveInfo.title.includes("Zald"), "Zald's expanded research notes must be reachable from his interactive archive profile in CONT-AR.");
+assert.ok(zaldArchiveInfo.sections.some(section => section.text.includes("nivel 7") && section.text.includes("nivel 10") && section.text.includes("no es una fórmula universal verificada")),
+  "Zald's Deus Ambrosia example must be labelled a community report rather than a universal rule.");
+assert.ok(zaldArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Zald"),
+  "Zald's interactive research note must preserve its community source type.");
+assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null), null,
+  "Astrea Record ability notes must not be presented as a main-light-novel profile.");
 
 bell.history = "mutated";
 assert.notEqual(api.get("DM-CHAR-BELL").history, "mutated", "Callers must not mutate the shared dossier catalog.");

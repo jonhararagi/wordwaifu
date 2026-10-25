@@ -485,3 +485,15 @@ Se alinearon los expedientes interactivos de Alfia y Zald con la información me
 - **Zald / Deus Ambrosia:** la ficha comunitaria de Zald ofrece como ejemplo de límite que un aventurero reportado en nivel 7 no puede alcanzar sin más un poder equivalente al nivel 10. Las fichas de UI y Markdown ahora expresan el ejemplo con ese alcance limitado; no se interpreta como fórmula universal del sistema ni reemplaza el coste reportado del veneno de Behemoth. Fuente comunitaria: https://danmachi.fandom.com/es/wiki/Zald.
 
 La corrección no incorpora claims, aristas, alias ni IDs nuevos y no cambia el estado de evidencia. Es un ajuste de presentación/precisión sobre contenido secundario ya presente en el corpus. Los localizadores primarios de DMR-045 siguen pendientes. **Integración y validación:** PR [#118](https://github.com/jonhararagi/wordwaifu/pull/118) integrada en `main` con SHA `d81766fc7003294c15d0a2b776ce2d59170da86c`. CI de PR (head `e870d5ef364639238000b7f991a4b855deafe136`): [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210105940) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210106029), ambas exitosas. CI post-merge sobre el SHA exacto `d81766fc7003294c15d0a2b776ce2d59170da86c`: [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257785) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257780), ambas exitosas.
+
+
+## Acceso real del diálogo “Más información” a los expedientes de Alfia y Zald (2026-10-25)
+
+Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los resúmenes de habilidad, pero el diálogo ampliado dependía del registro `EXTENDED` de `src/character-archive.js`. Por ello, una ficha podía existir en el registro detallado sin exponer sus resúmenes desde la enciclopedia.
+
+- Añadidas entradas `CONT-AR` para Alfia y Zald, con notas de habilidad acotadas, referencias comunitarias explícitas y advertencias de que los localizadores primarios no están verificados.
+- Añadidas pruebas de API y de navegador para buscar cada personaje, abrir su ficha y comprobar el diálogo ampliado.
+- Alfia: el diálogo expone el reporte comunitario de Genos Angelus (campana gris plateada y alcance superior a 100 metros) como evidencia secundaria.
+- Zald: el diálogo expone el ejemplo comunitario nivel 7/nivel 10 de Deus Ambrosia, con la limitación de que no constituye una fórmula universal verificada.
+- Las entradas se sirven solo para `CONT-AR`; las pistas de vol. 20 continúan como investigación `CONT-MAIN-LN`, y los detalles exclusivos de juegos o `CONT-AU` no se consolidan en este resumen.
+- **Estado:** código y regresiones preparados en rama; la integración queda condicionada a CI de PR y posintegración. DMR-045 continúa abierto para cotejo primario.

@@ -49,6 +49,14 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - **Integración:** PR [#118](https://github.com/jonhararagi/wordwaifu/pull/118) integrada; SHA `d81766fc7003294c15d0a2b776ce2d59170da86c`. La CI de PR y la CI post-merge aprobaron ambos workflows.
 - **Límite:** no se crean claims ni relaciones nuevos, no cambia ningún ID ni el estado de canon; los localizadores primarios individuales de DMR-045 siguen abiertos.
 
+## Acceso interactivo a habilidades secundarias de Alfia y Zald (2026-10-25)
+
+- [x] Añadir entradas del diálogo ampliado por continuidad `CONT-AR` para Alfia y Zald; conservar las wikis como fuentes comunitarias, no oficiales ni equivalentes a texto primario.
+- [x] Añadir pruebas de API para fuentes, detalles de Genos Angelus y el ejemplo de Deus Ambrosia; verificar que estas notas no se exponen como perfiles de `CONT-MAIN-LN`.
+- [x] Añadir regresiones Playwright que buscan, abren y leen el diálogo “Más información” de ambas fichas en la aplicación real.
+- [ ] Ejecutar los workflows de PR y posintegración; registrar SHA y resultados exactos antes de marcar integrado.
+- **Límite:** sin cambios a IDs, claims o aristas; DMR-045 sigue abierto para cotejo de localizadores primarios.
+
 ## Cobertura integrada del roster · DANMACHI-RESEARCH-036
 
 - [x] Crear fichas Markdown individuales para las 63 identidades del roster de adaptación, incluidos los cuatro hermanos Gulliver.

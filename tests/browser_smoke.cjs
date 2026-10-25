@@ -794,6 +794,47 @@ async function run() {
     await page.locator("#archive-return-search").click();
     assert.equal(await page.locator("#character-archive-query").inputValue(), "Ryu");
     assert.equal(await page.locator("#character-archive-results [data-archive-open]").count(), 1);
+
+    // DMR-045 regression: the community ability notes must be reachable from each real archive profile,
+    // explicitly tagged as secondary, and available only in the Astrea Record continuity.
+    await page.locator("#character-archive-query").fill("Alfia");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-DARK-ALFIA"]').length === 1, null, { timeout: 5000 });
+    await page.locator('#character-archive-results [data-archive-open="CHAR-DARK-ALFIA"]').click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Alfia");
+    await page.locator("#archive-profile-continuity").selectOption("CONT-AR");
+    await page.locator("#archive-profile-panel [data-archive-more-info]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, null, { timeout: 3000 });
+    const alfiaArchiveNotes = await page.locator("#archive-more-info-content").innerText();
+    assert.ok(alfiaArchiveNotes.includes("campana gris plateada") && alfiaArchiveNotes.includes("superior a 100 metros"),
+      "Opening Alfia's interactive expanded info must reveal the Genos Angelus report.");
+    assert.ok(alfiaArchiveNotes.includes("afirmaciones secundarias") || alfiaArchiveNotes.includes("pendientes de cotejo"),
+      "Alfia's expanded info must keep a visible warning that ability details are secondary/unverified.");
+    assert.ok(await page.locator("#archive-more-info-content a[href='https://danmachi.fandom.com/es/wiki/Alfia/Habilidades']").count() > 0,
+      "Alfia's expanded info must provide a direct, typed community source link.");
+    assert.ok((await page.locator("#archive-more-info-content").innerText()).includes("CONT-MAIN-LN"),
+      "Alfia's research note must explicitly keep volume-20 leads outside the CONT-AR dossier.");
+    await page.locator("#archive-more-info-close").click();
+
+    await page.locator("#archive-return-search").click();
+    await page.locator("#character-archive-query").fill("Zald");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-DARK-ZALD"]').length === 1, null, { timeout: 5000 });
+    await page.locator('#character-archive-results [data-archive-open="CHAR-DARK-ZALD"]').click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Zald");
+    await page.locator("#archive-profile-continuity").selectOption("CONT-AR");
+    await page.locator("#archive-profile-panel [data-archive-more-info]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, null, { timeout: 3000 });
+    const zaldArchiveNotes = await page.locator("#archive-more-info-content").innerText();
+    assert.ok(zaldArchiveNotes.includes("nivel 7") && zaldArchiveNotes.includes("nivel 10"),
+      "Opening Zald's interactive expanded info must reveal the Deus Ambrosia limitation example.");
+    assert.ok(zaldArchiveNotes.includes("no es una fórmula universal verificada"),
+      "Zald's expanded info must not turn a community example into a universal system rule.");
+    assert.ok(await page.locator("#archive-more-info-content a[href='https://danmachi.fandom.com/es/wiki/Zald']").count() > 0,
+      "Zald's expanded info must provide a direct community source link.");
+    await page.locator("#archive-more-info-close").click();
+    await page.locator("#archive-return-search").click();
+    await page.locator("#character-archive-query").fill("Ryu");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').length === 1, null, { timeout: 5000 });
+
     // Request anime continuity explicitly: main-novel context correctly uses original, non-official placeholder art.
     await page.locator("#archive-continuity").selectOption("CONT-ANIME");
     // Preserve the canonical image URL while avoiding a live publisher-site dependency in CI.
