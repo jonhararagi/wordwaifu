@@ -157,3 +157,15 @@
 - **Validación de PR, exacto head SHA `1fe1d632565d303894956d0bae86f214cc4087f6`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40152510473) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40152510494) — ambas exitosas.
 - **Validación post-merge, exacto SHA `a7725802e2cef7ad9a3e648b7189e7986f1853fb`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40152602203) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40152602204) — ambas completadas con éxito.
 - **Decisión de continuidad:** no modificar el grafo ni promocionar afirmaciones secundarias. Los pasajes primarios legítimos de volúmenes 2 y 6 siguen pendientes.
+
+
+### CONV-DM-2026-10-25-001 — Incorporar filtros de alineamiento moral y de conducta
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTADO EN RAMA DE TRABAJO; pruebas e integración pendientes.
+- **Instrucción aceptada:** añadir filtros de bueno / neutral / malo y legal / neutral / caótico a la enciclopedia de personajes, además de representar personajes cuyo alineamiento no haya sido evaluado.
+- **Diseño:** dos ejes independientes combinables, más un estado explícito «Sin clasificar». La ausencia de datos jamás se interpreta como neutralidad.
+- **Alfia y Zald:** el usuario propone «caótico bueno». La implementación comienza con «caótico neutral» como interpretación provisional de baja confianza, pues las wikis describen objetivos protectores junto con aceptación consciente de caos, muerte y desesperación. «Caótico bueno» queda visible como alternativa razonada, no como una etiqueta descartada ni como canon oficial.
+- **Fuentes usadas para esa interpretación secundaria:** https://danmachi.fandom.com/wiki/Alfia ; https://danmachi.fandom.com/es/wiki/Alfia ; https://danmachi.fandom.com/wiki/Zald ; https://danmachi.fandom.com/es/wiki/Zald ; https://danmachi.com/news/news131.php (esta última aporta contexto editorial, no asigna alineamientos).
+- **Archivos afectados:** src/character-alignments.js, index.html, src/app.js, src/styles.css, pruebas de fichas y búsqueda, docs/DECISIONS.md, docs/STATUS.md, lore/danmachi/WORK_QUEUE.md y DMR-045.
+- **Límite factual:** solo Alfia y Zald reciben etiqueta inicial. Las demás fichas permanecen «Sin clasificar» hasta revisión con justificación y fuentes.
+- **Pendiente:** CI, PR, integración y verificación sobre el SHA final de main.
