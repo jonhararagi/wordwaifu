@@ -1,7 +1,7 @@
 # DANMACHI-RESEARCH-045 · Alfia, Zald, Meteria, Erebus y Rudra: auditoría histórica y de continuidad
 
 - Fecha de revisión documental y de UI: 2026-10-24.
-- Estado: revisión cruzada secundaria incorporada y expedientes interactivos corregidos; localizadores primarios individuales pendientes.
+- Estado: revisión cruzada secundaria incorporada y expedientes interactivos corregidos, integrados y validados en main; localizadores primarios individuales pendientes.
 - Objetivo: mejorar cinco expedientes históricos sin transformar fuentes comunitarias en confirmación primaria ni confundir periodos.
 
 ## Matriz de continuidad y evidencia
@@ -403,3 +403,10 @@ Se armonizaron los resúmenes de interfaz de las cinco identidades de DMR-045 co
 - **Rudra:** la descripción visual reportada por la wiki española queda disponible para consulta, claramente marcada como secundaria. El texto del volumen 14 respalda la atribución colectiva a Rudra Familia, no una orden personal de Rudra.
 
 Se añadieron pruebas de regresión sobre los cinco expedientes de UI, las URLs de procedencia, la separación CONT-AU/CONT-GAME y la ausencia de «Eren» del front matter de alias. No se cambiaron IDs, aristas, niveles de verificación ni localizadores pendientes. El cotejo primario de Alfia, Zald, Meteria, Erebus y la responsabilidad personal de Rudra sigue abierto.
+
+
+## Verificación de integración de la capa interactiva (2026-10-24)
+
+La corrección de UI quedó integrada por [PR #113](https://github.com/jonhararagi/wordwaifu/pull/113), commit `9e5a2ee6041dd2a4283003993bfd6655a9a3d419`. Las dos verificaciones de la PR aprobaron ([Validate WordWaifu #3236](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859509), [DanMachi Lore and Retrieval Integrity #1689](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859538)); las dos ejecuciones posteriores sobre ese mismo SHA en `main` también aprobaron ([Validate WordWaifu #3237](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959234), [DanMachi Lore and Retrieval Integrity #1690](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959233)).
+
+Esta verificación valida el comportamiento y la documentación de la capa interactiva, no la exactitud primaria integral de las biografías. La lectura de pasajes licenciados con páginas reproducibles sigue pendiente para Alfia, Zald y Meteria; Erebus requiere su localizador de escena revisada, y el conocimiento u orden personal de Rudra no se deduce del acto colectivo de la Familia.

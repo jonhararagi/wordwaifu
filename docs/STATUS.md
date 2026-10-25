@@ -10,16 +10,14 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
-## Personajes históricos — correcciones de fichas interactivas DMR-045 (preintegración, 2026-10-24)
+## Personajes históricos — correcciones de fichas interactivas DMR-045 (integrado y validado, 2026-10-24)
 
-- Se mejoran las fichas visibles de Alfia, Zald, Meteria, Erebus y Rudra sin cambiar IDs ni promover claims secundarios a canon primario.
-- Alfia: rasgos físicos reportados por wiki y límites/costes atribuidos a Gif Blessing, Silentium Eden y Genos Angelus quedan visibles.
-- Zald: nivel 7/piso 71 se rotulan como snapshot de wiki; la interfaz explica los límites secundarios de Deus Ambrosia y mantiene el veneno de Behemoth como coste. Se enlaza el pie editorial de LN News Online.
-- Meteria: su personalidad procedente de la nota de Omori permanece etiquetada CONT-AU; la entrevista de Memoria Freese no identifica por nombre a la hermana de Alfia.
-- Erebus: apariencia, sobrenombre y filosofía se etiquetan como información secundaria de CONT-GAME; «Eren» no pasa a los alias canónicos. Se expone la fuente de LN News Online usada por los claims.
-- Rudra: se recupera la descripción visual de la wiki española como detalle secundario; el resumen conserva que el volumen 14 atribuye la trampa a Rudra Familia en conjunto, no personalmente a la deidad.
-- Se añaden regresiones al test de lore para las cinco fichas, procedencia de fuentes, límites de continuidad y alias. Los localizadores primarios de DMR-045 siguen abiertos; no se modifica el estado de evidencia de los claims ni el grafo de relaciones.
-- **Estado preintegración:** implementado en la rama de trabajo; pendiente resultado de CI de la PR y verificación de main.
+- La PR [#113](https://github.com/jonhararagi/wordwaifu/pull/113) se integró en `main` mediante el commit `9e5a2ee6041dd2a4283003993bfd6655a9a3d419`.
+- Se corrigieron las fichas interactivas de Alfia, Zald, Meteria, Erebus y Rudra sin cambiar IDs, aristas ni estado de evidencia de los claims. Las apariencias y mecánicas de wiki permanecen marcadas como secundarias.
+- Alfia: límites y costes atribuidos a Gif Blessing, Silentium Eden y Genos Angelus; Zald: snapshot histórico y límites reportados de Deus Ambrosia con el coste del veneno; Meteria: CONT-AU separado; Erebus: CONT-GAME separado y «Eren» excluido de los alias canónicos; Rudra: apariencia secundaria recuperada y la trampa sigue atribuida a Rudra Familia como grupo.
+- Pruebas de la PR aprobadas: [Validate WordWaifu #3236](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859509) y [DanMachi Lore and Retrieval Integrity #1689](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859538).
+- Pruebas posteriores a la integración, ambas con éxito y asociadas al SHA `9e5a2ee6041dd2a4283003993bfd6655a9a3d419`: [Validate WordWaifu #3237](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959234) y [DanMachi Lore and Retrieval Integrity #1690](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959233).
+- **Pendiente real:** no se cerraron los localizadores narrativos primarios de Alfia, Zald, Meteria y Erebus, ni la responsabilidad personal de Rudra. Las métricas, el catálogo de identidades y las relaciones no cambiaron en este lote.
 
 ## Orario — localizador provisional de la plaza norte armonizado (2026-10-24)
 
