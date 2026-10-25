@@ -466,7 +466,7 @@ La ficha oficial de Yen Press para la edición inglesa de *Astrea Record, Vol. 3
 - evidence_type: licensed_retail_listing_and_free_sample_route
 - claim_ids: []
 - character_ids: []
-- access_test: El lector de muestra al que conduce el enlace respondió “Could not download. Please check your network connection.” en la consulta automatizada del 25-10-2026; no se obtuvo texto narrativo legible. El fallo puede corresponder a la sesión, red o visor y no demuestra indisponibilidad general del libro.
+- access_test: La consulta automatizada del 25-10-2026 respondió “Could not download. Please check your network connection.”; un segundo intento del mismo día por la URL normal `?sample=1` terminó en timeout. Ninguno expuso texto narrativo legible. Los fallos pueden deberse a la sesión, la red o el visor; no demuestran indisponibilidad general del libro.
 - confidence_note: La página comercial acredita una ficha de una edición japonesa licenciada y ofrece el acceso de muestra; no constituye un localizador narrativo por personaje. No confirma escenas, técnicas o relaciones de Alfia, Zald o Erebus. No se añadieron claims ni aristas.
 
 ### Ruta añadida a fichas interactivas (2026-10-25)
@@ -580,3 +580,26 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Siguiente acción:** conservar el enlace como ruta de consulta de acceso normal; si la página de muestra se ofrece en el entorno del lector, verificar manualmente una página concreta sin eludir restricciones.
 
 **Límite conjunto de SRC-023–025:** estos registros describen vías de consulta licenciada y observaciones de sus páginas públicas. Ninguno permitió leer una página narrativa. Las sinopsis editoriales, la etiqueta “Free sample” y una advertencia regional no respaldan afirmaciones individuales sobre Alfia, Zald, Meteria, Erebus o Rudra ni cierran los localizadores primarios de DMR-045.
+
+
+## DMR-045-SRC-026 · BOOK☆WALKER — muestra gratuita de Astrea Record 1 (reintento de acceso)
+- **Fecha de consulta:** 2026-10-25.
+- **Ficha de producto:** [アストレア・レコード１ 邪悪胎動](https://bookwalker.jp/dee09029f8-9a55-40d2-bce2-384e8387f016/).
+- **Ruta de muestra anunciada por la ficha:** https://bookwalker.jp/dee09029f8-9a55-40d2-bce2-384e8387f016/?sample=1.
+- **Tipo:** ruta gratuita de muestra en un distribuidor licenciado; editor de la edición japonesa: SB Creative / GA Bunko.
+- **Resultado del reintento:** el enlace redirigió al lector de prueba de BOOK☆WALKER; la página visible devolvió “Could not download. Please check your network connection.” No se extrajo texto narrativo ni página legible.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** queda verificada una ruta normal de muestra gratuita y la limitación concreta de esta consulta. No se afirma que la muestra sea inaccesible en general ni se infieren escenas o ausencias de personajes.
+- **Siguiente acción:** si el lector muestra páginas mediante el uso normal del navegador, registrar solo un pasaje realmente visible con localizador reproducible.
+
+## DMR-045-SRC-027 · BOOK☆WALKER — muestra gratuita de Astrea Record 2 (reintento de acceso)
+- **Fecha de consulta:** 2026-10-25.
+- **Ficha de producto:** [アストレア・レコード２ 正義失墜](https://bookwalker.jp/deb27a4c03-eff6-43f8-a76b-105368b329aa/).
+- **Ruta de muestra anunciada por la serie/ficha:** https://bookwalker.jp/deb27a4c03-eff6-43f8-a76b-105368b329aa/?sample=1.
+- **Tipo:** ruta gratuita de muestra en un distribuidor licenciado; editorial de la edición japonesa: SB Creative / GA Bunko.
+- **Resultado del reintento:** la ficha pública de producto confirmó el título y la edición, y la serie indica 試し読み; sin embargo, las llamadas normales a la ruta de muestra terminaron en timeout y no devolvieron texto legible.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** la ficha identifica una ruta de muestra gratuita, pero esta consulta no permite comprobar ninguna página o escena. El timeout no demuestra indisponibilidad global ni ausencia de personajes.
+- **Siguiente acción:** reintentar mediante el lector normal autorizado si carga; registrar capítulo/página solo después de ver el pasaje.
+
+**Nota de reintento para SRC-017 / SRC-006 (Astrea Record 3):** la ruta de muestra es la misma ya registrada en DMR-045-SRC-006 y DMR-045-SRC-017; por eso no se crea otro ID. En la nueva consulta pública del 25-10-2026, una llamada al lector terminó en timeout después de que un intento anterior devolviera un error de red. Se conservan ambas observaciones como intentos de acceso, no como evidencia narrativa.
