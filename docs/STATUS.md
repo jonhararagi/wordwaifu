@@ -264,3 +264,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - PR integrada: [#117](https://github.com/jonhararagi/wordwaifu/pull/117), merge commit [`1302145`](https://github.com/jonhararagi/wordwaifu/commit/1302145b9b222130069c9aa7393a115cbfd7284f).
 - CI de la PR, SHA `a9ac60cbc29f7e41574ee541ba0eb5d5a432e133`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40205349066) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40205349060), ambas exitosas.
 - CI post-merge, exacto SHA `1302145b9b222130069c9aa7393a115cbfd7284f`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40205481864) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40205481796), ambas exitosas.
+
+
+## DMR-045 — precisión incremental de las fichas de Alfia y Zald (2026-10-25)
+
+- **Implementación preparada en rama:** `fix/danmachi-character-mechanics-2026-10-25`; la PR, las pruebas de CI y la integración todavía deben comprobarse.
+- La ficha interactiva de Alfia expone el alcance (>100 metros) y la campana gris plateada reportados por las wikis para Genos Angelus, además del deterioro de salud atribuido a su uso contra Leviathan. Todo sigue explícitamente como evidencia secundaria.
+- El expediente interactivo y la ficha Markdown de Zald explicitan el límite de Deus Ambrosia que describe la wiki: el ejemplo nivel 7 / poder equivalente a nivel 10 no se trata como regla universal verificada. El coste continuo del veneno de Behemoth permanece visible.
+- Se agregaron regresiones a `tests/test_lore_corpus.cjs` para evitar pérdida de estos detalles y de sus límites de evidencia.
+- **Integridad del corpus:** no se modifican IDs, claims, relaciones, aliases ni métricas. DMR-045 mantiene pendientes los localizadores narrativos primarios; esta corrección mejora la recuperación de referencias, no cierra esa investigación.
+- **Estado:** implementado en rama; pendiente de CI e integración segura.
