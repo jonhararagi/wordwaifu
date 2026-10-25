@@ -330,3 +330,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR, cabeza 77cfd88def764f42ed60dc5a8360512074c848d2:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737355) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737354), ambos success.
 - **CI post-merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879793) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879958), ambos success; incluyen browser smoke y validación del catálogo/enlaces.
 - **Próxima prioridad:** conseguir una página narrativa realmente legible mediante acceso autorizado normal; mantener abiertos los cinco localizadores primarios de DMR-045.
+
+
+## DMR-045 — reintentos de muestra BOOK☆WALKER para Astrea Record 1–3 (2026-10-25)
+
+- **Integrado:** PR [#131](https://github.com/jonhararagi/wordwaifu/pull/131), SHA exacto de main `96f885af9f1ff036bddd99a017e7ecef76db70f5`.
+- Se añadieron rutas de muestra pública de BOOK☆WALKER para los volúmenes 1 y 2: DMR-045-SRC-026/027. El lector del vol. 1 devolvió “Could not download. Please check your network connection”; la extracción de la muestra del vol. 2 terminó en timeout. Para vol. 3 se reintentó el mismo enlace ya registrado en SRC-006/SRC-017 y se documentó otro timeout, sin crear un ID adicional para la misma ruta.
+- Las pruebas impiden presentar los resultados como lectura narrativa. Los tres registros aplicables permanecen metadata_checked_only, con claims/eventos vacíos. No se generaron relaciones, alias ni localizadores de capítulo o página.
+- **CI de la PR, cabeza `cc3ced574bae926690fbff231d21e813f17e886e`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40230094644) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40230094738), ambos success.
+- **CI post-merge sobre el SHA exacto de main `96f885af9f1ff036bddd99a017e7ecef76db70f5`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40230249545) success, incluida la prueba de navegador; [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40230249546) seguía en ejecución al preparar este registro.
+- **Límite:** ninguna nueva muestra reveló páginas narrativas. DMR-045 sigue abierto para la verificación primaria de Alfia, Zald, Meteria, Erebus y la responsabilidad personal de Rudra.
