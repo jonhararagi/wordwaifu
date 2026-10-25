@@ -66,3 +66,13 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - Resultado de ejecución registrado el 2026-10-24: el barrido secundario disponible se documentó en DMR-045/DMR-029; se conserva abierta la verificación primaria y la siguiente etapa activa es Orario.
 - Reglas: las wikis inglesa y española se etiquetan como fuentes secundarias; no confundir una acción de Rudra Familia con responsabilidad personal de Rudra, no equiparar Meteria con la hermana sin nombre citada en la entrevista de Memoria Freese, y no transferir contenido de `CONT-AU` a `CONT-MAIN-LN`/ `CONT-AR`.
 - Documentos afectados: registro de conversación, estado, cola, DMR-045/DMR-029, fichas y directorio de fuentes recuperables desde la aplicación.
+
+
+### DEC-DM-008 — Metadatos de muestras licenciadas no equivalen a lectura narrativa
+- **Fecha:** 2026-10-25.
+- **Estado:** ACCEPTED como regla de investigación y PRESENT como implementación UI/documental.
+- **Decisión:** Las rutas licenciadas de Google Books, BOOK☆WALKER y BinB pueden registrarse para futuras consultas humanas. La ficha de producto, el índice, los controles del visor y una búsqueda sin resultados no se consideran lectura de un pasaje narrativo. HTTP 429 es error de acceso y no evidencia de ausencia.
+- **Aplicación de continuidad:** DMR-045-SRC-018 permanece en CONT-MAIN-LN solo como metadatos/índice del volumen 20; DMR-045-SRC-019 permanece en CONT-AR como interfaz/metadatos de la muestra japonesa de Astrea Record 3. Ambas tienen claims_supported vacíos.
+- **Límite de canon:** la entrevista sobre la madre de Bell no identifica por sí sola a la hermana como Meteria; la ideología de Erebus en CONT-GAME no se traslada a la novelización; una acción atribuida a Rudra Familia no demuestra que Rudra personalmente la ordenara, autorizara o conociera el plan.
+- **Prioridad operativa:** se actualiza la directriz de DEC-DM-006 para retomar primero el cotejo primario de DMR-045 conforme al prompt vigente del usuario; Orario se mantiene en cola, no se cancela.
+- **Referencias:** [DANMACHI-RESEARCH-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md), [registro central de fuentes](sources/00-registro-fuentes.md), [PR #122](https://github.com/jonhararagi/wordwaifu/pull/122).
