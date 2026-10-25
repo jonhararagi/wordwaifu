@@ -125,6 +125,14 @@ assert.equal(bookwalkerAstrea3.length, 1, "the existing vol. 3 sample must not b
 assert.match(bookwalkerAstrea3[0].limits, /reintento.*timeout/i);
 
 
+const googlePlayDanmachi14 = sources.filter(source => source.id === "licensed-preview-google-play-books-danmachi-vol14");
+assert.equal(googlePlayDanmachi14.length, 1, "Google Play Books vol. 14 sample route must be discoverable exactly once");
+assert.equal(googlePlayDanmachi14[0].category, "licensed_retailer");
+assert.equal(googlePlayDanmachi14[0].url, "https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ");
+assert.match(googlePlayDanmachi14[0].authority, /Free sample/);
+assert.match(googlePlayDanmachi14[0].limits, /No se leyó el capítulo 13/i);
+assert.match(googlePlayDanmachi14[0].limits, /metadata_checked_only/);
+assert.match(googlePlayDanmachi14[0].limits, /no respalda la trampa de Rudra Familia/i);
 const bookwalkerDanmachi14 = sources.filter(source => source.id === "licensed-retailer-bookwalker-danmachi-vol14-sample");
 assert.equal(bookwalkerDanmachi14.length, 1, "DanMachi vol. 14 sample route must be discoverable exactly once");
 assert.equal(bookwalkerDanmachi14[0].category, "licensed_retailer");
