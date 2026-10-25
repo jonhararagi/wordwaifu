@@ -778,3 +778,12 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Documentar las sustituciones conocidas y conservar las ramas remotas archivadas para consulta; [informe de auditoría](../../docs/BRANCH_AUDIT_2026-10-24.md).
 - [ ] Continuar DMR-045 con los localizadores primarios faltantes; no avanzar a una nueva tanda de lore por el solo hecho de que el censo de ramas esté cerrado.
 
+
+
+## DMR-045 — Ruta adicional licenciada para el volumen 14 (2026-10-25)
+
+- [x] Añadir [Google Play Books, volumen 14](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ) como ruta normal de muestra anunciada, con metadatos y límites visibles en el navegador de fuentes.
+- [x] Enlazar la muestra desde “Más información” de Rudra, junto a la ficha editorial y la ruta ya registrada de BOOK☆WALKER.
+- [x] Añadir regresiones API y Playwright para garantizar que el acceso se ofrece bajo CONT-MAIN-LN sin afirmar que se leyó la novela.
+- [ ] Inspeccionar un pasaje narrativo del capítulo 13 o del epílogo del volumen 14. Google Play Books anunció Free sample, pero esta consulta solo recuperó metadatos; Google Books mostró la cubierta y la ficha bibliográfica. No se leyó la retrospectiva de Rudra Familia ni el pasaje del epílogo.
+- **Estado:** implementado en la rama de trabajo; DMR-045-SRC-029 está metadata_checked_only, sin claims ni aristas. El localizador primario de Rudra sigue pendiente.
