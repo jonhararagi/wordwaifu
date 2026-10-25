@@ -116,3 +116,10 @@
 **Aplicación inicial:** Alfia y Zald aparecen, con alcance interpretativo provisional en CONT-AR y confianza baja, como «caótico neutral». Se conserva «caótico bueno» como alternativa plausible que pondera más su fin protector. La motivación declarada no borra los medios violentos descritos por fuentes secundarias.
 **Límites:** no atribuir estas etiquetas a Omori ni tratarlas como hechos canónicos. Cada asignación necesita justificación, continuidad, confianza y enlaces de fuente; los personajes restantes permanecen sin clasificar hasta que haya evaluación documentada.
 **Motivo:** facilitar exploración y revisión de coherencia de personajes sin mezclar brújula moral con temperamento, ni forzar conclusiones cuando falta evidencia.
+
+
+## DEC-023 — Procedencia visible por tipo de fuente en las fichas ampliadas
+**Estado:** Aprobada como criterio de calidad de la interfaz; no es una decisión de canon.
+**Decisión:** El diálogo de investigación clasifica explícitamente las referencias como wiki comunitaria no oficial, entrevista, publicación autoral, ficha editorial/metadatos, muestra licenciada o fuente oficial/primaria. Una entrevista autoral no se representa como una página de novela, una ficha de editorial no demuestra una escena y una muestra que no carga no confirma presencia ni ausencia de un personaje.
+**Aplicación:** Las notas de Meteria, Erebus y Rudra se presentan bajo sus respectivas continuidades; CONT-AU y CONT-GAME no se transfieren automáticamente a CONT-MAIN-LN o CONT-AR. Los resultados de búsqueda incompletos (incluido HTTP 429) se registran como limitación de acceso, nunca como resultado factual.
+**Motivo:** hacer utilizable la procedencia dentro de la enciclopedia sin fingir verificación primaria ni crear claims o relaciones de relleno.

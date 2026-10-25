@@ -287,3 +287,15 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de PR, head SHA `308ee68ed81673757ae4c99c1d8af95bae573cfe`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032458) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032504), ambas exitosas.
 - **CI post-merge en `main`, SHA exacto `742b0220590e45082972015684a0ecc6cbf14f04`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145581) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145583), ambas exitosas.
 - **Límite:** las entradas solo se muestran bajo `CONT-AR`; pistas de vol. 20 quedan en `CONT-MAIN-LN`, `CONT-GAME` y `CONT-AU` no se fusionan y los localizadores primarios de DMR-045 siguen pendientes.
+
+
+## DMR-045 — notas interactivas para Meteria, Erebus y Rudra; vistas autorizadas (2026-10-25)
+
+- **Integrado:** PR [#122](https://github.com/jonhararagi/wordwaifu/pull/122), SHA exacto de main: ba6363bce1b651a74ebfa9b782fb7e38f8804eef.
+- La interfaz “Más información” incluye ahora una nota de Meteria bajo CONT-MAIN-LN y la nota autoral separada bajo CONT-AU; Erebus se documenta en CONT-GAME sin trasladar su ideología a la novelización; Rudra tiene una nota en CONT-MAIN-LN que mantiene sin demostrar su responsabilidad personal por acciones atribuidas a Rudra Familia.
+- Las referencias distinguen la wiki comunitaria, entrevista, publicación autoral y metadatos de editorial. No se añade ningún claim, alias, ID ni arista canónica.
+- Las rutas públicas autorizadas [Google Books vol. 20](https://books.google.com/books?id=XWHEEQAAQBAJ) y [BinB Astrea Record 3](https://r.binb.jp/epm/e1_270413_31102022103801/) quedaron registradas como DMR-045-SRC-018/019. No se recuperó texto narrativo legible. Los errores de consulta, incluido HTTP 429, no se interpretan como evidencia de ausencia de personajes.
+- **CI de la PR, head SHA e03fdb17c5c6fc292fb9fffd321483eb1abf2b07:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40222698644) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40222698535), ambas exitosas, incluida la prueba de navegador.
+- **CI post-merge sobre main, SHA exacto ba6363bce1b651a74ebfa9b782fb7e38f8804eef:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40222827902) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40222827809), ambas success. La segunda completó browser smoke, la validación de catálogo/enlaces y la subida de capturas.
+- **Estado de la investigación:** las notas y las pruebas de UI están integradas; DMR-045 sigue abierto por localizadores de texto primario para los cinco expedientes.
+- **Próxima prioridad aceptada:** continuar el cotejo primario de DMR-045 antes de retomar la expansión del escenario de Orario.
