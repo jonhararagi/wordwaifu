@@ -282,3 +282,12 @@
 - **Límite factual:** la vista previa que no se renderiza no es un localizador narrativo; no confirma presencia/ausencia de personajes ni respalda habilidades, relaciones o escenas. Las búsquedas previas que fallaron con HTTP 429 siguen siendo errores, no resultados negativos.
 - **Prioridad vigente:** mantener abiertos los localizadores primarios individuales de Alfia, Zald, Meteria y Erebus, y la atribución personal de Rudra; no ampliar Orario hasta completar o acotar honestamente esta investigación.
 - **Estado de integración:** pendiente de la revisión y CI de la PR que contiene esta actualización.
+
+
+### CONV-DM-2026-10-25-011 — Sincronizar la prioridad activa con el bloque correcto de WORK_QUEUE
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED ON BRANCH; pendiente de CI e integración.
+- **Corrección encontrada:** WORK_QUEUE tenía un encabezado que decía DMR-045 como prioridad actual, pero debajo contenía el listado extenso de trabajo geográfico de Orario. Además, el resultado histórico del barrido secundario aún decía que Orario debía activarse inmediatamente, pese a la decisión posterior de volver a priorizar la verificación primaria.
+- **Cambio:** se creó un bloque de prioridad DMR-045 con las cinco tareas primarias, los límites comunes de SRC-018–028 y enlaces al registro de fuentes; el listado urbano fue renombrado como etapa posterior y el orden de Orario de 2026-10-24 quedó conservado como histórico/sustituido, no borrado.
+- **Prueba:** se ampliaron las regresiones para exigir ambos encabezados, comprobar los SRC-026/027/028 en la cola y rechazar la instrucción antigua que promovía Orario a prioridad siguiente.
+- **Sin cambios de canon:** no se añadieron IDs, relaciones ni claims de personajes. DMR-045 sigue abierto; las rutas de muestras permanecen metadata_checked_only cuando no se leyó narrativa.
