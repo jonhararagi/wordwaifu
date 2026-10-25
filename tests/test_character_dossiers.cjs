@@ -85,7 +85,13 @@ const rudraMainInfo = archiveApi.getExtendedInfo("CHAR-DARK-RUDRA", "CONT-MAIN-L
 assert.ok(rudraMainInfo && rudraMainInfo.sections.some(section => section.text.includes("no demuestra que Rudra") && section.text.includes("Rudra Familia")),
   "Rudra's note must distinguish group responsibility from unproven personal authorization.");
 assert.ok(rudraMainInfo.references.some(ref => ref.kind === "publisher_metadata" && ref.url.includes("yenpress.com/titles/9781975385026")),
-  "The vol. 14 product page must be labelled as metadata rather than narrative evidence.");
+  "The vol. 14 publisher product page must be labelled as metadata rather than narrative evidence.");
+assert.ok(rudraMainInfo.sections.some(section => section.title === "Ruta adicional de consulta licenciada" && section.text.includes("no páginas de la muestra")),
+  "Rudra's note must expose the new licensed route without claiming the sample was read.");
+assert.ok(rudraMainInfo.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ"),
+  "Rudra's dossier must link the Google Play Books sample route with its access limit.");
+assert.ok(rudraMainInfo.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1"),
+  "Rudra's dossier must keep the existing BOOK☆WALKER sample route reachable.");
 
 bell.history = "mutated";
 assert.notEqual(api.get("DM-CHAR-BELL").history, "mutated", "Callers must not mutate the shared dossier catalog.");
