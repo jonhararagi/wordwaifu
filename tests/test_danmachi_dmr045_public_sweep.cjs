@@ -12,6 +12,7 @@ const alfia = read("lore/danmachi/characters/dark-era/alfia.md");
 const erebus = read("lore/danmachi/characters/dark-era/erebus.md");
 const meteria = read("lore/danmachi/characters/dark-era/meteria.md");
 const queue = read("lore/danmachi/WORK_QUEUE.md");
+const masterIndex = read("lore/danmachi/MASTER_INDEX.md");
 
 function section(markdown, id) {
   const start = markdown.indexOf("### " + id + " ·");
@@ -83,6 +84,10 @@ assert.match(dmr045, /un segundo intento del mismo día por la URL normal/i);
 assert.match(queue, /DMR-045-SRC-023/);
 assert.match(queue, /DMR-045-SRC-024/);
 assert.match(queue, /DMR-045-SRC-025/);
+assert.match(queue, /DMR-045-SRC-026/);
+assert.match(queue, /DMR-045-SRC-027/);
+assert.ok(masterIndex.includes("DMR-045-SRC-018–027"), "the master index must reflect the current licensed-source range");
+assert.match(masterIndex, /BOOK☆WALKER/i);
 assert.match(erebus, /CONT-GAME/);
 assert.match(meteria, /no pronuncia el nombre Meteria/i);
 assert.match(queue, /Cotejar los localizadores primarios pendientes/i);
