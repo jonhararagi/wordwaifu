@@ -284,3 +284,12 @@
 - **Estado:** IMPLEMENTED, INTEGRATED y VALIDATED: PR [#135](https://github.com/jonhararagi/wordwaifu/pull/135), merge SHA `e63fbdaa8b8b757b67446aecbe0ffec1382e4562`.
 - **CI de la PR (head SHA `a10ba6062e6e6d5d11722625b132c569b66ccfb2`):** [Validate WordWaifu #3374](https://github.com/jonhararagi/wordwaifu/actions/runs/40232076731) y [DanMachi Lore and Retrieval Integrity #1766](https://github.com/jonhararagi/wordwaifu/actions/runs/40232076712), ambos `success`.
 - **CI post-merge sobre el SHA exacto `e63fbdaa8b8b757b67446aecbe0ffec1382e4562`:** [Validate WordWaifu #3377](https://github.com/jonhararagi/wordwaifu/actions/runs/40232214960) y [DanMachi Lore and Retrieval Integrity #1767](https://github.com/jonhararagi/wordwaifu/actions/runs/40232214899), ambos `success`.
+
+
+### CONV-DM-2026-10-25-011 — Sincronizar la prioridad activa con el bloque correcto de WORK_QUEUE
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED ON BRANCH; pendiente de CI e integración.
+- **Corrección encontrada:** WORK_QUEUE tenía un encabezado que decía DMR-045 como prioridad actual, pero debajo contenía el listado extenso de trabajo geográfico de Orario. Además, el resultado histórico del barrido secundario aún decía que Orario debía activarse inmediatamente, pese a la decisión posterior de volver a priorizar la verificación primaria.
+- **Cambio:** se creó un bloque de prioridad DMR-045 con las cinco tareas primarias, los límites comunes de SRC-018–028 y enlaces al registro de fuentes; el listado urbano fue renombrado como etapa posterior y el orden de Orario de 2026-10-24 quedó conservado como histórico/sustituido, no borrado.
+- **Prueba:** se ampliaron las regresiones para exigir ambos encabezados, comprobar los SRC-026/027/028 en la cola y rechazar la instrucción antigua que promovía Orario a prioridad siguiente.
+- **Sin cambios de canon:** no se añadieron IDs, relaciones ni claims de personajes. DMR-045 sigue abierto; las rutas de muestras permanecen metadata_checked_only cuando no se leyó narrativa.

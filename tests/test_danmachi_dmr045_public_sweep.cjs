@@ -50,7 +50,13 @@ assert.match(meteria, /dulce/);
 assert.match(sources, /DMR-045-CLM-015/);
 assert.match(sources, /DMR-045-CLM-018/);
 assert.match(queue, /Estado del subtrabajo.*DONE/i);
-assert.match(queue, /PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes/);
+assert.match(queue, /## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes/);
+assert.ok(queue.includes("## Etapa posterior — Orario y cobertura de la ciudad (pendiente tras DMR-045)"));
+assert.match(queue, /DMR-045-SRC-026/);
+assert.match(queue, /DMR-045-SRC-027/);
+assert.match(queue, /DMR-045-SRC-028/);
+assert.match(queue, /ninguna muestra consultada expuso páginas narrativas legibles/i);
+assert.doesNotMatch(queue, /Tras terminar este barrido secundario, activar la etapa de Orario como siguiente prioridad/i);
 assert.match(queue, /Cotejar los localizadores primarios pendientes/i);
 
 assert.match(dmr045, /DMR-045-SRC-018/);
