@@ -57,6 +57,14 @@ const rudraFamilia = sources.find(source => source.id === "community-rudra-famil
 assert.match(rudraFamilia.limits, /no prueba que el dios Rudra/i,
   "the source directory must distinguish a Familia action from personal responsibility by Rudra");
 
+const googlePlayVol14 = sources.filter(source => source.id === "licensed-preview-google-play-danmachi-vol14");
+assert.equal(googlePlayVol14.length, 1, "the licensed DanMachi vol. 14 retailer route must be discoverable exactly once");
+assert.equal(googlePlayVol14[0].category, "licensed_retailer");
+assert.equal(googlePlayVol14[0].url, "https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ");
+assert.match(googlePlayVol14[0].authority, /Free sample/);
+assert.match(googlePlayVol14[0].limits, /no páginas narrativas/i);
+assert.match(googlePlayVol14[0].limits, /no permite verificar la trampa de Rudra Familia/i);
+assert.match(googlePlayVol14[0].limits, /metadata_checked_only/);
 const googleBooksPreview = sources.filter(source => source.id === "licensed-preview-google-books-danmachi-vol20");
 assert.equal(googleBooksPreview.length, 1, "the authorized Google Books preview route must be discoverable exactly once");
 assert.equal(googleBooksPreview[0].category, "licensed_retailer");
