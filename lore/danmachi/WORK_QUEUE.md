@@ -54,7 +54,8 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - [x] Añadir entradas del diálogo ampliado por continuidad `CONT-AR` para Alfia y Zald; conservar las wikis como fuentes comunitarias, no oficiales ni equivalentes a texto primario.
 - [x] Añadir pruebas de API para fuentes, detalles de Genos Angelus y el ejemplo de Deus Ambrosia; verificar que estas notas no se exponen como perfiles de `CONT-MAIN-LN`.
 - [x] Añadir regresiones Playwright que buscan, abren y leen el diálogo “Más información” de ambas fichas en la aplicación real.
-- [ ] Ejecutar los workflows de PR y posintegración; registrar SHA y resultados exactos antes de marcar integrado.
+- [x] Ejecutar los workflows de PR y posintegración; ambos workflows pasaron tanto en la PR como en el SHA de `main`.
+- **Integración:** PR [#120](https://github.com/jonhararagi/wordwaifu/pull/120) integrada en `main` por SHA `742b0220590e45082972015684a0ecc6cbf14f04`. CI de PR y post-merge: Validate WordWaifu ([PR](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032458), [main](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145581)) y Lore Integrity ([PR](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032504), [main](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145583)), todos exitosos.
 - **Límite:** sin cambios a IDs, claims o aristas; DMR-045 sigue abierto para cotejo de localizadores primarios.
 
 ## Cobertura integrada del roster · DANMACHI-RESEARCH-036
