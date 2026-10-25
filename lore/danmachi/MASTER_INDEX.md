@@ -124,7 +124,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice maestro de personajes](characters/00-indice-personajes.md)
 - [Índice de deidades](canon/06-indice-deidades.md)
 - [Índice de Familias y organizaciones](familias/00-indice-familias.md)
-- [Índice de lugares](places/00-indice-lugares.md) — incluye el [Dungeon](places/dungeon.md) y las nuevas fichas parciales [Orario](places/orario.md), [Babel](places/babel.md) y [Hostess of Fertility](places/hostess-of-fertility.md), con continuidad de anime y límites de certeza explícitos.
+- [Índice de lugares](places/00-indice-lugares.md) — incluye el [Dungeon](places/dungeon.md), las fichas de [Orario](places/orario.md), [Babel](places/babel.md) y [Hostess of Fertility](places/hostess-of-fertility.md), y [Rivira](places/rivira.md), cuya entrada oficial se limita a `CONT-ANIME`.
 - [Familia Hestia](familias/hestia-familia.md)
 - [Familia Loki](familias/loki-familia.md)
 - [Familia Astrea](familias/astrea-familia.md) — expediente histórico parcial con fuentes y continuidad separadas.
