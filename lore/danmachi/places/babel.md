@@ -14,7 +14,9 @@ tags: [Babel, 摩天楼施設バベル, Guild, Dungeon, Orario]
 
 ## Identidad y función
 
-El glosario oficial de la web del anime identifica a Babel como el edificio más alto de Orario y lo describe como una instalación perteneciente a la Guild para supervisar y gestionar el Dungeon. La misma entrada menciona dependencias públicas, instalaciones comerciales y presencia de dioses en los pisos superiores.
+El glosario oficial de la web del anime identifica a Babel como el edificio más alto de Orario y lo describe como una instalación perteneciente a la Guild para supervisar y gestionar el Dungeon. La misma entrada menciona dependencias públicas, instalaciones comerciales y presencia de dioses en los pisos superiores. El glosario no afirma que la sede administrativa principal de la Guild esté dentro de Babel ni que Babel sea Pantheon.
+
+El contraste con el extracto editorial de novela principal está documentado en [DANMACHI-RESEARCH-051](../research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md): el texto indexado favorece distinguir Pantheon de la sede blanca de la Guild, pero no fija la relación física de ninguna de ellas con Babel. Por eso las relaciones oficiales de Babel se mantienen bajo `CONT-ANIME` y no se añade una arista de identidad o adyacencia.
 
 ## Detalles adicionales del relato Prototype (continuidad separada)
 
