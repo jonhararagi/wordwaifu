@@ -14,6 +14,9 @@
 
 - La ficha pública licenciada de [Google Books vol. 20](https://books.google.com/books?id=XWHEEQAAQBAJ) se comprobó también desde su lector normal ([vista previa pública](https://www.google.com/books/edition/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a/XWHEEQAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PT29)). El lector anuncia `Preview · 28 pages` y muestra `1 of 4`, pero las páginas consultadas devuelven `Something went wrong / Page didn't load`; no se obtiene texto narrativo legible.
 - Se actualizó el registro existente `DMR-045-SRC-018` y el directorio de fuentes para reflejar el fallo de renderizado. Sigue `metadata_checked_only`, con `claims_supported: []`; no se crean claims, relaciones ni localizadores a partir de la interfaz o del índice.
+- **Integrado en `main`:** [PR #135](https://github.com/jonhararagi/wordwaifu/pull/135), merge SHA `e63fbdaa8b8b757b67446aecbe0ffec1382e4562`.
+- **CI de la PR (head SHA `a10ba6062e6e6d5d11722625b132c569b66ccfb2`):** [Validate WordWaifu #3374](https://github.com/jonhararagi/wordwaifu/actions/runs/40232076731) y [DanMachi Lore and Retrieval Integrity #1766](https://github.com/jonhararagi/wordwaifu/actions/runs/40232076712), ambos `success`.
+- **CI post-merge sobre el SHA exacto `e63fbdaa8b8b757b67446aecbe0ffec1382e4562`:** [Validate WordWaifu #3377](https://github.com/jonhararagi/wordwaifu/actions/runs/40232214960) y [DanMachi Lore and Retrieval Integrity #1767](https://github.com/jonhararagi/wordwaifu/actions/runs/40232214899), ambos `success`.
 - **Pendiente:** localizar en una edición licenciada legible los pasajes individuales de Alfia, Zald, Meteria y Erebus y la evidencia narrativa que permita evaluar la atribución personal a Rudra. Los cinco huecos primarios de DMR-045 siguen abiertos.
 
 ## Filtro de alineamiento de personajes — integrado y validado (2026-10-25)
