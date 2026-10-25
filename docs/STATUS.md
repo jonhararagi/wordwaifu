@@ -2,13 +2,21 @@
 ## Estado operativo y verificación — 2026-10-24
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 176 registros activos; 29 IDs reservados; 130 documentos de apoyo.
-- **Grafo de conocimiento:** 256 relaciones explícitas; 256/256 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Corpus DanMachi:** 177 registros activos; 29 IDs reservados; 130 documentos de apoyo.
+- **Grafo de conocimiento:** 257 relaciones explícitas; 257/257 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 92 perfiles; 92/92 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
+
+## Orario — Rivira como asentamiento del Dungeon (2026-10-24)
+
+- Se incorporó `LOC-RIVIRA` con una afirmación nueva (DMR-026-CLM-004) recuperada del glosario oficial del anime, que ubica el asentamiento en el piso seguro 18 y resume su actividad comercial.
+- Se agregó una arista hacia `LOC-DUNGEON` bajo `CONT-ANIME`; no se conectó directamente a la ciudad de superficie `LOC-ORARIO` ni se trasladó la afirmación a `CONT-MAIN-LN`.
+- La entrada se indexó en el catálogo, el índice de lugares, la búsqueda de lore y el directorio de fuentes. Las pruebas nuevas exigen que la búsqueda la encuentre en `CONT-ANIME` y la excluya de `CONT-MAIN-LN`.
+- Fuente: [glosario oficial de lugares](https://danmachi.com/danmachi/special/index.html), entrada `リヴィラの街`. No aporta coordenadas ni un mapa del piso.
+- Estado de la tanda: pendiente de CI sobre PR y de verificación del SHA de `main` después de la integración.
 
 ## Orario — separación de Guild como organización (2026-10-24)
 

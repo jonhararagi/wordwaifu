@@ -49,6 +49,8 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Validador automático de catálogo](tools/check-catalog.mjs)
 
 ## Etapa 1 — PRIORIDAD ACTUAL: Orario como escenario
+- [Rivira](places/rivira.md) — asentamiento comercial del piso seguro 18 según el glosario oficial de adaptación; evidencia limitada a `CONT-ANIME`, sin coordenadas ni transferencia automática a la novela principal.
+
 - [Guild (organización)](familias/guild-organization.md) — nodo institucional `ORG-GUILD`; separado de la guía conceptual `DM-GUILD-001` y de los lugares físicos. La ubicación exacta de la sede y la relación Pantheon–Babel siguen pendientes.
 
 
@@ -122,7 +124,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice maestro de personajes](characters/00-indice-personajes.md)
 - [Índice de deidades](canon/06-indice-deidades.md)
 - [Índice de Familias y organizaciones](familias/00-indice-familias.md)
-- [Índice de lugares](places/00-indice-lugares.md) — incluye el [Dungeon](places/dungeon.md) y las nuevas fichas parciales [Orario](places/orario.md), [Babel](places/babel.md) y [Hostess of Fertility](places/hostess-of-fertility.md), con continuidad de anime y límites de certeza explícitos.
+- [Índice de lugares](places/00-indice-lugares.md) — incluye el [Dungeon](places/dungeon.md), las fichas de [Orario](places/orario.md), [Babel](places/babel.md) y [Hostess of Fertility](places/hostess-of-fertility.md), y [Rivira](places/rivira.md), cuya entrada oficial se limita a `CONT-ANIME`.
 - [Familia Hestia](familias/hestia-familia.md)
 - [Familia Loki](familias/loki-familia.md)
 - [Familia Astrea](familias/astrea-familia.md) — expediente histórico parcial con fuentes y continuidad separadas.
@@ -182,7 +184,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [DANMACHI-RESEARCH-010 · Familia Hestia: roster, funciones y límites de continuidad](research/inbox/DANMACHI-RESEARCH-010-hestia-familia-dossier.md) — seis afirmaciones rastreables, fuentes oficiales de adaptación y unknowns preservados.
 - [DANMACHI-RESEARCH-011 · Familia Loki: cargos, perfiles y red de relaciones](research/inbox/DANMACHI-RESEARCH-011-loki-familia-dossier.md) — ocho afirmaciones trazables y snapshot oficial de Sword Oratoria.
 - [DANMACHI-RESEARCH-012 · Familia Astrea: justicia, liderazgo y continuidad histórica](research/inbox/DANMACHI-RESEARCH-012-astrea-familia-dossier.md) — sinopsis editoriales oficiales, Alise como capitana y vacíos históricos explícitos.
-- [DANMACHI-RESEARCH-026 · Orario, Babel y Hostess of Fertility](research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md) — tres lugares con fuente oficial del anime, siete relaciones navegables y continuidad CONT-ANIME.
+- [DANMACHI-RESEARCH-026 · Orario, Babel, Hostess of Fertility y Rivira](research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md) — cuatro lugares con fuente oficial del anime y ocho relaciones navegables; Rivira está conectada al Dungeon bajo `CONT-ANIME`, sin inferir que sea un barrio de Orario de superficie.
 
 ## 5. Prioridades de verificación
 

@@ -67,11 +67,22 @@
 
 - **Fecha:** 2026-10-24.
 - **Tipo:** corrección de modelado, implementación y control de calidad.
-- **Estado al registrar:** implementado en rama de trabajo; la integración y la validación sólo se consignan tras comprobar las pruebas del PR y el SHA de `main`.
+- **Estado final:** integrado y validado el 2026-10-24 mediante el [PR #106](https://github.com/jonhararagi/wordwaifu/pull/106), SHA `dd61b90142e9e5f6382ab4456ff4f7316157b599`. CI posterior a la integración: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40140711145) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40140711295), ambos en verde sobre ese SHA.
 - **Requisito aplicado:** separar la organización Guild de la guía histórica compuesta y de cualquier edificio físico; la misma regla se aplica a la organización/personal de Hostess of Fertility y su lugar físico.
 - **Cambios:** `ORG-GUILD` y `ORG-HOSTESS` se tipan como `organization`; `DM-GUILD-001` conserva su ID estable como guía conceptual de tipo `setting`; las relaciones institucionales catalogadas se conectan a `ORG-GUILD`; las menciones del glosario de anime apuntan al mismo nodo organizativo.
 - **Límites preservados:** Babel conserva sus alcances `CONT-ANIME` y `CONT-PROTOTYPE`; Pantheon sigue siendo una referencia de la muestra parcial de la novela principal y la relación de sede es secundaria. No se crea una ubicación física independiente para la Guild ni se decide la identidad física Pantheon–Babel sin pasaje suficiente.
 - **Pruebas:** se amplía la regresión existente de grafo organizativo y se actualizan las expectativas del buscador; la aprobación final depende de CI del PR y de `main` tras la integración.
+
+### CONV-DM-2026-10-24-008 — Rivira añadida desde el glosario oficial de adaptación
+
+- **Fecha:** 2026-10-24.
+- **Tipo:** hallazgo de investigación, implementación y prueba de continuidad.
+- **Estado al registrar:** implementado en rama de trabajo; integración pendiente de CI y verificación del SHA final de `main`.
+- **Hallazgo:** el glosario oficial del anime ya utilizado en DMR-026 contiene una entrada de `リヴィラの街` (Rivira) que faltaba en el inventario del corpus. Describe una población en el piso seguro 18 del Dungeon y servicios comerciales orientados a aventureros.
+- **Cambios:** creado `LOC-RIVIRA`, añadido `DMR-026-CLM-004`, extendido `DMR-026-SRC-001`, registrada la arista `REL-RIVIRA-DUNGEON-SAFE-FLOOR-18`, actualizado el catálogo, el índice y el directorio de fuentes y añadida una regresión de recuperación.
+- **Continuidad y límites:** únicamente `CONT-ANIME`; la única arista geográfica nueva apunta a `LOC-DUNGEON`. No se infiere una conexión de superficie con `LOC-ORARIO`, coordenadas, mapa exacto ni equivalencia automática con `CONT-MAIN-LN`.
+- **Fuente:** https://danmachi.com/danmachi/special/index.html — entrada oficial de adaptación en japonés; consultada directamente durante esta tarea.
+- **Siguiente acción:** pasar CI de catálogo/recuperación y smoke de navegador, integrar si está verde y comprobar las acciones sobre el SHA de `main`.
 
 ## Plantilla para entradas futuras
 

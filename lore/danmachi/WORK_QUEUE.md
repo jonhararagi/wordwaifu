@@ -84,6 +84,7 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [ ] Localizar un pasaje narrativo de la novela publicada con capítulo/página; la sinopsis editorial no verifica la geografía interna de Orario ni completa esta tarea.
 - [x] Registrar como avance parcial el extracto de lectura de GA Bunko que describe una plaza semicircular al norte de Orario; el archivo directo no respondió y la paginación sigue pendiente, por lo que la tarea de localizador reproducible no se cierra.
 - [x] Separar el nodo organizativo `ORG-GUILD` de la guía conceptual histórica `DM-GUILD-001`; mover las aristas institucionales al nodo organizativo sin cambiar su continuidad ni su procedencia.
+- [x] Añadir `LOC-RIVIRA` como asentamiento del piso seguro 18 del Dungeon a partir del glosario oficial del anime (DMR-026-CLM-004); relación única al Dungeon bajo `CONT-ANIME`, sin inferir un barrio de superficie ni trasladarlo a la novela principal.
 - [ ] Completar el inventario de lugares de la ciudad con IDs estables y relaciones respaldadas; la resolución de la sede física de la Guild y del vínculo Pantheon–Babel permanece pendiente.
 - [ ] Verificar distritos, calles, accesos, orientación y mapas. Mantener las ubicaciones sin respaldo como esquema/pregunta; las wikis solo aportan pistas.
 - [ ] Analizar instituciones, Familias, población, vida cotidiana, comercio, abastecimiento y seguridad, afirmación por afirmación.

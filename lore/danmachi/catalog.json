@@ -649,6 +649,23 @@
       "priority": "critical"
     },
     {
+      "id": "LOC-RIVIRA",
+      "path": "places/rivira.md",
+      "type": "location",
+      "tags": [
+        "Rivira",
+        "Rivira Town",
+        "リヴィラの街",
+        "Dungeon",
+        "piso 18",
+        "zona segura",
+        "comercio de aventureros",
+        "CONT-ANIME"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
       "id": "CHAR-LILIRUCA-ARDE",
       "path": "characters/liliruca-arde.md",
       "type": "character",
@@ -7116,6 +7133,20 @@
       "claimRef": "DMR-045-CLM-016",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
       "note": "Arista de investigación, no confirmación de que la habilidad se use en el pasaje. No infiere mecánica, nivel, resultado ni página."
+    },
+    {
+      "id": "REL-RIVIRA-DUNGEON-SAFE-FLOOR-18",
+      "from": "LOC-RIVIRA",
+      "to": "LOC-DUNGEON",
+      "kind": "located_on_safe_floor",
+      "label": "Rivira se sitúa en el piso seguro 18 del Dungeon según el glosario oficial del anime",
+      "continuity": "CONT-ANIME",
+      "interval": "Descripción general del glosario; periodo narrativo exacto no establecido",
+      "evidenceStatus": "source_checked",
+      "evidenceType": "official_anime_glossary",
+      "claimRef": "DMR-026-CLM-004",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
+      "note": "Relación explícita en la referencia oficial de adaptación. No afirma que Rivira sea un barrio de la ciudad de superficie Orario ni confirma la misma configuración en CONT-MAIN-LN."
     }
   ]
 }
