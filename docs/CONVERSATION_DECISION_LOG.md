@@ -175,9 +175,12 @@
 
 ### CONV-DM-2026-10-25-002 — Añadir acceso editorial licenciado sin falsear la evidencia primaria
 - **Fecha:** 2026-10-25.
-- **Estado:** IMPLEMENTADO EN RAMA; pendiente de integración y CI.
+- **Estado:** INTEGRADO Y VALIDADO en `main`.
 - **Objetivo:** continuar mejorando la consulta de los expedientes históricos de Alfia, Zald, Erebus sin declarar resueltos los localizadores narrativos pendientes.
 - **Cambio:** registrar la ficha oficial de Yen Press / Yen On para *Astrea Record, Vol. 3* (ISBN 9781975379926; publicación indicada: 26 de noviembre de 2024) en el directorio de fuentes y exponerla en los tres expedientes interactivos.
 - **Límite obligatorio:** la fuente es metadato editorial y sinopsis general; no se usa como prueba de una escena, habilidad, relación, alias o alineamiento individual. DMR-045 permanece abierto y DMR-045-SRC-016 queda en `metadata_checked_only`, sin claims.
 - **Pruebas añadidas:** unicidad/URL/autoridad/límites del registro editorial y presencia del acceso licenciado en las tres fichas.
+- **PR integrada:** [#116](https://github.com/jonhararagi/wordwaifu/pull/116), merge commit `6efb50779b17924e7064876af75afa3cbd1d3b67`.
+- **CI de la PR, head SHA `7e903eb6eda4dae6f3d4c69d5af0257ce8eeddbb`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40196827871) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40196827863), ambas exitosas.
+- **CI post-merge sobre `main`, SHA exacto `6efb50779b17924e7064876af75afa3cbd1d3b67`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003502) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003501), ambas exitosas.
 - **Prioridad siguiente:** continuar el inventario de Orario y buscar localizadores narrativos reales; no deducir la topología Pantheon–Babel–Guild.
