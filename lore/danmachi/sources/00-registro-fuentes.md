@@ -967,13 +967,13 @@ verification_status: stub
 - volume_or_edition: Artículo web comunitario; actualización visible 2020-11-29
 - language: Japonés
 - official_url: https://w.atwiki.jp/danmachi/pages/53.html
-- accessed_at: 2026-10-20
+- accessed_at: 2026-10-24
 - locator_type: article_sections
-- locator: Sección 概要; murallas, ocho avenidas principales e industria de piedras mágicas
-- claims_supported: [DMR-031-CLM-003, DMR-031-CLM-004]
+- locator: Sección 概要; murallas y ocho avenidas principales, industria de piedras mágicas y párrafo sobre アモールの広場 (acceso por callejón desde la avenida principal suroeste, pavimento, flores e iluminación)
+- claims_supported: [DMR-031-CLM-003, DMR-031-CLM-004, DMR-031-CLM-011]
 - events_supported: []
 - continuity_scope: CONT-UNVERIFIED
-- reliability_note: Fuente secundaria útil para vocabulario japonés y preguntas de investigación. La fecha de actualización y la naturaleza comunitaria impiden usarla como verificación canónica.
+- reliability_note: Fuente secundaria útil para vocabulario japonés y preguntas de investigación. La fecha de actualización y la naturaleza comunitaria impiden usarla como verificación canónica de la novela.
 - conflicting_sources: []
 - rights_note: Resumen original en español, sin reproducir la descripción completa.
 - verified_by: DANMACHI-RESEARCH-031

@@ -13,6 +13,7 @@
 | [LOC-CENTRAL-PARK](central-park.md) | Central Park / plaza central | Avenidas principales, Babel, Dungeon | Parcial: aparece en el texto oficial Prototype; no trasladar automáticamente al canon publicado |
 | [LOC-ORARIO-MAIN-STREETS](main-streets.md) | Red de avenidas principales de Orario | Ciudad, Central Park, comercio de calle | Ocho direcciones documentadas sólo para la continuidad Prototype |
 | [LOC-PANTHEON](pantheon.md) | Pantheon — lugar mencionado en la novela principal | Orario, avenida comercial, Guild y Babel | Mención en extracto oficial de volumen 3 (`source_checked_excerpt_only`); identidad física pendiente |
+| [LOC-AMOR-SQUARE](amor-square.md) | Plaza del Amor (`アモールの広場`) | Orario, avenida principal suroeste (según wiki comunitaria) | Sólo evidencia secundaria (`CONT-UNVERIFIED`); localizador primario pendiente |
 | [LOC-APOLLO-MANOR](apollo-familia-mansion.md) | Mansión de Apollo Familia | Nueva residencia de Hestia Familia después del War Game | Parcial: transición respaldada en la adaptación; ubicación exacta pendiente |
 | [LOC-HOSTESS](hostess-of-fertility.md) | Hostess of Fertility | Orario, Familia Loki, personal de la taberna | Ficha parcial respaldada por el glosario oficial del anime |
 | [LOC-HESTIA-HOME](hestia-familia-church.md) | Antigua iglesia de Hestia Familia | Residencia inicial; destrucción antes del traslado posterior al War Game | Parcial: continuidad anime respaldada; causa y ubicación exacta pendientes |
@@ -28,9 +29,9 @@
 |---|---|---|---|
 | [LOC-RIVIRA](rivira.md) | Rivira / Rivira Town (リヴィラの街) | Población comercial del piso seguro 18 del Dungeon | Parcial; glosario oficial del anime, `CONT-ANIME`. No es un barrio de Orario de superficie ni un mapa exacto del piso. |
 
-## Candidatos de Orario encontrados en wikis (IDs aún no activados)
+## Candidatos de Orario que siguen pendientes de ficha propia
 
-El inventario secundario que queda por investigar incluye la tienda de Hephaistos, anfiteatro/Coliseo, área comercial, mercado libre, Plaza del Amor, cementerio de aventureros, distrito del entretenimiento, Hibachitei, Hearth Mansion, apartamento de Eina y una posada asociada a Hermes Familia. Pantheon, Daedalus Street y las dos residencias de Hestia Familia ya tienen fichas parciales con alcances de evidencia separados.
+El inventario secundario que queda por investigar incluye la tienda de Hephaistos, anfiteatro/Coliseo, área comercial, mercado libre, cementerio de aventureros, distrito del entretenimiento, Hibachitei, Hearth Mansion, apartamento de Eina y una posada asociada a Hermes Familia. Plaza del Amor ya tiene ficha exploratoria secundaria; Pantheon, Daedalus Street y las dos residencias de Hestia Familia tienen fichas parciales con alcances de evidencia separados.
 
 Estos nombres son **candidatos de investigación**, no nuevas entidades aprobadas. Antes de asignar IDs hay que comprobar su primera aparición, forma japonesa/nombre de edición, tipo real (lugar, institución, negocio o residencia), continuidad y estado temporal. Véase [DANMACHI-RESEARCH-031 — Orario: geografía y mapa](../research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md).
 

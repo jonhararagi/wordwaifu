@@ -93,13 +93,15 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [x] Recuperar pistas secundarias de geografía urbana, mapa, Guild/Pantheon y economía de wikis ES/EN/JA en [DANMACHI-RESEARCH-031](research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md), registrando fuente, localizador y límites.
 - [x] Crear ficha parcial de Daedalus Street con la mención oficial de DanMachi III, episodio 12, separando la geografía de wiki como secundaria.
 - [x] Crear una ficha secundaria de Pantheon como edificio atribuido a la Guild, separada de la organización en la navegación y sin elevarla a canon de novela.
-- [ ] Rastrear las referencias de las wikis hasta fuentes primarias y activar lugares/relaciones sólo después del cotejo; la triangulación secundaria no cierra la etapa.
+- [x] Crear ficha de exploración navegable de Plaza del Amor a partir de DMR-031-CLM-011; conservar nombre/entorno como evidencia secundaria y relación con Orario en `CONT-UNVERIFIED`.
+- [ ] Rastrear las referencias de las wikis hasta fuentes primarias; las fichas exploratorias secundarias no equivalen a verificación de la novela ni cierran la etapa.
 - [x] Registrar por separado la antigua iglesia y la mansión adquirida de Apollo Familia como residencias en CONT-ANIME, con la transición sustentada en la sinopsis oficial de DanMachi II, episodio 5.
 - [x] Recuperar del portal oficial Prototype los detalles de avenidas, Central Park, comercio de calle y usos de Babel en [DANMACHI-RESEARCH-034](research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md), manteniéndolos bajo CONT-PROTOTYPE.
 - [x] Localizar una mención de Pantheon en el extracto oficial de volumen 3 (capítulo I y folios 36–37 conservados por el índice) e integrarla como `source_checked_excerpt_only`.
 - [ ] Determinar con el pasaje completo si Pantheon, la sede de la Guild y Babel son ubicaciones distintas; el extracto indexado no resuelve su identidad física.
 - [x] Registrar la sinopsis editorial oficial de Sword Oratoria vol. 7 como evidencia separada de la investigación de Loki Familia sobre Daedalus Street (DMR-049, `CONT-SO-LN`).
 - [ ] Localizar la primera mención de Daedalus Street en la novela principal; DMR-049 no satisface esta tarea porque pertenece a Sword Oratoria.
+- [ ] Localizar el pasaje primario de `アモールの広場` (Plaza del Amor) con capítulo/página o localizador digital para confirmar la descripción y evaluar si algún dato puede asignarse a `CONT-MAIN-LN`.
 - [x] Registrar como claim independiente el relato corto oficial `迷宮街の恋愛話・裏` en `CONT-SHORT` (DMR-050); el PDF aún no se verificó visualmente.
 - [ ] Cotejar en CONT-MAIN-LN las ocho avenidas, Central Park, la zona comercial junto al Dungeon, los servicios de Babel y el límite comercial del piso veinte; no cerrar esos puntos usando sólo Prototype.
 - [ ] Localizar en fuente primaria la primera descripción de la iglesia y de la mansión, verificar quién destruyó la iglesia y establecer su ubicación urbana.

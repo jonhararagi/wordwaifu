@@ -20,7 +20,7 @@
    Describe Babel como una torre de 50 pisos construida sobre el Dungeon y presenta usos comerciales e instalaciones en distintos niveles. El número de pisos y la distribución interna se conservan como pistas secundarias; no se trasladan a la ficha canónica por repetición entre páginas.
 
 5. **ダンまち @ ウィキ, オラリオ** — https://w.atwiki.jp/danmachi/pages/53.html  
-   Wiki comunitaria japonesa cuyo texto describe Orario como ciudad circular amurallada, con ocho grandes avenidas radiales orientadas hacia los puntos cardinales e intercardinales, y relaciona su prosperidad con la industria de las piedras mágicas. La página visible indica una actualización de 2020; es útil como vocabulario y como hipótesis de búsqueda, no como verificación editorial.
+   Wiki comunitaria japonesa cuyo texto describe Orario como ciudad circular amurallada, con ocho grandes avenidas radiales orientadas hacia los puntos cardinales e intercardinales, relaciona su prosperidad con la industria de las piedras mágicas y sitúa secundariamente アモールの広場 (Plaza del Amor) a través de un callejón desde la avenida principal suroeste. La página visible indica una actualización de 2020; sus afirmaciones son pistas de investigación, no verificación editorial.
 
 6. **ダンまちデータベース @ ウィキ, オラリオ** — https://w.atwiki.jp/danmachi-world/pages/13.html  
    Índice breve de edificios principales (Babel, sede de la Guild y Hostess of Fertility) y una base de Familia identificada como la posada de Hermes. Su brevedad la hace útil para hallar nombres, no para resolver funciones o fechas.
@@ -189,11 +189,29 @@
 - spoiler_level: mild
 - confidence_note: La atribución de la destrucción a Apollo Familia queda secundaria; no convertirla en un hecho oficial sólo por coincidir con el contexto del War Game.
 
+
+### DMR-031-CLM-011 · Plaza del Amor y acceso desde la avenida suroeste (pista secundaria)
+
+- claim_id: DMR-031-CLM-011
+- claim: La wiki comunitaria japonesa identifica アモールの広場 (Plaza del Amor) como punto de encuentro para citas al que se llega por un callejón desde la avenida principal suroeste. Describe pavimento de piedras de varios colores, flores plantadas junto a setos y lámparas de piedra mágica que iluminan el lugar al anochecer. La descripción se registra como afirmación secundaria de la wiki, no como pasaje de novela cotejado.
+- aspect: nombre, acceso urbano, pavimento, vegetación e iluminación
+- era_or_interval: Descripción de artículo comunitario actualizado en 2020; periodo interno exacto no fijado
+- continuity_scope: CONT-UNVERIFIED
+- source_id: DMR-031-SRC-005
+- source_title: ダンまち @ ウィキ — オラリオ
+- source_type: COMMUNITY_WIKI
+- source_locator: Sección 概要, párrafo 南西のメインストリート / アモールの広場; descripción del pavimento, las flores y la iluminación nocturna
+- source_url: https://w.atwiki.jp/danmachi/pages/53.html
+- evidence_type: secondary_wiki_summary
+- verification_status: secondary_checked
+- spoiler_level: mild
+- confidence_note: La wiki comunitaria en español también etiqueta una Plaza del Amor en el diagrama de Orario (DMR-031-CLM-002), pero ese mapa no es confirmación primaria independiente. No se localizó capítulo/página de novela en esta tanda; mantener nombre, acceso y detalles bajo CONT-UNVERIFIED hasta cotejo.
+
 ## Inventario de lugares que merece rastreo
 
-**Ya tienen ficha en WordWaifu:** Orario, Dungeon, Babel y Hostess of Fertility.
+**Ya tienen ficha en WordWaifu:** Orario, Dungeon, Babel, Hostess of Fertility y Plaza del Amor (esta última sólo como pista secundaria; el localizador primario sigue pendiente).
 
-**Candidatos extraídos de los mapas y tablas comunitarios:** Pantheon/sede física de la Guild, iglesia abandonada, tienda noroeste de Hephaistos, anfiteatro/Coliseo, calle Daidalos, área comercial, mercado libre, Plaza del Amor, cementerio de aventureros, distrito del entretenimiento, Hibachitei, Hearth Mansion, apartamento de Eina y posada de Hermes Familia.
+**Candidatos extraídos de los mapas y tablas comunitarios aún sin ficha propia:** iglesia abandonada, tienda noroeste de Hephaistos, anfiteatro/Coliseo, calle Daidalos, área comercial, mercado libre, cementerio de aventureros, distrito del entretenimiento, Hibachitei, Hearth Mansion, apartamento de Eina y posada de Hermes Familia. Pantheon/sede física de la Guild y Plaza del Amor ya tienen fichas exploratorias, pero sus cuestiones primarias siguen abiertas.
 
 Esta lista no crea automáticamente fichas canónicas. Para cada candidato se debe: (1) localizar la primera aparición en una fuente primaria; (2) anotar volumen/capítulo/página o episodio/escena según continuidad; (3) comprobar su nombre original y alias; (4) decidir si es lugar, organización, negocio o residencia; (5) registrar estado por época cuando corresponda; y (6) activar una ficha y sus relaciones sólo cuando exista evidencia suficiente.
 
