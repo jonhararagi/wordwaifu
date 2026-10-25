@@ -550,3 +550,33 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Interpretación permitida:** queda registrada una ruta editorial de consulta autorizada. No es una escena leída ni un localizador de capítulo/página; la carga incompleta no prueba presencia o ausencia de un personaje.
 
 **Límite conjunto de SRC-020–022:** los tres enlaces son intentos de acceso a lectores públicos. Ninguno devolvió páginas narrativas; no se crean claims, relaciones ni localizadores a partir del número de volumen, el CID o el menú del lector. La verificación primaria de DMR-045 continúa abierta.
+
+
+## DMR-045-SRC-023 · Google Play Books — ficha y control de muestra de Astrea Record, volumen 1
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Google Play Books — Astrea Record, Vol. 1](https://play.google.com/store/books/details/Astrea_Record_Vol_1_Is_It_Wrong_to_Try_to_Pick_Up_?hl=en&id=M_3xEAAAQBAJ).
+- **Tipo:** ficha de producto de distribuidor licenciado; el escaparate consultado muestra el control “Free sample”.
+- **Resultado observado:** título, vendedor Yen Press LLC, 276 páginas y control de muestra. La extracción no expuso páginas narrativas ni un localizador individual.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** es una ruta legal adicional para comprobar manualmente la muestra mediante su flujo normal. No se afirma que el visor haya sido abierto ni que la muestra contenga una escena relacionada con los cinco expedientes. La disponibilidad puede variar por territorio/cuenta.
+
+## DMR-045-SRC-024 · Google Play Books — ficha y control de muestra de Astrea Record, volumen 2
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Google Play Books — Astrea Record, Vol. 2](https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_2_Is_It_Wrong_to_Tr?id=cLwFEQAAQBAJ).
+- **Tipo:** ficha de producto de distribuidor licenciado; el escaparate consultado muestra el estado “Eligible” y el control “Free sample”.
+- **Resultado observado:** título, vendedor Yen Press LLC, 296 páginas y control de muestra. La extracción no expuso páginas narrativas ni un localizador individual.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** es una ruta legal adicional para comprobar manualmente la muestra mediante su flujo normal. No se afirma que el visor haya sido abierto ni que la muestra contenga una escena relacionada con los cinco expedientes. La disponibilidad puede variar por territorio/cuenta.
+
+## DMR-045-SRC-025 · Google Play Books — ficha y disponibilidad territorial de Astrea Record, volumen 3
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Google Play Books — Astrea Record, Vol. 3](https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_3_Is_It_Wrong_to_Tr?id=Z0gVEQAAQBAJ).
+- **Tipo:** ficha de producto de distribuidor licenciado; el resultado de búsqueda mostraba “Free sample”, pero la página de producto recuperada con un escaparate localizado en Nueva Zelanda indicó “This item isn't available in your country”.
+- **Resultado observado:** no se expuso contenido de muestra ni páginas narrativas. El estado visible pertenece al escaparate consultado y no determina la disponibilidad en Argentina ni en otras regiones.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** conservar el enlace como ruta de consulta condicionada por territorio, sin afirmar que el usuario pueda acceder desde su región. No cambiar de territorio para sortear restricciones y no convertir un mensaje de disponibilidad en evidencia narrativa.
+
+**Límite conjunto de SRC-023–025:** las páginas y controles de muestra acreditan una vía posible de consulta minorista, no una lectura narrativa. Ningún claim de personaje ni localizador primario se genera desde estas páginas de producto.
