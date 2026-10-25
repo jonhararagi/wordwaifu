@@ -254,9 +254,11 @@
 
 ### CONV-DM-2026-10-25-008 — Rutas de muestra Google Play Books para Astrea Record 1–3
 - **Fecha:** 2026-10-25.
-- **Estado:** IMPLEMENTED on a work branch; pending pull-request validation and integration.
+- **Estado:** IMPLEMENTED, INTEGRATED and VALIDATED.
 - **Motivo:** continuar la búsqueda de texto primario en rutas licenciadas después de que los lectores japoneses de SB Creative/BinB no expusieran páginas narrativas.
 - **Resultado:** se identificaron las páginas públicas de Google Play Books para los tres volúmenes ingleses de Astrea Record. Las páginas de los volúmenes 1 y 2 anuncian una muestra gratuita, pero la extracción solo obtuvo metadatos y sinopsis editoriales. La página del volumen 3 presentó una variante regional que indica que el elemento no está disponible en esa región, aunque una ficha indexada distinta anuncia una muestra.
 - **Límites de evidencia:** los tres registros DMR-045-SRC-023–025 se conservan como metadata_checked_only, con claims_supported vacíos. No se atribuye presencia, acción o habilidad de ningún personaje a una página no leída; el estado regional no se interpreta como indisponibilidad global.
-- **Integración prevista:** directorio de fuentes de la aplicación, DMR-045, registro central de fuentes, cola, índice maestro y pruebas de regresión de fuentes/continuidad.
+- **Integración comprobada:** [PR #129](https://github.com/jonhararagi/wordwaifu/pull/129), merge SHA f450e98426c38c9c54b0c9befc6a1e5388ea99ac. CI de la cabeza 77cfd88def764f42ed60dc5a8360512074c848d2: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737355) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737354), ambos success. CI post-merge sobre el SHA exacto f450e98426c38c9c54b0c9befc6a1e5388ea99ac: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879793) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879958), ambos success, incluida la prueba de navegador y la validación de catálogo/enlaces.
+- **Nota de corrección de pruebas:** la primera ejecución detectó que el test buscaba SRC-023/SRC-024/SRC-025 por separado, mientras la cola usaba la abreviatura 023–025. Se cambió la cola a enumeración explícita y la nueva ejecución pasó ambos workflows.
+- **Documentos integrados:** directorio de fuentes de la aplicación, DMR-045, registro central de fuentes, cola, índice maestro, estado y pruebas de regresión de fuentes/continuidad.
 - **Prioridad vigente:** continuar el cotejo primario de los cinco expedientes de DMR-045; Orario permanece en cola.
