@@ -144,3 +144,14 @@
 - **Validación de PR:** [Validate WordWaifu #3236](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859509); [DanMachi Lore and Retrieval Integrity #1689](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859538) — ambas exitosas.
 - **Validación posterior a la integración, exacto SHA de `main`:** [Validate WordWaifu #3237](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959234); [DanMachi Lore and Retrieval Integrity #1690](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959233) — ambas exitosas.
 - **Pendiente:** no cambia IDs, relaciones ni niveles de evidencia. Los localizadores primarios de Alfia, Zald, Meteria, Erebus y la atribución personal de Rudra siguen abiertos.
+
+
+### CONV-DM-2026-10-24-013 — Separar acusación de Zanis y destino de Canoe en fichas UI
+- **Fecha:** 2026-10-24.
+- **Estado:** IMPLEMENTADO; validación e integración pendientes.
+- **Objetivo:** corregir la lectura cruzada entre Liliruca, Canoe Belway, Zanis Lustra y Chandra Ihit en la capa interactiva, conservando los estados `secondary_checked` de DMR-046.
+- **Corrección:** DMR-046-CLM-007 registra el destino de Canoe según una fuente comunitaria; DMR-046-CLM-005 registra la acusación que una sinopsis comunitaria de volumen 6 atribuye a Zanis. La acusación no demuestra culpabilidad de Lili, conocimiento cierto de Zanis ni el destino de Canoe.
+- **Fuentes editoriales enlazadas y límite:** se reutilizan las páginas ya registradas de volumen 2 y volumen 6 (`https://ga.sbcr.jp/product/9784797373073/`, `https://ga.sbcr.jp/product/9784797380583/`) solo para su contexto editorial. Las sinopsis generales no verifican a Canoe, la acusación de Zanis ni la intervención personal de Chandra.
+- **Archivos afectados:** `src/character-dossiers.js`, `tests/test_lore_corpus.cjs`, DMR-046, `lore/danmachi/WORK_QUEUE.md` y `docs/STATUS.md`.
+- **Decisión de continuidad:** no modificar IDs ni aristas, no promocionar afirmaciones secundarias ni cerrar el conflicto por preferencia de una wiki. Los pasajes primarios legítimos de volúmenes 2 y 6 siguen pendientes.
+- **Estado de ejecución:** lote preparado en `work/soma-canoe-zanis-character-evidence-2026-10-24`; se registrarán PR, SHA integrado y CI exacto tras la verificación.
