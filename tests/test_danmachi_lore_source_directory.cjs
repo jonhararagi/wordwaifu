@@ -88,4 +88,23 @@ for (const [label, rows, url] of [
   assert.match(rows[0].limits, /No inferir presencia o ausencia/i);
 }
 
+const googlePlayAstrea1 = sources.filter(source => source.id === "licensed-preview-google-play-astrea-record-vol1");
+const googlePlayAstrea2 = sources.filter(source => source.id === "licensed-preview-google-play-astrea-record-vol2");
+const googlePlayAstrea3 = sources.filter(source => source.id === "licensed-preview-google-play-astrea-record-vol3");
+for (const [label, rows, url] of [
+  ["Astrea Record 1 Google Play", googlePlayAstrea1, "https://play.google.com/store/books/details/Astrea_Record_Vol_1_Is_It_Wrong_to_Try_to_Pick_Up_?hl=en&id=M_3xEAAAQBAJ"],
+  ["Astrea Record 2 Google Play", googlePlayAstrea2, "https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_2_Is_It_Wrong_to_Tr?id=cLwFEQAAQBAJ"],
+  ["Astrea Record 3 Google Play", googlePlayAstrea3, "https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_3_Is_It_Wrong_to_Tr?id=Z0gVEQAAQBAJ"]
+]) {
+  assert.equal(rows.length, 1, label + " sample/storefront route must be discoverable exactly once");
+  assert.equal(rows[0].category, "licensed_retailer");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].limits, /No se ha leído una página narrativa|No se ha leído contenido de la muestra/i);
+  assert.match(rows[0].limits, /territorio/i);
+}
+assert.match(googlePlayAstrea1[0].coverage, /Free sample/);
+assert.match(googlePlayAstrea2[0].coverage, /Free sample/);
+assert.match(googlePlayAstrea3[0].coverage, /This item isn't available in your country/);
+assert.match(googlePlayAstrea3[0].limits, /No cambiar de territorio/i);
+
 console.log("DanMachi source directory: secondary references and authorized preview limits validated.");
