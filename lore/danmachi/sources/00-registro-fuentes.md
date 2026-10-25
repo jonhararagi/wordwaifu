@@ -3213,3 +3213,25 @@ verification_status: stub
 - rights_note: Enlace y metadatos únicamente; no se ha extraído texto.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-028 · Google Play Books — DanMachi vol. 14
+- source_id: DMR-045-SRC-028
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 14 (light novel)
+- creator_or_publisher: Google Play Books / Yen Press LLC
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 14, edición inglesa; ISBN 9781975385019
+- language: Inglés
+- official_url: https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ
+- accessed_at: 2026-10-25
+- locator_type: product_metadata_and_sample_offer
+- locator: El resultado público anuncia “Free sample”; la extracción de la página devolvió sinopsis/metadatos, pero ninguna página narrativa o folio.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Ruta autorizada relacionada con el volumen 14 donde wikis citan un localizador de la retrospectiva de Rudra Familia. La sinopsis editorial no sustituye la escena, no verifica el capítulo 13 y no demuestra que Rudra personalmente ordenara o conociera el plan.
+- conflicting_sources: []
+- rights_note: Enlace y metadatos únicamente; no se accedió a contenido protegido ni se intentó eludir la muestra.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
