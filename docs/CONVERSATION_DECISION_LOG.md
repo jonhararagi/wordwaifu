@@ -239,3 +239,12 @@
 - **Validate WordWaifu:** [ejecución post-merge](https://github.com/jonhararagi/wordwaifu/actions/runs/40222827902) — success.
 - **DanMachi Lore and Retrieval Integrity:** [ejecución post-merge](https://github.com/jonhararagi/wordwaifu/actions/runs/40222827809) — success; completó browser smoke y validación de catálogo/enlaces.
 - **Resultado:** PR #122 está integrada y validada sobre el SHA indicado; el cotejo primario de DMR-045 sigue abierto.
+
+
+### CONV-DM-2026-10-25-007 — Registrar muestras editoriales consultadas por volumen sin confundir acceso con lectura
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED en rama de trabajo; integración pendiente de CI.
+- **Resultado de investigación:** los lectores públicos de SBCr eBook Store asociados a Astrea Record 1, 2 y 3 devolvieron “Now loading...” y controles de menú, sin página narrativa visible. Se preparan los registros DMR-045-SRC-020/021/022 como metadata_checked_only, sin claims, eventos ni localizadores individuales.
+- **Regla reforzada:** el registro de una ruta editorial legal no equivale a leer el texto; un visor que queda cargando no demuestra ausencia de un personaje y no cierra DMR-045.
+- **Archivos afectados:** src/lore-corpus.js, pruebas de directorio y barrido de DMR-045, auditoría DMR-045, registro central de fuentes, WORK_QUEUE, MASTER_INDEX y STATUS.
+- **Orden vigente:** continuar el cotejo primario de los cinco expedientes; Orario sigue en cola.
