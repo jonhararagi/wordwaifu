@@ -674,6 +674,13 @@ assert.ok(index.relationships.some(edge => edge.id === "REL-PANTHEON-ORARIO-MAIN
 assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-volume-03-trial" && source.url === "https://ga.sbcr.jp/sp/danmachi/trial03.pdf" && source.limits.includes("Babel")), "The official volume 3 preview must be available in the source browser with the building-identity limitation.");
 const pantheonPrototypeSearch = corpus.search(index, { query: "Pantheon avenida tiendas Guild", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(!pantheonPrototypeSearch.results.some(item => item.claimId === "DMR-048-CLM-001"), "The main-novel Pantheon claim must not leak into Prototype continuity.");
+// DMR-051 reconciles the partial publisher excerpt with a conflicting community description without inventing physical edges.
+assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md"), "DMR-051 must be part of the default interactive research corpus.");
+assert.ok(catalog.documents.some(doc => doc.document_id === "DOC-DANMACHI-RESEARCH-051" && doc.path === "research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md" && doc.status === "source_checked_partial"), "DMR-051 must be registered with partial-evidence status.");
+const pantheonConflict = catalog.relationships.find(edge => edge.id === "REL-PANTHEON-GUILD-HEADQUARTERS-SECONDARY");
+assert.ok(pantheonConflict && pantheonConflict.continuity === "CONT-UNVERIFIED" && pantheonConflict.evidenceStatus === "secondary_checked" && pantheonConflict.note.includes("DMR-051") && pantheonConflict.note.includes("No prueba distancia"), "The wiki's Pantheon-as-headquarters claim must remain secondary and explicitly bounded by DMR-051.");
+const pantheonMainNoWikiLeak = corpus.search(index, { query: "Pantheon Guild edificio biblioteca", continuity: "CONT-MAIN-LN", period: "ALL", aspect: "all", spoiler: "all" });
+assert.ok(!pantheonMainNoWikiLeak.results.some(item => item.claimId === "DMR-031-CLM-006"), "The community claim that Pantheon is Guild headquarters must not be promoted into main-novel continuity.");
 
 // DMR-049: Sword Oratoria vol. 7 synopsis is searchable only in CONT-SO-LN, without promoting it to main LN.
 assert.ok(corpus.getDefaultResearchPaths().includes("research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md"), "DMR-049 must be in the default research manifest.");
