@@ -15,6 +15,22 @@ const profilePaths = catalog.records
   .map(record => record.path);
 const profileDocuments = profilePaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const index = corpus.buildIndex(catalog, documents, profileDocuments);
+
+const riviraRecord = catalog.records.find(record => record.id === "LOC-RIVIRA");
+assert.ok(riviraRecord && riviraRecord.type === "location" && riviraRecord.path === "places/rivira.md" && riviraRecord.status === "source_checked_partial", "Rivira must be a separately navigable location record.");
+const riviraMarkdown = fs.readFileSync(path.join(root, "places/rivira.md"), "utf8");
+assert.ok(riviraMarkdown.includes("DMR-026-CLM-004") && riviraMarkdown.includes("continuity_scope: CONT-ANIME") && riviraMarkdown.includes("no como un barrio"), "Rivira's dossier must preserve the official-adaptation scope and surface-city limit.");
+const riviraClaim = index.claims.find(item => item.claimId === "DMR-026-CLM-004");
+assert.ok(riviraClaim && riviraClaim.verificationStatus === "source_checked" && riviraClaim.continuityScopes.includes("CONT-ANIME") && riviraClaim.sourceIds.includes("DMR-026-SRC-001"), "Rivira's official glossary claim must stay source-linked and adaptation-scoped.");
+const riviraEdge = index.relationships.find(edge => edge.id === "REL-RIVIRA-DUNGEON-SAFE-FLOOR-18");
+assert.ok(riviraEdge && riviraEdge.from === "LOC-RIVIRA" && riviraEdge.to === "LOC-DUNGEON" && riviraEdge.continuity === "CONT-ANIME" && riviraEdge.evidenceStatus === "source_checked" && riviraEdge.claimRef === "DMR-026-CLM-004", "Rivira must link to the Dungeon floor with the matching claim and continuity.");
+assert.ok(!index.relationships.some(edge => edge.from === "LOC-RIVIRA" && edge.to === "LOC-ORARIO"), "The evidence must not imply that Rivira is a surface district of Orario.");
+const riviraAnimeSearch = corpus.search(index, {query:"Rivira piso seguro 18 tienda",continuity:"CONT-ANIME",period:"ALL",aspect:"all",spoiler:"all",verificationStatus:"source_checked"});
+assert.ok(riviraAnimeSearch.results.some(item => item.claimId === "DMR-026-CLM-004"), "Rivira must be discoverable through the interactive lore retrieval.");
+const riviraMainNovelSearch = corpus.search(index, {query:"Rivira piso seguro 18 tienda",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(!riviraMainNovelSearch.results.some(item => item.claimId === "DMR-026-CLM-004"), "Rivira's anime glossary claim must not leak into main-light-novel continuity.");
+const officialLocationGlossary = corpus.getOnlineSourceDirectory().find(source => source.id === "official-anime-location-glossary");
+assert.ok(officialLocationGlossary && officialLocationGlossary.url === "https://danmachi.com/danmachi/special/index.html" && String(officialLocationGlossary.limits).includes("CONT-ANIME"), "The official place glossary must be discoverable in the source browser with continuity limits.");
 const plainFieldFixture = [
   "### DMR-998-CLM-001 · Metadata sin backticks",
   "- claim_id: DMR-998-CLM-001",
