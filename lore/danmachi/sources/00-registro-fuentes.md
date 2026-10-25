@@ -3083,3 +3083,66 @@ verification_status: stub
 - rights_note: Enlace y observación de interfaz solamente; no se ha extraído la novela.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+## DMR-045-SRC-023 · Google Play Books — muestra de Astrea Record, volumen 1
+- source_id: DMR-045-SRC-023
+- title: Astrea Record: Is It Wrong to Try to Pick Up Girls in a Dungeon? Tales of Heroes, Vol. 1
+- creator_or_publisher: Yen Press LLC; Google Play Books
+- source_type: LICENSED_RETAILER_SAMPLE_CONTROL
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 1, edición inglesa digital
+- language: Inglés (ficha y sinopsis)
+- official_url: https://play.google.com/store/books/details/Astrea_Record_Vol_1_Is_It_Wrong_to_Try_to_Pick_Up_?hl=en&id=M_3xEAAAQBAJ
+- accessed_at: 2026-10-25
+- locator_type: licensed_product_page_and_sample_control
+- locator: La ficha muestra el vendedor Yen Press LLC, 276 páginas y “Free sample”; la extracción no expuso páginas narrativas.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: La página del producto y el control de muestra no equivalen a texto leído. La disponibilidad del lector puede variar por territorio/cuenta.
+- conflicting_sources: []
+- rights_note: Enlace a la tienda y descripción limitada de los controles visibles; no se extrae el ebook.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-024 · Google Play Books — muestra de Astrea Record, volumen 2
+- source_id: DMR-045-SRC-024
+- title: Astrea Record: Is It Wrong to Try to Pick Up Girls in a Dungeon? Tales of Heroes, Vol. 2
+- creator_or_publisher: Yen Press LLC; Google Play Books
+- source_type: LICENSED_RETAILER_SAMPLE_CONTROL
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 2, edición inglesa digital
+- language: Inglés (ficha y sinopsis)
+- official_url: https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_2_Is_It_Wrong_to_Tr?id=cLwFEQAAQBAJ
+- accessed_at: 2026-10-25
+- locator_type: licensed_product_page_and_sample_control
+- locator: La ficha muestra el vendedor Yen Press LLC, 296 páginas y “Free sample”; la extracción no expuso páginas narrativas.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: La página del producto y el control de muestra no equivalen a texto leído. La disponibilidad del lector puede variar por territorio/cuenta.
+- conflicting_sources: []
+- rights_note: Enlace a la tienda y descripción limitada de los controles visibles; no se extrae el ebook.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-025 · Google Play Books — muestra de Astrea Record, volumen 3
+- source_id: DMR-045-SRC-025
+- title: Astrea Record: Is It Wrong to Try to Pick Up Girls in a Dungeon? Tales of Heroes, Vol. 3
+- creator_or_publisher: Yen Press LLC; Google Play Books
+- source_type: LICENSED_RETAILER_SAMPLE_CONTROL
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 3, edición inglesa digital
+- language: Inglés (ficha y sinopsis)
+- official_url: https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_3_Is_It_Wrong_to_Tr?id=Z0gVEQAAQBAJ
+- accessed_at: 2026-10-25
+- locator_type: licensed_product_page_and_region_availability
+- locator: El resultado de búsqueda muestra “Free sample”; la ficha abierta con el escaparate localizado en Nueva Zelanda indica “This item isn't available in your country”. No se accedió a páginas narrativas.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: La limitación de disponibilidad es específica del escaparate consultado y no determina el acceso desde Argentina u otros países. No se debe cambiar de territorio para sortear restricciones; no hay claims narrativos respaldados.
+- conflicting_sources: []
+- rights_note: Enlace a la tienda y estado de la ficha únicamente; no se descarga ni reproduce el ebook.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
