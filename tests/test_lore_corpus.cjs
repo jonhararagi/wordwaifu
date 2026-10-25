@@ -789,7 +789,8 @@ assert.ok(uiErebus.appearance.includes("Absolute Evil") && uiErebus.appearance.i
   uiErebus.personality.includes("CONT-GAME") && uiErebus.sources.includes("https://ln-news.com/articles/109766"),
   "Erebus's reported nickname and ideology must be visible with the correct game-continuity and editorial-source limits.");
 const erebusLoreDossier = fs.readFileSync(path.join(root, "characters", "dark-era", "erebus.md"), "utf8");
-assert.ok(/^aliases: \\[Erebus\\]$/m.test(erebusLoreDossier) && !/^aliases:.*Eren/m.test(erebusLoreDossier),
+const erebusFrontMatter = erebusLoreDossier.split("---")[1] || "";
+assert.ok(erebusFrontMatter.includes("aliases: [Erebus]") && !erebusFrontMatter.includes("Eren"),
   "The unverified wiki label Eren must not leak into the canonical alias list.");
 const uiRudra = uiCharacterDossiers.get("CHAR-DARK-RUDRA");
 assert.ok(uiRudra.appearance.includes("piel oscura") && uiRudra.appearance.includes("secundaria") &&
