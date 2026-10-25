@@ -299,3 +299,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI post-merge sobre main, SHA exacto ba6363bce1b651a74ebfa9b782fb7e38f8804eef:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40222827902) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40222827809), ambas success. La segunda completó browser smoke, la validación de catálogo/enlaces y la subida de capturas.
 - **Estado de la investigación:** las notas y las pruebas de UI están integradas; DMR-045 sigue abierto por localizadores de texto primario para los cinco expedientes.
 - **Próxima prioridad aceptada:** continuar el cotejo primario de DMR-045 antes de retomar la expansión del escenario de Orario.
+
+
+## DMR-045 — tres rutas oficiales de muestra SB Creative (2026-10-25)
+
+- Se consultaron los enlaces públicos del lector BinB de SBCr eBook Store asociados a Astrea Record 1, 2 y 3: 81561017JAAA01MBJE3X, 81561018JAAA02MBJE3X y 81561019JAAA03MBJE3X.
+- Las tres extracciones devolvieron “Now loading...” y controles de interfaz (bibliografía, índice, búsqueda, avance automático, lectura por voz, ajustes), sin páginas narrativas legibles. Se registran como DMR-045-SRC-020/021/022, metadata_checked_only, con claims_supported vacío y continuidad CONT-AR.
+- Se añadieron las rutas al directorio consultable y regresiones para impedir que se traten como capítulos, páginas o pruebas de apariciones individuales.
+- **Estado:** el intento de acceso está registrado; no completa el cotejo primario. La prioridad permanece DMR-045 y siguen abiertos los cinco expedientes.
+- **PR #126 integrada:** [merge SHA 580fe272cb07cb10ad33e5648350840b63d41604](https://github.com/jonhararagi/wordwaifu/commit/580fe272cb07cb10ad33e5648350840b63d41604). CI post-merge de ese SHA: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40225402605) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40225402638), ambas exitosas, incluida prueba de navegador y catálogo/enlaces.
