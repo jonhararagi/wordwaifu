@@ -59,9 +59,10 @@
 - **Tipo:** resultado de investigación y actualización de prioridad.
 - **Resultado:** se revisaron las páginas públicas ya registradas de DanMachi Wiki EN/ES, la nota autoral directa y la entrevista pública de Dengeki. Se añadió a la ficha de Alfia una pista secundaria que indexa una aparición retrospectiva en el volumen 20 y se preservó como no resuelta la identidad de la maga del prólogo; el detalle del árbol sagrado permanece secundario porque no se cotejó el pasaje subyacente. Se registró la caracterización ideológica de Erebus bajo CONT-GAME y el recuerdo de la comida de Meteria únicamente bajo CONT-AU. La información pública del plan posterior de Jura ya se encuentra en DMR-043 y su ficha; no se duplicó. No se encontró evidencia pública que atribuya a Rudra personalmente la orden o conocimiento del plan de su Familia.
 - **Estado factual:** el barrido de fuentes secundarias consultables queda completado; la investigación DMR-045 no está completa a nivel primario y conserva pendientes de capítulo/página o localizador digital.
-- **Cambio de prioridad:** Orario pasa a ser la prioridad de trabajo activa. Los pendientes primarios de DMR-045 se conservan para retomarlos si aparece un texto licenciado accesible.
+- **Cambio de prioridad registrado el 2026-10-24 (histórico; revisado el 2026-10-25):** en ese momento Orario se anotó como etapa inmediata, mientras se conservaban los pendientes primarios de DMR-045.
+- **Revisión de prioridad (2026-10-25):** la instrucción más reciente vuelve a priorizar el cotejo de texto primario de Alfia, Zald, Meteria, Erebus y Rudra antes de ampliar Orario. La prioridad de Orario registrada en este resultado histórico queda sustituida como orden de ejecución vigente por CONV-DM-2026-10-25-006; no se borra el resultado del barrido secundario ni sus límites.
 - **Documentos afectados:** DMR-045, DMR-029, registro maestro de fuentes, fichas Alfia/Erebus/Meteria, WORK_QUEUE.md, MASTER_INDEX.md y STATUS.md.
-- **Siguiente acción:** continuar la etapa Orario sin trasladar datos de Prototype, anime, juego o wikis a CONT-MAIN-LN sin verificación.
+- **Siguiente acción vigente:** cotejar localizadores primarios verificables de DMR-045; Orario permanece en cola para retomarse después, sin trasladar datos de Prototype, anime, juego o wikis a CONT-MAIN-LN sin verificación.
 
 ### CONV-DM-2026-10-24-007 — Tipos de entidad de Guild y lugares de Orario
 
