@@ -57,13 +57,14 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Ficha central de Orario](places/orario.md) y [índice maestro de lugares](places/00-indice-lugares.md).
 - [DANMACHI-RESEARCH-031 — Geografía, mapa y pistas comunitarias](research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md).
 - [Daedalus Street](places/daedalus-street.md) — mención respaldada en la adaptación anime; geometría y funciones urbanas secundarias.
-- [Pantheon](places/pantheon.md) — ficha provisional secundaria; pendiente cotejo de la sede física de la Guild.
+- [Pantheon](places/pantheon.md) — ficha con evidencia primaria parcial y discrepancia secundaria explícita; falta cotejo visual y relación física con Babel.
 - [Plaza del Amor](places/amor-square.md) — ficha navegable a partir de una wiki comunitaria japonesa (`CONT-UNVERIFIED`); ubicación detallada y primera mención en novela pendientes.
 - [Red de avenidas principales](places/main-streets.md) y [Central Park](places/central-park.md) — basadas en el texto oficial Prototype, con continuidad aislada.
 - [DANMACHI-RESEARCH-034 — avenidas, comercio y Babel en Prototype](research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md) — nueve claims con localizadores de los episodios oficiales 3, 16 y 26.
 - [DANMACHI-RESEARCH-035 — Orario y Dungeon en la sinopsis editorial del volumen 1](research/inbox/DANMACHI-RESEARCH-035-orario-volume1-publisher-synopsis.md) — confirma solo el marco general de la novela principal; no es un pasaje narrativo.
 - [DANMACHI-RESEARCH-047 — Plaza semicircular al norte de Orario en una muestra editorial](research/inbox/DANMACHI-RESEARCH-047-orario-north-plaza-volume2-preview.md) y [ficha del lugar](places/north-plaza.md) — extracto parcial de la novela principal; sin página/capítulo verificados, no sustituye el mapa completo.
-- [DANMACHI-RESEARCH-048 — Pantheon y la avenida comercial en una muestra del volumen 3](research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md) y [ficha de Pantheon](places/pantheon.md) — mención primaria recuperada del índice del PDF; relación con la sede de la Guild y Babel sin resolver.
+- [DANMACHI-RESEARCH-048 — Pantheon y la avenida comercial en una muestra del volumen 3](research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md) y [ficha de Pantheon](places/pantheon.md) — mención primaria recuperada del índice del PDF.
+- [DANMACHI-RESEARCH-051 — Contraste Pantheon/sede de la Guild/Babel](research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md) — el orden narrativo indexado favorece separar Pantheon de la sede; la ubicación física exacta respecto de Babel sigue abierta.
 - [DANMACHI-RESEARCH-039 — Inventario de lugares del Prototype](research/inbox/DANMACHI-RESEARCH-039-orario-prototype-location-inventory.md) — tres rutas urbanas parciales con claims DMR-034 y continuidad aislada `CONT-PROTOTYPE`.
 - [Antigua iglesia de Hestia Familia](places/hestia-familia-church.md) y [mansión de Apollo Familia](places/apollo-familia-mansion.md) — residencias físicas distintas enlazadas por la transición oficial de DanMachi II, episodio 5.
 - [DANMACHI-RESEARCH-033 — residencias de Hestia Familia](research/inbox/DANMACHI-RESEARCH-033-hestia-familia-residences.md).
