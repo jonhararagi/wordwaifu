@@ -3213,3 +3213,26 @@ verification_status: stub
 - rights_note: Enlace y metadatos únicamente; no se ha extraído texto.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-028 · BOOK☆WALKER — muestra de DanMachi, volumen 14
+- source_id: DMR-045-SRC-028
+- title: ダンジョンに出会いを求めるのは間違っているだろうか１４ — 試し読み
+- creator_or_publisher: BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_SAMPLE
+- series: DanMachi
+- volume_or_edition: Volumen 14, edición japonesa de la novela principal
+- language: Japonés
+- official_url: https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1
+- product_page: https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_route_and_network_error
+- locator: La ficha pública anuncia 試し読み. La ruta normal redirigió a viewer-trial y devolvió “Could not download. Please check your network connection.” No se obtuvo página narrativa ni localizador de capítulo/página.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Registro de acceso/metadatos únicamente. No respalda DMR-045-CLM-013/014 ni demuestra que falten escenas o personajes; el error puntual no implica indisponibilidad global. La página exacta del capítulo 13 y del epílogo sigue pendiente.
+- conflicting_sources: []
+- rights_note: Se conservan URL y resultado del intento normal; no se copió texto narrativo ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
