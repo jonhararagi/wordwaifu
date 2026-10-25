@@ -633,3 +633,12 @@ select{background:#332d26;color:#e9dfd2}
 .story-review-suggestions ul{margin:5px 0;padding-left:20px;color:var(--muted);line-height:1.7}
 .story-review-clean,.story-review-empty{margin:0;padding:12px;border:1px dashed var(--line);border-radius:9px;color:var(--muted);font-size:12px;line-height:1.6}
 @media(max-width:650px){.story-review-panel{padding:12px}.story-review-heading{display:grid}.story-review-actions{align-items:stretch}.story-review-actions label{min-width:0;width:100%}.story-review-actions button{width:100%}}
+
+/* Interpretive character alignment: separate moral and conduct axes, visibly provisional. */
+.archive-alignment-section{padding:15px;border:1px solid #31453b;border-radius:14px;background:linear-gradient(145deg,#15231d,#111820)}
+.archive-alignment-section .archive-section-heading h3{font-size:16px}
+.archive-alignment-section .archive-section-heading p{font-size:10px}
+.archive-alignment-section>p{margin:0;color:#d0d9d6;font-size:12px;line-height:1.75;overflow-wrap:anywhere}
+.archive-alignment-alternative{padding:11px 12px;border-left:3px solid #927b50;border-radius:0 9px 9px 0;background:#211e18;color:#e6d7b8!important}
+.archive-alignment-unclassified{padding:12px 13px;border:1px dashed #46545a;border-radius:10px;background:#11171e;color:var(--muted)!important}
+@media(max-width:560px){.archive-alignment-section{padding:12px}.archive-alignment-section .archive-section-heading{align-items:start;display:grid}}
