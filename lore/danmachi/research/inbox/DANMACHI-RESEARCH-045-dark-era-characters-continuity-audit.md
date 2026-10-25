@@ -488,16 +488,16 @@ La corrección no incorpora claims, aristas, alias ni IDs nuevos y no cambia el 
 
 
 
-## DMR-045-SRC-018 · Google Books — búsqueda pública autorizada del volumen 20
+## DMR-045-SRC-018 · Google Books — búsqueda pública y reintento de la vista previa del volumen 20
 
 - **Fecha de consulta:** 2026-10-25.
 - **Fuente:** [Google Books · Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 20 (light novel)](https://books.google.com/books?id=XWHEEQAAQBAJ).
 - **Tipo:** índice/vista previa autorizada de la edición inglesa publicada por Yen Press; no es texto narrativo completo.
-- **Metadatos observados:** la ficha muestra el índice con “The Heroes' Afterglow” y “The Knights Afterglow”.
-- **Resultado de la búsqueda dentro del libro:** “Alfia”, “Meteria” y “Rudra” devolvieron “No results found in this book”. La búsqueda de “Afterglow” sí devuelve cinco resultados, pero las páginas de texto narrativo indican “No preview available for this page”. Las consultas para “Zald” y “Erebus” no pudieron completarse porque el servicio respondió HTTP 429.
+- **Metadatos observados:** la ficha muestra el índice con “The Heroes' Afterglow” y “The Knights Afterglow”. En una comprobación adicional de la vista pública licenciada, Google Books anunció `Preview · 28 pages` y mostró el lector `1 of 4`; se consultó la ruta normal del lector ([vista previa pública](https://www.google.com/books/edition/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a/XWHEEQAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PT29)), pero las páginas consultadas devolvieron `Something went wrong / Page didn't load`.
+- **Resultado de la búsqueda dentro del libro:** “Alfia”, “Meteria” y “Rudra” devolvieron “No results found in this book”. La búsqueda de “Afterglow” sí devuelve cinco resultados, pero los resultados de búsqueda muestran “No preview available for this page”. En el reintento separado del visor público (28 páginas anunciadas), las páginas tampoco llegaron a renderizarse: `Page didn't load`; no se obtuvo texto narrativo legible. Las consultas para “Zald” y “Erebus” no pudieron completarse porque el servicio respondió HTTP 429.
 - **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; continuidad CONT-MAIN-LN.
 - **Interpretación permitida:** confirma que hay una ruta de búsqueda autorizada y permite ver metadatos/índice. No demuestra ausencia de los personajes en el volumen, no revela sus escenas y no proporciona una página narrativa reproducible. El error 429 no se interpreta como resultado de búsqueda.
-- **Siguiente acción:** volver a intentar manualmente la vista previa autorizada si el visor pasa a ofrecer páginas legibles; no inventar localizadores ni elevar el índice de Afterglow a prueba de usos individuales.
+- **Siguiente acción:** consultar de nuevo la vista previa mediante su funcionamiento normal cuando cargue correctamente, o usar una edición licenciada legible; registrar capítulo/página solo tras ver un pasaje reproducible. No inventar localizadores ni elevar el índice de Afterglow a prueba de usos individuales.
 
 ## DMR-045-SRC-019 · Voyager BinB — muestra legal de Astrea Record, volumen 3
 
