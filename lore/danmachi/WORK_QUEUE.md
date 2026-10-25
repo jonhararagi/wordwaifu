@@ -102,7 +102,7 @@ Criterio factual: claims de wiki permanecen secundarios; leads sin pasaje locali
 
 Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de Orario.
 
-## PRIORIDAD ACTUAL — Etapa 1: Orario como escenario
+## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
 
 **Estado:** IN_PROGRESS. El barrido secundario disponible de DMR-045 ya está documentado; sus pasajes primarios individuales continúan pendientes y no impiden avanzar a esta etapa. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
 **Guía:** [Método de análisis progresivo](research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md) · [Ficha central de Orario](places/orario.md).
@@ -624,6 +624,20 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 
 ## DANMACHI-RESEARCH-045 · Alfia, Zald, Meteria, Erebus y Rudra
+
+**Actualización de interfaz y nuevas rutas autorizadas (2026-10-25):**
+- [x] Exponer en “Más información” la nota de Meteria bajo CONT-MAIN-LN y su recuerdo alternativo por separado en CONT-AU.
+- [x] Exponer el resumen secundario de Erebus solo bajo CONT-GAME; mantener “Eren” sin aprobar como alias canónico y no atribuir automáticamente la motivación a la novelización CONT-AR.
+- [x] Añadir para Rudra una nota navegable que distinga la trampa atribuida a Rudra Familia de una orden/conocimiento personal no demostrado.
+- [x] Etiquetar en la interfaz wikis, entrevistas, publicaciones autorales y metadatos editoriales por su tipo, sin llamar “texto primario” a una ficha de producto.
+- [x] Registrar Google Books vol. 20 como DMR-045-SRC-018 y BinB Astrea Record 3 como DMR-045-SRC-019; ambos se mantienen metadata_checked_only y sin claims.
+- [x] Ejecutar regresiones API y Playwright para los tres expedientes y sus etiquetas de fuente.
+- **Integración de código:** [PR #122](https://github.com/jonhararagi/wordwaifu/pull/122), SHA ba6363bce1b651a74ebfa9b782fb7e38f8804eef. CI de la PR: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40222698644) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40222698535), ambas exitosas.
+- [ ] Cotejar el texto narrativo/licenciado de Astrea Record vols. 1–3 para Alfia, Zald y Erebus con localizador reproducible.
+- [ ] Localizar el texto primario que identifique a Meteria, su parentesco/afiliación y los detalles de su historia en la continuidad publicada.
+- [ ] Verificar en lectura directa la retrospectiva del vol. 14 y mantener pendiente la atribución personal a Rudra.
+- **Estado factual:** las nuevas rutas legales no expusieron pasajes narrativos. Un resultado de búsqueda limitado no demuestra ausencia de un personaje; HTTP 429 no es resultado de búsqueda. Los cinco localizadores primarios siguen abiertos.
+
 
 **Integraciones recientes verificadas (2026-10-24):** PR [#98](https://github.com/jonhararagi/wordwaifu/pull/98) quedó fusionada en `c0d913c5691617accac4898c6d2b3b18bba07ec7`; los workflows posteriores al merge pasaron ([Validate #40120951150](https://github.com/jonhararagi/wordwaifu/actions/runs/40120951150), [Lore/Retrieval #40120951026](https://github.com/jonhararagi/wordwaifu/actions/runs/40120951026)). PR [#99](https://github.com/jonhararagi/wordwaifu/pull/99) quedó fusionada en `4b982eb92bd86f8eb5fa7164e10752a917d48d31`; los workflows posteriores al merge también pasaron ([Validate #40121414947](https://github.com/jonhararagi/wordwaifu/actions/runs/40121414947), [Lore/Retrieval #40121415026](https://github.com/jonhararagi/wordwaifu/actions/runs/40121415026)). PR [#100](https://github.com/jonhararagi/wordwaifu/pull/100) quedó fusionada en `e554ea8f4aa57f4ef61c8b0a7fb14b4df78d7aad`; ambos workflows posteriores al merge pasaron ([Validate #40122126727](https://github.com/jonhararagi/wordwaifu/actions/runs/40122126727), [Lore/Retrieval #40122126726](https://github.com/jonhararagi/wordwaifu/actions/runs/40122126726)). PR [#101](https://github.com/jonhararagi/wordwaifu/pull/101) quedó fusionada en `6fd994f50df051e4b8f1abc647a9e5657529a186`; los workflows de CI posteriores pasaron ([Validate #40125640096](https://github.com/jonhararagi/wordwaifu/actions/runs/40125640096), [Lore/Retrieval #40125640094](https://github.com/jonhararagi/wordwaifu/actions/runs/40125640094)).
 
