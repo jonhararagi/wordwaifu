@@ -3803,6 +3803,7 @@
     const sources = window.WordWaifuLoreCorpus.getOnlineSourceDirectory();
     const groups = [
       { key:"official", title:"Prioridad alta · fuentes oficiales y editoriales", note:"Usalas para verificar lo que realmente publican. Una página oficial del anime sigue describiendo la adaptación; una sinopsis editorial no reemplaza el libro completo.", badge:"OFICIAL / EDITORIAL" },
+      { key:"licensed_retailer", title:"Acceso legal a libros y muestras", note:"Enlaces de distribuidores que ofrecen ediciones licenciadas o muestras gratuitas. Una ficha comercial y una muestra que no carga no equivalen a un pasaje narrativo cotejado.", badge:"DISTRIBUIDOR LICENCIADO" },
       { key:"interview", title:"Material complementario · entrevistas con autores", note:"Registran declaraciones atribuibles a los autores, pero no son páginas del libro. Comprueba qué continuidad y afirmación concreta tratan, y no conviertas una respuesta sobre un juego o una adaptación en canon de la novela ligera.", badge:"ENTREVISTA AUTORAL" },
       { key:"community", title:"Apoyo para descubrir referencias · fuentes secundarias", note:"Útiles como índice y mapa de términos; cada afirmación relevante necesita una referencia comprobable antes de aprobarse.", badge:"SECUNDARIA" }
     ];
