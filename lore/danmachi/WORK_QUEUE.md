@@ -13,6 +13,16 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 Esta regla preserva el contexto, pero no sustituye validación factual, pruebas técnicas ni confirmación de integración.
 
+## WordWaifu — filtros de alineamiento interpretativo (2026-10-25)
+
+- [x] Añadir metadatos de alineamiento con ejes separados: moralidad (bueno / neutral / malo) y conducta (legal / neutral / caótico).
+- [x] Añadir filtros de ambos ejes a la enciclopedia de personajes y mostrar justificación, continuidad, confianza y fuentes en la ficha.
+- [x] Tratar «sin clasificar» como ausencia de evaluación, no como una alineación neutral; añadir pruebas de regresión.
+- [x] Registrar la clasificación provisional de Alfia y Zald como caótico neutral de baja confianza, con «caótico bueno» descrito como alternativa interpretativa y fuentes secundarias visibles.
+- [ ] Ampliar la clasificación a más personajes solo después de revisar motivaciones, decisiones y consecuencias por continuidad; no asignar alineamientos en masa ni deducirlos únicamente del temperamento.
+- **Estado de implementación:** código y pruebas preparados en rama; integración y CI aún pendientes.
+
+
 ## DANMACHI-RESEARCH-045 — Resultado del barrido secundario público (2026-10-24)
 
 **Estado del subtrabajo:** DONE para las fuentes públicas consultadas. **DMR-045 sigue abierto** respecto de la verificación primaria.
