@@ -3278,7 +3278,8 @@
       refs.appendChild(heading);
       (info.references||[]).forEach(ref=>{
         const item=archiveElement("div","archive-more-info-reference");
-        item.appendChild(archiveElement("span","archive-reference-kind",ref.kind==="community"?"WIKI COMUNITARIA · NO OFICIAL":"FUENTE OFICIAL / PRIMARIA"));
+        const referenceKindLabels={community:"WIKI COMUNITARIA · NO OFICIAL",interview:"ENTREVISTA / FUENTE SECUNDARIA",author:"PUBLICACIÓN AUTORAL",publisher_metadata:"FICHA EDITORIAL · METADATOS",licensed_preview:"MUESTRA LICENCIADA · ACCESO LIMITADO",official:"FUENTE OFICIAL / PRIMARIA"};
+        item.appendChild(archiveElement("span","archive-reference-kind",referenceKindLabels[ref.kind]||"FUENTE SECUNDARIA · ESTADO POR COMPROBAR"));
         appendLoreLink(item,ref.label,ref.url,true);
         refs.appendChild(item);
       });
