@@ -23,7 +23,20 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - **Estado:** PR [#115](https://github.com/jonhararagi/wordwaifu/pull/115) integrada en `main` por `3f9fb9536482f381f1cdd9b533ae75d34508f749`; CI de la PR y post-merge aprobada. El alcance sigue limitado a Alfia y Zald con alineamiento provisional de baja confianza; ampliar el censo requiere una revisión individual.
 
 
-## DANMACHI-RESEARCH-045 — Resultado del barrido secundario público (2026-10-24)
+## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
+
+**Estado:** IN_PROGRESS. El barrido secundario está registrado y se han probado rutas de consulta licenciadas, pero ninguna muestra consultada expuso páginas narrativas legibles. Los cinco expedientes continúan abiertos para verificación primaria.
+
+- [x] Registrar las rutas autorizadas y los límites de acceso de DMR-045-SRC-018 a DMR-045-SRC-028; las fichas, sinopsis, índices, búsquedas limitadas, errores de red y respuestas HTTP no equivalen a leer el texto narrativo.
+- [ ] Alfia y Zald: conseguir un pasaje identificable de Astrea Record y cotejar habilidades, límites y secuencias concretas; no inventar capítulo ni página.
+- [ ] Meteria: localizar la identificación primaria y cotejar parentesco, afiliación e historia en la continuidad publicada; mantener el recuerdo autoral en CONT-AU.
+- [ ] Erebus: localizar sus escenas en la novelización CONT-AR; conservar los datos del juego en CONT-GAME y no asumir que las versiones son idénticas.
+- [ ] Rudra: leer directamente el pasaje del volumen 14 y su retrospectiva/epílogo antes de validar qué hizo Rudra Familia y qué conocimiento u orden personal puede atribuirse a Rudra.
+- [ ] En cada nuevo intento, registrar título, idioma, URL, continuidad, estado exacto de acceso y localizador solo después de ver el pasaje. Si el visor falla, dejarlo como metadata_checked_only y mantener claims_supported vacío.
+
+**Regla de cierre:** DMR-045 no se cierra hasta cotejar los localizadores primarios pertinentes para los cinco expedientes. Orario permanece como etapa posterior. Véanse [la auditoría DMR-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) y el [registro central de fuentes](sources/00-registro-fuentes.md).
+
+## DANMACHI-RESEARCH-045 — Resultado histórico del barrido secundario público (2026-10-24)
 
 **Estado del subtrabajo:** DONE para las fuentes públicas consultadas. **DMR-045 sigue abierto** respecto de la verificación primaria.
 
@@ -36,7 +49,7 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - [x] Documentar que las fuentes públicas revisadas no prueban una orden ni conocimiento personal de Rudra sobre el plan de su Familia.
 - [ ] Cotejar los localizadores primarios pendientes de Alfia/Zald/Erebus, Meteria y Rudra cuando el texto licenciado sea accesible; no inventar páginas ni convertir wikis/entrevistas en escenas del libro.
 - [x] Corregir los cinco resúmenes de UI de DMR-045 para recuperar detalles secundarios útiles y mostrar su procedencia/continuidad; añadir regresiones sobre límites de Gif Blessing/Deus Ambrosia, CONT-AU de Meteria, CONT-GAME de Erebus, alias «Eren» y atribución colectiva de Rudra Familia (PR #113 integrada; CI de PR y de main aprobada).
-- [x] Tras terminar este barrido secundario, activar la etapa de Orario como siguiente prioridad sin borrar los pendientes primarios de DMR-045.
+- [x] Decisión histórica del 2026-10-24: tras este barrido se anotó Orario como siguiente etapa. Esa secuencia fue sustituida el 2026-10-25: el cotejo primario de DMR-045 vuelve a ser la prioridad antes de ampliar Orario; véanse CONV-DM-2026-10-25-006 y DEC-DM-008.
 
 **Límite:** el barrido secundario completado no equivale a cinco biografías verificadas en el texto primario. Los localizadores no disponibles permanecen abiertos.
 
@@ -102,9 +115,9 @@ Criterio factual: claims de wiki permanecen secundarios; leads sin pasaje locali
 
 Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de Orario.
 
-## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
+## Etapa posterior — Orario y cobertura de la ciudad (pendiente tras DMR-045)
 
-**Estado:** IN_PROGRESS. El barrido secundario disponible de DMR-045 ya está documentado; sus pasajes primarios individuales continúan pendientes y no impiden avanzar a esta etapa. El método y la matriz inicial están creados; el análisis factual de la ciudad sigue parcial.  
+**Estado:** PENDIENTE; este bloque conserva las tareas de cobertura de Orario para ejecutarlas después de verificar DMR-045. No representa la prioridad operativa actual. Las casillas siguientes expresan el estado puntual de cada tarea, pero no adelantan su orden de ejecución.  
 **Guía:** [Método de análisis progresivo](research/inbox/DANMACHI-RESEARCH-030-metodo-de-analisis-progresivo.md) · [Ficha central de Orario](places/orario.md).
 
 - [x] Establecer una ficha central con el alcance de la evidencia actual y límites explícitos.
