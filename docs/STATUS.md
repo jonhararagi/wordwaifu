@@ -340,3 +340,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR, cabeza `cc3ced574bae926690fbff231d21e813f17e886e`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40230094644) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40230094738), ambos success.
 - **CI post-merge sobre el SHA exacto de main `96f885af9f1ff036bddd99a017e7ecef76db70f5`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40230249545) success, incluida la prueba de navegador; [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40230249546) seguía en ejecución al preparar este registro.
 - **Límite:** ninguna nueva muestra reveló páginas narrativas. DMR-045 sigue abierto para la verificación primaria de Alfia, Zald, Meteria, Erebus y la responsabilidad personal de Rudra.
+
+
+## DMR-045 — Google Play Books, muestra anunciada de DanMachi volumen 14 (2026-10-25)
+
+- Se añade a la aplicación la ruta [Google Play Books — DanMachi vol. 14](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ), relevante para intentar la lectura del capítulo 13 citado en las referencias secundarias sobre Rudra Familia.
+- La página pública anuncia “Free sample”, pero la extracción normal solo devuelve sinopsis editorial y metadatos. No se obtuvo el pasaje de la retrospectiva ni un folio legible. No se crea una afirmación sobre el acontecimiento o la responsabilidad personal de Rudra.
+- El registro DMR-045-SRC-028 queda metadata_checked_only con claims_supported/eventos vacíos; se añaden regresiones para exigir que el estado de evidencia no se convierta en un claim narrativo.
+- **Estado:** implementado en rama del PR #132; a la espera de CI e integración.
+- **Próxima acción:** si el visor normal ofrece una página legible, cotejar directamente el capítulo 13/retrospectiva antes de validar los claims; DMR-045 continúa abierto.
