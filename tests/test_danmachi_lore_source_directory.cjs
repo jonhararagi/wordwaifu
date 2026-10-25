@@ -57,4 +57,19 @@ const rudraFamilia = sources.find(source => source.id === "community-rudra-famil
 assert.match(rudraFamilia.limits, /no prueba que el dios Rudra/i,
   "the source directory must distinguish a Familia action from personal responsibility by Rudra");
 
-console.log("DanMachi source directory: secondary references, licensed Yen Press metadata, and BOOK☆WALKER free-preview limits validated.");
+const googleBooksPreview = sources.filter(source => source.id === "licensed-preview-google-books-danmachi-vol20");
+assert.equal(googleBooksPreview.length, 1, "the authorized Google Books preview route must be discoverable exactly once");
+assert.equal(googleBooksPreview[0].category, "licensed_retailer");
+assert.equal(googleBooksPreview[0].url, "https://books.google.com/books?id=XWHEEQAAQBAJ");
+assert.match(googleBooksPreview[0].coverage, /The Heroes' Afterglow/);
+assert.match(googleBooksPreview[0].coverage, /No preview available for this page/);
+assert.match(googleBooksPreview[0].limits, /HTTP 429/);
+assert.match(googleBooksPreview[0].limits, /No se infiere que un personaje esté ausente/i);
+const binbAstreaPreview = sources.filter(source => source.id === "licensed-preview-binb-astrea-record-vol3");
+assert.equal(binbAstreaPreview.length, 1, "the second authorized Astrea Record reader must be discoverable exactly once");
+assert.equal(binbAstreaPreview[0].category, "licensed_retailer");
+assert.equal(binbAstreaPreview[0].url, "https://r.binb.jp/epm/e1_270413_31102022103801/");
+assert.match(binbAstreaPreview[0].limits, /no es un localizador primario/i);
+assert.match(binbAstreaPreview[0].coverage, /no expuso páginas narrativas/i);
+
+console.log("DanMachi source directory: secondary references and authorized preview limits validated.");
