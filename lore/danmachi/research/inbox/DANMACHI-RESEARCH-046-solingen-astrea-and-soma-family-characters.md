@@ -1,7 +1,7 @@
 # DANMACHI-RESEARCH-046 · Nueva Astrea Familia y tres expedientes de Soma Familia
 
 - Fecha de corte: 2026-10-23.
-- Estado: lectura cruzada entre fichas UI integrada en `main`; CI de PR completa, CI post-merge parcialmente verificada; localizadores primarios individuales pendientes.
+- Estado: lectura cruzada entre fichas UI integrada y validada en `main`; localizadores primarios individuales pendientes.
 - Continuidad de trabajo: CONT-MAIN-LN. Las entradas de wiki son pistas secundarias, no sustitutos de capítulo/página.
 - Propósito: hacer recuperables a Cecil Blackliza, Iselina, Shau, Ulanda, Zanis Lustra, Chandra Ihit y Canoe Belway. Mantener desconocidos los campos sin fuente y separar una acusación reportada del hecho al que se refiere.
 
@@ -172,5 +172,12 @@ Se añadieron pruebas de regresión sobre la exposición de ambos claims, los l�
 ## Verificación de integración del lote de Canoe / Zanis (2026-10-24)
 
 La corrección de fichas quedó integrada por [PR #114](https://github.com/jonhararagi/wordwaifu/pull/114), commit `a7725802e2cef7ad9a3e648b7189e7986f1853fb`. Las pruebas de la PR para [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40152510473) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40152510494) aprobaron sobre head SHA `1fe1d632565d303894956d0bae86f214cc4087f6`. Tras la integración, [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40152602203) aprobó sobre el SHA exacto de `main`; [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40152602204) seguía `in_progress` durante la instalación de Chromium a la hora del último chequeo, por lo que su resultado no se declara.
+
+La corrección valida límites de presentación y continuidad, no resuelve la discrepancia factual. Los dos localizadores narrativos primarios de volúmenes 2 y 6 siguen abiertos; no inferir culpabilidad o conocimiento a partir de la acusación reportada.
+
+
+## Verificación final de integración del lote de Canoe / Zanis (2026-10-25)
+
+La corrección de fichas quedó integrada por [PR #114](https://github.com/jonhararagi/wordwaifu/pull/114), commit `a7725802e2cef7ad9a3e648b7189e7986f1853fb`. Las pruebas de la PR ([DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40152510473), [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40152510494)) aprobaron sobre head SHA `1fe1d632565d303894956d0bae86f214cc4087f6`. Tras la integración, ambos flujos también aprobaron sobre el SHA exacto de `main`: [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40152602203) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40152602204). El resultado exitoso de Validate WordWaifu se publicó después de una lectura inicial del estado `in_progress`.
 
 La corrección valida límites de presentación y continuidad, no resuelve la discrepancia factual. Los dos localizadores narrativos primarios de volúmenes 2 y 6 siguen abiertos; no inferir culpabilidad o conocimiento a partir de la acusación reportada.
