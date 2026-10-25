@@ -1,7 +1,7 @@
 # DANMACHI-RESEARCH-045 · Alfia, Zald, Meteria, Erebus y Rudra: auditoría histórica y de continuidad
 
-- Fecha de corte: 2026-10-23.
-- Estado: revisión cruzada secundaria incorporada; localizadores primarios individuales pendientes.
+- Fecha de revisión documental y de UI: 2026-10-24.
+- Estado: revisión cruzada secundaria incorporada y expedientes interactivos corregidos; localizadores primarios individuales pendientes.
 - Objetivo: mejorar cinco expedientes históricos sin transformar fuentes comunitarias en confirmación primaria ni confundir periodos.
 
 ## Matriz de continuidad y evidencia
@@ -390,3 +390,16 @@ Esta mejora es de **descubribilidad y procedencia**, no de certeza canónica: la
 5. No declarar biografía primaria confirmada por la convergencia entre wikis.
 
 **Resultado:** los cinco expedientes son más útiles y recuperables, pero continúan con brechas de evidencia primaria. Este lote no declara completa la Era Oscura ni las historias individuales.
+
+
+## Revisión de la capa interactiva de personajes (2026-10-24)
+
+Se armonizaron los resúmenes de interfaz de las cinco identidades de DMR-045 con lo que las fuentes secundarias y las notas de continuidad permiten afirmar, sin elevar su estado de evidencia:
+
+- **Alfia:** la interfaz expone la apariencia publicada por la wiki (cabello plateado, heterocromía reportada, altura) y acompaña el listado de magia con los costes/deterioro que la misma fuente atribuye a Gif Blessing, Silentium Eden y Genos Angelus. Son datos secundarios, no un cotejo de la novelización.
+- **Zald:** la interfaz señala explícitamente que nivel 7 y piso 71 son una instantánea histórica de wiki; añade apariencia reportada y explica los límites atribuidos a Deus Ambrosia junto al deterioro por el veneno de Behemoth. Se agregó el enlace de LN News Online para el pie editorial del juego (DMR-045-CLM-011).
+- **Meteria:** la personalidad procedente de la nota de Omori sigue identificada como CONT-AU; la entrevista sobre la hermana de Alfia no la nombra como Meteria. La maternidad y el parentesco no ascienden de evidencia secundaria.
+- **Erebus:** la apariencia y «Absolute Evil» se muestran como datos secundarios de CONT-GAME; la filosofía se describe con procedencia y límites explícitos. «Eren» sigue fuera de la lista de alias canónicos. La interfaz incluye la fuente editorial de LN News Online (DMR-045-CLM-009).
+- **Rudra:** la descripción visual reportada por la wiki española queda disponible para consulta, claramente marcada como secundaria. El texto del volumen 14 respalda la atribución colectiva a Rudra Familia, no una orden personal de Rudra.
+
+Se añadieron pruebas de regresión sobre los cinco expedientes de UI, las URLs de procedencia, la separación CONT-AU/CONT-GAME y la ausencia de «Eren» del front matter de alias. No se cambiaron IDs, aristas, niveles de verificación ni localizadores pendientes. El cotejo primario de Alfia, Zald, Meteria, Erebus y la responsabilidad personal de Rudra sigue abierto.

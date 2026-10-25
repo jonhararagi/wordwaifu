@@ -25,6 +25,7 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - [x] Reutilizar la información ya registrada en DMR-043 y la ficha de Jura para su plan posterior de Juggernaut, sin duplicar claims.
 - [x] Documentar que las fuentes públicas revisadas no prueban una orden ni conocimiento personal de Rudra sobre el plan de su Familia.
 - [ ] Cotejar los localizadores primarios pendientes de Alfia/Zald/Erebus, Meteria y Rudra cuando el texto licenciado sea accesible; no inventar páginas ni convertir wikis/entrevistas en escenas del libro.
+- [ ] Corregir los cinco resúmenes de UI de DMR-045 para recuperar detalles secundarios útiles y mostrar su procedencia/continuidad; añadir regresiones sobre límites de Gif Blessing/Deus Ambrosia, CONT-AU de Meteria, CONT-GAME de Erebus, alias «Eren» y atribución colectiva de Rudra Familia.
 - [x] Tras terminar este barrido secundario, activar la etapa de Orario como siguiente prioridad sin borrar los pendientes primarios de DMR-045.
 
 **Límite:** el barrido secundario completado no equivale a cinco biografías verificadas en el texto primario. Los localizadores no disponibles permanecen abiertos.

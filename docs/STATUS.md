@@ -10,6 +10,17 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## Personajes históricos — correcciones de fichas interactivas DMR-045 (preintegración, 2026-10-24)
+
+- Se mejoran las fichas visibles de Alfia, Zald, Meteria, Erebus y Rudra sin cambiar IDs ni promover claims secundarios a canon primario.
+- Alfia: rasgos físicos reportados por wiki y límites/costes atribuidos a Gif Blessing, Silentium Eden y Genos Angelus quedan visibles.
+- Zald: nivel 7/piso 71 se rotulan como snapshot de wiki; la interfaz explica los límites secundarios de Deus Ambrosia y mantiene el veneno de Behemoth como coste. Se enlaza el pie editorial de LN News Online.
+- Meteria: su personalidad procedente de la nota de Omori permanece etiquetada CONT-AU; la entrevista de Memoria Freese no identifica por nombre a la hermana de Alfia.
+- Erebus: apariencia, sobrenombre y filosofía se etiquetan como información secundaria de CONT-GAME; «Eren» no pasa a los alias canónicos. Se expone la fuente de LN News Online usada por los claims.
+- Rudra: se recupera la descripción visual de la wiki española como detalle secundario; el resumen conserva que el volumen 14 atribuye la trampa a Rudra Familia en conjunto, no personalmente a la deidad.
+- Se añaden regresiones al test de lore para las cinco fichas, procedencia de fuentes, límites de continuidad y alias. Los localizadores primarios de DMR-045 siguen abiertos; no se modifica el estado de evidencia de los claims ni el grafo de relaciones.
+- **Estado preintegración:** implementado en la rama de trabajo; pendiente resultado de CI de la PR y verificación de main.
+
 ## Orario — localizador provisional de la plaza norte armonizado (2026-10-24)
 
 - Se reconciliaron DMR-047 y `DMR-047-SRC-001`: la muestra oficial `trial02.pdf` corresponde al volumen 2; el índice textual conserva capítulo IV 「だからボクは力になりたい」 y marcadores de folio 20–21 junto a la escena de la plaza semicircular al norte de Orario.

@@ -133,3 +133,13 @@
 - **Contexto o fuentes:**
 - **Siguiente acción:** 
 
+
+
+### CONV-DM-2026-10-24-012 — Corregir la información de personajes en las fichas interactivas
+- **Fecha:** 2026-10-24.
+- **Estado:** IMPLEMENTADO; validación e integración pendientes.
+- **Instrucción aplicada:** continuar la corrección efectiva de personajes, no limitarse a una propuesta o una auditoría general. Usar las wikis reconocidas como evidencia secundaria cuando el texto primario no sea accesible, mostrando procedencia y límites.
+- **Alcance del lote:** expedientes de UI de Alfia, Zald, Meteria, Erebus y Rudra (DMR-045), con pruebas de regresión. Las apariencias, niveles, habilidades y motivaciones de wiki se mantienen como secundarias; la nota alternativa de Meteria continúa en CONT-AU; los detalles de Erebus vinculados al juego quedan en CONT-GAME; «Eren» no se añade como alias; la trampa del Juggernaut permanece atribuida a Rudra Familia en conjunto, no a Rudra personalmente.
+- **Documentos afectados:** src/character-dossiers.js, tests/test_lore_corpus.cjs, DMR-045, WORK_QUEUE.md y STATUS.md.
+- **Límites pendientes:** no se cambian IDs, relaciones ni estados de evidencia. Permanecen abiertos los localizadores primarios de Alfia, Zald, Meteria, Erebus y la atribución personal de Rudra.
+- **Estado de ejecución:** cambios en rama de trabajo; se actualizará esta entrada con la PR, el SHA integrado y las ejecuciones CI exactas tras verificar el resultado.
