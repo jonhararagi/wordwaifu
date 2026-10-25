@@ -20,7 +20,7 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - [x] Tratar «sin clasificar» como ausencia de evaluación, no como una alineación neutral; añadir pruebas de regresión.
 - [x] Registrar la clasificación provisional de Alfia y Zald como caótico neutral de baja confianza, con «caótico bueno» descrito como alternativa interpretativa y fuentes secundarias visibles.
 - [ ] Ampliar la clasificación a más personajes solo después de revisar motivaciones, decisiones y consecuencias por continuidad; no asignar alineamientos en masa ni deducirlos únicamente del temperamento.
-- **Estado de implementación:** código y pruebas preparados en rama; integración y CI aún pendientes.
+- **Estado:** PR [#115](https://github.com/jonhararagi/wordwaifu/pull/115) integrada en `main` por `3f9fb9536482f381f1cdd9b533ae75d34508f749`; CI de la PR y post-merge aprobada. El alcance sigue limitado a Alfia y Zald con alineamiento provisional de baja confianza; ampliar el censo requiere una revisión individual.
 
 
 ## DANMACHI-RESEARCH-045 — Resultado del barrido secundario público (2026-10-24)

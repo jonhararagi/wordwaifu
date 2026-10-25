@@ -10,12 +10,14 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
-## Filtro de alineamiento de personajes — implementación inicial (preintegración, 2026-10-25)
+## Filtro de alineamiento de personajes — integrado y validado (2026-10-25)
 
-- Se añadieron dos filtros independientes a la enciclopedia: orientación moral (bueno / neutral / malo) y conducta ante normas (legal / neutral / caótico), con opción «Sin clasificar».
-- Las tarjetas y el resumen de ficha muestran etiqueta interpretativa, justificación, continuidad, confianza y referencias secundarias. No se etiqueta a todas las fichas automáticamente.
-- Alfia y Zald: clasificación inicial «caótico neutral», de baja confianza y en CONT-AR. «Caótico bueno» permanece como alternativa interpretativa por su finalidad protectora declarada; los medios descritos por las wikis incluyen daño intencional, por lo que no se fuerza una lectura binaria.
-- **Estado:** implementado en la rama de trabajo work/character-alignment-filters-2026-10-25; pendiente ejecución de CI de la rama/PR y verificación de main. No cambia el catálogo de identidades, las relaciones ni las métricas.
+- La PR [#115](https://github.com/jonhararagi/wordwaifu/pull/115) está integrada en `main` por el commit `3f9fb9536482f381f1cdd9b533ae75d34508f749`.
+- La enciclopedia ahora tiene dos filtros independientes: orientación moral (bueno / neutral / malo) y conducta ante normas (legal / neutral / caótico), además de «Sin clasificar». La falta de evaluación no cuenta como neutralidad.
+- El perfil muestra etiqueta interpretativa, justificación, continuidad, confianza baja y enlaces de fuente. Solo Alfia y Zald se clasificaron inicialmente como «caótico neutral» en CONT-AR; «caótico bueno» permanece como alternativa razonada, no canon oficial. El resto de personajes queda sin clasificar.
+- **CI de la PR, exacto head SHA `2302a6e635c9208fe2c805e8154b7da991074948`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40193671503) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40193671496) — ambas exitosas.
+- **CI post-merge, exacto SHA de `main` `3f9fb9536482f381f1cdd9b533ae75d34508f749`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40193807701) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40193807729) — ambas completadas con éxito.
+- No se cambiaron IDs de personajes, relaciones explícitas ni métricas del catálogo. El filtro se mantiene como herramienta editorial, no como propiedad oficial de los personajes.
 
 
 ## Personajes históricos — correcciones de fichas interactivas DMR-045 (integrado y validado, 2026-10-24)
