@@ -61,8 +61,10 @@ assert.ok(meteriaMainInfo.references.some(ref => ref.kind === "interview" && ref
 assert.ok(!meteriaMainInfo.sections.some(section => section.text.includes("supporter de Zeus Familia")),
   "The original-game parentage context must not leak into Meteria's main-novel continuity note.");
 const meteriaGameInfo = archiveApi.getExtendedInfo("CHAR-METERIA", "CONT-GAME", null);
-assert.ok(meteriaGameInfo && meteriaGameInfo.sections.some(section => section.text.includes("supporter de Zeus Familia") && section.text.includes("no pronuncia el nombre Meteria")),
-  "Meteria's game-origin research note must preserve the father-role detail and the unresolved identity.");
+assert.ok(meteriaGameInfo && meteriaGameInfo.sections.some(section => section.text.includes("supporter de Zeus Familia")),
+  "Meteria's game-origin note must preserve the father-role detail from the author interview.");
+assert.ok(meteriaGameInfo.sections.some(section => section.text.includes("no pronuncia el nombre Meteria")),
+  "Meteria's game-origin note must preserve the unresolved identity within the same source context.");
 assert.ok(meteriaGameInfo.references.some(ref => ref.kind === "interview" && ref.url === "https://ln-news.com/articles/109766"),
   "The direct author confirmation must retain interview provenance.");
 assert.ok(meteriaMainInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/Meteria"),
