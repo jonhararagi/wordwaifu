@@ -631,6 +631,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir las tres rutas al directorio consultable y cubrirlas con pruebas de regresión. Las tres devolvieron “Now loading...” y controles, sin páginas narrativas legibles.
 - [ ] Reintentar manualmente los visores mediante su uso normal o consultar una edición autorizada legible; solo registrar capítulo/página después de ver el pasaje concreto.
 - **Límite:** los accesos fallidos no demuestran que un personaje no aparezca ni que los libros sean indisponibles. DMR-045 continúa abierto para verificación primaria.
+- **Integración y CI:** [PR #127](https://github.com/jonhararagi/wordwaifu/pull/127), main SHA `1a1bc2be356463edde3464e530015674dd8bc767`; PR CI [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927385) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927413), ambos success; CI post-merge [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051519) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051508), ambos success.
 
 - [x] Exponer en “Más información” la nota de Meteria bajo CONT-MAIN-LN y su recuerdo alternativo por separado en CONT-AU.
 - [x] Exponer el resumen secundario de Erebus solo bajo CONT-GAME; mantener “Eren” sin aprobar como alias canónico y no atribuir automáticamente la motivación a la novelización CONT-AR.
