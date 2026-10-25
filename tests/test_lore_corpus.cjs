@@ -18,6 +18,7 @@ assert.ok(appSource.includes('alignmentRegistry.matches(item.id,moralityFilter,c
   "The directory must apply both alignment axes and explain that unclassified characters are not assumed neutral.");
 
 assert.ok(appSource.includes('{ key:"interview", title:"Material complementario · entrevistas con autores"') && appSource.includes('badge:"ENTREVISTA AUTORAL"'), "The source browser must render author interviews in their own evidence tier, separate from official publisher pages and community leads.");
+assert.ok(appSource.includes('{ key:"licensed_retailer", title:"Acceso legal a libros y muestras"') && appSource.includes('badge:"DISTRIBUIDOR LICENCIADO"'), "The source browser must render licensed retailer listings and free sample routes in a distinct group.");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
 const sourceRegistry = fs.readFileSync(path.join(root, "sources", "00-registro-fuentes.md"), "utf8");
 const documentPaths = corpus.getDefaultResearchPaths();
