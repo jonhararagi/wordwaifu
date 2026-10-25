@@ -787,11 +787,18 @@ assert.ok(uiAlfia.appearance.includes("heterocromía") && uiAlfia.appearance.inc
   "Alfia's visual profile must expose the community-reported details and their source without presenting them as primary verification.");
 assert.ok(uiAlfia.abilities.includes("Limit Off") && uiAlfia.abilities.includes("deterioro progresivo") && uiAlfia.abilities.includes("pendientes de cotejo"),
   "Alfia's ability summary must preserve Gif Blessing's reported cost/decline instead of presenting her power as unlimited.");
+assert.ok(uiAlfia.abilities.includes("campana gris plateada") && uiAlfia.abilities.includes("superior a 100 metros") && uiAlfia.abilities.includes("datos secundarios pendientes de cotejo primario"),
+  "Alfia's Genos Angelus range/effect must remain explicitly secondary and awaiting primary-text verification.");
 const uiZald = uiCharacterDossiers.get("CHAR-DARK-ZALD");
 assert.ok(uiZald.appearance.includes("212 cm") && uiZald.appearance.includes("secundarios") && uiZald.history.includes("piso 71"),
   "Zald's appearance and historic level/floor snapshot must be useful but visibly secondary.");
 assert.ok(uiZald.abilities.includes("cantidad y calidad") && uiZald.abilities.includes("veneno") && uiZald.sources.includes("https://ln-news.com/articles/109766"),
   "Zald's Deus Ambrosia limits, Behemoth-venom cost, and editorial profile source must be visible in the UI dossier.");
+assert.ok(uiZald.abilities.includes("Zald reportado en nivel 7") && uiZald.abilities.includes("nivel 10") && uiZald.abilities.includes("no una fórmula universal verificada"),
+  "Zald's UI dossier must expose the community-reported Deus Ambrosia ceiling without presenting it as a verified universal rule.");
+const zaldMarkdown = fs.readFileSync(path.join(root, "characters/dark-era/zald.md"), "utf8");
+assert.ok(zaldMarkdown.includes("nivel 10") && zaldMarkdown.includes("no constituye una fórmula universal verificada"),
+  "Zald's Markdown profile must retain the same evidence-bounded Deus Ambrosia ceiling as the UI dossier.");
 const uiMeteria = uiCharacterDossiers.get("CHAR-METERIA");
 assert.ok(uiMeteria.personality.includes("CONT-AU") && uiMeteria.personality.includes("escenario hipotético") &&
   uiMeteria.history.includes("no nombra a esa hermana como Meteria"),
