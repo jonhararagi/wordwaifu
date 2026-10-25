@@ -297,6 +297,18 @@ references:[
 {label:"LN News Online · entrevista sobre el nacimiento de Bell (2020)",url:"https://ln-news.com/articles/109766",kind:"interview"}
 ]
 },
+"CONT-GAME":{
+title:"Origen de Bell en Memoria Freese · identidad de Meteria pendiente",
+summary:"Contexto familiar confirmado en entrevista autoral sobre la historia original de DanMemo. La entrevista no nombra a la madre de Bell como Meteria; esta nota conserva esa limitación dentro de CONT-GAME.",
+sections:[
+{title:"Qué confirma la entrevista",text:"En la entrevista de LN News del 15 de octubre de 2020, el entrevistador resume que el padre de Bell era un supporter de Zeus Familia y que su madre era la hermana menor de Alfia. Omori confirma el resumen y explica que la historia del nacimiento de Bell se reveló primero en DanMemo. Esto respalda lo dicho en el intercambio sobre el contexto del juego, no equivale a un pasaje narrativo de la novela."},
+{title:"La identidad sigue sin fijarse por esta fuente",text:"El intercambio no pronuncia el nombre Meteria, no identifica al padre y no demuestra que supporter signifique miembro formal de Zeus Familia. Las wikis inglesas y españolas asocian a Meteria con ese parentesco, pero la convergencia secundaria no sustituye un localizador narrativo primario. No se crea alias ni relación nueva a partir de la entrevista."},
+{title:"Barrera de continuidad",text:"La evidencia de origen aquí expuesta corresponde a CONT-GAME. No se convierte automáticamente en biografía confirmada de CONT-MAIN-LN o CONT-AR. Para identificar a Meteria dentro de la novela principal sigue siendo necesario un pasaje verificable."}
+],
+references:[
+{label:"LN News Online · entrevista autoral sobre el origen de Bell",url:"https://ln-news.com/articles/109766",kind:"interview"}
+]
+},
 "CONT-AU":{
 title:"Meteria · recuerdo del escenario alternativo autoral",
 summary:"Esta nota resume solo el escenario hipotético publicado por Fujino Omori. No describe un hecho sucedido en la cronología principal.",
@@ -320,7 +332,7 @@ sections:[
 ],
 references:[
 {label:"DanMachi Wiki · Erebus (inglés)",url:"https://danmachi.fandom.com/wiki/Erebus",kind:"community"},
-{label:"LN News Online · entrevista y pie editorial sobre Erebus",url:"https://ln-news.com/articles/109766",kind:"interview"}
+{label:"LN News Online · pie editorial de Erebus en el contexto del juego",url:"https://ln-news.com/articles/109766",kind:"editorial_caption"}
 ]
 }
 },
@@ -605,7 +617,7 @@ return{summary:"Ficha provisional basada únicamente en las afirmaciones de esta
 function refsClaims(index,refs,continuity,filter){return(index.claims||[]).filter(c=>((refs||[]).includes(c.claimId)||(refs||[]).includes(c.entryId))&&(!continuity||(c.continuityScopes||[]).includes(continuity))&&visible(c.spoilerLevel,filter));}
 function worst(claims){const rank={none:0,mild:1,unknown:2,major:3,endgame:4};return claims.reduce((v,c)=>rank[String(c.spoilerLevel||"unknown").toLowerCase()]>rank[v]?String(c.spoilerLevel||"unknown").toLowerCase():v,"none");}
 function list(index,options){const o=options||{},q=String(o.query||"").trim().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(),continuity=String(o.continuity||"ALL"),filter=String(o.spoiler||"all");
-return(index.characters||[]).map(ch=>{const all=claimsFor(index,ch.id), shown=all.filter(c=>visible(c.spoilerLevel,filter)), scopes=ordered(all.flatMap(c=>c.continuityScopes||[])), shownScopes=ordered(shown.flatMap(c=>c.continuityScopes||[]));const target=continuity!=="ALL"&&shownScopes.includes(continuity)?continuity:defaultState(scopes),st=state(ch.id,target),meta=META[ch.id];const official=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(ch.id):null;const displayOverview=meta?meta.overview:(official?official.summary:"Ficha provisional basada en afirmaciones documentadas.");const names=[ch.name,...(ch.aliases||[]),...(ch.keywords||[])].map(value=>String(value).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase());
+return(index.characters||[]).map(ch=>{const all=claimsFor(index,ch.id), shown=all.filter(c=>visible(c.spoilerLevel,filter)), scopes=ordered(all.flatMap(c=>c.continuityScopes||[]).concat(Object.keys(EXTENDED[ch.id]||{}))), shownScopes=ordered(shown.flatMap(c=>c.continuityScopes||[]).concat(Object.keys(EXTENDED[ch.id]||{})));const target=continuity!=="ALL"&&shownScopes.includes(continuity)?continuity:defaultState(scopes),st=state(ch.id,target),meta=META[ch.id];const official=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(ch.id):null;const displayOverview=meta?meta.overview:(official?official.summary:"Ficha provisional basada en afirmaciones documentadas.");const names=[ch.name,...(ch.aliases||[]),...(ch.keywords||[])].map(value=>String(value).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase());
 const matched=!q||names.some(name=>{
   if(name===q||name.startsWith(q+" "))return true;
   // Short queries such as "Ryu" should match token prefixes, not incidental
@@ -688,7 +700,7 @@ function relationshipLinks(index,id,continuity,filter){
     }:null;
   }).filter(Boolean);
 }
-function profile(index,id,continuity,filter){const ch=record(index,id);if(!ch)return null;const all=claimsFor(index,id),scopes=ordered(all.flatMap(c=>c.continuityScopes||[])),chosen=continuity&&scopes.includes(continuity)?continuity:defaultState(scopes),allState=all.filter(c=>(c.continuityScopes||[]).includes(chosen)),shown=allState.filter(c=>visible(c.spoilerLevel,filter)),meta=META[id]||{states:{}};
+function profile(index,id,continuity,filter){const ch=record(index,id);if(!ch)return null;const all=claimsFor(index,id),scopes=ordered(all.flatMap(c=>c.continuityScopes||[]).concat(Object.keys(EXTENDED[id]||{}))),chosen=continuity&&scopes.includes(continuity)?continuity:defaultState(scopes),allState=all.filter(c=>(c.continuityScopes||[]).includes(chosen)),shown=allState.filter(c=>visible(c.spoilerLevel,filter)),meta=META[id]||{states:{}};
 const official=typeof globalThis!=="undefined"&&globalThis.WordWaifuOfficialCharacterRoster?globalThis.WordWaifuOfficialCharacterRoster.get(id):null;
 const related=relationshipLinks(index,id,chosen,filter);
 const moments=(((MOM[id]||{})[chosen])||[]).map(m=>{const claims=refsClaims(index,m.refs,chosen,filter);return claims.length?{id:m.id,title:m.title,period:m.period,summary:m.summary,claims:claims,spoilerLevel:worst(claims),people:unique(m.people||[]).filter(pid=>record(index,pid)).map(pid=>({id:pid,name:record(index,pid).name}))}:null;}).filter(Boolean);

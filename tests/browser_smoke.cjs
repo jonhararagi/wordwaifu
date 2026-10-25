@@ -843,10 +843,22 @@ async function run() {
     const meteriaMainNotes = await page.locator("#archive-more-info-content").innerText();
     assert.ok(meteriaMainNotes.includes("no la nombra como Meteria") && meteriaMainNotes.includes("No se asignan diagnóstico médico"),
       "Meteria's main-novel note must preserve the unresolved identity/biography caveats.");
-    assert.ok(meteriaMainNotes.includes("ENTREVISTA / FUENTE SECUNDARIA"),
-      "The LN News author interview must not be displayed as an official primary novel source.");
+    assert.ok(meteriaMainNotes.includes("ENTREVISTA AUTORAL · DECLARACIÓN DEL AUTOR"),
+      "The LN News author interview must be identified as an author statement, not as a primary novel page.");
     assert.ok(await page.locator("#archive-more-info-content a[href='https://ln-news.com/articles/109766']").count() > 0,
       "Meteria's expanded note must link the interview that does not name her.");
+    await page.locator("#archive-more-info-close").click();
+
+    await page.locator("#archive-profile-continuity").selectOption("CONT-GAME");
+    await page.locator("#archive-profile-panel [data-archive-more-info]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, null, { timeout: 3000 });
+    const meteriaGameNotes = await page.locator("#archive-more-info-content").innerText();
+    assert.ok(meteriaGameNotes.includes("supporter de Zeus Familia") && meteriaGameNotes.includes("no pronuncia el nombre Meteria"),
+      "Meteria's game-origin note must expose what Omori confirmed while preserving her unresolved name in that interview.");
+    assert.ok(meteriaGameNotes.includes("ENTREVISTA AUTORAL · DECLARACIÓN DEL AUTOR"),
+      "The interview must be labeled as author testimony, separate from a novel passage.");
+    assert.ok(await page.locator("#archive-more-info-content a[href='https://ln-news.com/articles/109766']").count() > 0,
+      "Meteria's game-origin note must link its author interview.");
     await page.locator("#archive-more-info-close").click();
 
     await page.locator("#archive-return-search").click();
@@ -859,8 +871,8 @@ async function run() {
     const erebusGameNotes = await page.locator("#archive-more-info-content").innerText();
     assert.ok(erebusGameNotes.includes("Eren") && erebusGameNotes.includes("no se incorpora como alias canónico"),
       "Erebus's game continuity note must keep the alias unresolved.");
-    assert.ok(erebusGameNotes.includes("ENTREVISTA / FUENTE SECUNDARIA"),
-      "The game's editorial character caption must not be mislabeled as a primary novel page.");
+    assert.ok(erebusGameNotes.includes("PIE EDITORIAL · FUENTE SECUNDARIA"),
+      "The game's editorial character caption must be labelled separately from Omori's interview.");
     await page.locator("#archive-more-info-close").click();
 
     await page.locator("#archive-return-search").click();
