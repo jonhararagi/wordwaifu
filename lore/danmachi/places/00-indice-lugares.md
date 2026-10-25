@@ -22,6 +22,12 @@
 | [LOC-DAEDALUS-STREET](daedalus-street.md) | Daedalus Street / Calle Daidalos | Anime, Sword Oratoria vol. 7 y relato corto oficial | Parcial: claims por continuidad separados (CONT-ANIME, CONT-SO-LN, CONT-SHORT); geometría y primera mención en novela principal pendientes |
 | [LOC-ORARIO-NORTH-PLAZA](north-plaza.md) | Plaza semicircular al norte de Orario (etiqueta descriptiva; nombre propio no confirmado) | Orario, avenida principal y escena de compra de equipo | Extracto editorial de novela principal; página pendiente |
 
+## Asentamientos dentro del Dungeon
+
+| ID | Lugar | Relación documentada | Estado |
+|---|---|---|---|
+| [LOC-RIVIRA](rivira.md) | Rivira / Rivira Town (リヴィラの街) | Población comercial del piso seguro 18 del Dungeon | Parcial; glosario oficial del anime, `CONT-ANIME`. No es un barrio de Orario de superficie ni un mapa exacto del piso. |
+
 ## Candidatos de Orario encontrados en wikis (IDs aún no activados)
 
 El inventario secundario que queda por investigar incluye la tienda de Hephaistos, anfiteatro/Coliseo, área comercial, mercado libre, Plaza del Amor, cementerio de aventureros, distrito del entretenimiento, Hibachitei, Hearth Mansion, apartamento de Eina y una posada asociada a Hermes Familia. Pantheon, Daedalus Street y las dos residencias de Hestia Familia ya tienen fichas parciales con alcances de evidencia separados.
