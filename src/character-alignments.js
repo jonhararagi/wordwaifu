@@ -19,7 +19,7 @@
       continuity:"CONT-AR",
       rationale:"Las referencias comunitarias describen una finalidad declarada de preparar a Orario para la amenaza del Dragón Negro, pero también su aceptación consciente de causar caos, muerte y desesperación. La intención protectora y los medios deliberadamente lesivos quedan en tensión; por eso esta lectura no la etiqueta automáticamente como buena.",
       alternative:"Caótico bueno es una interpretación alternativa si se pondera ante todo el fin protector. La fuente secundaria también describe rasgos violentos y controladores; la etiqueta no es canon oficial y debe revisarse al cotejar escenas de la novelización.",
-      sources:["https://danmachi.fandom.com/wiki/Alfia","https://danmachi.fandom.com/es/wiki/Alfia","https://danmachi.com/news/news131.php"]
+      sources:["https://danmachi.fandom.com/wiki/Alfia","https://danmachi.fandom.com/es/wiki/Alfia"]
     }),
     "CHAR-DARK-ZALD":Object.freeze({
       id:"CHAR-DARK-ZALD",
@@ -31,7 +31,7 @@
       continuity:"CONT-AR",
       rationale:"Las referencias comunitarias describen como objetivo fortalecer Orario para la futura lucha contra el Dragón Negro, pero Zald acepta actuar como enemigo y provocar caos, muerte y desesperación para forzar ese crecimiento. El propósito protector no borra el daño intencional de los medios; esta lectura evita clasificarlo automáticamente como bueno.",
       alternative:"Caótico bueno es una interpretación alternativa si se da más peso al objetivo de supervivencia humana que a los medios. La clasificación sigue siendo editorial, secundaria y de baja confianza, no una etiqueta oficial del personaje.",
-      sources:["https://danmachi.fandom.com/wiki/Zald","https://danmachi.fandom.com/es/wiki/Zald","https://danmachi.fandom.com/wiki/Alfia"]
+      sources:["https://danmachi.fandom.com/wiki/Zald","https://danmachi.fandom.com/es/wiki/Zald"]
     })
   });
 
