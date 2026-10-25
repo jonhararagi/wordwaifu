@@ -653,6 +653,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Cotejar el texto de esa edición con capítulos y páginas reproducibles para cada afirmación individual de Alfia, Zald y Erebus; la sinopsis editorial no satisface este criterio.
 - [x] Añadir la ficha del distribuidor licenciado BOOK☆WALKER y su enlace de muestra gratuita de la edición japonesa de *Astrea Record 3* al directorio de fuentes y a las fichas de Alfia, Zald y Erebus, con prueba de regresión. La categoría `licensed_retailer` tiene un grupo propio visible en el navegador de fuentes.
 - [ ] Reintentar la lectura de la muestra autorizada de BOOK☆WALKER o cotejar la edición licenciada fuera del visor bloqueado; obtener capítulo/página individual antes de confirmar datos narrativos de Alfia, Zald o Erebus.
+- **Integración/validación:** PR [#117](https://github.com/jonhararagi/wordwaifu/pull/117) integrada; exacto `main` SHA `1302145b9b222130069c9aa7393a115cbfd7284f`. CI de PR: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40205349066), [Lore](https://github.com/jonhararagi/wordwaifu/actions/runs/40205349060); CI post-merge: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40205481864), [Lore](https://github.com/jonhararagi/wordwaifu/actions/runs/40205481796) — todas exitosas.
 
 ## DANMACHI-RESEARCH-046 · Solingen y red de Soma Familia
 
