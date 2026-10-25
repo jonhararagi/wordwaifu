@@ -649,6 +649,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 **Estado factual:** fichas más completas y buscables; el lote sigue en secondary_checked_with_primary_gaps. No se declara verificación primaria de las biografías.
 
 
+- [x] Registrar y exponer en la interfaz la ficha oficial de Yen Press para la edición inglesa licenciada de *Astrea Record, Vol. 3* (ISBN 9781975379926; publicada el 26-11-2024) como ruta de consulta legal para Alfia, Zald y Erebus; etiquetarla como metadatos editoriales, sin claims narrativos.
+- [ ] Cotejar el texto de esa edición con capítulos y páginas reproducibles para cada afirmación individual de Alfia, Zald y Erebus; la sinopsis editorial no satisface este criterio.
+
 ## DANMACHI-RESEARCH-046 · Solingen y red de Soma Familia
 
 - [x] Expandir las fichas de Cecil Blackliza, Iselina, Shau y Ulanda con datos de roster, límites explícitos y rutas de navegación.
