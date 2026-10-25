@@ -3143,7 +3143,7 @@ verification_status: stub
 - events_supported: []
 - continuity_scope: CONT-AR
 - reliability_note: El estado visible del producto/muestra varía según la localización del distribuidor. No se interpreta como indisponibilidad global ni como ausencia de narrativa o personajes.
-- conflicting_sources: [Variantes regionales de la página Google Play Books]
+- conflicting_sources: []
 - rights_note: Enlace y metadatos solamente; no se copió texto narrativo ni se intentó eludir restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
