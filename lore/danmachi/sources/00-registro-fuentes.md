@@ -3020,3 +3020,66 @@ verification_status: stub
 - rights_note: Enlace y metadatos únicamente; no extraer ni reproducir la novela.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+## DMR-045-SRC-020 · SB Creative eBook Store — muestra Astrea Record 1
+- source_id: DMR-045-SRC-020
+- title: SBCr eBook Store / BinB — lector de muestra de Astrea Record 1
+- creator_or_publisher: SB Creative / GA Bunko
+- source_type: OFFICIAL_PUBLISHER_SAMPLE_READER
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 1, muestra digital
+- language: Japonés (interfaz del lector)
+- official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561017JAAA01MBJE3X&lginbtn=false
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_interface_only
+- locator: “Now loading...” y controles de bibliografía, índice, búsqueda, avance automático, lectura por voz y ajustes; no se expuso página narrativa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta de muestra del editor; la extracción no expuso el texto. No se asignan claims ni localizadores narrativos y la carga fallida no implica ausencia de personajes.
+- conflicting_sources: []
+- rights_note: Enlace y observación de interfaz solamente; no se ha extraído la novela.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-021 · SB Creative eBook Store — muestra Astrea Record 2
+- source_id: DMR-045-SRC-021
+- title: SBCr eBook Store / BinB — lector de muestra de Astrea Record 2
+- creator_or_publisher: SB Creative / GA Bunko
+- source_type: OFFICIAL_PUBLISHER_SAMPLE_READER
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 2, muestra digital
+- language: Japonés (interfaz del lector)
+- official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561018JAAA02MBJE3X&lginbtn=false
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_interface_only
+- locator: “Now loading...” y controles de bibliografía, índice, búsqueda, avance automático, lectura por voz y ajustes; no se expuso página narrativa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta de muestra del editor; la extracción no expuso el texto. No se asignan claims ni localizadores narrativos y la carga fallida no implica ausencia de personajes.
+- conflicting_sources: []
+- rights_note: Enlace y observación de interfaz solamente; no se ha extraído la novela.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-022 · SB Creative eBook Store — muestra Astrea Record 3
+- source_id: DMR-045-SRC-022
+- title: SBCr eBook Store / BinB — lector de muestra de Astrea Record 3
+- creator_or_publisher: SB Creative / GA Bunko
+- source_type: OFFICIAL_PUBLISHER_SAMPLE_READER
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 3, muestra digital
+- language: Japonés (interfaz del lector)
+- official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_interface_only
+- locator: “Now loading...” y controles de bibliografía, índice, búsqueda, avance automático, lectura por voz y ajustes; no se expuso página narrativa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta de muestra del editor; la extracción no expuso el texto. No se asignan claims ni localizadores narrativos y la carga fallida no implica ausencia de personajes.
+- conflicting_sources: []
+- rights_note: Enlace y observación de interfaz solamente; no se ha extraído la novela.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
