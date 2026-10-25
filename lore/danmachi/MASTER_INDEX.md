@@ -252,3 +252,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 
 - [Escenario alternativo: Alfia y Zald crían a Bell](events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md) — ficha independiente con cuatro relaciones de navegación y procedencia en DMR-029-CLM-012; no forma parte de la cronología de la novela principal.
 
+
+
+## DMR-045 — ruta de muestra del volumen 14 para el expediente de Rudra
+- [DMR-045-SRC-029](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) registra Google Play Books, volumen 14: opción “Free sample” anunciada en el resultado de catálogo y metadatos bibliográficos de Google Books, sin páginas narrativas legibles.
+- La ficha interactiva de Rudra enlaza esta ruta, la muestra existente de BOOK☆WALKER (DMR-045-SRC-028) y los metadatos de Yen Press. Ninguno de esos enlaces cierra por sí mismo la verificación de la retrospectiva o del epílogo.
+- La prioridad continúa siendo obtener un pasaje narrativo reproducible; no añadir claims ni asignar a Rudra responsabilidad personal por hechos atribuidos a Rudra Familia sin evidencia explícita.
