@@ -17,6 +17,13 @@ assert.ok(bell.history.length > 300, "Bell's history must be a real paragraph, n
 assert.ok(bell.abilities.includes("Liaris Freese"), "Bell's dossier must describe named abilities.");
 assert.ok(api.get("CHAR-RYUU-LION").history.includes("piso 37"), "Ryuu's dossier must include specific narrative context.");
 assert.equal(api.get("MISSING-ID"), null, "Unknown characters should return null.");
+const licensedAstreaUrl = "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes";
+for (const id of ["CHAR-DARK-ALFIA", "CHAR-DARK-ZALD", "CHAR-DARK-EREBUS"]) {
+  const dossier = api.get(id);
+  assert.ok(dossier && Array.isArray(dossier.sources), id + " must retain its source list.");
+  assert.ok(dossier.sources.includes(licensedAstreaUrl), id + " must expose the licensed English Astrea Record volume 3 page as an access route.");
+}
+
 bell.history = "mutated";
 assert.notEqual(api.get("DM-CHAR-BELL").history, "mutated", "Callers must not mutate the shared dossier catalog.");
 const alignments = require("../src/character-alignments.js");
