@@ -545,6 +545,20 @@ const orarioRoadsSearch = corpus.search(index, { query: "Orario avenidas radialm
 assert.ok(orarioRoadsSearch.results.some(item => item.claimId === "DMR-031-CLM-003" && item.verificationStatus === "secondary_checked"), "Japanese wiki leads about the urban layout must be searchable without canon promotion.");
 const orarioEconomySearch = corpus.search(index, { query: "Orario piedras mágicas ciudad desarrollo", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(orarioEconomySearch.results.some(item => item.claimId === "DMR-031-CLM-004" && item.verificationStatus === "secondary_checked"), "Wiki-sourced economic leads must remain retrievable and secondary-labelled.");
+
+const amorSquareRecord = catalog.records.find(record => record.id === "LOC-AMOR-SQUARE");
+assert.ok(amorSquareRecord && amorSquareRecord.path === "places/amor-square.md" && amorSquareRecord.status === "secondary_reference_primary_locator_pending", "Amor Square must be a navigable location whose primary locator remains pending.");
+const amorSquarePage = fs.readFileSync(path.join(root, "places/amor-square.md"), "utf8");
+assert.ok(amorSquarePage.includes("continuity_scope: CONT-UNVERIFIED") && amorSquarePage.includes("DMR-031-CLM-011") && amorSquarePage.includes("アモールの広場"), "Amor Square's place page must retain Japanese naming, research claim, and unverified continuity scope.");
+const amorSquareEdge = index.relationships.find(edge => edge.id === "REL-AMOR-SQUARE-ORARIO-SECONDARY");
+assert.ok(amorSquareEdge && amorSquareEdge.from === "LOC-AMOR-SQUARE" && amorSquareEdge.to === "LOC-ORARIO" && amorSquareEdge.continuity === "CONT-UNVERIFIED" && amorSquareEdge.evidenceStatus === "secondary_checked" && amorSquareEdge.claimRef === "DMR-031-CLM-011", "Amor Square's spatial edge must be explicitly secondary and sourced to DMR-031-CLM-011.");
+const amorSquareSearch = corpus.search(index, {query:"Plaza del Amor avenida suroeste",continuity:"CONT-UNVERIFIED",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(amorSquareSearch.results.some(item => item.claimId === "DMR-031-CLM-011" && item.verificationStatus === "secondary_checked"), "Amor Square's Japanese wiki details must be searchable with a visible secondary-evidence status.");
+const amorSquareMainLN = corpus.search(index, {query:"Plaza del Amor avenida suroeste",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+assert.ok(!amorSquareMainLN.results.some(item => item.claimId === "DMR-031-CLM-011"), "The unverified Amor Square claim must not leak into main light-novel continuity.");
+const amorSquareSource = corpus.getOnlineSourceDirectory().find(source => source.id === "community-orario-atwiki-ja");
+assert.ok(amorSquareSource && String(amorSquareSource.coverage).includes("アモールの広場") && String(amorSquareSource.limits).includes("CONT-UNVERIFIED"), "The research browser must expose the Japanese source and its continuity limitation.");
+
 const guildBuildingSearch = corpus.search(index, { query: "Guild Pantheon mostradores biblioteca aventureros", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(guildBuildingSearch.results.some(item => item.claimId === "DMR-031-CLM-006" && item.verificationStatus === "secondary_checked"), "Guild/Pantheon building details must be retrievable separately from canon-confirmed facts.");
 const babelFloorsSearch = corpus.search(index, { query: "Babel torre pisos Dungeon comerciales", continuity: "CONT-UNVERIFIED", period: "ALL", aspect: "all", spoiler: "all" });

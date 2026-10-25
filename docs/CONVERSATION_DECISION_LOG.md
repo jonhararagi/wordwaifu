@@ -84,6 +84,17 @@
 - **Fuente:** https://danmachi.com/danmachi/special/index.html — entrada oficial de adaptación en japonés; consultada directamente durante esta tarea.
 - **Verificación posterior a la integración:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40147234354) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40147234424), ambos finalizados con éxito sobre el SHA exacto `2c93c79d93050e88260fc3c3a448ce40d1d6e7ee`.
 
+### CONV-DM-2026-10-24-009 — Plaza del Amor registrada como pista secundaria navegable
+
+- **Fecha:** 2026-10-24.
+- **Tipo:** investigación e implementación de lugar.
+- **Estado al abrir PR:** implementado en la rama de trabajo; integración y validación pendientes de los controles del PR y de la CI posterior al merge.
+- **Hallazgo:** la wiki comunitaria japonesa ダンまち @ ウィキ, entrada オラリオ, describe アモールの広場 (Plaza del Amor) como punto de encuentro al que se llega por un callejón desde la avenida principal suroeste; también resume su pavimento, flores y lámparas de piedra mágica. La wiki en español lista Plaza del Amor en su esquema de Orario, pero el esquema no es cartografía oficial.
+- **Implementación propuesta:** crear `LOC-AMOR-SQUARE` como registro tipo `location` con estado `secondary_reference_primary_locator_pending`, un claim `DMR-031-CLM-011`, una arista `REL-AMOR-SQUARE-ORARIO-SECONDARY`, búsqueda recuperable y prueba de no filtración a `CONT-MAIN-LN`.
+- **Alcance:** claim y relación únicamente en `CONT-UNVERIFIED`; no se usa como confirmación narrativa de la novela principal y no asigna coordenadas. La primera mención primaria y su localizador reproducible siguen abiertos; el bloqueo HTTP 503 de las muestras GA Bunko tampoco queda resuelto por este lote.
+- **Documentos afectados:** DMR-031, registro de fuentes, catálogo, ficha/índice de lugares, índice maestro, cola, directorio de fuentes, pruebas y estado del proyecto.
+- **Siguiente acción:** validar PR y workflows; tras la integración, sustituir este estado inicial por el SHA final y las URLs de CI verificadas.
+
 ## Plantilla para entradas futuras
 
 - **ID:**

@@ -1480,6 +1480,22 @@
       "priority": "normal"
     },
     {
+      "id": "LOC-AMOR-SQUARE",
+      "path": "places/amor-square.md",
+      "type": "location",
+      "tags": [
+        "Amor Square",
+        "Plaza del Amor",
+        "アモールの広場",
+        "Orario",
+        "avenida suroeste",
+        "fuente secundaria",
+        "CONT-UNVERIFIED"
+      ],
+      "status": "secondary_reference_primary_locator_pending",
+      "priority": "normal"
+    },
+    {
       "id": "LOC-HESTIA-HOME",
       "path": "places/hestia-familia-church.md",
       "type": "location",
@@ -3540,7 +3556,7 @@
       "status": "source_checked_excerpt_only"
     }
   ],
-  "lastStructuredSync": "2026-10-23",
+  "lastStructuredSync": "2026-10-24",
   "relationships": [
     {
       "id": "REL-ASTREA-DEITY-001",
@@ -5173,6 +5189,20 @@
       "claimRef": "DMR-031-CLM-006",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md",
       "note": "La relación diferencia el edificio físico de la institución. Sigue siendo secundaria y no resuelve si Pantheon se distingue físicamente de Babel en la continuidad de la novela."
+    },
+    {
+      "id": "REL-AMOR-SQUARE-ORARIO-SECONDARY",
+      "from": "LOC-AMOR-SQUARE",
+      "to": "LOC-ORARIO",
+      "kind": "located_in",
+      "label": "La wiki comunitaria japonesa ubica secundariamente la Plaza del Amor en el marco urbano de Orario",
+      "continuity": "CONT-UNVERIFIED",
+      "interval": "Descripción comunitaria actualizada en 2020; periodo narrativo no fijado",
+      "evidenceStatus": "secondary_checked",
+      "evidenceType": "secondary_wiki_summary",
+      "claimRef": "DMR-031-CLM-011",
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md",
+      "note": "No es una arista de canon confirmado; no fija coordenadas ni demuestra la posición exacta en la novela principal."
     },
     {
       "id": "REL-HESTIA-CHURCH-FORMER-HOME-ANIME",

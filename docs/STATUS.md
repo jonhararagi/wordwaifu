@@ -2,13 +2,21 @@
 ## Estado operativo y verificación — 2026-10-24
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 177 registros activos; 29 IDs reservados; 130 documentos de apoyo.
-- **Grafo de conocimiento:** 257 relaciones explícitas; 257/257 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Corpus DanMachi:** 178 registros activos; 29 IDs reservados; 130 documentos de apoyo.
+- **Grafo de conocimiento:** 258 relaciones explícitas; 258/258 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 92 perfiles; 92/92 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
+
+## Orario — Plaza del Amor registrada como pista secundaria navegable (2026-10-24)
+
+- Se añadió `LOC-AMOR-SQUARE` a partir del claim `DMR-031-CLM-011` de una wiki comunitaria japonesa consultada directamente. La fuente describe el nombre `アモールの広場`, el acceso por un callejón desde la avenida principal suroeste, el pavimento, la vegetación y la iluminación nocturna.
+- La relación `REL-AMOR-SQUARE-ORARIO-SECONDARY` conserva `CONT-UNVERIFIED` y `secondary_checked`; la ficha no afirma que el pasaje narrativo se haya localizado ni que el mapa comunitario sea cartografía oficial.
+- La wiki en español sirve como contraste del nombre mostrado en su diagrama, no como verificación primaria independiente. La primera mención en la novela principal, la página y la precisión topológica siguen pendientes.
+- La búsqueda del lore y el directorio de fuentes se actualizaron y se añadieron regresiones para comprobar que el claim se recupera en `CONT-UNVERIFIED` y no se filtra a `CONT-MAIN-LN`.
+- **Estado en esta rama:** implementación preparada para PR; todavía no declarar integración ni validación hasta comprobar las verificaciones y la CI posterior al merge.
 
 ## Orario — Rivira como asentamiento del Dungeon (2026-10-24)
 
