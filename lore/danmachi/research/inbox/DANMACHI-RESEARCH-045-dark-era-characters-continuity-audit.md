@@ -550,3 +550,33 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Interpretación permitida:** queda registrada una ruta editorial de consulta autorizada. No es una escena leída ni un localizador de capítulo/página; la carga incompleta no prueba presencia o ausencia de un personaje.
 
 **Límite conjunto de SRC-020–022:** los tres enlaces son intentos de acceso a lectores públicos. Ninguno devolvió páginas narrativas; no se crean claims, relaciones ni localizadores a partir del número de volumen, el CID o el menú del lector. La verificación primaria de DMR-045 continúa abierta.
+
+
+## DMR-045-SRC-023 · Google Play Books — Astrea Record Vol. 1 (edición inglesa)
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Google Play Books — Astrea Record Vol. 1](https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_1_Is_It_Wrong_to_Tr?id=M_3xEAAAQBAJ).
+- **Tipo:** página de distribuidor de ebook licenciado; vendedor indicado: Yen Press LLC.
+- **Resultado observado:** la página pública indica que existe una muestra gratuita (“Free sample”) y publica una sinopsis editorial. La extracción recuperó metadatos y sinopsis, pero no páginas de la muestra.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** ruta directa para que un lector consulte la muestra mediante el flujo normal de Google Play Books. No es prueba de que se haya leído el texto ni identifica en qué escena aparece un personaje.
+- **Siguiente acción:** si la muestra está disponible en el visor normal del lector, documentar un pasaje solo después de verlo con un localizador reproducible.
+
+## DMR-045-SRC-024 · Google Play Books — Astrea Record Vol. 2 (edición inglesa)
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Google Play Books — Astrea Record Vol. 2](https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_2_Is_It_Wrong_to_Tr?id=cLwFEQAAQBAJ).
+- **Tipo:** página de distribuidor de ebook licenciado; vendedor indicado: Yen Press LLC.
+- **Resultado observado:** la página pública indica que existe una muestra gratuita (“Free sample”) y publica una sinopsis editorial sobre las consecuencias de la noche de tragedia en Orario. La extracción solo devolvió metadatos y sinopsis, no páginas narrativas.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** ruta directa para consulta legítima del ebook y su muestra; sin lectura narrativa, no se genera ningún claim de personaje ni localizador de escena.
+- **Siguiente acción:** probar la muestra con el acceso normal del lector y registrar edición/página/capítulo únicamente si el texto está visible.
+
+## DMR-045-SRC-025 · Google Play Books — Astrea Record Vol. 3 (disponibilidad regional variable)
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Google Play Books — Astrea Record Vol. 3](https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_3_Is_It_Wrong_to_Tr?id=Z0gVEQAAQBAJ).
+- **Tipo:** página de distribuidor de ebook licenciado; vendedor indicado: Yen Press LLC.
+- **Resultado observado:** una ficha indexada anuncia “Free sample”, pero la página abierta en otra localización devolvió “This item isn't available in your country” y no mostró la misma acción de muestra. La extracción no obtuvo páginas narrativas de ninguna de las dos vistas.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** la disponibilidad del producto/muestra depende de la variante regional que muestra el distribuidor. No se afirma que la muestra esté disponible o ausente globalmente y no se infiere presencia o ausencia de personajes.
+- **Siguiente acción:** conservar el enlace como ruta de consulta de acceso normal; si la página de muestra se ofrece en el entorno del lector, verificar manualmente una página concreta sin eludir restricciones.
+
+**Límite conjunto de SRC-023–025:** estos registros describen vías de consulta licenciada y observaciones de sus páginas públicas. Ninguno permitió leer una página narrativa. Las sinopsis editoriales, la etiqueta “Free sample” y una advertencia regional no respaldan afirmaciones individuales sobre Alfia, Zald, Meteria, Erebus o Rudra ni cierran los localizadores primarios de DMR-045.
