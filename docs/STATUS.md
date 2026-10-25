@@ -326,5 +326,7 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - Los volúmenes 1 y 2 anuncian “Free sample”; la extracción pública solo mostró sinopsis y metadatos. La ficha del volumen 3 mostró una restricción regional en una vista, mientras que otra ficha indexada anunciaba una muestra. No se asume disponibilidad global uniforme.
 - Se registran DMR-045-SRC-023–025 en el directorio de fuentes y en la auditoría/registro central. Los tres son metadata_checked_only, sin claims ni localizadores; no se ha leído una página narrativa y no cambia el estado de verificación de los personajes.
 - Se actualizaron las pruebas de directorio de fuentes y de integridad de DMR-045 para exigir que los tres enlaces permanezcan accesibles con el límite de evidencia explícito.
-- **Estado:** implementado en rama de trabajo; pendiente CI del PR y de main.
+- **Integrado y validado:** PR [#129](https://github.com/jonhararagi/wordwaifu/pull/129), merge SHA f450e98426c38c9c54b0c9befc6a1e5388ea99ac.
+- **CI de la PR, cabeza 77cfd88def764f42ed60dc5a8360512074c848d2:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737355) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737354), ambos success.
+- **CI post-merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879793) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879958), ambos success; incluyen browser smoke y validación del catálogo/enlaces.
 - **Próxima prioridad:** conseguir una página narrativa realmente legible mediante acceso autorizado normal; mantener abiertos los cinco localizadores primarios de DMR-045.
