@@ -46,7 +46,7 @@ assert.equal(bookwalkerSample[0].url, "https://bookwalker.jp/dead6afbb1-d488-4cf
 assert.equal(bookwalkerSample[0].authority, "Muestra gratuita de distribuidor licenciado");
 assert.match(bookwalkerSample[0].limits, /Could not download/);
 assert.match(bookwalkerSample[0].limits, /No se obtuvo texto narrativo legible|ningún intento devolvió páginas narrativas legibles/i);
-assert.match(bookwalkerSample[0].limits, /no demuestra que la edición esté indisponible/i);
+assert.match(bookwalkerSample[0].limits, /no demuestra(?:n)? que la edición esté indisponible/i);
 const meteriaEn = sources.find(source => source.id === "community-meteria-en");
 assert.match(meteriaEn.limits, /no nombra a Meteria/i,
   "the source directory must preserve the limit of the Memoria Freese interview");
