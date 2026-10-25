@@ -156,6 +156,7 @@
     "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md",
     "research/inbox/DANMACHI-RESEARCH-047-orario-north-plaza-volume2-preview.md",
     "research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md",
+    "research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md",
     "research/inbox/DANMACHI-RESEARCH-049-daedalus-street-sword-oratoria-vol7.md",
     "research/inbox/DANMACHI-RESEARCH-050-daedalus-street-official-short-story.md"
   ];
