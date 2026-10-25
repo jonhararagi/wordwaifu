@@ -2989,8 +2989,8 @@ verification_status: stub
 - language: Inglés
 - official_url: https://books.google.com/books?id=XWHEEQAAQBAJ
 - accessed_at: 2026-10-25
-- locator_type: licensed_preview_search_and_contents_metadata
-- locator: Tabla de contenidos con “The Heroes' Afterglow” y “The Knights Afterglow”; búsquedas de Alfia, Meteria y Rudra sin resultados; los resultados de Afterglow indican “No preview available for this page”. Zald/Erebus: error HTTP 429, búsqueda no completada.
+- locator_type: licensed_preview_search_contents_and_reader_render_failure
+- locator: Tabla de contenidos con “The Heroes' Afterglow” y “The Knights Afterglow”; búsquedas de Alfia, Meteria y Rudra sin resultados; los resultados de Afterglow indican “No preview available for this page”. Un reintento por el lector público normal ([vista previa de Google Books](https://www.google.com/books/edition/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a/XWHEEQAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PT29)) anunció `Preview · 28 pages` y `1 of 4`, pero las páginas devolvieron `Something went wrong / Page didn't load`; no se leyó narración. Zald/Erebus: error HTTP 429, búsqueda no completada.
 - claims_supported: []
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN

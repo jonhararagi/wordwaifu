@@ -274,3 +274,11 @@
 - **Integración verificada:** PR [#133](https://github.com/jonhararagi/wordwaifu/pull/133), merge SHA `1c53f9f7ca57a6aeebaedbf57234fb8b6e581f6f`.
 - **CI de la PR:** [Validate WordWaifu #3366](https://github.com/jonhararagi/wordwaifu/actions/runs/40231380471) y [DanMachi Lore and Retrieval Integrity #1759](https://github.com/jonhararagi/wordwaifu/actions/runs/40231380497), success.
 - **CI post-merge del SHA exacto de main:** [Validate WordWaifu #3367](https://github.com/jonhararagi/wordwaifu/actions/runs/40231489642) y [DanMachi Lore and Retrieval Integrity #1760](https://github.com/jonhararagi/wordwaifu/actions/runs/40231489669), success.
+
+### CONV-DM-2026-10-25-010 — Reintento de la vista previa licenciada de Google Books vol. 20
+- **Fecha:** 2026-10-25.
+- **Hallazgo:** la página pública autorizada de Google Books anuncia `Preview · 28 pages`; el lector muestra `1 of 4`, pero las páginas consultadas no cargaron y devolvieron `Something went wrong / Page didn't load`.
+- **Registro actualizado:** se conserva el ID existente `DMR-045-SRC-018` en `metadata_checked_only`, con claims vacíos. Se actualizan la auditoría de DMR-045, el registro central de fuentes, el directorio de fuentes de la aplicación, la cola, el índice maestro, el estado y las regresiones.
+- **Límite factual:** la vista previa que no se renderiza no es un localizador narrativo; no confirma presencia/ausencia de personajes ni respalda habilidades, relaciones o escenas. Las búsquedas previas que fallaron con HTTP 429 siguen siendo errores, no resultados negativos.
+- **Prioridad vigente:** mantener abiertos los localizadores primarios individuales de Alfia, Zald, Meteria y Erebus, y la atribución personal de Rudra; no ampliar Orario hasta completar o acotar honestamente esta investigación.
+- **Estado de integración:** pendiente de la revisión y CI de la PR que contiene esta actualización.

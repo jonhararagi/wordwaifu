@@ -10,6 +10,12 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## DMR-045 — reintento de vista previa autorizada de DanMachi vol. 20 (2026-10-25)
+
+- La ficha pública licenciada de [Google Books vol. 20](https://books.google.com/books?id=XWHEEQAAQBAJ) se comprobó también desde su lector normal ([vista previa pública](https://www.google.com/books/edition/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a/XWHEEQAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PT29)). El lector anuncia `Preview · 28 pages` y muestra `1 of 4`, pero las páginas consultadas devuelven `Something went wrong / Page didn't load`; no se obtiene texto narrativo legible.
+- Se actualizó el registro existente `DMR-045-SRC-018` y el directorio de fuentes para reflejar el fallo de renderizado. Sigue `metadata_checked_only`, con `claims_supported: []`; no se crean claims, relaciones ni localizadores a partir de la interfaz o del índice.
+- **Pendiente:** localizar en una edición licenciada legible los pasajes individuales de Alfia, Zald, Meteria y Erebus y la evidencia narrativa que permita evaluar la atribución personal a Rudra. Los cinco huecos primarios de DMR-045 siguen abiertos.
+
 ## Filtro de alineamiento de personajes — integrado y validado (2026-10-25)
 
 - La PR [#115](https://github.com/jonhararagi/wordwaifu/pull/115) está integrada en `main` por el commit `3f9fb9536482f381f1cdd9b533ae75d34508f749`.
