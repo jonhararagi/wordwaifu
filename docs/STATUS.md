@@ -16,7 +16,7 @@
 - La relación `REL-AMOR-SQUARE-ORARIO-SECONDARY` conserva `CONT-UNVERIFIED` y `secondary_checked`; la ficha no afirma que el pasaje narrativo se haya localizado ni que el mapa comunitario sea cartografía oficial.
 - La wiki en español sirve como contraste del nombre mostrado en su diagrama, no como verificación primaria independiente. La primera mención en la novela principal, la página y la precisión topológica siguen pendientes.
 - La búsqueda del lore y el directorio de fuentes se actualizaron y se añadieron regresiones para comprobar que el claim se recupera en `CONT-UNVERIFIED` y no se filtra a `CONT-MAIN-LN`.
-- **Estado en esta rama:** implementación preparada para PR; todavía no declarar integración ni validación hasta comprobar las verificaciones y la CI posterior al merge.
+- **Estado final:** integrado y validado en `main` mediante [PR #109](https://github.com/jonhararagi/wordwaifu/pull/109), SHA `2342ccf464a6f6d88e0b31aa4c7f77af04695348`. [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40148575531) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40148575536) finalizaron con éxito sobre ese SHA exacto.
 
 ## Orario — Rivira como asentamiento del Dungeon (2026-10-24)
 
