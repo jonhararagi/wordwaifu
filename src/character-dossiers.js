@@ -769,6 +769,9 @@
       conflict: "Su función narrativa provisional se lee como un antagonismo que pone a prueba a los héroes de Orario, no como una villana plana. La lectura moral de sus motivos debe distinguir el texto de la interpretación comunitaria y no importar datos de la versión de juego sin comparación.",
       sources: ["https://danmachi.fandom.com/wiki/Alfia","https://danmachi.fandom.com/es/wiki/Alfia/Habilidades","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://dengekionline.com/articles/189750/","https://note.com/fujinoomori/n/n629829ac3fe4","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md","https://ln-news.com/articles/109766",
         "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes"
+      ,
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
       ],
     },
     "CHAR-CECIL-BLACKLIZA": {
@@ -852,6 +855,9 @@
       conflict: "El conflicto de Zald se estudia como antagonismo de alto impacto dentro de una tragedia mayor, con un posible sentido de prueba para los héroes del futuro según fuentes comunitarias. La enciclopedia no debe reducirlo a una ficha de poder ni inventar motivaciones más allá de lo que la novela confirme.",
       sources: ["https://danmachi.fandom.com/es/wiki/Zald","https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://www.reddit.com/r/DanMachi/comments/1ifg4g6/volume_20_side_story_a_scene_between_a_certain/","https://dengekionline.com/articles/189750/","https://ln-news.com/articles/109766","https://note.com/fujinoomori/n/n629829ac3fe4","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md",
         "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes"
+      ,
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
       ]
     },
     "CHAR-DARK-RUDRA": {
@@ -899,6 +905,9 @@
       conflict: "Erebus sirve para explorar la oposición ideológica a la justicia de Ryu y Astrea Familia. La ficha distingue antagonismo reportado de una reconstrucción completa de su plan.",
       sources: ["https://danmachi.fandom.com/wiki/Erebus","https://ln-news.com/articles/109766","https://danmachi.com/news/news131.php","https://danmachi.com/chronology/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
         "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes"
+      ,
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
       ]
     },
     "CHAR-OLIVAS-ACT": {
