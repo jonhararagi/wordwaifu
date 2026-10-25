@@ -341,3 +341,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR, cabeza 77cfd88def764f42ed60dc5a8360512074c848d2:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737355) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737354), ambos success.
 - **CI post-merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879793) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879958), ambos success; incluyen browser smoke y validación del catálogo/enlaces.
 - **Próxima prioridad:** conseguir una página narrativa realmente legible mediante acceso autorizado normal; mantener abiertos los cinco localizadores primarios de DMR-045.
+
+
+## Corrección de prioridad en WORK_QUEUE — DMR-045 antes que Orario (2026-10-25)
+
+- Se corrigió una contradicción de estructura: el encabezado de prioridad apuntaba a DMR-045, pero su cuerpo contenía las tareas geográficas de Orario.
+- Ahora la cola presenta el trabajo primario aún pendiente de Alfia, Zald, Meteria, Erebus y Rudra, junto con el límite de evidencia de las rutas DMR-045-SRC-018 a DMR-045-SRC-028. El bloque extenso de Orario queda expresamente como etapa posterior.
+- Se conserva la decisión del 2026-10-24 como historial, pero se marca como sustituida en el orden de ejecución por la directriz vigente del 2026-10-25.
+- Las pruebas de integridad exigen ambos bloques y comprueban que SRC-026/027/028 estén visibles en la cola sin convertir los errores de acceso en hallazgos narrativos.
+- **Estado:** cambio documental y de prueba en rama de trabajo; pendiente CI e integración.
+- **Límite factual:** todavía no se dispone de un pasaje narrativo primario legible para cerrar DMR-045; el orden de trabajo se corrigió, no la evidencia del canon.
