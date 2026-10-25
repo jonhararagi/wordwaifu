@@ -219,3 +219,15 @@
 - **CI de PR, head SHA `308ee68ed81673757ae4c99c1d8af95bae573cfe`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032458) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032504), ambas exitosas.
 - **CI post-merge, SHA exacto de `main` `742b0220590e45082972015684a0ecc6cbf14f04`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145581) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145583), ambas exitosas, incluida la prueba de navegador.
 - **Estado final:** integrado y validado; DMR-045 sigue abierto para el cotejo de fuentes primarias.
+
+
+### CONV-DM-2026-10-25-006 — Notas interactivas faltantes y evidencia de muestras licenciadas
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED, MERGED; la validación posterior a la fusión se registra por separado.
+- **Instrucción operativa aplicada:** continuar las correcciones de DMR-045 antes de ampliar Orario; actualizar las fichas existentes y la interfaz, no duplicar personajes ni convertir un resumen secundario en canon primario.
+- **Integración:** PR [#122](https://github.com/jonhararagi/wordwaifu/pull/122), SHA exacto de main: ba6363bce1b651a74ebfa9b782fb7e38f8804eef. CI de la PR, head e03fdb17c5c6fc292fb9fffd321483eb1abf2b07: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40222698644) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40222698535), ambas exitosas, incluida la prueba de navegador.
+- **Implementación:** el diálogo “Más información” muestra notas separadas para Meteria (CONT-MAIN-LN y CONT-AU), Erebus (CONT-GAME) y Rudra (CONT-MAIN-LN). La UI tipa por separado wikis comunitarias, entrevistas, publicación autoral y metadatos editoriales.
+- **Investigación de acceso legal:** se registran DMR-045-SRC-018 (Google Books, vol. 20) y DMR-045-SRC-019 (BinB, Astrea Record 3) en la auditoría y el registro central de fuentes. Los lectores consultados no proporcionaron páginas narrativas legibles; el HTTP 429 para dos consultas no se cuenta como resultado de búsqueda.
+- **Límites:** no se crean IDs, claims ni aristas; la filiación de Meteria, las motivaciones de Erebus y la responsabilidad personal de Rudra no se promueven a canon. DMR-045 sigue abierto para localizadores primarios.
+- **Documentos afectados:** UI, registro de fuentes, DMR-045, estado, cola, índice maestro y pruebas de API/Playwright.
+- **Siguiente acción aceptada:** continuar primero el cotejo primario de los cinco expedientes de DMR-045. Si las muestras licenciadas siguen sin exponer páginas narrativas, conservar el bloqueo concreto y completar solo huecos verificables antes de retomar la expansión de Orario.
