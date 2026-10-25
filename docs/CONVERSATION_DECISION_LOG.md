@@ -199,10 +199,11 @@
 
 ### CONV-DM-2026-10-25-004 — Alinear el detalle mecánico de las fichas de Alfia y Zald
 - **Fecha:** 2026-10-25.
-- **Estado:** IMPLEMENTADO EN RAMA; pruebas y CI pendientes de ejecución.
+- **Estado final:** INTEGRADO Y VALIDADO EN `main` mediante PR [#118](https://github.com/jonhararagi/wordwaifu/pull/118), merge SHA `d81766fc7003294c15d0a2b776ce2d59170da86c`.
 - **Objetivo:** corregir una diferencia entre el nivel de detalle de las fichas Markdown y los expedientes interactivos, sin crear más identidades ni elevar pistas comunitarias a canon.
 - **Cambios:** la ficha UI de Alfia ahora muestra que las wikis atribuyen a Genos Angelus una campana gris plateada, alcance superior a 100 metros y un empeoramiento de su salud al usarlo contra Leviathan; todo queda marcado como dato secundario pendiente de cotejo. Las fichas UI y Markdown de Zald explicitan el ejemplo comunitario de Deus Ambrosia (nivel 7 frente a poder equivalente al nivel 10) como límite reportado, no como fórmula universal comprobada.
 - **Fuentes/continuidad:** https://danmachi.fandom.com/es/wiki/Alfia/Habilidades y https://danmachi.fandom.com/es/wiki/Zald; los detalles continúan bajo CONT-AR con evidencia secundaria y localizador primario pendiente.
 - **Archivos afectados:** `src/character-dossiers.js`, `lore/danmachi/characters/dark-era/zald.md`, `tests/test_lore_corpus.cjs`, `lore/danmachi/research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md`, `lore/danmachi/WORK_QUEUE.md` y `docs/STATUS.md`.
 - **Límite:** no se agregan claims, relaciones, aliases ni IDs nuevos; DMR-045 y sus localizadores narrativos primarios siguen abiertos.
-- **Siguiente paso:** ejecutar CI de la PR; integrar solo con las verificaciones pertinentes en verde y registrar el SHA exacto de `main`.
+- **CI de PR, head SHA `e870d5ef364639238000b7f991a4b855deafe136`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210105940) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210106029), ambas exitosas.
+- **CI post-merge sobre el SHA exacto de `main` `d81766fc7003294c15d0a2b776ce2d59170da86c`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257785) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257780), ambas exitosas.
