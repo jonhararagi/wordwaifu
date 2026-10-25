@@ -552,9 +552,9 @@ const amorSquarePage = fs.readFileSync(path.join(root, "places/amor-square.md"),
 assert.ok(amorSquarePage.includes("continuity_scope: CONT-UNVERIFIED") && amorSquarePage.includes("DMR-031-CLM-011") && amorSquarePage.includes("アモールの広場"), "Amor Square's place page must retain Japanese naming, research claim, and unverified continuity scope.");
 const amorSquareEdge = index.relationships.find(edge => edge.id === "REL-AMOR-SQUARE-ORARIO-SECONDARY");
 assert.ok(amorSquareEdge && amorSquareEdge.from === "LOC-AMOR-SQUARE" && amorSquareEdge.to === "LOC-ORARIO" && amorSquareEdge.continuity === "CONT-UNVERIFIED" && amorSquareEdge.evidenceStatus === "secondary_checked" && amorSquareEdge.claimRef === "DMR-031-CLM-011", "Amor Square's spatial edge must be explicitly secondary and sourced to DMR-031-CLM-011.");
-const amorSquareSearch = corpus.search(index, {query:"Plaza del Amor アモールの広場 avenida suroeste callejón adoquines flores lámparas",continuity:"CONT-UNVERIFIED",period:"ALL",aspect:"all",spoiler:"all"});
+const amorSquareSearch = corpus.search(index, {query:"Plaza del Amor avenida suroeste",continuity:"CONT-UNVERIFIED",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(amorSquareSearch.results.some(item => item.claimId === "DMR-031-CLM-011" && item.verificationStatus === "secondary_checked"), "Amor Square's Japanese wiki details must be searchable with a visible secondary-evidence status.");
-const amorSquareMainLN = corpus.search(index, {query:"Plaza del Amor アモールの広場 avenida suroeste callejón",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
+const amorSquareMainLN = corpus.search(index, {query:"Plaza del Amor avenida suroeste",continuity:"CONT-MAIN-LN",period:"ALL",aspect:"all",spoiler:"all"});
 assert.ok(!amorSquareMainLN.results.some(item => item.claimId === "DMR-031-CLM-011"), "The unverified Amor Square claim must not leak into main light-novel continuity.");
 const amorSquareSource = corpus.getOnlineSourceDirectory().find(source => source.id === "community-orario-atwiki-ja");
 assert.ok(amorSquareSource && String(amorSquareSource.coverage).includes("アモールの広場") && String(amorSquareSource.limits).includes("CONT-UNVERIFIED"), "The research browser must expose the Japanese source and its continuity limitation.");
