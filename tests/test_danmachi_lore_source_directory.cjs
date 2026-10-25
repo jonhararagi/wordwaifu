@@ -45,7 +45,7 @@ assert.equal(bookwalkerSample.length, 1, "the free preview route must be discove
 assert.equal(bookwalkerSample[0].url, "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1");
 assert.equal(bookwalkerSample[0].authority, "Muestra gratuita de distribuidor licenciado");
 assert.match(bookwalkerSample[0].limits, /Could not download/);
-assert.match(bookwalkerSample[0].limits, /No se obtuvo texto narrativo legible/);
+assert.match(bookwalkerSample[0].limits, /No se obtuvo texto narrativo legible|ningún intento devolvió páginas narrativas legibles/i);
 assert.match(bookwalkerSample[0].limits, /no demuestra que la edición esté indisponible/i);
 const meteriaEn = sources.find(source => source.id === "community-meteria-en");
 assert.match(meteriaEn.limits, /no nombra a Meteria/i,
