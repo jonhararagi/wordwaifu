@@ -211,9 +211,11 @@
 
 ### CONV-DM-2026-10-25-005 — Abrir los resúmenes de habilidad de Alfia y Zald desde la enciclopedia
 - **Fecha:** 2026-10-25.
-- **Estado inicial:** implementación preparada en rama; PR y CI pendientes.
+- **Estado final:** integrada y validada en `main` mediante PR [#120](https://github.com/jonhararagi/wordwaifu/pull/120), merge SHA `742b0220590e45082972015684a0ecc6cbf14f04`.
 - **Problema observado:** las fichas detalladas de `src/character-dossiers.js` almacenaban el detalle corregido, pero el diálogo “Más información” de la enciclopedia dependía del registro `EXTENDED` de `src/character-archive.js`. Sin entrada específica por continuidad, la UI podía mostrar únicamente las afirmaciones curadas y no el detalle de habilidades esperado.
 - **Cambio:** añadir entradas explícitas `CONT-AR` de Alfia y Zald al diálogo ampliado, con fuente comunitaria visible y límites de evidencia/continuidad. Añadir pruebas Node y Playwright que abran ambas fichas reales desde la búsqueda de la enciclopedia y comprueben que los detalles se ven en el diálogo.
 - **Regla de continuidad:** las notas de habilidades se ofrecen únicamente bajo `CONT-AR`; las pistas del volumen 20 se mantienen señaladas como `CONT-MAIN-LN`, y los contenidos de juego/`CONT-AU` no se fusionan.
 - **Integridad:** no se crean identidades, claims, relaciones ni alias; no se convierten datos de wiki en canon confirmado. DMR-045 conserva pendiente el cotejo primario.
-- **Validación:** pendiente de CI de PR y posintegración.
+- **CI de PR, head SHA `308ee68ed81673757ae4c99c1d8af95bae573cfe`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032458) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032504), ambas exitosas.
+- **CI post-merge, SHA exacto de `main` `742b0220590e45082972015684a0ecc6cbf14f04`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145581) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145583), ambas exitosas, incluida la prueba de navegador.
+- **Estado final:** integrado y validado; DMR-045 sigue abierto para el cotejo de fuentes primarias.
