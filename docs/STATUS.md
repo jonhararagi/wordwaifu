@@ -276,3 +276,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR, head SHA `e870d5ef364639238000b7f991a4b855deafe136`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210105940) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210106029), ambas exitosas.
 - **CI post-merge sobre `main`, SHA exacto `d81766fc7003294c15d0a2b776ce2d59170da86c`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257785) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257780), ambas exitosas.
 - **Estado final:** integrado y validado; no se modificaron métricas ni estructura de relaciones.
+
+
+## DMR-045 — acceso desde la UI a las habilidades secundarias (2026-10-25)
+
+- Se detectó que el detalle de `src/character-dossiers.js` no bastaba para garantizar que los datos aparecieran en el diálogo “Más información”: ese diálogo usa entradas por continuidad del registro `EXTENDED` en `src/character-archive.js`.
+- Se añadieron notas interactivas específicas de `CONT-AR` para Alfia y Zald. La ficha de Alfia muestra el reporte comunitario sobre Genos Angelus (campana gris plateada y alcance superior a 100 metros) con advertencia de evidencia secundaria; la de Zald muestra el ejemplo reportado nivel 7/nivel 10 sin presentarlo como fórmula universal.
+- Se añadieron pruebas de API y de recorrido Playwright para verificar que buscar Alfia/Zald, abrir la ficha y pulsar “Más información” muestra las notas y enlaza las wikis comunitarias.
+- **Estado:** implementación en rama; PR, CI e integración pendientes.
+- **Límite:** las entradas solo se muestran bajo `CONT-AR`; pistas de vol. 20 quedan en `CONT-MAIN-LN`, `CONT-GAME` y `CONT-AU` no se fusionan y los localizadores primarios de DMR-045 siguen pendientes.
