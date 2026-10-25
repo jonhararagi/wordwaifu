@@ -627,6 +627,14 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 **Actualización de interfaz y nuevas rutas autorizadas (2026-10-25):**
 **Rutas oficiales adicionales consultadas (2026-10-25):**
+**Rutas minoristas de muestra consultadas (2026-10-25):**
+- [x] Registrar Google Play Books para Astrea Record 1 como DMR-045-SRC-023: la ficha muestra “Free sample”, pero la extracción no mostró páginas de la novela.
+- [x] Registrar Google Play Books para Astrea Record 2 como DMR-045-SRC-024: se observa el control “Free sample”; no se llegó a leer una página narrativa.
+- [x] Registrar Google Play Books para Astrea Record 3 como DMR-045-SRC-025: el resultado de búsqueda muestra “Free sample”, pero el escaparate que se pudo abrir (Nueva Zelanda) dice que el producto no está disponible en su territorio; no inferir disponibilidad en Argentina ni eludir restricciones.
+- [x] Añadir las tres rutas al directorio consultable y cubrirlas con regresiones de accesibilidad, procedencia y límites.
+- [ ] Cuando sea posible dentro del escaparate autorizado de la región del usuario, abrir el control de muestra por el flujo normal y registrar solo un pasaje visible con localizador reproducible.
+- **Límite factual:** ninguna de estas páginas de producto ha proporcionado texto narrativo; DMR-045 sigue abierto.
+
 - [x] Abrir por su URL pública normal el lector de muestra de SBCr eBook Store para Astrea Record 1/2/3; registrar DMR-045-SRC-020, DMR-045-SRC-021 y DMR-045-SRC-022 como metadata_checked_only, sin claims ni localizadores.
 - [x] Añadir las tres rutas al directorio consultable y cubrirlas con pruebas de regresión. Las tres devolvieron “Now loading...” y controles, sin páginas narrativas legibles.
 - [ ] Reintentar manualmente los visores mediante su uso normal o consultar una edición autorizada legible; solo registrar capítulo/página después de ver el pasaje concreto.
