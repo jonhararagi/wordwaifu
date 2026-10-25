@@ -2869,19 +2869,36 @@
   }
   function archiveEmpty(text){return archiveElement("div","archive-empty",text||"Sin información suficiente en las fuentes incorporadas.");}
   function archiveGoTab(tab,label){const b=archiveElement("button","archive-related-link",label+" →");b.type="button";b.dataset.profileTab=tab;return b;}
+  function getCharacterAlignment(id){
+    const registry=window.WordWaifuCharacterAlignments;
+    return registry&&typeof registry.get==="function"?registry.get(id):null;
+  }
+  function alignmentConfidenceLabel(value){
+    return value==="high"?"confianza alta":value==="medium"?"confianza media":"confianza baja";
+  }
   function renderCharacterDirectory(){
     if(!loreArchiveIndex||!window.WordWaifuCharacterArchive)return;
     const results=$("#character-archive-results"),status=$("#archive-directory-status");
-    const items=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:$("#character-archive-query").value,continuity:$("#archive-continuity").value,spoiler:$("#archive-spoiler").value});
+    const directoryItems=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:$("#character-archive-query").value,continuity:$("#archive-continuity").value,spoiler:$("#archive-spoiler").value});
+    const moralityFilter=$("#archive-alignment-morality").value;
+    const conductFilter=$("#archive-alignment-conduct").value;
+    const alignmentRegistry=window.WordWaifuCharacterAlignments;
+    const items=directoryItems.filter(item=>alignmentRegistry&&typeof alignmentRegistry.matches==="function"
+      ?alignmentRegistry.matches(item.id,moralityFilter,conductFilter)
+      :(moralityFilter==="ALL"&&conductFilter==="ALL"));
     results.replaceChildren();
-    const totalItems=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:"",continuity:"ALL",spoiler:"all"}).length;
+    const completeDirectory=window.WordWaifuCharacterArchive.list(loreArchiveIndex,{query:"",continuity:"ALL",spoiler:"all"});
+    const totalItems=completeDirectory.length;
+    const classifiedCount=alignmentRegistry&&typeof alignmentRegistry.isClassified==="function"
+      ?completeDirectory.filter(item=>alignmentRegistry.isClassified(item.id)).length:0;
     document.querySelectorAll("#archive-quick-filters [data-archive-scope]").forEach(button=>{
       button.setAttribute("aria-pressed",button.dataset.archiveScope===$("#archive-continuity").value?"true":"false");
     });
+    const alignmentStatus="Alineamientos evaluados: "+classifiedCount+" de "+totalItems+" ficha(s); el resto queda sin clasificar.";
     status.textContent=items.length
-      ?items.length+" ficha(s) disponibles (de "+totalItems+"). Selección parcial: todavía no es la enciclopedia completa de DanMachi."
-      :"0 ficha(s) disponibles (de "+totalItems+"). No hay coincidencias; probá otro nombre o una continuidad más amplia.";
-    if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados."));return;}
+      ?items.length+" ficha(s) disponibles (de "+totalItems+"). "+alignmentStatus+" El archivo de DanMachi sigue siendo parcial."
+      :"0 ficha(s) disponibles (de "+totalItems+"). No hay coincidencias; probá otro nombre o restablecé la continuidad, los spoilers o el alineamiento. "+alignmentStatus;
+    if(!items.length){results.appendChild(archiveEmpty("No hay personajes que coincidan con los filtros seleccionados. «Sin clasificar» significa que todavía no se ha evaluado su alineamiento, no que sea neutral."));return;}
     items.forEach(item=>{
       const card=archiveElement("article","archive-character-card");card.setAttribute("role","listitem");
       card.appendChild(archivePortrait(item.id,item.name,false,item.preferredContinuity || "ALL"));
@@ -2889,6 +2906,11 @@
       const badges=archiveElement("div","archive-badge-row");
       if(item.states.length)item.states.slice(0,3).forEach(st=>{badges.appendChild(archiveBadge(st.code,"continuity"));if(st.affiliation)badges.appendChild(archiveBadge(st.affiliation,"muted"));});
       else badges.appendChild(archiveBadge("Sin evidencia visible con este filtro","muted"));
+      const alignment=getCharacterAlignment(item.id);
+      if(alignment){
+        badges.appendChild(archiveBadge("Alineamiento · "+alignment.displayLabel,"muted"));
+        badges.appendChild(archiveBadge(alignmentConfidenceLabel(alignment.confidence),"muted"));
+      }
       if(item.verifiedClaimCount)badges.appendChild(archiveBadge(item.verifiedClaimCount+" afirmaciones visibles","muted"));
       copy.appendChild(badges);
       const actions=archiveElement("div","archive-card-actions"),open=archiveElement("button","archive-open-button","Abrir ficha ↗");
@@ -2900,6 +2922,8 @@
     $("#archive-profile-summary").textContent=profile.state.summary;$("#archive-profile-state-note").textContent=profile.state.period;
     const p=$("#archive-profile-portrait"),visual=archivePortrait(profile.id,profile.name,true,profile.continuity);p.className=visual.className;p.setAttribute("aria-label",visual.getAttribute("aria-label"));p.replaceChildren(...Array.from(visual.childNodes));
     const badges=$("#archive-profile-badges");badges.replaceChildren();badges.append(archiveBadge(profile.continuityLabel,"continuity"),archiveBadge(profile.state.affiliation,"muted"),archiveBadge("Estado provisional","muted"));
+    const alignment=getCharacterAlignment(profile.id);
+    if(alignment)badges.appendChild(archiveBadge("Alineamiento interpretativo · "+alignment.displayLabel,"muted"));
     if(profile.claims.some(c=>["major","endgame"].includes(String(c.spoilerLevel||"").toLowerCase())))badges.appendChild(archiveBadge("Incluye spoilers","spoiler"));
     const select=$("#archive-profile-continuity");select.replaceChildren();
     window.WordWaifuCharacterArchive.continuityOrder.forEach(scope=>{const opt=new Option((window.WordWaifuCharacterArchive.continuityLabels[scope]||scope)+(profile.availableContinuities.includes(scope)?"":" · sin evidencia registrada"),scope);if(!profile.availableContinuities.includes(scope))opt.disabled=true;select.appendChild(opt);});
@@ -3022,6 +3046,30 @@
     identity.append(archiveElement("h4","","Identidad y afiliación"),archiveElement("p","",profile.state.affiliation),archiveElement("p","","ID estable: "+profile.id),archiveGoTab("sources","Ver fuentes"));
     const m=profile.claims.find(c=>(c.aspects||[]).includes("motivation"));motivation.append(archiveElement("h4","","Valores y motivaciones"),archiveElement("p","",m?m.claim:"Sin información suficiente en esta continuidad."),archiveGoTab("personality","Explorar personalidad"));
     grid.append(identity,motivation);overview.appendChild(grid);root.appendChild(overview);
+    const alignment=getCharacterAlignment(profile.id);
+    const alignmentSection=archiveElement("section","archive-section archive-alignment-section");
+    const alignmentHeading=archiveElement("div","archive-section-heading");
+    alignmentHeading.append(archiveElement("h3","","Alineamiento interpretativo"),
+      archiveElement("p","","Modelo orientativo de WordWaifu · no es canon oficial"));
+    alignmentSection.appendChild(alignmentHeading);
+    if(!alignment){
+      alignmentSection.appendChild(archiveElement("p","archive-alignment-unclassified","Sin clasificar. No se han documentado suficientes motivos y decisiones para asignar un eje moral y otro de conducta con responsabilidad. Esto no equivale a «neutral»; la evaluación queda pendiente."));
+    }else{
+      const alignmentBadges=archiveElement("div","archive-badge-row");
+      alignmentBadges.append(archiveBadge(alignment.displayLabel,"continuity"),
+        archiveBadge("Moralidad · "+(window.WordWaifuCharacterAlignments.moralityLabels[alignment.morality]||"Sin clasificar"),"muted"),
+        archiveBadge("Conducta · "+(window.WordWaifuCharacterAlignments.conductLabels[alignment.conduct]||"Sin clasificar"),"muted"),
+        archiveBadge(alignmentConfidenceLabel(alignment.confidence),"muted"),
+        archiveBadge(alignment.continuity,"continuity"));
+      alignmentSection.appendChild(alignmentBadges);
+      alignmentSection.appendChild(archiveElement("p","",alignment.rationale));
+      alignmentSection.appendChild(archiveElement("p","archive-alignment-alternative","Lectura alternativa: "+alignment.alternative));
+      alignmentSection.appendChild(archiveElement("p","archive-research-note","Estado: interpretación provisional de baja confianza, apoyada en referencias secundarias; revisar al cotejar escenas y diálogos de la continuidad indicada."));
+      const alignmentLinks=archiveElement("div","archive-official-source-links");
+      (alignment.sources||[]).forEach((url,index)=>appendLoreLink(alignmentLinks,index===0?"Fuente secundaria de referencia ↗":"Fuente complementaria ↗",url,true));
+      if(alignmentLinks.childNodes.length)alignmentSection.appendChild(alignmentLinks);
+    }
+    root.appendChild(alignmentSection);
     const continuityDossier=renderRosterContinuityDossier(profile);if(continuityDossier)root.appendChild(continuityDossier);
     const official = profile.continuity === "CONT-ANIME"
       ? (profile.officialReference ||
@@ -3280,6 +3328,8 @@
   function backInArchiveNavigation(){const old=archiveNavigationStack.pop();if(!old){returnToArchiveDirectory();return;}activeArchiveCharacterId=old.id;activeArchiveContinuity=old.continuity;activeArchiveTab=old.tab;renderArchiveProfile();$("#character-archive-profile").scrollIntoView({block:"start",behavior:"auto"});}
   $("#character-archive-query").addEventListener("input",()=>{$("#global-search").value=$("#character-archive-query").value;if(loreArchiveIndex)renderCharacterDirectory();else void prepareLoreView().catch(e=>$("#archive-directory-status").textContent="No se pudo preparar el índice: "+e.message);});
   $("#archive-continuity").addEventListener("change",()=>{if(loreArchiveIndex)renderCharacterDirectory();});
+  $("#archive-alignment-morality").addEventListener("change",()=>{if(loreArchiveIndex)renderCharacterDirectory();});
+  $("#archive-alignment-conduct").addEventListener("change",()=>{if(loreArchiveIndex)renderCharacterDirectory();});
   $("#archive-quick-filters").addEventListener("click",event=>{
     const button=event.target.closest("[data-archive-scope]");
     if(!button)return;
@@ -3292,6 +3342,8 @@
     $("#archive-continuity").value="ALL";
     $("#archive-spoiler").value="all";
     $("#archive-profile-spoiler").value="all";
+    $("#archive-alignment-morality").value="ALL";
+    $("#archive-alignment-conduct").value="ALL";
     if(loreArchiveIndex)renderCharacterDirectory();
     $("#character-archive-query").focus();
   });
@@ -3992,6 +4044,8 @@
     navigate("lore");
     $("#archive-continuity").value = "ALL";
     $("#archive-spoiler").value = "all";
+    $("#archive-alignment-morality").value = "ALL";
+    $("#archive-alignment-conduct").value = "ALL";
     $("#character-archive-query").value = query;
     $("#character-archive-profile").classList.add("hidden");
     $("#character-archive-directory").classList.remove("hidden");

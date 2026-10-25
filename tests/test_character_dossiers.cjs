@@ -19,4 +19,33 @@ assert.ok(api.get("CHAR-RYUU-LION").history.includes("piso 37"), "Ryuu's dossier
 assert.equal(api.get("MISSING-ID"), null, "Unknown characters should return null.");
 bell.history = "mutated";
 assert.notEqual(api.get("DM-CHAR-BELL").history, "mutated", "Callers must not mutate the shared dossier catalog.");
+const alignments = require("../src/character-alignments.js");
+const alfiaAlignment = alignments.get("CHAR-DARK-ALFIA");
+const zaldAlignment = alignments.get("CHAR-DARK-ZALD");
+assert.ok(alfiaAlignment && zaldAlignment, "Alfia and Zald must have an explicit provisional alignment entry.");
+for (const entry of [alfiaAlignment,zaldAlignment]) {
+  assert.equal(entry.morality, "neutral", "The provisional moral axis should remain explicit.");
+  assert.equal(entry.conduct, "chaotic", "The provisional conduct axis should remain distinct from morality.");
+  assert.equal(entry.displayLabel, "Caótico neutral", "The displayed combination must be stable and readable.");
+  assert.equal(entry.status, "interpretive_provisional", "Alignment is an interpretation, not canon data.");
+  assert.equal(entry.confidence, "low", "Secondary characterization must not be overstated.");
+  assert.equal(entry.continuity, "CONT-AR", "The provisional classification is scoped to Astrea Record.");
+  assert.ok(entry.rationale.length > 120 && entry.alternative.includes("Caótico bueno"),
+    "The alignment explanation must preserve the user's alternative and the character's conflicting means/ends.");
+  assert.ok(entry.sources.some(url => url.includes("danmachi.fandom.com")),
+    "The classification must expose the secondary sources that informed the interpretation.");
+}
+assert.equal(alignments.matches("CHAR-DARK-ALFIA","neutral","chaotic"), true,
+  "Filtering by both axes should find Alfia.");
+assert.equal(alignments.matches("CHAR-DARK-ZALD","good","chaotic"), false,
+  "A provisional chaotic-neutral profile must not also appear as chaotic-good in the strict filter.");
+assert.equal(alignments.matches("UNCLASSIFIED-ID","unclassified","unclassified"), true,
+  "Unknown profiles should match the unclassified option, not default to neutral.");
+assert.equal(alignments.matches("UNCLASSIFIED-ID","neutral","ALL"), false,
+  "Missing alignment must never be treated as neutral.");
+assert.equal(alignments.format("neutral","chaotic"), "Caótico neutral",
+  "The alignment label helper must combine axes consistently.");
+alfiaAlignment.sources.push("https://invalid.example/");
+assert.equal(alignments.get("CHAR-DARK-ALFIA").sources.includes("https://invalid.example/"), false,
+  "Alignment lookups must return defensive copies rather than mutable shared metadata.");
 process.stdout.write("PASS character dossiers: " + all.length + " profiles with six substantive sections and source URLs.\\n");

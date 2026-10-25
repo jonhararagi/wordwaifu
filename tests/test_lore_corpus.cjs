@@ -6,6 +6,17 @@ require("../src/character-dossiers.js");
 const uiCharacterDossiers = globalThis.WordWaifuCharacterDossiers;
 const root = path.join(__dirname, "..", "lore", "danmachi");
 const appSource = fs.readFileSync(path.join(__dirname, "..", "src", "app.js"), "utf8");
+const indexHtml = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
+assert.ok(indexHtml.includes('id="archive-alignment-morality"') &&
+  indexHtml.includes('id="archive-alignment-conduct"') &&
+  indexHtml.includes('<option value="unclassified">Sin clasificar</option>') &&
+  indexHtml.includes('./src/character-alignments.js'),
+  "The character encyclopedia must load independent moral/conduct alignment filters and an explicit unclassified option.");
+assert.ok(appSource.includes('alignmentRegistry.matches(item.id,moralityFilter,conductFilter)') &&
+  appSource.includes('archive-alignment-section') &&
+  appSource.includes('no equivale a «neutral»'),
+  "The directory must apply both alignment axes and explain that unclassified characters are not assumed neutral.");
+
 assert.ok(appSource.includes('{ key:"interview", title:"Material complementario · entrevistas con autores"') && appSource.includes('badge:"ENTREVISTA AUTORAL"'), "The source browser must render author interviews in their own evidence tier, separate from official publisher pages and community leads.");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
 const sourceRegistry = fs.readFileSync(path.join(root, "sources", "00-registro-fuentes.md"), "utf8");

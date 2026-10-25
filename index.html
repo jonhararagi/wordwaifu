@@ -199,7 +199,10 @@
           <div class="archive-directory-filters">
             <label for="archive-continuity">Continuidad<select id="archive-continuity"><option value="ALL">Todas las continuidades disponibles</option><option value="CONT-AR">Astrea Record · CONT-AR</option><option value="CONT-ANIME">Adaptación anime · CONT-ANIME</option><option value="CONT-MAIN-LN">Novela principal · CONT-MAIN-LN</option><option value="CONT-AU">Historia alternativa · CONT-AU</option><option value="CROSS-CONTINUITY">Comparación entre continuidades</option></select></label>
             <label for="archive-spoiler">Spoilers<select id="archive-spoiler"><option value="all">Mostrar todos, etiquetados</option><option value="hide-major">Ocultar major / endgame</option><option value="safe-only">Solo sin spoilers o leves</option></select></label>
+            <label for="archive-alignment-morality">Orientación moral<select id="archive-alignment-morality"><option value="ALL">Todas</option><option value="good">Bueno</option><option value="neutral">Neutral</option><option value="evil">Malo</option><option value="unclassified">Sin clasificar</option></select></label>
+            <label for="archive-alignment-conduct">Actitud ante reglas y orden<select id="archive-alignment-conduct"><option value="ALL">Todas</option><option value="lawful">Legal</option><option value="neutral">Neutral</option><option value="chaotic">Caótico</option><option value="unclassified">Sin clasificar</option></select></label>
           </div>
+          <p class="archive-research-note">Alineamiento interpretativo, no canónico: «bueno / neutral / malo» y «legal / neutral / caótico» son ejes separados. Los personajes sin evaluación registrada quedan como «Sin clasificar», no como neutrales.</p>
           <p id="archive-directory-status" class="lore-search-status" role="status" aria-live="polite">Cargando el índice documental…</p>
           <div id="character-archive-results" class="character-archive-results" role="list" aria-label="Resultados de personajes"></div>
         </section>
@@ -368,6 +371,7 @@
   <script src="./src/project-repository.js" defer></script>
   <script src="./src/official-character-roster.js" defer></script>
   <script src="./src/character-dossiers.js" defer></script>
+  <script src="./src/character-alignments.js" defer></script>
   <script src="./src/art-studio.js" defer></script>
   <script src="./src/lore-corpus.js" defer></script>
   <script src="./src/character-archive.js" defer></script>
