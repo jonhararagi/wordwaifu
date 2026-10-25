@@ -410,3 +410,17 @@ Se añadieron pruebas de regresión sobre los cinco expedientes de UI, las URLs 
 La corrección de UI quedó integrada por [PR #113](https://github.com/jonhararagi/wordwaifu/pull/113), commit `9e5a2ee6041dd2a4283003993bfd6655a9a3d419`. Las dos verificaciones de la PR aprobaron ([Validate WordWaifu #3236](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859509), [DanMachi Lore and Retrieval Integrity #1689](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859538)); las dos ejecuciones posteriores sobre ese mismo SHA en `main` también aprobaron ([Validate WordWaifu #3237](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959234), [DanMachi Lore and Retrieval Integrity #1690](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959233)).
 
 Esta verificación valida el comportamiento y la documentación de la capa interactiva, no la exactitud primaria integral de las biografías. La lectura de pasajes licenciados con páginas reproducibles sigue pendiente para Alfia, Zald y Meteria; Erebus requiere su localizador de escena revisada, y el conocimiento u orden personal de Rudra no se deduce del acto colectivo de la Familia.
+
+
+## Capa editorial de alineamiento narrativo (2026-10-25) — no canon oficial
+
+WordWaifu introduce una brújula interpretativa de dos ejes para navegar y comparar personajes: orientación moral (bueno / neutral / malo) y conducta ante reglas u orden (legal / neutral / caótico). No es una categoría oficial de DanMachi ni una afirmación atribuida al autor. El propósito declarado de una decisión y los medios usados deben evaluarse por separado; cuando el expediente no permita justificar ambos ejes, la ficha permanece «Sin clasificar».
+
+### Alfia y Zald — evaluación inicial, baja confianza
+
+- **Etiqueta implementada:** caótico neutral · continuidad interpretativa inicial CONT-AR · confianza baja.
+- **Base secundaria:** las entradas comunitarias de Alfia y Zald describen su intención de preparar a Orario para la amenaza del Dragón Negro, pero también su aceptación de desencadenar caos, muerte y desesperación como medio para fortalecer a la ciudad. Esta combinación deja una tensión real entre finalidad protectora y daño deliberado.
+- **Alternativa conservada:** caótico bueno, si se pondera principalmente la intención de proteger a la humanidad y se interpreta la violencia como un sacrificio extremo. La implementación no oculta esta alternativa; tampoco la presenta como conclusión canónica.
+- **Fuentes de investigación:** [Alfia, wiki EN](https://danmachi.fandom.com/wiki/Alfia); [Alfia, wiki ES](https://danmachi.fandom.com/es/wiki/Alfia); [Zald, wiki EN](https://danmachi.fandom.com/wiki/Zald); [Zald, wiki ES](https://danmachi.fandom.com/es/wiki/Zald); [anuncio oficial de la novelización de Astrea Record](https://danmachi.com/news/news131.php). Las wikis son fuentes secundarias; el anuncio oficial describe la procedencia editorial de Astrea Record y no asigna alineamientos ni verifica cada escena.
+- **Límite de continuidad:** las páginas comunitarias pueden resumir información del juego y de la versión novelada. Esta etiqueta de interfaz es provisional para la lectura de Astrea Record y no prueba identidad escena por escena entre CONT-GAME y CONT-AR.
+- **Pendiente:** revisar escenas y diálogos de las ediciones de Astrea Record para fundamentar mejor la valoración moral y conductual. No se crean claims canónicos ni aristas de grafo a partir de este juicio editorial.
