@@ -343,11 +343,14 @@ summary:"Nota de investigación para la novela principal. La secuencia del volum
 sections:[
 {title:"Separar a Rudra Familia de su deidad",text:"La ficha comunitaria de Rudra Familia atribuye a la agrupación una trampa contra Astrea Familia vinculada a daños en el Dungeon y a la aparición del Juggernaut. La investigación existente señala como pista el volumen 14, capítulo 13, pero el lector autorizado consultado no expuso la página narrativa. Por tanto, la atribución colectiva sigue necesitando cotejo directo: no demuestra que Rudra, como dios patrono, diseñara, ordenara, aprobara o conociera el plan."},
 {title:"Alcance de la retrospectiva y el epílogo",text:"El registro de investigación distingue el relato de la trampa de la versión pública difundida tras el incidente. Hasta inspeccionar el texto, los capítulos y el epílogo sirven como localizadores para buscar, no como páginas cotejadas ni prueba de las acciones individuales de Rudra. Tampoco se debe trasladar esta etapa aproximada T-5 al intervalo T-7 de Astrea Record."},
+{title:"Ruta adicional de consulta licenciada",text:"La ficha pública indexada de Google Play Books anuncia una muestra gratuita del volumen 14; el registro bibliográfico de Google Books de la edición inglesa indica Limited preview. En esta comprobación se obtuvieron metadatos y sinopsis, no páginas de la muestra. La ruta de BOOK☆WALKER ya registrada devolvió un error de descarga al abrir su lector público. Estos intentos no permiten confirmar la trampa, el capítulo 13, el epílogo ni ninguna acción personal de Rudra. Usa los enlaces para consultar el texto por el acceso normal si el lector lo presenta; solo entonces registra un localizador visible."},
 {title:"Qué falta confirmar",text:"Quedan pendientes una página o un pasaje narrativo reproducible, qué acciones se atribuyen explícitamente a cada miembro y si el texto da alguna evidencia del conocimiento personal de Rudra. No se crea una relación personal nueva ni se infiere una motivación a partir del cargo de deidad."}
 ],
 references:[
 {label:"DanMachi Wiki · Rudra Familia (inglés)",url:"https://danmachi.fandom.com/wiki/Rudra_Familia",kind:"community"},
 {label:"DanMachi Wiki · Rudra (español)",url:"https://danmachi.fandom.com/es/wiki/Rudra",kind:"community"},
+{label:"Google Play Books · DanMachi vol. 14 (muestra anunciada; texto no cotejado)",url:"https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ",kind:"licensed_preview"},
+{label:"BOOK☆WALKER · DanMachi vol. 14 (muestra japonesa; lector no cargó)",url:"https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1",kind:"licensed_preview"},
 {label:"Yen Press · DanMachi, volumen 14 (ficha editorial; no página narrativa)",url:"https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel",kind:"publisher_metadata"}
 ]
 }
