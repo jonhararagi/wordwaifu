@@ -379,14 +379,14 @@ Esta mejora es de **descubribilidad y procedencia**, no de certeza canónica: la
 - El plan posterior de Jura para reproducir y controlar el Juggernaut ya está descrito en la ficha de Jura y en DMR-043-CLM-007/008/009; se reutiliza ese trabajo y no se crea una copia de la misma afirmación.
 - La revisión de las fuentes de Rudra no halló una fuente pública que atribuya de forma verificable al dios una orden o conocimiento personal del plan. La responsabilidad colectiva de Rudra Familia no se convierte en responsabilidad individual de Rudra.
 
-**Resultado operativo:** la búsqueda secundaria disponible ya no bloquea el orden de trabajo. La siguiente prioridad activa es Orario; los pasajes primarios de DMR-045 permanecen como pendientes de evidencia, no como hechos completados.
+**Resultado operativo (prioridad revisada el 2026-10-25):** aunque el barrido secundario original se completó, la directriz operativa vigente coloca primero el cotejo primario de DMR-045 y después Orario. Sinopsis, índices, metadatos comerciales o errores de visor no sustituyen el texto narrativo. Orario permanece en cola.
 
 ## Localizadores primarios pendientes
 
 1. DanMachi vol. 20: el hilo comunitario de páginas de muestra ofrece una pista secundaria sobre el prólogo marítimo (DMR-045-CLM-015), pero el lector oficial no expuso el texto y las identidades propuestas no quedan verificadas. Sigue pendiente el pasaje de Meteria y el cotejo directo de Alfia/Zald con capítulo/página o localizador digital reproducible.
 2. Astrea Record vols. 1–3: cotejar las escenas de Alfia, Zald y Erebus; anotar edición y volumen/capítulo para cada dato confirmado. DMR-045-CLM-017 aporta contexto autoral sobre por qué Alfia/Zald entraron en Astrea Record, pero no reemplaza dichos localizadores. Como ruta independiente, DMR-045-CLM-016 señala retrospectivas de los capítulos 2–3 del vol. 20 para comprobar los usos de Afterglow atribuidos secundariamente a Alfia y Zald.
 3. Meteria: localizar el pasaje narrativo que establece maternidad y parentesco. No identificar al padre de Bell hasta que una fuente lo nombre explícitamente.
-4. DanMachi vol. 14: ya se localizó parcialmente la retrospección del capítulo 13 sobre la trampa de Rudra Familia (DMR-045-CLM-013) y el epílogo sobre el relato público (DMR-045-CLM-014). Falta cotejar la página exacta en una edición accesible y completar el seguimiento del plan posterior de Jura en vols. 13–14; la atribución personal a Rudra sigue pendiente.
+4. DanMachi vol. 14: ya se localizaron parcialmente la retrospección del capítulo 13 sobre la trampa de Rudra Familia (DMR-045-CLM-013) y el epílogo sobre el relato público (DMR-045-CLM-014). El reintento de la muestra japonesa licenciada de BOOK☆WALKER (DMR-045-SRC-028) también terminó en error de descarga y no mostró narración. Falta cotejar páginas exactas en una edición accesible y completar el seguimiento del plan posterior de Jura en vols. 13–14; la atribución personal a Rudra sigue pendiente.
 5. No declarar biografía primaria confirmada por la convergencia entre wikis.
 
 **Resultado:** los cinco expedientes son más útiles y recuperables, pero continúan con brechas de evidencia primaria. Este lote no declara completa la Era Oscura ni las historias individuales.
@@ -603,3 +603,26 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Siguiente acción:** reintentar mediante el lector normal autorizado si carga; registrar capítulo/página solo después de ver el pasaje.
 
 **Nota de reintento para SRC-017 / SRC-006 (Astrea Record 3):** la ruta de muestra es la misma ya registrada en DMR-045-SRC-006 y DMR-045-SRC-017; por eso no se crea otro ID. En la nueva consulta pública del 25-10-2026, una llamada al lector terminó en timeout después de que un intento anterior devolviera un error de red. Se conservan ambas observaciones como intentos de acceso, no como evidencia narrativa.
+
+
+## DMR-045-SRC-028 · BOOK☆WALKER — muestra de DanMachi, volumen 14
+- source_id: DMR-045-SRC-028
+- title: ダンジョンに出会いを求めるのは間違っているだろうか１４ — 試し読み
+- creator_or_publisher: BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_SAMPLE
+- series: DanMachi
+- volume_or_edition: Volumen 14, edición japonesa de la novela principal
+- language: Japonés
+- official_url: https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1
+- product_page: https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_route_and_network_error
+- locator: La ficha pública anuncia 試し読み. La ruta normal redirigió a viewer-trial y devolvió “Could not download. Please check your network connection.” No se obtuvo página narrativa ni localizador de capítulo/página.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Registro de acceso/metadatos únicamente. No respalda DMR-045-CLM-013/014 ni demuestra que falten escenas o personajes; el error puntual no implica indisponibilidad global. La página exacta del capítulo 13 y del epílogo sigue pendiente.
+- conflicting_sources: []
+- rights_note: Se conservan URL y resultado del intento normal; no se copió texto narrativo ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only

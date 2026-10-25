@@ -1,5 +1,5 @@
 # Estado de WordWaifu
-## Estado operativo y verificación — 2026-10-24
+## Estado operativo y verificación — 2026-10-25
 
 <!-- DANMACHI-METRICS:BEGIN -->
 - **Corpus DanMachi:** 178 registros activos; 29 IDs reservados; 131 documentos de apoyo.
@@ -28,6 +28,13 @@
 - Pruebas de la PR aprobadas: [Validate WordWaifu #3236](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859509) y [DanMachi Lore and Retrieval Integrity #1689](https://github.com/jonhararagi/wordwaifu/actions/runs/40151859538).
 - Pruebas posteriores a la integración, ambas con éxito y asociadas al SHA `9e5a2ee6041dd2a4283003993bfd6655a9a3d419`: [Validate WordWaifu #3237](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959234) y [DanMachi Lore and Retrieval Integrity #1690](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959233).
 - **Pendiente real:** no se cerraron los localizadores narrativos primarios de Alfia, Zald, Meteria y Erebus, ni la responsabilidad personal de Rudra. Las métricas, el catálogo de identidades y las relaciones no cambiaron en este lote.
+
+## DMR-045 — nueva ruta licenciada de muestra para el volumen 14 (2026-10-25)
+
+- Se comprobó la ficha japonesa de BOOK☆WALKER para [DanMachi, volumen 14](https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/) y el enlace normal de muestra gratuita [試し読み](https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1).
+- El producto identifica la edición japonesa de SB Creative / GA Bunko, pero el lector de muestra redirige a viewer-trial y devuelve “Could not download. Please check your network connection.” No se recuperó una página narrativa ni un localizador nuevo.
+- La ruta queda registrada como DMR-045-SRC-028, metadata_checked_only, con claims_supported vacío, únicamente en CONT-MAIN-LN. No respalda el capítulo 13 ni el epílogo del volumen 14, no establece responsabilidad individual de Rudra y no prueba indisponibilidad global.
+- **Estado:** investigación de la ruta realizada; DMR-045 sigue abierto. Siguiente tarea: cotejar el texto de una edición accesible sin convertir metadatos, fallos de visor o resúmenes comunitarios en evidencia primaria.
 
 ## Canoe Belway / Zanis Lustra / Liliruca — corrección de la atribución en fichas UI (integrado y validado, 2026-10-24)
 
@@ -86,7 +93,7 @@
 - Para DanMachi, las wikis reconocidas en inglés y español se utilizan como fuentes secundarias cuando no hay acceso a las novelas; las fuentes oficiales accesibles conservan prioridad y los datos de wiki no se presentan como escenas primarias cotejadas.
 - Regla de comprobación: no declarar una modificación integrada ni validada hasta verificarla en `main` y revisar las pruebas del SHA exacto.
 - El orden operativo y la prioridad actual quedaron registrados en [CONV-DM-2026-10-24-005](CONVERSATION_DECISION_LOG.md) y [DEC-DM-006](../lore/danmachi/06-registro-decisiones.md): cierre de la investigación pública de DMR-045 antes de retomar Orario. El directorio de fuentes consultables incorpora páginas comunitarias EN/ES de los cinco expedientes y una regresión automática; esto mejora trazabilidad, no convierte sus claims en canon primario.
-- **DMR-045 — resultado del barrido secundario público:** se añadió el índice secundario de la aparición retrospectiva de Alfia en volumen 20, la pista de la rama de árbol sagrado (no verificada por fuente primaria), la caracterización del juego de Erebus bajo `CONT-GAME` y el recuerdo de la comida de Meteria bajo `CONT-AU`. No se modifican métricas generadas. DMR-045 sigue abierto por localizadores primarios; la prioridad activa pasa a Orario.
+- **DMR-045 — resultado del barrido secundario público (registro histórico):** se añadieron el índice secundario de la aparición retrospectiva de Alfia en volumen 20, la pista del árbol sagrado (sin cotejo primario), la caracterización de Erebus bajo `CONT-GAME` y el recuerdo de Meteria bajo `CONT-AU`. La prioridad de Orario anotada entonces fue revisada el 2026-10-25: primero sigue el cotejo primario de DMR-045; después Orario. No se modifican las métricas generadas.
 
 
 **Revisión adicional de expedientes manuales de personajes:** 82/82 registros `character` tienen un bloque manual en `src/character-dossiers.js`; los siete expedientes pendientes de bloque manual ahora están incorporados. Además, 10 bloques de interfaz corresponden a entradas heredadas de tipo deidad/grupo u otros IDs que no son registros `character`. Esta auditoría de cobertura manual no reemplaza la métrica automatizada de rutas.

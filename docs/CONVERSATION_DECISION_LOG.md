@@ -262,3 +262,12 @@
 - **Nota de corrección de pruebas:** la primera ejecución detectó que el test buscaba SRC-023/SRC-024/SRC-025 por separado, mientras la cola usaba la abreviatura 023–025. Se cambió la cola a enumeración explícita y la nueva ejecución pasó ambos workflows.
 - **Documentos integrados:** directorio de fuentes de la aplicación, DMR-045, registro central de fuentes, cola, índice maestro, estado y pruebas de regresión de fuentes/continuidad.
 - **Prioridad vigente:** continuar el cotejo primario de los cinco expedientes de DMR-045; Orario permanece en cola.
+
+
+### CONV-DM-2026-10-25-009 — Registrar el intento de muestra licenciada de DanMachi vol. 14
+- **Fecha:** 2026-10-25.
+- **Estado:** resultado de investigación registrado; sin verificación primaria nueva.
+- **Resultado:** se consultaron la ficha y el enlace normal de muestra de BOOK☆WALKER para DanMachi vol. 14 (edición japonesa de SB Creative / GA Bunko). La ficha anuncia 試し読み, pero el lector devuelve “Could not download. Please check your network connection.” La ruta se catalogó como DMR-045-SRC-028, metadata_checked_only, sin claims ni localizador narrativo.
+- **Límite factual:** no se modifica DMR-045-CLM-013/014, no se confirma la página exacta y no se atribuye a Rudra conocimiento, autorización u orden del plan. Un error de visor no prueba indisponibilidad general ni presencia/ausencia de personajes.
+- **Prioridad vigente:** continuar el cotejo primario de los cinco expedientes de DMR-045 antes de expandir Orario. Si una muestra legal no entrega narración, conservar el bloqueo y no crear afirmaciones para llenar el hueco.
+- **Documentos afectados:** auditoría DMR-045, registro central de fuentes, directorio de fuentes UI y su prueba, cola de trabajo, índice maestro, estado y registro de decisiones.
