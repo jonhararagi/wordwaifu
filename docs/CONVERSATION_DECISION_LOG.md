@@ -109,6 +109,16 @@
 - **Integración:** incorporado mediante [PR #111](https://github.com/jonhararagi/wordwaifu/pull/111) a `main` con SHA [f7ccf59e48d4cc2da6fe0b15b79fe794c535424a](https://github.com/jonhararagi/wordwaifu/commit/f7ccf59e48d4cc2da6fe0b15b79fe794c535424a).
 - **Verificación posterior al merge del SHA anterior:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40150204443) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40150204432), ambas finalizadas con `success`.
 
+### CONV-DM-2026-10-24-011 — Armonizar el localizador provisional de la plaza norte
+
+- **Fecha:** 2026-10-24.
+- **Tipo:** corrección de procedencia, mejora del directorio de fuentes y prueba de regresión.
+- **Estado:** implementado en rama de trabajo; integración y CI pendientes.
+- **Hallazgo:** DMR-047 ya conserva en el claim el capítulo IV 「だからボクは力になりたい」 y los marcadores de folio 20–21 de la muestra oficial del volumen 2, pero el registro central de fuentes decía que no se asignaba capítulo/página.
+- **Cambio:** alineados el registro `DMR-047-SRC-001`, la entrada del directorio de fuentes, la investigación y el índice maestro; añadidas pruebas para comprobar que el registro central y el directorio exponen el localizador provisional sin abandonar `source_checked_excerpt_only`.
+- **Límites:** el PDF no se pudo inspeccionar visualmente; los folios no cuentan como páginas cotejadas. No se asigna nombre oficial a la plaza, coordenadas ni vecindad no documentada.
+- **Siguiente acción:** validar el lote y fusionarlo si la CI pasa; continuar buscando un pasaje primario de Orario que pueda verificarse directamente.
+
 ## Plantilla para entradas futuras
 
 - **ID:**
