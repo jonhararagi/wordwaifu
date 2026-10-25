@@ -57,7 +57,14 @@ assert.ok(meteriaMainInfo.sections.some(section => section.text.includes("no la 
 assert.ok(meteriaMainInfo.sections.some(section => section.text.includes("No se asignan diagnóstico médico")),
   "Meteria's file must leave undocumented diagnosis and dates unresolved.");
 assert.ok(meteriaMainInfo.references.some(ref => ref.kind === "interview" && ref.url === "https://ln-news.com/articles/109766"),
-  "The interview must be labelled as secondary editorial material, not as a primary novel page.");
+  "The author interview must remain a separately typed source, not a primary novel page.");
+assert.ok(!meteriaMainInfo.sections.some(section => section.text.includes("supporter de Zeus Familia")),
+  "The original-game parentage context must not leak into Meteria's main-novel continuity note.");
+const meteriaGameInfo = archiveApi.getExtendedInfo("CHAR-METERIA", "CONT-GAME", null);
+assert.ok(meteriaGameInfo && meteriaGameInfo.sections.some(section => section.text.includes("supporter de Zeus Familia") && section.text.includes("no pronuncia el nombre Meteria")),
+  "Meteria's game-origin research note must preserve the father-role detail and the unresolved identity.");
+assert.ok(meteriaGameInfo.references.some(ref => ref.kind === "interview" && ref.url === "https://ln-news.com/articles/109766"),
+  "The direct author confirmation must retain interview provenance.");
 assert.ok(meteriaMainInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/Meteria"),
   "Meteria's claims must expose the community source type.");
 const meteriaAuInfo = archiveApi.getExtendedInfo("CHAR-METERIA", "CONT-AU", null);
@@ -68,8 +75,8 @@ assert.ok(meteriaAuInfo.references.some(ref => ref.kind === "author" && ref.url 
 const erebusGameInfo = archiveApi.getExtendedInfo("CHAR-DARK-EREBUS", "CONT-GAME", null);
 assert.ok(erebusGameInfo && erebusGameInfo.sections.some(section => section.text.includes("Eren") && section.text.includes("no se incorpora como alias canónico")),
   "Erebus's game continuity note must keep the uncertain alias unapproved.");
-assert.ok(erebusGameInfo.references.some(ref => ref.kind === "interview" && ref.url === "https://ln-news.com/articles/109766"),
-  "Erebus's editorial caption must not be mislabeled as a primary novel source.");
+assert.ok(erebusGameInfo.references.some(ref => ref.kind === "editorial_caption" && ref.url === "https://ln-news.com/articles/109766"),
+  "Erebus's editorial caption must be labelled separately from Omori's interview.");
 assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-EREBUS", "CONT-AR", null), null,
   "Erebus's original-game ideology must not be presented as a verified Astrea Record novel dossier.");
 const rudraMainInfo = archiveApi.getExtendedInfo("CHAR-DARK-RUDRA", "CONT-MAIN-LN", null);
