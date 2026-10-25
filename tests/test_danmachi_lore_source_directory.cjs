@@ -88,4 +88,22 @@ for (const [label, rows, url] of [
   assert.match(rows[0].limits, /No inferir presencia o ausencia/i);
 }
 
-console.log("DanMachi source directory: secondary references and authorized preview limits validated.");
+const gplayAstrea1 = sources.filter(source => source.id === "licensed-preview-google-play-astrea-record-vol1");
+const gplayAstrea2 = sources.filter(source => source.id === "licensed-preview-google-play-astrea-record-vol2");
+const gplayAstrea3 = sources.filter(source => source.id === "licensed-preview-google-play-astrea-record-vol3");
+for (const [label, rows, url] of [
+  ["Google Play Astrea Record 1", gplayAstrea1, "https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_1_Is_It_Wrong_to_Tr?id=M_3xEAAAQBAJ"],
+  ["Google Play Astrea Record 2", gplayAstrea2, "https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_2_Is_It_Wrong_to_Tr?id=cLwFEQAAQBAJ"],
+  ["Google Play Astrea Record 3", gplayAstrea3, "https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_3_Is_It_Wrong_to_Tr?id=Z0gVEQAAQBAJ"]
+]) {
+  assert.equal(rows.length, 1, label + " must be discoverable exactly once");
+  assert.equal(rows[0].category, "licensed_retailer");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].limits, /no páginas narrativas|ninguna página narrativa/i);
+  assert.match(rows[0].limits, /metadata_checked_only/);
+}
+assert.match(gplayAstrea1[0].authority, /Free sample/);
+assert.match(gplayAstrea2[0].authority, /Free sample/);
+assert.match(gplayAstrea3[0].limits, /disponible o ausente globalmente/i);
+
+console.log("DanMachi source directory: secondary references and licensed preview limits validated.");

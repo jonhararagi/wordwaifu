@@ -3083,3 +3083,67 @@ verification_status: stub
 - rights_note: Enlace y observación de interfaz solamente; no se ha extraído la novela.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-023 · Google Play Books — Astrea Record Vol. 1
+- source_id: DMR-045-SRC-023
+- title: Astrea Record, Vol. 1 — Is It Wrong to Try to Pick Up Girls in a Dungeon? Tales of Heroes
+- creator_or_publisher: Google Play Books; Yen Press LLC (vendedor indicado)
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE
+- series: DanMachi / Astrea Record, novela ligera revisada
+- volume_or_edition: Volumen 1, edición inglesa; ISBN digital 9781975379896
+- language: Inglés
+- official_url: https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_1_Is_It_Wrong_to_Tr?id=M_3xEAAAQBAJ
+- accessed_at: 2026-10-25
+- locator_type: product_metadata_and_sample_offer
+- locator: La página indica “Free sample” y una sinopsis editorial; no se extrajo texto de páginas de muestra.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Página de distribuidor licenciado útil como ruta de lectura; el catálogo y la sinopsis no son prueba narrativa de hechos individuales.
+- conflicting_sources: []
+- rights_note: Enlace y metadatos solamente; no se copió texto narrativo ni se intentó eludir restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-024 · Google Play Books — Astrea Record Vol. 2
+- source_id: DMR-045-SRC-024
+- title: Astrea Record, Vol. 2 — Is It Wrong to Try to Pick Up Girls in a Dungeon? Tales of Heroes
+- creator_or_publisher: Google Play Books; Yen Press LLC (vendedor indicado)
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE
+- series: DanMachi / Astrea Record, novela ligera revisada
+- volume_or_edition: Volumen 2, edición inglesa
+- language: Inglés
+- official_url: https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_2_Is_It_Wrong_to_Tr?id=cLwFEQAAQBAJ
+- accessed_at: 2026-10-25
+- locator_type: product_metadata_and_sample_offer
+- locator: La página indica “Free sample” y una sinopsis editorial; no se extrajo texto de páginas de muestra.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Página de distribuidor licenciado útil como ruta de lectura; el catálogo y la sinopsis no son prueba narrativa de hechos individuales.
+- conflicting_sources: []
+- rights_note: Enlace y metadatos solamente; no se copió texto narrativo ni se intentó eludir restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-025 · Google Play Books — Astrea Record Vol. 3
+- source_id: DMR-045-SRC-025
+- title: Astrea Record, Vol. 3 — Is It Wrong to Try to Pick Up Girls in a Dungeon? Tales of Heroes
+- creator_or_publisher: Google Play Books; Yen Press LLC (vendedor indicado)
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE
+- series: DanMachi / Astrea Record, novela ligera revisada
+- volume_or_edition: Volumen 3, edición inglesa
+- language: Inglés
+- official_url: https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_3_Is_It_Wrong_to_Tr?id=Z0gVEQAAQBAJ
+- accessed_at: 2026-10-25
+- locator_type: product_metadata_region_variant_and_sample_offer
+- locator: Una ficha indexada anuncia “Free sample”; otra vista pública del producto indica que no está disponible en esa región. Ninguna expuso páginas narrativas.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: El estado visible del producto/muestra varía según la localización del distribuidor. No se interpreta como indisponibilidad global ni como ausencia de narrativa o personajes.
+- conflicting_sources: []
+- rights_note: Enlace y metadatos solamente; no se copió texto narrativo ni se intentó eludir restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only

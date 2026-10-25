@@ -318,3 +318,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR, head SHA d39161c1622317f973b07cc66096019be2f9c84b:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927385) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927413), ambas success.
 - **CI post-merge sobre el SHA exacto 1a1bc2be356463edde3464e530015674dd8bc767:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051519) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051508), ambas success.
 - **Límite:** la tarea de encontrar rutas oficiales de consulta quedó registrada y validada técnicamente; el cotejo primario de DMR-045 permanece abierto para los cinco expedientes.
+
+
+## DMR-045 — Google Play Books: muestras inglesas de Astrea Record (2026-10-25)
+
+- Se añadieron al directorio de fuentes de la aplicación las tres fichas de Google Play Books: volumen 1 ([ficha](https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_1_Is_It_Wrong_to_Tr?id=M_3xEAAAQBAJ)), volumen 2 ([ficha](https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_2_Is_It_Wrong_to_Tr?id=cLwFEQAAQBAJ)) y volumen 3 ([ficha](https://play.google.com/store/books/details/Fujino_Omori_Astrea_Record_Vol_3_Is_It_Wrong_to_Tr?id=Z0gVEQAAQBAJ)).
+- Los volúmenes 1 y 2 anuncian “Free sample”; la extracción pública solo mostró sinopsis y metadatos. La ficha del volumen 3 mostró una restricción regional en una vista, mientras que otra ficha indexada anunciaba una muestra. No se asume disponibilidad global uniforme.
+- Se registran DMR-045-SRC-023–025 en el directorio de fuentes y en la auditoría/registro central. Los tres son metadata_checked_only, sin claims ni localizadores; no se ha leído una página narrativa y no cambia el estado de verificación de los personajes.
+- Se actualizaron las pruebas de directorio de fuentes y de integridad de DMR-045 para exigir que los tres enlaces permanezcan accesibles con el límite de evidencia explícito.
+- **Estado:** implementado en rama de trabajo; pendiente CI del PR y de main.
+- **Próxima prioridad:** conseguir una página narrativa realmente legible mediante acceso autorizado normal; mantener abiertos los cinco localizadores primarios de DMR-045.

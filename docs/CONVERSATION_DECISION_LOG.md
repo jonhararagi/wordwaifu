@@ -250,3 +250,13 @@
 - **Regla reforzada:** el registro de una ruta editorial legal no equivale a leer el texto; un visor que queda cargando no demuestra ausencia de un personaje y no cierra DMR-045.
 - **Archivos afectados:** src/lore-corpus.js, pruebas de directorio y barrido de DMR-045, auditoría DMR-045, registro central de fuentes, WORK_QUEUE, MASTER_INDEX y STATUS.
 - **Orden vigente:** continuar el cotejo primario de los cinco expedientes; Orario sigue en cola.
+
+
+### CONV-DM-2026-10-25-008 — Rutas de muestra Google Play Books para Astrea Record 1–3
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED on a work branch; pending pull-request validation and integration.
+- **Motivo:** continuar la búsqueda de texto primario en rutas licenciadas después de que los lectores japoneses de SB Creative/BinB no expusieran páginas narrativas.
+- **Resultado:** se identificaron las páginas públicas de Google Play Books para los tres volúmenes ingleses de Astrea Record. Las páginas de los volúmenes 1 y 2 anuncian una muestra gratuita, pero la extracción solo obtuvo metadatos y sinopsis editoriales. La página del volumen 3 presentó una variante regional que indica que el elemento no está disponible en esa región, aunque una ficha indexada distinta anuncia una muestra.
+- **Límites de evidencia:** los tres registros DMR-045-SRC-023–025 se conservan como metadata_checked_only, con claims_supported vacíos. No se atribuye presencia, acción o habilidad de ningún personaje a una página no leída; el estado regional no se interpreta como indisponibilidad global.
+- **Integración prevista:** directorio de fuentes de la aplicación, DMR-045, registro central de fuentes, cola, índice maestro y pruebas de regresión de fuentes/continuidad.
+- **Prioridad vigente:** continuar el cotejo primario de los cinco expedientes de DMR-045; Orario permanece en cola.
