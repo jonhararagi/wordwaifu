@@ -847,11 +847,11 @@ verification_status: stub
 - official_url: https://danmachi.com/danmachi/special/index.html
 - accessed_at: 2026-10-18
 - locator_type: glossary_entries
-- locator: Entradas 迷宮都市オラリオ, 摩天楼施設バベル y 豊饒の女主人
-- claims_supported: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003]
+- locator: Entradas 迷宮都市オラリオ, 摩天楼施設バベル, 豊饒の女主人 y リヴィラの街
+- claims_supported: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003, DMR-026-CLM-004]
 - events_supported: []
 - continuity_scope: CONT-ANIME
-- reliability_note: Fuente oficial de adaptación para las descripciones generales de Orario, Babel y Hostess of Fertility. No sustituye los pasajes de la novela ligera ni prueba que todos los detalles se mantengan idénticos en cada continuidad.
+- reliability_note: Fuente oficial de adaptación para las descripciones generales de Orario, Babel, Hostess of Fertility y Rivira. No sustituye los pasajes de la novela ligera ni prueba que todos los detalles se mantengan idénticos en cada continuidad.
 - conflicting_sources: []
 - rights_note: Paráfrasis original breve en español; no reproducir las descripciones completas del glosario.
 - verified_by: DANMACHI-RESEARCH-026
