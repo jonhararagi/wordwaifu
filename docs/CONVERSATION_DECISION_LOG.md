@@ -273,3 +273,13 @@
 - **Límites de evidencia:** DMR-045-SRC-026/027 documentan rutas de muestra y sus errores de acceso, con `claims_supported: []`, `events_supported: []` y `metadata_checked_only`. No se leyó ninguna página narrativa; no se crearon claims, relaciones, alias ni localizadores. Los errores no demuestran indisponibilidad global ni ausencia de personajes.
 - **Documentos afectados:** directorio interactivo de fuentes, auditoría DMR-045, registro central de fuentes, cola, índice maestro y pruebas de recuperación.
 - **Prioridad vigente:** continuar el cotejo primario de Alfia, Zald, Meteria, Erebus y Rudra antes de expandir Orario.
+
+
+### CONV-DM-2026-10-25-010 — Ruta de muestra de DanMachi, volumen 14, para la investigación de Rudra
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED on the open PR #132 branch; pending CI and integration.
+- **Motivo:** obtener una ruta legítima de consulta para el volumen 14, asociado en las referencias secundarias al capítulo 13 y a la retrospectiva de Rudra Familia.
+- **Resultado:** Google Play Books anuncia una muestra gratuita para DanMachi vol. 14, pero la página pública consultada solo devolvió sinopsis editorial y metadatos. No expuso el capítulo ni una página narrativa.
+- **Límite de evidencia:** DMR-045-SRC-028 queda metadata_checked_only con claims/eventos vacíos. La sinopsis del piso 27 y los recuerdos de Lyu no prueban la escena de Rudra Familia ni suponen que Rudra ordenara/conociera el plan.
+- **Integración prevista:** directorio interactivo de fuentes, auditoría DMR-045, registro central de fuentes, cola, índice maestro, estado y tests del rango de fuentes.
+- **Prioridad vigente:** sigue siendo el cotejo primario de los cinco expedientes DMR-045; no se amplía Orario mientras esta investigación siga abierta.
