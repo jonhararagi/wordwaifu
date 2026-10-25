@@ -190,6 +190,6 @@
 - **Fecha:** 2026-10-25.
 - **Estado:** IMPLEMENTADO EN RAMA; pendiente de CI e integración.
 - **Hallazgo:** BOOK☆WALKER ofrece ficha y enlace de muestra gratuita para la edición japonesa de *Astrea Record 3*; el visor probado devolvió un error de descarga y no mostró narración legible.
-- **Cambio:** se añadió al directorio consultable y a las fichas de Alfia, Zald y Erebus la ficha del distribuidor licenciado y el enlace de muestra. Se añadieron regresiones del directorio y de las tres fichas.
+- **Cambio:** se añadió al directorio consultable y a las fichas de Alfia, Zald y Erebus la ficha del distribuidor licenciado y el enlace de muestra. Se añadieron regresiones del directorio y de las tres fichas. También se creó un grupo visible propio (`licensed_retailer`) en la interfaz y una regresión estática del renderizador.
 - **Límite:** `DMR-045-SRC-017` queda como `metadata_checked_only`, sin claims. El error observado no prueba que el libro no esté disponible para otros usuarios y no se inventan páginas o escenas.
 - **Próximo paso:** reintentar el visor autorizado o cotejar una edición licenciada que permita establecer capítulo/página para cada personaje; Rudra y Meteria conservan sus preguntas independientes.
