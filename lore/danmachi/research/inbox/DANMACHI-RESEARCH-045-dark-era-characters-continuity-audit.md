@@ -626,3 +626,17 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - rights_note: Se conservan URL y resultado del intento normal; no se copió texto narrativo ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-029 · Google Play Books — DanMachi, volumen 14 (muestra anunciada; texto no cotejado)
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente de distribuidor:** [Google Play Books — DanMachi, volumen 14](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ).
+- **Registro bibliográfico adicional:** [Google Books — edición Yen Press, volumen 14](https://books.google.com/books?id=9gXHwQEACAAJ).
+- **Tipo:** página de distribuidor de ebook licenciado; vendedor indicado por Google Play: Yen Press LLC.
+- **Observación de catálogo:** el resultado público indexado de Google Play anuncia “Free sample”. El registro bibliográfico de Google Books para la edición de Yen Press indica “Limited preview”.
+- **Resultado de acceso:** la página comercial de Google Play no pudo extraerse en la consulta directa (cache miss); Google Books mostró metadatos, sinopsis y la cubierta de la edición limitada, pero ninguna página narrativa. No se abrió ni leyó el visor de muestra.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-MAIN-LN.
+- **Interpretación permitida:** se añade otra ruta de consulta autorizada para intentar revisar manualmente el volumen 14. La ficha de producto, la sinopsis y la existencia de la opción “Free sample” no verifican la retrospectiva del capítulo 13, el epílogo ni la atribución grupal de la trampa. La herramienta tampoco ha confirmado si la muestra se ofrece en todas las regiones.
+- **Siguiente acción:** abrir la ficha desde el acceso normal de Google Play Books en un entorno donde la opción de muestra esté disponible; registrar página/capítulo solamente después de ver texto narrativo legible.
+- **Relación con fuentes existentes:** el volumen 14 ya cuenta con la ruta de muestra japonesa de BOOK☆WALKER en DMR-045-SRC-028, cuyo visor devolvió un error de descarga. Esta entrada no duplica ese ID porque corresponde a un distribuidor y edición de consulta diferentes, y tampoco crea un claim nuevo.

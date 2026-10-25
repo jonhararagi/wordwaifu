@@ -887,6 +887,12 @@ async function run() {
       "Rudra's dialog must separate family action from personal responsibility.");
     assert.ok(rudraMainNotes.includes("FICHA EDITORIAL · METADATOS"),
       "The vol. 14 publisher product page must be labelled metadata, not a narrative passage.");
+    assert.ok(rudraMainNotes.includes("Ruta adicional de consulta licenciada") && rudraMainNotes.includes("no páginas de la muestra"),
+      "Rudra's UI must explain that the additional sample routes remain metadata-only.");
+    assert.ok(await page.locator("#archive-more-info-content a[href='https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ']").count() > 0,
+      "Rudra's expanded dossier must link the Google Play Books sample route.");
+    assert.ok(await page.locator("#archive-more-info-content a[href='https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1']").count() > 0,
+      "Rudra's expanded dossier must expose the existing BOOK☆WALKER sample route.");
     await page.locator("#archive-more-info-close").click();
     await page.locator("#archive-return-search").click();
     await page.locator("#character-archive-query").fill("Ryu");
