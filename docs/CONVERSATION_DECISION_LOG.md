@@ -231,3 +231,10 @@
 - **Límites:** no se crean IDs, claims ni aristas; la filiación de Meteria, las motivaciones de Erebus y la responsabilidad personal de Rudra no se promueven a canon. DMR-045 sigue abierto para localizadores primarios.
 - **Documentos afectados:** UI, registro de fuentes, DMR-045, estado, cola, índice maestro y pruebas de API/Playwright.
 - **Siguiente acción aceptada:** continuar primero el cotejo primario de los cinco expedientes de DMR-045. Si las muestras licenciadas siguen sin exponer páginas narrativas, conservar el bloqueo concreto y completar solo huecos verificables antes de retomar la expansión de Orario.
+
+
+#### Verificación posterior a la integración de CONV-DM-2026-10-25-006
+- **SHA comprobado en main:** ba6363bce1b651a74ebfa9b782fb7e38f8804eef.
+- **Validate WordWaifu:** [ejecución post-merge](https://github.com/jonhararagi/wordwaifu/actions/runs/40222827902) — success.
+- **DanMachi Lore and Retrieval Integrity:** [ejecución post-merge](https://github.com/jonhararagi/wordwaifu/actions/runs/40222827809) — success; completó browser smoke y validación de catálogo/enlaces.
+- **Resultado:** PR #122 está integrada y validada sobre el SHA indicado; el cotejo primario de DMR-045 sigue abierto.
