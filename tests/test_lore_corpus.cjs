@@ -2,6 +2,8 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const corpus = require("../src/lore-corpus.js");
+require("../src/character-dossiers.js");
+const uiCharacterDossiers = globalThis.WordWaifuCharacterDossiers;
 const root = path.join(__dirname, "..", "lore", "danmachi");
 const appSource = fs.readFileSync(path.join(__dirname, "..", "src", "app.js"), "utf8");
 assert.ok(appSource.includes('{ key:"interview", title:"Material complementario · entrevistas con autores"') && appSource.includes('badge:"ENTREVISTA AUTORAL"'), "The source browser must render author interviews in their own evidence tier, separate from official publisher pages and community leads.");
@@ -765,6 +767,34 @@ const astreaLimitedEditionMain = corpus.search(index,{query:"Astrea Record 3 edi
 assert.ok(!astreaLimitedEditionMain.results.some(item=>item.claimId==="DMR-045-CLM-004"),"The alternative story's publication metadata must not leak into main light-novel continuity.");
 
 
+
+// DMR-045: keep the five historical dossiers informative while preserving source and continuity limits.
+assert.ok(uiCharacterDossiers && typeof uiCharacterDossiers.get === "function", "The interactive character dossier data must load in Node tests.");
+const uiAlfia = uiCharacterDossiers.get("CHAR-DARK-ALFIA");
+assert.ok(uiAlfia.appearance.includes("heterocromía") && uiAlfia.appearance.includes("169 cm") && uiAlfia.sources.includes("https://danmachi.fandom.com/wiki/Alfia"),
+  "Alfia's visual profile must expose the community-reported details and their source without presenting them as primary verification.");
+assert.ok(uiAlfia.abilities.includes("Limit Off") && uiAlfia.abilities.includes("deterioro progresivo") && uiAlfia.abilities.includes("pendientes de cotejo"),
+  "Alfia's ability summary must preserve Gif Blessing's reported cost/decline instead of presenting her power as unlimited.");
+const uiZald = uiCharacterDossiers.get("CHAR-DARK-ZALD");
+assert.ok(uiZald.appearance.includes("212 cm") && uiZald.appearance.includes("secundarios") && uiZald.history.includes("piso 71"),
+  "Zald's appearance and historic level/floor snapshot must be useful but visibly secondary.");
+assert.ok(uiZald.abilities.includes("cantidad y calidad") && uiZald.abilities.includes("veneno") && uiZald.sources.includes("https://ln-news.com/articles/109766"),
+  "Zald's Deus Ambrosia limits, Behemoth-venom cost, and editorial profile source must be visible in the UI dossier.");
+const uiMeteria = uiCharacterDossiers.get("CHAR-METERIA");
+assert.ok(uiMeteria.personality.includes("CONT-AU") && uiMeteria.personality.includes("escenario hipotético") &&
+  uiMeteria.history.includes("no nombra a esa hermana como Meteria"),
+  "Meteria's AU characterization must stay separate from the unresolved primary identification in the main/game continuities.");
+const uiErebus = uiCharacterDossiers.get("CHAR-DARK-EREBUS");
+assert.ok(uiErebus.appearance.includes("Absolute Evil") && uiErebus.appearance.includes("CONT-GAME") &&
+  uiErebus.personality.includes("CONT-GAME") && uiErebus.sources.includes("https://ln-news.com/articles/109766"),
+  "Erebus's reported nickname and ideology must be visible with the correct game-continuity and editorial-source limits.");
+const erebusLoreDossier = fs.readFileSync(path.join(root, "characters", "dark-era", "erebus.md"), "utf8");
+assert.ok(/^aliases: \\[Erebus\\]$/m.test(erebusLoreDossier) && !/^aliases:.*Eren/m.test(erebusLoreDossier),
+  "The unverified wiki label Eren must not leak into the canonical alias list.");
+const uiRudra = uiCharacterDossiers.get("CHAR-DARK-RUDRA");
+assert.ok(uiRudra.appearance.includes("piel oscura") && uiRudra.appearance.includes("secundaria") &&
+  uiRudra.history.includes("no prueba que la deidad Rudra la ordenara"),
+  "Rudra's secondary appearance should be useful while the collective trap is not misattributed as his personal order.");
 
 // DMR-046: the seven files and claims are indexed for detail navigation and retrieval.
 const dmr046Path = "research/inbox/DANMACHI-RESEARCH-046-solingen-astrea-and-soma-family-characters.md";
