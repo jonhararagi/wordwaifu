@@ -250,3 +250,12 @@
 - **Regla reforzada:** el registro de una ruta editorial legal no equivale a leer el texto; un visor que queda cargando no demuestra ausencia de un personaje y no cierra DMR-045.
 - **Archivos afectados:** src/lore-corpus.js, pruebas de directorio y barrido de DMR-045, auditoría DMR-045, registro central de fuentes, WORK_QUEUE, MASTER_INDEX y STATUS.
 - **Orden vigente:** continuar el cotejo primario de los cinco expedientes; Orario sigue en cola.
+
+
+### CONV-DM-2026-10-25-009 — Añadir rutas licenciadas de muestra Google Play Books sin elevar metadatos a evidencia primaria
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED en rama de trabajo; pendiente validar e integrar.
+- **Resultado:** se incorporan rutas del escaparate Google Play Books para Astrea Record 1, 2 y 3 como DMR-045-SRC-023/024/025. El storefront de los volúmenes 1 y 2 muestra “Free sample”, pero no se extrajeron páginas narrativas. La ficha del vol. 3 abierta desde el escaparate localizado en Nueva Zelanda informa que no está disponible en ese territorio; esto no demuestra la disponibilidad en Argentina.
+- **Límite:** ninguna de las tres rutas ofrece por esta extracción texto narrativo o un localizador. Se mantienen los estados metadata_checked_only y continuidad CONT-AR. No se intenta eludir restricciones territoriales.
+- **Archivos afectados:** src/lore-corpus.js, pruebas del directorio y barrido DMR-045, auditoría, registro central de fuentes, WORK_QUEUE, MASTER_INDEX, STATUS y registro de acuerdos.
+- **Prioridad vigente:** cotejo primario de los cinco expedientes DMR-045 antes de retomar Orario.
