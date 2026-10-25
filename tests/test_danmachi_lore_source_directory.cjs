@@ -27,6 +27,14 @@ for (const [id, url] of required) {
   assert.match(source.limits, /CONT-/, id + " must state a continuity/evidence boundary");
 }
 
+const licensedAstrea = sources.filter(source => source.id === "publisher-yenpress-astrea-record-vol3");
+assert.equal(licensedAstrea.length, 1, "the licensed English edition must have one discoverable source entry");
+assert.equal(licensedAstrea[0].url, "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes");
+assert.equal(licensedAstrea[0].authority, "Catálogo editorial oficial");
+assert.match(licensedAstrea[0].coverage, /ISBN 9781975379926/);
+assert.match(licensedAstrea[0].limits, /no texto narrativo/i);
+assert.match(licensedAstrea[0].limits, /no usarla para verificar biografías/i, "publisher metadata must not be treated as a character-specific primary locator");
+
 const meteriaEn = sources.find(source => source.id === "community-meteria-en");
 assert.match(meteriaEn.limits, /no nombra a Meteria/i,
   "the source directory must preserve the limit of the Memoria Freese interview");
@@ -37,4 +45,4 @@ const rudraFamilia = sources.find(source => source.id === "community-rudra-famil
 assert.match(rudraFamilia.limits, /no prueba que el dios Rudra/i,
   "the source directory must distinguish a Familia action from personal responsibility by Rudra");
 
-console.log("DanMachi secondary source directory: 7 entries validated.");
+console.log("DanMachi source directory: 7 secondary entries and the licensed Astrea Record edition route validated.");

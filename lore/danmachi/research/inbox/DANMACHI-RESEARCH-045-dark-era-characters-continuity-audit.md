@@ -431,3 +431,22 @@ WordWaifu introduce una brújula interpretativa de dos ejes para navegar y compa
 La función quedó integrada mediante [PR #115](https://github.com/jonhararagi/wordwaifu/pull/115), commit `3f9fb9536482f381f1cdd9b533ae75d34508f749`. Las comprobaciones de la PR en el head SHA `2302a6e635c9208fe2c805e8154b7da991074948` aprobaron ([Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40193671503), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40193671496)). Las comprobaciones posteriores al merge sobre el SHA exacto de `main` también aprobaron ([Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40193807701), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40193807729)).
 
 La clasificación moral/conductual es metadato interpretativo de WordWaifu, no canon oficial. «Caótico neutral» para Alfia y Zald es de baja confianza y se conserva «caótico bueno» como alternativa plausible. El filtro no cambia claims canónicos, aristas, IDs ni métricas del corpus; las escenas primarias que podrían refinar la interpretación siguen pendientes.
+
+
+## DMR-045-SRC-016 · Yen Press — Astrea Record, Vol. 3 (edición inglesa licenciada)
+
+- source_id: DMR-045-SRC-016
+- source_title: Astrea Record, Vol. 3 — ficha editorial de Yen Press / Yen On
+- source_type: OFFICIAL_PUBLISHER_PRODUCT_PAGE
+- source_locator: página de producto, apartado de detalles; ISBN 9781975379926; fecha de publicación indicada: 26 de noviembre de 2024
+- source_url: https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes
+- continuity_scope: CONT-AR
+- verification_status: metadata_checked_only
+- evidence_type: licensed_edition_metadata_and_publisher_synopsis
+- claim_ids: []
+- character_ids: []
+- confidence_note: La ficha editorial confirma los metadatos de la edición inglesa y ofrece una sinopsis general del desenlace. No expone el texto narrativo ni identifica individualmente a los dos “fallen heroes” descritos por la sinopsis. Por tanto, no confirma escenas, diálogos, habilidades, relaciones, alineamientos ni biografías de Alfia, Zald o Erebus, y no cierra ningún localizador primario pendiente.
+
+### Ruta de consulta legal incorporada a la interfaz (2026-10-25)
+
+La ficha oficial de Yen Press para la edición inglesa de *Astrea Record, Vol. 3* quedó agregada al directorio de fuentes de la aplicación y a las fichas interactivas de Alfia, Zald y Erebus como **ruta para localizar la edición licenciada**, no como sustento de sus datos biográficos. Las pruebas verifican la URL y el límite `metadata_checked_only`. El barrido no encontró capítulos/páginas narrativas reproducibles para esos personajes; el estado primario de DMR-045 sigue abierto.

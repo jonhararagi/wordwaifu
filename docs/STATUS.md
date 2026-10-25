@@ -241,3 +241,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 
 
 - **DANMACHI-RESEARCH-046 — Solingen y Soma Familia:** siete expedientes tienen ya ficha Markdown ampliada, ficha de UI manual, fuentes y tests de navegación/búsqueda. Los datos de wiki permanecen secundarios; la acusación de Zanis contra Liliruca no se presenta como culpabilidad probada.
+
+
+## DMR-045 — ruta editorial licenciada añadida (2026-10-25)
+
+- Se añadió al directorio interactivo la ficha oficial de Yen Press / Yen On para *Astrea Record, Vol. 3*, edición inglesa licenciada, ISBN 9781975379926, con fecha editorial del 26 de noviembre de 2024: [ficha oficial](https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes).
+- La ruta se muestra en las fichas de Alfia, Zald y Erebus y queda cubierta por regresiones del directorio de fuentes y de fichas.
+- **Alcance limitado:** la página ofrece metadatos y sinopsis general; no contiene los pasajes narrativos ni localizadores de personaje. No se eleva ninguna afirmación secundaria a evidencia primaria y DMR-045 permanece abierto.
+- **Siguiente trabajo:** seguir con Orario y los localizadores pendientes sin inferir la relación física entre Pantheon, Babel y la sede de la Guild.
