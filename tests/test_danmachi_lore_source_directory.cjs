@@ -72,4 +72,20 @@ assert.equal(binbAstreaPreview[0].url, "https://r.binb.jp/epm/e1_270413_31102022
 assert.match(binbAstreaPreview[0].limits, /no un localizador primario/i);
 assert.match(binbAstreaPreview[0].coverage, /no expuso páginas narrativas/i);
 
+const sbcrAstrea1 = sources.filter(source => source.id === "official-sbcr-astrea-record-vol1-preview-metadata-only");
+const sbcrAstrea2 = sources.filter(source => source.id === "official-sbcr-astrea-record-vol2-preview-metadata-only");
+const sbcrAstrea3 = sources.filter(source => source.id === "official-sbcr-astrea-record-vol3-preview-metadata-only");
+for (const [label, rows, url] of [
+  ["Astrea Record 1", sbcrAstrea1, "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561017JAAA01MBJE3X&lginbtn=false"],
+  ["Astrea Record 2", sbcrAstrea2, "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561018JAAA02MBJE3X&lginbtn=false"],
+  ["Astrea Record 3", sbcrAstrea3, "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false"]
+]) {
+  assert.equal(rows.length, 1, label + " official sample route must be discoverable exactly once");
+  assert.equal(rows[0].category, "official");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].coverage, /Now loading/i);
+  assert.match(rows[0].limits, /no aporta capítulo, página, escena/i);
+  assert.match(rows[0].limits, /No inferir presencia o ausencia/i);
+}
+
 console.log("DanMachi source directory: secondary references and authorized preview limits validated.");

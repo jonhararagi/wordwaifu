@@ -520,3 +520,33 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - Las entradas se sirven solo para `CONT-AR`; las pistas de vol. 20 continúan como investigación `CONT-MAIN-LN`, y los detalles exclusivos de juegos o `CONT-AU` no se consolidan en este resumen.
 - **Integración:** PR [#120](https://github.com/jonhararagi/wordwaifu/pull/120) integrada en `main`, SHA exacto `742b0220590e45082972015684a0ecc6cbf14f04`. CI de PR (head `308ee68ed81673757ae4c99c1d8af95bae573cfe`): [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032458) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40211032504), ambas exitosas. CI post-merge sobre ese SHA exacto de `main`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145581) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40211145583), ambas exitosas; Playwright y validación de catálogo/enlaces completaron sin error.
 - DMR-045 continúa abierto para cotejo primario.
+
+
+## DMR-045-SRC-020 · SB Creative eBook Store — muestra de Astrea Record 1
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [SBCr eBook Store / BinB — Astrea Record 1](https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561017JAAA01MBJE3X&lginbtn=false).
+- **Tipo:** lector de muestra publicado por SB Creative / GA Bunko; intento de acceso por la ruta normal del visor.
+- **Resultado observado:** la extracción devolvió “Now loading...” y los controles de bibliografía, índice, búsqueda en el texto, avance automático, lectura por voz, ajustes, acceso y compra. No expuso páginas narrativas legibles.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** queda registrada una ruta editorial de consulta autorizada. No es una escena leída ni un localizador de capítulo/página; la carga incompleta no prueba presencia o ausencia de un personaje.
+
+## DMR-045-SRC-021 · SB Creative eBook Store — muestra de Astrea Record 2
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [SBCr eBook Store / BinB — Astrea Record 2](https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561018JAAA02MBJE3X&lginbtn=false).
+- **Tipo:** lector de muestra publicado por SB Creative / GA Bunko; intento de acceso por la ruta normal del visor.
+- **Resultado observado:** la extracción devolvió “Now loading...” y los controles de bibliografía, índice, búsqueda en el texto, avance automático, lectura por voz, ajustes, acceso y compra. No expuso páginas narrativas legibles.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** queda registrada una ruta editorial de consulta autorizada. No es una escena leída ni un localizador de capítulo/página; la carga incompleta no prueba presencia o ausencia de un personaje.
+
+## DMR-045-SRC-022 · SB Creative eBook Store — muestra de Astrea Record 3
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [SBCr eBook Store / BinB — Astrea Record 3](https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false).
+- **Tipo:** lector de muestra publicado por SB Creative / GA Bunko; intento de acceso por la ruta normal del visor.
+- **Resultado observado:** la extracción devolvió “Now loading...” y los controles de bibliografía, índice, búsqueda en el texto, avance automático, lectura por voz, ajustes, acceso y compra. No expuso páginas narrativas legibles.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** queda registrada una ruta editorial de consulta autorizada. No es una escena leída ni un localizador de capítulo/página; la carga incompleta no prueba presencia o ausencia de un personaje.
+
+**Límite conjunto de SRC-020–022:** los tres enlaces son intentos de acceso a lectores públicos. Ninguno devolvió páginas narrativas; no se crean claims, relaciones ni localizadores a partir del número de volumen, el CID o el menú del lector. La verificación primaria de DMR-045 continúa abierta.
