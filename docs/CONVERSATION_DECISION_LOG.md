@@ -184,3 +184,12 @@
 - **CI de la PR, head SHA `7e903eb6eda4dae6f3d4c69d5af0257ce8eeddbb`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40196827871) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40196827863), ambas exitosas.
 - **CI post-merge sobre `main`, SHA exacto `6efb50779b17924e7064876af75afa3cbd1d3b67`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003502) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003501), ambas exitosas.
 - **Prioridad siguiente:** continuar el inventario de Orario y buscar localizadores narrativos reales; no deducir la topología Pantheon–Babel–Guild.
+
+
+### CONV-DM-2026-10-25-003 — Agregar acceso a muestra licenciada sin ascender metadatos a canon
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTADO EN RAMA; pendiente de CI e integración.
+- **Hallazgo:** BOOK☆WALKER ofrece ficha y enlace de muestra gratuita para la edición japonesa de *Astrea Record 3*; el visor probado devolvió un error de descarga y no mostró narración legible.
+- **Cambio:** se añadió al directorio consultable y a las fichas de Alfia, Zald y Erebus la ficha del distribuidor licenciado y el enlace de muestra. Se añadieron regresiones del directorio y de las tres fichas. También se creó un grupo visible propio (`licensed_retailer`) en la interfaz y una regresión estática del renderizador.
+- **Límite:** `DMR-045-SRC-017` queda como `metadata_checked_only`, sin claims. El error observado no prueba que el libro no esté disponible para otros usuarios y no se inventan páginas o escenas.
+- **Próximo paso:** reintentar el visor autorizado o cotejar una edición licenciada que permita establecer capítulo/página para cada personaje; Rudra y Meteria conservan sus preguntas independientes.

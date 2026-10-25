@@ -768,7 +768,9 @@
       relationships: "Las fuentes secundarias la vinculan con Hera Familia y con Meteria; su relación con Zald forma parte del eje antagonista descrito en resúmenes de Astrea Record. Una arista secundaria permite abrir la pista comunitaria del prólogo de vol. 20 (EVT-DM-V20-PROLOGUE-SEA-WITCH-LEAD-001); no debe tratarse como confirmación de identidad ni como una relación canónica verificada. Otra pista independiente remite a los caps. 2–3 para cotejar Afterglow (EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001); no confirma el uso individual de la técnica. Una entrevista a Omori afirma que la novelización presenta a Alfia como tía de Bell (DMR-045-CLM-007), pero no ofrece capítulo/página y no cierra el resto de su biografía. Una entrevista anterior sobre Memoria Freese confirma que la madre de Bell es la hermana menor de Alfia (DMR-045-CLM-008, CONT-GAME); ese pasaje no nombra a la hermana como Meteria y se mantiene separado de la relación CONT-AR. Un hilo comunitario sobre páginas de muestra del vol. 20 interpreta tentativamente como Alfia a una maga de cabello gris del prólogo, usando Genos Angelus contra una criatura marina (DMR-045-CLM-015, CONT-MAIN-LN). No confirma que la criatura sea Leviathan ni que el testigo sea Leon; hasta cotejar el texto autorizado queda como pista secundaria. La nota autoral hipotética se abre por separado en EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001 (`CONT-AU`); no forma parte de su biografía de Astrea Record.",
       conflict: "Su función narrativa provisional se lee como un antagonismo que pone a prueba a los héroes de Orario, no como una villana plana. La lectura moral de sus motivos debe distinguir el texto de la interpretación comunitaria y no importar datos de la versión de juego sin comparación.",
       sources: ["https://danmachi.fandom.com/wiki/Alfia","https://danmachi.fandom.com/es/wiki/Alfia/Habilidades","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://dengekionline.com/articles/189750/","https://note.com/fujinoomori/n/n629829ac3fe4","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md","https://ln-news.com/articles/109766",
-        "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes"
+        "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
       ],
     },
     "CHAR-CECIL-BLACKLIZA": {
@@ -851,7 +853,9 @@
       relationships: "Su trayectoria se vincula secundariamente con Zeus Familia, con Alfia dentro del conflicto de Astrea Record y con Ottar en un enfrentamiento reportado. Esas relaciones son rutas históricas y no implican que exista una fecha o escena verificada para cada detalle. Una arista de investigación conecta su ficha con la pista de Afterglow en los caps. 2–3 de vol. 20 (EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001); falta cotejo primario. El escenario autoral de crianza se consulta en EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001 (CONT-AU), sin atribuir esos hechos a la novela principal o a Astrea Record.",
       conflict: "El conflicto de Zald se estudia como antagonismo de alto impacto dentro de una tragedia mayor, con un posible sentido de prueba para los héroes del futuro según fuentes comunitarias. La enciclopedia no debe reducirlo a una ficha de poder ni inventar motivaciones más allá de lo que la novela confirme.",
       sources: ["https://danmachi.fandom.com/es/wiki/Zald","https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://www.reddit.com/r/DanMachi/comments/1ifg4g6/volume_20_side_story_a_scene_between_a_certain/","https://dengekionline.com/articles/189750/","https://ln-news.com/articles/109766","https://note.com/fujinoomori/n/n629829ac3fe4","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md",
-        "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes"
+        "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
       ]
     },
     "CHAR-DARK-RUDRA": {
@@ -898,7 +902,9 @@
       relationships: "Su asociación con el conflicto de Evilus y Astrea Record se conserva como evidencia secundaria. Evilus se modela como una red de facciones y no se le atribuyen automáticamente todas las acciones del conflicto.",
       conflict: "Erebus sirve para explorar la oposición ideológica a la justicia de Ryu y Astrea Familia. La ficha distingue antagonismo reportado de una reconstrucción completa de su plan.",
       sources: ["https://danmachi.fandom.com/wiki/Erebus","https://ln-news.com/articles/109766","https://danmachi.com/news/news131.php","https://danmachi.com/chronology/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
-        "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes"
+        "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
       ]
     },
     "CHAR-OLIVAS-ACT": {
