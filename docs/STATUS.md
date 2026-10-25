@@ -19,12 +19,14 @@
 - Pruebas posteriores a la integración, ambas con éxito y asociadas al SHA `9e5a2ee6041dd2a4283003993bfd6655a9a3d419`: [Validate WordWaifu #3237](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959234) y [DanMachi Lore and Retrieval Integrity #1690](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959233).
 - **Pendiente real:** no se cerraron los localizadores narrativos primarios de Alfia, Zald, Meteria y Erebus, ni la responsabilidad personal de Rudra. Las métricas, el catálogo de identidades y las relaciones no cambiaron en este lote.
 
-## Canoe Belway / Zanis Lustra / Liliruca — corrección de la atribución en fichas UI (preintegración, 2026-10-24)
+## Canoe Belway / Zanis Lustra / Liliruca — corrección de la atribución en fichas UI (integrado; verificación post-merge parcial, 2026-10-24)
 
-- Se corrigen los resúmenes interactivos de Liliruca, Canoe, Zanis y Chandra para distinguir el destino de Canoe reportado por una fuente comunitaria de la acusación que el resumen comunitario del volumen 6 atribuye a Zanis (DMR-046-CLM-007 vs. DMR-046-CLM-005).
-- Se agregan a Liliruca y Canoe las dos URLs editoriales ya registradas de volumen 2/6 y a Zanis la de volumen 6. Sus límites quedan explícitos: la sinopsis de vol. 2 presenta a Lili como ayudante y el contexto de Soma Familia; la de vol. 6 confirma su captura previa al War Game. Ninguna verifica por sí misma a Canoe, la acusación ni la intervención individual de Chandra.
-- Se añaden pruebas de regresión para los cuatro expedientes y la separación entre afirmación comunitaria, contexto editorial y hecho primario. No cambian los IDs ni el estado `secondary_checked`; no se modifica el grafo.
-- **Pendiente:** localizar en ediciones legítimas de los volúmenes 2 y 6 los pasajes que permitan establecer qué pasó con Canoe, qué sabe Zanis y si existe fundamento para la acusación. **Estado preintegración:** rama de trabajo; falta CI e integración.
+- La PR [#114](https://github.com/jonhararagi/wordwaifu/pull/114) se integró en `main` mediante el commit `a7725802e2cef7ad9a3e648b7189e7986f1853fb`.
+- Se corrigieron las fichas interactivas de Liliruca, Canoe Belway, Zanis Lustra y Chandra Ihit para distinguir `DMR-046-CLM-007` (destino de Canoe reportado por fuente comunitaria) de `DMR-046-CLM-005` (acusación atribuida a Zanis por el resumen comunitario del volumen 6).
+- Las URLs editoriales de los volúmenes 2 y 6 se muestran como contexto general; no prueban el caso de Canoe, la acusación ni la acción individual de Chandra. No cambian IDs, aristas ni el estado `secondary_checked`.
+- **CI de la PR (SHA `1fe1d632565d303894956d0bae86f214cc4087f6`):** [DanMachi Lore and Retrieval Integrity #168?](https://github.com/jonhararagi/wordwaifu/actions/runs/40152510473) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40152510494) — ambas exitosas.
+- **CI post-merge exacto de `main` (SHA `a7725802e2cef7ad9a3e648b7189e7986f1853fb`):** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40152602203) — éxito. [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40152602204) — al último chequeo continúa `in_progress` en instalación de Chromium; no se declara aprobada hasta que publique conclusión.
+- **Pendiente factual:** cotejar en ediciones legítimas los pasajes de volúmenes 2 y 6 para establecer la secuencia de Canoe, qué sabía Zanis y si la acusación tiene fundamento. La discrepancia entre los resúmenes comunitarios no se ha declarado resuelta.
 
 ## Orario — localizador provisional de la plaza norte armonizado (2026-10-24)
 
