@@ -16,6 +16,8 @@
 - La descarga del PDF sigue devolviendo HTTP 503 y la captura no pudo inspeccionar visualmente la página. El localizador sirve como pista reproducible del índice, no como paginación cotejada; la certeza sigue en `source_checked_excerpt_only`.
 - La muestra ya figura en el directorio de fuentes consultable con esos límites, y se añadieron regresiones para que ficha, registro central y directorio no contradigan el localizador ni eleven su estado.
 - No cambian entidades, relaciones ni métricas del corpus. La tarea de localizar y verificar un pasaje primario visualmente inspeccionable permanece abierta.
+- **Integración:** [PR #112](https://github.com/jonhararagi/wordwaifu/pull/112) se fusionó en `main` mediante squash, SHA [07784cb869428aadcc57d5bb3322dda8c5274127](https://github.com/jonhararagi/wordwaifu/commit/07784cb869428aadcc57d5bb3322dda8c5274127).
+- **CI posterior al merge para ese SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40150808803) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40150808868), ambas finalizadas con éxito.
 
 ## Orario — contraste parcial Pantheon / sede de la Guild / Babel (2026-10-24)
 

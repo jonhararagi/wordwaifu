@@ -113,11 +113,13 @@
 
 - **Fecha:** 2026-10-24.
 - **Tipo:** corrección de procedencia, mejora del directorio de fuentes y prueba de regresión.
-- **Estado:** implementado en rama de trabajo; integración y CI pendientes.
-- **Hallazgo:** DMR-047 ya conserva en el claim el capítulo IV 「だからボクは力になりたい」 y los marcadores de folio 20–21 de la muestra oficial del volumen 2, pero el registro central de fuentes decía que no se asignaba capítulo/página.
-- **Cambio:** alineados el registro `DMR-047-SRC-001`, la entrada del directorio de fuentes, la investigación y el índice maestro; añadidas pruebas para comprobar que el registro central y el directorio exponen el localizador provisional sin abandonar `source_checked_excerpt_only`.
+- **Estado final:** integrado y validado en `main` mediante [PR #112](https://github.com/jonhararagi/wordwaifu/pull/112), SHA [07784cb869428aadcc57d5bb3322dda8c5274127](https://github.com/jonhararagi/wordwaifu/commit/07784cb869428aadcc57d5bb3322dda8c5274127).
+- **Hallazgo:** DMR-047 ya conservaba en el claim el capítulo IV 「だからボクは力になりたい」 y los marcadores de folio 20–21 de la muestra oficial del volumen 2, pero el registro central de fuentes decía que no se asignaba capítulo/página.
+- **Cambio:** alineados el registro `DMR-047-SRC-001`, la entrada del directorio de fuentes, la investigación y el índice maestro; añadidas regresiones para comprobar que el registro central y el directorio exponen el localizador provisional sin abandonar `source_checked_excerpt_only`.
 - **Límites:** el PDF no se pudo inspeccionar visualmente; los folios no cuentan como páginas cotejadas. No se asigna nombre oficial a la plaza, coordenadas ni vecindad no documentada.
-- **Siguiente acción:** validar el lote y fusionarlo si la CI pasa; continuar buscando un pasaje primario de Orario que pueda verificarse directamente.
+- **Verificación CI sobre el PR:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40150720025) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40150720014), ambas finalizadas con éxito.
+- **Verificación posterior al merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40150808803) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40150808868), ambas finalizadas con éxito.
+- **Siguiente acción:** continuar el inventario de lugares de Orario y buscar un pasaje primario que pueda verificarse directamente; la inspección visual de esta muestra sigue pendiente.
 
 ## Plantilla para entradas futuras
 
