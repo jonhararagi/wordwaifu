@@ -2,13 +2,20 @@
 ## Estado operativo y verificación — 2026-10-24
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 178 registros activos; 29 IDs reservados; 130 documentos de apoyo.
+- **Corpus DanMachi:** 178 registros activos; 29 IDs reservados; 131 documentos de apoyo.
 - **Grafo de conocimiento:** 258 relaciones explícitas; 258/258 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 92 perfiles; 92/92 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
+
+## Orario — contraste parcial Pantheon / sede de la Guild / Babel (2026-10-24)
+
+- La muestra editorial oficial del volumen 3, recuperada mediante indexación textual, presenta Pantheon como referencia en una avenida y después narra la entrada en la sede blanca de la Guild. La secuencia favorece interpretarlos como referencias físicas distintas; el PDF responde HTTP 503 al abrirse directamente y no se pudo verificar visualmente.
+- El glosario oficial del anime describe Babel como el edificio más alto y una instalación propiedad de la Guild para supervisar y gestionar el Dungeon. No indica si la sede administrativa está dentro de Babel, es la misma estructura o se encuentra separada.
+- La afirmación comunitaria que identifica Pantheon como sede principal permanece etiquetada como secundaria y en conflicto con la lectura provisional del extracto; no se añade una arista espacial o de identidad entre Pantheon, Babel y la sede.
+- La conciliación se documenta en [DANMACHI-RESEARCH-051](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md). Continúan pendientes la inspección visual del pasaje, los localizadores primarios reproducibles y el inventario urbano completo.
 
 ## Orario — Plaza del Amor registrada como pista secundaria navegable (2026-10-24)
 

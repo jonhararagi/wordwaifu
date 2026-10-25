@@ -85,7 +85,7 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [x] Registrar como avance parcial el extracto de lectura de GA Bunko que describe una plaza semicircular al norte de Orario; el archivo directo no respondió y la paginación sigue pendiente, por lo que la tarea de localizador reproducible no se cierra.
 - [x] Separar el nodo organizativo `ORG-GUILD` de la guía conceptual histórica `DM-GUILD-001`; mover las aristas institucionales al nodo organizativo sin cambiar su continuidad ni su procedencia.
 - [x] Añadir `LOC-RIVIRA` como asentamiento del piso seguro 18 del Dungeon a partir del glosario oficial del anime (DMR-026-CLM-004); relación única al Dungeon bajo `CONT-ANIME`, sin inferir un barrio de superficie ni trasladarlo a la novela principal.
-- [ ] Completar el inventario de lugares de la ciudad con IDs estables y relaciones respaldadas; la resolución de la sede física de la Guild y del vínculo Pantheon–Babel permanece pendiente.
+- [ ] Completar el inventario de lugares de la ciudad con IDs estables y relaciones respaldadas; la evidencia parcial favorece distinguir Pantheon de la sede de la Guild, pero la sede física exacta y el vínculo Pantheon–Babel siguen pendientes; véase [DMR-051](research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md).
 - [ ] Verificar distritos, calles, accesos, orientación y mapas. Mantener las ubicaciones sin respaldo como esquema/pregunta; las wikis solo aportan pistas.
 - [ ] Analizar instituciones, Familias, población, vida cotidiana, comercio, abastecimiento y seguridad, afirmación por afirmación.
 - [ ] Describir el estado de Orario por periodos históricos y enlazar los eventos existentes sin narrarlos aquí de nuevo.
@@ -98,7 +98,8 @@ Este lote mejora la navegación de las fuentes recuperadas; no cierra el mapa de
 - [x] Registrar por separado la antigua iglesia y la mansión adquirida de Apollo Familia como residencias en CONT-ANIME, con la transición sustentada en la sinopsis oficial de DanMachi II, episodio 5.
 - [x] Recuperar del portal oficial Prototype los detalles de avenidas, Central Park, comercio de calle y usos de Babel en [DANMACHI-RESEARCH-034](research/inbox/DANMACHI-RESEARCH-034-orario-prototype-streets-commerce-babel.md), manteniéndolos bajo CONT-PROTOTYPE.
 - [x] Localizar una mención de Pantheon en el extracto oficial de volumen 3 (capítulo I y folios 36–37 conservados por el índice) e integrarla como `source_checked_excerpt_only`.
-- [ ] Determinar con el pasaje completo si Pantheon, la sede de la Guild y Babel son ubicaciones distintas; el extracto indexado no resuelve su identidad física.
+- [x] Contrastar la afirmación comunitaria sobre Pantheon con la secuencia del extracto editorial: el texto indexado favorece que Pantheon sea una referencia distinta de la sede blanca de la Guild; discrepancia registrada en DMR-051, con cautela por falta de verificación visual.
+- [ ] Abrir visualmente el PDF del volumen 3 y resolver, con nuevos localizadores si hace falta, si la sede de la Guild está dentro de Babel o en una estructura separada; el glosario oficial de anime no establece la relación física.
 - [x] Registrar la sinopsis editorial oficial de Sword Oratoria vol. 7 como evidencia separada de la investigación de Loki Familia sobre Daedalus Street (DMR-049, `CONT-SO-LN`).
 - [ ] Localizar la primera mención de Daedalus Street en la novela principal; DMR-049 no satisface esta tarea porque pertenece a Sword Oratoria.
 - [ ] Localizar el pasaje primario de `アモールの広場` (Plaza del Amor) con capítulo/página o localizador digital para confirmar la descripción y evaluar si algún dato puede asignarse a `CONT-MAIN-LN`.

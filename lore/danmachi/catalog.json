@@ -3554,6 +3554,12 @@
       "path": "research/inbox/DANMACHI-RESEARCH-050-daedalus-street-official-short-story.md",
       "type": "official_supplemental_short_story_research",
       "status": "source_checked_excerpt_only"
+    },
+    {
+      "document_id": "DOC-DANMACHI-RESEARCH-051",
+      "path": "research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md",
+      "type": "cross_source_location_reconciliation",
+      "status": "source_checked_partial"
     }
   ],
   "lastStructuredSync": "2026-10-24",
@@ -5188,7 +5194,7 @@
       "evidenceType": "community_secondary_summary",
       "claimRef": "DMR-031-CLM-006",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-031-orario-wiki-geography-leads.md",
-      "note": "La relación diferencia el edificio físico de la institución. Sigue siendo secundaria y no resuelve si Pantheon se distingue físicamente de Babel en la continuidad de la novela."
+      "note": "Esta arista reproduce únicamente la afirmación de la wiki bajo CONT-UNVERIFIED, no un hecho confirmado de la novela. DMR-048 (extracto editorial indexado, no verificado visualmente) favorece leer Pantheon como un punto pasado antes de entrar en la sede blanca de la Guild; la discrepancia y sus límites se documentan en DMR-051. No prueba distancia ni relación física con Babel."
     },
     {
       "id": "REL-AMOR-SQUARE-ORARIO-SECONDARY",

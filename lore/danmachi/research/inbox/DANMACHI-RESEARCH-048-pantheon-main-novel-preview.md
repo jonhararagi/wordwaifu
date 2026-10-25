@@ -10,7 +10,7 @@
 ### DMR-048-CLM-001 · La muestra de novela principal menciona Pantheon y una sede de la Guild en el recorrido por una avenida
 
 - `claim_id`: DMR-048-CLM-001
-- `claim`: El extracto oficial del capítulo I describe una avenida amplia con comercios concurridos a ambos lados. En el mismo recorrido nombra un gran templo como Pantheon y, después de pasar frente a ese punto de referencia, narra la entrada en la sede de la Guild, descrita como de mármol blanco. Esto confirma que el término Pantheon aparece en esta muestra de la novela principal y se lo sitúa en el contexto de una avenida urbana. El extracto indexado por sí solo no resuelve si Pantheon y la sede de la Guild son edificios separados, si el término también designa la sede, ni cuál es la relación física con Babel.
+- `claim`: El extracto oficial indexado del capítulo I describe una avenida amplia con comercios concurridos. En la secuencia, Pantheon aparece como un gran templo/punto de referencia; luego el narrador pasa frente a él y entra en la sede de la Guild, descrita como de mármol blanco. El orden de la narración favorece interpretar Pantheon y la sede como referencias físicas distintas, en tensión con la atribución comunitaria de Pantheon como sede principal. Como el PDF no pudo abrirse visualmente, esta lectura permanece provisional; el extracto no resuelve la posición ni la relación física de Babel con la sede.
 - `character_ids`: [LOC-PANTHEON, LOC-ORARIO]
 - `aspect`: nombre de lugar, calle comercial, sede institucional y recorrido urbano
 - `era_or_interval`: capítulo I 「剣姫異来」 de la muestra del volumen 3; fecha interna de la escena no fijada aquí
@@ -23,7 +23,7 @@
 - `evidence_type`: official_publisher_light_novel_preview_excerpt
 - `verification_status`: source_checked_excerpt_only
 - `spoiler_level`: mild
-- `confidence_note`: Evidencia primaria de extracto publicada por el sello editorial, con acceso parcial a través del índice textual. Confirma el uso del término y la secuencia descrita, no una cartografía completa ni una respuesta definitiva sobre Pantheon, la sede de la Guild y Babel.
+- `confidence_note`: Evidencia primaria parcial publicada por el sello editorial. La secuencia indexada favorece que Pantheon y la sede blanca de la Guild sean referencias distintas; el PDF no se verificó visualmente, por lo que la lectura es provisional. DMR-031-CLM-006 recoge la afirmación comunitaria en conflicto. No fija la relación física con Babel ni una cartografía completa.
 
 ## Lo que queda sin resolver
 

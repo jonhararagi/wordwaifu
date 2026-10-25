@@ -12,7 +12,7 @@
 | [LOC-BABEL](babel.md) | Babel | Orario, Guild, Dungeon, Central Park | Ficha parcial respaldada por el glosario oficial del anime; detalles de Prototype separados |
 | [LOC-CENTRAL-PARK](central-park.md) | Central Park / plaza central | Avenidas principales, Babel, Dungeon | Parcial: aparece en el texto oficial Prototype; no trasladar automáticamente al canon publicado |
 | [LOC-ORARIO-MAIN-STREETS](main-streets.md) | Red de avenidas principales de Orario | Ciudad, Central Park, comercio de calle | Ocho direcciones documentadas sólo para la continuidad Prototype |
-| [LOC-PANTHEON](pantheon.md) | Pantheon — lugar mencionado en la novela principal | Orario, avenida comercial, Guild y Babel | Mención en extracto oficial de volumen 3 (`source_checked_excerpt_only`); identidad física pendiente |
+| [LOC-PANTHEON](pantheon.md) | Pantheon — lugar mencionado en la novela principal | Orario, avenida comercial, Guild y Babel | Extracto oficial parcial favorece distinguir Pantheon de la sede; relación física con Babel pendiente. Ver [DMR-051](../research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md) |
 | [LOC-AMOR-SQUARE](amor-square.md) | Plaza del Amor (`アモールの広場`) | Orario, avenida principal suroeste (según wiki comunitaria) | Sólo evidencia secundaria (`CONT-UNVERIFIED`); localizador primario pendiente |
 | [LOC-APOLLO-MANOR](apollo-familia-mansion.md) | Mansión de Apollo Familia | Nueva residencia de Hestia Familia después del War Game | Parcial: transición respaldada en la adaptación; ubicación exacta pendiente |
 | [LOC-HOSTESS](hostess-of-fertility.md) | Hostess of Fertility | Orario, Familia Loki, personal de la taberna | Ficha parcial respaldada por el glosario oficial del anime |
