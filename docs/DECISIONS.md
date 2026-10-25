@@ -108,3 +108,11 @@
 **Decisión:** usar `organization` para nodos institucionales como `ORG-GUILD` y `ORG-HOSTESS`; mantener los edificios o lugares en registros `location`; conservar `DM-GUILD-001` como guía conceptual compuesta de tipo `setting` para no romper su ID histórico, pero no crear relaciones nuevas hacia ella. Las aristas de la Guild deben apuntar a `ORG-GUILD` y cada una conserva continuidad, claim y nivel de evidencia.
 **Límite factual:** la organización Guild, Babel y Pantheon no se pueden fusionar en una sola entidad. La identidad física exacta entre Pantheon, la sede descrita en el extracto y Babel permanece pendiente; no se inventa una ubicación `LOC-GUILD`.
 **Motivo:** impedir que una ficha de referencia o una organización actúe como edificio físico, mejorando los enlaces y la búsqueda sin alterar los hechos ni los IDs estables.
+
+
+## DEC-022 — Filtros de alineamiento narrativo de personajes
+**Estado:** Aprobada como función editorial de WordWaifu, no como clasificación oficial del canon.
+**Decisión:** La enciclopedia ofrece dos ejes independientes: orientación moral (bueno, neutral, malo) y actitud ante reglas/orden (legal, neutral, caótico). La combinación forma alineamientos legibles; «sin clasificar» es un estado explícito y nunca equivale a neutral.
+**Aplicación inicial:** Alfia y Zald aparecen, con alcance interpretativo provisional en CONT-AR y confianza baja, como «caótico neutral». Se conserva «caótico bueno» como alternativa plausible que pondera más su fin protector. La motivación declarada no borra los medios violentos descritos por fuentes secundarias.
+**Límites:** no atribuir estas etiquetas a Omori ni tratarlas como hechos canónicos. Cada asignación necesita justificación, continuidad, confianza y enlaces de fuente; los personajes restantes permanecen sin clasificar hasta que haya evaluación documentada.
+**Motivo:** facilitar exploración y revisión de coherencia de personajes sin mezclar brújula moral con temperamento, ni forzar conclusiones cuando falta evidencia.
