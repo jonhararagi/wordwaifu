@@ -318,3 +318,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR, head SHA d39161c1622317f973b07cc66096019be2f9c84b:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927385) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927413), ambas success.
 - **CI post-merge sobre el SHA exacto 1a1bc2be356463edde3464e530015674dd8bc767:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051519) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051508), ambas success.
 - **Límite:** la tarea de encontrar rutas oficiales de consulta quedó registrada y validada técnicamente; el cotejo primario de DMR-045 permanece abierto para los cinco expedientes.
+
+
+## DMR-045 — rutas licenciadas de muestra Google Play Books (2026-10-25)
+
+- Se añadieron al directorio las fichas de Google Play Books para Astrea Record, volúmenes 1–3, registradas como DMR-045-SRC-023/024/025.
+- Los escaparates consultados muestran controles de muestra gratuita para los volúmenes 1 y 2, pero la extracción solo devolvió título, vendedor, número de páginas y sinopsis; no una página narrativa del sample.
+- Para el volumen 3, el resultado de búsqueda indicaba “Free sample”, pero la ficha abierta con el escaparate localizado en Nueva Zelanda mostraba “This item isn't available in your country”. No se infiere accesibilidad en Argentina ni se intenta eludir restricciones territoriales.
+- Las tres entradas quedan como metadata_checked_only, sin claims, eventos ni localizadores. DMR-045 permanece abierto.
