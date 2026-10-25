@@ -18,10 +18,14 @@ assert.ok(bell.abilities.includes("Liaris Freese"), "Bell's dossier must describ
 assert.ok(api.get("CHAR-RYUU-LION").history.includes("piso 37"), "Ryuu's dossier must include specific narrative context.");
 assert.equal(api.get("MISSING-ID"), null, "Unknown characters should return null.");
 const licensedAstreaUrl = "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes";
+const bookwalkerProductUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/";
+const bookwalkerSampleUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1";
 for (const id of ["CHAR-DARK-ALFIA", "CHAR-DARK-ZALD", "CHAR-DARK-EREBUS"]) {
   const dossier = api.get(id);
   assert.ok(dossier && Array.isArray(dossier.sources), id + " must retain its source list.");
   assert.ok(dossier.sources.includes(licensedAstreaUrl), id + " must expose the licensed English Astrea Record volume 3 page as an access route.");
+  assert.ok(dossier.sources.includes(bookwalkerProductUrl), id + " must expose the licensed Japanese retailer listing.");
+  assert.ok(dossier.sources.includes(bookwalkerSampleUrl), id + " must expose the free sample route without treating it as verified narrative text.");
 }
 
 bell.history = "mutated";
