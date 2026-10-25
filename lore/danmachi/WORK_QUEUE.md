@@ -691,6 +691,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Reintentar el capítulo 13 y el epílogo solo mediante una edición o muestra legítima que exponga la página narrativa; mantener sin confirmar la atribución personal a Rudra.
 
 **Estado factual:** fichas más completas y buscables; el lote sigue en secondary_checked_with_primary_gaps. El lector de muestra de vol. 14 añadió una ruta registrada pero no una página legible. No se declara verificación primaria de las biografías.
+- **Integración:** PR [#133](https://github.com/jonhararagi/wordwaifu/pull/133), merge SHA `1c53f9f7ca57a6aeebaedbf57234fb8b6e581f6f`.
+- **Verificación post-merge del SHA exacto de `main`:** [Validate WordWaifu #3367](https://github.com/jonhararagi/wordwaifu/actions/runs/40231489642) y [DanMachi Lore and Retrieval Integrity #1760](https://github.com/jonhararagi/wordwaifu/actions/runs/40231489669), ambos `success`.
 
 
 - [x] Registrar y exponer en la interfaz la ficha oficial de Yen Press para la edición inglesa licenciada de *Astrea Record, Vol. 3* (ISBN 9781975379926; publicada el 26-11-2024) como ruta de consulta legal para Alfia, Zald y Erebus; etiquetarla como metadatos editoriales, sin claims narrativos. Integrado por [PR #116](https://github.com/jonhararagi/wordwaifu/pull/116); CI post-merge sobre `6efb50779b17924e7064876af75afa3cbd1d3b67`: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003502) y [Lore Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003501), ambas exitosas.
