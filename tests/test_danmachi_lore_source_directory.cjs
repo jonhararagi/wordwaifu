@@ -69,7 +69,7 @@ const binbAstreaPreview = sources.filter(source => source.id === "licensed-previ
 assert.equal(binbAstreaPreview.length, 1, "the second authorized Astrea Record reader must be discoverable exactly once");
 assert.equal(binbAstreaPreview[0].category, "licensed_retailer");
 assert.equal(binbAstreaPreview[0].url, "https://r.binb.jp/epm/e1_270413_31102022103801/");
-assert.match(binbAstreaPreview[0].limits, /no es un localizador primario/i);
+assert.match(binbAstreaPreview[0].limits, /no un localizador primario/i);
 assert.match(binbAstreaPreview[0].coverage, /no expuso páginas narrativas/i);
 
 console.log("DanMachi source directory: secondary references and authorized preview limits validated.");
