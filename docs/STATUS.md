@@ -10,6 +10,14 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## Filtro de alineamiento de personajes — implementación inicial (preintegración, 2026-10-25)
+
+- Se añadieron dos filtros independientes a la enciclopedia: orientación moral (bueno / neutral / malo) y conducta ante normas (legal / neutral / caótico), con opción «Sin clasificar».
+- Las tarjetas y el resumen de ficha muestran etiqueta interpretativa, justificación, continuidad, confianza y referencias secundarias. No se etiqueta a todas las fichas automáticamente.
+- Alfia y Zald: clasificación inicial «caótico neutral», de baja confianza y en CONT-AR. «Caótico bueno» permanece como alternativa interpretativa por su finalidad protectora declarada; los medios descritos por las wikis incluyen daño intencional, por lo que no se fuerza una lectura binaria.
+- **Estado:** implementado en la rama de trabajo work/character-alignment-filters-2026-10-25; pendiente ejecución de CI de la rama/PR y verificación de main. No cambia el catálogo de identidades, las relaciones ni las métricas.
+
+
 ## Personajes históricos — correcciones de fichas interactivas DMR-045 (integrado y validado, 2026-10-24)
 
 - La PR [#113](https://github.com/jonhararagi/wordwaifu/pull/113) se integró en `main` mediante el commit `9e5a2ee6041dd2a4283003993bfd6655a9a3d419`.
