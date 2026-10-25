@@ -252,3 +252,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40196827871) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40196827863) — ambas exitosas.
 - **CI post-merge sobre el SHA exacto de `main` `6efb50779b17924e7064876af75afa3cbd1d3b67`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003502) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003501) — ambas exitosas.
 - **Siguiente trabajo:** seguir con Orario y los localizadores pendientes sin inferir la relación física entre Pantheon, Babel y la sede de la Guild.
+
+
+## DMR-045 — acceso a la muestra licenciada japonesa (2026-10-25)
+
+- Se agregaron la ficha japonesa de *Astrea Record 3* y su enlace a muestra gratuita de BOOK☆WALKER al directorio de fuentes y a las fichas interactivas de Alfia, Zald y Erebus.
+- La prueba automatizada siguió el enlace de muestra, pero el visor mostró «Could not download. Please check your network connection.»; no se recuperó texto narrativo ni páginas verificables.
+- **Alcance:** la ruta se etiqueta como distribuidor licenciado, no como editorial ni evidencia narrativa cotejada. No se crearon claims ni aristas; los localizadores primarios siguen pendientes.
+- Referencia: [ficha BOOK☆WALKER](https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/) · [muestra gratuita](https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1).
