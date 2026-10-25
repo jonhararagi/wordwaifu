@@ -16,7 +16,7 @@
 - Se agregó una arista hacia `LOC-DUNGEON` bajo `CONT-ANIME`; no se conectó directamente a la ciudad de superficie `LOC-ORARIO` ni se trasladó la afirmación a `CONT-MAIN-LN`.
 - La entrada se indexó en el catálogo, el índice de lugares, la búsqueda de lore y el directorio de fuentes. Las pruebas nuevas exigen que la búsqueda la encuentre en `CONT-ANIME` y la excluya de `CONT-MAIN-LN`.
 - Fuente: [glosario oficial de lugares](https://danmachi.com/danmachi/special/index.html), entrada `リヴィラの街`. No aporta coordenadas ni un mapa del piso.
-- Estado de la tanda: pendiente de CI sobre PR y de verificación del SHA de `main` después de la integración.
+- **Estado final:** integrado y validado en `main` mediante el [PR #107](https://github.com/jonhararagi/wordwaifu/pull/107), SHA `2c93c79d93050e88260fc3c3a448ce40d1d6e7ee`. [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40147234354) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40147234424) terminaron en verde sobre ese SHA.
 
 ## Orario — separación de Guild como organización (2026-10-24)
 

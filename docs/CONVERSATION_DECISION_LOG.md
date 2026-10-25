@@ -77,12 +77,12 @@
 
 - **Fecha:** 2026-10-24.
 - **Tipo:** hallazgo de investigación, implementación y prueba de continuidad.
-- **Estado al registrar:** implementado en rama de trabajo; integración pendiente de CI y verificación del SHA final de `main`.
+- **Estado final:** integrado y validado en `main` mediante el [PR #107](https://github.com/jonhararagi/wordwaifu/pull/107), SHA `2c93c79d93050e88260fc3c3a448ce40d1d6e7ee`.
 - **Hallazgo:** el glosario oficial del anime ya utilizado en DMR-026 contiene una entrada de `リヴィラの街` (Rivira) que faltaba en el inventario del corpus. Describe una población en el piso seguro 18 del Dungeon y servicios comerciales orientados a aventureros.
 - **Cambios:** creado `LOC-RIVIRA`, añadido `DMR-026-CLM-004`, extendido `DMR-026-SRC-001`, registrada la arista `REL-RIVIRA-DUNGEON-SAFE-FLOOR-18`, actualizado el catálogo, el índice y el directorio de fuentes y añadida una regresión de recuperación.
 - **Continuidad y límites:** únicamente `CONT-ANIME`; la única arista geográfica nueva apunta a `LOC-DUNGEON`. No se infiere una conexión de superficie con `LOC-ORARIO`, coordenadas, mapa exacto ni equivalencia automática con `CONT-MAIN-LN`.
 - **Fuente:** https://danmachi.com/danmachi/special/index.html — entrada oficial de adaptación en japonés; consultada directamente durante esta tarea.
-- **Siguiente acción:** pasar CI de catálogo/recuperación y smoke de navegador, integrar si está verde y comprobar las acciones sobre el SHA de `main`.
+- **Verificación posterior a la integración:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40147234354) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40147234424), ambos finalizados con éxito sobre el SHA exacto `2c93c79d93050e88260fc3c3a448ce40d1d6e7ee`.
 
 ## Plantilla para entradas futuras
 
