@@ -121,7 +121,7 @@
 - evidence_type: secondary_wiki_summary
 - verification_status: secondary_checked
 - spoiler_level: mild
-- confidence_note: Mantener el registro físico separado de la entidad Guild. La cantidad y ubicación de plantas siguen pendientes de cotejo primario.
+- confidence_note: Mantener el registro físico separado de la entidad Guild. La afirmación comunitaria de que Pantheon es la sede principal entra en tensión con la secuencia indexada en DMR-048-CLM-001, que presenta Pantheon antes de la entrada a la sede blanca de la Guild. El extracto primario no se verificó visualmente; conservar como discrepancia y no trasladar esta relación a CONT-MAIN-LN.
 
 ### DMR-031-CLM-007 · Babel y sus niveles
 - claim_id: DMR-031-CLM-007
