@@ -28,6 +28,7 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 **Estado:** IN_PROGRESS. El barrido secundario está registrado y se han probado rutas de consulta licenciadas, pero ninguna muestra consultada expuso páginas narrativas legibles. Los cinco expedientes continúan abiertos para verificación primaria.
 
 - [x] Registrar las rutas autorizadas y los límites de acceso de DMR-045-SRC-018 a DMR-045-SRC-028; las fichas, sinopsis, índices, búsquedas limitadas, errores de red y respuestas HTTP no equivalen a leer el texto narrativo.
+- [x] Identificar por separado DMR-045-SRC-026 (BOOK☆WALKER Astrea Record vol. 1: error de descarga), DMR-045-SRC-027 (vol. 2: timeout) y DMR-045-SRC-028 (BOOK☆WALKER DanMachi vol. 14: error de descarga); los tres permanecen metadata_checked_only y sin claims.
 - [ ] Alfia y Zald: conseguir un pasaje identificable de Astrea Record y cotejar habilidades, límites y secuencias concretas; no inventar capítulo ni página.
 - [ ] Meteria: localizar la identificación primaria y cotejar parentesco, afiliación e historia en la continuidad publicada; mantener el recuerdo autoral en CONT-AU.
 - [ ] Erebus: localizar sus escenas en la novelización CONT-AR; conservar los datos del juego en CONT-GAME y no asumir que las versiones son idénticas.
