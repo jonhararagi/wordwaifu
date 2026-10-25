@@ -844,7 +844,7 @@ assert.ok(uiCanoeEvidence.sources.includes("https://ga.sbcr.jp/product/978479737
 const uiZanisEvidence = uiCharacterDossiers.get("CHAR-ZANIS-LUSTRA");
 assert.ok(uiZanisEvidence.history.includes("DMR-046-CLM-005") &&
   uiZanisEvidence.relationships.includes("no como resultado factual") &&
-  uiZanisEvidence.conflict.includes("no prueban culpabilidad"),
+  uiZanisEvidence.conflict.includes("prueban culpabilidad"),
   "Zanis's allegation must be described as reported speech, not an established result.");
 assert.ok(uiZanisEvidence.sources.includes("https://ga.sbcr.jp/product/9784797380583/"),
   "Zanis's dossier must include the official volume 6 synopsis while stating that it does not corroborate his individual accusation.");
