@@ -3236,3 +3236,26 @@ verification_status: stub
 - rights_note: Se conservan URL y resultado del intento normal; no se copió texto narrativo ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-029 · Google Play Books — DanMachi vol. 14 sample offer (metadata only)
+- source_id: DMR-045-SRC-029
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 14 (light novel)
+- creator_or_publisher: Google Play Books / Yen Press LLC
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_SAMPLE_OFFER
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 14, edición inglesa de Yen Press; ISBN digital relacionado 9781975385026 / impreso 9781975385019
+- language: Inglés
+- official_url: https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ
+- related_bibliographic_url: https://books.google.com/books?id=9gXHwQEACAAJ
+- accessed_at: 2026-10-25
+- locator_type: product_metadata_and_sample_offer
+- locator: El resultado público indexado anuncia “Free sample”; el registro bibliográfico de Google Books indica “Limited preview”. La consulta directa de Google Play devolvió cache miss; Google Books solo mostró metadatos, sinopsis y cubierta, sin páginas narrativas visibles.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Es una vía licenciada para consultar el volumen, no un extracto de texto. No respalda DMR-045-CLM-013 ni DMR-045-CLM-014 hasta que se inspeccione la muestra y se registre un localizador reproducible. No inferir hechos de la sinopsis.
+- conflicting_sources: []
+- rights_note: Enlaces y metadatos solamente; no se copiaron textos narrativos ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
