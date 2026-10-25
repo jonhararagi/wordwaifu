@@ -629,8 +629,10 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 **Rutas oficiales adicionales consultadas (2026-10-25):**
 - [x] Abrir por su URL pública normal el lector de muestra de SBCr eBook Store para Astrea Record 1/2/3; registrar DMR-045-SRC-020, DMR-045-SRC-021 y DMR-045-SRC-022 como metadata_checked_only, sin claims ni localizadores.
 - [x] Añadir las tres rutas al directorio consultable y cubrirlas con pruebas de regresión. Las tres devolvieron “Now loading...” y controles, sin páginas narrativas legibles.
-- [ ] Reintentar manualmente los visores mediante su uso normal o consultar una edición autorizada legible; solo registrar capítulo/página después de ver el pasaje concreto.
-- **Límite:** los accesos fallidos no demuestran que un personaje no aparezca ni que los libros sean indisponibles. DMR-045 continúa abierto para verificación primaria.
+- [x] Localizar y verificar las fichas públicas de Google Play Books para las ediciones inglesas de Astrea Record 1–3: DMR-045-SRC-023–025. Volúmenes 1/2 anuncian “Free sample”; el resultado extraído solo contiene ficha y sinopsis, no páginas narrativas. Vol. 3 presenta variantes regionales de disponibilidad.
+- [ ] Abrir manualmente las muestras inglesas mediante el lector normal de Google Play Books o una edición licenciada legible; registrar capítulo/página solo después de ver el pasaje concreto.
+- [ ] Reintentar manualmente los visores japoneses mediante su uso normal o consultar otra edición autorizada legible; solo registrar capítulo/página después de ver el pasaje concreto.
+- **Límite:** los accesos fallidos no demuestran que un personaje no aparezca ni que los libros sean indisponibles. Los registros DMR-045-SRC-018–025 son metadata_checked_only y tienen claims vacíos. DMR-045 continúa abierto para verificación primaria.
 - **Integración y CI:** [PR #127](https://github.com/jonhararagi/wordwaifu/pull/127), main SHA `1a1bc2be356463edde3464e530015674dd8bc767`; PR CI [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927385) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927413), ambos success; CI post-merge [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051519) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051508), ambos success.
 
 - [x] Exponer en “Más información” la nota de Meteria bajo CONT-MAIN-LN y su recuerdo alternativo por separado en CONT-AU.
