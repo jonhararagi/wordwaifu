@@ -60,7 +60,7 @@ assert.match(dmr045, /No preview available for this page/);
 assert.match(sources, /DMR-045-SRC-018/);
 assert.match(sources, /DMR-045-SRC-019/);
 assert.match(erebus, /CONT-GAME/);
-assert.match(meteria, /no nombra a Meteria/i);
+assert.match(meteria, /no pronuncia el nombre Meteria/i);
 assert.match(queue, /Cotejar los localizadores primarios pendientes/i);
 
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
