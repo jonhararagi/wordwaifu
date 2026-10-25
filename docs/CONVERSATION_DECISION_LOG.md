@@ -171,3 +171,13 @@
 - **CI post-merge, exacto SHA de `main` `3f9fb9536482f381f1cdd9b533ae75d34508f749`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40193807701) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40193807729) — ambas exitosas.
 - **Archivos afectados:** `src/character-alignments.js`, `index.html`, `src/app.js`, `src/styles.css`, pruebas de ficha y recuperación, `docs/DECISIONS.md`, `docs/STATUS.md`, `lore/danmachi/WORK_QUEUE.md` y DMR-045.
 - **Límite factual:** solo Alfia y Zald reciben alineamiento inicial; el resto permanece «Sin clasificar». No cambian IDs, relaciones ni métricas. Las fuentes primarias individuales de DMR-045 siguen pendientes.
+
+
+### CONV-DM-2026-10-25-002 — Añadir acceso editorial licenciado sin falsear la evidencia primaria
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTADO EN RAMA; pendiente de integración y CI.
+- **Objetivo:** continuar mejorando la consulta de los expedientes históricos de Alfia, Zald, Erebus sin declarar resueltos los localizadores narrativos pendientes.
+- **Cambio:** registrar la ficha oficial de Yen Press / Yen On para *Astrea Record, Vol. 3* (ISBN 9781975379926; publicación indicada: 26 de noviembre de 2024) en el directorio de fuentes y exponerla en los tres expedientes interactivos.
+- **Límite obligatorio:** la fuente es metadato editorial y sinopsis general; no se usa como prueba de una escena, habilidad, relación, alias o alineamiento individual. DMR-045 permanece abierto y DMR-045-SRC-016 queda en `metadata_checked_only`, sin claims.
+- **Pruebas añadidas:** unicidad/URL/autoridad/límites del registro editorial y presencia del acceso licenciado en las tres fichas.
+- **Prioridad siguiente:** continuar el inventario de Orario y buscar localizadores narrativos reales; no deducir la topología Pantheon–Babel–Guild.
