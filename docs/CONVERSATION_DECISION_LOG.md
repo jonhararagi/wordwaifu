@@ -262,3 +262,14 @@
 - **Nota de corrección de pruebas:** la primera ejecución detectó que el test buscaba SRC-023/SRC-024/SRC-025 por separado, mientras la cola usaba la abreviatura 023–025. Se cambió la cola a enumeración explícita y la nueva ejecución pasó ambos workflows.
 - **Documentos integrados:** directorio de fuentes de la aplicación, DMR-045, registro central de fuentes, cola, índice maestro, estado y pruebas de regresión de fuentes/continuidad.
 - **Prioridad vigente:** continuar el cotejo primario de los cinco expedientes de DMR-045; Orario permanece en cola.
+
+
+### CONV-DM-2026-10-25-009 — Reintentos públicos BOOK☆WALKER para Astrea Record 1–3
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED, INTEGRATED; post-merge CI del SHA exacto registrado parcialmente mientras termina Validate.
+- **Motivo:** el cotejo primario de DMR-045 sigue abierto; tras reintentar las rutas de Google Play, comprobar además las muestras públicas que BOOK☆WALKER anuncia para las ediciones japonesas sin crear claims a partir de sinopsis o errores del visor.
+- **Resultado:** la muestra normal de Astrea Record 1 redirigió al visor de prueba, que devolvió “Could not download. Please check your network connection.” La ruta de muestra de vol. 2 agotó el tiempo de extracción, aunque la ficha de producto identifica el título y la serie anuncia 試し読み. El vol. 3 ya estaba registrado bajo SRC-006/SRC-017; el nuevo intento volvió a agotar el tiempo después del error de red anterior, por lo que no se creó otro ID para esa misma ruta.
+- **Integración:** [PR #131](https://github.com/jonhararagi/wordwaifu/pull/131), SHA exacto de main `96f885af9f1ff036bddd99a017e7ecef76db70f5`. CI de la cabeza `cc3ced574bae926690fbff231d21e813f17e886e`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40230094644) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40230094738), ambos success. Post-merge en el SHA exacto: [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40230249545) está success e incluyó el recorrido de navegador; [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40230249546) seguía en ejecución al registrar esta entrada.
+- **Límites de evidencia:** DMR-045-SRC-026/027 documentan rutas de muestra y sus errores de acceso, con `claims_supported: []`, `events_supported: []` y `metadata_checked_only`. No se leyó ninguna página narrativa; no se crearon claims, relaciones, alias ni localizadores. Los errores no demuestran indisponibilidad global ni ausencia de personajes.
+- **Documentos afectados:** directorio interactivo de fuentes, auditoría DMR-045, registro central de fuentes, cola, índice maestro y pruebas de recuperación.
+- **Prioridad vigente:** continuar el cotejo primario de Alfia, Zald, Meteria, Erebus y Rudra antes de expandir Orario.
