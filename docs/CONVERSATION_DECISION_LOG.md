@@ -243,8 +243,10 @@
 
 ### CONV-DM-2026-10-25-007 — Registrar muestras editoriales consultadas por volumen sin confundir acceso con lectura
 - **Fecha:** 2026-10-25.
-- **Estado:** IMPLEMENTED en rama de trabajo; integración pendiente de CI.
-- **Resultado de investigación:** los lectores públicos de SBCr eBook Store asociados a Astrea Record 1, 2 y 3 devolvieron “Now loading...” y controles de menú, sin página narrativa visible. Se preparan los registros DMR-045-SRC-020/021/022 como metadata_checked_only, sin claims, eventos ni localizadores individuales.
+- **Estado:** IMPLEMENTADO, INTEGRADO y VALIDADO; [PR #127](https://github.com/jonhararagi/wordwaifu/pull/127) quedó en main mediante SHA `1a1bc2be356463edde3464e530015674dd8bc767`.
+- **Resultado de investigación:** los lectores públicos de SBCr eBook Store asociados a Astrea Record 1, 2 y 3 devolvieron “Now loading...” y controles de menú, sin página narrativa visible. Se registran DMR-045-SRC-020/021/022 como metadata_checked_only, sin claims, eventos ni localizadores individuales.
+- **CI de la PR, head SHA `d39161c1622317f973b07cc66096019be2f9c84b`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927385) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927413), ambas exitosas, incluida la prueba de navegador y la validación de catálogo/enlaces.
+- **CI post-merge sobre el SHA exacto de main `1a1bc2be356463edde3464e530015674dd8bc767`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051519) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051508), ambas exitosas.
 - **Regla reforzada:** el registro de una ruta editorial legal no equivale a leer el texto; un visor que queda cargando no demuestra ausencia de un personaje y no cierra DMR-045.
 - **Archivos afectados:** src/lore-corpus.js, pruebas de directorio y barrido de DMR-045, auditoría DMR-045, registro central de fuentes, WORK_QUEUE, MASTER_INDEX y STATUS.
 - **Orden vigente:** continuar el cotejo primario de los cinco expedientes; Orario sigue en cola.
