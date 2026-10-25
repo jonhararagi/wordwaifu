@@ -1,10 +1,10 @@
 # DANMACHI-RESEARCH-047 · Orario: plaza semicircular en una muestra editorial de la novela principal
 
-- Fecha de consulta: 2026-10-23.
+- Fecha de consulta inicial: 2026-10-23; reconciliación del localizador y metadatos: 2026-10-24.
 - Estado: `source_checked_excerpt_only`; el índice oficial conserva el título del capítulo y marcadores de folio, pero la página del PDF no pudo inspeccionarse visualmente.
 - Continuidad: `CONT-MAIN-LN`.
 - Objetivo: registrar un detalle urbano limitado extraído de una muestra de lectura publicada por GA Bunko, sin transferir a la novela los mapas o datos de `CONT-PROTOTYPE`.
-- Método: la muestra oficial está alojada en [GA Bunko, archivo trial02.pdf](https://ga.sbcr.jp/sp/danmachi/trial02.pdf). El índice del PDF conserva la cabecera del capítulo IV **「だからボクは力になりたい」** y los marcadores de folio **20–21** alrededor del pasaje donde el narrador espera en una plaza semicircular al norte de Orario, frente a una avenida principal. El contexto inmediato menciona la propuesta de Eina de ir a comprar equipo. La página editorial también mantiene la ficha bibliográfica del [volumen 2](https://ga.sbcr.jp/product/9784797373073/).
+- Método: la muestra oficial corresponde al volumen 2 según la ficha editorial [DanMachi 2](https://ga.sbcr.jp/product/9784797373073/) y está alojada en [GA Bunko, archivo trial02.pdf](https://ga.sbcr.jp/sp/danmachi/trial02.pdf). El índice del PDF conserva la cabecera del capítulo IV **「だからボクは力になりたい」** y los marcadores de folio **20–21** alrededor del pasaje donde el narrador espera en una plaza semicircular al norte de Orario, frente a una avenida principal. El contexto inmediato menciona la propuesta de Eina de ir a comprar equipo. La página editorial también mantiene la ficha bibliográfica del [volumen 2](https://ga.sbcr.jp/product/9784797373073/).
 - Limitación de acceso: la apertura directa del PDF devolvió HTTP 503 y la herramienta de captura rechazó la referencia indexada por no tener un documento PDF abierto. Los rótulos de capítulo y folio proceden del texto indexado, no de una inspección visual del facsímil; por eso el estado sigue siendo `source_checked_excerpt_only`.
 
 ### DMR-047-CLM-001 · Una muestra de la novela principal sitúa una plaza semicircular al norte de Orario
