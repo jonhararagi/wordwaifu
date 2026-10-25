@@ -35,6 +35,8 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - [ ] Rudra: leer directamente el pasaje del volumen 14 y su retrospectiva/epílogo antes de validar qué hizo Rudra Familia y qué conocimiento u orden personal puede atribuirse a Rudra.
 - [ ] En cada nuevo intento, registrar título, idioma, URL, continuidad, estado exacto de acceso y localizador solo después de ver el pasaje. Si el visor falla, dejarlo como metadata_checked_only y mantener claims_supported vacío.
 
+**Integración y CI:** la corrección del orden de trabajo quedó integrada en [PR #140](https://github.com/jonhararagi/wordwaifu/pull/140), merge SHA `e236c07cc475feae31c0fa2ab0697b26851c41d0`. CI de PR: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40232710265) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40232710323), ambos success. CI post-merge sobre el SHA exacto: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839057) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839130), ambos success.
+
 **Regla de cierre:** DMR-045 no se cierra hasta cotejar los localizadores primarios pertinentes para los cinco expedientes. Orario permanece como etapa posterior. Véanse [la auditoría DMR-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) y el [registro central de fuentes](sources/00-registro-fuentes.md).
 
 ## DANMACHI-RESEARCH-045 — Resultado histórico del barrido secundario público (2026-10-24)
