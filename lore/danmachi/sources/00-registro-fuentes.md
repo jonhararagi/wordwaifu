@@ -2978,3 +2978,45 @@ verification_status: stub
 - rights_note: Paráfrasis propia; no reproducir el relato completo.
 - verified_by: DANMACHI-RESEARCH-050
 - verification_status: source_checked_excerpt_only
+
+## DMR-045-SRC-018 · Google Books — búsqueda pública autorizada del volumen 20
+- source_id: DMR-045-SRC-018
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 20 (light novel)
+- creator_or_publisher: Google Books / Yen Press (Yen On)
+- source_type: LICENSED_PREVIEW_INDEX
+- series: DanMachi, novela ligera principal, volumen 20
+- volume_or_edition: Edición inglesa, ISBN 9798855437867 (digital)
+- language: Inglés
+- official_url: https://books.google.com/books?id=XWHEEQAAQBAJ
+- accessed_at: 2026-10-25
+- locator_type: licensed_preview_search_and_contents_metadata
+- locator: Tabla de contenidos con “The Heroes' Afterglow” y “The Knights Afterglow”; búsquedas de Alfia, Meteria y Rudra sin resultados; los resultados de Afterglow indican “No preview available for this page”. Zald/Erebus: error HTTP 429, búsqueda no completada.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Acceso autorizado a metadatos/índice y búsqueda, no a páginas narrativas legibles. La ausencia de resultados en la búsqueda limitada no demuestra ausencia de un personaje del volumen. HTTP 429 no es un resultado de búsqueda.
+- conflicting_sources: []
+- rights_note: Registrar URL, metadatos y resultado de acceso; no copiar texto de la novela ni inferir capítulos/páginas a partir de un índice.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-019 · Voyager BinB — muestra licenciada de Astrea Record, volumen 3
+- source_id: DMR-045-SRC-019
+- title: アストレア・レコード３ 正邪決戦 — 立ち読み版
+- creator_or_publisher: GA Bunko / SB Creative; lector BinB de Voyager Japan
+- source_type: LICENSED_SAMPLE_READER
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen japonés 3, lector de muestra
+- language: Japonés
+- official_url: https://r.binb.jp/epm/e1_270413_31102022103801/
+- accessed_at: 2026-10-25
+- locator_type: sample_reader_metadata_and_interface_only
+- locator: La página identifica título y autor, pero la extracción solo muestra controles de la interfaz; no expone páginas narrativas ni localizador individual.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta de muestra licenciada útil para consulta manual futura; la extracción consultada no permite afirmar que se haya leído la novela ni verificar personajes individualmente.
+- conflicting_sources: []
+- rights_note: Enlace y metadatos únicamente; no extraer ni reproducir la novela.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only

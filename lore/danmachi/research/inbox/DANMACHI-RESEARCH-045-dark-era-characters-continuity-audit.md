@@ -487,6 +487,28 @@ Se alinearon los expedientes interactivos de Alfia y Zald con la información me
 La corrección no incorpora claims, aristas, alias ni IDs nuevos y no cambia el estado de evidencia. Es un ajuste de presentación/precisión sobre contenido secundario ya presente en el corpus. Los localizadores primarios de DMR-045 siguen pendientes. **Integración y validación:** PR [#118](https://github.com/jonhararagi/wordwaifu/pull/118) integrada en `main` con SHA `d81766fc7003294c15d0a2b776ce2d59170da86c`. CI de PR (head `e870d5ef364639238000b7f991a4b855deafe136`): [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210105940) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210106029), ambas exitosas. CI post-merge sobre el SHA exacto `d81766fc7003294c15d0a2b776ce2d59170da86c`: [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257785) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257780), ambas exitosas.
 
 
+
+## DMR-045-SRC-018 · Google Books — búsqueda pública autorizada del volumen 20
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Google Books · Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 20 (light novel)](https://books.google.com/books?id=XWHEEQAAQBAJ).
+- **Tipo:** índice/vista previa autorizada de la edición inglesa publicada por Yen Press; no es texto narrativo completo.
+- **Metadatos observados:** la ficha muestra el índice con “The Heroes' Afterglow” y “The Knights Afterglow”.
+- **Resultado de la búsqueda dentro del libro:** “Alfia”, “Meteria” y “Rudra” devolvieron “No results found in this book”. La búsqueda de “Afterglow” sí devuelve cinco resultados, pero las páginas de texto narrativo indican “No preview available for this page”. Las consultas para “Zald” y “Erebus” no pudieron completarse porque el servicio respondió HTTP 429.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; continuidad CONT-MAIN-LN.
+- **Interpretación permitida:** confirma que hay una ruta de búsqueda autorizada y permite ver metadatos/índice. No demuestra ausencia de los personajes en el volumen, no revela sus escenas y no proporciona una página narrativa reproducible. El error 429 no se interpreta como resultado de búsqueda.
+- **Siguiente acción:** volver a intentar manualmente la vista previa autorizada si el visor pasa a ofrecer páginas legibles; no inventar localizadores ni elevar el índice de Afterglow a prueba de usos individuales.
+
+## DMR-045-SRC-019 · Voyager BinB — muestra legal de Astrea Record, volumen 3
+
+- **Fecha de consulta:** 2026-10-25.
+- **Fuente:** [Voyager BinB · アストレア・レコード３ 正邪決戦（立ち読み版）](https://r.binb.jp/epm/e1_270413_31102022103801/).
+- **Tipo:** lector de muestra licenciada del volumen japonés publicado por GA Bunko / SB Creative.
+- **Resultado:** los metadatos identifican título y autor y dan una sinopsis editorial. La extracción pública solo devolvió controles del lector (índice, búsqueda en el texto y ajustes); no se obtuvieron páginas narrativas legibles.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** acceso legal adicional para consulta humana futura. No confirma ninguna escena, habilidad, relación o biografía de Alfia, Zald, Meteria o Erebus. El menú de búsqueda del lector no demuestra que la búsqueda de texto esté disponible sin cargar las páginas.
+- **Siguiente acción:** si el visor manual permite leer páginas mediante su acceso normal, registrar únicamente un pasaje realmente visible con volumen/capítulo/página. No eludir restricciones ni tratar los metadatos como lectura narrativa.
+
 ## Acceso real del diálogo “Más información” a los expedientes de Alfia y Zald (2026-10-25)
 
 Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los resúmenes de habilidad, pero el diálogo ampliado dependía del registro `EXTENDED` de `src/character-archive.js`. Por ello, una ficha podía existir en el registro detallado sin exponer sus resúmenes desde la enciclopedia.

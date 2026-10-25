@@ -49,6 +49,35 @@ assert.ok(zaldArchiveInfo.references.some(ref => ref.kind === "community" && ref
 assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null), null,
   "Astrea Record ability notes must not be presented as a main-light-novel profile.");
 
+const meteriaMainInfo = archiveApi.getExtendedInfo("CHAR-METERIA", "CONT-MAIN-LN", null);
+assert.ok(meteriaMainInfo && meteriaMainInfo.title.includes("Meteria"),
+  "Meteria's secondary main-novel research note must be reachable from her archive profile.");
+assert.ok(meteriaMainInfo.sections.some(section => section.text.includes("no la nombra como Meteria")),
+  "Meteria's note must distinguish the game-era interview from an independent primary identification.");
+assert.ok(meteriaMainInfo.sections.some(section => section.text.includes("No se asignan diagnóstico médico")),
+  "Meteria's file must leave undocumented diagnosis and dates unresolved.");
+assert.ok(meteriaMainInfo.references.some(ref => ref.kind === "interview" && ref.url === "https://ln-news.com/articles/109766"),
+  "The interview must be labelled as secondary editorial material, not as a primary novel page.");
+assert.ok(meteriaMainInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/Meteria"),
+  "Meteria's claims must expose the community source type.");
+const meteriaAuInfo = archiveApi.getExtendedInfo("CHAR-METERIA", "CONT-AU", null);
+assert.ok(meteriaAuInfo && meteriaAuInfo.sections.some(section => section.text.includes("CONT-AU")),
+  "Meteria's alternate-author material must remain reachable only as a separated AU note.");
+assert.ok(meteriaAuInfo.references.some(ref => ref.kind === "author" && ref.url === "https://note.com/fujinoomori/n/n629829ac3fe4"),
+  "The author-published alternate story must be labelled as an author publication.");
+const erebusGameInfo = archiveApi.getExtendedInfo("CHAR-DARK-EREBUS", "CONT-GAME", null);
+assert.ok(erebusGameInfo && erebusGameInfo.sections.some(section => section.text.includes("Eren") && section.text.includes("no se incorpora como alias canónico")),
+  "Erebus's game continuity note must keep the uncertain alias unapproved.");
+assert.ok(erebusGameInfo.references.some(ref => ref.kind === "interview" && ref.url === "https://ln-news.com/articles/109766"),
+  "Erebus's editorial caption must not be mislabeled as a primary novel source.");
+assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-EREBUS", "CONT-AR", null), null,
+  "Erebus's original-game ideology must not be presented as a verified Astrea Record novel dossier.");
+const rudraMainInfo = archiveApi.getExtendedInfo("CHAR-DARK-RUDRA", "CONT-MAIN-LN", null);
+assert.ok(rudraMainInfo && rudraMainInfo.sections.some(section => section.text.includes("no demuestra que Rudra") && section.text.includes("Rudra Familia")),
+  "Rudra's note must distinguish group responsibility from unproven personal authorization.");
+assert.ok(rudraMainInfo.references.some(ref => ref.kind === "publisher_metadata" && ref.url.includes("yenpress.com/titles/9781975385026")),
+  "The vol. 14 product page must be labelled as metadata rather than narrative evidence.");
+
 bell.history = "mutated";
 assert.notEqual(api.get("DM-CHAR-BELL").history, "mutated", "Callers must not mutate the shared dossier catalog.");
 const alignments = require("../src/character-alignments.js");

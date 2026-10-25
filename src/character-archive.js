@@ -1,7 +1,7 @@
 (function(root,factory){"use strict";const api=factory();if(typeof module==="object"&&module.exports)module.exports=api;else root.WordWaifuCharacterArchive=api;})(typeof globalThis!=="undefined"?globalThis:this,function(){
 "use strict";
-const LABELS={"CONT-AR":"Astrea Record · Era Oscura","CONT-ANIME":"Adaptación anime · perfiles oficiales","CONT-MAIN-LN":"Novela principal","CONT-AU":"Historia alternativa (AU)","CROSS-CONTINUITY":"Comparación entre continuidades"};
-const ORDER=["CONT-AR","CONT-ANIME","CONT-MAIN-LN","CONT-AU","CROSS-CONTINUITY"];
+const LABELS={"CONT-AR":"Astrea Record · Era Oscura","CONT-GAME":"Memoria Freese · versión original del juego","CONT-ANIME":"Adaptación anime · perfiles oficiales","CONT-MAIN-LN":"Novela principal","CONT-AU":"Historia alternativa (AU)","CROSS-CONTINUITY":"Comparación entre continuidades"};
+const ORDER=["CONT-AR","CONT-GAME","CONT-ANIME","CONT-MAIN-LN","CONT-AU","CROSS-CONTINUITY"];
 const META={
 "CHAR-RYUU-LION":{
  overview:"Una identidad con estados separados: etapa histórica de Astrea Record y un perfil posterior de la adaptación anime.",
@@ -279,6 +279,64 @@ sections:[
 references:[
 {label:"Wiki comunitaria en español · Zald",url:"https://danmachi.fandom.com/es/wiki/Zald",kind:"community"},
 {label:"Wiki comunitaria en español · Astrea Record, novela ligera vol. 3",url:"https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3",kind:"community"}
+]
+}
+},
+"CHAR-METERIA":{
+"CONT-MAIN-LN":{
+title:"Meteria · pista secundaria para la novela principal",
+summary:"Este apunte no confirma hechos de la novela principal: conserva los datos biográficos que reportan las wikis y muestra qué parte del parentesco sigue sin una identificación primaria inequívoca. La entrevista de LN News sobre Memoria Freese confirma una relación familiar formulada por el entrevistador, pero no pronuncia el nombre Meteria.",
+sections:[
+{title:"Parentesco reportado y límite de identificación",text:"Las wikis comunitarias en inglés y español presentan a Meteria como madre de Bell Cranel, hermana gemela de Alfia y antigua integrante de Hera Familia. Son datos secundarios pendientes de un localizador narrativo reproducible. La entrevista de LN News de 2020, en el contexto de Memoria Freese, confirma que la madre de Bell es la hermana menor de Alfia; no la nombra como Meteria y por sí sola no identifica esta ficha."},
+{title:"Vacíos que deben permanecer abiertos",text:"El padre biológico de Bell sigue sin identificar. No se asignan diagnóstico médico, fechas absolutas, conversaciones, motivos ni detalles de la entrega de Bell sin un pasaje verificable. La convergencia entre dos wikis ayuda a investigar, pero no reemplaza el texto primario."},
+{title:"Separación de la continuidad alternativa",text:"El recuerdo de Meteria y las anécdotas sobre comida pertenecen al texto alternativo autoral CONT-AU. No deben convertirse en personalidad o sucesos de CONT-MAIN-LN ni de CONT-AR. Abrí la ficha de CONT-AU para consultar esa versión por separado."}
+],
+references:[
+{label:"DanMachi Wiki · Meteria (inglés)",url:"https://danmachi.fandom.com/wiki/Meteria",kind:"community"},
+{label:"DanMachi Wiki · Meteria (español)",url:"https://danmachi.fandom.com/es/wiki/Meteria",kind:"community"},
+{label:"LN News Online · entrevista sobre el nacimiento de Bell (2020)",url:"https://ln-news.com/articles/109766",kind:"interview"}
+]
+},
+"CONT-AU":{
+title:"Meteria · recuerdo del escenario alternativo autoral",
+summary:"Esta nota resume solo el escenario hipotético publicado por Fujino Omori. No describe un hecho sucedido en la cronología principal.",
+sections:[
+{title:"Rasgos descritos en el recuerdo alternativo",text:"En el escenario alternativo donde Alfia y Zald crían a Bell, Meteria aparece en el recuerdo de Alfia como amable, sonriente, frágil y apreciada por quienes la rodeaban. El relato incluye una anécdota intensa relacionada con un dulce que Meteria esperaba comer. Estos rasgos y la anécdota pertenecen a CONT-AU."},
+{title:"Límite de continuidad",text:"No trasladar este recuerdo como biografía confirmada de la novela principal ni usarlo para probar convivencia histórica entre Meteria, Alfia, Zald y Bell. La publicación es una posibilidad alternativa, no una sustitución del relato publicado."}
+],
+references:[
+{label:"Fujino Omori · それは遥か彼方の静穏の夢 (escenario alternativo)",url:"https://note.com/fujinoomori/n/n629829ac3fe4",kind:"author"}
+]
+}
+},
+"CHAR-DARK-EREBUS":{
+"CONT-GAME":{
+title:"Erebus · Memoria Freese original (CONT-GAME)",
+summary:"Resumen de pistas secundarias sobre la versión original del juego. No se transfiere automáticamente a la novelización de Astrea Record.",
+sections:[
+{title:"Ideología atribuida por la wiki",text:"La ficha comunitaria en inglés atribuye a Erebus la idea de que el mal verdadero debe ser odiado por todos y que la justicia absoluta es un ideal que debe alcanzarse. Es una paráfrasis secundaria de la versión original de Memoria Freese, no una cita verificada de diálogo ni una explicación definitiva de su psicología."},
+{title:"Identidad, sobrenombre y alias pendiente",text:"La página de LN News presenta a Erebus con el sobrenombre editorial Absolute Evil en su cobertura de la historia del juego. Una wiki también menciona Eren, pero ese nombre no se incorpora como alias canónico ni se afirma que aparezca en la novela revisada. No se le asignan poderes, nivel de aventurero ni una cadena de mando completa dentro de Evilus sin evidencia individual."},
+{title:"Barrera de continuidad",text:"Este apunte solo describe lo que las fuentes secundarias atribuyen a la versión original del juego (CONT-GAME). Las acciones de la novelización CONT-AR necesitan un cotejo propio; pertenecer al mismo proyecto narrativo no prueba que cada detalle sea idéntico."}
+],
+references:[
+{label:"DanMachi Wiki · Erebus (inglés)",url:"https://danmachi.fandom.com/wiki/Erebus",kind:"community"},
+{label:"LN News Online · entrevista y pie editorial sobre Erebus",url:"https://ln-news.com/articles/109766",kind:"interview"}
+]
+}
+},
+"CHAR-DARK-RUDRA":{
+"CONT-MAIN-LN":{
+title:"Rudra · responsabilidad colectiva y atribución personal pendiente",
+summary:"Nota de investigación para la novela principal. La secuencia del volumen 14 se conoce aquí como pista secundaria/localizador por comprobar, no como escena que se haya podido leer directamente durante esta revisión.",
+sections:[
+{title:"Separar a Rudra Familia de su deidad",text:"La ficha comunitaria de Rudra Familia atribuye a la agrupación una trampa contra Astrea Familia vinculada a daños en el Dungeon y a la aparición del Juggernaut. La investigación existente señala como pista el volumen 14, capítulo 13, pero el lector autorizado consultado no expuso la página narrativa. Por tanto, la atribución colectiva sigue necesitando cotejo directo: no demuestra que Rudra, como dios patrono, diseñara, ordenara, aprobara o conociera el plan."},
+{title:"Alcance de la retrospectiva y el epílogo",text:"El registro de investigación distingue el relato de la trampa de la versión pública difundida tras el incidente. Hasta inspeccionar el texto, los capítulos y el epílogo sirven como localizadores para buscar, no como páginas cotejadas ni prueba de las acciones individuales de Rudra. Tampoco se debe trasladar esta etapa aproximada T-5 al intervalo T-7 de Astrea Record."},
+{title:"Qué falta confirmar",text:"Quedan pendientes una página o un pasaje narrativo reproducible, qué acciones se atribuyen explícitamente a cada miembro y si el texto da alguna evidencia del conocimiento personal de Rudra. No se crea una relación personal nueva ni se infiere una motivación a partir del cargo de deidad."}
+],
+references:[
+{label:"DanMachi Wiki · Rudra Familia (inglés)",url:"https://danmachi.fandom.com/wiki/Rudra_Familia",kind:"community"},
+{label:"DanMachi Wiki · Rudra (español)",url:"https://danmachi.fandom.com/es/wiki/Rudra",kind:"community"},
+{label:"Yen Press · DanMachi, volumen 14 (ficha editorial; no página narrativa)",url:"https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel",kind:"publisher_metadata"}
 ]
 }
 },

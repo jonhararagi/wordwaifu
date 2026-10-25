@@ -831,6 +831,51 @@ async function run() {
     assert.ok(await page.locator("#archive-more-info-content a[href='https://danmachi.fandom.com/es/wiki/Zald']").count() > 0,
       "Zald's expanded info must provide a direct community source link.");
     await page.locator("#archive-more-info-close").click();
+
+    await page.locator("#archive-return-search").click();
+    await page.locator("#character-archive-query").fill("Meteria");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-METERIA"]').length === 1, null, { timeout: 5000 });
+    await page.locator('#character-archive-results [data-archive-open="CHAR-METERIA"]').click();
+    assert.equal(await page.locator("#archive-profile-name").innerText(), "Meteria");
+    await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
+    await page.locator("#archive-profile-panel [data-archive-more-info]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, null, { timeout: 3000 });
+    const meteriaMainNotes = await page.locator("#archive-more-info-content").innerText();
+    assert.ok(meteriaMainNotes.includes("no la nombra como Meteria") && meteriaMainNotes.includes("No se asignan diagnóstico médico"),
+      "Meteria's main-novel note must preserve the unresolved identity/biography caveats.");
+    assert.ok(meteriaMainNotes.includes("ENTREVISTA / FUENTE SECUNDARIA"),
+      "The LN News author interview must not be displayed as an official primary novel source.");
+    assert.ok(await page.locator("#archive-more-info-content a[href='https://ln-news.com/articles/109766']").count() > 0,
+      "Meteria's expanded note must link the interview that does not name her.");
+    await page.locator("#archive-more-info-close").click();
+
+    await page.locator("#archive-return-search").click();
+    await page.locator("#character-archive-query").fill("Erebus");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-DARK-EREBUS"]').length === 1, null, { timeout: 5000 });
+    await page.locator('#character-archive-results [data-archive-open="CHAR-DARK-EREBUS"]').click();
+    await page.locator("#archive-profile-continuity").selectOption("CONT-GAME");
+    await page.locator("#archive-profile-panel [data-archive-more-info]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, null, { timeout: 3000 });
+    const erebusGameNotes = await page.locator("#archive-more-info-content").innerText();
+    assert.ok(erebusGameNotes.includes("Eren") && erebusGameNotes.includes("no se incorpora como alias canónico"),
+      "Erebus's game continuity note must keep the alias unresolved.");
+    assert.ok(erebusGameNotes.includes("ENTREVISTA / FUENTE SECUNDARIA"),
+      "The game's editorial character caption must not be mislabeled as a primary novel page.");
+    await page.locator("#archive-more-info-close").click();
+
+    await page.locator("#archive-return-search").click();
+    await page.locator("#character-archive-query").fill("Rudra");
+    await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-DARK-RUDRA"]').length === 1, null, { timeout: 5000 });
+    await page.locator('#character-archive-results [data-archive-open="CHAR-DARK-RUDRA"]').click();
+    await page.locator("#archive-profile-continuity").selectOption("CONT-MAIN-LN");
+    await page.locator("#archive-profile-panel [data-archive-more-info]").click();
+    await page.waitForFunction(() => document.querySelector("#archive-more-info-dialog")?.open === true, null, { timeout: 3000 });
+    const rudraMainNotes = await page.locator("#archive-more-info-content").innerText();
+    assert.ok(rudraMainNotes.includes("no demuestra que Rudra") && rudraMainNotes.includes("Rudra Familia"),
+      "Rudra's dialog must separate family action from personal responsibility.");
+    assert.ok(rudraMainNotes.includes("FICHA EDITORIAL · METADATOS"),
+      "The vol. 14 publisher product page must be labelled metadata, not a narrative passage.");
+    await page.locator("#archive-more-info-close").click();
     await page.locator("#archive-return-search").click();
     await page.locator("#character-archive-query").fill("Ryu");
     await page.waitForFunction(() => document.querySelectorAll('#character-archive-results [data-archive-open="CHAR-RYUU-LION"]').length === 1, null, { timeout: 5000 });
