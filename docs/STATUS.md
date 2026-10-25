@@ -308,3 +308,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - Se añadieron las rutas al directorio consultable y regresiones para impedir que se traten como capítulos, páginas o pruebas de apariciones individuales.
 - **Estado:** el intento de acceso está registrado; no completa el cotejo primario. La prioridad permanece DMR-045 y siguen abiertos los cinco expedientes.
 - **PR #126 integrada:** [merge SHA 580fe272cb07cb10ad33e5648350840b63d41604](https://github.com/jonhararagi/wordwaifu/commit/580fe272cb07cb10ad33e5648350840b63d41604). CI post-merge de ese SHA: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40225402605) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40225402638), ambas exitosas, incluida prueba de navegador y catálogo/enlaces.
+
+
+## DMR-045 — integración de rutas de muestra SB Creative, PR #127 (2026-10-25)
+
+- **Integrado:** [PR #127](https://github.com/jonhararagi/wordwaifu/pull/127), SHA exacto de main: 1a1bc2be356463edde3464e530015674dd8bc767.
+- Se añadieron al directorio de fuentes tres rutas normales de muestra BinB/SBCr para Astrea Record 1, 2 y 3, con registros DMR-045-SRC-020/021/022. Las extracciones devolvieron “Now loading...” y controles de interfaz, sin páginas narrativas legibles.
+- Las tres entradas están marcadas metadata_checked_only, sin claims, eventos ni localizadores. No se infiere presencia o ausencia de personajes a partir de la carga fallida.
+- **CI de la PR, head SHA d39161c1622317f973b07cc66096019be2f9c84b:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927385) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927413), ambas success.
+- **CI post-merge sobre el SHA exacto 1a1bc2be356463edde3464e530015674dd8bc767:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051519) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051508), ambas success.
+- **Límite:** la tarea de encontrar rutas oficiales de consulta quedó registrada y validada técnicamente; el cotejo primario de DMR-045 permanece abierto para los cinco expedientes.
