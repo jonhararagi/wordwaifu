@@ -687,8 +687,10 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Localizar parcialmente en el epílogo del vol. 14 (`You'll Be Back II`) el relato público sobre Jura, otros supervivientes de Rudra Familia y la supuesta muerte de Gale Wind (`DMR-045-CLM-014`); conservarlo como versión pública, no como prueba de que Ryuu murió.
 - [ ] Completar el cotejo de los volúmenes 13–14 con una edición accesible para establecer páginas reproducibles y detallar el plan posterior de Jura; la autoría/autoridad personal de Rudra continúa pendiente.
 - [x] Consultar el lector gratuito oficial de DanMachi vol. 14 (SBCr/BinB) como ruta primaria alternativa; la extracción no expuso páginas narrativas. Registrar `DMR-045-SRC-015` como `metadata_checked_only`, sin claims, y mantener pendiente el cotejo real del capítulo 13.
+- [x] Consultar la ficha y la ruta normal de muestra licenciada de BOOK☆WALKER para DanMachi vol. 14; registrar `DMR-045-SRC-028` como `metadata_checked_only`, sin claims y sin localizador narrativo, porque el lector devolvió un error de descarga.
+- [ ] Reintentar el capítulo 13 y el epílogo solo mediante una edición o muestra legítima que exponga la página narrativa; mantener sin confirmar la atribución personal a Rudra.
 
-**Estado factual:** fichas más completas y buscables; el lote sigue en secondary_checked_with_primary_gaps. No se declara verificación primaria de las biografías.
+**Estado factual:** fichas más completas y buscables; el lote sigue en secondary_checked_with_primary_gaps. El lector de muestra de vol. 14 añadió una ruta registrada pero no una página legible. No se declara verificación primaria de las biografías.
 
 
 - [x] Registrar y exponer en la interfaz la ficha oficial de Yen Press para la edición inglesa licenciada de *Astrea Record, Vol. 3* (ISBN 9781975379926; publicada el 26-11-2024) como ruta de consulta legal para Alfia, Zald y Erebus; etiquetarla como metadatos editoriales, sin claims narrativos. Integrado por [PR #116](https://github.com/jonhararagi/wordwaifu/pull/116); CI post-merge sobre `6efb50779b17924e7064876af75afa3cbd1d3b67`: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003502) y [Lore Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40197003501), ambas exitosas.
