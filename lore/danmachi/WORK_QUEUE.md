@@ -627,7 +627,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 **Actualización de interfaz y nuevas rutas autorizadas (2026-10-25):**
 **Rutas oficiales adicionales consultadas (2026-10-25):**
-- [x] Abrir por su URL pública normal el lector de muestra de SBCr eBook Store para Astrea Record 1/2/3; registrar DMR-045-SRC-020, 021 y 022 como metadata_checked_only, sin claims ni localizadores.
+- [x] Abrir por su URL pública normal el lector de muestra de SBCr eBook Store para Astrea Record 1/2/3; registrar DMR-045-SRC-020, DMR-045-SRC-021 y DMR-045-SRC-022 como metadata_checked_only, sin claims ni localizadores.
 - [x] Añadir las tres rutas al directorio consultable y cubrirlas con pruebas de regresión. Las tres devolvieron “Now loading...” y controles, sin páginas narrativas legibles.
 - [ ] Reintentar manualmente los visores mediante su uso normal o consultar una edición autorizada legible; solo registrar capítulo/página después de ver el pasaje concreto.
 - **Límite:** los accesos fallidos no demuestran que un personaje no aparezca ni que los libros sean indisponibles. DMR-045 continúa abierto para verificación primaria.
