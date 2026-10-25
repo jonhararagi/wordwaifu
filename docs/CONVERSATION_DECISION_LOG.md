@@ -277,7 +277,7 @@
 
 ### CONV-DM-2026-10-25-010 — Reintento de la vista previa licenciada de Google Books vol. 20
 - **Fecha:** 2026-10-25.
-- **Hallazgo:** la página pública autorizada de Google Books anuncia `Preview · 28 pages`; el lector de cuatro paneles no cargó las páginas consultadas y mostró `Something went wrong / Page didn't load`.
+- **Hallazgo:** la página pública autorizada de Google Books anuncia `Preview · 28 pages`; el lector muestra `1 of 4`, pero las páginas consultadas no cargaron y devolvieron `Something went wrong / Page didn't load`.
 - **Registro actualizado:** se conserva el ID existente `DMR-045-SRC-018` en `metadata_checked_only`, con claims vacíos. Se actualizan la auditoría de DMR-045, el registro central de fuentes, el directorio de fuentes de la aplicación, la cola, el índice maestro, el estado y las regresiones.
 - **Límite factual:** la vista previa que no se renderiza no es un localizador narrativo; no confirma presencia/ausencia de personajes ni respalda habilidades, relaciones o escenas. Las búsquedas previas que fallaron con HTTP 429 siguen siendo errores, no resultados negativos.
 - **Prioridad vigente:** mantener abiertos los localizadores primarios individuales de Alfia, Zald, Meteria y Erebus, y la atribución personal de Rudra; no ampliar Orario hasta completar o acotar honestamente esta investigación.
