@@ -266,8 +266,11 @@
 
 ### CONV-DM-2026-10-25-009 — Registrar el intento de muestra licenciada de DanMachi vol. 14
 - **Fecha:** 2026-10-25.
-- **Estado:** resultado de investigación registrado; sin verificación primaria nueva.
+- **Estado:** cambio documental implementado, integrado y validado; la evidencia primaria sobre la narración sigue pendiente.
 - **Resultado:** se consultaron la ficha y el enlace normal de muestra de BOOK☆WALKER para DanMachi vol. 14 (edición japonesa de SB Creative / GA Bunko). La ficha anuncia 試し読み, pero el lector devuelve “Could not download. Please check your network connection.” La ruta se catalogó como DMR-045-SRC-028, metadata_checked_only, sin claims ni localizador narrativo.
 - **Límite factual:** no se modifica DMR-045-CLM-013/014, no se confirma la página exacta y no se atribuye a Rudra conocimiento, autorización u orden del plan. Un error de visor no prueba indisponibilidad general ni presencia/ausencia de personajes.
 - **Prioridad vigente:** continuar el cotejo primario de los cinco expedientes de DMR-045 antes de expandir Orario. Si una muestra legal no entrega narración, conservar el bloqueo y no crear afirmaciones para llenar el hueco.
 - **Documentos afectados:** auditoría DMR-045, registro central de fuentes, directorio de fuentes UI y su prueba, cola de trabajo, índice maestro, estado y registro de decisiones.
+- **Integración verificada:** PR [#133](https://github.com/jonhararagi/wordwaifu/pull/133), merge SHA `1c53f9f7ca57a6aeebaedbf57234fb8b6e581f6f`.
+- **CI de la PR:** [Validate WordWaifu #3366](https://github.com/jonhararagi/wordwaifu/actions/runs/40231380471) y [DanMachi Lore and Retrieval Integrity #1759](https://github.com/jonhararagi/wordwaifu/actions/runs/40231380497), success.
+- **CI post-merge del SHA exacto de main:** [Validate WordWaifu #3367](https://github.com/jonhararagi/wordwaifu/actions/runs/40231489642) y [DanMachi Lore and Retrieval Integrity #1760](https://github.com/jonhararagi/wordwaifu/actions/runs/40231489669), success.
