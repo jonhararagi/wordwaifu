@@ -40,6 +40,14 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 
 **Límite:** el barrido secundario completado no equivale a cinco biografías verificadas en el texto primario. Los localizadores no disponibles permanecen abiertos.
 
+## Corrección incremental de personajes — precisión de habilidades secundarias (2026-10-25)
+
+- [x] Completar el resumen interactivo de Genos Angelus de Alfia con el alcance reportado (>100 metros), la campana gris plateada y el coste para su salud, manteniendo cada detalle como pista comunitaria pendiente de cotejo primario.
+- [x] Alinear la ficha Markdown y el expediente UI de Zald para explicitar el ejemplo reportado de Deus Ambrosia (nivel 7 frente a poder equivalente al nivel 10) sin tratarlo como fórmula universal verificada.
+- [x] Añadir regresiones automatizadas para la precisión, la consistencia UI/Markdown y los límites de evidencia.
+- [ ] Ejecutar CI de PR y posintegración para el SHA exacto de `main`; actualizar el estado final al obtener los resultados.
+- **Límite:** no se crean claims ni relaciones nuevos, no cambia ningún ID ni el estado de canon; los localizadores primarios individuales de DMR-045 siguen abiertos.
+
 ## Cobertura integrada del roster · DANMACHI-RESEARCH-036
 
 - [x] Crear fichas Markdown individuales para las 63 identidades del roster de adaptación, incluidos los cuatro hermanos Gulliver.
