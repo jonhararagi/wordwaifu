@@ -16,6 +16,8 @@
 - El glosario oficial del anime describe Babel como el edificio más alto y una instalación propiedad de la Guild para supervisar y gestionar el Dungeon. No indica si la sede administrativa está dentro de Babel, es la misma estructura o se encuentra separada.
 - La afirmación comunitaria que identifica Pantheon como sede principal permanece etiquetada como secundaria y en conflicto con la lectura provisional del extracto; no se añade una arista espacial o de identidad entre Pantheon, Babel y la sede.
 - La conciliación se documenta en [DANMACHI-RESEARCH-051](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md). Continúan pendientes la inspección visual del pasaje, los localizadores primarios reproducibles y el inventario urbano completo.
+- **Integración:** [PR #111](https://github.com/jonhararagi/wordwaifu/pull/111) se fusionó mediante squash en `main`, con SHA [f7ccf59e48d4cc2da6fe0b15b79fe794c535424a](https://github.com/jonhararagi/wordwaifu/commit/f7ccf59e48d4cc2da6fe0b15b79fe794c535424a).
+- **CI posterior al merge para ese SHA exacto:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40150204443) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40150204432), ambas finalizadas con éxito.
 
 ## Orario — Plaza del Amor registrada como pista secundaria navegable (2026-10-24)
 

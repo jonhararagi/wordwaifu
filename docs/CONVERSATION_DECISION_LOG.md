@@ -96,7 +96,7 @@
 - **Verificación posterior al merge:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40148575531) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40148575536), ambos finalizaron con éxito sobre el SHA exacto `2342ccf464a6f6d88e0b31aa4c7f77af04695348`.
 - **Siguiente acción:** localizar el pasaje primario de la Plaza del Amor en la novela ligera con capítulo/página o localizador digital reproducible, antes de promover detalles a `CONT-MAIN-LN`.
 
-### CONV-DM-2026-10-24-009 — Contrastar Pantheon, sede de la Guild y Babel sin inferencias
+### CONV-DM-2026-10-24-010 — Contrastar Pantheon, sede de la Guild y Babel sin inferencias
 
 - **Fecha:** 2026-10-24.
 - **Estado:** RECORDED; investigación parcial documentada y límites preservados.
@@ -106,6 +106,8 @@
 - **Límite:** la descarga de `trial03.pdf` respondió HTTP 503 y no pudo comprobarse la página visualmente; la lectura queda `source_checked_excerpt_only`. No se crea una relación física nueva ni se inventan coordenadas.
 - **Documentos afectados:** DMR-048, DMR-051, fichas de Pantheon/Babel/Orario, índice de lugares, catálogo, registro de fuentes, MASTER_INDEX, WORK_QUEUE y STATUS.
 - **Siguiente acción:** recuperar un localizador primario verificable, continuar el inventario de lugares de Orario y resolver la relación con Babel solo si una fuente primaria lo demuestra.
+- **Integración:** incorporado mediante [PR #111](https://github.com/jonhararagi/wordwaifu/pull/111) a `main` con SHA [f7ccf59e48d4cc2da6fe0b15b79fe794c535424a](https://github.com/jonhararagi/wordwaifu/commit/f7ccf59e48d4cc2da6fe0b15b79fe794c535424a).
+- **Verificación posterior al merge del SHA anterior:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40150204443) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40150204432), ambas finalizadas con `success`.
 
 ## Plantilla para entradas futuras
 
