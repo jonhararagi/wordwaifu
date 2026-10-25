@@ -19,6 +19,13 @@
 - Pruebas posteriores a la integración, ambas con éxito y asociadas al SHA `9e5a2ee6041dd2a4283003993bfd6655a9a3d419`: [Validate WordWaifu #3237](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959234) y [DanMachi Lore and Retrieval Integrity #1690](https://github.com/jonhararagi/wordwaifu/actions/runs/40151959233).
 - **Pendiente real:** no se cerraron los localizadores narrativos primarios de Alfia, Zald, Meteria y Erebus, ni la responsabilidad personal de Rudra. Las métricas, el catálogo de identidades y las relaciones no cambiaron en este lote.
 
+## Canoe Belway / Zanis Lustra / Liliruca — corrección de la atribución en fichas UI (preintegración, 2026-10-24)
+
+- Se corrigen los resúmenes interactivos de Liliruca, Canoe, Zanis y Chandra para distinguir el destino de Canoe reportado por una fuente comunitaria de la acusación que el resumen comunitario del volumen 6 atribuye a Zanis (DMR-046-CLM-007 vs. DMR-046-CLM-005).
+- Se agregan a Liliruca y Canoe las dos URLs editoriales ya registradas de volumen 2/6 y a Zanis la de volumen 6. Sus límites quedan explícitos: la sinopsis de vol. 2 presenta a Lili como ayudante y el contexto de Soma Familia; la de vol. 6 confirma su captura previa al War Game. Ninguna verifica por sí misma a Canoe, la acusación ni la intervención individual de Chandra.
+- Se añaden pruebas de regresión para los cuatro expedientes y la separación entre afirmación comunitaria, contexto editorial y hecho primario. No cambian los IDs ni el estado `secondary_checked`; no se modifica el grafo.
+- **Pendiente:** localizar en ediciones legítimas de los volúmenes 2 y 6 los pasajes que permitan establecer qué pasó con Canoe, qué sabe Zanis y si existe fundamento para la acusación. **Estado preintegración:** rama de trabajo; falta CI e integración.
+
 ## Orario — localizador provisional de la plaza norte armonizado (2026-10-24)
 
 - Se reconciliaron DMR-047 y `DMR-047-SRC-001`: la muestra oficial `trial02.pdf` corresponde al volumen 2; el índice textual conserva capítulo IV 「だからボクは力になりたい」 y marcadores de folio 20–21 junto a la escena de la plaza semicircular al norte de Orario.
