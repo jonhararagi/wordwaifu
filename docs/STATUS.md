@@ -268,9 +268,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 
 ## DMR-045 — precisión incremental de las fichas de Alfia y Zald (2026-10-25)
 
-- **Implementación preparada en rama:** `fix/danmachi-character-mechanics-2026-10-25`; la PR, las pruebas de CI y la integración todavía deben comprobarse.
+- **Integrado y validado:** PR [#118](https://github.com/jonhararagi/wordwaifu/pull/118), SHA exacto de `main` `d81766fc7003294c15d0a2b776ce2d59170da86c`.
 - La ficha interactiva de Alfia expone el alcance (>100 metros) y la campana gris plateada reportados por las wikis para Genos Angelus, además del deterioro de salud atribuido a su uso contra Leviathan. Todo sigue explícitamente como evidencia secundaria.
 - El expediente interactivo y la ficha Markdown de Zald explicitan el límite de Deus Ambrosia que describe la wiki: el ejemplo nivel 7 / poder equivalente a nivel 10 no se trata como regla universal verificada. El coste continuo del veneno de Behemoth permanece visible.
 - Se agregaron regresiones a `tests/test_lore_corpus.cjs` para evitar pérdida de estos detalles y de sus límites de evidencia.
 - **Integridad del corpus:** no se modifican IDs, claims, relaciones, aliases ni métricas. DMR-045 mantiene pendientes los localizadores narrativos primarios; esta corrección mejora la recuperación de referencias, no cierra esa investigación.
-- **Estado:** implementado en rama; pendiente de CI e integración segura.
+- **CI de la PR, head SHA `e870d5ef364639238000b7f991a4b855deafe136`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210105940) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210106029), ambas exitosas.
+- **CI post-merge sobre `main`, SHA exacto `d81766fc7003294c15d0a2b776ce2d59170da86c`:** [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257785) y [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40210257780), ambas exitosas.
+- **Estado final:** integrado y validado; no se modificaron métricas ni estructura de relaciones.
