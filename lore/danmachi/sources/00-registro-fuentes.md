@@ -2898,16 +2898,16 @@ verification_status: stub
 - creator_or_publisher: GA Bunko / SB Creative
 - source_type: OFFICIAL_PUBLISHER_PREVIEW_EXCERPT
 - series: DanMachi, novela ligera principal
-- volume_or_edition: Archivo de muestra de lectura en el portal editorial; la edición/rotulación interna del PDF no pudo verificarse directamente en esta sesión
+- volume_or_edition: Muestra oficial de lectura del volumen 2 (trial02.pdf); la ficha bibliográfica del volumen 2 está disponible en https://ga.sbcr.jp/product/9784797373073/. La rotulación interna se recupera del índice textual del PDF, no de una inspección visual
 - language: Japonés
 - official_url: https://ga.sbcr.jp/sp/danmachi/trial02.pdf
-- accessed_at: 2026-10-23
+- accessed_at: 2026-10-24
 - locator_type: publisher_preview_excerpt
-- locator: Pasaje indexado sobre una plaza semicircular al norte de Orario frente a una avenida principal; no se asigna página o capítulo
+- locator: Capítulo IV 「だからボクは力になりたい」; marcadores de folio 20–21 en el índice textual junto al pasaje de la plaza semicircular al norte de Orario. Folios y contexto no verificados visualmente.
 - claims_supported: [DMR-047-CLM-001]
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN
-- reliability_note: Muestra de lectura alojada en el sitio de GA Bunko. El extracto indexado sostiene solo la escena localizada; la descarga directa devolvió HTTP 503 durante la consulta, de modo que la paginación y el contexto integral siguen pendientes. Estado source_checked_excerpt_only.
+- reliability_note: Muestra de lectura alojada en el sitio de GA Bunko. El índice textual conserva el título del capítulo IV y los marcadores 20–21, pero la descarga directa respondió HTTP 503 y la herramienta de captura no reconoció una referencia PDF abierta. El localizador es reproducible solo como pista del índice, no como página cotejada visualmente. La ficha editorial confirma que trial02 corresponde al volumen 2, pero no verifica el contenido del pasaje. Estado source_checked_excerpt_only.
 - conflicting_sources: []
 - rights_note: Paráfrasis original; no reproducir el relato ni inventar un localizador.
 - verification_status: source_checked_excerpt_only
