@@ -1,7 +1,7 @@
 # DANMACHI-RESEARCH-046 · Nueva Astrea Familia y tres expedientes de Soma Familia
 
 - Fecha de corte: 2026-10-23.
-- Estado: ampliación secundaria registrada; localizadores primarios individuales pendientes.
+- Estado: ampliación secundaria registrada y lectura cruzada de fichas UI corregida; localizadores primarios individuales pendientes.
 - Continuidad de trabajo: CONT-MAIN-LN. Las entradas de wiki son pistas secundarias, no sustitutos de capítulo/página.
 - Propósito: hacer recuperables a Cecil Blackliza, Iselina, Shau, Ulanda, Zanis Lustra, Chandra Ihit y Canoe Belway. Mantener desconocidos los campos sin fuente y separar una acusación reportada del hecho al que se refiere.
 
@@ -155,3 +155,15 @@ La sinopsis oficial de GA Bunko para DanMachi, volumen 6, confirma a nivel gener
 5. No elevar a source_checked las biografías individuales a partir de perfiles comunitarios o de una sinopsis editorial de alcance general.
 
 **Veredicto:** expedientes ampliados y rastreables, pero con estado secondary_checked_with_primary_gaps; no se declara completada la verificación de canon.
+
+
+## Corrección de lectura cruzada entre Canoe, Zanis y Liliruca (2026-10-24)
+
+Las fichas interactivas de Liliruca, Canoe Belway, Zanis Lustra y Chandra Ihit ahora exponen la distinción que ya estaba establecida en las afirmaciones de investigación:
+
+- **DMR-046-CLM-007**: identidad y destino de Canoe reportados por un perfil comunitario, con secuencia de volumen 2 pendiente de localizador primario.
+- **DMR-046-CLM-005**: el resumen comunitario de volumen 6 atribuye a Zanis una acusación sobre la desaparición de Canoe y señala a Lili. La ficha registra un dicho atribuido, no culpa demostrada ni conocimiento cierto de Zanis.
+- Las páginas editoriales oficiales de los volúmenes 2 y 6 se incluyen como enlaces de contexto; su sinopsis confirma solo el papel de Lili como ayudante / el contexto de captura por Soma Familia antes del War Game. No confirma a Canoe, la acusación de Zanis ni la intervención personal de Chandra.
+- Las fichas de Lili, Canoe y Zanis muestran ahora ambos IDs de investigación, mantienen visibles las fuentes comunitarias de los dos volúmenes y explican por qué la discrepancia no se resuelve por autoridad de wiki. La ficha de Chandra advierte que el contexto editorial no demuestra su acto individual.
+
+Se añadieron pruebas de regresión sobre la exposición de ambos claims, los límites de las dos sinopsis oficiales y las advertencias en las cuatro fichas. No se modifica el grafo de relaciones, no se cambia el estado `secondary_checked` de los claims y no se declara resuelta la discrepancia. **Pendiente:** cotejar los pasajes primarios legítimos de volúmenes 2 y 6 para ordenar los hechos, determinar qué sabe Zanis y aclarar la situación de Canoe.

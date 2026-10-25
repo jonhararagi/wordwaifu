@@ -823,6 +823,36 @@ for (const [id,url] of [
  ["official-ga-danmachi-06","https://ga.sbcr.jp/product/9784797380583/"]
 ]) assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === id && source.url === url), "Missing DMR-046 online source directory entry: " + id);
 
+// DMR-046: the Soma-family character UI must keep Canoe's reported fate separate from Zanis's accusation.
+const uiLiliCanoe = uiCharacterDossiers.get("CHAR-LILIRUCA-ARDE");
+assert.ok(uiLiliCanoe.history.includes("DMR-046-CLM-005/007") &&
+  uiLiliCanoe.relationships.includes("DMR-046-CLM-007") &&
+  uiLiliCanoe.conflict.includes("No conviertas la acusación de Zanis en una confesión"),
+  "Liliruca's dossier must not turn Zanis's reported accusation into confirmed guilt or a confession.");
+assert.ok(uiLiliCanoe.sources.includes("https://ga.sbcr.jp/product/9784797373073/") &&
+  uiLiliCanoe.sources.includes("https://ga.sbcr.jp/product/9784797380583/"),
+  "Liliruca's dossier must expose the official volume 2/6 bibliographic context as context, not as proof of the Canoe allegation.");
+const uiCanoeEvidence = uiCharacterDossiers.get("CHAR-CANOE-BELWAY");
+assert.ok(uiCanoeEvidence.history.includes("DMR-046-CLM-007") &&
+  uiCanoeEvidence.relationships.includes("DMR-046-CLM-005") &&
+  uiCanoeEvidence.conflict.includes("contradicción aparente") &&
+  uiCanoeEvidence.conflict.includes("Ninguna sinopsis oficial resuelve el caso"),
+  "Canoe's fate, the later accusation, and the scope limits of official synopses must stay distinct and unresolved.");
+assert.ok(uiCanoeEvidence.sources.includes("https://ga.sbcr.jp/product/9784797373073/") &&
+  uiCanoeEvidence.sources.includes("https://ga.sbcr.jp/product/9784797380583/"),
+  "Canoe's UI profile must expose both official synopsis pages without implying that they verify individual biography details.");
+const uiZanisEvidence = uiCharacterDossiers.get("CHAR-ZANIS-LUSTRA");
+assert.ok(uiZanisEvidence.history.includes("DMR-046-CLM-005") &&
+  uiZanisEvidence.relationships.includes("no como resultado factual") &&
+  uiZanisEvidence.conflict.includes("prueban culpabilidad"),
+  "Zanis's allegation must be described as reported speech, not an established result.");
+assert.ok(uiZanisEvidence.sources.includes("https://ga.sbcr.jp/product/9784797380583/"),
+  "Zanis's dossier must include the official volume 6 synopsis while stating that it does not corroborate his individual accusation.");
+const uiChandraEvidence = uiCharacterDossiers.get("CHAR-CHANDRA-IHIT");
+assert.ok(uiChandraEvidence.history.includes("no está demostrado por la sinopsis editorial") &&
+  uiChandraEvidence.conflict.includes("no demuestra lo que Chandra hace individualmente"),
+  "Chandra's individual intervention must not be inferred from the publisher's general volume 6 synopsis.");
+
 // DMR-045: metadata-only Astrea Record 1 sample reader; never use it to confirm character claims.
 const astreaVol1Preview = historicalWikiSourceDirectory.find(item => item.id === "official-astrea-record-vol1-preview");
 assert.ok(astreaVol1Preview && astreaVol1Preview.url === "https://r.binb.jp/epm/e1_260370_02092022101233/" && astreaVol1Preview.authority.includes("metadatos solamente") && String(astreaVol1Preview.limits).toLocaleLowerCase("es").includes("no respalda ninguna capacidad"), "The official Astrea Record preview must be discoverable with its metadata-only limitation visible.");
