@@ -52,8 +52,10 @@ assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null),
 const meteriaMainInfo = archiveApi.getExtendedInfo("CHAR-METERIA", "CONT-MAIN-LN", null);
 assert.ok(meteriaMainInfo && meteriaMainInfo.title.includes("Meteria"),
   "Meteria's secondary main-novel research note must be reachable from her archive profile.");
-assert.ok(meteriaMainInfo.sections.some(section => section.text.includes("no la nombra como Meteria") && section.text.includes("No se asignan diagnóstico médico")),
+assert.ok(meteriaMainInfo.sections.some(section => section.text.includes("no la nombra como Meteria")),
   "Meteria's note must distinguish the game-era interview from an independent primary identification.");
+assert.ok(meteriaMainInfo.sections.some(section => section.text.includes("No se asignan diagnóstico médico")),
+  "Meteria's file must leave undocumented diagnosis and dates unresolved.");
 assert.ok(meteriaMainInfo.references.some(ref => ref.kind === "interview" && ref.url === "https://ln-news.com/articles/109766"),
   "The interview must be labelled as secondary editorial material, not as a primary novel page.");
 assert.ok(meteriaMainInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/Meteria"),
