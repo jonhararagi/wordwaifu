@@ -1,7 +1,7 @@
 # DANMACHI-RESEARCH-026 · Orario, Babel, Hostess of Fertility y Rivira
 
 - Estado: PARTIAL; cuatro lugares y ocho aristas navegables registradas a partir de un glosario oficial de la adaptación anime.
-- Fecha de consulta: 2026-10-18.
+- Fecha de consulta: 2026-10-24.
 - Continuidad: CONT-ANIME.
 - Fuente principal: DMR-026-SRC-001, glosario oficial de lugares en https://danmachi.com/danmachi/special/index.html.
 - Método: paráfrasis breve de entradas oficiales; no se copian descripciones completas ni se tratan como texto de novela ligera.
