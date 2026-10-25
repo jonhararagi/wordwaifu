@@ -649,6 +649,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir pruebas de cobertura de los siete perfiles, búsqueda de claims y procedencia de relaciones.
 - [ ] Localizar las escenas de Solingen y cotejar individualmente cargo, nivel y biografía de la nueva Astrea Familia.
 - [ ] Cotejar los volúmenes 2 y 6 para resolver la secuencia de Canoe y el alcance de la acusación de Zanis.
+- [x] Corregir las fichas UI de Liliruca, Canoe Belway, Zanis Lustra y Chandra Ihit para enlazar DMR-046-CLM-005/007, distinguir la acusación de Zanis del destino reportado de Canoe y limitar el alcance de las sinopsis editoriales; añadir pruebas de regresión. El cotejo primario de volúmenes 2 y 6 permanece abierto.
 - [ ] Localizar las escenas del volumen 6 para Chandra y Zanis con capítulo/página, sin elevar el resumen comunitario a fuente primaria.
 
 **Estado factual:** las fichas y rutas son más completas, pero DMR-046 conserva el estado secondary_checked_with_primary_gaps. Ninguna afirmación individual de wiki se ha promocionado a canon primario.
