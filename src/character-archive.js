@@ -252,6 +252,36 @@ MOM["CHAR-OTTAR"]={"CONT-ANIME":[
 
 
 const EXTENDED={
+"CHAR-DARK-ALFIA":{
+"CONT-AR":{
+title:"Alfia · Astrea Record / Era Oscura",
+summary:"Resumen de investigación de alcance secundario para CONT-AR. Las wikis comunitarias describen capacidades concretas, pero no sustituyen los pasajes de la novela: faltan localizadores narrativos primarios y varias mecánicas no se han cotejado escena por escena.",
+sections:[
+{title:"Genos Angelus · descripción reportada por la wiki",text:"La wiki comunitaria en español describe Genos Angelus como un hechizo de canto muy largo que manifiesta una campana gris plateada, con un alcance reportado superior a 100 metros. La misma fuente atribuye al uso contra Leviathan un agravamiento de la salud de Alfia. Son afirmaciones secundarias pendientes de cotejo con el texto publicado; no se presenta el alcance como una medición verificada ni se confirma aquí una secuencia exacta de combate."},
+{title:"Gif Blessing, Limit Off y coste",text:"Los compendios comunitarios vinculan Gif Blessing con la enfermedad de Alfia y describen Limit Off como una condición que mantiene sus capacidades a cambio de deterioro físico, mental y de resistencia. También reportan Silentium Eden como defensa mágica con un coste elevado de Mind y restricciones sobre la propia magia de Alfia. El funcionamiento exacto, las condiciones de activación y el coste por escena siguen sin localizador primario comprobado."},
+{title:"Límites de investigación y continuidad",text:"Este resumen corresponde a la investigación secundaria sobre Astrea Record (CONT-AR), no a una transcripción del libro. Las pistas sobre Afterglow y el prólogo del volumen 20 pertenecen a la investigación de la novela principal (CONT-MAIN-LN) y siguen sin confirmar identidad ni uso individual; los hechos exclusivos de juegos y el escenario autoral alternativo (CONT-AU) no se importan como sucesos de Astrea Record."}
+],
+references:[
+{label:"Wiki comunitaria en español · Alfia / Habilidades",url:"https://danmachi.fandom.com/es/wiki/Alfia/Habilidades",kind:"community"},
+{label:"Wiki comunitaria en inglés · Alfia",url:"https://danmachi.fandom.com/wiki/Alfia",kind:"community"}
+]
+}
+},
+"CHAR-DARK-ZALD":{
+"CONT-AR":{
+title:"Zald · Astrea Record / Era Oscura",
+summary:"Resumen de investigación secundaria sobre capacidades y limitaciones asociadas a Zald en CONT-AR. Las cifras y mecánicas que siguen proceden de compendios comunitarios; no reemplazan el texto narrativo, y no hay un localizador primario verificado para cada afirmación.",
+sections:[
+{title:"Deus Ambrosia · límite de poder reportado",text:"La wiki comunitaria describe Deus Ambrosia como una habilidad que puede aumentar las capacidades de Zald al consumir criaturas o materiales, con resultados dependientes de la cantidad y calidad ingeridas. La fuente presenta como ejemplo que un Zald reportado en nivel 7 no podía alcanzar sin más un poder equivalente al nivel 10. Ese ejemplo es una afirmación secundaria; no es una fórmula universal verificada del sistema de niveles."},
+{title:"Veneno de Behemoth y coste",text:"La fuente comunitaria describe un deterioro persistente causado por el veneno de Behemoth. El aumento de capacidades no debe representarse como poder ilimitado ni como una mejora gratuita que borra ese coste. Los efectos exactos, su duración y las condiciones de cada escena continúan pendientes de cotejo primario."},
+{title:"Otras capacidades y límites de continuidad",text:"Las wikis también enumeran Al Questa, Niggle Gourmet y Rea Ambrosia, pero esta ficha no asigna efectos, parámetros ni usos individuales sin una descripción suficientemente localizada. La pista de Afterglow del volumen 20 pertenece a CONT-MAIN-LN; el escenario de crianza autoral se mantiene separado como CONT-AU y no se fusiona con Astrea Record."}
+],
+references:[
+{label:"Wiki comunitaria en español · Zald",url:"https://danmachi.fandom.com/es/wiki/Zald",kind:"community"},
+{label:"Wiki comunitaria en español · Astrea Record, novela ligera vol. 3",url:"https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3",kind:"community"}
+]
+}
+},
 "CHAR-RYUU-LION":{
 "CONT-AR":{title:"Ryu Lion · Era Oscura de Orario",summary:"En Astrea Record, Ryu aparece en una etapa anterior a su trabajo en la Anfitriona de la Fertilidad. La sinopsis editorial la sitúa tratando de construir su propia idea de justicia, bajo Astrea y guiada por Alise, capitana de la Familia. La historia se desarrolla en una Orario descrita por la cronología oficial como sumida en el caos y la violencia.",sections:[{title:"Punto de partida",text:"Su búsqueda de justicia no se presenta como una respuesta ya resuelta: es la pregunta que orienta esta etapa de su vida. Alise ocupa un lugar explícito como capitana y guía; Astrea es el marco divino de la Familia."},{title:"El contexto histórico",text:"Las sinopsis editoriales conectan a la Familia con el conflicto contra Evilus y con acontecimientos que amenazan a Orario. La trilogía de Astrea Record está organizada en tres volúmenes; los detalles de escenas concretas deben comprobarse en las novelas, no deducirse de sus sinopsis."},{title:"Cómo leer su evolución",text:"La sinopsis del segundo volumen indica que las pérdidas conocidas como “Los siete días de la muerte” sacuden su comprensión de la justicia. Esta ficha resume ese punto de inflexión sin reproducir el libro ni convertir una sinopsis en una narración exhaustiva."}],references:[{label:"Wiki comunitaria en español · Ryuu Lion",url:"https://danmachi.fandom.com/es/wiki/Ryuu_Lion",kind:"community"},{label:"Cronología oficial de DanMachi (japonés)",url:"https://danmachi.com/chronology",kind:"official"},{label:"Astrea Record, volumen 1 · editorial GA Bunko (japonés)",url:"https://ga.sbcr.jp/product/9784815610173",kind:"official"},{label:"Astrea Record, volumen 2 · editorial GA Bunko (japonés)",url:"https://ga.sbcr.jp/product/9784815610180",kind:"official"}],galleryUrl:"https://danmachi.fandom.com/es/wiki/Ryuu_Lion#Galería_de_Imágenes"},
 "CONT-ANIME":{title:"Ryu Lion · adaptación anime",summary:"El perfil de DanMachi IV presenta a Ryu como antigua aventurera y trabajadora de la Anfitriona de la Fertilidad. Ese estado posterior no sustituye su perfil histórico de Astrea Record ni debe mezclarse con datos de la novela principal sin una fuente específica.",sections:[{title:"Estado representado",text:"La ficha oficial de la adaptación sirve para identificar el papel que Ryu ocupa en esa versión. Los acontecimientos de su etapa anterior pertenecen a otro tramo temporal y conviene leerlos aparte."},{title:"Personalidad y límites",text:"El corpus incorpora por separado la motivación de justicia atribuida a su etapa histórica. No trasladamos automáticamente todos los rasgos de una etapa a otra, ni inferimos gustos o pensamientos privados si las fuentes no los registran."}],references:[{label:"Wiki comunitaria en español · Ryuu Lion",url:"https://danmachi.fandom.com/es/wiki/Ryuu_Lion",kind:"community"},{label:"Perfil oficial de personajes · DanMachi IV (japonés)",url:"https://danmachi.com/danmachi4/character",kind:"official"}],galleryUrl:"https://danmachi.fandom.com/es/wiki/Ryuu_Lion#Galería_de_Imágenes"}},
