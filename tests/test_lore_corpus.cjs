@@ -6,6 +6,7 @@ const root = path.join(__dirname, "..", "lore", "danmachi");
 const appSource = fs.readFileSync(path.join(__dirname, "..", "src", "app.js"), "utf8");
 assert.ok(appSource.includes('{ key:"interview", title:"Material complementario · entrevistas con autores"') && appSource.includes('badge:"ENTREVISTA AUTORAL"'), "The source browser must render author interviews in their own evidence tier, separate from official publisher pages and community leads.");
 const catalog = JSON.parse(fs.readFileSync(path.join(root, "catalog.json"), "utf8"));
+const sourceRegistry = fs.readFileSync(path.join(root, "sources", "00-registro-fuentes.md"), "utf8");
 const documentPaths = corpus.getDefaultResearchPaths();
 const documents = documentPaths.map(file => ({ path: file, content: fs.readFileSync(path.join(root, file), "utf8") }));
 const detailIds = new Set(corpus.getDefaultDetailIds());
@@ -662,7 +663,14 @@ assert.ok(northPlazaSearch.results.some(item => item.claimId === "DMR-047-CLM-00
 assert.ok(catalog.records.some(record => record.id === "LOC-ORARIO-NORTH-PLAZA" && record.path === "places/north-plaza.md" && record.status === "source_checked_partial"), "The north plaza must be a separately navigable location with explicit evidence limits.");
 assert.ok(corpus.searchEntities(catalog, { type: "location", query: "plaza semicircular norte Orario" }).results.some(entity => entity.id === "LOC-ORARIO-NORTH-PLAZA"), "The unnamed northern plaza must be discoverable through location search.");
 assert.ok(index.relationships.some(edge => edge.id === "REL-ORARIO-NORTH-PLAZA-OF-ORARIO" && edge.from === "LOC-ORARIO-NORTH-PLAZA" && edge.to === "LOC-ORARIO" && edge.continuity === "CONT-MAIN-LN" && edge.claimRef === "DMR-047-CLM-001" && edge.evidenceStatus === "source_checked_excerpt_only"), "The location relation must carry the exact claim, continuity and evidence status.");
-assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "ga-ln-volume-02-trial" && source.url === "https://ga.sbcr.jp/sp/danmachi/trial02.pdf" && source.authority.includes("Extracto editorial")), "The official publisher preview must appear in the live source directory.");
+const northPlazaSource = corpus.getOnlineSourceDirectory().find(source => source.id === "ga-ln-volume-02-trial");
+assert.ok(northPlazaSource && northPlazaSource.url === "https://ga.sbcr.jp/sp/danmachi/trial02.pdf" && northPlazaSource.authority.includes("Extracto editorial"), "The official volume 2 publisher preview must appear in the live source directory.");
+assert.ok(northPlazaSource.coverage.includes("capítulo IV") && northPlazaSource.coverage.includes("20–21") && northPlazaSource.limits.includes("no de inspección visual"), "The live source directory must expose the provisional chapter/folio locator without overstating visual verification.");
+const northPlazaSourceStart = sourceRegistry.indexOf("## DMR-047-SRC-001");
+const northPlazaSourceEnd = sourceRegistry.indexOf("## DMR-048-SRC-001", northPlazaSourceStart);
+const northPlazaSourceEntry = sourceRegistry.slice(northPlazaSourceStart, northPlazaSourceEnd);
+assert.ok(northPlazaSourceStart >= 0 && northPlazaSourceEnd > northPlazaSourceStart && northPlazaSourceEntry.includes("Capítulo IV 「だからボクは力になりたい」") && northPlazaSourceEntry.includes("20–21") && northPlazaSourceEntry.includes("HTTP 503"), "The persistent source registry must match the provisional locator recorded in DMR-047.");
+assert.ok(northPlazaSourceEntry.includes("source_checked_excerpt_only"), "Recording an indexed locator must not promote DMR-047 beyond excerpt-only evidence.");
 const northPlazaPrototypeSearch = corpus.search(index, { query: "Orario norte plaza semicircular avenida principal", continuity: "CONT-PROTOTYPE", period: "ALL", aspect: "all", spoiler: "all" });
 assert.ok(!northPlazaPrototypeSearch.results.some(item => item.claimId === "DMR-047-CLM-001"), "The main-novel excerpt must not leak into Prototype continuity.");
 
