@@ -803,3 +803,11 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **Estado:** `metadata_checked_only`; `claims_supported: []`; sin claims, aliases, acontecimientos ni relaciones nuevas.
 - **Alcance permitido:** conservar una ruta normal para futura lectura autorizada. El intento no verifica la identidad de la maga del prólogo, la criatura, el testigo, la aparición de Alfia/Zald ni la técnica Afterglow en el volumen 20.
 - **Siguiente paso:** si el lector muestra narración en una consulta normal, registrar únicamente el pasaje que sea realmente visible con edición y localizador reproducible. No asumir que una pantalla de carga implica indisponibilidad global.
+
+## Integración y CI — DMR-045-SRC-044 (PR #153)
+
+- La ruta oficial de muestra BinB del volumen 20 y su regresión de directorio se integraron en [PR #153](https://github.com/jonhararagi/wordwaifu/pull/153), merge SHA `1894e3acf3ced6c472b9e8979dcb53874bf40226`.
+- Head de la PR: `857ac384f03fc62c624f74297736befc431e19d9`.
+- CI de PR: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254967) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254924), ambos success.
+- CI post-merge sobre el SHA exacto de `main`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40284421948) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40284422026), ambos success.
+- La integración valida el registro, los límites de evidencia, el catálogo y las regresiones; no aporta una página narrativa nueva. SRC-044 continúa `metadata_checked_only` y DMR-045 sigue abierto.
