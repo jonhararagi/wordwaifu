@@ -398,4 +398,15 @@
 - **Hallazgo:** la sinopsis comunitaria del volumen 14 describe que Rudra aparece ante Ryuu después de la venganza contra Rudra Familia, comenta que le habría gustado invitar a la Ryuu de ese momento a su Familia y es capturado por el Gremio después de que ella se marcha. Fuente: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis. La consulta directa falló con HTTP 402; se usó el resultado indexado.
 - **Implementación:** DMR-045-SRC-046 y DMR-045-CLM-021; notas en la ficha de Rudra, el resumen de personaje y la vista interactiva `CONT-MAIN-LN`; pruebas para la fuente, el claim y la frontera de atribución.
 - **Límite aceptado:** la escena posterior no prueba que Rudra conociera, ordenara, diseñara o autorizara la trampa de Rudra Familia. No se añade relación canónica nueva; la afirmación sigue `secondary_checked` hasta cotejo licenciado.
-- **Estado actual:** implementación en rama de trabajo; CI, revisión e integración pendientes. DMR-045 continúa IN_PROGRESS y el cotejo primario sigue abierto.
+- **Integración y validación:** **Integración:** PR [#157](https://github.com/jonhararagi/wordwaifu/pull/157), merge SHA `364876830d0b16eccc81969ea928180c29ba9f35`.
+- **CI de PR (head `7efaaf78083989f737a0e85ce1f15dcff77b543e`):** [Validate #40354723328](https://github.com/jonhararagi/wordwaifu/actions/runs/40354723328) y [Lore/Integrity #40354723341](https://github.com/jonhararagi/wordwaifu/actions/runs/40354723341), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Lore/Integrity #40354993811](https://github.com/jonhararagi/wordwaifu/actions/runs/40354993811) y [Validate #40354994039](https://github.com/jonhararagi/wordwaifu/actions/runs/40354994039), ambos `success` (confirmado el 2026-10-26).
+- **Límite factual:** `DMR-045-CLM-021` sigue `secondary_checked`; no se cotejó una página de la novela, no se añadió una arista canónica y no se atribuye a Rudra conocimiento u orden de la trampa previa.
+- **Estado del lore:** el detalle posterior se ha incorporado a la ficha de Rudra y su UI como pista secundaria de CONT-MAIN-LN. El cotejo primario y la atribución de conocimiento/orden previos siguen abiertos.
+
+### CONV-DM-2026-10-26-008 — Reintento de muestra licenciada para DMR-045
+- **Fecha:** 2026-10-26.
+- **Estado:** RECORDED.
+- **Resultado:** se confirmaron páginas públicas de BOOK☆WALKER para DanMachi vol. 14 y Astrea Record 3 con opción `試し読み`. El enlace de prueba de vol. 14 redirigió a un visor cuyo contenido no pudo recuperarse con la consulta web disponible; no se leyó texto narrativo, capítulo ni página.
+- **Alcance:** no se crea un ID de fuente duplicado, claim, alias o arista. Las rutas ya existentes siguen siendo simples rutas de lectura autorizada; los cinco cotejos primarios de DMR-045 permanecen abiertos.
+- **Límite operativo:** no se utilizó ningún espejo no autorizado ni se intentó eludir la limitación del visor. El siguiente paso útil es leer una vista previa que efectivamente muestre páginas narrativas en una sesión normal, o consultar una edición licenciada accesible.

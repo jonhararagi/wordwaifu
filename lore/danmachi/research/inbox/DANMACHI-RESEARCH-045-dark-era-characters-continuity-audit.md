@@ -424,6 +424,13 @@ La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confi
 - spoiler_level: major
 - confidence_note: El acceso directo a la wiki falló con HTTP 402; el contenido se recuperó del índice de búsqueda. No es una lectura cotejada de la novela. La aparición posterior de Rudra no demuestra que conociera, ordenara, diseñara o autorizara la trampa contra Astrea Familia. Mantener separadas las acciones de Rudra Familia, Jura y la deidad.
 
+## Integración y CI — DMR-045-CLM-021 (PR #157)
+
+- La nueva referencia secundaria y la nota de Rudra quedaron integradas en [PR #157](https://github.com/jonhararagi/wordwaifu/pull/157), merge SHA `364876830d0b16eccc81969ea928180c29ba9f35`.
+- CI de la PR sobre head `7efaaf78083989f737a0e85ce1f15dcff77b543e`: [Validate WordWaifu #40354723328](https://github.com/jonhararagi/wordwaifu/actions/runs/40354723328) y [DanMachi Lore and Retrieval Integrity #40354723341](https://github.com/jonhararagi/wordwaifu/actions/runs/40354723341), ambos `success`.
+- CI post-merge sobre el SHA exacto de `main` `364876830d0b16eccc81969ea928180c29ba9f35`: [DanMachi Lore and Retrieval Integrity #40354993811](https://github.com/jonhararagi/wordwaifu/actions/runs/40354993811) y [Validate WordWaifu #40354994039](https://github.com/jonhararagi/wordwaifu/actions/runs/40354994039), ambos `success` al comprobarse el 2026-10-26.
+- El claim permanece `secondary_checked`, no crea una arista nueva y solo describe una escena posterior atribuida a Rudra por la sinopsis comunitaria. No prueba conocimiento, orden o autorización de la trampa previa.
+
 ## Recuperación de las fuentes comunitarias desde la aplicación
 
 El directorio consultable de `src/lore-corpus.js` incluye entradas identificadas para las versiones inglesa y española de las fichas comunitarias relevantes para Alfia, Meteria, Zald, Erebus y Rudra/Rudra Familia. Las entradas describen el alcance de cada artículo y sus límites de atribución/continuidad; la prueba `tests/test_danmachi_lore_source_directory.cjs` evita que desaparezcan de la interfaz o se pierdan sus URLs.
@@ -872,3 +879,10 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - CI de PR: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254967) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254924), ambos success.
 - CI post-merge sobre el SHA exacto de `main`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40284421948) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40284422026), ambos success.
 - La integración valida el registro, los límites de evidencia, el catálogo y las regresiones; no aporta una página narrativa nueva. SRC-044 continúa `metadata_checked_only` y DMR-045 sigue abierto.
+
+
+## DMR-045 — reintento de lectura en muestra autorizada BOOK☆WALKER (2026-10-26)
+
+- **Rutas de lectura normal identificadas:** DanMachi volumen 14, [BOOK☆WALKER](https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/), y Astrea Record 3, [BOOK☆WALKER](https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/). La primera página expone el control `試し読み`; el enlace activado redirigió al visor `viewer-trial.bookwalker.jp`, que la herramienta de consulta no pudo abrir. La página de Astrea Record 3 también anuncia `試し読み`; no se recuperó su contenido narrativo.
+- **Resultado:** solo se corroboró la existencia de rutas autorizadas de vista previa, no el texto de la obra. No se verificaron escenas, capítulos/páginas, habilidades ni relaciones; no se añadió ID de fuente duplicado, claim, alias o arista.
+- **Estado y próximo paso:** los registros de rutas ya existentes se mantienen como metadatos/ruta de prueba hasta obtener texto narrativo realmente visible. Reintentar en una sesión de navegador normal o con una edición licenciada disponible; no usar espejos no autorizados ni inferir hechos del redireccionamiento del visor.
