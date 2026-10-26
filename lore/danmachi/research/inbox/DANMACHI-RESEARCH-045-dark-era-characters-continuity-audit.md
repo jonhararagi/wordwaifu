@@ -893,3 +893,12 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - Checks del head de la PR `671bdacba38e7e0b8d8e3322d2bcf2f1a0b3caec`: [Validate WordWaifu #40358799343](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799343) y [DanMachi Lore and Retrieval Integrity #40358799938](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799938), ambos `success`.
 - Checks post-merge disparados por push y asociados al SHA exacto `b01eeb269622d5d8c243fdf05c2fb056a7008221`: [Validate WordWaifu #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [DanMachi Lore and Retrieval Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
 - Sin cambio en la evidencia narrativa: SRC-046/CLM-021 sigue secundario. La consulta de las vistas previas BOOK☆WALKER no devolvió narración ni páginas legibles y no motivó claims duplicados. La investigación primaria para Alfia, Zald, Meteria, Erebus y Rudra continúa abierta.
+
+
+## DMR-045-SRC-047/048 — BookLive: ofertas de prueba licenciada, solo metadatos (2026-10-26)
+
+- **DMR-045-SRC-047:** [BookLive · DanMachi vol. 14](https://booklive.jp/product/index/title_id/201522/vol_no/014), CONT-MAIN-LN. La ficha expone los controles japoneses de prueba en navegador y app.
+- **DMR-045-SRC-048:** [BookLive · Astrea Record 3](https://booklive.jp/product/index/title_id/1237250/vol_no/003), CONT-AR. La ficha expone los mismos controles de prueba.
+- **Resultado de la consulta:** se inspeccionaron las páginas comerciales públicas y se confirmaron los controles de vista previa; no se abrió ni leyó ninguna página narrativa del visor. Estas son rutas de distribuidor licenciado para futuras consultas, no pasajes primarios.
+- **Regla de evidencia:** ambos registros llevan `claims_supported: []`, `events_supported: []` y `metadata_checked_only`. No se añadieron claims, aristas, aliases ni datos de canon. No debe inferirse la presencia/ausencia de un personaje a partir de esta verificación de metadatos.
+- **Continuidad y siguientes pasos:** SRC-047 queda en CONT-MAIN-LN y solo ofrece una ruta adicional para localizar las escenas del volumen 14 relevantes a Rudra; SRC-048 queda en CONT-AR y ofrece una ruta para revisar la novelización respecto de Alfia, Zald y Erebus. Los cinco localizadores narrativos primarios continúan pendientes.

@@ -3624,3 +3624,48 @@ verification_status: stub
 - rights_note: Se registra URL y paráfrasis breve, no una transcripción de la novela.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: secondary_checked
+
+
+## DMR-045-SRC-047 · BookLive — ficha y oferta de prueba de DanMachi vol. 14
+
+- source_id: DMR-045-SRC-047
+- title: ダンジョンに出会いを求めるのは間違っているだろうか１４
+- creator_or_publisher: BookLive / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_SAMPLE_OFFER
+- series: DanMachi / novela ligera principal
+- volume_or_edition: Volumen 14, edición digital japonesa
+- language: Japonés
+- official_url: https://booklive.jp/product/index/title_id/201522/vol_no/014
+- accessed_at: 2026-10-26
+- locator_type: retailer_product_page_and_sample_offer_metadata_only
+- locator: La ficha pública muestra los controles ブラウザ試し読み (prueba en navegador) y アプリ試し読みはこちら (prueba en app). No se inspeccionó el contenido de la vista previa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Esta es una ruta de consulta de distribuidor licenciado y una oferta de muestra, no texto narrativo primario leído. No confirma el capítulo 13, el epílogo ni hechos sobre Rudra Familia o responsabilidad personal de Rudra.
+- conflicting_sources: []
+- rights_note: Se guarda la URL y una descripción de la interfaz de la ficha; no se copia narración ni se intenta eludir el visor.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-048 · BookLive — ficha y oferta de prueba de Astrea Record 3
+
+- source_id: DMR-045-SRC-048
+- title: アストレア・レコード３ 正邪決戦
+- creator_or_publisher: BookLive / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_SAMPLE_OFFER
+- series: DanMachi / Astrea Record
+- volume_or_edition: Astrea Record 3, edición digital japonesa
+- language: Japonés
+- official_url: https://booklive.jp/product/index/title_id/1237250/vol_no/003
+- accessed_at: 2026-10-26
+- locator_type: retailer_product_page_and_sample_offer_metadata_only
+- locator: La ficha pública muestra los controles ブラウザ試し読み (prueba en navegador) y アプリ試し読みはこちら (prueba en app). No se inspeccionó el contenido de la vista previa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Esta es una ruta de consulta de distribuidor licenciado y una oferta de muestra, no texto narrativo primario leído. No confirma ninguna escena, habilidad, identidad o relación individual de Alfia, Zald o Erebus.
+- conflicting_sources: []
+- rights_note: Se guarda la URL y una descripción de la interfaz de la ficha; no se copia narración ni se intenta eludir el visor.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only

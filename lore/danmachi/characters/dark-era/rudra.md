@@ -10,6 +10,7 @@ source_refs:
   - DMR-045-SRC-010
   - DMR-045-SRC-037
   - DMR-045-SRC-046
+  - DMR-045-SRC-047
 claim_refs:
   - DMR-029-CLM-005
   - DMR-045-CLM-002
@@ -66,6 +67,7 @@ La ficha española etiqueta su debut como recuerdo de DanMachi volumen 14, mient
 - [Yen Press, volumen 14](https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel) — localizadores parciales de capítulo 13 y epílogo, DMR-045-SRC-010.
 - [Cronología oficial](https://danmachi.com/chronology/) — útil para mantener T-7 separado, no fuente directa de Rudra.
 - DMR-029-CLM-004/005 y DMR-045-CLM-002.
+- [BookLive · DanMachi vol. 14 (prueba anunciada; solo metadatos)](https://booklive.jp/product/index/title_id/201522/vol_no/014) (DMR-045-SRC-047) — la ficha ofrece prueba por navegador/app; no se inspeccionaron páginas narrativas.
 - [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md).
 
 **Pendiente de verificación primaria integral:** página exacta de la edición; fuente narrativa que identifique qué sabía o autorizó Rudra personalmente; cronología completa de su estado final. El capítulo 13 solo confirma parcialmente la trampa de la Familia, no una orden del dios.
