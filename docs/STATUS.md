@@ -479,3 +479,9 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI post-merge sobre el SHA exacto `968ad23141ffdc2db032383228445fddc753b755`:** [DanMachi Lore and Retrieval Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) y [Validate WordWaifu #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) finalizaron en `success`.
 - **Rutas añadidas:** SRC-047 BookLive DanMachi vol. 14 (`CONT-MAIN-LN`) y SRC-048 BookLive Astrea Record 3 (`CONT-AR`). Las páginas comerciales muestran prueba en navegador/app, pero no se leyó el interior de las muestras. Ambas son `metadata_checked_only` con `claims_supported: []`.
 - **Pendiente de investigación:** DMR-045 sigue `IN_PROGRESS`; los cinco localizadores primarios continúan abiertos. No se crean claims, relaciones o alias a partir de los botones de muestra.
+
+## DMR-045 — pista secundaria sobre el cierre de Astrea Record 3 (2026-10-26)
+- **Hallazgo:** el fragmento visible/indexado de la reseña comunitaria de BookLive DMR-045-SRC-043 parece resumir una ofrenda floral de Bell y Hermes ante tumbas de Erebus, Zald y Alfia.
+- **Implementación:** DMR-045-CLM-022 se registra en `CONT-AR` como `secondary_checked`, desde la misma fuente SRC-043. La pista aparece en las notas interactivas separadas de Alfia, Zald y Erebus.
+- **Límite:** no es lectura de la novela; no genera evento, aristas o relaciones, no confirma el destino individual y no importa la ideología de Erebus desde CONT-GAME.
+- **Pendiente:** cotejar el cierre en una edición licenciada y registrar capítulo/página solo si las páginas narrativas son realmente visibles.
