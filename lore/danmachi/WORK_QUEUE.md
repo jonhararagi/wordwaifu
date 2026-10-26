@@ -837,6 +837,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Mantener abierta la investigación narrativa primaria de Alfia, Zald, Meteria, Erebus y Rudra; las muestras consultadas no produjeron texto reproducible.
 
 
+- [x] Registrar como pista secundaria DMR-045-CLM-022 a partir de la entrada de reseña BookLive ya existente DMR-045-SRC-043: el resumen parece mencionar una ofrenda floral de Bell y Hermes ante tumbas de Erebus, Zald y Alfia. No crear aristas ni relaciones y no tratarlo como lectura de la novela.
+- [ ] Cotejar el cierre de Astrea Record 3 en una edición licenciada: confirmar si la escena y los personajes mencionados en CLM-022 aparecen en el texto, con localizador reproducible. Mantener el claim secundario hasta entonces.
+
 ### DMR-045 — rutas BookLive de prueba gratuita (2026-10-26)
 - [x] Registrar DMR-045-SRC-047 (BookLive, DanMachi vol. 14) y DMR-045-SRC-048 (BookLive, Astrea Record 3) como ofertas de prueba en navegador/app, solo metadatos, con `claims_supported: []` y pruebas de directorio e interfaz.
 - [x] Exponer las rutas desde los expedientes interactivos pertinentes sin mezclar CONT-MAIN-LN, CONT-AR y CONT-GAME.
