@@ -104,23 +104,24 @@
 - spoiler_level: major
 - confidence_note: El artículo informa esos nombres de armas y menciona por separado a Alfia/Zald en la biografía de Leon; la correspondencia exacta entre nombres y héroes es una hipótesis por cotejar, no una afirmación explícita verificada. No crear aristas del grafo. La sinopsis editorial oficial de volumen 20 no confirma estos detalles.
 
-### DMR-045-CLM-006 · Enfrentamientos citados en un fragmento indexado de Astrea Record 3
+### DMR-045-CLM-006 · Emparejamientos de combate descritos por una reseña comunitaria
 
 - claim_id: DMR-045-CLM-006
-- claim: Un fragmento indexado de la sinopsis editorial oficial de Astrea Record 3 afirma que, en el último día de los Siete Días de la Muerte, comienzan dos enfrentamientos: Zald contra Ottar en la superficie y Alfia contra Astrea Familia dentro del Dungeon. La ficha editorial directa devolvió HTTP 503 durante la comprobación del 2026-10-23; por ello, el claim se limita al texto visible del fragmento oficial indexado y no constituye un localizador del texto narrativo del volumen.
+- claim: Una reseña comunitaria de lectores de Astrea Record 3, publicada en BookLive y fechada el 11 de febrero de 2023, resume el último día de la guerra y ubica el duelo entre Zald y Ottar en la superficie, mientras que Alfia combate a Astrea Familia dentro del Dungeon. La misma entrada menciona a Delphyne. Esto se conserva como resumen secundario de un lector y pista de búsqueda, no como verificación del texto narrativo. La sinopsis editorial oficial de SB Creative describe la batalla final en términos generales, pero la página visible no nombra a estos participantes ni respalda los emparejamientos concretos.
 - character_ids: [CHAR-DARK-ALFIA, CHAR-DARK-ZALD, CHAR-OTTAR]
-- aspect: Emparejamientos de combate y ámbitos indicados por una sinopsis editorial
+- aspect: Emparejamientos de combate y ámbitos reportados por una reseña secundaria
 - era_or_interval: Último día de los Siete Días de la Muerte en CONT-AR; fecha absoluta, duración exacta y desarrollo desconocidos
 - continuity_scope: CONT-AR
-- source_id: DMR-045-SRC-005
-- source_title: Astrea Record 3 — fragmento indexado de la sinopsis editorial de SB Creative
-- source_type: OFFICIAL_REFERENCE
-- source_locator: Fragmento indexado de la ficha editorial que sitúa el inicio de Zald–Ottar en la superficie y Alfia–Astrea Familia dentro del Dungeon.
-- source_url: https://www.sbcr.jp/product/4815617554/
-- evidence_type: official_indexed_publisher_synopsis_excerpt
-- verification_status: source_checked_excerpt_only
+- source_id: DMR-045-SRC-043
+- source_title: BookLive — reseña comunitaria de Astrea Record 3, entrada atribuida a ブクログ
+- source_type: COMMUNITY_REVIEW
+- source_locator: Entrada “Posted by ブクログ”, 2023-02-11, en la página de reseñas del volumen 3
+- source_url: https://booklive.jp/review/list/title_id/1237250/vol_no/003
+- evidence_type: reader_review_summary
+- verification_status: secondary_checked
 - spoiler_level: major
-- confidence_note: El fragmento solo establece los dos emparejamientos y los ámbitos generales. No confirma técnicas, niveles, acciones individuales, resultados, supervivencia, daños, duración ni orden general de otros eventos. No se transfiere a CONT-MAIN-LN.
+- confidence_note: La reseña orienta la búsqueda de la escena, pero no sustituye la novela ni fija capítulo o página. No confirma técnicas, niveles, resultado, supervivencia, daños, duración ni secuencia completa. Mantener CONT-AR; no transferir el detalle a CONT-MAIN-LN.
+
 
 ### DMR-045-CLM-007 · Alfia es tía de Bell según entrevista del autor sobre la novelización
 
@@ -761,6 +762,17 @@ La consolidación de DMR-045 se integró en [PR #146](https://github.com/jonhara
 - **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-MAIN-LN.
 - **Interpretación permitida:** la ruta directa aporta una opción adicional para intentar lectura normal. No demuestra que el lector esté indisponible en general, ni verifica escenas, relaciones o hechos del canon. No se añadió ningún claim ni arista a partir de ella.
 - **Siguiente acción:** reintentar desde una sesión normal en la que el lector termine de cargar; registrar un localizador solo al ver páginas narrativas legibles.
+
+## Corrección de procedencia de DMR-045-CLM-006 (2026-10-26)
+
+Una revisión directa de la ficha editorial de SB Creative para Astrea Record 3 confirmó que su sinopsis visible describe la batalla final, pero no nombra los emparejamientos Zald–Ottar y Alfia–Astrea Familia. La frase detallada aparece en una reseña comunitaria de BookLive, en la entrada “Posted by ブクログ” del 2023-02-11. Por eso DMR-045-CLM-006 y su fuente pasan de atribución editorial/source_checked_excerpt_only a resumen secundario/secondary_checked. El contenido queda como pista de búsqueda; no se considera cotejado con la novela.
+
+## DMR-045-SRC-043 · BookLive — reseña comunitaria de Astrea Record 3
+
+- **Página consultada:** [BookLive — reseñas de Astrea Record 3](https://booklive.jp/review/list/title_id/1237250/vol_no/003).
+- **Localizador comunitario:** entrada “Posted by ブクログ”, fechada el 11-02-2023; resume el último día de la guerra y los combates Zald–Ottar en superficie y Alfia–Astrea Familia dentro del Dungeon.
+- **Clase y certeza:** COMMUNITY_REVIEW; secundaria; `secondary_checked`; continuidad `CONT-AR`.
+- **Límite:** no es una sinopsis editorial ni un fragmento de novela. El resumen se usa solo como pista; cotejar los combates en texto narrativo legible antes de elevar el dato.
 
 ## Integración y CI — rutas oficiales BinB de SB Creative (PR #147)
 
