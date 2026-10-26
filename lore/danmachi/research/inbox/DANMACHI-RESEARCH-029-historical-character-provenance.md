@@ -10,11 +10,11 @@
 - `aspect`: biografía, magia, condición física
 - `era_or_interval`: Astrea Record; páginas del volumen por cotejar
 - `continuity_scope`: CONT-AR
-- `source_id`: DMR-029-SRC-001; DMR-029-SRC-002; DMR-029-SRC-003; DMR-029-SRC-004
-- `source_title`: Alfia; Alfia/Habilidades; anuncio oficial de Astrea Record; resumen comunitario del volumen 3
+- `source_id`: DMR-029-SRC-001; DMR-029-SRC-002; DMR-029-SRC-003; DMR-029-SRC-004; DMR-045-SRC-034
+- `source_title`: Alfia; Alfia/Habilidades; anuncio oficial de Astrea Record; resumen comunitario del volumen 3; DanMachi Wiki (Miraheze) · Alfia
 - `source_type`: COMMUNITY_WIKI; OFFICIAL_REFERENCE
 - `source_locator`: Artículos comunitarios y anuncio editorial; capítulo/página de novela pendientes
-- `source_url`: https://danmachi.fandom.com/wiki/Alfia; https://danmachi.fandom.com/es/wiki/Alfia/Habilidades; https://danmachi.com/news/news131.php; https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3
+- `source_url`: https://danmachi.fandom.com/wiki/Alfia; https://danmachi.fandom.com/es/wiki/Alfia/Habilidades; https://danmachi.com/news/news131.php; https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3; https://danmachien.miraheze.org/wiki/Alfia
 - `evidence_type`: community_secondary_biography_with_publisher_context
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
@@ -26,11 +26,11 @@
 - `aspect`: afiliación, combate, estado histórico
 - `era_or_interval`: Astrea Record, tramo final; orden y página por cotejar
 - `continuity_scope`: CONT-AR
-- `source_id`: DMR-029-SRC-003; DMR-029-SRC-004; DMR-029-SRC-005
-- `source_title`: anuncio oficial de Astrea Record; resumen comunitario del volumen 3; Zald
+- `source_id`: DMR-029-SRC-003; DMR-029-SRC-004; DMR-029-SRC-005; DMR-045-SRC-035
+- `source_title`: anuncio oficial de Astrea Record; resumen comunitario del volumen 3; Zald; DanMachi Wiki (Miraheze) · Zald
 - `source_type`: OFFICIAL_REFERENCE; COMMUNITY_WIKI
 - `source_locator`: Anuncio editorial y secciones de historia/personalidad de la wiki
-- `source_url`: https://danmachi.com/news/news131.php; https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3; https://danmachi.fandom.com/es/wiki/Zald
+- `source_url`: https://danmachi.com/news/news131.php; https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3; https://danmachi.fandom.com/es/wiki/Zald; https://danmachien.miraheze.org/wiki/Zald
 - `evidence_type`: community_secondary_character_history
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
@@ -42,11 +42,11 @@
 - `aspect`: rol narrativo e ideología reportados
 - `era_or_interval`: Astrea Record original de Memoria Freese; escena exacta pendiente
 - `continuity_scope`: CONT-GAME
-- `source_id`: DMR-029-SRC-006
-- `source_title`: Erebus — DanMachi Wiki en inglés
+- `source_id`: DMR-029-SRC-006; DMR-045-SRC-036
+- `source_title`: Erebus — DanMachi Wiki en inglés; DanMachi Wiki (Miraheze) · Erebus
 - `source_type`: COMMUNITY_WIKI
 - `source_locator`: Summary y Personality; artículo comunitario sin paginación de escena
-- `source_url`: https://danmachi.fandom.com/wiki/Erebus
+- `source_url`: https://danmachi.fandom.com/wiki/Erebus; https://danmachien.miraheze.org/wiki/Erebus
 - `evidence_type`: community_secondary_character_summary
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
@@ -58,11 +58,11 @@
 - `aspect`: antagonismo, afiliación, causalidad de evento
 - `era_or_interval`: Meses después de T0; día exacto y secuencia de escenas pendientes
 - `continuity_scope`: CONT-MAIN-LN
-- `source_id`: DMR-029-SRC-007; DMR-029-SRC-008; DMR-029-SRC-009; DMR-029-SRC-010; DMR-029-SRC-011
-- `source_title`: Jura Halmer; Jura Halmer en español; Rudra Familia; DanMachi vol. 13; DanMachi vol. 14
+- `source_id`: DMR-029-SRC-007; DMR-029-SRC-008; DMR-029-SRC-009; DMR-029-SRC-010; DMR-029-SRC-011; DMR-045-SRC-037
+- `source_title`: Jura Halmer; Jura Halmer en español; Rudra Familia; DanMachi vol. 13; DanMachi vol. 14; DanMachi Wiki (Miraheze) · Rudra Familia
 - `source_type`: COMMUNITY_WIKI; OFFICIAL_PUBLISHER_REFERENCE
 - `source_locator`: Secciones de historia/afiliación y sinopsis editoriales de los volúmenes 13–14
-- `source_url`: https://danmachi.fandom.com/wiki/Jura_Halmer; https://danmachi.fandom.com/es/wiki/Jura_Halmer; https://danmachi.fandom.com/wiki/Rudra_Familia; https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel; https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel
+- `source_url`: https://danmachi.fandom.com/wiki/Jura_Halmer; https://danmachi.fandom.com/es/wiki/Jura_Halmer; https://danmachi.fandom.com/wiki/Rudra_Familia; https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel; https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel; https://danmachien.miraheze.org/wiki/Rudra_Familia
 - `evidence_type`: community_secondary_plot_summary_with_publisher_context
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
@@ -74,11 +74,11 @@
 - `aspect`: afiliación, rol histórico, relaciones
 - `era_or_interval`: Historia de Rudra Familia; fechas absolutas pendientes
 - `continuity_scope`: CONT-MAIN-LN
-- `source_id`: DMR-029-SRC-009; DMR-029-SRC-012
-- `source_title`: Rudra Familia; Rudra en español
+- `source_id`: DMR-029-SRC-009; DMR-029-SRC-012; DMR-045-SRC-037
+- `source_title`: Rudra Familia; Rudra en español; DanMachi Wiki (Miraheze) · Rudra Familia
 - `source_type`: COMMUNITY_WIKI
 - `source_locator`: Artículos comunitarios de familia y personaje
-- `source_url`: https://danmachi.fandom.com/wiki/Rudra_Familia; https://danmachi.fandom.com/es/wiki/Rudra
+- `source_url`: https://danmachi.fandom.com/wiki/Rudra_Familia; https://danmachi.fandom.com/es/wiki/Rudra; https://danmachien.miraheze.org/wiki/Rudra_Familia
 - `evidence_type`: community_secondary_identity_and_affiliation
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
@@ -94,11 +94,11 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `aspect`: habilidades, magia, límite físico y coste
 - `era_or_interval`: Astrea Record; instantánea histórica de personaje
 - `continuity_scope`: CONT-AR
-- `source_id`: DMR-029-SRC-001; DMR-029-SRC-002
-- `source_title`: Alfia; Alfia/Habilidades
+- `source_id`: DMR-029-SRC-001; DMR-029-SRC-002; DMR-045-SRC-034
+- `source_title`: Alfia; Alfia/Habilidades; DanMachi Wiki (Miraheze) · Alfia
 - `source_type`: COMMUNITY_WIKI
 - `source_locator`: Secciones de habilidades y magia de las fichas comunitarias; no se ha cotejado una página de la novela
-- `source_url`: https://danmachi.fandom.com/wiki/Alfia; https://danmachi.fandom.com/es/wiki/Alfia/Habilidades
+- `source_url`: https://danmachi.fandom.com/wiki/Alfia; https://danmachi.fandom.com/es/wiki/Alfia/Habilidades; https://danmachien.miraheze.org/wiki/Alfia
 - `evidence_type`: community_secondary_ability_summary
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
@@ -111,11 +111,11 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `aspect`: habilidades, coste, enfrentamiento y estado histórico
 - `era_or_interval`: Astrea Record; historia previa y desenlace del Gran Conflicto
 - `continuity_scope`: CONT-AR
-- `source_id`: DMR-029-SRC-004; DMR-029-SRC-005
-- `source_title`: Astrea Record volumen 3; Zald
+- `source_id`: DMR-029-SRC-004; DMR-029-SRC-005; DMR-045-SRC-035
+- `source_title`: Astrea Record volumen 3; Zald; DanMachi Wiki (Miraheze) · Zald
 - `source_type`: COMMUNITY_WIKI
 - `source_locator`: Resumen comunitario del volumen 3 y secciones de historia/habilidades de Zald
-- `source_url`: https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3; https://danmachi.fandom.com/es/wiki/Zald
+- `source_url`: https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3; https://danmachi.fandom.com/es/wiki/Zald; https://danmachien.miraheze.org/wiki/Zald
 - `evidence_type`: community_secondary_ability_and_plot_summary
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
@@ -179,15 +179,15 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `aspect`: afiliación y parentesco
 - `era_or_interval`: Historia familiar previa y posterior a la caída de Zeus/Hera; fechas exactas pendientes
 - `continuity_scope`: CONT-MAIN-LN; CONT-AR
-- `source_id`: DMR-021-SRC-006; DMR-029-SRC-015
-- `source_title`: Meteria; Meteria (español)
+- `source_id`: DMR-021-SRC-006; DMR-029-SRC-015; DMR-045-SRC-033
+- `source_title`: Meteria; Meteria (español); DanMachi Wiki (Miraheze) · Meteria
 - `source_type`: COMMUNITY_WIKI
 - `source_locator`: Secciones de afiliación y familiares de las fichas comunitarias
-- `source_url`: https://danmachi.fandom.com/wiki/Meteria; https://danmachi.fandom.com/es/wiki/Meteria
+- `source_url`: https://danmachi.fandom.com/wiki/Meteria; https://danmachi.fandom.com/es/wiki/Meteria; https://danmachien.miraheze.org/wiki/Meteria
 - `evidence_type`: community_secondary_family_relationships
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
-- `confidence_note`: Usar como hipótesis de parentesco con fuente secundaria; no implica que cualquier personaje conozca estos vínculos en cada escena. No identificar al padre de Bell.
+- `confidence_note`: Usar como parentesco reportado por wikis comunitarias, no como dato cotejado en novela. La página pública de Miraheze vuelve accesible el reporte en inglés, pero no aporta un localizador narrativo y no se ha establecido que sea editorialmente independiente de otras wikis; no implica que cualquier personaje conozca estos vínculos en cada escena. No identificar al padre de Bell.
 
 ### DMR-029-CLM-012 · Meteria: descripción de carácter en una nota del autor dentro de un escenario alternativo
 - `claim_id`: DMR-029-CLM-012
