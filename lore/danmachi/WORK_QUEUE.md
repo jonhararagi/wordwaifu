@@ -642,6 +642,12 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 ## DANMACHI-RESEARCH-045 · Alfia, Zald, Meteria, Erebus y Rudra
 
 **Actualización de interfaz y nuevas rutas autorizadas (2026-10-25):**
+**Nuevas rutas de compendios de muestra de distribuidor licenciado (2026-10-25):**
+- [x] Localizar los compendios gratuitos BOOK☆WALKER de octubre, noviembre y diciembre de 2022, que ofrecen muestras de Astrea Record 1, 2 y 3: DMR-045-SRC-030, DMR-045-SRC-031 y DMR-045-SRC-032.
+- [x] Seguir los enlaces de muestra normales. El compendio de octubre redirigió a un lector que no fue posible abrir; un reintento directo terminó en timeout. Los enlaces normales de muestra de noviembre y diciembre también terminaron en timeout. Ninguno expuso páginas narrativas.
+- [ ] Reintentar esas muestras solo por el lector normal; no tratar la vista de un compendio como edición final ni registrar pasajes que no se puedan leer.
+- **Estado:** los tres IDs son metadata_checked_only y tienen claims vacíos; no cierran la verificación primaria de DMR-045.
+
 **Rutas oficiales adicionales consultadas (2026-10-25):**
 - [x] Abrir por su URL pública normal el lector de muestra de SBCr eBook Store para Astrea Record 1/2/3; registrar DMR-045-SRC-020, DMR-045-SRC-021 y DMR-045-SRC-022 como metadata_checked_only, sin claims ni localizadores.
 - [x] Añadir las tres rutas al directorio consultable y cubrirlas con pruebas de regresión. Las tres devolvieron “Now loading...” y controles, sin páginas narrativas legibles.
@@ -649,7 +655,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Integración/CI:** PR [#129](https://github.com/jonhararagi/wordwaifu/pull/129), SHA f450e98426c38c9c54b0c9befc6a1e5388ea99ac. CI de la PR: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737355) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40228737354); CI post-merge sobre el SHA exacto: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879793) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40228879958). Los cuatro workflows terminaron en success.
 - [ ] Abrir manualmente las muestras inglesas mediante el lector normal de Google Play Books o una edición licenciada legible; registrar capítulo/página solo después de ver el pasaje concreto.
 - [ ] Reintentar manualmente los visores japoneses mediante su uso normal o consultar otra edición autorizada legible; solo registrar capítulo/página después de ver el pasaje concreto.
-- **Límite:** los accesos fallidos no demuestran que un personaje no aparezca ni que los libros sean indisponibles. Los registros DMR-045-SRC-018–028 son metadata_checked_only y tienen claims vacíos. DMR-045 continúa abierto para verificación primaria.
+- **Límite:** los accesos fallidos no demuestran que un personaje no aparezca ni que los libros sean indisponibles. Los registros DMR-045-SRC-018–032 son metadata_checked_only y tienen claims vacíos. DMR-045 continúa abierto para verificación primaria.
 - **Integración y CI:** [PR #127](https://github.com/jonhararagi/wordwaifu/pull/127), main SHA `1a1bc2be356463edde3464e530015674dd8bc767`; PR CI [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927385) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40225927413), ambos success; CI post-merge [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051519) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40226051508), ambos success.
 
 - [x] Exponer en “Más información” la nota de Meteria bajo CONT-MAIN-LN y su recuerdo alternativo por separado en CONT-AU.

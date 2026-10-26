@@ -362,3 +362,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR, head SHA `ae52715b0657f68bf65ecb7a3e158fad8bc1e6fd`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40232710265) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40232710323), ambos success.
 - **CI post-merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839057) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839130), ambos success; el segundo ejecutó browser smoke y validación de catálogo/enlaces.
 - **Límite factual:** todavía no se dispone de un pasaje narrativo primario legible para cerrar DMR-045; el orden de trabajo se corrigió, no la evidencia del canon.
+
+
+## DMR-045 — compendios de muestra BOOK☆WALKER Astrea Record 1–3 (2026-10-25)
+
+- Se añadieron al directorio consultable tres rutas de compendios gratuitos del distribuidor licenciado BOOK☆WALKER: octubre 2022 (Astrea Record 1), noviembre 2022 (volumen 2) y diciembre 2022 (volumen 3).
+- El compendio de octubre incluye explícitamente Astrea Record 1 y advierte que su muestra puede diferir parcialmente de la edición final. El enlace de lectura redirige al visor público, que no se pudo abrir en la extracción; un reintento de la URL del visor terminó en timeout. Los enlaces normales de muestra de noviembre y diciembre también terminaron en timeout.
+- Se registran DMR-045-SRC-030, DMR-045-SRC-031 y DMR-045-SRC-032 en la auditoría y el registro central de fuentes. Son metadata_checked_only y no respaldan afirmaciones, relaciones, habilidades ni localizadores narrativos.
+- Las pruebas de directorio exigen que las rutas aparezcan exactamente una vez, con las URLs correctas y los límites de evidencia; la prueba de DMR-045 comprueba que las tres entradas constan en auditoría, registro y cola.
+- **Estado:** implementado en rama de investigación; CI de PR y CI post-merge pendientes.
+- **Próxima prioridad:** volver a intentar los lectores normales solo si la ruta pública carga sin eludir restricciones y, de aparecer texto legible, cotejar un localizador específico. DMR-045 permanece abierto.
