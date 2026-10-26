@@ -647,6 +647,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Seguir los enlaces de muestra normales. El compendio de octubre redirigió a un lector que no fue posible abrir; un reintento directo terminó en timeout. Los enlaces normales de muestra de noviembre y diciembre también terminaron en timeout. Ninguno expuso páginas narrativas.
 - [ ] Reintentar esas muestras solo por el lector normal; no tratar la vista de un compendio como edición final ni registrar pasajes que no se puedan leer.
 - **Estado:** los tres IDs son metadata_checked_only y tienen claims vacíos; no cierran la verificación primaria de DMR-045.
+- **Integración:** PR [#143](https://github.com/jonhararagi/wordwaifu/pull/143), merge SHA `5cf3eb069bca47d2ce488a7ffb1128c1c830c7e4`.
+- **CI de PR:** [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108783) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108791), ambos success.
+- **CI post-merge:** [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414219) y [Lore/Retrieval](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414283), ambos success; browser smoke y enlaces/catálogo pasaron.
 
 **Rutas oficiales adicionales consultadas (2026-10-25):**
 - [x] Abrir por su URL pública normal el lector de muestra de SBCr eBook Store para Astrea Record 1/2/3; registrar DMR-045-SRC-020, DMR-045-SRC-021 y DMR-045-SRC-022 como metadata_checked_only, sin claims ni localizadores.
