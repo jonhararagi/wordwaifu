@@ -9,6 +9,7 @@ const dmr045 = read("lore/danmachi/research/inbox/DANMACHI-RESEARCH-045-dark-era
 const dmr029 = read("lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md");
 const sources = read("lore/danmachi/sources/00-registro-fuentes.md");
 const alfia = read("lore/danmachi/characters/dark-era/alfia.md");
+const zald = read("lore/danmachi/characters/dark-era/zald.md");
 const erebus = read("lore/danmachi/characters/dark-era/erebus.md");
 const meteria = read("lore/danmachi/characters/dark-era/meteria.md");
 const queue = read("lore/danmachi/WORK_QUEUE.md");
