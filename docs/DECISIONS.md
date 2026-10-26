@@ -124,3 +124,9 @@
 **Decisión:** El diálogo de investigación clasifica explícitamente las referencias como wiki comunitaria no oficial, entrevista, publicación autoral, ficha editorial/metadatos, muestra licenciada o fuente oficial/primaria. Una entrevista autoral no se representa como una página de novela, una ficha de editorial no demuestra una escena y una muestra que no carga no confirma presencia ni ausencia de un personaje.
 **Aplicación:** Las notas de Meteria, Erebus y Rudra se presentan bajo sus respectivas continuidades; CONT-AU y CONT-GAME no se transfieren automáticamente a CONT-MAIN-LN o CONT-AR. Los resultados de búsqueda incompletos (incluido HTTP 429) se registran como limitación de acceso, nunca como resultado factual.
 **Motivo:** hacer utilizable la procedencia dentro de la enciclopedia sin fingir verificación primaria ni crear claims o relaciones de relleno.
+
+## DEC-024 — La procedencia de cada afirmación debe coincidir con el texto accesible de la fuente
+**Estado:** Aprobada como criterio de calidad de evidencia.
+**Decisión:** cuando un dato detallado solo aparece en una reseña, resumen comunitario o resultado secundario, no se atribuye a la sinopsis oficial enlazada aunque trate del mismo volumen. La fuente primaria/editorial respalda únicamente lo que su contenido visible afirma. Una corrección de procedencia no convierte el dato en falso; cambia su clase de evidencia y el nivel de verificación.
+**Aplicación:** DMR-045-CLM-006 se vincula a la reseña comunitaria DMR-045-SRC-043 y queda secondary_checked; DMR-045-SRC-005 mantiene la descripción general de la batalla y ya no respalda los emparejamientos concretos.
+**Motivo:** evitar que una atribución errónea haga parecer un dato secundario más firme de lo que la evidencia permite.
