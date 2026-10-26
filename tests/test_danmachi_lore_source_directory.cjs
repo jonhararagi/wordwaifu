@@ -145,4 +145,27 @@ assert.match(bookwalkerDanmachi14[0].limits, /No se obtuvo página narrativa/i);
 assert.match(bookwalkerDanmachi14[0].limits, /no respalda la trampa de Rudra Familia/i);
 assert.match(bookwalkerDanmachi14[0].limits, /metadata_checked_only/);
 
+const mirahezeSources = [
+  ["community-miraheze-meteria-en", "https://danmachien.miraheze.org/wiki/Meteria"],
+  ["community-miraheze-alfia-en", "https://danmachien.miraheze.org/wiki/Alfia"],
+  ["community-miraheze-zald-en", "https://danmachien.miraheze.org/wiki/Zald"],
+  ["community-miraheze-erebus-en", "https://danmachien.miraheze.org/wiki/Erebus"],
+  ["community-miraheze-rudra-familia-en", "https://danmachien.miraheze.org/wiki/Rudra_Familia"]
+];
+for (const [id, url] of mirahezeSources) {
+  const rows = sources.filter(source => source.id === id);
+  assert.equal(rows.length, 1, id + " must be discoverable exactly once");
+  assert.equal(rows[0].category, "community");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].limits, /no.*(fuente oficial|localizador primario|fuente primaria|canon primario)/i);
+}
+const mirahezeMeteria = sources.find(source => source.id === "community-miraheze-meteria-en");
+assert.match(mirahezeMeteria.coverage, /madre de Bell/);
+assert.match(mirahezeMeteria.coverage, /hermana gemela de Alfia/);
+assert.match(mirahezeMeteria.limits, /independiente de otras wikis/i);
+const mirahezeErebus = sources.find(source => source.id === "community-miraheze-erebus-en");
+assert.match(mirahezeErebus.limits, /Eren.*sin confirmación primaria/i);
+const mirahezeRudra = sources.find(source => source.id === "community-miraheze-rudra-familia-en");
+assert.match(mirahezeRudra.limits, /no prueba que diseñara, conociera, ordenara o autorizara/i);
+
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
