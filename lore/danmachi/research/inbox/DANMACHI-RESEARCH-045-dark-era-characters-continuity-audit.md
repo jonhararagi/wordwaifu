@@ -406,6 +406,24 @@ La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confi
 - CI post-merge sobre el SHA de `main`: [DanMachi Lore and Retrieval Integrity #40348901258](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901258) `success`; [Validate WordWaifu #40348901098](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901098) sigue `in_progress` en `Install Chromium` según la última consulta.
 - Esta integración habilita la consulta de las pistas en la interfaz, pero no cierra el cotejo de la novela. Los claims siguen `secondary_checked` y los cinco localizadores primarios permanecen abiertos.
 
+### DMR-045-CLM-021 · Rudra aparece ante Ryuu después de la venganza, según el resumen comunitario del volumen 14
+
+- claim_id: DMR-045-CLM-021
+- claim: La sinopsis comunitaria de DanMachi vol. 14 relata que, después de que Ryuu atacara la sede de Rudra Familia, matara a sus integrantes y destruyera el edificio, el dios Rudra apareció ante ella. El resumen le atribuye una risa y el comentario de que le habría gustado invitar a la Ryuu de ese momento a su Familia; después de que ella se marchó, el Gremio capturó a Rudra y lo envió al Cielo. La afirmación se limita a esa secuencia posterior descrita por la fuente secundaria.
+- character_ids: [CHAR-DARK-RUDRA]
+- aspect: aparición personal reportada, comentario a Ryuu y destino posterior
+- era_or_interval: Retrospectiva del capítulo 13 de DanMachi vol. 14; fecha interna exacta no establecida aquí
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-046
+- source_title: DanMachi Wiki · DanMachi Light Novel Volume 14/Synopsis
+- source_type: COMMUNITY_WIKI
+- source_locator: Resumen del capítulo 13, Beyond a Thousand Darknesses; sin página narrativa primaria
+- source_url: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis
+- evidence_type: community_chapter_synopsis
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: El acceso directo a la wiki falló con HTTP 402; el contenido se recuperó del índice de búsqueda. No es una lectura cotejada de la novela. La aparición posterior de Rudra no demuestra que conociera, ordenara, diseñara o autorizara la trampa contra Astrea Familia. Mantener separadas las acciones de Rudra Familia, Jura y la deidad.
+
 ## Recuperación de las fuentes comunitarias desde la aplicación
 
 El directorio consultable de `src/lore-corpus.js` incluye entradas identificadas para las versiones inglesa y española de las fichas comunitarias relevantes para Alfia, Meteria, Zald, Erebus y Rudra/Rudra Familia. Las entradas describen el alcance de cada artículo y sus límites de atribución/continuidad; la prueba `tests/test_danmachi_lore_source_directory.cjs` evita que desaparezcan de la interfaz o se pierdan sus URLs.

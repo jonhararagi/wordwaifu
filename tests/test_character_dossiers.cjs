@@ -109,6 +109,10 @@ assert.ok(rudraMainInfo.references.some(ref => ref.kind === "licensed_preview" &
   "Rudra's dossier must link the Google Play Books sample route with its access limit.");
 assert.ok(rudraMainInfo.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1"),
   "Rudra's dossier must keep the existing BOOK☆WALKER sample route reachable.");
+assert.ok(rudraMainInfo.sections.some(section => section.text.includes("le habría gustado invitar") && section.text.toLowerCase().includes("no demuestra que rudra conociera")),
+  "Rudra's later appearance must be exposed as secondary evidence without implying prior authorization.");
+assert.ok(rudraMainInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis"),
+  "Rudra's personal-scene lead must link the volume 14 community synopsis.");
 
 bell.history = "mutated";
 assert.notEqual(api.get("DM-CHAR-BELL").history, "mutated", "Callers must not mutate the shared dossier catalog.");

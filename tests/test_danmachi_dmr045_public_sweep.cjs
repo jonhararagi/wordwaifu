@@ -12,6 +12,7 @@ const alfia = read("lore/danmachi/characters/dark-era/alfia.md");
 const zald = read("lore/danmachi/characters/dark-era/zald.md");
 const erebus = read("lore/danmachi/characters/dark-era/erebus.md");
 const meteria = read("lore/danmachi/characters/dark-era/meteria.md");
+const rudra = read("lore/danmachi/characters/dark-era/rudra.md");
 const queue = read("lore/danmachi/WORK_QUEUE.md");
 
 function section(markdown, id) {
@@ -50,6 +51,13 @@ assert.match(meteria, /dulce/);
 
 assert.match(sources, /DMR-045-CLM-015/);
 assert.match(sources, /DMR-045-CLM-018/);
+const rudraPersonalScene = section(dmr045, "DMR-045-CLM-021");
+assert.match(rudraPersonalScene, /continuity_scope: CONT-MAIN-LN/);
+assert.match(rudraPersonalScene, /source_id: DMR-045-SRC-046/);
+assert.match(rudraPersonalScene, /no demuestra.*conociera.*autorizara/i);
+assert.match(sources, /DMR-045-SRC-046/);
+assert.match(rudra, /DMR-045-CLM-021/);
+assert.match(rudra, /no demuestra que Rudra conociera.*autorizara/i);
 assert.match(queue, /Estado del subtrabajo.*DONE/i);
 assert.match(queue, /## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes/);
 assert.ok(queue.includes("## Etapa posterior — Orario y cobertura de la ciudad (pendiente tras DMR-045)"));

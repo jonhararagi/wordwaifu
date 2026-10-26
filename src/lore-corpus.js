@@ -151,6 +151,9 @@
     { id:"community-vol20-synopsis", category:"community", title:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",
       coverage:"Resumen comunitario por capítulos del volumen 20: pistas secundarias sobre Alfia en el capítulo 2 y Zald/Leon/Udaeus en el capítulo 3 (DMR-045-CLM-019 y DMR-045-CLM-020).",
       limits:"Sinopsis de wiki comunitaria, no texto primario ni localizador de página. El acceso directo quedó bloqueado en esta consulta; se usó el contenido indexado por búsqueda. Mantener como pista secundaria de CONT-MAIN-LN, sin promover a escena cotejada." },
+    { id:"community-volume-14-synopsis", category:"community", title:"DanMachi Wiki · DanMachi Light Novel Volume 14/Synopsis", publisher:"DanMachi Wiki contributors", authority:"Fuente secundaria", url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis",
+      coverage:"Resumen comunitario del capítulo 13: después de la venganza de Ryuu contra Rudra Familia, describe la aparición de Rudra, su comentario sobre invitarla a su Familia y su posterior captura por el Gremio.",
+      limits:"Sinopsis comunitaria, no página narrativa primaria. La apertura directa devolvió HTTP 402 en esta consulta; se usó contenido indexado por búsqueda. No demuestra que Rudra conociera, ordenara o autorizara la trampa anterior. Mantener CONT-MAIN-LN como evidencia secundaria." },
   ];
   const DEFAULT_RESEARCH_PATHS = [
     "research/inbox/BATCH-DM-003-era-oscura-y-personajes-multiepoca.md",

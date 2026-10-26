@@ -9,11 +9,13 @@ source_refs:
   - DMR-029-SRC-012
   - DMR-045-SRC-010
   - DMR-045-SRC-037
+  - DMR-045-SRC-046
 claim_refs:
   - DMR-029-CLM-005
   - DMR-045-CLM-002
   - DMR-045-CLM-013
   - DMR-045-CLM-014
+  - DMR-045-CLM-021
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases:
   - "Rudra"
@@ -31,6 +33,14 @@ Esta ficha pertenece a **CONT-MAIN-LN**, en la ruta posterior alrededor de T-5 r
 El resumen comunitario atribuía a la **Familia en conjunto** una trampa contra Astrea Familia. Ahora existe un localizador narrativo parcial en el volumen 14, capítulo 13: la retrospectiva describe que Rudra Familia dispuso más de cien explosivos dentro del Dungeon; Jura aparece con esa facción cuando Astrea Familia está a punto de enfrentarse al grupo y, después del lamento del Dungeon, aparece el Juggernaut (DMR-045-CLM-013). Esto apoya la responsabilidad colectiva en la trampa, pero **no** demuestra que Rudra, como deidad patrona, diseñara, ordenara, autorizara o conociera el plan. Esas atribuciones personales permanecen pendientes.
 
 El epílogo (DMR-045-CLM-014) distingue el relato público de la verdad del incidente: se comunicó en la superficie que Jura y otros supervivientes de Rudra Familia murieron y que Gale Wind murió junto a ellos. No debe leerse ese relato público como prueba de la muerte real de Ryuu. La página exacta de ambos pasajes no ha sido verificada; el dossier mantiene pendiente la biografía personal de Rudra.
+
+## Acción personal reportada al final de la retrospectiva
+
+La sinopsis comunitaria del volumen 14 relata que, una vez que Ryuu había destruido la sede y eliminado a los integrantes de Rudra Familia, el dios Rudra apareció ante ella. Según ese resumen, se rio y comentó que le habría gustado invitar a la Ryuu de ese momento a su Familia; después de la marcha de Ryuu, el Gremio lo capturó y lo envió al Cielo (DMR-045-CLM-021). Se mantiene como afirmación secundaria de CONT-MAIN-LN, sin página narrativa cotejada.
+
+**Límite de atribución:** esta escena posterior no demuestra que Rudra conociera, ordenara, diseñara o autorizara la trampa anterior de Rudra Familia. La responsabilidad colectiva de la Familia, las acciones de Jura y la aparición posterior de la deidad siguen siendo afirmaciones distintas.
+
+- Fuente secundaria: [DanMachi Wiki · resumen del volumen 14](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis) (DMR-045-SRC-046).
 
 ## Localizadores narrativos parciales — DanMachi vol. 14
 

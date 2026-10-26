@@ -3601,3 +3601,26 @@ verification_status: stub
 - rights_note: Se conservan URL y paráfrasis breve; no se reproduce extensamente el resumen comunitario ni el texto de la novela.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: secondary_checked
+
+
+## DMR-045-SRC-046 · DanMachi Wiki — resumen del volumen 14
+
+- source_id: DMR-045-SRC-046
+- title: DanMachi Light Novel Volume 14/Synopsis
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi / novela ligera principal
+- volume_or_edition: DanMachi vol. 14; resumen comunitario por capítulos
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis
+- accessed_at: 2026-10-26
+- locator_type: community_chapter_synopsis
+- locator: Resumen comunitario del capítulo 13 (Beyond a Thousand Darknesses), en la sección que describe la venganza de Ryuu contra Rudra Familia y la aparición posterior de Rudra; no aporta página de la novela.
+- claims_supported: [DMR-045-CLM-021]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: La página directa de Fandom devolvió HTTP 402 en esta consulta; se usó el contenido indexado del resultado de búsqueda. La fuente secundaria atribuye a Rudra una aparición y comentario posteriores a la destrucción de su Familia, pero no prueba que conociera, ordenara o autorizara la trampa previa.
+- conflicting_sources: []
+- rights_note: Se registra URL y paráfrasis breve, no una transcripción de la novela.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
