@@ -37,8 +37,11 @@ assert.ok(alfiaArchiveInfo.sections.some(section => section.text.includes("campa
   "The Alfia archive modal must expose the Genos Angelus report while retaining its secondary-evidence boundary.");
 assert.ok(alfiaArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Alfia/Habilidades"),
   "Alfia's interactive research note must link the Spanish community source with its type preserved.");
-assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-ALFIA", "CONT-MAIN-LN", null), null,
-  "Astrea Record ability notes must not be presented as a main-light-novel profile.");
+const alfiaMainNovelInfo = archiveApi.getExtendedInfo("CHAR-DARK-ALFIA", "CONT-MAIN-LN", null);
+assert.ok(alfiaMainNovelInfo && alfiaMainNovelInfo.title.includes("volumen 20"),
+  "Alfia must expose a distinct CONT-MAIN-LN volume 20 lead without relabelling it as Astrea Record.");
+assert.ok(!alfiaMainNovelInfo.sections.some(section => section.text.includes("campana gris plateada")),
+  "Alfia CONT-AR ability details must not leak into the main-novel note.");
 
 const zaldArchiveInfo = archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-AR", null);
 assert.ok(zaldArchiveInfo && zaldArchiveInfo.title.includes("Zald"), "Zald's expanded research notes must be reachable from his interactive archive profile in CONT-AR.");
@@ -46,8 +49,22 @@ assert.ok(zaldArchiveInfo.sections.some(section => section.text.includes("nivel 
   "Zald's Deus Ambrosia example must be labelled a community report rather than a universal rule.");
 assert.ok(zaldArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Zald"),
   "Zald's interactive research note must preserve its community source type.");
-assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null), null,
-  "Astrea Record ability notes must not be presented as a main-light-novel profile.");
+const zaldMainNovelInfo = archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null);
+assert.ok(zaldMainNovelInfo && zaldMainNovelInfo.title.includes("volumen 20"),
+  "Zald must expose a distinct CONT-MAIN-LN volume 20 lead without relabelling it as Astrea Record.");
+assert.ok(!zaldMainNovelInfo.sections.some(section => section.text.includes("Deus Ambrosia")),
+  "Zald CONT-AR ability details must not leak into the main-novel note.");
+
+const alfiaVol20Info = archiveApi.getExtendedInfo("CHAR-DARK-ALFIA", "CONT-MAIN-LN", null);
+assert.ok(alfiaVol20Info && alfiaVol20Info.sections.some(section => section.text.includes("Leon") && section.text.includes("pista secundaria")),
+  "Alfia volume 20 retrospective clue must be reachable in main-novel continuity with secondary-evidence limits.");
+assert.ok(alfiaVol20Info.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis"),
+  "Alfia volume 20 clue must expose the synopsis URL and community source type.");
+const zaldVol20Info = archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null);
+assert.ok(zaldVol20Info && zaldVol20Info.sections.some(section => section.text.includes("Udaeus") && section.text.includes("evidencia secundaria")),
+  "Zald Udaeus/sword-technique clue must be reachable in CONT-MAIN-LN and remain secondary.");
+assert.ok(zaldVol20Info.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis"),
+  "Zald volume 20 clue must expose the community synopsis URL and source type.");
 
 const meteriaMainInfo = archiveApi.getExtendedInfo("CHAR-METERIA", "CONT-MAIN-LN", null);
 assert.ok(meteriaMainInfo && meteriaMainInfo.title.includes("Meteria"),

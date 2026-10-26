@@ -130,3 +130,11 @@
 **Decisión:** cuando un dato detallado solo aparece en una reseña, resumen comunitario o resultado secundario, no se atribuye a la sinopsis oficial enlazada aunque trate del mismo volumen. La fuente primaria/editorial respalda únicamente lo que su contenido visible afirma. Una corrección de procedencia no convierte el dato en falso; cambia su clase de evidencia y el nivel de verificación.
 **Aplicación:** DMR-045-CLM-006 se vincula a la reseña comunitaria DMR-045-SRC-043 y queda secondary_checked; DMR-045-SRC-005 mantiene la descripción general de la batalla y ya no respalda los emparejamientos concretos.
 **Motivo:** evitar que una atribución errónea haga parecer un dato secundario más firme de lo que la evidencia permite.
+
+
+## DEC-025 — Las sinopsis comunitarias por capítulo son pistas secundarias, no localizadores primarios
+**Estado:** Aprobada como criterio de investigación.
+**Decisión:** cuando una wiki comunitaria conocida ofrece un resumen por capítulo con datos útiles que una ficha editorial no contiene, WordWaifu puede incorporar una paráfrasis breve y claims propios con fuente, capítulo del resumen, continuidad y límites explícitos. El capítulo del resumen no es una página de la novela ni convierte el dato en verificación primaria.
+**Aplicación:** DMR-045-SRC-045 aporta dos pistas para el volumen 20: DMR-045-CLM-019 (Alfia en la retrospectiva de Leon) y DMR-045-CLM-020 (Zald y Udaeus). Ambas quedan secondary_checked y no crean aristas canónicas ni cierran los localizadores primarios.
+**Límites:** indicar si se usó contenido indexado en vez de lectura directa; no copiar extensamente la sinopsis ni atribuirla a la editorial.
+**Motivo:** enriquecer fichas desde fuentes públicas disponibles sin crear una falsa impresión de lectura o certeza.

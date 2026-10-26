@@ -9,6 +9,7 @@ const required = [
   ["community-meteria-en", "https://danmachi.fandom.com/wiki/Meteria"],
   ["community-meteria-es", "https://danmachi.fandom.com/es/wiki/Meteria"],
   ["community-zald-en", "https://danmachi.fandom.com/wiki/Zald"],
+  ["community-vol20-synopsis", "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis"],
   ["community-erebus-en", "https://danmachi.fandom.com/wiki/Erebus"],
   ["community-rudra-familia-en", "https://danmachi.fandom.com/wiki/Rudra_Familia"],
   ["community-rudra-es", "https://danmachi.fandom.com/es/wiki/Rudra"]
@@ -26,6 +27,13 @@ for (const [id, url] of required) {
   assert.equal(source.authority, "Fuente secundaria", id + " must be labeled as a secondary source");
   assert.match(source.limits, /CONT-/, id + " must state a continuity/evidence boundary");
 }
+
+const vol20Synopsis = sources.filter(source => source.id === "community-vol20-synopsis");
+assert.equal(vol20Synopsis.length, 1, "the volume 20 chapter synopsis must be discoverable exactly once");
+assert.equal(vol20Synopsis[0].authority, "Fuente secundaria");
+assert.match(vol20Synopsis[0].coverage, /DMR-045-CLM-019.*DMR-045-CLM-020/);
+assert.match(vol20Synopsis[0].limits, /no texto primario ni localizador de página/i);
+assert.match(vol20Synopsis[0].limits, /CONT-MAIN-LN/);
 
 const licensedAstrea = sources.filter(source => source.id === "publisher-yenpress-astrea-record-vol3");
 assert.equal(licensedAstrea.length, 1, "the licensed English edition must have one discoverable source entry");

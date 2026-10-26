@@ -15,6 +15,7 @@ source_refs:
   - DMR-045-SRC-009
   - DMR-045-SRC-013
   - DMR-045-SRC-035
+  - DMR-045-SRC-045
 claim_refs:
   - DMR-029-CLM-002
   - DMR-029-CLM-007
@@ -22,6 +23,7 @@ claim_refs:
   - DMR-045-CLM-006
   - DMR-045-CLM-011
   - DMR-045-CLM-016
+  - DMR-045-CLM-020
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Zald"
@@ -71,6 +73,13 @@ La wiki describe **Afterglow** como una técnica compartida históricamente por 
 - **Claim de búsqueda:** DMR-029-CLM-015.
 - **Pista adicional del volumen 20:** un comentario comunitario dirige al lector a las retrospectivas de los capítulos 2–3 para comprobar Afterglow y dice que el caso de Zald resulta más explícito (DMR-045-CLM-016). Esto aún no equivale a cotejar el pasaje: no se asigna página ni se elevan la mecánica o la acción individual a dato primario. Ruta de búsqueda: [Pista de Afterglow en los capítulos 2–3](../../events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md).
 - **Estado:** secondary_checked. El repertorio y los detalles técnicos no deben presentarse como cotejo primario; la potencia depende del usuario y no convierte el ataque en un recurso ilimitado.
+
+## Pista secundaria del capítulo 3 del volumen 20 — Zald y su técnica de espada
+
+La sinopsis comunitaria del volumen 20 relata que Leon siguió a Zald a los pisos profundos del Dungeon y vio cómo derrotaba a Udaeus de un golpe; el resumen dice que Zald permitió a Leon observar su técnica de espada. Se registró por separado como DMR-045-CLM-020, bajo CONT-MAIN-LN y secondary_checked. La descripción procede de una wiki comunitaria, no de la lectura directa del volumen, y no aporta una página reproducible.
+
+- Fuente: [DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis) (DMR-045-SRC-045).
+- Límite: utilizar como ruta de búsqueda; no convertirlo en localizador primario ni afirmar que la mecánica completa de Afterglow ha sido cotejada.
 
 ## Relaciones navegables
 - **[Zeus Familia](../../familias/zeus-familia.md) / [Zeus](../zeus.md):** afiliación reportada y contexto histórico.

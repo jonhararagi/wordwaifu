@@ -3396,7 +3396,7 @@ verification_status: stub
 - accessed_at: 2026-10-25
 - locator_type: community_character_summary_and_appearance_metadata
 - locator: Infobox y secciones de identidad/filosofía; la ficha lista Astrea Record vol. 1 como aparición en novela y describe su presencia en el evento original de Memoria Freese.
-- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003, DMR-045-CLM-018]
+- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003]
 - events_supported: []
 - continuity_scope: CONT-GAME; CONT-AR (appearance metadata only, secondary)
 - reliability_note: La ficha también usa “Eren”, pero eso no verifica que sea un alias canónico en la novelización. No se traslada automáticamente la filosofía del juego a CONT-AR ni se deducen poderes o una cadena de mando completa de Evilus.
@@ -3578,3 +3578,26 @@ verification_status: stub
 - rights_note: Se conservan metadatos y enlaces; no se extrajo texto protegido ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-045 · DanMachi Wiki — resumen por capítulos del volumen 20
+
+- source_id: DMR-045-SRC-045
+- title: DanMachi Light Novel Volume 20/Synopsis
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi / novela ligera principal
+- volume_or_edition: DanMachi vol. 20; resumen comunitario de capítulos
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis
+- accessed_at: 2026-10-26
+- locator_type: community_chapter_synopsis
+- locator: Resúmenes de los capítulos 2 (The Lion and the Sword Princess) y 3 (The World, the Festival, and the Truth); no es paginación de la novela.
+- claims_supported: [DMR-045-CLM-019, DMR-045-CLM-020]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN (resumen secundario, no texto narrativo cotejado)
+- reliability_note: Se recuperó contenido indexado de la página mediante resultados de búsqueda; la apertura directa quedó bloqueada por el sitio (HTTP 402) durante esta consulta. La wiki aporta pistas de escena y nombres, pero no demuestra la formulación exacta ni proporciona páginas del libro. No elevar a evidencia primaria ni asumir independencia editorial respecto de otras wikis.
+- conflicting_sources: []
+- rights_note: Se conservan URL y paráfrasis breve; no se reproduce extensamente el resumen comunitario ni el texto de la novela.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked

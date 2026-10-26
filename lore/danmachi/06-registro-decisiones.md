@@ -105,3 +105,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Estado:** Integrada mediante [PR #151](https://github.com/jonhararagi/wordwaifu/pull/151), merge SHA `fc3080189815805ae2e0853b177bae33d0cec516`. Ambos workflows de PR pasaron sobre head `4771a81e371f4c2997c4c2fb9414e809d1645ee9`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40265979989) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40265980006). El conector de consulta solo devuelve ejecuciones disparadas por pull_request, por lo que no se afirma un resultado para los workflows push post-merge.
 - **Decisión:** cuando una frase detallada aparece en una reseña de usuario y la sinopsis oficial no la contiene, el claim debe citar la reseña como fuente secundaria y la ficha editorial debe limitarse a lo que efectivamente muestra. No inferir procedencia por proximidad al título o por un resultado de búsqueda agregado.
 - **Aplicación:** DMR-045-CLM-006 se vincula a la reseña comunitaria DMR-045-SRC-043 y queda secondary_checked; DMR-045-SRC-043 registra BookLive; SRC-005 deja de listar ese claim. El detalle de combate continúa pendiente de cotejo primario.
+
+
+### DEC-DM-013 — Sinopsis comunitaria por capítulos como pista secundaria trazable
+- **Fecha:** 2026-10-26.
+- **Estado:** ACCEPTED.
+- **Decisión:** una sinopsis de wiki puede servir para investigar escenas concretas cuando el texto licenciado no se ha podido leer, siempre que cada afirmación tenga su claim, URL, capítulo del resumen, continuidad y límite de evidencia. El capítulo de la wiki no se presenta como página de la novela y la paráfrasis no se atribuye a una ficha editorial.
+- **Aplicación:** DMR-045-SRC-045 sustenta los claims secundarios DMR-045-CLM-019 (Alfia/Leon, resumen del capítulo 2) y DMR-045-CLM-020 (Zald/Leon/Udaeus, resumen del capítulo 3). Los datos son secondary_checked; no crean aristas nuevas y no cierran la verificación primaria.
+- **Contexto:** https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis; contenido recuperado por el índice de búsqueda el 2026-10-26, mientras el acceso directo quedó bloqueado.

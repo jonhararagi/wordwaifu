@@ -429,3 +429,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de PR:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254967) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254924), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40284421948) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40284422026), ambos `success`.
 - **Límite factual:** `DMR-045-SRC-044` sigue `metadata_checked_only`; el lector no expuso texto narrativo. La integración técnica no cierra los cinco localizadores primarios de DMR-045.
+
+
+## DMR-045 — sinopsis comunitaria por capítulos del volumen 20
+
+- **Fuente registrada:** DMR-045-SRC-045, [DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis), clasificada como fuente secundaria comunitaria.
+- **Claims añadidos:** DMR-045-CLM-019 (pista sobre Alfia y Leon en el resumen del capítulo 2) y DMR-045-CLM-020 (pista sobre Zald, Leon y Udaeus en el resumen del capítulo 3). Ambos permanecen secondary_checked, en CONT-MAIN-LN.
+- **UI:** las fichas de Alfia y Zald muestran el contexto resumido en sus expedientes y en las notas ampliadas de continuidad CONT-MAIN-LN, enlazando URL y tipo de fuente.
+- **Corrección de procedencia adicional:** CI detectó que SRC-036 (Miraheze · Erebus) enumeraba CLM-018, aunque ese claim cita la ficha inglesa de Fandom DMR-029-SRC-006. SRC-036 ya no declara ese apoyo incorrecto.
+- **Límite:** el contenido se recuperó del índice de búsqueda; el acceso directo a la wiki quedó bloqueado. No se verificaron páginas de la novela ni se crearon aristas nuevas. Los cinco localizadores primarios de DMR-045 siguen pendientes.

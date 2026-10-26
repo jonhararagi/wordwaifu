@@ -363,6 +363,42 @@ La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confi
 - spoiler_level: major
 - confidence_note: Es una paráfrasis de una wiki, no una cita del juego ni una declaración directa del autor. No convertir la ideología en una jerarquía sobre Evilus ni atribuirle cada acción de la red; comprobar los diálogos de la versión que se quiera representar.
 
+### DMR-045-CLM-019 · Alfia en la retrospectiva de Leon según el resumen comunitario del volumen 20
+
+- claim_id: DMR-045-CLM-019
+- claim: La sinopsis comunitaria por capítulos de DanMachi vol. 20 sitúa en el capítulo 2 una retrospectiva de Leon en la que Alfia, la Emperatriz y otros miembros de la generación anterior lo golpeaban a menudo; el resumen atribuye a Alfia haberlo animado a adquirir fuerza suficiente para cortar una colina. Es un resumen secundario de la novela principal, no una escena cotejada directamente ni una página narrativa reproducible.
+- character_ids: [CHAR-DARK-ALFIA]
+- aspect: relación histórica reportada con Leon; entrenamiento y motivación atribuidos
+- era_or_interval: Retrospectiva del capítulo 2 del volumen 20; fecha interna exacta no establecida aquí
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-045
+- source_title: DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis
+- source_type: COMMUNITY_WIKI
+- source_locator: Resumen de capítulo 2, The Lion and the Sword Princess; sin folio o página del texto primario
+- source_url: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis
+- evidence_type: community_chapter_synopsis
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: El contenido se recuperó mediante el índice de búsqueda y la apertura directa del sitio no se pudo inspeccionar. No se fija una página, no se confirma la formulación literal ni se convierte el relato de wiki en verificación primaria. Mantenerlo como pista útil para cotejo de CONT-MAIN-LN, separado de CONT-AR.
+
+### DMR-045-CLM-020 · Zald y la técnica de espada en la retrospectiva del volumen 20
+
+- claim_id: DMR-045-CLM-020
+- claim: La sinopsis comunitaria del capítulo 3 de DanMachi vol. 20 cuenta que Leon siguió a Zald a los pisos profundos del Dungeon y presenció que derrotó a Udaeus de un solo golpe; también resume que Leon quería aprender la técnica de espada de Zald y que este le permitió observarla. El resumen atribuye a Zald una posición entre los espadachines más hábiles de la generación de Zeus y Hera Familias. Estos detalles orientan la búsqueda, pero no se han cotejado en el texto narrativo primario.
+- character_ids: [CHAR-DARK-ZALD]
+- aspect: técnica de espada, entrenamiento e impresión de Leon sobre Zald
+- era_or_interval: Retrospectiva del capítulo 3 del volumen 20; fecha interna exacta no establecida aquí
+- continuity_scope: CONT-MAIN-LN
+- source_id: DMR-045-SRC-045
+- source_title: DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis
+- source_type: COMMUNITY_WIKI
+- source_locator: Resumen de capítulo 3, The World, the Festival, and the Truth; sin folio o página del texto primario
+- source_url: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis
+- evidence_type: community_chapter_synopsis
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: Fuente comunitaria, no transcripción de novela. El acceso directo a la página no se completó, y el contenido recuperado por el índice no proporciona número de página. No promover el uso de Afterglow ni los detalles del combate contra Udaeus a source_checked_excerpt_only.
+
 ## Recuperación de las fuentes comunitarias desde la aplicación
 
 El directorio consultable de `src/lore-corpus.js` incluye entradas identificadas para las versiones inglesa y española de las fichas comunitarias relevantes para Alfia, Meteria, Zald, Erebus y Rudra/Rudra Familia. Las entradas describen el alcance de cada artículo y sus límites de atribución/continuidad; la prueba `tests/test_danmachi_lore_source_directory.cjs` evita que desaparezcan de la interfaz o se pierdan sus URLs.
