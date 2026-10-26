@@ -374,3 +374,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR, head SHA `9b032700559afcfdc3fd4ba1fd45f931829bf0fb`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108783) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108791), ambos success.
 - **CI post-merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414219) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414283), ambos success; el último ejecutó browser smoke y validación de catálogo/enlaces.
 - **Próxima prioridad:** volver a intentar los lectores normales solo si la ruta pública carga sin eludir restricciones y, de aparecer texto legible, cotejar un localizador específico. DMR-045 permanece abierto.
+
+## DMR-045 — fuentes secundarias Miraheze y ruta licenciada NOOK (2026-10-25)
+
+- **SRC-033–037:** se añadieron cinco páginas comunitarias en inglés de Miraheze como referencias secundarias para Meteria, Alfia, Zald, Erebus y Rudra Familia. No son fuentes oficiales, no se presume independencia editorial respecto de otras wikis y no se elevan sus resúmenes a localizadores primarios.
+- **SRC-038:** la ficha de Barnes & Noble para DanMachi vol. 14 muestra “Read sample” hacia el lector NOOK. La apertura de esa ruta devolvió “Cache miss” en esta consulta; no se obtuvieron páginas narrativas y el fallo no demuestra indisponibilidad global.
+- **Integridad factual:** SRC-030–032 continúan reservados a las muestras recopilatorias BOOK☆WALKER de Astrea Record 1–3; los IDs SRC-033–037 corresponden a Miraheze y SRC-038 a NOOK. Todos los registros distinguen la fuente y su alcance de continuidad. No se crean claims, aliases, relaciones ni hechos canónicos nuevos.
+- **Pendiente:** DMR-045 sigue IN_PROGRESS. Los cinco localizadores primarios permanecen abiertos; las fichas secundarias y los errores de visor no validan escenas ni responsabilidad personal de Rudra. Orario no vuelve a ser la prioridad activa.
+- **Estado de esta ampliación:** preparada en la rama de consolidación; pendiente de CI y revisión/fusión.
+
+
