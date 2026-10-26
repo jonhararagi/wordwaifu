@@ -640,3 +640,42 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Interpretación permitida:** se añade otra ruta de consulta autorizada para intentar revisar manualmente el volumen 14. La ficha de producto, la sinopsis y la existencia de la opción “Free sample” no verifican la retrospectiva del capítulo 13, el epílogo ni la atribución grupal de la trampa. La herramienta tampoco ha confirmado si la muestra se ofrece en todas las regiones.
 - **Siguiente acción:** abrir la ficha desde el acceso normal de Google Play Books en un entorno donde la opción de muestra esté disponible; registrar página/capítulo solamente después de ver texto narrativo legible.
 - **Relación con fuentes existentes:** el volumen 14 ya cuenta con la ruta de muestra japonesa de BOOK☆WALKER en DMR-045-SRC-028, cuyo visor devolvió un error de descarga. Esta entrada no duplica ese ID porque corresponde a un distribuidor y edición de consulta diferentes, y tampoco crea un claim nuevo.
+
+
+## DMR-045-SRC-030 · BOOK☆WALKER — compendio gratuito de octubre de 2022 (muestra de Astrea Record 1)
+
+- **Fecha de consulta:** 2026-10-25.
+- **Ficha del distribuidor:** [GA文庫＆GAノベル2022年10月の新刊 全作品立読み（合本版）](https://bookwalker.jp/dedafe030d-bc1c-4b5a-ad6a-877ba7bc3e7b/).
+- **Ruta de muestra normal:** [Leer el compendio gratuito](https://bookwalker.jp/dedafe030d-bc1c-4b5a-ad6a-877ba7bc3e7b/?sample=2).
+- **Tipo:** compilación de muestras gratuitas de un distribuidor licenciado (BOOK☆WALKER / SB Creative / GA Bunko), no la edición final individual.
+- **Metadatos verificados:** el compendio cuesta ¥0, lista Astrea Record 1 (邪悪胎動) entre las obras incluidas y advierte que la muestra compilada puede diferir parcialmente del producto final.
+- **Resultado del acceso:** el enlace normal redirigió al lector público viewer.bookwalker.jp/browserWebApi/03/view?cid=dafe030d-bc1c-4b5a-ad6a-877ba7bc3e7b. La consulta web no pudo abrir esa vista; un reintento directo de la misma URL pública mediante extracción terminó en timeout. No se vio una página narrativa legible.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** esta es una nueva vía gratuita y autorizada para intentar la lectura manual normal del fragmento de Astrea Record 1. El lector que no cargó no demuestra que la muestra sea inaccesible para todos, y el compendio puede variar respecto del producto final.
+- **Siguiente acción:** si el lector abre normalmente en una sesión legible, registrar volumen/versión/página exactos y cotejar solo el texto que realmente aparece.
+
+## DMR-045-SRC-031 · BOOK☆WALKER — compendio gratuito de noviembre de 2022 (muestra de Astrea Record 2)
+
+- **Fecha de consulta:** 2026-10-25.
+- **Ficha del distribuidor:** [GA文庫＆GAノベル2022年11月の新刊 全作品立読み（合本版）](https://bookwalker.jp/ded45bc452-2ba7-41c9-9d75-e6951e5231fc/).
+- **Ruta de muestra normal:** [Leer el compendio gratuito](https://bookwalker.jp/ded45bc452-2ba7-41c9-9d75-e6951e5231fc/?sample=2).
+- **Tipo:** compilación de muestras gratuitas de un distribuidor licenciado (BOOK☆WALKER / SB Creative / GA Bunko).
+- **Metadatos verificados:** la ficha pública describe el volumen como compendio gratuito de muestras y anuncia Astrea Record 2, con una sinopsis sobre el periodo denominado «los siete días de la muerte» en Orario.
+- **Resultado del acceso:** el enlace normal de muestra terminó en timeout durante la extracción pública. No se obtuvo una página narrativa legible, un capítulo ni un localizador de personajes.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** la página comercial identifica una ruta de muestra; la sinopsis no demuestra las acciones o apariciones de Alfia, Zald o Erebus en las páginas no leídas. Un timeout no demuestra indisponibilidad global.
+- **Siguiente acción:** reintentar la muestra mediante el lector normal si carga en una sesión pública legible; registrar únicamente el pasaje efectivamente visto.
+
+## DMR-045-SRC-032 · BOOK☆WALKER — compendio gratuito de diciembre de 2022 (muestra de Astrea Record 3)
+
+- **Fecha de consulta:** 2026-10-25.
+- **Ficha del distribuidor:** [GA文庫＆GAノベル2022年12月の新刊 全作品立読み（合本版）](https://bookwalker.jp/def1fe306c-b1b8-4c55-9390-1cb7f16d0775/).
+- **Ruta de muestra normal:** [Leer el compendio gratuito](https://bookwalker.jp/def1fe306c-b1b8-4c55-9390-1cb7f16d0775/?sample=2).
+- **Tipo:** compilación de muestras gratuitas de un distribuidor licenciado (BOOK☆WALKER / SB Creative / GA Bunko).
+- **Metadatos verificados:** la ficha pública describe el volumen como compendio gratuito de muestras y anuncia Astrea Record 3, 正邪決戦, y la conclusión de la batalla entre justicia y mal.
+- **Resultado del acceso:** el enlace normal de muestra terminó en timeout durante la extracción pública. No se obtuvo una página narrativa legible, un capítulo ni un localizador de personajes.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** la sinopsis no verifica escenas, técnicas ni desenlaces por personaje. El timeout no demuestra indisponibilidad global y no se infiere la presencia o ausencia de nadie.
+- **Siguiente acción:** reintentar la muestra mediante el lector normal si carga en una sesión pública legible; registrar únicamente el pasaje efectivamente visto.
+
+**Límite conjunto de SRC-030–032:** se localizaron tres compendios gratuitos licenciados correspondientes a las muestras de Astrea Record 1–3. En esta consulta, los tres accesos de lectura fallaron (un redireccionamiento no legible más timeout para Vol. 1; timeout para Vols. 2–3). Ningún registro aporta un claim ni un localizador narrativo primario. DMR-045 continúa abierto.
