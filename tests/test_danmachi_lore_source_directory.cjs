@@ -270,6 +270,9 @@ assert.ok(bookLiveAstrea3Review[0].coverage.includes("Zald–Ottar"));
 assert.ok(bookLiveAstrea3Review[0].coverage.includes("Alfia contra Astrea Familia"));
 assert.ok(bookLiveAstrea3Review[0].limits.includes("no es la sinopsis editorial oficial"));
 assert.ok(bookLiveAstrea3Review[0].limits.includes("CONT-AR"));
+assert.ok(bookLiveAstrea3Review[0].coverage.includes("DMR-045-CLM-022"));
+assert.ok(bookLiveAstrea3Review[0].coverage.includes("Bell y Hermes") && bookLiveAstrea3Review[0].coverage.includes("tumbas de Erebus, Zald y Alfia"));
+assert.ok(bookLiveAstrea3Review[0].limits.includes("no confirmación de escena"));
 
 const sbCreativeVol20 = sources.filter(source => source.id === "official-sbcreative-danmachi-vol20-sample");
 assert.equal(sbCreativeVol20.length, 1, "SB Creative DanMachi vol. 20 reader route must be discoverable exactly once");
