@@ -783,3 +783,13 @@ Las rutas DMR-045-SRC-039–042 se integraron en main mediante [PR #147](https:/
 - **DanMachi Lore and Retrieval Integrity:** [run 40262391545](https://github.com/jonhararagi/wordwaifu/actions/runs/40262391545), success; incluye las pruebas de catálogo, retrieval, integridad y browser smoke.
 - **Límite post-merge:** el conector de consulta disponible solo devuelve workflows disparados por pull_request, por lo que no permitió verificar los workflows push después de la fusión. No se declara su resultado.
 - **Límite factual:** las rutas siguen metadata_checked_only; ninguna entregó texto narrativo legible ni un localizador de capítulo/página. DMR-045 permanece IN_PROGRESS.
+
+## Integración de la corrección de procedencia — PR #151
+
+La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jonhararagi/wordwaifu/pull/151), merge SHA `fc3080189815805ae2e0853b177bae33d0cec516`.
+
+- **Head validado:** `4771a81e371f4c2997c4c2fb9414e809d1645ee9`.
+- **Validate WordWaifu:** [run 40265979989](https://github.com/jonhararagi/wordwaifu/actions/runs/40265979989), success.
+- **DanMachi Lore and Retrieval Integrity:** [run 40265980006](https://github.com/jonhararagi/wordwaifu/actions/runs/40265980006), success; incluyó pruebas de catálogo/relaciones, recuperación y browser smoke.
+- **Límite post-merge:** el conector de consulta disponible solo devuelve workflows disparados por pull_request, por lo que no permitió verificar los workflows push del SHA de fusión. No se declara su resultado.
+- **Estado factual:** DMR-045-CLM-006 se mantiene secondary_checked y cita DMR-045-SRC-043. No se afirma que la escena esté leída directamente en la novela; los cinco localizadores primarios siguen pendientes.

@@ -358,3 +358,10 @@
 - **Corrección:** el detalle se reasigna a DMR-045-SRC-043 (COMMUNITY_REVIEW) y DMR-045-CLM-006 pasa a secondary_checked; SRC-005 mantiene el alcance general de la sinopsis y ya no respalda ese claim.
 - **Impacto:** se actualizan el directorio de fuentes, el registro central, la auditoría, las fichas de Alfia/Zald, el grafo, la cola, el índice maestro, el estado y las pruebas. No se añaden hechos ni relaciones nuevas; se corrige el tipo de evidencia.
 - **Pendiente:** encontrar y cotejar la escena en un ejemplar o lector licenciado con texto legible antes de elevar el dato a evidencia primaria.
+
+### CONV-DM-2026-10-26-003 — Registrar integración de la corrección de procedencia
+- **Fecha:** 2026-10-26.
+- **Integración:** PR #151, merge SHA fc3080189815805ae2e0853b177bae33d0cec516.
+- **CI de PR:** Validate WordWaifu success (https://github.com/jonhararagi/wordwaifu/actions/runs/40265979989) y DanMachi Lore and Retrieval Integrity success (https://github.com/jonhararagi/wordwaifu/actions/runs/40265980006), ambos sobre head 4771a81e371f4c2997c4c2fb9414e809d1645ee9.
+- **CI post-merge:** el conector de workflows utilizado filtra por pull_request y no permitió comprobar los runs push asociados al SHA de fusión; no se afirma ese resultado.
+- **Resultado de lore:** SRC-005 quedó limitado a la sinopsis oficial general; SRC-043 es la reseña comunitaria para CLM-006; claim y dos relaciones figuran secondary_checked. DMR-045 sigue abierto para cotejo primario.

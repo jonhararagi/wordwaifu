@@ -405,3 +405,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - Esos detalles aparecen en una reseña comunitaria en [BookLive](https://booklive.jp/review/list/title_id/1237250/vol_no/003), entrada “Posted by ブクログ” fechada el 11-02-2023. Se registra como DMR-045-SRC-043 (COMMUNITY_REVIEW, secondary_checked).
 - DMR-045-CLM-006 ahora depende de SRC-043, no de SRC-005. SRC-005 conserva el alcance de sinopsis editorial general y ya no declara respaldar ese claim. Las fichas de Alfia y Zald quedaron corregidas y el test de integridad protege la atribución.
 - **Estado de canon:** el detalle sigue siendo secundario; no se inventó capítulo/página ni se marca como cotejado en el texto de la novela. DMR-045 continúa IN_PROGRESS y los cinco localizadores primarios permanecen abiertos.
+
+## DMR-045 — integración de la corrección de procedencia (PR #151)
+
+- La corrección de DMR-045-CLM-006 quedó integrada en [PR #151](https://github.com/jonhararagi/wordwaifu/pull/151), merge SHA `fc3080189815805ae2e0853b177bae33d0cec516`.
+- Los dos workflows de la PR pasaron sobre el head `4771a81e371f4c2997c4c2fb9414e809d1645ee9`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40265979989) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40265980006). El segundo completó las pruebas de catálogo/grafo, retrieval y browser smoke.
+- El validador del catálogo confirmó que las dos relaciones de Alfia y Zald coinciden con secondary_checked y community_review_summary; el registro central de DMR-045 tiene 40 IDs únicos, incluidos SRC-043.
+- **Límite post-merge:** el conector disponible solo expone runs disparados por pull_request y no permitió verificar los workflows push del SHA de fusión. No se afirma su resultado.
+- **Estado del lore:** DMR-045 sigue IN_PROGRESS; la reseña BookLive permanece como pista secundaria, y los cinco localizadores primarios continúan pendientes.
