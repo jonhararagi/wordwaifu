@@ -16,6 +16,7 @@ source_refs:
   - DMR-045-SRC-005
   - DMR-045-SRC-009
   - DMR-045-SRC-011
+  - DMR-045-SRC-031
   - DMR-045-SRC-012
   - DMR-045-SRC-013
 claim_refs:
@@ -111,6 +112,7 @@ La wiki española de Astrea Record volumen 3 sirve como mapa de búsqueda y menc
 
 ## Fuentes
 - [Alfia · DanMachi Wiki, inglés](https://danmachi.fandom.com/wiki/Alfia) — resumen comunitario.
+- [Alfia · DanMachi Wiki (Miraheze), inglés](https://danmachien.miraheze.org/wiki/Alfia) (DMR-045-SRC-031) — referencia comunitaria alternativa; la lista de apariciones menciona el volumen 20 como flashback, sin capítulo/página cotejado.
 - [Alfia/Habilidades · DanMachi Wiki, español](https://danmachi.fandom.com/es/wiki/Alfia/Habilidades) — catálogo secundario de habilidades y magias.
 - [Astrea Record, volumen 3 · referencia comunitaria](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3) — pista de localización, no cotejo de páginas.
 - [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — respalda el contexto editorial, no cada dato biográfico.
