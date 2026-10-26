@@ -40,11 +40,11 @@
 - aspect: atribución de responsabilidad, afiliación y causalidad de evento
 - era_or_interval: T-5 aproximado según resumen comunitario; fecha exacta pendiente
 - continuity_scope: CONT-MAIN-LN
-- source_id: DMR-029-SRC-009
-- source_title: Rudra Familia — DanMachi Wiki
+- source_id: DMR-029-SRC-009; DMR-045-SRC-034
+- source_title: Rudra Familia — DanMachi Wiki; DanMachi Wiki (Miraheze) · Rudra Familia
 - source_type: COMMUNITY_WIKI
 - source_locator: Resumen de historia; trampa, daño al Dungeon y aparición del Juggernaut
-- source_url: https://danmachi.fandom.com/wiki/Rudra_Familia
+- source_url: https://danmachi.fandom.com/wiki/Rudra_Familia; https://danmachien.miraheze.org/wiki/Rudra_Familia
 - evidence_type: community_secondary_faction_history_with_attribution_limit
 - verification_status: secondary_checked
 - spoiler_level: major
@@ -58,11 +58,11 @@
 - aspect: identidad divina, apariencia, afiliación y alias reportados en una ficha asociada al juego
 - era_or_interval: Astrea Record original de Memoria Freese; localizador narrativo específico pendiente
 - continuity_scope: CONT-GAME
-- source_id: DMR-029-SRC-006
-- source_title: Erebus — DanMachi Wiki en inglés
+- source_id: DMR-029-SRC-006; DMR-045-SRC-033
+- source_title: Erebus — DanMachi Wiki en inglés; DanMachi Wiki (Miraheze) · Erebus
 - source_type: COMMUNITY_WIKI
 - source_locator: Summary, Characteristics, Professional Status, Personal Status y Debuts
-- source_url: https://danmachi.fandom.com/wiki/Erebus
+- source_url: https://danmachi.fandom.com/wiki/Erebus; https://danmachien.miraheze.org/wiki/Erebus
 - evidence_type: community_secondary_identity_profile
 - verification_status: secondary_checked
 - spoiler_level: major
@@ -294,11 +294,11 @@
 - aspect: pista de aparición y localizador secundario para una escena histórica
 - era_or_interval: DanMachi volumen 20, prólogo/flashback; fecha interna desconocida
 - continuity_scope: CONT-MAIN-LN
-- source_id: DMR-045-SRC-011; DMR-029-SRC-001
-- source_title: Discusión comunitaria sobre páginas de muestra de DanMachi vol. 20; Alfia — DanMachi Wiki en inglés
+- source_id: DMR-045-SRC-011; DMR-029-SRC-001; DMR-045-SRC-031
+- source_title: Discusión comunitaria sobre páginas de muestra de DanMachi vol. 20; Alfia — DanMachi Wiki en inglés; DanMachi Wiki (Miraheze) · Alfia
 - source_type: COMMUNITY_DISCUSSION; COMMUNITY_WIKI
 - source_locator: Hilo “Vol 20 preview pages”, publicado el 2024-12-06; DanMachi Wiki, apartado Debuts / Light Novel, que indexa el volumen 20 como flashback
-- source_url: https://www.reddit.com/r/DanMachi/comments/1h7wabo/; https://danmachi.fandom.com/wiki/Alfia
+- source_url: https://www.reddit.com/r/DanMachi/comments/1h7wabo/; https://danmachi.fandom.com/wiki/Alfia; https://danmachien.miraheze.org/wiki/Alfia
 - evidence_type: community_preview_summary_and_secondary_appearance_locator
 - verification_status: secondary_checked
 - spoiler_level: major
