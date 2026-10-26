@@ -168,4 +168,37 @@ assert.match(mirahezeErebus.limits, /Eren.*sin confirmación primaria/i);
 const mirahezeRudra = sources.find(source => source.id === "community-miraheze-rudra-familia-en");
 assert.match(mirahezeRudra.limits, /no prueba que diseñara, conociera, ordenara o autorizara/i);
 
+
+const bookwalkerAnthology1 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol1-sample-anthology");
+const bookwalkerAnthology2 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol2-sample-anthology");
+const bookwalkerAnthology3 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol3-sample-anthology");
+for (const [label, rows, url] of [
+  ["BOOK☆WALKER October anthology / Astrea Record 1", bookwalkerAnthology1, "https://bookwalker.jp/dedafe030d-bc1c-4b5a-ad6a-877ba7bc3e7b/?sample=2"],
+  ["BOOK☆WALKER November anthology / Astrea Record 2", bookwalkerAnthology2, "https://bookwalker.jp/ded45bc452-2ba7-41c9-9d75-e6951e5231fc/?sample=2"],
+  ["BOOK☆WALKER December anthology / Astrea Record 3", bookwalkerAnthology3, "https://bookwalker.jp/def1fe306c-b1b8-4c55-9390-1cb7f16d0775/?sample=2"]
+]) {
+  assert.equal(rows.length, 1, label + " route must be discoverable exactly once");
+  assert.equal(rows[0].category, "licensed_retailer");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].limits, /metadata_checked_only/);
+  assert.match(rows[0].limits, /No se obtuvieron páginas narrativas|No se vio ninguna página narrativa/i);
+}
+assert.match(bookwalkerAnthology1[0].limits, /viewer\.bookwalker\.jp/);
+assert.match(bookwalkerAnthology1[0].limits, /timeout/);
+assert.match(bookwalkerAnthology2[0].limits, /timeout/);
+assert.match(bookwalkerAnthology3[0].limits, /timeout/);
+assert.match(bookwalkerAnthology1[0].coverage, /puede diferir parcialmente del producto final/i);
+
+const barnesNobleDanmachi14 = sources.filter(source => source.id === "licensed-retailer-barnes-noble-danmachi-vol14-sample");
+assert.equal(barnesNobleDanmachi14.length, 1, "Barnes & Noble NOOK vol. 14 sample route must be discoverable exactly once");
+assert.equal(barnesNobleDanmachi14[0].category, "licensed_retailer");
+assert.equal(barnesNobleDanmachi14[0].url, "https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019");
+assert.match(barnesNobleDanmachi14[0].authority, /Read sample/i);
+assert.match(barnesNobleDanmachi14[0].coverage, /Barnes & Noble/);
+assert.match(barnesNobleDanmachi14[0].limits, /Cache miss/i);
+assert.match(barnesNobleDanmachi14[0].limits, /No se leyó el capítulo 13/i);
+assert.match(barnesNobleDanmachi14[0].limits, /no demuestra indisponibilidad general/i);
+assert.match(barnesNobleDanmachi14[0].limits, /metadata_checked_only/);
+assert.match(barnesNobleDanmachi14[0].limits, /no respalda.*responsabilidad personal de Rudra/i);
+
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
