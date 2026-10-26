@@ -96,6 +96,13 @@ assert.match(queue, /DMR-045-SRC-023/);
 assert.match(queue, /DMR-045-SRC-024/);
 assert.match(queue, /DMR-045-SRC-025/);
 assert.match(queue, /DMR-045-SRC-029/);
+for (const id of ["DMR-045-SRC-030", "DMR-045-SRC-031", "DMR-045-SRC-032", "DMR-045-SRC-033", "DMR-045-SRC-034"]) {
+  assert.match(dmr045, new RegExp(id));
+  assert.match(sources, new RegExp(id));
+  assert.match(queue, new RegExp(id));
+}
+assert.match(dmr045, /no se ha establecido la independencia editorial/i);
+assert.match(dmr045, /no cierran ninguno de los cinco localizadores primarios/i);
 assert.match(erebus, /CONT-GAME/);
 assert.match(meteria, /no pronuncia el nombre Meteria/i);
 assert.match(queue, /Cotejar los localizadores primarios pendientes/i);
