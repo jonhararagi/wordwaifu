@@ -130,6 +130,14 @@ assert.ok(sources.includes("https://nook.barnesandnoble.com/products/97819753850
 const sourceIds = [...sources.matchAll(/^- source_id: (DMR-045-SRC-\d{3})$/gm)].map(match => match[1]);
 assert.equal(new Set(sourceIds).size, sourceIds.length, "DMR-045 source IDs must be unique");
 
+for (const id of ["DMR-045-SRC-039", "DMR-045-SRC-040", "DMR-045-SRC-041", "DMR-045-SRC-042"]) {
+  assert.match(dmr045, new RegExp(id));
+  assert.match(sources, new RegExp(id));
+  assert.match(queue, new RegExp(id));
+}
+assert.match(dmr045, /Now loading\.\.\./);
+assert.ok(dmr045.includes("https://ebook.sbcr.jp/landing/p/danmachi"));
+
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, "DMR-045 claim IDs must be unique");
 
