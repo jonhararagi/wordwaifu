@@ -433,3 +433,11 @@
 - **CI pre-merge sobre head** `6d89ea9a7846c64132b08f58b628ff70b075a302`: [Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [DanMachi Lore and Retrieval Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success`.
 - **CI post-merge final:** [Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) y [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) terminaron en `success` sobre el SHA exacto de `main` `968ad23141ffdc2db032383228445fddc753b755`. El estado previo `in_progress` de Chromium fue transitorio.
 - **Alcance factual:** SRC-047 (DanMachi vol. 14, CONT-MAIN-LN) y SRC-048 (Astrea Record 3, CONT-AR) son fichas BookLive con oferta de vista previa, no narración leída. Ambos conservan `metadata_checked_only` y claims/events vacíos. No se añadieron claims, aristas ni aliases y no se elevaron los niveles de evidencia de Alfia, Zald, Meteria, Erebus o Rudra.
+
+### CONV-DM-2026-10-26-012 — Pista de cierre de Astrea Record 3 en reseña BookLive
+- **Fecha:** 2026-10-26.
+- **Estado:** RECORDED; claim secundario añadido, verificación primaria pendiente.
+- **Hallazgo:** el fragmento visible/indexado de la reseña comunitaria BookLive SRC-043 parece mencionar una ofrenda floral de Bell y Hermes ante tumbas de Erebus, Zald y Alfia.
+- **Implementación:** DMR-045-CLM-022, continuity_scope `CONT-AR`, status `secondary_checked`; enlace desde las notas interactivas de los tres personajes y pruebas de regresión.
+- **Límites:** no se crea un evento ni relaciones; no se infiere vínculo privado o destino individual a partir de la reseña. No se trasladan a la novelización los detalles de Erebus pertenecientes a CONT-GAME.
+- **Siguiente paso:** cotejar la escena en el texto licenciado; la reseña no reemplaza capítulo o página narrativa.
