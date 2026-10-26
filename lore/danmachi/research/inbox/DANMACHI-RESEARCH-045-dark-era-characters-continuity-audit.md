@@ -399,6 +399,13 @@ La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confi
 - spoiler_level: major
 - confidence_note: Fuente comunitaria, no transcripción de novela. El acceso directo a la página no se completó, y el contenido recuperado por el índice no proporciona número de página. No promover el uso de Afterglow ni los detalles del combate contra Udaeus a source_checked_excerpt_only.
 
+### Integración y validación — DMR-045-SRC-045 (PR #155)
+
+- SRC-045 y los claims secundarios CLM-019/020 quedaron integrados en [PR #155](https://github.com/jonhararagi/wordwaifu/pull/155), merge SHA `21c55f905e28c419df0616e25247d8960533fde8`.
+- CI de la PR sobre head `bd707757659be7ee976d5b41bf88007b63482928`: [Validate WordWaifu #40348659487](https://github.com/jonhararagi/wordwaifu/actions/runs/40348659487) y [DanMachi Lore and Retrieval Integrity #40348659494](https://github.com/jonhararagi/wordwaifu/actions/runs/40348659494), ambos `success`.
+- CI post-merge sobre el SHA de `main`: [DanMachi Lore and Retrieval Integrity #40348901258](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901258) `success`; [Validate WordWaifu #40348901098](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901098) sigue `in_progress` en `Install Chromium` según la última consulta.
+- Esta integración habilita la consulta de las pistas en la interfaz, pero no cierra el cotejo de la novela. Los claims siguen `secondary_checked` y los cinco localizadores primarios permanecen abiertos.
+
 ## Recuperación de las fuentes comunitarias desde la aplicación
 
 El directorio consultable de `src/lore-corpus.js` incluye entradas identificadas para las versiones inglesa y española de las fichas comunitarias relevantes para Alfia, Meteria, Zald, Erebus y Rudra/Rudra Familia. Las entradas describen el alcance de cada artículo y sus límites de atribución/continuidad; la prueba `tests/test_danmachi_lore_source_directory.cjs` evita que desaparezcan de la interfaz o se pierdan sus URLs.
