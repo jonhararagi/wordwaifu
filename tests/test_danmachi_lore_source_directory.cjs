@@ -206,7 +206,7 @@ const sbCreativePreviewSpecs = [
   ["official-sbcreative-astrea-record-vol1-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561017JAAA01MBJE3X&lginbtn=false", /CONT-AR/],
   ["official-sbcreative-astrea-record-vol2-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561018JAAA02MBJE3X&lginbtn=false", /CONT-AR/],
   ["official-sbcreative-astrea-record-vol3-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false", /CONT-AR/],
-  ["official-sbcreative-danmachi-vol14-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=79739620JAAA14MBJE3X&lginbtn=false", /CONT-MAIN-LN/]
+  ["official-sbcreative-danmachi-vol14-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=79739620JAAA14MBJE3X&lginbtn=false", /CONT-MAIN-LN/],
   ["official-sbcreative-danmachi-vol20-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81562869JAAA20MBJE3X&lginbtn=false", /CONT-MAIN-LN/]
 ];
 for (const [id, url, continuity] of sbCreativePreviewSpecs) {
