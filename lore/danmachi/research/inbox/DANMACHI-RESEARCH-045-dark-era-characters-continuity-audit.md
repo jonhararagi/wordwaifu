@@ -793,3 +793,13 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **DanMachi Lore and Retrieval Integrity:** [run 40265980006](https://github.com/jonhararagi/wordwaifu/actions/runs/40265980006), success; incluyó pruebas de catálogo/relaciones, recuperación y browser smoke.
 - **Límite post-merge:** el conector de consulta disponible solo devuelve workflows disparados por pull_request, por lo que no permitió verificar los workflows push del SHA de fusión. No se declara su resultado.
 - **Estado factual:** DMR-045-CLM-006 se mantiene secondary_checked y cita DMR-045-SRC-043. No se afirma que la escena esté leída directamente en la novela; los cinco localizadores primarios siguen pendientes.
+
+## DMR-045-SRC-044 · SB Creative BinB — ruta oficial de muestra para DanMachi vol. 20
+
+- **Página oficial de la serie:** [SBCr eBook Store — DanMachi](https://ebook.sbcr.jp/landing/p/danmachi), que lista el volumen 20 y el enlace 立ち読み.
+- **Lector directo:** [DanMachi vol. 20 — BinB](https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81562869JAAA20MBJE3X&lginbtn=false).
+- **Resultado de consulta (2026-10-26):** la página del lector solo muestra un iframe, “Now loading...” y controles del menú. No se pudo leer narración, capítulo o folio.
+- **Tipo y continuidad:** ruta editorial oficial de muestra; `OFFICIAL_PUBLISHER_EBOOK_PREVIEW_ROUTE`; `CONT-MAIN-LN`.
+- **Estado:** `metadata_checked_only`; `claims_supported: []`; sin claims, aliases, acontecimientos ni relaciones nuevas.
+- **Alcance permitido:** conservar una ruta normal para futura lectura autorizada. El intento no verifica la identidad de la maga del prólogo, la criatura, el testigo, la aparición de Alfia/Zald ni la técnica Afterglow en el volumen 20.
+- **Siguiente paso:** si el lector muestra narración en una consulta normal, registrar únicamente el pasaje que sea realmente visible con edición y localizador reproducible. No asumir que una pantalla de carga implica indisponibilidad global.
