@@ -8,6 +8,7 @@ source_refs:
   - DMR-029-SRC-009
   - DMR-029-SRC-012
   - DMR-045-SRC-010
+  - DMR-045-SRC-037
 claim_refs:
   - DMR-029-CLM-005
   - DMR-045-CLM-002
@@ -50,6 +51,7 @@ La ficha española etiqueta su debut como recuerdo de DanMachi volumen 14, mient
 ## Fuentes
 - [Rudra — DanMachi Wiki en español](https://danmachi.fandom.com/es/wiki/Rudra) — apariencia y debut reportados.
 - [Rudra Familia — DanMachi Wiki](https://danmachi.fandom.com/wiki/Rudra_Familia) — afiliación, historia y relato secundario de la trampa.
+- [Rudra Familia — DanMachi Wiki (Miraheze), inglés](https://danmachien.miraheze.org/wiki/Rudra_Familia) (DMR-045-SRC-037) — resumen secundario de la trampa atribuida a la Familia; no prueba responsabilidad personal del dios Rudra.
 - [Yen Press, volumen 13](https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel) — contexto editorial del arco posterior.
 - [Yen Press, volumen 14](https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel) — localizadores parciales de capítulo 13 y epílogo, DMR-045-SRC-010.
 - [Cronología oficial](https://danmachi.com/chronology/) — útil para mantener T-7 separado, no fuente directa de Rudra.
