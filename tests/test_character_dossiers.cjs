@@ -29,6 +29,7 @@ for (const id of ["CHAR-DARK-ALFIA", "CHAR-DARK-ZALD", "CHAR-DARK-EREBUS"]) {
   assert.ok(dossier.sources.includes(licensedAstreaUrl), id + " must expose the licensed English Astrea Record volume 3 page as an access route.");
   assert.ok(dossier.sources.includes(bookwalkerProductUrl), id + " must expose the licensed Japanese retailer listing.");
   assert.ok(dossier.sources.includes(bookwalkerSampleUrl), id + " must expose the free sample route without treating it as verified narrative text.");
+  assert.ok(dossier.sources.includes("https://booklive.jp/product/index/title_id/1237250/vol_no/003"), id + " must expose BookLive's Astrea Record 3 trial-offer page as metadata only.");
 }
 
 const alfiaArchiveInfo = archiveApi.getExtendedInfo("CHAR-DARK-ALFIA", "CONT-AR", null);
@@ -96,8 +97,13 @@ assert.ok(erebusGameInfo && erebusGameInfo.sections.some(section => section.text
   "Erebus's game continuity note must keep the uncertain alias unapproved.");
 assert.ok(erebusGameInfo.references.some(ref => ref.kind === "editorial_caption" && ref.url === "https://ln-news.com/articles/109766"),
   "Erebus's editorial caption must be labelled separately from Omori's interview.");
-assert.equal(archiveApi.getExtendedInfo("CHAR-DARK-EREBUS", "CONT-AR", null), null,
-  "Erebus's original-game ideology must not be presented as a verified Astrea Record novel dossier.");
+const erebusNovelInfo = archiveApi.getExtendedInfo("CHAR-DARK-EREBUS", "CONT-AR", null);
+assert.ok(erebusNovelInfo && erebusNovelInfo.sections.some(section => section.text.includes("solo se inspeccionaron la ficha y sus metadatos") && section.text.includes("no confirma apariciÃ³n")),
+  "Erebus's novelization route must expose the licensed BookLive page without importing game continuity or inventing narrative facts.");
+assert.ok(erebusNovelInfo.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://booklive.jp/product/index/title_id/1237250/vol_no/003"),
+  "Erebus's CONT-AR note must link the BookLive trial-offer page as metadata only.");
+assert.equal(erebusNovelInfo.sections.some(section => section.text.includes("Absolute Evil")), false,
+  "Erebus's game-only details must not leak into the separate novelization route.");
 const rudraMainInfo = archiveApi.getExtendedInfo("CHAR-DARK-RUDRA", "CONT-MAIN-LN", null);
 assert.ok(rudraMainInfo && rudraMainInfo.sections.some(section => section.text.includes("no demuestra que Rudra") && section.text.includes("Rudra Familia")),
   "Rudra's note must distinguish group responsibility from unproven personal authorization.");
@@ -113,6 +119,8 @@ assert.ok(rudraMainInfo.sections.some(section => section.text.includes("le habrÃ
   "Rudra's later appearance must be exposed as secondary evidence without implying prior authorization.");
 assert.ok(rudraMainInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis"),
   "Rudra's personal-scene lead must link the volume 14 community synopsis.");
+assert.ok(rudraMainInfo.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://booklive.jp/product/index/title_id/201522/vol_no/014"),
+  "Rudra's main-novel note must expose BookLive's vol. 14 trial-offer page as metadata only.");
 
 bell.history = "mutated";
 assert.notEqual(api.get("DM-CHAR-BELL").history, "mutated", "Callers must not mutate the shared dossier catalog.");

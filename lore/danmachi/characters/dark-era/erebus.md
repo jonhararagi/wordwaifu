@@ -4,7 +4,7 @@ universe: danmachi
 type: character
 status: secondary_reference_primary_locator_pending
 continuity_scope: CONT-AR
-source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001, DMR-045-SRC-009, DMR-045-SRC-036]
+source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001, DMR-045-SRC-009, DMR-045-SRC-036, DMR-045-SRC-048]
 claim_refs: [DMR-029-CLM-003, DMR-038-CLM-007, DMR-045-CLM-003, DMR-045-CLM-009, DMR-045-CLM-018]
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases: [Erebus]
@@ -45,6 +45,7 @@ No se registra nivel de aventurero, magia, habilidades, arma ni mecanismo concre
 - [Anuncio oficial de Astrea Record](https://danmachi.com/news/news131.php) — origen editorial de los tres libros, no poderes individuales.
 - DMR-029-CLM-003 y DMR-038-CLM-007 — función antagonista atribuida y marco parcial.
 - DMR-045-CLM-003 — perfil secundario y cautela sobre «Eren».
+- [BookLive · Astrea Record 3 (prueba anunciada; solo metadatos)](https://booklive.jp/product/index/title_id/1237250/vol_no/003) (DMR-045-SRC-048) — ruta para consultar la novelización, sin página narrativa inspeccionada.
 - [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md).
 
 **Pendiente de verificación primaria:** localizar capítulo/página de su primera escena en Astrea Record; comprobar el uso de «Eren» en el texto revisado; identificar sus acciones propias sin atribuirle todo el conflicto de Evilus.

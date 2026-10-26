@@ -274,7 +274,8 @@ sections:[
 ],
 references:[
 {label:"Wiki comunitaria en español · Alfia / Habilidades",url:"https://danmachi.fandom.com/es/wiki/Alfia/Habilidades",kind:"community"},
-{label:"Wiki comunitaria en inglés · Alfia",url:"https://danmachi.fandom.com/wiki/Alfia",kind:"community"}
+{label:"Wiki comunitaria en inglés · Alfia",url:"https://danmachi.fandom.com/wiki/Alfia",kind:"community"},
+{label:"BookLive · Astrea Record 3 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/1237250/vol_no/003",kind:"licensed_preview"}
 ]
 }
 },
@@ -300,7 +301,8 @@ sections:[
 ],
 references:[
 {label:"Wiki comunitaria en español · Zald",url:"https://danmachi.fandom.com/es/wiki/Zald",kind:"community"},
-{label:"Wiki comunitaria en español · Astrea Record, novela ligera vol. 3",url:"https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3",kind:"community"}
+{label:"Wiki comunitaria en español · Astrea Record, novela ligera vol. 3",url:"https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3",kind:"community"},
+{label:"BookLive · Astrea Record 3 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/1237250/vol_no/003",kind:"licensed_preview"}
 ]
 }
 },
@@ -357,6 +359,18 @@ references:[
 {label:"LN News Online · pie editorial de Erebus en el contexto del juego",url:"https://ln-news.com/articles/109766",kind:"editorial_caption"}
 ]
 }
+,"CONT-AR":{
+title:"Erebus · ruta de consulta de la novelización (Astrea Record)",
+summary:"Esta sección conserva un enlace bibliográfico para consultar la edición novelada. No establece que el contenido de la versión original de Memoria Freese aparezca sin cambios en los libros.",
+sections:[
+{title:"BookLive · Astrea Record 3",text:"La ficha pública del distribuidor licenciado presenta una opción de prueba en navegador y otra en app. En esta revisión solo se inspeccionaron la ficha y sus metadatos; no se abrieron páginas narrativas del visor. El enlace sirve para una consulta futura, no confirma aparición, diálogo, afiliación, poder ni acción individual de Erebus en la novelización."},
+{title:"Separación de continuidad",text:"La información sobre la ideología y la versión original del personaje permanece en CONT-GAME. No se importa a CONT-AR hasta que un pasaje de la novelización se pueda leer y localizar de manera reproducible."}
+],
+references:[
+{label:"BookLive · Astrea Record 3 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/1237250/vol_no/003",kind:"licensed_preview"},
+{label:"SB Creative / GA Bunko · página de Astrea Record 3",url:"https://ga.sbcr.jp/product/9784815610197",kind:"publisher_metadata"}
+]
+}
 },
 "CHAR-DARK-RUDRA":{
 "CONT-MAIN-LN":{
@@ -365,7 +379,7 @@ summary:"Nota de investigación para la novela principal. La secuencia del volum
 sections:[
 {title:"Separar a Rudra Familia de su deidad",text:"La ficha comunitaria de Rudra Familia atribuye a la agrupación una trampa contra Astrea Familia vinculada a daños en el Dungeon y a la aparición del Juggernaut. La investigación existente señala como pista el volumen 14, capítulo 13, pero el lector autorizado consultado no expuso la página narrativa. Por tanto, la atribución colectiva sigue necesitando cotejo directo: no demuestra que Rudra, como dios patrono, diseñara, ordenara, aprobara o conociera el plan."},
 {title:"Alcance de la retrospectiva y el epílogo",text:"El registro de investigación distingue el relato de la trampa de la versión pública difundida tras el incidente. Hasta inspeccionar el texto, los capítulos y el epílogo sirven como localizadores para buscar, no como páginas cotejadas ni prueba de las acciones individuales de Rudra. Tampoco se debe trasladar esta etapa aproximada T-5 al intervalo T-7 de Astrea Record."},
-{title:"Ruta adicional de consulta licenciada",text:"La ficha pública indexada de Google Play Books anuncia una muestra gratuita del volumen 14; el registro bibliográfico de Google Books de la edición inglesa indica Limited preview. En esta comprobación se obtuvieron metadatos y sinopsis, no páginas de la muestra. La ruta de BOOK☆WALKER ya registrada devolvió un error de descarga al abrir su lector público. Estos intentos no permiten confirmar la trampa, el capítulo 13, el epílogo ni ninguna acción personal de Rudra. Usa los enlaces para consultar el texto por el acceso normal si el lector lo presenta; solo entonces registra un localizador visible."},
+{title:"Ruta adicional de consulta licenciada",text:"La ficha pública indexada de Google Play Books anuncia una muestra gratuita del volumen 14; el registro bibliográfico de Google Books de la edición inglesa indica Limited preview. En esta comprobación se obtuvieron metadatos y sinopsis, no páginas de la muestra. La ruta de BOOK☆WALKER ya registrada devolvió un error de descarga al abrir su lector público. La ficha de BookLive también anuncia lectura de prueba en navegador/app para el volumen 14, pero aquí solo se consultaron sus metadatos, no páginas de la muestra. Estos intentos no permiten confirmar la trampa, el capítulo 13, el epílogo ni ninguna acción personal de Rudra. Usa los enlaces para consultar el texto por el acceso normal si el lector lo presenta; solo entonces registra un localizador visible."},
 {title:"Qué falta confirmar",text:"Quedan pendientes una página o un pasaje narrativo reproducible, qué acciones se atribuyen explícitamente a cada miembro y si el texto da alguna evidencia del conocimiento personal de Rudra. No se crea una relación personal nueva ni se infiere una motivación a partir del cargo de deidad."},
 {title:"Acción personal reportada después de la venganza",text:"La sinopsis comunitaria del volumen 14 afirma que, tras destruir la sede y eliminar a los miembros de Rudra Familia, Ryuu vio aparecer al dios Rudra. El resumen le atribuye una risa y el comentario de que le habría gustado invitar a la Ryuu de ese momento a su Familia; después, el Gremio lo captura y lo envía al Cielo (DMR-045-CLM-021). Se conserva como evidencia secundaria de CONT-MAIN-LN. No demuestra que Rudra conociera, ordenara ni autorizara la trampa anterior."}
 ],
@@ -375,6 +389,7 @@ references:[
 {label:"DanMachi Wiki · DanMachi Light Novel Volume 14/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis",kind:"community"},
 {label:"Google Play Books · DanMachi vol. 14 (muestra anunciada; texto no cotejado)",url:"https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=PLS9DwAAQBAJ",kind:"licensed_preview"},
 {label:"BOOK☆WALKER · DanMachi vol. 14 (muestra japonesa; lector no cargó)",url:"https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/?sample=1",kind:"licensed_preview"},
+{label:"BookLive · DanMachi vol. 14 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/201522/vol_no/014",kind:"licensed_preview"},
 {label:"Yen Press · DanMachi, volumen 14 (ficha editorial; no página narrativa)",url:"https://yenpress.com/titles/9781975385026-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel",kind:"publisher_metadata"}
 ]
 }

@@ -769,7 +769,7 @@
       conflict: "Su función narrativa provisional se lee como un antagonismo que pone a prueba a los héroes de Orario, no como una villana plana. La lectura moral de sus motivos debe distinguir el texto de la interpretación comunitaria y no importar datos de la versión de juego sin comparación.",
       sources: ["https://danmachi.fandom.com/wiki/Alfia","https://danmachi.fandom.com/es/wiki/Alfia/Habilidades","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://dengekionline.com/articles/189750/","https://note.com/fujinoomori/n/n629829ac3fe4","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md","https://ln-news.com/articles/109766",
         "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes",
-        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/","https://booklive.jp/product/index/title_id/1237250/vol_no/003",
         "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
               "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",
       ],
@@ -855,7 +855,7 @@
       conflict: "El conflicto de Zald se estudia como antagonismo de alto impacto dentro de una tragedia mayor, con un posible sentido de prueba para los héroes del futuro según fuentes comunitarias. La enciclopedia no debe reducirlo a una ficha de poder ni inventar motivaciones más allá de lo que la novela confirme.",
       sources: ["https://danmachi.fandom.com/es/wiki/Zald","https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3","https://danmachi.com/news/news131.php","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://www.reddit.com/r/DanMachi/comments/1ifg4g6/volume_20_side_story_a_scene_between_a_certain/","https://dengekionline.com/articles/189750/","https://ln-news.com/articles/109766","https://note.com/fujinoomori/n/n629829ac3fe4","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/candidates/EVT-DM-AU-ALFIA-ZALD-RAISE-BELL-001.md",
         "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes",
-        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/","https://booklive.jp/product/index/title_id/1237250/vol_no/003",
         "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
               "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",
       ]
@@ -867,7 +867,7 @@
       abilities: "No se atribuyen habilidades, nivel de combatiente ni poderes individuales en esta ficha. Como deidad, no se le asigna nivel de aventurero. El material necesario para ampliar la sección es una fuente primaria que describa sus decisiones o capacidades.",
       relationships: "Los compendios comunitarios lo vinculan con Rudra Familia. El catálogo conecta la propia Familia con la tragedia histórica de Astrea y mantiene una arista separada de Rudra, la deidad, con evidencia secundaria. El pasaje parcial de vol. 14 respalda acciones del grupo, no una orden personal del dios (DMR-045-CLM-013).",
       conflict: "La relación con la tragedia de Ryu y el Juggernaut se mantiene en la continuidad de la novela principal, separada del núcleo de Astrea Record alrededor de T-7. No se imputa a Rudra cada acción de Jura ni se fusiona esta fase posterior con la historia de Alfia y Zald.",
-      sources: ["https://danmachi.fandom.com/es/wiki/Rudra","https://danmachi.fandom.com/wiki/Rudra_Familia","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis"]
+      sources: ["https://danmachi.fandom.com/es/wiki/Rudra","https://danmachi.fandom.com/wiki/Rudra_Familia","https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis","https://booklive.jp/product/index/title_id/201522/vol_no/014"]
     },
     "CHAR-DARK-JURA-HALMER": {
       appearance: "Las wikis describen a Jura como hombre-gato alto y delgado, con una oreja y parte del brazo derecho perdidos tras un encuentro con Ryuu; el resumen español menciona señales de agotamiento. Rasgos visuales secundarios, pendientes de cotejo en DanMachi vol. 13.",
@@ -905,7 +905,7 @@
       conflict: "Erebus sirve para explorar la oposición ideológica a la justicia de Ryu y Astrea Familia. La ficha distingue antagonismo reportado de una reconstrucción completa de su plan.",
       sources: ["https://danmachi.fandom.com/wiki/Erebus","https://ln-news.com/articles/109766","https://danmachi.com/news/news131.php","https://danmachi.com/chronology/","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md","https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md",
         "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes",
-        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/",
+        "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/","https://booklive.jp/product/index/title_id/1237250/vol_no/003",
         "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
       ]
     },
