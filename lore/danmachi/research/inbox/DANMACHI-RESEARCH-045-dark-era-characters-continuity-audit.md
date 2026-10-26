@@ -643,7 +643,7 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 
 ## DMR-045 — reconsulta de fuentes comunitarias accesibles en inglés (2026-10-25)
 
-Se consultaron las páginas públicas de DanMachi Wiki alojadas en Miraheze como rutas alternativas cuando Fandom bloquea la extracción automatizada. Son fuentes comunitarias secundarias, no oficiales; no se ha establecido su independencia editorial respecto de otras wikis y no se usan para declarar leído un pasaje de novela.
+Se consultaron las páginas públicas de DanMachi Wiki alojadas en Miraheze como rutas alternativas cuando Fandom bloquea la extracción automatizada. Son fuentes comunitarias secundarias, no oficiales; no se ha establecido la independencia editorial de estas páginas respecto de otras wikis y no se usan para declarar leído un pasaje de novela.
 
 - **DMR-045-SRC-030 · Meteria:** la infobox y el resumen identifican a Meteria como madre de Bell y hermana gemela de Alfia, además de reportar una afiliación anterior a Hera Familia. La página no aporta un localizador de capítulo/página. La identificación es una pista secundaria útil frente a la entrevista DMR-045-SRC-009, que no pronuncia el nombre Meteria; no cierra la filiación primaria de CONT-MAIN-LN.
 - **DMR-045-SRC-031 · Alfia:** la lista de apariciones comunitaria incluye el volumen 20 como flashback y Astrea Record vol. 1. Esto sirve para orientar la búsqueda, no para identificar a la maga de cabello gris del prólogo ni fijar una página.
