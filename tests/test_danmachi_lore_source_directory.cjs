@@ -64,6 +64,26 @@ assert.equal(bookwalkerSample[0].authority, "Muestra gratuita de distribuidor li
 assert.match(bookwalkerSample[0].limits, /Could not download/);
 assert.match(bookwalkerSample[0].limits, /No se obtuvo texto narrativo legible|ningún intento devolvió páginas narrativas legibles/i);
 assert.match(bookwalkerSample[0].limits, /no demuestra(?:n)? que la edición esté indisponible/i);
+const bookLiveVol14 = sources.filter(source => source.id === "licensed-retailer-booklive-danmachi-vol14");
+assert.equal(bookLiveVol14.length, 1, "BookLive DanMachi vol. 14 route must appear exactly once");
+assert.equal(bookLiveVol14[0].category, "licensed_retailer");
+assert.equal(bookLiveVol14[0].url, "https://booklive.jp/product/index/title_id/201522/vol_no/014");
+assert.equal(bookLiveVol14[0].authority, "Distribuidor licenciado; vista previa anunciada, no inspeccionada");
+assert.match(bookLiveVol14[0].coverage, /ブラウザ試し読み/);
+assert.match(bookLiveVol14[0].coverage, /no el contenido de la muestra/i);
+assert.match(bookLiveVol14[0].limits, /no pasaje narrativo recuperado/i);
+assert.match(bookLiveVol14[0].limits, /no respalda la trampa de Rudra Familia/i);
+assert.match(bookLiveVol14[0].limits, /metadata_checked_only/);
+const bookLiveAstrea3 = sources.filter(source => source.id === "licensed-retailer-booklive-astrea-record-vol3");
+assert.equal(bookLiveAstrea3.length, 1, "BookLive Astrea Record 3 route must appear exactly once");
+assert.equal(bookLiveAstrea3[0].category, "licensed_retailer");
+assert.equal(bookLiveAstrea3[0].url, "https://booklive.jp/product/index/title_id/1237250/vol_no/003");
+assert.equal(bookLiveAstrea3[0].authority, "Distribuidor licenciado; vista previa anunciada, no inspeccionada");
+assert.match(bookLiveAstrea3[0].coverage, /アプリ試し読みはこちら/);
+assert.match(bookLiveAstrea3[0].coverage, /no el contenido de la muestra/i);
+assert.match(bookLiveAstrea3[0].limits, /no pasaje narrativo recuperado/i);
+assert.match(bookLiveAstrea3[0].limits, /no verifica escenas, habilidades, identidades o relaciones/i);
+assert.match(bookLiveAstrea3[0].limits, /metadata_checked_only/);
 const meteriaEn = sources.find(source => source.id === "community-meteria-en");
 assert.match(meteriaEn.limits, /no nombra a Meteria/i,
   "the source directory must preserve the limit of the Memoria Freese interview");
