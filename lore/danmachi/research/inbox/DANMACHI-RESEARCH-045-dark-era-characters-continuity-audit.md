@@ -40,11 +40,11 @@
 - aspect: atribución de responsabilidad, afiliación y causalidad de evento
 - era_or_interval: T-5 aproximado según resumen comunitario; fecha exacta pendiente
 - continuity_scope: CONT-MAIN-LN
-- source_id: DMR-029-SRC-009
-- source_title: Rudra Familia — DanMachi Wiki
+- source_id: DMR-029-SRC-009; DMR-045-SRC-037
+- source_title: Rudra Familia — DanMachi Wiki; DanMachi Wiki (Miraheze) · Rudra Familia
 - source_type: COMMUNITY_WIKI
 - source_locator: Resumen de historia; trampa, daño al Dungeon y aparición del Juggernaut
-- source_url: https://danmachi.fandom.com/wiki/Rudra_Familia
+- source_url: https://danmachi.fandom.com/wiki/Rudra_Familia; https://danmachien.miraheze.org/wiki/Rudra_Familia
 - evidence_type: community_secondary_faction_history_with_attribution_limit
 - verification_status: secondary_checked
 - spoiler_level: major
@@ -58,11 +58,11 @@
 - aspect: identidad divina, apariencia, afiliación y alias reportados en una ficha asociada al juego
 - era_or_interval: Astrea Record original de Memoria Freese; localizador narrativo específico pendiente
 - continuity_scope: CONT-GAME
-- source_id: DMR-029-SRC-006
-- source_title: Erebus — DanMachi Wiki en inglés
+- source_id: DMR-029-SRC-006; DMR-045-SRC-036
+- source_title: Erebus — DanMachi Wiki en inglés; DanMachi Wiki (Miraheze) · Erebus
 - source_type: COMMUNITY_WIKI
 - source_locator: Summary, Characteristics, Professional Status, Personal Status y Debuts
-- source_url: https://danmachi.fandom.com/wiki/Erebus
+- source_url: https://danmachi.fandom.com/wiki/Erebus; https://danmachien.miraheze.org/wiki/Erebus
 - evidence_type: community_secondary_identity_profile
 - verification_status: secondary_checked
 - spoiler_level: major
@@ -156,7 +156,7 @@
 - evidence_type: author_interview_confirmation_of_game_backstory
 - verification_status: source_checked
 - spoiler_level: major
-- confidence_note: La respuesta del autor confirma el parentesco formulado por el entrevistador en relación con la historia del juego. No nombra a la hermana, no aporta localizador de la novela y no permite promover la identidad de Meteria ni el vínculo materno de CONT-MAIN-LN sin una fuente independiente.
+- confidence_note: La respuesta del autor confirma el parentesco formulado por el entrevistador dentro de la historia del juego, pero no nombra a la hermana ni aporta localizador de novela. La ficha pública de Meteria en DanMachi Wiki (Miraheze; DMR-045-SRC-033) sí la identifica secundariamente como madre de Bell y hermana gemela de Alfia; no se ha establecido la independencia editorial de esa wiki frente a otras wikis ni se aporta pasaje primario reproducible. Esta referencia alternativa mejora el acceso a la pista secundaria, pero no cierra la identificación en CONT-MAIN-LN ni promueve el claim a canon primario.
 
 ### DMR-045-CLM-009 · Pie editorial de Erebus en la cobertura de la versión de juego
 
@@ -294,11 +294,11 @@
 - aspect: pista de aparición y localizador secundario para una escena histórica
 - era_or_interval: DanMachi volumen 20, prólogo/flashback; fecha interna desconocida
 - continuity_scope: CONT-MAIN-LN
-- source_id: DMR-045-SRC-011; DMR-029-SRC-001
-- source_title: Discusión comunitaria sobre páginas de muestra de DanMachi vol. 20; Alfia — DanMachi Wiki en inglés
+- source_id: DMR-045-SRC-011; DMR-029-SRC-001; DMR-045-SRC-034
+- source_title: Discusión comunitaria sobre páginas de muestra de DanMachi vol. 20; Alfia — DanMachi Wiki en inglés; DanMachi Wiki (Miraheze) · Alfia
 - source_type: COMMUNITY_DISCUSSION; COMMUNITY_WIKI
 - source_locator: Hilo “Vol 20 preview pages”, publicado el 2024-12-06; DanMachi Wiki, apartado Debuts / Light Novel, que indexa el volumen 20 como flashback
-- source_url: https://www.reddit.com/r/DanMachi/comments/1h7wabo/; https://danmachi.fandom.com/wiki/Alfia
+- source_url: https://www.reddit.com/r/DanMachi/comments/1h7wabo/; https://danmachi.fandom.com/wiki/Alfia; https://danmachien.miraheze.org/wiki/Alfia
 - evidence_type: community_preview_summary_and_secondary_appearance_locator
 - verification_status: secondary_checked
 - spoiler_level: major
@@ -641,6 +641,17 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Siguiente acción:** abrir la ficha desde el acceso normal de Google Play Books en un entorno donde la opción de muestra esté disponible; registrar página/capítulo solamente después de ver texto narrativo legible.
 - **Relación con fuentes existentes:** el volumen 14 ya cuenta con la ruta de muestra japonesa de BOOK☆WALKER en DMR-045-SRC-028, cuyo visor devolvió un error de descarga. Esta entrada no duplica ese ID porque corresponde a un distribuidor y edición de consulta diferentes, y tampoco crea un claim nuevo.
 
+## DMR-045 — reconsulta de fuentes comunitarias accesibles en inglés (2026-10-25)
+
+Se consultaron las páginas públicas de DanMachi Wiki alojadas en Miraheze como rutas alternativas cuando Fandom bloquea la extracción automatizada. Son fuentes comunitarias secundarias, no oficiales; no se ha establecido la independencia editorial de estas páginas respecto de otras wikis y no se usan para declarar leído un pasaje de novela.
+
+- **DMR-045-SRC-033 · Meteria:** la infobox y el resumen identifican a Meteria como madre de Bell y hermana gemela de Alfia, además de reportar una afiliación anterior a Hera Familia. La página no aporta un localizador de capítulo/página. La identificación es una pista secundaria útil frente a la entrevista DMR-045-SRC-009, que no pronuncia el nombre Meteria; no cierra la filiación primaria de CONT-MAIN-LN.
+- **DMR-045-SRC-034 · Alfia:** la lista de apariciones comunitaria incluye el volumen 20 como flashback y Astrea Record vol. 1. Esto sirve para orientar la búsqueda, no para identificar a la maga de cabello gris del prólogo ni fijar una página.
+- **DMR-045-SRC-035 · Zald:** la página reporta perfil y aparición en Astrea Record vol. 1, y enlaza referencias comunitarias a perfiles/hojas de estado. No verifica por sí sola los usos de Afterglow atribuidos a los capítulos 2–3 del volumen 20.
+- **DMR-045-SRC-036 · Erebus:** la página trata la figura del juego y lista Astrea Record vol. 1 como aparición en novela; también usa “Eren”. El nombre alternativo sigue sin aprobarse como alias canónico de la novelización y la ideología de CONT-GAME no se transfiere automáticamente a CONT-AR.
+- **DMR-045-SRC-037 · Rudra Familia:** el resumen atribuye a la Familia como grupo la trampa y la aparición del Juggernaut. La fuente permanece grupal/secundaria; no establece que el dios Rudra diseñara, ordenara, conociera o autorizara personalmente el plan.
+
+**Resultado:** se mejora el acceso y la trazabilidad de los cinco expedientes sin añadir claims, relaciones, alias ni métricas. Estas páginas no cierran ninguno de los cinco localizadores primarios de DMR-045. Las entradas están documentadas en el registro central y expuestas en el directorio de fuentes de la aplicación.
 
 ## DMR-045-SRC-030 · BOOK☆WALKER — compendio gratuito de octubre de 2022 (muestra de Astrea Record 1)
 
@@ -678,8 +689,18 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Interpretación permitida:** la sinopsis no verifica escenas, técnicas ni desenlaces por personaje. El timeout no demuestra indisponibilidad global y no se infiere la presencia o ausencia de nadie.
 - **Siguiente acción:** reintentar la muestra mediante el lector normal si carga en una sesión pública legible; registrar únicamente el pasaje efectivamente visto.
 
-**Límite conjunto de SRC-030–032:** se localizaron tres compendios gratuitos licenciados correspondientes a las muestras de Astrea Record 1–3. En esta consulta, los tres accesos de lectura fallaron (un redireccionamiento no legible más timeout para Vol. 1; timeout para Vols. 2–3). Ningún registro aporta un claim ni un localizador narrativo primario. DMR-045 continúa abierto.
+**Límite conjunto de SRC-035–037:** se localizaron tres compendios gratuitos licenciados correspondientes a las muestras de Astrea Record 1–3. En esta consulta, los tres accesos de lectura fallaron (un redireccionamiento no legible más timeout para Vol. 1; timeout para Vols. 2–3). Ningún registro aporta un claim ni un localizador narrativo primario. DMR-045 continúa abierto.
 
+## DMR-045-SRC-038 · Barnes & Noble NOOK — ruta de muestra de DanMachi, volumen 14
+
+- **Fecha de consulta:** 2026-10-25.
+- **Ficha pública:** [Barnes & Noble — DanMachi, Vol. 14](https://www.barnesandnoble.com/w/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-fujino-omori/1130510787).
+- **Ruta enlazada desde “Read sample”:** https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019.
+- **Tipo:** distribuidor licenciado; edición inglesa de Yen Press, ISBN digital 9781975385026 / impreso 9781975385019.
+- **Resultado de acceso:** la ficha pública muestra un enlace “Read sample”. Al abrir el endpoint normal del lector durante esta consulta, la herramienta devolvió “Cache miss”; no se recuperó texto narrativo ni una página identificable.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-MAIN-LN.
+- **Interpretación permitida:** es una ruta adicional que se puede intentar desde el flujo normal de NOOK. El cache miss describe el resultado de esta consulta, no la disponibilidad global del título ni la disponibilidad regional de la muestra. No respalda el capítulo 13, el epílogo, la trampa de Rudra Familia ni la responsabilidad personal de Rudra.
+- **Relación con fuentes existentes:** complementa las rutas metadata-only SRC-028 (BOOK☆WALKER) y SRC-029 (Google Play Books) para el mismo volumen; no crea claims ni aristas y no cierra el localizador primario pendiente.
 
 ## Integración y CI — DMR-045-SRC-030–032 (2026-10-25)
 
