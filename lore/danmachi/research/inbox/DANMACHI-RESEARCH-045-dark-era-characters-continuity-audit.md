@@ -640,3 +640,14 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Interpretación permitida:** se añade otra ruta de consulta autorizada para intentar revisar manualmente el volumen 14. La ficha de producto, la sinopsis y la existencia de la opción “Free sample” no verifican la retrospectiva del capítulo 13, el epílogo ni la atribución grupal de la trampa. La herramienta tampoco ha confirmado si la muestra se ofrece en todas las regiones.
 - **Siguiente acción:** abrir la ficha desde el acceso normal de Google Play Books en un entorno donde la opción de muestra esté disponible; registrar página/capítulo solamente después de ver texto narrativo legible.
 - **Relación con fuentes existentes:** el volumen 14 ya cuenta con la ruta de muestra japonesa de BOOK☆WALKER en DMR-045-SRC-028, cuyo visor devolvió un error de descarga. Esta entrada no duplica ese ID porque corresponde a un distribuidor y edición de consulta diferentes, y tampoco crea un claim nuevo.
+
+## DMR-045-SRC-030 · Barnes & Noble NOOK — ruta de muestra de DanMachi, volumen 14
+
+- **Fecha de consulta:** 2026-10-25.
+- **Ficha pública:** [Barnes & Noble — DanMachi, Vol. 14](https://www.barnesandnoble.com/w/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-fujino-omori/1130510787).
+- **Ruta enlazada desde “Read sample”:** https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019.
+- **Tipo:** distribuidor licenciado; edición inglesa de Yen Press, ISBN digital 9781975385026 / impreso 9781975385019.
+- **Resultado de acceso:** la ficha pública muestra un enlace “Read sample”. Al abrir el endpoint normal del lector durante esta consulta, la herramienta devolvió “Cache miss”; no se recuperó texto narrativo ni una página identificable.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-MAIN-LN.
+- **Interpretación permitida:** es una ruta adicional que se puede intentar desde el flujo normal de NOOK. El cache miss describe el resultado de esta consulta, no la disponibilidad global del título ni la disponibilidad regional de la muestra. No respalda el capítulo 13, el epílogo, la trampa de Rudra Familia ni la responsabilidad personal de Rudra.
+- **Relación con fuentes existentes:** complementa las rutas metadata-only SRC-028 (BOOK☆WALKER) y SRC-029 (Google Play Books) para el mismo volumen; no crea claims ni aristas y no cierra el localizador primario pendiente.
