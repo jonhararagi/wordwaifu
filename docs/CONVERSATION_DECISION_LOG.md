@@ -390,3 +390,12 @@
 - **Corrección surgida de CI:** se retiró DMR-045-CLM-018 de `claims_supported` en SRC-036 (Miraheze), porque ese claim cita la ficha inglesa de Fandom `DMR-029-SRC-006`. El registro ya no atribuye a una wiki el respaldo de otra. No cambia el contenido factual del claim ni su estado secundario.
 - **Integración y validación:** PR [#155](https://github.com/jonhararagi/wordwaifu/pull/155) integrada en `main` por SHA `21c55f905e28c419df0616e25247d8960533fde8`. CI de la PR: [Validate #40348659487](https://github.com/jonhararagi/wordwaifu/actions/runs/40348659487) y [Lore/Integrity #40348659494](https://github.com/jonhararagi/wordwaifu/actions/runs/40348659494), ambos success sobre head `bd707757659be7ee976d5b41bf88007b63482928`. CI post-merge: [Lore/Integrity #40348901258](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901258) success; [Validate #40348901098](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901098) sigue in_progress en `Install Chromium` a la última consulta.
 - **Estado del lore:** las dos pistas están integradas, en `CONT-MAIN-LN` y `secondary_checked`; la verificación narrativa primaria sigue pendiente.
+
+
+### CONV-DM-2026-10-26-007 — Registrar la aparición posterior de Rudra sin inferir autorización previa
+- **Fecha:** 2026-10-26.
+- **Tipo:** investigación secundaria y mejora del expediente interactivo DMR-045.
+- **Hallazgo:** la sinopsis comunitaria del volumen 14 describe que Rudra aparece ante Ryuu después de la venganza contra Rudra Familia, comenta que le habría gustado invitar a la Ryuu de ese momento a su Familia y es capturado por el Gremio después de que ella se marcha. Fuente: https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis. La consulta directa falló con HTTP 402; se usó el resultado indexado.
+- **Implementación:** DMR-045-SRC-046 y DMR-045-CLM-021; notas en la ficha de Rudra, el resumen de personaje y la vista interactiva `CONT-MAIN-LN`; pruebas para la fuente, el claim y la frontera de atribución.
+- **Límite aceptado:** la escena posterior no prueba que Rudra conociera, ordenara, diseñara o autorizara la trampa de Rudra Familia. No se añade relación canónica nueva; la afirmación sigue `secondary_checked` hasta cotejo licenciado.
+- **Estado actual:** implementación en rama de trabajo; CI, revisión e integración pendientes. DMR-045 continúa IN_PROGRESS y el cotejo primario sigue abierto.
