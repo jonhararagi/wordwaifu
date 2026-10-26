@@ -3555,3 +3555,26 @@ verification_status: stub
 - rights_note: Se registran URL y paráfrasis breve; no se copia el texto de la reseña ni de la novela.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: secondary_checked
+
+## DMR-045-SRC-044 · SB Creative BinB — ruta oficial de muestra para DanMachi vol. 20
+
+- source_id: DMR-045-SRC-044
+- title: ダンジョンに出会いを求めるのは間違っているだろうか２０ — 立ち読み (BinB preview)
+- creator_or_publisher: SB Creative / GA Bunko
+- source_type: OFFICIAL_PUBLISHER_EBOOK_PREVIEW_ROUTE
+- series: DanMachi / novela ligera principal
+- volume_or_edition: DanMachi vol. 20; opción de muestra enlazada desde el catálogo electrónico oficial de la serie
+- language: Japonés
+- official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81562869JAAA20MBJE3X&lginbtn=false
+- product_page: https://ebook.sbcr.jp/landing/p/danmachi
+- accessed_at: 2026-10-26
+- locator_type: official_reader_route_metadata_only
+- locator: El catálogo público de la serie incluye un enlace 立ち読み para el volumen 20 y abre la ruta BinB indicada. La vista consultada muestra un iframe, “Now loading...” y el menú del lector; no se recuperó texto de capítulo ni página narrativa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Ruta oficial de consulta identificada desde el catálogo del editor, pero el lector no proporcionó narración legible en esta consulta. No respalda los detalles del prólogo, los recuerdos de los capítulos 2–3, la técnica Afterglow ni la identidad individual de un personaje.
+- conflicting_sources: []
+- rights_note: Se conservan metadatos y enlaces; no se extrajo texto protegido ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
