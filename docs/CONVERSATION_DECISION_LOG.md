@@ -301,3 +301,11 @@
 - **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #3384](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839057) y [DanMachi Lore and Retrieval Integrity #1776](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839130), ambos `success`.
 - **Ramas/PR obsoletas cerradas sin fusionar:** #132 (solapada con #131/#133), #134 y #137 (intentos documentales con base desfasada), sustituidas por #140.
 - **Resultado:** el encabezado activo, las tareas de los cinco expedientes, los límites de las fuentes y la etapa posterior de Orario ya están sincronizados en `main`. DMR-045 no queda cerrado en cuanto al canon: las páginas narrativas primarias siguen pendientes.
+
+### CONV-DM-2026-10-25-012 — Incorporar páginas comunitarias accesibles como referencias secundarias alternativas para DMR-045
+- **Fecha:** 2026-10-25.
+- **Resultado:** se consultaron las páginas públicas en inglés de Meteria, Alfia, Zald, Erebus y Rudra Familia alojadas en Miraheze y se registraron como DMR-045-SRC-030–034, con entradas visibles en el directorio de fuentes y enlaces desde las fichas Markdown.
+- **Hallazgo relevante:** la ficha comunitaria de Meteria la identifica como madre de Bell y hermana gemela de Alfia. Esta pista permite contrastar la entrevista de LN News Online (DMR-045-SRC-009), que atribuye a la madre no nombrada de Bell el parentesco de hermana menor de Alfia; la convergencia sigue siendo secundaria, no se ha establecido independencia editorial entre wikis y no se obtuvo capítulo/página de novela.
+- **Límites:** las páginas no son oficiales. La lista de apariciones de Alfia no identifica el contenido de una escena exacta, Erebus conserva “Eren” sin aprobar como alias de la novela y la ficha de Rudra Familia no demuestra responsabilidad personal del dios Rudra. No se crean claims, relaciones ni aliases nuevos y no cambia ninguna continuidad.
+- **Pendiente operativo:** continuar buscando pasajes licenciados legibles para Alfia, Zald, Meteria, Erebus y Rudra; DMR-045 sigue abierto y Orario permanece en la etapa posterior.
+- **Integración:** pendiente de revisión, CI y fusión de la PR de este lote.
