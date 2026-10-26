@@ -377,3 +377,14 @@
 - **CI de PR:** Validate WordWaifu [run 40284254967](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254967) y DanMachi Lore and Retrieval Integrity [run 40284254924](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254924), ambos success sobre head `857ac384f03fc62c624f74297736befc431e19d9`.
 - **CI post-merge:** Validate WordWaifu [run 40284421948](https://github.com/jonhararagi/wordwaifu/actions/runs/40284421948) y DanMachi Lore and Retrieval Integrity [run 40284422026](https://github.com/jonhararagi/wordwaifu/actions/runs/40284422026), ambos success sobre el SHA exacto de `main`.
 - **Prioridad:** DMR-045 continúa antes de Orario; siguen pendientes los cinco localizadores primarios.
+
+
+### CONV-DM-2026-10-26-005 — Integrar la sinopsis comunitaria por capítulos del volumen 20 como pista secundaria
+- **Fecha:** 2026-10-26.
+- **Tipo:** investigación, incorporación de evidencia secundaria y ampliación de UI.
+- **Decisión operativa:** cuando una wiki reconocida ofrece una sinopsis por capítulos más concreta que la ficha editorial, puede utilizarse para ampliar la investigación si se etiqueta como secundaria, conserva el capítulo del resumen como localizador comunitario (no página de novela) y deja pendiente el cotejo licenciado.
+- **Hallazgo:** [https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis) resume una retrospectiva de Alfia en el capítulo 2 y el episodio de Zald/Udaeus en el capítulo 3. El acceso directo quedó bloqueado en esta consulta, pero se recuperó contenido indexado por búsqueda; la evidencia se limita al resumen visto.
+- **Implementación en rama:** registra DMR-045-SRC-045, DMR-045-CLM-019 y DMR-045-CLM-020; añade las pistas a las fichas de Alfia y Zald, al expediente interactivo CONT-MAIN-LN, al directorio de fuentes y a las pruebas. No crea aristas nuevas ni eleva claims a evidencia primaria.
+- **Alcance y continuidad:** CONT-MAIN-LN como referencia secundaria; no trasladar las escenas a CONT-AR. Los cinco localizadores primarios de DMR-045 siguen abiertos.
+- **Documentos afectados:** auditoría DMR-045, registro de fuentes, fichas de Alfia y Zald, dossier interactivo, directorio de fuentes, pruebas, cola, índice maestro, docs/STATUS.md, docs/DECISIONS.md y registro DanMachi.
+- **Estado actual:** implementado en la rama de trabajo; CI, revisión e integración en main pendientes. La casilla de cotejo primario permanece abierta.
