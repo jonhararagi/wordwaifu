@@ -4,7 +4,7 @@ universe: danmachi
 type: character
 status: secondary_reference_primary_locator_pending
 continuity_scope: CONT-AR
-source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001, DMR-045-SRC-009]source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001, DMR-045-SRC-009, DMR-045-SRC-033]
+source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001, DMR-045-SRC-009, DMR-045-SRC-033]
 claim_refs: [DMR-029-CLM-003, DMR-038-CLM-007, DMR-045-CLM-003, DMR-045-CLM-009, DMR-045-CLM-018]
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases: [Erebus]
