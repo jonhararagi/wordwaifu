@@ -10,6 +10,7 @@ const required = [
   ["community-meteria-es", "https://danmachi.fandom.com/es/wiki/Meteria"],
   ["community-zald-en", "https://danmachi.fandom.com/wiki/Zald"],
   ["community-vol20-synopsis", "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis"],
+  ["community-volume-14-synopsis", "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis"],
   ["community-erebus-en", "https://danmachi.fandom.com/wiki/Erebus"],
   ["community-rudra-familia-en", "https://danmachi.fandom.com/wiki/Rudra_Familia"],
   ["community-rudra-es", "https://danmachi.fandom.com/es/wiki/Rudra"]
@@ -34,6 +35,14 @@ assert.equal(vol20Synopsis[0].authority, "Fuente secundaria");
 assert.match(vol20Synopsis[0].coverage, /DMR-045-CLM-019.*DMR-045-CLM-020/);
 assert.match(vol20Synopsis[0].limits, /no texto primario ni localizador de página/i);
 assert.match(vol20Synopsis[0].limits, /CONT-MAIN-LN/);
+
+const volume14Synopsis = sources.filter(source => source.id === "community-volume-14-synopsis");
+assert.equal(volume14Synopsis.length, 1, "the volume 14 chapter synopsis must be discoverable exactly once");
+assert.equal(volume14Synopsis[0].authority, "Fuente secundaria");
+assert.match(volume14Synopsis[0].coverage, /Rudra.*Ryuu.*Gremio/);
+assert.match(volume14Synopsis[0].limits, /no página narrativa primaria/i);
+assert.match(volume14Synopsis[0].limits, /no demuestra que Rudra conociera, ordenara o autorizara/i);
+assert.match(volume14Synopsis[0].limits, /CONT-MAIN-LN/);
 
 const licensedAstrea = sources.filter(source => source.id === "publisher-yenpress-astrea-record-vol3");
 assert.equal(licensedAstrea.length, 1, "the licensed English edition must have one discoverable source entry");
