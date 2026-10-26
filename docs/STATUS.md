@@ -413,3 +413,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - El validador del catálogo confirmó que las dos relaciones de Alfia y Zald coinciden con secondary_checked y community_review_summary; el registro central de DMR-045 tiene 40 IDs únicos, incluidos SRC-043.
 - **Límite post-merge:** el conector disponible solo expone runs disparados por pull_request y no permitió verificar los workflows push del SHA de fusión. No se afirma su resultado.
 - **Estado del lore:** DMR-045 sigue IN_PROGRESS; la reseña BookLive permanece como pista secundaria, y los cinco localizadores primarios continúan pendientes.
+
+## DMR-045 — ruta BinB oficial adicional para DanMachi vol. 20 (2026-10-26)
+
+- Se comprobó en el [catálogo oficial de SBCr eBook Store](https://ebook.sbcr.jp/landing/p/danmachi) que DanMachi vol. 20 tiene una entrada 立ち読み y se siguió el enlace normal al lector [BinB del volumen 20](https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81562869JAAA20MBJE3X&lginbtn=false).
+- **Resultado visible:** iframe, “Now loading...” y menú del lector; no se recuperó narración ni localizador de capítulo/página.
+- **Registro:** `DMR-045-SRC-044`, añadido al directorio de fuentes de la aplicación y al registro central; queda `metadata_checked_only` en `CONT-MAIN-LN`, con claims/events vacíos.
+- **Pruebas añadidas:** el test del directorio valida URL exacta, unicidad del ID, continuidad y prohibición de tratar la pantalla de carga como evidencia narrativa.
+- **Límite factual:** no se identifica a la maga del prólogo, al testigo o a la criatura, y no se valida el uso de Afterglow en los capítulos 2–3. Los cinco localizadores primarios de DMR-045 siguen pendientes; Orario continúa aplazado.
