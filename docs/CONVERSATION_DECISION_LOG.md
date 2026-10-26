@@ -301,3 +301,13 @@
 - **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #3384](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839057) y [DanMachi Lore and Retrieval Integrity #1776](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839130), ambos `success`.
 - **Ramas/PR obsoletas cerradas sin fusionar:** #132 (solapada con #131/#133), #134 y #137 (intentos documentales con base desfasada), sustituidas por #140.
 - **Resultado:** el encabezado activo, las tareas de los cinco expedientes, los límites de las fuentes y la etapa posterior de Orario ya están sincronizados en `main`. DMR-045 no queda cerrado en cuanto al canon: las páginas narrativas primarias siguen pendientes.
+
+
+### CONV-DM-2026-10-25-012 — Tres compendios gratuitos de BOOK☆WALKER para Astrea Record 1–3
+- **Fecha:** 2026-10-25.
+- **Estado:** IMPLEMENTED on a work branch; pending PR CI, merge, and post-merge verification.
+- **Origen:** búsqueda pública de distribuidores licenciados encontró los compendios de muestras de octubre, noviembre y diciembre de 2022, que incluyen Astrea Record 1, 2 y 3. Es un tipo de recurso diferente de las fichas individuales ya registradas, así que se guardan sus tres rutas normales sin duplicar IDs existentes.
+- **Acceso observado:** el compendio de octubre lleva al lector público; la extracción no pudo abrir esa vista y el reintento directo del lector terminó en timeout. Las rutas normales de muestra de noviembre y diciembre también terminaron en timeout.
+- **Límite de evidencia:** DMR-045-SRC-030–032 quedan metadata_checked_only, con claims_supported vacíos y sin localizadores narrativos. El compendio de octubre advierte además que su contenido de muestra puede diferir de la edición final. Ninguna ruta confirma técnica, relación o escena de Alfia, Zald, Meteria, Erebus o Rudra.
+- **Implementación prevista:** directorio de fuentes de la aplicación, auditoría DMR-045, registro central, cola, índice maestro, test del directorio y test de integridad DMR-045.
+- **Prioridad vigente:** conseguir texto primario legible por vía autorizada para los cinco expedientes; Orario continúa en cola.
