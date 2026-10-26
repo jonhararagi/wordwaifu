@@ -271,11 +271,14 @@ sections:[
 {title:"Genos Angelus · descripción reportada por la wiki",text:"La wiki comunitaria en español describe Genos Angelus como un hechizo de canto muy largo que manifiesta una campana gris plateada, con un alcance reportado superior a 100 metros. La misma fuente atribuye al uso contra Leviathan un agravamiento de la salud de Alfia. Son afirmaciones secundarias pendientes de cotejo con el texto publicado; no se presenta el alcance como una medición verificada ni se confirma aquí una secuencia exacta de combate."},
 {title:"Gif Blessing, Limit Off y coste",text:"Los compendios comunitarios vinculan Gif Blessing con la enfermedad de Alfia y describen Limit Off como una condición que mantiene sus capacidades a cambio de deterioro físico, mental y de resistencia. También reportan Silentium Eden como defensa mágica con un coste elevado de Mind y restricciones sobre la propia magia de Alfia. El funcionamiento exacto, las condiciones de activación y el coste por escena siguen sin localizador primario comprobado."},
 {title:"Límites de investigación y continuidad",text:"Este resumen corresponde a la investigación secundaria sobre Astrea Record (CONT-AR), no a una transcripción del libro. Las pistas sobre Afterglow y el prólogo del volumen 20 pertenecen a la investigación de la novela principal (CONT-MAIN-LN) y siguen sin confirmar identidad ni uso individual; los hechos exclusivos de juegos y el escenario autoral alternativo (CONT-AU) no se importan como sucesos de Astrea Record."}
+,
+{title:"Pista secundaria sobre el cierre de Astrea Record 3",text:"La reseña comunitaria de BookLive atribuida a ブクログ (11-02-2023) parece describir que Bell y Hermes depositan flores ante tumbas de Erebus, Zald y Alfia. La pista se conserva como lo que reporta una reseña de lector (DMR-045-CLM-022), no como escena leída ni localizador primario. No confirma la formulación exacta, las relaciones entre los personajes ni detalles individuales de su destino."}
 ],
 references:[
 {label:"Wiki comunitaria en español · Alfia / Habilidades",url:"https://danmachi.fandom.com/es/wiki/Alfia/Habilidades",kind:"community"},
 {label:"Wiki comunitaria en inglés · Alfia",url:"https://danmachi.fandom.com/wiki/Alfia",kind:"community"},
-{label:"BookLive · Astrea Record 3 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/1237250/vol_no/003",kind:"licensed_preview"}
+{label:"BookLive · Astrea Record 3 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/1237250/vol_no/003",kind:"licensed_preview"},
+{label:"BookLive · reseña comunitaria de Astrea Record 3 (pista secundaria)",url:"https://booklive.jp/review/list/title_id/1237250/vol_no/003",kind:"community"}
 ]
 }
 },
@@ -298,11 +301,14 @@ sections:[
 {title:"Deus Ambrosia · límite de poder reportado",text:"La wiki comunitaria describe Deus Ambrosia como una habilidad que puede aumentar las capacidades de Zald al consumir criaturas o materiales, con resultados dependientes de la cantidad y calidad ingeridas. La fuente presenta como ejemplo que un Zald reportado en nivel 7 no podía alcanzar sin más un poder equivalente al nivel 10. Ese ejemplo es una afirmación secundaria; no es una fórmula universal verificada del sistema de niveles."},
 {title:"Veneno de Behemoth y coste",text:"La fuente comunitaria describe un deterioro persistente causado por el veneno de Behemoth. El aumento de capacidades no debe representarse como poder ilimitado ni como una mejora gratuita que borra ese coste. Los efectos exactos, su duración y las condiciones de cada escena continúan pendientes de cotejo primario."},
 {title:"Otras capacidades y límites de continuidad",text:"Las wikis también enumeran Al Questa, Niggle Gourmet y Rea Ambrosia, pero esta ficha no asigna efectos, parámetros ni usos individuales sin una descripción suficientemente localizada. La pista de Afterglow del volumen 20 pertenece a CONT-MAIN-LN; el escenario de crianza autoral se mantiene separado como CONT-AU y no se fusiona con Astrea Record."}
+,
+{title:"Pista secundaria sobre el cierre de Astrea Record 3",text:"La reseña comunitaria de BookLive atribuida a ブクログ (11-02-2023) parece describir que Bell y Hermes depositan flores ante tumbas de Erebus, Zald y Alfia. La pista se conserva como lo que reporta una reseña de lector (DMR-045-CLM-022), no como escena leída ni localizador primario. No confirma la formulación exacta, las relaciones entre los personajes ni detalles individuales de su destino."}
 ],
 references:[
 {label:"Wiki comunitaria en español · Zald",url:"https://danmachi.fandom.com/es/wiki/Zald",kind:"community"},
 {label:"Wiki comunitaria en español · Astrea Record, novela ligera vol. 3",url:"https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3",kind:"community"},
-{label:"BookLive · Astrea Record 3 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/1237250/vol_no/003",kind:"licensed_preview"}
+{label:"BookLive · Astrea Record 3 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/1237250/vol_no/003",kind:"licensed_preview"},
+{label:"BookLive · reseña comunitaria de Astrea Record 3 (pista secundaria)",url:"https://booklive.jp/review/list/title_id/1237250/vol_no/003",kind:"community"}
 ]
 }
 },
@@ -365,10 +371,13 @@ summary:"Esta sección conserva un enlace bibliográfico para consultar la edici
 sections:[
 {title:"BookLive · Astrea Record 3",text:"La ficha pública del distribuidor licenciado presenta una opción de prueba en navegador y otra en app. En esta revisión solo se inspeccionaron la ficha y sus metadatos; no se abrieron páginas narrativas del visor. El enlace sirve para una consulta futura, no confirma aparición, diálogo, afiliación, poder ni acción individual de Erebus en la novelización."},
 {title:"Separación de continuidad",text:"La información sobre la ideología y la versión original del personaje permanece en CONT-GAME. No se importa a CONT-AR hasta que un pasaje de la novelización se pueda leer y localizar de manera reproducible."}
+,
+{title:"Pista comunitaria sobre el cierre de Astrea Record 3",text:"El fragmento visible/indexado de una reseña comunitaria de BookLive, atribuida a ブクログ y fechada el 11-02-2023, parece describir una ofrenda floral de Bell y Hermes ante tumbas asociadas a Erebus, Zald y Alfia (DMR-045-CLM-022). Es una pista secundaria de CONT-AR, sin capítulo ni página narrativa. No permite deducir una relación privada ni trasladar a la novelización la ideología o los actos atribuidos a Erebus en CONT-GAME."}
 ],
 references:[
 {label:"BookLive · Astrea Record 3 (prueba anunciada; páginas no inspeccionadas)",url:"https://booklive.jp/product/index/title_id/1237250/vol_no/003",kind:"licensed_preview"},
-{label:"SB Creative / GA Bunko · página de Astrea Record 3",url:"https://ga.sbcr.jp/product/9784815610197",kind:"publisher_metadata"}
+{label:"SB Creative / GA Bunko · página de Astrea Record 3",url:"https://ga.sbcr.jp/product/9784815610197",kind:"publisher_metadata"},
+{label:"BookLive · reseña comunitaria de Astrea Record 3 (pista secundaria)",url:"https://booklive.jp/review/list/title_id/1237250/vol_no/003",kind:"community"}
 ]
 }
 },
