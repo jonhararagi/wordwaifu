@@ -441,3 +441,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de la PR**, sobre head `bd707757659be7ee976d5b41bf88007b63482928`: [Validate WordWaifu #40348659487](https://github.com/jonhararagi/wordwaifu/actions/runs/40348659487) y [DanMachi Lore and Retrieval Integrity #40348659494](https://github.com/jonhararagi/wordwaifu/actions/runs/40348659494), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main`:** [DanMachi Lore and Retrieval Integrity #40348901258](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901258) `success`. [Validate WordWaifu #40348901098](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901098) sigue `in_progress` en `Install Chromium` en la última consulta; no se declara su resultado final.
 - **Límite:** el contenido se recuperó del índice de búsqueda; el acceso directo a la wiki quedó bloqueado. No se verificaron páginas de la novela ni se crearon aristas nuevas. Los cinco localizadores primarios de DMR-045 siguen pendientes.
+
+
+## DMR-045 — pista secundaria individual de Rudra
+
+- **Fuente registrada:** DMR-045-SRC-046, [DanMachi Wiki · resumen del volumen 14](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis), clasificada como fuente secundaria comunitaria. La apertura directa devolvió HTTP 402; se trabajó con el contenido recuperado por el índice de búsqueda.
+- **Claim añadido:** DMR-045-CLM-021, según el cual el resumen comunitario sitúa a Rudra apareciendo ante Ryuu después de la destrucción de Rudra Familia, haciendo un comentario sobre invitarla a su Familia y siendo capturado posteriormente por el Gremio. Estado `secondary_checked`, continuidad `CONT-MAIN-LN`.
+- **Interfaz y fichas:** se amplió el perfil Markdown de Rudra, su resumen de personaje y la nota interactiva de `CONT-MAIN-LN`; se añadieron pruebas de regresión para la URL, el estado secundario y la barrera de atribución.
+- **Límite:** el dato no prueba que Rudra conociera, ordenara, diseñara o autorizara la trampa previa. No se crea arista canónica nueva ni se cierra el localizador primario de la escena. CI e integración pendientes hasta la revisión del PR.
