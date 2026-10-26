@@ -179,15 +179,15 @@ Thanatos y Valletta Grede mantienen fichas de descubrimiento con URL comunitaria
 - `aspect`: afiliación y parentesco
 - `era_or_interval`: Historia familiar previa y posterior a la caída de Zeus/Hera; fechas exactas pendientes
 - `continuity_scope`: CONT-MAIN-LN; CONT-AR
-- `source_id`: DMR-021-SRC-006; DMR-029-SRC-015
-- `source_title`: Meteria; Meteria (español)
+- `source_id`: DMR-021-SRC-006; DMR-029-SRC-015; DMR-045-SRC-030
+- `source_title`: Meteria; Meteria (español); DanMachi Wiki (Miraheze) · Meteria
 - `source_type`: COMMUNITY_WIKI
 - `source_locator`: Secciones de afiliación y familiares de las fichas comunitarias
-- `source_url`: https://danmachi.fandom.com/wiki/Meteria; https://danmachi.fandom.com/es/wiki/Meteria
+- `source_url`: https://danmachi.fandom.com/wiki/Meteria; https://danmachi.fandom.com/es/wiki/Meteria; https://danmachien.miraheze.org/wiki/Meteria
 - `evidence_type`: community_secondary_family_relationships
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
-- `confidence_note`: Usar como hipótesis de parentesco con fuente secundaria; no implica que cualquier personaje conozca estos vínculos en cada escena. No identificar al padre de Bell.
+- `confidence_note`: Usar como parentesco reportado por wikis comunitarias, no como dato cotejado en novela. La página pública de Miraheze vuelve accesible el reporte en inglés, pero no aporta un localizador narrativo y no se ha establecido que sea editorialmente independiente de otras wikis; no implica que cualquier personaje conozca estos vínculos en cada escena. No identificar al padre de Bell.
 
 ### DMR-029-CLM-012 · Meteria: descripción de carácter en una nota del autor dentro de un escenario alternativo
 - `claim_id`: DMR-029-CLM-012
