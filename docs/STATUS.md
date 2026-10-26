@@ -17,7 +17,8 @@
 - **Integrado en `main`:** [PR #135](https://github.com/jonhararagi/wordwaifu/pull/135), merge SHA `e63fbdaa8b8b757b67446aecbe0ffec1382e4562`.
 - **CI de la PR (head SHA `a10ba6062e6e6d5d11722625b132c569b66ccfb2`):** [Validate WordWaifu #3374](https://github.com/jonhararagi/wordwaifu/actions/runs/40232076731) y [DanMachi Lore and Retrieval Integrity #1766](https://github.com/jonhararagi/wordwaifu/actions/runs/40232076712), ambos `success`.
 - **CI post-merge sobre el SHA exacto `e63fbdaa8b8b757b67446aecbe0ffec1382e4562`:** [Validate WordWaifu #3377](https://github.com/jonhararagi/wordwaifu/actions/runs/40232214960) y [DanMachi Lore and Retrieval Integrity #1767](https://github.com/jonhararagi/wordwaifu/actions/runs/40232214899), ambos `success`.
-- **Pendiente:** localizar en una edición licenciada legible los pasajes individuales de Alfia, Zald, Meteria y Erebus y la evidencia narrativa que permita evaluar la atribución personal a Rudra. Los cinco huecos primarios de DMR-045 siguen abiertos.
+- Se añadieron como referencias secundarias accesibles las fichas inglesas de Miraheze para Meteria, Alfia, Zald, Erebus y Rudra Familia (DMR-045-SRC-030–034). La ficha de Meteria ofrece una atribución explícita de madre/hermana en el resumen comunitario, útil para contrastar con la entrevista ya registrada, pero no expone un localizador narrativo ni se ha establecido independencia editorial respecto de otras wikis.
+- No se añadieron claims, alias, relaciones ni hechos canónicos. **Pendiente:** localizar en una edición licenciada legible los pasajes individuales de Alfia, Zald, Meteria y Erebus y la evidencia narrativa que permita evaluar la atribución personal a Rudra. Los cinco huecos primarios de DMR-045 siguen abiertos.
 
 ## Filtro de alineamiento de personajes — integrado y validado (2026-10-25)
 
