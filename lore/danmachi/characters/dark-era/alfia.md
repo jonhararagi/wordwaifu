@@ -18,6 +18,7 @@ source_refs:
   - DMR-045-SRC-009
   - DMR-045-SRC-011
   - DMR-045-SRC-034
+  - DMR-045-SRC-045
   - DMR-045-SRC-012
   - DMR-045-SRC-013
 claim_refs:
@@ -31,6 +32,7 @@ claim_refs:
   - DMR-045-CLM-006
   - DMR-045-CLM-015
   - DMR-045-CLM-016
+  - DMR-045-CLM-019
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Alfia"
@@ -70,6 +72,13 @@ Un comentario comunitario sitúa la búsqueda de la técnica Afterglow en las re
 - **Estado:** secondary_checked; pista de localización, sin página verificada.
 - **Evento candidato:** [Pista de Afterglow en los capítulos 2–3](../../events/candidates/EVT-DM-V20-AFTERGLOW-LEGACY-LEAD-001.md).
 - **Fuente:** DMR-045-SRC-013, discusión comunitaria; la ficha de Yen Press DMR-045-SRC-012 solo acredita la edición del volumen.
+
+## Pista secundaria del capítulo 2 del volumen 20 — Alfia y Leon
+
+La sinopsis comunitaria por capítulos del volumen 20 sitúa una retrospectiva de Leon en la que Alfia y otros héroes de la generación anterior lo golpeaban con frecuencia y atribuye a Alfia haberlo animado a desarrollar fuerza suficiente para cortar una colina. Este detalle se conserva como claim separado (DMR-045-CLM-019), bajo CONT-MAIN-LN, con estado secondary_checked. Es un resumen de wiki, no una página narrativa leída; debe servir para localizar la escena en una edición licenciada, no para ampliar automáticamente el perfil de Astrea Record.
+
+- Fuente: [DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis) (DMR-045-SRC-045).
+- Límite: sin número de página ni texto primario cotejado. No inferir fecha, parentesco adicional, diálogo literal ni un vínculo personal más allá de lo descrito en el resumen.
 
 ## Datos de la wiki: qué está disponible y qué significa
 La ficha inglesa ofrece nombre japonés, romanización, alias y una instantánea de su estado. Registra nivel 7 y piso 71 como datos históricos reportados, y da el alias **Silence**; sus sobrenombres resaltan el talento excepcional. La wiki no sirve para afirmar que ese nivel o las cifras de estadísticas sean universales o permanentes.
