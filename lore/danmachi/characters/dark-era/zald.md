@@ -13,6 +13,7 @@ source_refs:
   - DMR-045-SRC-005
   - DMR-045-SRC-009
   - DMR-045-SRC-013
+  - DMR-045-SRC-032
 claim_refs:
   - DMR-029-CLM-002
   - DMR-029-CLM-007
@@ -82,6 +83,7 @@ La wiki española señala Astrea Record volumen 3, con títulos de capítulos y 
 - [Zald · DanMachi Wiki, español](https://danmachi.fandom.com/es/wiki/Zald) — roster, historia, habilidades y magia como referencia secundaria.
 - [Astrea Record, volumen 3 · resumen comunitario](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3) — pistas de navegación.
 - [Zeus Familia · DanMachi Wiki, inglés](https://danmachi.fandom.com/wiki/Zeus_Familia) — contexto histórico secundario.
+- [Zald · DanMachi Wiki (Miraheze), inglés](https://danmachien.miraheze.org/wiki/Zald) (DMR-045-SRC-032) — perfil comunitario alternativo; no verifica la retrospección de Afterglow en el volumen 20.
 - [Anuncio oficial de publicación de Astrea Record](https://danmachi.com/news/news131.php) — confirma el contexto editorial.
 - Investigación asociada: DMR-029-CLM-002 y DMR-029-CLM-007.
 
