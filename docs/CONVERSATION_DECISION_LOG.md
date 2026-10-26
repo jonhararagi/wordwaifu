@@ -387,4 +387,5 @@
 - **Implementación en rama:** registra DMR-045-SRC-045, DMR-045-CLM-019 y DMR-045-CLM-020; añade las pistas a las fichas de Alfia y Zald, al expediente interactivo CONT-MAIN-LN, al directorio de fuentes y a las pruebas. No crea aristas nuevas ni eleva claims a evidencia primaria.
 - **Alcance y continuidad:** CONT-MAIN-LN como referencia secundaria; no trasladar las escenas a CONT-AR. Los cinco localizadores primarios de DMR-045 siguen abiertos.
 - **Documentos afectados:** auditoría DMR-045, registro de fuentes, fichas de Alfia y Zald, dossier interactivo, directorio de fuentes, pruebas, cola, índice maestro, docs/STATUS.md, docs/DECISIONS.md y registro DanMachi.
+- **Corrección surgida de CI:** se retiró DMR-045-CLM-018 de `claims_supported` en SRC-036 (Miraheze), porque ese claim cita la ficha inglesa de Fandom `DMR-029-SRC-006`. El registro ya no atribuye a una wiki el respaldo de otra. No cambia el contenido factual del claim ni su estado secundario.
 - **Estado actual:** implementado en la rama de trabajo; CI, revisión e integración en main pendientes. La casilla de cotejo primario permanece abierta.
