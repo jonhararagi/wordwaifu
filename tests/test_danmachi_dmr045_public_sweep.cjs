@@ -127,7 +127,7 @@ assert.match(dmr045, /no se ha establecido la independencia editorial/i);
 assert.match(dmr045, /no cierran ninguno de los cinco localizadores primarios/i);
 assert.match(dmr045, /Cache miss/);
 assert.ok(sources.includes("https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019"));
-const sourceIds = [...sources.matchAll(/^- source_id: (DMR-045-SRC-\\d{3})$/gm)].map(match => match[1]);
+const sourceIds = [...sources.matchAll(/^- source_id: (DMR-045-SRC-\d{3})$/gm)].map(match => match[1]);
 assert.equal(new Set(sourceIds).size, sourceIds.length, "DMR-045 source IDs must be unique");
 
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
