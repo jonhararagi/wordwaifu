@@ -127,3 +127,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - Las rutas SRC-047/048 y la navegación fueron integradas mediante [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`; los dos workflows de PR pasan sobre el head `6d89ea9a7846c64132b08f58b628ff70b075a302` ([Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794), [Lore/Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812)).
 - Post-merge Lore/Integrity [#40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) y Validate [#40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) terminaron en `success`.
 - **Límite:** únicamente se verificaron páginas de producto y controles de muestra; no se leyó narración. No cambiar claims ni cerrar los localizadores de DMR-045 a partir de estos metadatos.
+
+### DEC-DM-015 — Reseña comunitaria como pista secundaria, no localizador
+- **Fecha:** 2026-10-26.
+- **Estado:** Aplicada; pendiente de cotejo primario.
+- **Decisión de trabajo:** una reseña pública de lector puede aportar una pista atómica si queda etiquetada como secundaria y separada de afirmaciones verificadas en el texto.
+- **Aplicación:** DMR-045-SRC-043 sustenta DMR-045-CLM-022 como pista `secondary_checked` sobre una posible ofrenda floral al cierre de Astrea Record 3. No se crea un evento, arista o alias ni se transfiere material de CONT-GAME a CONT-AR.
+- **Límite:** no elevar a canon confirmado ni registrar capítulo/página hasta leer una edición licenciada.
