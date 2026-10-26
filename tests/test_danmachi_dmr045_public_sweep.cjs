@@ -113,6 +113,23 @@ assert.match(dmr045, /viewer\.bookwalker\.jp\/browserWebApi\/03\/view/);
 assert.match(dmr045, /muestra compilada puede diferir parcialmente del producto final/i);
 assert.match(dmr045, /timeout para Vols\. 2–3/i);
 
+for (const id of ["DMR-045-SRC-033", "DMR-045-SRC-034", "DMR-045-SRC-035", "DMR-045-SRC-036", "DMR-045-SRC-037"]) {
+  assert.match(dmr045, new RegExp(id));
+  assert.match(sources, new RegExp(id));
+  assert.match(queue, new RegExp(id));
+}
+for (const id of ["DMR-045-SRC-038"]) {
+  assert.match(dmr045, new RegExp(id));
+  assert.match(sources, new RegExp(id));
+  assert.match(queue, new RegExp(id));
+}
+assert.match(dmr045, /no se ha establecido la independencia editorial/i);
+assert.match(dmr045, /no cierran ninguno de los cinco localizadores primarios/i);
+assert.match(dmr045, /Cache miss/);
+assert.ok(sources.includes("https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019"));
+const sourceIds = [...sources.matchAll(/^- source_id: (DMR-045-SRC-\\d{3})$/gm)].map(match => match[1]);
+assert.equal(new Set(sourceIds).size, sourceIds.length, "DMR-045 source IDs must be unique");
+
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, "DMR-045 claim IDs must be unique");
 
