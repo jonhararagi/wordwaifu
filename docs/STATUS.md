@@ -10,6 +10,14 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## DMR-045 — lectores BinB enlazados desde la tienda oficial de SB Creative (2026-10-25)
+
+- Se localizaron cuatro rutas de muestra 立ち読み desde el [catálogo oficial de la serie DanMachi de SB Creative](https://ebook.sbcr.jp/landing/p/danmachi): Astrea Record 1–3 y DanMachi vol. 14, registradas como DMR-045-SRC-039–042.
+- La vista pública de las rutas directas solo expuso un iframe y Now loading...; no se recuperaron páginas narrativas ni localizadores. Esto no demuestra indisponibilidad general del lector.
+- Los cuatro registros permanecen metadata_checked_only, con claims_supported vacío; tres pertenecen a CONT-AR y vol. 14 a CONT-MAIN-LN. No se añadieron hechos canónicos, aliases ni relaciones.
+- PR #146 quedó integrada por SHA dc7fa0fe44d259e710902d5d741fe11a85b3e3a0. Los workflows de PR pasaron sobre head 634cd5cc403dbdb0360a2b72ecd77997206ff2bc (Validate: https://github.com/jonhararagi/wordwaifu/actions/runs/40261732974; Lore/Integrity: https://github.com/jonhararagi/wordwaifu/actions/runs/40261733009); al registrar esta nota aún no aparecían ejecuciones post-merge asociadas al SHA de fusión.
+- DMR-045 sigue IN_PROGRESS; los cinco localizadores primarios continúan pendientes.
+
 ## DMR-045 — reintento de vista previa autorizada de DanMachi vol. 20 (2026-10-25)
 
 - La ficha pública licenciada de [Google Books vol. 20](https://books.google.com/books?id=XWHEEQAAQBAJ) se comprobó también desde su lector normal ([vista previa pública](https://www.google.com/books/edition/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a/XWHEEQAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PT29)). El lector anuncia `Preview · 28 pages` y muestra `1 of 4`, pero las páginas consultadas devuelven `Something went wrong / Page didn't load`; no se obtiene texto narrativo legible.
