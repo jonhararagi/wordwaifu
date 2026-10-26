@@ -9,6 +9,7 @@ const dmr045 = read("lore/danmachi/research/inbox/DANMACHI-RESEARCH-045-dark-era
 const dmr029 = read("lore/danmachi/research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md");
 const sources = read("lore/danmachi/sources/00-registro-fuentes.md");
 const alfia = read("lore/danmachi/characters/dark-era/alfia.md");
+const zald = read("lore/danmachi/characters/dark-era/zald.md");
 const erebus = read("lore/danmachi/characters/dark-era/erebus.md");
 const meteria = read("lore/danmachi/characters/dark-era/meteria.md");
 const queue = read("lore/danmachi/WORK_QUEUE.md");
@@ -137,6 +138,21 @@ for (const id of ["DMR-045-SRC-039", "DMR-045-SRC-040", "DMR-045-SRC-041", "DMR-
 }
 assert.match(dmr045, /Now loading\.\.\./);
 assert.ok(dmr045.includes("https://ebook.sbcr.jp/landing/p/danmachi"));
+
+const combatMatchupClaim = section(dmr045, "DMR-045-CLM-006");
+assert.ok(combatMatchupClaim.includes("source_id: DMR-045-SRC-043"));
+assert.ok(combatMatchupClaim.includes("source_type: COMMUNITY_REVIEW"));
+assert.ok(combatMatchupClaim.includes("verification_status: secondary_checked"));
+assert.ok(combatMatchupClaim.includes("sinopsis editorial oficial de SB Creative"));
+assert.ok(combatMatchupClaim.includes("no nombra a estos participantes"));
+assert.ok(!combatMatchupClaim.includes("official_indexed_publisher_synopsis_excerpt"));
+assert.ok(sources.includes("source_id: DMR-045-SRC-043"));
+const publisherSynopsis005 = sources.slice(sources.indexOf("## DMR-045-SRC-005"), sources.indexOf("## DMR-045-SRC-006"));
+assert.ok(publisherSynopsis005.includes("claims_supported: []"));
+assert.ok(!publisherSynopsis005.includes("claims_supported: [DMR-045-CLM-006]"));
+assert.ok(sources.toLowerCase().includes("booklive — reseña comunitaria de astrea record 3"));
+assert.ok(alfia.includes("DMR-045-SRC-043"));
+assert.ok(zald.includes("DMR-045-SRC-043"));
 
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, "DMR-045 claim IDs must be unique");
