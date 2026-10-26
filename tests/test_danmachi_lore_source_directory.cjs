@@ -207,6 +207,7 @@ const sbCreativePreviewSpecs = [
   ["official-sbcreative-astrea-record-vol2-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561018JAAA02MBJE3X&lginbtn=false", /CONT-AR/],
   ["official-sbcreative-astrea-record-vol3-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false", /CONT-AR/],
   ["official-sbcreative-danmachi-vol14-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=79739620JAAA14MBJE3X&lginbtn=false", /CONT-MAIN-LN/]
+  ["official-sbcreative-danmachi-vol20-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81562869JAAA20MBJE3X&lginbtn=false", /CONT-MAIN-LN/]
 ];
 for (const [id, url, continuity] of sbCreativePreviewSpecs) {
   const rows = sources.filter(source => source.id === id);
@@ -232,5 +233,16 @@ assert.ok(bookLiveAstrea3Review[0].coverage.includes("Zald–Ottar"));
 assert.ok(bookLiveAstrea3Review[0].coverage.includes("Alfia contra Astrea Familia"));
 assert.ok(bookLiveAstrea3Review[0].limits.includes("no es la sinopsis editorial oficial"));
 assert.ok(bookLiveAstrea3Review[0].limits.includes("CONT-AR"));
+
+const sbCreativeVol20 = sources.filter(source => source.id === "official-sbcreative-danmachi-vol20-sample");
+assert.equal(sbCreativeVol20.length, 1, "SB Creative DanMachi vol. 20 reader route must be discoverable exactly once");
+assert.equal(sbCreativeVol20[0].category, "official");
+assert.equal(sbCreativeVol20[0].url, "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81562869JAAA20MBJE3X&lginbtn=false");
+assert.match(sbCreativeVol20[0].coverage, /ダンジョンに出会いを求めるのは間違っているだろうか２０/);
+assert.match(sbCreativeVol20[0].limits, /prólogo|retrospectivas/i);
+assert.match(sbCreativeVol20[0].limits, /Now loading\.\.\./);
+assert.match(sbCreativeVol20[0].limits, /no se recuperó ninguna página narrativa/i);
+assert.match(sbCreativeVol20[0].limits, /metadata_checked_only/);
+assert.match(sbCreativeVol20[0].limits, /CONT-MAIN-LN/);
 
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
