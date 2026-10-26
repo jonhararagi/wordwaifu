@@ -253,6 +253,17 @@ MOM["CHAR-OTTAR"]={"CONT-ANIME":[
 
 const EXTENDED={
 "CHAR-DARK-ALFIA":{
+"CONT-MAIN-LN":{
+title:"Alfia · pista de la retrospectiva del volumen 20",
+summary:"Pista secundaria de la novela principal. El resumen comunitario por capítulos aporta contexto para buscar la escena, pero no sustituye páginas narrativas cotejadas.",
+sections:[
+{title:"Capítulo 2 · Alfia y la juventud de Leon",text:"El resumen comunitario de DanMachi vol. 20 describe una retrospectiva en la que Alfia, la Emperatriz y otros héroes de la generación anterior golpeaban repetidamente a Leon. También atribuye a Alfia haberlo animado a alcanzar la fuerza necesaria para cortar una colina. Esto procede de la sinopsis comunitaria del capítulo 2, no de una lectura directa de la novela; se conserva como pista secundaria (DMR-045-CLM-019)." },
+{title:"Límite de evidencia",text:"La sinopsis no da número de página y la muestra oficial consultada no expuso narración legible. La escena, el contexto completo y la formulación exacta siguen pendientes de cotejo primario. No trasladar esta pista a CONT-AR ni a CONT-GAME." }
+],
+references:[
+{label:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",kind:"community"}
+]
+},
 "CONT-AR":{
 title:"Alfia · Astrea Record / Era Oscura",
 summary:"Resumen de investigación de alcance secundario para CONT-AR. Las wikis comunitarias describen capacidades concretas, pero no sustituyen los pasajes de la novela: faltan localizadores narrativos primarios y varias mecánicas no se han cotejado escena por escena.",
@@ -268,6 +279,17 @@ references:[
 }
 },
 "CHAR-DARK-ZALD":{
+"CONT-MAIN-LN":{
+title:"Zald · pista de la técnica de espada en el volumen 20",
+summary:"Pista secundaria de la novela principal; no es una transcripción ni un localizador primario.",
+sections:[
+{title:"Capítulo 3 · Zald, Leon y Udaeus",text:"La sinopsis comunitaria cuenta que Leon siguió a Zald a los pisos profundos del Dungeon y lo vio derrotar a Udaeus de un golpe. También resume que Leon quería aprender la técnica de espada de Zald y que este le permitió observarla. El resumen lo sitúa entre los espadachines más hábiles de aquella generación, pero estos detalles siguen siendo evidencia secundaria de CONT-MAIN-LN (DMR-045-CLM-020)." },
+{title:"Qué no queda confirmado",text:"La fuente no es la página narrativa del libro y no proporciona folio reproducible. La interpretación exacta de la técnica y su relación con Afterglow requieren cotejar la edición licenciada. No elevar este registro a source_checked_excerpt_only ni inventar página." }
+],
+references:[
+{label:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",kind:"community"}
+]
+},
 "CONT-AR":{
 title:"Zald · Astrea Record / Era Oscura",
 summary:"Resumen de investigación secundaria sobre capacidades y limitaciones asociadas a Zald en CONT-AR. Las cifras y mecánicas que siguen proceden de compendios comunitarios; no reemplazan el texto narrativo, y no hay un localizador primario verificado para cada afirmación.",
