@@ -3260,7 +3260,6 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
 
-
 ## DMR-045-SRC-030 · BOOK☆WALKER — compendio gratuito Astrea Record 1 (octubre de 2022)
 - source_id: DMR-045-SRC-030
 - title: GA文庫＆GAノベル2022年10月の新刊 全作品立読み（合本版）
@@ -3324,5 +3323,127 @@ verification_status: stub
 - reliability_note: Sin lectura narrativa ni localizador por personaje. La sinopsis comercial no verifica hechos individuales y el timeout no significa indisponibilidad global.
 - conflicting_sources: []
 - rights_note: Enlaces y metadatos solamente; no se eludieron restricciones ni se copió texto de la obra.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-033 · DanMachi Wiki (Miraheze) — Meteria
+- source_id: DMR-045-SRC-033
+- title: Meteria
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Meteria
+- accessed_at: 2026-10-25
+- locator_type: community_character_summary_and_infobox
+- locator: Infobox de familiares/afiliación y secciones de identidad e historia; la página identifica a Meteria como madre de Bell y como hermana gemela de Alfia. No se aporta un localizador primario de novela.
+- claims_supported: [DMR-029-CLM-011]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR (reported secondary profile only)
+- reliability_note: Fuente secundaria comunitaria. No se ha establecido si es editorialmente independiente de otras wikis y la ficha consultada no ofrece una referencia de capítulo/página primaria para cada parentesco. Sirve como fuente alternativa accesible, no como confirmación primaria ni como permiso para fusionar afirmaciones de distintas continuidades.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-034 · DanMachi Wiki (Miraheze) — Alfia
+- source_id: DMR-045-SRC-034
+- title: Alfia
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Alfia
+- accessed_at: 2026-10-25
+- locator_type: community_character_summary_and_appearance_metadata
+- locator: Infobox; la lista de apariciones reporta DanMachi vol. 20 (flashback) y Astrea Record vol. 1. El cuerpo lista referencias a un perfil de DanMemo y a una ficha de estado de la edición limitada de Astrea Record 3; no se cotejó la escena narrativa.
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-006, DMR-045-CLM-015]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN (appearance index only, secondary)
+- reliability_note: No identifica a la maga de cabello gris del prólogo en una página concreta del volumen 20. La lista de apariciones dirige una futura búsqueda, pero no sustituye el texto narrativo ni verifica técnicas/parentescos individualmente.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-035 · DanMachi Wiki (Miraheze) — Zald
+- source_id: DMR-045-SRC-035
+- title: Zald
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Zald
+- accessed_at: 2026-10-25
+- locator_type: community_character_summary_and_reference_list
+- locator: Infobox e historia; el índice de apariciones lista Astrea Record vol. 1 y el cuerpo refiere el perfil de Zald en DanMemo, la hoja de estado de Astrea Record vol. 3 y una nota autoral. No proporciona página narrativa del volumen 20.
+- claims_supported: [DMR-029-CLM-002, DMR-029-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-GAME; CONT-AR (secondary profile / appearance metadata only)
+- reliability_note: El resumen es una fuente secundaria, no confirma el uso individual de Afterglow en las retrospectivas del volumen 20 ni demuestra una secuencia de combate completa. Mantener cada habilidad, nivel y coste bajo la evidencia propia de su claim.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-036 · DanMachi Wiki (Miraheze) — Erebus
+- source_id: DMR-045-SRC-036
+- title: Erebus
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Erebus
+- accessed_at: 2026-10-25
+- locator_type: community_character_summary_and_appearance_metadata
+- locator: Infobox y secciones de identidad/filosofía; la ficha lista Astrea Record vol. 1 como aparición en novela y describe su presencia en el evento original de Memoria Freese.
+- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003, DMR-045-CLM-018]
+- events_supported: []
+- continuity_scope: CONT-GAME; CONT-AR (appearance metadata only, secondary)
+- reliability_note: La ficha también usa “Eren”, pero eso no verifica que sea un alias canónico en la novelización. No se traslada automáticamente la filosofía del juego a CONT-AR ni se deducen poderes o una cadena de mando completa de Evilus.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-037 · DanMachi Wiki (Miraheze) — Rudra Familia
+- source_id: DMR-045-SRC-037
+- title: Rudra Familia
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Rudra_Familia
+- accessed_at: 2026-10-25
+- locator_type: community_familia_summary
+- locator: Sección Information; el resumen atribuye a Rudra Familia como grupo la trampa contra Astrea Familia y el daño a la Dungeon que precedió al Juggernaut. La página no aporta capítulo/página en el texto consultado.
+- claims_supported: [DMR-029-CLM-004, DMR-029-CLM-005, DMR-045-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN (secondary group-level summary)
+- reliability_note: Fuente secundaria sin localizador primario reproducible en la página consultada. No demuestra que el dios Rudra diseñara, conociera, ordenara o autorizara personalmente el plan.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-038 · Barnes & Noble NOOK — DanMachi vol. 14 sample route (metadata only)
+- source_id: DMR-045-SRC-038
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 14 (light novel) — Read sample route
+- creator_or_publisher: Barnes & Noble / Yen Press LLC
+- source_type: LICENSED_RETAILER_SAMPLE_ROUTE
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 14, edición inglesa de Yen Press; ISBN digital 9781975385026 / impreso 9781975385019
+- language: Inglés
+- official_url: https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019
+- product_page: https://www.barnesandnoble.com/w/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-fujino-omori/1130510787
+- accessed_at: 2026-10-25
+- locator_type: licensed_sample_route_metadata_only
+- locator: La ficha pública de Barnes & Noble muestra el enlace “Read sample” para la edición. Al abrir la ruta normal NOOK desde esta consulta, la herramienta devolvió “Cache miss”; no se expusieron páginas del lector ni un localizador narrativo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Ruta legal adicional para una futura comprobación mediante el lector normal; la lectura de esta consulta no demuestra indisponibilidad general ni disponibilidad en todas las regiones. No respalda DMR-045-CLM-013/014 ni permite atribuir a Rudra una orden, autorización o conocimiento personal.
+- conflicting_sources: []
+- rights_note: Se conservaron URLs y metadatos de la ruta de muestra; no se copió texto narrativo ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
