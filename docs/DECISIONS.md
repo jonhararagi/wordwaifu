@@ -153,3 +153,9 @@
 - **CI de PR:** [Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [Lore/Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success` sobre head `6d89ea9a7846c64132b08f58b628ff70b075a302`.
 - **CI post-merge sobre SHA `968ad23141ffdc2db032383228445fddc753b755`:** [Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) y [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810), ambos `success`; la demora de Chromium fue transitoria.
 - El cambio solo incorpora rutas de metadatos; no equivale a ver texto primario ni a cambiar ningún claim.
+
+## DEC-027 — Reseña BookLive como pista de cierre para Erebus, Zald y Alfia
+**Estado:** Aplicada como pista secundaria; verificación primaria pendiente.
+**Decisión:** un resumen público de lector puede ampliar la cola de investigación cuando menciona una escena posible, pero debe conservar la procedencia, continuidad, incertidumbre y ausencia de localizador narrativo.
+**Aplicación:** DMR-045-CLM-022 se vincula a la reseña comunitaria SRC-043 y queda `secondary_checked` en `CONT-AR`. La ficha interactiva muestra el indicio como pista, sin crear un evento o una arista.
+**Límites:** no se considera leído el pasaje de Astrea Record 3; no se infieren relaciones privadas ni destino individual y no se importa a la novelización la caracterización de Erebus correspondiente a `CONT-GAME`.

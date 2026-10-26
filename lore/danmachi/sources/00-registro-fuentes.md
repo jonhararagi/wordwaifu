@@ -3546,11 +3546,11 @@ verification_status: stub
 - official_url: https://booklive.jp/review/list/title_id/1237250/vol_no/003
 - accessed_at: 2026-10-26
 - locator_type: user_review_entry
-- locator: Entrada de reseña atribuida a ブクログ y fechada el 11 de febrero de 2023; en el resumen del desenlace distingue el duelo Zald–Ottar en la superficie del combate Alfia–Astrea Familia dentro del Dungeon.
-- claims_supported: [DMR-045-CLM-006]
+- locator: Entrada de reseña atribuida a ブクログ y fechada el 11 de febrero de 2023; resume los emparejamientos Zald–Ottar y Alfia–Astrea Familia y el fragmento visible/indexado parece mencionar una ofrenda floral de Bell y Hermes ante tumbas de Erebus, Zald y Alfia. No ofrece capítulo ni página de la novela.
+- claims_supported: [DMR-045-CLM-006, DMR-045-CLM-022]
 - events_supported: [EVT-DM-ASTREA-RECORD-FOUNDATIONS-001]
 - continuity_scope: CONT-AR
-- reliability_note: Es un resumen de lector alojado en una página de reseñas, no texto editorial ni extracto verificado de la novela. Se conserva solo como pista secundaria para dirigir el cotejo; la sinopsis oficial accesible de SB Creative no incluye los emparejamientos. No se ha establecido la exactitud ni independencia de la reseña.
+- reliability_note: Es un resumen de lector alojado en una página de reseñas, no texto editorial ni extracto verificado de la novela. Los combates y la aparente mención de flores ante tumbas se mantienen como pistas secundarias; no confirman escenas por sí solos ni permiten inferir relaciones privadas, destino biográfico exacto o acciones de la versión de juego. La sinopsis oficial accesible de SB Creative no incluye estos detalles. No se ha establecido la exactitud ni independencia de la reseña.
 - conflicting_sources: [DMR-045-SRC-005]
 - rights_note: Se registran URL y paráfrasis breve; no se copia el texto de la reseña ni de la novela.
 - verified_by: DANMACHI-RESEARCH-045

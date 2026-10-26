@@ -4,8 +4,8 @@ universe: danmachi
 type: character
 status: secondary_reference_primary_locator_pending
 continuity_scope: CONT-AR
-source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001, DMR-045-SRC-009, DMR-045-SRC-036, DMR-045-SRC-048]
-claim_refs: [DMR-029-CLM-003, DMR-038-CLM-007, DMR-045-CLM-003, DMR-045-CLM-009, DMR-045-CLM-018]
+source_refs: [DMR-029-SRC-003, DMR-029-SRC-006, DMR-038-SRC-001, DMR-045-SRC-009, DMR-045-SRC-036, DMR-045-SRC-043, DMR-045-SRC-048]
+claim_refs: [DMR-029-CLM-003, DMR-038-CLM-007, DMR-045-CLM-003, DMR-045-CLM-009, DMR-045-CLM-018, DMR-045-CLM-022]
 verification_status: secondary_summary_reviewed_primary_page_pending
 aliases: [Erebus]
 tags: [Erebus, Evilus, Era Oscura, Astrea Record, CONT-GAME, antagonista ideológico, spoiler]
@@ -29,6 +29,9 @@ La wiki inglesa atribuye a Erebus la idea de que el mal verdadero debe ser odiad
 ## Papel narrativo y límite de continuidad
 
 La lectura secundaria presenta a Erebus como antagonista ideológico en la versión original del juego (CONT-GAME), frente a la justicia asociada con Astrea Familia. Es una guía para localizar escenas, no una explicación definitiva de su psicología. La ficha de la novela ligera mantiene pendientes los localizadores individuales; Evilus se maneja como red de facciones, y la afiliación no implica que Erebus dirigiera cada grupo ni ordenara todos los actos atribuidos a esa red.
+
+## Pista secundaria de cierre — Astrea Record 3 (`CONT-AR`)
+El resumen visible/indexado de una reseña comunitaria de BookLive (entrada “Posted by ブクログ”, 11-02-2023) parece describir que Bell y Hermes depositan flores ante tumbas asociadas a Erebus, Zald y Alfia (DMR-045-CLM-022). Es un indicio secundario, sin capítulo ni página de novela. No establece una relación privada ni autoriza a reutilizar en la novelización la ideología atribuida a Erebus en la versión original del juego (`CONT-GAME`). Cotejar la escena directamente antes de crear relaciones o completar su biografía.
 
 ## Capacidades y límites
 No se registra nivel de aventurero, magia, habilidades, arma ni mecanismo concreto de acción respaldado por fuente primaria. Es preferible dejar esos campos sin afirmar antes que rellenarlos con atributos de otros dioses. Cualquier futura ampliación debe citar la escena y conservar la diferencia entre versión original de Memoria Freese y libros revisados.

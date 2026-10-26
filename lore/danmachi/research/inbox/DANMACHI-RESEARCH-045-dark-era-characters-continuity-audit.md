@@ -424,6 +424,24 @@ La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confi
 - spoiler_level: major
 - confidence_note: El acceso directo a la wiki falló con HTTP 402; el contenido se recuperó del índice de búsqueda. No es una lectura cotejada de la novela. La aparición posterior de Rudra no demuestra que conociera, ordenara, diseñara o autorizara la trampa contra Astrea Familia. Mantener separadas las acciones de Rudra Familia, Jura y la deidad.
 
+### DMR-045-CLM-022 · La reseña de BookLive parece mencionar una ofrenda floral ante tumbas al cierre de Astrea Record 3
+
+- claim_id: DMR-045-CLM-022
+- claim: El resumen visible/indexado de la reseña comunitaria de BookLive (entrada atribuida a ブクログ, 11-02-2023) parece describir que Bell y Hermes depositan flores ante las tumbas de Erebus, Zald y Alfia. Esta entrada registra únicamente lo que reporta la reseña de un lector; no equivale a lectura directa de la novela ni confirma la escena de forma independiente.
+- character_ids: [CHAR-DARK-EREBUS, CHAR-DARK-ZALD, CHAR-DARK-ALFIA]
+- aspect: Pista de localización sobre la conclusión de Astrea Record 3; mención secundaria de ofrenda floral ante tumbas
+- era_or_interval: Cierre del volumen 3 según la reseña; cronología narrativa exacta no establecida aquí
+- continuity_scope: CONT-AR
+- source_id: DMR-045-SRC-043
+- source_title: BookLive — reseña comunitaria de Astrea Record 3, entrada “Posted by ブクログ”
+- source_type: COMMUNITY_REVIEW
+- source_locator: Fragmento visible/indexado del resumen de usuario fechado el 11 de febrero de 2023; no proporciona capítulo ni página de la novela
+- source_url: https://booklive.jp/review/list/title_id/1237250/vol_no/003
+- evidence_type: community_user_review_summary
+- verification_status: secondary_checked
+- spoiler_level: major
+- confidence_note: La reseña sirve como indicio para localizar el cierre, no como texto canónico cotejado. No se crea una arista, no se infiere parentesco o relación privada y no se importa a CONT-AR la ideología de Erebus descrita para CONT-GAME. La presencia exacta de los personajes, la formulación de la escena y el destino que implique cada tumba necesitan cotejo con la edición licenciada.
+
 ## Integración y CI — DMR-045-CLM-021 (PR #157)
 
 - La nueva referencia secundaria y la nota de Rudra quedaron integradas en [PR #157](https://github.com/jonhararagi/wordwaifu/pull/157), merge SHA `364876830d0b16eccc81969ea928180c29ba9f35`.

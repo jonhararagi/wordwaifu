@@ -58,6 +58,17 @@ assert.match(rudraPersonalScene, /no demuestra.*conociera.*autorizara/i);
 assert.match(sources, /DMR-045-SRC-046/);
 assert.match(rudra, /DMR-045-CLM-021/);
 assert.match(rudra, /no demuestra que Rudra conociera.*autorizara/i);
+
+const erebusMemorialLead = section(dmr045, "DMR-045-CLM-022");
+assert.match(erebusMemorialLead, /continuity_scope: CONT-AR/);
+assert.match(erebusMemorialLead, /source_id: DMR-045-SRC-043/);
+assert.match(erebusMemorialLead, /verification_status: secondary_checked/);
+assert.match(erebusMemorialLead, /no equivale a lectura directa de la novela/i);
+assert.match(erebusMemorialLead, /no se crea una arista/i);
+assert.match(sources, /claims_supported: \[DMR-045-CLM-006, DMR-045-CLM-022\]/);
+assert.match(alfia, /DMR-045-CLM-022/);
+assert.match(zald, /DMR-045-CLM-022/);
+assert.match(erebus, /DMR-045-CLM-022/);
 assert.match(queue, /Estado del subtrabajo.*DONE/i);
 assert.match(queue, /## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes/);
 assert.ok(queue.includes("## Etapa posterior — Orario y cobertura de la ciudad (pendiente tras DMR-045)"));
