@@ -145,4 +145,17 @@ assert.match(bookwalkerDanmachi14[0].limits, /No se obtuvo página narrativa/i);
 assert.match(bookwalkerDanmachi14[0].limits, /no respalda la trampa de Rudra Familia/i);
 assert.match(bookwalkerDanmachi14[0].limits, /metadata_checked_only/);
 
+
+const barnesNobleDanmachi14 = sources.filter(source => source.id === "licensed-retailer-barnes-noble-danmachi-vol14-sample");
+assert.equal(barnesNobleDanmachi14.length, 1, "Barnes & Noble NOOK vol. 14 sample route must be discoverable exactly once");
+assert.equal(barnesNobleDanmachi14[0].category, "licensed_retailer");
+assert.equal(barnesNobleDanmachi14[0].url, "https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019");
+assert.match(barnesNobleDanmachi14[0].authority, /Read sample/i);
+assert.match(barnesNobleDanmachi14[0].coverage, /Barnes & Noble/);
+assert.match(barnesNobleDanmachi14[0].limits, /Cache miss/i);
+assert.match(barnesNobleDanmachi14[0].limits, /No se leyó el capítulo 13/i);
+assert.match(barnesNobleDanmachi14[0].limits, /no demuestra indisponibilidad general/i);
+assert.match(barnesNobleDanmachi14[0].limits, /metadata_checked_only/);
+assert.match(barnesNobleDanmachi14[0].limits, /no respalda.*responsabilidad personal de Rudra/i);
+
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
