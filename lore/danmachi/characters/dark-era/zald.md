@@ -25,6 +25,7 @@ claim_refs:
   - DMR-045-CLM-011
   - DMR-045-CLM-016
   - DMR-045-CLM-020
+  - DMR-045-CLM-022
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Zald"
@@ -42,6 +43,8 @@ tags: [Zeus Familia, Astrea Record, abilities, Behemoth, spoiler]
 ## Pista secundaria acotada — Astrea Record 3
 
 La reseña comunitaria de BookLive (entrada “Posted by ブクログ”, 2023-02-11) resume el último día de los Siete Días de la Muerte y sitúa el duelo de Zald contra Ottar en la superficie (`DMR-045-CLM-006`, `DMR-045-SRC-043`, `CONT-AR`). La sinopsis oficial visible de SB Creative describe la batalla final de forma general, pero no nombra ese emparejamiento. El detalle se mantiene como pista secundaria, no como localizador de la novela. No confirma técnicas, niveles, ganador, consecuencias ni secuencia completa.
+
+La misma reseña parece mencionar una ofrenda floral de Bell y Hermes ante tumbas de Erebus, Zald y Alfia (DMR-045-CLM-022). Es una pista de lector sin capítulo/página reproducible, no una escena primaria cotejada.
 
 ## Pie editorial de la versión original del juego — CONT-GAME
 
