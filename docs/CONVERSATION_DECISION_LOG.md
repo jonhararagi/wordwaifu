@@ -341,3 +341,13 @@
 - **CI de PR:** Validate WordWaifu success (https://github.com/jonhararagi/wordwaifu/actions/runs/40262391617) y DanMachi Lore and Retrieval Integrity success (https://github.com/jonhararagi/wordwaifu/actions/runs/40262391545), ambos sobre head 32891061a411b66ac9a66000d8f5b0c4f2b0ba56.
 - **CI post-merge:** la consulta de workflows disponible filtra ejecuciones pull_request y no permitió verificar las ejecuciones push asociadas al SHA de fusión; no se afirma su resultado.
 - **Resultado de lore:** cuatro rutas oficiales adicionales siguen metadata_checked_only, sin claims nuevos y sin localizadores narrativos; los cinco huecos primarios de DMR-045 siguen pendientes.
+
+
+### CONV-DM-2026-10-26-001 — Corregir la evidencia de integración de las fuentes DMR-045
+- **Fecha:** 2026-10-26.
+- **Estado al registrar:** implementación documental realizada en la rama `docs/fix-stale-dmr045-status-integration-2026-10-26`; pendiente de revisión de PR y CI de esta corrección.
+- **Hallazgo:** la última nota de DMR-045 en `docs/STATUS.md` todavía decía que la ampliación de fuentes Miraheze/NOOK estaba pendiente de CI y fusión, aunque la PR #146 ya estaba integrada en `main`.
+- **Corrección:** sustituir esa nota obsoleta por la evidencia de integración de la PR [#146](https://github.com/jonhararagi/wordwaifu/pull/146), merge SHA `dc7fa0fe44d259e710902d5d741fe11a85b3e3a0`, y los dos workflows exitosos de la PR más los dos workflows exitosos del push posterior a la fusión.
+- **CI anterior verificada:** PR head `634cd5cc403dbdb0360a2b72ecd77997206ff2bc`; [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40261732974), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40261733009); post-merge sobre `dc7fa0fe44d259e710902d5d741fe11a85b3e3a0`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40261844162), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40261844139). Los cuatro terminaron en `success`.
+- **Límite factual mantenido:** los registros DMR-045-SRC-033–038 documentan referencias comunitarias secundarias y una ruta de muestra licenciada cuyo visor no entregó texto narrativo. Los cinco localizadores primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes. No se añadieron claims, aliases, relaciones ni hechos de lore.
+- **Documentos afectados:** `docs/STATUS.md` y este registro. La prioridad de DMR-045 y la cola de Orario no cambian.
