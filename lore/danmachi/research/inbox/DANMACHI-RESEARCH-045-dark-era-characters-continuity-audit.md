@@ -424,6 +424,13 @@ La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confi
 - spoiler_level: major
 - confidence_note: El acceso directo a la wiki falló con HTTP 402; el contenido se recuperó del índice de búsqueda. No es una lectura cotejada de la novela. La aparición posterior de Rudra no demuestra que conociera, ordenara, diseñara o autorizara la trampa contra Astrea Familia. Mantener separadas las acciones de Rudra Familia, Jura y la deidad.
 
+## Integración y CI — DMR-045-CLM-021 (PR #157)
+
+- La nueva referencia secundaria y la nota de Rudra quedaron integradas en [PR #157](https://github.com/jonhararagi/wordwaifu/pull/157), merge SHA `364876830d0b16eccc81969ea928180c29ba9f35`.
+- CI de la PR sobre head `7efaaf78083989f737a0e85ce1f15dcff77b543e`: [Validate WordWaifu #40354723328](https://github.com/jonhararagi/wordwaifu/actions/runs/40354723328) y [DanMachi Lore and Retrieval Integrity #40354723341](https://github.com/jonhararagi/wordwaifu/actions/runs/40354723341), ambos `success`.
+- CI post-merge sobre el SHA exacto de `main`: [DanMachi Lore and Retrieval Integrity #40354993811](https://github.com/jonhararagi/wordwaifu/actions/runs/40354993811) `success`; [Validate WordWaifu #40354994039](https://github.com/jonhararagi/wordwaifu/actions/runs/40354994039) sigue `in_progress` en `Install Chromium` a la última consulta.
+- El claim permanece `secondary_checked`, no crea una arista nueva y solo describe una escena posterior atribuida a Rudra por la sinopsis comunitaria. No prueba conocimiento, orden o autorización de la trampa previa.
+
 ## Recuperación de las fuentes comunitarias desde la aplicación
 
 El directorio consultable de `src/lore-corpus.js` incluye entradas identificadas para las versiones inglesa y española de las fichas comunitarias relevantes para Alfia, Meteria, Zald, Erebus y Rudra/Rudra Familia. Las entradas describen el alcance de cada artículo y sus límites de atribución/continuidad; la prueba `tests/test_danmachi_lore_source_directory.cjs` evita que desaparezcan de la interfaz o se pierdan sus URLs.
