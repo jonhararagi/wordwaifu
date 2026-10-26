@@ -27,8 +27,9 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 
 **Estado:** IN_PROGRESS. El barrido secundario está registrado y se han probado rutas de consulta licenciadas, pero ninguna muestra consultada expuso páginas narrativas legibles. Los cinco expedientes continúan abiertos para verificación primaria.
 
-- [x] Registrar las rutas autorizadas y los límites de acceso de DMR-045-SRC-018 a DMR-045-SRC-028; las fichas, sinopsis, índices, búsquedas limitadas, errores de red y respuestas HTTP no equivalen a leer el texto narrativo.
+- [x] Registrar las rutas autorizadas y los límites de acceso de DMR-045-SRC-018 a DMR-045-SRC-030; las fichas, sinopsis, índices, búsquedas limitadas, errores de red y respuestas HTTP no equivalen a leer el texto narrativo.
 - [x] Identificar por separado DMR-045-SRC-026 (BOOK☆WALKER Astrea Record vol. 1: error de descarga), DMR-045-SRC-027 (vol. 2: timeout) y DMR-045-SRC-028 (BOOK☆WALKER DanMachi vol. 14: error de descarga); los tres permanecen metadata_checked_only y sin claims.
+- [x] Registrar DMR-045-SRC-030 como ruta de muestra NOOK enlazada desde Barnes & Noble para el volumen 14; la extracción del endpoint devolvió “Cache miss”, por lo que no hay texto narrativo ni claims nuevos.
 - [ ] Alfia y Zald: conseguir un pasaje identificable de Astrea Record y cotejar habilidades, límites y secuencias concretas; no inventar capítulo ni página.
 - [ ] Meteria: localizar la identificación primaria y cotejar parentesco, afiliación e historia en la continuidad publicada; mantener el recuerdo autoral en CONT-AU.
 - [ ] Erebus: localizar sus escenas en la novelización CONT-AR; conservar los datos del juego en CONT-GAME y no asumir que las versiones son idénticas.
@@ -804,3 +805,10 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir regresiones API y Playwright para garantizar que el acceso se ofrece bajo CONT-MAIN-LN sin afirmar que se leyó la novela.
 - [ ] Inspeccionar un pasaje narrativo del capítulo 13 o del epílogo del volumen 14. Google Play Books anunció Free sample, pero esta consulta solo recuperó metadatos; Google Books mostró la cubierta y la ficha bibliográfica. No se leyó la retrospectiva de Rudra Familia ni el pasaje del epílogo.
 - **Estado:** implementado en la rama de trabajo; DMR-045-SRC-029 está metadata_checked_only, sin claims ni aristas. El localizador primario de Rudra sigue pendiente.
+
+## DMR-045-SRC-030 — Ruta adicional de muestra de NOOK para volumen 14 (2026-10-25)
+
+- La ficha pública de Barnes & Noble muestra “Read sample” para la edición inglesa de DanMachi vol. 14; su enlace normal apunta al lector NOOK y queda registrado en el directorio de fuentes.
+- La apertura del endpoint en esta consulta devolvió “Cache miss”. Esto no confirma que el texto esté ausente o que la muestra sea inaccesible en general.
+- La ruta se etiqueta como metadata_checked_only, claims_supported vacío y continuidad CONT-MAIN-LN. No se validan el capítulo 13, el epílogo ni una acción personal de Rudra.
+- DMR-045 sigue IN_PROGRESS; los cinco huecos primarios permanecen abiertos. Orario sigue siendo la etapa siguiente, no la prioridad activa.
