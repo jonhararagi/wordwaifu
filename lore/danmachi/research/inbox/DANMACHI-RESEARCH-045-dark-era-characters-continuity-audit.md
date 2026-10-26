@@ -156,7 +156,7 @@
 - evidence_type: author_interview_confirmation_of_game_backstory
 - verification_status: source_checked
 - spoiler_level: major
-- confidence_note: La respuesta del autor confirma el parentesco formulado por el entrevistador en relación con la historia del juego. No nombra a la hermana, no aporta localizador de la novela y no permite promover la identidad de Meteria ni el vínculo materno de CONT-MAIN-LN sin una fuente independiente.
+- confidence_note: La respuesta del autor confirma el parentesco formulado por el entrevistador dentro de la historia del juego, pero no nombra a la hermana ni aporta localizador de novela. La ficha pública de Meteria en DanMachi Wiki (Miraheze; DMR-045-SRC-030) sí la identifica secundariamente como madre de Bell y hermana gemela de Alfia; no se ha establecido la independencia editorial de esa wiki frente a otras wikis ni se aporta pasaje primario reproducible. Esta referencia alternativa mejora el acceso a la pista secundaria, pero no cierra la identificación en CONT-MAIN-LN ni promueve el claim a canon primario.
 
 ### DMR-045-CLM-009 · Pie editorial de Erebus en la cobertura de la versión de juego
 
@@ -640,3 +640,15 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Interpretación permitida:** se añade otra ruta de consulta autorizada para intentar revisar manualmente el volumen 14. La ficha de producto, la sinopsis y la existencia de la opción “Free sample” no verifican la retrospectiva del capítulo 13, el epílogo ni la atribución grupal de la trampa. La herramienta tampoco ha confirmado si la muestra se ofrece en todas las regiones.
 - **Siguiente acción:** abrir la ficha desde el acceso normal de Google Play Books en un entorno donde la opción de muestra esté disponible; registrar página/capítulo solamente después de ver texto narrativo legible.
 - **Relación con fuentes existentes:** el volumen 14 ya cuenta con la ruta de muestra japonesa de BOOK☆WALKER en DMR-045-SRC-028, cuyo visor devolvió un error de descarga. Esta entrada no duplica ese ID porque corresponde a un distribuidor y edición de consulta diferentes, y tampoco crea un claim nuevo.
+
+## DMR-045 — reconsulta de fuentes comunitarias accesibles en inglés (2026-10-25)
+
+Se consultaron las páginas públicas de DanMachi Wiki alojadas en Miraheze como rutas alternativas cuando Fandom bloquea la extracción automatizada. Son fuentes comunitarias secundarias, no oficiales; no se ha establecido su independencia editorial respecto de otras wikis y no se usan para declarar leído un pasaje de novela.
+
+- **DMR-045-SRC-030 · Meteria:** la infobox y el resumen identifican a Meteria como madre de Bell y hermana gemela de Alfia, además de reportar una afiliación anterior a Hera Familia. La página no aporta un localizador de capítulo/página. La identificación es una pista secundaria útil frente a la entrevista DMR-045-SRC-009, que no pronuncia el nombre Meteria; no cierra la filiación primaria de CONT-MAIN-LN.
+- **DMR-045-SRC-031 · Alfia:** la lista de apariciones comunitaria incluye el volumen 20 como flashback y Astrea Record vol. 1. Esto sirve para orientar la búsqueda, no para identificar a la maga de cabello gris del prólogo ni fijar una página.
+- **DMR-045-SRC-032 · Zald:** la página reporta perfil y aparición en Astrea Record vol. 1, y enlaza referencias comunitarias a perfiles/hojas de estado. No verifica por sí sola los usos de Afterglow atribuidos a los capítulos 2–3 del volumen 20.
+- **DMR-045-SRC-033 · Erebus:** la página trata la figura del juego y lista Astrea Record vol. 1 como aparición en novela; también usa “Eren”. El nombre alternativo sigue sin aprobarse como alias canónico de la novelización y la ideología de CONT-GAME no se transfiere automáticamente a CONT-AR.
+- **DMR-045-SRC-034 · Rudra Familia:** el resumen atribuye a la Familia como grupo la trampa y la aparición del Juggernaut. La fuente permanece grupal/secundaria; no establece que el dios Rudra diseñara, ordenara, conociera o autorizara personalmente el plan.
+
+**Resultado:** se mejora el acceso y la trazabilidad de los cinco expedientes sin añadir claims, relaciones, alias ni métricas. Estas páginas no cierran ninguno de los cinco localizadores primarios de DMR-045. Las entradas están documentadas en el registro central y expuestas en el directorio de fuentes de la aplicación.
