@@ -258,3 +258,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - [DMR-045-SRC-029](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) registra Google Play Books, volumen 14: opción “Free sample” anunciada en el resultado de catálogo y metadatos bibliográficos de Google Books, sin páginas narrativas legibles.
 - La ficha interactiva de Rudra enlaza esta ruta, la muestra existente de BOOK☆WALKER (DMR-045-SRC-028) y los metadatos de Yen Press. Ninguno de esos enlaces cierra por sí mismo la verificación de la retrospectiva o del epílogo.
 - La prioridad continúa siendo obtener un pasaje narrativo reproducible; no añadir claims ni asignar a Rudra responsabilidad personal por hechos atribuidos a Rudra Familia sin evidencia explícita.
+
+
+## Estado de integración — DMR-045 / Rudra (2026-10-26)
+- La documentación de la pista secundaria de Rudra y el reintento de vista previa licenciada quedó integrada mediante [PR #158](https://github.com/jonhararagi/wordwaifu/pull/158), SHA real de `main`: `b01eeb269622d5d8c243fdf05c2fb056a7008221`.
+- CI de la PR sobre head `671bdacba38e7e0b8d8e3322d2bcf2f1a0b3caec`: [Validate #40358799343](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799343) y [Lore/Integrity #40358799938](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799938), ambos `success`.
+- CI post-merge sobre `b01eeb269622d5d8c243fdf05c2fb056a7008221`: [Validate #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [Lore/Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
+- La integración documental no cambia el nivel de evidencia del claim: DMR-045-CLM-021 sigue `secondary_checked`; no aparecen aristas canónicas nuevas. Los cinco localizadores primarios permanecen abiertos.

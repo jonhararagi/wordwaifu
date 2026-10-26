@@ -410,3 +410,12 @@
 - **Resultado:** se confirmaron páginas públicas de BOOK☆WALKER para DanMachi vol. 14 y Astrea Record 3 con opción `試し読み`. El enlace de prueba de vol. 14 redirigió a un visor cuyo contenido no pudo recuperarse con la consulta web disponible; no se leyó texto narrativo, capítulo ni página.
 - **Alcance:** no se crea un ID de fuente duplicado, claim, alias o arista. Las rutas ya existentes siguen siendo simples rutas de lectura autorizada; los cinco cotejos primarios de DMR-045 permanecen abiertos.
 - **Límite operativo:** no se utilizó ningún espejo no autorizado ni se intentó eludir la limitación del visor. El siguiente paso útil es leer una vista previa que efectivamente muestre páginas narrativas en una sesión normal, o consultar una edición licenciada accesible.
+
+
+### CONV-DM-2026-10-26-009 — Cierre de la validación post-merge de la PR documental #158
+- **Fecha:** 2026-10-26.
+- **Estado:** INTEGRATED_AND_VALIDATED (documentación; checks automatizados del commit resultante).
+- **Main resultante:** `b01eeb269622d5d8c243fdf05c2fb056a7008221`, confirmado en la referencia real `main`.
+- **CI post-merge sobre ese SHA exacto:** [Validate WordWaifu #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [DanMachi Lore and Retrieval Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
+- **Alcance:** PR #158 actualiza la trazabilidad del cambio de Rudra y el intento de muestra licenciada. La integración documental no añade evidencia narrativa ni cambia el estado `secondary_checked` de DMR-045-CLM-021.
+- **Pendiente:** los cinco cotejos primarios de DMR-045 siguen abiertos; la lectura autorizada no proporcionó texto narrativo verificable.
