@@ -11,6 +11,7 @@ source_refs:
   - DMR-029-SRC-017
   - DMR-021-SRC-001
   - DMR-045-SRC-005
+  - DMR-045-SRC-043
   - DMR-045-SRC-009
   - DMR-045-SRC-013
   - DMR-045-SRC-035
@@ -35,9 +36,9 @@ tags: [Zeus Familia, Astrea Record, abilities, Behemoth, spoiler]
 - **Continuidad:** CONT-AR. Los detalles de la retrospectiva deben mantenerse aparte de los hechos contemporáneos de la novela principal, salvo que se localice el pasaje que los conecta.
 - **Estado de la ficha:** varias pistas concretas recuperadas de la wiki española; cotejo del texto primario pendiente.
 
-## Evidencia editorial acotada — Astrea Record 3
+## Pista secundaria acotada — Astrea Record 3
 
-La ficha editorial de *Astrea Record 3*, recuperada mediante un fragmento indexado, sitúa el inicio del enfrentamiento de Zald contra Ottar en la superficie durante el último día de los Siete Días de la Muerte (`DMR-045-CLM-006`, `DMR-045-SRC-005`, `CONT-AR`). La página editorial directa no pudo verificarse en la comprobación registrada; por eso esta es evidencia de extracto, no un localizador del texto narrativo. No confirma técnicas, niveles, ganador, consecuencias ni secuencia completa. Los detalles biográficos y de capacidades de las wikis siguen siendo secundarios.
+La reseña comunitaria de BookLive (entrada “Posted by ブクログ”, 2023-02-11) resume el último día de los Siete Días de la Muerte y sitúa el duelo de Zald contra Ottar en la superficie (`DMR-045-CLM-006`, `DMR-045-SRC-043`, `CONT-AR`). La sinopsis oficial visible de SB Creative describe la batalla final de forma general, pero no nombra ese emparejamiento. El detalle se mantiene como pista secundaria, no como localizador de la novela. No confirma técnicas, niveles, ganador, consecuencias ni secuencia completa.
 
 ## Pie editorial de la versión original del juego — CONT-GAME
 

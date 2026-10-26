@@ -74,10 +74,10 @@ for (const [file, label] of [
   ["characters/dark-era/zald.md", "Zald"]
 ]) {
   const dossier = fs.readFileSync(path.join(root, file), "utf8");
-  assert.ok(dossier.includes("DMR-045-SRC-005") && dossier.includes("DMR-045-CLM-006"),
-    label + " dossier must expose the same bounded Astrea Record 3 excerpt evidence used by its event relationship.");
-  assert.ok(dossier.includes("source editorial") || dossier.includes("ficha editorial"),
-    label + " dossier must explain the evidence limit rather than presenting the indexed synopsis as a narrative locator.");
+  assert.ok(dossier.includes("DMR-045-SRC-043") && dossier.includes("DMR-045-CLM-006"),
+    label + " dossier must cite the secondary BookLive review behind the Astrea Record 3 matchup claim.");
+  assert.ok(dossier.includes("pista secundaria") && dossier.includes("sinopsis oficial"),
+    label + " dossier must distinguish the community review from the official publisher synopsis and the unread novel text.");
 }
 assert.ok(![...(meteriaCharacter.aliases || []), ...(meteriaCharacter.keywords || [])]
   .some(value => corpus.normalize(value) === "bell cranel"),
@@ -219,14 +219,15 @@ assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "commun
 assert.ok(!index.relationships.some(edge => edge.claimRef === "DMR-045-CLM-005" || (edge.claimRefs || []).includes("DMR-045-CLM-005")), "A secondary interpretation of weapon names must not create canon character relationships.");
 
 const astreaFinalDay = corpus.search(index, { query: "Alfia Zald Ottar Astrea Familia Siete Días de la Muerte", continuity: "CONT-AR", period: "ALL", aspect: "all", spoiler: "all" });
-assert.ok(astreaFinalDay.results.some(item => item.claimId === "DMR-045-CLM-006" && item.verificationStatus === "source_checked_excerpt_only" && item.sourceUrls.includes("https://www.sbcr.jp/product/4815617554/")), "The Astrea Record final-day matchup excerpt must be searchable with excerpt-only provenance.");
-assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "official-sbcr-astrea-record-3-matchups-excerpt" && source.authority.includes("Fragmento de sinopsis editorial oficial indexado") && source.limits.includes("HTTP 503")), "The publisher excerpt must be visible with its direct-access limitation.");
+assert.ok(astreaFinalDay.results.some(item => item.claimId === "DMR-045-CLM-006" && item.verificationStatus === "secondary_checked" && item.sourceUrls.includes("https://booklive.jp/review/list/title_id/1237250/vol_no/003")), "The Astrea Record final-day matchup must be searchable with secondary BookLive provenance.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "official-sbcr-astrea-record-3-product-page" && source.authority.includes("Ficha editorial oficial") && source.limits.includes("no nombra los emparejamientos Zald–Ottar")), "The SB Creative listing must be represented as a general publisher page, not as evidence for the specific matchup.");
+assert.ok(corpus.getOnlineSourceDirectory().some(source => source.id === "community-booklive-astrea-record-vol3-review" && source.authority.includes("Reseña comunitaria") && source.limits.includes("no es la sinopsis editorial oficial")), "The matchup source must be discoverable as a community review.");
 for (const [id,from] of [
  ["REL-ALFIA-ASTREA-RECORD-FINAL-DAY-EXCERPT","CHAR-DARK-ALFIA"],
  ["REL-ZALD-ASTREA-RECORD-FINAL-DAY-EXCERPT","CHAR-DARK-ZALD"]
 ]) {
  const edge = index.relationships.find(item => item.id === id);
- assert.ok(edge && edge.from === from && edge.to === "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001" && edge.continuity === "CONT-AR" && edge.evidenceStatus === "source_checked_excerpt_only" && edge.claimRef === "DMR-045-CLM-006", "Astrea Record matchup must be navigable only as an excerpt-limited CONT-AR event: " + id);
+ assert.ok(edge && edge.from === from && edge.to === "EVT-DM-ASTREA-RECORD-FOUNDATIONS-001" && edge.continuity === "CONT-AR" && edge.evidenceStatus === "secondary_checked" && edge.claimRef === "DMR-045-CLM-006", "Astrea Record matchup must be navigable only as a secondary CONT-AR event: " + id);
 }
 assert.ok(!index.relationships.some(edge => edge.claimRef === "DMR-045-CLM-006" && edge.continuity === "CONT-MAIN-LN"), "Astrea Record excerpt must not leak into main-light-novel continuity.");
 

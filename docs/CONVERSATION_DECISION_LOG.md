@@ -351,3 +351,10 @@
 - **CI anterior verificada:** PR head `634cd5cc403dbdb0360a2b72ecd77997206ff2bc`; [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40261732974), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40261733009); post-merge sobre `dc7fa0fe44d259e710902d5d741fe11a85b3e3a0`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40261844162), [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40261844139). Los cuatro terminaron en `success`.
 - **Límite factual mantenido:** los registros DMR-045-SRC-033–038 documentan referencias comunitarias secundarias y una ruta de muestra licenciada cuyo visor no entregó texto narrativo. Los cinco localizadores primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes. No se añadieron claims, aliases, relaciones ni hechos de lore.
 - **Documentos afectados:** `docs/STATUS.md` y este registro. La prioridad de DMR-045 y la cola de Orario no cambian.
+
+### CONV-DM-2026-10-26-002 — Corregir la atribución editorial de DMR-045-CLM-006
+- **Fecha:** 2026-10-26.
+- **Hallazgo:** la ficha oficial de SB Creative para Astrea Record 3 muestra una sinopsis general, pero no nombra los emparejamientos Zald–Ottar y Alfia–Astrea Familia. El detalle específico aparece en una reseña comunitaria de BookLive atribuida a ブクログ y fechada el 2023-02-11.
+- **Corrección:** el detalle se reasigna a DMR-045-SRC-043 (COMMUNITY_REVIEW) y DMR-045-CLM-006 pasa a secondary_checked; SRC-005 mantiene el alcance general de la sinopsis y ya no respalda ese claim.
+- **Impacto:** se actualizan el directorio de fuentes, el registro central, la auditoría, las fichas de Alfia/Zald, el grafo, la cola, el índice maestro, el estado y las pruebas. No se añaden hechos ni relaciones nuevas; se corrige el tipo de evidencia.
+- **Pendiente:** encontrar y cotejar la escena en un ejemplar o lector licenciado con texto legible antes de elevar el dato a evidencia primaria.

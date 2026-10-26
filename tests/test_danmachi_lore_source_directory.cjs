@@ -222,4 +222,15 @@ for (const [id, url, continuity] of sbCreativePreviewSpecs) {
   assert.match(rows[0].limits, continuity);
 }
 
+
+const bookLiveAstrea3Review = sources.filter(source => source.id === "community-booklive-astrea-record-vol3-review");
+assert.equal(bookLiveAstrea3Review.length, 1, "BookLive Astrea Record 3 review must be discoverable exactly once");
+assert.equal(bookLiveAstrea3Review[0].category, "community");
+assert.equal(bookLiveAstrea3Review[0].url, "https://booklive.jp/review/list/title_id/1237250/vol_no/003");
+assert.ok(bookLiveAstrea3Review[0].authority.includes("Reseña comunitaria"));
+assert.ok(bookLiveAstrea3Review[0].coverage.includes("Zald–Ottar"));
+assert.ok(bookLiveAstrea3Review[0].coverage.includes("Alfia contra Astrea Familia"));
+assert.ok(bookLiveAstrea3Review[0].limits.includes("no es la sinopsis editorial oficial"));
+assert.ok(bookLiveAstrea3Review[0].limits.includes("CONT-AR"));
+
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
