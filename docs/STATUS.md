@@ -10,6 +10,13 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## DMR-045 — corrección de procedencia de los emparejamientos de Astrea Record 3 (2026-10-26)
+
+- La revisión directa de la ficha editorial oficial de [SB Creative, Astrea Record 3](https://www.sbcr.jp/product/4815617554/) muestra una sinopsis general de la batalla final; no nombra los emparejamientos Zald–Ottar ni Alfia–Astrea Familia.
+- Esos detalles aparecen en una reseña comunitaria en [BookLive](https://booklive.jp/review/list/title_id/1237250/vol_no/003), entrada “Posted by ブクログ” fechada el 11-02-2023. Se registra como DMR-045-SRC-043 (COMMUNITY_REVIEW, secondary_checked).
+- DMR-045-CLM-006 ahora depende de SRC-043, no de SRC-005. SRC-005 conserva el alcance de sinopsis editorial general y ya no declara respaldar ese claim. Las fichas de Alfia y Zald quedaron corregidas y el test de integridad protege la atribución.
+- **Estado de canon:** el detalle sigue siendo secundario; no se inventó capítulo/página ni se marca como cotejado en el texto de la novela. DMR-045 continúa IN_PROGRESS y los cinco localizadores primarios permanecen abiertos.
+
 ## DMR-045 — lectores BinB enlazados desde la tienda oficial de SB Creative (2026-10-25)
 
 - Se localizaron cuatro rutas de muestra 立ち読み desde el [catálogo oficial de la serie DanMachi de SB Creative](https://ebook.sbcr.jp/landing/p/danmachi): Astrea Record 1–3 y DanMachi vol. 14, registradas como DMR-045-SRC-039–042.
