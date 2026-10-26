@@ -74,10 +74,10 @@ for (const [file, label] of [
   ["characters/dark-era/zald.md", "Zald"]
 ]) {
   const dossier = fs.readFileSync(path.join(root, file), "utf8");
-  assert.ok(dossier.includes("DMR-045-SRC-005") && dossier.includes("DMR-045-CLM-006"),
-    label + " dossier must expose the same bounded Astrea Record 3 excerpt evidence used by its event relationship.");
-  assert.ok(dossier.includes("source editorial") || dossier.includes("ficha editorial"),
-    label + " dossier must explain the evidence limit rather than presenting the indexed synopsis as a narrative locator.");
+  assert.ok(dossier.includes("DMR-045-SRC-043") && dossier.includes("DMR-045-CLM-006"),
+    label + " dossier must cite the secondary BookLive review behind the Astrea Record 3 matchup claim.");
+  assert.ok(dossier.includes("pista secundaria") && dossier.includes("sinopsis oficial"),
+    label + " dossier must distinguish the community review from the official publisher synopsis and the unread novel text.");
 }
 assert.ok(![...(meteriaCharacter.aliases || []), ...(meteriaCharacter.keywords || [])]
   .some(value => corpus.normalize(value) === "bell cranel"),
