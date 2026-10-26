@@ -99,3 +99,9 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Estado:** Integrada mediante PR #147, merge SHA 58025c70e8fd26d6ce3c2043c8fd5d51e5cc0d98. Los workflows de PR pasaron sobre head 32891061a411b66ac9a66000d8f5b0c4f2b0ba56 (Validate: https://github.com/jonhararagi/wordwaifu/actions/runs/40262391617; Lore/Integrity: https://github.com/jonhararagi/wordwaifu/actions/runs/40262391545). La consulta de workflows disponible solo devuelve ejecuciones disparadas por pull_request; no permitió verificar los workflows push post-merge de ese SHA y no se afirma ese resultado.
 - **Decisión:** la presencia de una opción oficial 立ち読み solo autoriza registrar la ruta de muestra. Si la extracción solo muestra “Now loading...”, no se establece que la obra sea globalmente inaccesible ni se crea una afirmación narrativa. Los registros quedan metadata_checked_only y claims_supported vacío.
 - **Aplicación:** DMR-045-SRC-039–042 corresponden a SB Creative BinB; CONT-AR para Astrea Record 1–3 y CONT-MAIN-LN para DanMachi vol. 14. Reintentar desde sesión normal y añadir un localizador únicamente tras ver texto narrativo legible.
+
+### DEC-DM-012 — La procedencia de un detalle debe coincidir con el texto accesible de la fuente
+- **Fecha:** 2026-10-26.
+- **Estado:** Corrección implementada en rama de trabajo; pendiente de CI e integración.
+- **Decisión:** cuando una frase detallada aparece en una reseña de usuario y la sinopsis oficial no la contiene, el claim debe citar la reseña como fuente secundaria y la ficha editorial debe limitarse a lo que efectivamente muestra. No inferir procedencia por proximidad al título o por un resultado de búsqueda agregado.
+- **Aplicación:** DMR-045-CLM-006 se vincula a la reseña comunitaria DMR-045-SRC-043 y queda secondary_checked; DMR-045-SRC-043 registra BookLive; SRC-005 deja de listar ese claim. El detalle de combate continúa pendiente de cotejo primario.
