@@ -709,3 +709,55 @@ Las tres rutas de muestra recopilatoria de BOOK☆WALKER y sus pruebas quedaron 
 - **CI de PR, head SHA `9b032700559afcfdc3fd4ba1fd45f931829bf0fb`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108783) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108791), ambos success.
 - **CI post-merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414219) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414283), ambos success; el segundo completó browser smoke, validación de catálogo/enlaces y subida de capturas.
 - **Límite mantenido:** SRC-030–032 siguen metadata_checked_only, con claims vacíos y sin páginas narrativas cotejadas. La integración registra rutas de consulta, no cierre de la verificación primaria de DMR-045.
+
+## Integración y CI — rutas Miraheze y NOOK (PR #146)
+
+La consolidación de DMR-045 se integró en [PR #146](https://github.com/jonhararagi/wordwaifu/pull/146), merge SHA dc7fa0fe44d259e710902d5d741fe11a85b3e3a0; head de la PR 634cd5cc403dbdb0360a2b72ecd77997206ff2bc. Ambos workflows de PR fueron success: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40261732974) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40261733009). El conector de consulta de workflows utilizado devuelve solo ejecuciones disparadas por pull_request; no permite verificar los workflows push posteriores a la fusión. No se declara validación post-merge para ese SHA en este registro.
+
+## DMR-045-SRC-039 · SB Creative BinB — ruta oficial de muestra para Astrea Record 1
+
+- **Fecha de consulta:** 2026-10-25.
+- **Página de la serie:** [SB Creative eBook Store — DanMachi](https://ebook.sbcr.jp/landing/p/danmachi).
+- **Ruta de lector:** https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561017JAAA01MBJE3X&lginbtn=false
+- **Tipo:** lector BinB enlazado desde el catálogo electrónico oficial de SB Creative / GA Bunko.
+- **Edición/listado:** アストレア・レコード１　邪悪胎動; el catálogo público lista la opción 立ち読み (lectura de muestra).
+- **Resultado de acceso:** la vista pública del lector solo expuso un iframe y el estado “Now loading...”; no se recuperó texto narrativo, capítulo o página identificable.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** la ruta directa aporta una opción adicional para intentar lectura normal. No demuestra que el lector esté indisponible en general, ni verifica escenas, relaciones o hechos del canon. No se añadió ningún claim ni arista a partir de ella.
+- **Siguiente acción:** reintentar desde una sesión normal en la que el lector termine de cargar; registrar un localizador solo al ver páginas narrativas legibles.
+
+## DMR-045-SRC-040 · SB Creative BinB — ruta oficial de muestra para Astrea Record 2
+
+- **Fecha de consulta:** 2026-10-25.
+- **Página de la serie:** [SB Creative eBook Store — DanMachi](https://ebook.sbcr.jp/landing/p/danmachi).
+- **Ruta de lector:** https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561018JAAA02MBJE3X&lginbtn=false
+- **Tipo:** lector BinB enlazado desde el catálogo electrónico oficial de SB Creative / GA Bunko.
+- **Edición/listado:** アストレア・レコード２　正義失墜; el catálogo público lista la opción 立ち読み (lectura de muestra).
+- **Resultado de acceso:** la vista pública del lector solo expuso un iframe y el estado “Now loading...”; no se recuperó texto narrativo, capítulo o página identificable.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** la ruta directa aporta una opción adicional para intentar lectura normal. No demuestra que el lector esté indisponible en general, ni verifica escenas, relaciones o hechos del canon. No se añadió ningún claim ni arista a partir de ella.
+- **Siguiente acción:** reintentar desde una sesión normal en la que el lector termine de cargar; registrar un localizador solo al ver páginas narrativas legibles.
+
+## DMR-045-SRC-041 · SB Creative BinB — ruta oficial de muestra para Astrea Record 3
+
+- **Fecha de consulta:** 2026-10-25.
+- **Página de la serie:** [SB Creative eBook Store — DanMachi](https://ebook.sbcr.jp/landing/p/danmachi).
+- **Ruta de lector:** https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false
+- **Tipo:** lector BinB enlazado desde el catálogo electrónico oficial de SB Creative / GA Bunko.
+- **Edición/listado:** アストレア・レコード３　正邪決戦; el catálogo público lista la opción 立ち読み (lectura de muestra).
+- **Resultado de acceso:** la vista pública del lector solo expuso un iframe y el estado “Now loading...”; no se recuperó texto narrativo, capítulo o página identificable.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-AR.
+- **Interpretación permitida:** la ruta directa aporta una opción adicional para intentar lectura normal. No demuestra que el lector esté indisponible en general, ni verifica escenas, relaciones o hechos del canon. No se añadió ningún claim ni arista a partir de ella.
+- **Siguiente acción:** reintentar desde una sesión normal en la que el lector termine de cargar; registrar un localizador solo al ver páginas narrativas legibles.
+
+## DMR-045-SRC-042 · SB Creative BinB — ruta oficial de muestra para DanMachi vol. 14
+
+- **Fecha de consulta:** 2026-10-25.
+- **Página de la serie:** [SB Creative eBook Store — DanMachi](https://ebook.sbcr.jp/landing/p/danmachi).
+- **Ruta de lector:** https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=79739620JAAA14MBJE3X&lginbtn=false
+- **Tipo:** lector BinB enlazado desde el catálogo electrónico oficial de SB Creative / GA Bunko.
+- **Edición/listado:** ダンジョンに出会いを求めるのは間違っているだろうか１４; el catálogo público lista la opción 立ち読み (lectura de muestra).
+- **Resultado de acceso:** la vista pública del lector solo expuso un iframe y el estado “Now loading...”; no se recuperó texto narrativo, capítulo o página identificable.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-MAIN-LN.
+- **Interpretación permitida:** la ruta directa aporta una opción adicional para intentar lectura normal. No demuestra que el lector esté indisponible en general, ni verifica escenas, relaciones o hechos del canon. No se añadió ningún claim ni arista a partir de ella.
+- **Siguiente acción:** reintentar desde una sesión normal en la que el lector termine de cargar; registrar un localizador solo al ver páginas narrativas legibles.

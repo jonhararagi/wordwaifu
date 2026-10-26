@@ -3447,3 +3447,91 @@ verification_status: stub
 - rights_note: Se conservaron URLs y metadatos de la ruta de muestra; no se copió texto narrativo ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+## DMR-045-SRC-039 · SB Creative eBook Store BinB — Astrea Record 1 sample route (metadata only)
+- source_id: DMR-045-SRC-039
+- title: アストレア・レコード１　邪悪胎動 — 立ち読み (BinB preview)
+- creator_or_publisher: SB Creative / GA Bunko
+- source_type: OFFICIAL_PUBLISHER_EBOOK_PREVIEW_ROUTE
+- series: DanMachi / Astrea Record
+- volume_or_edition: Astrea Record 1; sample option linked from official SB Creative e-book series landing page
+- language: Japonés
+- official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561017JAAA01MBJE3X&lginbtn=false
+- product_page: https://ebook.sbcr.jp/landing/p/danmachi
+- accessed_at: 2026-10-25
+- locator_type: official_reader_route_metadata_only
+- locator: La página de la serie muestra la opción 立ち読み para esta edición y enlaza a la ruta BinB indicada. La extracción pública del lector solo mostró un iframe y Now loading...; no se obtuvo página narrativa ni localizador verificable.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta oficial de muestra identificada desde el catálogo del editor. El estado de carga observado se refiere a esta consulta y no demuestra que el lector sea inaccesible para todos. La entrada no respalda hechos biográficos ni escenas.
+- conflicting_sources: []
+- rights_note: Se conservaron enlaces y metadatos; no se extrajo texto protegido ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-040 · SB Creative eBook Store BinB — Astrea Record 2 sample route (metadata only)
+- source_id: DMR-045-SRC-040
+- title: アストレア・レコード２　正義失墜 — 立ち読み (BinB preview)
+- creator_or_publisher: SB Creative / GA Bunko
+- source_type: OFFICIAL_PUBLISHER_EBOOK_PREVIEW_ROUTE
+- series: DanMachi / Astrea Record
+- volume_or_edition: Astrea Record 2; sample option linked from official SB Creative e-book series landing page
+- language: Japonés
+- official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561018JAAA02MBJE3X&lginbtn=false
+- product_page: https://ebook.sbcr.jp/landing/p/danmachi
+- accessed_at: 2026-10-25
+- locator_type: official_reader_route_metadata_only
+- locator: La página de la serie muestra la opción 立ち読み para esta edición y enlaza a la ruta BinB indicada. La extracción pública del lector solo mostró un iframe y Now loading...; no se obtuvo página narrativa ni localizador verificable.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta oficial de muestra identificada desde el catálogo del editor. El estado de carga observado se refiere a esta consulta y no demuestra que el lector sea inaccesible para todos. La entrada no respalda hechos biográficos ni escenas.
+- conflicting_sources: []
+- rights_note: Se conservaron enlaces y metadatos; no se extrajo texto protegido ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-041 · SB Creative eBook Store BinB — Astrea Record 3 sample route (metadata only)
+- source_id: DMR-045-SRC-041
+- title: アストレア・レコード３　正邪決戦 — 立ち読み (BinB preview)
+- creator_or_publisher: SB Creative / GA Bunko
+- source_type: OFFICIAL_PUBLISHER_EBOOK_PREVIEW_ROUTE
+- series: DanMachi / Astrea Record
+- volume_or_edition: Astrea Record 3; sample option linked from official SB Creative e-book series landing page
+- language: Japonés
+- official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false
+- product_page: https://ebook.sbcr.jp/landing/p/danmachi
+- accessed_at: 2026-10-25
+- locator_type: official_reader_route_metadata_only
+- locator: La página de la serie muestra la opción 立ち読み para esta edición y enlaza a la ruta BinB indicada. La extracción pública del lector solo mostró un iframe y Now loading...; no se obtuvo página narrativa ni localizador verificable.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta oficial de muestra identificada desde el catálogo del editor. El estado de carga observado se refiere a esta consulta y no demuestra que el lector sea inaccesible para todos. La entrada no respalda hechos biográficos ni escenas.
+- conflicting_sources: []
+- rights_note: Se conservaron enlaces y metadatos; no se extrajo texto protegido ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-042 · SB Creative eBook Store BinB — DanMachi vol. 14 sample route (metadata only)
+- source_id: DMR-045-SRC-042
+- title: ダンジョンに出会いを求めるのは間違っているだろうか１４ — 立ち読み (BinB preview)
+- creator_or_publisher: SB Creative / GA Bunko
+- source_type: OFFICIAL_PUBLISHER_EBOOK_PREVIEW_ROUTE
+- series: DanMachi / novela ligera principal
+- volume_or_edition: DanMachi vol. 14; sample option linked from official SB Creative e-book series landing page
+- language: Japonés
+- official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=79739620JAAA14MBJE3X&lginbtn=false
+- product_page: https://ebook.sbcr.jp/landing/p/danmachi
+- accessed_at: 2026-10-25
+- locator_type: official_reader_route_metadata_only
+- locator: La página de la serie muestra la opción 立ち読み para esta edición y enlaza a la ruta BinB indicada. La extracción pública del lector solo mostró un iframe y Now loading...; no se obtuvo página narrativa ni localizador verificable.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Ruta oficial de muestra identificada desde el catálogo del editor. El estado de carga observado se refiere a esta consulta y no demuestra que el lector sea inaccesible para todos. La entrada no respalda hechos biográficos ni escenas.
+- conflicting_sources: []
+- rights_note: Se conservaron enlaces y metadatos; no se extrajo texto protegido ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only

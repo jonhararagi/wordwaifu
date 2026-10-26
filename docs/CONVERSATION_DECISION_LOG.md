@@ -327,4 +327,10 @@
 - **Límite factual:** metadata_checked_only, claims_supported vacío, CONT-MAIN-LN. No confirma el capítulo 13, el epílogo, la trampa de grupo ni una orden/conocimiento personal de Rudra.
 - **Impacto:** fuente accesible desde el directorio UI, el registro central y la auditoría, con regresiones para preservar el límite de evidencia. No se añaden claims ni relaciones; DMR-045 continúa abierto.
 
+### CONV-DM-2026-10-25-015 — Registrar rutas oficiales BinB de muestras de SB Creative
 
+- **Fecha:** 2026-10-25.
+- **Hallazgo:** el catálogo electrónico oficial de SB Creative (https://ebook.sbcr.jp/landing/p/danmachi) ofrece enlaces 立ち読み para Astrea Record 1, 2 y 3 y DanMachi vol. 14. Las rutas BinB directas se conservan individualmente como DMR-045-SRC-039–042.
+- **Resultado del acceso:** la vista pública del lector mostró un iframe y “Now loading...”, sin página narrativa ni localizador verificable. Esto no demuestra indisponibilidad general.
+- **Decisión:** cada ruta permanece metadata_checked_only con claims_supported vacío y continuidad individual preservada (CONT-AR para los tres Astrea Record; CONT-MAIN-LN para vol. 14). No se crean claims, relaciones ni aliases.
+- **Estado de PR #146:** integrada por SHA dc7fa0fe44d259e710902d5d741fe11a85b3e3a0; los workflows pre-merge pasaron; el conector de consulta de workflows solo devuelve ejecuciones disparadas por pull_request y no permite verificar los workflows push posteriores a la fusión; no se afirma su resultado.
