@@ -457,3 +457,10 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - Se revisaron las páginas públicas de [DanMachi volumen 14](https://bookwalker.jp/deb74ef953-7194-47cb-8abb-7453a4b2e353/) y [Astrea Record 3](https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/), que muestran la opción de prueba `試し読み`.
 - Al abrir la opción de DanMachi 14, la consulta web redirigió al visor de prueba pero no pudo recuperar su contenido narrativo. No se leyó un pasaje primario ni se obtuvo localizador. No se creó claim, relación ni fuente duplicada: las rutas estaban registradas de antes.
 - La verificación primaria de Rudra y de los cuatro expedientes restantes continúa pendiente.
+
+
+## Integración y validación documental — PR #158 (2026-10-26)
+- **Integrado:** [PR #158](https://github.com/jonhararagi/wordwaifu/pull/158), squash SHA `b01eeb269622d5d8c243fdf05c2fb056a7008221`, verificado como cabeza actual de `main`.
+- **CI pre-merge sobre el head** `671bdacba38e7e0b8d8e3322d2bcf2f1a0b3caec`: [Validate WordWaifu #40358799343](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799343) y [DanMachi Lore and Retrieval Integrity #40358799938](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799938), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [DanMachi Lore and Retrieval Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
+- **Límite factual:** la pista de Rudra sigue siendo secundaria, y la lectura autorizada de BOOK☆WALKER no entregó páginas narrativas. DMR-045 continúa `IN_PROGRESS`; no se cierra ninguno de los cinco localizadores primarios.

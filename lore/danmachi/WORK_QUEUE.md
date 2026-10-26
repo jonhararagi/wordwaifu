@@ -828,3 +828,10 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir regresiones API y Playwright para garantizar que el acceso se ofrece bajo CONT-MAIN-LN sin afirmar que se leyó la novela.
 - [ ] Inspeccionar un pasaje narrativo del capítulo 13 o del epílogo del volumen 14. Google Play Books anunció Free sample, pero esta consulta solo recuperó metadatos; Google Books mostró la cubierta y la ficha bibliográfica. No se leyó la retrospectiva de Rudra Familia ni el pasaje del epílogo.
 - **Estado:** implementado en la rama de trabajo; DMR-045-SRC-029 está metadata_checked_only, sin claims ni aristas. El localizador primario de Rudra sigue pendiente.
+
+
+### Cierre técnico de la PR documental #158
+- [x] Integrar por squash y confirmar en `main`: [PR #158](https://github.com/jonhararagi/wordwaifu/pull/158), SHA `b01eeb269622d5d8c243fdf05c2fb056a7008221`.
+- [x] Validar el head pre-merge `671bdacba38e7e0b8d8e3322d2bcf2f1a0b3caec`: [Validate #40358799343](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799343) y [Lore/Integrity #40358799938](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799938), ambos `success`.
+- [x] Validar ambos workflows post-merge sobre el SHA exacto de `main`: [Validate #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [Lore/Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
+- [ ] Mantener abierta la investigación narrativa primaria de Alfia, Zald, Meteria, Erebus y Rudra; las muestras consultadas no produjeron texto reproducible.
