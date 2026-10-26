@@ -27,7 +27,8 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 
 **Estado:** IN_PROGRESS. El barrido secundario está registrado y se han probado rutas de consulta licenciadas, pero ninguna muestra consultada expuso páginas narrativas legibles. Los cinco expedientes continúan abiertos para verificación primaria.
 
-- [x] Registrar las rutas autorizadas y los límites de acceso de DMR-045-SRC-018 a DMR-045-SRC-028; las fichas, sinopsis, índices, búsquedas limitadas, errores de red y respuestas HTTP no equivalen a leer el texto narrativo.
+- [x] Registrar las rutas de muestra licenciadas DMR-045-SRC-018 a DMR-045-SRC-029 y sus límites de acceso; las fichas, sinopsis, índices, búsquedas limitadas, errores de red y respuestas HTTP no equivalen a leer el texto narrativo.
+- [x] Consultar y registrar las páginas comunitarias públicas en inglés de DanMachi Wiki alojadas en Miraheze como DMR-045-SRC-030–034 para Meteria, Alfia, Zald, Erebus y Rudra Familia. Se usan como referencias secundarias accesibles, no como fuentes oficiales ni como localizadores primarios; no se crean claims ni relaciones nuevos.
 - [x] Identificar por separado DMR-045-SRC-026 (BOOK☆WALKER Astrea Record vol. 1: error de descarga), DMR-045-SRC-027 (vol. 2: timeout) y DMR-045-SRC-028 (BOOK☆WALKER DanMachi vol. 14: error de descarga); los tres permanecen metadata_checked_only y sin claims.
 - [ ] Alfia y Zald: conseguir un pasaje identificable de Astrea Record y cotejar habilidades, límites y secuencias concretas; no inventar capítulo ni página.
 - [ ] Meteria: localizar la identificación primaria y cotejar parentesco, afiliación e historia en la continuidad publicada; mantener el recuerdo autoral en CONT-AU.
