@@ -334,3 +334,10 @@
 - **Resultado del acceso:** la vista pública del lector mostró un iframe y “Now loading...”, sin página narrativa ni localizador verificable. Esto no demuestra indisponibilidad general.
 - **Decisión:** cada ruta permanece metadata_checked_only con claims_supported vacío y continuidad individual preservada (CONT-AR para los tres Astrea Record; CONT-MAIN-LN para vol. 14). No se crean claims, relaciones ni aliases.
 - **Estado de PR #146:** integrada por SHA dc7fa0fe44d259e710902d5d741fe11a85b3e3a0; los workflows pre-merge pasaron; el conector de consulta de workflows solo devuelve ejecuciones disparadas por pull_request y no permite verificar los workflows push posteriores a la fusión; no se afirma su resultado.
+
+### CONV-DM-2026-10-25-016 — Registrar integración de las rutas oficiales BinB
+- **Fecha:** 2026-10-25.
+- **Integración:** PR #147, merge SHA 58025c70e8fd26d6ce3c2043c8fd5d51e5cc0d98; SRC-039–042 ya están en main.
+- **CI de PR:** Validate WordWaifu success (https://github.com/jonhararagi/wordwaifu/actions/runs/40262391617) y DanMachi Lore and Retrieval Integrity success (https://github.com/jonhararagi/wordwaifu/actions/runs/40262391545), ambos sobre head 32891061a411b66ac9a66000d8f5b0c4f2b0ba56.
+- **CI post-merge:** la consulta de workflows disponible filtra ejecuciones pull_request y no permitió verificar las ejecuciones push asociadas al SHA de fusión; no se afirma su resultado.
+- **Resultado de lore:** cuatro rutas oficiales adicionales siguen metadata_checked_only, sin claims nuevos y sin localizadores narrativos; los cinco huecos primarios de DMR-045 siguen pendientes.
