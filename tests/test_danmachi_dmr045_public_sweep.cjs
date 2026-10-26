@@ -110,8 +110,8 @@ assert.match(queue, /DMR-045-SRC-030/);
 assert.match(queue, /DMR-045-SRC-031/);
 assert.match(queue, /DMR-045-SRC-032/);
 assert.match(dmr045, /viewer\.bookwalker\.jp\/browserWebApi\/03\/view/);
-assert.match(dmr045, /compilación de muestras puede diferir/i);
-assert.match(dmr045, /los enlaces normales de muestra de noviembre y diciembre también terminaron en timeout/i);
+assert.match(dmr045, /muestra compilada puede diferir parcialmente del producto final/i);
+assert.match(dmr045, /timeout para Vols\. 2–3/i);
 
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, "DMR-045 claim IDs must be unique");
