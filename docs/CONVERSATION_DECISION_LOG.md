@@ -301,3 +301,11 @@
 - **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #3384](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839057) y [DanMachi Lore and Retrieval Integrity #1776](https://github.com/jonhararagi/wordwaifu/actions/runs/40232839130), ambos `success`.
 - **Ramas/PR obsoletas cerradas sin fusionar:** #132 (solapada con #131/#133), #134 y #137 (intentos documentales con base desfasada), sustituidas por #140.
 - **Resultado:** el encabezado activo, las tareas de los cinco expedientes, los límites de las fuentes y la etapa posterior de Orario ya están sincronizados en `main`. DMR-045 no queda cerrado en cuanto al canon: las páginas narrativas primarias siguen pendientes.
+
+### CONV-DM-2026-10-25-012 — Nueva ruta NOOK de muestra para DanMachi vol. 14
+- **Fecha:** 2026-10-25.
+- **Hallazgo:** la ficha pública de Barnes & Noble para la edición inglesa de DanMachi vol. 14 muestra un enlace “Read sample” que conduce al lector NOOK: https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019.
+- **Resultado de consulta:** abrir esa ruta produjo “Cache miss” en esta herramienta; no se obtuvieron páginas narrativas. Se conserva como nueva vía licenciada de consulta, no como evidencia de contenido ni disponibilidad regional global.
+- **Cambio de corpus:** se registra DMR-045-SRC-030 con metadata_checked_only, claims_supported vacío y CONT-MAIN-LN; se añade al directorio de fuentes y se protege mediante regresiones para impedir que el enlace sea tratado como prueba del capítulo 13, el epílogo o una orden personal de Rudra.
+- **Prioridad vigente:** continuar el cotejo primario de los cinco expedientes DMR-045. No se añaden claims ni aristas y no se reactiva la expansión de Orario.
+- **Estado de implementación inicial:** cambios preparados en la rama research/dmr045-bn-vol14-sample-2026-10-25; la integración y el resultado de CI se registrarán tras la verificación del PR.
