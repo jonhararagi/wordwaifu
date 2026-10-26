@@ -712,7 +712,7 @@ Las tres rutas de muestra recopilatoria de BOOK☆WALKER y sus pruebas quedaron 
 
 ## Integración y CI — rutas Miraheze y NOOK (PR #146)
 
-La consolidación de DMR-045 se integró en [PR #146](https://github.com/jonhararagi/wordwaifu/pull/146), merge SHA dc7fa0fe44d259e710902d5d741fe11a85b3e3a0; head de la PR 634cd5cc403dbdb0360a2b72ecd77997206ff2bc. Ambos workflows de PR fueron success: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40261732974) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40261733009). Al consultar el SHA de merge, la API de workflows todavía no devolvía ejecuciones post-merge; por tanto no se declara validación post-merge para ese SHA en este registro.
+La consolidación de DMR-045 se integró en [PR #146](https://github.com/jonhararagi/wordwaifu/pull/146), merge SHA dc7fa0fe44d259e710902d5d741fe11a85b3e3a0; head de la PR 634cd5cc403dbdb0360a2b72ecd77997206ff2bc. Ambos workflows de PR fueron success: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40261732974) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40261733009). El conector de consulta de workflows utilizado devuelve solo ejecuciones disparadas por pull_request; no permite verificar los workflows push posteriores a la fusión. No se declara validación post-merge para ese SHA en este registro.
 
 ## DMR-045-SRC-039 · SB Creative BinB — ruta oficial de muestra para Astrea Record 1
 
