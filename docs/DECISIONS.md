@@ -146,3 +146,10 @@
 **Aplicación:** DMR-045-SRC-047 registra BookLive DanMachi vol. 14 en CONT-MAIN-LN y SRC-048 BookLive Astrea Record 3 en CONT-AR. Ambos conservan `claims_supported: []` y `metadata_checked_only` hasta obtener un pasaje narrativo visible y un localizador reproducible.
 **Límites:** no inferir presencia/ausencia de personajes, escenas o vínculos por metadatos del producto. No transferir material entre CONT-MAIN-LN, CONT-AR y CONT-GAME. No crear aristas o claims de relleno.
 **Motivo:** mantener accesibles las rutas legítimas de investigación sin fingir que la oferta de muestra equivale a lectura primaria.
+
+
+## DEC-026 — Estado de implementación y validación (PR #160)
+- **Integrado:** [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`.
+- **CI de PR:** [Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [Lore/Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success` sobre head `6d89ea9a7846c64132b08f58b628ff70b075a302`.
+- **CI post-merge:** [Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) `success`; [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) estaba pendiente en `Install Chromium` al primer control.
+- El cambio solo incorpora rutas de metadatos; no equivale a ver texto primario ni a cambiar ningún claim.

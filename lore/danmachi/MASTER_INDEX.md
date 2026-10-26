@@ -271,3 +271,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - [DMR-045-SRC-047](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md): ficha de BookLive de DanMachi vol. 14 con botones de prueba en navegador/app; metadata_checked_only, sin claims.
 - [DMR-045-SRC-048](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md): ficha de BookLive de Astrea Record 3 con botones de prueba en navegador/app; metadata_checked_only, sin claims.
 - Las fichas interactivas enlazan estas rutas como metadatos. No se leyó texto narrativo ni se alteró el nivel de evidencia de Alfia, Zald, Meteria, Erebus o Rudra.
+
+
+## DMR-045 — integración BookLive, PR #160 (2026-10-26)
+- SRC-047 y SRC-048 quedaron integradas mediante [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`. Son rutas de consulta metadata-only para DanMachi vol. 14 (CONT-MAIN-LN) y Astrea Record 3 (CONT-AR).
+- CI de PR sobre head `6d89ea9a7846c64132b08f58b628ff70b075a302`: [Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [Lore/Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success`.
+- CI post-merge Lore/Integrity [#40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) `success`; Validate [#40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) seguía en curso a la última comprobación.
+- Las rutas no prueban narración ni modifican claims; los cinco localizadores primarios siguen abiertos.

@@ -471,3 +471,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Verificación real:** se comprobó la metadata pública y la oferta de muestra, pero no se abrió el lector ni se examinó ninguna página narrativa. Ambas entradas son `metadata_checked_only` y tienen `claims_supported: []`.
 - **Interfaz:** las rutas están disponibles en las fichas interactivas de Rudra (CONT-MAIN-LN) y de Alfia, Zald y Erebus (CONT-AR por separado). No se transfiere información de la versión de juego a la novelización.
 - **Pendiente:** DMR-045 sigue `IN_PROGRESS`. Los cinco localizadores narrativos primarios continúan abiertos; no se crearon claims, relaciones o aliases a partir de los metadatos.
+
+
+## Integración de BookLive metadata-only — PR #160 (2026-10-26)
+- **Integrado:** [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), squash SHA real de `main`: `968ad23141ffdc2db032383228445fddc753b755`.
+- **CI de PR sobre head** `6d89ea9a7846c64132b08f58b628ff70b075a302`: [Validate WordWaifu #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [DanMachi Lore and Retrieval Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success`.
+- **CI post-merge sobre el SHA exacto:** [DanMachi Lore and Retrieval Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) `success`; [Validate WordWaifu #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) seguía `in_progress` en `Install Chromium` al último control. Este último resultado queda pendiente de una nueva consulta.
+- **Rutas añadidas:** SRC-047 BookLive DanMachi vol. 14 (`CONT-MAIN-LN`) y SRC-048 BookLive Astrea Record 3 (`CONT-AR`). Las páginas comerciales muestran prueba en navegador/app, pero no se leyó el interior de las muestras. Ambas son `metadata_checked_only` con `claims_supported: []`.
+- **Pendiente de investigación:** DMR-045 sigue `IN_PROGRESS`; los cinco localizadores primarios continúan abiertos. No se crean claims, relaciones o alias a partir de los botones de muestra.

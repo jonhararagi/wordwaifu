@@ -426,3 +426,10 @@
 - **Resultado:** las fichas públicas de [BookLive · DanMachi vol. 14](https://booklive.jp/product/index/title_id/201522/vol_no/014) y [BookLive · Astrea Record 3](https://booklive.jp/product/index/title_id/1237250/vol_no/003) exponen controles de prueba en navegador y app. Solo se consultaron páginas comerciales y metadatos; no se leyó contenido del visor.
 - **Implementación:** DMR-045-SRC-047/048, dos entradas `metadata_checked_only` con claims vacíos, enlaces visibles en el directorio de fuentes y en las fichas interactivas de Rudra, Alfia, Zald y Erebus; pruebas de regresión añadidas.
 - **Límite:** no se añaden claims, aristas, aliases ni hechos narrativos. Los cinco localizadores primarios siguen abiertos y la separación CONT-MAIN-LN / CONT-AR / CONT-GAME se conserva.
+
+
+### CONV-DM-2026-10-26-011 — Integración de rutas BookLive metadata-only
+- **Integración:** PR [#160](https://github.com/jonhararagi/wordwaifu/pull/160) fusionada con squash en `main`, SHA `968ad23141ffdc2db032383228445fddc753b755`.
+- **CI pre-merge sobre head** `6d89ea9a7846c64132b08f58b628ff70b075a302`: [Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [DanMachi Lore and Retrieval Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success`.
+- **Estado post-merge en primera comprobación:** [Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) terminó en `success`; [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) estaba todavía `in_progress` en `Install Chromium`. No dar por finalizado este último hasta consultar su conclusión.
+- **Alcance factual:** SRC-047 (DanMachi vol. 14, CONT-MAIN-LN) y SRC-048 (Astrea Record 3, CONT-AR) son fichas BookLive con oferta de vista previa, no narración leída. Ambos conservan `metadata_checked_only` y claims/events vacíos. No se añadieron claims, aristas ni aliases y no se elevaron los niveles de evidencia de Alfia, Zald, Meteria, Erebus o Rudra.
