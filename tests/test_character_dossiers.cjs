@@ -38,6 +38,10 @@ assert.ok(alfiaArchiveInfo.sections.some(section => section.text.includes("campa
   "The Alfia archive modal must expose the Genos Angelus report while retaining its secondary-evidence boundary.");
 assert.ok(alfiaArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Alfia/Habilidades"),
   "Alfia's interactive research note must link the Spanish community source with its type preserved.");
+assert.ok(alfiaArchiveInfo.sections.some(section => section.text.includes("tumbas de Erebus, Zald y Alfia") && section.text.includes("reseña de lector")),
+  "Alfia's Astrea Record note must expose the BookLive memorial lead as secondary, not as a primary scene.");
+assert.ok(alfiaArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://booklive.jp/review/list/title_id/1237250/vol_no/003"),
+  "Alfia's Astrea Record note must link the BookLive review source for the secondary memorial clue.");
 const alfiaMainNovelInfo = archiveApi.getExtendedInfo("CHAR-DARK-ALFIA", "CONT-MAIN-LN", null);
 assert.ok(alfiaMainNovelInfo && alfiaMainNovelInfo.title.includes("volumen 20"),
   "Alfia must expose a distinct CONT-MAIN-LN volume 20 lead without relabelling it as Astrea Record.");
@@ -50,6 +54,10 @@ assert.ok(zaldArchiveInfo.sections.some(section => section.text.includes("nivel 
   "Zald's Deus Ambrosia example must be labelled a community report rather than a universal rule.");
 assert.ok(zaldArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Zald"),
   "Zald's interactive research note must preserve its community source type.");
+assert.ok(zaldArchiveInfo.sections.some(section => section.text.includes("tumbas de Erebus, Zald y Alfia") && section.text.includes("reseña de lector")),
+  "Zald's Astrea Record note must expose the BookLive memorial lead as secondary, not as a primary scene.");
+assert.ok(zaldArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://booklive.jp/review/list/title_id/1237250/vol_no/003"),
+  "Zald's Astrea Record note must link the BookLive review source for the secondary memorial clue.");
 const zaldMainNovelInfo = archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null);
 assert.ok(zaldMainNovelInfo && zaldMainNovelInfo.title.includes("volumen 20"),
   "Zald must expose a distinct CONT-MAIN-LN volume 20 lead without relabelling it as Astrea Record.");
@@ -104,6 +112,10 @@ assert.ok(erebusNovelInfo.references.some(ref => ref.kind === "licensed_preview"
   "Erebus's CONT-AR note must link the BookLive trial-offer page as metadata only.");
 assert.equal(erebusNovelInfo.sections.some(section => section.text.includes("Absolute Evil")), false,
   "Erebus's game-only details must not leak into the separate novelization route.");
+assert.ok(erebusNovelInfo.sections.some(section => section.text.includes("flores") && section.text.includes("tumbas") && section.text.includes("pista secundaria")),
+  "Erebus's CONT-AR note must surface the BookLive review lead without promoting it to novel canon.");
+assert.ok(erebusNovelInfo.references.some(ref => ref.kind === "community" && ref.url === "https://booklive.jp/review/list/title_id/1237250/vol_no/003"),
+  "Erebus's CONT-AR note must link the BookLive review, not the separate game page.");
 const rudraMainInfo = archiveApi.getExtendedInfo("CHAR-DARK-RUDRA", "CONT-MAIN-LN", null);
 assert.ok(rudraMainInfo && rudraMainInfo.sections.some(section => section.text.includes("no demuestra que Rudra") && section.text.includes("Rudra Familia")),
   "Rudra's note must distinguish group responsibility from unproven personal authorization.");
