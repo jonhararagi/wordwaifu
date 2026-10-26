@@ -3259,3 +3259,25 @@ verification_status: stub
 - rights_note: Enlaces y metadatos solamente; no se copiaron textos narrativos ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+## DMR-045-SRC-030 · Barnes & Noble NOOK — DanMachi vol. 14 sample route (metadata only)
+- source_id: DMR-045-SRC-030
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 14 (light novel) — Read sample route
+- creator_or_publisher: Barnes & Noble / Yen Press LLC
+- source_type: LICENSED_RETAILER_SAMPLE_ROUTE
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 14, edición inglesa de Yen Press; ISBN digital 9781975385026 / impreso 9781975385019
+- language: Inglés
+- official_url: https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019
+- product_page: https://www.barnesandnoble.com/w/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-fujino-omori/1130510787
+- accessed_at: 2026-10-25
+- locator_type: licensed_sample_route_metadata_only
+- locator: La ficha pública de Barnes & Noble muestra el enlace “Read sample” para la edición. Al abrir la ruta normal NOOK desde esta consulta, la herramienta devolvió “Cache miss”; no se expusieron páginas del lector ni un localizador narrativo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Ruta legal adicional para una futura comprobación mediante el lector normal; la lectura de esta consulta no demuestra indisponibilidad general ni disponibilidad en todas las regiones. No respalda DMR-045-CLM-013/014 ni permite atribuir a Rudra una orden, autorización o conocimiento personal.
+- conflicting_sources: []
+- rights_note: Se conservaron URLs y metadatos de la ruta de muestra; no se copió texto narrativo ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
