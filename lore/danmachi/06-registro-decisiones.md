@@ -102,6 +102,6 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-012 — La procedencia de un detalle debe coincidir con el texto accesible de la fuente
 - **Fecha:** 2026-10-26.
-- **Estado:** Corrección implementada en rama de trabajo; pendiente de CI e integración.
+- **Estado:** Integrada mediante [PR #151](https://github.com/jonhararagi/wordwaifu/pull/151), merge SHA `fc3080189815805ae2e0853b177bae33d0cec516`. Ambos workflows de PR pasaron sobre head `4771a81e371f4c2997c4c2fb9414e809d1645ee9`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40265979989) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40265980006). El conector de consulta solo devuelve ejecuciones disparadas por pull_request, por lo que no se afirma un resultado para los workflows push post-merge.
 - **Decisión:** cuando una frase detallada aparece en una reseña de usuario y la sinopsis oficial no la contiene, el claim debe citar la reseña como fuente secundaria y la ficha editorial debe limitarse a lo que efectivamente muestra. No inferir procedencia por proximidad al título o por un resultado de búsqueda agregado.
 - **Aplicación:** DMR-045-CLM-006 se vincula a la reseña comunitaria DMR-045-SRC-043 y queda secondary_checked; DMR-045-SRC-043 registra BookLive; SRC-005 deja de listar ese claim. El detalle de combate continúa pendiente de cotejo primario.
