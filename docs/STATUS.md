@@ -18,6 +18,14 @@
 - PR #146 quedó integrada por SHA dc7fa0fe44d259e710902d5d741fe11a85b3e3a0. Los workflows de PR pasaron sobre head 634cd5cc403dbdb0360a2b72ecd77997206ff2bc (Validate: https://github.com/jonhararagi/wordwaifu/actions/runs/40261732974; Lore/Integrity: https://github.com/jonhararagi/wordwaifu/actions/runs/40261733009); el conector de consulta utilizado solo devuelve ejecuciones disparadas por pull_request y no permite confirmar el estado de los workflows push post-merge; no se afirma su resultado.
 - DMR-045 sigue IN_PROGRESS; los cinco localizadores primarios continúan pendientes.
 
+## DMR-045 — integración de las rutas oficiales SB Creative (PR #147)
+
+- Las cuatro rutas BinB oficiales DMR-045-SRC-039–042 quedaron integradas en main mediante [PR #147](https://github.com/jonhararagi/wordwaifu/pull/147), merge SHA 58025c70e8fd26d6ce3c2043c8fd5d51e5cc0d98.
+- Los workflows previos a la fusión pasaron sobre el head 32891061a411b66ac9a66000d8f5b0c4f2b0ba56: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40262391617) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40262391545).
+- La consulta de workflows disponible solo devuelve ejecuciones disparadas por pull_request y no permite verificar aquí los workflows push post-merge del SHA de fusión; no se afirma que esos checks hayan pasado o fallado.
+- DMR-045 permanece IN_PROGRESS. La incorporación de rutas no cierra ninguno de los cinco localizadores primarios.
+
+
 ## DMR-045 — reintento de vista previa autorizada de DanMachi vol. 20 (2026-10-25)
 
 - La ficha pública licenciada de [Google Books vol. 20](https://books.google.com/books?id=XWHEEQAAQBAJ) se comprobó también desde su lector normal ([vista previa pública](https://www.google.com/books/edition/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a/XWHEEQAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PT29)). El lector anuncia `Preview · 28 pages` y muestra `1 of 4`, pero las páginas consultadas devuelven `Something went wrong / Page didn't load`; no se obtiene texto narrativo legible.

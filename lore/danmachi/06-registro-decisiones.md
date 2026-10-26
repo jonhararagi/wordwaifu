@@ -96,6 +96,6 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-011 — Registrar lectores oficiales que no exponen narración en extracción pública
 - **Fecha:** 2026-10-25.
-- **Estado:** Rutas registradas y regresiones preparadas; pendiente de CI/fusión de esta ampliación.
+- **Estado:** Integrada mediante PR #147, merge SHA 58025c70e8fd26d6ce3c2043c8fd5d51e5cc0d98. Los workflows de PR pasaron sobre head 32891061a411b66ac9a66000d8f5b0c4f2b0ba56 (Validate: https://github.com/jonhararagi/wordwaifu/actions/runs/40262391617; Lore/Integrity: https://github.com/jonhararagi/wordwaifu/actions/runs/40262391545). La consulta de workflows disponible solo devuelve ejecuciones disparadas por pull_request; no permitió verificar los workflows push post-merge de ese SHA y no se afirma ese resultado.
 - **Decisión:** la presencia de una opción oficial 立ち読み solo autoriza registrar la ruta de muestra. Si la extracción solo muestra “Now loading...”, no se establece que la obra sea globalmente inaccesible ni se crea una afirmación narrativa. Los registros quedan metadata_checked_only y claims_supported vacío.
 - **Aplicación:** DMR-045-SRC-039–042 corresponden a SB Creative BinB; CONT-AR para Astrea Record 1–3 y CONT-MAIN-LN para DanMachi vol. 14. Reintentar desde sesión normal y añadir un localizador únicamente tras ver texto narrativo legible.

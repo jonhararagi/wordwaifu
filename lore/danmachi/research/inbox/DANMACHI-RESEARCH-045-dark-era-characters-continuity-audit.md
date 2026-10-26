@@ -761,3 +761,13 @@ La consolidación de DMR-045 se integró en [PR #146](https://github.com/jonhara
 - **Estado de evidencia:** metadata_checked_only; claims_supported: []; claim_ids: []; character_ids: []; event_ids: []; continuidad CONT-MAIN-LN.
 - **Interpretación permitida:** la ruta directa aporta una opción adicional para intentar lectura normal. No demuestra que el lector esté indisponible en general, ni verifica escenas, relaciones o hechos del canon. No se añadió ningún claim ni arista a partir de ella.
 - **Siguiente acción:** reintentar desde una sesión normal en la que el lector termine de cargar; registrar un localizador solo al ver páginas narrativas legibles.
+
+## Integración y CI — rutas oficiales BinB de SB Creative (PR #147)
+
+Las rutas DMR-045-SRC-039–042 se integraron en main mediante [PR #147](https://github.com/jonhararagi/wordwaifu/pull/147), merge SHA 58025c70e8fd26d6ce3c2043c8fd5d51e5cc0d98.
+
+- **Head validado:** 32891061a411b66ac9a66000d8f5b0c4f2b0ba56.
+- **Validate WordWaifu:** [run 40262391617](https://github.com/jonhararagi/wordwaifu/actions/runs/40262391617), success.
+- **DanMachi Lore and Retrieval Integrity:** [run 40262391545](https://github.com/jonhararagi/wordwaifu/actions/runs/40262391545), success; incluye las pruebas de catálogo, retrieval, integridad y browser smoke.
+- **Límite post-merge:** el conector de consulta disponible solo devuelve workflows disparados por pull_request, por lo que no permitió verificar los workflows push después de la fusión. No se declara su resultado.
+- **Límite factual:** las rutas siguen metadata_checked_only; ninguna entregó texto narrativo legible ni un localizador de capítulo/página. DMR-045 permanece IN_PROGRESS.
