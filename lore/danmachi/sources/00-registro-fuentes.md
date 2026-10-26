@@ -3259,3 +3259,104 @@ verification_status: stub
 - rights_note: Enlaces y metadatos solamente; no se copiaron textos narrativos ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-030 · DanMachi Wiki (Miraheze) — Meteria
+- source_id: DMR-045-SRC-030
+- title: Meteria
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Meteria
+- accessed_at: 2026-10-25
+- locator_type: community_character_summary_and_infobox
+- locator: Infobox de familiares/afiliación y secciones de identidad e historia; la página identifica a Meteria como madre de Bell y como hermana gemela de Alfia. No se aporta un localizador primario de novela.
+- claims_supported: [DMR-029-CLM-011]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN; CONT-AR (reported secondary profile only)
+- reliability_note: Fuente secundaria comunitaria. No se ha establecido si es editorialmente independiente de otras wikis y la ficha consultada no ofrece una referencia de capítulo/página primaria para cada parentesco. Sirve como fuente alternativa accesible, no como confirmación primaria ni como permiso para fusionar afirmaciones de distintas continuidades.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-031 · DanMachi Wiki (Miraheze) — Alfia
+- source_id: DMR-045-SRC-031
+- title: Alfia
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Alfia
+- accessed_at: 2026-10-25
+- locator_type: community_character_summary_and_appearance_metadata
+- locator: Infobox; la lista de apariciones reporta DanMachi vol. 20 (flashback) y Astrea Record vol. 1. El cuerpo lista referencias a un perfil de DanMemo y a una ficha de estado de la edición limitada de Astrea Record 3; no se cotejó la escena narrativa.
+- claims_supported: [DMR-029-CLM-001, DMR-029-CLM-006, DMR-045-CLM-015]
+- events_supported: []
+- continuity_scope: CONT-AR; CONT-MAIN-LN (appearance index only, secondary)
+- reliability_note: No identifica a la maga de cabello gris del prólogo en una página concreta del volumen 20. La lista de apariciones dirige una futura búsqueda, pero no sustituye el texto narrativo ni verifica técnicas/parentescos individualmente.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-032 · DanMachi Wiki (Miraheze) — Zald
+- source_id: DMR-045-SRC-032
+- title: Zald
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Zald
+- accessed_at: 2026-10-25
+- locator_type: community_character_summary_and_reference_list
+- locator: Infobox e historia; el índice de apariciones lista Astrea Record vol. 1 y el cuerpo refiere el perfil de Zald en DanMemo, la hoja de estado de Astrea Record vol. 3 y una nota autoral. No proporciona página narrativa del volumen 20.
+- claims_supported: [DMR-029-CLM-002, DMR-029-CLM-007]
+- events_supported: []
+- continuity_scope: CONT-GAME; CONT-AR (secondary profile / appearance metadata only)
+- reliability_note: El resumen es una fuente secundaria, no confirma el uso individual de Afterglow en las retrospectivas del volumen 20 ni demuestra una secuencia de combate completa. Mantener cada habilidad, nivel y coste bajo la evidencia propia de su claim.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-033 · DanMachi Wiki (Miraheze) — Erebus
+- source_id: DMR-045-SRC-033
+- title: Erebus
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Erebus
+- accessed_at: 2026-10-25
+- locator_type: community_character_summary_and_appearance_metadata
+- locator: Infobox y secciones de identidad/filosofía; la ficha lista Astrea Record vol. 1 como aparición en novela y describe su presencia en el evento original de Memoria Freese.
+- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003, DMR-045-CLM-018]
+- events_supported: []
+- continuity_scope: CONT-GAME; CONT-AR (appearance metadata only, secondary)
+- reliability_note: La ficha también usa “Eren”, pero eso no verifica que sea un alias canónico en la novelización. No se traslada automáticamente la filosofía del juego a CONT-AR ni se deducen poderes o una cadena de mando completa de Evilus.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
+
+## DMR-045-SRC-034 · DanMachi Wiki (Miraheze) — Rudra Familia
+- source_id: DMR-045-SRC-034
+- title: Rudra Familia
+- creator_or_publisher: DanMachi Wiki contributors; public Miraheze-hosted page
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- language: Inglés
+- official_url: https://danmachien.miraheze.org/wiki/Rudra_Familia
+- accessed_at: 2026-10-25
+- locator_type: community_familia_summary
+- locator: Sección Information; el resumen atribuye a Rudra Familia como grupo la trampa contra Astrea Familia y el daño a la Dungeon que precedió al Juggernaut. La página no aporta capítulo/página en el texto consultado.
+- claims_supported: [DMR-029-CLM-004, DMR-029-CLM-005, DMR-045-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN (secondary group-level summary)
+- reliability_note: Fuente secundaria sin localizador primario reproducible en la página consultada. No demuestra que el dios Rudra diseñara, conociera, ordenara o autorizara personalmente el plan.
+- conflicting_sources: []
+- rights_note: Enlace y paráfrasis breve; no se reproduce contenido protegido de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
