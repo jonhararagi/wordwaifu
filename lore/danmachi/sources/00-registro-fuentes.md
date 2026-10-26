@@ -3396,7 +3396,7 @@ verification_status: stub
 - accessed_at: 2026-10-25
 - locator_type: community_character_summary_and_appearance_metadata
 - locator: Infobox y secciones de identidad/filosofía; la ficha lista Astrea Record vol. 1 como aparición en novela y describe su presencia en el evento original de Memoria Freese.
-- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003, DMR-045-CLM-018]
+- claims_supported: [DMR-029-CLM-003, DMR-045-CLM-003]
 - events_supported: []
 - continuity_scope: CONT-GAME; CONT-AR (appearance metadata only, secondary)
 - reliability_note: La ficha también usa “Eren”, pero eso no verifica que sea un alias canónico en la novelización. No se traslada automáticamente la filosofía del juego a CONT-AR ni se deducen poderes o una cadena de mando completa de Evilus.
