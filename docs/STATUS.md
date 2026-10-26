@@ -10,6 +10,14 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## DMR-045 — ruta adicional de muestra Barnes & Noble NOOK (2026-10-25)
+
+- Se localizó la ficha pública de [Barnes & Noble — DanMachi, volumen 14](https://www.barnesandnoble.com/w/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-fujino-omori/1130510787); la página muestra el enlace “Read sample” hacia el lector NOOK.
+- Ruta exacta enlazada: [NOOK sample](https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019). La apertura del endpoint desde esta consulta devolvió “Cache miss”; no se obtuvieron páginas narrativas.
+- Se registra como DMR-045-SRC-030 en el directorio de fuentes y en la auditoría DMR-045 con metadata_checked_only, claims_supported vacío y CONT-MAIN-LN. No confirma la trampa del capítulo 13, el epílogo ni responsabilidad personal de Rudra.
+- Esto añade una ruta normal de consulta, no una verificación de canon. Los cinco huecos primarios de DMR-045 continúan abiertos; Orario permanece diferido hasta resolver o acotar honestamente esos huecos.
+
+
 ## DMR-045 — reintento de vista previa autorizada de DanMachi vol. 20 (2026-10-25)
 
 - La ficha pública licenciada de [Google Books vol. 20](https://books.google.com/books?id=XWHEEQAAQBAJ) se comprobó también desde su lector normal ([vista previa pública](https://www.google.com/books/edition/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a/XWHEEQAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PT29)). El lector anuncia `Preview · 28 pages` y muestra `1 of 4`, pero las páginas consultadas devuelven `Something went wrong / Page didn't load`; no se obtiene texto narrativo legible.
