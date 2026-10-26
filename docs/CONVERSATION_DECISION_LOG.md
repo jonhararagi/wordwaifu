@@ -341,3 +341,10 @@
 - **CI de PR:** Validate WordWaifu success (https://github.com/jonhararagi/wordwaifu/actions/runs/40262391617) y DanMachi Lore and Retrieval Integrity success (https://github.com/jonhararagi/wordwaifu/actions/runs/40262391545), ambos sobre head 32891061a411b66ac9a66000d8f5b0c4f2b0ba56.
 - **CI post-merge:** la consulta de workflows disponible filtra ejecuciones pull_request y no permitió verificar las ejecuciones push asociadas al SHA de fusión; no se afirma su resultado.
 - **Resultado de lore:** cuatro rutas oficiales adicionales siguen metadata_checked_only, sin claims nuevos y sin localizadores narrativos; los cinco huecos primarios de DMR-045 siguen pendientes.
+
+### CONV-DM-2026-10-26-001 — Corregir la atribución editorial de DMR-045-CLM-006
+- **Fecha:** 2026-10-26.
+- **Hallazgo:** la ficha oficial de SB Creative para Astrea Record 3 muestra una sinopsis general, pero no nombra los emparejamientos Zald–Ottar y Alfia–Astrea Familia. El detalle específico aparece en una reseña comunitaria de BookLive atribuida a ブクログ y fechada el 2023-02-11.
+- **Corrección:** el detalle se reasigna a DMR-045-SRC-043 (COMMUNITY_REVIEW) y DMR-045-CLM-006 pasa a secondary_checked; SRC-005 mantiene el alcance general de la sinopsis y ya no respalda ese claim.
+- **Impacto:** se actualizan el directorio de fuentes, el registro central, la auditoría, las fichas de Alfia/Zald, la cola, el índice maestro, el estado y las pruebas. No se añaden hechos ni relaciones nuevas; se corrige el tipo de evidencia.
+- **Pendiente:** encontrar y cotejar la escena en un ejemplar o lector licenciado con texto legible antes de elevar el dato a evidencia primaria.
