@@ -39,7 +39,7 @@ assert.match(vol20Synopsis[0].limits, /CONT-MAIN-LN/);
 const volume14Synopsis = sources.filter(source => source.id === "community-volume-14-synopsis");
 assert.equal(volume14Synopsis.length, 1, "the volume 14 chapter synopsis must be discoverable exactly once");
 assert.equal(volume14Synopsis[0].authority, "Fuente secundaria");
-assert.match(volume14Synopsis[0].coverage, /Rudra.*Ryuu.*Gremio/);
+assert.match(volume14Synopsis[0].coverage, /Ryuu.*Rudra.*Gremio/);
 assert.match(volume14Synopsis[0].limits, /no página narrativa primaria/i);
 assert.match(volume14Synopsis[0].limits, /no demuestra que Rudra conociera, ordenara o autorizara/i);
 assert.match(volume14Synopsis[0].limits, /CONT-MAIN-LN/);
