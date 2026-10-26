@@ -2575,28 +2575,27 @@ verification_status: stub
 - verification_status: secondary_checked
 
 
-## DMR-045-SRC-005 · Astrea Record 3 — fragmento indexado de sinopsis editorial
-
+## DMR-045-SRC-005 · SB Creative — sinopsis editorial oficial de Astrea Record 3
 - source_id: DMR-045-SRC-005
-- title: アストレア・レコード3 正邪決戦 — ficha editorial oficial de SB Creative (fragmento indexado)
+- title: アストレア・レコード3 正邪決戦 — ficha editorial oficial de SB Creative (edición especial)
 - creator_or_publisher: SB Creative / GA文庫
-- source_type: OFFICIAL_REFERENCE
+- source_type: OFFICIAL_PUBLISHER_PRODUCT_PAGE
 - series: DanMachi Heroic Tale: Astrea Record
-- volume_or_edition: Astrea Record, volumen 3; edición especial, ISBN 978-4-8156-1755-4
+- volume_or_edition: Astrea Record, volumen 3; edición especial con cuadernillo, ISBN 978-4-8156-1755-4
 - language: Japonés
-- publication_date: 2022-12-15 aproximadamente, según editorial
+- publication_date: 2022-12-15
 - official_url: https://www.sbcr.jp/product/4815617554/
-- accessed_at: 2026-10-23
-- locator_type: indexed_official_publisher_synopsis_excerpt
-- locator: Fragmento indexado sobre el inicio de los enfrentamientos Zald–Ottar en la superficie y Alfia–Astrea Familia dentro del Dungeon durante el último día de los Siete Días de la Muerte.
-- claims_supported: [DMR-045-CLM-006]
+- accessed_at: 2026-10-26
+- locator_type: official_publisher_synopsis
+- locator: Sinopsis editorial visible en la página oficial: describe la batalla final entre la facción Evilus y los aventureros, la defensa de Orario y el papel de los héroes. La ficha indica además que el cuadernillo especial contiene una versión ampliada/revisada de “それは遥か彼方の静穏の夢” planteada como un escenario que podría haber sucedido.
+- claims_supported: []
 - events_supported: [EVT-DM-ASTREA-RECORD-FOUNDATIONS-001]
-- continuity_scope: CONT-AR
-- reliability_note: El fragmento procede del resultado indexado de la página de editorial; el acceso directo a esa página respondió HTTP 503 durante la comprobación. Solo permite registrar lo expresado en el extracto, no detalles del texto completo ni resultados individuales.
-- conflicting_sources: []
-- rights_note: Enlace y paráfrasis breve; no reproducir sinopsis extensas.
+- continuity_scope: CONT-AR; el cuadernillo adicional queda en CONT-AU
+- reliability_note: Página editorial primaria para metadatos de edición y descripción general de la historia. La sinopsis visible no nombra a Zald, Ottar ni Alfia ni especifica esos emparejamientos de combate; no debe usarse como respaldo del detalle de DMR-045-CLM-006.
+- conflicting_sources: [DMR-045-SRC-043]
+- rights_note: Enlace y paráfrasis breve; no reproducir sinopsis extensas ni el cuadernillo.
 - verified_by: DANMACHI-RESEARCH-045
-- verification_status: source_checked_excerpt_only
+- verification_status: source_checked
 
 
 ## DMR-045-SRC-006 · BOOK☆WALKER — muestra pública de Astrea Record 3 (solo metadatos)
@@ -3535,3 +3534,24 @@ verification_status: stub
 - rights_note: Se conservaron enlaces y metadatos; no se extrajo texto protegido ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+## DMR-045-SRC-043 · BookLive — reseña comunitaria de Astrea Record 3
+- source_id: DMR-045-SRC-043
+- title: アストレア・レコード３ 正邪決戦 — レビュー（reseña comunitaria）
+- creator_or_publisher: BookLive; entrada de reseña marcada “Posted by ブクログ”
+- source_type: COMMUNITY_REVIEW
+- series: DanMachi / Astrea Record, volumen 3
+- volume_or_edition: Reseña de la edición japonesa del volumen 3
+- language: Japonés
+- official_url: https://booklive.jp/review/list/title_id/1237250/vol_no/003
+- accessed_at: 2026-10-26
+- locator_type: user_review_entry
+- locator: Entrada de reseña atribuida a ブクログ y fechada el 11 de febrero de 2023; en el resumen del desenlace distingue el duelo Zald–Ottar en la superficie del combate Alfia–Astrea Familia dentro del Dungeon.
+- claims_supported: [DMR-045-CLM-006]
+- events_supported: [EVT-DM-ASTREA-RECORD-FOUNDATIONS-001]
+- continuity_scope: CONT-AR
+- reliability_note: Es un resumen de lector alojado en una página de reseñas, no texto editorial ni extracto verificado de la novela. Se conserva solo como pista secundaria para dirigir el cotejo; la sinopsis oficial accesible de SB Creative no incluye los emparejamientos. No se ha establecido la exactitud ni independencia de la reseña.
+- conflicting_sources: [DMR-045-SRC-005]
+- rights_note: Se registran URL y paráfrasis breve; no se copia el texto de la reseña ni de la novela.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
