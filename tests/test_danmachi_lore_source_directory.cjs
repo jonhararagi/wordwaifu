@@ -145,6 +145,30 @@ assert.match(bookwalkerDanmachi14[0].limits, /No se obtuvo página narrativa/i);
 assert.match(bookwalkerDanmachi14[0].limits, /no respalda la trampa de Rudra Familia/i);
 assert.match(bookwalkerDanmachi14[0].limits, /metadata_checked_only/);
 
+const mirahezeSources = [
+  ["community-miraheze-meteria-en", "https://danmachien.miraheze.org/wiki/Meteria"],
+  ["community-miraheze-alfia-en", "https://danmachien.miraheze.org/wiki/Alfia"],
+  ["community-miraheze-zald-en", "https://danmachien.miraheze.org/wiki/Zald"],
+  ["community-miraheze-erebus-en", "https://danmachien.miraheze.org/wiki/Erebus"],
+  ["community-miraheze-rudra-familia-en", "https://danmachien.miraheze.org/wiki/Rudra_Familia"]
+];
+for (const [id, url] of mirahezeSources) {
+  const rows = sources.filter(source => source.id === id);
+  assert.equal(rows.length, 1, id + " must be discoverable exactly once");
+  assert.equal(rows[0].category, "community");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].limits, /no.*(fuente oficial|localizador primario|fuente primaria|canon primario)/i);
+}
+const mirahezeMeteria = sources.find(source => source.id === "community-miraheze-meteria-en");
+assert.match(mirahezeMeteria.coverage, /madre de Bell/);
+assert.match(mirahezeMeteria.coverage, /hermana gemela de Alfia/);
+assert.match(mirahezeMeteria.limits, /independiente de otras wikis/i);
+const mirahezeErebus = sources.find(source => source.id === "community-miraheze-erebus-en");
+assert.match(mirahezeErebus.limits, /Eren.*sin confirmación primaria/i);
+const mirahezeRudra = sources.find(source => source.id === "community-miraheze-rudra-familia-en");
+assert.match(mirahezeRudra.limits, /no prueba que diseñara, conociera, ordenara o autorizara/i);
+
+
 const bookwalkerAnthology1 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol1-sample-anthology");
 const bookwalkerAnthology2 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol2-sample-anthology");
 const bookwalkerAnthology3 = sources.filter(source => source.id === "licensed-retailer-bookwalker-astrea-record-vol3-sample-anthology");
@@ -164,5 +188,17 @@ assert.match(bookwalkerAnthology1[0].limits, /timeout/);
 assert.match(bookwalkerAnthology2[0].limits, /timeout/);
 assert.match(bookwalkerAnthology3[0].limits, /timeout/);
 assert.match(bookwalkerAnthology1[0].coverage, /puede diferir parcialmente del producto final/i);
+
+const barnesNobleDanmachi14 = sources.filter(source => source.id === "licensed-retailer-barnes-noble-danmachi-vol14-sample");
+assert.equal(barnesNobleDanmachi14.length, 1, "Barnes & Noble NOOK vol. 14 sample route must be discoverable exactly once");
+assert.equal(barnesNobleDanmachi14[0].category, "licensed_retailer");
+assert.equal(barnesNobleDanmachi14[0].url, "https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019");
+assert.match(barnesNobleDanmachi14[0].authority, /Read sample/i);
+assert.match(barnesNobleDanmachi14[0].coverage, /Barnes & Noble/);
+assert.match(barnesNobleDanmachi14[0].limits, /Cache miss/i);
+assert.match(barnesNobleDanmachi14[0].limits, /No se leyó el capítulo 13/i);
+assert.match(barnesNobleDanmachi14[0].limits, /no demuestra indisponibilidad general/i);
+assert.match(barnesNobleDanmachi14[0].limits, /metadata_checked_only/);
+assert.match(barnesNobleDanmachi14[0].limits, /no respalda.*responsabilidad personal de Rudra/i);
 
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
