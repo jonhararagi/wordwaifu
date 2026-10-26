@@ -100,6 +100,13 @@ assert.match(erebus, /CONT-GAME/);
 assert.match(meteria, /no pronuncia el nombre Meteria/i);
 assert.match(queue, /Cotejar los localizadores primarios pendientes/i);
 
+assert.match(dmr045, /DMR-045-SRC-030/);
+assert.match(sources, /DMR-045-SRC-030/);
+assert.match(queue, /DMR-045-SRC-030/);
+assert.match(dmr045, /Cache miss/);
+assert.ok(sources.includes("https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019"));
+assert.ok(dmr045.includes("claims_supported: []"));
+
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, "DMR-045 claim IDs must be unique");
 
