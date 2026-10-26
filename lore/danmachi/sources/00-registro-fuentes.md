@@ -3259,3 +3259,70 @@ verification_status: stub
 - rights_note: Enlaces y metadatos solamente; no se copiaron textos narrativos ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-030 · BOOK☆WALKER — compendio gratuito Astrea Record 1 (octubre de 2022)
+- source_id: DMR-045-SRC-030
+- title: GA文庫＆GAノベル2022年10月の新刊 全作品立読み（合本版）
+- creator_or_publisher: BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_SAMPLE_ANTHOLOGY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Compendio gratuito de muestras de octubre de 2022; contiene una muestra de Astrea Record 1
+- language: Japonés
+- official_url: https://bookwalker.jp/dedafe030d-bc1c-4b5a-ad6a-877ba7bc3e7b/
+- sample_url: https://bookwalker.jp/dedafe030d-bc1c-4b5a-ad6a-877ba7bc3e7b/?sample=2
+- accessed_at: 2026-10-25
+- locator_type: licensed_anthology_metadata_and_reader_access_failure
+- locator: La ficha incluye Astrea Record 1 entre las muestras y avisa que el compendio puede diferir del producto final. El lector redirigido no se abrió en la extracción; un reintento público terminó en timeout.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Acceso a metadatos, sin páginas narrativas legibles. No es un pasaje cotejado de la edición final; los fallos del lector no prueban indisponibilidad general.
+- conflicting_sources: []
+- rights_note: Enlaces y metadatos únicamente; no se extrajo texto protegido ni se eludieron restricciones.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-031 · BOOK☆WALKER — compendio gratuito Astrea Record 2 (noviembre de 2022)
+- source_id: DMR-045-SRC-031
+- title: GA文庫＆GAノベル2022年11月の新刊 全作品立読み（合本版）
+- creator_or_publisher: BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_SAMPLE_ANTHOLOGY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Compendio gratuito de muestras de noviembre de 2022; contiene una muestra de Astrea Record 2
+- language: Japonés
+- official_url: https://bookwalker.jp/ded45bc452-2ba7-41c9-9d75-e6951e5231fc/
+- sample_url: https://bookwalker.jp/ded45bc452-2ba7-41c9-9d75-e6951e5231fc/?sample=2
+- accessed_at: 2026-10-25
+- locator_type: licensed_anthology_metadata_and_reader_timeout
+- locator: La ficha anuncia Astrea Record 2; el acceso de muestra normal terminó en timeout. No se obtuvo ninguna página narrativa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Sin lectura narrativa ni localizador por personaje. La sinopsis comercial no verifica hechos individuales y el timeout no significa indisponibilidad global.
+- conflicting_sources: []
+- rights_note: Enlaces y metadatos solamente; no se eludieron restricciones ni se copió texto de la obra.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
+## DMR-045-SRC-032 · BOOK☆WALKER — compendio gratuito Astrea Record 3 (diciembre de 2022)
+- source_id: DMR-045-SRC-032
+- title: GA文庫＆GAノベル2022年12月の新刊 全作品立読み（合本版）
+- creator_or_publisher: BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_SAMPLE_ANTHOLOGY
+- series: DanMachi / Astrea Record
+- volume_or_edition: Compendio gratuito de muestras de diciembre de 2022; contiene una muestra de Astrea Record 3
+- language: Japonés
+- official_url: https://bookwalker.jp/def1fe306c-b1b8-4c55-9390-1cb7f16d0775/
+- sample_url: https://bookwalker.jp/def1fe306c-b1b8-4c55-9390-1cb7f16d0775/?sample=2
+- accessed_at: 2026-10-25
+- locator_type: licensed_anthology_metadata_and_reader_timeout
+- locator: La ficha anuncia Astrea Record 3; el acceso de muestra normal terminó en timeout. No se obtuvo ninguna página narrativa.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Sin lectura narrativa ni localizador por personaje. La sinopsis comercial no verifica hechos individuales y el timeout no significa indisponibilidad global.
+- conflicting_sources: []
+- rights_note: Enlaces y metadatos solamente; no se eludieron restricciones ni se copió texto de la obra.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
