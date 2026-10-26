@@ -305,9 +305,12 @@
 
 ### CONV-DM-2026-10-25-012 — Tres compendios gratuitos de BOOK☆WALKER para Astrea Record 1–3
 - **Fecha:** 2026-10-25.
-- **Estado:** IMPLEMENTED on a work branch; pending PR CI, merge, and post-merge verification.
+- **Estado:** INTEGRATED and VALIDATED in main.
 - **Origen:** búsqueda pública de distribuidores licenciados encontró los compendios de muestras de octubre, noviembre y diciembre de 2022, que incluyen Astrea Record 1, 2 y 3. Es un tipo de recurso diferente de las fichas individuales ya registradas, así que se guardan sus tres rutas normales sin duplicar IDs existentes.
 - **Acceso observado:** el compendio de octubre lleva al lector público; la extracción no pudo abrir esa vista y el reintento directo del lector terminó en timeout. Las rutas normales de muestra de noviembre y diciembre también terminaron en timeout.
 - **Límite de evidencia:** DMR-045-SRC-030–032 quedan metadata_checked_only, con claims_supported vacíos y sin localizadores narrativos. El compendio de octubre advierte además que su contenido de muestra puede diferir de la edición final. Ninguna ruta confirma técnica, relación o escena de Alfia, Zald, Meteria, Erebus o Rudra.
-- **Implementación prevista:** directorio de fuentes de la aplicación, auditoría DMR-045, registro central, cola, índice maestro, test del directorio y test de integridad DMR-045.
+- **Integración confirmada:** PR [#143](https://github.com/jonhararagi/wordwaifu/pull/143) integrada en main por SHA exacto `5cf3eb069bca47d2ce488a7ffb1128c1c830c7e4`.
+- **CI de la PR, head SHA `9b032700559afcfdc3fd4ba1fd45f931829bf0fb`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108783) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108791), ambos success.
+- **CI post-merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414219) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414283), ambos success; el segundo completó browser smoke, validación de catálogo/enlaces y subida de capturas.
+- **Implementación integrada:** directorio de fuentes de la aplicación, auditoría DMR-045, registro central, cola, índice maestro y pruebas de directorio/integridad.
 - **Prioridad vigente:** conseguir texto primario legible por vía autorizada para los cinco expedientes; Orario continúa en cola.
