@@ -419,3 +419,10 @@
 - **CI post-merge sobre ese SHA exacto:** [Validate WordWaifu #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [DanMachi Lore and Retrieval Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
 - **Alcance:** PR #158 actualiza la trazabilidad del cambio de Rudra y el intento de muestra licenciada. La integración documental no añade evidencia narrativa ni cambia el estado `secondary_checked` de DMR-045-CLM-021.
 - **Pendiente:** los cinco cotejos primarios de DMR-045 siguen abiertos; la lectura autorizada no proporcionó texto narrativo verificable.
+
+
+### CONV-DM-2026-10-26-010 — Registrar rutas BookLive sin elevar certeza narrativa
+- **Fecha:** 2026-10-26.
+- **Resultado:** las fichas públicas de [BookLive · DanMachi vol. 14](https://booklive.jp/product/index/title_id/201522/vol_no/014) y [BookLive · Astrea Record 3](https://booklive.jp/product/index/title_id/1237250/vol_no/003) exponen controles de prueba en navegador y app. Solo se consultaron páginas comerciales y metadatos; no se leyó contenido del visor.
+- **Implementación:** DMR-045-SRC-047/048, dos entradas `metadata_checked_only` con claims vacíos, enlaces visibles en el directorio de fuentes y en las fichas interactivas de Rudra, Alfia, Zald y Erebus; pruebas de regresión añadidas.
+- **Límite:** no se añaden claims, aristas, aliases ni hechos narrativos. Los cinco localizadores primarios siguen abiertos y la separación CONT-MAIN-LN / CONT-AR / CONT-GAME se conserva.

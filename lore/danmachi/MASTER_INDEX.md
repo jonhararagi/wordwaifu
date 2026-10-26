@@ -265,3 +265,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - CI de la PR sobre head `671bdacba38e7e0b8d8e3322d2bcf2f1a0b3caec`: [Validate #40358799343](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799343) y [Lore/Integrity #40358799938](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799938), ambos `success`.
 - CI post-merge sobre `b01eeb269622d5d8c243fdf05c2fb056a7008221`: [Validate #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [Lore/Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
 - La integración documental no cambia el nivel de evidencia del claim: DMR-045-CLM-021 sigue `secondary_checked`; no aparecen aristas canónicas nuevas. Los cinco localizadores primarios permanecen abiertos.
+
+
+## DMR-045 — BookLive como ruta de lectura futura (2026-10-26)
+- [DMR-045-SRC-047](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md): ficha de BookLive de DanMachi vol. 14 con botones de prueba en navegador/app; metadata_checked_only, sin claims.
+- [DMR-045-SRC-048](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md): ficha de BookLive de Astrea Record 3 con botones de prueba en navegador/app; metadata_checked_only, sin claims.
+- Las fichas interactivas enlazan estas rutas como metadatos. No se leyó texto narrativo ni se alteró el nivel de evidencia de Alfia, Zald, Meteria, Erebus o Rudra.

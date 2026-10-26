@@ -138,3 +138,11 @@
 **Aplicación:** DMR-045-SRC-045 aporta dos pistas para el volumen 20: DMR-045-CLM-019 (Alfia en la retrospectiva de Leon) y DMR-045-CLM-020 (Zald y Udaeus). Ambas quedan secondary_checked y no crean aristas canónicas ni cierran los localizadores primarios.
 **Límites:** indicar si se usó contenido indexado en vez de lectura directa; no copiar extensamente la sinopsis ni atribuirla a la editorial.
 **Motivo:** enriquecer fichas desde fuentes públicas disponibles sin crear una falsa impresión de lectura o certeza.
+
+
+## DEC-026 — Las fichas BookLive con botón de muestra son rutas de consulta, no evidencia narrativa
+**Estado:** Aprobada como criterio de investigación y de interfaz.
+**Decisión:** cuando una ficha pública de un distribuidor licenciado ofrece prueba en navegador o app, WordWaifu puede registrar la página y enlazarla desde la enciclopedia aunque el lector no sea inspeccionable desde la herramienta actual. La ruta debe describirse como metadatos/oferta de muestra; no como texto leído.
+**Aplicación:** DMR-045-SRC-047 registra BookLive DanMachi vol. 14 en CONT-MAIN-LN y SRC-048 BookLive Astrea Record 3 en CONT-AR. Ambos conservan `claims_supported: []` y `metadata_checked_only` hasta obtener un pasaje narrativo visible y un localizador reproducible.
+**Límites:** no inferir presencia/ausencia de personajes, escenas o vínculos por metadatos del producto. No transferir material entre CONT-MAIN-LN, CONT-AR y CONT-GAME. No crear aristas o claims de relleno.
+**Motivo:** mantener accesibles las rutas legítimas de investigación sin fingir que la oferta de muestra equivale a lectura primaria.

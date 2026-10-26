@@ -835,3 +835,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Validar el head pre-merge `671bdacba38e7e0b8d8e3322d2bcf2f1a0b3caec`: [Validate #40358799343](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799343) y [Lore/Integrity #40358799938](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799938), ambos `success`.
 - [x] Validar ambos workflows post-merge sobre el SHA exacto de `main`: [Validate #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [Lore/Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
 - [ ] Mantener abierta la investigación narrativa primaria de Alfia, Zald, Meteria, Erebus y Rudra; las muestras consultadas no produjeron texto reproducible.
+
+
+### DMR-045 — rutas BookLive de prueba gratuita (2026-10-26)
+- [x] Registrar DMR-045-SRC-047 (BookLive, DanMachi vol. 14) y DMR-045-SRC-048 (BookLive, Astrea Record 3) como ofertas de prueba en navegador/app, solo metadatos, con `claims_supported: []` y pruebas de directorio e interfaz.
+- [x] Exponer las rutas desde los expedientes interactivos pertinentes sin mezclar CONT-MAIN-LN, CONT-AR y CONT-GAME.
+- [ ] Leer una muestra licenciada que exponga páginas narrativas reales y registrar un localizador reproducible antes de actualizar cualquier claim. La ficha y los controles de muestra, por sí solos, no son evidencia narrativa.

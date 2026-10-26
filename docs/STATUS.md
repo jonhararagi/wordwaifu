@@ -464,3 +464,10 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI pre-merge sobre el head** `671bdacba38e7e0b8d8e3322d2bcf2f1a0b3caec`: [Validate WordWaifu #40358799343](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799343) y [DanMachi Lore and Retrieval Integrity #40358799938](https://github.com/jonhararagi/wordwaifu/actions/runs/40358799938), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40359137390](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137390) y [DanMachi Lore and Retrieval Integrity #40359137265](https://github.com/jonhararagi/wordwaifu/actions/runs/40359137265), ambos `success`.
 - **Límite factual:** la pista de Rudra sigue siendo secundaria, y la lectura autorizada de BOOK☆WALKER no entregó páginas narrativas. DMR-045 continúa `IN_PROGRESS`; no se cierra ninguno de los cinco localizadores primarios.
+
+
+## DMR-045 — rutas BookLive de prueba autorizada (2026-10-26)
+- **Registradas:** DMR-045-SRC-047, [BookLive · DanMachi vol. 14](https://booklive.jp/product/index/title_id/201522/vol_no/014); y DMR-045-SRC-048, [BookLive · Astrea Record 3](https://booklive.jp/product/index/title_id/1237250/vol_no/003). Las dos fichas muestran controles de prueba en navegador y app.
+- **Verificación real:** se comprobó la metadata pública y la oferta de muestra, pero no se abrió el lector ni se examinó ninguna página narrativa. Ambas entradas son `metadata_checked_only` y tienen `claims_supported: []`.
+- **Interfaz:** las rutas están disponibles en las fichas interactivas de Rudra (CONT-MAIN-LN) y de Alfia, Zald y Erebus (CONT-AR por separado). No se transfiere información de la versión de juego a la novelización.
+- **Pendiente:** DMR-045 sigue `IN_PROGRESS`. Los cinco localizadores narrativos primarios continúan abiertos; no se crearon claims, relaciones o aliases a partir de los metadatos.

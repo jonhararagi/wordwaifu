@@ -113,3 +113,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Decisión:** una sinopsis de wiki puede servir para investigar escenas concretas cuando el texto licenciado no se ha podido leer, siempre que cada afirmación tenga su claim, URL, capítulo del resumen, continuidad y límite de evidencia. El capítulo de la wiki no se presenta como página de la novela y la paráfrasis no se atribuye a una ficha editorial.
 - **Aplicación:** DMR-045-SRC-045 sustenta los claims secundarios DMR-045-CLM-019 (Alfia/Leon, resumen del capítulo 2) y DMR-045-CLM-020 (Zald/Leon/Udaeus, resumen del capítulo 3). Los datos son secondary_checked; no crean aristas nuevas y no cierran la verificación primaria.
 - **Contexto:** https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis; contenido recuperado por el índice de búsqueda el 2026-10-26, mientras el acceso directo quedó bloqueado.
+
+
+### DEC-DM-014 — Oferta de muestra en ficha BookLive: ruta, no pasaje narrativo
+- **Fecha:** 2026-10-26.
+- **Estado:** Aplicación de la regla de metadatos de DEC-DM-008/011; implementación pendiente de integración.
+- **Decisión operativa:** se puede registrar una ficha pública de BookLive si expone controles de prueba en navegador/app, pero el enlace se describe como oferta de muestra hasta que el visor presente páginas narrativas realmente legibles.
+- **Aplicación:** DMR-045-SRC-047 (DanMachi vol. 14, CONT-MAIN-LN) y SRC-048 (Astrea Record 3, CONT-AR) permanecen `metadata_checked_only`, con `claims_supported: []` y `events_supported: []`.
+- **Límites:** no se añade narración, relación, alias ni claim; no se infiere presencia/ausencia y no se fusionan las continuidades. Alfia, Zald, Meteria, Erebus y Rudra conservan sus localizadores primarios pendientes.
