@@ -679,3 +679,12 @@ Se detectó una brecha de recorrido: `src/character-dossiers.js` guardaba los re
 - **Siguiente acción:** reintentar la muestra mediante el lector normal si carga en una sesión pública legible; registrar únicamente el pasaje efectivamente visto.
 
 **Límite conjunto de SRC-030–032:** se localizaron tres compendios gratuitos licenciados correspondientes a las muestras de Astrea Record 1–3. En esta consulta, los tres accesos de lectura fallaron (un redireccionamiento no legible más timeout para Vol. 1; timeout para Vols. 2–3). Ningún registro aporta un claim ni un localizador narrativo primario. DMR-045 continúa abierto.
+
+
+## Integración y CI — DMR-045-SRC-030–032 (2026-10-25)
+
+Las tres rutas de muestra recopilatoria de BOOK☆WALKER y sus pruebas quedaron integradas en [PR #143](https://github.com/jonhararagi/wordwaifu/pull/143), SHA exacto de main `5cf3eb069bca47d2ce488a7ffb1128c1c830c7e4`.
+
+- **CI de PR, head SHA `9b032700559afcfdc3fd4ba1fd45f931829bf0fb`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108783) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40260108791), ambos success.
+- **CI post-merge sobre el SHA exacto:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414219) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40260414283), ambos success; el segundo completó browser smoke, validación de catálogo/enlaces y subida de capturas.
+- **Límite mantenido:** SRC-030–032 siguen metadata_checked_only, con claims vacíos y sin páginas narrativas cotejadas. La integración registra rutas de consulta, no cierre de la verificación primaria de DMR-045.
