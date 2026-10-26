@@ -309,3 +309,16 @@
 - **Límites:** las páginas no son oficiales. La lista de apariciones de Alfia no identifica el contenido de una escena exacta, Erebus conserva “Eren” sin aprobar como alias de la novela y la ficha de Rudra Familia no demuestra responsabilidad personal del dios Rudra. No se crean claims, relaciones ni aliases nuevos y no cambia ninguna continuidad.
 - **Pendiente operativo:** continuar buscando pasajes licenciados legibles para Alfia, Zald, Meteria, Erebus y Rudra; DMR-045 sigue abierto y Orario permanece en la etapa posterior.
 - **Integración:** pendiente de revisión, CI y fusión de la PR de este lote.
+
+### CONV-DM-2026-10-25-013 — Registrar compendios licenciados BOOK☆WALKER para Astrea Record 1–3
+- **Fecha:** 2026-10-25.
+- **Resultado:** se incorporan las rutas gratuitas de los compendios de muestra de octubre, noviembre y diciembre de 2022 como DMR-045-SRC-035–037. El compendio de octubre lista Astrea Record 1, pero advierte que la recopilación puede diferir de la edición final; los tres intentos del lector no expusieron texto narrativo.
+- **Evidencia:** metadata_checked_only, claims_supported vacío, sin localizadores de capítulo/página ni relaciones nuevas; se mantiene CONT-AR.
+- **Impacto:** entradas al directorio de fuentes UI, registro central y auditoría DMR-045, con regresiones que aseguran las rutas exactas y el límite de evidencia. DMR-045 permanece abierto.
+
+### CONV-DM-2026-10-25-014 — Incorporar ruta de muestra NOOK para DanMachi vol. 14
+- **Fecha:** 2026-10-25.
+- **Resultado:** se registra la ruta “Read sample” de Barnes & Noble / Yen Press como DMR-045-SRC-038. La ficha del distribuidor enlaza al lector NOOK, pero su endpoint devolvió “Cache miss” en esta consulta y no se obtuvo una página narrativa.
+- **Límite factual:** metadata_checked_only, claims_supported vacío, CONT-MAIN-LN. No respalda el capítulo 13, el epílogo, la trampa grupal ni una responsabilidad personal de Rudra. La limitación de caché no prueba indisponibilidad global ni regional.
+- **Impacto:** la ruta se añade al directorio consultable, registro central y auditoría con pruebas de regresión. No se añaden claims, relaciones ni aliases; DMR-045 continúa abierto.
+
