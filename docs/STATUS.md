@@ -421,3 +421,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Registro:** `DMR-045-SRC-044`, añadido al directorio de fuentes de la aplicación y al registro central; queda `metadata_checked_only` en `CONT-MAIN-LN`, con claims/events vacíos.
 - **Pruebas añadidas:** el test del directorio valida URL exacta, unicidad del ID, continuidad y prohibición de tratar la pantalla de carga como evidencia narrativa.
 - **Límite factual:** no se identifica a la maga del prólogo, al testigo o a la criatura, y no se valida el uso de Afterglow en los capítulos 2–3. Los cinco localizadores primarios de DMR-045 siguen pendientes; Orario continúa aplazado.
+
+## Integración y CI — ruta oficial de muestra de DanMachi vol. 20 (PR #153)
+
+- **Integrado:** PR [#153](https://github.com/jonhararagi/wordwaifu/pull/153), merge SHA exacto de `main`: `1894e3acf3ced6c472b9e8979dcb53874bf40226`.
+- **Head validado de la PR:** `857ac384f03fc62c624f74297736befc431e19d9`.
+- **CI de PR:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254967) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254924), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40284421948) y [DanMachi Lore and Retrieval Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40284422026), ambos `success`.
+- **Límite factual:** `DMR-045-SRC-044` sigue `metadata_checked_only`; el lector no expuso texto narrativo. La integración técnica no cierra los cinco localizadores primarios de DMR-045.
