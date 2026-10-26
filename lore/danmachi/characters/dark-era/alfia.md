@@ -34,6 +34,7 @@ claim_refs:
   - DMR-045-CLM-015
   - DMR-045-CLM-016
   - DMR-045-CLM-019
+  - DMR-045-CLM-022
 verification_status: secondary_checked_primary_text_pending
 aliases:
   - "Alfia"
@@ -50,6 +51,8 @@ tags: [Hera Familia, Astrea Record, abilities, illness, spoiler]
 ## Pista secundaria acotada — Astrea Record 3
 
 La reseña comunitaria de BookLive (entrada “Posted by ブクログ”, 2023-02-11) resume el último día de los Siete Días de la Muerte y sitúa a Alfia combatiendo contra Astrea Familia dentro del Dungeon (`DMR-045-CLM-006`, `DMR-045-SRC-043`, `CONT-AR`). La sinopsis oficial de SB Creative solo describe la batalla final en términos generales y no nombra ese emparejamiento. Por tanto, el detalle se conserva como pista secundaria, no como evidencia editorial ni localizador de la novela. No confirma técnicas, nivel, resultado ni secuencia completa.
+
+La misma reseña contiene otra mención que parece describir una ofrenda floral de Bell y Hermes ante tumbas de Erebus, Zald y Alfia (DMR-045-CLM-022). Es un resumen de lector, sin página narrativa; el pasaje de cierre debe cotejarse antes de tratarlo como un hecho de la novelización.
 
 ## Pie editorial de la versión original del juego — CONT-GAME
 
