@@ -107,6 +107,17 @@ assert.match(erebus, /CONT-GAME/);
 assert.match(meteria, /no pronuncia el nombre Meteria/i);
 assert.match(queue, /Cotejar los localizadores primarios pendientes/i);
 
+for (const id of ["DMR-045-SRC-035", "DMR-045-SRC-036", "DMR-045-SRC-037", "DMR-045-SRC-038"]) {
+  assert.match(dmr045, new RegExp(id));
+  assert.match(sources, new RegExp(id));
+  assert.match(queue, new RegExp(id));
+}
+assert.match(dmr045, /Cache miss/);
+assert.ok(sources.includes("https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019"));
+assert.match(dmr045, /viewer\.bookwalker\.jp\/browserWebApi\/03\/view/);
+assert.match(dmr045, /muestra compilada puede diferir parcialmente del producto final/i);
+assert.match(dmr045, /metadata_checked_only/);
+
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, "DMR-045 claim IDs must be unique");
 
