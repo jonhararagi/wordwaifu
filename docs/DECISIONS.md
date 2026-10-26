@@ -151,5 +151,5 @@
 ## DEC-026 — Estado de implementación y validación (PR #160)
 - **Integrado:** [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`.
 - **CI de PR:** [Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [Lore/Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success` sobre head `6d89ea9a7846c64132b08f58b628ff70b075a302`.
-- **CI post-merge:** [Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) `success`; [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) estaba pendiente en `Install Chromium` al primer control.
+- **CI post-merge sobre SHA `968ad23141ffdc2db032383228445fddc753b755`:** [Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) y [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810), ambos `success`; la demora de Chromium fue transitoria.
 - El cambio solo incorpora rutas de metadatos; no equivale a ver texto primario ni a cambiar ningún claim.

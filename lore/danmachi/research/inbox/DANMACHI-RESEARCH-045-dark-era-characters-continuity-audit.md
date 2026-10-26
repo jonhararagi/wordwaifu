@@ -403,7 +403,7 @@ La nota original de Fujino Omori `DMR-029-SRC-016` se leyó directamente y confi
 
 - SRC-045 y los claims secundarios CLM-019/020 quedaron integrados en [PR #155](https://github.com/jonhararagi/wordwaifu/pull/155), merge SHA `21c55f905e28c419df0616e25247d8960533fde8`.
 - CI de la PR sobre head `bd707757659be7ee976d5b41bf88007b63482928`: [Validate WordWaifu #40348659487](https://github.com/jonhararagi/wordwaifu/actions/runs/40348659487) y [DanMachi Lore and Retrieval Integrity #40348659494](https://github.com/jonhararagi/wordwaifu/actions/runs/40348659494), ambos `success`.
-- CI post-merge sobre el SHA de `main`: [DanMachi Lore and Retrieval Integrity #40348901258](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901258) `success`; [Validate WordWaifu #40348901098](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901098) sigue `in_progress` en `Install Chromium` según la última consulta.
+- CI post-merge sobre el SHA de `main`: [DanMachi Lore and Retrieval Integrity #40348901258](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901258) y [Validate WordWaifu #40348901098](https://github.com/jonhararagi/wordwaifu/actions/runs/40348901098) terminaron en `success`; el estado previo en instalación de Chromium fue intermedio.
 - Esta integración habilita la consulta de las pistas en la interfaz, pero no cierra el cotejo de la novela. Los claims siguen `secondary_checked` y los cinco localizadores primarios permanecen abiertos.
 
 ### DMR-045-CLM-021 · Rudra aparece ante Ryuu después de la venganza, según el resumen comunitario del volumen 14
@@ -907,5 +907,5 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 ## Integración y CI — rutas BookLive SRC-047/048 (PR #160)
 - Las fichas metadata-only y sus enlaces interactivos quedaron integrados en [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`.
 - CI de la PR sobre head `6d89ea9a7846c64132b08f58b628ff70b075a302`: [Validate WordWaifu #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [DanMachi Lore and Retrieval Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success`.
-- CI post-merge [Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) `success`. [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) estaba `in_progress` en `Install Chromium` al último control; no se declara completado todavía.
+- CI post-merge [Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) y [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) finalizaron en `success` sobre el SHA efectivo de `main` `968ad23141ffdc2db032383228445fddc753b755`.
 - Las nuevas entradas mantienen `claims_supported: []`, `events_supported: []` y `metadata_checked_only`; la consulta comprobó botones de muestra, no páginas narrativas. No se crearon hechos de canon y los cinco localizadores primarios siguen pendientes.

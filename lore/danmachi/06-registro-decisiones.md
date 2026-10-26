@@ -117,7 +117,7 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-014 — Oferta de muestra en ficha BookLive: ruta, no pasaje narrativo
 - **Fecha:** 2026-10-26.
-- **Estado:** Implementada e integrada mediante [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`; Validación post-merge incompleta mientras el workflow Validate #40381983810 siga en curso.
+- **Estado:** Implementada, integrada y validada mediante [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`; los dos workflows post-merge terminan en `success` ([Lore/Integrity #40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723), [Validate #40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810)).
 - **Decisión operativa:** se puede registrar una ficha pública de BookLive si expone controles de prueba en navegador/app, pero el enlace se describe como oferta de muestra hasta que el visor presente páginas narrativas realmente legibles.
 - **Aplicación:** DMR-045-SRC-047 (DanMachi vol. 14, CONT-MAIN-LN) y SRC-048 (Astrea Record 3, CONT-AR) permanecen `metadata_checked_only`, con `claims_supported: []` y `events_supported: []`.
 - **Límites:** no se añade narración, relación, alias ni claim; no se infiere presencia/ausencia y no se fusionan las continuidades. Alfia, Zald, Meteria, Erebus y Rudra conservan sus localizadores primarios pendientes.
@@ -125,5 +125,5 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### Estado de implementación — DEC-DM-014 / BookLive
 - Las rutas SRC-047/048 y la navegación fueron integradas mediante [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`; los dos workflows de PR pasan sobre el head `6d89ea9a7846c64132b08f58b628ff70b075a302` ([Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794), [Lore/Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812)).
-- Post-merge Lore/Integrity [#40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) pasa; Validate [#40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) continuaba en curso en la comprobación inicial.
+- Post-merge Lore/Integrity [#40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) y Validate [#40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810) terminaron en `success`.
 - **Límite:** únicamente se verificaron páginas de producto y controles de muestra; no se leyó narración. No cambiar claims ni cerrar los localizadores de DMR-045 a partir de estos metadatos.

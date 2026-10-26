@@ -847,5 +847,5 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Registrar y enlazar SRC-047 (BookLive DanMachi vol. 14) y SRC-048 (BookLive Astrea Record 3) como metadatos de muestra, sin claims ni eventos, mediante [PR #160](https://github.com/jonhararagi/wordwaifu/pull/160), SHA `968ad23141ffdc2db032383228445fddc753b755`.
 - [x] CI de PR sobre head `6d89ea9a7846c64132b08f58b628ff70b075a302`: [Validate #40381631794](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631794) y [Lore/Integrity #40381631812](https://github.com/jonhararagi/wordwaifu/actions/runs/40381631812), ambos `success`.
 - [x] CI post-merge Lore/Integrity [#40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) `success`.
-- [ ] Confirmar la conclusión del workflow post-merge Validate [#40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810), que seguía instalando Chromium en la comprobación inicial.
+- [x] Confirmar la conclusión final de post-merge Validate [#40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810): `success` sobre `968ad23141ffdc2db032383228445fddc753b755`.
 - [ ] Leer texto narrativo real de una muestra licenciada y registrar un localizador reproducible antes de actualizar cualquier claim. Los cinco localizadores primarios de DMR-045 permanecen abiertos.
