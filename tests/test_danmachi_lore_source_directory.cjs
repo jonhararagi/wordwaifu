@@ -201,4 +201,25 @@ assert.match(barnesNobleDanmachi14[0].limits, /no demuestra indisponibilidad gen
 assert.match(barnesNobleDanmachi14[0].limits, /metadata_checked_only/);
 assert.match(barnesNobleDanmachi14[0].limits, /no respalda.*responsabilidad personal de Rudra/i);
 
+
+const sbCreativePreviewSpecs = [
+  ["official-sbcreative-astrea-record-vol1-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561017JAAA01MBJE3X&lginbtn=false", /CONT-AR/],
+  ["official-sbcreative-astrea-record-vol2-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561018JAAA02MBJE3X&lginbtn=false", /CONT-AR/],
+  ["official-sbcreative-astrea-record-vol3-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false", /CONT-AR/],
+  ["official-sbcreative-danmachi-vol14-sample", "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=79739620JAAA14MBJE3X&lginbtn=false", /CONT-MAIN-LN/]
+];
+for (const [id, url, continuity] of sbCreativePreviewSpecs) {
+  const rows = sources.filter(source => source.id === id);
+  assert.equal(rows.length, 1, id + " must be discoverable exactly once");
+  assert.equal(rows[0].category, "official");
+  assert.equal(rows[0].publisher, "SB Creative / GA Bunko");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].authority, /立ち読み/);
+  assert.ok(rows[0].coverage.includes("https://ebook.sbcr.jp/landing/p/danmachi"));
+  assert.match(rows[0].limits, /Now loading\.\.\./);
+  assert.match(rows[0].limits, /no demuestra indisponibilidad/i);
+  assert.match(rows[0].limits, /metadata_checked_only/);
+  assert.match(rows[0].limits, continuity);
+}
+
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
