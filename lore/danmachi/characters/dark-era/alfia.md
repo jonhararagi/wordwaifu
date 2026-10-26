@@ -14,6 +14,7 @@ source_refs:
   - DMR-021-SRC-006
   - DMR-045-SRC-008
   - DMR-045-SRC-005
+  - DMR-045-SRC-043
   - DMR-045-SRC-009
   - DMR-045-SRC-011
   - DMR-045-SRC-034
@@ -43,9 +44,9 @@ tags: [Hera Familia, Astrea Record, abilities, illness, spoiler]
 - **Continuidad principal de esta ficha:** CONT-AR. Las referencias comunitarias también la relacionan con una retrospectiva de la novela principal; no mezclar detalles de adaptación/juego o AU sin etiquetarlos.
 - **Estado de la ficha:** información útil recuperada de wikis en inglés y español; el cotejo de la edición primaria sigue pendiente.
 
-## Evidencia editorial acotada — Astrea Record 3
+## Pista secundaria acotada — Astrea Record 3
 
-La ficha editorial de *Astrea Record 3*, recuperada mediante un fragmento indexado, sitúa el inicio del enfrentamiento de Alfia contra Astrea Familia dentro del Dungeon durante el último día de los Siete Días de la Muerte (`DMR-045-CLM-006`, `DMR-045-SRC-005`, `CONT-AR`). La página editorial directa no pudo verificarse en la comprobación registrada; por eso esta es evidencia de extracto, no un localizador del texto narrativo. No confirma técnicas, nivel, integrantes concretos del grupo, resultado ni secuencia completa. El resto de la biografía de esta ficha conserva sus estados de evidencia propios.
+La reseña comunitaria de BookLive (entrada “Posted by ブクログ”, 2023-02-11) resume el último día de los Siete Días de la Muerte y sitúa a Alfia combatiendo contra Astrea Familia dentro del Dungeon (`DMR-045-CLM-006`, `DMR-045-SRC-043`, `CONT-AR`). La sinopsis oficial de SB Creative solo describe la batalla final en términos generales y no nombra ese emparejamiento. Por tanto, el detalle se conserva como pista secundaria, no como evidencia editorial ni localizador de la novela. No confirma técnicas, nivel, resultado ni secuencia completa.
 
 ## Pie editorial de la versión original del juego — CONT-GAME
 
