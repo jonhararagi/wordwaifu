@@ -86,3 +86,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Límites obligatorios:** no se asume independencia editorial de otras wikis; la repetición de un mismo resumen no cuenta como corroboración primaria independiente. Una lista de apariciones no es lectura de escena ni localizador de capítulo/página. Los datos nuevos deben enlazarse a claims existentes cuando corresponda, sin duplicar IDs, relaciones o biografías.
 - **Aplicación a DMR-045:** se registran DMR-045-SRC-030–034 para Meteria, Alfia, Zald, Erebus y Rudra Familia desde páginas comunitarias públicas de Miraheze. Las relaciones y apariciones de esos perfiles siguen siendo secundarias. El parentesco de Meteria no se promueve a canon primario a partir de la ficha sola; “Eren” sigue sin aprobarse como alias de la novelización; la trampa sigue atribuida a Rudra Familia como grupo, sin inferir orden o conocimiento personal de Rudra.
 - **Resultado:** mejor acceso y trazabilidad de fuentes, sin nuevos claims, alias, aristas ni cambios de continuidad. Los cinco localizadores primarios de DMR-045 permanecen abiertos; Orario sigue como etapa posterior.
+
+### DEC-DM-010 — Mantener inventarios separados para fuentes comunitarias y rutas licenciadas no legibles
+- **Fecha:** 2026-10-25.
+- **Estado:** Implementación preparada; pendiente de CI, integración y verificación post-merge.
+- **Decisión operativa:** mantener SRC-030–034 para las páginas comunitarias Miraheze de Meteria, Alfia, Zald, Erebus y Rudra Familia; asignar SRC-035–037 a los tres compendios de muestra BOOK☆WALKER de Astrea Record 1–3 y SRC-038 a la ruta NOOK de DanMachi vol. 14. No reutilizar identificadores por cada nueva ruta, aunque las fuentes hablen del mismo personaje o volumen.
+- **Límites de evidencia:** Miraheze y las wikis comunitarias siguen siendo fuentes secundarias; no se presume independencia editorial. Las páginas de producto/compendio y los errores de visor no son pasajes de novela. Las nuevas muestras permanecen metadata_checked_only con claims_supported vacío y no permiten cerrar ningún localizador primario de DMR-045.
+- **Resultado esperado:** mejor trazabilidad de investigación, sin IDs de claims, aristas, alias o hechos canónicos nuevos. Los cinco huecos primarios permanecen abiertos y Orario sigue diferido.
+
