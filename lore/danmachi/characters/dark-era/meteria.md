@@ -9,6 +9,7 @@ source_refs:
   - DMR-029-SRC-015
   - DMR-029-SRC-016
   - DMR-045-SRC-009
+  - DMR-045-SRC-033
 claim_refs:
   - DMR-021-CLM-004
   - DMR-021-CLM-005
@@ -57,6 +58,7 @@ En la publicación de Fujino Omori [それは遥か彼方の静穏の夢](https:
 ## Fuentes
 - [Meteria — DanMachi Wiki, inglés](https://danmachi.fandom.com/wiki/Meteria) — apariencia, salud y parentesco reportados.
 - [Meteria — DanMachi Wiki, español](https://danmachi.fandom.com/es/wiki/Meteria) — corroboración secundaria en español.
+- [Meteria — DanMachi Wiki (Miraheze), inglés](https://danmachien.miraheze.org/wiki/Meteria) (DMR-045-SRC-033) — identifica a Meteria como madre de Bell y hermana de Alfia, pero no aporta capítulo/página de novela ni se ha establecido su independencia editorial frente a otras wikis.
 - [Nota de Fujino Omori](https://note.com/fujinoomori/n/n629829ac3fe4) — únicamente contexto alternativo CONT-AU.
 - [DANMACHI-RESEARCH-029](../../research/inbox/DANMACHI-RESEARCH-029-historical-character-provenance.md) — claims de parentesco y nota alternativa.
 - [DANMACHI-RESEARCH-045](../../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) — auditoría de continuidad y tareas de verificación primaria.
