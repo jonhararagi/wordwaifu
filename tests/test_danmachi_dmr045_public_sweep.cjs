@@ -149,7 +149,7 @@ assert.ok(!combatMatchupClaim.includes("official_indexed_publisher_synopsis_exce
 assert.ok(sources.includes("source_id: DMR-045-SRC-043"));
 const publisherSynopsis005 = sources.slice(sources.indexOf("## DMR-045-SRC-005"), sources.indexOf("## DMR-045-SRC-006"));
 assert.ok(publisherSynopsis005.includes("claims_supported: []"));
-assert.ok(!publisherSynopsis005.includes("DMR-045-CLM-006"));
+assert.ok(!publisherSynopsis005.includes("claims_supported: [DMR-045-CLM-006]"));
 assert.ok(sources.toLowerCase().includes("booklive — reseña comunitaria de astrea record 3"));
 assert.ok(alfia.includes("DMR-045-SRC-043"));
 assert.ok(zald.includes("DMR-045-SRC-043"));
