@@ -369,9 +369,11 @@
 
 ### CONV-DM-2026-10-26-004 — Registrar la ruta oficial BinB del volumen 20 sin ascenderla a evidencia narrativa
 - **Fecha:** 2026-10-26.
-- **Estado inicial:** ruta pública localizada; registro y prueba implementados en la rama `research/dmr045-sbcr-vol20-route-2026-10-26`, pendientes de CI e integración.
+- **Estado final:** integrada y validada en `main` mediante PR [#153](https://github.com/jonhararagi/wordwaifu/pull/153), merge SHA `1894e3acf3ced6c472b9e8979dcb53874bf40226`.
 - **Fuente:** el [catálogo oficial de SBCr eBook Store](https://ebook.sbcr.jp/landing/p/danmachi) lista DanMachi vol. 20 con enlace 立ち読み; se comprobó la ruta normal de lector https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81562869JAAA20MBJE3X&lginbtn=false.
 - **Resultado real:** el lector solo mostró iframe, “Now loading...” y menú; no se recuperó texto narrativo ni localizador.
 - **Decisión de evidencia:** registrar el acceso como DMR-045-SRC-044, `metadata_checked_only`, continuidad `CONT-MAIN-LN` y claims vacíos. No inferir identidades ni escenas del prólogo o de los capítulos 2–3 a partir del enlace, su índice o el error de carga.
 - **Archivos afectados:** `src/lore-corpus.js`, `tests/test_danmachi_lore_source_directory.cjs`, registro central de fuentes, auditoría DMR-045, `WORK_QUEUE.md`, `MASTER_INDEX.md`, `docs/STATUS.md` y este registro.
+- **CI de PR:** Validate WordWaifu [run 40284254967](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254967) y DanMachi Lore and Retrieval Integrity [run 40284254924](https://github.com/jonhararagi/wordwaifu/actions/runs/40284254924), ambos success sobre head `857ac384f03fc62c624f74297736befc431e19d9`.
+- **CI post-merge:** Validate WordWaifu [run 40284421948](https://github.com/jonhararagi/wordwaifu/actions/runs/40284421948) y DanMachi Lore and Retrieval Integrity [run 40284422026](https://github.com/jonhararagi/wordwaifu/actions/runs/40284422026), ambos success sobre el SHA exacto de `main`.
 - **Prioridad:** DMR-045 continúa antes de Orario; siguen pendientes los cinco localizadores primarios.
