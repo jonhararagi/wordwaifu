@@ -10,6 +10,15 @@
 - **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
+## DMR-045 — consolidación de rutas comunitarias y muestras licenciadas (2026-10-25)
+
+- **SRC-030–034:** páginas comunitarias inglesas de Miraheze para Meteria, Alfia, Zald, Erebus y Rudra Familia; se conservan como referencias secundarias, sin independencia editorial asumida ni nuevos claims/relaciones.
+- **SRC-035–037:** compendios gratuitos de BOOK☆WALKER de octubre, noviembre y diciembre de 2022 que incluyen muestras de Astrea Record 1–3. El lector no expuso narración utilizable; las tres entradas siguen metadata_checked_only.
+- **SRC-038:** Barnes & Noble muestra una ruta “Read sample” hacia NOOK para DanMachi vol. 14; el endpoint devolvió “Cache miss” en esta consulta y no entregó páginas narrativas.
+- **Integridad factual:** los nueve identificadores SRC-030–038 son únicos por ruta/edición y están diferenciados por tipo de fuente. Los registros de muestra no respaldan el capítulo 13, el epílogo ni una orden/conocimiento personal de Rudra; no se añadieron claims, alias, aristas ni hechos canónicos.
+- **Estado de trabajo:** integrado aún pendiente de CI/fusión; DMR-045 permanece IN_PROGRESS y los cinco localizadores primarios continúan abiertos. Orario no vuelve a ser la prioridad activa.
+
+
 ## DMR-045 — reintento de vista previa autorizada de DanMachi vol. 20 (2026-10-25)
 
 - La ficha pública licenciada de [Google Books vol. 20](https://books.google.com/books?id=XWHEEQAAQBAJ) se comprobó también desde su lector normal ([vista previa pública](https://www.google.com/books/edition/Is_It_Wrong_to_Try_to_Pick_Up_Girls_in_a/XWHEEQAAQBAJ?hl=en&newbks=1&gbpv=1&pg=PT29)). El lector anuncia `Preview · 28 pages` y muestra `1 of 4`, pero las páginas consultadas devuelven `Something went wrong / Page didn't load`; no se obtiene texto narrativo legible.
