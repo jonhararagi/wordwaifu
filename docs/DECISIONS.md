@@ -200,8 +200,9 @@
 **Límite:** decisión de reproducibilidad del CI; no modifica la funcionalidad narrativa ni la evidencia de DanMachi.
 
 ## DEC-032 — Bitácora obligatoria para evitar actualizaciones repetitivas de personajes
-**Estado:** implementada en rama de trabajo; integración pendiente.
+**Estado:** implementada, integrada y validada por PR #170.
 **Reglas aceptadas:** antes de editar una ficha, leer `lore/danmachi/CHARACTER_UPDATE_LEDGER.md`; registrar lo consultado y dejar de repetir consultas a la misma fuente cuando no informe el campo. «No informado por esta fuente» no significa «no existe», y tampoco permite inventar un nivel, poder, skill, nombre de magia, coste o personalidad. Las personalidades existentes no se reformulan salvo evidencia nueva o contradicción concreta.
 **Estados de la bitácora:** `SECONDARY_PASS_COMPLETE`, `PARTIAL_NOT_REPORTED`, `SECONDARY_CONFLICT` y `HOLD_FOR_PRIMARY_SOURCE`; cada entrada incluye el disparador que permitiría reabrirla.
 **Aplicación:** se añade `CONT-SECONDARY` para exponer los datos comunitarios en el archivo interactivo sin mezclarlos con otras continuidades; se registra una primera pasada estructurada de diez miembros de Astrea Familia y una pausa de DMR-045 hasta evidencia nueva. La regresión `tests/test_character_update_ledger.cjs` se ejecuta en ambos workflows.
+**Validación:** CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`: [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`. CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`: [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
 **Límite:** la actualización de la cohorte usa fuentes secundarias; no se convierte en validación primaria ni en una afirmación de que el canon no contiene datos ausentes de las wikis.
