@@ -37,6 +37,7 @@ jobs:
           node --check scripts/sync-danmachi-status.mjs
           node --check src/character-archive.js
           node --check src/character-dossiers.js
+          node --check tests/test_character_update_ledger.cjs
           node --check src/official-character-roster.js
           node --check src/art-studio.js
           node --check src/project-schema.js
@@ -57,6 +58,8 @@ jobs:
         run: node tests/test_character_archive.cjs
       - name: Test extended character dossiers
         run: node tests/test_character_dossiers.cjs
+      - name: Test character update ledger and no-repeat protocol
+        run: node tests/test_character_update_ledger.cjs
       - name: Test DanMachi roster coverage and navigation integrity
         run: node tests/test_danmachi_character_coverage.cjs
       - name: Verify generated status metrics and roster contract
