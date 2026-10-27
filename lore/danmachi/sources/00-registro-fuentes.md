@@ -3691,3 +3691,26 @@ verification_status: stub
 - rights_note: Guardar el enlace y metadata resumida solamente; no reproducir la novela ni eludir restricciones del lector.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+## DMR-045-SRC-050 · BOOK☆WALKER — ficha y muestra de DanMachi vol. 20
+
+- source_id: DMR-045-SRC-050
+- title: ダンジョンに出会いを求めるのは間違っているだろうか２０
+- creator_or_publisher: Fujino Omori / Suzuhito Yasuda; BOOK☆WALKER / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_SAMPLE_OFFER
+- series: DanMachi / novela ligera principal
+- volume_or_edition: Volumen 20, edición digital japonesa
+- language: Japonés
+- official_url: https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1
+- product_page_url: https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/
+- accessed_at: 2026-10-27
+- locator_type: retailer_sample_route_and_viewer_access_failure_metadata_only
+- locator: La ficha comercial oficial ofrece 試し読み. La ruta de muestra redirige al visor https://viewer-trial.bookwalker.jp/trial-page/03/view?cid=2996c502-7cb0-42b4-821a-b63df271d442; la herramienta devuelve «Internal Error» al seguir la redirección y señala «not accessible via this tool»; no se confirmó una respuesta HTTP del visor ni se expusieron páginas narrativas.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Ruta licenciada y comprobada a nivel de ficha/enlace; no es texto narrativo leído ni un localizador de capítulo/página.
+- conflicting_sources: []
+- rights_note: Guardar enlace y descripción de acceso; no extraer el libro ni eludir restricciones del lector.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only

@@ -118,6 +118,21 @@ assert.match(koboVol20[0].limits, /CONT-MAIN-LN/);
 assert.match(koboVol20[0].limits, /metadata_checked_only/);
 assert.ok(koboVol20[0].limits.includes("claims_supported: []"));
 
+const bookwalkerVol20 = sources.filter(source => source.id === "licensed-retailer-bookwalker-danmachi-vol20");
+assert.equal(bookwalkerVol20.length, 1, "BOOK☆WALKER DanMachi vol. 20 route must appear exactly once");
+assert.equal(bookwalkerVol20[0].category, "licensed_retailer");
+assert.equal(bookwalkerVol20[0].url, "https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1");
+assert.equal(bookwalkerVol20[0].authority, "Distribuidor licenciado; muestra anunciada, no inspeccionada");
+assert.match(bookwalkerVol20[0].coverage, /試し読み/);
+assert.match(bookwalkerVol20[0].coverage, /Internal Error/);
+assert.match(bookwalkerVol20[0].coverage, /not accessible via this tool/);
+assert.match(bookwalkerVol20[0].coverage, /no se confirmó una respuesta HTTP del visor/);
+assert.match(bookwalkerVol20[0].limits, /no texto narrativo recuperado/i);
+assert.match(bookwalkerVol20[0].limits, /no se abrió ninguna página/i);
+assert.match(bookwalkerVol20[0].limits, /CONT-MAIN-LN/);
+assert.match(bookwalkerVol20[0].limits, /metadata_checked_only/);
+assert.ok(bookwalkerVol20[0].limits.includes("claims_supported: []"));
+
 const binbAstreaPreview = sources.filter(source => source.id === "licensed-preview-binb-astrea-record-vol3");
 assert.equal(binbAstreaPreview.length, 1, "the second authorized Astrea Record reader must be discoverable exactly once");
 assert.equal(binbAstreaPreview[0].category, "licensed_retailer");

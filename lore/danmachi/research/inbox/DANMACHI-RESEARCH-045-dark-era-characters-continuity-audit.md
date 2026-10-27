@@ -953,3 +953,15 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - La lectura narrativa sigue pendiente: la ficha pública indexada de Kobo anuncia una muestra, pero la apertura automatizada dio “Cache miss”. No se creó ningún claim, evento, relación o alias a partir de esta ficha.
 - **Límite de validación:** no se obtuvo evidencia de los workflows post-merge para el SHA `345db0189308b2e34a31bbf8f3930e75f0b4fc2f` a través de los estados disponibles; se deja sin afirmar que estén verdes.
 - **Pendiente prioritario:** cotejar los cinco expedientes (Alfia, Zald, Meteria, Erebus y Rudra) con pasajes narrativos licenciados y localizadores reproducibles. DMR-045 permanece `IN_PROGRESS`.
+
+## DMR-045-SRC-050 · BOOK☆WALKER — ficha y muestra oficial de DanMachi vol. 20
+
+- **Fecha de consulta:** 2026-10-27.
+- **Ficha comercial:** [BOOK☆WALKER · ダンジョンに出会いを求めるのは間違っているだろうか２０](https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/).
+- **Ruta normal de muestra:** [試し読み (muestra gratuita)](https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1).
+- **Tipo:** ficha y ruta de muestra de distribuidor licenciado del volumen japonés; texto narrativo no inspeccionado.
+- **Resultado:** la ficha pública confirma el título y ofrece el botón 試し読み. Al abrirlo por su ruta normal, la consulta redirige a `https://viewer-trial.bookwalker.jp/trial-page/03/view?cid=2996c502-7cb0-42b4-821a-b63df271d442`, para la que la herramienta pública devuelve «Internal Error» durante la redirección y señala «not accessible via this tool»; no se confirmó una respuesta HTTP del visor. No se obtuvo ninguna página narrativa ni localizador.
+- **Estado de evidencia:** `metadata_checked_only`; `claims_supported: []`; `events_supported: []`; continuidad `CONT-MAIN-LN`.
+- **Interpretación permitida:** proporciona una ruta adicional para que se intente la muestra en un navegador normal. No respalda usos de Afterglow, apariciones de Alfia o Zald, ni escenas individuales; tampoco demuestra ausencia de personajes.
+- **Límites:** no se eludió el visor, no se usaron mirrors, y no se cambió ningún claim, relación, evento, alias o métrica.
+- **Siguiente acción:** si el lector normal muestra el texto, registrar únicamente un localizador reproducible que se haya visto de verdad. Los cinco expedientes primarios de DMR-045 continúan abiertos.

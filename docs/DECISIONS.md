@@ -173,3 +173,9 @@
 - CI de PR: [Validate #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [DanMachi Lore and Retrieval Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895), ambos `success`.
 - No se pudo confirmar el estado de los workflows disparados post-merge para el SHA de main; no se marcarán como aprobados sin evidencia directa.
 - La lectura primaria continúa pendiente y la fuente sigue `metadata_checked_only`.
+
+## DEC-029 — BOOK☆WALKER como ruta de muestra, no evidencia narrativa automática
+**Estado:** Aplicada en rama de trabajo; validación pendiente.
+**Decisión:** registrar una ruta `試し読み` de un distribuidor licenciado si es útil para consulta humana futura, aunque el visor no sea accesible a la herramienta. La oferta de muestra y un error de acceso no prueban que se haya leído el texto.
+**Aplicación:** DMR-045-SRC-050 registra BOOK☆WALKER DanMachi vol. 20 en `CONT-MAIN-LN`, con `metadata_checked_only`, `claims_supported: []` y `events_supported: []`. El enlace se expone desde las notas de investigación de Alfia y Zald únicamente en esa continuidad.
+**Límites:** no inferir presencia/ausencia, escenas, identidad de personajes, habilidades ni relaciones a partir de metadatos o del fallo del visor; no crear claims para rellenar huecos. Mantener abiertos los cinco cotejos primarios de DMR-045.

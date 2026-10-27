@@ -262,7 +262,8 @@ sections:[
 ],
 references:[
 {label:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",kind:"community"},
-{label:"Kobo · DanMachi vol. 20 (vista previa anunciada; páginas no inspeccionadas)",url:"https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel",kind:"licensed_preview"}
+{label:"Kobo · DanMachi vol. 20 (vista previa anunciada; páginas no inspeccionadas)",url:"https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel",kind:"licensed_preview"},
+{label:"BOOK☆WALKER · DanMachi vol. 20 (muestra anunciada; lector no inspeccionado)",url:"https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1",kind:"licensed_preview"}
 ]
 },
 "CONT-AR":{
@@ -292,7 +293,8 @@ sections:[
 ],
 references:[
 {label:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",kind:"community"},
-{label:"Kobo · DanMachi vol. 20 (vista previa anunciada; páginas no inspeccionadas)",url:"https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel",kind:"licensed_preview"}
+{label:"Kobo · DanMachi vol. 20 (vista previa anunciada; páginas no inspeccionadas)",url:"https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel",kind:"licensed_preview"},
+{label:"BOOK☆WALKER · DanMachi vol. 20 (muestra anunciada; lector no inspeccionado)",url:"https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1",kind:"licensed_preview"}
 ]
 },
 "CONT-AR":{
