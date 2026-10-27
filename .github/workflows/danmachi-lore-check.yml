@@ -15,7 +15,8 @@ concurrency:
 jobs:
   catalog-and-retrieval:
     name: Catalog, retrieval and browser smoke
-    runs-on: ubuntu-latest
+    # Keep Playwright 1.55 on a supported, stable runner; ubuntu-latest is migrating to Ubuntu 26.04.
+    runs-on: ubuntu-24.04
     steps:
       # v7.0.1; immutable upstream SHA, Node 24 runtime.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
