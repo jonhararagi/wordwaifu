@@ -462,7 +462,7 @@
 - **Fecha:** 2026-10-27.
 - **Estado:** IMPLEMENTACIÓN EN RAMA DE TRABAJO; CI PENDIENTE.
 - **Tipo:** investigación de fuente y mejora de navegación.
-- **Contenido:** la ficha de BOOK☆WALKER para DanMachi vol. 20 ofrece 試し読み; la apertura normal redirige al visor de prueba, inaccesible para la herramienta (error 500). No se inspeccionaron páginas narrativas.
+- **Contenido:** la ficha de BOOK☆WALKER para DanMachi vol. 20 ofrece 試し読み; la apertura normal redirige al visor de prueba, inaccesible para la herramienta: al seguir la redirección devuelve «Internal Error» y señala «not accessible via this tool»; no se confirmó una respuesta HTTP del visor. No se inspeccionaron páginas narrativas.
 - **Alcance y continuidad:** DMR-045-SRC-050, `CONT-MAIN-LN`; enlace desde las notas de Alfia y Zald de la novela principal, sin filtrarse a `CONT-AR` ni `CONT-GAME`.
 - **Archivos afectados:** directorio de fuentes, archivo de personajes, pruebas de directorio/fichas, auditoría DMR-045, cola, índice, estado y decisiones.
 - **Límite:** fuente `metadata_checked_only`, sin claims, eventos, relaciones, aliases o cambios de métricas. Los cinco localizadores narrativos siguen abiertos.
