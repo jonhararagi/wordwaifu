@@ -787,6 +787,79 @@ references:[
 ]
 };
 
+Object.assign(EXTENDED, {
+"CHAR-ALLEN-FROMEL":{"CONT-SECONDARY":{
+title:"Allen Fromel · aceleración y límites reportados",
+summary:"Pasada comunitaria del 2026-10-27. Se registra la magia nombrada y su condición de uso sin reescribir la personalidad ni elevar el detalle a canon cotejado.",
+sections:[
+{title:"Magia y condición reportadas",text:"La wiki reporta un snapshot de nivel 6 y la magia Gralineze Fromel: su velocidad aumenta mientras corre y el poder destructivo crece con la aceleración. La misma descripción advierte que puede perder el control de la trayectoria y embestir sin distinguir objetivos. Se menciona una lanza como arma."},
+{title:"Campos no reportados en esta pasada",text:"No se recuperó una lista individual cotejable de skills con nombre ni costes numéricos. No rellenar esos huecos por analogía, ni interpretar que la fuente no los enumere como prueba de que no existan en el canon."},
+{title:"Cierre",text:"Pasada secundaria terminada para la magia y el equipo descritos. Reabrir solo ante fuente nueva o pasaje primario legible."}
+],
+references:[{label:"DanMachi Wiki · Allen Fromel",url:"https://danmachi.fandom.com/wiki/Allen_Fromel",kind:"community"}]
+}},
+"CHAR-HEDIN-SELLAND":{"CONT-SECONDARY":{
+title:"Hedin Selland · magia, skills y equipo reportados",
+summary:"Pasada comunitaria del 2026-10-27; niveles, habilidades y limitaciones permanecen en una capa secundaria separada.",
+sections:[
+{title:"Snapshot y magia",text:"La wiki reporta nivel 6. Enumera Caelus Hildr (flechas de rayo de área amplia; el resumen español reporta más de 500 metros), Varian Hildr (rayo de gran potencia con fuerte consumo de mente) y Laurus Hildr (encantamiento de rayo aplicado a otra persona)."},
+{title:"Limitaciones y skills",text:"El resumen consultado dice que Laurus Hildr no puede aplicarse a sí mismo, requiere un objetivo reconocido por Hedin y consume una cantidad extrema de mente. La lista de skills incluye Hildr Blood, Fairy Hildr, Diu Hjaðningavíg y Solvato Eo. Las habilidades de desarrollo enumeradas son Mage, Abnormal Resistance, Magic Resistance, Spirit Healing y Destructive Lightning."},
+{title:"Arma y campos no cerrados",text:"Dizaria se describe como arma de doble función, bastón mágico y arma de filo; la fuente dice que fue partida durante el combate contra Ottar y deja incierto si el arma que Hedin usa después es una nueva Dizaria. No hay un coste numérico universal ni duración fija verificados en esta pasada."},
+{title:"Cierre",text:"Usar nombres y límites como evidencia secundaria. No reformular la personalidad ni repetir las mismas páginas para buscar costes no indicados."}
+],
+references:[
+{label:"DanMachi Wiki · Hedin Selland",url:"https://danmachi.fandom.com/wiki/Hedin_Selland",kind:"community"},
+{label:"DanMachi Wiki · Hedin Selland/Habilidades",url:"https://danmachi.fandom.com/es/wiki/Hedin_Selland/Habilidades",kind:"community"}
+]
+}},
+"CHAR-HOGNI-RAGNAR":{"CONT-SECONDARY":{
+title:"Hogni Ragnar · magia de combate y arma maldita",
+summary:"Pasada comunitaria del 2026-10-27 centrada en habilidades y restricciones reportadas; no se actualiza su perfil psicológico.",
+sections:[
+{title:"Snapshot y listas reportadas",text:"La wiki reporta nivel 6. Enumera Dainsleif, Burn Dain y Rasu Dain como magia; Fairy Nocturne, Vow Hjaðningavíg y Dark In como skills; y Hunter, Mage, Abnormal Resistance, Swordsman y Flash Cut como habilidades de desarrollo."},
+{title:"Condiciones y límites",text:"La descripción de Dainsleif dice que altera su modo de combate y elimina inhibiciones, sin aumentar directamente sus estadísticas base. Burn Dain se describe como una explosión de fuego de corto alcance que puede servir como cortina de humo. La fuente indica que Rasu Dain existe por nombre, pero el efecto no quedó explicado en el contenido recuperado."},
+{title:"Equipo reportado",text:"Victim Abyss se describe como arma maldita que extiende de forma invisible su hoja hasta un máximo reportado de 50 metros, consumiendo estamina y ralentizando la curación mágica. La wiki caracteriza el alcance de la magia de Hogni como reducido, lo que favorece su combate cercano. Estos detalles aún no tienen cotejo primario en esta tanda."},
+{title:"Cierre",text:"No repetir la búsqueda de Rasu Dain en la misma fuente si nada ha cambiado. No convertir Dainsleif en un rasgo permanente de personalidad."}
+],
+references:[{label:"DanMachi Wiki · Hogni Ragnar",url:"https://danmachi.fandom.com/wiki/Hogni_Ragnar",kind:"community"}]
+}},
+"CHAR-GULLIVER-BROTHERS":{"CONT-SECONDARY":{
+title:"Hermanos Gulliver · coordinación y especialidades conjuntas",
+summary:"Pasada comunitaria del 2026-10-27. La coordinación se atribuye al grupo y no se convierte en una estadística individual de cada hermano.",
+sections:[
+{title:"Nivel y coordinación",text:"La wiki reporta un snapshot conjunto de nivel 5 y un rendimiento cercano al nivel 6 cuando luchan sincronizados. Su capacidad disminuye notablemente cuando se separan; la fuente destaca coordinación visual y comunicación sin necesidad de hablar."},
+{title:"Especialidades reportadas",text:"Alfrigg calcula y toma decisiones a partir del análisis conjunto; Dvalinn detecta magia; Berling busca enemigos y posibles emboscadas; Grer observa hábitos, fortalezas y debilidades del adversario."},
+{title:"Habilidades y límites no informados",text:"La página recuperada no ofrece una lista individual de magias o skills con nombre para los cuatro. Resistencia Anormal se atribuye específicamente a Dvalinn; no se supone que el mismo detalle esté confirmado para cada hermano. Las armas reportadas son lanza (Alfrigg), martillo (Dvalinn), hacha (Berling) y espadón (Grer)."},
+{title:"Cierre",text:"Usar el perfil conjunto para coordinación y la especialidad explícita de cada hermano. No inferir niveles individuales distintos, magia nominal ni personalidad adicional."}
+],
+references:[{label:"Wiki DanMachi · Hermanos Gulliver",url:"https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver",kind:"community"},{label:"DanMachi Wiki · Gulliver Brothers",url:"https://danmachi.fandom.com/wiki/Gulliver_Brothers",kind:"community"}]
+}},
+"CHAR-ALFRIGG-GULLIVER":{"CONT-SECONDARY":{
+title:"Alfrigg Gulliver · lanza y cálculo táctico",
+summary:"Dato individual recuperado de la página comunitaria del grupo; no supone ficha psicológica ni nivel independiente.",
+sections:[{title:"Dato reportado",text:"Alfrigg usa una lanza y se distingue por calcular y tomar decisiones rápidas a partir de los análisis de sus hermanos."},{title:"No informado",text:"La página no entrega una magia o skill individual con nombre ni costes. El nivel disponible es un snapshot del grupo, no una ficha numérica independiente."}],
+references:[{label:"Wiki DanMachi · Hermanos Gulliver",url:"https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver",kind:"community"}]
+}},
+"CHAR-DVALINN-GULLIVER":{"CONT-SECONDARY":{
+title:"Dvalinn Gulliver · martillo, detección mágica y resistencia",
+summary:"Dato individual recuperado de la página comunitaria del grupo; la atribución de Resistencia Anormal queda limitada a Dvalinn.",
+sections:[{title:"Dato reportado",text:"Dvalinn usa un martillo y se distingue por detectar magia. La fuente le atribuye Resistencia Anormal y resistencia al veneno, pero no se copia aquí un rango numérico no necesario para la ficha."},{title:"No informado",text:"No se recuperó un nombre individual de magia o skill ni un coste. No transferir la atribución de Resistencia Anormal a Alfrigg, Berling o Grer."}],
+references:[{label:"Wiki DanMachi · Hermanos Gulliver",url:"https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver",kind:"community"}]
+}},
+"CHAR-BERLING-GULLIVER":{"CONT-SECONDARY":{
+title:"Berling Gulliver · hacha y búsqueda táctica",
+summary:"Dato individual recuperado de la página comunitaria del grupo; no se añade personalidad por estilo.",
+sections:[{title:"Dato reportado",text:"Berling usa un hacha y se distingue por buscar enemigos y comprobar si existe riesgo de emboscada o ataque sorpresa."},{title:"No informado",text:"La página no atribuye a Berling una magia o skill individual con nombre ni un coste. No se le asigna automáticamente Resistencia Anormal a partir de la entrada de Dvalinn."}],
+references:[{label:"Wiki DanMachi · Hermanos Gulliver",url:"https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver",kind:"community"}]
+}},
+"CHAR-GRER-GULLIVER":{"CONT-SECONDARY":{
+title:"Grer Gulliver · espadón y observación del adversario",
+summary:"Dato individual recuperado de la página comunitaria del grupo; no se añaden motivaciones ni rasgos de personalidad.",
+sections:[{title:"Dato reportado",text:"Grer usa un espadón y se distingue por observar hábitos, fortalezas, debilidades y capacidades del adversario."},{title:"No informado",text:"La página no ofrece una magia o skill individual con nombre ni costes en el contenido recuperado. La especialidad táctica descrita no se renombra como una skill formal."}],
+references:[{label:"Wiki DanMachi · Hermanos Gulliver",url:"https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver",kind:"community"}]
+}}
+});
+
 function extendedInfo(id,continuity,index){
 const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;
 if(!base)return null;
