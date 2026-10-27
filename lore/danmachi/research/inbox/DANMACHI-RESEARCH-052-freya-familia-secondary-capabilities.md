@@ -91,5 +91,5 @@ Reabrir únicamente ante una página narrativa licenciada legible, una publicaci
 
 ## Integración y validación técnica
 - CI de PR sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`: [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success`.
-- CI post-merge sobre `79505bd740d47560d4bc67166c807d14090a950d`: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362); la conclusión se confirma por separado.
+- CI post-merge sobre `79505bd740d47560d4bc67166c807d14090a950d`: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
 - La integración técnica no eleva datos secundarios a verificación primaria. DMR-045 conserva los cinco cotejos narrativos pendientes.
