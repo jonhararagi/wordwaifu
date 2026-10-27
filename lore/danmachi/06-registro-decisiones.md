@@ -151,5 +151,5 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Fecha:** 2026-10-27.
 - **Estado:** Registrado en rama de trabajo; implementación y CI pendientes.
 - **Decisión:** registrar la muestra licenciada como ruta de consulta aun cuando la herramienta no pueda abrir el visor, indicando la respuesta real observada.
-- **Aplicación:** DMR-045-SRC-050 guarda la ficha y ruta de prueba del volumen 20 japonés. El visor respondió con error 500 de acceso en esta herramienta; no se recuperó texto.
+- **Aplicación:** DMR-045-SRC-050 guarda la ficha y ruta de prueba del volumen 20 japonés. La herramienta devolvió «Internal Error» al seguir la redirección y señaló «not accessible via this tool»; no se confirmó una respuesta HTTP del visor ni se recuperó texto.
 - **Límites:** mantiene `CONT-MAIN-LN`, no modifica claims/eventos/aristas/aliases y no mezcla las referencias con `CONT-AR` o `CONT-GAME`. Los cinco cotejos primarios siguen abiertos.
