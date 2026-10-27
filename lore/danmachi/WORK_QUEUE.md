@@ -912,6 +912,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Registrar como no informados los costes y nombres individuales que las páginas consultadas no expusieron; no interpretar la omisión como prueba de inexistencia en canon.
 - [x] Ampliar las notas de Allen, Hedin, Hogni y los cuatro hermanos, preservando las personalidades existentes.
 - [x] Añadir una regresión automática para comprobar las ocho entradas de la bitácora y la disponibilidad de las fuentes.
-- [ ] Revisar el diff y pasar los dos workflows de CI; integrar solo tras comprobarlos.
+- [x] Revisar el diff y aprobar los dos workflows de PR; integrar solo tras comprobarlos.
+- [x] Integrar mediante PR [#172](https://github.com/jonhararagi/wordwaifu/pull/172), SHA de `main` `79505bd740d47560d4bc67166c807d14090a950d`.
+- [x] Registrar los workflows de PR aprobados sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`: [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435).
+- [ ] Confirmar la conclusión de CI post-merge sobre `79505bd740d47560d4bc67166c807d14090a950d`: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362).
 - **Límite:** fuente secundaria; no añade claims, eventos o relaciones ni cierra cotejos primarios.
 - **Convivencia con DMR-045:** la búsqueda primaria de los cinco expedientes históricos sigue pendiente. Mientras no haya una nueva fuente licenciada legible, no se reintentan las mismas páginas sin cambios; se permite avanzar sobre una cohorte distinta como esta, conforme a la directriz anti-repetición.
