@@ -860,6 +860,46 @@ references:[{label:"Wiki DanMachi · Hermanos Gulliver",url:"https://danmachi.fa
 }}
 });
 
+
+Object.assign(EXTENDED, {
+"CHAR-BETE-LOGA":{"CONT-SECONDARY":{
+title:"Bete Loga · magia, skills y equipo reportados",
+summary:"Pasada comunitaria del 2026-10-27 limitada a capacidades y equipo. No modifica la personalidad ni el expediente de historia ya existente.",
+sections:[
+{title:"Nivel y skills reportados",text:"DanMachi Wiki reporta nivel 6 y enumera Úlfheðinn, Fenris Wolf y Solmani. La tabla de estadísticas detallada de la misma página corresponde a un snapshot de nivel 5; no combinar esos valores con el encabezado de nivel 6."},
+{title:"Magia Hati",text:"La página comunitaria española describe Hati como una magia de encantamiento que absorbe poder mágico y daño al contacto. Las llamas crecen al absorber energía y el daño acumulado puede también afectar a Bete. Esta mecánica sigue siendo secundaria, sin cotejo de novela."},
+{title:"Equipo y divergencia de nombre",text:"La página inglesa escribe Flosvirt y la española Frosvirt para las botas; ambas nombran Dual Rolan. Se conserva la diferencia ortográfica entre fuentes sin decidir cuál es la forma canónica. No se recuperó un coste numérico de Hati."},
+{title:"Cierre",text:"Reutilizar esta pasada. Reabrir solo ante página comunitaria materialmente actualizada, fuente oficial nueva o pasaje primario legible."}
+],
+references:[
+{label:"DanMachi Wiki · Bete Loga",url:"https://danmachi.fandom.com/wiki/Bete_Loga",kind:"community"},
+{label:"Bete Loga/Habilidades · Wiki DanMachi",url:"https://danmachi.fandom.com/es/wiki/Bete_Loga/Habilidades",kind:"community"}
+]
+}},
+"CHAR-TIONA-HIRYUTE":{"CONT-SECONDARY":{
+title:"Tiona Hiryute · skills y equipo reportados",
+summary:"Pasada comunitaria del 2026-10-27 limitada a capacidades de combate y equipo. No reescribe personalidad ni repite su investigación histórica.",
+sections:[
+{title:"Nivel y skills reportados",text:"La ficha comunitaria reporta nivel 6 y enumera Berserk e Intense Heat. Berserk aumenta el ataque al recibir daño; Intense Heat eleva ampliamente sus habilidades en situaciones límite y el aumento crece con el daño recibido. Son descripciones secundarias, no cotejadas en novela."},
+{title:"Magia y habilidades de desarrollo",text:"La ficha consultada no enumera una magia con nombre. En su tabla aparecen Fist Strike, Diving, Abnormal Resistance y Crush como habilidades de desarrollo; la tabla de estadísticas detallada corresponde al snapshot de nivel 5, separado del encabezado de nivel 6."},
+{title:"Equipo reportado",text:"La página enumera Urga, Blade Rolan y Corbel Edge. Informa un precio de 120.000.000 valis para una versión de Urga y relata reposiciones posteriores; el precio no debe tratarse como coste universal de todas las versiones."},
+{title:"Cierre",text:"No interpretar que una magia no listada en esta página esté universalmente ausente. Reabrir solo con evidencia primaria legible o actualización material de la ficha."}
+],
+references:[{label:"DanMachi Wiki · Tiona Hiryute",url:"https://danmachi.fandom.com/wiki/Tiona_Hiryute",kind:"community"}]
+}},
+"CHAR-TIONE-HIRYUTE":{"CONT-SECONDARY":{
+title:"Tione Hiryute · List Iorum, skills y equipo reportados",
+summary:"Pasada comunitaria del 2026-10-27 limitada a capacidades y equipo. No reescribe personalidad ni repite la investigación sobre su pasado.",
+sections:[
+{title:"Nivel y skills reportados",text:"La ficha reporta nivel 6 y enumera Berserk y Backdraft. Berserk aumenta el ataque conforme recibe daño y se relaciona con su ira; Backdraft eleva de forma notable la fuerza en una situación límite. La tabla de estadísticas detallada se presenta como snapshot de nivel 5."},
+{title:"Magia List Iorum",text:"La fuente describe una magia cuya probabilidad de éxito depende de su estadística de magia y cuyo resultado adopta la forma de un látigo que también puede usarse como arma. No se recuperó un coste numérico ni una duración fija en el contenido consultado."},
+{title:"Habilidades de desarrollo y equipo",text:"La tabla enumera Fist Strike, Diving, Abnormal Resistance y Healing Power. Las armas nombradas son Zolas, Filuka, Halberd Rolan y Corbel Edge; la fuente inglesa registra 58.000.000 valis como coste de fabricación reportado para Zolas, no como precio universal."},
+{title:"Cierre",text:"No transferir una habilidad de Tiona a Tione o viceversa por analogía. Reabrir solo con una actualización material de la fuente o texto primario legible."}
+],
+references:[{label:"DanMachi Wiki · Tione Hiryute",url:"https://danmachi.fandom.com/wiki/Tione_Hiryute",kind:"community"}]
+}}
+});
+
 function extendedInfo(id,continuity,index){
 const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;
 if(!base)return null;
