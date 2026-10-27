@@ -184,3 +184,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Aplicación:** DMR-052 incorpora capacidades secundarias de Allen Fromel, Hedin Selland, Hogni Ragnar y los cuatro hermanos Gulliver. Las fuentes y los límites se registran en DMR-052 y CHARACTER_UPDATE_LEDGER.md.
 - **Límites:** lo no reportado por una wiki no demuestra inexistencia en canon; los snapshots y mecanismos permanecen secundarios; no se reescribe personalidad ni se inventan localizadores.
 - **Relación con prioridad:** DMR-045 conserva la prioridad de cotejo primario, pero sus páginas de muestra sin narración legible no se vuelven a consultar sin un desencadenante nuevo. DMR-052 avanza en paralelo una cohorte diferente mientras se conserva ese bloqueo.
+
+
+### DEC-DM-021 — Pasada de capacidades Loki sin iteración de personalidad
+- **Fecha:** 2026-10-27.
+- **Estado:** implementado en rama; validación e integración pendientes.
+- **Decisión operativa:** cuando una fuente ya fue recorrida varias veces, no repetirla sin un cambio material. Pasar a otro personaje/grupo y limitar la ampliación a capacidades, equipo o límites verificables; no volver a redactar personalidad.
+- **Aplicación:** DMR-053 registra Hati, Úlfheðinn, Fenris Wolf y Solmani para Bete; Berserk e Intense Heat para Tiona; Berserk, Backdraft y List Iorum para Tione, con sus armas/habilidades de desarrollo reportadas.
+- **Límites:** las fuentes son wikis comunitarias, bajo CONT-SECONDARY; tablas de nivel 5 y encabezados de nivel 6 son snapshots distintos; “no listado” no prueba inexistencia universal.
