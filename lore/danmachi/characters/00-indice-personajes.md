@@ -6,6 +6,8 @@ El índice se sincroniza con el catálogo activo. Tener ficha no equivale a biog
 
 Cada identidad conserva un ID estable. Cambios de edad o afiliación no crean duplicados; las etapas y los vínculos se modelan por intervalo y continuidad.
 
+Antes de modificar una ficha, consulta la [bitácora anti-repetición de actualizaciones de personajes](../CHARACTER_UPDATE_LEDGER.md). No se reescribe la personalidad por estilo ni se repite una búsqueda en la misma fuente si no contiene el dato; se reabre un campo solo con evidencia nueva o un conflicto material.
+
 ## Mapa por conflicto y periodo
 
 Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.md) para separar tres rutas: Astrea Record alrededor de T-7; el arco posterior de Rudra/Jura y Juggernaut, aproximadamente T-5 según fuentes secundarias; y el pasado de Tiona/Tione vinculado con Kali Familia en Sword Oratoria vol. 6. Son periodos y continuidades distintos.
