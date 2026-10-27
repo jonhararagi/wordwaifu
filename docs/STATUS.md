@@ -514,3 +514,10 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - La página enlaza detalles útiles para buscar `Lugio`, `Gif Blessing`, `Genos Angelus`, `Deus Ambrosia` y la escena EXTRA, pero se conservan como pistas secundarias.
 - La ruta normal de muestra ofrecida por la ficha editorial de [GA Bunko](https://ga.sbcr.jp/product/9784815617554/) redirige al lector BinB; la consulta pública mostró interfaz y créditos, no páginas narrativas legibles.
 - Esta ampliación no añade claims, sucesos, relaciones, alias o métricas y no cierra ningún cotejo primario. DMR-045 sigue `IN_PROGRESS` con Alfia, Zald, Meteria, Erebus y Rudra pendientes.
+
+
+## Corrección de runner para pruebas de navegador (2026-10-27)
+
+- La PR #168 encontró que Playwright 1.55 no instala Chromium en el runner Ubuntu 26.04 al usar `ubuntu-latest`; el log devolvió `Playwright does not support chromium on ubuntu26.04`.
+- Los workflows `.github/workflows/validate.yml` y `.github/workflows/danmachi-lore-check.yml` se fijaron a `ubuntu-24.04` para mantener el runtime de navegador sobre un runner compatible con la dependencia fijada. La migración de `ubuntu-latest` está documentada por [GitHub](https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration/).
+- Se corrigió también una aserción nueva para tolerar diferencia de mayúsculas. El estado definitivo depende del próximo CI de la PR #168; no se considera validada hasta que ambos workflows terminen en `success`.
