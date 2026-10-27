@@ -1109,14 +1109,14 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: Characteristics, Personality, History y Abilities.
+- accessed_at: 2026-10-27
+- locator_type: community_character_roster_and_ability_summary
+- locator: Pasada estructurada de características y habilidades: nivel 4, magias Gokou/Shikai, skills Kaina Blood/Tekiheni, desarrollo Night Fight/Abnormal Resistance y armas Higanbana/Futaba.
 - claims_supported: [DMR-028-CLM-002, DMR-028-CLM-003, DMR-028-CLM-006, DMR-028-CLM-023, DMR-028-CLM-024, DMR-028-CLM-025, DMR-028-CLM-026]
 - events_supported: []
 - continuity_scope: CONT-AR; referencia secundaria
 - reliability_note: La página presenta una biografía extensa y detalles de valores/combate. No hay localizador primario cotejado en este expediente.
-- conflicting_sources: []
+- conflicting_sources: La lista española Habilidades muestra Sakibeni en el lugar donde el artículo inglés indica Tekiheni. No resolver ni crear alias sin evidencia primaria; véase CHARACTER_UPDATE_LEDGER.md.
 - rights_note: Paráfrasis propia breve.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
@@ -1131,13 +1131,13 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Lyra
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: History, Magic, Skills, Abilities y Equipment.
+- accessed_at: 2026-10-27
+- locator_type: community_character_roster_and_ability_summary
+- locator: Pasada estructurada: nivel 3; magias Mūs Mine/Wingus Smite; skills Ratts Phil/Agile Salt; desarrollo Abnormal Resistance; boomerangs Carnivore, bombas y objeto mágico Aegis.
 - claims_supported: [DMR-028-CLM-004, DMR-028-CLM-005, DMR-028-CLM-006]
 - events_supported: []
 - continuity_scope: CONT-AR; referencia secundaria
-- reliability_note: Útil para recuperar nombres de magia y equipo; verificar el texto original para reglas, costes, límites y escenas.
+- reliability_note: Fuente comunitaria útil para recuperar nombres. Wingus Smite aparece sin efecto descrito en la página consultada; no inferirlo ni inventar costes. Véase CHARACTER_UPDATE_LEDGER.md.
 - conflicting_sources: []
 - rights_note: Paráfrasis propia breve.
 - verified_by: DANMACHI-RESEARCH-028
@@ -1153,13 +1153,13 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Alise_Lovell
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: Personality, History y Abilities.
+- accessed_at: 2026-10-27
+- locator_type: community_character_roster_and_ability_summary
+- locator: Pasada estructurada: nivel 4, magia Agaris Alvesynth, skills Lubrude Bequia/Batleate Asyrath, desarrollo Hunter/Abnormal Resistance/Fire Flash, arma Crimson Order y equipo Crimson Flower Heat Dress.
 - claims_supported: [DMR-028-CLM-006, DMR-028-CLM-009, DMR-028-CLM-010]
 - events_supported: []
 - continuity_scope: CONT-AR; referencia secundaria
-- reliability_note: Los matices de personalidad, nivel y edad se conservan como pistas secundarias, no como estadísticas canónicas confirmadas.
+- reliability_note: Nivel, estadísticas, magia y equipo son datos de una wiki comunitaria. Esta pasada documenta poderes y límites, sin reescribir personalidad ni elevar los datos a verificación primaria.
 - conflicting_sources: []
 - rights_note: Paráfrasis propia breve.
 - verified_by: DANMACHI-RESEARCH-028
@@ -1222,14 +1222,14 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Celty_Srowa
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: History, Personality y Abilities; origen, relación con Ryana y Ryuu, magia y percepción
+- accessed_at: 2026-10-27
+- locator_type: community_character_summary_with_magic_attribution
+- locator: Pasada estructurada de History/Abilities; el perfil describe magia de fuego defensiva capaz de quemar a una aventurera de segunda clase.
 - claims_supported: [DMR-028-CLM-011, DMR-028-CLM-012, DMR-028-CLM-013, DMR-028-CLM-014]
 - events_supported: []
 - continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
 - reliability_note: La wiki resume datos atribuidos a flashbacks y Astrea Record. No se han cotejado aquí los pasajes internos de la novela; las estadísticas y capacidades no se elevan a canon confirmado.
-- conflicting_sources: []
+- conflicting_sources: DMR-028-SRC-010 (Ryuu Lion) atribuye a Celty magia de rayo. No afirmar que posee ambas ni escoger una sin pasaje primario; véase CHARACTER_UPDATE_LEDGER.md.
 - rights_note: Paráfrasis propia; no copiar el artículo.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
@@ -1244,13 +1244,13 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Español
 - official_url: https://danmachi.fandom.com/es/wiki/Iska_Bra
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: Historia y Personalidad; orfanato de la Calle Daidalos, motivación, moda y maquillaje
+- accessed_at: 2026-10-27
+- locator_type: community_character_summary_and_magic_lead
+- locator: Pasada estructurada; roster individual Unknown para nivel y rango genérico 3–4 en Minor Characters. Ryuu Lion describe una magia de ataque de dos puños, sin nombre reportado para Iska.
 - claims_supported: [DMR-028-CLM-015, DMR-028-CLM-016]
 - events_supported: []
 - continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
-- reliability_note: La página enlaza resúmenes comunitarios y referencias externas; no equivale a cotejar el capítulo o relato original.
+- reliability_note: Resumen comunitario; el rango 3–4 no es un nivel individual exacto ni ofrece coste o nombre de la magia. Véase CHARACTER_UPDATE_LEDGER.md.
 - conflicting_sources: []
 - rights_note: Paráfrasis propia; no copiar el artículo.
 - verified_by: DANMACHI-RESEARCH-028
