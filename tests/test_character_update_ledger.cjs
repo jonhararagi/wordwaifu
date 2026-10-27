@@ -76,7 +76,8 @@ for (const id of [
   "community-freya-hedin",
   "community-freya-hedin-skills-es",
   "community-freya-hogni",
-  "community-freya-gulliver-es"
+  "community-freya-gulliver-es",
+  "community-freya-gulliver-en"
 ]) {
   assert.ok(sourceDirectory.some(source => source.id === id),
     "The ledger's supporting wiki route must be discoverable: " + id);
