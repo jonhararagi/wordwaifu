@@ -866,3 +866,11 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Confirmar CI de PR sobre `dc60cf91fba87a85419bc029d24dd7b8446420f6`: [Validate #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [Lore/Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895), ambos `success`.
 - [ ] Verificar evidencia post-merge de los workflows sobre el SHA exacto de main; las consultas disponibles no devolvieron estados que permitan declararlos verdes.
 - **Estado factual:** ruta implementada e integrada, con CI de PR aprobado; no equivale a texto primario y no cierra los cinco localizadores de DMR-045.
+
+### DMR-045-SRC-050 — BOOK☆WALKER, muestra japonesa del volumen 20
+- [x] Localizar la ficha oficial de BOOK☆WALKER y su enlace 試し読み para DanMachi vol. 20.
+- [x] Intentar la ruta de muestra normal; el visor redirigido no es accesible desde la herramienta de consulta (error 500).
+- [x] Registrar la ruta como `metadata_checked_only`, `CONT-MAIN-LN`, sin claims, eventos, relaciones ni aliases nuevos.
+- [x] Enlazarla desde los expedientes de investigación de Alfia y Zald solo en `CONT-MAIN-LN`, con pruebas para la frontera de continuidad.
+- [ ] Abrir la muestra en un navegador normal y registrar capítulo/página únicamente si el texto narrativo queda realmente visible.
+- **Estado factual:** implementación propuesta en rama de trabajo; esta ruta no confirma ninguna pista secundaria ni cierra los cinco localizadores de DMR-045.
