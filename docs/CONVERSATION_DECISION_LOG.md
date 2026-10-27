@@ -495,9 +495,12 @@
 
 ### CONV-DM-2026-10-27-004 — Bitácora anti-repetición y avance hacia otros personajes
 - **Fecha:** 2026-10-27.
-- **Estado:** implementada en rama de trabajo; PR y CI pendientes.
+- **Estado:** implementada, integrada y validada por PR #170.
 - **Instrucción aceptada:** dejar de repetir pasadas generales sobre personajes ya analizados y no reescribir personalidades por estilo. Si las wikis o el juego no informan un nivel/poder/skill, registrarlo como «no informado en las fuentes consultadas»; no inferir automáticamente que no existe en el canon ni inventar un dato para llenar la ficha.
 - **Implementación:** crear [CHARACTER_UPDATE_LEDGER.md](../lore/danmachi/CHARACTER_UPDATE_LEDGER.md), con estado, fuentes, hallazgos, campos no reportados, conflictos y un disparador concreto de reapertura por personaje. Añadir la continuidad de archivo `CONT-SECONDARY` para exponer los resultados comunitarios sin mezclarlos con `CONT-AR`, `CONT-GAME` o `CONT-ANIME`.
 - **Primera cohorte:** Alise, Kaguya, Lyra, Maryuu, Neze, Noin, Iska, Asta, Ryana y Celty; se documentaron niveles, magias/skills/equipo donde la fuente los enumera y las lagunas/conflictos donde no. DMR-045 (Alfia, Zald, Meteria, Erebus, Rudra) queda en `HOLD_FOR_PRIMARY_SOURCE` hasta evidencia nueva.
 - **Protección contra bucles:** una pasada secundaria por fuente basta. No volver a visitar una misma wiki para conseguir un dato que no contiene; reabrir solo con texto licenciado legible, una fuente oficial nueva, un cambio material en la fuente o una contradicción nueva.
-- **Límite:** las notas siguen siendo secundarias; no se crean claims/eventos/aristas ni se cambian personalidades en esta tanda. El nuevo test `tests/test_character_update_ledger.cjs` se incorpora a ambos workflows para detectar regresiones del protocolo.
+- **Integración:** [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170), squash SHA `034eb037f98ce25076de7fc4217a62cb960172eb`; la comparación de GitHub confirma que `main` coincide.
+- **CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`:** [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`.
+- **CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`:** [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
+- **Límite:** las notas siguen siendo secundarias; no se crean claims/eventos/aristas ni se cambian personalidades en esta tanda. El test `tests/test_character_update_ledger.cjs` queda conectado a ambos workflows.
