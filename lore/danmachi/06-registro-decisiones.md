@@ -135,3 +135,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Aplicación:** DMR-045-SRC-043 sustenta DMR-045-CLM-022 como pista `secondary_checked` sobre una posible ofrenda floral al cierre de Astrea Record 3. No se crea un evento, arista o alias ni se transfiere material de CONT-GAME a CONT-AR.
 - **Límite:** no elevar a canon confirmado ni registrar capítulo/página hasta leer una edición licenciada.
 - **Integración y validación:** PR [#162](https://github.com/jonhararagi/wordwaifu/pull/162), SHA `09a771bd752a8a903984bf5f84510a36565f9206`. **Integración y CI de PR #162:** integrada por squash en `main`, merge SHA `09a771bd752a8a903984bf5f84510a36565f9206`. CI de la PR sobre head `3bbd6e89e6a1c73a338acf7b36574e6642392712`: [Validate WordWaifu #40394117882](https://github.com/jonhararagi/wordwaifu/actions/runs/40394117882) y [DanMachi Lore and Retrieval Integrity #40394118254](https://github.com/jonhararagi/wordwaifu/actions/runs/40394118254), ambos `success`. CI post-merge sobre el SHA exacto de `main`: [DanMachi Lore and Retrieval Integrity #40400987218](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987218) y [Validate WordWaifu #40400987257](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987257), ambos `success`.
+
+### DEC-DM-016 — Ruta Kobo del volumen 20: vista previa anunciada, no leída
+- **Fecha:** 2026-10-26.
+- **Estado:** RECORDED; implementación y CI pendientes.
+- **Decisión:** añadir rutas de distribuidores licenciados como metadata-only si la ficha anuncia una vista previa, incluso cuando el lector no pueda inspeccionarse. La existencia de un botón no equivale a acceso al texto.
+- **Aplicación:** DMR-045-SRC-049 registra el ebook inglés de DanMachi vol. 20 en Kobo; el índice público muestra “Preview Now” y “Save Preview”, mientras la apertura directa devolvió “Cache miss”. Se expone desde Alfia y Zald en CONT-MAIN-LN solamente.
+- **Límites:** no crea claims, eventos, aristas ni aliases; no confirma las pistas secundarias DMR-045-CLM-019 o CLM-020 y no cambia la continuidad. Los cinco cotejos primarios continúan pendientes.

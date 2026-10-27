@@ -3669,3 +3669,25 @@ verification_status: stub
 - rights_note: Se guarda la URL y una descripción de la interfaz de la ficha; no se copia narración ni se intenta eludir el visor.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+## DMR-045-SRC-049 · Kobo — ficha y oferta de vista previa de DanMachi vol. 20
+
+- source_id: DMR-045-SRC-049
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 20 (light novel)
+- creator_or_publisher: Rakuten Kobo / Yen Press LLC / Yen On
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_PREVIEW_OFFER
+- series: DanMachi / novela ligera principal
+- volume_or_edition: Volumen 20, edición digital inglesa
+- language: Inglés
+- official_url: https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel
+- accessed_at: 2026-10-26
+- locator_type: retailer_product_page_and_preview_offer_metadata_only
+- locator: El resultado público indexado muestra “Preview Now” y “Save Preview”; la ficha indica ISBN 9798855437867 y publicación el 2026-08-11. La apertura directa devolvió “Cache miss”; el lector no se abrió.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Ruta de consulta de distribuidor licenciado, no página narrativa. No se verificó texto, capítulo, página o escena.
+- conflicting_sources: []
+- rights_note: Guardar el enlace y metadata resumida solamente; no reproducir la novela ni eludir restricciones del lector.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only

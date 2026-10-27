@@ -486,3 +486,10 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Límite:** no es lectura de la novela; no genera evento, aristas o relaciones, no confirma el destino individual y no importa la ideología de Erebus desde CONT-GAME.
 - **Integración:** PR [#162](https://github.com/jonhararagi/wordwaifu/pull/162), merge SHA `09a771bd752a8a903984bf5f84510a36565f9206`. **Integración y CI de PR #162:** integrada por squash en `main`, merge SHA `09a771bd752a8a903984bf5f84510a36565f9206`. CI de la PR sobre head `3bbd6e89e6a1c73a338acf7b36574e6642392712`: [Validate WordWaifu #40394117882](https://github.com/jonhararagi/wordwaifu/actions/runs/40394117882) y [DanMachi Lore and Retrieval Integrity #40394118254](https://github.com/jonhararagi/wordwaifu/actions/runs/40394118254), ambos `success`. CI post-merge sobre el SHA exacto de `main`: [DanMachi Lore and Retrieval Integrity #40400987218](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987218) y [Validate WordWaifu #40400987257](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987257), ambos `success`.
 - **Pendiente:** cotejar el cierre en una edición licenciada y registrar capítulo/página solo si las páginas narrativas son realmente visibles.
+
+## DMR-045 — Kobo, vista previa anunciada para el volumen 20 (2026-10-26)
+
+- Se encontró una ficha licenciada de Kobo cuyo resultado indexado muestra “Preview Now” y “Save Preview” para DanMachi vol. 20, edición inglesa (ISBN 9798855437867).
+- La apertura directa desde la herramienta pública devolvió “Cache miss”; no se obtuvo narración ni localizador reproducible.
+- La ruta se añade como DMR-045-SRC-049, metadata_checked_only, CONT-MAIN-LN, sin claims, eventos, relaciones o cambios de métricas. Las fichas de investigación de Alfia y Zald la enlazan como acceso pendiente de inspección manual.
+- **Estado:** cambio preparado en rama research/dmr045-kobo-vol20-preview-route-2026-10-26; las pruebas de CI y la integración aún están pendientes. DMR-045 sigue abierto y los cinco cotejos primarios permanecen pendientes.

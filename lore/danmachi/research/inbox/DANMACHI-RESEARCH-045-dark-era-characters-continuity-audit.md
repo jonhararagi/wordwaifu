@@ -933,3 +933,15 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - CI de la PR sobre head `3bbd6e89e6a1c73a338acf7b36574e6642392712`: [Validate WordWaifu #40394117882](https://github.com/jonhararagi/wordwaifu/actions/runs/40394117882) y [DanMachi Lore and Retrieval Integrity #40394118254](https://github.com/jonhararagi/wordwaifu/actions/runs/40394118254), ambos `success`.
 - CI post-merge sobre el SHA exacto `09a771bd752a8a903984bf5f84510a36565f9206`: [Validate WordWaifu #40400987257](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987257) y [DanMachi Lore and Retrieval Integrity #40400987218](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987218), ambos `success`.
 - La nota sigue siendo una paráfrasis de reseña comunitaria, sin capítulo/página. No se registran nuevas aristas, evento, alias o relaciones privadas. La verificación primaria permanece pendiente.
+
+## DMR-045-SRC-049 · Kobo — ficha licenciada y oferta de vista previa de DanMachi vol. 20
+
+- **Fecha de consulta:** 2026-10-26.
+- **Fuente:** [Kobo · Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 20 (light novel)](https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel).
+- **Tipo:** ficha de distribuidor licenciado y oferta de vista previa de la edición inglesa publicada por Yen Press / Yen On; no es texto narrativo recuperado.
+- **Metadata observada:** el resultado público indexado muestra los controles “Preview Now” y “Save Preview”; la ficha identifica ISBN 9798855437867 y fecha de publicación 11 de agosto de 2026.
+- **Resultado real de acceso:** la apertura directa de la ficha desde la herramienta pública devolvió “Cache miss”. No se abrió el lector ni se inspeccionó ninguna página narrativa.
+- **Estado de evidencia:** metadata_checked_only; claims_supported: []; events_supported: []; continuidad CONT-MAIN-LN.
+- **Interpretación permitida:** conserva una ruta adicional para consulta manual legítima, útil para los indicios DMR-045-CLM-019 (Alfia) y DMR-045-CLM-020 (Zald). No confirma apariciones, escenas, habilidades, relaciones o formulaciones; no permite inferir presencia o ausencia de personajes.
+- **Límite de derechos:** se conserva enlace y descripción breve de la ficha, no una copia del libro. No se intentó eludir el lector ni usar mirrors no autorizados.
+- **Siguiente acción:** abrir la vista previa desde una sesión normal de Kobo que funcione y registrar un localizador solo si el texto narrativo aparece realmente legible. Los cinco expedientes primarios de DMR-045 siguen abiertos.
