@@ -1262,19 +1262,19 @@ verification_status: stub
 - title: Minor Characters
 - creator_or_publisher: Comunidad DanMachi Wiki
 - source_type: COMMUNITY_WIKI
-- series: DanMachi; sección de antiguas integrantes de Astrea Familia
+- series: DanMachi; sección de personajes menores y antiguas integrantes de Astrea Familia
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Minor_Characters
-- accessed_at: 2026-10-19
-- locator_type: community_character_roster_and_summaries
-- locator: Entradas Asta Knox y Maryuu Reage; datos de afiliación, equipo, personalidad y magia
+- accessed_at: 2026-10-27
+- locator_type: community_character_roster_and_ability_summaries
+- locator: Pasada estructurada del 2026-10-27 a entradas de Asta Knox, Maryuu Reage, Neze Rankett, Noin Unic, Iska Bra, Ryana Lietz y Celty Srowa; resumen de equipo, magia, rango de nivel y aficiones/personality según la versión actual de la página.
 - claims_supported: [DMR-028-CLM-017, DMR-028-CLM-018, DMR-028-CLM-019]
 - events_supported: []
-- continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
-- reliability_note: Artículo agregador de contenido comunitario. Las filas históricas pueden omitir o mezclar estados; los niveles desconocidos o rangos no se deben consolidar por inferencia.
-- conflicting_sources: []
-- rights_note: Resumen original breve.
+- continuity_scope: CONT-AR; CONT-MAIN-LN solo como pista secundaria
+- reliability_note: Artículo agregador secundario. El rango general 3–4 no es el nivel exacto de cada integrante; la tabla de la Familia marca Unknown para algunas, mientras que esta página las agrupa en un rango. Se usan aquí las mecánicas y el equipo que la página sí nombra, sin inventar nombre de magia/skill, coste ni estadística no publicada.
+- conflicting_sources: Celty: esta página informa magia de fuego, mientras que DMR-028-SRC-010 (Ryuu Lion) atribuye magia de rayo. Neze: la lista española de habilidades menciona Úlfheðinn en un contexto distinto del listado inglés consultado; no se la asigna como hecho primario. Véase lore/danmachi/CHARACTER_UPDATE_LEDGER.md.
+- rights_note: Paráfrasis original breve; no copiar pasajes extensos.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
 
@@ -1284,19 +1284,19 @@ verification_status: stub
 - title: Ryuu Lion
 - creator_or_publisher: Comunidad DanMachi Wiki
 - source_type: COMMUNITY_WIKI
-- series: DanMachi; novela principal y Astrea Record
+- series: DanMachi; novela principal y Astrea Record (resumen comunitario)
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Ryuu_Lion
-- accessed_at: 2026-10-19
-- locator_type: community_character_and_magic_summary
-- locator: Magic; lista de magias atribuidas a antiguas compañeras de Ryuu
+- accessed_at: 2026-10-27
+- locator_type: community_character_and_former_companions_magic_summary
+- locator: Pasada estructurada de la sección de magias de antiguas compañeras de Ryu: Gokou (Kaguya), Rea Vindemia (Maryuu), Mūs Mine (Lyra), Irivute (Ryana), más descripciones funcionales sin nombre para magia de aumento de velocidad (Noin), garras de viento (Neze), ataque de dos puños (Iska), defensa impenetrable (Asta) y una atribución de rayo para Celty.
 - claims_supported: [DMR-028-CLM-012, DMR-028-CLM-018, DMR-028-CLM-019, DMR-028-CLM-020, DMR-028-CLM-021, DMR-028-CLM-022]
 - events_supported: []
-- continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
-- reliability_note: Resumen comunitario de nombres y efectos; no establece por sí solo el pasaje original, reglas, costes, duración ni todos los límites de las habilidades.
-- conflicting_sources: []
-- rights_note: Paráfrasis propia; no copiar la página.
+- continuity_scope: CONT-AR; CONT-MAIN-LN solo como pista secundaria
+- reliability_note: Resumen de wiki comunitaria. Los hechizos sin nombre se conservan como descripciones funcionales sin nombre reportado; la página no proporciona costes numéricos ni localizadores de capítulo/página. No inventar un nombre para completar el campo.
+- conflicting_sources: Celty: esta página la asocia con magia de rayo; el perfil individual de Celty en DMR-028-SRC-011 la asocia con magia de fuego. No afirmar que posee ambas ni elegir una sin un pasaje primario. Véase lore/danmachi/CHARACTER_UPDATE_LEDGER.md.
+- rights_note: Paráfrasis original breve; no copiar la página.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
 
