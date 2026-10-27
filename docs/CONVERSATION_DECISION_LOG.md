@@ -515,3 +515,13 @@
 - **Integración:** [PR #172](https://github.com/jonhararagi/wordwaifu/pull/172), squash SHA de `main` `79505bd740d47560d4bc67166c807d14090a950d`.
 - **CI de PR:** [Validate WordWaifu #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [DanMachi Lore and Retrieval Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success` sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`.
 - **CI post-merge sobre el SHA exacto de `main` `79505bd740d47560d4bc67166c807d14090a950d`: [Validate WordWaifu #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [DanMachi Lore and Retrieval Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
+
+
+### CONV-DM-2026-10-27-006 — Pasar a otra cohorte de capacidades sin reescribir personalidades
+- **Fecha:** 2026-10-27.
+- **Estado:** implementado en rama; CI e integración pendientes.
+- **Instrucción aplicada:** después de múltiples pasadas sobre los mismos personajes y fuentes, avanzar a otra cohorte cuando sea más útil; limitar la actualización al campo con evidencia nueva y no reformular personalidad como sustituto de información factual.
+- **Cohorte:** Bete Loga, Tiona Hiryute y Tione Hiryute. Pasada limitada a nivel reportado, skills, magia, habilidades de desarrollo, equipo, snapshots de estado y límites de la evidencia comunitaria.
+- **Implementación:** DMR-053, notas interactivas bajo CONT-SECONDARY, fuentes DMR-053-SRC-001..004, bitácora de actualizaciones y regresión para los tres expedientes.
+- **Reglas de evidencia:** las cabeceras de nivel 6 y tablas de estadísticas de nivel 5 se mantienen separadas; las grafías Flosvirt/Frosvirt se guardan como diferencia entre fuentes; magia no listada se anota como no listada en esa fuente, sin afirmar ausencia universal.
+- **Límites:** no se reescriben personalidades, no se modifican los expedientes históricos de las gemelas, y no se crean claims, eventos o relaciones narrativas nuevos. DMR-045 conserva los cinco cotejos primarios pendientes.
