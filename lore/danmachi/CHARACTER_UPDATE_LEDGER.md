@@ -121,35 +121,35 @@ Fuentes comunes consultadas como fuentes secundarias:
 
 Estos cinco expedientes ya tienen repetidos barridos secundarios y rutas de muestra licenciada probadas. El resultado actual debe reutilizarse; **no repetir una vuelta general ni reescribir personalidad**.
 
-### CHAR-DARK-ALFIA
+### CHAR-DARK-ALFIA — Alfia
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** se registraron pistas secundarias sobre `Genos Angelus`, `Gif Blessing`, `Limit Off`, `Silentium Eden` y la retrospectiva del volumen 20. La página comunitaria de diferencias de Astrea Record 3 se incorporó por [PR #168](https://github.com/jonhararagi/wordwaifu/pull/168) como guía secundaria.
 - **Pendiente real:** texto licenciado legible y localizador reproducible de escena/coste. Las rutas consultadas de las muestras no expusieron páginas narrativas.
 - **Reabrir solo si:** aparece una página narrativa nueva accesible o una fuente oficial que aporte un localizador concreto.
 
-### CHAR-DARK-ZALD
+### CHAR-DARK-ZALD — Zald
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** se registraron como pistas secundarias `Deus Ambrosia`, veneno de Behemoth, el combate con Udaeus y la secuencia de Ottar; no se afirmaron como lectura directa.
 - **Pendiente real:** técnica de espada, coste/efecto por escena y localizador de la novela.
 - **Reabrir solo si:** hay un pasaje primario accesible que resuelva una de esas cuestiones.
 
-### CHAR-METERIA
+### CHAR-METERIA — Meteria
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** las wikis asocian a Meteria con maternidad y parentesco, pero la entrevista de LN News sobre la versión original del juego no pronuncia el nombre Meteria. No identifica al padre de Bell.
 - **Pendiente real:** pasaje primario que identifique inequívocamente a Meteria; la personalidad no se modifica a partir de `CONT-AU).
 - **Reabrir solo si:** aparece un pasaje narrativo o una declaración oficial explícita que resuelva la identidad.
 
-### CHAR-DARK-EREBUS
+### CHAR-DARK-EREBUS — Erebus
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** la ideología reportada para la versión de Memoria Freese permanece en `CONT-GAME); la wiki de diferencias sirve únicamente para localizar la escena EXTRA en `CONT-AR).
 - **Pendiente real:** escenas/diálogos legibles de la novelización, separados del juego.
 - **Reabrir solo si:** se obtiene la escena EXTRA o un capítulo de Astrea Record en una muestra/licencia legible.
 
-### CHAR-DARK-RUDRA
+### CHAR-DARK-RUDRA — Rudra
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** las fuentes comunitarias atribuyen actos a Rudra Familia; esto no demuestra que Rudra personalmente los diseñara, ordenara o conociera.
