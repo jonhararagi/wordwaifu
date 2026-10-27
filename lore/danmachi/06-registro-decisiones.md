@@ -146,3 +146,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Decisión:** añadir rutas de distribuidores licenciados como metadata-only si la ficha anuncia una vista previa, incluso cuando el lector no pueda inspeccionarse. La existencia de un botón no equivale a acceso al texto.
 - **Aplicación:** DMR-045-SRC-049 registra el ebook inglés de DanMachi vol. 20 en Kobo; el índice público muestra “Preview Now” y “Save Preview”, mientras la apertura directa devolvió “Cache miss”. Se expone desde Alfia y Zald en CONT-MAIN-LN solamente.
 - **Límites:** no crea claims, eventos, aristas ni aliases; no confirma las pistas secundarias DMR-045-CLM-019 o CLM-020 y no cambia la continuidad. Los cinco cotejos primarios continúan pendientes.
+
+### DEC-DM-017 — BOOK☆WALKER vol. 20: el enlace 試し読み no equivale a lectura
+- **Fecha:** 2026-10-27.
+- **Estado:** Registrado en rama de trabajo; implementación y CI pendientes.
+- **Decisión:** registrar la muestra licenciada como ruta de consulta aun cuando la herramienta no pueda abrir el visor, indicando la respuesta real observada.
+- **Aplicación:** DMR-045-SRC-050 guarda la ficha y ruta de prueba del volumen 20 japonés. El visor respondió con error 500 de acceso en esta herramienta; no se recuperó texto.
+- **Límites:** mantiene `CONT-MAIN-LN`, no modifica claims/eventos/aristas/aliases y no mezcla las referencias con `CONT-AR` o `CONT-GAME`. Los cinco cotejos primarios siguen abiertos.
