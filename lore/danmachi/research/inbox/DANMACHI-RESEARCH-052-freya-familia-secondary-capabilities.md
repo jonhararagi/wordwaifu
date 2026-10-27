@@ -1,7 +1,7 @@
 # DANMACHI-RESEARCH-052 · Freya Familia: capacidades, magia y equipo
 
 - **Fecha de pasada:** 2026-10-27.
-- **Estado:** pasada secundaria estructurada preparada para integración; no equivale a cotejo primario de las novelas.
+- **Estado:** pasada secundaria estructurada implementada e integrada en `main` mediante [PR #172](https://github.com/jonhararagi/wordwaifu/pull/172), SHA `79505bd740d47560d4bc67166c807d14090a950d`; no equivale a cotejo primario de las novelas.
 - **Alcance:** Allen Fromel, Hedin Selland, Hogni Ragnar y los cuatro hermanos Gulliver. Se completa solo la capa de capacidades, magia, habilidades, armas y límites reportados.
 - **Regla aplicada:** no se reescriben personalidades. Se conserva como «no informado en las fuentes consultadas» todo campo que las páginas revisadas no describen; eso no demuestra que el dato no exista en el canon.
 - **Continuidad de exhibición:** CONT-SECONDARY. Los datos no se transfieren a CONT-MAIN-LN, CONT-ANIME ni CONT-FC como verificados por texto primario.
@@ -87,3 +87,9 @@ Las wikis son fuentes secundarias comunitarias. Algunas páginas hacen referenci
 ## Regla de reapertura
 
 Reabrir únicamente ante una página narrativa licenciada legible, una publicación oficial nueva que resuelva el dato, una actualización material de las páginas comunitarias citadas o una contradicción nueva.
+
+
+## Integración y validación técnica
+- CI de PR sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`: [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success`.
+- CI post-merge sobre `79505bd740d47560d4bc67166c807d14090a950d`: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
+- La integración técnica no eleva datos secundarios a verificación primaria. DMR-045 conserva los cinco cotejos narrativos pendientes.

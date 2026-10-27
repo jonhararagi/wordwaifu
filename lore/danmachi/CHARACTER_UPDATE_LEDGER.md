@@ -225,3 +225,10 @@ Esta es una cohorte distinta, abierta porque las fuentes primarias de DMR-045 si
 - **Cierre:** no renombrar la especialidad como skill formal.
 
 **Regla de toda la cohorte:** las referencias son secundarias y no se crearon claims, eventos ni relaciones. Reabrir solo con página primaria legible, fuente oficial nueva, actualización material de la wiki o contradicción nueva.
+
+
+## Cierre de integración — cohorte Freya Familia DMR-052 (2026-10-27)
+- Integrado mediante [PR #172](https://github.com/jonhararagi/wordwaifu/pull/172), SHA de `main` `79505bd740d47560d4bc67166c807d14090a950d`.
+- CI de PR: [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success`.
+- CI post-merge sobre ese SHA exacto: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
+- Estado de evidencia sin cambios: fuentes secundarias; lo no reportado no se convierte en inexistencia canónica; no reabrir expedientes ni reescribir personalidades sin un disparador documentado.

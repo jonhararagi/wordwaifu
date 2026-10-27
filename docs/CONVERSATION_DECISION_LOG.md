@@ -507,8 +507,11 @@
 
 ### CONV-DM-2026-10-27-005 — Aplicar la bitácora a otra Familia y registrar capacidades faltantes
 - **Fecha:** 2026-10-27.
-- **Estado:** investigación e implementación en rama de trabajo; integración y CI pendientes.
+- **Estado:** implementado e integrado en `main` mediante PR #172; los dos workflows de PR aprobaron; CI post-merge registrado por separado.
 - **Instrucción aplicada:** al haber repetido varios intentos sobre los mismos expedientes, pasar a otros personajes; no repetir la actualización de personalidad. Si las wikis/juegos no informan un poder, nivel, skill, magia o coste, anotar que la fuente no lo informa y continuar sin inventarlo.
 - **Cohorte:** Allen Fromel, Hedin Selland, Hogni Ragnar y Alfrigg, Dvalinn, Berling y Grer Gulliver. Se consulta la información comunitaria de capacidades, skills, magia y equipo.
 - **Implementación:** [DMR-052](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-052-freya-familia-secondary-capabilities.md); ampliación de CONT-SECONDARY, bitácora anti-repetición, directorio de fuentes y pruebas.
 - **Límites:** todos los hallazgos de esta tanda son secundarios; no se crean claims/eventos/relaciones nuevos ni se modifican personalidades. Los cinco cotejos primarios de DMR-045 siguen pendientes y se reabrirán solo ante evidencia nueva.
+- **Integración:** [PR #172](https://github.com/jonhararagi/wordwaifu/pull/172), squash SHA de `main` `79505bd740d47560d4bc67166c807d14090a950d`.
+- **CI de PR:** [Validate WordWaifu #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [DanMachi Lore and Retrieval Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success` sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`.
+- **CI post-merge sobre el SHA exacto de `main` `79505bd740d47560d4bc67166c807d14090a950d`: [Validate WordWaifu #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [DanMachi Lore and Retrieval Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.

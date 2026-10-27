@@ -177,7 +177,9 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-020 — Avanzar a otra cohorte cuando la fuente ya fue agotada
 - **Fecha:** 2026-10-27.
-- **Estado:** aplicada en la pasada DMR-052; integración pendiente.
+- **Estado:** implementada e integrada en `main` mediante PR #172; CI de PR aprobado; post-merge registrado por separado.
+- **Pruebas de PR:** [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success` sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`.
+- **Merge:** [PR #172](https://github.com/jonhararagi/wordwaifu/pull/172), SHA `79505bd740d47560d4bc67166c807d14090a950d`. CI post-merge aprobada: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success` sobre ese SHA.
 - **Decisión operativa:** no reiterar análisis de personalidad ni volver a recorrer la misma wiki/juego solo para buscar un nivel, poder, skill, magia o coste que no reporta. Anotar el campo como no informado por esa fuente y avanzar a otro personaje/grupo.
 - **Aplicación:** DMR-052 incorpora capacidades secundarias de Allen Fromel, Hedin Selland, Hogni Ragnar y los cuatro hermanos Gulliver. Las fuentes y los límites se registran en DMR-052 y CHARACTER_UPDATE_LEDGER.md.
 - **Límites:** lo no reportado por una wiki no demuestra inexistencia en canon; los snapshots y mecanismos permanecen secundarios; no se reescribe personalidad ni se inventan localizadores.

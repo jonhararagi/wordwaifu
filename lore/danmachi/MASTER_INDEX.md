@@ -332,3 +332,8 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Integración:** [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170), SHA de `main` `034eb037f98ce25076de7fc4217a62cb960172eb`.
 - **CI de PR:** [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success` sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`.
 - **CI post-merge:** [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success` sobre `034eb037f98ce25076de7fc4217a62cb960172eb`.
+
+## Estado de integración de DMR-052 (2026-10-27)
+- Integrado en `main` por [PR #172](https://github.com/jonhararagi/wordwaifu/pull/172), SHA `79505bd740d47560d4bc67166c807d14090a950d`.
+- CI de PR aprobado sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`: [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435).
+- CI post-merge sobre el SHA exacto de `main`: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
