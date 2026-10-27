@@ -849,7 +849,7 @@ references:[{label:"Wiki DanMachi · Hermanos Gulliver",url:"https://danmachi.fa
 "CHAR-BERLING-GULLIVER":{"CONT-SECONDARY":{
 title:"Berling Gulliver · hacha y búsqueda táctica",
 summary:"Dato individual recuperado de la página comunitaria del grupo; no se añade personalidad por estilo.",
-sections:[{title:"Dato reportado",text:"Berling usa un hacha y se distingue por buscar enemigos y comprobar si existe riesgo de emboscada o ataque sorpresa."},{title:"No informado",text:"La página no atribuye a Berling una magia o skill individual con nombre ni un coste. No se le asigna automáticamente Resistencia Anormal a partir de la entrada de Dvalinn."}],
+sections:[{title:"Dato reportado",text:"Berling usa un hacha y se distingue por buscar enemigos y comprobar posibles emboscadas y ataques sorpresa."},{title:"No informado",text:"La página no atribuye a Berling una magia o skill individual con nombre ni un coste. No se le asigna automáticamente Resistencia Anormal a partir de la entrada de Dvalinn."}],
 references:[{label:"Wiki DanMachi · Hermanos Gulliver",url:"https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver",kind:"community"}]
 }},
 "CHAR-GRER-GULLIVER":{"CONT-SECONDARY":{
