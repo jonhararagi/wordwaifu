@@ -71,6 +71,10 @@ assert.ok(alfiaVol20Info.references.some(ref => ref.kind === "community" && ref.
   "Alfia volume 20 clue must expose the synopsis URL and community source type.");
 assert.ok(alfiaVol20Info.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel"),
   "Alfia CONT-MAIN-LN must expose the Kobo preview route as metadata only.");
+assert.ok(alfiaVol20Info.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1"),
+  "Alfia CONT-MAIN-LN must expose the BookWalker trial route as metadata only.");
+assert.ok(!alfiaArchiveInfo.references.some(ref => ref.url === "https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1"),
+  "The BookWalker volume 20 route must not leak into Alfia CONT-AR.");
 assert.ok(!alfiaArchiveInfo.references.some(ref => ref.url === "https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel"),
   "The Kobo route must not leak into Alfia CONT-AR.");
 const zaldVol20Info = archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null);
@@ -80,6 +84,10 @@ assert.ok(zaldVol20Info.references.some(ref => ref.kind === "community" && ref.u
   "Zald volume 20 clue must expose the community synopsis URL and source type.");
 assert.ok(zaldVol20Info.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel"),
   "Zald CONT-MAIN-LN must expose the Kobo preview route as metadata only.");
+assert.ok(zaldVol20Info.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1"),
+  "Zald CONT-MAIN-LN must expose the BookWalker trial route as metadata only.");
+assert.ok(!zaldArchiveInfo.references.some(ref => ref.url === "https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1"),
+  "The BookWalker volume 20 route must not leak into Zald CONT-AR.");
 assert.ok(!zaldArchiveInfo.references.some(ref => ref.url === "https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel"),
   "The Kobo route must not leak into Zald CONT-AR.");
 
