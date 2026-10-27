@@ -876,4 +876,13 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Validar CI de PR: [Validate #40450101232](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101232) y [Lore/Integrity #40450101166](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101166), ambos `success` sobre `80c5468f78812312898dbe3f6de709856f63d0d2`.
 - [x] Confirmar CI post-merge sobre el SHA exacto de `main`: [Validate WordWaifu #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [DanMachi Lore and Retrieval Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519), ambos `success` para `2951fa55396564cb878e00ab5c7d2b297966cd64`.
 - [ ] Abrir la muestra en un navegador normal y registrar capítulo/página únicamente si el texto narrativo queda realmente visible.
-- **Estado factual:** integrado; CI de PR aprobado; CI post-merge pendiente. La ruta no confirma ninguna pista secundaria ni cierra los cinco localizadores de DMR-045.
+- **Estado factual:** integrado; CI de PR y CI post-merge aprobados sobre los SHA registrados. La consulta manual de la muestra sigue pendiente; la ruta no confirma pistas secundarias ni cierra los cinco localizadores de DMR-045.
+
+
+### DMR-045-SRC-051 — Diferencias comunitarias de Astrea Record 3
+- [x] Consultar la página de diferencias de DanMachi Wiki en español y registrar su alcance como fuente secundaria de `CONT-AR`.
+- [x] Añadir la fuente al directorio buscable y enlazarla desde las notas de Alfia, Zald y Erebus solo en `CONT-AR`.
+- [x] Añadir regresiones para procedencia secundaria, descubribilidad y separación de continuidad.
+- [x] Comprobar la ruta normal de muestra enlazada por la ficha editorial de GA Bunko; el lector BinB no mostró páginas narrativas legibles en la consulta pública.
+- [ ] Cotejar con texto licenciado los detalles de `Lugio`, `Gif Blessing`, `Genos Angelus`, `Deus Ambrosia` y la escena EXTRA Zald/Alfia/Erebus; no inventar capítulo/página.
+- **Estado factual:** pista secundaria integrada en rama de trabajo; no crea claims, eventos ni relaciones. Requiere PR, CI y verificación posterior.
