@@ -1,5 +1,5 @@
 # Estado de WordWaifu
-## Estado operativo y verificación — 2026-10-25
+## Estado operativo y verificación — 2026-10-27
 
 <!-- DANMACHI-METRICS:BEGIN -->
 - **Corpus DanMachi:** 178 registros activos; 29 IDs reservados; 131 documentos de apoyo.
@@ -535,3 +535,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Integración:** [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170), squash SHA `034eb037f98ce25076de7fc4217a62cb960172eb`.
 - **CI de PR:** [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040) finalizaron `success` sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`.
 - **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301) finalizaron `success` sobre `034eb037f98ce25076de7fc4217a62cb960172eb`.
+
+## DMR-052 · Freya Familia: capacidades secundarias (2026-10-27)
+
+- Se investigaron las páginas comunitarias de Allen Fromel, Hedin Selland, Hogni Ragnar y Hermanos Gulliver, con una pasada limitada a niveles reportados, magia, skills, equipo y límites.
+- La investigación dejó notas recuperables en CONT-SECONDARY y registró ocho identidades en CHARACTER_UPDATE_LEDGER.md; no reescribe personalidades ni crea claims, eventos o relaciones.
+- Campos no informados que se cierran provisionalmente: costes numéricos, efecto recuperable de Rasu Dain, listas individuales completas de skills de Allen y magias/skills con nombre para cada hermano Gulliver.
+- **Estado:** cambios implementados en rama research/freya-familia-capabilities-2026-10-27; revisión, CI e integración pendientes.
+- **Pendiente sin repetir fuentes:** DMR-045 sigue a la espera de texto primario licenciable y legible para Alfia, Zald, Meteria, Erebus y Rudra. No reabrir las mismas muestras que solo dieron pantallas de carga salvo que aparezca un cambio material.
