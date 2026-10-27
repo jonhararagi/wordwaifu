@@ -169,7 +169,8 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-019 — Bitácora anti-repetición de personajes y campos no reportados
 - **Fecha:** 2026-10-27.
-- **Estado:** implementada en rama de trabajo; validación e integración pendientes.
+- **Estado:** implementada, integrada y validada por PR #170.
 - **Regla de trabajo:** reutilizar la pasada secundaria ya documentada en vez de actualizar repetidamente la personalidad. Registrar por identidad los enlaces revisados, hechos secundarios, campos no reportados, discrepancias y condición precisa para reabrir.
 - **Aplicación:** `lore/danmachi/CHARACTER_UPDATE_LEDGER.md`; continuidad adicional `CONT-SECONDARY`; notas de habilidades de una primera cohorte de diez miembros de Astrea Familia; test automatizado agregado a ambos workflows.
+- **Integración y validación:** PR [#170](https://github.com/jonhararagi/wordwaifu/pull/170), SHA `034eb037f98ce25076de7fc4217a62cb960172eb`. CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`: [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`; CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`: [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
 - **Límite de inferencia:** ausencia en una wiki/juego significa que esa fuente no reportó el dato, no que el canon niegue explícitamente la habilidad. No completar nombres, costes o niveles exactos por inferencia. DMR-045 se mantiene `HOLD_FOR_PRIMARY_SOURCE` hasta evidencia nueva; no se cambia la prioridad hacia Orario por esta tanda.
