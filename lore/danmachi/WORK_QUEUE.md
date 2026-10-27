@@ -886,3 +886,5 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Comprobar la ruta normal de muestra enlazada por la ficha editorial de GA Bunko; el lector BinB no mostró páginas narrativas legibles en la consulta pública.
 - [ ] Cotejar con texto licenciado los detalles de `Lugio`, `Gif Blessing`, `Genos Angelus`, `Deus Ambrosia` y la escena EXTRA Zald/Alfia/Erebus; no inventar capítulo/página.
 - **Estado factual:** pista secundaria integrada en rama de trabajo; no crea claims, eventos ni relaciones. Requiere PR, CI y verificación posterior.
+
+- **Corrección técnica de CI en PR #168:** los primeros checks detectaron una aserción sensible a mayúsculas y que Playwright 1.55 no instala Chromium en Ubuntu 26.04. Se corrigió la aserción y se fijaron ambos workflows a `ubuntu-24.04`; confirmar los nuevos resultados antes de integrar.
