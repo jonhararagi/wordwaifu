@@ -965,3 +965,11 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **Interpretación permitida:** proporciona una ruta adicional para que se intente la muestra en un navegador normal. No respalda usos de Afterglow, apariciones de Alfia o Zald, ni escenas individuales; tampoco demuestra ausencia de personajes.
 - **Límites:** no se eludió el visor, no se usaron mirrors, y no se cambió ningún claim, relación, evento, alias o métrica.
 - **Siguiente acción:** si el lector normal muestra el texto, registrar únicamente un localizador reproducible que se haya visto de verdad. Los cinco expedientes primarios de DMR-045 continúan abiertos.
+
+
+## DMR-045-SRC-050 · estado de integración (2026-10-27)
+
+- Integrado mediante [PR #166](https://github.com/jonhararagi/wordwaifu/pull/166), squash SHA de `main` `2951fa55396564cb878e00ab5c7d2b297966cd64`; GitHub confirma que `main` coincide con ese commit.
+- CI de PR sobre `80c5468f78812312898dbe3f6de709856f63d0d2`: [Validate #40450101232](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101232) y [DanMachi Lore and Retrieval Integrity #40450101166](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101166), ambos `success`.
+- CI post-merge sobre `2951fa55396564cb878e00ab5c7d2b297966cd64`: [Validate #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [DanMachi Lore and Retrieval Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519), ambos `success`.
+- Límite de evidencia: `metadata_checked_only`; no se leyó texto narrativo ni se modificaron claims. La muestra requiere consulta humana normal. Los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra continúan abiertos.

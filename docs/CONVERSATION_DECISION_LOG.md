@@ -460,10 +460,13 @@
 
 ### CONV-DM-2026-10-27-001 — Registrar ruta de muestra BOOK☆WALKER para el volumen 20
 - **Fecha:** 2026-10-27.
-- **Estado:** IMPLEMENTACIÓN EN RAMA DE TRABAJO; CI PENDIENTE.
+- **Estado:** IMPLEMENTADO E INTEGRADO; CI DE PR APROBADO; CI POST-MERGE APROBADO.
 - **Tipo:** investigación de fuente y mejora de navegación.
 - **Contenido:** la ficha de BOOK☆WALKER para DanMachi vol. 20 ofrece 試し読み; la apertura normal redirige al visor de prueba, inaccesible para la herramienta: al seguir la redirección devuelve «Internal Error» y señala «not accessible via this tool»; no se confirmó una respuesta HTTP del visor. No se inspeccionaron páginas narrativas.
 - **Alcance y continuidad:** DMR-045-SRC-050, `CONT-MAIN-LN`; enlace desde las notas de Alfia y Zald de la novela principal, sin filtrarse a `CONT-AR` ni `CONT-GAME`.
 - **Archivos afectados:** directorio de fuentes, archivo de personajes, pruebas de directorio/fichas, auditoría DMR-045, cola, índice, estado y decisiones.
+- **Integración:** [PR #166](https://github.com/jonhararagi/wordwaifu/pull/166) fusionada por squash; SHA confirmado de `main`: `2951fa55396564cb878e00ab5c7d2b297966cd64`.
+- **CI de PR:** [Validate WordWaifu #40450101232](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101232) y [DanMachi Lore and Retrieval Integrity #40450101166](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101166) finalizaron `success` sobre el head `80c5468f78812312898dbe3f6de709856f63d0d2`.
+- **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [DanMachi Lore and Retrieval Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519), ambos `success` sobre `2951fa55396564cb878e00ab5c7d2b297966cd64`.
 - **Límite:** fuente `metadata_checked_only`, sin claims, eventos, relaciones, aliases o cambios de métricas. Los cinco localizadores narrativos siguen abiertos.
-- **Siguiente acción:** ejecutar CI, integrar si los checks pertinentes pasan y verificar `main`; si la muestra se abre en un navegador normal, registrar solo un pasaje visible con localizador reproducible.
+- **Siguiente acción:** confirmar los workflows post-merge y, por separado, abrir la muestra en un navegador normal; registrar un pasaje solo si el texto queda realmente visible con localizador reproducible.

@@ -872,5 +872,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Intentar la ruta de muestra normal; el visor redirigido no es accesible desde la herramienta de consulta (Internal Error de la herramienta al seguir la redirección; no se confirmó una respuesta HTTP del visor).
 - [x] Registrar la ruta como `metadata_checked_only`, `CONT-MAIN-LN`, sin claims, eventos, relaciones ni aliases nuevos.
 - [x] Enlazarla desde los expedientes de investigación de Alfia y Zald solo en `CONT-MAIN-LN`, con pruebas para la frontera de continuidad.
+- [x] Integrar mediante [PR #166](https://github.com/jonhararagi/wordwaifu/pull/166), squash SHA de `main` `2951fa55396564cb878e00ab5c7d2b297966cd64`.
+- [x] Validar CI de PR: [Validate #40450101232](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101232) y [Lore/Integrity #40450101166](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101166), ambos `success` sobre `80c5468f78812312898dbe3f6de709856f63d0d2`.
+- [x] Confirmar CI post-merge sobre el SHA exacto de `main`: [Validate WordWaifu #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [DanMachi Lore and Retrieval Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519), ambos `success` para `2951fa55396564cb878e00ab5c7d2b297966cd64`.
 - [ ] Abrir la muestra en un navegador normal y registrar capítulo/página únicamente si el texto narrativo queda realmente visible.
-- **Estado factual:** implementación propuesta en rama de trabajo; esta ruta no confirma ninguna pista secundaria ni cierra los cinco localizadores de DMR-045.
+- **Estado factual:** integrado; CI de PR aprobado; CI post-merge pendiente. La ruta no confirma ninguna pista secundaria ni cierra los cinco localizadores de DMR-045.
