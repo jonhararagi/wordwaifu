@@ -3,6 +3,9 @@
 - **Última actualización:** 2026-10-27.
 - **Propósito:** evitar análisis repetidos sin datos nuevos; registrar qué se consultó, qué información apareció, qué no está reportado y qué resultado debe reutilizarse.
 - **Alcance de esta pasada:** datos de niveles, magia, habilidades, habilidades de desarrollo y equipo de la primera Astrea Familia, más el cierre de búsqueda secundaria de los cinco expedientes DMR-045. **No se reescribieron personalidades.**
+- **Integración:** [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170), SHA de `main` `034eb037f98ce25076de7fc4217a62cb960172eb`.
+- **CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`:** [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`.
+- **CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`:** [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
 - **Fuente primaria de estado del proyecto:** [WORK_QUEUE](WORK_QUEUE.md), [índice maestro](MASTER_INDEX.md) y el [registro central de fuentes](sources/00-registro-fuentes.md).
 
 ## Protocolo anti-repetición (obligatorio)
@@ -159,3 +162,11 @@ Estos cinco expedientes ya tienen repetidos barridos secundarios y rutas de mues
 ## Próxima actualización permitida
 
 **Pasar a otros personajes en lugar de iterar sobre los ya cerrados.** Para esta cohorte, el siguiente lote debe ser de otra Familia/otro grupo y usar el mismo pase único. No reabrir los 10 registros de Astrea ni los cinco DMR-045 sin uno de los disparadores enumerados arriba.
+
+
+## Estado de integración y validación — 2026-10-27
+
+- [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170) integró la bitácora, la vista `CONT-SECONDARY`, la primera cohorte y las regresiones automatizadas; squash SHA de `main`: `034eb037f98ce25076de7fc4217a62cb960172eb`.
+- CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`: [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`.
+- CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`: [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
+- No se crearon claims, eventos o aristas nuevos. Las fuentes de la cohorte permanecen secundarias y DMR-045 sigue en `HOLD_FOR_PRIMARY_SOURCE` hasta evidencia primaria nueva.
