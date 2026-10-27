@@ -160,7 +160,8 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-018 — Diferencias de la novelización de Astrea Record como guía secundaria
 - **Fecha:** 2026-10-27.
-- **Estado:** Registrado en rama de trabajo; validación e integración pendientes.
+- **Estado:** Implementada e integrada mediante PR #168; CI de PR y post-merge aprobados.
 - **Decisión aplicada:** se puede enlazar una comparación comunitaria de la novelización para orientar la búsqueda de escenas, pero su etiqueta debe seguir siendo secundaria y ceñirse a la continuidad descrita.
 - **Aplicación:** DMR-045-SRC-051 enlaza la página de diferencias de Astrea Record 3 y se expone en las notas interactivas de Alfia, Zald y Erebus únicamente bajo `CONT-AR`.
+- **Integración y validación:** PR [#168](https://github.com/jonhararagi/wordwaifu/pull/168), SHA `99a667e60f3651b98759a1993a26258ba37dd645`. CI de PR sobre `16338edec86670b1692084bea446657bc657eb71`: [Validate WordWaifu #40510817854](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817854) y [DanMachi Lore and Retrieval Integrity #40510817870](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817870), ambos `success`; CI post-merge sobre `99a667e60f3651b98759a1993a26258ba37dd645`: [Validate WordWaifu #40511064727](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064727) y [DanMachi Lore and Retrieval Integrity #40511064313](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064313), ambos `success`.
 - **Límites:** sin claims ni eventos nuevos; no se afirma lectura directa de la novela, no se inventan páginas, no se crea una relación familiar para el padre de Bell y no se importa la ideología de Erebus del juego a la novelización.

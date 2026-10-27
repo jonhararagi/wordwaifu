@@ -474,17 +474,21 @@
 
 ### CONV-DM-2026-10-27-002 — Usar la página de diferencias de Astrea Record 3 solo como guía secundaria
 - **Fecha:** 2026-10-27.
-- **Estado:** RESULTADO DE INVESTIGACIÓN REGISTRADO; IMPLEMENTACIÓN EN RAMA DE TRABAJO.
+- **Estado:** INVESTIGACIÓN SECUNDARIA REGISTRADA; IMPLEMENTADA, INTEGRADA Y VALIDADA TÉCNICAMENTE.
 - **Hallazgo:** la página comunitaria [Astrea Record Volumen 3/Diferencias](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias) resume cambios entre el juego y la novelización relacionados con habilidades de Alfia, el uso de la esgrima de Zald, Deus Ambrosia y una escena EXTRA que incluye a Erebus.
 - **Criterio aplicado:** la página se clasifica como `secondary_checked`, `CONT-AR`; sirve para localizar temas y preguntas, no para afirmar que se leyó el texto primario. La ficha oficial de GA Bunko ofrece `試し読み`, pero la vista pública consultada no expuso páginas narrativas legibles.
 - **Alcance de implementación:** directorio de fuentes y notas interactivas de Alfia, Zald y Erebus bajo `CONT-AR`, con pruebas para impedir filtración a `CONT-MAIN-LN` y `CONT-GAME`.
+- **Integración:** PR [#168](https://github.com/jonhararagi/wordwaifu/pull/168), squash SHA `99a667e60f3651b98759a1993a26258ba37dd645`.
+- **CI de PR sobre `16338edec86670b1692084bea446657bc657eb71`:** [Validate WordWaifu #40510817854](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817854) y [DanMachi Lore and Retrieval Integrity #40510817870](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817870), ambos `success`.
+- **CI post-merge sobre `99a667e60f3651b98759a1993a26258ba37dd645`:** [Validate WordWaifu #40511064727](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064727) y [DanMachi Lore and Retrieval Integrity #40511064313](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064313), ambos `success`.
 - **Límite:** no se crean claims, eventos, relaciones, aliases ni métricas; Meteria sigue sin identificación por pasaje primario y los cinco expedientes de DMR-045 continúan abiertos.
 
 
 ### CONV-DM-2026-10-27-003 — Fijar el runner de CI para Playwright 1.55
 - **Fecha:** 2026-10-27.
-- **Estado:** Corrección implementada en la rama de la PR #168; revalidación pendiente.
+- **Estado:** Corregido e integrado mediante PR #168; CI de PR y post-merge aprobados.
 - **Hallazgo:** la acción de integridad falló en `Install Chromium` con el error observado `Playwright does not support chromium on ubuntu26.04`. El runner de GitHub se resolvió a Ubuntu 26.04 mediante `ubuntu-latest`.
 - **Decisión técnica:** fijar a `ubuntu-24.04` los workflows `.github/workflows/validate.yml` y `.github/workflows/danmachi-lore-check.yml`, ambos con Playwright 1.55. La migración oficial de la etiqueta `ubuntu-latest` a Ubuntu 26.04 está documentada por [GitHub](https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration/); la versión de Playwright usada por el repo falló en esa imagen.
 - **Corrección de test:** hacer que una aserción de límites de fuente no falle por diferencia irrelevante de mayúsculas.
-- **Límite:** cambio de entorno de pruebas; no altera el producto ni cambia la jerarquía de evidencia de DMR-045. La PR #168 no se fusionará hasta que ambos workflows vuelvan a pasar.
+- **Resultado:** los workflows sobre la cabeza de PR `16338edec86670b1692084bea446657bc657eb71` finalizaron en `success` ([Validate WordWaifu #40510817854](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817854); [DanMachi Lore and Retrieval Integrity #40510817870](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817870)). Los workflows sobre el SHA de `main` `99a667e60f3651b98759a1993a26258ba37dd645` también finalizaron en `success` ([Validate WordWaifu #40511064727](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064727); [DanMachi Lore and Retrieval Integrity #40511064313](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064313)).
+- **Límite:** cambio de entorno de pruebas; no altera la funcionalidad narrativa ni la jerarquía de evidencia de DMR-045.

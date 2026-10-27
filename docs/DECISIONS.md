@@ -185,7 +185,7 @@
 
 
 ## DEC-030 — La página de diferencias de Astrea Record 3 es una pista secundaria, no texto primario
-**Estado:** Aplicada en rama de trabajo; validación e integración pendientes.
+**Estado:** Aplicada e integrada mediante PR #168; CI de PR y post-merge aprobados.
 **Decisión:** aprovechar la página comunitaria de diferencias entre Memoria Freese y la novelización para generar pistas de búsqueda sobre Alfia, Zald y Erebus, sin elevar sus resúmenes a canon cotejado.
 **Aplicación:** se registra como DMR-045-SRC-051, `secondary_checked`, `CONT-AR`. Sus notas interactivas etiquetan explícitamente los detalles reportados como secundarios y conservan la falta de capítulo/página narrativa.
 **Reglas:** no transferir contenido exclusivo de `CONT-GAME` a `CONT-AR`, no inferir el padre de Bell, no crear aristas familiares por una reseña comunitaria y no convertir una muestra inaccesible en evidencia de ausencia.
@@ -193,7 +193,8 @@
 
 
 ## DEC-031 — Fijar Ubuntu 24.04 para los workflows que usan Playwright 1.55
-**Estado:** Aplicada en la rama de trabajo de PR #168; CI de confirmación pendiente.
+**Estado:** Aplicada e integrada mediante PR #168; CI de PR y post-merge aprobados.
 **Motivo:** GitHub Actions ejecutó `ubuntu-latest` sobre Ubuntu 26.04 y Playwright 1.55 falló al instalar Chromium con `Playwright does not support chromium on ubuntu26.04`. GitHub anunció que la etiqueta `ubuntu-latest` migrará a Ubuntu 26.04 durante octubre–noviembre de 2026 ([anuncio oficial](https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration/)).
 **Aplicación:** fijar `runs-on: ubuntu-24.04` tanto en `.github/workflows/validate.yml` como en `.github/workflows/danmachi-lore-check.yml`, preservando la versión ya fijada de Playwright. Corregir además una aserción de texto que dependía de mayúsculas.
-**Límite:** decisión de reproducibilidad del CI; no modifica la funcionalidad de WordWaifu ni la evidencia narrativa de DanMachi.
+**Validación:** CI de PR: [Validate WordWaifu #40510817854](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817854) y [DanMachi Lore and Retrieval Integrity #40510817870](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817870) (`success`) sobre `16338edec86670b1692084bea446657bc657eb71`. CI post-merge: [Validate WordWaifu #40511064727](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064727) y [DanMachi Lore and Retrieval Integrity #40511064313](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064313) (`success`) sobre `99a667e60f3651b98759a1993a26258ba37dd645`.
+**Límite:** decisión de reproducibilidad del CI; no modifica la funcionalidad narrativa ni la evidencia de DanMachi.
