@@ -306,5 +306,5 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ## DMR-045 — BOOK☆WALKER vol. 20, ruta de muestra (2026-10-27)
 
 - [DMR-045-SRC-050](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) registra la ficha comercial y el enlace 試し読み del volumen 20 japonés.
-- La ruta de prueba redirige al visor oficial, que la herramienta no puede abrir (error 500); no se obtuvo texto narrativo.
+- La ruta de prueba redirige al visor oficial, que la herramienta no puede abrir: devuelve «Internal Error» al seguir la redirección y señala «not accessible via this tool»; no se confirmó una respuesta HTTP del visor ni se obtuvo texto narrativo.
 - La fuente aparece como `metadata_checked_only` en el directorio y en las notas de Alfia/Zald dentro de `CONT-MAIN-LN`. No añade canon ni cierra ninguno de los cinco cotejos primarios.
