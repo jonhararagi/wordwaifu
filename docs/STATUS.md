@@ -545,3 +545,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de PR:** [Validate WordWaifu #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [DanMachi Lore and Retrieval Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435) finalizaron `success` sobre el SHA de rama `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`.
 - **CI post-merge sobre el SHA exacto de `main` `79505bd740d47560d4bc67166c807d14090a950d`: [Validate WordWaifu #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [DanMachi Lore and Retrieval Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
 - **Pendiente sin repetir fuentes:** DMR-045 sigue a la espera de texto primario licenciable y legible para Alfia, Zald, Meteria, Erebus y Rudra. No reabrir las mismas muestras que solo dieron pantallas de carga salvo que aparezca un cambio material.
+
+
+## DMR-053 · Familia Loki: capacidades de combate (2026-10-27)
+
+- Cohorte investigada: Bete Loga, Tiona Hiryute y Tione Hiryute.
+- Campos capturados en CONT-SECONDARY: skills, magia, habilidades de desarrollo, equipo, snapshots de nivel y discrepancias de fuente.
+- Bitácora: tres entradas únicas añadidas a CHARACTER_UPDATE_LEDGER.md; el test de regresión exige fuentes detectables, notas secundarias y campos de límite.
+- **Estado:** implementado en la rama research/loki-frontline-capabilities-2026-10-27; CI, revisión e integración pendientes.
+- **No se modificó:** personalidad, pasado de Kali Familia, relaciones, eventos o claims narrativos.
