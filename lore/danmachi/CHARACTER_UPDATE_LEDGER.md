@@ -2,7 +2,7 @@
 
 - **Última actualización:** 2026-10-27.
 - **Propósito:** evitar análisis repetidos sin datos nuevos; registrar qué se consultó, qué información apareció, qué no está reportado y qué resultado debe reutilizarse.
-- **Alcance de esta pasada:** datos de niveles, magia, habilidades, habilidades de desarrollo y equipo de la primera Astrea Familia, más el cierre de búsqueda secundaria de los cinco expedientes DMR-045. **No se reescribieron personalidades.**
+- **Alcance de las pasadas documentadas:** datos de niveles, magia, habilidades, habilidades de desarrollo y equipo de la primera Astrea Familia; cierre de búsqueda secundaria de los cinco expedientes DMR-045; y pasada de capacidades de la cohorte Freya Familia DMR-052. **No se reescribieron personalidades.**
 - **Integración:** [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170), SHA de `main` `034eb037f98ce25076de7fc4217a62cb960172eb`.
 - **CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`:** [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`.
 - **CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`:** [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
