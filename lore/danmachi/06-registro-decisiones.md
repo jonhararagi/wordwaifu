@@ -149,7 +149,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-017 — BOOK☆WALKER vol. 20: el enlace 試し読み no equivale a lectura
 - **Fecha:** 2026-10-27.
-- **Estado:** Registrado en rama de trabajo; implementación y CI pendientes.
-- **Decisión:** registrar la muestra licenciada como ruta de consulta aun cuando la herramienta no pueda abrir el visor, indicando la respuesta real observada.
+- **Estado:** Implementada e integrada mediante PR #166; CI de PR aprobado; CI post-merge en curso.
+- **Decisión:** registrar la muestra licenciada como ruta de consulta aun cuando la herramienta no pueda abrir el visor, indicando el resultado observado con precisión.
 - **Aplicación:** DMR-045-SRC-050 guarda la ficha y ruta de prueba del volumen 20 japonés. La herramienta devolvió «Internal Error» al seguir la redirección y señaló «not accessible via this tool»; no se confirmó una respuesta HTTP del visor ni se recuperó texto.
-- **Límites:** mantiene `CONT-MAIN-LN`, no modifica claims/eventos/aristas/aliases y no mezcla las referencias con `CONT-AR` o `CONT-GAME`. Los cinco cotejos primarios siguen abiertos.
+- **Integración:** [PR #166](https://github.com/jonhararagi/wordwaifu/pull/166), SHA de `main` `2951fa55396564cb878e00ab5c7d2b297966cd64`; la comparación GitHub confirmó que el SHA coincide con `main`.
+- **CI de PR:** [Validate #40450101232](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101232) y [Lore/Integrity #40450101166](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101166), ambos `success` sobre el head probado `80c5468f78812312898dbe3f6de709856f63d0d2`.
+- **CI post-merge pendiente:** [Validate #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [Lore/Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519) aún no habían finalizado en el momento del registro.
+- **Límites:** mantiene `CONT-MAIN-LN), no modifica claims/eventos/aristas/aliases y no mezcla las referencias con `CONT-AR` o `CONT-GAME`. Los cinco cotejos primarios siguen abiertos.
