@@ -190,3 +190,10 @@
 **Aplicación:** se registra como DMR-045-SRC-051, `secondary_checked`, `CONT-AR`. Sus notas interactivas etiquetan explícitamente los detalles reportados como secundarios y conservan la falta de capítulo/página narrativa.
 **Reglas:** no transferir contenido exclusivo de `CONT-GAME` a `CONT-AR`, no inferir el padre de Bell, no crear aristas familiares por una reseña comunitaria y no convertir una muestra inaccesible en evidencia de ausencia.
 **Continuidad del trabajo:** los cinco cotejos primarios de DMR-045 siguen siendo la prioridad previa a la expansión de Orario.
+
+
+## DEC-031 — Fijar Ubuntu 24.04 para los workflows que usan Playwright 1.55
+**Estado:** Aplicada en la rama de trabajo de PR #168; CI de confirmación pendiente.
+**Motivo:** GitHub Actions ejecutó `ubuntu-latest` sobre Ubuntu 26.04 y Playwright 1.55 falló al instalar Chromium con `Playwright does not support chromium on ubuntu26.04`. GitHub anunció que la etiqueta `ubuntu-latest` migrará a Ubuntu 26.04 durante octubre–noviembre de 2026 ([anuncio oficial](https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration/)).
+**Aplicación:** fijar `runs-on: ubuntu-24.04` tanto en `.github/workflows/validate.yml` como en `.github/workflows/danmachi-lore-check.yml`, preservando la versión ya fijada de Playwright. Corregir además una aserción de texto que dependía de mayúsculas.
+**Límite:** decisión de reproducibilidad del CI; no modifica la funcionalidad de WordWaifu ni la evidencia narrativa de DanMachi.
