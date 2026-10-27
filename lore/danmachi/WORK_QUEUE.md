@@ -927,6 +927,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Registrar la divergencia ortográfica Flosvirt/Frosvirt sin adjudicar un cambio de canon.
 - [x] Añadir las notas de CONT-SECONDARY para Bete Loga, Tiona Hiryute y Tione Hiryute, sin reescribir personalidad ni historia.
 - [x] Registrar cuatro fuentes comunitarias y añadir una regresión del protocolo anti-repetición.
-- [ ] Ejecutar ambos workflows; abrir PR y fusionar solo con checks aprobados.
+- [x] Ejecutar ambos workflows y aprobar el CI de PR: [Validate #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962), [Lore/Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069).
+- [x] Integrar mediante [PR #174](https://github.com/jonhararagi/wordwaifu/pull/174), SHA de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- [x] Verificar CI post-merge: [Validate #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [Lore/Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
 - **Límite:** datos secundarios; no se crean claims narrativos, eventos o relaciones.
 - **Convivencia con DMR-045:** los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes. DMR-053 no reemplaza esa prioridad ni justifica repetir las muestras no legibles.

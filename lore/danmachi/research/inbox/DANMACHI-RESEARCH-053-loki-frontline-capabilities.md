@@ -57,3 +57,9 @@
 ## Pendiente de canon
 
 Las tres entradas necesitan un pasaje narrativo de edición licenciada para elevar las mecánicas a verificación primaria. No se reabren las páginas comunitarias arriba listadas para reformular personalidad o rastrear una vez más campos que no contienen.
+
+## Integración y validación técnica
+- Integrado mediante [PR #174](https://github.com/jonhararagi/wordwaifu/pull/174), SHA de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
+- El estado técnico no eleva a canon primario las mecánicas y costes de las wikis comunitarias.

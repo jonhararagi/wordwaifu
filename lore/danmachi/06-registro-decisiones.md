@@ -188,7 +188,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-021 — Pasada de capacidades Loki sin iteración de personalidad
 - **Fecha:** 2026-10-27.
-- **Estado:** implementado en rama; validación e integración pendientes.
+- **Estado:** implementado e integrado en `main` mediante PR [#174](https://github.com/jonhararagi/wordwaifu/pull/174); CI de PR y post-merge aprobados.
 - **Decisión operativa:** cuando una fuente ya fue recorrida varias veces, no repetirla sin un cambio material. Pasar a otro personaje/grupo y limitar la ampliación a capacidades, equipo o límites verificables; no volver a redactar personalidad.
 - **Aplicación:** DMR-053 registra Hati, Úlfheðinn, Fenris Wolf y Solmani para Bete; Berserk e Intense Heat para Tiona; Berserk, Backdraft y List Iorum para Tione, con sus armas/habilidades de desarrollo reportadas.
 - **Límites:** las fuentes son wikis comunitarias, bajo CONT-SECONDARY; tablas de nivel 5 y encabezados de nivel 6 son snapshots distintos; “no listado” no prueba inexistencia universal.
+- SHA de `main`: `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
