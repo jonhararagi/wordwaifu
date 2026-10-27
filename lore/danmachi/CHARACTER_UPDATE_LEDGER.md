@@ -262,3 +262,8 @@ Esta es una cohorte distinta, abierta porque las fuentes primarias de DMR-045 si
 - **Cierre:** no transferir las habilidades de una gemela a la otra por analogía; no volver a reformular personalidad o historial.
 - **Reabrir solo si:** aparece un pasaje primario legible o una actualización material de la fuente.
 
+## Cierre de integración — cohorte Loki Familia DMR-053 (2026-10-27)
+- Integrado mediante [PR #174](https://github.com/jonhararagi/wordwaifu/pull/174), SHA de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
+- La cohorte conserva fuentes secundarias, la variante Flosvirt/Frosvirt y snapshots de nivel 5 separados de encabezados de nivel 6. No se modifica personalidad ni historial; “no listado” se mantiene como límite de la fuente.
