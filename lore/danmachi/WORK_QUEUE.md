@@ -862,4 +862,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Enlazar la ruta desde las fichas de investigación de Alfia y Zald bajo CONT-MAIN-LN, sin trasladarla a CONT-AR o CONT-GAME.
 - [x] Añadir regresiones de unicidad, URL, estado de evidencia y separación de continuidad.
 - [ ] Abrir la muestra en una sesión normal accesible y registrar capítulo/página solo si una página narrativa queda realmente legible; la herramienta pública devolvió “Cache miss”.
-- **Estado factual:** ruta implementada en rama de trabajo; no equivale a texto primario y no cierra los cinco localizadores de DMR-045.
+- [x] Integrar la ruta metadata-only mediante [PR #164](https://github.com/jonhararagi/wordwaifu/pull/164), squash SHA `345db0189308b2e34a31bbf8f3930e75f0b4fc2f`.
+- [x] Confirmar CI de PR sobre `dc60cf91fba87a85419bc029d24dd7b8446420f6`: [Validate #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [Lore/Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895), ambos `success`.
+- [ ] Verificar evidencia post-merge de los workflows sobre el SHA exacto de main; las consultas disponibles no devolvieron estados que permitan declararlos verdes.
+- **Estado factual:** ruta implementada e integrada, con CI de PR aprobado; no equivale a texto primario y no cierra los cinco localizadores de DMR-045.
