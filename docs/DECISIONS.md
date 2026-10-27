@@ -167,3 +167,9 @@
 **Decisión:** una ficha de Kobo que anuncie “Preview Now” o “Save Preview” puede registrarse como ruta de investigación de una edición licenciada, aunque el acceso automatizado a la ficha o al lector falle. El resultado solo sustenta que se localizó una oferta de vista previa, no que se inspeccionó su contenido.
 **Aplicación:** DMR-045-SRC-049 registra la ficha inglesa de DanMachi vol. 20 bajo CONT-MAIN-LN y metadata_checked_only. Se enlaza desde las pistas independientes de Alfia y Zald; claims_supported vacío, events_supported vacío y sin relaciones nuevas.
 **Límites:** no inferir presencia/ausencia, escena, habilidad o relación a partir de metadatos, índice, errores de caché o botones de muestra. Mantener abiertos los cinco cotejos primarios de DMR-045 hasta obtener texto narrativo visible y un localizador reproducible.
+
+## DEC-028 — Implementación y validación de la ruta Kobo (PR #164)
+- Integrado en [PR #164](https://github.com/jonhararagi/wordwaifu/pull/164), merge SHA `345db0189308b2e34a31bbf8f3930e75f0b4fc2f`; head probado `dc60cf91fba87a85419bc029d24dd7b8446420f6`.
+- CI de PR: [Validate #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [DanMachi Lore and Retrieval Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895), ambos `success`.
+- No se pudo confirmar el estado de los workflows disparados post-merge para el SHA de main; no se marcarán como aprobados sin evidencia directa.
+- La lectura primaria continúa pendiente y la fuente sigue `metadata_checked_only`.
