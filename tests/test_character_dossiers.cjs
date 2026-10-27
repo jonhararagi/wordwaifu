@@ -144,7 +144,7 @@ assert.ok(erebusNovelInfo.sections.some(section => section.text.includes("flores
   "Erebus's CONT-AR note must surface the BookLive review lead without promoting it to novel canon.");
 assert.ok(erebusNovelInfo.references.some(ref => ref.kind === "community" && ref.url === "https://booklive.jp/review/list/title_id/1237250/vol_no/003"),
   "Erebus's CONT-AR note must link the BookLive review, not the separate game page.");
-assert.ok(erebusNovelInfo.sections.some(section => section.text.includes("escena EXTRA") && section.text.includes("no ofrece una transcripción localizada") && section.text.includes("CONT-GAME")),
+assert.ok(erebusNovelInfo.sections.some(section => section.text.includes("escena EXTRA") && section.text.includes("No ofrece una transcripción localizada") && section.text.includes("CONT-GAME")),
   "Erebus's CONT-AR note must surface the novelization EXTRA lead without importing game ideology.");
 assert.ok(erebusNovelInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias"),
   "Erebus's CONT-AR note must link the secondary differences page.");
