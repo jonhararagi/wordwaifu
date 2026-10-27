@@ -721,7 +721,7 @@ EXTENDED["CHAR-NOIN-UNIC"]["CONT-SECONDARY"]={
 title:"Noin Unic · magia de velocidad sin nombre",
 summary:"La pasada secundaria encontró un efecto descrito, pero el nombre del hechizo no figura en las referencias consultadas.",
 sections:[
-{title:"Nivel y magia",text:"La tabla de Astraea Familia indica nivel 4; Minor Characters ofrece el rango amplio 3–4. Ryuu Lion menciona una magia que aumenta la velocidad de Noin, sin nombre ni coste."},
+{title:"Nivel y magia",text:"La tabla de Astraea Familia indica nivel 4; Minor Characters ofrece el rango amplio 3–4. Ryuu Lion menciona una magia de aumento de velocidad de Noin, sin nombre ni coste."},
 {title:"Qué no se debe rellenar",text:"Las páginas consultadas no proporcionan nombre de la magia, skills con nombre ni costes individuales. Mantener esos campos como «no reportado en las fuentes consultadas»; no volver a buscar en las mismas páginas."}
 ],
 references:[
