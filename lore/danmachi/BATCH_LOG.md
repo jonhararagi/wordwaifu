@@ -471,5 +471,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se registran Hati y las skills Úlfheðinn/Fenris Wolf/Solmani para Bete; Berserk/Intense Heat para Tiona; Berserk/Backdraft y List Iorum para Tione.
 - Se registran armas y habilidades de desarrollo listadas por las wikis comunitarias, junto con dos límites de lectura: nivel 6 en encabezado frente a tablas estadísticas del nivel 5 y variantes Flosvirt/Frosvirt.
 - Fuente, alcance y condiciones para reabrir: DMR-053 y DMR-053-SRC-001..004; los cuatro registros quedan como secondary_checked.
-- **Estado:** implementado en rama de investigación; CI e integración pendientes.
-- **Próxima acción:** validar test anti-repetición, catálogo y navegador; integrar con los dos workflows aprobados.
+- **Integración:** [PR #174](https://github.com/jonhararagi/wordwaifu/pull/174), SHA de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
+- **Próxima acción:** volver a la prioridad DMR-045 solo ante un nuevo localizador primario legible; no repetir las mismas muestras sin un disparador material.
