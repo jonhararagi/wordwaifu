@@ -15,7 +15,8 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    # Keep Playwright 1.55 on a supported, stable runner; ubuntu-latest is migrating to Ubuntu 26.04.
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
         # v7.0.1; pinned to the verified upstream commit SHA (Node 24 runtime).

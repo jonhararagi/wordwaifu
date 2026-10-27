@@ -470,3 +470,21 @@
 - **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [DanMachi Lore and Retrieval Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519), ambos `success` sobre `2951fa55396564cb878e00ab5c7d2b297966cd64`.
 - **Límite:** fuente `metadata_checked_only`, sin claims, eventos, relaciones, aliases o cambios de métricas. Los cinco localizadores narrativos siguen abiertos.
 - **Siguiente acción:** confirmar los workflows post-merge y, por separado, abrir la muestra en un navegador normal; registrar un pasaje solo si el texto queda realmente visible con localizador reproducible.
+
+
+### CONV-DM-2026-10-27-002 — Usar la página de diferencias de Astrea Record 3 solo como guía secundaria
+- **Fecha:** 2026-10-27.
+- **Estado:** RESULTADO DE INVESTIGACIÓN REGISTRADO; IMPLEMENTACIÓN EN RAMA DE TRABAJO.
+- **Hallazgo:** la página comunitaria [Astrea Record Volumen 3/Diferencias](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias) resume cambios entre el juego y la novelización relacionados con habilidades de Alfia, el uso de la esgrima de Zald, Deus Ambrosia y una escena EXTRA que incluye a Erebus.
+- **Criterio aplicado:** la página se clasifica como `secondary_checked`, `CONT-AR`; sirve para localizar temas y preguntas, no para afirmar que se leyó el texto primario. La ficha oficial de GA Bunko ofrece `試し読み`, pero la vista pública consultada no expuso páginas narrativas legibles.
+- **Alcance de implementación:** directorio de fuentes y notas interactivas de Alfia, Zald y Erebus bajo `CONT-AR`, con pruebas para impedir filtración a `CONT-MAIN-LN` y `CONT-GAME`.
+- **Límite:** no se crean claims, eventos, relaciones, aliases ni métricas; Meteria sigue sin identificación por pasaje primario y los cinco expedientes de DMR-045 continúan abiertos.
+
+
+### CONV-DM-2026-10-27-003 — Fijar el runner de CI para Playwright 1.55
+- **Fecha:** 2026-10-27.
+- **Estado:** Corrección implementada en la rama de la PR #168; revalidación pendiente.
+- **Hallazgo:** la acción de integridad falló en `Install Chromium` con el error observado `Playwright does not support chromium on ubuntu26.04`. El runner de GitHub se resolvió a Ubuntu 26.04 mediante `ubuntu-latest`.
+- **Decisión técnica:** fijar a `ubuntu-24.04` los workflows `.github/workflows/validate.yml` y `.github/workflows/danmachi-lore-check.yml`, ambos con Playwright 1.55. La migración oficial de la etiqueta `ubuntu-latest` a Ubuntu 26.04 está documentada por [GitHub](https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration/); la versión de Playwright usada por el repo falló en esa imagen.
+- **Corrección de test:** hacer que una aserción de límites de fuente no falle por diferencia irrelevante de mayúsculas.
+- **Límite:** cambio de entorno de pruebas; no altera el producto ni cambia la jerarquía de evidencia de DMR-045. La PR #168 no se fusionará hasta que ambos workflows vuelvan a pasar.

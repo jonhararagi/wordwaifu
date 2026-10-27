@@ -505,3 +505,19 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de PR:** [Validate WordWaifu #40450101232](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101232) y [DanMachi Lore and Retrieval Integrity #40450101166](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101166) finalizaron `success` sobre el head de PR `80c5468f78812312898dbe3f6de709856f63d0d2`.
 - **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [DanMachi Lore and Retrieval Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519) finalizaron `success` para `2951fa55396564cb878e00ab5c7d2b297966cd64`.
 - No se modificaron claims, relaciones, sucesos, aliases o métricas. DMR-045 sigue `IN_PROGRESS`; los cinco cotejos primarios permanecen pendientes.
+
+
+## DMR-045 — Diferencias comunitarias de Astrea Record 3 (2026-10-27)
+
+- Se consultó [DanMachi Wiki · Astrea Record Novela Ligera Volumen 3/Diferencias](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias), que resume cambios atribuidos a la novelización frente a Memoria Freese relacionados con Alfia, Zald y Erebus.
+- DMR-045-SRC-051 la registra como `secondary_checked`, alcance `CONT-AR`. La ficha no es narración primaria ni ofrece localizadores reproducibles.
+- La página enlaza detalles útiles para buscar `Lugio`, `Gif Blessing`, `Genos Angelus`, `Deus Ambrosia` y la escena EXTRA, pero se conservan como pistas secundarias.
+- La ruta normal de muestra ofrecida por la ficha editorial de [GA Bunko](https://ga.sbcr.jp/product/9784815617554/) redirige al lector BinB; la consulta pública mostró interfaz y créditos, no páginas narrativas legibles.
+- Esta ampliación no añade claims, sucesos, relaciones, alias o métricas y no cierra ningún cotejo primario. DMR-045 sigue `IN_PROGRESS` con Alfia, Zald, Meteria, Erebus y Rudra pendientes.
+
+
+## Corrección de runner para pruebas de navegador (2026-10-27)
+
+- La PR #168 encontró que Playwright 1.55 no instala Chromium en el runner Ubuntu 26.04 al usar `ubuntu-latest`; el log devolvió `Playwright does not support chromium on ubuntu26.04`.
+- Los workflows `.github/workflows/validate.yml` y `.github/workflows/danmachi-lore-check.yml` se fijaron a `ubuntu-24.04` para mantener el runtime de navegador sobre un runner compatible con la dependencia fijada. La migración de `ubuntu-latest` está documentada por [GitHub](https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration/).
+- Se corrigió también una aserción nueva para tolerar diferencia de mayúsculas. El estado definitivo depende del próximo CI de la PR #168; no se considera validada hasta que ambos workflows terminen en `success`.

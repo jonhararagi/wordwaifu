@@ -42,9 +42,15 @@ assert.ok(alfiaArchiveInfo.sections.some(section => section.text.includes("tumba
   "Alfia's Astrea Record note must expose the BookLive memorial lead as secondary, not as a primary scene.");
 assert.ok(alfiaArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://booklive.jp/review/list/title_id/1237250/vol_no/003"),
   "Alfia's Astrea Record note must link the BookLive review source for the secondary memorial clue.");
+assert.ok(alfiaArchiveInfo.sections.some(section => section.text.includes("Lugio") && section.text.includes("pistas secundarias") && section.text.includes("DMR-045-SRC-051")),
+  "Alfia's CONT-AR note must expose the novelization differences as a secondary scene locator.");
+assert.ok(alfiaArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias"),
+  "Alfia's Astrea Record note must link the community differences page.");
 const alfiaMainNovelInfo = archiveApi.getExtendedInfo("CHAR-DARK-ALFIA", "CONT-MAIN-LN", null);
 assert.ok(alfiaMainNovelInfo && alfiaMainNovelInfo.title.includes("volumen 20"),
   "Alfia must expose a distinct CONT-MAIN-LN volume 20 lead without relabelling it as Astrea Record.");
+assert.ok(!alfiaMainNovelInfo.references.some(ref => ref.url === "https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias"),
+  "The Astrea Record differences source must not leak into Alfia CONT-MAIN-LN.");
 assert.ok(!alfiaMainNovelInfo.sections.some(section => section.text.includes("campana gris plateada")),
   "Alfia CONT-AR ability details must not leak into the main-novel note.");
 
@@ -58,9 +64,15 @@ assert.ok(zaldArchiveInfo.sections.some(section => section.text.includes("tumbas
   "Zald's Astrea Record note must expose the BookLive memorial lead as secondary, not as a primary scene.");
 assert.ok(zaldArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://booklive.jp/review/list/title_id/1237250/vol_no/003"),
   "Zald's Astrea Record note must link the BookLive review source for the secondary memorial clue.");
+assert.ok(zaldArchiveInfo.sections.some(section => section.text.includes("veneno de Behemoth") && section.text.includes("no identifica al padre de Bell")),
+  "Zald's CONT-AR note must preserve the secondary-only limit around the EXTRA scene and Bell's father.");
+assert.ok(zaldArchiveInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias"),
+  "Zald's Astrea Record note must link the community differences page.");
 const zaldMainNovelInfo = archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null);
 assert.ok(zaldMainNovelInfo && zaldMainNovelInfo.title.includes("volumen 20"),
   "Zald must expose a distinct CONT-MAIN-LN volume 20 lead without relabelling it as Astrea Record.");
+assert.ok(!zaldMainNovelInfo.references.some(ref => ref.url === "https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias"),
+  "The Astrea Record differences source must not leak into Zald CONT-MAIN-LN.");
 assert.ok(!zaldMainNovelInfo.sections.some(section => section.text.includes("Deus Ambrosia")),
   "Zald CONT-AR ability details must not leak into the main-novel note.");
 
@@ -132,6 +144,13 @@ assert.ok(erebusNovelInfo.sections.some(section => section.text.includes("flores
   "Erebus's CONT-AR note must surface the BookLive review lead without promoting it to novel canon.");
 assert.ok(erebusNovelInfo.references.some(ref => ref.kind === "community" && ref.url === "https://booklive.jp/review/list/title_id/1237250/vol_no/003"),
   "Erebus's CONT-AR note must link the BookLive review, not the separate game page.");
+assert.ok(erebusNovelInfo.sections.some(section => section.text.includes("escena EXTRA") && section.text.includes("No ofrece una transcripción localizada") && section.text.includes("CONT-GAME")),
+  "Erebus's CONT-AR note must surface the novelization EXTRA lead without importing game ideology.");
+assert.ok(erebusNovelInfo.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias"),
+  "Erebus's CONT-AR note must link the secondary differences page.");
+const erebusGameInfoForDifferences = archiveApi.getExtendedInfo("CHAR-DARK-EREBUS", "CONT-GAME", null);
+assert.ok(!erebusGameInfoForDifferences.references.some(ref => ref.url === "https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias"),
+  "The Astrea Record differences source must not leak into Erebus's game-continuity references.");
 const rudraMainInfo = archiveApi.getExtendedInfo("CHAR-DARK-RUDRA", "CONT-MAIN-LN", null);
 assert.ok(rudraMainInfo && rudraMainInfo.sections.some(section => section.text.includes("no demuestra que Rudra") && section.text.includes("Rudra Familia")),
   "Rudra's note must distinguish group responsibility from unproven personal authorization.");

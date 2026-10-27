@@ -311,3 +311,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Integración:** [PR #166](https://github.com/jonhararagi/wordwaifu/pull/166), squash SHA de `main` `2951fa55396564cb878e00ab5c7d2b297966cd64`.
 - **CI de PR:** [Validate #40450101232](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101232) y [Lore/Integrity #40450101166](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101166) pasaron sobre `80c5468f78812312898dbe3f6de709856f63d0d2`.
 - **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [DanMachi Lore and Retrieval Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519) finalizaron `success` para `2951fa55396564cb878e00ab5c7d2b297966cd64`.
+
+
+## DMR-045-SRC-051 — Diferencias comunitarias de Astrea Record 3
+
+- [DANMACHI-RESEARCH-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) registra [la página comunitaria de diferencias entre Memoria Freese y Astrea Record 3](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias) como `secondary_checked`, `CONT-AR`.
+- La página ayuda a localizar temas de Alfia, Zald y la escena EXTRA con Erebus; no es texto narrativo primario ni ofrece localizadores reproducibles.
+- La fuente aparece en el directorio buscable y las notas interactivas de los tres personajes solo dentro de `CONT-AR`. No se crean claims, relaciones o eventos. Los cinco cotejos primarios siguen pendientes.

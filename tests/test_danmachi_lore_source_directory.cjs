@@ -302,6 +302,17 @@ assert.ok(bookLiveAstrea3Review[0].coverage.includes("DMR-045-CLM-022"));
 assert.ok(bookLiveAstrea3Review[0].coverage.includes("Bell y Hermes") && bookLiveAstrea3Review[0].coverage.includes("tumbas de Erebus, Zald y Alfia"));
 assert.ok(bookLiveAstrea3Review[0].limits.includes("no confirmación de escena"));
 
+const astreaRecordDifferences = sources.filter(source => source.id === "community-astrea-record-vol3-differences");
+assert.equal(astreaRecordDifferences.length, 1, "Astrea Record vol. 3 differences page must be registered exactly once");
+assert.equal(astreaRecordDifferences[0].category, "community");
+assert.equal(astreaRecordDifferences[0].url, "https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias");
+assert.match(astreaRecordDifferences[0].authority, /Fuente secundaria/);
+assert.ok(astreaRecordDifferences[0].coverage.includes("Lugio") && astreaRecordDifferences[0].coverage.includes("Gif Blessing"));
+assert.ok(astreaRecordDifferences[0].coverage.includes("Deus Ambrosia") && astreaRecordDifferences[0].coverage.includes("Erebus"));
+assert.match(astreaRecordDifferences[0].limits, /no texto primario/i);
+assert.match(astreaRecordDifferences[0].limits, /CONT-GAME/);
+assert.match(astreaRecordDifferences[0].limits, /ni ofrece paginación narrativa reproducible/i);
+
 const sbCreativeVol20 = sources.filter(source => source.id === "official-sbcreative-danmachi-vol20-sample");
 assert.equal(sbCreativeVol20.length, 1, "SB Creative DanMachi vol. 20 reader route must be discoverable exactly once");
 assert.equal(sbCreativeVol20[0].category, "official");
