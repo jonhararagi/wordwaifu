@@ -504,3 +504,11 @@
 - **CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`:** [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`.
 - **CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`:** [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
 - **Límite:** las notas siguen siendo secundarias; no se crean claims/eventos/aristas ni se cambian personalidades en esta tanda. El test `tests/test_character_update_ledger.cjs` queda conectado a ambos workflows.
+
+### CONV-DM-2026-10-27-005 — Aplicar la bitácora a otra Familia y registrar capacidades faltantes
+- **Fecha:** 2026-10-27.
+- **Estado:** investigación e implementación en rama de trabajo; integración y CI pendientes.
+- **Instrucción aplicada:** al haber repetido varios intentos sobre los mismos expedientes, pasar a otros personajes; no repetir la actualización de personalidad. Si las wikis/juegos no informan un poder, nivel, skill, magia o coste, anotar que la fuente no lo informa y continuar sin inventarlo.
+- **Cohorte:** Allen Fromel, Hedin Selland, Hogni Ragnar y Alfrigg, Dvalinn, Berling y Grer Gulliver. Se consulta la información comunitaria de capacidades, skills, magia y equipo.
+- **Implementación:** [DMR-052](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-052-freya-familia-secondary-capabilities.md); ampliación de CONT-SECONDARY, bitácora anti-repetición, directorio de fuentes y pruebas.
+- **Límites:** todos los hallazgos de esta tanda son secundarios; no se crean claims/eventos/relaciones nuevos ni se modifican personalidades. Los cinco cotejos primarios de DMR-045 siguen pendientes y se reabrirán solo ante evidencia nueva.

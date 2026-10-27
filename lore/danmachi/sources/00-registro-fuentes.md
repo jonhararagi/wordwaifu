@@ -3737,3 +3737,137 @@ verification_status: stub
 - rights_note: Guardar URL y paráfrasis breve; no copiar pasajes extensos ni eludir lectores licenciados.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: secondary_checked
+
+
+## DMR-052-SRC-001 · DanMachi Wiki — Allen Fromel
+
+- source_id: DMR-052-SRC-001
+- title: Allen Fromel
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; sin edición identificada en esta consulta
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Allen_Fromel
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Skill, Magic and Equipment; Abilities.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria utilizada para registrar como reportados el snapshot de nivel 6, la magia Gralineze Fromel y la lanza. No se cotejó directamente la novela ni se verificaron costes numéricos.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-052
+- verification_status: secondary_checked
+
+## DMR-052-SRC-002 · DanMachi Wiki — Hedin Selland
+
+- source_id: DMR-052-SRC-002
+- title: Hedin Selland
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; sin edición identificada en esta consulta
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Hedin_Selland
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Skill, Magic and Equipment; Abilities.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para los nombres de skills, magias y equipo. No es texto primario ni proporciona en esta pasada un cotejo reproducible de todos los costes.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-052
+- verification_status: secondary_checked
+
+## DMR-052-SRC-003 · DanMachi Wiki — Hedin Selland/Habilidades
+
+- source_id: DMR-052-SRC-003
+- title: Hedin Selland/Habilidades
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Página comunitaria de habilidades
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Hedin_Selland/Habilidades
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Habilidades; Estadísticas; Magia; Habilidades de Desarrollo; Equipo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para las descripciones de Caelus Hildr, Varian Hildr y Laurus Hildr y las restricciones reportadas. Las cifras y mecanismos no quedan cotejados con la novela.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-052
+- verification_status: secondary_checked
+
+## DMR-052-SRC-004 · DanMachi Wiki — Hogni Ragnar
+
+- source_id: DMR-052-SRC-004
+- title: Hogni Ragnar
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; sin edición identificada en esta consulta
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Hogni_Ragnar
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Skill, Magic and Equipment; Abilities.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para el snapshot de nivel 6, las magias/skills enumeradas y Victim Abyss. Rasu Dain aparece nombrada, pero el efecto no quedó descrito en el contenido recuperado.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-052
+- verification_status: secondary_checked
+
+## DMR-052-SRC-005 · Wiki DanMachi — Hermanos Gulliver
+
+- source_id: DMR-052-SRC-005
+- title: Hermanos Gulliver
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario grupal
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Situación Profesional; Habilidades; Habilidades de Desarrollo; Equipo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria sobre coordinación grupal, especialidades y armas. Resistencia Anormal se atribuye expresamente a Dvalinn; no generalizarlo a cada hermano ni inferir skills individuales no listadas.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-052
+- verification_status: secondary_checked
+
+
+## DMR-052-SRC-006 · DanMachi Wiki — Gulliver Brothers
+
+- source_id: DMR-052-SRC-006
+- title: Gulliver Brothers
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario grupal
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Gulliver_Brothers
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Abilities; Development Abilities; Equipment.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria contrastada con la página en español para la descripción grupal y las especialidades de cada hermano. No se cotejó directamente la novela ni se asignan stats individuales a partir del nivel grupal.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-052
+- verification_status: secondary_checked

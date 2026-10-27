@@ -2,7 +2,7 @@
 
 - **Última actualización:** 2026-10-27.
 - **Propósito:** evitar análisis repetidos sin datos nuevos; registrar qué se consultó, qué información apareció, qué no está reportado y qué resultado debe reutilizarse.
-- **Alcance de esta pasada:** datos de niveles, magia, habilidades, habilidades de desarrollo y equipo de la primera Astrea Familia, más el cierre de búsqueda secundaria de los cinco expedientes DMR-045. **No se reescribieron personalidades.**
+- **Alcance de las pasadas documentadas:** datos de niveles, magia, habilidades, habilidades de desarrollo y equipo de la primera Astrea Familia; cierre de búsqueda secundaria de los cinco expedientes DMR-045; y pasada de capacidades de la cohorte Freya Familia DMR-052. **No se reescribieron personalidades.**
 - **Integración:** [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170), SHA de `main` `034eb037f98ce25076de7fc4217a62cb960172eb`.
 - **CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`:** [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`.
 - **CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`:** [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
@@ -162,3 +162,66 @@ Estos cinco expedientes ya tienen repetidos barridos secundarios y rutas de mues
 ## Próxima actualización permitida
 
 **Pasar a otros personajes en lugar de iterar sobre los ya cerrados.** Para esta cohorte, el siguiente lote debe ser de otra Familia/otro grupo y usar el mismo pase único. No reabrir los 10 registros de Astrea ni los cinco DMR-045 sin uno de los disparadores enumerados arriba.
+
+
+## Pasada secundaria 2026-10-27 — Freya Familia: capacidades y equipo
+
+Esta es una cohorte distinta, abierta porque las fuentes primarias de DMR-045 siguen inaccesibles. No se repiten las páginas de Astrea ya cerradas y no se reescriben personalidades. Detalle completo y referencias: [DANMACHI-RESEARCH-052](research/inbox/DANMACHI-RESEARCH-052-freya-familia-secondary-capabilities.md).
+
+### CHAR-ALLEN-FROMEL — Allen Fromel
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URLs consultadas:** [DanMachi Wiki · Allen Fromel](https://danmachi.fandom.com/wiki/Allen_Fromel).
+- **Datos encontrados:** snapshot de nivel 6; magia Gralineze Fromel, cuya velocidad y poder destructivo aumentan con la aceleración; lanza.
+- **No informado en la pasada:** costes numéricos y lista individual completa de skills con nombres.
+- **Cierre:** usar como nota secundaria; no reformular personalidad ni completar huecos por analogía.
+
+### CHAR-HEDIN-SELLAND — Hedin Selland
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URLs consultadas:** [perfil en inglés](https://danmachi.fandom.com/wiki/Hedin_Selland) y [Habilidades en español](https://danmachi.fandom.com/es/wiki/Hedin_Selland/Habilidades).
+- **Datos encontrados:** snapshot nivel 6; magias Caelus Hildr, Varian Hildr y Laurus Hildr; skills Hildr Blood, Fairy Hildr, Diu Hjaðningavíg y Solvato Eo; habilidades de desarrollo Mage, Abnormal Resistance, Magic Resistance, Spirit Healing y Destructive Lightning; arma Dizaria con estado posterior incierto.
+- **No informado/limitado:** coste numérico general, duración fija de encantamientos y confirmación del arma posterior.
+- **Cierre:** la restricción de Laurus Hildr (no autoaplicación, objetivo reconocido, alto consumo de mente) queda secundaria; no se reabre para buscar costes en las mismas páginas sin novedad.
+
+### CHAR-HOGNI-RAGNAR — Hogni Ragnar
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URL consultada:** [DanMachi Wiki · Hogni Ragnar](https://danmachi.fandom.com/wiki/Hogni_Ragnar).
+- **Datos encontrados:** snapshot nivel 6; magias Dainsleif, Burn Dain, Rasu Dain; skills Fairy Nocturne, Vow Hjaðningavíg, Dark In; desarrollos Hunter, Mage, Abnormal Resistance, Swordsman y Flash Cut; arma Victim Abyss.
+- **No informado/limitado:** efecto explicado de Rasu Dain en el contenido recuperado; costes exactos. La extensión de hoja reportada para Victim Abyss se conserva como secundaria.
+- **Cierre:** no repetir búsqueda de Rasu Dain en la misma página sin actualización. No confundir efecto de Dainsleif con personalidad permanente.
+
+### CHAR-GULLIVER-BROTHERS — Hermanos Gulliver
+- **Estado:** SECONDARY_PASS_COMPLETE para los datos conjuntos.
+- **URL consultada:** [Wiki DanMachi · Hermanos Gulliver](https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver) y contraste de [la página inglesa](https://danmachi.fandom.com/wiki/Gulliver_Brothers).
+- **Datos encontrados:** snapshot grupal nivel 5; coordinación descrita como comparable a nivel 6 si están sincronizados; especialidades diferenciadas entre cálculo/decisión, detección mágica, búsqueda de enemigos y observación; armas individuales nombradas.
+- **No informado/limitado:** lista individual completa de magias y skills. Resistencia Anormal se atribuye expresamente a Dvalinn, no a todos los hermanos.
+- **Cierre:** no convertir la capacidad conjunta en atributos individuales. Reabrir ante fuente nueva o texto primario.
+
+### CHAR-ALFRIGG-GULLIVER — Alfrigg
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URL:** [Hermanos Gulliver](https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver).
+- **Dato encontrado:** lanza; análisis y decisiones rápidas basadas en lo que detectan los hermanos.
+- **No informado:** skill/magia individual con nombre, coste y nivel individual independiente.
+- **Cierre:** no duplicar los datos colectivos como stats personales.
+
+### CHAR-DVALINN-GULLIVER — Dvalinn
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URL:** [Hermanos Gulliver](https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver).
+- **Dato encontrado:** martillo; detección de magia; Resistencia Anormal atribuida individualmente, sin asignar aquí rango numérico.
+- **No informado:** nombres de magia/skill y coste.
+- **Cierre:** no transferir esta habilidad a los otros tres sin evidencia.
+
+### CHAR-BERLING-GULLIVER — Berling
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URL:** [Hermanos Gulliver](https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver).
+- **Dato encontrado:** hacha; búsqueda de enemigos y vigilancia ante emboscadas.
+- **No informado:** magia/skill individual con nombre y costes.
+- **Cierre:** no inferir habilidades formales de la descripción táctica.
+
+### CHAR-GRER-GULLIVER — Grer
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URL:** [Hermanos Gulliver](https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver).
+- **Dato encontrado:** espadón; observación de hábitos y debilidades del adversario.
+- **No informado:** magia/skill individual con nombre y costes.
+- **Cierre:** no renombrar la especialidad como skill formal.
+
+**Regla de toda la cohorte:** las referencias son secundarias y no se crearon claims, eventos ni relaciones. Reabrir solo con página primaria legible, fuente oficial nueva, actualización material de la wiki o contradicción nueva.

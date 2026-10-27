@@ -188,6 +188,12 @@ El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis d
 La revisión de [Alfia](dark-era/alfia.md), [Zald](dark-era/zald.md), [Meteria](dark-era/meteria.md), [Erebus](dark-era/erebus.md) y [Rudra](dark-era/rudra.md) está recogida en [DANMACHI-RESEARCH-045](../research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md). Las fuentes comunitarias siguen siendo secundarias; la nota de autor de Meteria permanece en CONT-AU, y la fase posterior de Rudra/Juggernaut se mantiene separada del intervalo T-7 de Astrea Record.
 
 
+## DMR-052 · Capacidades secundarias de Freya Familia
+
+- [Allen Fromel](allenfromel.md), [Hedin Selland](hedinselland.md), [Hogni Ragnar](hogniragnar.md) y [Hermanos Gulliver](gulliverbrothers.md) tienen notas ampliadas bajo CONT-SECONDARY.
+- Las especialidades de [Alfrigg](alfrigggulliver.md), [Dvalinn](dvalinngulliver.md), [Berling](berlinggulliver.md) y [Grer](grergulliver.md) se conservan por separado sin inventar magias ni skills individuales.
+- Véase [DANMACHI-RESEARCH-052](../research/inbox/DANMACHI-RESEARCH-052-freya-familia-secondary-capabilities.md) y la [bitácora anti-repetición](../CHARACTER_UPDATE_LEDGER.md).
+
 ## DMR-046 · Perfiles ampliados de Solingen y Soma Familia
 
 - [Cecil Blackliza](cecil-blackliza.md) — capitanía y herrería reportadas; datos personales siguen secundarios.

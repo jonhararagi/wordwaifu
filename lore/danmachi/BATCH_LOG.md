@@ -449,3 +449,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Política de rescate:** mantener archivadas las ramas viejas sin borrarlas; cualquier requerimiento futuro de una rama histórica se recuperará por diff selectivo sobre el main vigente, con pruebas y continuidad actualizadas.
 - **Próxima tarea efectiva:** DMR-045 mantiene pendientes los pasajes primarios de Alfia/Zald/Erebus, Meteria/Bell y Rudra/Jura. El censo de ramas no cierra la investigación factual.
 
+
+
+## DANMACHI-RESEARCH-052 · Capacidades secundarias de Freya Familia (2026-10-27)
+
+- Se hizo una pasada estructurada por las páginas comunitarias de Allen Fromel, Hedin Selland, Hogni Ragnar y Hermanos Gulliver; para Hedin se consultó además la subpágina de habilidades en español.
+- Se registran snapshots reportados de nivel, magias, skills, desarrollos y equipo cuando la fuente los enumera; se anotan por separado los límites de Laurus Hildr, Dainsleif, Victim Abyss y la coordinación grupal de los Gulliver.
+- La ficha conjunta Gulliver conserva cuatro especialidades: cálculo/decisión (Alfrigg), detección mágica (Dvalinn), búsqueda/alerta de emboscadas (Berling) y observación del adversario (Grer). La Resistencia Anormal solo se atribuye aquí de manera expresa a Dvalinn.
+- Campos que la pasada no resolvió: costes numéricos, efecto descrito de Rasu Dain, lista completa de skills de Allen y magias/skills individuales con nombre para cada hermano Gulliver. Se dejan como «no informado en las fuentes consultadas», no como ausencia probada en el canon.
+- Las notas se exponen en CONT-SECONDARY; no se reescriben personalidades, no se crean claims/eventos/aristas/IDs y no se traslada la información secundaria a otras continuidades.
+- Fuente y matrices de límites: [DMR-052](research/inbox/DANMACHI-RESEARCH-052-freya-familia-secondary-capabilities.md), [bitácora](CHARACTER_UPDATE_LEDGER.md) y DMR-052-SRC-001–005 en el registro maestro de fuentes.
+- **Estado actual:** implementación en rama de trabajo; PR y CI pendientes.
+- **Próxima acción:** revisar diff y pruebas antes de integrar; si una de las fuentes no informa el campo, cerrar ese dato y pasar a otra identidad.

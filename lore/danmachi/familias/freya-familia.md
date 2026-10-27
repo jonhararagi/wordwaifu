@@ -39,6 +39,10 @@ Los perfiles oficiales de adaptación respaldan las afiliaciones citadas, pero n
 
 La copertenencia es un vínculo institucional y no demuestra amistad o enemistad. Las relaciones personales requieren sus propios claims y periodo; cada arista del catálogo conserva continuidad, intervalo y estado probatorio.
 
+## Investigación secundaria de capacidades
+
+La pasada [DMR-052](../research/inbox/DANMACHI-RESEARCH-052-freya-familia-secondary-capabilities.md) registra magias, skills, equipo y límites reportados por wikis para Allen, Hedin, Hogni y los hermanos Gulliver. Es una capa CONT-SECONDARY, no un cotejo directo de las novelas; la personalidad no se reescribe y los campos no reportados permanecen abiertos.
+
 ## Claims
 
 - DMR-006-CLM-024

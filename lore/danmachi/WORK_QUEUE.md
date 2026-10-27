@@ -904,3 +904,14 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`: [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`.
 - [x] CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`: [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
 - **Regla permanente:** si una fuente consultada no informa el nivel/nombre/efecto/coste, registrar «no informado en esta fuente» y pasar a otro personaje; solo reabrir con un desencadenante documentado. No afirmar que el dato no existe en el canon sin evidencia expresa.
+
+## DANMACHI-RESEARCH-052 · Freya Familia: capacidades, magia y equipo (2026-10-27)
+
+- [x] Revisar una sola vez las páginas comunitarias de Allen Fromel, Hedin Selland, Hogni Ragnar y Hermanos Gulliver.
+- [x] Registrar datos disponibles de magia, skills, equipo y límites en DMR-052, la bitácora y la continuidad separada CONT-SECONDARY.
+- [x] Registrar como no informados los costes y nombres individuales que las páginas consultadas no expusieron; no interpretar la omisión como prueba de inexistencia en canon.
+- [x] Ampliar las notas de Allen, Hedin, Hogni y los cuatro hermanos, preservando las personalidades existentes.
+- [x] Añadir una regresión automática para comprobar las ocho entradas de la bitácora y la disponibilidad de las fuentes.
+- [ ] Revisar el diff y pasar los dos workflows de CI; integrar solo tras comprobarlos.
+- **Límite:** fuente secundaria; no añade claims, eventos o relaciones ni cierra cotejos primarios.
+- **Convivencia con DMR-045:** la búsqueda primaria de los cinco expedientes históricos sigue pendiente. Mientras no haya una nueva fuente licenciada legible, no se reintentan las mismas páginas sin cambios; se permite avanzar sobre una cohorte distinta como esta, conforme a la directriz anti-repetición.
