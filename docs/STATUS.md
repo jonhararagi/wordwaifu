@@ -499,6 +499,6 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 ## DMR-045 — BOOK☆WALKER, muestra japonesa del volumen 20 (2026-10-27)
 
 - La ficha comercial pública de [BOOK☆WALKER, volumen 20](https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/) ofrece la ruta [試し読み](https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1).
-- La apertura normal redirige al visor https://viewer-trial.bookwalker.jp/trial-page/03/view?cid=2996c502-7cb0-42b4-821a-b63df271d442, pero la herramienta devuelve error 500 de acceso; no se obtuvo texto narrativo ni localizador reproducible.
+- La apertura normal redirige al visor https://viewer-trial.bookwalker.jp/trial-page/03/view?cid=2996c502-7cb0-42b4-821a-b63df271d442, pero la herramienta devuelve «Internal Error» al seguir la redirección y señala «not accessible via this tool»; no se confirmó una respuesta HTTP del visor ni se obtuvo texto narrativo o localizador reproducible.
 - Se añade como DMR-045-SRC-050 con `metadata_checked_only`, `CONT-MAIN-LN`, `claims_supported: []` y `events_supported: []`; el enlace se muestra en las notas de Alfia/Zald solamente dentro de la novela principal.
 - No se modificaron claims, relaciones, sucesos, aliases o métricas. DMR-045 sigue `IN_PROGRESS`; los cinco cotejos primarios permanecen pendientes.
