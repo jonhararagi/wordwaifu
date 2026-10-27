@@ -15,6 +15,7 @@
 | DMR-052-SRC-003 | [DanMachi Wiki — Hedin Selland/Habilidades](https://danmachi.fandom.com/es/wiki/Hedin_Selland/Habilidades), español | Detalle comunitario de Caelus Hildr, Varian Hildr, Laurus Hildr, límites de uso y habilidades de desarrollo. |
 | DMR-052-SRC-004 | [DanMachi Wiki — Hogni Ragnar](https://danmachi.fandom.com/wiki/Hogni_Ragnar), inglés | Perfil, magia, skills, equipo maldito y restricciones reportadas. |
 | DMR-052-SRC-005 | [Wiki DanMachi — Hermanos Gulliver](https://danmachi.fandom.com/es/wiki/Hermanos_Gulliver), español | Nivel conjunto, coordinación, roles de cada hermano, armas y límite de atribución de Resistencia Anormal. |
+| DMR-052-SRC-006 | [DanMachi Wiki — Gulliver Brothers](https://danmachi.fandom.com/wiki/Gulliver_Brothers), inglés | Contraste comunitario del nivel conjunto, coordinación, armamento y especialidades; no es un localizador primario. |
 
 Las wikis son fuentes secundarias comunitarias. Algunas páginas hacen referencia a volúmenes y capítulos, pero en esta pasada no se abrió el texto primario para cotejar cada mecánica. No se registran citas, páginas ni escenas como leídas directamente.
 
