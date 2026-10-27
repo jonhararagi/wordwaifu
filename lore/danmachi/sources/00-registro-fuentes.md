@@ -1295,7 +1295,7 @@ verification_status: stub
 - events_supported: []
 - continuity_scope: CONT-AR; CONT-MAIN-LN solo como pista secundaria
 - reliability_note: Resumen de wiki comunitaria. Los hechizos sin nombre se conservan como descripciones funcionales sin nombre reportado; la página no proporciona costes numéricos ni localizadores de capítulo/página. No inventar un nombre para completar el campo.
-- conflicting_sources: Celty: esta página la asocia con magia de rayo; el perfil individual de Celty en DMR-028-SRC-011 la asocia con magia de fuego. No afirmar que posee ambas ni elegir una sin un pasaje primario. Véase lore/danmachi/CHARACTER_UPDATE_LEDGER.md.
+- conflicting_sources: Celty: esta página la asocia con magia de rayo; el perfil individual de Celty en DMR-028-SRC-007 la asocia con magia de fuego. No afirmar que posee ambas ni elegir una sin un pasaje primario. Véase lore/danmachi/CHARACTER_UPDATE_LEDGER.md.
 - rights_note: Paráfrasis original breve; no copiar la página.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
