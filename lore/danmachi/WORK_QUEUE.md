@@ -891,3 +891,14 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Estado factual:** fuente secundaria integrada y validada técnicamente; no crea claims, eventos ni relaciones. Queda pendiente el cotejo de texto primario para los detalles listados y los cinco expedientes DMR-045.
 
 - **Corrección técnica de CI en PR #168:** los checks iniciales detectaron dos aserciones de texto mal ajustadas y que Playwright 1.55 no instala Chromium en Ubuntu 26.04. Se corrigieron las aserciones y se fijaron ambos workflows a `ubuntu-24.04`. CI de PR y post-merge aprobados: [Validate WordWaifu #40510817854](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817854), [DanMachi Lore and Retrieval Integrity #40510817870](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817870), [Validate WordWaifu #40511064727](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064727) y [DanMachi Lore and Retrieval Integrity #40511064313](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064313).
+
+### Bitácora anti-repetición de actualizaciones de personajes — cohorte 2026-10-27
+- [x] Crear `lore/danmachi/CHARACTER_UPDATE_LEDGER.md` con resultados, fuentes, campos no reportados, contradicciones y disparadores de reapertura.
+- [x] Añadir una continuidad `CONT-SECONDARY` al archivo interactivo sin trasladar datos de wikis a `CONT-AR`, `CONT-ANIME` o `CONT-GAME`.
+- [x] Completar una pasada secundaria acotada para Alise, Kaguya, Lyra, Maryuu, Neze, Noin, Iska, Asta, Ryana y Celty.
+- [x] Marcar `HOLD_FOR_PRIMARY_SOURCE` para los cinco expedientes DMR-045 hasta evidencia nueva; no repetir el barrido general ni reescribir personalidades.
+- [x] Registrar la pasada de `DMR-028-SRC-002` a `SRC-010` en el registro de fuentes existente, conservando los IDs y anotando las discrepancias relevantes.
+- [x] Añadir `tests/test_character_update_ledger.cjs` y conectarlo con ambos workflows de CI.
+- [ ] Revisar el diff completo, corregir fallos de las regresiones y abrir PR hacia `main`.
+- [ ] Integrar con ambos workflows de la PR aprobados; verificar después el SHA de `main` y ambos workflows post-merge.
+- **Regla permanente:** si una fuente consultada no informa el nivel/nombre/efecto/coste, registrar «no informado en esta fuente» y pasar a otro personaje; solo reabrir con un desencadenante documentado. No afirmar que el dato no existe en el canon sin evidencia expresa.

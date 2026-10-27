@@ -321,3 +321,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Integración:** [PR #168](https://github.com/jonhararagi/wordwaifu/pull/168), SHA de `main` `99a667e60f3651b98759a1993a26258ba37dd645`.
 - **CI de PR:** [Validate WordWaifu #40510817854](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817854) y [DanMachi Lore and Retrieval Integrity #40510817870](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817870), ambos `success` sobre `16338edec86670b1692084bea446657bc657eb71`.
 - **CI post-merge:** [Validate WordWaifu #40511064727](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064727) y [DanMachi Lore and Retrieval Integrity #40511064313](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064313), ambos `success` sobre `99a667e60f3651b98759a1993a26258ba37dd645`.
+
+
+## Bitácora de actualizaciones de personajes
+
+- [CHARACTER_UPDATE_LEDGER.md](CHARACTER_UPDATE_LEDGER.md) es el registro obligatorio antes de modificar expedientes: reúne las URLs consultadas, hallazgos, campos no reportados, conflictos y criterios para reabrir.
+- La primera pasada de diez miembros de Astrea Familia registra datos secundarios de nivel, magia, skills y equipo sin reescribir personalidades. Los campos no nombrados siguen como no reportados; los conflictos se mantienen abiertos.
+- DMR-045 sigue siendo prioridad de canon, pero sus cinco fichas quedan `HOLD_FOR_PRIMARY_SOURCE` hasta una fuente nueva o un pasaje primario legible. La regla evita repetir rondas sin datos nuevos; no cierra el trabajo de canon ni declara que una habilidad ausente en la wiki no exista.

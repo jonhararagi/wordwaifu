@@ -1087,15 +1087,15 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Astraea_Familia
-- accessed_at: 2026-10-19
-- locator_type: community_organization_summary
-- locator: Introducción, información general y roster actual/histórico.
+- accessed_at: 2026-10-27
+- locator_type: community_organization_roster_and_level_table
+- locator: Roster actual/histórico de Astrea Familia, cargos y columna de niveles. La pasada de 2026-10-27 encontró niveles individuales para Alise (4), Kaguya (4), Lyra (3), Neze (4) y Noin (4), mientras Iska, Maryuu, Asta, Ryana y Celty aparecen como Unknown en la tabla.
 - claims_supported: [DMR-028-CLM-001, DMR-028-CLM-006, DMR-028-CLM-008]
 - events_supported: []
 - continuity_scope: Referencia secundaria transversal; separar CONT-AR y CONT-MAIN-LN por afirmación
-- reliability_note: Sirve como índice de miembros, cargos y posibles escenas; no sustituye las novelas. El roster actual y el histórico requieren verificación por periodo.
-- conflicting_sources: []
-- rights_note: Paráfrasis propia breve; no copiar el artículo.
+- reliability_note: Sirve como índice comunitario de miembros, cargos y posibles escenas; no sustituye las novelas. Si otra entrada de wiki usa el rango genérico 3–4, no convertirlo en nivel individual exacto ni resolver el conflicto por inferencia.
+- conflicting_sources: DMR-028-SRC-009 (Minor Characters) resume un rango 3–4 para algunos personajes cuyo nivel individual figura como Unknown en esta tabla. Celty también tiene conflicto de elemento mágico con DMR-028-SRC-007/010.
+- rights_note: Paráfrasis propia breve; no copiar el artículo. Véase lore/danmachi/CHARACTER_UPDATE_LEDGER.md.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
 
@@ -1109,14 +1109,14 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Gojouno_Kaguya
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: Characteristics, Personality, History y Abilities.
+- accessed_at: 2026-10-27
+- locator_type: community_character_roster_and_ability_summary
+- locator: Pasada estructurada de características y habilidades: nivel 4, magias Gokou/Shikai, skills Kaina Blood/Tekiheni, desarrollo Night Fight/Abnormal Resistance y armas Higanbana/Futaba.
 - claims_supported: [DMR-028-CLM-002, DMR-028-CLM-003, DMR-028-CLM-006, DMR-028-CLM-023, DMR-028-CLM-024, DMR-028-CLM-025, DMR-028-CLM-026]
 - events_supported: []
 - continuity_scope: CONT-AR; referencia secundaria
 - reliability_note: La página presenta una biografía extensa y detalles de valores/combate. No hay localizador primario cotejado en este expediente.
-- conflicting_sources: []
+- conflicting_sources: La lista española Habilidades muestra Sakibeni en el lugar donde el artículo inglés indica Tekiheni. No resolver ni crear alias sin evidencia primaria; véase CHARACTER_UPDATE_LEDGER.md.
 - rights_note: Paráfrasis propia breve.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
@@ -1131,13 +1131,13 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Lyra
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: History, Magic, Skills, Abilities y Equipment.
+- accessed_at: 2026-10-27
+- locator_type: community_character_roster_and_ability_summary
+- locator: Pasada estructurada: nivel 3; magias Mūs Mine/Wingus Smite; skills Ratts Phil/Agile Salt; desarrollo Abnormal Resistance; boomerangs Carnivore, bombas y objeto mágico Aegis.
 - claims_supported: [DMR-028-CLM-004, DMR-028-CLM-005, DMR-028-CLM-006]
 - events_supported: []
 - continuity_scope: CONT-AR; referencia secundaria
-- reliability_note: Útil para recuperar nombres de magia y equipo; verificar el texto original para reglas, costes, límites y escenas.
+- reliability_note: Fuente comunitaria útil para recuperar nombres. Wingus Smite aparece sin efecto descrito en la página consultada; no inferirlo ni inventar costes. Véase CHARACTER_UPDATE_LEDGER.md.
 - conflicting_sources: []
 - rights_note: Paráfrasis propia breve.
 - verified_by: DANMACHI-RESEARCH-028
@@ -1153,13 +1153,13 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Alise_Lovell
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: Personality, History y Abilities.
+- accessed_at: 2026-10-27
+- locator_type: community_character_roster_and_ability_summary
+- locator: Pasada estructurada: nivel 4, magia Agaris Alvesynth, skills Lubrude Bequia/Batleate Asyrath, desarrollo Hunter/Abnormal Resistance/Fire Flash, arma Crimson Order y equipo Crimson Flower Heat Dress.
 - claims_supported: [DMR-028-CLM-006, DMR-028-CLM-009, DMR-028-CLM-010]
 - events_supported: []
 - continuity_scope: CONT-AR; referencia secundaria
-- reliability_note: Los matices de personalidad, nivel y edad se conservan como pistas secundarias, no como estadísticas canónicas confirmadas.
+- reliability_note: Nivel, estadísticas, magia y equipo son datos de una wiki comunitaria. Esta pasada documenta poderes y límites, sin reescribir personalidad ni elevar los datos a verificación primaria.
 - conflicting_sources: []
 - rights_note: Paráfrasis propia breve.
 - verified_by: DANMACHI-RESEARCH-028
@@ -1222,14 +1222,14 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Celty_Srowa
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: History, Personality y Abilities; origen, relación con Ryana y Ryuu, magia y percepción
+- accessed_at: 2026-10-27
+- locator_type: community_character_summary_with_magic_attribution
+- locator: Pasada estructurada de History/Abilities; el perfil describe magia de fuego defensiva capaz de quemar a una aventurera de segunda clase.
 - claims_supported: [DMR-028-CLM-011, DMR-028-CLM-012, DMR-028-CLM-013, DMR-028-CLM-014]
 - events_supported: []
 - continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
 - reliability_note: La wiki resume datos atribuidos a flashbacks y Astrea Record. No se han cotejado aquí los pasajes internos de la novela; las estadísticas y capacidades no se elevan a canon confirmado.
-- conflicting_sources: []
+- conflicting_sources: DMR-028-SRC-010 (Ryuu Lion) atribuye a Celty magia de rayo. No afirmar que posee ambas ni escoger una sin pasaje primario; véase CHARACTER_UPDATE_LEDGER.md.
 - rights_note: Paráfrasis propia; no copiar el artículo.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
@@ -1244,13 +1244,13 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Español
 - official_url: https://danmachi.fandom.com/es/wiki/Iska_Bra
-- accessed_at: 2026-10-19
-- locator_type: community_character_summary
-- locator: Historia y Personalidad; orfanato de la Calle Daidalos, motivación, moda y maquillaje
+- accessed_at: 2026-10-27
+- locator_type: community_character_summary_and_magic_lead
+- locator: Pasada estructurada; roster individual Unknown para nivel y rango genérico 3–4 en Minor Characters. Ryuu Lion describe una magia de ataque de dos puños, sin nombre reportado para Iska.
 - claims_supported: [DMR-028-CLM-015, DMR-028-CLM-016]
 - events_supported: []
 - continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
-- reliability_note: La página enlaza resúmenes comunitarios y referencias externas; no equivale a cotejar el capítulo o relato original.
+- reliability_note: Resumen comunitario; el rango 3–4 no es un nivel individual exacto ni ofrece coste o nombre de la magia. Véase CHARACTER_UPDATE_LEDGER.md.
 - conflicting_sources: []
 - rights_note: Paráfrasis propia; no copiar el artículo.
 - verified_by: DANMACHI-RESEARCH-028
@@ -1262,19 +1262,19 @@ verification_status: stub
 - title: Minor Characters
 - creator_or_publisher: Comunidad DanMachi Wiki
 - source_type: COMMUNITY_WIKI
-- series: DanMachi; sección de antiguas integrantes de Astrea Familia
+- series: DanMachi; sección de personajes menores y antiguas integrantes de Astrea Familia
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Minor_Characters
-- accessed_at: 2026-10-19
-- locator_type: community_character_roster_and_summaries
-- locator: Entradas Asta Knox y Maryuu Reage; datos de afiliación, equipo, personalidad y magia
+- accessed_at: 2026-10-27
+- locator_type: community_character_roster_and_ability_summaries
+- locator: Pasada estructurada del 2026-10-27 a entradas de Asta Knox, Maryuu Reage, Neze Rankett, Noin Unic, Iska Bra, Ryana Lietz y Celty Srowa; resumen de equipo, magia, rango de nivel y aficiones/personality según la versión actual de la página.
 - claims_supported: [DMR-028-CLM-017, DMR-028-CLM-018, DMR-028-CLM-019]
 - events_supported: []
-- continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
-- reliability_note: Artículo agregador de contenido comunitario. Las filas históricas pueden omitir o mezclar estados; los niveles desconocidos o rangos no se deben consolidar por inferencia.
-- conflicting_sources: []
-- rights_note: Resumen original breve.
+- continuity_scope: CONT-AR; CONT-MAIN-LN solo como pista secundaria
+- reliability_note: Artículo agregador secundario. El rango general 3–4 no es el nivel exacto de cada integrante; la tabla de la Familia marca Unknown para algunas, mientras que esta página las agrupa en un rango. Se usan aquí las mecánicas y el equipo que la página sí nombra, sin inventar nombre de magia/skill, coste ni estadística no publicada.
+- conflicting_sources: Celty: esta página informa magia de fuego, mientras que DMR-028-SRC-010 (Ryuu Lion) atribuye magia de rayo. Neze: la lista española de habilidades menciona Úlfheðinn en un contexto distinto del listado inglés consultado; no se la asigna como hecho primario. Véase lore/danmachi/CHARACTER_UPDATE_LEDGER.md.
+- rights_note: Paráfrasis original breve; no copiar pasajes extensos.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
 
@@ -1284,19 +1284,19 @@ verification_status: stub
 - title: Ryuu Lion
 - creator_or_publisher: Comunidad DanMachi Wiki
 - source_type: COMMUNITY_WIKI
-- series: DanMachi; novela principal y Astrea Record
+- series: DanMachi; novela principal y Astrea Record (resumen comunitario)
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Ryuu_Lion
-- accessed_at: 2026-10-19
-- locator_type: community_character_and_magic_summary
-- locator: Magic; lista de magias atribuidas a antiguas compañeras de Ryuu
+- accessed_at: 2026-10-27
+- locator_type: community_character_and_former_companions_magic_summary
+- locator: Pasada estructurada de la sección de magias de antiguas compañeras de Ryu: Gokou (Kaguya), Rea Vindemia (Maryuu), Mūs Mine (Lyra), Irivute (Ryana), más descripciones funcionales sin nombre para magia de aumento de velocidad (Noin), garras de viento (Neze), ataque de dos puños (Iska), defensa impenetrable (Asta) y una atribución de rayo para Celty.
 - claims_supported: [DMR-028-CLM-012, DMR-028-CLM-018, DMR-028-CLM-019, DMR-028-CLM-020, DMR-028-CLM-021, DMR-028-CLM-022]
 - events_supported: []
-- continuity_scope: CONT-AR; CONT-MAIN-LN como pista secundaria
-- reliability_note: Resumen comunitario de nombres y efectos; no establece por sí solo el pasaje original, reglas, costes, duración ni todos los límites de las habilidades.
-- conflicting_sources: []
-- rights_note: Paráfrasis propia; no copiar la página.
+- continuity_scope: CONT-AR; CONT-MAIN-LN solo como pista secundaria
+- reliability_note: Resumen de wiki comunitaria. Los hechizos sin nombre se conservan como descripciones funcionales sin nombre reportado; la página no proporciona costes numéricos ni localizadores de capítulo/página. No inventar un nombre para completar el campo.
+- conflicting_sources: Celty: esta página la asocia con magia de rayo; el perfil individual de Celty en DMR-028-SRC-007 la asocia con magia de fuego. No afirmar que posee ambas ni elegir una sin un pasaje primario. Véase lore/danmachi/CHARACTER_UPDATE_LEDGER.md.
+- rights_note: Paráfrasis original breve; no copiar la página.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
 

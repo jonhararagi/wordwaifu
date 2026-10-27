@@ -1,7 +1,7 @@
 (function(root,factory){"use strict";const api=factory();if(typeof module==="object"&&module.exports)module.exports=api;else root.WordWaifuCharacterArchive=api;})(typeof globalThis!=="undefined"?globalThis:this,function(){
 "use strict";
-const LABELS={"CONT-AR":"Astrea Record · Era Oscura","CONT-GAME":"Memoria Freese · versión original del juego","CONT-ANIME":"Adaptación anime · perfiles oficiales","CONT-MAIN-LN":"Novela principal","CONT-AU":"Historia alternativa (AU)","CROSS-CONTINUITY":"Comparación entre continuidades"};
-const ORDER=["CONT-AR","CONT-GAME","CONT-ANIME","CONT-MAIN-LN","CONT-AU","CROSS-CONTINUITY"];
+const LABELS={"CONT-AR":"Astrea Record · Era Oscura","CONT-GAME":"Memoria Freese · versión original del juego","CONT-ANIME":"Adaptación anime · perfiles oficiales","CONT-MAIN-LN":"Novela principal","CONT-AU":"Historia alternativa (AU)","CONT-SECONDARY":"Wiki y compendios · datos no cotejados","CROSS-CONTINUITY":"Comparación entre continuidades"};
+const ORDER=["CONT-AR","CONT-GAME","CONT-ANIME","CONT-MAIN-LN","CONT-AU","CONT-SECONDARY","CROSS-CONTINUITY"];
 const META={
 "CHAR-RYUU-LION":{
  overview:"Una identidad con estados separados: etapa histórica de Astrea Record y un perfil posterior de la adaptación anime.",
@@ -100,6 +100,25 @@ summary:"La ficha oficial escribe マリュー・レアージュ, la identifica 
 period:"DanMachi IV · perfil oficial de personaje.",
 affiliation:"Astrea Familia · integrante histórica"
 };
+
+for (const [id, summary] of [
+["CHAR-ALISE-LOVELACE","Barrido secundario de nivel, magias, skills y equipo completado. No reescribir personalidad en este pase."],
+["CHAR-KAGUYA","Barrido secundario completado; el nombre de una skill aparece en conflicto entre páginas."],
+["CHAR-LYRA","Barrido secundario de nivel, magias, skills y equipo completado; Wingus Smite carece de efecto descrito en las fuentes consultadas."],
+["CHAR-MARIYU-LEAGE","Barrido secundario parcial; Rea Vindemia y maza reportadas. Nivel individual no resuelto."],
+["CHAR-NEZE-RANKETT","Barrido secundario parcial; nivel/magia/skill tienen alcance o atribuciones en conflicto."],
+["CHAR-NOIN-UNIC","Barrido secundario parcial; el nombre de la magia de velocidad no está reportado."],
+["CHAR-ISKA-BRA","Barrido secundario parcial; nivel individual y nombre de la magia de dos puños no reportados."],
+["CHAR-ASTA-KNOX","Barrido secundario parcial; nivel individual y nombre de la magia defensiva no reportados."],
+["CHAR-RYANA-LIETZ","Barrido secundario parcial; Irivute se atribuye en una fuente comunitaria; nivel exacto no reportado."],
+["CHAR-CELTY-SROWA","Barrido secundario parcial; las fuentes atribuyen fuego y rayo, sin resolver la discrepancia."]
+]) {
+  META[id].states["CONT-SECONDARY"] = {
+    summary,
+    period: "Pasada secundaria registrada el 2026-10-27; no equivale a cotejo primario.",
+    affiliation: "Astrea Familia · información comunitaria no cotejada"
+  };
+}
 
 const REL={
 "CHAR-RYUU-LION":{"CONT-AR":[
@@ -626,6 +645,148 @@ references:[
 META["CHAR-ASTREA"].states["CONT-MAIN-LN"].summary += " Una fuente secundaria atribuye su salida original de Orario a una petición de Ryu para no presenciar la venganza; el motivo requiere localizador primario.";
 META["CHAR-RYUU-LION"].states["CONT-MAIN-LN"].summary += " La separación de Astrea y los episodios de venganza y rescate se conservan como resumen secundario; el reencuentro y la orden de quedarse se apoyan en una sinopsis editorial.";
 
+// DMR-free character update pass: ability/level facts only, in a dedicated secondary-source tab.
+EXTENDED["CHAR-ALISE-LOVELACE"]["CONT-SECONDARY"]={
+title:"Alise Lovell · nivel, magia y equipo reportados",
+summary:"Una pasada de fuentes comunitarias encontró datos concretos de combate. Se registran aquí sin reemplazar los perfiles existentes ni reescribir personalidad.",
+sections:[
+{title:"Nivel y magia",text:"El perfil comunitario individual informa nivel 4 y la magia de fuego Agaris Alvesynth, descrita como un encantamiento que cubre piernas, manos y espada y puede liberar una corriente de llamas o explosiones."},
+{title:"Skills y habilidades de desarrollo",text:"La página enumera Lubrude Bequia y Batleate Asyrath. También lista Hunter, Abnormal Resistance y Fire Flash como habilidades de desarrollo. Son descripciones secundarias; esta ficha no añade cifras de coste ni condiciones que las fuentes consultadas no proporcionan."},
+{title:"Equipo reportado",text:"El perfil enumera la espada Crimson Order y el equipo Crimson Flower Heat Dress. No se vuelve a redactar su personalidad en esta actualización."},
+{title:"Campos cerrados",text:"La pasada no obtuvo un localizador de página narrativa ni un coste numérico primario. No reabrir estos campos a menos que aparezca una nueva fuente legible."}
+],
+references:[
+{label:"DanMachi Wiki · Alise Lovell",url:"https://danmachi.fandom.com/wiki/Alise_Lovell",kind:"community"},
+{label:"DanMachi Wiki · Skills",url:"https://danmachi.fandom.com/wiki/Skills",kind:"community"}
+]
+};
+EXTENDED["CHAR-KAGUYA"]["CONT-SECONDARY"]={
+title:"Gojouno Kaguya · nivel, técnicas y nomenclatura de skills",
+summary:"Una pasada de fuentes comunitarias recuperó nivel, magias y equipo, pero detectó una discrepancia en el nombre de una skill. No se cambia la personalidad existente.",
+sections:[
+{title:"Nivel, magia y armas",text:"El perfil individual informa nivel 4 y enumera las magias Gokou y Shikai; lista la katana Higanbana y los kodachi Futaba. El perfil describe Gokou como cinco cortes mágicos que cercan al objetivo desde varias direcciones."},
+{title:"Skills y habilidades de desarrollo",text:"Kaina Blood aparece en el perfil individual. Para la otra skill, el perfil inglés usa Tekiheni en una lista mientras que el listado español de habilidades usa Sakibeni. Night Fight y Abnormal Resistance aparecen como habilidades de desarrollo. La divergencia Tekiheni/Sakibeni queda abierta: no crear un alias ni escoger uno sin fuente primaria."},
+{title:"Campos no cotejados",text:"No se obtuvo aquí un localizador primario para cada técnica ni un coste numérico. Reabrir la nomenclatura solo si aparece texto licenciado que la resuelva."}
+],
+references:[
+{label:"DanMachi Wiki · Gojouno Kaguya",url:"https://danmachi.fandom.com/wiki/Gojouno_Kaguya",kind:"community"},
+{label:"DanMachi Wiki en español · Habilidades",url:"https://danmachi.fandom.com/es/wiki/Habilidades",kind:"community"},
+{label:"DanMachi Wiki · Skills",url:"https://danmachi.fandom.com/wiki/Skills",kind:"community"}
+]
+};
+EXTENDED["CHAR-LYRA"]["CONT-SECONDARY"]={
+title:"Lyra · nivel, magias, skills y equipo reportados",
+summary:"Una pasada comunitaria recuperó el nivel y una lista concreta de capacidades; el efecto de Wingus Smite no aparece explicado en el fragmento consultado.",
+sections:[
+{title:"Nivel y magias",text:"El perfil individual informa nivel 3. Enumera Mūs Mine, descrita como una magia que crea un campo de minas, y Wingus Smite, cuyo efecto no está explicado en la fuente revisada."},
+{title:"Skills y equipo",text:"La página enumera Ratts Phil, Agile Salt y la habilidad de desarrollo Abnormal Resistance. También registra las armas boomerang Carnivore, bombas creadas por Lyra y el objeto mágico Aegis, capaz de copiar la magia con la que entra en contacto y destruido durante la batalla contra Alfia."},
+{title:"Campos cerrados",text:"No inventar un efecto para Wingus Smite ni un coste no publicado. La personalidad no se reescribe en esta pasada; reabrir solo ante evidencia nueva."}
+],
+references:[
+{label:"DanMachi Wiki · Lyra",url:"https://danmachi.fandom.com/wiki/Lyra",kind:"community"},
+{label:"DanMachi Wiki · Skills",url:"https://danmachi.fandom.com/wiki/Skills",kind:"community"}
+]
+};
+EXTENDED["CHAR-MARIYU-LEAGE"]["CONT-SECONDARY"]={
+title:"Maryuu Reage · magia curativa y nivel no resuelto",
+summary:"Se conservan las variantes de romanización ya existentes. El pase encontró una magia y equipo, pero el nivel no está informado de forma consistente.",
+sections:[
+{title:"Magia y equipo",text:"El artículo agregador informa Rea Vindemia como magia curativa de área capaz de curar heridas y restaurar resistencia. También señala que Maryuu portaba una maza y podía luchar en primera línea."},
+{title:"Nivel: no informado con precisión",text:"La tabla de Astraea Familia marca el nivel como Unknown, mientras que Minor Characters usa el rango genérico 3–4. No asignar nivel exacto; las dos etiquetas se conservan como discrepancia secundaria."},
+{title:"Campos no reportados",text:"Las referencias consultadas no dan una lista de skills con nombre, costes o estadísticas individuales. No repetir la misma búsqueda hasta que aparezca una fuente nueva."}
+],
+references:[
+{label:"DanMachi Wiki · Minor Characters",url:"https://danmachi.fandom.com/wiki/Minor_Characters",kind:"community"},
+{label:"DanMachi Wiki · Astraea Familia",url:"https://danmachi.fandom.com/wiki/Astraea_Familia",kind:"community"},
+{label:"DanMachi Wiki · Ryuu Lion",url:"https://danmachi.fandom.com/wiki/Ryuu_Lion",kind:"community"}
+]
+};
+EXTENDED["CHAR-NEZE-RANKETT"]["CONT-SECONDARY"]={
+title:"Neze Rankett · magia sin nombre y atribuciones en conflicto",
+summary:"La pasada secundaria encontró una magia descrita por su efecto, pero no un nombre reproducible; el nivel de distintas fichas no tiene la misma precisión.",
+sections:[
+{title:"Nivel y magia reportada",text:"La tabla de Astraea Familia informa nivel 4; Minor Characters usa el rango general 3–4. Ryuu Lion menciona una magia de garras de viento, sin nombre ni coste. No convertir esa descripción en un nombre de hechizo."},
+{title:"Skill en conflicto",text:"La lista inglesa de Skills recuperada presenta Úlfheðinn con Bete Loga y Cole Kuster; el fragmento de la lista española relaciona también a Neze. No se atribuye esa skill como hecho seguro hasta disponer de un localizador primario."},
+{title:"Campos no reportados",text:"No se encontró nombre para la magia de garras ni una lista de skills individual corroborada. Mantener el campo como no reportado/en conflicto y cerrar la búsqueda repetitiva."}
+],
+references:[
+{label:"DanMachi Wiki · Astraea Familia",url:"https://danmachi.fandom.com/wiki/Astraea_Familia",kind:"community"},
+{label:"DanMachi Wiki · Minor Characters",url:"https://danmachi.fandom.com/wiki/Minor_Characters",kind:"community"},
+{label:"DanMachi Wiki · Ryuu Lion",url:"https://danmachi.fandom.com/wiki/Ryuu_Lion",kind:"community"},
+{label:"DanMachi Wiki · Skills",url:"https://danmachi.fandom.com/wiki/Skills",kind:"community"},
+{label:"DanMachi Wiki en español · Habilidades",url:"https://danmachi.fandom.com/es/wiki/Habilidades",kind:"community"}
+]
+};
+EXTENDED["CHAR-NOIN-UNIC"]["CONT-SECONDARY"]={
+title:"Noin Unic · magia de velocidad sin nombre",
+summary:"La pasada secundaria encontró un efecto descrito, pero el nombre del hechizo no figura en las referencias consultadas.",
+sections:[
+{title:"Nivel y magia",text:"La tabla de Astraea Familia indica nivel 4; Minor Characters ofrece el rango amplio 3–4. Ryuu Lion menciona una magia de aumento de velocidad de Noin, sin nombre ni coste."},
+{title:"Qué no se debe rellenar",text:"Las páginas consultadas no proporcionan nombre de la magia, skills con nombre ni costes individuales. Mantener esos campos como «no reportado en las fuentes consultadas»; no volver a buscar en las mismas páginas."}
+],
+references:[
+{label:"DanMachi Wiki · Astraea Familia",url:"https://danmachi.fandom.com/wiki/Astraea_Familia",kind:"community"},
+{label:"DanMachi Wiki · Minor Characters",url:"https://danmachi.fandom.com/wiki/Minor_Characters",kind:"community"},
+{label:"DanMachi Wiki · Ryuu Lion",url:"https://danmachi.fandom.com/wiki/Ryuu_Lion",kind:"community"}
+]
+};
+EXTENDED["CHAR-ISKA-BRA"]["CONT-SECONDARY"]={
+title:"Iska Bra · magia de dos puños sin nombre",
+summary:"La pasada encontró un efecto de magia atribuido por la wiki, pero no un nombre de hechizo ni un nivel individual exacto.",
+sections:[
+{title:"Nivel y magia",text:"La tabla de Astraea Familia marca el nivel como Unknown; Minor Characters usa el rango genérico 3–4. Ryuu Lion menciona una magia que lanza un ataque de dos puños, sin nombre ni coste."},
+{title:"Campos no reportados",text:"No se encontró nombre de magia ni skill individual en las referencias consultadas. Mantener el registro como no informado; no tratar el rango 3–4 como nivel exacto."}
+],
+references:[
+{label:"DanMachi Wiki · Astraea Familia",url:"https://danmachi.fandom.com/wiki/Astraea_Familia",kind:"community"},
+{label:"DanMachi Wiki · Minor Characters",url:"https://danmachi.fandom.com/wiki/Minor_Characters",kind:"community"},
+{label:"DanMachi Wiki · Ryuu Lion",url:"https://danmachi.fandom.com/wiki/Ryuu_Lion",kind:"community"}
+]
+};
+EXTENDED["CHAR-ASTA-KNOX"]["CONT-SECONDARY"]={
+title:"Asta Knox · magia defensiva sin nombre",
+summary:"La pasada secundaria halló el equipo y el efecto de una magia, no su nombre ni nivel individual exacto.",
+sections:[
+{title:"Equipo y magia",text:"Minor Characters señala que Asta portaba un escudo. Ryuu Lion menciona una magia que concede una defensa impenetrable, sin nombre ni coste."},
+{title:"Nivel: no informado con precisión",text:"La tabla de Astraea Familia marca el nivel como Unknown, mientras que Minor Characters ofrece el rango 3–4. No asignar un nivel individual a partir de ese rango."},
+{title:"Campos cerrados",text:"Las referencias consultadas no nombran skills o magia de Asta. Mantener la descripción funcional como pista secundaria y no repetir búsqueda hasta que aparezca una fuente nueva."}
+],
+references:[
+{label:"DanMachi Wiki · Astraea Familia",url:"https://danmachi.fandom.com/wiki/Astraea_Familia",kind:"community"},
+{label:"DanMachi Wiki · Minor Characters",url:"https://danmachi.fandom.com/wiki/Minor_Characters",kind:"community"},
+{label:"DanMachi Wiki · Ryuu Lion",url:"https://danmachi.fandom.com/wiki/Ryuu_Lion",kind:"community"}
+]
+};
+EXTENDED["CHAR-RYANA-LIETZ"]["CONT-SECONDARY"]={
+title:"Ryana Lietz · Irivute y nivel no exacto",
+summary:"Una referencia comunitaria asigna un nombre a su magia de fuego y describe su efecto; la página agregadora solo la menciona como magia de fuego sin nombre.",
+sections:[
+{title:"Magia reportada",text:"Ryuu Lion enumera Irivute como magia de fuego de ataque/debilitación: deja marcas de quemadura que reducen el poder mágico y los efectos de magia. Minor Characters describe magia de fuego capaz de matar a una aventurera de segunda clase, pero no le da un nombre; no se crean dos magias distintas por esa diferencia de resumen."},
+{title:"Nivel: no informado con precisión",text:"La tabla de Astraea Familia marca el nivel como Unknown; Minor Characters usa el rango amplio 3–4. No fijar un número exacto."},
+{title:"Campos no reportados",text:"No hay una lista individual de skills ni costes numéricos en las páginas consultadas. Cerrar la búsqueda hasta nueva evidencia."}
+],
+references:[
+{label:"DanMachi Wiki · Astraea Familia",url:"https://danmachi.fandom.com/wiki/Astraea_Familia",kind:"community"},
+{label:"DanMachi Wiki · Minor Characters",url:"https://danmachi.fandom.com/wiki/Minor_Characters",kind:"community"},
+{label:"DanMachi Wiki · Ryuu Lion",url:"https://danmachi.fandom.com/wiki/Ryuu_Lion",kind:"community"}
+]
+};
+EXTENDED["CHAR-CELTY-SROWA"]["CONT-SECONDARY"]={
+title:"Celty Srowa · elemento de magia en conflicto",
+summary:"Las fuentes secundarias reportan magia para Celty, pero discrepan sobre el elemento; no se asumirá que ambas atribuciones son dos magias distintas.",
+sections:[
+{title:"Atribuciones encontradas",text:"La página individual de Celty describe magia de fuego capaz de matar a una aventurera de segunda clase. La página de Ryuu Lion atribuye a Celty una magia de rayo. Las referencias no aclaran si se trata de dos magias, un error de una entrada o una diferencia de versión."},
+{title:"Nivel y datos no reportados",text:"La tabla de Astraea Familia marca el nivel como Unknown y Minor Characters lo resume como 3–4. Las páginas consultadas no dan el nombre de las magias ni costes numéricos."},
+{title:"Cierre del pase",text:"Registrar «fuego vs rayo: conflicto secundario»; no escoger una opción ni declarar que ambas son ciertas sin un pasaje primario. No volver a buscar en las mismas páginas hasta una actualización de fuente."}
+],
+references:[
+{label:"DanMachi Wiki · Celty Srowa",url:"https://danmachi.fandom.com/wiki/Celty_Srowa",kind:"community"},
+{label:"DanMachi Wiki · Astraea Familia",url:"https://danmachi.fandom.com/wiki/Astraea_Familia",kind:"community"},
+{label:"DanMachi Wiki · Minor Characters",url:"https://danmachi.fandom.com/wiki/Minor_Characters",kind:"community"},
+{label:"DanMachi Wiki · Ryuu Lion",url:"https://danmachi.fandom.com/wiki/Ryuu_Lion",kind:"community"}
+]
+};
+
 function extendedInfo(id,continuity,index){
 const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;
 if(!base)return null;
@@ -641,7 +802,7 @@ const sections=(doc.sections||[]).filter(section=>{
   const animeHeading=/temporal state b|estado temporal b|official anime|perfil oficial del anime|perfil oficial de adaptacion|adaptacion anime/.test(normalizedHeading);
   // Explicit scope tags are authoritative even when the prose heading is localized
   // or does not contain the words "Astrea Record", "histórico" or "anime".
-  const knownScopes=["CONT-AR","CONT-ANIME","CONT-MAIN-LN","CONT-SO","CONT-AU","CONT-GAME","CONT-UNVERIFIED","CROSS-CONTINUITY"];
+  const knownScopes=["CONT-AR","CONT-ANIME","CONT-MAIN-LN","CONT-SO","CONT-AU","CONT-GAME","CONT-SECONDARY","CONT-UNVERIFIED","CROSS-CONTINUITY"];
   const explicitScopes=knownScopes.filter(scope=>new RegExp("(^|[^A-Z0-9])"+scope+"([^A-Z0-9]|$)","i").test(heading));
   if(explicitScopes.length&&continuity!=="ALL"&&!explicitScopes.includes(continuity))return false;
   if(historicalHeading&&animeHeading)return false;
