@@ -459,5 +459,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Campos que la pasada no resolvió: costes numéricos, efecto descrito de Rasu Dain, lista completa de skills de Allen y magias/skills individuales con nombre para cada hermano Gulliver. Se dejan como «no informado en las fuentes consultadas», no como ausencia probada en el canon.
 - Las notas se exponen en CONT-SECONDARY; no se reescriben personalidades, no se crean claims/eventos/aristas/IDs y no se traslada la información secundaria a otras continuidades.
 - Fuente y matrices de límites: [DMR-052](research/inbox/DANMACHI-RESEARCH-052-freya-familia-secondary-capabilities.md), [bitácora](CHARACTER_UPDATE_LEDGER.md) y DMR-052-SRC-001–005 en el registro maestro de fuentes.
-- **Estado actual:** implementación en rama de trabajo; PR y CI pendientes.
+- **Integración:** [PR #172](https://github.com/jonhararagi/wordwaifu/pull/172), SHA real de `main` `79505bd740d47560d4bc67166c807d14090a950d`.
+- **CI de PR:** [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success` sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`.
+- **CI post-merge:** [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362); conclusión final por verificar.
 - **Próxima acción:** revisar diff y pruebas antes de integrar; si una de las fuentes no informa el campo, cerrar ese dato y pasar a otra identidad.
