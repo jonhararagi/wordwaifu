@@ -69,11 +69,19 @@ assert.ok(alfiaVol20Info && alfiaVol20Info.sections.some(section => section.text
   "Alfia volume 20 retrospective clue must be reachable in main-novel continuity with secondary-evidence limits.");
 assert.ok(alfiaVol20Info.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis"),
   "Alfia volume 20 clue must expose the synopsis URL and community source type.");
+assert.ok(alfiaVol20Info.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel"),
+  "Alfia CONT-MAIN-LN must expose the Kobo preview route as metadata only.");
+assert.ok(!alfiaArchiveInfo.references.some(ref => ref.url === "https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel"),
+  "The Kobo route must not leak into Alfia CONT-AR.");
 const zaldVol20Info = archiveApi.getExtendedInfo("CHAR-DARK-ZALD", "CONT-MAIN-LN", null);
 assert.ok(zaldVol20Info && zaldVol20Info.sections.some(section => section.text.includes("Udaeus") && section.text.includes("evidencia secundaria")),
   "Zald Udaeus/sword-technique clue must be reachable in CONT-MAIN-LN and remain secondary.");
 assert.ok(zaldVol20Info.references.some(ref => ref.kind === "community" && ref.url === "https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis"),
   "Zald volume 20 clue must expose the community synopsis URL and source type.");
+assert.ok(zaldVol20Info.references.some(ref => ref.kind === "licensed_preview" && ref.url === "https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel"),
+  "Zald CONT-MAIN-LN must expose the Kobo preview route as metadata only.");
+assert.ok(!zaldArchiveInfo.references.some(ref => ref.url === "https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel"),
+  "The Kobo route must not leak into Zald CONT-AR.");
 
 const meteriaMainInfo = archiveApi.getExtendedInfo("CHAR-METERIA", "CONT-MAIN-LN", null);
 assert.ok(meteriaMainInfo && meteriaMainInfo.title.includes("Meteria"),
