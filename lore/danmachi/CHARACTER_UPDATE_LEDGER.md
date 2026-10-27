@@ -232,3 +232,33 @@ Esta es una cohorte distinta, abierta porque las fuentes primarias de DMR-045 si
 - CI de PR: [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success`.
 - CI post-merge sobre ese SHA exacto: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
 - Estado de evidencia sin cambios: fuentes secundarias; lo no reportado no se convierte en inexistencia canónica; no reabrir expedientes ni reescribir personalidades sin un disparador documentado.
+
+## Pasada secundaria 2026-10-27 — Familia Loki: capacidades de combate
+
+### CHAR-BETE-LOGA — Bete Loga
+
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URLs consultadas:** [DanMachi Wiki · Bete Loga](https://danmachi.fandom.com/wiki/Bete_Loga) y [Habilidades en español](https://danmachi.fandom.com/es/wiki/Bete_Loga/Habilidades).
+- **Datos encontrados:** nivel 6 reportado; Hati; skills Úlfheðinn, Fenris Wolf y Solmani; equipo Flosvirt/Frosvirt y Dual Rolan. La tabla detallada de estadísticas se presenta como nivel 5.
+- **No informado/conflicto:** no se recuperó coste numérico de Hati. La grafía Flosvirt/Frosvirt varía entre las páginas inglesa y española.
+- **Cierre:** conservar la diferencia de snapshots y de grafía; no mezclar estadísticas del nivel 5 con el encabezado de nivel 6.
+- **Reabrir solo si:** una fuente oficial nueva o un pasaje primario legible resuelve la mecánica/nombre, o las páginas se actualizan materialmente.
+
+### CHAR-TIONA-HIRYUTE — Tiona Hiryute
+
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URL consultada:** [DanMachi Wiki · Tiona Hiryute](https://danmachi.fandom.com/wiki/Tiona_Hiryute).
+- **Datos encontrados:** nivel 6 reportado; skills Berserk e Intense Heat; habilidades de desarrollo Fist Strike, Diving, Abnormal Resistance y Crush; armas Urga, Blade Rolan y Corbel Edge.
+- **No informado:** la ficha consultada no enumera una magia con nombre ni coste mágico; la tabla detallada de estadísticas corresponde al estado de nivel 5.
+- **Cierre:** no interpretar que una magia no listada en esta página esté universalmente ausente; no cambiar su personalidad ni volver a investigar su pasado en esta tanda.
+- **Reabrir solo si:** aparece texto primario legible o una actualización material de la fuente sobre sus capacidades.
+
+### CHAR-TIONE-HIRYUTE — Tione Hiryute
+
+- **Estado:** PARTIAL_NOT_REPORTED.
+- **URL consultada:** [DanMachi Wiki · Tione Hiryute](https://danmachi.fandom.com/wiki/Tione_Hiryute).
+- **Datos encontrados:** nivel 6 reportado; skills Berserk y Backdraft; magia List Iorum; habilidades de desarrollo Fist Strike, Diving, Abnormal Resistance y Healing Power; equipo Zolas, Filuka, Halberd Rolan y Corbel Edge.
+- **No informado:** coste/duración precisos de List Iorum; la tabla detallada de estadísticas corresponde al estado de nivel 5.
+- **Cierre:** no transferir las habilidades de una gemela a la otra por analogía; no volver a reformular personalidad o historial.
+- **Reabrir solo si:** aparece un pasaje primario legible o una actualización material de la fuente.
+
