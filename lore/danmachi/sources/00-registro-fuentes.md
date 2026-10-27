@@ -3848,3 +3848,26 @@ verification_status: stub
 - rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
 - verified_by: DANMACHI-RESEARCH-052
 - verification_status: secondary_checked
+
+
+## DMR-052-SRC-006 · DanMachi Wiki — Gulliver Brothers
+
+- source_id: DMR-052-SRC-006
+- title: Gulliver Brothers
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario grupal
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Gulliver_Brothers
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Abilities; Development Abilities; Equipment.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria contrastada con la página en español para la descripción grupal y las especialidades de cada hermano. No se cotejó directamente la novela ni se asignan stats individuales a partir del nivel grupal.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-052
+- verification_status: secondary_checked
