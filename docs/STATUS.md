@@ -492,4 +492,6 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - Se encontró una ficha licenciada de Kobo cuyo resultado indexado muestra “Preview Now” y “Save Preview” para DanMachi vol. 20, edición inglesa (ISBN 9798855437867).
 - La apertura directa desde la herramienta pública devolvió “Cache miss”; no se obtuvo narración ni localizador reproducible.
 - La ruta se añade como DMR-045-SRC-049, metadata_checked_only, CONT-MAIN-LN, sin claims, eventos, relaciones o cambios de métricas. Las fichas de investigación de Alfia y Zald la enlazan como acceso pendiente de inspección manual.
-- **Estado:** cambio preparado en rama research/dmr045-kobo-vol20-preview-route-2026-10-26; las pruebas de CI y la integración aún están pendientes. DMR-045 sigue abierto y los cinco cotejos primarios permanecen pendientes.
+- **Integración:** [PR #164](https://github.com/jonhararagi/wordwaifu/pull/164) fusionada por squash; `main` verificado en SHA `345db0189308b2e34a31bbf8f3930e75f0b4fc2f`.
+- **CI de PR:** [Validate WordWaifu #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [DanMachi Lore and Retrieval Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895) finalizaron `success` sobre el head probado `dc60cf91fba87a85419bc029d24dd7b8446420f6`.
+- **Verificación post-merge:** no confirmada mediante los estados disponibles; no se registra como verde sin evidencia del SHA exacto. DMR-045 sigue abierto y los cinco cotejos primarios permanecen pendientes.

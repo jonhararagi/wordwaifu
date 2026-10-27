@@ -295,3 +295,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - [DMR-045-SRC-049](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) registra la ficha Kobo del volumen 20 inglés, cuyo resultado indexado anuncia “Preview Now” y “Save Preview”.
 - La apertura directa devolvió “Cache miss”; no se obtuvo texto narrativo. El directorio de fuentes y las fichas principales de Alfia y Zald enlazan esta ruta solo como vista previa no inspeccionada.
 - No se modifican claims, relaciones, eventos, aliases ni métricas del canon. DMR-045 continúa IN_PROGRESS; los cinco cotejos primarios siguen abiertos.
+
+## DMR-045-SRC-049 — integración y validación técnica
+
+- Integrado en [PR #164](https://github.com/jonhararagi/wordwaifu/pull/164), squash SHA de main `345db0189308b2e34a31bbf8f3930e75f0b4fc2f`; PR head `dc60cf91fba87a85419bc029d24dd7b8446420f6`.
+- CI de PR: [Validate #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [Lore/Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895), ambos `success`, incluido el smoke test de navegador.
+- No hay evidencia recuperada para declarar verde el CI post-merge de `345db0189308b2e34a31bbf8f3930e75f0b4fc2f`; esa verificación queda abierta y separada del éxito de la PR.
+- La ruta continúa `metadata_checked_only`, sin claims ni relaciones nuevos; los cinco localizadores primarios permanecen abiertos.

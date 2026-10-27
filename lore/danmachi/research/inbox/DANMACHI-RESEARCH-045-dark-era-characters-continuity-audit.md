@@ -945,3 +945,11 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **Interpretación permitida:** conserva una ruta adicional para consulta manual legítima, útil para los indicios DMR-045-CLM-019 (Alfia) y DMR-045-CLM-020 (Zald). No confirma apariciones, escenas, habilidades, relaciones o formulaciones; no permite inferir presencia o ausencia de personajes.
 - **Límite de derechos:** se conserva enlace y descripción breve de la ficha, no una copia del libro. No se intentó eludir el lector ni usar mirrors no autorizados.
 - **Siguiente acción:** abrir la vista previa desde una sesión normal de Kobo que funcione y registrar un localizador solo si el texto narrativo aparece realmente legible. Los cinco expedientes primarios de DMR-045 siguen abiertos.
+
+## Integración y validación — DMR-045-SRC-049 / PR #164
+
+- Integrado por squash mediante [PR #164](https://github.com/jonhararagi/wordwaifu/pull/164); SHA resultante de main `345db0189308b2e34a31bbf8f3930e75f0b4fc2f` (comparación main/commit: identical). Head probado de la PR: `dc60cf91fba87a85419bc029d24dd7b8446420f6`.
+- [Validate WordWaifu #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [DanMachi Lore and Retrieval Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895) finalizaron en `success` sobre el head de PR; ambos incluyeron la sintaxis JS, pruebas de expedientes/directorio y smoke test del navegador.
+- La lectura narrativa sigue pendiente: la ficha pública indexada de Kobo anuncia una muestra, pero la apertura automatizada dio “Cache miss”. No se creó ningún claim, evento, relación o alias a partir de esta ficha.
+- **Límite de validación:** no se obtuvo evidencia de los workflows post-merge para el SHA `345db0189308b2e34a31bbf8f3930e75f0b4fc2f` a través de los estados disponibles; se deja sin afirmar que estén verdes.
+- **Pendiente prioritario:** cotejar los cinco expedientes (Alfia, Zald, Meteria, Erebus y Rudra) con pasajes narrativos licenciados y localizadores reproducibles. DMR-045 permanece `IN_PROGRESS`.
