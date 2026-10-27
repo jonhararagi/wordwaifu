@@ -552,5 +552,7 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - Cohorte investigada: Bete Loga, Tiona Hiryute y Tione Hiryute.
 - Campos capturados en CONT-SECONDARY: skills, magia, habilidades de desarrollo, equipo, snapshots de nivel y discrepancias de fuente.
 - Bitácora: tres entradas únicas añadidas a CHARACTER_UPDATE_LEDGER.md; el test de regresión exige fuentes detectables, notas secundarias y campos de límite.
-- **Estado:** implementado en la rama research/loki-frontline-capabilities-2026-10-27; CI, revisión e integración pendientes.
+- **Integración:** PR [#174](https://github.com/jonhararagi/wordwaifu/pull/174), squash SHA real de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
 - **No se modificó:** personalidad, pasado de Kali Familia, relaciones, eventos o claims narrativos.
