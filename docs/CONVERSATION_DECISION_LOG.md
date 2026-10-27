@@ -443,3 +443,13 @@
 - **Siguiente paso:** cotejar la escena en el texto licenciado; la reseña no reemplaza capítulo o página narrativa.
 - **Integración y CI de PR #162:** integrada por squash en `main`, merge SHA `09a771bd752a8a903984bf5f84510a36565f9206`. CI de la PR sobre head `3bbd6e89e6a1c73a338acf7b36574e6642392712`: [Validate WordWaifu #40394117882](https://github.com/jonhararagi/wordwaifu/actions/runs/40394117882) y [DanMachi Lore and Retrieval Integrity #40394118254](https://github.com/jonhararagi/wordwaifu/actions/runs/40394118254), ambos `success`. CI post-merge sobre el SHA exacto de `main`: [DanMachi Lore and Retrieval Integrity #40400987218](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987218) y [Validate WordWaifu #40400987257](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987257), ambos `success`.
 - **Estado después de CI:** el claim y su UI quedan integrados y validados técnicamente; DMR-045 permanece abierto y CLM-022 sigue siendo una pista secundaria, sin relaciones ni evento.
+
+### CONV-DM-2026-10-26-013 — Registrar ruta Kobo del volumen 20 con límites de evidencia
+- **Fecha:** 2026-10-26.
+- **Estado:** RECORDED; implementación en rama de trabajo, validación de CI pendiente.
+- **Tipo:** investigación de fuente y navegación en la enciclopedia.
+- **Contenido:** el resultado público indexado de Kobo muestra “Preview Now” y “Save Preview” para la edición inglesa de DanMachi vol. 20; la apertura directa devolvió “Cache miss”. La ruta se registra como metadata_checked_only, sin afirmar que se haya leído la novela.
+- **Alcance y continuidad:** DMR-045, CONT-MAIN-LN; acceso desde las notas de investigación de Alfia y Zald únicamente en esa continuidad.
+- **Documentos, registros o pruebas afectados:** DMR-045-SRC-049, registro central de fuentes, src/lore-corpus.js, archivo interactivo de personajes, pruebas de directorio y fichas, cola, índice y estado.
+- **Límite:** no cambia claims, acontecimientos, relaciones, aliases, conocimiento de personajes ni estado de canon. La prioridad primaria de DMR-045 sigue abierta.
+- **Siguiente acción:** ejecutar CI del PR y abrir manualmente la vista previa desde una sesión normal; solo registrar localizador narrativo si aparece texto legible.
