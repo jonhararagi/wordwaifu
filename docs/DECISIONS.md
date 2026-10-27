@@ -208,7 +208,7 @@
 **Límite:** la actualización de la cohorte usa fuentes secundarias; no se convierte en validación primaria ni en una afirmación de que el canon no contiene datos ausentes de las wikis.
 
 ## DEC-033 — Cambiar de cohorte cuando las fuentes no aportan datos nuevos
-**Estado:** Aplicada en la pasada DMR-052; CI e integración pendientes.
+**Estado:** Implementada e integrada en `main` por PR #172; CI de PR aprobado. La verificación post-merge queda registrada por separado.
 **Decisión:** no repetir pasadas sobre la misma wiki/juego ni volver a reformular personalidades para aparentar progreso. Cuando una fuente no informe nivel, magia, skill, equipo o coste, dejarlo como no informado por esa fuente y pasar a otro personaje/grupo.
 **Aplicación:** la pasada DMR-052 amplía la capa secundaria de Allen Fromel, Hedin Selland, Hogni Ragnar y los cuatro hermanos Gulliver. Los resultados se conservan en CHARACTER_UPDATE_LEDGER.md y CONT-SECONDARY.
 **Límite:** «no informado» no significa «no existe en canon»; no se inventan poderes, costes, localizadores o biografías. DMR-045 conserva sus pendientes primarios y no se reintenta una misma muestra sin evidencia nueva.
