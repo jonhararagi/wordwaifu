@@ -343,3 +343,8 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - [Informe DMR-053](research/inbox/DANMACHI-RESEARCH-053-loki-frontline-capabilities.md) — pasada secundaria de Bete Loga, Tiona Hiryute y Tione Hiryute: magia, skills, habilidades de desarrollo, equipo y snapshots de nivel.
 - Las fuentes se registran como DMR-053-SRC-001..004 y la interfaz expone notas bajo CONT-SECONDARY; no se modifica el expediente histórico ni la personalidad.
 - El informe conserva las tablas de nivel 5 separadas de los encabezados que reportan nivel 6 y registra la variante Flosvirt/Frosvirt como diferencia de fuente.
+
+## Estado de integración de DMR-053 (2026-10-27)
+- Integrado en `main` por [PR #174](https://github.com/jonhararagi/wordwaifu/pull/174), SHA `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
