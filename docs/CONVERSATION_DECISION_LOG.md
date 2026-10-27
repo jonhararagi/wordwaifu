@@ -479,3 +479,12 @@
 - **Criterio aplicado:** la página se clasifica como `secondary_checked`, `CONT-AR`; sirve para localizar temas y preguntas, no para afirmar que se leyó el texto primario. La ficha oficial de GA Bunko ofrece `試し読み`, pero la vista pública consultada no expuso páginas narrativas legibles.
 - **Alcance de implementación:** directorio de fuentes y notas interactivas de Alfia, Zald y Erebus bajo `CONT-AR`, con pruebas para impedir filtración a `CONT-MAIN-LN` y `CONT-GAME`.
 - **Límite:** no se crean claims, eventos, relaciones, aliases ni métricas; Meteria sigue sin identificación por pasaje primario y los cinco expedientes de DMR-045 continúan abiertos.
+
+
+### CONV-DM-2026-10-27-003 — Fijar el runner de CI para Playwright 1.55
+- **Fecha:** 2026-10-27.
+- **Estado:** Corrección implementada en la rama de la PR #168; revalidación pendiente.
+- **Hallazgo:** la acción de integridad falló en `Install Chromium` con el error observado `Playwright does not support chromium on ubuntu26.04`. El runner de GitHub se resolvió a Ubuntu 26.04 mediante `ubuntu-latest`.
+- **Decisión técnica:** fijar a `ubuntu-24.04` los workflows `.github/workflows/validate.yml` y `.github/workflows/danmachi-lore-check.yml`, ambos con Playwright 1.55. La migración oficial de la etiqueta `ubuntu-latest` a Ubuntu 26.04 está documentada por [GitHub](https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration/); la versión de Playwright usada por el repo falló en esa imagen.
+- **Corrección de test:** hacer que una aserción de límites de fuente no falle por diferencia irrelevante de mayúsculas.
+- **Límite:** cambio de entorno de pruebas; no altera el producto ni cambia la jerarquía de evidencia de DMR-045. La PR #168 no se fusionará hasta que ambos workflows vuelvan a pasar.
