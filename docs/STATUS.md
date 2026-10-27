@@ -495,3 +495,10 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Integración:** [PR #164](https://github.com/jonhararagi/wordwaifu/pull/164) fusionada por squash; `main` verificado en SHA `345db0189308b2e34a31bbf8f3930e75f0b4fc2f`.
 - **CI de PR:** [Validate WordWaifu #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [DanMachi Lore and Retrieval Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895) finalizaron `success` sobre el head probado `dc60cf91fba87a85419bc029d24dd7b8446420f6`.
 - **Verificación post-merge:** no confirmada mediante los estados disponibles; no se registra como verde sin evidencia del SHA exacto. DMR-045 sigue abierto y los cinco cotejos primarios permanecen pendientes.
+
+## DMR-045 — BOOK☆WALKER, muestra japonesa del volumen 20 (2026-10-27)
+
+- La ficha comercial pública de [BOOK☆WALKER, volumen 20](https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/) ofrece la ruta [試し読み](https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/?sample=1).
+- La apertura normal redirige al visor https://viewer-trial.bookwalker.jp/trial-page/03/view?cid=2996c502-7cb0-42b4-821a-b63df271d442, pero la herramienta devuelve error 500 de acceso; no se obtuvo texto narrativo ni localizador reproducible.
+- Se añade como DMR-045-SRC-050 con `metadata_checked_only`, `CONT-MAIN-LN`, `claims_supported: []` y `events_supported: []`; el enlace se muestra en las notas de Alfia/Zald solamente dentro de la novela principal.
+- No se modificaron claims, relaciones, sucesos, aliases o métricas. DMR-045 sigue `IN_PROGRESS`; los cinco cotejos primarios permanecen pendientes.
