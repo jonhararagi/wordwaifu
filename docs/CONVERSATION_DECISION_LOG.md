@@ -519,9 +519,12 @@
 
 ### CONV-DM-2026-10-27-006 — Pasar a otra cohorte de capacidades sin reescribir personalidades
 - **Fecha:** 2026-10-27.
-- **Estado:** implementado en rama; CI e integración pendientes.
+- **Estado:** implementado e integrado en `main` mediante PR [#174](https://github.com/jonhararagi/wordwaifu/pull/174); CI de PR y post-merge aprobados.
 - **Instrucción aplicada:** después de múltiples pasadas sobre los mismos personajes y fuentes, avanzar a otra cohorte cuando sea más útil; limitar la actualización al campo con evidencia nueva y no reformular personalidad como sustituto de información factual.
 - **Cohorte:** Bete Loga, Tiona Hiryute y Tione Hiryute. Pasada limitada a nivel reportado, skills, magia, habilidades de desarrollo, equipo, snapshots de estado y límites de la evidencia comunitaria.
 - **Implementación:** DMR-053, notas interactivas bajo CONT-SECONDARY, fuentes DMR-053-SRC-001..004, bitácora de actualizaciones y regresión para los tres expedientes.
 - **Reglas de evidencia:** las cabeceras de nivel 6 y tablas de estadísticas de nivel 5 se mantienen separadas; las grafías Flosvirt/Frosvirt se guardan como diferencia entre fuentes; magia no listada se anota como no listada en esa fuente, sin afirmar ausencia universal.
 - **Límites:** no se reescriben personalidades, no se modifican los expedientes históricos de las gemelas, y no se crean claims, eventos o relaciones narrativas nuevos. DMR-045 conserva los cinco cotejos primarios pendientes.
+- **SHA de `main`:** `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
