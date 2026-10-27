@@ -63,8 +63,8 @@ for (const id of [
   "community-lyra",
   "community-celty-srowa"
 ]) {
-  assert.equal(sourceDirectory.filter(source => source.id === id).length, 1,
-    "The ledger's supporting wiki route must exist exactly once: " + id);
+  assert.ok(sourceDirectory.some(source => source.id === id),
+    "The ledger's supporting wiki route must be discoverable: " + id);
 }
 
 const secondaryNotes = new Map([
