@@ -3871,3 +3871,92 @@ verification_status: stub
 - rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
 - verified_by: DANMACHI-RESEARCH-052
 - verification_status: secondary_checked
+
+## DMR-053-SRC-001 · DanMachi Wiki — Bete Loga
+
+- source_id: DMR-053-SRC-001
+- title: Bete Loga
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; sin edición identificada en esta consulta
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Bete_Loga
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Skill, Magic and Equipment; Abilities.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para el snapshot de nivel 6, las skills enumeradas y el equipo. La tabla de estadísticas detallada se muestra como estado de nivel 5 y no debe mezclarse con el nivel 6.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-053
+- verification_status: secondary_checked
+
+## DMR-053-SRC-002 · Bete Loga/Habilidades — Wiki DanMachi
+
+- source_id: DMR-053-SRC-002
+- title: Bete Loga/Habilidades
+- creator_or_publisher: Wiki DanMachi contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Página comunitaria de habilidades
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Bete_Loga/Habilidades
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Estadísticas; Magia; Habilidades de Desarrollo; Equipo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para Hati, las habilidades de desarrollo y el equipo. La grafía de las botas aparece como Frosvirt, mientras que la página inglesa utiliza Flosvirt; la variante se conserva sin adjudicarla como cambio canónico.
+- conflicting_sources: [DMR-053-SRC-001]
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-053
+- verification_status: secondary_checked
+
+## DMR-053-SRC-003 · DanMachi Wiki — Tiona Hiryute
+
+- source_id: DMR-053-SRC-003
+- title: Tiona Hiryute
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; sin edición identificada en esta consulta
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Tiona_Hiryute
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Skill, Magic and Equipment; Abilities.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para el snapshot de nivel, skills, habilidades de desarrollo y armas. El encabezado reporta nivel 6, mientras que la tabla de estadísticas detallada corresponde al estado de nivel 5; no se combinan como un único snapshot.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-053
+- verification_status: secondary_checked
+
+## DMR-053-SRC-004 · DanMachi Wiki — Tione Hiryute
+
+- source_id: DMR-053-SRC-004
+- title: Tione Hiryute
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; sin edición identificada en esta consulta
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Tione_Hiryute
+- accessed_at: 2026-10-27
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Skill, Magic and Equipment; Abilities.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para el snapshot de nivel, Berserk, Backdraft, List Iorum, habilidades de desarrollo y equipo. La tabla de estadísticas detallada se muestra como estado de nivel 5.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-053
+- verification_status: secondary_checked
+

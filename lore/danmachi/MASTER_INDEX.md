@@ -337,3 +337,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Integrado en `main` por [PR #172](https://github.com/jonhararagi/wordwaifu/pull/172), SHA `79505bd740d47560d4bc67166c807d14090a950d`.
 - CI de PR aprobado sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`: [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435).
 - CI post-merge sobre el SHA exacto de `main`: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
+
+
+## DANMACHI-RESEARCH-053 · Familia Loki: capacidades de combate
+- [Informe DMR-053](research/inbox/DANMACHI-RESEARCH-053-loki-frontline-capabilities.md) — pasada secundaria de Bete Loga, Tiona Hiryute y Tione Hiryute: magia, skills, habilidades de desarrollo, equipo y snapshots de nivel.
+- Las fuentes se registran como DMR-053-SRC-001..004 y la interfaz expone notas bajo CONT-SECONDARY; no se modifica el expediente histórico ni la personalidad.
+- El informe conserva las tablas de nivel 5 separadas de los encabezados que reportan nivel 6 y registra la variante Flosvirt/Frosvirt como diferencia de fuente.

@@ -463,3 +463,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **CI de PR:** [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success` sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`.
 - **CI post-merge sobre el SHA exacto de `main` `79505bd740d47560d4bc67166c807d14090a950d`: [Validate WordWaifu #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [DanMachi Lore and Retrieval Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
 - **Próxima acción:** revisar diff y pruebas antes de integrar; si una de las fuentes no informa el campo, cerrar ese dato y pasar a otra identidad.
+
+
+## DANMACHI-RESEARCH-053 · Capacidades de primera línea de Familia Loki (2026-10-27)
+
+- Pasada limitada a Bete Loga, Tiona Hiryute y Tione Hiryute, sin reabrir su investigación histórica ni reformular personalidades.
+- Se registran Hati y las skills Úlfheðinn/Fenris Wolf/Solmani para Bete; Berserk/Intense Heat para Tiona; Berserk/Backdraft y List Iorum para Tione.
+- Se registran armas y habilidades de desarrollo listadas por las wikis comunitarias, junto con dos límites de lectura: nivel 6 en encabezado frente a tablas estadísticas del nivel 5 y variantes Flosvirt/Frosvirt.
+- Fuente, alcance y condiciones para reabrir: DMR-053 y DMR-053-SRC-001..004; los cuatro registros quedan como secondary_checked.
+- **Estado:** implementado en rama de investigación; CI e integración pendientes.
+- **Próxima acción:** validar test anti-repetición, catálogo y navegador; integrar con los dos workflows aprobados.

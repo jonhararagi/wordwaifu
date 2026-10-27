@@ -918,3 +918,15 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Confirmar la conclusión de CI post-merge sobre `79505bd740d47560d4bc67166c807d14090a950d`: [Validate #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success`.
 - **Límite:** fuente secundaria; no añade claims, eventos o relaciones ni cierra cotejos primarios.
 - **Convivencia con DMR-045:** la búsqueda primaria de los cinco expedientes históricos sigue pendiente. Mientras no haya una nueva fuente licenciada legible, no se reintentan las mismas páginas sin cambios; se permite avanzar sobre una cohorte distinta como esta, conforme a la directriz anti-repetición.
+
+
+## DANMACHI-RESEARCH-053 — Familia Loki: capacidades de Bete, Tiona y Tione (2026-10-27)
+
+- [x] Revisar una sola vez las páginas comunitarias elegidas para habilidades, magia, habilidades de desarrollo y equipo.
+- [x] Distinguir los encabezados de nivel 6 de las tablas estadísticas de nivel 5.
+- [x] Registrar la divergencia ortográfica Flosvirt/Frosvirt sin adjudicar un cambio de canon.
+- [x] Añadir las notas de CONT-SECONDARY para Bete Loga, Tiona Hiryute y Tione Hiryute, sin reescribir personalidad ni historia.
+- [x] Registrar cuatro fuentes comunitarias y añadir una regresión del protocolo anti-repetición.
+- [ ] Ejecutar ambos workflows; abrir PR y fusionar solo con checks aprobados.
+- **Límite:** datos secundarios; no se crean claims narrativos, eventos o relaciones.
+- **Convivencia con DMR-045:** los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes. DMR-053 no reemplaza esa prioridad ni justifica repetir las muestras no legibles.
