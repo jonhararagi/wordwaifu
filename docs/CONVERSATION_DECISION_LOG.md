@@ -446,7 +446,11 @@
 
 ### CONV-DM-2026-10-26-013 — Registrar ruta Kobo del volumen 20 con límites de evidencia
 - **Fecha:** 2026-10-26.
-- **Estado:** RECORDED; implementación en rama de trabajo, validación de CI pendiente.
+- **Estado:** IMPLEMENTADO E INTEGRADO EN main; CI de PR aprobado; estado post-merge no confirmado.
+- **PR e integración:** [PR #164](https://github.com/jonhararagi/wordwaifu/pull/164) fusionada por squash en main. Head probado: dc60cf91fba87a85419bc029d24dd7b8446420f6; SHA resultante de main confirmado: 345db0189308b2e34a31bbf8f3930e75f0b4fc2f.
+- **CI de PR sobre el head exacto:** [Validate WordWaifu #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [DanMachi Lore and Retrieval Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895), ambos `success`; incluyen sintaxis JS, expedientes, directorio de fuentes y smoke test de navegador.
+- **Verificación post-merge:** no confirmada. La consulta del SHA de main no devolvió contextos de estado ni ejecuciones accesibles mediante las consultas disponibles; no se afirma que los workflows post-merge estén en verde.
+
 - **Tipo:** investigación de fuente y navegación en la enciclopedia.
 - **Contenido:** el resultado público indexado de Kobo muestra “Preview Now” y “Save Preview” para la edición inglesa de DanMachi vol. 20; la apertura directa devolvió “Cache miss”. La ruta se registra como metadata_checked_only, sin afirmar que se haya leído la novela.
 - **Alcance y continuidad:** DMR-045, CONT-MAIN-LN; acceso desde las notas de investigación de Alfia y Zald únicamente en esa continuidad.
