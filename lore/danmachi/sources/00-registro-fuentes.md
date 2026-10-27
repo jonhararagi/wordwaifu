@@ -1087,15 +1087,15 @@ verification_status: stub
 - volume_or_edition: Artículo web; revisión variable
 - language: Inglés
 - official_url: https://danmachi.fandom.com/wiki/Astraea_Familia
-- accessed_at: 2026-10-19
-- locator_type: community_organization_summary
-- locator: Introducción, información general y roster actual/histórico.
+- accessed_at: 2026-10-27
+- locator_type: community_organization_roster_and_level_table
+- locator: Roster actual/histórico de Astrea Familia, cargos y columna de niveles. La pasada de 2026-10-27 encontró niveles individuales para Alise (4), Kaguya (4), Lyra (3), Neze (4) y Noin (4), mientras Iska, Maryuu, Asta, Ryana y Celty aparecen como Unknown en la tabla.
 - claims_supported: [DMR-028-CLM-001, DMR-028-CLM-006, DMR-028-CLM-008]
 - events_supported: []
 - continuity_scope: Referencia secundaria transversal; separar CONT-AR y CONT-MAIN-LN por afirmación
-- reliability_note: Sirve como índice de miembros, cargos y posibles escenas; no sustituye las novelas. El roster actual y el histórico requieren verificación por periodo.
-- conflicting_sources: []
-- rights_note: Paráfrasis propia breve; no copiar el artículo.
+- reliability_note: Sirve como índice comunitario de miembros, cargos y posibles escenas; no sustituye las novelas. Si otra entrada de wiki usa el rango genérico 3–4, no convertirlo en nivel individual exacto ni resolver el conflicto por inferencia.
+- conflicting_sources: DMR-028-SRC-009 (Minor Characters) resume un rango 3–4 para algunos personajes cuyo nivel individual figura como Unknown en esta tabla. Celty también tiene conflicto de elemento mágico con DMR-028-SRC-007/010.
+- rights_note: Paráfrasis propia breve; no copiar el artículo. Véase lore/danmachi/CHARACTER_UPDATE_LEDGER.md.
 - verified_by: DANMACHI-RESEARCH-028
 - verification_status: secondary_checked
 
