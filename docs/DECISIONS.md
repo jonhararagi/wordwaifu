@@ -215,3 +215,11 @@
 **Decisión:** no repetir pasadas sobre la misma wiki/juego ni volver a reformular personalidades para aparentar progreso. Cuando una fuente no informe nivel, magia, skill, equipo o coste, dejarlo como no informado por esa fuente y pasar a otro personaje/grupo.
 **Aplicación:** la pasada DMR-052 amplía la capa secundaria de Allen Fromel, Hedin Selland, Hogni Ragnar y los cuatro hermanos Gulliver. Los resultados se conservan en CHARACTER_UPDATE_LEDGER.md y CONT-SECONDARY.
 **Límite:** «no informado» no significa «no existe en canon»; no se inventan poderes, costes, localizadores o biografías. DMR-045 conserva sus pendientes primarios y no se reintenta una misma muestra sin evidencia nueva.
+
+
+## DEC-034 — Registrar capacidades de otro grupo antes de repetir pasadas agotadas
+**Estado:** implementado en rama de investigación; CI e integración pendientes.
+**Decisión:** si varios intentos sobre un mismo personaje/fuente no aportan información nueva, detener esa iteración y avanzar a otra cohorte. Actualizar solo capacidades que la fuente realmente enumera; no reescribir personalidades para aparentar progreso.
+**Aplicación:** DMR-053 registra capacidades secundarias de Bete Loga, Tiona Hiryute y Tione Hiryute en CONT-SECONDARY.
+**Límites:** los niveles 6 reportados por los encabezados no se fusionan con tablas de estado de nivel 5; las variantes Flosvirt/Frosvirt se preservan; magia no listada se registra como no listada por la fuente consultada.
+**Relación con prioridad:** DMR-045 conserva los pendientes primarios, pero no se reintentan sus muestras sin texto legible si no aparece un desencadenante nuevo.
