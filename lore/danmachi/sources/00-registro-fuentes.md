@@ -3714,3 +3714,26 @@ verification_status: stub
 - rights_note: Guardar enlace y descripción de acceso; no extraer el libro ni eludir restricciones del lector.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-045-SRC-051 · DanMachi Wiki — diferencias entre Memoria Freese y Astrea Record 3
+
+- source_id: DMR-045-SRC-051
+- title: Astrea Record Novela Ligera Volumen 3/Diferencias
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI_ADAPTATION_COMPARISON
+- series: DanMachi / Astrea Record
+- volume_or_edition: Volumen 3, comparación comunitaria entre el evento de Memoria Freese y la novelización
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias
+- accessed_at: 2026-10-27
+- locator_type: community_differences_summary_no_primary_page_locator
+- locator: La página resume diferencias reportadas en la novelización: Spell Key Lugio/Satanas Verion, accesorio de Asfi, uso por Alfia de la esgrima de Zald, detalles de Genos Angelus y Gif Blessing, referencias a Deus Ambrosia y al estado final de Zald, y una escena EXTRA con Zald, Alfia y Erebus.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Fuente secundaria reconocida para orientar búsquedas. La página no es el texto de la novela, no ofrece localizadores primarios reproducibles y puede resumir u omitir matices; no usar para promover una afirmación a verificación primaria.
+- conflicting_sources: La página compara la versión del juego con la novelización; cada detalle debe mantenerse en su continuidad y cotejarse con la edición licenciada.
+- rights_note: Guardar URL y paráfrasis breve; no copiar pasajes extensos ni eludir lectores licenciados.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: secondary_checked
