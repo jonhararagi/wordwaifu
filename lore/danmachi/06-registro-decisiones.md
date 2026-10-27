@@ -165,3 +165,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Aplicación:** DMR-045-SRC-051 enlaza la página de diferencias de Astrea Record 3 y se expone en las notas interactivas de Alfia, Zald y Erebus únicamente bajo `CONT-AR`.
 - **Integración y validación:** PR [#168](https://github.com/jonhararagi/wordwaifu/pull/168), SHA `99a667e60f3651b98759a1993a26258ba37dd645`. CI de PR sobre `16338edec86670b1692084bea446657bc657eb71`: [Validate WordWaifu #40510817854](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817854) y [DanMachi Lore and Retrieval Integrity #40510817870](https://github.com/jonhararagi/wordwaifu/actions/runs/40510817870), ambos `success`; CI post-merge sobre `99a667e60f3651b98759a1993a26258ba37dd645`: [Validate WordWaifu #40511064727](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064727) y [DanMachi Lore and Retrieval Integrity #40511064313](https://github.com/jonhararagi/wordwaifu/actions/runs/40511064313), ambos `success`.
 - **Límites:** sin claims ni eventos nuevos; no se afirma lectura directa de la novela, no se inventan páginas, no se crea una relación familiar para el padre de Bell y no se importa la ideología de Erebus del juego a la novelización.
+
+
+### DEC-DM-019 — Bitácora anti-repetición de personajes y campos no reportados
+- **Fecha:** 2026-10-27.
+- **Estado:** implementada en rama de trabajo; validación e integración pendientes.
+- **Regla de trabajo:** reutilizar la pasada secundaria ya documentada en vez de actualizar repetidamente la personalidad. Registrar por identidad los enlaces revisados, hechos secundarios, campos no reportados, discrepancias y condición precisa para reabrir.
+- **Aplicación:** `lore/danmachi/CHARACTER_UPDATE_LEDGER.md`; continuidad adicional `CONT-SECONDARY`; notas de habilidades de una primera cohorte de diez miembros de Astrea Familia; test automatizado agregado a ambos workflows.
+- **Límite de inferencia:** ausencia en una wiki/juego significa que esa fuente no reportó el dato, no que el canon niegue explícitamente la habilidad. No completar nombres, costes o niveles exactos por inferencia. DMR-045 se mantiene `HOLD_FOR_PRIMARY_SOURCE` hasta evidencia nueva; no se cambia la prioridad hacia Orario por esta tanda.
