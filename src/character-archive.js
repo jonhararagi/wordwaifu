@@ -261,7 +261,8 @@ sections:[
 {title:"Límite de evidencia",text:"La sinopsis no da número de página y la muestra oficial consultada no expuso narración legible. La escena, el contexto completo y la formulación exacta siguen pendientes de cotejo primario. No trasladar esta pista a CONT-AR ni a CONT-GAME." }
 ],
 references:[
-{label:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",kind:"community"}
+{label:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",kind:"community"},
+{label:"Kobo · DanMachi vol. 20 (vista previa anunciada; páginas no inspeccionadas)",url:"https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel",kind:"licensed_preview"}
 ]
 },
 "CONT-AR":{
@@ -290,7 +291,8 @@ sections:[
 {title:"Qué no queda confirmado",text:"La fuente no es la página narrativa del libro y no proporciona folio reproducible. La interpretación exacta de la técnica y su relación con Afterglow requieren cotejar la edición licenciada. No elevar este registro a source_checked_excerpt_only ni inventar página." }
 ],
 references:[
-{label:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",kind:"community"}
+{label:"DanMachi Wiki · DanMachi Light Novel Volume 20/Synopsis",url:"https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis",kind:"community"},
+{label:"Kobo · DanMachi vol. 20 (vista previa anunciada; páginas no inspeccionadas)",url:"https://www.kobo.com/us/en/ebook/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel",kind:"licensed_preview"}
 ]
 },
 "CONT-AR":{
