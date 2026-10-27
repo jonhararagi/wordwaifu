@@ -208,7 +208,10 @@
 **Límite:** la actualización de la cohorte usa fuentes secundarias; no se convierte en validación primaria ni en una afirmación de que el canon no contiene datos ausentes de las wikis.
 
 ## DEC-033 — Cambiar de cohorte cuando las fuentes no aportan datos nuevos
-**Estado:** Implementada e integrada en `main` por PR #172; CI de PR aprobado. La verificación post-merge queda registrada por separado.
+**Estado:** Implementada e integrada en `main` por PR [#172](https://github.com/jonhararagi/wordwaifu/pull/172); CI de PR y CI post-merge aprobados.
+- **SHA de `main`:** `79505bd740d47560d4bc67166c807d14090a950d`.
+- **CI de PR:** [Validate #40572608737](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608737) y [Lore/Integrity #40572608435](https://github.com/jonhararagi/wordwaifu/actions/runs/40572608435), ambos `success` sobre `1ece6f0117dadf2fb0b0a4988d23c13df34d0609`.
+- [Validate post-merge #40590376454](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376454) y [Lore/Integrity post-merge #40590376362](https://github.com/jonhararagi/wordwaifu/actions/runs/40590376362), ambos `success` sobre el SHA exacto de `main`.
 **Decisión:** no repetir pasadas sobre la misma wiki/juego ni volver a reformular personalidades para aparentar progreso. Cuando una fuente no informe nivel, magia, skill, equipo o coste, dejarlo como no informado por esa fuente y pasar a otro personaje/grupo.
 **Aplicación:** la pasada DMR-052 amplía la capa secundaria de Allen Fromel, Hedin Selland, Hogni Ragnar y los cuatro hermanos Gulliver. Los resultados se conservan en CHARACTER_UPDATE_LEDGER.md y CONT-SECONDARY.
 **Límite:** «no informado» no significa «no existe en canon»; no se inventan poderes, costes, localizadores o biografías. DMR-045 conserva sus pendientes primarios y no se reintenta una misma muestra sin evidencia nueva.
