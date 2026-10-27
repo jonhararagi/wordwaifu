@@ -218,8 +218,11 @@
 
 
 ## DEC-034 — Registrar capacidades de otro grupo antes de repetir pasadas agotadas
-**Estado:** implementado en rama de investigación; CI e integración pendientes.
+**Estado:** implementado e integrado en `main` por PR [#174](https://github.com/jonhararagi/wordwaifu/pull/174); CI de PR y post-merge aprobados.
 **Decisión:** si varios intentos sobre un mismo personaje/fuente no aportan información nueva, detener esa iteración y avanzar a otra cohorte. Actualizar solo capacidades que la fuente realmente enumera; no reescribir personalidades para aparentar progreso.
 **Aplicación:** DMR-053 registra capacidades secundarias de Bete Loga, Tiona Hiryute y Tione Hiryute en CONT-SECONDARY.
 **Límites:** los niveles 6 reportados por los encabezados no se fusionan con tablas de estado de nivel 5; las variantes Flosvirt/Frosvirt se preservan; magia no listada se registra como no listada por la fuente consultada.
 **Relación con prioridad:** DMR-045 conserva los pendientes primarios, pero no se reintentan sus muestras sin texto legible si no aparece un desencadenante nuevo.
+- SHA de `main`: `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
+- **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
