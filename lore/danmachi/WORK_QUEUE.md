@@ -899,6 +899,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Marcar `HOLD_FOR_PRIMARY_SOURCE` para los cinco expedientes DMR-045 hasta evidencia nueva; no repetir el barrido general ni reescribir personalidades.
 - [x] Registrar la pasada de `DMR-028-SRC-002` a `SRC-010` en el registro de fuentes existente, conservando los IDs y anotando las discrepancias relevantes.
 - [x] Añadir `tests/test_character_update_ledger.cjs` y conectarlo con ambos workflows de CI.
-- [ ] Revisar el diff completo, corregir fallos de las regresiones y abrir PR hacia `main`.
-- [ ] Integrar con ambos workflows de la PR aprobados; verificar después el SHA de `main` y ambos workflows post-merge.
+- [x] Revisar el diff completo y corregir los fallos detectados por CI (fuente Celty, límites secundarios de Kaguya, sobrescritura de notas secundarias y vocabulario de la magia de Noin).
+- [x] Abrir PR [#170](https://github.com/jonhararagi/wordwaifu/pull/170) y fusionarla por squash; SHA de `main`: `034eb037f98ce25076de7fc4217a62cb960172eb`.
+- [x] CI de PR sobre `e0cb29570ad8cd0b7b704ca73fa95882765e66a0`: [Validate WordWaifu #40525522243](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522243) y [DanMachi Lore and Retrieval Integrity #40525522040](https://github.com/jonhararagi/wordwaifu/actions/runs/40525522040), ambos `success`.
+- [x] CI post-merge sobre `034eb037f98ce25076de7fc4217a62cb960172eb`: [Validate WordWaifu #40525793577](https://github.com/jonhararagi/wordwaifu/actions/runs/40525793577) y [DanMachi Lore and Retrieval Integrity #40525794301](https://github.com/jonhararagi/wordwaifu/actions/runs/40525794301), ambos `success`.
 - **Regla permanente:** si una fuente consultada no informa el nivel/nombre/efecto/coste, registrar «no informado en esta fuente» y pasar a otro personaje; solo reabrir con un desencadenante documentado. No afirmar que el dato no existe en el canon sin evidencia expresa.
