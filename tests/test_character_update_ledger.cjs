@@ -25,6 +25,16 @@ const astreaIds = [
   "CHAR-RYANA-LIETZ",
   "CHAR-CELTY-SROWA"
 ];
+const freyaIds = [
+  "CHAR-ALLEN-FROMEL",
+  "CHAR-HEDIN-SELLAND",
+  "CHAR-HOGNI-RAGNAR",
+  "CHAR-GULLIVER-BROTHERS",
+  "CHAR-ALFRIGG-GULLIVER",
+  "CHAR-DVALINN-GULLIVER",
+  "CHAR-BERLING-GULLIVER",
+  "CHAR-GRER-GULLIVER"
+];
 const heldDmr045Ids = [
   "CHAR-DARK-ALFIA",
   "CHAR-DARK-ZALD",
@@ -40,7 +50,7 @@ function sectionFor(id) {
   return ledger.slice(start, end < 0 ? ledger.length : end);
 }
 
-for (const id of [...astreaIds, ...heldDmr045Ids]) {
+for (const id of [...astreaIds, ...heldDmr045Ids, ...freyaIds]) {
   const matches = ledger.match(new RegExp("^### " + id + " —", "gm")) || [];
   assert.equal(matches.length, 1, "Each character must have exactly one update ledger entry: " + id);
   const entry = sectionFor(id);
@@ -61,7 +71,12 @@ for (const id of [
   "community-alise",
   "community-kaguya",
   "community-lyra",
-  "community-celty-srowa"
+  "community-celty-srowa",
+  "community-freya-allen",
+  "community-freya-hedin",
+  "community-freya-hedin-skills-es",
+  "community-freya-hogni",
+  "community-freya-gulliver-es"
 ]) {
   assert.ok(sourceDirectory.some(source => source.id === id),
     "The ledger's supporting wiki route must be discoverable: " + id);
@@ -77,7 +92,15 @@ const secondaryNotes = new Map([
   ["CHAR-ISKA-BRA", ["dos puños", "Unknown"]],
   ["CHAR-ASTA-KNOX", ["defensa impenetrable", "escudo"]],
   ["CHAR-RYANA-LIETZ", ["Irivute", "debilitación"]],
-  ["CHAR-CELTY-SROWA", ["fuego", "rayo", "conflicto"]]
+  ["CHAR-CELTY-SROWA", ["fuego", "rayo", "conflicto"]],
+  ["CHAR-ALLEN-FROMEL", ["Gralineze Fromel", "aceleración", "costes numéricos"]],
+  ["CHAR-HEDIN-SELLAND", ["Caelus Hildr", "Laurus Hildr", "Dizaria"]],
+  ["CHAR-HOGNI-RAGNAR", ["Dainsleif", "Rasu Dain", "Victim Abyss"]],
+  ["CHAR-GULLIVER-BROTHERS", ["nivel 5", "nivel 6", "Dvalinn"]],
+  ["CHAR-ALFRIGG-GULLIVER", ["lanza", "decisiones"]],
+  ["CHAR-DVALINN-GULLIVER", ["martillo", "Resistencia Anormal"]],
+  ["CHAR-BERLING-GULLIVER", ["hacha", "emboscadas"]],
+  ["CHAR-GRER-GULLIVER", ["espadón", "adversario"]]
 ]);
 for (const [id, requiredTerms] of secondaryNotes) {
   const note = archive.getExtendedInfo(id, "CONT-SECONDARY", null);
@@ -97,4 +120,4 @@ assert.ok(archive.continuityLabels["CONT-SECONDARY"].includes("no cotejados"),
   "The archive must visibly label secondary-source data as not primary-checked.");
 assert.ok(archive.continuityOrder.includes("CONT-SECONDARY"),
   "The separate secondary continuity must remain available to the interactive archive.");
-console.log("PASS character update ledger: unique entries, stop/reopen rules, source typing and 10 secondary character notes verified.");
+console.log("PASS character update ledger: unique entries, stop/reopen rules, source typing, 10 Astrea notes and 8 Freya notes verified.");
