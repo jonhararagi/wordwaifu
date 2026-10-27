@@ -94,7 +94,7 @@ Fuentes comunes consultadas como fuentes secundarias:
 
 ### CHAR-ASTA-KNOX — Asta Knox
 
-- **Estado:** `PARTIAL_NOT_REPORTED).
+- **Estado:** `PARTIAL_NOT_REPORTED`.
 - **URLs consultadas:** [Astraea Familia](https://danmachi.fandom.com/wiki/Astraea_Familia), [Minor Characters](https://danmachi.fandom.com/wiki/Minor_Characters), [Ryuu Lion](https://danmachi.fandom.com/wiki/Ryuu_Lion).
 - **Datos encontrados:** el roster de Familia marca el nivel como `Unknown`; el artículo agregador ofrece `3–4`; equipo reportado: escudo. Ryuu Lion menciona una magia de defensa impenetrable, sin nombre.
 - **No informado:** nivel individual exacto, nombre de la magia, skills con nombre y coste.
