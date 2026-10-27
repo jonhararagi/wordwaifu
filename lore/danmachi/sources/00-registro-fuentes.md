@@ -3705,7 +3705,7 @@ verification_status: stub
 - product_page_url: https://bookwalker.jp/de2996c502-7cb0-42b4-821a-b63df271d442/
 - accessed_at: 2026-10-27
 - locator_type: retailer_sample_route_and_viewer_access_failure_metadata_only
-- locator: La ficha comercial oficial ofrece 試し読み. La ruta de muestra redirige al visor https://viewer-trial.bookwalker.jp/trial-page/03/view?cid=2996c502-7cb0-42b4-821a-b63df271d442; la herramienta devuelve un error 500 de acceso al visor y no expone páginas narrativas.
+- locator: La ficha comercial oficial ofrece 試し読み. La ruta de muestra redirige al visor https://viewer-trial.bookwalker.jp/trial-page/03/view?cid=2996c502-7cb0-42b4-821a-b63df271d442; la herramienta devuelve «Internal Error» al seguir la redirección y señala «not accessible via this tool»; no se confirmó una respuesta HTTP del visor ni se expusieron páginas narrativas.
 - claims_supported: []
 - events_supported: []
 - continuity_scope: CONT-MAIN-LN
