@@ -311,7 +311,7 @@ assert.ok(astreaRecordDifferences[0].coverage.includes("Lugio") && astreaRecordD
 assert.ok(astreaRecordDifferences[0].coverage.includes("Deus Ambrosia") && astreaRecordDifferences[0].coverage.includes("Erebus"));
 assert.match(astreaRecordDifferences[0].limits, /no texto primario/i);
 assert.match(astreaRecordDifferences[0].limits, /CONT-GAME/);
-assert.match(astreaRecordDifferences[0].limits, /no ofrece paginación narrativa reproducible/);
+assert.match(astreaRecordDifferences[0].limits, /no ofrece paginación narrativa reproducible/i);
 
 const sbCreativeVol20 = sources.filter(source => source.id === "official-sbcreative-danmachi-vol20-sample");
 assert.equal(sbCreativeVol20.length, 1, "SB Creative DanMachi vol. 20 reader route must be discoverable exactly once");
