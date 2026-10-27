@@ -855,3 +855,11 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] CI post-merge Lore/Integrity [#40381983723](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983723) `success`.
 - [x] Confirmar la conclusión final de post-merge Validate [#40381983810](https://github.com/jonhararagi/wordwaifu/actions/runs/40381983810): `success` sobre `968ad23141ffdc2db032383228445fddc753b755`.
 - [ ] Leer texto narrativo real de una muestra licenciada y registrar un localizador reproducible antes de actualizar cualquier claim. Los cinco localizadores primarios de DMR-045 permanecen abiertos.
+
+### DMR-045-SRC-049 — ruta Kobo de vista previa, solo metadatos (2026-10-26)
+- [x] Localizar la ficha licenciada de Kobo para DanMachi vol. 20 en inglés; el resultado público indexado muestra “Preview Now” y “Save Preview”.
+- [x] Registrar la ruta como metadata_checked_only en CONT-MAIN-LN, con claims_supported vacío, sin claims, eventos o relaciones nuevos.
+- [x] Enlazar la ruta desde las fichas de investigación de Alfia y Zald bajo CONT-MAIN-LN, sin trasladarla a CONT-AR o CONT-GAME.
+- [x] Añadir regresiones de unicidad, URL, estado de evidencia y separación de continuidad.
+- [ ] Abrir la muestra en una sesión normal accesible y registrar capítulo/página solo si una página narrativa queda realmente legible; la herramienta pública devolvió “Cache miss”.
+- **Estado factual:** ruta implementada en rama de trabajo; no equivale a texto primario y no cierra los cinco localizadores de DMR-045.
