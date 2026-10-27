@@ -289,3 +289,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - CI de PR sobre head `3bbd6e89e6a1c73a338acf7b36574e6642392712`: [Validate #40394117882](https://github.com/jonhararagi/wordwaifu/actions/runs/40394117882) y [Lore/Integrity #40394118254](https://github.com/jonhararagi/wordwaifu/actions/runs/40394118254), ambos `success`.
 - CI post-merge sobre ese SHA exacto de `main`: [Validate #40400987257](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987257) y [Lore/Integrity #40400987218](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987218), ambos `success`.
 - CLM-022 continúa `secondary_checked`; no se crean eventos/aristas y la comprobación primaria de Astrea Record 3 sigue pendiente.
+
+## DMR-045 — Kobo, ruta adicional metadata-only (2026-10-26)
+
+- [DMR-045-SRC-049](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) registra la ficha Kobo del volumen 20 inglés, cuyo resultado indexado anuncia “Preview Now” y “Save Preview”.
+- La apertura directa devolvió “Cache miss”; no se obtuvo texto narrativo. El directorio de fuentes y las fichas principales de Alfia y Zald enlazan esta ruta solo como vista previa no inspeccionada.
+- No se modifican claims, relaciones, eventos, aliases ni métricas del canon. DMR-045 continúa IN_PROGRESS; los cinco cotejos primarios siguen abiertos.
