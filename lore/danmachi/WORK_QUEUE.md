@@ -838,6 +838,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 
 - [x] Registrar como pista secundaria DMR-045-CLM-022 a partir de la entrada de reseña BookLive ya existente DMR-045-SRC-043: el resumen parece mencionar una ofrenda floral de Bell y Hermes ante tumbas de Erebus, Zald y Alfia. No crear aristas ni relaciones y no tratarlo como lectura de la novela.
+- [x] Integrar DMR-045-CLM-022 y sus tres notas interactivas mediante [PR #162](https://github.com/jonhararagi/wordwaifu/pull/162), merge SHA `09a771bd752a8a903984bf5f84510a36565f9206`; CI de PR y post-merge documentados a continuación.
+- [x] Validar PR #162: [Validate #40394117882](https://github.com/jonhararagi/wordwaifu/actions/runs/40394117882) y [Lore/Integrity #40394118254](https://github.com/jonhararagi/wordwaifu/actions/runs/40394118254), ambos `success` sobre head `3bbd6e89e6a1c73a338acf7b36574e6642392712`.
+- [x] Validar post-merge sobre el SHA exacto de `main`: [Lore/Integrity #40400987218](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987218) y [Validate #40400987257](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987257), ambos `success`.
 - [ ] Cotejar el cierre de Astrea Record 3 en una edición licenciada: confirmar si la escena y los personajes mencionados en CLM-022 aparecen en el texto, con localizador reproducible. Mantener el claim secundario hasta entonces.
 
 ### DMR-045 — rutas BookLive de prueba gratuita (2026-10-26)

@@ -282,3 +282,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ## DMR-045-CLM-022 — pista secundaria del cierre
 - La reseña de BookLive DMR-045-SRC-043 parece mencionar una ofrenda floral de Bell y Hermes ante tumbas de Erebus, Zald y Alfia.
 - El claim está separado de las notas sobre CONT-GAME, no crea relaciones y permanece `secondary_checked` hasta cotejo del texto narrativo licenciado.
+
+
+## DMR-045-CLM-022 — integración y CI (PR #162)
+- Integrado en [PR #162](https://github.com/jonhararagi/wordwaifu/pull/162), merge SHA `09a771bd752a8a903984bf5f84510a36565f9206`.
+- CI de PR sobre head `3bbd6e89e6a1c73a338acf7b36574e6642392712`: [Validate #40394117882](https://github.com/jonhararagi/wordwaifu/actions/runs/40394117882) y [Lore/Integrity #40394118254](https://github.com/jonhararagi/wordwaifu/actions/runs/40394118254), ambos `success`.
+- CI post-merge sobre ese SHA exacto de `main`: [Validate #40400987257](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987257) y [Lore/Integrity #40400987218](https://github.com/jonhararagi/wordwaifu/actions/runs/40400987218), ambos `success`.
+- CLM-022 continúa `secondary_checked`; no se crean eventos/aristas y la comprobación primaria de Astrea Record 3 sigue pendiente.
