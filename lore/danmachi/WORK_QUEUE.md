@@ -869,7 +869,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 ### DMR-045-SRC-050 — BOOK☆WALKER, muestra japonesa del volumen 20
 - [x] Localizar la ficha oficial de BOOK☆WALKER y su enlace 試し読み para DanMachi vol. 20.
-- [x] Intentar la ruta de muestra normal; el visor redirigido no es accesible desde la herramienta de consulta (error 500).
+- [x] Intentar la ruta de muestra normal; el visor redirigido no es accesible desde la herramienta de consulta (Internal Error de la herramienta al seguir la redirección; no se confirmó una respuesta HTTP del visor).
 - [x] Registrar la ruta como `metadata_checked_only`, `CONT-MAIN-LN`, sin claims, eventos, relaciones ni aliases nuevos.
 - [x] Enlazarla desde los expedientes de investigación de Alfia y Zald solo en `CONT-MAIN-LN`, con pruebas para la frontera de continuidad.
 - [ ] Abrir la muestra en un navegador normal y registrar capítulo/página únicamente si el texto narrativo queda realmente visible.
