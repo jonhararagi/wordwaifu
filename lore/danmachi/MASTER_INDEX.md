@@ -302,3 +302,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - CI de PR: [Validate #40432114887](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114887) y [Lore/Integrity #40432114895](https://github.com/jonhararagi/wordwaifu/actions/runs/40432114895), ambos `success`, incluido el smoke test de navegador.
 - No hay evidencia recuperada para declarar verde el CI post-merge de `345db0189308b2e34a31bbf8f3930e75f0b4fc2f`; esa verificación queda abierta y separada del éxito de la PR.
 - La ruta continúa `metadata_checked_only`, sin claims ni relaciones nuevos; los cinco localizadores primarios permanecen abiertos.
+
+## DMR-045 — BOOK☆WALKER vol. 20, ruta de muestra (2026-10-27)
+
+- [DMR-045-SRC-050](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) registra la ficha comercial y el enlace 試し読み del volumen 20 japonés.
+- La ruta de prueba redirige al visor oficial, que la herramienta no puede abrir (error 500); no se obtuvo texto narrativo.
+- La fuente aparece como `metadata_checked_only` en el directorio y en las notas de Alfia/Zald dentro de `CONT-MAIN-LN`. No añade canon ni cierra ninguno de los cinco cotejos primarios.
