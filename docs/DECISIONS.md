@@ -182,3 +182,11 @@
 **CI de PR:** [Validate #40450101232](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101232) y [Lore/Integrity #40450101166](https://github.com/jonhararagi/wordwaifu/actions/runs/40450101166), ambos `success` sobre `80c5468f78812312898dbe3f6de709856f63d0d2`.
 **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #40459532846](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532846) y [DanMachi Lore and Retrieval Integrity #40459532519](https://github.com/jonhararagi/wordwaifu/actions/runs/40459532519), ambos `success` sobre `2951fa55396564cb878e00ab5c7d2b297966cd64`.
 **Límites:** no inferir presencia/ausencia, escenas, identidad de personajes, habilidades ni relaciones a partir de metadatos o del fallo del visor; no crear claims para rellenar huecos. Mantener abiertos los cinco cotejos primarios de DMR-045.
+
+
+## DEC-030 — La página de diferencias de Astrea Record 3 es una pista secundaria, no texto primario
+**Estado:** Aplicada en rama de trabajo; validación e integración pendientes.
+**Decisión:** aprovechar la página comunitaria de diferencias entre Memoria Freese y la novelización para generar pistas de búsqueda sobre Alfia, Zald y Erebus, sin elevar sus resúmenes a canon cotejado.
+**Aplicación:** se registra como DMR-045-SRC-051, `secondary_checked`, `CONT-AR`. Sus notas interactivas etiquetan explícitamente los detalles reportados como secundarios y conservan la falta de capítulo/página narrativa.
+**Reglas:** no transferir contenido exclusivo de `CONT-GAME` a `CONT-AR`, no inferir el padre de Bell, no crear aristas familiares por una reseña comunitaria y no convertir una muestra inaccesible en evidencia de ausencia.
+**Continuidad del trabajo:** los cinco cotejos primarios de DMR-045 siguen siendo la prioridad previa a la expansión de Orario.
