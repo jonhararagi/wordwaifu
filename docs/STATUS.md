@@ -568,6 +568,9 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 ## DMR-045 · Ruta adicional de BookLive (2026-10-27)
 
 - **Fuente nueva registrada:** DMR-045-SRC-052, ficha licenciada de BookLive para DanMachi vol. 20.
+- **Integración:** [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177), SHA de main a9ab02584f857a9c3fabbba59b40e8799e7aaead.
+- **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
+- **CI post-merge sobre a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), en ejecución al registrar este estado.
 - **Verificado:** metadatos públicos y presencia de controles de muestra en navegador y aplicación.
 - **No verificado:** ninguna página narrativa ni localizador; el lector no se abrió, por lo que su estado es desconocido.
 - **Estado de la investigación primaria:** sin cambios. Los cinco cotejos de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos.
