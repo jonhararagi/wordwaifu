@@ -536,3 +536,13 @@
 - **Cambio real:** se enlaza explícitamente esa evidencia editorial con el expediente DMR-045 y se agrega una regresión para evitar duplicar la fuente o trasladar su escenario hipotético al canon principal.
 - **Continuidad:** el relato es CONT-AU; la editorial describe el cuadernillo como una versión revisada de algo que podría haber sucedido. El marco alternativo no verifica acontecimientos, habilidades o costes de CONT-MAIN-LN ni cierra el cotejo primario de Meteria, Alfia o Zald.
 - **Regla anti-repetición:** no volver a consultar el mismo relato o las mismas muestras bloqueadas para repetir el resultado. Reabrir solo ante un nuevo localizador primario legible o cambio material de fuente.
+
+
+### CONV-DM-2026-10-27-008 — Nueva ruta licenciada de metadatos para DMR-045
+- **Fecha:** 2026-10-27.
+- **Estado:** implementado en rama; CI e integración pendientes.
+- **Ruta:** BookLive, volumen 20: https://booklive.jp/product/index/title_id/201522/vol_no/020, registrada como DMR-045-SRC-052.
+- **Resultado confirmado:** la ficha pública muestra metadatos del volumen y los controles ブラウザ試し読み / アプリ試し読みはこちら.
+- **Límite:** no se abrió el lector ni se inspeccionaron páginas narrativas; el estado del lector es desconocido. No afirmar que la muestra falló ni que proporciona texto legible.
+- **Regla anti-repetición:** esta ruta es distinta de BookWalker, Kobo, Google Books y BinB ya registradas. No repetir aquellas consultas bloqueadas sin cambio material.
+- **Prioridad:** DMR-045 continúa IN_PROGRESS; Alfia, Zald, Meteria, Erebus y Rudra conservan sus cinco cotejos primarios pendientes.
