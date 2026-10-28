@@ -587,3 +587,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Resultado:** Asfi tiene un listado comunitario de nivel, magia, skills y objetos; Lulune tiene nivel reportado y capacidades generales, pero el contenido recuperado no enumera magia/skills con nombre. No se infiere inexistencia en canon a partir de la omisión.
 - **Control técnico:** la prueba `tests/test_character_update_ledger.cjs` se amplía para exigir entradas únicas de bitácora, fuentes detectables y notas interactivas de ambos personajes.
 - **Límites de prioridad:** los cinco cotejos primarios de DMR-045 continúan abiertos. No se repiten las mismas páginas ni se reformulan personalidades sin un disparador nuevo.
+
+## DMR-055 — cohorte secundaria nueva (2026-10-28)
+- **Estado:** investigación documental registrada en la rama research/dmr055-hephaestus-smiths-2026-10-28; aún no integrada ni validada por CI.
+- **Cohorte:** Tsubaki Collbrande y Welf Crozzo, elegidos para avanzar a otros personajes después de DMR-052/053/054.
+- **Fuentes:** DanMachi Wiki EN para Tsubaki y DanMachi Wiki ES para Welf; ambas secundarias.
+- **Resultado:** se registran niveles, magia/skills/equipo que la fuente sí presenta y campos no informados. No se reescriben personalidades ni se crean claims narrativos.
+- **Siguiente paso:** PR, CI y verificación de integración pendientes; la información no debe describirse como integrada hasta comprobarlo.
+
