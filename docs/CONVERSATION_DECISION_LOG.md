@@ -578,3 +578,11 @@
 - **CI de PR:** Validate [#40744157365](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157365) y Lore/Integrity [#40744157330](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157330), ambos success.
 - **CI post-merge sobre ese SHA:** Validate [#40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y Lore/Integrity [#40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos success.
 - **Alcance real:** Tsubaki Collbrande y Welf Crozzo, wikis comunitarias bajo CONT-SECONDARY; no hubo actualización de personalidades ni de fichas interactivas. DMR-045 mantiene sus cinco cotejos primarios abiertos.
+
+### CONV-DM-2026-10-28-002 — Prioridad de DMR-045 y ruta BookLive sin verificar por bloqueo de herramienta
+- **Fecha:** 2026-10-28.
+- **Estado:** registrado; no constituye verificación narrativa ni cierre de DMR-045.
+- **Prioridad reafirmada:** DMR-045 sigue siendo el trabajo de lore prioritario y no queda sustituido por DMR-055 ni por otras tandas de personajes. La ampliación de las fichas interactivas de Tsubaki y Welf permanece separada, bajo `CONT-SECONDARY`, hasta incorporar sus pruebas.
+- **Ruta candidata observada:** [BookLive — edición recopilatoria de Astrea Record, tres volúmenes](https://booklive.jp/product/index/title_id/1295720/vol_no/001). La página pública muestra la ficha comercial y el control «ブラウザ試し読み» (muestra en navegador).
+- **Resultado exacto:** el servicio de automatización de navegador disponible rechazó el inicio de la consulta con `insufficient_credits`, antes de abrir el visor. Por tanto, **no se comprobó el contenido del lector**. No debe etiquetarse como lector fallido, no accesible o sin texto; tampoco aporta un hecho narrativo o un localizador. No se asigna un nuevo ID de fuente ni se crea ningún claim basándose únicamente en la ficha comercial.
+- **Siguiente acción:** mantener abiertos los cinco cotejos primarios. Reintentar esta ruta solo cuando pueda abrirse realmente el control de muestra o cuando haya un pasaje de edición licenciada con localizador reproducible. No repetir en paralelo las rutas ya registradas que solo mostraron metadatos/cargas.
