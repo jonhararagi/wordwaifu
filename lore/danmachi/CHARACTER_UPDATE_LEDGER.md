@@ -320,3 +320,8 @@ Fuentes consultadas:
 
 **Regla DMR-055:** todos estos hallazgos son CONT-SECONDARY; no se crean claims narrativos, relaciones, eventos o alias. «No informado» no significa «inexistente en canon».
 
+## Cierre de integración — cohorte DMR-055 (2026-10-28)
+- **PR:** [#182](https://github.com/jonhararagi/wordwaifu/pull/182), squash merge; SHA de `main`: `25b019598e74c5f9756aa541b8e9f5f1fe7c633e`.
+- **CI de PR:** [Validate #40744157365](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157365) y [Lore/Integrity #40744157330](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157330), ambos `success` sobre el head `3712b698375d48458b7c7cc0012df56e344a2686`.
+- **CI post-merge:** [Validate #40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y [Lore/Integrity #40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos `success` sobre el SHA exacto de `main`.
+- **Límite:** DMR-055 solo cubre la pasada secundaria de Tsubaki y Welf. Las fichas interactivas no se actualizaron; no se modificaron personalidades ni se añadieron claims narrativos.
