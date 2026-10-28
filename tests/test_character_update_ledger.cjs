@@ -44,6 +44,12 @@ const hermesIds = [
   "CHAR-ASFI-AL-ANDROMEDA",
   "CHAR-LULUNE-LOUIE"
 ];
+const hestiaIds = [
+  "CHAR-LILIRUCA-ARDE",
+  "CHAR-MIKOTO-YAMATO",
+  "CHAR-SANJOUNO-HARUHIME",
+  "CHAR-NINA-TULLE"
+];
 const heldDmr045Ids = [
   "CHAR-DARK-ALFIA",
   "CHAR-DARK-ZALD",
@@ -59,7 +65,7 @@ function sectionFor(id) {
   return ledger.slice(start, end < 0 ? ledger.length : end);
 }
 
-for (const id of [...astreaIds, ...heldDmr045Ids, ...freyaIds, ...lokiIds, ...hermesIds]) {
+for (const id of [...astreaIds, ...heldDmr045Ids, ...freyaIds, ...lokiIds, ...hermesIds, ...hestiaIds]) {
   const matches = ledger.match(new RegExp("^### " + id + " —", "gm")) || [];
   assert.equal(matches.length, 1, "Each character must have exactly one update ledger entry: " + id);
   const entry = sectionFor(id);
@@ -92,7 +98,13 @@ for (const id of [
   "community-loki-tiona-en",
   "community-loki-tione-en",
   "community-hermes-asfi",
-  "community-hermes-lulune"
+  "community-hermes-lulune",
+  "community-hestia-lili",
+  "community-hestia-mikoto",
+  "community-hestia-haruhime",
+  "community-hestia-nina",
+  "community-hestia-family-en",
+  "community-hestia-family-es"
 ]) {
   assert.ok(sourceDirectory.some(source => source.id === id),
     "The ledger's supporting wiki route must be discoverable: " + id);
@@ -121,7 +133,11 @@ const secondaryNotes = new Map([
   ["CHAR-TIONA-HIRYUTE", ["Berserk", "Intense Heat", "nivel 5", "Urga"]],
   ["CHAR-TIONE-HIRYUTE", ["List Iorum", "Backdraft", "nivel 5", "Zolas"]],
   ["CHAR-ASFI-AL-ANDROMEDA", ["Kalov Argol", "Trismegistus", "Talaria", "Argeiphontes", "no se cotejaron capítulos"]],
-  ["CHAR-LULUNE-LOUIE", ["nivel 3", "cartografía", "cuchillo", "no aparece una lista de magia", "no aparece una lista de skills"]]
+  ["CHAR-LULUNE-LOUIE", ["nivel 3", "cartografía", "cuchillo", "no aparece una lista de magia", "no aparece una lista de skills"]],
+  ["CHAR-LILIRUCA-ARDE", ["Cinder Ella", "Artel Assist", "Command Call", "Sciurus Walnut", "no se reabre"]],
+  ["CHAR-MIKOTO-YAMATO", ["Futsunomitama", "Yatanokurogarasu", "Yatanoshirogarasu", "10 metros", "no se reabre"]],
+  ["CHAR-SANJOUNO-HARUHIME", ["Uchide no Kozuchi", "Kokonoe", "15 minutos", "20 minutos", "seis colas", "no se reabre"]],
+  ["CHAR-NINA-TULLE", ["Magia Kris", "Lagriel Krisheim", "Fairy Cradle", "Alf Minister", "membresía formal", "conflicto", "no se reabre"]]
 ]);
 for (const [id, requiredTerms] of secondaryNotes) {
   const note = archive.getExtendedInfo(id, "CONT-SECONDARY", null);
@@ -141,4 +157,4 @@ assert.ok(archive.continuityLabels["CONT-SECONDARY"].includes("no cotejados"),
   "The archive must visibly label secondary-source data as not primary-checked.");
 assert.ok(archive.continuityOrder.includes("CONT-SECONDARY"),
   "The separate secondary continuity must remain available to the interactive archive.");
-console.log("PASS character update ledger: unique entries, stop/reopen rules, source typing, 10 Astrea, 8 Freya, 3 Loki, and 2 Hermes capability notes verified.");
+console.log("PASS character update ledger: unique entries, stop/reopen rules, source typing, 10 Astrea, 8 Freya, 3 Loki, 2 Hermes, and 4 Hestia support/healer capability notes verified.");
