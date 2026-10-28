@@ -39,3 +39,13 @@ La ficha oficial la describe como tímida y romántica, aficionada a las histori
 Portal oficial de personajes de DanMachi V: https://danmachi.com/danmachi5/character/
 
 Afirmaciones de respaldo: `DMR-006-CLM-019` a `DMR-006-CLM-021` en `research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md`. Falta cotejar localizadores del texto íntegro de las novelas.
+
+## Capacidades secundarias documentadas — DMR-056 (`CONT-SECONDARY`)
+
+Esta nota permanece separada del perfil oficial de adaptación. La wiki reporta `Uchide no Kozuchi` como aumento temporal de un nivel, no aplicable a Haruhime misma. Describe snapshots distintos: nivel 1, unos 15 minutos de efecto/10 de intervalo; tras subir a nivel 2, unos 20 minutos/9 de intervalo durante el War Game contra Freya. La fuente también señala que el objetivo gana menos de la mitad de la Excelia normal y puede tener dificultades para controlar sus capacidades aumentadas.
+
+`Kokonoe` puede extender los efectos a múltiples objetivos. La misma página describe hasta nueve colas en general y seis observadas en el snapshot del War Game; no unificamos ambas cifras sin un cotejo de escena. `Mikuzumenohou` mejora los efectos mágicos y el uso de Mind. Se enumeran Mage, Oubu, Suiran, Goliath Robe y Undine Cloth.
+
+**No informado:** costes numéricos de Mind o localizadores primarios que corroboren los snapshots. No reabrir la misma página sin fuente nueva o pasaje primario legible.
+
+Fuente secundaria: [DanMachi Wiki — Sanjouno Haruhime](https://danmachi.fandom.com/wiki/Sanjouno_Haruhime). Registro DMR-056-SRC-003.

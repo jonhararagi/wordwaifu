@@ -909,6 +909,20 @@
         "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1",
       ]
     },
+    "CHAR-NINA-TULLE": {
+      "appearance": "La ficha comunitaria describe a Nina como una medio elfa de trece años, con cabello castaño, un mechón verde y ojos verdes que se presentan como señales de su linaje. Es una descripción secundaria de referencia, no una comprobación visual de una edición licenciada; los detalles deben conservar esa procedencia.",
+      "history": "Las páginas comunitarias la sitúan como estudiante del School District, líder de la tercera escuadra de Baldr Class y sanadora. El relato del perfil dice que, tras pasar tiempo con Lapi Flemish y descubrir que era Bell, solicitó una pasantía en Hestia Familia. El alcance exacto de esa etapa se mantiene bajo CONT-SECONDARY.",
+      "personality": "Una descripción comunitaria la presenta como trabajadora, madura para su edad y una instructora rigurosa, y señala que otros pueden creerla mayor de lo que es. Estos rasgos son un resumen secundario y no sustituyen la revisión de sus escenas; no se deducen motivaciones, reacciones ni una personalidad completa a partir de esa breve caracterización.",
+      "abilities": "Las fuentes comunitarias le atribuyen Magia Kris para curación a distancia de varios objetivos, incluidas heridas y resistencia, con una opción para compartir Mind; citan un caso de extensión del potenciador de Haruhime de 20 a 25 minutos. Lagriel Krisheim se describe como un área de curación continua y protección frente a varios estados anómalos. Fairy Cradle y Alf Minister aparecen como skills, pero sus efectos individuales no están descritos en el extracto.",
+      "relationships": "La página de Nina la identifica como hermana menor de Eina Tulle y enumera otros parientes. Esa información queda registrada como afirmación secundaria y no crea por sí sola una arista nueva en el grafo. Su relación con Hestia Familia se describe como pasantía, mientras otra tabla comunitaria la marca como activa; el estado formal sigue sin resolver.",
+      "conflict": "La comprobación estructural debe impedir que la etiqueta de una tabla se convierta automáticamente en canon: el texto inglés de Hestia Familia dice que Nina todavía no recibió la falna de Hestia y no es miembro oficial, mientras la tabla de miembros la marca activa. Mantener ambas observaciones como SECONDARY_CONFLICT hasta obtener una fuente narrativa primaria legible; no inferir posesión de falna ni membresía oficial.",
+      "sources": [
+        "https://danmachi.fandom.com/wiki/Nina_Tulle",
+        "https://danmachi.fandom.com/wiki/Hestia_Familia",
+        "https://danmachi.fandom.com/es/wiki/Familia_Hestia",
+        "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-056-hestia-familia-support-capabilities.md"
+      ]
+    },
     "CHAR-OLIVAS-ACT": {
       "appearance": "La wiki inglesa describe cabello blanco, ojos amarillo verdosos, equipo de combate blanco y una máscara con forma de cráneo; también atribuye un cambio de color de piel desde la cintura. Es información visual secundaria que debe cotejarse con las ilustraciones o escenas pertinentes.",
       "history": "La fuente comunitaria lo sitúa en Sword Oratoria, volumen 3, y relaciona su pasado con Evilus, el incidente del piso 27 y una transformación posterior en Creature. También lo marca como fallecido. La sinopsis editorial solo aporta el marco del volumen; ninguna de estas afirmaciones biográficas se presenta como verificación primaria.",

@@ -253,3 +253,10 @@
 **Decisión:** si la misma página o juego ya se ha revisado y no informa un campo, cerrar ese campo como «no informado en la fuente consultada» y pasar a otro personaje o grupo. No reformular la personalidad para simular progreso; no afirmar que una capacidad no existe en canon solo porque una wiki no la enumera.
 **Aplicación:** DMR-054 añade una pasada secundaria limitada a Asfi Al Andromeda y Lulune Louie de Hermes Familia. Se registran nivel/skills/magia/equipo reportados y, por separado, los campos no informados, con notas de continuidad `CONT-SECONDARY` y pruebas.
 **Límites:** no se crean claims, eventos, relaciones o aliases; no se modifican las personalidades ni se cierran los cinco cotejos primarios de DMR-045. La información de wiki no se presenta como texto primario.
+
+
+## DEC-038 — Completar una cohorte nueva para validar recuperación de lore DanMachi
+**Estado:** en validación de PR; no se declara integrada hasta verificar CI y el SHA de `main`.
+**Decisión:** ante la falta de texto primario legible en las rutas ya agotadas de DMR-045, avanzar con una cohorte distinta que permita probar la estructura de personajes, fuentes, continuidad, límites de poderes y contradicciones de roster.
+**Aplicación:** DMR-056 agrega datos secundarios de Liliruca Arde, Mikoto Yamato y Haruhime, y una ficha de Nina Tulle que no existía en el catálogo. Las capacidades quedan expuestas en `CONT-SECONDARY` y bajo bitácora anti-repetición.
+**Límite:** DMR-045 sigue abierto. No se crean claims, eventos, relaciones ni aliases; Nina permanece en conflicto de afiliación y no se convierte en miembro confirmado por inferencia.

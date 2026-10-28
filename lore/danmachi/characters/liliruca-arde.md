@@ -41,3 +41,11 @@ El perfil oficial de DanMachi V la describe como astuta y pragmática, dispuesta
 Portal oficial de personajes de DanMachi V: https://danmachi.com/danmachi5/character/
 
 Afirmaciones de respaldo: `DMR-006-CLM-010`, `DMR-006-CLM-011`, `DMR-006-CLM-012` en `research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md`. La referencia de adaptación está consultada; siguen pendientes localizadores de capítulo/página para cotejar la novela.
+
+## Capacidades secundarias documentadas — DMR-056 (`CONT-SECONDARY`)
+
+Esta nota no reemplaza el perfil oficial de adaptación anterior. La wiki comunitaria reporta nivel 2; magia `Cinder Ella`, que transforma a una forma de tamaño similar y copia capacidades físicas hasta el límite de su propio estado; skills `Artel Assist` (cargas pesadas) y `Command Call` (alcance de órdenes condicionado por intensidad del grito, escala del combate, falna compartida y nivel). También enumera Abnormal Resistance, armas Sciurus Walnut/Rikka y equipo Goliath Robe/Supporter Glove.
+
+**No informado en el extracto consultado:** costes numéricos, duración/cooldowns generales y localizadores narrativos de cada mecánica. No reabrir esta misma página sin fuente nueva o pasaje primario legible.
+
+Fuente secundaria: [DanMachi Wiki ES — Liliruca Arde](https://danmachi.fandom.com/es/wiki/Liliruca_Arde). Registro DMR-056-SRC-001; el detalle permanece en `CONT-SECONDARY`.

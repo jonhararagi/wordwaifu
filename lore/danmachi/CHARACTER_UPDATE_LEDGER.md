@@ -325,3 +325,39 @@ Fuentes consultadas:
 - **CI de PR:** [Validate #40744157365](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157365) y [Lore/Integrity #40744157330](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157330), ambos `success` sobre el head `3712b698375d48458b7c7cc0012df56e344a2686`.
 - **CI post-merge:** [Validate #40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y [Lore/Integrity #40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos `success` sobre el SHA exacto de `main`.
 - **Límite:** DMR-055 solo cubre la pasada secundaria de Tsubaki y Welf. Las fichas interactivas no se actualizaron; no se modificaron personalidades ni se añadieron claims narrativos.
+
+## Pasada secundaria 2026-10-28 — Hestia Familia: capacidades de apoyo/curación
+
+### CHAR-LILIRUCA-ARDE — Liliruca Arde
+- **Estado:** `SECONDARY_PASS_COMPLETE`.
+- **Continuidad:** `CONT-SECONDARY`; el perfil oficial ya existente se mantiene en su alcance original.
+- **URL revisada:** https://danmachi.fandom.com/es/wiki/Liliruca_Arde
+- **Datos encontrados:** nivel 2 reportado; Cinder Ella, Artel Assist, Command Call, Abnormal Resistance, Sciurus Walnut, Rikka, Goliath Robe y Supporter Glove.
+- **Límites/no informado:** copia física limitada por su estado; Command Call depende de intensidad del grito/escala de combate/falna/nivel. Costes, duración y localizadores primarios no informados en el extracto.
+- **Reabrir solo si:** aparece una fuente oficial nueva o un pasaje primario legible; no repetir el mismo artículo.
+
+### CHAR-MIKOTO-YAMATO — Mikoto Yamato
+- **Estado:** `SECONDARY_PASS_COMPLETE`.
+- **Continuidad:** `CONT-SECONDARY`.
+- **URL revisada:** https://danmachi.fandom.com/wiki/Yamato_Mikoto
+- **Datos encontrados:** nivel 2 reportado; Futsunomitama (campo descrito de unos 10 metros), Yatanokurogarasu, Yatanoshirogarasu, Abnormal Resistance y armas nombradas.
+- **Límites/no informado:** las hazañas contra Black Goliath/Gulliver tienen condiciones contextuales; las skills solo cubren el conjunto y rango descritos. Costes, duración general y radios exactos no informados en el extracto.
+- **Reabrir solo si:** aparece fuente oficial nueva o pasaje primario legible; no repetir el mismo artículo.
+
+### CHAR-SANJOUNO-HARUHIME — Sanjouno Haruhime
+- **Estado:** `SECONDARY_PASS_COMPLETE`.
+- **Continuidad:** `CONT-SECONDARY`.
+- **URL revisada:** https://danmachi.fandom.com/wiki/Sanjouno_Haruhime
+- **Datos encontrados:** Uchide no Kozuchi, Kokonoe, Mikuzumenohou, Mage y equipo. Se registran snapshots de 15/10 minutos a nivel 1 y 20/9 minutos a nivel 2/War Game; la fuente también habla de un máximo general de nueve colas y seis en el snapshot del War Game.
+- **Límites/no informado:** no reconciliar snapshots por intuición; coste numérico de Mind y localizadores primarios no recuperados.
+- **Reabrir solo si:** aparece fuente oficial nueva o pasaje primario legible; no repetir el mismo artículo.
+
+### CHAR-NINA-TULLE — Nina Tulle
+- **Estado:** `SECONDARY_CONFLICT` para afiliación/membresía; ficha nueva provisional.
+- **Continuidad:** `CONT-SECONDARY`.
+- **URLs revisadas:** https://danmachi.fandom.com/wiki/Nina_Tulle; https://danmachi.fandom.com/wiki/Hestia_Familia; https://danmachi.fandom.com/es/wiki/Familia_Hestia
+- **Datos encontrados:** nivel 2 y piso 29 reportados; Magia Kris, Lagriel Krisheim; skills enumeradas Fairy Cradle y Alf Minister; Mage, Anmistil Staff y Magic Bringer MK-4: Fierce Wind.
+- **Conflicto:** los párrafos de las páginas EN/ES dicen que Nina es pasante y aún no miembro oficial sin falna de Hestia, pero las tablas de roster la marcan como activa. Mantener discrepancia abierta.
+- **Límites/no informado:** efectos individuales de las dos skills no están descritos en el extracto; no crear alias, aristas ni hechos canónicos a partir de esta pasada.
+- **Reabrir solo si:** aparece fuente oficial nueva, página materialmente actualizada o pasaje primario legible.
+

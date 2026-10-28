@@ -508,3 +508,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Diferencias/decisiones:** no se afirma que un campo no listado no exista en canon; no se reformulan personalidades ni se crean claims/eventos/relaciones.
 - **Validación:** pendiente del CI de PR y del SHA exacto de main tras la integración.
 - **Próxima tanda:** solo reabrir estas dos páginas ante una actualización material, fuente oficial nueva o texto primario legible; mientras tanto avanzar en otra cohorte.
+
+## DANMACHI-RESEARCH-056 · Hestia Familia: apoyo, detección y curación
+
+- Fecha: 2026-10-28.
+- Estado: datos y pruebas añadidos a la rama; CI e integración pendientes.
+- Fuentes examinadas: seis rutas de wiki comunitaria (Liliruca ES, Mikoto, Haruhime, Nina, Hestia Familia EN/ES) mediante extractos públicos indexados.
+- Registros creados: `CHAR-NINA-TULLE` y `DOC-DMR-056`; cuatro notas `CONT-SECONDARY` recuperables desde el archivo interactivo.
+- Registros actualizados: catálogo, índice, directorio de fuentes, fichas Markdown de Liliruca/Mikoto/Haruhime, bitácora, WORK_QUEUE y MASTER_INDEX.
+- Alias añadidos: ninguno. Relaciones/eventos/claims nuevos: ninguno; el grafo de relaciones se mantiene intacto.
+- Conflicto preservado: Nina aparece como pasante sin falna en el texto descriptivo y como activa en la tabla de miembros.
+- Límites: no se verificaron capítulos de novela ni se modificó CONT-ANIME; costes de Mind, duraciones generales y efectos de Fairy Cradle/Alf Minister no recuperados quedan sin completar.
+- Próxima tanda: comprobar búsqueda/catálogo/UI y seleccionar otra cohorte sin repetir estas páginas. DMR-045 sigue abierto a la espera de nueva evidencia primaria accesible.
