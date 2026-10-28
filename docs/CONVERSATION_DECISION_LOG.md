@@ -540,7 +540,10 @@
 
 ### CONV-DM-2026-10-27-008 — Nueva ruta licenciada de metadatos para DMR-045
 - **Fecha:** 2026-10-27.
-- **Estado:** implementado en rama; CI e integración pendientes.
+- **Estado:** implementado e integrado en main mediante [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177); CI de PR aprobada.
+- **SHA de main:** a9ab02584f857a9c3fabbba59b40e8799e7aaead.
+- **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
+- **CI post-merge sobre a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), en ejecución al registrar este estado.
 - **Ruta:** BookLive, volumen 20: https://booklive.jp/product/index/title_id/201522/vol_no/020, registrada como DMR-045-SRC-052.
 - **Resultado confirmado:** la ficha pública muestra metadatos del volumen y los controles ブラウザ試し読み / アプリ試し読みはこちら.
 - **Límite:** no se abrió el lector ni se inspeccionaron páginas narrativas; el estado del lector es desconocido. No afirmar que la muestra falló ni que proporciona texto legible.
