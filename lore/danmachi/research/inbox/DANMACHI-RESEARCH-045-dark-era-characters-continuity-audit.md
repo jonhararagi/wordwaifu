@@ -993,3 +993,12 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **Uso permitido:** conservar los detalles que aparecen expresamente en el relato dentro de CONT-AU; sirve para ese escenario hipotético y para distinguir decisiones alternativas de la línea principal. La publicación describe una situación en la que Alfia y Zald crían a Bell y menciona a Meteria como su madre. No se asigna nombre al dios visitante que el texto no identifica explícitamente.
 - **Límite que no cambia:** esto no verifica la identidad de Meteria, las habilidades/costes de Alfia o Zald, los combates de Zald, ni las escenas de Erebus o Rudra en CONT-MAIN-LN / CONT-AR. No se crean claims o relaciones de canon principal a partir del relato alternativo. Los cinco cotejos primarios de DMR-045 siguen abiertos.
 - **Regla anti-repetición:** no volver a inspeccionar el mismo relato ni volver a abrir las rutas de muestra ya documentadas solo para repetir este resultado. Reabrir únicamente si se obtiene un localizador narrativo nuevo en una edición licenciada o un cambio material de fuente.
+ 
+## Nueva ruta licenciada de BookLive para el volumen 20 (2026-10-27)
+
+- **Fuente:** [BookLive · DanMachi, volumen 20](https://booklive.jp/product/index/title_id/201522/vol_no/020), registrada como DMR-045-SRC-052.
+- **Qué quedó verificado:** la ficha pública identifica la edición japonesa del volumen 20, la editorial SB Creative / GA Bunko, la fecha de publicación que indica la página y sus 368 páginas; también muestra los controles ブラウザ試し読み y アプリ試し読みはこちら.
+- **Qué no quedó verificado:** no se abrió el lector desde esos controles y no se obtuvieron páginas narrativas, capítulo, página ni localizador de escena. El estado del lector es desconocido; esta pasada no demuestra que la muestra funcione ni que haya fallado.
+- **Uso permitido:** nueva ruta de consulta licenciada y metadatos, con estado `metadata_checked_only`; no respalda afirmaciones sobre Alfia, Zald, Meteria, Erebus o Rudra, ni presencia/ausencia de estos personajes en el volumen.
+- **No repetir:** esta ruta es distinta de las rutas BookWalker, Kobo, Google Books y BinB ya registradas. No repetir aquellas consultas idénticas que solo devolvieron pantallas de carga. Solo reabrir SRC-052 si el lector BookLive se puede abrir por su control normal y expone texto narrativo legible.
+- **Estado de prioridad:** DMR-045 sigue `IN_PROGRESS`; los cinco cotejos primarios continúan pendientes. No se modifica ningún claim o relación de canon principal por esta ruta de metadatos.
