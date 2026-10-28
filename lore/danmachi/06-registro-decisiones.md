@@ -217,7 +217,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-024 — Pasada de capacidades Hermes sin reescritura de personalidad
 - **Fecha:** 2026-10-28.
-- **Estado:** implementada en rama; CI e integración pendientes.
+- **Estado:** integrada y validada en `main`.
+- **Integración:** [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179), squash merge; SHA exacto de `main`: `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
+- **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate WordWaifu #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [DanMachi Lore and Retrieval Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [DanMachi Lore and Retrieval Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
 - **Decisión:** pasar a personajes distintos cuando la fuente ya se agotó. Registrar la falta de un dato como «no informado en el contenido consultado» y no como prueba de inexistencia en canon.
 - **Aplicación:** DMR-054 documenta a Asfi Al Andromeda y Lulune Louie bajo CONT-SECONDARY. Asfi: nivel, Kalov Argol, skills y equipo que la wiki enumera; Lulune: nivel reportado, combate acrobático, sentidos y cartografía, con magia/skills nombradas no recuperadas en la página consultada.
 - **Límites:** no se reescriben personalidades ni historia, no se crean claims/eventos/relaciones/aliases, y DMR-045 mantiene sus cinco cotejos primarios.
