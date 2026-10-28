@@ -246,7 +246,10 @@
 
 
 ## DEC-037 — Evitar vueltas de análisis y registrar capacidades solo cuando estén respaldadas
-**Estado:** implementado en rama de investigación; validación e integración pendientes.
+**Estado:** integrado y validado en `main`.
+- **Integración:** [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179), squash merge; SHA exacto de `main`: `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
+- **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate WordWaifu #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [DanMachi Lore and Retrieval Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [DanMachi Lore and Retrieval Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
 **Decisión:** si la misma página o juego ya se ha revisado y no informa un campo, cerrar ese campo como «no informado en la fuente consultada» y pasar a otro personaje o grupo. No reformular la personalidad para simular progreso; no afirmar que una capacidad no existe en canon solo porque una wiki no la enumera.
 **Aplicación:** DMR-054 añade una pasada secundaria limitada a Asfi Al Andromeda y Lulune Louie de Hermes Familia. Se registran nivel/skills/magia/equipo reportados y, por separado, los campos no informados, con notas de continuidad `CONT-SECONDARY` y pruebas.
 **Límites:** no se crean claims, eventos, relaciones o aliases; no se modifican las personalidades ni se cierran los cinco cotejos primarios de DMR-045. La información de wiki no se presenta como texto primario.
