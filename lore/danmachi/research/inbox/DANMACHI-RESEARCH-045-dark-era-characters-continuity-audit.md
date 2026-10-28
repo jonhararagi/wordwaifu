@@ -1038,3 +1038,26 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **confidence_note:** esta es una edición licenciada distinta de las rutas de Google Books del volumen 20 registradas anteriormente. No se ha leído narración de Alfia, Zald, Meteria o Erebus y no se obtiene localizador primario reproducible. No convertir un nombre dentro de «Common terms and phrases» ni un encabezado de capítulo en un claim narrativo.
 - **rights_note:** no se almacenan textos extensos; solo metadatos y resultado preciso de acceso.
 - **verified_by:** DANMACHI-RESEARCH-045
+
+## DMR-045-SRC-054 · Sony Reader Store — Astrea Record, volumen 3 (edición japonesa licenciada)
+
+- **source_id:** DMR-045-SRC-054
+- **source_title:** アストレア・レコード３ 正邪決戦 ダンジョンに出会いを求めるのは間違っているだろうか 英雄譚
+- **creator_or_publisher:** Fujino Omori / GA文庫・SBクリエイティブ; distribuidor: Sony Reader Store
+- **source_type:** LICENSED_RETAILER_SAMPLE
+- **series:** DanMachi Heroic Tale: Astrea Record
+- **volume_or_edition:** Volumen 3, edición japonesa; ISBN 978-4-8156-1019-7; 488 páginas según la ficha
+- **language:** Japonés
+- **source_url:** https://ebookstore.sony.jp/title/01237250/id/BT000123725000300301/
+- **accessed_at:** 2026-10-28
+- **locator_type:** product_page_age_gate
+- **locator:** ficha pública del producto; bloque «年齢認証» y aviso de que la portada, la lectura de muestra y la compra requieren confirmar la edad (texto visible en la página, sin acceso a páginas narrativas)
+- **claims_supported:** []
+- **events_supported:** []
+- **character_ids:** []
+- **continuity_scope:** CONT-AR
+- **verification_status:** metadata_checked_only
+- **access_result:** la página pública confirma la edición y muestra controles «はい / いいえ» de verificación de edad antes de mostrar portada, muestra o compra. No se ha confirmado la edad ni abierto la muestra; no se obtuvo texto narrativo ni localizador de escena.
+- **confidence_note:** es una ruta de distribuidor distinta de las muestras BOOK☆WALKER, BinB, Google Books y BookLive ya registradas. El control de edad no prueba que la muestra esté disponible o no disponible después de la verificación. No usar la sinopsis comercial ni esta pantalla como evidencia de Alfia, Zald o Erebus.
+- **rights_note:** no se almacena texto de la novela; solo metadatos y estado de la ruta pública.
+- **verified_by:** DANMACHI-RESEARCH-045
