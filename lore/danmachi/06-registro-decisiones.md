@@ -209,7 +209,7 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Estado:** implementado e integrado en main por [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177); CI de PR aprobada.
 - SHA de main: a9ab02584f857a9c3fabbba59b40e8799e7aaead.
 - **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
-- **CI post-merge sobre a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), en ejecución al registrar este estado.
+- **CI post-merge sobre el SHA exacto de main a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), ambos success.
 - **Decisión:** registrar una ficha de distribuidor solo como metadata_checked_only cuando se han visto datos de producto o controles de muestra pero no se ha leído narración.
 - **Aplicación:** DMR-045-SRC-052, BookLive vol. 20. No se considera un intento fallido de lectura porque el lector no se abrió en esta pasada.
 - **Prioridad conservada:** los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos. No se reintentan muestras ya bloqueadas salvo evidencia nueva.
