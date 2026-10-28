@@ -46,6 +46,10 @@ La afiliación es institucional; no demuestra por sí sola amistad, rivalidad, p
 
 Un perfil de adaptación no sustituye una biografía por escenas. Se deben cotejar acontecimientos, decisiones, evolución y cambios de estado en fuentes narrativas antes de ampliar esta sección. Los datos no respaldados se dejan abiertos.
 
+## Capa secundaria separada — CONT-SECONDARY
+
+La pasada de [DANMACHI-RESEARCH-054](../research/inbox/DANMACHI-RESEARCH-054-hermes-familia-secondary-capabilities.md) registra que la wiki comunitaria reporta nivel 3 y describe combate acrobático, cuchillo, sentidos agudizados y cartografía. En el contenido recuperado no aparecen nombres de magia o skills, habilidades de desarrollo ni un arma individual nombrada. Esto no demuestra su inexistencia en canon ni modifica el nivel no indicado en la ficha oficial de adaptación.
+
 ## Procedencia
 
 - Fuente: https://danmachi.com/sword_oratoria/character/

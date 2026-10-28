@@ -549,3 +549,13 @@
 - **Límite:** no se abrió el lector ni se inspeccionaron páginas narrativas; el estado del lector es desconocido. No afirmar que la muestra falló ni que proporciona texto legible.
 - **Regla anti-repetición:** esta ruta es distinta de BookWalker, Kobo, Google Books y BinB ya registradas. No repetir aquellas consultas bloqueadas sin cambio material.
 - **Prioridad:** DMR-045 continúa IN_PROGRESS; Alfia, Zald, Meteria, Erebus y Rudra conservan sus cinco cotejos primarios pendientes.
+
+
+### CONV-DM-2026-10-28-001 — Avanzar a otros personajes y cerrar campos no reportados
+- **Fecha:** 2026-10-28.
+- **Estado:** implementado en rama de investigación; validación e integración pendientes.
+- **Instrucción aceptada:** después de varios intentos sin información nueva sobre los mismos personajes, avanzar a otras identidades en lugar de reescribir personalidades. Si la wiki o el juego consultados no proporcionan nivel, poder, skill, magia, equipo o coste, registrar «no informado en el contenido consultado» y no inferir inexistencia universal ni rellenar por analogía.
+- **Cohorte nueva:** Asfi Al Andromeda y Lulune Louie de Hermes Familia, usando páginas comunitarias no oficiales bajo `CONT-SECONDARY`.
+- **Hallazgos acotados:** Asfi tiene en la wiki una lista concreta de nivel, magia, skills y objetos; Lulune tiene nivel reportado y descripciones de combate/sentidos/cartografía, pero el contenido recuperado no enumera magia o skills con nombre.
+- **Implementación:** DMR-054, ampliación de la bitácora, fuentes, notas interactivas, enlaces desde las dos fichas y regresión específica.
+- **Límites:** no se reescriben personalidades, historia, relaciones, eventos o claims; no se elevan datos secundarios a novela principal. DMR-045 conserva sus cinco cotejos primarios pendientes hasta un pasaje nuevo legible.

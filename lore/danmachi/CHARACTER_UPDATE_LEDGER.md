@@ -1,6 +1,6 @@
 # Bitácora de actualizaciones de personajes — DanMachi
 
-- **Última actualización:** 2026-10-27.
+- **Última actualización:** 2026-10-28.
 - **Propósito:** evitar análisis repetidos sin datos nuevos; registrar qué se consultó, qué información apareció, qué no está reportado y qué resultado debe reutilizarse.
 - **Alcance de las pasadas documentadas:** datos de niveles, magia, habilidades, habilidades de desarrollo y equipo de la primera Astrea Familia; cierre de búsqueda secundaria de los cinco expedientes DMR-045; y pasada de capacidades de la cohorte Freya Familia DMR-052. **No se reescribieron personalidades.**
 - **Integración:** [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170), SHA de `main` `034eb037f98ce25076de7fc4217a62cb960172eb`.
@@ -270,3 +270,24 @@ Esta es una cohorte distinta, abierta porque las fuentes primarias de DMR-045 si
 - **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
 - La cohorte conserva fuentes secundarias, la variante Flosvirt/Frosvirt y snapshots de nivel 5 separados de encabezados de nivel 6. No se modifica personalidad ni historial; “no listado” se mantiene como límite de la fuente.
+
+
+## Pasada secundaria 2026-10-28 — Hermes Familia: capacidades de Asfi y Lulune
+
+### CHAR-ASFI-AL-ANDROMEDA — Asfi Al Andromeda
+
+- **Estado:** `PARTIAL_NOT_REPORTED` para costes/duración generales y cotejo narrativo primario.
+- **URLs consultadas:** [DanMachi Wiki · Asfi Al Andromeda](https://danmachi.fandom.com/wiki/Asfi_Al_Andromeda).
+- **Datos encontrados:** nivel 4 reportado; magia `Kalov Argol`; skills `Trismegistus`, `Argeiphontes`, `Petasos`, `Special General` y `Andromedas`; habilidades de desarrollo enumeradas por la wiki y equipo `Canoval Dagger`, `Burst Oil`, `Talaria`, `White Cloud Chlamys`, `Cithara`, `Hades Head` y `Crizea`.
+- **No informado/cotejado:** costes numéricos completos, duración/cooldowns generales y localizadores de página primaria para cada mecánica.
+- **Cierre:** reutilizar la pasada secundaria; no reescribir personalidad ni elevar a canon cotejado. Reabrir solo ante fuente oficial nueva, cambio material de la página o pasaje narrativo licenciable legible.
+
+### CHAR-LULUNE-LOUIE — Lulune Louie
+
+- **Estado:** `PARTIAL_NOT_REPORTED`.
+- **URL consultada:** [DanMachi Wiki · Lulune Louie](https://danmachi.fandom.com/wiki/Lulune_Louie).
+- **Datos encontrados:** nivel 3 reportado; estilo de combate acrobático, destreza general con cuchillo, tácticas de guerrilla/disrupción, sentidos agudizados y capacidad de cartografía.
+- **No informado en el contenido recuperado:** nombres de magia, skills, habilidades de desarrollo o arma específica; estadísticas detalladas, costes y localizadores narrativos. La página menciona cuchillos en términos generales, sin nombrar un arma.
+- **Cierre:** no interpretar la ausencia de una lista como inexistencia en canon. No volver a consultar la misma página para buscar nombres que no presenta; reabrir ante una actualización material o una fuente nueva.
+
+**Regla de toda la cohorte DMR-054:** se amplían solo capacidades con respaldo comunitario y se mantienen dentro de `CONT-SECONDARY`. No se modifica personalidad, historia, relaciones, eventos ni claims narrativos; no se crea una lista ficticia para completar campos vacíos.

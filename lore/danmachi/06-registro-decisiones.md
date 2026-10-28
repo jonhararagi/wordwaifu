@@ -213,3 +213,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Decisión:** registrar una ficha de distribuidor solo como metadata_checked_only cuando se han visto datos de producto o controles de muestra pero no se ha leído narración.
 - **Aplicación:** DMR-045-SRC-052, BookLive vol. 20. No se considera un intento fallido de lectura porque el lector no se abrió en esta pasada.
 - **Prioridad conservada:** los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos. No se reintentan muestras ya bloqueadas salvo evidencia nueva.
+
+
+### DEC-DM-024 — Pasada de capacidades Hermes sin reescritura de personalidad
+- **Fecha:** 2026-10-28.
+- **Estado:** implementada en rama; CI e integración pendientes.
+- **Decisión:** pasar a personajes distintos cuando la fuente ya se agotó. Registrar la falta de un dato como «no informado en el contenido consultado» y no como prueba de inexistencia en canon.
+- **Aplicación:** DMR-054 documenta a Asfi Al Andromeda y Lulune Louie bajo CONT-SECONDARY. Asfi: nivel, Kalov Argol, skills y equipo que la wiki enumera; Lulune: nivel reportado, combate acrobático, sentidos y cartografía, con magia/skills nombradas no recuperadas en la página consultada.
+- **Límites:** no se reescriben personalidades ni historia, no se crean claims/eventos/relaciones/aliases, y DMR-045 mantiene sus cinco cotejos primarios.

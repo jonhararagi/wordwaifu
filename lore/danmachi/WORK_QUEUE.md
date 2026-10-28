@@ -954,3 +954,15 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Inspeccionar el lector normal solo si se puede abrir desde el control de BookLive y muestra texto narrativo legible; registrar un localizador reproducible si aparece.
 - [ ] Continuar los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra cuando exista texto licenciable legible.
 - **Límite:** DMR-045 sigue IN_PROGRESS; los metadatos no verifican apariciones, habilidades, costes, relaciones ni ausencia de personajes.
+
+
+## DANMACHI-RESEARCH-054 · Hermes Familia: capacidades de Asfi y Lulune (2026-10-28)
+
+- [x] Consultar páginas comunitarias nuevas para Asfi Al Andromeda y Lulune Louie en lugar de repetir las tandas ya cerradas.
+- [x] Registrar DMR-054-SRC-001 y DMR-054-SRC-002 en el registro maestro de fuentes, con continuidad CONT-SECONDARY y sin claims/eventos.
+- [x] Documentar skills, magia, equipo y limitaciones reportados para Asfi; registrar el nivel y capacidades generales que sí aparecen para Lulune.
+- [x] Marcar explícitamente como no informados en el contenido consultado los nombres de magia/skills y equipo individual de Lulune que la página no enumera.
+- [x] Añadir notas separadas CONT-SECONDARY al archivo interactivo y enlaces en las dos fichas, sin tocar personalidades ni el alcance CONT-ANIME.
+- [x] Añadir regresión automática para las dos entradas, sus fuentes y los campos no reportados.
+- [ ] Revisar CI de PR, integrar a main y registrar el SHA real con los dos workflows post-merge.
+- **Límite:** información comunitaria secundaria; no se crean claims, eventos, relaciones o aliases. DMR-045 conserva los cinco cotejos primarios abiertos.

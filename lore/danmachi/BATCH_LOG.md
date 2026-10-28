@@ -493,3 +493,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
 - **CI post-merge sobre el SHA exacto de main a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), ambos success.
 - DMR-045 conserva los cinco cotejos primarios abiertos.
+
+
+## DANMACHI-RESEARCH-054 · Hermes Familia: capacidades de Asfi y Lulune
+- **Fecha:** 2026-10-28.
+- **Estado:** investigación e implementación documental en rama; validación e integración pendientes.
+- **Fuentes examinadas:** páginas comunitarias de DanMachi Wiki para Asfi Al Andromeda y Lulune Louie; la lectura directa completa de las páginas no pudo confirmarse.
+- **Registros creados:** DMR-054-SRC-001 y DMR-054-SRC-002; informe DMR-054.
+- **Notas de archivo:** añadida una capa CONT-SECONDARY para ambas identidades; se mantienen separadas sus fichas de adaptación.
+- **Campos no informados:** costes/duración generales y localizadores narrativos para Asfi; nombres de magia/skills, habilidades de desarrollo, arma individual, estadísticas/costes para Lulune en el contenido recuperado.
+- **Diferencias/decisiones:** no se afirma que un campo no listado no exista en canon; no se reformulan personalidades ni se crean claims/eventos/relaciones.
+- **Validación:** pendiente del CI de PR y del SHA exacto de main tras la integración.
+- **Próxima tanda:** solo reabrir estas dos páginas ante una actualización material, fuente oficial nueva o texto primario legible; mientras tanto avanzar en otra cohorte.

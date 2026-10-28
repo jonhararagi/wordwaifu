@@ -46,6 +46,10 @@ La afiliación es institucional; no demuestra por sí sola amistad, rivalidad, p
 
 Un perfil de adaptación no sustituye una biografía por escenas. Se deben cotejar acontecimientos, decisiones, evolución y cambios de estado en fuentes narrativas antes de ampliar esta sección. Los datos no respaldados se dejan abiertos.
 
+## Capa secundaria separada — CONT-SECONDARY
+
+La pasada de [DANMACHI-RESEARCH-054](../research/inbox/DANMACHI-RESEARCH-054-hermes-familia-secondary-capabilities.md) registra por separado lo que la wiki comunitaria reporta: nivel 4, `Kalov Argol`, skills `Trismegistus`, `Argeiphontes`, `Petasos`, `Special General` y `Andromedas`, además de objetos mágicos. Es una fuente secundaria, no una ampliación del estado `CONT-ANIME` ni una verificación primaria. Los costes numéricos completos y los localizadores de novela no se cotejaron.
+
 ## Procedencia
 
 - Fuente: https://danmachi.com/sword_oratoria/character/

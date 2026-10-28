@@ -1,5 +1,5 @@
 # Estado de WordWaifu
-## Estado operativo y verificación — 2026-10-27
+## Estado operativo y verificación — 2026-10-28
 
 <!-- DANMACHI-METRICS:BEGIN -->
 - **Corpus DanMachi:** 178 registros activos; 29 IDs reservados; 131 documentos de apoyo.
@@ -575,3 +575,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **No verificado:** ninguna página narrativa ni localizador; el lector no se abrió, por lo que su estado es desconocido.
 - **Estado de la investigación primaria:** sin cambios. Los cinco cotejos de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos.
 - **Regla de reintento:** si no se obtiene texto narrativo, mantener metadata_checked_only y no repetir BookWalker/Kobo/Google Books/BinB sin un cambio material.
+
+
+## DMR-054 · Hermes Familia: capacidades de Asfi y Lulune (2026-10-28)
+- **Estado actual de esta tanda:** implementada en rama de investigación; PR, CI e integración pendientes.
+- **Cohorte:** Asfi Al Andromeda y Lulune Louie. La pasada se limita a capacidades, magia, skills, equipo y campos no reportados; no modifica personalidades.
+- **Fuentes:** DMR-054-SRC-001 y DMR-054-SRC-002, ambas wikis comunitarias bajo `CONT-SECONDARY`.
+- **Resultado:** Asfi tiene un listado comunitario de nivel, magia, skills y objetos; Lulune tiene nivel reportado y capacidades generales, pero el contenido recuperado no enumera magia/skills con nombre. No se infiere inexistencia en canon a partir de la omisión.
+- **Control técnico:** la prueba `tests/test_character_update_ledger.cjs` se amplía para exigir entradas únicas de bitácora, fuentes detectables y notas interactivas de ambos personajes.
+- **Límites de prioridad:** los cinco cotejos primarios de DMR-045 continúan abiertos. No se repiten las mismas páginas ni se reformulan personalidades sin un disparador nuevo.
