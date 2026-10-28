@@ -1703,16 +1703,20 @@ verification_status: stub
 - publication_date: 2020-08-28
 - official_url: https://note.com/fujinoomori/n/n629829ac3fe4
 - accessed_at: 2026-10-19
+- last_cross_reference_at: 2026-10-27
 - locator_type: author_web_publication
 - locator: Pasajes que describen a Meteria por medio de Alfia; el marco propone una situación alternativa en la que Alfia y Zald crían a Bell
 - claims_supported: [DMR-029-CLM-012]
 - events_supported: []
 - continuity_scope: CONT-AU
-- reliability_note: Material publicado por el autor, pero el escenario es alternativo; no acredita los mismos sucesos o decisiones para CONT-MAIN-LN.
+- reliability_note: Material publicado por el autor, pero el escenario es alternativo; no acredita los mismos sucesos o decisiones para CONT-MAIN-LN. La ficha editorial de la edición especial confirma que una versión ampliada/revisada se incluyó en el cuadernillo como algo que podría haber sucedido.
 - conflicting_sources: []
 - rights_note: Registrar solo paráfrasis original breve; no copiar la publicación.
 - verified_by: DANMACHI-RESEARCH-019
 - verification_status: source_checked_excerpt_only
+
+- editorial_cross_reference: DMR-045-SRC-002; DMR-045-SRC-005 (ambas páginas editoriales ya registradas; verifican inclusión/presentación del cuadernillo, no los hechos de la novela principal)
+- last_cross_reference_at: 2026-10-27
 
 ## DMR-029-SRC-017 · Terminology — Afterglow
 - source_id: DMR-029-SRC-017

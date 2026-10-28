@@ -556,3 +556,10 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
 - **No se modificó:** personalidad, pasado de Kali Familia, relaciones, eventos o claims narrativos.
+
+## DMR-045 · Cruce de continuidad ya registrada (2026-10-27)
+
+- Se verificó el encadenamiento de la fuente autoral existente DMR-029-SRC-016 con las fichas editoriales ya existentes DMR-045-SRC-002 y DMR-045-SRC-005.
+- La nota original es legible y corresponde a un escenario hipotético; la edición especial confirma que se publicó una versión revisada en un cuadernillo, descrita como algo que podría haber sucedido.
+- **Estado de la investigación primaria:** sin cambios. Los cinco cotejos narrativos de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos. No se crean claims ni relaciones principales a partir de CONT-AU.
+- **Regla de reintento:** el mismo relato y las muestras oficiales que no devolvieron narración no se vuelven a recorrer sin cambio material; buscar solo un localizador primario nuevo.

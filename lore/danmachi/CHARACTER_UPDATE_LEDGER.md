@@ -130,6 +130,7 @@ Estos cinco expedientes ya tienen repetidos barridos secundarios y rutas de mues
 - **Último resultado reutilizable:** se registraron pistas secundarias sobre `Genos Angelus`, `Gif Blessing`, `Limit Off`, `Silentium Eden` y la retrospectiva del volumen 20. La página comunitaria de diferencias de Astrea Record 3 se incorporó por [PR #168](https://github.com/jonhararagi/wordwaifu/pull/168) como guía secundaria.
 - **Pendiente real:** texto licenciado legible y localizador reproducible de escena/coste. Las rutas consultadas de las muestras no expusieron páginas narrativas.
 - **Reabrir solo si:** aparece una página narrativa nueva accesible o una fuente oficial que aporte un localizador concreto.
+- **Cruce de fuente (2026-10-27):** el relato de Fujino Omori ya registrado como DMR-029-SRC-016 y la confirmación editorial de su versión revisada en el cuadernillo de Astrea Record 3 (DMR-045-SRC-002/005) pertenecen a CONT-AU. No elevan habilidades ni escenas de CONT-AR/CONT-MAIN-LN a evidencia primaria; mantener HOLD_FOR_PRIMARY_SOURCE.
 
 ### CHAR-DARK-ZALD — Zald
 
@@ -137,6 +138,7 @@ Estos cinco expedientes ya tienen repetidos barridos secundarios y rutas de mues
 - **Último resultado reutilizable:** se registraron como pistas secundarias `Deus Ambrosia`, veneno de Behemoth, el combate con Udaeus y la secuencia de Ottar; no se afirmaron como lectura directa.
 - **Pendiente real:** técnica de espada, coste/efecto por escena y localizador de la novela.
 - **Reabrir solo si:** hay un pasaje primario accesible que resuelva una de esas cuestiones.
+- **Cruce de fuente (2026-10-27):** la convivencia hipotética de Alfia y Zald criando a Bell pertenece al relato alternativo ya registrado DMR-029-SRC-016 (CONT-AU), cuyo cuadernillo se confirma por DMR-045-SRC-002/005. No verifica el combate con Ottar, Afterglow, costes ni la secuencia principal; mantener HOLD_FOR_PRIMARY_SOURCE.
 
 ### CHAR-METERIA — Meteria
 
@@ -144,6 +146,7 @@ Estos cinco expedientes ya tienen repetidos barridos secundarios y rutas de mues
 - **Último resultado reutilizable:** las wikis asocian a Meteria con maternidad y parentesco, pero la entrevista de LN News sobre la versión original del juego no pronuncia el nombre Meteria. No identifica al padre de Bell.
 - **Pendiente real:** pasaje primario que identifique inequívocamente a Meteria; la personalidad no se modifica a partir de `CONT-AU`.
 - **Reabrir solo si:** aparece un pasaje narrativo o una declaración oficial explícita que resuelva la identidad.
+- **Cruce de fuente (2026-10-27):** DMR-029-SRC-016 ya contiene texto del autor que nombra a Meteria dentro de CONT-AU; DMR-045-SRC-002/005 confirman la publicación revisada del relato alternativo. Esto no identifica a Meteria en un pasaje de CONT-MAIN-LN; mantener HOLD_FOR_PRIMARY_SOURCE.
 
 ### CHAR-DARK-EREBUS — Erebus
 
