@@ -553,7 +553,10 @@
 
 ### CONV-DM-2026-10-28-001 — Avanzar a otros personajes y cerrar campos no reportados
 - **Fecha:** 2026-10-28.
-- **Estado:** implementado en rama de investigación; validación e integración pendientes.
+- **Estado:** integrado en `main` y validado.
+- **Integración:** [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179), squash merge; SHA exacto de `main`: `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
+- **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate WordWaifu #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [DanMachi Lore and Retrieval Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [DanMachi Lore and Retrieval Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
 - **Instrucción aceptada:** después de varios intentos sin información nueva sobre los mismos personajes, avanzar a otras identidades en lugar de reescribir personalidades. Si la wiki o el juego consultados no proporcionan nivel, poder, skill, magia, equipo o coste, registrar «no informado en el contenido consultado» y no inferir inexistencia universal ni rellenar por analogía.
 - **Cohorte nueva:** Asfi Al Andromeda y Lulune Louie de Hermes Familia, usando páginas comunitarias no oficiales bajo `CONT-SECONDARY`.
 - **Hallazgos acotados:** Asfi tiene en la wiki una lista concreta de nivel, magia, skills y objetos; Lulune tiene nivel reportado y descripciones de combate/sentidos/cartografía, pero el contenido recuperado no enumera magia o skills con nombre.

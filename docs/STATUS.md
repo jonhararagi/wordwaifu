@@ -578,7 +578,10 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 
 
 ## DMR-054 · Hermes Familia: capacidades de Asfi y Lulune (2026-10-28)
-- **Estado actual de esta tanda:** implementada en rama de investigación; PR, CI e integración pendientes.
+- **Estado actual de esta tanda:** integrada y validada en `main` mediante [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179); SHA `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
+- **Integración:** [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179), squash merge; SHA exacto de `main`: `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
+- **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate WordWaifu #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [DanMachi Lore and Retrieval Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [DanMachi Lore and Retrieval Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
 - **Cohorte:** Asfi Al Andromeda y Lulune Louie. La pasada se limita a capacidades, magia, skills, equipo y campos no reportados; no modifica personalidades.
 - **Fuentes:** DMR-054-SRC-001 y DMR-054-SRC-002, ambas wikis comunitarias bajo `CONT-SECONDARY`.
 - **Resultado:** Asfi tiene un listado comunitario de nivel, magia, skills y objetos; Lulune tiene nivel reportado y capacidades generales, pero el contenido recuperado no enumera magia/skills con nombre. No se infiere inexistencia en canon a partir de la omisión.

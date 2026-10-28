@@ -1,7 +1,7 @@
 # DANMACHI-RESEARCH-054 · Hermes Familia: capacidades de Asfi y Lulune
 
 - **Fecha:** 2026-10-28.
-- **Estado:** implementado en rama; PR, CI e integración pendientes.
+- **Estado:** integrado en `main` y validado; ver SHA y CI debajo.
 - **Cohorte:** Asfi Al Andromeda y Lulune Louie.
 - **Objetivo acotado:** ampliar capacidades, magia, skills, equipo y límites descritos por las páginas comunitarias, sin reescribir personalidad ni repetir la pasada histórica.
 - **Continuidad de exhibición:** `CONT-SECONDARY`. Las fichas existentes mantienen su alcance original `CONT-ANIME`; los datos de wiki no se elevan a canon cotejado.
@@ -41,3 +41,12 @@ Las páginas consultadas son fuentes secundarias comunitarias. Los resultados p�
 - Registrar fuentes, límites y condiciones de reapertura en la bitácora.
 - Añadir una regresión automática para las dos identidades, sus referencias y los campos que se deben mantener como no informados.
 - No crear claims, eventos, relaciones ni aliases; no cambiar personalidad, historia ni continuidad principal.
+
+
+## Integración y validación
+
+- **Integración:** [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179), squash merge; SHA exacto de `main`: `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
+- **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate WordWaifu #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [DanMachi Lore and Retrieval Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [DanMachi Lore and Retrieval Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
+
+- La primera ejecución de la regresión falló en la afirmación textual para Lulune; se ajustó la nota para expresar explícitamente el campo no informado, y ambas verificaciones volvieron a ejecutarse con éxito sobre el head final del PR. No se atribuye un fallo al catálogo ni a la aplicación por ese primer error de aserción.

@@ -497,7 +497,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 
 ## DANMACHI-RESEARCH-054 · Hermes Familia: capacidades de Asfi y Lulune
 - **Fecha:** 2026-10-28.
-- **Estado:** investigación e implementación documental en rama; validación e integración pendientes.
+- **Estado:** integrado y validado en `main`.
+- **Integración:** [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179), squash merge; SHA exacto de `main`: `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
+- **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate WordWaifu #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [DanMachi Lore and Retrieval Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [DanMachi Lore and Retrieval Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
 - **Fuentes examinadas:** páginas comunitarias de DanMachi Wiki para Asfi Al Andromeda y Lulune Louie; la lectura directa completa de las páginas no pudo confirmarse.
 - **Registros creados:** DMR-054-SRC-001 y DMR-054-SRC-002; informe DMR-054.
 - **Notas de archivo:** añadida una capa CONT-SECONDARY para ambas identidades; se mantienen separadas sus fichas de adaptación.
