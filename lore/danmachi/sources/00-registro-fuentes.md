@@ -3989,3 +3989,48 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-053
 - verification_status: secondary_checked
 
+
+
+## DMR-054-SRC-001 · DanMachi Wiki — Asfi Al Andromeda
+
+- source_id: DMR-054-SRC-001
+- title: Asfi Al Andromeda
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; sin edición identificada en esta consulta
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Asfi_Al_Andromeda
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Skill, Magic and Equipment; Abilities; Development Abilities; Equipment.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para el nivel 4 reportado, Kalov Argol, las skills, habilidades de desarrollo, equipo y límites descritos. Costes numéricos completos y mecanismos no se elevan a canon primario; el acceso directo a la página no permitió una comprobación completa en esta pasada.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-054
+- verification_status: secondary_checked
+
+## DMR-054-SRC-002 · DanMachi Wiki — Lulune Louie
+
+- source_id: DMR-054-SRC-002
+- title: Lulune Louie
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; sin edición identificada en esta consulta
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Lulune_Louie
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Abilities.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para el nivel 3 reportado, combate acrobático, manejo de cuchillo, sentidos y cartografía. El contenido recuperado no enumera magia, skills o habilidades de desarrollo con nombre ni un arma específica; esa omisión no prueba ausencia en canon.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-054
+- verification_status: secondary_checked
