@@ -694,6 +694,21 @@
       "priority": "high"
     },
     {
+      "id": "CHAR-NINA-TULLE",
+      "path": "characters/nina-tulle.md",
+      "type": "character",
+      "tags": [
+        "Nina Tulle",
+        "School District",
+        "Baldr Class",
+        "Hestia Familia",
+        "healer",
+        "CONT-SECONDARY"
+      ],
+      "status": "secondary_reference_partial_primary_check_pending",
+      "priority": "high"
+    },
+    {
       "id": "CHAR-MIKOTO-YAMATO",
       "path": "characters/mikoto-yamato.md",
       "type": "character",
@@ -3560,9 +3575,15 @@
       "path": "research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md",
       "type": "cross_source_location_reconciliation",
       "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DMR-056",
+      "path": "research/inbox/DANMACHI-RESEARCH-056-hestia-familia-support-capabilities.md",
+      "type": "research_report",
+      "status": "secondary_checked"
     }
   ],
-  "lastStructuredSync": "2026-10-24",
+  "lastStructuredSync": "2026-10-28",
   "relationships": [
     {
       "id": "REL-ASTREA-DEITY-001",
