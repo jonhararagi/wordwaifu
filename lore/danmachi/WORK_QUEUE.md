@@ -27,6 +27,10 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 
 **Estado:** IN_PROGRESS. El barrido secundario está registrado y se han probado rutas de consulta licenciadas, pero ninguna muestra consultada expuso páginas narrativas legibles. Los cinco expedientes continúan abiertos para verificación primaria.
 
+- [x] Probar las rutas públicas seleccionadas PT10/PT11 de Google Books para la edición inglesa licenciada de Astrea Record vol. 3. No se obtuvo narración visible; DMR-045-SRC-053 queda metadata_checked_only, sin claims ni localizador narrativo.
+- [x] Identificar la ficha BookLive de la edición recopilatoria japonesa de Astrea Record 1–3 como ruta candidata distinta. La inspección no pudo iniciarse porque el servicio de navegador devolvió insufficient_credits antes de navegar; el estado del lector sigue desconocido.
+- [ ] Reintentar cualquiera de estas rutas solo cuando sea posible abrir páginas narrativas reales mediante una sesión autorizada. No repetir pantallas de metadatos, índices o carcasas de página como si fueran pasajes primarios.
+
 - [x] Registrar las rutas autorizadas y los límites de acceso de DMR-045-SRC-018 a DMR-045-SRC-044, incluidos los compendios BOOK☆WALKER, las referencias Miraheze y las rutas BinB oficiales; las fichas, sinopsis, índices, búsquedas limitadas, errores de red y pantallas de carga no equivalen a leer el texto narrativo.
 - [x] Revisión de procedencia: DMR-045-CLM-006 queda respaldado por la reseña comunitaria SRC-043 (`secondary_checked`); la sinopsis editorial SRC-005 no nombra esos emparejamientos y solo mantiene la descripción general del conflicto.
 - [x] Identificar por separado DMR-045-SRC-026 (BOOK☆WALKER Astrea Record vol. 1: error de descarga), DMR-045-SRC-027 (vol. 2: timeout) y DMR-045-SRC-028 (BOOK☆WALKER DanMachi vol. 14: error de descarga); los tres permanecen metadata_checked_only y sin claims.

@@ -578,3 +578,20 @@
 - **CI de PR:** Validate [#40744157365](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157365) y Lore/Integrity [#40744157330](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157330), ambos success.
 - **CI post-merge sobre ese SHA:** Validate [#40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y Lore/Integrity [#40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos success.
 - **Alcance real:** Tsubaki Collbrande y Welf Crozzo, wikis comunitarias bajo CONT-SECONDARY; no hubo actualización de personalidades ni de fichas interactivas. DMR-045 mantiene sus cinco cotejos primarios abiertos.
+
+### CONV-DM-2026-10-28-002 — Prioridad de DMR-045 y ruta BookLive sin verificar por bloqueo de herramienta
+- **Fecha:** 2026-10-28.
+- **Estado:** registrado; no constituye verificación narrativa ni cierre de DMR-045.
+- **Prioridad reafirmada:** DMR-045 sigue siendo el trabajo de lore prioritario y no queda sustituido por DMR-055 ni por otras tandas de personajes. La ampliación de las fichas interactivas de Tsubaki y Welf permanece separada, bajo `CONT-SECONDARY`, hasta incorporar sus pruebas.
+- **Ruta candidata observada:** [BookLive — edición recopilatoria de Astrea Record, tres volúmenes](https://booklive.jp/product/index/title_id/1295720/vol_no/001). La página pública muestra la ficha comercial y el control «ブラウザ試し読み» (muestra en navegador).
+- **Resultado exacto:** el servicio de automatización de navegador disponible rechazó el inicio de la consulta con `insufficient_credits`, antes de abrir el visor. Por tanto, **no se comprobó el contenido del lector**. No debe etiquetarse como lector fallido, no accesible o sin texto; tampoco aporta un hecho narrativo o un localizador. No se asigna un nuevo ID de fuente ni se crea ningún claim basándose únicamente en la ficha comercial.
+- **Siguiente acción:** mantener abiertos los cinco cotejos primarios. Reintentar esta ruta solo cuando pueda abrirse realmente el control de muestra o cuando haya un pasaje de edición licenciada con localizador reproducible. No repetir en paralelo las rutas ya registradas que solo mostraron metadatos/cargas.
+
+### CONV-DM-2026-10-28-003 — Nueva ruta licenciada de Google Books para Astrea Record, volumen 3
+- **Fecha:** 2026-10-28.
+- **Estado:** registrado; sin nuevo hallazgo narrativo primario.
+- **Ruta consultada:** [Google Books — Astrea Record, Vol. 3 (edición inglesa de Yen Press)](https://books.google.com/books/about/Astrea_Record_Vol_3_Is_It_Wrong_to_Try_t.html?id=Z0gVEQAAQBAJ); se abrieron además las rutas seleccionadas [PT10](https://books.google.com/books?cad=1&id=Z0gVEQAAQBAJ&pg=PT10&source=gbs_selected_pages) y [PT11](https://books.google.com/books?cad=1&id=Z0gVEQAAQBAJ&pg=PT11&source=gbs_selected_pages).
+- **Resultado observado:** la ficha muestra índice y términos comunes, pero las páginas seleccionadas solo expusieron la carcasa «Pages», sin texto narrativo visible. La ruta de la tabla de contenidos falló con un error de caché. Los nombres dentro de «Common terms and phrases» no son prueba suficiente de escenas ni de claims.
+- **Registro persistente:** DMR-045-SRC-053 en el expediente y el registro maestro de fuentes, estado metadata_checked_only, continuidad CONT-AR, claims_supported vacío y events_supported vacío. No se añade ningún hecho, relación ni localizador narrativo.
+- **Anti-repetición:** esta consulta fue para el volumen 3 de la edición inglesa licenciada; no debe confundirse con el intento de Google Books del volumen 20. Reabrir solo cuando se pueda ver texto narrativo real, no por la mera presencia de nombres o encabezados.
+- **Estado global:** DMR-045 sigue pendiente para Alfia, Zald, Meteria, Erebus y Rudra; no se sustituye por la tanda secundaria DMR-055.

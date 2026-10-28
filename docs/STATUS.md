@@ -1,6 +1,12 @@
 # Estado de WordWaifu
 ## Estado operativo y verificación — 2026-10-28
 
+### DMR-045 — rutas candidatas de muestra revisadas el 2026-10-28
+- **Google Books / Yen Press, Astrea Record vol. 3 en inglés:** se probaron las rutas seleccionadas PT10 y PT11; la extracción mostró solo la carcasa de página («Pages») y el índice devolvió error de caché. La ficha y los términos comunes son metadatos, no prueba narrativa. Registro DMR-045-SRC-053, metadata_checked_only, CONT-AR, claims_supported vacío.
+- **BookLive, edición recopilatoria japonesa de Astrea Record 1–3:** la página comercial muestra un control de muestra, pero no fue posible iniciar la inspección del visor porque la herramienta de navegador devolvió insufficient_credits antes de navegar. El contenido del lector sigue sin comprobarse; no es un fallo del lector.
+- No se agregaron claims, relaciones, sucesos ni localizadores narrativos. DMR-045 sigue IN_PROGRESS con los cinco cotejos primarios abiertos. DMR-055 y la ampliación de UI de Tsubaki/Welf permanecen separadas.
+
+
 <!-- DANMACHI-METRICS:BEGIN -->
 - **Corpus DanMachi:** 178 registros activos; 29 IDs reservados; 131 documentos de apoyo.
 - **Grafo de conocimiento:** 258 relaciones explícitas; 258/258 con ambos extremos activos y distintos; IDs de relación únicos.
