@@ -18,6 +18,8 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [DANMACHI-RESEARCH-041 — Familia Chronicle episode Haze/Heith](research/inbox/DANMACHI-RESEARCH-041-familia-chronicle-episode-haze.md) — resuelve la identidad Haze/Heizu con Heith Velvet y enlaza solo el marco de sinopsis a un evento parcial.
 - [EVT-DM-FC-HAZE-001 — Familia Chronicle episode Haze/Heith](events/timeline/EVT-DM-FC-HAZE-001.md) — ruta parcial a Heith y Ottar; la secuencia íntegra del volumen sigue pendiente.
 
+- [DANMACHI-RESEARCH-056 · Hestia Familia: apoyo, detección y curación](research/inbox/DANMACHI-RESEARCH-056-hestia-familia-support-capabilities.md) — capacidades reportadas de Liliruca Arde, Mikoto Yamato, Haruhime y Nina Tulle en `CONT-SECONDARY`; límites no informados, snapshots temporales y conflicto de afiliación de Nina explícitos.
+
 ## 1. Guías de trabajo
 
 - [Matriz de integración DanMachi — auditoría 2026-10](../../docs/INTEGRATION_DANMACHI_AUDIT_2026-10.md) — estado de ramas, riesgos de sobrescritura y gates de validación; no implica que la integración esté cerrada.
