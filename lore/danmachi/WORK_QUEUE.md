@@ -941,3 +941,13 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Registrar el resultado en DMR-045 y CHARACTER_UPDATE_LEDGER.md sin reescribir personalidades, crear claims ni duplicar fuentes.
 - [ ] Continuar los cinco cotejos primarios solo ante una ruta narrativa licenciada nueva y legible: Alfia, Zald, Meteria, Erebus y Rudra.
 - **Cierre del subtrabajo:** completado; DMR-045 en conjunto permanece IN_PROGRESS.
+
+
+## DMR-045 · Ruta BookLive para DanMachi vol. 20 (2026-10-27)
+
+- [x] Comprobar la ficha pública de BookLive y registrar el control visible de muestra.
+- [x] Añadir DMR-045-SRC-052 con estado metadata_checked_only, sin claims ni eventos.
+- [x] Añadir la ruta al directorio interactivo y una regresión para comprobar su clasificación y visibilidad.
+- [ ] Inspeccionar el lector normal solo si se puede abrir desde el control de BookLive y muestra texto narrativo legible; registrar un localizador reproducible si aparece.
+- [ ] Continuar los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra cuando exista texto licenciable legible.
+- **Límite:** DMR-045 sigue IN_PROGRESS; los metadatos no verifican apariciones, habilidades, costes, relaciones ni ausencia de personajes.

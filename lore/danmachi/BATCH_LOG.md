@@ -482,3 +482,11 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - El texto autoral se mantiene en CONT-AU; el cuadernillo contiene una versión revisada de un escenario descrito como “algo que podría haber sucedido”.
 - Se añade una regresión que valida la separación de continuidad y la disponibilidad de la fuente en el directorio interactivo.
 - **Estado del subtrabajo:** implementado en rama; CI e integración pendientes. DMR-045 sigue abierta para sus cinco cotejos primarios.
+
+
+## DMR-045 · BookLive vol. 20, nueva ruta licenciada de metadatos (2026-10-27)
+
+- Se registró la ficha BookLive del volumen 20 como DMR-045-SRC-052 y en el directorio interactivo como licensed-retailer-booklive-danmachi-vol20-preview.
+- La página presenta botones de muestra en navegador y aplicación, pero el lector no se abrió ni se recuperó narración. El resultado queda en metadata_checked_only, no como éxito o fallo de lectura.
+- Se añadió una regresión para validar la fuente, los controles y la ausencia de claims/eventos.
+- **Estado:** implementado en rama; CI e integración pendientes. DMR-045 conserva los cinco cotejos primarios abiertos.

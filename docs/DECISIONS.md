@@ -233,3 +233,10 @@
 **Aplicación:** DMR-029-SRC-016 identifica «それは遥か彼方の静穏の夢» como texto de autor en CONT-AU; DMR-045-SRC-002 y DMR-045-SRC-005 confirman su inclusión revisada en el cuadernillo especial de Astrea Record 3.
 **Límite:** el cuadernillo es descrito como escenario que podría haber ocurrido. No se transfieren esos sucesos a CONT-MAIN-LN / CONT-AR ni se cierran los cinco cotejos primarios de DMR-045.
 **Prueba:** test_danmachi_dmr045_public_sweep.cjs valida el tipo de fuente, la continuidad alternativa, las entradas ya existentes y que el relato siga siendo descubrible sin crear claims de canon.
+
+
+## DEC-036 — Registrar rutas licenciadas nuevas sin exagerar la evidencia
+**Estado:** implementado en rama de investigación; CI e integración pendientes.
+**Decisión:** una ficha de distribuidor/licencia que anuncia un control de muestra se puede registrar como ruta metadata-only. No debe describirse como texto abierto, ni como lector fallido, hasta que el control normal se haya probado y el resultado sea observable.
+**Aplicación:** DMR-045-SRC-052 registra la ficha de BookLive para DanMachi vol. 20 y sus controles públicos de muestra. El contenido narrativo no se inspeccionó.
+**Límite:** no se crean claims ni eventos, no se da por confirmada la presencia o ausencia de personajes, y DMR-045 sigue abierta para los cinco cotejos primarios.

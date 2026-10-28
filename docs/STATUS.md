@@ -563,3 +563,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - La nota original es legible y corresponde a un escenario hipotético; la edición especial confirma que se publicó una versión revisada en un cuadernillo, descrita como algo que podría haber sucedido.
 - **Estado de la investigación primaria:** sin cambios. Los cinco cotejos narrativos de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos. No se crean claims ni relaciones principales a partir de CONT-AU.
 - **Regla de reintento:** el mismo relato y las muestras oficiales que no devolvieron narración no se vuelven a recorrer sin cambio material; buscar solo un localizador primario nuevo.
+
+
+## DMR-045 · Ruta adicional de BookLive (2026-10-27)
+
+- **Fuente nueva registrada:** DMR-045-SRC-052, ficha licenciada de BookLive para DanMachi vol. 20.
+- **Verificado:** metadatos públicos y presencia de controles de muestra en navegador y aplicación.
+- **No verificado:** ninguna página narrativa ni localizador; el lector no se abrió, por lo que su estado es desconocido.
+- **Estado de la investigación primaria:** sin cambios. Los cinco cotejos de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos.
+- **Regla de reintento:** si no se obtiene texto narrativo, mantener metadata_checked_only y no repetir BookWalker/Kobo/Google Books/BinB sin un cambio material.
