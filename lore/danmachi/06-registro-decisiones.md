@@ -202,3 +202,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Decisión:** no volver a rastrear ni duplicar el relato alternativo «それは遥か彼方の静穏の夢». Su texto ya está documentado como DMR-029-SRC-016; el catálogo editorial que confirma la edición especial está en DMR-045-SRC-002 y DMR-045-SRC-005.
 - **Alcance permitido:** utilizar detalles solo dentro de CONT-AU. La ficha editorial acredita la existencia y la presentación alternativa del cuadernillo, no las escenas específicas de la novela principal.
 - **Pendiente preservado:** Alfia, Zald, Meteria, Erebus y Rudra continúan con los cotejos primarios de DMR-045 abiertos; no se añadieron claims ni relaciones a CONT-MAIN-LN.
+
+
+### DEC-DM-023 — Separar metadatos de distribuidor de la lectura narrativa
+- **Fecha:** 2026-10-27.
+- **Estado:** implementado en rama; validación e integración pendientes.
+- **Decisión:** registrar una ficha de distribuidor solo como metadata_checked_only cuando se han visto datos de producto o controles de muestra pero no se ha leído narración.
+- **Aplicación:** DMR-045-SRC-052, BookLive vol. 20. No se considera un intento fallido de lectura porque el lector no se abrió en esta pasada.
+- **Prioridad conservada:** los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos. No se reintentan muestras ya bloqueadas salvo evidencia nueva.
