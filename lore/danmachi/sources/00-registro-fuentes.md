@@ -3743,6 +3743,31 @@ verification_status: stub
 - verification_status: secondary_checked
 
 
+
+## DMR-045-SRC-052 · BookLive — DanMachi, volumen 20 (ficha y muestra anunciada)
+
+- source_id: DMR-045-SRC-052
+- title: ダンジョンに出会いを求めるのは間違っているだろうか２０ — ficha de BookLive
+- creator_or_publisher: BookLive / SB Creative / GA Bunko
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE
+- series: DanMachi
+- volume_or_edition: Volumen 20, edición japonesa en formato digital
+- publication_date: 2024-12-15
+- page_count: 368
+- language: Japonés
+- official_url: https://booklive.jp/product/index/title_id/201522/vol_no/020
+- accessed_at: 2026-10-27
+- locator_type: retailer_metadata_and_sample_control
+- locator: Ficha pública del volumen 20; controles ブラウザ試し読み (muestra en navegador) y アプリ試し読みはこちら (muestra en aplicación)
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Se verificaron los metadatos del producto y la presencia de controles de muestra. En esta pasada no se abrió el lector ni se inspeccionaron páginas narrativas; el estado del lector queda desconocido. La ficha no respalda escenas, poderes, parentescos o apariciones de Alfia, Zald, Meteria, Erebus o Rudra.
+- conflicting_sources: []
+- rights_note: Conservar URL y metadatos breves; no eludir restricciones del lector ni copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
 ## DMR-052-SRC-001 · DanMachi Wiki — Allen Fromel
 
 - source_id: DMR-052-SRC-001
