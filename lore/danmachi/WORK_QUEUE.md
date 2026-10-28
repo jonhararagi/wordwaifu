@@ -932,3 +932,12 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Verificar CI post-merge: [Validate #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [Lore/Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
 - **Límite:** datos secundarios; no se crean claims narrativos, eventos o relaciones.
 - **Convivencia con DMR-045:** los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes. DMR-053 no reemplaza esa prioridad ni justifica repetir las muestras no legibles.
+
+## DMR-045 · Cruce de la nota autoral y la edición especial (2026-10-27)
+
+- [x] Confirmar que la nota «それは遥か彼方の静穏の夢» ya está registrada como DMR-029-SRC-016 y en el directorio de fuentes interactivo.
+- [x] Relacionarla con las fichas editoriales ya registradas DMR-045-SRC-002 y DMR-045-SRC-005, que confirman la inclusión revisada del relato en el cuadernillo.
+- [x] Añadir pruebas para mantener la fuente en CONT-AU y evitar que el escenario hipotético se use como evidencia de la línea principal.
+- [x] Registrar el resultado en DMR-045 y CHARACTER_UPDATE_LEDGER.md sin reescribir personalidades, crear claims ni duplicar fuentes.
+- [ ] Continuar los cinco cotejos primarios solo ante una ruta narrativa licenciada nueva y legible: Alfia, Zald, Meteria, Erebus y Rudra.
+- **Cierre del subtrabajo:** completado; DMR-045 en conjunto permanece IN_PROGRESS.
