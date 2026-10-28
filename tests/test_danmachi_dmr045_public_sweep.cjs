@@ -187,6 +187,31 @@ assert.match(dmr045, /no se ha establecido la independencia editorial/i);
 assert.match(dmr045, /no cierran ninguno de los cinco localizadores primarios/i);
 assert.match(dmr045, /Cache miss/);
 assert.ok(sources.includes("https://nook.barnesandnoble.com/products/9781975385026/sample?sourceEan=9781975385019"));
+
+ 
+const bookliveVol20 = sources.slice(
+  sources.indexOf("## DMR-045-SRC-052"),
+  sources.indexOf("## DMR-052-SRC-001")
+);
+assert.match(bookliveVol20, /LICENSED_RETAILER_PRODUCT_PAGE/);
+assert.match(bookliveVol20, /verification_status: metadata_checked_only/);
+assert.match(bookliveVol20, /claims_supported: \[\]/);
+assert.match(bookliveVol20, /events_supported: \[\]/);
+assert.match(bookliveVol20, /https:\/\/booklive\.jp\/product\/index\/title_id\/201522\/vol_no\/020/);
+assert.match(bookliveVol20, /ブラウザ試し読み/);
+assert.match(bookliveVol20, /lector queda desconocido|estado del lector es desconocido/i);
+assert.match(dmr045, /Nueva ruta licenciada de BookLive para el volumen 20/);
+assert.match(dmr045, /no se abrió el lector desde esos controles/i);
+
+const bookliveSource = corpus.getOnlineSourceDirectory().find(
+  source => source.id === "licensed-retailer-booklive-danmachi-vol20-preview"
+);
+assert.ok(bookliveSource, "The new BookLive volume 20 metadata route must be discoverable.");
+assert.equal(bookliveSource.category, "licensed_retailer");
+assert.ok(bookliveSource.url.includes("booklive.jp/product/index/title_id/201522/vol_no/020"));
+assert.match(bookliveSource.limits, /metadata_checked_only/);
+assert.match(bookliveSource.limits, /No se abrió el lector/);
+
 const sourceIds = [...sources.matchAll(/^- source_id: (DMR-045-SRC-\d{3})$/gm)].map(match => match[1]);
 assert.equal(new Set(sourceIds).size, sourceIds.length, "DMR-045 source IDs must be unique");
 
