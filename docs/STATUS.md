@@ -588,10 +588,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Control técnico:** la prueba `tests/test_character_update_ledger.cjs` se amplía para exigir entradas únicas de bitácora, fuentes detectables y notas interactivas de ambos personajes.
 - **Límites de prioridad:** los cinco cotejos primarios de DMR-045 continúan abiertos. No se repiten las mismas páginas ni se reformulan personalidades sin un disparador nuevo.
 
-## DMR-055 — cohorte secundaria nueva (2026-10-28)
-- **Estado:** investigación documental registrada en la rama research/dmr055-hephaestus-smiths-2026-10-28; aún no integrada ni validada por CI.
-- **Cohorte:** Tsubaki Collbrande y Welf Crozzo, elegidos para avanzar a otros personajes después de DMR-052/053/054.
-- **Fuentes:** DanMachi Wiki EN para Tsubaki y DanMachi Wiki ES para Welf; ambas secundarias.
-- **Resultado:** se registran niveles, magia/skills/equipo que la fuente sí presenta y campos no informados. No se reescriben personalidades ni se crean claims narrativos.
-- **Siguiente paso:** PR, CI y verificación de integración pendientes; la información no debe describirse como integrada hasta comprobarlo.
+## DMR-055 — cohorte secundaria (2026-10-28)
+- **Estado:** investigación documental integrada y validada en `main`; la ampliación de fichas interactivas continúa pendiente por separado.
+- **Integración:** [PR #182](https://github.com/jonhararagi/wordwaifu/pull/182), squash merge; SHA exacto de `main`: `25b019598e74c5f9756aa541b8e9f5f1fe7c633e`.
+- **Cohorte:** Tsubaki Collbrande y Welf Crozzo, elegidos para avanzar a personajes distintos después de DMR-052/053/054, sin repetir búsquedas ya cerradas.
+- **Fuentes:** DanMachi Wiki EN para Tsubaki y DanMachi Wiki ES para Welf; ambas comunitarias/secundarias bajo CONT-SECONDARY.
+- **CI de PR sobre `3712b698375d48458b7c7cc0012df56e344a2686`:** [Validate WordWaifu #40744157365](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157365) y [DanMachi Lore and Retrieval Integrity #40744157330](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157330), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main` `25b019598e74c5f9756aa541b8e9f5f1fe7c633e`:** [Validate WordWaifu #40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y [DanMachi Lore and Retrieval Integrity #40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos `success`.
+- **Resultado:** se documentan niveles, magia/skills/equipo sí presentados por las fuentes y los campos que no aparecen. No se reescriben personalidades ni se crean claims narrativos, relaciones, eventos o alias.
+- **Límite:** DMR-045 conserva los cinco cotejos primarios pendientes; DMR-055 no los sustituye. La integración de notas secundarias a la interfaz requiere cambios y pruebas separados.
 
