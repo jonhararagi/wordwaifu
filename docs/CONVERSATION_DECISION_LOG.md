@@ -595,3 +595,12 @@
 - **Registro persistente:** DMR-045-SRC-053 en el expediente y el registro maestro de fuentes, estado metadata_checked_only, continuidad CONT-AR, claims_supported vacío y events_supported vacío. No se añade ningún hecho, relación ni localizador narrativo.
 - **Anti-repetición:** esta consulta fue para el volumen 3 de la edición inglesa licenciada; no debe confundirse con el intento de Google Books del volumen 20. Reabrir solo cuando se pueda ver texto narrativo real, no por la mera presencia de nombres o encabezados.
 - **Estado global:** DMR-045 sigue pendiente para Alfia, Zald, Meteria, Erebus y Rudra; no se sustituye por la tanda secundaria DMR-055.
+
+### CONV-DM-2026-10-28-004 — Ruta Sony Reader Store localizada; lectura no verificada
+- **Fecha:** 2026-10-28.
+- **Estado:** investigación de ruta registrada; no constituye cotejo narrativo primario.
+- **Fuente:** [Sony Reader Store — Astrea Record, volumen 3, edición japonesa](https://ebookstore.sony.jp/title/01237250/id/BT000123725000300301/).
+- **Resultado:** la página identifica el volumen y presenta una verificación de edad antes de permitir portada, muestra y compra. La investigación se detuvo en esa pantalla; no se confirmó edad, no se abrió la muestra y no se afirma que el visor falle o que esté disponible después de confirmar.
+- **Registro:** DMR-045-SRC-054 en el expediente y el registro maestro de fuentes, CONT-AR, metadata_checked_only, claims_supported y events_supported vacíos.
+- **Límites:** no se crearon claims, relaciones, eventos, alias ni localizadores narrativos. Los cinco cotejos primarios de DMR-045 continúan pendientes. DMR-055 y la ampliación UI de Tsubaki/Welf siguen separadas bajo CONT-SECONDARY.
+- **Anti-repetición:** esta es una ficha de distribuidor distinta de las rutas ya registradas. Solo reabrirla siguiendo el flujo normal del sitio si puede accederse legítimamente a la muestra, y anotar escenas únicamente tras ver texto real.
