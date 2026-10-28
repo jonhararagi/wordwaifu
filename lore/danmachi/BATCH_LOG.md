@@ -489,4 +489,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Se registró la ficha BookLive del volumen 20 como DMR-045-SRC-052 y en el directorio interactivo como licensed-retailer-booklive-danmachi-vol20-preview.
 - La página presenta botones de muestra en navegador y aplicación, pero el lector no se abrió ni se recuperó narración. El resultado queda en metadata_checked_only, no como éxito o fallo de lectura.
 - Se añadió una regresión para validar la fuente, los controles y la ausencia de claims/eventos.
-- **Estado:** implementado en rama; CI e integración pendientes. DMR-045 conserva los cinco cotejos primarios abiertos.
+- **Integración:** [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177), SHA de main a9ab02584f857a9c3fabbba59b40e8799e7aaead.
+- **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
+- **CI post-merge sobre a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), en ejecución al registrar este estado.
+- DMR-045 conserva los cinco cotejos primarios abiertos.
