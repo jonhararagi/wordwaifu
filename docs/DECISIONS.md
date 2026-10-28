@@ -243,3 +243,10 @@
 **Decisión:** una ficha de distribuidor/licencia que anuncia un control de muestra se puede registrar como ruta metadata-only. No debe describirse como texto abierto, ni como lector fallido, hasta que el control normal se haya probado y el resultado sea observable.
 **Aplicación:** DMR-045-SRC-052 registra la ficha de BookLive para DanMachi vol. 20 y sus controles públicos de muestra. El contenido narrativo no se inspeccionó.
 **Límite:** no se crean claims ni eventos, no se da por confirmada la presencia o ausencia de personajes, y DMR-045 sigue abierta para los cinco cotejos primarios.
+
+
+## DEC-037 — Evitar vueltas de análisis y registrar capacidades solo cuando estén respaldadas
+**Estado:** implementado en rama de investigación; validación e integración pendientes.
+**Decisión:** si la misma página o juego ya se ha revisado y no informa un campo, cerrar ese campo como «no informado en la fuente consultada» y pasar a otro personaje o grupo. No reformular la personalidad para simular progreso; no afirmar que una capacidad no existe en canon solo porque una wiki no la enumera.
+**Aplicación:** DMR-054 añade una pasada secundaria limitada a Asfi Al Andromeda y Lulune Louie de Hermes Familia. Se registran nivel/skills/magia/equipo reportados y, por separado, los campos no informados, con notas de continuidad `CONT-SECONDARY` y pruebas.
+**Límites:** no se crean claims, eventos, relaciones o aliases; no se modifican las personalidades ni se cierran los cinco cotejos primarios de DMR-045. La información de wiki no se presenta como texto primario.
