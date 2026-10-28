@@ -20,6 +20,20 @@ assert.ok(bell.history.length > 300, "Bell's history must be a real paragraph, n
 assert.ok(bell.abilities.includes("Liaris Freese"), "Bell's dossier must describe named abilities.");
 assert.ok(api.get("CHAR-RYUU-LION").history.includes("piso 37"), "Ryuu's dossier must include specific narrative context.");
 assert.equal(api.get("MISSING-ID"), null, "Unknown characters should return null.");
+
+const ninaDossier = api.get("CHAR-NINA-TULLE");
+assert.ok(ninaDossier, "Nina Tulle must have a general narrative dossier, not only a modal note.");
+assert.ok(ninaDossier.abilities.includes("Magia Kris") && ninaDossier.abilities.includes("Lagriel Krisheim"),
+  "Nina's documented healing abilities must be findable from her general dossier.");
+assert.ok(ninaDossier.abilities.includes("not described") === false && ninaDossier.abilities.includes("no están descritos"),
+  "Nina's unreported skill effects must remain explicit.");
+assert.ok(ninaDossier.conflict.includes("SECONDARY_CONFLICT") && ninaDossier.conflict.includes("membresía oficial"),
+  "Nina's membership disagreement must remain explicit.");
+assert.ok(ninaDossier.sources.includes("https://danmachi.fandom.com/wiki/Nina_Tulle") &&
+  ninaDossier.sources.includes("https://danmachi.fandom.com/wiki/Hestia_Familia") &&
+  ninaDossier.sources.includes("https://danmachi.fandom.com/es/wiki/Familia_Hestia"),
+  "Nina's general dossier must retain separate English/Spanish source routes.");
+
 const licensedAstreaUrl = "https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes";
 const bookwalkerProductUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/";
 const bookwalkerSampleUrl = "https://bookwalker.jp/dead6afbb1-d488-4cf3-a255-669537f7f049/?sample=1";
