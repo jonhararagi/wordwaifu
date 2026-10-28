@@ -604,3 +604,11 @@
 - **Registro:** DMR-045-SRC-054 en el expediente y el registro maestro de fuentes, CONT-AR, metadata_checked_only, claims_supported y events_supported vacíos.
 - **Límites:** no se crearon claims, relaciones, eventos, alias ni localizadores narrativos. Los cinco cotejos primarios de DMR-045 continúan pendientes. DMR-055 y la ampliación UI de Tsubaki/Welf siguen separadas bajo CONT-SECONDARY.
 - **Anti-repetición:** esta es una ficha de distribuidor distinta de las rutas ya registradas. Solo reabrirla siguiendo el flujo normal del sitio si puede accederse legítimamente a la muestra, y anotar escenas únicamente tras ver texto real.
+
+
+## CONV-DM-2026-10-28-005 — Completar personajes y datos de DanMachi para probar WordWaifu
+- **Fecha:** 2026-10-28.
+- **Decisión del usuario:** completar personajes y datos faltantes de DanMachi para comprobar WordWaifu como segundo cerebro de lore, con memoria estructurada y controles de continuidad.
+- **Aplicación:** priorizar DMR-056 (Liliruca Arde, Mikoto Yamato, Haruhime y ficha nueva de Nina Tulle), enlazar fuentes y probar el archivo interactivo. Datos de wiki bajo `CONT-SECONDARY`.
+- **Límites:** no inventar habilidades/costes que la fuente no informa; registrar contradicciones sin resolverlas por intuición; no reescribir personalidades sin evidencia nueva; no cerrar DMR-045 ni repetir lectores agotados sin texto primario nuevo.
+- **Estado:** tarea aceptada; implementación y verificación en curso. El estado final se actualizará con evidencia real de CI e integración.
