@@ -1016,3 +1016,25 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **Clasificación:** ruta candidata, no una fuente narrativa verificada. No se crea un ID DMR-045-SRC nuevo, no se añaden claims ni localizadores y no se deduce que el lector falle o carezca de texto.
 - **Regla anti-repetición:** reintentar únicamente cuando el navegador pueda ejecutar la visita real; entretanto, no repetir los visores ya registrados que solo expusieron interfaz, metadatos o errores de carga.
 - **Estado global:** DMR-045 continúa IN_PROGRESS; Alfia, Zald, Meteria, Erebus y Rudra conservan sus cinco cotejos narrativos primarios pendientes.
+
+## DMR-045-SRC-053 · Google Books — Astrea Record, volumen 3 (edición inglesa licenciada)
+
+- **source_id:** DMR-045-SRC-053
+- **source_title:** Astrea Record, Vol. 3: Is It Wrong to Try to Pick Up Girls in a Dungeon? Tales of Heroes
+- **creator_or_publisher:** Fujino Omori / Yen Press LLC; vista previa pública de Google Books
+- **source_type:** LICENSED_BOOK_PREVIEW
+- **volume_or_edition:** Volumen 3, ISBN 9781975379933, edición inglesa, 296 páginas según la ficha.
+- **language:** Inglés
+- **source_url:** https://books.google.com/books/about/Astrea_Record_Vol_3_Is_It_Wrong_to_Try_t.html?id=Z0gVEQAAQBAJ
+- **additional_routes:** páginas seleccionadas [PT10](https://books.google.com/books?cad=1&id=Z0gVEQAAQBAJ&pg=PT10&source=gbs_selected_pages) y [PT11](https://books.google.com/books?cad=1&id=Z0gVEQAAQBAJ&pg=PT11&source=gbs_selected_pages); enlace de vista previa «Preview this book» abre una página que solo muestra la portada.
+- **locator_type:** selected_page_route
+- **locator:** PT10 y PT11 como rutas seleccionadas, **no** como localizadores narrativos verificados.
+- **claims_supported:** []
+- **events_supported:** []
+- **character_ids:** []
+- **continuity_scope:** CONT-AR
+- **verification_status:** metadata_checked_only
+- **access_result (2026-10-28):** la ficha pública expone metadatos, tabla de contenidos y términos comunes, incluidos nombres relevantes. Al abrir las páginas seleccionadas PT10/PT11, la extracción web solo muestra una carcasa de página («Pages»), sin texto narrativo visible; la tabla de contenidos abrió con error de caché. La lista de términos comunes no demuestra que una escena o afirmación concreta aparezca en el pasaje.
+- **confidence_note:** esta es una edición licenciada distinta de las rutas de Google Books del volumen 20 registradas anteriormente. No se ha leído narración de Alfia, Zald, Meteria o Erebus y no se obtiene localizador primario reproducible. No convertir un nombre dentro de «Common terms and phrases» ni un encabezado de capítulo en un claim narrativo.
+- **rights_note:** no se almacenan textos extensos; solo metadatos y resultado preciso de acceso.
+- **verified_by:** DANMACHI-RESEARCH-045
