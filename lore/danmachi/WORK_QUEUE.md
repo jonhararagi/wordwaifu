@@ -950,7 +950,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir la ruta al directorio interactivo y una regresión para comprobar su clasificación y visibilidad.
 - [x] Integrar mediante [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177), SHA de main a9ab02584f857a9c3fabbba59b40e8799e7aaead.
 - [x] Aprobar CI de PR: [Validate #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [Lore/Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354).
-- [ ] Confirmar CI post-merge sobre a9ab02584f857a9c3fabbba59b40e8799e7aaead: [Validate #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [Lore/Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944).
+- [x] Confirmar CI post-merge sobre a9ab02584f857a9c3fabbba59b40e8799e7aaead: [Validate #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [Lore/Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), ambos success.
 - [ ] Inspeccionar el lector normal solo si se puede abrir desde el control de BookLive y muestra texto narrativo legible; registrar un localizador reproducible si aparece.
 - [ ] Continuar los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra cuando exista texto licenciable legible.
 - **Límite:** DMR-045 sigue IN_PROGRESS; los metadatos no verifican apariciones, habilidades, costes, relaciones ni ausencia de personajes.
