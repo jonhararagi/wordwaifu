@@ -1,4 +1,10 @@
 # Estado de WordWaifu
+
+## DMR-045 — nueva ruta de muestra japonesa localizada en Sony Reader Store (2026-10-28)
+- Se abrió la ficha pública de [Sony Reader Store — Astrea Record, volumen 3](https://ebookstore.sony.jp/title/01237250/id/BT000123725000300301/), edición japonesa de GA Bunko / SB Creative.
+- La página presenta el bloque de verificación de edad y explica que la portada, la muestra y la compra requieren confirmarla. No se avanzó a través del control ni se abrió texto narrativo; por tanto, esta ruta queda metadata_checked_only y no demuestra si el visor funciona tras la verificación.
+- Registro DMR-045-SRC-054, CONT-AR, claims_supported vacío y events_supported vacío. No se añadieron hechos, relaciones ni localizadores.
+- DMR-045 sigue IN_PROGRESS para Alfia, Zald, Meteria, Erebus y Rudra. DMR-055 y la interfaz de Tsubaki/Welf siguen como trabajos separados.
 ## Estado operativo y verificación — 2026-10-28
 
 ### DMR-045 — rutas candidatas de muestra revisadas el 2026-10-28
