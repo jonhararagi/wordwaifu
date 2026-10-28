@@ -234,3 +234,12 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Decisión operativa:** después de una pasada secundaria estructurada sin datos nuevos, no repetir la misma URL ni reformular la personalidad. Avanzar a otra identidad; marcar como «no informado en el contenido consultado» el campo ausente, sin inventarlo ni concluir que está universalmente ausente del canon.
 - **Aplicación:** DMR-055 documenta Tsubaki Collbrande y Welf Crozzo. Las fuentes permanecen secundarias y no se crean claims narrativos, relaciones o eventos. La actualización de fichas interactivas queda separada y requiere pruebas propias.
 - **Prioridad:** los cinco cotejos narrativos primarios de DMR-045 siguen abiertos; las muestras ya agotadas no se repiten sin evidencia nueva.
+
+
+### DEC-DM-026 — Nueva cohorte Hestia para probar recuperación y contradicciones
+- **Fecha:** 2026-10-28.
+- **Estado:** en validación de PR; integración pendiente.
+- **Decisión operativa:** cuando los lectores primarios ya probados no ofrecen texto nuevo, no repetir las mismas URL sin un desencadenante. Seguir completando personajes de otra cohorte con fuentes secundarias claramente delimitadas y pruebas de recuperación.
+- **Aplicación:** DMR-056 reúne Liliruca Arde, Mikoto Yamato, Haruhime Sanjouno y crea la ficha CHAR-NINA-TULLE; se añaden notas `CONT-SECONDARY`, seis entradas al directorio de fuentes y regresiones automatizadas.
+- **Contradicción preservada:** Nina figura como pasante sin falna en el texto descriptivo, pero como activa en tablas de miembros. Su afiliación formal queda sin resolver.
+- **Límites:** no se añaden claims, eventos, relaciones o alias; DMR-045 mantiene los cinco cotejos primarios pendientes y solo se reabre con evidencia nueva.
