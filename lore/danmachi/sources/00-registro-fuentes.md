@@ -4124,3 +4124,141 @@ verification_status: stub
 - rights_note: no almacenar texto extenso; documentar solo metadatos y límites de acceso.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+## DMR-056-SRC-001 · DanMachi Wiki ES — Liliruca Arde
+
+- source_id: DMR-056-SRC-001
+- title: DanMachi Wiki ES — Liliruca Arde
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil o tabla comunitaria; edición no identificada
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Liliruca_Arde
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Situación profesional; Habilidad, Magia y Equipo; Habilidades de Desarrollo
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para nivel 2 reportado, Cinder Ella, Artel Assist, Command Call, desarrollo y equipo. No aporta localizador primario ni costes numéricos en el extracto utilizado. Extracto público indexado; no se afirma que el artículo íntegro ni la novela estén cotejados.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-056
+- verification_status: secondary_checked
+
+
+## DMR-056-SRC-002 · DanMachi Wiki — Yamato Mikoto
+
+- source_id: DMR-056-SRC-002
+- title: DanMachi Wiki — Yamato Mikoto
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil o tabla comunitaria; edición no identificada
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Yamato_Mikoto
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Skill, Magic and Equipment; Futsunomitama; Skills
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para nivel 2, Futsunomitama, skills de búsqueda, Abnormal Resistance y armas. Las hazañas se conservan con contexto; costes y radios generales no aparecen en el extracto. Extracto público indexado; no se afirma que el artículo íntegro ni la novela estén cotejados.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-056
+- verification_status: secondary_checked
+
+
+## DMR-056-SRC-003 · DanMachi Wiki — Sanjouno Haruhime
+
+- source_id: DMR-056-SRC-003
+- title: DanMachi Wiki — Sanjouno Haruhime
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil o tabla comunitaria; edición no identificada
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Sanjouno_Haruhime
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Uchide no Kozuchi; Kokonoe; Skills; Development Abilities; Equipment
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para magias, skill, equipo y snapshots temporales. La propia página presenta máximos generales y un snapshot posterior de colas; no se decide una cifra universal. Extracto público indexado; no se afirma que el artículo íntegro ni la novela estén cotejados.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-056
+- verification_status: secondary_checked
+
+
+## DMR-056-SRC-004 · DanMachi Wiki — Nina Tulle
+
+- source_id: DMR-056-SRC-004
+- title: DanMachi Wiki — Nina Tulle
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil o tabla comunitaria; edición no identificada
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Nina_Tulle
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Abilities; Magic; Skills; Development Abilities; Equipment
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para nivel 2, piso 29 reportado, sanación, Magia Kris, Lagriel Krisheim, skills nombradas, Mage y equipo. Efectos individuales de Fairy Cradle/Alf Minister no constan en el extracto. Extracto público indexado; no se afirma que el artículo íntegro ni la novela estén cotejados.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-056
+- verification_status: secondary_checked
+
+
+## DMR-056-SRC-005 · DanMachi Wiki — Hestia Familia
+
+- source_id: DMR-056-SRC-005
+- title: DanMachi Wiki — Hestia Familia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil o tabla comunitaria; edición no identificada
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Hestia_Familia
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Organization; Members
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para la pasantía de Nina. El texto dice que no es miembro oficial sin la falna, mientras que la tabla la etiqueta Active en el roster; conservar la contradicción interna. Extracto público indexado; no se afirma que el artículo íntegro ni la novela estén cotejados.
+- conflicting_sources: [DMR-056-SRC-006, Hestia Familia roster/status discrepancy]
+- rights_note: Conservar paráfrasis breve y URL; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-056
+- verification_status: secondary_checked
+
+
+## DMR-056-SRC-006 · DanMachi Wiki ES — Familia Hestia
+
+- source_id: DMR-056-SRC-006
+- title: DanMachi Wiki ES — Familia Hestia
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil o tabla comunitaria; edición no identificada
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Familia_Hestia
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Organización; Miembros
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria. El párrafo identifica a Nina como pasante sin falna/membresía formal; la tabla la incluye como activa. Mantener ambos datos sin resolverlos por intuición. Extracto público indexado; no se afirma que el artículo íntegro ni la novela estén cotejados.
+- conflicting_sources: [DMR-056-SRC-005, Hestia Familia roster/status discrepancy]
+- rights_note: Conservar paráfrasis breve y URL; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-056
+- verification_status: secondary_checked
