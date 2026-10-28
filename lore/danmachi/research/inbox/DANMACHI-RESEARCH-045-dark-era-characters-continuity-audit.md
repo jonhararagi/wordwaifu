@@ -1008,3 +1008,11 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
 - **CI post-merge sobre el SHA exacto de main a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), ambos success.
 - La integración incorpora una ruta metadata-only y una regresión automática; no eleva la ficha de distribuidor a evidencia narrativa.
+
+## Ruta candidata BookLive para la edición recopilatoria de Astrea Record — 2026-10-28
+
+- Se identificó la ficha pública de [BookLive para la edición recopilatoria de Astrea Record, volúmenes 1–3](https://booklive.jp/product/index/title_id/1295720/vol_no/001), que muestra el control «ブラウザ試し読み» (muestra en navegador).
+- **Estado de acceso:** no inspeccionado. El servicio de automatización de navegador devolvió `insufficient_credits` antes de iniciar la navegación. No se abrió el visor, así que su comportamiento y el contenido de la muestra siguen desconocidos.
+- **Clasificación:** ruta candidata, no una fuente narrativa verificada. No se crea un ID DMR-045-SRC nuevo, no se añaden claims ni localizadores y no se deduce que el lector falle o carezca de texto.
+- **Regla anti-repetición:** reintentar únicamente cuando el navegador pueda ejecutar la visita real; entretanto, no repetir los visores ya registrados que solo expusieron interfaz, metadatos o errores de carga.
+- **Estado global:** DMR-045 continúa IN_PROGRESS; Alfia, Zald, Meteria, Erebus y Rudra conservan sus cinco cotejos narrativos primarios pendientes.
