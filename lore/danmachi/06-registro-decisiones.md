@@ -224,3 +224,13 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Decisión:** pasar a personajes distintos cuando la fuente ya se agotó. Registrar la falta de un dato como «no informado en el contenido consultado» y no como prueba de inexistencia en canon.
 - **Aplicación:** DMR-054 documenta a Asfi Al Andromeda y Lulune Louie bajo CONT-SECONDARY. Asfi: nivel, Kalov Argol, skills y equipo que la wiki enumera; Lulune: nivel reportado, combate acrobático, sentidos y cartografía, con magia/skills nombradas no recuperadas en la página consultada.
 - **Límites:** no se reescriben personalidades ni historia, no se crean claims/eventos/relaciones/aliases, y DMR-045 mantiene sus cinco cotejos primarios.
+
+### DEC-DM-025 — Cohorte secundaria DMR-055 con protocolo anti-repetición
+- **Fecha:** 2026-10-28.
+- **Estado:** integrada y validada en main.
+- **Integración:** [PR #182](https://github.com/jonhararagi/wordwaifu/pull/182), squash merge; SHA exacto de main `25b019598e74c5f9756aa541b8e9f5f1fe7c633e`.
+- **CI de PR:** [Validate #40744157365](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157365) y [DanMachi Lore and Retrieval Integrity #40744157330](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157330), ambos success.
+- **CI post-merge sobre el SHA exacto:** [Validate #40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y [DanMachi Lore and Retrieval Integrity #40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos success.
+- **Decisión operativa:** después de una pasada secundaria estructurada sin datos nuevos, no repetir la misma URL ni reformular la personalidad. Avanzar a otra identidad; marcar como «no informado en el contenido consultado» el campo ausente, sin inventarlo ni concluir que está universalmente ausente del canon.
+- **Aplicación:** DMR-055 documenta Tsubaki Collbrande y Welf Crozzo. Las fuentes permanecen secundarias y no se crean claims narrativos, relaciones o eventos. La actualización de fichas interactivas queda separada y requiere pruebas propias.
+- **Prioridad:** los cinco cotejos narrativos primarios de DMR-045 siguen abiertos; las muestras ya agotadas no se repiten sin evidencia nueva.
