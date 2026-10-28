@@ -571,3 +571,10 @@
 - **Aplicación:** una pasada estructurada por URL y seguimiento solo con fuente nueva, cambio material, contradicción relevante o texto primario accesible. Los datos comunitarios siguen en CONT-SECONDARY.
 - **Primera aplicación de esta instrucción en esta tanda:** DMR-055, Tsubaki Collbrande y Welf Crozzo; sin reescritura de personalidad.
 
+### Resultado de ejecución — CONV-DM-2026-10-28-001 / DMR-055
+- **Estado:** integrado y validado documentalmente.
+- **PR #182:** https://github.com/jonhararagi/wordwaifu/pull/182
+- **SHA de main:** `25b019598e74c5f9756aa541b8e9f5f1fe7c633e`.
+- **CI de PR:** Validate [#40744157365](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157365) y Lore/Integrity [#40744157330](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157330), ambos success.
+- **CI post-merge sobre ese SHA:** Validate [#40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y Lore/Integrity [#40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos success.
+- **Alcance real:** Tsubaki Collbrande y Welf Crozzo, wikis comunitarias bajo CONT-SECONDARY; no hubo actualización de personalidades ni de fichas interactivas. DMR-045 mantiene sus cinco cotejos primarios abiertos.
