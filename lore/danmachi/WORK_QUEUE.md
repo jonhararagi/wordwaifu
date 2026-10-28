@@ -23,6 +23,13 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - **Estado:** PR [#115](https://github.com/jonhararagi/wordwaifu/pull/115) integrada en `main` por `3f9fb9536482f381f1cdd9b533ae75d34508f749`; CI de la PR y post-merge aprobada. El alcance sigue limitado a Alfia y Zald con alineamiento provisional de baja confianza; ampliar el censo requiere una revisión individual.
 
 
+## Próximo lote accionable para probar la memoria de lore · DMR-056
+
+- [x] Cambiar el siguiente lote de ejecución a una cohorte distinta porque las rutas públicas ya registradas de DMR-045 no proporcionaron texto narrativo legible; **DMR-045 no se cierra** y sus cinco cotejos continúan abiertos hasta una fuente primaria nueva.
+- [ ] Integrar y validar DMR-056: Liliruca Arde, Mikoto Yamato, Haruhime Sanjouno y el expediente nuevo de Nina Tulle, limitado a capacidades secundarias.
+- [ ] Probar recuperación por continuidad, lectura de límites de habilidades, snapshots temporales de Haruhime y detección de la contradicción de afiliación de Nina.
+- [ ] Si la prueba pasa, seleccionar otra cohorte distinta; no repetir las mismas wikis ni reabrir DMR-045 sin evidencia nueva.
+
 ## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
 
 **Estado:** IN_PROGRESS. El barrido secundario está registrado y se han probado rutas de consulta licenciadas, pero ninguna muestra consultada expuso páginas narrativas legibles. Los cinco expedientes continúan abiertos para verificación primaria.
