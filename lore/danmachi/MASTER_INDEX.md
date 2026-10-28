@@ -352,3 +352,8 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ## DMR-045 · Continuidad del relato autoral ya registrado
 - [Informe DMR-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) enlaza el relato DMR-029-SRC-016 con las fichas editoriales existentes DMR-045-SRC-002 y DMR-045-SRC-005.
 - El relato y el cuadernillo especial quedan explícitamente en CONT-AU; el cruce no cierra los cinco cotejos narrativos primarios ni crea claims de la novela principal.
+
+
+## DMR-045 · Ruta de consulta BookLive para DanMachi vol. 20
+- Informe: DMR-045-SRC-052 en el registro maestro de fuentes y el informe DMR-045.
+- La ficha pública ofrece controles de muestra en navegador/aplicación; no se inspeccionó el lector ni páginas narrativas. Mantener el estado metadata-only.
