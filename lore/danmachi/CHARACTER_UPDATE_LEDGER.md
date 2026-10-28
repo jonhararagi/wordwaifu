@@ -299,3 +299,24 @@ Esta es una cohorte distinta, abierta porque las fuentes primarias de DMR-045 si
 - **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [Lore/Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main`:** [Validate #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [Lore/Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
 - **Límite de evidencia:** datos comunitarios únicamente; no se reescribieron personalidades ni se crearon claims, eventos, relaciones o aliases. Los campos que la página no enumera permanecen como «no informados en el contenido consultado».
+
+## Pasada secundaria 2026-10-28 — herreros de Hephaistos (DMR-055)
+
+Fuentes consultadas:
+- [Tsubaki Collbrande — DanMachi Wiki](https://danmachi.fandom.com/wiki/Tsubaki_Collbrande), inglés.
+- [Welf Crozzo — DanMachi Wiki](https://danmachi.fandom.com/es/wiki/Welf_Crozzo), español.
+
+### CHAR-TSUBAKI-COLLBRANDE — Tsubaki Collbrande
+- **Estado:** PARTIAL_NOT_REPORTED para magia/skills personales; capacidades secundarias documentadas.
+- **Hallazgos:** nivel 5 reportado; Hephaistos Familia; Herrero y Resistencia Anormal; maestría en forja y manejo versátil de armas; Benishigure aparece como naginata propia.
+- **No informado en las secciones consultadas:** lista nominal de magia/skills, costes numéricos, estadísticas completas y localizadores narrativos primarios.
+- **Cierre:** no repetir esta URL para buscar los campos ausentes. Reabrir solo ante actualización material o fuente primaria accesible.
+
+### CHAR-WELF-CROZZO — Welf Crozzo
+- **Estado:** SECONDARY_PASS_COMPLETE para la pasada acotada de capacidades; costes exactos y cotejo primario pendientes.
+- **Hallazgos:** nivel 2 reportado en la ficha consultada; Will-o-Wisp; Crozzo Blood; Veritas Burn; Herrero; gran espada, Shikou Kazuki y equipo nombrado en DMR-055. Will-o-Wisp tiene límites descritos por la fuente y no se modela como cancelación universal; las espadas que dependen de la magia del usuario pueden agotar al portador.
+- **No informado de forma cotejable:** costes numéricos completos, preparación exacta en todas las condiciones y localizadores primarios para cada mecánica.
+- **Cierre:** no repetir la misma página para los campos ausentes ni reformular la personalidad.
+
+**Regla DMR-055:** todos estos hallazgos son CONT-SECONDARY; no se crean claims narrativos, relaciones, eventos o alias. «No informado» no significa «inexistente en canon».
+
