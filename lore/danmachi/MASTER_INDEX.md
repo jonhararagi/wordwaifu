@@ -348,3 +348,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Integrado en `main` por [PR #174](https://github.com/jonhararagi/wordwaifu/pull/174), SHA `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
 - **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
+
+## DMR-045 · Continuidad del relato autoral ya registrado
+- [Informe DMR-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md) enlaza el relato DMR-029-SRC-016 con las fichas editoriales existentes DMR-045-SRC-002 y DMR-045-SRC-005.
+- El relato y el cuadernillo especial quedan explícitamente en CONT-AU; el cruce no cierra los cinco cotejos narrativos primarios ni crea claims de la novela principal.
