@@ -512,11 +512,13 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 ## DANMACHI-RESEARCH-056 · Hestia Familia: apoyo, detección y curación
 
 - Fecha: 2026-10-28.
-- Estado: datos y pruebas añadidos a la rama; CI e integración pendientes.
+- Estado: integrado en `main` mediante [PR #186](https://github.com/jonhararagi/wordwaifu/pull/186), merge SHA `a51f3a8a92ceb74e12be0d9dad1e4c5ad4a7a470` (head probado `4d299431611382a96ea0881bca1c0c722eb12e73`).
 - Fuentes examinadas: seis rutas de wiki comunitaria (Liliruca ES, Mikoto, Haruhime, Nina, Hestia Familia EN/ES) mediante extractos públicos indexados.
 - Registros creados: `CHAR-NINA-TULLE` y `DOC-DMR-056`; cuatro notas `CONT-SECONDARY` recuperables desde el archivo interactivo.
 - Registros actualizados: catálogo, índice, directorio de fuentes, fichas Markdown de Liliruca/Mikoto/Haruhime, bitácora, WORK_QUEUE y MASTER_INDEX.
 - Alias añadidos: ninguno. Relaciones/eventos/claims nuevos: ninguno; el grafo de relaciones se mantiene intacto.
 - Conflicto preservado: Nina aparece como pasante sin falna en el texto descriptivo y como activa en la tabla de miembros.
 - Límites: no se verificaron capítulos de novela ni se modificó CONT-ANIME; costes de Mind, duraciones generales y efectos de Fairy Cradle/Alf Minister no recuperados quedan sin completar.
-- Próxima tanda: comprobar búsqueda/catálogo/UI y seleccionar otra cohorte sin repetir estas páginas. DMR-045 sigue abierto a la espera de nueva evidencia primaria accesible.
+- CI pre-merge: [Validate WordWaifu #40773212555](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y [DanMachi Lore and Retrieval Integrity #40773212768](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) finalizaron en success.
+- No pude confirmar CI post-merge: el conector de esta sesión no devolvió runs para el merge SHA; no se declara esa validación.
+- Próxima tanda: seleccionar otra cohorte sin repetir estas páginas. DMR-045 sigue abierto a la espera de nueva evidencia primaria accesible.
