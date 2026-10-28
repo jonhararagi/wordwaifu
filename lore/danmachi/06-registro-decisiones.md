@@ -195,3 +195,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - SHA de `main`: `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
 - **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
+
+### DEC-DM-022 — Reutilizar la fuente alternativa ya registrada sin reabrir canon
+- **Fecha:** 2026-10-27.
+- **Estado:** implementado en rama; validación e integración pendientes.
+- **Decisión:** no volver a rastrear ni duplicar el relato alternativo «それは遥か彼方の静穏の夢». Su texto ya está documentado como DMR-029-SRC-016; el catálogo editorial que confirma la edición especial está en DMR-045-SRC-002 y DMR-045-SRC-005.
+- **Alcance permitido:** utilizar detalles solo dentro de CONT-AU. La ficha editorial acredita la existencia y la presentación alternativa del cuadernillo, no las escenas específicas de la novela principal.
+- **Pendiente preservado:** Alfia, Zald, Meteria, Erebus y Rudra continúan con los cotejos primarios de DMR-045 abiertos; no se añadieron claims ni relaciones a CONT-MAIN-LN.
