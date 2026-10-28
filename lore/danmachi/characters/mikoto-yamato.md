@@ -39,3 +39,11 @@ El perfil oficial le atribuye la magia gravitatoria Futsunomitama, técnicas de 
 Portal oficial de personajes de DanMachi V: https://danmachi.com/danmachi5/character/
 
 Afirmaciones de respaldo: `DMR-006-CLM-016` a `DMR-006-CLM-018` en `research/inbox/BATCH-DM-006-oficial-roster-y-retratos.md`. Falta cotejar localizadores del texto íntegro de las novelas.
+
+## Capacidades secundarias documentadas — DMR-056 (`CONT-SECONDARY`)
+
+Esta capa no sustituye el perfil oficial de adaptación. La wiki reporta nivel 2 y la magia gravitatoria `Futsunomitama`, cuyo campo se describe con unos 10 metros de radio. Las hazañas citadas contra Black Goliath y Gulliver Brothers son ejemplos contextualizados, no una regla de victoria universal. Las skills `Yatanokurogarasu` y `Yatanoshirogarasu` rastrean, respectivamente, monstruos previamente encontrados y miembros de su misma Familia dentro de rangos establecidos. Se enumeran Abnormal Resistance y las armas Kotetsu, Chizan, Shunsan y Shakuya.
+
+El extracto también advierte que el canto concurrente al luchar o moverse presenta riesgo de fallo o pérdida de control. **No informado:** coste de Mind, duración general y radios exactos de las skills. No reabrir las mismas páginas sin fuente nueva o pasaje primario legible.
+
+Fuente secundaria: [DanMachi Wiki — Yamato Mikoto](https://danmachi.fandom.com/wiki/Yamato_Mikoto). Registro DMR-056-SRC-002.
