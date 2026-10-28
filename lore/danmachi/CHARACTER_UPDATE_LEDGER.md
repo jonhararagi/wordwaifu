@@ -361,3 +361,12 @@ Fuentes consultadas:
 - **Límites/no informado:** efectos individuales de las dos skills no están descritos en el extracto; no crear alias, aristas ni hechos canónicos a partir de esta pasada.
 - **Reabrir solo si:** aparece fuente oficial nueva, página materialmente actualizada o pasaje primario legible.
 
+
+
+## Verificación de integración — DANMACHI-RESEARCH-056
+
+- **PR:** [#186](https://github.com/jonhararagi/wordwaifu/pull/186), fusionada a `main`.
+- **Merge SHA:** `a51f3a8a92ceb74e12be0d9dad1e4c5ad4a7a470`; head probado antes del merge: `4d299431611382a96ea0881bca1c0c722eb12e73`.
+- **CI pre-merge:** [Validate WordWaifu #40773212555](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y [DanMachi Lore and Retrieval Integrity #40773212768](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) concluyeron en success. El head probado validó los campos sustanciales de Nina, las fuentes y el conflicto de membresía, catálogo, bitácora, notas de archivo y smoke tests de navegador.
+- **Límite de evidencia CI:** la vista de workflow disponible en el conector solo devuelve ejecuciones asociadas a pull requests; no devolvió runs para el merge SHA. Por ello no se declara verificado el CI de push/post-merge.
+- **Continuidad:** todos los datos DMR-056 permanecen bajo `CONT-SECONDARY`; DMR-045 conserva abiertos los cinco cotejos narrativos primarios. No se añadieron relaciones, eventos, claims ni alias.

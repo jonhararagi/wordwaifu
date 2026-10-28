@@ -238,7 +238,7 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 
 ### DEC-DM-026 — Nueva cohorte Hestia para probar recuperación y contradicciones
 - **Fecha:** 2026-10-28.
-- **Estado:** en validación de PR; integración pendiente.
+- **Estado:** integrada en `main` con [PR #186](https://github.com/jonhararagi/wordwaifu/pull/186), merge SHA `a51f3a8a92ceb74e12be0d9dad1e4c5ad4a7a470`. CI del head `4d299431611382a96ea0881bca1c0c722eb12e73`: [Validate WordWaifu](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y [Lore Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) pasaron antes de fusionar. La verificación post-merge no fue accesible mediante el conector.
 - **Decisión operativa:** cuando los lectores primarios ya probados no ofrecen texto nuevo, no repetir las mismas URL sin un desencadenante. Seguir completando personajes de otra cohorte con fuentes secundarias claramente delimitadas y pruebas de recuperación.
 - **Aplicación:** DMR-056 reúne Liliruca Arde, Mikoto Yamato, Haruhime Sanjouno y crea la ficha CHAR-NINA-TULLE; se añaden notas `CONT-SECONDARY`, seis entradas al directorio de fuentes y regresiones automatizadas.
 - **Contradicción preservada:** Nina figura como pasante sin falna en el texto descriptivo, pero como activa en tablas de miembros. Su afiliación formal queda sin resolver.

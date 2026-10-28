@@ -26,9 +26,9 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 ## Próximo lote accionable para probar la memoria de lore · DMR-056
 
 - [x] Cambiar el siguiente lote de ejecución a una cohorte distinta porque las rutas públicas ya registradas de DMR-045 no proporcionaron texto narrativo legible; **DMR-045 no se cierra** y sus cinco cotejos continúan abiertos hasta una fuente primaria nueva.
-- [ ] Integrar y validar DMR-056: Liliruca Arde, Mikoto Yamato, Haruhime Sanjouno y el expediente nuevo de Nina Tulle, limitado a capacidades secundarias.
-- [ ] Probar recuperación por continuidad, lectura de límites de habilidades, snapshots temporales de Haruhime y detección de la contradicción de afiliación de Nina.
-- [ ] Si la prueba pasa, seleccionar otra cohorte distinta; no repetir las mismas wikis ni reabrir DMR-045 sin evidencia nueva.
+- [x] Integrar DMR-056 en `main` mediante PR #186: Liliruca Arde, Mikoto Yamato, Haruhime Sanjouno y el expediente nuevo de Nina Tulle, limitado a capacidades secundarias.
+- [x] Probar recuperación por continuidad, lectura de límites de habilidades, snapshots temporales de Haruhime y detección de la contradicción de afiliación de Nina en CI de PR #186 (ambos workflows en success).
+- [ ] Siguiente: seleccionar otra cohorte distinta; no repetir las mismas wikis ni reabrir DMR-045 sin evidencia nueva.
 
 ## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
 

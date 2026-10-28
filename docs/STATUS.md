@@ -2,11 +2,14 @@
 
 ## Estado operativo y verificación — 2026-10-28
 
-### DMR-056 — cohorte secundaria para comprobar recuperación de lore (en validación)
+### DMR-056 — cohorte secundaria para comprobar recuperación de lore (integrada)
 
 - Alcance: capacidades de Liliruca Arde, Mikoto Yamato y Haruhime; ficha nueva de Nina Tulle; seis rutas comunitarias registradas.
 - Los datos `CONT-SECONDARY` quedan separados de los perfiles de adaptación. Nina conserva el conflicto de sus fuentes: el texto la llama pasante sin falna, mientras la tabla la marca activa.
-- Pruebas añadidas para directorio de fuentes y cuatro notas de capacidades. CI e integración se registrarán solo tras verificar cada SHA; DMR-045 permanece abierto y en espera de evidencia primaria nueva.
+- Alcance integrado vía [PR #186](https://github.com/jonhararagi/wordwaifu/pull/186); merge SHA `a51f3a8a92ceb74e12be0d9dad1e4c5ad4a7a470`.
+- **CI de la PR:** [Validate WordWaifu #40773212555](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y [DanMachi Lore and Retrieval Integrity #40773212768](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) terminaron en success para el head `4d299431611382a96ea0881bca1c0c722eb12e73` antes de integrar.
+- **Post-merge:** la integración de `main` está confirmada, pero el conector de GitHub de esta sesión no devolvió ejecuciones pull-request para el merge SHA; por tanto, no se etiqueta el CI de push/post-merge como validado aquí.
+- DMR-045 permanece abierto y en espera de evidencia primaria nueva.
 
 
 ### DMR-045 — nueva ruta de muestra japonesa localizada en Sony Reader Store (2026-10-28)
