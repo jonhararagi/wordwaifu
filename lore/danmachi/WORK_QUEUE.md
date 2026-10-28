@@ -26,6 +26,9 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 ## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
 
 **Estado:** IN_PROGRESS. El barrido secundario está registrado y se han probado rutas de consulta licenciadas, pero ninguna muestra consultada expuso páginas narrativas legibles. Los cinco expedientes continúan abiertos para verificación primaria.
+- [x] Localizar una ruta legal distinta de muestra del volumen 3 en Sony Reader Store: la ficha japonesa presenta una verificación de edad previa a portada/muestra/compra. Registrar DMR-045-SRC-054 como metadata_checked_only, sin claims ni localizadores; la muestra no se abrió.
+- [ ] Si se retoma la ruta de Sony Reader Store, continuar solo mediante el flujo normal de verificación de edad y comprobar si aparecen páginas narrativas; no registrar resultado de muestra hasta verlas.
+
 
 - [x] Probar las rutas públicas seleccionadas PT10/PT11 de Google Books para la edición inglesa licenciada de Astrea Record vol. 3. No se obtuvo narración visible; DMR-045-SRC-053 queda metadata_checked_only, sin claims ni localizador narrativo.
 - [x] Identificar la ficha BookLive de la edición recopilatoria japonesa de Astrea Record 1–3 como ruta candidata distinta. La inspección no pudo iniciarse porque el servicio de navegador devolvió insufficient_credits antes de navegar; el estado del lector sigue desconocido.

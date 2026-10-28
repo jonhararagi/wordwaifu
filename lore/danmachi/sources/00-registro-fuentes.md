@@ -4101,3 +4101,26 @@ verification_status: stub
 - rights_note: Registrar solo metadatos y resumen breve del resultado de acceso; no copiar texto extenso.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+## DMR-045-SRC-054 · Sony Reader Store — Astrea Record, volumen 3 (edición japonesa licenciada)
+
+- source_id: DMR-045-SRC-054
+- title: アストレア・レコード３ 正邪決戦 ダンジョンに出会いを求めるのは間違っているだろうか 英雄譚
+- creator_or_publisher: Fujino Omori / GA文庫・SBクリエイティブ; distribuidor Sony Reader Store
+- source_type: LICENSED_RETAILER_SAMPLE
+- series: DanMachi Heroic Tale: Astrea Record
+- volume_or_edition: Volumen 3; ISBN 978-4-8156-1019-7; 488 páginas indicadas en la ficha
+- language: Japonés
+- publication_date: 2022-12-14 (fecha de distribución indicada en Reader Store)
+- official_url: https://ebookstore.sony.jp/title/01237250/id/BT000123725000300301/
+- accessed_at: 2026-10-28
+- locator_type: product_page_age_gate
+- locator: ficha del producto; bloque 年齢認証 y aviso de que la portada, la muestra y la compra requieren verificación de edad
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: ficha de un distribuidor licenciado; solo metadatos. No se confirmó la edad ni abrió la muestra, así que no se obtuvo texto narrativo ni localizador. La pantalla de verificación no demuestra que la muestra falle o sea inaccesible tras completarla.
+- conflicting_sources: []
+- rights_note: no almacenar texto extenso; documentar solo metadatos y límites de acceso.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
