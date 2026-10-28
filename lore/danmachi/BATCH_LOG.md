@@ -475,3 +475,10 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
 - **Próxima acción:** volver a la prioridad DMR-045 solo ante un nuevo localizador primario legible; no repetir las mismas muestras sin un disparador material.
+
+## DMR-045 · Cruce autoral ya registrado (2026-10-27)
+
+- Se reutiliza DMR-029-SRC-016 para el texto autoral y DMR-045-SRC-002/SRC-005 para la verificación editorial de su edición especial; no se crea otra entrada para la misma nota ni se repiten muestras que no devolvieron texto legible.
+- El texto autoral se mantiene en CONT-AU; el cuadernillo contiene una versión revisada de un escenario descrito como “algo que podría haber sucedido”.
+- Se añade una regresión que valida la separación de continuidad y la disponibilidad de la fuente en el directorio interactivo.
+- **Estado del subtrabajo:** implementado en rama; CI e integración pendientes. DMR-045 sigue abierta para sus cinco cotejos primarios.
