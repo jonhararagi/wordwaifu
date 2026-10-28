@@ -291,3 +291,11 @@ Esta es una cohorte distinta, abierta porque las fuentes primarias de DMR-045 si
 - **Cierre:** no interpretar la ausencia de una lista como inexistencia en canon. No volver a consultar la misma página para buscar nombres que no presenta; reabrir ante una actualización material o una fuente nueva.
 
 **Regla de toda la cohorte DMR-054:** se amplían solo capacidades con respaldo comunitario y se mantienen dentro de `CONT-SECONDARY`. No se modifica personalidad, historia, relaciones, eventos ni claims narrativos; no se crea una lista ficticia para completar campos vacíos.
+
+
+## Cierre de integración — cohorte Hermes DMR-054 (2026-10-28)
+- **Cohorte:** Asfi Al Andromeda y Lulune Louie.
+- **Integración:** [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179), SHA de `main` `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
+- **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [Lore/Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
+- **CI post-merge sobre el SHA exacto de `main`:** [Validate #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [Lore/Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
+- **Límite de evidencia:** datos comunitarios únicamente; no se reescribieron personalidades ni se crearon claims, eventos, relaciones o aliases. Los campos que la página no enumera permanecen como «no informados en el contenido consultado».
