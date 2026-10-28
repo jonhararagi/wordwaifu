@@ -562,3 +562,12 @@
 - **Hallazgos acotados:** Asfi tiene en la wiki una lista concreta de nivel, magia, skills y objetos; Lulune tiene nivel reportado y descripciones de combate/sentidos/cartografía, pero el contenido recuperado no enumera magia o skills con nombre.
 - **Implementación:** DMR-054, ampliación de la bitácora, fuentes, notas interactivas, enlaces desde las dos fichas y regresión específica.
 - **Límites:** no se reescriben personalidades, historia, relaciones, eventos o claims; no se elevan datos secundarios a novela principal. DMR-045 conserva sus cinco cotejos primarios pendientes hasta un pasaje nuevo legible.
+
+### CONV-DM-2026-10-28-001 — Bitácora anti-repetición y cambio de cohorte
+- **Fecha:** 2026-10-28.
+- **Estado:** ACCEPTED.
+- **Instrucción:** tras varios intentos sobre los mismos personajes, avanzar a otros personajes en vez de repetir búsquedas genéricas o reformular personalidades. Consultar la bitácora antes de cada ficha.
+- **Regla de evidencia:** cuando una wiki o juego no informa un nivel, poder, magia, skill, arma o coste, registrar «no informado en el contenido consultado». No inventar el campo ni afirmar que no existe en todo el canon sin evidencia explícita.
+- **Aplicación:** una pasada estructurada por URL y seguimiento solo con fuente nueva, cambio material, contradicción relevante o texto primario accesible. Los datos comunitarios siguen en CONT-SECONDARY.
+- **Primera aplicación de esta instrucción en esta tanda:** DMR-055, Tsubaki Collbrande y Welf Crozzo; sin reescritura de personalidad.
+

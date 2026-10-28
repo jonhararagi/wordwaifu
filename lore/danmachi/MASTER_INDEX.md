@@ -372,3 +372,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Integración:** [PR #179](https://github.com/jonhararagi/wordwaifu/pull/179), squash merge; SHA exacto de `main`: `cf1aef26f0f2f1d3b4ffe4513c0ff80f65764ef6`.
 - **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate WordWaifu #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [DanMachi Lore and Retrieval Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [DanMachi Lore and Retrieval Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
+
+## DANMACHI-RESEARCH-055 · Herreros de Hephaistos
+- [Informe DMR-055](research/inbox/DANMACHI-RESEARCH-055-hephaestus-smiths-secondary-capabilities.md) — pasada secundaria de capacidades de Tsubaki Collbrande y Welf Crozzo; magia/skills/equipo según páginas comunitarias, con campos ausentes marcados como no informados. Sin reescritura de personalidad ni claims narrativos. Fuentes EN/ES y continuidad CONT-SECONDARY.
+

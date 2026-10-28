@@ -4034,3 +4034,48 @@ verification_status: stub
 - rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
 - verified_by: DANMACHI-RESEARCH-054
 - verification_status: secondary_checked
+
+## DMR-055-SRC-001 · DanMachi Wiki — Tsubaki Collbrande
+
+- source_id: DMR-055-SRC-001
+- title: Tsubaki Collbrande
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; edición no identificada
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Tsubaki_Collbrande
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Professional Status; Abilities; Development Abilities; Equipment
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para nivel 5 reportado, habilidades de desarrollo, destreza de combate/forja y Benishigure. En las secciones consultadas no se recuperó una lista nominal de magia o skills personales ni costes numéricos; la omisión no demuestra inexistencia en canon.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-055
+- verification_status: secondary_checked
+
+## DMR-055-SRC-002 · DanMachi Wiki — Welf Crozzo
+
+- source_id: DMR-055-SRC-002
+- title: Welf Crozzo
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: COMMUNITY_WIKI
+- series: DanMachi
+- volume_or_edition: Perfil comunitario; edición no identificada
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Welf_Crozzo
+- accessed_at: 2026-10-28
+- locator_type: wiki_profile_sections
+- locator: Situación profesional; Habilidad, Magia y Equipo; Habilidades; Magia; Habilidades de Desarrollo; Equipo
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para el nivel 2 reportado en el perfil consultado, Will-o-Wisp, Crozzo Blood, Veritas Burn, Herrero, armas y equipo. Los costes numéricos completos y localizadores narrativos primarios no se cotejaron en esta pasada.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis breve y URL; no copiar pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-055
+- verification_status: secondary_checked
+

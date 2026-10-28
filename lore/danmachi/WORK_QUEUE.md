@@ -969,3 +969,13 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **CI de PR sobre `809ad6ccd67e0e90c01d7c842438b1f296ae2ad5`:** [Validate WordWaifu #40727748042](https://github.com/jonhararagi/wordwaifu/actions/runs/40727748042) y [DanMachi Lore and Retrieval Integrity #40727747907](https://github.com/jonhararagi/wordwaifu/actions/runs/40727747907), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main`:** [Validate WordWaifu #40728030060](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030060) y [DanMachi Lore and Retrieval Integrity #40728030297](https://github.com/jonhararagi/wordwaifu/actions/runs/40728030297), ambos `success`.
 - **Límite:** información comunitaria secundaria; no se crean claims, eventos, relaciones o aliases. DMR-045 conserva los cinco cotejos primarios abiertos.
+
+## DMR-055 — Herreros de Hephaistos: Tsubaki y Welf (2026-10-28)
+
+- [x] Elegir una cohorte nueva tras DMR-052, DMR-053 y DMR-054, sin repetir las mismas búsquedas ni reescribir personalidades.
+- [x] Registrar DMR-055-SRC-001 (Tsubaki Collbrande, wiki EN) y DMR-055-SRC-002 (Welf Crozzo, wiki ES) como fuentes secundarias.
+- [x] Documentar capacidades, magia/skills/equipo reportados y campos no informados en un informe dedicado.
+- [x] Añadir resultados a la bitácora anti-repetición.
+- [ ] Si se incorporan los hallazgos a las fichas interactivas, mantenerlos exclusivamente bajo CONT-SECONDARY y añadir regresión de interfaz antes de integrar.
+- **Límite:** pasada documental secundaria; no se declara validación primaria de novelas. Los campos omitidos se cierran para estas URL y solo se reabren con fuente nueva, actualización material o pasaje primario legible.
+
