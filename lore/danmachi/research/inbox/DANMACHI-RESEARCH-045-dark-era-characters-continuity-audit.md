@@ -1002,3 +1002,9 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **Uso permitido:** nueva ruta de consulta licenciada y metadatos, con estado `metadata_checked_only`; no respalda afirmaciones sobre Alfia, Zald, Meteria, Erebus o Rudra, ni presencia/ausencia de estos personajes en el volumen.
 - **No repetir:** esta ruta es distinta de las rutas BookWalker, Kobo, Google Books y BinB ya registradas. No repetir aquellas consultas idénticas que solo devolvieron pantallas de carga. Solo reabrir SRC-052 si el lector BookLive se puede abrir por su control normal y expone texto narrativo legible.
 - **Estado de prioridad:** DMR-045 sigue `IN_PROGRESS`; los cinco cotejos primarios continúan pendientes. No se modifica ningún claim o relación de canon principal por esta ruta de metadatos.
+
+## Integración de la ruta BookLive (2026-10-27)
+- [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177) integrado en main con SHA a9ab02584f857a9c3fabbba59b40e8799e7aaead.
+- **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
+- **CI post-merge sobre el SHA exacto de main a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), ambos success.
+- La integración incorpora una ruta metadata-only y una regresión automática; no eleva la ficha de distribuidor a evidencia narrativa.
