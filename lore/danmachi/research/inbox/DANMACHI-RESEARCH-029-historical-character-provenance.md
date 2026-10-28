@@ -339,3 +339,11 @@ Estas aristas no sustituyen ni promueven las relaciones históricas de fuente se
 - `verification_status`: secondary_checked
 - `spoiler_level`: major
 - `confidence_note`: Costes numéricos, condiciones y consecuencias están recogidos como resumen secundario. No presentarlos como reglas confirmadas ni como proporciones universales.
+
+
+
+## Cruce editorial de DMR-029-CLM-012 (2026-10-27)
+- La fuente narrativa autoral permanece DMR-029-SRC-016, con scope CONT-AU y estado source_checked_excerpt_only.
+- Las páginas editoriales existentes DMR-045-SRC-002 y DMR-045-SRC-005 confirman que la edición especial incluye una versión ampliada/revisada del relato. Esa confirmación es de publicación, no de hechos específicos en la novela principal.
+- No se añaden afirmaciones sobre la identidad del padre, el abuelo no nombrado ni la identidad del dios visitante; el texto no los identifica explícitamente en el alcance consultado.
+- No cambiar el claim de continuidad alternativa ni importarlo al timeline principal.
