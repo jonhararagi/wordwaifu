@@ -256,7 +256,7 @@
 
 
 ## DEC-038 — Completar una cohorte nueva para validar recuperación de lore DanMachi
-**Estado:** en validación de PR; no se declara integrada hasta verificar CI y el SHA de `main`.
+**Estado:** integrada mediante [PR #186](https://github.com/jonhararagi/wordwaifu/pull/186) en `main`, merge SHA `a51f3a8a92ceb74e12be0d9dad1e4c5ad4a7a470`; ambos workflows de validación pasaron en el head `4d299431611382a96ea0881bca1c0c722eb12e73` antes del merge ([Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555), [Lore Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768)). El estado de ejecución post-merge no está disponible en la respuesta del conector y no se declara verificado.
 **Decisión:** ante la falta de texto primario legible en las rutas ya agotadas de DMR-045, avanzar con una cohorte distinta que permita probar la estructura de personajes, fuentes, continuidad, límites de poderes y contradicciones de roster.
 **Aplicación:** DMR-056 agrega datos secundarios de Liliruca Arde, Mikoto Yamato y Haruhime, y una ficha de Nina Tulle que no existía en el catálogo. Las capacidades quedan expuestas en `CONT-SECONDARY` y bajo bitácora anti-repetición.
 **Límite:** DMR-045 sigue abierto. No se crean claims, eventos, relaciones ni aliases; Nina permanece en conflicto de afiliación y no se convierte en miembro confirmado por inferencia.
