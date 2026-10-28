@@ -239,7 +239,7 @@
 **Estado:** implementado e integrado en main mediante [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177); CI de PR aprobada.
 - **SHA de main:** a9ab02584f857a9c3fabbba59b40e8799e7aaead.
 - **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
-- **CI post-merge sobre a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), en ejecución al registrar este estado.
+- **CI post-merge sobre el SHA exacto de main a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), ambos success.
 **Decisión:** una ficha de distribuidor/licencia que anuncia un control de muestra se puede registrar como ruta metadata-only. No debe describirse como texto abierto, ni como lector fallido, hasta que el control normal se haya probado y el resultado sea observable.
 **Aplicación:** DMR-045-SRC-052 registra la ficha de BookLive para DanMachi vol. 20 y sus controles públicos de muestra. El contenido narrativo no se inspeccionó.
 **Límite:** no se crean claims ni eventos, no se da por confirmada la presencia o ausencia de personajes, y DMR-045 sigue abierta para los cinco cotejos primarios.
