@@ -1006,5 +1006,5 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 ## Integración de la ruta BookLive (2026-10-27)
 - [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177) integrado en main con SHA a9ab02584f857a9c3fabbba59b40e8799e7aaead.
 - **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
-- **CI post-merge sobre a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), en ejecución al registrar este estado.
+- **CI post-merge sobre el SHA exacto de main a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), ambos success.
 - La integración incorpora una ruta metadata-only y una regresión automática; no eleva la ficha de distribuidor a evidencia narrativa.
