@@ -226,3 +226,10 @@
 - SHA de `main`: `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
 - **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
+
+## DEC-035 — No repetir ni promocionar una fuente autoral de continuidad alternativa
+**Estado:** implementado en rama de investigación; CI e integración pendientes.
+**Decisión:** antes de registrar una fuente supuestamente nueva, comprobar el registro existente. Si el relato ya se encuentra archivado, enlazar la fuente editorial que confirma su publicación en vez de duplicar IDs o recrear la investigación.
+**Aplicación:** DMR-029-SRC-016 identifica «それは遥か彼方の静穏の夢» como texto de autor en CONT-AU; DMR-045-SRC-002 y DMR-045-SRC-005 confirman su inclusión revisada en el cuadernillo especial de Astrea Record 3.
+**Límite:** el cuadernillo es descrito como escenario que podría haber ocurrido. No se transfieren esos sucesos a CONT-MAIN-LN / CONT-AR ni se cierran los cinco cotejos primarios de DMR-045.
+**Prueba:** test_danmachi_dmr045_public_sweep.cjs valida el tipo de fuente, la continuidad alternativa, las entradas ya existentes y que el relato siga siendo descubrible sin crear claims de canon.
