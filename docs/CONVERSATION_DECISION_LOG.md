@@ -528,3 +528,11 @@
 - **SHA de `main`:** `28ae6f34859bc0a59beaf7a711bfa54504265ffd`.
 - **CI de PR sobre `37f50a3f0608cb00b3c355e75c008031e70bbe70`:** [Validate WordWaifu #40602468962](https://github.com/jonhararagi/wordwaifu/actions/runs/40602468962) y [DanMachi Lore and Retrieval Integrity #40602469069](https://github.com/jonhararagi/wordwaifu/actions/runs/40602469069), ambos `success`.
 - **CI post-merge sobre el SHA exacto de `main` `28ae6f34859bc0a59beaf7a711bfa54504265ffd`:** [Validate WordWaifu #40602644529](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644529) y [DanMachi Lore and Retrieval Integrity #40602644563](https://github.com/jonhararagi/wordwaifu/actions/runs/40602644563), ambos `success`.
+
+### CONV-DM-2026-10-27-007 — Cruce de una fuente autoral alternativa ya registrada
+- **Fecha:** 2026-10-27.
+- **Estado:** implementado en rama; CI e integración pendientes.
+- **Resultado:** el relato de Fujino Omori «それは遥か彼方の静穏の夢» ya estaba registrado como DMR-029-SRC-016 y era visible en el directorio de fuentes. La edición especial de Astrea Record 3 ya estaba registrada en DMR-045-SRC-002 y DMR-045-SRC-005.
+- **Cambio real:** se enlaza explícitamente esa evidencia editorial con el expediente DMR-045 y se agrega una regresión para evitar duplicar la fuente o trasladar su escenario hipotético al canon principal.
+- **Continuidad:** el relato es CONT-AU; la editorial describe el cuadernillo como una versión revisada de algo que podría haber sucedido. El marco alternativo no verifica acontecimientos, habilidades o costes de CONT-MAIN-LN ni cierra el cotejo primario de Meteria, Alfia o Zald.
+- **Regla anti-repetición:** no volver a consultar el mismo relato o las mismas muestras bloqueadas para repetir el resultado. Reabrir solo ante un nuevo localizador primario legible o cambio material de fuente.
