@@ -360,3 +360,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Integrado por [PR #177](https://github.com/jonhararagi/wordwaifu/pull/177), SHA de main a9ab02584f857a9c3fabbba59b40e8799e7aaead.
 - **CI de PR sobre aa20c6ebe92311d9b46b3410c1305ca3ef6802c8:** [Validate WordWaifu #40613817357](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817357) y [DanMachi Lore and Retrieval Integrity #40613817354](https://github.com/jonhararagi/wordwaifu/actions/runs/40613817354), ambos success.
 - **CI post-merge sobre el SHA exacto de main a9ab02584f857a9c3fabbba59b40e8799e7aaead:** [Validate WordWaifu #40613983958](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983958) y [DanMachi Lore and Retrieval Integrity #40613983944](https://github.com/jonhararagi/wordwaifu/actions/runs/40613983944), ambos success.
+
+
+## DANMACHI-RESEARCH-054 · Hermes Familia: capacidades
+- [Informe DMR-054](research/inbox/DANMACHI-RESEARCH-054-hermes-familia-secondary-capabilities.md) — pasada secundaria acotada de Asfi Al Andromeda y Lulune Louie.
+- Fuentes: DMR-054-SRC-001 (Asfi) y DMR-054-SRC-002 (Lulune), ambas wikis comunitarias.
+- Las notas aparecen en el archivo interactivo solo bajo `CONT-SECONDARY`; no alteran los expedientes de personalidad, historia o continuidad de adaptación.
+- Se registra qué campos sí aparecen y qué nombres de magia/skills/equipo no están presentes en el contenido recuperado. DMR-045 mantiene sus cinco cotejos primarios pendientes.
