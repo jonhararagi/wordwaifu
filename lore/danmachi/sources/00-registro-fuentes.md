@@ -4079,3 +4079,25 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-055
 - verification_status: secondary_checked
 
+## DMR-045-SRC-053 · Google Books — Astrea Record, volumen 3 (edición inglesa licenciada)
+
+- source_id: DMR-045-SRC-053
+- title: Astrea Record, Vol. 3: Is It Wrong to Try to Pick Up Girls in a Dungeon? Tales of Heroes
+- creator_or_publisher: Fujino Omori / Yen Press LLC; vista previa pública de Google Books
+- source_type: LICENSED_BOOK_PREVIEW
+- series: DanMachi Heroic Tale: Astrea Record
+- volume_or_edition: Volumen 3, ISBN 9781975379933; 296 páginas indicadas en la ficha
+- language: Inglés
+- publication_date: 2024 (según la ficha pública)
+- official_url: https://books.google.com/books/about/Astrea_Record_Vol_3_Is_It_Wrong_to_Try_t.html?id=Z0gVEQAAQBAJ
+- accessed_at: 2026-10-28
+- locator_type: selected_page_route
+- locator: rutas PT10 (https://books.google.com/books?cad=1&id=Z0gVEQAAQBAJ&pg=PT10&source=gbs_selected_pages) y PT11 (https://books.google.com/books?cad=1&id=Z0gVEQAAQBAJ&pg=PT11&source=gbs_selected_pages); rutas probadas, no localizadores narrativos verificados
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-AR
+- reliability_note: Edición licenciada listada por Google Books. Los intentos de las páginas seleccionadas solo expusieron la carcasa «Pages», sin prosa legible; la tabla de contenidos produjo un error de caché. La lista de términos comunes y los encabezados no prueban una escena ni sostienen un claim individual.
+- conflicting_sources: []
+- rights_note: Registrar solo metadatos y resumen breve del resultado de acceso; no copiar texto extenso.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
