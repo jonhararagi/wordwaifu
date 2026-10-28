@@ -976,6 +976,11 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Registrar DMR-055-SRC-001 (Tsubaki Collbrande, wiki EN) y DMR-055-SRC-002 (Welf Crozzo, wiki ES) como fuentes secundarias.
 - [x] Documentar capacidades, magia/skills/equipo reportados y campos no informados en un informe dedicado.
 - [x] Añadir resultados a la bitácora anti-repetición.
+- [x] Integrar documentación, bitácora, fuentes e índice en `main` mediante [PR #182](https://github.com/jonhararagi/wordwaifu/pull/182).
+- [x] Validar CI de PR y CI post-merge sobre el SHA exacto de `main`.
 - [ ] Si se incorporan los hallazgos a las fichas interactivas, mantenerlos exclusivamente bajo CONT-SECONDARY y añadir regresión de interfaz antes de integrar.
-- **Límite:** pasada documental secundaria; no se declara validación primaria de novelas. Los campos omitidos se cierran para estas URL y solo se reabren con fuente nueva, actualización material o pasaje primario legible.
+- **SHA de main:** `25b019598e74c5f9756aa541b8e9f5f1fe7c633e`.
+- **CI de PR:** [Validate #40744157365](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157365) y [Lore/Integrity #40744157330](https://github.com/jonhararagi/wordwaifu/actions/runs/40744157330), ambos success.
+- **CI post-merge:** [Validate #40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y [Lore/Integrity #40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos success sobre el SHA de main indicado.
+- **Límite:** pasada documental secundaria, sin cotejo primario de novelas. Los campos omitidos solo se reabren ante fuente nueva, actualización material o pasaje primario legible.
 
