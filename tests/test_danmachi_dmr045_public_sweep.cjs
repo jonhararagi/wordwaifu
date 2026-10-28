@@ -14,6 +14,7 @@ const erebus = read("lore/danmachi/characters/dark-era/erebus.md");
 const meteria = read("lore/danmachi/characters/dark-era/meteria.md");
 const rudra = read("lore/danmachi/characters/dark-era/rudra.md");
 const queue = read("lore/danmachi/WORK_QUEUE.md");
+const corpus = require("../src/lore-corpus.js");
 
 function section(markdown, id) {
   const start = markdown.indexOf("### " + id + " ·");
@@ -48,6 +49,45 @@ assert.match(meteriaAu, /dulce/);
 assert.match(meteriaAu, /no como confirmación de acontecimientos, rasgos permanentes o convivencia de la novela principal/i);
 assert.match(meteria, /CONT-AU/);
 assert.match(meteria, /dulce/);
+ 
+// The author-published story and its special-edition booklet are already registered.
+// Treat the narrative as CONT-AU, not as proof of the five open primary-canon cases.
+const authorNoteSource = sources.slice(
+  sources.indexOf("## DMR-029-SRC-016"),
+  sources.indexOf("## DMR-029-SRC-017")
+);
+assert.match(authorNoteSource, /source_type: AUTHOR_NOTE/);
+assert.match(authorNoteSource, /continuity_scope: CONT-AU/);
+assert.match(authorNoteSource, /source_checked_excerpt_only/);
+assert.match(authorNoteSource, /no acredita los mismos sucesos o decisiones para CONT-MAIN-LN/i);
+
+const officialBookletSource = sources.slice(
+  sources.indexOf("## DMR-045-SRC-002"),
+  sources.indexOf("## DMR-045-SRC-003")
+);
+assert.match(officialBookletSource, /OFFICIAL_PUBLISHER_PRODUCT_PAGE/);
+assert.match(officialBookletSource, /CONT-AU/);
+assert.match(officialBookletSource, /podría haber sucedido/i);
+
+const officialSpecialEditionSource = sources.slice(
+  sources.indexOf("## DMR-045-SRC-005"),
+  sources.indexOf("## DMR-045-SRC-006")
+);
+assert.match(officialSpecialEditionSource, /continuity_scope: CONT-AR; el cuadernillo adicional queda en CONT-AU/);
+assert.match(officialSpecialEditionSource, /claims_supported: \[\]/);
+assert.match(dmr045, /Cruce de continuidad del relato autoral ya registrado/);
+assert.match(dmr045, /Los cinco cotejos primarios de DMR-045 siguen abiertos/);
+
+const sourceDirectory = corpus.getOnlineSourceDirectory();
+for (const id of [
+  "official-author-note-meteria-alfia-zald-au",
+  "official-ga-astrea-record-3-limited-edition",
+  "official-sbcr-astrea-record-3-product-page"
+]) {
+  assert.ok(sourceDirectory.some(source => source.id === id),
+    "Already registered alternate-story sources must remain discoverable: " + id);
+}
+
 
 assert.match(sources, /DMR-045-CLM-015/);
 assert.match(sources, /DMR-045-CLM-018/);
