@@ -2,6 +2,13 @@
 
 ## Estado operativo y verificación — 2026-10-28
 
+### DMR-056 — cohorte secundaria para comprobar recuperación de lore (en validación)
+
+- Alcance: capacidades de Liliruca Arde, Mikoto Yamato y Haruhime; ficha nueva de Nina Tulle; seis rutas comunitarias registradas.
+- Los datos `CONT-SECONDARY` quedan separados de los perfiles de adaptación. Nina conserva el conflicto de sus fuentes: el texto la llama pasante sin falna, mientras la tabla la marca activa.
+- Pruebas añadidas para directorio de fuentes y cuatro notas de capacidades. CI e integración se registrarán solo tras verificar cada SHA; DMR-045 permanece abierto y en espera de evidencia primaria nueva.
+
+
 ### DMR-045 — nueva ruta de muestra japonesa localizada en Sony Reader Store (2026-10-28)
 - Se abrió la ficha pública de [Sony Reader Store — Astrea Record, volumen 3](https://ebookstore.sony.jp/title/01237250/id/BT000123725000300301/), edición japonesa de GA Bunko / SB Creative.
 - La página presenta el bloque de verificación de edad y explica que la portada, la muestra y la compra requieren confirmarla. No se avanzó a través del control ni se abrió texto narrativo; por tanto, esta ruta queda metadata_checked_only y no demuestra si el visor funciona tras la verificación.
@@ -15,12 +22,12 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 178 registros activos; 29 IDs reservados; 131 documentos de apoyo.
+- **Corpus DanMachi:** 179 registros activos; 29 IDs reservados; 132 documentos de apoyo.
 - **Grafo de conocimiento:** 258 relaciones explícitas; 258/258 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
-- **Expedientes de interfaz:** 92 perfiles; 92/92 enlazados a catálogo y Markdown por ID.
+- **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 82 personajes; 5 grupos; 12 deidades con registro de personaje.
-- **Marcadas `complete`:** 0/82 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
+- **Marcadas `complete`:** 0/83 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
 ## DMR-045 — lectores BinB enlazados desde la tienda oficial de SB Creative (2026-10-25)
