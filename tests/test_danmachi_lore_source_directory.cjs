@@ -337,6 +337,19 @@ assert.match(sbCreativeVol20[0].limits, /metadata_checked_only/);
 assert.match(sbCreativeVol20[0].limits, /CONT-MAIN-LN/);
 
 
+
+const dbookAstrea3Sample = sources.filter(source => source.id === "licensed-retailer-dbook-astrea-record-vol3-sample");
+assert.equal(dbookAstrea3Sample.length, 1, "dBook Astrea Record 3 sample route must be discoverable exactly once");
+assert.equal(dbookAstrea3Sample[0].category, "licensed_retailer");
+assert.equal(dbookAstrea3Sample[0].url, "https://dbook.docomo.ne.jp/item/b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9/2000/");
+assert.equal(dbookAstrea3Sample[0].authority, "Distribuidor licenciado; muestra anunciada, no texto narrativo");
+assert.match(dbookAstrea3Sample[0].coverage, /試し読み/);
+assert.match(dbookAstrea3Sample[0].coverage, /applaunch\/view/);
+assert.match(dbookAstrea3Sample[0].limits, /cero líneas de contenido/);
+assert.match(dbookAstrea3Sample[0].limits, /no demuestra un fallo general del lector/i);
+assert.match(dbookAstrea3Sample[0].limits, /metadata_checked_only/);
+assert.match(dbookAstrea3Sample[0].limits, /CONT-AR/);
+
 const dmr058SourceSpecs = [
   ["community-dmr058-daphne-en", "https://danmachi.fandom.com/wiki/Daphne_Lauros", /Elios Passion.*Laurus Wreath/i],
   ["community-dmr058-daphne-es", "https://danmachi.fandom.com/es/wiki/Daphne_Lauros", /Elios Passion.*Fencer Laureate/i],
