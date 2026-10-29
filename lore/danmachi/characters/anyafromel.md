@@ -52,6 +52,16 @@ Un perfil de adaptación no sustituye una biografía por escenas. Se deben cotej
 - Claim refs: DMR-006-CLM-055, DMR-006-CLM-056, DMR-006-CLM-057.
 - El archivo es navegable, pero la biografía no se considera completa hasta cotejar las escenas relevantes.
 
+## Capacidades reportadas por fuentes secundarias — DMR-057
+
+- **Continuidad/evidencia:** `CONT-SECONDARY`; no equivale a cotejo de novela.
+- Las páginas comunitarias reportan la magia `Remiste Felis`: onda sonora de área amplia que debilita a quienes la oyen y también afecta sus habilidades de desarrollo, skills y magia. No discrimina necesariamente entre aliados y adversarios; bloquear el sonido se describe como contramedida y la recarga supera medio día.
+- Se reporta Abnormal Resistance como habilidad de desarrollo y una lanza como arma.
+- **Diferencia secundaria:** la página española dice que la magia se cancela si Anya pierde el conocimiento; el fragmento inglés consultado no incluye esa condición. No resolver la diferencia por intuición.
+- **No informado en las páginas de perfil consultadas:** coste exacto en mind, fórmula cuantitativa de debilitamiento y nombres de skills individuales.
+- **Fuentes:** [DanMachi Wiki — Anya Fromel](https://danmachi.fandom.com/wiki/Anya_Fromel) y [Wiki DanMachi — Anya Fromel](https://danmachi.fandom.com/es/wiki/Anya_Fromel); DMR-057-SRC-002/003; resumen DMR-057-CLM-002.
+- Reabrir solo con evidencia nueva o un pasaje primario legible.
+
 ## Próxima revisión
 
 1. Localizar escenas/capítulos de novela para los hechos importantes.
