@@ -8,7 +8,7 @@
 - **Integración:** [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), squash SHA de `main` `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
 - **Head probado antes del merge:** `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`.
 - **CI pre-merge:** [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [DanMachi Lore and Retrieval Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos `success`.
-- La consulta del conector no devolvió CI post-merge para el SHA exacto; ese estado no se declara verificado.
+- **CI post-merge verificado** sobre el SHA exacto de integración `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [DanMachi Lore and Retrieval Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate WordWaifu #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos `success`.
 - Se registraron magia, habilidades de desarrollo, equipo y límites reportados para los tres personajes con `CONT-SECONDARY`; no se reescribieron personalidades ni se inventaron costes o skills ausentes.
 - La página española de Anya informa una condición adicional de cancelación de Remiste Felis al perder el conocimiento; la página inglesa consultada no muestra ese detalle. Se conserva como diferencia secundaria, sin resolverla por intuición.
 - Registro: [DANMACHI-RESEARCH-057](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md); fuentes DMR-057-SRC-001–005; [bitácora](../lore/danmachi/CHARACTER_UPDATE_LEDGER.md).
