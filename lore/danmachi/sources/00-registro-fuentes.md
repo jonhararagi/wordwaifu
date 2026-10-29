@@ -3504,14 +3504,17 @@ verification_status: stub
 - volume_or_edition: Astrea Record 3; sample option linked from official SB Creative e-book series landing page
 - language: Japonés
 - official_url: https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false
-- product_page: https://ebook.sbcr.jp/landing/p/danmachi
-- accessed_at: 2026-10-25
+- product_page: https://ebook.sbcr.jp/product/81561019JAAA03MBJE3X
+- series_page: https://ebook.sbcr.jp/landing/p/danmachi
+- accessed_at: 2026-10-29 (revalidación de una ruta ya registrada)
 - locator_type: official_reader_route_metadata_only
-- locator: La página de la serie muestra la opción 立ち読み para esta edición y enlaza a la ruta BinB indicada. La extracción pública del lector solo mostró un iframe y Now loading...; no se obtuvo página narrativa ni localizador verificable.
+- locator: La ficha oficial del producto ofrece 立ち読み（無料） y enlaza al lector BinB indicado. La revisión pública de la página embebida muestra el aviso «お使いのブラウザは新ビューワに対応しておりません。». La apertura directa devolvió solo siete líneas extraíbles sin ninguna página narrativa ni localizador reproducible. La sesión interactiva de navegador no pudo iniciar por insufficient_credits.
 - claims_supported: []
 - events_supported: []
 - continuity_scope: CONT-AR
-- reliability_note: Ruta oficial de muestra identificada desde el catálogo del editor. El estado de carga observado se refiere a esta consulta y no demuestra que el lector sea inaccesible para todos. La entrada no respalda hechos biográficos ni escenas.
+- reliability_note: Ruta oficial de muestra identificada desde la tienda electrónica del editor. El aviso del lector describe la compatibilidad observada durante esta consulta; no demuestra que la muestra sea inaccesible mediante un navegador compatible. No respalda hechos biográficos ni escenas.
+- access_result: El 2026-10-29, la página del producto ofreció la muestra gratuita y el bloque del lector mostró el aviso «お使いのブラウザは新ビューワに対応しておりません。». La extracción directa no expuso páginas narrativas. El proveedor de navegador interactivo informó insufficient_credits antes de iniciar la sesión; por tanto, no se verificó el comportamiento del lector en un navegador compatible.
+- reopen_trigger: Reintentar únicamente cuando una sesión normal autorizada con un navegador compatible permita ver páginas narrativas y un localizador reproducible. No repetir la extracción de la misma ruta ni convertir un aviso de compatibilidad en afirmación de indisponibilidad general.
 - conflicting_sources: []
 - rights_note: Se conservaron enlaces y metadatos; no se extrajo texto protegido ni se eludieron restricciones.
 - verified_by: DANMACHI-RESEARCH-045
