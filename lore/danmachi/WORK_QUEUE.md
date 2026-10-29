@@ -1021,3 +1021,5 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Mantener diferencia EN/ES de Remiste Felis y campos no informados; no reescribir personalidades ni elevar fuentes comunitarias a primarias.
 - [ ] Siguiente cohorte: seleccionar personajes sin repetir cohortes recientes y comprobar que notas de capacidad se recuperan correctamente en búsqueda/UI; no abrir otra tanda si el modelo de archivo requiere una prueba de integración distinta.
 - **Límite persistente:** DMR-045 continúa prioritario para cualquier nueva evidencia primaria y no se cierra por DMR-057. Los cinco cotejos de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos.
+
+- **CI post-merge verificado después de la actualización:** ambos workflows de push finalizaron en `success` sobre el SHA exacto integrado `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [DanMachi Lore and Retrieval Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate WordWaifu #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125).
