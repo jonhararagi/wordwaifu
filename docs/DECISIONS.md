@@ -260,3 +260,10 @@
 **Decisión:** ante la falta de texto primario legible en las rutas ya agotadas de DMR-045, avanzar con una cohorte distinta que permita probar la estructura de personajes, fuentes, continuidad, límites de poderes y contradicciones de roster.
 **Aplicación:** DMR-056 agrega datos secundarios de Liliruca Arde, Mikoto Yamato y Haruhime, y una ficha de Nina Tulle que no existía en el catálogo. Las capacidades quedan expuestas en `CONT-SECONDARY` y bajo bitácora anti-repetición.
 **Límite:** DMR-045 sigue abierto. No se crean claims, eventos, relaciones ni aliases; Nina permanece en conflicto de afiliación y no se convierte en miembro confirmado por inferencia.
+
+
+## DEC-039 — Registrar DMR-057 e integrar tras CI aprobado
+**Estado:** integrada en `main` mediante [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), squash SHA `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
+**Decisión operativa:** completar una cohorte nueva de capacidades secundarias para Aisha Belka, Anya Fromel y Chloe Rollo, manteniendo cinco rutas comunitarias como `CONT-SECONDARY` y sin reescribir personalidades.
+**Verificación:** ambos workflows de CI pasaron sobre el head `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`: [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548). No se encontraron ejecuciones post-merge para el SHA de fusión, por lo que esa parte no se declara validada.
+**Límites:** conservar como diferencia secundaria la condición de cancelación de Remiste Felis descrita en la página española y no presente en el fragmento inglés consultado. No inventar costes o skills no listados, no convertir ausencia de informe en inexistencia canónica y no cerrar DMR-045.
