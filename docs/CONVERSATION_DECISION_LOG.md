@@ -624,16 +624,9 @@
 - **Límite:** esta decisión metodológica no cierra DMR-045 ni convierte los datos de wiki en canon primario.
 
 
-### CONV-DM-2026-10-29-002 — Integración de DMR-057 en main
+- **Estado:** INTEGRADO Y VALIDADO. PR [#188](https://github.com/jonhararagi/wordwaifu/pull/188), merge SHA `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
+- **CI pre-merge:** [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos success sobre `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`.
+- **CI post-merge:** [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos success sobre el SHA exacto de `main`.
+- **Alcance:** capacidades secundarias de Aisha, Anya y Chloe bajo CONT-SECONDARY; se conserva la diferencia EN/ES sobre Remiste Felis y los campos no informados.
+- **Límite:** DMR-045 sigue abierto; no se promueve evidencia comunitaria a primaria ni se reescriben personalidades.
 
-- **Fecha:** 2026-10-29.
-- **Tipo:** integración técnica y actualización de estado.
-- **Estado:** INTEGRADO; CI pre-merge validado, CI post-merge no verificado desde el conector disponible.
-- **Resultado:** la PR [#188](https://github.com/jonhararagi/wordwaifu/pull/188) se fusionó mediante squash en `main`; SHA exacto: `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
-- **CI pre-merge sobre `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`:** [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [DanMachi Lore and Retrieval Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos `success`.
-- **Alcance integrado:** pasada secundaria para Aisha Belka, Anya Fromel y Chloe Rollo; cinco referencias comunitarias; diferencia EN/ES de Remiste Felis preservada; campos no informados cerrados contra búsquedas repetidas. Sin cambios de personalidad ni promoción a evidencia primaria.
-- **Limitación de verificación:** la consulta disponible no devolvió ejecuciones post-merge para el SHA de fusión; no se declara ese CI validado.
-- **Continuidad:** DMR-057 permanece `CONT-SECONDARY`. DMR-045 sigue `IN_PROGRESS`, con sus cinco verificaciones narrativas primarias pendientes; no repetir las rutas agotadas sin desencadenante nuevo.
-- **Siguiente paso:** seguir con otra cohorte no repetida para probar búsqueda, fuente, límites y recuperación en la enciclopedia; retomar DMR-045 únicamente si aparece texto primario legible o una fuente oficial nueva con localizador verificable.
-
-- **CI post-merge verificado después de la actualización:** ambos workflows de push finalizaron en `success` sobre el SHA exacto integrado `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate WordWaifu #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125).
