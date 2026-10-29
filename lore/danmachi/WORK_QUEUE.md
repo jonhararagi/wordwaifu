@@ -1008,7 +1008,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Registrar como no informados los nombres de skills individuales y costes que no aparecen en las páginas consultadas.
 - [x] Preservar la diferencia secundaria sobre si Remiste Felis se cancela al perder Anya el conocimiento.
 - [x] Añadir los resultados a la bitácora anti-repetición para evitar búsquedas idénticas en las mismas páginas.
-- [ ] Incorporar/verificar la exposición de estos datos en las fichas interactivas si el modelo de archivo existente admite notas de capacidades secundarias sin contaminar el canon primario.
+- [x] Incorporar y verificar las notas en las fichas interactivas mediante PR #189; CI de PR y post-merge aprobadas (detalle en la sección de integración al final de esta cola).
 - **Límite:** esta tanda no resuelve los cinco cotejos primarios de DMR-045; permanecen pendientes hasta obtener texto narrativo accesible. No repetir metadatos comerciales como sustituto de evidencia.
 
 
@@ -1024,3 +1024,10 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Siguiente tarea de cohorte:** no abrir una cohorte nueva hasta registrar la conclusión del CI post-merge; luego continuar DMR-045 solo con evidencia primaria nueva y legible, sin repetir rutas ya cerradas.
 - **Límite persistente:** DMR-045 continúa prioritario para cualquier nueva evidencia primaria y no se cierra por DMR-057. Los cinco cotejos de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos.
 
+## DMR-045 — Control de repetición tras DMR-057 (2026-10-29)
+
+- [x] Reconciliar el último estado de main: al inicio de esta revisión, SHA 8348d5610382f45f5fe30073d70f53886d259ea4; [Catalog/retrieval/browser smoke #40842395446](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395446) y [validate #40842395510](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395510) finalizaron en success.
+- [x] Confirmar que la exposición interactiva de DMR-057 está integrada por [PR #189](https://github.com/jonhararagi/wordwaifu/pull/189), con CI post-merge #40842144964 y #40842144977 en verde sobre el SHA de integración indicado en el índice.
+- [x] Revisar el estado público disponible de Yen Press Astrea Record 3, la ruta existente DMR-045-SRC-018 de Google Books volumen 20 y la ficha oficial de GA Bunko ya registrada bajo DMR-044. No se obtuvo texto narrativo nuevo: sinopsis general, índice/términos sin páginas legibles y HTTP 503, respectivamente.
+- [x] Evitar IDs y claims duplicados; no crear hechos, eventos, relaciones o alias ni modificar personalidades.
+- [ ] Reanudar los cinco cotejos primarios únicamente cuando una edición licenciada muestre narración legible o una nueva fuente oficial resuelva un punto concreto. Mantener Alfia, Zald, Meteria, Erebus y Rudra en HOLD_FOR_PRIMARY_SOURCE; no iniciar expansión de Orario mientras tanto.

@@ -254,3 +254,12 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **CI post-merge:** [Lore Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125) pasaron sobre el SHA exacto de integración.
 - **Contenido:** cohorte secundaria de Aisha, Anya y Chloe; cinco fuentes comunitarias; diferencia EN/ES de Remiste Felis conservada. DMR-045 mantiene abiertos sus cinco cotejos narrativos primarios.
 
+### DEC-DM-028 — Puerta de evidencia primaria para DMR-045
+
+- **Fecha:** 2026-10-29.
+- **Estado:** criterio operativo registrado; cotejos de canon pendientes.
+- **Resultado:** la consulta pública no expuso texto narrativo legible nuevo. Yen Press ofrece solo una sinopsis general para Astrea Record 3; la ruta ya registrada de Google Books para el volumen 20 no permite leer narración; la ficha oficial GA Bunko ya registrada bajo DMR-044 respondió HTTP 503.
+- **Decisión:** no registrar fuentes duplicadas ni crear claims por sinopsis, índices, términos comunes o resultados de acceso. No modificar personalidades ni cruzar hechos entre CONT-MAIN-LN, CONT-AR, CONT-GAME y CONT-AU.
+- **Pendientes:** Alfia (habilidades, costes y escenas); Zald (técnica de espada, Udaeus y Ottar); Meteria (identidad, maternidad y parentesco, sin inferir el padre de Bell); Erebus (escenas y diálogos de la novelización separados del juego); Rudra (conocimiento/orden personal frente a acciones de la Familia).
+- **Reapertura:** texto licenciado legible o fuente oficial nueva que resuelva un campo concreto. Los cinco expedientes siguen HOLD_FOR_PRIMARY_SOURCE; Orario permanece pospuesto.
+- **CI de contexto sobre SHA 8348d5610382f45f5fe30073d70f53886d259ea4:** [Catalog/retrieval/browser smoke #40842395446](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395446) y [validate #40842395510](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395510), ambos success.

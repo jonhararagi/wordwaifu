@@ -635,3 +635,13 @@
 **CI post-merge:** [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) y [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977), ambos `success` sobre el SHA exacto `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`.
 - **Límite:** no edita roster, grafo de relaciones, personalidad ni escenas primarias. La discrepancia EN/ES de Remiste Felis se conserva como secundaria. DMR-045 sigue abierto.
 
+### CONV-DM-2026-10-29-004 — Revalidación de la puerta de evidencia primaria de DMR-045
+
+- **Fecha:** 2026-10-29.
+- **Tipo:** investigación, control anti-repetición y estado de integración.
+- **Estado:** registrado; DMR-045 sigue abierto.
+- **Resultado:** la ficha editorial de Yen Press para Astrea Record 3 solo ofrece contexto general; la ruta existente DMR-045-SRC-018 de Google Books expone índice/términos, no narración legible; la ficha oficial de GA Bunko del volumen 20 (fuente ya registrada bajo DMR-044) devolvió HTTP 503. Ninguna aporta un pasaje primario nuevo.
+- **Regla aplicada:** no duplicar fuentes ni crear claims por sinopsis, índice, términos, metadatos o errores del lector. No actualizar personalidades ni convertir fuentes CONT-AU/CONT-GAME/CONT-SECONDARY en canon de la novela principal o la novelización.
+- **SHA de main comprobado al iniciar esta tanda:** 8348d5610382f45f5fe30073d70f53886d259ea4. Los checks [Catalog, retrieval and browser smoke #40842395446](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395446) y [validate #40842395510](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395510) terminaron con success.
+- **Pendiente por personaje:** Alfia (habilidades/costes/escenas), Zald (técnica, Udaeus y secuencia con Ottar), Meteria (identificación/maternidad/parentesco, sin inferir el padre de Bell), Erebus (escenas y diálogo de CONT-AR separados de CONT-GAME) y Rudra (responsabilidad personal frente a la trampa colectiva de su Familia).
+- **Siguiente acción:** solo reabrir al obtener texto licenciado narrativo realmente legible o una fuente oficial nueva que resuelva uno de esos puntos. Orario sigue pospuesto; las cinco fichas conservan HOLD_FOR_PRIMARY_SOURCE.
