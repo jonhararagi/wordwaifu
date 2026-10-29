@@ -443,3 +443,11 @@ Fuentes consultadas:
 - **CI post-merge:** [Validate #40898517407](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517407) y [Lore/Integrity #40898517371](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517371), ambos success sobre el SHA indicado. Validate necesitó un segundo intento por un timeout transitorio al cargar imágenes de referencia oficiales.
 - **Bitácora anti-repetición:** no repetir metadatos ni lanzar de nuevo el visor dBook sin cambiar la condición de acceso. Reabrir solo cuando una sesión normal autorizada exponga páginas narrativas con localizador reproducible o una fuente oficial nueva resuelva un punto.
 - **Estado por personaje:** Alfia, Zald, Meteria, Erebus y Rudra permanecen `HOLD_FOR_PRIMARY_SOURCE`. Sin cambios de personalidad, claims o relaciones.
+
+## DMR-045 — revalidación de SRC-041 sin contenido narrativo (2026-10-29)
+
+- **Ruta existente:** muestra oficial SBCr/BinB para Astrea Record 3; reutilizar el ID existente, sin duplicarlo.
+- **Observación:** la ficha del producto ofrece 立ち読み（無料）; el visor muestra «お使いのブラウザは新ビューワに対応しておりません。». La extracción directa no expuso páginas y la sesión interactiva no pudo iniciar por `insufficient_credits`.
+- **Estado:** `DMR-045-SRC-041` permanece `metadata_checked_only`; no aporta claims ni eventos. No se cambian relaciones o personalidades. El aviso no demuestra que el lector falle en todos los navegadores.
+- **Anti-repetición:** no repetir esta ruta hasta que se disponga de una sesión normal autorizada y compatible que muestre páginas narrativas con localizador reproducible. Los cinco expedientes siguen `HOLD_FOR_PRIMARY_SOURCE`.
+
