@@ -520,7 +520,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Conflicto preservado: Nina aparece como pasante sin falna en el texto descriptivo y como activa en la tabla de miembros.
 - Límites: no se verificaron capítulos de novela ni se modificó CONT-ANIME; costes de Mind, duraciones generales y efectos de Fairy Cradle/Alf Minister no recuperados quedan sin completar.
 - CI pre-merge: [Validate WordWaifu #40773212555](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y [DanMachi Lore and Retrieval Integrity #40773212768](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) finalizaron en success.
-- No pude confirmar CI post-merge: el conector de esta sesión no devolvió runs para el merge SHA; no se declara esa validación.
+
 - Próxima tanda: seleccionar otra cohorte sin repetir estas páginas. DMR-045 sigue abierto a la espera de nueva evidencia primaria accesible.
 
 
@@ -532,7 +532,7 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Registros: informe DMR-057; tres resúmenes/claims de capacidades; fuentes registradas en el directorio; bitácora, cola, índice maestro, STATUS y registros persistentes actualizados.
 - Hallazgos reutilizables: Aisha — Hell Kaios, Great Podao Zaga, Hunter/Abnormal Resistance/Fist Strike; Anya — Remiste Felis, alcance sonoro y recarga reportada; Chloe — Feles Cruz, espejismos con limitaciones, Mixing/Escape/Abnormal Resistance y cuchillo Violetta.
 - Diferencia: la wiki ES de Anya agrega cancelación al perder el conocimiento; el extracto EN no lo incluye. Se conserva sin resolver.
-- CI pre-merge: [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos success. CI post-merge no confirmado por el conector.
+- CI pre-merge: [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos success.
+- CI post-merge: [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos success sobre `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
 - Límites: no se reescriben personalidades ni se crean inferencias sobre costes/skills ausentes; DMR-045 mantiene los cinco cotejos primarios pendientes.
 
-- **CI post-merge verificado después de la actualización:** ambos workflows de push finalizaron en `success` sobre el SHA exacto integrado `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [DanMachi Lore and Retrieval Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate WordWaifu #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125).
