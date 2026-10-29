@@ -4404,3 +4404,119 @@ verification_status: stub
 - rights_note: Resumir en palabras propias.
 - verified_by: DANMACHI-RESEARCH-057
 - verification_status: secondary_checked
+
+## DMR-058-SRC-001 · Daphne Lauros — DanMachi Wiki (inglés)
+
+- source_id: DMR-058-SRC-001
+- title: Daphne Lauros
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Página comunitaria web
+- language: Inglés
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/wiki/Daphne_Lauros
+- accessed_at: 2026-10-29
+- locator_type: wiki_profile_sections
+- locator: Professional Status, Status, Skill/Magic/Equipment, Abilities, Magic, Skills, Development Abilities y Equipment.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para niveles/snapshots y capacidades reportadas. No se abrió la novela para cotejar cada mecánica.
+- conflicting_sources: [DMR-058-SRC-002, estado nivel 2/nivel 3 por periodo]
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-058
+- verification_status: secondary_checked
+
+## DMR-058-SRC-002 · Daphne Lauros — DanMachi Wiki ES
+
+- source_id: DMR-058-SRC-002
+- title: Daphne Lauros
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Página comunitaria web
+- language: Español
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/es/wiki/Daphne_Lauros
+- accessed_at: 2026-10-29
+- locator_type: wiki_profile_sections
+- locator: Situación profesional, Estado, Habilidad, Magia y Equipo; Habilidades; Magia; Habilidades de Desarrollo y Equipo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Contraste comunitario de la página inglesa; no es una fuente primaria independiente.
+- conflicting_sources: [DMR-058-SRC-001, estado nivel 2/nivel 3 por periodo]
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-058
+- verification_status: secondary_checked
+
+## DMR-058-SRC-003 · Cassandra Ilion — DanMachi Wiki (inglés)
+
+- source_id: DMR-058-SRC-003
+- title: Cassandra Ilion
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Página comunitaria web
+- language: Inglés
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/wiki/Cassandra_Ilion
+- accessed_at: 2026-10-29
+- locator_type: wiki_profile_sections
+- locator: Professional Status, Status, Skill/Magic/Equipment, Abilities, Magic, Skills, Development Abilities y Equipment.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Fuente secundaria para magia, skill, habilidad de desarrollo y equipo; el efecto de Five Dimension Troia permanece desconocido.
+- conflicting_sources: [DMR-058-SRC-004, DMR-058-SRC-005]
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-058
+- verification_status: secondary_checked
+
+## DMR-058-SRC-004 · Magia — DanMachi Wiki ES
+
+- source_id: DMR-058-SRC-004
+- title: Magia
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Índice comunitario de magia
+- language: Español
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/es/wiki/Magia
+- accessed_at: 2026-10-29
+- locator_type: list_entry
+- locator: Entradas de Raumure, Soullight y Cure Ephialtes.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Índice secundario para localizar nombres/efectos; no es un pasaje narrativo ni una fuente editorial independiente.
+- conflicting_sources: [DMR-058-SRC-001, DMR-058-SRC-002, DMR-058-SRC-003]
+- rights_note: Parafrasear brevemente; no copiar cantos extensos.
+- verified_by: DANMACHI-RESEARCH-058
+- verification_status: secondary_checked
+
+## DMR-058-SRC-005 · Habilidades — DanMachi Wiki ES
+
+- source_id: DMR-058-SRC-005
+- title: Habilidades
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Índice comunitario de skills
+- language: Español
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/es/wiki/Habilidades
+- accessed_at: 2026-10-29
+- locator_type: list_entry
+- locator: Entrada de Five Dimension Troia.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: La entrada la describe como misteriosa e indescifrable; no permite deducir su efecto concreto.
+- conflicting_sources: [DMR-058-SRC-003]
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-058
+- verification_status: secondary_checked
+

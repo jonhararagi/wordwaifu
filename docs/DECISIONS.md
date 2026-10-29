@@ -281,3 +281,14 @@
 - **Aplicación:** no crear fuentes duplicadas, claims, eventos, relaciones o alias; no reescribir personalidades; mantener los límites entre CONT-MAIN-LN, CONT-AR, CONT-GAME y CONT-AU.
 - **Pendientes:** Alfia, Zald, Meteria, Erebus y Rudra permanecen en HOLD_FOR_PRIMARY_SOURCE. No inferir el padre de Bell ni atribuir a Rudra personalmente las acciones de toda su Familia.
 - **Reapertura:** solo cuando una edición licenciada exponga texto narrativo legible o aparezca una fuente oficial nueva que resuelva un campo concreto.
+
+## DEC-041 — Añadir pasada funcional secundaria de Daphne Lauros y Cassandra Ilion
+
+**Estado:** implementado en rama; validación CI e integración pendientes.  
+**Fecha:** 2026-10-29.
+
+- **Alcance:** reutilizar CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION y exponer detalles de las wikis únicamente bajo CONT-SECONDARY.
+- **Aplicación:** informe DMR-058, cinco referencias comunitarias, notas del archivo interactivo y pruebas que verifican recuperación y aislamiento de continuidades.
+- **Límites:** no reescribir personalidad, crear claims/relaciones/eventos/aliases canónicos ni inferir costes o efectos ausentes. La información comunitaria no equivale a cotejo de novela.
+- **Prioridad preservada:** DMR-045 sigue abierta; los cinco localizadores primarios solo se reabren con texto licenciado legible o fuente oficial nueva. Orario sigue pospuesto.
+

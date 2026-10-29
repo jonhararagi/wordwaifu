@@ -263,3 +263,13 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Pendientes:** Alfia (habilidades, costes y escenas); Zald (técnica de espada, Udaeus y Ottar); Meteria (identidad, maternidad y parentesco, sin inferir el padre de Bell); Erebus (escenas y diálogos de la novelización separados del juego); Rudra (conocimiento/orden personal frente a acciones de la Familia).
 - **Reapertura:** texto licenciado legible o fuente oficial nueva que resuelva un campo concreto. Los cinco expedientes siguen HOLD_FOR_PRIMARY_SOURCE; Orario permanece pospuesto.
 - **CI de contexto sobre SHA 8348d5610382f45f5fe30073d70f53886d259ea4:** [Catalog/retrieval/browser smoke #40842395446](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395446) y [validate #40842395510](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395510), ambos success.
+
+### DEC-DM-029 — DMR-058: capacidades secundarias sin duplicar perfiles
+
+- **Fecha:** 2026-10-29.
+- **Estado:** implementado en rama; CI e integración pendientes.
+- **Decisión:** usar las wikis EN/ES como fuentes secundarias para añadir capacidades funcionales a Daphne Lauros y Cassandra Ilion; mantenerlas bajo CONT-SECONDARY y conservar los IDs y perfiles oficiales existentes.
+- **Aplicación:** informe DMR-058; fuentes DMR-058-SRC-001–005; notas y regresiones del archivo interactivo. Los snapshots de nivel 2 y nivel 3 se mantienen como estados de distinto periodo.
+- **No informado:** costes numéricos/duración universal de magia; efecto de Five Dimension Troia. No inferirlos ni reintentar la misma fuente sin cambio material.
+- **Límites:** no crear relaciones, eventos, aliases ni claims canónicos; no reescribir personalidad. La cohorte no cierra DMR-045 ni habilita expansión de Orario.
+

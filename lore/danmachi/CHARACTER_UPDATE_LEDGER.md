@@ -413,3 +413,17 @@ Fuentes consultadas:
 - **Resultado:** no añadir fuentes nuevas, claims, eventos, relaciones, alias, habilidades/costes no informados ni cambios de personalidad. Se mantienen separadas CONT-MAIN-LN, CONT-AR, CONT-GAME y CONT-AU.
 - **Reapertura:** solo al disponer de texto licenciado realmente legible o de una fuente oficial nueva que resuelva un campo concreto. Reutilizar las notas existentes y no repetir los mismos lectores.
 - **Control CI de contexto:** main estaba en 8348d5610382f45f5fe30073d70f53886d259ea4 al inicio; [Catalog/retrieval/browser smoke #40842395446](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395446) y [validate #40842395510](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395510) finalizaron en success.
+
+## Pasada secundaria 2026-10-29 — DMR-058: Daphne Lauros y Cassandra Ilion
+
+- **Estado:** pasada secundaria estructurada; no es cotejo de texto primario.
+- **Continuidad:** CONT-SECONDARY; reutiliza los IDs existentes CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION. No cambia sus perfiles oficiales de adaptación.
+- **Fuentes registradas:** DMR-058-SRC-001–005: Daphne EN/ES, Cassandra EN, índices comunitarios de Magia ES y Habilidades ES. Son referencias comunitarias, no fuentes primarias ni necesariamente independientes.
+- **Daphne — encontrado:** nivel 3/piso 37 reportados además de snapshot anterior nivel 2; Raumure, Elios Passion, Laurus Wreath, Abnormal Resistance, Escape y Fencer Laureate. Escape queda condicionado a persecución y a Elios Passion.
+- **Daphne — no informado/cotejado:** costes numéricos, incrementos exactos, duración/cooldowns universales y localizadores primarios por mecánica.
+- **Cassandra — encontrado:** nivel 3/piso 37 reportados además de snapshot anterior nivel 2; Soullight, Cure Ephialtes, Five Dimension Troia, Treatment, Holy Crystal Rod y Rabbit Charm. El efecto de Five Dimension Troia sigue desconocido; el precio de la vara no se etiqueta como coste de uso mágico.
+- **Cassandra — no informado/cotejado:** costes de Mind, duración/cooldowns exactos, efecto de Five Dimension Troia y localizadores narrativos primarios.
+- **Anti-repetición:** no consultar estas mismas páginas de nuevo para buscar datos no reportados. Reabrir solo ante fuente nueva/materialmente actualizada, contradicción pertinente o pasaje licenciado legible.
+- **Implementación:** informe DMR-058, registro maestro de fuentes, archivo interactivo y pruebas de continuidad; CI e integración siguen pendientes en esta rama.
+- **Límite:** no se reescriben personalidades ni se crean claims canónicos, sucesos, relaciones, aliases o IDs duplicados. DMR-045 permanece abierto.
+

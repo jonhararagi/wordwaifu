@@ -213,4 +213,25 @@ for (const [id, expectedTitle, sourceUrl, keyword] of [
 const anyaDmr057 = archive.getExtendedInfo("CHAR-ANYA-FROMEL", "CONT-SECONDARY", index);
 assert.ok(anyaDmr057.sections.some(section => section.text.includes("página española") && section.text.includes("fragmento inglés")), "Anya's EN/ES discrepancy must remain visible in the interactive note.");
 
+
+for (const [id, title, sourceUrl, mustInclude] of [
+  ["CHAR-DAPHNE-LAUROS", "Daphne Lauros", "https://danmachi.fandom.com/wiki/Daphne_Lauros", "Elios Passion"],
+  ["CHAR-CASSANDRA-ILION", "Cassandra Ilion", "https://danmachi.fandom.com/wiki/Cassandra_Ilion", "Soullight"]
+]) {
+  const info = archive.getExtendedInfo(id, "CONT-SECONDARY", index);
+  assert.ok(info && info.title.includes(title), title + " must expose the DMR-058 secondary capability note.");
+  assert.ok(info.sections.some(section => section.text.includes(mustInclude)), title + " must expose a documented capability.");
+  assert.ok(info.references.some(ref => ref.kind === "community" && ref.url === sourceUrl), title + " must retain the consulted community source.");
+  assert.equal(archive.getExtendedInfo(id, "CONT-ANIME", index), null, title + " secondary note must not overwrite the adaptation profile.");
+  assert.equal(archive.getExtendedInfo(id, "CONT-MAIN-LN", index), null, title + " secondary note must not leak into the main light-novel continuity.");
+  const profile = archive.getProfile(index, id, "CONT-SECONDARY", "all");
+  assert.ok(profile && profile.availableContinuities.includes("CONT-SECONDARY"), title + " must be searchable in the dedicated secondary continuity.");
+}
+const daphne058 = archive.getExtendedInfo("CHAR-DAPHNE-LAUROS", "CONT-SECONDARY", index);
+assert.ok(daphne058.sections.some(section => section.text.includes("solo cuando Daphne está siendo perseguida") && section.text.includes("Escape")), "Daphne's conditional Escape ability must not be described as always available.");
+assert.ok(daphne058.sections.some(section => section.text.includes("Fencer Laureate") && section.text.includes("60 cm")), "Daphne's reported equipment must include the bounded weapon description.");
+const cassandra058 = archive.getExtendedInfo("CHAR-CASSANDRA-ILION", "CONT-SECONDARY", index);
+assert.ok(cassandra058.sections.some(section => section.text.includes("Five Dimension Troia") && section.text.includes("no se inventa")), "Cassandra's unknown skill effect must stay explicitly unknown.");
+assert.ok(cassandra058.sections.some(section => section.text.includes("1.200.000 valis") && section.text.includes("precio de compra")), "Cassandra's rod price must not be mislabeled as a magic usage cost.");
+
 process.stdout.write("PASS character archive model: continuity, relations, moments, spoiler filtering and unavailable-evidence handling.\\n");
