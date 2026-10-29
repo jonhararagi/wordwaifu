@@ -10,6 +10,13 @@
 - **CI post-merge sobre el SHA exacto `7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91`:** [DanMachi Lore and Retrieval Integrity #40898517371](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517371) terminó en `success`; [Validate WordWaifu #40898517407](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517407) terminó en `success` tras el segundo intento. En el primer intento de Validate, el smoke de navegador excedió 10 s al esperar retratos oficiales de referencia en `danmachi.com`; el segundo intento pasó el smoke y la comprobación de estructura. El dato queda registrado como inestabilidad de carga externa, no como fallo del cambio dBook.
 - La ruta es una alternativa de acceso licenciada, no corroboración narrativa independiente. Alfia, Zald, Meteria, Erebus y Rudra permanecen `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
 
+## DMR-045 — revalidación del lector oficial SBCr para Astrea Record 3 (SRC-041, 2026-10-29)
+
+- La [ficha oficial del producto](https://ebook.sbcr.jp/product/81561019JAAA03MBJE3X) ofrece 立ち読み（無料） y enlaza al [lector BinB](https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false).
+- La extracción de la página del lector muestra el aviso «お使いのブラウザは新ビューワに対応しておりません。»; la ruta directa devolvió siete líneas y ninguna página narrativa. La sesión interactiva no pudo iniciar por `insufficient_credits`.
+- Se actualizó la entrada existente SRC-041 en el registro de fuentes, directorio de fuentes de la aplicación, informe DMR-045, índice maestro, cola y pruebas. No se creó un SRC duplicado ni se añadieron claims/eventos.
+- El aviso no prueba indisponibilidad general; no se confirmó el comportamiento en un navegador compatible. DMR-045 sigue `IN_PROGRESS`, Alfia/Zald/Meteria/Erebus/Rudra siguen `HOLD_FOR_PRIMARY_SOURCE` y Orario permanece pospuesto.
+
 ## DMR-058 — capacidades secundarias de Daphne y Cassandra (integrado y validado en main)
 
 - Se reutilizan `CHAR-DAPHNE-LAUROS` y `CHAR-CASSANDRA-ILION`; los detalles funcionales quedan bajo `CONT-SECONDARY`, sin sobrescribir sus perfiles de adaptación.
