@@ -674,12 +674,12 @@
 
 - **Fecha:** 2026-10-29.
 - **Tipo:** investigación de lore, actualización del archivo de personajes y regresiones de continuidad.
-- **Estado:** integrado en `main`; CI pre-merge validado y CI post-merge en verificación.
+- **Estado:** integrado y validado en `main`; CI pre-merge y post-merge aprobados.
 - **Motivo:** al no haber texto primario nuevo que permita cerrar DMR-045, avanzar con una cohorte distinta y útil sin volver a recorrer fuentes ya agotadas.
 - **Resultado:** se enriquecen las notas interactivas de los IDs existentes CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION bajo CONT-SECONDARY. Las fuentes comunitarias reportan Raumure, Elios Passion, Laurus Wreath, Escape, Fencer Laureate, Soullight, Cure Ephialtes, Five Dimension Troia, Treatment y equipo; los costes no informados y el efecto desconocido de Five Dimension Troia quedan explícitos.
 - **Fuentes:** DMR-058-SRC-001–005 en lore/danmachi/sources/00-registro-fuentes.md.
 - **CI pre-merge:** [Validate WordWaifu #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [DanMachi Lore and Retrieval Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), ambos `success` sobre el head `ef14f8b914fb424cf816f0d6a27f258fbe230843`.
 - **Integración:** PR [#194](https://github.com/jonhararagi/wordwaifu/pull/194) fusionada por squash; `main` verificado en `190b4313a21569aa056548f8a40f9022b900b028`.
-- **CI post-merge:** verificaciones de `main` sobre el SHA exacto siguen en ejecución; el estado se registrará tras confirmación.
+- **CI post-merge sobre el SHA exacto de main** `190b4313a21569aa056548f8a40f9022b900b028`: [Validate WordWaifu #40867850127](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850127) y [DanMachi Lore and Retrieval Integrity #40867850048](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850048), ambos `success`.
 - **Límite de canon:** wikis secundarias; no se agregan IDs, claims del grafo, relaciones, eventos, aliases ni reescrituras de personalidad. DMR-045 sigue abierta; Orario sigue pospuesto.
 
