@@ -382,3 +382,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - [Informe DMR-055](research/inbox/DANMACHI-RESEARCH-055-hephaestus-smiths-secondary-capabilities.md) — pasada secundaria de capacidades de Tsubaki Collbrande y Welf Crozzo; magia/skills/equipo según páginas comunitarias, con campos ausentes marcados como no informados. Sin reescritura de personalidad ni claims narrativos. Fuentes EN/ES y continuidad CONT-SECONDARY.
 - **Integración:** [PR #182](https://github.com/jonhararagi/wordwaifu/pull/182), SHA de main `25b019598e74c5f9756aa541b8e9f5f1fe7c633e`; CI de PR y post-merge en verde. Evidencia detallada en [docs/STATUS.md](../../docs/STATUS.md) y [bitácora de personajes](CHARACTER_UPDATE_LEDGER.md).
 
+
+
+## DANMACHI-RESEARCH-057 · Capacidades secundarias
+- Informe: [Aisha, Anya y Chloe](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md). Tres perfiles revisados; cinco rutas comunitarias registradas; continuidad `CONT-SECONDARY`; campos ausentes y una diferencia EN/ES preservados.
+- Integración: [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), SHA de `main` `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
+- CI pre-merge sobre `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos success. CI post-merge no verificado en esta consulta.
+- DMR-045 conserva sus cinco verificaciones primarias abiertas.
