@@ -278,8 +278,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 ### DEC-DM-030 — Entrevistas del autor sobre planes editoriales no equivalen a pasajes de canon
 
 - **Fecha:** 2026-10-29.
-- **Estado:** criterio aplicado; integración de su implementación pendiente de CI.
+- **Estado:** integrado y validado mediante [PR #199](https://github.com/jonhararagi/wordwaifu/pull/199), squash SHA 65c4eb53d50e16c8bcca48393e51e35ebd5bc360.
 - **Contexto:** la entrevista pública a Fujino Omori en LN News Online (2024-12-15) menciona tentativamente una futura entrega de Familia Chronicle centrada en Zeus o quizá Meteria.
 - **Decisión:** registrar el material como fuente primaria solo para la declaración editorial, con CONT-UNVERIFIED y sin claims/eventos narrativos. Una posibilidad editorial no es una confirmación de publicación ni prueba de acontecimientos ficticios, identidades o parentescos.
 - **Impacto en DMR-045:** no se cierra ninguno de los cinco expedientes. Mantener pendientes las pruebas narrativas específicas y evitar reabrir esta entrevista para buscar datos que no contiene.
 - **Fuente registrada:** DMR-045-SRC-057; informe DMR-045, registro central de fuentes, directorio in-app y prueba de regresión.
+- **CI pre-merge sobre el head PR 38eee8702e5d98fadcc160c8a7604eab1a6a42ab:** [Validate WordWaifu #40911237809](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237809) y [DanMachi Lore and Retrieval Integrity #40911237807](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237807), ambos success.
+- **CI post-merge sobre el SHA exacto de main 65c4eb53d50e16c8bcca48393e51e35ebd5bc360:** [Validate WordWaifu #40911471211](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471211) y [DanMachi Lore and Retrieval Integrity #40911471327](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471327), ambos success. El primer intento de Validate falló en el smoke de navegador al esperar 5 s por un retrato remoto (tests/browser_smoke.cjs:517); se repitió únicamente ese job y el segundo intento pasó.
