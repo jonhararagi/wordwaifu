@@ -4262,3 +4262,119 @@ verification_status: stub
 - rights_note: Conservar paráfrasis breve y URL; no copiar texto extenso.
 - verified_by: DANMACHI-RESEARCH-056
 - verification_status: secondary_checked
+
+
+## DMR-057-SRC-001 · Aisha Belka — DanMachi Wiki
+
+- source_id: DMR-057-SRC-001
+- title: Aisha Belka
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Página comunitaria web
+- language: Inglés
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/wiki/Aisha_Belka
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Information, Skill/Magic/Equipment, Abilities, Magic, Development Abilities y Equipment.
+- claims_supported: [DMR-057-CLM-001]
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Perfil comunitario útil para capacidades reportadas; no se abrió la novela para cotejar los detalles.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-057
+- verification_status: secondary_checked
+
+## DMR-057-SRC-002 · Anya Fromel — DanMachi Wiki
+
+- source_id: DMR-057-SRC-002
+- title: Anya Fromel
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Página comunitaria web
+- language: Inglés
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/wiki/Anya_Fromel
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Information, Skill/Magic/Equipment, Abilities, Magic y Development Abilities.
+- claims_supported: [DMR-057-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Resume magia y limitaciones reportadas; no sustituye el texto primario.
+- conflicting_sources: [DMR-057-SRC-003]
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-057
+- verification_status: secondary_checked
+
+## DMR-057-SRC-003 · Anya Fromel — Wiki DanMachi
+
+- source_id: DMR-057-SRC-003
+- title: Anya Fromel
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Página comunitaria web
+- language: Español
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/es/wiki/Anya_Fromel
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Habilidad, Magia y Equipo; Magia; Habilidades de Desarrollo.
+- claims_supported: [DMR-057-CLM-002]
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Añade la condición de cancelación si Anya pierde el conocimiento, no mostrada en el fragmento inglés consultado; conservar como diferencia secundaria pendiente.
+- conflicting_sources: [DMR-057-SRC-002]
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-057
+- verification_status: secondary_checked
+
+## DMR-057-SRC-004 · Chloe Rollo — DanMachi Wiki
+
+- source_id: DMR-057-SRC-004
+- title: Chloe Rollo
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Página comunitaria web
+- language: Inglés
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/wiki/Chloe_Rollo
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Information, Skill/Magic/Equipment, Abilities, Magic, Development Abilities y Equipment.
+- claims_supported: [DMR-057-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Perfil comunitario; las descripciones de habilidades y pasado no fueron cotejadas en el texto primario.
+- conflicting_sources: [DMR-057-SRC-005]
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-057
+- verification_status: secondary_checked
+
+## DMR-057-SRC-005 · Chloe Rollo — Wiki DanMachi
+
+- source_id: DMR-057-SRC-005
+- title: Chloe Rollo
+- creator_or_publisher: Comunidad DanMachi Wiki/Fandom
+- source_type: SECONDARY
+- series: DanMachi
+- volume_or_edition: Página comunitaria web
+- language: Español
+- publication_date: No indicada
+- official_url: https://danmachi.fandom.com/es/wiki/Chloe_Rollo
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Habilidad, Magia y Equipo; Habilidades; Magia; Habilidades de Desarrollo; Equipo.
+- claims_supported: [DMR-057-CLM-003]
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Contraste comunitario de la página inglesa; no se considera fuente primaria independiente.
+- conflicting_sources: []
+- rights_note: Resumir en palabras propias.
+- verified_by: DANMACHI-RESEARCH-057
+- verification_status: secondary_checked
