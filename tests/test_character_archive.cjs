@@ -234,4 +234,24 @@ const cassandra058 = archive.getExtendedInfo("CHAR-CASSANDRA-ILION", "CONT-SECON
 assert.ok(cassandra058.sections.some(section => section.text.includes("Five Dimension Troia") && section.text.includes("no se inventa")), "Cassandra's unknown skill effect must stay explicitly unknown.");
 assert.ok(cassandra058.sections.some(section => section.text.includes("1.200.000 valis") && section.text.includes("precio de compra")), "Cassandra's rod price must not be mislabeled as a magic usage cost.");
 
+
+for (const [id, title, sourceUrl, key] of [
+  ["CHAR-FINN-DEIMNE","Finn Deimne","https://danmachi.fandom.com/wiki/Finn_Deimne","Hell Finegas"],
+  ["CHAR-RIVERIA-LJOS-ALF","Riveria Ljos Alf","https://danmachi.fandom.com/wiki/Riveria_Ljos_Alf","Alf Regina"],
+  ["CHAR-GARETH-LANDROCK","Gareth Landrock","https://danmachi.fandom.com/wiki/Gareth_Landrock","Earth Raid"]
+]) {
+  const info=archive.getExtendedInfo(id,"CONT-SECONDARY",index);
+  assert.ok(info && info.title.includes(title),title+" must expose the DMR-059 secondary capability note.");
+  assert.ok(info.sections.some(section=>section.text.includes(key)),title+" must expose a sourced capability.");
+  assert.ok(info.references.some(ref=>ref.kind==="community"&&ref.url===sourceUrl),title+" must retain its source URL.");
+  const mainInfo=archive.getExtendedInfo(id,"CONT-MAIN-LN",index);
+  assert.ok(!mainInfo || !mainInfo.sections.some(section=>section.text.includes("DMR-059")||section.text.includes("Hell Finegas y Tir na Nog")||section.text.includes("Nueve magias de falna")||section.text.includes("Earth Raid permite destruir el terreno")),title+" secondary details must not be promoted to the main light-novel continuity.");
+}
+const finn059=archive.getExtendedInfo("CHAR-FINN-DEIMNE","CONT-SECONDARY",index);
+assert.ok(finn059.sections.some(section=>section.text.includes("61")&&section.text.includes("59")), "Finn's EN/ES floor discrepancy must remain visible.");
+const riveria059=archive.getExtendedInfo("CHAR-RIVERIA-LJOS-ALF","CONT-SECONDARY",index);
+assert.ok(riveria059.sections.some(section=>section.text.includes("nueve magias de falna")&&section.text.includes("Flare Burn")&&section.text.includes("no contarla")), "Riveria's nine Falna magics must stay distinct from congenital Flare Burn.");
+const gareth059=archive.getExtendedInfo("CHAR-GARETH-LANDROCK","CONT-SECONDARY",index);
+assert.ok(gareth059.sections.some(section=>section.text.includes("solo puede lanzarse cuando Gareth está en el suelo")), "Earth Raid's reported ground-contact condition must remain explicit.");
+
 process.stdout.write("PASS character archive model: continuity, relations, moments, spoiler filtering and unavailable-evidence handling.\\n");
