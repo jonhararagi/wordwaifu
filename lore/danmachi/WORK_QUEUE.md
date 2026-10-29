@@ -33,6 +33,8 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 
 ### DMR-058 — Daphne Lauros y Cassandra Ilion (integrado y validado en main)
 
+- [x] Corregir el nombre del dossier: el contenido siempre fue Daphne/Cassandra, no Miach; usar `DANMACHI-RESEARCH-058-daphne-cassandra-capabilities.md` y no interpretar el nombre antiguo como una investigación de Miach Familia.
+
 - [x] Reutilizar CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION; no crear IDs ni alterar la continuidad del perfil existente.
 - [x] Registrar cinco fuentes comunitarias y las capacidades, condiciones de uso, equipo y campos no informados en un dossier dedicado.
 - [x] Añadir notas interactivas bajo CONT-SECONDARY y pruebas de aislamiento frente a CONT-ANIME y CONT-MAIN-LN.
