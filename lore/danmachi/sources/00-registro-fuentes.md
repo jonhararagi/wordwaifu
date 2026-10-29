@@ -4152,6 +4152,32 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
 
+## DMR-045-SRC-056 · dBook — Astrea Record, volumen 3 (ruta de muestra japonesa)
+
+- source_id: DMR-045-SRC-056
+- title: アストレア・レコード３ 正邪決戦 ダンジョンに出会いを求めるのは間違っているだろうか 英雄譚
+- creator_or_publisher: Fujino Omori / SB Creative・GA文庫; distribuidor dBook (NTT DOCOMO)
+- source_type: LICENSED_RETAILER_SAMPLE
+- series: DanMachi Heroic Tale: Astrea Record
+- volume_or_edition: Volumen 3; edición japonesa. La ficha editorial de SB Creative identifica el ISBN 978-4-8156-1019-7.
+- language: Japonés
+- publication_date: 2022-12-14 (fecha de distribución electrónica mostrada por dBook)
+- official_url: https://dbook.docomo.ne.jp/item/b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9/2000/
+- sample_action_url: https://dbook.docomo.ne.jp/applaunch/view/?launch=app&pid=b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9
+- accessed_at: 2026-10-29
+- locator_type: retailer_sample_action_to_app_launcher
+- locator: ficha del producto con enlace 試し読み; al seguirlo, se abrió la ruta de lanzamiento de la aplicación, que no devolvió texto extraíble ni páginas narrativas
+- claims_supported: []
+- events_supported: []
+- character_ids: []
+- continuity_scope: CONT-AR
+- reliability_note: Ruta de distribuidor licenciado, útil como punto de entrada para consulta manual autorizada; el catálogo y la acción de muestra no son un localizador narrativo primario. No se deduce presencia o ausencia de personajes.
+- access_result: la ficha pública confirma título, autores, sello editorial y una acción de muestra. Al seguir la acción de muestra, la extracción web abrió el lanzador de aplicación dBook y devolvió cero líneas de texto. No se vio ninguna página de la novela; el estado del lector dentro de la aplicación queda desconocido.
+- reopen_trigger: volver a inspeccionar únicamente cuando una sesión normal autorizada permita ver páginas narrativas legibles con localizador reproducible; no repetir la consulta de metadatos ni tratar la ruta de aplicación como fallo general.
+- rights_note: no se almacena texto de la novela; solo metadatos públicos y resultado de acceso.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
 ## DMR-056-SRC-001 · DanMachi Wiki ES — Liliruca Arde
 
 - source_id: DMR-056-SRC-001

@@ -683,3 +683,14 @@
 - **CI post-merge sobre el SHA exacto de main** `190b4313a21569aa056548f8a40f9022b900b028`: [Validate WordWaifu #40867850127](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850127) y [DanMachi Lore and Retrieval Integrity #40867850048](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850048), ambos `success`.
 - **Límite de canon:** wikis secundarias; no se agregan IDs, claims del grafo, relaciones, eventos, aliases ni reescrituras de personalidad. DMR-045 sigue abierta; Orario sigue pospuesto.
 
+### CONV-DM-2026-10-29-008 — Ruta dBook de muestra de Astrea Record 3
+
+- **Fecha:** 2026-10-29.
+- **Tipo:** nueva ruta licenciada y control anti-repetición para DMR-045.
+- **Estado:** implementado en rama; integración y CI de PR pendientes.
+- **Hallazgo:** la ficha pública de [dBook](https://dbook.docomo.ne.jp/item/b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9/2000/) anuncia 試し読み para Astrea Record 3. La acción conduce al [lanzador dBook](https://dbook.docomo.ne.jp/applaunch/view/?launch=app&pid=b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9), que no devolvió texto extraíble.
+- **Aplicación:** DMR-045-SRC-056 se registra como `metadata_checked_only` en el registro de fuentes y se añade al directorio de fuentes de la aplicación con prueba de regresión.
+- **Límite:** no se obtiene un pasaje narrativo; no se generan claims/eventos/relaciones/alias y no se cambian personalidades. Los cinco expedientes primarios de DMR-045 siguen abiertos y Orario permanece pospuesto.
+- **Siguiente acción:** reintentar esta ruta solo con una sesión normal autorizada que produzca páginas narrativas legibles; no repetir metadatos ni tratar el lanzador como evidencia de fallo general.
+
+
