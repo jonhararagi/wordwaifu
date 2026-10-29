@@ -1099,3 +1099,14 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] CI post-merge del SHA exacto: [Validate #40911471211](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471211) y [Lore/Integrity #40911471327](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471327), ambos success.
 - **Nota de CI:** el primer intento post-merge de Validate expiró al esperar la imagen remota del retrato de Ryuu en el smoke de navegador (5 s, línea 517); solo se repitió ese job y el segundo intento pasó.
 - **Límite:** la entrevista no es narración y no resuelve ninguno de los cinco cotejos de DMR-045. Orario sigue pospuesto.
+
+
+## DMR-059 — Finn Deimne, Riveria Ljos Alf y Gareth Landrock
+
+- [x] Reutilizar `CHAR-FINN-DEIMNE`, `CHAR-RIVERIA-LJOS-ALF` y `CHAR-GARETH-LANDROCK`; no crear identidades nuevas ni alterar sus perfiles oficiales de adaptación.
+- [x] Registrar cinco referencias comunitarias DMR-059-SRC-001–005 con idioma, URL, alcance y límites.
+- [x] Registrar el conflicto EN/ES de Finn (piso alcanzado 61 frente a 59) sin elegir una versión por intuición.
+- [x] Separar las nueve magias de falna de Riveria de Flare Burn, descrita aparte como magia congénita.
+- [x] Añadir notas recuperables bajo `CONT-SECONDARY` y pruebas de aislamiento frente a `CONT-ANIME`, `CONT-SO` y `CONT-MAIN-LN`.
+- [ ] Cotejo narrativo primario de cada mecánica pendiente; los costes numéricos y localizadores no reportados permanecen ausentes.
+- **Límite persistente:** DMR-045 continúa abierto y sus cinco cotejos primarios siguen pendientes. No repetir las páginas de Finn/Riveria/Gareth para buscar campos que no enumeran; reabrir solo ante fuente nueva, actualización material o pasaje licenciado legible.
