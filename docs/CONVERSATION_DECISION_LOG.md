@@ -612,3 +612,13 @@
 - **Aplicación:** priorizar DMR-056 (Liliruca Arde, Mikoto Yamato, Haruhime y ficha nueva de Nina Tulle), enlazar fuentes y probar el archivo interactivo. Datos de wiki bajo `CONT-SECONDARY`.
 - **Límites:** no inventar habilidades/costes que la fuente no informa; registrar contradicciones sin resolverlas por intuición; no reescribir personalidades sin evidencia nueva; no cerrar DMR-045 ni repetir lectores agotados sin texto primario nuevo.
 - **Estado:** integrada en `main` mediante [PR #186](https://github.com/jonhararagi/wordwaifu/pull/186), merge SHA `a51f3a8a92ceb74e12be0d9dad1e4c5ad4a7a470`. Head probado: `4d299431611382a96ea0881bca1c0c722eb12e73`. Validate WordWaifu [#40773212555](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y DanMachi Lore and Retrieval Integrity [#40773212768](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) quedaron en success antes del merge. La comprobación CI post-merge no pudo confirmarse desde el conector disponible; no se declara verificada.
+
+
+### CONV-DM-2026-10-29-001 — No repetir búsquedas secundarias sin evidencia nueva
+
+- **Fecha:** 2026-10-29.
+- **Estado:** ACCEPTED.
+- **Decisión:** cuando se hayan consultado repetidamente las mismas páginas y estas no informen niveles, magia, skills, costes u otros campos, registrar «no informado en las fuentes consultadas» y continuar con otros personajes. No insistir en el mismo campo mediante búsquedas equivalentes ni convertir ausencia de información en prueba de inexistencia canónica.
+- **Aplicación:** mantener una bitácora por personaje con fuentes/URLs, datos encontrados, campos no reportados, contradicciones y disparadores de reapertura. Solo reabrir con evidencia nueva, fuente oficial nueva, cambio material de una página o contradicción relevante.
+- **Tanda aplicada:** DMR-057, Aisha Belka, Anya Fromel y Chloe Rollo; cinco referencias comunitarias, continuidad `CONT-SECONDARY`.
+- **Límite:** esta decisión metodológica no cierra DMR-045 ni convierte los datos de wiki en canon primario.
