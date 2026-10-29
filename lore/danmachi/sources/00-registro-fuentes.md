@@ -4126,6 +4126,32 @@ verification_status: stub
 - verification_status: metadata_checked_only
 
 
+## DMR-045-SRC-055 · Google Play Books — DanMachi, volumen 20 (edición inglesa; muestra anunciada)
+
+- source_id: DMR-045-SRC-055
+- title: Is It Wrong to Try to Pick Up Girls in a Dungeon?, Vol. 20 (light novel) — ficha de Google Play Books
+- creator_or_publisher: Google Play Books; vendedor indicado: Yen Press LLC
+- source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_SAMPLE_OFFER
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 20, edición inglesa Yen Press / Yen On; ISBN digital 9798855437867; identificador del producto Google Books/Play Books XWHEEQAAQBAJ
+- language: Inglés
+- official_url: https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ
+- related_official_url: https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel
+- same_edition_route: DMR-045-SRC-018 (Google Books; mismo identificador XWHEEQAAQBAJ)
+- accessed_at: 2026-10-29
+- locator_type: product_page_and_free_sample_offer
+- locator: ficha pública del producto: «Free sample», 232 páginas y vendedor Yen Press LLC; no es localizador de página narrativa
+- claims_supported: []
+- events_supported: []
+- character_ids: []
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: ficha comercial de una edición licenciada. La existencia de una muestra anunciada no demuestra que se hayan leído sus páginas ni que cubra los pasajes pendientes. La página de Google Play comparte el identificador del libro con DMR-045-SRC-018; es una ruta de acceso alternativa, no evidencia independiente ni un claim nuevo.
+- access_result: el 2026-10-29 se comprobó la ficha pública y el control «Free sample». La herramienta de navegador no llegó a iniciar la navegación porque devolvió insufficient_credits; además, la apertura directa de https://play.google.com/books/reader?id=XWHEEQAAQBAJ no fue accesible mediante la extracción web. No se observó una respuesta del lector ni una página narrativa, por lo que el funcionamiento de la muestra queda desconocido. La limitación corresponde a la herramienta de consulta y no demuestra un fallo del lector.
+- reopen_trigger: volver a intentar solo cuando una sesión pública autorizada permita abrir la muestra normalmente, o cuando se disponga de páginas visibles de una edición licenciada con un localizador reproducible. No repetir comprobaciones de metadatos/índice como sustituto de lectura.
+- rights_note: no se almacena texto de la novela; solo metadatos públicos y límite de acceso.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
+
 ## DMR-056-SRC-001 · DanMachi Wiki ES — Liliruca Arde
 
 - source_id: DMR-056-SRC-001
