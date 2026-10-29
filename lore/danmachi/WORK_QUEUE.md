@@ -1031,3 +1031,10 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Revisar el estado público disponible de Yen Press Astrea Record 3, la ruta existente DMR-045-SRC-018 de Google Books volumen 20 y la ficha oficial de GA Bunko ya registrada bajo DMR-044. No se obtuvo texto narrativo nuevo: sinopsis general, índice/términos sin páginas legibles y HTTP 503, respectivamente.
 - [x] Evitar IDs y claims duplicados; no crear hechos, eventos, relaciones o alias ni modificar personalidades.
 - [ ] Reanudar los cinco cotejos primarios únicamente cuando una edición licenciada muestre narración legible o una nueva fuente oficial resuelva un punto concreto. Mantener Alfia, Zald, Meteria, Erebus y Rudra en HOLD_FOR_PRIMARY_SOURCE; no iniciar expansión de Orario mientras tanto.
+
+## Verificación de integración — puerta de evidencia DMR-045 (PR #190, 2026-10-29)
+
+- PR [#190](https://github.com/jonhararagi/wordwaifu/pull/190) fusionada por squash; SHA exacto de main 779980733c3f27ee5d9cb2f7adc2705d9ccadfaf.
+- **CI pre-merge sobre a05567f854d8db7704403d9badaadda15b84316b:** [Catalog/retrieval/browser smoke #40857051535](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051535) y [validate #40857051732](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051732), success.
+- **CI post-merge sobre el SHA exacto 779980733c3f27ee5d9cb2f7adc2705d9ccadfaf:** [Catalog/retrieval/browser smoke #40857268146](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268146) y [validate #40857268310](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268310), success.
+- **Límite persistente:** DMR-045 sigue IN_PROGRESS; los cinco expedientes continúan HOLD_FOR_PRIMARY_SOURCE. No se abren tareas nuevas de Orario por esta integración documental.
