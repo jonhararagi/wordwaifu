@@ -655,3 +655,14 @@
 - **CI pre-merge sobre el head a05567f854d8db7704403d9badaadda15b84316b:** [Catalog, retrieval and browser smoke #40857051535](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051535) y [validate #40857051732](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051732), ambos success.
 - **CI post-merge sobre el SHA exacto 779980733c3f27ee5d9cb2f7adc2705d9ccadfaf:** [Catalog, retrieval and browser smoke #40857268146](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268146) y [validate #40857268310](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268310), ambos success.
 - **Alcance:** actualiza documentos persistentes, registra que la consulta actual no produjo narración primaria legible y deja DMR-045 abierto para Alfia, Zald, Meteria, Erebus y Rudra. No se añadieron claims ni se alteró el canon.
+
+### CONV-DM-2026-10-29-006 — Ruta Google Play Books del volumen 20; muestra aún no inspeccionada
+
+- **Fecha:** 2026-10-29.
+- **Tipo:** hallazgo de investigación, actualización de fuente y regresiones de recuperación.
+- **Estado:** registrado; integración/CI pendientes en la rama `docs/dmr045-google-play-vol20-sample-route-2026-10-29` hasta la verificación de GitHub.
+- **Hallazgo verificable:** la ficha de Google Play Books para la edición inglesa de DanMachi vol. 20 anuncia “Free sample”, indica a Yen Press LLC como vendedor y muestra 232 páginas; la ficha editorial de Yen Press da el ISBN digital 9798855437867 y fecha de publicación del 11 de agosto de 2026. Producto: https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ; editor: https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel.
+- **Límite de acceso:** la herramienta de navegador disponible devolvió `insufficient_credits` antes de comenzar la navegación; la apertura directa de https://play.google.com/books/reader?id=XWHEEQAAQBAJ no fue accesible mediante la extracción web. No se observó respuesta del lector ni texto narrativo. Esto no demuestra que el lector falle.
+- **Registro:** DMR-045-SRC-055, `metadata_checked_only`, `claims_supported: []`, `events_supported: []`, `CONT-MAIN-LN`. Comparte el identificador XWHEEQAAQBAJ con la ruta de Google Books DMR-045-SRC-018; es una vía de acceso alternativa, no evidencia independiente.
+- **Acción:** añadir la ruta a la investigación y al directorio de fuentes de WordWaifu con una prueba de regresión; reabrir el cotejo solo cuando haya páginas narrativas licenciadas legibles y localizador reproducible. Alfia, Zald, Meteria, Erebus y Rudra permanecen `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
+
