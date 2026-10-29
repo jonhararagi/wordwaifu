@@ -1087,3 +1087,12 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Registrar que una entrega de Familia Chronicle sobre Zeus o quizá Meteria es una posibilidad futura sin fecha confirmada; no derivar hechos de la ficción.
 - [ ] Mantener abiertos los cinco cotejos primarios: Alfia (habilidades/costes/escenas), Zald (técnica/Udaeus/Ottar), Meteria (maternidad/parentesco en narración primaria), Erebus (novelización separada del juego) y Rudra (responsabilidad personal).
 - **Límite:** no se añadieron claims, relaciones o eventos. Orario continúa pospuesto.
+
+## Verificación de integración — DMR-045-SRC-057 / PR #199 (2026-10-29)
+
+- [x] Integrar la entrevista de autor como fuente de contexto editorial, sin claims narrativos, con regresión del directorio in-app.
+- [x] Fusionar [PR #199](https://github.com/jonhararagi/wordwaifu/pull/199) por squash; SHA de main verificado: 65c4eb53d50e16c8bcca48393e51e35ebd5bc360.
+- [x] CI pre-merge: [Validate #40911237809](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237809) y [Lore/Integrity #40911237807](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237807), ambos success sobre el head 38eee8702e5d98fadcc160c8a7604eab1a6a42ab.
+- [x] CI post-merge del SHA exacto: [Validate #40911471211](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471211) y [Lore/Integrity #40911471327](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471327), ambos success.
+- **Nota de CI:** el primer intento post-merge de Validate expiró al esperar la imagen remota del retrato de Ryuu en el smoke de navegador (5 s, línea 517); solo se repitió ese job y el segundo intento pasó.
+- **Límite:** la entrevista no es narración y no resuelve ninguno de los cinco cotejos de DMR-045. Orario sigue pospuesto.

@@ -1130,3 +1130,10 @@ Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se cons
 - **Registro:** DMR-045-SRC-057; AUTHOR_INTERVIEW; CONT-UNVERIFIED; claims_supported: []; events_supported: []. La entrada se añade al registro central y al directorio de fuentes de la aplicación con una regresión de límites.
 - **Conclusión:** no cambia ningún claim, relación, acontecimiento, alias ni ficha de personaje. Los cinco expedientes de DMR-045 siguen HOLD_FOR_PRIMARY_SOURCE; no se reabre la expansión de Orario.
 - **Regla anti-repetición:** no volver a consultar esta entrevista para buscar pasajes narrativos que no contiene. Reabrir la pregunta de Meteria cuando se publique material narrativo nuevo o aparezca una fuente primaria que confirme expresamente los vínculos.
+
+## Integración verificada — DMR-045-SRC-057 / PR #199 (2026-10-29)
+
+- **Integración:** [PR #199](https://github.com/jonhararagi/wordwaifu/pull/199), squash merge; SHA exacto de main: [65c4eb53d50e16c8bcca48393e51e35ebd5bc360](https://github.com/jonhararagi/wordwaifu/commit/65c4eb53d50e16c8bcca48393e51e35ebd5bc360).
+- **CI pre-merge sobre el head PR 38eee8702e5d98fadcc160c8a7604eab1a6a42ab:** [Validate WordWaifu #40911237809](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237809) y [DanMachi Lore and Retrieval Integrity #40911237807](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237807), ambos success.
+- **CI post-merge sobre el SHA exacto de main 65c4eb53d50e16c8bcca48393e51e35ebd5bc360:** [Validate WordWaifu #40911471211](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471211) y [DanMachi Lore and Retrieval Integrity #40911471327](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471327), ambos success. El primer intento de Validate falló en el smoke de navegador al esperar 5 s por un retrato remoto (tests/browser_smoke.cjs:517); se repitió únicamente ese job y el segundo intento pasó.
+- **Resultado de contenido:** la entrevista queda disponible en el directorio de fuentes con los límites explícitos. No añade claims/eventos/relaciones, no cambia fichas y no cierra ningún cotejo primario de DMR-045.
