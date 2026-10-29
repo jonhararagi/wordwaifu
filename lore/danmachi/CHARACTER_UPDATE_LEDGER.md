@@ -429,3 +429,12 @@ Fuentes consultadas:
 - **CI post-merge sobre el SHA exacto `190b4313a21569aa056548f8a40f9022b900b028`:** [Validate #40867850127](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850127) y [Lore/Integrity #40867850048](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850048), ambos `success`.
 - **Límite:** no se reescriben personalidades ni se crean claims canónicos, sucesos, relaciones, aliases o IDs duplicados. DMR-045 permanece abierto.
 
+## DMR-045 — ruta dBook para Astrea Record 3 (2026-10-29)
+
+- **Ruta nueva:** ficha de dBook/NTT DOCOMO para la edición japonesa de Astrea Record 3, con acción 試し読み.
+- **Resultado reutilizable:** la acción lleva al lanzador de la aplicación dBook; la extracción pública devolvió cero líneas y no expuso una página narrativa. El estado del lector dentro de la aplicación queda desconocido.
+- **Estado:** DMR-045-SRC-056 `metadata_checked_only`; no aporta claims. No volver a consultar los metadatos ni interpretar el lanzador como un fallo general.
+- **Cierre por personaje:** Alfia, Zald, Meteria, Erebus y Rudra siguen `HOLD_FOR_PRIMARY_SOURCE`. No se cambian personalidades ni se infiere al padre de Bell o responsabilidad individual de Rudra desde los actos de su Familia.
+- **Reabrir solo si:** una sesión autorizada muestra texto narrativo legible con localizador reproducible o aparece evidencia oficial nueva que resuelva una pregunta concreta.
+
+
