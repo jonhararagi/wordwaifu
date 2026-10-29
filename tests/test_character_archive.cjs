@@ -247,6 +247,17 @@ for (const [id, title, sourceUrl, key] of [
   const mainInfo=archive.getExtendedInfo(id,"CONT-MAIN-LN",index);
   assert.ok(!mainInfo || !mainInfo.sections.some(section=>section.text.includes("DMR-059")||section.text.includes("Hell Finegas y Tir na Nog")||section.text.includes("Nueve magias de falna")||section.text.includes("Earth Raid permite destruir el terreno")),title+" secondary details must not be promoted to the main light-novel continuity.");
 }
+for (const [id, continuities] of [
+  ["CHAR-FINN-DEIMNE",["CONT-ANIME"]],
+  ["CHAR-RIVERIA-LJOS-ALF",["CONT-SO"]],
+  ["CHAR-GARETH-LANDROCK",["CONT-SO"]]
+]) {
+  for (const continuity of continuities) {
+    const officialInfo=archive.getExtendedInfo(id,continuity,index);
+    assert.ok(!officialInfo || !officialInfo.sections.some(section=>section.title.includes("DMR-059")||section.text.includes("DMR-059")),
+      id+" DMR-059 secondary notes must not leak into "+continuity+".");
+  }
+}
 const finn059=archive.getExtendedInfo("CHAR-FINN-DEIMNE","CONT-SECONDARY",index);
 assert.ok(finn059.sections.some(section=>section.text.includes("61")&&section.text.includes("59")), "Finn's EN/ES floor discrepancy must remain visible.");
 const riveria059=archive.getExtendedInfo("CHAR-RIVERIA-LJOS-ALF","CONT-SECONDARY",index);
