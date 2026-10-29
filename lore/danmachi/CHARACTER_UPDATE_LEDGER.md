@@ -424,6 +424,8 @@ Fuentes consultadas:
 - **Cassandra — encontrado:** nivel 3/piso 37 reportados además de snapshot anterior nivel 2; Soullight, Cure Ephialtes, Five Dimension Troia, Treatment, Holy Crystal Rod y Rabbit Charm. El efecto de Five Dimension Troia sigue desconocido; el precio de la vara no se etiqueta como coste de uso mágico.
 - **Cassandra — no informado/cotejado:** costes de Mind, duración/cooldowns exactos, efecto de Five Dimension Troia y localizadores narrativos primarios.
 - **Anti-repetición:** no consultar estas mismas páginas de nuevo para buscar datos no reportados. Reabrir solo ante fuente nueva/materialmente actualizada, contradicción pertinente o pasaje licenciado legible.
-- **Implementación:** informe DMR-058, registro maestro de fuentes, archivo interactivo y pruebas de continuidad; CI e integración siguen pendientes en esta rama.
+- **Integración:** [PR #194](https://github.com/jonhararagi/wordwaifu/pull/194), squash SHA de `main` `190b4313a21569aa056548f8a40f9022b900b028`; incluye informe, registro de fuentes, archivo interactivo, directorio in-app y regresiones.
+- **CI pre-merge:** [Validate #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [Lore/Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), ambos `success` sobre `ef14f8b914fb424cf816f0d6a27f258fbe230843`.
+- **CI post-merge sobre el SHA exacto `190b4313a21569aa056548f8a40f9022b900b028`:** [Validate #40867850127](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850127) y [Lore/Integrity #40867850048](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850048), ambos `success`.
 - **Límite:** no se reescriben personalidades ni se crean claims canónicos, sucesos, relaciones, aliases o IDs duplicados. DMR-045 permanece abierto.
 

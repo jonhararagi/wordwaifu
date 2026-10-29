@@ -284,11 +284,12 @@
 
 ## DEC-041 — Añadir pasada funcional secundaria de Daphne Lauros y Cassandra Ilion
 
-**Estado:** implementado en rama; validación CI e integración pendientes.  
+**Estado:** integrado y validado en `main`; CI pre-merge y post-merge aprobados.  
 **Fecha:** 2026-10-29.
 
 - **Alcance:** reutilizar CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION y exponer detalles de las wikis únicamente bajo CONT-SECONDARY.
 - **Aplicación:** informe DMR-058, cinco referencias comunitarias, notas del archivo interactivo y pruebas que verifican recuperación y aislamiento de continuidades.
 - **Límites:** no reescribir personalidad, crear claims/relaciones/eventos/aliases canónicos ni inferir costes o efectos ausentes. La información comunitaria no equivale a cotejo de novela.
 - **Prioridad preservada:** DMR-045 sigue abierta; los cinco localizadores primarios solo se reabren con texto licenciado legible o fuente oficial nueva. Orario sigue pospuesto.
+- **Integración:** PR [#194](https://github.com/jonhararagi/wordwaifu/pull/194), squash SHA `190b4313a21569aa056548f8a40f9022b900b028`; CI pre-merge: [Validate #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [Lore/Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), ambos success sobre el head exacto. Post-merge sobre `190b4313a21569aa056548f8a40f9022b900b028`: [Validate #40867850127](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850127) y [Lore/Integrity #40867850048](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850048), ambos `success`.
 
