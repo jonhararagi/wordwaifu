@@ -317,6 +317,22 @@ assert.match(sbCreativeAstrea3CurrentReader[0].limits, /metadata_checked_only/);
 assert.match(sbCreativeAstrea3CurrentReader[0].limits, /CONT-AR/);
 
 
+
+const sbCreativeAstrea3CurrentReader = sources.filter(source => source.id === "official-sbcreative-astrea-record-vol3-sample");
+assert.equal(sbCreativeAstrea3CurrentReader.length, 1, "SB Creative Astrea Record 3 reader route must remain discoverable exactly once");
+assert.equal(sbCreativeAstrea3CurrentReader[0].category, "official");
+assert.equal(sbCreativeAstrea3CurrentReader[0].url, "https://ebook.sbcr.jp/sbv.17050.sbcr/main.html?cid=81561019JAAA03MBJE3X&lginbtn=false");
+assert.ok(sbCreativeAstrea3CurrentReader[0].coverage.includes("https://ebook.sbcr.jp/product/81561019JAAA03MBJE3X"));
+assert.ok(sbCreativeAstrea3CurrentReader[0].coverage.includes("立ち読み（無料）"));
+assert.ok(sbCreativeAstrea3CurrentReader[0].coverage.includes("お使いのブラウザは新ビューワに対応しておりません。"));
+assert.match(sbCreativeAstrea3CurrentReader[0].limits, /Now loading\.\.\./);
+assert.match(sbCreativeAstrea3CurrentReader[0].limits, /seven lines|siete líneas/i);
+assert.match(sbCreativeAstrea3CurrentReader[0].limits, /insufficient_credits/);
+assert.match(sbCreativeAstrea3CurrentReader[0].limits, /no demuestra indisponibilidad general/i);
+assert.match(sbCreativeAstrea3CurrentReader[0].limits, /metadata_checked_only/);
+assert.match(sbCreativeAstrea3CurrentReader[0].limits, /CONT-AR/);
+
+
 const bookLiveAstrea3Review = sources.filter(source => source.id === "community-booklive-astrea-record-vol3-review");
 assert.equal(bookLiveAstrea3Review.length, 1, "BookLive Astrea Record 3 review must be discoverable exactly once");
 assert.equal(bookLiveAstrea3Review[0].category, "community");
