@@ -614,19 +614,13 @@
 - **Estado:** integrada en `main` mediante [PR #186](https://github.com/jonhararagi/wordwaifu/pull/186), merge SHA `a51f3a8a92ceb74e12be0d9dad1e4c5ad4a7a470`. Head probado: `4d299431611382a96ea0881bca1c0c722eb12e73`. Validate WordWaifu [#40773212555](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y DanMachi Lore and Retrieval Integrity [#40773212768](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) quedaron en success antes del merge. La comprobación CI post-merge no pudo confirmarse desde el conector disponible; no se declara verificada.
 
 
-### CONV-DM-2026-10-29-001 — No repetir búsquedas secundarias sin evidencia nueva
+### CONV-DM-2026-10-29-002 — Integración de DMR-057 en main
 
 - **Fecha:** 2026-10-29.
-- **Estado:** ACCEPTED.
-- **Decisión:** cuando se hayan consultado repetidamente las mismas páginas y estas no informen niveles, magia, skills, costes u otros campos, registrar «no informado en las fuentes consultadas» y continuar con otros personajes. No insistir en el mismo campo mediante búsquedas equivalentes ni convertir ausencia de información en prueba de inexistencia canónica.
-- **Aplicación:** mantener una bitácora por personaje con fuentes/URLs, datos encontrados, campos no reportados, contradicciones y disparadores de reapertura. Solo reabrir con evidencia nueva, fuente oficial nueva, cambio material de una página o contradicción relevante.
-- **Tanda aplicada:** DMR-057, Aisha Belka, Anya Fromel y Chloe Rollo; cinco referencias comunitarias, continuidad `CONT-SECONDARY`.
-- **Límite:** esta decisión metodológica no cierra DMR-045 ni convierte los datos de wiki en canon primario.
-
-
-- **Estado:** INTEGRADO Y VALIDADO. PR [#188](https://github.com/jonhararagi/wordwaifu/pull/188), merge SHA `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
-- **CI pre-merge:** [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos success sobre `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`.
-- **CI post-merge:** [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos success sobre el SHA exacto de `main`.
+- **Tipo:** integración técnica y actualización de estado.
+- **Estado:** INTEGRADO Y VALIDADO.
+- **Resultado:** la PR [#188](https://github.com/jonhararagi/wordwaifu/pull/188) se fusionó mediante squash en `main`; SHA exacto de integración: `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
+- **CI pre-merge sobre `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`:** [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos `success`.
+- **CI post-merge sobre el SHA exacto de integración:** [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos `success`.
 - **Alcance:** capacidades secundarias de Aisha, Anya y Chloe bajo CONT-SECONDARY; se conserva la diferencia EN/ES sobre Remiste Felis y los campos no informados.
 - **Límite:** DMR-045 sigue abierto; no se promueve evidencia comunitaria a primaria ni se reescriben personalidades.
-
