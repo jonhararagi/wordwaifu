@@ -105,6 +105,18 @@ assert.match(googleBooksPreview[0].coverage, /Page didn't load/);
 assert.match(googleBooksPreview[0].limits, /HTTP 429/);
 assert.match(googleBooksPreview[0].limits, /No se infiere que un personaje esté ausente/i);
 assert.match(googleBooksPreview[0].limits, /metadata_checked_only/);
+const googlePlayVol20 = sources.filter(source => source.id === "licensed-preview-google-play-danmachi-vol20");
+assert.equal(googlePlayVol20.length, 1, "Google Play Books DanMachi vol. 20 route must appear exactly once");
+assert.equal(googlePlayVol20[0].category, "licensed_retailer");
+assert.equal(googlePlayVol20[0].url, "https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ");
+assert.equal(googlePlayVol20[0].authority, "Distribuidor licenciado; muestra anunciada, no texto narrativo");
+assert.match(googlePlayVol20[0].coverage, /Free sample/);
+assert.match(googlePlayVol20[0].coverage, /XWHEEQAAQBAJ/);
+assert.match(googlePlayVol20[0].limits, /insufficient_credits/);
+assert.match(googlePlayVol20[0].limits, /no una falla confirmada del lector/i);
+assert.match(googlePlayVol20[0].limits, /metadata_checked_only/);
+assert.ok(googlePlayVol20[0].limits.includes("claims_supported: []"));
+
 const koboVol20 = sources.filter(source => source.id === "licensed-retailer-kobo-danmachi-vol20");
 assert.equal(koboVol20.length, 1, "Kobo DanMachi vol. 20 route must appear exactly once");
 assert.equal(koboVol20[0].category, "licensed_retailer");

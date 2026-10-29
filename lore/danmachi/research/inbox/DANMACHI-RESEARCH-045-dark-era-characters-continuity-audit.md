@@ -1062,12 +1062,24 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **rights_note:** no se almacena texto de la novela; solo metadatos y estado de la ruta pública.
 - **verified_by:** DANMACHI-RESEARCH-045
 
+## DMR-045-SRC-055 · Google Play Books — volumen 20 inglés (ruta de muestra anunciada)
+
+La ficha del distribuidor muestra una muestra gratuita anunciada, pero no se pudo inspeccionar el lector por el flujo público normal en esta sesión. Se registra la ruta para una futura consulta autorizada; no se registra contenido narrativo ni se crean claims a partir del catálogo.
+
+- URL del producto: [Google Play Books — DanMachi vol. 20](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ)
+- Referencia editorial: [Yen Press — volumen 20](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel)
+- Continuidad: `CONT-MAIN-LN`; ISBN digital `9798855437867`; identificador `XWHEEQAAQBAJ`, el mismo que la fuente existente DMR-045-SRC-018.
+- Resultado exacto: la ficha pública anuncia “Free sample” y señala a Yen Press LLC como vendedor. La herramienta de navegador devolvió `insufficient_credits` antes de iniciar la navegación y la URL directa del lector no fue accesible mediante la extracción web. No se pudo confirmar si la muestra abre ni ver una página narrativa.
+- Clasificación: `metadata_checked_only`; `claims_supported: []`; `events_supported: []`. No es un fallo confirmado del lector, no es evidencia independiente de SRC-018 y no resuelve ninguno de los cinco cotejos primarios.
+- Reapertura: solo cuando sea posible abrir la muestra mediante el flujo público autorizado o se disponga de páginas visibles con localizador reproducible.
+
 ## Revisión pública de acceso — 2026-10-29, sin texto narrativo nuevo
 
 Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se conserva para reutilizar el resultado y evitar otro ciclo de análisis sin evidencia.
 
 - **Yen Press — Astrea Record, vol. 3:** [ficha editorial](https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes). La sinopsis pública describe el conflicto en términos generales, pero no expone una escena individual, diálogo ni localizador que verifique las acciones, habilidades o motivaciones de Alfia, Zald o Erebus. No se crea una fuente narrativa DMR-045 nueva desde la sinopsis.
 - **Google Books — DanMachi vol. 20:** [ficha y vista pública](https://books.google.com/books?id=XWHEEQAAQBAJ), ya registradas como DMR-045-SRC-018. La interfaz deja consultar datos bibliográficos, índice y términos comunes; las rutas consultadas no muestran páginas narrativas legibles. Los encabezados The Heroes' Afterglow y The Knights Afterglow no verifican por sí solos la técnica, el coste, el usuario ni la escena concreta de Afterglow. Los resultados de términos y la falta de vista previa no demuestran ausencia de un personaje.
+- **Google Play Books — DanMachi vol. 20 (SRC-055):** la ficha del mismo producto anuncia “Free sample” y señala a Yen Press LLC como vendedor; no se obtuvo narración legible. La herramienta de navegador no llegó a iniciar por falta de créditos y la URL directa del lector no fue accesible mediante la extracción web. Se conserva como ruta metadata-only, no como fallo confirmado del lector ni como evidencia independiente de SRC-018.
 - **GA Bunko / SB Creative — DanMachi vol. 20:** [ficha oficial](https://ga.sbcr.jp/product/9784815628697/), una fuente bibliográfica ya existente bajo DMR-044. La consulta devolvió HTTP 503; no se obtuvo texto narrativo. No se crea un ID duplicado de DMR-045.
 - **Balance:** no aparecen hechos nuevos que justifiquen actualizar los claims existentes. No se crean claims, eventos, relaciones o alias; no se modifica ninguna personalidad ni se promueven hechos de CONT-AU, CONT-GAME o fuentes comunitarias a CONT-MAIN-LN/CONT-AR.
 - **Criterio de reapertura:** abrir una nueva pasada solamente ante páginas narrativas licenciadas realmente legibles o una publicación oficial nueva que resuelva un campo concreto. Mantener:

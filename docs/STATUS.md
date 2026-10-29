@@ -1,5 +1,11 @@
 # Estado de WordWaifu
 
+## DMR-045 — ruta adicional de Google Play Books, volumen 20 (2026-10-29)
+
+- Se localizó la ficha de [Google Play Books — volumen 20](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ) desde la ficha editorial de [Yen Press](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel). La página del distribuidor anuncia “Free sample”, identifica a Yen Press LLC como vendedor y muestra 232 páginas para la edición inglesa (ISBN digital 9798855437867).
+- Se registra como DMR-045-SRC-055 y como ruta del directorio de fuentes de la aplicación. Comparte el identificador de producto XWHEEQAAQBAJ con Google Books (SRC-018); no es evidencia independiente y no añade claims.
+- La herramienta de navegador devolvió `insufficient_credits` antes de iniciar la navegación; la URL directa del lector tampoco fue accesible mediante la extracción web. El estado de la muestra es desconocido, no “fallido”. DMR-045 continúa IN_PROGRESS y mantiene abiertos los cinco cotejos primarios.
+
 ## Integración y CI post-merge — PR #190 (2026-10-29)
 
 - **PR:** [#190 — docs(danmachi): record DMR-045 primary-source gate](https://github.com/jonhararagi/wordwaifu/pull/190), fusionada por squash.
