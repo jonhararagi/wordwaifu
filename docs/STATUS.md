@@ -1,5 +1,13 @@
 # Estado de WordWaifu
 
+## Integración y CI post-merge — PR #190 (2026-10-29)
+
+- **PR:** [#190 — docs(danmachi): record DMR-045 primary-source gate](https://github.com/jonhararagi/wordwaifu/pull/190), fusionada por squash.
+- **SHA exacto de main verificado:** 779980733c3f27ee5d9cb2f7adc2705d9ccadfaf ([commit](https://github.com/jonhararagi/wordwaifu/commit/779980733c3f27ee5d9cb2f7adc2705d9ccadfaf)).
+- **Checks pre-merge** sobre el head a05567f854d8db7704403d9badaadda15b84316b: [Catalog, retrieval and browser smoke #40857051535](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051535) y [validate #40857051732](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051732), ambos success.
+- **Checks post-merge sobre el SHA exacto anterior:** [Catalog, retrieval and browser smoke #40857268146](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268146) y [validate #40857268310](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268310), ambos success.
+- La actualización documental deja DMR-045 en IN_PROGRESS y no cambia ningún claim, relación, habilidad, personalidad ni continuidad de canon.
+
 ## Corte de evidencia primaria y verificación de main — 2026-10-29
 
 - **SHA de main comprobado al iniciar esta tanda:** 8348d5610382f45f5fe30073d70f53886d259ea4 ([commit](https://github.com/jonhararagi/wordwaifu/commit/8348d5610382f45f5fe30073d70f53886d259ea4)).

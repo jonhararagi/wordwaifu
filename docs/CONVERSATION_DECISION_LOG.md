@@ -645,3 +645,13 @@
 - **SHA de main comprobado al iniciar esta tanda:** 8348d5610382f45f5fe30073d70f53886d259ea4. Los checks [Catalog, retrieval and browser smoke #40842395446](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395446) y [validate #40842395510](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395510) terminaron con success.
 - **Pendiente por personaje:** Alfia (habilidades/costes/escenas), Zald (técnica, Udaeus y secuencia con Ottar), Meteria (identificación/maternidad/parentesco, sin inferir el padre de Bell), Erebus (escenas y diálogo de CONT-AR separados de CONT-GAME) y Rudra (responsabilidad personal frente a la trampa colectiva de su Familia).
 - **Siguiente acción:** solo reabrir al obtener texto licenciado narrativo realmente legible o una fuente oficial nueva que resuelva uno de esos puntos. Orario sigue pospuesto; las cinco fichas conservan HOLD_FOR_PRIMARY_SOURCE.
+
+### CONV-DM-2026-10-29-005 — Verificación post-merge de PR #190
+
+- **Fecha:** 2026-10-29.
+- **Estado:** INTEGRADO Y VALIDADO.
+- **PR:** [#190 — docs(danmachi): record DMR-045 primary-source gate](https://github.com/jonhararagi/wordwaifu/pull/190).
+- **SHA de integración verificado en main:** 779980733c3f27ee5d9cb2f7adc2705d9ccadfaf.
+- **CI pre-merge sobre el head a05567f854d8db7704403d9badaadda15b84316b:** [Catalog, retrieval and browser smoke #40857051535](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051535) y [validate #40857051732](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051732), ambos success.
+- **CI post-merge sobre el SHA exacto 779980733c3f27ee5d9cb2f7adc2705d9ccadfaf:** [Catalog, retrieval and browser smoke #40857268146](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268146) y [validate #40857268310](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268310), ambos success.
+- **Alcance:** actualiza documentos persistentes, registra que la consulta actual no produjo narración primaria legible y deja DMR-045 abierto para Alfia, Zald, Meteria, Erebus y Rudra. No se añadieron claims ni se alteró el canon.
