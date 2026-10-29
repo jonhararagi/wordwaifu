@@ -336,4 +336,31 @@ assert.match(sbCreativeVol20[0].limits, /no se recuperó ninguna página narrati
 assert.match(sbCreativeVol20[0].limits, /metadata_checked_only/);
 assert.match(sbCreativeVol20[0].limits, /CONT-MAIN-LN/);
 
+
+const dmr058SourceSpecs = [
+  ["community-dmr058-daphne-en", "https://danmachi.fandom.com/wiki/Daphne_Lauros", /Elios Passion.*Laurus Wreath/i],
+  ["community-dmr058-daphne-es", "https://danmachi.fandom.com/es/wiki/Daphne_Lauros", /Elios Passion.*Fencer Laureate/i],
+  ["community-dmr058-cassandra-en", "https://danmachi.fandom.com/wiki/Cassandra_Ilion", /Soullight.*Five Dimension Troia/i],
+  ["community-dmr058-magic-es", "https://danmachi.fandom.com/es/wiki/Magia", /Raumure.*Soullight.*Cure Ephialtes/i],
+  ["community-dmr058-skills-es", "https://danmachi.fandom.com/es/wiki/Habilidades", /Five Dimension Troia/i]
+];
+for (const [id, url, coveragePattern] of dmr058SourceSpecs) {
+  const rows = sources.filter(source => source.id === id);
+  assert.equal(rows.length, 1, id + " must be discoverable exactly once in the in-app source directory");
+  assert.equal(rows[0].category, "community");
+  assert.equal(rows[0].publisher, "DanMachi Wiki contributors");
+  assert.equal(rows[0].authority, "Fuente secundaria");
+  assert.equal(rows[0].url, url);
+  assert.match(rows[0].coverage, coveragePattern, id + " must describe its actual coverage");
+  assert.match(rows[0].coverage, /DMR-058-SRC-00[1-5]/);
+  assert.match(rows[0].limits, /CONT-SECONDARY/);
+  assert.match(rows[0].limits, /no cotejad|no se recuper|no inferir|no aporta|no especifica|no una fuente primaria/i);
+}
+const dmr058Daphne = sources.find(source => source.id === "community-dmr058-daphne-en");
+assert.match(dmr058Daphne.limits, /Escape está condicionado a persecución/i,
+  "the source directory must preserve the conditional nature of Daphne's Escape skill");
+const dmr058Cassandra = sources.find(source => source.id === "community-dmr058-cassandra-en");
+assert.match(dmr058Cassandra.limits, /efecto concreto de Five Dimension Troia sigue desconocido/i,
+  "the source directory must not invent Five Dimension Troia's effect");
+
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
