@@ -23,12 +23,21 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - **Estado:** PR [#115](https://github.com/jonhararagi/wordwaifu/pull/115) integrada en `main` por `3f9fb9536482f381f1cdd9b533ae75d34508f749`; CI de la PR y post-merge aprobada. El alcance sigue limitado a Alfia y Zald con alineamiento provisional de baja confianza; ampliar el censo requiere una revisión individual.
 
 
-## Próximo lote accionable para probar la memoria de lore · DMR-056
+## Cohortes secundarias recientes para probar la memoria de lore · DMR-056–058
 
 - [x] Cambiar el siguiente lote de ejecución a una cohorte distinta porque las rutas públicas ya registradas de DMR-045 no proporcionaron texto narrativo legible; **DMR-045 no se cierra** y sus cinco cotejos continúan abiertos hasta una fuente primaria nueva.
 - [x] Integrar DMR-056 en `main` mediante PR #186: Liliruca Arde, Mikoto Yamato, Haruhime Sanjouno y el expediente nuevo de Nina Tulle, limitado a capacidades secundarias.
 - [x] Probar recuperación por continuidad, lectura de límites de habilidades, snapshots temporales de Haruhime y detección de la contradicción de afiliación de Nina en CI de PR #186 (ambos workflows en success).
-- [ ] Siguiente: seleccionar otra cohorte distinta; no repetir las mismas wikis ni reabrir DMR-045 sin evidencia nueva.
+- [x] Seleccionar otra cohorte distinta en DMR-057 (Aisha, Anya y Chloe) y DMR-058 (Daphne y Cassandra), sin duplicar IDs ni reabrir páginas agotadas de DMR-045.
+- [ ] Próximo paso DMR-045: reabrir los cinco cotejos primarios solo si una edición licenciada muestra páginas narrativas legibles o aparece una fuente oficial nueva; no crear otra ronda de metadatos.
+
+### DMR-058 — Daphne Lauros y Cassandra Ilion (implementado en rama; integración pendiente)
+
+- [x] Reutilizar CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION; no crear IDs ni alterar la continuidad del perfil existente.
+- [x] Registrar cinco fuentes comunitarias y las capacidades, condiciones de uso, equipo y campos no informados en un dossier dedicado.
+- [x] Añadir notas interactivas bajo CONT-SECONDARY y pruebas de aislamiento frente a CONT-ANIME y CONT-MAIN-LN.
+- [ ] Completar CI, integrar en main y registrar el SHA final y los checks post-merge.
+- **Regla factual:** no validar wikis como canon primario, no reescribir personalidad y no inferir costes ni efectos no publicados. El efecto de Five Dimension Troia permanece desconocido.
 
 ## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
 
