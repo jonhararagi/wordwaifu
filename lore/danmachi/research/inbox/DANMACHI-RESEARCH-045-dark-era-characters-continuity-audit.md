@@ -1089,3 +1089,11 @@ Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se cons
   - **Erebus:** escenas/diálogos de la novelización de Astrea Record, separados de la versión del juego.
   - **Rudra:** prueba de lo que supo, ordenó o autorizó personalmente, sin atribuirle automáticamente el plan entero de su Familia.
 - **Estado:** IN_PROGRESS a nivel de investigación; los cinco expedientes siguen en HOLD_FOR_PRIMARY_SOURCE. Orario continúa como etapa posterior.
+
+## DMR-045-SRC-055 — integración y CI verificada (2026-10-29)
+
+- Integración: [PR #192](https://github.com/jonhararagi/wordwaifu/pull/192), fusionada por squash; SHA exacto de `main` `6eb2db0161848de320c75abf7cc0241565a1644f`; head de PR `fbd4c6fef0d65066ec53b39ea22b9d4bc5377dfa`.
+- CI pre-merge sobre el head exacto: [Validate WordWaifu #40862116846](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116846) y [DanMachi Lore and Retrieval Integrity #40862116852](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116852), ambos `success`.
+- CI post-merge sobre el SHA exacto de `main`: [Validate WordWaifu #40862327265](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327265) y [DanMachi Lore and Retrieval Integrity #40862327234](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327234), ambos `success`.
+- Resultado de contenido: SRC-055 sigue `metadata_checked_only`, con `claims_supported: []`; la muestra no se inspeccionó y no resuelve los cinco cotejos de Alfia, Zald, Meteria, Erebus y Rudra. Orario continúa pospuesto.
+
