@@ -670,3 +670,14 @@
 - **Registro:** DMR-045-SRC-055, `metadata_checked_only`, `claims_supported: []`, `events_supported: []`, `CONT-MAIN-LN`. Comparte el identificador XWHEEQAAQBAJ con la ruta de Google Books DMR-045-SRC-018; es una vía de acceso alternativa, no evidencia independiente.
 - **Acción:** añadir la ruta a la investigación y al directorio de fuentes de WordWaifu con una prueba de regresión; reabrir el cotejo solo cuando haya páginas narrativas licenciadas legibles y localizador reproducible. Alfia, Zald, Meteria, Erebus y Rudra permanecen `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
 
+### CONV-DM-2026-10-29-007 — DMR-058: capacidades secundarias de Daphne y Cassandra
+
+- **Fecha:** 2026-10-29.
+- **Tipo:** investigación de lore, actualización del archivo de personajes y regresiones de continuidad.
+- **Estado:** implementado en rama; revisión CI e integración pendientes.
+- **Motivo:** al no haber texto primario nuevo que permita cerrar DMR-045, avanzar con una cohorte distinta y útil sin volver a recorrer fuentes ya agotadas.
+- **Resultado:** se enriquecen las notas interactivas de los IDs existentes CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION bajo CONT-SECONDARY. Las fuentes comunitarias reportan Raumure, Elios Passion, Laurus Wreath, Escape, Fencer Laureate, Soullight, Cure Ephialtes, Five Dimension Troia, Treatment y equipo; los costes no informados y el efecto desconocido de Five Dimension Troia quedan explícitos.
+- **Fuentes:** DMR-058-SRC-001–005 en lore/danmachi/sources/00-registro-fuentes.md.
+- **Pruebas:** regresiones de recuperación, referencias y aislamiento de CONT-ANIME/CONT-MAIN-LN; resultado CI todavía pendiente.
+- **Límite de canon:** wikis secundarias; no se agregan IDs, claims del grafo, relaciones, eventos, aliases ni reescrituras de personalidad. DMR-045 sigue abierta; Orario sigue pospuesto.
+
