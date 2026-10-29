@@ -1060,3 +1060,13 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] CI post-merge sobre el SHA exacto `6eb2db0161848de320c75abf7cc0241565a1644f`: [Validate WordWaifu #40862327265](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327265) y [DanMachi Lore and Retrieval Integrity #40862327234](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327234), ambos `success`.
 - [ ] Reabrir la investigación del texto solo cuando una sesión autorizada exponga páginas narrativas licenciadas legibles y un localizador reproducible. Alfia, Zald, Meteria, Erebus y Rudra permanecen en `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
 
+## DMR-045 — ruta de muestra dBook para Astrea Record 3 (2026-10-29)
+
+- [x] Localizar una ruta nueva de distribuidor para la edición japonesa de Astrea Record 3: [dBook / NTT DOCOMO](https://dbook.docomo.ne.jp/item/b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9/2000/); la ficha anuncia 試し読み y atribuye la obra a Fujino Omori / SB Creative・GA Bunko.
+- [x] Seguir la acción de muestra. El destino es [el lanzador dBook](https://dbook.docomo.ne.jp/applaunch/view/?launch=app&pid=b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9); la extracción web devolvió cero líneas y ninguna página narrativa. No confundir este resultado con un fallo general del lector.
+- [x] Registrar DMR-045-SRC-056 como `metadata_checked_only`, sin claims/eventos, exponer la ruta en `src/lore-corpus.js` y añadir una prueba de regresión de su presencia y límites.
+- [ ] Reintentar solo cuando una sesión normal y autorizada pueda mostrar páginas narrativas legibles y un localizador reproducible. No repetir la inspección de la ficha comercial como sustituto de leer el texto.
+- [ ] Mantener abiertos los cinco cotejos primarios: Alfia (habilidades/costes/escenas), Zald (técnica, Udaeus y enfrentamiento con Ottar), Meteria (identificación/maternidad/parentesco sin inferir al padre de Bell), Erebus (novelización separada del juego) y Rudra (responsabilidad personal no inferida de actos colectivos).
+- **Límite:** esta ruta nueva mejora las opciones de consulta manual, pero no resuelve ninguno de los cinco huecos. No se cambian personajes, claims, relaciones, eventos, alias ni personalidad; Orario permanece pospuesto.
+
+
