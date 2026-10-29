@@ -1040,3 +1040,12 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **CI pre-merge sobre a05567f854d8db7704403d9badaadda15b84316b:** [Catalog/retrieval/browser smoke #40857051535](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051535) y [validate #40857051732](https://github.com/jonhararagi/wordwaifu/actions/runs/40857051732), success.
 - **CI post-merge sobre el SHA exacto 779980733c3f27ee5d9cb2f7adc2705d9ccadfaf:** [Catalog/retrieval/browser smoke #40857268146](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268146) y [validate #40857268310](https://github.com/jonhararagi/wordwaifu/actions/runs/40857268310), success.
 - **Límite persistente:** DMR-045 sigue IN_PROGRESS; los cinco expedientes continúan HOLD_FOR_PRIMARY_SOURCE. No se abren tareas nuevas de Orario por esta integración documental.
+
+## Integración de DMR-045-SRC-055 — PR #192 (2026-10-29)
+
+- [x] Registrar en fuentes y directorio de la aplicación la ficha de Google Play Books de DanMachi vol. 20 como ruta licenciada `metadata_checked_only`, sin claims/eventos y sin tratar el error de herramientas como fallo del lector.
+- [x] Integrar mediante [PR #192](https://github.com/jonhararagi/wordwaifu/pull/192), squash SHA exacto de `main` `6eb2db0161848de320c75abf7cc0241565a1644f`; head de PR verificado: `fbd4c6fef0d65066ec53b39ea22b9d4bc5377dfa`.
+- [x] CI pre-merge: [Validate WordWaifu #40862116846](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116846) y [DanMachi Lore and Retrieval Integrity #40862116852](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116852), ambos `success`.
+- [x] CI post-merge sobre el SHA exacto `6eb2db0161848de320c75abf7cc0241565a1644f`: [Validate WordWaifu #40862327265](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327265) y [DanMachi Lore and Retrieval Integrity #40862327234](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327234), ambos `success`.
+- [ ] Reabrir la investigación del texto solo cuando una sesión autorizada exponga páginas narrativas licenciadas legibles y un localizador reproducible. Alfia, Zald, Meteria, Erebus y Rudra permanecen en `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
+

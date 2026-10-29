@@ -660,7 +660,11 @@
 
 - **Fecha:** 2026-10-29.
 - **Tipo:** hallazgo de investigación, actualización de fuente y regresiones de recuperación.
-- **Estado:** registrado; integración/CI pendientes en la rama `docs/dmr045-google-play-vol20-sample-route-2026-10-29` hasta la verificación de GitHub.
+- **Estado:** INTEGRADO Y VALIDADO; PR [#192](https://github.com/jonhararagi/wordwaifu/pull/192) fusionada por squash en `main`.
+- **SHA de integración verificado en main:** `6eb2db0161848de320c75abf7cc0241565a1644f` ([commit](https://github.com/jonhararagi/wordwaifu/commit/6eb2db0161848de320c75abf7cc0241565a1644f)); head probado antes del merge: `fbd4c6fef0d65066ec53b39ea22b9d4bc5377dfa`.
+- **CI pre-merge sobre el head exacto:** [Validate WordWaifu #40862116846](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116846) y [DanMachi Lore and Retrieval Integrity #40862116852](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116852), ambos `success`.
+- **CI post-merge sobre el SHA exacto de main:** [Validate WordWaifu #40862327265](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327265) y [DanMachi Lore and Retrieval Integrity #40862327234](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327234), ambos `success`.
+
 - **Hallazgo verificable:** la ficha de Google Play Books para la edición inglesa de DanMachi vol. 20 anuncia “Free sample”, indica a Yen Press LLC como vendedor y muestra 232 páginas; la ficha editorial de Yen Press da el ISBN digital 9798855437867 y fecha de publicación del 11 de agosto de 2026. Producto: https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ; editor: https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel.
 - **Límite de acceso:** la herramienta de navegador disponible devolvió `insufficient_credits` antes de comenzar la navegación; la apertura directa de https://play.google.com/books/reader?id=XWHEEQAAQBAJ no fue accesible mediante la extracción web. No se observó respuesta del lector ni texto narrativo. Esto no demuestra que el lector falle.
 - **Registro:** DMR-045-SRC-055, `metadata_checked_only`, `claims_supported: []`, `events_supported: []`, `CONT-MAIN-LN`. Comparte el identificador XWHEEQAAQBAJ con la ruta de Google Books DMR-045-SRC-018; es una vía de acceso alternativa, no evidencia independiente.

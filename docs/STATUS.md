@@ -2,9 +2,13 @@
 
 ## DMR-045 — ruta adicional de Google Play Books, volumen 20 (2026-10-29)
 
-- Se localizó la ficha de [Google Play Books — volumen 20](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ) desde la ficha editorial de [Yen Press](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel). La página del distribuidor anuncia “Free sample”, identifica a Yen Press LLC como vendedor y muestra 232 páginas para la edición inglesa (ISBN digital 9798855437867).
+- Se localizó la ficha de [Google Play Books — volumen 20](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ) desde la ficha editorial de [Yen Press](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel). La página del distribuidor anuncia “Free sample”, identifica a Yen Press LLC como vendedor y muestra 232 páginas para la edición inglesa (ISBN digital 9798855437867).
 - Se registra como DMR-045-SRC-055 y como ruta del directorio de fuentes de la aplicación. Comparte el identificador de producto XWHEEQAAQBAJ con Google Books (SRC-018); no es evidencia independiente y no añade claims.
 - La herramienta de navegador devolvió `insufficient_credits` antes de iniciar la navegación; la URL directa del lector tampoco fue accesible mediante la extracción web. El estado de la muestra es desconocido, no “fallido”. DMR-045 continúa IN_PROGRESS y mantiene abiertos los cinco cotejos primarios.
+- **Integración:** [PR #192 — registro de la ruta de muestra](https://github.com/jonhararagi/wordwaifu/pull/192), fusionada por squash; SHA exacto de `main`: `6eb2db0161848de320c75abf7cc0241565a1644f` ([commit](https://github.com/jonhararagi/wordwaifu/commit/6eb2db0161848de320c75abf7cc0241565a1644f)). Head probado antes de fusionar: `fbd4c6fef0d65066ec53b39ea22b9d4bc5377dfa`.
+- **CI pre-merge sobre el head `fbd4c6fef0d65066ec53b39ea22b9d4bc5377dfa`:** [Validate WordWaifu #40862116846](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116846) y [DanMachi Lore and Retrieval Integrity #40862116852](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116852), ambos `success`.
+- **CI post-merge sobre el SHA exacto `6eb2db0161848de320c75abf7cc0241565a1644f`:** [Validate WordWaifu #40862327265](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327265) y [DanMachi Lore and Retrieval Integrity #40862327234](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327234), ambos `success`.
+- Alcance: ruta metadata-only y regresiones; no se añadieron claims, relaciones, eventos, aliases ni cambios de personalidad. DMR-045 continúa IN_PROGRESS; Alfia, Zald, Meteria, Erebus y Rudra siguen en `HOLD_FOR_PRIMARY_SOURCE`.
 
 ## Integración y CI post-merge — PR #190 (2026-10-29)
 
