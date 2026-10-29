@@ -267,9 +267,10 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 ### DEC-DM-029 — DMR-058: capacidades secundarias sin duplicar perfiles
 
 - **Fecha:** 2026-10-29.
-- **Estado:** implementado en rama; CI e integración pendientes.
+- **Estado:** integrado en `main`; CI pre-merge aprobado, post-merge en verificación.
 - **Decisión:** usar las wikis EN/ES como fuentes secundarias para añadir capacidades funcionales a Daphne Lauros y Cassandra Ilion; mantenerlas bajo CONT-SECONDARY y conservar los IDs y perfiles oficiales existentes.
 - **Aplicación:** informe DMR-058; fuentes DMR-058-SRC-001–005; notas y regresiones del archivo interactivo. Los snapshots de nivel 2 y nivel 3 se mantienen como estados de distinto periodo.
+- **Integración:** PR [#194](https://github.com/jonhararagi/wordwaifu/pull/194), squash SHA `190b4313a21569aa056548f8a40f9022b900b028`; [Validate #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [Lore/Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), ambos success sobre el head `ef14f8b914fb424cf816f0d6a27f258fbe230843`. CI post-merge pendiente.
 - **No informado:** costes numéricos/duración universal de magia; efecto de Five Dimension Troia. No inferirlos ni reintentar la misma fuente sin cambio material.
 - **Límites:** no crear relaciones, eventos, aliases ni claims canónicos; no reescribir personalidad. La cohorte no cierra DMR-045 ni habilita expansión de Orario.
 
