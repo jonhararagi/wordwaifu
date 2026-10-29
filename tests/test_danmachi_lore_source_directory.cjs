@@ -84,6 +84,15 @@ assert.match(bookLiveAstrea3[0].coverage, /no el contenido de la muestra/i);
 assert.match(bookLiveAstrea3[0].limits, /no pasaje narrativo recuperado/i);
 assert.match(bookLiveAstrea3[0].limits, /no verifica escenas, habilidades, identidades o relaciones/i);
 assert.match(bookLiveAstrea3[0].limits, /metadata_checked_only/);
+const meteriaFutureAuthorInterview = sources.filter(source => source.id === "author-interview-ln-news-2024-zeus-meteria-familia-chronicle");
+assert.equal(meteriaFutureAuthorInterview.length, 1, "the 2024 author interview must be discoverable exactly once");
+assert.equal(meteriaFutureAuthorInterview[0].category, "interview");
+assert.equal(meteriaFutureAuthorInterview[0].url, "https://www.ln-news.com/articles/121215");
+assert.equal(meteriaFutureAuthorInterview[0].authority, "Entrevista pública con declaración directa del autor sobre posibles proyectos futuros");
+assert.match(meteriaFutureAuthorInterview[0].coverage, /Familia Chronicle.*Zeus.*Meteria/i);
+assert.match(meteriaFutureAuthorInterview[0].limits, /no narración/i);
+assert.match(meteriaFutureAuthorInterview[0].limits, /No confirma maternidad de Bell, parentesco Meteria–Alfia/i);
+assert.match(meteriaFutureAuthorInterview[0].limits, /CONT-UNVERIFIED/);
 const meteriaEn = sources.find(source => source.id === "community-meteria-en");
 assert.match(meteriaEn.limits, /no nombra a Meteria/i,
   "the source directory must preserve the limit of the Memoria Freese interview");
