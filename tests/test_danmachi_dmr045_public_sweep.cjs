@@ -246,7 +246,8 @@ const googlePlayVol20 = sources.slice(
   sources.indexOf("## DMR-056-SRC-001")
 );
 assert.match(googlePlayVol20, /source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_SAMPLE_OFFER/);
-assert.match(googlePlayVol20, /official_url: https:\/\/play\.google\.com\/store\/books\/details\//);\nassert.match(googlePlayVol20, /id=XWHEEQAAQBAJ/);
+assert.match(googlePlayVol20, /official_url: https:\/\/play\.google\.com\/store\/books\/details\//);
+assert.match(googlePlayVol20, /id=XWHEEQAAQBAJ/);
 assert.match(googlePlayVol20, /claims_supported: \[\]/);
 assert.match(googlePlayVol20, /events_supported: \[\]/);
 assert.match(googlePlayVol20, /verification_status: metadata_checked_only/);
