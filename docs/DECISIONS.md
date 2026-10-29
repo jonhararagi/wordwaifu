@@ -271,3 +271,13 @@
 **CI post-merge:** [Lore Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), success sobre el SHA exacto de integración.
 **Límites:** mantener la diferencia secundaria EN/ES sobre Remiste Felis y no inventar costes ni skills omitidas. DMR-045 continúa abierto.
 
+## DEC-040 — Mantener DMR-045 sujeto a evidencia primaria nueva
+
+**Estado:** aceptada como criterio de trabajo; verificación de canon pendiente.
+**Fecha:** 2026-10-29.
+
+- **Decisión:** DMR-045 sigue siendo la prioridad de lore abierta. No se repiten rutas que solo aportaron metadatos, índices, términos comunes o pantallas de carga salvo que cambien las condiciones de acceso.
+- **Resultado:** la página editorial de Yen Press de Astrea Record 3 es una sinopsis general; Google Books DMR-045-SRC-018 no expone páginas narrativas; la ficha de GA Bunko del volumen 20 ya está registrada bajo DMR-044 y devolvió HTTP 503. No hay pasaje primario nuevo.
+- **Aplicación:** no crear fuentes duplicadas, claims, eventos, relaciones o alias; no reescribir personalidades; mantener los límites entre CONT-MAIN-LN, CONT-AR, CONT-GAME y CONT-AU.
+- **Pendientes:** Alfia, Zald, Meteria, Erebus y Rudra permanecen en HOLD_FOR_PRIMARY_SOURCE. No inferir el padre de Bell ni atribuir a Rudra personalmente las acciones de toda su Familia.
+- **Reapertura:** solo cuando una edición licenciada exponga texto narrativo legible o aparezca una fuente oficial nueva que resuelva un campo concreto.

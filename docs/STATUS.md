@@ -1,5 +1,14 @@
 # Estado de WordWaifu
 
+## Corte de evidencia primaria y verificación de main — 2026-10-29
+
+- **SHA de main comprobado al iniciar esta tanda:** 8348d5610382f45f5fe30073d70f53886d259ea4 ([commit](https://github.com/jonhararagi/wordwaifu/commit/8348d5610382f45f5fe30073d70f53886d259ea4)).
+- **Validaciones sobre ese SHA exacto:** [Catalog, retrieval and browser smoke #40842395446](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395446) y [validate #40842395510](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395510), ambos success.
+- **Estado de DMR-045:** sigue IN_PROGRESS; Alfia, Zald, Meteria, Erebus y Rudra continúan en HOLD_FOR_PRIMARY_SOURCE. La consulta pública de esta tanda no produjo un pasaje narrativo primario legible.
+- **Fuentes revisadas sin duplicar IDs:** Yen Press Astrea Record 3 solo aporta una sinopsis general; Google Books volumen 20 corresponde a DMR-045-SRC-018 y sigue mostrando índice/términos sin narración legible; la ficha de GA Bunko del volumen 20 ya está registrada bajo DMR-044 y devolvió HTTP 503.
+- **Límite:** no se añadieron claims, eventos, relaciones, aliases ni cambios de personalidad. No se promueve evidencia de CONT-SECONDARY, CONT-GAME o CONT-AU al canon principal.
+- **Siguiente acción:** retomar solo con una página narrativa licenciada legible o una fuente oficial nueva que resuelva uno de los cinco cotejos; Orario permanece pospuesto.
+
 ## Estado operativo y verificación — 2026-10-29
 
 

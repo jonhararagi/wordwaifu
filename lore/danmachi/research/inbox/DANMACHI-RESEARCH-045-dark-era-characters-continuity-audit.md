@@ -1061,3 +1061,19 @@ La corrección de DMR-045-CLM-006 se integró en [PR #151](https://github.com/jo
 - **confidence_note:** es una ruta de distribuidor distinta de las muestras BOOK☆WALKER, BinB, Google Books y BookLive ya registradas. El control de edad no prueba que la muestra esté disponible o no disponible después de la verificación. No usar la sinopsis comercial ni esta pantalla como evidencia de Alfia, Zald o Erebus.
 - **rights_note:** no se almacena texto de la novela; solo metadatos y estado de la ruta pública.
 - **verified_by:** DANMACHI-RESEARCH-045
+
+## Revisión pública de acceso — 2026-10-29, sin texto narrativo nuevo
+
+Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se conserva para reutilizar el resultado y evitar otro ciclo de análisis sin evidencia.
+
+- **Yen Press — Astrea Record, vol. 3:** [ficha editorial](https://yenpress.com/titles/9781975379926-astrea-record-vol-3-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-tales-of-heroes). La sinopsis pública describe el conflicto en términos generales, pero no expone una escena individual, diálogo ni localizador que verifique las acciones, habilidades o motivaciones de Alfia, Zald o Erebus. No se crea una fuente narrativa DMR-045 nueva desde la sinopsis.
+- **Google Books — DanMachi vol. 20:** [ficha y vista pública](https://books.google.com/books?id=XWHEEQAAQBAJ), ya registradas como DMR-045-SRC-018. La interfaz deja consultar datos bibliográficos, índice y términos comunes; las rutas consultadas no muestran páginas narrativas legibles. Los encabezados The Heroes' Afterglow y The Knights Afterglow no verifican por sí solos la técnica, el coste, el usuario ni la escena concreta de Afterglow. Los resultados de términos y la falta de vista previa no demuestran ausencia de un personaje.
+- **GA Bunko / SB Creative — DanMachi vol. 20:** [ficha oficial](https://ga.sbcr.jp/product/9784815628697/), una fuente bibliográfica ya existente bajo DMR-044. La consulta devolvió HTTP 503; no se obtuvo texto narrativo. No se crea un ID duplicado de DMR-045.
+- **Balance:** no aparecen hechos nuevos que justifiquen actualizar los claims existentes. No se crean claims, eventos, relaciones o alias; no se modifica ninguna personalidad ni se promueven hechos de CONT-AU, CONT-GAME o fuentes comunitarias a CONT-MAIN-LN/CONT-AR.
+- **Criterio de reapertura:** abrir una nueva pasada solamente ante páginas narrativas licenciadas realmente legibles o una publicación oficial nueva que resuelva un campo concreto. Mantener:
+  - **Alfia:** habilidad/coste y escena individual con localizador.
+  - **Zald:** técnica de espada, combate contra Udaeus y secuencia del enfrentamiento con Ottar.
+  - **Meteria:** identificación, maternidad y parentesco en fuente primaria; no inferir al padre de Bell.
+  - **Erebus:** escenas/diálogos de la novelización de Astrea Record, separados de la versión del juego.
+  - **Rudra:** prueba de lo que supo, ordenó o autorizó personalmente, sin atribuirle automáticamente el plan entero de su Familia.
+- **Estado:** IN_PROGRESS a nivel de investigación; los cinco expedientes siguen en HOLD_FOR_PRIMARY_SOURCE. Orario continúa como etapa posterior.

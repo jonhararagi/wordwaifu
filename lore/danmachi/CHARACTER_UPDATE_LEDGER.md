@@ -1,6 +1,6 @@
 # Bitácora de actualizaciones de personajes — DanMachi
 
-- **Última actualización:** 2026-10-28.
+- **Última actualización:** 2026-10-29.
 - **Propósito:** evitar análisis repetidos sin datos nuevos; registrar qué se consultó, qué información apareció, qué no está reportado y qué resultado debe reutilizarse.
 - **Alcance de las pasadas documentadas:** datos de niveles, magia, habilidades, habilidades de desarrollo y equipo de la primera Astrea Familia; cierre de búsqueda secundaria de los cinco expedientes DMR-045; y pasada de capacidades de la cohorte Freya Familia DMR-052. **No se reescribieron personalidades.**
 - **Integración:** [PR #170](https://github.com/jonhararagi/wordwaifu/pull/170), SHA de `main` `034eb037f98ce25076de7fc4217a62cb960172eb`.
@@ -402,3 +402,14 @@ Fuentes consultadas:
 - CI de PR: [Validate #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [Lore/Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917), ambos success. Browser smoke pasó.
 - **CI post-merge:** [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) y [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977), ambos `success` sobre el SHA exacto `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`.
 - Mantener la diferencia EN/ES de Remiste Felis; no modificar personalidad, relaciones ni claims primarios. DMR-045 sigue abierto.
+
+## DANMACHI-RESEARCH-045 — corte de evidencia primaria (2026-10-29)
+
+- **Estado común:** HOLD_FOR_PRIMARY_SOURCE para Alfia, Zald, Meteria, Erebus y Rudra. La ronda pública no obtuvo un pasaje narrativo primario legible.
+- **Rutas y resultados reutilizables:**
+  - Yen Press, Astrea Record vol. 3: sinopsis editorial general, no una escena individual ni un diálogo localizable.
+  - Google Books, DanMachi vol. 20: ruta existente DMR-045-SRC-018; índice/términos visibles, páginas narrativas no legibles. No inferir presencia/ausencia ni afirmar escenas desde el índice.
+  - GA Bunko, DanMachi vol. 20: URL de producto ya registrada bajo DMR-044; respondió HTTP 503 en esta consulta. No duplicar como una fuente DMR-045.
+- **Resultado:** no añadir fuentes nuevas, claims, eventos, relaciones, alias, habilidades/costes no informados ni cambios de personalidad. Se mantienen separadas CONT-MAIN-LN, CONT-AR, CONT-GAME y CONT-AU.
+- **Reapertura:** solo al disponer de texto licenciado realmente legible o de una fuente oficial nueva que resuelva un campo concreto. Reutilizar las notas existentes y no repetir los mismos lectores.
+- **Control CI de contexto:** main estaba en 8348d5610382f45f5fe30073d70f53886d259ea4 al inicio; [Catalog/retrieval/browser smoke #40842395446](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395446) y [validate #40842395510](https://github.com/jonhararagi/wordwaifu/actions/runs/40842395510) finalizaron en success.
