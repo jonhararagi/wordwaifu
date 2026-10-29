@@ -44,6 +44,8 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 ## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
 
 **Estado:** IN_PROGRESS. El barrido secundario está registrado y se han probado rutas de consulta licenciadas, pero ninguna muestra consultada expuso páginas narrativas legibles. Los cinco expedientes continúan abiertos para verificación primaria.
+- [x] Registrar DMR-045-SRC-058 como nueva ruta oficial de adaptación manga en `CONT-MANGA`: la ficha de SQUARE ENIX/Big Gangan y la ficha BookLive del número de estreno aportan metadatos y opciones anunciadas de muestra, pero no páginas narrativas. El navegador interactivo devolvió `insufficient_credits` antes de navegar; estado del lector desconocido. No crea claims/eventos ni resuelve Alfia, Zald, Meteria, Erebus o Rudra.
+- [ ] Inspeccionar la muestra de `CONT-MANGA` solo cuando una sesión pública normal permita ver páginas reales; mantener todo hallazgo bajo esa continuidad y no transferirlo a `CONT-AR` o `CONT-MAIN-LN`.
 - [x] Localizar una ruta legal distinta de muestra del volumen 3 en Sony Reader Store: la ficha japonesa presenta una verificación de edad previa a portada/muestra/compra. Registrar DMR-045-SRC-054 como metadata_checked_only, sin claims ni localizadores; la muestra no se abrió.
 - [ ] Si se retoma la ruta de Sony Reader Store, continuar solo mediante el flujo normal de verificación de edad y comprobar si aparecen páginas narrativas; no registrar resultado de muestra hasta verlas.
 
