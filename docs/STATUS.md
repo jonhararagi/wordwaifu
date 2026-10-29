@@ -634,3 +634,14 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Resultado:** se documentan niveles, magia/skills/equipo sí presentados por las fuentes y los campos que no aparecen. No se reescriben personalidades ni se crean claims narrativos, relaciones, eventos o alias.
 - **Límite:** DMR-045 conserva los cinco cotejos primarios pendientes; DMR-055 no los sustituye. La integración de notas secundarias a la interfaz requiere cambios y pruebas separados.
 
+## Estado operativo y verificación — 2026-10-29 (actualización DMR-057)
+
+### DMR-057 — Aisha, Anya y Chloe (integrada)
+- Integrado mediante [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188); SHA de `main`: `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
+- Head sometido a CI: `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`.
+- CI pre-merge: [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [DanMachi Lore and Retrieval Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos `success`.
+- El conector no devolvió runs del CI post-merge para el SHA exacto; no se declara esa fase verificada.
+- Se agregaron fuentes y notas de capacidades secundarias para Aisha Belka, Anya Fromel y Chloe Rollo, con cinco páginas comunitarias. Los datos permanecen bajo `CONT-SECONDARY`; se mantiene el conflicto EN/ES de Remiste Felis y los campos no informados.
+- No se reescribieron personalidades ni se infirieron costes, skills, relaciones o escenas primarias.
+- DMR-045 permanece `IN_PROGRESS`: los cinco cotejos primarios continúan pendientes. No repetir las mismas rutas de muestra hasta que exista texto legible o un cambio material de fuente.
+
