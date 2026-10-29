@@ -396,3 +396,11 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Tests de PR: [Validate #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [Lore/Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917), ambos success. Se verifica la recuperación, refs comunitarias, campos no informados y aislamiento frente a CONT-ANIME/CONT-MAIN-LN; browser smoke también pasó.
 - CI post-merge validado sobre SHA exacto: [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) y [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977), ambos `success` sobre `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`.
 - Diferencia EN/ES de Remiste Felis conservada como secundaria. No se modifica el roster, relaciones ni personalidad. DMR-045 mantiene cinco cotejos narrativos primarios pendientes.
+
+## DMR-045-SRC-055 — integración y validación (2026-10-29)
+
+- La ruta Google Play Books del volumen 20 en inglés está registrada en el directorio de fuentes interactivo y en `lore/danmachi/sources/00-registro-fuentes.md`, sin claims narrativos.
+- Integración: [PR #192](https://github.com/jonhararagi/wordwaifu/pull/192), squash SHA de `main` `6eb2db0161848de320c75abf7cc0241565a1644f`; CI pre-merge [Validate #40862116846](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116846) y [Lore/Integrity #40862116852](https://github.com/jonhararagi/wordwaifu/actions/runs/40862116852), ambos `success`.
+- CI post-merge verificado sobre el SHA exacto de `main`: [Validate #40862327265](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327265) y [Lore/Integrity #40862327234](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327234), ambos `success`.
+- DMR-045 sigue `IN_PROGRESS`: no se obtuvo texto narrativo nuevo y no se cerró ninguno de los cinco cotejos primarios.
+
