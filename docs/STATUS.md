@@ -647,3 +647,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - No se reescribieron personalidades ni se infirieron costes, skills, relaciones o escenas primarias.
 - DMR-045 permanece `IN_PROGRESS`: los cinco cotejos primarios continúan pendientes. No repetir las mismas rutas de muestra hasta que exista texto legible o un cambio material de fuente.
 
+
+
+### DMR-057 — notas en archivo interactivo (integrada, CI post-merge pendiente de cierre)
+
+- Integración: [PR #189](https://github.com/jonhararagi/wordwaifu/pull/189), merge SHA `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`; main actual consultado tras merge.
+- Alcance: `src/character-archive.js` expone datos secundarios para Aisha Belka, Anya Fromel y Chloe Rollo en `CONT-SECONDARY`; `tests/test_character_archive.cjs` comprueba recuperación del dato, fuente comunitaria y no filtración hacia `CONT-ANIME` ni `CONT-MAIN-LN`.
+- CI de PR: [Validate #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [Lore/Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917), ambos success. La prueba del archivo y el smoke test de navegador terminaron en success.
+- CI post-merge sobre el SHA exacto: [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) y [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977), pendientes en la última consulta.
+- Se preserva la discrepancia EN/ES de Remiste Felis y los campos no informados. No se modificaron personalidad, relaciones, roster ni claims de continuidad primaria.
+- DMR-045 continúa IN_PROGRESS; los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes.
