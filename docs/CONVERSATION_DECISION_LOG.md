@@ -624,3 +624,12 @@
 - **CI post-merge sobre el SHA exacto de integración:** [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos `success`.
 - **Alcance:** capacidades secundarias de Aisha, Anya y Chloe bajo CONT-SECONDARY; se conserva la diferencia EN/ES sobre Remiste Felis y los campos no informados.
 - **Límite:** DMR-045 sigue abierto; no se promueve evidencia comunitaria a primaria ni se reescriben personalidades.
+
+
+### CONV-DM-2026-10-29-003 — Notas DMR-057 en el archivo interactivo
+
+- **Estado:** IMPLEMENTADO EN PR, CI PENDIENTE; todavía no integrado.
+- **PR:** [#189](https://github.com/jonhararagi/wordwaifu/pull/189), rama `feature/dmr057-interactive-secondary-capabilities-2026-10-29`, head `fedb22bc44bd6e2c25aad39e3589db39a0720620`, base SHA `4d8cb68fa1a9d908670447e079e36150d7a5a17c`.
+- **Cambio:** añade `EXTENDED[id]["CONT-SECONDARY"]` para Aisha Belka, Anya Fromel y Chloe Rollo y regresiones para la recuperación desde el archivo interactivo, refs comunitarias, campos no reportados y aislamiento frente a `CONT-ANIME`/`CONT-MAIN-LN`.
+- **Pruebas CI:** [Validate WordWaifu #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [DanMachi Lore and Retrieval Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917) estaban `in_progress` en la última consulta. No se declara validación ni fusión hasta comprobar ambas conclusiones.
+- **Límite:** no edita roster/relaciones/personality; la discrepancia EN/ES de Remiste Felis se conserva como secundaria. DMR-045 sigue abierto.
