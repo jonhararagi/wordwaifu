@@ -262,10 +262,12 @@
 **Límite:** DMR-045 sigue abierto. No se crean claims, eventos, relaciones ni aliases; Nina permanece en conflicto de afiliación y no se convierte en miembro confirmado por inferencia.
 
 
-## DEC-039 — Registrar DMR-057 e integrar tras CI aprobado
-**Estado:** integrada en `main` mediante [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), squash SHA `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
-**Decisión operativa:** completar una cohorte nueva de capacidades secundarias para Aisha Belka, Anya Fromel y Chloe Rollo, manteniendo cinco rutas comunitarias como `CONT-SECONDARY` y sin reescribir personalidades.
-**Verificación:** ambos workflows de CI pasaron sobre el head `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`: [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548). No se encontraron ejecuciones post-merge para el SHA de fusión, por lo que esa parte no se declara validada.
-**Límites:** conservar como diferencia secundaria la condición de cancelación de Remiste Felis descrita en la página española y no presente en el fragmento inglés consultado. No inventar costes o skills no listados, no convertir ausencia de informe en inexistencia canónica y no cerrar DMR-045.
 
-- **CI post-merge verificado después de la actualización:** ambos workflows de push finalizaron en `success` sobre el SHA exacto integrado `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [DanMachi Lore and Retrieval Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate WordWaifu #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125).
+
+## DEC-039 — DMR-057 integrado y validado
+**Estado:** integrada y validada en `main` mediante [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), merge SHA `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
+**Aplicación:** notas secundarias de capacidades para Aisha Belka, Anya Fromel y Chloe Rollo; continuidad `CONT-SECONDARY`, cinco referencias comunitarias, no se reescriben personalidades.
+**CI pre-merge:** [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), success sobre `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`.
+**CI post-merge:** [Lore Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), success sobre el SHA exacto de integración.
+**Límites:** mantener la diferencia secundaria EN/ES sobre Remiste Felis y no inventar costes ni skills omitidas. DMR-045 continúa abierto.
+
