@@ -18,8 +18,11 @@
 
 Las wikis son fuentes comunitarias secundarias. Las páginas consultadas resumen o atribuyen detalles a volúmenes, pero esta pasada no abrió el texto de las novelas; por tanto, no se inventan páginas ni escenas cotejadas. Los datos siguientes no deben elevarse a `CONT-MAIN-LN`, `CONT-SO-LN` ni `CONT-FC` como verificados primariamente.
 
-## DMR-057-CLM-001 · Aisha Belka
+### DMR-057-CLM-001 · Aisha Belka
 
+- source_id: DMR-057-SRC-001
+- verification_status: secondary_checked
+- continuity_scope: CONT-SECONDARY
 - **Estado:** `secondary_checked`.
 - **Fuentes:** DMR-057-SRC-001.
 - **Encontrado en la página consultada:** nivel 4 reportado; magia `Hell Kaios`, descrita como un corte/onda roja de choque; arma `Great Podao Zaga`; capacidades de combate cuerpo a cuerpo y con arma; se informa de las habilidades de desarrollo Hunter, Abnormal Resistance y Fist Strike. El perfil también describe su capacidad para dirigir grupos en combate.
@@ -27,8 +30,11 @@ Las wikis son fuentes comunitarias secundarias. Las páginas consultadas resumen
 - **Continuidad:** `CONT-SECONDARY`. La ficha comunitaria relaciona a Aisha con más de una afiliación a lo largo del tiempo; no sobrescribir su afiliación temporal en el canon principal a partir de este resumen.
 - **Reapertura:** solo con un pasaje primario legible, fuente oficial nueva o discrepancia material.
 
-## DMR-057-CLM-002 · Anya Fromel
+### DMR-057-CLM-002 · Anya Fromel
 
+- source_id: DMR-057-SRC-002, DMR-057-SRC-003
+- verification_status: secondary_checked
+- continuity_scope: CONT-SECONDARY
 - **Estado:** `secondary_checked`, con una diferencia de detalle entre páginas secundarias.
 - **Fuentes:** DMR-057-SRC-002 y DMR-057-SRC-003.
 - **Encontrado:** nivel 4 reportado; magia `Remiste Felis`, onda sonora de área amplia que debilita el estado de quienes la oyen y reduce también el rendimiento de sus habilidades de desarrollo, skills y magia; la fuente inglesa informa que puede contrarrestarse bloqueando el sonido y que deben pasar más de doce horas antes de volver a usarla. Se reporta una lanza como arma y Abnormal Resistance como habilidad de desarrollo.
@@ -38,8 +44,11 @@ Las wikis son fuentes comunitarias secundarias. Las páginas consultadas resumen
 - **Continuidad:** `CONT-SECONDARY`.
 - **Reapertura:** solo si se obtiene un pasaje primario o una fuente secundaria nueva que modifique sustancialmente el límite/cooldown.
 
-## DMR-057-CLM-003 · Chloe Rollo
+### DMR-057-CLM-003 · Chloe Rollo
 
+- source_id: DMR-057-SRC-004, DMR-057-SRC-005
+- verification_status: secondary_checked
+- continuity_scope: CONT-SECONDARY
 - **Estado:** `secondary_checked`.
 - **Fuentes:** DMR-057-SRC-004 y DMR-057-SRC-005.
 - **Encontrado:** nivel 4 reportado; magia `Feles Cruz`, que crea dos espejismos controlados por Chloe, incapaces de atacar o defenderse; habilidades de desarrollo Abnormal Resistance, Mixing y Escape; arma `Violetta`, descrita como cuchillo empleado con venenos. La fuente describe su estilo como orientado al sigilo, las distracciones y los ataques a puntos débiles, con menor ventaja en enfrentamientos directos.
