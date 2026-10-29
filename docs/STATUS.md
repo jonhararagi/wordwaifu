@@ -3,13 +3,15 @@
 ## Estado operativo y verificación — 2026-10-29
 
 
-### DMR-057 — capacidades secundarias de Aisha, Anya y Chloe (2026-10-29)
+### DMR-057 — capacidades secundarias de Aisha, Anya y Chloe (integrada, 2026-10-29)
 
-- Se consultaron cinco páginas comunitarias EN/ES para tres personajes fuera de las cohortes DMR-052/054/056.
-- Se registraron magia, habilidades de desarrollo, equipo y límites reportados, manteniendo `CONT-SECONDARY`; no se reescribieron personalidades ni se inventaron costes o skills ausentes.
+- **Integración:** [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), squash SHA de `main` `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
+- **Head probado antes del merge:** `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`.
+- **CI pre-merge:** [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [DanMachi Lore and Retrieval Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos `success`.
+- La consulta del conector no devolvió CI post-merge para el SHA exacto; ese estado no se declara verificado.
+- Se registraron magia, habilidades de desarrollo, equipo y límites reportados para los tres personajes con `CONT-SECONDARY`; no se reescribieron personalidades ni se inventaron costes o skills ausentes.
 - La página española de Anya informa una condición adicional de cancelación de Remiste Felis al perder el conocimiento; la página inglesa consultada no muestra ese detalle. Se conserva como diferencia secundaria, sin resolverla por intuición.
-- Registro de investigación: [DANMACHI-RESEARCH-057](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md); fuentes: DMR-057-SRC-001–005; bitácora: [CHARACTER_UPDATE_LEDGER](../lore/danmachi/CHARACTER_UPDATE_LEDGER.md).
-- **Estado técnico:** cambios documentales propuestos en rama de trabajo; no integrados ni validados hasta completar PR y workflows.
+- Registro: [DANMACHI-RESEARCH-057](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md); fuentes DMR-057-SRC-001–005; [bitácora](../lore/danmachi/CHARACTER_UPDATE_LEDGER.md).
 - DMR-045 sigue IN_PROGRESS; los cinco cotejos primarios no se cierran por esta tanda.
 
 
