@@ -697,4 +697,12 @@
 - **Límite:** no se obtiene un pasaje narrativo; no se generan claims/eventos/relaciones/alias y no se cambian personalidades. Los cinco expedientes primarios de DMR-045 siguen abiertos y Orario permanece pospuesto.
 - **Siguiente acción:** reintentar esta ruta solo con una sesión normal autorizada que produzca páginas narrativas legibles; no repetir metadatos ni tratar el lanzador como evidencia de fallo general.
 
+### CONV-DM-2026-10-29-009 — Revalidación de la ruta BinB oficial para Astrea Record 3
+
+- **Fecha:** 2026-10-29.
+- **Hallazgo:** la ficha oficial de [SBCr eBook Store](https://ebook.sbcr.jp/product/81561019JAAA03MBJE3X) ofrece 立ち読み（無料）. El bloque del lector muestra «お使いのブラウザは新ビューワに対応しておりません。»; la apertura directa no expuso páginas narrativas. La sesión interactiva de lectura no pudo empezar porque la herramienta de navegador devolvió `insufficient_credits`.
+- **Registro:** se revalidó DMR-045-SRC-041, que ya existía. No se creó un SRC nuevo ni se interpretó el aviso como fallo general del lector.
+- **Límite:** no hubo página, capítulo, diálogo o claim legible; no cambiaron los expedientes de personajes, sus relaciones, personalidad o continuidad.
+- **Regla anti-repetición:** reutilizar el resultado como `metadata_checked_only`; reabrir solo cuando una sesión normal autorizada y compatible permita verificar una página narrativa con localizador reproducible.
+- **Prioridad:** DMR-045 continúa `IN_PROGRESS`; Alfia, Zald, Meteria, Erebus y Rudra permanecen `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
 
