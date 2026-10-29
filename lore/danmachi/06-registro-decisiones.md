@@ -274,3 +274,12 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **No informado:** costes numéricos/duración universal de magia; efecto de Five Dimension Troia. No inferirlos ni reintentar la misma fuente sin cambio material.
 - **Límites:** no crear relaciones, eventos, aliases ni claims canónicos; no reescribir personalidad. La cohorte no cierra DMR-045 ni habilita expansión de Orario.
 
+
+### DEC-DM-030 — Entrevistas del autor sobre planes editoriales no equivalen a pasajes de canon
+
+- **Fecha:** 2026-10-29.
+- **Estado:** criterio aplicado; integración de su implementación pendiente de CI.
+- **Contexto:** la entrevista pública a Fujino Omori en LN News Online (2024-12-15) menciona tentativamente una futura entrega de Familia Chronicle centrada en Zeus o quizá Meteria.
+- **Decisión:** registrar el material como fuente primaria solo para la declaración editorial, con CONT-UNVERIFIED y sin claims/eventos narrativos. Una posibilidad editorial no es una confirmación de publicación ni prueba de acontecimientos ficticios, identidades o parentescos.
+- **Impacto en DMR-045:** no se cierra ninguno de los cinco expedientes. Mantener pendientes las pruebas narrativas específicas y evitar reabrir esta entrevista para buscar datos que no contiene.
+- **Fuente registrada:** DMR-045-SRC-057; informe DMR-045, registro central de fuentes, directorio in-app y prueba de regresión.
