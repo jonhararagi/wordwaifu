@@ -1110,3 +1110,14 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir notas recuperables bajo `CONT-SECONDARY` y pruebas de aislamiento frente a `CONT-ANIME`, `CONT-SO` y `CONT-MAIN-LN`.
 - [ ] Cotejo narrativo primario de cada mecánica pendiente; los costes numéricos y localizadores no reportados permanecen ausentes.
 - **Límite persistente:** DMR-045 continúa abierto y sus cinco cotejos primarios siguen pendientes. No repetir las páginas de Finn/Riveria/Gareth para buscar campos que no enumeran; reabrir solo ante fuente nueva, actualización material o pasaje licenciado legible.
+
+
+### Verificación de integración — DMR-059 (PR #204, 2026-10-29)
+
+- [x] Integrar el dossier de Finn Deimne, Riveria Ljos Alf y Gareth Landrock; reutilizar IDs y mantener los datos en `CONT-SECONDARY`.
+- [x] Registrar la discrepancia EN/ES de Finn (piso 61 frente a 59) y separar Flare Burn congénita de las nueve magias de falna de Riveria.
+- [x] Fusionar [PR #204](https://github.com/jonhararagi/wordwaifu/pull/204) por squash; SHA exacto de integración en `main`: `6c62170dee51ec7a57b87dff4e0e0d189dadc2bc`.
+- [x] CI pre-merge sobre el head `54717ffae9f3e7cc00357da06eef5b8da5d67800`: [Validate WordWaifu #40952467958](https://github.com/jonhararagi/wordwaifu/actions/runs/40952467958) y [DanMachi Lore and Retrieval Integrity #40952468323](https://github.com/jonhararagi/wordwaifu/actions/runs/40952468323), ambos `success`.
+- [x] CI post-merge sobre el SHA exacto `6c62170dee51ec7a57b87dff4e0e0d189dadc2bc`: [Validate WordWaifu #40952682496](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682496) y [DanMachi Lore and Retrieval Integrity #40952682505](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682505), ambos `success`.
+- [ ] Mantener pendiente el cotejo narrativo primario de las mecánicas y los costes no reportados; no repetir las mismas páginas sin evidencia nueva.
+- **DMR-045:** permanece abierto; los cinco cotejos primarios no cambian.

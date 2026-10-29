@@ -465,3 +465,12 @@ Fuentes consultadas:
 - **Anti-repetición:** no volver a recorrer estas mismas páginas para completar campos ausentes. Reabrir con texto licenciado legible, actualización material o contradicción nueva.
 - **Continuidad:** `CONT-SECONDARY` únicamente. No reescribir personalidad ni importar datos automáticamente a `CONT-MAIN-LN` o a perfiles `CONT-ANIME`/`CONT-SO`.
 - **DMR-045:** permanece abierto con sus cinco cotejos primarios pendientes.
+
+
+## Verificación de integración — DMR-059 (PR #204, 2026-10-29)
+
+- **Integración:** [PR #204](https://github.com/jonhararagi/wordwaifu/pull/204), fusionada por squash; SHA exacto de `main`: `6c62170dee51ec7a57b87dff4e0e0d189dadc2bc`.
+- **CI pre-merge sobre `54717ffae9f3e7cc00357da06eef5b8da5d67800`:** [Validate #40952467958](https://github.com/jonhararagi/wordwaifu/actions/runs/40952467958) y [Lore/Integrity #40952468323](https://github.com/jonhararagi/wordwaifu/actions/runs/40952468323), ambos `success`.
+- **CI post-merge sobre el SHA exacto:** [Validate #40952682496](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682496) y [Lore/Integrity #40952682505](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682505), ambos `success`.
+- **Resultado:** tres identidades existentes enriquecidas con notas interactivas `CONT-SECONDARY`; cinco fuentes registradas; tests de recuperación, conflicto EN/ES y aislamiento de continuidad aprobados.
+- **Límite:** no se validaron narrativamente las wikis; costes y localizadores ausentes siguen pendientes. DMR-045 continúa abierto.
