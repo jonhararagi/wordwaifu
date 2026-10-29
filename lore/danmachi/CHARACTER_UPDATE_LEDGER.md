@@ -382,3 +382,13 @@ Fuentes consultadas:
 - **Diferencia que conservar:** la página española de Anya indica que Remiste Felis se cancela si pierde el conocimiento; la página inglesa consultada no incluye esa condición en el fragmento revisado. No resolver sin evidencia nueva.
 - **Continuidad:** `CONT-SECONDARY`; las páginas comunitarias no prueban por sí solas la formulación del canon de una novela.
 - **Regla de cierre:** no repetir estas mismas páginas para buscar los campos que no enumeran. Reabrir solo con un pasaje primario legible, fuente oficial nueva, actualización material de la wiki o conflicto que afecte a la ficha.
+
+
+## Verificación de integración — DANMACHI-RESEARCH-057
+
+- **PR:** [#188](https://github.com/jonhararagi/wordwaifu/pull/188), integrada mediante squash.
+- **SHA de `main`:** `6c1ffc257e2df45d3a32facb39fe684b71994f60`; head probado: `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`.
+- **CI pre-merge:** [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [DanMachi Lore and Retrieval Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos `success`.
+- **CI post-merge:** la consulta no devolvió ejecuciones para el SHA de fusión; resultado no verificado.
+- **Contenido:** Aisha Belka, Anya Fromel y Chloe Rollo; cinco referencias comunitarias; continuidad `CONT-SECONDARY`; diferencia EN/ES de Remiste Felis conservada. Costes y skills ausentes se mantienen como no informados en las páginas revisadas.
+- **Reapertura:** solo ante fuente oficial nueva, pasaje narrativo legible, actualización material o contradicción relevante. DMR-045 sigue abierto.
