@@ -31,7 +31,7 @@
 ## DMR-058 — capacidades secundarias de Daphne y Cassandra (integrado y validado en main)
 
 - Se reutilizan `CHAR-DAPHNE-LAUROS` y `CHAR-CASSANDRA-ILION`; los detalles funcionales quedan bajo `CONT-SECONDARY`, sin sobrescribir sus perfiles de adaptación.
-- Informe: [DANMACHI-RESEARCH-058](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-058-miach-familia-capabilities.md). Fuentes DMR-058-SRC-001–005 en el [registro maestro](../lore/danmachi/sources/00-registro-fuentes.md) y en el directorio de fuentes de la aplicación.
+- Informe: [DANMACHI-RESEARCH-058](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-058-daphne-cassandra-capabilities.md). Fuentes DMR-058-SRC-001–005 en el [registro maestro](../lore/danmachi/sources/00-registro-fuentes.md) y en el directorio de fuentes de la aplicación.
 - Alcance: notas del archivo interactivo, cinco entradas en `src/lore-corpus.js` y pruebas de recuperación/aislamiento; los costes y el efecto de Five Dimension Troia no informados siguen abiertos.
 - **PR integrada:** [#194](https://github.com/jonhararagi/wordwaifu/pull/194), squash SHA `190b4313a21569aa056548f8a40f9022b900b028`; main fue consultado y apunta a ese SHA.
 - **CI pre-merge sobre el head exacto** `ef14f8b914fb424cf816f0d6a27f258fbe230843`: [Validate WordWaifu #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [DanMachi Lore and Retrieval Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), ambos `success`.
