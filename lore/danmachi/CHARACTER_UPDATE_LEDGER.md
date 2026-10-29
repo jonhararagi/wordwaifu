@@ -437,4 +437,9 @@ Fuentes consultadas:
 - **Cierre por personaje:** Alfia, Zald, Meteria, Erebus y Rudra siguen `HOLD_FOR_PRIMARY_SOURCE`. No se cambian personalidades ni se infiere al padre de Bell o responsabilidad individual de Rudra desde los actos de su Familia.
 - **Reabrir solo si:** una sesión autorizada muestra texto narrativo legible con localizador reproducible o aparece evidencia oficial nueva que resuelva una pregunta concreta.
 
+## DMR-045 — integración verificada de la ruta dBook (PR #196, 2026-10-29)
 
+- **Integración:** [PR #196](https://github.com/jonhararagi/wordwaifu/pull/196), merge SHA `7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91`.
+- **CI post-merge:** [Validate #40898517407](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517407) y [Lore/Integrity #40898517371](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517371), ambos success sobre el SHA indicado. Validate necesitó un segundo intento por un timeout transitorio al cargar imágenes de referencia oficiales.
+- **Bitácora anti-repetición:** no repetir metadatos ni lanzar de nuevo el visor dBook sin cambiar la condición de acceso. Reabrir solo cuando una sesión normal autorizada exponga páginas narrativas con localizador reproducible o una fuente oficial nueva resuelva un punto.
+- **Estado por personaje:** Alfia, Zald, Meteria, Erebus y Rudra permanecen `HOLD_FOR_PRIMARY_SOURCE`. Sin cambios de personalidad, claims o relaciones.
