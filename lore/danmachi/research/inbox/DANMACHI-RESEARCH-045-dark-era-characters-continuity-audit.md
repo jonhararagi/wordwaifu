@@ -1146,3 +1146,12 @@ Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se cons
 - **Límite de continuidad:** registrar esta ruta como `DMR-045-SRC-058`, `OFFICIAL_MANGA_SERIES_PAGE`, `CONT-MANGA`, `metadata_checked_only`, con `claims_supported: []` y `events_supported: []`. El resumen público presenta a Ryuu, Alise, Kaguya y Ardee, pero su lista de personajes no permite concluir que Alfia, Zald, Meteria, Erebus o Rudra estén ausentes de otros capítulos.
 - **Resultado para DMR-045:** la adaptación manga es una ruta oficial distinta para una búsqueda futura, no un cotejo narrativo de la novela ligera. No cambia habilidades, parentescos, escenas, personalidad ni el estado probatorio de los cinco expedientes. No transferir contenido manga a `CONT-AR` o `CONT-MAIN-LN`.
 - **Criterio anti-repetición:** no reintentar el lector de BookLive mientras no haya una sesión pública normal e inspeccionable; si se abre, registrar el volumen, capítulo/página y solo los hechos realmente visibles, bajo `CONT-MANGA`. DMR-045 sigue `IN_PROGRESS`; Orario permanece pospuesto.
+
+## Integración y CI verificada — DMR-045-SRC-058 / PR #201 (2026-10-29)
+
+- **Head final de PR validado:** `6af090defaa128fbb26dcb034aeb03a915aa3bc5`; [Validate WordWaifu #40929087678](https://github.com/jonhararagi/wordwaifu/actions/runs/40929087678) y [DanMachi Lore and Retrieval Integrity #40929087528](https://github.com/jonhararagi/wordwaifu/actions/runs/40929087528), ambos `success`.
+- **Incidente:** el primer Validate [#40928846364](https://github.com/jonhararagi/wordwaifu/actions/runs/40928846364) falló por cuatro enlaces Markdown con ángulos; se corrigieron a enlaces normales y se repitió CI sobre el head final.
+- **Integración:** [PR #201](https://github.com/jonhararagi/wordwaifu/pull/201) fusionada por squash, SHA exacto de `main`: [`ad20a70e4b15e48901e5898780f21841d0979968`](https://github.com/jonhararagi/wordwaifu/commit/ad20a70e4b15e48901e5898780f21841d0979968).
+- **CI post-merge sobre ese SHA exacto:** [Validate #40929383860](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383860) y [Lore/Integrity #40929383855](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383855), ambos `success`.
+- **Resultado factual:** la entrada `CONT-MANGA` sigue `metadata_checked_only`; no se leyó ningún panel ni se añadió claim/evento. Los cinco cotejos primarios siguen abiertos.
+
