@@ -405,4 +405,19 @@ const dmr058Cassandra = sources.find(source => source.id === "community-dmr058-c
 assert.match(dmr058Cassandra.limits, /efecto concreto de Five Dimension Troia sigue desconocido/i,
   "the source directory must not invent Five Dimension Troia's effect");
 
+
+const bigGanganAstreaManga = sources.filter(source => source.id === "official-sqex-big-gangan-astrea-record-manga");
+assert.equal(bigGanganAstreaManga.length, 1, "official Astrea Record manga page must be discoverable exactly once");
+assert.equal(bigGanganAstreaManga[0].category, "official");
+assert.equal(bigGanganAstreaManga[0].url, "https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/");
+assert.match(bigGanganAstreaManga[0].authority, /adaptación manga.*metadatos/i);
+assert.match(bigGanganAstreaManga[0].coverage, /2026-05-25/);
+assert.match(bigGanganAstreaManga[0].coverage, /BookLive/);
+assert.match(bigGanganAstreaManga[0].limits, /CONT-MANGA/);
+assert.match(bigGanganAstreaManga[0].limits, /no demuestra su ausencia/i);
+assert.match(bigGanganAstreaManga[0].limits, /insufficient_credits/);
+assert.match(bigGanganAstreaManga[0].limits, /estado del lector es desconocido, no fallido/i);
+assert.match(bigGanganAstreaManga[0].limits, /metadata_checked_only/);
+assert.match(bigGanganAstreaManga[0].limits, /CONT-AR.*CONT-MAIN-LN/);
+
 console.log("DanMachi source directory: secondary references and licensed preview limits validated.");
