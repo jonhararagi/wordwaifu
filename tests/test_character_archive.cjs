@@ -197,4 +197,20 @@ assert.ok(bell.relationships.length>=3,"Bell's source-backed relationship networ
 assert.ok(archive.getExtendedInfo("CHAR-RYUU-LION","CONT-AR").references.some(ref=>ref.url.includes("fandom.com/es/wiki/Ryuu_Lion")));
 assert.ok(archive.getExtendedInfo("DM-CHAR-BELL","CONT-ANIME").sections.length>=2);
 assert.equal(archive.getExtendedInfo("DM-CHAR-BELL","CONT-AR"),null,"Do not copy anime profile details into the historical continuity.");
+
+for (const [id, expectedTitle, sourceUrl, keyword] of [
+  ["CHAR-AISHA-BELKA", "Aisha Belka", "https://danmachi.fandom.com/wiki/Aisha_Belka", "Hell Kaios"],
+  ["CHAR-ANYA-FROMEL", "Anya Fromel", "https://danmachi.fandom.com/wiki/Anya_Fromel", "Remiste Felis"],
+  ["CHAR-CHLOE-ROLO", "Chloe Rollo", "https://danmachi.fandom.com/wiki/Chloe_Rollo", "Feles Cruz"]
+]) {
+  const info = archive.getExtendedInfo(id, "CONT-SECONDARY", index);
+  assert.ok(info && info.title.includes(expectedTitle), expectedTitle + " secondary capability note must be reachable from the interactive archive.");
+  assert.ok(info.sections.some(section => section.text.includes(keyword)), expectedTitle + " archive note must expose its key capability.");
+  assert.ok(info.references.some(ref => ref.kind === "community" && ref.url === sourceUrl), expectedTitle + " archive note must retain its community source.");
+  assert.equal(archive.getExtendedInfo(id, "CONT-ANIME", index), null, expectedTitle + " secondary note must not leak into the adaptation continuity.");
+  assert.equal(archive.getExtendedInfo(id, "CONT-MAIN-LN", index), null, expectedTitle + " secondary note must not leak into the main light novel continuity.");
+}
+const anyaDmr057 = archive.getExtendedInfo("CHAR-ANYA-FROMEL", "CONT-SECONDARY", index);
+assert.ok(anyaDmr057.sections.some(section => section.text.includes("página española") && section.text.includes("fragmento inglés")), "Anya's EN/ES discrepancy must remain visible in the interactive note.");
+
 process.stdout.write("PASS character archive model: continuity, relations, moments, spoiler filtering and unavailable-evidence handling.\\n");
