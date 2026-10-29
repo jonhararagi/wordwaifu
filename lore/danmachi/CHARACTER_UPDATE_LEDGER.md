@@ -416,6 +416,8 @@ Fuentes consultadas:
 
 ## Pasada secundaria 2026-10-29 — DMR-058: Daphne Lauros y Cassandra Ilion
 
+- **Corrección documental:** el dossier se había guardado con un nombre de archivo que mencionaba erróneamente a Miach. El contenido corresponde a Daphne y Cassandra; el nombre correcto es `DANMACHI-RESEARCH-058-daphne-cassandra-capabilities.md`. No se ha investigado ni añadido información de Miach Familia en DMR-058.
+
 - **Estado:** pasada secundaria estructurada; no es cotejo de texto primario.
 - **Continuidad:** CONT-SECONDARY; reutiliza los IDs existentes CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION. No cambia sus perfiles oficiales de adaptación.
 - **Fuentes registradas:** DMR-058-SRC-001–005: Daphne EN/ES, Cassandra EN, índices comunitarios de Magia ES y Habilidades ES. Son referencias comunitarias, no fuentes primarias ni necesariamente independientes.

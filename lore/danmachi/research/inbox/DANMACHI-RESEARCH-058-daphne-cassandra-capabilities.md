@@ -1,11 +1,12 @@
 # DANMACHI-RESEARCH-058 · Capacidades secundarias de Daphne Lauros y Cassandra Ilion
 
 - **Fecha de consulta:** 2026-10-29.
-- **Estado:** pasada secundaria estructurada; revisión CI e integración pendientes.
+- **Estado:** pasada secundaria estructurada e integrada en `main` mediante PR [#194](https://github.com/jonhararagi/wordwaifu/pull/194); CI pre-merge y post-merge aprobó ambos workflows. Sigue siendo evidencia secundaria, no cotejo narrativo primario.
 - **Continuidad:** `CONT-SECONDARY`.
 - **Expedientes reutilizados:** `CHAR-DAPHNE-LAUROS` (`characters/daphnelauros.md`) y `CHAR-CASSANDRA-ILION` (`characters/cassandrailion.md`). No se crean identidades ni se cambian IDs.
 - **Objetivo:** hacer recuperables las capacidades funcionales que las referencias comunitarias describen, registrar qué campos no informan y probar que esos datos no se filtren a continuidades oficiales.
 - **Anti-repetición:** no recorrer estas mismas páginas otra vez para buscar datos que no ofrecen. Reabrir solo ante actualización material, contradicción pertinente o pasaje narrativo licenciado legible.
+- **Integración verificada:** squash SHA `190b4313a21569aa056548f8a40f9022b900b028`. CI pre-merge: [Validate #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [Lore/Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), ambos `success`. CI post-merge sobre el SHA exacto: [Validate #40867850127](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850127) y [Lore/Integrity #40867850048](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850048), ambos `success`.
 
 ## Fuentes consultadas
 
