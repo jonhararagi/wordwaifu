@@ -241,4 +241,20 @@ assert.ok(zald.includes("DMR-045-SRC-043"));
 const ids = [...dmr045.matchAll(/^### (DMR-045-CLM-\d{3}) ·/gm)].map(match => match[1]);
 assert.equal(new Set(ids).size, ids.length, "DMR-045 claim IDs must be unique");
 
+const googlePlayVol20 = sources.slice(
+  sources.indexOf("## DMR-045-SRC-055"),
+  sources.indexOf("## DMR-056-SRC-001")
+);
+assert.match(googlePlayVol20, /source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_SAMPLE_OFFER/);
+assert.match(googlePlayVol20, /official_url: https://play\.google\.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Try_to_Pick_Up_Girls_i\?id=XWHEEQAAQBAJ/);
+assert.match(googlePlayVol20, /claims_supported: \[\]/);
+assert.match(googlePlayVol20, /events_supported: \[\]/);
+assert.match(googlePlayVol20, /verification_status: metadata_checked_only/);
+assert.match(googlePlayVol20, /insufficient_credits/);
+assert.match(googlePlayVol20, /no demuestra un fallo del lector/i);
+assert.match(dmr045, /DMR-045-SRC-055/);
+assert.match(dmr045, /XWHEEQAAQBAJ/);
+assert.match(queue, /DMR-045-SRC-055/);
+assert.match(corpus.getOnlineSourceDirectory().find(source => source.id === "licensed-preview-google-play-danmachi-vol20").limits, /claims_supported: \[\]/);
+
 console.log("DMR-045 public secondary sweep and continuity boundaries validated.");
