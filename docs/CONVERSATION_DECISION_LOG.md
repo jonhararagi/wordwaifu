@@ -635,3 +635,5 @@
 - **Limitación de verificación:** la consulta disponible no devolvió ejecuciones post-merge para el SHA de fusión; no se declara ese CI validado.
 - **Continuidad:** DMR-057 permanece `CONT-SECONDARY`. DMR-045 sigue `IN_PROGRESS`, con sus cinco verificaciones narrativas primarias pendientes; no repetir las rutas agotadas sin desencadenante nuevo.
 - **Siguiente paso:** seguir con otra cohorte no repetida para probar búsqueda, fuente, límites y recuperación en la enciclopedia; retomar DMR-045 únicamente si aparece texto primario legible o una fuente oficial nueva con localizador verificable.
+
+- **CI post-merge verificado después de la actualización:** ambos workflows de push finalizaron en `success` sobre el SHA exacto integrado `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate WordWaifu #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125).
