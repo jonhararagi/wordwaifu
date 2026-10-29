@@ -536,3 +536,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - CI post-merge: [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos success sobre `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
 - Límites: no se reescriben personalidades ni se crean inferencias sobre costes/skills ausentes; DMR-045 mantiene los cinco cotejos primarios pendientes.
 
+
+
+## Verificación de integración — DMR-057 expediente interactivo
+
+- PR [#189](https://github.com/jonhararagi/wordwaifu/pull/189), integrada mediante squash en `main`; merge SHA `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`.
+- Incluye notas `CONT-SECONDARY` en `src/character-archive.js` para Aisha Belka, Anya Fromel y Chloe Rollo; pruebas en `tests/test_character_archive.cjs` para recuperación, fuente, campos faltantes y aislamiento frente a CONT-ANIME/CONT-MAIN-LN.
+- CI de PR: [Validate #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [Lore/Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917), ambos success. Browser smoke pasó.
+- CI post-merge sobre SHA exacto: [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) y [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977), en progreso en la última consulta.
+- Mantener la diferencia EN/ES de Remiste Felis; no modificar personalidad, relaciones ni claims primarios. DMR-045 sigue abierto.
