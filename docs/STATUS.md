@@ -1,5 +1,13 @@
 # Estado de WordWaifu
 
+## DMR-058 — capacidades secundarias de Daphne y Cassandra (implementado en rama; CI/integración pendientes)
+
+- Se reutilizan CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION; la información funcional adicional se expone únicamente en CONT-SECONDARY, sin sobrescribir sus perfiles de adaptación.
+- Informe: [DANMACHI-RESEARCH-058](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-058-miach-familia-capabilities.md). Fuentes DMR-058-SRC-001–005 en el [registro maestro](../lore/danmachi/sources/00-registro-fuentes.md).
+- Alcance: archivo interactivo y regresiones; se documentan Escape condicional, efecto desconocido de Five Dimension Troia y costes/cooldowns no informados.
+- La rama de trabajo se creó desde main SHA 467579330acf20d65728f759f0ce142822366375; todavía no se atribuye CI aprobado ni integración a esta tanda.
+- DMR-045 sigue IN_PROGRESS, con Alfia, Zald, Meteria, Erebus y Rudra en HOLD_FOR_PRIMARY_SOURCE. No se repiten lectores sin cambio de acceso y Orario continúa pospuesto.
+
 ## DMR-045 — ruta adicional de Google Play Books, volumen 20 (2026-10-29)
 
 - Se localizó la ficha de [Google Play Books — volumen 20](https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ) desde la ficha editorial de [Yen Press](https://yenpress.com/titles/9798855437867-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-20-light-novel). La página del distribuidor anuncia “Free sample”, identifica a Yen Press LLC como vendedor y muestra 232 páginas para la edición inglesa (ISBN digital 9798855437867).
