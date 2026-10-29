@@ -4595,3 +4595,116 @@ verification_status: stub
 - rights_note: Enlaces y paráfrasis original; no se reproduce contenido protegido del manga ni de las novelas.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: metadata_checked_only
+
+
+---
+
+## DMR-059-SRC-001 · Finn Deimne — DanMachi Wiki (inglés)
+
+- source_id: DMR-059-SRC-001
+- title: Finn Deimne
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Página comunitaria, versión consultada el 2026-10-29
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Finn_Deimne
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Skill, Magic and Equipment; Abilities; Development Abilities
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Reporta nivel 7 y piso alcanzado 61, además de Hell Finegas, Tir na Nog y skills. Los snapshots no fijan por sí solos una fecha exacta.
+- conflicting_sources: [DMR-059-SRC-002]
+- rights_note: Resumen propio; no almacenar extractos extensos.
+- verified_by: DANMACHI-RESEARCH-059
+- verification_status: secondary_checked
+
+## DMR-059-SRC-002 · Finn Deimne — DanMachi Wiki ES
+
+- source_id: DMR-059-SRC-002
+- title: Finn Deimne
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Página comunitaria, versión consultada el 2026-10-29
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Finn_Deimne
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Características; Habilidad, Magia y Equipo
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Reporta piso alcanzado 59 frente al 61 de la versión inglesa. Mantener ambas atribuciones; no inferir cuál es posterior.
+- conflicting_sources: [DMR-059-SRC-001]
+- rights_note: Resumen propio; no almacenar extractos extensos.
+- verified_by: DANMACHI-RESEARCH-059
+- verification_status: secondary_checked
+
+## DMR-059-SRC-003 · Riveria Ljos Alf — DanMachi Wiki (inglés)
+
+- source_id: DMR-059-SRC-003
+- title: Riveria Ljos Alf
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Página comunitaria, versión consultada el 2026-10-29
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Riveria_Ljos_Alf
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Skill, Magic and Equipment; Magic; Skills; Development Abilities
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Enumera nueve magias de falna y lista Flare Burn aparte como magia congénita sin falna.
+- conflicting_sources: []
+- rights_note: Resumen propio; no almacenar extractos extensos.
+- verified_by: DANMACHI-RESEARCH-059
+- verification_status: secondary_checked
+
+## DMR-059-SRC-004 · Gareth Landrock — DanMachi Wiki (inglés)
+
+- source_id: DMR-059-SRC-004
+- title: Gareth Landrock
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Página comunitaria, versión consultada el 2026-10-29
+- language: Inglés
+- official_url: https://danmachi.fandom.com/wiki/Gareth_Landrock
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Skill, Magic and Equipment; Magic; Skills; Development Abilities
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Reporta Dvergr Enhance, Ardigalea y Earth Raid; la restricción de Earth Raid al contacto con el suelo es secundaria.
+- conflicting_sources: []
+- rights_note: Resumen propio; no almacenar extractos extensos.
+- verified_by: DANMACHI-RESEARCH-059
+- verification_status: secondary_checked
+
+## DMR-059-SRC-005 · Habilidades — DanMachi Wiki ES
+
+- source_id: DMR-059-SRC-005
+- title: Habilidades
+- creator_or_publisher: DanMachi Wiki contributors
+- source_type: SECONDARY
+- series: DanMachi / Sword Oratoria
+- volume_or_edition: Página comunitaria, versión consultada el 2026-10-29
+- language: Español
+- official_url: https://danmachi.fandom.com/es/wiki/Habilidades
+- accessed_at: 2026-10-29
+- locator_type: webpage_section
+- locator: Tabla de efectos; Fairy Anthem, Alf Regina, Dvergr Enhance, Ardigalea, Pallum Spirit, Noble Brave, Dia Fianna, Command Howl y Ail mac Midna
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-SECONDARY
+- reliability_note: Índice comunitario de efectos, no pasaje narrativo ni corroboración independiente de las páginas de personaje.
+- conflicting_sources: []
+- rights_note: Resumen propio; no almacenar extractos extensos.
+- verified_by: DANMACHI-RESEARCH-059
+- verification_status: secondary_checked
