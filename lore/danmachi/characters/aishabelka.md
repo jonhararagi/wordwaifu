@@ -52,6 +52,15 @@ Un perfil de adaptación no sustituye una biografía por escenas. Se deben cotej
 - Claim refs: DMR-006-CLM-136, DMR-006-CLM-137.
 - El archivo es navegable, pero la biografía no se considera completa hasta cotejar las escenas relevantes.
 
+## Capacidades reportadas por fuentes secundarias — DMR-057
+
+- **Continuidad/evidencia:** `CONT-SECONDARY`; no equivale a cotejo de novela.
+- La página comunitaria reporta la magia `Hell Kaios`, descrita como una onda/corte roja de choque, y el arma `Great Podao Zaga`.
+- También enumera las habilidades de desarrollo Hunter, Abnormal Resistance y Fist Strike.
+- **No informado en la página consultada:** nombres de skills individuales y costes numéricos de la magia. No completar esos campos por analogía.
+- **Fuente:** [DanMachi Wiki — Aisha Belka](https://danmachi.fandom.com/wiki/Aisha_Belka); registro DMR-057-SRC-001; resumen DMR-057-CLM-001.
+- Reabrir solo con evidencia nueva o un pasaje primario legible.
+
 ## Próxima revisión
 
 1. Localizar escenas/capítulos de novela para los hechos importantes.
