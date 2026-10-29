@@ -4,6 +4,7 @@
 
 
 - [DANMACHI-RESEARCH-058](research/inbox/DANMACHI-RESEARCH-058-miach-familia-capabilities.md) — pasada secundaria de Daphne Lauros y Cassandra Ilion; condiciones de skills, magia, equipo y campos no informados bajo CONT-SECONDARY, sin IDs duplicados ni claims de canon nuevos.
+- [DANMACHI-RESEARCH-059](research/inbox/DANMACHI-RESEARCH-059-loki-trio-capabilities.md) — Finn Deimne, Riveria Ljos Alf y Gareth Landrock; capacidades secundarias, condiciones, discrepancia EN/ES de Finn y separación de Flare Burn congénita.
 - [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
 
 ## Índices de personajes e historias por continuidad

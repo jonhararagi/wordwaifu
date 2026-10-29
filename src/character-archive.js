@@ -1013,6 +1013,50 @@ references:[
 }}
 });
 
+
+Object.assign(EXTENDED,{
+"CHAR-FINN-DEIMNE":{"CONT-SECONDARY":{
+title:"Finn Deimne · capacidades reportadas por fuentes comunitarias",
+summary:"DMR-059. Referencias secundarias; el perfil oficial de adaptación permanece separado y el conflicto EN/ES no se resuelve por intuición.",
+sections:[
+{title:"Hell Finegas y Tir na Nog · DMR-059",text:"La wiki inglesa describe Hell Finegas como una magia de canto muy corto que refuerza ampliamente las capacidades de Finn, pero afecta su juicio por el aumento del deseo de combatir. Tir na Nog se describe como magia arrojadiza que agrega el nivel y los totales de habilidades al poder mágico, con uso reportado de una vez cada 24 horas. Son datos secundarios, no localizadores primarios."},
+{title:"Skills reportadas · DMR-059",text:"Pallum Spirit refuerza magia y skills ante adversidad; Noble Brave aporta resistencia mental; Dia Fianna permite usar temporalmente Spearman mientras empuña una lanza; Command Howl amplía la transmisión de sus gritos en función de la escala del combate; Ail mac Midna aporta resistencia al sueño y al fuego. No se añaden magnitudes exactas ni costes de Mind no publicados por las fuentes revisadas."},
+{title:"Conflicto EN/ES y cierre",text:"La página inglesa reporta piso alcanzado 61 y la española 59. Se conservan ambos datos atribuidos: la fecha de snapshot no está fijada y no se elige uno por intuición. No se cotejaron costes numéricos ni localizadores narrativos primarios. CONT-SECONDARY."}
+],
+references:[
+{label:"DanMachi Wiki · Finn Deimne (EN)",url:"https://danmachi.fandom.com/wiki/Finn_Deimne",kind:"community"},
+{label:"DanMachi Wiki ES · Finn Deimne",url:"https://danmachi.fandom.com/es/wiki/Finn_Deimne",kind:"community"},
+{label:"DanMachi Wiki ES · Habilidades",url:"https://danmachi.fandom.com/es/wiki/Habilidades",kind:"community"}
+]
+}},
+"CHAR-RIVERIA-LJOS-ALF":{"CONT-SECONDARY":{
+title:"Riveria Ljos Alf · magia, apoyo y equipo reportados",
+summary:"DMR-059. Mantener nueve magias de falna separadas de Flare Burn, que la fuente describe como magia congénita.",
+sections:[
+{title:"Fairy Anthem y Alf Regina · DMR-059",text:"Fairy Anthem se describe como un aumento de efectos, potencia y alcance de la magia ligado a la longitud del canto. Alf Regina aumenta la estadística mágica de Riveria, refuerza la magia de los elfos dentro de su círculo y permite que recuperen Mind a partir de la energía mágica utilizada, según las referencias comunitarias."},
+{title:"Nueve magias de falna frente a Flare Burn",text:"La página inglesa organiza nueve magias de falna en tres grupos: ataque (Wynn Fimbulvetr, Rea Laevateinn, Vas Windheim), defensa (Liv Ilusio, Veil Breath, Via Shilheim) y curación (Fil Eldis, Luna Aldis, Van Alheim). Flare Burn también figura en la página, pero se identifica aparte como magia congénita élfica utilizable sin falna; no contarla como una décima magia del sistema de nueve."},
+{title:"Desarrollo, equipo y campos no informados",text:"Se reportan Mage, Treatment, Abnormal Resistance, Spirit Healing y Magic Resistance, además del bastón Magna Alfs y Fairy King's Holy Robe. No se recuperaron costes numéricos de Mind, cooldowns universales ni localizadores narrativos primarios por hechizo. CONT-SECONDARY."}
+],
+references:[
+{label:"DanMachi Wiki · Riveria Ljos Alf (EN)",url:"https://danmachi.fandom.com/wiki/Riveria_Ljos_Alf",kind:"community"},
+{label:"DanMachi Wiki ES · Habilidades",url:"https://danmachi.fandom.com/es/wiki/Habilidades",kind:"community"}
+]
+}},
+"CHAR-GARETH-LANDROCK":{"CONT-SECONDARY":{
+title:"Gareth Landrock · fuerza, resistencia y magia reportadas",
+summary:"DMR-059. Datos comunitarios con condición explícita de Earth Raid; no son cotejo de novela.",
+sections:[
+{title:"Dvergr Enhance y Ardigalea · DMR-059",text:"Dvergr Enhance aumenta considerablemente la estadística de fuerza. Ardigalea aumenta considerablemente la resistencia y la resistencia contra ataques mágicos, según las páginas comunitarias."},
+{title:"Earth Raid y condición de lanzamiento",text:"Earth Raid permite destruir el terreno; la página inglesa indica que su potencia depende de la estadística de fuerza y que solo puede lanzarse cuando Gareth está en el suelo. Conservar la condición como afirmación secundaria pendiente de cotejo narrativo."},
+{title:"Desarrollo, equipo y campos no informados",text:"Se reportan Fist Strike, Magic Resistance, Abnormal Resistance, Crush y Strong Defense, además de Grand Axe y Axe Rolan. No se recuperaron coste de Mind, área numérica, duración/cooldown ni localizadores primarios. CONT-SECONDARY."}
+],
+references:[
+{label:"DanMachi Wiki · Gareth Landrock (EN)",url:"https://danmachi.fandom.com/wiki/Gareth_Landrock",kind:"community"},
+{label:"DanMachi Wiki ES · Habilidades",url:"https://danmachi.fandom.com/es/wiki/Habilidades",kind:"community"}
+]
+}}
+});
+
 function refsClaims(index,refs,continuity,filter){return(index.claims||[]).filter(c=>((refs||[]).includes(c.claimId)||(refs||[]).includes(c.entryId))&&(!continuity||(c.continuityScopes||[]).includes(continuity))&&visible(c.spoilerLevel,filter));}
 function worst(claims){const rank={none:0,mild:1,unknown:2,major:3,endgame:4};return claims.reduce((v,c)=>rank[String(c.spoilerLevel||"unknown").toLowerCase()]>rank[v]?String(c.spoilerLevel||"unknown").toLowerCase():v,"none");}
 function list(index,options){const o=options||{},q=String(o.query||"").trim().normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase(),continuity=String(o.continuity||"ALL"),filter=String(o.spoiler||"all");

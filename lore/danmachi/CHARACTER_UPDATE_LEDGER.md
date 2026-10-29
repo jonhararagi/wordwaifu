@@ -451,3 +451,17 @@ Fuentes consultadas:
 - **Estado:** `DMR-045-SRC-041` permanece `metadata_checked_only`; no aporta claims ni eventos. No se cambian relaciones o personalidades. El aviso no demuestra que el lector falle en todos los navegadores.
 - **Anti-repetición:** no repetir esta ruta hasta que se disponga de una sesión normal autorizada y compatible que muestre páginas narrativas con localizador reproducible. Los cinco expedientes siguen `HOLD_FOR_PRIMARY_SOURCE`.
 
+
+
+## Pasada secundaria 2026-10-29 — DMR-059: Finn, Riveria y Gareth
+
+- **Estado:** `SECONDARY_PASS_COMPLETE` para las páginas consultadas; contraste EN/ES parcial, sin cotejo narrativo primario.
+- **IDs reutilizados:** `CHAR-FINN-DEIMNE`, `CHAR-RIVERIA-LJOS-ALF`, `CHAR-GARETH-LANDROCK`.
+- **Fuentes:** DMR-059-SRC-001–005. Finn EN/ES, Riveria EN, Gareth EN y tabla comunitaria Habilidades ES; las páginas relacionadas no son fuentes independientes.
+- **Finn:** Hell Finegas refuerza capacidades y perjudica el juicio por el impulso de combate; Tir na Nog se reporta con uso una vez cada 24 horas; se describen cinco skills. **Conflicto EN/ES:** piso alcanzado 61 en inglés y 59 en español; conservar ambas atribuciones sin fechar los snapshots.
+- **Riveria:** Fairy Anthem y Alf Regina; nueve magias de falna en tres grupos. Flare Burn figura aparte como magia congénita sin falna; no es una décima magia del sistema de nueve.
+- **Gareth:** Dvergr Enhance, Ardigalea y Earth Raid; esta última se reporta condicionada al contacto con el suelo.
+- **No informado/cotejado:** costes numéricos de Mind, duración/cooldowns universales, incrementos exactos y localizadores primarios por mecánica.
+- **Anti-repetición:** no volver a recorrer estas mismas páginas para completar campos ausentes. Reabrir con texto licenciado legible, actualización material o contradicción nueva.
+- **Continuidad:** `CONT-SECONDARY` únicamente. No reescribir personalidad ni importar datos automáticamente a `CONT-MAIN-LN` o a perfiles `CONT-ANIME`/`CONT-SO`.
+- **DMR-045:** permanece abierto con sus cinco cotejos primarios pendientes.
