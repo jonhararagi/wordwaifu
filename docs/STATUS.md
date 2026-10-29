@@ -1,5 +1,12 @@
 # Estado de WordWaifu
 
+## DMR-045 — nueva ruta de muestra dBook para Astrea Record 3 (2026-10-29)
+
+- Se encontró una ruta pública de distribuidor para la edición japonesa de Astrea Record 3: [dBook / NTT DOCOMO](https://dbook.docomo.ne.jp/item/b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9/2000/). La ficha anuncia 試し読み y está asociada a SB Creative / GA Bunko.
+- Al seguir la acción de muestra se abrió [el lanzador de la aplicación dBook](https://dbook.docomo.ne.jp/applaunch/view/?launch=app&pid=b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9); la extracción devolvió cero líneas. No se obtuvo texto narrativo ni localizador, y no se puede concluir que el lector falle en la aplicación normal.
+- Se añadió la entrada DMR-045-SRC-056, un enlace en el directorio de fuentes de la aplicación y una regresión de descubribilidad. En este commit de trabajo la integración aún está pendiente de PR y CI; la fuente queda `metadata_checked_only`, sin claims ni eventos.
+- La ruta es una alternativa de acceso licenciada, no corroboración narrativa independiente. Alfia, Zald, Meteria, Erebus y Rudra permanecen `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
+
 ## DMR-058 — capacidades secundarias de Daphne y Cassandra (integrado y validado en main)
 
 - Se reutilizan `CHAR-DAPHNE-LAUROS` y `CHAR-CASSANDRA-ILION`; los detalles funcionales quedan bajo `CONT-SECONDARY`, sin sobrescribir sus perfiles de adaptación.
