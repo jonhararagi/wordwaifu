@@ -753,3 +753,14 @@
 - **Corrección:** renombrar el dossier a `DANMACHI-RESEARCH-058-daphne-cassandra-capabilities.md`, actualizar los enlaces internos y el título/descripción de PR #194, y corregir el estado del dossier para reflejar su integración real.
 - **Límite:** no se crea una investigación de Miach ni se modifica lore, IDs, relaciones, eventos o personalidades. DMR-058 sigue siendo una pasada secundaria de Daphne y Cassandra; DMR-045 sigue abierto.
 - **Evidencia histórica de integración:** PR #194, squash SHA `190b4313a21569aa056548f8a40f9022b900b028`; CI pre-merge [Validate #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [Lore/Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), post-merge [Validate #40867850127](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850127) y [Lore/Integrity #40867850048](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850048), todos `success`.
+
+### CONV-DM-2026-10-29-014 — Pasada individual obligatoria de 5–10 minutos y marca +
+
+- **Fecha:** 2026-10-29.
+- **Estado:** ACCEPTED.
+- **Instrucción:** para cada personaje de la tanda activa, dedicar una pasada individual de investigación de 5–10 minutos, sin saltar personajes ni sustituir la revisión por un resumen general. Consultar primero las rutas principales ya designadas: texto primario/licenciado legible; después DanMachi Wiki EN y ES, portal oficial danmachi.com, GA Bunko/SB Creative ga.sbcr.jp y entrevistas/publicaciones identificables.
+- **Bitácora obligatoria:** añadir un signo + junto al nombre al completar la pasada pública individual; anotar nombre/ID, datos nuevos o aclaraciones que se incorporan, URLs/sitios efectivamente visitados, campos aún no informados, discrepancias, continuidad y disparador para reabrir.
+- **Significado de +:** indica que la pasada de búsqueda quedó documentada; no equivale a validación primaria ni a cierre del expediente canónico. Si falta texto primario, conservar HOLD_FOR_PRIMARY_SOURCE y separar CONT-MAIN-LN, CONT-AR, CONT-GAME, CONT-AU y CONT-SECONDARY.
+- **Anti-repetición:** no volver a probar lectores ya agotados ni duplicar fuentes/IDs sin cambio material de acceso o evidencia nueva. No utilizar copias no autorizadas de novelas. No inferir al padre de Bell ni atribuir a Rudra personalmente actos de su Familia sin evidencia explícita.
+- **Primera aplicación:** Alfia, Zald, Meteria, Erebus y Rudra en DMR-045. La pasada pública del 2026-10-29 queda registrada en CHARACTER_UPDATE_LEDGER.md y en el dossier DMR-045; los cinco cotejos primarios continúan pendientes.
+- **Documentos afectados:** lore/danmachi/CHARACTER_UPDATE_LEDGER.md, lore/danmachi/research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md, lore/danmachi/WORK_QUEUE.md y el registro de fuentes cuando aparezca una fuente verdaderamente nueva.
