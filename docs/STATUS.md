@@ -11,19 +11,6 @@
 - **CI post-merge sobre el SHA exacto `ad20a70e4b15e48901e5898780f21841d0979968`:** [Validate WordWaifu #40929383860](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383860) y [DanMachi Lore and Retrieval Integrity #40929383855](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383855), ambos `success`.
 - **Estado factual:** la ruta añade procedencia y separación de continuidad, no una escena. Los cinco cotejos narrativos primarios de DMR-045 siguen abiertos y Orario permanece pospuesto.
 
-n manga oficial de Astrea Record registrada (2026-10-29)
-
-- Se registra **DMR-045-SRC-058**: [página oficial SQUARE ENIX / Big Gangan](https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/) y [ficha BookLive de Big Gangan 2026 Vol.06](https://booklive.jp/product/index/title_id/387660/vol_no/119). La serialización se anuncia desde el 2026-05-25; BookLive anuncia la adaptación como nueva serie y muestra opciones de lectura.
-- No se obtuvo una página de manga legible. El navegador interactivo devolvió `insufficient_credits` antes de iniciar la navegación; la muestra no se pudo inspeccionar y no se afirma que el lector haya fallado.
-- La fuente queda en `CONT-MANGA`, `metadata_checked_only`, con `claims_supported: []` y `events_supported: []`. La lista oficial inicial de personajes no demuestra ausencia de Alfia, Zald, Meteria, Erebus o Rudra en otros capítulos. No transferir detalles de manga a `CONT-AR` o `CONT-MAIN-LN`.
-- **PR integrada:** [#201](https://github.com/jonhararagi/wordwaifu/pull/201), squash SHA de `main`: [`ad20a70e4b15e48901e5898780f21841d0979968`](https://github.com/jonhararagi/wordwaifu/commit/ad20a70e4b15e48901e5898780f21841d0979968).
-- **CI pre-merge sobre el head final `6af090defaa128fbb26dcb034aeb03a915aa3bc5`:** [Validate WordWaifu #40929087678](https://github.com/jonhararagi/wordwaifu/actions/runs/40929087678) y [DanMachi Lore and Retrieval Integrity #40929087528](https://github.com/jonhararagi/wordwaifu/actions/runs/40929087528), ambos `success`.
-- **Corrección de CI registrada:** el intento inicial de Validate [#40928846364](https://github.com/jonhararagi/wordwaifu/actions/runs/40928846364) falló porque el validador rechazó cuatro enlaces Markdown con ángulos alrededor de la URL. Se cambiaron a enlaces Markdown normales y la nueva ejecución sobre el head final pasó; no se ocultó el primer resultado.
-- **CI post-merge sobre el SHA exacto `ad20a70e4b15e48901e5898780f21841d0979968`:** [Validate WordWaifu #40929383860](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383860) y [DanMachi Lore and Retrieval Integrity #40929383855](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383855), ambos `success`.
-- **Estado factual:** la ruta añade procedencia y separación de continuidad, no una escena. Los cinco cotejos narrativos primarios de DMR-045 siguen abiertos y Orario permanece pospuesto.
-
-# Estado de WordWaifu
-
 ## DMR-045 — nueva ruta de muestra dBook para Astrea Record 3 (2026-10-29)
 
 - Se encontró una ruta pública de distribuidor para la edición japonesa de Astrea Record 3: [dBook / NTT DOCOMO](https://dbook.docomo.ne.jp/item/b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9/2000/). La ficha anuncia 試し読み y está asociada a SB Creative / GA Bunko.
