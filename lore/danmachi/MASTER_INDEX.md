@@ -389,3 +389,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Integración: [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), SHA de `main` `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
 - CI pre-merge sobre `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`: [Validate](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos success. CI post-merge validado sobre el SHA exacto de integración: [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos success sobre `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
 - DMR-045 conserva sus cinco verificaciones primarias abiertas.
+
+
+## DANMACHI-RESEARCH-057 · expediente interactivo (integrado)
+- La capa `CONT-SECONDARY` de Aisha Belka, Anya Fromel y Chloe Rollo ya está disponible en `src/character-archive.js` mediante [PR #189](https://github.com/jonhararagi/wordwaifu/pull/189), merge SHA `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`.
+- Tests de PR: [Validate #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [Lore/Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917), ambos success. Se verifica la recuperación, refs comunitarias, campos no informados y aislamiento frente a CONT-ANIME/CONT-MAIN-LN; browser smoke también pasó.
+- CI post-merge del SHA exacto: [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) y [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977), aún in_progress en la última consulta.
+- Diferencia EN/ES de Remiste Felis conservada como secundaria. No se modifica el roster, relaciones ni personalidad. DMR-045 mantiene cinco cotejos narrativos primarios pendientes.
