@@ -243,3 +243,11 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Aplicación:** DMR-056 reúne Liliruca Arde, Mikoto Yamato, Haruhime Sanjouno y crea la ficha CHAR-NINA-TULLE; se añaden notas `CONT-SECONDARY`, seis entradas al directorio de fuentes y regresiones automatizadas.
 - **Contradicción preservada:** Nina figura como pasante sin falna en el texto descriptivo, pero como activa en tablas de miembros. Su afiliación formal queda sin resolver.
 - **Límites:** no se añaden claims, eventos, relaciones o alias; DMR-045 mantiene los cinco cotejos primarios pendientes y solo se reabre con evidencia nueva.
+
+
+### DEC-DM-027 — Integrar cohorte DMR-057 sin cerrar DMR-045
+- **Fecha:** 2026-10-29.
+- **Estado:** integrada mediante [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), SHA de `main` `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
+- **Decisión operativa:** completar una cohorte secundaria nueva —Aisha Belka, Anya Fromel y Chloe Rollo— para probar la memoria recuperable de habilidades, fuentes y límites sin repetir análisis previos.
+- **CI pre-merge:** [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548) pasaron sobre `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`. La consulta del conector no devolvió CI post-merge para el SHA integrado; no se declara ese resultado.
+- **Límites:** continuidad `CONT-SECONDARY`; diferencia inglesa/española sobre Remiste Felis conservada; no informar un campo no equivale a afirmar su inexistencia. DMR-045 mantiene abiertos los cinco cotejos narrativos primarios.
