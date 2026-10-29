@@ -719,3 +719,17 @@
 - **Fuente:** https://www.ln-news.com/articles/121215.
 - **CI pre-merge sobre el head PR 38eee8702e5d98fadcc160c8a7604eab1a6a42ab:** [Validate WordWaifu #40911237809](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237809) y [DanMachi Lore and Retrieval Integrity #40911237807](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237807), ambos success.
 - **CI post-merge sobre el SHA exacto de main 65c4eb53d50e16c8bcca48393e51e35ebd5bc360:** [Validate WordWaifu #40911471211](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471211) y [DanMachi Lore and Retrieval Integrity #40911471327](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471327), ambos success. El primer intento de Validate falló en el smoke de navegador al esperar 5 s por un retrato remoto (tests/browser_smoke.cjs:517); se repitió únicamente ese job y el segundo intento pasó.
+
+### CONV-DM-2026-10-29-011 — Registrar adaptación manga oficial sin mezclar continuidades
+
+- **Fecha:** 2026-10-29.
+- **Tipo:** investigación de fuente oficial, procedencia y límites de continuidad.
+- **Estado:** integrado y validado en `main` mediante [PR #201](https://github.com/jonhararagi/wordwaifu/pull/201).
+- **Resultado:** se registró DMR-045-SRC-058 con la página oficial de SQUARE ENIX / Big Gangan y la ficha de distribución del número de debut. La entrada y el directorio de fuentes la clasifican como `CONT-MANGA` y `metadata_checked_only`, con `claims_supported: []` y `events_supported: []`.
+- **Acceso:** el navegador interactivo devolvió `insufficient_credits` antes de navegar. Por tanto, la muestra de BookLive no se inspeccionó; el estado del lector es desconocido, no fallido. La lista inicial de personajes de la ficha oficial no prueba ausencia de los cinco objetivos.
+- **Cambios:** fuente en el registro central, directorio de fuentes de la aplicación, regresión de unicidad/límites, informe DMR-045, WORK_QUEUE y MASTER_INDEX. No se añadió ningún claim, evento, relación, alias, habilidad ni cambio de personalidad. No se transfieren hechos de `CONT-MANGA` a `CONT-AR` o `CONT-MAIN-LN`.
+- **Head de PR validado:** `6af090defaa128fbb26dcb034aeb03a915aa3bc5`. [Validate WordWaifu #40929087678](https://github.com/jonhararagi/wordwaifu/actions/runs/40929087678) y [DanMachi Lore and Retrieval Integrity #40929087528](https://github.com/jonhararagi/wordwaifu/actions/runs/40929087528) terminaron en `success`.
+- **Incidente de validación:** el primer intento de Validate [#40928846364](https://github.com/jonhararagi/wordwaifu/actions/runs/40928846364) falló por cuatro enlaces Markdown con ángulos que el validador interpretó como enlaces rotos. Se corrigió el formato; el head final quedó validado por ambos workflows.
+- **Integración:** [PR #201](https://github.com/jonhararagi/wordwaifu/pull/201) fusionada por squash; SHA exacto de `main`: [`ad20a70e4b15e48901e5898780f21841d0979968`](https://github.com/jonhararagi/wordwaifu/commit/ad20a70e4b15e48901e5898780f21841d0979968).
+- **CI post-merge sobre el SHA exacto:** [Validate WordWaifu #40929383860](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383860) y [DanMachi Lore and Retrieval Integrity #40929383855](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383855), ambos `success`.
+- **Prioridad vigente:** DMR-045 sigue `IN_PROGRESS`; Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes de cotejo narrativo primario. Orario permanece pospuesto.
