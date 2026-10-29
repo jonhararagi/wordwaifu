@@ -744,3 +744,12 @@
 - **Reglas clave:** la continuidad se registra separada del nivel de verificación; las wikis y análisis siguen siendo secundarios; las diferencias entre juego y novelización se preservan; el material AU no se importa automáticamente; metadatos no prueban escenas; los datos no informados no se inventan.
 - **DMR-045:** esta decisión organiza la evidencia, pero no verifica los expedientes de Alfia, Zald, Meteria, Erebus o Rudra.
 - **Criterio de cierre:** solo declarar integrada después de revisar diff, aprobar CI y verificar el SHA resultante de `main`.
+
+
+### CONV-DM-2026-10-29-013 — Corrección de nombre del dossier DMR-058
+
+- **Fecha:** 2026-10-29.
+- **Hallazgo:** el archivo `DANMACHI-RESEARCH-058-miach-familia-capabilities.md` contiene el dossier de Daphne Lauros y Cassandra Ilion; la cola, el índice y el estado también describen esa cohorte. El título de la PR #194 igualmente mencionaba Miach por error.
+- **Corrección:** renombrar el dossier a `DANMACHI-RESEARCH-058-daphne-cassandra-capabilities.md`, actualizar los enlaces internos y el título/descripción de PR #194, y corregir el estado del dossier para reflejar su integración real.
+- **Límite:** no se crea una investigación de Miach ni se modifica lore, IDs, relaciones, eventos o personalidades. DMR-058 sigue siendo una pasada secundaria de Daphne y Cassandra; DMR-045 sigue abierto.
+- **Evidencia histórica de integración:** PR #194, squash SHA `190b4313a21569aa056548f8a40f9022b900b028`; CI pre-merge [Validate #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [Lore/Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), post-merge [Validate #40867850127](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850127) y [Lore/Integrity #40867850048](https://github.com/jonhararagi/wordwaifu/actions/runs/40867850048), todos `success`.
