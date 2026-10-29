@@ -628,8 +628,10 @@
 
 ### CONV-DM-2026-10-29-003 — Notas DMR-057 en el archivo interactivo
 
-- **Estado:** IMPLEMENTADO EN PR, CI PENDIENTE; todavía no integrado.
-- **PR:** [#189](https://github.com/jonhararagi/wordwaifu/pull/189), rama `feature/dmr057-interactive-secondary-capabilities-2026-10-29`, head `fedb22bc44bd6e2c25aad39e3589db39a0720620`, base SHA `4d8cb68fa1a9d908670447e079e36150d7a5a17c`.
-- **Cambio:** añade `EXTENDED[id]["CONT-SECONDARY"]` para Aisha Belka, Anya Fromel y Chloe Rollo y regresiones para la recuperación desde el archivo interactivo, refs comunitarias, campos no reportados y aislamiento frente a `CONT-ANIME`/`CONT-MAIN-LN`.
-- **Pruebas CI:** [Validate WordWaifu #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [DanMachi Lore and Retrieval Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917) estaban `in_progress` en la última consulta. No se declara validación ni fusión hasta comprobar ambas conclusiones.
-- **Límite:** no edita roster/relaciones/personality; la discrepancia EN/ES de Remiste Felis se conserva como secundaria. DMR-045 sigue abierto.
+- **Estado:** INTEGRADO; CI de la PR validado, CI post-merge en curso en la última consulta.
+- **PR:** [#189](https://github.com/jonhararagi/wordwaifu/pull/189), squash SHA integrado `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`; head sometido a CI `fedb22bc44bd6e2c25aad39e3589db39a0720620`.
+- **Cambio:** añade `EXTENDED[id]["CONT-SECONDARY"]` para Aisha Belka, Anya Fromel y Chloe Rollo y pruebas de recuperación desde el archivo interactivo, referencias comunitarias, campos no reportados y aislamiento frente a `CONT-ANIME`/`CONT-MAIN-LN`.
+- **CI de PR:** [Validate WordWaifu #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [DanMachi Lore and Retrieval Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917), ambos `success` sobre el head indicado. La prueba del archivo y el smoke test de navegador también finalizaron en success.
+- **CI post-merge:** [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977) y [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) sobre el SHA exacto de integración; seguían `in_progress` en la última consulta.
+- **Límite:** no edita roster, grafo de relaciones, personalidad ni escenas primarias. La discrepancia EN/ES de Remiste Felis se conserva como secundaria. DMR-045 sigue abierto.
+
