@@ -733,3 +733,14 @@
 - **Integración:** [PR #201](https://github.com/jonhararagi/wordwaifu/pull/201) fusionada por squash; SHA exacto de `main`: [`ad20a70e4b15e48901e5898780f21841d0979968`](https://github.com/jonhararagi/wordwaifu/commit/ad20a70e4b15e48901e5898780f21841d0979968).
 - **CI post-merge sobre el SHA exacto:** [Validate WordWaifu #40929383860](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383860) y [DanMachi Lore and Retrieval Integrity #40929383855](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383855), ambos `success`.
 - **Prioridad vigente:** DMR-045 sigue `IN_PROGRESS`; Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes de cotejo narrativo primario. Orario permanece pospuesto.
+
+
+### CONV-DM-2026-10-29-012 — Guardar las etiquetas primordiales de continuidad DanMachi
+
+- **Fecha:** 2026-10-29.
+- **Estado:** decisión aceptada; documentación propuesta en la rama `docs/danmachi-continuity-tags-2026-10-29`, pendiente de integración y CI.
+- **Solicitud:** conservar de forma permanente las definiciones y límites de `CONT-GAME`, `CONT-AR`, `CONT-MAIN-LN`, `CONT-SECONDARY` y `CONT-AU`.
+- **Documento canónico:** `lore/danmachi/CONTINUITY_TAGS.md`; enlazado desde `lore/danmachi/MASTER_INDEX.md` y reflejado en DEC-030 de `docs/DECISIONS.md`.
+- **Reglas clave:** la continuidad se registra separada del nivel de verificación; las wikis y análisis siguen siendo secundarios; las diferencias entre juego y novelización se preservan; el material AU no se importa automáticamente; metadatos no prueban escenas; los datos no informados no se inventan.
+- **DMR-045:** esta decisión organiza la evidencia, pero no verifica los expedientes de Alfia, Zald, Meteria, Erebus o Rudra.
+- **Criterio de cierre:** solo declarar integrada después de revisar diff, aprobar CI y verificar el SHA resultante de `main`.
