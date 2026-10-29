@@ -1017,9 +1017,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Añadir la pasada secundaria estructurada, cinco rutas comunitarias y notas de límites para Aisha Belka, Anya Fromel y Chloe Rollo.
 - [x] Integrar mediante [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), squash SHA de `main` `6c1ffc257e2df45d3a32facb39fe684b71994f60`.
 - [x] Validar ambos workflows en el head pre-merge: [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos `success`.
-- [ ] Comprobar el CI post-merge del SHA exacto cuando la herramienta exponga esa ejecución; hasta entonces, post-merge CI no verificado.
+- [x] Comprobar el CI post-merge del SHA exacto de integración `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos success.
 - [x] Mantener diferencia EN/ES de Remiste Felis y campos no informados; no reescribir personalidades ni elevar fuentes comunitarias a primarias.
 - [ ] Siguiente cohorte: seleccionar personajes sin repetir cohortes recientes y comprobar que notas de capacidad se recuperan correctamente en búsqueda/UI; no abrir otra tanda si el modelo de archivo requiere una prueba de integración distinta.
 - **Límite persistente:** DMR-045 continúa prioritario para cualquier nueva evidencia primaria y no se cierra por DMR-057. Los cinco cotejos de Alfia, Zald, Meteria, Erebus y Rudra siguen abiertos.
 
-- **CI post-merge verificado después de la actualización:** ambos workflows de push finalizaron en `success` sobre el SHA exacto integrado `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [DanMachi Lore and Retrieval Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate WordWaifu #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125).
