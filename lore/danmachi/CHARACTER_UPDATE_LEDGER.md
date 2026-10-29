@@ -389,7 +389,7 @@ Fuentes consultadas:
 - **PR:** [#188](https://github.com/jonhararagi/wordwaifu/pull/188), integrada mediante squash.
 - **SHA de `main`:** `6c1ffc257e2df45d3a32facb39fe684b71994f60`; head probado: `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`.
 - **CI pre-merge:** [Validate WordWaifu #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [DanMachi Lore and Retrieval Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos `success`.
-- **CI post-merge:** la consulta no devolvió ejecuciones para el SHA de fusión; resultado no verificado.
+- **CI post-merge:** verificado sobre el SHA exacto de integración `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [Lore/Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125), ambos `success`.
 - **Contenido:** Aisha Belka, Anya Fromel y Chloe Rollo; cinco referencias comunitarias; continuidad `CONT-SECONDARY`; diferencia EN/ES de Remiste Felis conservada. Costes y skills ausentes se mantienen como no informados en las páginas revisadas.
 - **Reapertura:** solo ante fuente oficial nueva, pasaje narrativo legible, actualización material o contradicción relevante. DMR-045 sigue abierto.
 
