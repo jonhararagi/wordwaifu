@@ -900,6 +900,45 @@ references:[{label:"DanMachi Wiki · Tione Hiryute",url:"https://danmachi.fandom
 }}
 });
 
+Object.assign(EXTENDED, {
+"CHAR-AISHA-BELKA":{"CONT-SECONDARY":{
+title:"Aisha Belka · capacidades reportadas por fuentes secundarias",
+summary:"Pasada DMR-057. Los datos de wiki se separan del perfil oficial de adaptación y no sustituyen un cotejo de novela.",
+sections:[
+{title:"Magia y arma reportadas",text:"La página comunitaria reporta Hell Kaios, descrita como una onda o corte roja de choque, y el arma Great Podao Zaga."},
+{title:"Habilidades y campos no informados",text:"Habilidades de desarrollo enumeradas: Hunter, Abnormal Resistance y Fist Strike. Las páginas revisadas no informan nombres de skills individuales ni costes numéricos de la magia; no completar por analogía."},
+{title:"Límite de evidencia",text:"Continuidad CONT-SECONDARY. No se modifican personalidad, relaciones o escenas; reabrir solo con una fuente materialmente nueva o un pasaje primario legible."}
+],
+references:[{label:"DanMachi Wiki · Aisha Belka",url:"https://danmachi.fandom.com/wiki/Aisha_Belka",kind:"community"}]
+}},
+"CHAR-ANYA-FROMEL":{"CONT-SECONDARY":{
+title:"Anya Fromel · magia de debilitamiento reportada",
+summary:"Pasada DMR-057. Las referencias comunitarias describen una magia de área; se preserva una discrepancia entre páginas inglesa y española.",
+sections:[
+{title:"Remiste Felis",text:"Las páginas comunitarias describen una onda sonora de área amplia que debilita a quienes la oyen y puede afectar habilidades de desarrollo, skills y magia. No discrimina necesariamente entre aliados y adversarios; bloquear el sonido se presenta como contramedida y la recarga supera medio día."},
+{title:"Habilidades, equipo y campos no informados",text:"Se reportan Abnormal Resistance y una lanza. El coste exacto en Mind, la fórmula cuantitativa de debilitamiento y los nombres de skills individuales no están informados en las páginas revisadas."},
+{title:"Diferencia EN/ES",text:"La página española indica que Remiste Felis se cancela si Anya pierde el conocimiento; el fragmento inglés consultado no contiene esa condición. La diferencia se conserva sin resolver por intuición. Continuidad CONT-SECONDARY."}
+],
+references:[
+{label:"DanMachi Wiki · Anya Fromel",url:"https://danmachi.fandom.com/wiki/Anya_Fromel",kind:"community"},
+{label:"Wiki DanMachi ES · Anya Fromel",url:"https://danmachi.fandom.com/es/wiki/Anya_Fromel",kind:"community"}
+]
+}},
+"CHAR-CHLOE-ROLO":{"CONT-SECONDARY":{
+title:"Chloe Rollo · magia, habilidades y arma reportadas",
+summary:"Pasada DMR-057. Las notas comunitarias quedan separadas del perfil oficial de adaptación y de la historia no cotejada.",
+sections:[
+{title:"Feles Cruz",text:"Las páginas comunitarias describen Feles Cruz como una magia que crea dos espejismos controlados por Chloe que no pueden atacar ni defenderse."},
+{title:"Habilidades y arma reportadas",text:"Habilidades de desarrollo reportadas: Abnormal Resistance, Mixing y Escape. La wiki describe el cuchillo Violetta como un arma empleada con venenos."},
+{title:"Campos no informados y límites",text:"Las páginas revisadas no informan skills individuales con nombre ni coste numérico de Feles Cruz. Abnormal Resistance no implica inmunidad absoluta. Continuidad CONT-SECONDARY; no reescribir personalidad ni inferir escenas."}
+],
+references:[
+{label:"DanMachi Wiki · Chloe Rollo",url:"https://danmachi.fandom.com/wiki/Chloe_Rollo",kind:"community"},
+{label:"Wiki DanMachi ES · Chloe Rollo",url:"https://danmachi.fandom.com/es/wiki/Chloe_Rollo",kind:"community"}
+]
+}}
+});
+
 function extendedInfo(id,continuity,index){
 const base=EXTENDED[id]&&EXTENDED[id][continuity]?EXTENDED[id][continuity]:null;
 if(!base)return null;
