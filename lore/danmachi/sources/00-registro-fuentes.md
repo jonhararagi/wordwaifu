@@ -4572,3 +4572,26 @@ verification_status: stub
 - rights_note: URL y paráfrasis breve; no reproducir extensamente la entrevista ni obras protegidas.
 - verified_by: DANMACHI-RESEARCH-045
 - verification_status: source_checked
+
+## DMR-045-SRC-058 · Big Gangan — página oficial de la adaptación manga de Astrea Record
+
+- source_id: DMR-045-SRC-058
+- title: アストレア・レコード ダンジョンに出会いを求めるのは間違っているだろうか 英雄譚 — página oficial de la serie
+- creator_or_publisher: SQUARE ENIX / Monthly Big Gangan; obra original: Fujino Omori; manga: Karu Yonehaku
+- source_type: OFFICIAL_MANGA_SERIES_PAGE
+- series: DanMachi / Astrea Record manga adaptation
+- volume_or_edition: Inicio de serialización anunciado para 2026-05-25; Big Gangan 2026 Vol.06
+- language: Japonés
+- official_url: https://magazine.jp.square-enix.com/biggangan/introduction/danmachi_astrea/
+- related_access_url: https://booklive.jp/product/index/title_id/387660/vol_no/119
+- accessed_at: 2026-10-29
+- locator_type: publisher_series_page_and_issue_metadata
+- locator: Ficha oficial de la serie (sinopsis y lista inicial de personajes) y ficha de distribuidor del número que anuncia el estreno. No se inspeccionó capítulo, página ni panel narrativo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-MANGA
+- reliability_note: Fuente primaria para los créditos y metadatos de la adaptación manga, no para lo narrado en las novelas. El sitio oficial presenta a Ryuu, Alise, Kaguya y Ardee; esa lista de presentación no demuestra que los cinco personajes de DMR-045 estén ausentes de toda la adaptación. BookLive ofrece opciones de muestra, pero el flujo de lectura no se inspeccionó: el navegador interactivo devolvió insufficient_credits antes de navegar. El estado del lector es desconocido, no fallido. Mantener CONT-MANGA aislado de CONT-AR y CONT-MAIN-LN.
+- conflicting_sources: []
+- rights_note: Enlaces y paráfrasis original; no se reproduce contenido protegido del manga ni de las novelas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: metadata_checked_only
