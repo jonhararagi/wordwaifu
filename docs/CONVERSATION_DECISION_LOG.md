@@ -687,7 +687,11 @@
 
 - **Fecha:** 2026-10-29.
 - **Tipo:** nueva ruta licenciada y control anti-repetición para DMR-045.
-- **Estado:** implementado en rama; integración y CI de PR pendientes.
+- **Estado:** INTEGRADO Y VALIDADO; PR [#196](https://github.com/jonhararagi/wordwaifu/pull/196) fusionada por squash en `main`.
+- **SHA de integración confirmado:** `7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91` ([commit](https://github.com/jonhararagi/wordwaifu/commit/7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91)).
+
+- **CI pre-merge sobre el head `19777ba299a968777e8e77b5e87c612038fa4caa`:** [Validate WordWaifu #40897980797](https://github.com/jonhararagi/wordwaifu/actions/runs/40897980797) terminó en `success`; [DanMachi Lore and Retrieval Integrity #40897980663](https://github.com/jonhararagi/wordwaifu/actions/runs/40897980663) terminó en `success` tras el segundo intento. El primer intento del workflow de lore agotó el timeout del smoke test al cargar retratos remotos; el reintento aprobó el smoke de navegador y el catálogo/enlaces.
+- **CI post-merge sobre el SHA exacto `7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91`:** [DanMachi Lore and Retrieval Integrity #40898517371](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517371) terminó en `success`; [Validate WordWaifu #40898517407](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517407) terminó en `success` tras el segundo intento. En el primer intento de Validate, el smoke de navegador excedió 10 s al esperar retratos oficiales de referencia en `danmachi.com`; el segundo intento pasó el smoke y la comprobación de estructura. El dato queda registrado como inestabilidad de carga externa, no como fallo del cambio dBook.
 - **Hallazgo:** la ficha pública de [dBook](https://dbook.docomo.ne.jp/item/b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9/2000/) anuncia 試し読み para Astrea Record 3. La acción conduce al [lanzador dBook](https://dbook.docomo.ne.jp/applaunch/view/?launch=app&pid=b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9), que no devolvió texto extraíble.
 - **Aplicación:** DMR-045-SRC-056 se registra como `metadata_checked_only` en el registro de fuentes y se añade al directorio de fuentes de la aplicación con prueba de regresión.
 - **Límite:** no se obtiene un pasaje narrativo; no se generan claims/eventos/relaciones/alias y no se cambian personalidades. Los cinco expedientes primarios de DMR-045 siguen abiertos y Orario permanece pospuesto.

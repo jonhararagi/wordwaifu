@@ -1106,4 +1106,9 @@ Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se cons
 - **Reapertura:** volver a inspeccionarla solo si una sesión normal autorizada muestra páginas narrativas legibles con localizador reproducible. Hasta entonces no repetir los metadatos de esta ruta.
 - **Estado general:** DMR-045 sigue `IN_PROGRESS`; los cinco expedientes permanecen `HOLD_FOR_PRIMARY_SOURCE`. No se añaden claims, relaciones, eventos, aliases ni cambios de personalidad; Orario sigue pospuesto.
 
+## Integración verificada — DMR-045-SRC-056 / PR #196 (2026-10-29)
 
+- **Integración:** [PR #196](https://github.com/jonhararagi/wordwaifu/pull/196), fusionada por squash; SHA comprobado de `main`: `7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91` ([commit](https://github.com/jonhararagi/wordwaifu/commit/7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91)).
+- **CI pre-merge:** [Validate WordWaifu #40897980797](https://github.com/jonhararagi/wordwaifu/actions/runs/40897980797) y [DanMachi Lore and Retrieval Integrity #40897980663](https://github.com/jonhararagi/wordwaifu/actions/runs/40897980663), success sobre el head `19777ba299a968777e8e77b5e87c612038fa4caa` (Lore tras reintento).
+- **CI post-merge:** [DanMachi Lore and Retrieval Integrity #40898517371](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517371) y [Validate WordWaifu #40898517407](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517407), success sobre `7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91` (Validate tras reintento por timeout en la carga de retratos remotos).
+- **Límite:** SRC-056 sigue `metadata_checked_only`, sin claims/eventos y sin páginas narrativas. La ruta no verifica ninguna habilidad o escena de Alfia, Zald, Meteria o Erebus, ni responsabilidad personal de Rudra. Los cinco expedientes siguen `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
