@@ -1097,3 +1097,13 @@ Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se cons
 - CI post-merge sobre el SHA exacto de `main`: [Validate WordWaifu #40862327265](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327265) y [DanMachi Lore and Retrieval Integrity #40862327234](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327234), ambos `success`.
 - Resultado de contenido: SRC-055 sigue `metadata_checked_only`, con `claims_supported: []`; la muestra no se inspeccionó y no resuelve los cinco cotejos de Alfia, Zald, Meteria, Erebus y Rudra. Orario continúa pospuesto.
 
+## DMR-045-SRC-056 — ruta dBook para Astrea Record 3, sin narración legible (2026-10-29)
+
+- **Ruta licenciada localizada:** [dBook / NTT DOCOMO — Astrea Record 3](https://dbook.docomo.ne.jp/item/b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9/2000/), edición japonesa de GA Bunko / SB Creative; la ficha presenta la acción 試し読み.
+- **Resultado de acceso:** al seguirla, la consulta pública abrió [el lanzador de la aplicación dBook](https://dbook.docomo.ne.jp/applaunch/view/?launch=app&pid=b1b573a541fb926b318d941d5c6181ceb595f28a264a162b9eb0c6f0d3f66cc9), sin líneas extraíbles ni páginas narrativas. El resultado no permite determinar si la muestra funciona dentro de la aplicación con una sesión normal.
+- **Registro:** DMR-045-SRC-056, `LICENSED_RETAILER_SAMPLE`, `CONT-AR`, `metadata_checked_only`, `claims_supported: []`, `events_supported: []`. La ruta se añadió también al directorio de fuentes de la aplicación y a sus pruebas.
+- **Lectura probatoria:** no hay escena, diálogo, página, capítulo ni claim nuevo. No usar esta ficha para confirmar habilidades de Alfia, Zald, Meteria o Erebus ni atribuir acciones personales a Rudra. La ruta es distinta de los lectores ya registrados, pero no es una fuente de narración independiente.
+- **Reapertura:** volver a inspeccionarla solo si una sesión normal autorizada muestra páginas narrativas legibles con localizador reproducible. Hasta entonces no repetir los metadatos de esta ruta.
+- **Estado general:** DMR-045 sigue `IN_PROGRESS`; los cinco expedientes permanecen `HOLD_FOR_PRIMARY_SOURCE`. No se añaden claims, relaciones, eventos, aliases ni cambios de personalidad; Orario sigue pospuesto.
+
+
