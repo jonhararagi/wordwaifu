@@ -246,7 +246,7 @@ const googlePlayVol20 = sources.slice(
   sources.indexOf("## DMR-056-SRC-001")
 );
 assert.match(googlePlayVol20, /source_type: LICENSED_RETAILER_PRODUCT_PAGE_AND_SAMPLE_OFFER/);
-assert.ok(googlePlayVol20.includes("official_url: https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Pick_Up_Girls_i?id=XWHEEQAAQBAA"));
+assert.ok(googlePlayVol20.includes("official_url: https://play.google.com/store/books/details/Fujino_Omori_Is_It_Wrong_to_Pick_Up_Girls_i?id=XWHEEQAAQBAJ"));
 assert.match(googlePlayVol20, /claims_supported: \[\]/);
 assert.match(googlePlayVol20, /events_supported: \[\]/);
 assert.match(googlePlayVol20, /verification_status: metadata_checked_only/);
