@@ -31,12 +31,14 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - [x] Seleccionar otra cohorte distinta en DMR-057 (Aisha, Anya y Chloe) y DMR-058 (Daphne y Cassandra), sin duplicar IDs ni reabrir páginas agotadas de DMR-045.
 - [ ] Próximo paso DMR-045: reabrir los cinco cotejos primarios solo si una edición licenciada muestra páginas narrativas legibles o aparece una fuente oficial nueva; no crear otra ronda de metadatos.
 
-### DMR-058 — Daphne Lauros y Cassandra Ilion (implementado en rama; integración pendiente)
+### DMR-058 — Daphne Lauros y Cassandra Ilion (integrado en main; CI post-merge en verificación)
 
 - [x] Reutilizar CHAR-DAPHNE-LAUROS y CHAR-CASSANDRA-ILION; no crear IDs ni alterar la continuidad del perfil existente.
 - [x] Registrar cinco fuentes comunitarias y las capacidades, condiciones de uso, equipo y campos no informados en un dossier dedicado.
 - [x] Añadir notas interactivas bajo CONT-SECONDARY y pruebas de aislamiento frente a CONT-ANIME y CONT-MAIN-LN.
-- [ ] Completar CI, integrar en main y registrar el SHA final y los checks post-merge.
+- [x] CI pre-merge aprobado, PR [#194](https://github.com/jonhararagi/wordwaifu/pull/194) integrada por squash; main SHA `190b4313a21569aa056548f8a40f9022b900b028`.
+- [x] Registrar checks pre-merge del head `ef14f8b914fb424cf816f0d6a27f258fbe230843`: [Validate #40867615144](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615144) y [Lore/Integrity #40867615207](https://github.com/jonhararagi/wordwaifu/actions/runs/40867615207), ambos success.
+- [ ] Verificar ambos workflows post-merge sobre el SHA exacto `190b4313a21569aa056548f8a40f9022b900b028` y registrar sus resultados.
 - **Regla factual:** no validar wikis como canon primario, no reescribir personalidad y no inferir costes ni efectos no publicados. El efecto de Five Dimension Troia permanece desconocido.
 
 ## PRIORIDAD ACTUAL — DMR-045: cotejo primario de los cinco expedientes
