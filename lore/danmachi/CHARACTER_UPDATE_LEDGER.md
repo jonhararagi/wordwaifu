@@ -370,3 +370,15 @@ Fuentes consultadas:
 - **CI pre-merge:** [Validate WordWaifu #40773212555](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y [DanMachi Lore and Retrieval Integrity #40773212768](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) concluyeron en success. El head probado validó los campos sustanciales de Nina, las fuentes y el conflicto de membresía, catálogo, bitácora, notas de archivo y smoke tests de navegador.
 - **Límite de evidencia CI:** la vista de workflow disponible en el conector solo devuelve ejecuciones asociadas a pull requests; no devolvió runs para el merge SHA. Por ello no se declara verificado el CI de push/post-merge.
 - **Continuidad:** todos los datos DMR-056 permanecen bajo `CONT-SECONDARY`; DMR-045 conserva abiertos los cinco cotejos narrativos primarios. No se añadieron relaciones, eventos, claims ni alias.
+
+
+## Pasada secundaria 2026-10-29 — DMR-057: Aisha, Anya y Chloe
+
+- **Estado global:** pasada secundaria estructurada completada; sin cotejo primario.
+- **Fuentes:** DMR-057-SRC-001–005 en el [registro maestro](sources/00-registro-fuentes.md).
+- **Expedientes:** DMR-057-CLM-001 Aisha Belka; DMR-057-CLM-002 Anya Fromel; DMR-057-CLM-003 Chloe Rollo.
+- **Datos reutilizables:** Aisha — Hell Kaios, Great Podao Zaga y habilidades de desarrollo reportadas; Anya — Remiste Felis y sus límites de área/sonido/recarga; Chloe — Feles Cruz, dos espejismos no ofensivos/defensivos, Abnormal Resistance, Mixing, Escape y cuchillo Violetta.
+- **Campos no informados:** no se inventan skills individuales ni costes numéricos de magia cuando las páginas consultadas no los ofrecen.
+- **Diferencia que conservar:** la página española de Anya indica que Remiste Felis se cancela si pierde el conocimiento; la página inglesa consultada no incluye esa condición en el fragmento revisado. No resolver sin evidencia nueva.
+- **Continuidad:** `CONT-SECONDARY`; las páginas comunitarias no prueban por sí solas la formulación del canon de una novela.
+- **Regla de cierre:** no repetir estas mismas páginas para buscar los campos que no enumeran. Reabrir solo con un pasaje primario legible, fuente oficial nueva, actualización material de la wiki o conflicto que afecte a la ficha.

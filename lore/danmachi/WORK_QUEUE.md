@@ -998,3 +998,15 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **CI post-merge:** [Validate #40751474055](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474055) y [Lore/Integrity #40751474058](https://github.com/jonhararagi/wordwaifu/actions/runs/40751474058), ambos success sobre el SHA de main indicado.
 - **Límite:** pasada documental secundaria, sin cotejo primario de novelas. Los campos omitidos solo se reabren ante fuente nueva, actualización material o pasaje primario legible.
 
+
+
+## DANMACHI-RESEARCH-057 · Aisha, Anya y Chloe: capacidades secundarias (2026-10-29)
+
+- [x] Consultar páginas comunitarias EN/ES de Aisha Belka, Anya Fromel y Chloe Rollo, una cohorte distinta de DMR-052/054/056.
+- [x] Registrar DMR-057-SRC-001–005 en el registro maestro de fuentes y limitar la evidencia a `CONT-SECONDARY`.
+- [x] Documentar magia, habilidades de desarrollo, armas y límites expresamente reportados, sin reescribir personalidades.
+- [x] Registrar como no informados los nombres de skills individuales y costes que no aparecen en las páginas consultadas.
+- [x] Preservar la diferencia secundaria sobre si Remiste Felis se cancela al perder Anya el conocimiento.
+- [x] Añadir los resultados a la bitácora anti-repetición para evitar búsquedas idénticas en las mismas páginas.
+- [ ] Incorporar/verificar la exposición de estos datos en las fichas interactivas si el modelo de archivo existente admite notas de capacidades secundarias sin contaminar el canon primario.
+- **Límite:** esta tanda no resuelve los cinco cotejos primarios de DMR-045; permanecen pendientes hasta obtener texto narrativo accesible. No repetir metadatos comerciales como sustituto de evidencia.

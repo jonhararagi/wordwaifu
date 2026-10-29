@@ -52,6 +52,15 @@ Un perfil de adaptación no sustituye una biografía por escenas. Se deben cotej
 - Claim refs: DMR-006-CLM-058, DMR-006-CLM-059, DMR-006-CLM-060.
 - El archivo es navegable, pero la biografía no se considera completa hasta cotejar las escenas relevantes.
 
+## Capacidades reportadas por fuentes secundarias — DMR-057
+
+- **Continuidad/evidencia:** `CONT-SECONDARY`; no equivale a cotejo de novela.
+- Las páginas comunitarias reportan la magia `Feles Cruz`, que crea dos espejismos controlados por Chloe que no pueden atacar ni defenderse.
+- Habilidades de desarrollo reportadas: Abnormal Resistance, Mixing y Escape. Arma reportada: cuchillo `Violetta`, que la wiki describe como empleado con venenos.
+- **No informado en las páginas consultadas:** nombres de skills individuales y coste numérico de Feles Cruz. Abnormal Resistance no se convierte en afirmación de inmunidad absoluta.
+- **Fuentes:** [DanMachi Wiki — Chloe Rollo](https://danmachi.fandom.com/wiki/Chloe_Rollo) y [Wiki DanMachi — Chloe Rollo](https://danmachi.fandom.com/es/wiki/Chloe_Rollo); DMR-057-SRC-004/005; resumen DMR-057-CLM-003.
+- Reabrir solo con evidencia nueva o un pasaje primario legible.
+
 ## Próxima revisión
 
 1. Localizar escenas/capítulos de novela para los hechos importantes.

@@ -1,5 +1,8 @@
 # DanMachi Lore · Índice maestro y tablero de cobertura
 
+
+- [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
+
 ## Índices de personajes e historias por continuidad
 
 - [Índice maestro de personajes](characters/00-indice-personajes.md) — identidades, alias, estado de ficha y rutas de investigación.
