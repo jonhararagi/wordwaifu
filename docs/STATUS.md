@@ -711,3 +711,10 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI post-merge:** [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) y [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977), ambos `success` sobre el SHA exacto `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`.
 - Se preserva la discrepancia EN/ES de Remiste Felis y los campos no informados. No se modificaron personalidad, relaciones, roster ni claims de continuidad primaria.
 - DMR-045 continúa IN_PROGRESS; los cinco cotejos primarios de Alfia, Zald, Meteria, Erebus y Rudra siguen pendientes.
+
+## DMR-045 — entrevista autoral sobre posible material futuro de Meteria (2026-10-29)
+
+- Fuente revisada: [LN News Online, entrevista a Fujino Omori publicada el 2024-12-15](https://www.ln-news.com/articles/121215). El autor menciona como posibilidad futura una entrega de Familia Chronicle sobre Zeus o quizá Meteria, sin fecha ni confirmación editorial definitiva.
+- Se registra como DMR-045-SRC-057 y aparece en el directorio de fuentes de WordWaifu; el test verifica que sus límites no se pierdan en la interfaz.
+- **No es contenido narrativo:** no confirma la maternidad de Bell, el parentesco Meteria–Alfia ni escenas o habilidades de los otros expedientes. No se crean claims/eventos/relaciones y no cambia la continuidad.
+- DMR-045 continúa IN_PROGRESS; Alfia, Zald, Meteria, Erebus y Rudra permanecen HOLD_FOR_PRIMARY_SOURCE. Orario sigue pospuesto. La integración y los resultados de CI de esta actualización se consignarán después de su verificación en GitHub.

@@ -1122,3 +1122,11 @@ Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se cons
 - **Estado probatorio:** SRC-041 se mantiene `metadata_checked_only`, `CONT-AR`, sin claims ni eventos. No hay pasaje, diálogo, escena, habilidad o localizador nuevo. Esta actualización no cambia las fichas ni la personalidad de Alfia, Zald, Meteria, Erebus o Rudra.
 - **Criterio de reapertura:** volver a intentar solo si una sesión normal y autorizada puede mostrar páginas narrativas legibles. No repetir la extracción de la misma ruta, no crear un ID duplicado y no inferir ausencia de personajes a partir del aviso del visor.
 - **Balance de DMR-045:** la investigación sigue `IN_PROGRESS`; los cinco cotejos narrativos primarios permanecen abiertos y Orario sigue pospuesto.
+
+## DMR-045-SRC-057 — entrevista pública del autor sobre una posible entrega futura relacionada con Meteria (consulta 2026-10-29)
+
+- **Fuente nueva para la investigación:** [LN News Online — entrevista a Fujino Omori, 15-12-2024](https://www.ln-news.com/articles/121215). En la respuesta al final del artículo, Omori menciona la posibilidad futura de una obra de Familia Chronicle con Zeus o quizá Meteria como figura central; no establece fecha de publicación ni formula un compromiso definitivo.
+- **Alcance probatorio:** la entrevista es una fuente primaria de la declaración del autor sobre posibles planes editoriales, pero no es texto narrativo. No identifica a Meteria en una escena ni confirma maternidad, parentesco con Alfia u otros datos biográficos. Tampoco contiene los cotejos de habilidades/costes de Alfia, secuencias de Zald, diálogos de Erebus o responsabilidad personal de Rudra.
+- **Registro:** DMR-045-SRC-057; AUTHOR_INTERVIEW; CONT-UNVERIFIED; claims_supported: []; events_supported: []. La entrada se añade al registro central y al directorio de fuentes de la aplicación con una regresión de límites.
+- **Conclusión:** no cambia ningún claim, relación, acontecimiento, alias ni ficha de personaje. Los cinco expedientes de DMR-045 siguen HOLD_FOR_PRIMARY_SOURCE; no se reabre la expansión de Orario.
+- **Regla anti-repetición:** no volver a consultar esta entrevista para buscar pasajes narrativos que no contiene. Reabrir la pregunta de Meteria cuando se publique material narrativo nuevo o aparezca una fuente primaria que confirme expresamente los vínculos.

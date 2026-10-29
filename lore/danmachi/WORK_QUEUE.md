@@ -1079,3 +1079,11 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Retomar los cotejos narrativos primarios solo si una edición licenciada ofrece texto legible y localizador reproducible o aparece una fuente oficial nueva que resuelva una pregunta. Alfia, Zald, Meteria, Erebus y Rudra siguen `HOLD_FOR_PRIMARY_SOURCE`; no iniciar Orario todavía.
 
 **Resultado limitado:** se integró la ruta de acceso; no se obtuvo narración. DMR-045 continúa `IN_PROGRESS`.
+
+## DMR-045-SRC-057 — entrevista autoral sobre posibles planes futuros (2026-10-29)
+
+- [x] Revisar la entrevista pública de LN News Online a Fujino Omori publicada el 2024-12-15, en la sección final sobre proyectos futuros de Zeus/Hera.
+- [x] Registrar DMR-045-SRC-057 como fuente primaria de intención editorial, no como texto narrativo; exponerla en el directorio de fuentes y añadir una regresión sobre alcance y continuidad.
+- [x] Registrar que una entrega de Familia Chronicle sobre Zeus o quizá Meteria es una posibilidad futura sin fecha confirmada; no derivar hechos de la ficción.
+- [ ] Mantener abiertos los cinco cotejos primarios: Alfia (habilidades/costes/escenas), Zald (técnica/Udaeus/Ottar), Meteria (maternidad/parentesco en narración primaria), Erebus (novelización separada del juego) y Rudra (responsabilidad personal).
+- **Límite:** no se añadieron claims, relaciones o eventos. Orario continúa pospuesto.

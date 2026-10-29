@@ -4549,3 +4549,26 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-058
 - verification_status: secondary_checked
 
+
+## DMR-045-SRC-057 · Entrevista a Fujino Omori sobre posibles proyectos futuros relacionados con Zeus/Meteria
+
+- source_id: DMR-045-SRC-057
+- title: 独占インタビュー「ラノベの素」 大森藤ノ先生『ダンジョンに出会いを求めるのは間違っているだろうか』
+- creator_or_publisher: LN News Online; entrevista directa a Fujino Omori
+- source_type: AUTHOR_INTERVIEW
+- series: DanMachi; declaración sobre posibles proyectos editoriales futuros
+- volume_or_edition: Artículo web, sin paginación editorial
+- language: Japonés
+- publication_date: 2024-12-15
+- official_url: https://www.ln-news.com/articles/121215
+- accessed_at: 2026-10-29
+- locator_type: author_interview_statement_no_book_page
+- locator: Pregunta/respuesta cerca del final del artículo sobre la futura presencia de Zeus/Hera y una posible entrega de Familia Chronicle; Omori menciona «episode Zeus» o quizá Meteria, sin fecha concreta ni compromiso editorial definitivo.
+- claims_supported: []
+- events_supported: []
+- continuity_scope: CONT-UNVERIFIED
+- reliability_note: Fuente primaria para lo que el autor declaró sobre una posible dirección editorial, no para hechos narrativos. La respuesta expresa una posibilidad futura sin calendario confirmado. No confirma la maternidad de Bell, el parentesco Meteria–Alfia, las habilidades/costes de Alfia, las escenas de Zald/Erebus ni el conocimiento o responsabilidad personal de Rudra.
+- conflicting_sources: []
+- rights_note: URL y paráfrasis breve; no reproducir extensamente la entrevista ni obras protegidas.
+- verified_by: DANMACHI-RESEARCH-045
+- verification_status: source_checked

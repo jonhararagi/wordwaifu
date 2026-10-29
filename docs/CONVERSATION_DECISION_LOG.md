@@ -706,3 +706,14 @@
 - **Regla anti-repetición:** reutilizar el resultado como `metadata_checked_only`; reabrir solo cuando una sesión normal autorizada y compatible permita verificar una página narrativa con localizador reproducible.
 - **Prioridad:** DMR-045 continúa `IN_PROGRESS`; Alfia, Zald, Meteria, Erebus y Rudra permanecen `HOLD_FOR_PRIMARY_SOURCE`; Orario sigue pospuesto.
 
+
+### CONV-DM-2026-10-29-010 — Nueva entrevista de autor verificada, sin nuevo dato narrativo
+
+- **Fecha:** 2026-10-29.
+- **Estado:** hallazgo registrado; integración pendiente de las verificaciones de esta rama.
+- **Tipo:** investigación de fuente y control de inferencias.
+- **Resultado:** se consultó la entrevista de LN News Online a Fujino Omori publicada el 2024-12-15. En la parte final, el autor menciona la posibilidad de una futura entrega de Familia Chronicle sobre Zeus o quizá Meteria, sin fecha confirmada ni compromiso editorial definitivo.
+- **Alcance:** DMR-045-SRC-057 registra la entrevista como fuente primaria de la declaración editorial, con continuidad CONT-UNVERIFIED y sin claims/eventos narrativos. No confirma la maternidad de Bell, el parentesco Meteria–Alfia ni ningún detalle pendiente de Alfia, Zald, Erebus o Rudra.
+- **Aplicación:** entrada al registro central, directorio de fuentes in-app y test de regresión; actualización del informe DMR-045, cola, índice maestro y estado.
+- **Prioridad:** los cinco cotejos de DMR-045 siguen HOLD_FOR_PRIMARY_SOURCE; Orario permanece pospuesto. No se cambian fichas, relaciones, personalidad ni continuidad.
+- **Fuente:** https://www.ln-news.com/articles/121215.
