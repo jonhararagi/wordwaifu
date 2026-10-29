@@ -1,5 +1,18 @@
 # Estado de WordWaifu
 
+## Estado operativo y verificación — 2026-10-29
+
+
+### DMR-057 — capacidades secundarias de Aisha, Anya y Chloe (2026-10-29)
+
+- Se consultaron cinco páginas comunitarias EN/ES para tres personajes fuera de las cohortes DMR-052/054/056.
+- Se registraron magia, habilidades de desarrollo, equipo y límites reportados, manteniendo `CONT-SECONDARY`; no se reescribieron personalidades ni se inventaron costes o skills ausentes.
+- La página española de Anya informa una condición adicional de cancelación de Remiste Felis al perder el conocimiento; la página inglesa consultada no muestra ese detalle. Se conserva como diferencia secundaria, sin resolverla por intuición.
+- Registro de investigación: [DANMACHI-RESEARCH-057](../lore/danmachi/research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md); fuentes: DMR-057-SRC-001–005; bitácora: [CHARACTER_UPDATE_LEDGER](../lore/danmachi/CHARACTER_UPDATE_LEDGER.md).
+- **Estado técnico:** cambios documentales propuestos en rama de trabajo; no integrados ni validados hasta completar PR y workflows.
+- DMR-045 sigue IN_PROGRESS; los cinco cotejos primarios no se cierran por esta tanda.
+
+
 ## Estado operativo y verificación — 2026-10-28
 
 ### DMR-056 — cohorte secundaria para comprobar recuperación de lore (integrada)
