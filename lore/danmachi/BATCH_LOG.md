@@ -534,3 +534,5 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - Diferencia: la wiki ES de Anya agrega cancelación al perder el conocimiento; el extracto EN no lo incluye. Se conserva sin resolver.
 - CI pre-merge: [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos success. CI post-merge no confirmado por el conector.
 - Límites: no se reescriben personalidades ni se crean inferencias sobre costes/skills ausentes; DMR-045 mantiene los cinco cotejos primarios pendientes.
+
+- **CI post-merge verificado después de la actualización:** ambos workflows de push finalizaron en `success` sobre el SHA exacto integrado `6c1ffc257e2df45d3a32facb39fe684b71994f60`: [DanMachi Lore and Retrieval Integrity #40841046104](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046104) y [Validate WordWaifu #40841046125](https://github.com/jonhararagi/wordwaifu/actions/runs/40841046125).
