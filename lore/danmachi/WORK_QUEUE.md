@@ -1069,4 +1069,11 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Mantener abiertos los cinco cotejos primarios: Alfia (habilidades/costes/escenas), Zald (técnica, Udaeus y enfrentamiento con Ottar), Meteria (identificación/maternidad/parentesco sin inferir al padre de Bell), Erebus (novelización separada del juego) y Rudra (responsabilidad personal no inferida de actos colectivos).
 - **Límite:** esta ruta nueva mejora las opciones de consulta manual, pero no resuelve ninguno de los cinco huecos. No se cambian personajes, claims, relaciones, eventos, alias ni personalidad; Orario permanece pospuesto.
 
+## Verificación de integración — DMR-045-SRC-056 / PR #196 (2026-10-29)
 
+- [x] Integrar la nueva ruta dBook de Astrea Record 3 mediante [PR #196](https://github.com/jonhararagi/wordwaifu/pull/196), squash SHA `7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91`; `main` fue consultado y apunta a ese SHA.
+- [x] CI pre-merge del head `19777ba299a968777e8e77b5e87c612038fa4caa`: [Validate #40897980797](https://github.com/jonhararagi/wordwaifu/actions/runs/40897980797) y [DanMachi Lore/Integrity #40897980663](https://github.com/jonhararagi/wordwaifu/actions/runs/40897980663), ambos success (el segundo tras reintento).
+- [x] CI post-merge sobre `7b2da61c4b3353cf9eb1998f70f6cd4b6cbf0d91`: [Validate #40898517407](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517407) y [DanMachi Lore/Integrity #40898517371](https://github.com/jonhararagi/wordwaifu/actions/runs/40898517371), ambos success. Validate pasó en el segundo intento después de un timeout de 10 s al cargar retratos remotos en el primer intento; el cambio dBook pasó también su prueba de directorio de fuentes.
+- [ ] Retomar los cotejos narrativos primarios solo si una edición licenciada ofrece texto legible y localizador reproducible o aparece una fuente oficial nueva que resuelva una pregunta. Alfia, Zald, Meteria, Erebus y Rudra siguen `HOLD_FOR_PRIMARY_SOURCE`; no iniciar Orario todavía.
+
+**Resultado limitado:** se integró la ruta de acceso; no se obtuvo narración. DMR-045 continúa `IN_PROGRESS`.
