@@ -1155,3 +1155,44 @@ Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se cons
 - **CI post-merge sobre ese SHA exacto:** [Validate #40929383860](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383860) y [Lore/Integrity #40929383855](https://github.com/jonhararagi/wordwaifu/actions/runs/40929383855), ambos `success`.
 - **Resultado factual:** la entrada `CONT-MANGA` sigue `metadata_checked_only`; no se leyó ningún panel ni se añadió claim/evento. Los cinco cotejos primarios siguen abiertos.
 
+## Pasada estructurada por personaje — 2026-10-29
+
+**Resultado de la ronda:** se completó una pasada pública individual de los cinco expedientes prioritarios y se registró en CHARACTER_UPDATE_LEDGER.md con + junto al nombre. El signo identifica que la pasada de búsqueda quedó registrada; no significa verificación primaria. No se reabrieron lectores agotados ni se usaron copias no autorizadas de novelas. No se añadieron claims de lore, relaciones, eventos, habilidades ni cambios de personalidad; los cinco cotejos primarios permanecen pendientes.
+
+### Alfia +
+
+- **Rutas consultadas en esta ronda:** [DanMachi Wiki EN — Alfia](https://danmachi.fandom.com/wiki/Alfia), [DanMachi Wiki ES — Alfia/Habilidades](https://danmachi.fandom.com/es/wiki/Alfia/Habilidades), [Diferencias de Astrea Record 3 (ES)](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias), [GA Bunko — Astrea Record 3](https://ga.sbcr.jp/product/9784815610197/), [portal oficial — anuncio de la novelización](https://danmachi.com/news/news131.php).
+- **Nota reutilizable:** la wiki secundaria describe Gif Blessing, Limit Off, deterioro progresivo y las magias Satanas Verion, Silentium Eden y Genos Angelus. La cifra del 5 % por turno no se confirmó aquí en texto narrativo licenciado; las fichas editoriales oficiales solo establecen procedencia y metadatos.
+- **Pendiente:** pasajes reproducibles de habilidades, coste y escena; mantener HOLD_FOR_PRIMARY_SOURCE.
+
+### Zald +
+
+- **Rutas consultadas en esta ronda:** [DanMachi Wiki EN — Zald](https://danmachi.fandom.com/wiki/Zald), [DanMachi Wiki ES — Zald](https://danmachi.fandom.com/es/wiki/Zald), [Skills EN](https://danmachi.fandom.com/wiki/Skills), [Habilidades ES](https://danmachi.fandom.com/es/wiki/Habilidades), [Diferencias de Astrea Record LN vol. 1 (ES)](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_1/Diferencias), [sinopsis comunitaria de DanMachi vol. 20, capítulo 3](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis), [Leon Vardenburg (EN)](https://danmachi.fandom.com/wiki/Leon_Vardenburg).
+- **Nota reutilizable:** Rea Ambrosia y Afterglow aparecen descritas secundariamente como potenciación ígnea del arma y corte de onda de choque repetible; la sinopsis comunitaria del vol. 20, capítulo 3, atribuye a Zald derrotar a Udaeus de un golpe con Afterglow y describe a Leon buscando aprender su técnica. Deus Ambrosia/Overeat se relaciona con aumentos según lo ingerido. La página de diferencias del vol. 1 resume una confrontación anterior con Ottar resuelta en un ataque; el perfil de Zald resume el combate final del Gran Conflicto como prolongado y afectado por el veneno. Son referencias secundarias para localizar escenas, no verificación primaria; se mantienen las secuencias separadas.
+- **Pendiente:** técnica y secuencia del combate final, costes/efectos por escena y localizador licenciado; mantener HOLD_FOR_PRIMARY_SOURCE.
+
+### Meteria +
+
+- **Rutas consultadas en esta ronda:** [DanMachi Wiki EN — Meteria](https://danmachi.fandom.com/wiki/Meteria), [DanMachi Wiki ES — Meteria](https://danmachi.fandom.com/es/wiki/Meteria), [nota de Fujino Omori](https://note.com/fujinoomori/n/n629829ac3fe4), [entrevista a Omori de LN News Online (2024)](https://www.ln-news.com/articles/121215).
+- **Nota reutilizable:** las dos wikis coinciden secundariamente en que Meteria es la madre de Bell y hermana gemela de Alfia. La nota de Omori describe una crianza hipotética de Bell por Alfia y Zald y permanece en CONT-AU; no verifica por sí sola la continuidad principal. La entrevista de 2024 trata el proceso de adaptación de historias del juego a novela, pero no menciona a Meteria.
+- **Límite:** no inferir ni nombrar al padre de Bell; no promover la wiki o CONT-AU a prueba primaria de CONT-MAIN-LN; mantener HOLD_FOR_PRIMARY_SOURCE.
+
+### Erebus +
+
+- **Rutas consultadas en esta ronda:** [DanMachi Wiki EN — Erebus](https://danmachi.fandom.com/wiki/Erebus), [Astrea Record EN](https://danmachi.fandom.com/wiki/Astraea_Record), [Diferencias de Astrea Record 3 (ES)](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias), [entrevista a Omori de LN News Online (2024)](https://www.ln-news.com/articles/121215), [anuncio oficial de la novelización](https://danmachi.com/news/news131.php).
+- **Nota reutilizable:** la ideología y sobrenombre se mantienen atribuidos al contexto CONT-GAME según las referencias secundarias. La página de diferencias sirve de pista para una escena EXTRA con Zald, Alfia y Erebus en CONT-AR, pero no da un localizador primario reproducible. Omori explica que la novelización añadió/retrabajó material frente al juego; no se obtuvo en esta ronda un diálogo específico legible de Erebus.
+- **Pendiente:** cotejo de escena EXTRA y diálogo en la novela; mantener HOLD_FOR_PRIMARY_SOURCE.
+
+### Rudra +
+
+- **Rutas consultadas en esta ronda:** [DanMachi Wiki ES — Rudra](https://danmachi.fandom.com/es/wiki/Rudra), [DanMachi Wiki EN — Rudra Familia](https://danmachi.fandom.com/wiki/Rudra_Familia), [Ryuu Lion ES](https://danmachi.fandom.com/es/wiki/Ryuu_Lion), [sinopsis comunitaria de DanMachi vol. 14 EN](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis), [GA Bunko — Astrea Record 3](https://ga.sbcr.jp/product/9784815610197/).
+- **Nota reutilizable:** se distingue la trampa que las fuentes atribuyen a la Familia Rudra como grupo, la aparición posterior del Juggernaut y la escena en que Rudra se presenta ante Ryuu después de su venganza. Ninguno de estos resúmenes demuestra que el dios diseñara, ordenara o conociera personalmente la trampa. El claim parcial existente de capítulo 13 conserva su alcance grupal.
+- **Pendiente:** cotejar la narración licenciada del vol. 14 y separar explícitamente actos/diálogos propios de Rudra de los actos de sus dependientes; mantener HOLD_FOR_PRIMARY_SOURCE.
+
+### Cierre de la pasada
+
+- Se consultaron primero las rutas oficiales/editoriales relevantes disponibles (portal oficial y GA Bunko) y después las wikis reconocidas EN/ES para las páginas específicas de cada personaje, conforme a la prioridad fijada.
+- La ficha oficial de GA Bunko confirma que Astrea Record 3 se publicó el 2022-12-15 y ofrece una muestra, pero el acceso previo documentado no mostró páginas narrativas legibles. El anuncio oficial confirma que la trilogía es una novelización revisada por Fujino Omori; eso no verifica por sí solo detalles individuales.
+- No se reintentaron las mismas rutas agotadas de BinB, BookLive, BOOK☆WALKER, Google Books/Play Books ni Sony Reader Store, porque no hubo un cambio material de acceso.
+- No se creó un nuevo ID de fuente solo por esta pasada: las páginas secundarias nuevas de sinopsis (vol. 20, cap. 3, y vol. 14) quedan registradas como rutas de investigación en la bitácora/dossier, sin claims nuevos. Se mantienen como ayudas de localización, no como pasajes primarios.
+- **Estado final de DMR-045:** IN_PROGRESS. Los cinco nombres llevan + en la bitácora como pasada pública completada; los cinco cotejos primarios siguen abiertos. No se declara cerrada la investigación canónica.

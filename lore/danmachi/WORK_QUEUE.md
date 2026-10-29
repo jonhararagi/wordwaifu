@@ -31,6 +31,13 @@ Esta regla preserva el contexto, pero no sustituye validación factual, pruebas 
 - [x] Seleccionar otra cohorte distinta en DMR-057 (Aisha, Anya y Chloe) y DMR-058 (Daphne y Cassandra), sin duplicar IDs ni reabrir páginas agotadas de DMR-045.
 - [ ] Próximo paso DMR-045: reabrir los cinco cotejos primarios solo si una edición licenciada muestra páginas narrativas legibles o aparece una fuente oficial nueva; no crear otra ronda de metadatos.
 
+### DMR-045 — Pasada individual documentada (2026-10-29)
+
+- [x] Completar la pasada pública individual de Alfia, Zald, Meteria, Erebus y Rudra, respetando el orden de fuentes principales y sin saltar personajes.
+- [x] Marcar con + los cinco nombres en CHARACTER_UPDATE_LEDGER.md y registrar por personaje datos/precisiones reutilizables, enlaces visitados y campos pendientes.
+- [ ] No marcar los expedientes canónicos como cerrados: los cinco siguen en HOLD_FOR_PRIMARY_SOURCE hasta que exista texto narrativo licenciado legible o una fuente oficial nueva que resuelva el dato pendiente.
+- **Resultado factual:** no se añadieron claims de lore, relaciones, eventos, habilidades ni cambios de personalidad en esta pasada. Las wikis siguen siendo secundarias; CONT-GAME, CONT-AR, CONT-AU y CONT-MAIN-LN se mantienen separados. No inferir el padre de Bell ni atribuir a Rudra órdenes/conocimiento personal sin evidencia.
+- **Informe:** [DANMACHI-RESEARCH-045](research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md); la marca + significa pasada de investigación registrada, no validación primaria.
 ### DMR-058 — Daphne Lauros y Cassandra Ilion (integrado y validado en main)
 
 - [x] Corregir el nombre del dossier: el contenido siempre fue Daphne/Cassandra, no Miach; usar `DANMACHI-RESEARCH-058-daphne-cassandra-capabilities.md` y no interpretar el nombre antiguo como una investigación de Miach Familia.

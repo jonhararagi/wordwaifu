@@ -124,43 +124,50 @@ Fuentes comunes consultadas como fuentes secundarias:
 
 Estos cinco expedientes ya tienen repetidos barridos secundarios y rutas de muestra licenciada probadas. El resultado actual debe reutilizarse; **no repetir una vuelta general ni reescribir personalidad**.
 
-### CHAR-DARK-ALFIA — Alfia
+**Convención del signo `+` (desde 2026-10-29):** indica que se completó una pasada pública estructurada por ese personaje, registrando páginas consultadas, datos secundarios útiles y vacíos. **No** significa que el cotejo primario esté completo ni que los datos secundarios hayan sido promovidos a canon. Los cinco estados `HOLD_FOR_PRIMARY_SOURCE` se conservan hasta obtener texto narrativo licenciado legible o una fuente oficial nueva que resuelva el punto.
+
+### CHAR-DARK-ALFIA — Alfia +
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** se registraron pistas secundarias sobre `Genos Angelus`, `Gif Blessing`, `Limit Off`, `Silentium Eden` y la retrospectiva del volumen 20. La página comunitaria de diferencias de Astrea Record 3 se incorporó por [PR #168](https://github.com/jonhararagi/wordwaifu/pull/168) como guía secundaria.
 - **Pendiente real:** texto licenciado legible y localizador reproducible de escena/coste. Las rutas consultadas de las muestras no expusieron páginas narrativas.
 - **Reabrir solo si:** aparece una página narrativa nueva accesible o una fuente oficial que aporte un localizador concreto.
+- **Pasada pública 2026-10-29 (+):** se volvieron a contrastar [Alfia (EN)](https://danmachi.fandom.com/wiki/Alfia), [Alfia/Habilidades (ES)](https://danmachi.fandom.com/es/wiki/Alfia/Habilidades) y [Diferencias de Astrea Record 3 (ES)](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias). Se consolidó como nota de investigación —no como nuevo claim— que la wiki reporta `Gif Blessing`/`Limit Off`, la caída progresiva de atributos/estamina/mente y las tres magias `Satanas Verion`, `Silentium Eden` y `Genos Angelus`; el 5% «por turno» sigue siendo atribución secundaria, sin pasaje narrativo primario ni coste de escena verificado. No se añadió lore ni se modificó la ficha interactiva.
 - **Cruce de fuente (2026-10-27):** el relato de Fujino Omori ya registrado como DMR-029-SRC-016 y la confirmación editorial de su versión revisada en el cuadernillo de Astrea Record 3 (DMR-045-SRC-002/005) pertenecen a CONT-AU. No elevan habilidades ni escenas de CONT-AR/CONT-MAIN-LN a evidencia primaria; mantener HOLD_FOR_PRIMARY_SOURCE.
 
-### CHAR-DARK-ZALD — Zald
+### CHAR-DARK-ZALD — Zald +
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** se registraron como pistas secundarias `Deus Ambrosia`, veneno de Behemoth, el combate con Udaeus y la secuencia de Ottar; no se afirmaron como lectura directa.
 - **Pendiente real:** técnica de espada, coste/efecto por escena y localizador de la novela.
 - **Reabrir solo si:** hay un pasaje primario accesible que resuelva una de esas cuestiones.
+- **Pasada pública 2026-10-29 (+):** se contrastaron [Zald (EN)](https://danmachi.fandom.com/wiki/Zald), [Zald (ES)](https://danmachi.fandom.com/es/wiki/Zald), las listas de [habilidades (ES)](https://danmachi.fandom.com/es/wiki/Habilidades) y [skills (EN)](https://danmachi.fandom.com/wiki/Skills), [sinopsis comunitaria de DanMachi vol. 20, capítulo 3](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_20/Synopsis) y [Leon Vardenburg (EN)](https://danmachi.fandom.com/wiki/Leon_Vardenburg). Se documentó como pista secundaria que `Rea Ambrosia` recubre el arma y que `Afterglow` se describe como un corte de onda de choque repetible; la sinopsis de vol. 20 atribuye a Zald derrotar a Udaeus de un golpe usando Afterglow y que Leon buscó aprender su técnica. `Deus Ambrosia`/`Overeat` se vincula al aumento según lo ingerido. Se conservó la distinción entre la confrontación anterior con Ottar resumida en la página de diferencias del vol. 1 (un ataque) y el combate final del Gran Conflicto descrito en el perfil de Zald como prolongado y condicionado por el veneno. Son resúmenes secundarios: no se fusionan escenas ni se afirma que el texto primario haya sido cotejado.
 - **Cruce de fuente (2026-10-27):** la convivencia hipotética de Alfia y Zald criando a Bell pertenece al relato alternativo ya registrado DMR-029-SRC-016 (CONT-AU), cuyo cuadernillo se confirma por DMR-045-SRC-002/005. No verifica el combate con Ottar, Afterglow, costes ni la secuencia principal; mantener HOLD_FOR_PRIMARY_SOURCE.
 
-### CHAR-METERIA — Meteria
+### CHAR-METERIA — Meteria +
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** las wikis asocian a Meteria con maternidad y parentesco, pero la entrevista de LN News sobre la versión original del juego no pronuncia el nombre Meteria. No identifica al padre de Bell.
 - **Pendiente real:** pasaje primario que identifique inequívocamente a Meteria; la personalidad no se modifica a partir de `CONT-AU`.
 - **Reabrir solo si:** aparece un pasaje narrativo o una declaración oficial explícita que resuelva la identidad.
+- **Pasada pública 2026-10-29 (+):** se contrastaron [Meteria (EN)](https://danmachi.fandom.com/wiki/Meteria), [Meteria (ES)](https://danmachi.fandom.com/es/wiki/Meteria), la [nota de Fujino Omori](https://note.com/fujinoomori/n/n629829ac3fe4) y la [entrevista de LN News de 2024](https://www.ln-news.com/articles/121215). Las dos wikis coinciden en maternidad y parentesco, pero siguen siendo secundarias; la nota del autor es `CONT-AU` y no prueba por sí sola la continuidad principal. La entrevista de 2024 trata la diferencia entre juego y novelización, pero no menciona a Meteria. No se infiere ni se propone un nombre para el padre de Bell; no se añadió un claim canónico.
 - **Cruce de fuente (2026-10-27):** DMR-029-SRC-016 ya contiene texto del autor que nombra a Meteria dentro de CONT-AU; DMR-045-SRC-002/005 confirman la publicación revisada del relato alternativo. Esto no identifica a Meteria en un pasaje de CONT-MAIN-LN; mantener HOLD_FOR_PRIMARY_SOURCE.
 
-### CHAR-DARK-EREBUS — Erebus
+### CHAR-DARK-EREBUS — Erebus +
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** la ideología reportada para la versión de Memoria Freese permanece en `CONT-GAME`; la wiki de diferencias sirve únicamente para localizar la escena EXTRA en `CONT-AR`.
 - **Pendiente real:** escenas/diálogos legibles de la novelización, separados del juego.
 - **Reabrir solo si:** se obtiene la escena EXTRA o un capítulo de Astrea Record en una muestra/licencia legible.
+- **Pasada pública 2026-10-29 (+):** se contrastaron [Erebus (EN)](https://danmachi.fandom.com/wiki/Erebus), [Astraea Record (EN)](https://danmachi.fandom.com/wiki/Astraea_Record), [Diferencias de Astrea Record 3 (ES)](https://danmachi.fandom.com/es/wiki/Astrea_Record_Novela_Ligera_Volumen_3/Diferencias) y la [entrevista a Omori de 2024](https://www.ln-news.com/articles/121215). La wiki describe su ideología en `CONT-GAME`; la página de diferencias funciona como pista para una escena EXTRA con Zald, Alfia y Erebus en `CONT-AR`, sin texto narrativo ni localizador primario accesible. La entrevista autoral explica que la novelización reescribe y añade material frente al juego, pero no verifica el diálogo específico de Erebus. Se mantiene la separación juego/novela.
 
-### CHAR-DARK-RUDRA — Rudra
+### CHAR-DARK-RUDRA — Rudra +
 
 - **Estado:** `HOLD_FOR_PRIMARY_SOURCE`.
 - **Último resultado reutilizable:** las fuentes comunitarias atribuyen actos a Rudra Familia; esto no demuestra que Rudra personalmente los diseñara, ordenara o conociera.
 - **Pendiente real:** cotejo primario del volumen 14 para separar responsabilidad grupal de acción individual del dios.
 - **Reabrir solo si:** el capítulo/epílogo aparece legible y se puede registrar un localizador reproducible.
+- **Pasada pública 2026-10-29 (+):** se contrastaron [Rudra (ES)](https://danmachi.fandom.com/es/wiki/Rudra), [Rudra Familia (EN)](https://danmachi.fandom.com/wiki/Rudra_Familia), [Ryuu Lion (ES)](https://danmachi.fandom.com/es/wiki/Ryuu_Lion) y el resumen comunitario del [volumen 14 (EN)](https://danmachi.fandom.com/wiki/DanMachi_Light_Novel_Volume_14/Synopsis). Se reiteró la distinción entre la trampa atribuida a Rudra Familia como grupo, la aparición del Juggernaut y la escena posterior en que Rudra aparece ante Ryuu. Eso no prueba que Rudra diseñara, ordenara o conociera personalmente la trampa. El claim parcial ya registrado para el capítulo 13 sigue limitado a la secuencia grupal; no se amplía la responsabilidad individual.
 
 ## Próxima actualización permitida
 
