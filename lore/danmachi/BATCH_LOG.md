@@ -522,3 +522,15 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - CI pre-merge: [Validate WordWaifu #40773212555](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212555) y [DanMachi Lore and Retrieval Integrity #40773212768](https://github.com/jonhararagi/wordwaifu/actions/runs/40773212768) finalizaron en success.
 - No pude confirmar CI post-merge: el conector de esta sesión no devolvió runs para el merge SHA; no se declara esa validación.
 - Próxima tanda: seleccionar otra cohorte sin repetir estas páginas. DMR-045 sigue abierto a la espera de nueva evidencia primaria accesible.
+
+
+## DANMACHI-RESEARCH-057 · Capacidades secundarias de Aisha, Anya y Chloe
+
+- Fecha: 2026-10-29.
+- Estado: integrado en `main` vía [PR #188](https://github.com/jonhararagi/wordwaifu/pull/188), SHA `6c1ffc257e2df45d3a32facb39fe684b71994f60` (head probado `2eb0912ab7445d543eae6a2c790b4d9483ee63fe`).
+- Fuentes: cinco rutas comunitarias EN/ES; no se consideran independientes ni primarias por defecto.
+- Registros: informe DMR-057; tres resúmenes/claims de capacidades; fuentes registradas en el directorio; bitácora, cola, índice maestro, STATUS y registros persistentes actualizados.
+- Hallazgos reutilizables: Aisha — Hell Kaios, Great Podao Zaga, Hunter/Abnormal Resistance/Fist Strike; Anya — Remiste Felis, alcance sonoro y recarga reportada; Chloe — Feles Cruz, espejismos con limitaciones, Mixing/Escape/Abnormal Resistance y cuchillo Violetta.
+- Diferencia: la wiki ES de Anya agrega cancelación al perder el conocimiento; el extracto EN no lo incluye. Se conserva sin resolver.
+- CI pre-merge: [Validate #40840588616](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588616) y [Lore/Integrity #40840588548](https://github.com/jonhararagi/wordwaifu/actions/runs/40840588548), ambos success. CI post-merge no confirmado por el conector.
+- Límites: no se reescriben personalidades ni se crean inferencias sobre costes/skills ausentes; DMR-045 mantiene los cinco cotejos primarios pendientes.
