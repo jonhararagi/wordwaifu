@@ -774,5 +774,16 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Snapshot Bell (PDF p. 33):** Lv. 1; Fuerza I77→I82; Resistencia I13; Destreza I93→I96; Agilidad H148→H172; Magia I0. Bell se pregunta si el aumento de Agilidad deriva de escapar del Minotauro; no se registra como causa probada.
 - **Inspección visual:** pp. 31–36 renderizadas e inspeccionadas a página completa. P. 33 contiene la tabla de atributos; pp. 35–36 la entrada de Habilidad. Son páginas de texto sin ilustraciones.
 - **Fichas:** Bell y Hestia reciben una sección temporal de `CONT-MAIN-LN`; no se marcan `+` por esta pasada grupal.
-- **Próximo folio:** PDF p. 37. Siguen pendientes inspecciones visuales de pp. 19–21 y 23–24, cotejo individual completo y contraste posterior con el corpus web separado.
-- **Rama:** `research/danmachi-v1-primary-pp31-36-2026-10-30`, creada desde el SHA validado de `main` `fd201fc6f1825299630d2ef04d4436fa02f50d60`. Esta tanda aún requiere CI y PR; no se declara integrada.
+- **Siguiente folio al cerrar el bloque:** PDF p. 37; esa continuación se completó después hasta PDF p. 42, documentada en la sección siguiente. Siguen pendientes inspecciones visuales de pp. 19–21 y 23–24, cotejo individual completo y contraste posterior con el corpus web separado.
+- **Integración:** PR [#212](https://github.com/jonhararagi/wordwaifu/pull/212) integrada por squash; `main` verificado en SHA `30ace01e17d94d5eeaa23424bcba10fc7028329a`. CI pre-merge sobre HEAD `3242b98c8520a435f853286d28e44b3b374f07f5`: [Validate #41056002967](https://github.com/jonhararagi/wordwaifu/actions/runs/41056002967) y [Lore/Integrity #41056002935](https://github.com/jonhararagi/wordwaifu/actions/runs/41056002935), ambos `success`. CI post-merge sobre el SHA exacto de `main`: [Validate #41056197850](https://github.com/jonhararagi/wordwaifu/actions/runs/41056197850) y [Lore/Integrity #41056197884](https://github.com/jonhararagi/wordwaifu/actions/runs/41056197884), ambos `success`.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 37–42 (2026-10-30)
+
+- **Corpus:** `CONT-MAIN-LN`, fuente DMR-061-SRC-001, traducción privada no cotejada con japonés; no se incluyen hallazgos web/wiki.
+- **Lectura:** p. 37 abre el capítulo 2; pp. 38–39 narran la mañana de Bell y Hestia en la base subterránea; p. 40 ilustra la escena; p. 41 Bell se libera, sale y descubre que olvidó desayunar; p. 42 percibe una mirada y conoce a una joven humana que aún no se identifica por nombre.
+- **Precauciones:** la portadilla de p. 37 no identifica nominalmente a la figura; p. 42 tampoco nombra a la joven. No afirmar que son la misma persona por semejanza. No identificar al aventurero que observa a Bell, porque el texto no determina cuál de las personas presentes lo miraba.
+- **Eventos y personajes:** no se crea un evento ni una ficha de personaje por el encuentro incompleto de p. 42. La escena queda como lead para cotejar con la continuación de la lectura. No se marcan personajes con `+`.
+- **Inspección visual:** PDF pp. 37–42 renderizadas e inspeccionadas a página completa. Pp. 37 y 40 contienen ilustraciones; las otras cuatro son páginas de texto.
+- **Próximo folio:** PDF p. 43. Cinco pasadas abiertas; siguen pendientes pp. 19–21 y 23–24 de la inspección visual, auditoría individual de personajes y comparación posterior con el corpus web.
+- **Rama:** `research/danmachi-v1-primary-pp37-42-2026-10-30`, creada desde el SHA integrado de `main` `30ace01e17d94d5eeaa23424bcba10fc7028329a`. Esta tanda todavía requiere PR y CI.
+
