@@ -1336,5 +1336,6 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Retirar el evento combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` de catálogo/cronología y reservarlo como `(x) superseded`; conservar los enlaces en eventos sustitutos y documentación.
 - [x] Portar el grafo temporal dirigido para `before`, `after`, `between` y offsets relativos, y actualizar pruebas para 42 eventos/36 referencias de ubicación.
 - [x] Actualizar dossier V2, DMR-060 inbox, fuente, índices y perfiles de Bell, Eina, Hestia y Liliruca; conservar las correcciones más nuevas de Freya y el material V1 de main.
-- [ ] Ejecutar y corregir Validate WordWaifu y DanMachi Lore and Retrieval Integrity en el HEAD final de esta rama; abrir PR nueva.
-- [ ] Integrar la segunda parte sólo tras CI verde; después marcar PR #209 como `(x) superseded` y cerrarlo. No eliminar su rama antes de confirmar que no contiene trabajo exclusivo pendiente.
+- [x] Ejecutar Validate WordWaifu y DanMachi Lore and Retrieval Integrity en el HEAD final `d0487e94d833be67e0d27ba57add265372c373c1`; ambos `success` (runs #41129690702 y #41129690671).
+- [x] Integrar mediante PR [#216](https://github.com/jonhararagi/wordwaifu/pull/216), squash SHA `7de2acca6975d3700b7c5b5ca71c004211fb308e`; CI post-merge runs #41129998675 y #41129998580, ambos `success`.
+- [x] Marcar PR [#209](https://github.com/jonhararagi/wordwaifu/pull/209) como `(x) SUPERSEDED BY #216` y cerrarlo. La rama histórica queda conservada; no se borra.
