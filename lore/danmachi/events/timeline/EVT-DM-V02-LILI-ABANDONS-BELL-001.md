@@ -2,46 +2,37 @@
 id: EVT-DM-V02-LILI-ABANDONS-BELL-001
 universe: danmachi
 type: event
-status: source_checked_partial
+status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 time_anchor: volume_02_internal_order_absolute_date_unknown
-source_verification: private_translation_not_crosschecked
-source_refs: ["DMR-060-SRC-001"]
+source_verification: user_supplied_private_translation_not_crosschecked
+source_refs: [DMR-060-SRC-001]
+source_locators: ["PDF pp. 212–214"]
 spoiler_level: major
-tags: [Liliruca Arde, Bell Cranel, Daga de Hestia, piso 10, traición]
 ---
+# Lili toma la Daga de Hestia y abandona a Bell
 
-# Lili toma la Daga de Hestia y deja a Bell atrás
-
-## Alcance y tiempo
-
-- **Continuidad:** `CONT-MAIN-LN`.
-- **Orden temporal:** dentro de la secuencia narrativa del volumen 2; fecha absoluta desconocida.
-- **Localizador:** PDF pp. 213–229.
-- **Estado de lectura:** páginas narrativas localizadas en la traducción española privada aportada por el usuario; fidelidad de traducción pendiente de cotejo.
+## Localizador
+- Volumen 2, PDF físico pp. 212–214.
+- Fuente DMR-060-SRC-001; traducción privada/no cotejada.
 
 ## Resumen
+Mientras Bell es atacado por los cuatro Ogros atraídos por el cebo, Lili recoge la bolsa que una flecha metálica había lanzado fuera de su alcance. Toma la Daga de Hestia, se despide de Bell y se marcha.
 
-Durante la crisis del piso 10, Lili toma la Daga de Hestia y abandona temporalmente a Bell ante el peligro. La narración desarrolla después su historia de abuso/exclusión dentro de Soma Familia. El texto identifica a Lili como Hobbit y explica que usa Cinder Ella para alterar su apariencia y presentarse como Beastwoman.
+## Ancla temporal
+Durante la emboscada del piso 10, inmediatamente después de EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.
 
-## Entidades participantes
+## Participantes
+- Bell Cranel.
+- Liliruca Arde.
+- Ogros.
 
-- [Liliruca Arde](../../characters/liliruca-arde.md) — toma la daga y se marcha.
-- [Bell Cranel](../../characters/bell-cranel.md) — queda atrás en peligro.
-
-## Detalles registrados
-
-- La acción sucede después de la emboscada y separación del piso 10.
-- Lili es Hobbit; la apariencia Beastwoman es el resultado de Cinder Ella, que modifica sus rasgos.
-- Su conducta posterior se contextualiza con abuso/exclusión dentro de Soma Familia y con el objetivo de reunir dinero para liberarse de su afiliación.
-- No reducir toda su personalidad a esta decisión.
-- La traición posterior de miembros de Soma y el rescate por Bell se registran en un evento separado.
+## Detalles
+- Bell ve a Lili caminar entre los cuerpos de los Ogros mientras él intenta esquivar los ataques.
+- Lili recoge la bolsa y toma la Daga de Hestia.
+- Le dice a Bell que debe aprender a desconfiar de los demás y que este es el final de su equipo.
+- Se marcha con su mochila mientras Bell sigue rodeado por los Ogros.
 
 ## Límites
-
-No convertir un acto situado en una situación concreta en rasgo permanente ni atribuirlo a toda la Familia Soma.
-
-## Fuente
-
-- `DMR-060-SRC-001` — [expediente de extracción del volumen 2](../../research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md).
-- Fuente material: `Volumen [02] • DanMachi.pdf`, archivo adjunto proporcionado por el usuario. La obra original es oficial; la traducción consultada es privada/no editorial.
+- La huida de Lili, su transformación Cinder Ella y la revelación de su raza se detallan en EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.
+- No reducir las acciones posteriores de Lili a un único rasgo permanente de personalidad.
