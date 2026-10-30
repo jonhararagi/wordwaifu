@@ -356,3 +356,61 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **Auditoría visual:** las pp. 157–177 se renderizaron a 110 dpi y revisaron. Pp. 157–168 y 170–177 son texto; p. 169 es la única ilustración y se inspeccionó ampliada.
 - **Pasadas:** las tres pasadas obligatorias quedaron completas para todas las páginas. Se aplicó una cuarta pasada correctiva a pp. 165–167 por la discrepancia de apariencia de Seal y la precisión del objetivo del Silverback. No se añadieron fichas para personajes anónimos ni se crearon lugares/relaciones nuevos.
 - **Próximo folio:** PDF p. 178.
+
+
+## Claims de investigación trazables para relaciones de cronología · 2026-10-30
+
+### DMR-061-CLM-001 · Hestia pide a Hephaistos un arma para Bell y ella acepta forjarla
+
+- continuity_scope: CONT-MAIN-LN
+- verification_status: source_checked_excerpt_only
+- source_refs: DMR-061-SRC-001
+- source_locators: PDF p. 115 y pp. 129–133
+- claim: Hestia solicita a Hephaistos un arma para Bell durante el Banquete de los Dioses. Tras dos días de insistencia y al escuchar su motivación, Hephaistos acepta fabricar personalmente una daga, pero mantiene exigible la deuda de Hestia.
+- limitation: La escena acredita la petición, aceptación e inicio de la forja; no equivale a la entrega física posterior ni establece un precio exacto.
+- evidence_type: user_supplied_private_light_novel_translation
+- verification_note: lectura directa de las páginas físicas indicadas; la traducción privada no se cotejó con el japonés.
+
+### DMR-061-CLM-002 · La forja aceptada precede a la entrega de la Daga de Hestia
+
+- continuity_scope: CONT-MAIN-LN
+- verification_status: source_checked_excerpt_only
+- source_refs: DMR-061-SRC-001
+- source_locators: PDF pp. 129–133 y 145–146
+- claim: La aceptación y el comienzo de la fabricación por Hephaistos constituyen un momento anterior a la entrega física de la daga terminada a Hestia.
+- limitation: Son dos momentos narrativos relacionados pero separados; no se fusionan en un solo evento.
+- evidence_type: user_supplied_private_light_novel_translation
+- verification_note: lectura directa de las páginas físicas indicadas; la traducción privada no se cotejó con el japonés.
+
+### DMR-061-CLM-003 · Freya se reúne con Loki y Ais y reconoce a Bell entre la multitud
+
+- continuity_scope: CONT-MAIN-LN
+- verification_status: source_checked_excerpt_only
+- source_refs: DMR-061-SRC-001
+- source_locators: PDF pp. 139–145
+- claim: Freya se reúne con Loki y Ais en una cafetería durante el Festival, describe el interés que siente por un joven y reconoce a Bell cuando lo ve caminar hacia el Coliseo.
+- limitation: Bell no interactúa con ellas en esta escena; la atracción de Freya no se convierte en una relación formal.
+- evidence_type: user_supplied_private_light_novel_translation
+- verification_note: lectura directa de las páginas físicas indicadas; la traducción privada no se cotejó con el japonés.
+
+### DMR-061-CLM-004 · Loki lleva a Ais a la reunión con Freya y la presenta
+
+- continuity_scope: CONT-MAIN-LN
+- verification_status: source_checked_excerpt_only
+- source_refs: DMR-061-SRC-001
+- source_locators: PDF pp. 140–145
+- claim: Loki llega acompañada de Ais y la presenta ante Freya. La narración describe gestos protectores y una conversación sobre el descanso de Ais.
+- limitation: No se infiere una relación romántica ni se importan datos de otras continuidades.
+- evidence_type: user_supplied_private_light_novel_translation
+- verification_note: lectura directa de las páginas físicas indicadas; la traducción privada no se cotejó con el japonés.
+
+### DMR-061-CLM-005 · Ais sigue con la mirada a Bell cuando pasa hacia el Coliseo
+
+- continuity_scope: CONT-MAIN-LN
+- verification_status: source_checked_excerpt_only
+- source_refs: DMR-061-SRC-001
+- source_locators: PDF pp. 143–145
+- claim: Cuando Freya ve a Bell entre la multitud y se marcha, Ais también sigue con la mirada su cabello blanco familiar desde la cafetería.
+- limitation: El pasaje no muestra conversación, reconocimiento verbal ni interacción directa entre Ais y Bell.
+- evidence_type: user_supplied_private_light_novel_translation
+- verification_note: lectura directa de las páginas físicas indicadas; la traducción privada no se cotejó con el japonés.
