@@ -2839,6 +2839,21 @@
       ]
     },
     {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001",
+      "path": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "HESTIA",
+        "ESTADO"
+      ]
+    },
+    {
       "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001",
       "path": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md",
       "type": "event",
