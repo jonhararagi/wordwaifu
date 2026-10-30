@@ -6,42 +6,38 @@ status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 time_anchor: relative_sequence
 source_verification: user_supplied_private_translation_not_crosschecked
-source_refs:
-  - DMR-060-SRC-001
-source_locators:
-  - PDF pp. 230–237
+source_refs: [DMR-060-SRC-001]
+source_locators: ["PDF pp. 230–237"]
 spoiler_level: major
 ---
-
 # Bell rescata a Lili de las Hormigas Asesinas y ambos se reconcilian
 
 ## Localizador y alcance
-- **Fuente:** DMR-060-SRC-001.
-- **Localizador:** PDF pp. 230–237.
-- **Continuidad:** CONT-MAIN-LN.
-- **Verificación:** la obra original es oficial; la traducción española consultada es privada y no se ha cotejado con el japonés.
+- Volumen 2, PDF físico pp. 230–237.
+- Fuente DMR-060-SRC-001; traducción privada/no cotejada.
 
 ## Ancla temporal
-Después de que miembros de Soma Familia abandonan a Lili como cebo; mismo episodio de la traición.
+Después de que miembros de Soma Familia abandonan a Lili como cebo; durante el mismo episodio de la traición.
 
 ## Relación temporal
-Después de EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001
+Después de EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.
 
 ## Resumen
-Firebolt interrumpe el ataque de las Hormigas Asesinas. Bell encuentra a Lili, le da una poción, combate a los monstruos y escucha su confesión sobre los engaños anteriores. Le explica que la ayudó porque es Lili y porque no quiere que desaparezca; ella se disculpa y ambos se reconcilian.
+Firebolt interrumpe el ataque de las Hormigas Asesinas. Bell encuentra a Lili, la ayuda a recuperarse, combate con Firebolt y sus dagas y escucha su confesión. Lili admite haber engañado a Bell; él le explica que la salvó porque es Lili y no quiere que desaparezca.
 
 ## Participantes
-Bell Cranel y Liliruca Arde
+- Bell Cranel.
+- Liliruca Arde.
 
 ## Detalles registrados
-- Bell entra en la habitación rodeada por aproximadamente treinta Hormigas Asesinas.
-- Bell usa la poción de recuperación de Poder Mental que había comprado a Naaza por 8.700 Varisu.
-- Combate con Firebolt, la Daga de Hestia y su daga secundaria; Lili le devuelve la Daga de Hestia.
-- Lili confiesa que falseaba las divisiones del dinero (habitualmente 4:6 y en ocasiones 3:7), exageró precios de objetos y admite doce ocasiones.
-- Lili admite que inicialmente quería robar la daga y el botín de Bell.
-- Bell responde que la salvó porque es Lili y porque no quiere que desaparezca; ambos se abrazan y ella pide perdón.
+- Bell irrumpe en la habitación donde Lili está rodeada por Hormigas Asesinas; la traducción habla de alrededor de treinta monstruos.
+- Usa una poción de recuperación de Poder Mental que había comprado a Naaza por 8.700 Varisu.
+- Combate con Firebolt, la Daga de Hestia y su daga secundaria.
+- Lili devuelve la Daga de Hestia a Bell.
+- Lili confiesa que falseaba las divisiones del dinero, exageraba los precios de objetos y que había intentado robar la daga.
+- Bell responde que la ayudó por ser Lili y porque no quiere que desaparezca; ambos se abrazan y ella se disculpa.
 
-## Límites de evidencia
-- No añadir fecha de calendario si el texto no la proporciona.
-- Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
-- No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+## Límites
+- La reconciliación no borra ni convierte en inexistentes los engaños anteriores.
+- No atribuir el plan de Kanu a toda Soma Familia.
+- La recontratación ocurre dos días después y tiene evento separado.
