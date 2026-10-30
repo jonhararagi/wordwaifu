@@ -285,3 +285,15 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Fuente registrada:** DMR-045-SRC-057; informe DMR-045, registro central de fuentes, directorio in-app y prueba de regresión.
 - **CI pre-merge sobre el head PR 38eee8702e5d98fadcc160c8a7604eab1a6a42ab:** [Validate WordWaifu #40911237809](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237809) y [DanMachi Lore and Retrieval Integrity #40911237807](https://github.com/jonhararagi/wordwaifu/actions/runs/40911237807), ambos success.
 - **CI post-merge sobre el SHA exacto de main 65c4eb53d50e16c8bcca48393e51e35ebd5bc360:** [Validate WordWaifu #40911471211](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471211) y [DanMachi Lore and Retrieval Integrity #40911471327](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471327), ambos success. El primer intento de Validate falló en el smoke de navegador al esperar 5 s por un retrato remoto (tests/browser_smoke.cjs:517); se repitió únicamente ese job y el segundo intento pasó.
+
+
+### DEC-DM-031 — Intervalos temporales relativos anclados a acontecimientos
+
+- **Fecha:** 2026-10-29.
+- **Estado:** ACCEPTED.
+- **Instrucción:** cuando el texto dice «una semana después», «tres días antes», «dos días más tarde», «al día siguiente» u otro intervalo comparable, conservarlo como intervalo explícito aunque no exista fecha absoluta.
+- **Representación:** evento de referencia identificable + dirección (antes/después) + cantidad + unidad + precisión exacta/estimada/aproximada. Si no se conoce la duración, conservar solo el orden. Si el texto dice «unos días», registrar intervalo impreciso, no una cifra inventada.
+- **Límite:** no convertir a fecha calendario sin ancla verificable; los offsets relativos pueden enlazarse a T0 o a otro evento de la cronología. Los rumores se mantienen como rumores.
+- **Aplicación inmediata:** DMR-060/061; rumor de Ais una semana después de Udaeus, pociones de Bell tres días antes de Naaza, demostración de Firebolt de Lili el día previo al piso 10, y reencuentro de Bell/Lili dos días después del rescate.
+- **Documentos afectados:** eras-and-events.json, src/danmachi-timeline.js, tests/test_danmachi_timeline.cjs, DMR-060, DMR-061, dossiers de volumen y fichas de personajes.
+
