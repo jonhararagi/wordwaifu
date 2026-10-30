@@ -44,3 +44,9 @@ Bell Cranel, Hestia y Eina Tulle
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
 - No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+
+## Ampliación · PDF pp. 150–155
+- Bell mantiene presente el encargo de devolver el monedero de Seal; Hestia propone combinar la búsqueda con la salida, sin que Bell abandone explícitamente la tarea.
+- Comparten crepes; Hestia pide a Bell que la alimente y después que limpie la mermelada de su mejilla. Bell se avergüenza por la cercanía.
+- Hestia propone continuar con croquetas. Bell reconoce que rara vez comparten actividades fuera de sus obligaciones y admite que disfruta la salida.
+- La ilustración de p. 154 es coherente con el gesto narrado, sin añadir hechos independientes. Hestia/Freya pp. 148–149 es contexto previo; el evento conserva su localizador principal pp. 150–159.
