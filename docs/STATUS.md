@@ -110,7 +110,7 @@
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 84 personajes; 5 grupos; 12 deidades con registro de personaje.
-- **Marcadas `complete`:** 0/83 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
+- **Marcadas `complete`:** 0/84 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
 ## DMR-045 — lectores BinB enlazados desde la tienda oficial de SB Creative (2026-10-25)
