@@ -764,3 +764,11 @@
 - **Anti-repetición:** no volver a probar lectores ya agotados ni duplicar fuentes/IDs sin cambio material de acceso o evidencia nueva. No utilizar copias no autorizadas de novelas. No inferir al padre de Bell ni atribuir a Rudra personalmente actos de su Familia sin evidencia explícita.
 - **Primera aplicación:** Alfia, Zald, Meteria, Erebus y Rudra en DMR-045. La pasada pública del 2026-10-29 queda registrada en CHARACTER_UPDATE_LEDGER.md y en el dossier DMR-045; los cinco cotejos primarios continúan pendientes.
 - **Documentos afectados:** lore/danmachi/CHARACTER_UPDATE_LEDGER.md, lore/danmachi/research/inbox/DANMACHI-RESEARCH-045-dark-era-characters-continuity-audit.md, lore/danmachi/WORK_QUEUE.md y el registro de fuentes cuando aparezca una fuente verdaderamente nueva.
+
+
+### CONV-DM-2026-10-29-015 — Precisión explícita sobre los padres de Bell en entrevista de Omori
+
+- **Fuente:** DMR-045-SRC-009, entrevista LN News Online del 2020-10-15, sección sobre el nacimiento de Bell.
+- **Hallazgo:** el entrevistador enuncia que el padre de Bell era un supporter de Zeus Familia y la madre era la hermana menor de Alfia; Omori responde afirmativamente. Registrar únicamente esa descripción general del padre, sin inventar nombre ni identidad individual.
+- **Continuidad y límite:** la declaración se refiere a la historia original de DanMemo (`CONT-GAME`). La entrevista no nombra a la hermana como Meteria ni ofrece localizador de la novelización; no promueve por sí sola el dato a `CONT-MAIN-LN`.
+- **Registro:** se amplía DMR-045-CLM-008 y la nota de DMR-045-SRC-009; se actualizan el dossier y la bitácora de Meteria. No se crea un nuevo ID de fuente ni una relación con un personaje padre sin identificar.
