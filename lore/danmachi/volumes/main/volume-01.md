@@ -93,7 +93,7 @@ Bell pasa de aspirante sin Familia a miembro de Hestia Familia. Hestia deja de e
 - **Inspección visual:** p. 22 revisada a página completa mediante render del PDF. Las pp. 19–21 y 23–24 se leyeron en texto; su inspección visual sigue pendiente.
 - **Datos para la pasada de personajes (no cerrar fichas aún):** Bell: aldea de origen cercana a Orario, abuelo como figura que lo crió, herencia restante tras su muerte, ideal heroico y motivación inicial; estado económico puntual de 1.200 Varisu tras canje en p. 21. Eina: asesora del Gremio, advertencia profesional y ánimo personal a Bell; la descripción física/mezcla de razas aparece en p. 16. Ais: reputación y datos públicos transmitidos por Eina; evitar convertir opiniones/hipérboles en métricas.
 - **Eventos:** la conversación con Eina se añade al expediente existente `EVT-DM-EINA-ADVISOR-001`; no se crea un segundo evento para la misma interacción. La frase de Bell al despedirse se registra como parte de ese intercambio.
-- **Próximo folio secuencial:** PDF p. 25. Las cinco pasadas permanecen abiertas.
+- **Continuación:** la lectura secuencial de PDF pp. 25–30 se registra en el apartado siguiente; el próximo folio es PDF p. 31. Las cinco pasadas permanecen abiertas.
 
 ## Registro de lectura directa del material aportado · PDF pp. 25–30 (2026-10-30)
 
