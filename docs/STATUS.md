@@ -870,3 +870,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Personajes/objetos:** no se crean personajes ni objetos duplicados. La tarjeta p.209 ya estaba reflejada en el perfil de Bell y se confirmó visualmente; no se repite su registro.
 - **Pendientes:** identidad del responsable de la fuga; mirada no identificada de p.186; Familia de la azotea desde la que Freya observa en p.200; vínculo exacto entre la pequeña caja de p.190 y la daga que Hestia entrega en p.193 (probable por continuidad, no dicho en p.190); color de ojos de Seal; reconciliar la secuencia de Seal p.98–102 con el reencuentro pp.203–204 antes de crear otro evento.
 - **Alcance histórico:** esta actualización no cierra las inspecciones visuales pendientes registradas por PR #215 (pp.19–21, 23–24 y 49–54). Tampoco declara revisadas las pp.1–10, que no constan en el dossier secuencial actual.
+
+
+## DMR-062 — auditoría cruzada de la transcripción MD del Volumen 1 (2026-10-30)
+
+- Se inicia auditoría específica del archivo Markdown privado derivado del Volumen 1. Contiene 7.251 líneas y cargas Base64; no ofrece paginación física consistente, por lo que no se usa para inventar localizadores PDF.
+- La extracción narrativa secuencial del PDF queda integrada hasta p.214 en `main` (merge SHA `c00b582ad3f8a03930243b0cfb69b33cd3cdded9`); Validate WordWaifu #3710 y DanMachi Lore and Retrieval Integrity #2088 pasaron en ese SHA.
+- La auditoría DMR-062 añadió diez fichas de monstruos del Volumen 1 y las registró en el índice y catálogo. Su estado es `source_checked_translation_unverified`: la traducción sigue sin cotejo con japonés.
+- Informe: `lore/danmachi/research/inbox/DANMACHI-RESEARCH-062-volume-01-markdown-cross-audit.md`.
+- Pendiente: cotejar pp.1–10, completar inspecciones visuales antiguas, revisar reglas/objetos atomizados y evaluar los eventos candidatos sin duplicar IDs.
