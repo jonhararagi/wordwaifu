@@ -8,7 +8,15 @@ status: provisional
 
 Este índice separa historias parciales respaldadas por sinopsis/perfiles oficiales, candidatos que necesitan verificación y acontecimientos AU propuestos por el autor. Cada archivo conserva ID, continuidad y estado de evidencia explícitos.
 
-## Historias de novela principal con cobertura parcial
+## Volumen 2 — eventos narrativos extraídos de traducción aportada\n\n- [Volumen 2: enfrentamiento de Ais con Udaeus](timeline/EVT-DM-V02-AIS-UDAEUS-001.md) · `EVT-DM-V02-AIS-UDAEUS-001` · `CONT-MAIN-LN` · PDF pp. 106–111; rumor de nivel 6 conservado como rumor.
+- [Volumen 2: Bell obtiene Firebolt](timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) · `EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001` · `CONT-MAIN-LN` · PDF pp. 136–149.
+- [Volumen 2: Bell prueba Firebolt y agota Mind](timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) · `EVT-DM-V02-BELL-FIREBOLT-TEST-001` · `CONT-MAIN-LN` · PDF pp. 150–155 y 167–169.
+- [Volumen 2: emboscada de Ogros en el piso 10](timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) · `EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001` · `CONT-MAIN-LN` · PDF pp. 195–213.
+- [Volumen 2: Lili toma la Daga de Hestia y abandona a Bell](timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) · `EVT-DM-V02-LILI-ABANDONS-BELL-001` · `CONT-MAIN-LN` · PDF pp. 213–229.
+- [Volumen 2: traición a Lili y rescate de Bell](timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) · `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` · `CONT-MAIN-LN` · PDF pp. 213–240.
+- [Volumen 2: Ais encuentra el Protector de Jade](timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) · `EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001` · `CONT-MAIN-LN` · PDF pp. 242–243.
+
+Estos registros se basan en la traducción española privada aportada por el usuario de la obra oficial. Los localizadores se refieren a páginas físicas del PDF; la fidelidad de la traducción no se ha cotejado todavía. Las fechas absolutas permanecen desconocidas.\n\n\n## Historias de novela principal con cobertura parcial
 
 - [Volumen 21: expedición fallida del piso 60 y respuesta de Orario](candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md) · EVT-DM-V21-EXPEDITION-RESCUE-001 · CONT-MAIN-LN.
 
