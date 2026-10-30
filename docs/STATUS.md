@@ -105,7 +105,7 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 206 registros activos; 29 IDs reservados; 133 documentos de apoyo.
+- **Corpus DanMachi:** 208 registros activos; 29 IDs reservados; 133 documentos de apoyo.
 - **Grafo de conocimiento:** 258 relaciones explícitas; 258/258 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
@@ -796,3 +796,15 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Inspección visual:** pp. 43–48 inspeccionadas a página completa; son folios de texto continuo sin ilustraciones.
 - **Próximo folio:** PDF p. 49. Las cinco pasadas siguen abiertas; faltan las inspecciones visuales de pp. 19–21 y 23–24, cotejo individual y comparación con el corpus web.
 - **Rama:** `research/danmachi-v1-primary-pp43-48-2026-10-30`, creada desde el SHA integrado de `main` `3a0702faecfd817219717d3ab340ef2a269ca671`. Esta tanda aún requiere PR y CI; no se declara integrada.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 49–54 (2026-10-30)
+
+- **Sesión controlada por hora argentina:** inicio 10:03:52; límite de seis minutos 10:09:52; cierre registrado a las 10:09:52 (UTC−03:00).
+- **Corpus:** `CONT-MAIN-LN), DMR-061-SRC-001, traducción privada no cotejada con japonés; sin mezcla de fuentes web/wiki.
+- **Lectura:** pp. 49–50 cierran el combate contra Kobolds y documentan fragmentos de Piedra Mágica; p. 51 registra una garra como botín y la carga que Bell debe transportar; p. 52 explica el Dungeon «vivo», mapas, autorreparación y nacimiento de monstruos; p. 53 documenta un Goblin y un Diente de Goblin; p. 54 muestra una retirada planificada a la superficie y un snapshot de Estado.
+- **Eventos reutilizados:** ya existían en la rama `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` (pp. 46–51) y `EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001` (p. 53). No se crearon IDs duplicados; esta tanda los integrará en los índices y catálogo centrales.
+- **Snapshot Bell, PDF p. 54, Lv. 1:** Fuerza I82→H120; Resistencia I13→I42; Destreza I96→H139; Agilidad H172→G225; Magia I0. Magia y Habilidades aparecen vacías. No se atribuyen los aumentos a un solo monstruo.
+- **Límite:** el nuevo ataque sorpresa de p. 54 queda abierto; no se registra un evento cerrado. El próximo folio es p. 55.
+- **Inspección visual:** pp. 49–54 renderizadas e inspeccionadas; seis páginas de texto, sin ilustraciones. La tabla de p. 54 se comprobó a página completa.
+- **Próximo trabajo:** lectura desde p. 55; inspecciones visuales pendientes pp. 19–21 y 23–24; cotejo individual y contraste web permanecen abiertos.
+- **Rama:** `research/danmachi-v1-primary-pp49-54-2026-10-30`, basada en `main` SHA `12f2e60d79b8a3dbe9e1a998a375ecd7cafef684`. No se declara integrada ni validada todavía.
