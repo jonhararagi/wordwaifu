@@ -8,7 +8,9 @@ status: provisional
 
 Este índice separa historias parciales respaldadas por sinopsis/perfiles oficiales, candidatos que necesitan verificación y acontecimientos AU propuestos por el autor. Cada archivo conserva ID, continuidad y estado de evidencia explícitos.
 
-## Volumen 2 — eventos narrativos extraídos de traducción aportada\n\n- [Volumen 2: enfrentamiento de Ais con Udaeus](timeline/EVT-DM-V02-AIS-UDAEUS-001.md) · `EVT-DM-V02-AIS-UDAEUS-001` · `CONT-MAIN-LN` · PDF pp. 106–111; rumor de nivel 6 conservado como rumor.
+## Volumen 2 — eventos narrativos extraídos de traducción aportada
+
+- [Volumen 2: enfrentamiento de Ais con Udaeus](timeline/EVT-DM-V02-AIS-UDAEUS-001.md) · `EVT-DM-V02-AIS-UDAEUS-001` · `CONT-MAIN-LN` · PDF pp. 106–111; rumor de nivel 6 conservado como rumor.
 - [Volumen 2: Bell obtiene Firebolt](timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) · `EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001` · `CONT-MAIN-LN` · PDF pp. 136–149.
 - [Volumen 2: Bell prueba Firebolt y agota Mind](timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) · `EVT-DM-V02-BELL-FIREBOLT-TEST-001` · `CONT-MAIN-LN` · PDF pp. 150–155 y 167–169.
 - [Volumen 2: emboscada de Ogros en el piso 10](timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) · `EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001` · `CONT-MAIN-LN` · PDF pp. 195–213.
@@ -16,7 +18,9 @@ Este índice separa historias parciales respaldadas por sinopsis/perfiles oficia
 - [Volumen 2: traición a Lili y rescate de Bell](timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) · `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` · `CONT-MAIN-LN` · PDF pp. 213–240.
 - [Volumen 2: Ais encuentra el Protector de Jade](timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) · `EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001` · `CONT-MAIN-LN` · PDF pp. 242–243.
 
-Estos registros se basan en la traducción española privada aportada por el usuario de la obra oficial. Los localizadores se refieren a páginas físicas del PDF; la fidelidad de la traducción no se ha cotejado todavía. Las fechas absolutas permanecen desconocidas.\n\n\n## Historias de novela principal con cobertura parcial
+Estos registros se basan en la traducción española privada aportada por el usuario de la obra oficial. Los localizadores se refieren a páginas físicas del PDF; la fidelidad de la traducción no se ha cotejado todavía. Las fechas absolutas permanecen desconocidas.
+
+\n## Historias de novela principal con cobertura parcial
 
 - [Volumen 21: expedición fallida del piso 60 y respuesta de Orario](candidates/EVT-DM-V21-EXPEDITION-RESCUE-001.md) · EVT-DM-V21-EXPEDITION-RESCUE-001 · CONT-MAIN-LN.
 
@@ -59,3 +63,25 @@ Las propuestas del autor no son canon ni se convierten en overrides aprobados au
 ## Regla de duplicación
 
 Antes de crear otro evento, compara ID, nombres alternativos, participantes, periodo, lugar y consecuencias. Un flashback o relato desde otro punto de vista suele ser otra referencia al mismo evento, no un evento nuevo.
+
+## Volumen 1 — eventos narrativos extraídos de traducción aportada
+
+- [Encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) y [concesión de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — PDF pp. 211–214.
+- [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146.
+- [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
+- [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–164.
+- [Respuesta de Ganesha y el Gremio](timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md) — pp. 170–173.
+- [Persecución del Silverback](timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — pp. 173–190.
+- [Actualización y entrega de la daga](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md) — pp. 193–196.
+- [Bell derrota al Silverback](timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md) — pp. 196–200.
+- [Hestia explica la daga y su préstamo](timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md) — pp. 203–208.
+
+## Volumen 2 — eventos y anclas ampliadas
+
+- [Rumor de nivel 6 de Ais](timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md) — una semana después de Udaeus; rumor, no confirmación.
+- [Pociones agotadas](timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md) y [compra de poción de Mind](timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md) — tres días antes de la visita y visita pp. 167–169.
+- [Bell ve a Lili acosada](timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md) — pp. 169–170.
+- [Lili observa Firebolt](timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md) — un día antes de la incursión al piso 10.
+- [Traición de Soma a Lili](timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md), [rescate y reconciliación](timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) y [reencuentro dos días después](timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) son acontecimientos separados.
+
+**Procedencia:** DMR-061-SRC-001 y DMR-060-SRC-001; novela ligera original oficial, traducciones privadas no cotejadas. Las pasadas visuales/cotejo no están cerradas.
