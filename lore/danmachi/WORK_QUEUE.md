@@ -1158,9 +1158,13 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Continuar con pp. 19–24: reputación de Ais comunicada por Eina, consejo profesional/personal de Eina, canje de 1.200 Varisu, pasado e ideal heroico de Bell y llegada a una iglesia deteriorada sin identificación todavía.
 - [x] Actualizar el evento existente `EVT-DM-EINA-ADVISOR-001` con el localizador de novela principal pp. 16–21 y 23, sin mezclar su perfil CONT-ANIME ni inferir reciprocidad romántica.
 - [x] Inspeccionar visualmente PDF p. 22; registrar descripción sin asignar identidad por semejanza contextual.
-- [ ] Continuar lectura secuencial desde PDF p. 25. No volver a leer pp. 1–24 salvo para resolver una discrepancia concreta o revisar visualmente un folio pendiente.
+- [x] Leer secuencialmente PDF pp. 25–30 e inspeccionar visualmente los seis folios completos; son páginas de texto continuo, sin ilustraciones.
+- [x] Enlazar el recuerdo del primer encuentro Bell–Hestia (PDF p. 29) al evento existente `EVT-DM-BELL-MEETS-HESTIA-001`, sin crear ID duplicado.
+- [x] Registrar la actualización rutinaria de Estado de p. 30 sin confundirla con la concesión inicial de Falna (pp. 211–214) ni con la actualización y entrega de daga (pp. 193–196); no crear evento separado todavía.
+- [x] Retomar la lectura secuencial desde PDF p. 25; bloque completado hasta p. 30. La siguiente página pendiente es p. 31.
 - [ ] Inspeccionar a página completa las pp. 19–21 y 23–24; separar este trabajo de la lectura textual ya hecha.
 - [ ] Seguir cotejando el texto inicial con eventos, personajes, vínculos, objetos y cronología ya existentes; actualizar los registros de canon primario y no crear IDs duplicados.
 - [ ] Completar después el cotejo individual de fichas y la comparación con el corpus web/secundario; no añadir `+` por esta pasada grupal.
-- **Estado:** IN_PROGRESS; checkpoint de pp. 19–24 verificado en la rama `research/danmachi-volume-01-primary-canon-2026-10-30`. PR #210 está abierta y mergeable. CI preintegración sobre HEAD `9c1fa3af0df755510b9609b66d8275814ac38498`: Validate WordWaifu #41052288264 y DanMachi Lore and Retrieval Integrity #41052288242, ambos `success`. La integración y el CI post-merge siguen pendientes.
+- [ ] Continuar lectura secuencial desde PDF p. 31.
+- **Estado del checkpoint anterior:** pp. 19–24 integradas en `main` por PR [#210](https://github.com/jonhararagi/wordwaifu/pull/210), squash SHA `042e302ef8fc18495c41ca8c8a0a9c74a6714a7d`. CI pre-merge sobre HEAD `28af3d4af5cba0bade32eff6864ba4b0e8b1d21c`: Validate [#41052639204](https://github.com/jonhararagi/wordwaifu/actions/runs/41052639204) y Lore/Integrity [#41052639202](https://github.com/jonhararagi/wordwaifu/actions/runs/41052639202), ambos `success`. CI post-merge sobre el SHA exacto de `main`: Validate [#41052934599](https://github.com/jonhararagi/wordwaifu/actions/runs/41052934599) y Lore/Integrity [#41052934536](https://github.com/jonhararagi/wordwaifu/actions/runs/41052934536), ambos `success`.
 
