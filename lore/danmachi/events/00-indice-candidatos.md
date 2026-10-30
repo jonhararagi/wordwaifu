@@ -67,7 +67,7 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 ## Volumen 1 — eventos narrativos extraídos de traducción aportada
 
 - [Ais rescata a Bell del Minotauro](timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md) — PDF pp. 11–18 (rescate pp. 11–14; relato posterior a Eina pp. 16–18); se conserva «Aizu» como grafía de la traducción y la ambigüedad sobre la aparición en el piso 15.
-- [Encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) y [concesión de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — PDF pp. 211–214.
+- [Primer encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) — recuerdo narrativo en PDF p. 29 (traducción privada); [concesión inicial de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — evento distinto en PDF pp. 211–214. La actualización rutinaria de Estado de p. 30 no se crea todavía como evento separado ni se confunde con la actualización acompañada de la daga de pp. 193–196.
 - [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146.
 - [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
 - [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–164.
