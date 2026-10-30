@@ -414,3 +414,36 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - limitation: El pasaje no muestra conversación, reconocimiento verbal ni interacción directa entre Ais y Bell.
 - evidence_type: user_supplied_private_light_novel_translation
 - verification_note: lectura directa de las páginas físicas indicadas; la traducción privada no se cotejó con el japonés.
+
+## DMR-061 — extracción primaria PDF pp. 178–200 (2026-10-30)
+
+> **Procedencia:** DMR-061-SRC-001, traducción privada española no cotejada con japonés. Continuidad exclusiva CONT-MAIN-LN.
+
+- **p. 178:** Bell y Hestia entran más profundamente en la Calle Dédalo. Las casas son pequeñas, de piedra, con candelabros de Piedras Mágicas; los residentes conocen el laberinto, pero huyen al ver al Silverback. Hestia pierde resistencia.
+- **p. 179:** el Silverback se mueve por encima de las casas, cae entre Bell y Hestia y los separa. Su rugido produce el efecto llamado Terror en Bell y reactiva el recuerdo del Minotauro.
+- **p. 180:** Bell enfrenta el miedo y decide no dejar atrás a Hestia. Esquiva un puño y ataca al monstruo con su daga.
+- **p. 181:** la daga se rompe al chocar contra el pelo/defensa del Silverback sin penetrarla. El monstruo agarra a Bell y lo estrella contra una pared. Bell toma la Piedra Mágica de una lámpara mural y la presiona contra los ojos del monstruo.
+- **p. 182:** el Silverback retrocede cegado. Bell corre hacia Hestia, pero se reprocha no poder protegerla. El monstruo ruge desde lejos y vuelve a perseguirlos.
+- **p. 183:** Bell decide que no puede proteger a Hestia directamente y la introduce en una alcantarilla; cierra la verja y planea actuar como señuelo.
+- **p. 184:** Bell explica que su abuelo era su único pariente y murió por un ataque de monstruo mientras estaba fuera de la aldea por negocios; Bell no estaba presente y recibió la noticia de los aldeanos. Explica su miedo a perder a la familia y su deseo de encontrar en Orario el calor de una Familia.
+- **p. 185:** Bell pide a Hestia que busque ayuda y se separa. Consume una poción de líquido verde oscuro con emblema de Miach Familia; el texto indica que recupera resistencia y que disminuyen fatiga/dolor, pero no da nombre ni tipo. Bell provoca al Silverback y lo atrae hacia sí.
+- **p. 186:** Bell observa señales pintadas para salir de la Calle Dédalo y elige el sentido contrario para atraer al monstruo a mayor profundidad. Los residentes observan desde ventanas y sombras. Una mirada relajada lo sigue, pero el dueño no se identifica. El Silverback ataca desde arriba y Bell cae en una plaza ovalada con una fuente.
+- **p. 187:** el Silverback usa las cadenas de sus muñecas como látigos, daña suelo y paredes y golpea a Bell en la cabeza. Bell no puede vencerlo y piensa en la seguridad de Hestia.
+- **p. 188:** Bell recuerda que Ais lo salvó ante el Minotauro. Hestia vuelve a aparecer; el Silverback cambia su objetivo de Bell a Hestia y carga contra ella.
+- **p. 189:** Bell intercepta el ataque, toma a Hestia y ambos ruedan por una pendiente. Bell le reprocha haber regresado; Hestia explica que lo buscó y que no lo abandonará.
+- **p. 190:** Hestia recuerda la promesa de no dejarla sola y dice tener una idea. Saca una caja pequeña de su cintura, pero el Silverback aparece por las escaleras antes de que explique su contenido; ambos vuelven a huir.
+- **p. 191:** Bell carga a Hestia para escapar. Llegan a un callejón sin salida y los residentes de la Calle Dédalo se esconden.
+- **p. 192:** Hestia propone actualizar el Estado de Bell. Él duda que una mejora baste para dañar al Silverback y recuerda las burlas y los insultos que minaron su confianza.
+- **p. 193:** Hestia entrega la Daga de Hestia, una daga negra con grabados y brillo rojo tenue. Le pide confiar en ella; Bell acepta.
+- **p. 194:** Hestia actualiza el Estado de Bell con sangre divina y Texto Sagrado. Recuerda que Hephaistos forjó mithril y añadió a la daga un Estado/Texto Sagrado propio; el arma se desarrolla con la experiencia del usuario y solo puede usarla alguien con la Gracia de Hestia.
+- **p. 195:** snapshot de Bell Lv.1: Fuerza G221→E403; Resistencia H101→H199; Destreza G232→E412; Agilidad F313→D512; Magia I0. Hestia siente celos de Ais. La ficha visual p.208 muestra Agilidad D521, discrepancia abierta frente a D512 narrativo.
+- **p. 196:** Hestia anima a Bell a atacar. El Silverback percibe que el Bell actualizado puede herirlo.
+- **p. 197:** Bell recuerda la enseñanza de Eina: la Piedra Mágica alojada en el pecho es el punto débil absoluto de los monstruos. Apunta a esa zona.
+- **p. 198:** la Daga de Hestia atraviesa el pecho del Silverback y destruye algo duro que Bell identifica como su Piedra Mágica. El monstruo cae; el retroceso lanza a Bell por el aire.
+- **p. 199:** ilustración monocroma inspeccionada ampliada: figura de cabello claro sentada en el suelo, daga oscura en primer plano y humo/ceniza alrededor; no hay rótulo nominal.
+- **p. 200:** el Silverback se convierte en cenizas y desaparece. Los residentes aplauden. Hestia cae al suelo después de la victoria; el texto no especifica la causa inmediata. Bell recoge la daga y la carga. Freya observa desde la azotea de una Familia no identificada, siente celos, felicita a Bell y se retira.
+- **Eventos:** la persecución existente EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001 se extiende hasta p.195; el evento EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001 conserva pp.193–196; EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001 conserva pp.196–200. No crear IDs duplicados.
+- **Correcciones y límites:** la causa del desplome de Hestia no se fija; la caja de p.190 no se identifica; la poción de p.185 no recibe un nombre inventado; la mirada de p.186 y la Familia de la azotea de p.200 quedan sin identificar. La muerte del abuelo ya está registrada en la ficha de Bell y no se crea un evento duplicado.
+- **Auditoría visual:** pp.178–200 renderizadas a 110 dpi e inspeccionadas; p.199 única ilustración del bloque, ampliada. Las demás páginas son texto.
+- **Pasadas:** tres pasadas completas en pp.178–200; cuarta correctiva en p.200 para eliminar una causa de colapso no explícita.
+- **Próximo folio:** PDF p.201.
