@@ -12,7 +12,7 @@ tags: ["Lili", "Soma Familia", "confianza", "abuso"]
 ---
 # DanMachi · Volumen 2: Liliruca Arde y Soma Familia
 
- > **Estado:** resumen original para navegación. No es un análisis cotejado capítulo a capítulo. El dato editorial enlazado no demuestra por sí solo cada detalle del resumen.
+ > **Estado:** extracción narrativa sustancial de la traducción privada aportada por el usuario, con localizadores de páginas físicas y revisión visual parcial. La traducción no se ha cotejado con el japonés; las pasadas 2–5 siguen abiertas.
 
 ## Sinopsis original
 
@@ -45,31 +45,37 @@ La relación puede pasar de una asociación instrumental al compañerismo. Perte
 - **Estado de búsqueda:** `provisional_summary`; claim `DMR-008-CLM-002`; spoilers mild.
 
 
-## Eventos temporales extraídos del PDF aportado (2026-10-29)
+## DMR-060 · acontecimientos extraídos del PDF aportado (CONT-MAIN-LN)
 
-La lectura sustancial de la traducción privada aportada permitió crear siete registros de eventos separados. Todos pertenecen a `CONT-MAIN-LN`; las fechas absolutas no están fijadas y los localizadores son páginas físicas del PDF.
-
+La primera extracción registró siete sucesos separados:
 - [Ais se enfrenta a Udaeus](../../events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md) — PDF pp. 106–111.
 - [Bell obtiene Firebolt](../../events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) — PDF pp. 136–149.
 - [Bell prueba Firebolt y agota Mind](../../events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) — PDF pp. 150–155 y 167–169.
-- [Emboscada de Ogros en el piso 10](../../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–213.
-- [Lili toma la Daga de Hestia y deja a Bell](../../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 213–229.
-- [Miembros de Soma traicionan a Lili y Bell la rescata](../../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240.
+- [Emboscada de Ogros en el piso 10](../../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — actualizado a PDF pp. 195–212.
+- [Lili toma la Daga de Hestia y deja a Bell](../../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — actualizado a PDF pp. 212–214.
 - [Ais encuentra el Protector de Jade](../../events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) — PDF pp. 242–243.
 
-**Reserva de fuente:** la obra original es la novela ligera oficial. La traducción consultada es privada/no editorial y no ha sido cotejada con el japonés. Los eventos describen lo que muestra esa traducción; no se afirma fidelidad lingüística exacta. Véase `DMR-060-SRC-001` y `DANMACHI-RESEARCH-060`.
+## Ampliación DMR-060 · anclas temporales y segmentación de la historia de Lili
 
-
-## Ampliación DMR-060 · eventos y anclas temporales (CONT-MAIN-LN)
-
-La extracción del PDF aporta siete registros adicionales o separados respecto de la primera tanda: rumor del ascenso de Ais, agotamiento de pociones, visita a Naaza, hostigamiento a Lili, demostración de Firebolt, rescate/reconciliación y recontratación. Los registros de Udaeus, Firebolt, Ogros, abandono y hallazgo del Protector permanecen con sus IDs existentes.
-
-- [Rumor de Ais nivel 6](../../events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md) — PDF p. 111; exactamente una semana después de Udaeus; sigue siendo rumor.
+- [Rumor de que Ais alcanzó el nivel 6](../../events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md) — PDF p. 111; una semana después de Udaeus; el texto lo llama rumor.
 - [Bell agota pociones](../../events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md) — PDF p. 167; tres días antes de visitar a Naaza.
-- [Bell compra poción de Poder Mental](../../events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md) — PDF pp. 167–169.
+- [Bell compra una poción de Poder Mental](../../events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md) — PDF pp. 167–169; la última prueba de Firebolt había sido la noche anterior.
 - [Bell ve a Lili acosada](../../events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md) — PDF pp. 169–170.
-- [Lili observa Firebolt](../../events/timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md) — PDF p. 198; exactamente el día antes de la incursión al piso 10.
+- [Lili observa a Bell usar Firebolt](../../events/timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md) — PDF p. 198; un día antes de la incursión al piso 10.
+- [Lili revela su identidad Hobbit](../../events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md) — PDF pp. 214–221.
+- [Hestia y Eina hablan de Lili y Soma Familia](../../events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md) — PDF pp. 218–219; escena paralela a la huida de Lili.
+- [Los padres de Lili mueren en el Dungeon](../../events/timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md) — PDF p. 216; recuerdo sin fecha ni piso identificado.
+- [Gedo embosca y captura a Lili](../../events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md) — PDF pp. 221–224, piso 7.
+- [Kanu y otros miembros de Soma abandonan a Lili como cebo](../../events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md) — PDF pp. 224–229, piso 7.
 - [Bell rescata a Lili y ambos se reconcilian](../../events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) — PDF pp. 230–237.
-- [Bell y Lili vuelven a formar equipo](../../events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) — PDF pp. 237–240; dos días después de la separación posterior al rescate.
+- [Bell y Lili vuelven a formar equipo](../../events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) — PDF pp. 237–240; dos días después de la separación tras el rescate.
 
-**Intervalo impreciso:** la travesía de los pisos 8 y 9 ocupa «unos días»; no convertirlo a cifra exacta. **Datos visuales:** PDF pp. 244–245 añaden ficha y Estado de Lili; véase DMR-060 para valores y reserva de traducción. **Créditos impresos:** Sorotrans (versión inglesa), Mugetsu123 (traducción inglés-español, corrección y edición); Kurosaki-Vizard Translation es marca de agua.
+**Intervalos no exactos:** la travesía de los pisos 8 y 9 se describe como «unos días». No se convierte en una duración exacta. El hecho de que la conversación Hestia–Eina sea paralela a la huida se conserva sin asignarle una hora concreta.
+
+**Procedencia y límite:** traducción privada/no cotejada; páginas físicas del PDF. No atribuir toda acción de unos miembros a la Familia Soma completa.
+
+## Ampliación DMR-060 · datos de estados, equipo y localizadores visuales (CONT-MAIN-LN)
+
+La extracción también conserva snapshots de Estado y objetos. No fusionar estadísticas de momentos diferentes ni borrar historial de pérdida/recuperación de objetos.
+
+ **Datos visuales:** PDF pp. 244–245 añaden ficha y Estado de Lili; véase DMR-060 para valores y reserva de traducción. **Créditos impresos:** Sorotrans (versión inglesa), Mugetsu123 (traducción inglés-español, corrección y edición); Kurosaki-Vizard Translation es marca de agua.
