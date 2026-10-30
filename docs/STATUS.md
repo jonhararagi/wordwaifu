@@ -763,8 +763,8 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Evento existente:** el recuerdo del primer encuentro Bell–Hestia (PDF p. 29) se añadió a `EVT-DM-BELL-MEETS-HESTIA-001`; no se creó un ID duplicado. La concesión inicial de Falna de pp. 211–214 y la actualización con entrega de daga de pp. 193–196 permanecen como eventos separados.
 - **Límites:** no se identifica la estatua de la iglesia, la iglesia como lugar catalogado ni la amiga de Hestia. P. 30 no aporta valores de atributos ni prueba de un evento nuevo con resultado cuantificable.
 - **Inspección visual:** PDF pp. 25–30 inspeccionadas a página completa; son folios de texto continuo sin ilustraciones. Permanecen pendientes pp. 19–21 y 23–24 de la tanda visual previa.
-- **Próximo punto:** PDF p. 31. Las cinco pasadas continúan abiertas; no se marca `+` a personajes.
-- **Rama de continuación:** `research/danmachi-v1-primary-pp25-30-2026-10-30`, nacida del SHA de `main` `042e302ef8fc18495c41ca8c8a0a9c74a6714a7d`. Los cambios de esta tanda aún requieren CI y PR; no se declaran integrados.
+- **Siguiente folio al cerrar este bloque:** PDF p. 31; esa continuación se completó después hasta PDF p. 36, documentada en la sección siguiente. Las cinco pasadas continúan abiertas; no se marca `+` a personajes.
+- **Integración:** la rama `research/danmachi-v1-primary-pp25-30-2026-10-30` quedó integrada mediante [PR #211](https://github.com/jonhararagi/wordwaifu/pull/211), squash SHA `fd201fc6f1825299630d2ef04d4436fa02f50d60`. CI pre-merge sobre HEAD `69ed2d6a69a1ed1fc1d280cf253500fb873a119e`: [Validate #41053605873](https://github.com/jonhararagi/wordwaifu/actions/runs/41053605873) y [Lore/Integrity #41053605851](https://github.com/jonhararagi/wordwaifu/actions/runs/41053605851), ambos `success`. CI post-merge sobre el SHA exacto `fd201fc6f1825299630d2ef04d4436fa02f50d60`: [Validate #41054208200](https://github.com/jonhararagi/wordwaifu/actions/runs/41054208200) y [Lore/Integrity #41054208192](https://github.com/jonhararagi/wordwaifu/actions/runs/41054208192), ambos `success`.
 
 ## DMR-061 — continuación del Volumen 1, PDF pp. 31–36 (2026-10-30)
 
