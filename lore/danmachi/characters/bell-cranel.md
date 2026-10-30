@@ -127,3 +127,18 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Dato desde la perspectiva de Hestia (pp. 35–36):** en el Estado grabado en la espalda aparece `[Deseo Inquebrantable]`, descrita como aceleración del crecimiento; sus efectos duran mientras los sentimientos de Bell no cambien y dependen de la fuerza de esos sentimientos.
 - **Límite de conocimiento:** el pasaje no muestra que Bell vea el nombre ni conozca esos efectos. Mantener la Habilidad como información del lector/Hestia en este punto, no como conocimiento consciente de Bell.
 - **Traducción:** «Deseo Inquebrantable» es el nombre tal como aparece en el texto español privado; no se aporta aquí un nombre japonés cotejado.
+
+## Estado tras la primera incursión matutina · CONT-MAIN-LN
+
+- **Fuente:** DMR-061-SRC-001, Volumen 1, traducción privada no cotejada; PDF p. 54.
+- **Momento:** snapshot que aparece al cierre de la secuencia narrativa de la primera incursión descrita en el capítulo 2. Se conserva el orden de lectura; la traducción no especifica en esta tabla el instante exacto de actualización.
+- **Nivel:** Lv. 1.
+- **Valores anteriores → valores mostrados en p. 54:**
+  - Fuerza: I 82 → H 120.
+  - Resistencia: I 13 → I 42.
+  - Destreza: I 96 → H 139.
+  - Agilidad: H 172 → G 225.
+  - Magia: I 0 (sin cambio).
+- **Magia y Habilidades:** ambas secciones aparecen vacías en la ficha de p. 54.
+- **Comparación:** los valores anteriores coinciden con el snapshot de p. 33 tras la actualización del Estado posterior al Minotauro. No atribuir toda la variación a los Kobolds o al Goblin de p. 53; la página no identifica causas individuales.
+- **Límite:** no asumir que Bell conoce una Habilidad oculta por el solo hecho de que el lector la vio desde la perspectiva de Hestia en pp. 35–36; en p. 54 su tabla sigue mostrando Habilidades vacías.
