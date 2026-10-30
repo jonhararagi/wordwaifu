@@ -420,7 +420,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 
 
 ## DANMACHI-RESEARCH-061 — extracción del volumen 1 (CONT-MAIN-LN)
-- [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — primer encuentro Bell–Hestia y Falna; Festival, Freya/Silverback, persecución, actualización de Estado, derrota y Daga de Hestia. Traducción privada sin cotejo; pasadas visuales pendientes.
+- [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos iniciales Bell–Hestia, Eina, Ais y Seal Flover; escenas de Estado, Festival, Freya/Silverback y Dungeon. Traducción privada sin cotejo; el combate de Kobolds de pp. 46–48 sigue abierto.
 - [Dossier volumen 1](volumes/main/volume-01.md) y [índice de eventos](events/00-indice-candidatos.md).
 
 ## DANMACHI-RESEARCH-060 — ampliación del volumen 2 (CONT-MAIN-LN)
