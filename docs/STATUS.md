@@ -846,3 +846,15 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - Pp. 150–155 amplían EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001. P. 156 cambia al Coliseo y describe el inicio del espectáculo con Battle Jabalí y domadora de Ganesha Familia.
 - Diez páginas renderizadas a 110 dpi; p. 154 única ilustración, inspeccionada ampliada. Sin pruebas de código ni CI.
 - Referencia histórica de entrada: rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD fe082141ad06e897481ac29c176e1b69b8db05c9; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 71 adelante/0 detrás. Los commits de documentación posteriores movieron el HEAD; no usar aquella referencia como estado actual. Una comparación posterior al guardado inicial arrojó 78 adelante/0 detrás. Resolver HEAD y distancia vigentes en GitHub al reanudar. Sin PR propia; PR #209 no modificada. Próxima página: PDF p. 157. Cinco pasadas siguen abiertas.
+
+## DMR-061 — Volumen 1, PDF pp. 157–177 (2026-10-30)
+
+- **Fuente/continuidad:** DMR-061-SRC-001, CONT-MAIN-LN, traducción privada no cotejada con japonés.
+- **Páginas:** 157–177 completadas con tres pasadas obligatorias por página; cuarta pasada correctiva en pp. 165–167. Próxima página exacta: PDF p. 178.
+- **Visual:** 21 páginas renderizadas a 110 dpi; p. 169 contiene la única ilustración, inspeccionada ampliada. Las demás son páginas de texto.
+- **Hallazgos clave:** Eina cuestiona el riesgo del Festival; Bell/Hestia vuelven a encontrarse con Eina y siguen buscando a Seal; Freya incapacita personal de los establos y libera un Silverback; el monstruo primero busca a Freya y luego recibe la orden de perseguir a una «pequeña Diosa» (probablemente Hestia); Ganesha responde a nueve fugas y Eina coordina ayuda con Ais/Loki; Bell y Hestia comienzan la persecución hacia la Calle Dédalo.
+- **Correcciones:** se conserva la discrepancia de apariencia de Seal entre pp. 42 y 165; se corrige la atribución de objetivo del Silverback, sin afirmar que Freya ordenó atacar a Bell ni que liberó personalmente los nueve monstruos.
+- **Archivos:** dossier de volumen, inbox DMR-061, cuatro eventos, fichas de Seal/Freya, índices de eventos, WORK_QUEUE, registro de acuerdos y STATUS.
+- **Estado Git de entrada:** rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD b972852b0b720f769af1115afbcad8778324d63e; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 80 adelante/0 detrás. Sin PR propia, sin CI en ese HEAD y sin pruebas locales. PR #209 corresponde a otra rama; main no se modificó. El HEAD cambia al guardar estos archivos y se verifica de nuevo al cierre.
+- **Pruebas:** no se ejecutaron pruebas locales. No se declara CI para estos cambios documentales hasta que exista una ejecución sobre el HEAD actualizado.
+- **Pendientes:** devolución del monedero de Seal y continuación de la persecución.
