@@ -5,7 +5,8 @@ type: world_rule
 status: provisional
 confidence: high for general concept
 tags: [monstruos, Dungeon, piedras mágicas, recursos]
-source_refs: [DanMachi light novel series; localizador pendiente]
+source_refs: [DMR-061-SRC-001]
+continuity_scope: CONT-MAIN-LN
 ---
 # Monstruos, Dungeon y piedras mágicas
 
@@ -30,3 +31,10 @@ No proporcionar una estadística de monstruo, piso de aparición, debilidad, res
 ## Verificación pendiente
 
 Crear fichas específicas de monstruos solo cuando una escena los necesite. Consultar la fuente correspondiente y guardar especie, nombre traducido, variantes, piso conocido, patrón de combate y referencia de origen.
+
+## Domesticación de monstruos — CONT-MAIN-LN
+
+- **Fuente:** DMR-061-SRC-001, Volumen 1, PDF pp. 137–138; traducción privada no cotejada con japonés.
+- Anya y Ryuu describen la domesticación como una habilidad que existe y cuya eficacia depende de las cualidades de la persona. Explican que se debe mostrar fuerza al monstruo para que se vuelva obediente.
+- Según su explicación, los monstruos del Dungeon son especialmente difíciles de domesticar; normalmente se domestican criaturas de la superficie. Afirman que los miembros centrales de Ganesha Familia tienen suficiente fuerza para domesticar también monstruos del Dungeon.
+- **Alcance:** información expuesta por dos empleadas durante una conversación sobre el Festival de Monstruos. No se da un nombre técnico de habilidad, fórmula, tasa de éxito, duración del control ni una lista de monstruos domesticables. No asumir que cualquier aventurero puede repetirlo ni que los monstruos formen equipos o amistades como regla.
