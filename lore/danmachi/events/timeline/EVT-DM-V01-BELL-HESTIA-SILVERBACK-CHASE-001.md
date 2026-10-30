@@ -41,6 +41,16 @@ Bell Cranel, Hestia y Silverback
 - Bell recuerda que su abuelo murió atacado por un monstruo cuando él no estaba presente y explica que teme perder a su familia.
 - Hestia vuelve por Bell y ambos recuerdan la promesa de no dejarse solos.
 
+## Ampliación · inicio de la persecución, PDF pp. 173–177
+
+- **p. 173:** Bell ve al Silverback en la Calle Principal del Este. El monstruo arrastra cadenas y esposas que parecen haber sido arrancadas de la pared. Bell lo reconoce por las lecciones de Eina, recuerda que aparece en el piso 11 y estima que es más débil que el Minotauro, pero más fuerte que él.
+- **p. 174:** el Silverback carga hacia Bell y Hestia. Bell esquiva con Hestia, rueda por el suelo y se coloca para cubrirla. El monstruo cambia de dirección y Bell concluye que su objetivo es Hestia. El golpe alcanza el abdomen de Bell y lo arroja contra una tienda.
+- **p. 175:** la multitud huye. Bell se levanta pese al dolor y tira de las cadenas sujetas a las muñecas del Silverback para detenerlo; el monstruo lo arroja a un lado. Bell no puede competir con su fuerza.
+- **p. 176:** la cadena se desliza de las manos de Bell y el Silverback tropieza por el impulso. Bell aprovecha la abertura, toma a Hestia y escapa por un callejón. Bell observa que el monstruo no ataca al azar: persigue a Hestia y parece tener un propósito dirigido por alguien.
+- **p. 176 — ruta:** Bell y Hestia corren hacia el sur desde la Calle Principal del Este, por el área entre esta y la Calle Principal Sudoriental.
+- **p. 177 — Calle Dédalo:** Hestia comienza a quedarse sin aire. Bell reconoce la Calle Dédalo, una zona residencial pobre y laberíntica, reconstruida de forma desordenada y difícil de atravesar. Bell teme que los callejones permitan al monstruo alcanzarlos o cortarles el paso.
+- **Relación con Freya:** la orden de p. 167 para perseguir a una «pequeña Diosa» está documentada en EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001; por contexto parece Hestia. No convertirla en una orden de atacar a Bell.
+
 ## Límites de evidencia
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
