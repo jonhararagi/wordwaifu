@@ -746,3 +746,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Corrección documental:** una atribución previa de prueba de Firebolt/retorno de Ais en V1 pp. 153–158 queda retirada; ese localizador corresponde a la cita Bell–Hestia y al inicio del Festival. Firebolt está documentado en V2.
 - **Estado:** cambios preparados en rama; no afirmar merge en main ni CI hasta verificación real.
 
+## DMR-061 — continuación del corpus primario del Volumen 1 (2026-10-30)
+
+- **Separación de carpetas:** los extractos del PDF del volumen 1 se conservan en `lore/danmachi/volumes/main/` y sus eventos `CONT-MAIN-LN`; no se incorporan al repositorio de hallazgos de wikis/búsqueda web. El objetivo es contrastar más tarde ambos corpus sin mezclar la autoridad de sus fuentes.
+- **Lectura añadida:** PDF pp. 11–24. El rescate de Bell por Ais está localizado en el evento existente `EVT-DM-BELL-AIS-MINOTAUR-001`; la conversación y asesoramiento de Eina se localizan en `EVT-DM-EINA-ADVISOR-001`. Se registran pp. 19–24 en DMR-061 y en el dossier del volumen.
+- **Nuevos datos localizados:** reputación de Ais comunicada por Eina; advertencia y ánimo de Eina; canje de 1.200 Varisu; biografía temprana de Bell sobre su abuelo y su motivación para viajar a Orario; llegada a una iglesia deteriorada aún sin ID de lugar.
+- **Inspección visual:** PDF p. 22 inspeccionada a página completa. La identidad de la figura queda sin confirmar por ausencia de rótulo; no se infiere por apariencia.
+- **Próximo punto:** PDF p. 25. La revisión visual integral, la auditoría de personajes/equipo/estadísticas y las restantes pasadas siguen abiertas.
+- **Rama:** `research/danmachi-volume-01-primary-canon-2026-10-30`.
+- **Último checkpoint de esta tanda:** se verificará el HEAD final al cerrar; no declarar PR, CI ni merge hasta contar con sus resultados.
+
