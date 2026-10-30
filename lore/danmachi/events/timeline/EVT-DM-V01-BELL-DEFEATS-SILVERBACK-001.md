@@ -28,7 +28,7 @@ Inmediatamente después de la actualización del Estado y la entrega de la daga.
 Después de EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001
 
 ## Resumen
-Bell aplica el consejo de Eina y dirige su estocada al núcleo del monstruo. La Daga de Hestia atraviesa la Piedra Mágica del Silverback, que se convierte en cenizas. Hestia colapsa por agotamiento después de la victoria.
+Bell aplica el consejo de Eina y dirige su estocada al núcleo del monstruo. La Daga de Hestia atraviesa la Piedra Mágica del Silverback, que se convierte en cenizas. Hestia se desploma poco después de la victoria; la causa inmediata no se especifica en el folio.
 
 ## Participantes
 Bell Cranel, Hestia y Silverback
@@ -39,6 +39,14 @@ Bell Cranel, Hestia y Silverback
 - El monstruo se desintegra en cenizas; los residentes de la Calle Dédalo aplauden y celebran la victoria.
 - Hestia se desploma después de la batalla y Bell corre a atenderla.
 - Freya observa desde una azotea cómo Bell carga a Hestia y reconoce su victoria.
+
+## Auditoría de alcance · PDF pp. 196–200
+
+- **p. 196:** Bell inicia el ataque con la Daga de Hestia; el Silverback percibe que ahora puede causarle heridas mortales.
+- **p. 197:** Bell aplica la enseñanza de Eina sobre la Piedra Mágica situada en el pecho como punto débil de los monstruos.
+- **p. 198:** la estocada atraviesa el pecho y destruye la Piedra Mágica. El Silverback cae; el impulso del ataque lanza a Bell por el aire.
+- **p. 199:** ilustración monocroma ampliada: Bell aparece sentado en el suelo, con la Daga de Hestia en primer plano y humo/ceniza alrededor. La imagen no rotula el nombre, pero el contexto textual la vincula a Bell.
+- **p. 200:** el cuerpo del Silverback se vuelve cenizas y desaparece; los residentes aplauden. Hestia cae al suelo poco después; **la causa inmediata no se especifica en el folio**. Bell recupera la daga y la carga para marcharse. Freya observa desde la azotea de una Familia no identificada, siente celos al ver a Bell con Hestia, lo felicita y se retira.
 
 ## Límites de evidencia
 - No añadir fecha de calendario si el texto no la proporciona.
