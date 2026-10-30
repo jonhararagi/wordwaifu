@@ -8,7 +8,7 @@ function temporalKindLabel(temporal){
   const precision={day:"día",month:"mes",year:"año"}[temporal.precision]||"precisión pendiente";
   return base+" · precisión "+precision;
  }
- if(temporal.kind==="relative_offset")return base+(temporal.precision==="approximate"?" · aproximado":temporal.precision==="estimated"?" · estimado":"");
+ if(temporal.kind==="relative_offset")return base+(temporal.precision==="exact"?" · intervalo explícito":temporal.precision==="approximate"?" · aproximado":temporal.precision==="estimated"?" · estimado":"");
  return base;
 }
 function temporalDescription(temporal){
@@ -96,7 +96,7 @@ function validateDataset(data){
      if(dateComparable(lower)>=dateComparable(upper))errors.push("Interval lower bound must precede upper bound on "+event.id);
     }
    }else if(temporal.kind==="relative_offset"){
-    if(!data.anchor||temporal.anchorId!==data.anchor.id)errors.push("Relative offset has unknown anchor on "+event.id+": "+temporal.anchorId);
+    if(!knownRefs.has(temporal.anchorId))errors.push("Relative offset has unknown anchor on "+event.id+": "+temporal.anchorId);\n    if(temporal.anchorId===event.id)errors.push("Relative offset cannot reference itself on "+event.id);\n    if(eventIds.has(temporal.anchorId)&&(typeof temporal.anchorLabel!=="string"||!temporal.anchorLabel.trim()))errors.push("Event-relative offset needs an anchorLabel on "+event.id);
     if(!["before","after"].includes(temporal.direction))errors.push("Relative offset has invalid direction on "+event.id);
     if(typeof temporal.amount!=="number"||!Number.isFinite(temporal.amount)||temporal.amount<=0)errors.push("Relative offset amount must be a positive number on "+event.id);
     if(!units.has(temporal.unit))errors.push("Invalid relative offset unit on "+event.id+": "+temporal.unit);
