@@ -125,3 +125,15 @@ No afirmar que todas las ilustraciones o detalles del volumen quedaron revisados
 - **PDF p. 215:** hoja de créditos visuales, confirma Sorotrans / Mugetsu123 y la marca de agua Kurosaki-Vizard.
 
 No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen un inventario parcial de imágenes comprobadas.
+
+## Lectura secuencial adicional · PDF pp. 19–24 (2026-10-30)
+
+- **Ais (p. 19):** Eina relata la destreza y reputación públicas de Ais, la derrota individual de un grupo de monstruos Lv.5 y el título Princesa de la Espada. La supuesta marca de mil cortejos fallidos se conserva como impresión/hipérbole de Eina, no como conteo fiable. Eina dice que Ais no sale actualmente con nadie; queda como información que Eina comunica a Bell en esa escena.
+- **Bell y Eina (pp. 19–21, 23):** Bell admite estar enamorado de Ais. Eina le recuerda su pertenencia a una deidad distinta de Loki y la posición de Ais en Loki Familia; luego lo anima a hacerse más fuerte. Bell obtiene 1.200 Varisu al canjear piedras mágicas, principalmente de Goblins y Dríadas. Al despedirse dice a Eina «¡Te amo!» y le da las gracias; no inferir reciprocidad romántica ni alterar la relación estable.
+- **Biografía de Bell (pp. 23–24):** creció en una aldea rural cerca de Orario, fue criado por su abuelo y, tras la muerte de este, tomó la riqueza que quedaba y partió hacia la ciudad. Las historias heroicas y la visión romántica que le transmitió su abuelo influyeron en su deseo de convertirse en aventurero y vivir encuentros predestinados. Tras la crisis del Minotauro, la supervivencia se vuelve una preocupación explícita y su meta incluye volver a encontrar a Aizu Wallenstein.
+- **Lugar (p. 24):** Bell llega a una iglesia deteriorada de dos pisos con piedras rotas. El texto aún no la identifica nominalmente; no asignar ID de localización hasta leer la continuación.
+- **Visual (p. 22):** render e inspección a página completa de una ilustración monocroma: mujer de orejas puntiagudas, cabello corto oscuro, chaleco oscuro sobre blusa clara y lazo, brazos cruzados. No aparece rótulo nominal; no convertir la inferencia contextual de que sea Eina en identificación confirmada.
+- **Actualización de evento existente:** la interacción de Eina se documenta en `EVT-DM-EINA-ADVISOR-001`, con localizadores pp. 16–21 y 23. No se creó un evento duplicado.
+- **Pasada de personajes:** los datos biográficos de Bell, el consejo de Eina y los datos públicos de Ais quedan como material localizado pendiente de cotejo y de revisión individual de fichas. No añadir `+` a ningún personaje por esta tanda grupal.
+- **Próximo folio:** PDF p. 25. Las cinco pasadas siguen abiertas.
+
