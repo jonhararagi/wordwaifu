@@ -772,3 +772,10 @@
 - **Hallazgo:** el entrevistador enuncia que el padre de Bell era un supporter de Zeus Familia y la madre era la hermana menor de Alfia; Omori responde afirmativamente. Registrar únicamente esa descripción general del padre, sin inventar nombre ni identidad individual.
 - **Continuidad y límite:** la declaración se refiere a la historia original de DanMemo (`CONT-GAME`). La entrevista no nombra a la hermana como Meteria ni ofrece localizador de la novelización; no promueve por sí sola el dato a `CONT-MAIN-LN`.
 - **Registro:** se amplía DMR-045-CLM-008 y la nota de DMR-045-SRC-009; se actualizan el dossier y la bitácora de Meteria. No se crea un nuevo ID de fuente ni una relación con un personaje padre sin identificar.
+
+
+### CONV-DM-2026-10-29-016 — Límite de evidencia temporal de la pasada de personajes
+
+- **Corrección de precisión:** la PR #207 documenta una pasada pública individual y las rutas consultadas para Alfia, Zald, Meteria, Erebus y Rudra, pero no conserva hora de inicio/fin ni medición de duración por personaje.
+- **Regla:** no afirmar que los 5–10 minutos se cumplieron ni usar el signo `+` como prueba de duración. `+` significa únicamente que la pasada y sus resultados quedaron registrados. En futuras tandas, registrar por personaje el tiempo real solo si existe evidencia temporal verificable; no inventarlo retrospectivamente.
+- **Integración PR #207:** merge SHA `720d7c3ac1c9e9d02696510de97b8cc19289b8b0`; CI pre-merge sobre `d265131abb3d57e9f6d8a7432a21f80aea007db3`: Validate #40959812375 y Lore/Integrity #40959812485, ambos `success`.
