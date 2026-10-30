@@ -59,3 +59,12 @@ DanMachi, novela ligera, volumen 1: verificar los pasajes sobre cuánto tiempo l
 - **Cuidado práctico:** se la describe como bondadosa y trabajando para contribuir al coste de la daga entregada a Bell. La conducta respalda su inversión en la Familia, no una afición a vender comida ni un gusto alimentario particular. [DMR-002-CLM-003]
 - **Relación con Bell y Freya:** el perfil dice que ama a Bell y mantiene cautela ante la posibilidad de que Freya interfiera en el vínculo. “Celos protectores” es una interpretación del comportamiento descrito, no un diagnóstico ni una característica que deba suponerse invariable. [DMR-002-CLM-004]
 - **Temporalidad:** no proyectar esta dinámica a escenas anteriores sin evidencia del periodo elegido.
+
+
+## CONT-MAIN-LN · volumen 1 (DMR-061-SRC-001)
+
+Hestia se encuentra con Bell después de cincuenta intentos fallidos de reclutamiento y le concede la Falna en la biblioteca de una antigua tienda de libros, lugar que elige por su amor a los libros (PDF pp. 211–214). Durante la crisis del Silverback vuelve para no abandonar a Bell, y ambos recuerdan la promesa de no dejarse solos (pp. 183–190).
+
+Hestia consigue de Hephaistos la Daga de Hestia para Bell (pp. 145–146). Más tarde revela que se inclinó en dogeza durante treinta horas y explica el trabajo de creación: cabello, sangre divina y Texto Sagrado. El arma tiene Estado propio y crece con Bell; solo alguien con la Gracia de Hestia puede usarla correctamente (pp. 203–208). La ficha visual consigna préstamo a 35 años y 420 plazos, además de contrato laboral en Babel con Hephaistos Familia (p. 208). No describir la deuda como perdonada.
+
+**Procedencia:** DMR-061-SRC-001; traducción privada/no cotejada. No asignar fechas calendáricas que el volumen no da.
