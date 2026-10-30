@@ -196,7 +196,7 @@ const cycleRumor=eventOffsetCycle.events.find(event=>event.id==="EVT-DM-V02-AIS-
 cycleUdaeus.temporal={kind:"relative_order",relation:"after",referenceIds:[cycleRumor.id],distanceKnown:false,precision:"order_only",qualifier:"Synthetic cycle fixture.",sourceUrls:cycleUdaeus.temporal.sourceUrls};
 const cycleValidation=timeline.validateDataset(eventOffsetCycle);
 assert.equal(cycleValidation.valid,false,"Event-relative offsets must participate in cycle validation.");
-assert.ok(cycleValidation.errors.some(error=>error.includes("Temporal relative-order cycle detected.")),cycleValidation.errors.join("; "));
+assert.ok(cycleValidation.errors.some(error=>error.includes("Temporal relative-order cycle detected:")),cycleValidation.errors.join("; "));
 
 
 const validFixtures=[
