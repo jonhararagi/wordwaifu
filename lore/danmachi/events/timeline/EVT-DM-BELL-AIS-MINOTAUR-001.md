@@ -36,3 +36,9 @@ Poco después de T0, al comienzo de la historia principal; día exacto no fijado
 - [GA Bunko / SB Creative · volumen 1](https://ga.sbcr.jp/product/9784797372809/) · ficha editorial.
 
 **Límite:** no asignar fecha calendárica, no deducir la identidad desde la ilustración aislada y no inferir reciprocidad romántica de Ais. «Aizu» y la frase sobre el piso 15 se conservan como rasgos de esta traducción privada pendientes de cotejo.
+
+## Relato posterior oído por Bell en la taberna
+
+- **PDF pp. 63–66, misma fuente DMR-061-SRC-001:** durante la cena en La Señora de la Abundancia, Bell escucha a un miembro masculino de aspecto bestial —sin nombre confirmado en el pasaje— pedir a Ais que relate el episodio de los Minotauros que escaparon durante el regreso de la Familia Loki desde una expedición. La conversación sitúa el encuentro original en el piso 17 y describe que, tras perseguirlos por los pisos superiores, el último Minotauro alcanzó el quinto piso, donde Ais lo derrotó.
+- Los aventureros describen al novato que quedó cubierto de sangre como «chico tomate». Bell comprende que hablan de él y su reacción durante el rescate. El grupo se ríe de su miedo y de que saliera corriendo después; Ais frunce levemente el ceño y tose. No se infiere que Ais se avergüence, sienta culpa o se ría con ellos.
+- Este pasaje es una narración posterior del acontecimiento ya registrado, no un segundo combate. El itinerario piso 17 → piso 5 se registra como relato oído por Bell; el matiz ambiguo de la explicación de Eina en p. 18 se conserva junto a esta precisión posterior, sin borrar la fuente previa.
