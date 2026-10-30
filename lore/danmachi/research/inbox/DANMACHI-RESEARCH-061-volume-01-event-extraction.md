@@ -117,3 +117,10 @@ No afirmar que todas las ilustraciones o detalles del volumen quedaron revisados
 - **PDF p. 215:** hoja de créditos visuales, confirma Sorotrans / Mugetsu123 y la marca de agua Kurosaki-Vizard.
 
 Se revisaron en hojas de contacto los 24 objetos de imagen incrustados y se ampliaron fichas p. 208–209 y créditos p. 215. No se ha renderizado ni examinado a página completa cada uno de los 215 folios.
+
+## Punto de reanudación — nueva tanda de lectura (2026-10-30, PDF pp. 1–10)
+
+- **Inspección visual:** PDF p. 1 cubierta a color; p. 2 ilustración interior sin datos narrativos; p. 3 ilustración con rótulos impresos explícitos Hestia, Loki y Freya; p. 4 retrato rotulado Hephaistos; p. 5 escena ilustrada de dos personajes en un mostrador sin rótulos nominales (no asignar identidad desde la imagen); p. 6 portadilla gráfica; p. 7 portadilla del prólogo; p. 8 no devolvió contenido en esta extracción.
+- **Lectura narrativa:** PDF pp. 9–10: Bell expone su ideal juvenil de convertirse en héroe, rescatar a una chica y vivir aventuras románticas con distintas razas. El texto lo corrige de inmediato: está siendo perseguido por un Minotauro, es nivel 1, sus ataques no le hacen efecto y queda acorralado. Esto es la apertura del mismo episodio del Minotauro; no crear un evento duplicado separado del registro de rescate posterior.
+- **Ancla/orden:** el relato es el comienzo de la narración principal; no aporta fecha calendárica.
+- **Siguiente página:** PDF p. 11. Mantener la revisión narrativa, visual y de continuidad separadas.
