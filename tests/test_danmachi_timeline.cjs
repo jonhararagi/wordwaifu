@@ -120,6 +120,21 @@ assert.equal(events.get("EVT-DM-AR-ERA-001").continuityScopes.includes("CONT-AR"
 assert.equal(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").continuityScopes.includes("CONT-AR"),false,"T−5 remains separate from Astrea Record T−7");
 assert.equal(events.get("EVT-DM-BELL-ARRIVAL-001").temporal.anchorId,"T0-BELL-ARRIVAL");
 
+
+const offsetEdges=structuredClone(data);
+const offsetBefore=offsetEdges.events.find(e=>e.id==="EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001");
+const offsetAfter=offsetEdges.events.find(e=>e.id==="EVT-DM-V02-BELL-AND-LILI-REHIRE-001");
+assert.equal(offsetBefore.temporal.direction,"before");
+assert.equal(offsetAfter.temporal.direction,"after");
+const directionalCycle=structuredClone(offsetEdges);
+const first=directionalCycle.events.find(e=>e.id==="EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001");
+const second=directionalCycle.events.find(e=>e.id==="EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001");
+first.temporal={kind:"relative_offset",anchorId:second.id,anchorLabel:"second fixture",direction:"before",amount:1,unit:"day",precision:"exact",sourceUrls:first.temporal.sourceUrls};
+second.temporal={kind:"relative_offset",anchorId:first.id,anchorLabel:"first fixture",direction:"before",amount:1,unit:"day",precision:"exact",sourceUrls:second.temporal.sourceUrls};
+const directionCycleReport=timeline.validateDataset(directionalCycle);
+assert.equal(directionCycleReport.valid,false,"Contradictory event-relative offsets must be rejected.");
+assert.ok(directionCycleReport.errors.some(error=>error.includes("Temporal relative-order cycle detected")),directionCycleReport.errors.join("; "));
+
 const weeklyRumor=events.get("EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001");
 assert.equal(weeklyRumor.temporal.anchorId,"EVT-DM-V02-AIS-UDAEUS-001");
 assert.equal(weeklyRumor.temporal.amount,1);
