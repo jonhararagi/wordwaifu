@@ -135,7 +135,7 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **Visual (p. 22):** render e inspección a página completa de una ilustración monocroma: mujer de orejas puntiagudas, cabello corto oscuro, chaleco oscuro sobre blusa clara y lazo, brazos cruzados. No aparece rótulo nominal; no convertir la inferencia contextual de que sea Eina en identificación confirmada.
 - **Actualización de evento existente:** la interacción de Eina se documenta en `EVT-DM-EINA-ADVISOR-001`, con localizadores pp. 16–21 y 23. No se creó un evento duplicado.
 - **Pasada de personajes:** los datos biográficos de Bell, el consejo de Eina y los datos públicos de Ais quedan como material localizado pendiente de cotejo y de revisión individual de fichas. No añadir `+` a ningún personaje por esta tanda grupal.
-- **Próximo folio:** PDF p. 25. Las cinco pasadas siguen abiertas.
+- **Continuación:** la lectura secuencial de PDF pp. 25–30 se registra en la sección siguiente; el próximo folio es PDF p. 31. Las cinco pasadas siguen abiertas.
 
 ## Lectura secuencial adicional · PDF pp. 25–30 (2026-10-30)
 
