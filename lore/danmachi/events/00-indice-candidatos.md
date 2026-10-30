@@ -78,7 +78,7 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–165.
 - [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–167.
 - [Respuesta de Ganesha y el Gremio](timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md) — pp. 170–173.
-- [Persecución del Silverback](timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — pp. 173–190.
+- [Persecución del Silverback](timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — pp. 173–195.
 - [Actualización y entrega de la daga](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md) — pp. 193–196.
 - [Bell derrota al Silverback](timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md) — pp. 196–200.
 - [Hestia explica la daga y su préstamo](timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md) — pp. 203–208.
