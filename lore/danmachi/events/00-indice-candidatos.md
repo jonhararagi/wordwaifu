@@ -90,3 +90,4 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Traición de Soma a Lili](timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md), [rescate y reconciliación](timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) y [reencuentro dos días después](timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) son acontecimientos separados.
 
 **Procedencia:** DMR-061-SRC-001 y DMR-060-SRC-001; novela ligera original oficial, traducciones privadas no cotejadas. Las pasadas visuales/cotejo no están cerradas.
+- [Bell oye a la Familia Loki burlarse del rescate del Minotauro y se marcha de la taberna](timeline/EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001.md) — PDF pp. 57–72; incluye la llegada de la Familia Loki, los comentarios de Bate, la defensa de Riveria, la reacción de Ais y la decisión de Bell de volver al Dungeon.
