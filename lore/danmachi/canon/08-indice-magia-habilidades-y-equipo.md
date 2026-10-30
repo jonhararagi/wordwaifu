@@ -40,3 +40,13 @@ Este índice identifica categorías que se documentarán a medida que se analice
 - No asumir que un poder se conoce públicamente por haber sido mostrado al lector.
 - Registrar cambios de equipo a través de eventos; no borrar inventario previo.
 - Distinguir nombres alternativos de técnicas que realmente sean distintas.
+
+## Equipo y capacidades localizadas en V2 (CONT-MAIN-LN; ficha visual traducida)
+
+- **Cinder Ella** — magia de transformación de Liliruca; la ficha vincula el resultado a la imaginación y precisión del canto, y reproduce cánticos de transformación/liberación. Fuente: DMR-060-SRC-001, PDF p. 245.
+- **Héroe Anónimo** — habilidad de Liliruca; se activa cuando el peso del equipo supera cierto límite y eleva Estado y peso proporcionalmente. No se especifica el umbral. Fuente: PDF p. 245.
+- **Ballesta Pequeña** — creada por Goibniu Familia para Hobbits; carga manual, disparo continuo, alto poder para su tamaño, alcance corto y uso de flechas intercambiables. Fuente: PDF p. 245.
+- **Guantes de Ayudante** — equipo desechable tras usar, apto para manipular cadáveres de monstruos, con protección frente a ácidos fuertes y resistencia a efectos anormales. Fuente: PDF p. 244.
+- **Estado Liliruca Lv.1** — Fuerza I42, Resistencia I42, Destreza H143, Agilidad G285, Magia F317. Es snapshot del folio, no dato atemporal. Fuente: PDF p. 245.
+
+Todos estos datos son de fichas finales de la traducción privada aportada; no se consideran cotejados con el japonés. La wiki/continuidad secundaria ya registrada permanece separada.
