@@ -40,6 +40,12 @@ Bell Cranel y Hestia
 - Hestia explica que la Daga de Hestia posee su propio Estado y crece con la experiencia y el desarrollo del usuario.
 - Bell acepta la daga y decide enfrentar al Silverback.
 
+## Ampliación · PDF pp. 193–195
+
+- **p. 193:** Hestia entrega a Bell la Daga de Hestia, negra, con grabados y brillo rojo tenue. Bell la acepta después de que Hestia le pide confiar en ella.
+- **p. 194:** Hestia explica que Hephaistos forjó la hoja con mithril y le añadió su propio Estado/Texto Sagrado. La daga se comporta como un arma de crecimiento: la experiencia del usuario la fortalece y, al subir de nivel, manifiesta una fuerza apropiada. El texto indica que solo puede utilizarla alguien con la Gracia de Hestia.
+- **p. 195:** Estado actualizado de Bell, todavía Lv.1: Fuerza G221→E403; Resistencia H101→H199; Destreza G232→E412; Agilidad F313→D512; Magia I0. La narración dice que el aumento total supera 600 puntos. Hestia siente celos de Ais durante la escena. La ficha visual de p.208 conserva una discrepancia posterior de Agilidad D521; no sustituir el D512 narrativo.
+
 ## Límites de evidencia
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
