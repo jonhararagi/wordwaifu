@@ -818,3 +818,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Inspección visual:** pp. 55–60 fueron renderizadas desde el PDF local a 110 dpi y revisadas; son folios de texto continuo, sin ilustraciones. La lectura embebida de Files no proporcionó las imágenes, por lo que se usó el render local.
 - **Rama:** research/danmachi-v1-primary-pp49-54-2026-10-30, con base main SHA 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684. En el cierre de esta sesión la rama aún no tiene PR ni CI; no se ejecutaron pruebas locales.
 - **Próximo folio:** PDF p. 61. Siguen abiertas las cinco pasadas, la inspección visual de pp. 19–21, 23–24 y 49–54, los cotejos individuales y la comparación secundaria separada.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 61–66 (2026-10-30)
+
+- **Lectura:** Bell cena en La Señora de la Abundancia, habla con Seal, escucha la descripción de su jefa Mia y recibe la explicación del interés de Seal por conocer personas. La Familia Loki llega para celebrar el regreso de una expedición; Bell reconoce a Ais. En pp. 65–66 los aventureros cuentan el rescate del Minotauro y se burlan del novato cubierto de sangre, que Bell reconoce como su propia experiencia.
+- **Enlace de evento:** pp. 65–66 amplían el rescate previo de EVT-DM-BELL-AIS-MINOTAUR-001; se evita crear un ID duplicado para el mismo combate. La primera visita a la taberna queda como candidato independiente hasta revisar el resto del pasaje.
+- **Precaución de continuidad:** existe CHAR-MIA-GRAND en alcance CONT-ANIME; esta tanda de CONT-MAIN-LN solo respalda el nombre «Mia» y la información relatada en PDF p. 62. No se copia apellido ni atributos de adaptación.
+- **Inspección visual:** pp. 61–66 renderizadas a 110 dpi e inspeccionadas; seis folios de texto continuo, sin ilustraciones.
+- **Rama:** research/danmachi-v1-primary-pp49-54-2026-10-30, base main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684. La rama sigue sin PR, sin CI y sin pruebas locales.
+- **Próximo folio:** PDF p. 67. Continúan abiertas cinco pasadas, inspecciones visuales de pp. 19–21, 23–24 y 49–54, cotejos individuales y contraste web secundario.
