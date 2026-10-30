@@ -182,3 +182,11 @@ La inspección visual directa de los folios finales y la pasada de contacto de t
 - **PDF p. 246:** créditos visuales, confirma Sorotrans / Mugetsu123 y marca de agua Kurosaki-Vizard.
 
 Se hizo una pasada de contacto sobre los 29 recursos de imagen y se ampliaron páginas clave; no equivale a inspección visual página por página de los 246 folios.
+
+## Punto de reanudación — nueva tanda de lectura (2026-10-30, PDF pp. 1–10)
+
+- **Inspección visual:** PDF p. 1 cubierta del volumen 2; pp. 2–4 portadillas/arte editorial; p. 5 escena ilustrada con Bell y una segunda figura sin rótulos nominales (no atribuir identidad solo por apariencia); p. 6 retrato de una aventurera de cabello verde sin nombre impreso en el folio (no identificar por la imagen); p. 7 portadilla del volumen; p. 8 imagen de apertura del prólogo con figura encapuchada/sombreada, sin atribución nominal.
+- **Lectura narrativa:** PDF pp. 9–10, prólogo «Las Burlas de los Débiles»: define al Ayudante como no combatiente de apoyo, responsable de recuperar Piedras Mágicas y botín y transportarlos a la superficie. El narrador describe desprecio, insultos y explotación por aventureros; cita el dicho de que los Ayudantes son «héroes anónimos», pero pone en duda que los aventureros valoren ese trabajo.
+- **Identidad:** en estas dos páginas el narrador no se nombra explícitamente. No asignar identidad definitiva hasta que una referencia textual posterior lo confirme; tampoco convertir la ilustración de p. 8 en prueba.
+- **Ancla/orden:** apertura del volumen; no proporciona fecha de calendario.
+- **Siguiente página:** PDF p. 11. Mantener la revisión de V2 separada de V1.
