@@ -144,7 +144,7 @@
 ### DMR-045-CLM-008 · La madre de Bell es la hermana menor de Alfia según entrevista sobre Memoria Freese
 
 - claim_id: DMR-045-CLM-008
-- claim: En una entrevista publicada por LN News Online el 15 de octubre de 2020, el entrevistador resume que, en la historia de Memoria Freese donde participan Erebus, Alfia y Zald, la madre de Bell es la hermana menor de Alfia; Fujino Omori responde afirmativamente y explica que la historia del nacimiento de Bell se reveló primero en DanMemo. La evidencia corrobora el parentesco de Alfia con la madre de Bell dentro del marco narrativo presentado como revelación del juego. La respuesta no pronuncia el nombre Meteria en ese pasaje, por lo que no basta para identificar a la hermana con el registro CHAR-METERIA ni para afirmar la maternidad en CONT-MAIN-LN.
+- claim: En la entrevista de LN News Online del 15 de octubre de 2020, el entrevistador resume que, en la historia de Memoria Freese con Erebus, Alfia y Zald, el padre de Bell era un supporter de la Familia Zeus y su madre era la hermana menor de Alfia; Fujino Omori responde «そうですね» (sí, así es) y explica que el nacimiento de Bell se reveló primero en DanMemo. Por tanto, la entrevista respalda autoralmente esos dos datos dentro del marco de la historia del juego: la madre es hermana menor de Alfia y el padre pertenecía al grupo de supporters de Zeus Familia. No proporciona el nombre del padre ni el de la hermana en ese intercambio. No basta para identificar a la hermana con CHAR-METERIA ni para afirmar por sí sola la maternidad en CONT-MAIN-LN.
 - character_ids: [CHAR-DARK-ALFIA, DM-CHAR-BELL]
 - aspect: parentesco familiar y procedencia de la revelación
 - era_or_interval: Memoria Freese / Astrea Record original; revelación de 2020; fecha familiar absoluta desconocida
@@ -157,7 +157,7 @@
 - evidence_type: author_interview_confirmation_of_game_backstory
 - verification_status: source_checked
 - spoiler_level: major
-- confidence_note: La respuesta del autor confirma el parentesco formulado por el entrevistador dentro de la historia del juego, pero no nombra a la hermana ni aporta localizador de novela. La ficha pública de Meteria en DanMachi Wiki (Miraheze; DMR-045-SRC-033) sí la identifica secundariamente como madre de Bell y hermana gemela de Alfia; no se ha establecido la independencia editorial de esa wiki frente a otras wikis ni se aporta pasaje primario reproducible. Esta referencia alternativa mejora el acceso a la pista secundaria, pero no cierra la identificación en CONT-MAIN-LN ni promueve el claim a canon primario.
+- confidence_note: La respuesta del autor confirma el resumen del entrevistador: la madre es la hermana menor de Alfia y el padre era un supporter de Zeus Familia. El intercambio no nombra a ninguno de los dos ni aporta localizador de novela. La ficha pública de Meteria en DanMachi Wiki (Miraheze; DMR-045-SRC-033) sí la identifica secundariamente como madre de Bell y hermana gemela de Alfia; no se ha establecido la independencia editorial de esa wiki frente a otras wikis ni se aporta pasaje primario reproducible. Esta referencia alternativa mejora el acceso a la pista secundaria, pero no cierra la identificación en CONT-MAIN-LN ni promueve el claim a canon primario.
 
 ### DMR-045-CLM-009 · Pie editorial de Erebus en la cobertura de la versión de juego
 
@@ -1196,3 +1196,12 @@ Esta comprobación no desbloquea ninguno de los cinco cotejos primarios. Se cons
 - No se reintentaron las mismas rutas agotadas de BinB, BookLive, BOOK☆WALKER, Google Books/Play Books ni Sony Reader Store, porque no hubo un cambio material de acceso.
 - No se creó un nuevo ID de fuente solo por esta pasada: las páginas secundarias nuevas de sinopsis (vol. 20, cap. 3, y vol. 14) quedan registradas como rutas de investigación en la bitácora/dossier, sin claims nuevos. Se mantienen como ayudas de localización, no como pasajes primarios.
 - **Estado final de DMR-045:** IN_PROGRESS. Los cinco nombres llevan + en la bitácora como pasada pública completada; los cinco cotejos primarios siguen abiertos. No se declara cerrada la investigación canónica.
+
+
+## DMR-045 — precisión autoral recuperada de la entrevista de 2020 (relectura focalizada)
+
+- **Fuente reutilizada:** DMR-045-SRC-009, sin crear un ID duplicado: https://ln-news.com/articles/109766.
+- **Localizador reproducible:** sección «『ダンメモ』のエピソードに登場したベル・クラネル出生の物語», intercambio de los párrafos 419–427 de la extracción web (15-10-2020).
+- **Dato respaldado:** el entrevistador formula explícitamente que el padre de Bell era un supporter de Zeus Familia y que su madre era la hermana menor de Alfia; Omori responde afirmativamente («そうですね»). La misma sección confirma que el nacimiento de Bell se reveló primero en DanMemo.
+- **Límite:** el pasaje no da el nombre del padre ni nombra a la hermana como Meteria. No convertir la identificación comunitaria de Meteria en afirmación de esta entrevista; no trasladar automáticamente la revelación del juego a CONT-MAIN-LN.
+- **Continuidad:** CONT-GAME; declaración autoral sobre la historia original del juego, no localizador narrativo de la novelización CONT-AR.
