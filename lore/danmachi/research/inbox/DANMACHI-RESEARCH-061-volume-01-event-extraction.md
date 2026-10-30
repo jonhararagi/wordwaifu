@@ -319,3 +319,14 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **pp. 145–146 — Daga de Hestia:** Hephaistos entrega a Hestia la caja con la daga y la vaina, ambas negras. La traducción indica que dedicó casi un día a la pieza, hecha para Bell. Hestia propone en broma un nombre romántico; Hephaistos la llama Daga de Hestia. La deuda no se condona. Hestia sale emocionada para enseñársela a Bell; no se la entrega en estas páginas.
 - **Eventos:** reunión Freya–Loki–Ais de pp. 139–145, distinta del Banquete y de la liberación del Silverback; petición/aceptación de la forja por Hestia en pp. 115 y 129–133, distinta de la entrega física p. 145–146; el monedero de Seal sigue pendiente. Se verificó el catálogo y no existían IDs para las dos primeras secuencias como eventos independientes. No se duplican los IDs de la cita Bell/Hestia (pp. 150–159) ni la liberación del Silverback (pp. 159–164).
 - **Fuente/visual:** DMR-061-SRC-001, CONT-MAIN-LN; traducción privada no cotejada con japonés. Render de las diez páginas a 110 dpi y hoja de contactos revisada; sin ilustraciones. Próxima página: PDF p. 147.
+
+
+## DMR-061 — extracción primaria PDF pp. 147–156 (2026-10-30)
+- pp. 147–148: Hestia busca a Bell tras consultar el programa; viaja en carruaje, paga 90 Varisu y deja todo como propina aunque el conductor intenta advertir que no hay cambio suficiente. «Taxi» se atribuye a un dios no identificado.
+- pp. 148–149: Hestia se encuentra con Freya en un callejón; Freya explica por qué evita la avenida y le indica dónde cree haber visto a Bell, camino al Coliseo. Separado de Freya/Loki/Ais pp. 139–145.
+- pp. 150–151: Hestia encuentra a Bell y propone una cita. Bell explica que tiene una tarea pendiente; Hestia acepta combinar la salida con la búsqueda. Bell recuerda que debe devolver el monedero de Seal.
+- pp. 152–153: comparten crepes; Bell se avergüenza y levanta la mano para limpiar mermelada de la mejilla de Hestia.
+- p. 154: ilustración monocroma inspeccionada ampliada: Bell mira a Hestia, que sonríe con los ojos cerrados; una mano está levantada cerca de su rostro.
+- p. 155: Hestia pide a Bell que limpie la mermelada y propone seguir con croquetas. Bell reconoce que rara vez comparten actividades fuera de sus obligaciones y admite que disfruta la salida.
+- p. 156: cambio al Coliseo; espectáculo ante 50.000 espectadores. Battle Jabalí de unos dos metros contra domadora no identificada de Ganesha Familia, que busca domarlo. Eina y empleados del Gremio apoyan admisión/orientación.
+- pp. 150–155 amplían EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001. Sin ID duplicado. Hestia/Freya queda como contexto previo. Monedero sin devolución confirmada. Fuente DMR-061-SRC-001, CONT-MAIN-LN; traducción privada no cotejada. Próxima p. 157.
