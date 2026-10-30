@@ -8,7 +8,7 @@
 - [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
 
 ## Extracción de acontecimientos por volumen
-- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 42; incluye el evento separado de actualización de Estado de Bell posterior al Minotauro y distingue la habilidad vista por Hestia de la copia entregada a Bell. La joven de p. 42 permanece sin identificar.
+- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 48; incluye el evento de primer encuentro Bell–Seal Flover y mantiene abierto el combate contra Kobolds.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
 
 - [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — siete acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y separación entre escenas de combate, adquisición/prueba de magia, traición, rescate y hallazgo de objeto. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.
@@ -420,7 +420,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 
 
 ## DANMACHI-RESEARCH-061 — extracción del volumen 1 (CONT-MAIN-LN)
-- [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — primer encuentro Bell–Hestia y Falna; Festival, Freya/Silverback, persecución, actualización de Estado, derrota y Daga de Hestia. Traducción privada sin cotejo; pasadas visuales pendientes.
+- [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos iniciales Bell–Hestia, Eina, Ais y Seal Flover; escenas de Estado, Festival, Freya/Silverback y Dungeon. Traducción privada sin cotejo; el combate de Kobolds de pp. 46–48 sigue abierto.
 - [Dossier volumen 1](volumes/main/volume-01.md) y [índice de eventos](events/00-indice-candidatos.md).
 
 ## DANMACHI-RESEARCH-060 — ampliación del volumen 2 (CONT-MAIN-LN)

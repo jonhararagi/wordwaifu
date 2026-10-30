@@ -71,6 +71,7 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 
 **V1 — CONT-MAIN-LN**
 - `EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001` — actualización inicial de Estado posterior al Minotauro; snapshot p. 33 y Habilidad revelada desde la perspectiva de Hestia (PDF pp. 30–36).
+- `EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001` — Bell conoce a Seal Flover; devolución de Piedra Mágica, desayuno ofrecido e invitación aceptada a cenar (PDF pp. 42–46).
 - `EVT-DM-V01-BELL-RECEIVES-FALNA-001` — Falna en biblioteca (PDF pp. 211–214).
 - `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001` — Hephaistos entrega la daga a Hestia (pp. 145–146).
 - `EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001` — encuentro en Festival de Monstruos (pp. 150–159).

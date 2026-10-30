@@ -2992,6 +2992,33 @@
         "event",
         "BELL AND"
       ]
+    },
+    {
+      "id": "DM-CHAR-SEAL-FLOVER",
+      "path": "characters/seal-flover.md",
+      "type": "character",
+      "tags": [
+        "Seal Flover",
+        "Seal",
+        "CONT-MAIN-LN",
+        "volume 1"
+      ],
+      "status": "provisional",
+      "priority": "medium"
+    },
+    {
+      "id": "EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001.md",
+      "type": "event",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Bell",
+        "Seal Flover"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
     }
   ],
   "reservedIds": [

@@ -105,12 +105,12 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 204 registros activos; 29 IDs reservados; 133 documentos de apoyo.
+- **Corpus DanMachi:** 206 registros activos; 29 IDs reservados; 133 documentos de apoyo.
 - **Grafo de conocimiento:** 258 relaciones explícitas; 258/258 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
-- **Tipos en el catálogo:** 83 personajes; 5 grupos; 12 deidades con registro de personaje.
-- **Marcadas `complete`:** 0/83 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
+- **Tipos en el catálogo:** 84 personajes; 5 grupos; 12 deidades con registro de personaje.
+- **Marcadas `complete`:** 0/84 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
 ## DMR-045 — lectores BinB enlazados desde la tienda oficial de SB Creative (2026-10-25)
@@ -784,6 +784,15 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Precauciones:** la portadilla de p. 37 no identifica nominalmente a la figura; p. 42 tampoco nombra a la joven. No afirmar que son la misma persona por semejanza. No identificar al aventurero que observa a Bell, porque el texto no determina cuál de las personas presentes lo miraba.
 - **Eventos y personajes:** no se crea un evento ni una ficha de personaje por el encuentro incompleto de p. 42. La escena queda como lead para cotejar con la continuación de la lectura. No se marcan personajes con `+`.
 - **Inspección visual:** PDF pp. 37–42 renderizadas e inspeccionadas a página completa. Pp. 37 y 40 contienen ilustraciones; las otras cuatro son páginas de texto.
-- **Próximo folio:** PDF p. 43. Cinco pasadas abiertas; siguen pendientes pp. 19–21 y 23–24 de la inspección visual, auditoría individual de personajes y comparación posterior con el corpus web.
-- **Rama:** `research/danmachi-v1-primary-pp37-42-2026-10-30`, creada desde el SHA integrado de `main` `30ace01e17d94d5eeaa23424bcba10fc7028329a`. Esta tanda todavía requiere PR y CI.
+- **Siguiente folio al cerrar el bloque:** PDF p. 43; esa continuación se completó después hasta PDF p. 48, documentada en la sección siguiente. Cinco pasadas abiertas; siguen pendientes pp. 19–21 y 23–24 de la inspección visual, auditoría individual y comparación posterior con el corpus web.
+- **Integración:** la rama `research/danmachi-v1-primary-pp37-42-2026-10-30` quedó integrada mediante PR [#213](https://github.com/jonhararagi/wordwaifu/pull/213), squash SHA `3a0702faecfd817219717d3ab340ef2a269ca671`. CI pre-merge sobre HEAD `aa60e3db255822d68a7d34a4a1dd28024300b1ba`: [Validate #41056686864](https://github.com/jonhararagi/wordwaifu/actions/runs/41056686864) y [Lore/Integrity #41056686938](https://github.com/jonhararagi/wordwaifu/actions/runs/41056686938), ambos `success`. CI post-merge sobre el SHA exacto `3a0702faecfd817219717d3ab340ef2a269ca671`: [Validate #41056932254](https://github.com/jonhararagi/wordwaifu/actions/runs/41056932254) y [Lore/Integrity #41056932256](https://github.com/jonhararagi/wordwaifu/actions/runs/41056932256), ambos `success`.
 
+## DMR-061 — continuación del Volumen 1, PDF pp. 43–48 (2026-10-30)
+
+- **Corpus:** `CONT-MAIN-LN`, DMR-061-SRC-001; traducción privada no cotejada con japonés y separada de fuentes web/wiki.
+- **Seal Flover:** las pp. 43–46 confirman el nombre de la joven presentada a Bell en p. 42. Se crea la ficha provisional `DM-CHAR-SEAL-FLOVER`; la figura de p. 37 no se identifica como Seal.
+- **Nuevo evento:** `EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001` registra la devolución de la Piedra Mágica, la oferta de pan y queso, la invitación aceptada a cenar y el intercambio de nombres (pp. 42–46). No se registra como sucedida la cena futura; el local no recibe nombre.
+- **Dungeon/Kobolds:** p. 46 contiene exposición sobre el Dungeon anterior al descenso de los dioses y antiguos combatientes sin Gracia. En pp. 46–47 Bell es perseguido por seis Kobolds después de matar dos de un grupo inicial de ocho. P. 48 muestra una emboscada parcial; el enfrentamiento queda abierto y sin evento cerrado.
+- **Inspección visual:** pp. 43–48 inspeccionadas a página completa; son folios de texto continuo sin ilustraciones.
+- **Próximo folio:** PDF p. 49. Las cinco pasadas siguen abiertas; faltan las inspecciones visuales de pp. 19–21 y 23–24, cotejo individual y comparación con el corpus web.
+- **Rama:** `research/danmachi-v1-primary-pp43-48-2026-10-30`, creada desde el SHA integrado de `main` `3a0702faecfd817219717d3ab340ef2a269ca671`. Esta tanda aún requiere PR y CI; no se declara integrada.
