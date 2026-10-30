@@ -141,9 +141,11 @@ function validateDataset(data){
    const graph=new Map(events.map(event=>[event.id,[]]));
    for(const event of events){
     const temporal=event.temporal;
-    if(!temporal||temporal.kind!=="relative_order"||temporal.relation==="overlaps"||!Array.isArray(temporal.referenceIds))continue;
-    for(const referenceId of temporal.referenceIds){
-     if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(event.id).push(referenceId);
+    if(!temporal)continue;
+    if(temporal.kind==="relative_order"&&temporal.relation!=="overlaps"&&Array.isArray(temporal.referenceIds)){
+     for(const referenceId of temporal.referenceIds){if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(event.id).push(referenceId);}
+    }else if(temporal.kind==="relative_offset"&&eventIds.has(temporal.anchorId)){
+     graph.get(event.id).push(temporal.anchorId);
     }
    }
    const state=new Map(),stack=[];
