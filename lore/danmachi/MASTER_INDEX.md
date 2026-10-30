@@ -7,7 +7,7 @@
 - [DANMACHI-RESEARCH-059](research/inbox/DANMACHI-RESEARCH-059-loki-trio-capabilities.md) — Finn Deimne, Riveria Ljos Alf y Gareth Landrock; capacidades secundarias, condiciones, discrepancia EN/ES de Finn y separación de Flare Burn congénita.
 - [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
 
-## Índices de personajes e historias por continuidad
+## Extracción de acontecimientos por volumen\n\n- [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — siete acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y separación entre escenas de combate, adquisición/prueba de magia, traición, rescate y hallazgo de objeto. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.\n\n## Índices de personajes e historias por continuidad
 
 - [Índice maestro de personajes](characters/00-indice-personajes.md) — identidades, alias, estado de ficha y rutas de investigación.
 - [Índice narrativo de la Era Oscura](characters/dark-era/00-indice-era-oscura.md) — protagonistas, antagonistas, Evilus y rutas temporales separadas.
