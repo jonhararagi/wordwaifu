@@ -10,8 +10,7 @@ source_refs:
   - DMR-061-SRC-001
 source_locators:
   - PDF p. 156
-aliases:
-  - Battle Boar
+aliases: []
 spoiler_level: mild
 ---
 # Battle Jabalí
