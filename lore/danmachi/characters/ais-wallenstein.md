@@ -44,3 +44,11 @@ Cotejar las primeras apariciones de Ais y los volúmenes que explican su biograf
 - La sinopsis editorial relaciona a Ais con la expedición fallida y el grupo atrapado, pero no ofrece un listado completo de estados individuales. Claim: DMR-008-CLM-022 (`provisional_summary`).
 - El fragmento público del prólogo muestra a Ais en una escena oscura y amenazante. Claim: DMR-008-CLM-026; relación `REL-AIS-V21-PROLOGUE-EXCERPT`; estado `source_checked_excerpt_only`.
 - **Límite:** no se infiere si la escena del prólogo ocurre después, antes o en paralelo a los acontecimientos del capítulo inicial. Se necesita cotejar el volumen completo.
+
+
+## Volumen 2 · acontecimientos temporales (CONT-MAIN-LN)
+
+- [Ais se enfrenta a Udaeus en el piso 37](../events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md) — PDF pp. 106–111.
+- [Ais encuentra el Protector de Jade perdido y sigue el rastro de Bell](../events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) — PDF pp. 242–243.
+
+No se asigna fecha absoluta ni se afirma que Ais conozca toda la secuencia del piso 10.
