@@ -808,3 +808,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Inspección visual:** pp. 49–54 se leyeron mediante el texto extraído; el extractor no entregó imágenes de página y no se hizo render en esa sesión. La inspección visual de esos folios, incluida la tabla de p. 54, permanece pendiente.
 - **Próximo trabajo:** lectura desde p. 55; inspecciones visuales pendientes pp. 19–21 y 23–24; cotejo individual y contraste web permanecen abiertos.
 - **Rama:** `research/danmachi-v1-primary-pp49-54-2026-10-30`, basada en `main` SHA `12f2e60d79b8a3dbe9e1a998a375ecd7cafef684`. No se declara integrada ni validada todavía.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 55–60 (2026-10-30)
+
+- **Corpus:** CONT-MAIN-LN, DMR-061-SRC-001; traducción privada no cotejada con japonés y sin importar información de wikis o juegos.
+- **Lectura:** p. 55 registra la reacción de Bell al Estado que Hestia le entrega; p. 56 muestra el enfado silencioso de Hestia y su salida a una fiesta de su lugar de trabajo; p. 57 identifica el local de Seal como **La Señora de la Abundancia**; pp. 58–59 registran la primera entrada de Bell, el personal observado y el asiento apartado que Seal le prepara; p. 60 conserva la conversación con la jefa («Mia mama») y las cifras económicas dichas por Bell.
+- **Precisión de stats:** el «29» que Bell menciona para Resistencia en p. 55 es compatible con el incremento I 13 → I 42 del snapshot anterior de p. 54; no se trata como total nuevo aislado ni se atribuye toda la subida a un único ataque.
+- **Límite narrativo:** Bell aún está revisando el menú al final de p. 60. No se registra que haya terminado de cenar ni se crea evento definitivo sin revisar primero el catálogo.
+- **Inspección visual:** pp. 55–60 fueron renderizadas desde el PDF local a 110 dpi y revisadas; son folios de texto continuo, sin ilustraciones. La lectura embebida de Files no proporcionó las imágenes, por lo que se usó el render local.
+- **Rama:** research/danmachi-v1-primary-pp49-54-2026-10-30, con base main SHA 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684. En el cierre de esta sesión la rama aún no tiene PR ni CI; no se ejecutaron pruebas locales.
+- **Próximo folio:** PDF p. 61. Siguen abiertas las cinco pasadas, la inspección visual de pp. 19–21, 23–24 y 49–54, los cotejos individuales y la comparación secundaria separada.
