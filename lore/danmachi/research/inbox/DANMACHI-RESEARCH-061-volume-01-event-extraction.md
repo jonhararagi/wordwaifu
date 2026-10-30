@@ -101,3 +101,19 @@ Una nota conversacional previa atribuyó por error a V1 pp. 153–158 una prueba
 ## Límite global
 
 No afirmar que todas las ilustraciones o detalles del volumen quedaron revisados. No importar datos de anime, wiki, juego o spin-off a estos registros de `CONT-MAIN-LN`.
+
+
+## Registro visual inicial (inspección renderizada, no total)
+
+- **PDF p. 1:** cubierta a color; Bell/Hestia y el arte promocional de volumen.
+- **PDF p. 2:** página interior de arte/ilustración.
+- **PDF p. 3:** ilustración grupal con etiquetas impresas explícitas Hestia, Loki y Freya; conservar esos rótulos como identificación segura de la propia página.
+- **PDF p. 4:** ilustración individual rotulada Hephaistos.
+- **PDF p. 5:** ilustración a color de dos personajes en el contexto de una tienda/mostrador; no tiene rótulos de nombre en el folio, por lo que no asignar identidades a partir de apariencia solamente.
+- **PDF p. 6:** portadilla gráfica.
+- **PDF p. 7:** portadilla de prólogo.
+- **PDF p. 12:** ilustración monocroma de una mujer armada y una figura en sombra; no hay rótulo de nombre y queda pendiente el cotejo con la escena narrativa.
+- **PDF pp. 208–210:** fichas visuales de Estado, Daga de Hestia, Bell y daga anterior ya transcritas en este expediente.
+- **PDF p. 215:** hoja de créditos visuales, confirma Sorotrans / Mugetsu123 y la marca de agua Kurosaki-Vizard.
+
+No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen un inventario parcial de imágenes comprobadas.
