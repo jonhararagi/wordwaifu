@@ -52,9 +52,9 @@ Bell pasa de aspirante sin Familia a miembro de Hestia Familia. Hestia deja de e
 - [Hestia concede la Falna a Bell](../../events/timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — PDF pp. 211–214.
 - [Hephaistos entrega la Daga de Hestia](../../events/timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — PDF pp. 145–146.
 - [Bell y Hestia pasan tiempo juntos en el Festival](../../events/timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — PDF pp. 150–159.
-- [Freya libera un Silverback](../../events/timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — PDF pp. 159–164.
+- [Freya libera un Silverback](../../events/timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — PDF pp. 160–164.
 - [Ganesha y el Gremio responden a la fuga](../../events/timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md) — PDF pp. 170–173.
-- [Bell protege a Hestia durante la persecución](../../events/timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — PDF pp. 173–190.
+- [Bell protege a Hestia durante la persecución](../../events/timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — PDF pp. 165–190.
 - [Hestia actualiza a Bell y entrega la daga](../../events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md) — PDF pp. 193–196; discrepancia Agilidad D512/D521 sin resolver.
 - [Bell derrota al Silverback](../../events/timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md) — PDF pp. 196–200.
 - [Hestia explica la daga y el préstamo](../../events/timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md) — PDF pp. 203–208.
@@ -62,3 +62,8 @@ Bell pasa de aspirante sin Familia a miembro de Hestia Familia. Hestia deja de e
 **Límite de cobertura:** esta primera pasada no declara revisadas las ilustraciones página por página ni todos los detalles de los capítulos iniciales. Los eventos nuevos cubren los pasajes localizados en esta tanda; Arrival y Bell–Ais–Minotaur conservan sus IDs existentes hasta cotejar sus localizadores primarios de forma sistemática.
 
 **Fuente:** DMR-061-SRC-001; PDF físico 215 páginas, texto narrativo hasta p. 214 y créditos en p. 215. Traducción privada; créditos impresos Sorotrans (versión inglesa) y Mugetsu123 (traducción inglés-español, corrección y edición); Kurosaki-Vizard es marca de agua.
+
+
+## Estado de la revisión visual (DMR-061)
+
+Se extrajeron y revisaron en hojas de contacto los 24 objetos de imagen embebidos del PDF; se ampliaron fichas/Estado de Bell y Daga de Hestia (PDF p. 208), ficha de Bell/daga anterior (p. 209) y créditos (p. 215). La revisión visual es parcial: no se examinó cada página completa de las 215 páginas. Los valores D512 narrativo y D521 visual de Agilidad se conservan como discrepancia abierta.
