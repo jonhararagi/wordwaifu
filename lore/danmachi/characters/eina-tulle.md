@@ -52,3 +52,12 @@ El perfil oficial de DanMachi III identifica a Eina como recepcionista y asesora
 - **Relaciones:** `REL-EINA-ADVISOR-BELL-ANIME` y `REL-EINA-WORKS-GUILD-ANIME`.
 - **Claim:** DMR-016-CLM-001; fuente DMR-016-SRC-001: https://danmachi.com/danmachi3/character/.
 - **Límite:** el vínculo general corresponde a CONT-ANIME. Las conversaciones concretas, la secuencia de su primera asesoría y los localizadores de la novela principal siguen pendientes.
+
+
+## CONT-MAIN-LN · volúmenes 1 y 2 (DMR-061-SRC-001 / DMR-060-SRC-001)
+
+Eina aconseja a Bell sobre las debilidades de los monstruos y la Piedra Mágica como núcleo, información que él recuerda al derrotar al Silverback (V1 PDF pp. 197–198). También organiza al personal del Gremio para pedir ayuda durante la fuga de monstruos del Festival (V1 pp. 171–173).
+
+En V2 investiga la anomalía de Soma Familia, pide ayuda a Ais para proteger a Bell y Lili e interpreta el riesgo a partir de la información que obtuvo (V2 pp. 174–190, 201–204). No se debe convertir la advertencia de Loki en omnisciencia de Eina ni inferir que conoce toda la trama de Kanu.
+
+**Procedencia:** traducciones privadas no cotejadas; los perfiles CONT-ANIME existentes permanecen separados.
