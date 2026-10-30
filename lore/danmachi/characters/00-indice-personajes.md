@@ -104,6 +104,7 @@ Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.m
 | Rudra | `CHAR-DARK-RUDRA` | Personaje | `pending_primary_text_check` | [Abrir](dark-era/rudra.md) |
 | Ryana Lietz | `CHAR-RYANA-LIETZ` | Personaje | `provisional` | [Abrir](ryana-lietz.md) |
 | Ryu Lion | `CHAR-RYUU-LION` | Personaje | `provisional` | [Abrir](ryuu-lion.md) |
+| Seal Flover | `DM-CHAR-SEAL-FLOVER` | Personaje | `provisional` | [Abrir](seal-flover.md) |
 | Seldas | `CHAR-SELDAS` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](seldas.md) |
 | Shakti Varma | `CHAR-SHAKTI-VARMA` | Personaje | `source_checked_partial` | [Abrir](shakti-varma.md) |
 | Shau | `CHAR-SHAU` | Personaje | `provisional` | [Abrir](shau.md) |
