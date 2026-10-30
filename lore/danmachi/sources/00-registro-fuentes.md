@@ -4708,3 +4708,38 @@ verification_status: stub
 - rights_note: Resumen propio; no almacenar extractos extensos.
 - verified_by: DANMACHI-RESEARCH-059
 - verification_status: secondary_checked
+
+
+## DMR-060-SRC-001 · Volumen 2 aportado por el usuario (traducción española privada)
+
+- source_id: DMR-060-SRC-001
+- title: Volumen [02] • DanMachi
+- creator_or_publisher: Obra original: Fujino Omori / GA Bunko / SB Creative; traducción española atribuida en el PDF a Kurosaki-Vizard Translation
+- source_type: USER_PROVIDED_TRANSLATION_OF_OFFICIAL_PRIMARY_WORK
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 2
+- language: Español (traducción privada)
+- original_work_status: novela ligera oficial
+- translation_status: privada/no editorial; realizada como favor según aclaración expresa del usuario
+- fidelity_status: no cotejada con japonés ni con otra edición
+- official_url: https://ga.sbcr.jp/product/9784797373073/
+- user_material: archivo adjunto en la conversación: `Volumen [02] • DanMachi.pdf`
+- accessed_at: 2026-10-29
+- locator_type: physical_pdf_page
+- locator: Páginas físicas del PDF, citadas siempre como «PDF p.»; no confundir con la paginación impresa.
+- claims_supported: []
+- events_supported:
+  - EVT-DM-V02-AIS-UDAEUS-001
+  - EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001
+  - EVT-DM-V02-BELL-FIREBOLT-TEST-001
+  - EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001
+  - EVT-DM-V02-LILI-ABANDONS-BELL-001
+  - EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001
+  - EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Se trata de una traducción privada de la obra oficial. La lectura de sus páginas permite registrar qué narra este documento y sus localizadores, pero no afirmar fidelidad exacta de términos o matices al original japonés. La lectura textual fue sustancial; no equivale a inspección visual de todas las páginas.
+- conflicting_sources: []
+- rights_note: Conservar referencia y paráfrasis originales; no reproducir pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-060
+- verification_status: source_checked_translation_unverified
+
