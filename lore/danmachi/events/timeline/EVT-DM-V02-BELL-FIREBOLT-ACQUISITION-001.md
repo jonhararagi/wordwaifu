@@ -27,7 +27,7 @@ Seal presta a Bell un libro que resulta ser un Grimorio. Tras leerlo, Bell obtie
 ## Entidades participantes
 
 - [Bell Cranel](../../characters/bell-cranel.md) — lector del Grimorio y nuevo usuario de Firebolt.
-- [Seal Flover](../../characters/seal-flover.md) — presta el libro.
+- Seal Flover — presta el libro; en este volumen no se ha localizado una ficha individual independiente en el catálogo.
 - [Hestia](../../characters/hestia.md) — observa el resultado y plantea una explicación inicial.
 
 ## Detalles registrados
