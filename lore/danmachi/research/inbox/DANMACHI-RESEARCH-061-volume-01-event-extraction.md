@@ -203,7 +203,7 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **P. 54 — retirada y prudencia:** Bell decide regresar a superficie para cambiar sus botines, reconociendo que el Dungeon sigue siendo peligroso aunque no busque riesgos. Piensa en la cena prometida a Seal y en ganar suficiente dinero. El encuentro sorpresivo con el Goblin del final de la página no queda resuelto.
 - **Snapshot p. 54, Lv. 1:** Fuerza I82→H120; Resistencia I13→I42; Destreza I96→H139; Agilidad H172→G225; Magia I0. Magia y Habilidades aparecen vacías. No atribuir toda la variación a una criatura o una acción concreta.
 - **Eventos enlazados:** los expedientes existentes `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` (pp. 46–51) y `EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001` (p. 53) se añaden a los registros centrales; el ataque sorpresivo de p. 54 queda abierto.
-- **Visual:** pp. 49–54 renderizadas e inspeccionadas; seis folios de texto continuo, sin ilustraciones.
+- **Visual:** pp. 49–54 leídas mediante texto extraído; no se renderizaron imágenes en esa sesión. La inspección visual de esos folios permanece pendiente.
 - **Próximo folio:** PDF p. 55. Las cinco pasadas siguen abiertas; pp. 19–21 y 23–24 aún requieren inspección visual.
 
 ## DMR-061 — continuación narrativa, PDF pp. 55–60
