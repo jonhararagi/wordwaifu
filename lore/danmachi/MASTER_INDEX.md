@@ -431,3 +431,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Volumen 1 (CONT-MAIN-LN) documentado secuencialmente hasta PDF p. 60 en la rama research/danmachi-v1-primary-pp49-54-2026-10-30. Las pp. 55–60 incorporan el Estado actualizado de Bell y la primera visita al establecimiento de Seal, **La Señora de la Abundancia**.
 - La visita se conserva como evento candidato pendiente de comprobación en catálogo; no se crea ID hasta descartar duplicados. No se dan por realizadas la cena completa ni la identificación personal de «Mia mama».
 - Procedencia: DMR-061-SRC-001, traducción privada no cotejada con japonés. Las cinco pasadas permanecen abiertas; próximo folio: PDF p. 61.
+
+### DMR-061 — progreso de lectura primaria V1 hasta PDF p. 66
+- Lectura secuencial del volumen 1 (CONT-MAIN-LN) documentada hasta PDF p. 66. Las pp. 61–66 contienen la cena inicial de Bell en La Señora de la Abundancia, información sobre la jefa «Mia», la llegada de la Familia Loki y el relato que Bell oye sobre su rescate del Minotauro.
+- El pasaje de pp. 65–66 amplía EVT-DM-BELL-AIS-MINOTAUR-001; no crea un segundo combate. La visita a la taberna permanece como evento candidato hasta terminar la secuencia y comprobar el catálogo.
+- No transferir atributos de la ficha CHAR-MIA-GRAND (CONT-ANIME) a CONT-MAIN-LN; pp. 62 solo confirma «Mia» y los datos dichos por Seal.
+- Próximo folio: PDF p. 67. Traducción privada no cotejada con japonés; cinco pasadas abiertas.
