@@ -69,3 +69,16 @@ Su experiencia dentro de Soma Familia incluye exclusión/abuso y el deseo de reu
 La ficha p. 244 describe Guantes de Ayudante: desechar tras el uso; permiten manipular cadáveres de monstruos y protegen contra ácidos/efectos anormales. Estos datos vienen de la ficha visual traducida, no de una edición contrastada.
 
 **Procedencia:** DMR-060-SRC-001; traducción privada/no cotejada. No asumir que cada acción de Kanu representa a toda Soma Familia.
+
+
+## CONT-MAIN-LN · equipo, magia y habilidad en fichas visuales de V2 (DMR-060-SRC-001)
+
+**Localizadores visuales:** PDF p. 244 (ficha de Liliruca y Guantes de Ayudante) y PDF p. 245 (Estado, Cinder Ella, Héroe Anónimo y Ballesta Pequeña).
+
+- **Estado de Lili en la ficha:** Lv.1; Fuerza I42, Resistencia I42, Destreza H143, Agilidad G285, Magia F317. Es un snapshot presentado en el documento, no un valor atemporal.
+- **Cinder Ella:** magia de transformación. La ficha dice que el objetivo de la transformación se basa en la imaginación al cantar; si falta precisión, puede fracasar. La recomienda para imitación. El canto de transformación presentado es «Tu grabado me pertenece a mí. Mis grabados todavía me pertenecen a mí» y el canto de liberación es «El eco es la señal de la medianoche». Mantener esta formulación como dato de la traducción privada.
+- **Héroe Anónimo:** la ficha la describe como habilidad que se activa cuando el peso del equipo supera cierto límite; el aumento de Estado y peso es proporcional. No añadir valores de activación ni límites numéricos que la ficha no proporciona.
+- **Ballesta Pequeña:** la ficha atribuye su creación a Goibniu Familia y dice que está diseñada para la raza Hobbit. Tiene alto poder destructivo para su tamaño, carga manual que permite disparar de forma continua y alcance algo corto. El uso de flechas que se venden por separado puede alterar poder destructivo y distancia de vuelo.
+- **Guantes de Ayudante:** equipo de apoyo para manipular cadáveres de monstruos; desechables después de su uso. Protegen la piel contra corrosión de ácidos fuertes y tienen resistencia a efectos anormales. La ficha menciona varios colores y dice que marrón es el favorito de Lili.
+
+**Reserva:** las descripciones proceden de las fichas traducidas del PDF, no de cotejo japonés. No mezclar con los reportes de wiki de Cinder Ella, Artel Assist, Command Call o equipo secundario; esos siguen separados bajo CONT-SECONDARY hasta cotejo propio.
