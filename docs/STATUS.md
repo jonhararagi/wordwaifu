@@ -800,7 +800,7 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 ## DMR-061 — continuación del Volumen 1, PDF pp. 49–54 (2026-10-30)
 
 - **Sesión controlada por hora argentina:** inicio 10:03:52; límite de seis minutos 10:09:52; cierre registrado a las 10:09:52 (UTC−03:00).
-- **Corpus:** `CONT-MAIN-LN), DMR-061-SRC-001, traducción privada no cotejada con japonés; sin mezcla de fuentes web/wiki.
+- **Corpus:** `CONT-MAIN-LN`, DMR-061-SRC-001, traducción privada no cotejada con japonés; sin mezcla de fuentes web/wiki.
 - **Lectura:** pp. 49–50 cierran el combate contra Kobolds y documentan fragmentos de Piedra Mágica; p. 51 registra una garra como botín y la carga que Bell debe transportar; p. 52 explica el Dungeon «vivo», mapas, autorreparación y nacimiento de monstruos; p. 53 documenta un Goblin y un Diente de Goblin; p. 54 muestra una retirada planificada a la superficie y un snapshot de Estado.
 - **Eventos reutilizados:** ya existían en la rama `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` (pp. 46–51) y `EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001` (p. 53). No se crearon IDs duplicados; esta tanda los integrará en los índices y catálogo centrales.
 - **Snapshot Bell, PDF p. 54, Lv. 1:** Fuerza I82→H120; Resistencia I13→I42; Destreza I96→H139; Agilidad H172→G225; Magia I0. Magia y Habilidades aparecen vacías. No se atribuyen los aumentos a un solo monstruo.
