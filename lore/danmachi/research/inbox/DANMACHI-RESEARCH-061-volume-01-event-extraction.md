@@ -23,6 +23,14 @@ tags: [volume-01, events, Bell, Hestia, Freya, Silverback, Daga de Hestia]
 
 ## Acontecimientos extraídos
 
+
+### EVT-DM-BELL-AIS-MINOTAUR-001 — Ais rescata a Bell del Minotauro
+- **Localizador primario de trabajo:** PDF pp. 11–14 para el rescate e identificación textual de Aizu Wallenstein; pp. 16–18 para el relato posterior de Bell a Eina y la explicación del peligro.
+- **Datos observados:** Bell desciende del piso 2 al piso 5, encuentra un Minotauro y queda acorralado. Una línea corta al monstruo en fragmentos. El texto nombra a la rescatista como «Aizu Wallenstein», Princesa de la Espada, nivel 5 y miembro de Loki Familia. Bell huye avergonzado cuando ella le tiende la mano; después pide información sobre ella a Eina.
+- **Precauciones:** «Aizu» se conserva como forma escrita en la traducción; no crear una identidad separada. La reacción amorosa descrita es la de Bell, no evidencia de reciprocidad. La frase de Eina sobre el piso en que debería aparecer un Minotauro tiene una dirección ambigua en esta traducción y queda pendiente de cotejo.
+- **Estado:** escena localizada en traducción privada; no cotejada con el original japonés. Se actualiza el evento existente, sin crear ID duplicado.
+
+
 ### EVT-DM-BELL-MEETS-HESTIA-001 — Primer encuentro de Bell y Hestia
 - **Localizador:** PDF pp. 211–214, epílogo retrospectivo.
 - **Hechos:** Hestia había fracasado en 50 intentos de reclutamiento; Bell había recibido 10 rechazos de otras Familias. Se encuentran, conversan y Bell pide entrar en Hestia Familia.
