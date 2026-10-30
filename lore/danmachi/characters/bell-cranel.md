@@ -142,3 +142,10 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Magia y Habilidades:** ambas secciones aparecen vacías en la ficha de p. 54.
 - **Comparación:** los valores anteriores coinciden con el snapshot de p. 33 tras la actualización del Estado posterior al Minotauro. No atribuir toda la variación a los Kobolds o al Goblin de p. 53; la página no identifica causas individuales.
 - **Límite:** no asumir que Bell conoce una Habilidad oculta por el solo hecho de que el lector la vio desde la perspectiva de Hestia en pp. 35–36; en p. 54 su tabla sigue mostrando Habilidades vacías.
+
+## Estado actualizado durante la crisis del Silverback · PDF p. 195
+
+Tras la actualización de Hestia, Bell sigue en Lv.1. El snapshot narrativo registra: Fuerza G 221→E 403; Resistencia H 101→H 199; Destreza G 232→E 412; Agilidad F 313→D 512; Magia I 0. Es un cambio temporal fechado en el pasaje, no una ficha atemporal. La ficha visual posterior de p. 208 muestra Agilidad D521; la discrepancia frente al D512 narrativo permanece abierta.
+
+- **Evento:** EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001, PDF pp. 193–196.
+- **Equipo:** recibe la Daga de Hestia; su daga anterior se rompe en p. 181, pero el folio no identifica esa arma por nombre.
