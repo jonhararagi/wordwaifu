@@ -39,7 +39,7 @@ Las tres afirmaciones de la sinopsis editorial conservan el estado `provisional_
 - [Pérdida de poder/caída de Zeus y Hera Familia](candidates/EVT-DM-ZH-FALL-001.md) · EVT-DM-ZH-FALL-001
 - [Llegada de Hestia al mundo inferior](candidates/EVT-DM-HESTIA-DESCENT-001.md) · EVT-DM-HESTIA-DESCENT-001
 - [Encuentro inicial de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) · EVT-DM-BELL-MEETS-HESTIA-001
-- [Eina asesora a Bell a través de la Guild](candidates/EVT-DM-EINA-ADVISOR-001.md) · EVT-DM-EINA-ADVISOR-001
+- [Eina asesora a Bell a través de la Guild](candidates/EVT-DM-EINA-ADVISOR-001.md) · EVT-DM-EINA-ADVISOR-001 · `CONT-MAIN-LN`; traducción V1 PDF pp. 16–21 y 23, con primer contacto recordado «hace casi dos semanas», advertencia de seguridad y ánimo posterior al rescate de Ais.
 
 La excepción parcial es EVT-DM-GREAT-QUESTS-001: una referencia oficial transversal confirma conjuntamente que Zeus Familia y Hera Familia derrotaron a Behemoth y Leviathan, pero no asigna cada monstruo a una Familia ni establece fecha, roster o desenlace contra el Dragón Negro. Los demás eventos de esta sección siguen pendientes de cotejo primario para sus detalles específicos.
 
