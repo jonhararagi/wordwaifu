@@ -105,8 +105,8 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 206 registros activos; 29 IDs reservados; 133 documentos de apoyo.
-- **Grafo de conocimiento:** 258 relaciones explícitas; 258/258 con ambos extremos activos y distintos; IDs de relación únicos.
+- **Corpus DanMachi:** 211 registros activos; 29 IDs reservados; 133 documentos de apoyo.
+- **Grafo de conocimiento:** 263 relaciones explícitas; 263/263 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
 - **Tipos en el catálogo:** 84 personajes; 5 grupos; 12 deidades con registro de personaje.
@@ -796,3 +796,65 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Inspección visual:** pp. 43–48 inspeccionadas a página completa; son folios de texto continuo sin ilustraciones.
 - **Próximo folio:** PDF p. 49. Las cinco pasadas siguen abiertas; faltan las inspecciones visuales de pp. 19–21 y 23–24, cotejo individual y comparación con el corpus web.
 - **Rama:** `research/danmachi-v1-primary-pp43-48-2026-10-30`, creada desde el SHA integrado de `main` `3a0702faecfd817219717d3ab340ef2a269ca671`. Esta tanda aún requiere PR y CI; no se declara integrada.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 49–54 (2026-10-30)
+
+- **Sesión controlada por hora argentina:** inicio 10:03:52; límite de seis minutos 10:09:52; cierre registrado a las 10:09:52 (UTC−03:00).
+- **Corpus:** `CONT-MAIN-LN`, DMR-061-SRC-001, traducción privada no cotejada con japonés; sin mezcla de fuentes web/wiki.
+- **Lectura:** pp. 49–50 cierran el combate contra Kobolds y documentan fragmentos de Piedra Mágica; p. 51 registra una garra como botín y la carga que Bell debe transportar; p. 52 explica el Dungeon «vivo», mapas, autorreparación y nacimiento de monstruos; p. 53 documenta un Goblin y un Diente de Goblin; p. 54 muestra una retirada planificada a la superficie y un snapshot de Estado.
+- **Eventos reutilizados:** ya existían en la rama `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` (pp. 46–51) y `EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001` (p. 53). No se crearon IDs duplicados; esta tanda los integrará en los índices y catálogo centrales.
+- **Snapshot Bell, PDF p. 54, Lv. 1:** Fuerza I82→H120; Resistencia I13→I42; Destreza I96→H139; Agilidad H172→G225; Magia I0. Magia y Habilidades aparecen vacías. No se atribuyen los aumentos a un solo monstruo.
+- **Límite:** el nuevo ataque sorpresa de p. 54 queda abierto; no se registra un evento cerrado. El próximo folio es p. 55.
+- **Inspección visual:** pp. 49–54 se leyeron mediante el texto extraído; el extractor no entregó imágenes de página y no se hizo render en esa sesión. La inspección visual de esos folios, incluida la tabla de p. 54, permanece pendiente.
+- **Próximo trabajo:** lectura desde p. 55; inspecciones visuales pendientes pp. 19–21 y 23–24; cotejo individual y contraste web permanecen abiertos.
+- **Rama:** `research/danmachi-v1-primary-pp49-54-2026-10-30`, basada en `main` SHA `12f2e60d79b8a3dbe9e1a998a375ecd7cafef684`. No se declara integrada ni validada todavía.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 55–60 (2026-10-30)
+
+- **Corpus:** CONT-MAIN-LN, DMR-061-SRC-001; traducción privada no cotejada con japonés y sin importar información de wikis o juegos.
+- **Lectura:** p. 55 registra la reacción de Bell al Estado que Hestia le entrega; p. 56 muestra el enfado silencioso de Hestia y su salida a una fiesta de su lugar de trabajo; p. 57 identifica el local de Seal como **La Señora de la Abundancia**; pp. 58–59 registran la primera entrada de Bell, el personal observado y el asiento apartado que Seal le prepara; p. 60 conserva la conversación con la jefa («Mia mama») y las cifras económicas dichas por Bell.
+- **Precisión de stats:** el «29» que Bell menciona para Resistencia en p. 55 es compatible con el incremento I 13 → I 42 del snapshot anterior de p. 54; no se trata como total nuevo aislado ni se atribuye toda la subida a un único ataque.
+- **Límite narrativo:** Bell aún está revisando el menú al final de p. 60. No se registra que haya terminado de cenar ni se crea evento definitivo sin revisar primero el catálogo.
+- **Inspección visual:** pp. 55–60 fueron renderizadas desde el PDF local a 110 dpi y revisadas; son folios de texto continuo, sin ilustraciones. La lectura embebida de Files no proporcionó las imágenes, por lo que se usó el render local.
+- **Rama:** research/danmachi-v1-primary-pp49-54-2026-10-30, con base main SHA 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684. En el cierre de esta sesión la rama aún no tiene PR ni CI; no se ejecutaron pruebas locales.
+- **Próximo folio:** PDF p. 61. Siguen abiertas las cinco pasadas, la inspección visual de pp. 19–21, 23–24 y 49–54, los cotejos individuales y la comparación secundaria separada.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 61–66 (2026-10-30)
+
+- **Lectura:** Bell cena en La Señora de la Abundancia, habla con Seal, escucha la descripción de su jefa Mia y recibe la explicación del interés de Seal por conocer personas. La Familia Loki llega para celebrar el regreso de una expedición; Bell reconoce a Ais. En pp. 65–66 los aventureros cuentan el rescate del Minotauro y se burlan del novato cubierto de sangre, que Bell reconoce como su propia experiencia.
+- **Enlace de evento:** pp. 65–66 amplían el rescate previo de EVT-DM-BELL-AIS-MINOTAUR-001; se evita crear un ID duplicado para el mismo combate. La primera visita a la taberna queda como candidato independiente hasta revisar el resto del pasaje.
+- **Precaución de continuidad:** existe CHAR-MIA-GRAND en alcance CONT-ANIME; esta tanda de CONT-MAIN-LN solo respalda el nombre «Mia» y la información relatada en PDF p. 62. No se copia apellido ni atributos de adaptación.
+- **Inspección visual:** pp. 61–66 renderizadas a 110 dpi e inspeccionadas; seis folios de texto continuo, sin ilustraciones.
+- **Rama:** research/danmachi-v1-primary-pp49-54-2026-10-30, base main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684. La rama sigue sin PR, sin CI y sin pruebas locales.
+- **Próximo folio:** PDF p. 67. Continúan abiertas cinco pasadas, inspecciones visuales de pp. 19–21, 23–24 y 49–54, cotejos individuales y contraste web secundario.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 137–146 (2026-10-30)
+
+- **Continuidad/fuente:** `CONT-MAIN-LN`, `DMR-061-SRC-001`; traducción privada española no cotejada con el japonés.
+- **Lectura y auditoría:** pp. 137–146 leídas secuencialmente; revisión por página y hoja de contactos renderizada a 110 dpi. No se observaron ilustraciones en este bloque.
+- **Hallazgos:** pp. 137–138 describen el Festival de Monstruos y el encargo del monedero de Seal; Bell sale con él hacia el Coliseo, pero la devolución aún no aparece. pp. 139–145 contienen la reunión Freya–Loki–Ais, la sospecha de Loki sobre el interés de Freya y la observación de Bell entre la multitud. pp. 145–146 muestran a Hephaistos entregando a Hestia la daga terminada; la deuda sigue vigente.
+- **Eventos:** se conservan por separado `EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001` (petición/aceptación y comienzo de forja, p. 115 y pp. 129–133) y `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001` (entrega física pp. 145–146). La reunión se registra en `EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001`; el seguimiento visual de Ais se limita a lo que el texto narra, sin convertirlo en reconocimiento verbal. Los tres IDs figuran en los índices de eventos y se enlazan a la fuente DMR-061-SRC-001.
+- **Pendientes:** devolución del monedero a Seal; continuar lectura desde PDF p. 147. Las dos pociones ya quedaron identificadas en p. 127 como pociones de recuperación; no atribuirles fórmula o propiedades adicionales sin pasaje.
+- **Estado Git:** la extracción permanece en la rama independiente `research/danmachi-v1-primary-pp49-54-2026-10-30`; `main` no se modificó. El HEAD y la distancia exacta se consultan en vivo al retomar, porque este archivo de estado también se versiona en la propia rama y su actualización cambia el SHA. PR #209 pertenece a otra rama y no se modificó.
+- **Pruebas/CI:** no se ejecutaron pruebas de código ni CI para esta pasada documental. No se creó PR ni se modificó `main`.
+- **Control horario de la lectura:** el checkpoint de `lore/danmachi/WORK_QUEUE.md` registra inicio 16:53:11, minuto 6 a las 16:59:11 y límite de 10 minutos a las 17:03:11 (Argentina, UTC−03:00). La verificación documental posterior no añadió una medición independiente.
+
+
+## DMR-061 — Volumen 1 hasta PDF p. 156 (2026-10-30)
+- Lectura secuencial hasta p. 156 en CONT-MAIN-LN, fuente DMR-061-SRC-001 (traducción privada no cotejada).
+- Hestia encuentra a Freya y recibe indicaciones para localizar a Bell; después propone una cita. Bell mantiene presente el encargo del monedero de Seal; devolución pendiente.
+- Pp. 150–155 amplían EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001. P. 156 cambia al Coliseo y describe el inicio del espectáculo con Battle Jabalí y domadora de Ganesha Familia.
+- Diez páginas renderizadas a 110 dpi; p. 154 única ilustración, inspeccionada ampliada. Sin pruebas de código ni CI.
+- Referencia histórica de entrada: rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD fe082141ad06e897481ac29c176e1b69b8db05c9; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 71 adelante/0 detrás. Los commits de documentación posteriores movieron el HEAD; no usar aquella referencia como estado actual. Una comparación posterior al guardado inicial arrojó 78 adelante/0 detrás. Resolver HEAD y distancia vigentes en GitHub al reanudar. Sin PR propia; PR #209 no modificada. Próxima página: PDF p. 157. Cinco pasadas siguen abiertas.
+
+## DMR-061 — Volumen 1, PDF pp. 157–177 (2026-10-30)
+
+- **Fuente/continuidad:** DMR-061-SRC-001, CONT-MAIN-LN, traducción privada no cotejada con japonés.
+- **Páginas:** 157–177 completadas con tres pasadas obligatorias por página; cuarta pasada correctiva en pp. 165–167. Próxima página exacta: PDF p. 178.
+- **Visual:** 21 páginas renderizadas a 110 dpi; p. 169 contiene la única ilustración, inspeccionada ampliada. Las demás son páginas de texto.
+- **Hallazgos clave:** Eina cuestiona el riesgo del Festival; Bell/Hestia vuelven a encontrarse con Eina y siguen buscando a Seal; Freya incapacita personal de los establos y libera un Silverback; el monstruo primero busca a Freya y luego recibe la orden de perseguir a una «pequeña Diosa» (probablemente Hestia); Ganesha responde a nueve fugas y Eina coordina ayuda con Ais/Loki; Bell y Hestia comienzan la persecución hacia la Calle Dédalo.
+- **Correcciones:** se conserva la discrepancia de apariencia de Seal entre pp. 42 y 165; se corrige la atribución de objetivo del Silverback, sin afirmar que Freya ordenó atacar a Bell ni que liberó personalmente los nueve monstruos.
+- **Archivos:** dossier de volumen, inbox DMR-061, cuatro eventos, fichas de Seal/Freya, índices de eventos, WORK_QUEUE, registro de acuerdos y STATUS.
+- **Estado Git de entrada:** rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD b972852b0b720f769af1115afbcad8778324d63e; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 80 adelante/0 detrás. Sin PR propia, sin CI en ese HEAD y sin pruebas locales. PR #209 corresponde a otra rama; main no se modificó. El HEAD cambia al guardar estos archivos y se verifica de nuevo al cierre.
+- **Pruebas:** no se ejecutaron pruebas locales. No se declara CI para estos cambios documentales hasta que exista una ejecución sobre el HEAD actualizado.
+- **Pendientes:** devolución del monedero de Seal y continuación de la persecución.

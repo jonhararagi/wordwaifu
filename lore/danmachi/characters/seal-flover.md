@@ -42,3 +42,10 @@ La traducción privada española aportada escribe el nombre como «Seal Flover»
 ## Verificación pendiente
 
 La ficha se limita al primer encuentro visible en la traducción privada del Volumen 1. Su fidelidad terminológica y la romanización no se han cotejado con japonés. Completar biografía, afiliaciones o apariciones posteriores solo con nuevos localizadores de fuente.
+
+## Apariencia recordada por Bell · PDF p. 165
+
+Bell interpreta que Hestia le pregunta por Seal y la describe como una mujer de cabello y ojos grises, relativamente alta y de estatura cercana a la suya. Esto contradice la descripción textual de p. 42, donde el cabello y los ojos aparecen oscuros. Ambas referencias pertenecen a la misma traducción privada y no se ha determinado si la diferencia se debe a una inconsistencia de traducción, recuerdo del personaje u otra causa. **No elegir una versión ni corregir la otra sin evidencia nueva.**
+
+- **Localizador:** PDF p. 165 (descripción recordada por Bell); contraste PDF p. 42 (descripción inicial del narrador).
+- **Estado:** discrepancia interna no resuelta dentro de DMR-061-SRC-001.

@@ -9,7 +9,7 @@ source_verification: user_supplied_private_translation_not_crosschecked
 source_refs:
   - DMR-061-SRC-001
 source_locators:
-  - PDF pp. 150–159
+  - PDF pp. 150–165
 spoiler_level: major
 ---
 
@@ -17,7 +17,7 @@ spoiler_level: major
 
 ## Localizador y alcance
 - **Fuente:** DMR-061-SRC-001.
-- **Localizador:** PDF pp. 150–159.
+- **Localizador:** PDF pp. 150–165.
 - **Continuidad:** CONT-MAIN-LN.
 - **Verificación:** la obra original es oficial; la traducción española consultada es privada y no se ha cotejado con el japonés.
 
@@ -40,7 +40,20 @@ Bell Cranel, Hestia y Eina Tulle
 - Hestia pregunta a Eina si ha utilizado su posición para mirar a Bell por motivos personales; Eina responde que separa asuntos privados y oficiales.
 - La escena antecede a la crisis de los monstruos escapados.
 
+## Ampliación · PDF pp. 157–159 y 165
+
+- **p. 157 — contexto de Eina:** Eina cuestiona internamente la autorización del Festival por los riesgos de transportar monstruos del Dungeon a la superficie. La narración explica la dependencia del Gremio de la recuperación de Piedras Mágicas y la tolerancia administrativa pese a críticas públicas. Los rumores o calumnias oídos en Babel no se detallan.
+- **pp. 158–159 — encuentro con Eina:** Bell presenta a Hestia ante Eina y explica que busca a una persona; Eina no la identifica y razona que alguien sin dinero quizá no haya entrado al Coliseo por la cuota. Hestia pregunta si Eina ha usado su cargo para mirar a Bell por motivos personales; Eina responde que separa lo privado y lo oficial. Hestia dice creerle y se lleva a Bell. Eina interpreta la pregunta como una advertencia, no como prueba de una falta.
+- **p. 159 — señal de la crisis:** un compañero informa que el personal de la Entrada Oeste parece haberse desplomado. La explicación de que bebieron demasiado es una estimación del compañero; Eina siente una tensión ominosa, sin conocer la causa.
+- **p. 165 — continuación de la búsqueda:** Bell y Hestia siguen buscando a Seal. Bell interpreta la pregunta de Hestia como referida a Seal y la describe como mujer de cabello y ojos grises, relativamente alta y casi de su misma estatura. Hestia muestra descontento y alude a la conversación con la asesora; Bell no entiende su reacción. La descripción de Seal contradice la de p. 42 (cabello/ojos oscuros) y se conserva como discrepancia, no como corrección.
+
 ## Límites de evidencia
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
 - No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+
+## Ampliación · PDF pp. 150–155
+- Bell mantiene presente el encargo de devolver el monedero de Seal; Hestia propone combinar la búsqueda con la salida, sin que Bell abandone explícitamente la tarea.
+- Comparten crepes; Hestia pide a Bell que la alimente y después que limpie la mermelada de su mejilla. Bell se avergüenza por la cercanía.
+- Hestia propone continuar con croquetas. Bell reconoce que rara vez comparten actividades fuera de sus obligaciones y admite que disfruta la salida.
+- La ilustración de p. 154 es coherente con el gesto narrado, sin añadir hechos independientes. Hestia/Freya pp. 148–149 es contexto previo; el evento conserva su localizador principal pp. 150–159.

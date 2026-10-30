@@ -4773,11 +4773,13 @@ verification_status: stub
 - narrative_text_extent: PDF pp. 1–214; p. 215 contiene créditos impresos
 - locator_type: physical_pdf_page
 - locator: Páginas físicas del PDF, citadas siempre como «PDF p.»; no confundir con paginación impresa.
-- claims_supported: []
+- claims_supported: [DMR-061-CLM-001, DMR-061-CLM-002, DMR-061-CLM-003, DMR-061-CLM-004, DMR-061-CLM-005]
 - events_supported:
   - EVT-DM-BELL-MEETS-HESTIA-001
   - EVT-DM-V01-BELL-RECEIVES-FALNA-001
+  - EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001
   - EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001
+  - EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001
   - EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001
   - EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001
   - EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001
@@ -4785,6 +4787,8 @@ verification_status: stub
   - EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001
   - EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001
   - EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001
+  - EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001
+  - EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001
   - EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001
   - EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001
 - continuity_scope: CONT-MAIN-LN
@@ -4793,3 +4797,4 @@ verification_status: stub
 - rights_note: Conservar referencia y paráfrasis originales; no reproducir pasajes extensos.
 - verified_by: DANMACHI-RESEARCH-061
 - verification_status: source_checked_translation_unverified
+- `EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001` — evento narrativo derivado de DMR-061-SRC-001, traducción privada V1, PDF pp. 57–72.

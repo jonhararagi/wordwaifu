@@ -810,3 +810,13 @@
 - **Aplicación:** Bell recibe una copia de su Estado con la sección de Habilidades vacía (pp. 33–34). La narración desde la perspectiva de Hestia revela `Deseo Inquebrantable` en el Estado grabado en la espalda de Bell (pp. 35–36). No declarar que Bell conoce la habilidad en ese momento.
 - **Separación de eventos:** la actualización posterior al Minotauro (pp. 30–36), la concesión inicial de Falna (pp. 211–214) y la actualización con entrega de Daga de Hestia (pp. 193–196) son acontecimientos distintos y conservan registros separados.
 - **Límite:** la traducción privada no se ha cotejado con japonés; conservar el nombre español tal como aparece y no inventar una forma japonesa.
+
+### CONV-DM-2026-10-30-020 — Tres pasadas obligatorias por página y trabajo sin cronómetro
+
+- **Fecha:** 2026-10-30.
+- **Estado:** ACCEPTED; sustituye las instrucciones anteriores de límite temporal y de cinco pasadas para la lectura secuencial página por página de DMR-061.
+- **Regla:** cada página de la novela se completa con tres pasadas obligatorias: (1) extracción documental, (2) auditoría visual/textual mediante render o inspección real de la página, y (3) continuidad, relaciones y duplicados. Una cuarta pasada correctiva es opcional y se aplica ante contradicciones, ambigüedades relevantes o posibles errores.
+- **Tiempo y volumen:** no imponer límites arbitrarios de minutos ni un número fijo de páginas. Continuar mientras la lectura sea fiable; detenerse por problemas técnicos, calidad, continuidad o necesidad de guardar/validar, no por cronómetro. No afirmar conocer porcentajes de contexto ni predecir un error de sesión.
+- **Persistencia:** guardar checkpoints después de bloques coherentes y antes de que la conversación se vuelva inestable. Registrar por página el estado de las pasadas, visuales realmente inspeccionados, cambios, dudas y página exacta siguiente.
+- **Aplicación:** DMR-061, Volumen 1, CONT-MAIN-LN, desde PDF p.157. Las referencias históricas a cinco pasadas generales y cronómetros no sustituyen las tres pasadas obligatorias por página.
+- **Límite:** no marcar como visualmente revisada una página que no se haya renderizado/visualizado; no afirmar pruebas, CI, commits, PR o integración sin evidencia directa.

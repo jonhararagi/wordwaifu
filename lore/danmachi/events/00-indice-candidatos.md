@@ -69,10 +69,14 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Ais rescata a Bell del Minotauro](timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md) — PDF pp. 11–18 (rescate pp. 11–14; relato posterior a Eina pp. 16–18); se conserva «Aizu» como grafía de la traducción y la ambigüedad sobre la aparición en el piso 15.
 - [Hestia actualiza el Estado de Bell tras el Minotauro](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md) — PDF pp. 30–36; incluye el snapshot de atributos de p. 33 y `Deseo Inquebrantable` desde la perspectiva de Hestia (pp. 35–36), no conocido por Bell en esa escena.
 - [Bell conoce a Seal Flover](timeline/EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001.md) — PDF pp. 42–46; Seal devuelve una Piedra Mágica, le ofrece desayuno e invita a Bell a cenar; la cena no se da por sucedida.
+- [Bell derrota al grupo de Kobolds](timeline/EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001.md) — PDF pp. 46–51; conserva la ambigüedad del recuento y registra fragmentos de Piedra Mágica y una garra como botín.
+- [Bell derrota a un Goblin y recoge su diente](timeline/EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001.md) — PDF p. 53; no se confunde con el encuentro abierto de p. 54.
 - [Primer encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) — recuerdo narrativo en PDF p. 29 (traducción privada); [concesión inicial de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — evento distinto en PDF pp. 211–214. La actualización posterior al Minotauro se registra en [su propio evento](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md), pp. 30–36, separada de la actualización con daga de pp. 193–196.
-- [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146.
-- [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
-- [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–164.
+- [Hestia consigue que Hephaistos acepte forjar una daga para Bell](timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md) — petición en p. 115, insistencia y aceptación en pp. 129–133; distinta de la entrega física.
+- [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146; entrega después de la petición y forja.
+- [Freya se reúne con Loki y Ais y reconoce a Bell durante el Festival](timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md) — pp. 139–145; reunión posterior al Banquete de los Dioses y anterior al encuentro de Bell/Hestia y a la liberación del Silverback.
+- [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–165.
+- [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–167.
 - [Respuesta de Ganesha y el Gremio](timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md) — pp. 170–173.
 - [Persecución del Silverback](timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — pp. 173–190.
 - [Actualización y entrega de la daga](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md) — pp. 193–196.
@@ -88,3 +92,4 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Traición de Soma a Lili](timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md), [rescate y reconciliación](timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) y [reencuentro dos días después](timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) son acontecimientos separados.
 
 **Procedencia:** DMR-061-SRC-001 y DMR-060-SRC-001; novela ligera original oficial, traducciones privadas no cotejadas. Las pasadas visuales/cotejo no están cerradas.
+- [Bell oye a la Familia Loki burlarse del rescate del Minotauro y se marcha de la taberna](timeline/EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001.md) — PDF pp. 57–72; incluye la llegada de la Familia Loki, los comentarios de Bate, la defensa de Riveria, la reacción de Ais y la decisión de Bell de volver al Dungeon.
