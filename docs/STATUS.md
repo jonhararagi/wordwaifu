@@ -856,3 +856,17 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Estado Git de entrada:** rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD b972852b0b720f769af1115afbcad8778324d63e; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 80 adelante/0 detrás. Sin PR propia, sin CI en ese HEAD y sin pruebas locales. PR #209 corresponde a otra rama; main no se modificó. El HEAD cambia al guardar estos archivos y se verifica de nuevo al cierre.
 - **Pruebas:** no se ejecutaron pruebas locales. No se declara CI para estos cambios documentales hasta que exista una ejecución sobre el HEAD actualizado.
 - **Pendientes:** devolución del monedero de Seal y continuación de la persecución.
+
+## DMR-061 — Volumen 1, PDF pp. 178–214 (2026-10-30)
+
+- **Continuidad/fuente:** CONT-MAIN-LN, DMR-061-SRC-001; traducción privada en español no cotejada con japonés.
+- **Estado de lectura:** pp. 178–214 incorporadas a partir del checkpoint integrado hasta p.177. El PDF termina en p.214; no existe una p.215.
+- **Tres pasadas:** extracción, auditoría visual y continuidad/duplicados completadas para todas las pp.178–214. Pp.208–210 incluyen tres tarjetas/ilustraciones revisadas ampliadas.
+- **Cuarta pasada correctiva:** p.200 (corrección de atribución sobre el colapso); pp.203–205 (reencuentro de Seal y fatiga de Hestia); p.208 (Agilidad D512 narrativo frente a D521 visual).
+- **Hallazgos:** cierre de la fuga y reacción de Ais (pp.201–203); Bell y Hestia se recuperan en La Señora de la Abundancia, con Seal (pp.203–204); Hestia explica la daga y el préstamo (pp.205–208); retrospectiva del primer encuentro y concesión de Falna (pp.211–214).
+- **Correcciones de continuidad:** p.204 describe el cabello de Seal como gris oscuro, apoyando parcialmente el recuerdo de p.165; los ojos continúan en discrepancia con p.42. La narración p.203 confirma fatiga de Hestia; p.205 menciona dogeza de 30 horas, sin afirmar que sea la única causa del colapso.
+- **Eventos existentes actualizados:** persecución hasta p.195; respuesta Ganesha/Gremio pp.170–203; derrota Silverback pp.196–203; explicación daga y préstamo pp.203–208; concesión inicial de Falna pp.211–214. Se amplió el candidato del primer encuentro Bell–Hestia sin crear un duplicado.
+- **Archivos:** dossier V1, inbox DMR-061, eventos mencionados, candidato de primer encuentro, fichas de Seal y Freya, reglas de Piedra Mágica, índice de equipo, índices de eventos, WORK_QUEUE, STATUS y MASTER_INDEX.
+- **Personajes/objetos:** no se crean personajes ni objetos duplicados. La tarjeta p.209 ya estaba reflejada en el perfil de Bell y se confirmó visualmente; no se repite su registro.
+- **Pendientes:** identidad del responsable de la fuga; mirada no identificada de p.186; Familia de la azotea desde la que Freya observa en p.200; vínculo exacto entre la pequeña caja de p.190 y la daga que Hestia entrega en p.193 (probable por continuidad, no dicho en p.190); color de ojos de Seal; reconciliar la secuencia de Seal p.98–102 con el reencuentro pp.203–204 antes de crear otro evento.
+- **Alcance histórico:** esta actualización no cierra las inspecciones visuales pendientes registradas por PR #215 (pp.19–21, 23–24 y 49–54). Tampoco declara revisadas las pp.1–10, que no constan en el dossier secuencial actual.

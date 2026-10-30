@@ -9,7 +9,7 @@ source_verification: user_supplied_private_translation_not_crosschecked
 source_refs:
   - DMR-061-SRC-001
 source_locators:
-  - PDF pp. 173–190
+  - PDF pp. 173–195
 spoiler_level: major
 ---
 
@@ -55,3 +55,15 @@ Bell Cranel, Hestia y Silverback
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
 - No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+
+## Ampliación · persecución y preparación del combate, PDF pp. 178–195
+
+- **pp. 178–179:** Bell y Hestia atraviesan la Calle Dédalo; los residentes huyen. El Silverback se desplaza por encima de las casas, cae entre ambos y los separa. Su rugido provoca Terror en Bell y le recuerda al Minotauro.
+- **pp. 180–182:** Bell supera el miedo y ataca, pero su daga se rompe contra la defensa del Silverback. El monstruo lo estrella contra una pared; Bell usa la Piedra Mágica de una lámpara mural para cegarlo. Se reúne con Hestia y se reprocha su debilidad.
+- **pp. 183–185:** Bell encierra a Hestia en una alcantarilla y decide actuar como señuelo. Le confiesa el miedo a perder a su familia, ligado a la muerte de su abuelo por un monstruo cuando Bell estaba ausente. Hestia le pide que busque ayuda; Bell toma una poción verde oscura con emblema de Miach Familia, sin nombre explícito, que alivia fatiga/dolor y recupera resistencia, y atrae al Silverback.
+- **p. 186:** Bell elige el camino opuesto a las señales de salida para adentrarse en la Calle Dédalo. Una mirada relajada lo sigue, pero no identifica a su dueño. El Silverback ataca desde arriba; Bell cae en una plaza con fuente.
+- **p. 187:** el Silverback usa las cadenas como látigos y supera ampliamente a Bell.
+- **pp. 188–190:** Hestia vuelve; el Silverback cambia su objetivo hacia ella. Bell la rescata y ambos recuerdan la promesa de no dejarla sola. Hestia saca una caja pequeña y dice tener una idea, pero el monstruo aparece antes de que revele el contenido.
+- **pp. 191–192:** Bell carga a Hestia y llegan a un callejón sin salida. Hestia propone actualizar el Estado de Bell; él duda que pueda dañar al Silverback.
+- **pp. 193–195:** la entrega de la Daga de Hestia y la actualización del Estado se registran en el evento separado EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001. El evento de persecución llega hasta el punto en que Bell acepta luchar con la daga nueva; no duplicar el snapshot de estadísticas.
+- **Límite:** la persecución no se declara resuelta en p.195; el combate y la derrota del Silverback comienzan en p.196 y permanecen en EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.

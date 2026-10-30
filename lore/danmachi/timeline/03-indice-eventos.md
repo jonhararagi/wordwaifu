@@ -80,10 +80,10 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - `EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001` — Freya se reúne con Loki y Ais durante el Festival y reconoce a Bell entre la multitud (pp. 139–145).
 - `EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001` — encuentro en Festival de Monstruos (pp. 150–165).
 - `EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001` — Encanto y liberación de un Silverback (pp. 159–167).
-- `EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001` — respuesta ante nueve fugas reportadas (pp. 170–173).
-- `EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001` — persecución, señuelo y promesa familiar (pp. 173–190).
+- `EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001` — respuesta ante nueve fugas reportadas y confirmación pública de la derrota (pp. 170–203).
+- `EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001` — persecución, señuelo y promesa familiar (pp. 173–195).
 - `EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001` — actualización de Estado y entrega de daga (pp. 193–196).
-- `EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001` — derrota del Silverback (pp. 196–200).
+- `EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001` — derrota del Silverback y recepción de la noticia por Ais (pp. 196–203).
 - `EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001` — origen, deuda y contrato de la daga (pp. 203–208).
 
 **V2 — CONT-MAIN-LN**

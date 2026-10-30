@@ -67,3 +67,13 @@ Los cinco puntos forman una estructura narrativa de alto nivel basada en el resu
 ## Distinción con la apertura del anime
 
 El expediente [EVT-DM-BELL-OPENING-CRISIS-ANIME-001](EVT-DM-BELL-OPENING-CRISIS-ANIME-001.md) documenta el estado inicial que la sinopsis del episodio 1 describe: Bell es el único miembro de Hestia Familia desde hace aproximadamente medio mes y se enfrenta a una crisis en el quinto piso. Ese intervalo pertenece a la adaptación y no fija por sí solo la fecha exacta del primer encuentro de la novela ni el descenso de Hestia.
+
+## Contraste con la retrospectiva del epílogo · PDF pp. 211–214
+
+El epílogo añade detalles al recuerdo de p.29 sin crear un segundo primer encuentro:
+
+- Hestia dice que ese fue su intento número 50 de reclutamiento; Bell ya había recibido diez rechazos de otras Familias.
+- Hestia ve a Bell solo en la calle y lo sigue para advertirle que no entre a un callejón peligroso. Tras hablar, Bell le pide ingresar en su Familia y acepta aun sabiendo que solo ella será miembro al comienzo.
+- La ceremonia de Falna ocurre después, en la biblioteca del segundo piso de una librería antigua. Se mantiene como evento separado en EVT-DM-V01-BELL-RECEIVES-FALNA-001.
+- El propietario de la librería es un hombre humano mayor sin nombre. No se asigna identidad ni ficha.
+- **Límite:** pp.211–214 son retrospectiva del epílogo; no dan fecha absoluta ni un intervalo exacto entre primer encuentro e inscripción de Falna.

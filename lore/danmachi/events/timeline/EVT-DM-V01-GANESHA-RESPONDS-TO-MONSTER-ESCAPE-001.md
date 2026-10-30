@@ -9,7 +9,7 @@ source_verification: user_supplied_private_translation_not_crosschecked
 source_refs:
   - DMR-061-SRC-001
 source_locators:
-  - PDF pp. 170–173
+  - PDF pp. 170–203
 spoiler_level: major
 ---
 
@@ -52,3 +52,10 @@ Ganesha, Eina Tulle, Ais Wallenstein, Loki y empleados del Gremio
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
 - No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+
+## Ampliación · PDF pp. 201–203
+
+- **p. 201:** Ais derrota a un Troll de un solo ataque. Ella y Loki observan que los monstruos parecían ignorar a los civiles y actuar como si buscaran algo bajo control ajeno. El Silverback es el último de los nueve monstruos escapados que sigue sin derrotar.
+- **p. 202:** un testigo informa a Loki que un aventurero joven de cabello blanco y ojos rojos derrotó al Silverback de un solo golpe en la Calle Dédalo. Ais reconoce la descripción como Bell, recuerda que lo rescató del Minotauro y desea verlo para felicitarlo y disculparse; Bell atraviesa la multitud sin advertirla.
+- **p. 203:** la narración informa que la rápida respuesta de Ganesha Familia, el Gremio y otras organizaciones redujo las pérdidas. El responsable no fue capturado y los miembros de Ganesha Familia/Gremio que tuvieron contacto con él parecían haber sido hechizados, pues no podían recordar lo ocurrido.
+- **Límites:** el testimonio de p.202 atribuye la derrota a un golpe, pero no describe el combate; no añadir maniobra, técnica o magia. La redacción de p.203 sobre ausencia de heridos coexiste con la mención de Bell como el aventurero con lesiones más graves; se conserva esa ambigüedad.

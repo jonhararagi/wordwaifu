@@ -50,3 +50,8 @@ Este índice identifica categorías que se documentarán a medida que se analice
 - **Estado Liliruca Lv.1** — Fuerza I42, Resistencia I42, Destreza H143, Agilidad G285, Magia F317. Es snapshot del folio, no dato atemporal. Fuente: PDF p. 245.
 
 Todos estos datos son de fichas finales de la traducción privada aportada; no se consideran cotejados con el japonés. La wiki/continuidad secundaria ya registrada permanece separada.
+
+## Equipo localizado en V1 · CONT-MAIN-LN
+
+- **Daga de Hestia** — daga negra de mithril forjada por Hephaistos, con Estado/Texto Sagrado propio inscrito en la hoja. Crece con la experiencia y el desarrollo del usuario y manifiesta fuerza apropiada a su nivel; el texto indica que solo puede utilizarla alguien con la Gracia de Hestia. Hestia la entrega a Bell y la actualiza junto con su Estado en PDF pp. 193–196. Bell la usa para destruir la Piedra Mágica del Silverback en pp. 196–200.
+- **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada. No confundir con la daga anterior de Bell, que se rompe en p. 181; el pasaje no identifica esa arma por nombre.
