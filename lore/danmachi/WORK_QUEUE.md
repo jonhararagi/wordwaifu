@@ -1325,3 +1325,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Pendientes:** el monedero de Seal no aparece devuelto; la persecución sigue abierta. La identidad contextual de la «pequeña Diosa» como Hestia no se convierte en literalidad de la traducción.
 - **Estado Git de entrada:** rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD b972852b0b720f769af1115afbcad8778324d63e; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 80 adelante/0 detrás. Sin PR propia, sin CI en el HEAD de entrada y sin pruebas locales. PR #209 pertenece a otra rama. main no se modifica.
 - **Próxima acción:** continuar desde PDF p.178 y no releer pp.157–177 salvo discrepancia concreta.
+
+
+## DMR-060 — consolidación del PR #209 en rama limpia (2026-10-30)
+
+- [x] Auditar PR #209 contra `main` posterior a #215; identificar 98 commits de adelanto y 6 de retraso en el snapshot antiguo, y separar trabajo único de cambios V1 obsoletos.
+- [x] Crear rama `integration/dmr060-v2-timeline-pr209-2026-10-30` desde main SHA `8e6fcedaeed4e6c38e6f63a7c099cc8e27ad3441`.
+- [x] Trasladar cinco eventos V2 independientes para pasado de Lili, revelación Hobbit, conversación Eina–Hestia, captura de Gedo y abandono como cebo por miembros de Soma.
+- [x] Actualizar localizadores y límites de las fichas de emboscada, abandono y rescate; mantener separada la recontratación.
+- [x] Retirar el evento combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` de catálogo/cronología y reservarlo como `(x) superseded`; conservar los enlaces en eventos sustitutos y documentación.
+- [x] Portar el grafo temporal dirigido para `before`, `after`, `between` y offsets relativos, y actualizar pruebas para 42 eventos/36 referencias de ubicación.
+- [x] Actualizar dossier V2, DMR-060 inbox, fuente, índices y perfiles de Bell, Eina, Hestia y Liliruca; conservar las correcciones más nuevas de Freya y el material V1 de main.
+- [ ] Ejecutar y corregir Validate WordWaifu y DanMachi Lore and Retrieval Integrity en el HEAD final de esta rama; abrir PR nueva.
+- [ ] Integrar la segunda parte sólo tras CI verde; después marcar PR #209 como `(x) superseded` y cerrarlo. No eliminar su rama antes de confirmar que no contiene trabajo exclusivo pendiente.
