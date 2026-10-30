@@ -4736,6 +4736,13 @@ verification_status: stub
   - EVT-DM-V02-LILI-ABANDONS-BELL-001
   - EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001
   - EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001
+  - EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001
+  - EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001
+  - EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001
+  - EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001
+  - EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001
+  - EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001
+  - EVT-DM-V02-BELL-AND-LILI-REHIRE-001
 - continuity_scope: CONT-MAIN-LN
 - reliability_note: Se trata de una traducción privada de la obra oficial. La lectura de sus páginas permite registrar qué narra este documento y sus localizadores, pero no afirmar fidelidad exacta de términos o matices al original japonés. La lectura textual fue sustancial; no equivale a inspección visual de todas las páginas.
 - conflicting_sources: []
