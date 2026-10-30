@@ -5,7 +5,7 @@ type: character
 status: provisional
 confidence: high for identity; medium for time-specific details
 tags: [Bell Cranel, protagonista, Familia Hestia, identidad]
-source_refs: [DanMachi light novel Vol. 1; localizador pendiente]
+source_refs: [DMR-061-SRC-001]
 claim_refs:
   - DMR-002-CLM-001
   - DMR-002-CLM-002
@@ -117,3 +117,13 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 **Cronología relativa:** agotó sus pociones normales tres días antes de visitar a Naaza; dejó que Lili viera Firebolt un día antes de la incursión al piso 10; se reencuentra y vuelve a contratar a Lili dos días después del rescate. No se asignan fechas de calendario.
 
 **Procedencia:** lectura directa de la traducción privada aportada, no cotejada con japonés. No trasladar estos snapshots a otros volúmenes sin una nueva fuente.
+
+## Estado tras el encuentro con el Minotauro · CONT-MAIN-LN
+
+- **Fuente:** DMR-061-SRC-001, Volumen 1, traducción privada no cotejada; páginas físicas PDF 30–36.
+- **Evento:** [Hestia actualiza el Estado de Bell tras el Minotauro](../events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md).
+- **Snapshot entregado a Bell (p. 33), Lv. 1:** Fuerza I 82 (desde I 77); Resistencia I 13 (sin cambio); Destreza I 96 (desde I 93); Agilidad H 172 (desde H 148); Magia I 0.
+- **Habilidades que Bell ve:** su copia muestra la sección de Habilidades vacía (pp. 33–34).
+- **Dato desde la perspectiva de Hestia (pp. 35–36):** en el Estado grabado en la espalda aparece `[Deseo Inquebrantable]`, descrita como aceleración del crecimiento; sus efectos duran mientras los sentimientos de Bell no cambien y dependen de la fuerza de esos sentimientos.
+- **Límite de conocimiento:** el pasaje no muestra que Bell vea el nombre ni conozca esos efectos. Mantener la Habilidad como información del lector/Hestia en este punto, no como conocimiento consciente de Bell.
+- **Traducción:** «Deseo Inquebrantable» es el nombre tal como aparece en el texto español privado; no se aporta aquí un nombre japonés cotejado.
