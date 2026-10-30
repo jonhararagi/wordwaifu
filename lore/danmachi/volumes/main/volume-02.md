@@ -49,12 +49,12 @@ La relación puede pasar de una asociación instrumental al compañerismo. Perte
 
 La lectura sustancial de la traducción privada aportada permitió crear siete registros de eventos separados. Todos pertenecen a `CONT-MAIN-LN`; las fechas absolutas no están fijadas y los localizadores son páginas físicas del PDF.
 
-- [Ais se enfrenta a Udaeus](../events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md) — PDF pp. 106–111.
-- [Bell obtiene Firebolt](../events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) — PDF pp. 136–149.
-- [Bell prueba Firebolt y agota Mind](../events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) — PDF pp. 150–155 y 167–169.
-- [Emboscada de Ogros en el piso 10](../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–213.
-- [Lili toma la Daga de Hestia y deja a Bell](../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 213–229.
-- [Miembros de Soma traicionan a Lili y Bell la rescata](../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240.
-- [Ais encuentra el Protector de Jade](../events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) — PDF pp. 242–243.
+- [Ais se enfrenta a Udaeus](../../events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md) — PDF pp. 106–111.
+- [Bell obtiene Firebolt](../../events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) — PDF pp. 136–149.
+- [Bell prueba Firebolt y agota Mind](../../events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) — PDF pp. 150–155 y 167–169.
+- [Emboscada de Ogros en el piso 10](../../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–213.
+- [Lili toma la Daga de Hestia y deja a Bell](../../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 213–229.
+- [Miembros de Soma traicionan a Lili y Bell la rescata](../../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240.
+- [Ais encuentra el Protector de Jade](../../events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) — PDF pp. 242–243.
 
 **Reserva de fuente:** la obra original es la novela ligera oficial. La traducción consultada es privada/no editorial y no ha sido cotejada con el japonés. Los eventos describen lo que muestra esa traducción; no se afirma fidelidad lingüística exacta. Véase `DMR-060-SRC-001` y `DANMACHI-RESEARCH-060`.
