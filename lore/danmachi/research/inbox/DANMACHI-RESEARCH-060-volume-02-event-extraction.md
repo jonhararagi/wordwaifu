@@ -138,3 +138,18 @@ La inspección directa/renderizado de los últimos folios confirma:
 - **Conteo físico confirmado:** el archivo tiene 246 páginas (comprobado con pdfinfo y render físico de las páginas 244–246). El lector indexado de páginas de la herramienta de extracción indicó un límite en p.243; para estos folios se usó renderizado directo del PDF físico, que prevalece para su paginación.
 
 **Límite:** esta inspección visual cubre los últimos folios y no constituye inspección visual completa de las 246 páginas.
+
+
+## Registro visual inicial (inspección renderizada, no total)
+
+- **PDF p. 1:** cubierta a color del volumen 2.
+- **PDF pp. 2–4:** portadillas/arte interior; p. 4 muestra una composición gráfica con el título.
+- **PDF p. 5:** ilustración a color de dos personajes sin rótulos de nombre; conservar sin atribución hasta confirmación textual.
+- **PDF p. 6:** retrato a color sin nombre legible en el propio folio; no asignar identidad solo por apariencia.
+- **PDF pp. 7–8:** portadilla y escena de apertura del prólogo con una figura encapuchada/sombreada; no atribuir identidad aún.
+- **PDF p. 11:** ilustración monocroma de una Hobbit junto a la apertura del capítulo 1, titulado «Supporter»; la identificación con Liliruca se vincula por la secuencia y su descripción posterior, no por rótulo explícito de nombre en la ilustración.
+- **PDF p. 244:** ficha de Liliruca y Guantes de Ayudante.
+- **PDF p. 245:** Estado, Cinder Ella, Héroe Anónimo y Ballesta Pequeña.
+- **PDF p. 246:** créditos visuales, confirma Sorotrans / Mugetsu123 y marca de agua Kurosaki-Vizard.
+
+No se ha inspeccionado visualmente cada folio de los 246.
