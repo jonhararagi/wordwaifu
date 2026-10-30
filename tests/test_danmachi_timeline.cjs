@@ -190,6 +190,15 @@ function fixture(temporal,originKind,scopes){
 const exactEventOffset=fixture({kind:"relative_offset",anchorId:"EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001",anchorLabel:"rescate y reconciliación de Lili",direction:"after",amount:2,unit:"day",precision:"exact"},"user_plan",["CONT-AU"]);
 assert.equal(timeline.validateDataset(exactEventOffset.clone).valid,true,"An exact relative offset may reference an existing event.");
 
+const eventOffsetCycle=structuredClone(data);
+const cycleUdaeus=eventOffsetCycle.events.find(event=>event.id==="EVT-DM-V02-AIS-UDAEUS-001");
+const cycleRumor=eventOffsetCycle.events.find(event=>event.id==="EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001");
+cycleUdaeus.temporal={kind:"relative_order",relation:"after",referenceIds:[cycleRumor.id],distanceKnown:false,precision:"order_only",qualifier:"Synthetic cycle fixture.",sourceUrls:cycleUdaeus.temporal.sourceUrls};
+const cycleValidation=timeline.validateDataset(eventOffsetCycle);
+assert.equal(cycleValidation.valid,false,"Event-relative offsets must participate in cycle validation.");
+assert.ok(cycleValidation.errors.some(error=>error.includes("Temporal relative-order cycle detected.")),cycleValidation.errors.join("; "));
+
+
 const validFixtures=[
  {name:"calendar date with explicit calendar",origin:"user_plan",scopes:["CONT-AU"],temporal:{kind:"absolute_date",value:"2042-03-04",calendar:"gregorian",precision:"day"}},
  {name:"approximate bounded interval",origin:"user_plan",scopes:["CONT-AU"],temporal:{kind:"approximate_interval",lower:{value:"2040-01-01",calendar:"gregorian",precision:"day"},upper:{value:"2041-01-01",calendar:"gregorian",precision:"day"},precision:"approximate"}},
