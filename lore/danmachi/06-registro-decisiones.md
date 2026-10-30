@@ -297,3 +297,12 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Aplicación inmediata:** DMR-060/061; rumor de Ais una semana después de Udaeus, pociones de Bell tres días antes de Naaza, demostración de Firebolt de Lili el día previo al piso 10, y reencuentro de Bell/Lili dos días después del rescate.
 - **Documentos afectados:** eras-and-events.json, src/danmachi-timeline.js, tests/test_danmachi_timeline.cjs, DMR-060, DMR-061, dossiers de volumen y fichas de personajes.
 
+### DEC-DM-032 — Separar lo que ve el personaje de lo que revela otro punto de vista
+
+- **Fecha:** 2026-10-30.
+- **Estado:** ACCEPTED como regla de extracción y modelado de conocimiento.
+- **Decisión:** si una escena muestra a un personaje una ficha, resumen o explicación y después revela información adicional desde otro punto de vista, conservar dos ámbitos: lo que el personaje vio/oyó y lo que conoce el narrador/lector u otro personaje. No transferir automáticamente la información revelada al conocimiento consciente del personaje.
+- **Aplicación DMR-061:** Bell recibe una copia de su Estado con la sección de Habilidades vacía (PDF pp. 33–34). La narración pasa a la perspectiva de Hestia y revela `Deseo Inquebrantable` en el Estado grabado en la espalda de Bell (PDF pp. 35–36). No afirmar que Bell conoce esa Habilidad en ese momento.
+- **Separación de eventos:** la actualización de Estado posterior al Minotauro (PDF pp. 30–36), la concesión inicial de Falna (pp. 211–214) y la actualización con entrega de Daga de Hestia (pp. 193–196) permanecen como tres eventos separados.
+- **Límite:** el nombre español «Deseo Inquebrantable» procede de una traducción privada no cotejada con japonés. No inventar una forma japonesa ni elevar el snapshot a una ficha atemporal.
+
