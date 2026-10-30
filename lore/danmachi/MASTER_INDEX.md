@@ -8,7 +8,7 @@
 - [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
 
 ## Extracción de acontecimientos por volumen
-- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 177; incluye primer encuentro con Seal Flover, combate inicial, Festival de Monstruos, liberación del Silverback, respuesta de Ganesha y comienzo de la persecución hacia la Calle Dédalo.
+- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 214; incluye el Festival de Monstruos, derrota del Silverback, recuperación posterior y retrospectiva de la concesión inicial de Falna.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
 
 - [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y segmentación de combate, adquisición/prueba de magia, pasado de Lili, captura, traición, rescate y reencuentro. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los acontecimientos de V2, incluida la secuencia de Lili segmentada; no fija fechas absolutas ni convierte rumores en hechos confirmados.
@@ -422,7 +422,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ## DANMACHI-RESEARCH-061 — extracción del volumen 1 (CONT-MAIN-LN)
 - [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos iniciales Bell–Hestia, Eina, Ais y Seal Flover; escenas de Estado, Festival, Freya/Silverback y Dungeon. Traducción privada sin cotejo; el combate de Kobolds de pp. 46–48 sigue abierto.
 - [Dossier volumen 1](volumes/main/volume-01.md) y [índice de eventos](events/00-indice-candidatos.md).
-- **Lectura primaria más reciente:** Volumen 1, PDF pp. 11–177 documentadas secuencialmente; próximo folio p. 178. El bloque pp. 157–177 está registrado; p. 169 contiene la única ilustración de ese bloque, inspeccionada ampliada; p. 154 pertenece al bloque anterior.
+- **Lectura primaria más reciente:** Volumen 1, PDF pp. 11–214 documentadas secuencialmente; el archivo termina en p. 214. Los bloques pp.178–214 se completaron con tres pasadas; pp.208–210 contienen fichas/ilustraciones visuales inspeccionadas ampliadas. No se declara revisión de pp.1–10 ni de las inspecciones visuales antiguas pendientes.
 - **Eventos V1 añadidos en la rama de investigación:** petición/forja de la daga (`EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001`), entrega física a Hestia (`EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001`) y reunión de Freya/Loki/Ais (`EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001`); no fusionar petición con entrega ni extrapolar el gesto de Ais.
 - **Estado:** traducción privada no cotejada con japonés; tres pasadas obligatorias completadas por página en pp. 157–177 y cuarta correctiva en pp. 165–167. El cotejo japonés y las auditorías individuales de personajes siguen pendientes; no se añaden marcas `+` por esta extracción grupal.
 
@@ -459,3 +459,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - [PR #216](https://github.com/jonhararagi/wordwaifu/pull/216): segmentación DMR-060 V2 y grafo temporal dirigido, merge SHA `7de2acca6975d3700b7c5b5ca71c004211fb308e`; pre-merge y post-merge CI verdes en ambos workflows.
 - [PR #209](https://github.com/jonhararagi/wordwaifu/pull/209): `(x) SUPERSEDED BY #216`, cerrado; su snapshot divergente no se fusionó directamente. La rama histórica se conserva.
 - Estado vigente: 42 eventos temporales únicos, 215 registros activos, 30 IDs reservados, 263 relaciones. El antiguo ID combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` está reservado como superseded y no forma parte de la cronología activa.
+
+### DMR-061 — cierre del archivo PDF Volumen 1 · p. 214
+
+- **Estado:** extracción secuencial de trabajo registrada hasta la última página física del PDF (p.214). No existe p.215. La traducción privada no se ha cotejado con japonés.
+- **Pendientes separados:** auditoría visual de pp.19–21, 23–24 y 49–54; revisar pp.1–10 para identificar su función; resolver la descripción de los ojos de Seal y cotejar la visita/reencuentro en pp.98–102 y 203–204.
+- **Último bloque:** pp.201–214 con tres pasadas completas y cuarta correctiva en pp.203–205 y p.208. No se añaden IDs para párrafos ni personajes anónimos.
