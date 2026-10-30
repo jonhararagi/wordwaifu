@@ -858,3 +858,14 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Estado Git de entrada:** rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD b972852b0b720f769af1115afbcad8778324d63e; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 80 adelante/0 detrás. Sin PR propia, sin CI en ese HEAD y sin pruebas locales. PR #209 corresponde a otra rama; main no se modificó. El HEAD cambia al guardar estos archivos y se verifica de nuevo al cierre.
 - **Pruebas:** no se ejecutaron pruebas locales. No se declara CI para estos cambios documentales hasta que exista una ejecución sobre el HEAD actualizado.
 - **Pendientes:** devolución del monedero de Seal y continuación de la persecución.
+
+## DMR-061 — Volumen 1, PDF pp. 157–200 (2026-10-30)
+
+- **Fuente/continuidad:** DMR-061-SRC-001, CONT-MAIN-LN; traducción privada no cotejada con japonés.
+- **Páginas:** 157–200 completadas con tres pasadas obligatorias por página; cuarta pasada correctiva en pp.165–167 y p.200. Próxima página exacta: PDF p.201.
+- **Visual:** 44 páginas renderizadas a 110 dpi. Solo pp.169 y 199 contienen ilustraciones; ambas inspeccionadas ampliadas. Las demás son texto.
+- **Hallazgos:** se completa la persecución del Silverback, la entrega de la Daga de Hestia, la actualización de Estado de Bell y la derrota del monstruo. Bell sigue en Lv.1; sus atributos se actualizan en p.195. Freya observa la victoria en p.200.
+- **Correcciones:** se conserva la discrepancia de Seal (pp.42/165), se corrige el objetivo del Silverback (p.167) y no se atribuye una causa no explicitada al desplome de Hestia (p.200).
+- **Archivos:** dossier e inbox DMR-061, eventos de persecución/actualización/derrota, perfiles de Bell/Hestia/Freya, índice de magia/equipo, regla de monstruos/Piedras Mágicas, índices de eventos, WORK_QUEUE, STATUS y MASTER_INDEX.
+- **Estado Git:** rama research/danmachi-v1-primary-pp49-54-2026-10-30; el HEAD y la distancia se verifican al cierre. main no se modifica. No hay CI asociado a la rama sin PR; pruebas locales no ejecutadas.
+- **Pendientes:** revisar p.201 en adelante; mantener abiertos los datos desconocidos indicados en WORK_QUEUE.
