@@ -1162,5 +1162,5 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Inspeccionar a página completa las pp. 19–21 y 23–24; separar este trabajo de la lectura textual ya hecha.
 - [ ] Seguir cotejando el texto inicial con eventos, personajes, vínculos, objetos y cronología ya existentes; actualizar los registros de canon primario y no crear IDs duplicados.
 - [ ] Completar después el cotejo individual de fichas y la comparación con el corpus web/secundario; no añadir `+` por esta pasada grupal.
-- **Estado:** IN_PROGRESS; checkpoint de esta tanda verificado en rama `research/danmachi-volume-01-primary-canon-2026-10-30`. No hay CI acreditado ni integración a `main` todavía.
+- **Estado:** IN_PROGRESS; checkpoint de pp. 19–24 verificado en la rama `research/danmachi-volume-01-primary-canon-2026-10-30`. PR #210 está abierta y mergeable. CI preintegración sobre HEAD `9c1fa3af0df755510b9609b66d8275814ac38498`: Validate WordWaifu #41052288264 y DanMachi Lore and Retrieval Integrity #41052288242, ambos `success`. La integración y el CI post-merge siguen pendientes.
 
