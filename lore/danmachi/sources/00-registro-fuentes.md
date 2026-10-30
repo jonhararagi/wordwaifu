@@ -2687,7 +2687,7 @@ verification_status: stub
 - official_url: https://ln-news.com/articles/109766
 - accessed_at: 2026-10-23
 - locator_type: author_interview_statement_and_editorial_profile_captions
-- locator: Pregunta/respuesta sobre el origen de Bell junto a «ベルの出生については、ダンメモが初公開になりましたね»; además, pies editoriales bajo las imágenes de Erebus, Alfia y Zald en la misma sección.
+- locator: Sección «『ダンメモ』のエピソードに登場したベル・クラネル出生の物語», pregunta/respuesta sobre el origen de Bell; en particular, párrafos de la extracción web 419–427 (pregunta del entrevistador sobre el padre supporter de Zeus Familia y la hermana menor de Alfia, respuesta «そうですね» de Omori). También contiene pies editoriales bajo las imágenes de Erebus, Alfia y Zald.
 - claims_supported: [DMR-045-CLM-008, DMR-045-CLM-009, DMR-045-CLM-010, DMR-045-CLM-011, DMR-045-CLM-012]
 - events_supported: [EVT-DM-GAME-ASTREA-RECORD-001]
 - continuity_scope: CONT-GAME
