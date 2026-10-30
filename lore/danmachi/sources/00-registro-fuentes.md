@@ -4773,7 +4773,7 @@ verification_status: stub
 - narrative_text_extent: PDF pp. 1–214; p. 215 contiene créditos impresos
 - locator_type: physical_pdf_page
 - locator: Páginas físicas del PDF, citadas siempre como «PDF p.»; no confundir con paginación impresa.
-- claims_supported: []
+- claims_supported: [DMR-061-CLM-001, DMR-061-CLM-002, DMR-061-CLM-003, DMR-061-CLM-004, DMR-061-CLM-005]
 - events_supported:
   - EVT-DM-BELL-MEETS-HESTIA-001
   - EVT-DM-V01-BELL-RECEIVES-FALNA-001
