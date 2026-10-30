@@ -58,3 +58,14 @@ Fuente secundaria: [DanMachi Wiki ES — Liliruca Arde](https://danmachi.fandom.
 - [Miembros de Soma traicionan a Lili y Bell la rescata](../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240; ambos reanudan el equipo en Babel, pp. 237–240.
 
 Los hechos se describen desde la traducción española privada aportada; la obra original es oficial, pero la traducción aún no está cotejada.
+
+
+## CONT-MAIN-LN · volumen 2 (DMR-060-SRC-001)
+
+El texto identifica a Liliruca como Hobbit; su apariencia Beastwoman procede de la magia Cinder Ella (PDF pp. 213–229). La ficha visual p. 244 también la clasifica Hobbit y Ayudante, piso alcanzado 11, armas daga/arco/flecha y 300 Varisu. El Estado ilustrado p. 245 registra Lv1: Fuerza I42, Resistencia I42, Destreza H143, Agilidad G285, Magia F317; aparecen Cinder Ella, skill Héroe Anónimo y Ballesta Pequeña.
+
+Su experiencia dentro de Soma Familia incluye exclusión/abuso y el deseo de reunir recursos para conseguir su libertad. En el piso 10 toma la Daga de Hestia y abandona a Bell; después miembros de Soma la traicionan y la dejan como cebo. Bell la rescata y escucha su confesión de engaños sobre reparto de dinero y precios; la reconciliación se registra por separado (PDF pp. 213–237). Dos días después se reencuentran en Babel y Lili acepta volver como Ayudante (pp. 237–240).
+
+La ficha p. 244 describe Guantes de Ayudante: desechar tras el uso; permiten manipular cadáveres de monstruos y protegen contra ácidos/efectos anormales. Estos datos vienen de la ficha visual traducida, no de una edición contrastada.
+
+**Procedencia:** DMR-060-SRC-001; traducción privada/no cotejada. No asumir que cada acción de Kanu representa a toda Soma Familia.
