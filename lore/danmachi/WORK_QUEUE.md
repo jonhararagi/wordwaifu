@@ -1161,7 +1161,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Leer secuencialmente PDF pp. 25–30 e inspeccionar visualmente los seis folios completos; son páginas de texto continuo, sin ilustraciones.
 - [x] Enlazar el recuerdo del primer encuentro Bell–Hestia (PDF p. 29) al evento existente `EVT-DM-BELL-MEETS-HESTIA-001`, sin crear ID duplicado.
 - [x] Registrar la actualización de Estado de Bell en PDF pp. 30–36 como evento separado `EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001`, sin confundirla con la concesión inicial de Falna (pp. 211–214) ni con la actualización y entrega de daga (pp. 193–196).
-- [x] Retomar la lectura secuencial desde PDF p. 25; bloque completado hasta p. 30. La siguiente página pendiente es p. 31.
+- [x] Cerrar el checkpoint secuencial PDF pp. 25–30; al cierre de ese bloque el siguiente folio era p. 31. La continuación pp. 31–36 quedó completada en las tareas posteriores de esta misma cola.
 - [ ] Inspeccionar a página completa las pp. 19–21 y 23–24; separar este trabajo de la lectura textual ya hecha.
 - [ ] Seguir cotejando el texto inicial con eventos, personajes, vínculos, objetos y cronología ya existentes; actualizar los registros de canon primario y no crear IDs duplicados.
 - [ ] Completar después el cotejo individual de fichas y la comparación con el corpus web/secundario; no añadir `+` por esta pasada grupal.
