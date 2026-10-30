@@ -838,3 +838,11 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Estado Git:** la extracción permanece en la rama independiente `research/danmachi-v1-primary-pp49-54-2026-10-30`; `main` no se modificó. El HEAD y la distancia exacta se consultan en vivo al retomar, porque este archivo de estado también se versiona en la propia rama y su actualización cambia el SHA. PR #209 pertenece a otra rama y no se modificó.
 - **Pruebas/CI:** no se ejecutaron pruebas de código ni CI para esta pasada documental. No se creó PR ni se modificó `main`.
 - **Control horario de la lectura:** el checkpoint de `lore/danmachi/WORK_QUEUE.md` registra inicio 16:53:11, minuto 6 a las 16:59:11 y límite de 10 minutos a las 17:03:11 (Argentina, UTC−03:00). La verificación documental posterior no añadió una medición independiente.
+
+
+## DMR-061 — Volumen 1 hasta PDF p. 156 (2026-10-30)
+- Lectura secuencial hasta p. 156 en CONT-MAIN-LN, fuente DMR-061-SRC-001 (traducción privada no cotejada).
+- Hestia encuentra a Freya y recibe indicaciones para localizar a Bell; después propone una cita. Bell mantiene presente el encargo del monedero de Seal; devolución pendiente.
+- Pp. 150–155 amplían EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001. P. 156 cambia al Coliseo y describe el inicio del espectáculo con Battle Jabalí y domadora de Ganesha Familia.
+- Diez páginas renderizadas a 110 dpi; p. 154 única ilustración, inspeccionada ampliada. Sin pruebas de código ni CI.
+- Rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD fe082141ad06e897481ac29c176e1b69b8db05c9; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 71 adelante, 0 detrás. Sin PR propia; PR #209 no modificada. Próxima página: PDF p. 157. Cinco pasadas siguen abiertas.
