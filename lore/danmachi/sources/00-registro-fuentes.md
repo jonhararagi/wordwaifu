@@ -4714,7 +4714,7 @@ verification_status: stub
 
 - source_id: DMR-060-SRC-001
 - title: Volumen [02] • DanMachi
-- creator_or_publisher: Obra original: Fujino Omori / GA Bunko / SB Creative; traducción española atribuida en el PDF a Kurosaki-Vizard Translation
+- creator_or_publisher: Obra original: Fujino Omori / GA Bunko / SB Creative; créditos impresos del archivo: versión inglesa Sorotrans; traducción inglés-español, corrección y edición Mugetsu123; Kurosaki-Vizard Translation aparece como marca de agua, no como crédito exclusivo
 - source_type: USER_PROVIDED_TRANSLATION_OF_OFFICIAL_PRIMARY_WORK
 - series: DanMachi, novela ligera principal
 - volume_or_edition: Volumen 2
@@ -4743,3 +4743,42 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-060
 - verification_status: source_checked_translation_unverified
 
+
+
+## DMR-061-SRC-001 · Volumen 1 aportado por el usuario (traducción española privada)
+
+- source_id: DMR-061-SRC-001
+- title: Volumen [01] • DanMachi
+- creator_or_publisher: Obra original: Fujino Omori / GA Bunko / SB Creative; créditos impresos del archivo: versión inglesa Sorotrans; traducción inglés-español, corrección y edición Mugetsu123; Kurosaki-Vizard Translation aparece como marca de agua, no como crédito exclusivo
+- source_type: USER_PROVIDED_TRANSLATION_OF_OFFICIAL_PRIMARY_WORK
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 1
+- language: Español (traducción privada)
+- original_work_status: novela ligera oficial
+- translation_status: privada/no editorial; realizada como favor según aclaración expresa del usuario
+- fidelity_status: no cotejada con japonés ni con otra edición
+- official_url: https://ga.sbcr.jp/product/9784797372809/
+- user_material: archivo adjunto en la conversación: `Volumen [01] • DanMachi.pdf`
+- accessed_at: 2026-10-29
+- physical_file_pages: 215
+- narrative_text_extent: PDF pp. 1–214; p. 215 contiene créditos impresos
+- locator_type: physical_pdf_page
+- locator: Páginas físicas del PDF, citadas siempre como «PDF p.»; no confundir con paginación impresa.
+- claims_supported: []
+- events_supported:
+  - EVT-DM-BELL-MEETS-HESTIA-001
+  - EVT-DM-V01-BELL-RECEIVES-FALNA-001
+  - EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001
+  - EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001
+  - EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001
+  - EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001
+  - EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001
+  - EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001
+  - EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001
+  - EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: La obra original es la novela ligera oficial. El documento consultado es una traducción privada no editorial; se pueden registrar su contenido y localizadores físicos, pero no afirmar fidelidad exacta de terminología o matices al japonés. La lectura narrativa secuencial se completó hasta p. 214; algunas páginas no produjeron texto extraíble y la inspección visual total aún no está cerrada.
+- conflicting_sources: []
+- rights_note: Conservar referencia y paráfrasis originales; no reproducir pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-061
+- verification_status: source_checked_translation_unverified
