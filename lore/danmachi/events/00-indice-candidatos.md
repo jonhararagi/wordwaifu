@@ -66,6 +66,7 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 
 ## Volumen 1 — eventos narrativos extraídos de traducción aportada
 
+- [Ais rescata a Bell del Minotauro](timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md) — PDF pp. 11–18 (rescate pp. 11–14; relato posterior a Eina pp. 16–18); se conserva «Aizu» como grafía de la traducción y la ambigüedad sobre la aparición en el piso 15.
 - [Encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) y [concesión de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — PDF pp. 211–214.
 - [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146.
 - [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
