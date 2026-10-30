@@ -3047,6 +3047,23 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "medium"
+    },
+    {
+      "id": "EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Bell",
+        "Ais",
+        "Loki Familia",
+        "Hostess of Fertility",
+        "Minotaur retelling"
+      ]
     }
   ],
   "reservedIds": [
