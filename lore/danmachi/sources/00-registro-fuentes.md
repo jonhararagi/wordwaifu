@@ -4795,3 +4795,4 @@ verification_status: stub
 - rights_note: Conservar referencia y paráfrasis originales; no reproducir pasajes extensos.
 - verified_by: DANMACHI-RESEARCH-061
 - verification_status: source_checked_translation_unverified
+- `EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001` — evento narrativo derivado de DMR-061-SRC-001, traducción privada V1, PDF pp. 57–72.
