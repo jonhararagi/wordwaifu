@@ -1325,3 +1325,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Pendientes:** el monedero de Seal no aparece devuelto; la persecución sigue abierta. La identidad contextual de la «pequeña Diosa» como Hestia no se convierte en literalidad de la traducción.
 - **Estado Git de entrada:** rama research/danmachi-v1-primary-pp49-54-2026-10-30, HEAD b972852b0b720f769af1115afbcad8778324d63e; main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684; 80 adelante/0 detrás. Sin PR propia, sin CI en el HEAD de entrada y sin pruebas locales. PR #209 pertenece a otra rama. main no se modifica.
 - **Próxima acción:** continuar desde PDF p.178 y no releer pp.157–177 salvo discrepancia concreta.
+
+### Checkpoint DMR-061 · Volumen 1, PDF pp. 157–200 · 2026-10-30
+
+- **Protocolo vigente:** tres pasadas obligatorias por página (extracción, auditoría visual y continuidad/duplicados); cuarta pasada opcional ante discrepancias. Sin cronómetro ni límite arbitrario de páginas.
+- **Lectura:** pp. 157–200 completadas. Próxima página exacta: PDF p. 201.
+- **Pasada 1:** Eina y la organización del Festival (p.157); encuentro Bell/Hestia/Eina y búsqueda de Seal (pp.158–159,165); Encanto de Freya y liberación del Silverback (pp.160–167); respuesta de Ganesha y Gremio a nueve fugas (pp.170–173); persecución y defensa de Hestia (pp.173–195); actualización de Estado y entrega de Daga de Hestia (pp.193–196); derrota del Silverback y reacción de Freya (pp.196–200).
+- **Pasada 2:** 44 páginas renderizadas a 110 dpi e inspeccionadas. Solo pp.169 y 199 contienen ilustraciones; ambas se inspeccionaron ampliadas. Las demás son páginas de texto.
+- **Pasada 3:** se reutilizan eventos existentes; no se crean IDs duplicados. La muerte del abuelo ya figura en la ficha de Bell; no se crea un evento de backstory duplicado. No se crean IDs para la mirada de p.186, la caja de p.190 ni la poción sin nombre de p.185.
+- **Cuarta pasada:** p.200, para corregir la causa no demostrada del desplome de Hestia; se registra solo que cae después de la victoria.
+- **Eventos:** persecución extendida a pp.173–195; actualización/entrega de Daga de Hestia pp.193–196; derrota del Silverback pp.196–200. Freya observa la victoria en p.200.
+- **Personajes:** Bell conserva el snapshot de Estado Lv.1 en p.195; Hestia actualiza el Estado y entrega la daga; Freya expresa celos y felicita a Bell. La discrepancia de Agilidad D512 narrativo frente a D521 visual p.208 sigue abierta.
+- **Objetos/reglas:** la daga anterior de Bell se rompe en p.181 (sin identificarla por nombre); poción verde con emblema de Miach en p.185 (tipo no especificado); Daga de Hestia con Estado propio y crecimiento ligado al usuario; Piedra Mágica del Silverback como punto débil en el pecho.
+- **Pendientes:** contenido de la caja de Hestia de p.190 desconocido; dueño de la mirada de p.186 desconocido; Familia de la azotea de Freya en p.200 no identificada; causa inmediata del desplome de Hestia no explicitada. Próximo folio p.201.
