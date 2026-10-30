@@ -22,7 +22,7 @@ tags: [Liliruca Arde, Bell Cranel, Daga de Hestia, piso 10, traición]
 
 ## Resumen
 
-Durante la crisis del piso 10, Lili toma la Daga de Hestia y abandona temporalmente a Bell ante el peligro. La narración desarrolla después los motivos y el historial de abuso/exclusión que rodean su conducta.
+Durante la crisis del piso 10, Lili toma la Daga de Hestia y abandona temporalmente a Bell ante el peligro. La narración desarrolla después su historia de abuso/exclusión dentro de Soma Familia. El texto identifica a Lili como Hobbit y explica que usa Cinder Ella para alterar su apariencia y presentarse como Beastwoman.
 
 ## Entidades participantes
 
@@ -32,7 +32,9 @@ Durante la crisis del piso 10, Lili toma la Daga de Hestia y abandona temporalme
 ## Detalles registrados
 
 - La acción sucede después de la emboscada y separación del piso 10.
-- La historia posterior de Lili aporta contexto sobre su experiencia en Soma Familia; no reducir toda su personalidad a esta decisión.
+- Lili es Hobbit; la apariencia Beastwoman es el resultado de Cinder Ella, que modifica sus rasgos.
+- Su conducta posterior se contextualiza con abuso/exclusión dentro de Soma Familia y con el objetivo de reunir dinero para liberarse de su afiliación.
+- No reducir toda su personalidad a esta decisión.
 - La traición posterior de miembros de Soma y el rescate por Bell se registran en un evento separado.
 
 ## Límites
