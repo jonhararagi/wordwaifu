@@ -77,3 +77,7 @@ Hestia consigue de Hephaistos la Daga de Hestia para Bell (pp. 145–146). Más 
 - La narración cambia a la perspectiva de Hestia y revela que el Estado grabado en Bell contiene `[Deseo Inquebrantable]`, con aceleración del crecimiento; duración mientras sus sentimientos no cambien; y efecto proporcional a la fuerza de esos sentimientos (PDF pp. 35–36).
 - El texto atribuye a Hestia la extracción de ese tipo de Puntos de Experiencia y su inscripción personal. Al observar el resultado, comienza a arrepentirse.
 - **Límite:** no convertir esta escena puntual en un rasgo permanente de personalidad ni atribuir a Bell conocimiento de la Habilidad; la ficha distingue la perspectiva interna de Hestia de la información mostrada a Bell.
+
+## Crisis del Silverback · CONT-MAIN-LN · PDF pp. 183–200
+
+Hestia se niega a abandonar a Bell y vuelve por él, recordando la promesa de no dejarlo solo (pp. 183–190). En el callejón sin salida propone actualizar su Estado y le entrega la Daga de Hestia; usa sangre divina y Texto Sagrado para actualizarlo (pp. 192–196). Durante el crecimiento de Bell siente celos de Ais (p. 195). Tras la derrota del Silverback cae al suelo; el folio p. 200 no especifica la causa inmediata. Fuente DMR-061-SRC-001, traducción privada no cotejada.
