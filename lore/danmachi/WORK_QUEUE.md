@@ -1130,3 +1130,10 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] CI post-merge sobre el SHA exacto `6c62170dee51ec7a57b87dff4e0e0d189dadc2bc`: [Validate WordWaifu #40952682496](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682496) y [DanMachi Lore and Retrieval Integrity #40952682505](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682505), ambos `success`.
 - [ ] Mantener pendiente el cotejo narrativo primario de las mecánicas y los costes no reportados; no repetir las mismas páginas sin evidencia nueva.
 - **DMR-045:** permanece abierto; los cinco cotejos primarios no cambian.
+\n
+
+#### Aclaración de evidencia sobre la pasada individual del 2026-10-29
+
+- PR [#207](https://github.com/jonhararagi/wordwaifu/pull/207) quedó integrada en `main` por `720d7c3ac1c9e9d02696510de97b8cc19289b8b0`; sus dos workflows pre-merge finalizaron `success` sobre el head `d265131abb3d57e9f6d8a7432a21f80aea007db3`.
+- **Límite de honestidad:** la PR documenta las rutas y hallazgos por personaje, pero no guarda marcas horarias ni evidencia que permita demostrar que cada personaje recibió efectivamente 5–10 minutos. No presentar la duración como verificada. El signo `+` solo acredita que existe una pasada pública documentada.
+- **Hallazgo adicional posterior:** DMR-045-SRC-009 permite registrar que el padre de Bell era un *supporter* de Zeus Familia, sin nombre; la madre era la hermana menor de Alfia. Omori confirma el resumen del entrevistador. Sigue siendo `CONT-GAME`; no identifica a Meteria por nombre.
