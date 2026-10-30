@@ -156,7 +156,7 @@ Bell pasa de aspirante sin Familia a miembro de Hestia Familia. Hestia deja de e
 - **Pasada de eventos (actualizada tras p. 46):** el encuentro de pp. 42–46 se registra en `EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001` y la joven en `DM-CHAR-SEAL-FLOVER`. La cena que ella invita a Bell todavía no aparece como celebrada. El combate contra Kobolds de pp. 46–48 queda abierto hasta leer su continuación.
 - **Inspección visual:** PDF pp. 37–42 renderizadas e inspeccionadas a página completa. P. 37 y p. 40 contienen ilustraciones; pp. 38–39 y 41–42 son páginas de texto continuo.
 - **Pasada de personajes:** no se actualizan fichas individuales ni se marca `+` por esta tanda grupal. Se conserva el dato temporal de la rutina matutina de Bell y el límite de identidad de la joven.
-- **Próximo folio secuencial:** PDF p. 43. Las cinco pasadas siguen abiertas; permanecen pendientes las inspecciones visuales de pp. 19–21 y 23–24, el cotejo individual y la comparación posterior con el corpus web separado.
+- **Continuación secuencial:** el bloque posterior registra PDF pp. 43–48; tras esa lectura, el próximo folio vigente es PDF p. 49. Las cinco pasadas siguen abiertas; permanecen pendientes las inspecciones visuales de pp. 19–21 y 23–24, el cotejo individual y la comparación posterior con el corpus web separado.
 
 ## Registro de lectura directa del material aportado · PDF pp. 43–48 (2026-10-30)
 
