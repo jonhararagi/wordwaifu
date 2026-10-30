@@ -8,7 +8,7 @@
 - [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
 
 ## Extracción de acontecimientos por volumen
-- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 54; incluye primer encuentro con Seal Flover, combate contra Kobolds, botín de monstruos y snapshot de Estado actualizado.
+- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 177; incluye primer encuentro con Seal Flover, combate inicial, Festival de Monstruos, liberación del Silverback, respuesta de Ganesha y comienzo de la persecución hacia la Calle Dédalo.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
 
 - [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — siete acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y separación entre escenas de combate, adquisición/prueba de magia, traición, rescate y hallazgo de objeto. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.
@@ -422,9 +422,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ## DANMACHI-RESEARCH-061 — extracción del volumen 1 (CONT-MAIN-LN)
 - [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos iniciales Bell–Hestia, Eina, Ais y Seal Flover; escenas de Estado, Festival, Freya/Silverback y Dungeon. Traducción privada sin cotejo; el combate de Kobolds de pp. 46–48 sigue abierto.
 - [Dossier volumen 1](volumes/main/volume-01.md) y [índice de eventos](events/00-indice-candidatos.md).
-- **Lectura primaria más reciente:** Volumen 1, PDF pp. 11–156 documentadas secuencialmente; próximo folio p. 157. El bloque pp. 147–156 está registrado; p. 154 contiene una ilustración inspeccionada.
+- **Lectura primaria más reciente:** Volumen 1, PDF pp. 11–177 documentadas secuencialmente; próximo folio p. 178. El bloque pp. 157–177 está registrado; p. 169 contiene la única ilustración de ese bloque, inspeccionada ampliada; p. 154 pertenece al bloque anterior.
 - **Eventos V1 añadidos en la rama de investigación:** petición/forja de la daga (`EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001`), entrega física a Hestia (`EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001`) y reunión de Freya/Loki/Ais (`EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001`); no fusionar petición con entrega ni extrapolar el gesto de Ais.
-- **Estado:** traducción privada no cotejada con japonés; cinco pasadas generales abiertas, cotejo visual/individual aún pendiente y sin marcas `+` por esta extracción grupal.
+- **Estado:** traducción privada no cotejada con japonés; tres pasadas obligatorias completadas por página en pp. 157–177 y cuarta correctiva en pp. 165–167. El cotejo japonés y las auditorías individuales de personajes siguen pendientes; no se añaden marcas `+` por esta extracción grupal.
 
 ## DANMACHI-RESEARCH-060 — ampliación del volumen 2 (CONT-MAIN-LN)
 - [Expediente DMR-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — eventos adicionales de Naaza, hostigamiento a Lili, Firebolt observado, rescate y reconciliación, recontratación dos días después y rumor de Ais una semana después de Udaeus.
@@ -442,6 +442,6 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Próximo folio: PDF p. 67. Traducción privada no cotejada con japonés; cinco pasadas abiertas.
 
 
-### DMR-061 — checkpoint hasta PDF p. 156
-- Hestia localiza a Bell tras recibir indicaciones de Freya; pp. 150–155 amplían el evento existente de la cita. El monedero de Seal sigue pendiente. El espectáculo del Coliseo comienza en p. 156.
-- Próxima página: PDF p. 157. Traducción privada no cotejada; inspección visual del bloque completada.
+### DMR-061 — checkpoint hasta PDF p. 177
+- Hestia localiza a Bell y continúan buscando a Seal; el monedero sigue pendiente. El Festival pasa del espectáculo del Coliseo a la fuga de nueve monstruos, la respuesta de Ganesha/Gremio y la persecución del Silverback hacia la Calle Dédalo.
+- Próxima página: PDF p. 178. Traducción privada no cotejada; pp. 157–177 completadas con tres pasadas obligatorias y cuarta correctiva en pp. 165–167.
