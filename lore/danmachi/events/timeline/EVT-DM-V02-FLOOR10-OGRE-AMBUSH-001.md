@@ -16,13 +16,13 @@ tags: [Bell Cranel, Liliruca Arde, Ogros, piso 10, emboscada]
 ## Alcance y tiempo
 
 - **Continuidad:** `CONT-MAIN-LN`.
-- **Orden temporal:** dentro de la secuencia narrativa del volumen 2; fecha absoluta desconocida.
+- **Orden temporal:** Bell recuerda que Lili había visto Firebolt el día anterior a la incursión; el ascenso por los pisos 8 y 9 se describe como «unos días», sin cifra exacta.
 - **Localizador:** PDF pp. 195–213.
 - **Estado de lectura:** páginas narrativas localizadas en la traducción española privada aportada por el usuario; fidelidad de traducción pendiente de cotejo.
 
 ## Resumen
 
-Bell y Lili alcanzan el piso 10. Bell combate contra Ogros y queda separado de Lili mediante una trampa con carne/cebo y una emboscada.
+Bell y Lili atraviesan los pisos 8 y 9 durante «unos días» y llegan al piso 10, cuya niebla reduce la visibilidad. Bell combate Ogros; uno utiliza un árbol muerto como garrote mediante el Arsenal del Dungeon. Después la carne/cebo y una emboscada producen la separación de la pareja.
 
 ## Entidades participantes
 
@@ -32,6 +32,9 @@ Bell y Lili alcanzan el piso 10. Bell combate contra Ogros y queda separado de L
 
 ## Detalles registrados
 
+- El piso 10 introduce niebla y árboles que pueden servir como armas del Arsenal del Dungeon.
+- Bell usa su espada corta para atacar abdomen y pierna del primer Ogro, luego atraviesa su cabeza.
+- Un segundo Ogro aparece; Bell necesita dos lanzamientos consecutivos de Firebolt para derrotarlo.
 - La secuencia usa carne/cebo para provocar la situación de peligro.
 - La separación prepara la decisión posterior de Lili de tomar la daga y dejar a Bell atrás.
 

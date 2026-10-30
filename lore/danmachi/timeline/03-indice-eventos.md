@@ -65,3 +65,34 @@ Dos escenas que describen el mismo acontecimiento deben enlazarse a un solo ID c
 - Loki llama “Bell” al OC: `AU-EVT-LOKI-NAMES-OC-BELL-001` (propuesta del autor).
 
 Estos registros facilitan la siguiente tanda, pero las seis entradas de canon siguen pendientes de cotejo y las cuatro entradas AU requieren decisión expresa del autor.
+
+
+## Eventos de los volúmenes principales 1 y 2 (DMR-060/061)
+
+**V1 — CONT-MAIN-LN**
+- `EVT-DM-V01-BELL-RECEIVES-FALNA-001` — Falna en biblioteca (PDF pp. 211–214).
+- `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001` — Hephaistos entrega la daga a Hestia (pp. 145–146).
+- `EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001` — encuentro en Festival de Monstruos (pp. 150–159).
+- `EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001` — Encanto y liberación de un Silverback (pp. 159–164).
+- `EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001` — respuesta ante nueve fugas reportadas (pp. 170–173).
+- `EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001` — persecución, señuelo y promesa familiar (pp. 173–190).
+- `EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001` — actualización de Estado y entrega de daga (pp. 193–196).
+- `EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001` — derrota del Silverback (pp. 196–200).
+- `EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001` — origen, deuda y contrato de la daga (pp. 203–208).
+
+**V2 — CONT-MAIN-LN**
+- `EVT-DM-V02-AIS-UDAEUS-001` — combate contra Udaeus (pp. 106–111).
+- `EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001` — rumor una semana después, no confirmación (p. 111).
+- `EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001` / `EVT-DM-V02-BELL-FIREBOLT-TEST-001` — adquisición y prueba de Firebolt.
+- `EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001` — tres días antes de Naaza (p. 167).
+- `EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001` — compra a Naaza (pp. 167–169).
+- `EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001` — Bell ve el hostigamiento a Lili (pp. 169–170).
+- `EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001` — Firebolt observado el día antes del piso 10 (p. 198).
+- `EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001` — Ogros y Arsenal del Dungeon (pp. 195–213).
+- `EVT-DM-V02-LILI-ABANDONS-BELL-001` — Lili toma la daga y abandona a Bell (pp. 213–229).
+- `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` — Kanu y otros miembros de Soma traicionan a Lili (pp. 221–230).
+- `EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001` — rescate y reconciliación (pp. 230–237).
+- `EVT-DM-V02-BELL-AND-LILI-REHIRE-001` — reencuentro y nueva contratación dos días después (pp. 237–240).
+- `EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001` — Ais encuentra el Protector de Jade (pp. 242–243).
+
+**Reserva de procedencia:** ambos PDFs son traducciones privadas de la novela ligera original oficial, no cotejadas con japonés. Los números indicados son páginas físicas PDF. Las fichas visuales de V1/V2 requieren auditoría integral adicional.

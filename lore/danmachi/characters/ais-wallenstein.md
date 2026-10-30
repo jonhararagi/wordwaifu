@@ -52,3 +52,10 @@ Cotejar las primeras apariciones de Ais y los volúmenes que explican su biograf
 - [Ais encuentra el Protector de Jade perdido y sigue el rastro de Bell](../events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) — PDF pp. 242–243.
 
 No se asigna fecha absoluta ni se afirma que Ais conozca toda la secuencia del piso 10.
+
+
+## CONT-MAIN-LN · volumen 2 (DMR-060-SRC-001)
+
+Ais combate sola contra Udaeus en el piso 37 (PDF pp. 106–111). El texto dice que una semana después se extendió por Orario el rumor de que había alcanzado nivel 6; este dato es un rumor narrado, no una ficha de Estado ni una confirmación independiente. En el epílogo del volumen, busca a Bell en el piso 10 y encuentra su Protector de Jade, desgastado por el Dungeon (pp. 242–243).
+
+**Procedencia:** traducción privada aportada, no cotejada con japonés; no convertir el rumor en hecho confirmado.

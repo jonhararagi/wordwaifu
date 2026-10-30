@@ -20,3 +20,10 @@ tags: [Freya, Freya Familia, Bell, motivación, spoiler-major]
 - **Conducta e influencia:** el perfil describe Charm como capaz de influir en humanos, dioses y monstruos, y presenta una pauta de apropiación respecto de quienes le interesan. La lectura “posesiva” es síntesis conductual, no diagnóstico. [DMR-002-CLM-012]
 - **Relaciones y límites:** Bell es central para la motivación descrita; Ottar y los demás miembros requieren estados y fuentes propios. La identidad de Syr se mantiene sin resolver en esta tanda.
 - **Gustos cotidianos, aversiones y temores:** no confirmados en las páginas utilizadas; no rellenar por fanon.
+
+
+## CONT-MAIN-LN · volumen 1 (DMR-061-SRC-001)
+
+Durante el Festival de Monstruos, Freya incapacita con Encanto a guardias/empleados de los establos, obtiene las llaves y libera un Silverback específico para que busque a Bell (PDF pp. 159–164). El texto describe una motivación de fascinación y deseo posesivo de observar el crecimiento de Bell; la maniobra es deliberadamente peligrosa. La fuga general se informa después como nueve monstruos, pero el pasaje no demuestra que Freya liberara personalmente a los nueve.
+
+**Separación de continuidad:** este apartado añade datos de novela principal sin sustituir el perfil CONT-ANIME existente. Fuente: traducción privada no cotejada.

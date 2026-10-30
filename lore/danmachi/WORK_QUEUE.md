@@ -1137,3 +1137,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - PR [#207](https://github.com/jonhararagi/wordwaifu/pull/207) quedó integrada en `main` por `720d7c3ac1c9e9d02696510de97b8cc19289b8b0`; sus dos workflows pre-merge finalizaron `success` sobre el head `d265131abb3d57e9f6d8a7432a21f80aea007db3`.
 - **Límite de honestidad:** la PR documenta las rutas y hallazgos por personaje, pero no guarda marcas horarias ni evidencia que permita demostrar que cada personaje recibió efectivamente 5–10 minutos. No presentar la duración como verificada. El signo `+` solo acredita que existe una pasada pública documentada.
 - **Hallazgo adicional posterior:** DMR-045-SRC-009 permite registrar que el padre de Bell era un *supporter* de Zeus Familia, sin nombre; la madre era la hermana menor de Alfia. Omori confirma el resumen del entrevistador. Sigue siendo `CONT-GAME`; no identifica a Meteria por nombre.
+
+
+## DMR-060 / DMR-061 — revisión de volúmenes 1 y 2 en cinco pasadas
+
+- [x] Completar la primera pasada de lectura narrativa secuencial hasta V1 PDF p. 214 y V2 PDF p. 243, con límites de extracción indicados en los informes.
+- [x] Crear registros temporales independientes para nueve acontecimientos adicionales de V1 y siete ampliaciones/segmentaciones de V2; mantener siete eventos V2 anteriores con sus IDs y separar traición, rescate y reencuentro.
+- [x] Añadir a la cronología offsets relativos exactos: una semana después de Udaeus (rumor de Ais), tres días antes de visita a Naaza, un día antes de incursión al piso 10 y dos días después del rescate para recontratación; conservar «unos días» en pisos 8–9 sin inventar cifra.
+- [x] Corregir crédito de traducción: Sorotrans (inglés), Mugetsu123 (traducción inglés-español/corrección/edición); Kurosaki-Vizard es marca de agua.
+- [ ] Completar la inspección visual de todas las ilustraciones y fichas de ambos PDF, registrando página física y detalle extra.
+- [ ] Releer y cotejar sistemáticamente los pasajes iniciales V1 pp. 1–140 con los eventos y personajes existentes, sin duplicar Arrival/Minotaur ni otras IDs.
+- [ ] Auditar las fichas de Bell, Hestia, Liliruca, Ais, Freya y Eina, Estados de Falna, equipo, atributos, relaciones y localizadores exactos. No marcar + por esta extracción grupal.
+- [ ] Ejecutar tests de cronología/recuperación, validadores y workflows CI; solo después integrar por PR en main.
+- **Estado:** IN_PROGRESS; primera pasada sustancial completada, pasadas 2–5 pendientes.

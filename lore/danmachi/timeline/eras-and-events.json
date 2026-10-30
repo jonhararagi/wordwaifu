@@ -780,8 +780,8 @@
       "continuityScopes": [
         "CONT-MAIN-LN"
       ],
-      "evidenceStatus": "candidate_primary_locator_pending",
-      "summary": "Es un acontecimiento independiente de la llegada de Bell. Conduce a la formación de la Familia Hestia, pero no se le asigna una cantidad de días sin cotejar el capítulo.",
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "En la retrospectiva del epílogo, Hestia se encuentra con Bell después de que él recibe diez rechazos de otras Familias y ella ha fallado cincuenta intentos de reclutamiento. Bell acepta ingresar en su Familia; la ceremonia de Falna en la biblioteca se registra por separado.",
       "participants": [
         {
           "id": "DM-CHAR-BELL",
@@ -810,6 +810,12 @@
           "kind": "publisher",
           "note": "Sinopsis editorial oficial: Orario es una ciudad que posee el Dungeon; no determina ubicación exacta de escenas.",
           "url": "https://ga.sbcr.jp/product/9784797372809/"
+        },
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Localizador directo: PDF pp. 211–214; traducción privada no cotejada con el japonés."
         }
       ],
       "temporal": {
@@ -822,7 +828,8 @@
         "distanceKnown": false,
         "qualifier": "Poco después de T0; el capítulo/localizador y la cantidad de días son desconocidos.",
         "sourceUrls": [
-          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/work/story-completion-danmachi-audit-2026-10/lore/danmachi/events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
         ]
       },
       "narrativeOrigin": {
@@ -842,6 +849,84 @@
           "context": "Ciudad identificada a nivel general; no se infiere una residencia o edificio concreto.",
           "sourceUrls": [
             "https://ga.sbcr.jp/product/9784797372809/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-RECEIVES-FALNA-001",
+      "recordId": "EVT-DM-V01-BELL-RECEIVES-FALNA-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 615,
+      "title": "Bell recibe la Falna de Hestia en la biblioteca",
+      "dateLabel": "Después del primer encuentro Bell–Hestia; intervalo exacto no cuantificado.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "En la retrospectiva del epílogo, Hestia lleva a Bell a la biblioteca del segundo piso de una antigua tienda de libros y le concede la Falna. El sitio tiene valor personal para Hestia por su amor a los libros y porque desea que el inicio de su Familia esté rodeado de ellos.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "recibe la Falna"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "concede la Falna"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-BELL-MEETS-HESTIA-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La ceremonia ocurre después de que Bell acepta entrar a Hestia Familia; el texto no cuantifica el intervalo.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La ceremonia se enmarca en Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La ceremonia se enmarca en Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md"
           ]
         }
       ]
@@ -1008,6 +1093,653 @@
       ]
     },
     {
+      "id": "EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001",
+      "recordId": "EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 640,
+      "title": "Hephaistos entrega la Daga de Hestia a Hestia",
+      "dateLabel": "Después de que Bell ya forma parte de Hestia Familia y antes de la crisis del Festival; intervalo exacto desconocido.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hephaistos entrega a Hestia la daga negra y su vaina hecha para Bell. Hestia acepta el préstamo, no una condonación: la ficha visual especifica 35 años, 420 plazos y un contrato laboral en la sucursal de Babel de Hephaistos Familia.",
+      "participants": [
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "recibe la daga"
+        },
+        {
+          "name": "Hephaistos",
+          "kind": "character",
+          "role": "crea y entrega el arma"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-BELL-AIS-MINOTAUR-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La entrega es posterior a los primeros acontecimientos de Bell como aventurero y anterior al Festival; no se da cantidad de días.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La entrega ocurre en Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La entrega ocurre en Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001",
+      "recordId": "EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 650,
+      "title": "Bell y Hestia pasan tiempo juntos en el Festival de Monstruos",
+      "dateLabel": "Durante la jornada del Festival de Monstruos; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia encuentra a Bell entre la multitud. Ambos comparten comida y momentos de cercanía; Eina habla con Hestia y recibe una advertencia sobre mantener separados sus asuntos privados y profesionales respecto de Bell.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "acompaña a Hestia"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "pasa el festival con Bell"
+        },
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "interactúa con Hestia"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La cita tiene lugar durante el Festival después de que Hestia obtiene la daga.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "El Festival se celebra en el coliseo de Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "El Festival se celebra en el coliseo de Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001",
+      "recordId": "EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 660,
+      "title": "Freya neutraliza a los guardias y libera al Silverback",
+      "dateLabel": "Durante el Festival de Monstruos; antes de que el Silverback llegue a Bell y Hestia.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Freya utiliza su Encanto para incapacitar a los encargados de los establos, obtiene las llaves y libera a un Silverback concreto para que busque a Bell. El pasaje no demuestra que ella liberara personalmente los nueve monstruos reportados después.",
+      "participants": [
+        {
+          "id": "CHAR-FREYA",
+          "name": "Freya",
+          "kind": "character",
+          "role": "infiltra establos y libera al Silverback"
+        },
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "objetivo de la maniobra"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "objetivo indirecto de la persecución"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Sucede durante la misma jornada del Festival, antes de la persecución.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "Los establos forman parte del recinto del Festival en Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Los establos forman parte del recinto del Festival en Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001",
+      "recordId": "EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 670,
+      "title": "Ganesha y el Gremio responden a la fuga de nueve monstruos",
+      "dateLabel": "La fuga se confirma menos de cinco minutos antes del informe de Ganesha; el intervalo previo a la confirmación no se precisa.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Ganesha prioriza la seguridad de los civiles, ordena no provocar pánico y solicita ayuda a otras Familias. Eina organiza a los empleados del Gremio; Ais y Loki se suman a la intervención.",
+      "participants": [
+        {
+          "id": "CHAR-GANESHA",
+          "name": "Ganesha",
+          "kind": "character",
+          "role": "coordina la respuesta"
+        },
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "moviliza al Gremio"
+        },
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "responde a la emergencia"
+        },
+        {
+          "id": "DM-CHAR-LOKI",
+          "name": "Loki",
+          "kind": "character",
+          "role": "responde a la emergencia"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "El informe llega después de confirmarse la fuga; no se fija la distancia desde cada liberación.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "El incidente y la respuesta ocurren en Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "El incidente y la respuesta ocurren en Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001",
+      "recordId": "EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 680,
+      "title": "Bell protege a Hestia y es perseguido por el Silverback",
+      "dateLabel": "Durante la misma emergencia; se solapa con la respuesta pública a la fuga.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell protege a Hestia, es golpeado, ciega al Silverback con una lámpara de Piedra Mágica y la lleva por la Calle Dédalo. Decide actuar como señuelo y recuerda la muerte de su abuelo; Hestia regresa y rechaza abandonarlo.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "protege a Hestia y distrae al monstruo"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "acompañante y objetivo de la persecución"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "overlaps",
+        "referenceIds": [
+          "EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La persecución ocurre en paralelo a la respuesta del Gremio y Ganesha Familia.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La persecución recorre la Calle Dédalo de Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La persecución recorre la Calle Dédalo de Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001",
+      "recordId": "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 690,
+      "title": "Hestia actualiza el Estado de Bell y le entrega la Daga de Hestia",
+      "dateLabel": "Inmediatamente antes del combate final contra el Silverback.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia actualiza el Estado de Bell y le entrega la Daga de Hestia. Los valores narrativos son Fuerza E403, Resistencia H199, Destreza E412 y Agilidad D512; la ficha visual posterior muestra D521, discrepancia que queda abierta.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "recibe el arma y la actualización"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "actualiza la Falna y entrega la daga"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La actualización ocurre después de la persecución, en el callejón sin salida.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La escena ocurre en un callejón sin salida de la Calle Dédalo, Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La escena ocurre en un callejón sin salida de la Calle Dédalo, Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001",
+      "recordId": "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 691,
+      "title": "Bell derrota al Silverback con la Daga de Hestia",
+      "dateLabel": "Inmediatamente después de la actualización del Estado y la entrega de la daga.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell aplica el consejo de Eina y atraviesa la Piedra Mágica del Silverback con la Daga de Hestia. El monstruo se vuelve cenizas, los residentes de la Calle Dédalo celebran y Hestia colapsa por agotamiento.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "derrota al Silverback"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "colapsa tras la victoria"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "El combate comienza tras la actualización y la entrega de la daga.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "El combate ocurre en la Calle Dédalo de Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "El combate ocurre en la Calle Dédalo de Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001",
+      "recordId": "EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 692,
+      "title": "Hestia explica a Bell el origen de la daga y el acuerdo con Hephaistos",
+      "dateLabel": "Después de la derrota del Silverback y durante la recuperación de Hestia.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia explica que obtuvo la daga mediante un acuerdo de préstamo y trabajo con Hephaistos. Revela la creación vinculada a su cabello, sangre divina y Texto Sagrado, así como el crecimiento del arma junto al usuario.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "recibe la explicación"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "explica la creación y el acuerdo"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La explicación ocurre durante la recuperación posterior a la victoria.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La conversación ocurre en la Señora de la Abundancia, Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La conversación ocurre en la Señora de la Abundancia, Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md"
+          ]
+        }
+      ]
+    },
+    {
       "id": "EVT-DM-RYUU-JURA-PURSUIT-001",
       "recordId": "EVT-DM-RYUU-JURA-PURSUIT-001",
       "eraId": "ERA-06-MAIN-V13-14",
@@ -1087,6 +1819,149 @@
           "sourceUrls": [
             "https://yenpress.com/titles/9781975328191-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-13-light-novel",
             "https://danmachi.fandom.com/wiki/Timeline"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-AIS-UDAEUS-001",
+      "recordId": "EVT-DM-V02-AIS-UDAEUS-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 700,
+      "title": "Ais derrota a Udaeus en el piso 37",
+      "dateLabel": "Volumen 2 · día absoluto no fijado.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Ais derrota sola a Udaeus en el piso 37. El combate es el ancla del rumor separado de una semana después, no una confirmación de ascenso de nivel.",
+      "participants": [
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "derrota a Udaeus"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "En el tramo temprano de la historia principal, tras la llegada de Bell a Orario; el texto no fija la distancia ni el orden exacto respecto del Festival.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "Udaeus aparece en el piso 37 del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "Udaeus aparece en el piso 37 del Dungeon.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001",
+      "recordId": "EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 701,
+      "title": "Se difunde el rumor de que Ais alcanzó el nivel 6",
+      "dateLabel": "Exactamente una semana después del combate de Ais contra Udaeus.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Una semana después del combate, el texto dice que se extendió por Orario el rumor de que la Princesa de la Espada había alcanzado el nivel 6. Se registra como rumor, no como un Estado confirmado.",
+      "participants": [
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "objeto del rumor"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "anchorId": "EVT-DM-V02-AIS-UDAEUS-001",
+        "anchorLabel": "combate de Ais contra Udaeus",
+        "direction": "after",
+        "amount": 1,
+        "unit": "week",
+        "precision": "exact",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "El rumor se extiende por las calles de Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "El rumor se extiende por las calles de Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md"
           ]
         }
       ]
@@ -1184,6 +2059,155 @@
       ]
     },
     {
+      "id": "EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001",
+      "recordId": "EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 710,
+      "title": "Bell obtiene Firebolt al leer el Grimorio",
+      "dateLabel": "Volumen 2 · fecha exacta no fijada.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell obtiene Firebolt tras leer el Grimorio prestado por Seal. Hestia identifica el libro y explica su función.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "obtiene Firebolt"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "identifica el Grimorio"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Durante el arco inicial de Bell en Orario; la distancia desde T0 y el orden paralelo respecto de la escena de Udaeus no quedan fijados aquí.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La lectura del Grimorio ocurre en la base de Hestia Familia, Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La lectura del Grimorio ocurre en la base de Hestia Familia, Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001",
+      "recordId": "EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 715,
+      "title": "Bell agota sus pociones de recuperación",
+      "dateLabel": "Exactamente tres días antes de la visita a Naaza.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell recuerda que agotó todas sus pociones de recuperación durante una exploración del Dungeon tres días antes de visitar la tienda de Naaza.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "consume sus pociones"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "anchorId": "EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001",
+        "anchorLabel": "visita de Bell a la tienda de Naaza",
+        "direction": "before",
+        "amount": 3,
+        "unit": "day",
+        "precision": "exact",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "dungeon_general",
+        "reason": "Bell señala que las consumió durante una exploración del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "dungeon_general",
+          "context": "Bell señala que las consumió durante una exploración del Dungeon.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md"
+          ]
+        }
+      ]
+    },
+    {
       "id": "EVT-DM-JUGGERNAUT-DEFEAT-001",
       "recordId": "EVT-DM-JUGGERNAUT-DEFEAT-001",
       "eraId": "ERA-06-MAIN-V13-14",
@@ -1257,6 +2281,776 @@
           "context": "Dentro del Dungeon durante la crisis descrita como piso 37; sin ficha de piso ni coordenada.",
           "sourceUrls": [
             "https://yenpress.com/titles/9781975385019-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-vol-14-light-novel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-FIREBOLT-TEST-001",
+      "recordId": "EVT-DM-V02-BELL-FIREBOLT-TEST-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 720,
+      "title": "Bell prueba Firebolt y sufre agotamiento mental",
+      "dateLabel": "Volumen 2 · varias pruebas; una ocurre la noche anterior a la visita a Naaza.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell prueba Firebolt en el Dungeon y sufre agotamiento mental. El pasaje de Naaza confirma que la prueba que provocó el desmayo ocurrió la noche anterior a la visita.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "prueba Firebolt"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Después de obtener Firebolt; el volumen menciona varias pruebas y no reduce todos los ensayos a un solo momento.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "dungeon_general",
+        "reason": "Bell prueba la magia durante una exploración del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "dungeon_general",
+          "context": "Bell prueba la magia durante una exploración del Dungeon.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001",
+      "recordId": "EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 730,
+      "title": "Bell compra a Naaza una poción de recuperación de Poder Mental",
+      "dateLabel": "Durante la jornada de la visita a la tienda Miach; tres días después de agotar las pociones normales.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Naaza identifica agotamiento mental y vende una poción de recuperación de Poder Mental por 8.700 Varisu; agrega dos pociones normales y ofrece todo por 9.000 Varisu.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "compra pociones"
+        },
+        {
+          "name": "Naaza",
+          "kind": "character",
+          "role": "vendedora de Miach Familia"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-FIREBOLT-TEST-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La visita sigue al uso de Firebolt de la noche anterior; la fecha absoluta no se especifica.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La tienda de Miach Familia está en Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La tienda de Miach Familia está en Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001",
+      "recordId": "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 731,
+      "title": "Bell ve a Lili rodeada por aventureros y es confrontado",
+      "dateLabel": "Después de comprar pociones a Naaza; el intervalo hasta la siguiente expedición no se cuantifica.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell observa a Lili rodeada por aventureros asociados a Soma Familia y un hombre lo detiene para preguntarle si la ha contratado.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "presencia el acoso"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "es increpada"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "El encuentro sigue a la visita de Bell a la tienda de Naaza.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La escena ocurre en la Plaza Central de Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La escena ocurre en la Plaza Central de Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001",
+      "recordId": "EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 735,
+      "title": "Lili observa a Bell utilizar Firebolt",
+      "dateLabel": "Exactamente el día anterior a la expedición al piso 10; el hecho se relata retrospectivamente.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell recuerda que el día anterior dejó que Lili lo viera utilizar Firebolt. La escena de la demostración no se narra íntegramente en este localizador.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "muestra Firebolt"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "observa Firebolt"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "anchorId": "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001",
+        "anchorLabel": "expedición de Bell y Lili al piso 10",
+        "direction": "before",
+        "amount": 1,
+        "unit": "day",
+        "precision": "exact",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "dungeon_general",
+        "reason": "El pasaje sitúa la mención en la preparación de la expedición; el lugar exacto de la demostración no vuelve a precisarse."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "dungeon_general",
+          "context": "El pasaje sitúa la mención en la preparación de la expedición; el lugar exacto de la demostración no vuelve a precisarse.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001",
+      "recordId": "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 740,
+      "title": "Bell y Lili combaten Ogros y afrontan la emboscada del piso 10",
+      "dateLabel": "Volumen 2 · incursión al piso 10.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell y Lili llegan al piso 10 tras atravesar los pisos 8 y 9 durante unos días. Combaten Ogros; uno utiliza un árbol del entorno como arma del Arsenal del Dungeon.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "combate a los Ogros"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "acompaña a Bell"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Después del encuentro de Bell con los aventureros que increpan a Lili; el texto describe «unos días» para atravesar los pisos 8 y 9 y un intervalo de un día entre la demostración de Firebolt y la incursión.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "La lucha ocurre en el piso 10 del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "La lucha ocurre en el piso 10 del Dungeon.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-LILI-ABANDONS-BELL-001",
+      "recordId": "EVT-DM-V02-LILI-ABANDONS-BELL-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 750,
+      "title": "Lili toma la Daga de Hestia y abandona a Bell",
+      "dateLabel": "Durante la emboscada en el piso 10.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Lili recupera la Daga de Hestia y abandona a Bell entre los monstruos. Su traición a Bell se conserva separada de la traición que ella sufre después.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "es abandonado"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "toma la daga y huye"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Ocurre durante la continuación de la emboscada.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "La separación sucede durante la emboscada del piso 10."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "La separación sucede durante la emboscada del piso 10.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001",
+      "recordId": "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 760,
+      "title": "Miembros de Soma Familia traicionan a Lili y la dejan como cebo",
+      "dateLabel": "Después de que Lili abandona a Bell; intervalo adicional no especificado.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Kanu y otros miembros de Soma Familia traicionan a Lili, exigen la llave de su caja fuerte de joyas de Gnomo y la dejan como cebo ante las Hormigas Asesinas. El rescate de Bell se registra por separado.",
+      "participants": [
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "es traicionada"
+        },
+        {
+          "name": "Kanu",
+          "kind": "character",
+          "role": "miembro de Soma Familia que participa en la traición"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-LILI-ABANDONS-BELL-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Después de que Lili abandona a Bell; no se fija un intervalo adicional.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "La traición sucede en el Dungeon durante la huida de Lili."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "La traición sucede en el Dungeon durante la huida de Lili.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001",
+      "recordId": "EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 770,
+      "title": "Bell rescata a Lili de las Hormigas Asesinas y ambos se reconcilian",
+      "dateLabel": "Después de la traición de miembros de Soma Familia; mismo episodio.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Firebolt interrumpe el ataque de las Hormigas Asesinas. Bell encuentra a Lili, usa la poción de Poder Mental comprada a Naaza, combate con Firebolt y sus dagas y escucha su confesión; ambos se reconcilian.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "rescata a Lili"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "es rescatada y se disculpa"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Firebolt interrumpe la situación y Bell interviene durante la misma secuencia.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "La escena sucede en el Dungeon entre Hormigas Asesinas."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "La escena sucede en el Dungeon entre Hormigas Asesinas.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-AND-LILI-REHIRE-001",
+      "recordId": "EVT-DM-V02-BELL-AND-LILI-REHIRE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 780,
+      "title": "Bell y Lili se reencuentran en Babel y vuelven a formar equipo",
+      "dateLabel": "Exactamente dos días después de la separación tras el rescate.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Tras dos días sin contacto, Bell encuentra a Lili frente a la puerta oeste de Babel y le ofrece volver a trabajar con él como Ayudante. Lili acepta y ambos reinician el equipo.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "vuelve a contratar a Lili"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "acepta volver como Ayudante"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "anchorId": "EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001",
+        "anchorLabel": "separación de Bell y Lili después del rescate",
+        "direction": "after",
+        "amount": 2,
+        "unit": "day",
+        "precision": "exact",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "El reencuentro ocurre en la puerta oeste de Babel, Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "El reencuentro ocurre en la puerta oeste de Babel, Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001",
+      "recordId": "EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 790,
+      "title": "Ais encuentra el Protector de Jade de Bell",
+      "dateLabel": "Volumen 2 · epílogo; fecha exacta abierta.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Ais busca a Bell por el piso 10 a petición de Eina y encuentra el Protector de Jade desgastado entre la hierba. El epílogo no fija la distancia temporal exacta desde el reencuentro de Bell y Lili.",
+      "participants": [
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "encuentra el objeto"
+        },
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "propietario del Protector de Jade"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-AND-LILI-REHIRE-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "El epílogo aparece después del reencuentro; el intervalo exacto es desconocido.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "Ais encuentra el objeto en el piso 10 del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "Ais encuentra el objeto en el piso 10 del Dungeon.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md"
           ]
         }
       ]

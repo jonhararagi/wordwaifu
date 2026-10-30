@@ -17,7 +17,7 @@ tags: [volume-02, events, Bell, Liliruca, Ais, Firebolt, Soma Familia]
 - **Traducción consultada:** española privada, atribuida en el documento a Kurosaki-Vizard Translation y descrita por el usuario como una traducción realizada como favor. No es una edición editorial española; esto no convierte la obra original en fanfiction ni en fuente secundaria.
 - **Continuidad:** `CONT-MAIN-LN`.
 - **Límite:** la fidelidad de la traducción no se ha cotejado con el japonés ni con otra edición. Los eventos se registran como lectura directa de la traducción aportada, con esa reserva explícita.
-- **Lectura anterior registrada:** texto extraíble de PDF pp. 9–243 leído sustancialmente; páginas sin extracción legible y páginas iniciales sin inspección visual siguen anotadas en `botimagen-referencias-privadas/danmachi/BITACORA.md`. No afirmar inspección visual completa página por página.
+- **Lectura anterior registrada:** texto extraíble de PDF pp. 9–243 leído sustancialmente; algunas páginas no devolvieron texto extraíble y las páginas finales 244–245 son fichas visuales. No afirmar inspección visual completa página por página.
 
 ## Acontecimientos extraídos
 
@@ -60,13 +60,13 @@ tags: [volume-02, events, Bell, Liliruca, Ais, Firebolt, Soma Familia]
 - **Contexto narrativo:** las revelaciones posteriores detallan sus motivos instrumentales, la historia de abuso/exclusión y su experiencia dentro de Soma Familia; no reducir la decisión a una etiqueta de personalidad permanente.
 - **Relación temporal:** ocurre después de la separación/emboscada del piso 10.
 
-### EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001 — Traición a Lili y rescate por Bell
-- **Localizador:** PDF pp. 213–237, con detalles de la historia de Lili especialmente pp. 213–229 y 234–237.
-- **Participantes:** Liliruca Arde; Bell Cranel; miembros de Soma Familia.
-- **Lugar:** piso 10 del Dungeon.
-- **Hecho:** después de usar a Bell y separarse de él, Lili es traicionada por miembros de Soma Familia. Bell interviene y la rescata.
-- **Consecuencia inmediata:** Bell y Lili reanudan su relación de equipo en la entrada de Babel (PDF pp. 237–240).
-- **No inferir:** que toda la Familia Soma participe en la traición ni que las acciones de los individuos describan a cada miembro.
+### EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001 — Miembros de Soma traicionan a Lili
+- **Localizador:** PDF pp. 221–230; la entrega de la llave y el abandono como cebo se desarrollan dentro de esta secuencia.
+- **Participantes:** Liliruca Arde; Kanu y otros miembros de Soma Familia; Gedo y sus colaboradores en la persecución anterior.
+- **Lugar:** Dungeon, durante la huida de Lili.
+- **Hecho:** Lili intenta escapar de Gedo y sus colaboradores; Kanu y otros integrantes de Soma la hacen entregar la llave de una caja fuerte con joyas de Gnomo y la abandonan como cebo frente a las Hormigas Asesinas.
+- **Separación:** el rescate y la reconciliación con Bell se registran en EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001 (PDF pp. 230–237); el reencuentro y nueva contratación se registran en EVT-DM-V02-BELL-AND-LILI-REHIRE-001 (PDF pp. 237–240).
+- **No inferir:** que toda la Familia Soma participe en la traición ni que las acciones de estos individuos describan a cada miembro.
 
 ### EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001 — Ais encuentra el Protector de Jade
 - **Localizador:** PDF pp. 242–243, epílogo.
@@ -84,7 +84,72 @@ tags: [volume-02, events, Bell, Liliruca, Ais, Firebolt, Soma Familia]
 
 ## Fuentes y verificación
 
-- `DMR-060-SRC-001`: PDF aportado por el usuario; obra original oficial, traducción española privada no cotejada.
+- DMR-060-SRC-001: PDF aportado por el usuario; obra original oficial, traducción española privada no cotejada. Créditos impresos: Sorotrans (versión inglesa), Mugetsu123 (traducción inglés-español, corrección y edición); Kurosaki-Vizard Translation es marca de agua.
 - Los localizadores son páginas físicas del PDF, no paginación impresa.
 - No se añaden datos de wiki, anime, juego o Astrea Record a estos acontecimientos.
-- Los eventos no fijan fechas absolutas porque el volumen no las proporciona en los pasajes localizados.
+- Los eventos no fijan fechas absolutas porque el volumen no las proporciona. Se conservan offsets explícitos de una semana, tres días, un día y dos días, referidos a eventos identificables y sin fabricar fechas calendáricas.
+- La travesía de los pisos 8 y 9 se describe como «unos días»; se conserva el intervalo impreciso, sin convertirlo en cifra exacta.
+- Las fichas visuales adicionales del PDF pp. 244–245 contienen datos de Lili: Hobbit, Supporter, nivel 1; Fuerza I42, Resistencia I42, Destreza H143, Agilidad G285, Magia F317; magia Cinder Ella, skill Héroe Anónimo y Ballesta Pequeña. También se describen los Guantes de Ayudante como desechables tras uso y útiles contra ácidos/efectos anormales. Estos datos quedan sujetos a la reserva de traducción privada.
+
+
+### EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001 — Rumor de que Ais alcanza nivel 6
+- **Localizador:** PDF p. 111.
+- **Ancla:** exactamente una semana después del combate contra Udaeus.
+- **Estado:** el texto lo formula como rumor extendido por Orario; no presenta una ficha de Estado que confirme el ascenso.
+
+### EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001 — Bell agota sus pociones normales
+- **Localizador:** PDF p. 167, recuerdo durante la visita a Naaza.
+- **Ancla:** exactamente tres días antes de la visita a la tienda de Naaza.
+- **Límite:** no se identifican en ese recuerdo todos los monstruos, participantes o pisos de la expedición.
+
+### EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001 — Bell compra una poción de Poder Mental
+- **Localizador:** PDF pp. 167–169.
+- **Hechos:** Naaza diagnostica agotamiento mental; ofrece una poción de Poder Mental por 8.700 Varisu y dos pociones normales adicionales, total 9.000 Varisu.
+- **Relación temporal:** Bell recuerda un desmayo por Firebolt la noche anterior.
+
+### EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001 — Bell ve a Lili rodeada por aventureros
+- **Localizador:** PDF pp. 169–170.
+- **Hecho:** Bell ve a tres aventureros con insignia de Soma Familia increpando a Lili; otro hombre detiene a Bell y le pregunta si la contrató.
+- **Límite:** no asignar identidad definitiva ni atribuir todo el plan antes de que la secuencia lo revele.
+
+### EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001 — Lili ve a Bell usar Firebolt
+- **Localizador:** PDF p. 198, recuerdo de Bell.
+- **Ancla:** Bell afirma que dejó que Lili lo viera usar Firebolt el día anterior a la expedición al piso 10.
+- **Límite:** la demostración no se vuelve a narrar con lugar, duración o número de lanzamientos.
+
+### EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001 — Bell rescata a Lili y ambos se reconcilian
+- **Localizador:** PDF pp. 230–237.
+- **Hechos:** Bell irrumpe con Firebolt, usa la poción de Poder Mental de Naaza, combate con sus dos dagas y rescata a Lili de un grupo de alrededor de treinta Hormigas Asesinas. Lili confiesa los engaños sobre el dinero y los precios; Bell le dice que la salvó por ser ella y porque no quiere que desaparezca.
+- **Límite:** ambos se reconcilian tras la confesión.
+
+### EVT-DM-V02-BELL-AND-LILI-REHIRE-001 — Bell y Lili vuelven a formar equipo
+- **Localizador:** PDF pp. 237–240.
+- **Ancla:** exactamente dos días después de la separación posterior al rescate.
+- **Hecho:** Bell encuentra a Lili en la puerta oeste de Babel y le ofrece volver como Ayudante; ambos acuerdan comenzar de nuevo como equipo de dos.
+
+
+## Fichas visuales verificadas directamente en el PDF físico (pasada visual parcial)
+
+La inspección directa/renderizado de los últimos folios confirma:
+- **PDF p. 244 — ficha de Liliruca:** afiliación Soma Familia; raza Hobbit; clase Ayudante; piso alcanzado 11; armas daga, arco y flecha; dinero 300 Varisu. Los Guantes de Ayudante sirven para manipular cadáveres de monstruos, se desechan tras el uso, protegen contra corrosión de ácidos fuertes y resisten efectos anormales. La ficha indica que hay varios colores y el favorito de Lili es marrón.
+- **PDF p. 245 — Estado de Liliruca:** Lv.1; Fuerza I42; Resistencia I42; Destreza H143; Agilidad G285; Magia F317. Cinder Ella se describe como magia de transformación basada en la imaginación expresada al cantar; puede fallar si falta precisión y se recomienda para imitación. La ficha muestra el canto de transformación «Tu grabado me pertenece a mí. Mis grabados todavía me pertenecen a mí» y el de liberación «El eco es la señal de la medianoche». Héroe Anónimo se activa cuando el peso del equipo excede cierto límite y aumenta Estado/peso proporcionalmente.
+- **PDF p. 245 — Ballesta Pequeña:** fabricada por Goibniu Familia y diseñada para Hobbits; alto poder destructivo para su tamaño, carga manual para disparos continuos, alcance algo corto y flechas separadas permiten cambiar potencia y distancia de vuelo.
+- **PDF p. 246 — créditos impresos:** versión inglesa Sorotrans; traducción inglés-español, corrección y edición Mugetsu123. La marca «Kurosaki-Vizard Translation» aparece en la cabecera como marca de agua.
+- **Conteo físico confirmado:** el archivo tiene 246 páginas (comprobado con pdfinfo y render físico de las páginas 244–246). El lector indexado de páginas de la herramienta de extracción indicó un límite en p.243; para estos folios se usó renderizado directo del PDF físico, que prevalece para su paginación.
+
+**Límite:** esta inspección visual cubre los últimos folios y no constituye inspección visual completa de las 246 páginas.
+
+
+## Registro visual inicial (inspección renderizada, no total)
+
+- **PDF p. 1:** cubierta a color del volumen 2.
+- **PDF pp. 2–4:** portadillas/arte interior; p. 4 muestra una composición gráfica con el título.
+- **PDF p. 5:** ilustración a color de dos personajes sin rótulos de nombre; conservar sin atribución hasta confirmación textual.
+- **PDF p. 6:** retrato a color sin nombre legible en el propio folio; no asignar identidad solo por apariencia.
+- **PDF pp. 7–8:** portadilla y escena de apertura del prólogo con una figura encapuchada/sombreada; no atribuir identidad aún.
+- **PDF p. 11:** ilustración monocroma de una Hobbit junto a la apertura del capítulo 1, titulado «Supporter»; la identificación con Liliruca se vincula por la secuencia y su descripción posterior, no por rótulo explícito de nombre en la ilustración.
+- **PDF p. 244:** ficha de Liliruca y Guantes de Ayudante.
+- **PDF p. 245:** Estado, Cinder Ella, Héroe Anónimo y Ballesta Pequeña.
+- **PDF p. 246:** créditos visuales, confirma Sorotrans / Mugetsu123 y marca de agua Kurosaki-Vizard.
+
+No se ha inspeccionado visualmente cada folio de los 246.

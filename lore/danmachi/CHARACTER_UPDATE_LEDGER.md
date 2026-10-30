@@ -484,3 +484,15 @@ Fuentes consultadas:
 - **CI post-merge sobre el SHA exacto:** [Validate #40952682496](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682496) y [Lore/Integrity #40952682505](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682505), ambos `success`.
 - **Resultado:** tres identidades existentes enriquecidas con notas interactivas `CONT-SECONDARY`; cinco fuentes registradas; tests de recuperación, conflicto EN/ES y aislamiento de continuidad aprobados.
 - **Límite:** no se validaron narrativamente las wikis; costes y localizadores ausentes siguen pendientes. DMR-045 continúa abierto.
+
+
+## DMR-060 / DMR-061 — primera pasada narrativa de volúmenes 1 y 2 (2026-10-29)
+
+- **Material:** Volumen 1 y Volumen 2 PDF aportados por el usuario; novela ligera original oficial, traducciones privadas no cotejadas.
+- **Lectura secuencial:** V1 PDF pp. 1–214 y V2 PDF pp. 1–243 revisados sustancialmente en bloques. Algunas páginas no devolvieron texto extraíble; no se declara cotejo de cada línea.
+- **V1:** encuentro Bell–Hestia y Falna, entrega de Daga de Hestia, Festival, Encanto de Freya y fuga de un Silverback, respuesta de Ganesha/Gremio, persecución, actualización de Bell, derrota del Silverback y explicación del préstamo/arma. IDs enumerados en DMR-061.
+- **V2:** rumor de Ais una semana después de Udaeus; Bell agota pociones tres días antes de Naaza; compra de poción; hostigamiento a Lili; Lili observa Firebolt el día previo al piso 10; traición a Lili, rescate/reconciliación y reencuentro dos días después. IDs enumerados en DMR-060.
+- **Corrección de atribución:** prueba de Firebolt y vuelta de Ais del piso 37 no corresponden a V1 pp. 153–158; esa atribución previa se retira. La lectura directa de V1 pp. 141–160 muestra la cita Bell–Hestia y comienzo del Festival.
+- **Visual:** V1 pp. 208–209 y V2 pp. 244–245 incorporan fichas y datos no presentes en la narración continua. La inspección visual completa permanece pendiente.
+- **Bitácora de personaje:** no se añade signo + ni se declara pasada individual completa de 5–10 min para Bell, Hestia, Lili, Ais, Freya o Eina; esta tanda es una extracción por volumen, no una revisión individual cronometrada.
+- **Próximo paso:** completar páginas iniciales V1 con localizadores, inspección visual página a página, cotejo de perfiles/objetos/estadísticas y pruebas de cronología interactiva antes de integrar a main.

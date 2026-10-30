@@ -7,7 +7,11 @@
 - [DANMACHI-RESEARCH-059](research/inbox/DANMACHI-RESEARCH-059-loki-trio-capabilities.md) — Finn Deimne, Riveria Ljos Alf y Gareth Landrock; capacidades secundarias, condiciones, discrepancia EN/ES de Finn y separación de Flare Burn congénita.
 - [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
 
-## Extracción de acontecimientos por volumen\n\n- [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — siete acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y separación entre escenas de combate, adquisición/prueba de magia, traición, rescate y hallazgo de objeto. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.\n\n## Índices de personajes e historias por continuidad
+## Extracción de acontecimientos por volumen
+
+- [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — siete acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y separación entre escenas de combate, adquisición/prueba de magia, traición, rescate y hallazgo de objeto. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.
+
+## Índices de personajes e historias por continuidad
 
 - [Índice maestro de personajes](characters/00-indice-personajes.md) — identidades, alias, estado de ficha y rutas de investigación.
 - [Índice narrativo de la Era Oscura](characters/dark-era/00-indice-era-oscura.md) — protagonistas, antagonistas, Evilus y rutas temporales separadas.
@@ -411,3 +415,12 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - CI post-merge verificado sobre el SHA exacto de `main`: [Validate #40862327265](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327265) y [Lore/Integrity #40862327234](https://github.com/jonhararagi/wordwaifu/actions/runs/40862327234), ambos `success`.
 - DMR-045 sigue `IN_PROGRESS`: no se obtuvo texto narrativo nuevo y no se cerró ninguno de los cinco cotejos primarios.
 
+
+
+## DANMACHI-RESEARCH-061 — extracción del volumen 1 (CONT-MAIN-LN)
+- [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — primer encuentro Bell–Hestia y Falna; Festival, Freya/Silverback, persecución, actualización de Estado, derrota y Daga de Hestia. Traducción privada sin cotejo; pasadas visuales pendientes.
+- [Dossier volumen 1](volumes/main/volume-01.md) y [índice de eventos](events/00-indice-candidatos.md).
+
+## DANMACHI-RESEARCH-060 — ampliación del volumen 2 (CONT-MAIN-LN)
+- [Expediente DMR-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — eventos adicionales de Naaza, hostigamiento a Lili, Firebolt observado, rescate y reconciliación, recontratación dos días después y rumor de Ais una semana después de Udaeus.
+- La cronología interactiva incluye ahora 38 acontecimientos, con offsets relativos enlazados a eventos y fuente, sin fechas absolutas inventadas.

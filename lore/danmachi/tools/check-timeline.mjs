@@ -43,7 +43,7 @@ if(!locationCatalogReport.valid)for(const error of locationCatalogReport.errors)
 const temporalReport=timelineValidator.validateDataset(timeline);
 if(!temporalReport.valid)for(const error of temporalReport.errors)errors.push("Temporal model: "+error);
 if(temporalReport.legacyTemporalModel)errors.push("Current DanMachi timeline dataset must use the explicit temporal model.");
-if(temporalReport.temporalEventCount!==15)errors.push("Expected typed temporal model on 15 events; got "+temporalReport.temporalEventCount+".");
+if(temporalReport.temporalEventCount!==timeline.events.length)errors.push("Expected typed temporal model on all "+timeline.events.length+" events; got "+temporalReport.temporalEventCount+".");
 console.log("DanMachi timeline check: "+timeline.eras.length+" eras, "+timeline.events.length+" events, "+catalog.records.length+" catalog records; temporal model v"+temporalReport.temporalModelVersion+"; "+temporalReport.locationCount+" places / "+temporalReport.locationRefCount+" location links / "+temporalReport.unknownEventCount+" unknown / "+temporalReport.provisionalEventCount+" provisional events.");
 if(errors.length){for(const e of errors)console.error("ERROR: "+e);console.error("FAILED with "+errors.length+" error(s).");process.exit(1);}
 console.log("PASS: era hierarchy, source routes, catalog links, T−7/T−5 separation, event-to-place references, place type/path integrity and no-coordinate schematic validated.");

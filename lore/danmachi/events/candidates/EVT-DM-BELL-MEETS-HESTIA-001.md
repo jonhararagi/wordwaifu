@@ -2,7 +2,7 @@
 id: EVT-DM-BELL-MEETS-HESTIA-001
 universe: danmachi
 type: event
-status: source_checked_partial
+status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 spoiler_level: mild
 source_refs:

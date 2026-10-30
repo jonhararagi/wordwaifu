@@ -779,3 +779,15 @@
 - **Corrección de precisión:** la PR #207 documenta una pasada pública individual y las rutas consultadas para Alfia, Zald, Meteria, Erebus y Rudra, pero no conserva hora de inicio/fin ni medición de duración por personaje.
 - **Regla:** no afirmar que los 5–10 minutos se cumplieron ni usar el signo `+` como prueba de duración. `+` significa únicamente que la pasada y sus resultados quedaron registrados. En futuras tandas, registrar por personaje el tiempo real solo si existe evidencia temporal verificable; no inventarlo retrospectivamente.
 - **Integración PR #207:** merge SHA `720d7c3ac1c9e9d02696510de97b8cc19289b8b0`; CI pre-merge sobre `d265131abb3d57e9f6d8a7432a21f80aea007db3`: Validate #40959812375 y Lore/Integrity #40959812485, ambos `success`.
+
+
+### CONV-DM-2026-10-29-017 — Cronología con intervalos explícitos entre acontecimientos
+
+- **Fecha:** 2026-10-29.
+- **Estado:** ACCEPTED e implementado en rama de trabajo; integración pendiente de CI y PR.
+- **Instrucción:** preservar las expresiones temporales del texto («una semana después», «tres días antes», «dos días después», «al día siguiente»), incluso cuando no exista fecha exacta de calendario. No transformar una duración imprecisa («unos días») en número exacto.
+- **Representación técnica:** los offsets temporales pueden referirse a otro evento existente, no solo a T0; la validación debe comprobar que el evento ancla exista y que no se creen ciclos temporales. Se registra origen, localizador y estado de precisión.
+- **Aplicación:** DMR-060 y DMR-061 en CONT-MAIN-LN; rumores siguen como rumor, traducción privada no cotejada.
+- **Corrección de fuente:** los créditos impresos de ambos PDFs indican versión inglesa Sorotrans y traducción inglés-español/corrección/edición Mugetsu123. Kurosaki-Vizard Translation aparece como marca de agua, no crédito exclusivo.
+- **Alcance abierto:** la primera pasada narrativa de V1/V2 está sustancialmente terminada; inspección visual completa, cotejo de personajes y pruebas de regresión/CI continúan pendientes. No marcar + ni declarar una revisión individual cronometrada por la extracción grupal.
+
