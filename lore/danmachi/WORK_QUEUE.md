@@ -1190,3 +1190,11 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Inspección visual:** PDF pp. 55–60 renderizadas e inspeccionadas; seis folios de texto continuo, sin ilustraciones. El sistema de lectura de archivos no entregó imágenes embebidas, por lo que se renderizaron desde el PDF local.
 - **Sesión horaria (Argentina, UTC−03:00):** inicio 10:18:01; límite de seis minutos 10:24:01. Cierre y estado final se añaden al terminar la sesión. La sesión no autoriza continuar después del límite.
 - **Otras tareas aún abiertas:** cinco pasadas; visual pp. 19–21 y 23–24; cotejo individual completo; contraste web secundario separado; revisión pendiente de PR #209 sin mezclarla con esta extracción V1.
+
+### Checkpoint de lectura primaria DMR-061 · PDF pp. 61–66
+- **Estado:** páginas leídas secuencialmente; próximo folio PDF p. 67.
+- **Contenido:** Bell paga su pasta y describe los gastos de su equipo; Seal explica datos de la taberna y de su jefa Mia; entra un grupo de la Familia Loki; Bell reconoce a Ais y oye a los aventureros contar el rescate del Minotauro y la historia del «chico tomate».
+- **Personajes/entidades:** existe CHAR-MIA-GRAND, pero su alcance actual es CONT-ANIME; no introducir su apellido, nivel o datos de adaptación como hechos de CONT-MAIN-LN. El texto de p. 62 solo dice «Mia». No crear fichas por la observación grupal de empleados ni por el hombre bestia sin nombre.
+- **Eventos:** pp. 65–66 amplían como relato posterior el mismo rescate ya registrado en EVT-DM-BELL-AIS-MINOTAUR-001; no crear otro ID para ese combate. La visita de Bell a la taberna queda como evento candidato pendiente de catálogo y posterior decisión de registro.
+- **Inspección visual:** PDF pp. 61–66 renderizadas a 110 dpi e inspeccionadas; son páginas de texto continuo, sin ilustraciones.
+- **Otras tareas abiertas:** cinco pasadas; inspección visual pp. 19–21, 23–24 y 49–54; cotejos individuales y contraste secundario separado; revisión PR #209 sin mezclarla con DMR-061.
