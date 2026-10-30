@@ -1153,3 +1153,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Ejecutar las pruebas de cronología, validadores y CI; crear PR a main después de corregir fallos y revisar diff. No declarar integración hasta merge y CI post-merge.
 - **Signo +:** no se añade a los seis personajes por esta pasada grupal. Una pasada individual de 5–10 min debe registrarse por personaje con los cambios concretos y los lugares consultados; no afirmar duración si no se cronometra.
 - **Estado:** IN_PROGRESS. Primera pasada narrativa sustancial terminada hasta el límite extraíble; pasada visual parcial; pasadas 3–5 pendientes.
+
+## DMR-060/061 — checkpoint de lectura 2026-10-30 (bloque máximo 5 minutos)
+
+- [x] Reanudar lectura en los dos archivos originales, sin unir los volúmenes.
+- [x] Revisar visualmente V1 PDF pp. 1–7 y V2 PDF pp. 1–8; registrar rotulación visible y no asignar identidades desde ilustraciones sin nombre.
+- [x] Leer el texto narrativo disponible en V1 PDF pp. 9–10: sueño heroico de Bell y persecución por Minotauro; usar el evento Minotauro existente, sin duplicarlo.
+- [x] Leer V2 PDF pp. 9–10: descripción del rol de Ayudante y del desprecio que sufre; narrador sin nombre explícito en estas páginas, identidad pendiente de corroboración textual.
+- [ ] Continuar desde PDF p. 11 de ambos volúmenes; no saltar páginas ni suponer que los folios con extracción vacía han sido leídos.
+- [ ] Completar revisión visual a página completa; las hojas de contacto anteriores no equivalen a inspeccionar cada folio.
+- [ ] Seguir con cotejo individual de personajes/objetos/estadísticas y auditoría de duplicados.
+- [ ] Validar cronología y PR #209 sobre su SHA final; no integrar a main hasta CI en verde en el SHA exacto y revisión del diff.
+- **Estado al pausar:** PR #209 abierto; SHA observado a354854ba89fce6b085a508ab579f50eb2679a0d. En ese SHA no aparecían checks ni workflows asociados; no se declara test local ni CI validado. Los workflows existentes de SHAs anteriores no sustituyen evidencia sobre el HEAD actual.
+- **Regla temporal:** conservar «una semana después», «tres días antes», «un día antes» y «dos días después» como offsets relativos ligados al evento de referencia; nunca convertirlos en fechas absolutas inventadas.
