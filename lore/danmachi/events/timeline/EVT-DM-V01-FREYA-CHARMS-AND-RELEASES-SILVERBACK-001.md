@@ -4,43 +4,37 @@ universe: danmachi
 type: event
 status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
-time_anchor: relative_sequence
+time_anchor: festival_day
 source_verification: user_supplied_private_translation_not_crosschecked
-source_refs:
-  - DMR-061-SRC-001
-source_locators:
-  - PDF pp. 159–164
+source_refs: [DMR-061-SRC-001]
+source_locators: ["PDF pp. 160–164"]
 spoiler_level: major
 ---
+# Freya neutraliza a los guardias y libera un Silverback
 
-# Freya neutraliza a los guardias y libera al Silverback
-
-## Localizador y alcance
-- **Fuente:** DMR-061-SRC-001.
-- **Localizador:** PDF pp. 159–164.
-- **Continuidad:** CONT-MAIN-LN.
-- **Verificación:** la obra original es oficial; la traducción española consultada es privada y no se ha cotejado con el japonés.
+## Localizador
+- Volumen 1, PDF físico pp. 160–164.
+- Fuente: DMR-061-SRC-001; traducción privada/no cotejada.
 
 ## Ancla temporal
-Durante el Festival de Monstruos, antes de que el Silverback alcance a Bell y Hestia; momento calendario desconocido.
-
-## Relación temporal
-Después de EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001
+Durante el Festival de Monstruos, antes de que el Silverback alcance a Bell y Hestia.
 
 ## Resumen
-Freya utiliza su Encanto para incapacitar a los responsables de los establos y obtener las llaves. Luego libera a un Silverback concreto y lo dirige hacia Bell. El texto no afirma que Freya liberara personalmente los nueve monstruos que más tarde se reportan escapados.
+Freya utiliza el Encanto para incapacitar a empleados y guardias en los establos subterráneos del coliseo. Obtiene las llaves, selecciona un Silverback y lo libera para que busque a Bell.
 
 ## Participantes
-Freya; personal del Gremio y Ganesha Familia; Silverback
+- Freya.
+- Personal de los establos y miembros de Ganesha Familia afectados por el Encanto.
+- Un Silverback concreto.
 
-## Detalles registrados
-- Los guardias y empleados afectados siguen vivos y no presentan heridas externas; quedan sin voluntad y sin fuerza para actuar.
-- Freya obtiene las llaves preguntando por los establos de monstruos.
-- Al retirar su capa, los monstruos reaccionan a su belleza/Encanto.
-- Freya elige un Silverback, abre su establo y le pide que la espere/continúe el impulso hacia el niño Bell.
-- Su motivación combina el deseo de ver crecer a Bell, su fascinación por él y una actitud posesiva y peligrosa.
+## Detalles
+- En PDF p. 160 se describe el almacén subterráneo y los establos de monstruos.
+- En p. 161 Freya domina a una mujer encargada de los preparativos y confirma que los guardias siguen vivos y sin heridas externas.
+- En p. 162 pregunta por las llaves, las obtiene y explica el efecto del Encanto sobre la voluntad.
+- En pp. 163–164 selecciona y libera un Silverback; lo orienta hacia Bell para observar su crecimiento y reacción.
+- Freya admite el peligro de que Bell muera; aun así mantiene la decisión y dice que, si eso ocurre, seguirá su alma.
 
-## Límites de evidencia
-- No añadir fecha de calendario si el texto no la proporciona.
-- Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
-- No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+## Límites
+- La fuga general se informa luego como nueve monstruos; esta escena solo muestra a Freya liberando un Silverback específico.
+- No atribuirle la liberación de los otros ocho monstruos sin otro pasaje.
+- La motivación descrita en este pasaje no debe extrapolarse a todos los momentos de la relación Freya–Bell.
