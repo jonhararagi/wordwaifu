@@ -1303,7 +1303,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 
 ### Checkpoint DMR-061 · Volumen 1 PDF pp. 147–156 · 2026-10-30
-- Inicio Argentina UTC−03:00: 17:22 (precisión de minuto; sin segundos verificables). Umbral de seis minutos: aprox. 17:28; cierre de lectura y comienzo de guardado en ese momento.
+- Inicio Argentina UTC−03:00: 17:22 (precisión de minuto; sin segundos verificables). Cierre real: 17:26:34; duración aproximada 4 min 34 s. El umbral de seis minutos no se alcanzó; se cerró anticipadamente tras completar las diez páginas y guardar el checkpoint.
 - Lectura secuencial pp. 147–156 completada; próxima página exacta: PDF p. 157.
 - Pasada 1: Hestia busca a Bell, viaja en carruaje, encuentra a Freya y recibe indicaciones; alcanza a Bell, propone una cita y acepta combinarla con la búsqueda de Seal. Comparten crepes. En paralelo, comienza el espectáculo del Coliseo con Battle Jabalí y domadora de Ganesha Familia.
 - Pasada 2: diez folios renderizados a 110 dpi y hoja de contactos inspeccionada; p. 154 única ilustración, revisada ampliada. Verificados 90 Varisu, 50.000 espectadores, altura aproximada de dos metros, participantes y orden. Domadora/conductor sin nombre.
