@@ -2753,6 +2753,230 @@
       ],
       "status": "source_checked_partial_translation_unverified",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V01-BELL-RECEIVES-FALNA-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "BELL RECEIVES"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001",
+      "path": "events/timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "HEPHAISTOS GIVES"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "BELL HESTIA"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001",
+      "path": "events/timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "FREYA CHARMS"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001",
+      "path": "events/timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "GANESHA RESPONDS"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "BELL HESTIA"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001",
+      "path": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "HESTIA UPDATES"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "BELL DEFEATS"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001",
+      "path": "events/timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "HESTIA EXPLAINS"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001",
+      "path": "events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "AIS REACHES"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "BELL EXHAUSTS"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "BELL BUYS"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "BELL WITNESSES"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001",
+      "path": "events/timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "LILI OBSERVES"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "BELL RESCUES"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-AND-LILI-REHIRE-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "BELL AND"
+      ]
     }
   ],
   "reservedIds": [
