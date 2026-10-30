@@ -3181,11 +3181,11 @@
         "kind": "relative_order",
         "relation": "after",
         "referenceIds": [
-          "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001"
+          "EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001"
         ],
         "distanceKnown": false,
         "precision": "order_only",
-        "qualifier": "Firebolt interrumpe la situación y Bell interviene durante la misma secuencia.",
+        "qualifier": "Después de que Kanu y miembros de Soma abandonan a Lili como cebo; Bell interviene durante la misma secuencia.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md"
