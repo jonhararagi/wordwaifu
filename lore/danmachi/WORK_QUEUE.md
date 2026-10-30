@@ -1198,3 +1198,9 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Eventos:** pp. 65–66 amplían como relato posterior el mismo rescate ya registrado en EVT-DM-BELL-AIS-MINOTAUR-001; no crear otro ID para ese combate. La visita de Bell a la taberna queda como evento candidato pendiente de catálogo y posterior decisión de registro.
 - **Inspección visual:** PDF pp. 61–66 renderizadas a 110 dpi e inspeccionadas; son páginas de texto continuo, sin ilustraciones.
 - **Otras tareas abiertas:** cinco pasadas; inspección visual pp. 19–21, 23–24 y 49–54; cotejos individuales y contraste secundario separado; revisión PR #209 sin mezclarla con DMR-061.
+
+### Registro horario de sesión primaria · 2026-10-30 (Argentina, UTC−03:00)
+- Inicio: 11:15:21.
+- Límite de seis minutos: 11:21:21.
+- Cierre: checkpoint guardado antes del límite; siguiente folio PDF p. 67.
+- Regla: detener la sesión al llegar al límite y esperar nueva confirmación.
