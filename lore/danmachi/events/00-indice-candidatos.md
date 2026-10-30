@@ -15,7 +15,7 @@ Este índice separa historias parciales respaldadas por sinopsis/perfiles oficia
 - [Volumen 2: Bell prueba Firebolt y agota Mind](timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) · `EVT-DM-V02-BELL-FIREBOLT-TEST-001` · `CONT-MAIN-LN` · PDF pp. 150–155 y 167–169.
 - [Volumen 2: emboscada de Ogros en el piso 10](timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) · `EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001` · `CONT-MAIN-LN` · PDF pp. 195–213.
 - [Volumen 2: Lili toma la Daga de Hestia y abandona a Bell](timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) · `EVT-DM-V02-LILI-ABANDONS-BELL-001` · `CONT-MAIN-LN` · PDF pp. 213–229.
-- [Volumen 2: traición a Lili y rescate de Bell](timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) · `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` · `CONT-MAIN-LN` · PDF pp. 213–240.
+- [Volumen 2: secuencia de Lili en Soma Familia](timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md) y eventos relacionados · `CONT-MAIN-LN` · PDF pp. 212–240; segmentado en pasado, identidad, captura, traición, rescate y recontratación.
 - [Volumen 2: Ais encuentra el Protector de Jade](timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) · `EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001` · `CONT-MAIN-LN` · PDF pp. 242–243.
 
 Estos registros se basan en la traducción española privada aportada por el usuario de la obra oficial. Los localizadores se refieren a páginas físicas del PDF; la fidelidad de la traducción no se ha cotejado todavía. Las fechas absolutas permanecen desconocidas.
@@ -89,7 +89,13 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Pociones agotadas](timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md) y [compra de poción de Mind](timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md) — tres días antes de la visita y visita pp. 167–169.
 - [Bell ve a Lili acosada](timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md) — pp. 169–170.
 - [Lili observa Firebolt](timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md) — un día antes de la incursión al piso 10.
-- [Traición de Soma a Lili](timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md), [rescate y reconciliación](timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) y [reencuentro dos días después](timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) son acontecimientos separados.
+- [Los padres de Lili mueren en el Dungeon](timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md) — PDF p. 216; recuerdo retrospectivo, sin piso ni fecha.
+- [Lili revela su identidad Hobbit](timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md) — PDF pp. 214–221.
+- [Eina advierte a Hestia sobre Lili](timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md) — PDF pp. 218–219; no se confirma aceptación.
+- [Gedo captura a Lili](timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md) — PDF pp. 221–224.
+- [Kanu y miembros de Soma abandonan a Lili como cebo](timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md) — PDF pp. 224–229.
+- [Bell rescata a Lili y ambos se reconcilian](timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) — PDF pp. 230–237.
+- [Bell y Lili se reencuentran dos días después](timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) — PDF pp. 237–240; nueva contratación.
 
 **Procedencia:** DMR-061-SRC-001 y DMR-060-SRC-001; novela ligera original oficial, traducciones privadas no cotejadas. Las pasadas visuales/cotejo no están cerradas.
 - [Bell oye a la Familia Loki burlarse del rescate del Minotauro y se marcha de la taberna](timeline/EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001.md) — PDF pp. 57–72; incluye la llegada de la Familia Loki, los comentarios de Bate, la defensa de Riveria, la reacción de Ais y la decisión de Bell de volver al Dungeon.

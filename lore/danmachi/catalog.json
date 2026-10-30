@@ -2715,20 +2715,6 @@
       "name": "lili abandons bell 001"
     },
     {
-      "id": "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001",
-      "path": "events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md",
-      "type": "event",
-      "tags": [
-        "Liliruca",
-        "Bell",
-        "Soma Familia",
-        "rescue"
-      ],
-      "status": "source_checked_partial",
-      "priority": "high",
-      "name": "soma betrayal bell rescue 001"
-    },
-    {
       "id": "EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001",
       "path": "events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md",
       "type": "event",
@@ -3096,6 +3082,76 @@
         "Bell",
         "Monster Festival"
       ]
+    },
+    {
+      "id": "EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001",
+      "path": "events/timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "evento",
+        "Lili"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001",
+      "path": "events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "evento",
+        "Lili"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001",
+      "path": "events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "evento",
+        "Lili"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-GEDO-CAPTURES-LILI-001",
+      "path": "events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "evento",
+        "Lili"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001",
+      "path": "events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "evento",
+        "Lili"
+      ]
     }
   ],
   "reservedIds": [
@@ -3243,6 +3299,12 @@
       "id": "RULE-DUNGEON-MYSTERIES",
       "type": "rule",
       "status": "candidate_not_created"
+    },
+    {
+      "id": "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001",
+      "type": "event",
+      "status": "superseded",
+      "reason": "(x) Evento combinado sustituido por segmentación: Lili abandona a Bell, Gedo captura a Lili, Kanu/Soma la usa como cebo, Bell rescata/reconcilia y la recontratación posterior; conservar la referencia histórica, no usar como evento activo."
     }
   ],
   "documents": [

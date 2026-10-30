@@ -77,3 +77,12 @@ Hestia consigue de Hephaistos la Daga de Hestia para Bell (pp. 145–146). Más 
 - La narración cambia a la perspectiva de Hestia y revela que el Estado grabado en Bell contiene `[Deseo Inquebrantable]`, con aceleración del crecimiento; duración mientras sus sentimientos no cambien; y efecto proporcional a la fuerza de esos sentimientos (PDF pp. 35–36).
 - El texto atribuye a Hestia la extracción de ese tipo de Puntos de Experiencia y su inscripción personal. Al observar el resultado, comienza a arrepentirse.
 - **Límite:** no convertir esta escena puntual en un rasgo permanente de personalidad ni atribuir a Bell conocimiento de la Habilidad; la ficha distingue la perspectiva interna de Hestia de la información mostrada a Bell.
+
+
+## Volumen 2 · conversación con Eina sobre Lili (CONT-MAIN-LN)
+
+Durante una inspección del Gremio en el establecimiento donde trabaja Hestia, Eina la lleva aparte y le habla de Lili y del riesgo relacionado con Soma Familia. Le pide que ayude a convencer a Bell de romper el contacto con su Ayudante (V2 PDF pp. 218–219). Hestia escucha; el pasaje no confirma que acepte la solicitud.
+
+- Evento: [Eina advierte a Hestia sobre Lili](../events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md).
+- **Límite:** no inferir que Hestia consigue cambiar la decisión de Bell en esta escena.
+- **Procedencia:** DMR-060-SRC-001; traducción privada no cotejada.

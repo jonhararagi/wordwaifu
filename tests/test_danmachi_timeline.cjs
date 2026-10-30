@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,38);
-assert.equal(report.temporalEventCount,38);
+assert.equal(report.eventCount,42);
+assert.equal(report.temporalEventCount,42);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -39,7 +39,11 @@ const expectedKinds={
  "EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001":"relative_offset",
  "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001":"relative_order",
  "EVT-DM-V02-LILI-ABANDONS-BELL-001":"relative_order",
- "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001":"relative_order",
+ "EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001":"relative_order",
+ "EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001":"relative_order",
+ "EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001":"relative_order",
+ "EVT-DM-V02-GEDO-CAPTURES-LILI-001":"relative_order",
+ "EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001":"relative_order",
  "EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001":"relative_order",
  "EVT-DM-V02-BELL-AND-LILI-REHIRE-001":"relative_offset",
  "EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001":"relative_order",
@@ -79,7 +83,11 @@ const expectedLabels={
  "EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001":"Exactamente el día anterior a la expedición al piso 10; el hecho se relata retrospectivamente.",
  "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001":"Volumen 2 · incursión al piso 10.",
  "EVT-DM-V02-LILI-ABANDONS-BELL-001":"Durante la emboscada en el piso 10.",
- "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001":"Después de que Lili abandona a Bell; intervalo adicional no especificado.",
+ "EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001":"Pasado de Lili · antes de su vida actual como Ayudante; fecha desconocida",
+ "EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001":"Después de separarse de Bell · huida desde el piso 10 hacia los pisos superiores.",
+ "EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001":"En paralelo a la huida de Lili tras separarse de Bell.",
+ "EVT-DM-V02-GEDO-CAPTURES-LILI-001":"Después de la huida de Lili desde el piso 10; séptimo piso del Dungeon.",
+ "EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001":"Después de la captura de Lili por Gedo; séptimo piso del Dungeon.",
  "EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001":"Después de la traición de miembros de Soma Familia; mismo episodio.",
  "EVT-DM-V02-BELL-AND-LILI-REHIRE-001":"Exactamente dos días después de la separación tras el rescate.",
  "EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001":"Volumen 2 · epílogo; fecha exacta abierta.",
@@ -100,7 +108,7 @@ const expectedLabels={
  "EVT-DM-JUGGERNAUT-DEFEAT-001":"Continuación en el volumen 14 · fecha interna abierta"
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 38 timeline event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 42 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");
@@ -119,6 +127,28 @@ assert.equal(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").temporal.precisi
 assert.equal(events.get("EVT-DM-AR-ERA-001").continuityScopes.includes("CONT-AR"),true);
 assert.equal(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").continuityScopes.includes("CONT-AR"),false,"T−5 remains separate from Astrea Record T−7");
 assert.equal(events.get("EVT-DM-BELL-ARRIVAL-001").temporal.anchorId,"T0-BELL-ARRIVAL");
+
+
+const offsetEdges=structuredClone(data);
+const offsetBefore=offsetEdges.events.find(e=>e.id==="EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001");
+const offsetAfter=offsetEdges.events.find(e=>e.id==="EVT-DM-V02-BELL-AND-LILI-REHIRE-001");
+assert.equal(offsetBefore.temporal.direction,"before");
+assert.equal(offsetAfter.temporal.direction,"after");
+const directionalCycle=structuredClone(offsetEdges);
+const first=directionalCycle.events.find(e=>e.id==="EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001");
+const second=directionalCycle.events.find(e=>e.id==="EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001");
+first.temporal={kind:"relative_offset",anchorId:second.id,anchorLabel:"second fixture",direction:"before",amount:1,unit:"day",precision:"exact",sourceUrls:first.temporal.sourceUrls};
+second.temporal={kind:"relative_offset",anchorId:first.id,anchorLabel:"first fixture",direction:"before",amount:1,unit:"day",precision:"exact",sourceUrls:second.temporal.sourceUrls};
+const directionCycleReport=timeline.validateDataset(directionalCycle);
+assert.equal(directionCycleReport.valid,false,"Contradictory event-relative offsets must be rejected.");
+assert.ok(directionCycleReport.errors.some(error=>error.includes("Temporal relative-order cycle detected")),directionCycleReport.errors.join("; "));
+
+
+assert.equal(events.has("EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001"),false,"The combined legacy Soma/Rescue timeline record must be removed.");
+assert.equal(events.get("EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001").temporal.referenceIds[0],"EVT-DM-V02-LILI-ABANDONS-BELL-001");
+assert.equal(events.get("EVT-DM-V02-GEDO-CAPTURES-LILI-001").temporal.referenceIds[0],"EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001");
+assert.equal(events.get("EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001").temporal.referenceIds[0],"EVT-DM-V02-GEDO-CAPTURES-LILI-001");
+assert.equal(events.get("EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001").temporal.referenceIds[0],"EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001");
 
 const weeklyRumor=events.get("EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001");
 assert.equal(weeklyRumor.temporal.anchorId,"EVT-DM-V02-AIS-UDAEUS-001");
@@ -267,10 +297,10 @@ assert.equal(legacyReport.valid,true,"legacy v1 data must remain loadable throug
 assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,2);
-assert.equal(report.locationRefCount,32);
+assert.equal(report.locationRefCount,36);
 assert.equal(report.unknownEventCount,6);
 assert.equal(report.provisionalEventCount,5);
-assert.equal(data.events.length,38,"All 38 indexed event IDs must remain.");
+assert.equal(data.events.length,42,"All 42 indexed event IDs must remain.");
 const locationById=new Map(data.locations.map(place=>[place.id,place]));
 assert.equal(locationById.get("LOC-ORARIO").recordPath,"places/orario.md");
 assert.equal(locationById.get("LOC-DUNGEON").recordPath,"places/dungeon.md");

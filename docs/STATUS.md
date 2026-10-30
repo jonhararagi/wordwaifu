@@ -105,7 +105,7 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 211 registros activos; 29 IDs reservados; 133 documentos de apoyo.
+- **Corpus DanMachi:** 215 registros activos; 30 IDs reservados; 133 documentos de apoyo.
 - **Grafo de conocimiento:** 263 relaciones explícitas; 263/263 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
@@ -734,17 +734,14 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI post-merge sobre el SHA exacto de main 65c4eb53d50e16c8bcca48393e51e35ebd5bc360:** [Validate WordWaifu #40911471211](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471211) y [DanMachi Lore and Retrieval Integrity #40911471327](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471327), ambos success. El primer intento de Validate falló en el smoke de navegador al esperar 5 s por un retrato remoto (tests/browser_smoke.cjs:517); se repitió únicamente ese job y el segundo intento pasó.
 
 
-## DMR-060 / DMR-061 — revisión de volúmenes 1 y 2 (en rama; 2026-10-29)
+## DMR-060 / DMR-061 — integración de cronología y estado de revisión (2026-10-30)
 
-- **Rama de trabajo:** research/danmachi-volumes-01-02-event-time-audit-2026-10-29, creada desde main HEAD e13c3bd346b69e5a658ae3a68876578274568f99.
-- **Volumen 1:** DMR-061 y source DMR-061-SRC-001 registran novela ligera original oficial, traducción española privada no cotejada, créditos impresos Sorotrans/Mugetsu123 y marca de agua Kurosaki-Vizard. Se crearon nueve eventos narrativos separados y se añadió localizador PDF pp. 211–214 al encuentro Bell–Hestia ya existente.
-- **Volumen 2:** DMR-060 ampliado; siete eventos adicionales/segmentados y siete eventos previos conectados a la cronología. La traición de Soma a Lili, el rescate/reconciliación por Bell y la recontratación dos días después tienen registros separados.
-- **Cronología interactiva:** 38 eventos, 32 referencias de ubicación. Se implementa el soporte de offset relativo anclado a eventos existentes para conservar una semana después, tres días antes, un día antes y dos días después sin fecha calendario inventada. El validador también incorpora esas aristas en el control de ciclos.
-- **Pruebas:** el archivo de tests se actualizó a 38 eventos y offsets enlazados; todavía no se declara ejecutado localmente ni aprobado por CI. Pendiente abrir PR y esperar CI.
-- **Lectura:** primera pasada narrativa secuencial completada de forma sustancial hasta V1 PDF p. 214 y V2 PDF p. 243. No es inspección completa de cada imagen ni de cada página con extracción fallida.
-- **Pasadas restantes:** inspección visual integral, cotejo exhaustivo de fichas/objetos/estadísticas, revisión completa de eventos de los capítulos iniciales de V1 y contraste final con WordWaifu. No marcar + a personajes por esta extracción de volumen.
-- **Corrección documental:** una atribución previa de prueba de Firebolt/retorno de Ais en V1 pp. 153–158 queda retirada; ese localizador corresponde a la cita Bell–Hestia y al inicio del Festival. Firebolt está documentado en V2.
-- **Estado:** cambios preparados en rama; no afirmar merge en main ni CI hasta verificación real.
+- **DMR-061 / Volumen 1:** PR #215 integrada por squash en `main`, SHA `8e6fcedaeed4e6c38e6f63a7c099cc8e27ad3441`; lectura secuencial documentada hasta PDF p. 177, próxima p. 178. CI pre-merge y post-merge de Validate WordWaifu y DanMachi Lore and Retrieval Integrity: `success` sobre sus SHA exactos.
+- **DMR-060 / Volumen 2:** rama de integración separada desde el main vigente. Se segmenta la historia de Lili en eventos distintos; la cronología pasa a 42 eventos y 36 referencias de ubicación.
+- **ID retirado:** `(x) EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` queda reservado como superseded, sustituido por captura de Gedo, traición/cebo de Kanu y miembros de Soma, y rescate/reconciliación de Bell; la recontratación permanece aparte.
+- **Lógica temporal:** se corrige la detección de ciclos para respetar dirección `before/after/between` y offsets relativos; las reglas ya existentes de validación de ancla y precisión se conservan.
+- **Rama heredada:** PR #209 sigue abierta y no fusionable como snapshot antiguo (98 commits ahead/6 behind respecto del main previo a #215). No fusionar directamente; sólo portar cambios únicos. La rama de integración actual se basa en el main posterior a #215.
+- **Estado de integración:** los cambios DMR-060 están en rama de preparación; todavía no se declara PR, CI ni merge de esta segunda parte hasta su validación.
 
 ## DMR-061 — continuación del corpus primario del Volumen 1 (2026-10-30)
 

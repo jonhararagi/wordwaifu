@@ -94,9 +94,13 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - `EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001` — compra a Naaza (pp. 167–169).
 - `EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001` — Bell ve el hostigamiento a Lili (pp. 169–170).
 - `EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001` — Firebolt observado el día antes del piso 10 (p. 198).
-- `EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001` — Ogros y Arsenal del Dungeon (pp. 195–213).
-- `EVT-DM-V02-LILI-ABANDONS-BELL-001` — Lili toma la daga y abandona a Bell (pp. 213–229).
-- `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` — Kanu y otros miembros de Soma traicionan a Lili (pp. 221–230).
+- `EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001` — Ogros y Arsenal del Dungeon (pp. 195–212).
+- `EVT-DM-V02-LILI-ABANDONS-BELL-001` — Lili toma la daga y abandona a Bell (pp. 212–214).
+- `EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001` — recuerdo de los padres de Lili (p. 216; piso y fecha desconocidos).
+- `EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001` — Cinder Ella retira el disfraz Beastman y revela que Lili es Hobbit (pp. 214–221).
+- `EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001` — Eina habla en privado con Hestia sobre Lili (pp. 218–219; escena paralela a la huida).
+- `EVT-DM-V02-GEDO-CAPTURES-LILI-001` — Gedo embosca y captura a Lili (pp. 221–224; piso 7).
+- `EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001` — Kanu y miembros de Soma usan a Lili como cebo (pp. 224–229; piso 7).
 - `EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001` — rescate y reconciliación (pp. 230–237).
 - `EVT-DM-V02-BELL-AND-LILI-REHIRE-001` — reencuentro y nueva contratación dos días después (pp. 237–240).
 - `EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001` — Ais encuentra el Protector de Jade (pp. 242–243).

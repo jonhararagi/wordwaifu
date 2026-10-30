@@ -99,9 +99,12 @@ Una entrevista de LN News Online de 2020 recoge que, en la historia de Memoria F
 - [Ais se enfrenta a Udaeus en el piso 37](../events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md) — PDF pp. 106–111. El rumor de ascenso a nivel 6 permanece atribuido como rumor.
 - [Bell obtiene Firebolt tras leer el Grimorio](../events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) — PDF pp. 136–149.
 - [Bell prueba Firebolt y agota su Mind](../events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) — PDF pp. 150–155 y 167–169.
-- [Emboscada de Ogros en el piso 10](../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–213.
-- [Lili toma la Daga de Hestia y deja a Bell atrás](../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 213–229.
-- [Traición a Lili y rescate de Bell](../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240.
+- [Emboscada de Ogros en el piso 10](../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–212.
+- [Lili toma la Daga de Hestia y abandona a Bell](../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 212–214.
+- [Lili revela su identidad Hobbit mediante Cinder Ella](../events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md) — PDF pp. 214–221.
+- [Gedo captura a Lili](../events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md) — PDF pp. 221–224.
+- [Kanu y miembros de Soma usan a Lili como cebo](../events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md) — PDF pp. 224–229.
+- [Bell rescata a Lili y ambos se reconcilian](../events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) — PDF pp. 230–237.
 
 La traducción española aportada es privada y no se ha cotejado con el japonés. Estos localizadores describen el PDF consultado, no una paginación impresa confirmada.
 
