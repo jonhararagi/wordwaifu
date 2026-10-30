@@ -142,10 +142,24 @@ function validateDataset(data){
    for(const event of events){
     const temporal=event.temporal;
     if(!temporal)continue;
-    if(temporal.kind==="relative_order"&&temporal.relation!=="overlaps"&&Array.isArray(temporal.referenceIds)){
-     for(const referenceId of temporal.referenceIds){if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(event.id).push(referenceId);}
-    }else if(temporal.kind==="relative_offset"&&eventIds.has(temporal.anchorId)){
-     graph.get(event.id).push(temporal.anchorId);
+    if(temporal.kind==="relative_order"&&Array.isArray(temporal.referenceIds)){
+     if(temporal.relation==="before"){
+      for(const rawReferenceId of temporal.referenceIds){const referenceId=rawReferenceId===data.anchor.id?data.anchor.eventId:rawReferenceId;if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(event.id).push(referenceId);}
+     }else if(temporal.relation==="after"){
+      for(const rawReferenceId of temporal.referenceIds){const referenceId=rawReferenceId===data.anchor.id?data.anchor.eventId:rawReferenceId;if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(referenceId).push(event.id);}
+     }else if(temporal.relation==="between"&&temporal.referenceIds.length===2){
+      const [rawEarlier,rawLater]=temporal.referenceIds;
+      const earlier=rawEarlier===data.anchor.id?data.anchor.eventId:rawEarlier;
+      const later=rawLater===data.anchor.id?data.anchor.eventId:rawLater;
+      if(eventIds.has(earlier))graph.get(earlier).push(event.id);
+      if(eventIds.has(later))graph.get(event.id).push(later);
+     }
+    }else if(temporal.kind==="relative_offset"){
+     const anchorEventId=temporal.anchorId===data.anchor.id?data.anchor.eventId:temporal.anchorId;
+     if(eventIds.has(anchorEventId)){
+      if(temporal.direction==="before")graph.get(event.id).push(anchorEventId);
+      else if(temporal.direction==="after")graph.get(anchorEventId).push(event.id);
+     }
     }
    }
    const state=new Map(),stack=[];
