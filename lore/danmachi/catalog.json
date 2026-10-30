@@ -3064,6 +3064,38 @@
         "Hostess of Fertility",
         "Minotaur retelling"
       ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001",
+      "path": "events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "Hestia",
+        "Hephaistos",
+        "dagger commission"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001",
+      "path": "events/timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "Freya",
+        "Loki",
+        "Ais",
+        "Bell",
+        "Monster Festival"
+      ]
     }
   ],
   "reservedIds": [
@@ -7632,6 +7664,71 @@
       "claimRef": "DMR-026-CLM-004",
       "claimPath": "research/inbox/DANMACHI-RESEARCH-026-orario-babel-hostess-glossary.md",
       "note": "Relación explícita en la referencia oficial de adaptación. No afirma que Rivira sea un barrio de la ciudad de superficie Orario ni confirma la misma configuración en CONT-MAIN-LN."
+    },
+    {
+      "id": "REL-HESTIA-REQUESTS-HEPHAISTOS-DAGGER-V01",
+      "from": "DM-CHAR-HESTIA",
+      "to": "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001",
+      "kind": "requests_weapon_for_bell",
+      "label": "Hestia pide a Hephaistos un arma para Bell y consigue que acepte forjarla",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 1, p.115 y pp.129–133",
+      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceType": "user_supplied_private_light_novel_translation",
+      "claimPath": "events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
+      "note": "Petición y aceptación/forja; no es la entrega física de pp.145–146."
+    },
+    {
+      "id": "REL-HEPHAISTOS-FORGE-REQUEST-DELIVERY-V01",
+      "from": "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001",
+      "to": "EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001",
+      "kind": "precedes",
+      "label": "La aceptación y comienzo de la forja preceden a la entrega de la daga a Hestia",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Petición p.115, aceptación pp.129–133; entrega pp.145–146",
+      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceType": "user_supplied_private_light_novel_translation",
+      "claimPath": "events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
+      "note": "Dos momentos cronológicos separados, vinculados a la misma arma."
+    },
+    {
+      "id": "REL-FREYA-LOKI-CAFE-MEETING-V01",
+      "from": "CHAR-FREYA",
+      "to": "EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001",
+      "kind": "participant_in",
+      "label": "Freya se reúne con Loki y Ais durante el Festival y reconoce a Bell entre la multitud",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 1, PDF pp.139–145",
+      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceType": "user_supplied_private_light_novel_translation",
+      "claimPath": "events/timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md",
+      "note": "Bell es observado desde la cafetería; no interactúa con Freya, Loki o Ais."
+    },
+    {
+      "id": "REL-LOKI-FREYA-CAFE-MEETING-V01",
+      "from": "DM-CHAR-LOKI",
+      "to": "EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001",
+      "kind": "participant_in",
+      "label": "Loki se reúne con Freya y lleva a Ais a la cafetería durante el Festival",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 1, PDF pp.139–145",
+      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceType": "user_supplied_private_light_novel_translation",
+      "claimPath": "events/timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md",
+      "note": "No se infiere relación formal entre Loki y Ais."
+    },
+    {
+      "id": "REL-AIS-FREYA-LOKI-CAFE-MEETING-V01",
+      "from": "DM-CHAR-AIS",
+      "to": "EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001",
+      "kind": "participant_in",
+      "label": "Ais acompaña a Loki y es presentada ante Freya",
+      "continuity": "CONT-MAIN-LN",
+      "interval": "Volumen 1, PDF pp.140–145",
+      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceType": "user_supplied_private_light_novel_translation",
+      "claimPath": "events/timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md",
+      "note": "Ais sigue con la mirada a Bell cuando pasa por la avenida; no se registra interacción."
     }
   ]
 }
