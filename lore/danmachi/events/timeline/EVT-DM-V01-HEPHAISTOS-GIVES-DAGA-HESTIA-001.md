@@ -9,7 +9,10 @@ source_verification: user_supplied_private_translation_not_crosschecked
 source_refs:
   - DMR-061-SRC-001
 source_locators:
-  - PDF pp. 145–146 y ficha/explicación PDF pp. 203–208
+  - PDF pp. 145–146
+  - Ficha/explicación PDF pp. 203–208
+related_event_ids:
+  - EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001
 spoiler_level: major
 ---
 
