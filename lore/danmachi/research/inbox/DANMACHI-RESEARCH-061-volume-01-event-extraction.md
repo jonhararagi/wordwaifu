@@ -38,7 +38,7 @@ tags: [volume-01, events, Bell, Hestia, Freya, Silverback, Daga de Hestia]
 
 ### EVT-DM-V01-BELL-RECEIVES-FALNA-001 — Hestia concede la Falna a Bell
 - **Localizador:** PDF pp. 211–214.
-- **Hecho:** tras aceptar Bell entrar en Hestia Familia, Hestia le concede la Falna en la biblioteca del segundo piso de una antigua tienda de libros. Hestia explica que eligió el lugar por su amor a los libros y porque desea que el comienzo de su Familia esté rodeado de ellos.
+- **Hecho:** tras aceptar Bell entrar en Hestia Familia, Hestia le concede la Falna en la biblioteca del segundo piso de una tienda de libros en mal estado. Hestia explica que eligió el lugar por su amor a los libros y porque desea que el comienzo de su Familia esté rodeado de ellos.
 - **Separación:** la concesión de Falna se registra como evento diferente del primer encuentro.
 
 ### EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001 — Hephaistos entrega la daga a Hestia
@@ -464,7 +464,7 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **p. 210 — ilustración:** figura de cabello oscuro, rostro inclinado y ropa amplia; rótulo vertical japonés relativo al epílogo. Sin nombre explícito en el folio; no asignar identidad por parecido.
 - **pp. 211–212:** Hestia recuerda su intento número 50 fallido de reclutamiento y encuentra a Bell solo en la calle. Lo sigue y le advierte que no entre a un callejón peligroso. Bell ya había sido rechazado por diez Familias.
 - **p. 212:** Hestia explica que tampoco había encontrado a nadie para su Familia; Bell le ruega entrar. Acepta aun sabiendo que por entonces Hestia solo es miembro de su propia Familia.
-- **pp. 212–213:** van a una antigua librería; el propietario, un humano mayor sin nombre, les presta la biblioteca del segundo piso. Hestia ama los libros y quiere iniciar su Familia en un lugar rodeado de ellos.
+- **pp. 212–213:** van a una tienda de libros en mal estado; el propietario, un humano mayor sin nombre, les presta la biblioteca del segundo piso. Hestia ama los libros y quiere iniciar su Familia en un lugar rodeado de ellos.
 - **p. 213:** Hestia graba la Gracia/Falna de Bell. Bell explica su deseo de un encuentro predestinado en el Dungeon y dice que su abuelo le enseñó que un harén era lo mejor; Hestia bromea sobre su mal pariente. Hestia explica que los Puntos de Experiencia registran lo que los aventureros viven, ven y oyen y que ella escribirá esa historia en el Estado.
 - **p. 214:** el epílogo presenta la vida del aventurero como una historia que los dioses observan y Hestia registra.
 - **Eventos existentes:** pp.201–203 amplían EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001 y EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001; pp.203–208 amplían EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001; pp.211–214 amplían EVT-DM-V01-BELL-RECEIVES-FALNA-001 y el candidato EVT-DM-BELL-MEETS-HESTIA-001. No se crea un evento duplicado para la concesión de Falna.
