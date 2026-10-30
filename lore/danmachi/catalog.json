@@ -3152,6 +3152,144 @@
         "evento",
         "Lili"
       ]
+    },
+    {
+      "id": "MON-DM-MINOTAUR-001",
+      "path": "monsters/minotaur.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Minotaur",
+        "Minotauro"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-GOBLIN-001",
+      "path": "monsters/goblin.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Goblin"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-KOBOLD-001",
+      "path": "monsters/kobold.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Kobold"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-FROG-SHOOTER-001",
+      "path": "monsters/frog-shooter.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Frog Shooter",
+        "Rana Tiradora"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-WAR-SHADOW-001",
+      "path": "monsters/war-shadow.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "War Shadow",
+        "floor 6"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-DUNGEON-LIZARD-001",
+      "path": "monsters/dungeon-lizard.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Dungeon Lizard",
+        "floor 4"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-SILVERBACK-001",
+      "path": "monsters/silverback.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Silverback",
+        "Monster Festival"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
+    },
+    {
+      "id": "MON-DM-TROLL-001",
+      "path": "monsters/troll.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Troll",
+        "floor 20"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-SWORD-DEER-001",
+      "path": "monsters/sword-deer.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Sword Deer",
+        "Ciervo Espada"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-BATTLE-JABALI-001",
+      "path": "monsters/battle-jabali.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Battle Jabalí",
+        "Coliseo"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
     }
   ],
   "reservedIds": [
@@ -4103,9 +4241,15 @@
       "path": "research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
       "type": "source_extraction_report",
       "status": "source_checked_partial_translation_unverified"
+    },
+    {
+      "document_id": "DMR-062-V01-MD-AUDIT",
+      "path": "research/inbox/DANMACHI-RESEARCH-062-volume-01-markdown-cross-audit.md",
+      "type": "research_dossier",
+      "status": "present"
     }
   ],
-  "lastStructuredSync": "2026-10-28",
+  "lastStructuredSync": "2026-10-30",
   "relationships": [
     {
       "id": "REL-ASTREA-DEITY-001",

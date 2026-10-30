@@ -1354,3 +1354,21 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Estado Git al abrir este bloque:** rama research/danmachi-v1-primary-pp178-214-2026-10-30 creada desde main SHA 21215d847eff8709919dc86ae60f31e6c1160439, para no fusionar directamente la rama antigua divergente. HEAD final se verifica al cierre.
 - **Pruebas:** no se han ejecutado pruebas locales. CI se solicitará sobre el HEAD final de la PR; no se declara validado antes de su ejecución.
 - **Siguiente acción:** cierre de extracción del PDF; completar las inspecciones visuales antiguas pendientes y revisar las pp.1–10 para determinar si son preliminares relevantes. No existe siguiente página narrativa dentro de este archivo.
+
+
+## DMR-062 — auditoría cruzada de la transcripción Markdown del Volumen 1 (2026-10-30)
+
+**Estado:** IN_PROGRESS. La transcripción MD se trata como material de navegación derivado de DMR-061-SRC-001, no como fuente independiente ni como paginación del PDF.
+
+- [x] Inspeccionar estructura, encabezados, extensión textual y cargas Base64 del MD; confirmar que sus líneas no equivalen a páginas físicas del PDF.
+- [x] Comparar la estructura del MD con el dossier V1 integrado hasta PDF p.214, el catálogo, el índice de eventos y los índices de personajes/lugares/Familias/reglas.
+- [x] Crear un expediente de auditoría con alcance, cobertura, límites de fuente, diferencias y pendientes: [DANMACHI-RESEARCH-062](research/inbox/DANMACHI-RESEARCH-062-volume-01-markdown-cross-audit.md).
+- [x] Crear diez fichas individuales de monstruos del Volumen 1 con referencias DMR-061-SRC-001 y localizadores PDF; ninguna ficha añade estadísticas, niveles, debilidades o habilidades ausentes.
+- [x] Añadir las fichas al índice de monstruos y al catálogo estructurado, sin modificar los eventos existentes ni duplicar especies/individuos.
+- [ ] Cotejar MD contra PDF en pp.1–10 y determinar si contienen material narrativo que falta en el dossier secuencial.
+- [ ] Completar la inspección visual pendiente de pp.19–21, 23–24 y 49–54; p.54 conserva revisión específica de la tabla de Estado.
+- [ ] Atomizar solo las reglas y objetos que necesiten ficha propia: Dungeon (nacimiento/reparación/desplazamiento de monstruos), Piedras Mágicas, Falna/Estado y Daga de Hestia.
+- [ ] Revisar eventos candidatos de Frog Shooter/War Shadows y Dungeon Lizard contra el catálogo antes de asignar IDs.
+- [ ] Revisar personajes nombrados en el MD sin importar atributos de CONT-ANIME o CONT-AR.
+
+**Límite permanente:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. No usar número de línea MD como página; no convertir personajes/objetos anónimos en fichas; no dar por cerrada la inspección integral por haber llegado a PDF p.214.

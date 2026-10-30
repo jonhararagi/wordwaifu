@@ -11,6 +11,9 @@
 - [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 214; incluye el Festival de Monstruos, derrota del Silverback, recuperación posterior y retrospectiva de la concesión inicial de Falna.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
 
+- [DMR-062 — auditoría cruzada del MD de Volumen 1](research/inbox/DANMACHI-RESEARCH-062-volume-01-markdown-cross-audit.md) — transcripción derivada del PDF, sin paginación física propia; registra diez fichas de monstruos con localizadores del PDF y deja abiertas las diferencias de traducción.
+- [Índice de monstruos y amenazas](canon/09-indice-monstruos-y-amenazas.md) — incluye ahora las especies documentadas en V1; verificación limitada a DMR-061-SRC-001.
+
 - [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y segmentación de combate, adquisición/prueba de magia, pasado de Lili, captura, traición, rescate y reencuentro. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los acontecimientos de V2, incluida la secuencia de Lili segmentada; no fija fechas absolutas ni convierte rumores en hechos confirmados.
 
 ## Índices de personajes e historias por continuidad
