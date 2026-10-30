@@ -1181,3 +1181,12 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Alcance:** continuación del Volumen 1 desde PDF p. 49; cerrar con un checkpoint de lectura, visual, cambios, estado GitHub y siguiente página.
 - **Regla de cierre:** no comenzar otro bloque después de 10:09:52; guardar el estado y esperar la siguiente confirmación.
 - **Cierre de sesión:** 10:09:52 (hora de Argentina). Se guarda este checkpoint y se detiene el trabajo hasta nueva confirmación.
+
+### Checkpoint de lectura primaria DMR-061 · PDF pp. 55–60
+- **Estado:** bloque narrativo leído y documentado; lectura secuencial siguiente: PDF p. 61.
+- **Contenido incorporado:** reacción de Bell al Estado del día; silencio/enfado de Hestia y su salida a una fiesta laboral; identificación del local de Seal como La Señora de la Abundancia; primera entrada de Bell, asiento apartado, intervención de «Mia mama» y cifras económicas expresadas por Bell.
+- **Pendiente de catalogación:** revisar si ya existe un evento para la primera visita de Bell al local antes de crear cualquier ID. No crear fichas individuales a partir de la observación grupal del personal.
+- **Precisión de stats:** el «29» mencionado por Bell en p. 55 es compatible con el incremento I 13 → I 42 de p. 54; conservarlo como incremento interpretado y no como valor total independiente.
+- **Inspección visual:** PDF pp. 55–60 renderizadas e inspeccionadas; seis folios de texto continuo, sin ilustraciones. El sistema de lectura de archivos no entregó imágenes embebidas, por lo que se renderizaron desde el PDF local.
+- **Sesión horaria (Argentina, UTC−03:00):** inicio 10:18:01; límite de seis minutos 10:24:01. Cierre y estado final se añaden al terminar la sesión. La sesión no autoriza continuar después del límite.
+- **Otras tareas aún abiertas:** cinco pasadas; visual pp. 19–21 y 23–24; cotejo individual completo; contraste web secundario separado; revisión pendiente de PR #209 sin mezclarla con esta extracción V1.
