@@ -426,3 +426,8 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ## DANMACHI-RESEARCH-060 — ampliación del volumen 2 (CONT-MAIN-LN)
 - [Expediente DMR-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — eventos adicionales de Naaza, hostigamiento a Lili, Firebolt observado, rescate y reconciliación, recontratación dos días después y rumor de Ais una semana después de Udaeus.
 - La cronología interactiva incluye ahora 38 acontecimientos, con offsets relativos enlazados a eventos y fuente, sin fechas absolutas inventadas.
+
+### DMR-061 — progreso de lectura primaria V1 hasta PDF p. 60
+- Volumen 1 (CONT-MAIN-LN) documentado secuencialmente hasta PDF p. 60 en la rama research/danmachi-v1-primary-pp49-54-2026-10-30. Las pp. 55–60 incorporan el Estado actualizado de Bell y la primera visita al establecimiento de Seal, **La Señora de la Abundancia**.
+- La visita se conserva como evento candidato pendiente de comprobación en catálogo; no se crea ID hasta descartar duplicados. No se dan por realizadas la cena completa ni la identificación personal de «Mia mama».
+- Procedencia: DMR-061-SRC-001, traducción privada no cotejada con japonés. Las cinco pasadas permanecen abiertas; próximo folio: PDF p. 61.
