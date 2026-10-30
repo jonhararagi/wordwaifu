@@ -75,7 +75,9 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` — combate contra el grupo de Kobolds y recuperación de fragmentos y garra (PDF pp. 46–51).
 - `EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001` — Bell derrota a un Goblin y recoge un Diente de Goblin (PDF p. 53).
 - `EVT-DM-V01-BELL-RECEIVES-FALNA-001` — Falna en biblioteca (PDF pp. 211–214).
-- `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001` — Hephaistos entrega la daga a Hestia (pp. 145–146).
+- `EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001` — Hestia pide una daga para Bell y Hephaistos acepta forjarla después de dos días de insistencia (p. 115 y pp. 129–133).
+- `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001` — Hephaistos entrega la daga terminada a Hestia (pp. 145–146), posterior al evento de petición y forja.
+- `EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001` — Freya se reúne con Loki y Ais durante el Festival y reconoce a Bell entre la multitud (pp. 139–145).
 - `EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001` — encuentro en Festival de Monstruos (pp. 150–159).
 - `EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001` — Encanto y liberación de un Silverback (pp. 159–164).
 - `EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001` — respuesta ante nueve fugas reportadas (pp. 170–173).
