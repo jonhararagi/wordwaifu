@@ -422,7 +422,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ## DANMACHI-RESEARCH-061 — extracción del volumen 1 (CONT-MAIN-LN)
 - [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos iniciales Bell–Hestia, Eina, Ais y Seal Flover; escenas de Estado, Festival, Freya/Silverback y Dungeon. Traducción privada sin cotejo; el combate de Kobolds de pp. 46–48 sigue abierto.
 - [Dossier volumen 1](volumes/main/volume-01.md) y [índice de eventos](events/00-indice-candidatos.md).
-- **Lectura primaria más reciente:** Volumen 1, PDF pp. 11–146 documentadas secuencialmente; próximo folio p. 147. El bloque pp. 137–146 queda registrado en el dossier y el informe, con hoja visual revisada y sin ilustraciones.
+- **Lectura primaria más reciente:** Volumen 1, PDF pp. 11–156 documentadas secuencialmente; próximo folio p. 157. El bloque pp. 147–156 está registrado; p. 154 contiene una ilustración inspeccionada.
 - **Eventos V1 añadidos en la rama de investigación:** petición/forja de la daga (`EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001`), entrega física a Hestia (`EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001`) y reunión de Freya/Loki/Ais (`EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001`); no fusionar petición con entrega ni extrapolar el gesto de Ais.
 - **Estado:** traducción privada no cotejada con japonés; cinco pasadas generales abiertas, cotejo visual/individual aún pendiente y sin marcas `+` por esta extracción grupal.
 
@@ -440,3 +440,8 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - El pasaje de pp. 65–66 amplía EVT-DM-BELL-AIS-MINOTAUR-001; no crea un segundo combate. La visita a la taberna permanece como evento candidato hasta terminar la secuencia y comprobar el catálogo.
 - No transferir atributos de la ficha CHAR-MIA-GRAND (CONT-ANIME) a CONT-MAIN-LN; pp. 62 solo confirma «Mia» y los datos dichos por Seal.
 - Próximo folio: PDF p. 67. Traducción privada no cotejada con japonés; cinco pasadas abiertas.
+
+
+### DMR-061 — checkpoint hasta PDF p. 156
+- Hestia localiza a Bell tras recibir indicaciones de Freya; pp. 150–155 amplían el evento existente de la cita. El monedero de Seal sigue pendiente. El espectáculo del Coliseo comienza en p. 156.
+- Próxima página: PDF p. 157. Traducción privada no cotejada; inspección visual del bloque completada.
