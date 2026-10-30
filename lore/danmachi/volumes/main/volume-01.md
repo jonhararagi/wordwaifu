@@ -5,14 +5,14 @@ document_type: volume_dossier
 series: main_light_novel
 volume_number: 1
 continuity_scope: CONT-MAIN-LN
-status: provisional_summary
+status: source_checked_partial_translation_unverified
 source_url: https://ga.sbcr.jp/product/9784797372809/
 claim_id: DMR-008-CLM-001
 tags: ["inicio", "Bell", "Hestia", "Ais"]
 ---
 # DanMachi · Volumen 1: Primeros pasos de Bell en Orario
 
-> **Estado:** resumen original para navegación. No es un análisis cotejado capítulo a capítulo. El dato editorial enlazado no demuestra por sí solo cada detalle del resumen.
+> **Estado:** dossier de extracción primaria parcial a partir de una traducción privada aportada por el usuario. La obra original es oficial; la traducción no está cotejada con el japonés. La primera pasada narrativa llegó a PDF p. 214; la revisión visual/cotejo no está cerrada.
 
 ## Sinopsis original
 
@@ -44,3 +44,21 @@ Bell pasa de aspirante sin Familia a miembro de Hestia Familia. Hestia deja de e
 - [ ] Separar qué sabe cada personaje de lo que conoce el lector.
 - [ ] Comparar duplicados con los demás volúmenes.
 - **Estado de búsqueda:** `provisional_summary`; claim `DMR-008-CLM-001`; spoilers mild.
+
+
+## DMR-061 · eventos extraídos de traducción aportada (CONT-MAIN-LN)
+
+- [Primer encuentro Bell–Hestia](../../events/candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) — PDF pp. 211–214; epílogo retrospectivo.
+- [Hestia concede la Falna a Bell](../../events/timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — PDF pp. 211–214.
+- [Hephaistos entrega la Daga de Hestia](../../events/timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — PDF pp. 145–146.
+- [Bell y Hestia pasan tiempo juntos en el Festival](../../events/timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — PDF pp. 150–159.
+- [Freya libera un Silverback](../../events/timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — PDF pp. 159–164.
+- [Ganesha y el Gremio responden a la fuga](../../events/timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md) — PDF pp. 170–173.
+- [Bell protege a Hestia durante la persecución](../../events/timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — PDF pp. 173–190.
+- [Hestia actualiza a Bell y entrega la daga](../../events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md) — PDF pp. 193–196; discrepancia Agilidad D512/D521 sin resolver.
+- [Bell derrota al Silverback](../../events/timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md) — PDF pp. 196–200.
+- [Hestia explica la daga y el préstamo](../../events/timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md) — PDF pp. 203–208.
+
+**Límite de cobertura:** esta primera pasada no declara revisadas las ilustraciones página por página ni todos los detalles de los capítulos iniciales. Los eventos nuevos cubren los pasajes localizados en esta tanda; Arrival y Bell–Ais–Minotaur conservan sus IDs existentes hasta cotejar sus localizadores primarios de forma sistemática.
+
+**Fuente:** DMR-061-SRC-001; PDF físico 215 páginas, texto narrativo hasta p. 214 y créditos en p. 215. Traducción privada; créditos impresos Sorotrans (versión inglesa) y Mugetsu123 (traducción inglés-español, corrección y edición); Kurosaki-Vizard es marca de agua.
